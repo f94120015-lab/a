@@ -1,0 +1,6 @@
+{
+  "appId": "com.faruk.amok",
+  "appName": "amok",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

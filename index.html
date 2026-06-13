@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amok — İngilizce Öğren</title>
+  <meta name="description" content="Türkçe konuşanlar için oyunlaştırılmış ve etkileşimli İngilizce öğrenme platformu.">
+
+  <!-- Google Fonts: Serif aile -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Canvas Confetti -->
+  <script src="canvas-confetti.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       1. AUTH EKRANI — Giriş / Kayıt
+       ════════════════════════════════════════════════════════ -->
+  <section id="auth-screen" class="app-screen">
+    <div class="auth-container">
+      <div class="auth-brand">
+        <div class="auth-logo-wrap">
+          <img src="assets/logo.png" alt="amok logo" class="auth-logo" id="auth-logo-img">
+        </div>
+        <h1 class="auth-title">amok</h1>
+        <p class="auth-subtitle">İngilizceyi eğlenerek öğren</p>
+      </div>
+
+      <!-- Sekmeler -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" id="tab-login">Giriş Yap</button>
+        <button class="auth-tab" data-tab="register" id="tab-register">Kayıt Ol</button>
+      </div>
+
+      <!-- Giriş Formu -->
+      <form id="login-form" class="auth-form active">
+        <div class="form-group">
+          <label for="login-username">Kullanıcı Adı</label>
+          <input type="text" id="login-username" placeholder="örn: ahmet123" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Şifre</label>
+          <input type="password" id="login-password" placeholder="••••••" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="btn-login">Giriş Yap</button>
+      </form>
+
+      <!-- Kayıt Formu -->
+      <form id="register-form" class="auth-form">
+        <div class="form-group">
+          <label for="register-username">Kullanıcı Adı</label>
+          <input type="text" id="register-username" placeholder="örn: ahmet123" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="register-email">E-posta</label>
+          <input type="email" id="register-email" placeholder="ornek@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="register-password">Şifre</label>
+          <input type="password" id="register-password" placeholder="En az 6 karakter" required minlength="6" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="btn-register">Kayıt Ol</button>
+      </form>
+
+      <div class="auth-divider"><span>veya şununla devam et</span></div>
+
+      <div class="social-auth-container">
+        <button class="btn-social" id="btn-google-login" type="button" title="Google ile Devam Et">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          Google
+        </button>
+        <button class="btn-social" id="btn-facebook-login" type="button" title="Facebook ile Devam Et">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="#1877F2" d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12z"/>
+          </svg>
+          Facebook
+        </button>
+        <button class="btn-social" id="btn-apple-login" type="button" title="Apple ile Devam Et">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.22.67-2.94 1.5-.64.74-1.2 1.88-1.05 3 .1 1.16 2.34 2.1 3-1.44z"/>
+          </svg>
+          Apple
+        </button>
+      </div>
+
+      <div class="auth-divider"><span>veya</span></div>
+      <button class="btn btn-ghost btn-full" id="btn-guest">Misafir Olarak Devam Et</button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       2. ANA SAYFA — Ders Ağacı
+       ════════════════════════════════════════════════════════ -->
+  <section id="home-screen" class="app-screen active">
+
+    <!-- Üst Bar (Tüm ekranı kaplayacak şekilde en üste alındı) -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <!-- Masaüstü için Başlık Yazısı ve Yeni Logo (Masaüstünde gösterilecek, mobilde gizlenecek) -->
+        <div class="top-bar-title-wrap">
+          <img src="assets/logo_topbar.png" alt="Logo" class="top-bar-title-logo">
+          <span class="top-bar-title-text">Akademik Metinleri Okuma Kılavuzu</span>
+          <span class="top-bar-title-amok"><span class="amok-navy">AM</span><span class="amok-gray">OK</span></span>
+        </div>
+        
+        <!-- Mobil için Stats (Masaüstünde Gizlenecek) -->
+        <div class="stat-pill" id="stat-streak" title="Günlük seri">
+          <span class="stat-icon">🔥</span>
+          <span class="stat-value" id="streak-count">0</span>
+        </div>
+        <div class="stat-pill" id="stat-xp" title="Deneyim puanı">
+          <span class="stat-icon">⚡</span>
+          <span class="stat-value" id="xp-count">0</span>
+        </div>
+        <div class="stat-pill hearts" id="stat-hearts" title="Can">
+          <span class="stat-icon">❤️</span>
+          <span class="stat-value" id="hearts-count">5</span>
+        </div>
+      </div>
+
+      <div class="top-bar-center">
+        <img src="assets/logo.png" alt="amok" class="top-bar-logo" id="top-bar-logo-img">
+        <span class="top-bar-brand">amok</span>
+      </div>
+
+      <div class="top-bar-right">
+        <button class="btn-icon" id="btn-theme" title="Tema değiştir">🌙</button>
+        <button class="btn btn-login-topbar" id="btn-login-topbar" style="display:none;">Giriş Yap</button>
+        <div class="user-menu">
+          <button class="btn-icon" id="btn-user-menu" title="Profil">👤</button>
+          <div class="user-dropdown" id="user-dropdown">
+            <span class="dropdown-name" id="dropdown-name">Kullanıcı</span>
+            <hr>
+            <button id="btn-logout">Çıkış Yap</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Gövde Bölümü (Sidebar ve Ana İçerik yan yana) -->
+    <div class="home-body-layout">
+      <!-- Sol Sidebar (Masaüstü için Dikey Menü, Mobil için Alt Bar) -->
+      <aside class="sidebar-nav">
+        <nav class="sidebar-menu">
+          <button class="nav-tab active" data-tab="lessons">
+            <span class="nav-tab-icon">📚</span>
+            <span class="nav-tab-label">Dersler</span>
+          </button>
+          <button class="nav-tab" data-tab="leaderboard">
+            <span class="nav-tab-icon">🏆</span>
+            <span class="nav-tab-label">Ligler</span>
+          </button>
+          <button class="nav-tab" data-tab="store">
+            <span class="nav-tab-icon">🛍️</span>
+            <span class="nav-tab-label">Mağaza</span>
+          </button>
+          <button class="nav-tab" data-tab="profile">
+            <span class="nav-tab-icon">👤</span>
+            <span class="nav-tab-label">Profil</span>
+          </button>
+        </nav>
+        <!-- Placement Test Banner (Sol menünün altı için) -->
+        <div class="placement-banner" id="placement-banner" style="display:none;">
+          <div class="placement-banner-left">
+            <h3>👋 İngilizce Seviyeni Biliyor musun?</h3>
+            <p>Seviye Belirleme Sınavı'na girerek seviyene uygun bölümden hemen başla!</p>
+          </div>
+          <button class="btn btn-primary" id="btn-start-placement">Sınava Başla</button>
+        </div>
+      </aside>
+
+      <!-- Ana İçerik Alanı (Sol menünün sağında kalacak şekilde sarmalandı) -->
+      <div class="home-main-wrapper">
+
+      <!-- Ana İçerik Alanı -->
+      <main class="home-content">
+        
+        <!-- 1. DERSLER SEKMESİ -->
+        <div id="tab-content-lessons" class="tab-content active">
+        <div class="lessons-layout">
+          <div class="lessons-main-col">
+            <div class="tree-container" id="tree-container">
+              <!-- Dinamik olarak app.js tarafından doldurulacak -->
+            </div>
+          </div>
+
+          <div class="lessons-side-col">
+            <!-- Yan Sütun Stats Bar (Masaüstü için) -->
+            <div class="side-stats-bar">
+              <div class="stat-pill" id="stat-streak-side" title="Günlük seri">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-value" id="streak-count-side">0</span>
+              </div>
+              <div class="stat-pill" id="stat-xp-side" title="Deneyim puanı">
+                <span class="stat-icon">⚡</span>
+                <span class="stat-value" id="xp-count-side">0</span>
+              </div>
+              <div class="stat-pill hearts" id="stat-hearts-side" title="Can">
+                <span class="stat-icon">❤️</span>
+                <span class="stat-value" id="hearts-count-side">5</span>
+              </div>
+            </div>
+
+            <!-- Sosyal Takip Modülü (Arkadaşlar) -->
+            <div class="profile-social-card" id="lessons-social-card">
+              <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">👥 Arkadaşlar</h3>
+              
+              <div class="social-tabs">
+                <button class="social-tab active" data-subtab="following" id="subtab-following">Takip Ettiklerim (0)</button>
+                <button class="social-tab" data-subtab="followers" id="subtab-followers">Takipçilerim (0)</button>
+              </div>
+              
+              <div class="social-search-wrap">
+                <div class="search-input-container">
+                  <input type="text" id="social-search-input" placeholder="Kullanıcı ara (örn: John, Deniz, Buse)..." autocomplete="off">
+                  <button class="search-clear-btn" id="social-search-clear" style="display:none;">✕</button>
+                </div>
+                <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 16px;">Ara</button>
+              </div>
+              <div class="social-search-results" id="social-search-results" style="display:none;"></div>
+              
+              <div class="social-list-container">
+                <div id="social-list-content"></div>
+              </div>
+            </div>
+
+            <!-- Spaced Repetition (Review) Banner -->
+            <div class="review-banner" id="review-banner" style="display:none;">
+              <div class="review-banner-left">
+                <h3>🔄 Akıllı Tekrar Zamanı!</h3>
+                <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
+              </div>
+              <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
+            </div>
+
+            <!-- Günlük Görevler Bölümü -->
+            <div class="daily-tasks-section" id="daily-tasks-section">
+              <div class="daily-tasks-header">
+                <h2 class="section-title">📅 Günlük Görevler</h2>
+                <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
+              </div>
+              <div class="daily-tasks-list" id="daily-tasks-list">
+                <!-- Dinamik olarak app.js tarafından doldurulacak -->
+              </div>
+            </div>
+
+            <!-- Başarımlar Bölümü -->
+            <div class="achievements-section" id="achievements-section">
+              <h2 class="section-title">🏆 Başarımlar</h2>
+              <div class="achievements-grid" id="achievements-grid">
+                <!-- Dinamik olarak app.js tarafından doldurulacak -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. LİDERLİK TABLOSU SEKMESİ -->
+      <div id="tab-content-leaderboard" class="tab-content">
+        <div class="leaderboard-container">
+          <div class="leaderboard-header">
+            <div class="league-badge">🏆 Altın Lig</div>
+            <p class="league-desc">Haftalık ligin bitmesine son 2 gün! Ligde kalıp puan kazanmak için dersleri tamamla.</p>
+          </div>
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Sıra</th>
+                <th>Kullanıcı</th>
+                <th>Puan</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-list">
+              <!-- Dinamik olarak app.js tarafından doldurulacak -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. MAĞAZA SEKMESİ -->
+      <div id="tab-content-store" class="tab-content">
+        <div class="store-container">
+          <h2 class="store-title">🛍️ amok Sanal Mağazası</h2>
+          <p class="store-subtitle">Deneyim puanlarını kullanarak serini dondur, canlarını doldur veya altın temayı aç!</p>
+          
+          <div class="store-grid">
+            <div class="store-card" id="store-card-hearts">
+              <span class="store-card-icon">❤️</span>
+              <h3>Can Yenile</h3>
+              <p>Canını tamamen doldur (5 Can). Canın azaldığında alabilirsin.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="hearts" data-price="50" id="buy-hearts-btn">50 Puan</button>
+            </div>
+            
+            <div class="store-card" id="store-card-streak-freeze">
+              <span class="store-card-icon">❄️</span>
+              <h3>Seri Dondurucu</h3>
+              <p>Bir gün girmeyi unutsan bile serini koruyan kalkan.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="streak-freeze" data-price="100" id="buy-streak-freeze-btn">100 Puan</button>
+            </div>
+            
+            <div class="store-card" id="store-card-gold-theme">
+              <span class="store-card-icon">👑</span>
+              <h3>Özel Altın Tema</h3>
+              <p>Tüm uygulamaya özel, asil altın renk paletini uygular.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="gold-theme" data-price="200" id="buy-gold-theme-btn">200 Puan</button>
+            </div>
+            
+            <div class="store-card" id="store-card-canva-theme">
+              <span class="store-card-icon">🎨</span>
+              <h3>Özel Canva Teması</h3>
+              <p>Canva'nın turkuaz, mavi ve mor gradyan renk paletini uygular.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="canva-theme" data-price="150" id="buy-canva-theme-btn">150 Puan</button>
+            </div>
+
+            <div class="store-card" id="store-card-mint-theme">
+              <span class="store-card-icon">🌿</span>
+              <h3>Pastel Mint Teması</h3>
+              <p>Yatıştırıcı pastel nane yeşili ve adaçayı renk paletini uygular.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="mint-theme" data-price="100" id="buy-mint-theme-btn">100 Puan</button>
+            </div>
+
+            <div class="store-card" id="store-card-sakura-theme">
+              <span class="store-card-icon">🌸</span>
+              <h3>Pastel Sakura Teması</h3>
+              <p>Zarif pastel kiraz çiçeği pembesi ve lavanta renk paletini uygular.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="sakura-theme" data-price="120" id="buy-sakura-theme-btn">120 Puan</button>
+            </div>
+
+            <div class="store-card" id="store-card-sunset-theme">
+              <span class="store-card-icon">🌅</span>
+              <h3>Pastel Sunset Teması</h3>
+              <p>Sıcak pastel şeftali, mercan ve gün batımı renk paletini uygular.</p>
+              <button class="btn btn-primary store-buy-btn" data-item="sunset-theme" data-price="130" id="buy-sunset-theme-btn">130 Puan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PROFİL SEKMESİ -->
+      <div id="tab-content-profile" class="tab-content">
+        <div class="profile-container">
+          <!-- Dinamik olarak app.js tarafından doldurulacak -->
+        </div>
+      </div>
+
+    </main>
+    </div> <!-- .home-main-wrapper sonu -->
+    </div> <!-- .home-body-layout sonu -->
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       3. QUIZ EKRANI — Aktif Öğrenme
+       ════════════════════════════════════════════════════════ -->
+  <section id="quiz-screen" class="app-screen">
+    <div class="quiz-header">
+      <button class="btn-icon quiz-close" id="quiz-close" title="Çık">✕</button>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="quiz-progress"></div>
+      </div>
+      <div class="quiz-hearts" id="quiz-hearts">
+        <span>❤️</span>
+        <span id="quiz-hearts-count">5</span>
+      </div>
+    </div>
+
+    <div class="quiz-body" id="quiz-body">
+      <!-- Soru içeriği app.js tarafından dinamik olarak oluşturulacak -->
+    </div>
+
+    <div class="quiz-footer" id="quiz-footer">
+      <div class="feedback-panel" id="feedback-panel">
+        <span class="feedback-icon" id="feedback-icon"></span>
+        <span class="feedback-text" id="feedback-text"></span>
+      </div>
+      <button class="btn btn-primary btn-check" id="btn-check" disabled>KONTROL ET</button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       4. DERS TAMAMLAMA ÖZET EKRANI
+       ════════════════════════════════════════════════════════ -->
+  <section id="summary-screen" class="app-screen">
+    <div class="summary-container">
+      <div class="summary-trophy">🏆</div>
+      <h2 class="summary-title">Tebrikler!</h2>
+      <p class="summary-subtitle" id="summary-lesson-name">Dersi tamamladın</p>
+
+      <div class="summary-stats">
+        <div class="summary-card">
+          <span class="summary-card-value" id="summary-xp">+10</span>
+          <span class="summary-card-label">Puan Kazandın</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-card-value" id="summary-accuracy">100%</span>
+          <span class="summary-card-label">Doğruluk</span>
+        </div>
+      </div>
+
+      <!-- Yeni başarım bildirimi -->
+      <div class="summary-achievements" id="summary-achievements" style="display:none;">
+        <h3>🎉 Yeni Başarım!</h3>
+        <div id="summary-achievement-list"></div>
+      </div>
+
+      <button class="btn btn-primary btn-full" id="btn-summary-continue">DEVAM ET</button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       5. CAN BİTTİ EKRANI
+       ════════════════════════════════════════════════════════ -->
+  <section id="gameover-screen" class="app-screen">
+    <div class="gameover-container">
+      <div class="gameover-icon">💔</div>
+      <h2 class="gameover-title">Canların Bitti!</h2>
+      <p class="gameover-subtitle">Ama endişelenme, devam edebilirsin.</p>
+
+      <div class="gameover-actions">
+        <button class="btn btn-primary btn-full" id="btn-refill-hearts">
+          <span>⚡ Puan ile Can Doldur</span>
+          <span class="refill-cost" id="refill-cost">(50 Puan)</span>
+        </button>
+        <button class="btn btn-secondary btn-full" id="btn-restart-lesson">🔄 Dersi Yeniden Başlat</button>
+        <button class="btn btn-ghost btn-full" id="btn-go-home">🏠 Ana Sayfaya Dön</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       5b. SEVİYE BELİRLEME SINAVI EKRANI
+       ════════════════════════════════════════════════════════ -->
+  <section id="placement-screen" class="app-screen">
+    <div class="quiz-header">
+      <button class="btn-icon quiz-close" id="placement-close" title="Çık">✕</button>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="placement-progress"></div>
+      </div>
+      <div class="placement-title-text" style="font-weight: 700; font-family: var(--font-heading); margin-right: 15px; color: var(--text-secondary);">Seviye Sınavı</div>
+    </div>
+
+    <div class="quiz-body" id="placement-body">
+      <!-- Dinamik olarak app.js tarafından doldurulacak -->
+    </div>
+
+    <div class="quiz-footer" id="placement-footer">
+      <div class="feedback-panel" id="placement-feedback-panel">
+        <span class="feedback-icon" id="placement-feedback-icon"></span>
+        <span class="feedback-text" id="placement-feedback-text"></span>
+      </div>
+      <button class="btn btn-primary btn-check" id="btn-placement-check" disabled>KONTROL ET</button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       6. TOAST BİLDİRİM
+       ════════════════════════════════════════════════════════ -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
