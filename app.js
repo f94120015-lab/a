@@ -41,6 +41,7 @@ let state = {
 
 // Quiz ve diğer durumlar
 let currentLesson = null;
+let currentQuizQuestions = [];
 let currentQuestionIndex = 0;
 let correctCount = 0;
 let wrongCount = 0;
@@ -55,6 +56,191 @@ let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
 let placementQuestionsList = [];
+
+// E-posta Bildirim Ayarları (Kullanıcı e-postasını kodda gizlemek için Base64 kullanılmıştır)
+const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ=="; // f94120015@gmail.com
+
+// ============================================================
+// KELİME SÖZLÜĞÜ VE HOVER ÇEVİRİ ALTYAPISI
+// ============================================================
+const wordDictionary = {
+  // Common helper/structural words
+  "the": "belirteç (belirli bir nesneyi/özneyi işaret eder)",
+  "a": "bir",
+  "an": "bir",
+  "is": "-dir/-dır (olmak fiili)",
+  "are": "-dirler/-dırlar (olmak fiili)",
+  "was": "-di/-dı (geçmiş zaman olmak fiili)",
+  "were": "-diler/-dılar (geçmiş zaman olmak fiili)",
+  "in": "içinde, -de/-da",
+  "on": "üzerinde, -de/-da",
+  "at": "-de/-da (noktasal konum/zaman)",
+  "from": "-den/-dan (itibaren, kaynak)",
+  "to": "-e/-a (yönelme/kadar), -mek/-mak için",
+  "for": "için, -dir (süreç)",
+  "with": "ile, birlikte, -li/-lı",
+  "by": "tarafından, vasıtasıyla, -e göre",
+  "of": "-in/-ın (iyelik/parçası), -den/-dan",
+  "this": "bu",
+  "that": "şu, o, -ki (bağlaç)",
+  "these": "bunlar",
+  "those": "şunlar, onlar",
+  "i": "ben",
+  "you": "sen / siz",
+  "he": "o (erkek)",
+  "she": "o (kadın)",
+  "it": "o (cansız/hayvan)",
+  "we": "biz",
+  "they": "onlar",
+  "my": "benim",
+  "your": "senin / sizin",
+  "his": "onun (erkek)",
+  "her": "onun (kadın)",
+  "its": "onun (cansız/hayvan)",
+  "our": "bizim",
+  "their": "onların",
+  "will": "-ecek/-acak (gelecek zaman)",
+  "be": "olmak",
+  "been": "olunmuş / bulunmuş",
+  "have": "sahip olmak / -miş olmak",
+  "has": "sahip olmak / -miş olmak",
+  "had": "sahip olmak (geçmiş) / -miş olmak",
+  "not": "değil, olumsuzluk eki",
+  "no": "hayır, hiçbir, yok",
+  "there": "orada, var (there is/are)",
+  "here": "burada",
+  "and": "ve",
+  "or": "veya, yoksa",
+  "but": "ama, fakat",
+  "about": "hakkında, yaklaşık",
+  "some": "bazı, biraz",
+  "any": "hiç, herhangi bir",
+  "all": "tüm, bütün, hepsi",
+  "more": "daha fazla",
+  "most": "en çok, çoğu",
+  "other": "diğer, başka",
+  "new": "yeni",
+  "old": "eski, yaşlı",
+  "good": "iyi",
+  "bad": "kötü",
+  "very": "çok",
+  "can": "-ebilmek/-abilmek (yetenek/olasılık)",
+  "could": "-ebilirdi / -ebildi",
+  "may": "-ebilir/-abilir (olasılık/izin)",
+  "might": "-ebilir/-abilir (düşük olasılık)",
+  "must": "-meli/-malı (zorunluluk)",
+  "should": "-meli/-malı (tavsiye/gereklilik)",
+  "would": "-erdi/-ardı (istek/koşul)",
+  "do": "yapmak",
+  "does": "yapmak (3. tekil şahıs)",
+  "did": "yaptı (geçmiş zaman)",
+  "done": "yapılmış, tamamlanmış",
+  "who": "kim, -ki o (kişi niteleme)",
+  "which": "hangi, -ki o (nesne niteleme)",
+  "where": "nerede, nereye",
+  "when": "ne zaman, -diğinde/-duğunda",
+  "why": "neden, niçin",
+  "how": "nasıl",
+  "what": "ne",
+  "whose": "kimin",
+  "whom": "kime, kimi, kiminle",
+  "so": "bu yüzden, öyleyse, çok",
+  "then": "o zaman, sonra",
+  "if": "eğer, -se/-sa",
+  "than": "-den/-dan (karşılaştırma)",
+  "as": "olarak, gibi, -dikçe",
+  "like": "gibi, hoşlanmak",
+  "into": "içine doğru",
+  "through": "içinden, vasıtasıyla",
+  "over": "üzerinde, aşırı, bitti",
+  "under": "altında",
+  "between": "arasında (iki şeyin)",
+  "among": "arasında (ikiden fazla şeyin)",
+  "out": "dışarı, dışarıda",
+  "up": "yukarı",
+  "down": "aşağı"
+};
+
+// Populate dictionary dynamically from unitSentencesMap if it exists
+function buildDynamicDictionary() {
+  if (typeof unitSentencesMap !== 'undefined') {
+    for (const unitId in unitSentencesMap) {
+      const lessonsInUnit = unitSentencesMap[unitId];
+      for (const lessonId in lessonsInUnit) {
+        const sentences = lessonsInUnit[lessonId];
+        if (Array.isArray(sentences)) {
+          sentences.forEach(s => {
+            if (s.word && s.trWord) {
+              const cleanWord = s.word.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"").trim();
+              if (!wordDictionary[cleanWord]) {
+                wordDictionary[cleanWord] = s.trWord.toLowerCase().trim();
+              }
+            }
+          });
+        }
+      }
+    }
+  }
+}
+
+// Get the meaning of a word with various fallback logic
+function getWordMeaning(word) {
+  const clean = word.toLowerCase().trim();
+  if (wordDictionary[clean]) return wordDictionary[clean];
+  
+  // Plural -> Singular check
+  if (clean.endsWith('s')) {
+    const singular = clean.slice(0, -1);
+    if (wordDictionary[singular]) return wordDictionary[singular];
+  }
+  
+  // Verb past tense suffix check
+  if (clean.endsWith('ed')) {
+    const base1 = clean.slice(0, -2);
+    if (wordDictionary[base1]) return wordDictionary[base1];
+    const base2 = clean.slice(0, -1);
+    if (wordDictionary[base2]) return wordDictionary[base2];
+  }
+  
+  // Gerund suffix check
+  if (clean.endsWith('ing')) {
+    const base1 = clean.slice(0, -3);
+    if (wordDictionary[base1]) return wordDictionary[base1];
+    const base2 = base1 + 'e';
+    if (wordDictionary[base2]) return wordDictionary[base2];
+  }
+  
+  return null;
+}
+
+// Convert English text into hoverable HTML elements
+function makeTextHoverable(text) {
+  if (!text) return '';
+  const wordRegex = /([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'-]+)/g;
+  let match;
+  let html = '';
+  
+  wordRegex.lastIndex = 0;
+  while ((match = wordRegex.exec(text)) !== null) {
+    const word = match[1];
+    const nonWord = match[2];
+    
+    if (word) {
+      const meaning = getWordMeaning(word);
+      if (meaning) {
+        html += `<span class="hoverable-word" data-meaning="${meaning}">${word}</span>`;
+      } else {
+        html += `<span class="hoverable-word no-meaning">${word}</span>`;
+      }
+    } else if (nonWord) {
+      html += nonWord;
+    }
+  }
+  return html;
+}
+
+// Initialize dynamic dictionary builder
+buildDynamicDictionary();
 
 // ============================================================
 // YARDIMCI FONKSİYONLAR
@@ -553,6 +739,222 @@ function animateStat(elementId, className) {
 // ============================================================
 // DERS AĞACI RENDER
 // ============================================================
+function getLessonIllustration(lessonId, unitId) {
+  const lesson = lessons.find(l => l.id === lessonId);
+  const unitLessons = units.find(u => u.id === unitId)?.lessons || [];
+  const lessonIndex = unitLessons.indexOf(lessonId);
+
+  // Default fallback
+  let category = 'school';
+
+  if (unitId === 1 || unitId === 2) {
+    category = 'grammar';
+  } else if (unitId === 3) {
+    category = 'soup';
+  } else if (unitId === 4) {
+    category = 'time';
+  } else if (unitId === 5) {
+    category = 'blocks';
+  } else if (unitId === 6) {
+    category = 'multilingual';
+  } else if (unitId === 7) {
+    category = 'greetings';
+  } else if (unitId === 8) {
+    category = 'family';
+  } else if (unitId === 9) {
+    category = 'blocks';
+  } else if (unitId === 10) {
+    category = 'school';
+  } else if (unitId === 11) {
+    category = 'time';
+  } else if (unitId === 12) {
+    category = 'school';
+  } else if (unitId === 13) {
+    category = 'multilingual';
+  } else if (unitId === 14) {
+    category = 'globe';
+  } else if (unitId === 15) {
+    category = 'greetings';
+  } else if (unitId === 16) {
+    category = 'time';
+  } else if (unitId === 17) {
+    category = 'teacher';
+  } else if (unitId === 18) {
+    category = 'train';
+  } else if (unitId === 19) {
+    category = 'chatbot';
+  } else if (unitId === 20) {
+    category = 'multilingual';
+  } else if (unitId === 21) {
+    category = 'time';
+  } else if (unitId === 22) {
+    category = 'grammar';
+  } else if (unitId === 23) {
+    category = 'blocks';
+  } else if (unitId === 24) {
+    category = 'teacher';
+  } else if (unitId === 25) {
+    category = 'globe';
+  }
+
+  // Inject variety
+  if (lessonIndex === 1 && (unitId === 3 || unitId === 7 || unitId === 8)) {
+    category = 'calendar';
+  }
+  if (lessonIndex === 2 && (unitId === 1 || unitId === 2 || unitId === 9 || unitId === 18)) {
+    category = 'chatbot';
+  }
+
+  // Beautiful Vector SVGs with transparent backgrounds
+  const svgs = {
+    greetings: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M22 38V24C22 21.8 23.8 20 26 20C28.2 20 30 21.8 30 24V32M30 32V18C30 15.8 31.8 14 34 14C36.2 14 38 15.8 38 18V32M38 32V20C38 17.8 39.8 16 42 16C44.2 16 46 17.8 46 20V32M46 32V24C46 21.8 47.8 20 50 20C52.2 20 54 21.8 54 24V40C54 47.7 47.7 54 40 54H32C23.2 54 16 46.8 16 38V38" stroke="#F2A871" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#F8C8A0"/>
+        <path d="M12 22C13.5 20.5 15.5 20.5 17 22" stroke="#E8CB6E" stroke-width="3" stroke-linecap="round"/>
+        <path d="M10 27C12 26 14 26 16 27" stroke="#E8CB6E" stroke-width="3" stroke-linecap="round"/>
+        <path d="M11 32C12.5 31.5 14.5 31.5 16 32" stroke="#E8CB6E" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    `,
+    calendar: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <rect x="10" y="16" width="44" height="36" rx="6" fill="#FFE3E8" stroke="#FFA0B4" stroke-width="4"/>
+        <path d="M10 24H54" stroke="#FFA0B4" stroke-width="4" stroke-linecap="round"/>
+        <path d="M20 12V18" stroke="#7EB8F0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 12V18" stroke="#7EB8F0" stroke-width="4" stroke-linecap="round"/>
+        <path d="M44 12V18" stroke="#7EB8F0" stroke-width="4" stroke-linecap="round"/>
+        <rect x="18" y="30" width="6" height="6" rx="2" fill="#FFA0B4"/>
+        <rect x="29" y="30" width="6" height="6" rx="2" fill="#FFA0B4"/>
+        <rect x="40" y="30" width="6" height="6" rx="2" fill="#FFA0B4"/>
+        <rect x="18" y="40" width="6" height="6" rx="2" fill="#FFA0B4"/>
+        <rect x="29" y="40" width="6" height="6" rx="2" fill="#7EB8F0"/>
+        <rect x="40" y="40" width="6" height="6" rx="2" fill="#FFA0B4"/>
+      </svg>
+    `,
+    globe: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M20 52H44" stroke="#B597F6" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 46V52" stroke="#B597F6" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 10C41.9 10 50 18.1 50 28C50 34.6 46.4 40.3 41 43.4" stroke="#B597F6" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="30" cy="28" r="16" fill="#C2D9FF" stroke="#7EB8F0" stroke-width="3"/>
+        <path d="M20 22C22 20 26 22 28 20C30 18 29 15 27 14C23.5 14 18.5 17.5 20 22Z" fill="#74DB96"/>
+        <path d="M34 26C38 24 42 27 44 25C46 23 44 18 41 18C38 18 36 21 34 26Z" fill="#74DB96"/>
+        <path d="M24 34C26 38 32 36 34 40C36 44 26 44 22 41C18 38 22 30 24 34Z" fill="#74DB96"/>
+      </svg>
+    `,
+    blocks: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <rect x="12" y="30" width="22" height="22" rx="4" fill="#FFA478" stroke="#D1754B" stroke-width="3"/>
+        <text x="23" y="46" font-family="sans-serif" font-weight="bold" font-size="14" fill="#ffffff" text-anchor="middle">A</text>
+        <rect x="34" y="34" width="18" height="18" rx="4" fill="#62CDCB" stroke="#439E9D" stroke-width="3"/>
+        <text x="43" y="47" font-family="sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">B</text>
+        <rect x="22" y="10" width="20" height="20" rx="4" fill="#B597F6" stroke="#8D6EC8" stroke-width="3"/>
+        <text x="32" y="25" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff" text-anchor="middle">1</text>
+      </svg>
+    `,
+    grammar: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M8 52C18 48 32 50 32 50C32 50 46 48 56 52V24C46 20 32 22 32 22C32 22 18 20 8 24V52Z" fill="#ffffff" stroke="#FFA0B4" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M32 22V50" stroke="#FFA0B4" stroke-width="4"/>
+        <path d="M14 30H24M14 36H26M14 42H22" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 30H40M50 36H38M50 42H44" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
+        <text x="16" y="16" font-family="sans-serif" font-weight="bold" font-size="12" fill="#F9D053" text-anchor="middle">A</text>
+        <text x="32" y="14" font-family="sans-serif" font-weight="bold" font-size="10" fill="#7EB8F0" text-anchor="middle">ü</text>
+        <text x="48" y="16" font-family="sans-serif" font-weight="bold" font-size="12" fill="#74DB96" text-anchor="middle">?</text>
+      </svg>
+    `,
+    train: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <circle cx="20" cy="12" r="4" fill="#E2D4FF"/>
+        <circle cx="26" cy="8" r="6" fill="#FFE3E8"/>
+        <path d="M20 20V26H28V20H20Z" fill="#ED8BE0" stroke="#C064B4" stroke-width="3"/>
+        <rect x="30" y="22" width="22" height="24" rx="3" fill="#7EB8F0" stroke="#588FC6" stroke-width="3"/>
+        <rect x="36" y="27" width="10" height="8" rx="2" fill="#ffffff" stroke="#588FC6" stroke-width="2"/>
+        <rect x="14" y="28" width="18" height="18" rx="3" fill="#FFA0B4" stroke="#D37388" stroke-width="3"/>
+        <circle cx="22" cy="50" r="6" fill="#9C8EF7" stroke="#7465D3" stroke-width="3"/>
+        <circle cx="42" cy="50" r="6" fill="#9C8EF7" stroke="#7465D3" stroke-width="3"/>
+        <path d="M22 50H42" stroke="#7465D3" stroke-width="3"/>
+      </svg>
+    `,
+    chatbot: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M10 16C10 11.6 13.6 8 18 8H46C50.4 8 54 11.6 54 16V38C54 42.4 50.4 46 46 46H24L12 54V46C10 44 10 41.5 10 38V16Z" fill="#62CDCB" stroke="#439E9D" stroke-width="3"/>
+        <rect x="20" y="16" width="24" height="18" rx="5" fill="#ffffff"/>
+        <path d="M32 16V12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="32" cy="10" r="3" fill="#F9D053"/>
+        <circle cx="27" cy="24" r="2.5" fill="#439E9D"/>
+        <circle cx="37" cy="24" r="2.5" fill="#439E9D"/>
+        <path d="M29 29C31 31 33 31 35 29" stroke="#439E9D" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    `,
+    multilingual: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M8 24C8 17.4 13.4 12 20 12H32C38.6 12 44 17.4 44 24C44 30.6 38.6 36 32 36H20L12 42V36C8 34 8 31.5 8 24Z" fill="#46D5C8" stroke="#2CA297" stroke-width="3"/>
+        <text x="24" y="28" font-family="sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">Hi</text>
+        <path d="M56 32C56 38.6 50.6 44 44 44H32C25.4 44 20 38.6 20 32C20 25.4 25.4 20 32 20H44C50.6 20 56 25.4 56 32Z" fill="#B597F6" stroke="#8D6EC8" stroke-width="3"/>
+        <text x="38" y="36" font-family="sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">Olá</text>
+      </svg>
+    `,
+    family: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <circle cx="24" cy="22" r="8" fill="#FFA478" stroke="#D1754B" stroke-width="3"/>
+        <path d="M12 44C12 36 18 32 24 32C30 32 36 36 36 44" fill="#FFE2D4" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="42" cy="28" r="6" fill="#7EB8F0" stroke="#588FC6" stroke-width="2.5"/>
+        <path d="M32 46C32 40 36 37 42 37C48 37 52 40 52 46" fill="#C2D9FF" stroke="#588FC6" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    `,
+    soup: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M24 16C24 12 26 12 26 8" stroke="#FFA478" stroke-width="3" stroke-linecap="round"/>
+        <path d="M32 16C32 10 34 10 34 6" stroke="#F9D053" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 16C40 12 42 12 42 8" stroke="#FFA478" stroke-width="3" stroke-linecap="round"/>
+        <path d="M12 28C12 28 12 48 32 48C52 48 52 28 52 28H12Z" fill="#FFA0B4" stroke="#D37388" stroke-width="4" stroke-linejoin="round"/>
+        <ellipse cx="32" cy="28" rx="20" ry="4" fill="#ffffff" stroke="#D37388" stroke-width="3"/>
+        <ellipse cx="32" cy="28" rx="18" ry="2.5" fill="#F9D053"/>
+        <path d="M42 22L50 12" stroke="#7EB8F0" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    `,
+    time: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M20 48L14 54" stroke="#74DB96" stroke-width="4" stroke-linecap="round"/>
+        <path d="M44 48L50 54" stroke="#74DB96" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="18" cy="14" r="6" fill="#F9D053" stroke="#CCA024" stroke-width="3"/>
+        <circle cx="46" cy="14" r="6" fill="#F9D053" stroke="#CCA024" stroke-width="3"/>
+        <path d="M18 18L26 22" stroke="#CCA024" stroke-width="3"/>
+        <path d="M46 18L38 22" stroke="#CCA024" stroke-width="3"/>
+        <circle cx="32" cy="34" r="16" fill="#ffffff" stroke="#74DB96" stroke-width="4"/>
+        <path d="M32 34V24" stroke="#52A66F" stroke-width="3" stroke-linecap="round"/>
+        <path d="M32 34L40 38" stroke="#52A66F" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="32" cy="34" r="2.5" fill="#52A66F"/>
+      </svg>
+    `,
+    school: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M12 28L32 14L52 28H12Z" fill="#FFA0B4" stroke="#D37388" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="16" y="28" width="32" height="24" rx="2" fill="#ffffff" stroke="#588FC6" stroke-width="3"/>
+        <rect x="27" y="40" width="10" height="12" rx="2" fill="#FFA478" stroke="#D1754B" stroke-width="2"/>
+        <rect x="20" y="32" width="6" height="6" rx="1" fill="#C2D9FF" stroke="#588FC6" stroke-width="2"/>
+        <rect x="38" y="32" width="6" height="6" rx="1" fill="#C2D9FF" stroke="#588FC6" stroke-width="2"/>
+        <rect x="28" y="10" width="8" height="8" fill="#F9D053" stroke="#CCA024" stroke-width="2"/>
+        <circle cx="32" cy="14" r="2" fill="#ffffff"/>
+      </svg>
+    `,
+    teacher: `
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
+        <path d="M20 48L14 56" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
+        <path d="M44 48L50 56" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
+        <rect x="10" y="14" width="44" height="32" rx="4" fill="#FFA478" stroke="#D1754B" stroke-width="3"/>
+        <rect x="14" y="18" width="36" height="24" rx="2" fill="#74DB96"/>
+        <path d="M32 22L34 26L38 26L35 29L36 33L32 30L28 33L29 29L26 26L30 26L32 22Z" fill="#ffffff"/>
+        <path d="M44 40L54 28" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    `
+  };
+
+  return svgs[category] || svgs.school;
+}
+
+
+
 function renderLessonTree() {
   const container = document.getElementById('tree-container');
   // Render definitions SVG for the path gradients
@@ -611,10 +1013,10 @@ function renderLessonTree() {
     `;
     container.appendChild(banner);
 
-    // 3. Create Winding Path Container
+    // 3. Create Winding Path Container (Height expanded to 190px per lesson to support larger nodes without overlapping)
     const pathContainer = document.createElement('div');
     pathContainer.className = 'unit-path-container';
-    pathContainer.style.height = `${totalInUnit * 120}px`;
+    pathContainer.style.height = `${totalInUnit * 190}px`;
 
     // Compute coordinates for the lessons (Using a mathematical formula to guarantee all 20 units have unique shapes)
     const points = [];
@@ -633,7 +1035,7 @@ function renderLessonTree() {
 
       points.push({
         x: 50 + offsetPercent,
-        y: idx * 120 + 60
+        y: idx * 190 + 95
       });
     }
 
@@ -652,16 +1054,16 @@ function renderLessonTree() {
     if (progressLimit > 0) {
       progressD = `M ${points[0].x} ${points[0].y}`;
       for (let i = 0; i < progressLimit; i++) {
-        const p0 = points[i];
-        const p1 = points[i + 1];
-        const cy = (p0.y + p1.y) / 2;
-        progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
+         const p0 = points[i];
+         const p1 = points[i + 1];
+         const cy = (p0.y + p1.y) / 2;
+         progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
       }
     }
 
-    // Render path SVG
+    // Render path SVG (Expanded viewBox height matching the 190px vertical spacing)
     const svgHTML = `
-      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 120}" preserveAspectRatio="none">
+      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
         <path class="path-bg" d="${pathD}" />
         ${progressD ? `<path class="path-progress" d="${progressD}" stroke="url(#path-gradient)" />` : ''}
       </svg>
@@ -683,27 +1085,52 @@ function renderLessonTree() {
       nodeWrapper.className = 'lesson-node-wrapper';
       nodeWrapper.style.left = `${pt.x}%`;
       nodeWrapper.style.top = `${pt.y}px`;
+      // Increasing z-index prevents subsequent lesson labels from rendering behind previous lesson nodes
+      nodeWrapper.style.zIndex = `${100 + idx}`;
 
       let statusClass = 'locked';
       if (isCompleted) {
         statusClass = 'completed';
       } else if (isActive) {
-        statusClass = 'active';
+        statusClass = `active unit-pin-color-${colorIndex}`;
       }
 
-      // Inside pin icon content: always show lesson icon.
-      const iconContent = `<span class="pin-icon">${lesson.icon}</span>`;
+      // Generate the premium SVG illustration instead of emoji
+      const illustrationContent = getLessonIllustration(lId, unit.id);
+
+      // Progress Badge content
+      let progressBadgeContent = '';
+      if (lesson.exercises && lesson.exercises.length > 0) {
+        const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
+        const totalCount = lesson.exercises.length;
+        const isAllExCompleted = completedCount === totalCount;
+        progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
+          ${isAllExCompleted ? '✓' : `${completedCount}/${totalCount}`}
+        </div>`;
+      } else {
+        progressBadgeContent = `<div class="node-progress-badge ${isCompleted ? 'completed' : ''}">
+          ${isCompleted ? '✓' : `0/${lesson.questions.length}`}
+        </div>`;
+      }
+
+      // New Banner for active lesson
+      const activeBannerContent = isActive ? '<div class="lesson-node-banner">Yeni</div>' : '';
 
       nodeWrapper.innerHTML = `
         ${isActive ? '<div class="pulse-ring"></div>' : ''}
+        ${activeBannerContent}
         <button class="lesson-node ${statusClass}" data-lesson-id="${lId}">
           <div class="pin-bg"></div>
           <div class="pin-inner">
-            ${iconContent}
+            ${illustrationContent}
           </div>
           ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
+          ${progressBadgeContent}
         </button>
-        <div class="lesson-node-label">${lesson.title}</div>
+        <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
+          <strong>${lesson.title}</strong>
+          <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
+        </div>
       `;
 
       const btn = nodeWrapper.querySelector('.lesson-node');
@@ -738,22 +1165,16 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const lessonIndex = unit.lessons.indexOf(lessonId);
 
   if (topic) {
-    if (unit.id === 1 && lessonIndex < 8) {
-      const formulas = [
-        { formula: "Adjective + Noun", example: "<strong>Analytical method</strong>: Analitik yöntem" },
-        { formula: "Noun + Noun", example: "<strong>Method evaluation</strong>: Yöntem değerlendirmesi" },
-        { formula: "Noun + of + Noun", example: "<strong>Evaluation of projects</strong>: Projelerin değerlendirilmesi" },
-        { formula: "Adjective + Noun + Noun", example: "<strong>Global wealth distribution</strong>: Küresel servet dağılımı" },
-        { formula: "Present Participle (V-ing) + Noun", example: "<strong>Expanding economy</strong>: Büyüyen ekonomi" },
-        { formula: "Noun + Present Participle (V-ing) + Noun", example: "<strong>Economy-stimulating policy</strong>: Ekonomiyi canlandıran politika" },
-        { formula: "Past Participle (V-ed) + Noun", example: "<strong>Stimulated growth</strong>: Uyarılmış/Canlandırılmış büyüme" },
-        { formula: "Adverb + Past Participle (V-ed) + Noun", example: "<strong>Regionally stimulated growth</strong>: Bölgesel olarak canlandırılmış büyüme" }
-      ];
-      const f = formulas[lessonIndex];
+    if (lesson.formula && lesson.example) {
+      let styledExample = lesson.example;
+      if (styledExample.includes(':') && !styledExample.includes('<strong>')) {
+        const parts = styledExample.split(':');
+        styledExample = `<strong>${parts[0]}</strong>:${parts[1]}`;
+      }
       previewHTML = `
         <div class="grammar-preview-box">
-          <div class="grammar-formula"><span class="formula-badge">Formül</span> ${f.formula}</div>
-          <div class="grammar-example">Örnek: ${f.example}</div>
+          <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>
+          <div class="grammar-example">Örnek: ${styledExample}</div>
         </div>
       `;
     } else if (lessonIndex === 0) {
@@ -797,27 +1218,64 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const popover = document.createElement('div');
   popover.className = 'lesson-popover';
   popover.dataset.lessonId = lessonId;
-  popover.style.top = `${pxY + 80}px`; // position directly below the node
+  // Positioned directly below the scaled-up labels (pxY + 95px) to prevent overlap with the smaller pins/labels
+  popover.style.top = `${pxY + 95}px`;
   popover.style.left = `${pctX}%`;
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
   let popoverSubtitleHTML = lesson.subtitle;
-  if (unit.id === 1 && lessonIndex < 8) {
-    const formulas = [
-      { formula: "Adjective + Noun", example: "Analytical data: Analitik veri" },
-      { formula: "Noun + Noun", example: "Resource allocation: Kaynak tahsisi" },
-      { formula: "Noun + of + Noun", example: "Distribution of income: Gelir dağılımı" },
-      { formula: "Adjective + Noun + Noun", example: "Precise analytical data: Hassas analitik veri" },
-      { formula: "Present Participle (V-ing) + Noun", example: "Expanding economy: Büyüyen ekonomi" },
-      { formula: "Noun + Present Participle (V-ing) + Noun", example: "Economy-stimulating policy: Ekonomiyi canlandıran politika" },
-      { formula: "Past Participle (V-ed) + Noun", example: "Stimulated growth: Uyarılmış büyüme" },
-      { formula: "Adverb + Past Participle (V-ed) + Noun", example: "Regionally stimulated growth: Bölgesel olarak canlandırılmış büyüme" }
-    ];
-    const f = formulas[lessonIndex];
-    if (f) {
-      popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">Örnek Çeviri: <strong>${f.example}</strong></span>`;
-    }
+  if (lesson.formula && lesson.example) {
+    popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">Örnek Çeviri: <strong>${lesson.example}</strong></span>`;
+  }
+
+  let popoverFooterHTML = '';
+  if (lesson.exercises && lesson.exercises.length > 0) {
+    let exercisesRows = lesson.exercises.map((ex, index) => {
+      const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
+      const isExUnlocked = true; // Şimdilik soruları/düzenlemeleri görebilmek için kilitler açıldı
+      
+      const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
+      const rowClass = isExUnlocked ? '' : 'locked';
+      
+      return `
+        <div class="popover-exercise-row ${rowClass}" data-exercise-id="${ex.id}">
+          <div class="exercise-info">
+            <span class="exercise-icon">${isExCompleted ? '✅' : '📝'}</span>
+            <div class="exercise-meta">
+              <span class="exercise-title">${ex.title}</span>
+              <span class="exercise-subtitle">${ex.description || '20 Soru'}</span>
+            </div>
+          </div>
+          <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
+            ${statusText}
+          </button>
+        </div>
+      `;
+    }).join('');
+
+    popoverFooterHTML = `
+      <div class="popover-exercises-container">
+        <h5 class="popover-exercises-title">Alıştırmalar</h5>
+        <div class="popover-exercises-list">
+          ${exercisesRows}
+        </div>
+      </div>
+    `;
+  } else {
+    popoverFooterHTML = `
+      <div class="popover-footer">
+        ${isUnlocked ? `
+          <button class="btn btn-primary popover-start-btn">
+            ${isCompleted ? 'Tekrar Et (+5 Puan)' : 'Dersi Başlat (+10 Puan)'}
+          </button>
+        ` : `
+          <button class="btn btn-primary popover-start-btn" disabled>
+            🔒 KİLİTLİ
+          </button>
+        `}
+      </div>
+    `;
   }
 
   popover.innerHTML = `
@@ -829,20 +1287,18 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     <div class="popover-body">
       ${previewHTML}
     </div>
-    <div class="popover-footer">
-      ${isUnlocked ? `
-        <button class="btn btn-primary popover-start-btn">
-          ${isCompleted ? 'Tekrar Et (+5 Puan)' : 'Dersi Başlat (+10 Puan)'}
-        </button>
-      ` : `
-        <button class="btn btn-primary popover-start-btn" disabled>
-          🔒 KİLİTLİ
-        </button>
-      `}
-    </div>
+    ${popoverFooterHTML}
   `;
 
-  if (isUnlocked) {
+  if (lesson.exercises && lesson.exercises.length > 0) {
+    popover.querySelectorAll('.exercise-start-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const exerciseId = btn.dataset.exerciseId;
+        popover.remove();
+        startLesson(lessonId, exerciseId);
+      });
+    });
+  } else if (isUnlocked) {
     popover.querySelector('.popover-start-btn').addEventListener('click', () => {
       popover.remove();
       startLesson(lessonId);
@@ -854,6 +1310,16 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const pathContainer = button.closest('.unit-path-container');
   if (pathContainer) {
     pathContainer.appendChild(popover);
+    
+    // Auto-center or align to top of screen so everything is visible
+    setTimeout(() => {
+      const rect = popover.getBoundingClientRect();
+      if (rect.height > window.innerHeight) {
+        popover.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        popover.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 50);
   }
 }
 
@@ -866,6 +1332,8 @@ document.addEventListener('click', () => {
 });
 
 function isLessonUnlocked(lessonId) {
+  return true; // Şimdilik içerik kontrolü için tüm kilitler açıldı
+
   if (lessonId === 1) return true;
 
   // Find the lesson and its unit
@@ -914,9 +1382,20 @@ function renderAchievements() {
 // ============================================================
 // QUIZ MOTORU
 // ============================================================
-function startLesson(lessonId) {
+function startLesson(lessonId, exerciseId = null) {
   currentLesson = lessons.find(l => l.id === lessonId);
   if (!currentLesson) return;
+
+  if (exerciseId && currentLesson.exercises) {
+    const exercise = currentLesson.exercises.find(ex => ex.id === exerciseId);
+    currentQuizQuestions = exercise ? exercise.questions : currentLesson.questions;
+    currentLesson.activeExerciseId = exerciseId;
+    currentLesson.activeExerciseTitle = exercise ? exercise.title : '';
+  } else {
+    currentQuizQuestions = currentLesson.questions;
+    currentLesson.activeExerciseId = null;
+    currentLesson.activeExerciseTitle = '';
+  }
 
   currentQuestionIndex = 0;
   correctCount = 0;
@@ -939,7 +1418,7 @@ function startLesson(lessonId) {
 
 function updateQuizUI() {
   // İlerleme çubuğu
-  const total = isReviewMode ? reviewQuestions.length : currentLesson.questions.length;
+  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
   const progress = (currentQuestionIndex / total) * 100;
   document.getElementById('quiz-progress').style.width = `${progress}%`;
 
@@ -948,7 +1427,7 @@ function updateQuizUI() {
 }
 
 function renderQuestion() {
-  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentLesson.questions[currentQuestionIndex];
+  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   if (!question) return;
 
   selectedAnswer = null;
@@ -984,18 +1463,32 @@ function renderQuestion() {
     case 'translation-text':
       renderTranslationText(body, question);
       break;
+    case 'multiple-fill-blank':
+      renderMultipleFillBlank(body, question);
+      break;
   }
 }
 
 // ── Çoktan Seçmeli ──────────────────────────────────────────
 function renderMultipleChoice(container, question) {
+  let promptHtml = question.prompt;
+  if (question.enSentence && question.isEngToTr) {
+    promptHtml = promptHtml.replace(question.enSentence, makeTextHoverable(question.enSentence));
+  }
+
+  const renderedOptions = question.options.map((opt, i) => {
+    let optHtml = opt;
+    if (question.enSentence && !question.isEngToTr) {
+      optHtml = makeTextHoverable(opt);
+    }
+    return `<button class="mc-option" data-index="${i}">${optHtml}</button>`;
+  }).join('');
+
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-prompt">${promptHtml}</p>
     ${question.translation ? `<p class="quiz-translation">${question.translation}</p>` : ''}
     <div class="mc-options">
-      ${question.options.map((opt, i) => `
-        <button class="mc-option" data-index="${i}">${opt}</button>
-      `).join('')}
+      ${renderedOptions}
     </div>
   `;
 
@@ -1019,9 +1512,14 @@ function renderMultipleChoice(container, question) {
 function renderWordBank(container, question) {
   const shuffledWords = [...question.words].sort(() => Math.random() - 0.5);
 
+  let translationHtml = question.translation;
+  if (question.isEngToTr && question.enSentence) {
+    translationHtml = makeTextHoverable(translationHtml);
+  }
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    <p class="quiz-translation">${question.translation}</p>
+    <p class="quiz-translation">${translationHtml}</p>
     <div class="wb-sentence" id="wb-sentence"></div>
     <div class="wb-bank" id="wb-bank">
       ${shuffledWords.map((w, i) => `
@@ -1094,7 +1592,7 @@ function renderMatching(container, question) {
       <span class="match-col-header">İngilizce</span>
       ${question.pairs.map((pair, i) => `
         <button class="match-item match-left" data-left="${pair.left}" data-pair-index="${i}">${pair.left}</button>
-        <button class="match-item match-right" data-right="${shuffledRight[i].right}">${shuffledRight[i].right}</button>
+        <button class="match-item match-right" data-right="${shuffledRight[i].right}">${makeTextHoverable(shuffledRight[i].right)}</button>
       `).join('')}
     </div>
   `;
@@ -1181,10 +1679,13 @@ function renderFillBlankDropdown(container, question) {
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
 
+  const part0Html = makeTextHoverable(parts[0]);
+  const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary);">
-      ${parts[0]}<select class="inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${parts[1] || ''}
+    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
+      ${part0Html}<select class="inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${part1Html}
     </div>
   `;
 
@@ -1200,10 +1701,13 @@ function renderFillBlankDropdown(container, question) {
 function renderFillBlankText(container, question) {
   const parts = question.sentence.split('___');
 
+  const part0Html = makeTextHoverable(parts[0]);
+  const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary);">
-      ${parts[0]}<input type="text" class="inline-text-input" id="fb-text-input" autocomplete="off" placeholder="yazın">${parts[1] || ''}
+    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
+      ${part0Html}<input type="text" class="inline-text-input" id="fb-text-input" autocomplete="off" placeholder="yazın">${part1Html}
     </div>
   `;
 
@@ -1219,10 +1723,16 @@ function renderFillBlankText(container, question) {
 
 // ── Tam Metin Çeviri Testi (Klavyeli Girdi) ──────────────────
 function renderTranslationText(container, question) {
+  const placeholderText = question.isEngToTr ? "Türkçe çeviriyi buraya yazın..." : "İngilizce çeviriyi buraya yazın...";
+  let promptHtml = question.prompt;
+  if (question.enSentence && question.isEngToTr) {
+    promptHtml = promptHtml.replace(question.enSentence, makeTextHoverable(question.enSentence));
+  }
+
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-prompt">${promptHtml}</p>
     <div class="translation-input-wrap">
-      <textarea class="translation-textarea" id="translation-text-area" placeholder="İngilizce çeviriyi buraya yazın..." autocomplete="off"></textarea>
+      <textarea class="translation-textarea" id="translation-text-area" placeholder="${placeholderText}" autocomplete="off"></textarea>
     </div>
   `;
 
@@ -1236,11 +1746,47 @@ function renderTranslationText(container, question) {
   });
 }
 
+// ── Çoklu Boşluk Doldurma (multiple-fill-blank) ────────────────────
+function renderMultipleFillBlank(container, question) {
+  const parts = question.sentence.split('___');
+  let sentenceHtml = '';
+  
+  parts.forEach((part, index) => {
+    sentenceHtml += makeTextHoverable(part);
+    if (index < parts.length - 1) {
+      sentenceHtml += `<input type="text" class="inline-text-input multi-fb-input" data-index="${index}" autocomplete="off" placeholder="...">`;
+    }
+  });
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    ${question.translation ? `<p class="quiz-translation">${question.translation}</p>` : ''}
+    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 2;">
+      ${sentenceHtml}
+    </div>
+  `;
+
+  const inputs = container.querySelectorAll('.multi-fb-input');
+  if (inputs.length > 0) {
+    setTimeout(() => inputs[0].focus(), 100);
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      if (isAnswerChecked) return;
+      
+      const allFilled = Array.from(inputs).every(inp => inp.value.trim().length > 0);
+      document.getElementById('btn-check').disabled = !allFilled;
+      
+      selectedAnswer = Array.from(inputs).map(inp => inp.value.trim());
+    });
+  });
+}
 function checkAnswer() {
   if (isAnswerChecked) return;
   isAnswerChecked = true;
 
-  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentLesson.questions[currentQuestionIndex];
+  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   let isCorrect = false;
 
   switch (question.type) {
@@ -1288,6 +1834,24 @@ function checkAnswer() {
           textEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
           textEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
         }
+      }
+      break;
+    case 'multiple-fill-blank':
+      {
+        const userVals = (selectedAnswer || []).map(val => val.toLowerCase().trim());
+        const correctVals = question.corrects.map(val => val.toLowerCase().trim());
+        
+        isCorrect = userVals.length === correctVals.length && userVals.every((val, i) => val === correctVals[i]);
+        
+        const inputs = document.querySelectorAll('.multi-fb-input');
+        inputs.forEach((inputEl, idx) => {
+          const isInputCorrect = userVals[idx] === correctVals[idx];
+          if (inputEl) {
+            inputEl.style.borderColor = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+            inputEl.style.backgroundColor = isInputCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+            inputEl.style.color = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+          }
+        });
       }
       break;
   }
@@ -1346,6 +1910,8 @@ function checkAnswer() {
       correctAnswerText = question.correctSentence;
     } else if (question.type === 'word-bank') {
       correctAnswerText = question.correctOrder.join(' ');
+    } else if (question.type === 'multiple-fill-blank') {
+      correctAnswerText = question.corrects.join(', ');
     }
 
     feedbackText.textContent = `Doğru cevap: ${correctAnswerText}`;
@@ -1417,7 +1983,7 @@ function nextQuestion() {
   }
 
   // Ders/Tekrar bitti mi?
-  const total = isReviewMode ? reviewQuestions.length : currentLesson.questions.length;
+  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
   if (currentQuestionIndex >= total) {
     if (isReviewMode) {
       completeReviewSession();
@@ -1448,8 +2014,22 @@ function completeReviewSession() {
 // ============================================================
 function completeLesson() {
   // Dersi tamamlanan listesine ekle
-  if (!state.completedLessons.includes(currentLesson.id)) {
-    state.completedLessons.push(currentLesson.id);
+  if (currentLesson.activeExerciseId) {
+    const exerciseKey = `${currentLesson.id}_${currentLesson.activeExerciseId}`;
+    if (!state.completedLessons.includes(exerciseKey)) {
+      state.completedLessons.push(exerciseKey);
+    }
+    // Eğer bu ders altındaki tüm alıştırmalar tamamlandıysa, dersin kendisini de tamamlandı olarak işaretle
+    const allExercisesCompleted = currentLesson.exercises.every(ex =>
+      state.completedLessons.includes(`${currentLesson.id}_${ex.id}`)
+    );
+    if (allExercisesCompleted && !state.completedLessons.includes(currentLesson.id)) {
+      state.completedLessons.push(currentLesson.id);
+    }
+  } else {
+    if (!state.completedLessons.includes(currentLesson.id)) {
+      state.completedLessons.push(currentLesson.id);
+    }
   }
 
   // Gece kuşu kontrolü
@@ -1472,14 +2052,14 @@ function completeLesson() {
   const newAchievements = checkAchievements();
 
   // Özet ekranı güncelle
-  const total = currentLesson.questions.length;
+  const total = currentQuizQuestions.length;
   const accuracy = Math.round((correctCount / total) * 100);
   const earnedXP = correctCount * XP_PER_CORRECT;
 
-  document.getElementById('summary-lesson-name').textContent = `"${currentLesson.title}" dersini tamamladın!`;
+  const exTitle = currentLesson.activeExerciseTitle ? ` - ${currentLesson.activeExerciseTitle}` : '';
+  document.getElementById('summary-lesson-name').textContent = `"${currentLesson.title}${exTitle}" alıştırmasını tamamladın!`;
   document.getElementById('summary-xp').textContent = `+${earnedXP}`;
   document.getElementById('summary-accuracy').textContent = `${accuracy}%`;
-
   // Yeni başarımları göster
   const summaryAch = document.getElementById('summary-achievements');
   const achList = document.getElementById('summary-achievement-list');
@@ -1689,6 +2269,8 @@ function renderProfile() {
         <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border);">İlerlemeyi Sıfırla</button>
       </div>
     </div>
+
+    ${getReportsHTML()}
   `;
 
   // Attach event listeners
@@ -1731,6 +2313,36 @@ function renderProfile() {
       switchTab('profile');
     }
   });
+
+  // Admin Reports listeners if they exist in DOM
+  const btnExport = document.getElementById('btn-export-reports');
+  const btnClearRep = document.getElementById('btn-clear-reports');
+  
+  if (btnExport) {
+    btnExport.addEventListener('click', () => {
+      const reports = localStorage.getItem('amok_question_reports') || '[]';
+      const blob = new Blob([reports], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `amok_question_reports_${Date.now()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Hata bildirimleri başarıyla indirildi.', 'success');
+    });
+  }
+
+  if (btnClearRep) {
+    btnClearRep.addEventListener('click', () => {
+      if (confirm('Tüm hata bildirimlerini silmek istediğinize emin misiniz?')) {
+        localStorage.removeItem('amok_question_reports');
+        showToast('Tüm hata bildirimleri temizlendi.', 'info');
+        renderProfile();
+      }
+    });
+  }
 }
 
 function initSocialSystem() {
@@ -2213,6 +2825,11 @@ function initEventListeners() {
     }
   });
 
+  // Soru Hata Bildirimi
+  document.getElementById('quiz-report').addEventListener('click', () => {
+    showReportModal();
+  });
+
   // Kontrol Et / Devam Et butonu
   document.getElementById('btn-check').addEventListener('click', () => {
     if (!isAnswerChecked) {
@@ -2633,6 +3250,199 @@ function completePlacementTest() {
   showToast('Seviyeniz başarıyla belirlendi!', 'success');
   alert(feedbackMsg);
   enterApp();
+}
+
+function showReportModal() {
+  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
+  if (!question) {
+    showToast('Aktif bir soru bulunamadı.', 'error');
+    return;
+  }
+  
+  const modal = document.createElement('div');
+  modal.className = 'custom-modal-overlay';
+  modal.id = 'report-modal';
+  
+  const questionText = question.prompt || question.sentence || 'Görsel / Eşleştirme';
+  
+  modal.innerHTML = `
+    <div class="custom-modal">
+      <div class="custom-modal-header">
+        <h3>⚠️ Soru Hatası Bildir</h3>
+        <button class="modal-close-btn" id="btn-close-report-modal">&times;</button>
+      </div>
+      <div class="custom-modal-body">
+        <div class="report-question-info">
+          <div class="info-row">
+            <strong>Soru Metni:</strong>
+            <span>${questionText}</span>
+          </div>
+          <div class="info-row">
+            <strong>Soru ID:</strong>
+            <span>${question.id}</span>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="report-error-type">Hata Türü</label>
+          <select id="report-error-type" class="report-select">
+            <option value="translation">Çeviri Hatası</option>
+            <option value="typo">Yazım / İmla Hatası</option>
+            <option value="answer">Cevap Anahtarı Hatası</option>
+            <option value="technical">Teknik Sorun</option>
+            <option value="other">Diğer</option>
+          </select>
+        </div>
+        
+        <div class="form-group" style="margin-top: 15px;">
+          <label for="report-comment">Açıklamanız (Muhtemel düzeltme vb.)</label>
+          <textarea id="report-comment" placeholder="Lütfen hatayı detaylandırın..." class="report-textarea"></textarea>
+        </div>
+      </div>
+      <div class="custom-modal-footer">
+        <button class="btn btn-secondary" id="btn-cancel-report">İptal</button>
+        <button class="btn btn-primary" id="btn-submit-report">Bildirimi Gönder</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  document.getElementById('btn-close-report-modal').addEventListener('click', () => modal.remove());
+  document.getElementById('btn-cancel-report').addEventListener('click', () => modal.remove());
+  document.getElementById('btn-submit-report').addEventListener('click', () => {
+    const errorType = document.getElementById('report-error-type').value;
+    const comment = document.getElementById('report-comment').value.trim();
+    
+    if (!comment) {
+      showToast('Lütfen bir açıklama yazın.', 'error');
+      return;
+    }
+
+    submitReport(question, errorType, comment);
+    modal.remove();
+  });
+}
+
+function submitReport(question, errorType, comment) {
+  const reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+  
+  // Find the lesson associated with this question dynamically
+  const questionLesson = (typeof lessons !== 'undefined') ? lessons.find(l => l.questions.some(q => q.id === question.id)) : null;
+  const activeLesson = questionLesson || currentLesson;
+  const lessonTitleStr = activeLesson ? `${activeLesson.id}. Ders (${activeLesson.subtitle})` : (isReviewMode ? 'Hızlı Tekrar' : 'N/A');
+  const lessonIdStr = activeLesson ? activeLesson.id : 'N/A';
+
+  const newReport = {
+    id: "rep_" + Date.now(),
+    timestamp: new Date().toLocaleString('tr-TR'),
+    lessonId: lessonIdStr,
+    lessonTitle: lessonTitleStr,
+    questionId: question.id,
+    questionPrompt: question.prompt || question.sentence || 'Görsel / Eşleştirme',
+    questionType: question.type,
+    errorType: errorType,
+    userComment: comment,
+    username: state.username || 'Misafir'
+  };
+
+  reports.push(newReport);
+  localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+  
+  // E-posta bildirimi gönder
+  sendReportEmail(newReport);
+  
+  showToast('Hata bildiriminiz gönderildi. Teşekkür ederiz! 🙏', 'success');
+}
+
+function sendReportEmail(report) {
+  if (typeof OBFUSCATED_EMAIL === 'undefined' || !OBFUSCATED_EMAIL) return;
+
+  try {
+    // Decode the Base64 email address to keep it hidden in source code
+    const emailAddress = atob(OBFUSCATED_EMAIL);
+    
+    // FormSubmit AJAX API endpoint
+    const url = `https://formsubmit.co/ajax/${emailAddress}`;
+    
+    const body = {
+      _subject: `AMOK Soru Hata Bildirimi - ${report.lessonTitle}`,
+      "Ders Bilgisi": report.lessonTitle,
+      "Soru ID": report.questionId,
+      "Soru Türü": report.questionType,
+      "Soru Metni": report.questionPrompt,
+      "Hata Türü": translateErrorType(report.errorType),
+      "Kullanıcı Açıklaması": report.userComment,
+      "Bildiren Kullanıcı": report.username,
+      "Bildirim Zamanı": report.timestamp
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    .then(response => {
+      if (!response.ok) {
+        console.error('Email API returned non-ok status');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending email request:', error);
+    });
+  } catch (err) {
+    console.error('Error decoding obfuscated email:', err);
+  }
+}
+
+function getReportsHTML() {
+  const reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+  if (reports.length > 0) {
+    return `
+      <h3 class="profile-section-title" style="margin-top: 24px;">⚠️ Soru Hata Bildirimleri (${reports.length})</h3>
+      <div class="profile-actions-card">
+        <div class="profile-reports-list" style="max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+          ${reports.map(rep => `
+            <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px; font-size: 0.82rem; line-height: 1.4; text-align: left;">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
+                <span>${rep.lessonTitle} (ID: ${rep.questionId})</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${rep.timestamp}</span>
+              </div>
+              <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Soru:</strong> <span style="font-style: italic;">${rep.questionPrompt}</span></div>
+              <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Hata Türü:</strong> <span style="background: var(--accent-primary-light); color: var(--accent-primary-hover); padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">${translateErrorType(rep.errorType)}</span></div>
+              <div style="background: var(--bg-card); border-left: 3px solid var(--color-wrong, #ff3b30); padding: 6px 10px; border-radius: 2px 4px 4px 2px; margin-top: 6px; color: var(--text-primary);">
+                <strong>Kullanıcı Yorumu (${rep.username}):</strong> ${rep.userComment}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="profile-actions-buttons">
+          <button class="btn btn-secondary" id="btn-export-reports">JSON Olarak İndir</button>
+          <button class="btn btn-ghost" id="btn-clear-reports" style="color: var(--color-wrong); border-color: var(--color-wrong-border);">Tümünü Temizle</button>
+        </div>
+      </div>
+    `;
+  } else {
+    return `
+      <h3 class="profile-section-title" style="margin-top: 24px;">⚠️ Soru Hata Bildirimleri</h3>
+      <div class="profile-actions-card" style="text-align: center; color: var(--text-muted); padding: 24px; font-size: 0.9rem;">
+        Henüz bildirilmiş bir soru hatası bulunmuyor.
+      </div>
+    `;
+  }
+}
+
+function translateErrorType(type) {
+  switch (type) {
+    case 'translation': return 'Çeviri Hatası';
+    case 'typo': return 'Yazım / İmla Hatası';
+    case 'answer': return 'Cevap Anahtarı Hatası';
+    case 'technical': return 'Teknik Sorun';
+    default: return 'Diğer';
+  }
 }
 
 // ============================================================

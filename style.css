@@ -3,22 +3,22 @@
    Sıcak kanvas tonları, serif tipografi, responsive tasarım
    ============================================================ */
 
-/* ─── CSS Değişkenleri (Açık Tema – Canva Pastel Paleti) ── */
+/* ─── CSS Değişkenleri (Açık Tema – Premium Temiz Palet) ── */
 :root {
-  /* Arka planlar – pastel yeşil tonları */
-  --bg-primary: #F1F7F4;
-  --bg-secondary: #E2EEE6;
+  /* Arka planlar – modern temiz ve ferah tonlar */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
   --bg-card: #ffffff;
-  --bg-card-hover: #F6FAF8;
+  --bg-card-hover: #f1f3f5;
 
-  /* Metin – yumuşak orman/yaprak yeşili tonları */
-  --text-primary: #1D2D24;
-  --text-secondary: #41574C;
-  --text-muted: #7A9486;
+  /* Metin – yumuşak antrasit ve gri tonları */
+  --text-primary: #2b2b2b;
+  --text-secondary: #555555;
+  --text-muted: #8e8e8e;
 
-  /* Çizgi – pastel yeşil gri */
-  --border-color: #C9DFD3;
-  --border-light: #E6EFEA;
+  /* Çizgi – temiz açık gri */
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
 
   /* Ana renkler – Canva Pastel Teal */
   --accent-primary: #7EC8C8;
@@ -53,11 +53,11 @@
   --color-completed: #8BC6A0;
   --color-completed-bg: rgba(139, 198, 160, 0.18);
 
-  /* Gölge – sıcak tonlu */
-  --shadow-sm: 0 1px 3px rgba(45, 42, 50, 0.05);
-  --shadow-md: 0 4px 12px rgba(45, 42, 50, 0.07);
-  --shadow-lg: 0 8px 28px rgba(45, 42, 50, 0.10);
-  --shadow-xl: 0 16px 48px rgba(45, 42, 50, 0.14);
+  /* Gölge – yumuşak tonlu */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
 
   /* Animasyonlar */
   --transition-fast: 150ms ease;
@@ -76,19 +76,19 @@
   --font-body: 'Lora', 'Times New Roman', serif;
 }
 
-/* ─── Koyu Tema – Pastel Dark ────────────────────────────── */
+/* ─── Koyu Tema – Premium Koyu Temiz Palet ───────────────── */
 [data-theme="dark"] {
-  --bg-primary: #1a1820;
-  --bg-secondary: #222028;
-  --bg-card: #2a2832;
-  --bg-card-hover: #32303c;
+  --bg-primary: #121214;
+  --bg-secondary: #1a1a1e;
+  --bg-card: #1e1e24;
+  --bg-card-hover: #26262f;
 
-  --text-primary: #f0eef4;
-  --text-secondary: #a8a2b4;
-  --text-muted: #6e6880;
+  --text-primary: #f8f9fa;
+  --text-secondary: #a0a0ab;
+  --text-muted: #6b6b75;
 
-  --border-color: #3a3644;
-  --border-light: #2e2a38;
+  --border-color: #2b2b30;
+  --border-light: #212125;
 
   --accent-primary: #9AD8D8;
   --accent-primary-hover: #B0E4E4;
@@ -117,10 +117,10 @@
   --color-completed: #A0D4B4;
   --color-completed-bg: rgba(160, 212, 180, 0.15);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.35);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
 /* ─── Reset ──────────────────────────────────────────────── */
@@ -494,7 +494,7 @@ input {
 .top-bar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -676,45 +676,45 @@ input {
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-/* Bölüm 1 – Pastel Teal */
+/* Bölüm 1 – Vibrant Teal & Mint */
 .unit-banner.unit-color-1 {
-  background: linear-gradient(135deg, #7EC8C8 0%, #A8DEDE 100%);
+  background: linear-gradient(135deg, #62CDCB 0%, #A5F3FC 100%);
 }
-/* Bölüm 2 – Pastel Lavanta */
+/* Bölüm 2 – Vibrant Lavender & Lilac */
 .unit-banner.unit-color-2 {
-  background: linear-gradient(135deg, #B4A7D6 0%, #D0C6E8 100%);
+  background: linear-gradient(135deg, #B597F6 0%, #E2D4FF 100%);
 }
-/* Bölüm 3 – Pastel Mercan */
+/* Bölüm 3 – Vibrant Rose & Coral */
 .unit-banner.unit-color-3 {
-  background: linear-gradient(135deg, #E8A0AC 0%, #F0C0C8 100%);
+  background: linear-gradient(135deg, #FFA0B4 0%, #FFE3E8 100%);
 }
-/* Bölüm 4 – Pastel Gökyüzü */
+/* Bölüm 4 – Vibrant Sky Blue & Lavender */
 .unit-banner.unit-color-4 {
-  background: linear-gradient(135deg, #8BB8E8 0%, #B0D0F0 100%);
+  background: linear-gradient(135deg, #7EB8F0 0%, #C2D9FF 100%);
 }
-/* Bölüm 5 – Pastel Sage */
+/* Bölüm 5 – Vibrant Mint & Emerald */
 .unit-banner.unit-color-5 {
-  background: linear-gradient(135deg, #8BC6A0 0%, #B0DCC0 100%);
+  background: linear-gradient(135deg, #74DB96 0%, #B7F5CC 100%);
 }
-/* Bölüm 6 – Pastel Şeftali */
+/* Bölüm 6 – Vibrant Orange & Peach */
 .unit-banner.unit-color-6 {
-  background: linear-gradient(135deg, #F2A871 0%, #F8C8A0 100%);
+  background: linear-gradient(135deg, #FFA478 0%, #FFE2D4 100%);
 }
-/* Bölüm 7 – Pastel Gül Kurusu */
+/* Bölüm 7 – Vibrant Magenta & Rose */
 .unit-banner.unit-color-7 {
-  background: linear-gradient(135deg, #D4A0C8 0%, #E8C0DC 100%);
+  background: linear-gradient(135deg, #ED8BE0 0%, #FDD2FA 100%);
 }
-/* Bölüm 8 – Pastel Altın */
+/* Bölüm 8 – Vibrant Gold & Banana */
 .unit-banner.unit-color-8 {
-  background: linear-gradient(135deg, #E8CB6E 0%, #F0DCA0 100%);
+  background: linear-gradient(135deg, #F9D053 0%, #FFEFA8 100%);
 }
-/* Bölüm 9 – Pastel Turkuaz */
+/* Bölüm 9 – Vibrant Turquoise & Ocean */
 .unit-banner.unit-color-9 {
-  background: linear-gradient(135deg, #6BBFB0 0%, #A0DCD0 100%);
+  background: linear-gradient(135deg, #46D5C8 0%, #ACFAF3 100%);
 }
-/* Bölüm 10 – Pastel Leylak */
+/* Bölüm 10 – Vibrant Indigo & Lilac */
 .unit-banner.unit-color-10 {
-  background: linear-gradient(135deg, #A088C8 0%, #C0B0E0 100%);
+  background: linear-gradient(135deg, #9C8EF7 0%, #DED9FF 100%);
 }
 .path-bg {
   fill: none;
@@ -763,6 +763,22 @@ input {
   max-width: 440px;
   margin: 0 auto 48px;
   height: 720px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.map-landmark {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .map-landmark {
+  opacity: 0.1;
 }
 
 .unit-path-svg {
@@ -772,15 +788,15 @@ input {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
 
 .lesson-node-wrapper {
   position: absolute;
   z-index: 10;
-  width: 108px;
-  height: 108px;
+  width: 122px;
+  height: 122px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -788,8 +804,8 @@ input {
 }
 
 .lesson-node {
-  width: 92px;
-  height: 103px;
+  width: 104px;
+  height: 116px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -804,76 +820,204 @@ input {
 }
 
 .lesson-node.locked {
-  cursor: pointer;
-  filter: grayscale(0.35);
+  cursor: not-allowed;
+  filter: grayscale(0.5) opacity(0.85);
 }
 
 /* Teardrop background */
 .pin-bg {
   position: absolute;
   top: 0;
-  left: 5px;
-  width: 82px;
-  height: 82px;
+  left: 6px;
+  width: 92px;
+  height: 92px;
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
-  border: 3px solid #fff;
+  border: 4px solid #ffffff;
   box-sizing: border-box;
-  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .lesson-node.locked .pin-bg {
-  background: var(--color-locked, #b5b5b5);
-  box-shadow: 0 5px 0 var(--border-color);
+  background: linear-gradient(135deg, #e2dee8 0%, #f1edf5 100%);
+  box-shadow: 0 7px 0 #b3acbc, 0 9px 14px rgba(0,0,0,0.06);
+  border-color: #f7f5f9;
 }
 
 .lesson-node.active .pin-bg {
-  background: var(--accent-primary, #7EC8C8);
-  box-shadow: 0 5px 0 var(--accent-primary-shadow);
+  background: linear-gradient(135deg, #7EC8C8 0%, #A8DEDE 100%);
+  box-shadow: 0 7px 0 #5ca0a0, 0 9px 18px rgba(92,160,160,0.18);
 }
 
 .lesson-node.completed .pin-bg {
-  background: var(--color-correct, #8BC6A0);
-  box-shadow: 0 5px 0 #287a4f;
+  background: linear-gradient(135deg, #8BC6A0 0%, #B0DCC0 100%);
+  box-shadow: 0 7px 0 #5f9a74, 0 9px 18px rgba(95,154,116,0.15);
+}
+
+/* Color-combined vibrant pastel pin colors corresponding to each unit */
+.lesson-node.active.unit-pin-color-1 .pin-bg {
+  background: linear-gradient(135deg, #62CDCB 0%, #A5F3FC 100%);
+  box-shadow: 0 7px 0 #439E9D, 0 9px 18px rgba(67, 158, 157, 0.18);
+}
+.lesson-node.active.unit-pin-color-1:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(67, 158, 157, 0.18), 0 9px 0 #439E9D;
+}
+.lesson-node.active.unit-pin-color-1:active .pin-bg {
+  box-shadow: 0 2px 0 #439E9D, 0 4px 9px rgba(67, 158, 157, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-2 .pin-bg {
+  background: linear-gradient(135deg, #B597F6 0%, #E2D4FF 100%);
+  box-shadow: 0 7px 0 #8D6EC8, 0 9px 18px rgba(141, 110, 200, 0.18);
+}
+.lesson-node.active.unit-pin-color-2:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(141, 110, 200, 0.18), 0 9px 0 #8D6EC8;
+}
+.lesson-node.active.unit-pin-color-2:active .pin-bg {
+  box-shadow: 0 2px 0 #8D6EC8, 0 4px 9px rgba(141, 110, 200, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-3 .pin-bg {
+  background: linear-gradient(135deg, #FFA0B4 0%, #FFE3E8 100%);
+  box-shadow: 0 7px 0 #D37388, 0 9px 18px rgba(211, 115, 136, 0.18);
+}
+.lesson-node.active.unit-pin-color-3:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(211, 115, 136, 0.18), 0 9px 0 #D37388;
+}
+.lesson-node.active.unit-pin-color-3:active .pin-bg {
+  box-shadow: 0 2px 0 #D37388, 0 4px 9px rgba(211, 115, 136, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-4 .pin-bg {
+  background: linear-gradient(135deg, #7EB8F0 0%, #C2D9FF 100%);
+  box-shadow: 0 7px 0 #588FC6, 0 9px 18px rgba(88, 143, 198, 0.18);
+}
+.lesson-node.active.unit-pin-color-4:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(88, 143, 198, 0.18), 0 9px 0 #588FC6;
+}
+.lesson-node.active.unit-pin-color-4:active .pin-bg {
+  box-shadow: 0 2px 0 #588FC6, 0 4px 9px rgba(88, 143, 198, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-5 .pin-bg {
+  background: linear-gradient(135deg, #74DB96 0%, #B7F5CC 100%);
+  box-shadow: 0 7px 0 #52A66F, 0 9px 18px rgba(82, 166, 111, 0.18);
+}
+.lesson-node.active.unit-pin-color-5:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(82, 166, 111, 0.18), 0 9px 0 #52A66F;
+}
+.lesson-node.active.unit-pin-color-5:active .pin-bg {
+  box-shadow: 0 2px 0 #52A66F, 0 4px 9px rgba(82, 166, 111, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-6 .pin-bg {
+  background: linear-gradient(135deg, #FFA478 0%, #FFE2D4 100%);
+  box-shadow: 0 7px 0 #D1754B, 0 9px 18px rgba(209, 117, 75, 0.18);
+}
+.lesson-node.active.unit-pin-color-6:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(209, 117, 75, 0.18), 0 9px 0 #D1754B;
+}
+.lesson-node.active.unit-pin-color-6:active .pin-bg {
+  box-shadow: 0 2px 0 #D1754B, 0 4px 9px rgba(209, 117, 75, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-7 .pin-bg {
+  background: linear-gradient(135deg, #ED8BE0 0%, #FDD2FA 100%);
+  box-shadow: 0 7px 0 #C064B4, 0 9px 18px rgba(192, 100, 180, 0.18);
+}
+.lesson-node.active.unit-pin-color-7:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(192, 100, 180, 0.18), 0 9px 0 #C064B4;
+}
+.lesson-node.active.unit-pin-color-7:active .pin-bg {
+  box-shadow: 0 2px 0 #C064B4, 0 4px 9px rgba(192, 100, 180, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-8 .pin-bg {
+  background: linear-gradient(135deg, #F9D053 0%, #FFEFA8 100%);
+  box-shadow: 0 7px 0 #CCA024, 0 9px 18px rgba(204, 160, 36, 0.18);
+}
+.lesson-node.active.unit-pin-color-8:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(204, 160, 36, 0.18), 0 9px 0 #CCA024;
+}
+.lesson-node.active.unit-pin-color-8:active .pin-bg {
+  box-shadow: 0 2px 0 #CCA024, 0 4px 9px rgba(204, 160, 36, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-9 .pin-bg {
+  background: linear-gradient(135deg, #46D5C8 0%, #ACFAF3 100%);
+  box-shadow: 0 7px 0 #2CA297, 0 9px 18px rgba(44, 162, 151, 0.18);
+}
+.lesson-node.active.unit-pin-color-9:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(44, 162, 151, 0.18), 0 9px 0 #2CA297;
+}
+.lesson-node.active.unit-pin-color-9:active .pin-bg {
+  box-shadow: 0 2px 0 #2CA297, 0 4px 9px rgba(44, 162, 151, 0.15);
+}
+
+.lesson-node.active.unit-pin-color-10 .pin-bg {
+  background: linear-gradient(135deg, #9C8EF7 0%, #DED9FF 100%);
+  box-shadow: 0 7px 0 #7465D3, 0 9px 18px rgba(116, 101, 211, 0.18);
+}
+.lesson-node.active.unit-pin-color-10:hover:not(:active) .pin-bg {
+  box-shadow: 0 9px 18px rgba(116, 101, 211, 0.18), 0 9px 0 #7465D3;
+}
+.lesson-node.active.unit-pin-color-10:active .pin-bg {
+  box-shadow: 0 2px 0 #7465D3, 0 4px 9px rgba(116, 101, 211, 0.15);
 }
 
 /* Inner circle containing icon */
 .pin-inner {
   position: absolute;
-  top: 12px;
-  left: 17px;
-  width: 58px;
-  height: 58px;
+  top: 14px;
+  left: 19.5px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2);
   z-index: 6;
   box-sizing: border-box;
   overflow: hidden;
 }
 
+.pin-inner svg {
+  width: 68%;
+  height: 68%;
+  display: block;
+}
+
+.pin-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .pin-icon {
-  font-size: 1.9rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Padlock badge for locked lessons */
 .pin-lock-badge {
   position: absolute;
-  bottom: 22px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
+  bottom: 25px;
+  right: 11px;
+  width: 29px;
+  height: 29px;
   border-radius: 50%;
   background: #ffffff;
-  border: 2.5px solid var(--color-locked, #b5b5b5);
+  border: 2px solid #b5b5b5;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 0.94rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
   z-index: 10;
   box-sizing: border-box;
 }
@@ -881,52 +1025,51 @@ input {
 /* Active ribbon "Yeni" */
 .lesson-node-banner {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  background: #ff3b30; /* Apple/iOS vibrant Red */
+  top: -9px;
+  right: -9px;
+  background: #ff3b30; /* Duolingo-style vibrant red */
   color: #fff;
   font-family: var(--font-heading);
-  font-size: 0.65rem;
-  font-weight: 800;
-  padding: 2px 6px;
-  border-radius: 6px;
+  font-size: 0.68rem;
+  padding: 2px 9px;
+  border-radius: 7px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
-  z-index: 10;
+  z-index: 12;
+  border: 1.5px solid #ffffff;
 }
 
 /* Lesson Node Progress Badge */
 .node-progress-badge {
   position: absolute;
-  bottom: 8px;
-  right: -8px;
-  background: #ff9f43; /* Coral orange */
+  bottom: 18px;
+  right: -4px;
+  background: #ff7657; /* Coral orange */
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 0.68rem;
+  padding: 3px 9px;
+  border-radius: 14px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
   z-index: 10;
   white-space: nowrap;
-  border: 1.5px solid #fff;
+  border: 2px solid #ffffff;
 }
 
 .node-progress-badge.completed {
-  background: #287a4f; /* Green */
+  background: #2e754c; /* Green */
 }
 
 /* Swell/Raise Hover Effects with Vibration */
 @keyframes hoverVibrate {
-  0% { transform: scale(1.08) translateY(-4px) rotate(0deg); }
-  20% { transform: scale(1.08) translateY(-4px) rotate(-1.5deg); }
-  40% { transform: scale(1.08) translateY(-4px) rotate(1.5deg); }
-  60% { transform: scale(1.08) translateY(-4px) rotate(-1deg); }
-  80% { transform: scale(1.08) translateY(-4px) rotate(1deg); }
-  100% { transform: scale(1.08) translateY(-4px) rotate(0deg); }
+  0% { transform: scale(1.08) translateY(-3px) rotate(0deg); }
+  20% { transform: scale(1.08) translateY(-3px) rotate(-1.5deg); }
+  40% { transform: scale(1.08) translateY(-3px) rotate(1.5deg); }
+  60% { transform: scale(1.08) translateY(-3px) rotate(-1deg); }
+  80% { transform: scale(1.08) translateY(-3px) rotate(1deg); }
+  100% { transform: scale(1.08) translateY(-3px) rotate(0deg); }
 }
 
 .lesson-node:hover:not(:active) {
@@ -934,34 +1077,34 @@ input {
 }
 
 .lesson-node.active:hover:not(:active) .pin-bg {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12), 0 8px 0 var(--accent-primary-shadow);
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18), 0 9px 0 #c72b0c;
 }
 
 .lesson-node.completed:hover:not(:active) .pin-bg {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12), 0 8px 0 #287a4f;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.15), 0 9px 0 #1e8449;
 }
 
 .lesson-node.locked:hover:not(:active) .pin-bg {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 6px 0 var(--border-color);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.08), 0 7px 0 #7e7587;
 }
 
 /* Press animation */
 .lesson-node:active:not(.locked) {
-  transform: translateY(4px);
+  transform: translateY(3px);
 }
 
 .lesson-node.active:active .pin-bg {
-  box-shadow: 0 2px 0 var(--accent-primary-shadow);
+  box-shadow: 0 2px 0 #c72b0c, 0 4px 9px rgba(0,0,0,0.15);
 }
 
 .lesson-node.completed:active .pin-bg {
-  box-shadow: 0 2px 0 #287a4f;
+  box-shadow: 0 2px 0 #1e8449, 0 4px 9px rgba(0,0,0,0.15);
 }
 
 .pulse-ring {
   position: absolute;
-  width: 103px;
-  height: 103px;
+  width: 116px;
+  height: 116px;
   border: 4px solid var(--accent-primary);
   border-radius: 50%;
   animation: pulse 2s infinite;
@@ -1010,31 +1153,44 @@ input {
 
 .lesson-node-label {
   position: absolute;
-  top: 110px;
-  left: 50%;
-  transform: translateX(-50%);
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
   background: var(--bg-card);
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 6px 14px;
+  border-radius: 14px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  z-index: 6;
+  width: max-content;
+  max-width: 160px;
+  line-height: 1.25;
+  z-index: 10;
   pointer-events: none;
+}
+
+.lesson-node-label.label-right {
+  top: 50%;
+  left: 110px;
+  right: auto;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+.lesson-node-label.label-left {
+  top: 50%;
+  right: 110px;
+  left: auto;
+  bottom: auto;
+  transform: translateY(-50%);
 }
 
 /* Popover details */
 .lesson-popover {
   position: absolute;
-  z-index: 100;
+  z-index: 500;
   width: 290px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1437,6 +1593,56 @@ input {
   font-family: var(--font-heading);
   color: var(--color-hearts);
   font-size: 1rem;
+}
+
+.quiz-container {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.quiz-report-btn {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+  background: var(--color-wrong-bg);
+  border: 1.5px solid var(--color-wrong-border);
+  color: var(--color-wrong);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-report-btn:hover {
+  background: var(--color-wrong-bg);
+  border-color: var(--color-wrong);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.report-btn-icon {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 580px) {
+  .quiz-report-btn {
+    top: 8px;
+    right: 16px;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+  }
 }
 
 /* Quiz Body */
@@ -2227,7 +2433,7 @@ input {
 .sidebar-nav {
   background: var(--bg-card);
   border-right: 1px solid var(--border-color);
-  z-index: 200;
+  z-index: 1000;
 }
 
 /* Masaüstü (820px ve üzeri) */
@@ -3906,3 +4112,363 @@ input {
     display: none !important;
   }
 }
+
+/* Çoklu Boşluk Doldurma (multiple-fill-blank) input stilleri */
+.multi-fb-input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  margin: 0 6px;
+  width: 120px;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.multi-fb-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--color-active-glow);
+}
+
+/* ============================================================
+   HOVER KELİME ANLAMLARI (TOOLTIP) STİLLERİ
+   ============================================================ */
+
+/* Kelimenin kendisi */
+.hoverable-word {
+  position: relative;
+  border-bottom: 2px dotted var(--accent-primary, #5ab07f);
+  cursor: help;
+  display: inline-block;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: border-color var(--transition-fast, 0.2s), color var(--transition-fast, 0.2s);
+}
+
+.hoverable-word:hover {
+  border-bottom-style: solid;
+  border-bottom-color: var(--accent-primary-hover, #439a68);
+  color: var(--accent-primary, #5ab07f);
+}
+
+/* Anlamı olmayan kelimeler için alt çizgiyi gizle */
+.hoverable-word.no-meaning {
+  border-bottom: none;
+  cursor: default;
+}
+.hoverable-word.no-meaning:hover {
+  color: inherit;
+}
+
+/* Anlam kutusu (Tooltip) */
+.hoverable-word::after {
+  content: attr(data-meaning);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background-color: var(--bg-card, #ffffff);
+  color: var(--text-primary, #2d3748);
+  padding: 6px 12px;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-body), sans-serif;
+  width: max-content;
+  max-width: 220px;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.4;
+  box-shadow: var(--shadow-md, 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1));
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-top: 3px solid var(--accent-primary, #5ab07f);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1050;
+  pointer-events: none;
+}
+
+/* Tooltip oku */
+.hoverable-word::before {
+  content: '';
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--border-color, #e2e8f0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1050;
+  pointer-events: none;
+}
+
+/* Hover durumunda göster */
+.hoverable-word:not(.no-meaning):hover::after,
+.hoverable-word:not(.no-meaning):hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   SORU HATA BİLDİRİMİ MODAL STİLLERİ
+   ============================================================ */
+
+/* Custom Modal overlay */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Modal box */
+.custom-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  box-sizing: border-box;
+  animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.custom-modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  color: var(--color-wrong);
+}
+
+.report-question-info {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.report-question-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.report-question-info .info-row strong {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.report-question-info .info-row span {
+  color: var(--text-primary);
+  word-break: break-word;
+  text-align: right;
+  font-weight: 500;
+}
+
+.report-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin-top: 6px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.report-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.report-textarea:focus, .report-select:focus {
+  border-color: var(--accent-primary);
+}
+
+.custom-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+/* Reports section in profile */
+.profile-reports-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.profile-reports-list::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+}
+
+.profile-reports-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   POPOVER ALISTIRMA LISTESI TASARIMI
+   ============================================================ */
+.popover-exercises-container {
+  margin-top: 14px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popover-exercises-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+
+.popover-exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popover-exercise-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  gap: 8px;
+}
+
+.popover-exercise-row:hover:not(.locked) {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.popover-exercise-row.locked {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.popover-exercise-row .exercise-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.popover-exercise-row .exercise-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.popover-exercise-row .exercise-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.popover-exercise-row .exercise-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popover-exercise-row .exercise-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.popover-exercise-row .exercise-start-btn {
+  padding: 5px 14px;
+  font-size: 0.72rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+

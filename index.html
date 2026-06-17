@@ -151,6 +151,13 @@
     <div class="home-body-layout">
       <!-- Sol Sidebar (Masaüstü için Dikey Menü, Mobil için Alt Bar) -->
       <aside class="sidebar-nav">
+        <div class="sidebar-brand">
+          <div class="sidebar-logo-frame">
+            <img src="assets/logo.png" alt="amok logo" class="sidebar-logo">
+          </div>
+          <h2 class="sidebar-title">amok</h2>
+          <span class="sidebar-subtitle">Akademik Metinleri Okuma Kılavuzu</span>
+        </div>
         <nav class="sidebar-menu">
           <button class="nav-tab active" data-tab="lessons">
             <span class="nav-tab-icon">📚</span>
@@ -373,8 +380,13 @@
       </div>
     </div>
 
-    <div class="quiz-body" id="quiz-body">
-      <!-- Soru içeriği app.js tarafından dinamik olarak oluşturulacak -->
+    <div class="quiz-container">
+      <button class="quiz-report-btn" id="quiz-report" title="Soru Hatası Bildir">
+        <span class="report-btn-icon">⚠️</span> Soruda Hata Bildir
+      </button>
+      <div class="quiz-body" id="quiz-body">
+        <!-- Soru içeriği app.js tarafından dinamik olarak oluşturulacak -->
+      </div>
     </div>
 
     <div class="quiz-footer" id="quiz-footer">
