@@ -57,8 +57,8 @@ let isReviewMode = false;
 let reviewQuestions = [];
 let placementQuestionsList = [];
 
-// E-posta Bildirim Ayarları (Kullanıcı e-postasını kodda gizlemek için Base64 kullanılmıştır)
-const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ=="; // f94120015@gmail.com
+// E-posta Bildirim Ayarları
+const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
 
 // ============================================================
 // KELİME SÖZLÜĞÜ VE HOVER ÇEVİRİ ALTYAPISI
@@ -245,6 +245,24 @@ buildDynamicDictionary();
 // ============================================================
 // YARDIMCI FONKSİYONLAR
 // ============================================================
+
+// Güvenlik: XSS koruması için HTML escape fonksiyonu
+function escapeHtml(str) {
+  if (typeof str !== 'string') return str;
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Güvenlik: Şifre hash'leme (SHA-256)
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
@@ -252,8 +270,13 @@ function saveState() {
 function loadState() {
   const saved = localStorage.getItem(STATE_KEY);
   if (saved) {
-    const parsed = JSON.parse(saved);
-    state = { ...state, ...parsed };
+    try {
+      const parsed = JSON.parse(saved);
+      state = { ...state, ...parsed };
+    } catch (e) {
+      console.error('State yükleme hatası, varsayılan state kullanılacak:', e);
+      localStorage.removeItem(STATE_KEY);
+    }
   }
   // Initialize daily tasks if missing or empty
   if (!state.dailyTasks || !state.dailyTasks.tasks || state.dailyTasks.tasks.length === 0) {
@@ -285,12 +308,20 @@ function loadState() {
 
 function getUsers() {
   const u = localStorage.getItem(USERS_KEY);
-  return u ? JSON.parse(u) : {};
+  if (!u) return {};
+  try {
+    return JSON.parse(u);
+  } catch (e) {
+    console.error('Kullanıcı veritabanı bozuk, sıfırlanıyor:', e);
+    localStorage.removeItem(USERS_KEY);
+    return {};
+  }
 }
 
-function saveUser(username, password) {
+async function saveUser(username, password) {
   const users = getUsers();
-  users[username] = { password, createdAt: new Date().toISOString() };
+  const hashedPassword = await hashPassword(password);
+  users[username] = { password: hashedPassword, createdAt: new Date().toISOString() };
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
 }
 
@@ -509,7 +540,7 @@ function initAuth() {
   });
 
   // Giriş
-  loginForm.addEventListener('submit', (e) => {
+  loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = document.getElementById('login-username').value.trim();
     const password = document.getElementById('login-password').value;
@@ -519,7 +550,8 @@ function initAuth() {
       showToast('Kullanıcı bulunamadı!', 'error');
       return;
     }
-    if (users[username].password !== password) {
+    const hashedInput = await hashPassword(password);
+    if (users[username].password !== hashedInput) {
       showToast('Şifre yanlış!', 'error');
       return;
     }
@@ -527,7 +559,11 @@ function initAuth() {
     // Kullanıcının state'ini yükle
     const userState = localStorage.getItem(`amok_state_${username}`);
     if (userState) {
-      state = { ...state, ...JSON.parse(userState) };
+      try {
+        state = { ...state, ...JSON.parse(userState) };
+      } catch (e) {
+        console.error('Kullanıcı state yükleme hatası:', e);
+      }
     }
 
     state.username = username;
@@ -537,7 +573,7 @@ function initAuth() {
   });
 
   // Kayıt
-  registerForm.addEventListener('submit', (e) => {
+  registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = document.getElementById('register-username').value.trim();
     const email = document.getElementById('register-email').value.trim();
@@ -554,7 +590,7 @@ function initAuth() {
       return;
     }
 
-    saveUser(username, password);
+    await saveUser(username, password);
     state = {
       ...state,
       username,
@@ -2206,10 +2242,10 @@ function renderProfile() {
   container.innerHTML = `
     <div class="profile-header-card">
       <div class="profile-avatar-wrap">
-        <div class="profile-avatar">${firstLetter}</div>
+        <div class="profile-avatar">${escapeHtml(firstLetter)}</div>
       </div>
       <div class="profile-user-details">
-        <h2 class="profile-username">${state.username || 'Kullanıcı'}</h2>
+        <h2 class="profile-username">${escapeHtml(state.username || 'Kullanıcı')}</h2>
         <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
       </div>
     </div>
@@ -2424,22 +2460,22 @@ function renderSocialList() {
     if (activeSocialSubTab === 'following') {
       actionBtn = `
         <div class="social-action-buttons">
-          <button class="social-btn social-kudos-btn" onclick="congratulateFriend('${user.username}')" title="Tebrik Et">👏</button>
-          <button class="social-btn social-unfollow-btn" onclick="toggleFollowUser('${user.username}', false)">Takipten Çık</button>
+          <button class="social-btn social-kudos-btn" data-action="kudos" data-username="${escapeHtml(user.username)}" title="Tebrik Et">👏</button>
+          <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}">Takipten Çık</button>
         </div>
       `;
     } else {
       // Followers tab
       actionBtn = isFollowing 
         ? `<span class="social-status-text">Takip Ediliyor</span>`
-        : `<button class="social-btn social-follow-btn" onclick="toggleFollowUser('${user.username}', true)">Geri Takip Et</button>`;
+        : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}">Geri Takip Et</button>`;
     }
 
     return `
       <div class="friend-card">
-        <div class="friend-avatar" style="background-color: ${user.avatarColor || '#7EC8C8'}">${letter}</div>
+        <div class="friend-avatar" style="background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}">${escapeHtml(letter)}</div>
         <div class="friend-details">
-          <span class="friend-name">${user.username}</span>
+          <span class="friend-name">${escapeHtml(user.username)}</span>
           <div class="friend-meta">
             <span class="friend-stat">⚡ ${user.xp} Puan</span>
             ${user.streak > 0 ? `<span class="friend-stat">🔥 ${user.streak} Gün</span>` : ''}
@@ -2449,6 +2485,17 @@ function renderSocialList() {
       </div>
     `;
   }).join('');
+
+  // Güvenlik: addEventListener ile olay dinleyicilerini bağla (inline onclick yerine)
+  contentEl.querySelectorAll('[data-action="kudos"]').forEach(btn => {
+    btn.addEventListener('click', () => congratulateFriend(btn.dataset.username));
+  });
+  contentEl.querySelectorAll('[data-action="unfollow"]').forEach(btn => {
+    btn.addEventListener('click', () => toggleFollowUser(btn.dataset.username, false));
+  });
+  contentEl.querySelectorAll('[data-action="follow"]').forEach(btn => {
+    btn.addEventListener('click', () => toggleFollowUser(btn.dataset.username, true));
+  });
 }
 
 function searchSocialUsers() {
@@ -2503,18 +2550,25 @@ function searchSocialUsers() {
         
         return `
           <div class="search-result-card">
-            <div class="friend-avatar small" style="background-color: ${user.avatarColor || '#7EC8C8'}">${letter}</div>
+            <div class="friend-avatar small" style="background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}">${escapeHtml(letter)}</div>
             <div class="search-result-details">
-              <span class="search-result-name">${user.username}</span>
+              <span class="search-result-name">${escapeHtml(user.username)}</span>
               <span class="search-result-xp">⚡ ${user.xp} Puan</span>
             </div>
-            <button class="social-btn ${btnClass}" onclick="toggleFollowUser('${user.username}', ${!isFollowing})">${btnText}</button>
+            <button class="social-btn ${btnClass}" data-action="toggle-follow" data-username="${escapeHtml(user.username)}" data-follow="${!isFollowing}">${btnText}</button>
           </div>
         `;
       }).join('')}
     </div>
   `;
   resultsEl.style.display = 'block';
+
+  // Güvenlik: addEventListener ile olay dinleyicilerini bağla
+  resultsEl.querySelectorAll('[data-action="toggle-follow"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggleFollowUser(btn.dataset.username, btn.dataset.follow === 'true');
+    });
+  });
 }
 
 function toggleFollowUser(username, isFollowing) {
@@ -2595,7 +2649,7 @@ function renderLeaderboard() {
 
   const competitors = [
     ...baseCompetitors,
-    { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true }
+    { name: escapeHtml((state.username || 'Misafir') + " (Sen)"), xp: state.xp, isUser: true }
   ];
 
   competitors.sort((a, b) => b.xp - a.xp);
@@ -2608,7 +2662,7 @@ function renderLeaderboard() {
     return `
       <tr class="leaderboard-row ${c.isUser ? 'user-row' : ''} ${rankClass}">
         <td><span class="rank-badge">${rank}</span></td>
-        <td>${c.name}</td>
+        <td>${escapeHtml(c.name)}</td>
         <td>${c.xp} Puan</td>
       </tr>
     `;
@@ -3275,11 +3329,11 @@ function showReportModal() {
         <div class="report-question-info">
           <div class="info-row">
             <strong>Soru Metni:</strong>
-            <span>${questionText}</span>
+            <span>${escapeHtml(questionText)}</span>
           </div>
           <div class="info-row">
             <strong>Soru ID:</strong>
-            <span>${question.id}</span>
+            <span>${escapeHtml(question.id)}</span>
           </div>
         </div>
         
@@ -3325,9 +3379,13 @@ function showReportModal() {
 }
 
 function submitReport(question, errorType, comment) {
-  const reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-  
-  // Find the lesson associated with this question dynamically
+  let reports;
+  try {
+    reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+  } catch (e) {
+    console.error('Rapor veritabanı bozuk, sıfırlanıyor:', e);
+    reports = [];
+  }
   const questionLesson = (typeof lessons !== 'undefined') ? lessons.find(l => l.questions.some(q => q.id === question.id)) : null;
   const activeLesson = questionLesson || currentLesson;
   const lessonTitleStr = activeLesson ? `${activeLesson.id}. Ders (${activeLesson.subtitle})` : (isReviewMode ? 'Hızlı Tekrar' : 'N/A');
@@ -3399,7 +3457,13 @@ function sendReportEmail(report) {
 }
 
 function getReportsHTML() {
-  const reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+  let reports;
+  try {
+    reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+  } catch (e) {
+    console.error('Raporlar yüklenemedi:', e);
+    reports = [];
+  }
   if (reports.length > 0) {
     return `
       <h3 class="profile-section-title" style="margin-top: 24px;">⚠️ Soru Hata Bildirimleri (${reports.length})</h3>
@@ -3408,16 +3472,16 @@ function getReportsHTML() {
           ${reports.map(rep => `
             <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px; font-size: 0.82rem; line-height: 1.4; text-align: left;">
               <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
-                <span>${rep.lessonTitle} (ID: ${rep.questionId})</span>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${rep.timestamp}</span>
+                <span>${escapeHtml(rep.lessonTitle)} (ID: ${escapeHtml(rep.questionId)})</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${escapeHtml(rep.timestamp)}</span>
               </div>
-              <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Soru:</strong> <span style="font-style: italic;">${rep.questionPrompt}</span></div>
+              <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Soru:</strong> <span style="font-style: italic;">${escapeHtml(rep.questionPrompt)}</span></div>
               <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Hata Türü:</strong> <span style="background: var(--accent-primary-light); color: var(--accent-primary-hover); padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">${translateErrorType(rep.errorType)}</span></div>
               <div style="background: var(--bg-card); border-left: 3px solid var(--color-wrong, #ff3b30); padding: 6px 10px; border-radius: 2px 4px 4px 2px; margin-top: 6px; color: var(--text-primary);">
-                <strong>Kullanıcı Yorumu (${rep.username}):</strong> ${rep.userComment}
+                <strong>Kullanıcı Yorumu (${escapeHtml(rep.username)}):</strong> ${escapeHtml(rep.userComment)}
               </div>
             </div>
-          `).join('')}
+          `).join('')}}
         </div>
         <div class="profile-actions-buttons">
           <button class="btn btn-secondary" id="btn-export-reports">JSON Olarak İndir</button>
