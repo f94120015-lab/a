@@ -2715,6 +2715,38 @@ input {
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 12px var(--accent-primary-light);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.profile-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+.avatar-edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  border-radius: var(--radius-full);
+}
+
+.profile-avatar:hover .avatar-edit-overlay {
+  opacity: 1;
 }
 
 .profile-user-details {

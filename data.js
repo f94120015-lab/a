@@ -1,3 +1,155 @@
+const unit1IntroSentencesRaw = [
+  { en: "Data analysis", tr: "Veri analizi" },
+  { en: "Income distribution", tr: "Gelir dağılımı" },
+  { en: "Research method", tr: "Araştırma yöntemi" },
+  { en: "Finance sector", tr: "Finans sektörü" },
+  { en: "Labour policy", tr: "İş gücü politikası" },
+  { en: "Computer technology", tr: "Bilgisayar teknolojisi" },
+  { en: "Investment strategy", tr: "Yatırım stratejisi" },
+  { en: "Resource allocation", tr: "Kaynak tahsisi" },
+  { en: "Structure analysis", tr: "Yapı analizi" },
+  { en: "Energy source", tr: "Enerji kaynağı" },
+  { en: "Contract law", tr: "Sözleşme hukuku" },
+  { en: "Quality control", tr: "Kalite kontrol" },
+  { en: "Data analysis process", tr: "Veri analizi süreci" },
+  { en: "Computer network security", tr: "Bilgisayar ağı güvenliği" },
+  { en: "Research project design", tr: "Araştırma projesi tasarımı" },
+  { en: "Environment assessment methodology", tr: "Çevre değerlendirme metodolojisi" },
+  { en: "Financial sector policy", tr: "Finansal sektör politikası" },
+  { en: "Target identity factor", tr: "Hedef kimlik faktörü" },
+  { en: "Resource distribution strategy", tr: "Kaynak dağıtımı stratejisi" },
+  { en: "Legal contract framework", tr: "Yasal sözleşme çerçevesi" },
+  { en: "Project team leader", tr: "Proje ekibi lideri" },
+  { en: "Economy growth rate", tr: "Ekonomik büyüme oranı" },
+  { en: "Consumer trend research", tr: "Tüketici eğilimi araştırması" },
+  { en: "Credit card security", tr: "Kredi kartı güvenliği" },
+  { en: "Data analysis team role", tr: "Veri analizi ekibi rolü" },
+  { en: "Computer network security policy", tr: "Bilgisayar ağı güvenliği politikası" },
+  { en: "Global trade investment strategy", tr: "Küresel ticaret yatırım stratejisi" },
+  { en: "Environment impact assessment method", tr: "Çevresel etki değerlendirme yöntemi" },
+  { en: "Core team research project", tr: "Çekirdek ekip araştırma projesi" },
+  { en: "Individual income distribution category", tr: "Bireysel gelir dağılımı kategorisi" },
+  { en: "Sector resource allocation process", tr: "Sektör kaynak tahsisi süreci" },
+  { en: "Text analysis research design", tr: "Metin analizi araştırma tasarımı" },
+  { en: "Market research data analysis", tr: "Pazar araştırması veri analizi" },
+  { en: "Information technology sector policy", tr: "Bilgi teknolojisi sektörü politikası" },
+  { en: "Government policy reform process", tr: "Hükümet politikası reform süreci" },
+  { en: "Data collection method design", tr: "Veri toplama yöntemi tasarımı" },
+  { en: "Academic research project resource allocation", tr: "Akademik araştırma projesi kaynak tahsisi" },
+  { en: "Computer network security policy framework", tr: "Bilgisayar ağı güvenliği politikası çerçevesi" },
+  { en: "Data analysis team research project", tr: "Veri analizi ekibi araştırma projesi" },
+  { en: "Global finance sector investment policy", tr: "Küresel finans sektörü yatırım politikası" },
+  { en: "Media text analysis research methodology", tr: "Medya metni analizi araştırma metodolojisi" },
+  { en: "Institutional policy resource distribution process", tr: "Kurumsal politika kaynak dağıtımı süreci" },
+  { en: "Individual task assessment criteria structure", tr: "Bireysel görev değerlendirme kriterleri yapısı" },
+  { en: "International trade law contract framework", tr: "Uluslararası ticaret hukuku sözleşme çerçevesi" }
+];
+
+function buildCustomExerciseQuestions(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // 1. Matching (1 question with 4 pairs)
+  const matchSents = sentences.slice(0, 4);
+  if (matchSents.length >= 2) {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_match`,
+      type: "matching",
+      prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+      pairs: matchSents.map(s => ({
+        left: s.tr,
+        right: s.en
+      }))
+    });
+  }
+
+  // 2. Multiple Choice (4 questions)
+  const mcSents = sentences.slice(4, 8);
+  mcSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      sA.tr,
+      shuffledWrongs[0].tr,
+      shuffledWrongs[1].tr,
+      shuffledWrongs[2].tr
+    ]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${sA.en}" ifadesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(sA.tr),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 3. Translation Text (4 questions)
+  const txSents = sentences.slice(8, 12);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 4. Word Bank (remaining questions)
+  const wbSents = sentences.slice(12);
+  wbSents.forEach((sA, idx) => {
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  return qList;
+}
+
+const unit1IntroSentences = {
+  exercises: [
+    {
+      id: "intro_ex1",
+      title: "Alıştırma 1: Temel İsim Tamlamaları",
+      description: "Eşleştirme, Çoktan Seçmeli ve Çeviri (1-15)",
+      questions: buildCustomExerciseQuestions(unit1IntroSentencesRaw.slice(0, 15), 1, 1, 1)
+    },
+    {
+      id: "intro_ex2",
+      title: "Alıştırma 2: Orta Seviye İsim Tamlamaları",
+      description: "Çoktan Seçmeli, Kelime Bankası ve Çeviri (16-30)",
+      questions: buildCustomExerciseQuestions(unit1IntroSentencesRaw.slice(15, 30), 1, 1, 2)
+    },
+    {
+      id: "intro_ex3",
+      title: "Alıştırma 3: İleri Seviye İsim Tamlamaları",
+      description: "Karma Alıştırmalar ve Çeviri (31-44)",
+      questions: buildCustomExerciseQuestions(unit1IntroSentencesRaw.slice(30), 1, 1, 3)
+    }
+  ]
+};
+
 const unit1LessonSentences = {
   1: {
     exercises: [
@@ -1859,7 +2011,91 @@ const unit25LessonSentences = {
 
 const rawTopics = [
   {
-    title: "I. Yapılar",
+    title: "I. İsim ve Edat Takımları",
+    desc: "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
+    icon: "👋",
+    numLessons: 7,
+    formulas: [
+      { 
+        formula: "", 
+        example: "",
+        description: "İngilizce'de aralarında edat (in, on, of, with vb.) veya bağlaç bulunmayan, yan yana dizilmiş kelime öbekleri (tamlamalar), kelime sayısı kaç olursa olsun soldan sağa doğru sırayla bir bütün olarak anlamlandırılarak Türkçe'ye çevrilir.<br><br><strong>Örnekler:</strong><br>• Airport ground control tower: Havalimanı yer kontrol kulesi<br>• Emergency room heart surgery team: Acil servis kalp ameliyatı ekibi"
+      },
+      { formula: "Noun + of the + Noun", example: "The legs of the animal: Hayvanın bacakları" },
+      { formula: "Pronoun + of the + Noun", example: "Some of the prices: Fiyatların bazıları" },
+      { formula: "Noun + of + Noun", example: "The invention of fire: Ateşin icadı" },
+      { formula: "Noun + from + Noun", example: "A student from England: İngiltere'den bir öğrenci" },
+      { formula: "Noun + Prepositional Phrase", example: "the house on the corner: köşedeki ev / köşede olan ev / köşede bulunan ev (Edat takımı önündeki ismi tamamlar - çevrilirken '-ki', '-olan', '-bulunan' eklenebilir)" },
+      { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" }
+    ],
+    subtitles: [
+      "Giriş. İsim ve Edat Takımlarına Giriş",
+      "A. İsim + of the + isim (Sayfa 13)",
+      "B. Zamir + of the + isim (Sayfa 14)",
+      "C. İsim + of + isim (Sayfa 16)",
+      "D. İsim + from + isim (Sayfa 17)",
+      "E. İsim + edat takımı (Sayfa 13)",
+      "F. İsim + edat takımı + edat takımı (Sayfa 19)"
+    ]
+  },
+  {
+    title: "II. Fiil ve Edat Takımları",
+    desc: "Fiillerin edat grupları ve zarflarla olan ilişkileri",
+    icon: "🎧",
+    numLessons: 2,
+    formulas: [
+      { formula: "Verb + Prepositional Phrase", example: "We describe this method in the next chapter: Bu yöntemi gelecek bölümde tanımlıyoruz" },
+      { formula: "Prepositional Phrase + Prepositional Phrase", example: "Before the invention of the wheel: Tekerleğin icadından önce" }
+    ],
+    subtitles: [
+      "A. Fiil + edat takımı (Sayfa 21)",
+      "B. Edat takımı + edat takımı (Sayfa 23)"
+    ]
+  },
+  {
+    title: "III. İsim Tamlaması (Sayfa 72)",
+    desc: "İsim tamlamaları ve bileşik isim grupları",
+    icon: "🎯",
+    numLessons: 2,
+    formulas: [
+      { formula: "Noun + Noun", example: "Income distribution: Gelir dağılımı" },
+      { formula: "Adj + Noun + Noun", example: "Compound Noun Phrases: Bileşik isim tamlamaları" }
+    ],
+    subtitles: [
+      "A. İsim + isim (Sayfa 72)",
+      "B. İsim + isim + isim (Sayfa 78)"
+    ]
+  },
+  {
+    title: "IV. Present Participle Sıfatı (-ing) (Sayfa 81)",
+    desc: "Present participle sıfat olarak kullanımı ve niteleme yapıları",
+    icon: "🌸",
+    numLessons: 2,
+    formulas: [
+      { formula: "Present Participle (...ing) + Noun", example: "Growing population: Büyüyen nüfus" },
+      { formula: "Noun + ...ing + Noun", example: "Factor limiting the growth: Büyümeyi sınırlayan faktör" }
+    ],
+    subtitles: [
+      "A. ...ing + isim (Sayfa 81)",
+      "B. İsim + ...ing + isim (Sayfa 84)"
+    ]
+  },
+  {
+    title: "V. Past Participle Sıfatı (-ed) (Sayfa 85)",
+    desc: "Past participle sıfat olarak kullanımı ve zarflı niteleme grupları",
+    icon: "🌲",
+    numLessons: 2,
+    formulas: [
+      { formula: "Past Participle (...ed) + Noun", example: "Analytical data obtained: Elde edilen analitik veri" },
+      { formula: "Adverb + Past Participle + Noun", example: "Carefully analysed data: Dikkatlice analiz edilmiş veri" }
+    ],
+    subtitles: [
+      "A. ...ed + isim (Sayfa 85)",
+      "B. Zarf + past participle + isim (Sayfa 88)"
+    ]
+  },
+  {
+    title: "VI. Yapılar",
     desc: "Özne + Olmak Fiili + İsim/Sıfat/Sıfat+İsim/Edat Takımı ile temel cümle yapıları",
     icon: "⭐",
     numLessons: 4,
@@ -1874,84 +2110,6 @@ const rawTopics = [
       "B. Özne + olmak + sıfat (Sayfa 2)",
       "C. Özne + olmak + sıfat + isim (Sayfa 4)",
       "D. Özne + olmak + edat takımı (Sayfa 6)"
-    ]
-  },
-  {
-    title: "II. İsim ve Edat Takımları",
-    desc: "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
-    icon: "👋",
-    numLessons: 6,
-    formulas: [
-      { formula: "Noun + Prepositional Phrase", example: "the house on the corner: köşedeki ev / köşede olan ev / köşede bulunan ev (Edat takımı önündeki ismi tamamlar - çevrilirken '-ki', '-olan', '-bulunan' eklenebilir)" },
-      { formula: "Noun + of the + Noun", example: "The legs of the animal: Hayvanın bacakları" },
-      { formula: "Pronoun + of the + Noun", example: "Some of the prices: Fiyatların bazıları" },
-      { formula: "Noun + of + Noun", example: "The invention of fire: Ateşin icadı" },
-      { formula: "Noun + from + Noun", example: "A student from England: İngiltere'den bir öğrenci" },
-      { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" }
-    ],
-    subtitles: [
-      "A. İsim + edat takımı (Sayfa 13)",
-      "B. İsim + of the + isim (Sayfa 13)",
-      "C. Zamir + of the + isim (Sayfa 14)",
-      "D. İsim + of + isim (Sayfa 16)",
-      "E. İsim + from + isim (Sayfa 17)",
-      "F. İsim + edat takımı + edat takımı (Sayfa 19)"
-    ]
-  },
-  {
-    title: "III. Fiil ve Edat Takımları",
-    desc: "Fiillerin edat grupları ve zarflarla olan ilişkileri",
-    icon: "🎧",
-    numLessons: 2,
-    formulas: [
-      { formula: "Verb + Prepositional Phrase", example: "We describe this method in the next chapter: Bu yöntemi gelecek bölümde tanımlıyoruz" },
-      { formula: "Prepositional Phrase + Prepositional Phrase", example: "Before the invention of the wheel: Tekerleğin icadından önce" }
-    ],
-    subtitles: [
-      "A. Fiil + edat takımı (Sayfa 21)",
-      "B. Edat takımı + edat takımı (Sayfa 23)"
-    ]
-  },
-  {
-    title: "IV. İsim Tamlaması (Sayfa 72)",
-    desc: "İsim tamlamaları ve bileşik isim grupları",
-    icon: "🎯",
-    numLessons: 2,
-    formulas: [
-      { formula: "Noun + Noun", example: "Income distribution: Gelir dağılımı" },
-      { formula: "Adj + Noun + Noun", example: "Compound Noun Phrases: Bileşik isim tamlamaları" }
-    ],
-    subtitles: [
-      "A. İsim + isim (Sayfa 72)",
-      "B. İsim + isim + isim (Sayfa 78)"
-    ]
-  },
-  {
-    title: "V. Present Participle Sıfatı (-ing) (Sayfa 81)",
-    desc: "Present participle sıfat olarak kullanımı ve niteleme yapıları",
-    icon: "🌸",
-    numLessons: 2,
-    formulas: [
-      { formula: "Present Participle (...ing) + Noun", example: "Growing population: Büyüyen nüfus" },
-      { formula: "Noun + ...ing + Noun", example: "Factor limiting the growth: Büyümeyi sınırlayan faktör" }
-    ],
-    subtitles: [
-      "A. ...ing + isim (Sayfa 81)",
-      "B. İsim + ...ing + isim (Sayfa 84)"
-    ]
-  },
-  {
-    title: "VI. Past Participle Sıfatı (-ed) (Sayfa 85)",
-    desc: "Past participle sıfat olarak kullanımı ve zarflı niteleme grupları",
-    icon: "🌲",
-    numLessons: 2,
-    formulas: [
-      { formula: "Past Participle (...ed) + Noun", example: "Analytical data obtained: Elde edilen analitik veri" },
-      { formula: "Adverb + Past Participle + Noun", example: "Carefully analysed data: Dikkatlice analiz edilmiş veri" }
-    ],
-    subtitles: [
-      "A. ...ed + isim (Sayfa 85)",
-      "B. Zarf + past participle + isim (Sayfa 88)"
     ]
   },
   {
@@ -2291,34 +2449,35 @@ let globalLessonCounter = 1;
 
 const unitSentencesMap = {
   1: {
-    1: unit1LessonSentences[1],
-    2: unit1LessonSentences[2],
-    3: unit1LessonSentences[3],
-    4: unit1LessonSentences[4]
-  },
-  2: {
-    1: unit3LessonSentences[1],
+    1: unit1IntroSentences,
     2: unit3LessonSentences[2],
     3: unit3LessonSentences[3],
     4: unit3LessonSentences[4],
     5: unit3LessonSentences[5],
-    6: unit3LessonSentences[6]
+    6: unit3LessonSentences[1],
+    7: unit3LessonSentences[6]
   },
-  3: {
+  2: {
     1: unit4LessonSentences[1],
     2: unit4LessonSentences[2]
   },
-  4: {
+  3: {
     1: unit2LessonSentences[2],
     2: unit2LessonSentences[4]
   },
-  5: {
+  4: {
     1: unit2LessonSentences[5],
     2: unit2LessonSentences[6]
   },
-  6: {
+  5: {
     1: unit2LessonSentences[7],
     2: unit2LessonSentences[8]
+  },
+  6: {
+    1: unit1LessonSentences[1],
+    2: unit1LessonSentences[2],
+    3: unit1LessonSentences[3],
+    4: unit1LessonSentences[4]
   },
   7: {
     1: [...unit4LessonSentences[3], ...unit4LessonSentences[4]]
@@ -2440,7 +2599,7 @@ rawTopics.forEach((topic, uIdx) => {
           id: ex.id,
           title: ex.title,
           description: ex.description || "",
-          questions: []
+          questions: ex.questions || []
         }));
       } else if (Array.isArray(data) && data.length > 0) {
         lessonExercises = generateDynamicExercises(unitId, lessonId, data);
@@ -2453,9 +2612,9 @@ rawTopics.forEach((topic, uIdx) => {
     }
 
     // İsim tamlaması ünitesinde çoklu boşluk doldurma sorusu ekle
-    if (unitId === 4 && lIdx === 0) {
+    if (unitId === 3 && lIdx === 0) {
       questions.push({
-        id: `u4l1_multi_fb`,
+        id: `u3l1_multi_fb`,
         type: "multiple-fill-blank",
         prompt: "Fill in the Blanks:",
         sentence: "An objection is a ___ between smth that a ___ wants and something that you, in their opinion, ___.",
@@ -2475,7 +2634,8 @@ rawTopics.forEach((topic, uIdx) => {
       questions: questions,
       exercises: lessonExercises,
       formula: topic.formulas && topic.formulas[lIdx] ? topic.formulas[lIdx].formula : "",
-      example: topic.formulas && topic.formulas[lIdx] ? topic.formulas[lIdx].example : ""
+      example: topic.formulas && topic.formulas[lIdx] ? topic.formulas[lIdx].example : "",
+      description: topic.formulas && topic.formulas[lIdx] ? (topic.formulas[lIdx].description || "") : ""
     });
   }
   globalLessonCounter += numLessons;

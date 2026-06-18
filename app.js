@@ -23,6 +23,7 @@ let state = {
   wrongQuestions: [],
   streakFreezeBought: false,
   activeTheme: 'canva',
+  profilePhoto: null,
   dailyTasks: {
     lastResetDate: null,
     tasks: []
@@ -951,15 +952,15 @@ function getLessonIllustration(lessonId, unitId) {
   // Default fallback
   let category = 'school';
 
-  if (unitId === 1 || unitId === 2) {
+  if (unitId === 1 || unitId === 6) {
     category = 'grammar';
-  } else if (unitId === 3) {
+  } else if (unitId === 2) {
     category = 'soup';
-  } else if (unitId === 4) {
+  } else if (unitId === 3) {
     category = 'time';
-  } else if (unitId === 5) {
+  } else if (unitId === 4) {
     category = 'blocks';
-  } else if (unitId === 6) {
+  } else if (unitId === 5) {
     category = 'multilingual';
   } else if (unitId === 7) {
     category = 'greetings';
@@ -1002,10 +1003,10 @@ function getLessonIllustration(lessonId, unitId) {
   }
 
   // Inject variety
-  if (lessonIndex === 1 && (unitId === 3 || unitId === 7 || unitId === 8)) {
+  if (lessonIndex === 1 && (unitId === 2 || unitId === 7 || unitId === 8)) {
     category = 'calendar';
   }
-  if (lessonIndex === 2 && (unitId === 1 || unitId === 2 || unitId === 9 || unitId === 18)) {
+  if (lessonIndex === 2 && (unitId === 1 || unitId === 6 || unitId === 9 || unitId === 18)) {
     category = 'chatbot';
   }
 
@@ -1379,6 +1380,13 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         <div class="grammar-preview-box">
           <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>
           <div class="grammar-example">Örnek: ${styledExample}</div>
+          ${lesson.description ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.4; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);">${lesson.description}</div>` : ''}
+        </div>
+      `;
+    } else if (lesson.description) {
+      previewHTML = `
+        <div class="grammar-preview-box">
+          <div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">${lesson.description}</div>
         </div>
       `;
     } else if (lessonIndex === 0) {
@@ -2403,6 +2411,37 @@ const MOCK_ONLINE_USERS = [
   { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' }
 ];
 
+function handleProfilePhotoUpload(file) {
+  if (!file) return;
+  if (!file.type.startsWith('image/')) {
+    showToast('Lütfen geçerli bir resim dosyası seçin!', 'error');
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      canvas.width = 128;
+      canvas.height = 128;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, 128, 128);
+      
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+      state.profilePhoto = dataUrl;
+      saveState();
+      
+      updateTopBar();
+      renderProfile();
+      renderSocialList();
+      showToast('Profil fotoğrafı güncellendi! 📸', 'success');
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
 function renderProfile() {
   const container = document.querySelector('#tab-content-profile .profile-container');
   if (!container) return;
@@ -2434,10 +2473,20 @@ function renderProfile() {
     `;
   }).join('');
 
+  const avatarContent = state.profilePhoto 
+    ? `<img src="${state.profilePhoto}" alt="Profil Fotoğrafı" class="profile-avatar-img">`
+    : escapeHtml(firstLetter);
+
   container.innerHTML = `
     <div class="profile-header-card">
       <div class="profile-avatar-wrap">
-        <div class="profile-avatar">${escapeHtml(firstLetter)}</div>
+        <div class="profile-avatar" id="profile-avatar-trigger" title="Profil fotoğrafını değiştir">
+          ${avatarContent}
+          <div class="avatar-edit-overlay">
+            <span>📷 Düzenle</span>
+          </div>
+        </div>
+        <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
       </div>
       <div class="profile-user-details">
         <h2 class="profile-username">${escapeHtml(state.username || 'Kullanıcı')}</h2>
@@ -2451,7 +2500,7 @@ function renderProfile() {
         <div class="guest-alert-body">
           <h3>İlerlemeni Kaydet!</h3>
           <p>Misafir modunda tarayıcı verileri silindiğinde ilerlemen kaybolabilir. Ücretsiz bir hesap açarak serini ve puanlarını koru!</p>
-          <button class="btn btn-primary btn-sm" id="btn-profile-register">Hesap Oluştur / Giriş Yap</button>
+          <button class="btn btn-primary btn-full" id="btn-profile-register">Hesap Oluştur / Giriş Yap</button>
         </div>
       </div>
     ` : ''}
@@ -2505,10 +2554,29 @@ function renderProfile() {
   `;
 
   // Attach event listeners
-  if (isGuest) {
-    document.getElementById('btn-profile-register').addEventListener('click', () => {
-      logout(); // Will log out and show auth screen
+  const avatarTrigger = document.getElementById('profile-avatar-trigger');
+  const fileInput = document.getElementById('profile-photo-input');
+  
+  if (avatarTrigger && fileInput) {
+    avatarTrigger.addEventListener('click', () => {
+      fileInput.click();
     });
+    
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        handleProfilePhotoUpload(file);
+      }
+    });
+  }
+
+  if (isGuest) {
+    const regBtn = document.getElementById('btn-profile-register');
+    if (regBtn) {
+      regBtn.addEventListener('click', () => {
+        logout();
+      });
+    }
   }
 
   document.getElementById('btn-profile-logout').addEventListener('click', () => {
@@ -2524,6 +2592,7 @@ function renderProfile() {
       state.hearts = MAX_HEARTS;
       state.wrongQuestions = [];
       state.streakFreezeBought = false;
+      state.profilePhoto = null;
       state.dailyTasks = {
         lastResetDate: new Date().toDateString(),
         tasks: getInitialDailyTasks()
