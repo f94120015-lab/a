@@ -253,7 +253,13 @@ const unit3LessonSentences = {
     { en: "The bones in the arm", tr: "Koldaki kemikler", word: "bones", trWord: "kemikler", blank: "The ___ in the arm" },
     { en: "The heat in the metal", tr: "Metaldeki ısı", word: "heat", trWord: "ısı", blank: "The ___ in the metal" },
     { en: "The cure for this disease", tr: "Bu hastalığın tedavisi", word: "cure", trWord: "tedavi", blank: "The ___ for this disease" },
-    { en: "Injection under the skin", tr: "Deri altındaki enjeksiyon", word: "skin", trWord: "deri", blank: "Injection under the ___" }
+    { en: "Injection under the skin", tr: "Deri altındaki enjeksiyon", word: "skin", trWord: "deri", blank: "Injection under the ___" },
+    { en: "Preparation for an examination", tr: "Sınava hazırlık", word: "preparation", trWord: "hazırlık", blank: "___ for an examination" },
+    { en: "Employment in the factories", tr: "Fabrikalardaki istihdam", word: "employment", trWord: "istihdam", blank: "___ in the factories" },
+    { en: "A substance in the blood", tr: "Kandaki bir madde", word: "substance", trWord: "madde", blank: "A ___ in the blood" },
+    { en: "The distance from this point", tr: "Bu noktadan olan mesafe", word: "distance", trWord: "mesafe", blank: "The ___ from this point" },
+    { en: "The water under the ground", tr: "Yer altındaki su", word: "water", trWord: "su", blank: "The ___ under the ground" },
+    { en: "The situation in America", tr: "Amerika'daki durum", word: "situation", trWord: "durum", blank: "The ___ in America" }
   ],
   2: [
     { en: "The legs of the animal", tr: "Hayvanın bacakları", word: "legs", trWord: "bacakları", blank: "The ___ of the animal" },
@@ -939,30 +945,199 @@ function buildReviewQuestions(unitId, lessonId, sentencesMix) {
 }
 
 function generateDynamicExercises(unitId, lessonId, sentences) {
+  if (!sentences || sentences.length === 0) return [];
+
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const ex1Questions = [];
+  const matchSents = shuffle(sentences).slice(0, 4);
+  if (matchSents.length >= 2) {
+    ex1Questions.push({
+      id: `u${unitId}l${lessonId}ex1_match`,
+      type: "matching",
+      prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+      pairs: matchSents.map(s => ({
+        left: s.trWord || s.word,
+        right: s.word
+      }))
+    });
+  }
+
+  const mcEtSents = shuffle(sentences).slice(0, 2);
+  mcEtSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      ensurePunctuation(sA.tr),
+      ensurePunctuation(shuffledWrongs[0].tr),
+      ensurePunctuation(shuffledWrongs[1].tr),
+      ensurePunctuation(shuffledWrongs[2].tr)
+    ]);
+    ex1Questions.push({
+      id: `u${unitId}l${lessonId}ex1_mc_et_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${ensurePunctuation(sA.en)}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(ensurePunctuation(sA.tr)),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  const mcTeSents = shuffle(sentences).slice(0, 2);
+  mcTeSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      ensurePunctuation(sA.en),
+      ensurePunctuation(shuffledWrongs[0].en),
+      ensurePunctuation(shuffledWrongs[1].en),
+      ensurePunctuation(shuffledWrongs[2].en)
+    ]);
+    ex1Questions.push({
+      id: `u${unitId}l${lessonId}ex1_mc_te_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${ensurePunctuation(sA.tr)}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(ensurePunctuation(sA.en)),
+      enSentence: sA.en,
+      isEngToTr: false
+    });
+  });
+
+  const ex2Questions = [];
+  const fdSents = shuffle(sentences).slice(0, 3);
+  fdSents.forEach((sC, idx) => {
+    const otherWords = sentences.filter(s => s.word !== sC.word).map(s => s.word);
+    const uniqueWrongWords = [...new Set(otherWords)];
+    const shuffledWrongs = shuffle(uniqueWrongWords);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push("word");
+    }
+    const options = shuffle([sC.word, shuffledWrongs[0], shuffledWrongs[1], shuffledWrongs[2]]);
+    ex2Questions.push({
+      id: `u${unitId}l${lessonId}ex2_fd_${idx}`,
+      type: "fill-blank-dropdown",
+      prompt: `Cümleyi tamamlayın: "${ensurePunctuation(sC.tr)}"`,
+      sentence: sC.blank || sC.en.replace(sC.word, "___"),
+      options: options,
+      correctIndex: options.indexOf(sC.word),
+      enSentence: sC.en
+    });
+  });
+
+  const ftSents = shuffle(sentences).slice(0, 2);
+  ftSents.forEach((sC, idx) => {
+    ex2Questions.push({
+      id: `u${unitId}l${lessonId}ex2_ft_${idx}`,
+      type: "fill-blank-text",
+      prompt: `Boşluğu uygun kelimeyle doldurun (İngilizce): "${ensurePunctuation(sC.tr)}"`,
+      sentence: sC.blank || sC.en.replace(sC.word, "___"),
+      correct: sC.word,
+      enSentence: sC.en
+    });
+  });
+
+  const ex3Questions = [];
+  const wbEtSents = shuffle(sentences).slice(0, 2);
+  wbEtSents.forEach((sD, idx) => {
+    const targetWords = sD.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sD.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    ex3Questions.push({
+      id: `u${unitId}l${lessonId}ex3_wb_et_${idx}`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: ensurePunctuation(sD.en),
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sD.en,
+      isEngToTr: true
+    });
+  });
+
+  const wbTeSents = shuffle(sentences).slice(0, 2);
+  wbTeSents.forEach((sD, idx) => {
+    const targetWords = sD.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherEnWords = sentences.filter(s => s.en !== sD.en).map(s => s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherEnWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("the");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    ex3Questions.push({
+      id: `u${unitId}l${lessonId}ex3_wb_te_${idx}`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: ensurePunctuation(sD.tr),
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sD.en,
+      isEngToTr: false
+    });
+  });
+
+  const ex4Questions = [];
+  const txEtSents = shuffle(sentences).slice(0, 2);
+  txEtSents.forEach((sD, idx) => {
+    ex4Questions.push({
+      id: `u${unitId}l${lessonId}ex4_tx_et_${idx}`,
+      type: "translation-text",
+      prompt: `"${ensurePunctuation(sD.en)}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sD.tr,
+      enSentence: sD.en,
+      isEngToTr: true
+    });
+  });
+
+  const txTeSents = shuffle(sentences).slice(0, 2);
+  txTeSents.forEach((sD, idx) => {
+    ex4Questions.push({
+      id: `u${unitId}l${lessonId}ex4_tx_te_${idx}`,
+      type: "translation-text",
+      prompt: `"${ensurePunctuation(sD.tr)}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: sD.en,
+      enSentence: sD.en,
+      isEngToTr: false
+    });
+  });
+
   return [
     {
       id: "ex1",
       title: "Alıştırma 1: Kelime ve Temel Yapılar",
       description: "Çoktan Seçmeli & Eşleştirme Soruları",
-      questions: []
+      questions: ex1Questions
     },
     {
       id: "ex2",
       title: "Alıştırma 2: Cümle Yapısı ve Boşluk Doldurma",
       description: "Boşluk Doldurma & Test Soruları",
-      questions: []
+      questions: ex2Questions
     },
     {
       id: "ex3",
       title: "Alıştırma 3: Kelime Sıralama Pratiği",
       description: "Sözcükleri Doğru Sıraya Koyma",
-      questions: []
+      questions: ex3Questions
     },
     {
       id: "ex4",
       title: "Alıştırma 4: Yazma ve Çeviri Pratiği",
       description: "Klavye ile Doğrudan Çeviri",
-      questions: []
+      questions: ex4Questions
     }
   ];
 }
@@ -1707,7 +1882,7 @@ const rawTopics = [
     icon: "👋",
     numLessons: 6,
     formulas: [
-      { formula: "Noun + Prepositional Phrase", example: "The workers in the factory: Fabrikadaki işçiler" },
+      { formula: "Noun + Prepositional Phrase", example: "the house on the corner: köşedeki ev / köşede olan ev / köşede bulunan ev (Edat takımı önündeki ismi tamamlar - çevrilirken '-ki', '-olan', '-bulunan' eklenebilir)" },
       { formula: "Noun + of the + Noun", example: "The legs of the animal: Hayvanın bacakları" },
       { formula: "Pronoun + of the + Noun", example: "Some of the prices: Fiyatların bazıları" },
       { formula: "Noun + of + Noun", example: "The invention of fire: Ateşin icadı" },

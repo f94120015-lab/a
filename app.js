@@ -343,6 +343,174 @@ function showToast(message, type = 'info') {
   setTimeout(() => toast.remove(), 3000);
 }
 
+function openQuestionPreview(title, questions) {
+  if (!questions || questions.length === 0) {
+    showToast("Bu alıştırmada henüz soru bulunmuyor.", "info");
+    return;
+  }
+
+  const overlay = document.createElement('div');
+  overlay.className = 'qp-modal-overlay';
+
+  let headerHtml = `
+    <div class="qp-modal-header">
+      <h3>👁️ ${title} — Soru Önizleme</h3>
+      <button class="modal-close-btn" id="qp-close-btn" title="Kapat">✕</button>
+    </div>
+  `;
+
+  let cardsHtml = questions.map((q, idx) => {
+    let typeLabel = "Soru";
+    let typeClass = "";
+    let detailsHtml = "";
+
+    switch (q.type) {
+      case 'multiple-choice':
+        typeLabel = q.isEngToTr ? "Çoktan Seçmeli (Eng -> Tr)" : "Çoktan Seçmeli (Tr -> Eng)";
+        typeClass = "qp-type-mc";
+        const opts = q.options.map((opt, oIdx) => {
+          const isCorrect = oIdx === q.correctIndex;
+          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+        }).join('');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Seçenekler:</span>
+            <div class="qp-options-list">${opts}</div>
+          </div>
+        `;
+        break;
+
+      case 'fill-blank-dropdown':
+        typeLabel = "Açılır Menü Boşluk Doldurma";
+        typeClass = "qp-type-drop";
+        const dropOpts = q.options.map((opt, oIdx) => {
+          const isCorrect = oIdx === q.correctIndex;
+          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+        }).join('');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Cümle Şablonu:</span>
+            <span class="qp-detail-val">"${q.sentence}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Seçenekler:</span>
+            <div class="qp-options-list">${dropOpts}</div>
+          </div>
+        `;
+        break;
+
+      case 'fill-blank-text':
+        typeLabel = "Yazılı Boşluk Doldurma";
+        typeClass = "qp-type-text";
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Cümle Şablonu:</span>
+            <span class="qp-detail-val">"${q.sentence}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Doğru Kelime:</span>
+            <span class="qp-detail-val qp-correct">${q.correct}</span>
+          </div>
+        `;
+        break;
+
+      case 'word-bank':
+        typeLabel = q.isEngToTr ? "Kelime Sıralama (Eng -> Tr)" : "Kelime Sıralama (Tr -> Eng)";
+        typeClass = "qp-type-wb";
+        const bankWords = q.words.map(w => `<span class="qp-option-item">${w}</span>`).join('');
+        const correctPath = Array.isArray(q.correctOrder) ? q.correctOrder.join(' ') : q.correctOrder;
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Kaynak Cümle:</span>
+            <span class="qp-detail-val">"${q.translation}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Kelimeler:</span>
+            <div class="qp-options-list">${bankWords}</div>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Doğru Sıralama:</span>
+            <span class="qp-detail-val qp-correct">"${correctPath}"</span>
+          </div>
+        `;
+        break;
+
+      case 'translation-text':
+        typeLabel = q.isEngToTr ? "Yazılı Çeviri (Eng -> Tr)" : "Yazılı Çeviri (Tr -> Eng)";
+        typeClass = "qp-type-trans";
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Doğru Çeviri:</span>
+            <span class="qp-detail-val qp-correct">"${q.correctSentence}"</span>
+          </div>
+        `;
+        break;
+
+      case 'matching':
+        typeLabel = "Eşleştirme Kartları";
+        typeClass = "qp-type-match";
+        const pairsHtml = q.pairs.map(p => `<span class="qp-option-item correct">${p.left} ⟷ ${p.right}</span>`).join('');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Eşleşmeler:</span>
+            <div class="qp-options-list">${pairsHtml}</div>
+          </div>
+        `;
+        break;
+
+      case 'multiple-fill-blank':
+        typeLabel = "Çoklu Boşluk Doldurma";
+        typeClass = "qp-type-multi";
+        const correctsList = q.corrects.map(c => `<span class="qp-option-item correct">${c}</span>`).join(' ');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Cümle Şablonu:</span>
+            <span class="qp-detail-val">"${q.sentence}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Sırasıyla Cevaplar:</span>
+            <div class="qp-options-list">${correctsList}</div>
+          </div>
+        `;
+        break;
+    }
+
+    return `
+      <div class="qp-question-card">
+        <div class="qp-question-header">
+          <span class="qp-qnumber">Soru #${idx + 1}</span>
+          <span class="qp-type-badge ${typeClass}">${typeLabel}</span>
+        </div>
+        <p class="qp-prompt">${q.prompt}</p>
+        <div class="qp-details">
+          ${detailsHtml}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  overlay.innerHTML = `
+    <div class="qp-modal">
+      ${headerHtml}
+      <div class="qp-modal-body">
+        ${cardsHtml}
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  const closeBtn = overlay.querySelector('#qp-close-btn');
+  const closeModal = () => {
+    overlay.classList.add('fade-out');
+    setTimeout(() => overlay.remove(), 200);
+  };
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+}
+
 // ============================================================
 // GÜNLÜK GÖREVLER (DAILY TASKS) SİSTEMİ
 // ============================================================
@@ -1283,9 +1451,12 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
               <span class="exercise-subtitle">${ex.description || '20 Soru'}</span>
             </div>
           </div>
-          <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
-            ${statusText}
-          </button>
+          <div class="qp-btn-group">
+            <button class="exercise-preview-btn" data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>
+            <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
+              ${statusText}
+            </button>
+          </div>
         </div>
       `;
     }).join('');
@@ -1300,9 +1471,10 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     `;
   } else {
     popoverFooterHTML = `
-      <div class="popover-footer">
+      <div class="popover-footer" style="display: flex; gap: 8px; justify-content: flex-end; align-items: center;">
         ${isUnlocked ? `
-          <button class="btn btn-primary popover-start-btn">
+          <button class="popover-preview-btn" title="Tüm Soruları Önizle">👁️ Önizle</button>
+          <button class="btn btn-primary popover-start-btn" style="flex: 1;">
             ${isCompleted ? 'Tekrar Et (+5 Puan)' : 'Dersi Başlat (+10 Puan)'}
           </button>
         ` : `
@@ -1334,11 +1506,28 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         startLesson(lessonId, exerciseId);
       });
     });
+    popover.querySelectorAll('.exercise-preview-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const exerciseId = btn.dataset.exerciseId;
+        const exercise = lesson.exercises.find(ex => ex.id === exerciseId);
+        if (exercise) {
+          openQuestionPreview(exercise.title, exercise.questions);
+        }
+      });
+    });
   } else if (isUnlocked) {
     popover.querySelector('.popover-start-btn').addEventListener('click', () => {
       popover.remove();
       startLesson(lessonId);
     });
+    const prevBtn = popover.querySelector('.popover-preview-btn');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openQuestionPreview(lesson.title, lesson.questions);
+      });
+    }
   }
 
   popover.addEventListener('click', (e) => e.stopPropagation());
@@ -2197,7 +2386,7 @@ function switchTab(tabId) {
 // ============================================================
 // PROFİL SEKME RENDER
 // ============================================================
-let activeSocialSubTab = 'following'; // Global tab state for social section
+let activeSocialSubTab = 'online'; // Global tab state for social section
 
 const MOCK_USER_DATABASE = [
   { username: 'John Doe', xp: 600, streak: 15, avatarColor: '#8BB8E8' },
@@ -2206,6 +2395,12 @@ const MOCK_USER_DATABASE = [
   { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' },
   { username: 'Melis Şen', xp: 90, streak: 2, avatarColor: '#E8CB6E' },
   { username: 'Deniz Aksu', xp: 720, streak: 25, avatarColor: '#7EC8C8' }
+];
+
+const MOCK_ONLINE_USERS = [
+  { username: 'Buse Kaya', xp: 410, streak: 8, avatarColor: '#E8919A' },
+  { username: 'Deniz Aksu', xp: 720, streak: 25, avatarColor: '#7EC8C8' },
+  { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' }
 ];
 
 function renderProfile() {
@@ -2384,6 +2579,7 @@ function renderProfile() {
 function initSocialSystem() {
   const subtabFollowing = document.getElementById('subtab-following');
   const subtabFollowers = document.getElementById('subtab-followers');
+  const subtabOnline = document.getElementById('subtab-online');
   const searchInput = document.getElementById('social-search-input');
   const searchClear = document.getElementById('social-search-clear');
   const searchBtn = document.getElementById('btn-social-search');
@@ -2393,6 +2589,7 @@ function initSocialSystem() {
     activeSocialSubTab = 'following';
     subtabFollowing.classList.add('active');
     subtabFollowers.classList.remove('active');
+    if (subtabOnline) subtabOnline.classList.remove('active');
     renderSocialList();
   });
 
@@ -2400,8 +2597,19 @@ function initSocialSystem() {
     activeSocialSubTab = 'followers';
     subtabFollowers.classList.add('active');
     subtabFollowing.classList.remove('active');
+    if (subtabOnline) subtabOnline.classList.remove('active');
     renderSocialList();
   });
+
+  if (subtabOnline) {
+    subtabOnline.addEventListener('click', () => {
+      activeSocialSubTab = 'online';
+      subtabOnline.classList.add('active');
+      subtabFollowing.classList.remove('active');
+      subtabFollowers.classList.remove('active');
+      renderSocialList();
+    });
+  }
 
   // Search input events
   searchInput.addEventListener('input', () => {
@@ -2441,7 +2649,21 @@ function renderSocialList() {
   const tabFollowers = document.getElementById('subtab-followers');
   if (tabFollowers) tabFollowers.textContent = `Takipçilerim (${state.followers.length})`;
 
-  const currentList = activeSocialSubTab === 'following' ? state.following : state.followers;
+  const tabOnline = document.getElementById('subtab-online');
+  const onlineCount = 1 + MOCK_ONLINE_USERS.length; // me + mock online users
+  if (tabOnline) tabOnline.textContent = `Çevrimiçi (${onlineCount})`;
+
+  let currentList = [];
+  if (activeSocialSubTab === 'following') {
+    currentList = state.following;
+  } else if (activeSocialSubTab === 'followers') {
+    currentList = state.followers;
+  } else if (activeSocialSubTab === 'online') {
+    currentList = [
+      { username: (state.username || 'Misafir') + ' (Sen)', xp: state.xp, streak: state.streak, avatarColor: '#5856D6', isSelf: true },
+      ...MOCK_ONLINE_USERS
+    ];
+  }
 
   if (currentList.length === 0) {
     contentEl.innerHTML = `
@@ -2464,16 +2686,32 @@ function renderSocialList() {
           <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}">Takipten Çık</button>
         </div>
       `;
-    } else {
+    } else if (activeSocialSubTab === 'followers') {
       // Followers tab
       actionBtn = isFollowing 
         ? `<span class="social-status-text">Takip Ediliyor</span>`
         : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}">Geri Takip Et</button>`;
+    } else if (activeSocialSubTab === 'online') {
+      // Online tab
+      if (user.isSelf) {
+        actionBtn = `<span class="social-status-text online">Çevrimiçi</span>`;
+      } else {
+        const isUserFollowing = state.following.some(u => u.username === user.username);
+        actionBtn = isUserFollowing 
+          ? `<span class="social-status-text">Takip Ediliyor</span>`
+          : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}">Takip Et</button>`;
+      }
     }
+
+    const isOnlineTab = activeSocialSubTab === 'online';
+    const onlineDotHtml = isOnlineTab ? `<span class="online-dot"></span>` : '';
 
     return `
       <div class="friend-card">
-        <div class="friend-avatar" style="background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}">${escapeHtml(letter)}</div>
+        <div class="friend-avatar" style="background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}">
+          ${escapeHtml(letter)}
+          ${onlineDotHtml}
+        </div>
         <div class="friend-details">
           <span class="friend-name">${escapeHtml(user.username)}</span>
           <div class="friend-meta">

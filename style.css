@@ -1,63 +1,61 @@
 /* ============================================================
    amok — Premium Stylesheet
    Sıcak kanvas tonları, serif tipografi, responsive tasarım
-   ============================================================ */
-
-/* ─── CSS Değişkenleri (Açık Tema – Premium Temiz Palet) ── */
+   ============================================================ *//* ─── CSS Değişkenleri (Açık Tema – Premium Temiz Palet) ── */
 :root {
-  /* Arka planlar – modern temiz ve ferah tonlar */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
+  /* Arka planlar – modern temiz ve ferah tonlar (Görsel referansına uygun) */
+  --bg-primary: #F7F9FC;
+  --bg-secondary: #EDF2F7;
   --bg-card: #ffffff;
-  --bg-card-hover: #f1f3f5;
+  --bg-card-hover: #F2F6FC;
 
-  /* Metin – yumuşak antrasit ve gri tonları */
-  --text-primary: #2b2b2b;
-  --text-secondary: #555555;
-  --text-muted: #8e8e8e;
+  /* Metin – Slate tonları (Görsel referansına uygun) */
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
 
-  /* Çizgi – temiz açık gri */
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
+  /* Çizgi */
+  --border-color: #E2E8F0;
+  --border-light: #EDF2F7;
 
-  /* Ana renkler – Canva Pastel Teal */
-  --accent-primary: #7EC8C8;
-  --accent-primary-hover: #6BB8B8;
-  --accent-primary-shadow: #57A3A3;
-  --accent-primary-light: rgba(126, 200, 200, 0.15);
+  /* Ana renkler – Canlı Mavi (Görsel referansına uygun) */
+  --accent-primary: #1B85FF;
+  --accent-primary-hover: #0076F5;
+  --accent-primary-shadow: #0063D1;
+  --accent-primary-light: rgba(27, 133, 255, 0.12);
 
-  /* Durum renkleri – pastel yeşil / kırmızı */
-  --color-correct: #8BC6A0;
-  --color-correct-bg: rgba(139, 198, 160, 0.12);
-  --color-correct-border: rgba(139, 198, 160, 0.35);
-  --color-wrong: #E8919A;
-  --color-wrong-bg: rgba(232, 145, 154, 0.12);
-  --color-wrong-border: rgba(232, 145, 154, 0.35);
-  --color-warning: #F2C078;
-  --color-info: #8BB8E8;
+  /* Durum renkleri – Canlı yeşil / kırmızı (Görsel referansına uygun) */
+  --color-correct: #34C759;
+  --color-correct-bg: rgba(52, 199, 89, 0.12);
+  --color-correct-border: rgba(52, 199, 89, 0.35);
+  --color-wrong: #FF3B30;
+  --color-wrong-bg: rgba(255, 59, 48, 0.12);
+  --color-wrong-border: rgba(255, 59, 48, 0.35);
+  --color-warning: #FF9500;
+  --color-info: #007AFF;
 
-  /* XP & Streak – pastel turuncu / altın / pembe */
-  --color-streak: #F2A871;
-  --color-xp: #E8CB6E;
-  --color-hearts: #E88A9A;
+  /* XP & Streak – Canlı turuncu / altın / pembe */
+  --color-streak: #FF9500;
+  --color-xp: #FFCC00;
+  --color-hearts: #FF2D55;
 
   /* Kilit */
-  --color-locked: #BDB5C6;
-  --color-locked-bg: #F0ECF2;
+  --color-locked: #94A3B8;
+  --color-locked-bg: #E2E8F0;
 
-  /* Aktif ders – Canva Pastel Lavanta */
-  --color-active: #B4A7D6;
-  --color-active-glow: rgba(180, 167, 214, 0.28);
+  /* Aktif ders – Canlı Mavi */
+  --color-active: #1B85FF;
+  --color-active-glow: rgba(27, 133, 255, 0.25);
 
   /* Tamamlanan ders */
-  --color-completed: #8BC6A0;
-  --color-completed-bg: rgba(139, 198, 160, 0.18);
+  --color-completed: #34C759;
+  --color-completed-bg: rgba(52, 199, 89, 0.18);
 
-  /* Gölge – yumuşak tonlu */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.08);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+  /* Gölge – Görseldeki gibi ultra pürüzsüz ve hafif gölgeler */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.08);
 
   /* Animasyonlar */
   --transition-fast: 150ms ease;
@@ -65,57 +63,56 @@
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Boyutlar */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
   --radius-full: 50%;
 
-  /* Fontlar */
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Lora', 'Times New Roman', serif;
+  /* Fontlar – Sans Serif (Görsel referansına uygun) */
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
 }
 
-/* ─── Koyu Tema – Premium Koyu Temiz Palet ───────────────── */
 [data-theme="dark"] {
-  --bg-primary: #121214;
-  --bg-secondary: #1a1a1e;
-  --bg-card: #1e1e24;
-  --bg-card-hover: #26262f;
+  --bg-primary: #0B0F19;
+  --bg-secondary: #111827;
+  --bg-card: #1F2937;
+  --bg-card-hover: #374151;
 
-  --text-primary: #f8f9fa;
-  --text-secondary: #a0a0ab;
-  --text-muted: #6b6b75;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
 
-  --border-color: #2b2b30;
-  --border-light: #212125;
+  --border-color: #374151;
+  --border-light: #1F2937;
 
-  --accent-primary: #9AD8D8;
-  --accent-primary-hover: #B0E4E4;
-  --accent-primary-shadow: #6BBCBC;
-  --accent-primary-light: rgba(154, 216, 216, 0.15);
+  --accent-primary: #3B82F6;
+  --accent-primary-hover: #60A5FA;
+  --accent-primary-shadow: #2563EB;
+  --accent-primary-light: rgba(59, 130, 246, 0.15);
 
-  --color-correct: #A0D4B4;
-  --color-correct-bg: rgba(160, 212, 180, 0.12);
-  --color-correct-border: rgba(160, 212, 180, 0.3);
-  --color-wrong: #E8A0A8;
-  --color-wrong-bg: rgba(232, 160, 168, 0.12);
-  --color-wrong-border: rgba(232, 160, 168, 0.3);
-  --color-warning: #F0C888;
-  --color-info: #A0C8F0;
+  --color-correct: #10B981;
+  --color-correct-bg: rgba(16, 185, 129, 0.12);
+  --color-correct-border: rgba(16, 185, 129, 0.3);
+  --color-wrong: #EF4444;
+  --color-wrong-bg: rgba(239, 68, 68, 0.12);
+  --color-wrong-border: rgba(239, 68, 68, 0.3);
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
 
-  --color-streak: #F0C080;
-  --color-xp: #F0D888;
-  --color-hearts: #E8909A;
+  --color-streak: #F59E0B;
+  --color-xp: #FBBF24;
+  --color-hearts: #EC4899;
 
-  --color-locked: #5A5468;
-  --color-locked-bg: #32303C;
+  --color-locked: #4B5563;
+  --color-locked-bg: #1F2937;
 
-  --color-active: #C8B8E8;
-  --color-active-glow: rgba(200, 184, 232, 0.3);
+  --color-active: #3B82F6;
+  --color-active-glow: rgba(59, 130, 246, 0.25);
 
-  --color-completed: #A0D4B4;
-  --color-completed-bg: rgba(160, 212, 180, 0.15);
+  --color-completed: #10B981;
+  --color-completed-bg: rgba(16, 185, 129, 0.18);
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -3882,12 +3879,25 @@ input {
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  position: relative;
 }
 
 .friend-avatar.small {
   width: 34px;
   height: 34px;
   font-size: 1rem;
+}
+
+.online-dot {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 11px;
+  height: 11px;
+  background-color: #22c55e;
+  border: 2px solid var(--bg-card, #fff);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .friend-details {
@@ -3971,6 +3981,11 @@ input {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-weight: 600;
+}
+
+.social-status-text.online {
+  color: #22c55e;
+  font-weight: 700;
 }
 
 /* ─── Sidebar Placement Banner & Sidebar Overrides ────────── */
@@ -4470,5 +4485,240 @@ input {
   flex-shrink: 0;
   cursor: pointer;
 }
+
+/* ─── Soru Önizleme Modalı Stilleri ───────────────────────── */
+.qp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+  animation: fadeIn 0.2s ease;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.qp-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-width: 760px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.qp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.qp-modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qp-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-primary);
+  flex: 1;
+}
+
+.qp-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.qp-modal-body::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.qp-modal-body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+.qp-question-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.qp-question-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.qp-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px dashed var(--border-light);
+  padding-bottom: 8px;
+}
+
+.qp-qnumber {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.qp-type-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.qp-type-mc { background-color: #5856d6; }
+.qp-type-match { background-color: #ff9500; }
+.qp-type-drop { background-color: #007aff; }
+.qp-type-text { background-color: #34c759; }
+.qp-type-wb { background-color: #af52de; }
+.qp-type-trans { background-color: #5ac8fa; }
+.qp-type-multi { background-color: #ff2d55; }
+
+.qp-prompt {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.qp-details {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qp-detail-row {
+  display: flex;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.qp-detail-label {
+  font-weight: 700;
+  color: var(--text-secondary);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.qp-detail-val {
+  color: var(--text-primary);
+}
+
+.qp-correct {
+  color: var(--color-correct) !important;
+  font-weight: 700;
+}
+
+.qp-options-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.qp-option-item {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.qp-option-item.correct {
+  border-color: var(--color-correct-border);
+  background: var(--color-correct-bg);
+  color: var(--color-correct);
+}
+
+.qp-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.exercise-preview-btn {
+  padding: 5px 10px;
+  font-size: 0.72rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.exercise-preview-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--bg-secondary);
+}
+
+.popover-preview-btn {
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.popover-preview-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--bg-secondary);
+}
+
 
 
