@@ -3206,6 +3206,36 @@ function initEventListeners() {
     renderLessonTree();
     renderAchievements();
     showScreen('home-screen');
+
+    // Find the next target lesson to open
+    let targetLessonId = null;
+    if (currentLesson) {
+      if (currentLesson.exercises && currentLesson.exercises.length > 0) {
+        // Check if there are uncompleted exercises in the current lesson
+        const hasUncompleted = currentLesson.exercises.some(ex => !state.completedLessons.includes(`${currentLesson.id}_${ex.id}`));
+        if (hasUncompleted) {
+          targetLessonId = currentLesson.id;
+        }
+      }
+      if (!targetLessonId) {
+        const nextLesson = lessons.find(l => l.id === currentLesson.id + 1);
+        if (nextLesson && isLessonUnlocked(nextLesson.id)) {
+          targetLessonId = nextLesson.id;
+        }
+      }
+    }
+
+    if (targetLessonId) {
+      setTimeout(() => {
+        const button = document.querySelector(`.lesson-node[data-lesson-id="${targetLessonId}"]`);
+        if (button) {
+          button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => {
+            button.click();
+          }, 350);
+        }
+      }, 100);
+    }
   });
 
   // Can Bitti ekranı butonları
