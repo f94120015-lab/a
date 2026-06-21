@@ -3924,6 +3924,990 @@ const unit8Lesson2Exercises = {
   ]
 };
 
+const unit2Lesson1SentencesRaw1 = [
+  { en: "We describe this method in the next chapter", tr: "Bu yöntemi gelecek bölümde tanımlıyoruz" },
+  { en: "We show these data on this page", tr: "Bu verileri bu sayfada gösteriyoruz" },
+  { en: "We employ this concept for this research", tr: "Bu kavramı bu araştırma için kullanıyoruz" },
+  { en: "We solved that issue in two weeks", tr: "O sorunu iki haftada çözdük" },
+  { en: "We analyze the structure in this section", tr: "Bu bölümdeki yapıyı analiz ediyoruz" },
+  { en: "We created the policy for this institution", tr: "Bu kurum için politikayı oluşturduk" },
+  { en: "We tested this theory in the first period", tr: "Bu teoriyi birinci dönemde test ettik" },
+  { en: "We evaluate the results in the final summary", tr: "Sonuçları nihai özetle değerlendiriyoruz" },
+  { en: "We need this formula for the next process", tr: "Gelecek süreç için bu formüle ihtiyacımız var" },
+  { en: "We find the criteria on the main site", tr: "Kriterleri ana sitede buluyoruz" },
+  { en: "We defined that role in this project", tr: "Bu projedeki o rolü tanımladık" },
+  { en: "We read this text for this assignment", tr: "Bu ödev için bu metni okuduk" },
+  { en: "We change the variables in the second phase", tr: "İkinci aşamada değişkenleri değiştiriyoruz" },
+  { en: "We use this framework for the new strategy", tr: "Yeni strateji için bu çerçeveyi kullanıyoruz" },
+  { en: "We present this data in the main report", tr: "Bu verileri ana raporda sunuyoruz" }
+];
+
+const unit2Lesson1SentencesRaw2 = [
+  { en: "We apply this formula in the third calculation", tr: "Bu formülü üçüncü hesaplamada uyguluyoruz" },
+  { en: "We verify the parameters in the laboratory", tr: "Parametreleri laboratuvarda doğruluyoruz" },
+  { en: "We compare the results with the previous study", tr: "Sonuçları önceki çalışmayla karşılaştırıyoruz" },
+  { en: "We develop this framework for the target application", tr: "Hedef uygulama için bu çerçeveyi geliştiriyoruz" },
+  { en: "We modify the structure in the second version", tr: "İkinci versiyonda yapıyı değiştiriyoruz" },
+  { en: "We assess the risk in the initial phase", tr: "İlk aşamada riski değerlendiriyoruz" },
+  { en: "We define the scope in the first section", tr: "Kapsamı birinci bölümde tanımlıyoruz" },
+  { en: "We test the hypothesis in this experiment", tr: "Bu deneyde hipotezi test ediyoruz" },
+  { en: "We examine the evidence in the case file", tr: "Dava dosyasındaki delilleri inceliyoruz" },
+  { en: "We identify the problem in the summary page", tr: "Sorunu özet sayfasında belirliyoruz" },
+  { en: "We report the details in the appendix section", tr: "Detayları ek bölümünde bildiriyoruz" },
+  { en: "We measure the temperature at regular intervals", tr: "Sıcaklığı düzenli aralıklarla ölçüyoruz" },
+  { en: "We update the database on a daily basis", tr: "Veritabanını günlük olarak güncelliyoruz" },
+  { en: "We select the candidates for the final interview", tr: "Nihai mülakat için adayları seçiyoruz" },
+  { en: "We reject the proposal after the first review", tr: "Teklifi ilk incelemeden sonra reddediyoruz" }
+];
+
+const unit2Lesson1SentencesRaw3 = [
+  { en: "We collect the feedback from the participants", tr: "Katılımcılardan geri bildirim topluyoruz" },
+  { en: "We explain the procedure in the instruction manual", tr: "Prosedürü kullanım kılavuzunda açıklıyoruz" },
+  { en: "We publish the findings in an academic journal", tr: "Bulguları akademik bir dergide yayınlıyoruz" },
+  { en: "We investigate the causes in the safety report", tr: "Güvenlik raporundaki nedenleri araştırıyoruz" },
+  { en: "We monitor the emissions in the industrial zone", tr: "Sanayi bölgesindeki emisyonları izliyoruz" },
+  { en: "We adjust the settings for the best performance", tr: "En iyi performans için ayarları düzenliyoruz" },
+  { en: "We verify the signature on the contract document", tr: "Sözleşme belgesindeki imzayı doğruluyoruz" },
+  { en: "We confirm the appointment for the next Tuesday", tr: "Gelecek Salı için randevuyu onaylıyoruz" },
+  { en: "We design the layout for the mobile application", tr: "Mobil uygulama için düzeni tasarlıyoruz" },
+  { en: "We establish the criteria for the selection process", tr: "Seçim süreci için kriterleri belirliyoruz" },
+  { en: "We implement the changes in the software update", tr: "Değişiklikleri yazılım güncellemesinde uyguluyoruz" },
+  { en: "We support the decision with strong evidence", tr: "Kararı güçlü kanıtlarla destekliyoruz" },
+  { en: "We observe the reaction under a microscope", tr: "Tepkimeyi mikroskop altında gözlemliyoruz" },
+  { en: "We resolve the dispute in a friendly manner", tr: "Anlaşmazlığı dostane bir şekilde çözüyoruz" },
+  { en: "We maintain the equipment on a monthly schedule", tr: "Ekipmanın bakımını aylık bir programla yapıyoruz" }
+];
+
+const unit2Lesson1SentencesRaw4 = [
+  { en: "We document the process in the project folder", tr: "Süreci proje klasöründe belgeliyoruz" },
+  { en: "We transfer the files to the secure server", tr: "Dosyaları güvenli sunucuya aktarıyoruz" },
+  { en: "We analyze the content of the document", tr: "Belgenin içeriğini analiz ediyoruz" },
+  { en: "We create a copy of the main database", tr: "Ana veritabanının bir kopyasını oluşturuyoruz" },
+  { en: "We evaluate the performance of the system", tr: "Sistemin performansını değerlendiriyoruz" },
+  { en: "We define the parameters of the simulation", tr: "Simülasyonun parametrelerini tanımlıyoruz" },
+  { en: "We check the status of the network connection", tr: "Ağ bağlantısının durumunu kontrol ediyoruz" },
+  { en: "We test the quality of the raw materials", tr: "Hammaddelerin kalitesini test ediyoruz" },
+  { en: "We change the configuration of the router", tr: "Yönlendiricinin konfigürasyonunu değiştiriyoruz" },
+  { en: "We read the instructions on the package", tr: "Paketin üzerindeki talimatları okuyoruz" },
+  { en: "We describe the scenario in the first paragraph", tr: "Senaryoyu birinci paragrafta tanımlıyoruz" },
+  { en: "We show the progress on the dashboard page", tr: "İlerlemeyi kontrol paneli sayfasında gösteriyoruz" },
+  { en: "We need a solution for this error message", tr: "Bu hata mesajı için bir çözüme ihtiyacımız var" },
+  { en: "We find the coordinates on the map image", tr: "Harita görselindeki koordinatları buluyoruz" },
+  { en: "We use this application for data collection", tr: "Bu uygulamayı veri toplama için kullanıyoruz" }
+];
+
+const unit2Lesson1SentencesRaw5 = [
+  { en: "We examine the characteristics of the samples", tr: "Örneklerin özelliklerini inceliyoruz" },
+  { en: "We identify the limitations of the current study", tr: "Mevcut çalışmanın sınırlılıklarını belirliyoruz" },
+  { en: "We report the progress to the project board", tr: "İlerlemeyi proje kuruluna rapor ediyoruz" },
+  { en: "We monitor the temperature of the water tank", tr: "Su tankının sıcaklığını izliyoruz" },
+  { en: "We update the profiles of the users", tr: "Kullanıcıların profillerini güncelliyoruz" },
+  { en: "We select the best option from the list", tr: "Listedeki en iyi seçeneği seçiyoruz" },
+  { en: "We compare the performance of both models", tr: "Her iki modelin performansını karşılaştırıyoruz" },
+  { en: "We develop a strategy for the marketing campaign", tr: "Pazarlama kampanyası için bir strateji geliştiriyoruz" },
+  { en: "We assess the impact of the new regulations", tr: "Yeni düzenlemelerin etkisini değerlendiriyoruz" },
+  { en: "We test the functionality of the prototype", tr: "Prototipin işlevselliğini test ediyoruz" },
+  { en: "We examine the effects of the treatment", tr: "Tedavinin etkilerini inceliyoruz" },
+  { en: "We identify the source of the leak", tr: "Sızıntının kaynağını belirliyoruz" },
+  { en: "We compare the results of the two groups", tr: "İki grubun sonuçlarını karşılaştırıyoruz" },
+  { en: "We analyze the behavior of the participants", tr: "Katılımcıların davranışlarını analiz ediyoruz" },
+  { en: "We evaluate the effectiveness of the training", tr: "Eğitimin etkililiğini değerlendiriyoruz" }
+];
+
+const unit2Lesson1Exercises = {
+  exercises: [
+    {
+      id: "u2l1ex1",
+      title: "Alıştırma 1: Fiil + Edat Takımı Giriş",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-15)",
+      questions: build15Questions(unit2Lesson1SentencesRaw1, 2, 8, 1)
+    },
+    {
+      id: "u2l1ex2",
+      title: "Alıştırma 2: Temel Cümleler",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (16-30)",
+      questions: build15Questions(unit2Lesson1SentencesRaw2, 2, 8, 2)
+    },
+    {
+      id: "u2l1ex3",
+      title: "Alıştırma 3: Orta Seviye Cümleler",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (31-45)",
+      questions: build15Questions(unit2Lesson1SentencesRaw3, 2, 8, 3)
+    },
+    {
+      id: "u2l1ex4",
+      title: "Alıştırma 4: İleri Seviye Cümleler I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (46-60)",
+      questions: build15Questions(unit2Lesson1SentencesRaw4, 2, 8, 4)
+    },
+    {
+      id: "u2l1ex5",
+      title: "Alıştırma 5: İleri Seviye Cümleler II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (61-75)",
+      questions: build15Questions(unit2Lesson1SentencesRaw5, 2, 8, 5)
+    }
+  ]
+};
+
+const unit2Lesson2SentencesRaw1 = [
+  { en: "before the analysis of the data", tr: "verinin analizinden önce" },
+  { en: "in the interpretation of the results", tr: "sonuçların yorumlanmasında" },
+  { en: "during the assessment of the impact", tr: "etkinin değerlendirilmesi sırasında" },
+  { en: "according to the structure of the institution", tr: "kurumun yapısına göre" },
+  { en: "because of the distribution of the resources", tr: "kaynakların dağılımı nedeniyle" },
+  { en: "after the evaluation of the method", tr: "yöntemin değerlendirilmesinden sonra" },
+  { en: "in the context of the research", tr: "araştırmanın bağlamında" },
+  { en: "under the regulation of the authority", tr: "otoritenin düzenlemesi altında" },
+  { en: "during the transition of the economy", tr: "ekonominin geçişi sırasında" },
+  { en: "before the implementation of the policy", tr: "politikanın uygulanmasından önce" },
+  { en: "according to the definition of the concept", tr: "kavramın tanımına göre" },
+  { en: "after the identification of the factor", tr: "faktörün belirlenmesinden sonra" },
+  { en: "in the absence of the evidence", tr: "kanıtın yokluğunda" },
+  { en: "during the formulation of the theory", tr: "teorinin formüle edilmesi sırasında" },
+  { en: "because of the complexity of the system", tr: "sistemin karmaşıklığı nedeniyle" }
+];
+
+const unit2Lesson2SentencesRaw2 = [
+  { en: "under the authority of the administration", tr: "yönetimin yetkisi altında" },
+  { en: "in the selection of the variable", tr: "değişkenin seçiminde" },
+  { en: "after the completion of the assignment", tr: "ödevin tamamlanmasından sonra" },
+  { en: "before the acquisition of the funding", tr: "finansmanın sağlanmasından önce" },
+  { en: "according to the principle of the logic", tr: "mantığın ilkesine göre" },
+  { en: "in this framework of thought", tr: "bu düşünce çerçevesinde" },
+  { en: "during a study of the variation", tr: "değişimin incelenmesi sırasında" },
+  { en: "because of the source of the error", tr: "hatanın kaynağı nedeniyle" },
+  { en: "before the shift of the category", tr: "kategori değişiminden önce" },
+  { en: "after the collection of the samples", tr: "örneklerin toplanmasından sonra" },
+  { en: "in the configuration of the network", tr: "ağın yapılandırılmasında" },
+  { en: "during the verification of the signature", tr: "imzanın doğrulanması sırasında" },
+  { en: "because of the limitations of the study", tr: "çalışmanın sınırlılıkları nedeniyle" },
+  { en: "according to the instructions of the package", tr: "paketin talimatlarına göre" },
+  { en: "under the supervision of the professor", tr: "profesörün gözetimi altında" }
+];
+
+const unit2Lesson2SentencesRaw3 = [
+  { en: "in the comparison of the models", tr: "modellerin karşılaştırılmasında" },
+  { en: "before the start of the project", tr: "projenin başlangıcından önce" },
+  { en: "during the execution of the process", tr: "sürecin yürütülmesi sırasında" },
+  { en: "because of the fluctuation of the prices", tr: "fiyatların dalgalanması nedeniyle" },
+  { en: "after the discovery of the element", tr: "elementin keşfinden sonra" },
+  { en: "according to the guidelines of the board", tr: "kurulun yönergelerine göre" },
+  { en: "under the influence of the environment", tr: "çevrenin etkisi altında" },
+  { en: "in the definition of the scope", tr: "kapsamın tanımında" },
+  { en: "before the release of the software", tr: "yazılımın yayınlanmasından önce" },
+  { en: "during the observation of the reaction", tr: "tepkimenin gözlemlenmesi sırasında" },
+  { en: "because of the lack of resources", tr: "kaynakların eksikliği nedeniyle" },
+  { en: "after the modification of the parameters", tr: "parametrelerin değiştirilmesinden sonra" },
+  { en: "according to the criteria of the selection", tr: "seçimin kriterlerine göre" },
+  { en: "under the protection of the law", tr: "yasanın koruması altında" },
+  { en: "in the evaluation of the performance", tr: "performansın değerlendirilmesinde" }
+];
+
+const unit2Lesson2SentencesRaw4 = [
+  { en: "before the completion of the phase", tr: "aşamanın tamamlanmasından önce" },
+  { en: "during the transition of the power", tr: "gücün geçişi sırasında" },
+  { en: "because of the presence of the virus", tr: "virüsün varlığı nedeniyle" },
+  { en: "after the approval of the budget", tr: "bütçenin onaylanmasından sonra" },
+  { en: "according to the rules of the logic", tr: "mantığın kurallarına göre" },
+  { en: "under the command of the leader", tr: "liderin komutası altında" },
+  { en: "in the calculation of the cost", tr: "maliyetin hesaplanmasında" },
+  { en: "before the selection of the candidates", tr: "adayların seçiminden önce" },
+  { en: "during the presentation of the findings", tr: "bulguların sunumu sırasında" },
+  { en: "because of the intensity of the crisis", tr: "krizin şiddeti nedeniyle" },
+  { en: "after the creation of the database", tr: "veritabanının oluşturulmasından sonra" },
+  { en: "according to the expectations of the users", tr: "kullanıcıların beklentilerine göre" },
+  { en: "under the conditions of the contract", tr: "sözleşmenin koşulları altında" },
+  { en: "in the description of the scenario", tr: "senaryonun tanımında" },
+  { en: "before the change of the strategy", tr: "strateji değişiminden önce" }
+];
+
+const unit2Lesson2SentencesRaw5 = [
+  { en: "during the investigation of the cause", tr: "nedenin araştırılması sırasında" },
+  { en: "because of the sensitivity of the data", tr: "verinin hassasiyeti nedeniyle" },
+  { en: "after the publication of the report", tr: "raporun yayınlanmasından sonra" },
+  { en: "according to the details of the assignment", tr: "ödevin ayrıntılarına göre" },
+  { en: "under the authority of the institution", tr: "kurumun yetkisi altında" },
+  { en: "in the analysis of the behavior", tr: "davranışın analizinde" },
+  { en: "before the audit of the accounts", tr: "hesapların denetiminden önce" },
+  { en: "during the measurement of the temperature", tr: "sıcaklığın ölçülmesi sırasında" },
+  { en: "because of the complexity of the task", tr: "görevin karmaşıklığı nedeniyle" },
+  { en: "after the establishment of the rules", tr: "kuralların belirlenmesinden sonra" },
+  { en: "according to the preferences of the participants", tr: "katılımcıların tercihlerine göre" },
+  { en: "under the supervision of the manager", tr: "yöneticinin gözetimi altında" },
+  { en: "in the detection of the error", tr: "hatanın tespit edilmesinde" },
+  { en: "before the expansion of the market", tr: "pazarın genişlemesinden önce" },
+  { en: "during the validation of the hypothesis", tr: "hipotezin doğrulanması sırasında" }
+];
+
+const unit2Lesson2Exercises = {
+  exercises: [
+    {
+      id: "u2l2ex1",
+      title: "Alıştırma 1: Edat Takımı + Edat Takımı Giriş",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-15)",
+      questions: build15Questions(unit2Lesson2SentencesRaw1, 2, 9, 1)
+    },
+    {
+      id: "u2l2ex2",
+      title: "Alıştırma 2: Temel Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (16-30)",
+      questions: build15Questions(unit2Lesson2SentencesRaw2, 2, 9, 2)
+    },
+    {
+      id: "u2l2ex3",
+      title: "Alıştırma 3: Orta Seviye Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (31-45)",
+      questions: build15Questions(unit2Lesson2SentencesRaw3, 2, 9, 3)
+    },
+    {
+      id: "u2l2ex4",
+      title: "Alıştırma 4: İleri Seviye Yapılar I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (46-60)",
+      questions: build15Questions(unit2Lesson2SentencesRaw4, 2, 9, 4)
+    },
+    {
+      id: "u2l2ex5",
+      title: "Alıştırma 5: İleri Seviye Yapılar II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (61-75)",
+      questions: build15Questions(unit2Lesson2SentencesRaw5, 2, 9, 5)
+    }
+  ]
+};
+
+const unit3Lesson10SentencesRaw = [
+  // Exercise 1: index 0-15
+  { en: "a significant factor", tr: "önemli bir faktör", word: "significant", trWord: "önemli" },
+  { en: "a theoretical approach", tr: "teorik bir yaklaşım", word: "theoretical", trWord: "teorik" },
+  { en: "an analytical method", tr: "analitik bir yöntem", word: "analytical", trWord: "analitik" },
+  { en: "a constitutional issue", tr: "anayasal bir sorun", word: "constitutional", trWord: "anayasal" },
+  { en: "a financial benefit", tr: "finansal bir fayda", word: "financial", trWord: "finansal" },
+  { en: "an environmental policy", tr: "çevresel bir politika", word: "environmental", trWord: "çevresel" },
+  { en: "a consistent response", tr: "tutarlı bir yanıt", word: "consistent", trWord: "tutarlı" },
+  { en: "a specific definition", tr: "belirli bir tanım", word: "specific", trWord: "belirli" },
+  { en: "a methodological error", tr: "metodolojik bir hata", word: "methodological", trWord: "metodolojik" },
+  { en: "an economic sector", tr: "ekonomik bir sektör", word: "economic", trWord: "ekonomik" },
+  { en: "a structural modification", tr: "yapısal bir değişiklik", word: "structural", trWord: "yapısal" },
+  { en: "a periodic assessment", tr: "periyodik bir değerlendirme", word: "periodic", trWord: "periyodik" },
+  { en: "an individual identity", tr: "bireysel bir kimlik", word: "individual", trWord: "bireysel" },
+  { en: "a procedural requirement", tr: "yöntemsel bir gereklilik", word: "procedural", trWord: "yöntemsel" },
+  { en: "a conceptual framework", tr: "kavramsal bir çerçeve", word: "conceptual", trWord: "kavramsal" },
+  { en: "a responsive authority", tr: "duyarlı bir otorite", word: "responsive", trWord: "duyarlı" },
+
+  // Exercise 2: index 16-31
+  { en: "a contextual analysis", tr: "bağlamsal bir analiz", word: "contextual", trWord: "bağlamsal" },
+  { en: "a distributive function", tr: "dağıtımsal bir işlev", word: "distributive", trWord: "dağıtımsal" },
+  { en: "a similar occurrence", tr: "benzer bir olay", word: "similar", trWord: "benzer" },
+  { en: "an evident bias", tr: "bariz bir önyargı", word: "evident", trWord: "bariz" },
+  { en: "a major source", tr: "önemli bir kaynak", word: "major", trWord: "önemli" },
+  { en: "a creative process", tr: "yaratıcı bir süreç", word: "creative", trWord: "yaratıcı" },
+  { en: "an alternative solution", tr: "alternatif bir çözüm", word: "alternative", trWord: "alternatif" },
+  { en: "a mutual agreement", tr: "karşılıklı bir anlaşma", word: "mutual", trWord: "karşılıklı" },
+  { en: "a negative impact", tr: "olumsuz bir etki", word: "negative", trWord: "olumsuz" },
+  { en: "a positive result", tr: "olumlu bir sonuç", word: "positive", trWord: "olumlu" },
+  { en: "a physical property", tr: "fiziksel bir özellik", word: "physical", trWord: "fiziksel" },
+  { en: "a chemical reaction", tr: "kimyasal bir tepkime", word: "chemical", trWord: "kimyasal" },
+  { en: "a social change", tr: "toplumsal bir değişim", word: "social", trWord: "toplumsal" },
+  { en: "a technical difficulty", tr: "teknik bir zorluk", word: "technical", trWord: "teknik" },
+  { en: "a cultural heritage", tr: "kültürel bir miras", word: "cultural", trWord: "kültürel" },
+  { en: "a visual representation", tr: "görsel bir temsil", word: "visual", trWord: "görsel" },
+
+  // Exercise 3: index 32-47
+  { en: "an official document", tr: "resmi bir belge", word: "official", trWord: "resmi" },
+  { en: "a natural resource", tr: "doğal bir kaynak", word: "natural", trWord: "doğal" },
+  { en: "a primary source", tr: "birincil bir kaynak", word: "primary", trWord: "birincil" },
+  { en: "a secondary analysis", tr: "ikincil bir analiz", word: "secondary", trWord: "ikincil" },
+  { en: "a permanent state", tr: "kalıcı bir durum", word: "permanent", trWord: "kalıcı" },
+  { en: "a temporary status", tr: "geçici bir statü", word: "temporary", trWord: "geçici" },
+  { en: "an active participation", tr: "aktif bir katılım", word: "active", trWord: "aktif" },
+  { en: "a passive role", tr: "edilgen bir rol", word: "passive", trWord: "edilgen" },
+  { en: "a formal education", tr: "resmi bir eğitim", word: "formal", trWord: "resmi" },
+  { en: "an informal discussion", tr: "resmi olmayan bir tartışma", word: "informal", trWord: "resmi olmayan" },
+  { en: "a logical argument", tr: "mantıklı bir argüman", word: "logical", trWord: "mantıklı" },
+  { en: "empirical evidence", tr: "deneysel bir kanıt", word: "empirical", trWord: "deneysel" },
+  { en: "statistical significance", tr: "istatistiksel bir önem", word: "statistical", trWord: "istatistiksel" },
+  { en: "a preliminary report", tr: "ön bir rapor", word: "preliminary", trWord: "ön" },
+  { en: "a comprehensive study", tr: "kapsamlı bir çalışma", word: "comprehensive", trWord: "kapsamlı" },
+  { en: "a dominant feature", tr: "baskın bir özellik", word: "dominant", trWord: "baskın" },
+
+  // Exercise 4: index 48-63
+  { en: "a data analysis", tr: "veri analizi", word: "data", trWord: "veri" },
+  { en: "a government policy", tr: "hükümet politikası", word: "government", trWord: "hükümet" },
+  { en: "a research method", tr: "araştırma yöntemi", word: "research", trWord: "araştırma" },
+  { en: "a market economy", tr: "piyasa ekonomisi", word: "market", trWord: "piyasa" },
+  { en: "a contract specification", tr: "sözleşme şartnamesi", word: "contract", trWord: "sözleşme" },
+  { en: "a labor market", tr: "iş gücü piyasası", word: "labor", trWord: "iş gücü" },
+  { en: "an income distribution", tr: "gelir dağılımı", word: "income", trWord: "gelir" },
+  { en: "a theory formulation", tr: "teori formülasyonu", word: "theory", trWord: "teori" },
+  { en: "an energy source", tr: "enerji kaynağı", word: "energy", trWord: "enerji" },
+  { en: "a computer network", tr: "bilgisayar ağı", word: "computer", trWord: "bilgisayar" },
+  { en: "a resource allocation", tr: "kaynak tahsisi", word: "resource", trWord: "kaynak" },
+  { en: "a quality control", tr: "kalite kontrolü", word: "quality", trWord: "kalite" },
+  { en: "a project design", tr: "proje tasarımı", word: "project", trWord: "proje" },
+  { en: "a trade agreement", tr: "ticaret anlaşması", word: "trade", trWord: "ticaret" },
+  { en: "a security system", tr: "güvenlik sistemi", word: "security", trWord: "güvenlik" },
+  { en: "a transition period", tr: "geçiş dönemi", word: "transition", trWord: "geçiş" },
+
+  // Exercise 5: index 64-79
+  { en: "data collection", tr: "veri toplama", word: "collection", trWord: "toplama" },
+  { en: "a feedback loop", tr: "geri bildirim döngüsü", word: "feedback", trWord: "geri bildirim" },
+  { en: "a research project", tr: "araştırma projesi", word: "project", trWord: "projesi" },
+  { en: "population growth", tr: "nüfus büyümesi", word: "population", trWord: "nüfus" },
+  { en: "a budget cut", tr: "bütçe kesintisi", word: "budget", trWord: "bütçe" },
+  { en: "a water supply", tr: "su kaynağı", word: "water", trWord: "su" },
+  { en: "an output level", tr: "çıktı seviyesi", word: "output", trWord: "çıktı" },
+  { en: "an input device", tr: "girdi aygıtı", word: "input", trWord: "girdi" },
+  { en: "a price index", tr: "fiyat endeksi", word: "price", trWord: "fiyat" },
+  { en: "a risk assessment", tr: "risk değerlendirmesi", word: "risk", trWord: "risk" },
+  { en: "a consensus meeting", tr: "uzlaşı toplantısı", word: "consensus", trWord: "uzlaşı" },
+  { en: "tax revenue", tr: "vergi geliri", word: "tax", trWord: "vergi" },
+  { en: "a code system", tr: "kod sistemi", word: "code", trWord: "kod" },
+  { en: "a software release", tr: "yazılım sürümü", word: "software", trWord: "yazılım" },
+  { en: "crisis management", tr: "kriz yönetimi", word: "crisis", trWord: "kriz" },
+  { en: "an error rate", tr: "hata oranı", word: "error", trWord: "hata" },
+
+  // Exercise 6: index 80-95
+  { en: "a team leader", tr: "ekip lideri", word: "team", trWord: "ekip" },
+  { en: "network security", tr: "ağ güvenliği", word: "security", trWord: "güvenliği" },
+  { en: "a database creator", tr: "veritabanı yaratıcısı", word: "database", trWord: "veritabanı" },
+  { en: "signature verification", tr: "imza doğrulaması", word: "signature", trWord: "imza" },
+  { en: "product development", tr: "ürün geliştirme", word: "product", trWord: "ürün" },
+  { en: "memory capacity", tr: "bellek kapasitesi", word: "memory", trWord: "bellek" },
+  { en: "customer service", tr: "müşteri hizmetleri", word: "customer", trWord: "müşteri" },
+  { en: "user expectation", tr: "kullanıcı beklentisi", word: "user", trWord: "kullanıcı" },
+  { en: "a detailed explanation", tr: "detaylı açıklama", word: "explanation", trWord: "açıklama" },
+  { en: "an account balance", tr: "hesap bakiyesi", word: "balance", trWord: "bakiye" },
+  { en: "temperature measurement", tr: "sıcaklık ölçümü", word: "temperature", trWord: "sıcaklık" },
+  { en: "a behavior pattern", tr: "davranış kalıbı", word: "behavior", trWord: "davranış" },
+  { en: "task division", tr: "görev paylaşımı", word: "division", trWord: "paylaşımı" },
+  { en: "a time limit", tr: "zaman sınırı", word: "limit", trWord: "sınırı" },
+  { en: "an index table", tr: "endeks tablosu", word: "table", trWord: "tablosu" },
+  { en: "a test result", tr: "test sonucu", word: "result", trWord: "sonucu" }
+];
+
+const unit3Lesson11SentencesRaw = [
+  // Exercise 1: index 0-15
+  { en: "a global market expansion", tr: "küresel pazar büyümesi", word: "expansion", trWord: "büyümesi" },
+  { en: "an alternative energy source", tr: "alternatif enerji kaynağı", word: "alternative", trWord: "alternatif" },
+  { en: "a complex network design", tr: "karmaşık ağ tasarımı", word: "complex", trWord: "karmaşık" },
+  { en: "a stable regime structure", tr: "istikrarlı rejim yapısı", word: "regime", trWord: "rejim" },
+  { en: "a clear concept definition", tr: "net kavram tanımı", word: "concept", trWord: "kavram" },
+  { en: "a precise data analysis", tr: "kesin veri analizi", word: "precise", trWord: "kesin" },
+  { en: "a primary research method", tr: "birincil araştırma yöntemi", word: "primary", trWord: "birincil" },
+  { en: "a modern government policy", tr: "modern hükümet politikası", word: "modern", trWord: "modern" },
+  { en: "a typical market economy", tr: "tipik piyasa ekonomisi", word: "typical", trWord: "tipik" },
+  { en: "a formal contract specification", tr: "resmi sözleşme şartnamesi", word: "formal", trWord: "resmi" },
+  { en: "a competitive labor market", tr: "rekabetçi iş gücü piyasası", word: "competitive", trWord: "rekabetçi" },
+  { en: "an unequal income distribution", tr: "eşitsiz gelir dağılımı", word: "unequal", trWord: "eşitsiz" },
+  { en: "a new theory formulation", tr: "yeni teori formülasyonu", word: "formulation", trWord: "formülasyonu" },
+  { en: "a significant environmental factor", tr: "önemli çevresel faktör", word: "significant", trWord: "önemli" },
+  { en: "a temporary transition period", tr: "geçici geçiş dönemi", word: "temporary", trWord: "geçici" },
+  { en: "a secure database connection", tr: "güvenli veritabanı bağlantısı", word: "secure", trWord: "güvenli" },
+
+  // Exercise 2: index 16-31
+  { en: "a rapid population growth", tr: "hızlı nüfus büyümesi", word: "rapid", trWord: "hızlı" },
+  { en: "a severe budget cut", tr: "ciddi bütçe kesintisi", word: "severe", trWord: "ciddi" },
+  { en: "an efficient water supply", tr: "verimli su kaynağı", word: "efficient", trWord: "verimli" },
+  { en: "a low output level", tr: "düşük çıktı seviyesi", word: "output", trWord: "çıktı" },
+  { en: "a high price index", tr: "yüksek fiyat endeksi", word: "price", trWord: "fiyat" },
+  { en: "a dynamic feedback loop", tr: "dinamik geri bildirim döngüsü", word: "dynamic", trWord: "dinamik" },
+  { en: "a preliminary risk assessment", tr: "ön risk değerlendirmesi", word: "preliminary", trWord: "ön" },
+  { en: "an internal security system", tr: "iç güvenlik sistemi", word: "internal", trWord: "iç" },
+  { en: "a mutual trade agreement", tr: "karşılıklı ticaret anlaşması", word: "mutual", trWord: "karşılıklı" },
+  { en: "a major project design", tr: "büyük proje tasarımı", word: "major", trWord: "büyük" },
+  { en: "a reliable resource allocation", tr: "güvenilir kaynak tahsisi", word: "reliable", trWord: "güvenilir" },
+  { en: "a strict quality control", tr: "katı kalite kontrolü", word: "strict", trWord: "katı" },
+  { en: "a creative product development", tr: "yaratıcı ürün geliştirme", word: "creative", trWord: "yaratıcı" },
+  { en: "a massive memory capacity", tr: "devasa bellek kapasitesi", word: "massive", trWord: "devasa" },
+  { en: "a professional customer service", tr: "profesyonel müşteri hizmetleri", word: "professional", trWord: "profesyonel" },
+  { en: "a high user expectation", tr: "yüksek kullanıcı beklentisi", word: "user", trWord: "kullanıcı" },
+
+  // Exercise 3: index 32-47
+  { en: "a detailed explanation document", tr: "detaylı açıklama belgesi", word: "document", trWord: "belgesi" },
+  { en: "a positive test result", tr: "olumlu test sonucu", word: "positive", trWord: "olumlu" },
+  { en: "a chronological index table", tr: "kronolojik endeks tablosu", word: "chronological", trWord: "kronolojik" },
+  { en: "a strict time limit", tr: "katı zaman sınırı", word: "limit", trWord: "sınırı" },
+  { en: "a clear task division", tr: "net görev paylaşımı", word: "division", trWord: "paylaşımı" },
+  { en: "a typical behavior pattern", tr: "tipik davranış kalıbı", word: "behavior", trWord: "davranış" },
+  { en: "an automatic temperature measurement", tr: "otomatik sıcaklık ölçümü", word: "temperature", trWord: "sıcaklık" },
+  { en: "an accurate account balance", tr: "doğru hesap bakiyesi", word: "accurate", trWord: "doğru" },
+  { en: "Data analysis is a creative process.", tr: "Veri analizi yaratıcı bir süreçtir.", word: "process", trWord: "süreçtir" },
+  { en: "The team completed the research project.", tr: "Ekip araştırma projesini tamamladı.", word: "project", trWord: "projesini" },
+  { en: "The government changed the economic policy.", tr: "Hükümet ekonomik politikayı değiştirdi.", word: "policy", trWord: "politikayı" },
+  { en: "The company increased the memory capacity.", tr: "Şirket bellek kapasitesini artırdı.", word: "capacity", trWord: "kapasitesini" },
+  { en: "Scientists proposed a new research method.", tr: "Bilim insanları yeni bir araştırma yöntemi önerdiler.", word: "proposed", trWord: "önerdiler" },
+  { en: "The market economy requires stable resources.", tr: "Piyasa ekonomisi istikrarlı kaynaklar gerektirir.", word: "requires", trWord: "gerektirir" },
+  { en: "We must design a secure network system.", tr: "Güvenli bir ağ sistemi tasarlamalıyız.", word: "design", trWord: "tasarlamalıyız" },
+  { en: "The manager approved the resource allocation.", tr: "Yönetici kaynak tahsisini onayladı.", word: "approved", trWord: "onayladı" },
+
+  // Exercise 4: index 48-63
+  { en: "They established a strict quality control.", tr: "Sıkı bir kalite kontrolü kurdular.", word: "quality", trWord: "kalite" },
+  { en: "The sector needs a major modification.", tr: "Sektörün büyük bir değişikliğe ihtiyacı var.", word: "needs", trWord: "ihtiyacı var" },
+  { en: "The report highlights a significant factor.", tr: "Rapor önemli bir faktörü vurgulamaktadır.", word: "highlights", trWord: "vurgulamaktadır" },
+  { en: "We observed a similar occurrence in the test.", tr: "Testte benzer bir olayı gözlemledik.", word: "observed", trWord: "gözlemledik" },
+  { en: "The author provides a conceptual framework.", tr: "Yazar kavramsal bir çerçeve sunmaktadır.", word: "provides", trWord: "sunmaktadır" },
+  { en: "The lawyer drafted a new trade agreement.", tr: "Avukat yeni bir ticaret anlaşması hazırladı.", word: "drafted", trWord: "hazırladı" },
+  { en: "The economy experiences a rapid transition.", tr: "Ekonomi hızlı bir geçiş yaşıyor.", word: "experiences", trWord: "yaşıyor" },
+  { en: "The team needs a reliable database creator.", tr: "Ekibin güvenilir bir veritabanı yaratıcısına ihtiyacı var.", word: "creator", trWord: "yaratıcısına" },
+  { en: "They verified the signature of the client.", tr: "Müşterinin imzasını doğruladılar.", word: "verified", trWord: "doğruladılar" },
+  { en: "The country promotes a sustainable source.", tr: "Ülke sürdürülebilir bir kaynağı teşvik ediyor.", word: "promotes", trWord: "teşvik ediyor" },
+  { en: "We need an immediate risk assessment.", tr: "Acil bir risk değerlendirmesine ihtiyacımız var.", word: "immediate", trWord: "acil" },
+  { en: "The system detects a logical error.", tr: "Sistem mantıksal bir hata tespit ediyor.", word: "detects", trWord: "tespit ediyor" },
+  { en: "The project operates under strict regulations.", tr: "Proje katı kurallar altında yürütülmektedir.", word: "operates", trWord: "yürütülmektedir" },
+  { en: "The candidate showed a positive behavior pattern.", tr: "Aday olumlu bir davranış kalıbı gösterdi.", word: "showed", trWord: "gösterdi" },
+  { en: "The student completed the difficult assignment.", tr: "Öğrenci zor görevi tamamladı.", word: "completed", trWord: "tamamladı" },
+  { en: "The board accepted the budget proposal.", tr: "Yönetim kurulu bütçe teklifini kabul etti.", word: "accepted", trWord: "kabul etti" },
+
+  // Exercise 5: index 64-79
+  { en: "We measured the temperature of the liquid.", tr: "Sıvının sıcaklığını ölçtük.", word: "measured", trWord: "ölçtük" },
+  { en: "The user has a high expectation.", tr: "Kullanıcının yüksek bir beklentisi var.", word: "expectation", trWord: "beklentisi var" },
+  { en: "The process requires a clear definition.", tr: "Süreç net bir tanım gerektirir.", word: "definition", trWord: "tanım" },
+  { en: "The analysis revealed a major source.", tr: "Analiz önemli bir kaynağı ortaya çıkardı.", word: "revealed", trWord: "ortaya çıkardı" },
+  { en: "They completed a periodic assessment of the system.", tr: "Sistemin periyodik bir değerlendirmesini tamamladılar.", word: "assessment", trWord: "değerlendirmesini" },
+  { en: "The administration updated the security policy.", tr: "Yönetim güvenlik politikasını güncelledi.", word: "updated", trWord: "güncelledi" },
+  { en: "The team created a new database connection.", tr: "Ekip yeni bir veritabanı bağlantısı oluşturdu.", word: "connection", trWord: "bağlantısı" },
+  { en: "We need a procedural requirement document.", tr: "Yöntemsel bir gereklilik belgesine ihtiyacımız var.", word: "requirement", trWord: "gereklilik" },
+  { en: "The institution has a responsive authority.", tr: "Kurumun duyarlı bir yetkisi var.", word: "authority", trWord: "yetkisi var" },
+  { en: "The professor wrote a conceptual analysis.", tr: "Profesör kavramsal bir analiz yazdı.", word: "wrote", trWord: "yazdı" },
+  { en: "The division of labor is a key principle.", tr: "İş bölümü kilit bir ilkedir.", word: "division", trWord: "bölümü" },
+  { en: "The company faces a competitive labor market.", tr: "Şirket rekabetçi bir iş gücü piyasası ile karşı karşıyadır.", word: "faces", trWord: "karşı karşıyadır" },
+  { en: "The distribution of income is not equal.", tr: "Gelir dağılımı eşit değildir.", word: "distribution", trWord: "dağılımı" },
+  { en: "The author started the theory formulation.", tr: "Yazar teori formülasyonuna başladı.", word: "formulation", trWord: "formülasyonuna" },
+  { en: "They found a creative solution to the problem.", tr: "Soruna yaratıcı bir çözüm buldular.", word: "found", trWord: "buldular" },
+  { en: "We need to obtain a new energy source.", tr: "Yeni bir enerji kaynağı elde etmeliyiz.", word: "obtain", trWord: "elde etmeliyiz" },
+
+  // Exercise 6: index 80-95
+  { en: "The computer network was upgraded yesterday.", tr: "Bilgisayar ağı dün yükseltildi.", word: "network", trWord: "ağı" },
+  { en: "The committee accepted the mutual agreement.", tr: "Komite karşılıklı anlaşmayı kabul etti.", word: "agreement", trWord: "anlaşmayı" },
+  { en: "The negative impact was resolved quickly.", tr: "Olumsuz etki hızlıca çözüldü.", word: "resolved", trWord: "çözüldü" },
+  { en: "We got a positive result from the experiment.", tr: "Deneyden olumlu bir sonuç aldık.", word: "result", trWord: "sonuç" },
+  { en: "The physical property of the metal is interesting.", tr: "Metalin fiziksel özelliği ilginçtir.", word: "property", trWord: "özelliği" },
+  { en: "The chemical reaction was very fast.", tr: "Kimyasal tepkime çok hızlıydı.", word: "reaction", trWord: "tepkime" },
+  { en: "The community wants a social change.", tr: "Topluluk toplumsal bir değişim istiyor.", word: "social", trWord: "toplumsal" },
+  { en: "We resolved the technical difficulty.", tr: "Teknik zorluğu çözdük.", word: "difficulty", trWord: "zorluğu" },
+  { en: "The country has a rich cultural heritage.", tr: "Ülkenin zengin bir kültürel mirası var.", word: "heritage", trWord: "mirası var" },
+  { en: "The diagram is a visual representation.", tr: "Diyagram görsel bir temsildir.", word: "representation", trWord: "temsildir" },
+  { en: "The police checked the official document.", tr: "Polis resmi belgeyi kontrol etti.", word: "document", trWord: "belgeyi" },
+  { en: "We should protect our natural resources.", tr: "Doğal kaynaklarimizi korumalıyız.", word: "protect", trWord: "korumalıyız" },
+  { en: "The witness gave a detailed description.", tr: "Tanık detaylı bir açıklama yaptı.", word: "description", trWord: "açıklama" },
+  { en: "The patient needs a temporary treatment.", tr: "Hastanın geçici bir tedaviye ihtiyacı var.", word: "treatment", trWord: "tedaviye" },
+  { en: "The organization has a stable structure.", tr: "Organizasyonun istikrarlı bir yapısı var.", word: "structure", trWord: "yapısı" },
+  { en: "The study provides supporting evidence.", tr: "Çalışma destekleyici kanıt sağlıyor.", word: "evidence", trWord: "kanıt" }
+];
+
+const unit4Lesson12SentencesRaw = [
+  // Exercise 1: index 0-15
+  { en: "decreasing exports", tr: "azalan ihracat", word: "decreasing", trWord: "azalan" },
+  { en: "emerging economies", tr: "gelişmekte olan ekonomiler", word: "emerging", trWord: "gelişmekte olan" },
+  { en: "expanding networks", tr: "genişleyen ağlar", word: "expanding", trWord: "genişleyen" },
+  { en: "declining revenues", tr: "düşen gelirler", word: "declining", trWord: "düşen" },
+  { en: "increasing costs", tr: "artan maliyetler", word: "increasing", trWord: "artan" },
+  { en: "growing inconsistencies", tr: "büyüyen tutarsızlıklar", word: "growing", trWord: "büyüyen" },
+  { en: "shifting policies", tr: "değişen politikalar", word: "shifting", trWord: "değişen" },
+  { en: "evolving theories", tr: "gelişen teoriler", word: "evolving", trWord: "gelişen" },
+  { en: "fluctuating estimates", tr: "dalgalanan tahminler", word: "fluctuating", trWord: "dalgalanan" },
+  { en: "varying parameters", tr: "değişen parametreler", word: "varying", trWord: "değişen" },
+  { en: "surviving entities", tr: "hayatta kalan varlıklar", word: "surviving", trWord: "hayatta kalan" },
+  { en: "dominating factors", tr: "baskın faktörler", word: "dominating", trWord: "baskın" },
+  { en: "corresponding responses", tr: "karşılık gelen yanıtlar", word: "corresponding", trWord: "karşılık gelen" },
+  { en: "underlying structures", tr: "temelinde yatan yapılar", word: "underlying", trWord: "temelinde yatan" },
+  { en: "contradicting evidence", tr: "çelişen kanıtlar", word: "contradicting", trWord: "çelişen" },
+  { en: "alternating methods", tr: "dönüşümlü yöntemler", word: "alternating", trWord: "dönüşümlü" },
+
+  // Exercise 2: index 16-31
+  { en: "continuing movement", tr: "devam eden hareket", word: "continuing", trWord: "devam eden" },
+  { en: "interacting variables", tr: "etkileşen değişkenler", word: "interacting", trWord: "etkileşen" },
+  { en: "conflicting insights", tr: "çelişen öngörüler", word: "conflicting", trWord: "çelişen" },
+  { en: "devoting sectors", tr: "kendini adayan sektörler", word: "devoting", trWord: "kendini adayan" },
+  { en: "occurring variations", tr: "meydana gelen varyasyonlar", word: "occurring", trWord: "meydana gelen" },
+  { en: "indicative trends", tr: "gösterge niteliğindeki trendler", word: "indicative", trWord: "gösterge niteliğindeki" },
+  { en: "rising prices", tr: "yükselen fiyatlar", word: "rising", trWord: "yükselen" },
+  { en: "falling demand", tr: "düşen talep", word: "falling", trWord: "düşen" },
+  { en: "growing demands", tr: "artan talepler", word: "growing", trWord: "artan" },
+  { en: "leading companies", tr: "öncü şirketler", word: "leading", trWord: "öncü" },
+  { en: "fluctuating prices", tr: "dalgalanan fiyatlar", word: "fluctuating", trWord: "dalgalanan" },
+  { en: "lasting impressions", tr: "kalıcı izlenimler", word: "lasting", trWord: "kalıcı" },
+  { en: "convincing arguments", tr: "ikna edici argümanlar", word: "convincing", trWord: "ikna edici" },
+  { en: "misleading information", tr: "yanıltıcı bilgi", word: "misleading", trWord: "yanıltıcı" },
+  { en: "supporting data", tr: "destekleyici veriler", word: "supporting", trWord: "destekleyici" },
+  { en: "promising results", tr: "umut verici sonuçlar", word: "promising", trWord: "umut verici" },
+
+  // Exercise 3: index 32-47
+  { en: "varying results", tr: "değişen sonuçlar", word: "varying", trWord: "değişen" },
+  { en: "dominating trends", tr: "baskın trendler", word: "dominating", trWord: "baskın" },
+  { en: "existing systems", tr: "mevcut sistemler", word: "existing", trWord: "mevcut" },
+  { en: "growing interest", tr: "artan ilgi", word: "growing", trWord: "artan" },
+  { en: "rising temperatures", tr: "artan sıcaklıklar", word: "rising", trWord: "artan" },
+  { en: "developing countries", tr: "gelişmekte olan ülkeler", word: "developing", trWord: "gelişmekte olan" },
+  { en: "matching answers", tr: "eşleşen cevaplar", word: "matching", trWord: "eşleşen" },
+  { en: "challenging tasks", tr: "zorlayıcı görevler", word: "challenging", trWord: "zorlayıcı" },
+  { en: "limiting conditions", tr: "sınırlayıcı koşullar", word: "limiting", trWord: "sınırlayıcı" },
+  { en: "outstanding achievements", tr: "olağanüstü başarılar", word: "outstanding", trWord: "olağanüstü" },
+  { en: "existing structures", tr: "mevcut yapılar", word: "existing", trWord: "mevcut" },
+  { en: "shifting priorities", tr: "değişen öncelikler", word: "shifting", trWord: "değişen" },
+  { en: "developing theories", tr: "gelişen teoriler", word: "developing", trWord: "gelişen" },
+  { en: "concluding remarks", tr: "kapanış konuşmaları", word: "concluding", trWord: "kapanış" },
+  { en: "defining moments", tr: "belirleyici anlar", word: "defining", trWord: "belirleyici" },
+  { en: "surviving companies", tr: "hayatta kalan şirketler", word: "surviving", trWord: "hayatta kalan" },
+
+  // Exercise 4: index 48-63
+  { en: "increasing production", tr: "artan üretim", word: "increasing", trWord: "artan" },
+  { en: "declining interest", tr: "azalan ilgi", word: "declining", trWord: "azalan" },
+  { en: "rising rates", tr: "yükselen oranlar", word: "rising", trWord: "yükselen" },
+  { en: "shifting focus", tr: "değişen odak", word: "shifting", trWord: "değişen" },
+  { en: "growing population", tr: "büyüyen nüfus", word: "growing", trWord: "büyüyen" },
+  { en: "changing times", tr: "değişen zamanlar", word: "changing", trWord: "değişen" },
+  { en: "existing resources", tr: "mevcut kaynaklar", word: "existing", trWord: "mevcut" },
+  { en: "differing views", tr: "farklı görüşler", word: "differing", trWord: "farklı" },
+  { en: "opposing parties", tr: "muhalif partiler", word: "opposing", trWord: "muhalif" },
+  { en: "matching patterns", tr: "eşleşen desenler", word: "matching", trWord: "eşleşen" },
+  { en: "impending danger", tr: "yaklaşan tehlike", word: "impending", trWord: "yaklaşan" },
+  { en: "emerging technologies", tr: "yeni ortaya çıkan teknolojiler", word: "emerging", trWord: "yeni ortaya çıkan" },
+  { en: "competing products", tr: "rekabet eden ürünler", word: "competing", trWord: "rekabet eden" },
+  { en: "demanding clients", tr: "talepkar müşteriler", word: "demanding", trWord: "talepkar" },
+  { en: "promising career", tr: "umut verici kariyer", word: "promising", trWord: "umut verici" },
+  { en: "leading indicators", tr: "öncü göstergeler", word: "leading", trWord: "öncü" },
+
+  // Exercise 5: index 64-79
+  { en: "outstanding debts", tr: "ödenmemiş borçlar", word: "outstanding", trWord: "ödenmemiş" },
+  { en: "missing details", tr: "eksik detaylar", word: "missing", trWord: "eksik" },
+  { en: "surviving patients", tr: "hayatta kalan hastalar", word: "surviving", trWord: "hayatta kalan" },
+  { en: "conflicting statements", tr: "çelişen ifadeler", word: "conflicting", trWord: "çelişen" },
+  { en: "underlying causes", tr: "temelde yatan nedenler", word: "underlying", trWord: "temelde yatan" },
+  { en: "corresponding values", tr: "karşılık gelen değerler", word: "corresponding", trWord: "karşılık gelen" },
+  { en: "occurring events", tr: "meydana gelen olaylar", word: "occurring", trWord: "meydana gelen" },
+  { en: "varying opinions", tr: "değişen fikirler", word: "varying", trWord: "değişen" },
+  { en: "growing influence", tr: "artan etki", word: "growing", trWord: "artan" },
+  { en: "expanding boundaries", tr: "genişleyen sınırlar", word: "expanding", trWord: "genişleyen" },
+  { en: "increasing pressure", tr: "artan baskı", word: "increasing", trWord: "artan" },
+  { en: "declining membership", tr: "azalan üyelik", word: "declining", trWord: "azalan" },
+  { en: "rising tensions", tr: "yükselen gerilimler", word: "rising", trWord: "yükselen" },
+  { en: "evolving concepts", tr: "gelişen kavramlar", word: "evolving", trWord: "gelişen" },
+  { en: "fluctuating levels", tr: "dalgalanan seviyeler", word: "fluctuating", trWord: "dalgalanan" },
+  { en: "dominating features", tr: "baskın özellikler", word: "dominating", trWord: "baskın" },
+
+  // Exercise 6: index 80-95
+  { en: "contradicting statements", tr: "çelişen beyanlar", word: "contradicting", trWord: "çelişen" },
+  { en: "alternating currents", tr: "dalgalı akımlar", word: "alternating", trWord: "dalgalı" },
+  { en: "continuing support", tr: "devam eden destek", word: "continuing", trWord: "devam eden" },
+  { en: "interacting groups", tr: "etkileşen gruplar", word: "interacting", trWord: "etkileşen" },
+  { en: "conflicting requirements", tr: "çelişen gereksinimler", word: "conflicting", trWord: "çelişen" },
+  { en: "devoting efforts", tr: "adanan çabalar", word: "devoting", trWord: "adanan" },
+  { en: "occurring changes", tr: "meydana gelen değişiklikler", word: "occurring", trWord: "meydana gelen" },
+  { en: "indicative results", tr: "gösterge niteliğindeki sonuçlar", word: "indicative", trWord: "gösterge niteliğindeki" },
+  { en: "limiting restrictions", tr: "sınırlayıcı kısıtlamalar", word: "limiting", trWord: "sınırlayıcı" },
+  { en: "outstanding performances", tr: "üstün performanslar", word: "outstanding", trWord: "üstün" },
+  { en: "existing data", tr: "mevcut veriler", word: "existing", trWord: "mevcut" },
+  { en: "shifting alliances", tr: "değişen ittifaklar", word: "shifting", trWord: "değişen" },
+  { en: "developing regions", tr: "gelişen bölgeler", word: "developing", trWord: "gelişen" },
+  { en: "concluding sentence", tr: "sonuç cümlesi", word: "concluding", trWord: "sonuç" },
+  { en: "defining characteristics", tr: "belirleyici özellikler", word: "defining", trWord: "belirleyici" },
+  { en: "challenging situations", tr: "zorlu durumlar", word: "challenging", trWord: "zorlu" },
+
+  // Exercise 7: index 96-111
+  { en: "expanding sectors", tr: "genişleyen sektörler", word: "expanding", trWord: "genişleyen" },
+  { en: "emerging issues", tr: "ortaya çıkan sorunlar", word: "emerging", trWord: "ortaya çıkan" },
+  { en: "increasing demands", tr: "artan talepler", word: "increasing", trWord: "artan" },
+  { en: "declining standard", tr: "düşen standart", word: "declining", trWord: "düşen" },
+  { en: "growing tension", tr: "artan gerilim", word: "growing", trWord: "artan" },
+  { en: "shifting dynamics", tr: "değişen dinamikler", word: "shifting", trWord: "değişen" },
+  { en: "evolving standards", tr: "gelişen standartlar", word: "evolving", trWord: "gelişen" },
+  { en: "fluctuating demands", tr: "dalgalanan talepler", word: "fluctuating", trWord: "dalgalanan" },
+  { en: "varying definitions", tr: "değişen tanımlar", word: "varying", trWord: "değişen" },
+  { en: "surviving elements", tr: "hayatta kalan unsurlar", word: "surviving", trWord: "hayatta kalan" },
+  { en: "dominating powers", tr: "baskın güçler", word: "dominating", trWord: "baskın" },
+  { en: "corresponding elements", tr: "karşılık gelen unsurlar", word: "corresponding", trWord: "karşılık gelen" },
+  { en: "underlying principles", tr: "temelde yatan ilkeler", word: "underlying", trWord: "temelde yatan" },
+  { en: "contradicting reports", tr: "çelişen raporlar", word: "contradicting", trWord: "çelişen" },
+  { en: "alternating sequences", tr: "ardışık sıralar", word: "alternating", trWord: "ardışık" },
+  { en: "continuing dialogue", tr: "devam eden diyalog", word: "continuing", trWord: "devam eden" },
+
+  // Exercise 8: index 112-127
+  { en: "interacting processes", tr: "etkileşen süreçler", word: "interacting", trWord: "etkileşen" },
+  { en: "conflicting perspectives", tr: "çelişen perspektifler", word: "conflicting", trWord: "çelişen" },
+  { en: "devoting resources", tr: "tahsis edilen kaynaklar", word: "devoting", trWord: "tahsis edilen" },
+  { en: "occurring phenomena", tr: "meydana gelen olaylar", word: "occurring", trWord: "meydana gelen" },
+  { en: "indicative evidence", tr: "gösterge niteliğindeki kanıtlar", word: "indicative", trWord: "gösterge niteliğindeki" },
+  { en: "rising stars", tr: "yükselen yıldızlar", word: "rising", trWord: "yükselen" },
+  { en: "falling leaves", tr: "düşen yapraklar", word: "falling", trWord: "düşen" },
+  { en: "leading figures", tr: "önde gelen şahsiyetler", word: "leading", trWord: "önde gelen" },
+  { en: "lasting peace", tr: "kalıcı barış", word: "lasting", trWord: "kalıcı" },
+  { en: "convincing explanations", tr: "ikna edici açıklamalar", word: "convincing", trWord: "ikna edici" },
+  { en: "misleading charts", tr: "yanıltıcı grafikler", word: "misleading", trWord: "yanıltıcı" },
+  { en: "supporting letters", tr: "destekleyici mektuplar", word: "supporting", trWord: "destekleyici" },
+  { en: "promising opportunities", tr: "umut verici fırsatlar", word: "promising", trWord: "umut verici" },
+  { en: "varying colors", tr: "değişen renkler", word: "varying", trWord: "değişen" },
+  { en: "dominating positions", tr: "baskın konumlar", word: "dominating", trWord: "baskın" },
+  { en: "existing laws", tr: "mevcut yasalar", word: "existing", trWord: "mevcut" }
+];
+
+const unit4Lesson13SentencesRaw = [
+  // Exercise 1: index 0-15
+  { en: "income-maximizing strategy", tr: "geliri maksimize eden strateji", word: "income-maximizing", trWord: "geliri maksimize eden" },
+  { en: "resource-limiting factor", tr: "kaynağı sınırlandıran faktör", word: "resource-limiting", trWord: "kaynağı sınırlandıran" },
+  { en: "policy-defining role", tr: "politikayı tanımlayan rol", word: "policy-defining", trWord: "politikayı tanımlayan" },
+  { en: "data-processing software", tr: "veri işleyen yazılım", word: "data-processing", trWord: "veri işleyen" },
+  { en: "market-expanding project", tr: "pazarı büyüten proje", word: "market-expanding", trWord: "pazarı büyüten" },
+  { en: "energy-consuming device", tr: "enerji tüketen cihaz", word: "energy-consuming", trWord: "enerji tüketen" },
+  { en: "logic-defying concept", tr: "mantığa meydan okuyan kavram", word: "logic-defying", trWord: "mantığa meydan okuyan" },
+  { en: "environment-protecting law", tr: "çevreyi koruyan yasa", word: "environment-protecting", trWord: "çevreyi koruyan" },
+  { en: "investment-supporting policy", tr: "yatırımı destekleyen politika", word: "investment-supporting", trWord: "yatırımı destekleyen" },
+  { en: "research-funding source", tr: "araştırmayı fonlayan kaynak", word: "research-funding", trWord: "araştırmayı fonlayan" },
+  { en: "network-monitoring tool", tr: "ağı izleyen araç", word: "network-monitoring", trWord: "ağı izleyen" },
+  { en: "structure-defining rule", tr: "yapıyı tanımlayan kural", word: "structure-defining", trWord: "yapıyı tanımlayan" },
+  { en: "design-simplifying method", tr: "tasarımı basitleştiren yöntem", word: "design-simplifying", trWord: "tasarımı basitleştiren" },
+  { en: "authority-challenging action", tr: "otoriteye meydan okuyan eylem", word: "authority-challenging", trWord: "otoriteye meydan okuyan" },
+  { en: "growth-stimulating plan", tr: "büyümeyi canlandıran plan", word: "growth-stimulating", trWord: "büyümeyi canlandıran" },
+  { en: "regime-supporting force", tr: "rejimi destekleyen güç", word: "regime-supporting", trWord: "rejimi destekleyen" },
+
+  // Exercise 2: index 16-31
+  { en: "cost-reducing measure", tr: "maliyeti düşüren önlem", word: "cost-reducing", trWord: "maliyeti düşüren" },
+  { en: "revenue-generating activity", tr: "gelir getiren faaliyet", word: "revenue-generating", trWord: "gelir getiren" },
+  { en: "profit-maximizing price", tr: "kârı maksimize eden fiyat", word: "profit-maximizing", trWord: "kârı maksimize eden" },
+  { en: "time-saving method", tr: "zaman kazandıran yöntem", word: "time-saving", trWord: "zaman kazandıran" },
+  { en: "problem-solving skill", tr: "problem çözen beceri", word: "problem-solving", trWord: "problem çözen" },
+  { en: "risk-mitigating factor", tr: "riski azaltan faktör", word: "risk-mitigating", trWord: "riski azaltan" },
+  { en: "value-adding service", tr: "değer katan hizmet", word: "value-adding", trWord: "değer katan" },
+  { en: "fact-finding mission", tr: "gerçekleri araştırma görevi", word: "fact-finding", trWord: "gerçekleri araştırma" },
+  { en: "decision-making authority", tr: "karar alma yetkisi", word: "decision-making", trWord: "karar alma" },
+  { en: "labor-saving technology", tr: "işgücü tasarrufu sağlayan teknoloji", word: "labor-saving", trWord: "işgücü tasarrufu sağlayan" },
+  { en: "record-breaking run", tr: "rekor kıran koşu", word: "record-breaking", trWord: "rekor kıran" },
+  { en: "attention-grabbing title", tr: "ilgi çeken başlık", word: "attention-grabbing", trWord: "ilgi çeken" },
+  { en: "breath-taking view", tr: "nefes kesen manzara", word: "breath-taking", trWord: "nefes kesen" },
+  { en: "heart-warming story", tr: "iç ısıtan hikaye", word: "heart-warming", trWord: "iç ısıtan" },
+  { en: "law-abiding citizen", tr: "yasalara uyan vatandaş", word: "law-abiding", trWord: "yasalara uyan" },
+  { en: "peace-loving nation", tr: "barışsever ulus", word: "peace-loving", trWord: "barışsever" },
+
+  // Exercise 3: index 32-47
+  { en: "mind-boggling puzzle", tr: "akıl almaz bulmaca", word: "mind-boggling", trWord: "akıl almaz" },
+  { en: "eye-opening experience", tr: "göz açıcı deneyim", word: "eye-opening", trWord: "göz açıcı" },
+  { en: "mouth-watering dish", tr: "ağız sulandıran yemek", word: "mouth-watering", trWord: "ağız sulandıran" },
+  { en: "life-saving treatment", tr: "hayat kurtaran tedavi", word: "life-saving", trWord: "hayat kurtaran" },
+  { en: "money-making scheme", tr: "para kazandıran plan", word: "money-making", trWord: "para kazandıran" },
+  { en: "job-creating investment", tr: "istihdam yaratan yatırım", word: "job-creating", trWord: "istihdam yaratan" },
+  { en: "face-saving compromise", tr: "itibar kurtaran uzlaşma", word: "face-saving", trWord: "itibar kurtaran" },
+  { en: "climate-changing emission", tr: "iklimi değiştiren emisyon", word: "climate-changing", trWord: "iklimi değiştiren" },
+  { en: "cost-saving device", tr: "maliyet tasarrufu sağlayan cihaz", word: "cost-saving", trWord: "maliyet tasarrufu sağlayan" },
+  { en: "noise-reducing headphone", tr: "gürültü azaltan kulaklık", word: "noise-reducing", trWord: "gürültü azaltan" },
+  { en: "light-emitting diode", tr: "ışık yayan diyot", word: "light-emitting", trWord: "ışık yayan" },
+  { en: "soil-eroding rain", tr: "toprak aşındıran yağmur", word: "soil-eroding", trWord: "toprak aşındıran" },
+  { en: "disease-causing bacteria", tr: "hastalığa neden olan bakteri", word: "disease-causing", trWord: "hastalığa neden olan" },
+  { en: "habit-forming drug", tr: "alışkanlık yapan ilaç", word: "habit-forming", trWord: "alışkanlık yapan" },
+  { en: "caffeine-containing drink", tr: "kafein içeren içecek", word: "caffeine-containing", trWord: "kafein içeren" },
+  { en: "interest-bearing account", tr: "faiz getiren hesap", word: "interest-bearing", trWord: "faiz getiren" },
+
+  // Exercise 4: index 48-63
+  { en: "tax-paying resident", tr: "vergi ödeyen mukim", word: "tax-paying", trWord: "vergi ödeyen" },
+  { en: "trouble-making student", tr: "sorun çıkaran öğrenci", word: "trouble-making", trWord: "sorun çıkaran" },
+  { en: "order-defining priority", tr: "sırayı belirleyen öncelik", word: "order-defining", trWord: "sırayı belirleyen" },
+  { en: "water-absorbing plant", tr: "su emen bitki", word: "water-absorbing", trWord: "su emen" },
+  { en: "heat-conducting metal", tr: "ısı ileten metal", word: "heat-conducting", trWord: "ısı ileten" },
+  { en: "light-absorbing surface", tr: "ışık emen yüzey", word: "light-absorbing", trWord: "ışık emen" },
+  { en: "truth-revealing witness", tr: "gerçeği ortaya çıkaran tanık", word: "truth-revealing", trWord: "gerçeği ortaya çıkaran" },
+  { en: "error-detecting code", tr: "hata tespit eden kod", word: "error-detecting", trWord: "hata tespit eden" },
+  { en: "data-gathering system", tr: "veri toplayan sistem", word: "data-gathering", trWord: "veri toplayan" },
+  { en: "space-saving design", tr: "yer kazandıran tasarım", word: "space-saving", trWord: "yer kazandıran" },
+  { en: "career-defining decision", tr: "kariyer belirleyici karar", word: "career-defining", trWord: "kariyer belirleyici" },
+  { en: "electricity-generating turbine", tr: "elektrik üreten türbin", word: "electricity-generating", trWord: "elektrik üreten" },
+  { en: "memory-enhancing drug", tr: "bellek geliştiren ilaç", word: "memory-enhancing", trWord: "bellek geliştiren" },
+  { en: "revenue-boosting campaign", tr: "gelir artıran kampanya", word: "revenue-boosting", trWord: "gelir artıran" },
+  { en: "productivity-enhancing tool", tr: "verimlilik artıran araç", word: "productivity-enhancing", trWord: "verimlilik artıran" },
+  { en: "performance-improving software", tr: "performans iyileştiren yazılım", word: "performance-improving", trWord: "performans iyileştiren" }
+];
+
+function buildUnit3CustomExercise(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // 1. Single Word Matching (Q1) using first 4 sentences' word and trWord
+  const matchSents1 = sentences.slice(0, 4);
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents1.map(s => ({
+      left: s.trWord || s.tr,
+      right: s.word || s.en
+    }))
+  });
+
+  // 2. Single Word Matching (Q2) using sentences 4 to 7's word and trWord
+  const matchSents2 = sentences.slice(4, 8);
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents2.map(s => ({
+      left: s.trWord || s.tr,
+      right: s.word || s.en
+    }))
+  });
+
+  // 3. Phrase Matching (Q3) using first 4 sentences' en and tr
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match_phrase`,
+    type: "matching",
+    prompt: "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents1.map(s => ({
+      left: s.tr,
+      right: s.en
+    }))
+  });
+
+  // 4. Multiple Choice (Q4-Q6) using sentences 4, 5, 6
+  const mcSents = sentences.slice(4, 7);
+  mcSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      sA.tr,
+      shuffledWrongs[0].tr,
+      shuffledWrongs[1].tr,
+      shuffledWrongs[2].tr
+    ]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${sA.en}" ifadesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(sA.tr),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 5. Word Bank (Q7-Q9) using sentences 7, 8, 9
+  const wbSents = sentences.slice(7, 10);
+  wbSents.forEach((sA, idx) => {
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 6. Word Sorting (Q10-Q12) using sentences 10, 11, 12
+  const wsSents = sentences.slice(10, 13);
+  wsSents.forEach((sA, idx) => {
+    const targetWords = sA.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherEnWords = sentences.filter(s => s.en !== sA.en).map(s => s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherEnWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("the");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_ws_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin İngilizce karşılığını oluşturun:",
+      translation: sA.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: false
+    });
+  });
+
+  // 7. Translation Text (Q13-Q15) using sentences 13, 14, 15
+  const txSents = sentences.slice(13, 16);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  return qList;
+}
+
+const unit3Lesson10Exercises = {
+  exercises: [
+    {
+      id: "u3l10ex1",
+      title: "Alıştırma 1: Sıfat + İsim I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(0, 16), 3, 10, 1)
+    },
+    {
+      id: "u3l10ex2",
+      title: "Alıştırma 2: Sıfat + İsim II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (17-32)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(16, 32), 3, 10, 2)
+    },
+    {
+      id: "u3l10ex3",
+      title: "Alıştırma 3: Sıfat + İsim III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (33-48)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(32, 48), 3, 10, 3)
+    },
+    {
+      id: "u3l10ex4",
+      title: "Alıştırma 4: İsim + İsim I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (49-64)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(48, 64), 3, 10, 4)
+    },
+    {
+      id: "u3l10ex5",
+      title: "Alıştırma 5: İsim + İsim II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (65-80)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(64, 80), 3, 10, 5)
+    },
+    {
+      id: "u3l10ex6",
+      title: "Alıştırma 6: Karışık İsim Tamlamaları",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (81-96)",
+      questions: buildUnit3CustomExercise(unit3Lesson10SentencesRaw.slice(80, 96), 3, 10, 6)
+    }
+  ]
+};
+
+const unit3Lesson11Exercises = {
+  exercises: [
+    {
+      id: "u3l11ex1",
+      title: "Alıştırma 1: Üçlü İsim Tamlamaları I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(0, 16), 3, 11, 1)
+    },
+    {
+      id: "u3l11ex2",
+      title: "Alıştırma 2: Üçlü İsim Tamlamaları II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (17-32)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(16, 32), 3, 11, 2)
+    },
+    {
+      id: "u3l11ex3",
+      title: "Alıştırma 3: Tamlamalar ve Cümle Giriş",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (33-48)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(32, 48), 3, 11, 3)
+    },
+    {
+      id: "u3l11ex4",
+      title: "Alıştırma 4: Akademik Cümleler I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (49-64)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(48, 64), 3, 11, 4)
+    },
+    {
+      id: "u3l11ex5",
+      title: "Alıştırma 5: Akademik Cümleler II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (65-80)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(64, 80), 3, 11, 5)
+    },
+    {
+      id: "u3l11ex6",
+      title: "Alıştırma 6: Akademik Cümleler III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (81-96)",
+      questions: buildUnit3CustomExercise(unit3Lesson11SentencesRaw.slice(80, 96), 3, 11, 6)
+    }
+  ]
+};
+
+function buildUnit4CustomExercise(sentences, unitId, lessonId, exId) {
+  return buildUnit3CustomExercise(sentences, unitId, lessonId, exId);
+}
+
+const unit4Lesson12Exercises = {
+  exercises: [
+    {
+      id: "u4l12ex1",
+      title: "Alıştırma 1: ...ing + İsim I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(0, 16), 4, 12, 1)
+    },
+    {
+      id: "u4l12ex2",
+      title: "Alıştırma 2: ...ing + İsim II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (17-32)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(16, 32), 4, 12, 2)
+    },
+    {
+      id: "u4l12ex3",
+      title: "Alıştırma 3: ...ing + İsim III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (33-48)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(32, 48), 4, 12, 3)
+    },
+    {
+      id: "u4l12ex4",
+      title: "Alıştırma 4: ...ing + İsim IV",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (49-64)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(48, 64), 4, 12, 4)
+    },
+    {
+      id: "u4l12ex5",
+      title: "Alıştırma 5: ...ing + İsim V",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (65-80)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(64, 80), 4, 12, 5)
+    },
+    {
+      id: "u4l12ex6",
+      title: "Alıştırma 6: ...ing + İsim VI",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (81-96)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(80, 96), 4, 12, 6)
+    },
+    {
+      id: "u4l12ex7",
+      title: "Alıştırma 7: ...ing + İsim VII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (97-112)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(96, 112), 4, 12, 7)
+    },
+    {
+      id: "u4l12ex8",
+      title: "Alıştırma 8: ...ing + İsim VIII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (113-128)",
+      questions: buildUnit4CustomExercise(unit4Lesson12SentencesRaw.slice(112, 128), 4, 12, 8)
+    }
+  ]
+};
+
+const unit4Lesson13Exercises = {
+  exercises: [
+    {
+      id: "u4l13ex1",
+      title: "Alıştırma 1: İsim + ...ing + İsim I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit4CustomExercise(unit4Lesson13SentencesRaw.slice(0, 16), 4, 13, 1)
+    },
+    {
+      id: "u4l13ex2",
+      title: "Alıştırma 2: İsim + ...ing + İsim II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (17-32)",
+      questions: buildUnit4CustomExercise(unit4Lesson13SentencesRaw.slice(16, 32), 4, 13, 2)
+    },
+    {
+      id: "u4l13ex3",
+      title: "Alıştırma 3: İsim + ...ing + İsim III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (33-48)",
+      questions: buildUnit4CustomExercise(unit4Lesson13SentencesRaw.slice(32, 48), 4, 13, 3)
+    },
+    {
+      id: "u4l13ex4",
+      title: "Alıştırma 4: İsim + ...ing + İsim IV",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (49-64)",
+      questions: buildUnit4CustomExercise(unit4Lesson13SentencesRaw.slice(48, 64), 4, 13, 4)
+    }
+  ]
+};
+
 const units = [];
 const lessons = [];
 let globalLessonCounter = 1;
@@ -3939,16 +4923,16 @@ const unitSentencesMap = {
     7: unit1Lesson7Exercises
   },
   2: {
-    1: unit4LessonSentences[1],
-    2: unit4LessonSentences[2]
+    1: unit2Lesson1Exercises,
+    2: unit2Lesson2Exercises
   },
   3: {
-    1: unit2LessonSentences[2],
-    2: unit2LessonSentences[4]
+    1: unit3Lesson10Exercises,
+    2: unit3Lesson11Exercises
   },
   4: {
-    1: unit2LessonSentences[5],
-    2: unit2LessonSentences[6]
+    1: unit4Lesson12Exercises,
+    2: unit4Lesson13Exercises
   },
   5: {
     1: unit2LessonSentences[7],

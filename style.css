@@ -1194,7 +1194,8 @@ input {
 .lesson-popover {
   position: absolute;
   z-index: 500;
-  width: 290px;
+  width: 360px;
+  max-width: 90vw;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -4456,13 +4457,30 @@ input {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.popover-exercises-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.popover-exercises-list::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: var(--radius-full);
+}
+
+.popover-exercises-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
 }
 
 .popover-exercise-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 12px;
+  padding: 6px 10px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -4516,7 +4534,7 @@ input {
 }
 
 .popover-exercise-row .exercise-start-btn {
-  padding: 5px 14px;
+  padding: 4px 12px;
   font-size: 0.72rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
@@ -4722,7 +4740,7 @@ input {
 }
 
 .exercise-preview-btn {
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 0.72rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
