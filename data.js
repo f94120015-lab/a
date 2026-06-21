@@ -88,20 +88,7 @@ function buildCustomExerciseQuestions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 3. Translation Text (4 questions)
-  const txSents = sentences.slice(8, 12);
-  txSents.forEach((sA, idx) => {
-    qList.push({
-      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
-      type: "translation-text",
-      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
-      correctSentence: sA.tr,
-      enSentence: sA.en,
-      isEngToTr: true
-    });
-  });
-
-  // 4. Word Bank (remaining questions)
+  // 3. Word Bank (remaining questions)
   const wbSents = sentences.slice(12);
   wbSents.forEach((sA, idx) => {
     const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
@@ -119,6 +106,19 @@ function buildCustomExerciseQuestions(sentences, unitId, lessonId, exId) {
       translation: sA.en,
       words: words,
       correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 4. Translation Text (4 questions)
+  const txSents = sentences.slice(8, 12);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
       enSentence: sA.en,
       isEngToTr: true
     });
@@ -150,40 +150,1285 @@ const unit1IntroSentences = {
   ]
 };
 
+const unit1Lesson2SentencesRaw = [
+  // 1. Noun phrases (1-44 from first list)
+  { en: "the legs of the animal", tr: "hayvanın bacakları" },
+  { en: "the muscles of the leg", tr: "bacağın kasları" },
+  { en: "the importance of the results", tr: "sonuçların önemi" },
+  { en: "the arrangement of the pictures", tr: "resimlerin düzenlenmesi" },
+  { en: "the movement of the molecules", tr: "moleküllerin hareketi" },
+  { en: "the extent of the damage", tr: "hasarın boyutu" },
+  { en: "the volume of the liquid", tr: "sıvının hacmi" },
+  { en: "the result of the experiment", tr: "deneyin sonucu" },
+  { en: "the difficulty of the problem", tr: "problemin zorluğu" },
+  { en: "the photograph of the student", tr: "öğrencinin fotoğrafı" },
+  { en: "the duration of the holiday", tr: "tatilin süresi" },
+  { en: "the distribution of the forests", tr: "ormanların dağılımı" },
+  { en: "the difficulties of the experiment", tr: "deneyin zorlukları" },
+  { en: "the dimensions of the room", tr: "odanın boyutları" },
+  { en: "the division of the work", tr: "işin bölünmesi" },
+  { en: "the disadvantages of the situation", tr: "durumun dezavantajları" },
+  { en: "the employment of the workers", tr: "işçilerin istihdamı" },
+  { en: "the use of the wood", tr: "odunun kullanımı" },
+  { en: "the discovery of the element", tr: "elementin keşfi" },
+  { en: "the volume of the gas", tr: "gazın hacmi" },
+  { en: "the analysis of the data", tr: "verinin analizi" },
+  { en: "the definition of the concept", tr: "kavramın tanımı" },
+  { en: "the structure of the organization", tr: "organizasyonun yapısı" },
+  { en: "the interpretation of the text", tr: "metnin yorumlanması" },
+  { en: "the function of the brain", tr: "beynin işlevi" },
+  { en: "the distribution of the income", tr: "gelirin dağılımı" },
+  { en: "the assessment of the risk", tr: "riskin değerlendirilmesi" },
+  { en: "the role of the government", tr: "hükümetin rolü" },
+  { en: "the creation of the universe", tr: "evrenin yaratılışı" },
+  { en: "the evaluation of the program", tr: "programın değerlendirilmesi" },
+  { en: "the focus of the study", tr: "çalışmanın odağı" },
+  { en: "the impact of the policy", tr: "politikanın etkisi" },
+  { en: "the dynamics of the market", tr: "piyasanın dinamikleri" },
+  { en: "the stability of the economy", tr: "ekonominin istikrarı" },
+  { en: "the design of the system", tr: "sistemin tasarımı" },
+  { en: "the complexity of the task", tr: "görevin karmaşıklığı" },
+  { en: "the core of the problem", tr: "problemin özü" },
+  { en: "the duration of the process", tr: "sürecin süresi" },
+  { en: "the consequences of the action", tr: "eylemin sonuçları" },
+  { en: "the strategy of the company", tr: "şirketin stratejisi" },
+  { en: "the adaptation of the species", tr: "türlerin adaptasyonu" },
+  { en: "the framework of the theory", tr: "teorinin çerçevesi" },
+  { en: "the context of the situation", tr: "durumun bağlamı" },
+  { en: "the proportion of the population", tr: "nüfusun oranı" },
+
+  // 45-80: 36 simple sentences/noun phrases to bridge the gap
+  { en: "some of the prices", tr: "fiyatların bazıları" },
+  { en: "many of the substances", tr: "maddelerin birçoğu" },
+  { en: "one of the diseases", tr: "hastalıkların biri" },
+  { en: "most of the goods", tr: "malların çoğu" },
+  { en: "all of the mountains", tr: "dağların hepsi" },
+  { en: "none of the contracts", tr: "sözleşmelerin hiçbirisi" },
+  { en: "each of the agreements", tr: "anlaşmaların her biri" },
+  { en: "part of the area", tr: "bölgenin bir kısmı" },
+  { en: "most of the oil", tr: "petrolün çoğu" },
+  { en: "a little of the gas", tr: "gazın az bir miktarı" },
+  { en: "none of the wood", tr: "odunun hiçbirisi" },
+  { en: "another of the diseases", tr: "hastalıkların bir başkası" },
+  { en: "all of the ideas", tr: "fikirlerin hepsi" },
+  { en: "several of the metals", tr: "metallerin birkaçı" },
+  { en: "most of the energy", tr: "enerjinin çoğu" },
+  { en: "half of the profits", tr: "kazançların yarısı" },
+  { en: "a student from England", tr: "ingiltere'den bir öğrenci" },
+  { en: "sand from the river", tr: "nehirden gelen kum" },
+  { en: "a substance from coal", tr: "kömürden elde edilen madde" },
+  { en: "a book from the library", tr: "kütüphaneden bir kitap" },
+  { en: "an article from this newspaper", tr: "bu gazeteden bir makale" },
+  { en: "radiation from space", tr: "uzaydan gelen radyasyon" },
+  { en: "a page from history", tr: "tarihten bir yaprak" },
+  { en: "damage from neglect", tr: "ihmalden kaynaklanan hasar" },
+  { en: "the water from the river", tr: "nehirden gelen su" },
+  { en: "the heat from the metal", tr: "metalden gelen ısı" },
+  { en: "the blood from the animal", tr: "hayvandan alınan kan" },
+  { en: "diseases from viruses", tr: "virüslerden kaynaklanan hastalıklar" },
+  { en: "the gas from this substance", tr: "bu maddeden çıkan gaz" },
+  { en: "the results from these experiments", tr: "bu deneylerden alınan sonuçlar" },
+  { en: "the ideas from this book", tr: "bu kitaptan edinilen fikirler" },
+  { en: "coal from this area", tr: "bu bölgeden çıkan kömür" },
+  { en: "the invention of fire", tr: "ateşin icadı" },
+  { en: "fear of hunger", tr: "açlık korkusu" },
+  { en: "the study of disease", tr: "hastalık çalışması" },
+  { en: "proof of guilt", tr: "suçluluk kanıtı" },
+
+  // 81-105: 25 full complex sentences from the new image
+  { en: "The committee completed the analysis of the data of the research.", tr: "Komite araştırmanın verilerinin analizini tamamladı." },
+  { en: "Experts need to examine the structure of the sectors of the economy.", tr: "Uzmanların ekonominin sektörlerinin yapısını incelemesi gerekiyor." },
+  { en: "Policymakers should focus on the evaluation of the benefits of the policy.", tr: "Politika yapıcılar politikanın faydalarının değerlendirilmesine odaklanmalıdır." },
+  { en: "The new manager wants to improve the stability of the framework of the organization.", tr: "Yeni müdür organizasyonun çerçevesinin istikrarını geliştirmek istiyor." },
+  { en: "The mediator facilitated the resolution of the conflict of the parties.", tr: "Arabulucu tarafların çatışmasının çözümünü kolaylaştırdı." },
+  { en: "The statistics confirmed the significance of the results of the experiment.", tr: "İstatistikler deneyin sonuçlarının önemini doğruladı." },
+  { en: "Engineers closely monitored the variation of the parameters of the system.", tr: "Mühendisler sistemin parametrelerinin değişimini yakından izledi." },
+  { en: "The census revealed the proportion of the minorities of the population.", tr: "Nüfus sayımı nüfusun azınlıklarının oranını ortaya çıkardı." },
+  { en: "The scientists provided the validation of the hypotheses of the analysts.", tr: "Bilim insanları analistlerin hipotezlerinin doğrulamasını sağladı." },
+  { en: "The lawyer finalized the interpretation of the text of the contract.", tr: "Avukat sözleşmenin metninin yorumlanmasını tamamladı." },
+  { en: "The authors provided a detailed chapter for the definition of the concept.", tr: "Yazarlar kavramın tanımı için ayrıntılı bir bölüm sağladı." },
+  { en: "The university is very satisfied with the assessment of the students.", tr: "Üniversite öğrencilerin değerlendirilmesinden çok memnun." },
+  { en: "No one is allowed to leave the laboratory during the duration of the process.", tr: "Süreç boyunca hiç kimsenin laboratuvardan çıkmasına izin verilmez." },
+  { en: "The IT department upgraded the system by the creation of the new network.", tr: "BT departmanı yeni ağın oluşturulmasıyla sistemi yükseltti." },
+  { en: "Researchers achieved this breakthrough through the modification of the genes.", tr: "Araştırmacılar bu ilerlemeyi genlerin modifikasyonu yoluyla başardı." },
+  { en: "The journalists published their report after the conclusion of the investigation.", tr: "Gazeteciler raporlarını soruşturmanın sonuçlanmasından sonra yayınladılar." },
+  { en: "The technician is responsible for the maintenance of the equipment.", tr: "Teknisyen ekipmanın bakımından sorumludur." },
+  { en: "The doctors cannot proceed without the consent of the participants.", tr: "Doktorlar katılımcıların onayı olmadan devam edemezler." },
+  { en: "The government intervened because of the intensity of the crisis.", tr: "Hükümet krizin şiddeti nedeniyle müdahale etti." },
+  { en: "The project operates strictly under the authority of the institution.", tr: "Proje kesinlikle kurumun yetkisi altında yürütülmektedir." },
+  { en: "Economists are investigating the distribution of the income in Europe.", tr: "Ekonomistler Avrupa'daki gelir dağılımını araştırıyorlar." },
+  { en: "The professor criticized the interpretation of the data in the journal.", tr: "Profesör dergideki verilerin yorumlanmasını eleştirdi." },
+  { en: "The ministry aims to promote the integration of the technology in schools.", tr: "Bakanlık okullarda teknolojinin entegrasyonunu teşvik etmeyi amaçlamaktadır." },
+  { en: "We underestimated the complexity of the task in the project.", tr: "Projedeki görevin karmaşıklığını hafife aldık." },
+  { en: "Environmentalists measured the concentration of the chemical in the water.", tr: "Çevreciler sudaki kimyasalın konsantrasyonunu ölçtüler." }
+];
+
+function build15Questions(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // 1. Matching (1 question with 4 pairs using first 4 sentences)
+  const matchSents = sentences.slice(0, 4);
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents.map(s => ({
+      left: s.tr,
+      right: s.en
+    }))
+  });
+
+  // 2. Multiple Choice (4 questions using sentences 2 to 5)
+  const mcSents = sentences.slice(2, 6);
+  mcSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      sA.tr,
+      shuffledWrongs[0].tr,
+      shuffledWrongs[1].tr,
+      shuffledWrongs[2].tr
+    ]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${sA.en}" ifadesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(sA.tr),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 3. Word Bank (5 questions using sentences 10 to 14 - repeating last if short)
+  const wbSents = sentences.length >= 15 ? sentences.slice(10, 15) : [...sentences.slice(9, 14), sentences[13]];
+  wbSents.slice(0, 5).forEach((sA, idx) => {
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 4. Translation Text (5 questions using sentences 5 to 9)
+  const txSents = sentences.slice(5, 10);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  return qList;
+}
+
+function build12Questions(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // 1. Matching (1 question with 4 pairs using first 4 sentences: index 0 to 3)
+  const matchSents = sentences.slice(0, 4);
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents.map(s => ({
+      left: s.tr,
+      right: s.en
+    }))
+  });
+
+  // 2. Multiple Choice (3 questions using sentences 2 to 4)
+  const mcSents = sentences.slice(2, 5);
+  mcSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      sA.tr,
+      shuffledWrongs[0].tr,
+      shuffledWrongs[1].tr,
+      shuffledWrongs[2].tr
+    ]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${sA.en}" ifadesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(sA.tr),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 3. Word Bank (4 questions using sentences 8 to 11)
+  const wbSents = sentences.slice(8, 12);
+  wbSents.forEach((sA, idx) => {
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 4. Translation Text (4 questions using sentences 5 to 8)
+  const txSents = sentences.slice(5, 9);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${sA.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  return qList;
+}
+
+const unit1Lesson2Exercises = {
+  exercises: [
+    {
+      id: "u1l2ex1",
+      title: "Alıştırma 1: Basit Yapılar I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (1-15)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(0, 15), 1, 2, 1)
+    },
+    {
+      id: "u1l2ex2",
+      title: "Alıştırma 2: Basit Yapılar II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (16-30)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(15, 30), 1, 2, 2)
+    },
+    {
+      id: "u1l2ex3",
+      title: "Alıştırma 3: Orta Yapılar I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (31-45)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(30, 45), 1, 2, 3)
+    },
+    {
+      id: "u1l2ex4",
+      title: "Alıştırma 4: Orta Yapılar II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (46-60)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(45, 60), 1, 2, 4)
+    },
+    {
+      id: "u1l2ex5",
+      title: "Alıştırma 5: İleri Yapılar I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (61-75)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(60, 75), 1, 2, 5)
+    },
+    {
+      id: "u1l2ex6",
+      title: "Alıştırma 6: İleri Yapılar II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (76-90)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(75, 90), 1, 2, 6)
+    },
+    {
+      id: "u1l2ex7",
+      title: "Alıştırma 7: Karmaşık Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (91-105)",
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(90, 105), 1, 2, 7)
+    }
+  ]
+};
+
+const unit1Lesson3SentencesRaw = [
+  // Basit Yapılar (1-15)
+  { en: "some of the prices", tr: "fiyatların bazıları" },
+  { en: "many of the substances", tr: "maddelerin birçoğu" },
+  { en: "one of the diseases", tr: "hastalıkların biri" },
+  { en: "most of the goods", tr: "malların çoğu" },
+  { en: "some of the experiments", tr: "deneylerin bazıları" },
+  { en: "all of the mountains", tr: "dağların hepsi" },
+  { en: "none of the contracts", tr: "sözleşmelerin hiçbirisi" },
+  { en: "each of the agreements", tr: "anlaşmaların her biri" },
+  { en: "some of the heat", tr: "ısının bir kısmı" },
+  { en: "part of the area", tr: "bölgenin bir kısmı" },
+  { en: "each of the countries", tr: "ülkelerin her biri" },
+  { en: "most of the oil", tr: "petrolün çoğu" },
+  { en: "a little of the gas", tr: "gazın az bir miktarı" },
+  { en: "a little of the liquid", tr: "sıvının az bir miktarı" },
+  { en: "none of the wood", tr: "odunun hiçbirisi" },
+
+  // Orta Yapılar (16-30)
+  { en: "none of the tissues", tr: "dokuların hiçbirisi" },
+  { en: "another of the diseases", tr: "hastalıkların bir başkası" },
+  { en: "some of the water vapour", tr: "su buharının bir kısmı" },
+  { en: "all of the ideas", tr: "fikirlerin hepsi" },
+  { en: "a lot of the work", tr: "işin büyük bir kısmı" },
+  { en: "several of the metals", tr: "metallerin birkaçı" },
+  { en: "many of the reactions", tr: "tepkimelerin birçoğu" },
+  { en: "most of the energy", tr: "enerjinin çoğu" },
+  { en: "several of the reasons", tr: "sebeplerin birkaçı" },
+  { en: "a little of the heat", tr: "ısının az bir kısmı" },
+  { en: "a few of the results", tr: "sonuçların birkaçı" },
+  { en: "some of the profit", tr: "kârın bir kısmı" },
+  { en: "some of the cost", tr: "maliyetin bir kısmı" },
+  { en: "part of the brain", tr: "beynin bir kısmı" },
+  { en: "part of the tissues", tr: "dokuların bir kısmı" },
+
+  // İleri Yapılar (31-45)
+  { en: "another of the problems", tr: "problemlerin bir diğeri" },
+  { en: "many of the details", tr: "detayların birçoğu" },
+  { en: "a few of the decisions", tr: "kararların birkaçı" },
+  { en: "many of the laws", tr: "yasaların birçoğu" },
+  { en: "none of the coal", tr: "kömürün hiçbirisi" },
+  { en: "half of the profits", tr: "kazançların yarısı" },
+  { en: "half of the cost", tr: "maliyetin yarısı" },
+  { en: "most of the bone", tr: "kemiğin çoğu" },
+  { en: "several of the employers", tr: "işverenlerin birkaçı" },
+  { en: "some of the substances", tr: "maddelerin bazıları" },
+  { en: "some of the data", tr: "verilerin bazıları" },
+  { en: "many of the substitutes", tr: "alternatiflerin birçoğu" },
+  { en: "one of the factors", tr: "faktörlerden biri" },
+  { en: "most of the variables", tr: "değişkenlerin çoğu" },
+  { en: "some of the experiments", tr: "deneylerin bazıları" },
+
+  // Karmaşık Yapılar (46-60)
+  { en: "all of the elements", tr: "elementlerin hepsi" },
+  { en: "none of the contracts", tr: "sözleşmelerin hiçbirisi" },
+  { en: "each of the categories", tr: "kategorilerin her biri" },
+  { en: "some of the energy", tr: "enerjinin bir kısmı" },
+  { en: "part of the area", tr: "bölgenin bir kısmı" },
+  { en: "each of the countries", tr: "ülkelerin her biri" },
+  { en: "most of the revenue", tr: "gelirin çoğu" },
+  { en: "a little of the gas", tr: "gazın az bir miktarı" },
+  { en: "a little of the liquid", tr: "sıvının az bir miktarı" },
+  { en: "none of the resources", tr: "kaynakların hiçbirisi" },
+  { en: "none of the sectors", tr: "sektörlerin hiçbirisi" },
+  { en: "another of the theories", tr: "teorilerin bir diğeri" },
+  { en: "some of the criteria", tr: "kriterlerin bazıları" },
+  { en: "all of the concepts", tr: "kavramların hepsi" },
+  { en: "a lot of the labor", tr: "emeğin büyük bir kısmı" }
+];
+
+const unit1Lesson3Exercises = {
+  exercises: [
+    {
+      id: "u1l3ex1",
+      title: "Alıştırma 1: Basit Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-15)",
+      questions: build15Questions(unit1Lesson3SentencesRaw.slice(0, 15), 1, 3, 1)
+    },
+    {
+      id: "u1l3ex2",
+      title: "Alıştırma 2: Orta Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 16-30)",
+      questions: build15Questions(unit1Lesson3SentencesRaw.slice(15, 30), 1, 3, 2)
+    },
+    {
+      id: "u1l3ex3",
+      title: "Alıştırma 3: İleri Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 31-45)",
+      questions: build15Questions(unit1Lesson3SentencesRaw.slice(30, 45), 1, 3, 3)
+    },
+    {
+      id: "u1l3ex4",
+      title: "Alıştırma 4: Karmaşık Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 46-60)",
+      questions: build15Questions(unit1Lesson3SentencesRaw.slice(45, 60), 1, 3, 4)
+    }
+  ]
+};
+
+const unit1Lesson4SentencesRaw = [
+  // Basit Yapılar (1-15)
+  { en: "fear of hunger", tr: "açlık korkusu" },
+  { en: "the invention of fire", tr: "ateşin icadı" },
+  { en: "the study of history", tr: "tarih çalışması" },
+  { en: "the speed of light", tr: "ışık hızı" },
+  { en: "proof of guilt", tr: "suçluluk kanıtı" },
+  { en: "the existence of coal", tr: "kömürün varlığı" },
+  { en: "the study of disease", tr: "hastalık çalışması" },
+  { en: "division of labor", tr: "iş bölümü" },
+  { en: "division of labour", tr: "iş bölümü" },
+  { en: "form of government", tr: "hükümet şekli" },
+  { en: "form of policy", tr: "politika şekli" },
+  { en: "the produce of Turkey", tr: "Türkiye'nin ürünleri" },
+  { en: "freedom of religion", tr: "din özgürlüğü" },
+  { en: "rejection of authority", tr: "otoritenin reddi" },
+  { en: "the history of nations", tr: "ulusların tarihi" },
+
+  // Orta Yapılar (16-30)
+  { en: "the use of electricity", tr: "elektrik kullanımı" },
+  { en: "the discovery of radium", tr: "radyumun keşfi" },
+  { en: "the creation of finance", tr: "finansın yaratılması" },
+  { en: "the analysis of data", tr: "verinin analizi" },
+  { en: "proof of hypothesis", tr: "hipotez kanıtı" },
+  { en: "freedom of movement", tr: "hareket özgürlüğü" },
+  { en: "freedom of expression", tr: "ifade özgürlüğü" },
+  { en: "freedom of interpretation", tr: "yorumlama özgürlüğü" },
+  { en: "the choice of materials", tr: "malzemelerin seçimi" },
+  { en: "the growth of population", tr: "nüfusun büyümesi" },
+  { en: "the control of quality", tr: "kalite kontrolü" },
+  { en: "the source of information", tr: "bilgi kaynağı" },
+  { en: "the pattern of behavior", tr: "davranış kalıbı" },
+  { en: "the distribution of income", tr: "gelir dağılımı" },
+  { en: "the study of economics", tr: "ekonomi çalışması" },
+
+  // İleri Yapılar (31-45)
+  { en: "the expectancy of life", tr: "yaşam beklentisi" },
+  { en: "the production of raw materials", tr: "hammadde üretimi" },
+  { en: "the estimation of welfare", tr: "refah tahmini" },
+  { en: "the integration of technology", tr: "teknolojinin entegrasyonu" },
+  { en: "the history of legislation", tr: "mevzuat tarihi" },
+  { en: "the history of philosophy", tr: "felsefe tarihi" },
+  { en: "the equality of individuals", tr: "bireylerin eşitliği" },
+  { en: "the production of components", tr: "bileşenlerin üretimi" },
+  { en: "the existence of inconsistencies", tr: "tutarsızlıkların varlığı" },
+  { en: "the export of resources", tr: "kaynakların ihracatı" },
+  { en: "the code of conduct", tr: "davranış kuralları" },
+  { en: "the standard of living", tr: "yaşam standardı" },
+  { en: "the method of measurement", tr: "ölçüm yöntemi" },
+  { en: "the center of gravity", tr: "yerçekimi merkezi" },
+  { en: "the state of emergency", tr: "olağanüstü hal" }
+];
+
+const unit1Lesson4Exercises = {
+  exercises: [
+    {
+      id: "u1l4ex1",
+      title: "Alıştırma 1: Basit Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (1-15)",
+      questions: build15Questions(unit1Lesson4SentencesRaw.slice(0, 15), 1, 4, 1)
+    },
+    {
+      id: "u1l4ex2",
+      title: "Alıştırma 2: Orta Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (16-30)",
+      questions: build15Questions(unit1Lesson4SentencesRaw.slice(15, 30), 1, 4, 2)
+    },
+    {
+      id: "u1l4ex3",
+      title: "Alıştırma 3: İleri Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (31-45)",
+      questions: build15Questions(unit1Lesson4SentencesRaw.slice(30, 45), 1, 4, 3)
+    }
+  ]
+};
+
+const unit1Lesson5SentencesRaw = [
+  // Alıştırma 1: Basit Yapılar (1-12)
+  { en: "a student from England", tr: "İngiltere'den bir öğrenci" },
+  { en: "sand from the river", tr: "nehirden gelen kum" },
+  { en: "a substance from coal", tr: "kömürden elde edilen madde" },
+  { en: "a book from the library", tr: "kütüphaneden bir kitap" },
+  { en: "an article from this newspaper", tr: "bu gazeteden bir makale" },
+  { en: "radiation from space", tr: "uzaydan gelen radyasyon" },
+  { en: "a page from history", tr: "tarihten bir sayfa" },
+  { en: "damage from neglect", tr: "ihmalden kaynaklanan hasar" },
+  { en: "the water from the river", tr: "nehirden gelen su" },
+  { en: "the heat from the metal", tr: "metalden gelen ısı" },
+  { en: "the blood from the animal", tr: "hayvandan alınan kan" },
+  { en: "diseases from viruses", tr: "virüslerden kaynaklanan hastalıklar" },
+
+  // Alıştırma 2: Orta Yapılar (13-24)
+  { en: "the gas from this substance", tr: "bu maddeden çıkan gaz" },
+  { en: "the results from these experiments", tr: "bu deneylerden alınan sonuçlar" },
+  { en: "the ideas from this book", tr: "bu kitaptan edinilen fikirler" },
+  { en: "coal from this area", tr: "bu bölgeden çıkan kömür" },
+  { en: "the heat from this substance", tr: "bu maddeden gelen ısı" },
+  { en: "water from this area", tr: "bu bölgeden gelen su" },
+  { en: "a student from the academy", tr: "akademiden bir öğrenci" },
+  { en: "data from the survey", tr: "anketten elde edilen veri" },
+  { en: "a substitute from coal", tr: "kömürden elde edilen alternatif" },
+  { en: "a text from the library", tr: "kütüphaneden bir metin" },
+  { en: "an article from this journal", tr: "bu dergiden bir makale" },
+  { en: "radiation from the environment", tr: "çevreden gelen radyasyon" },
+
+  // Alıştırma 3: İleri Yapılar (25-36)
+  { en: "a page from history", tr: "tarihten bir sayfa" },
+  { en: "injury from labor", tr: "çalışmadan kaynaklanan yaralanma" },
+  { en: "the revenue from the export", tr: "ihracattan elde edilen gelir" },
+  { en: "the energy from the component", tr: "bileşenden gelen enerji" },
+  { en: "the blood from the individual", tr: "bireyden alınan kan" },
+  { en: "inconsistencies from variables", tr: "değişkenlerden kaynaklanan tutarsızlıklar" },
+  { en: "the gas from this substance", tr: "bu maddeden çıkan gaz" },
+  { en: "the results from these experiments", tr: "bu deneylerden alınan sonuçlar" },
+  { en: "the concepts from this theory", tr: "bu teoriden çıkan kavramlar" },
+  { en: "the heat from this substance", tr: "bu maddeden gelen ısı" },
+  { en: "feedback from the respondents", tr: "katılımcılardan gelen geri bildirim" },
+  { en: "interpretations from the analysts", tr: "analistlerden gelen yorumlar" }
+];
+
+const unit1Lesson5SentencesNewRaw = [
+  { en: "I have met a student from England.", tr: "İngiltere'den bir öğrenciyle tanıştım." },
+  { en: "He took some samples of sand from the river.", tr: "Nehirden bazı kum örnekleri aldı." },
+  { en: "They tried to obtain a substance from coal.", tr: "Kömürden bir madde elde etmeye çalıştılar." },
+  { en: "They have lost a book from the library.", tr: "Kütüphaneden bir kitap kaybettiler." },
+  { en: "Two days ago I read an article from this newspaper.", tr: "İki gün önce bu gazeteden bir makale okudum." },
+  { en: "They have not yet solved the problem of radiation from space.", tr: "Uzaydan gelen radyasyon problemini henüz çözmediler." },
+  { en: "Watching the film was like reading a page from history.", tr: "Filmi izlemek tarihten bir sayfa okumak gibiydi." },
+  { en: "The child is suffering from damage from neglect.", tr: "Çocuk ihmalden kaynaklanan hasardan muzdarip." },
+  { en: "The water from the river is not clean enough to drink.", tr: "Nehirden gelen su içmek için yeterince temiz değil." },
+  { en: "They found a simple way to measure the heat from the metal.", tr: "Metalden gelen ısıyı ölçmek için basit bir yol buldular." },
+  { en: "The blood from the animal was on the road.", tr: "Hayvandan alınan kan yoldaydı." },
+  { en: "Today they have found a way to prevent some of the diseases from viruses.", tr: "Bugün virüslerden kaynaklanan bazı hastalıkları önlemenin bir yolunu buldular." },
+  { en: "Then they collected the gas from this substance.", tr: "Sonra bu maddeden çıkan gazı topladılar." },
+  { en: "We are waiting for the results from these experiments.", tr: "Bu deneylerden alınan sonuçları bekliyoruz." },
+  { en: "They did not agree with the ideas from this book.", tr: "Bu kitaptan edinilen fikirlerle aynı fikirde değildiler." },
+  { en: "They have stopped mining the coal from this area.", tr: "Bu bölgeden kömür çıkarmayı durdurdular." },
+  { en: "They found a way to measure the heat from this substance.", tr: "Bu maddeden gelen ısıyı ölçmek için bir yol buldular." },
+  { en: "They have found a way to obtain salt from the water from this area.", tr: "Bu bölgeden gelen sudan tuz elde etmenin bir yolunu buldular." }
+];
+
+function buildTranslationAndScrambleQuestions(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  sentences.forEach((sA, idx) => {
+    const isWordBank = idx < 8;
+    if (isWordBank) {
+      const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+      const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+      const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+      const shuffledDistractors = shuffle(uniqueDistractors);
+      while (shuffledDistractors.length < 3) {
+        shuffledDistractors.push("ve");
+      }
+      const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+      qList.push({
+        id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+        type: "word-bank",
+        prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+        translation: sA.en,
+        words: words,
+        correctOrder: targetWords,
+        enSentence: sA.en,
+        isEngToTr: true
+      });
+    } else {
+      qList.push({
+        id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+        type: "translation-text",
+        prompt: `"${ensurePunctuation(sA.en)}" cümlesini Türkçe'ye çevirin:`,
+        correctSentence: sA.tr,
+        enSentence: sA.en,
+        isEngToTr: true
+      });
+    }
+  });
+
+  return qList;
+}
+
+const unit1Lesson5Exercises = {
+  exercises: [
+    {
+      id: "u1l5ex1",
+      title: "Alıştırma 1: Basit Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (1-12)",
+      questions: build12Questions(unit1Lesson5SentencesRaw.slice(0, 12), 1, 5, 1)
+    },
+    {
+      id: "u1l5ex2",
+      title: "Alıştırma 2: Orta Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (13-24)",
+      questions: build12Questions(unit1Lesson5SentencesRaw.slice(12, 24), 1, 5, 2)
+    },
+    {
+      id: "u1l5ex3",
+      title: "Alıştırma 3: İleri Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (25-36)",
+      questions: build12Questions(unit1Lesson5SentencesRaw.slice(24, 36), 1, 5, 3)
+    },
+    {
+      id: "u1l5ex4",
+      title: "Alıştırma 4: Cümle Çevirileri",
+      description: "Kelime Sıralama & Yazılı Çeviri (Cümleler 1-18)",
+      questions: buildTranslationAndScrambleQuestions(unit1Lesson5SentencesNewRaw, 1, 5, 4)
+    }
+  ]
+};
+
+const unit1Lesson7SentencesRaw = [
+  // Basit Yapılar (1-17)
+  { en: "the difference in the results of the experiments", tr: "deneylerin sonuçlarındaki fark" },
+  { en: "a study of the diseases of the blood", tr: "kan hastalıklarının bir incelemesi" },
+  { en: "the space between the molecules in the liquid in the glass", tr: "bardaktaki sıvının molekülleri arasındaki boşluk" },
+  { en: "the policy of the government during the last few years", tr: "son birkaç yılda hükümetin politikası" },
+  { en: "the photograph on the front page of the newspaper", tr: "gazetenin ön sayfasındaki fotoğraf" },
+  { en: "the difficulty in the explanation of the problem", tr: "problemin açıklanmasındaki zorluk" },
+  { en: "government by the people of this community", tr: "bu topluluğun halkı tarafından yönetim" },
+  { en: "the history of the civilisation of these people", tr: "bu insanların medeniyetinin tarihi" },
+  { en: "the damage to the head of this patient", tr: "bu hastanın kafasındaki hasar" },
+  { en: "the ideas in this article in the newspaper", tr: "gazetedeki bu makaledeki fikirler" },
+  { en: "the disease in the bones of the leg", tr: "bacak kemiklerindeki hastalık" },
+  { en: "the heat in the metal round the top of the bottle", tr: "şişenin üst kısmının etrafındaki metaldeki ısı" },
+  { en: "the heat at the surface of the liquid in the tank", tr: "tanktaki sıvının yüzeyindeki ısı" },
+  { en: "the cure for this disease of the blood", tr: "bu kan hastalığının tedavisi" },
+  { en: "an injection into the muscle of the leg of the animal", tr: "hayvanın bacağının kasına yapılan enjeksiyon" },
+  { en: "preparation for an examination in English", tr: "İngilizce sınavına hazırlık" },
+  { en: "employment in factories of this kind", tr: "bu tür fabrikalardaki istihdam" },
+
+  // Orta Yapılar (18-34)
+  { en: "the situation of the workers in America", tr: "Amerika'daki işçilerin durumu" },
+  { en: "the coal at the surface of the ground", tr: "toprağın yüzeyindeki kömür" },
+  { en: "a substance in the blood of the patient with this disease", tr: "bu hastalığa sahip hastanın kanındaki madde" },
+  { en: "the variation in the responses of the participants", tr: "katılımcıların yanıtlarındaki değişim" },
+  { en: "the shift in the policies of the government", tr: "hükümetin politikalarındaki değişim" },
+  { en: "the inconsistency in the data of the analysis", tr: "analizin verilerindeki tutarsızlık" },
+  { en: "the decline in the revenue of the sectors", tr: "sektörlerin gelirlerindeki düşüş" },
+  { en: "the fluctuation in the estimates of the economists", tr: "ekonomistlerin tahminlerindeki dalgalanma" },
+  { en: "the ambiguity in the clauses of the contract", tr: "sözleşmenin maddelerindeki belirsizlik" },
+  { en: "the rigidity in the structures of the institutions", tr: "kurumların yapılarındaki katılık" },
+  { en: "the progression in the phases of the process", tr: "sürecin aşamalarındaki ilerleme" },
+  { en: "the distortion in the images of the media", tr: "medyanın görüntülerindeki bozulma" },
+  { en: "a study of the theories of the philosophy", tr: "felsefenin teorilerinin bir incelemesi" },
+  { en: "an assessment of the components of the framework", tr: "çerçevenin bileşenlerinin değerlendirmesi" },
+  { en: "an interpretation of the text of the legislation", tr: "mevzuatın metninin yorumu" },
+  { en: "a summary of the principles of the academy", tr: "akademinin ilkelerinin özeti" },
+  { en: "an investigation of the ethics of the practitioners", tr: "uygulayıcıların ahlak kurallarının araştırılması" },
+
+  // İleri Yapılar (35-49)
+  { en: "the integration of the elements of the culture", tr: "kültürün unsurlarının entegrasyonu" },
+  { en: "the validation of the criteria of the evaluation", tr: "değerlendirmenin ölçütlerinin doğrulanması" },
+  { en: "a definition of the parameters of the concept", tr: "kavramın parametrelerinin bir tanımı" },
+  { en: "the distribution of the resources of the welfare", tr: "refah kaynaklarının dağılımı" },
+  { en: "a revaluation of the assets of the corporation", tr: "şirket varlıklarının yeniden değerlendirilmesi" },
+  { en: "the conflict between the individuals in the workplace", tr: "işyerindeki bireyler arasındaki çatışma" },
+  { en: "the interaction between the variables in the formula", tr: "formüldeki değişkenler arasındaki etkileşim" },
+  { en: "the linkage between the innovations in the industry", tr: "sektördeki yenilikler arasındaki bağlantı" },
+  { en: "the relation between the factors in the environment", tr: "çevredeki faktörler arasındaki ilişki" },
+  { en: "the consensus between the analysts in the committee", tr: "komitedeki analistler arasındaki fikir birliği" },
+  { en: "the overlap between the categories in the database", tr: "veritabanındaki kategoriler arasındaki çakışma" },
+  { en: "the tension between the minorities in the region", tr: "bölgedeki azınlıklar arasındaki gerilim" },
+  { en: "the cooperation between the colleagues in the department", tr: "departmandaki meslektaşlar arasındaki işbirliği" },
+  { en: "the proportion of the immigrants in the population", tr: "nüfustaki göçmenlerin oranı" },
+  { en: "the accumulation of the evidence in the investigation", tr: "soruşturmadaki kanıtların birikmesi" }
+];
+
+
+function buildDynamicQuestions(sentences, unitId, lessonId, exId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  const total = sentences.length;
+
+  // 1. Matching (1 question with 4 pairs using first 4 sentences)
+  const matchSents = sentences.slice(0, 4);
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: matchSents.map(s => ({
+      left: s.tr,
+      right: s.en
+    }))
+  });
+
+  // 2. Multiple Choice (up to 6 questions using indices 2 to 7)
+  const mcSents = sentences.slice(2, Math.min(8, total));
+  mcSents.forEach((sA, idx) => {
+    const wrongSents = sentences.filter(s => s.en !== sA.en);
+    const shuffledWrongs = shuffle(wrongSents);
+    while (shuffledWrongs.length < 3) {
+      shuffledWrongs.push({ en: "test", tr: "test" });
+    }
+    const options = shuffle([
+      sA.tr,
+      shuffledWrongs[0].tr,
+      shuffledWrongs[1].tr,
+      shuffledWrongs[2].tr
+    ]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `"${sA.en}" ifadesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(sA.tr),
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 3. Word Bank (remaining questions from index 14 onwards)
+  const wbStart = Math.min(14, total);
+  const wbSents = sentences.slice(wbStart);
+  wbSents.forEach((sA, idx) => {
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_${idx}`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  // 4. Translation Text (up to 6 questions using indices 8 to 13)
+  const txStart = Math.min(8, total);
+  const txEnd = Math.min(14, total);
+  const txSents = sentences.slice(txStart, txEnd);
+  txSents.forEach((sA, idx) => {
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
+      type: "translation-text",
+      prompt: `"${ensurePunctuation(sA.en)}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: sA.tr,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  });
+
+  return qList;
+}
+
+const unit1Lesson6SentencesRaw1 = [
+  { en: "the workers in the factory", tr: "fabrikadaki işçiler" },
+  { en: "the statement in the newspaper", tr: "gazetedeki ifade" },
+  { en: "the papers on my table", tr: "masamın üzerindeki kağıtlar" },
+  { en: "the photograph in the newspaper", tr: "gazetedeki fotoğraf" },
+  { en: "the difference between the results", tr: "sonuçlar arasındaki fark" },
+  { en: "the molecules in the liquid", tr: "sıvıdaki moleküller" },
+  { en: "the molecules in the gas", tr: "gazdaki moleküller" },
+  { en: "the policy of the government", tr: "hükümetin politikası" },
+  { en: "government by the people", tr: "halk tarafından yönetim" },
+  { en: "the examination of the doctor", tr: "doktorun muayenesi" },
+  { en: "damage to the head", tr: "kafadaki hasar" },
+  { en: "the ideas in this chapter", tr: "bu bölümdeki fikirler" },
+  { en: "the bones in the arm", tr: "koldaki kemikler" },
+  { en: "the heat in the metal", tr: "metaldeki ısı" },
+  { en: "the cure for this disease", tr: "bu hastalığın tedavisi" },
+  { en: "injection under the skin", tr: "deri altındaki enjeksiyon" },
+  { en: "preparation for an examination", tr: "sınava hazırlık" },
+  { en: "employment in the factories", tr: "fabrikalardaki istihdam" },
+  { en: "a substance in the blood", tr: "kandaki bir madde" },
+  { en: "the distance from this point", tr: "bu noktadan olan mesafe" },
+  { en: "the water under the ground", tr: "yer altındaki su" },
+  { en: "the situation in America", tr: "Amerika'daki durum" }
+];
+
+const unit1Lesson6SentencesRaw2 = [
+  { en: "The employer of these men is at the office.", tr: "Bu adamların işvereni ofistedir." },
+  { en: "The explanation of this problem is at the end.", tr: "Bu problemin açıklaması sondadır." },
+  { en: "The machine for cutting paper is in the factory.", tr: "Kağıt kesme makinesi fabrikadadır." },
+  { en: "The substance in the test-tube is from this bottle.", tr: "Deney tüpündeki madde bu şişedendir." },
+  { en: "The answer to this problem is in the book.", tr: "Bu problemin cevabı kitaptadır." },
+  { en: "The market for these goods is in the Far East.", tr: "Bu malların pazarı Uzak Doğu'dadır." },
+  { en: "The building in the centre of the town is between the railway and the river.", tr: "Kasabanın merkezindeki bina demiryolu ile nehir arasındadır." },
+  { en: "The book about Turkey is on the table.", tr: "Türkiye hakkındaki kitap masanın üzerindedir." },
+  { en: "The summary of the chapter is at the end.", tr: "Bölümün özeti sondadır." },
+  { en: "The papers for the examination are on my table.", tr: "Sınav kağıtları masamın üzerindedir." },
+  { en: "The buildings on the corner are in the centre of the city.", tr: "Köşedeki binalar şehrin merkezindedir." },
+  { en: "The chapters on Turkey are at the end.", tr: "Türkiye ile ilgili bölümler sondadır." },
+  { en: "The factories inside the town are near the river.", tr: "Kasabanın içindeki fabrikalar nehrin yakınındadır." },
+  { en: "The substances in the liquid are from this bottle.", tr: "Sıvıdaki maddeler bu şişedendir." },
+  { en: "The liquids in the test-tubes are in the laboratory.", tr: "Deney tüplerindeki sıvılar laboratuvardadır." },
+  { en: "The answers to the questions are on this paper.", tr: "Soruların cevapları bu kağıttadır." },
+  { en: "The statements of the workers are in this report.", tr: "İşçilerin ifadeleri bu rapordadır." },
+  { en: "The coal in this area is near the surface.", tr: "Bu bölgedeki kömür yüzeye yakındır." },
+  { en: "The translation of these sentences is on the next page.", tr: "Bu cümlelerin çevirisi sonraki sayfadadır." },
+  { en: "Nutrients in the soil are near the surface.", tr: "Topraktaki besinler yüzeye yakındır." }
+];
+
+const unit1Lesson6SentencesRaw3 = [
+  { en: "The activities of the research workers are in this report.", tr: "Araştırma görevlilerinin faaliyetleri bu rapordadır." },
+  { en: "The results of their investigations are in the report.", tr: "Araştırmalarının sonuçları rapordadır." },
+  { en: "The results of these experiments will be in this report.", tr: "Bu deneylerin sonuçları bu raporda olacaktır." },
+  { en: "The decision of the committee was in favour of their activities.", tr: "Komitenin kararı onların faaliyetlerinin lehineydi." },
+  { en: "The majority of the workers were in favour of the decisions.", tr: "İşçilerin çoğunluğu kararların lehineydi." },
+  { en: "The details of the experiment are in this report.", tr: "Deneyin detayları bu rapordadır." },
+  { en: "The answers to all these questions are at the end of the book.", tr: "Tüm bu soruların cevapları kitabın sonundadır." },
+  { en: "The object of the research project will be at the beginning of the report.", tr: "Araştırma projesinin amacı raporun başlangıcında olacaktır." },
+  { en: "The details of the study were not in the report.", tr: "Çalışmanın detayları raporda değildi." },
+  { en: "The comprehension questions for these sentences are at the end of the exercise.", tr: "Bu cümleler için anlama soruları alıştırmanın sonundadır." },
+  { en: "The bacteria of this disease are in the tissues of the lung.", tr: "Bu hastalığın bakterileri akciğer dokularındadır." },
+  { en: "The date of the next meeting is on the notice board.", tr: "Bir sonraki toplantının tarihi ilan tahtasındadır." },
+  { en: "The report of the last meeting may be on the notice board.", tr: "Son toplantının raporu ilan tahtasında olabilir." },
+  { en: "The equipment for the next experiment is not in the laboratory.", tr: "Bir sonraki deney için ekipman laboratuvarda değildir." },
+  { en: "The statement from the manager was in today's newspaper.", tr: "Yöneticinin açıklaması bugünkü gazetedeydi." },
+  { en: "The materials for the next experiment are in this box.", tr: "Bir sonraki deney için malzemeler bu kutudadır." },
+  { en: "The reasons for their refusal are in this statement.", tr: "Reddetmelerinin nedenleri bu açıklamadır." },
+  { en: "The list of names of patients from that hospital is in the records.", tr: "O hastanedeki hastaların isim listesi kayıtlardadır." },
+  { en: "The records of all the students are in these files.", tr: "Tüm öğrencilerin kayıtları bu dosyalardadır." },
+  { en: "The address of every hospital in London is in our records.", tr: "Londra'daki her hastanenin adresi kayıtlarımızdadir." },
+  { en: "The names and addresses of all our patients are in these files.", tr: "Tüm hastalarımızın isimleri ve adresleri bu dosyalardadır." },
+  { en: "The oil in this area is below the level of the sea.", tr: "Bu bölgedeki petrol deniz seviyesinin altındadır." }
+];
+
+const unit1Lesson6SentencesRaw4 = [
+  { en: "The manager is speaking to the workers in the factory.", tr: "Yönetici fabrikadaki işçilerle konuşuyor." },
+  { en: "Nobody has read the statement in the newspaper.", tr: "Gazetedeki açıklamayı kimse okumadı." },
+  { en: "I have lost the papers on my table.", tr: "Masamın üzerindeki kağıtları kaybettim." },
+  { en: "The photograph in the newspaper is not very good.", tr: "Gazetedeki fotoğraf çok iyi değil." },
+  { en: "Have you seen the difference between the results?", tr: "Sonuçlar arasındaki farkı gördün mü?" },
+  { en: "The molecules in the liquid never stop moving.", tr: "Sıvıdaki moleküller hareket etmeyi asla bırakmaz." },
+  { en: "The molecules in the gas are less dense.", tr: "Gazdaki moleküller daha az yoğundur." },
+  { en: "They did not approve of the policy of the government.", tr: "Hükümetin politikasını onaylamadılar." },
+  { en: "Democracy is a form of government by the people.", tr: "Demokrasi halk tarafından bir yönetim biçimidir." },
+  { en: "He is ready for the examination of the doctor.", tr: "Doktorun muayenesi için hazırdır." },
+  { en: "The doctor could not see any damage to the head.", tr: "Doktor kafada herhangi bir hasar göremedi." },
+  { en: "They did not approve of the ideas in this chapter.", tr: "Bu bölümdeki fikirleri onaylamadılar." },
+  { en: "The doctor examined the bones in the arm with X-rays.", tr: "Doktor koldaki kemikleri Röntgen ışınlarıyla inceledi." },
+  { en: "They measured the loss of the heat in the metal.", tr: "Metaldeki ısı kaybını ölçtüler." },
+  { en: "Now they have found a cure for this disease.", tr: "Şimdi bu hastalık için bir tedavi buldular." },
+  { en: "He preferred to make injection under the skin.", tr: "Deri altına enjeksiyon yapmayı tercih etti." },
+  { en: "These students have had no preparation for an examination.", tr: "Bu öğrencilerin sınava hazırlığı yoktu." },
+  { en: "These machines are ready for use in the factories.", tr: "Bu makineler fabrikalarda kullanılmak üzere hazırdır." },
+  { en: "Sodium chloride is a substance in the blood.", tr: "Sodyum klorür kandaki bir maddedir." },
+  { en: "The students measured the distance from this point.", tr: "Öğrenciler bu noktadan olan mesafeyi ölçtüler." },
+  { en: "The water under the ground rises to the surface.", tr: "Yer altındaki su yüzeye yükselir." },
+  { en: "Nobody has mentioned the situation in America.", tr: "Kimse Amerika'daki durumdan bahsetmedi." }
+];
+
+const unit1Lesson6SentencesRaw5 = [
+  { en: "He studied the movement of the legs of the animal.", tr: "Hayvanın bacaklarının hareketini inceledi." },
+  { en: "He studied the movement of the muscles of the leg.", tr: "Bacağın kaslarının hareketini inceledi." },
+  { en: "We must remember the importance of the results of this experiment.", tr: "Bu deneyin sonuçlarının önemini unutmamalıyız." },
+  { en: "The arrangement of the pictures is very important.", tr: "Resimlerin düzenlenmesi çok önemlidir." },
+  { en: "Robert Brown studied the movement of the molecules in a liquid.", tr: "Robert Brown bir sıvıdaki moleküllerin hareketini inceledi." },
+  { en: "The doctor estimated the extent of the damage to the thorax.", tr: "Doktor toraksa verilen hasarın boyutunu tahmin etti." },
+  { en: "The volume of the liquid increased or decreased.", tr: "Sıvının hacmi arttı veya azaldı." },
+  { en: "We are waiting for the result of the experiment.", tr: "Deneyin sonucunu bekliyoruz." },
+  { en: "He could not understand the difficulty of the problem.", tr: "Problemin zorluğunu anlayamadı." },
+  { en: "The photograph of the student is not in the file.", tr: "Öğrencinin fotoğrafı dosyada değil." },
+  { en: "They closed the factory for the duration of the holiday.", tr: "Tatil süresince fabrikayı kapattılar." },
+  { en: "This map shows the distribution of the forests in Turkey.", tr: "Bu harita Türkiye'deki ormanların dağılımını göstermektedir." },
+  { en: "They overcame the difficulties of the experiment.", tr: "Deneyin zorluklarının üstesinden geldiler." },
+  { en: "They did not know the dimensions of the room.", tr: "Odanın boyutlarını bilmiyorlardı." },
+  { en: "The manager will decide on the division of the work.", tr: "Müdür işin bölünmesine karar verecektir." },
+  { en: "The students could not see the disadvantages of the situation.", tr: "Öğrenciler durumun dezavantajlarını göremediler." },
+  { en: "He spoke in favour of the employment of the workers.", tr: "İşçilerin istihdam edilmesinin lehinde konuştu." },
+  { en: "He will not recommend the use of the wood.", tr: "Odunun kullanılmasını tavsiye etmeyecektir." },
+  { en: "The discovery of the element was important to his work.", tr: "Elementin keşfi onun çalışması için önemliydi." },
+  { en: "The volume of the gas will increase or decrease.", tr: "Gazın hacmi artacak veya azalacaktır." }
+];
+
+const unit1Lesson6Exercises = {
+  exercises: [
+    {
+      id: "u1l6ex1",
+      title: "Alıştırma 1: Basit Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-22)",
+      questions: buildDynamicQuestions(unit1Lesson6SentencesRaw1, 1, 6, 1)
+    },
+    {
+      id: "u1l6ex2",
+      title: "Alıştırma 2: Cümle Yapıları I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-20)",
+      questions: buildDynamicQuestions(unit1Lesson6SentencesRaw2, 1, 6, 2)
+    },
+    {
+      id: "u1l6ex3",
+      title: "Alıştırma 3: Cümle Yapıları II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-22)",
+      questions: buildDynamicQuestions(unit1Lesson6SentencesRaw3, 1, 6, 3)
+    },
+    {
+      id: "u1l6ex4",
+      title: "Alıştırma 4: Durumsal Cümleler",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-22)",
+      questions: buildDynamicQuestions(unit1Lesson6SentencesRaw4, 1, 6, 4)
+    },
+    {
+      id: "u1l6ex5",
+      title: "Alıştırma 5: Karmaşık Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-20)",
+      questions: buildDynamicQuestions(unit1Lesson6SentencesRaw5, 1, 6, 5)
+    }
+  ]
+};
+
+const unit1Lesson7Exercises = {
+  exercises: [
+    {
+      id: "u1l7ex1",
+      title: "Alıştırma 1: Basit Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 1-17)",
+      questions: buildDynamicQuestions(unit1Lesson7SentencesRaw.slice(0, 17), 1, 7, 1)
+    },
+    {
+      id: "u1l7ex2",
+      title: "Alıştırma 2: Orta Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 18-34)",
+      questions: buildDynamicQuestions(unit1Lesson7SentencesRaw.slice(17, 34), 1, 7, 2)
+    },
+    {
+      id: "u1l7ex3",
+      title: "Alıştırma 3: İleri Yapılar",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (Cümleler 35-49)",
+      questions: buildDynamicQuestions(unit1Lesson7SentencesRaw.slice(34), 1, 7, 3)
+    }
+  ]
+};
+
+// Unit 6 Lesson 1 'There is / There is no' Sentences and Exercises Generation
+const nounsData = [
+  { en: "examination", tr: "sınav", type: "an" },
+  { en: "test", tr: "test", type: "a" },
+  { en: "possibility", tr: "olasılık", type: "a" },
+  { en: "tendency", tr: "eğilim", type: "a" },
+  { en: "translation", tr: "çeviri", type: "a" },
+  { en: "form", tr: "biçim", type: "a" },
+  { en: "hope", tr: "umut", type: "a" },
+  { en: "improvement", tr: "gelişme", type: "an" },
+  { en: "theory", tr: "kuram", type: "a" },
+  { en: "supply", tr: "arz", type: "a" },
+  { en: "wire", tr: "tel", type: "a" },
+  { en: "vibration", tr: "titreşim", type: "a" },
+  { en: "temperature", tr: "sıcaklık", type: "a" },
+  { en: "type", tr: "tür", type: "a" },
+  { en: "statement", tr: "ifade", type: "a" },
+  { en: "suggestion", tr: "öneri", type: "a" },
+  { en: "summary", tr: "özet", type: "a" },
+  { en: "source", tr: "kaynak", type: "a" },
+  { en: "solution", tr: "çözüm", type: "a" },
+  { en: "similarity", tr: "benzerlik", type: "a" },
+  { en: "profit", tr: "kâr", type: "a" },
+  { en: "condition", tr: "koşul", type: "a" }
+];
+
+const unit6AffSentences = nounsData.map(item => ({
+  en: `There is ${item.type} ${item.en}`,
+  tr: `Bir ${item.tr} vardır`,
+  word: item.en,
+  trWord: item.tr
+}));
+
+const unit6NegSentences = nounsData.map(item => ({
+  en: `There is no ${item.en}`,
+  tr: `Bir ${item.tr} yoktur`,
+  word: item.en,
+  trWord: item.tr
+}));
+
+const allUnit6Sentences = [...unit6AffSentences, ...unit6NegSentences];
+
+function makeWordBankQuestion(id, sentence, prompt, isEngToTr, sentencesPool) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  const sourceStr = isEngToTr ? sentence.en : sentence.tr;
+  const targetStr = isEngToTr ? sentence.tr : sentence.en;
+
+  const targetWords = targetStr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+  const allOtherWords = sentencesPool
+    .filter(s => s.en !== sentence.en)
+    .map(s => (isEngToTr ? s.tr : s.en).split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")))
+    .flat();
+  const uniqueDistractors = [...new Set(allOtherWords)].filter(w => !targetWords.includes(w));
+  const shuffledDistractors = shuffle(uniqueDistractors);
+  while (shuffledDistractors.length < 3) {
+    shuffledDistractors.push(isEngToTr ? "ve" : "the");
+  }
+  const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+
+  return {
+    id: id,
+    type: "word-bank",
+    prompt: prompt,
+    translation: sourceStr,
+    words: words,
+    correctOrder: targetWords,
+    enSentence: sentence.en,
+    isEngToTr: isEngToTr
+  };
+}
+
+function makeMultipleChoiceQuestion(id, sentence, prompt, isEngToTr, sentencesPool) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  const sourceStr = isEngToTr ? sentence.en : sentence.tr;
+  const targetStr = isEngToTr ? sentence.tr : sentence.en;
+
+  const wrongSents = sentencesPool.filter(s => s.en !== sentence.en);
+  const shuffledWrongs = shuffle(wrongSents);
+  while (shuffledWrongs.length < 3) {
+    shuffledWrongs.push({ en: "test", tr: "test" });
+  }
+
+  const options = shuffle([
+    targetStr,
+    isEngToTr ? shuffledWrongs[0].tr : shuffledWrongs[0].en,
+    isEngToTr ? shuffledWrongs[1].tr : shuffledWrongs[1].en,
+    isEngToTr ? shuffledWrongs[2].tr : shuffledWrongs[2].en
+  ]);
+
+  return {
+    id: id,
+    type: "multiple-choice",
+    prompt: prompt,
+    options: options,
+    correctIndex: options.indexOf(targetStr),
+    enSentence: sentence.en,
+    isEngToTr: isEngToTr
+  };
+}
+
+function makeEnglishDropdownQuestion(id, sentence) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  let blankedSentence = "";
+  let correct = "";
+  let options = [];
+
+  if (sentence.en.includes("There is an ")) {
+    blankedSentence = sentence.en.replace("There is an ", "There is ___ ");
+    correct = "an";
+    options = ["a", "an", "no", "the"];
+  } else if (sentence.en.includes("There is a ")) {
+    blankedSentence = sentence.en.replace("There is a ", "There is ___ ");
+    correct = "a";
+    options = ["a", "an", "no", "any"];
+  } else if (sentence.en.includes("There is no ")) {
+    blankedSentence = sentence.en.replace("There is no ", "There is ___ ");
+    correct = "no";
+    options = ["a", "an", "no", "some"];
+  }
+
+  const shuffledOptions = shuffle(options);
+
+  return {
+    id: id,
+    type: "fill-blank-dropdown",
+    prompt: `Cümleyi tamamlayın: "${sentence.tr}"`,
+    sentence: blankedSentence,
+    options: shuffledOptions,
+    correctIndex: shuffledOptions.indexOf(correct),
+    enSentence: sentence.en
+  };
+}
+
+function makeTurkishDropdownQuestion(id, sentence) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  let blankedSentence = "";
+  let correct = "";
+  let options = [];
+
+  if (sentence.tr.endsWith(" vardır")) {
+    blankedSentence = sentence.tr.replace(" vardır", " ___");
+    correct = "vardır";
+    options = ["vardır", "yoktur", "değildir", "olur"];
+  } else if (sentence.tr.endsWith(" yoktur")) {
+    blankedSentence = sentence.tr.replace(" yoktur", " ___");
+    correct = "yoktur";
+    options = ["vardır", "yoktur", "değildir", "olmaz"];
+  }
+
+  const shuffledOptions = shuffle(options);
+
+  return {
+    id: id,
+    type: "fill-blank-dropdown",
+    prompt: `Boşluğu doldurun: "${sentence.en}"`,
+    sentence: blankedSentence,
+    options: shuffledOptions,
+    correctIndex: shuffledOptions.indexOf(correct),
+    enSentence: sentence.en
+  };
+}
+
+function makeMatchingQuestion(id, sentencesSlice) {
+  return {
+    id: id,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: sentencesSlice.map(s => ({
+      left: s.tr,
+      right: s.en
+    }))
+  };
+}
+
+function buildUnit6Lesson1Exercises() {
+  const exercises = [];
+
+  // Ex 1: Olumlu Cümleler I (Nouns 1-11)
+  const ex1Sents = unit6AffSentences.slice(0, 11);
+  const ex1Questions = [];
+  ex1Questions.push(makeMatchingQuestion("u6l1ex1_match", ex1Sents.slice(0, 4)));
+  for (let i = 0; i < 5; i++) {
+    ex1Questions.push(makeWordBankQuestion(`u6l1ex1_wb_et_${i}`, ex1Sents[1 + i], "Cümlenin Türkçe karşılığını oluşturun:", true, ex1Sents));
+  }
+  for (let i = 0; i < 5; i++) {
+    ex1Questions.push(makeWordBankQuestion(`u6l1ex1_wb_te_${i}`, ex1Sents[6 + i], "Translate to English:", false, ex1Sents));
+  }
+  for (let i = 0; i < 4; i++) {
+    ex1Questions.push(makeMultipleChoiceQuestion(`u6l1ex1_mc_${i}`, ex1Sents[7 + i], `"${ex1Sents[7 + i].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, ex1Sents));
+  }
+  exercises.push({
+    id: "u6l1ex1",
+    title: "Alıştırma 1: Var Yapısı - Olumlu Cümleler I",
+    description: "There is (1-11) - Eşleştirme, Kelime Bankası ve Sıralama",
+    questions: ex1Questions
+  });
+
+  // Ex 2: Olumlu Cümleler II (Nouns 12-22)
+  const ex2Sents = unit6AffSentences.slice(11, 22);
+  const ex2Questions = [];
+  ex2Questions.push(makeMatchingQuestion("u6l1ex2_match", ex2Sents.slice(0, 4)));
+  for (let i = 0; i < 5; i++) {
+    ex2Questions.push(makeWordBankQuestion(`u6l1ex2_wb_et_${i}`, ex2Sents[1 + i], "Cümlenin Türkçe karşılığını oluşturun:", true, ex2Sents));
+  }
+  for (let i = 0; i < 5; i++) {
+    ex2Questions.push(makeWordBankQuestion(`u6l1ex2_wb_te_${i}`, ex2Sents[6 + i], "Translate to English:", false, ex2Sents));
+  }
+  for (let i = 0; i < 4; i++) {
+    ex2Questions.push(makeMultipleChoiceQuestion(`u6l1ex2_mc_${i}`, ex2Sents[7 + i], `"${ex2Sents[7 + i].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, ex2Sents));
+  }
+  exercises.push({
+    id: "u6l1ex2",
+    title: "Alıştırma 2: Var Yapısı - Olumlu Cümleler II",
+    description: "There is (12-22) - Eşleştirme, Kelime Bankası ve Sıralama",
+    questions: ex2Questions
+  });
+
+  // Ex 3: Olumsuz Cümleler I (Nouns 1-11)
+  const ex3Sents = unit6NegSentences.slice(0, 11);
+  const ex3Questions = [];
+  ex3Questions.push(makeMatchingQuestion("u6l1ex3_match", ex3Sents.slice(0, 4)));
+  for (let i = 0; i < 5; i++) {
+    ex3Questions.push(makeWordBankQuestion(`u6l1ex3_wb_et_${i}`, ex3Sents[1 + i], "Cümlenin Türkçe karşılığını oluşturun:", true, ex3Sents));
+  }
+  for (let i = 0; i < 5; i++) {
+    ex3Questions.push(makeWordBankQuestion(`u6l1ex3_wb_te_${i}`, ex3Sents[6 + i], "Translate to English:", false, ex3Sents));
+  }
+  for (let i = 0; i < 4; i++) {
+    ex3Questions.push(makeMultipleChoiceQuestion(`u6l1ex3_mc_${i}`, ex3Sents[7 + i], `"${ex3Sents[7 + i].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, ex3Sents));
+  }
+  exercises.push({
+    id: "u6l1ex3",
+    title: "Alıştırma 3: Yok Yapısı - Olumsuz Cümleler I",
+    description: "There is no (1-11) - Eşleştirme, Kelime Bankası ve Sıralama",
+    questions: ex3Questions
+  });
+
+  // Ex 4: Olumsuz Cümleler II (Nouns 12-22)
+  const ex4Sents = unit6NegSentences.slice(11, 22);
+  const ex4Questions = [];
+  ex4Questions.push(makeMatchingQuestion("u6l1ex4_match", ex4Sents.slice(0, 4)));
+  for (let i = 0; i < 5; i++) {
+    ex4Questions.push(makeWordBankQuestion(`u6l1ex4_wb_et_${i}`, ex4Sents[1 + i], "Cümlenin Türkçe karşılığını oluşturun:", true, ex4Sents));
+  }
+  for (let i = 0; i < 5; i++) {
+    ex4Questions.push(makeWordBankQuestion(`u6l1ex4_wb_te_${i}`, ex4Sents[6 + i], "Translate to English:", false, ex4Sents));
+  }
+  for (let i = 0; i < 4; i++) {
+    ex4Questions.push(makeMultipleChoiceQuestion(`u6l1ex4_mc_${i}`, ex4Sents[7 + i], `"${ex4Sents[7 + i].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, ex4Sents));
+  }
+  exercises.push({
+    id: "u6l1ex4",
+    title: "Alıştırma 4: Yok Yapısı - Olumsuz Cümleler II",
+    description: "There is no (12-22) - Eşleştirme, Kelime Bankası ve Sıralama",
+    questions: ex4Questions
+  });
+
+  // Ex 5: Karma Pratik - Boşluk Doldurma & Çoktan Seçmeli
+  const ex5Questions = [];
+  // 5 English Dropdowns
+  ex5Questions.push(makeEnglishDropdownQuestion("u6l1ex5_ed_0", unit6AffSentences[0])); // examination
+  ex5Questions.push(makeEnglishDropdownQuestion("u6l1ex5_ed_1", unit6AffSentences[7])); // improvement
+  ex5Questions.push(makeEnglishDropdownQuestion("u6l1ex5_ed_2", unit6NegSentences[1])); // test
+  ex5Questions.push(makeEnglishDropdownQuestion("u6l1ex5_ed_3", unit6NegSentences[8])); // theory
+  ex5Questions.push(makeEnglishDropdownQuestion("u6l1ex5_ed_4", unit6AffSentences[12])); // vibration
+  
+  // 5 Turkish Dropdowns
+  ex5Questions.push(makeTurkishDropdownQuestion("u6l1ex5_td_0", unit6AffSentences[3])); // tendency
+  ex5Questions.push(makeTurkishDropdownQuestion("u6l1ex5_td_1", unit6AffSentences[10])); // wire
+  ex5Questions.push(makeTurkishDropdownQuestion("u6l1ex5_td_2", unit6NegSentences[4])); // translation
+  ex5Questions.push(makeTurkishDropdownQuestion("u6l1ex5_td_3", unit6NegSentences[11])); // vibration
+  ex5Questions.push(makeTurkishDropdownQuestion("u6l1ex5_td_4", unit6AffSentences[15])); // suggestion
+
+  // 5 Multiple Choices
+  ex5Questions.push(makeMultipleChoiceQuestion("u6l1ex5_mc_0", unit6AffSentences[5], `"${unit6AffSentences[5].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, allUnit6Sentences));
+  ex5Questions.push(makeMultipleChoiceQuestion("u6l1ex5_mc_1", unit6NegSentences[6], `"${unit6NegSentences[6].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, allUnit6Sentences));
+  ex5Questions.push(makeMultipleChoiceQuestion("u6l1ex5_mc_2", unit6AffSentences[17], `"${unit6AffSentences[17].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, allUnit6Sentences));
+  ex5Questions.push(makeMultipleChoiceQuestion("u6l1ex5_mc_3", unit6NegSentences[19], `"${unit6NegSentences[19].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, allUnit6Sentences));
+  ex5Questions.push(makeMultipleChoiceQuestion("u6l1ex5_mc_4", unit6AffSentences[21], `"${unit6AffSentences[21].en}" ifadesinin Türkçe karşılığı hangisidir?`, true, allUnit6Sentences));
+
+  exercises.push({
+    id: "u6l1ex5",
+    title: "Alıştırma 5: Karma Yapılar - Kelime Havuzu",
+    description: "Seçmeli ve Boşluk Doldurma Alıştırmaları (15 Soru)",
+    questions: ex5Questions
+  });
+
+  // Ex 6: Sıralama ve Eşleştirme Mücadelesi (Mixed hard)
+  const ex6Questions = [];
+  ex6Questions.push(makeMatchingQuestion("u6l1ex6_match", [
+    unit6AffSentences[1],
+    unit6NegSentences[3],
+    unit6AffSentences[13],
+    unit6NegSentences[16]
+  ]));
+  
+  // 7 English to Turkish Word Bank
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_0", unit6AffSentences[2], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_1", unit6NegSentences[5], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_2", unit6AffSentences[9], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_3", unit6NegSentences[12], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_4", unit6AffSentences[14], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_5", unit6NegSentences[18], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_et_6", unit6AffSentences[20], "Cümlenin Türkçe karşılığını oluşturun:", true, allUnit6Sentences));
+
+  // 7 Turkish to English Word Bank (Kelime Sıralama)
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_0", unit6NegSentences[2], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_1", unit6AffSentences[6], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_2", unit6NegSentences[9], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_3", unit6AffSentences[11], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_4", unit6NegSentences[15], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_5", unit6AffSentences[18], "Translate to English:", false, allUnit6Sentences));
+  ex6Questions.push(makeWordBankQuestion("u6l1ex6_wb_te_6", unit6NegSentences[21], "Translate to English:", false, allUnit6Sentences));
+
+  exercises.push({
+    id: "u6l1ex6",
+    title: "Alıştırma 6: Kelime Sıralama ve Eşleştirme Mücadelesi",
+    description: "Karışık Olumlu & Olumsuz Cümleler (15 Soru)",
+    questions: ex6Questions
+  });
+
+  return exercises;
+}
+
 const unit1LessonSentences = {
   1: {
-    exercises: [
-      {
-        id: "u1l1ex1",
-        title: "Alıştırma 1: Olumlu İsim Cümleleri",
-        description: "Subject + Be + Noun (Olumlu)",
-        questions: []
-      },
-      {
-        id: "u1l1ex2",
-        title: "Alıştırma 2: Soru Yapıları ve Anlama",
-        description: "What is ...? (Soru ve Anlama)",
-        questions: []
-      },
-      {
-        id: "u1l1ex3",
-        title: "Alıştırma 3: Olumsuz İsim Cümleleri",
-        description: "Cümleleri olumsuz forma çevirin",
-        questions: []
-      },
-      {
-        id: "u1l1ex4",
-        title: "Alıştırma 4: Akademik İsim Cümleleri",
-        description: "Subject + Be + Noun (Akademik)",
-        questions: []
-      },
-      {
-        id: "u1l1ex5",
-        title: "Alıştırma 5: Geçmiş Zaman Yapıları",
-        description: "Subject + Was/Were + Noun",
-        questions: []
-      }
-    ]
+    exercises: buildUnit6Lesson1Exercises()
   },
   2: [ // Ders 2: Özne + Olmak Fiili + Sıfat (Subject + Be + Adjective)
     { en: "The ground is wet", tr: "Zemin ıslaktır", word: "wet", trWord: "ıslak", blank: "The ground is ___" },
@@ -599,24 +1844,7 @@ const unit5LessonSentences = {
     { en: "There is a statement", tr: "Bir ifade vardır", word: "statement", trWord: "ifade", blank: "There is a ___" },
     { en: "There is a suggestion", tr: "Bir öneri vardır", word: "suggestion", trWord: "öneri", blank: "There is a ___" }
   ],
-  2: [
-    { en: "There will be a change", tr: "Bir değişiklik olacak", word: "will", trWord: "olacak", blank: "There ___ be a change" },
-    { en: "There may be a reaction", tr: "Bir tepkime olabilir", word: "may", trWord: "olabilir", blank: "There ___ be a reaction" },
-    { en: "There might be a mistake", tr: "Bir hata olabilir", word: "might", trWord: "olabilir", blank: "There ___ be a mistake" },
-    { en: "There can be a solution", tr: "Bir çözüm olabilir", word: "can", trWord: "olabilir", blank: "There ___ be a solution" },
-    { en: "There could be a danger", tr: "Bir tehlike olabilirdi", word: "could", trWord: "olabilirdi", blank: "There ___ be a danger" },
-    { en: "There has been an increase", tr: "Bir artış olmuştur", word: "has", trWord: "olmuştur", blank: "There ___ been an increase" },
-    { en: "There have been improvements", tr: "Gelişmeler olmuştur", word: "have", trWord: "olmuştur", blank: "There ___ been improvements" },
-    { en: "There must be a reason", tr: "Bir sebep olmalıdır", word: "must", trWord: "olmalıdır", blank: "There ___ be a reason" },
-    { en: "There should be a limit", tr: "Bir sınır olmalıdır", word: "should", trWord: "olmalıdır", blank: "There ___ be a limit" },
-    { en: "There will be no strike", tr: "Grev olmayacak", word: "no", trWord: "olmayacak", blank: "There will be ___ strike" },
-    { en: "There may be no results", tr: "Sonuçlar olmayabilir", word: "no", trWord: "olmayabilir", blank: "There may be ___ results" },
-    { en: "There cannot be a division", tr: "Bir bölünme olamaz", word: "cannot", trWord: "olamaz", blank: "There ___ be a division" },
-    { en: "There could be no vibration", tr: "Titreşim olamazdı", word: "no", trWord: "olamazdı", blank: "There could be ___ vibration" },
-    { en: "There must be no delay", tr: "Gecikme olmamalıdır", word: "no", trWord: "olmamalıdır", blank: "There must be ___ delay" },
-    { en: "There has been no progress", tr: "İlerleme olmamıştır", word: "no", trWord: "olmamıştır", blank: "There has been ___ progress" },
-    { en: "There have been no disputes", tr: "Anlaşmazlık olmamıştır", word: "no", trWord: "olmamıştır", blank: "There have been ___ disputes" }
-  ],
+
   3: [
     { en: "Where is the post office", tr: "Postane nerededir", word: "Where", trWord: "nerededir", blank: "___ is the post office" },
     { en: "Where was the resemblance", tr: "Benzerlik neredeydi", word: "Where", trWord: "neredeydi", blank: "___ was the resemblance" },
@@ -2011,7 +3239,7 @@ const unit25LessonSentences = {
 
 const rawTopics = [
   {
-    title: "I. İsim ve Edat Takımları",
+    title: "I. İsim ve Edat Takımları (Sayfa 13)",
     desc: "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
     icon: "👋",
     numLessons: 7,
@@ -2021,7 +3249,11 @@ const rawTopics = [
         example: "",
         description: "İngilizce'de aralarında edat (in, on, of, with vb.) veya bağlaç bulunmayan, yan yana dizilmiş kelime öbekleri (tamlamalar), kelime sayısı kaç olursa olsun soldan sağa doğru sırayla bir bütün olarak anlamlandırılarak Türkçe'ye çevrilir.<br><br><strong>Örnekler:</strong><br>• Airport ground control tower: Havalimanı yer kontrol kulesi<br>• Emergency room heart surgery team: Acil servis kalp ameliyatı ekibi"
       },
-      { formula: "Noun + of the + Noun", example: "The legs of the animal: Hayvanın bacakları" },
+      { 
+        formula: "Noun + of the + Noun", 
+        example: "The legs of the animal: Hayvanın bacakları",
+        description: "Eğer kelime öbekleri arasında edat ya da bağlaç bulunuyorsa arka arkaya gelen bu yapılar genellikle birbirini tamamlar ve Türkçe mantığına göre sonundan başına doğru zincirleme olarak tercüme edilir. Bu ve bundan sonraki örnekler bu kurala uygundur.<br><br>Örneğin; The volume of the liquid"
+      },
       { formula: "Pronoun + of the + Noun", example: "Some of the prices: Fiyatların bazıları" },
       { formula: "Noun + of + Noun", example: "The invention of fire: Ateşin icadı" },
       { formula: "Noun + from + Noun", example: "A student from England: İngiltere'den bir öğrenci" },
@@ -2029,7 +3261,7 @@ const rawTopics = [
       { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" }
     ],
     subtitles: [
-      "Giriş. İsim ve Edat Takımlarına Giriş",
+      "Giriş. İsim ve Edat Takımlarına Giriş (Sayfa 13)",
       "A. İsim + of the + isim (Sayfa 13)",
       "B. Zamir + of the + isim (Sayfa 14)",
       "C. İsim + of + isim (Sayfa 16)",
@@ -2039,7 +3271,7 @@ const rawTopics = [
     ]
   },
   {
-    title: "II. Fiil ve Edat Takımları",
+    title: "II. Fiil ve Edat Takımları (Sayfa 21)",
     desc: "Fiillerin edat grupları ve zarflarla olan ilişkileri",
     icon: "🎧",
     numLessons: 2,
@@ -2095,7 +3327,7 @@ const rawTopics = [
     ]
   },
   {
-    title: "VI. Yapılar",
+    title: "VI. Yapılar (Sayfa 1)",
     desc: "Özne + Olmak Fiili + İsim/Sıfat/Sıfat+İsim/Edat Takımı ile temel cümle yapıları",
     icon: "⭐",
     numLessons: 4,
@@ -2125,7 +3357,7 @@ const rawTopics = [
     ]
   },
   {
-    title: "VIII. \"There\" Yapıları",
+    title: "VIII. \"There\" Yapıları (Sayfa 38)",
     desc: "There is/are ve modal fiillerle varlık durumları",
     icon: "📋",
     numLessons: 2,
@@ -2227,7 +3459,7 @@ const rawTopics = [
     ]
   },
   {
-    title: "XV. Maksat ve Amac Yapıları",
+    title: "XV. Maksat ve Amac Yapıları (Sayfa 107)",
     desc: "Maksat ve amaç bildiren mastar (infinitive of purpose) yapıları",
     icon: "🎯",
     numLessons: 2,
@@ -2443,6 +3675,255 @@ const lessonIcons = [
   "🎗️", "📣", "📢", "🔋", "🔌", "🛸"
 ];
 
+const unit8Lesson1SentencesRaw1 = [
+  { en: "There is a test", tr: "Bir test var" },
+  { en: "There is no test", tr: "Bir test yok" },
+  { en: "There is a form", tr: "Bir form var" },
+  { en: "There is no form", tr: "Bir form yok" },
+  { en: "There is a wire", tr: "Bir tel var" },
+  { en: "There is no wire", tr: "Bir tel yok" },
+  { en: "There is a hope", tr: "Bir umut var" },
+  { en: "There is no hope", tr: "Bir umut yok" },
+  { en: "There is a type", tr: "Bir tür var" },
+  { en: "There is no type", tr: "Bir tür yok" },
+  { en: "There is a theory", tr: "Bir kuram var" },
+  { en: "There is no theory", tr: "Bir kuram yok" },
+  { en: "There is a supply", tr: "Bir arz var" },
+  { en: "There is no supply", tr: "Bir arz yok" },
+  { en: "There is a profit", tr: "Bir kâr var" },
+  { en: "There is no profit", tr: "Bir kâr yok" },
+  { en: "There is a source", tr: "Bir kaynak var" },
+  { en: "There is no source", tr: "Bir kaynak yok" },
+  { en: "There is a solution", tr: "Bir çözüm var" },
+  { en: "There is no solution", tr: "Bir çözüm yok" },
+  { en: "There is a summary", tr: "Bir özet var" },
+  { en: "There is no summary", tr: "Bir özet yok" },
+  { en: "There is a vibration", tr: "Bir titreşim var" },
+  { en: "There is no vibration", tr: "Bir titreşim yok" },
+  { en: "There is a statement", tr: "Bir ifade var" },
+  { en: "There is no statement", tr: "Bir ifade yok" },
+  { en: "There is a condition", tr: "Bir koşul var" },
+  { en: "There is no condition", tr: "Bir koşul yok" },
+  { en: "There is a tendency", tr: "Bir eğilim var" },
+  { en: "There is no tendency", tr: "Bir eğilim yok" },
+  { en: "There is an examination", tr: "Bir sınav var" },
+  { en: "There is no examination", tr: "Bir sınav yok" },
+  { en: "There is a possibility", tr: "Bir olasılık var" },
+  { en: "There is no possibility", tr: "Bir olasılık yok" },
+  { en: "There is a translation", tr: "Bir çeviri var" },
+  { en: "There is no translation", tr: "Bir çeviri yok" },
+  { en: "There is a temperature", tr: "Bir sıcaklık var" },
+  { en: "There is no temperature", tr: "Bir sıcaklık yok" },
+  { en: "There is a similarity", tr: "Bir benzerlik var" },
+  { en: "There is no similarity", tr: "Bir benzerlik yok" },
+  { en: "There is an improvement", tr: "Bir iyileşme var" },
+  { en: "There is no improvement", tr: "Bir iyileşme yok" },
+  { en: "There is a suggestion", tr: "Bir öneri var" },
+  { en: "There is no suggestion", tr: "Bir öneri yok" }
+];
+
+const unit8Lesson1SentencesRaw2 = [
+  { en: "There will be a short test", tr: "Kısa bir test olacak" },
+  { en: "There must be a thin wire", tr: "İnce bir tel olmalıdır" },
+  { en: "There will be a long examination", tr: "Uzun bir sınav olacak" },
+  { en: "There may be no new form", tr: "Yeni bir form olmayabilir" },
+  { en: "There might be a faint hope", tr: "Zayıf bir umut olabilir" },
+  { en: "There must be a short summary", tr: "Kısa bir özet olmalıdır" },
+  { en: "There will be a new source", tr: "Yeni bir kaynak olacak" },
+  { en: "There will be no large profit", tr: "Büyük bir kâr olmayacak" },
+  { en: "There may be some disadvantages", tr: "Bazı dezavantajlar olabilir" },
+  { en: "There will be some advantages", tr: "Bazı avantajlar olacak" },
+  { en: "There will be some successes", tr: "Bazı başarılar olacak" },
+  { en: "There could be some failures", tr: "Bazı başarısızlıklar olabilirdi" },
+  { en: "There have been some influences", tr: "Bazı etkiler olmuştur" },
+  { en: "There may be large supplies", tr: "Büyük tedarikler olabilir" },
+  { en: "There must be some reforms", tr: "Bazı reformlar olmalıdır" }
+];
+
+const unit8Lesson1SentencesRaw3 = [
+  { en: "There may not be any heavy rainfall", tr: "Hiç şiddetli yağış olmayabilir" },
+  { en: "There may not be any agricultural reform", tr: "Hiç tarım reformu olmayabilir" },
+  { en: "There have not been any similar stages", tr: "Hiç benzer aşama olmamıştır" },
+  { en: "There have not been any common species", tr: "Hiç ortak tür olmamıştır" },
+  { en: "There must be some effective precautions", tr: "Bazı etkili önlemler olmalıdır" },
+  { en: "There may not be any intensive agriculture", tr: "Hiç yoğun tarım olmayabilir" },
+  { en: "There ought not to be any rapid erosion", tr: "Hiç hızlı erozyon olmamalıdır" },
+  { en: "There will not be any profitable agriculture", tr: "Hiç kârlı tarım olmayacak" },
+  { en: "There must not be any similar neglect", tr: "Hiç benzer ihmal olmamalıdır" },
+  { en: "There could not be any effective precautions", tr: "Hiç etkili önlem olamazdı" },
+  { en: "There must not be any unequal responsibilities", tr: "Hiç eşit olmayan sorumluluk olmamalıdır" },
+  { en: "There should not be any great disadvantages", tr: "Hiç büyük dezavantaj olmamalıdır" },
+  { en: "There may be a slight tendency towards improvement soon", tr: "Yakında iyileşmeye doğru hafif bir eğilim olabilir" },
+  { en: "There will not be any further nationalisation", tr: "Daha fazla kamulaştırma olmayacak" },
+  { en: "There has not been any concept of data distortion", tr: "Hiçbir veri bozulması kavramı olmamıştır" }
+];
+
+const unit8Lesson1SentencesRaw4 = [
+  { en: "There can be no reason for failure", tr: "Başarısızlık için hiçbir sebep olamaz" },
+  { en: "There must be an easy solution to this problem", tr: "Bu sorunun kolay bir çözümü olmalı" },
+  { en: "There may be no easy solution to this problem", tr: "Bu sorunun kolay bir çözümü olmayabilir" },
+  { en: "There have been no new theories in this field", tr: "Bu alanda yeni hiçbir teori olmadı" },
+  { en: "There has been no decision at the meeting so far", tr: "Şimdiye kadar toplantıda hiçbir karar alınmadı" },
+  { en: "There can be an improvement in the quality of the fruit", tr: "Meyvenin kalitesinde bir iyileşme olabilir" },
+  { en: "There has been a serious flying accident near the airport", tr: "Havalimanının yakınında ciddi bir uçuş kazası oldu" },
+  { en: "There has been no formal justification for the budget cuts", tr: "Bütçe kesintileri için resmi hiçbir gerekçe olmadı" },
+  { en: "There must be a precise definition for every core concept", tr: "Her temel kavram için kesin bir tanım olmalıdır" },
+  { en: "There will be no automatic extension of the existing contract", tr: "Mevcut sözleşmenin otomatik bir uzatılması olmayacak" },
+  { en: "There has been no clear resolution to the ongoing conflict", tr: "Devam eden çatışmaya net bir çözüm olmadı" },
+  { en: "There has been a very heavy rainfall in these areas", tr: "Bu bölgelerde çok şiddetli yağış oldu" },
+  { en: "There can be no possibility of improvement before next year", tr: "Gelecek yıldan önce bir iyileşme olasılığı olamaz" },
+  { en: "There has been no tendency towards improvement in recent years", tr: "Son yıllarda iyileşmeye yönelik hiçbir eğilim olmadı" },
+  { en: "There can be no resemblance between the two cases", tr: "İki vaka arasında hiçbir benzerlik olamaz" }
+];
+
+const unit8Lesson1SentencesRaw5 = [
+  { en: "There must be a filter at the top of this machine", tr: "Bu makinenin üstünde bir filtre olmalıdır" },
+  { en: "There must be no filter in this part of the machine", tr: "Makinenin bu kısmında hiçbir filtre olmamalıdır" },
+  { en: "There could be a faint hope of improvement soon", tr: "Yakında hafif bir iyileşme umudu olabilirdi" },
+  { en: "There could be no evidence of guilt in the circumstances", tr: "Koşullarda hiçbir suçluluk kanıtı olamazdı" },
+  { en: "There may be no protection from fire in the laboratory", tr: "Laboratuvarda yangından hiçbir korunma olmayabilir" },
+  { en: "There has been no absorption of the light rays so far", tr: "Şimdiye kadar ışık ışınlarının hiçbir emilimi olmadı" },
+  { en: "There can be no comparison between these two actions", tr: "Bu iki eylem arasında hiçbir karşılaştırma olamaz" },
+  { en: "There can be no resemblance between the two types of plant", tr: "İki bitki türü arasında hiçbir benzerlik olamaz" },
+  { en: "There may be no direct relevance between these two issues", tr: "Bu iki konu arasında doğrudan hiçbir ilişki olmayabilir" },
+  { en: "There can be no stable growth without financial investment", tr: "Finansal yatırım olmadan istikrarlı bir büyüme olamaz" },
+  { en: "There could be no better framework for this specific research", tr: "Bu özel araştırma için daha iyi bir çerçeve olamazdı" },
+  { en: "There must be no possibility of failure in this matter", tr: "Bu hususta hiçbir başarısızlık olasılığı olmamalıdır" },
+  { en: "There can be no doubt of an improvement in the quality of the fruit", tr: "Meyvenin kalitesinde bir iyileşme olduğundan hiçbir şüphe duyulamaz" },
+  { en: "There has been no significant alteration in the research methodology", tr: "Araştırma metodolojisinde önemli hiçbir değişiklik olmadı" },
+  { en: "There must be no discrimination based on gender or ethnicity", tr: "Cinsiyete veya etnik kökene dayalı hiçbir ayrımcılık olmamalıdır" }
+];
+
+const unit8Lesson1SentencesRaw6 = [
+  { en: "There must be an immediate assessment of the structural damage", tr: "Yapısal hasarın derhal bir değerlendirmesi yapılmalıdır" },
+  { en: "There must be a sustainable source of funding for the project", tr: "Proje için sürdürülebilir bir finansman kaynağı olmalıdır" },
+  { en: "There ought to be a reliable mechanism to monitor the emissions", tr: "Emisyonları izlemek için güvenilir bir mekanizma olmalıdır" },
+  { en: "There must have been some inconsistencies in the analyzed samples", tr: "Analiz edilen örneklerde bazı tutarsızlıklar olmuş olmalı" },
+  { en: "There must have been a major recession in the domestic economy", tr: "Yurtiçi ekonomide büyük bir durgunluk olmuş olmalı" },
+  { en: "There will be a short test in Geology this afternoon", tr: "Bu öğleden sonra Jeoloji dersinde kısa bir test olacak" },
+  { en: "There may be a faint possibility of improvement next year", tr: "Gelecek yıl hafif bir iyileşme olasılığı olabilir" },
+  { en: "There will be a good translation of this work in the library", tr: "Kütüphanede bu çalışmanın iyi bir çevirisi olacak" },
+  { en: "There will be no wheat from this area until the year after next", tr: "Gelecek yıldan sonraki yıla kadar bu bölgeden hiçbir buğday olmayacak" },
+  { en: "There will be no further excavations in this area until next year", tr: "Gelecek yıla kadar bu alanda daha fazla kazı olmayacak" },
+  { en: "There may be no new works of art at the exhibition tomorrow", tr: "Yarın sergide yeni sanat eserleri olmayabilir" },
+  { en: "There has been a noticeable shift in public policy regarding welfare", tr: "Refah konusundaki kamu politikasında gözle görülür bir değişim oldu" },
+  { en: "There have been numerous occurrences of data distortion in the past", tr: "Geçmişte çok sayıda veri bozulması vakası meydana geldi" },
+  { en: "There must have been a systematic error in the initial compilation", tr: "İlk derlemede sistematik bir hata olmuş olmalı" },
+  { en: "There might not be an available substitute for this chemical component", tr: "Bu kimyasal bileşen için mevcut bir alternatif olmayabilir" }
+];
+
+const unit8Lesson1SentencesRaw7 = [
+  { en: "There must be a high degree of accuracy in the statistical estimation", tr: "İstatistiksel tahminde yüksek derecede doğruluk olmalıdır" },
+  { en: "There has not been any formal registration for the conference yet", tr: "Konferans için henüz resmi bir kayıt olmadı" },
+  { en: "There should be more focus on the welfare of the individuals", tr: "Bireylerin refahına daha fazla odaklanılmalıdır" },
+  { en: "There may be a new form of power within the next few years", tr: "Gelecek birkaç yıl içinde yeni bir güç biçimi olabilir" },
+  { en: "There could be a high temperature at a later stage of the disease", tr: "Hastalığın daha sonraki bir aşamasında yüksek ateş olabilirdi" },
+  { en: "There could be a slight similarity between the different types of plant", tr: "Farklı bitki türleri arasında hafif bir benzerlik olabilirdi" },
+  { en: "There might be a possibility of improvement in the wheat crop next year", tr: "Gelecek yıl buğday mahsulünde bir iyileşme olasılığı olabilir" },
+  { en: "There may be a slight tendency towards improvement at a later stage", tr: "Daha sonraki bir aşamada iyileşmeye yönelik hafif bir eğilim olabilir" },
+  { en: "There may be a slight resemblance between the two types of plant", tr: "İki bitki türü arasında hafif bir benzerlik olabilir" },
+  { en: "There should be some beautiful works of art at the exhibition tomorrow", tr: "Yarın sergide bazı güzel sanat eserleri olmalıdır" },
+  { en: "There has been no serious flying accident in the last ten years", tr: "Son on yılda ciddi hiçbir uçuş kazası olmadı" },
+  { en: "There has been a steady evolution in the structure of the organization", tr: "Organizasyonun yapısında istikrarlı bir gelişim oldu" },
+  { en: "There have been several contradictions in the witness testimonies", tr: "Tanık ifadelerinde birkaç çelişki oldu" },
+  { en: "There has not been enough evidence to support this specific hypothesis", tr: "Bu özel hipotezi desteklemek için yeterli kanıt olmadı" },
+  { en: "There has not been a clear indicator of economic stability this quarter", tr: "Bu çeyrekte ekonomik istikrarın net bir göstergesi olmadı" }
+];
+
+const unit8Lesson1SentencesRaw8 = [
+  { en: "There must not be any unverified variables in the final equation", tr: "Nihai denklemde doğrulanmamış hiçbir değişken olmamalıdır" },
+  { en: "There must not be any external interference during the investigation", tr: "Soruşturma sırasında hiçbir dış müdahale olmamalıdır" },
+  { en: "There ought to be more flexibility in the working hours of the staff", tr: "Personelin çalışma saatlerinde daha fazla esneklik olmalıdır" },
+  { en: "There ought to be an explicit acknowledgement of the authors' contributions", tr: "Yazarların katkılarının açık bir şekilde belirtilmesi gerekir" },
+  { en: "There should not be any significant error in the data processing phase", tr: "Veri işleme aşamasında önemli hiçbir hata olmamalıdır" },
+  { en: "There must not have been sufficient integration between the systems", tr: "Sistemler arasında yeterli entegrasyon olmamış olmalı" },
+  { en: "There could not have been a more appropriate method for this study", tr: "Bu çalışma için daha uygun bir yöntem olamazdı" },
+  { en: "There could have been no coincidence in those identical results", tr: "Bu özdeş sonuçlarda hiçbir tesadüf olamazdı" },
+  { en: "There could have been an ethical implication in that procedure", tr: "Bu prosedürde etik bir ima olabilirdi" },
+  { en: "There will be a special session dedicated to the theory of relativity", tr: "Görelilik teorisine adanmış özel bir oturum olacak" },
+  { en: "There must have been an unpredicted fluctuation in the market prices", tr: "Piyasa fiyatlarında öngörülemeyen bir dalgalanma olmuş olmalı" },
+  { en: "There will be a new source of raw material in the next 10 years", tr: "Gelecek 10 yıl içinde yeni bir hammadde kaynağı olacak" },
+  { en: "There has been no contact with the members for more than two months", tr: "Üyelerle iki aydan fazla süredir hiçbir temas olmadı" },
+  { en: "There will be more excavation in this area in the next two years", tr: "Gelecek iki yıl içinde bu alanda daha fazla kazı yapılacak" },
+  { en: "There were many gold and silver objects in the exhibition of art", tr: "Sanat sergisinde birçok altın ve gümüş nesne vardı" }
+];
+
+const unit8Lesson1SentencesRaw9 = [
+  { en: "There could have been no new sources of information on this subject", tr: "Bu konuda yeni hiçbir bilgi kaynağı olamazdı" },
+  { en: "There must have been a temporary breakdown in institutional communication", tr: "Kurumsal iletişimde geçici bir kesinti olmuş olmalı" },
+  { en: "There could have been a different outcome if the criteria were modified", tr: "Kriterler değiştirilseydi farklı bir sonuç olabilirdi" },
+  { en: "There could not have been a total collapse without structural flaws", tr: "Yapısal kusurlar olmadan tam bir çöküş olamazdı" },
+  { en: "There will be many new sources of information on this subject in this book", tr: "Bu kitapta bu konuda birçok yeni bilgi kaynağı olacak" },
+  { en: "There must have been an administrative oversight during the selection process", tr: "Seçim sürecinde idari bir hata olmuş olmalı" },
+  { en: "There must have been a difference between the results of the two experiments", tr: "İki deneyin sonuçları arasında bir fark olmuş olmalı" },
+  { en: "There should have been a better translation of that work in the library", tr: "Kütüphanede o çalışmanın daha iyi bir çevirisi olmalıydı" },
+  { en: "There can be no large supply of raw materials for export from these areas", tr: "Bu bölgelerden ihracat için büyük miktarda hammadde tedariki olamaz" }
+];
+
+const unit8Lesson1Exercises = {
+  exercises: [
+    {
+      id: "u8l1ex1",
+      title: "Alıştırma 1: Temel \"There\" Yapıları (Basit Cümleler)",
+      description: "Eşleştirme, Çoktan Seçmeli ve Çeviri",
+      questions: buildCustomExerciseQuestions(unit8Lesson1SentencesRaw1, 8, 21, 1)
+    },
+    {
+      id: "u8l1ex2",
+      title: "Alıştırma 2: Zamanlar ve Modal Fiiller",
+      description: "Çoktan Seçmeli, Kelime Bankası ve Çeviri",
+      questions: build15Questions(unit8Lesson1SentencesRaw2, 8, 21, 2)
+    },
+    {
+      id: "u8l1ex3",
+      title: "Alıştırma 3: Orta Seviye Varyasyonlar",
+      description: "Eşleştirme, Çoktan Seçmeli ve Kelime Bankası",
+      questions: build15Questions(unit8Lesson1SentencesRaw3, 8, 21, 3)
+    },
+    {
+      id: "u8l1ex4",
+      title: "Alıştırma 4: İleri Seviye Cümleler I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw4, 8, 21, 4)
+    },
+    {
+      id: "u8l1ex5",
+      title: "Alıştırma 5: İleri Seviye Cümleler II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw5, 8, 21, 5)
+    }
+  ]
+};
+
+const unit8Lesson2Exercises = {
+  exercises: [
+    {
+      id: "u8l2ex1",
+      title: "Alıştırma 1: İleri Seviye Cümleler III",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw6, 8, 22, 1)
+    },
+    {
+      id: "u8l2ex2",
+      title: "Alıştırma 2: İleri Seviye Cümleler IV",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw7, 8, 22, 2)
+    },
+    {
+      id: "u8l2ex3",
+      title: "Alıştırma 3: Karmaşık Durumsal Cümleler I",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw8, 8, 22, 3)
+    },
+    {
+      id: "u8l2ex4",
+      title: "Alıştırma 4: Karmaşık Durumsal Cümleler II",
+      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw9, 8, 22, 4)
+    }
+  ]
+};
+
 const units = [];
 const lessons = [];
 let globalLessonCounter = 1;
@@ -2450,12 +3931,12 @@ let globalLessonCounter = 1;
 const unitSentencesMap = {
   1: {
     1: unit1IntroSentences,
-    2: unit3LessonSentences[2],
-    3: unit3LessonSentences[3],
-    4: unit3LessonSentences[4],
-    5: unit3LessonSentences[5],
-    6: unit3LessonSentences[1],
-    7: unit3LessonSentences[6]
+    2: unit1Lesson2Exercises,
+    3: unit1Lesson3Exercises,
+    4: unit1Lesson4Exercises,
+    5: unit1Lesson5Exercises,
+    6: unit1Lesson6Exercises,
+    7: unit1Lesson7Exercises
   },
   2: {
     1: unit4LessonSentences[1],
@@ -2483,8 +3964,8 @@ const unitSentencesMap = {
     1: [...unit4LessonSentences[3], ...unit4LessonSentences[4]]
   },
   8: {
-    1: unit5LessonSentences[1],
-    2: unit5LessonSentences[2]
+    1: unit8Lesson1Exercises,
+    2: unit8Lesson2Exercises
   },
   9: {
     1: unit5LessonSentences[3],
@@ -2568,6 +4049,51 @@ const unitSentencesMap = {
 };
 
 rawTopics.forEach((topic, uIdx) => {
+  // Clean page numbers and replace "takım" and "strüktür" with "yapı" in title, desc, and subtitles
+  if (topic.title) {
+    topic.title = topic.title
+      .replace(/^[IVXLCDM]+\.\s*/, "")
+      .replace(/Takımları/g, "Yapıları")
+      .replace(/takımları/g, "yapıları")
+      .replace(/Takımı/g, "Yapısı")
+      .replace(/takımı/g, "yapısı")
+      .replace(/Strüktürleri/g, "Yapıları")
+      .replace(/strüktürleri/g, "yapıları")
+      .replace(/Strüktürü/g, "Yapısı")
+      .replace(/strüktürü/g, "yapısı")
+      .replace(/Strüktürel/g, "Yapısal")
+      .replace(/strüktürel/g, "yapısal")
+      .replace(/Strüktür/g, "Yapı")
+      .replace(/strüktür/g, "yapı");
+  }
+  if (topic.desc) {
+    topic.desc = topic.desc
+      .replace(/takımları/g, "yapıları")
+      .replace(/takımlı/g, "yapılı")
+      .replace(/takımı/g, "yapısı")
+      .replace(/strüktürleri/g, "yapıları")
+      .replace(/strüktürel/g, "yapısal")
+      .replace(/strüktür/g, "yapı");
+  }
+  if (topic.subtitles) {
+    topic.subtitles = topic.subtitles.map(sub => sub
+      .replace(/Takımlarına/g, "Yapılarına")
+      .replace(/takımlarına/g, "yapılarına")
+      .replace(/Takımları/g, "Yapıları")
+      .replace(/takımları/g, "yapıları")
+      .replace(/Takımı/g, "Yapısı")
+      .replace(/takımı/g, "yapısı")
+      .replace(/Strüktürleri/g, "Yapıları")
+      .replace(/strüktürleri/g, "yapıları")
+      .replace(/Strüktürü/g, "Yapısı")
+      .replace(/strüktürü/g, "yapısı")
+      .replace(/Strüktürel/g, "Yapısal")
+      .replace(/strüktürel/g, "yapısal")
+      .replace(/Strüktür/g, "Yapı")
+      .replace(/strüktür/g, "yapı")
+    );
+  }
+
   const unitId = uIdx + 1;
   const numLessons = topic.numLessons;
   const unitLessonIds = [];

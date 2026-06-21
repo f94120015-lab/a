@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx -y http-server -p 3000 -o -c-1",
     "build": "mkdir -p www && cp index.html app.js data.js style.css canvas-confetti.min.js www/ && cp -R assets www/",
-    "cap:sync": "npx cap sync"
+    "cap:sync": "npx cap sync",
+    "status": "node check-lessons.js"
   },
   "dependencies": {
     "@capacitor/android": "^6.0.0",

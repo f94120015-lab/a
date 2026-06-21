@@ -51,6 +51,7 @@ let selectedAnswer = null;
 let isAnswerChecked = false;
 let matchState = null;
 let autoAdvanceTimeout = null;
+let homeScreenScrollY = 0;
 
 // Ek mod durumları
 let isPlacementMode = false;
@@ -65,6 +66,197 @@ const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
 // KELİME SÖZLÜĞÜ VE HOVER ÇEVİRİ ALTYAPISI
 // ============================================================
 const wordDictionary = {
+  // Lesson 2 vocabulary
+  "committee": "komite",
+  "completed": "tamamladı / tamamlanmış",
+  "research": "araştırma",
+  "experts": "uzmanlar",
+  "need": "ihtiyaç duymak / gerekmek",
+  "examine": "incelemek",
+  "sectors": "sektörler",
+  "economy": "ekonomi",
+  "policymakers": "politika yapıcılar",
+  "focus": "odaklanmak / odak",
+  "evaluation": "değerlendirme",
+  "benefits": "faydalar",
+  "manager": "müdür / yönetici",
+  "stability": "istikrar",
+  "framework": "çerçeve",
+  "mediator": "arabulucu",
+  "facilitated": "kolaylaştırdı",
+  "resolution": "çözüm",
+  "conflict": "çatışma",
+  "parties": "taraflar",
+  "statistics": "istatistikler",
+  "confirmed": "doğruladı",
+  "significance": "önem",
+  "variation": "değişim / varyasyon",
+  "parameters": "parametreler",
+  "census": "nüfus sayımı",
+  "revealed": "ortaya çıkardı",
+  "minorities": "azınlıklar",
+  "validation": "doğrulama",
+  "hypotheses": "hipotezler",
+  "analysts": "analistler",
+  "lawyer": "avukat",
+  "finalized": "tamamladı",
+  "contract": "sözleşme",
+  "authors": "yazarlar",
+  "detailed": "detaylı / ayrıntılı",
+  "chapter": "bölüm",
+  "satisfied": "memnun",
+  "leave": "ayrılmak / terk etmek",
+  "laboratory": "laboratuvar",
+  "duration": "süre / zaman",
+  "process": "süreç",
+  "upgraded": "yükseltti",
+  "creation": "oluşturulması / yaratılış",
+  "breakthrough": "dönüm noktası / ilerleme",
+  "modification": "modifikasyon / değişiklik",
+  "genes": "genler",
+  "journalists": "gazeteciler",
+  "published": "yayınladı",
+  "report": "rapor",
+  "conclusion": "sonuç / sonuçlanma",
+  "investigation": "soruşturma",
+  "technician": "teknisyen",
+  "responsible": "sorumlu",
+  "maintenance": "bakım",
+  "equipment": "ekipman / malzeme",
+  "proceed": "devam etmek",
+  "consent": "onay / rıza",
+  "participants": "katılımcılar",
+  "intervened": "müdahale etti",
+  "intensity": "şiddet / yoğunluk",
+  "crisis": "kriz",
+  "operates": "yürütülmektedir / çalışır",
+  "strictly": "kesinlikle / sıkı bir şekilde",
+  "authority": "yetki / otorite",
+  "institution": "kurum",
+  "economists": "ekonomistler",
+  "europe": "Avrupa",
+  "criticized": "eleştirdi",
+  "journal": "dergi",
+  "ministry": "bakanlık",
+  "promote": "teşvik etmek / desteklemek",
+  "integration": "entegrasyon / uyum",
+  "schools": "okullar",
+  "underestimated": "hafife aldık",
+  "complexity": "karmaşıklık",
+  "task": "görev",
+  "environmentalists": "çevreciler",
+  "measured": "ölçtü / ölçtüler",
+  "concentration": "konsantrasyon / yoğunluk",
+  "chemical": "kimyasal",
+  "water": "su",
+  "legs": "bacaklar / bacakları",
+  "animal": "hayvan",
+  "muscles": "kaslar / kasları",
+  "leg": "bacak",
+  "importance": "önem / önemi",
+  "results": "sonuçlar / sonuçları",
+  "arrangement": "düzenleme / diziliş",
+  "pictures": "resimler / resimleri",
+  "movement": "hareket / hareketi",
+  "molecules": "moleküller / molekülleri",
+  "extent": "boyut / ölçü / kapsam",
+  "damage": "hasar / hasarı",
+  "volume": "hacim / hacmi",
+  "liquid": "sıvı / sıvısı",
+  "result": "sonuç / sonucu",
+  "experiment": "deney / deneyi",
+  "difficulty": "zorluk / zorluğu",
+  "problem": "problem / sorun / problemi",
+  "photograph": "fotoğraf / fotoğrafı",
+  "student": "öğrenci / öğrencisi",
+  "duration": "süre / süresi",
+  "holiday": "tatil / tatili",
+  "distribution": "dağılım / dağılımı",
+  "forests": "ormanlar / ormanları",
+  "difficulties": "zorluklar / zorlukları",
+  "dimensions": "boyutlar / boyutları",
+  "room": "oda / odası",
+  "division": "bölünme / bölüm / bölünmesi",
+  "work": "iş / işi",
+  "disadvantages": "dezavantajlar / dezavantajları",
+  "situation": "durum / durumu",
+  "employment": "istihdam / istihdamı",
+  "workers": "işçiler / işçileri",
+  "use": "kullanım / kullanımı",
+  "wood": "odun / tahta / odunu",
+  "discovery": "keşif / keşfi",
+  "element": "element / elementi",
+  "gas": "gaz / gazı",
+  "analysis": "analiz / analizi",
+  "data": "veri / verileri",
+  "definition": "tanım / tanımı",
+  "concept": "kavram / kavramı",
+  "structure": "yapı / yapısı",
+  "organization": "organizasyon / organizasyonu",
+  "interpretation": "yorumlama / yorum / yorumlanması",
+  "text": "metin / metni",
+  "function": "işlev / fonksiyon / işlevi",
+  "brain": "beyin / beyni",
+  "income": "gelir / geliri",
+  "assessment": "değerlendirme / değerlendirilmesi",
+  "risk": "risk / riski",
+  "role": "rol / rolü",
+  "government": "hükümet / devlet / hükümeti",
+  "creation": "yaratılış / yaratılışı",
+  "universe": "evren / evreni",
+  "evaluation": "değerlendirme / değerlendirilmesi",
+  "program": "program / programı",
+  "focus": "odak / odağı",
+  "study": "çalışma / çalışması",
+  "impact": "etki / etkisi",
+  "policy": "politika / politikası",
+  "dynamics": "dinamikler / dinamikleri",
+  "market": "piyasa / pazar / piyasası",
+  "stability": "istikrar / istikrarı",
+  "economy": "ekonomi / ekonomisi",
+  "design": "tasarım / tasarımı",
+  "complexity": "karmaşıklık / karmaşıklığı",
+  "task": "görev / görevi",
+  "core": "öz / çekirdek / özü",
+  "process": "süreç / süreci",
+  "consequences": "sonuçlar / sonuçları",
+  "action": "eylem / hareket / eylemi",
+  "strategy": "strateji / stratejisi",
+  "company": "şirket / şirketi",
+  "adaptation": "adaptasyon / uyum / adaptasyonu",
+  "species": "tür / türler / türleri",
+  "framework": "çerçeve / çerçevesi",
+  "theory": "teori / kuram / teorisi",
+  "context": "bağlam / bağlamı",
+  "proportion": "oran / oranı",
+  "population": "nüfus / nüfusu",
+  "category": "kategori",
+  "categories": "kategoriler",
+  "resource": "kaynak",
+  "resources": "kaynaklar",
+  "revaluation": "yeniden değerlendirme",
+  "asset": "varlık",
+  "assets": "varlıklar",
+  "corporation": "şirket / kurum",
+  "workplace": "işyeri",
+  "interaction": "etkileşim",
+  "formula": "formül",
+  "linkage": "bağlantı / ilişki",
+  "innovation": "yenilik",
+  "innovations": "yenilikler",
+  "industry": "endüstri / sanayi",
+  "relation": "ilişki",
+  "consensus": "fikir birliği / uzlaşı",
+  "overlap": "çakışma / örtüşme",
+  "tension": "gerilim / gerginlik",
+  "cooperation": "işbirliği",
+  "colleague": "meslektaş / iş arkadaşı",
+  "colleagues": "meslektaşlar / iş arkadaşları",
+  "department": "departman / bölüm",
+  "immigrant": "göçmen",
+  "immigrants": "göçmenler",
+  "accumulation": "birikim / birikme",
+
   // Common helper/structural words
   "the": "belirteç (belirli bir nesneyi/özneyi işaret eder)",
   "a": "bir",
@@ -159,7 +351,290 @@ const wordDictionary = {
   "among": "arasında (ikiden fazla şeyin)",
   "out": "dışarı, dışarıda",
   "up": "yukarı",
-  "down": "aşağı"
+  "down": "aşağı",
+  "price": "fiyat",
+  "prices": "fiyatlar",
+  "disease": "hastalık",
+  "diseases": "hastalıklar",
+  "mountain": "dağ",
+  "mountains": "dağlar",
+  "agreement": "anlaşma",
+  "agreements": "anlaşmalar",
+  "tissue": "doku",
+  "tissues": "dokular",
+  "vapour": "buhar",
+  "metal": "metal",
+  "metals": "metaller",
+  "reason": "sebep / neden",
+  "reasons": "sebepler / nedenler",
+  "profit": "kâr / kazanç",
+  "profits": "kârlar / kazançlar",
+  "coal": "kömür",
+  "bone": "kemik",
+  "bones": "kemikler",
+  "employer": "işveren",
+  "employers": "işverenler",
+  "goods": "mallar / eşyalar",
+  "each": "her / her biri",
+  "part": "parça / kısım / bölüm",
+  "area": "alan / bölge",
+  "country": "ülke",
+  "countries": "ülkeler",
+  "oil": "petrol / yağ",
+  "little": "az",
+  "gas": "gaz",
+  "another": "başka / diğer / bir diğeri",
+  "idea": "fikir",
+  "ideas": "fikirler",
+  "lot": "çok / büyük miktar",
+  "several": "birkaç / çeşitli",
+  "energy": "enerji",
+  "few": "az / birkaç",
+  "brain": "beyin",
+  "problem": "problem / sorun",
+  "problems": "problemler / sorunlar",
+  "detail": "detay / ayrıntı",
+  "details": "detaylar / ayrıntılar",
+  "decision": "karar",
+  "decisions": "kararlar",
+  "law": "kanun / yasa",
+  "laws": "kanunlar / yasalar",
+  "half": "yarım / yarısı",
+  "substance": "madde",
+  "substances": "maddeler",
+  "experiments": "deneyler",
+  "invention": "icat",
+  "fire": "ateş",
+  "fear": "korku",
+  "hunger": "açlık",
+  "guilt": "suçluluk",
+  "radium": "radyum",
+  "expectancy": "beklenti",
+  "electricity": "elektrik",
+  "labour": "iş / emek / çalışma",
+  "labor": "iş / emek / çalışma",
+  "religion": "din",
+  "produce": "ürün / mahsul",
+  "nation": "ulus / millet",
+  "nations": "uluslar / milletler",
+  "finance": "finans / maliye",
+  "rejection": "ret / reddetme",
+  "hypothesis": "hipotez",
+  "estimation": "tahmin / kestirim",
+  "welfare": "refah",
+  "expression": "ifade / dışa vurum",
+  "speech": "konuşma / söylev",
+  "legislation": "mevzuat / yasa koyma",
+  "philosophy": "felsefe",
+  "equality": "eşitlik",
+  "individual": "birey",
+  "individuals": "bireyler",
+  "component": "bileşen / unsur",
+  "components": "bileşenler / unsurlar",
+  "export": "ihracat / ihraç",
+  "inconsistency": "tutarsızlık",
+  "inconsistencies": "tutarsızlıklar",
+  "economics": "ekonomi (bilim dalı)",
+  "speed": "hız",
+  "light": "ışık",
+  "choice": "seçim / seçme",
+  "materials": "malzemeler / maddeler",
+  "material": "malzeme / madde",
+  "growth": "büyüme / gelişme",
+  "control": "kontrol / denetim",
+  "quality": "kalite",
+  "pattern": "kalıp / kalıbı / model",
+  "behavior": "davranış",
+  "conduct": "davranış / yönetim / yürütme",
+  "standard": "standart",
+  "living": "yaşam / hayat",
+  "method": "yöntem / metot",
+  "measurement": "ölçüm / ölçme",
+  "center": "merkez / orta nokta",
+  "gravity": "yerçekimi / ağırlık",
+  "state": "durum / hal / devlet",
+  "emergency": "acil durum / olağanüstü hal",
+  "england": "İngiltere",
+  "sand": "kum",
+  "neglect": "ihmal / savsaklama / boş verme",
+  "virus": "virüs",
+  "viruses": "virüsler",
+  "friend": "arkadaş",
+  "sun": "güneş",
+  "news": "haber / haberler",
+  "help": "yardım",
+  "star": "yıldız",
+  "pressure": "basınç",
+  "top": "üst / tepe",
+  "protection": "koruma",
+  "cold": "soğuk",
+  "sea": "deniz",
+  "milk": "süt",
+  "cow": "inek",
+  "smoke": "duman",
+  "chimney": "baca",
+  "oxygen": "oksijen",
+  "well": "kuyu",
+  "gift": "hediye",
+  "mother": "anne",
+  "spring": "kaynak",
+  "community": "topluluk",
+  "call": "arama / çağrı",
+  "computer": "bilgisayar",
+  "container": "kap / kutu",
+  "audience": "dinleyiciler / izleyiciler",
+  "stranger": "yabancı",
+  "farm": "çiftlik",
+  "product": "ürün",
+  "products": "ürünler",
+  "meet": "karşılaşmak / buluşmak / tanışmak",
+  "met": "karşılaştı / tanıştı / karşılaştım / tanıştım",
+  "sample": "örnek",
+  "samples": "örnekler",
+  "obtain": "elde etmek / edinmek",
+  "obtained": "elde etti / edinilmiş",
+  "try": "denemek / çalışmak",
+  "tried": "denedi / çalıştı",
+  "lose": "kaybetmek",
+  "lost": "kaybetti / kaybolmuş",
+  "solve": "çözmek",
+  "solved": "çözdü",
+  "watch": "izlemek / saat",
+  "watching": "izleme / izlemek",
+  "film": "film",
+  "suffer": "muzdarip olmak / acı çekmek",
+  "suffering": "muzdarip / acı çeken",
+  "drink": "içmek",
+  "clean": "temiz",
+  "enough": "yeterince / yeterli",
+  "find": "bulmak",
+  "found": "buldu / bulunmuş",
+  "simple": "basit",
+  "way": "yol / yöntem",
+  "measure": "ölçmek / önlem",
+  "road": "yol",
+  "today": "bugün",
+  "prevent": "önlemek / engellemek",
+  "collect": "toplamak / biriktirmek",
+  "collected": "topladı / biriktirilmiş",
+  "wait": "beklemek",
+  "waiting": "bekliyor",
+  "stop": "durmak / durdurmak",
+  "stopped": "durdu / durdurdu",
+  "mine": "maden / benimki / çıkarmak",
+  "mining": "madencilik / kömür çıkarma",
+  "salt": "tuz",
+  "agree": "kabul etmek / katılmak / anlaşmak",
+  "academy": "akademi",
+  "survey": "anket / araştırma",
+  "substitute": "yedek / ikame / alternatif",
+  "injury": "yaralanma / sakatlanma / zarar",
+  "revenue": "gelir / hasılat / kazanç",
+  "variable": "değişken",
+  "variables": "değişkenler",
+  "feedback": "geri bildirim",
+  "respondent": "katılımcı / yanıtlayan",
+  "respondents": "katılımcılar / yanıtlayanlar",
+  "river": "nehir",
+  "took": "aldı",
+  "library": "kütüphane",
+  "two": "iki",
+  "day": "gün",
+  "days": "günler",
+  "ago": "önce",
+  "read": "okumak / okudu",
+  "newspaper": "gazete",
+  "yet": "henüz",
+  "radiation": "radyasyon",
+  "space": "uzay / boşluk",
+  "reading": "okuma / okumak",
+  "page": "sayfa",
+  "history": "tarih",
+  "child": "çocuk",
+  "heat": "ısı",
+  "blood": "kan",
+  "book": "kitap",
+  "books": "kitaplar",
+  "difference": "fark",
+  "differences": "farklar",
+  "glass": "bardak / cam",
+  "during": "boyunca / esnasında",
+  "last": "son / geçen",
+  "year": "yıl",
+  "years": "yıllar",
+  "front": "ön",
+  "explanation": "açıklama",
+  "people": "halk / insanlar",
+  "civilisation": "medeniyet",
+  "head": "kafa / baş",
+  "patient": "hasta",
+  "round": "etrafında / yuvarlak",
+  "bottle": "şişe",
+  "surface": "yüzey",
+  "tank": "tank / depo",
+  "cure": "tedavi / çare",
+  "preparation": "hazırlık",
+  "examination": "sınav / muayene",
+  "english": "İngilizce",
+  "factory": "fabrika",
+  "factories": "fabrikalar",
+  "kind": "tür / çeşit",
+  "america": "Amerika",
+  "ground": "yer / zemin / toprak",
+  "response": "yanıt / cevap",
+  "responses": "yanıtlar / cevaplar",
+  "shift": "değişim / kayma",
+  "decline": "düşüş / azalma",
+  "fluctuation": "dalgalanma",
+  "estimate": "tahmin",
+  "estimates": "tahminler",
+  "ambiguity": "belirsizlik",
+  "clause": "madde / fıkra",
+  "clauses": "maddeler / fıkralar",
+  "rigidity": "katılık / sertlik",
+  "progression": "ilerleme",
+  "phase": "aşama / evre",
+  "phases": "aşamalar / evreler",
+  "distortion": "bozulma / çarpıtma",
+  "image": "görüntü / resim",
+  "images": "görüntüler / resimler",
+  "media": "medya",
+  "summary": "özet",
+  "principle": "ilke / prensip",
+  "principles": "ilkeler",
+  "ethics": "ahlak / etik",
+  "practitioner": "uygulayıcı",
+  "practitioners": "uygulayıcılar",
+  "culture": "kültür",
+  "criteria": "kriterler / ölçütler",
+  "theories": "teoriler",
+  "elements": "unsurlar / ögeler",
+  "office": "ofis",
+  "cutting": "kesme / kesmek",
+  "machine": "makine",
+  "paper": "kağıt",
+  "papers": "kağıtlar / evraklar",
+  "test-tube": "deney tüpü",
+  "answer": "cevap / yanıt",
+  "town": "kasaba",
+  "railway": "demiryolu",
+  "table": "masa",
+  "corner": "köşe",
+  "city": "şehir",
+  "man": "adam",
+  "men": "adamlar",
+  "end": "son / bitiş",
+  "east": "doğu",
+  "far": "uzak",
+  "building": "bina",
+  "buildings": "binalar",
+  "centre": "merkez",
+  "turkey": "Türkiye",
+  "chapters": "bölümler",
+  "statement": "ifade / açıklama",
+  "statements": "ifadeler / açıklamalar",
+  "distance": "mesafe",
+  "point": "nokta"
 };
 
 // Populate dictionary dynamically from unitSentencesMap if it exists
@@ -326,13 +801,43 @@ async function saveUser(username, password) {
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
 }
 
+function updateBodyScrollLock() {
+  const homeScreen = document.getElementById('home-screen');
+  const homeScreenActive = homeScreen && homeScreen.classList.contains('active');
+  const hasPopover = document.querySelector('.lesson-popover') !== null;
+  const hasModal = document.querySelector('.qp-modal-overlay') !== null;
+
+  if (homeScreenActive && (hasPopover || hasModal)) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+}
+
 function showScreen(screenId) {
   if (autoAdvanceTimeout) {
     clearTimeout(autoAdvanceTimeout);
     autoAdvanceTimeout = null;
   }
+
+  // If leaving home-screen, save scroll position
+  const activeScreen = document.querySelector('.app-screen.active');
+  if (activeScreen && activeScreen.id === 'home-screen') {
+    homeScreenScrollY = window.scrollY;
+  }
+
   document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
+
+  // If returning to home-screen, restore scroll position
+  if (screenId === 'home-screen') {
+    requestAnimationFrame(() => {
+      window.scrollTo(0, homeScreenScrollY);
+    });
+  }
+
+  // Update body scroll lock state based on active screen & overlays
+  updateBodyScrollLock();
 }
 
 function showToast(message, type = 'info') {
@@ -500,11 +1005,15 @@ function openQuestionPreview(title, questions) {
   `;
 
   document.body.appendChild(overlay);
+  updateBodyScrollLock();
 
   const closeBtn = overlay.querySelector('#qp-close-btn');
   const closeModal = () => {
     overlay.classList.add('fade-out');
-    setTimeout(() => overlay.remove(), 200);
+    setTimeout(() => {
+      overlay.remove();
+      updateBodyScrollLock();
+    }, 200);
   };
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => {
@@ -1194,7 +1703,15 @@ function renderLessonTree() {
     </svg>
   `;
 
-  units.forEach(unit => {
+  // Move Unit 8 to the beginning of the rendered list so it displays at the very top
+  const renderedUnits = [...units];
+  const unit8Index = renderedUnits.findIndex(u => u.id === 8);
+  if (unit8Index !== -1) {
+    const [unit8] = renderedUnits.splice(unit8Index, 1);
+    renderedUnits.unshift(unit8);
+  }
+
+  renderedUnits.forEach(unit => {
     // 1. Calculate progress in this unit
     const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
     const totalInUnit = unit.lessons.length;
@@ -1357,6 +1874,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   if (existingPopover) {
     const isSame = existingPopover.dataset.lessonId == lessonId;
     existingPopover.remove();
+    updateBodyScrollLock();
     if (isSame) return;
   }
 
@@ -1543,6 +2061,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const pathContainer = button.closest('.unit-path-container');
   if (pathContainer) {
     pathContainer.appendChild(popover);
+    updateBodyScrollLock();
     
     // Auto-center or align to top of screen so everything is visible
     setTimeout(() => {
@@ -1561,6 +2080,7 @@ document.addEventListener('click', () => {
   const popover = document.querySelector('.lesson-popover');
   if (popover) {
     popover.remove();
+    updateBodyScrollLock();
   }
 });
 
