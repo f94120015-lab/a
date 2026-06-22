@@ -1,7 +1,6 @@
 import Foundation
 import Vision
 import ImageIO
-import AppKit
 
 guard CommandLine.arguments.count > 1 else {
     print("Usage: swift ocr.swift <image-path>")
@@ -20,7 +19,6 @@ guard let imageSource = CGImageSourceCreateWithURL(url as CFURL, nil),
 let width = cgImage.width
 let height = cgImage.height
 
-// Create a Core Graphics context with a white background to flatten transparency
 let colorSpace = CGColorSpaceCreateDeviceRGB()
 guard let context = CGContext(
     data: nil,
@@ -47,11 +45,10 @@ guard let flatImage = context.makeImage() else {
 let requestHandler = VNImageRequestHandler(cgImage: flatImage, options: [:])
 let request = VNRecognizeTextRequest { (request, error) in
     if let error = error {
-        print("Error in request: \(error)")
+        print("Error: \(error)")
         return
     }
     guard let observations = request.results as? [VNRecognizedTextObservation] else {
-        print("No observations result")
         return
     }
     for observation in observations {
@@ -60,12 +57,7 @@ let request = VNRecognizeTextRequest { (request, error) in
         }
     }
 }
-
 request.recognitionLevel = .accurate
 request.usesLanguageCorrection = true
 
-do {
-    try requestHandler.perform([request])
-} catch {
-    print("Failed to perform request: \(error)")
-}
+try? requestHandler.perform([request])

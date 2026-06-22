@@ -1,0 +1,2604 @@
+Soru tipleri
+* matching
+* multiple-choice
+* fill-blank-dropdown
+* fill-blank-text
+* word-bank
+* translation-text
+* multiple-fill-blank
+* fill-blank
+eşleştirme
+çoktan seçmeli
+boşluk doldurma (açılır menü)
+boşluk doldurma (metin)
+kelime bankası / kelime havuzu
+çeviri metni
+çoklu boşluk doldurma
+boşluk doldurma
+çeviri metni
+kelime bankası / kelime havuzu
+eşleştirme
+kelime sıralama
+Aşağıdaki cümle örnekleri verilmiştir.
+Bu örnekleri 10’lu soru paketleri halinde alıştırmalar olarak dağıtman gerekli.
+Her bir alıştırmada 10’ar soru olmalıdır.
+Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli.
+Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için çeviri metni ve kelime sıralama soru tiplerini kullan.
+Her alıştırmada İngilizce tek kelimeleri de eşleştirme yoluyla anlamını en az iki soru da sor. Ayrıca her kelimenin üzerine gelindiğinde Türkçe karşılığı popup şeklinde görünsün.
+Aşağıda yer alan tüm örneklerin tamamı kullanılmalı.
+Her soru tipinin altında yer alan Tercüme Kılavuzu açıklamasını, yerleştirildiği dersin açıklamasına ekle.
+1. Tip’de ürettiğin alıştırmaları Bölüm 9, 23. Ders altına yerleştir.
+2. Tip’de ürettiğin alıştırmaları Bölüm 9, 24. Ders altına yerleştir.
+3. Tip’de ürettiğin alıştırmaları Bölüm 9, 25. Ders altına yerleştir.
+4. Tip’de ürettiğin alıştırmaları Bölüm 9, 26. Ders altına yerleştir.
+5. Tip’de ürettiğin alıştırmaları Bölüm 9, 27. Ders altına yerleştir.
+Tip: Fiil + Özne
+Tercüme Kılavuzu: Bu yapı bir durum (olmak) sorgusudur; cümlede gitmek, yapmak gibi bir hareket fiili yoktur. İngilizcede Am, is, are, was, were kelimeleri başa gelerek cümlenin bir "durum, nitelik veya konum" belirttiğini fısıldar. Türkçeye çevirirken cümlenin sonuna mutlaka "-mı, -mi, -mu, -mü" soru ekini getirmelisiniz.
+Is the data valid?
+Are the documents ready?
+Was the concept clear?
+Were the methods standards?
+Is the author present?
+Are the factors internal?
+Was the response negative?
+Were the criteria strict?
+Is the sector growing?
+Are you the analyst?
+Is the legal framework sufficient for this case?
+Are the economic indicators stable this month?
+Was the initial assessment fully accurate?
+Were the specific sources verified by experts?
+Is the financial structure completely transparent?
+Are the individual variables controlled well?
+Was the primary benefit clearly identified?
+Were the environmental factors considered?
+Is the final outcome satisfactory for everyone?
+Are these academic journals peer-reviewed?
+Is the methodological approach relevant to the current study?
+Are the statistical computations available for public review?
+Was the constitutional amendment approved by the parliament?
+Were the administrative procedures followed during the crisis?
+Is the theoretical assumption supported by empirical evidence?
+Are the global distribution networks functional right now?
+Was the historical document genuine according to analysts?
+Were the experimental results consistent across all trials?
+Is the institutional framework adaptable to new legislation?
+Are the demographic categories exclusive in this research?
+Tip: do, does, did fiili + özne + mastar
+Tercüme Kılavuzu: Bu yapı bir eylem (hareket/iş) sorgusudur; cümlede analiz etmek, yayımlamak gibi gerçek bir aksiyon vardır. Eylem fiilleri hantal olduğu için soru yaparken başa kendileri gelemez; geçmiş zaman için did, geniş zaman için do/does yardımcı fiillerini öne gönderirler. Türkçeye tercüme edilirken eylem fiilinin sonuna yine "-mı, -mi, -mu, -mü" soru ekleri eklenir.
+Did you analyze it?
+Does it function well?
+Do they export goods?
+Did he publish the book?
+Does she assume the risk?
+Do we require a permit?
+Did it indicate a change?
+Does this derive from code?
+Do they source materials locally?
+Did you estimate the cost?
+Did the analyst evaluate the raw data?
+Does the government modify the tax policy?
+Do researchers establish a clear framework?
+Did the committee exclude the final report?
+Does this factor influence the public opinion?
+Do institutions structure their academic curriculum?
+Did the team integrate the new software?
+Does the theory define the phenomenon correctly?
+Do companies achieve their annual production goals?
+Did the manager adjust the financial budget?
+Did the administration abolish the controversial labor legislation?
+Does the regional economy affect the minority distribution?
+Do separate departments allocate their resources independently?
+Did the university adopt the progressive assessment model?
+Does this specific variable alter the final analysis?
+Do modern societies sustain their unique cultural identity?
+Did the supreme court challenge the legal definition today?
+Does the ancient text imply rigid social structures?
+Do laboratory technicians conduct the primary safety experiment?
+Did the participants interpret the survey instructions accurately?
+Tip: Soru kelimesi + fiil + özne
+Tercüme Kılavuzu: Bu yapı bir durum (olmak) bildiren bilgi sorusudur (Cevap Evet/Hayır olamaz). Başta Why, Where, What gibi bir soru kelimesi yer alır ve hemen ardından bir eylem fiili değil, is, are, was, were köprü fiili gelir. Türkçeye çevirirken "Neden, Nerede, Nedir" gibi soru kelimeleri doğrudan cümlenin yüklemine veya öznesine bağlanarak cümlenin içine yerleşir.
+Why is the data wrong?
+Where are the documents?
+What was the concept?
+How is the method?
+Who was the author?
+Why were the factors dynamic?
+Where is the sector?
+What is the percentage?
+How was the response?
+Who is the analyst?
+Why are the legal criteria so rigid?
+What will be the primary benefit?
+How is the financial structure today?
+Where were the specific sources found?
+Why is the initial assessment incomplete?
+What can be the potential outcome?
+Who is the principal investigator here?
+How were the variables so unpredictable?
+What is the major function of this?
+Where are the individual responses?
+Why is the theoretical framework of this study unstable?
+What was the ultimate constitutional authority of the state?
+How are the economic indicators relevant to this region?
+Where is the administrative policy document located now?
+Why were the environmental factors excluded from the report?
+What will be the long-term significance of this discovery?
+How is the statistical analysis useful for predictions?
+Who was the original creator of this specific methodology?
+Why is the global distribution of resources so unequal?
+What are the primary components of this chemical compound?
+Tip: Soru kelimesi + do, does, did + özne + mastar
+Tercüme Kılavuzu: Bu yapı bir eylem (hareket/iş) bildiren detaylı bilgi sorusudur. Cümle bir soru kelimesiyle (How, Why, When) başlar, ancak hareket bildiren asıl fiilden hemen önce araya do, does, did yardımcı fiili girer. Türkçeye tercüme ederken soru kelimesini ("Nasıl, Ne zaman, Neden") asıl eylemin hemen soluna yerleştirerek akıcı bir hareket cümlesi kurmalısınız.
+Why did they analyze it?
+How does it function?
+What did you estimate?
+Where do they source it?
+When did he publish it?
+Why does she assume that?
+How did you derive this?
+What does this indicate?
+Where did they establish it?
+Why do we require this?
+How did the analyst evaluate the data?
+Does the government modify the policy?
+What did the researchers achieve last year?
+Where do institutions structure the framework?
+When did the committee publish the summary?
+How does this factor influence the outcome?
+Why did the team exclude the respondents?
+What does the theory define exactly?
+Where did they integrate the technology?
+Why do companies export their production?
+Why did the administration abolish the old regulatory framework?
+How does the global economy affect domestic resource distribution?
+What did the scientific community conclude regarding the data?
+Where do separate departments allocate their annual financial credit?
+When did the university adopt the new academic assessment method?
+How does this specific variable alter the statistical analysis?
+Why did the main opposition challenge the legal definition?
+What does the historical text imply about social structures?
+Where did the engineers conduct the primary energy experiment?
+How do modern societies sustain their cultural identity?
+Tip: Edat + soru kelimesi + fiil + özne
+Tercüme Kılavuzu: Bu yapı tamamen resmi ve akademik dilde durum bildiren ileri düzey bir soru kalıbıdır. Sorulan durumun bağlı olduğu edat (At, In, With, From) en başta yer alır. Türkçeye tercüme edilirken en başta duran o sinsi edatlar, soru kelimesinin sonuna eklenerek "Hangi düzeyde, Kiminle, Ne ölçüde" gibi kalıplara dönüşür ve cümlenin en başına yerleşerek akademik bir ton yaratır.
+At which level is it?
+In which sector are they?
+To what extent was it?
+For which purpose is this?
+By whose authority was it?
+Under which category are they?
+From which source is it?
+In what period was it?
+With which method is it?
+On whose data was it?
+In which academic journal was it published?
+Under what legal criteria were they selected?
+For which specific purpose is this required?
+At what financial percentage was it fixed?
+From which primary source is this derived?
+To what degree are the variables dynamic?
+With which analytical framework is it compatible?
+By what assessment method was it evaluated?
+In which economic sector is the crisis visible?
+On what theoretical assumption is this based?
+Under which constitutional clause was the law modified?
+By what statistical methodology were the figures calculated?
+To what geographic extent is the population distributed?
+For whose ultimate benefit was the policy established?
+From which institutional perspective was the text interpreted?
+In which experimental environment were the plants grown?
+With what administrative authority is the director acting?
+At which developmental stage are the data components?
+On which philosophical concept is the framework structured?
+Through what regulatory process was the contract validated?
+Aşağıdaki cümle örnekleri verilmiştir.
+Bu örnekleri 15’li soru paketleri halinde alıştırmalar olarak dağıtman gerekli.
+Her bir alıştırmada 15’er soru olmalıdır.
+Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli.
+Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için çeviri metni ve kelime sıralama soru tiplerini kullan.
+her alıştırmada İngilizce tek kelimeleri de eşleştirme yoluyla anlamını en az iki soru da sor. Ayrıca her kelimenin üzerine gelindiğinde Türkçe karşılığı popup şeklinde görünsün.
+Aşağıda yer alan tüm örneklerin tamamı kullanılmalı.
+Yapı 1’de ürettiğin alıştırmaları Bölüm 6, 16. Ders altına yerleştir.
+Yapı 2’de ürettiğin alıştırmaları Bölüm 6, 17. Ders altına yerleştir.
+Yapı 3’de ürettiğin alıştırmaları Bölüm 6, 18. Ders altına yerleştir.
+Yapı 4’de ürettiğin alıştırmaları Bölüm 6, 19. Ders altına yerleştir.
+Yapı 1: [İsim] + is/are + [İsim] (Noun + linking verb + Noun)
+Bu yapı, bir akademik kavramı veya özneyi doğrudan başka bir isimle tanımlar.
+The analysis is a requirement.
+The policy is a guarantee.
+The experiment is a test.
+The data are an indicator.
+The framework is a structure.
+The theory is a concept.
+The contract is a legal document.
+The method is a procedure.
+The assessment is an evaluation.
+The formula is a definition.
+The sector is an area.
+The respondent is an individual.
+The outcome is a benefit.
+The legislation is a principle.
+The summary is a text.
+The source is a journal.
+The category is an element.
+The institution is an authority.
+The revenue is an income.
+The component is a factor.
+The hypothesis is a theory.
+The investigation is a process.
+The criteria are a requirement.
+The strategy is a method.
+The conflict is an issue.
+The percentage is a proportion.
+The research is a project.
+The resolution is a conclusion.
+The variables are factors.
+The structures are systems.
+The recession is a crisis.
+The deviation is an error.
+The entities are organizations.
+The devices are instruments.
+The export is a source.
+The substitute is an alternative.
+The sequence is a process.
+The parameters are criteria.
+The modification is an alteration.
+The insights are an analysis.
+The regulations are laws.
+The labor is a factor.
+The volume is a measure.
+The version is a revision.
+The coordination is a requirement.
+Yapı 2: [İsim] + is/are + [Sıfat] (Noun + linking verb + Adjective)
+Bu yapı, akademik bir ismi doğrudan bir sıfatla niteler.
+The data are accurate.
+The expenses are high.
+The experiments are important.
+The substances are pure.
+The approach is analytical.
+The framework is structural.
+The theory is conceptual.
+The policy is beneficial.
+The response is consistent.
+The definition is specific.
+The method is methodical.
+The economy is stable.
+The evidence is evident.
+The resource is available.
+The analysis is complex.
+The process is creative.
+The criteria are rigid.
+The interpretation is subjective.
+The investigation is intensive.
+The contract is valid.
+The variables are dynamic.
+The results are significant.
+The sectors are diverse.
+The changes are periodic.
+The technology is advanced.
+The structures are unstable.
+The authority is authoritative.
+The concept is abstract.
+The factors are crucial.
+The hypotheses are testable.
+The strategies are strategic.
+The documents are published.
+The consequences are negative.
+The text is contextual.
+The welfare is sustainable.
+The insights are valuable.
+The functions are procedural.
+The methods are alternative.
+The identities are distinct.
+The components are integral.
+The parameters are variable.
+The errors are statistical.
+The categories are specific.
+The revenue is insufficient.
+The coordination is essential.
+Yapı 3: [İsim] + is/are + [Sıfat] + [İsim] (Noun + linking verb + Adjective + Noun)
+Bu yapı, özneyi nitelemek için sıfat tamlaması kullanır.
+The statement is an interesting confession.
+The paper is a reliable guarantee.
+The experiment is a successful test.
+The chapter is a short summary.
+The analysis is a detailed evaluation.
+The framework is a conceptual structure.
+The policy is a beneficial strategy.
+The data are an accurate indicator.
+The theory is a logical concept.
+The method is an analytical procedure.
+The contract is a legally binding agreement.
+The response is a consistent pattern.
+The definition is a specific requirement.
+The economy is a highly stable system.
+The evidence is a crucial factor.
+The resource is an available alternative.
+The process is a complex investigation.
+The criteria are a rigid parameter.
+The interpretation is a subjective analysis.
+The sector is a diverse area.
+The results are a significant outcome.
+The investigation is a thorough assessment.
+The variables are a dynamic element.
+The technology is an advanced tool.
+The authority is an institutional body.
+The conflict is an ongoing issue.
+The percentage is a high proportion.
+The research is an academic project.
+The resolution is a peaceful conclusion.
+The hypothesis is a testable theory.
+The document is a published text.
+The consequences are a negative impact.
+The welfare is a sustainable program.
+The insights are a valuable contribution.
+The coordination is an effective mechanism.
+The source is a primary journal.
+The category is a distinct classification.
+The revenue is a substantial income.
+The component is an integral part.
+The recession is a financial crisis.
+The deviation is a statistical error.
+The substitute is an appropriate alternative.
+The sequence is a structured process.
+The modification is a minor alteration.
+The labor is a costly factor.
+Yapı 4: [İsim] + is/are + [Edat Öbeği] (Noun + linking verb + Prepositional Phrase)
+Bu yapı, öznenin konumunu, kaynağını veya bulunduğu bağlamı gösterir.
+The factories are outside the town.
+The substances are in the liquid.
+The liquids are in the test-tubes.
+The reports are from the employers.
+The data are in the database.
+The analysis is in the journal.
+The framework is under review.
+The policy is for the welfare.
+The theory is in the textbook.
+The contract is on the table.
+The method is in the appendix.
+The assessment is for the students.
+The formula is on the board.
+The sector is in decline.
+The respondents are from the academy.
+The outcome is under investigation.
+The legislation is in the constitution.
+The summary is at the end.
+The source is from the internet.
+The category is under discussion.
+The institution is in the region.
+The revenue is from the exports.
+The component is in the formula.
+The hypothesis is under evaluation.
+The criteria are for the selection.
+The strategy is for the expansion.
+The conflict is between the parties.
+The proportion is above the average.
+The research is with the experts.
+The resolution is within reach.
+The variables are in the model.
+The structures are in the area.
+The recession is in the economy.
+The deviation is from the norm.
+The entities are under control.
+The devices are in the laboratory.
+The substitute is in the market.
+The sequence is in the document.
+The parameters are within the range.
+The modification is for the stability.
+The insights are from the analysts.
+The regulations are for the sector.
+The labor is from the community.
+The volume is in the container.
+The coordination is by the committee.
+Aşağıdaki Past Participle Sıfatı yapısında, “…ed + isim” yapısında örnekler var. Bu örnekleri 15’li soru paketleri halinde alıştırmalar olarak dağıt. Her bir alıştırmada 15’er soru olmalıdır. Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli. Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için ceviri metni ve kelime sıralama soru tiplerini kullan. Ayrıca her alıştırmada ingilizce tek kelimeleri de eşleştirme yoluyla anlamını en az iki soru da sor. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+Aşağıda yer alan tüm örneklerin tamamı kullanılsın mutlaka.
+Ürettiğin alıştırmaları da Bölüm 5, 14. Ders altına yerleştir. alıştırmaların her birinde mutlaka 15 soru olsun.
+analyzed data
+uninhabited regions
+reduced volume
+exposed land
+required material
+modified criteria
+identified factors
+estimated revenue
+structured approaches
+established policies
+derived conclusions
+defined concepts
+reallocated resources
+restricted areas
+integrated technology
+selected individuals
+evaluated methods
+sustained growth
+published documents
+interpreted texts
+The committee reviewed the analyzed data.
+Researchers explored the uninhabited regions.
+The laboratory recorded a reduced volume of the liquid.
+The heavy rain affected the exposed land.
+Students must submit the required material before Friday.
+The scientists followed the modified criteria for the test.
+We need to focus on the identified factors.
+The accountant calculated the estimated revenue for this year.
+They prefer structured approaches to solve the problem.
+The institution relies on established policies.
+The final report contains derived conclusions.
+The textbook explains the defined concepts clearly.
+The manager distributed the reallocated resources.
+Security guards protect the restricted areas.
+The school supports integrated technology in classrooms.
+The interviewer spoke with selected individuals.
+The journal published the evaluated methods.
+The government wants to maintain sustained growth.
+Public libraries store published documents.
+Students provided an analysis of the interpreted texts.
+The analyzed data confirmed the primary hypothesis of the study.
+Modified criteria allowed more participants to join the project.
+The estimated revenue looks promising for the next quarter.
+Established policies protect the rights of the individuals.
+The required material was delivered to the laboratory yesterday.
+Sustained growth remains the main goal of the new economic plan.
+The defined concepts help students understand the difficult topic.
+Restricted areas require special permission from the authority.
+The published documents attracted a lot of public attention.
+Identified factors explain the structural variation in the system.
+The analyzed data altered the established policies.
+Modified criteria improved the estimated revenue.
+Identified factors influenced the required material.
+The defined concepts clarified the interpreted texts.
+Sustained growth justified the reallocated resources.
+Established policies protect the restricted areas.
+The published documents listed the evaluated methods.
+Selected individuals reviewed the analyzed data.
+Structured approaches simplified the required material.
+The integrated technology supported sustained growth.
+Aşağıdaki Past Participle Sıfatı yapısında, “…ed + isim” yapısında örnekler var. Bu örnekleri 15’li soru paketleri halinde alıştırmalar olarak dağıt. Her bir alıştırmada 15’er soru olmalıdır. Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli. Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için ceviri metni ve kelime sıralama soru tiplerini kullan. Ayrıca her alıştırmada ingilizce tek kelimeleri de eşleştirme yoluyla anlamını en az iki soru da sor. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+Aşağıda yer alan tüm örneklerin tamamı kullanılsın mutlaka.
+Ürettiğin alıştırmaları da Bölüm 5, 15. Ders altına yerleştir. Alıştırmaların her birinde mutlaka 15 soru olsun.
+a highly analyzed data
+a densely populated area
+an over-estimated revenue
+an under-estimated cost
+a well-structured approach
+a politically motivated policy
+an inappropriately defined concept
+a socially integrated technology
+a theoretically derived conclusion
+an under-resourced sector
+a legally binding contract
+a carefully selected individual
+a rigorously evaluated method
+a firmly established principle
+a genetically modified organism (ya da component)
+a highly responsive authority
+a contextually interpreted text
+a structurally unstable framework
+an empirically validated hypothesis
+a well-coordinated team
+The professor published a highly analyzed data set.
+Many people live in a densely populated area.
+The company has an over-estimated revenue plan.
+We need to avoid an under-estimated cost.
+Teachers prefer a well-structured approach.
+The government announced a politically motivated policy.
+This textbook contains an inappropriately defined concept.
+They want a socially integrated technology system.
+The scientists presented a theoretically derived conclusion.
+The ministry supports an under-resourced sector.
+The manager signed a legally binding contract.
+The clinic interviewed a carefully selected individual.
+The journal described a rigorously evaluated method.
+The institution follows a firmly established principle.
+The laboratory creates a genetically modified component.
+The citizens expect a highly responsive authority.
+Students read a contextually interpreted text.
+The engineers fixed a structurally unstable framework.
+The team verified an empirically validated hypothesis.
+The project requires a well-coordinated team.
+A highly analyzed data sheet helps the research process.
+We must protect every worker in an under-resourced sector.
+They changed a politically motivated policy last week.
+Please follow a well-structured approach during the test.
+The company values a well-coordinated team above all.
+Aşağıdaki Present Participle Sıfatı yapısında, “…ing + isim” yapısında örnekler var. Bu örnekleri 15’li soru paketleri halinde alıştırmalar olarak dağıt. Her bir alıştırmada 15’er soru olmalıdır. Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli. Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için ceviri metni ve kelime sıralama soru tiplerini kullan. Ayrıca her alıştırmada ingilizce tek kelimeleri de eşleştirme yoluyla anlamını en az iki soru da sor. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+Birinci Kısım’dan Ürettiğin alıştırmaları da Bölüm 4, 12. Ders altına yerleştir.  Ders altında En az 8 alıştırma olmalı, daha fazla da olabilir ve alıştırmaların her birinde mutlaka 15 soru olsun.
+İkinci Kısım’dan Ürettiğin alıştırmaları da Bölüm 4, 13. Ders altına yerleştir. En az 4 alıştırma da burada olmalı. alıştırmaların her birinde mutlaka 15 soru olsun
+Birinci Kısım
+decreasing exports
+emerging economies
+expanding networks
+declining revenues
+increasing costs
+growing inconsistencies
+shifting policies
+evolving theories
+fluctuating estimates
+varying parameters
+surviving entities
+dominating factors
+corresponding responses
+underlying structures
+contradicting evidence
+alternating methods
+continuing movement
+interacting variables
+conflicting insights
+devoting sectors
+occurring variations
+indicative trends
+reoccurring crises
+developing muscles
+overlapping categories
+diminishing resources
+facilitating factors
+retaining mechanisms
+trending topics
+sustaining frameworks
+We must look at decreasing exports.
+The professor studies emerging economies.
+They are working on expanding networks.
+The company has declining revenues.
+We are worried about increasing costs.
+The manager found growing inconsistencies.
+People adapt to shifting policies.
+Students learn about evolving theories.
+Do not trust fluctuating estimates.
+The test has varying parameters.
+They are tracking surviving entities.
+We identified the dominating factors.
+They gave corresponding responses.
+He explained the underlying structures.
+The judge saw contradicting evidence.
+The scientists used alternating methods.
+We observed the continuing movement.
+The formula contains interacting variables.
+The team has conflicting insights.
+Money goes to devoting sectors.
+They recorded the occurring variations.
+The chart shows indicative trends.
+The country fears reoccurring crises.
+Protein is good for developing muscles.
+Please delete the overlapping categories.
+The island has diminishing resources.
+We listed the facilitating factors.
+The body uses retaining mechanisms.
+They talk about trending topics.
+We need sustaining frameworks.
+Decreasing exports and declining revenues are attached to the core problems of the region.
+Emerging economies and expanding networks are not in good working condition due to lack of investment.
+Increasing costs and growing inconsistencies are attached to the financial failure of the project.
+Shifting policies and evolving theories are not in good working condition without proper institutional support.
+Fluctuating estimates and varying parameters are attached to the high margin of error in the formula.
+Surviving entities and dominating factors are not in good working condition during severe economic crises.
+Corresponding responses and underlying structures are attached to the social framework of the community.
+Contradicting evidence and conflicting insights are not in good working condition for establishing legal validation.
+Alternating methods and interacting variables are attached to the final stages of data processing.
+Continuing movement and occurring variations are not in good working condition under these unstable laboratory environments.
+Indicative trends and reoccurring crises are attached to the structural weaknesses of the domestic market.
+Developing muscles and retaining mechanisms are not in good working condition without regular protein intake.
+Overlapping categories and diminishing resources are attached to the logistical failures of the task force.
+Facilitating factors and sustaining frameworks are not in good working condition in under-resourced sectors.
+Trending topics and shifting policies are attached to the cultural dynamics of modern media.
+Decreasing exports and increasing costs are not in good working condition for maintaining long-term stability.
+Emerging economies and diminishing resources are attached to the geopolitical risks of the decade.
+Expanding networks and interacting variables are not in good working condition without a secure computer infrastructure.
+Declining revenues and fluctuating estimates are attached to the pessimistic analysis of the economists.
+Growing inconsistencies and contradicting evidence are not in good working condition for a successful scientific evaluation.
+Evolving theories and conflicting insights are attached to the ongoing academic debate within the institute.
+Varying parameters and occurring variations are not in good working condition during the validation process.
+Surviving entities and reoccurring crises are attached to the history of the private sector.
+Dominating factors and indicative trends are not in good working condition without comprehensive statistical data.
+Corresponding responses and facilitating factors are attached to the high satisfaction rates of the respondents.
+Underlying structures and sustaining frameworks are not in good working condition under the current government administration.
+Alternating methods and overlapping categories are attached to the complexity of the research design.
+Continuing movement and developing muscles are not in good working condition without proper physical therapy.
+Devoting sectors and retaining mechanisms are attached to the strategic welfare plan of the nation.
+Trending topics and conflicting insights are not in good working condition for creating an objective assessment.
+İkinci Kısım
+tax-decreasing exports
+resource-emerging economies
+data-expanding networks
+market-declining revenues
+labor-increasing costs
+system-growing inconsistencies
+government-shifting policies
+science-evolving theories
+price-fluctuating estimates
+time-varying parameters
+crisis-surviving entities
+trend-dominating factors
+user-corresponding responses
+theory-underlying structures
+fact-contradicting evidence
+phase-alternating methods
+wave-continuing movement
+model-interacting variables
+expert-conflicting insights
+fund-devoting sectors
+nature-occurring variations
+status-indicative trends
+economy-reoccurring crises
+weight-developing muscles
+theme-overlapping categories
+energy-diminishing resources
+process-facilitating factors
+water-retaining mechanisms
+media-trending topics
+research-sustaining frameworks
+The company prefers tax-decreasing exports.
+We must support resource-emerging economies.
+The engineers designed data-expanding networks.
+They want to avoid market-declining revenues.
+New projects create labor-increasing costs.
+The audit revealed system-growing inconsistencies.
+Citizens react to government-shifting policies.
+The professor tests science-evolving theories.
+The report contains price-fluctuating estimates.
+The algorithm calculates time-varying parameters.
+The government helps crisis-surviving entities.
+We need to identify trend-dominating factors.
+The system records user-corresponding responses.
+Students analyze theory-underlying structures.
+The judge rejected fact-contradicting evidence.
+The laboratory uses phase-alternating methods.
+The sensor measures wave-continuing movement.
+The software runs model-interacting variables.
+The committee discussed expert-conflicting insights.
+The bank supports fund-devoting sectors.
+The biologist tracks nature-occurring variations.
+The chart displays status-indicative trends.
+Central banks prevent economy-reoccurring crises.
+Proper nutrition aids weight-developing muscles.
+The database organizes theme-overlapping categories.
+The community protects energy-diminishing resources.
+The manager listed process-facilitating factors.
+Plants have water-retaining mechanisms.
+The marketing team studies media-trending topics.
+The university builds research-sustaining frameworks.
+Yapı 1: Sıfat + İsim (Adjective + Noun)
+a significant factor
+a theoretical approach
+an analytical method
+a constitutional issue
+a financial benefit
+an environmental policy
+a consistent response
+a specific definition
+a methodological error
+an economic sector
+a structural modification
+a periodic assessment
+an individual identity
+a procedural requirement
+a conceptual framework
+a responsive authority
+a contextual analysis
+a distributive function
+a similar occurrence
+an evident bias
+a major source
+a creative process
+Yapı 2: İsim + İsim (Noun + Noun)
+a data analysis
+a government policy
+a research method
+a market economy
+a contract specification
+a labor market
+an income distribution
+a theory formulation
+a resource allocation
+a system integration
+a business sector
+a research analyst
+an industry structure
+a status symbol
+a policy evaluation
+a computer network
+a team coordination
+a data indicator
+a project framework
+a research topic
+a gene modification
+a conflict resolution
+a test criterion
+Yapı 1: Sıfat + İsim İçeren Cümleler
+Motivation is a significant factor in learning a second language.
+The professor used a theoretical approach to explain the social phenomenon.
+The laboratory developed an analytical method to detect the substance.
+The supreme court reviewed a constitutional issue regarding freedom of speech.
+The local community received a financial benefit from the new investment.
+The government announced an environmental policy to reduce carbon emissions.
+The participant provided a consistent response throughout the entire interview.
+The textbook gives a specific definition for each technical term.
+The statistics revealed a methodological error in the initial sampling.
+Agriculture remains an economic sector of vital importance to the country.
+The engineers proposed a structural modification to stabilize the old bridge.
+The clinic recommends a periodic assessment of the patient's health status.
+Every human being develops an individual identity over time.
+The registration process has a procedural requirement that cannot be ignored.
+The researcher established a conceptual framework before collecting data.
+The citizens demanded a responsive authority to handle the crisis swiftly.
+The academic journal published a contextual analysis of the historical text.
+Taxation often serves a distributive function within modern economies.
+The police reported a similar occurrence in the neighboring district yesterday.
+The external investigators found an evident bias in the selection process.
+Fossil fuels are still a major source of energy for many nations.
+Writing a dissertation is a creative process that requires deep focus.
+Yapı 2: İsim + İsim İçeren Cümleler
+The young interns completed a data analysis under supervision.
+The cabinet finalized a government policy to fight rising inflation.
+The graduate students learned a research method in their first semester.
+Many countries transitioned to a market economy in the late twentieth century.
+The client signed a contract specification before the project started.
+Technological changes heavily influence a labor market in any region.
+The economist studied an income distribution model across the continents.
+The scientists worked on a theory formulation for quantum computing.
+The board optimized a resource allocation strategy for the departments.
+The IT company offers a system integration service for large enterprises.
+Tourism has become a business sector that generates high revenues.
+The financial firm hired a research analyst to evaluate the markets.
+The corporate monopoly changed an industry structure completely.
+Owning an expensive sports car is often considered a status symbol.
+The think tank published a policy evaluation report this morning.
+The technician configured a computer network for the new office building.
+Complex rescue operations require a team coordination of high quality.
+Unemployment rate is a data indicator used by major banks.
+The research proposal outlines a project framework for the timeline.
+The seminar focused on a research topic related to organic chemistry.
+Bio-engineers carried out a gene modification to increase crop yields.
+The international mediators achieved a conflict resolution within a week.
+The laboratory established a test criterion for the new medical device.
+Bazen bir isim tamlamasından önce bir sıfat ya da başka bir isim gelebilir. O takdirde başta gelen isim ile sıfat, her ikisi birden, sıfat gibi iş görürler.
+the first data analysis
+annual income distribution
+global market economy
+current government policy
+initial theory formulation
+strategic resource allocation
+complex system integration
+private business sector
+senior research analyst
+domestic labor market
+standard test criterion
+digital computer network
+effective team coordination
+key data indicator
+comprehensive project framework
+specific research topic
+advanced gene modification
+peaceful conflict resolution
+legal contract specification
+academic word list
+the second research phase
+structural stability assessment
+external audit procedure
+historical context analysis
+national welfare program
+institutional framework design
+financial risk evaluation
+experimental data collection
+public sector revenue
+theoretical concept definition
+methodological error detection
+corporate investment strategy
+environmental impact assessment
+individual identity formation
+procedural requirement checklist
+consistent response pattern
+statistical variance estimation
+social minority proportion
+primary source interpretation
+creative design process
+technical specification document
+regional distribution network
+academic journal publication
+ethical principle violation
+unpredicted market fluctuation
+The professor supervised the first data analysis.
+New regulations affected the annual income distribution.
+Inflation can damage a global market economy.
+The cabinet changed the current government policy.
+The scientist published an initial theory formulation.
+The board authorized a strategic resource allocation.
+Our company specializes in complex system integration.
+Tech companies dominate the private business sector.
+The firm hired a senior research analyst.
+Automation directly affects the domestic labor market.
+The laboratory follows a standard test criterion.
+Hackers attacked the digital computer network.
+The manager achieved effective team coordination.
+Gross Domestic Product is a key data indicator.
+The team designed a comprehensive project framework.
+The students selected a specific research topic.
+The university bans advanced gene modification.
+The diplomats negotiated a peaceful conflict resolution.
+The lawyer reviewed the legal contract specification.
+Every student needs the academic word list.
+The team completed the second research phase.
+The engineers requested a structural stability assessment.
+The accountant followed the external audit procedure.
+The textbook includes a historical context analysis.
+The government funded a national welfare program.
+The architects proposed an institutional framework design.
+The bank conducted a financial risk evaluation.
+Software simplifies experimental data collection.
+Tax collection increases public sector revenue.
+The dictionary provides a theoretical concept definition.
+The algorithm allows methodological error detection.
+The director altered the corporate investment strategy.
+The agency requires an environmental impact assessment.
+Education plays a role in individual identity formation.
+The applicant completed the procedural requirement checklist.
+The software identified a consistent response pattern.
+The statistician calculated the statistical variance estimation.
+The census measured the social minority proportion.
+The historian focused on primary source interpretation.
+Experience can improve a creative design process.
+The technician signed the technical specification document.
+The company expanded its regional distribution network.
+Peer review is essential for academic journal publication.
+The committee investigated an ethical principle violation.
+Investors fear an unpredicted market fluctuation.
+Fiil + Edat takımı
+45 Akademik Yapı ve Cümle Örneği
+this method in the next chapter
+We describe this method in the next chapter.
+these data on this page We show these data on this page.
+this concept for this research
+We employ this concept for this research.
+that issue in two weeks We solved that issue in two weeks.
+the structure in this section
+We analyze the structure in this section.
+the policy for this institution
+We created the policy for this institution.
+this theory in the first period
+We tested this theory in the first period.
+the results in the final summary
+We evaluate the results in the final summary.
+this formula for the next process
+We need this formula for the next process.
+the criteria on the main site
+We find the criteria on the main site.
+that role in this project
+We defined that role in this project.
+this text for this assignment
+We read this text for this assignment.
+the variables in the second phase
+We change the variables in the second phase.
+this framework for the new strategy
+We use this framework for the new strategy.
+the evidence in this document
+We see the evidence in this document.
+that approach in the past decade
+We dropped that approach in the past decade.
+the factors for this analysis
+We choose the factors for this analysis.
+this category in the next lecture
+We discuss this category in the next lecture.
+the features on this device
+We check the features on this device.
+this definition for the general context
+We keep this definition for the general context.
+that technique in the last session
+We learned that technique in the last session.
+the functions for this network
+We write the functions for this network.
+this code in the first file
+We modify this code in the first file.
+the components for this system
+We buy the components for this system.
+that theme in this chapter
+We follow that theme in this chapter.
+the regulations on this welfare
+We accept the regulations on this welfare.
+this error in the final output
+We noticed this error in the final output.
+the parameters for the next run
+We fix the parameters for the next run.
+that sequence in the third paragraph
+We repeat that sequence in the third paragraph.
+this target for the coming year
+We set this target for the coming year.
+the appendix at the end of the text
+We attach the appendix at the end of the text.
+this scenario for the future trend
+We investigate this scenario for the future trend.
+that protocol during the crisis period
+We follow that protocol during the crisis period.
+the statistics in the annual report
+We update the statistics in the annual report.
+this perspective in the current debate
+We present this perspective in the current debate.
+the procedural rules for this regime
+We clarify the procedural rules for this regime.
+that link between the two variables
+We observe that link between the two variables.
+this mechanism for energy transfer
+We examine this mechanism for energy transfer.
+the allocation of the new funds
+We manage the allocation of the new funds.
+that contrast in the second chart
+We see that contrast in the second chart.
+this mode of global transport
+We select this mode of global transport.
+the integration of the minority communities
+We support the integration of the minority communities.
+that schedule for the final shift
+We change that schedule for the final shift.
+this resolution for the ultimate outcome
+We propose this resolution for the ultimate outcome.
+the guidelines on this specific topic
+We follow the guidelines on this specific topic.
+Aşağıdaki Edat takımı + edat takımı yapısını, 15’li soru paketleri halinde alıştırmalar olarak dağıt. Her bir alıştırmada 15’er soru olmalıdır. Alıştırma içinde sorular ve dağılım basit olanlardan karmaşık olana doğru ilerlemeli. Soru tipleri hazırlanırken kullanılan kelimeleri ezberletmek için tek tek kelime eşleştirme, kelime bankası, çoktan seçmeli soru tipleri, cümleler için ceviri metni ve kelime sıralama soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+Ürettiğin alıştırmaları da Bölüm 2, 9. Ders altına yerleştir. En az 5 alıştırma ve herbirinde mutlaka 15 soru olsun.
+Edat takımı + edat takımı
+Dersin Açıklaması: Arka arkaya gelen iki (veya daha fazla) edat takımı birbirini tamamlarsa, sonundan başlayarak başına doğru tercüme edilir.
+before the analysis of the data
+in the interpretation of the results
+during the assessment of the impact
+according to the structure of the institution
+because of the distribution of the resources
+after the evaluation of the method
+in the context of the research
+under the regulation of the authority
+during the transition of the economy
+before the implementation of the policy
+according to the definition of the concept
+after the identification of the factor
+in the absence of the evidence
+during the formulation of the theory
+because of the complexity of the system
+under the authority of the administration
+in the selection of the variable
+after the completion of the assignment
+before the acquisition of the funding
+according to the principle of the logic
+in this framework of thought
+during a study of the variation
+because of the source of the error
+before the shift of the category
+according to the approach of the researcher
+in the response of the community
+under the status of the requirement
+during the period of the interaction
+because of the issue of the legality
+after the series of the experiments
+in the area of the sustainability
+before the instance of the violation
+according to the thesis of the author
+during the reaction of the substance
+in the credit of the financier
+from the accumulation of the capital
+with the participation of the individual
+throughout the duration of the process
+despite the inconsistency of the data
+within the scope of the legislation
+through the facilitation of the expert
+upon the establishment of the foundation
+towards the improvement of the performance
+beyond the limit of the capacity
+amidst the instability of the region
+Cümle içinde:
+Before the analysis of the data, the researchers had to filter out all erroneous entries.
+Key variables were carefully defined in the interpretation of the results.
+During the assessment of the impact, several unexpected environmental risks emerged.
+The committee acted strictly according to the structure of the institution.
+Many local projects failed because of the distribution of the resources.
+After the evaluation of the method, the team decided to upgrade their current software.
+This specific behavior makes perfect sense in the context of the research.
+The market operates smoothly under the regulation of the authority.
+During the transition of the economy, inflation rates fluctuated unpredictably.
+Extensive testing is required before the implementation of the policy.
+According to the definition of the concept, this case cannot be classified as a crisis.
+After the identification of the factor, scientists began formulating a new solution.
+The suspect was released immediately in the absence of the evidence.
+Critical assumptions were made during the formulation of the theory.
+The software crashed repeatedly because of the complexity of the system.
+The final decision was signed under the authority of the administration.
+Bias must be eliminated in the selection of the variable.
+After the completion of the assignment, students submitted their reports online.
+A detailed budget proposal is necessary before the acquisition of the funding.
+The argument was constructed according to the principle of the logic.
+In this framework of thought, traditional values are heavily questioned.
+The new strain was discovered during a study of the variation.
+The entire calculation went wrong because of the source of the error.
+A noticeable drop in accuracy occurred before the shift of the category.
+According to the approach of the researcher, qualitative data provides deeper insights.
+Significant cultural changes were observed in the response of the community.
+The project was temporarily paused under the status of the requirement.
+Several anomalies were recorded during the period of the interaction.
+The deal was cancelled at the last minute because of the issue of the legality.
+After the series of the experiments, the initial hypothesis was fully confirmed.
+Breakthrough innovations are happening in the area of the sustainability.
+The system generated an automated alert before the instance of the violation.
+According to the thesis of the author, industrialization altered human behavior completely.
+A sudden temperature drop was measured during the reaction of the substance.
+The international transaction was logged in the credit of the financier.
+The small business grew rapidly from the accumulation of the capital.
+The workshop was successfully completed with the participation of the individual.
+Participants must remain silent throughout the duration of the process.
+The report was accepted despite the inconsistency of the data.
+Strict measures were taken within the scope of the legislation.
+The complex data was easily processed through the facilitation of the expert.
+A grand opening ceremony was organized upon the establishment of the foundation.
+The company invested heavily towards the improvement of the performance.
+The engine stopped functioning because it went beyond the limit of the capacity.
+Amidst the instability of the region, local business owners struggled to survive.
+Bölüm 1 ders 1
+Data analysis
+Income distribution
+Research method
+Finance sector
+Labour policy
+Computer technology
+Investment strategy
+Resource allocation
+Structure analysis
+Energy source
+Contract law
+Quality control
+Data analysis process
+Computer network security
+Research project design
+Environment assessment methodology
+Financial sector policy
+Target identity factor
+Resource distribution strategy
+Legal contract framework
+Project team leader
+Economy growth rate
+Consumer trend research
+Credit card security
+Data analysis team role
+Computer network security policy
+Global trade investment strategy
+Environment impact assessment method
+Core team research project
+Individual income distribution category
+Sector resource allocation process
+Text analysis research design
+Market research data analysis
+Information technology sector policy
+Government policy reform process
+Data collection method design
+Academic research project resource allocation
+Computer network security policy framework
+Data analysis team research project
+Global finance sector investment policy
+Media text analysis research methodology
+Institutional policy resource distribution process
+Individual task assessment criteria structure
+International trade law contract framework
+Area development strategy research project
+İsim + Of The + İsim
+Aşağıdaki yapıları 15’li soru paketleri halinde bölüm 1 ders 2’nin alıştırmalarına dağıt. Her bir alıştırmada 15’er soru olmalıdır. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+the legs of the animal
+the muscles of the leg
+the importance of the results
+the arrangement of the pictures
+the movement of the molecules
+the extent of the damage
+the volume of the liquid
+the result of the experiment
+the difficulty of the problem
+the photograph of the student
+the duration of the holiday
+the distribution of the forests
+the difficulties of the experiment
+the dimensions of the room
+the division of the work
+the disadvantages of the situation
+the employment of the workers
+the use of the wood
+the discovery of the element
+the volume of the gas
+the analysis of the data
+the definition of the concept
+the structure of the organization
+the interpretation of the text
+the function of the brain
+the distribution of the income
+the assessment of the risk
+the role of the government
+the creation of the universe
+the evaluation of the program
+the focus of the study
+the impact of the policy
+the dynamics of the market
+the stability of the economy
+the design of the system
+the complexity of the task
+the core of the problem
+the duration of the process
+the consequences of the action
+the strategy of the company
+the adaptation of the species
+the framework of the theory
+the context of the situation
+the proportion of the population
+the integration of the technology
+the modification of the gene
+the resolution of the conflict
+the format of the document
+the logic of the argument
+the expansion of the business
+the analysis of the data of the research
+the structure of the sectors of the economy
+the evaluation of the benefits of the policy
+the stability of the framework of the organization
+the resolution of the conflict of the parties
+the significance of the results of the experiment
+the variation of the parameters of the system
+the proportion of the minorities of the population
+the validation of the hypotheses of the analysts
+the interpretation of the text of the contract
+for the definition of the concept
+with the assessment of the students
+during the duration of the process
+by the creation of the new network
+through the modification of the genes
+after the conclusion of the investigation
+for the maintenance of the equipment
+without the consent of the participants
+because of the intensity of the crisis
+under the authority of the institution
+the distribution of the income in Europe
+the interpretation of the data in the journal
+the integration of the technology in schools
+the complexity of the task in the project
+the concentration of the chemical in the water
+the expansion of the business in the global market
+the relevance of the theory in modern science
+the accumulation of the capital in the private sector
+the allocation of the resources in the region
+the exposure of the individuals in the workplace
+The committee completed the analysis of the data of the research.
+Experts need to examine the structure of the sectors of the economy.
+Policymakers should focus on the evaluation of the benefits of the policy.
+The new manager wants to improve the stability of the framework of the organization.
+The mediator facilitated the resolution of the conflict of the parties.
+The statistics confirmed the significance of the results of the experiment.
+Engineers closely monitored the variation of the parameters of the system.
+The census revealed the proportion of the minorities of the population.
+The scientists provided the validation of the hypotheses of the analysts.
+The lawyer finalized the interpretation of the text of the contract.
+The authors provided a detailed chapter for the definition of the concept.
+The university is very satisfied with the assessment of the students.
+No one is allowed to leave the laboratory during the duration of the process.
+The IT department upgraded the system by the creation of the new network.
+Researchers achieved this breakthrough through the modification of the genes.
+The journalists published their report after the conclusion of the investigation.
+The technician is responsible for the maintenance of the equipment.
+The doctors cannot proceed without the consent of the participants.
+The government intervened because of the intensity of the crisis.
+The project operates strictly under the authority of the institution.
+Economists are investigating the distribution of the income in Europe.
+The professor criticized the interpretation of the data in the journal.
+The ministry aims to promote the integration of the technology in schools.
+We underestimated the complexity of the task in the project.
+Environmentalists measured the concentration of the chemical in the water.
+Zamir + 'Of The' + İsim
+Aşağıdaki yapıları 15’li soru paketleri halinde bölüm 1 ders 3’nin alıştırmalarına dağıt. Her bir alıştırmada 15’er soru olmalıdır. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+some of the prices
+many of the substances
+one of the diseases
+most of the goods
+some of the experiments
+all of the mountains
+none of the contracts
+each of the agreements
+some of the heat
+part of the area
+each of the countries
+most of the oil
+a little of the gas
+a little of the liquid
+none of the wood
+none of the tissues
+another of the diseases
+some of the water vapour
+all of the ideas
+a lot of the work
+several of the metals
+many of the reactions
+most of the energy
+several of the reasons
+a little of the heat
+a few of the results
+some of the profit
+some of the cost
+part of the brain
+part of the tissues
+another of the problems
+many of the details
+a few of the decisions
+many of the laws
+none of the coal
+half of the profits
+half of the cost
+most of the bone
+several of the employers
+some of the substances
+some of the data
+many of the substitutes
+one of the factors
+most of the variables
+some of the experiments
+all of the elements
+none of the contracts
+each of the categories
+some of the energy
+part of the area
+each of the countries
+most of the revenue
+a little of the gas
+a little of the liquid
+none of the resources
+none of the sectors
+another of the theories
+some of the criteria
+all of the concepts
+a lot of the labor
+II. D. İsim + 'Of' + İsim
+Örnek: history of Man -> insanın tarihi / insan tarihi
+28. Türkçeye çeviriniz:
+Aşağıdaki 45 yapıyı 15’li soru paketleri halinde bölüm 1, ders 4’nin alıştırmalarına dağıt. Her bir alıştırmada 15’er soru olmalıdır. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün.
+the invention of fire
+fear of hunger
+the study of disease
+proof of guilt
+the discovery of radium
+the expectancy of life
+the use of electricity
+division of labour
+form of government
+freedom of religion
+the production of raw materials
+the produce of Turkey
+the existence of coal
+the study of history
+the history of nations
+the creation of finance
+rejection of authority
+the analysis of data
+proof of hypothesis
+the distribution of income
+the estimation of welfare
+the integration of technology
+division of labor
+form of policy
+freedom of interpretation
+freedom of expression (veya speech)
+freedom of movement
+the history of legislation
+the history of philosophy
+the equality of individuals
+the production of components
+the export of resources
+the existence of inconsistencies
+the study of economics
+the evolution of societies
+the validation of theories
+the assessment of risk
+sources of energy
+the interpretation of texts
+definition of roles
+the maintenance of stability
+the complexity of structures
+modification of criteria
+the resolution of conflicts
+the accumulation of evidence
+İsim + 'From' + İsim
+Aşağıdaki 36 soruyu, 3 bölüm halinde,  Bölüm 1, Ders 5’nin alıştırmalarına dağıt.. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün
+a student from England
+sand from the river
+a substance from coal
+a book from the library
+an article from this newspaper
+radiation from space
+a page from history
+damage from neglect
+the water from the river
+the heat from the metal
+the blood from the animal
+diseases from viruses
+the gas from this substance
+the results from these experiments
+the ideas from this book
+coal from this area
+the heat from this substance
+water from this area
+a student from the academy
+data from the survey
+a substitute from coal
+a text from the library
+an article from this journal
+radiation from the environment
+a page from history
+injury from labor
+the revenue from the export
+the energy from the component
+the blood from the individual
+inconsistencies from variables
+the gas from this substance
+the results from these experiments
+the concepts from this theory
+the heat from this substance
+feedback from the respondents
+interpretations from the analysts
+Bu sorular ise başka bir alıştırmada ve sadece yazılı çeviri ve kelime sıralama quizleri kullanılarak Bölüm 1, Ders 5’te, bir alıştırma içinde uygulansın. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün
+I have met a student from England.
+He took some samples of sand from the river.
+They tried to obtain a substance from coal.
+They have lost a book from the library.
+Two days ago I read an article from this newspaper.
+They have not yet solved the problem of radiation from space.
+Watching the film was like reading a page from history.
+The child is suffering from damage from neglect.
+The water from the river is not clean enough to drink.
+They found a simple way to measure the heat from the metal.
+The blood from the animal was on the road.
+Today they have found a way to prevent some of the diseases from viruses.
+Then they collected the gas from this substance.
+We are waiting for the results from these experiments.
+They did not agree with the ideas from this book.
+They have stopped mining the coal from this area.
+They found a way to measure the heat from this substance.
+They have found a way to obtain salt from the water from this area.
+II. F. İsim + Edat Takımı + Edat Takımı
+Aşağıdaki soruları, 3 bölüm halinde,  Bölüm 1, Ders 6’nin alıştırmalarına dağıt.. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün
+the difference in the results of the experiments.
+a study of the diseases of the blood
+the space between the molecules in the liquid in the glass
+the policy of the government during the last few years
+the photograph on the front page of the newspaper
+the difficulty in the explanation of the problem
+government by the people of this community
+the history of the civilisation of these people
+the damage to the head of this patient
+the ideas in this article in the newspaper
+the disease in the bones of the leg
+the heat in the metal round the top of the bottle
+the heat at the surface of the liquid in the tank
+the cure for this disease of the blood
+an injection into the muscle of the leg of the animal
+preparation for an examination in English
+employment in factories of this kind
+the situation of the workers in America
+the coal at the surface of the ground
+a substance in the blood of the patient with this disease
+the difference in the results of the experiments
+the variation in the responses of the participants
+the shift in the policies of the government
+the inconsistency in the data of the analysis
+the decline in the revenue of the sectors
+the fluctuation in the estimates of the economists
+the ambiguity in the clauses of the contract
+the rigidity in the structures of the institutions
+the progression in the phases of the process
+the distortion in the images of the media
+a study of the theories of the philosophy
+an assessment of the components of the framework
+an interpretation of the text of the legislation
+a summary of the principles of the academy
+an investigation of the ethics of the practitioners
+the integration of the elements of the culture
+the validation of the criteria of the evaluation
+a definition of the parameters of the concept
+the distribution of the resources of the welfare
+a revaluation of the assets of the corporation
+the conflict between the individuals in the workplace
+the interaction between the variables in the formula
+the linkage between the innovations in the industry
+the relation between the factors in the environment
+the consensus between the analysts in the committee
+the overlap between the categories in the database
+the tension between the minorities in the region
+the cooperation between the colleagues in the department
+the proportion of the immigrants in the population
+the accumulation of the evidence in the investigation
+II. A. İsim + Edat Takımı
+Aşağıdaki soruları, her bir alıştırma kendi sırasında olmak üzere,  Bölüm 1, Ders 6’nin alıştırmalarına dağıt.. Dağılım basit olanlardan karmaşık olana doğru ilerlesin. Bunu yaparken eşleştirme, kelime bankası, ceviri metni ve çoktan seçmeli soru tiplerini kullan. Ayrıca her kelimenin üzerine gelindiğinde türkçe karşılığı popup şeklinde görünsün
+1. alıştırma
+the workers in the factory
+the statement in the newspaper
+the papers on my table
+the photograph in the newspaper
+the difference between the results
+the molecules in the liquid
+the molecules in the gas
+the policy of the government
+government by the people
+the examination of the doctor
+damage to the head
+the ideas in this chapter
+the bones in the arm
+the heat in the metal
+the cure for this disease
+injection under the skin
+preparation for an examination
+employment in the factories
+a substance in the blood
+the distance from this point
+the water under the ground
+the situation in America
+2. alıştırma
+The employer of these men is at the office.
+The explanation of this problem is at the end.
+The machine for cutting paper is in the factory.
+The substance in the test-tube is from this bottle.
+The answer to this problem is in the book.
+The market for these goods is in the Far East.
+The building in the centre of the town is between the railway and the river.
+The book about Turkey is on the table.
+The summary of the chapter is at the end.
+The papers for the examination are on my table.
+The buildings on the corner are in the centre of the city.
+The chapters on Turkey are at the end.
+The factories inside the town are near the river.
+The substances in the liquid are from this bottle.
+The liquids in the test-tubes are in the laboratory.
+The answers to the questions are on this paper.
+The statements of the workers are in this report.
+The coal in this area is near the surface.
+The translation of these sentences is on the next page.
+Nutrients in the soil are near the surface.
+3.  alıştırma
+The activities of the research workers are in this report.
+The results of their investigations are in the report.
+The results of these experiments will be in this report.
+The decision of the committee was in favour of their activities.
+The majority of the workers were in favour of the decisions.
+The details of the experiment are in this report.
+The answers to all these questions are at the end of the book.
+The object of the research project will be at the beginning of the report.
+The details of the study were not in the report.
+The comprehension questions for these sentences are at the end of the exercise.
+The bacteria of this disease are in the tissues of the lung.
+The date of the next meeting is on the notice board.
+The report of the last meeting may be on the notice board.
+The equipment for the next experiment is not in the laboratory.
+The statement from the manager was in today's newspaper.
+The materials for the next experiment are in this box.
+The reasons for their refusal are in this statement.
+The list of names of patients from that hospital is in the records.
+The records of all the students are in these files.
+The address of every hospital in London is in our records.
+The names and addresses of all our patients are in these files.
+The oil in this area is below the level of the sea.
+4.  alıştırma
+The manager is speaking to the workers in the factory.
+Nobody has read the statement in the newspaper.
+I have lost the papers on my table.
+The photograph in the newspaper is not very good.
+Have you seen the difference between the results?
+The molecules in the liquid never stop moving.
+The molecules in the gas are less dense.
+They did not approve of the policy of the government.
+Democracy is a form of government by the people.
+He is ready for the examination of the doctor.
+The doctor could not see any damage to the head.
+They did not approve of the ideas in this chapter.
+The doctor examined the bones in the arm with X-rays.
+They measured the loss of the heat in the metal.
+Now they have found a cure for this disease.
+He preferred to make injection under the skin.
+These students have had no preparation for an examination.
+These machines are ready for use in the factories.
+Sodium chloride is a substance in the blood.
+The students measured the distance from this point.
+The water under the ground rises to the surface.
+Nobody has mentioned the situation in America
+5. araştırma
+He studied the movement of the legs of the animal.
+He studied the movement of the muscles of the leg.
+We must remember the importance of the results of this experiment.
+The arrangement of the pictures is very important.
+Robert Brown studied the movement of the molecules in a liquid.
+The doctor estimated the extent of the damage to the thorax.
+The volume of the liquid increased or decreased.
+We are waiting for the result of the experiment.
+He could not understand the difficulty of the problem.
+The photograph of the student is not in the file.
+They closed the factory for the duration of the holiday.
+This map shows the distribution of the forests in Turkey.
+They overcame the difficulties of the experiment.
+They did not know the dimensions of the room.
+The manager will decide on the division of the work.
+The students could not see the disadvantages of the situation.
+He spoke in favour of the employment of the workers.
+He will not recommend the use of the wood.
+The discovery of the element was important to his work.
+The volume of the gas will increase or decrease.
+İngilizce'de aralarında edat (in, on, of, with vb.) veya bağlaç bulunmayan, yan yana dizilmiş kelime öbekleri (tamlamalar), kelime sayısı kaç olursa olsun soldan sağa doğru sırayla bir bütün olarak anlamlandırılarak Türkçe'ye çevrilir.
+Örneğin; Heart surgery
+Eğer kelime öbekleri arasında edat ya da bağlaç bulunuyorsa arka arkaya gelen bu yapılar genellikle birbirini tamamlar ve Türkçe mantığına göre sonundan başına doğru zincirleme olarak tercüme edilir. Bu ve bundan sonraki örnekler bu kurala uygundur.
+Örneğin; The volume of the liquid
+There + olmak fiili + isim
+There is a test.
+There is a form.
+There is a hope.
+There is a wire.
+There is a type.
+There is no test.
+There is no form.
+There is no hope.
+There is no wire.
+There is no type.
+There is a theory.
+There is a supply.
+There is a profit.
+There is a new form.
+There is a thin wire.
+There is a new type.
+There is no theory.
+There is no supply.
+There is no profit.
+There is a vibration.
+There is a summary.
+There is a source.
+There is a solution.
+There is a short test.
+There is a faint hope.
+There is a new theory.
+There is a new source.
+There will be a short test.
+There must be a thin wire.
+There is a tendency.
+There is a statement.
+There is a condition.
+There is no vibration.
+There is no summary.
+There is no source.
+There is no solution.
+There is an examination.
+There is a possibility.
+There is a translation.
+There is a temperature.
+There is a similarity.
+There is no tendency.
+There is no statement.
+There is no condition.
+There is a large supply.
+There is a short summary.
+There is a large profit.
+There will be a long examination.
+There may be no new form.
+There might be a faint hope.
+There must be a short summary.
+There will be a new source.
+There will be no large profit.
+There may be some disadvantages.
+There will be some advantages.
+There will be some successes.
+There could be some failures.
+There have been some influences.
+There is no examination.
+There is no possibility.
+There is no translation.
+There is no temperature.
+There is no similarity.
+There is an improvement.
+There is a suggestion.
+There is a slight tendency.
+There is a slight vibration.
+There is a high temperature.
+There is a false statement.
+There may be a faint possibility.
+There may be a slight tendency.
+There may be large supplies.
+There may be a slight vibration.
+There must be no false statement.
+There must be some reforms.
+There have been some causes.
+There should be some proofs.
+There is no improvement.
+There is no suggestion.
+There is a long examination.
+There is a faint possibility.
+There is a good translation.
+There is a hopeful solution.
+There is a slight similarity.
+There may be a good translation.
+There could be a high temperature.
+There might be a hopeful solution.
+There must be some precautions.
+There could not be any peace.
+There has not been any cause.
+There should not be any loss.
+There is a great improvement.
+There is a useful suggestion.
+There have been several new types.
+There could be a slight similarity.
+There will be no action in this matter.
+There can be no reason for failure.
+There ought not to be any failure.
+There cannot be any transport.
+There must not be any erosion.
+There will not be any species.
+There may not be any reforms.
+There have not been any stages.
+There is an important condition.
+There have been no great improvements.
+There have been many new theories.
+There will be an important condition.
+There can be no similarity in their circumstances.
+There may be no proof of guilt in this case.
+There ought to be some responsibilities.
+There may not be any agriculture.
+There may not be any rainfall.
+There will not be any agriculture.
+There should not be any advantage.
+There has not been any influence.
+There may be many useful suggestions.
+There could not be any precautions.
+There must not be any responsibility.
+There should not be any neglect.
+There have not been any species.
+There may be some minor disadvantages.
+There will be various advantages.
+There will be unequal successes.
+There could be some minor failures.
+There has been some foreign influence.
+There must be some industrial reforms.
+There ought not to be any great failures.
+There could not be any definite peace.
+There has not been any definite cause.
+There has not been any foreign influence.
+There must be an easy solution to this problem.
+There may be no easy solution to this problem.
+There have been no new theories in this field.
+There can be no resemblance between the two cases.
+There has been no decision at the meeting so far.
+There have been some similar causes.
+There should be some definite proof.
+There cannot be any industrialisation.
+There will not be any nationalisation.
+There cannot be any rapid transport.
+There should not be any great losses.
+There will not be any foreign species.
+There may not be any heavy rainfall.
+There may not be any agricultural reform.
+There have not been any similar stages.
+There have not been any common species.
+There can be an improvement in the quality of the fruit.
+There will be no variation in the temperature of the metal.
+There has been no indication of an improvement so far.
+There have been no suggestions for a solution so far.
+There will be no danger of fire in this laboratory.
+There may be no difficulties after the end of the year.
+There ought to be some similar responsibilities.
+There must some effective precautions.
+There may not be any intensive agriculture.
+There ought not to be any rapid erosion.
+There will not be any profitable agriculture.
+There must not be any similar neglect.
+There must be a filter at the top of this machine.
+There has been no rainfall in this area for four months.
+There must be no filter in this part of the machine.
+There will be a short test in Geology this afternoon.
+There could be a faint hope of improvement soon.
+There may be large supplies of this raw material in Asia.
+There may be a slight vibration from the machinery.
+There must be no false statement in this report.
+There might be a hopeful solution to the question soon.
+There could be no evidence of guilt in the circumstances.
+There may be no protection from fire in the laboratory.
+There has been no absorption of the light rays so far.
+There can be no comparison between these two actions.
+There could not be any effective precautions.
+There must not be any unequal responsibilities.
+There should not be any great disadvantages.
+There should be an improvement in the results of their work.
+There has been a serious flying accident near the airport.
+There can be no resemblance between the two types of plant.
+There has been no formal justification for the budget cuts.
+There must be a precise definition for every core concept.
+There may be no direct relevance between these two issues.
+There might be a slight modification in the final format.
+There can be no stable growth without financial investment.
+There could be no better framework for this specific research.
+There will be no automatic extension of the existing contract.
+There has been no clear resolution to the ongoing conflict.
+There have been no great improvements in this field recently.
+There must be a thin wire from the electrode to the battery.
+There have been several new types of equipment recently.
+There may be many useful suggestions from the committee.
+There must be a short summary at the end of the chapter.
+There must be no possibility of failure in this matter.
+There cannot be any rapid industrialisation.
+There has been a very heavy rainfall in these areas.
+There have been several new theories in this field in recent years.
+There will be no wheat from this area until the year after next.
+There can be no possibility of improvement before next year.
+There could have been no accident in the street last night.
+There have been major innovations in the field of biotechnology.
+There have been positive responses from most of the participants.
+There must be a logical interpretation for these unusual results.
+There must be strict coordination between the two departments.
+There must be no deviation from the established protocol.
+There must be no ambiguity in the legal clauses of the contract.
+There should be a fair distribution of income across all sectors.
+There should be no restriction on the access to public documents.
+There should be a clear distinction between the two categories.
+There should be a comprehensive evaluation of the new policy.
+There should be no conflict between the fundamental principles.
+There should not be an over-estimation of the final revenue.
+There will be a thorough analysis of the final data next week.
+There will be no further subsidies for the private sector.
+There may be an alternative approach to solving this complexity.
+There can be a wide diversity of perspectives within the academy.
+There could be an unexpected expansion in the target market.
+There has been an accumulation of evidence in the recent literature.
+There should be no negative consequences for the respondents.
+There must have been a distortion in the transmitted images.
+There may be an inherent bias within the selected sample.
+There can be no justification for violating the safety regulations.
+There could be a substantial decline in the annual revenue.
+There must be a baseline consensus among the committee members.
+There may not be a direct interaction between the two variables.
+There could not be a more straightforward solution to this crisis.
+There may be a faint possibility of improvement next year.
+There will be a good translation of this work in the library.
+There have been many new theories during the last few years.
+There may be no possibility of success in these circumstances.
+There will be no precise details of the incident until later.
+There must be no reduction of the supplies of raw materials.
+There have been no complications in the course of the disease.
+There has not been any concept of data distortion.
+There will not be any further nationalisation.
+There will be a good crop of wheat from this area next year.
+There may be a slight variation in the temperature at a later stage.
+There must have been an accident last night in this street.
+There will be no further excavations in this area until next year.
+There can be no doubt of an improvement in the quality of the fruit.
+There has been no tendency towards improvement in recent years.
+There may be no new works of art at the exhibition tomorrow.
+There has been no significant alteration in the research methodology.
+There has been a noticeable shift in public policy regarding welfare.
+There have been numerous occurrences of data distortion in the past.
+There must be no discrimination based on gender or ethnicity.
+There must be an immediate assessment of the structural damage.
+There must be a sustainable source of funding for the project.
+There ought to be a reliable mechanism to monitor the emissions.
+There must have been a systematic error in the initial compilation.
+There must have been some inconsistencies in the analyzed samples.
+There must have been a major recession in the domestic economy.
+There must not have been any prior validation of the instruments.
+There must have been a logical linkage between those occurrences.
+There must not have been enough clarity in the initial guidelines.
+There must have been a significant variation in the parameters.
+There might not be an available substitute for this chemical component.
+There must be a high degree of accuracy in the statistical estimation.
+There might be a legal prohibition on the export of these resources.
+There has not been any formal registration for the conference yet.
+There should be more focus on the welfare of the individuals.
+There might not be a sufficient margin of profit for the contractors.
+There cannot be an effective implementation without data integration.
+There must be a thorough inspection of the technical infrastructure.
+There may be a slight tendency towards improvement soon.
+There may be a new form of power within the next few years.
+There could be a high temperature at a later stage of the disease.
+There could be a slight similarity between the different types of plant.
+There might be a possibility of improvement in the wheat crop next year.
+There may be a slight tendency towards improvement at a later stage.
+There may be a slight resemblance between the two types of plant.
+There should be some beautiful works of art at the exhibition tomorrow.
+There can be no improvement in the quality of their work in these conditions.
+There should be no difference in the results of the two experiments.
+There can be no better translation of that work in our library.
+There has been no serious flying accident in the last ten years.
+There has been a steady evolution in the structure of the organization.
+There have been several contradictions in the witness testimonies.
+There has not been enough evidence to support this specific hypothesis.
+There has not been a clear indicator of economic stability this quarter.
+There must not be any unverified variables in the final equation.
+There must not be any external interference during the investigation.
+There ought to be more flexibility in the working hours of the staff.
+There ought to be an explicit acknowledgement of the authors' contributions.
+There should not be any significant error in the data processing phase.
+There must not have been sufficient integration between the systems.
+There could not have been a more appropriate method for this study.
+There could have been no coincidence in those identical results.
+There could have been an ethical implication in that procedure.
+There will be a special session dedicated to the theory of relativity.
+There must have been an unpredicted fluctuation in the market prices.
+There will be a new source of raw material in the next 10 years.
+There has been no contact with the members for more than two months.
+There will be more excavation in this area in the next two years.
+There were many gold and silver objects in the exhibition of art.
+There could have been no new sources of information on this subject.
+There must have been a temporary breakdown in institutional communication.
+There could have been a different outcome if the criteria were modified.
+There could not have been a total collapse without structural flaws.
+There will be many new sources of information on this subject in this book.
+There must have been an administrative oversight during the selection process.
+There must have been a difference between the results of the two experiments.
+There should have been a better translation of that work in the library.
+There can be no large supply of raw materials for export from these areas.
+Anladım, listenin pedagojik olarak daha net ve doğrudan dil yapılarına odaklanması için of plant, new form, thin wire veya for failure gibi sadece iki kelimeden oluşan kısa tamlamaları ve edat öbeklerini de tamamen ayıkladım.
+Geriye sadece 3 veya daha fazla kelimeden oluşan anlamlı alt tamlamalar ile hedef cümlelerin kendileri kalmıştır:
+Sen bir İngilizce Dil Pedagojisi Uzmanı ve Full-Stack Yazılımcısın. Sana aşağıda karışık halde "There + be" yapısıyla kurulmuş cümlelerden oluşan bir liste vereceğim.
+Senden isteğim, bu cümleleri Duolingo benzeri bir dil öğrenme uygulamasının veritabanına doğrudan eklenebilecek şekilde, "Basitten Karmaşığa" (Pedagojik Gelişim Eğrisine Uygun) sıralı bir  hale getirmen.
+Sıralama Yaparken Şu Pedagojik Kriterleri Esas Al:
+1. Zaman ve Kip (Gramer) Zorluğu: Önce Present (is/are), sonra Future (will), sonra Temel Modals (must/may), sonra Present Perfect (have been), en son ise Modal Perfect (could have been/must have been) gelmeli.
+2. Cümle Uzunluğu ve Kelime Çeşitliliği: Aynı gramer yapısında olsalar bile, kısa ve somut kelimeli cümleler (örn: wire, test), uzun ve akademik/soyut kelimeli cümlelerden (örn: agricultural reform, structural flaws) önce gelmeli.
+3. Olumlu/Olumsuz Dengesi: Bir yapının önce olumlusu, hemen ardından veya çok yakınında olumsuzu gelerek pekiştirme sağlanmalı.
+Şu soru tiplerini kullanarak basitten karmaşığa herbirinde 15 adet soru olacak alıştırmalar üret;
+1. Çoktan Seçmeli Çeviri (Anlam Eşleştirme)
+Türkçe verilen cümlenin doğru İngilizce karşılığını ya da tersini seçme.
+Soru: "Gelecekte yeni bir kaynak olacak." cümlesinin İngilizce karşılığı hangisidir?
+A) There is a new source.
+B) There will be a new source. (Doğru Cevap)
+C) There must be a new source.
+2. İki Şıklı Karar (Doğru/Yanlış veya Doğru Kipi Seçme)
+Cümledeki zaman zarfına bakarak doğru varlık kalıbını seçme testi.
+Soru: "There _______ a serious flying accident in the last ten years."
+A) will be
+B) has been (Geçmişten günümüze süregelen etki vurgusu için)
+Seviye 2: Sözdizimi ve Yapı İnşası (Orta Seviye)
+Türkçede "Var" kelimesi cümlenin sonunda yer alırken, İngilizcede "There is..." başta yer alır. Hele araya must, have, been gibi yardımcı fiiller girdiğinde kelime sırası iyice karmaşıklaşır. Bu aşamada Kelime Kutusu (Word Bank) yapısı en iyi çözümdür.
+3. Kelime Sıralama (Word Bank / Unscramble)
+Kullanıcıya karışık kelimeler verilir ve doğru sırayla dizmesi istenir. Bu, özellikle listenizdeki uzun ve karmaşık yapılar için mükemmeldir.
+Soru: "İçişlerinde dış müdahale olmamalıdır." cümlesini kurun.
+Verilen Kelimeler: [interference] [There] [any] [external] [be] [must] [not] [during the investigation.]
+Kullanıcının Yapması Gereken: There + must + not + be + any + external + interference...
+Seviye 3: Dilbilgisi ve Esneklik (İleri Orta Seviye)
+Bu aşamada kullanıcı artık yapıyı tanıyor ve dizebiliyordur; şimdi doğru "ekleri" ve "kipleri" doğru boşluğa yerleştirmesi gerekir.
+4. Metin İçi Boşluk Doldurma (Cloze Test)
+Cümlenin ana gövdesi verilir, "There" yapısının hangi formda geleceği boş bırakılır. Kapsamlı listedeki nüansları (olasılık, zorunluluk, kesinlik) ölçmek için harikadır.
+Soru: "There _______________ (kesinlikle olamazdı) a total collapse without structural flaws."
+Doğru Cevap: could not have been
+Seviye 4: Üretim ve Refleks (İleri Seviye)
+Kullanıcının hiçbir ipucu olmadan yapıyı sıfırdan yazması veya duyduğunu kaydetmesi aşamasıdır.
+5. Doğrudan Çeviri ve Dikte (Yazma/Dinleme)
+Yazma: Ekranda sadece Türkçe cümle görünür ("Bu alanda yeni teoriler olmadı."), kullanıcı klavyeden sıfırdan "There have been no new theories in this field." yazar.
+İşte Düzenlenecek Cümle Listesi:
+[There is a test.
+There is a form.
+There is a hope.
+There is a wire.
+There is a type.
+There is no test.
+There is no form.
+There is no hope.
+There is no wire.
+There is no type.
+There is a theory.
+There is a supply.
+There is a profit.
+There is no theory.
+There is no supply.
+There is no profit.
+There is a vibration.
+There is a summary.
+There is a source.
+There is a solution.
+There is no vibration.
+There is no summary.
+There is no source.
+There is no solution.
+There is an examination.
+There is a possibility.
+There is a translation.
+There is a temperature.
+There is a similarity.
+There is no tendency.
+There is no statement.
+There is no condition.
+There is no examination.
+There is no possibility.
+There is no translation.
+There is no temperature.
+There is no similarity.
+There is an improvement.
+There is a suggestion.
+There is no improvement.
+There is no suggestion.
+There will be a short test.
+There must be a thin wire.
+There will be a long examination.
+There may be no new form.
+There might be a faint hope.
+There must be a short summary.
+There will be a new source.
+There will be no large profit.
+There may be some disadvantages.
+There will be some advantages.
+There will be some successes.
+There could be some failures.
+There have been some influences.
+There may be large supplies.
+There must be some reforms.
+There have been some causes.
+There should be some proofs.
+There must be some precautions.
+There could not be any peace.
+There has not been any cause.
+There should not be any loss.
+There have been several new types.
+There ought not to be any failure.
+There cannot be any transport.
+There must not be any erosion.
+There will not be any species.
+There may not be any reforms.
+There have not been any stages.
+There have been no great improvements.
+There have been many new theories.
+There will be an important condition.
+There may not be any agriculture.
+There may not be any rainfall.
+There will not be any agriculture.
+There should not be any advantage.
+There has not been any influence.
+There could not be any precautions.
+There must not be any responsibility.
+There should not be any neglect.
+There have not been any species.
+There may be some minor disadvantages.
+There will be various advantages.
+There will be unequal successes.
+There could be some minor failures.
+There ought not to be any great failures.
+There could not be any definite peace.
+There has not been any definite cause.
+There has not been any foreign influence.
+There cannot be any industrialisation.
+There will not be any nationalisation.
+There cannot be any rapid transport.
+There should not be any great losses.
+There will not be any foreign species.
+There may not be any heavy rainfall.
+There may not be any agricultural reform.
+There have not been any similar stages.
+There have not been any common species.
+There must some effective precautions.
+There may not be any intensive agriculture.
+There ought not to be any rapid erosion.
+There will not be any profitable agriculture.
+There must not be any similar neglect.
+There could not be any effective precautions.
+There must not be any unequal responsibilities.
+There should not be any great disadvantages.
+There may be a slight tendency towards improvement soon.
+There will not be any further nationalisation.
+There has not been any concept of data distortion.
+There is a new form.
+There is a thin wire.
+There is a new type.
+There is a short test.
+There is a faint hope.
+There is a new theory.
+There is a new source.
+There is a tendency.
+There is a statement.
+There is a condition.
+There is a large supply.
+There is a short summary.
+There is a large profit.
+There is a slight tendency.
+There is a slight vibration.
+There is a high temperature.
+There is a false statement.
+There may be a faint possibility.
+There may be a slight tendency.
+There may be a slight vibration.
+There is a long examination.
+There is a faint possibility.
+There is a good translation.
+There is a hopeful solution.
+There is a slight similarity.
+There may be a good translation.
+There could be a high temperature.
+There might be a hopeful solution.
+There is a great improvement.
+There is a useful suggestion.
+There could be a slight similarity.
+There is an important condition.
+There has been some foreign influence.
+There must be some industrial reforms.
+reason for failure
+There can be no reason for failure.
+easy solution to this problem
+There must be an easy solution to this problem.
+easy solution to this problem
+There may be no easy solution to this problem.
+new theories in this field
+There have been no new theories in this field.
+at the meeting so far
+decision at the meeting so far
+There has been no decision at the meeting so far.
+improvement in the quality of the fruit
+There can be an improvement in the quality of the fruit.
+serious flying accident near the airport
+There has been a serious flying accident near the airport.
+formal justification for the budget cuts
+There has been no formal justification for the budget cuts.
+precise definition for every core concept
+There must be a precise definition for every core concept.
+automatic extension of the existing contract
+There will be no automatic extension of the existing contract.
+clear resolution to the ongoing conflict
+There has been no clear resolution to the ongoing conflict.
+very heavy rainfall in these areas
+There has been a very heavy rainfall in these areas.
+possibility of improvement before next year
+There can be no possibility of improvement before next year.
+tendency towards improvement in recent years
+There has been no tendency towards improvement in recent years.
+resemblance between the two cases
+There can be no resemblance between the two cases.
+at the top of this machine
+filter at the top of this machine
+There must be a filter at the top of this machine.
+in this part of the machine
+filter in this part of the machine
+There must be no filter in this part of the machine.
+faint hope of improvement soon
+There could be a faint hope of improvement soon.
+evidence of guilt in the circumstances
+There could be no evidence of guilt in the circumstances.
+protection from fire in the laboratory
+There may be no protection from fire in the laboratory.
+absorption of the light rays so far
+There has been no absorption of the light rays so far.
+comparison between these two actions
+There can be no comparison between these two actions.
+between the two types of plant
+resemblance between the two types of plant
+There can be no resemblance between the two types of plant.
+direct relevance between these two issues
+There may be no direct relevance between these two issues.
+stable growth without financial investment
+There can be no stable growth without financial investment.
+better framework for this specific research
+There could be no better framework for this specific research.
+possibility of failure in this matter
+There must be no possibility of failure in this matter.
+of an improvement in the quality of the fruit
+doubt of an improvement in the quality of the fruit
+There can be no doubt of an improvement in the quality of the fruit.
+significant alteration in the research methodology
+There has been no significant alteration in the research methodology.
+discrimination based on gender or ethnicity
+There must be no discrimination based on gender or ethnicity.
+immediate assessment of the structural damage
+There must be an immediate assessment of the structural damage.
+sustainable source of funding for the project
+There must be a sustainable source of funding for the project.
+reliable mechanism to monitor the emissions
+There ought to be a reliable mechanism to monitor the emissions.
+some inconsistencies in the analyzed samples
+There must have been some inconsistencies in the analyzed samples.
+major recession in the domestic economy
+There must have been a major recession in the domestic economy.
+in Geology this afternoon
+short test in Geology this afternoon
+There will be a short test
+There will be a short test in Geology this afternoon.
+of improvement next year
+faint possibility of improvement next year
+There may be a faint possibility
+There may be a faint possibility of improvement next year.
+of this work in the library
+good translation of this work in the library
+There will be a good translation
+There will be a good translation of this work in the library.
+until the year after next
+wheat from this area until the year after next
+There will be no wheat
+There will be no wheat from this area until the year after next.
+until next year
+further excavations in this area until next year
+There will be no further excavations
+There will be no further excavations in this area until next year.
+at the exhibition tomorrow
+new works of art at the exhibition tomorrow
+There may be no new works
+There may be no new works of art at the exhibition tomorrow.
+in public policy regarding welfare
+noticeable shift in public policy regarding welfare
+There has been a noticeable shift in public policy regarding welfare.
+of data distortion in the past
+numerous occurrences of data distortion in the past
+There have been numerous occurrences of data distortion in the past.
+in the initial compilation
+systematic error in the initial compilation
+There must have been a systematic error
+There must have been a systematic error in the initial compilation.
+available substitute for this chemical component
+There might not be an available substitute
+There might not be an available substitute for this chemical component.
+in the statistical estimation
+high degree of accuracy in the statistical estimation
+There must be a high degree
+There must be a high degree of accuracy in the statistical estimation.
+formal registration for the conference yet
+There has not been any formal registration
+There has not been any formal registration for the conference yet.
+on the welfare of the individuals
+more focus on the welfare of the individuals
+There should be more focus on the welfare of the individuals.
+within the next few years
+new form of power within the next few years
+There may be a new form
+There may be a new form of power within the next few years.
+at a later stage of the disease
+high temperature at a later stage of the disease
+There could be a high temperature at a later stage of the disease.
+between the different types of plant
+slight similarity between the different types of plant
+There could be a slight similarity between the different types of plant.
+possibility of improvement in the wheat crop next year
+There might be a possibility
+There might be a possibility of improvement in the wheat crop next year.
+towards improvement at a later stage
+slight tendency towards improvement at a later stage
+There may be a slight tendency towards improvement at a later stage.
+between the two types of plant
+slight resemblance between the two types of plant
+There may be a slight resemblance between the two types of plant.
+beautiful works of art at the exhibition tomorrow
+There should be some beautiful works
+There should be some beautiful works of art at the exhibition tomorrow.
+serious flying accident in the last ten years
+There has been no serious flying accident
+There has been no serious flying accident in the last ten years.
+in the structure of the organization
+steady evolution in the structure of the organization
+There has been a steady evolution in the structure of the organization.
+in the witness testimonies
+several contradictions in the witness testimonies
+There have been several contradictions in the witness testimonies.
+enough evidence to support this specific hypothesis
+There has not been enough evidence
+There has not been enough evidence to support this specific hypothesis.
+clear indicator of economic stability this quarter
+There has not been a clear indicator
+There has not been a clear indicator of economic stability this quarter.
+unverified variables in the final equation
+There must not be any unverified variables
+There must not be any unverified variables in the final equation.
+external interference during the investigation
+There must not be any external interference
+There must not be any external interference during the investigation.
+in the working hours of the staff
+more flexibility in the working hours of the staff
+There ought to be more flexibility in the working hours of the staff.
+of the authors' contributions
+explicit acknowledgement of the authors' contributions
+There ought to be an explicit acknowledgement of the authors' contributions.
+in the data processing phase
+significant error in the data processing phase
+There should not be any significant error in the data processing phase.
+sufficient integration between the systems
+There must not have been sufficient integration
+There must not have been sufficient integration between the systems.
+more appropriate method for this study
+There could not have been a more appropriate method
+There could not have been a more appropriate method for this study.
+no coincidence in those identical results
+There could have been no coincidence
+There could have been no coincidence in those identical results.
+ethical implication in that procedure
+There could have been an ethical implication
+There could have been an ethical implication in that procedure.
+dedicated to the theory of relativity
+special session dedicated to the theory of relativity
+There will be a special session dedicated to the theory of relativity.
+in the market prices
+unpredicted fluctuation in the market prices
+There must have been an unpredicted fluctuation in the market prices.
+new source of raw material in the next 10 years
+There will be a new source
+There will be a new source of raw material in the next 10 years.
+with the members for more than two months
+contact with the members for more than two months
+There has been no contact with the members for more than two months.
+excavation in this area in the next two years
+There will be more excavation
+There will be more excavation in this area in the next two years.
+gold and silver objects in the exhibition of art
+There were many gold and silver objects in the exhibition of art.
+new sources of information on this subject
+There could have been no new sources
+There could have been no new sources of information on this subject.
+in institutional communication
+temporary breakdown in institutional communication
+There must have been a temporary breakdown in institutional communication.
+different outcome if the criteria were modified
+There could have been a different outcome
+There could have been a different outcome if the criteria were modified.
+total collapse without structural flaws
+There could not have been a total collapse
+There could not have been a total collapse without structural flaws.
+of information on this subject in this book
+new sources of information on this subject in this book
+There will be many new sources of information on this subject in this book.
+during the selection process
+administrative oversight during the selection process
+There must have been an administrative oversight during the selection process.
+between the results of the two experiments
+results of the two experiments
+There must have been a difference
+There must have been a difference between the results of the two experiments.
+better translation of that work in the library
+There should have been a better translation of that work in the library.
+large supply of raw materials for export from these areas
+There can be no large supply of raw materials for export from these areas.
+]
+There is a test.
+There is a form.
+There is a hope.
+There is a wire.
+There is a type.
+There is no test.
+There is no form.
+There is no hope.
+There is no wire.
+There is no type.
+There is a theory.
+There is a supply.
+There is a profit.
+There is no theory.
+There is no supply.
+There is no profit.
+There is a vibration.
+There is a summary.
+There is a source.
+There is a solution.
+There is no vibration.
+There is no summary.
+There is no source.
+There is no solution.
+There is an examination.
+There is a possibility.
+There is a translation.
+There is a temperature.
+There is a similarity.
+There is no tendency.
+There is no statement.
+There is no condition.
+There is no examination.
+There is no possibility.
+There is no translation.
+There is no temperature.
+There is no similarity.
+There is an improvement.
+There is a suggestion.
+There is no improvement.
+There is no suggestion.
+There will be a short test.
+There must be a thin wire.
+There will be a long examination.
+There may be no new form.
+There might be a faint hope.
+There must be a short summary.
+There will be a new source.
+There will be no large profit.
+There may be some disadvantages.
+There will be some advantages.
+There will be some successes.
+There could be some failures.
+There have been some influences.
+There may be large supplies.
+There must be some reforms.
+There have been some causes.
+There should be some proofs.
+There must be some precautions.
+There could not be any peace.
+There has not been any cause.
+There should not be any loss.
+There have been several new types.
+There ought not to be any failure.
+There cannot be any transport.
+There must not be any erosion.
+There will not be any species.
+There may not be any reforms.
+There have not been any stages.
+There have been no great improvements.
+There have been many new theories.
+There will be an important condition.
+There may not be any agriculture.
+There may not be any rainfall.
+There will not be any agriculture.
+There should not be any advantage.
+There has not been any influence.
+There could not be any precautions.
+There must not be any responsibility.
+There should not be any neglect.
+There have not been any species.
+There may be some minor disadvantages.
+There will be various advantages.
+There will be unequal successes.
+There could be some minor failures.
+There ought not to be any great failures.
+There could not be any definite peace.
+There has not been any definite cause.
+There has not been any foreign influence.
+There cannot be any industrialisation.
+There will not be any nationalisation.
+There cannot be any rapid transport.
+There should not be any great losses.
+There will not be any foreign species.
+There may not be any heavy rainfall.
+There may not be any agricultural reform.
+There have not been any similar stages.
+There have not been any common species.
+There must some effective precautions.
+There may not be any intensive agriculture.
+There ought not to be any rapid erosion.
+There will not be any profitable agriculture.
+There must not be any similar neglect.
+There could not be any effective precautions.
+There must not be any unequal responsibilities.
+There should not be any great disadvantages.
+There may be a slight tendency towards improvement soon.
+There will not be any further nationalisation.
+There has not been any concept of data distortion.
+There is a new form.
+There is a thin wire.
+There is a new type.
+There is a short test.
+There is a faint hope.
+There is a new theory.
+There is a new source.
+There is a tendency.
+There is a statement.
+There is a condition.
+There is a large supply.
+There is a short summary.
+There is a large profit.
+There is a slight tendency.
+There is a slight vibration.
+There is a high temperature.
+There is a false statement.
+There may be a faint possibility.
+There may be a slight tendency.
+There may be a slight vibration.
+There is a long examination.
+There is a faint possibility.
+There is a good translation.
+There is a hopeful solution.
+There is a slight similarity.
+There may be a good translation.
+There could be a high temperature.
+There might be a hopeful solution.
+There is a great improvement.
+There is a useful suggestion.
+There could be a slight similarity.
+There is an important condition.
+There has been some foreign influence.
+There must be some industrial reforms.
+reason for failure
+There can be no reason for failure.
+easy solution to this problem
+There must be an easy solution to this problem.
+easy solution to this problem
+There may be no easy solution to this problem.
+new theories in this field
+There have been no new theories in this field.
+at the meeting so far
+decision at the meeting so far
+There has been no decision at the meeting so far.
+improvement in the quality of the fruit
+There can be an improvement in the quality of the fruit.
+serious flying accident near the airport
+There has been a serious flying accident near the airport.
+formal justification for the budget cuts
+There has been no formal justification for the budget cuts.
+precise definition for every core concept
+There must be a precise definition for every core concept.
+automatic extension of the existing contract
+There will be no automatic extension of the existing contract.
+clear resolution to the ongoing conflict
+There has been no clear resolution to the ongoing conflict.
+very heavy rainfall in these areas
+There has been a very heavy rainfall in these areas.
+possibility of improvement before next year
+There can be no possibility of improvement before next year.
+tendency towards improvement in recent years
+There has been no tendency towards improvement in recent years.
+resemblance between the two cases
+There can be no resemblance between the two cases.
+at the top of this machine
+filter at the top of this machine
+There must be a filter at the top of this machine.
+in this part of the machine
+filter in this part of the machine
+There must be no filter in this part of the machine.
+faint hope of improvement soon
+There could be a faint hope of improvement soon.
+evidence of guilt in the circumstances
+There could be no evidence of guilt in the circumstances.
+protection from fire in the laboratory
+There may be no protection from fire in the laboratory.
+absorption of the light rays so far
+There has been no absorption of the light rays so far.
+comparison between these two actions
+There can be no comparison between these two actions.
+between the two types of plant
+resemblance between the two types of plant
+There can be no resemblance between the two types of plant.
+direct relevance between these two issues
+There may be no direct relevance between these two issues.
+stable growth without financial investment
+There can be no stable growth without financial investment.
+better framework for this specific research
+There could be no better framework for this specific research.
+possibility of failure in this matter
+There must be no possibility of failure in this matter.
+of an improvement in the quality of the fruit
+doubt of an improvement in the quality of the fruit
+There can be no doubt of an improvement in the quality of the fruit.
+significant alteration in the research methodology
+There has been no significant alteration in the research methodology.
+discrimination based on gender or ethnicity
+There must be no discrimination based on gender or ethnicity.
+immediate assessment of the structural damage
+There must be an immediate assessment of the structural damage.
+sustainable source of funding for the project
+There must be a sustainable source of funding for the project.
+reliable mechanism to monitor the emissions
+There ought to be a reliable mechanism to monitor the emissions.
+some inconsistencies in the analyzed samples
+There must have been some inconsistencies in the analyzed samples.
+major recession in the domestic economy
+There must have been a major recession in the domestic economy.
+in Geology this afternoon
+short test in Geology this afternoon
+There will be a short test
+There will be a short test in Geology this afternoon.
+of improvement next year
+faint possibility of improvement next year
+There may be a faint possibility
+There may be a faint possibility of improvement next year.
+of this work in the library
+good translation of this work in the library
+There will be a good translation
+There will be a good translation of this work in the library.
+until the year after next
+wheat from this area until the year after next
+There will be no wheat
+There will be no wheat from this area until the year after next.
+until next year
+further excavations in this area until next year
+There will be no further excavations
+There will be no further excavations in this area until next year.
+at the exhibition tomorrow
+new works of art at the exhibition tomorrow
+There may be no new works
+There may be no new works of art at the exhibition tomorrow.
+in public policy regarding welfare
+noticeable shift in public policy regarding welfare
+There has been a noticeable shift in public policy regarding welfare.
+of data distortion in the past
+numerous occurrences of data distortion in the past
+There have been numerous occurrences of data distortion in the past.
+in the initial compilation
+systematic error in the initial compilation
+There must have been a systematic error
+There must have been a systematic error in the initial compilation.
+available substitute for this chemical component
+There might not be an available substitute
+There might not be an available substitute for this chemical component.
+in the statistical estimation
+high degree of accuracy in the statistical estimation
+There must be a high degree
+There must be a high degree of accuracy in the statistical estimation.
+formal registration for the conference yet
+There has not been any formal registration
+There has not been any formal registration for the conference yet.
+on the welfare of the individuals
+more focus on the welfare of the individuals
+There should be more focus on the welfare of the individuals.
+within the next few years
+new form of power within the next few years
+There may be a new form
+There may be a new form of power within the next few years.
+at a later stage of the disease
+high temperature at a later stage of the disease
+There could be a high temperature at a later stage of the disease.
+between the different types of plant
+slight similarity between the different types of plant
+There could be a slight similarity between the different types of plant.
+possibility of improvement in the wheat crop next year
+There might be a possibility
+There might be a possibility of improvement in the wheat crop next year.
+towards improvement at a later stage
+slight tendency towards improvement at a later stage
+There may be a slight tendency towards improvement at a later stage.
+between the two types of plant
+slight resemblance between the two types of plant
+There may be a slight resemblance between the two types of plant.
+beautiful works of art at the exhibition tomorrow
+There should be some beautiful works
+There should be some beautiful works of art at the exhibition tomorrow.
+serious flying accident in the last ten years
+There has been no serious flying accident
+There has been no serious flying accident in the last ten years.
+in the structure of the organization
+steady evolution in the structure of the organization
+There has been a steady evolution in the structure of the organization.
+in the witness testimonies
+several contradictions in the witness testimonies
+There have been several contradictions in the witness testimonies.
+enough evidence to support this specific hypothesis
+There has not been enough evidence
+There has not been enough evidence to support this specific hypothesis.
+clear indicator of economic stability this quarter
+There has not been a clear indicator
+There has not been a clear indicator of economic stability this quarter.
+unverified variables in the final equation
+There must not be any unverified variables
+There must not be any unverified variables in the final equation.
+external interference during the investigation
+There must not be any external interference
+There must not be any external interference during the investigation.
+in the working hours of the staff
+more flexibility in the working hours of the staff
+There ought to be more flexibility in the working hours of the staff.
+of the authors' contributions
+explicit acknowledgement of the authors' contributions
+There ought to be an explicit acknowledgement of the authors' contributions.
+in the data processing phase
+significant error in the data processing phase
+There should not be any significant error in the data processing phase.
+sufficient integration between the systems
+There must not have been sufficient integration
+There must not have been sufficient integration between the systems.
+more appropriate method for this study
+There could not have been a more appropriate method
+There could not have been a more appropriate method for this study.
+no coincidence in those identical results
+There could have been no coincidence
+There could have been no coincidence in those identical results.
+ethical implication in that procedure
+There could have been an ethical implication
+There could have been an ethical implication in that procedure.
+dedicated to the theory of relativity
+special session dedicated to the theory of relativity
+There will be a special session dedicated to the theory of relativity.
+in the market prices
+unpredicted fluctuation in the market prices
+There must have been an unpredicted fluctuation in the market prices.
+new source of raw material in the next 10 years
+There will be a new source
+There will be a new source of raw material in the next 10 years.
+with the members for more than two months
+contact with the members for more than two months
+There has been no contact with the members for more than two months.
+excavation in this area in the next two years
+There will be more excavation
+There will be more excavation in this area in the next two years.
+gold and silver objects in the exhibition of art
+There were many gold and silver objects in the exhibition of art.
+new sources of information on this subject
+There could have been no new sources
+There could have been no new sources of information on this subject.
+in institutional communication
+temporary breakdown in institutional communication
+There must have been a temporary breakdown in institutional communication.
+different outcome if the criteria were modified
+There could have been a different outcome
+There could have been a different outcome if the criteria were modified.
+total collapse without structural flaws
+There could not have been a total collapse
+There could not have been a total collapse without structural flaws.
+of information on this subject in this book
+new sources of information on this subject in this book
+There will be many new sources of information on this subject in this book.
+during the selection process
+administrative oversight during the selection process
+There must have been an administrative oversight during the selection process.
+between the results of the two experiments
+results of the two experiments
+There must have been a difference
+There must have been a difference between the results of the two experiments.
+better translation of that work in the library
+There should have been a better translation of that work in the library.
+large supply of raw materials for export from these areas
+There can be no large supply of raw materials for export from these areas.

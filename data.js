@@ -1426,6 +1426,506 @@ function buildUnit6Lesson1Exercises() {
   return exercises;
 }
 
+const unit6Lesson1SentencesRaw = [
+  { en: "The analysis is a requirement.", tr: "Analiz bir gerekliliktir.", word: "requirement", trWord: "gereklilik", blank: "The analysis is a ___." },
+  { en: "The policy is a guarantee.", tr: "Politika bir garantidir.", word: "guarantee", trWord: "garanti", blank: "The policy is a ___." },
+  { en: "The experiment is a test.", tr: "Deney bir testtir.", word: "experiment", trWord: "deney", blank: "The ___ is a test." },
+  { en: "The data are an indicator.", tr: "Veriler bir göstergedir.", word: "indicator", trWord: "gösterge", blank: "The data are an ___." },
+  { en: "The framework is a structure.", tr: "Çerçeve bir yapıdır.", word: "structure", trWord: "yapı", blank: "The framework is a ___." },
+  { en: "The theory is a concept.", tr: "Teori bir kavramdır.", word: "concept", trWord: "kavram", blank: "The theory is a ___." },
+  { en: "The contract is a legal document.", tr: "Sözleşme yasal bir belgedir.", word: "contract", trWord: "sözleşme", blank: "The ___ is a legal document." },
+  { en: "The method is a procedure.", tr: "Yöntem bir prosedürdür.", word: "procedure", trWord: "prosedür", blank: "The method is a ___." },
+  { en: "The assessment is an evaluation.", tr: "Değerlendirme bir değerlendirmedir.", word: "assessment", trWord: "değerlendirme", blank: "The ___ is an evaluation." },
+  { en: "The formula is a definition.", tr: "Formül bir tanımdır.", word: "definition", trWord: "tanım", blank: "The formula is a ___." },
+  { en: "The sector is an area.", tr: "Sektör bir alandır.", word: "sector", trWord: "sektör", blank: "The ___ is an area." },
+  { en: "The respondent is an individual.", tr: "Katılımcı bir bireydir.", word: "individual", trWord: "birey", blank: "The respondent is an ___." },
+  { en: "The outcome is a benefit.", tr: "Sonuç bir faydadır.", word: "benefit", trWord: "fayda", blank: "The outcome is a ___." },
+  { en: "The legislation is a principle.", tr: "Mevzuat bir ilkedir.", word: "legislation", trWord: "mevzuat", blank: "The ___ is a principle." },
+  { en: "The summary is a text.", tr: "Özet bir metindir.", word: "summary", trWord: "özet", blank: "The summary is a ___." },
+  { en: "The source is a journal.", tr: "Kaynak bir dergidir.", word: "journal", trWord: "dergi", blank: "The source is a ___." },
+  { en: "The category is an element.", tr: "Kategori bir elementtir.", word: "element", trWord: "element", blank: "The category is an ___." },
+  { en: "The institution is an authority.", tr: "Kurum bir otoritedir.", word: "authority", trWord: "otorite", blank: "The institution is an ___." },
+  { en: "The revenue is an income.", tr: "Gelir bir gelirdir.", word: "revenue", trWord: "gelir", blank: "The ___ is an income." },
+  { en: "The component is a factor.", tr: "Bileşen bir faktördür.", word: "component", trWord: "bileşen", blank: "The component is a ___." }
+];
+
+const unit6Lesson2SentencesRaw = [
+  { en: "The ground is wet", tr: "Zemin ıslaktır", word: "wet", trWord: "ıslak", blank: "The ground is ___" },
+  { en: "The cost is high", tr: "Maliyet yüksektir", word: "cost", trWord: "maliyet", blank: "The ___ is high" },
+  { en: "The price is low", tr: "Fiyat düşüktür", word: "price", trWord: "fiyat", blank: "The ___ is low" },
+  { en: "The answer is wrong", tr: "Cevap yanlıştır", word: "wrong", trWord: "yanlış", blank: "The answer is ___" },
+  { en: "The explanation is long", tr: "Açıklama uzundur", word: "explanation", trWord: "açıklama", blank: "The ___ is long" },
+  { en: "The machine is expensive", tr: "Makine pahalıdır", word: "expensive", trWord: "pahalı", blank: "The machine is ___" },
+  { en: "The results are important", tr: "Sonuçlar önemlidir", word: "results", trWord: "sonuçlar", blank: "The ___ are important" },
+  { en: "The expenses are high", tr: "Masraflar yüksektir", word: "expenses", trWord: "masraflar", blank: "The ___ are high" },
+  { en: "The experiments are important", tr: "Deneyler önemlidir", word: "experiments", trWord: "deneyler", blank: "The ___ are important" },
+  { en: "The substances are pure", tr: "Maddeler saftır", word: "pure", trWord: "saf", blank: "The substances are ___" },
+  { en: "The substance is impure", tr: "Madde saf değildir", word: "impure", trWord: "saf değil", blank: "The substance is ___" },
+  { en: "The results are favourable", tr: "Sonuçlar olumludur", word: "favourable", trWord: "olumlu", blank: "The results are ___" },
+  { en: "The costs are low", tr: "Maliyetler düşüktür", word: "costs", trWord: "maliyetler", blank: "The ___ are low" },
+  { en: "The reactions are slow", tr: "Tepkimeler yavaştır", word: "reactions", trWord: "tepkimeler", blank: "The ___ are slow" },
+  { en: "Bacteria are present", tr: "Bakteriler mevcuttur", word: "present", trWord: "mevcut", blank: "Bacteria are ___" },
+  { en: "Profits are high", tr: "Kazançlar yüksektir", word: "profits", trWord: "kazançlar", blank: "___ are high" }
+];
+
+const unit6Lesson3SentencesRaw = [
+  { en: "The student is an English doctor", tr: "Öğrenci İngiliz bir doktordur", word: "English", trWord: "İngiliz", blank: "The student is an ___ doctor" },
+  { en: "The man is a Turkish professor", tr: "Adam Türk bir profesördür", word: "Turkish", trWord: "Türk", blank: "The man is a ___ professor" },
+  { en: "The building is a modern hospital", tr: "Bina modern bir hastanedir", word: "modern", trWord: "modern", blank: "The building is a ___ hospital" },
+  { en: "The book is a French dictionary", tr: "Kitap Fransızca bir sözlüktür", word: "French", trWord: "Fransızca", blank: "The book is a ___ dictionary" },
+  { en: "The woman is a good lawyer", tr: "Kadın iyi bir avukattır", word: "good", trWord: "iyi", blank: "The woman is a ___ lawyer" },
+  { en: "The statement is an interesting confession", tr: "İfade ilginç bir itiraftır", word: "interesting", trWord: "ilginç", blank: "The statement is an ___ confession" },
+  { en: "The paper is a reliable guarantee", tr: "Belge güvenilir bir garantidir", word: "reliable", trWord: "güvenilir", blank: "The paper is a ___ guarantee" },
+  { en: "The experiment is a successful test", tr: "Deney başarılı bir testtir", word: "successful", trWord: "başarılı", blank: "The experiment is a ___ test" },
+  { en: "The chapter is a short summary", tr: "Bölüm kısa bir özettir", word: "short", trWord: "kısa", blank: "The chapter is a ___ summary" },
+  { en: "The lesson is an easy preparation", tr: "Ders kolay bir hazırlıktır", word: "easy", trWord: "kolay", blank: "The lesson is an ___ preparation" },
+  { en: "The lesson is an interesting experiment", tr: "Ders ilginç bir deneydir", word: "experiment", trWord: "deney", blank: "The lesson is an interesting ___" },
+  { en: "The method is a successful experiment", tr: "Yöntem başarılı bir deneydir", word: "method", trWord: "yöntem", blank: "The ___ is a successful experiment" },
+  { en: "The experiment is an unexpected success", tr: "Deney beklenmedik bir başarıdır", word: "unexpected", trWord: "beklenmedik", blank: "The experiment is an ___ success" },
+  { en: "Bacteria are living organisms", tr: "Bakteriler canlı organizmalardır", word: "living", trWord: "canlı", blank: "Bacteria are ___ organisms" },
+  { en: "Gold is a precious metal", tr: "Altın değerli bir metaldir", word: "precious", trWord: "değerli", blank: "Gold is a ___ metal" },
+  { en: "Oxygen is a non-metallic element", tr: "Oksijen metalik olmayan bir elementtir", word: "non-metallic", trWord: "metalik olmayan", blank: "Oxygen is a ___ element" }
+];
+
+const unit6Lesson4SentencesRaw = [
+  { en: "The student is in the train", tr: "Öğrenci trendedir", word: "train", trWord: "tren", blank: "The student is in the ___" },
+  { en: "The employer is at the office", tr: "İşveren ofistedir", word: "office", trWord: "ofis", blank: "The employer is at the ___" },
+  { en: "The explanation is at the end", tr: "Açıklama sondadır", word: "end", trWord: "son", blank: "The explanation is at the ___" },
+  { en: "The machine is in the factory", tr: "Makine fabrikadadır", word: "factory", trWord: "fabrika", blank: "Light is in the soil" }, // dummy blank, will replace with original
+  { en: "The substance is in the test-tube", tr: "Madde deney tüpündedir", word: "test-tube", trWord: "deney tüpü", blank: "The substance is in the ___" },
+  { en: "The answer is in the book", tr: "Cevap kitaptadır", word: "book", trWord: "kitap", blank: "The answer is in the ___" },
+  { en: "The shop is on the corner", tr: "Dükkan köşededir", word: "corner", trWord: "köşe", blank: "The shop is on the ___" },
+  { en: "The building is on the other side", tr: "Bina diğer taraftadır", word: "side", trWord: "taraf", blank: "The building is on the other ___" },
+  { en: "The test-tube is on my table", tr: "Deney tüpü masamın üzerindedir", word: "table", trWord: "masa", blank: "The test-tube is on my ___" },
+  { en: "The summary is at the end", tr: "Özet sondadır", word: "summary", trWord: "özet", blank: "The ___ is at the end" },
+  { en: "The papers are on my table", tr: "Kağıtlar masamın üzerindedir", word: "papers", trWord: "kağıtlar", blank: "The ___ are on my table" },
+  { en: "The buildings are in the centre", tr: "Binalar merkezdedir", word: "centre", trWord: "merkez", blank: "The buildings are in the ___" },
+  { en: "The workers are in the factory", tr: "İşçiler fabrikadadır", word: "workers", trWord: "işçiler", blank: "The ___ are in the factory" },
+  { en: "The factories are outside the town", tr: "Fabrikalar kasabanın dışındadır", word: "outside", trWord: "dışında", blank: "The factories are ___ the town" },
+  { en: "The reports are from the employers", tr: "Raporlar işverenlerdendir", word: "employers", trWord: "işverenler", blank: "The reports are from the ___" },
+  { en: "Lime is in the soil", tr: "Kireç topraktadır", word: "soil", trWord: "toprak", blank: "Lime is in the ___" }
+];
+
+// Correcting the blank for "The machine is in the factory" in unit6Lesson4SentencesRaw
+unit6Lesson4SentencesRaw[3].blank = "The machine is in the ___";
+
+function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offset) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const slice = [];
+  for (let i = 0; i < 15; i++) {
+    const idx = (offset + i) % sentences.length;
+    slice.push(sentences[idx]);
+  }
+
+  // 1. Matching (2 questions)
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(0, 4).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(4, 8).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  const getMcDistractors = (targetVal, isTr) => {
+    const list = sentences.filter(s => (isTr ? s.tr : s.en) !== targetVal).map(s => isTr ? s.tr : s.en);
+    const shuffled = shuffle([...new Set(list)]);
+    while (shuffled.length < 3) {
+      shuffled.push(isTr ? "deneme" : "test");
+    }
+    return shuffled.slice(0, 3);
+  };
+
+  const getWbDistractors = (targetWords, isTr) => {
+    const list = sentences.map(s => (isTr ? s.tr : s.en).split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""))).flat();
+    const unique = [...new Set(list)].filter(w => !targetWords.includes(w));
+    const shuffled = shuffle(unique);
+    while (shuffled.length < 3) {
+      shuffled.push(isTr ? "ve" : "the");
+    }
+    return shuffled.slice(0, 3);
+  };
+
+  // 2. Multiple Choice (4 questions)
+  {
+    const s = slice[8];
+    const dist = getMcDistractors(s.tr, true);
+    const options = shuffle([s.tr, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_0`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.tr),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[9];
+    const dist = getMcDistractors(s.tr, true);
+    const options = shuffle([s.tr, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_1`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.tr),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[10];
+    const dist = getMcDistractors(s.en, false);
+    const options = shuffle([s.en, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_2`,
+      type: "multiple-choice",
+      prompt: `"${s.tr}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.en),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  {
+    const s = slice[11];
+    const dist = getMcDistractors(s.en, false);
+    const options = shuffle([s.en, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_3`,
+      type: "multiple-choice",
+      prompt: `"${s.tr}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.en),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 3. Word Bank (5 questions)
+  {
+    const s = slice[0];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_0`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[1];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_1`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[2];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_2`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[3];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_3`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  {
+    const s = slice[4];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_4`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 4. Translation Text (4 questions)
+  {
+    const s = slice[12];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_0`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[13];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_1`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[14];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
+      type: "translation-text",
+      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: s.en,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  {
+    const s = slice[5];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_3`,
+      type: "translation-text",
+      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: s.en,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  return {
+    id: `u${unitId}l${lessonId}ex${exId}`,
+    title: `Alıştırma ${exId}: Yapı Çalışması`,
+    description: `Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (${offset + 1}-${offset + 15})`,
+    questions: qList
+  };
+}
+
+function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offset) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const slice = [];
+  for (let i = 0; i < 10; i++) {
+    const idx = (offset + i) % sentences.length;
+    slice.push(sentences[idx]);
+  }
+
+  // 1. Matching (2 questions)
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(0, 4).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(4, 8).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  const getMcDistractors = (targetVal, isTr) => {
+    const list = sentences.filter(s => (isTr ? s.tr : s.en) !== targetVal).map(s => isTr ? s.tr : s.en);
+    const shuffled = shuffle([...new Set(list)]);
+    while (shuffled.length < 3) {
+      shuffled.push(isTr ? "deneme" : "test");
+    }
+    return shuffled.slice(0, 3);
+  };
+
+  const getWbDistractors = (targetWords, isTr) => {
+    const list = sentences.map(s => (isTr ? s.tr : s.en).split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""))).flat();
+    const unique = [...new Set(list)].filter(w => !targetWords.includes(w));
+    const shuffled = shuffle(unique);
+    while (shuffled.length < 3) {
+      shuffled.push(isTr ? "ve" : "the");
+    }
+    return shuffled.slice(0, 3);
+  };
+
+  // 2. Multiple Choice (2 questions)
+  {
+    const s = slice[8];
+    const dist = getMcDistractors(s.tr, true);
+    const options = shuffle([s.tr, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_0`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.tr),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[9];
+    const dist = getMcDistractors(s.en, false);
+    const options = shuffle([s.en, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_1`,
+      type: "multiple-choice",
+      prompt: `"${s.tr}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.en),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 3. Word Bank (3 questions)
+  {
+    const s = slice[0];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_0`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[1];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_1`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[2];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_2`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 4. Translation Text (3 questions)
+  {
+    const s = slice[3];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_0`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[4];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_1`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[5];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
+      type: "translation-text",
+      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: s.en,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  return {
+    id: `u${unitId}l${lessonId}ex${exId}`,
+    title: `Alıştırma ${exId}: Yapı Çalışması`,
+    description: `Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (${offset + 1}-${offset + 10})`,
+    questions: qList
+  };
+}
+
 const unit1LessonSentences = {
   1: {
     exercises: buildUnit6Lesson1Exercises()
@@ -1936,6 +2436,176 @@ const unit5LessonSentences = {
     { en: "Why do they change the plan", tr: "Planı neden değiştiriyorlar", word: "change", trWord: "değiştiriyorlar", blank: "Why do they ___ the plan" }
   ]
 };
+
+const unit9Lesson1SentencesRaw = [
+  { en: "Is the data valid?", tr: "Veri geçerli midir?", word: "valid", trWord: "geçerli", blank: "Is the data ___?" },
+  { en: "Are the documents ready?", tr: "Belgeler hazır mıdır?", word: "ready", trWord: "hazır", blank: "Are the documents ___?" },
+  { en: "Was the concept clear?", tr: "Kavram açık mıydı?", word: "clear", trWord: "açık", blank: "Was the concept ___?" },
+  { en: "Were the methods standards?", tr: "Yöntemler standart mıydı?", word: "standards", trWord: "standart", blank: "Were the methods ___?" },
+  { en: "Is the author present?", tr: "Yazar mevcut mudur?", word: "present", trWord: "mevcut", blank: "Is the author ___?" },
+  { en: "Are the factors internal?", tr: "Faktörler içsel midir?", word: "internal", trWord: "içsel", blank: "Are the factors ___?" },
+  { en: "Was the response negative?", tr: "Yanıt olumsuz muydu?", word: "negative", trWord: "olumsuz", blank: "Was the response ___?" },
+  { en: "Were the criteria strict?", tr: "Kriterler katı mıydı?", word: "strict", trWord: "katı", blank: "Were the criteria ___?" },
+  { en: "Is the sector growing?", tr: "Sektör büyüyor mu?", word: "growing", trWord: "büyüyor", blank: "Is the sector ___?" },
+  { en: "Are you the analyst?", tr: "Siz analist misiniz?", word: "analyst", trWord: "analist", blank: "Are you the ___?" },
+  { en: "Is the legal framework sufficient for this case?", tr: "Yasal çerçeve bu dava için yeterli midir?", word: "framework", trWord: "çerçeve", blank: "Is the legal ___ sufficient for this case?" },
+  { en: "Are the economic indicators stable this month?", tr: "Ekonomik göstergeler bu ay istikrarlı mıdır?", word: "stable", trWord: "istikrarlı", blank: "Are the economic indicators ___ this month?" },
+  { en: "Was the initial assessment fully accurate?", tr: "İlk değerlendirme tamamen doğru muydu?", word: "assessment", trWord: "değerlendirme", blank: "Was the initial ___ fully accurate?" },
+  { en: "Were the specific sources verified by experts?", tr: "Belirli kaynaklar uzmanlar tarafından doğrulandı mı?", word: "verified", trWord: "doğrulandı", blank: "Were the specific sources ___ by experts?" },
+  { en: "Is the financial structure completely transparent?", tr: "Finansal yapı tamamen şeffaf mıdır?", word: "structure", trWord: "yapı", blank: "Is the financial ___ completely transparent?" },
+  { en: "Are the individual variables controlled well?", tr: "Bireysel değişkenler iyi kontrol ediliyor mu?", word: "variables", trWord: "değişkenler", blank: "Are the individual ___ controlled well?" },
+  { en: "Was the primary benefit clearly identified?", tr: "Temel fayda açıkça belirlendi mi?", word: "benefit", trWord: "fayda", blank: "Was the primary ___ clearly identified?" },
+  { en: "Were the environmental factors considered?", tr: "Çevresel faktörler dikkate alındı mı?", word: "factors", trWord: "faktörler", blank: "Were the environmental ___ considered?" },
+  { en: "Is the final outcome satisfactory for everyone?", tr: "Nihai sonuç herkes için tatmin edici midir?", word: "outcome", trWord: "sonuç", blank: "Is the final ___ satisfactory for everyone?" },
+  { en: "Are these academic journals peer-reviewed?", tr: "Bu akademik dergiler hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed?" },
+  { en: "Is the methodological approach relevant to the current study?", tr: "Metodolojik yaklaşım mevcut çalışma ile ilgili midir?", word: "approach", trWord: "yaklaşım", blank: "Is the methodological ___ relevant to the current study?" },
+  { en: "Are the statistical computations available for public review?", tr: "İstatistiksel hesaplamalar kamuya açık inceleme için mevcut mudur?", word: "available", trWord: "mevcut", blank: "Are the statistical computations ___ for public review?" },
+  { en: "Was the constitutional amendment approved by the parliament?", tr: "Anayasa değişikliği parlamento tarafından onaylandı mı?", word: "amendment", trWord: "değişiklik", blank: "Was the constitutional ___ approved by the parliament?" },
+  { en: "Were the administrative procedures followed during the crisis?", tr: "Kriz sırasında idari prosedürler takip edildi mi?", word: "procedures", trWord: "prosedürler", blank: "Were the administrative ___ followed during the crisis?" },
+  { en: "Is the theoretical assumption supported by empirical evidence?", tr: "Teorik varsayım ampirik kanıtlarla destekleniyor mu?", word: "assumption", trWord: "varsayım", blank: "Is the theoretical ___ supported by empirical evidence?" },
+  { en: "Are the global distribution networks functional right now?", tr: "Küresel dağıtım ağları şu anda işlevsel midir?", word: "distribution", trWord: "dağıtım", blank: "Are the global ___ networks functional right now?" },
+  { en: "Was the historical document genuine according to analysts?", tr: "Tarihsel belge analistlere göre orijinal miydi?", word: "analysts", trWord: "analistlere", blank: "Was the historical document genuine according to ___?" },
+  { en: "Were the experimental results consistent across all trials?", tr: "Deneysel sonuçlar tüm denemelerde tutarlı mıydı?", word: "consistent", trWord: "tutarlı", blank: "Were the experimental results ___ across all trials?" },
+  { en: "Is the institutional framework adaptable to new legislation?", tr: "Kurumsal çerçeve yeni mevzuata uyarlanabilir mi?", word: "legislation", trWord: "mevzuata", blank: "Is the institutional framework adaptable to new ___?" },
+  { en: "Are the demographic categories exclusive in this research?", tr: "Bu araştırmada demografik kategoriler birbirini dışlayıcı mıdır?", word: "categories", trWord: "kategoriler", blank: "Are the demographic ___ exclusive in this research?" }
+];
+
+
+const unit9Lesson2SentencesRaw = [
+  { en: "Did you analyze it?", tr: "Onu analiz ettin mi?", word: "analyze", trWord: "analiz ettin", blank: "Did you ___ it?" },
+  { en: "Does it function well?", tr: "İyi çalışıyor mu?", word: "function", trWord: "çalışıyor", blank: "Does it ___ well?" },
+  { en: "Do they export goods?", tr: "Mal ihraç ediyorlar mı?", word: "export", trWord: "ihraç ediyorlar", blank: "Do they ___ goods?" },
+  { en: "Did he publish the book?", tr: "Kitabı yayımladı mı?", word: "publish", trWord: "yayımladı", blank: "Did he ___ the book?" },
+  { en: "Does she assume the risk?", tr: "Riski üstleniyor mu?", word: "assume", trWord: "üstleniyor", blank: "Does she ___ the risk?" },
+  { en: "Do we require a permit?", tr: "İzin belgesi gerekiyor mu?", word: "require", trWord: "gerekiyor", blank: "Do we ___ a permit?" },
+  { en: "Did it indicate a change?", tr: "Bir değişiklik gösterdi mi?", word: "indicate", trWord: "gösterdi", blank: "Did it ___ a change?" },
+  { en: "Does this derive from code?", tr: "Bu, kuraldan mı türiyor?", word: "derive", trWord: "türiyor", blank: "Does this ___ from code?" },
+  { en: "Do they source materials locally?", tr: "Malzemeleri yerel olarak mı tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Do they ___ materials locally?" },
+  { en: "Did you estimate the cost?", tr: "Maliyeti tahmin ettin mi?", word: "estimate", trWord: "tahmin ettin", blank: "Did you ___ the cost?" },
+  { en: "Did the analyst evaluate the raw data?", tr: "Analist ham veriyi değerlendirdi mi?", word: "evaluate", trWord: "değerlendirdi", blank: "Did the analyst ___ the raw data?" },
+  { en: "Does the government modify the tax policy?", tr: "Hükümet vergi politikasını değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the tax policy?" },
+  { en: "Do researchers establish a clear framework?", tr: "Araştırmacılar net bir çerçeve kuruyor mu?", word: "establish", trWord: "kuruyor", blank: "Do researchers ___ a clear framework?" },
+  { en: "Did the committee exclude the final report?", tr: "Komite nihai raporu hariç tuttu mu?", word: "exclude", trWord: "hariç tuttu", blank: "Did the committee ___ the final report?" },
+  { en: "Does this factor influence the public opinion?", tr: "Bu faktör kamuoyunu etkiliyor mu?", word: "influence", trWord: "etkiliyor", blank: "Does this factor ___ the public opinion?" },
+  { en: "Do institutions structure their academic curriculum?", tr: "Kurumlar akademik müfredatlarını yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do institutions ___ their academic curriculum?" },
+  { en: "Did the team integrate the new software?", tr: "Ekip yeni yazılımı entegre etti mi?", word: "integrate", trWord: "entegre etti", blank: "Did the team ___ the new software?" },
+  { en: "Does the theory define the phenomenon correctly?", tr: "Teori olguyu doğru tanımlıyor mu?", word: "define", trWord: "tanımlıyor", blank: "Does the theory ___ the phenomenon correctly?" },
+  { en: "Do companies achieve their annual production goals?", tr: "Şirketler yıllık üretim hedeflerine ulaşıyor mu?", word: "achieve", trWord: "ulaşıyor", blank: "Do companies ___ their annual production goals?" },
+  { en: "Did the manager adjust the financial budget?", tr: "Müdür finansal bütçeyi ayarladı mı?", word: "adjust", trWord: "ayarladı", blank: "Did the manager ___ the financial budget?" },
+  { en: "Did the administration abolish the controversial labor legislation?", tr: "Yönetim tartışmalı iş mevzuatını kaldırdı mı?", word: "abolish", trWord: "kaldırdı", blank: "Did the administration ___ the controversial labor legislation?" },
+  { en: "Does the regional economy affect the minority distribution?", tr: "Bölgesel ekonomi azınlık dağılımını etkiliyor mu?", word: "affect", trWord: "etkiliyor", blank: "Does the regional economy ___ the minority distribution?" },
+  { en: "Do separate departments allocate their resources independently?", tr: "Ayrı departmanlar kaynaklarını bağımsız olarak mı tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Do separate departments ___ their resources independently?" },
+  { en: "Did the university adopt the progressive assessment model?", tr: "Üniversite ilerici değerlendirme modelini benimsedi mi?", word: "adopt", trWord: "benimsedi", blank: "Did the university ___ the progressive assessment model?" },
+  { en: "Does this specific variable alter the final analysis?", tr: "Bu özel değişken nihai analizi değiştiriyor mu?", word: "alter", trWord: "değiştiriyor", blank: "Does this specific variable ___ the final analysis?" },
+  { en: "Do modern societies sustain their unique cultural identity?", tr: "Modern toplumlar benzersiz kültürel kimliklerini sürdürüyor mu?", word: "sustain", trWord: "sürdürüyor", blank: "Do modern societies ___ their unique cultural identity?" },
+  { en: "Did the supreme court challenge the legal definition today?", tr: "Anayasa Mahkemesi bugün yasal tanımı sorguladı mı?", word: "challenge", trWord: "sorguladı", blank: "Did the supreme court ___ the legal definition today?" },
+  { en: "Does the ancient text imply rigid social structures?", tr: "Antik metin katı sosyal yapılar mı ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "Does the ancient text ___ rigid social structures?" },
+  { en: "Do laboratory technicians conduct the primary safety experiment?", tr: "Laboratuvar teknisyenleri temel güvenlik deneyini yürütüyor mu?", word: "conduct", trWord: "yürütüyor", blank: "Do laboratory technicians ___ the primary safety experiment?" },
+  { en: "Did the participants interpret the survey instructions accurately?", tr: "Katılımcılar anket yönergelerini doğru yorumladı mı?", word: "interpret", trWord: "yorumladı", blank: "Did the participants ___ the survey instructions accurately?" }
+];
+
+
+const unit9Lesson3SentencesRaw = [
+  { en: "Why is the data wrong?", tr: "Veri neden yanlıştır?", word: "wrong", trWord: "yanlıştır", blank: "Why is the data ___?" },
+  { en: "Where are the documents?", tr: "Belgeler nerededir?", word: "Where", trWord: "nerededir", blank: "___ are the documents?" },
+  { en: "What was the concept?", tr: "Kavram neydi?", word: "What", trWord: "neydi", blank: "___ was the concept?" },
+  { en: "How is the method?", tr: "Yöntem nasıldır?", word: "How", trWord: "nasıldır", blank: "___ is the method?" },
+  { en: "Who was the author?", tr: "Yazar kimdi?", word: "Who", trWord: "kimdi", blank: "___ was the author?" },
+  { en: "Why were the factors dynamic?", tr: "Faktörler neden dinamikti?", word: "dynamic", trWord: "dinamikti", blank: "Why were the factors ___?" },
+  { en: "Where is the sector?", tr: "Sektör nerededir?", word: "Where", trWord: "nerededir", blank: "___ is the sector?" },
+  { en: "What is the percentage?", tr: "Yüzde kaçtır?", word: "percentage", trWord: "yüzde", blank: "What is the ___?" },
+  { en: "How was the response?", tr: "Yanıt nasıldı?", word: "response", trWord: "yanıt", blank: "How was the ___?" },
+  { en: "Who is the analyst?", tr: "Analist kimdir?", word: "analyst", trWord: "analist", blank: "Who is the ___?" },
+  { en: "Why are the legal criteria so rigid?", tr: "Yasal kriterler neden bu kadar katıdır?", word: "rigid", trWord: "katıdır", blank: "Why are the legal criteria so ___?" },
+  { en: "What will be the primary benefit?", tr: "Temel fayda ne olacaktır?", word: "benefit", trWord: "fayda", blank: "What will be the primary ___?" },
+  { en: "How is the financial structure today?", tr: "Bugün finansal yapı nasıldır?", word: "structure", trWord: "yapı", blank: "How is the financial ___ today?" },
+  { en: "Where were the specific sources found?", tr: "Belirli kaynaklar nerede bulundu?", word: "found", trWord: "bulundu", blank: "Where were the specific sources ___?" },
+  { en: "Why is the initial assessment incomplete?", tr: "İlk değerlendirme neden eksiktir?", word: "assessment", trWord: "değerlendirme", blank: "Why is the initial ___ incomplete?" },
+  { en: "What can be the potential outcome?", tr: "Potansiyel sonuç ne olabilir?", word: "outcome", trWord: "sonuç", blank: "What can be the potential ___?" },
+  { en: "Who is the principal investigator here?", tr: "Buradaki asıl araştırmacı kimdir?", word: "investigator", trWord: "araştırmacı", blank: "Who is the principal ___ here?" },
+  { en: "How were the variables so unpredictable?", tr: "Değişkenler nasıl bu kadar tahmin edilemezdi?", word: "variables", trWord: "değişkenler", blank: "How were the ___ so unpredictable?" },
+  { en: "What is the major function of this?", tr: "Bunun ana işlevi nedir?", word: "function", trWord: "işlevi", blank: "What is the major ___ of this?" },
+  { en: "Where are the individual responses?", tr: "Bireysel yanıtlar nerededir?", word: "responses", trWord: "yanıtlar", blank: "Where are the individual ___?" },
+  { en: "Why is the theoretical framework of this study unstable?", tr: "Bu çalışmanın teorik çerçevesi neden istikrarsızdır?", word: "framework", trWord: "çerçevesi", blank: "Why is the theoretical ___ of this study unstable?" },
+  { en: "What was the ultimate constitutional authority of the state?", tr: "Devletin nihai anayasal yetkisi neydi?", word: "authority", trWord: "yetkisi", blank: "What was the ultimate constitutional ___ of the state?" },
+  { en: "How are the economic indicators relevant to this region?", tr: "Ekonomik göstergeler bu bölgeyle nasıl ilgilidir?", word: "indicators", trWord: "göstergeler", blank: "How are the economic ___ relevant to this region?" },
+  { en: "Where is the administrative policy document located now?", tr: "İdari politika belgesi şimdi nerede bulunuyor?", word: "located", trWord: "bulunuyor", blank: "Where is the administrative policy document ___ now?" },
+  { en: "Why were the environmental factors excluded from the report?", tr: "Çevresel faktörler neden rapordan hariç tutuldu?", word: "excluded", trWord: "hariç tutuldu", blank: "Why were the environmental factors ___ from the report?" },
+  { en: "What will be the long-term significance of this discovery?", tr: "Bu keşfin uzun vadeli önemi ne olacaktır?", word: "significance", trWord: "önemi", blank: "What will be the long-term ___ of this discovery?" },
+  { en: "How is the statistical analysis useful for predictions?", tr: "İstatistiksel analiz tahminler için nasıl yararlıdır?", word: "analysis", trWord: "analiz", blank: "How is the statistical ___ useful for predictions?" },
+  { en: "Who was the original creator of this specific methodology?", tr: "Bu özel metodolojinin özgün yaratıcısı kimdi?", word: "methodology", trWord: "metodolojinin", blank: "Who was the original creator of this specific ___?" },
+  { en: "Why is the global distribution of resources so unequal?", tr: "Küresel kaynak dağıtımı neden bu kadar adaletsizdir?", word: "distribution", trWord: "dağıtımı", blank: "Why is the global ___ of resources so unequal?" },
+  { en: "What are the primary components of this chemical compound?", tr: "Bu kimyasal bileşiğin birincil bileşenleri nelerdir?", word: "components", trWord: "bileşenleri", blank: "What are the primary ___ of this chemical compound?" }
+];
+
+
+const unit9Lesson4SentencesRaw = [
+  { en: "Why did they analyze it?", tr: "Onu neden analiz ettiler?", word: "analyze", trWord: "analiz ettiler", blank: "Why did they ___ it?" },
+  { en: "How does it function?", tr: "Nasıl çalışıyor?", word: "function", trWord: "çalışıyor", blank: "How does it ___?" },
+  { en: "What did you estimate?", tr: "Neyi tahmin ettiniz?", word: "estimate", trWord: "tahmin ettiniz", blank: "What did you ___?" },
+  { en: "Where do they source it?", tr: "Onu nereden tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Where do they ___ it?" },
+  { en: "When did he publish it?", tr: "Onu ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did he ___ it?" },
+  { en: "Why does she assume that?", tr: "Bunu neden varsayıyor?", word: "assume", trWord: "varsayıyor", blank: "Why does she ___ that?" },
+  { en: "How did you derive this?", tr: "Bunu nasıl türettiniz?", word: "derive", trWord: "türettiniz", blank: "How did you ___ this?" },
+  { en: "What does this indicate?", tr: "Bu neyi gösteriyor?", word: "indicate", trWord: "gösteriyor", blank: "What does this ___?" },
+  { en: "Where did they establish it?", tr: "Onu nerede kurdular?", word: "establish", trWord: "kurdular", blank: "Where did they ___ it?" },
+  { en: "Why do we require this?", tr: "Buna neden ihtiyaç duyuyoruz?", word: "require", trWord: "ihtiyaç duyuyoruz", blank: "Why do we ___ this?" },
+  { en: "How did the analyst evaluate the data?", tr: "Analist veriyi nasıl değerlendirdi?", word: "evaluate", trWord: "değerlendirdi", blank: "How did the analyst ___ the data?" },
+  { en: "Does the government modify the policy?", tr: "Hükümet politikayı değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the policy?" },
+  { en: "What did the researchers achieve last year?", tr: "Araştırmacılar geçen yıl neyi başardı?", word: "achieve", trWord: "başardı", blank: "What did the researchers ___ last year?" },
+  { en: "Where do institutions structure the framework?", tr: "Kurumlar çerçeveyi nerede yapılandırıyor?", word: "structure", trWord: "yapılandırıyor", blank: "Where do institutions ___ the framework?" },
+  { en: "When did the committee publish the summary?", tr: "Komite özeti ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did the committee ___ the summary?" },
+  { en: "How does this factor influence the outcome?", tr: "Bu faktör sonucu nasıl etkiliyor?", word: "influence", trWord: "etkiliyor", blank: "How does this factor ___ the outcome?" },
+  { en: "Why did the team exclude the respondents?", tr: "Ekip katılımcıları neden hariç tuttu?", word: "exclude", trWord: "hariç tuttu", blank: "Why did the team ___ the respondents?" },
+  { en: "What does the theory define exactly?", tr: "Teori tam olarak neyi tanımlıyor?", word: "define", trWord: "tanımlıyor", blank: "What does the theory ___ exactly?" },
+  { en: "Where did they integrate the technology?", tr: "Teknolojiyi nereye entegre ettiler?", word: "integrate", trWord: "entegre ettiler", blank: "Where did they ___ the technology?" },
+  { en: "Why do companies export their production?", tr: "Şirketler üretimlerini neden ihraç ediyor?", word: "export", trWord: "ihraç ediyor", blank: "Why do companies ___ their production?" },
+  { en: "Why did the administration abolish the old regulatory framework?", tr: "Yönetim eski düzenleyici çerçeveyi neden kaldırdı?", word: "abolish", trWord: "kaldırdı", blank: "Why did the administration ___ the old regulatory framework?" },
+  { en: "How does the global economy affect domestic resource distribution?", tr: "Küresel ekonomi iç kaynak dağılımını nasıl etkiliyor?", word: "affect", trWord: "etkiliyor", blank: "How does the global economy ___ domestic resource distribution?" },
+  { en: "What did the scientific community conclude regarding the data?", tr: "Bilimsel topluluk verilerle ilgili ne sonuç çıkardı?", word: "conclude", trWord: "sonuç çıkardı", blank: "What did the scientific community ___ regarding the data?" },
+  { en: "Where do separate departments allocate their annual financial credit?", tr: "Ayrı departmanlar yıllık finansal kredilerini nereye tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Where do separate departments ___ their annual financial credit?" },
+  { en: "When did the university adopt the new academic assessment method?", tr: "Üniversite yeni akademik değerlendirme yöntemini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the new academic assessment method?" },
+  { en: "How does this specific variable alter the statistical analysis?", tr: "Bu özel değişken istatistiksel analizi nasıl değiştiriyor?", word: "alter", trWord: "değiştiriyor", blank: "How does this specific variable ___ the statistical analysis?" },
+  { en: "Why did the main opposition challenge the legal definition?", tr: "Ana muhalefet yasal tanıma neden karşı çıktı?", word: "challenge", trWord: "karşı çıktı", blank: "Why did the main opposition ___ the legal definition?" },
+  { en: "What does the historical text imply about social structures?", tr: "Tarihsel metin toplumsal yapılar hakkında ne ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "What does the historical text ___ about social structures?" },
+  { en: "Where did the engineers conduct the primary energy experiment?", tr: "Mühendisler temel enerji deneyini nerede yürüttüler?", word: "conduct", trWord: "yürüttüler", blank: "Where did the engineers ___ the primary energy experiment?" },
+  { en: "How do modern societies sustain their cultural identity?", tr: "Modern toplumlar kültürel kimliklerini nasıl sürdürüyor?", word: "sustain", trWord: "sürdürüyor", blank: "How do modern societies ___ their cultural identity?" }
+];
+
+
+const unit9Lesson5SentencesRaw = [
+  { en: "At which level is it?", tr: "Hangi düzeydedir?", word: "level", trWord: "düzeydedir", blank: "At which ___ is it?" },
+  { en: "In which sector are they?", tr: "Hangi sektördedirler?", word: "sector", trWord: "sektördedirler", blank: "In which ___ are they?" },
+  { en: "To what extent was it?", tr: "Ne ölçüdeydi?", word: "extent", trWord: "ölçüdeydi", blank: "To what ___ was it?" },
+  { en: "For which purpose is this?", tr: "Bu hangi amaç içindir?", word: "purpose", trWord: "amaç", blank: "For which ___ is this?" },
+  { en: "By whose authority was it?", tr: "Kimin yetkisiyleydi?", word: "authority", trWord: "yetkisiyleydi", blank: "By whose ___ was it?" },
+  { en: "Under which category are they?", tr: "Hangi kategori altındadırlar?", word: "category", trWord: "kategori", blank: "Under which ___ are they?" },
+  { en: "From which source is it?", tr: "Hangi kaynaktandır?", word: "source", trWord: "kaynaktandır", blank: "From which ___ is it?" },
+  { en: "In what period was it?", tr: "Hangi dönemdeydi?", word: "period", trWord: "dönemdeydi", blank: "In what ___ was it?" },
+  { en: "With which method is it?", tr: "Hangi yöntemledir?", word: "method", trWord: "yöntemledir", blank: "With which ___ is it?" },
+  { en: "On whose data was it?", tr: "Kimin verileri üzerindeydi?", word: "data", trWord: "verileri", blank: "On whose ___ was it?" },
+  { en: "In which academic journal was it published?", tr: "Hangi akademik dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was it published?" },
+  { en: "Under what legal criteria were they selected?", tr: "Hangi yasal kriterler altında seçildiler?", word: "criteria", trWord: "kriterler", blank: "Under what legal ___ were they selected?" },
+  { en: "For which specific purpose is this required?", tr: "Bu hangi özel amaç için gereklidir?", word: "purpose", trWord: "amaç", blank: "For which specific ___ is this required?" },
+  { en: "At what financial percentage was it fixed?", tr: "Hangi finansal yüzdeyle sabitlendi?", word: "percentage", trWord: "yüzdeyle", blank: "At what financial ___ was it fixed?" },
+  { en: "From which primary source is this derived?", tr: "Bu hangi birincil kaynaktan türetilmiştir?", word: "source", trWord: "kaynaktan", blank: "From which primary ___ is this derived?" },
+  { en: "To what degree are the variables dynamic?", tr: "Değişkenler ne derece dinamiktir?", word: "degree", trWord: "derece", blank: "To what ___ are the variables dynamic?" },
+  { en: "With which analytical framework is it compatible?", tr: "Hangi analitik çerçeve ile uyumludur?", word: "framework", trWord: "çerçeve", blank: "With which analytical ___ is it compatible?" },
+  { en: "By what assessment method was it evaluated?", tr: "Hangi değerlendirme yöntemiyle değerlendirildi?", word: "assessment", trWord: "değerlendirme", blank: "By what ___ method was it evaluated?" },
+  { en: "In which economic sector is the crisis visible?", tr: "Kriz hangi ekonomik sektörde görünürdür?", word: "sector", trWord: "sektörde", blank: "In which economic ___ is the crisis visible?" },
+  { en: "On what theoretical assumption is this based?", tr: "Bu hangi teorik varsayıma dayanmaktadır?", word: "assumption", trWord: "varsayıma", blank: "On what theoretical ___ is this based?" },
+  { en: "Under which constitutional clause was the law modified?", tr: "Yasa hangi anayasal madde uyarınca değiştirildi?", word: "clause", trWord: "madde", blank: "Under which constitutional ___ was the law modified?" },
+  { en: "By what statistical methodology were the figures calculated?", tr: "Rakamlar hangi istatistiksel metodolojiyle hesaplandı?", word: "methodology", trWord: "metodolojiyle", blank: "By what statistical ___ were the figures calculated?" },
+  { en: "To what geographic extent is the population distributed?", tr: "Nüfus hangi coğrafi ölçüde dağılmıştır?", word: "extent", trWord: "ölçüde", blank: "To what geographic ___ is the population distributed?" },
+  { en: "For whose ultimate benefit was the policy established?", tr: "Politika kimin nihai faydası için oluşturuldu?", word: "benefit", trWord: "faydası", blank: "For whose ultimate ___ was the policy established?" },
+  { en: "From which institutional perspective was the text interpreted?", tr: "Metin hangi kurumsal perspektiften yorumlandı?", word: "perspective", trWord: "perspektiften", blank: "From which institutional ___ was the text interpreted?" },
+  { en: "In which experimental environment were the plants grown?", tr: "Bitkiler hangi deneysel ortamda yetiştirildi?", word: "environment", trWord: "ortamda", blank: "In which experimental ___ were the plants grown?" },
+  { en: "With what administrative authority is the director acting?", tr: "Müdür hangi idari yetkiyle hareket ediyor?", word: "authority", trWord: "yetkiyle", blank: "With what administrative ___ is the director acting?" },
+  { en: "At which developmental stage are the data components?", tr: "Veri bileşenleri hangi gelişim aşamasındadır?", word: "stage", trWord: "aşamasındadır", blank: "At which developmental ___ are the data components?" },
+  { en: "On which philosophical concept is the framework structured?", tr: "Çerçeve hangi felsefi kavram üzerine yapılandırılmıştır?", word: "concept", trWord: "kavram", blank: "On which philosophical ___ is the framework structured?" },
+  { en: "Through what regulatory process was the contract validated?", tr: "Sözleşme hangi düzenleyici süreçle onaylandı?", word: "process", trWord: "süreçle", blank: "Through what regulatory ___ was the contract validated?" }
+];
+
 
 const unit6LessonSentences = {
   1: [
@@ -3376,18 +4046,38 @@ const rawTopics = [
     icon: "🔑",
     numLessons: 5,
     formulas: [
-      { formula: "Wh- Word + Be + Subject", example: "Where is the post office: Postane nerededir" },
-      { formula: "Wh- Word + Do/Does/Did + Subject + Verb", example: "Where did he live last year: Geçen yıl nerede yaşadı" },
-      { formula: "Be + Subject + ...", example: "Is the man here: Adam burada mıdır" },
-      { formula: "Do/Does/Did + Subject + Verb + ...", example: "Did the employers solve the problem: İşverenler problemi çözdü mü" },
-      { formula: "Preposition + Wh- Word + Auxiliary + Subject + ...", example: "For what purpose is the machine: Makine hangi amaç içindir" }
+      {
+        formula: "Fiil + Özne",
+        example: "Is the data valid?: Veri geçerli midir?",
+        description: "Tercüme Kılavuzu: Bu yapı bir durum (olmak) sorgusudur; cümlede gitmek, yapmak gibi bir hareket fiili yoktur. İngilizcede Am, is, are, was, were kelimeleri başa gelerek cümlenin bir \"durum, nitelik veya konum\" belirttiğini fısıldar. Türkçeye çevirirken cümlenin sonuna mutlaka \"-mı, -mi, -mu, -mü\" soru ekini getirmelisiniz."
+      },
+      {
+        formula: "Yardımcı Fiil + Özne + Fiil",
+        example: "Did the employers solve the problem?: İşverenler problemi çözdü mü?",
+        description: "Tercüme Kılavuzu: Bu yapı bir hareket veya eylem sorgusudur; cümlede yapmak, gerçekleştirmek gibi bir eylem fiili bulunur. İngilizcede can, do, does, did, has, have, will gibi yardımcı fiiller/modallar başa gelerek cümleye soru anlamı katar. Türkçeye çevirirken eyleme bağlı olarak cümlenin sonuna mutlaka \"-mı, -mi, -mu, -mü\" soru ekini getirmelisiniz."
+      },
+      {
+        formula: "Soru Kelimesi + Fiil + Özne",
+        example: "Where is the post office?: Postane nerededir?",
+        description: "Tercüme Kılavuzu: Bu yapı soru kelimeleri (Who, What, Where, When, Why, How vb.) ve olmak (be) fiiliyle kurulan bir durum sorgusudur. Türkçeye çevirirken soru kelimesinin anlamına göre \"nedir, nerededir, nasıldır, ne zaman\" gibi karşılıklar cümlenin sonuna veya ilgili ögeye eklenerek soru anlamı sağlanır."
+      },
+      {
+        formula: "Soru Kelimesi + Yardımcı Fiil + Özne + Fiil",
+        example: "Where did he live last year?: Geçen yıl nerede yaşadı?",
+        description: "Tercüme Kılavuzu: Bu yapı soru kelimeleri (Who, What, Where, When, Why, How vb.) ile birlikte bir eylem fiili içeren ve do, does, did, will, can gibi yardımcı fiillerle kurulan soru yapısıdır. Türkçeye çevirirken soru kelimesinin anlamı (nerede, neden, nasıl, ne zaman) cümleye eklenir ve eylem çekimlenerek soru anlamı oluşturulur."
+      },
+      {
+        formula: "Edat + Soru Kelimesi + Yardımcı Fiil + Özne + Fiil",
+        example: "For what purpose is the machine?: Makine hangi amaç içindir?",
+        description: "Tercüme Kılavuzu: Bu yapı bir edat (with, for, in, at, by vb.) ile başlayan soru kelimesi gruplarının kullanıldığı soru yapısıdır. Edat ve soru kelimesi birleşerek Türkçedeki \"kiminle, hangi amaçla, nerede, ne kadar süreyle\" gibi yönelme, bulunma veya vasıta bildiren soru öbeklerini oluşturur."
+      }
     ],
     subtitles: [
-      "A. Soru kelimesi + fiil + özne (Sayfa 49)",
-      "B. Soru kelimesi + do + özne + mastar (Sayfa 50)",
-      "C. Fiil + özne (Sayfa 51)",
-      "D. Do, does, did + özne + mastar (Sayfa 52)",
-      "E. Edat + soru kelimesi + fiil + özne / mastar (Sayfa 53)"
+      "A. Fiil + Özne (Sayfa 51)",
+      "B. do, does, did fiili + özne + mastar (Sayfa 52)",
+      "C. Soru kelimesi + fiil + özne (Sayfa 49)",
+      "D. Soru kelimesi + do, does, did + özne + mastar (Sayfa 50)",
+      "E. Edat + soru kelimesi + fiil + özne (Sayfa 53)"
     ]
   },
   {
@@ -4908,6 +5598,309 @@ const unit4Lesson13Exercises = {
   ]
 };
 
+const unit5Lesson14SentencesRaw = [
+  // User's sheet (1. Kısım) - 20 phrases
+  { en: "analyzed data", tr: "analiz edilmiş veri", word: "analyzed", trWord: "analiz edilmiş", blank: "___ data" },
+  { en: "uninhabited regions", tr: "insansız bölgeler", word: "uninhabited", trWord: "insansız", blank: "___ regions" },
+  { en: "reduced volume", tr: "azaltılmış hacim", word: "reduced", trWord: "azaltılmış", blank: "___ volume" },
+  { en: "exposed land", tr: "maruz kalmış toprak", word: "exposed", trWord: "maruz kalmış", blank: "___ land" },
+  { en: "required material", tr: "gerekli malzeme", word: "required", trWord: "gerekli", blank: "___ material" },
+  { en: "modified criteria", tr: "değiştirilmiş kriterler", word: "modified", trWord: "değiştirilmiş", blank: "___ criteria" },
+  { en: "identified factors", tr: "belirlenmiş faktörler", word: "identified", trWord: "belirlenmiş", blank: "___ factors" },
+  { en: "estimated revenue", tr: "tahmin edilen gelir", word: "estimated", trWord: "tahmin edilen", blank: "___ revenue" },
+  { en: "structured approaches", tr: "yapılandırılmış yaklaşımlar", word: "structured", trWord: "yapılandırılmış", blank: "___ approaches" },
+  { en: "established policies", tr: "kurulmuş politikalar", word: "established", trWord: "kurulmuş", blank: "___ policies" },
+  { en: "derived conclusions", tr: "çıkarılmış sonuçlar", word: "derived", trWord: "çıkarılmış", blank: "___ conclusions" },
+  { en: "defined concepts", tr: "tanımlanmış kavramlar", word: "defined", trWord: "tanımlanmış", blank: "___ concepts" },
+  { en: "reallocated resources", tr: "yeniden tahsis edilmiş kaynaklar", word: "reallocated", trWord: "yeniden tahsis edilmiş", blank: "___ resources" },
+  { en: "restricted areas", tr: "kısıtlanmış alanlar", word: "restricted", trWord: "kısıtlanmış", blank: "___ areas" },
+  { en: "integrated technology", tr: "entegre teknoloji", word: "integrated", trWord: "entegre", blank: "___ technology" },
+  { en: "selected individuals", tr: "seçilmiş bireyler", word: "selected", trWord: "seçilmiş", blank: "___ individuals" },
+  { en: "evaluated methods", tr: "değerlendirilmiş yöntemler", word: "evaluated", trWord: "değerlendirilmiş", blank: "___ methods" },
+  { en: "sustained growth", tr: "kesintisiz büyüme", word: "sustained", trWord: "kesintisiz", blank: "___ growth" },
+  { en: "published documents", tr: "yayınlanmış belgeler", word: "published", trWord: "yayınlanmış", blank: "___ documents" },
+  { en: "interpreted texts", tr: "yorumlanmış metinler", word: "interpreted", trWord: "yorumlanmış", blank: "___ texts" },
+
+  // User's sheet (1. Kısım) - 20 sentences
+  { en: "The committee reviewed the analyzed data.", tr: "Komite analiz edilmiş veriyi inceledi.", word: "analyzed", trWord: "analiz edilmiş", blank: "The committee reviewed the ___ data." },
+  { en: "Researchers explored the uninhabited regions.", tr: "Araştırmacılar insansız bölgeleri keşfetti.", word: "uninhabited", trWord: "insansız", blank: "Researchers explored the ___ regions." },
+  { en: "The laboratory recorded a reduced volume of the liquid.", tr: "Laboratuvar sıvının azaltılmış hacmini kaydetti.", word: "reduced", trWord: "azaltılmış", blank: "The laboratory recorded a ___ volume of the liquid." },
+  { en: "The heavy rain affected the exposed land.", tr: "Şiddetli yağmur maruz kalmış toprağı etkiledi.", word: "exposed", trWord: "maruz kalmış", blank: "The heavy rain affected the ___ land." },
+  { en: "Students must submit the required material before Friday.", tr: "Öğrenciler gerekli malzemeyi Cuma gününden önce teslim etmelidir.", word: "required", trWord: "gerekli", blank: "Students must submit the ___ material before Friday." },
+  { en: "The scientists followed the modified criteria for the test.", tr: "Bilim insanları test için değiştirilmiş kriterleri takip etti.", word: "modified", trWord: "değiştirilmiş", blank: "The scientists followed the ___ criteria for the test." },
+  { en: "We need to focus on the identified factors.", tr: "Belirlenmiş faktörlere odaklanmamız gerekiyor.", word: "identified", trWord: "belirlenmiş", blank: "We need to focus on the ___ factors." },
+  { en: "The accountant calculated the estimated revenue for this year.", tr: "Muhasebeci bu yıl için tahmin edilen geliri hesapladı.", word: "estimated", trWord: "tahmin edilen", blank: "The accountant calculated the ___ revenue for this year." },
+  { en: "They prefer structured approaches to solve the problem.", tr: "Problemi çözmek için yapılandırılmış yaklaşımları tercih ediyorlar.", word: "structured", trWord: "yapılandırılmış", blank: "They prefer ___ approaches to solve the problem." },
+  { en: "The institution relies on established policies.", tr: "Kurum kurulmuş politikalara güveniyor.", word: "established", trWord: "kurulmuş", blank: "The institution relies on ___ policies." },
+  { en: "The final report contains derived conclusions.", tr: "Nihai rapor çıkarılmış sonuçlar içeriyor.", word: "derived", trWord: "çıkarılmış", blank: "The final report contains ___ conclusions." },
+  { en: "The textbook explains the defined concepts clearly.", tr: "Ders kitabı tanımlanmış kavramları açıkça açıklıyor.", word: "defined", trWord: "tanımlanmış", blank: "The textbook explains the ___ concepts clearly." },
+  { en: "The manager distributed the reallocated resources.", tr: "Yönetici yeniden tahsis edilmiş kaynakları dağıttı.", word: "reallocated", trWord: "yeniden tahsis edilmiş", blank: "The manager distributed the ___ resources." },
+  { en: "Security guards protect the restricted areas.", tr: "Güvenlik görevlileri kısıtlanmış alanları korur.", word: "restricted", trWord: "kısıtlanmış", blank: "Security guards protect the ___ areas." },
+  { en: "The school supports integrated technology in classrooms.", tr: "Okul sınıflarda entegre teknolojiyi destekliyor.", word: "integrated", trWord: "entegre", blank: "The school supports ___ technology in classrooms." },
+  { en: "The interviewer spoke with selected individuals.", tr: "Görüşmeci seçilmiş bireylerle konuştu.", word: "selected", trWord: "seçilmiş", blank: "The interviewer spoke with ___ individuals." },
+  { en: "The report describes the evaluated methods.", tr: "Rapor değerlendirilmiş yöntemleri tanımlar.", word: "evaluated", trWord: "değerlendirilmiş", blank: "The report describes the ___ methods." },
+  { en: "Sustained growth is crucial for the economy.", tr: "Sürekli büyüme ekonomi için çok önemlidir.", word: "sustained", trWord: "sürekli", blank: "___ growth is crucial for the economy." },
+  { en: "The library holds the published documents.", tr: "Kütüphane yayınlanmış belgeleri barındırır.", word: "published", trWord: "yayınlanmış", blank: "The library holds the ___ documents." },
+  { en: "We studied the interpreted texts.", tr: "Yorumlanmış metinleri inceledik.", word: "interpreted", trWord: "yorumlanmış", blank: "We studied the ___ texts." },
+
+  // Book Section XI A - 3 introductory examples
+  { en: "stolen money", tr: "çalınmış para", word: "stolen", trWord: "çalınmış", blank: "___ money" },
+  { en: "broken bones", tr: "kırılmış kemikler", word: "broken", trWord: "kırılmış", blank: "___ bones" },
+  { en: "worn-out machines", tr: "eskitilmiş makineler", word: "worn-out", trWord: "eskitilmiş", blank: "___ machines" },
+
+  // Book Section XI A - 20 phrases
+  { en: "united nations", tr: "birleşmiş milletler", word: "united", trWord: "birleşmiş", blank: "___ nations" },
+  { en: "cooked food", tr: "pişmiş yemek", word: "cooked", trWord: "pişmiş", blank: "___ food" },
+  { en: "uncooked meat", tr: "pişmemiş et", word: "uncooked", trWord: "pişmemiş", blank: "___ meat" },
+  { en: "simplified picture", tr: "basitleştirilmiş resim", word: "simplified", trWord: "basitleştirilmiş", blank: "___ picture" },
+  { en: "improved methods", tr: "geliştirilmiş yöntemler", word: "improved", trWord: "geliştirilmiş", blank: "___ methods" },
+  { en: "untried method", tr: "denenmemiş yöntem", word: "untried", trWord: "denenmemiş", blank: "___ method" },
+  { en: "exposed wire", tr: "açıkta kalan tel", word: "exposed", trWord: "açıkta kalan", blank: "___ wire" },
+  { en: "emitted rays", tr: "yayılmış ışınlar", word: "emitted", trWord: "yayılmış", blank: "___ rays" },
+  { en: "uninhabited regions", tr: "insansız bölgeler", word: "uninhabited", trWord: "insansız", blank: "___ regions" },
+  { en: "reduced volume", tr: "azaltılmış hacim", word: "reduced", trWord: "azaltılmış", blank: "___ volume" },
+  { en: "exposed land", tr: "maruz kalmış toprak", word: "exposed", trWord: "maruz kalmış", blank: "___ land" },
+  { en: "required material", tr: "gerekli malzeme", word: "required", trWord: "gerekli", blank: "___ material" },
+  { en: "diseased trees", tr: "hastalıklı ağaçlar", word: "diseased", trWord: "hastalıklı", blank: "___ trees" },
+  { en: "inhabited regions", tr: "insan yaşayan bölgeler", word: "inhabited", trWord: "insan yaşayan", blank: "___ regions" },
+  { en: "forested areas", tr: "ormanlık alanlar", word: "forested", trWord: "ormanlık", blank: "___ areas" },
+  { en: "unexposed plate", tr: "banyo edilmemiş levha", word: "unexposed", trWord: "banyo edilmemiş", blank: "___ plate" },
+  { en: "diseased tissue", tr: "hastalıklı doku", word: "diseased", trWord: "hastalıklı", blank: "___ tissue" },
+  { en: "broken vase", tr: "kırık vazo", word: "broken", trWord: "kırık", blank: "___ vase" },
+  { en: "estimated cost", tr: "tahmin edilen maliyet", word: "estimated", trWord: "tahmin edilen", blank: "___ cost" },
+  { en: "unemployed personnel", tr: "işsiz personel", word: "unemployed", trWord: "işsiz", blank: "___ personnel" },
+
+  // Book Section XI A - 20 sentences
+  { en: "The United Nations have recognized the new government.", tr: "Birleşmiş Milletler yeni hükümeti tanıdı.", word: "united", trWord: "birleşmiş", blank: "The ___ Nations have recognized the new government." },
+  { en: "Cooked foods were unknown before the discovery of fire.", tr: "Pişmiş yemekler ateşin keşfinden önce bilinmiyordu.", word: "cooked", trWord: "pişmiş", blank: "___ foods were unknown before the discovery of fire." },
+  { en: "This disease is transmitted in uncooked meat.", tr: "Bu hastalık pişmemiş ette taşınır.", word: "uncooked", trWord: "pişmemiş", blank: "This disease is transmitted in ___ meat." },
+  { en: "The book is illustrated with simplified pictures for children.", tr: "Kitap çocuklar için basitleştirilmiş resimlerle resimlendirilmiştir.", word: "simplified", trWord: "basitleştirilmiş", blank: "The book is illustrated with ___ pictures for children." },
+  { en: "Improved methods of agriculture were introduced.", tr: "Geliştirilmiş tarım yöntemleri uygulamaya konuldu.", word: "improved", trWord: "geliştirilmiş", blank: "___ methods of agriculture were introduced." },
+  { en: "The exposed wire caused a fire in the roof.", tr: "Açıkta kalan tel çatıda yangına neden oldu.", word: "exposed", trWord: "açıkta kalan", blank: "The ___ wire caused a fire in the roof." },
+  { en: "The emitted rays penetrate the cells.", tr: "Yayılan ışınlar hücrelere nüfuz eder.", word: "emitted", trWord: "yayılan", blank: "The ___ rays penetrate the cells." },
+  { en: "There are a large number of uninhabited regions.", tr: "Çok sayıda insansız bölge vardır.", word: "uninhabited", trWord: "insansız", blank: "There are a large number of ___ regions." },
+  { en: "The reduced volume is measured after cooling.", tr: "Azaltılmış hacim soğutmadan sonra ölçülür.", word: "reduced", trWord: "azaltılmış", blank: "The ___ volume is measured after cooling." },
+  { en: "Exposed land will be subject to erosion.", tr: "Maruz kalan toprak erozyona maruz kalacaktır.", word: "exposed", trWord: "maruz kalan", blank: "___ land will be subject to erosion." },
+  { en: "The required material is imported from Germany.", tr: "Gerekli malzeme Almanya'dan ithal edilmektedir.", word: "required", trWord: "gerekli", blank: "The ___ material is imported from Germany." },
+  { en: "The surgeon hesitated to use an untried method for the heart operation.", tr: "Cerrah kalp ameliyatı için denenmemiş bir yöntem kullanmakta tereddüt etti.", word: "untried", trWord: "denenmemiş", blank: "The surgeon hesitated to use an ___ method for the heart operation." },
+  { en: "Diseased trees should be removed as soon as possible.", tr: "Hastalıklı ağaçlar mümkün olan en kısa sürede kaldırılmalıdır.", word: "diseased", trWord: "hastalıklı", blank: "___ trees should be removed as soon as possible." },
+  { en: "The disease spread quickly through most of the inhabited regions.", tr: "Hastalık insan yaşayan bölgelerin çoğuna hızla yayıldı.", word: "inhabited", trWord: "insan yaşayan", blank: "The disease spread quickly through most of the ___ regions." },
+  { en: "Inhabitants of the forested areas have a milder climate.", tr: "Ormanlık alanların sakinleri daha ılıman bir iklime sahiptir.", word: "forested", trWord: "ormanlık", blank: "Inhabitants of the ___ areas have a milder climate." },
+  { en: "The marks could be seen on the unexposed plate.", tr: "İşaretler banyo edilmemiş levha üzerinde görülebilirdi.", word: "unexposed", trWord: "banyo edilmemiş", blank: "The marks could be seen on the ___ plate." },
+  { en: "Diseased tissue must be removed as soon as possible.", tr: "Hastalıklı doku mümkün olan en kısa sürede kaldırılmalıdır.", word: "diseased", trWord: "hastalıklı", blank: "___ tissue must be removed as soon as possible." },
+  { en: "A broken vase was excavated from the foundation of the temple.", tr: "Tapınağın temelinden kırık bir vazo çıkarıldı.", word: "broken", trWord: "kırık", blank: "A ___ vase was excavated from the foundation of the temple." },
+  { en: "The finished product was more expensive than the estimated cost.", tr: "Bitmiş ürün tahmin edilen maliyetten daha pahalıydı.", word: "estimated", trWord: "tahmin edilen", blank: "The finished product was more expensive than the ___ cost." },
+  { en: "The welfare workers are concerned about the number of unemployed personnel.", tr: "Sosyal yardım çalışanları işsiz personelin sayısından endişe duymaktadır.", word: "unemployed", trWord: "işsiz", blank: "The welfare workers are concerned about the number of ___ personnel." }
+];
+
+const unit5Lesson15SentencesRaw = [
+  // User's sheet (2. Kısım) - 20 phrases
+  { en: "a highly analyzed data", tr: "son derece analiz edilmiş veri", word: "highly", trWord: "son derece", blank: "a ___ analyzed data" },
+  { en: "a densely populated area", tr: "yoğun nüfuslu bir bölge", word: "densely", trWord: "yoğun", blank: "a ___ populated area" },
+  { en: "an over-estimated revenue", tr: "aşırı tahmin edilmiş gelir", word: "over-estimated", trWord: "aşırı tahmin edilmiş", blank: "an ___ revenue" },
+  { en: "an under-estimated cost", tr: "yetersiz tahmin edilmiş maliyet", word: "under-estimated", trWord: "yetersiz tahmin edilmiş", blank: "an ___ cost" },
+  { en: "a well-structured approach", tr: "iyi yapılandırılmış bir yaklaşım", word: "well-structured", trWord: "iyi yapılandırılmış", blank: "a ___ approach" },
+  { en: "a politically motivated policy", tr: "siyasi amaçlı bir politika", word: "politically", trWord: "siyasi amaçlı", blank: "a ___ motivated policy" },
+  { en: "an inappropriately defined concept", tr: "uygunsuz şekilde tanımlanmış bir kavram", word: "inappropriately", trWord: "uygunsuz şekilde", blank: "an ___ defined concept" },
+  { en: "a socially integrated technology", tr: "toplumsal olarak entegre edilmiş bir teknoloji", word: "socially", trWord: "toplumsal olarak", blank: "a ___ integrated technology" },
+  { en: "a theoretically derived conclusion", tr: "teorik olarak çıkarılmış bir sonuç", word: "theoretically", trWord: "teorik olarak", blank: "a ___ derived conclusion" },
+  { en: "an under-resourced sector", tr: "yetersiz kaynak aktarılmış bir sektör", word: "under-resourced", trWord: "yetersiz kaynak aktarılmış", blank: "an ___ sector" },
+  { en: "a legally binding contract", tr: "yasal olarak bağlayıcı bir sözleşme", word: "legally", trWord: "yasal olarak", blank: "a ___ binding contract" },
+  { en: "a carefully selected individual", tr: "dikkatle seçilmiş bir birey", word: "carefully", trWord: "dikkatle", blank: "a ___ selected individual" },
+  { en: "a rigorously evaluated method", tr: "titizlikle değerlendirilmiş bir yöntem", word: "rigorously", trWord: "titizlikle", blank: "a ___ evaluated method" },
+  { en: "a firmly established principle", tr: "sağlam bir şekilde kurulmuş bir ilke", word: "firmly", trWord: "sağlam bir şekilde", blank: "a ___ established principle" },
+  { en: "a genetically modified organism", tr: "genetiği değiştirilmiş bir organizma", word: "genetically", trWord: "genetiği", blank: "a ___ modified organism" },
+  { en: "a highly responsive authority", tr: "son derece duyarlı bir otorite", word: "highly", trWord: "son derece", blank: "a ___ responsive authority" },
+  { en: "a contextually interpreted text", tr: "bağlamsal olarak yorumlanmış bir metin", word: "contextually", trWord: "bağlamsal olarak", blank: "a ___ interpreted text" },
+  { en: "a structurally unstable framework", tr: "yapısal olarak kararsız bir çerçeve", word: "structurally", trWord: "yapısal olarak", blank: "a ___ unstable framework" },
+  { en: "an empirically validated hypothesis", tr: "deneysel olarak doğrulanmış bir hipotez", word: "empirically", trWord: "deneysel olarak", blank: "an ___ validated hypothesis" },
+  { en: "a well-coordinated team", tr: "iyi koordine edilmiş bir ekip", word: "well-coordinated", trWord: "iyi koordine edilmiş", blank: "a ___ team" },
+
+  // User's sheet (2. Kısım) - 20 sentences
+  { en: "The professor published a highly analyzed data set.", tr: "Profesör son derece analiz edilmiş bir veri seti yayınladı.", word: "highly", trWord: "son derece", blank: "The professor published a ___ analyzed data set." },
+  { en: "Many people live in a densely populated area.", tr: "Birçok insan yoğun nüfuslu bir bölgede yaşıyor.", word: "densely", trWord: "yoğun", blank: "Many people live in a ___ populated area." },
+  { en: "The company has an over-estimated revenue plan.", tr: "Şirketin aşırı tahmin edilmiş bir gelir planı var.", word: "over-estimated", trWord: "aşırı tahmin edilmiş", blank: "The company has an ___ revenue plan." },
+  { en: "We need to avoid an under-estimated cost.", tr: "Yetersiz tahmin edilmiş bir maliyetten kaçınmamız gerekir.", word: "under-estimated", trWord: "yetersiz tahmin edilmiş", blank: "We need to avoid an ___ cost." },
+  { en: "Teachers prefer a well-structured approach.", tr: "Öğretmenler iyi yapılandırılmış bir yaklaşımı tercih eder.", word: "well-structured", trWord: "iyi yapılandırılmış", blank: "Teachers prefer a ___ approach." },
+  { en: "The government announced a politically motivated policy.", tr: "Hükümet siyasi amaçlı bir politika ilan etti.", word: "politically", trWord: "siyasi amaçlı", blank: "The government announced a ___ motivated policy." },
+  { en: "This textbook contains an inappropriately defined concept.", tr: "Bu ders kitabı uygunsuz şekilde tanımlanmış bir kavram içeriyor.", word: "inappropriately", trWord: "uygunsuz şekilde", blank: "This textbook contains an ___ defined concept." },
+  { en: "The project utilizes a socially integrated technology to connect people.", tr: "Proje insanları birbirine bağlamak için toplumsal olarak entegre edilmiş bir teknoloji kullanıyor.", word: "socially", trWord: "toplumsal olarak", blank: "The project utilizes a ___ integrated technology to connect people." },
+  { en: "The scientist presented a theoretically derived conclusion at the seminar.", tr: "Bilim insanı seminerde teorik olarak çıkarılmış bir sonuç sundu.", word: "theoretically", trWord: "teorik olarak", blank: "The scientist presented a ___ derived conclusion at the seminar." },
+  { en: "The government provided funding for an under-resourced sector.", tr: "Hükümet yetersiz kaynak aktarılmış bir sektör için fon sağladı.", word: "under-resourced", trWord: "yetersiz kaynak aktarılmış", blank: "The government provided funding for an ___ sector." },
+  { en: "Both parties signed a legally binding contract yesterday.", tr: "Her iki taraf dün yasal olarak bağlayıcı bir sözleşme imzaladı.", word: "legally", trWord: "yasal olarak", blank: "Both parties signed a ___ binding contract yesterday." },
+  { en: "The committee interviewed a carefully selected individual for the position.", tr: "Komite pozisyon için dikkatle seçilmiş bir bireyle görüştü.", word: "carefully", trWord: "dikkatle", blank: "The committee interviewed a ___ selected individual for the position." },
+  { en: "The laboratory implemented a rigorously evaluated method for testing.", tr: "Laboratuvar test için titizlikle değerlendirilmiş bir yöntem uyguladı.", word: "rigorously", trWord: "titizlikle", blank: "The laboratory implemented a ___ evaluated method for testing." },
+  { en: "We must follow a firmly established principle of physics.", tr: "Fiziğin sağlam bir şekilde kurulmuş bir ilkesini takip etmeliyiz.", word: "firmly", trWord: "sağlam bir şekilde", blank: "We must follow a ___ established principle of physics." },
+  { en: "The farmer harvested a genetically modified organism in his fields.", tr: "Çiftçi tarlalarında genetiği değiştirilmiş bir organizma hasat etti.", word: "genetically", trWord: "genetiği", blank: "The farmer harvested a ___ modified organism in his fields." },
+  { en: "Citizens demand help from a highly responsive authority.", tr: "Vatandaşlar son derece duyarlı bir otoriteden yardım talep ediyor.", word: "highly", trWord: "son derece", blank: "Citizens demand help from a ___ responsive authority." },
+  { en: "The researcher analyzed a contextually interpreted text.", tr: "Araştırmacı bağlamsal olarak yorumlanmış bir metni analiz etti.", word: "contextually", trWord: "bağlamsal olarak", blank: "The researcher analyzed a ___ interpreted text." },
+  { en: "The engineers rebuilt a structurally unstable framework.", tr: "Mühendisler yapısal olarak kararsız bir çerçeveyi yeniden inşa etti.", word: "structurally", trWord: "yapısal olarak", blank: "The engineers rebuilt a ___ unstable framework." },
+  { en: "The research supports an empirically validated hypothesis.", tr: "Araştırma deneysel olarak doğrulanmış bir hipotezi destekliyor.", word: "empirically", trWord: "deneysel olarak", blank: "The research supports an ___ validated hypothesis." },
+  { en: "The company relies on a well-coordinated team to succeed.", tr: "Şirket başarılı olmak için iyi koordine edilmiş bir ekibe güveniyor.", word: "well-coordinated", trWord: "iyi koordine edilmiş", blank: "The company relies on a ___ team to succeed." },
+
+  // Book Section XI B - 1 intro example
+  { en: "well-developed system", tr: "iyi gelişmiş sistem", word: "well-developed", trWord: "iyi gelişmiş", blank: "___ system" },
+
+  // Book Section XI B - 22 phrases
+  { en: "a densely populated area", tr: "yoğun nüfuslu bir alan", word: "densely", trWord: "yoğun", blank: "a ___ populated area" },
+  { en: "an over-populated area", tr: "aşırı nüfuslu bir alan", word: "over-populated", trWord: "aşırı nüfuslu", blank: "an ___ area" },
+  { en: "an under-populated area", tr: "yetersiz nüfuslu bir alan", word: "under-populated", trWord: "yetersiz nüfuslu", blank: "an ___ area" },
+  { en: "a well-developed muscle", tr: "iyi gelişmiş bir kas", word: "well-developed", trWord: "iyi gelişmiş", blank: "a ___ muscle" },
+  { en: "an over-developed muscle", tr: "aşırı gelişmiş bir kas", word: "over-developed", trWord: "aşırı gelişmiş", blank: "an ___ muscle" },
+  { en: "an under-developed muscle", tr: "yetersiz gelişmiş bir kas", word: "under-developed", trWord: "yetersiz gelişmiş", blank: "an ___ muscle" },
+  { en: "a well-known fact", tr: "iyi bilinen bir gerçek", word: "well-known", trWord: "iyi bilinen", blank: "a ___ fact" },
+  { en: "a better known fact", tr: "daha iyi bilinen bir gerçek", word: "better", trWord: "daha iyi", blank: "a ___ known fact" },
+  { en: "a little known fact", tr: "az bilinen bir gerçek", word: "little", trWord: "az", blank: "a ___ known fact" },
+  { en: "a newly-formed compound", tr: "yeni oluşmuş bir bileşik", word: "newly-formed", trWord: "yeni oluşmuş", blank: "a ___ compound" },
+  { en: "a newly-planted tree", tr: "yeni dikilmiş bir ağaç", word: "newly-planted", trWord: "yeni dikilmiş", blank: "a ___ tree" },
+  { en: "recently-introduced methods", tr: "yakın zamanda uygulamaya konulmuş yöntemler", word: "recently-introduced", trWord: "yakın zamanda uygulamaya konulmuş", blank: "___ methods" },
+  { en: "well-developed roots", tr: "iyi gelişmiş kökler", word: "well-developed", trWord: "iyi gelişmiş", blank: "___ roots" },
+  { en: "under-developed countries", tr: "az gelişmiş ülkeler", word: "under-developed", trWord: "az gelişmiş", blank: "___ countries" },
+  { en: "the newly discovered species", tr: "yeni keşfedilmiş türler", word: "newly", trWord: "yeni", blank: "the ___ discovered species" },
+  { en: "the recently won peace", tr: "yakın zamanda kazanılmış barış", word: "recently", trWord: "yakın zamanda", blank: "the ___ won peace" },
+  { en: "greatly reduced volume", tr: "büyük ölçüde azaltılmış hacim", word: "greatly", trWord: "büyük ölçüde", blank: "___ reduced volume" },
+  { en: "some little-inhabited regions", tr: "az yerleşilmiş bazı bölgeler", word: "little-inhabited", trWord: "az yerleşilmiş", blank: "some ___ regions" },
+  { en: "greatly improved methods", tr: "büyük ölçüde geliştirilmiş yöntemler", word: "greatly", trWord: "büyük ölçüde", blank: "___ improved methods" },
+  { en: "an over-simplified diagram", tr: "aşırı basitleştirilmiş bir şema", word: "over-simplified", trWord: "aşırı basitleştirilmiş", blank: "an ___ diagram" },
+  { en: "badly managed programme", tr: "kötü yönetilen program", word: "badly", trWord: "kötü", blank: "___ managed programme" },
+  { en: "a badly-developed organ", tr: "kötü gelişmiş bir organ", word: "badly-developed", trWord: "kötü gelişmiş", blank: "a ___ organ" },
+
+  // Book Section XI B - corresponding sentences
+  { en: "They introduced a well-developed system in the factory.", tr: "Fabrikada iyi gelişmiş bir sistem kurdular.", word: "well-developed", trWord: "iyi gelişmiş", blank: "They introduced a ___ in the factory." },
+  { en: "We live in a densely populated area.", tr: "Yoğun nüfuslu bir alanda yaşıyoruz.", word: "densely", trWord: "yoğun", blank: "We live in a ___ populated area." },
+  { en: "Traffic is a major problem in an over-populated area.", tr: "Aşırı nüfuslu bir alanda trafik büyük bir sorundur.", word: "over-populated", trWord: "aşırı nüfuslu", blank: "Traffic is a major problem in an ___ area." },
+  { en: "The government encourages migration to an under-populated area.", tr: "Hükümet yetersiz nüfuslu bir alana göçü teşvik ediyor.", word: "under-populated", trWord: "yetersiz nüfuslu", blank: "The government encourages migration to an ___ area." },
+  { en: "Regular exercise results in a well-developed muscle.", tr: "Düzenli egzersiz iyi gelişmiş bir kasla sonuçlanır.", word: "well-developed", trWord: "iyi gelişmiş", blank: "Regular exercise results in a ___ muscle." },
+  { en: "The athlete has an over-developed muscle in his leg.", tr: "Sporcunun bacağında aşırı gelişmiş bir kas var.", word: "over-developed", trWord: "aşırı gelişmiş", blank: "The athlete has an ___ muscle in his leg." },
+  { en: "Malnutrition can cause an under-developed muscle.", tr: "Yetersiz beslenme yetersiz gelişmiş bir kasa neden olabilir.", word: "under-developed", trWord: "yetersiz gelişmiş", blank: "Malnutrition can cause an ___ muscle." },
+  { en: "It is a well-known fact that water freezes at zero degrees.", tr: "Suyun sıfır derecede donduğu iyi bilinen bir gerçektir.", word: "well-known", trWord: "iyi bilinen", blank: "It is a ___ fact that water freezes at zero degrees." },
+  { en: "This is a better known fact among researchers.", tr: "Bu, araştırmacılar arasında daha iyi bilinen bir gerçektir.", word: "better", trWord: "daha iyi", blank: "This is a ___ known fact among researchers." },
+  { en: "The history of this tribe is a little known fact.", tr: "Bu kabilenin tarihi az bilinen bir gerçektir.", word: "little", trWord: "az", blank: "The history of this tribe is a ___ known fact." },
+  { en: "The chemist analyzed a newly-formed compound.", tr: "Kimyager yeni oluşmuş bir bileşiği analiz etti.", word: "newly-formed", trWord: "yeni oluşmuş", blank: "The chemist analyzed a ___ compound." },
+  { en: "The gardener watered a newly-planted tree.", tr: "Bahçıvan yeni dikilmiş bir ağacı suladı.", word: "newly-planted", trWord: "yeni dikilmiş", blank: "The gardener watered a ___ tree." },
+  { en: "We must adapt to recently-introduced methods.", tr: "Yakın zamanda uygulamaya konulmuş yöntemlere uyum sağlamalıyız.", word: "recently-introduced", trWord: "yakın zamanda uygulamaya konulmuş", blank: "We must adapt to ___ methods." },
+  { en: "These desert plants have well-developed roots.", tr: "Bu çöl bitkilerinin iyi gelişmiş kökleri vardır.", word: "well-developed", trWord: "iyi gelişmiş", blank: "These desert plants have ___ roots." },
+  { en: "International organizations help under-developed countries.", tr: "Uluslararası kuruluşlar az gelişmiş ülkelere yardım eder.", word: "under-developed", trWord: "az gelişmiş", blank: "International organizations help ___ countries." },
+  { en: "The biologist cataloged the newly discovered species.", tr: "Biyolog yeni keşfedilmiş türleri katalogladı.", word: "newly", trWord: "yeni", blank: "The biologist cataloged the ___ discovered species." },
+  { en: "Politicians want to protect the recently won peace.", tr: "Politikacılar yakın zamanda kazanılmış barışı korumak istiyorlar.", word: "recently", trWord: "yakın zamanda", blank: "Politicians want to protect the ___ won peace." },
+  { en: "The pressure drop led to a greatly reduced volume.", tr: "Basınç düşüşü büyük ölçüde azaltılmış bir hacme yol açtı.", word: "greatly", trWord: "büyük ölçüde", blank: "The pressure drop led to a ___ volume." },
+  { en: "Nomads live in some little-inhabited regions of the desert.", tr: "Göçebeler çölün az yerleşilmiş bazı bölgelerinde yaşarlar.", word: "little-inhabited", trWord: "az yerleşilmiş", blank: "Nomads live in some ___ regions of the desert." },
+  { en: "The laboratory uses greatly improved methods for testing.", tr: "Laboratuvar test için büyük ölçüde geliştirilmiş yöntemler kullanır.", word: "greatly", trWord: "büyük ölçüde", blank: "The laboratory uses ___ improved methods for testing." },
+  { en: "Do not rely on an over-simplified diagram.", tr: "Aşırı basitleştirilmiş bir şemaya güvenmeyin.", word: "over-simplified", trWord: "aşırı basitleştirilmiş", blank: "Do not rely on an ___ diagram." },
+  { en: "The loss of funding resulted in a badly managed programme.", tr: "Fon kaybı kötü yönetilen bir programla sonuçlandı.", word: "badly", trWord: "kötü", blank: "The loss of funding resulted in a ___ managed programme." },
+  { en: "The doctor diagnosed a badly-developed organ in the patient.", tr: "Doktor hastada kötü gelişmiş bir organ teşhis etti.", word: "badly-developed", trWord: "kötü gelişmiş", blank: "The doctor diagnosed a ___ organ in the patient." }
+];
+
+function buildUnit5CustomExercise(sentences, unitId, lessonId, exId) {
+  return buildUnit3CustomExercise(sentences, unitId, lessonId, exId);
+}
+
+const unit5Lesson14Exercises = {
+  exercises: [
+    {
+      id: "u5l14ex1",
+      title: "Alıştırma 1: Geçmiş Ortaç Sıfatı I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(0, 16), 5, 14, 1)
+    },
+    {
+      id: "u5l14ex2",
+      title: "Alıştırma 2: Geçmiş Ortaç Sıfatı II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (11-26)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(10, 26), 5, 14, 2)
+    },
+    {
+      id: "u5l14ex3",
+      title: "Alıştırma 3: Geçmiş Ortaç Sıfatı III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (21-36)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(20, 36), 5, 14, 3)
+    },
+    {
+      id: "u5l14ex4",
+      title: "Alıştırma 4: Geçmiş Ortaç Sıfatı IV",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (31-46)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(30, 46), 5, 14, 4)
+    },
+    {
+      id: "u5l14ex5",
+      title: "Alıştırma 5: Geçmiş Ortaç Sıfatı V",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (41-56)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(40, 56), 5, 14, 5)
+    },
+    {
+      id: "u5l14ex6",
+      title: "Alıştırma 6: Geçmiş Ortaç Sıfatı VI",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (51-66)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(50, 66), 5, 14, 6)
+    },
+    {
+      id: "u5l14ex7",
+      title: "Alıştırma 7: Geçmiş Ortaç Sıfatı VII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (61-76)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(60, 76), 5, 14, 7)
+    },
+    {
+      id: "u5l14ex8",
+      title: "Alıştırma 8: Geçmiş Ortaç Sıfatı VIII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (68-83)",
+      questions: buildUnit5CustomExercise(unit5Lesson14SentencesRaw.slice(67, 83), 5, 14, 8)
+    }
+  ]
+};
+
+const unit5Lesson15Exercises = {
+  exercises: [
+    {
+      id: "u5l15ex1",
+      title: "Alıştırma 1: Zarf + Geçmiş Ortaç I",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (1-16)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(0, 16), 5, 15, 1)
+    },
+    {
+      id: "u5l15ex2",
+      title: "Alıştırma 2: Zarf + Geçmiş Ortaç II",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (11-26)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(10, 26), 5, 15, 2)
+    },
+    {
+      id: "u5l15ex3",
+      title: "Alıştırma 3: Zarf + Geçmiş Ortaç III",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (21-36)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(20, 36), 5, 15, 3)
+    },
+    {
+      id: "u5l15ex4",
+      title: "Alıştırma 4: Zarf + Geçmiş Ortaç IV",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (31-46)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(30, 46), 5, 15, 4)
+    },
+    {
+      id: "u5l15ex5",
+      title: "Alıştırma 5: Zarf + Geçmiş Ortaç V",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (41-56)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(40, 56), 5, 15, 5)
+    },
+    {
+      id: "u5l15ex6",
+      title: "Alıştırma 6: Zarf + Geçmiş Ortaç VI",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (51-66)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(50, 66), 5, 15, 6)
+    },
+    {
+      id: "u5l15ex7",
+      title: "Alıştırma 7: Zarf + Geçmiş Ortaç VII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (61-76)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(60, 76), 5, 15, 7)
+    },
+    {
+      id: "u5l15ex8",
+      title: "Alıştırma 8: Zarf + Geçmiş Ortaç VIII",
+      description: "Eşleştirme, Çoktan Seçmeli, Kelime Havuzu ve Yazma (71-86)",
+      questions: buildUnit5CustomExercise(unit5Lesson15SentencesRaw.slice(70, 86), 5, 15, 8)
+    }
+  ]
+};
+
 const units = [];
 const lessons = [];
 let globalLessonCounter = 1;
@@ -4935,14 +5928,14 @@ const unitSentencesMap = {
     2: unit4Lesson13Exercises
   },
   5: {
-    1: unit2LessonSentences[7],
-    2: unit2LessonSentences[8]
+    1: unit5Lesson14Exercises,
+    2: unit5Lesson15Exercises
   },
   6: {
-    1: unit1LessonSentences[1],
-    2: unit1LessonSentences[2],
-    3: unit1LessonSentences[3],
-    4: unit1LessonSentences[4]
+    1: { exercises: [buildCustom15QuestionExercises(unit6Lesson1SentencesRaw, 6, 16, 1, 0), buildCustom15QuestionExercises(unit6Lesson1SentencesRaw, 6, 16, 2, 5)] },
+    2: { exercises: [buildCustom15QuestionExercises(unit6Lesson2SentencesRaw, 6, 17, 1, 0), buildCustom15QuestionExercises(unit6Lesson2SentencesRaw, 6, 17, 2, 1)] },
+    3: { exercises: [buildCustom15QuestionExercises(unit6Lesson3SentencesRaw, 6, 18, 1, 0), buildCustom15QuestionExercises(unit6Lesson3SentencesRaw, 6, 18, 2, 1)] },
+    4: { exercises: [buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 1, 0), buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 2, 1)] }
   },
   7: {
     1: [...unit4LessonSentences[3], ...unit4LessonSentences[4]]
@@ -4952,11 +5945,31 @@ const unitSentencesMap = {
     2: unit8Lesson2Exercises
   },
   9: {
-    1: unit5LessonSentences[3],
-    2: unit5LessonSentences[7],
-    3: unit5LessonSentences[4],
-    4: unit5LessonSentences[5],
-    5: unit5LessonSentences[6]
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit9Lesson1SentencesRaw, 9, 23, 1, 0),
+      buildCustom10QuestionExercises(unit9Lesson1SentencesRaw, 9, 23, 2, 10),
+      buildCustom10QuestionExercises(unit9Lesson1SentencesRaw, 9, 23, 3, 20)
+    ] },
+    2: { exercises: [
+      buildCustom10QuestionExercises(unit9Lesson2SentencesRaw, 9, 24, 1, 0),
+      buildCustom10QuestionExercises(unit9Lesson2SentencesRaw, 9, 24, 2, 10),
+      buildCustom10QuestionExercises(unit9Lesson2SentencesRaw, 9, 24, 3, 20)
+    ] },
+    3: { exercises: [
+      buildCustom10QuestionExercises(unit9Lesson3SentencesRaw, 9, 25, 1, 0),
+      buildCustom10QuestionExercises(unit9Lesson3SentencesRaw, 9, 25, 2, 10),
+      buildCustom10QuestionExercises(unit9Lesson3SentencesRaw, 9, 25, 3, 20)
+    ] },
+    4: { exercises: [
+      buildCustom10QuestionExercises(unit9Lesson4SentencesRaw, 9, 26, 1, 0),
+      buildCustom10QuestionExercises(unit9Lesson4SentencesRaw, 9, 26, 2, 10),
+      buildCustom10QuestionExercises(unit9Lesson4SentencesRaw, 9, 26, 3, 20)
+    ] },
+    5: { exercises: [
+      buildCustom10QuestionExercises(unit9Lesson5SentencesRaw, 9, 27, 1, 0),
+      buildCustom10QuestionExercises(unit9Lesson5SentencesRaw, 9, 27, 2, 10),
+      buildCustom10QuestionExercises(unit9Lesson5SentencesRaw, 9, 27, 3, 20)
+    ] }
   },
   10: {
     1: [...unit6LessonSentences[1], ...unit6LessonSentences[2], ...unit6LessonSentences[3], ...unit6LessonSentences[4]]
