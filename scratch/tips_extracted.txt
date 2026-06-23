@@ -1,0 +1,290 @@
+P 4820: A. İsim + Present Participle + Edat Takımı
+P 4821: Present participle, isimden sonra gelerek bir kelime grubunun (öbeğinin) başında yer alabilir ve sıfat göreviyle ismi niteler. Türkçeye çevirirken bu takımın nitelediği isimden önce gelmesi gerekir.
+P 4822: İngilizce Sıralama: İsim + Present Participle + Edat Takımı
+P 4823: the molecules, moving in the gas
+P 4824: Türkçe Sıralama: Edat Takımı + Present Participle + İsim
+P 4825: gazda hareket eden moleküller
+P 4826: Alıştırma
+P 4827: 101. Yukarıda geçen örnekte olduğu gibi aşağıda verilen participle takımlarını isimden önce yerleştirip Türkçeye çeviriniz:
+P 4828: the forests remaining in these areas
+P 4829: a point moving along a straight line
+P 4830: an organism living in the soil
+P 4831: a tree growing in sandy soil
+P 4832: a line beginning at this point
+P 4833: micro-organisms living in the cell
+P 4834: costs increasing because of scarcity of raw materials
+P 4835: movement continuing in waves
+P 4836: results differing from previous experiments
+P 4837: gas escaping from the pipes
+P 4838: problems existing in the cotton industry
+P 4839: a sphere revolving at the base of the column
+P 4840: personnel working in modern factories
+P 4841: a mixture resulting from three elements
+P 4842: plants living in a smoky atmosphere
+P 4843: a disease beginning with high fever
+P 4844: opinions disagreeing with the majority
+P 4845: a disease developing from vitamin deficiency
+P 4846: a diet lacking in protein
+P 4847: waves moving in the same direction
+P 4848: legislation existing for the individual
+P 4849: a characteristic distinguishing from other species of insect
+P 4850: factors contributing to the general situation
+P 4851: a mixture consisting of sand, cement and water
+P 4852: a compound consisting of salt and acids
+P 4853: Sözlük
+P 4854: Anlama Soruları (Comprehension Questions)
+P 4855: Which forests?
+P 4856: Which point?
+P 4857: Which organism?
+P 4858: Which tree?
+P 4859: Which line?
+P 4860: Which micro-organisms?
+P 4861: Which costs?
+P 4862: Which results?
+P 4863: Which movement?
+P 4864: Which gas?
+P 4865: Which problems?
+P 4866: Which sphere?
+P 4867: Which personnel?
+P 4868: Which mixture?
+P 4869: Which plants?
+P 4870: Which disease?
+P 4871: Which opinions?
+P 4872: Which disease?
+P 4873: What sort of diet?
+P 4874: Which waves?
+P 4875: What sort of legislation?
+P 4876: Which characteristic?
+P 4877: Which factors?
+P 4878: What sort of mixture?
+P 4879: What sort of compound?
+P 4880: B. İsim + Present Participle + Nesne (İsim)
+P 4881: Present participle fiilden türediği için nesne alabilir. Yani present participle'dan sonra gelen isim onun nesnesidir ve bir takım (öbek) oluşturur. Türkçede yine nitelediği isimden önce yerleştirilir.
+P 4882: İngilizce Sıralama: İsim (1) + Present Participle (2) + Nesnesi (3)
+P 4883: a liquid (1) containing (2) organisms (3)
+P 4884: Türkçe Sıralama: Nesne (3) + Present Participle (2) + Nitelediği İsim (1)
+P 4885: organizmaları (3) ihtiva eden (2) bir sıvı (1)
+P 4886: Alıştırmalar
+P 4887: 102. Yukarıda geçen örnekte gösterildiği gibi, aşağıda verilmiş olan present participle takımlarını nitelediği isimden önce yerleştirerek Türkçeye çeviriniz:
+P 4888: a diagram showing the classification
+P 4889: a statement containing the facts
+P 4890: an article describing the situation
+P 4891: a wire connecting the electrodes
+P 4892: a cover protecting the contents
+P 4893: principles determining the right
+P 4894: a statement defining the principles
+P 4895: a law protecting the individual
+P 4896: laws protecting the rights
+P 4897: evidence proving the guilt
+P 4898: experiments proving the theory
+P 4899: a community cultivating the land
+P 4900: a principle establishing the rights
+P 4901: a gas giving off a smell
+P 4902: a flask containing a liquid
+P 4903: a tenant occupying premises
+P 4904: a contract binding both parties
+P 4905: a guarantee promising protection
+P 4906: a policy creating many problems
+P 4907: characteristics distinguishing this species
+P 4908: Sözlük
+P 4909: 103. Aşağıda verilmiş olan present participle takımlarını isimleri ile beraber Türkçeye çeviriniz:
+P 4910: water containing pollen dust
+P 4911: a statement containing a description of the accident
+P 4912: a diagram showing the classification of the species
+P 4913: a statement addressing the whole community
+P 4914: a report approving the decisions of the council
+P 4915: a wire connecting the electrodes to the battery
+P 4916: action creating confusion in the court of law
+P 4917: an experiment demonstrating the principles of relativity
+P 4918: an article describing the newly-discovered objects
+P 4919: a principle determining the rights of the people
+P 4920: a constitution establishing the rights of the people
+P 4921: a law limiting the sale of drugs
+P 4922: a statement defining the principles of democracy
+P 4923: a statement containing the facts of the case
+P 4924: an exhibition containing some of the best work
+P 4925: evidence proving the guilt of the defendant
+P 4926: laws protecting the freedom of the individual
+P 4927: a promise guaranteeing the rights of the individual
+P 4928: an innovation introducing many new methods
+P 4929: an experiment necessitating careful observation
+P 4930: new laws affecting every individual of community
+P 4931: a policy granting new benefits to the old and unemployed
+P 4932: a characteristic distinguishing this species of insect
+P 4933: activity endangering the lives of members of the community
+P 4934: factors governing the rate of growth
+P 4935: a document authorizing the owner of the premises
+P 4936: Sözlük
+P 4937: Anlama Soruları (Comprehension Questions)
+P 4938: Which water?
+P 4939: What sort of statement?
+P 4940: Which diagram?
+P 4941: Which statement?
+P 4942: Which report?
+P 4943: Which wire?
+P 4944: What sort of action?
+P 4945: What sort of experiment?
+P 4946: Which article?
+P 4947: Which principle?
+P 4948: What kind of constitution?
+P 4949: Which law?
+P 4950: Which statement?
+P 4951: What kind of statement?
+P 4952: Which exhibition?
+P 4953: What sort of evidence?
+P 4954: What kind of laws?
+P 4955: Which promise?
+P 4956: What sort of innovation?
+P 4957: What sort of experiment?
+P 4958: What sort of new laws?
+P 4959: What sort of policy?
+P 4960: What kind of characteristic?
+P 4961: What kind of activity?
+P 4962: Which factors?
+P 4963: What kind of document?
+P 4964: 104. Yukarıda geçen 1-26 sayılı participle takımları cümle içinde kullanılmıştır. Örnekte gösterildiği gibi bu cümleleri Türkçeye çeviriniz.
+P 4965: Örnek: The movement of the molecules could be seen in water containing pollen dust. $\rightarrow$ Moleküllerin hareketi, polen tozu ihtiva eden suda görülebilirdi.
+P 4966: The movement of molecules could be seen in water containing pollen dust.
+P 4967: He gave the police a statement containing a description of the accident.
+P 4968: On this page there is a diagram showing the classification of the species.
+P 4969: The report contains a statement addressing the whole community.
+P 4970: A report approving the decisions of the council was read to the court.
+P 4971: The current passes along a wire connecting the electrode to the battery.
+P 4972: He was accused of action creating confusion in the court of law.
+P 4973: This is an experiment demonstrating the principles of relativity.
+P 4974: He has published an article describing the newly-discovered objects.
+P 4975: The principle determining the rights of the people was explained in the lecture.
+P 4976: There was no constitution establishing the rights of the people.
+P 4977: A law limiting the sale of drugs was passed in 1936.
+P 4978: He published a statement defining the principles of democracy.
+P 4979: He published a statement containing the facts of the case.
+P 4980: Last year there was an exhibition containing some of the best work of the Renaissance in Italy.
+P 4981: The witness could provide no evidence proving the guilt of the defendant.
+P 4982: There are many many laws protecting the freedom of the individual.
+P 4983: This was contained in a promise guaranteeing the rights of the individual.
+P 4984: Electrical power was an innovation introducing many new methods in industry.
+P 4985: This could be proved in an experiment necessitating careful observation.
+P 4986: The government has passed many new laws affecting every individual of the community.
+P 4987: The government has proposed a policy granting new benefits to the old and unemployed.
+P 4988: The shape of the head and thorax is a characteristic distinguishing this species of insect.
+P 4989: They were engaged in activity endangering the lives of members of the community.
+P 4990: There are many factors governing the rate of growth of a plant or tree.
+P 4991: There was no signature on the document authorizing the owner of the premises to empty the rooms.
+P 4992: Sözlük
+P 4993: to accuse: itham etmek, suçlamak
+P 4994: current: cereyan, akım
+P 4995: to be engaged in: meşgul olmak, bir işle uğraşmak
+P 4996: to empty: boşaltmak
+P 4997: lecture: konferans, ders
+P 4998: plant: bitki
+P 4999: power: kuvvet, güç, enerji
+P 5000: to propose: teklif etmek, önermek
+P 5001: to prove: ispat etmek, kanıtlamak
+P 5002: to provide: sağlamak, temin etmek
+P 5003: to publish: neşretmek, yayınlamak
+P 5004: renaissance: rönesans
+P 5005: shape: şekil
+P 5006: signature: imza
+P 5007: witness: şahit, tanık
+P 5008: Anlama Soruları (Comprehension Questions)
+P 5009: What could be seen? Where could the movement of molecules be seen?
+P 5010: What did he give the police?
+P 5011: What is there on this page?
+P 5012: What does the report contain? What was read to the court?
+P 5013: What passes along the wire? Where does the current pass?
+P 5014: What was he accused of?
+P 5015: What is this?
+P 5016: What has he published? What has he done?
+P 5017: What was explained? Where was it explained?
+P 5018: What wasn't there?
+P 5019: What was passed in 1936?
+P 5020: What did he publish?
+P 5021: What did he publish?
+P 5022: What was there last year?
+P 5023: What could the witness not provide?
+P 5024: What are there?
+P 5025: Where was this contained?
+P 5026: What was an innovation? What was electrical power? What sort of innovation was it?
+P 5027: How could this be proved?
+P 5028: What has the government done?
+P 5029: What has the government proposed?
+P 5030: What is a characteristic distinguishing this species of insect?
+P 5031: In what were they engaged?
+P 5032: What are there?
+P 5033: What wasn't there? Which document?
+P 5034: C. İsim + Past Participle + Edat Takımı
+P 5035: Yukarıda present participle için gösterildiği gibi, past participle da isimden sonra gelerek takım oluşturabilir. Aynı şekilde takip ettiği ismi niteler. Anlamı edilgendir. Çeviride past participle takımı, nitelediği isimden önce yerleştirilir.
+P 5036: İngilizce Sıralama: İsim (1) + Past Participle (2) + Edat Takımı (3)
+P 5037: food (1) cooked (2) with electricity (3)
+P 5038: Türkçe Sıralama: Edat Takımı (3) + Past Participle (2) + İsim (1)
+P 5039: elektrikle (3) pişirilmiş (2) yemek (1)
+P 5040: Alıştırmalar
+P 5041: 105. Aşağıda verilen past participle takımlarını nitelediği isimleriyle beraber örnekte gösterildiği gibi Türkçeye çeviriniz:
+P 5042: nations united in their desire for peace
+P 5043: facts well-known to scientists
+P 5044: a compound composed of two elements
+P 5045: a picture simplified for children
+P 5046: all the materials needed for their industries
+P 5047: lead exposed to the air
+P 5048: organisms classified in the vegetable kingdom
+P 5049: the energy produced by an atomic pile
+P 5050: energy produced by an atom
+P 5051: gamma rays emitted by a small piece of cobalt
+P 5052: woods inhabited by wild animals
+P 5053: food produced by their enzyme action
+P 5054: land exposed to the danger of floods
+P 5055: information needed to develop the programme
+P 5056: subject matter used as a basis for teaching
+P 5057: waves emitted by the stars
+P 5058: signals sent by artificial satellites and rockets
+P 5059: towns surrounded by strong walls
+P 5060: vibrations generated by the light source
+P 5061: effects expected from the programmes
+P 5062: programmes outlined in the reports
+P 5063: surveys made before the 1936 Flood Control Act
+P 5064: Sözlük
+P 5065: Anlama Soruları (Comprehension Questions)
+P 5066: Which nations?
+P 5067: Which facts?
+P 5068: What kind of compound?
+P 5069: What sort of picture?
+P 5070: Which materials?
+P 5071: Which lead?
+P 5072: What sort of organisms?
+P 5073: What kind of energy?
+P 5074: Which energy?
+P 5075: Which gamma rays?
+P 5076: Which sort of woods?
+P 5077: What kind of food?
+P 5078: Which land?
+P 5079: What kind of information?
+P 5080: What sort of subject matter?
+P 5081: Which waves?
+P 5082: Which signals?
+P 5083: What kind of towns?
+P 5084: Which vibrations?
+P 5085: Which effects?
+P 5086: Which programmes?
+P 5087: Which surveys?
+P 5088: 106. Yukarıda verilmiş olan isimli participle takımları birer cümlede kullanılmıştır. Bu cümleleri Türkçeye çeviriniz:
+P 5089: There were representatives from many nations united in their desire for peace.
+P 5090: These are facts well-known to scientists.
+P 5091: This produces a compound composed of two elements.
+P 5092: This book contains pictures simplified for children to understand.
+P 5093: European countries do not produce all the materials needed for their industries.
+P 5094: A piece of lead exposed to the air becomes covered with a black film.
+P 5095: Bacteria are microscopic organisms classified in the vegetable kingdom.
+P 5096: The energy produced by an atomic pile is not cheap.
+P 5097: Energy produced by an atom costs more than energy produced by coal or petroleum.
+P 5098: The gamma rays emitted by a small piece of cobalt contained in a protecting cover penetrate to the cells.
+P 5099: These were woods inhabited by wild animals.
+P 5100: The fungi absorbs the liquid food produced by their enzyme action.
+P 5101: We could see large areas of land exposed to the danger of floods.
+P 5102: The department provides the information needed to develop the programme.
+P 5103: The subject matter used as a basis for teaching is provided by the educational department.
+P 5104: Electro-magnetic waves emitted by stars are recorded by radio telescope.
+P 5105: Radio telescopes also receive radio signals sent by artificial satellites.
+P 5106: Primitive villages gradually developed into towns surrounded by strong walls.
+P 5107: Light consists of vibrations generated by the light source.
+P 5108: The beneficial effects expected from the programmes outlined in the reports were described in the surveys made before the 1936 Flood Control Act. (Bu cümlede 3 tane past participle takımı vardır.)
+P 5109: Sözlük

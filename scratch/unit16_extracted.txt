@@ -1,0 +1,95 @@
+P 5550: What will be done? Why will measures be taken? From which effects must protection be ensured?
+P 5551: XVI. Fiil İsmi + Nesnesi (Gerund Yapısı - Cümlenin Öznesi Olarak)
+P 5552: A. ...ing + İsim
+P 5553: Yapı: Learning a language is not easy. $\rightarrow$ Bir dil öğrenmek kolay değildir. / Bir dilin öğrenilmesi kolay değildir.
+P 5554: Bu strüktürde de nesne, fiil isminden (gerund) önce yerleştirilip tercüme edilir.
+P 5555: İngilizce Sıralama: Fiil İsmi (1) + Nesnesi (2) $\rightarrow$ Translating (1) a text (2) is difficult.
+P 5556: Türkçe Sıralama: Nesnesi (2) + Fiil İsmi (1) $\rightarrow$ Bir metin (2) tercüme etmek (1) zordur. / Bir metnin tercüme edilmesi zordur.
+P 5557: Alıştırma
+P 5558: 119. Yukarıda örnekte gösterildiği gibi, aşağıda verilen özne durumundaki "...ing" fiil ismini ve nesnesini bulup cümleleri Türkçeye çeviriniz:
+P 5559: Criticising the work of others is easy.
+P 5560: Destroying harmful insects is a long process.
+P 5561: Developing backward countries takes a long time.
+P 5562: Growing trees in poor soil is uneconomic.
+P 5563: Distinguishing the different species is a job for the expert.
+P 5564: Introducing modern methods has increased production and distribution.
+P 5565: Protecting the tissues from further damage is very important.
+P 5566: Maintaining high standards of accuracy requires effort.
+P 5567: Estimating cost of production is a job for the expert.
+P 5568: Isolating the virus is the first step towards producing a serum.
+P 5569: Using a concentrated solution will give better results.
+P 5570: Repeating vocabulary exercises is a good way to learn words.
+P 5571: Sözlük
+P 5572: Anlama Soruları (Comprehension Questions)
+P 5573: What is easy?
+P 5574: What is a long process?
+P 5575: What takes a long time?
+P 5576: What is uneconomic?
+P 5577: What is a job for the expert?
+P 5578: What has increased production and distribution?
+P 5579: What is very important?
+P 5580: What requires effort?
+P 5581: What is a job for the expert?
+P 5582: What is the first step towards producing a serum?
+P 5583: What will give better results?
+P 5584: What is a good way to learn words?
+P 5585: B. Edattan Sonra Gelen Fiil İsmi + Nesnesi
+P 5586: Yapı: Edat + ...ing + Nesne
+P 5587: Örnekler:
+P 5588: for learning a language $\rightarrow$ bir lisanı öğrenmek için / bir lisanın öğrenilmesi için
+P 5589: about translating a sentence $\rightarrow$ bir cümlenin tercümesi hakkında / bir cümlenin tercüme edilmesi hakkında
+P 5590: Edatı takip eden "...ing" ve nesnesi o edata tabidir ve tercümesi yukarıdaki gibi iki türlü yapılabilir.
+P 5591: Alıştırma
+P 5592: 120. Yukarıdaki açıklama ve örneklerde olduğu gibi, aşağıda verilen (...ing ve nesne) öbeklerini edatına bağlayıp cümleleri tercüme ediniz:
+P 5593: This instrument is used for measuring the heights of distant clouds.
+P 5594: It is also used for detecting upper layers of thin clouds.
+P 5595: It can also be used for measuring the amount of condensation in clouds.
+P 5596: There has been some discussion on controlling the outflow of capital from Britain.
+P 5597: It is impossible to avoid the necessity for continuing control of investments.
+P 5598: There are no reasons for questioning the competence of the director.
+P 5599: This is a very reliable method of curing the infection.
+P 5600: These drugs are used to prevent the microbes from infecting the tissue.
+P 5601: This is a reliable method of measuring transpiration in plants.
+P 5602: The plant carries out its function of absorbing nourishment.
+P 5603: A rapid loss of water may be permitted by the opening of pores.
+P 5604: Legislation was introduced in 1911 for establishing state aid for the unemployed workers.
+P 5605: The government must legislate against illegal cutting in the state forests.
+P 5606: There is already some legislation for protecting the rights of minorities.
+P 5607: There are several methods of isolating the virus for cultivating it in the laboratory.
+P 5608: Through being absent for most of the term, they missed many opportunities for learning the language.
+P 5609: This book contains a lot of information about collecting, preserving and classifying butterflies.
+P 5610: The research work is completed except for checking and comparing the results of the analyses.
+P 5611: Most of the workers preferred to return to work instead of going on strike.
+P 5612: The main functions of the organism, like breathing, feeding and reproducing, are carried out in a characteristic way.
+P 5613: Sözlük
+P 5614: 
+P 5615: 
+P 5616: 1. Anlama Soruları (Comprehension Questions)
+P 5617: What is this instrument used for? What does it measure?
+P 5618: What is it also used for? What does it detect?
+P 5619: What can it also be used for? What does it measure?
+P 5620: What has there been? What would be controlled?
+P 5621: What is it impossible to avoid? What would be continued?
+P 5622: What are there? What would be questioned?
+P 5623: What is this? What does it cure?
+P 5624: What are these drugs used to do? What do they prevent?
+P 5625: What is this? What is measured?
+P 5626: What does the plant do? What is its function?
+P 5627: What may be permitted by the opening of pores? How may a rapid loss of water be permitted?
+P 5628: When was legislation introduced? What was it for? What did it establish?
+P 5629: What must the government do? Against what must it legislate?
+P 5630: What is there already? What does the legislation protect?
+P 5631: What are there? What is isolated? For what is the virus isolated?
+P 5632: What did they miss? Why did they miss the opportunities? Which opportunities did they miss?
+P 5633: What does this book contain? What is the information about?
+P 5634: What is completed? What exceptions are there? Which results?
+P 5635: What do most of the workers prefer to do? Instead of what?
+P 5636: What are the main functions of the organism? How are they carried out?
+P 5637: 2. Dilbilgisi Yapısı: XVII. "ON / BY / IN / WITHOUT" + Fiil İsmi (-ing)
+P 5638: Yapı: on / by / in / without + fiil(-ing) + (nesne)
+P 5639: Açıklama
+P 5640: ON, BY, IN, WITHOUT edatlarını (prepositions) takip eden ...ing eki almış fiiller (gerund / fiil ismi), Türkçeye çevrilirken özel ve kalıplaşmış anlamlar taşırlar. Bu fiil isimleri tıpkı normal fiiller gibi kendi nesnelerini de alabilirler. İngilizcede nesne fiilden sonra gelirken, Türkçeye çevrilirken fiil isminin önüne yerleştirilir.
+P 5641: Anlam Tablosu
+P 5642: Nesne Almış Örnekler
+P 5643: on paying the money $\rightarrow$ parayı ödediğinde
+P 5644: by cutting the trees $\rightarrow$ ağaçları keserek / kesmek suretiyle
