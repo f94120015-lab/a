@@ -1540,13 +1540,130 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
     }))
   });
 
-  const getMcDistractors = (targetVal, isTr) => {
-    const list = sentences.filter(s => (isTr ? s.tr : s.en) !== targetVal).map(s => isTr ? s.tr : s.en);
-    const shuffled = shuffle([...new Set(list)]);
-    while (shuffled.length < 3) {
-      shuffled.push(isTr ? "deneme" : "test");
+  const getMcDistractors = (s, isTr) => {
+    const targetVal = isTr ? s.tr : s.en;
+    const distractors = [];
+    const verb = s.word;
+    const trVerb = s.trWord;
+
+    if (!isTr && verb && s.en.includes(verb)) {
+      const parts = s.en.split(verb);
+      if (parts.length === 2) {
+        const subj = parts[0].trim();
+        let obj = parts[1].trim();
+        const hasPeriod = obj.endsWith(".");
+        if (hasPeriod) obj = obj.slice(0, -1).trim();
+
+        // 1. Swap Subject and Object (Semantic Reversal)
+        const cap = str => str.charAt(0).toUpperCase() + str.slice(1);
+        const decap = str => str.charAt(0).toLowerCase() + str.slice(1);
+        if (subj.toLowerCase() !== obj.toLowerCase()) {
+          const swapped = cap(obj) + " " + verb + " " + decap(subj) + (hasPeriod ? "." : "");
+          if (swapped !== s.en && !distractors.includes(swapped)) {
+            distractors.push(swapped);
+          }
+        }
+
+        // 2. Alter word order of Subject if complex (length >= 3 words)
+        const subjWords = subj.split(/\s+/);
+        if (subjWords.length >= 3) {
+          const idx = subjWords.length > 3 ? 2 : 1;
+          const temp = subjWords[idx];
+          subjWords[idx] = subjWords[idx+1];
+          subjWords[idx+1] = temp;
+          const alteredSubj = subjWords.join(" ");
+          const distVal = alteredSubj + " " + verb + " " + obj + (hasPeriod ? "." : "");
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+
+        // 3. Alter word order of Object if complex
+        const objWords = obj.split(/\s+/);
+        if (objWords.length >= 3) {
+          const idx = objWords.length > 3 ? 2 : 1;
+          const temp = objWords[idx];
+          objWords[idx] = objWords[idx+1];
+          objWords[idx+1] = temp;
+          const alteredObj = objWords.join(" ");
+          const distVal = subj + " " + verb + " " + alteredObj + (hasPeriod ? "." : "");
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
     }
-    return shuffled.slice(0, 3);
+
+    if (isTr && trVerb && s.tr.includes(trVerb)) {
+      const parts = s.tr.split(trVerb);
+      if (parts.length === 2) {
+        const prefix = parts[0].trim();
+        const suffix = parts[1].trim();
+        const words = prefix.split(/\s+/);
+        if (words.length >= 3) {
+          const temp = words[1];
+          words[1] = words[2];
+          words[2] = temp;
+          const alteredPrefix = words.join(" ");
+          const distVal = alteredPrefix + " " + trVerb + (suffix ? " " + suffix : "");
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+        if (words.length >= 4) {
+          const words2 = prefix.split(/\s+/);
+          const temp = words2[2];
+          words2[2] = words2[3];
+          words2[3] = temp;
+          const alteredPrefix = words2.join(" ");
+          const distVal = alteredPrefix + " " + trVerb + (suffix ? " " + suffix : "");
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
+    }
+
+    // 4. Fill remaining spots with Verb Substitution
+    const others = sentences.filter(o => o.word !== s.word && o.trWord !== s.trWord);
+    const shuffledOthers = shuffle(others);
+    for (let i = 0; i < shuffledOthers.length; i++) {
+      if (distractors.length >= 3) break;
+      const other = shuffledOthers[i];
+      if (isTr) {
+        if (s.trWord && other.trWord && s.tr.includes(s.trWord)) {
+          const distVal = s.tr.replace(s.trWord, other.trWord);
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      } else {
+        if (s.word && other.word && s.en.includes(s.word)) {
+          const distVal = s.en.replace(s.word, other.word);
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
+    }
+
+    // 5. Fallback
+    if (distractors.length < 3) {
+      const list = sentences.filter(item => (isTr ? item.tr : item.en) !== targetVal).map(item => isTr ? item.tr : item.en);
+      const shuffled = shuffle([...new Set(list)]);
+      for (const val of shuffled) {
+        if (!distractors.includes(val)) {
+          distractors.push(val);
+        }
+        if (distractors.length >= 3) break;
+      }
+    }
+
+    while (distractors.length < 3) {
+      distractors.push(isTr ? "deneme" : "test");
+    }
+
+    return distractors.slice(0, 3);
   };
 
   const getWbDistractors = (targetWords, isTr) => {
@@ -1562,7 +1679,7 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   // 2. Multiple Choice (4 questions)
   {
     const s = slice[8];
-    const dist = getMcDistractors(s.tr, true);
+    const dist = getMcDistractors(s, true);
     const options = shuffle([s.tr, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_0`,
@@ -1576,7 +1693,7 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
   {
     const s = slice[9];
-    const dist = getMcDistractors(s.tr, true);
+    const dist = getMcDistractors(s, true);
     const options = shuffle([s.tr, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_1`,
@@ -1590,7 +1707,7 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
   {
     const s = slice[10];
-    const dist = getMcDistractors(s.en, false);
+    const dist = getMcDistractors(s, false);
     const options = shuffle([s.en, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_2`,
@@ -1604,7 +1721,7 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
   {
     const s = slice[11];
-    const dist = getMcDistractors(s.en, false);
+    const dist = getMcDistractors(s, false);
     const options = shuffle([s.en, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_3`,
@@ -1784,13 +1901,130 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
     }))
   });
 
-  const getMcDistractors = (targetVal, isTr) => {
-    const list = sentences.filter(s => (isTr ? s.tr : s.en) !== targetVal).map(s => isTr ? s.tr : s.en);
-    const shuffled = shuffle([...new Set(list)]);
-    while (shuffled.length < 3) {
-      shuffled.push(isTr ? "deneme" : "test");
+  const getMcDistractors = (s, isTr) => {
+    const targetVal = isTr ? s.tr : s.en;
+    const distractors = [];
+    const verb = s.word;
+    const trVerb = s.trWord;
+
+    if (!isTr && verb && s.en.includes(verb)) {
+      const parts = s.en.split(verb);
+      if (parts.length === 2) {
+        const subj = parts[0].trim();
+        let obj = parts[1].trim();
+        const hasPeriod = obj.endsWith(".");
+        if (hasPeriod) obj = obj.slice(0, -1).trim();
+
+        // 1. Swap Subject and Object (Semantic Reversal)
+        const cap = str => str.charAt(0).toUpperCase() + str.slice(1);
+        const decap = str => str.charAt(0).toLowerCase() + str.slice(1);
+        if (subj.toLowerCase() !== obj.toLowerCase()) {
+          const swapped = cap(obj) + " " + verb + " " + decap(subj) + (hasPeriod ? "." : "");
+          if (swapped !== s.en && !distractors.includes(swapped)) {
+            distractors.push(swapped);
+          }
+        }
+
+        // 2. Alter word order of Subject if complex (length >= 3 words)
+        const subjWords = subj.split(/\s+/);
+        if (subjWords.length >= 3) {
+          const idx = subjWords.length > 3 ? 2 : 1;
+          const temp = subjWords[idx];
+          subjWords[idx] = subjWords[idx+1];
+          subjWords[idx+1] = temp;
+          const alteredSubj = subjWords.join(" ");
+          const distVal = alteredSubj + " " + verb + " " + obj + (hasPeriod ? "." : "");
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+
+        // 3. Alter word order of Object if complex
+        const objWords = obj.split(/\s+/);
+        if (objWords.length >= 3) {
+          const idx = objWords.length > 3 ? 2 : 1;
+          const temp = objWords[idx];
+          objWords[idx] = objWords[idx+1];
+          objWords[idx+1] = temp;
+          const alteredObj = objWords.join(" ");
+          const distVal = subj + " " + verb + " " + alteredObj + (hasPeriod ? "." : "");
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
     }
-    return shuffled.slice(0, 3);
+
+    if (isTr && trVerb && s.tr.includes(trVerb)) {
+      const parts = s.tr.split(trVerb);
+      if (parts.length === 2) {
+        const prefix = parts[0].trim();
+        const suffix = parts[1].trim();
+        const words = prefix.split(/\s+/);
+        if (words.length >= 3) {
+          const temp = words[1];
+          words[1] = words[2];
+          words[2] = temp;
+          const alteredPrefix = words.join(" ");
+          const distVal = alteredPrefix + " " + trVerb + (suffix ? " " + suffix : "");
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+        if (words.length >= 4) {
+          const words2 = prefix.split(/\s+/);
+          const temp = words2[2];
+          words2[2] = words2[3];
+          words2[3] = temp;
+          const alteredPrefix = words2.join(" ");
+          const distVal = alteredPrefix + " " + trVerb + (suffix ? " " + suffix : "");
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
+    }
+
+    // 4. Fill remaining spots with Verb Substitution
+    const others = sentences.filter(o => o.word !== s.word && o.trWord !== s.trWord);
+    const shuffledOthers = shuffle(others);
+    for (let i = 0; i < shuffledOthers.length; i++) {
+      if (distractors.length >= 3) break;
+      const other = shuffledOthers[i];
+      if (isTr) {
+        if (s.trWord && other.trWord && s.tr.includes(s.trWord)) {
+          const distVal = s.tr.replace(s.trWord, other.trWord);
+          if (distVal !== s.tr && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      } else {
+        if (s.word && other.word && s.en.includes(s.word)) {
+          const distVal = s.en.replace(s.word, other.word);
+          if (distVal !== s.en && !distractors.includes(distVal)) {
+            distractors.push(distVal);
+          }
+        }
+      }
+    }
+
+    // 5. Fallback
+    if (distractors.length < 3) {
+      const list = sentences.filter(item => (isTr ? item.tr : item.en) !== targetVal).map(item => isTr ? item.tr : item.en);
+      const shuffled = shuffle([...new Set(list)]);
+      for (const val of shuffled) {
+        if (!distractors.includes(val)) {
+          distractors.push(val);
+        }
+        if (distractors.length >= 3) break;
+      }
+    }
+
+    while (distractors.length < 3) {
+      distractors.push(isTr ? "deneme" : "test");
+    }
+
+    return distractors.slice(0, 3);
   };
 
   const getWbDistractors = (targetWords, isTr) => {
@@ -1806,7 +2040,7 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   // 2. Multiple Choice (2 questions)
   {
     const s = slice[8];
-    const dist = getMcDistractors(s.tr, true);
+    const dist = getMcDistractors(s, true);
     const options = shuffle([s.tr, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_0`,
@@ -1820,7 +2054,7 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
   {
     const s = slice[9];
-    const dist = getMcDistractors(s.en, false);
+    const dist = getMcDistractors(s, false);
     const options = shuffle([s.en, ...dist]);
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_mc_1`,
@@ -3191,6 +3425,852 @@ function generateDynamicExercises(unitId, lessonId, sentences) {
     }
   ];
 }
+
+const unit7LessonSentences = {
+  1: [
+  {
+    "en": "The data contradicts the theory.",
+    "tr": "Veriler teoriyle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The data ___ the theory."
+  },
+  {
+    "en": "The context specifies the criteria.",
+    "tr": "Bağlam kriterleri belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The context ___ the criteria."
+  },
+  {
+    "en": "The sector anticipates growth.",
+    "tr": "Sektör büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The sector ___ growth."
+  },
+  {
+    "en": "Authorities advocate reform.",
+    "tr": "Yetkililer reformu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Authorities ___ reform."
+  },
+  {
+    "en": "The dynamic triggers reaction.",
+    "tr": "Dinamik tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "The dynamic ___ reaction."
+  },
+  {
+    "en": "Experts clarify the scope.",
+    "tr": "Uzmanlar kapsamı açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Experts ___ the scope."
+  },
+  {
+    "en": "The process induces stress.",
+    "tr": "Süreç strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The process ___ stress."
+  },
+  {
+    "en": "The anomaly distorts results.",
+    "tr": "Anomali sonuçları bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The anomaly ___ results."
+  },
+  {
+    "en": "Media manipulates perspective.",
+    "tr": "Medya bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Media ___ perspective."
+  },
+  {
+    "en": "The system accommodates expansion.",
+    "tr": "Sistem genişlemeye uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The system ___ expansion."
+  },
+  {
+    "en": "The protocol defines parameters.",
+    "tr": "Protokol parametreleri tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The protocol ___ parameters."
+  },
+  {
+    "en": "The contract binds institutions.",
+    "tr": "Sözleşme kurumları bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The contract ___ institutions."
+  },
+  {
+    "en": "Analysts inspect the framework.",
+    "tr": "Analistler çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Analysts ___ the framework."
+  },
+  {
+    "en": "The variable affects outcomes.",
+    "tr": "Değişken sonuçları etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The variable ___ outcomes."
+  },
+  {
+    "en": "The core stabilizes components.",
+    "tr": "Çekirdek bileşenleri stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The core ___ components."
+  },
+  {
+    "en": "The graph illustrates percentages.",
+    "tr": "Grafik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The graph ___ percentages."
+  },
+  {
+    "en": "The policy restricts access.",
+    "tr": "Politika erişimi kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The policy ___ access."
+  },
+  {
+    "en": "The finding validates hypotheses.",
+    "tr": "Bulgu hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The finding ___ hypotheses."
+  },
+  {
+    "en": "The team modifies modules.",
+    "tr": "Ekip modülleri değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The team ___ modules."
+  },
+  {
+    "en": "The committee evaluates feedback.",
+    "tr": "Komite geri bildirimi değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The committee ___ feedback."
+  },
+  {
+    "en": "The researcher isolates variables.",
+    "tr": "Araştırmacı değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The researcher ___ variables."
+  },
+  {
+    "en": "Strategies maximize efficiency.",
+    "tr": "Stratejiler verimliliği maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Strategies ___ efficiency."
+  },
+  {
+    "en": "The script calculates ratios.",
+    "tr": "Betik oranları hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The script ___ ratios."
+  },
+  {
+    "en": "The audit exposes flaws.",
+    "tr": "Denetim kusurları ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The audit ___ flaws."
+  },
+  {
+    "en": "The shift alters trends.",
+    "tr": "Değişim eğilimleri değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The shift ___ trends."
+  },
+  {
+    "en": "The framework secures data.",
+    "tr": "Çerçeve verileri güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The framework ___ data."
+  },
+  {
+    "en": "The council suspended regulations.",
+    "tr": "Konsey düzenlemeleri askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The council ___ regulations."
+  },
+  {
+    "en": "The board terminated agreements.",
+    "tr": "Yönetim kurulu anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The board ___ agreements."
+  },
+  {
+    "en": "The ministry conducted surveys.",
+    "tr": "Bakanlık anketler yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The ministry ___ surveys."
+  },
+  {
+    "en": "The database accumulates logs.",
+    "tr": "Veritabanı günlükleri biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The database ___ logs."
+  },
+  {
+    "en": "The newly collected empirical data contradicts the theory.",
+    "tr": "Yeni toplanan deneysel veriler teoriyle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The newly collected empirical data ___ the theory."
+  },
+  {
+    "en": "The broader socio-economic context specifies the criteria.",
+    "tr": "Daha geniş sosyo-ekonomik bağlam kriterleri belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The broader socio-economic context ___ the criteria."
+  },
+  {
+    "en": "The highly competitive dynamic sector anticipates growth.",
+    "tr": "Son derece rekabetçi dinamik sektör büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The highly competitive dynamic sector ___ growth."
+  },
+  {
+    "en": "Leading institutional authorities advocate reform.",
+    "tr": "Önde gelen kurumsal yetkililer reformu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Leading institutional authorities ___ reform."
+  },
+  {
+    "en": "This unpredictable economic dynamic triggers reaction.",
+    "tr": "Bu öngörülemeyen ekonomik dinamik tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "This unpredictable economic dynamic ___ reaction."
+  },
+  {
+    "en": "Independent technical experts clarify the scope.",
+    "tr": "Bağımsız teknik uzmanlar kapsamı açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Independent technical experts ___ the scope."
+  },
+  {
+    "en": "The continuous chemical process induces stress.",
+    "tr": "Sürekli kimyasal süreç strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The continuous chemical process ___ stress."
+  },
+  {
+    "en": "The undetected structural anomaly distorts results.",
+    "tr": "Tespit edilemeyen yapısal anomali sonuçları bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The undetected structural anomaly ___ results."
+  },
+  {
+    "en": "Mainstream digital media manipulates perspective.",
+    "tr": "Ana akım dijital medya bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Mainstream digital media ___ perspective."
+  },
+  {
+    "en": "The updated operational system accommodates expansion.",
+    "tr": "Güncellenmiş operasyonel sistem genişlemeye uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The updated operational system ___ expansion."
+  },
+  {
+    "en": "The revised security protocol defines parameters.",
+    "tr": "Gözden geçirilmiş güvenlik protokolü parametreleri tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The revised security protocol ___ parameters."
+  },
+  {
+    "en": "The legally binding contract binds institutions.",
+    "tr": "Yasal olarak bağlayıcı sözleşme kurumları bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The legally binding contract ___ institutions."
+  },
+  {
+    "en": "Senior financial analysts inspect the framework.",
+    "tr": "Kıdemli finansal analistler çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Senior financial analysts ___ the framework."
+  },
+  {
+    "en": "The primary independent variable affects outcomes.",
+    "tr": "Birincil bağımsız değişken sonuçları etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The primary independent variable ___ outcomes."
+  },
+  {
+    "en": "The reinforced central core stabilizes components.",
+    "tr": "Güçlendirilmiş merkezi çekirdek bileşenleri stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The reinforced central core ___ components."
+  },
+  {
+    "en": "The attached statistical graph illustrates percentages.",
+    "tr": "Ekli istatistiksel grafik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The attached statistical graph ___ percentages."
+  },
+  {
+    "en": "The strict institutional policy restricts access.",
+    "tr": "Katı kurumsal politika erişimi kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The strict institutional policy ___ access."
+  },
+  {
+    "en": "The final scientific finding validates hypotheses.",
+    "tr": "Nihai bilimsel bulgu hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The final scientific finding ___ hypotheses."
+  },
+  {
+    "en": "The software development team modifies modules.",
+    "tr": "Yazılım geliştirme ekibi modülleri değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The software development team ___ modules."
+  },
+  {
+    "en": "The ethics evaluation committee evaluates feedback.",
+    "tr": "Etik değerlendirme komitesi geri bildirimi değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The ethics evaluation committee ___ feedback."
+  },
+  {
+    "en": "The principal laboratory researcher isolates variables.",
+    "tr": "Baş laboratuvar araştırmacısı değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The principal laboratory researcher ___ variables."
+  },
+  {
+    "en": "Innovative corporate strategies maximize efficiency.",
+    "tr": "Yenilikçi kurumsal stratejiler verimliliği maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Innovative corporate strategies ___ efficiency."
+  },
+  {
+    "en": "The automated background script calculates ratios.",
+    "tr": "Otomatik arka plan betiği oranları hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The automated background script ___ ratios."
+  },
+  {
+    "en": "The independent annual audit exposes flaws.",
+    "tr": "Bağımsız yıllık denetim kusurları ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The independent annual audit ___ flaws."
+  },
+  {
+    "en": "The sudden paradigm shift alters trends.",
+    "tr": "Ani paradigma değişimi eğilimleri değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The sudden paradigm shift ___ trends."
+  },
+  {
+    "en": "The advanced cryptographic framework secures data.",
+    "tr": "Gelişmiş kriptografik çerçeve verileri güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The advanced cryptographic framework ___ data."
+  },
+  {
+    "en": "The regional administrative council suspended regulations.",
+    "tr": "Bölgesel idari konsey düzenlemeleri askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The regional administrative council ___ regulations."
+  },
+  {
+    "en": "The executive internal board terminated agreements.",
+    "tr": "Yürütme iç kurulu anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The executive internal board ___ agreements."
+  },
+  {
+    "en": "The national education ministry conducted surveys.",
+    "tr": "Milli eğitim bakanlığı anketler yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The national education ministry ___ surveys."
+  },
+  {
+    "en": "The centralized cloud database accumulates logs.",
+    "tr": "Merkezi bulut veritabanı günlükleri biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The centralized cloud database ___ logs."
+  },
+  {
+    "en": "The data contradicts the long-standing theoretical model.",
+    "tr": "Veriler uzun süredir var olan teorik modelle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The data ___ the long-standing theoretical model."
+  },
+  {
+    "en": "The context specifies the strict qualitative selection criteria.",
+    "tr": "Bağlam katı nitel seçim kriterlerini belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The context ___ the strict qualitative selection criteria."
+  },
+  {
+    "en": "The sector anticipates significant annual financial growth.",
+    "tr": "Sektör yıllık önemli finansal büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The sector ___ significant annual financial growth."
+  },
+  {
+    "en": "Authorities advocate comprehensive legislative tax reform.",
+    "tr": "Yetkililer kapsamlı yasal vergi reformunu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Authorities ___ comprehensive legislative tax reform."
+  },
+  {
+    "en": "The dynamic triggers a chain of negative physical reactions.",
+    "tr": "Dinamik bir dizi olumsuz fiziksel tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "The dynamic ___ a chain of negative physical reactions."
+  },
+  {
+    "en": "Experts clarify the initial investigative project scope.",
+    "tr": "Uzmanlar başlangıçtaki araştırma projesi kapsamını açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Experts ___ the initial investigative project scope."
+  },
+  {
+    "en": "The process induces severe psychological and occupational stress.",
+    "tr": "Süreç ciddi psikolojik ve mesleki strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The process ___ severe psychological and occupational stress."
+  },
+  {
+    "en": "The anomaly distorts the final statistical research results.",
+    "tr": "Anomali nihai istatistiksel araştırma sonuçlarını bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The anomaly ___ the final statistical research results."
+  },
+  {
+    "en": "Media manipulates public political and cultural perspective.",
+    "tr": "Medya kamuoyunun siyasi ve kültürel bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Media ___ public political and cultural perspective."
+  },
+  {
+    "en": "The system accommodates rapid regional infrastructure expansion.",
+    "tr": "Sistem hızlı bölgesel altyapı genişlemesine uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The system ___ rapid regional infrastructure expansion."
+  },
+  {
+    "en": "The protocol defines crucial technical system parameters.",
+    "tr": "Protokol kritik teknik sistem parametrelerini tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The protocol ___ crucial technical system parameters."
+  },
+  {
+    "en": "The contract binds separate international research institutions.",
+    "tr": "Sözleşme ayrı uluslararası araştırma kurumlarını bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The contract ___ separate international research institutions."
+  },
+  {
+    "en": "Analysts inspect the entire underlying structural framework.",
+    "tr": "Analistler tüm temel yapısal çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Analysts ___ the entire underlying structural framework."
+  },
+  {
+    "en": "The variable affects excellent academic student outcomes.",
+    "tr": "Değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The variable ___ excellent academic student outcomes."
+  },
+  {
+    "en": "The core stabilizes crucial internal device components.",
+    "tr": "Çekirdek kritik dahili cihaz bileşenlerini stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The core ___ crucial internal device components."
+  },
+  {
+    "en": "The graph illustrates exact distribution and demographic percentages.",
+    "tr": "Grafik kesin dağılım ve demografik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The graph ___ exact distribution and demographic percentages."
+  },
+  {
+    "en": "The policy restricts unauthorized user network access.",
+    "tr": "Politika yetkisiz kullanıcı ağ erişimini kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The policy ___ unauthorized user network access."
+  },
+  {
+    "en": "The finding validates alternative alternative scientific hypotheses.",
+    "tr": "Bulgu alternatif bilimsel hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The finding ___ alternative alternative scientific hypotheses."
+  },
+  {
+    "en": "The team modifies individual functional software modules.",
+    "tr": "Ekip bireysel fonksiyonel yazılım modüllerini değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The team ___ individual functional software modules."
+  },
+  {
+    "en": "The committee evaluates detailed anonymous student feedback.",
+    "tr": "Komite detaylı anonim öğrenci geri bildirimini değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The committee ___ detailed anonymous student feedback."
+  },
+  {
+    "en": "The researcher isolates separate unstable chemical variables.",
+    "tr": "Araştırmacı ayrı kararsız kimyasal değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The researcher ___ separate unstable chemical variables."
+  },
+  {
+    "en": "Strategies maximize maximum annual manufacturing efficiency.",
+    "tr": "Stratejiler maksimum yıllık üretim verimliliğini maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Strategies ___ maximum annual manufacturing efficiency."
+  },
+  {
+    "en": "The script calculates complex mathematical data ratios.",
+    "tr": "Betik karmaşık matematiksel veri oranlarını hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The script ___ complex mathematical data ratios."
+  },
+  {
+    "en": "The audit exposes hidden organizational system flaws.",
+    "tr": "Denetim gizli örgütsel sistem kusurlarını ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The audit ___ hidden organizational system flaws."
+  },
+  {
+    "en": "The shift alters global consumer behavior trends.",
+    "tr": "Değişim küresel tüketici davranışı eğilimlerini değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The shift ___ global consumer behavior trends."
+  },
+  {
+    "en": "The framework secures sensitive user information data.",
+    "tr": "Çerçeve hassas kullanıcı bilgileri verilerini güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The framework ___ sensitive user information data."
+  },
+  {
+    "en": "The council suspended outdated environmental safety regulations.",
+    "tr": "Konsey güncelliğini yitirmiş çevresel güvenlik düzenlemelerini askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The council ___ outdated environmental safety regulations."
+  },
+  {
+    "en": "The board terminated formal bilateral commercial agreements.",
+    "tr": "Yönetim kurulu resmi ikili ticari anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The board ___ formal bilateral commercial agreements."
+  },
+  {
+    "en": "The ministry conducted comprehensive regional educational surveys.",
+    "tr": "Bakanlık kapsamlı bölgesel eğitim anketleri yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The ministry ___ comprehensive regional educational surveys."
+  },
+  {
+    "en": "The database accumulates detailed historical system logs.",
+    "tr": "Veritabanı detaylı geçmiş sistem günlüklerini biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The database ___ detailed historical system logs."
+  },
+  {
+    "en": "The newly collected empirical data contradicts the long-standing theoretical model.",
+    "tr": "Yeni toplanan deneysel veriler uzun süredir var olan teorik modelle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The newly collected empirical data ___ the long-standing theoretical model."
+  },
+  {
+    "en": "The broader socio-economic context specifies the strict qualitative selection criteria.",
+    "tr": "Daha geniş sosyo-ekonomik bağlam katı nitel seçim kriterlerini belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The broader socio-economic context ___ the strict qualitative selection criteria."
+  },
+  {
+    "en": "The highly competitive dynamic sector anticipates significant annual financial growth.",
+    "tr": "Son derece rekabetçi dinamik sektör yıllık önemli finansal büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The highly competitive dynamic sector ___ significant annual financial growth."
+  },
+  {
+    "en": "Leading institutional authorities advocate comprehensive legislative tax reform.",
+    "tr": "Önde gelen kurumsal yetkililer kapsamlı yasal vergi reformunu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Leading institutional authorities ___ comprehensive legislative tax reform."
+  },
+  {
+    "en": "This unpredictable economic dynamic triggers a chain of negative physical reactions.",
+    "tr": "Bu öngörülemeyen ekonomik dinamik bir dizi olumsuz fiziksel tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "This unpredictable economic dynamic ___ a chain of negative physical reactions."
+  },
+  {
+    "en": "Independent technical experts clarify the initial investigative project scope.",
+    "tr": "Bağımsız teknik uzmanlar başlangıçtaki araştırma projesi kapsamını açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Independent technical experts ___ the initial investigative project scope."
+  },
+  {
+    "en": "The continuous chemical process induces severe psychological and occupational stress.",
+    "tr": "Sürekli kimyasal süreç ciddi psikolojik ve mesleki strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The continuous chemical process ___ severe psychological and occupational stress."
+  },
+  {
+    "en": "The undetected structural anomaly distorts the final statistical research results.",
+    "tr": "Tespit edilemeyen yapısal anomali nihai istatistiksel araştırma sonuçlarını bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The undetected structural anomaly ___ the final statistical research results."
+  },
+  {
+    "en": "Mainstream digital media manipulates public political and cultural perspective.",
+    "tr": "Ana akım dijital medya kamuoyunun siyasi ve kültürel bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Mainstream digital media ___ public political and cultural perspective."
+  },
+  {
+    "en": "The updated operational system accommodates rapid regional infrastructure expansion.",
+    "tr": "Güncellenmiş operasyonel sistem hızlı bölgesel altyapı genişlemesine uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The updated operational system ___ rapid regional infrastructure expansion."
+  },
+  {
+    "en": "The revised security protocol defines crucial technical system parameters.",
+    "tr": "Gözden geçirilmiş güvenlik protokolü kritik teknik sistem parametrelerini tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The revised security protocol ___ crucial technical system parameters."
+  },
+  {
+    "en": "The legally binding contract binds separate international research institutions.",
+    "tr": "Yasal olarak bağlayıcı sözleşme ayrı uluslararası araştırma kurumlarını bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The legally binding contract ___ separate international research institutions."
+  },
+  {
+    "en": "Senior financial analysts inspect the entire underlying structural framework.",
+    "tr": "Kıdemli finansal analistler tüm temel yapısal çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Senior financial analysts ___ the entire underlying structural framework."
+  },
+  {
+    "en": "The primary independent variable affects excellent academic student outcomes.",
+    "tr": "Birincil bağımsız değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The primary independent variable ___ excellent academic student outcomes."
+  },
+  {
+    "en": "The reinforced central core stabilizes crucial internal device components.",
+    "tr": "Güçlendirilmiş merkezi çekirdek kritik dahili cihaz bileşenlerini stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The reinforced central core ___ crucial internal device components."
+  },
+  {
+    "en": "The attached statistical graph illustrates exact distribution and demographic percentages.",
+    "tr": "Ekli istatistiksel grafik kesin dağılım ve demografik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The attached statistical graph ___ exact distribution and demographic percentages."
+  },
+  {
+    "en": "The strict institutional policy restricts unauthorized user network access.",
+    "tr": "Katı kurumsal politika yetkisiz kullanıcı ağ erişimini kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The strict institutional policy ___ unauthorized user network access."
+  },
+  {
+    "en": "The final scientific finding validates alternative alternative scientific hypotheses.",
+    "tr": "Nihai bilimsel bulgu alternatif bilimsel hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The final scientific finding ___ alternative alternative scientific hypotheses."
+  },
+  {
+    "en": "The software development team modifies individual functional software modules.",
+    "tr": "Yazılım geliştirme ekibi bireysel fonksiyonel yazılım modüllerini değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The software development team ___ individual functional software modules."
+  },
+  {
+    "en": "The ethics evaluation committee evaluates detailed anonymous student feedback.",
+    "tr": "Etik değerlendirme komitesi detaylı anonim öğrenci geri bildirimini değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The ethics evaluation committee ___ detailed anonymous student feedback."
+  },
+  {
+    "en": "The principal laboratory researcher isolates separate unstable chemical variables.",
+    "tr": "Baş laboratuvar araştırmacısı ayrı kararsız kimyasal değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The principal laboratory researcher ___ separate unstable chemical variables."
+  },
+  {
+    "en": "Innovative corporate strategies maximize maximum annual manufacturing efficiency.",
+    "tr": "Yenilikçi kurumsal stratejiler maksimum yıllık üretim verimliliğini maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Innovative corporate strategies ___ maximum annual manufacturing efficiency."
+  },
+  {
+    "en": "The automated background script calculates complex mathematical data ratios.",
+    "tr": "Otomatik arka plan betiği karmaşık matematiksel veri oranlarını hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The automated background script ___ complex mathematical data ratios."
+  },
+  {
+    "en": "The independent annual audit exposes hidden organizational system flaws.",
+    "tr": "Bağımsız yıllık denetim gizli örgütsel sistem kusurlarını ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The independent annual audit ___ hidden organizational system flaws."
+  },
+  {
+    "en": "The sudden paradigm shift alters global consumer behavior trends.",
+    "tr": "Ani paradigma değişimi küresel tüketici davranışı eğilimlerini değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The sudden paradigm shift ___ global consumer behavior trends."
+  },
+  {
+    "en": "The advanced cryptographic framework secures sensitive user information data.",
+    "tr": "Gelişmiş kriptografik çerçeve hassas kullanıcı bilgileri verilerini güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The advanced cryptographic framework ___ sensitive user information data."
+  },
+  {
+    "en": "The regional administrative council suspended outdated environmental safety regulations.",
+    "tr": "Bölgesel idari konsey güncelliğini yitirmiş çevresel güvenlik düzenlemelerini askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The regional administrative council ___ outdated environmental safety regulations."
+  },
+  {
+    "en": "The executive internal board terminated formal bilateral commercial agreements.",
+    "tr": "Yürütme iç kurulu resmi ikili ticari anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The executive internal board ___ formal bilateral commercial agreements."
+  },
+  {
+    "en": "The national education ministry conducted comprehensive regional educational surveys.",
+    "tr": "Milli eğitim bakanlığı kapsamlı bölgesel eğitim anketleri yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The national education ministry ___ comprehensive regional educational surveys."
+  },
+  {
+    "en": "The centralized cloud database accumulates detailed historical system logs.",
+    "tr": "Merkezi bulut veritabanı detaylı geçmiş sistem günlüklerini biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The centralized cloud database ___ detailed historical system logs."
+  }
+]
+};
+
 
 const unit8LessonSentences = {
   1: [
@@ -6218,7 +7298,22 @@ const unitSentencesMap = {
     4: { exercises: [buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 1, 0), buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 2, 1)] }
   },
   7: {
-    1: [...unit4LessonSentences[3], ...unit4LessonSentences[4]]
+    1: {
+      exercises: [
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 1, 0),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 2, 10),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 3, 20),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 4, 30),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 5, 40),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 6, 50),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 7, 60),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 8, 70),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 9, 80),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 10, 90),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 11, 100),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 12, 110)
+      ]
+    }
   },
   8: {
     1: unit8Lesson1Exercises,
