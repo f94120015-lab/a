@@ -1,168 +1,844 @@
-const unit9Lesson1SentencesRaw = [
-  { en: "Is the data valid?", tr: "Veri geçerli midir?", word: "valid", trWord: "geçerli", blank: "Is the data ___?" },
-  { en: "Are the documents ready?", tr: "Belgeler hazır mıdır?", word: "ready", trWord: "hazır", blank: "Are the documents ___?" },
-  { en: "Was the concept clear?", tr: "Kavram açık mıydı?", word: "clear", trWord: "açık", blank: "Was the concept ___?" },
-  { en: "Were the methods standards?", tr: "Yöntemler standart mıydı?", word: "standards", trWord: "standart", blank: "Were the methods ___?" },
-  { en: "Is the author present?", tr: "Yazar mevcut mudur?", word: "present", trWord: "mevcut", blank: "Is the author ___?" },
-  { en: "Are the factors internal?", tr: "Faktörler içsel midir?", word: "internal", trWord: "içsel", blank: "Are the factors ___?" },
-  { en: "Was the response negative?", tr: "Yanıt olumsuz muydu?", word: "negative", trWord: "olumsuz", blank: "Was the response ___?" },
-  { en: "Were the criteria strict?", tr: "Kriterler katı mıydı?", word: "strict", trWord: "katı", blank: "Were the criteria ___?" },
-  { en: "Is the sector growing?", tr: "Sektör büyüyor mu?", word: "growing", trWord: "büyüyor", blank: "Is the sector ___?" },
-  { en: "Are you the analyst?", tr: "Siz analist misiniz?", word: "analyst", trWord: "analist", blank: "Are you the ___?" },
-  { en: "Is the legal framework sufficient for this case?", tr: "Yasal çerçeve bu dava için yeterli midir?", word: "framework", trWord: "çerçeve", blank: "Is the legal ___ sufficient for this case?" },
-  { en: "Are the economic indicators stable this month?", tr: "Ekonomik göstergeler bu ay istikrarlı mıdır?", word: "stable", trWord: "istikrarlı", blank: "Are the economic indicators ___ this month?" },
-  { en: "Was the initial assessment fully accurate?", tr: "İlk değerlendirme tamamen doğru muydu?", word: "assessment", trWord: "değerlendirme", blank: "Was the initial ___ fully accurate?" },
-  { en: "Were the specific sources verified by experts?", tr: "Belirli kaynaklar uzmanlar tarafından doğrulandı mı?", word: "verified", trWord: "doğrulandı", blank: "Were the specific sources ___ by experts?" },
-  { en: "Is the financial structure completely transparent?", tr: "Finansal yapı tamamen şeffaf mıdır?", word: "structure", trWord: "yapı", blank: "Is the financial ___ completely transparent?" },
-  { en: "Are the individual variables controlled well?", tr: "Bireysel değişkenler iyi kontrol ediliyor mu?", word: "variables", trWord: "değişkenler", blank: "Are the individual ___ controlled well?" },
-  { en: "Was the primary benefit clearly identified?", tr: "Temel fayda açıkça belirlendi mi?", word: "benefit", trWord: "fayda", blank: "Was the primary ___ clearly identified?" },
-  { en: "Were the environmental factors considered?", tr: "Çevresel faktörler dikkate alındı mı?", word: "factors", trWord: "faktörler", blank: "Were the environmental ___ considered?" },
-  { en: "Is the final outcome satisfactory for everyone?", tr: "Nihai sonuç herkes için tatmin edici midir?", word: "outcome", trWord: "sonuç", blank: "Is the final ___ satisfactory for everyone?" },
-  { en: "Are these academic journals peer-reviewed?", tr: "Bu akademik dergiler hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed?" },
-  { en: "Is the methodological approach relevant to the current study?", tr: "Metodolojik yaklaşım mevcut çalışma ile ilgili midir?", word: "approach", trWord: "yaklaşım", blank: "Is the methodological ___ relevant to the current study?" },
-  { en: "Are the statistical computations available for public review?", tr: "İstatistiksel hesaplamalar kamuya açık inceleme için mevcut mudur?", word: "available", trWord: "mevcut", blank: "Are the statistical computations ___ for public review?" },
-  { en: "Was the constitutional amendment approved by the parliament?", tr: "Anayasa değişikliği parlamento tarafından onaylandı mı?", word: "amendment", trWord: "değişiklik", blank: "Was the constitutional ___ approved by the parliament?" },
-  { en: "Were the administrative procedures followed during the crisis?", tr: "Kriz sırasında idari prosedürler takip edildi mi?", word: "procedures", trWord: "prosedürler", blank: "Were the administrative ___ followed during the crisis?" },
-  { en: "Is the theoretical assumption supported by empirical evidence?", tr: "Teorik varsayım ampirik kanıtlarla destekleniyor mu?", word: "assumption", trWord: "varsayım", blank: "Is the theoretical ___ supported by empirical evidence?" },
-  { en: "Are the global distribution networks functional right now?", tr: "Küresel dağıtım ağları şu anda işlevsel midir?", word: "distribution", trWord: "dağıtım", blank: "Are the global ___ networks functional right now?" },
-  { en: "Was the historical document genuine according to analysts?", tr: "Tarihsel belge analistlere göre orijinal miydi?", word: "analysts", trWord: "analistlere", blank: "Was the historical document genuine according to ___?" },
-  { en: "Were the experimental results consistent across all trials?", tr: "Deneysel sonuçlar tüm denemelerde tutarlı mıydı?", word: "consistent", trWord: "tutarlı", blank: "Were the experimental results ___ across all trials?" },
-  { en: "Is the institutional framework adaptable to new legislation?", tr: "Kurumsal çerçeve yeni mevzuata uyarlanabilir mi?", word: "legislation", trWord: "mevzuata", blank: "Is the institutional framework adaptable to new ___?" },
-  { en: "Are the demographic categories exclusive in this research?", tr: "Bu araştırmada demografik kategoriler birbirini dışlayıcı mıdır?", word: "categories", trWord: "kategoriler", blank: "Are the demographic ___ exclusive in this research?" }
-];
-
-
-const unit9Lesson2SentencesRaw = [
-  { en: "Did you analyze it?", tr: "Onu analiz ettin mi?", word: "analyze", trWord: "analiz ettin", blank: "Did you ___ it?" },
-  { en: "Does it function well?", tr: "İyi çalışıyor mu?", word: "function", trWord: "çalışıyor", blank: "Does it ___ well?" },
-  { en: "Do they export goods?", tr: "Mal ihraç ediyorlar mı?", word: "export", trWord: "ihraç ediyorlar", blank: "Do they ___ goods?" },
-  { en: "Did he publish the book?", tr: "Kitabı yayımladı mı?", word: "publish", trWord: "yayımladı", blank: "Did he ___ the book?" },
-  { en: "Does she assume the risk?", tr: "Riski üstleniyor mu?", word: "assume", trWord: "üstleniyor", blank: "Does she ___ the risk?" },
-  { en: "Do we require a permit?", tr: "İzin belgesi gerekiyor mu?", word: "require", trWord: "gerekiyor", blank: "Do we ___ a permit?" },
-  { en: "Did it indicate a change?", tr: "Bir değişiklik gösterdi mi?", word: "indicate", trWord: "gösterdi", blank: "Did it ___ a change?" },
-  { en: "Does this derive from code?", tr: "Bu, kuraldan mı türiyor?", word: "derive", trWord: "türiyor", blank: "Does this ___ from code?" },
-  { en: "Do they source materials locally?", tr: "Malzemeleri yerel olarak mı tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Do they ___ materials locally?" },
-  { en: "Did you estimate the cost?", tr: "Maliyeti tahmin ettin mi?", word: "estimate", trWord: "tahmin ettin", blank: "Did you ___ the cost?" },
-  { en: "Did the analyst evaluate the raw data?", tr: "Analist ham veriyi değerlendirdi mi?", word: "evaluate", trWord: "değerlendirdi", blank: "Did the analyst ___ the raw data?" },
-  { en: "Does the government modify the tax policy?", tr: "Hükümet vergi politikasını değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the tax policy?" },
-  { en: "Do researchers establish a clear framework?", tr: "Araştırmacılar net bir çerçeve kuruyor mu?", word: "establish", trWord: "kuruyor", blank: "Do researchers ___ a clear framework?" },
-  { en: "Did the committee exclude the final report?", tr: "Komite nihai raporu hariç tuttu mu?", word: "exclude", trWord: "hariç tuttu", blank: "Did the committee ___ the final report?" },
-  { en: "Does this factor influence the public opinion?", tr: "Bu faktör kamuoyunu etkiliyor mu?", word: "influence", trWord: "etkiliyor", blank: "Does this factor ___ the public opinion?" },
-  { en: "Do institutions structure their academic curriculum?", tr: "Kurumlar akademik müfredatlarını yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do institutions ___ their academic curriculum?" },
-  { en: "Did the team integrate the new software?", tr: "Ekip yeni yazılımı entegre etti mi?", word: "integrate", trWord: "entegre etti", blank: "Did the team ___ the new software?" },
-  { en: "Does the theory define the phenomenon correctly?", tr: "Teori olguyu doğru tanımlıyor mu?", word: "define", trWord: "tanımlıyor", blank: "Does the theory ___ the phenomenon correctly?" },
-  { en: "Do companies achieve their annual production goals?", tr: "Şirketler yıllık üretim hedeflerine ulaşıyor mu?", word: "achieve", trWord: "ulaşıyor", blank: "Do companies ___ their annual production goals?" },
-  { en: "Did the manager adjust the financial budget?", tr: "Müdür finansal bütçeyi ayarladı mı?", word: "adjust", trWord: "ayarladı", blank: "Did the manager ___ the financial budget?" },
-  { en: "Did the administration abolish the controversial labor legislation?", tr: "Yönetim tartışmalı iş mevzuatını kaldırdı mı?", word: "abolish", trWord: "kaldırdı", blank: "Did the administration ___ the controversial labor legislation?" },
-  { en: "Does the regional economy affect the minority distribution?", tr: "Bölgesel ekonomi azınlık dağılımını etkiliyor mu?", word: "affect", trWord: "etkiliyor", blank: "Does the regional economy ___ the minority distribution?" },
-  { en: "Do separate departments allocate their resources independently?", tr: "Ayrı departmanlar kaynaklarını bağımsız olarak mı tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Do separate departments ___ their resources independently?" },
-  { en: "Did the university adopt the progressive assessment model?", tr: "Üniversite ilerici değerlendirme modelini benimsedi mi?", word: "adopt", trWord: "benimsedi", blank: "Did the university ___ the progressive assessment model?" },
-  { en: "Does this specific variable alter the final analysis?", tr: "Bu özel değişken nihai analizi değiştiriyor mu?", word: "alter", trWord: "değiştiriyor", blank: "Does this specific variable ___ the final analysis?" },
-  { en: "Do modern societies sustain their unique cultural identity?", tr: "Modern toplumlar benzersiz kültürel kimliklerini sürdürüyor mu?", word: "sustain", trWord: "sürdürüyor", blank: "Do modern societies ___ their unique cultural identity?" },
-  { en: "Did the supreme court challenge the legal definition today?", tr: "Anayasa Mahkemesi bugün yasal tanımı sorguladı mı?", word: "challenge", trWord: "sorguladı", blank: "Did the supreme court ___ the legal definition today?" },
-  { en: "Does the ancient text imply rigid social structures?", tr: "Antik metin katı sosyal yapılar mı ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "Does the ancient text ___ rigid social structures?" },
-  { en: "Do laboratory technicians conduct the primary safety experiment?", tr: "Laboratuvar teknisyenleri temel güvenlik deneyini yürütüyor mu?", word: "conduct", trWord: "yürütüyor", blank: "Do laboratory technicians ___ the primary safety experiment?" },
-  { en: "Did the participants interpret the survey instructions accurately?", tr: "Katılımcılar anket yönergelerini doğru yorumladı mı?", word: "interpret", trWord: "yorumladı", blank: "Did the participants ___ the survey instructions accurately?" }
-];
-
-
-const unit9Lesson3SentencesRaw = [
-  { en: "Why is the data wrong?", tr: "Veri neden yanlıştır?", word: "wrong", trWord: "yanlıştır", blank: "Why is the data ___?" },
-  { en: "Where are the documents?", tr: "Belgeler nerededir?", word: "Where", trWord: "nerededir", blank: "___ are the documents?" },
-  { en: "What was the concept?", tr: "Kavram neydi?", word: "What", trWord: "neydi", blank: "___ was the concept?" },
-  { en: "How is the method?", tr: "Yöntem nasıldır?", word: "How", trWord: "nasıldır", blank: "___ is the method?" },
-  { en: "Who was the author?", tr: "Yazar kimdi?", word: "Who", trWord: "kimdi", blank: "___ was the author?" },
-  { en: "Why were the factors dynamic?", tr: "Faktörler neden dinamikti?", word: "dynamic", trWord: "dinamikti", blank: "Why were the factors ___?" },
-  { en: "Where is the sector?", tr: "Sektör nerededir?", word: "Where", trWord: "nerededir", blank: "___ is the sector?" },
-  { en: "What is the percentage?", tr: "Yüzde kaçtır?", word: "percentage", trWord: "yüzde", blank: "What is the ___?" },
-  { en: "How was the response?", tr: "Yanıt nasıldı?", word: "response", trWord: "yanıt", blank: "How was the ___?" },
-  { en: "Who is the analyst?", tr: "Analist kimdir?", word: "analyst", trWord: "analist", blank: "Who is the ___?" },
-  { en: "Why are the legal criteria so rigid?", tr: "Yasal kriterler neden bu kadar katıdır?", word: "rigid", trWord: "katıdır", blank: "Why are the legal criteria so ___?" },
-  { en: "What will be the primary benefit?", tr: "Temel fayda ne olacaktır?", word: "benefit", trWord: "fayda", blank: "What will be the primary ___?" },
-  { en: "How is the financial structure today?", tr: "Bugün finansal yapı nasıldır?", word: "structure", trWord: "yapı", blank: "How is the financial ___ today?" },
-  { en: "Where were the specific sources found?", tr: "Belirli kaynaklar nerede bulundu?", word: "found", trWord: "bulundu", blank: "Where were the specific sources ___?" },
-  { en: "Why is the initial assessment incomplete?", tr: "İlk değerlendirme neden eksiktir?", word: "assessment", trWord: "değerlendirme", blank: "Why is the initial ___ incomplete?" },
-  { en: "What can be the potential outcome?", tr: "Potansiyel sonuç ne olabilir?", word: "outcome", trWord: "sonuç", blank: "What can be the potential ___?" },
-  { en: "Who is the principal investigator here?", tr: "Buradaki asıl araştırmacı kimdir?", word: "investigator", trWord: "araştırmacı", blank: "Who is the principal ___ here?" },
-  { en: "How were the variables so unpredictable?", tr: "Değişkenler nasıl bu kadar tahmin edilemezdi?", word: "variables", trWord: "değişkenler", blank: "How were the ___ so unpredictable?" },
-  { en: "What is the major function of this?", tr: "Bunun ana işlevi nedir?", word: "function", trWord: "işlevi", blank: "What is the major ___ of this?" },
-  { en: "Where are the individual responses?", tr: "Bireysel yanıtlar nerededir?", word: "responses", trWord: "yanıtlar", blank: "Where are the individual ___?" },
-  { en: "Why is the theoretical framework of this study unstable?", tr: "Bu çalışmanın teorik çerçevesi neden istikrarsızdır?", word: "framework", trWord: "çerçevesi", blank: "Why is the theoretical ___ of this study unstable?" },
-  { en: "What was the ultimate constitutional authority of the state?", tr: "Devletin nihai anayasal yetkisi neydi?", word: "authority", trWord: "yetkisi", blank: "What was the ultimate constitutional ___ of the state?" },
-  { en: "How are the economic indicators relevant to this region?", tr: "Ekonomik göstergeler bu bölgeyle nasıl ilgilidir?", word: "indicators", trWord: "göstergeler", blank: "How are the economic ___ relevant to this region?" },
-  { en: "Where is the administrative policy document located now?", tr: "İdari politika belgesi şimdi nerede bulunuyor?", word: "located", trWord: "bulunuyor", blank: "Where is the administrative policy document ___ now?" },
-  { en: "Why were the environmental factors excluded from the report?", tr: "Çevresel faktörler neden rapordan hariç tutuldu?", word: "excluded", trWord: "hariç tutuldu", blank: "Why were the environmental factors ___ from the report?" },
-  { en: "What will be the long-term significance of this discovery?", tr: "Bu keşfin uzun vadeli önemi ne olacaktır?", word: "significance", trWord: "önemi", blank: "What will be the long-term ___ of this discovery?" },
-  { en: "How is the statistical analysis useful for predictions?", tr: "İstatistiksel analiz tahminler için nasıl yararlıdır?", word: "analysis", trWord: "analiz", blank: "How is the statistical ___ useful for predictions?" },
-  { en: "Who was the original creator of this specific methodology?", tr: "Bu özel metodolojinin özgün yaratıcısı kimdi?", word: "methodology", trWord: "metodolojinin", blank: "Who was the original creator of this specific ___?" },
-  { en: "Why is the global distribution of resources so unequal?", tr: "Küresel kaynak dağıtımı neden bu kadar adaletsizdir?", word: "distribution", trWord: "dağıtımı", blank: "Why is the global ___ of resources so unequal?" },
-  { en: "What are the primary components of this chemical compound?", tr: "Bu kimyasal bileşiğin birincil bileşenleri nelerdir?", word: "components", trWord: "bileşenleri", blank: "What are the primary ___ of this chemical compound?" }
-];
-
-
-const unit9Lesson4SentencesRaw = [
-  { en: "Why did they analyze it?", tr: "Onu neden analiz ettiler?", word: "analyze", trWord: "analiz ettiler", blank: "Why did they ___ it?" },
-  { en: "How does it function?", tr: "Nasıl çalışıyor?", word: "function", trWord: "çalışıyor", blank: "How does it ___?" },
-  { en: "What did you estimate?", tr: "Neyi tahmin ettiniz?", word: "estimate", trWord: "tahmin ettiniz", blank: "What did you ___?" },
-  { en: "Where do they source it?", tr: "Onu nereden tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Where do they ___ it?" },
-  { en: "When did he publish it?", tr: "Onu ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did he ___ it?" },
-  { en: "Why does she assume that?", tr: "Bunu neden varsayıyor?", word: "assume", trWord: "varsayıyor", blank: "Why does she ___ that?" },
-  { en: "How did you derive this?", tr: "Bunu nasıl türettiniz?", word: "derive", trWord: "türettiniz", blank: "How did you ___ this?" },
-  { en: "What does this indicate?", tr: "Bu neyi gösteriyor?", word: "indicate", trWord: "gösteriyor", blank: "What does this ___?" },
-  { en: "Where did they establish it?", tr: "Onu nerede kurdular?", word: "establish", trWord: "kurdular", blank: "Where did they ___ it?" },
-  { en: "Why do we require this?", tr: "Buna neden ihtiyaç duyuyoruz?", word: "require", trWord: "ihtiyaç duyuyoruz", blank: "Why do we ___ this?" },
-  { en: "How did the analyst evaluate the data?", tr: "Analist veriyi nasıl değerlendirdi?", word: "evaluate", trWord: "değerlendirdi", blank: "How did the analyst ___ the data?" },
-  { en: "Does the government modify the policy?", tr: "Hükümet politikayı değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the policy?" },
-  { en: "What did the researchers achieve last year?", tr: "Araştırmacılar geçen yıl neyi başardı?", word: "achieve", trWord: "başardı", blank: "What did the researchers ___ last year?" },
-  { en: "Where do institutions structure the framework?", tr: "Kurumlar çerçeveyi nerede yapılandırıyor?", word: "structure", trWord: "yapılandırıyor", blank: "Where do institutions ___ the framework?" },
-  { en: "When did the committee publish the summary?", tr: "Komite özeti ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did the committee ___ the summary?" },
-  { en: "How does this factor influence the outcome?", tr: "Bu faktör sonucu nasıl etkiliyor?", word: "influence", trWord: "etkiliyor", blank: "How does this factor ___ the outcome?" },
-  { en: "Why did the team exclude the respondents?", tr: "Ekip katılımcıları neden hariç tuttu?", word: "exclude", trWord: "hariç tuttu", blank: "Why did the team ___ the respondents?" },
-  { en: "What does the theory define exactly?", tr: "Teori tam olarak neyi tanımlıyor?", word: "define", trWord: "tanımlıyor", blank: "What does the theory ___ exactly?" },
-  { en: "Where did they integrate the technology?", tr: "Teknolojiyi nereye entegre ettiler?", word: "integrate", trWord: "entegre ettiler", blank: "Where did they ___ the technology?" },
-  { en: "Why do companies export their production?", tr: "Şirketler üretimlerini neden ihraç ediyor?", word: "export", trWord: "ihraç ediyor", blank: "Why do companies ___ their production?" },
-  { en: "Why did the administration abolish the old regulatory framework?", tr: "Yönetim eski düzenleyici çerçeveyi neden kaldırdı?", word: "abolish", trWord: "kaldırdı", blank: "Why did the administration ___ the old regulatory framework?" },
-  { en: "How does the global economy affect domestic resource distribution?", tr: "Küresel ekonomi iç kaynak dağılımını nasıl etkiliyor?", word: "affect", trWord: "etkiliyor", blank: "How does the global economy ___ domestic resource distribution?" },
-  { en: "What did the scientific community conclude regarding the data?", tr: "Bilimsel topluluk verilerle ilgili ne sonuç çıkardı?", word: "conclude", trWord: "sonuç çıkardı", blank: "What did the scientific community ___ regarding the data?" },
-  { en: "Where do separate departments allocate their annual financial credit?", tr: "Ayrı departmanlar yıllık finansal kredilerini nereye tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Where do separate departments ___ their annual financial credit?" },
-  { en: "When did the university adopt the new academic assessment method?", tr: "Üniversite yeni akademik değerlendirme yöntemini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the new academic assessment method?" },
-  { en: "How does this specific variable alter the statistical analysis?", tr: "Bu özel değişken istatistiksel analizi nasıl değiştiriyor?", word: "alter", trWord: "değiştiriyor", blank: "How does this specific variable ___ the statistical analysis?" },
-  { en: "Why did the main opposition challenge the legal definition?", tr: "Ana muhalefet yasal tanıma neden karşı çıktı?", word: "challenge", trWord: "karşı çıktı", blank: "Why did the main opposition ___ the legal definition?" },
-  { en: "What does the historical text imply about social structures?", tr: "Tarihsel metin toplumsal yapılar hakkında ne ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "What does the historical text ___ about social structures?" },
-  { en: "Where did the engineers conduct the primary energy experiment?", tr: "Mühendisler temel enerji deneyini nerede yürüttüler?", word: "conduct", trWord: "yürüttüler", blank: "Where did the engineers ___ the primary energy experiment?" },
-  { en: "How do modern societies sustain their cultural identity?", tr: "Modern toplumlar kültürel kimliklerini nasıl sürdürüyor?", word: "sustain", trWord: "sürdürüyor", blank: "How do modern societies ___ their cultural identity?" }
-];
-
-
-const unit9Lesson5SentencesRaw = [
-  { en: "At which level is it?", tr: "Hangi düzeydedir?", word: "level", trWord: "düzeydedir", blank: "At which ___ is it?" },
-  { en: "In which sector are they?", tr: "Hangi sektördedirler?", word: "sector", trWord: "sektördedirler", blank: "In which ___ are they?" },
-  { en: "To what extent was it?", tr: "Ne ölçüdeydi?", word: "extent", trWord: "ölçüdeydi", blank: "To what ___ was it?" },
-  { en: "For which purpose is this?", tr: "Bu hangi amaç içindir?", word: "purpose", trWord: "amaç", blank: "For which ___ is this?" },
-  { en: "By whose authority was it?", tr: "Kimin yetkisiyleydi?", word: "authority", trWord: "yetkisiyleydi", blank: "By whose ___ was it?" },
-  { en: "Under which category are they?", tr: "Hangi kategori altındadırlar?", word: "category", trWord: "kategori", blank: "Under which ___ are they?" },
-  { en: "From which source is it?", tr: "Hangi kaynaktandır?", word: "source", trWord: "kaynaktandır", blank: "From which ___ is it?" },
-  { en: "In what period was it?", tr: "Hangi dönemdeydi?", word: "period", trWord: "dönemdeydi", blank: "In what ___ was it?" },
-  { en: "With which method is it?", tr: "Hangi yöntemledir?", word: "method", trWord: "yöntemledir", blank: "With which ___ is it?" },
-  { en: "On whose data was it?", tr: "Kimin verileri üzerindeydi?", word: "data", trWord: "verileri", blank: "On whose ___ was it?" },
-  { en: "In which academic journal was it published?", tr: "Hangi akademik dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was it published?" },
-  { en: "Under what legal criteria were they selected?", tr: "Hangi yasal kriterler altında seçildiler?", word: "criteria", trWord: "kriterler", blank: "Under what legal ___ were they selected?" },
-  { en: "For which specific purpose is this required?", tr: "Bu hangi özel amaç için gereklidir?", word: "purpose", trWord: "amaç", blank: "For which specific ___ is this required?" },
-  { en: "At what financial percentage was it fixed?", tr: "Hangi finansal yüzdeyle sabitlendi?", word: "percentage", trWord: "yüzdeyle", blank: "At what financial ___ was it fixed?" },
-  { en: "From which primary source is this derived?", tr: "Bu hangi birincil kaynaktan türetilmiştir?", word: "source", trWord: "kaynaktan", blank: "From which primary ___ is this derived?" },
-  { en: "To what degree are the variables dynamic?", tr: "Değişkenler ne derece dinamiktir?", word: "degree", trWord: "derece", blank: "To what ___ are the variables dynamic?" },
-  { en: "With which analytical framework is it compatible?", tr: "Hangi analitik çerçeve ile uyumludur?", word: "framework", trWord: "çerçeve", blank: "With which analytical ___ is it compatible?" },
-  { en: "By what assessment method was it evaluated?", tr: "Hangi değerlendirme yöntemiyle değerlendirildi?", word: "assessment", trWord: "değerlendirme", blank: "By what ___ method was it evaluated?" },
-  { en: "In which economic sector is the crisis visible?", tr: "Kriz hangi ekonomik sektörde görünürdür?", word: "sector", trWord: "sektörde", blank: "In which economic ___ is the crisis visible?" },
-  { en: "On what theoretical assumption is this based?", tr: "Bu hangi teorik varsayıma dayanmaktadır?", word: "assumption", trWord: "varsayıma", blank: "On what theoretical ___ is this based?" },
-  { en: "Under which constitutional clause was the law modified?", tr: "Yasa hangi anayasal madde uyarınca değiştirildi?", word: "clause", trWord: "madde", blank: "Under which constitutional ___ was the law modified?" },
-  { en: "By what statistical methodology were the figures calculated?", tr: "Rakamlar hangi istatistiksel metodolojiyle hesaplandı?", word: "methodology", trWord: "metodolojiyle", blank: "By what statistical ___ were the figures calculated?" },
-  { en: "To what geographic extent is the population distributed?", tr: "Nüfus hangi coğrafi ölçüde dağılmıştır?", word: "extent", trWord: "ölçüde", blank: "To what geographic ___ is the population distributed?" },
-  { en: "For whose ultimate benefit was the policy established?", tr: "Politika kimin nihai faydası için oluşturuldu?", word: "benefit", trWord: "faydası", blank: "For whose ultimate ___ was the policy established?" },
-  { en: "From which institutional perspective was the text interpreted?", tr: "Metin hangi kurumsal perspektiften yorumlandı?", word: "perspective", trWord: "perspektiften", blank: "From which institutional ___ was the text interpreted?" },
-  { en: "In which experimental environment were the plants grown?", tr: "Bitkiler hangi deneysel ortamda yetiştirildi?", word: "environment", trWord: "ortamda", blank: "In which experimental ___ were the plants grown?" },
-  { en: "With what administrative authority is the director acting?", tr: "Müdür hangi idari yetkiyle hareket ediyor?", word: "authority", trWord: "yetkiyle", blank: "With what administrative ___ is the director acting?" },
-  { en: "At which developmental stage are the data components?", tr: "Veri bileşenleri hangi gelişim aşamasındadır?", word: "stage", trWord: "aşamasındadır", blank: "At which developmental ___ are the data components?" },
-  { en: "On which philosophical concept is the framework structured?", tr: "Çerçeve hangi felsefi kavram üzerine yapılandırılmıştır?", word: "concept", trWord: "kavram", blank: "On which philosophical ___ is the framework structured?" },
-  { en: "Through what regulatory process was the contract validated?", tr: "Sözleşme hangi düzenleyici süreçle onaylandı?", word: "process", trWord: "süreçle", blank: "Through what regulatory ___ was the contract validated?" }
-];
+const unit7LessonSentences = {
+  1: [
+  {
+    "en": "The data contradicts the theory.",
+    "tr": "Veriler teoriyle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The data ___ the theory."
+  },
+  {
+    "en": "The context specifies the criteria.",
+    "tr": "Bağlam kriterleri belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The context ___ the criteria."
+  },
+  {
+    "en": "The sector anticipates growth.",
+    "tr": "Sektör büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The sector ___ growth."
+  },
+  {
+    "en": "Authorities advocate reform.",
+    "tr": "Yetkililer reformu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Authorities ___ reform."
+  },
+  {
+    "en": "The dynamic triggers reaction.",
+    "tr": "Dinamik tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "The dynamic ___ reaction."
+  },
+  {
+    "en": "Experts clarify the scope.",
+    "tr": "Uzmanlar kapsamı açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Experts ___ the scope."
+  },
+  {
+    "en": "The process induces stress.",
+    "tr": "Süreç strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The process ___ stress."
+  },
+  {
+    "en": "The anomaly distorts results.",
+    "tr": "Anomali sonuçları bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The anomaly ___ results."
+  },
+  {
+    "en": "Media manipulates perspective.",
+    "tr": "Medya bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Media ___ perspective."
+  },
+  {
+    "en": "The system accommodates expansion.",
+    "tr": "Sistem genişlemeye uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The system ___ expansion."
+  },
+  {
+    "en": "The protocol defines parameters.",
+    "tr": "Protokol parametreleri tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The protocol ___ parameters."
+  },
+  {
+    "en": "The contract binds institutions.",
+    "tr": "Sözleşme kurumları bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The contract ___ institutions."
+  },
+  {
+    "en": "Analysts inspect the framework.",
+    "tr": "Analistler çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Analysts ___ the framework."
+  },
+  {
+    "en": "The variable affects outcomes.",
+    "tr": "Değişken sonuçları etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The variable ___ outcomes."
+  },
+  {
+    "en": "The core stabilizes components.",
+    "tr": "Çekirdek bileşenleri stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The core ___ components."
+  },
+  {
+    "en": "The graph illustrates percentages.",
+    "tr": "Grafik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The graph ___ percentages."
+  },
+  {
+    "en": "The policy restricts access.",
+    "tr": "Politika erişimi kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The policy ___ access."
+  },
+  {
+    "en": "The finding validates hypotheses.",
+    "tr": "Bulgu hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The finding ___ hypotheses."
+  },
+  {
+    "en": "The team modifies modules.",
+    "tr": "Ekip modülleri değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The team ___ modules."
+  },
+  {
+    "en": "The committee evaluates feedback.",
+    "tr": "Komite geri bildirimi değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The committee ___ feedback."
+  },
+  {
+    "en": "The researcher isolates variables.",
+    "tr": "Araştırmacı değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The researcher ___ variables."
+  },
+  {
+    "en": "Strategies maximize efficiency.",
+    "tr": "Stratejiler verimliliği maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Strategies ___ efficiency."
+  },
+  {
+    "en": "The script calculates ratios.",
+    "tr": "Betik oranları hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The script ___ ratios."
+  },
+  {
+    "en": "The audit exposes flaws.",
+    "tr": "Denetim kusurları ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The audit ___ flaws."
+  },
+  {
+    "en": "The shift alters trends.",
+    "tr": "Değişim eğilimleri değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The shift ___ trends."
+  },
+  {
+    "en": "The framework secures data.",
+    "tr": "Çerçeve verileri güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The framework ___ data."
+  },
+  {
+    "en": "The council suspended regulations.",
+    "tr": "Konsey düzenlemeleri askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The council ___ regulations."
+  },
+  {
+    "en": "The board terminated agreements.",
+    "tr": "Yönetim kurulu anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The board ___ agreements."
+  },
+  {
+    "en": "The ministry conducted surveys.",
+    "tr": "Bakanlık anketler yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The ministry ___ surveys."
+  },
+  {
+    "en": "The database accumulates logs.",
+    "tr": "Veritabanı günlükleri biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The database ___ logs."
+  },
+  {
+    "en": "The newly collected empirical data contradicts the theory.",
+    "tr": "Yeni toplanan deneysel veriler teoriyle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The newly collected empirical data ___ the theory."
+  },
+  {
+    "en": "The broader socio-economic context specifies the criteria.",
+    "tr": "Daha geniş sosyo-ekonomik bağlam kriterleri belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The broader socio-economic context ___ the criteria."
+  },
+  {
+    "en": "The highly competitive dynamic sector anticipates growth.",
+    "tr": "Son derece rekabetçi dinamik sektör büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The highly competitive dynamic sector ___ growth."
+  },
+  {
+    "en": "Leading institutional authorities advocate reform.",
+    "tr": "Önde gelen kurumsal yetkililer reformu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Leading institutional authorities ___ reform."
+  },
+  {
+    "en": "This unpredictable economic dynamic triggers reaction.",
+    "tr": "Bu öngörülemeyen ekonomik dinamik tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "This unpredictable economic dynamic ___ reaction."
+  },
+  {
+    "en": "Independent technical experts clarify the scope.",
+    "tr": "Bağımsız teknik uzmanlar kapsamı açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Independent technical experts ___ the scope."
+  },
+  {
+    "en": "The continuous chemical process induces stress.",
+    "tr": "Sürekli kimyasal süreç strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The continuous chemical process ___ stress."
+  },
+  {
+    "en": "The undetected structural anomaly distorts results.",
+    "tr": "Tespit edilemeyen yapısal anomali sonuçları bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The undetected structural anomaly ___ results."
+  },
+  {
+    "en": "Mainstream digital media manipulates perspective.",
+    "tr": "Ana akım dijital medya bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Mainstream digital media ___ perspective."
+  },
+  {
+    "en": "The updated operational system accommodates expansion.",
+    "tr": "Güncellenmiş operasyonel sistem genişlemeye uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The updated operational system ___ expansion."
+  },
+  {
+    "en": "The revised security protocol defines parameters.",
+    "tr": "Gözden geçirilmiş güvenlik protokolü parametreleri tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The revised security protocol ___ parameters."
+  },
+  {
+    "en": "The legally binding contract binds institutions.",
+    "tr": "Yasal olarak bağlayıcı sözleşme kurumları bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The legally binding contract ___ institutions."
+  },
+  {
+    "en": "Senior financial analysts inspect the framework.",
+    "tr": "Kıdemli finansal analistler çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Senior financial analysts ___ the framework."
+  },
+  {
+    "en": "The primary independent variable affects outcomes.",
+    "tr": "Birincil bağımsız değişken sonuçları etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The primary independent variable ___ outcomes."
+  },
+  {
+    "en": "The reinforced central core stabilizes components.",
+    "tr": "Güçlendirilmiş merkezi çekirdek bileşenleri stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The reinforced central core ___ components."
+  },
+  {
+    "en": "The attached statistical graph illustrates percentages.",
+    "tr": "Ekli istatistiksel grafik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The attached statistical graph ___ percentages."
+  },
+  {
+    "en": "The strict institutional policy restricts access.",
+    "tr": "Katı kurumsal politika erişimi kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The strict institutional policy ___ access."
+  },
+  {
+    "en": "The final scientific finding validates hypotheses.",
+    "tr": "Nihai bilimsel bulgu hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The final scientific finding ___ hypotheses."
+  },
+  {
+    "en": "The software development team modifies modules.",
+    "tr": "Yazılım geliştirme ekibi modülleri değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The software development team ___ modules."
+  },
+  {
+    "en": "The ethics evaluation committee evaluates feedback.",
+    "tr": "Etik değerlendirme komitesi geri bildirimi değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The ethics evaluation committee ___ feedback."
+  },
+  {
+    "en": "The principal laboratory researcher isolates variables.",
+    "tr": "Baş laboratuvar araştırmacısı değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The principal laboratory researcher ___ variables."
+  },
+  {
+    "en": "Innovative corporate strategies maximize efficiency.",
+    "tr": "Yenilikçi kurumsal stratejiler verimliliği maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Innovative corporate strategies ___ efficiency."
+  },
+  {
+    "en": "The automated background script calculates ratios.",
+    "tr": "Otomatik arka plan betiği oranları hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The automated background script ___ ratios."
+  },
+  {
+    "en": "The independent annual audit exposes flaws.",
+    "tr": "Bağımsız yıllık denetim kusurları ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The independent annual audit ___ flaws."
+  },
+  {
+    "en": "The sudden paradigm shift alters trends.",
+    "tr": "Ani paradigma değişimi eğilimleri değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The sudden paradigm shift ___ trends."
+  },
+  {
+    "en": "The advanced cryptographic framework secures data.",
+    "tr": "Gelişmiş kriptografik çerçeve verileri güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The advanced cryptographic framework ___ data."
+  },
+  {
+    "en": "The regional administrative council suspended regulations.",
+    "tr": "Bölgesel idari konsey düzenlemeleri askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The regional administrative council ___ regulations."
+  },
+  {
+    "en": "The executive internal board terminated agreements.",
+    "tr": "Yürütme iç kurulu anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The executive internal board ___ agreements."
+  },
+  {
+    "en": "The national education ministry conducted surveys.",
+    "tr": "Milli eğitim bakanlığı anketler yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The national education ministry ___ surveys."
+  },
+  {
+    "en": "The centralized cloud database accumulates logs.",
+    "tr": "Merkezi bulut veritabanı günlükleri biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The centralized cloud database ___ logs."
+  },
+  {
+    "en": "The data contradicts the long-standing theoretical model.",
+    "tr": "Veriler uzun süredir var olan teorik modelle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The data ___ the long-standing theoretical model."
+  },
+  {
+    "en": "The context specifies the strict qualitative selection criteria.",
+    "tr": "Bağlam katı nitel seçim kriterlerini belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The context ___ the strict qualitative selection criteria."
+  },
+  {
+    "en": "The sector anticipates significant annual financial growth.",
+    "tr": "Sektör yıllık önemli finansal büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The sector ___ significant annual financial growth."
+  },
+  {
+    "en": "Authorities advocate comprehensive legislative tax reform.",
+    "tr": "Yetkililer kapsamlı yasal vergi reformunu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Authorities ___ comprehensive legislative tax reform."
+  },
+  {
+    "en": "The dynamic triggers a chain of negative physical reactions.",
+    "tr": "Dinamik bir dizi olumsuz fiziksel tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "The dynamic ___ a chain of negative physical reactions."
+  },
+  {
+    "en": "Experts clarify the initial investigative project scope.",
+    "tr": "Uzmanlar başlangıçtaki araştırma projesi kapsamını açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Experts ___ the initial investigative project scope."
+  },
+  {
+    "en": "The process induces severe psychological and occupational stress.",
+    "tr": "Süreç ciddi psikolojik ve mesleki strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The process ___ severe psychological and occupational stress."
+  },
+  {
+    "en": "The anomaly distorts the final statistical research results.",
+    "tr": "Anomali nihai istatistiksel araştırma sonuçlarını bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The anomaly ___ the final statistical research results."
+  },
+  {
+    "en": "Media manipulates public political and cultural perspective.",
+    "tr": "Medya kamuoyunun siyasi ve kültürel bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Media ___ public political and cultural perspective."
+  },
+  {
+    "en": "The system accommodates rapid regional infrastructure expansion.",
+    "tr": "Sistem hızlı bölgesel altyapı genişlemesine uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The system ___ rapid regional infrastructure expansion."
+  },
+  {
+    "en": "The protocol defines crucial technical system parameters.",
+    "tr": "Protokol kritik teknik sistem parametrelerini tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The protocol ___ crucial technical system parameters."
+  },
+  {
+    "en": "The contract binds separate international research institutions.",
+    "tr": "Sözleşme ayrı uluslararası araştırma kurumlarını bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The contract ___ separate international research institutions."
+  },
+  {
+    "en": "Analysts inspect the entire underlying structural framework.",
+    "tr": "Analistler tüm temel yapısal çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Analysts ___ the entire underlying structural framework."
+  },
+  {
+    "en": "The variable affects excellent academic student outcomes.",
+    "tr": "Değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The variable ___ excellent academic student outcomes."
+  },
+  {
+    "en": "The core stabilizes crucial internal device components.",
+    "tr": "Çekirdek kritik dahili cihaz bileşenlerini stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The core ___ crucial internal device components."
+  },
+  {
+    "en": "The graph illustrates exact distribution and demographic percentages.",
+    "tr": "Grafik kesin dağılım ve demografik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The graph ___ exact distribution and demographic percentages."
+  },
+  {
+    "en": "The policy restricts unauthorized user network access.",
+    "tr": "Politika yetkisiz kullanıcı ağ erişimini kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The policy ___ unauthorized user network access."
+  },
+  {
+    "en": "The finding validates alternative alternative scientific hypotheses.",
+    "tr": "Bulgu alternatif bilimsel hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The finding ___ alternative alternative scientific hypotheses."
+  },
+  {
+    "en": "The team modifies individual functional software modules.",
+    "tr": "Ekip bireysel fonksiyonel yazılım modüllerini değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The team ___ individual functional software modules."
+  },
+  {
+    "en": "The committee evaluates detailed anonymous student feedback.",
+    "tr": "Komite detaylı anonim öğrenci geri bildirimini değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The committee ___ detailed anonymous student feedback."
+  },
+  {
+    "en": "The researcher isolates separate unstable chemical variables.",
+    "tr": "Araştırmacı ayrı kararsız kimyasal değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The researcher ___ separate unstable chemical variables."
+  },
+  {
+    "en": "Strategies maximize maximum annual manufacturing efficiency.",
+    "tr": "Stratejiler maksimum yıllık üretim verimliliğini maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Strategies ___ maximum annual manufacturing efficiency."
+  },
+  {
+    "en": "The script calculates complex mathematical data ratios.",
+    "tr": "Betik karmaşık matematiksel veri oranlarını hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The script ___ complex mathematical data ratios."
+  },
+  {
+    "en": "The audit exposes hidden organizational system flaws.",
+    "tr": "Denetim gizli örgütsel sistem kusurlarını ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The audit ___ hidden organizational system flaws."
+  },
+  {
+    "en": "The shift alters global consumer behavior trends.",
+    "tr": "Değişim küresel tüketici davranışı eğilimlerini değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The shift ___ global consumer behavior trends."
+  },
+  {
+    "en": "The framework secures sensitive user information data.",
+    "tr": "Çerçeve hassas kullanıcı bilgileri verilerini güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The framework ___ sensitive user information data."
+  },
+  {
+    "en": "The council suspended outdated environmental safety regulations.",
+    "tr": "Konsey güncelliğini yitirmiş çevresel güvenlik düzenlemelerini askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The council ___ outdated environmental safety regulations."
+  },
+  {
+    "en": "The board terminated formal bilateral commercial agreements.",
+    "tr": "Yönetim kurulu resmi ikili ticari anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The board ___ formal bilateral commercial agreements."
+  },
+  {
+    "en": "The ministry conducted comprehensive regional educational surveys.",
+    "tr": "Bakanlık kapsamlı bölgesel eğitim anketleri yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The ministry ___ comprehensive regional educational surveys."
+  },
+  {
+    "en": "The database accumulates detailed historical system logs.",
+    "tr": "Veritabanı detaylı geçmiş sistem günlüklerini biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The database ___ detailed historical system logs."
+  },
+  {
+    "en": "The newly collected empirical data contradicts the long-standing theoretical model.",
+    "tr": "Yeni toplanan deneysel veriler uzun süredir var olan teorik modelle çelişir.",
+    "word": "contradicts",
+    "trWord": "çelişir",
+    "blank": "The newly collected empirical data ___ the long-standing theoretical model."
+  },
+  {
+    "en": "The broader socio-economic context specifies the strict qualitative selection criteria.",
+    "tr": "Daha geniş sosyo-ekonomik bağlam katı nitel seçim kriterlerini belirler.",
+    "word": "specifies",
+    "trWord": "belirler",
+    "blank": "The broader socio-economic context ___ the strict qualitative selection criteria."
+  },
+  {
+    "en": "The highly competitive dynamic sector anticipates significant annual financial growth.",
+    "tr": "Son derece rekabetçi dinamik sektör yıllık önemli finansal büyüme öngörür.",
+    "word": "anticipates",
+    "trWord": "öngörür",
+    "blank": "The highly competitive dynamic sector ___ significant annual financial growth."
+  },
+  {
+    "en": "Leading institutional authorities advocate comprehensive legislative tax reform.",
+    "tr": "Önde gelen kurumsal yetkililer kapsamlı yasal vergi reformunu savunur.",
+    "word": "advocate",
+    "trWord": "savunur",
+    "blank": "Leading institutional authorities ___ comprehensive legislative tax reform."
+  },
+  {
+    "en": "This unpredictable economic dynamic triggers a chain of negative physical reactions.",
+    "tr": "Bu öngörülemeyen ekonomik dinamik bir dizi olumsuz fiziksel tepkiyi tetikler.",
+    "word": "triggers",
+    "trWord": "tetikler",
+    "blank": "This unpredictable economic dynamic ___ a chain of negative physical reactions."
+  },
+  {
+    "en": "Independent technical experts clarify the initial investigative project scope.",
+    "tr": "Bağımsız teknik uzmanlar başlangıçtaki araştırma projesi kapsamını açıklar.",
+    "word": "clarify",
+    "trWord": "açıklar",
+    "blank": "Independent technical experts ___ the initial investigative project scope."
+  },
+  {
+    "en": "The continuous chemical process induces severe psychological and occupational stress.",
+    "tr": "Sürekli kimyasal süreç ciddi psikolojik ve mesleki strese yol açar.",
+    "word": "induces",
+    "trWord": "yol açar",
+    "blank": "The continuous chemical process ___ severe psychological and occupational stress."
+  },
+  {
+    "en": "The undetected structural anomaly distorts the final statistical research results.",
+    "tr": "Tespit edilemeyen yapısal anomali nihai istatistiksel araştırma sonuçlarını bozar.",
+    "word": "distorts",
+    "trWord": "bozar",
+    "blank": "The undetected structural anomaly ___ the final statistical research results."
+  },
+  {
+    "en": "Mainstream digital media manipulates public political and cultural perspective.",
+    "tr": "Ana akım dijital medya kamuoyunun siyasi ve kültürel bakış açısını manipüle eder.",
+    "word": "manipulates",
+    "trWord": "manipüle eder",
+    "blank": "Mainstream digital media ___ public political and cultural perspective."
+  },
+  {
+    "en": "The updated operational system accommodates rapid regional infrastructure expansion.",
+    "tr": "Güncellenmiş operasyonel sistem hızlı bölgesel altyapı genişlemesine uyum sağlar.",
+    "word": "accommodates",
+    "trWord": "uyum sağlar",
+    "blank": "The updated operational system ___ rapid regional infrastructure expansion."
+  },
+  {
+    "en": "The revised security protocol defines crucial technical system parameters.",
+    "tr": "Gözden geçirilmiş güvenlik protokolü kritik teknik sistem parametrelerini tanımlar.",
+    "word": "defines",
+    "trWord": "tanımlar",
+    "blank": "The revised security protocol ___ crucial technical system parameters."
+  },
+  {
+    "en": "The legally binding contract binds separate international research institutions.",
+    "tr": "Yasal olarak bağlayıcı sözleşme ayrı uluslararası araştırma kurumlarını bağlar.",
+    "word": "binds",
+    "trWord": "bağlar",
+    "blank": "The legally binding contract ___ separate international research institutions."
+  },
+  {
+    "en": "Senior financial analysts inspect the entire underlying structural framework.",
+    "tr": "Kıdemli finansal analistler tüm temel yapısal çerçeveyi inceler.",
+    "word": "inspect",
+    "trWord": "inceler",
+    "blank": "Senior financial analysts ___ the entire underlying structural framework."
+  },
+  {
+    "en": "The primary independent variable affects excellent academic student outcomes.",
+    "tr": "Birincil bağımsız değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+    "word": "affects",
+    "trWord": "etkiler",
+    "blank": "The primary independent variable ___ excellent academic student outcomes."
+  },
+  {
+    "en": "The reinforced central core stabilizes crucial internal device components.",
+    "tr": "Güçlendirilmiş merkezi çekirdek kritik dahili cihaz bileşenlerini stabilize eder.",
+    "word": "stabilizes",
+    "trWord": "stabilize eder",
+    "blank": "The reinforced central core ___ crucial internal device components."
+  },
+  {
+    "en": "The attached statistical graph illustrates exact distribution and demographic percentages.",
+    "tr": "Ekli istatistiksel grafik kesin dağılım ve demografik yüzdeleri gösterir.",
+    "word": "illustrates",
+    "trWord": "gösterir",
+    "blank": "The attached statistical graph ___ exact distribution and demographic percentages."
+  },
+  {
+    "en": "The strict institutional policy restricts unauthorized user network access.",
+    "tr": "Katı kurumsal politika yetkisiz kullanıcı ağ erişimini kısıtlar.",
+    "word": "restricts",
+    "trWord": "kısıtlar",
+    "blank": "The strict institutional policy ___ unauthorized user network access."
+  },
+  {
+    "en": "The final scientific finding validates alternative alternative scientific hypotheses.",
+    "tr": "Nihai bilimsel bulgu alternatif bilimsel hipotezleri doğrular.",
+    "word": "validates",
+    "trWord": "doğrular",
+    "blank": "The final scientific finding ___ alternative alternative scientific hypotheses."
+  },
+  {
+    "en": "The software development team modifies individual functional software modules.",
+    "tr": "Yazılım geliştirme ekibi bireysel fonksiyonel yazılım modüllerini değiştirir.",
+    "word": "modifies",
+    "trWord": "değiştirir",
+    "blank": "The software development team ___ individual functional software modules."
+  },
+  {
+    "en": "The ethics evaluation committee evaluates detailed anonymous student feedback.",
+    "tr": "Etik değerlendirme komitesi detaylı anonim öğrenci geri bildirimini değerlendirir.",
+    "word": "evaluates",
+    "trWord": "değerlendirir",
+    "blank": "The ethics evaluation committee ___ detailed anonymous student feedback."
+  },
+  {
+    "en": "The principal laboratory researcher isolates separate unstable chemical variables.",
+    "tr": "Baş laboratuvar araştırmacısı ayrı kararsız kimyasal değişkenleri izole eder.",
+    "word": "isolates",
+    "trWord": "izole eder",
+    "blank": "The principal laboratory researcher ___ separate unstable chemical variables."
+  },
+  {
+    "en": "Innovative corporate strategies maximize maximum annual manufacturing efficiency.",
+    "tr": "Yenilikçi kurumsal stratejiler maksimum yıllık üretim verimliliğini maksimize eder.",
+    "word": "maximize",
+    "trWord": "maksimize eder",
+    "blank": "Innovative corporate strategies ___ maximum annual manufacturing efficiency."
+  },
+  {
+    "en": "The automated background script calculates complex mathematical data ratios.",
+    "tr": "Otomatik arka plan betiği karmaşık matematiksel veri oranlarını hesaplar.",
+    "word": "calculates",
+    "trWord": "hesaplar",
+    "blank": "The automated background script ___ complex mathematical data ratios."
+  },
+  {
+    "en": "The independent annual audit exposes hidden organizational system flaws.",
+    "tr": "Bağımsız yıllık denetim gizli örgütsel sistem kusurlarını ortaya çıkarır.",
+    "word": "exposes",
+    "trWord": "ortaya çıkarır",
+    "blank": "The independent annual audit ___ hidden organizational system flaws."
+  },
+  {
+    "en": "The sudden paradigm shift alters global consumer behavior trends.",
+    "tr": "Ani paradigma değişimi küresel tüketici davranışı eğilimlerini değiştirir.",
+    "word": "alters",
+    "trWord": "değiştirir",
+    "blank": "The sudden paradigm shift ___ global consumer behavior trends."
+  },
+  {
+    "en": "The advanced cryptographic framework secures sensitive user information data.",
+    "tr": "Gelişmiş kriptografik çerçeve hassas kullanıcı bilgileri verilerini güvenceye alır.",
+    "word": "secures",
+    "trWord": "güvenceye alır",
+    "blank": "The advanced cryptographic framework ___ sensitive user information data."
+  },
+  {
+    "en": "The regional administrative council suspended outdated environmental safety regulations.",
+    "tr": "Bölgesel idari konsey güncelliğini yitirmiş çevresel güvenlik düzenlemelerini askıya aldı.",
+    "word": "suspended",
+    "trWord": "askıya aldı",
+    "blank": "The regional administrative council ___ outdated environmental safety regulations."
+  },
+  {
+    "en": "The executive internal board terminated formal bilateral commercial agreements.",
+    "tr": "Yürütme iç kurulu resmi ikili ticari anlaşmaları feshetti.",
+    "word": "terminated",
+    "trWord": "feshetti",
+    "blank": "The executive internal board ___ formal bilateral commercial agreements."
+  },
+  {
+    "en": "The national education ministry conducted comprehensive regional educational surveys.",
+    "tr": "Milli eğitim bakanlığı kapsamlı bölgesel eğitim anketleri yürüttü.",
+    "word": "conducted",
+    "trWord": "yürüttü",
+    "blank": "The national education ministry ___ comprehensive regional educational surveys."
+  },
+  {
+    "en": "The centralized cloud database accumulates detailed historical system logs.",
+    "tr": "Merkezi bulut veritabanı detaylı geçmiş sistem günlüklerini biriktirir.",
+    "word": "accumulates",
+    "trWord": "biriktirir",
+    "blank": "The centralized cloud database ___ detailed historical system logs."
+  }
+]
+};

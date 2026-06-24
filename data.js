@@ -3205,7 +3205,24 @@ const unit8LessonSentences = {
     { en: "The resource is to be distributed equally", tr: "Kaynak eşit olarak dağıtılacak", word: "distributed", trWord: "dağıtılacak", blank: "The resource is to be ___ equally" },
     { en: "The virus was found to be transmitted by air", tr: "Virüsün hava yoluyla bulaştığı tespit edildi", word: "transmitted", trWord: "bulaştığı", blank: "The virus was found to be ___ by air" },
     { en: "The cost is expected to be reduced", tr: "Maliyetin düşürülmesi bekleniyor", word: "reduced", trWord: "düşürülmesi", blank: "The cost is expected to be ___" },
-    { en: "No changes are likely to be made", tr: "Herhangi bir değişiklik yapılması muhtemel görünmüyor", word: "made", trWord: "yapılması", blank: "No changes are likely to be ___" }
+    { en: "No changes are likely to be made", tr: "Herhangi bir değişiklik yapılması muhtemel görünmüyor", word: "made", trWord: "yapılması", blank: "No changes are likely to be ___" },
+    { en: "The scientific hypothesis can be tested by the research team", tr: "Bilimsel hipotez araştırma ekibi tarafından test edilebilir", word: "tested", trWord: "test edilebilir", blank: "The scientific hypothesis can be ___ by the research team" },
+    { en: "The scientific hypothesis cannot be tested by the research team", tr: "Bilimsel hipotez araştırma ekibi tarafından test edilemez", word: "tested", trWord: "test edilemez", blank: "The scientific hypothesis cannot be ___ by the research team" },
+    { en: "The statutory regulation could be suspended by the ministry", tr: "Yasal düzenleme bakanlık tarafından askıya alınabilir", word: "suspended", trWord: "askıya alınabilir", blank: "The statutory regulation could be ___ by the ministry" },
+    { en: "The statutory regulation could not be suspended by the ministry", tr: "Yasal düzenleme bakanlık tarafından askıya alınamadı", word: "suspended", trWord: "askıya alınamadı", blank: "The statutory regulation could not be ___ by the ministry" },
+    { en: "The historical document may be interpreted by separate experts", tr: "Tarihi belge ayrı uzmanlar tarafından yorumlanabilir", word: "interpreted", trWord: "yorumlanabilir", blank: "The historical document may be ___ by separate experts" },
+    { en: "The innovative methodology might be adopted by alternative institutions", tr: "Yenilikçi metodoloji alternatif kurumlar tarafından benimsenebilir", word: "adopted", trWord: "benimsenebilir", blank: "The innovative methodology might be ___ by alternative institutions" },
+    { en: "The innovative methodology might not be adopted by alternative institutions", tr: "Yenilikçi metodoloji alternatif kurumlar tarafından benimsenmeyebilir", word: "adopted", trWord: "benimsenmeyebilir", blank: "The innovative methodology might not be ___ by alternative institutions" },
+    { en: "Environmental damage must be minimized under global parameters", tr: "Çevresel zarar küresel parametreler altında en aza indirilmelidir", word: "minimized", trWord: "en aza indirilmelidir", blank: "Environmental damage must be ___ under global parameters" },
+    { en: "Separate digital modules should be integrated by the developer", tr: "Ayrı dijital modüller geliştirici tarafından entegre edilmelidir", word: "integrated", trWord: "entegre edilmelidir", blank: "Separate digital modules should be ___ by the developer" },
+    { en: "Should separate digital modules be integrated by the developer?", tr: "Ayrı dijital modüller geliştirici tarafından entegre edilmeli mi?", word: "integrated", trWord: "entegre edilmeli mi", blank: "Should separate digital modules be ___ by the developer?" },
+    { en: "Ethical parameters ought to be defined by the committee", tr: "Etik parametreler komite tarafından tanımlanmalıdır", word: "defined", trWord: "tanımlanmalıdır", blank: "Ethical parameters ought to be ___ by the committee" },
+    { en: "The legislative framework will be altered by the progressive government", tr: "Yasal çerçeve ilerici hükümet tarafından değiştirilecektir", word: "altered", trWord: "değiştirilecektir", blank: "The legislative framework will be ___ by the progressive government" },
+    { en: "Will the legislative framework be altered by the progressive government?", tr: "Yasal çerçeve ilerici hükümet tarafından değiştirilecek mi?", word: "altered", trWord: "değiştirilecek mi", blank: "Will the legislative framework be ___ by the progressive government?" },
+    { en: "The hypothesis can be tested", tr: "Hipotez test edilebilir", word: "tested", trWord: "test edilebilir", blank: "The hypothesis can be ___" },
+    { en: "The strategy is implemented", tr: "Strateji uygulanır", word: "implemented", trWord: "uygulanır", blank: "The strategy is ___" },
+    { en: "Documents are distributed", tr: "Belgeler dağıtılır", word: "distributed", trWord: "dağıtılır", blank: "Documents are ___" },
+    { en: "The regulation was suspended", tr: "Yönetmelik askıya alındı", word: "suspended", trWord: "askıya alındı", blank: "The regulation was ___" }
   ]
 };
 
@@ -4341,7 +4358,11 @@ const rawTopics = [
     icon: "🔒",
     numLessons: 1,
     formulas: [
-      { formula: "to be + Past Participle (V3)", example: "The problem needs to be solved: Sorunun çözülmesi gerekiyor" }
+      { 
+        formula: "to be + V3 / Modal + be + V3", 
+        example: "The problem needs to be solved: Sorunun çözülmesi gerekiyor",
+        description: "<strong>1. Aşama: Bilinenle Köprü Kurma (Aktif vs. Pasif Dönüşümü)</strong><br>Tercüme Kılavuzu: Aktif cümleler pasife dönüştürülürken eylemden etkilenen nesne başa gelir, araya modalın türüne göre bir be köprüsü eklenir ve asıl fiil 3. haline ($V_3$) çekimlenir. Olumsuzlarda modalın hemen yanına not gelir; sorularda ise modal cümlenin en başına, yani nesnenin önüne taşınır.<br><br><strong>2. Aşama: \"Kuyruksuz\" Kısa Cümlelerle Başlama (En Yalın Model)</strong><br>Tercüme Kılavuzu: Cümle sonundaki ek tümleçler (yer, zaman, eyleyen) kesilerek öğrencinin sadece çekirdek Nesne + Modal (+ not) + be + V3 yapısına odaklanması sağlanır. Sorularda ise cümlenin ilk yardımcı unsuru başa gelir."
+      }
     ],
     subtitles: [
       "Edilgen (Passive) Mastarı (Sayfa 63)"

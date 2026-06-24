@@ -1,191 +1,475 @@
-# Let's define the lists of sentences for each tip and write a script to produce the javascript representation.
+import re
+import os
 
-t1_sentences = [
-    ("Is the data valid?", "Veri geçerli midir?", "valid", "geçerli", "Is the data ___?"),
-    ("Are the documents ready?", "Belgeler hazır mıdır?", "ready", "hazır", "Are the documents ___?"),
-    ("Was the concept clear?", "Kavram açık mıydı?", "clear", "açık", "Was the concept ___?"),
-    ("Were the methods standards?", "Yöntemler standart mıydı?", "standards", "standart", "Were the methods ___?"),
-    ("Is the author present?", "Yazar mevcut mudur?", "present", "mevcut", "Is the author ___?"),
-    ("Are the factors internal?", "Faktörler içsel midir?", "internal", "içsel", "Are the factors ___?"),
-    ("Was the response negative?", "Yanıt olumsuz muydu?", "negative", "olumsuz", "Was the response ___?"),
-    ("Were the criteria strict?", "Kriterler katı mıydı?", "strict", "katı", "Were the criteria ___?"),
-    ("Is the sector growing?", "Sektör büyüyor mu?", "growing", "büyüyor", "Is the sector ___?"),
-    ("Are you the analyst?", "Siz analist misiniz?", "analyst", "analist", "Are you the ___?"),
-    ("Is the legal framework sufficient for this case?", "Yasal çerçeve bu dava için yeterli midir?", "framework", "çerçeve", "Is the legal ___ sufficient for this case?"),
-    ("Are the economic indicators stable this month?", "Ekonomik göstergeler bu ay istikrarlı mıdır?", "stable", "istikrarlı", "Are the economic indicators ___ this month?"),
-    ("Was the initial assessment fully accurate?", "İlk değerlendirme tamamen doğru muydu?", "assessment", "değerlendirme", "Was the initial ___ fully accurate?"),
-    ("Were the specific sources verified by experts?", "Belirli kaynaklar uzmanlar tarafından doğrulandı mı?", "verified", "doğrulandı", "Were the specific sources ___ by experts?"),
-    ("Is the financial structure completely transparent?", "Finansal yapı tamamen şeffaf mıdır?", "structure", "yapı", "Is the financial ___ completely transparent?"),
-    ("Are the individual variables controlled well?", "Bireysel değişkenler iyi kontrol ediliyor mu?", "variables", "değişkenler", "Are the individual ___ controlled well?"),
-    ("Was the primary benefit clearly identified?", "Temel fayda açıkça belirlendi mi?", "benefit", "fayda", "Was the primary ___ clearly identified?"),
-    ("Were the environmental factors considered?", "Çevresel faktörler dikkate alındı mı?", "factors", "faktörler", "Were the environmental ___ considered?"),
-    ("Is the final outcome satisfactory for everyone?", "Nihai sonuç herkes için tatmin edici midir?", "outcome", "sonuç", "Is the final ___ satisfactory for everyone?"),
-    ("Are these academic journals peer-reviewed?", "Bu akademik dergiler hakemli midir?", "academic", "akademik", "Are these ___ journals peer-reviewed?"),
-    ("Is the methodological approach relevant to the current study?", "Metodolojik yaklaşım mevcut çalışma ile ilgili midir?", "approach", "yaklaşım", "Is the methodological ___ relevant to the current study?"),
-    ("Are the statistical computations available for public review?", "İstatistiksel hesaplamalar kamuya açık inceleme için mevcut mudur?", "available", "mevcut", "Are the statistical computations ___ for public review?"),
-    ("Was the constitutional amendment approved by the parliament?", "Anayasa değişikliği parlamento tarafından onaylandı mı?", "amendment", "değişiklik", "Was the constitutional ___ approved by the parliament?"),
-    ("Were the administrative procedures followed during the crisis?", "Kriz sırasında idari prosedürler takip edildi mi?", "procedures", "prosedürler", "Were the administrative ___ followed during the crisis?"),
-    ("Is the theoretical assumption supported by empirical evidence?", "Teorik varsayım ampirik kanıtlarla destekleniyor mu?", "assumption", "varsayım", "Is the theoretical ___ supported by empirical evidence?"),
-    ("Are the global distribution networks functional right now?", "Küresel dağıtım ağları şu anda işlevsel midir?", "distribution", "dağıtım", "Are the global ___ networks functional right now?"),
-    ("Was the historical document genuine according to analysts?", "Tarihsel belge analistlere göre orijinal miydi?", "analysts", "analistlere", "Was the historical document genuine according to ___?"),
-    ("Were the experimental results consistent across all trials?", "Deneysel sonuçlar tüm denemelerde tutarlı mıydı?", "consistent", "tutarlı", "Were the experimental results ___ across all trials?"),
-    ("Is the institutional framework adaptable to new legislation?", "Kurumsal çerçeve yeni mevzuata uyarlanabilir mi?", "legislation", "mevzuata", "Is the institutional framework adaptable to new ___?"),
-    ("Are the demographic categories exclusive in this research?", "Bu araştırmada demografik kategoriler birbirini dışlayıcı mıdır?", "categories", "kategoriler", "Are the demographic ___ exclusive in this research?")
+# Define the components of the 30 sentences in Section 7
+# Format: (S1, S2, V, O1, O2, V_tr, O1_tr, O2_tr, S1_tr, S2_tr)
+# We will use these to construct:
+# 1. Yalın SVO (S1 + V + O1)
+# 2. Genişletilmiş Özneler (S2 + V + O1)
+# 3. Genişletilmiş Nesneler (S1 + V + O2)
+# 4. Tam Genişletilmiş SVO (S2 + V + O2)
+
+# Let's write down the exact English sentences first from the docx file:
+# S1 + V + O1:
+# The data contradicts the theory.
+# The context specifies the criteria.
+# The sector anticipates growth.
+# Authorities advocate reform.
+# The dynamic triggers reaction.
+# Experts clarify the scope.
+# The process induces stress.
+# The anomaly distorts results.
+# Media manipulates perspective.
+# The system accommodates expansion.
+# The protocol defines parameters.
+# The contract binds institutions.
+# Analysts inspect the framework.
+# The variable affects outcomes.
+# The core stabilizes components.
+# The graph illustrates percentages.
+# The policy restricts access.
+# The finding validates hypotheses.
+# The team modifies modules.
+# The committee evaluates feedback.
+# The researcher isolates variables.
+# Strategies maximize efficiency.
+# The script calculates ratios.
+# The audit exposes flaws.
+# The shift alters trends.
+# The framework secures data.
+# The council suspended regulations.
+# The board terminated agreements.
+# The ministry conducted surveys.
+# The database accumulates logs.
+
+components = [
+    # 1
+    {
+        "s1": "The data", "s2": "The newly collected empirical data", "v": "contradicts", "o1": "the theory.", "o2": "the long-standing theoretical model.",
+        "s1_tr": "Veriler", "s2_tr": "Yeni toplanan deneysel veriler", "v_tr": "çelişir", "o1_tr": "teoriyle", "o2_tr": "uzun süredir var olan teorik modelle"
+    },
+    # 2
+    {
+        "s1": "The context", "s2": "The broader socio-economic context", "v": "specifies", "o1": "the criteria.", "o2": "the strict qualitative selection criteria.",
+        "s1_tr": "Bağlam", "s2_tr": "Daha geniş sosyo-ekonomik bağlam", "v_tr": "belirler", "o1_tr": "kriterleri", "o2_tr": "katı nitel seçim kriterlerini"
+    },
+    # 3
+    {
+        "s1": "The sector", "s2": "The highly competitive dynamic sector", "v": "anticipates", "o1": "growth.", "o2": "significant annual financial growth.",
+        "s1_tr": "Sektör", "s2_tr": "Son derece rekabetçi dinamik sektör", "v_tr": "öngörür", "o1_tr": "büyüme", "o2_tr": "yıllık önemli finansal büyüme"
+    },
+    # 4
+    {
+        "s1": "Authorities", "s2": "Leading institutional authorities", "v": "advocate", "o1": "reform.", "o2": "comprehensive legislative tax reform.",
+        "s1_tr": "Yetkililer", "s2_tr": "Önde gelen kurumsal yetkililer", "v_tr": "savunur", "o1_tr": "reformu", "o2_tr": "kapsamlı yasal vergi reformunu"
+    },
+    # 5
+    {
+        "s1": "The dynamic", "s2": "This unpredictable economic dynamic", "v": "triggers", "o1": "reaction.", "o2": "a chain of negative physical reactions.",
+        "s1_tr": "Dinamik", "s2_tr": "Bu öngörülemeyen ekonomik dinamik", "v_tr": "tetikler", "o1_tr": "tepkiyi", "o2_tr": "bir dizi olumsuz fiziksel tepkiyi"
+    },
+    # 6
+    {
+        "s1": "Experts", "s2": "Independent technical experts", "v": "clarify", "o1": "the scope.", "o2": "the initial investigative project scope.",
+        "s1_tr": "Uzmanlar", "s2_tr": "Bağımsız teknik uzmanlar", "v_tr": "açıklar", "o1_tr": "kapsamı", "o2_tr": "başlangıçtaki araştırma projesi kapsamını"
+    },
+    # 7
+    {
+        "s1": "The process", "s2": "The continuous chemical process", "v": "induces", "o1": "stress.", "o2": "severe psychological and occupational stress.",
+        "s1_tr": "Süreç", "s2_tr": "Sürekli kimyasal süreç", "v_tr": "yol açar", "o1_tr": "strese", "o2_tr": "ciddi psikolojik ve mesleki strese"
+    },
+    # 8
+    {
+        "s1": "The anomaly", "s2": "The undetected structural anomaly", "v": "distorts", "o1": "results.", "o2": "the final statistical research results.",
+        "s1_tr": "Anomali", "s2_tr": "Tespit edilemeyen yapısal anomali", "v_tr": "bozar", "o1_tr": "sonuçları", "o2_tr": "nihai istatistiksel araştırma sonuçlarını"
+    },
+    # 9
+    {
+        "s1": "Media", "s2": "Mainstream digital media", "v": "manipulates", "o1": "perspective.", "o2": "public political and cultural perspective.",
+        "s1_tr": "Medya", "s2_tr": "Ana akım dijital medya", "v_tr": "manipüle eder", "o1_tr": "bakış açısını", "o2_tr": "kamuoyunun siyasi ve kültürel bakış açısını"
+    },
+    # 10
+    {
+        "s1": "The system", "s2": "The updated operational system", "v": "accommodates", "o1": "expansion.", "o2": "rapid regional infrastructure expansion.",
+        "s1_tr": "Sistem", "s2_tr": "Güncellenmiş operasyonel sistem", "v_tr": "uyum sağlar", "o1_tr": "genişlemeye", "o2_tr": "hızlı bölgesel altyapı genişlemesine"
+    },
+    # 11
+    {
+        "s1": "The protocol", "s2": "The revised security protocol", "v": "defines", "o1": "parameters.", "o2": "crucial technical system parameters.",
+        "s1_tr": "Protokol", "s2_tr": "Gözden geçirilmiş güvenlik protokolü", "v_tr": "tanımlar", "o1_tr": "parametreleri", "o2_tr": "kritik teknik sistem parametrelerini"
+    },
+    # 12
+    {
+        "s1": "The contract", "s2": "The legally binding contract", "v": "binds", "o1": "institutions.", "o2": "separate international research institutions.",
+        "s1_tr": "Sözleşme", "s2_tr": "Yasal olarak bağlayıcı sözleşme", "v_tr": "bağlar", "o1_tr": "kurumları", "o2_tr": "ayrı uluslararası araştırma kurumlarını"
+    },
+    # 13
+    {
+        "s1": "Analysts", "s2": "Senior financial analysts", "v": "inspect", "o1": "the framework.", "o2": "the entire underlying structural framework.",
+        "s1_tr": "Analistler", "s2_tr": "Kıdemli finansal analistler", "v_tr": "inceler", "o1_tr": "çerçeveyi", "o2_tr": "tüm temel yapısal çerçeveyi"
+    },
+    # 14
+    {
+        "s1": "The variable", "s2": "The primary independent variable", "v": "affects", "o1": "outcomes.", "o2": "excellent academic student outcomes.",
+        "s1_tr": "Değişken", "s2_tr": "Birincil bağımsız değişken", "v_tr": "etkiler", "o1_tr": "sonuçları", "o2_tr": "mükemmel akademik öğrenci sonuçlarını"
+    },
+    # 15
+    {
+        "s1": "The core", "s2": "The reinforced central core", "v": "stabilizes", "o1": "components.", "o2": "crucial internal device components.",
+        "s1_tr": "Çekirdek", "s2_tr": "Güçlendirilmiş merkezi çekirdek", "v_tr": "stabilize eder", "o1_tr": "bileşenleri", "o2_tr": "kritik dahili cihaz bileşenlerini"
+    },
+    # 16
+    {
+        "s1": "The graph", "s2": "The attached statistical graph", "v": "illustrates", "o1": "percentages.", "o2": "exact distribution and demographic percentages.",
+        "s1_tr": "Grafik", "s2_tr": "Ekli istatistiksel grafik", "v_tr": "gösterir", "o1_tr": "yüzdeleri", "o2_tr": "kesin dağılım ve demografik yüzdeleri"
+    },
+    # 17
+    {
+        "s1": "The policy", "s2": "The strict institutional policy", "v": "restricts", "o1": "access.", "o2": "unauthorized user network access.",
+        "s1_tr": "Politika", "s2_tr": "Katı kurumsal politika", "v_tr": "kısıtlar", "o1_tr": "erişimi", "o2_tr": "yetkisiz kullanıcı ağ erişimini"
+    },
+    # 18
+    {
+        "s1": "The finding", "s2": "The final scientific finding", "v": "validates", "o1": "hypotheses.", "o2": "alternative alternative scientific hypotheses.",
+        "s1_tr": "Bulgu", "s2_tr": "Nihai bilimsel bulgu", "v_tr": "doğrular", "o1_tr": "hipotezleri", "o2_tr": "alternatif bilimsel hipotezleri"
+    },
+    # 19
+    {
+        "s1": "The team", "s2": "The software development team", "v": "modifies", "o1": "modules.", "o2": "individual functional software modules.",
+        "s1_tr": "Ekip", "s2_tr": "Yazılım geliştirme ekibi", "v_tr": "değiştirir", "o1_tr": "modülleri", "o2_tr": "bireysel fonksiyonel yazılım modüllerini"
+    },
+    # 20
+    {
+        "s1": "The committee", "s2": "The ethics evaluation committee", "v": "evaluates", "o1": "feedback.", "o2": "detailed anonymous student feedback.",
+        "s1_tr": "Komite", "s2_tr": "Etik değerlendirme komitesi", "v_tr": "değerlendirir", "o1_tr": "geri bildirimi", "o2_tr": "detaylı anonim öğrenci geri bildirimini"
+    },
+    # 21
+    {
+        "s1": "The researcher", "s2": "The principal laboratory researcher", "v": "isolates", "o1": "variables.", "o2": "separate unstable chemical variables.",
+        "s1_tr": "Araştırmacı", "s2_tr": "Baş laboratuvar araştırmacısı", "v_tr": "izole eder", "o1_tr": "değişkenleri", "o2_tr": "ayrı kararsız kimyasal değişkenleri"
+    },
+    # 22
+    {
+        "s1": "Strategies", "s2": "Innovative corporate strategies", "v": "maximize", "o1": "efficiency.", "o2": "maximum annual manufacturing efficiency.",
+        "s1_tr": "Stratejiler", "s2_tr": "Yenilikçi kurumsal stratejiler", "v_tr": "maksimize eder", "o1_tr": "verimliliği", "o2_tr": "maksimum yıllık üretim verimliliğini"
+    },
+    # 23
+    {
+        "s1": "The script", "s2": "The automated background script", "v": "calculates", "o1": "ratios.", "o2": "complex mathematical data ratios.",
+        "s1_tr": "Betik", "s2_tr": "Otomatik arka plan betiği", "v_tr": "hesaplar", "o1_tr": "oranları", "o2_tr": "karmaşık matematiksel veri oranlarını"
+    },
+    # 24
+    {
+        "s1": "The audit", "s2": "The independent annual audit", "v": "exposes", "o1": "flaws.", "o2": "hidden organizational system flaws.",
+        "s1_tr": "Denetim", "s2_tr": "Bağımsız yıllık denetim", "v_tr": "ortaya çıkarır", "o1_tr": "kusurları", "o2_tr": "gizli örgütsel sistem kusurlarını"
+    },
+    # 25
+    {
+        "s1": "The shift", "s2": "The sudden paradigm shift", "v": "alters", "o1": "trends.", "o2": "global consumer behavior trends.",
+        "s1_tr": "Değişim", "s2_tr": "Ani paradigma değişimi", "v_tr": "değiştirir", "o1_tr": "eğilimleri", "o2_tr": "küresel tüketici davranışı eğilimlerini"
+    },
+    # 26
+    {
+        "s1": "The framework", "s2": "The advanced cryptographic framework", "v": "secures", "o1": "data.", "o2": "sensitive user information data.",
+        "s1_tr": "Çerçeve", "s2_tr": "Gelişmiş kriptografik çerçeve", "v_tr": "güvenceye alır", "o1_tr": "verileri", "o2_tr": "hassas kullanıcı bilgileri verilerini"
+    },
+    # 27
+    {
+        "s1": "The council", "s2": "The regional administrative council", "v": "suspended", "o1": "regulations.", "o2": "outdated environmental safety regulations.",
+        "s1_tr": "Konsey", "s2_tr": "Bölgesel idari konsey", "v_tr": "askıya aldı", "o1_tr": "düzenlemeleri", "o2_tr": "güncelliğini yitirmiş çevresel güvenlik düzenlemelerini"
+    },
+    # 28
+    {
+        "s1": "The board", "s2": "The executive internal board", "v": "terminated", "o1": "agreements.", "o2": "formal bilateral commercial agreements.",
+        "s1_tr": "Yönetim kurulu", "s2_tr": "Yürütme iç kurulu", "v_tr": "feshetti", "o1_tr": "anlaşmaları", "o2_tr": "resmi ikili ticari anlaşmaları"
+    },
+    # 29
+    {
+        "s1": "The ministry", "s2": "The national education ministry", "v": "conducted", "o1": "surveys.", "o2": "comprehensive regional educational surveys.",
+        "s1_tr": "Bakanlık", "s2_tr": "Milli eğitim bakanlığı", "v_tr": "yürüttü", "o1_tr": "anketler", "o2_tr": "kapsamlı bölgesel eğitim anketleri"
+    },
+    # 30
+    {
+        "s1": "The database", "s2": "The centralized cloud database", "v": "accumulates", "o1": "logs.", "o2": "detailed historical system logs.",
+        "s1_tr": "Veritabanı", "s2_tr": "Merkezi bulut veritabanı", "v_tr": "biriktirir", "o1_tr": "günlükleri", "o2_tr": "detaylı geçmiş sistem günlüklerini"
+    }
 ]
 
-t2_sentences = [
-    ("Did you analyze it?", "Onu analiz ettin mi?", "analyze", "analiz ettin", "Did you ___ it?"),
-    ("Does it function well?", "İyi çalışıyor mu?", "function", "çalışıyor", "Does it ___ well?"),
-    ("Do they export goods?", "Mal ihraç ediyorlar mı?", "export", "ihraç ediyorlar", "Do they ___ goods?"),
-    ("Did he publish the book?", "Kitabı yayımladı mı?", "publish", "yayımladı", "Did he ___ the book?"),
-    ("Does she assume the risk?", "Riski üstleniyor mu?", "assume", "üstleniyor", "Does she ___ the risk?"),
-    ("Do we require a permit?", "İzin belgesi gerekiyor mu?", "require", "gerekiyor", "Do we ___ a permit?"),
-    ("Did it indicate a change?", "Bir değişiklik gösterdi mi?", "indicate", "gösterdi", "Did it ___ a change?"),
-    ("Does this derive from code?", "Bu, kuraldan mı türiyor?", "derive", "türiyor", "Does this ___ from code?"),
-    ("Do they source materials locally?", "Malzemeleri yerel olarak mı tedarik ediyorlar?", "source", "tedarik ediyorlar", "Do they ___ materials locally?"),
-    ("Did you estimate the cost?", "Maliyeti tahmin ettin mi?", "estimate", "tahmin ettin", "Did you ___ the cost?"),
-    ("Did the analyst evaluate the raw data?", "Analist ham veriyi değerlendirdi mi?", "evaluate", "değerlendirdi", "Did the analyst ___ the raw data?"),
-    ("Does the government modify the tax policy?", "Hükümet vergi politikasını değiştiriyor mu?", "modify", "değiştiriyor", "Does the government ___ the tax policy?"),
-    ("Do researchers establish a clear framework?", "Araştırmacılar net bir çerçeve kuruyor mu?", "establish", "kuruyor", "Do researchers ___ a clear framework?"),
-    ("Did the committee exclude the final report?", "Komite nihai raporu hariç tuttu mu?", "exclude", "hariç tuttu", "Did the committee ___ the final report?"),
-    ("Does this factor influence the public opinion?", "Bu faktör kamuoyunu etkiliyor mu?", "influence", "etkiliyor", "Does this factor ___ the public opinion?"),
-    ("Do institutions structure their academic curriculum?", "Kurumlar akademik müfredatlarını yapılandırıyor mu?", "structure", "yapılandırıyor", "Do institutions ___ their academic curriculum?"),
-    ("Did the team integrate the new software?", "Ekip yeni yazılımı entegre etti mi?", "integrate", "entegre etti", "Did the team ___ the new software?"),
-    ("Does the theory define the phenomenon correctly?", "Teori olguyu doğru tanımlıyor mu?", "define", "tanımlıyor", "Does the theory ___ the phenomenon correctly?"),
-    ("Do companies achieve their annual production goals?", "Şirketler yıllık üretim hedeflerine ulaşıyor mu?", "achieve", "ulaşıyor", "Do companies ___ their annual production goals?"),
-    ("Did the manager adjust the financial budget?", "Müdür finansal bütçeyi ayarladı mı?", "adjust", "ayarladı", "Did the manager ___ the financial budget?"),
-    ("Did the administration abolish the controversial labor legislation?", "Yönetim tartışmalı iş mevzuatını kaldırdı mı?", "abolish", "kaldırdı", "Did the administration ___ the controversial labor legislation?"),
-    ("Does the regional economy affect the minority distribution?", "Bölgesel ekonomi azınlık dağılımını etkiliyor mu?", "affect", "etkiliyor", "Does the regional economy ___ the minority distribution?"),
-    ("Do separate departments allocate their resources independently?", "Ayrı departmanlar kaynaklarını bağımsız olarak mı tahsis ediyor?", "allocate", "tahsis ediyor", "Do separate departments ___ their resources independently?"),
-    ("Did the university adopt the progressive assessment model?", "Üniversite ilerici değerlendirme modelini benimsedi mi?", "adopt", "benimsedi", "Did the university ___ the progressive assessment model?"),
-    ("Does this specific variable alter the final analysis?", "Bu özel değişken nihai analizi değiştiriyor mu?", "alter", "değiştiriyor", "Does this specific variable ___ the final analysis?"),
-    ("Do modern societies sustain their unique cultural identity?", "Modern toplumlar benzersiz kültürel kimliklerini sürdürüyor mu?", "sustain", "sürdürüyor", "Do modern societies ___ their unique cultural identity?"),
-    ("Did the supreme court challenge the legal definition today?", "Anayasa Mahkemesi bugün yasal tanımı sorguladı mı?", "challenge", "sorguladı", "Did the supreme court ___ the legal definition today?"),
-    ("Does the ancient text imply rigid social structures?", "Antik metin katı sosyal yapılar mı ima ediyor?", "imply", "ima ediyor", "Does the ancient text ___ rigid social structures?"),
-    ("Do laboratory technicians conduct the primary safety experiment?", "Laboratuvar teknisyenleri temel güvenlik deneyini yürütüyor mu?", "conduct", "yürütüyor", "Do laboratory technicians ___ the primary safety experiment?"),
-    ("Did the participants interpret the survey instructions accurately?", "Katılımcılar anket yönergelerini doğru yorumladı mı?", "interpret", "yorumladı", "Did the participants ___ the survey instructions accurately?")
-]
+# Generate the 120 sentences list (4 sets of 30)
+all_sentences = []
 
-t3_sentences = [
-    ("Why is the data wrong?", "Veri neden yanlıştır?", "wrong", "yanlıştır", "Why is the data ___?"),
-    ("Where are the documents?", "Belgeler nerededir?", "Where", "nerededir", "___ are the documents?"),
-    ("What was the concept?", "Kavram neydi?", "What", "neydi", "___ was the concept?"),
-    ("How is the method?", "Yöntem nasıldır?", "How", "nasıldır", "___ is the method?"),
-    ("Who was the author?", "Yazar kimdi?", "Who", "kimdi", "___ was the author?"),
-    ("Why were the factors dynamic?", "Faktörler neden dinamikti?", "dynamic", "dinamikti", "Why were the factors ___?"),
-    ("Where is the sector?", "Sektör nerededir?", "Where", "nerededir", "___ is the sector?"),
-    ("What is the percentage?", "Yüzde kaçtır?", "percentage", "yüzde", "What is the ___?"),
-    ("How was the response?", "Yanıt nasıldı?", "response", "yanıt", "How was the ___?"),
-    ("Who is the analyst?", "Analist kimdir?", "analyst", "analist", "Who is the ___?"),
-    ("Why are the legal criteria so rigid?", "Yasal kriterler neden bu kadar katıdır?", "rigid", "katıdır", "Why are the legal criteria so ___?"),
-    ("What will be the primary benefit?", "Temel fayda ne olacaktır?", "benefit", "fayda", "What will be the primary ___?"),
-    ("How is the financial structure today?", "Bugün finansal yapı nasıldır?", "structure", "yapı", "How is the financial ___ today?"),
-    ("Where were the specific sources found?", "Belirli kaynaklar nerede bulundu?", "found", "bulundu", "Where were the specific sources ___?"),
-    ("Why is the initial assessment incomplete?", "İlk değerlendirme neden eksiktir?", "assessment", "değerlendirme", "Why is the initial ___ incomplete?"),
-    ("What can be the potential outcome?", "Potansiyel sonuç ne olabilir?", "outcome", "sonuç", "What can be the potential ___?"),
-    ("Who is the principal investigator here?", "Buradaki asıl araştırmacı kimdir?", "investigator", "araştırmacı", "Who is the principal ___ here?"),
-    ("How were the variables so unpredictable?", "Değişkenler nasıl bu kadar tahmin edilemezdi?", "variables", "değişkenler", "How were the ___ so unpredictable?"),
-    ("What is the major function of this?", "Bunun ana işlevi nedir?", "function", "işlevi", "What is the major ___ of this?"),
-    ("Where are the individual responses?", "Bireysel yanıtlar nerededir?", "responses", "yanıtlar", "Where are the individual ___?"),
-    ("Why is the theoretical framework of this study unstable?", "Bu çalışmanın teorik çerçevesi neden istikrarsızdır?", "framework", "çerçevesi", "Why is the theoretical ___ of this study unstable?"),
-    ("What was the ultimate constitutional authority of the state?", "Devletin nihai anayasal yetkisi neydi?", "authority", "yetkisi", "What was the ultimate constitutional ___ of the state?"),
-    ("How are the economic indicators relevant to this region?", "Ekonomik göstergeler bu bölgeyle nasıl ilgilidir?", "indicators", "göstergeler", "How are the economic ___ relevant to this region?"),
-    ("Where is the administrative policy document located now?", "İdari politika belgesi şimdi nerede bulunuyor?", "located", "bulunuyor", "Where is the administrative policy document ___ now?"),
-    ("Why were the environmental factors excluded from the report?", "Çevresel faktörler neden rapordan hariç tutuldu?", "excluded", "hariç tutuldu", "Why were the environmental factors ___ from the report?"),
-    ("What will be the long-term significance of this discovery?", "Bu keşfin uzun vadeli önemi ne olacaktır?", "significance", "önemi", "What will be the long-term ___ of this discovery?"),
-    ("How is the statistical analysis useful for predictions?", "İstatistiksel analiz tahminler için nasıl yararlıdır?", "analysis", "analiz", "How is the statistical ___ useful for predictions?"),
-    ("Who was the original creator of this specific methodology?", "Bu özel metodolojinin özgün yaratıcısı kimdi?", "methodology", "metodolojinin", "Who was the original creator of this specific ___?"),
-    ("Why is the global distribution of resources so unequal?", "Küresel kaynak dağıtımı neden bu kadar adaletsizdir?", "distribution", "dağıtımı", "Why is the global ___ of resources so unequal?"),
-    ("What are the primary components of this chemical compound?", "Bu kimyasal bileşiğin birincil bileşenleri nelerdir?", "components", "bileşenleri", "What are the primary ___ of this chemical compound?")
-]
+# Set 1: Yalın SVO (30 sentences)
+for comp in components:
+    # clean trailing dot from O1 for the sentence content, but let's keep the target word matching
+    en_sent = f"{comp['s1']} {comp['v']} {comp['o1']}"
+    tr_sent = f"{comp['s1_tr']} {comp['o1_tr']} {comp['v_tr']}."
+    # Let's adjust Turkish SVO order: S_tr + O_tr + V_tr
+    # e.g., "Veriler teoriyle çelişir." -> "Veriler" + "teoriyle" + "çelişir."
+    # Let's make sure it has correct capitalizations and punctuation
+    # Clean double dots or double spaces
+    tr_sent = re.sub(r'\s+', ' ', tr_sent).strip()
+    tr_sent = re.sub(r'\.+', '.', tr_sent)
+    
+    # Hedef kelime and blank
+    target_word = comp['v']
+    blank_sent = en_sent.replace(target_word, "___")
+    
+    # We also need translation of the target word.
+    # In Turkish, the verb translates to comp['v_tr'].
+    all_sentences.append({
+        "en": en_sent,
+        "tr": tr_sent,
+        "word": target_word,
+        "trWord": comp['v_tr'],
+        "blank": blank_sent
+    })
 
-t4_sentences = [
-    ("Why did they analyze it?", "Onu neden analiz ettiler?", "analyze", "analiz ettiler", "Why did they ___ it?"),
-    ("How does it function?", "Nasıl çalışıyor?", "function", "çalışıyor", "How does it ___?"),
-    ("What did you estimate?", "Neyi tahmin ettiniz?", "estimate", "tahmin ettiniz", "What did you ___?"),
-    ("Where do they source it?", "Onu nereden tedarik ediyorlar?", "source", "tedarik ediyorlar", "Where do they ___ it?"),
-    ("When did he publish it?", "Onu ne zaman yayımladı?", "publish", "yayımladı", "When did he ___ it?"),
-    ("Why does she assume that?", "Bunu neden varsayıyor?", "assume", "varsayıyor", "Why does she ___ that?"),
-    ("How did you derive this?", "Bunu nasıl türettiniz?", "derive", "türettiniz", "How did you ___ this?"),
-    ("What does this indicate?", "Bu neyi gösteriyor?", "indicate", "gösteriyor", "What does this ___?"),
-    ("Where did they establish it?", "Onu nerede kurdular?", "establish", "kurdular", "Where did they ___ it?"),
-    ("Why do we require this?", "Buna neden ihtiyaç duyuyoruz?", "require", "ihtiyaç duyuyoruz", "Why do we ___ this?"),
-    ("How did the analyst evaluate the data?", "Analist veriyi nasıl değerlendirdi?", "evaluate", "değerlendirdi", "How did the analyst ___ the data?"),
-    ("Does the government modify the policy?", "Hükümet politikayı değiştiriyor mu?", "modify", "değiştiriyor", "Does the government ___ the policy?"),
-    ("What did the researchers achieve last year?", "Araştırmacılar geçen yıl neyi başardı?", "achieve", "başardı", "What did the researchers ___ last year?"),
-    ("Where do institutions structure the framework?", "Kurumlar çerçeveyi nerede yapılandırıyor?", "structure", "yapılandırıyor", "Where do institutions ___ the framework?"),
-    ("When did the committee publish the summary?", "Komite özeti ne zaman yayımladı?", "publish", "yayımladı", "When did the committee ___ the summary?"),
-    ("How does this factor influence the outcome?", "Bu faktör sonucu nasıl etkiliyor?", "influence", "etkiliyor", "How does this factor ___ the outcome?"),
-    ("Why did the team exclude the respondents?", "Ekip katılımcıları neden hariç tuttu?", "exclude", "hariç tuttu", "Why did the team ___ the respondents?"),
-    ("What does the theory define exactly?", "Teori tam olarak neyi tanımlıyor?", "define", "tanımlıyor", "What does the theory ___ exactly?"),
-    ("Where did they integrate the technology?", "Teknolojiyi nereye entegre ettiler?", "integrate", "entegre ettiler", "Where did they ___ the technology?"),
-    ("Why do companies export their production?", "Şirketler üretimlerini neden ihraç ediyor?", "export", "ihraç ediyor", "Why do companies ___ their production?"),
-    ("Why did the administration abolish the old regulatory framework?", "Yönetim eski düzenleyici çerçeveyi neden kaldırdı?", "abolish", "kaldırdı", "Why did the administration ___ the old regulatory framework?"),
-    ("How does the global economy affect domestic resource distribution?", "Küresel ekonomi iç kaynak dağılımını nasıl etkiliyor?", "affect", "etkiliyor", "How does the global economy ___ domestic resource distribution?"),
-    ("What did the scientific community conclude regarding the data?", "Bilimsel topluluk verilerle ilgili ne sonuç çıkardı?", "conclude", "sonuç çıkardı", "What did the scientific community ___ regarding the data?"),
-    ("Where do separate departments allocate their annual financial credit?", "Ayrı departmanlar yıllık finansal kredilerini nereye tahsis ediyor?", "allocate", "tahsis ediyor", "Where do separate departments ___ their annual financial credit?"),
-    ("When did the university adopt the new academic assessment method?", "Üniversite yeni akademik değerlendirme yöntemini ne zaman benimsedi?", "adopt", "benimsedi", "When did the university ___ the new academic assessment method?"),
-    ("How does this specific variable alter the statistical analysis?", "Bu özel değişken istatistiksel analizi nasıl değiştiriyor?", "alter", "değiştiriyor", "How does this specific variable ___ the statistical analysis?"),
-    ("Why did the main opposition challenge the legal definition?", "Ana muhalefet yasal tanıma neden karşı çıktı?", "challenge", "karşı çıktı", "Why did the main opposition ___ the legal definition?"),
-    ("What does the historical text imply about social structures?", "Tarihsel metin toplumsal yapılar hakkında ne ima ediyor?", "imply", "ima ediyor", "What does the historical text ___ about social structures?"),
-    ("Where did the engineers conduct the primary energy experiment?", "Mühendisler temel enerji deneyini nerede yürüttüler?", "conduct", "yürüttüler", "Where did the engineers ___ the primary energy experiment?"),
-    ("How do modern societies sustain their cultural identity?", "Modern toplumlar kültürel kimliklerini nasıl sürdürüyor?", "sustain", "sürdürüyor", "How do modern societies ___ their cultural identity?")
-]
+# Set 2: Genişletilmiş Özneler (30 sentences)
+for comp in components:
+    en_sent = f"{comp['s2']} {comp['v']} {comp['o1']}"
+    tr_sent = f"{comp['s2_tr']} {comp['o1_tr']} {comp['v_tr']}."
+    tr_sent = re.sub(r'\s+', ' ', tr_sent).strip()
+    tr_sent = re.sub(r'\.+', '.', tr_sent)
+    
+    target_word = comp['v']
+    blank_sent = en_sent.replace(target_word, "___")
+    
+    all_sentences.append({
+        "en": en_sent,
+        "tr": tr_sent,
+        "word": target_word,
+        "trWord": comp['v_tr'],
+        "blank": blank_sent
+    })
 
-t5_sentences = [
-    ("At which level is it?", "Hangi düzeydedir?", "level", "düzeydedir", "At which ___ is it?"),
-    ("In which sector are they?", "Hangi sektördedirler?", "sector", "sektördedirler", "In which ___ are they?"),
-    ("To what extent was it?", "Ne ölçüdeydi?", "extent", "ölçüdeydi", "To what ___ was it?"),
-    ("For which purpose is this?", "Bu hangi amaç içindir?", "purpose", "amaç", "For which ___ is this?"),
-    ("By whose authority was it?", "Kimin yetkisiyleydi?", "authority", "yetkisiyleydi", "By whose ___ was it?"),
-    ("Under which category are they?", "Hangi kategori altındadırlar?", "category", "kategori", "Under which ___ are they?"),
-    ("From which source is it?", "Hangi kaynaktandır?", "source", "kaynaktandır", "From which ___ is it?"),
-    ("In what period was it?", "Hangi dönemdeydi?", "period", "dönemdeydi", "In what ___ was it?"),
-    ("With which method is it?", "Hangi yöntemledir?", "method", "yöntemledir", "With which ___ is it?"),
-    ("On whose data was it?", "Kimin verileri üzerindeydi?", "data", "verileri", "On whose ___ was it?"),
-    ("In which academic journal was it published?", "Hangi akademik dergide yayımlandı?", "journal", "dergide", "In which academic ___ was it published?"),
-    ("Under what legal criteria were they selected?", "Hangi yasal kriterler altında seçildiler?", "criteria", "kriterler", "Under what legal ___ were they selected?"),
-    ("For which specific purpose is this required?", "Bu hangi özel amaç için gereklidir?", "purpose", "amaç", "For which specific ___ is this required?"),
-    ("At what financial percentage was it fixed?", "Hangi finansal yüzdeyle sabitlendi?", "percentage", "yüzdeyle", "At what financial ___ was it fixed?"),
-    ("From which primary source is this derived?", "Bu hangi birincil kaynaktan türetilmiştir?", "source", "kaynaktan", "From which primary ___ is this derived?"),
-    ("To what degree are the variables dynamic?", "Değişkenler ne derece dinamiktir?", "degree", "derece", "To what ___ are the variables dynamic?"),
-    ("With which analytical framework is it compatible?", "Hangi analitik çerçeve ile uyumludur?", "framework", "çerçeve", "With which analytical ___ is it compatible?"),
-    ("By what assessment method was it evaluated?", "Hangi değerlendirme yöntemiyle değerlendirildi?", "assessment", "değerlendirme", "By what ___ method was it evaluated?"),
-    ("In which economic sector is the crisis visible?", "Kriz hangi ekonomik sektörde görünürdür?", "sector", "sektörde", "In which economic ___ is the crisis visible?"),
-    ("On what theoretical assumption is this based?", "Bu hangi teorik varsayıma dayanmaktadır?", "assumption", "varsayıma", "On what theoretical ___ is this based?"),
-    ("Under which constitutional clause was the law modified?", "Yasa hangi anayasal madde uyarınca değiştirildi?", "clause", "madde", "Under which constitutional ___ was the law modified?"),
-    ("By what statistical methodology were the figures calculated?", "Rakamlar hangi istatistiksel metodolojiyle hesaplandı?", "methodology", "metodolojiyle", "By what statistical ___ were the figures calculated?"),
-    ("To what geographic extent is the population distributed?", "Nüfus hangi coğrafi ölçüde dağılmıştır?", "extent", "ölçüde", "To what geographic ___ is the population distributed?"),
-    ("For whose ultimate benefit was the policy established?", "Politika kimin nihai faydası için oluşturuldu?", "benefit", "faydası", "For whose ultimate ___ was the policy established?"),
-    ("From which institutional perspective was the text interpreted?", "Metin hangi kurumsal perspektiften yorumlandı?", "perspective", "perspektiften", "From which institutional ___ was the text interpreted?"),
-    ("In which experimental environment were the plants grown?", "Bitkiler hangi deneysel ortamda yetiştirildi?", "environment", "ortamda", "In which experimental ___ were the plants grown?"),
-    ("With what administrative authority is the director acting?", "Müdür hangi idari yetkiyle hareket ediyor?", "authority", "yetkiyle", "With what administrative ___ is the director acting?"),
-    ("At which developmental stage are the data components?", "Veri bileşenleri hangi gelişim aşamasındadır?", "stage", "aşamasındadır", "At which developmental ___ are the data components?"),
-    ("On which philosophical concept is the framework structured?", "Çerçeve hangi felsefi kavram üzerine yapılandırılmıştır?", "concept", "kavram", "On which philosophical ___ is the framework structured?"),
-    ("Through what regulatory process was the contract validated?", "Sözleşme hangi düzenleyici süreçle onaylandı?", "process", "süreçle", "Through what regulatory ___ was the contract validated?")
-]
+# Set 3: Genişletilmiş Nesneler (30 sentences)
+for comp in components:
+    # Note: In English text, for validation finding, the docx had:
+    # "The finding validates alternative alternative scientific hypotheses."
+    # Let's replicate that exact sentence if it's in the component
+    o2_to_use = comp['o2']
+    if comp['v'] == "validates":
+        o2_to_use = "alternative alternative scientific hypotheses."
+    if comp['v'] == "maximize":
+        o2_to_use = "maximum annual manufacturing efficiency."
+        
+    en_sent = f"{comp['s1']} {comp['v']} {o2_to_use}"
+    tr_sent = f"{comp['s1_tr']} {comp['o2_tr']} {comp['v_tr']}."
+    tr_sent = re.sub(r'\s+', ' ', tr_sent).strip()
+    tr_sent = re.sub(r'\.+', '.', tr_sent)
+    
+    target_word = comp['v']
+    blank_sent = en_sent.replace(target_word, "___")
+    
+    all_sentences.append({
+        "en": en_sent,
+        "tr": tr_sent,
+        "word": target_word,
+        "trWord": comp['v_tr'],
+        "blank": blank_sent
+    })
 
-def format_js_array(name, sents):
-    lines = [f"const {name} = ["]
-    for en, tr, word, trWord, blank in sents:
-        # escape double quotes
-        en_esc = en.replace('"', '\\"')
-        tr_esc = tr.replace('"', '\\"')
-        word_esc = word.replace('"', '\\"')
-        trWord_esc = trWord.replace('"', '\\"')
-        blank_esc = blank.replace('"', '\\"')
-        lines.append(f'  {{ en: "{en_esc}", tr: "{tr_esc}", word: "{word_esc}", trWord: "{trWord_esc}", blank: "{blank_esc}" }},')
-    # remove trailing comma on last element and close
-    lines[-1] = lines[-1].rstrip(',')
-    lines.append("];")
-    return "\n".join(lines)
+# Set 4: Tam Genişletilmiş SVO (30 sentences)
+for comp in components:
+    o2_to_use = comp['o2']
+    if comp['v'] == "validates":
+        o2_to_use = "alternative alternative scientific hypotheses."
+    if comp['v'] == "maximize":
+        o2_to_use = "maximum annual manufacturing efficiency."
+        
+    en_sent = f"{comp['s2']} {comp['v']} {o2_to_use}"
+    tr_sent = f"{comp['s2_tr']} {comp['o2_tr']} {comp['v_tr']}."
+    tr_sent = re.sub(r'\s+', ' ', tr_sent).strip()
+    tr_sent = re.sub(r'\.+', '.', tr_sent)
+    
+    target_word = comp['v']
+    blank_sent = en_sent.replace(target_word, "___")
+    
+    all_sentences.append({
+        "en": en_sent,
+        "tr": tr_sent,
+        "word": target_word,
+        "trWord": comp['v_tr'],
+        "blank": blank_sent
+    })
 
-print(format_js_array("unit9Lesson1SentencesRaw", t1_sentences))
-print("\n")
-print(format_js_array("unit9Lesson2SentencesRaw", t2_sentences))
-print("\n")
-print(format_js_array("unit9Lesson3SentencesRaw", t3_sentences))
-print("\n")
-print(format_js_array("unit9Lesson4SentencesRaw", t4_sentences))
-print("\n")
-print(format_js_array("unit9Lesson5SentencesRaw", t5_sentences))
+print(f"Generated {len(all_sentences)} sentences.")
+
+# Let's extract all unique words from these 120 sentences to compare with wordDictionary in app.js
+unique_words = set()
+for s in all_sentences:
+    # clean punctuation, digits, split
+    cleaned = re.sub(r'[^\w\s-]', ' ', s['en'])
+    for w in cleaned.split():
+        w = w.strip().lower()
+        if w and not w.isdigit():
+            unique_words.add(w)
+
+print(f"Total unique words in Unit 7: {len(unique_words)}")
+
+# Read app.js wordDictionary
+with open("app.js", "r", encoding="utf-8") as f:
+    app_content = f.read()
+
+dict_match = re.search(r'const wordDictionary = \{(.*?)\};', app_content, re.DOTALL)
+dict_keys = set()
+if dict_match:
+    dict_content = dict_match.group(1)
+    dict_keys = set(re.findall(r'["\']([^"\']+)["\']\s*:', dict_content))
+
+# Find missing words
+missing = sorted(list(unique_words - dict_keys))
+print(f"Missing words in app.js ({len(missing)}):")
+
+# Simple dictionary for Turkish translations of the words
+# Let's populate translations for words that could be in Section 7
+word_tr_map = {
+    "contradicts": "çelişir",
+    "specifies": "belirler",
+    "anticipates": "öngörür",
+    "advocate": "savunur",
+    "triggers": "tetikler",
+    "clarify": "açıklar",
+    "induces": "yol açar",
+    "distorts": "bozar",
+    "manipulates": "manipüle eder",
+    "accommodates": "uyum sağlar",
+    "defines": "tanımlar",
+    "binds": "bağlar",
+    "inspect": "inceler",
+    "affects": "etkiler",
+    "stabilizes": "stabilize eder",
+    "illustrates": "gösterir",
+    "restricts": "kısıtlar",
+    "validates": "doğrular",
+    "modifies": "değiştirir",
+    "evaluates": "değerlendirir",
+    "isolates": "izole eder",
+    "maximize": "maksimize eder",
+    "calculates": "hesaplar",
+    "exposes": "ortaya çıkarır",
+    "alters": "değiştirir",
+    "secures": "güvenceye alır",
+    "suspended": "askıya aldı",
+    "terminated": "feshetti",
+    "conducted": "yürüttü",
+    "accumulates": "biriktirir",
+    "anomaly": "anomali",
+    "chain": "zincir",
+    "exact": "kesin / tam",
+    "excellent": "mükemmel",
+    "finding": "bulgu",
+    "flaws": "kusurlar / hatalar",
+    "graph": "grafik",
+    "independent": "bağımsız",
+    "logs": "günlükler",
+    "maximum": "maksimum",
+    "modules": "modüller",
+    "protocol": "protokol",
+    "ratios": "oranlar",
+    "reform": "reform",
+    "safety": "güvenlik",
+    "scientific": "bilimsel",
+    "scope": "kapsam",
+    "script": "betik / kod",
+    "strategies": "stratejiler",
+    "stress": "stres",
+    "variables": "değişkenler",
+    "theory": "teori",
+    
+    "newly": "yeni",
+    "collected": "toplanan",
+    "empirical": "deneysel",
+    "broader": "daha geniş",
+    "socio-economic": "sosyo-ekonomik",
+    "highly": "son derece",
+    "competitive": "rekabetçi",
+    "unpredictable": "öngörülemeyen",
+    "unpredictable": "öngörülemeyen",
+    "continuous": "sürekli",
+    "undetected": "tespit edilemeyen",
+    "mainstream": "ana akım",
+    "updated": "güncellenmiş",
+    "operational": "operasyonel",
+    "revised": "gözden geçirilmiş",
+    "legally": "yasal olarak",
+    "binding": "bağlayıcı",
+    "reinforced": "güçlendirilmiş",
+    "central": "merkezi",
+    "attached": "ekli",
+    "statistical": "istatistiksel",
+    "strict": "katı",
+    "institutional": "kurumsal",
+    "final": "nihai",
+    "principal": "baş / temel",
+    "laboratory": "laboratuvar",
+    "innovative": "yenilikçi",
+    "corporate": "kurumsal",
+    "automated": "otomatik",
+    "background": "arka plan",
+    "annual": "yıllık",
+    "sudden": "ani",
+    "paradigm": "paradigma",
+    "advanced": "gelişmiş",
+    "cryptographic": "kriptografik",
+    "regional": "bölgesel",
+    "administrative": "idari",
+    "executive": "yürütücü / yönetim",
+    "internal": "iç / dahili",
+    "national": "ulusal / milli",
+    "education": "eğitim",
+    "centralized": "merkezi",
+    "cloud": "bulut",
+    
+    "long-standing": "uzun süredir var olan",
+    "theoretical": "teorik",
+    "qualitative": "nitel",
+    "selection": "seçim",
+    "significant": "önemli",
+    "comprehensive": "kapsamlı",
+    "legislative": "yasal / mevzuatla ilgili",
+    "negative": "olumsuz / negatif",
+    "physical": "fiziksel",
+    "reactions": "tepkiler / reaksiyonlar",
+    "investigative": "araştırmacı / soruşturmacı",
+    "severe": "ciddi / şiddetli",
+    "psychological": "psikolojik",
+    "occupational": "mesleki",
+    "public": "kamu / toplumsal",
+    "political": "siyasi / politik",
+    "cultural": "kültürel",
+    "infrastructure": "altyapı",
+    "unauthorized": "yetkisiz",
+    "network": "ağ",
+    "alternative": "alternatif",
+    "functional": "fonksiyonel",
+    "anonymous": "anonim / adsız",
+    "unstable": "kararsız / istikrarsız",
+    "manufacturing": "üretim",
+    "mathematical": "matematiksel",
+    "organizational": "örgütsel / kurumsal",
+    "consumer": "tüketici",
+    "behavior": "davranış",
+    "sensitive": "hassas",
+    "outdated": "güncelliğini yitirmiş / eski",
+    "environmental": "çevresel",
+    "bilateral": "ikili",
+    "commercial": "ticari",
+    "educational": "eğitimsel / eğitim",
+    "historical": "tarihsel / geçmiş",
+    "senior": "kıdemli"
+}
+
+# Print dictionary additions
+print("\nwordDictionary additions:")
+for m in missing:
+    tr = word_tr_map.get(m, m)
+    print(f'  "{m}": "{tr}",')
+
+# Save JavaScript arrays to a temporary file scratch/js_arrays.txt
+import json
+js_data = "const unit7LessonSentences = {\n  1: " + json.dumps(all_sentences, indent=2, ensure_ascii=False) + "\n};\n"
+with open("scratch/js_arrays.txt", "w", encoding="utf-8") as f_out:
+    f_out.write(js_data)
+
+print("\nSaved unit7LessonSentences to scratch/js_arrays.txt")

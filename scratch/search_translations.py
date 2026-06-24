@@ -6,10 +6,11 @@ from docx import Document
 desktop_path = "/Users/faruknafizfazlioglu/Desktop"
 docx_files = glob.glob(os.path.join(desktop_path, "*.docx"))
 
-targets = ["çelişir", "belirler", "öngörür", "savunur", "tetikler", "açıklar", "yol açar", "bozar", "manipüle eder", "uyum sağlar"]
+target = "The data contradicts the theory"
 
 for f in docx_files:
     f_norm = unicodedata.normalize('NFC', f)
+    # also normalized to NFD just in case
     f_nfd = unicodedata.normalize('NFD', f)
     path_to_use = f
     if os.path.exists(f_norm):
@@ -21,8 +22,13 @@ for f in docx_files:
         doc = Document(path_to_use)
         for i, p in enumerate(doc.paragraphs):
             p_text = p.text.strip()
-            found = [t for t in targets if t in p_text.lower()]
-            if found:
-                print(f"FOUND {found} in {os.path.basename(f)} at paragraph {i}: {p_text[:120]}")
+            if target.lower() in p_text.lower():
+                print(f"FOUND target in {os.path.basename(f)} at paragraph {i}:")
+                # print 10 paragraphs around it
+                start = max(0, i - 2)
+                end = min(len(doc.paragraphs), i + 20)
+                for j in range(start, end):
+                    print(f"  P {j}: {doc.paragraphs[j].text.strip()}")
+                break
     except Exception as e:
         pass
