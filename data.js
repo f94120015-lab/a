@@ -4810,7 +4810,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "abandoned",
     adverbTr: "geçici olarak",
-    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"]
+    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"],
+    word: "temporarily",
+    trWord: "geçici olarak"
   },
   {
     en: "Growth is confidently anticipated.",
@@ -4822,7 +4824,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "anticipated",
     adverbTr: "güvenle",
-    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"]
+    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"],
+    word: "confidently",
+    trWord: "güvenle"
   },
   {
     en: "The dynamic is automatically triggered.",
@@ -4834,7 +4838,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "triggered",
     adverbTr: "otomatik olarak",
-    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"]
+    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"],
+    word: "automatically",
+    trWord: "otomatik olarak"
   },
   {
     en: "Context is explicitly specified.",
@@ -4846,7 +4852,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "specified",
     adverbTr: "açıkça",
-    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"]
+    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"],
+    word: "explicitly",
+    trWord: "açıkça"
   },
   {
     en: "Reform is strongly advocated.",
@@ -4858,7 +4866,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "advocated",
     adverbTr: "şiddetle",
-    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"]
+    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"],
+    word: "strongly",
+    trWord: "şiddetle"
   },
   {
     en: "The sector is rapidly expanded.",
@@ -4870,7 +4880,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "expanded",
     adverbTr: "hızla",
-    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"]
+    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"],
+    word: "rapidly",
+    trWord: "hızla"
   },
   {
     en: "Parameters are clearly defined.",
@@ -4882,7 +4894,9 @@ const unit11SplitPassiveSentences = [
     aux: "are",
     verb: "defined",
     adverbTr: "net bir şekilde",
-    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"]
+    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"],
+    word: "clearly",
+    trWord: "net bir şekilde"
   },
   {
     en: "Ratios are precisely calculated.",
@@ -4894,7 +4908,9 @@ const unit11SplitPassiveSentences = [
     aux: "are",
     verb: "calculated",
     adverbTr: "tam olarak",
-    adverbDistractorsTr: ["yaklaşık olarak", "tahminen", "rastgele"]
+    adverbDistractorsTr: ["yaklaşık olarak", "tahminen", "rastgele"],
+    word: "precisely",
+    trWord: "tam olarak"
   },
   {
     en: "The framework is thoroughly inspected.",
@@ -4906,7 +4922,9 @@ const unit11SplitPassiveSentences = [
     aux: "is",
     verb: "inspected",
     adverbTr: "en ince ayrıntısına kadar",
-    adverbDistractorsTr: ["yüzeysel olarak", "kısmen", "aceleyle"]
+    adverbDistractorsTr: ["yüzeysel olarak", "kısmen", "aceleyle"],
+    word: "thoroughly",
+    trWord: "en ince ayrıntısına kadar"
   },
   {
     en: "Insights are successfully derived.",
@@ -4918,7 +4936,9 @@ const unit11SplitPassiveSentences = [
     aux: "are",
     verb: "derived",
     adverbTr: "başarıyla",
-    adverbDistractorsTr: ["başarısızlıkla", "tesadüfen", "zorlukla"]
+    adverbDistractorsTr: ["başarısızlıkla", "tesadüfen", "zorlukla"],
+    word: "successfully",
+    trWord: "başarıyla"
   },
   {
     en: "Hypotheses were finally validated.",
@@ -4930,7 +4950,9 @@ const unit11SplitPassiveSentences = [
     aux: "were",
     verb: "validated",
     adverbTr: "sonunda",
-    adverbDistractorsTr: ["başlangıçta", "geçici olarak", "aniden"]
+    adverbDistractorsTr: ["başlangıçta", "geçici olarak", "aniden"],
+    word: "finally",
+    trWord: "sonunda"
   },
   {
     en: "The anomaly was instantly detected.",
@@ -4942,7 +4964,9 @@ const unit11SplitPassiveSentences = [
     aux: "was",
     verb: "detected",
     adverbTr: "anında",
-    adverbDistractorsTr: ["yavaşça", "gelecekte", "gecikmeli olarak"]
+    adverbDistractorsTr: ["yavaşça", "gelecekte", "gecikmeli olarak"],
+    word: "instantly",
+    trWord: "anında"
   },
   {
     en: "Rules were officially suspended.",
@@ -4954,7 +4978,9 @@ const unit11SplitPassiveSentences = [
     aux: "were",
     verb: "suspended",
     adverbTr: "resmi olarak",
-    adverbDistractorsTr: ["gayriresmi olarak", "gizlice", "kişisel olarak"]
+    adverbDistractorsTr: ["gayriresmi olarak", "gizlice", "kişisel olarak"],
+    word: "officially",
+    trWord: "resmi olarak"
   },
   {
     en: "Agreements were mutually terminated.",
@@ -4966,7 +4992,9 @@ const unit11SplitPassiveSentences = [
     aux: "were",
     verb: "terminated",
     adverbTr: "karşılıklı olarak",
-    adverbDistractorsTr: ["tek taraflı olarak", "kısmen", "bağımsız olarak"]
+    adverbDistractorsTr: ["tek taraflı olarak", "kısmen", "bağımsız olarak"],
+    word: "mutually",
+    trWord: "karşılıklı olarak"
   },
   {
     en: "Surveys were independently conducted.",
@@ -4978,7 +5006,9 @@ const unit11SplitPassiveSentences = [
     aux: "were",
     verb: "conducted",
     adverbTr: "bağımsız olarak",
-    adverbDistractorsTr: ["ortaklaşa", "bağımlı olarak", "zorla"]
+    adverbDistractorsTr: ["ortaklaşa", "bağımlı olarak", "zorla"],
+    word: "independently",
+    trWord: "bağımsız olarak"
   }
 ];
 
@@ -4993,7 +5023,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "was",
     verb: "abandoned",
     adverbTr: "geçici olarak",
-    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"]
+    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"],
+    word: "temporarily",
+    trWord: "geçici olarak"
   },
   {
     en: "Significant annual financial growth is confidently anticipated by senior financial analysts.",
@@ -5005,7 +5037,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "is",
     verb: "anticipated",
     adverbTr: "güvenle",
-    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"]
+    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"],
+    word: "confidently",
+    trWord: "güvenle"
   },
   {
     en: "This unpredictable economic dynamic was automatically triggered by a chain of reactions.",
@@ -5017,7 +5051,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "was",
     verb: "triggered",
     adverbTr: "otomatik olarak",
-    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"]
+    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"],
+    word: "automatically",
+    trWord: "otomatik olarak"
   },
   {
     en: "The broader socio-economic context must be explicitly specified by the selection criteria.",
@@ -5029,7 +5065,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "must be",
     verb: "specified",
     adverbTr: "açıkça",
-    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"]
+    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"],
+    word: "explicitly",
+    trWord: "açıkça"
   },
   {
     en: "Comprehensive legislative tax reform is strongly advocated by leading institutional authorities.",
@@ -5041,7 +5079,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "is",
     verb: "advocated",
     adverbTr: "şiddetle",
-    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"]
+    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"],
+    word: "strongly",
+    trWord: "şiddetle"
   },
   {
     en: "The highly competitive dynamic sector will be rapidly expanded by infrastructure growth.",
@@ -5053,7 +5093,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "will be",
     verb: "expanded",
     adverbTr: "hızla",
-    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"]
+    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"],
+    word: "rapidly",
+    trWord: "hızla"
   },
   {
     en: "Crucial technical system parameters have been clearly defined by the security protocol.",
@@ -5065,7 +5107,9 @@ const unit11SplitFullPassiveSentences = [
     aux: "have been",
     verb: "defined",
     adverbTr: "net bir şekilde",
-    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"]
+    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"],
+    word: "clearly",
+    trWord: "net bir şekilde"
   }
 ];
 
@@ -8031,10 +8075,13 @@ const unitSentencesMap = {
       ] },
       5: { exercises: [
         buildSplitPassiveExercises(unit11SplitPassiveSentences, 11, 36, 1, 0),
-        buildSplitPassiveExercises(unit11SplitPassiveSentences, 11, 36, 2, 5)
+        buildSplitPassiveExercises(unit11SplitPassiveSentences, 11, 36, 2, 5),
+        buildCustom10QuestionExercises(unit11SplitPassiveSentences, 11, 36, 3, 0),
+        buildCustom10QuestionExercises(unit11SplitPassiveSentences, 11, 36, 4, 5)
       ] },
       6: { exercises: [
-        buildSplitPassiveExercises(unit11SplitFullPassiveSentences, 11, 37, 1, 0)
+        buildSplitPassiveExercises(unit11SplitFullPassiveSentences, 11, 37, 1, 0),
+        buildCustom10QuestionExercises(unit11SplitFullPassiveSentences, 11, 37, 2, 0)
       ] }
     },
   12: {
