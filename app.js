@@ -3069,38 +3069,8 @@ function renderLessonTree() {
     </svg>
   `;
 
-  // Move Unit 8, Unit 6, Unit 9, Unit 12, Unit 16 and Unit 17 to the beginning of the rendered list (Unit 17 at the absolute top)
-  const renderedUnits = [...units];
-  const unit8Index = renderedUnits.findIndex(u => u.id === 8);
-  if (unit8Index !== -1) {
-    const [unit8] = renderedUnits.splice(unit8Index, 1);
-    renderedUnits.unshift(unit8);
-  }
-  const unit6Index = renderedUnits.findIndex(u => u.id === 6);
-  if (unit6Index !== -1) {
-    const [unit6] = renderedUnits.splice(unit6Index, 1);
-    renderedUnits.unshift(unit6);
-  }
-  const unit9Index = renderedUnits.findIndex(u => u.id === 9);
-  if (unit9Index !== -1) {
-    const [unit9] = renderedUnits.splice(unit9Index, 1);
-    renderedUnits.unshift(unit9);
-  }
-  const unit12Index = renderedUnits.findIndex(u => u.id === 12);
-  if (unit12Index !== -1) {
-    const [unit12] = renderedUnits.splice(unit12Index, 1);
-    renderedUnits.unshift(unit12);
-  }
-  const unit16Index = renderedUnits.findIndex(u => u.id === 16);
-  if (unit16Index !== -1) {
-    const [unit16] = renderedUnits.splice(unit16Index, 1);
-    renderedUnits.unshift(unit16);
-  }
-  const unit17Index = renderedUnits.findIndex(u => u.id === 17);
-  if (unit17Index !== -1) {
-    const [unit17] = renderedUnits.splice(unit17Index, 1);
-    renderedUnits.unshift(unit17);
-  }
+  // Sort all units sequentially by their ID (from Unit 1 to Unit 25)
+  const renderedUnits = [...units].sort((a, b) => a.id - b.id);
 
   renderedUnits.forEach(unit => {
     // 1. Calculate progress in this unit
@@ -3108,13 +3078,28 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
+    const notUploadedUnits = new Set([11, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+    const isNotUploadedUnit = notUploadedUnits.has(unit.id);
+    let notUploadedBadgeHTML = '';
+    if (isNotUploadedUnit) {
+      notUploadedBadgeHTML = `
+        <span class="unit-banner-not-uploaded-tag">
+          <span class="tag-pulse-dot"></span>
+          <span>Alıştırma Hazırlanacak</span>
+        </span>
+      `;
+    }
+
     // 2. Create Unit Banner
     const banner = document.createElement('div');
     const colorIndex = ((unit.id - 1) % 10) + 1;
     banner.className = `unit-banner unit-color-${colorIndex}`;
     banner.innerHTML = `
       <div class="unit-banner-info">
-        <h2>Bölüm ${unit.id}: ${unit.title}</h2>
+        <h2 class="unit-banner-title-row">
+          <span>Bölüm ${unit.id}: ${unit.title}</span>
+          ${notUploadedBadgeHTML}
+        </h2>
         <p>${unit.description}</p>
       </div>
       <div class="unit-progress-container">
@@ -3213,7 +3198,10 @@ function renderLessonTree() {
 
       // Progress Badge content
       let progressBadgeContent = '';
-      if (lesson.exercises && lesson.exercises.length > 0) {
+      const isNotUploadedLesson = isNotUploadedUnit;
+      if (isNotUploadedLesson) {
+        progressBadgeContent = `<div class="node-progress-badge">0</div>`;
+      } else if (lesson.exercises && lesson.exercises.length > 0) {
         const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
         const totalCount = lesson.exercises.length;
         const isAllExCompleted = completedCount === totalCount;
@@ -3243,6 +3231,7 @@ function renderLessonTree() {
         <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
           <strong>${lesson.title}</strong>
           <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
+          ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Alıştırma henüz yüklenmemiş</div>' : ''}
         </div>
       `;
 
@@ -3351,7 +3340,17 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  if (lesson.exercises && lesson.exercises.length > 0) {
+  const notUploadedUnitsPopover = new Set([11, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+  if (notUploadedUnitsPopover.has(unit.id)) {
+    popoverFooterHTML = `
+      <div class="popover-exercises-container">
+        <div class="popover-not-uploaded-message">
+          <span class="not-uploaded-icon">⏳</span>
+          <span class="not-uploaded-text">Alıştırma henüz yüklenmemiş</span>
+        </div>
+      </div>
+    `;
+  } else if (lesson.exercises && lesson.exercises.length > 0) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       const isExUnlocked = true; // Şimdilik soruları/düzenlemeleri görebilmek için kilitler açıldı

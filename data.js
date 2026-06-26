@@ -7471,7 +7471,7 @@ const unitSentencesMap = {
     ] }
   },
   11: {
-    1: unit8LessonSentences[1]
+    1: { exercises: [] }
   },
   12: {
     1: { exercises: [
@@ -7499,16 +7499,16 @@ const unitSentencesMap = {
     ] }
   },
   13: {
-    1: unit13LessonSentences[1],
-    2: unit13LessonSentences[2]
+    1: { exercises: [] },
+    2: { exercises: [] }
   },
   14: {
-    1: unit14LessonSentences[1],
-    2: unit14LessonSentences[2]
+    1: { exercises: [] },
+    2: { exercises: [] }
   },
   15: {
-    1: unit15LessonSentences[1],
-    2: unit15LessonSentences[2]
+    1: { exercises: [] },
+    2: { exercises: [] }
   },
   16: {
     1: { exercises: [
@@ -7540,45 +7540,45 @@ const unitSentencesMap = {
     ] }
   },
   18: {
-    1: unit18LessonSentences[1]
+    1: { exercises: [] }
   },
   19: {
-    1: unit19LessonSentences[1],
-    2: unit19LessonSentences[2],
-    3: unit19LessonSentences[3],
-    4: unit19LessonSentences[4],
-    5: unit19LessonSentences[5],
-    6: unit19LessonSentences[6],
-    7: unit19LessonSentences[7]
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] },
+    4: { exercises: [] },
+    5: { exercises: [] },
+    6: { exercises: [] },
+    7: { exercises: [] }
   },
   20: {
-    1: unit20LessonSentences[1],
-    2: unit20LessonSentences[2],
-    3: unit20LessonSentences[3]
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] }
   },
   21: {
-    1: unit21LessonSentences[1],
-    2: unit21LessonSentences[2],
-    3: unit21LessonSentences[3],
-    4: unit21LessonSentences[4],
-    5: unit21LessonSentences[5],
-    6: unit21LessonSentences[6],
-    7: unit21LessonSentences[7]
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] },
+    4: { exercises: [] },
+    5: { exercises: [] },
+    6: { exercises: [] },
+    7: { exercises: [] }
   },
   22: {
-    1: unit22LessonSentences[1],
-    2: unit22LessonSentences[2],
-    3: unit22LessonSentences[3],
-    4: unit22LessonSentences[4]
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] },
+    4: { exercises: [] }
   },
   23: {
-    1: unit23LessonSentences[1]
+    1: { exercises: [] }
   },
   24: {
-    1: unit24LessonSentences[1]
+    1: { exercises: [] }
   },
   25: {
-    1: unit25LessonSentences[1]
+    1: { exercises: [] }
   }
 };
 
