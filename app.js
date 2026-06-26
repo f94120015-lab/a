@@ -83,6 +83,7 @@ const wordDictionary = {
   "account": "hesap",
   "accountant": "muhasebeci",
   "accounts": "hesaplar",
+  "accumulate": "biriktirmek / toplamak",
   "accumulated": "biriktirilmiş / biriktirildi",
   "accumulates": "biriktirir",
   "accumulating": "biriken / birikme",
@@ -110,6 +111,7 @@ const wordDictionary = {
   "administrative": "idari",
   "adopting": "benimseme / benimseyen",
   "advanced": "ileri düzey",
+  "advantageous": "avantajlı",
   "advocate": "savunur",
   "advocated": "savunulan / savunuldu / savunulmaktadır",
   "affected": "etkiledi / etkilenmiş",
@@ -174,6 +176,7 @@ const wordDictionary = {
   "appointment": "randevu",
   "approach": "yaklaşım",
   "approaches": "yaklaşımlar",
+  "appropriate": "uygun / yerinde",
   "approved": "onayladı",
   "approving": "onaylayan",
   "architectural": "mimari",
@@ -500,6 +503,7 @@ const wordDictionary = {
   "defendant": "davalı / sanık",
   "defense": "savunma",
   "deficiency": "eksiklik",
+  "define": "tanımlamak",
   "defined": "tanımlanmış",
   "defines": "tanımlar",
   "defining": "belirleyici",
@@ -681,6 +685,7 @@ const wordDictionary = {
   "ethics": "ahlak / etik",
   "europe": "Avrupa",
   "european": "avrupalı / avrupa",
+  "evaluate": "değerlendirmek",
   "evaluated": "değerlendirilmiş",
   "evaluates": "değerlendirir",
   "evaluating": "değerlendirme / değerlendiren",
@@ -732,6 +737,7 @@ const wordDictionary = {
   "exposes": "ortaya çıkarır",
   "expression": "ifade / dışa vurum",
   "extent": "boyut / ölçü / kapsam",
+  "extract": "çıkarmak / özünü çıkarmak",
   "extracted": "çıkarılmış / çıkardı",
   "extracting": "çıkarma / çıkaran",
   "eye-opening": "göz açıcı",
@@ -753,6 +759,7 @@ const wordDictionary = {
   "farmer": "çiftçi",
   "fast": "hızlı",
   "fear": "korku",
+  "feasible": "uygulanabilir / mümkün",
   "feature": "özellik",
   "features": "özellikler",
   "feedback": "geri bildirim",
@@ -963,6 +970,7 @@ const wordDictionary = {
   "institution": "kurum / kuruluş",
   "institutional": "kurumsal",
   "institutions": "kurumlar",
+  "integrate": "entegre etmek",
   "integrated": "entegre / bütünleşmiş",
   "integrating": "entegre etme / birleştiren",
   "integration": "entegrasyon / uyum",
@@ -999,6 +1007,7 @@ const wordDictionary = {
   "involves": "içerir / gerektirir",
   "irrelevant": "ilgisiz / alakasız",
   "is": "-dir / -dır (olmak fiili)",
+  "isolate": "izole etmek / ayrıştırmak",
   "isolated": "yalıtılmış",
   "isolates": "izole eder",
   "isolating": "izole etmek / yalıtmak",
@@ -1101,6 +1110,7 @@ const wordDictionary = {
   "managed": "yönetilen / idare edilen",
   "management": "yönetim",
   "manager": "müdür / yönetici",
+  "mandatory": "zorunlu",
   "manipulated": "manipüle edilmiş / manipüle edildi",
   "manipulates": "manipüle eder",
   "manufacturing": "üretim",
@@ -1276,6 +1286,7 @@ const wordDictionary = {
   "papers": "kağıtlar / evraklar",
   "paradigm": "paradigma",
   "parameter": "parametre",
+  "parameterize": "parametrelendirmek",
   "parameters": "parametreler",
   "parliamentary": "parlamento / parlamenter",
   "part": "parça / kısım / bölüm",
@@ -1530,6 +1541,7 @@ const wordDictionary = {
   "responses": "yanıtlar / cevaplar",
   "responsible": "sorumlu",
   "responsive": "duyarlı",
+  "restrict": "sınırlandırmak",
   "restricted": "kısıtlanmış / yasak",
   "restricting": "kısıtlama / kısıtlayan",
   "restrictions": "kısıtlamalar",
@@ -1680,6 +1692,7 @@ const wordDictionary = {
   "specification": "şartname",
   "specified": "belirtilen / belirtildi / belirtilmektedir",
   "specifies": "belirler",
+  "specify": "belirtmek / tanımlamak",
   "speech": "konuşma / söylev",
   "speed": "hız",
   "spent": "harcanmış / harcadı",
@@ -1744,6 +1757,7 @@ const wordDictionary = {
   "sudden": "ani",
   "suffer": "muzdarip olmak / acı çekmek",
   "suffering": "muzdarip / acı çeken",
+  "sufficient": "yeterli",
   "suitcase": "valiz / bavul",
   "summarized": "özetlenmiş / özetledi",
   "summarizing": "özetleme / özetleyen",
@@ -1835,6 +1849,7 @@ const wordDictionary = {
   "town": "kasaba",
   "towns": "kasabalar / kentler",
   "toxic": "toksik / zehirli",
+  "trace": "takip etmek / izini sürmek",
   "track": "izlemek / takip etmek",
   "tracked": "izlenmiş / takip etti",
   "tracking": "takip etme / izleme",
@@ -1889,6 +1904,7 @@ const wordDictionary = {
   "university": "üniversite",
   "unknown": "bilinmeyen / bilinmiyordu",
   "unless": "-medikçe / -madıkça",
+  "unnecessary": "gereksiz",
   "unpredictable": "öngörülemeyen",
   "unstable": "kararsız / dengesiz",
   "until": "-e kadar",
@@ -1909,6 +1925,7 @@ const wordDictionary = {
   "utilizes": "kullanıyor / faydalanıyor",
   "utilizing": "kullanma / kullanan",
   "valid": "geçerli",
+  "validate": "doğrulamak",
   "validated": "doğrulanan / doğrulandı",
   "validates": "doğrular",
   "validating": "doğrulama / doğrulayan",
@@ -3108,7 +3125,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+    const notUploadedUnits = new Set([13, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -3370,7 +3387,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+  const notUploadedUnitsPopover = new Set([13, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">

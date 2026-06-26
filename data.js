@@ -5156,22 +5156,33 @@ const unit13LessonSentences = {
 
 const unit14LessonSentences = {
   1: [
-    { en: "It is important to understand the problem", tr: "Problemi anlamak önemlidir", word: "understand", trWord: "anlamak", blank: "It is important to ___ the problem" },
-    { en: "It is necessary to measure the temperature", tr: "Sıcaklığı ölçmek gereklidir", word: "measure", trWord: "ölçmek", blank: "It is necessary to ___ the temperature" },
-    { en: "It is difficult to change the policy", tr: "Politikayı değiştirmek zordur", word: "change", trWord: "değiştirmek", blank: "It is difficult to ___ the policy" },
-    { en: "It is easy to perform this experiment", tr: "Bu deneyi yapmak kolaydır", word: "perform", trWord: "yapmak", blank: "It is easy to ___ this experiment" },
-    { en: "It is possible to reduce the cost", tr: "Maliyeti düşürmek mümkündür", word: "reduce", trWord: "düşürmek", blank: "It is possible to ___ the cost" },
-    { en: "It is impossible to prevent the reaction", tr: "Tepkimeyi önlemek imkansızdır", word: "prevent", trWord: "önlemek", blank: "It is impossible to ___ the reaction" },
-    { en: "It is useful to write a summary", tr: "Bir özet yazmak faydalıdır", word: "write", trWord: "yazmak", blank: "It is useful to ___ a summary" },
-    { en: "It is simple to operate this machine", tr: "Bu makineyi çalıştırmak basittir", word: "operate", trWord: "çalıştırmak", blank: "It is simple to ___ this machine" },
-    { en: "It is essential to protect the environment", tr: "Çevreyi korumak esastır", word: "protect", trWord: "korumak", blank: "It is essential to ___ the environment" },
-    { en: "It is safe to use this source", tr: "Bu kaynağı kullanmak güvenlidir", word: "use", trWord: "kullanmak", blank: "It is safe to ___ this source" },
-    { en: "It is rare to observe this phenomenon", tr: "Bu olayı gözlemlemek nadirdir", word: "observe", trWord: "gözlemlemek", blank: "It is rare to ___ this phenomenon" },
-    { en: "It is logical to accept the suggestion", tr: "Öneriyi kabul etmek mantıklıdır", word: "accept", trWord: "kabul etmek", blank: "It is logical to ___ the suggestion" },
-    { en: "It is natural to expect a change", tr: "Bir değişiklik beklemek doğaldır", word: "expect", trWord: "beklemek", blank: "It is natural to ___ a change" },
-    { en: "It is reasonable to modify the design", tr: "Tasarımı değiştirmek makuldür", word: "modify", trWord: "değiştirmek", blank: "It is reasonable to ___ the design" },
-    { en: "It is dangerous to heat the mixture quickly", tr: "Karışımı hızlıca ısıtmak tehlikelidir", word: "heat", trWord: "ısıtmak", blank: "It is dangerous to ___ the mixture quickly" },
-    { en: "It is convenient to store the data online", tr: "Veriyi çevrimiçi depolamak uygundur", word: "store", trWord: "depolamak", blank: "It is convenient to ___ the data online" }
+    { en: "It is essential to define.", tr: "Tanımlamak esastır.", word: "define", trWord: "Tanımlamak", blank: "It is essential to ___." },
+    { en: "Is it essential to define?", tr: "Tanımlamak esas mıdır?", word: "define", trWord: "Tanımlamak", blank: "Is it essential to ___?" },
+    { en: "It is important to specify.", tr: "Belirtmek önemlidir.", word: "specify", trWord: "Belirtmek", blank: "It is important to ___." },
+    { en: "Is it important to specify?", tr: "Belirtmek önemli midir?", word: "specify", trWord: "Belirtmek", blank: "Is it important to ___?" },
+    { en: "It is possible to integrate.", tr: "Entegre etmek mümkündür.", word: "integrate", trWord: "Entegre etmek", blank: "It is possible to ___." },
+    { en: "Is it possible to integrate?", tr: "Entegre etmek mümkün müdür?", word: "integrate", trWord: "Entegre etmek", blank: "Is it possible to ___?" },
+    { en: "It is critical to stabilize.", tr: "Dengelemek kritiktir.", word: "stabilize", trWord: "Dengelemek", blank: "It is critical to ___." },
+    { en: "It is fundamental to extract.", tr: "Çıkarmak esastır.", word: "extract", trWord: "Çıkarmak", blank: "It is fundamental to ___." },
+    { en: "It has been crucial to adapt.", tr: "Uyum sağlamak kritik olmuştur.", word: "adapt", trWord: "Uyum sağlamak", blank: "It has been crucial to ___." },
+    { en: "It would be vital to identify.", tr: "Tespit etmek hayati olurdu.", word: "identify", trWord: "Tespit etmek", blank: "It would be vital to ___." },
+    { en: "It will be crucial to clarify.", tr: "Açıklığa kavuşturmak kritik olacaktır.", word: "clarify", trWord: "Açıklığa kavuşturmak", blank: "It will be crucial to ___." },
+    { en: "It has been difficult to isolate.", tr: "İzole etmek zor olmuştur.", word: "isolate", trWord: "İzole etmek", blank: "It has been difficult to ___." },
+    { en: "Will it be crucial to clarify?", tr: "Açıklığa kavuşturmak kritik olacak mıdır?", word: "clarify", trWord: "Açıklığa kavuşturmak", blank: "Will it be crucial to ___?" },
+    { en: "Has it been difficult to isolate?", tr: "İzole etmek zor olmuş mudur?", word: "isolate", trWord: "İzole etmek", blank: "Has it been difficult to ___?" },
+    { en: "It is convenient to parameterize.", tr: "Parametrelendirmek elverişlidir.", word: "parameterize", trWord: "Parametrelendirmek", blank: "It is convenient to ___." },
+    { en: "It will be impossible to validate.", tr: "Doğrulamak imkansız olacaktır.", word: "validate", trWord: "Doğrulamak", blank: "It will be impossible to ___." },
+    { en: "It will be logical to substitute.", tr: "Yerine koymak mantıklı olacaktır.", word: "substitute", trWord: "Yerine koymak", blank: "It will be logical to ___." },
+    { en: "It will be sufficient to trace.", tr: "Takip etmek yeterli olacaktır.", word: "trace", trWord: "Takip etmek", blank: "It will be sufficient to ___." },
+    { en: "Will it be impossible to validate?", tr: "Doğrulamak imkansız olacak mıdır?", word: "validate", trWord: "Doğrulamak", blank: "Will it be impossible to ___?" },
+    { en: "It would be unnecessary to modify.", tr: "Değiştirmek gereksiz olurdu.", word: "modify", trWord: "Değiştirmek", blank: "It would be unnecessary to ___." },
+    { en: "It would be beneficial to inspect.", tr: "Denetlemek faydalı olurdu.", word: "inspect", trWord: "Denetlemek", blank: "It would be beneficial to ___." },
+    { en: "Would it be unnecessary to modify?", tr: "Değiştirmek gereksiz olur muydu?", word: "modify", trWord: "Değiştirmek", blank: "Would it be unnecessary to ___?" },
+    { en: "It has been feasible to structure.", tr: "Yapılandırmak mümkün olmuştur.", word: "structure", trWord: "Yapılandırmak", blank: "It has been feasible to ___." },
+    { en: "It will be mandatory to protocol.", tr: "Protokol oluşturmak zorunlu olacaktır.", word: "protocol", trWord: "Protokol oluşturmak", blank: "It will be mandatory to ___." },
+    { en: "It would be appropriate to restrict.", tr: "Sınırlandırmak uygun olurdu.", word: "restrict", trWord: "Sınırlandırmak", blank: "It would be appropriate to ___." },
+    { en: "It has been necessary to evaluate.", tr: "Değerlendirmek gerekli olmuştur.", word: "evaluate", trWord: "Değerlendirmek", blank: "It has been necessary to ___." },
+    { en: "It has been advantageous to accumulate.", tr: "Biriktirmek avantajlı olmuştur.", word: "accumulate", trWord: "Biriktirmek", blank: "It has been advantageous to ___." }
   ],
   2: [
     { en: "It is important for the student to understand the problem", tr: "Öğrencinin problemi anlaması önemlidir", word: "understand", trWord: "anlaması", blank: "It is important for the student to ___ the problem" },
@@ -8114,7 +8125,11 @@ const unitSentencesMap = {
     2: { exercises: [] }
   },
   14: {
-    1: { exercises: [] },
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 1, 0),
+      buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 2, 10),
+      buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 3, 20)
+    ] },
     2: { exercises: [] }
   },
   15: {
