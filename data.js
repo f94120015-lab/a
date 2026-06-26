@@ -2160,6 +2160,80 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   };
 }
 
+function buildSplitPassiveExercises(sentences, unitId, lessonId, exId, offset) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const slice = [];
+  for (let i = 0; i < 10; i++) {
+    const idx = (offset + i) % sentences.length;
+    slice.push(sentences[idx]);
+  }
+
+  // 1. Spot the Split Adverb (3 questions)
+  for (let i = 0; i < 3; i++) {
+    const s = slice[i];
+    const correctVal = s.adverb;
+    const words = s.en.replace(/[.]/g, "").split(/\s+/);
+    const distractorWord = words.find(w => w.toLowerCase() !== s.adverb.toLowerCase() && 
+                                           w.toLowerCase() !== s.verb.toLowerCase() && 
+                                           !s.aux.toLowerCase().includes(w.toLowerCase())) || words[0];
+                                           
+    const options = shuffle([s.adverb, s.aux, s.verb, distractorWord]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_spot_${i}`,
+      type: "multiple-choice",
+      prompt: `Which word in the sentence below is an adverb splitting the passive verb?<br><br><strong class="highlight-sentence">${s.en}</strong>`,
+      options: options,
+      correctIndex: options.indexOf(correctVal),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 2. Adverb Distractor (4 questions)
+  for (let i = 0; i < 4; i++) {
+    const s = slice[3 + i];
+    const correctVal = s.tr;
+    const dists = s.adverbDistractorsTr.map(wrongAdv => {
+      return s.tr.replace(s.adverbTr, wrongAdv);
+    });
+    const options = shuffle([correctVal, ...dists]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_dist_${i}`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin doğru Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(correctVal),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+
+  // 3. Adverb Placement Test (3 questions)
+  for (let i = 0; i < 3; i++) {
+    const s = slice[7 + i];
+    const options = shuffle([s.adverb, s.adjective, s.noun, s.spellingDistractor]);
+    const blankSentence = s.en.replace(s.adverb, "[ ____ ]");
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_placement_${i}`,
+      type: "multiple-choice",
+      prompt: `Complete the sentence by putting the adverb in the correct position:<br><br><strong class="highlight-sentence">${blankSentence}</strong>`,
+      options: options,
+      correctIndex: options.indexOf(s.adverb),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  return {
+    id: `u${unitId}l${lessonId}ex${exId}`,
+    title: `Alıştırma ${exId}: Bölünmüş Edilgen Çalışması`,
+    description: `Araya Giren Zarfı Sökme, Anlam Kayması ve Zarf Pozisyonu Testleri (${offset + 1}-${offset + 10})`,
+    questions: qList
+  };
+}
+
 const unit1LessonSentences = {
   1: {
     exercises: buildUnit6Lesson1Exercises()
@@ -4725,6 +4799,276 @@ const unit11LessonSentences = {
   ]
 };
 
+const unit11SplitPassiveSentences = [
+  {
+    en: "The project is temporarily abandoned.",
+    tr: "Proje geçici olarak terk edilir.",
+    adverb: "temporarily",
+    adjective: "temporary",
+    noun: "temporariness",
+    spellingDistractor: "temporaries",
+    aux: "is",
+    verb: "abandoned",
+    adverbTr: "geçici olarak",
+    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"]
+  },
+  {
+    en: "Growth is confidently anticipated.",
+    tr: "Büyüme güvenle beklenir.",
+    adverb: "confidently",
+    adjective: "confident",
+    noun: "confidence",
+    spellingDistractor: "confidential",
+    aux: "is",
+    verb: "anticipated",
+    adverbTr: "güvenle",
+    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"]
+  },
+  {
+    en: "The dynamic is automatically triggered.",
+    tr: "Dinamik otomatik olarak tetiklenir.",
+    adverb: "automatically",
+    adjective: "automatic",
+    noun: "automation",
+    spellingDistractor: "automatical",
+    aux: "is",
+    verb: "triggered",
+    adverbTr: "otomatik olarak",
+    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"]
+  },
+  {
+    en: "Context is explicitly specified.",
+    tr: "Bağlam açıkça belirtilir.",
+    adverb: "explicitly",
+    adjective: "explicit",
+    noun: "explicitness",
+    spellingDistractor: "explicity",
+    aux: "is",
+    verb: "specified",
+    adverbTr: "açıkça",
+    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"]
+  },
+  {
+    en: "Reform is strongly advocated.",
+    tr: "Reform şiddetle savunulur.",
+    adverb: "strongly",
+    adjective: "strong",
+    noun: "strength",
+    spellingDistractor: "strongness",
+    aux: "is",
+    verb: "advocated",
+    adverbTr: "şiddetle",
+    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"]
+  },
+  {
+    en: "The sector is rapidly expanded.",
+    tr: "Sektör hızla genişletilir.",
+    adverb: "rapidly",
+    adjective: "rapid",
+    noun: "rapidity",
+    spellingDistractor: "rapidness",
+    aux: "is",
+    verb: "expanded",
+    adverbTr: "hızla",
+    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"]
+  },
+  {
+    en: "Parameters are clearly defined.",
+    tr: "Parametreler net bir şekilde tanımlanır.",
+    adverb: "clearly",
+    adjective: "clear",
+    noun: "clarity",
+    spellingDistractor: "clearness",
+    aux: "are",
+    verb: "defined",
+    adverbTr: "net bir şekilde",
+    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"]
+  },
+  {
+    en: "Ratios are precisely calculated.",
+    tr: "Oranlar tam olarak hesaplanır.",
+    adverb: "precisely",
+    adjective: "precise",
+    noun: "precision",
+    spellingDistractor: "preciseness",
+    aux: "are",
+    verb: "calculated",
+    adverbTr: "tam olarak",
+    adverbDistractorsTr: ["yaklaşık olarak", "tahminen", "rastgele"]
+  },
+  {
+    en: "The framework is thoroughly inspected.",
+    tr: "Çerçeve en ince ayrıntısına kadar denetlenir.",
+    adverb: "thoroughly",
+    adjective: "thorough",
+    noun: "thoroughness",
+    spellingDistractor: "throughly",
+    aux: "is",
+    verb: "inspected",
+    adverbTr: "en ince ayrıntısına kadar",
+    adverbDistractorsTr: ["yüzeysel olarak", "kısmen", "aceleyle"]
+  },
+  {
+    en: "Insights are successfully derived.",
+    tr: "Öngörüler başarıyla elde edilir.",
+    adverb: "successfully",
+    adjective: "successful",
+    noun: "success",
+    spellingDistractor: "successive",
+    aux: "are",
+    verb: "derived",
+    adverbTr: "başarıyla",
+    adverbDistractorsTr: ["başarısızlıkla", "tesadüfen", "zorlukla"]
+  },
+  {
+    en: "Hypotheses were finally validated.",
+    tr: "Hipotezler sonunda doğrulandı.",
+    adverb: "finally",
+    adjective: "final",
+    noun: "finality",
+    spellingDistractor: "finalize",
+    aux: "were",
+    verb: "validated",
+    adverbTr: "sonunda",
+    adverbDistractorsTr: ["başlangıçta", "geçici olarak", "aniden"]
+  },
+  {
+    en: "The anomaly was instantly detected.",
+    tr: "Anomali anında tespit edildi.",
+    adverb: "instantly",
+    adjective: "instant",
+    noun: "instance",
+    spellingDistractor: "instantaneous",
+    aux: "was",
+    verb: "detected",
+    adverbTr: "anında",
+    adverbDistractorsTr: ["yavaşça", "gelecekte", "gecikmeli olarak"]
+  },
+  {
+    en: "Rules were officially suspended.",
+    tr: "Kurallar resmi olarak askıya alındı.",
+    adverb: "officially",
+    adjective: "official",
+    noun: "officialdom",
+    spellingDistractor: "officiality",
+    aux: "were",
+    verb: "suspended",
+    adverbTr: "resmi olarak",
+    adverbDistractorsTr: ["gayriresmi olarak", "gizlice", "kişisel olarak"]
+  },
+  {
+    en: "Agreements were mutually terminated.",
+    tr: "Anlaşmalar karşılıklı olarak feshedildi.",
+    adverb: "mutually",
+    adjective: "mutual",
+    noun: "mutuality",
+    spellingDistractor: "mutuals",
+    aux: "were",
+    verb: "terminated",
+    adverbTr: "karşılıklı olarak",
+    adverbDistractorsTr: ["tek taraflı olarak", "kısmen", "bağımsız olarak"]
+  },
+  {
+    en: "Surveys were independently conducted.",
+    tr: "Araştırmalar bağımsız olarak yürütüldü.",
+    adverb: "independently",
+    adjective: "independent",
+    noun: "independence",
+    spellingDistractor: "independency",
+    aux: "were",
+    verb: "conducted",
+    adverbTr: "bağımsız olarak",
+    adverbDistractorsTr: ["ortaklaşa", "bağımlı olarak", "zorla"]
+  }
+];
+
+const unit11SplitFullPassiveSentences = [
+  {
+    en: "The initial investigative project was temporarily abandoned by the software development team.",
+    tr: "İlk araştırma projesi, yazılım geliştirme ekibi tarafından geçici olarak terk edildi.",
+    adverb: "temporarily",
+    adjective: "temporary",
+    noun: "temporariness",
+    spellingDistractor: "temporaries",
+    aux: "was",
+    verb: "abandoned",
+    adverbTr: "geçici olarak",
+    adverbDistractorsTr: ["kalıcı olarak", "tamamen", "kısmen"]
+  },
+  {
+    en: "Significant annual financial growth is confidently anticipated by senior financial analysts.",
+    tr: "Önemli yıllık finansal büyüme, kıdemli finansal analistler tarafından güvenle beklenmektedir.",
+    adverb: "confidently",
+    adjective: "confident",
+    noun: "confidence",
+    spellingDistractor: "confidential",
+    aux: "is",
+    verb: "anticipated",
+    adverbTr: "güvenle",
+    adverbDistractorsTr: ["şüpheyle", "endişeyle", "geçici olarak"]
+  },
+  {
+    en: "This unpredictable economic dynamic was automatically triggered by a chain of reactions.",
+    tr: "Bu öngörülemeyen ekonomik dinamik, bir reaksiyon zinciri tarafından otomatik olarak tetiklendi.",
+    adverb: "automatically",
+    adjective: "automatic",
+    noun: "automation",
+    spellingDistractor: "automatical",
+    aux: "was",
+    verb: "triggered",
+    adverbTr: "otomatik olarak",
+    adverbDistractorsTr: ["manuel olarak", "yanlışlıkla", "zorlukla"]
+  },
+  {
+    en: "The broader socio-economic context must be explicitly specified by the selection criteria.",
+    tr: "Daha geniş sosyo-ekonomik bağlam, seçim kriterleri tarafından açıkça belirtilmelidir.",
+    adverb: "explicitly",
+    adjective: "explicit",
+    noun: "explicitness",
+    spellingDistractor: "explicity",
+    aux: "must be",
+    verb: "specified",
+    adverbTr: "açıkça",
+    adverbDistractorsTr: ["dolaylı olarak", "gizlice", "tesadüfen"]
+  },
+  {
+    en: "Comprehensive legislative tax reform is strongly advocated by leading institutional authorities.",
+    tr: "Kapsamlı yasal vergi reformu, önde gelen kurumsal otoriteler tarafından şiddetle savunulmaktadır.",
+    adverb: "strongly",
+    adjective: "strong",
+    noun: "strength",
+    spellingDistractor: "strongness",
+    aux: "is",
+    verb: "advocated",
+    adverbTr: "şiddetle",
+    adverbDistractorsTr: ["isteksizce", "zayıf bir şekilde", "kısmen"]
+  },
+  {
+    en: "The highly competitive dynamic sector will be rapidly expanded by infrastructure growth.",
+    tr: "Son derece rekabetçi dinamik sektör, altyapı büyümesiyle hızla genişletilecektir.",
+    adverb: "rapidly",
+    adjective: "rapid",
+    noun: "rapidity",
+    spellingDistractor: "rapidness",
+    aux: "will be",
+    verb: "expanded",
+    adverbTr: "hızla",
+    adverbDistractorsTr: ["yavaşça", "kademeli olarak", "isteksizce"]
+  },
+  {
+    en: "Crucial technical system parameters have been clearly defined by the security protocol.",
+    tr: "Önemli teknik sistem parametreleri, güvenlik protokolü tarafından net bir şekilde tanımlanmıştır.",
+    adverb: "clearly",
+    adjective: "clear",
+    noun: "clarity",
+    spellingDistractor: "clearness",
+    aux: "have been",
+    verb: "defined",
+    adverbTr: "net bir şekilde",
+    adverbDistractorsTr: ["belirsizce", "gizlice", "tahminen"]
+  }
+];
+
 const unit12LessonSentences = {
   1: unit12Lesson1SentencesRaw,
   2: unit12Lesson2SentencesRaw,
@@ -5701,9 +6045,9 @@ const rawTopics = [
   },
   {
     title: "XI. Edilgen (Passive) Mastarı (Sayfa 63)",
-    desc: "Edilgen mastar (to be + V3) yapıları",
+    desc: "Edilgen mastar (to be + V3) yapıları ve bölünmüş edilgen fiiller",
     icon: "🔒",
-    numLessons: 4,
+    numLessons: 6,
     formulas: [
       { 
         formula: "Modal + be + V3 (Positive Modals)", 
@@ -5724,13 +6068,25 @@ const rawTopics = [
         formula: "Subject + Modal + be + V3 + by + Agent (Full Modal Passive)", 
         example: "The project can be abandoned by the team: Proje ekip tarafından terk edilebilir",
         description: "Tercüme Kılavuzu: Akademik makalelerde bu edilgen yapılarda özneler ve nesneler uzatılarak (expanded) ve cümlenin sonuna eyleyen (by + Agent) eklenerek kullanılır. Çeviri adımları: 1. Cümlenin başındaki uzun sıfat tamlamasını (özne) bulun. 2. Cümlenin sonundaki 'by/from' öbeğini (tarafından/kaynağından) araya ekleyin. 3. Yüklemi edilgen modal yapısına göre çevirerek cümleyi tamamlayın."
+      },
+      {
+        formula: "Subject + Be + Adverb + V3 (Split Passive)",
+        example: "The project is temporarily abandoned: Proje geçici olarak terk edilir",
+        description: "Çeviri Stratejisi: Yardımcı fiil ile fiilin 3. hali arasına giren ve genellikle \"-ly\" ile biten kelimeyi cımbızla çekin. Türkçeye çevirirken bu zarfı, edilgen Türkçe yüklemin hemen soluna (önüne) yerleştirerek anlamlandırın (Örn: is temporarily abandoned / geçici olarak terk edilir)."
+      },
+      {
+        formula: "Subject + Be + Adverb + V3 + by + Agent (Split Full Passive)",
+        example: "The project was temporarily abandoned by the team: Proje ekip tarafından geçici olarak terk edildi",
+        description: "Çeviri Stratejisi: Cümlenin merkezindeki bölünmüş fiil grubunu bulun ve zarfın işlevini saptayın. Genişletilmiş nesneyi Türkçe cümle başı (özne) yapın, by öbeğini getirin, araya giren zarfı Türkçe fiilin hemen soluna ekleyip edilgen yüklemle cümleyi sonlandırın."
       }
     ],
     subtitles: [
       "A. Modal Tabanlı Yalın Edilgen Örnekler (Positive Modals)",
       "B. Modal Tabanlı Yalın Edilgenlerin Olumsuzları (Negative Modals)",
       "C. Modal Tabanlı Yalın Edilgenlerin Soru Biçimleri (Interrogative Modals)",
-      "D. Modal Tabanlı Tam Genişletilmiş Edilgen Örnekler (Full Modal Passive)"
+      "D. Modal Tabanlı Tam Genişletilmiş Edilgen Örnekler (Full Modal Passive)",
+      "E. Arasına Zarf Girmiş Yalın Edilgen Örnekler (Split Passive)",
+      "F. Arasına Zarf Girmiş Tam Genişletilmiş Örnekler (Split Full Passive)"
     ]
   },
   {
@@ -7650,30 +8006,37 @@ const unitSentencesMap = {
     ] }
   },
     11: {
-    1: { exercises: [
-      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 1, 0),
-      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 2, 10),
-      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 3, 20)
-    ] },
-    2: { exercises: [
-      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 1, 0),
-      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 2, 10),
-      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 3, 20)
-    ] },
-    3: { exercises: [
-      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 1, 0),
-      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 2, 10),
-      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 3, 20)
-    ] },
-    4: { exercises: [
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 1, 0),
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 2, 10),
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 3, 20),
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 4, 30),
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 5, 40),
-      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 6, 50)
-    ] }
-  },
+      1: { exercises: [
+        buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 1, 0),
+        buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 2, 10),
+        buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 3, 20)
+      ] },
+      2: { exercises: [
+        buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 1, 0),
+        buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 2, 10),
+        buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 3, 20)
+      ] },
+      3: { exercises: [
+        buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 1, 0),
+        buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 2, 10),
+        buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 3, 20)
+      ] },
+      4: { exercises: [
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 1, 0),
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 2, 10),
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 3, 20),
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 4, 30),
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 5, 40),
+        buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 6, 50)
+      ] },
+      5: { exercises: [
+        buildSplitPassiveExercises(unit11SplitPassiveSentences, 11, 36, 1, 0),
+        buildSplitPassiveExercises(unit11SplitPassiveSentences, 11, 36, 2, 5)
+      ] },
+      6: { exercises: [
+        buildSplitPassiveExercises(unit11SplitFullPassiveSentences, 11, 37, 1, 0)
+      ] }
+    },
   12: {
     1: { exercises: [
       buildCustom10QuestionExercises(unit12Lesson1SentencesRaw, 12, 30, 1, 0),
