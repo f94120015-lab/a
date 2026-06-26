@@ -4464,6 +4464,106 @@ const unit12Lesson3SentencesRaw = [
   { en: "The beneficial effects expected from the programmes outlined in the reports were described in the surveys made before the 1936 Flood Control Act.", tr: "Araştırmalarda, 1936 Sel Kontrol Yasasından önce yapılan raporlarda belirtilen programlardan beklenen olumlu etkiler açıklanmıştır.", word: "expected", trWord: "beklenen", blank: "The beneficial effects ___ from the programmes outlined in the reports were described in the surveys made before the 1936 Flood Control Act." }
 ];
 
+const unit10LessonSentences = {
+  1: [
+    // Simple Present Passive — Geniş Zaman Edilgen (basit → karmaşık sıralı)
+    { en: "Growth is anticipated.", tr: "Büyüme öngörülmektedir.", word: "anticipated", trWord: "öngörülmektedir", blank: "Growth is ___." },
+    { en: "Reform is advocated.", tr: "Reform savunulmaktadır.", word: "advocated", trWord: "savunulmaktadır", blank: "Reform is ___." },
+    { en: "Context is specified.", tr: "Bağlam belirtilmektedir.", word: "specified", trWord: "belirtilmektedir", blank: "Context is ___." },
+    { en: "Insights are derived.", tr: "Çıkarımlar elde edilmektedir.", word: "derived", trWord: "elde edilmektedir", blank: "Insights are ___." },
+    { en: "Ratios are calculated.", tr: "Oranlar hesaplanmaktadır.", word: "calculated", trWord: "hesaplanmaktadır", blank: "Ratios are ___." },
+    { en: "Parameters are defined.", tr: "Parametreler tanımlanmaktadır.", word: "defined", trWord: "tanımlanmaktadır", blank: "Parameters are ___." },
+    { en: "The project is abandoned.", tr: "Proje terk edilmiştir.", word: "abandoned", trWord: "terk edilmiştir", blank: "The project is ___." },
+    { en: "The dynamic is triggered.", tr: "Dinamik tetiklenmektedir.", word: "triggered", trWord: "tetiklenmektedir", blank: "The dynamic is ___." },
+    { en: "The sector is expanded.", tr: "Sektör genişletilmektedir.", word: "expanded", trWord: "genişletilmektedir", blank: "The sector is ___." },
+    { en: "The framework is inspected.", tr: "Çerçeve incelenmektedir.", word: "inspected", trWord: "incelenmektedir", blank: "The framework is ___." },
+    // Simple Past Passive — Geçmiş Zaman Edilgen
+    { en: "Data was processed.", tr: "Veriler işlendi.", word: "processed", trWord: "işlendi", blank: "Data was ___." },
+    { en: "Media was manipulated.", tr: "Medya manipüle edildi.", word: "manipulated", trWord: "manipüle edildi", blank: "Media was ___." },
+    { en: "Rules were suspended.", tr: "Kurallar askıya alındı.", word: "suspended", trWord: "askıya alındı", blank: "Rules were ___." },
+    { en: "Surveys were conducted.", tr: "Anketler yürütüldü.", word: "conducted", trWord: "yürütüldü", blank: "Surveys were ___." },
+    { en: "Inputs were modified.", tr: "Girdiler değiştirildi.", word: "modified", trWord: "değiştirildi", blank: "Inputs were ___." },
+    { en: "Modules were integrated.", tr: "Modüller entegre edildi.", word: "integrated", trWord: "entegre edildi", blank: "Modules were ___." },
+    { en: "The scope was clarified.", tr: "Kapsam netleştirildi.", word: "clarified", trWord: "netleştirildi", blank: "The scope was ___." },
+    { en: "The anomaly was detected.", tr: "Anomali tespit edildi.", word: "detected", trWord: "tespit edildi", blank: "The anomaly was ___." },
+    { en: "Hypotheses were validated.", tr: "Hipotezler doğrulandı.", word: "validated", trWord: "doğrulandı", blank: "Hypotheses were ___." },
+    { en: "Agreements were not terminated.", tr: "Anlaşmalar feshedilmedi.", word: "terminated", trWord: "feshedilmedi", blank: "Agreements were not ___." }
+  ],
+  2: [
+    // Future Passive — Gelecek Zaman Edilgen
+    { en: "Flaws will be exposed.", tr: "Kusurlar açığa çıkarılacak.", word: "exposed", trWord: "açığa çıkarılacak", blank: "Flaws will be ___." },
+    { en: "Stress will be induced.", tr: "Stres uygulanacak.", word: "induced", trWord: "uygulanacak", blank: "Stress will be ___." },
+    { en: "Access will be restricted.", tr: "Erişim kısıtlanacak.", word: "restricted", trWord: "kısıtlanacak", blank: "Access will be ___." },
+    { en: "Formats will be altered.", tr: "Formatlar değiştirilecek.", word: "altered", trWord: "değiştirilecek", blank: "Formats will be ___." },
+    { en: "The core will be stabilized.", tr: "Çekirdek stabilize edilecek.", word: "stabilized", trWord: "stabilize edilecek", blank: "The core will be ___." },
+    // Present Perfect Passive — Yakın Geçmiş Edilgen
+    { en: "Funds have been shifted.", tr: "Fonlar aktarıldı.", word: "shifted", trWord: "aktarıldı", blank: "Funds have been ___." },
+    { en: "Privacy has been violated.", tr: "Gizlilik ihlal edildi.", word: "violated", trWord: "ihlal edildi", blank: "Privacy has been ___." },
+    { en: "Output has been maximized.", tr: "Çıktı en üst düzeye çıkarıldı.", word: "maximized", trWord: "en üst düzeye çıkarıldı", blank: "Output has been ___." },
+    { en: "Logs have been accumulated.", tr: "Kayıtlar biriktirildi.", word: "accumulated", trWord: "biriktirildi", blank: "Logs have been ___." },
+    { en: "Resources have been allocated.", tr: "Kaynaklar tahsis edildi.", word: "allocated", trWord: "tahsis edildi", blank: "Resources have been ___." }
+  ],
+  3: [
+    // Olumsuz Edilgen — Simple Present Passive Negative
+    { en: "Growth is not anticipated.", tr: "Büyüme öngörülmemektedir.", word: "anticipated", trWord: "öngörülmemektedir", blank: "Growth is not ___." },
+    { en: "Reform is not advocated.", tr: "Reform savunulmamaktadır.", word: "advocated", trWord: "savunulmamaktadır", blank: "Reform is not ___." },
+    { en: "Context is not specified.", tr: "Bağlam belirtilmemektedir.", word: "specified", trWord: "belirtilmemektedir", blank: "Context is not ___." },
+    { en: "Insights are not derived.", tr: "Çıkarımlar elde edilmemektedir.", word: "derived", trWord: "elde edilmemektedir", blank: "Insights are not ___." },
+    { en: "Ratios are not calculated.", tr: "Oranlar hesaplanmamaktadır.", word: "calculated", trWord: "hesaplanmamaktadır", blank: "Ratios are not ___." },
+    { en: "Parameters are not defined.", tr: "Parametreler tanımlanmamaktadır.", word: "defined", trWord: "tanımlanmamaktadır", blank: "Parameters are not ___." },
+    { en: "The project is not abandoned.", tr: "Proje terk edilmemiştir.", word: "abandoned", trWord: "terk edilmemiştir", blank: "The project is not ___." },
+    { en: "The dynamic is not triggered.", tr: "Dinamik tetiklenmemektedir.", word: "triggered", trWord: "tetiklenmemektedir", blank: "The dynamic is not ___." },
+    { en: "The sector is not expanded.", tr: "Sektör genişletilmemektedir.", word: "expanded", trWord: "genişletilmemektedir", blank: "The sector is not ___." },
+    { en: "The framework is not inspected.", tr: "Çerçeve incelenmemektedir.", word: "inspected", trWord: "incelenmemektedir", blank: "The framework is not ___." },
+    // Olumsuz Edilgen — Simple Past Passive Negative
+    { en: "Surveys were not conducted.", tr: "Anketler yürütülmedi.", word: "conducted", trWord: "yürütülmedi", blank: "Surveys were not ___." },
+    { en: "Media was not manipulated.", tr: "Medya manipüle edilmedi.", word: "manipulated", trWord: "manipüle edilmedi", blank: "Media was not ___." },
+    { en: "The scope was not clarified.", tr: "Kapsam netleştirilmedi.", word: "clarified", trWord: "netleştirilmedi", blank: "The scope was not ___." },
+    { en: "Inputs were not modified.", tr: "Girdiler değiştirilmedi.", word: "modified", trWord: "değiştirilmedi", blank: "Inputs were not ___." },
+    { en: "Modules were not integrated.", tr: "Modüller entegre edilmedi.", word: "integrated", trWord: "entegre edilmedi", blank: "Modules were not ___." },
+    { en: "Data was not processed.", tr: "Veriler işlenmedi.", word: "processed", trWord: "işlenmedi", blank: "Data was not ___." },
+    { en: "The anomaly was not detected.", tr: "Anomali tespit edilmedi.", word: "detected", trWord: "tespit edilmedi", blank: "The anomaly was not ___." },
+    { en: "Hypotheses were not validated.", tr: "Hipotezler doğrulanmadı.", word: "validated", trWord: "doğrulanmadı", blank: "Hypotheses were not ___." },
+    { en: "Rules were not suspended.", tr: "Kurallar askıya alınmadı.", word: "suspended", trWord: "askıya alınmadı", blank: "Rules were not ___." },
+    { en: "Agreements were not terminated.", tr: "Anlaşmalar feshedilmedi.", word: "terminated", trWord: "feshedilmedi", blank: "Agreements were not ___." }
+  ],
+  4: [
+    // Karmaşık Edilgen Cümleler — Basitten karmaşığa sıralı (10-13 kelime)
+    // 10 kelime
+    { en: "Significant annual financial growth is anticipated by senior financial analysts.", tr: "Önemli yıllık finansal büyüme kıdemli finansal analistler tarafından öngörülmektedir.", word: "anticipated", trWord: "öngörülmektedir", blank: "Significant annual financial growth is ___ by senior financial analysts." },
+    { en: "Comprehensive legislative tax reform is advocated by leading institutional authorities.", tr: "Kapsamlı yasal vergi reformu önde gelen kurumsal otoriteler tarafından savunulmaktadır.", word: "advocated", trWord: "savunulmaktadır", blank: "Comprehensive legislative tax reform is ___ by leading institutional authorities." },
+    { en: "Valuable qualitative insights are derived from comprehensive regional educational surveys.", tr: "Değerli niteliksel çıkarımlar kapsamlı bölgesel eğitim anketlerinden elde edilmektedir.", word: "derived", trWord: "elde edilmektedir", blank: "Valuable qualitative insights are ___ from comprehensive regional educational surveys." },
+    { en: "Alternative scientific hypotheses were validated by the final scientific finding.", tr: "Alternatif bilimsel hipotezler nihai bilimsel bulgu tarafından doğrulandı.", word: "validated", trWord: "doğrulandı", blank: "Alternative scientific hypotheses were ___ by the final scientific finding." },
+    // 11 kelime
+    { en: "The initial investigative project is abandoned by the software development team.", tr: "Başlangıçtaki araştırma projesi yazılım geliştirme ekibi tarafından terk edilmiştir.", word: "abandoned", trWord: "terk edilmiştir", blank: "The initial investigative project is ___ by the software development team." },
+    { en: "Crucial technical system parameters are defined by the revised security protocol.", tr: "Kritik teknik sistem parametreleri revize edilmiş güvenlik protokolü tarafından tanımlanmaktadır.", word: "defined", trWord: "tanımlanmaktadır", blank: "Crucial technical system parameters are ___ by the revised security protocol." },
+    { en: "Complex mathematical data ratios are calculated by the automated background script.", tr: "Karmaşık matematiksel veri oranları otomatik arka plan betiği tarafından hesaplanmaktadır.", word: "calculated", trWord: "hesaplanmaktadır", blank: "Complex mathematical data ratios are ___ by the automated background script." },
+    { en: "The entire underlying structural framework is inspected by independent technical experts.", tr: "Tüm temel yapısal çerçeve bağımsız teknik uzmanlar tarafından incelenmektedir.", word: "inspected", trWord: "incelenmektedir", blank: "The entire underlying structural framework is ___ by independent technical experts." },
+    { en: "The undetected structural anomaly was detected by the principal laboratory researcher.", tr: "Tespit edilmemiş yapısal anomali baş laboratuvar araştırmacısı tarafından tespit edildi.", word: "detected", trWord: "tespit edildi", blank: "The undetected structural anomaly was ___ by the principal laboratory researcher." },
+    { en: "Outdated environmental safety regulations were suspended by the regional administrative council.", tr: "Güncelliğini yitirmiş çevresel güvenlik düzenlemeleri bölgesel idari kurul tarafından askıya alındı.", word: "suspended", trWord: "askıya alındı", blank: "Outdated environmental safety regulations were ___ by the regional administrative council." },
+    { en: "Formal bilateral commercial agreements were terminated by the executive internal board.", tr: "Resmi ikili ticari anlaşmalar yürütme iç kurulu tarafından feshedildi.", word: "terminated", trWord: "feshedildi", blank: "Formal bilateral commercial agreements were ___ by the executive internal board." },
+    { en: "Comprehensive regional educational surveys were conducted by the national education ministry.", tr: "Kapsamlı bölgesel eğitim anketleri ulusal eğitim bakanlığı tarafından yürütüldü.", word: "conducted", trWord: "yürütüldü", blank: "Comprehensive regional educational surveys were ___ by the national education ministry." },
+    { en: "Public political and cultural perspective was manipulated by mainstream digital media.", tr: "Kamusal siyasi ve kültürel perspektif ana akım dijital medya tarafından manipüle edildi.", word: "manipulated", trWord: "manipüle edildi", blank: "Public political and cultural perspective was ___ by mainstream digital media." },
+    { en: "The initial investigative project scope was clarified by independent technical experts.", tr: "Başlangıçtaki araştırma projesinin kapsamı bağımsız teknik uzmanlar tarafından netleştirildi.", word: "clarified", trWord: "netleştirildi", blank: "The initial investigative project scope was ___ by independent technical experts." },
+    { en: "Individual functional software modules were modified by the software development team.", tr: "Bireysel işlevsel yazılım modülleri yazılım geliştirme ekibi tarafından değiştirildi.", word: "modified", trWord: "değiştirildi", blank: "Individual functional software modules were ___ by the software development team." },
+    { en: "Separate unstable chemical variables were integrated into the continuous chemical process.", tr: "Ayrı kararsız kimyasal değişkenler sürekli kimyasal sürece entegre edildi.", word: "integrated", trWord: "entegre edildi", blank: "Separate unstable chemical variables were ___ into the continuous chemical process." },
+    { en: "Maximum annual manufacturing resources have been allocated by innovative corporate strategies.", tr: "Maksimum yıllık üretim kaynakları yenilikçi kurumsal stratejiler tarafından tahsis edildi.", word: "allocated", trWord: "tahsis edildi", blank: "Maximum annual manufacturing resources have been ___ by innovative corporate strategies." },
+    // 12 kelime
+    { en: "The broader socio-economic context is specified by the strict qualitative selection criteria.", tr: "Daha geniş sosyo-ekonomik bağlam katı niteliksel seçim kriterleri tarafından belirtilmektedir.", word: "specified", trWord: "belirtilmektedir", blank: "The broader socio-economic context is ___ by the strict qualitative selection criteria." },
+    { en: "The highly competitive dynamic sector is expanded by rapid regional infrastructure expansion.", tr: "Son derece rekabetçi dinamik sektör hızlı bölgesel altyapı genişlemesiyle genişletilmektedir.", word: "expanded", trWord: "genişletilmektedir", blank: "The highly competitive dynamic sector is ___ by rapid regional infrastructure expansion." },
+    { en: "The newly collected empirical data was processed by the centralized cloud database.", tr: "Yeni toplanan ampirik veriler merkezi bulut veritabanı tarafından işlendi.", word: "processed", trWord: "işlendi", blank: "The newly collected empirical data was ___ by the centralized cloud database." },
+    { en: "Unauthorized user network access will be restricted by the strict institutional policy.", tr: "Yetkisiz kullanıcı ağ erişimi katı kurumsal politika tarafından kısıtlanacak.", word: "restricted", trWord: "kısıtlanacak", blank: "Unauthorized user network access will be ___ by the strict institutional policy." },
+    { en: "Crucial internal device components will be stabilized by the reinforced central core.", tr: "Kritik dahili cihaz bileşenleri güçlendirilmiş merkezi çekirdek tarafından stabilize edilecek.", word: "stabilized", trWord: "stabilize edilecek", blank: "Crucial internal device components will be ___ by the reinforced central core." },
+    { en: "Hidden organizational system flaws will be exposed by the independent annual audit.", tr: "Gizli organizasyonel sistem kusurları bağımsız yıllık denetim tarafından açığa çıkarılacak.", word: "exposed", trWord: "açığa çıkarılacak", blank: "Hidden organizational system flaws will be ___ by the independent annual audit." },
+    { en: "Detailed historical system logs have been accumulated by the centralized cloud database.", tr: "Ayrıntılı tarihsel sistem kayıtları merkezi bulut veritabanı tarafından biriktirildi.", word: "accumulated", trWord: "biriktirildi", blank: "Detailed historical system logs have been ___ by the centralized cloud database." },
+    { en: "Sensitive user information privacy has been violated by the unauthorized network access.", tr: "Hassas kullanıcı bilgi gizliliği yetkisiz ağ erişimi tarafından ihlal edildi.", word: "violated", trWord: "ihlal edildi", blank: "Sensitive user information privacy has been ___ by the unauthorized network access." },
+    // 13 kelime
+    { en: "This unpredictable economic dynamic is triggered by a chain of negative physical reactions.", tr: "Bu öngörülemeyen ekonomik dinamik bir dizi olumsuz fiziksel tepkime tarafından tetiklenmektedir.", word: "triggered", trWord: "tetiklenmektedir", blank: "This unpredictable economic dynamic is ___ by a chain of negative physical reactions." },
+    { en: "Exact distribution and demographic formats will be altered by the sudden paradigm shift.", tr: "Kesin dağılım ve demografik formatlar ani paradigma değişimi tarafından değiştirilecek.", word: "altered", trWord: "değiştirilecek", blank: "Exact distribution and demographic formats will be ___ by the sudden paradigm shift." },
+    { en: "Severe psychological and occupational stress will be induced by the continuous chemical process.", tr: "Şiddetli psikolojik ve mesleki stres sürekli kimyasal süreç tarafından uygulanacak.", word: "induced", trWord: "uygulanacak", blank: "Severe psychological and occupational stress will be ___ by the continuous chemical process." }
+  ]
+};
+
 const unit12LessonSentences = {
   1: unit12Lesson1SentencesRaw,
   2: unit12Lesson2SentencesRaw,
@@ -5424,12 +5524,18 @@ const rawTopics = [
     title: "X. Edilgen (Passive) Strüktürü (Sayfa 55)",
     desc: "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri",
     icon: "📗",
-    numLessons: 1,
+    numLessons: 4,
     formulas: [
-      { formula: "Subject + Be + Past Participle (V3)", example: "Coal is obtained from the mines: Kömür madenlerden elde edilir" }
+      { formula: "Subject + Be + Past Participle (V3)", example: "Coal is obtained from the mines: Kömür madenlerden elde edilir" },
+      { formula: "Subject + will be / have been + V3", example: "Access will be restricted: Erişim kısıtlanacak" },
+      { formula: "Subject + Be + not + V3", example: "The project is not abandoned: Proje terk edilmemiştir" },
+      { formula: "Subject + Be + V3 + by + Agent", example: "The project is abandoned by the team: Proje ekip tarafından terk edilmiştir" }
     ],
     subtitles: [
-      "Edilgen (Passive) Strüktürü (Sayfa 55)"
+      "A. Geniş ve Geçmiş Zaman Edilgen (Sayfa 55)",
+      "B. Gelecek Zaman ve Present Perfect Edilgen (Sayfa 58)",
+      "C. Olumsuz Edilgen Yapılar (Sayfa 60)",
+      "D. Karmaşık Edilgen Yapılar (by + Eyleyen) (Sayfa 62)"
     ]
   },
   {
@@ -7346,8 +7452,23 @@ const unitSentencesMap = {
       buildCustom10QuestionExercises(unit9Lesson5SentencesRaw, 9, 27, 3, 20)
     ] }
   },
-  10: {
-    1: [...unit6LessonSentences[1], ...unit6LessonSentences[2], ...unit6LessonSentences[3], ...unit6LessonSentences[4]]
+    10: {
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit10LessonSentences[1], 10, 28, 1, 0),
+      buildCustom10QuestionExercises(unit10LessonSentences[1], 10, 28, 2, 10)
+    ] },
+    2: { exercises: [
+      buildCustom10QuestionExercises(unit10LessonSentences[2], 10, 29, 1, 0)
+    ] },
+    3: { exercises: [
+      buildCustom10QuestionExercises(unit10LessonSentences[3], 10, 30, 1, 0),
+      buildCustom10QuestionExercises(unit10LessonSentences[3], 10, 30, 2, 10)
+    ] },
+    4: { exercises: [
+      buildCustom10QuestionExercises(unit10LessonSentences[4], 10, 31, 1, 0),
+      buildCustom10QuestionExercises(unit10LessonSentences[4], 10, 31, 2, 10),
+      buildCustom10QuestionExercises(unit10LessonSentences[4], 10, 31, 3, 20)
+    ] }
   },
   11: {
     1: unit8LessonSentences[1]
