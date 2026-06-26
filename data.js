@@ -2160,6 +2160,176 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   };
 }
 
+function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const slice = [];
+  for (let i = 0; i < 10; i++) {
+    const idx = (offset + i) % sentences.length;
+    slice.push(sentences[idx]);
+  }
+
+  // 1. Matching (2 questions)
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(0, 4).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  qList.push({
+    id: `u${unitId}l${lessonId}_ex${exId}_match2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: slice.slice(4, 8).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  const getMcDistractors = (s, isTr) => {
+    const targetVal = isTr ? s.tr : s.en;
+    const distractors = [];
+    const others = sentences.filter(o => o.en !== s.en);
+    const shuffledOthers = shuffle(others);
+    for (let i = 0; i < shuffledOthers.length; i++) {
+      if (distractors.length >= 3) break;
+      const other = shuffledOthers[i];
+      const distVal = isTr ? other.tr : other.en;
+      if (distVal !== targetVal && !distractors.includes(distVal)) {
+        distractors.push(distVal);
+      }
+    }
+    while (distractors.length < 3) {
+      distractors.push(isTr ? "Diğer bir çeviri." : "Another translation.");
+    }
+    return distractors.slice(0, 3);
+  };
+
+  // 2. Multiple Choice (2 questions)
+  {
+    const s = slice[8];
+    const dist = getMcDistractors(s, true);
+    const options = shuffle([s.tr, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_0`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.tr),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[9];
+    const dist = getMcDistractors(s, false);
+    const options = shuffle([s.en, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_mc_1`,
+      type: "multiple-choice",
+      prompt: `"${s.tr}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.en),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 3. Block Sorting (3 questions)
+  {
+    const s = slice[0];
+    const targetBlocks = s.blocks;
+    const words = shuffle(targetBlocks);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_bs_0`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetBlocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  {
+    const s = slice[1];
+    const targetBlocks = s.blocks;
+    const words = shuffle(targetBlocks);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_bs_1`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetBlocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  {
+    const s = slice[2];
+    const targetBlocks = s.blocks;
+    const words = shuffle(targetBlocks);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_bs_2`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetBlocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 4. Translation Text (3 questions)
+  {
+    const s = slice[3];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_0`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[4];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_1`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  {
+    const s = slice[5];
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
+      type: "translation-text",
+      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: s.en,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  return {
+    id: `u${unitId}l${lessonId}ex${exId}`,
+    title: `Alıştırma ${exId}: Akademik İnceleme ${exId}`,
+    description: "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
+    questions: qList
+  };
+}
+
 function buildSplitPassiveExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -5204,6 +5374,169 @@ const unit14LessonSentences = {
   ]
 };
 
+const unit14AcademicSentencesRaw = [
+  {
+    en: "It will be crucial to clarify the initial investigative project scope before the annual audit begins.",
+    tr: "Yıllık denetim başlamadan önce ilk araştırma projesi kapsamını açıklığa kavuşturmak kritik olacaktır.",
+    word: "clarify",
+    trWord: "açıklığa kavuşturmak",
+    blank: "It will be crucial to ___ the initial investigative project scope before the annual audit begins.",
+    blocks: ["It will be crucial", "to clarify", "the initial investigative project scope", "before the annual audit begins."]
+  },
+  {
+    en: "It would be unnecessary to modify individual functional software modules without receiving user feedback.",
+    tr: "Kullanıcı geri bildirimi almadan bireysel fonksiyonel yazılım modüllerini değiştirmek gereksiz olurdu.",
+    word: "modify",
+    trWord: "değiştirmek",
+    blank: "It would be unnecessary to ___ individual functional software modules without receiving user feedback.",
+    blocks: ["It would be unnecessary", "to modify", "individual functional software modules", "without receiving user feedback."]
+  },
+  {
+    en: "It has been difficult to isolate separate unstable chemical variables during the continuous process.",
+    tr: "Sürekli işlem sırasında ayrı kararsız kimyasal değişkenleri izole etmek zor olmuştur.",
+    word: "isolate",
+    trWord: "izole etmek",
+    blank: "It has been difficult to ___ separate unstable chemical variables during the continuous process.",
+    blocks: ["It has been difficult", "to isolate", "separate unstable chemical variables", "during the continuous process."]
+  },
+  {
+    en: "It will be impossible to validate alternative scientific hypotheses without any empirical data.",
+    tr: "Herhangi bir ampirik veri olmadan alternatif bilimsel hipotezleri doğrulamak imkansız olacaktır.",
+    word: "validate",
+    trWord: "doğrulamak",
+    blank: "It will be impossible to ___ alternative scientific hypotheses without any empirical data.",
+    blocks: ["It will be impossible", "to validate", "alternative scientific hypotheses", "without any empirical data."]
+  },
+  {
+    en: "It is important to specify the broader socio-economic context within the revised security protocol.",
+    tr: "Revize edilmiş güvenlik protokolü çerçevesinde daha geniş sosyo-ekonomik bağlamı belirtmek önemlidir.",
+    word: "specify",
+    trWord: "belirtmek",
+    blank: "It is important to ___ the broader socio-economic context within the revised security protocol.",
+    blocks: ["It is important", "to specify", "the broader socio-economic context", "within the revised security protocol."]
+  },
+  {
+    en: "It is possible to integrate these highly competitive dynamic sectors into the national infrastructure expansion.",
+    tr: "Bu son derece rekabetçi dinamik sektörleri ulusal altyapı genişlemesine entegre etmek mümkündür.",
+    word: "integrate",
+    trWord: "entegre etmek",
+    blank: "It is possible to ___ these highly competitive dynamic sectors into the national infrastructure expansion.",
+    blocks: ["It is possible", "to integrate", "these highly competitive dynamic sectors", "into the national infrastructure expansion."]
+  },
+  {
+    en: "It is essential to define crucial technical system parameters for the centralized cloud database.",
+    tr: "Merkezi bulut veri tabanı için kritik teknik sistem parametrelerini tanımlamak esastır.",
+    word: "define",
+    trWord: "tanımlamak",
+    blank: "It is essential to ___ crucial technical system parameters for the centralized cloud database.",
+    blocks: ["It is essential", "to define", "crucial technical system parameters", "for the centralized cloud database."]
+  },
+  {
+    en: "It has been necessary to evaluate comprehensive regional educational surveys every fiscal year.",
+    tr: "Her mali yılda kapsamlı bölgesel eğitim anketlerini değerlendirmek gerekli olmuştur.",
+    word: "evaluate",
+    trWord: "değerlendirmek",
+    blank: "It has been necessary to ___ comprehensive regional educational surveys every fiscal year.",
+    blocks: ["It has been necessary", "to evaluate", "comprehensive regional educational surveys", "every fiscal year."]
+  },
+  {
+    en: "It would be beneficial to inspect the entire underlying structural framework using independent technical experts.",
+    tr: "Bağımsız teknik uzmanlar kullanarak tüm temel yapısal çerçeveyi denetlemek faydalı olurdu.",
+    word: "inspect",
+    trWord: "denetlemek",
+    blank: "It would be beneficial to ___ the entire underlying structural framework using independent technical experts.",
+    blocks: ["It would be beneficial", "to inspect", "the entire underlying structural framework", "using independent technical experts."]
+  },
+  {
+    en: "It will be logical to substitute outdated environmental safety regulations with advanced encryption algorithms.",
+    tr: "Eski çevre güvenliği düzenlemelerini gelişmiş şifreleme algoritmalarıyla değiştirmek mantıklı olacaktır.",
+    word: "substitute",
+    trWord: "değiştirmek",
+    blank: "It will be logical to ___ outdated environmental safety regulations with advanced encryption algorithms.",
+    blocks: ["It will be logical", "to substitute", "outdated environmental safety regulations", "with advanced encryption algorithms."]
+  },
+  {
+    en: "It is critical to stabilize crucial internal device components to prevent severe occupational stress.",
+    tr: "Ciddi mesleki stresi önlemek için kritik dahili cihaz bileşenlerini dengelemek kritiktir.",
+    word: "stabilize",
+    trWord: "dengelemek",
+    blank: "It is critical to ___ crucial internal device components to prevent severe occupational stress.",
+    blocks: ["It is critical", "to stabilize", "crucial internal device components", "to prevent severe occupational stress."]
+  },
+  {
+    en: "It would be appropriate to restrict unauthorized user network access via strict institutional policy.",
+    tr: "Sıkı kurumsal politika aracılığıyla yetkisiz kullanıcı ağ erişimini sınırlandırmak uygun olurdu.",
+    word: "restrict",
+    trWord: "sınırlandırmak",
+    blank: "It would be appropriate to ___ unauthorized user network access via strict institutional policy.",
+    blocks: ["It would be appropriate", "to restrict", "unauthorized user network access", "via strict institutional policy."]
+  },
+  {
+    en: "It has been advantageous to accumulate detailed historical system logs for future paradigm shifts.",
+    tr: "Gelecekteki paradigma değişimleri için ayrıntılı geçmiş sistem günlüklerini biriktirmek avantajlı olmuştur.",
+    word: "accumulate",
+    trWord: "biriktirmek",
+    blank: "It has been advantageous to ___ detailed historical system logs for future paradigm shifts.",
+    blocks: ["It has been advantageous", "to accumulate", "detailed historical system logs", "for future paradigm shifts."]
+  },
+  {
+    en: "It will be mandatory to protocol formal bilateral commercial agreements between the executive internal boards.",
+    tr: "Yönetici iç kurullar arasında resmi ikili ticari anlaşmalar imzalamak zorunlu olacaktır.",
+    word: "protocol",
+    trWord: "protokol oluşturmak",
+    blank: "It will be mandatory to ___ formal bilateral commercial agreements between the executive internal boards.",
+    blocks: ["It will be mandatory", "to protocol", "formal bilateral commercial agreements", "between the executive internal boards."]
+  },
+  {
+    en: "It is fundamental to extract valuable qualitative insights from mainstream digital media sources.",
+    tr: "Ana akım dijital medya kaynaklarından değerli nitel öngörüleri çıkarmak esastır.",
+    word: "extract",
+    trWord: "çıkarmak",
+    blank: "It is fundamental to ___ valuable qualitative insights from mainstream digital media sources.",
+    blocks: ["It is fundamental", "to extract", "valuable qualitative insights", "from mainstream digital media sources."]
+  },
+  {
+    en: "It has been feasible to structure alternative scientific hypotheses based on the final scientific finding.",
+    tr: "Nihai bilimsel bulguya dayanarak alternatif bilimsel hipotezler yapılandırmak mümkün olmuştur.",
+    word: "structure",
+    trWord: "yapılandırmak",
+    blank: "It has been feasible to ___ alternative scientific hypotheses based on the final scientific finding.",
+    blocks: ["It has been feasible", "to structure", "alternative scientific hypotheses", "based on the final scientific finding."]
+  },
+  {
+    en: "It would be vital to identify the undetected structural anomaly before expanding the highly competitive sector.",
+    tr: "Son derece rekabetçi sektörü genişletmeden önce tespit edilemeyen yapısal anomaliyi belirlemek hayati olurdu.",
+    word: "identify",
+    trWord: "belirlemek",
+    blank: "It would be vital to ___ the undetected structural anomaly before expanding the highly competitive sector.",
+    blocks: ["It would be vital", "to identify", "the undetected structural anomaly", "before expanding the highly competitive sector."]
+  },
+  {
+    en: "It is convenient to parameterize complex mathematical data ratios using an automated background script.",
+    tr: "Otomatik bir arka plan betiği kullanarak karmaşık matematiksel veri oranlarını parametrelendirmek elverişlidir.",
+    word: "parameterize",
+    trWord: "parametrelendirmek",
+    blank: "It is convenient to ___ complex mathematical data ratios using an automated background script.",
+    blocks: ["It is convenient", "to parameterize", "complex mathematical data ratios", "using an automated background script."]
+  },
+  {
+    en: "It will be sufficient to trace unauthorized user network access through the centralized cloud database.",
+    tr: "Merkezi bulut veri tabanı aracılığıyla yetkisiz kullanıcı ağ erişimini takip etmek yeterli olacaktır.",
+    word: "trace",
+    trWord: "takip etmek",
+    blank: "It will be sufficient to ___ unauthorized user network access through the centralized cloud database.",
+    blocks: ["It will be sufficient", "to trace", "unauthorized user network access", "through the centralized cloud database."]
+  },
+  {
+    en: "It has been crucial to adapt innovative corporate strategies to maximize maximum annual manufacturing output.",
+    tr: "Maksimum yıllık üretim çıktısını maksimize etmek için yenilikçi kurumsal stratejiler uyarlamak kritik olmuştur.",
+    word: "adapt",
+    trWord: "uyarlamak",
+    blank: "It has been crucial to ___ innovative corporate strategies to maximize maximum annual manufacturing output.",
+    blocks: ["It has been crucial", "to adapt", "innovative corporate strategies", "to maximize maximum annual manufacturing output."]
+  }
+];
+
 const unit15LessonSentences = {
   1: [
     { en: "We perform experiments to obtain data", tr: "Veri elde etmek için deneyler yaparız", word: "obtain", trWord: "elde etmek", blank: "We perform experiments to ___ data" },
@@ -8128,7 +8461,10 @@ const unitSentencesMap = {
     1: { exercises: [
       buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 1, 0),
       buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 2, 10),
-      buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 3, 20)
+      buildCustom10QuestionExercises(unit14LessonSentences[1], 14, 43, 3, 20),
+      buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 4, 0),
+      buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 5, 10),
+      buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 6, 5)
     ] },
     2: { exercises: [] }
   },
