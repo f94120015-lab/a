@@ -3600,6 +3600,11 @@ function renderQuestion() {
   const btnCheck = document.getElementById('btn-check');
   const feedbackPanel = document.getElementById('feedback-panel');
 
+  const btnSkip = document.getElementById('btn-skip');
+  if (btnSkip) {
+    btnSkip.style.display = 'inline-flex';
+  }
+
   feedbackPanel.classList.remove('show', 'correct', 'wrong');
   btnCheck.disabled = true;
   btnCheck.textContent = 'KONTROL ET';
@@ -4097,6 +4102,11 @@ function checkAnswer() {
   btnCheck.textContent = 'DEVAM ET';
   btnCheck.disabled = false;
 
+  const btnSkip = document.getElementById('btn-skip');
+  if (btnSkip) {
+    btnSkip.style.display = 'none';
+  }
+
   if (isCorrect) {
     autoAdvanceTimeout = setTimeout(() => {
       nextQuestion();
@@ -4129,6 +4139,26 @@ function showFBFeedback(question) {
       btn.style.background = 'var(--color-wrong-bg)';
     }
   });
+}
+
+function skipQuestion() {
+  if (autoAdvanceTimeout) {
+    clearTimeout(autoAdvanceTimeout);
+    autoAdvanceTimeout = null;
+  }
+  currentQuestionIndex++;
+
+  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
+  if (currentQuestionIndex >= total) {
+    if (isReviewMode) {
+      completeReviewSession();
+    } else {
+      completeLesson();
+    }
+    return;
+  }
+
+  renderQuestion();
 }
 
 function nextQuestion() {
@@ -5129,6 +5159,14 @@ function initEventListeners() {
     }
   });
 
+  // Soruyu Atla butonu
+  const btnSkip = document.getElementById('btn-skip');
+  if (btnSkip) {
+    btnSkip.addEventListener('click', () => {
+      skipQuestion();
+    });
+  }
+
   // Özet ekranı devam
   document.getElementById('btn-summary-continue').addEventListener('click', () => {
     updateTopBar();
@@ -5253,6 +5291,13 @@ function initEventListeners() {
       } else {
         nextPlacementQuestion();
       }
+    });
+  }
+
+  const btnPlacementSkip = document.getElementById('btn-placement-skip');
+  if (btnPlacementSkip) {
+    btnPlacementSkip.addEventListener('click', () => {
+      skipPlacementQuestion();
     });
   }
 
@@ -5387,6 +5432,11 @@ function renderPlacementQuestion() {
   const body = document.getElementById('placement-body');
   const btnCheck = document.getElementById('btn-placement-check');
   const feedbackPanel = document.getElementById('placement-feedback-panel');
+
+  const btnPlacementSkip = document.getElementById('btn-placement-skip');
+  if (btnPlacementSkip) {
+    btnPlacementSkip.style.display = 'inline-flex';
+  }
 
   feedbackPanel.classList.remove('show', 'correct', 'wrong');
   btnCheck.disabled = true;
@@ -5528,10 +5578,28 @@ function checkPlacementAnswer() {
   const btnCheck = document.getElementById('btn-placement-check');
   btnCheck.textContent = 'DEVAM ET';
 
+  const btnPlacementSkip = document.getElementById('btn-placement-skip');
+  if (btnPlacementSkip) {
+    btnPlacementSkip.style.display = 'none';
+  }
+
   if (isCorrect) {
     autoAdvanceTimeout = setTimeout(() => {
       nextPlacementQuestion();
     }, 1200);
+  }
+}
+
+function skipPlacementQuestion() {
+  if (autoAdvanceTimeout) {
+    clearTimeout(autoAdvanceTimeout);
+    autoAdvanceTimeout = null;
+  }
+  placementCurrentIndex++;
+  if (placementCurrentIndex >= placementQuestionsList.length) {
+    completePlacementTest();
+  } else {
+    renderPlacementQuestion();
   }
 }
 
