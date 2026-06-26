@@ -83,6 +83,7 @@ const wordDictionary = {
   "account": "hesap",
   "accountant": "muhasebeci",
   "accounts": "hesaplar",
+  "accumulated": "biriktirilmiş / biriktirildi",
   "accumulates": "biriktirir",
   "accumulating": "biriken / birikme",
   "accumulation": "birikim / birikme",
@@ -122,6 +123,7 @@ const wordDictionary = {
   "agriculture": "tarım / ziraat",
   "air": "hava",
   "airspace": "hava sahası",
+  "algorithms": "algoritmalar / yöntemler",
   "all": "tüm, bütün, hepsi",
   "alliances": "ittifaklar",
   "allocated": "tahsis edilmiş",
@@ -174,6 +176,7 @@ const wordDictionary = {
   "approaches": "yaklaşımlar",
   "approved": "onayladı",
   "approving": "onaylayan",
+  "architectural": "mimari",
   "archive": "arşiv",
   "are": "-dirler / -dırlar (olmak fiili)",
   "area": "alan / bölge",
@@ -322,6 +325,7 @@ const wordDictionary = {
   "citizen": "vatandaş",
   "city": "şehir",
   "civilisation": "medeniyet",
+  "clarified": "açıklanmış / netleştirilmiş / açıklandı",
   "clarifies": "netleştirir / açıklar",
   "clarify": "açıklar",
   "clarity": "netlik / açıklık",
@@ -637,6 +641,7 @@ const wordDictionary = {
   "encountered": "karşılaştı / karşılaşılan",
   "encountering": "karşılaşma / karşılaşan",
   "encourages": "teşvik eder / yüreklendirir",
+  "encryption": "şifreleme",
   "end": "son / bitiş",
   "endangering": "tehlikeye atan",
   "energy": "enerji",
@@ -784,6 +789,7 @@ const wordDictionary = {
   "forests": "ormanlar / ormanları",
   "formal": "resmi",
   "format": "format / biçim",
+  "formats": "formatlar / biçimler",
   "forming": "oluşturma / oluşturan",
   "formula": "formül",
   "formulation": "formüle etme / biçimlendirme",
@@ -804,6 +810,7 @@ const wordDictionary = {
   "functions": "işlevler / çalışır",
   "funded": "finanse edilmiş / finanse etti",
   "funding": "fon / finansman",
+  "funds": "fonlar / kaynaklar",
   "fungi": "mantarlar",
   "further": "daha fazla / ileri",
   "gamma": "gama",
@@ -926,6 +933,7 @@ const wordDictionary = {
   "indicators": "göstergeler",
   "individual": "birey",
   "individuals": "bireyler",
+  "induced": "yol açılmış / yol açıldı",
   "induces": "yol açar",
   "industries": "sanayiler / endüstriler",
   "industry": "endüstri / sanayi",
@@ -941,6 +949,7 @@ const wordDictionary = {
   "innovations": "yenilikler",
   "innovative": "yenilikçi",
   "input": "girdi",
+  "inputs": "girdiler",
   "insect": "böcek",
   "insects": "böcekler",
   "insights": "öngörüler",
@@ -1088,6 +1097,7 @@ const wordDictionary = {
   "managed": "yönetilen / idare edilen",
   "management": "yönetim",
   "manager": "müdür / yönetici",
+  "manipulated": "manipüle edilmiş / manipüle edildi",
   "manipulates": "manipüle eder",
   "manufacturing": "üretim",
   "many": "birçok / çok",
@@ -1103,6 +1113,7 @@ const wordDictionary = {
   "mathematical": "matematiksel",
   "matter": "madde / husus",
   "maximize": "maksimize eder",
+  "maximized": "maksimize edilmiş / maksimize edildi",
   "maximum": "maksimum",
   "may": "-ebilir / -abilir (olasılık / izin)",
   "measure": "ölçmek / önlem",
@@ -1235,6 +1246,7 @@ const wordDictionary = {
   "original": "orijinal / özgün",
   "other": "diğer, başka",
   "others": "diğerleri / başkaları",
+  "ought": "-meli / -malı (ought to)",
   "our": "bizim",
   "out": "dışarı, dışarıda",
   "outcome": "sonuç",
@@ -1361,6 +1373,7 @@ const wordDictionary = {
   "principles": "ilkeler",
   "priorities": "öncelikler",
   "priority": "öncelik",
+  "privacy": "gizlilik",
   "problem": "problem / sorun / problemi",
   "problem-solving": "problem çözen",
   "problems": "problemler / sorunlar",
@@ -1402,6 +1415,7 @@ const wordDictionary = {
   "proposed": "önerdi / önerdiler",
   "prospects": "beklentiler / olasılıklar",
   "protect": "korumalıyız",
+  "protected": "korunmuş / korundu",
   "protecting": "koruyan",
   "protection": "koruma",
   "protects": "korur",
@@ -1545,6 +1559,7 @@ const wordDictionary = {
   "round": "etrafında / yuvarlak",
   "router": "yönlendirici / yönseçici",
   "rule": "kural",
+  "rules": "kurallar / yönetmelikler",
   "run": "koşu / gidişat",
   "runs": "çalıştırır / koşar",
   "safety": "güvenlik",
@@ -1604,6 +1619,7 @@ const wordDictionary = {
   "shared": "paylaşılan",
   "she": "o (kadın)",
   "shift": "değişim / kayma",
+  "shifted": "kaydırılmış / kaydırıldı",
   "shifting": "kaydırma / değiştiren",
   "short": "kısa",
   "should": "-meli / -malı (tavsiye / gereklilik)",
@@ -1665,6 +1681,7 @@ const wordDictionary = {
   "spring": "kaynak",
   "stability": "istikrar / istikrarı",
   "stabilize": "dengede tutmak / istikrarlı kılmak",
+  "stabilized": "stabilize edilmiş / dengelenmiş",
   "stabilizes": "istikrarlı hale getirir / dengeler",
   "stable": "istikrarlı",
   "stage": "aşama / evre / sahne",
@@ -1885,6 +1902,7 @@ const wordDictionary = {
   "validates": "doğrular",
   "validating": "doğrulama / doğrulayan",
   "validation": "doğrulama",
+  "valuable": "değerli",
   "value": "değer",
   "value-adding": "değer katan",
   "values": "değerler",
@@ -1906,6 +1924,7 @@ const wordDictionary = {
   "view": "manzara",
   "views": "görüşler",
   "villages": "köyler",
+  "violated": "ihlal edilmiş / ihlal edildi",
   "virus": "virüs",
   "viruses": "virüsler",
   "visibility": "görünürlük",
@@ -3078,7 +3097,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([11, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+    const notUploadedUnits = new Set([13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -3340,7 +3359,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([11, 13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+  const notUploadedUnitsPopover = new Set([13, 14, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">

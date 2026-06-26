@@ -4564,6 +4564,167 @@ const unit10LessonSentences = {
   ]
 };
 
+const unit11LessonSentences = {
+  1: [
+    { en: "Funds can be shifted.", tr: "Fonlar kaydırılabilir.", word: "shifted", trWord: "kaydırılabilir", blank: "Funds can be ___." },
+    { en: "Flaws will be exposed.", tr: "Kusurlar ortaya çıkarılacak.", word: "exposed", trWord: "ortaya çıkarılacak", blank: "Flaws will be ___." },
+    { en: "Stress will be induced.", tr: "Ciddi psikolojik ve mesleki strese yol açılacak.", word: "induced", trWord: "yol açılacak", blank: "Stress will be ___." },
+    { en: "Insights may be derived.", tr: "Çıkarımlar elde edilabilir.", word: "derived", trWord: "elde edilabilir", blank: "Insights may be ___." },
+    { en: "Formats will be altered.", tr: "Formatlar değiştirilacak.", word: "altered", trWord: "değiştirilacak", blank: "Formats will be ___." },
+    { en: "Logs can be accumulated.", tr: "Günlükler biriktirilabilir.", word: "accumulated", trWord: "biriktirilabilir", blank: "Logs can be ___." },
+    { en: "Reform must be advocated.", tr: "Reform savunulmalıdır.", word: "advocated", trWord: "savunulmalıdır", blank: "Reform must be ___." },
+    { en: "Rules might be suspended.", tr: "Kurallar askıya alınabilir.", word: "suspended", trWord: "askıya alınabilir", blank: "Rules might be ___." },
+    { en: "Inputs could be modified.", tr: "Girdiler değiştirilabilir.", word: "modified", trWord: "değiştirilabilir", blank: "Inputs could be ___." },
+    { en: "Output must be maximized.", tr: "Çıktı maksimize edilmalıdır.", word: "maximized", trWord: "maksimize edilmalıdır", blank: "Output must be ___." },
+    { en: "Growth can be anticipated.", tr: "Büyüme öngörülabilir.", word: "anticipated", trWord: "öngörülabilir", blank: "Growth can be ___." },
+    { en: "Context must be specified.", tr: "Bağlam belirlenmelidir.", word: "specified", trWord: "belirlenmelidir", blank: "Context must be ___." },
+    { en: "Access will be restricted.", tr: "Erişim kısıtlanacak.", word: "restricted", trWord: "kısıtlanacak", blank: "Access will be ___." },
+    { en: "Privacy must be protected.", tr: "Gizlilik korunmalıdır.", word: "protected", trWord: "korunmalıdır", blank: "Privacy must be ___." },
+    { en: "Surveys might be conducted.", tr: "Anketler yürütülabilir.", word: "conducted", trWord: "yürütülabilir", blank: "Surveys might be ___." },
+    { en: "Media could be manipulated.", tr: "Medya manipüle edilabilir.", word: "manipulated", trWord: "manipüle edilabilir", blank: "Media could be ___." },
+    { en: "Data ought to be processed.", tr: "Veri işlenmelidir.", word: "processed", trWord: "işlenmelidir", blank: "Data ought to be ___." },
+    { en: "The sector must be expanded.", tr: "Sektör genişletilmalıdır.", word: "expanded", trWord: "genişletilmalıdır", blank: "The sector must be ___." },
+    { en: "Ratios should be calculated.", tr: "Oranlar hesaplanmalıdır.", word: "calculated", trWord: "hesaplanmalıdır", blank: "Ratios should be ___." },
+    { en: "Hypotheses may be validated.", tr: "Hipotezler doğrulanabilir.", word: "validated", trWord: "doğrulanabilir", blank: "Hypotheses may be ___." },
+    { en: "The anomaly may be detected.", tr: "Anomali tespit edilabilir.", word: "detected", trWord: "tespit edilabilir", blank: "The anomaly may be ___." },
+    { en: "The core will be stabilized.", tr: "Çekirdek stabilize edilacak.", word: "stabilized", trWord: "stabilize edilacak", blank: "The core will be ___." },
+    { en: "The project can be abandoned.", tr: "Proje terk edilabilir.", word: "abandoned", trWord: "terk edilabilir", blank: "The project can be ___." },
+    { en: "The dynamic can be triggered.", tr: "Dinamik tetiklenebilir.", word: "triggered", trWord: "tetiklenebilir", blank: "The dynamic can be ___." },
+    { en: "Parameters should be defined.", tr: "Parametreler tanımlanmalıdır.", word: "defined", trWord: "tanımlanmalıdır", blank: "Parameters should be ___." },
+    { en: "The scope could be clarified.", tr: "Kapsam açıklanabilir.", word: "clarified", trWord: "açıklanabilir", blank: "The scope could be ___." },
+    { en: "Resources should be allocated.", tr: "Kaynaklar tahsis edilmalıdır.", word: "allocated", trWord: "tahsis edilmalıdır", blank: "Resources should be ___." },
+    { en: "Agreements might be terminated.", tr: "Anlaşmalar feshedilabilir.", word: "terminated", trWord: "feshedilabilir", blank: "Agreements might be ___." },
+    { en: "Modules ought to be integrated.", tr: "Modüller entegre edilmalıdır.", word: "integrated", trWord: "entegre edilmalıdır", blank: "Modules ought to be ___." },
+    { en: "The framework should be inspected.", tr: "Çerçeve incelenmelidir.", word: "inspected", trWord: "incelenmelidir", blank: "The framework should be ___." }
+  ],
+  2: [
+    { en: "Funds cannot be shifted.", tr: "Fonlar kaydırılamaz.", word: "shifted", trWord: "kaydırılamaz", blank: "Funds cannot be ___." },
+    { en: "Flaws will not be exposed.", tr: "Kusurlar ortaya çıkarılmayacak.", word: "exposed", trWord: "ortaya çıkarılmayacak", blank: "Flaws will not be ___." },
+    { en: "Stress will not be induced.", tr: "Strese yol açılmayacak.", word: "induced", trWord: "yol açılmayacak", blank: "Stress will not be ___." },
+    { en: "Logs cannot be accumulated.", tr: "Günlükler biriktirilemez.", word: "accumulated", trWord: "biriktirilemez", blank: "Logs cannot be ___." },
+    { en: "Insights may not be derived.", tr: "Çıkarımlar elde edilmayabilir.", word: "derived", trWord: "elde edilmayabilir", blank: "Insights may not be ___." },
+    { en: "Formats will not be altered.", tr: "Formatlar değiştirilmayacak.", word: "altered", trWord: "değiştirilmayacak", blank: "Formats will not be ___." },
+    { en: "Growth cannot be anticipated.", tr: "Büyüme öngörülamaz.", word: "anticipated", trWord: "öngörülamaz", blank: "Growth cannot be ___." },
+    { en: "Reform must not be advocated.", tr: "Reform savunulmamalıdır.", word: "advocated", trWord: "savunulmamalıdır", blank: "Reform must not be ___." },
+    { en: "Rules might not be suspended.", tr: "Kurallar askıya alınmayabilir.", word: "suspended", trWord: "askıya alınmayabilir", blank: "Rules might not be ___." },
+    { en: "Inputs could not be modified.", tr: "Girdiler değiştirilemez.", word: "modified", trWord: "değiştirilemez", blank: "Inputs could not be ___." },
+    { en: "Privacy must not be violated.", tr: "Gizlilik ihlal edilmemelidir.", word: "violated", trWord: "ihlal edilmemelidir", blank: "Privacy must not be ___." },
+    { en: "Output must not be minimized.", tr: "Çıktı minimize edilmamalıdır.", word: "minimized", trWord: "minimize edilmamalıdır", blank: "Output must not be ___." },
+    { en: "Context must not be specified.", tr: "Bağlam belirlenmemelidir.", word: "specified", trWord: "belirlenmemelidir", blank: "Context must not be ___." },
+    { en: "Access will not be restricted.", tr: "Erişim kısıtlanmayacak.", word: "restricted", trWord: "kısıtlanmayacak", blank: "Access will not be ___." },
+    { en: "Surveys might not be conducted.", tr: "Anketler yürütülmayabilir.", word: "conducted", trWord: "yürütülmayabilir", blank: "Surveys might not be ___." },
+    { en: "Media could not be manipulated.", tr: "Medya manipüle edilamaz.", word: "manipulated", trWord: "manipüle edilamaz", blank: "Media could not be ___." },
+    { en: "Data ought not to be processed.", tr: "Veri işlenmemelidir.", word: "processed", trWord: "işlenmemelidir", blank: "Data ought not to be ___." },
+    { en: "The project cannot be abandoned.", tr: "Proje terk edilemez.", word: "abandoned", trWord: "terk edilemez", blank: "The project cannot be ___." },
+    { en: "The dynamic cannot be triggered.", tr: "Dinamik tetiklenemez.", word: "triggered", trWord: "tetiklenemez", blank: "The dynamic cannot be ___." },
+    { en: "The sector must not be expanded.", tr: "Sektör genişletilmamalıdır.", word: "expanded", trWord: "genişletilmamalıdır", blank: "The sector must not be ___." },
+    { en: "Ratios should not be calculated.", tr: "Oranlar hesaplanmamalıdır.", word: "calculated", trWord: "hesaplanmamalıdır", blank: "Ratios should not be ___." },
+    { en: "Hypotheses may not be validated.", tr: "Hipotezler doğrulanmayabilir.", word: "validated", trWord: "doğrulanmayabilir", blank: "Hypotheses may not be ___." },
+    { en: "The anomaly may not be detected.", tr: "Anomali tespit edilmayabilir.", word: "detected", trWord: "tespit edilmayabilir", blank: "The anomaly may not be ___." },
+    { en: "The core will not be stabilized.", tr: "Çekirdek stabilize edilmayacak.", word: "stabilized", trWord: "stabilize edilmayacak", blank: "The core will not be ___." },
+    { en: "Parameters should not be defined.", tr: "Parametreler tanımlanmamalıdır.", word: "defined", trWord: "tanımlanmamalıdır", blank: "Parameters should not be ___." },
+    { en: "The scope could not be clarified.", tr: "Kapsam açıklanamaz.", word: "clarified", trWord: "açıklanamaz", blank: "The scope could not be ___." },
+    { en: "Resources should not be allocated.", tr: "Kaynaklar tahsis edilmamalıdır.", word: "allocated", trWord: "tahsis edilmamalıdır", blank: "Resources should not be ___." },
+    { en: "Agreements might not be terminated.", tr: "Anlaşmalar feshedilmayabilir.", word: "terminated", trWord: "feshedilmayabilir", blank: "Agreements might not be ___." },
+    { en: "Modules ought not to be integrated.", tr: "Modüller entegre edilmamalıdır.", word: "integrated", trWord: "entegre edilmamalıdır", blank: "Modules ought not to be ___." },
+    { en: "The framework should not be inspected.", tr: "Çerçeve incelenmemelidir.", word: "inspected", trWord: "incelenmemelidir", blank: "The framework should not be ___." }
+  ],
+  3: [
+    { en: "Can funds be shifted?", tr: "Fonlar kaydırılabilir mi?", word: "shifted", trWord: "kaydırılabilir mi?", blank: "Can funds be ___?" },
+    { en: "Will flaws be exposed?", tr: "Kusurlar ortaya çıkarılacak mı?", word: "exposed", trWord: "ortaya çıkarılacak mı?", blank: "Will flaws be ___?" },
+    { en: "Will stress be induced?", tr: "Strese yol açılacak mı?", word: "induced", trWord: "yol açılacak mı?", blank: "Will stress be ___?" },
+    { en: "May insights be derived?", tr: "Çıkarımlar elde edilabilir mi?", word: "derived", trWord: "elde edilabilir mi?", blank: "May insights be ___?" },
+    { en: "Will formats be altered?", tr: "Formatlar değiştirilacak mı?", word: "altered", trWord: "değiştirilacak mı?", blank: "Will formats be ___?" },
+    { en: "Can logs be accumulated?", tr: "Günlükler biriktirilabilir mi?", word: "accumulated", trWord: "biriktirilabilir mi?", blank: "Can logs be ___?" },
+    { en: "Must reform be advocated?", tr: "Reform savunulmalı mıdır?", word: "advocated", trWord: "savunulmalı mıdır?", blank: "Must reform be ___?" },
+    { en: "Might rules be suspended?", tr: "Kurallar askıya alınabilir mi?", word: "suspended", trWord: "askıya alınabilir mi?", blank: "Might rules be ___?" },
+    { en: "Could inputs be modified?", tr: "Girdiler değiştirilabilir mi?", word: "modified", trWord: "değiştirilabilir mi?", blank: "Could inputs be ___?" },
+    { en: "Should data be processed?", tr: "Veri işlenmeli midir?", word: "processed", trWord: "işlenmeli midir?", blank: "Should data be ___?" },
+    { en: "Must output be maximized?", tr: "Çıktı maksimize edilmalı mıdır?", word: "maximized", trWord: "maksimize edilmalı mıdır?", blank: "Must output be ___?" },
+    { en: "Can growth be anticipated?", tr: "Büyüme öngörülabilir mi?", word: "anticipated", trWord: "öngörülabilir mi?", blank: "Can growth be ___?" },
+    { en: "Must context be specified?", tr: "Bağlam belirlenmeli midir?", word: "specified", trWord: "belirlenmeli midir?", blank: "Must context be ___?" },
+    { en: "Will access be restricted?", tr: "Erişim kısıtlanacak mı?", word: "restricted", trWord: "kısıtlanacak mı?", blank: "Will access be ___?" },
+    { en: "Must privacy be protected?", tr: "Gizlilik korunmalı mıdır?", word: "protected", trWord: "korunmalı mıdır?", blank: "Must privacy be ___?" },
+    { en: "Might surveys be conducted?", tr: "Anketler yürütülabilir mi?", word: "conducted", trWord: "yürütülabilir mi?", blank: "Might surveys be ___?" },
+    { en: "Could media be manipulated?", tr: "Medya manipüle edilabilir mi?", word: "manipulated", trWord: "manipüle edilabilir mi?", blank: "Could media be ___?" },
+    { en: "Must the sector be expanded?", tr: "Sektör genişletilmalı mıdır?", word: "expanded", trWord: "genişletilmalı mıdır?", blank: "Must the sector be ___?" },
+    { en: "Should ratios be calculated?", tr: "Oranlar hesaplanmalı mıdır?", word: "calculated", trWord: "hesaplanmalı mıdır?", blank: "Should ratios be ___?" },
+    { en: "May hypotheses be validated?", tr: "Hipotezler doğrulanabilir mi?", word: "validated", trWord: "doğrulanabilir mi?", blank: "May hypotheses be ___?" },
+    { en: "May the anomaly be detected?", tr: "Anomali tespit edilabilir mi?", word: "detected", trWord: "tespit edilabilir mi?", blank: "May the anomaly be ___?" },
+    { en: "Will the core be stabilized?", tr: "Çekirdek stabilize edilacak mı?", word: "stabilized", trWord: "stabilize edilacak mı?", blank: "Will the core be ___?" },
+    { en: "Can the project be abandoned?", tr: "Proje terk edilabilir mi?", word: "abandoned", trWord: "terk edilabilir mi?", blank: "Can the project be ___?" },
+    { en: "Can the dynamic be triggered?", tr: "Dinamik tetiklenebilir mi?", word: "triggered", trWord: "tetiklenebilir mi?", blank: "Can the dynamic be ___?" },
+    { en: "Should parameters be defined?", tr: "Parametreler tanımlanmalı mıdır?", word: "defined", trWord: "tanımlanmalı mıdır?", blank: "Should parameters be ___?" },
+    { en: "Could the scope be clarified?", tr: "Kapsam açıklanabilir mi?", word: "clarified", trWord: "açıklanabilir mi?", blank: "Could the scope be ___?" },
+    { en: "Should modules be integrated?", tr: "Modüller entegre edilmalı mıdır?", word: "integrated", trWord: "entegre edilmalı mıdır?", blank: "Should modules be ___?" },
+    { en: "Should resources be allocated?", tr: "Kaynaklar tahsis edilmalı mıdır?", word: "allocated", trWord: "tahsis edilmalı mıdır?", blank: "Should resources be ___?" },
+    { en: "Might agreements be terminated?", tr: "Anlaşmalar feshedilabilir mi?", word: "terminated", trWord: "feshedilabilir mi?", blank: "Might agreements be ___?" },
+    { en: "Should the framework be inspected?", tr: "Çerçeve incelenmeli midir?", word: "inspected", trWord: "incelenmeli midir?", blank: "Should the framework be ___?" }
+  ],
+  4: [
+    { en: "Substantial empirical inputs could be modified by the software development team.", tr: "Bireysel fonksiyonel yazılım modülleri yazılım geliştirme ekibi tarafından değiştirilabilir.", word: "modified", trWord: "değiştirilabilir", blank: "Substantial empirical inputs could be ___ by the software development team." },
+    { en: "Substantial empirical inputs could be modified by the revised security protocol.", tr: "Önemli deneysel girdiler gözden geçirilmiş güvenlik protokolü tarafından değiştirilabilir.", word: "modified", trWord: "değiştirilabilir", blank: "Substantial empirical inputs could be ___ by the revised security protocol." },
+    { en: "This unpredictable economic dynamic will be induced by the sudden paradigm shift.", tr: "Bu öngörülemeyen ekonomik dinamiğe ani paradigma değişimi tarafından yol açılacak.", word: "induced", trWord: "yol açılacak", blank: "This unpredictable economic dynamic will be ___ by the sudden paradigm shift." },
+    { en: "Valuable qualitative insights may be derived from detailed historical system logs.", tr: "Değerli nitel çıkarımlar detaylı geçmiş sistem günlüklerinden elde edilabilir.", word: "derived", trWord: "elde edilabilir", blank: "Valuable qualitative insights may be ___ from detailed historical system logs." },
+    { en: "The undetected structural anomaly may be detected by the independent annual audit.", tr: "Tespit edilemeyen yapısal anomali bağımsız yıllık denetim tarafından tespit edilabilir.", word: "detected", trWord: "tespit edilabilir", blank: "The un___ structural anomaly may be ___ by the independent annual audit." },
+    { en: "Alternative scientific hypotheses may be validated by the final scientific finding.", tr: "Alternatif bilimsel hipotezler nihai bilimsel bulgu tarafından doğrulanabilir.", word: "validated", trWord: "doğrulanabilir", blank: "Alternative scientific hypotheses may be ___ by the final scientific finding." },
+    { en: "Hidden organizational system flaws will be exposed by the independent annual audit.", tr: "Gizli örgütsel sistem kusurları bağımsız yıllık denetim tarafından ortaya çıkarılacak.", word: "exposed", trWord: "ortaya çıkarılacak", blank: "Hidden organizational system flaws will be ___ by the independent annual audit." },
+    { en: "The initial investigative project can be abandoned by the software development team.", tr: "İlk araştırma projesi yazılım geliştirme ekibi tarafından terk edilabilir.", word: "abandoned", trWord: "terk edilabilir", blank: "The initial investigative project can be ___ by the software development team." },
+    { en: "Significant annual financial growth can be anticipated by senior financial analysts.", tr: "Önemli yıllık finansal büyüme kıdemli finansal analistler tarafından öngörülabilir.", word: "anticipated", trWord: "öngörülabilir", blank: "Significant annual financial growth can be ___ by senior financial analysts." },
+    { en: "Comprehensive legislative tax reform must be advocated by senior financial analysts.", tr: "Kapsamlı yasal vergi reformu kıdemli finansal analistler tarafından savunulmalıdır.", word: "advocated", trWord: "savunulmalıdır", blank: "Comprehensive legislative tax reform must be ___ by senior financial analysts." },
+    { en: "Detailed historical system logs can be accumulated by the software development team.", tr: "Detaylı geçmiş sistem günlükleri yazılım geliştirme ekibi tarafından biriktirilabilir.", word: "accumulated", trWord: "biriktirilabilir", blank: "Detailed historical system logs can be ___ by the software development team." },
+    { en: "Crucial internal device components will be stabilized by the reinforced central core.", tr: "Kritik dahili cihaz bileşenleri güçlendirilmiş merkezi çekirdek tarafından stabilize edilacak.", word: "stabilized", trWord: "stabilize edilacak", blank: "Crucial internal device components will be ___ by the reinforced central core." },
+    { en: "Detailed historical system logs can be accumulated by the centralized cloud database.", tr: "Yeni toplanan deneysel veriler merkezi bulut veritabanı tarafından işlenebilir.", word: "accumulated", trWord: "işlenebilir", blank: "Detailed historical system logs can be ___ by the centralized cloud database." },
+    { en: "Separate international research funds can be shifted by the software development team.", tr: "Ayrı uluslararası araştırma fonları yazılım geliştirme ekibi tarafından kaydırılabilir.", word: "shifted", trWord: "kaydırılabilir", blank: "Separate international research funds can be ___ by the software development team." },
+    { en: "Crucial technical system parameters should be defined by the revised security protocol.", tr: "Kritik teknik sistem parametreleri gözden geçirilmiş güvenlik protokolü tarafından tanımlanmalıdır.", word: "defined", trWord: "tanımlanmalıdır", blank: "Crucial technical system parameters should be ___ by the revised security protocol." },
+    { en: "Unauthorized user network access will be restricted by the strict institutional policy.", tr: "Yetkisiz kullanıcı ağ erişimi katı kurumsal politika tarafından kısıtlanacak.", word: "restricted", trWord: "kısıtlanacak", blank: "Unauthorized user network access will be ___ by the strict institutional policy." },
+    { en: "Sensitive user information privacy must be protected by advanced encryption algorithms.", tr: "Hassas kullanıcı bilgileri gizliliği gelişmiş şifreleme algoritmaları tarafından korunmalıdır.", word: "protected", trWord: "korunmalıdır", blank: "Sensitive user information privacy must be ___ by advanced encryption algorithms." },
+    { en: "Crucial technical system parameters should be defined by the software development team.", tr: "Kritik teknik sistem parametreleri yazılım geliştirme ekibi tarafından tanımlanmalıdır.", word: "defined", trWord: "tanımlanmalıdır", blank: "Crucial technical system parameters should be ___ by the software development team." },
+    { en: "Unauthorized user network access will be restricted by the automated background script.", tr: "Yetkisiz kullanıcı ağ erişimi otomatik arka plan betiği tarafından kısıtlanacak.", word: "restricted", trWord: "kısıtlanacak", blank: "Unauthorized user network access will be ___ by the automated background script." },
+    { en: "Exact distribution and demographic formats will be altered by the sudden paradigm shift.", tr: "Kesin dağılım ve demografik formatlar ani paradigma değişimi tarafından değiştirilacak.", word: "altered", trWord: "değiştirilacak", blank: "Exact distribution and demographic formats will be ___ by the sudden paradigm shift." },
+    { en: "Complex mathematical data ratios should be calculated by the centralized cloud database.", tr: "Karmaşık matematiksel veri oranları merkezi bulut veritabanı tarafından hesaplanmalıdır.", word: "calculated", trWord: "hesaplanmalıdır", blank: "Complex mathematical data ratios should be ___ by the centralized cloud database." },
+    { en: "Sensitive user information privacy must be protected by the strict institutional policy.", tr: "Hassas kullanıcı bilgileri gizliliği katı kurumsal politika tarafından korunmalıdır.", word: "protected", trWord: "korunmalıdır", blank: "Sensitive user information privacy must be ___ by the strict institutional policy." },
+    { en: "Complex mathematical data ratios should be calculated by the automated background script.", tr: "Karmaşık matematiksel veri oranları otomatik arka plan betiği tarafından hesaplanmalıdır.", word: "calculated", trWord: "hesaplanmalıdır", blank: "Complex mathematical data ratios should be ___ by the automated background script." },
+    { en: "The undetected structural anomaly may be detected by the principal laboratory researcher.", tr: "Tespit edilemeyen yapısal anomali baş laboratuvar araştırmacısı tarafından tespit edilabilir.", word: "detected", trWord: "tespit edilabilir", blank: "The un___ structural anomaly may be ___ by the principal laboratory researcher." },
+    { en: "Maximum annual manufacturing output must be maximized by innovative corporate strategies.", tr: "Maksimum yıllık üretim çıktısı yenilikçi kurumsal stratejiler tarafından maksimize edilmalıdır.", word: "maximized", trWord: "maksimize edilmalıdır", blank: "Maximum annual manufacturing output must be ___ by innovative corporate strategies." },
+    { en: "Maximum annual manufacturing output must be maximized by the automated background script.", tr: "Maksimum yıllık üretim çıktısı otomatik arka plan betiği tarafından maksimize edilmalıdır.", word: "maximized", trWord: "maksimize edilmalıdır", blank: "Maximum annual manufacturing output must be ___ by the automated background script." },
+    { en: "Individual functional software modules ought to be integrated into the continuous process.", tr: "Ayrı kararsız kimyasal değişkenler sürekli sürece entegre edilmalıdır.", word: "integrated", trWord: "entegre edilmalıdır", blank: "Individual functional software modules ought to be ___ into the continuous process." },
+    { en: "Alternative scientific hypotheses may be validated by the principal laboratory researcher.", tr: "Alternatif bilimsel hipotezler baş laboratuvar araştırmacısı tarafından doğrulanabilir.", word: "validated", trWord: "doğrulanabilir", blank: "Alternative scientific hypotheses may be ___ by the principal laboratory researcher." },
+    { en: "Hidden organizational system flaws will be exposed by the principal laboratory researcher.", tr: "Gizli örgütsel sistem kusurları baş laboratuvar araştırmacısı tarafından ortaya çıkarılacak.", word: "exposed", trWord: "ortaya çıkarılacak", blank: "Hidden organizational system flaws will be ___ by the principal laboratory researcher." },
+    { en: "Formal bilateral commercial agreements might be terminated by the executive internal board.", tr: "Resmi ikili ticari anlaşmalar yürütme iç kurulu tarafından feshedilabilir.", word: "terminated", trWord: "feshedilabilir", blank: "Formal bilateral commercial agreements might be ___ by the executive internal board." },
+    { en: "Public political and cultural perspective could be manipulated by mainstream digital media.", tr: "Kamuoyunun siyasi ve kültürel bakış açısı ana akım dijital medya tarafından manipüle edilabilir.", word: "manipulated", trWord: "manipüle edilabilir", blank: "Public political and cultural perspective could be ___ by mainstream digital media." },
+    { en: "The newly collected empirical data ought to be processed by the centralized cloud database.", tr: "Yeni toplanan deneysel veriler merkezi bulut veritabanı tarafından işlenmelidir.", word: "processed", trWord: "işlenmelidir", blank: "The newly collected empirical data ought to be ___ by the centralized cloud database." },
+    { en: "Sensitive user information privacy ought to be processed by advanced encryption algorithms.", tr: "Hassas kullanıcı bilgileri gizliliği gelişmiş şifreleme algoritmaları tarafından işlenmelidir.", word: "processed", trWord: "işlenmelidir", blank: "Sensitive user information privacy ought to be ___ by advanced encryption algorithms." },
+    { en: "Exact distribution and demographic formats will be altered by the executive internal board.", tr: "Kesin dağılım ve demografik formatlar yürütme iç kurulu tarafından değiştirilacak.", word: "altered", trWord: "değiştirilacak", blank: "Exact distribution and demographic formats will be ___ by the executive internal board." },
+    { en: "Maximum annual manufacturing resources should be allocated by the executive internal board.", tr: "Maksimum yıllık üretim kaynakları yürütme iç kurulu tarafından tahsis edilmalıdır.", word: "allocated", trWord: "tahsis edilmalıdır", blank: "Maximum annual manufacturing resources should be ___ by the executive internal board." },
+    { en: "Comprehensive legislative tax reform must be advocated by leading institutional authorities.", tr: "Kapsamlı yasal vergi reformu önde gelen kurumsal yetkililer tarafından savunulmalıdır.", word: "advocated", trWord: "savunulmalıdır", blank: "Comprehensive legislative tax reform must be ___ by leading institutional authorities." },
+    { en: "The initial investigative project scope could be clarified by independent technical experts.", tr: "İlk araştırma projesi bağımsız teknik uzmanlar tarafından terk edilabilir.", word: "clarified", trWord: "terk edilabilir", blank: "The initial investigative project scope could be ___ by independent technical experts." },
+    { en: "Separate international research funds can be shifted by the regional administrative council.", tr: "Ayrı uluslararası araştırma fonları bölgesel idari konsey tarafından kaydırılabilir.", word: "shifted", trWord: "kaydırılabilir", blank: "Separate international research funds can be ___ by the regional administrative council." },
+    { en: "Individual functional software modules should be inspected by independent technical experts.", tr: "Bireysel fonksiyonel yazılım modülleri bağımsız teknik uzmanlar tarafından incelenmelidir.", word: "inspected", trWord: "incelenmelidir", blank: "Individual functional software modules should be ___ by independent technical experts." },
+    { en: "Valuable qualitative insights may be derived from comprehensive regional educational surveys.", tr: "Değerli nitel çıkarımlar kapsamlı bölgesel eğitim anketlerinden elde edilabilir.", word: "derived", trWord: "elde edilabilir", blank: "Valuable qualitative insights may be ___ from comprehensive regional educational surveys." },
+    { en: "The newly proposed architectural framework can be inspected by independent technical experts.", tr: "Yeni önerilen mimari çerçeve bağımsız teknik uzmanlar tarafından incelenebilir.", word: "inspected", trWord: "incelenebilir", blank: "The newly proposed architectural framework can be ___ by independent technical experts." },
+    { en: "Maximum annual manufacturing resources should be allocated by innovative corporate strategies.", tr: "Maksimum yıllık üretim kaynakları yenilikçi kurumsal stratejiler tarafından tahsis edilmalıdır.", word: "allocated", trWord: "tahsis edilmalıdır", blank: "Maximum annual manufacturing resources should be ___ by innovative corporate strategies." },
+    { en: "Substantial long-term economic growth can be anticipated by leading institutional authorities.", tr: "Önemli uzun vadeli ekonomik büyüme önde gelen kurumsal yetkililer tarafından öngörülabilir.", word: "anticipated", trWord: "öngörülabilir", blank: "Substantial long-term economic growth can be ___ by leading institutional authorities." },
+    { en: "This unpredictable economic dynamic can be triggered by a chain of negative physical reactions.", tr: "Bu öngörülemeyen ekonomik dinamik bir dizi olumsuz fiziksel tepki tarafından tetiklenebilir.", word: "triggered", trWord: "tetiklenebilir", blank: "This unpredictable economic dynamic can be ___ by a chain of negative physical reactions." },
+    { en: "A severe psychological and occupational stress can be induced by the revised security protocol.", tr: "Ciddi bir psikolojik ve mesleki strese gözden geçirilmiş güvenlik protokolü tarafından yol açılabilir.", word: "induced", trWord: "yol açılabilir", blank: "A severe psychological and occupational stress can be ___ by the revised security protocol." },
+    { en: "Comprehensive regional educational surveys might be conducted by independent technical experts.", tr: "Kapsamlı bölgesel eğitim anketleri bağımsız teknik uzmanlar tarafından yürütülabilir.", word: "conducted", trWord: "yürütülabilir", blank: "Comprehensive regional educational surveys might be ___ by independent technical experts." },
+    { en: "Public political and cultural perspective could be manipulated by the executive internal board.", tr: "Kamuoyunun siyasi ve kültürel bakış açısı yürütme iç kurulu tarafından manipüle edilabilir.", word: "manipulated", trWord: "manipüle edilabilir", blank: "Public political and cultural perspective could be ___ by the executive internal board." },
+    { en: "Crucial internal device components ought to be integrated into the automated background script.", tr: "Kritik dahili cihaz bileşenleri otomatik arka plan betiğine entegre edilmalıdır.", word: "integrated", trWord: "entegre edilmalıdır", blank: "Crucial internal device components ought to be ___ into the automated background script." },
+    { en: "The newly proposed architectural framework will be stabilized by the software development team.", tr: "Yeni önerilen mimari çerçeve yazılım geliştirme ekibi tarafından stabilize edilacak.", word: "stabilized", trWord: "stabilize edilacak", blank: "The newly proposed architectural framework will be ___ by the software development team." },
+    { en: "The entire underlying structural framework should be inspected by independent technical experts.", tr: "Tüm temel yapısal çerçeve bağımsız teknik uzmanlar tarafından incelenmelidir.", word: "inspected", trWord: "incelenmelidir", blank: "The entire underlying structural framework should be ___ by independent technical experts." },
+    { en: "Severe psychological and occupational stress will be induced by the continuous chemical process.", tr: "Ciddi psikolojik ve mesleki strese sürekli kimyasal süreç tarafından yol açılacak.", word: "induced", trWord: "yol açılacak", blank: "Severe psychological and occupational stress will be ___ by the continuous chemical process." },
+    { en: "Comprehensive regional educational surveys might be conducted by the national education ministry.", tr: "Kapsamlı bölgesel eğitim anketleri milli eğitim bakanlığı tarafından yürütülabilir.", word: "conducted", trWord: "yürütülabilir", blank: "Comprehensive regional educational surveys might be ___ by the national education ministry." },
+    { en: "The broader socio-economic context must be specified by the strict qualitative selection criteria.", tr: "Daha geniş sosyo-ekonomik bağlam katı nitel seçim kriterleri tarafından belirlenmelidir.", word: "specified", trWord: "belirlenmelidir", blank: "The broader socio-economic context must be ___ by the strict qualitative selection criteria." },
+    { en: "The highly competitive dynamic sector must be expanded by rapid regional infrastructure expansion.", tr: "Bu öngörülemeyen ekonomik dinamik hızlı bölgesel altyapı genişlemesi tarafından tetiklenmelidir.", word: "expanded", trWord: "tetiklenmelidir", blank: "The highly competitive dynamic sector must be ___ by rapid regional infrastructure expansion." },
+    { en: "Outdated environmental safety regulations might be suspended by leading institutional authorities.", tr: "Güncelliğini yitirmiş çevresel güvenlik düzenlemeleri önde gelen kurumsal yetkililer tarafından askıya alınabilir.", word: "suspended", trWord: "askıya alınabilir", blank: "Outdated environmental safety regulations might be ___ by leading institutional authorities." },
+    { en: "Formal bilateral commercial agreements might be terminated by the regional administrative council.", tr: "Resmi ikili ticari anlaşmalar bölgesel idari konsey tarafından feshedilabilir.", word: "terminated", trWord: "feshedilabilir", blank: "Formal bilateral commercial agreements might be ___ by the regional administrative council." },
+    { en: "The initial investigative project scope could be clarified by the principal laboratory researcher.", tr: "Başlangıçtaki araştırma projesi kapsamı baş laboratuvar araştırmacısı tarafından açıklanabilir.", word: "clarified", trWord: "açıklanabilir", blank: "The initial investigative project scope could be ___ by the principal laboratory researcher." },
+    { en: "Outdated environmental safety regulations might be suspended by the regional administrative council.", tr: "Güncelliğini yitirmiş çevresel güvenlik düzenlemeleri bölgesel idari konsey tarafından askıya alınabilir.", word: "suspended", trWord: "askıya alınabilir", blank: "Outdated environmental safety regulations might be ___ by the regional administrative council." },
+    { en: "The exact distribution and demographic formats must be specified by the national education ministry.", tr: "Kesin dağılım ve demografik formatlar milli eğitim bakanlığı tarafından belirlenmelidir.", word: "specified", trWord: "belirlenmelidir", blank: "The exact distribution and demographic formats must be ___ by the national education ministry." },
+    { en: "The entire underlying structural framework must be expanded by rapid regional infrastructure expansion.", tr: "Tüm temel yapısal çerçeve hızlı bölgesel altyapı genişlemesi tarafından genişletilmalıdır.", word: "expanded", trWord: "genişletilmalıdır", blank: "The entire underlying structural framework must be ___ by rapid regional infrastructure expansion." }
+  ]
+};
+
 const unit12LessonSentences = {
   1: unit12Lesson1SentencesRaw,
   2: unit12Lesson2SentencesRaw,
@@ -5542,16 +5703,34 @@ const rawTopics = [
     title: "XI. Edilgen (Passive) Mastarı (Sayfa 63)",
     desc: "Edilgen mastar (to be + V3) yapıları",
     icon: "🔒",
-    numLessons: 1,
+    numLessons: 4,
     formulas: [
       { 
-        formula: "to be + V3 / Modal + be + V3", 
-        example: "The problem needs to be solved: Sorunun çözülmesi gerekiyor",
-        description: "<strong>1. Aşama: Bilinenle Köprü Kurma (Aktif vs. Pasif Dönüşümü)</strong><br>Tercüme Kılavuzu: Aktif cümleler pasife dönüştürülürken eylemden etkilenen nesne başa gelir, araya modalın türüne göre bir be köprüsü eklenir ve asıl fiil 3. haline ($V_3$) çekimlenir. Olumsuzlarda modalın hemen yanına not gelir; sorularda ise modal cümlenin en başına, yani nesnenin önüne taşınır.<br><br><strong>2. Aşama: \"Kuyruksuz\" Kısa Cümlelerle Başlama (En Yalın Model)</strong><br>Tercüme Kılavuzu: Cümle sonundaki ek tümleçler (yer, zaman, eyleyen) kesilerek öğrencinin sadece çekirdek Nesne + Modal (+ not) + be + V3 yapısına odaklanması sağlanır. Sorularda ise cümlenin ilk yardımcı unsuru başa gelir."
+        formula: "Modal + be + V3 (Positive Modals)", 
+        example: "The project can be abandoned: Proje terk edilebilir",
+        description: "Tercüme Kılavuzu: Edilgen (Passive) modal yapıları, bir eylemin yapılabilme olasılığını (can/may/might/could), zorunluluğunu (must/should/ought to) veya gelecekteki durumunu (will) bildirir. Cümle kurulurken eylemden etkilenen Nesne (Özne konumunda) + Modal + be + V3 yapısı kullanılır. Çeviri yaparken: Önce özne okunur, ardından fiilin edilgen haline modalın anlamı (edilebilir, edilmelidir, edilecek) eklenir."
+      },
+      { 
+        formula: "Modal + not + be + V3 (Negative Modals)", 
+        example: "The project cannot be abandoned: Proje terk edilemez",
+        description: "Tercüme Kılavuzu: Olumsuz edilgen modal yapılarında, modal yardımcısının hemen yanına olumsuzluk eki (not) gelir: Nesne + Modal + not + be + V3. Çeviride modalın olumsuz anlamı fiilin edilgen köküne eklenir: can/could not için \"-emez / -amaz\", must/should/ought not için \"-memelidir / -mamalıdır\", will not için \"-meyecek / -mayacak\" anlamı verilir."
+      },
+      { 
+        formula: "Modal + Subject + be + V3? (Interrogative Modals)", 
+        example: "Can the project be abandoned?: Proje terk edilebilir mi?",
+        description: "Tercüme Kılavuzu: Soru biçimlerinde modal cümlenin en başına (öznenin önüne) gelir: Modal + Nesne + be + V3?. Çeviride önce özne söylenir, ardından edilgen fiile modalın soru eki (edilebilir mi?, edilmeli midir?, edilecek mi?) eklenerek cümle tamamlanır."
+      },
+      { 
+        formula: "Subject + Modal + be + V3 + by + Agent (Full Modal Passive)", 
+        example: "The project can be abandoned by the team: Proje ekip tarafından terk edilebilir",
+        description: "Tercüme Kılavuzu: Akademik makalelerde bu edilgen yapılarda özneler ve nesneler uzatılarak (expanded) ve cümlenin sonuna eyleyen (by + Agent) eklenerek kullanılır. Çeviri adımları: 1. Cümlenin başındaki uzun sıfat tamlamasını (özne) bulun. 2. Cümlenin sonundaki 'by/from' öbeğini (tarafından/kaynağından) araya ekleyin. 3. Yüklemi edilgen modal yapısına göre çevirerek cümleyi tamamlayın."
       }
     ],
     subtitles: [
-      "Edilgen (Passive) Mastarı (Sayfa 63)"
+      "A. Modal Tabanlı Yalın Edilgen Örnekler (Positive Modals)",
+      "B. Modal Tabanlı Yalın Edilgenlerin Olumsuzları (Negative Modals)",
+      "C. Modal Tabanlı Yalın Edilgenlerin Soru Biçimleri (Interrogative Modals)",
+      "D. Modal Tabanlı Tam Genişletilmiş Edilgen Örnekler (Full Modal Passive)"
     ]
   },
   {
@@ -7470,8 +7649,30 @@ const unitSentencesMap = {
       buildCustom10QuestionExercises(unit10LessonSentences[4], 10, 31, 3, 20)
     ] }
   },
-  11: {
-    1: { exercises: [] }
+    11: {
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 1, 0),
+      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 2, 10),
+      buildCustom10QuestionExercises(unit11LessonSentences[1], 11, 32, 3, 20)
+    ] },
+    2: { exercises: [
+      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 1, 0),
+      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 2, 10),
+      buildCustom10QuestionExercises(unit11LessonSentences[2], 11, 33, 3, 20)
+    ] },
+    3: { exercises: [
+      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 1, 0),
+      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 2, 10),
+      buildCustom10QuestionExercises(unit11LessonSentences[3], 11, 34, 3, 20)
+    ] },
+    4: { exercises: [
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 1, 0),
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 2, 10),
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 3, 20),
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 4, 30),
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 5, 40),
+      buildCustom10QuestionExercises(unit11LessonSentences[4], 11, 35, 6, 50)
+    ] }
   },
   12: {
     1: { exercises: [
