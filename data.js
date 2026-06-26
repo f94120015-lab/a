@@ -5353,24 +5353,6 @@ const unit14LessonSentences = {
     { en: "It would be appropriate to restrict.", tr: "Sınırlandırmak uygun olurdu.", word: "restrict", trWord: "Sınırlandırmak", blank: "It would be appropriate to ___." },
     { en: "It has been necessary to evaluate.", tr: "Değerlendirmek gerekli olmuştur.", word: "evaluate", trWord: "Değerlendirmek", blank: "It has been necessary to ___." },
     { en: "It has been advantageous to accumulate.", tr: "Biriktirmek avantajlı olmuştur.", word: "accumulate", trWord: "Biriktirmek", blank: "It has been advantageous to ___." }
-  ],
-  2: [
-    { en: "It is important for the student to understand the problem", tr: "Öğrencinin problemi anlaması önemlidir", word: "understand", trWord: "anlaması", blank: "It is important for the student to ___ the problem" },
-    { en: "It is necessary for the researcher to measure the temperature", tr: "Araştırmacının sıcaklığı ölçmesi gereklidir", word: "measure", trWord: "ölçmesi", blank: "It is necessary for the researcher to ___ the temperature" },
-    { en: "It is difficult for the government to change the policy", tr: "Hükümetin politikayı değiştirmesi zordur", word: "change", trWord: "değiştirmesi", blank: "It is difficult for the government to ___ the policy" },
-    { en: "It is easy for the workers to operate the machine", tr: "İşçilerin makineyi çalıştırması kolaydır", word: "operate", trWord: "çalıştırması", blank: "It is easy for the workers to ___ the machine" },
-    { en: "It is possible for the company to reduce the cost", tr: "Şirketin maliyeti düşürmesi mümkündür", word: "reduce", trWord: "düşürmesi", blank: "It is possible for the company to ___ the cost" },
-    { en: "It is impossible for the patient to walk today", tr: "Hastanın bugün yürümesi imkansızdır", word: "walk", trWord: "yürümesi", blank: "It is impossible for the patient to ___ today" },
-    { en: "It is useful for the committee to write a summary", tr: "Komitenin bir özet yazması faydalıdır", word: "write", trWord: "yazması", blank: "It is useful for the committee to ___ a summary" },
-    { en: "It is essential for the factory to protect the environment", tr: "Fabrikanın çevreyi koruması esastır", word: "protect", trWord: "koruması", blank: "It is essential for the factory to ___ the environment" },
-    { en: "It is safe for the community to use this source", tr: "Topluluğun bu kaynağı kullanması güvenlidir", word: "use", trWord: "kullanması", blank: "It is safe for the community to ___ this source" },
-    { en: "It is rare for the analyst to make a mistake", tr: "Analistin hata yapması nadirdir", word: "make", trWord: "yapması", blank: "It is rare for the analyst to ___ a mistake" },
-    { en: "It is logical for the members to accept the suggestion", tr: "Üyelerin öneriyi kabul etmesi mantıklıdır", word: "accept", trWord: "kabul etmesi", blank: "It is logical for the members to ___ the suggestion" },
-    { en: "It is natural for the child to ask questions", tr: "Çocuğun soru sorması doğaldır", word: "ask", trWord: "sorması", blank: "It is natural for the child to ___ questions" },
-    { en: "It is reasonable for the team to modify the design", tr: "Ekibin tasarımı değiştirmesi makuldür", word: "modify", trWord: "değiştirmesi", blank: "It is reasonable for the team to ___ the design" },
-    { en: "It is dangerous for the worker to heat the mixture", tr: "İşçinin karışımı ısıtması tehlikelidir", word: "heat", trWord: "ısıtması", blank: "It is dangerous for the worker to ___ the mixture" },
-    { en: "It is convenient for the system to store the data", tr: "Sistemin veriyi depolaması uygundur", word: "store", trWord: "depolaması", blank: "It is convenient for the system to ___ the data" },
-    { en: "It is necessary for the expert to evaluate the project", tr: "Uzmanın projeyi değerlendirmesi gereklidir", word: "evaluate", trWord: "değerlendirmesi", blank: "It is necessary for the expert to ___ the project" }
   ]
 };
 
@@ -6511,14 +6493,12 @@ const rawTopics = [
     title: "XIV. Strüktürel \"It\" Cümlesinin Öznesi (Sayfa 103)",
     desc: "Strüktürel It cümlesinin öznesi ve sıfat/mastar yapıları",
     icon: "🎈",
-    numLessons: 2,
+    numLessons: 1,
     formulas: [
-      { formula: "It is + Adjective + Infinitive (to V)", example: "It is important to understand the problem: Problemi anlamak önemlidir" },
-      { formula: "It is + Adjective + for Object + Infinitive (to V)", example: "It is important for the student to understand: Öğrencinin anlaması önemlidir" }
+      { formula: "It is + Adjective + Infinitive (to V)", example: "It is important to understand the problem: Problemi anlamak önemlidir" }
     ],
     subtitles: [
-      "A. It + olmak + sıfat + mastar (Sayfa 103)",
-      "B. It + olmak + sıfat + mastar + nesnesi (Sayfa 105)"
+      "A. It + olmak + sıfat + mastar (Sayfa 103)"
     ]
   },
   {
@@ -8465,8 +8445,7 @@ const unitSentencesMap = {
       buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 4, 0),
       buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 5, 10),
       buildAcademicExercises(unit14AcademicSentencesRaw, 14, 43, 6, 5)
-    ] },
-    2: { exercises: [] }
+    ] }
   },
   15: {
     1: { exercises: [] },
