@@ -2183,7 +2183,7 @@ function buildSplitPassiveExercises(sentences, unitId, lessonId, exId, offset) {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_spot_${i}`,
       type: "multiple-choice",
-      prompt: `Which word in the sentence below is an adverb splitting the passive verb?<br><br><strong class="highlight-sentence">${s.en}</strong>`,
+      prompt: `Aşağıdaki kelimelerden hangisi edilgen fiili bölen bir zarftır?<br><br><strong class="highlight-sentence">${s.en}</strong>`,
       options: options,
       correctIndex: options.indexOf(correctVal),
       enSentence: s.en,
@@ -2218,7 +2218,7 @@ function buildSplitPassiveExercises(sentences, unitId, lessonId, exId, offset) {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_placement_${i}`,
       type: "multiple-choice",
-      prompt: `Complete the sentence by putting the adverb in the correct position:<br><br><strong class="highlight-sentence">${blankSentence}</strong>`,
+      prompt: `Zarfı doğru konuma yerleştirerek cümleyi tamamlayın:<br><br><strong class="highlight-sentence">${blankSentence}</strong>`,
       options: options,
       correctIndex: options.indexOf(s.adverb),
       enSentence: s.en,
