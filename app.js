@@ -66,7 +66,6 @@ const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
 // KELİME SÖZLÜĞÜ VE HOVER ÇEVİRİ ALTYAPISI
 // ============================================================
 const wordDictionary = {
-
   "a": "bir",
   "abandoned": "terk edilmiş / terk edildi",
   "abolishing": "yürürlükten kaldırma / kaldırma",
@@ -90,6 +89,7 @@ const wordDictionary = {
   "accumulation": "birikim / birikme",
   "accuracy": "doğruluk / kesinlik",
   "accurate": "doğru",
+  "accurately": "doğru bir şekilde / hassasiyetle",
   "accused": "suçlanan / suçlandı",
   "achievements": "başarılar",
   "acids": "asitler",
@@ -102,6 +102,7 @@ const wordDictionary = {
   "adapt": "uyum sağlamak / adapte olmak",
   "adaptable": "uyarlanabilir / uyumlu",
   "adaptation": "adaptasyon / uyum / adaptasyonu",
+  "additional": "ek / ilave",
   "addressing": "hitap eden / değinen",
   "adds": "ekler",
   "adjust": "ayarlamak / düzenlemek",
@@ -118,6 +119,7 @@ const wordDictionary = {
   "affecting": "etkileyen",
   "affects": "etkiler",
   "after": "sonra / -den sonra",
+  "agencies": "kurumlar / acenteler",
   "ago": "önce",
   "agree": "kabul etmek / katılmak / anlaşmak",
   "agreement": "anlaşma",
@@ -164,6 +166,7 @@ const wordDictionary = {
   "another": "başka / diğer / bir diğeri",
   "answer": "cevap / yanıt",
   "answers": "cevaplar",
+  "anticipate": "öngörmek / beklemek",
   "anticipated": "öngörülen / öngörüldü / öngörülmektedir",
   "anticipates": "öngörür",
   "any": "hiç, herhangi bir",
@@ -186,6 +189,7 @@ const wordDictionary = {
   "areas": "alanlar / bölgeler",
   "argument": "argüman / tartışma",
   "arguments": "argümanlar",
+  "arranged": "ayarladı / düzenledi",
   "arrangement": "düzenleme / diziliş",
   "article": "makale",
   "artificial": "yapay",
@@ -204,11 +208,14 @@ const wordDictionary = {
   "atom": "atom",
   "atomic": "atomik",
   "attached": "ekli",
+  "attempted": "girişti / denedi",
   "attention": "dikkat",
   "attention-grabbing": "ilgi çeken",
   "attract": "çekmek / cezbetmek",
   "audience": "dinleyiciler / izleyiciler",
   "audit": "denetim / teftiş",
+  "auditors": "denetçiler",
+  "authentication": "kimlik doğrulama",
   "author": "yazar",
   "authorities": "otoriteler / yetkililer",
   "authority": "otorite / yetki / yetkili",
@@ -236,6 +243,7 @@ const wordDictionary = {
   "becomes": "olur / haline gelir",
   "been": "olunmuş / bulunmuş",
   "before": "önce / -den önce",
+  "began": "başladı",
   "beginning": "başlayan",
   "behavior": "davranış",
   "beneficial": "faydalı / yararlı",
@@ -249,6 +257,7 @@ const wordDictionary = {
   "binding": "bağlayıcı",
   "binds": "bağlar",
   "biologist": "biyolog",
+  "biometric": "biyometrik",
   "black": "siyah / kara",
   "blood": "kan",
   "board": "kurul / yönetim kurulu",
@@ -260,6 +269,7 @@ const wordDictionary = {
   "boosts": "canlandırır / artırır",
   "both": "her iki / ikisi de",
   "bottle": "şişe",
+  "bound": "zorunda / mahkum",
   "boundaries": "sınırlar",
   "boundary": "sınır",
   "brain": "beyin / beyni",
@@ -275,10 +285,12 @@ const wordDictionary = {
   "but": "ama, fakat",
   "by": "tarafından, vasıtasıyla, -e göre",
   "caffeine-containing": "kafein içeren",
+  "calculate": "hesaplamak",
   "calculated": "hesaplanmış",
   "calculates": "hesaplar",
   "calendar": "takvim",
   "call": "arama / çağrı",
+  "called": "çağırdı / aradı / adlandırıldı",
   "campaign": "kampanya",
   "can": "-ebilmek / -abilmek (yetenek / olasılık)",
   "candidate": "aday",
@@ -324,6 +336,7 @@ const wordDictionary = {
   "children": "çocuklar",
   "chimney": "baca",
   "choice": "seçim / seçme",
+  "chose": "seçti",
   "chosen": "seçilmiş",
   "chronological": "kronolojik",
   "citizen": "vatandaş",
@@ -394,17 +407,18 @@ const wordDictionary = {
   "concerned": "endişeli / ilgili",
   "concluding": "sonuç / kapanış",
   "conclusion": "sonuç / sonuçlanma",
+  "concrete": "beton / somut",
   "condition": "koşul / durum",
   "conditions": "koşullar / şartlar",
   "conduct": "davranış / yönetim / yürütme",
   "conducted": "yürüttü",
   "conducting": "yürüten / yürütme",
+  "confidently": "güvenle / kendinden emin bir şekilde",
   "confirm": "onaylamak",
   "confirmed": "doğruladı",
   "conflict": "çatışma",
   "conflicting": "çelişen",
   "conflicts": "çatışmalar",
-  "confidently": "güvenle / kendinden emin bir şekilde",
   "confusion": "kafa karışıklığı",
   "connect": "bağlamak",
   "connected": "bağlanmış",
@@ -428,6 +442,7 @@ const wordDictionary = {
   "contexts": "bağlamlar",
   "contextual": "bağlamsal",
   "contextually": "bağlamsal olarak",
+  "continued": "devam etti",
   "continuing": "devam eden",
   "continuous": "sürekli",
   "contract": "sözleşme",
@@ -460,6 +475,7 @@ const wordDictionary = {
   "cover": "kapak / örtü",
   "covered": "kaplı / kaplanmış",
   "cow": "inek",
+  "crashed": "çöktü",
   "created": "oluşturdu",
   "creates": "yaratır / oluşturur",
   "creating": "yaratan / oluşturan",
@@ -495,6 +511,7 @@ const wordDictionary = {
   "days": "günler",
   "debates": "tartışmalar",
   "debts": "borçlar",
+  "decided": "karar verdi",
   "decision": "karar",
   "decision-making": "karar alma",
   "decisions": "kararlar",
@@ -512,6 +529,8 @@ const wordDictionary = {
   "degradation": "bozulma / bozunma",
   "degree": "derece",
   "delayed": "gecikmiş",
+  "delegate": "delege / temsilci",
+  "delegates": "delegeler / temsilciler",
   "demand": "talep",
   "demanding": "talepkar",
   "demands": "talepler",
@@ -519,9 +538,12 @@ const wordDictionary = {
   "demographic": "demografik",
   "demonstrating": "gösteren / kanıtlayan",
   "densely": "yoğun olarak / yoğun bir şekilde",
+  "density": "yoğunluk / yoğun",
   "department": "departman / bölüm",
   "departments": "departmanlar / bölümler",
   "depends": "bağlıdır",
+  "deployed": "dağıttı / yükledi / konuşlandırdı",
+  "derive": "elde etmek / türetmek",
   "derived": "türetilen / elde edilen / çıkarılan",
   "deriving": "türetme / türeten",
   "described": "tanımlanan / açıklandı",
@@ -531,11 +553,14 @@ const wordDictionary = {
   "desert": "çöl",
   "design": "tasarım / tasarımı / tasarlamak",
   "design-simplifying": "tasarımı basitleştiren",
+  "designed": "tasarladı / tasarlanmış",
   "desire": "arzu / istek",
+  "despite": "-e rağmen",
   "destroying": "yok etmek / mahvetmek",
   "detail": "detay / ayrıntı",
   "detailed": "detaylı / ayrıntılı",
   "details": "detaylar / ayrıntılar",
+  "detect": "tespit etmek / belirlemek",
   "detected": "tespit edilen / tespit edildi",
   "detection": "tespit / algılama",
   "detects": "tespit ediyor",
@@ -708,8 +733,10 @@ const wordDictionary = {
   "executive": "yürütücü / yönetim",
   "exercise": "egzersiz / alıştırma",
   "exercises": "egzersizler / alıştırmalar",
+  "exhaustive": "kapsamlı / ayrıntılı / yorucu",
   "exhibition": "sergi",
   "existing": "mevcut",
+  "expand": "genişletmek / büyümek",
   "expanded": "genişletilmiş / genişletildi / genişletilmektedir",
   "expanding": "genişleyen",
   "expansion": "genişleme / yayılma",
@@ -734,6 +761,7 @@ const wordDictionary = {
   "export": "ihracat / ihraç",
   "exported": "ihraç edilmiş / ihraç etti",
   "exporting": "ihraç etme / ihraç eden",
+  "expose": "ifşa etmek / ortaya çıkarmak",
   "exposed": "maruz kalmış / açıkta kalmış",
   "exposes": "ortaya çıkarır",
   "expression": "ifade / dışa vurum",
@@ -754,6 +782,7 @@ const wordDictionary = {
   "factors": "faktörler",
   "factory": "fabrika",
   "facts": "gerçekler",
+  "failed": "başaramadı / başarısız oldu",
   "falling": "düşen",
   "far": "uzak",
   "farm": "çiftlik",
@@ -776,6 +805,7 @@ const wordDictionary = {
   "financial": "finansal",
   "find": "bulmak",
   "finding": "bulgu",
+  "fine-tuned": "ince ayar yapılmış",
   "finished": "bitmiş / tamamlanmış",
   "fire": "ateş",
   "firmly": "sağlam bir şekilde / sıkıca",
@@ -881,10 +911,12 @@ const wordDictionary = {
   "heavily": "ağır bir şekilde / yoğun olarak",
   "heavy": "şiddetli / ağır",
   "help": "yardım",
+  "helped": "yardımcı oldu",
   "helps": "yardımcı olur",
   "her": "onun (kadın)",
   "here": "burada",
   "heritage": "miras",
+  "hesitate": "tereddüt etmek",
   "hesitated": "tereddüt etti",
   "hidden": "gizli",
   "high": "yüksek",
@@ -921,6 +953,7 @@ const wordDictionary = {
   "impending": "yaklaşan",
   "implement": "uygulamak",
   "implementation": "uygulama / yürürlüğe koyma",
+  "implemented": "uyguladı / uygulamaya koydu",
   "importance": "önem / önemi",
   "important": "önemli",
   "imported": "ithal edilir / ithal edilmiş",
@@ -945,8 +978,10 @@ const wordDictionary = {
   "indicators": "göstergeler",
   "individual": "birey",
   "individuals": "bireyler",
+  "induce": "ikna etmek / uyarmak / sebep olmak",
   "induced": "yol açılmış / yol açıldı",
   "induces": "yol açar",
+  "industrial": "endüstriyel / sanayi",
   "industries": "sanayiler / endüstriler",
   "industry": "endüstri / sanayi",
   "influence": "etki / nüfuz",
@@ -967,8 +1002,9 @@ const wordDictionary = {
   "insights": "öngörüler",
   "inspect": "inceler",
   "inspected": "incelenen / incelendi / incelenmektedir",
-  "instantly": "anında / hemen",
   "instability": "istikrarsızlık",
+  "installed": "kurdu / yükledi",
+  "instantly": "anında / hemen",
   "institution": "kurum / kuruluş",
   "institutional": "kurumsal",
   "institutions": "kurumlar",
@@ -1099,6 +1135,7 @@ const wordDictionary = {
   "lot": "çok / büyük miktar",
   "low": "düşük",
   "machine": "makine",
+  "machinery": "makineler / makine aksamı",
   "made": "yapılan / yapıldı",
   "mainstream": "ana akım",
   "maintain": "sürdürmek / bakımını yapmak",
@@ -1113,6 +1150,7 @@ const wordDictionary = {
   "management": "yönetim",
   "manager": "müdür / yönetici",
   "mandatory": "zorunlu",
+  "manipulate": "yönlendirmek / manipüle etmek",
   "manipulated": "manipüle edilmiş / manipüle edildi",
   "manipulates": "manipüle eder",
   "manufacturing": "üretim",
@@ -1139,6 +1177,7 @@ const wordDictionary = {
   "media": "medya",
   "mediator": "arabulucu",
   "meet": "karşılaşmak / buluşmak / tanışmak",
+  "meeting": "toplantı / buluşma",
   "members": "üyeler",
   "membership": "üyelik",
   "memory": "bellek",
@@ -1194,6 +1233,7 @@ const wordDictionary = {
   "mouth-watering": "ağız sulandıran",
   "movement": "hareket / hareketi",
   "moving": "hareket eden",
+  "multi": "çok / çoklu",
   "muscle": "kas",
   "muscles": "kaslar / kasları",
   "must": "-meli / -malı (zorunluluk)",
@@ -1238,6 +1278,7 @@ const wordDictionary = {
   "ocr": "OCR (optik karakter tanıma)",
   "of": "-in / -ın (iyelik / parçası), -den / -dan",
   "off": "off (yayınlama / kapalı)",
+  "off-peak": "yoğun olmayan (saatler)",
   "offers": "sunar",
   "office": "ofis",
   "official": "resmi",
@@ -1366,6 +1407,7 @@ const wordDictionary = {
   "precise": "kesin",
   "precisely": "tam olarak / hassasiyetle",
   "predict": "tahmin etmek",
+  "predictable": "öngörülebilir",
   "predicted": "tahmin edilmiş / tahmin etti",
   "predicting": "tahmin etme / tahmin eden",
   "prefer": "tercih etmek",
@@ -1474,6 +1516,7 @@ const wordDictionary = {
   "read": "okumak / okudu",
   "reading": "okuma / okumak",
   "ready": "hazır",
+  "reallocate": "yeniden tahsis etmek",
   "reallocated": "yeniden tahsis edilmiş",
   "reason": "sebep / neden",
   "reasons": "sebepler / nedenler",
@@ -1489,6 +1532,7 @@ const wordDictionary = {
   "reduced": "azaltılmış",
   "reduces": "azaltır",
   "reform": "reform",
+  "refused": "reddetti",
   "regime": "rejim",
   "regime-supporting": "rejimi destekleyen",
   "regional": "bölgesel",
@@ -1520,6 +1564,7 @@ const wordDictionary = {
   "representation": "temsil / gösterim",
   "representatives": "temsilciler",
   "reputation": "itibar / ün",
+  "requested": "talep etti / istedi",
   "require": "gerekmek / istemek",
   "required": "gerekli",
   "requirement": "gereklilik",
@@ -1548,6 +1593,8 @@ const wordDictionary = {
   "restricting": "kısıtlama / kısıtlayan",
   "restrictions": "kısıtlamalar",
   "restricts": "kısıtlar",
+  "restructure": "yeniden yapılandırmak",
+  "restructured": "yeniden yapılandırılmış / yeniden yapılandırdı",
   "result": "sonuç / sonucu",
   "resulting": "oluşan / ortaya çıkan",
   "results": "sonuçlar / sonuçları",
@@ -1669,9 +1716,11 @@ const wordDictionary = {
   "smell": "koku",
   "smoke": "duman",
   "smoky": "dumanlı",
+  "smoothly": "sorunsuzca / pürüzsüzce",
   "so": "bu yüzden, öyleyse, çok",
   "social": "toplumsal",
   "socially": "toplumsal olarak / sosyal olarak",
+  "socio": "sosyo",
   "socio-economic": "sosyo-ekonomik",
   "software": "yazılım",
   "soil": "toprak",
@@ -1764,6 +1813,7 @@ const wordDictionary = {
   "summarized": "özetlenmiş / özetledi",
   "summarizing": "özetleme / özetleyen",
   "summary": "özet",
+  "summit": "zirve",
   "sun": "güneş",
   "supervision": "gözetim / denetim",
   "supply": "kaynak / arz",
@@ -1776,6 +1826,7 @@ const wordDictionary = {
   "surveys": "araştırmalar / anketler",
   "surviving": "hayatta kalan",
   "suspect": "şüpheli",
+  "suspend": "askıya almak",
   "suspended": "askıya aldı / askıya alındı",
   "sustainable": "sürdürülebilir",
   "sustained": "sürekli / kesintisiz",
@@ -1797,6 +1848,7 @@ const wordDictionary = {
   "team": "ekip",
   "technical": "teknik",
   "technician": "teknisyen",
+  "technicians": "teknisyenler",
   "technologies": "teknolojiler",
   "technology": "teknoloji",
   "telescope": "teleskop",
@@ -1809,6 +1861,7 @@ const wordDictionary = {
   "tenant": "kiracı",
   "tension": "gerilim / gerginlik",
   "tensions": "gerilimler",
+  "terminate": "sonlandırmak / bitirmek",
   "terminated": "feshetti",
   "test": "test / deneme",
   "test-tube": "deney tüpü",
@@ -1823,14 +1876,15 @@ const wordDictionary = {
   "theoretically": "teorik olarak",
   "theories": "teoriler",
   "theory": "teori / kuram / teorisi",
-  "thoroughly": "en ince ayrıntısına kadar / tamamen",
   "there": "orada, var (there is / are)",
   "these": "bunlar",
   "thesis": "tez",
   "they": "onlar",
   "this": "bu",
   "thorax": "göğüs / göğüs kafesi",
+  "thoroughly": "en ince ayrıntısına kadar / tamamen",
   "those": "şunlar, onlar",
+  "threatened": "tehdit etti",
   "three": "üç",
   "through": "içinden, vasıtasıyla",
   "time": "zaman",
@@ -1871,6 +1925,7 @@ const wordDictionary = {
   "trials": "denemeler / testler",
   "tribe": "kabile",
   "tried": "denedi / çalıştı",
+  "trigger": "tetiklemek / yol açmak",
   "triggered": "tetiklenen / tetiklendi / tetiklenmektedir",
   "triggers": "tetikler",
   "trouble-making": "sorun çıkaran",
@@ -1958,10 +2013,12 @@ const wordDictionary = {
   "virus": "virüs",
   "viruses": "virüsler",
   "visibility": "görünürlük",
+  "visited": "ziyaret etti",
   "visual": "görsel",
   "vitamin": "vitamin",
   "vocabulary": "kelime bilgisi / kelime",
   "volume": "hacim / hacmi",
+  "voted": "oy kullandı",
   "wait": "beklemek",
   "waiting": "bekliyor",
   "wall": "duvar",
@@ -2024,8 +2081,7 @@ const wordDictionary = {
   "your": "senin / sizin",
   "zero": "sıfır",
   "zone": "bölge / alan"
-
-};
+};;
 
 // Populate dictionary dynamically from unitSentencesMap if it exists
 function buildDynamicDictionary() {
@@ -3127,7 +3183,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([13, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+    const notUploadedUnits = new Set([18, 19, 20, 21, 22, 23, 24, 25]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -3389,7 +3445,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([13, 15, 18, 19, 20, 21, 22, 23, 24, 25]);
+  const notUploadedUnitsPopover = new Set([18, 19, 20, 21, 22, 23, 24, 25]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
@@ -3796,8 +3852,8 @@ function renderMatching(container, question) {
 
   matchState = {
     pairs: question.pairs,
-    selectedLeft: null,
-    selectedRight: null,
+    selectedLeftBtn: null,
+    selectedRightBtn: null,
     matchedCount: 0,
     totalPairs: question.pairs.length,
     wrongAttempts: 0
@@ -3808,7 +3864,7 @@ function renderMatching(container, question) {
       if (isAnswerChecked || btn.classList.contains('matched')) return;
       container.querySelectorAll('.match-left').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
-      matchState.selectedLeft = btn.dataset.left;
+      matchState.selectedLeftBtn = btn;
       tryMatch(container, question);
     });
   });
@@ -3818,22 +3874,25 @@ function renderMatching(container, question) {
       if (isAnswerChecked || btn.classList.contains('matched')) return;
       container.querySelectorAll('.match-right').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
-      matchState.selectedRight = btn.dataset.right;
+      matchState.selectedRightBtn = btn;
       tryMatch(container, question);
     });
   });
 }
 
 function tryMatch(container, question) {
-  if (!matchState.selectedLeft || !matchState.selectedRight) return;
+  if (!matchState.selectedLeftBtn || !matchState.selectedRightBtn) return;
 
-  const correctPair = question.pairs.find(p => p.left === matchState.selectedLeft);
-  const isCorrectMatch = correctPair && correctPair.right === matchState.selectedRight;
+  const leftText = matchState.selectedLeftBtn.dataset.left;
+  const rightText = matchState.selectedRightBtn.dataset.right;
+
+  // Check if this pair exists in correct pairs
+  const isCorrectMatch = question.pairs.some(p => p.left === leftText && p.right === rightText);
 
   if (isCorrectMatch) {
     // Doğru eşleşme
-    const leftBtn = container.querySelector(`.match-left[data-left="${matchState.selectedLeft}"]`);
-    const rightBtn = container.querySelector(`.match-right[data-right="${matchState.selectedRight}"]`);
+    const leftBtn = matchState.selectedLeftBtn;
+    const rightBtn = matchState.selectedRightBtn;
 
     leftBtn.classList.remove('selected');
     rightBtn.classList.remove('selected');
@@ -3845,8 +3904,8 @@ function tryMatch(container, question) {
     // Yanlış eşleşme
     matchState.wrongAttempts++;
 
-    const leftBtn = container.querySelector(`.match-left.selected`);
-    const rightBtn = container.querySelector(`.match-right.selected`);
+    const leftBtn = matchState.selectedLeftBtn;
+    const rightBtn = matchState.selectedRightBtn;
 
     if (leftBtn) leftBtn.classList.add('wrong-flash');
     if (rightBtn) rightBtn.classList.add('wrong-flash');
@@ -3857,8 +3916,8 @@ function tryMatch(container, question) {
     }, 500);
   }
 
-  matchState.selectedLeft = null;
-  matchState.selectedRight = null;
+  matchState.selectedLeftBtn = null;
+  matchState.selectedRightBtn = null;
 
   // Tüm çiftler eşleşti mi?
   if (matchState.matchedCount === matchState.totalPairs) {

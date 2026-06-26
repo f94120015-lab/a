@@ -89,7 +89,7 @@ function buildCustomExerciseQuestions(sentences, unitId, lessonId, exId) {
   });
 
   // 3. Word Bank (remaining questions)
-  const wbSents = sentences.slice(12);
+  const wbSents = sentences.slice(10);
   wbSents.forEach((sA, idx) => {
     const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
     const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
@@ -111,8 +111,8 @@ function buildCustomExerciseQuestions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 4. Translation Text (4 questions)
-  const txSents = sentences.slice(8, 12);
+  // 4. Translation Text (2 questions)
+  const txSents = sentences.slice(8, 10);
   txSents.forEach((sA, idx) => {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
@@ -304,9 +304,9 @@ function build15Questions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 3. Word Bank (5 questions using sentences 10 to 14 - repeating last if short)
-  const wbSents = sentences.length >= 15 ? sentences.slice(10, 15) : [...sentences.slice(9, 14), sentences[13]];
-  wbSents.slice(0, 5).forEach((sA, idx) => {
+  // 3. Word Bank (8 questions using sentences 7 to 14)
+  const wbSents = sentences.length >= 15 ? sentences.slice(7, 15) : [...sentences.slice(7, 14), sentences[13]];
+  wbSents.forEach((sA, idx) => {
     const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
     const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
     const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
@@ -327,8 +327,8 @@ function build15Questions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 4. Translation Text (5 questions using sentences 5 to 9)
-  const txSents = sentences.slice(5, 10);
+  // 4. Translation Text (2 questions using sentences 5 to 6)
+  const txSents = sentences.slice(5, 7);
   txSents.forEach((sA, idx) => {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
@@ -384,8 +384,8 @@ function build12Questions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 3. Word Bank (4 questions using sentences 8 to 11)
-  const wbSents = sentences.slice(8, 12);
+  // 3. Word Bank (6 questions using sentences 7 to 11 and 4)
+  const wbSents = [...sentences.slice(7, 12), sentences[4]];
   wbSents.forEach((sA, idx) => {
     const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
     const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
@@ -407,8 +407,8 @@ function build12Questions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 4. Translation Text (4 questions using sentences 5 to 8)
-  const txSents = sentences.slice(5, 9);
+  // 4. Translation Text (2 questions using sentences 5 to 6)
+  const txSents = sentences.slice(5, 7);
   txSents.forEach((sA, idx) => {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
@@ -715,7 +715,7 @@ function buildTranslationAndScrambleQuestions(sentences, unitId, lessonId, exId)
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
   sentences.forEach((sA, idx) => {
-    const isWordBank = idx < 8;
+    const isWordBank = idx < 8 || idx >= 10;
     if (isWordBank) {
       const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
       const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
@@ -878,9 +878,8 @@ function buildDynamicQuestions(sentences, unitId, lessonId, exId) {
       isEngToTr: true
     });
   });
-
-  // 3. Word Bank (remaining questions from index 14 onwards)
-  const wbStart = Math.min(14, total);
+  // 3. Word Bank (remaining questions from index 10 onwards)
+  const wbStart = Math.min(10, total);
   const wbSents = sentences.slice(wbStart);
   wbSents.forEach((sA, idx) => {
     const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
@@ -903,10 +902,11 @@ function buildDynamicQuestions(sentences, unitId, lessonId, exId) {
     });
   });
 
-  // 4. Translation Text (up to 6 questions using indices 8 to 13)
+  // 4. Translation Text (up to 2 questions using indices 8 to 9)
   const txStart = Math.min(8, total);
-  const txEnd = Math.min(14, total);
+  const txEnd = Math.min(10, total);
   const txSents = sentences.slice(txStart, txEnd);
+
   txSents.forEach((sA, idx) => {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
@@ -1841,22 +1841,32 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
   {
     const s = slice[14];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
     qList.push({
-      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
-      type: "translation-text",
-      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
-      correctSentence: s.en,
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_5`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
       enSentence: s.en,
       isEngToTr: false
     });
   }
   {
     const s = slice[5];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
     qList.push({
-      id: `u${unitId}l${lessonId}_ex${exId}_tx_3`,
-      type: "translation-text",
-      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
-      correctSentence: s.en,
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_6`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
       enSentence: s.en,
       isEngToTr: false
     });
@@ -1870,6 +1880,88 @@ function buildCustom15QuestionExercises(sentences, unitId, lessonId, exId, offse
   };
 }
 
+const unit13BaseTranslations = {
+  "define": "tanımlamak",
+  "abandon": "vazgeçmek",
+  "inspect": "denetlemek",
+  "specify": "belirtmek",
+  "advocate": "savunmak",
+  "derive": "türetmek",
+  "anticipate": "öngörmek",
+  "trigger": "tetiklemek",
+  "clarify": "açıklığa kavuşturmak",
+  "suspend": "askıya almak",
+  "expand": "genişlemek",
+  "modify": "değiştirmek",
+  "conduct": "yürütmek",
+  "terminate": "sonlandırmak",
+  "stabilize": "dengelemek",
+  "process": "işlemek",
+  "restrict": "sınırlandırmak",
+  "alter": "değiştirmek",
+  "expose": "ifşa etmek",
+  "induce": "yol açmak",
+  "accumulate": "biriktirmek",
+  "protect": "korumak",
+  "allocate": "tahsis etmek",
+  "shift": "değiştirmek",
+  "maximize": "maksimize etmek",
+  "integrate": "entegre etmek",
+  "detect": "tespit etmek",
+  "calculate": "hesaplamak",
+  "manipulate": "manipüle etmek"
+};
+
+function getUniqueMatchingPairs(allSentences, primaryPool, count, unitId, excludeWords = new Set()) {
+  const pairs = [];
+  const seenWords = new Set(excludeWords);
+  const seenTrs = new Set();
+  const addedWords = new Set();
+
+  // First try primaryPool (e.g. current slice)
+  for (const s of primaryPool) {
+    if (pairs.length >= count) break;
+    const word = s.word;
+    const tr = (unitId === 13 && unit13BaseTranslations[word]) ? unit13BaseTranslations[word] : s.trWord;
+    if (!seenWords.has(word) && !seenTrs.has(tr)) {
+      seenWords.add(word);
+      seenTrs.add(tr);
+      addedWords.add(word);
+      pairs.push({ left: tr, right: word });
+    }
+  }
+
+  // Next try allSentences
+  if (pairs.length < count) {
+    for (const s of allSentences) {
+      if (pairs.length >= count) break;
+      const word = s.word;
+      const tr = (unitId === 13 && unit13BaseTranslations[word]) ? unit13BaseTranslations[word] : s.trWord;
+      if (!seenWords.has(word) && !seenTrs.has(tr)) {
+        seenWords.add(word);
+        seenTrs.add(tr);
+        addedWords.add(word);
+        pairs.push({ left: tr, right: word });
+      }
+    }
+  }
+
+  // Fallback if still not enough (relaxing seenWords/seenTrs check, but trying to keep left/right unique in the returned array)
+  if (pairs.length < count) {
+    for (const s of primaryPool) {
+      if (pairs.length >= count) break;
+      const word = s.word;
+      const tr = (unitId === 13 && unit13BaseTranslations[word]) ? unit13BaseTranslations[word] : s.trWord;
+      if (!addedWords.has(word)) {
+        addedWords.add(word);
+        pairs.push({ left: tr, right: word });
+      }
+    }
+  }
+
+  return pairs;
+}
+
 function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -1881,24 +1973,21 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   }
 
   // 1. Matching (2 questions)
+  const match1Pairs = getUniqueMatchingPairs(sentences, slice, 4, unitId);
   qList.push({
     id: `u${unitId}l${lessonId}_ex${exId}_match1`,
     type: "matching",
     prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-    pairs: slice.slice(0, 4).map(s => ({
-      left: s.trWord,
-      right: s.word
-    }))
+    pairs: match1Pairs
   });
 
+  const match1Words = new Set(match1Pairs.map(p => p.right));
+  const match2Pairs = getUniqueMatchingPairs(sentences, slice, 4, unitId, match1Words);
   qList.push({
     id: `u${unitId}l${lessonId}_ex${exId}_match2`,
     type: "matching",
     prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-    pairs: slice.slice(4, 8).map(s => ({
-      left: s.trWord,
-      right: s.word
-    }))
+    pairs: match2Pairs
   });
 
   const getMcDistractors = (s, isTr) => {
@@ -2116,8 +2205,24 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
       isEngToTr: false
     });
   }
+  {
+    const s = slice[5];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_3`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
 
-  // 4. Translation Text (3 questions)
+  // 4. Translation Text (2 questions)
   {
     const s = slice[3];
     qList.push({
@@ -2140,17 +2245,6 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
       isEngToTr: true
     });
   }
-  {
-    const s = slice[5];
-    qList.push({
-      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
-      type: "translation-text",
-      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
-      correctSentence: s.en,
-      enSentence: s.en,
-      isEngToTr: false
-    });
-  }
 
   return {
     id: `u${unitId}l${lessonId}ex${exId}`,
@@ -2171,24 +2265,21 @@ function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   }
 
   // 1. Matching (2 questions)
+  const match1Pairs = getUniqueMatchingPairs(sentences, slice, 4, unitId);
   qList.push({
     id: `u${unitId}l${lessonId}_ex${exId}_match1`,
     type: "matching",
     prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-    pairs: slice.slice(0, 4).map(s => ({
-      left: s.trWord,
-      right: s.word
-    }))
+    pairs: match1Pairs
   });
 
+  const match1Words = new Set(match1Pairs.map(p => p.right));
+  const match2Pairs = getUniqueMatchingPairs(sentences, slice, 4, unitId, match1Words);
   qList.push({
     id: `u${unitId}l${lessonId}_ex${exId}_match2`,
     type: "matching",
     prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-    pairs: slice.slice(4, 8).map(s => ({
-      left: s.trWord,
-      right: s.word
-    }))
+    pairs: match2Pairs
   });
 
   const getMcDistractors = (s, isTr) => {
@@ -2240,7 +2331,7 @@ function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
     });
   }
 
-  // 3. Block Sorting (3 questions)
+  // 3. Block Sorting (4 questions)
   {
     const s = slice[0];
     const targetBlocks = s.blocks;
@@ -2286,8 +2377,23 @@ function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
       isEngToTr: false
     });
   }
+  {
+    const s = slice[5];
+    const targetBlocks = s.blocks;
+    const words = shuffle(targetBlocks);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_bs_3`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetBlocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
 
-  // 4. Translation Text (3 questions)
+  // 4. Translation Text (2 questions)
   {
     const s = slice[3];
     qList.push({
@@ -2308,17 +2414,6 @@ function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
       correctSentence: s.tr,
       enSentence: s.en,
       isEngToTr: true
-    });
-  }
-  {
-    const s = slice[5];
-    qList.push({
-      id: `u${unitId}l${lessonId}_ex${exId}_tx_2`,
-      type: "translation-text",
-      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
-      correctSentence: s.en,
-      enSentence: s.en,
-      isEngToTr: false
     });
   }
 
@@ -3616,30 +3711,71 @@ function generateDynamicExercises(unitId, lessonId, sentences) {
       isEngToTr: false
     });
   });
-
   const ex4Questions = [];
   const txEtSents = shuffle(sentences).slice(0, 2);
   txEtSents.forEach((sD, idx) => {
-    ex4Questions.push({
-      id: `u${unitId}l${lessonId}ex4_tx_et_${idx}`,
-      type: "translation-text",
-      prompt: `"${ensurePunctuation(sD.en)}" ifadesini Türkçe'ye çevirin:`,
-      correctSentence: sD.tr,
-      enSentence: sD.en,
-      isEngToTr: true
-    });
+    if (idx === 0) {
+      ex4Questions.push({
+        id: `u${unitId}l${lessonId}ex4_tx_et_${idx}`,
+        type: "translation-text",
+        prompt: `"${ensurePunctuation(sD.en)}" ifadesini Türkçe'ye çevirin:`,
+        correctSentence: sD.tr,
+        enSentence: sD.en,
+        isEngToTr: true
+      });
+    } else {
+      const targetWords = sD.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+      const allOtherTrWords = sentences.filter(s => s.en !== sD.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+      const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+      const shuffledDistractors = shuffle(uniqueDistractors);
+      while (shuffledDistractors.length < 3) {
+        shuffledDistractors.push("ve");
+      }
+      const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+      ex4Questions.push({
+        id: `u${unitId}l${lessonId}ex4_wb_et_${idx}`,
+        type: "word-bank",
+        prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+        translation: ensurePunctuation(sD.en),
+        words: words,
+        correctOrder: targetWords,
+        enSentence: sD.en,
+        isEngToTr: true
+      });
+    }
   });
 
   const txTeSents = shuffle(sentences).slice(0, 2);
   txTeSents.forEach((sD, idx) => {
-    ex4Questions.push({
-      id: `u${unitId}l${lessonId}ex4_tx_te_${idx}`,
-      type: "translation-text",
-      prompt: `"${ensurePunctuation(sD.tr)}" ifadesini İngilizce'ye çevirin:`,
-      correctSentence: sD.en,
-      enSentence: sD.en,
-      isEngToTr: false
-    });
+    if (idx === 0) {
+      ex4Questions.push({
+        id: `u${unitId}l${lessonId}ex4_tx_te_${idx}`,
+        type: "translation-text",
+        prompt: `"${ensurePunctuation(sD.tr)}" ifadesini İngilizce'ye çevirin:`,
+        correctSentence: sD.en,
+        enSentence: sD.en,
+        isEngToTr: false
+      });
+    } else {
+      const targetWords = sD.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+      const allOtherEnWords = sentences.filter(s => s.en !== sD.en).map(s => s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+      const uniqueDistractors = [...new Set(allOtherEnWords)].filter(w => !targetWords.includes(w));
+      const shuffledDistractors = shuffle(uniqueDistractors);
+      while (shuffledDistractors.length < 3) {
+        shuffledDistractors.push("the");
+      }
+      const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+      ex4Questions.push({
+        id: `u${unitId}l${lessonId}ex4_wb_te_${idx}`,
+        type: "word-bank",
+        prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+        translation: ensurePunctuation(sD.tr),
+        words: words,
+        correctOrder: targetWords,
+        enSentence: sD.en,
+        isEngToTr: false
+      });
+    }
   });
 
   return [
@@ -5291,36 +5427,217 @@ const unit12LessonSentences = {
 
 const unit13LessonSentences = {
   1: [
-    { en: "They want to start the project", tr: "Projeye başlamak istiyorlar", word: "start", trWord: "başlamak", blank: "They want to ___ the project" },
-    { en: "We decided to change the plan", tr: "Planı değiştirmeye karar verdik", word: "change", trWord: "değiştirmeye", blank: "We decided to ___ the plan" },
-    { en: "He tried to solve the problem", tr: "Sorunu çözmeye çalıştı", word: "solve", trWord: "çözmeye", blank: "He tried to ___ the problem" },
-    { en: "They hope to obtain good results", tr: "İyi sonuçlar elde etmeyi umuyorlar", word: "obtain", trWord: "elde etmeyi", blank: "They hope to ___ good results" },
-    { en: "The government plans to build a factory", tr: "Hükümet bir fabrika kurmayı planlıyor", word: "build", trWord: "kurmayı", blank: "The government plans to ___ a factory" },
-    { en: "We need to measure the temperature", tr: "Sıcaklığı ölçmemiz gerekiyor", word: "measure", trWord: "ölçmemiz", blank: "We need to ___ the temperature" },
-    { en: "They managed to prevent the war", tr: "Savaşı önlemeyi başardılar", word: "prevent", trWord: "önlemeyi", blank: "They managed to ___ the war" },
-    { en: "Scientists attempt to explain the reaction", tr: "Bilim insanları tepkimeyi açıklamaya çalışıyor", word: "explain", trWord: "açıklamaya", blank: "Scientists attempt to ___ the reaction" },
-    { en: "He refused to accept the suggestion", tr: "Öneriyi kabul etmeyi reddetti", word: "accept", trWord: "kabul etmeyi", blank: "He refused to ___ the suggestion" },
-    { en: "The system failed to control the process", tr: "Sistem süreci kontrol etmeyi başaramadı", word: "control", trWord: "kontrol etmeyi", blank: "The system failed to ___ the process" },
-    { en: "They expect to finish the work tomorrow", tr: "İşi yarın bitirmeyi bekliyorlar", word: "finish", trWord: "bitirmeyi", blank: "They expect to ___ the work tomorrow" },
-    { en: "We promise to help the community", tr: "Topluluğa yardım etmeye söz veriyoruz", word: "help", trWord: "yardım etmeye", blank: "We promise to ___ the community" }
+    { en: "Experts failed to define.", tr: "Uzmanlar tanımlamayı başaramadı.", word: "define", trWord: "tanımlamayı", blank: "Experts failed to ___." },
+    { en: "Do experts fail to define?", tr: "Uzmanlar tanımlamayı başaramaz mı?", word: "define", trWord: "tanımlamayı", blank: "Do experts fail to ___?" },
+    { en: "The team agreed to abandon.", tr: "Ekip vazgeçmeyi kabul etti.", word: "abandon", trWord: "vazgeçmeyi", blank: "The team agreed to ___." },
+    { en: "Did the team agree to abandon?", tr: "Ekip vazgeçmeyi kabul etti mi?", word: "abandon", trWord: "vazgeçmeyi", blank: "Did the team agree to ___?" },
+    { en: "Technicians refused to inspect.", tr: "Teknisyenler denetlemeyi reddetti.", word: "inspect", trWord: "denetlemeyi", blank: "Technicians refused to ___." },
+    { en: "The protocol managed to specify.", tr: "Protokol belirtmeyi başardı.", word: "specify", trWord: "belirtmeyi", blank: "The protocol managed to ___." },
+    { en: "Authorities decided to advocate.", tr: "Yetkililer savunmaya karar verdi.", word: "advocate", trWord: "savunmaya", blank: "Authorities decided to ___." },
+    { en: "Researchers attempted to derive.", tr: "Araştırmacılar türetmeye girişti.", word: "derive", trWord: "türetmeye", blank: "Researchers attempted to ___." },
+    { en: "Analysts hesitated to anticipate.", tr: "Analistler öngörmekte tereddüt etti.", word: "anticipate", trWord: "öngörmekte", blank: "Analysts hesitated to ___." },
+    { en: "Heavy machinery began to trigger.", tr: "Ağır makineler tetiklemeye başladı.", word: "trigger", trWord: "tetiklemeye", blank: "Heavy machinery began to ___." },
+    { en: "Did technicians refuse to inspect?", tr: "Teknisyenler denetlemeyi reddetti mi?", word: "inspect", trWord: "denetlemeyi", blank: "Did technicians refuse to ___?" },
+    { en: "Did authorities decide to advocate?", tr: "Yetkililer savunmaya karar verdi mi?", word: "advocate", trWord: "savunmaya", blank: "Did authorities decide to ___?" },
+    { en: "Did heavy machinery begin to trigger?", tr: "Ağır makineler tetiklemeye başladı mı?", word: "trigger", trWord: "tetiklemeye", blank: "Did heavy machinery begin to ___?" },
+    { en: "Technical experts must try to clarify.", tr: "Teknik uzmanlar açıklığa kavuşturmaya çalışmalıdır.", word: "clarify", trWord: "açıklığa kavuşturmaya", blank: "Technical experts must try to ___." },
+    { en: "The regional council chose to suspend.", tr: "Bölgesel konsey askıya almayı seçti.", word: "suspend", trWord: "askıya almayı", blank: "The regional council chose to ___." },
+    { en: "Researchers did not attempt to derive.", tr: "Araştırmacılar türetmeye girişmedi.", word: "derive", trWord: "türetmeye", blank: "Researchers did not attempt to ___." },
+    { en: "Infrastructure growth helped to expand.", tr: "Altyapı büyümesi genişlemeye yardımcı oldu.", word: "expand", trWord: "genişlemeye", blank: "Infrastructure growth helped to ___." },
+    { en: "The protocol did not manage to specify.", tr: "Protokol belirtmeyi başaramadı.", word: "specify", trWord: "belirtmeyi", blank: "The protocol did not manage to ___." },
+    { en: "Analysts did not hesitate to anticipate.", tr: "Analistler öngörmekte tereddüt etmedi.", word: "anticipate", trWord: "öngörmekte", blank: "Analysts did not hesitate to ___." },
+    { en: "The software team should intend to modify.", tr: "Yazılım ekibi değiştirmeyi amaçlamalıdır.", word: "modify", trWord: "değiştirmeyi", blank: "The software team should intend to ___." },
+    { en: "The education ministry arranged to conduct.", tr: "Eğitim bakanlığı yürütmeyi planladı.", word: "conduct", trWord: "yürütmeyi", blank: "The education ministry arranged to ___." },
+    { en: "The executive board threatened to terminate.", tr: "Yönetim kurulu sonlandırmakla tehdit etti.", word: "terminate", trWord: "sonlandırmakla", blank: "The executive board threatened to ___." },
+    { en: "The reinforced core might help to stabilize.", tr: "Güçlendirilmiş çekirdek dengelemeye yardımcı olabilir.", word: "stabilize", trWord: "dengelemeye", blank: "The reinforced core might help to ___." },
+    { en: "The automated script continued to calculate.", tr: "Otomatik betik hesaplamaya devam etti.", word: "calculate", trWord: "hesaplamaya", blank: "The automated script continued to ___." },
+    { en: "The evaluation committee can choose to shift.", tr: "Değerlendirme komitesi değiştirmeyi seçebilir.", word: "shift", trWord: "değiştirmeyi", blank: "The evaluation committee can choose to ___." },
+    { en: "Infrastructure growth did not help to expand.", tr: "Altyapı büyümesi genişlemeye yardımcı olmadı.", word: "expand", trWord: "genişlemeye", blank: "Infrastructure growth did not help to ___." },
+    { en: "The centralized database may require to process.", tr: "Merkezi veri tabanı işlemeyi gerektirebilir.", word: "process", trWord: "işlemeyi", blank: "The centralized database may require to ___." },
+    { en: "The principal researcher was forced to validate.", tr: "Asıl araştırmacı doğrulamaya zorlandı.", word: "validate", trWord: "doğrulamaya", blank: "The principal researcher was forced to ___." },
+    { en: "The data processing unit was prepared to detect.", tr: "Veri işleme birimi tespit etmeye hazırdı.", word: "detect", trWord: "tespit etmeye", blank: "The data processing unit was prepared to ___." },
+    { en: "The independent annual audit is bound to expose.", tr: "Bağımsız yıllık denetim ifşa etmeye mecburdur.", word: "expose", trWord: "ifşa etmeye", blank: "The independent annual audit is bound to ___." },
+    { en: "Was the principal researcher forced to validate?", tr: "Asıl araştırmacı doğrulamaya zorlandı mı?", word: "validate", trWord: "doğrulamaya", blank: "Was the principal researcher forced to ___?" },
+    { en: "Mainstream digital media can seek to manipulate.", tr: "Ana akım dijital medya manipüle etmeyi amaçlayabilir.", word: "manipulate", trWord: "manipüle etmeyi", blank: "Mainstream digital media can seek to ___." },
+    { en: "The sudden paradigm shift could threaten to alter.", tr: "Ani paradigma değişimi değiştirmekle tehdit edebilir.", word: "alter", trWord: "değiştirmekle", blank: "The sudden paradigm shift could threaten to ___." },
+    { en: "The centralized database would love to accumulate.", tr: "Merkezi veri tabanı biriktirmeyi çok ister.", word: "accumulate", trWord: "biriktirmeyi", blank: "The centralized database would love to ___." },
+    { en: "Strict institutional policy will serve to restrict.", tr: "Sıkı kurumsal politika sınırlandırmaya hizmet edecektir.", word: "restrict", trWord: "sınırlandırmaya", blank: "Strict institutional policy will serve to ___." },
+    { en: "Continuous chemical processes are likely to induce.", tr: "Sürekli kimyasal süreçlerin yol açması muhtemeldir.", word: "induce", trWord: "yol açması", blank: "Continuous chemical processes are likely to ___." },
+    { en: "The automated script does not continue to calculate.", tr: "Otomatik betik hesaplamaya devam etmez.", word: "calculate", trWord: "hesaplamaya", blank: "The automated script does not continue to ___." },
+    { en: "Advanced encryption algorithms must operate to protect.", tr: "Gelişmiş şifreleme algoritmaları korumak için çalışmalıdır.", word: "protect", trWord: "korumak", blank: "Advanced encryption algorithms must operate to ___." },
+    { en: "Innovative corporate strategies should aim to allocate.", tr: "Yenilikçi kurumsal stratejiler tahsis etmeyi hedeflemelidir.", word: "allocate", trWord: "tahsis etmeyi", blank: "Innovative corporate strategies should aim to ___." },
+    { en: "Automated background scripts will struggle to maximize.", tr: "Otomatik arka plan betikleri maksimize etmekte zorlanacaktır.", word: "maximize", trWord: "maksimize etmekte", blank: "Automated background scripts will struggle to ___." },
+    { en: "Individual functional modules ought to design to integrate.", tr: "Bireysel fonksiyonel modüller entegre etmek üzere tasarlamalıdır.", word: "integrate", trWord: "entegre etmek", blank: "Individual functional modules ought to design to ___." }
   ],
   2: [
-    { en: "They want the student to start the project", tr: "Öğrencinin projeye başlamasını istiyorlar", word: "start", trWord: "başlamasını", blank: "They want the student to ___ the project" },
-    { en: "We advised the committee to change the plan", tr: "Komiteye planı değiştirmesini tavsiye ettik", word: "change", trWord: "değiştirmesini", blank: "We advised the committee to ___ the plan" },
-    { en: "The researcher expected the reaction to start", tr: "Araştırmacı tepkimenin başlamasını bekliyordu", word: "start", trWord: "başlamasını", blank: "The researcher expected the reaction to ___" },
-    { en: "The doctor allowed the patient to walk", tr: "Doktor hastanın yürümesine izin verdi", word: "walk", trWord: "yürümesine", blank: "The doctor allowed the patient to ___" },
-    { en: "The system requires the user to enter a password", tr: "Sistem kullanıcının bir şifre girmesini gerektirir", word: "enter", trWord: "girmesini", blank: "The system requires the user to ___ a password" },
-    { en: "We encourage the students to perform experiments", tr: "Öğrencileri deney yapmaya teşvik ediyoruz", word: "perform", trWord: "yapmaya", blank: "We encourage the students to ___ experiments" },
-    { en: "The force caused the structure to collapse", tr: "Kuvvet yapının çökmesine neden oldu", word: "collapse", trWord: "çökmesine", blank: "The force caused the structure to ___" },
-    { en: "The regulation forces the factory to reduce waste", tr: "Yönetmelik fabrikayı atığı azaltmaya zorlar", word: "reduce", trWord: "azaltmaya", blank: "The regulation forces the factory to ___ waste" },
-    { en: "The professor asked the students to write a summary", tr: "Profesör öğrencilerden bir özet yazmalarını istedi", word: "write", trWord: "yazmalarını", blank: "The professor asked the students to ___ a summary" },
-    { en: "We expect the temperature to increase tomorrow", tr: "Sıcaklığın yarın artmasını bekliyoruz", word: "increase", trWord: "artmasını", blank: "We expect the temperature to ___ tomorrow" },
-    { en: "The treaty allowed the countries to trade", tr: "Antlaşma ülkelerin ticaret yapmasına izin verdi", word: "trade", trWord: "yapmasına", blank: "The treaty allowed the countries to ___" },
-    { en: "They convinced the members to accept the suggestion", tr: "Üyeleri öneriyi kabul etmeye ikna ettiler", word: "accept", trWord: "kabul etmeye", blank: "They convinced the members to ___ the suggestion" },
-    { en: "The design permits the system to control the process", tr: "Tasarım sistemin süreci kontrol etmesine izin verir", word: "control", trWord: "kontrol etmesine", blank: "The design permits the system to ___ the process" },
-    { en: "The law forbids the factory to pollute the river", tr: "Yasa fabrikanın nehri kirletmesini yasaklar", word: "pollute", trWord: "kirletmesini", blank: "The law forbids the factory to ___ the river" },
-    { en: "The warning reminded the worker to wear a helmet", tr: "Uyarı işçiye kask takmasını hatırlattı", word: "wear", trWord: "takmasını", blank: "The warning reminded the worker to ___ a helmet" },
-    { en: "We invite the expert to evaluate the project", tr: "Uzmanı projeyi değerlendirmeye davet ediyoruz", word: "evaluate", trWord: "değerlendirmeye", blank: "We invite the expert to ___ the project" }
+    {
+      en: "Must independent technical experts try to clarify the initial investigative project scope before tomorrow?",
+      tr: "Bağımsız teknik uzmanlar yarından önce ilk araştırma projesinin kapsamını açıklığa kavuşturmaya çalışmalı mı?",
+      word: "clarify",
+      trWord: "açıklığa kavuşturmaya",
+      blank: "Must independent technical experts try to ___ the initial investigative project scope before tomorrow?",
+      blocks: ["Must independent technical experts", "try to clarify", "the initial investigative project scope", "before tomorrow?"]
+    },
+    {
+      en: "Has the national education ministry arranged to conduct comprehensive regional educational surveys this year?",
+      tr: "Milli eğitim bakanlığı bu yıl kapsamlı bölgesel eğitim anketleri yürütmeyi planladı mı?",
+      word: "conduct",
+      trWord: "yürütmeyi",
+      blank: "Has the national education ministry arranged to ___ comprehensive regional educational surveys this year?",
+      blocks: ["Has the national education ministry", "arranged to conduct", "comprehensive regional educational surveys", "this year?"]
+    },
+    {
+      en: "Do independent technical experts fail to define crucial technical system parameters for the security protocol?",
+      tr: "Bağımsız teknik uzmanlar güvenlik protokolü için kritik teknik sistem parametrelerini tanımlamayı başaramaz mı?",
+      word: "define",
+      trWord: "tanımlamayı",
+      blank: "Do independent technical experts fail to ___ crucial technical system parameters for the security protocol?",
+      blocks: ["Do independent technical experts", "fail to define crucial", "technical system parameters", "for the security protocol?"]
+    },
+    {
+      en: "Did the regional administrative council choose to suspend outdated environmental safety regulations last month?",
+      tr: "Bölgesel idari konsey geçen ay güncelliğini yitirmiş çevre güvenliği yönetmeliklerini askıya almayı mı seçti?",
+      word: "suspend",
+      trWord: "askıya almayı",
+      blank: "Did the regional administrative council choose to ___ outdated environmental safety regulations last month?",
+      blocks: ["Did the regional administrative council", "choose to suspend", "outdated environmental safety regulations", "last month?"]
+    },
+    {
+      en: "Did independent technical experts refuse to inspect the entire underlying structural framework of the facility?",
+      tr: "Bağımsız teknik uzmanlar tesisin tüm temel yapısal çerçevesini denetlemeyi reddetti mi?",
+      word: "inspect",
+      trWord: "denetlemeyi",
+      blank: "Did independent technical experts refuse to ___ the entire underlying structural framework of the facility?",
+      blocks: ["Did independent technical experts", "refuse to inspect", "the entire underlying structural framework", "of the facility?"]
+    },
+    {
+      en: "The data processing unit was not prepared to detect the undetected structural anomaly before the system crashed.",
+      tr: "Veri işleme birimi, sistem çökmeden önce tespit edilmemiş yapısal anomalileri tespit etmeye hazır değildi.",
+      word: "detect",
+      trWord: "tespit etmeye",
+      blank: "The data processing unit was not prepared to ___ the undetected structural anomaly before the system crashed.",
+      blocks: ["The data processing unit", "was not prepared to detect", "the undetected structural anomaly", "before the system crashed."]
+    },
+    {
+      en: "Rapid regional infrastructure expansion did not help to expand the highly competitive dynamic sector as expected.",
+      tr: "Hızlı bölgesel altyapı genişlemesi son derece rekabetçi dinamik sektörün beklendiği gibi genişlemesine yardımcı olmadı.",
+      word: "expand",
+      trWord: "genişlemesine",
+      blank: "Rapid regional infrastructure expansion did not help to ___ the highly competitive dynamic sector as expected.",
+      blocks: ["Rapid regional infrastructure expansion", "did not help to expand", "the highly competitive dynamic sector", "as expected."]
+    },
+    {
+      en: "Will strict institutional policy serve to restrict unauthorized user network access to sensitive user information?",
+      tr: "Sıkı kurumsal politika yetkisiz kullanıcıların hassas kullanıcı bilgilerine ağ erişimini sınırlandırmaya hizmet edecek mi?",
+      word: "restrict",
+      trWord: "sınırlandırmaya",
+      blank: "Will strict institutional policy serve to ___ unauthorized user network access to sensitive user information?",
+      blocks: ["Will strict institutional policy", "serve to restrict", "unauthorized user network access", "to sensitive user information?"]
+    },
+    {
+      en: "The strict qualitative selection criteria did not manage to specify the broader socio-economic context accurately.",
+      tr: "Sıkı nitel seçim kriterleri daha geniş sosyo-ekonomik bağlamı doğru bir şekilde belirtmeyi başaramadı.",
+      word: "specify",
+      trWord: "belirtmeyi",
+      blank: "The strict qualitative selection criteria did not manage to ___ the broader socio-economic context accurately.",
+      blocks: ["The strict qualitative selection criteria", "did not manage to specify", "the broader socio-economic context", "accurately."]
+    },
+    {
+      en: "The centralized cloud database may not require to process the newly collected empirical data during off-peak hours.",
+      tr: "Merkezi bulut veri tabanı, yoğun olmayan saatlerde yeni toplanan deneysel verileri işlemeyi gerektirmeyebilir.",
+      word: "process",
+      trWord: "işlemeyi",
+      blank: "The centralized cloud database may not require to ___ the newly collected empirical data during off-peak hours.",
+      blocks: ["The centralized cloud database", "may not require to process", "the newly collected empirical data", "during off-peak hours."]
+    },
+    {
+      en: "Was the principal laboratory researcher forced to validate alternative scientific hypotheses without empirical data?",
+      tr: "Asıl laboratuvar araştırmacısı deneysel veriler olmadan alternatif bilimsel hipotezleri doğrulamaya zorlandı mı?",
+      word: "validate",
+      trWord: "doğrulamaya",
+      blank: "Was the principal laboratory researcher forced to ___ alternative scientific hypotheses without empirical data?",
+      blocks: ["Was the principal laboratory researcher", "forced to validate", "alternative scientific hypotheses", "without empirical data?"]
+    },
+    {
+      en: "Did leading institutional authorities decide to advocate comprehensive legislative tax reform during the last summit?",
+      tr: "Önde gelen kurumsal yetkililer son zirve sırasında kapsamlı yasal vergi reformunu savunmaya mı karar verdi?",
+      word: "advocate",
+      trWord: "savunmaya",
+      blank: "Did leading institutional authorities decide to ___ comprehensive legislative tax reform during the last summit?",
+      blocks: ["Did leading institutional authorities", "decide to advocate", "comprehensive legislative tax reform", "during the last summit?"]
+    },
+    {
+      en: "The executive internal board did not threaten to terminate formal bilateral commercial agreements during the crisis.",
+      tr: "Yönetici iç kurul kriz sırasında resmi ikili ticari anlaşmaları sonlandırmakla tehdit etmedi.",
+      word: "terminate",
+      trWord: "sonlandırmakla",
+      blank: "The executive internal board did not threaten to ___ formal bilateral commercial agreements during the crisis.",
+      blocks: ["The executive internal board", "did not threaten to terminate", "formal bilateral commercial agreements", "during the crisis."]
+    },
+    {
+      en: "The automated background script does not continue to calculate complex mathematical data ratios during system updates.",
+      tr: "Otomatik arka plan betiği sistem güncellemeleri sırasında karmaşık matematiksel veri oranlarını hesaplamaya devam etmez.",
+      word: "calculate",
+      trWord: "hesaplamaya",
+      blank: "The automated background script does not continue to ___ complex mathematical data ratios during system updates.",
+      blocks: ["The automated background script", "does not continue to calculate", "complex mathematical data ratios", "during system updates."]
+    },
+    {
+      en: "The software development team should not intend to modify substantial empirical inputs without explicit authorization.",
+      tr: "Yazılım geliştirme ekibi açık yetki olmadan önemli deneysel girdileri değiştirmeyi amaçlamamalıdır.",
+      word: "modify",
+      trWord: "değiştirmeyi",
+      blank: "The software development team should not intend to ___ substantial empirical inputs without explicit authorization.",
+      blocks: ["The software development team", "should not intend to modify", "substantial empirical inputs", "without explicit authorization."]
+    },
+    {
+      en: "Mainstream digital media cannot seek to manipulate public political and cultural perspective under strict regulations.",
+      tr: "Ana akım dijital medya sıkı düzenlemeler altında halkın siyasi ve kültürel bakış açısını manipüle etmeye çalışamaz.",
+      word: "manipulate",
+      trWord: "manipüle etmeye",
+      blank: "Mainstream digital media cannot seek to ___ public political and cultural perspective under strict regulations.",
+      blocks: ["Mainstream digital media", "cannot seek to manipulate", "public political and cultural perspective", "under strict regulations."]
+    },
+    {
+      en: "Ought individual functional software modules not to design to integrate smoothly into the continuous chemical process?",
+      tr: "Bireysel fonksiyonel yazılım modüllerinin sürekli kimyasal sürece sorunsuzca entegre olmak üzere tasarlanması gerekmez mi?",
+      word: "integrate",
+      trWord: "entegre olmak",
+      blank: "Ought individual functional software modules not to design to ___ smoothly into the continuous chemical process?",
+      blocks: ["Ought individual functional software modules", "not to design to integrate", "smoothly", "into the continuous chemical process?"]
+    },
+    {
+      en: "Did this unpredictable economic dynamic begin to trigger a chain of negative physical reactions in the dynamic sector?",
+      tr: "Bu öngörülemeyen ekonomik dinamik, dinamik sektörde bir dizi olumsuz fiziksel tepkimeyi tetiklemeye başladı mı?",
+      word: "trigger",
+      trWord: "tetiklemeye",
+      blank: "Did this unpredictable economic dynamic begin to ___ a chain of negative physical reactions in the dynamic sector?",
+      blocks: ["Did this unpredictable economic dynamic", "begin to trigger", "a chain of negative physical reactions", "in the dynamic sector?"]
+    },
+    {
+      en: "Valuable qualitative insights did not attempt to derive directly from those comprehensive regional educational surveys.",
+      tr: "Değerli nitel anlayışlar doğrudan bu kapsamlı bölgesel eğitim anketlerinden türetilmeye çalışmadı.",
+      word: "derive",
+      trWord: "türetilmeye",
+      blank: "Valuable qualitative insights did not attempt to ___ directly from those comprehensive regional educational surveys.",
+      blocks: ["Valuable qualitative insights", "did not attempt to derive", "directly from", "those comprehensive regional educational surveys."]
+    },
+    {
+      en: "Did the software development team agree to abandon the initial investigative project scope before the annual audit began?",
+      tr: "Yazılım geliştirme ekibi yıllık denetim başlamadan önce ilk araştırma projesi kapsamından vazgeçmeyi kabul etti mi?",
+      word: "abandon",
+      trWord: "vazgeçmeyi",
+      blank: "Did the software development team agree to ___ the initial investigative project scope before the annual audit began?",
+      blocks: ["Did the software development team", "agree to abandon", "the initial investigative project scope", "before the annual audit began?"]
+    },
+    {
+      en: "Senior financial analysts did not hesitate to anticipate significant annual financial growth despite the sudden paradigm shift.",
+      tr: "Kıdemli finansal analistler ani paradigma değişimine rağmen önemli yıllık finansal büyümeyi öngörmekte tereddüt etmedi.",
+      word: "anticipate",
+      trWord: "öngörmekte",
+      blank: "Senior financial analysts did not hesitate to ___ significant annual financial growth despite the sudden paradigm shift.",
+      blocks: ["Senior financial analysts", "did not hesitate to anticipate", "significant annual financial growth", "despite the sudden paradigm shift."]
+    }
   ]
 };
 
@@ -5519,44 +5836,360 @@ const unit14AcademicSentencesRaw = [
   }
 ];
 
-const unit15LessonSentences = {
-  1: [
-    { en: "We perform experiments to obtain data", tr: "Veri elde etmek için deneyler yaparız", word: "obtain", trWord: "elde etmek", blank: "We perform experiments to ___ data" },
-    { en: "He measured the temperature to control the reaction", tr: "Tepkimeyi kontrol etmek için sıcaklığı ölçtü", word: "control", trWord: "kontrol etmek", blank: "He measured the temperature to ___ the reaction" },
-    { en: "They changed the design to reduce the cost", tr: "Maliyeti düşürmek için tasarımı değiştirdiler", word: "reduce", trWord: "düşürmek", blank: "They changed the design to ___ the cost" },
-    { en: "The patient took the medicine to cure the disease", tr: "Hastalığı tedavi etmek için ilacı aldı", word: "cure", trWord: "tedavi etmek", blank: "The patient took the medicine to ___ the disease" },
-    { en: "The factory uses coal to produce energy", tr: "Enerji üretmek için kömür kullanır", word: "produce", trWord: "üretmek", blank: "The factory uses coal to ___ energy" },
-    { en: "The student read the book to write a summary", tr: "Bir özet yazmak için kitabı okudu", word: "write", trWord: "yazmak", blank: "The student read the book to ___ a summary" },
-    { en: "We protect the forest to save the animals", tr: "Hayvanları kurtarmak için ormanı koruruz", word: "save", trWord: "kurtarmak", blank: "We protect the forest to ___ the animals" },
-    { en: "The system uses encryption to protect the data", tr: "Verileri korumak için sistem şifreleme kullanır", word: "protect", trWord: "korumak", blank: "The system uses encryption to ___ the data" },
-    { en: "They created the committee to evaluate the project", tr: "Projeyi değerlendirmek için komiteyi kurdular", word: "evaluate", trWord: "değerlendirmek", blank: "They created the committee to ___ the project" },
-    { en: "The worker heated the mixture to speed up the process", tr: "Süreci hızlandırmak için karışımı ısıttı", word: "speed", trWord: "hızlandırmak", blank: "The worker heated the mixture to ___ up the process" },
-    { en: "The scientist used a microscope to observe the cells", tr: "Hücreleri gözlemlemek için mikroskop kullandı", word: "observe", trWord: "gözlemlemek", blank: "The scientist used a microscope to ___ the cells" },
-    { en: "We changed the policy to encourage investments", tr: "Yatırımları teşvik etmek için politikayı değiştirdik", word: "encourage", trWord: "teşvik etmek", blank: "We changed the policy to ___ investments" },
-    { en: "He wrote the article to explain the theory", tr: "Teoriyi açıklamak için makaleyi yazdı", word: "explain", trWord: "açıklamak", blank: "He wrote the article to ___ the theory" },
-    { en: "They modified the machine to improve efficiency", tr: "Verimliliği artırmak için makineyi değiştirdiler", word: "improve", trWord: "artırmak", blank: "They modified the machine to ___ efficiency" },
-    { en: "The government passed the law to prevent pollution", tr: "Kirliliği önlemek için hükümet yasayı çıkardı", word: "prevent", trWord: "prevent", blank: "The government passed the law to ___ pollution" },
-    { en: "We need a strategy to achieve the goal", tr: "Hedefe ulaşmak için bir stratejiye ihtiyacımız var", word: "achieve", trWord: "ulaşmak", blank: "We need a strategy to ___ the goal" }
-  ],
-  2: [
-    { en: "They heated the liquid in order for the reaction to start", tr: "Tepkimenin başlaması için sıvıyı ısıttılar", word: "start", trWord: "başlaması", blank: "They heated the liquid in order for the reaction to ___" },
-    { en: "We modified the design in order for the team to work faster", tr: "Ekibin daha hızlı çalışması için tasarımı değiştirdik", word: "work", trWord: "çalışması", blank: "We modified the design in order for the team to ___ faster" },
-    { en: "The doctor gave the drug in order for the patient to recover", tr: "Hastanın iyileşmesi için doktor ilacı verdi", word: "recover", trWord: "iyileşmesi", blank: "The doctor gave the drug in order for the patient to ___" },
-    { en: "The regulation was changed in order for the factory to reduce waste", tr: "Fabrikanın atığı azaltması için yönetmelik değiştirildi", word: "reduce", trWord: "azaltması", blank: "The regulation was changed in order for the factory to ___ waste" },
-    { en: "The professor explained the problem in order for the students to understand", tr: "Öğrencilerin anlaması için profesör problemi açıkladı", word: "understand", trWord: "anlaması", blank: "The professor explained the problem in order for the students to ___" },
-    { en: "We store the files online so as for the users to access them", tr: "Kullanıcıların erişmesi için dosyaları çevrimiçi depolarız", word: "access", trWord: "erişmesi", blank: "We store the files online so as for the users to ___ them" },
-    { en: "They built the road in order for the trucks to transport the goods", tr: "Kamyonların malları taşıması için yolu inşa ettiler", word: "transport", trWord: "taşıması", blank: "They built the road in order for the trucks to ___ the goods" },
-    { en: "The law was passed in order for the community to be safe", tr: "Topluluğun güvende olması için yasa çıkarıldı", word: "be", trWord: "olması", blank: "The law was passed in order for the community to ___ safe" },
-    { en: "He wrote a guide so as for the beginners to learn the method", tr: "Yeni başlayanların yöntemi öğrenmesi için bir kılavuz yazdı", word: "learn", trWord: "öğrenmesi", blank: "He wrote a guide so as for the beginners to ___ the method" },
-    { en: "We need a framework in order for the system to process the data", tr: "Sistemin verileri işlemesi için bir çerçeveye ihtiyacımız var", word: "process", trWord: "işlemesi", blank: "We need a framework in order for the system to ___ the data" },
-    { en: "They created the reserve in order for the animals to survive", tr: "Hayvanların hayatta kalması için koruma alanı oluşturdular", word: "survive", trWord: "hayatta kalması", blank: "They created the reserve in order for the animals to ___" },
-    { en: "The system requires a password in order for the user to log in", tr: "Kullanıcının giriş yapması için sistem şifre gerektirir", word: "log", trWord: "giriş yapması", blank: "The system requires a password in order for the user to ___ in" },
-    { en: "The manager called a meeting in order for the members to decide", tr: "Üyelerin karar vermesi için müdür toplantı düzenledi", word: "decide", trWord: "karar vermesi", blank: "The manager called a meeting in order for the members to ___" },
-    { en: "We provide feedback in order for the students to improve", tr: "Öğrencilerin gelişmesi için geri bildirim sağlıyoruz", word: "improve", trWord: "gelişmesi", blank: "We provide feedback in order for the students to ___" },
-    { en: "The software was updated in order for the device to perform better", tr: "Cihazın daha iyi çalışması için yazılım güncellendi", word: "perform", trWord: "çalışması", blank: "The software was updated in order for the device to ___ better" },
-    { en: "They allocated funds so as for the researcher to finish the study", tr: "Araştırmacının çalışmayı bitirmesi için ödenek ayırdılar", word: "finish", trWord: "bitirmesi", blank: "They allocated funds so as for the researcher to ___ the study" }
-  ]
-};
+const unit15Lesson1SentencesRaw = [
+  { en: "Hired experts to expose.", tr: "Ortaya çıkarmak için uzmanlar işe aldı.", word: "expose", trWord: "ortaya çıkarmak", blank: "Hired experts to ___." },
+  { en: "Requested data to clarify.", tr: "Netleştirmek için veri talep etti.", word: "clarify", trWord: "netleştirmek", blank: "Requested data to ___." },
+  { en: "Funded expansion to expand.", tr: "Genişlemek için büyümeyi finanse etti.", word: "expand", trWord: "genişlemek", blank: "Funded expansion to ___." },
+  { en: "Initiated a shift to alter.", tr: "Değiştirmek için bir geçiş başlattı.", word: "alter", trWord: "değiştirmek", blank: "Initiated a shift to ___." },
+  { en: "Conducted surveys to derive.", tr: "Türetmek için anketler yürüttü.", word: "derive", trWord: "türetmek", blank: "Conducted surveys to ___." },
+  { en: "Collected inputs to validate.", tr: "Doğrulamak için girdileri topladı.", word: "validate", trWord: "doğrulamak", blank: "Collected inputs to ___." },
+  { en: "Integrated modules to clarify.", tr: "Açıklığa kavuşturmak için modülleri entegre etti.", word: "clarify", trWord: "açıklığa kavuşturmak", blank: "Integrated modules to ___." },
+  { en: "Utilized algorithms to detect.", tr: "Tespit etmek için algoritmalar kullandı.", word: "detect", trWord: "tespit etmek", blank: "Utilized algorithms to ___." },
+  { en: "Called a meeting to terminate.", tr: "Sonlandırmak için toplantı çağırdı.", word: "terminate", trWord: "sonlandırmak", blank: "Called a meeting to ___." },
+  { en: "Altered formats to manipulate.", tr: "Yönlendirmek için formatları değiştirdi.", word: "manipulate", trWord: "yönlendirmek", blank: "Altered formats to ___." },
+  { en: "Stopped the process to induce.", tr: "Uyarmak için süreci durdurdu.", word: "induce", trWord: "uyarmak", blank: "Stopped the process to ___." },
+  { en: "Modified parameters to trigger.", tr: "Tetiklemek için parametreleri değiştirdi.", word: "trigger", trWord: "tetiklemek", blank: "Modified parameters to ___." },
+  { en: "Implemented reform to advocate.", tr: "Savunmak için reformu uyguladı.", word: "advocate", trWord: "savunmak", blank: "Implemented reform to ___." },
+  { en: "Designed a framework to define.", tr: "Tanımlamak için bir çerçeve tasarladı.", word: "define", trWord: "tanımlamak", blank: "Designed a framework to ___." },
+  { en: "Deployed a script to calculate.", tr: "Hesaplamak için bir betik dağıttı.", word: "calculate", trWord: "hesaplamak", blank: "Deployed a script to ___." },
+  { en: "Voted at the summit to suspend.", tr: "Askıya almak için zirvede oy kullandı.", word: "suspend", trWord: "askıya almak", blank: "Voted at the summit to ___." },
+  { en: "Updated the database to modify.", tr: "Değiştirmek için veri tabanını güncelledi.", word: "modify", trWord: "değiştirmek", blank: "Updated the database to ___." },
+  { en: "Enforced algorithms to protect.", tr: "Korumak için algoritmaları uyguladı.", word: "protect", trWord: "korumak", blank: "Enforced algorithms to ___." },
+  { en: "Adopted strategies to allocate.", tr: "Tahsis etmek için stratejiler benimsedi.", word: "allocate", trWord: "tahsis etmek", blank: "Adopted strategies to ___." },
+  { en: "Evaluated surveys to anticipate.", tr: "Öngörmek için anketleri değerlendirdi.", word: "anticipate", trWord: "öngörmek", blank: "Evaluated surveys to ___." },
+  { en: "Revised the protocol to specify.", tr: "Belirtmek için protokolü gözden geçirdi.", word: "specify", trWord: "belirtmek", blank: "Revised the protocol to ___." },
+  { en: "Visited the facility to inspect.", tr: "Denetlemek için tesisi ziyaret etti.", word: "inspect", trWord: "denetlemek", blank: "Visited the facility to ___." },
+  { en: "Installed algorithms to process.", tr: "İşlemek için algoritmalar kurdu.", word: "process", trWord: "işlemek", blank: "Installed algorithms to ___." },
+  { en: "Reallocated the budget to shift.", tr: "Kaydırmak için bütçeyi yeniden tahsis etti.", word: "shift", trWord: "kaydırmak", blank: "Reallocated the budget to ___." },
+  { en: "Organized a committee to conduct.", tr: "Yürütmek için bir komite düzenledi.", word: "conduct", trWord: "yürütmek", blank: "Organized a committee to ___." },
+  { en: "Reinforced the core to stabilize.", tr: "Dengelemek için çekirdeği güçlendirdi.", word: "stabilize", trWord: "dengelemek", blank: "Reinforced the core to ___." },
+  { en: "Fine-tuned the script to maximize.", tr: "Maksimize etmek için betiğe ince ayar yaptı.", word: "maximize", trWord: "maksimize etmek", blank: "Fine-tuned the script to ___." },
+  { en: "Optimized the database to accumulate.", tr: "Biriktirmek için veri tabanını optimize etti.", word: "accumulate", trWord: "biriktirmek", blank: "Optimized the database to ___." },
+  { en: "Introduced authentication to restrict.", tr: "Kısıtlamak için kimlik doğrulama getirdi.", word: "restrict", trWord: "kısıtlamak", blank: "Introduced authentication to ___." },
+  { en: "Restructured the database to integrate.", tr: "Entegre etmek için veri tabanını yeniden yapılandırdı.", word: "integrate", trWord: "entegre etmek", blank: "Restructured the database to ___." },
+];
+
+const unit15Lesson2SentencesRaw = [
+  { en: "The agency hired experts to expose.", tr: "Ajans, ortaya çıkarmak için uzmanlar işe aldı.", word: "expose", trWord: "ortaya çıkarmak", blank: "The agency hired experts to ___." },
+  { en: "The client requested data to clarify.", tr: "Müşteri, netleştirmek için veri talep etti.", word: "clarify", trWord: "netleştirmek", blank: "The client requested data to ___." },
+  { en: "Management initiated a shift to alter.", tr: "Yönetim, değiştirmek için bir geçiş başlattı.", word: "alter", trWord: "değiştirmek", blank: "Management initiated a shift to ___." },
+  { en: "The ministry funded expansion to expand.", tr: "Bakanlık, genişlemek için büyümeyi finanse etti.", word: "expand", trWord: "genişlemek", blank: "The ministry funded expansion to ___." },
+  { en: "Programmers altered formats to manipulate.", tr: "Programcılar, yönlendirmek için formatları değiştirdi.", word: "manipulate", trWord: "yönlendirmek", blank: "Programmers altered formats to ___." },
+  { en: "Operators installed algorithms to process.", tr: "Operatörler, işlemek için algoritmalar kurdu.", word: "process", trWord: "işlemek", blank: "Operators installed algorithms to ___." },
+  { en: "Technicians deployed a script to calculate.", tr: "Teknisyenler, hesaplamak için bir betik yükledi.", word: "calculate", trWord: "hesaplamak", blank: "Technicians deployed a script to ___." },
+  { en: "The developer collected inputs to validate.", tr: "Geliştirici, doğrulamak için girdileri topladı.", word: "validate", trWord: "doğrulamak", blank: "The developer collected inputs to ___." },
+  { en: "The board organized a committee to conduct.", tr: "Yönetim kurulu, yürütmek için bir komite düzenledi.", word: "conduct", trWord: "yürütmek", blank: "The board organized a committee to ___." },
+  { en: "Engineers reinforced the core to stabilize.", tr: "Mühendisler, dengelemek için çekirdeği güçlendirdi.", word: "stabilize", trWord: "dengelemek", blank: "Engineers reinforced the core to ___." },
+  { en: "The company adopted strategies to allocate.", tr: "Şirket, tahsis etmek için stratejiler benimsedi.", word: "allocate", trWord: "tahsis etmek", blank: "The company adopted strategies to ___." },
+  { en: "The council revised the protocol to specify.", tr: "Konsey, belirtmek için protokolü gözden geçirdi.", word: "specify", trWord: "belirtmek", blank: "The council revised the protocol to ___." },
+  { en: "The executive called a meeting to terminate.", tr: "Yönetici, sonlandırmak için toplantı çağırdı.", word: "terminate", trWord: "sonlandırmak", blank: "The executive called a meeting to ___." },
+  { en: "Modern systems utilized algorithms to detect.", tr: "Modern sistemler, tespit etmek için algoritmalar kullandı.", word: "detect", trWord: "tespit etmek", blank: "Modern systems utilized algorithms to ___." },
+  { en: "The delegates voted at the summit to suspend.", tr: "Delegeler, askıya almak için zirvede oy kullandı.", word: "suspend", trWord: "askıya almak", blank: "The delegates voted at the summit to ___." },
+  { en: "The technician stopped the process to induce.", tr: "Teknisyen, uyarmak için süreci durdurdu.", word: "induce", trWord: "uyarmak", blank: "The technician stopped the process to ___." },
+  { en: "The director reallocated the budget to shift.", tr: "Direktör, kaydırmak için bütçeyi yeniden tahsis etti.", word: "shift", trWord: "kaydırmak", blank: "The director reallocated the budget to ___." },
+  { en: "Administrators updated the database to modify.", tr: "Yöneticiler, değiştirmek için veri tabanını güncelledi.", word: "modify", trWord: "değiştirmek", blank: "Administrators updated the database to ___." },
+  { en: "The government enforced algorithms to protect.", tr: "Hükümet, korumak için algoritmaları uyguladı.", word: "protect", trWord: "korumak", blank: "The government enforced algorithms to ___." },
+  { en: "Heavy machinery modified parameters to trigger.", tr: "Ağır makineler, tetiklemek için parametreleri değiştirdi.", word: "trigger", trWord: "tetiklemek", blank: "Heavy machinery modified parameters to ___." },
+  { en: "Senior researchers conducted surveys to derive.", tr: "Kıdemli araştırmacılar, türetmek için anketler düzenledi.", word: "derive", trWord: "türetmek", blank: "Senior researchers conducted surveys to ___." },
+  { en: "The software team integrated modules to clarify.", tr: "Yazılım ekibi, açıklığa kavuşturmak için modülleri entegre etti.", word: "clarify", trWord: "açıklığa kavuşturmak", blank: "The software team integrated modules to ___." },
+  { en: "Senior analysts evaluated surveys to anticipate.", tr: "Kıdemli analistler, öngörmek için anketleri değerlendirdi.", word: "anticipate", trWord: "öngörmek", blank: "Senior analysts evaluated surveys to ___." },
+  { en: "Representatives visited the facility to inspect.", tr: "Temsilciler, denetlemek için tesisi ziyaret etti.", word: "inspect", trWord: "denetlemek", blank: "Representatives visited the facility to ___." },
+  { en: "The team restructured the database to integrate.", tr: "Ekip, entegre etmek için veri tabanını yeniden yapılandırdı.", word: "integrate", trWord: "entegre etmek", blank: "The team restructured the database to ___." },
+  { en: "The system introduced authentication to restrict.", tr: "Sistem, kısıtlamak için kimlik doğrulama getirdi.", word: "restrict", trWord: "kısıtlamak", blank: "The system introduced authentication to ___." },
+  { en: "The analyst optimized the database to accumulate.", tr: "Analist, biriktirmek için veri tabanını optimize etti.", word: "accumulate", trWord: "biriktirmek", blank: "The analyst optimized the database to ___." },
+  { en: "The programmer fine-tuned the script to maximize.", tr: "Programcı, maksimize etmek için betiğe ince ayar yaptı.", word: "maximize", trWord: "maksimize etmek", blank: "The programmer fine-tuned the script to ___." },
+  { en: "Institutional authorities implemented reform to advocate.", tr: "Kurumsal makamlar, savunmak için reformu uyguladı.", word: "advocate", trWord: "savunmak", blank: "Institutional authorities implemented reform to ___." },
+  { en: "Technical experts density designed a framework to define.", tr: "Teknik uzmanlar, tanımlamak için yoğun bir şekilde bir çerçeve tasarladı.", word: "define", trWord: "tanımlamak", blank: "Technical experts density designed a framework to ___." },
+];
+
+const unit15Lesson3SentencesRaw = [
+  {
+    en: "The team collected substantial empirical inputs to validate alternative scientific hypotheses.",
+    tr: "Ekip, alternatif bilimsel hipotezleri doğrulamak için önemli deneysel girdiler topladı.",
+    word: "validate",
+    trWord: "doğrulamak",
+    blank: "The team collected substantial empirical inputs to ___ alternative scientific hypotheses.",
+    blocks: [
+      "The team collected",
+      "substantial empirical inputs",
+      "to validate",
+      "alternative scientific hypotheses."
+    ]
+  },
+  {
+    en: "Engineers reinforced the central concrete core to stabilize crucial internal device components.",
+    tr: "Mühendisler, kritik dahili cihaz bileşenlerini dengelemek için merkezi beton çekirdeği güçlendirdi.",
+    word: "stabilize",
+    trWord: "dengelemek",
+    blank: "Engineers reinforced the central concrete core to ___ crucial internal device components.",
+    blocks: [
+      "Engineers reinforced",
+      "the central concrete core",
+      "to stabilize",
+      "crucial internal device components."
+    ]
+  },
+  {
+    en: "The council revised the strict security protocol to specify the broader socio-economic context.",
+    tr: "Konsey, daha geniş sosyo-ekonomik bağlamı belirtmek için katı güvenlik protokolünü gözden geçirdi.",
+    word: "specify",
+    trWord: "belirtmek",
+    blank: "The council revised the strict security protocol to ___ the broader socio-economic context.",
+    blocks: [
+      "The council revised",
+      "the strict security protocol",
+      "to specify",
+      "the broader socio-economic context."
+    ]
+  },
+  {
+    en: "The software team updated the centralized cloud database to modify substantial empirical inputs.",
+    tr: "Yazılım ekibi, önemli deneysel girdileri değiştirmek için merkezi bulut veri tabanını güncelledi.",
+    word: "modify",
+    trWord: "değiştirmek",
+    blank: "The software team updated the centralized cloud database to ___ substantial empirical inputs.",
+    blocks: [
+      "The software team updated",
+      "the centralized cloud database",
+      "to modify",
+      "substantial empirical inputs."
+    ]
+  },
+  {
+    en: "Technicians deployed an automated background script to calculate complex mathematical data ratios.",
+    tr: "Teknisyenler, karmaşık matematiksel veri oranlarını hesaplamak için otomatik bir arka plan betiği dağıttı.",
+    word: "calculate",
+    trWord: "hesaplamak",
+    blank: "Technicians deployed an automated background script to ___ complex mathematical data ratios.",
+    blocks: [
+      "Technicians deployed",
+      "an automated background script",
+      "to calculate",
+      "complex mathematical data ratios."
+    ]
+  },
+  {
+    en: "Annual auditors utilized advanced encryption algorithms to detect the undetected structural anomaly.",
+    tr: "Yıllık denetçiler, tespit edilemeyen yapısal anomaliyi belirlemek için gelişmiş şifreleme algoritmaları kullandı.",
+    word: "detect",
+    trWord: "tespit etmek",
+    blank: "Annual auditors utilized advanced encryption algorithms to ___ the undetected structural anomaly.",
+    blocks: [
+      "Annual auditors utilized",
+      "advanced encryption algorithms",
+      "to detect",
+      "the undetected structural anomaly."
+    ]
+  },
+  {
+    en: "Technical experts designed a new architectural framework to define crucial technical system parameters.",
+    tr: "Teknik uzmanlar, kritik teknik sistem parametrelerini tanımlamak için yeni bir mimari çerçeve tasarladı.",
+    word: "define",
+    trWord: "tanımlamak",
+    blank: "Technical experts designed a new architectural framework to ___ crucial technical system parameters.",
+    blocks: [
+      "Technical experts designed",
+      "a new architectural framework",
+      "to define",
+      "crucial technical system parameters."
+    ]
+  },
+  {
+    en: "Heavy machinery modified its technical system parameters to trigger a more predictable economic dynamic.",
+    tr: "Ağır makineler, daha öngörülebilir bir ekonomik dinamik tetiklemek için teknik sistem parametrelerini değiştirdi.",
+    word: "trigger",
+    trWord: "tetiklemek",
+    blank: "Heavy machinery modified its technical system parameters to ___ a more predictable economic dynamic.",
+    blocks: [
+      "Heavy machinery modified",
+      "its technical system parameters",
+      "to trigger",
+      "a more predictable economic dynamic."
+    ]
+  },
+  {
+    en: "Government agencies installed advanced encryption algorithms to process the newly collected empirical data.",
+    tr: "Devlet kurumları, yeni toplanan deneysel verileri işlemek için gelişmiş şifreleme algoritmaları kurdu.",
+    word: "process",
+    trWord: "işlemek",
+    blank: "Government agencies installed advanced encryption algorithms to ___ the newly collected empirical data.",
+    blocks: [
+      "Government agencies installed",
+      "advanced encryption algorithms",
+      "to process",
+      "the newly collected empirical data."
+    ]
+  },
+  {
+    en: "The ministry funded rapid regional infrastructure expansion to expand the highly competitive dynamic sector.",
+    tr: "Bakanlık, son derece rekabetçi dinamik sektörü genişletmek için hızlı bölgesel altyapı büyümesini finanse etti.",
+    word: "expand",
+    trWord: "genişletmek",
+    blank: "The ministry funded rapid regional infrastructure expansion to ___ the highly competitive dynamic sector.",
+    blocks: [
+      "The ministry funded",
+      "rapid regional infrastructure expansion",
+      "to expand",
+      "the highly competitive dynamic sector."
+    ]
+  },
+  {
+    en: "Technicians restructured the centralized cloud database to integrate individual functional software modules.",
+    tr: "Teknisyenler, bireysel işlevsel yazılım modüllerini entegre etmek için merkezi bulut veri tabanını yeniden yapılandırdı.",
+    word: "integrate",
+    trWord: "entegre etmek",
+    blank: "Technicians restructured the centralized cloud database to ___ individual functional software modules.",
+    blocks: [
+      "Technicians restructured",
+      "the centralized cloud database",
+      "to integrate",
+      "individual functional software modules."
+    ]
+  },
+  {
+    en: "Strict policy introduced multi-factor biometric authentication to restrict unauthorized user network access.",
+    tr: "Katı politika, yetkisiz kullanıcı ağı erişimini kısıtlamak için çok faktörlü biyometrik kimlik doğrulamayı getirdi.",
+    word: "restrict",
+    trWord: "kısıtlamak",
+    blank: "Strict policy introduced multi-factor biometric authentication to ___ unauthorized user network access.",
+    blocks: [
+      "Strict policy introduced",
+      "multi-factor biometric authentication",
+      "to restrict",
+      "unauthorized user network access."
+    ]
+  },
+  {
+    en: "The internal board called an emergency committee meeting to terminate formal bilateral commercial agreements.",
+    tr: "İç yönetim kurulu, resmi ikili ticari anlaşmaları sonlandırmak için acil durum komitesi toplantısı çağırdı.",
+    word: "terminate",
+    trWord: "sonlandırmak",
+    blank: "The internal board called an emergency committee meeting to ___ formal bilateral commercial agreements.",
+    blocks: [
+      "The internal board called",
+      "an emergency committee meeting",
+      "to terminate",
+      "formal bilateral commercial agreements."
+    ]
+  },
+  {
+    en: "The laboratory researcher conducted exhaustive digital database surveys to derive valuable qualitative insights.",
+    tr: "Laboratuvar araştırmacısı, değerli nitel içgörüler elde etmek için kapsamlı dijital veri tabanı taramaları gerçekleştirdi.",
+    word: "derive",
+    trWord: "elde etmek",
+    blank: "The laboratory researcher conducted exhaustive digital database surveys to ___ valuable qualitative insights.",
+    blocks: [
+      "The laboratory researcher conducted",
+      "exhaustive digital database surveys",
+      "to derive",
+      "valuable qualitative insights."
+    ]
+  },
+  {
+    en: "Independent experts visited the modern industrial facility to inspect the entire underlying structural framework.",
+    tr: "Bağımsız uzmanlar, altta yatan tüm yapısal çerçeveyi denetlemek için modern endüstriyel tesisi ziyaret etti.",
+    word: "inspect",
+    trWord: "denetlemek",
+    blank: "Independent experts visited the modern industrial facility to ___ the entire underlying structural framework.",
+    blocks: [
+      "Independent experts visited",
+      "the modern industrial facility",
+      "to inspect",
+      "the entire underlying structural framework."
+    ]
+  },
+  {
+    en: "Institutional authorities voted at the international summit to suspend outdated environmental safety regulations.",
+    tr: "Kurumsal makamlar, güncelliğini yitirmiş çevre güvenliği düzenlemelerini askıya almak için uluslararası zirvede oy kullandı.",
+    word: "suspend",
+    trWord: "askıya almak",
+    blank: "Institutional authorities voted at the international summit to ___ outdated environmental safety regulations.",
+    blocks: [
+      "Institutional authorities voted",
+      "at the international summit",
+      "to suspend",
+      "outdated environmental safety regulations."
+    ]
+  },
+  {
+    en: "Digital media altered its mainstream distribution formats to manipulate public political and cultural perspective.",
+    tr: "Dijital medya, kamuoyunun siyasi ve kültürel bakış açısını yönlendirmek için ana akım dağıtım formatlarını değiştirdi.",
+    word: "manipulate",
+    trWord: "yönlendirmek",
+    blank: "Digital media altered its mainstream distribution formats to ___ public political and cultural perspective.",
+    blocks: [
+      "Digital media altered",
+      "its mainstream distribution formats",
+      "to manipulate",
+      "public political and cultural perspective."
+    ]
+  },
+  {
+    en: "The laboratory researcher requested additional statistical data to clarify the initial investigative project scope.",
+    tr: "Laboratuvar araştırmacısı, ilk araştırma projesi kapsamını netleştirmek için ek istatistiksel veri talep etti.",
+    word: "clarify",
+    trWord: "netleştirmek",
+    blank: "The laboratory researcher requested additional statistical data to ___ the initial investigative project scope.",
+    blocks: [
+      "The laboratory researcher requested",
+      "additional statistical data",
+      "to clarify",
+      "the initial investigative project scope."
+    ]
+  },
+  {
+    en: "The education ministry organized a specialized local committee to conduct comprehensive regional educational surveys.",
+    tr: "Eğitim bakanlığı, kapsamlı bölgesel eğitim anketleri yürütmek için uzmanlaşmış yerel bir komite düzenledi.",
+    word: "conduct",
+    trWord: "yürütmek",
+    blank: "The education ministry organized a specialized local committee to ___ comprehensive regional educational surveys.",
+    blocks: [
+      "The education ministry organized",
+      "a specialized local committee",
+      "to conduct",
+      "comprehensive regional educational surveys."
+    ]
+  },
+  {
+    en: "The software team integrated individual functional software modules to clarify the initial investigative project scope.",
+    tr: "Yazılım ekibi, ilk araştırma projesi kapsamını açıklığa kavuşturmak için bireysel işlevsel yazılım modüllerini entegre etti.",
+    word: "clarify",
+    trWord: "açıklığa kavuşturmak",
+    blank: "The software team integrated individual functional software modules to ___ the initial investigative project scope.",
+    blocks: [
+      "The software team integrated",
+      "individual functional software modules",
+      "to clarify",
+      "the initial investigative project scope."
+    ]
+  },
+  {
+    en: "Senior analysts evaluated comprehensive regional educational surveys to anticipate significant annual financial growth.",
+    tr: "Kıdemli analistler, önemli yıllık finansal büyümeyi öngörmek için kapsamlı bölgesel eğitim anketlerini değerlendirdi.",
+    word: "anticipate",
+    trWord: "öngörmek",
+    blank: "Senior analysts evaluated comprehensive regional educational surveys to ___ significant annual financial growth.",
+    blocks: [
+      "Senior analysts evaluated",
+      "comprehensive regional educational surveys",
+      "to anticipate",
+      "significant annual financial growth."
+    ]
+  },
+  {
+    en: "Institutional authorities implemented comprehensive legislative tax reform to advocate for regional economic development.",
+    tr: "Kurumsal makamlar, bölgesel ekonomik kalkınmayı savunmak için kapsamlı yasal vergi reformunu uyguladı.",
+    word: "advocate",
+    trWord: "savunmak",
+    blank: "Institutional authorities implemented comprehensive legislative tax reform to ___ for regional economic development.",
+    blocks: [
+      "Institutional authorities implemented",
+      "comprehensive legislative tax reform",
+      "to advocate for",
+      "regional economic development."
+    ]
+  }
+];
 
 const unit16LessonSentences = {
   1: [
@@ -6505,14 +7138,16 @@ const rawTopics = [
     title: "XV. Maksat ve Amac Yapıları (Sayfa 107)",
     desc: "Maksat ve amaç bildiren mastar (infinitive of purpose) yapıları",
     icon: "🎯",
-    numLessons: 2,
+    numLessons: 3,
     formulas: [
       { formula: "Subject + Verb + to + Verb (Infinitive of Purpose)", example: "We perform experiments to obtain data: Veri elde etmek için deneyler yaparız" },
-      { formula: "In order for / So as for + Object + to V", example: "They heated the liquid in order for the reaction to start: Tepkimenin başlaması için sıvıyı ısıttılar" }
+      { formula: "In order for / So as for + Object + to V", example: "They heated the liquid in order for the reaction to start: Tepkimenin başlaması için sıvıyı ısıttılar" },
+      { formula: "Subject + Verb + Object + to + Verb + Object", example: "The software team integrated individual functional software modules to clarify the initial investigative project scope: Yazılım ekibi, ilk araştırma projesi kapsamını açıklığa kavuşturmak için bireysel işlevsel yazılım modüllerini entegre etti." }
     ],
     subtitles: [
       "A. Maksat için kullanılan mastar (Sayfa 107)",
-      "B. Maksat için kullanılan mastarın nesnesi (Sayfa 110)"
+      "B. Maksat için kullanılan mastarın nesnesi (Sayfa 110)",
+      "C. Maksat Yapıları (Tam Genişletilmiş Akademik Örnekler)"
     ]
   },
   {
@@ -7782,9 +8417,8 @@ function buildUnit3CustomExercise(sentences, unitId, lessonId, exId) {
       isEngToTr: false
     });
   });
-
-  // 7. Translation Text (Q13-Q15) using sentences 13, 14, 15
-  const txSents = sentences.slice(13, 16);
+  // 7. Translation Text (Q13-Q14) using sentences 13, 14
+  const txSents = sentences.slice(13, 15);
   txSents.forEach((sA, idx) => {
     qList.push({
       id: `u${unitId}l${lessonId}_ex${exId}_tx_${idx}`,
@@ -7795,6 +8429,29 @@ function buildUnit3CustomExercise(sentences, unitId, lessonId, exId) {
       isEngToTr: true
     });
   });
+
+  // 8. Extra Word Bank (Q15) using sentence 15
+  if (sentences.length >= 16) {
+    const sA = sentences[15];
+    const targetWords = sA.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+    const allOtherTrWords = sentences.filter(s => s.en !== sA.en).map(s => s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+    const uniqueDistractors = [...new Set(allOtherTrWords)].filter(w => !targetWords.includes(w));
+    const shuffledDistractors = shuffle(uniqueDistractors);
+    while (shuffledDistractors.length < 3) {
+      shuffledDistractors.push("ve");
+    }
+    const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_ex${exId}_wb_extra`,
+      type: "word-bank",
+      prompt: "İfadenin Türkçe karşılığını oluşturun:",
+      translation: sA.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: sA.en,
+      isEngToTr: true
+    });
+  }
 
   return qList;
 }
@@ -8434,8 +9091,18 @@ const unitSentencesMap = {
     ] }
   },
   13: {
-    1: { exercises: [] },
-    2: { exercises: [] }
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit13LessonSentences[1], 13, 41, 1, 0),
+      buildCustom10QuestionExercises(unit13LessonSentences[1], 13, 41, 2, 10),
+      buildCustom10QuestionExercises(unit13LessonSentences[1], 13, 41, 3, 20),
+      buildCustom10QuestionExercises(unit13LessonSentences[1], 13, 41, 4, 30)
+    ] },
+    2: { exercises: [
+      buildAcademicExercises(unit13LessonSentences[2], 13, 42, 1, 0),
+      buildAcademicExercises(unit13LessonSentences[2], 13, 42, 2, 10),
+      buildAcademicExercises(unit13LessonSentences[2], 13, 42, 3, 5),
+      buildAcademicExercises(unit13LessonSentences[2], 13, 42, 4, 12)
+    ] }
   },
   14: {
     1: { exercises: [
@@ -8448,8 +9115,21 @@ const unitSentencesMap = {
     ] }
   },
   15: {
-    1: { exercises: [] },
-    2: { exercises: [] }
+    1: { exercises: [
+      buildCustom10QuestionExercises(unit15Lesson1SentencesRaw, 15, 44, 1, 0),
+      buildCustom10QuestionExercises(unit15Lesson1SentencesRaw, 15, 44, 2, 10),
+      buildCustom10QuestionExercises(unit15Lesson1SentencesRaw, 15, 44, 3, 20)
+    ] },
+    2: { exercises: [
+      buildCustom10QuestionExercises(unit15Lesson2SentencesRaw, 15, 45, 1, 0),
+      buildCustom10QuestionExercises(unit15Lesson2SentencesRaw, 15, 45, 2, 10),
+      buildCustom10QuestionExercises(unit15Lesson2SentencesRaw, 15, 45, 3, 20)
+    ] },
+    3: { exercises: [
+      buildCustom10QuestionExercises(unit15Lesson3SentencesRaw, 15, 46, 1, 0),
+      buildCustom10QuestionExercises(unit15Lesson3SentencesRaw, 15, 46, 2, 10),
+      buildCustom10QuestionExercises(unit15Lesson3SentencesRaw, 15, 46, 3, 20)
+    ] }
   },
   16: {
     1: { exercises: [

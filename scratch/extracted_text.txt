@@ -1,0 +1,660 @@
+P 0: 
+P 1: Görevin, aşağıda verilen İngilizce cümle listesini kullanarak dil öğrenme uygulamamız için veri tabanı (data.js) ve sözlük (app.js) entegrasyonunu gerçekleştirmektir. Bu görevi yerine getirirken aşağıdaki pedagojik, teknik ve yazılımsal kurallara kesinlikle uymalısın:
+P 2: - Basitten Karmaşığa İlerleme: Verilen tüm cümleleri kelime sayısı ve yapısal karmaşıklığa göre basitten karmaşığa doğru sırala. Alıştırmalarda zor cümlelerin başa gelmemesi için bu pedagojik sıralama korunmalıdır.
+P 3: - 10'arlı Soru Paketleri: Alıştırma sorularını 10'ar soruluk paketler halinde oluştur. Tüm cümleleri kapsayacak şekilde 10'arlı birden fazla alıştırma seti tasarla (Örn: 50 cümle varsa 5 adet alıştırma seti oluşturulmalı ve offset değerleri 0, 10, 20, 30, 40 olarak ayarlanmalıdır).
+P 4: - Paylaşılan ham cümlelerin tamamı eksiksiz olarak veri tabanına yüklenmelidir.
+P 5: - Çoktan seçmeli (multiple-choice) sorularda yanlış seçenekler (çeldiriciler) rastgele cümlelerden OLUŞTURULMAMALIDIR. Aksi takdirde öğrenci tek bir ipucu kelimesinden doğru yanıtı kolayca bulabilir.
+P 6: - Yanlış Seçenek Üretim Algoritması:
+P 7: 1. Özne-Nesne Değişimi (Subject-Object Swap): Cümledeki özne (Subject) ve nesne (Object) kısımlarının yerleri değiştirilerek anlamı tersine çevrilmiş çeldiriciler üretilmelidir.
+P 8: * Örn: "The data contradicts the theory." ➔ "The theory contradicts the data."
+P 9: 2. Kelime Dizilimini Bozma (Word Order Alteration): Eğer özne veya nesne grubu karmaşıksa (3 veya daha fazla kelime ve edattan oluşuyorsa), bu kelime grubunun kendi içindeki kelimelerin sırası bozularak (örneğin iki komşu kelime yer değiştirilerek) sentaks hatası içeren çeldiriciler üretilmelidir.
+P 10: * Örn: "...newly collected empirical data..." ➔ "...collected newly empirical data..."
+P 11: 3. Hedef Kelime Değişimi (Verb/Word Substitution): Cümle yapısı sabit tutulup, sadece hedef kelime/fiil ünite içerisindeki diğer hedef kelimelerle değiştirilerek leksikal çeldiriciler üretilmelidir.
+P 12: * Örn: "The sector anticipates growth." ➔ "The sector specifies growth."
+P 13: 
+P 14: 3. Yazılımsal Tanımlamalar ve Metadata Kuralları:
+P 15: - Veri Seti Yerleşimi: Cümleleri data.js dosyasındaki ilgili ünite dizisine (Örn: unit16LessonSentences[1]) ekle. Her bir cümle için şu formatı kullan:
+P 16: { en: "Cümle", tr: "Çeviri", word: "HedefKelime", trWord: "HedefÇeviri", blank: "___ BoşlukluHali" }
+P 17: - Alıştırma Eşleştirmesi: data.js dosyasındaki unitSentencesMap nesnesinde, ilgili dersin indeksine bu alıştırma paketlerini tanımla:
+P 18: { exercises: [ buildCustom10QuestionExercises(unitLessonSentences[1], unitId, lessonId, exId, offset), ... ] }
+P 19: - Tercüme Kılavuzu: Ders için verilmiş olan "Tercüme Kılavuzu" açıklamasını, data.js içindeki rawTopics dizisinde, ilgili dersin formül detaylarındaki "description" alanına ekle.
+P 20: - Sözlük Güncellemesi (wordDictionary): Eklenen tüm cümlelerde geçen İngilizce kelimeleri analiz et. app.js dosyasındaki wordDictionary nesnesinde tanımlı olmayan tüm yeni kelimeleri tespit ederek Türkçe karşılıklarıyla birlikte bu nesneye alfabetik olarak ekle. (Böylece hover/ipucu çevirisi sorunsuz çalışacaktır).
+P 21: Her bir bölümü bir ders altında kullan. Örneğin “BÖLÜM 1: MODAL TABANLI YALIN EDİLGEN ÖRNEKLER (Positive Modals)” bölümünün tüm örnekleri için uygulamada ürettiğin alıştırmaları Bölüm 11, 32. Ders altına yerleştir. Sonraki bölümleri de yeni ders açarak altında alıştırmalar olarak üret.
+P 22: 
+P 23: “BÖLÜM 4: MODAL TABANLI TAM GENİŞLETİLMİŞ EDİLGEN ÖRNEKLER (Full Modal Passive)” bölümü için ayrıca örneklerin öznelerini ve özneden sonra gelen kısımları ayrıca soru üretmek üzere kullan.
+P 24: 
+P 25: 
+P 26: ürettiğin alıştırmaları Bölüm 11, altındaki derslerin içine yerleştir.
+P 27: 
+P 28: 
+P 29: BÖLÜM 1: MODAL TABANLI YALIN EDİLGEN ÖRNEKLER (Positive Modals)
+P 30: 
+P 31: The project can be abandoned.
+P 32: Growth can be anticipated.
+P 33: The dynamic can be triggered.
+P 34: Context must be specified.
+P 35: Reform must be advocated.
+P 36: The sector must be expanded.
+P 37: Parameters should be defined.
+P 38: Ratios should be calculated.
+P 39: The framework should be inspected.
+P 40: Insights may be derived.
+P 41: Hypotheses may be validated.
+P 42: The anomaly may be detected.
+P 43: Rules might be suspended.
+P 44: Agreements might be terminated.
+P 45: Surveys might be conducted.
+P 46: Media could be manipulated.
+P 47: The scope could be clarified.
+P 48: Inputs could be modified.
+P 49: Modules ought to be integrated.
+P 50: Data ought to be processed.
+P 51: Access will be restricted.
+P 52: The core will be stabilized.
+P 53: Formats will be altered.
+P 54: Flaws will be exposed.
+P 55: Stress will be induced.
+P 56: Logs can be accumulated.
+P 57: Privacy must be protected.
+P 58: Resources should be allocated.
+P 59: Funds can be shifted.
+P 60: Output must be maximized.
+P 61: 
+P 62: BÖLÜM 2: MODAL TABANLI YALIN EDİLGENLERİN OLUMSUZLARI (Negative Modals)
+P 63: The project cannot be abandoned.
+P 64: Growth cannot be anticipated.
+P 65: The dynamic cannot be triggered.
+P 66: Context must not be specified.
+P 67: Reform must not be advocated.
+P 68: The sector must not be expanded.
+P 69: Parameters should not be defined.
+P 70: Ratios should not be calculated.
+P 71: The framework should not be inspected.
+P 72: Insights may not be derived.
+P 73: Hypotheses may not be validated.
+P 74: The anomaly may not be detected.
+P 75: Rules might not be suspended.
+P 76: Agreements might not be terminated.
+P 77: Surveys might not be conducted.
+P 78: Media could not be manipulated.
+P 79: The scope could not be clarified.
+P 80: Inputs could not be modified.
+P 81: Modules ought not to be integrated.
+P 82: Data ought not to be processed.
+P 83: Access will not be restricted.
+P 84: The core will not be stabilized.
+P 85: Formats will not be altered.
+P 86: Flaws will not be exposed.
+P 87: Stress will not be induced.
+P 88: Logs cannot be accumulated.
+P 89: Privacy must not be violated.
+P 90: Resources should not be allocated.
+P 91: Funds cannot be shifted.
+P 92: Output must not be minimized.
+P 93: 
+P 94: BÖLÜM 3: MODAL TABANLI YALIN EDİLGENLERİN SORU BİÇİMLERİ (Interrogative Modals)
+P 95: Can the project be abandoned?
+P 96: Can growth be anticipated?
+P 97: Can the dynamic be triggered?
+P 98: Must context be specified?
+P 99: Must reform be advocated?
+P 100: Must the sector be expanded?
+P 101: Should parameters be defined?
+P 102: Should ratios be calculated?
+P 103: Should the framework be inspected?
+P 104: May insights be derived?
+P 105: May hypotheses be validated?
+P 106: May the anomaly be detected?
+P 107: Might rules be suspended?
+P 108: Might agreements be terminated?
+P 109: Might surveys be conducted?
+P 110: Could media be manipulated?
+P 111: Could the scope be clarified?
+P 112: Could inputs be modified?
+P 113: Should modules be integrated?
+P 114: Should data be processed?
+P 115: Will access be restricted?
+P 116: Will the core be stabilized?
+P 117: Will formats be altered?
+P 118: Will flaws be exposed?
+P 119: Will stress be induced?
+P 120: Can logs be accumulated?
+P 121: Must privacy be protected?
+P 122: Should resources be allocated?
+P 123: Can funds be shifted?
+P 124: Must output be maximized?
+P 125: 
+P 126: BÖLÜM 4: MODAL TABANLI TAM GENİŞLETİLMİŞ EDİLGEN ÖRNEKLER (Full Modal Passive)
+P 127: The initial investigative project can be abandoned by the software development team.
+P 128: Significant annual financial growth can be anticipated by senior financial analysts.
+P 129: This unpredictable economic dynamic can be triggered by a chain of negative physical reactions.
+P 130: The broader socio-economic context must be specified by the strict qualitative selection criteria.
+P 131: Comprehensive legislative tax reform must be advocated by leading institutional authorities.
+P 132: The highly competitive dynamic sector must be expanded by rapid regional infrastructure expansion.
+P 133: Crucial technical system parameters should be defined by the revised security protocol.
+P 134: Complex mathematical data ratios should be calculated by the automated background script.
+P 135: The entire underlying structural framework should be inspected by independent technical experts.
+P 136: Valuable qualitative insights may be derived from comprehensive regional educational surveys.
+P 137: Alternative scientific hypotheses may be validated by the final scientific finding.
+P 138: The undetected structural anomaly may be detected by the principal laboratory researcher.
+P 139: Outdated environmental safety regulations might be suspended by the regional administrative council.
+P 140: Formal bilateral commercial agreements might be terminated by the executive internal board.
+P 141: Comprehensive regional educational surveys might be conducted by the national education ministry.
+P 142: Public political and cultural perspective could be manipulated by mainstream digital media.
+P 143: The initial investigative project scope could be clarified by independent technical experts.
+P 144: Substantial empirical inputs could be modified by the software development team.
+P 145: Individual functional software modules ought to be integrated into the continuous process.
+P 146: The newly collected empirical data ought to be processed by the centralized cloud database.
+P 147: Unauthorized user network access will be restricted by the strict institutional policy.
+P 148: Crucial internal device components will be stabilized by the reinforced central core.
+P 149: Exact distribution and demographic formats will be altered by the sudden paradigm shift.
+P 150: Hidden organizational system flaws will be exposed by the independent annual audit.
+P 151: Severe psychological and occupational stress will be induced by the continuous chemical process.
+P 152: Detailed historical system logs can be accumulated by the centralized cloud database.
+P 153: Sensitive user information privacy must be protected by advanced encryption algorithms.
+P 154: Maximum annual manufacturing resources should be allocated by innovative corporate strategies.
+P 155: Separate international research funds can be shifted by the regional administrative council.
+P 156: Maximum annual manufacturing output must be maximized by innovative corporate strategies.
+P 157: The newly proposed architectural framework can be inspected by independent technical experts.
+P 158: Substantial long-term economic growth can be anticipated by leading institutional authorities.
+P 159: A severe psychological and occupational stress can be induced by the revised security protocol.
+P 160: The exact distribution and demographic formats must be specified by the national education ministry.
+P 161: Comprehensive legislative tax reform must be advocated by senior financial analysts.
+P 162: The entire underlying structural framework must be expanded by rapid regional infrastructure expansion.
+P 163: Crucial technical system parameters should be defined by the software development team.
+P 164: Complex mathematical data ratios should be calculated by the centralized cloud database.
+P 165: Individual functional software modules should be inspected by independent technical experts.
+P 166: Valuable qualitative insights may be derived from detailed historical system logs.
+P 167: Alternative scientific hypotheses may be validated by the principal laboratory researcher.
+P 168: The undetected structural anomaly may be detected by the independent annual audit.
+P 169: Outdated environmental safety regulations might be suspended by leading institutional authorities.
+P 170: Formal bilateral commercial agreements might be terminated by the regional administrative council.
+P 171: Comprehensive regional educational surveys might be conducted by independent technical experts.
+P 172: Public political and cultural perspective could be manipulated by the executive internal board.
+P 173: The initial investigative project scope could be clarified by the principal laboratory researcher.
+P 174: Substantial empirical inputs could be modified by the revised security protocol.
+P 175: Crucial internal device components ought to be integrated into the automated background script.
+P 176: Sensitive user information privacy ought to be processed by advanced encryption algorithms.
+P 177: Unauthorized user network access will be restricted by the automated background script.
+P 178: The newly proposed architectural framework will be stabilized by the software development team.
+P 179: Exact distribution and demographic formats will be altered by the executive internal board.
+P 180: Hidden organizational system flaws will be exposed by the principal laboratory researcher.
+P 181: This unpredictable economic dynamic will be induced by the sudden paradigm shift.
+P 182: Detailed historical system logs can be accumulated by the software development team.
+P 183: Sensitive user information privacy must be protected by the strict institutional policy.
+P 184: Maximum annual manufacturing resources should be allocated by the executive internal board.
+P 185: Separate international research funds can be shifted by the software development team.
+P 186: Maximum annual manufacturing output must be maximized by the automated background script.
+P 187: 
+P 188: 
+P 189: 
+P 190: 
+P 191: 
+P 192: 
+P 193: 
+P 194: 
+P 195: 
+P 196: 
+P 197: 
+P 198: 
+P 199: 
+P 200: 
+P 201: 
+P 202: 
+P 203: 
+P 204: 
+P 205: 
+P 206: 
+P 207: 
+P 208: 
+P 209: 
+P 210: 
+P 211: 
+P 212: 
+P 213: 
+P 214: 
+P 215: 
+P 216: 
+P 217: 
+P 218: 
+P 219: 
+P 220: 
+P 221: 
+P 222: 
+P 223: 
+P 224: 
+P 225: 
+P 226: 
+P 227: 
+P 228: 
+P 229: 
+P 230: 
+P 231: 
+P 232: 
+P 233: 
+P 234: 
+P 235: 
+P 236: 
+P 237: 
+P 238: 
+P 239: 
+P 240: 
+P 241: 
+P 242: 
+P 243: 
+P 244: 
+P 245: 
+P 246: 
+P 247: 
+P 248: 
+P 249: 
+P 250: 
+P 251: 
+P 252: 
+P 253: 
+P 254: 
+P 255: 
+P 256: 
+P 257: 
+P 258: 
+P 259: 
+P 260: 
+P 261: 
+P 262: 
+P 263: 
+P 264: 
+P 265: 
+P 266: 
+P 267: 
+P 268: The project is abandoned.
+P 269: Growth is anticipated.
+P 270: The dynamic is triggered.
+P 271: Context is specified.
+P 272: Reform is advocated.
+P 273: The sector is expanded.
+P 274: Parameters are defined.
+P 275: Ratios are calculated.
+P 276: The framework is inspected.
+P 277: Insights are derived.
+P 278: Hypotheses were validated.
+P 279: The anomaly was detected.
+P 280: Rules were suspended.
+P 281: Agreements were not terminated.
+P 282: Surveys were conducted.
+P 283: Media was manipulated.
+P 284: The scope was clarified.
+P 285: Inputs were modified.
+P 286: Modules were integrated.
+P 287: Data was processed.
+P 288: Access will be restricted.
+P 289: The core will be stabilized.
+P 290: Formats will be altered.
+P 291: Flaws will be exposed.
+P 292: Stress will be induced.
+P 293: Logs have been accumulated.
+P 294: Privacy has been violated.
+P 295: Resources have been allocated.
+P 296: Funds have been shifted.
+P 297: Output has been maximized.
+P 298: The project is not abandoned.
+P 299: Growth is not anticipated.
+P 300: The dynamic is not triggered.
+P 301: Context is not specified.
+P 302: Reform is not advocated.
+P 303: The sector is not expanded.
+P 304: Parameters are not defined.
+P 305: Ratios are not calculated.
+P 306: The framework is not inspected.
+P 307: Insights are not derived.
+P 308: Hypotheses were not validated.
+P 309: The anomaly was not detected.
+P 310: Rules were not suspended.
+P 311: Agreements were not terminated.
+P 312: Surveys were not conducted.
+P 313: Media was not manipulated.
+P 314: The scope was not clarified.
+P 315: Inputs were not modified.
+P 316: Modules were not integrated.
+P 317: Data was not processed.
+P 318: Access will not be restricted.
+P 319: The core will not be stabilized.
+P 320: Formats will not be altered.
+P 321: Flaws will not be exposed.
+P 322: Stress will not be induced.
+P 323: Logs have not been accumulated.
+P 324: Privacy has not been violated.
+P 325: Resources have not been allocated.
+P 326: Funds have not been shifted.
+P 327: Output has not been maximized.
+P 328: The project is abandoned by the team.
+P 329: Growth is anticipated by analysts.
+P 330: The dynamic is triggered by reactions.
+P 331: Context is specified by criteria.
+P 332: Reform is advocated by authorities.
+P 333: The sector is expanded by infrastructure.
+P 334: Parameters are defined by the protocol.
+P 335: Ratios are calculated by the script.
+P 336: The framework is inspected by experts.
+P 337: Insights are derived by researchers.
+P 338: Hypotheses were validated by the finding.
+P 339: The anomaly was detected by the researcher.
+P 340: Rules were suspended by the council.
+P 341: Agreements were terminated by the board.
+P 342: Surveys were conducted by the ministry.
+P 343: Media was manipulated by agencies.
+P 344: The scope was clarified by experts.
+P 345: Inputs were modified by developers.
+P 346: Modules were integrated by the team.
+P 347: Data was processed by the database.
+P 348: Access will be restricted by the policy.
+P 349: The core will be stabilized by components.
+P 350: Formats will be altered by the shift.
+P 351: Flaws will be exposed by the audit.
+P 352: Stress will be induced by the process.
+P 353: Logs have been accumulated by the database.
+P 354: Privacy has been violated by software.
+P 355: Resources have been allocated by strategies.
+P 356: Funds have been shifted by the committee.
+P 357: Output has been maximized by strategies.
+P 358: The initial investigative project is abandoned by the software development team.
+P 359: Significant annual financial growth is anticipated by senior financial analysts.
+P 360: This unpredictable economic dynamic is triggered by a chain of negative physical reactions.
+P 361: The broader socio-economic context is specified by the strict qualitative selection criteria.
+P 362: Comprehensive legislative tax reform is advocated by leading institutional authorities.
+P 363: The highly competitive dynamic sector is expanded by rapid regional infrastructure expansion.
+P 364: Crucial technical system parameters are defined by the revised security protocol.
+P 365: Complex mathematical data ratios are calculated by the automated background script.
+P 366: The entire underlying structural framework is inspected by independent technical experts.
+P 367: Valuable qualitative insights are derived from comprehensive regional educational surveys.
+P 368: Alternative scientific hypotheses were validated by the final scientific finding.
+P 369: The undetected structural anomaly was detected by the principal laboratory researcher.
+P 370: Outdated environmental safety regulations were suspended by the regional administrative council.
+P 371: Formal bilateral commercial agreements were terminated by the executive internal board.
+P 372: Comprehensive regional educational surveys were conducted by the national education ministry.
+P 373: Public political and cultural perspective was manipulated by mainstream digital media.
+P 374: The initial investigative project scope was clarified by independent technical experts.
+P 375: Individual functional software modules were modified by the software development team.
+P 376: Separate unstable chemical variables were integrated into the continuous chemical process.
+P 377: The newly collected empirical data was processed by the centralized cloud database.
+P 378: Unauthorized user network access will be restricted by the strict institutional policy.
+P 379: Crucial internal device components will be stabilized by the reinforced central core.
+P 380: Exact distribution and demographic formats will be altered by the sudden paradigm shift.
+P 381: Hidden organizational system flaws will be exposed by the independent annual audit.
+P 382: Severe psychological and occupational stress will be induced by the continuous chemical process.
+P 383: Detailed historical system logs have been accumulated by the centralized cloud database.
+P 384: Sensitive user information privacy has been violated by the unauthorized network access.
+P 385: Maximum annual manufacturing resources have been allocated by innovative corporate strategies.
+P 386: Separate international research funds have been shifted by the ethics evaluation committee.
+P 387: Maximum annual manufacturing output has been maximized by innovative corporate strategies.
+P 388: 
+P 389: 
+P 390: 
+P 391: 
+P 392: 
+P 393: 
+P 394: 
+P 395: 
+P 396: 
+P 397: 
+P 398: 
+P 399: 
+P 400: 
+P 401: 
+P 402: 
+P 403: 
+P 404: 
+P 405: 
+P 406: 
+P 407: 
+P 408: 
+P 409: 
+P 410: 
+P 411: 
+P 412: 
+P 413: 
+P 414: 
+P 415: 
+P 416: 
+P 417: 
+P 418: 
+P 419: 
+P 420: 
+P 421: Görevin, aşağıda verilen İngilizce cümle listesini kullanarak dil öğrenme uygulamamız için veri tabanı (data.js) ve sözlük (app.js) entegrasyonunu gerçekleştirmektir. Bu görevi yerine getirirken aşağıdaki pedagojik, teknik ve yazılımsal kurallara kesinlikle uymalısın:
+P 422: 
+P 423: 1. Pedagojik Yapı ve Sıralama Kuralları:
+P 424: - Basitten Karmaşığa İlerleme: Verilen tüm cümleleri kelime sayısı ve yapısal karmaşıklığa göre basitten karmaşığa doğru sırala. Alıştırmalarda zor cümlelerin başa gelmemesi için bu pedagojik sıralama korunmalıdır.
+P 425: - 10'arlı Soru Paketleri: Alıştırma sorularını 10'ar soruluk paketler halinde oluştur. Tüm cümleleri kapsayacak şekilde 10'arlı birden fazla alıştırma seti tasarla (Örn: 50 cümle varsa 5 adet alıştırma seti oluşturulmalı ve offset değerleri 0, 10, 20, 30, 40 olarak ayarlanmalıdır).
+P 426: - Örneklerin Tamamı: Paylaşılan ham cümlelerin tamamı eksiksiz olarak veri tabanına yüklenmelidir.
+P 427: 
+P 428: 2. Çoktan Seçmeli Sorularda Akıllı Çeldirici (Distractor) Kuralları:
+P 429: - Çoktan seçmeli (multiple-choice) sorularda yanlış seçenekler (çeldiriciler) rastgele cümlelerden OLUŞTURULMAMALIDIR. Aksi takdirde öğrenci tek bir ipucu kelimesinden doğru yanıtı kolayca bulabilir.
+P 430: - Yanlış Seçenek Üretim Algoritması:
+P 431: 1. Özne-Nesne Değişimi (Subject-Object Swap): Cümledeki özne (Subject) ve nesne (Object) kısımlarının yerleri değiştirilerek anlamı tersine çevrilmiş çeldiriciler üretilmelidir.
+P 432: * Örn: "The data contradicts the theory." ➔ "The theory contradicts the data."
+P 433: 2. Kelime Dizilimini Bozma (Word Order Alteration): Eğer özne veya nesne grubu karmaşıksa (3 veya daha fazla kelime ve edattan oluşuyorsa), bu kelime grubunun kendi içindeki kelimelerin sırası bozularak (örneğin iki komşu kelime yer değiştirilerek) sentaks hatası içeren çeldiriciler üretilmelidir.
+P 434: * Örn: "...newly collected empirical data..." ➔ "...collected newly empirical data..."
+P 435: 3. Hedef Kelime Değişimi (Verb/Word Substitution): Cümle yapısı sabit tutulup, sadece hedef kelime/fiil ünite içerisindeki diğer hedef kelimelerle değiştirilerek leksikal çeldiriciler üretilmelidir.
+P 436: * Örn: "The sector anticipates growth." ➔ "The sector specifies growth."
+P 437: 
+P 438: 3. Yazılımsal Tanımlamalar ve Metadata Kuralları:
+P 439: - Veri Seti Yerleşimi: Cümleleri data.js dosyasındaki ilgili ünite dizisine (Örn: unit16LessonSentences[1]) ekle. Her bir cümle için şu formatı kullan:
+P 440: { en: "Cümle", tr: "Çeviri", word: "HedefKelime", trWord: "HedefÇeviri", blank: "___ BoşlukluHali" }
+P 441: - Alıştırma Eşleştirmesi: data.js dosyasındaki unitSentencesMap nesnesinde, ilgili dersin indeksine bu alıştırma paketlerini tanımla:
+P 442: { exercises: [ buildCustom10QuestionExercises(unitLessonSentences[1], unitId, lessonId, exId, offset), ... ] }
+P 443: - Tercüme Kılavuzu: Ders için verilmiş olan "Tercüme Kılavuzu" açıklamasını, data.js içindeki rawTopics dizisinde, ilgili dersin formül detaylarındaki "description" alanına ekle.
+P 444: - Sözlük Güncellemesi (wordDictionary): Eklenen tüm cümlelerde geçen İngilizce kelimeleri analiz et. app.js dosyasındaki wordDictionary nesnesinde tanımlı olmayan tüm yeni kelimeleri tespit ederek Türkçe karşılıklarıyla birlikte bu nesneye alfabetik olarak ekle. (Böylece hover/ipucu çevirisi sorunsuz çalışacaktır).
+P 445: 
+P 446: ürettiğin alıştırmaları Bölüm 7, 20. Ders altına yerleştir.
+P 447: 
+P 448: 
+P 449: 
+P 450: 
+P 451: 
+P 452: Tercüme Kılavuzu: Akademik makalelerde özneler ve nesneler; sıfat tamlamaları ve sıfat cümleleri (relative clauses) gibi yan yapılarla çok fazla uzatılarak bazen 3-4 satırı bulabilir. Öğrenci eğer cümledeki "Ana Özne ne?", "Geçişli Fiil ne?" ve "Bu fiilin etkilediği Nesne nerede?" üçlüsünü (SVO) doğru tespit edebilirse, cümlenin etrafındaki tüm süsleri ve tümleçleri kolayca ayıklayarak ana fikri saniyeler içinde anlar.
+P 453: 
+P 454: BÖLÜM: YALIN (KUYRUKSUZ) ÖRNEK LİSTESİ
+P 455: 
+P 456: The data contradicts the theory.
+P 457: The context specifies the criteria.
+P 458: The sector anticipates growth.
+P 459: Authorities advocate reform.
+P 460: The dynamic triggers reaction.
+P 461: Experts clarify the scope.
+P 462: The process induces stress.
+P 463: The anomaly distorts results.
+P 464: Media manipulates perspective.
+P 465: The system accommodates expansion.
+P 466: The protocol defines parameters.
+P 467: The contract binds institutions.
+P 468: Analysts inspect the framework.
+P 469: The variable affects outcomes.
+P 470: The core stabilizes components.
+P 471: The graph illustrates percentages.
+P 472: The policy restricts access.
+P 473: The finding validates hypotheses.
+P 474: The team modifies modules.
+P 475: The committee evaluates feedback.
+P 476: The researcher isolates variables.
+P 477: Strategies maximize efficiency.
+P 478: The script calculates ratios.
+P 479: The audit exposes flaws.
+P 480: The shift alters trends.
+P 481: The framework secures data.
+P 482: The council suspended regulations.
+P 483: The board terminated agreements.
+P 484: The ministry conducted surveys.
+P 485: The database accumulates logs.
+P 486: 
+P 487: 
+P 488: 
+P 489: 
+P 490: 
+P 491: ADIM: GENİŞLETİLMİŞ ÖZNELER (EXPANDED SUBJECTS)
+P 492: Sadece cümlenin sol tarafındaki özne blokları akademik sıfatlar ve tamlamalarla büyütülmüştür:
+P 493: The newly collected empirical data...
+P 494: The broader socio-economic context...
+P 495: The highly competitive dynamic sector...
+P 496: Leading institutional authorities...
+P 497: This unpredictable economic dynamic...
+P 498: Independent technical experts...
+P 499: The continuous chemical process...
+P 500: The undetected structural anomaly...
+P 501: Mainstream digital media...
+P 502: The updated operational system...
+P 503: The revised security protocol...
+P 504: The legally binding contract...
+P 505: Senior financial analysts...
+P 506: The primary independent variable...
+P 507: The reinforced central core...
+P 508: The attached statistical graph...
+P 509: The strict institutional policy...
+P 510: The final scientific finding...
+P 511: The software development team...
+P 512: The ethics evaluation committee...
+P 513: The principal laboratory researcher...
+P 514: Innovative corporate strategies...
+P 515: The automated background script...
+P 516: The independent annual audit...
+P 517: The sudden paradigm shift...
+P 518: The advanced cryptographic framework...
+P 519: The regional administrative council...
+P 520: The executive internal board...
+P 521: The national education ministry...
+P 522: The centralized cloud database...
+P 523: Genişletilmiş öznelerin yalın (kuyruksuz) geçişli fiil ve nesne ile birleşmiş hali:
+P 524: 
+P 525: The newly collected empirical data contradicts the theory.
+P 526: The broader socio-economic context specifies the criteria.
+P 527: The highly competitive dynamic sector anticipates growth.
+P 528: Leading institutional authorities advocate reform.
+P 529: This unpredictable economic dynamic triggers reaction.
+P 530: Independent technical experts clarify the scope.
+P 531: The continuous chemical process induces stress.
+P 532: The undetected structural anomaly distorts results.
+P 533: Mainstream digital media manipulates perspective.
+P 534: The updated operational system accommodates expansion.
+P 535: The revised security protocol defines parameters.
+P 536: The legally binding contract binds institutions.
+P 537: Senior financial analysts inspect the framework.
+P 538: The primary independent variable affects outcomes.
+P 539: The reinforced central core stabilizes components.
+P 540: The attached statistical graph illustrates percentages.
+P 541: The strict institutional policy restricts access.
+P 542: The final scientific finding validates hypotheses.
+P 543: The software development team modifies modules.
+P 544: The ethics evaluation committee evaluates feedback.
+P 545: The principal laboratory researcher isolates variables.
+P 546: Innovative corporate strategies maximize efficiency.
+P 547: The automated background script calculates ratios.
+P 548: The independent annual audit exposes flaws.
+P 549: The sudden paradigm shift alters trends.
+P 550: The advanced cryptographic framework secures data.
+P 551: The regional administrative council suspended regulations.
+P 552: The executive internal board terminated agreements.
+P 553: The national education ministry conducted surveys.
+P 554: The centralized cloud database accumulates logs.
+P 555: 
+P 556: 
+P 557: 
+P 558: ADIM: GENİŞLETİLMİŞ NESNELER (EXPANDED OBJECTS)
+P 559: 
+P 560: 
+P 561: ...the long-standing theoretical model.
+P 562: ...the strict qualitative selection criteria.
+P 563: ...significant annual financial growth.
+P 564: ...comprehensive legislative tax reform.
+P 565: ...a chain of negative physical reactions.
+P 566: ...the initial investigative project scope.
+P 567: ...severe psychological and occupational stress.
+P 568: ...the final statistical research results.
+P 569: ...public political and cultural perspective.
+P 570: ...rapid regional infrastructure expansion.
+P 571: ...crucial technical system parameters.
+P 572: ...separate international research institutions.
+P 573: ...the entire underlying structural framework.
+P 574: ...excellent academic student outcomes.
+P 575: ...crucial internal device components.
+P 576: ...exact distribution and demographic percentages.
+P 577: ...unauthorized user network access.
+P 578: ...alternative alternative scientific hypotheses.
+P 579: ...individual functional software modules.
+P 580: ...detailed anonymous student feedback.
+P 581: ...separate unstable chemical variables.
+P 582: ...maximum annual manufacturing efficiency.
+P 583: ...complex mathematical data ratios.
+P 584: ...hidden organizational system flaws.
+P 585: ...global consumer behavior trends.
+P 586: ...sensitive user information data.
+P 587: ...outdated environmental safety regulations.
+P 588: ...formal bilateral commercial agreements.
+P 589: ...comprehensive regional educational surveys.
+P 590: ...detailed historical system logs.
+P 591: 
+P 592: 
+P 593: Genişletilmiş nesnelerin yalın (kuyruksuz) özne ve geçişli fiil ile birleşmiş hali:
+P 594: 
+P 595: The data contradicts the long-standing theoretical model.
+P 596: The context specifies the strict qualitative selection criteria.
+P 597: The sector anticipates significant annual financial growth.
+P 598: Authorities advocate comprehensive legislative tax reform.
+P 599: The dynamic triggers a chain of negative physical reactions.
+P 600: Experts clarify the initial investigative project scope.
+P 601: The process induces severe psychological and occupational stress.
+P 602: The anomaly distorts the final statistical research results.
+P 603: Media manipulates public political and cultural perspective.
+P 604: The system accommodates rapid regional infrastructure expansion.
+P 605: The protocol defines crucial technical system parameters.
+P 606: The contract binds separate international research institutions.
+P 607: Analysts inspect the entire underlying structural framework.
+P 608: The variable affects excellent academic student outcomes.
+P 609: The core stabilizes crucial internal device components.
+P 610: The graph illustrates exact distribution and demographic percentages.
+P 611: The policy restricts unauthorized user network access.
+P 612: The finding validates alternative alternative scientific hypotheses.
+P 613: The team modifies individual functional software modules.
+P 614: The committee evaluates detailed anonymous student feedback.
+P 615: The researcher isolates separate unstable chemical variables.
+P 616: Strategies maximize maximum annual manufacturing efficiency.
+P 617: The script calculates complex mathematical data ratios.
+P 618: The audit exposes hidden organizational system flaws.
+P 619: The shift alters global consumer behavior trends.
+P 620: The framework secures sensitive user information data.
+P 621: The council suspended outdated environmental safety regulations.
+P 622: The board terminated formal bilateral commercial agreements.
+P 623: The ministry conducted comprehensive regional educational surveys.
+P 624: The database accumulates detailed historical system logs.
+P 625: 
+P 626: ADIM: TAM GENİŞLETİLMİŞ AKADEMİK CÜMLELER (FULL SVO)
+P 627: 
+P 628: 
+P 629: The newly collected empirical data contradicts the long-standing theoretical model.
+P 630: The broader socio-economic context specifies the strict qualitative selection criteria.
+P 631: The highly competitive dynamic sector anticipates significant annual financial growth.
+P 632: Leading institutional authorities advocate comprehensive legislative tax reform.
+P 633: This unpredictable economic dynamic triggers a chain of negative physical reactions.
+P 634: Independent technical experts clarify the initial investigative project scope.
+P 635: The continuous chemical process induces severe psychological and occupational stress.
+P 636: The undetected structural anomaly distorts the final statistical research results.
+P 637: Mainstream digital media manipulates public political and cultural perspective.
+P 638: The updated operational system accommodates rapid regional infrastructure expansion.
+P 639: The revised security protocol defines crucial technical system parameters.
+P 640: The legally binding contract binds separate international research institutions.
+P 641: Senior financial analysts inspect the entire underlying structural framework.
+P 642: The primary independent variable affects excellent academic student outcomes.
+P 643: The reinforced central core stabilizes crucial internal device components.
+P 644: The attached statistical graph illustrates exact distribution and demographic percentages.
+P 645: The strict institutional policy restricts unauthorized user network access.
+P 646: The final scientific finding validates alternative alternative scientific hypotheses.
+P 647: The software development team modifies individual functional software modules.
+P 648: The ethics evaluation committee evaluates detailed anonymous student feedback.
+P 649: The principal laboratory researcher isolates separate unstable chemical variables.
+P 650: Innovative corporate strategies maximize maximum annual manufacturing efficiency.
+P 651: The automated background script calculates complex mathematical data ratios.
+P 652: The independent annual audit exposes hidden organizational system flaws.
+P 653: The sudden paradigm shift alters global consumer behavior trends.
+P 654: The advanced cryptographic framework secures sensitive user information data.
+P 655: The regional administrative council suspended outdated environmental safety regulations.
+P 656: The executive internal board terminated formal bilateral commercial agreements.
+P 657: The national education ministry conducted comprehensive regional educational surveys.
+P 658: The centralized cloud database accumulates detailed historical system logs.
+P 659: 
