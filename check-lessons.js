@@ -38,8 +38,19 @@ if (!units || !lessons) {
 let totalLoadedQuestions = 0;
 let emptyLessonsCount = 0;
 
+let normalUnitIndex = 0;
+const unitDisplayNames = {};
+[...units].sort((a, b) => a.id - b.id).forEach(u => {
+  if (u.title.startsWith("Ara Bölüm")) {
+    unitDisplayNames[u.id] = u.title;
+  } else {
+    normalUnitIndex++;
+    unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}`;
+  }
+});
+
 units.forEach(unit => {
-  console.log(`\x1b[1mBölüm ${unit.id}: ${unit.title}\x1b[0m`);
+  console.log(`\x1b[1m${unitDisplayNames[unit.id]}\x1b[0m`);
   
   unit.lessons.forEach(lId => {
     const lesson = lessons.find(l => l.id === lId);

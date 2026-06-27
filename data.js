@@ -406,6 +406,7 @@ const wordDictionary = {
   "concepts": "kavramlar",
   "conceptual": "kavramsal",
   "concerned": "endişeli / ilgili",
+  "conclude": "sonuçlandırmak",
   "concluding": "sonuç / kapanış",
   "conclusion": "sonuç / sonuçlanma",
   "concrete": "beton / somut",
@@ -4494,6 +4495,298 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
   };
 }
 
+
+function buildAra3Exercises(sentences, unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const yalinSentences = sentences.filter(s => !s.en.includes(','));
+  const akademikSentences = sentences.filter(s => s.en.includes(','));
+  
+  const qList1 = [];
+  const qList2 = [];
+  const qList3 = [];
+  
+  // ==========================================
+  // EXERCISE 1: Kelime Isınma & Cümle Kurma (Yalın)
+  // ==========================================
+  // Q1: Matching vocab (first 5 unique word pairs)
+  const vocabPairs1 = [];
+  const seenWords = new Set();
+  for (let s of sentences) {
+    if (vocabPairs1.length >= 5) break;
+    if (s.word && s.trWord && !seenWords.has(s.word)) {
+      seenWords.add(s.word);
+      vocabPairs1.push({ left: s.trWord, right: s.word });
+    }
+  }
+  qList1.push({
+    id: `u${unitId}l${lessonId}_ex1_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: vocabPairs1
+  });
+  
+  // Q2: Matching vocab (next 5 unique word pairs)
+  const vocabPairs2 = [];
+  for (let s of sentences) {
+    if (vocabPairs2.length >= 5) break;
+    if (s.word && s.trWord && !seenWords.has(s.word)) {
+      seenWords.add(s.word);
+      vocabPairs2.push({ left: s.trWord, right: s.word });
+    }
+  }
+  if (vocabPairs2.length > 0) {
+    qList1.push({
+      id: `u${unitId}l${lessonId}_ex1_match2`,
+      type: "matching",
+      prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+      pairs: vocabPairs2
+    });
+  }
+  
+  // Q3-Q11: Word Bank (first 9 Yalın Cümleler)
+  yalinSentences.slice(0, 9).forEach((s, idx) => {
+    const isPast = s.en.includes('debated') || s.en.includes('collapsed') || s.en.includes('investigated') || s.en.includes('responded') || s.en.includes('expanded') || s.en.includes('evolved') || s.en.includes('shifted') || s.en.includes('intervened') || s.en.includes('started') || s.en.includes('concluded') || s.en.includes('had') || s.en.includes('was') || s.en.includes('were') || s.en.includes('been');
+    const distractors = isPast ? ["is", "had", "was"] : ["was", "has", "did"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    qList1.push({
+      id: `u${unitId}l${lessonId}_ex1_wb_${idx}`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  });
+  
+  // Q12: Keyboard Translation (the 10th Yalın Cümle)
+  const lastYalin = yalinSentences[9];
+  qList1.push({
+    id: `u${unitId}l${lessonId}_ex1_trans_last`,
+    type: "translation-text",
+    prompt: `"${lastYalin.en}" ifadesini Türkçe'ye çevirin:`,
+    enSentence: lastYalin.en,
+    correctSentence: lastYalin.tr,
+    isEngToTr: true
+  });
+  
+  // ==========================================
+  // EXERCISE 2: Dil Bilgisi & Zaman Uyumu (Cloze Test)
+  // ==========================================
+  // Q1-Q10: Cloze Test on 10 Academic sentences
+  akademikSentences.forEach((s, idx) => {
+    let options = [];
+    if (s.word === "valid") {
+      options = ["is", "was", "are", "had been"];
+    } else if (s.word === "available") {
+      options = ["is", "was", "are", "had been"];
+    } else if (s.word === "fluctuate") {
+      options = ["fluctuates", "fluctuated", "is fluctuating", "fluctuate"];
+    } else if (s.word === "emerge") {
+      options = ["emerges", "emerged", "is emerging", "emerge"];
+    } else if (s.word === "decline") {
+      options = ["declines", "declined", "is declining", "decline"];
+    } else if (s.word === "expand") {
+      options = ["expands", "expanded", "is expanding", "expand"];
+    } else if (s.word === "obvious") {
+      options = ["is", "was", "are", "be"];
+    } else if (s.word === "complex") {
+      options = ["is", "was", "are", "be"];
+    } else if (s.word === "function") {
+      options = ["functions", "functioned", "is functioning", "function"];
+    } else if (s.word === "vary") {
+      options = ["varies", "varied", "is varying", "vary"];
+    } else if (s.word === "debate") {
+      options = ["debated", "debate", "are debating", "had debated"];
+    } else if (s.word === "collapse") {
+      options = ["collapsed", "collapses", "is collapsing", "was collapsed"];
+    } else if (s.word === "investigate") {
+      options = ["investigated", "investigate", "are investigating", "have investigated"];
+    } else if (s.word === "respond") {
+      options = ["responded", "respond", "are responding", "responding"];
+    } else if (s.word === "evolve") {
+      options = ["evolved", "evolves", "is evolving", "evolve"];
+    } else if (s.word === "shift") {
+      options = ["shifted", "shifts", "is shifting", "shifted"];
+    } else if (s.word === "intervene") {
+      options = ["intervened", "intervene", "are intervening", "intervening"];
+    } else if (s.word === "cooperate") {
+      options = ["cooperated", "cooperate", "are cooperating", "cooperating"];
+    } else if (s.word === "terminate") {
+      options = ["terminated", "terminates", "is terminating", "terminated"];
+    } else if (s.word === "conflict") {
+      options = ["conflict", "conflicts", "conflicted", "conflicting"];
+    } else if (s.word === "conclude") {
+      options = ["concluded", "conclude", "concludes", "concluding"];
+    } else if (s.word === "predict") {
+      options = ["predicted", "predict", "are predicting", "had predicted"];
+    } else if (s.word === "accumulate") {
+      options = ["accumulated", "accumulate", "is accumulating", "accumulating"];
+    } else if (s.word === "mature") {
+      options = ["matured", "matures", "is maturing", "mature"];
+    } else if (s.word === "transform") {
+      options = ["transformed", "transforms", "is transforming", "transform"];
+    } else if (s.word === "occur") {
+      options = ["occurred", "occurs", "is occurring", "occur"];
+    } else if (s.word === "analyze") {
+      options = ["analyzed", "analyze", "are analyzing", "analyzing"];
+    } else if (s.word === "implement") {
+      options = ["implemented", "implement", "is implementing", "implemented"];
+    } else if (s.word === "allocate") {
+      options = ["allocated", "allocates", "is allocating", "allocated"];
+    } else if (s.word === "formulate") {
+      options = ["formulated", "formulates", "is formulating", "formulated"];
+    } else if (s.word === "publish") {
+      options = ["published", "publishes", "is publishing", "published"];
+    } else if (s.word === "detect") {
+      options = ["detected", "detects", "is detecting", "detected"];
+    } else if (s.word === "modify") {
+      options = ["modified", "modifies", "is modifying", "modified"];
+    } else if (s.word === "distribute") {
+      options = ["distributed", "distributes", "is distributing", "distributed"];
+    } else if (s.word === "enforce") {
+      options = ["enforced", "enforces", "is enforcing", "enforced"];
+    } else {
+      options = [s.word, s.word + "d", s.word + "s", "is " + s.word];
+    }
+    
+    const correctVal = options[0];
+    const shuffledOptions = shuffle(options);
+    
+    qList2.push({
+      id: `u${unitId}l${lessonId}_ex2_fb_${idx}`,
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    });
+  });
+  
+  // Q11-Q14: Multiple Choice translation questions (academic sentences 0 to 3)
+  akademikSentences.slice(0, 4).forEach((s, idx) => {
+    const fakeTrs = [
+      s.tr.replace("önce", "sonra").replace("edilmelidir", "edilebilir"),
+      s.tr.replace("titizlikle", "geçici olarak").replace("kapsamlı", "yüzeysel"),
+      s.tr.replace("önce", "esnasında").replace("gerekir", "yasaklanmıştır")
+    ];
+    const choices = shuffle([s.tr, ...fakeTrs]);
+    qList2.push({
+      id: `u${unitId}l${lessonId}_ex2_mc_${idx}`,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(s.tr),
+      isEngToTr: true,
+      enSentence: s.en
+    });
+  });
+  
+  // Q15: Keyboard Translation (the 5th Academic sentence)
+  const lastMcAcad = akademikSentences[4];
+  qList2.push({
+    id: `u${unitId}l${lessonId}_ex2_trans_last`,
+    type: "translation-text",
+    prompt: `"${lastMcAcad.en}" ifadesini Türkçe'ye çevirin:`,
+    enSentence: lastMcAcad.en,
+    correctSentence: lastMcAcad.tr,
+    isEngToTr: true
+  });
+  
+  // ==========================================
+  // EXERCISE 3: Akademik Okuma & Cümle Eşleştirme (Halves)
+  // ==========================================
+  // Q1: Match the Halves 1 (first 5 Academic sentences)
+  const halvesPairs1 = [];
+  akademikSentences.slice(0, 5).forEach(s => {
+    const parts = s.en.split(',');
+    if (parts.length >= 2) {
+      halvesPairs1.push({
+        left: parts[0].trim() + ",",
+        right: parts.slice(1).join(',').trim()
+      });
+    }
+  });
+  qList3.push({
+    id: `u${unitId}l${lessonId}_ex3_halves1`,
+    type: "matching",
+    prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+    leftHeader: "Yan Cümle (Before...)",
+    rightHeader: "Ana Cümle",
+    pairs: halvesPairs1
+  });
+  
+  // Q2: Match the Halves 2 (second 5 Academic sentences)
+  const halvesPairs2 = [];
+  akademikSentences.slice(5, 10).forEach(s => {
+    const parts = s.en.split(',');
+    if (parts.length >= 2) {
+      halvesPairs2.push({
+        left: parts[0].trim() + ",",
+        right: parts.slice(1).join(',').trim()
+      });
+    }
+  });
+  qList3.push({
+    id: `u${unitId}l${lessonId}_ex3_halves2`,
+    type: "matching",
+    prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+    leftHeader: "Yan Cümle (Before...)",
+    rightHeader: "Ana Cümle",
+    pairs: halvesPairs2
+  });
+  
+  // Q3-Q11: Word Bank for first 9 Academic sentences
+  akademikSentences.slice(0, 9).forEach((s, idx) => {
+    const distractors = ["is", "had", "was"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    qList3.push({
+      id: `u${unitId}l${lessonId}_ex3_wb_${idx}`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  });
+  
+  // Q12: Keyboard Translation (the 10th Academic sentence)
+  const lastAcad = akademikSentences[9];
+  qList3.push({
+    id: `u${unitId}l${lessonId}_ex3_trans_last`,
+    type: "translation-text",
+    prompt: `"${lastAcad.en}" ifadesini Türkçe'ye çevirin:`,
+    enSentence: lastAcad.en,
+    correctSentence: lastAcad.tr,
+    isEngToTr: true
+  });
+  
+  return [
+    {
+      id: `u${unitId}l${lessonId}ex1`,
+      title: "Alıştırma 1: Kelime Isınma & Cümle Kurma (Yalın)",
+      description: "Kelime eşleştirme kartları ve 10 yalın cümlenin söz dizimi (Word Bank)",
+      questions: qList1
+    },
+    {
+      id: `u${unitId}l${lessonId}ex2`,
+      title: "Alıştırma 2: Dil Bilgisi & Zaman Uyumu (Cloze Test)",
+      description: "Çoktan seçmeli boşluk doldurma ve çoktan seçmeli cümle çevirileri",
+      questions: qList2
+    },
+    {
+      id: `u${unitId}l${lessonId}ex3`,
+      title: "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme (Halves)",
+      description: "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+      questions: qList3
+    }
+  ];
+}
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -7663,6 +7956,102 @@ const unit11SplitFullPassiveSentences = [
 
 
 
+
+// ─── ARA BÖLÜM 3 RAW SENTENCES ───────────────────────────
+
+// ─── ARA BÖLÜM 3 RAW SENTENCES ───────────────────────────
+const unitAra3Lesson1SentencesRaw = [
+  { en: "Before it varies.", tr: "Çeşitlilik göstermeden önce.", word: "vary", trWord: "çeşitlilik göstermeden", blank: "Before it ___.", blocks: ["Before", "it", "varies."] },
+  { en: "Before it emerges.", tr: "Ortaya çıkmadan önce.", word: "emerge", trWord: "ortaya çıkmadan", blank: "Before it ___.", blocks: ["Before", "it", "emerges."] },
+  { en: "Before it expands.", tr: "Genişlemeden önce.", word: "expand", trWord: "genişlemeden", blank: "Before it ___.", blocks: ["Before", "it", "expands."] },
+  { en: "Before it declines.", tr: "Azalmadan önce.", word: "decline", trWord: "azalmadan", blank: "Before it ___.", blocks: ["Before", "it", "declines."] },
+  { en: "Before it is valid.", tr: "Geçerli olmadan önce.", word: "valid", trWord: "geçerli", blank: "Before it is ___.", blocks: ["Before", "it is", "valid."] },
+  { en: "Before it functions.", tr: "İşlev görmeden önce.", word: "function", trWord: "işlev görmeden", blank: "Before it ___.", blocks: ["Before", "it", "functions."] },
+  { en: "Before it is obvious.", tr: "Belirgin olmadan önce.", word: "obvious", trWord: "belirgin", blank: "Before it is ___.", blocks: ["Before", "it is", "obvious."] },
+  { en: "Before it is complex.", tr: "Karmaşık olmadan önce.", word: "complex", trWord: "karmaşık", blank: "Before it is ___.", blocks: ["Before", "it is", "complex."] },
+  { en: "Before it fluctuates.", tr: "Dalgalanmadan önce.", word: "fluctuate", trWord: "dalgalanmadan", blank: "Before it ___.", blocks: ["Before", "it", "fluctuates."] },
+  { en: "Before it is available.", tr: "Erişilebilir olmadan önce.", word: "available", trWord: "erişilebilir", blank: "Before it is ___.", blocks: ["Before", "it is", "available."] },
+  { en: "Before it is valid, the empirical data must be rigorously analyzed by the research team.", tr: "Geçerli olmadan önce, ampirik veriler araştırma ekibi tarafından titizlikle analiz edilmelidir.", word: "valid", trWord: "geçerli", blank: "Before it is ___, the empirical data must be rigorously analyzed by the research team.", blocks: ["Before it is valid,", "the empirical data", "must be rigorously analyzed by the research team."] },
+  { en: "Before it emerges as a dominant social trend, the cultural phenomenon needs to be thoroughly investigated.", tr: "Baskın bir toplumsal eğilim olarak ortaya çıkmadan önce, kültürel fenomenin derinlemesine araştırılması gerekir.", word: "emerge", trWord: "ortaya çıkmadan", blank: "Before it ___ as a dominant social trend, the cultural phenomenon needs to be thoroughly investigated.", blocks: ["Before it emerges as a dominant social trend,", "the cultural phenomenon", "needs to be thoroughly investigated."] },
+  { en: "Before it is available to the general public, the newly developed software requires extensive security testing.", tr: "Genel kamuoyunun kullanımına sunulmadan önce, yeni geliştirilen yazılım kapsamlı güvenlik testleri gerektirir.", word: "available", trWord: "sunulmadan", blank: "Before it is ___ to the general public, the newly developed software requires extensive security testing.", blocks: ["Before it is available to the general public,", "the newly developed software", "requires extensive security testing."] },
+  { en: "Before it fluctuates significantly, the national currency is usually stabilized by the central bank's policies.", tr: "Önemli ölçüde dalgalanmadan önce, ulusal para birimi genellikle merkez bankasının politikalarıyla istikrara kavuşturulur.", word: "fluctuate", trWord: "dalgalanmadan", blank: "Before it ___ significantly, the national currency is usually stabilized by the central bank's policies.", blocks: ["Before it fluctuates significantly,", "the national currency", "is usually stabilized by the central bank's policies."] },
+  { en: "Before it declines irreversibly, the endangered species must be protected by strict environmental legislation.", tr: "Geri döndürülemez şekilde azalmadan önce, nesli tehlike altındaki türler katı çevre mevzuatıyla korunmalıdır.", word: "decline", trWord: "azalmadan", blank: "Before it ___ irreversibly, the endangered species must be protected by strict environmental legislation.", blocks: ["Before it declines irreversibly,", "the endangered species", "must be protected by strict environmental legislation."] },
+  { en: "Before it expands into international markets, the corporate entity should carefully evaluate all economic risks.", tr: "Uluslararası pazarlara genişlemeden önce, kurumsal varlık tüm ekonomik riskleri dikkatlice değerlendirmelidir.", word: "expand", trWord: "genişlemeden", blank: "Before it ___ into international markets, the corporate entity should carefully evaluate all economic risks.", blocks: ["Before it expands into international markets,", "the corporate entity", "should carefully evaluate all economic risks."] },
+  { en: "Before it is obvious to external observers, the internal structural damage can severely compromise the facility.", tr: "Dış gözlemciler için bariz hale gelmeden önce, dahili yapısal hasar tesisi ciddi şekilde tehlikeye atabilir.", word: "obvious", trWord: "bariz", blank: "Before it is ___ to external observers, the internal structural damage can severely compromise the facility.", blocks: ["Before it is obvious to external observers,", "the internal structural damage", "can severely compromise the facility."] },
+  { en: "Before it functions optimally, the newly designed mechanical device requires highly precise technical calibration.", tr: "En uygun şekilde çalışmadan önce, yeni tasarlanan mekanik cihaz son derece hassas teknik kalibrasyon gerektirir.", word: "function", trWord: "çalışmadan", blank: "Before it ___ optimally, the newly designed mechanical device requires highly precise technical calibration.", blocks: ["Before it functions optimally,", "the newly designed mechanical device", "requires highly precise technical calibration."] },
+  { en: "Before it varies across different geographic regions, the initial standardized procedure is uniformly established.", tr: "Farklı coğrafi bölgelerde çeşitlilik göstermeden önce, ilk standartlaştırılmış prosedür tek biçimli olarak belirlenir.", word: "vary", trWord: "çeşitlilik göstermeden", blank: "Before it ___ across different geographic regions, the initial standardized procedure is uniformly established.", blocks: ["Before it varies across different geographic regions,", "the initial standardized procedure", "is uniformly established."] },
+  { en: "Before it is complex enough to require advanced analysis, the preliminary theoretical concept remains quite fundamental.", tr: "Gelişmiş analiz gerektirecek kadar karmaşık hale gelmeden önce, ön teorik kavram oldukça temel kalır.", word: "complex", trWord: "karmaşık", blank: "Before it is ___ enough to require advanced analysis, the preliminary theoretical concept remains quite fundamental.", blocks: ["Before it is complex enough to require advanced analysis,", "the preliminary theoretical concept", "remains quite fundamental."] }
+];
+
+const unitAra3Lesson2SentencesRaw = [
+  { en: "Before the policy shifted.", tr: "Politika değişmeden önce.", word: "shift", trWord: "değişmeden", blank: "Before the policy ___.", blocks: ["Before", "the policy", "shifted."] },
+  { en: "Before the experts debated.", tr: "Uzmanlar tartışmadan önce.", word: "debate", trWord: "tartışmadan", blank: "Before the experts ___.", blocks: ["Before", "the experts", "debated."] },
+  { en: "Before the economy collapsed.", tr: "Ekonomi çökmeden önce.", word: "collapse", trWord: "çökmeden", blank: "Before the economy ___.", blocks: ["Before", "the economy", "collapsed."] },
+  { en: "Before the network expanded.", tr: "Ağ genişlemeden önce.", word: "expand", trWord: "genişlemeden", blank: "Before the network ___.", blocks: ["Before", "the network", "expanded."] },
+  { en: "Before the conflict started.", tr: "Çatışma başlamadan önce.", word: "conflict", trWord: "başlamadan", blank: "Before the ___ started.", blocks: ["Before", "the conflict", "started."] },
+  { en: "Before the community responded.", tr: "Topluluk tepki vermeden önce.", word: "respond", trWord: "tepki vermeden", blank: "Before the community ___.", blocks: ["Before", "the community", "responded."] },
+  { en: "Before the institution evolved.", tr: "Kurum evrilmeden önce.", word: "evolve", trWord: "evrilmeden", blank: "Before the institution ___.", blocks: ["Before", "the institution", "evolved."] },
+  { en: "Before the process concluded.", tr: "Süreç sonuçlanmadan önce.", word: "conclude", trWord: "sonuçlanmadan", blank: "Before the process ___.", blocks: ["Before", "the process", "concluded."] },
+  { en: "Before the authorities intervened.", tr: "Yetkililer müdahale etmeden önce.", word: "intervene", trWord: "müdahale etmeden", blank: "Before the authorities ___.", blocks: ["Before", "the authorities", "intervened."] },
+  { en: "Before the researchers investigated.", tr: "Araştırmacılar incelemeden önce.", word: "investigate", trWord: "incelemeden", blank: "Before the researchers ___.", blocks: ["Before", "the researchers", "investigated."] },
+  { en: "Before the experts debated the issue, the preliminary report was published online.", tr: "Uzmanlar konuyu tartışmadan önce, ön rapor internette yayınlandı.", word: "debate", trWord: "tartışmadan", blank: "Before the experts ___ the issue, the preliminary report was published online.", blocks: ["Before the experts debated the issue,", "the preliminary report", "was published online."] },
+  { en: "Before the policy shifted in a new direction, public feedback was carefully collected.", tr: "Politika yeni bir yöne kaymadan önce, kamuoyunun geri bildirimleri dikkatlice toplandı.", word: "shift", trWord: "kaymadan", blank: "Before the policy ___ in a new direction, public feedback was carefully collected.", blocks: ["Before the policy shifted in a new direction,", "public feedback", "was carefully collected."] },
+  { en: "Before the researchers investigated the case, the primary evidence had been destroyed.", tr: "Araştırmacılar olayı incelemeden önce, birincil kanıtlar yok edilmişti.", word: "investigate", trWord: "incelemeden", blank: "Before the researchers ___ the case, the primary evidence had been destroyed.", blocks: ["Before the researchers investigated the case,", "the primary evidence", "had been destroyed."] },
+  { en: "Before the community responded to the crisis, local leaders organized emergency meetings.", tr: "Topluluk krize tepki vermeden önce, yerel liderler acil durum toplantıları düzenledi.", word: "respond", trWord: "tepki vermeden", blank: "Before the community ___ to the crisis, local leaders organized emergency meetings.", blocks: ["Before the community responded to the crisis,", "local leaders", "organized emergency meetings."] },
+  { en: "Before the economy collapsed entirely, the government implemented urgent financial reforms.", tr: "Ekonomi tamamen çökmeden önce, hükümet acil finansal reformları uygulamaya koydu.", word: "collapse", trWord: "çökmeden", blank: "Before the economy ___ entirely, the government implemented urgent financial reforms.", blocks: ["Before the economy collapsed entirely,", "the government", "implemented urgent financial reforms."] },
+  { en: "Before the conflict started in the region, international observers had proposed a peace plan.", tr: "Bölgede çatışma başlamadan önce, uluslararası gözlemciler bir barış planı önermişti.", word: "conflict", trWord: "başlamadan", blank: "Before the ___ started in the region, international observers had proposed a peace plan.", blocks: ["Before the conflict started in the region,", "international observers", "had proposed a peace plan."] },
+  { en: "Before the network expanded into rural areas, the telecommunications company tested the signals.", tr: "Ağ kırsal alanlara genişlemeden önce, telekomünikasyon şirketi sinyalleri test etti.", word: "expand", trWord: "genişlemeden", blank: "Before the network ___ into rural areas, the telecommunications company tested the signals.", blocks: ["Before the network expanded into rural areas,", "the telecommunications company", "tested the signals."] },
+  { en: "Before the institution evolved into its current state, it operated as a small non-profit organization.", tr: "Kurum mevcut durumuna evrilmeden önce, küçük bir kar amacı gütmeyen kuruluş olarak faaliyet gösterdi.", word: "evolve", trWord: "evrilmeden", blank: "Before the institution ___ into its current state, it operated as a small non-profit organization.", blocks: ["Before the institution evolved into its current state,", "it operated", "as a small non-profit organization."] },
+  { en: "Before the authorities intervened in the conflict, the local council attempted to mediate the dispute.", tr: "Yetkililer çatışmaya müdahale etmeden önce, yerel meclis anlaşmazlığa arabuluculuk etmeye çalıştı.", word: "intervene", trWord: "müdahale etmeden", blank: "Before the authorities ___ in the conflict, the local council attempted to mediate the dispute.", blocks: ["Before the authorities intervened in the conflict,", "the local council", "attempted to mediate the dispute."] },
+  { en: "Before the process concluded successfully, the research committee reviewed all experimental parameters.", tr: "Süreç başarıyla sonuçlanmadan önce, araştırma komitesi tüm deneysel parametreleri gözden geçirdi.", word: "conclude", trWord: "sonuçlanmadan", blank: "Before the process ___ successfully, the research committee reviewed all experimental parameters.", blocks: ["Before the process concluded successfully,", "the research committee", "reviewed all experimental parameters."] }
+];
+
+const unitAra3Lesson3SentencesRaw = [
+  { en: "Before the team had cooperated.", tr: "Ekip iş birliği yapmadan önce.", word: "cooperate", trWord: "iş birliği yapmadan", blank: "Before the team had ___.", blocks: ["Before", "the team had", "cooperated."] },
+  { en: "Before the data had accumulated.", tr: "Veriler birikmeden önce.", word: "accumulate", trWord: "birikmeden", blank: "Before the data had ___.", blocks: ["Before", "the data had", "accumulated."] },
+  { en: "Before the project had concluded.", tr: "Proje sonuçlanmadan önce.", word: "conclude", trWord: "sonuçlanmadan", blank: "Before the project had ___.", blocks: ["Before", "the project had", "concluded."] },
+  { en: "Before the design had transformed.", tr: "Tasarım dönüşmeden önce.", word: "transform", trWord: "dönüşmeden", blank: "Before the design had ___.", blocks: ["Before", "the design had", "transformed."] },
+  { en: "Before the foundation had shifted.", tr: "Temel kaymadan önce.", word: "shift", trWord: "kaymadan", blank: "Before the foundation had ___.", blocks: ["Before", "the foundation had", "shifted."] },
+  { en: "Before the currency had fluctuated.", tr: "Para birimi dalgalanmadan önce.", word: "fluctuate", trWord: "dalgalanmadan", blank: "Before the currency had ___.", blocks: ["Before", "the currency had", "fluctuated."] },
+  { en: "Before the analysts had predicted.", tr: "Analistler tahmin etmeden önce.", word: "predict", trWord: "tahmin etmeden", blank: "Before the analysts had ___.", blocks: ["Before", "the analysts had", "predicted."] },
+  { en: "Before the generations had matured.", tr: "Nesiller olgunlaşmadan önce.", word: "mature", trWord: "olgunlaşmadan", blank: "Before the generations had ___.", blocks: ["Before", "the generations had", "matured."] },
+  { en: "Before the alternative had emerged.", tr: "Alternatif ortaya çıkmadan önce.", word: "emerge", trWord: "ortaya çıkmadan", blank: "Before the alternative had ___.", blocks: ["Before", "the alternative had", "emerged."] },
+  { en: "Before the phenomenon had occurred.", tr: "Olgu gerçekleşmeden önce.", word: "occur", trWord: "gerçekleşmeden", blank: "Before the phenomenon had ___.", blocks: ["Before", "the phenomenon had", "occurred."] },
+  { en: "Before the empirical data had accumulated sufficiently, scientists refrained from formulating any conclusive theories.", tr: "Ampirik veriler yeterince birikmeden önce, bilim insanları kesin teoriler formüle etmekten kaçındı.", word: "accumulate", trWord: "birikmeden", blank: "Before the empirical data had ___ sufficiently, scientists refrained from formulating any conclusive theories.", blocks: ["Before the empirical data had accumulated sufficiently,", "scientists refrained", "from formulating any conclusive theories."] },
+  { en: "Before the multidisciplinary team had cooperated, individual practitioners faced significant methodological limitations.", tr: "Disiplinlerarası ekip iş birliği yapmadan önce, bireysel pratisyenler önemli metodolojik sınırlamalarla karşılaştı.", word: "cooperate", trWord: "iş birliği yapmadan", blank: "Before the multidisciplinary team had ___, individual practitioners faced significant methodological limitations.", blocks: ["Before the multidisciplinary team had cooperated,", "individual practitioners faced", "significant methodological limitations."] },
+  { en: "Before the younger generations had matured, the socio-economic dynamics of the developing country changed drastically.", tr: "Genç nesiller olgunlaşmadan önce, gelişmekte olan ülkenin sosyo-ekonomik dinamikleri büyük ölçüde değişti.", word: "mature", trWord: "olgunlaşmadan", blank: "Before the younger generations had ___, the socio-economic dynamics of the developing country changed drastically.", blocks: ["Before the younger generations had matured,", "the socio-economic dynamics of the developing country", "changed drastically."] },
+  { en: "Before the architectural design had transformed, the physical structure lacked functional efficiency and aesthetic appeal.", tr: "Mimari tasarım dönüşmeden önce, fiziksel yapı fonksiyonel verimlilikten ve estetik çekicilikten yoksundu.", word: "transform", trWord: "dönüşmeden", blank: "Before the architectural design had ___, the physical structure lacked functional efficiency and aesthetic appeal.", blocks: ["Before the architectural design had transformed,", "the physical structure lacked functional efficiency", "and aesthetic appeal."] },
+  { en: "Before the financial analysts had predicted the severe recession, corporate investors remained highly optimistic about the market.", tr: "Finansal analistler ciddi durgunluğu tahmin etmeden önce, kurumsal yatırımcılar piyasa konusunda oldukça iyimser kalmıştı.", word: "predict", trWord: "tahmin etmeden", blank: "Before the financial analysts had ___ the severe recession, corporate investors remained highly optimistic about the market.", blocks: ["Before the financial analysts had predicted the severe recession,", "corporate investors remained", "highly optimistic about the market."] },
+  { en: "Before the structural foundation had shifted, civil engineers erroneously presumed the construction site was entirely stable.", tr: "Yapısal temel kaymadan önce, inşaat mühendisleri inşaat alanının tamamen istikrarlı olduğunu yanlış bir şekilde varsaydılar.", word: "shift", trWord: "kaymadan", blank: "Before the structural foundation had ___, civil engineers erroneously presumed the construction site was entirely stable.", blocks: ["Before the structural foundation had shifted,", "civil engineers erroneously presumed", "the construction site was entirely stable."] },
+  { en: "Before the longitudinal project had concluded, the principal researchers successfully published several preliminary reports.", tr: "Boylamsal proje sonuçlanmadan önce, asıl araştırmacılar birkaç ön raporu başarıyla yayınladı.", word: "conclude", trWord: "sonuçlanmadan", blank: "Before the longitudinal project had ___, the principal researchers successfully published several preliminary reports.", blocks: ["Before the longitudinal project had concluded,", "the principal researchers successfully published", "several preliminary reports."] },
+  { en: "Before the domestic currency had fluctuated, the central bank maintained a remarkably consistent and stable monetary policy.", tr: "Ulusal para birimi dalgalanmadan önce, merkez bankası son derece tutarlı ve istikrarlı bir para politikası sürdürdü.", word: "fluctuate", trWord: "dalgalanmadan", blank: "Before the domestic currency had ___, the central bank maintained a remarkably consistent and stable monetary policy.", blocks: ["Before the domestic currency had fluctuated,", "the central bank maintained", "a remarkably consistent and stable monetary policy."] },
+  { en: "Before a sustainable alternative had emerged, the manufacturing industry relied completely on traditional and polluting resources.", tr: "Sürdürülebilir bir alternatif ortaya çıkmadan önce, imalat sanayisi tamamen geleneksel ve kirletici kaynaklara dayanıyordu.", word: "emerge", trWord: "ortaya çıkmadan", blank: "Before a sustainable alternative had ___, the manufacturing industry relied completely on traditional and polluting resources.", blocks: ["Before a sustainable alternative had emerged,", "the manufacturing industry relied completely", "on traditional and polluting resources."] },
+  { en: "Before the rare astronomical phenomenon had occurred, astronomers had accurately hypothesized its potential visual characteristics.", tr: "Nadir gök olayı gerçekleşmeden önce, astronomlar onun potansiyel görsel özelliklerini doğru bir şekilde varsaymışlardı.", word: "occur", trWord: "gerçekleşmeden", blank: "Before the rare astronomical phenomenon had ___, astronomers had accurately hypothesized its potential visual characteristics.", blocks: ["Before the rare astronomical phenomenon had occurred,", "astronomers had accurately hypothesized", "its potential visual characteristics."] }
+];
+
+const unitAra3Lesson4SentencesRaw = [
+  { en: "Before the data is analyzed.", tr: "Veriler analiz edilmeden önce.", word: "analyze", trWord: "analiz edilmeden", blank: "Before the data is ___.", blocks: ["Before", "the data is", "analyzed."] },
+  { en: "Before the fund was distributed.", tr: "Fon dağıtılmadan önce.", word: "distribute", trWord: "dağıtılmadan", blank: "Before the fund was ___.", blocks: ["Before", "the fund was", "distributed."] },
+  { en: "Before the equipment is modified.", tr: "Ekipman değiştirilmeden önce.", word: "modify", trWord: "değiştirilmeden", blank: "Before the equipment is ___.", blocks: ["Before", "the equipment is", "modified."] },
+  { en: "Before the resource was allocated.", tr: "Kaynak tahsis edilmeden önce.", word: "allocate", trWord: "tahsis edilmeden", blank: "Before the resource was ___.", blocks: ["Before", "the resource was", "allocated."] },
+  { en: "Before the document is published.", tr: "Belge yayınlanmadan önce.", word: "publish", trWord: "yayınlanmadan", blank: "Before the document is ___.", blocks: ["Before", "the document is", "published."] },
+  { en: "Before the error had been detected.", tr: "Hata tespit edilmeden önce.", word: "detect", trWord: "tespit edilmeden", blank: "Before the error had been ___.", blocks: ["Before", "the error", "had been detected."] },
+  { en: "Before the method had been evaluated.", tr: "Yöntem değerlendirilmeden önce.", word: "evaluate", trWord: "değerlendirilmeden", blank: "Before the method had been ___.", blocks: ["Before", "the method", "had been evaluated."] },
+  { en: "Before the strategy was implemented.", tr: "Strateji uygulanmadan önce.", word: "implement", trWord: "uygulanmadan", blank: "Before the strategy was ___.", blocks: ["Before", "the strategy was", "implemented."] },
+  { en: "Before the legislation was enforced.", tr: "Mevzuat yürürlüğe girmeden önce.", word: "enforce", trWord: "yürürlüğe girmeden", blank: "Before the legislation was ___.", blocks: ["Before", "the legislation was", "enforced."] },
+  { en: "Before the hypothesis had been formulated.", tr: "Hipotez formüle edilmeden önce.", word: "formulate", trWord: "formüle edilmeden", blank: "Before the hypothesis had been ___.", blocks: ["Before", "the hypothesis", "had been formulated."] },
+  { en: "Before the new analytical method had been evaluated entirely, it produced only marginally acceptable experimental results.", tr: "Yeni analitik yöntem tamamen değerlendirilmeden önce, yalnızca sınırda kabul edilebilir deneysel sonuçlar üretti.", word: "evaluate", trWord: "değerlendirilmeden", blank: "Before the new analytical method had been ___ entirely, it produced only marginally acceptable experimental results.", blocks: ["Before the new analytical method had been evaluated entirely,", "it produced only", "marginally acceptable experimental results."] },
+  { en: "Before the academic document is published in the recognized journal, it must undergo a highly rigorous peer-review process.", tr: "Akademik belge tanınmış dergide yayınlanmadan önce, son derece titiz bir hakem değerlendirme sürecinden geçmelidir.", word: "publish", trWord: "yayınlanmadan", blank: "Before the academic document is ___ in the recognized journal, it must undergo a highly rigorous peer-review process.", blocks: ["Before the academic document is published in the recognized journal,", "it must undergo", "a highly rigorous peer-review process."] },
+  { en: "Before the innovative marketing strategy was implemented, the international corporation conducted extensive demographic surveys.", tr: "Yenilikçi pazarlama stratejisi uygulanmadan önce, uluslararası şirket kapsamlı demografik anketler gerçekleştirdi.", word: "implement", trWord: "uygulanmadan", blank: "Before the innovative marketing strategy was ___, the international corporation conducted extensive demographic surveys.", blocks: ["Before the innovative marketing strategy was implemented,", "the international corporation conducted", "extensive demographic surveys."] },
+  { en: "Before the statistical data is analyzed, researchers must meticulously ensure that all external variables are strictly controlled.", tr: "İstatistiki veriler analiz edilmeden önce, araştırmacılar tüm dış değişkenlerin sıkı bir şekilde kontrol edildiğinden titizlikle emin olmalıdır.", word: "analyze", trWord: "analiz edilmeden", blank: "Before the statistical data is ___, researchers must meticulously ensure that all external variables are strictly controlled.", blocks: ["Before the statistical data is analyzed,", "researchers must meticulously ensure", "that all external variables are strictly controlled."] },
+  { en: "Before the critical computational error had been detected, the software malfunction caused significant disruptions to the network.", tr: "Kritik hesaplama hatası tespit edilmeden önce, yazılım arızası ağda önemli yapısal aksamalara neden oldu.", word: "detect", trWord: "tespit edilmeden", blank: "Before the critical computational error had been ___, the software malfunction caused significant disruptions to the network.", blocks: ["Before the critical computational error had been detected,", "the software malfunction caused", "significant disruptions to the network."] },
+  { en: "Before the emergency fund was distributed, a thorough demographic assessment was conducted to identify the legitimate beneficiaries.", tr: "Acil durum fonu dağıtılmadan önce, meşru hak sahiplerini belirlemek için kapsamlı bir demografik değerlendirme yapıldı.", word: "distribute", trWord: "dağıtılmadan", blank: "Before the emergency fund was ___, a thorough demographic assessment was conducted to identify the legitimate beneficiaries.", blocks: ["Before the emergency fund was distributed,", "a thorough demographic assessment was conducted", "to identify the legitimate beneficiaries."] },
+  { en: "Before the sensitive laboratory equipment is modified, technicians must strictly consult the manufacturer's technical specifications.", tr: "Hassas laboratuvar ekipmanı değiştirilmeden önce, teknisyenler kesinlikle üreticinin teknik özelliklerine danışmalıdır.", word: "modify", trWord: "değiştirilmeden", blank: "Before the sensitive laboratory equipment is ___, technicians must strictly consult the manufacturer's technical specifications.", blocks: ["Before the sensitive laboratory equipment is modified,", "technicians must strictly consult", "the manufacturer's technical specifications."] },
+  { en: "Before the scarce natural resource was allocated, prominent environmentalists strongly advocated for sustainable distribution policies.", tr: "Kıt doğal kaynak tahsis edilmeden önce, önde gelen çevreciler sürdürülebilir dağıtım politikalarını güçlü bir şekilde savundular.", word: "allocate", trWord: "tahsis edilmeden", blank: "Before the scarce natural resource was ___, prominent environmentalists strongly advocated for sustainable distribution policies.", blocks: ["Before the scarce natural resource was allocated,", "prominent environmentalists strongly advocated", "for sustainable distribution policies."] },
+  { en: "Before the primary research hypothesis had been formulated, the scientific team systematically reviewed the existing academic literature.", tr: "Birincil araştırma hipotezi formüle edilmeden önce, bilimsel ekip mevcut akademik literatürü sistematik olarak gözden geçirdi.", word: "formulate", trWord: "formüle edilmeden", blank: "Before the primary research hypothesis had been ___, the scientific team systematically reviewed the existing academic literature.", blocks: ["Before the primary research hypothesis had been formulated,", "the scientific team systematically reviewed", "the existing academic literature."] },
+  { en: "Before the controversial civil legislation was enforced, multiple advocacy groups organized massive and unprecedented public demonstrations.", tr: "Tartışmalı sivil mevzuat yürürlüğe girmeden önce, çok sayıda savunucu grup büyük ve benzeri görülmemiş halk gösterileri düzenledi.", word: "enforce", trWord: "yürürlüğe girmeden", blank: "Before the controversial civil legislation was ___, multiple advocacy groups organized massive and unprecedented public demonstrations.", blocks: ["Before the controversial civil legislation was enforced,", "multiple advocacy groups organized", "massive and unprecedented public demonstrations."] }
+];
+
 const unitAra2Lesson1SentencesRaw = [
   { en: "Would you modify the parameters of the architectural framework?", tr: "Mimari çerçevenin parametrelerini değiştirir misiniz?", word: "modify", trWord: "değiştirir misiniz", blank: "Would you ___ the parameters of the architectural framework?", blocks: ["Would you modify", "the parameters", "of the architectural framework?"] },
   { en: "Could you process the newly collected empirical data?", tr: "Yeni toplanan ampirik verileri işleyebilir misiniz?", word: "process", trWord: "işleyebilir misiniz", blank: "Could you ___ the newly collected empirical data?", blocks: ["Could you process", "the newly collected", "empirical data?"] },
@@ -9755,6 +10144,40 @@ const rawTopics = [
       "C. Soru Kelimesinden Sonra Gelen Mastar — İleri Akademik Cümleler"
     ]
   },
+    {
+    title: "Ara Bölüm 3: Before Bağlaçlı Cümle Yapıları",
+    desc: "Before bağlacı ile kurulan zaman ve durum yan cümlelerinin yapısı, zaman ve çatı uyumu",
+    icon: "⏳",
+    numLessons: 4,
+    formulas: [
+      {
+        formula: "Before + Subject + Be + Adjective/Noun / Before + Subject + V1(s)",
+        example: "Before it is valid: Geçerli olmadan önce / Before it fluctuates: Dalgalanmadan önce",
+        description: "Before bağlacı ile kurulan yan cümlelerde eylemin geniş zaman veya durum bildiren halleri kullanılır. Çevrilirken '-meden önce' veya '-madan önce' anlamı katılır."
+      },
+      {
+        formula: "Before + Subject + V2",
+        example: "Before the economy collapsed: Ekonomi çökmeden önce / Before the experts debated: Uzmanlar tartışmadan önce",
+        description: "Geçmişte gerçekleşen bir eylemin öncesini ifade etmek için Before yan cümlesinde fiilin 2. hali (V2) kullanılır."
+      },
+      {
+        formula: "Before + Subject + Had + V3",
+        example: "Before the analysts had predicted: Analistler tahmin etmeden önce",
+        description: "Geçmişte gerçekleşen bir eylemin daha öncesini Past Perfect (had V3) çatı ile ifade etmek için kullanılır."
+      },
+      {
+        formula: "Before + Subject + is / was / had been + V3 (Passive)",
+        example: "Before the data is analyzed: Veriler analiz edilmeden önce / Before the strategy was implemented: Strateji uygulanmadan önce",
+        description: "Before yan cümlesindeki eylemin edilgen çatı (passive voice) ile ifade edildiği yapılardır."
+      }
+    ],
+    subtitles: [
+      "A. Geniş Zaman Aktif ve Durum Cümleleri (Sayfa 1)",
+      "B. Basit Geçmiş Zaman Aktif Cümleleri (Sayfa 2)",
+      "C. Miş'li Geçmiş Zaman (Past Perfect) Aktif (Sayfa 3)",
+      "D. Edilgen Çatı (Passive Voice) (Sayfa 4)"
+    ]
+  },
   {
     title: "XIX. Zarf Cümleciği (Adverbial Clause) (Sayfa 164)",
     desc: "Zaman, sebep, zıtlık, derece, amaç, sonuç ve şart anlamı katan zarf tümleçleri",
@@ -11778,41 +12201,47 @@ const unitSentencesMap = {
     ] }
   },
   21: {
-    1: { exercises: [] },
-    2: { exercises: [] },
-    3: { exercises: [] },
-    4: { exercises: [] },
-    5: { exercises: [] },
-    6: { exercises: [] },
-    7: { exercises: [] }
+    1: { exercises: buildAra3Exercises(unitAra3Lesson1SentencesRaw, 21, 62) },
+    2: { exercises: buildAra3Exercises(unitAra3Lesson2SentencesRaw, 21, 63) },
+    3: { exercises: buildAra3Exercises(unitAra3Lesson3SentencesRaw, 21, 64) },
+    4: { exercises: buildAra3Exercises(unitAra3Lesson4SentencesRaw, 21, 65) }
   },
   22: {
     1: { exercises: [] },
     2: { exercises: [] },
-    3: { exercises: [] }
-  },
-  23: {
-    1: { exercises: [] },
-    2: { exercises: [] },
     3: { exercises: [] },
     4: { exercises: [] },
     5: { exercises: [] },
     6: { exercises: [] },
     7: { exercises: [] }
+  },
+  23: {
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] }
   },
   24: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
-    4: { exercises: [] }
+    4: { exercises: [] },
+    5: { exercises: [] },
+    6: { exercises: [] },
+    7: { exercises: [] }
   },
   25: {
-    1: { exercises: [] }
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] },
+    4: { exercises: [] }
   },
   26: {
     1: { exercises: [] }
   },
   27: {
+    1: { exercises: [] }
+  },
+  28: {
     1: { exercises: [] }
   }
 };

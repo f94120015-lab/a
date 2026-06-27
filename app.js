@@ -1166,13 +1166,24 @@ function renderLessonTree() {
   // Sort all units sequentially by their ID (from Unit 1 to Unit 25)
   const renderedUnits = [...units].sort((a, b) => a.id - b.id);
 
+  let normalUnitIndex = 0;
+  const unitDisplayNames = {};
+  renderedUnits.forEach(u => {
+    if (u.title.startsWith("Ara Bölüm")) {
+      unitDisplayNames[u.id] = u.title;
+    } else {
+      normalUnitIndex++;
+      unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}`;
+    }
+  });
+
   renderedUnits.forEach(unit => {
     // 1. Calculate progress in this unit
     const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 22, 23, 24, 25, 26, 27]);
+    const notUploadedUnits = new Set([22, 23, 24, 25, 26, 27, 28]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -1191,7 +1202,7 @@ function renderLessonTree() {
     banner.innerHTML = `
       <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
-          <span>Bölüm ${unit.id}: ${unit.title}</span>
+          <span>${unitDisplayNames[unit.id]}</span>
           ${notUploadedBadgeHTML}
         </h2>
         <p>${unit.description}</p>
@@ -1434,7 +1445,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 22, 23, 24, 25, 26, 27]);
+  const notUploadedUnitsPopover = new Set([22, 23, 24, 25, 26, 27, 28]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
@@ -1830,8 +1841,8 @@ function renderMatching(container, question) {
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
     <div class="match-grid">
-      <span class="match-col-header">Türkçe</span>
-      <span class="match-col-header">İngilizce</span>
+      <span class="match-col-header">${question.leftHeader || "Türkçe"}</span>
+      <span class="match-col-header">${question.rightHeader || "İngilizce"}</span>
       ${question.pairs.map((pair, i) => `
         <button class="match-item match-left" data-left="${pair.left}" data-pair-index="${i}">${pair.left}</button>
         <button class="match-item match-right" data-right="${shuffledRight[i].right}">${makeTextHoverable(shuffledRight[i].right)}</button>
