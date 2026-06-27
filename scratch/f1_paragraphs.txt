@@ -1,0 +1,250 @@
+P 1700: This method was used in all experiments, unless otherwise stated.
+P 1701: Negligence, where proven, is punishable by law.
+P 1702: Insecticides, when provided free of charge, greatly reduced the spread of the disease in the area. .
+P 1703: These insecticides must be used as indicated on the container.
+P 1704: When used as a cooling agent liquid nitrogen is very efficient.
+P 1705: As. mentioned in the previous chapter, the standard of living was very low in Scotland during the seventeenth century.
+P 1706: The vitamin is stored in the body ready for use, as required.
+P 1707: 
+P 1708: 
+P 1709: 
+P 1710: 
+P 1711: 
+P 1712: 
+P 1713: XVIII. Soru Kelimelerinden Sonra Gelen Mastarlar (Sayfa: 124)
+P 1714: Soru kelimesi   +  Mastar   +     (Nesne)     +     (Tümleç)
+P 1715: How           +  to translate  +   a sentence
+P 1716: 
+P 1717: Açıklama
+P 1718: Soru kelimesinden sonra gelen mastar, fiil isminin gelecek zamanı olarak Türkçeye çevrilir.
+P 1719: Örnek: what to do         ne yapacağını
+P 1720: where to go       nereye gideceğini
+P 1721: how to make      nasıl yapacağını
+P 1722: Cümlenin kalan kısmı da, bahsedilen şahısa göre bağlanır.
+P 1723: Örnek: He told me what to do.                Bana ne yapacağımı söyledi
+P 1724: She told you where to go.            Size nereye gideceğinizi söyledi.
+P 1725: We showed them how to make... Onlara nasıl yapacaklarını gösterdik.
+P 1726: Mastarın nesnesi, tümleci (varsa) bilindiği gibi, mastardan önce tercüme edilir.
+P 1727: 
+P 1728: Mastarın anlamı çoğu zaman edilgendir.
+P 1729: Örnek: how to do the experiment:             tecrübenin nasıl yapılacağını
+P 1730: how to translate the sentence:        cümlenin nasıl tercüme edileceğini
+P 1731: where to put the money:                 paranın nereye konulacağını
+P 1732: where to go tomorrow:                  yarın nereye gidileceğini
+P 1733: Alıştırmalar: (Sayfa: 125)
+P 1734: where to  build the library
+P 1735: how to clasaify the viruses
+P 1736: where to apply for work
+P 1737: what to demonstrafe to the students
+P 1738: what to ııse in this experiment
+P 1739: how to plan the work
+P 1740: how to separate the patients
+P 1741: how to prevent forest fires
+P 1742: when to start work
+P 1743: when to increase the price
+P 1744: how much water to give the plants.
+P 1745: how many students to accept
+P 1746: which elements to mix
+P 1747: which examination to take
+P 1748: how much nitrogen to add
+P 1749: which books to buy
+P 1750: which microbes to identify
+P 1751: how to identify the microbes
+P 1752: which material to use
+P 1753: how to use the material
+P 1754: 
+P 1755: Türkçeye çeviriniz:
+P 1756: He showed the new students what to do.
+P 1757: The new students were told where to go.
+P 1758: The report tells us whom to apply to.
+P 1759: The evidence shows us whom to punish.
+P 1760: The judge told the jury how to decide the case.
+P 1761: The ipstructions eatplain what to do.
+P 1762: The instructions tell us how to use the machine.
+P 1763: The letter from the ministry told them what to do.
+P 1764: The label on the bottle tells us how to use the medicine.
+P 1765: The doctor explained when to take the tablets.
+P 1766: The label tells us how much medicine to take.
+P 1767: The professor explained how to do the experiment.
+P 1768: The economist showed them how to analyse the results.
+P 1769: The expert will Show thw managerhow to increase his production.
+P 1770: The expert told them how to dolve the problem.
+P 1771: The judge explained to the jury how to apply the law.
+P 1772: The archaeologist did not know where to find the remains.
+P 1773: Chemists know how to preserve food.
+P 1774: Doctors have not yet discovered how to cure this disease.
+P 1775: We have not yet learned how to isolate the virüs.
+P 1776: They do not yet know where to send their children.
+P 1777: At that time they did not know how to split the atom.
+P 1778: 
+P 1779: Faydalı Mutad Cümle Takımları (Sayfa: 127)
+P 1780: by degrees                                 derece derece
+P 1781: little by little                               yavaş yavaş
+P 1782: by comparison                           mukayese edilince
+P 1783: in conclusion                              son olarak
+P 1784: in recent years/ times                 son senelerde/ son zamanlarda
+P 1785: as a result                                    sonuç olarak
+P 1786: the former                                  ilk bahsedilen
+P 1787: the latter                                     son bahsedilen
+P 1788: even so                                       öyle olsa bile
+P 1789: a number of                               bir kaç
+P 1790: a large number of                                   çok sayıda
+P 1791: a small number of                                   az sayıda
+P 1792: and so on                                                 ve saire
+P 1793: at least                                                      en aşağı/ hiç olmazsa
+P 1794: on the one hand                                      bir taraftan
+P 1795: on the other hand                                   diğer taraftan
+P 1796: generally speaking                                umumiyetli
+P 1797: as a general rule                                    umumiyetli
+P 1798: as a whole                                             bir bütün olarak
+P 1799: on the whole                                         genellikle
+P 1800: such as                                                 gibi
+P 1801: for example / for instance                 mesela/ örneğin
+P 1802: that is (to say)                                      yani
+P 1803: of course                                               tabi
+P 1804: otherwise                                             aksi takdirde
+P 1805: in many cases                                    bir çok hallerde
+P 1806: in some cases                                    bazı hallerde
+P 1807: more or less                                      aşağı yukarı
+P 1808: a great deal/ a good deal                  çok
+P 1809: most of                                              ..ın çoğu
+P 1810: mostly                                               çoğunlukla
+P 1811: to some extent                                  bir dereceye kadar
+P 1812: to a certain extent                             bir dereceye kadar
+P 1813: to a small extent                               az nispette
+P 1814: to a large extent                               büyük oranda
+P 1815: to a great extent                               büyük oranda
+P 1816: to such an extent (that)                  öyle bir dereceye kadar ki
+P 1817: on no account/ by no means         hiçbir surette
+P 1818: apart from                                      …dan başka
+P 1819: 
+P 1820: BİLEŞİK CÜMLELER (Sayfa: 164)
+P 1821: Bileşik cümle bir (veya birden fazla) bağımsız (ana) ile bir (veya fazla) bağımlı cümlecikten oluşur. Bağımlı cümleciğin 3 türlüsü vardır: Zarf, Sıfat ve işim Cümleciği. Her cümleciğin öznesi ve çekimli fiili vardır. Bileşik Cümleyi anlamak veya tercüme etmek için bağımlı ve bağımsız (ana) cümlecikleri birbirinden ayırıp önce bağımlı, sonra bağımsız (ana) cümleciği yerleştirmelidir. İngilizcede bağımlı cümlecik, hem ana cümlecikten önce, hem de sonra bulunabilir. Türkçede büyük ekseriyetle, bağımlı cümlecik önce gelir.
+P 1822: 
+P 1823: 
+P 1824: 
+P 1825: ZARF CÜMLECİKLERİ
+P 1826: Zarf cümleciği daima bir zarf olan işaret kelimesiyle başlar. Bu işaret kelimelerinin anlamını bilmek lâzımdır. Ona göre zarf cümlecikte bulunan fiile uygun bir şekil verilir. En mutad işaret kelimeleri zaman, sebep, maksat, netice, şart veya derece bildirirler. Bunların en mühimleri sırayla aşağıda ele alınmaktadır.
+P 1827: 
+P 1828: Zaman Zarfıyla Başlayan Zarf Cümleciği
+P 1829: Before          etmeden (önce, evvel)
+P 1830: After             ettikten sonra
+P 1831: When            edince
+P 1832: Since             edeli, ettiğinden beri
+P 1833: While/ as       ederken
+P 1834: Until              edinceye kadar
+P 1835: 
+P 1836: Before
+P 1837: Türkçeye çeviriniz.
+P 1838: Before it is cold
+P 1839: Before it is dry
+P 1840: Before it is empty
+P 1841: Before it is ready
+P 1842: Before it dies
+P 1843: Before it dries
+P 1844: Before it spreads
+P 1845: Before it gets worse
+P 1846: Before it dissolves
+P 1847: Before it ceases
+P 1848: Before it disappears
+P 1849: Before it gets better
+P 1850: Before the plants die
+P 1851: Before the army appoaches the city
+P 1852: Before the doctor arrives
+P 1853: Before the substance solidifies
+P 1854: Before the disease spreads
+P 1855: Before the roots develop
+P 1856: Before the moisture penetrates the cracks of the rocks
+P 1857: Before an accident occurs
+P 1858: Before the smell disappears
+P 1859: Before the process ceases
+P 1860: Before the conditions change
+P 1861: Before the moisture dries
+P 1862: 
+P 1863: Aşağıda verilmiş ‘before’ ile başlayan zarf cümleciğin fiilleri ‘Perfect Past’ zamanında bulunuyor.  Türkçeye çevirince ‘mış olmadan’ şekli koymak doğru olur. (Sayfa: 165)
+P 1864: 
+P 1865: Örnek: before the substance had dried       madde kurumuş olmadan (önce)
+P 1866: before the students had arrived     öğrenciler gelmiş olmadan (önce)
+P 1867: before they had been examined     imtihan edilmiş olmadan (önce)
+P 1868: 
+P 1869: before the trees had died
+P 1870: before the armies had arrived
+P 1871: before the smell had disappeared
+P 1872: before the roots had penetrated
+P 1873: before the profits had increased
+P 1874: before the substance had dissolved
+P 1875: before the bones had develope
+P 1876: before the conditions had changed
+P 1877: before the wood  had decayed
+P 1878: before the peocess had ceased
+P 1879: Aşağıda verilmiş 'before’ ile başlayan zarf cümleciklerin fiilleri edilgen şeklinde bulunuyor. Zamana göre Türkçeye çeviriniz . (Sayfa: 166)
+P 1880: 
+P 1881: Örnek: before the reaction was observed              reaksyon gözetlenmeden
+P 1882: before the reaction had been observed      reaksyon gözetlenmiş olmadan
+P 1883: 
+P 1884: before the substance is dissolved
+P 1885: before the substance had been obtained
+P 1886: before fire had been invented
+P 1887: before fire was invented .
+P 1888: before the substance is heated
+P 1889: before the law was passed
+P 1890: before the people had been civilised
+P 1891: before coal was used
+P 1892: before the proposal was considered
+P 1893: before this method was used
+P 1894: before the new mrthods had been introduced
+P 1895: before coal was discovered in the area
+P 1896: before the factory was built
+P 1897: before the results are published
+P 1898: before the substance is heated
+P 1899: before impurities are removed
+P 1900: before the oil is refined
+P 1901: before the djsease had been treated
+P 1902: before the trees are planted
+P 1903: before the suggestion was accepted by the committee
+P 1904: 
+P 1905: Aşağıda yazılmış olan cümlelerdeki zarf cümleciklerini kerre içine alarak başa getirip tercüme ettikten sonra kalan ana cümleciklerini tercüme ediniz:
+P 1906: Örnek: we must finish the work (before we go home)
+P 1907: (eve gitmeden) işi bitirmeliyiz
+P 1908: 
+P 1909: Ther is a lot of to do before our aims are accomplished.
+P 1910: We must collect more information before we can act.
+P 1911: The machine must be adjusted before it can be used.
+P 1912: The armies rested for a day before they advanced towards the city.
+P 1913: The armies rested for a day before they approached the river.
+P 1914: We must learn about the nature of molecules before we study the behaviour of liquids.
+P 1915: We must study the arrangement of the molecules before we can understand the transference of heat ina metal.
+P 1916: The supply of raw materials must be increased before the demand for these articles can be met.
+P 1917: A seed must a absord water before it can germinate
+P 1918: The cooperation of the workers must be obtained before new methods can be introduced.
+P 1919: 
+P 1920: After  (Sayfa: 169)
+P 1921: Aşağıda verilmiş ‘after’ ile başlayan zarf cümleciklerini ‘tikten sonra’ şeklini kullanarak Türkçeye çeviriniz.
+P 1922: NOT: Fiil Past Perfect olursa, (had done, had come, had seen, vs.) Türkçede fark etmez.
+P 1923: 
+P 1924: after it disappears
+P 1925: after it dries .
+P 1926: after it develops
+P 1927: after it is cooled
+P 1928: after it melts
+P 1929: after it dissolves
+P 1930: after it dies
+P 1931: after it divides
+P 1932: after it is seen
+P 1933: after it developed
+P 1934: after it was heated
+P 1935: after it formed
+P 1936: after it solidified
+P 1937: after it was introduced
+P 1938: after it had appeared
+P 1939: after it occurred
+P 1940: after it improved
+P 1941: after it disappeared
+P 1942: after it was weighed
+P 1943: after it was destroyed
+P 1944: after it had died
+P 1945: after it is transformed
+P 1946: after it is classified
+P 1947: after is applied
+P 1948: after it  was civilised
+P 1949: had been formed

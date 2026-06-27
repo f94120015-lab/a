@@ -1,0 +1,215 @@
+P 1020: 
+P 1021: ürettiğin alıştırmaları Bölüm 7, 20. Ders altına yerleştir.
+P 1022: 
+P 1023: 
+P 1024: 
+P 1025: 
+P 1026: 
+P 1027: Tercüme Kılavuzu: Akademik makalelerde özneler ve nesneler; sıfat tamlamaları ve sıfat cümleleri (relative clauses) gibi yan yapılarla çok fazla uzatılarak bazen 3-4 satırı bulabilir. Öğrenci eğer cümledeki "Ana Özne ne?", "Geçişli Fiil ne?" ve "Bu fiilin etkilediği Nesne nerede?" üçlüsünü (SVO) doğru tespit edebilirse, cümlenin etrafındaki tüm süsleri ve tümleçleri kolayca ayıklayarak ana fikri saniyeler içinde anlar.
+P 1028: 
+P 1029: BÖLÜM: YALIN (KUYRUKSUZ) ÖRNEK LİSTESİ
+P 1030: 
+P 1031: The data contradicts the theory.
+P 1032: The context specifies the criteria.
+P 1033: The sector anticipates growth.
+P 1034: Authorities advocate reform.
+P 1035: The dynamic triggers reaction.
+P 1036: Experts clarify the scope.
+P 1037: The process induces stress.
+P 1038: The anomaly distorts results.
+P 1039: Media manipulates perspective.
+P 1040: The system accommodates expansion.
+P 1041: The protocol defines parameters.
+P 1042: The contract binds institutions.
+P 1043: Analysts inspect the framework.
+P 1044: The variable affects outcomes.
+P 1045: The core stabilizes components.
+P 1046: The graph illustrates percentages.
+P 1047: The policy restricts access.
+P 1048: The finding validates hypotheses.
+P 1049: The team modifies modules.
+P 1050: The committee evaluates feedback.
+P 1051: The researcher isolates variables.
+P 1052: Strategies maximize efficiency.
+P 1053: The script calculates ratios.
+P 1054: The audit exposes flaws.
+P 1055: The shift alters trends.
+P 1056: The framework secures data.
+P 1057: The council suspended regulations.
+P 1058: The board terminated agreements.
+P 1059: The ministry conducted surveys.
+P 1060: The database accumulates logs.
+P 1061: 
+P 1062: 
+P 1063: 
+P 1064: 
+P 1065: 
+P 1066: ADIM: GENİŞLETİLMİŞ ÖZNELER (EXPANDED SUBJECTS)
+P 1067: Sadece cümlenin sol tarafındaki özne blokları akademik sıfatlar ve tamlamalarla büyütülmüştür:
+P 1068: The newly collected empirical data...
+P 1069: The broader socio-economic context...
+P 1070: The highly competitive dynamic sector...
+P 1071: Leading institutional authorities...
+P 1072: This unpredictable economic dynamic...
+P 1073: Independent technical experts...
+P 1074: The continuous chemical process...
+P 1075: The undetected structural anomaly...
+P 1076: Mainstream digital media...
+P 1077: The updated operational system...
+P 1078: The revised security protocol...
+P 1079: The legally binding contract...
+P 1080: Senior financial analysts...
+P 1081: The primary independent variable...
+P 1082: The reinforced central core...
+P 1083: The attached statistical graph...
+P 1084: The strict institutional policy...
+P 1085: The final scientific finding...
+P 1086: The software development team...
+P 1087: The ethics evaluation committee...
+P 1088: The principal laboratory researcher...
+P 1089: Innovative corporate strategies...
+P 1090: The automated background script...
+P 1091: The independent annual audit...
+P 1092: The sudden paradigm shift...
+P 1093: The advanced cryptographic framework...
+P 1094: The regional administrative council...
+P 1095: The executive internal board...
+P 1096: The national education ministry...
+P 1097: The centralized cloud database...
+P 1098: Genişletilmiş öznelerin yalın (kuyruksuz) geçişli fiil ve nesne ile birleşmiş hali:
+P 1099: 
+P 1100: The newly collected empirical data contradicts the theory.
+P 1101: The broader socio-economic context specifies the criteria.
+P 1102: The highly competitive dynamic sector anticipates growth.
+P 1103: Leading institutional authorities advocate reform.
+P 1104: This unpredictable economic dynamic triggers reaction.
+P 1105: Independent technical experts clarify the scope.
+P 1106: The continuous chemical process induces stress.
+P 1107: The undetected structural anomaly distorts results.
+P 1108: Mainstream digital media manipulates perspective.
+P 1109: The updated operational system accommodates expansion.
+P 1110: The revised security protocol defines parameters.
+P 1111: The legally binding contract binds institutions.
+P 1112: Senior financial analysts inspect the framework.
+P 1113: The primary independent variable affects outcomes.
+P 1114: The reinforced central core stabilizes components.
+P 1115: The attached statistical graph illustrates percentages.
+P 1116: The strict institutional policy restricts access.
+P 1117: The final scientific finding validates hypotheses.
+P 1118: The software development team modifies modules.
+P 1119: The ethics evaluation committee evaluates feedback.
+P 1120: The principal laboratory researcher isolates variables.
+P 1121: Innovative corporate strategies maximize efficiency.
+P 1122: The automated background script calculates ratios.
+P 1123: The independent annual audit exposes flaws.
+P 1124: The sudden paradigm shift alters trends.
+P 1125: The advanced cryptographic framework secures data.
+P 1126: The regional administrative council suspended regulations.
+P 1127: The executive internal board terminated agreements.
+P 1128: The national education ministry conducted surveys.
+P 1129: The centralized cloud database accumulates logs.
+P 1130: 
+P 1131: 
+P 1132: 
+P 1133: ADIM: GENİŞLETİLMİŞ NESNELER (EXPANDED OBJECTS)
+P 1134: 
+P 1135: 
+P 1136: ...the long-standing theoretical model.
+P 1137: ...the strict qualitative selection criteria.
+P 1138: ...significant annual financial growth.
+P 1139: ...comprehensive legislative tax reform.
+P 1140: ...a chain of negative physical reactions.
+P 1141: ...the initial investigative project scope.
+P 1142: ...severe psychological and occupational stress.
+P 1143: ...the final statistical research results.
+P 1144: ...public political and cultural perspective.
+P 1145: ...rapid regional infrastructure expansion.
+P 1146: ...crucial technical system parameters.
+P 1147: ...separate international research institutions.
+P 1148: ...the entire underlying structural framework.
+P 1149: ...excellent academic student outcomes.
+P 1150: ...crucial internal device components.
+P 1151: ...exact distribution and demographic percentages.
+P 1152: ...unauthorized user network access.
+P 1153: ...alternative alternative scientific hypotheses.
+P 1154: ...individual functional software modules.
+P 1155: ...detailed anonymous student feedback.
+P 1156: ...separate unstable chemical variables.
+P 1157: ...maximum annual manufacturing efficiency.
+P 1158: ...complex mathematical data ratios.
+P 1159: ...hidden organizational system flaws.
+P 1160: ...global consumer behavior trends.
+P 1161: ...sensitive user information data.
+P 1162: ...outdated environmental safety regulations.
+P 1163: ...formal bilateral commercial agreements.
+P 1164: ...comprehensive regional educational surveys.
+P 1165: ...detailed historical system logs.
+P 1166: 
+P 1167: 
+P 1168: Genişletilmiş nesnelerin yalın (kuyruksuz) özne ve geçişli fiil ile birleşmiş hali:
+P 1169: 
+P 1170: The data contradicts the long-standing theoretical model.
+P 1171: The context specifies the strict qualitative selection criteria.
+P 1172: The sector anticipates significant annual financial growth.
+P 1173: Authorities advocate comprehensive legislative tax reform.
+P 1174: The dynamic triggers a chain of negative physical reactions.
+P 1175: Experts clarify the initial investigative project scope.
+P 1176: The process induces severe psychological and occupational stress.
+P 1177: The anomaly distorts the final statistical research results.
+P 1178: Media manipulates public political and cultural perspective.
+P 1179: The system accommodates rapid regional infrastructure expansion.
+P 1180: The protocol defines crucial technical system parameters.
+P 1181: The contract binds separate international research institutions.
+P 1182: Analysts inspect the entire underlying structural framework.
+P 1183: The variable affects excellent academic student outcomes.
+P 1184: The core stabilizes crucial internal device components.
+P 1185: The graph illustrates exact distribution and demographic percentages.
+P 1186: The policy restricts unauthorized user network access.
+P 1187: The finding validates alternative alternative scientific hypotheses.
+P 1188: The team modifies individual functional software modules.
+P 1189: The committee evaluates detailed anonymous student feedback.
+P 1190: The researcher isolates separate unstable chemical variables.
+P 1191: Strategies maximize maximum annual manufacturing efficiency.
+P 1192: The script calculates complex mathematical data ratios.
+P 1193: The audit exposes hidden organizational system flaws.
+P 1194: The shift alters global consumer behavior trends.
+P 1195: The framework secures sensitive user information data.
+P 1196: The council suspended outdated environmental safety regulations.
+P 1197: The board terminated formal bilateral commercial agreements.
+P 1198: The ministry conducted comprehensive regional educational surveys.
+P 1199: The database accumulates detailed historical system logs.
+P 1200: 
+P 1201: ADIM: TAM GENİŞLETİLMİŞ AKADEMİK CÜMLELER (FULL SVO)
+P 1202: 
+P 1203: 
+P 1204: The newly collected empirical data contradicts the long-standing theoretical model.
+P 1205: The broader socio-economic context specifies the strict qualitative selection criteria.
+P 1206: The highly competitive dynamic sector anticipates significant annual financial growth.
+P 1207: Leading institutional authorities advocate comprehensive legislative tax reform.
+P 1208: This unpredictable economic dynamic triggers a chain of negative physical reactions.
+P 1209: Independent technical experts clarify the initial investigative project scope.
+P 1210: The continuous chemical process induces severe psychological and occupational stress.
+P 1211: The undetected structural anomaly distorts the final statistical research results.
+P 1212: Mainstream digital media manipulates public political and cultural perspective.
+P 1213: The updated operational system accommodates rapid regional infrastructure expansion.
+P 1214: The revised security protocol defines crucial technical system parameters.
+P 1215: The legally binding contract binds separate international research institutions.
+P 1216: Senior financial analysts inspect the entire underlying structural framework.
+P 1217: The primary independent variable affects excellent academic student outcomes.
+P 1218: The reinforced central core stabilizes crucial internal device components.
+P 1219: The attached statistical graph illustrates exact distribution and demographic percentages.
+P 1220: The strict institutional policy restricts unauthorized user network access.
+P 1221: The final scientific finding validates alternative alternative scientific hypotheses.
+P 1222: The software development team modifies individual functional software modules.
+P 1223: The ethics evaluation committee evaluates detailed anonymous student feedback.
+P 1224: The principal laboratory researcher isolates separate unstable chemical variables.
+P 1225: Innovative corporate strategies maximize maximum annual manufacturing efficiency.
+P 1226: The automated background script calculates complex mathematical data ratios.
+P 1227: The independent annual audit exposes hidden organizational system flaws.
+P 1228: The sudden paradigm shift alters global consumer behavior trends.
+P 1229: The advanced cryptographic framework secures sensitive user information data.
+P 1230: The regional administrative council suspended outdated environmental safety regulations.
+P 1231: The executive internal board terminated formal bilateral commercial agreements.
+P 1232: The national education ministry conducted comprehensive regional educational surveys.
+P 1233: The centralized cloud database accumulates detailed historical system logs.
+P 1234: 
