@@ -1,61 +1,61 @@
 /* ============================================================
    amok — Premium Stylesheet
-   Sıcak kanvas tonları, serif tipografi, responsive tasarım
-   ============================================================ *//* ─── CSS Değişkenleri (Açık Tema – Premium Temiz Palet) ── */
+   Yumuşak pastel tonlar, modern tipografi, responsive tasarım
+   ============================================================ *//* ─── CSS Değişkenleri (Açık Tema – Pastel Palet) ───────── */
 :root {
-  /* Arka planlar – modern temiz ve ferah tonlar (Görsel referansına uygun) */
-  --bg-primary: #F7F9FC;
-  --bg-secondary: #EDF2F7;
+  /* Arka planlar – sıcak krem ve leylak esinleri */
+  --bg-primary: #FAF8F6;
+  --bg-secondary: #F3EFF2;
   --bg-card: #ffffff;
-  --bg-card-hover: #F2F6FC;
+  --bg-card-hover: #F8F5FA;
 
-  /* Metin – Slate tonları (Görsel referansına uygun) */
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  /* Metin – yumuşak antrasit tonları */
+  --text-primary: #2D2B3D;
+  --text-secondary: #5C5775;
+  --text-muted: #9994AD;
 
-  /* Çizgi */
-  --border-color: #E2E8F0;
-  --border-light: #EDF2F7;
+  /* Çizgi – leylak gri */
+  --border-color: #E8E3EE;
+  --border-light: #F3EFF5;
 
-  /* Ana renkler – Canlı Mavi (Görsel referansına uygun) */
-  --accent-primary: #1B85FF;
-  --accent-primary-hover: #0076F5;
-  --accent-primary-shadow: #0063D1;
-  --accent-primary-light: rgba(27, 133, 255, 0.12);
+  /* Ana renk – Pastel Mor / Lavanta */
+  --accent-primary: #8B7EC8;
+  --accent-primary-hover: #7A6DB8;
+  --accent-primary-shadow: #6A5DA6;
+  --accent-primary-light: rgba(139, 126, 200, 0.12);
 
-  /* Durum renkleri – Canlı yeşil / kırmızı (Görsel referansına uygun) */
-  --color-correct: #34C759;
-  --color-correct-bg: rgba(52, 199, 89, 0.12);
-  --color-correct-border: rgba(52, 199, 89, 0.35);
-  --color-wrong: #FF3B30;
-  --color-wrong-bg: rgba(255, 59, 48, 0.12);
-  --color-wrong-border: rgba(255, 59, 48, 0.35);
-  --color-warning: #FF9500;
-  --color-info: #007AFF;
+  /* Durum renkleri – yumuşak yeşil / mercan */
+  --color-correct: #7BC8A4;
+  --color-correct-bg: rgba(123, 200, 164, 0.14);
+  --color-correct-border: rgba(123, 200, 164, 0.40);
+  --color-wrong: #E88B8B;
+  --color-wrong-bg: rgba(232, 139, 139, 0.14);
+  --color-wrong-border: rgba(232, 139, 139, 0.40);
+  --color-warning: #EAB86C;
+  --color-info: #82B4E0;
 
-  /* XP & Streak – Canlı turuncu / altın / pembe */
-  --color-streak: #FF9500;
-  --color-xp: #FFCC00;
-  --color-hearts: #FF2D55;
+  /* XP & Streak – pastel turuncu / altın / gül */
+  --color-streak: #E8A86C;
+  --color-xp: #E8CC78;
+  --color-hearts: #E88A9A;
 
   /* Kilit */
-  --color-locked: #94A3B8;
-  --color-locked-bg: #E2E8F0;
+  --color-locked: #B5B0C3;
+  --color-locked-bg: #E8E3EE;
 
-  /* Aktif ders – Canlı Mavi */
-  --color-active: #1B85FF;
-  --color-active-glow: rgba(27, 133, 255, 0.25);
+  /* Aktif ders – Lavanta */
+  --color-active: #8B7EC8;
+  --color-active-glow: rgba(139, 126, 200, 0.28);
 
   /* Tamamlanan ders */
-  --color-completed: #34C759;
-  --color-completed-bg: rgba(52, 199, 89, 0.18);
+  --color-completed: #7BC8A4;
+  --color-completed-bg: rgba(123, 200, 164, 0.18);
 
-  /* Gölge – Görseldeki gibi ultra pürüzsüz ve hafif gölgeler */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.06);
-  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.08);
+  /* Gölge – leylak tınısıyla ultra yumuşak gölgeler */
+  --shadow-sm: 0 2px 8px rgba(100, 80, 140, 0.04);
+  --shadow-md: 0 10px 30px rgba(100, 80, 140, 0.06);
+  --shadow-lg: 0 16px 48px rgba(100, 80, 140, 0.08);
+  --shadow-xl: 0 24px 64px rgba(100, 80, 140, 0.10);
 
   /* Animasyonlar */
   --transition-fast: 150ms ease;
@@ -69,55 +69,55 @@
   --radius-xl: 26px;
   --radius-full: 50%;
 
-  /* Fontlar – Sans Serif (Görsel referansına uygun) */
+  /* Fontlar – Sans Serif */
   --font-heading: 'Outfit', 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg-primary: #0B0F19;
-  --bg-secondary: #111827;
-  --bg-card: #1F2937;
-  --bg-card-hover: #374151;
+  --bg-primary: #16131E;
+  --bg-secondary: #1E1A28;
+  --bg-card: #262233;
+  --bg-card-hover: #322D42;
 
-  --text-primary: #F9FAFB;
-  --text-secondary: #D1D5DB;
-  --text-muted: #9CA3AF;
+  --text-primary: #F0EDF5;
+  --text-secondary: #C8C2D6;
+  --text-muted: #8E87A0;
 
-  --border-color: #374151;
-  --border-light: #1F2937;
+  --border-color: #3A3548;
+  --border-light: #2A2638;
 
-  --accent-primary: #3B82F6;
-  --accent-primary-hover: #60A5FA;
-  --accent-primary-shadow: #2563EB;
-  --accent-primary-light: rgba(59, 130, 246, 0.15);
+  --accent-primary: #A99ADE;
+  --accent-primary-hover: #BDB0EC;
+  --accent-primary-shadow: #8B7CC4;
+  --accent-primary-light: rgba(169, 154, 222, 0.16);
 
-  --color-correct: #10B981;
-  --color-correct-bg: rgba(16, 185, 129, 0.12);
-  --color-correct-border: rgba(16, 185, 129, 0.3);
-  --color-wrong: #EF4444;
-  --color-wrong-bg: rgba(239, 68, 68, 0.12);
-  --color-wrong-border: rgba(239, 68, 68, 0.3);
-  --color-warning: #F59E0B;
-  --color-info: #3B82F6;
+  --color-correct: #7DD4A8;
+  --color-correct-bg: rgba(125, 212, 168, 0.14);
+  --color-correct-border: rgba(125, 212, 168, 0.35);
+  --color-wrong: #E89090;
+  --color-wrong-bg: rgba(232, 144, 144, 0.14);
+  --color-wrong-border: rgba(232, 144, 144, 0.35);
+  --color-warning: #E8B870;
+  --color-info: #8AB4DC;
 
-  --color-streak: #F59E0B;
-  --color-xp: #FBBF24;
-  --color-hearts: #EC4899;
+  --color-streak: #E8B870;
+  --color-xp: #E8D080;
+  --color-hearts: #E88A9A;
 
-  --color-locked: #4B5563;
-  --color-locked-bg: #1F2937;
+  --color-locked: #5A5468;
+  --color-locked-bg: #2A2638;
 
-  --color-active: #3B82F6;
-  --color-active-glow: rgba(59, 130, 246, 0.25);
+  --color-active: #A99ADE;
+  --color-active-glow: rgba(169, 154, 222, 0.28);
 
-  --color-completed: #10B981;
-  --color-completed-bg: rgba(16, 185, 129, 0.18);
+  --color-completed: #7DD4A8;
+  --color-completed-bg: rgba(125, 212, 168, 0.18);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.30);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.45);
 }
 
 /* ─── Reset ──────────────────────────────────────────────── */
@@ -679,45 +679,45 @@ input {
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-/* Bölüm 1 – Vibrant Teal & Mint */
+/* Bölüm 1 – Pastel Sage & Mint */
 .unit-banner.unit-color-1 {
-  background: linear-gradient(135deg, #62CDCB 0%, #A5F3FC 100%);
+  background: linear-gradient(135deg, #A8D8C8 0%, #D4F0E7 100%);
 }
-/* Bölüm 2 – Vibrant Lavender & Lilac */
+/* Bölüm 2 – Pastel Lavanta & Leylak */
 .unit-banner.unit-color-2 {
-  background: linear-gradient(135deg, #B597F6 0%, #E2D4FF 100%);
+  background: linear-gradient(135deg, #C4B8E8 0%, #E8E0F8 100%);
 }
-/* Bölüm 3 – Vibrant Rose & Coral */
+/* Bölüm 3 – Pastel Gül & Pembe */
 .unit-banner.unit-color-3 {
-  background: linear-gradient(135deg, #FFA0B4 0%, #FFE3E8 100%);
+  background: linear-gradient(135deg, #F0B8C4 0%, #FCE4E8 100%);
 }
-/* Bölüm 4 – Vibrant Sky Blue & Lavender */
+/* Bölüm 4 – Pastel Gökyüzü & Buz */
 .unit-banner.unit-color-4 {
-  background: linear-gradient(135deg, #7EB8F0 0%, #C2D9FF 100%);
+  background: linear-gradient(135deg, #A8C8E8 0%, #D8E8F8 100%);
 }
-/* Bölüm 5 – Vibrant Mint & Emerald */
+/* Bölüm 5 – Pastel Nane & Yeşim */
 .unit-banner.unit-color-5 {
-  background: linear-gradient(135deg, #74DB96 0%, #B7F5CC 100%);
+  background: linear-gradient(135deg, #A0D8B0 0%, #D0F0D8 100%);
 }
-/* Bölüm 6 – Vibrant Orange & Peach */
+/* Bölüm 6 – Pastel Şeftali & Kayısı */
 .unit-banner.unit-color-6 {
-  background: linear-gradient(135deg, #FFA478 0%, #FFE2D4 100%);
+  background: linear-gradient(135deg, #F0C8A8 0%, #FCE8D8 100%);
 }
-/* Bölüm 7 – Vibrant Magenta & Rose */
+/* Bölüm 7 – Pastel Orkide & Gül Kurusu */
 .unit-banner.unit-color-7 {
-  background: linear-gradient(135deg, #ED8BE0 0%, #FDD2FA 100%);
+  background: linear-gradient(135deg, #E0B8D8 0%, #F4E0F0 100%);
 }
-/* Bölüm 8 – Vibrant Gold & Banana */
+/* Bölüm 8 – Pastel Bal & Vanilya */
 .unit-banner.unit-color-8 {
-  background: linear-gradient(135deg, #F9D053 0%, #FFEFA8 100%);
+  background: linear-gradient(135deg, #E8D8A0 0%, #F8F0D0 100%);
 }
-/* Bölüm 9 – Vibrant Turquoise & Ocean */
+/* Bölüm 9 – Pastel Okyanus & Turkuaz */
 .unit-banner.unit-color-9 {
-  background: linear-gradient(135deg, #46D5C8 0%, #ACFAF3 100%);
+  background: linear-gradient(135deg, #90D0CC 0%, #C8ECE8 100%);
 }
-/* Bölüm 10 – Vibrant Indigo & Lilac */
+/* Bölüm 10 – Pastel İndigo & Iris */
 .unit-banner.unit-color-10 {
-  background: linear-gradient(135deg, #9C8EF7 0%, #DED9FF 100%);
+  background: linear-gradient(135deg, #B0A8E0 0%, #DCD8F0 100%);
 }
 .path-bg {
   fill: none;
@@ -4915,6 +4915,114 @@ input {
     transform: scale(2.5);
     opacity: 0;
   }
+}
+
+/* ─── Hakkında (About) Sekmesi Stilleri ──────────────────── */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  animation: fadeIn 0.4s ease;
+}
+
+.about-hero {
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 40px 30px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about-hero:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-hero-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-hero-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  color: var(--accent-primary);
+  letter-spacing: -0.5px;
+}
+
+.about-hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--text-primary);
+}
+
+.about-hero-description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-primary);
+}
+
+.about-card-icon {
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+
+.about-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+}
+
+.about-card p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.about-footer-info {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 
