@@ -6961,31 +6961,40 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
     return result;
   };
 
+  const cleanEn = (text) => text ? text.replace(/<strong>/g, "").replace(/<\/strong>/g, "") : "";
+  const cleanConnector = (conn) => conn ? conn.replace(/<strong>/g, "").replace(/<\/strong>/g, "") : "";
+
   const buildMCQuestion = (s, id, allSentences) => {
     const tr = s.tr;
     const candidates = allSentences.filter(item => item.tr !== tr);
     const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
     const choices = shuffle([tr, ...distractors]);
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "multiple-choice",
-      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${cleanSentence}"</strong>`,
       options: choices,
       correctIndex: choices.indexOf(tr),
       isEngToTr: true,
-      enSentence: s.en,
+      enSentence: cleanSentence,
       explanation: s.explanation
     };
   };
 
   const buildClozeQuestion = (s, id) => {
-    const correctVal = s.connector;
-    const shuffledOptions = shuffle(s.options);
+    const correctVal = cleanConnector(s.connector);
+    const cleanSentence = cleanEn(s.en);
+    const shuffledOptions = shuffle(s.options.map(cleanConnector));
+    let clozedSentence = cleanSentence.replace(new RegExp(correctVal, "i"), "___");
+    if (!clozedSentence.includes("___")) {
+      clozedSentence = cleanSentence.replace(correctVal, "___");
+    }
     return {
       id: id,
       type: "fill-blank-dropdown",
       prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
-      sentence: s.en.replace(/<strong>.*?<\/strong>/, "___"),
+      sentence: clozedSentence,
       options: shuffledOptions,
       correctIndex: shuffledOptions.indexOf(correctVal),
       explanation: s.explanation
@@ -6993,9 +7002,10 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
   };
 
   const buildWBQuestion = (s, id) => {
-    const cleanBlocks = s.blocks.map(b => b.replace(/<strong>/g, "").replace(/<\/strong>/g, ""));
+    const cleanBlocks = s.blocks.map(b => cleanConnector(b));
     const distractors = ["and", "but", "so", "or"];
     const allWords = shuffle([...cleanBlocks, ...distractors]);
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "word-bank",
@@ -7003,18 +7013,19 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
       translation: s.tr,
       words: allWords,
       correctOrder: cleanBlocks,
-      enSentence: s.en,
+      enSentence: cleanSentence,
       isEngToTr: false,
       explanation: s.explanation
     };
   };
 
   const buildTransQuestion = (s, id) => {
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "translation-text",
-      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
-      enSentence: s.en,
+      prompt: `"${cleanSentence}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: cleanSentence,
       correctSentence: s.tr,
       isEngToTr: true,
       explanation: s.explanation
@@ -7030,7 +7041,7 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
         id: `u${unitId}l${lessonId}_${exId}_match`,
         type: "matching",
         prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: cleanEn(s.en) }))
       });
     }
 
@@ -7122,31 +7133,40 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
     return result;
   };
 
+  const cleanEn = (text) => text ? text.replace(/<strong>/g, "").replace(/<\/strong>/g, "") : "";
+  const cleanConnector = (conn) => conn ? conn.replace(/<strong>/g, "").replace(/<\/strong>/g, "") : "";
+
   const buildMCQuestion = (s, id, allSentences) => {
     const tr = s.tr;
     const candidates = allSentences.filter(item => item.tr !== tr);
     const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
     const choices = shuffle([tr, ...distractors]);
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "multiple-choice",
-      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${cleanSentence}"</strong>`,
       options: choices,
       correctIndex: choices.indexOf(tr),
       isEngToTr: true,
-      enSentence: s.en,
+      enSentence: cleanSentence,
       explanation: s.explanation
     };
   };
 
   const buildClozeQuestion = (s, id) => {
-    const correctVal = s.connector;
-    const shuffledOptions = shuffle(s.options);
+    const correctVal = cleanConnector(s.connector);
+    const cleanSentence = cleanEn(s.en);
+    const shuffledOptions = shuffle(s.options.map(cleanConnector));
+    let clozedSentence = cleanSentence.replace(new RegExp(correctVal, "i"), "___");
+    if (!clozedSentence.includes("___")) {
+      clozedSentence = cleanSentence.replace(correctVal, "___");
+    }
     return {
       id: id,
       type: "fill-blank-dropdown",
       prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
-      sentence: s.en.replace(/<strong>.*?<\/strong>/, "___"),
+      sentence: clozedSentence,
       options: shuffledOptions,
       correctIndex: shuffledOptions.indexOf(correctVal),
       explanation: s.explanation
@@ -7154,9 +7174,10 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
   };
 
   const buildWBQuestion = (s, id) => {
-    const cleanBlocks = s.blocks.map(b => b.replace(/<strong>/g, "").replace(/<\/strong>/g, ""));
+    const cleanBlocks = s.blocks.map(b => cleanConnector(b));
     const distractors = ["and", "but", "so", "or"];
     const allWords = shuffle([...cleanBlocks, ...distractors]);
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "word-bank",
@@ -7164,18 +7185,19 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
       translation: s.tr,
       words: allWords,
       correctOrder: cleanBlocks,
-      enSentence: s.en,
+      enSentence: cleanSentence,
       isEngToTr: false,
       explanation: s.explanation
     };
   };
 
   const buildTransQuestion = (s, id) => {
+    const cleanSentence = cleanEn(s.en);
     return {
       id: id,
       type: "translation-text",
-      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
-      enSentence: s.en,
+      prompt: `"${cleanSentence}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: cleanSentence,
       correctSentence: s.tr,
       isEngToTr: true,
       explanation: s.explanation
@@ -7191,7 +7213,7 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
         id: `u${unitId}l${lessonId}_${exId}_match`,
         type: "matching",
         prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
-        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: cleanEn(s.en) }))
       });
     }
 
