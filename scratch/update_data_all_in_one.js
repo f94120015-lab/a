@@ -62,7 +62,7 @@ const L95_raw = [
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "The system is ___ generating a unique cryptographic key.",
+    sentence: "Open target: the system is ___ generating a unique cryptographic key.",
     options: ["presently", "ago", "last week", "since"]
   },
   {
@@ -141,7 +141,7 @@ const L95_raw = [
   {
     type: "multiple-fill-blank",
     sentence: "At the moment, the compiler ___ the data blocks ___ the network firewall blocks external traffic.",
-    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor.",
+    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
     corrects: ["is processing", "while"]
   },
   {
@@ -153,7 +153,7 @@ const L95_raw = [
   {
     type: "multiple-fill-blank",
     sentence: "The system ___ presently generating a unique cryptographic key as soon as the administrator ___ verification clearance.",
-    translation: "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor.",
+    translation: "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretir.",
     corrects: ["is", "grants"]
   },
   {
@@ -663,6 +663,227 @@ const L97_raw = [
   }
 ];
 
+// Raw question definitions for Lesson 98 ("Since" Zaman Uyumu Kalıpları) - 40 questions
+const L98_raw = [
+  // Exercise 1 (1-10)
+  {
+    type: "fill-blank",
+    sentence: "The company ___ since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
+    options: ["has expanded", "expanded", "expands", "is expanding"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The company <span style=\"color: #51cf66; font-weight: bold;\">has expanded</span> ___ the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
+    options: ["since", "for", "when", "while"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Plants ___ significantly since they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
+    options: ["have grown", "grew", "grow", "are growing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
+    options: ["since", "during", "until", "before"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Children ___ grammar since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
+    options: ["have learned", "learned", "learn", "are learning"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Children <span style=\"color: #51cf66; font-weight: bold;\">have learned</span> grammar ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
+    options: ["since", "for", "when", "as"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
+    options: ["has not held", "did not hold", "does not hold", "is not holding"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The board <span style=\"color: #51cf66; font-weight: bold;\">has not held</span> meetings ___ the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
+    options: ["since", "while", "until", "although"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The layout ___ since it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
+    options: ["has not changed", "did not change", "does not change", "is not changing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> ___ it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
+    options: ["since", "for", "when", "because"]
+  },
+
+  // Exercise 2 (11-20)
+  {
+    type: "fill-blank",
+    sentence: "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> since equipment ___ .",
+    options: ["was installed", "is installed", "has installed", "installs"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Work ___ since equipment <span style=\"color: #ff6b6b; font-weight: bold;\">was installed</span>.",
+    options: ["has been facilitated", "was facilitated", "is facilitated", "facilitates"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Users <span style=\"color: #51cf66; font-weight: bold;\">have experienced</span> errors since the server ___ .",
+    options: ["crashed", "has crashed", "crashes", "is crashing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>.",
+    options: ["have experienced", "experienced", "experience", "are experiencing"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Automation <span style=\"color: #51cf66; font-weight: bold;\">has increased</span> since the tech firm ___ .",
+    options: ["opened", "has opened", "opens", "is opening"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Automation ___ since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>.",
+    options: ["has increased", "increased", "increases", "is increasing"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ .",
+    options: ["began", "has begun", "begins", "is beginning"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Temperatures ___ since winter <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.",
+    options: ["have fluctuated", "fluctuated", "fluctuate", "are fluctuating"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Profits <span style=\"color: #51cf66; font-weight: bold;\">have dropped</span> since the financial market ___ .",
+    options: ["declined", "has declined", "declines", "is declining"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Profits ___ since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span>.",
+    options: ["have dropped", "dropped", "drop", "are dropping"]
+  },
+
+  // Exercise 3 (21-30)
+  {
+    type: "fill-blank",
+    sentence: "The company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
+    options: ["has expanded", "expanded", "expands", "is expanding"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly since they ___ in the highly controlled laboratory greenhouse environment.",
+    options: ["were planted", "are planted", "have been planted", "plant"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Children ___ grammar rules faster since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> utilizing mobile applications with gamified designs.",
+    options: ["have learned", "learned", "learn", "are learning"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span> because internal administrative conflicts remain unresolved.",
+    options: ["has not held", "did not hold", "does not hold", "is not holding"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> since it ___ although several frontend developers requested visual interface updates.",
+    options: ["was designed", "is designed", "has designed", "designs"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The company ___ expanded its digital trade operations since the new law ___ passed by the legislative assembly.",
+    translation: "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti.",
+    corrects: ["has", "was"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Plants ___ grown significantly since they ___ planted in the highly controlled laboratory greenhouse environment.",
+    translation: "Bitkiler, son derece kontrollü laboratuvar sera ortamına dikildiklerinden beri önemli ölçüde büyüdüler.",
+    corrects: ["have", "were"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Children ___ learned grammar rules faster since they ___ utilizing mobile applications with gamified designs.",
+    translation: "Çocuklar, oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullanmaya başladıklarından beri dilbilgisi kurallarını daha hızlı öğrendiler.",
+    corrects: ["have", "started"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The board ___ not held meetings since the president ___ elected because internal administrative conflicts remain unresolved.",
+    translation: "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı.",
+    corrects: ["has", "was"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The layout ___ not changed since it ___ designed although several frontend developers requested visual interface updates.",
+    translation: "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi.",
+    corrects: ["has", "was"]
+  },
+
+  // Exercise 4 (31-40)
+  {
+    type: "fill-blank",
+    sentence: "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> greatly since electronic equipment ___ by the technical infrastructure branch.",
+    options: ["was installed", "is installed", "has installed", "installs"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, causing temporary suspension of data token generations.",
+    options: ["have experienced", "experienced", "experience", "are experiencing"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Automation ___ rapidly since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>, reducing corporate expenditure on manual operations.",
+    options: ["has increased", "increased", "increases", "is increasing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
+    options: ["began", "has begun", "begins", "is beginning"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Profits ___ dropped since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span> due to unexpected international trade restrictions.",
+    options: ["have", "has", "had", "are"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Work ___ been facilitated greatly since electronic equipment ___ installed by the technical infrastructure branch.",
+    translation: "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı.",
+    corrects: ["has", "was"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
+    translation: "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı.",
+    corrects: ["have", "crashed"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Automation ___ increased rapidly since the tech firm ___ , reducing corporate expenditure on manual operations.",
+    translation: "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı.",
+    corrects: ["has", "opened"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Temperatures ___ fluctuated since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
+    translation: "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi.",
+    corrects: ["have", "began"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Profits ___ dropped since the financial market ___ due to unexpected international trade restrictions.",
+    translation: "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü.",
+    corrects: ["have", "declined"]
+  }
+];
+
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -702,7 +923,8 @@ function buildExercises(rawList, lessonId) {
       id: `u0l${lessonId}ex1`,
       title: lessonId === 95 ? "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I" :
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
-                               "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I",
+             lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
+                               "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I",
       description: "Boşluk doldurma ve zaman zarfları pratikleri.",
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
@@ -710,7 +932,8 @@ function buildExercises(rawList, lessonId) {
       id: `u0l${lessonId}ex2`,
       title: lessonId === 95 ? "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II" :
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
-                               "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II",
+             lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
+                               "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II",
       description: "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
@@ -718,7 +941,8 @@ function buildExercises(rawList, lessonId) {
       id: `u0l${lessonId}ex3`,
       title: lessonId === 95 ? "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III" :
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
-                               "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III",
+             lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
+                               "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III",
       description: "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
@@ -726,7 +950,8 @@ function buildExercises(rawList, lessonId) {
       id: `u0l${lessonId}ex4`,
       title: lessonId === 95 ? "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV" :
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
-                               "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV",
+             lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
+                               "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV",
       description: "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
       questions: getExerciseQuestions(rawList.slice(30, 40), lessonId, 4)
     }
@@ -736,67 +961,55 @@ function buildExercises(rawList, lessonId) {
 const unit0Exercises = {
   1: { exercises: buildExercises(L95_raw, 95) },
   2: { exercises: buildExercises(L96_raw, 96) },
-  3: { exercises: buildExercises(L97_raw, 97) }
+  3: { exercises: buildExercises(L97_raw, 97) },
+  4: { exercises: buildExercises(L98_raw, 98) }
 };
 
 const dataPath = '../data.js';
 let content = fs.readFileSync(dataPath, 'utf8');
 
-// 1. Add DENEME to rawTopics
-const lastTopicMarker = `  {
-    title: "XXV. Neden ve Etki Strüktürleri (Sayfa 256)",
-    desc: "Cümleler arası neden-sonuç bağlaçları (therefore, thus, consequently, hence) kullanımı",
-    icon: "🪐",
-    numLessons: 1,
-    formulas: [
-      { formula: "Clause; therefore / thus / consequently / hence, Clause", example: "The cost was very high, therefore they changed the design: Maliyet çok yüksekti, bu nedenle tasarımı değiştirdiler" }
-    ],
-    subtitles: [
-      "Neden ve Etki Strüktürleri (Sayfa 256)"
-    ]
-  }
-];`;
-
-const newTopicContent = `  {
-    title: "XXV. Neden ve Etki Strüktürleri (Sayfa 256)",
-    desc: "Cümleler arası neden-sonuç bağlaçları (therefore, thus, consequently, hence) kullanımı",
-    icon: "🪐",
-    numLessons: 1,
-    formulas: [
-      { formula: "Clause; therefore / thus / consequently / hence, Clause", example: "The cost was very high, therefore they changed the design: Maliyet çok yüksekti, bu nedenle tasarımı değiştirdiler" }
-    ],
-    subtitles: [
-      "Neden ve Etki Strüktürleri (Sayfa 256)"
-    ]
-  },
-  {
+// 1. Replace the DENEME topic in rawTopics
+const topicStartMarker = 'id: 0,\n    title: "DENEME",';
+const topicStartIdx = content.indexOf(topicStartMarker);
+if (topicStartIdx !== -1) {
+  const openBraceIdx = content.lastIndexOf('{', topicStartIdx);
+  const closeArrayIdx = content.indexOf('];', topicStartIdx);
+  if (openBraceIdx !== -1 && closeArrayIdx !== -1) {
+    const newTopicBlock = `{
     id: 0,
     title: "DENEME",
     desc: "Time-Link: Connectors & Tenses",
     icon: "🧪",
-    numLessons: 3,
+    numLessons: 4,
     formulas: [
       { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
       { formula: "Subject + V2", example: "Yesterday, the central server <span style=\\"color: #ff6b6b; font-weight: bold;\\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
-      { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." }
+      { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
+      { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple, kırmızı) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect, yeşil) yapısındadır." }
     ],
     subtitles: [
       "Present Continuous (is Ving) - Zaman Zarfları",
       "Past Simple (v2) - Zaman Zarfları",
-      "Present Perfect (have V3) - Zaman Zarfları"
+      "Present Perfect (have V3) - Zaman Zarfları",
+      "\\\"Since\\\" Zaman Uyumu Kalıpları"
     ]
+  }\n`;
+    content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);
   }
-];`;
+}
 
-content = content.replace(lastTopicMarker, newTopicContent);
-
-// 2. Modify loader loop
-content = content.replace('const unitId = uIdx + 1;', 'const unitId = topic.id !== undefined ? topic.id : (uIdx + 1);');
-
-// 3. Insert 0: into unitSentencesMap
-const mapHeader = 'const unitSentencesMap = {';
-const mapHeaderReplacement = 'const unitSentencesMap = {\n  0: ' + JSON.stringify(unit0Exercises, null, 2) + ',';
-content = content.replace(mapHeader, mapHeaderReplacement);
+// 2. Re-read content because indices changed, then replace unitSentencesMap 0:
+const mapStartIndex = content.indexOf('const unitSentencesMap = {');
+if (mapStartIndex !== -1) {
+  const openingBraceIndex = content.indexOf('{', mapStartIndex);
+  const key0Index = content.indexOf('\n  0: ', openingBraceIndex);
+  const key1Index = content.indexOf('\n  1: ', openingBraceIndex);
+  
+  if (key0Index !== -1 && key1Index !== -1) {
+    const formattedObjStr = `\n  0: ${JSON.stringify(unit0Exercises, null, 2)},\n`;
+    content = content.substring(0, key0Index) + formattedObjStr + content.substring(key1Index);
+  }
+}
 
 fs.writeFileSync(dataPath, content);
 console.log("Single-pass update of data.js successful!");
