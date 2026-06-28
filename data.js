@@ -5643,7 +5643,7 @@ const unit19Lesson3SentencesL9Raw = [
 
 
 
-function buildUnit19Lesson68Exercises(unitId, lessonId) {
+function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
   // Greedy interleaving algorithm
@@ -5887,18 +5887,33 @@ function buildUnit19Lesson68Exercises(unitId, lessonId) {
     "When the bacteria are examined under the microscope they can be identified.": "microscope"
   };
 
-  // Build the 9 Exercises matching the 9 raw arrays
-  return [
-    compileClauseExercise(unit19Lesson3SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Şimdiki Zaman (Alıştırma 136)", "when ile başlayan geniş/şimdiki zaman yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
-    compileClauseExercise(unit19Lesson3SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Geçmiş Zaman (Alıştırma 137)", "when ile başlayan geçmiş zaman yan cümleleri, kelime eşleştirme ve yazma"),
-    compileClauseExercise(unit19Lesson3SentencesL3Raw, "ex3", "Alıştırma 3: Zaman Zarf Cümlecikleri — Perfect Zamanlar (Alıştırma 138)", "when ile başlayan present/past perfect zaman yan cümleleri, kelime eşleştirme ve yazma"),
-    compileClauseExercise(unit19Lesson3SentencesL4Raw, "ex4", "Alıştırma 4: Zaman Zarf Cümlecikleri — Edilgen (Alıştırma 139)", "when ile başlayan edilgen yan cümleler, kelime eşleştirme ve yazma"),
-    compileClauseExercise(unit19Lesson3SentencesL5Raw, "ex5", "Alıştırma 5: Zaman Zarf Cümlecikleri — Perfect Edilgen (Alıştırma 140)", "when ile başlayan perfect edilgen yan cümleleri, kelime eşleştirme ve yazma"),
-    compileClauseExercise(unit19Lesson3SentencesL6Raw, "ex6", "Alıştırma 6: Zaman Zarf Cümlecikleri — Karışık Zamanlar (Alıştırma 141)", "when ile başlayan karışık zamanlı yan cümleleri, kelime eşleştirme ve yazma"),
-    compileSentenceExercise(unit19Lesson3SentencesL7Raw, "ex7", "Alıştırma 7: Akademik Cümleler — Biyoloji & Doğa Bilimleri (Alıştırma 142)", "when ile kurulan karmaşık biyoloji ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
-    compileSentenceExercise(unit19Lesson3SentencesL8Raw, "ex8", "Alıştırma 8: Akademik Cümleler — Yönetim & Doğa (Alıştırma 143)", "when ile kurulan karmaşık yönetim ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
-    compileSentenceExercise(unit19Lesson3SentencesL9Raw, "ex9", "Alıştırma 9: Akademik Cümleler — Kimya & Fizik (Alıştırma 144)", "when ile kurulan karmaşık kimya ve fizik bilimleri cümleleri, eşleştirme ve yazma", splitter_144)
-  ];
+  // Build the Exercises matching the 9 raw arrays based on lessonNum
+  if (lessonNum === 1) {
+    return [
+      compileClauseExercise(unit19Lesson3SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Şimdiki Zaman (Alıştırma 136)", "when ile başlayan geniş/şimdiki zaman yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
+      compileClauseExercise(unit19Lesson3SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Geçmiş Zaman (Alıştırma 137)", "when ile başlayan geçmiş zaman yan cümleleri, kelime eşleştirme ve yazma")
+    ];
+  } else if (lessonNum === 2) {
+    return [
+      compileClauseExercise(unit19Lesson3SentencesL3Raw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Perfect Zamanlar (Alıştırma 138)", "when ile başlayan present/past perfect zaman yan cümleleri, kelime eşleştirme ve yazma")
+    ];
+  } else if (lessonNum === 3) {
+    return [
+      compileClauseExercise(unit19Lesson3SentencesL4Raw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Edilgen (Alıştırma 139)", "when ile başlayan edilgen yan cümleler, kelime eşleştirme ve yazma"),
+      compileClauseExercise(unit19Lesson3SentencesL5Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Perfect Edilgen (Alıştırma 140)", "when ile başlayan perfect edilgen yan cümleleri, kelime eşleştirme ve yazma")
+    ];
+  } else if (lessonNum === 4) {
+    return [
+      compileClauseExercise(unit19Lesson3SentencesL6Raw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Karışık Zamanlar (Alıştırma 141)", "when ile başlayan karışık zamanlı yan cümleleri, kelime eşleştirme ve yazma")
+    ];
+  } else if (lessonNum === 5) {
+    return [
+      compileSentenceExercise(unit19Lesson3SentencesL7Raw, "ex1", "Alıştırma 1: Akademik Cümleler — Biyoloji & Doğa Bilimleri (Alıştırma 142)", "when ile kurulan karmaşık biyoloji ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
+      compileSentenceExercise(unit19Lesson3SentencesL8Raw, "ex2", "Alıştırma 2: Akademik Cümleler — Yönetim & Doğa (Alıştırma 143)", "when ile kurulan karmaşık yönetim ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
+      compileSentenceExercise(unit19Lesson3SentencesL9Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Kimya & Fizik (Alıştırma 144)", "when ile kurulan karmaşık kimya ve fizik bilimleri cümleleri, eşleştirme ve yazma", splitter_144)
+    ];
+  }
+  return [];
 }
 
 
@@ -11322,16 +11337,40 @@ const rawTopics = [
     title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, When",
     desc: "when bağlacı ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 1,
+    numLessons: 5,
     formulas: [
       { 
-        formula: "When + Clause", 
-        example: "When the pressure increases, the temperature rises: Basınç arttığında sıcaklık yükselir",
+        formula: "When + Present / Past Simple", 
+        example: "When the bells ring: Ziller çaldığında / When he came: O geldiğinde",
         description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nKural Açıklaması:\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir."
+      },
+      {
+        formula: "When + Present / Past Perfect",
+        example: "When they have finished: Bitirdiklerinde / When he had left: Ayrılmış olduğunda",
+        description: "when ile başlayan ve eylemin tamamlanmışlığını vurgulayan perfect zaman yan cümleleri."
+      },
+      {
+        formula: "When + Passive (be + V3)",
+        example: "When it is heated: Isıtıldığında / When they were examined: İncelendiklerinde",
+        description: "when ile başlayan edilgen ve perfect edilgen çatıya sahip zaman cümleleri."
+      },
+      {
+        formula: "When + Mixed Tenses",
+        example: "When sugar is consumed: Şeker tüketildiğinde",
+        description: "when ile kurulan karışık zaman ilişkilerine sahip yan cümle örnekleri."
+      },
+      {
+        formula: "When + Complex Clause",
+        example: "When the substance is dissolved: Madde çözündüğünde",
+        description: "when bağlacı ile kurulan, fen ve doğa bilimlerine yönelik ileri düzey karmaşık akademik cümle yapıları."
       }
     ],
     subtitles: [
-      "C. When"
+      "C. When - Geniş ve Geçmiş Zaman",
+      "C. When - Perfect Zamanlar",
+      "C. When - Edilgen Yapılar",
+      "C. When - Karışık Zamanlar",
+      "C. When - Akademik Cümleler"
     ]
   },
   {
@@ -13381,7 +13420,11 @@ const unitSentencesMap = {
     1: { exercises: buildAra3ExercisesForLesson67(23, 67) }
   },
   24: {
-    1: { exercises: buildUnit19Lesson68Exercises(24, 68) }
+    1: { exercises: buildUnit19Lesson68Exercises(24, 68, 1) },
+    2: { exercises: buildUnit19Lesson68Exercises(24, 69, 2) },
+    3: { exercises: buildUnit19Lesson68Exercises(24, 70, 3) },
+    4: { exercises: buildUnit19Lesson68Exercises(24, 71, 4) },
+    5: { exercises: buildUnit19Lesson68Exercises(24, 72, 5) }
   },
   25: {
     1: { exercises: [] }
