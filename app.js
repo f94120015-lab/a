@@ -58,6 +58,8 @@ let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
 let placementQuestionsList = [];
+let quizSessionId = 0;
+
 
 // E-posta Bildirim Ayarları
 const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
@@ -117,194 +119,834 @@ function buildDynamicDictionary() {
 
 // Fallback dictionary for common English words that might be missing from lesson-specific data
 const fallbackDictionary = {
-  "trend": "eğilim, gidişat, akım",
-  "card": "kart",
-  "one": "bir",
-  "none": "hiçbiri, yok",
-  "proof": "kanıt, ispat",
-  "improve": "geliştirmek, iyileştirmek",
-  "allowed": "izin verilmiş, serbest",
+  "19th": "19.",
+  "abandon": "terk etmek",
+  "about": "hakkında, yaklaşık",
+  "above": "üzerinde, yukarıda",
+  "absolute": "mutlak",
+  "absorb": "emmek",
+  "absorption": "emilim",
+  "acceptable": "kabul edilebilir",
+  "accessible": "erişilebilir",
+  "according": "binaen",
   "achieved": "başarılmış, elde edilmiş",
-  "aims": "amaçlar, hedefler",
-  "existence": "varoluş, varlık",
-  "form": "form, şekil, biçim, oluşturmak",
-  "life": "hayat, yaşam",
-  "injection": "enjeksiyon, iğne yapma",
-  "region": "bölge",
-  "arm": "kol, silahlandırmak",
-  "skin": "cilt, deri",
-  "testtube": "deney tüpü",
-  "near": "yakın, yanında",
-  "testtubes": "deney tüpleri",
-  "questions": "sorular",
-  "translation": "çeviri, tercüme",
-  "nutrients": "besinler, gıdalar",
-  "favour": "iyilik, lütuf, desteklemek",
-  "object": "nesne, itiraz etmek",
-  "comprehension": "anlama, kavrama",
-  "lung": "akciğer",
-  "date": "tarih, randevu",
-  "box": "kutu, boks yapmak",
-  "refusal": "reddetme, ret",
-  "names": "isimler, adlar",
-  "hospital": "hastane",
-  "records": "kayıtlar, rekorlar",
-  "files": "dosyalar",
+  "acknowledgement": "teşekkür",
+  "activate": "etkinleştir",
+  "activities": "faaliyetler",
+  "add": "eklemek",
+  "added": "eklendi",
   "address": "adres, hitap etmek",
-  "london": "Londra",
   "addresses": "adresler",
-  "below": "aşağıda, altında",
-  "speaking": "konuşma, konuşuyor",
-  "nobody": "hiç kimse",
-  "never": "asla, hiçbir zaman",
-  "less": "daha az",
-  "dense": "yoğun, sık",
-  "approve": "onaylamak, beğenmek",
-  "xrays": "röntgen ışınları",
-  "make": "yapmak, etmek",
-  "sodium": "sodyum",
-  "chloride": "klorür",
-  "rises": "yükselir, artar",
-  "mentioned": "bahsedilen, adı geçen",
-  "remember": "hatırlamak",
-  "robert": "Robert (isim)",
-  "brown": "kahverengi, Brown (isim)",
-  "file": "dosya",
-  "map": "harita",
-  "shows": "gösterir, şovlar",
-  "overcame": "üstesinden geldi",
-  "recommend": "tavsiye etmek, önermek",
-  "increase": "artırmak, artış",
-  "decrease": "azaltmak, azalış",
-  "possibility": "olasılık, ihtimal",
-  "tendency": "eğilim, meyil",
-  "hope": "umut, umut etmek",
-  "improvement": "gelişme, iyileşme",
-  "vibration": "titreşim",
-  "type": "tip, tür, yazmak",
-  "suggestion": "öneri, teklif",
-  "similarity": "benzerlik",
-  "wet": "ıslak, nemli",
-  "wrong": "yanlış, hatalı",
-  "expenses": "giderler, masraflar",
-  "pure": "saf, temiz",
-  "impure": "saf olmayan, kirli",
-  "favourable": "uygun, olumlu, elverişli",
-  "slow": "yavaş",
-  "turkish": "Türkçe, Türk",
-  "french": "Fransızca, Fransız",
-  "dictionary": "sözlük",
-  "woman": "kadın",
-  "confession": "itiraf",
-  "lesson": "ders",
-  "success": "başarı",
-  "gold": "altın",
-  "precious": "değerli, kıymetli",
-  "nonmetallic": "metalik olmayan",
-  "train": "tren, eğitmek",
-  "shop": "dükkan, mağaza, alışveriş yapmak",
-  "side": "yan, taraf",
-  "outside": "dışarı, dışarısı",
-  "lime": "kireç, misket limonu",
-  "extensive": "kapsamlı, geniş",
-  "rigid": "sert, katı, esnemez",
-  "and": "ve",
-  "or": "veya, yahut",
-  "but": "ama, fakat",
-  "because": "çünkü, zira",
-  "so": "böylece, bu yüzden, çok",
-  "very": "çok",
-  "highly": "yüksek derecede, son derece",
-  "too": "de/da, aşırı",
-  "also": "ayrıca, hem de",
-  "either": "ya, ikisinden biri",
-  "neither": "ne de, ikisi de değil",
-  "both": "her ikisi",
-  "only": "sadece, yalnızca",
-  "even": "bile, hatta, çift",
-  "just": "sadece, henüz, adil",
-  "then": "o zaman, sonra",
-  "than": "göre, -den (karşılaştırma)",
-  "first": "birinci, ilk",
-  "second": "ikinci, saniye",
-  "third": "üçüncü",
-  "last": "son, sürmek",
-  "next": "sonraki, gelecek",
-  "here": "burada, burası",
-  "there": "orada, orası",
-  "where": "nerede, nereye",
-  "when": "ne zaman, -dığı zaman",
-  "why": "neden, niçin",
-  "how": "nasıl",
-  "what": "ne",
-  "who": "kim",
-  "which": "hangi, ki o",
-  "whose": "kimin",
-  "whom": "kime, kimi",
-  "some": "bazı, biraz",
-  "any": "hiç, herhangi bir",
-  "many": "birçok, çok",
-  "much": "çok",
-  "few": "az, birkaç",
-  "little": "küçük, az",
+  "administered": "yönetilen",
+  "administrator": "yönetici",
+  "administrators": "yöneticiler",
+  "adrenaline": "adrenalin",
+  "advance": "ilerlemek",
+  "advantages": "avantajlar",
+  "advocacy": "savunuculuk",
+  "aesthetic": "estetik",
+  "after": "sonra",
+  "afternoon": "öğleden sonra",
+  "against": "karşı, aleyhinde",
+  "agency": "ajans",
+  "ago": "önce",
+  "ahead": "ilerde",
+  "aid": "yardım",
+  "aim": "amaç",
+  "aims": "amaçlar, hedefler",
+  "airport": "havalimanı",
   "all": "tüm, bütün, hepsi",
-  "every": "her",
-  "each": "her biri",
-  "other": "diğer, başka",
-  "another": "başka bir, diğer bir",
-  "no": "hayır, yok, hiçbir",
-  "not": "değil, olumsuzluk eki",
-  "always": "her zaman, daima",
-  "usually": "genellikle",
-  "often": "sık sık",
-  "sometimes": "bazen",
-  "rarely": "nadiren, seyrek",
-  "seldom": "nadiren",
-  "hardly": "neredeyse hiç, güç bela",
-  "scarcely": "neredeyse hiç",
-  "barely": "ucu ucuna, zar zor",
+  "allergic": "alerjik",
+  "alliance": "ittifak",
+  "allowed": "izin verilmiş, serbest",
   "almost": "neredeyse, hemen hemen",
   "already": "zaten, çoktan",
-  "yet": "henüz, hala, ama",
-  "still": "hala, hareketsiz",
-  "since": "beri, -den beri, çünkü",
-  "ago": "önce",
+  "also": "ayrıca, hem de",
+  "alteration": "değişiklik",
+  "altitude": "rakım",
+  "always": "her zaman, daima",
+  "among": "arasında (çok şey)",
+  "amounts": "miktarlar",
+  "anatomical": "anatomik",
+  "anatomy": "anatomi",
+  "and": "ve",
+  "anodes": "anotlar",
+  "anomalies": "anomaliler",
+  "another": "başka bir, diğer bir",
+  "antibodies": "antikorlar",
+  "any": "hiç, herhangi bir",
+  "api": "api",
+  "appeal": "çekici",
+  "appendix": "ek",
+  "approval": "onay",
+  "approve": "onaylamak, beğenmek",
+  "architect": "mimar",
+  "architecture": "mimari",
+  "arm": "kol, silahlandırmak",
+  "armies": "ordular",
+  "art": "sanat",
+  "astronomers": "gökbilimciler",
+  "astronomical": "astronomik",
+  "attempt": "girişim",
+  "authorization": "yetkilendirme",
+  "authors'": "yazarların",
+  "automation": "otomasyon",
+  "auxiliary": "ek",
+  "away": "uzak, uzakta",
+  "back": "geri",
+  "backed": "destekli",
+  "backend": "arka uç",
+  "backup": "yedekleme",
+  "badge": "rozet",
+  "balloon": "balon",
+  "bank's": "bankanın",
+  "barely": "ucu ucuna, zar zor",
+  "basic": "temel",
+  "beautiful": "güzel",
+  "became": "oldu",
+  "because": "çünkü, zira",
   "before": "önce, önünde",
-  "after": "sonra",
+  "begun": "başladı",
+  "behind": "arkasında",
+  "below": "altında, aşağıda",
+  "beneficiaries": "faydalanıcılar",
+  "beside": "yanında",
+  "between": "arasında (iki şey)",
+  "bicarbonate": "bikarbonat",
+  "bigger": "daha büyük",
+  "biological": "biyolojik",
+  "block": "engellemek",
+  "blocked": "engellendi",
+  "blue": "mavi",
+  "bodies": "bedenler",
+  "body": "vücut",
+  "booth": "çardak",
+  "border": "sınır",
+  "both": "her ikisi",
+  "bottom": "alt",
+  "box": "kutu, boks yapmak",
+  "break": "kırmak",
+  "bridge": "köprü",
+  "britain": "britanya",
+  "british": "i̇ngiliz",
+  "brown": "kahverengi, Brown (isim)",
+  "but": "ama, fakat",
+  "by": "tarafından, yanında, ile",
+  "calculation": "hesaplama",
+  "calculations": "hesaplamalar",
+  "calibration": "kalibrasyon",
+  "camera": "kamera",
+  "cancelled": "iptal edildi",
+  "carbon": "karbon",
+  "card": "kart",
+  "carried": "taşınan",
+  "carries": "taşır",
+  "cavity": "boşluk",
+  "celestial": "göksel",
+  "cellular": "hücresel",
+  "century": "yüzyıl",
+  "ceremony": "tören",
+  "certain": "kesin",
+  "certificates": "sertifikalar",
+  "chamber": "odacık",
+  "chef": "şef",
+  "chest": "göğüs",
+  "chloride": "klorür",
+  "chocolate": "çikolata",
+  "circumstances": "durumlar",
+  "civic": "sivil",
+  "civil": "sivil",
+  "cleanroom": "temiz oda",
+  "cleanup": "temizlemek",
+  "clearance": "gümrükleme",
+  "clone": "klon",
+  "cluster": "küme",
+  "coastal": "kıyı",
+  "coincidence": "tesadüf",
+  "colour": "renk",
+  "combustion": "yanma",
+  "communication": "iletişim",
+  "communities": "topluluklar",
+  "comparative": "karşılaştırmalı",
+  "compilation": "derleme",
+  "compiled": "derlenmiş",
+  "compiler": "derleyici",
+  "compliance": "uyumluluk",
+  "comprehension": "anlama, kavrama",
+  "computational": "hesaplamalı",
+  "computations": "hesaplamalar",
+  "computing": "bilgi işlem",
+  "conclusive": "kesin",
+  "conference": "konferans",
+  "confession": "itiraf",
+  "configuration": "konfigürasyon",
+  "conservation": "koruma",
+  "considered": "dikkate alınan",
+  "constant": "devamlı",
+  "construction": "yapı",
+  "consult": "danışmak",
+  "consultants": "danışmanlar",
+  "consumed": "tüketilen",
+  "contact": "temas etmek",
+  "content": "içerik",
+  "continue": "devam etmek",
+  "contradictions": "çelişkiler",
+  "contributions": "katkılar",
+  "convenient": "uygun",
+  "convention": "kongre",
+  "coordinates": "koordinatlar",
+  "coordination": "koordinasyon",
+  "coordinators": "koordinatörler",
+  "copy": "kopyala",
+  "corrupted": "bozuk",
+  "cosmic": "kozmik",
+  "cracks": "çatlaklar",
+  "create": "yaratmak",
+  "crew": "mürettebat",
+  "crop": "mahsul",
+  "crossdisciplinary": "disiplinler arası",
+  "currencies": "para birimleri",
+  "currency": "para birimi",
+  "curricula": "müfredat",
+  "cybersecurity": "siber güvenlik",
+  "cylinder": "silindir",
+  "daily": "günlük",
+  "darker": "daha koyu",
+  "darkness": "karanlık",
+  "dashboard": "gösterge paneli",
+  "dataset": "veri kümesi",
+  "date": "tarih, randevu",
+  "deadline": "son teslim tarihi",
+  "decentralized": "merkezi olmayan",
+  "decomposed": "ayrışmış",
+  "decomposes": "ayrışır",
+  "decrease": "azaltmak, azalış",
+  "dedicated": "özel",
+  "deeper": "daha derine",
+  "deepspace": "derin uzay",
+  "defended": "savundu",
+  "demonstrations": "gösteriler",
+  "dense": "yoğun, sık",
+  "deployment": "konuşlandırma",
+  "describe": "betimlemek",
+  "destination": "varış noktası",
+  "developer": "geliştirici",
+  "diagnostic": "teşhis",
+  "dictates": "dikte eder",
+  "dictionary": "sözlük",
+  "didn't": "yapmadı",
+  "dioxide": "dioksit",
+  "direct": "doğrudan",
+  "discrimination": "ayrımcılık",
+  "disembarked": "gemiden inmiş",
+  "disk": "disk",
+  "display": "görüntülemek",
+  "displays": "görüntüler",
+  "disruptions": "kesintiler",
+  "dissections": "diseksiyonlar",
+  "documentation": "dokümantasyon",
+  "don't": "yapma",
+  "doors": "kapılar",
+  "dose": "doz",
+  "doubt": "şüphe",
+  "down": "aşağı",
+  "download": "indirmek",
+  "downloading": "indiriliyor",
+  "draft": "taslak",
+  "drafts": "taslaklar",
+  "drastically": "şiddetli bir şekilde",
+  "drawn": "çizilmiş",
+  "drew": "çizdi",
+  "dried": "kurutulmuş",
+  "dries": "kurur",
+  "drive": "sürmek",
+  "drone": "dron",
+  "dropped": "düştü",
   "during": "esnasında, boyunca",
-  "until": "kadar, -e kadar",
-  "till": "kadar, -e kadar",
-  "while": "iken, esnasında, süre",
+  "dying": "ölme",
+  "dynamically": "dinamik olarak",
+  "each": "her biri",
+  "effect": "etki",
+  "effective": "etkili",
+  "either": "ya, ikisinden biri",
+  "electric": "elektrik",
+  "electromagnetic": "elektromanyetik",
+  "electronic": "elektronik",
+  "embryo": "embriyo",
+  "employ": "istihdam etmek",
+  "employees": "çalışanlar",
+  "encrypted": "şifrelenmiş",
+  "endangered": "nesli tükenmekte olan",
+  "endorse": "onaylamak",
+  "engagement": "nişanlanmak",
+  "engine": "motor",
+  "ensure": "emin olmak",
+  "entity": "varlık",
+  "equation": "denklem",
+  "equations": "denklemler",
+  "erratically": "düzensiz olarak",
+  "erroneously": "yanlışlıkla",
+  "establishment": "kuruluş",
+  "ethical": "etik",
+  "ethnicity": "etnik köken",
+  "even": "bile, hatta, çift",
+  "every": "her",
+  "everyone": "herkes",
+  "evolution": "evrim",
+  "excavation": "kazı",
+  "excavations": "kazılar",
+  "exclusive": "özel",
+  "existence": "varoluş, varlık",
+  "exothermic": "ekzotermik",
+  "expenses": "giderler, masraflar",
+  "expired": "günü geçmiş",
+  "exploit": "faydalanmak",
+  "extension": "eklenti",
+  "extensive": "kapsamlı, geniş",
+  "external": "harici",
+  "extraction": "ekstraksiyon",
+  "extreme": "aşırı",
+  "failure": "arıza",
+  "failures": "başarısızlıklar",
+  "faint": "bayılmak",
+  "fallen": "düşmüş",
+  "falls": "düşme",
+  "fan": "fan",
+  "far": "uzak",
+  "faulty": "hatalı",
+  "favour": "iyilik, lütuf, desteklemek",
+  "favourable": "uygun, olumlu, elverişli",
+  "feeds": "beslemeler",
+  "few": "az, birkaç",
+  "field": "alan",
+  "file": "dosya",
+  "files": "dosyalar",
+  "filling": "doldurma",
+  "firewall": "güvenlik duvarı",
+  "firewalls": "güvenlik duvarları",
+  "first": "birinci, ilk",
+  "flexibility": "esneklik",
+  "flickered": "titredi",
+  "flight": "uçuş",
+  "flying": "uçan",
+  "folders": "klasörler",
+  "football": "futbol",
+  "form": "form, şekil, biçim, oluşturmak",
+  "fortified": "takviye edilmiş",
+  "fossil": "fosil",
+  "frame": "çerçeve",
+  "freeze": "donmak, buz tutmak",
+  "french": "Fransızca, Fransız",
+  "frontend": "başlangıç ​​aşaması",
+  "frozen": "dondurulmuş",
+  "fruit": "meyve",
+  "fuel": "yakıt",
+  "fuels": "yakıtlar",
+  "fund": "fon",
+  "fundamental": "esas",
+  "future": "gelecek",
+  "galileo's": "galileo'nun",
+  "game": "oyun",
+  "gamified": "oyunlaştırılmış",
+  "gateway": "geçit",
+  "gender": "cinsiyet",
+  "generate": "oluşturmak",
+  "generations": "nesiller",
+  "generator": "jeneratör",
+  "geographic": "coğrafi",
+  "geology": "jeoloji",
+  "german": "almanca",
+  "given": "verildi",
+  "gold": "altın",
+  "grammar": "dilbilgisi",
+  "grammatical": "gramer",
+  "grant": "hibe etmek",
+  "grants": "hibeler",
+  "gravitational": "yerçekimi",
+  "guest": "misafir",
+  "hackers": "bilgisayar korsanları",
+  "happens": "olur",
+  "hardly": "neredeyse hiç, güç bela",
+  "hardware": "donanım",
+  "hazardous": "tehlikeli",
+  "held": "tutulmuş",
+  "here": "burada, burası",
+  "highcapacity": "yüksek kapasite",
+  "highly": "yüksek derecede, son derece",
+  "highpressure": "yüksek basınç",
+  "highresolution": "yüksek çözünürlük",
+  "hightemperature": "yüksek sıcaklık",
+  "him": "o",
+  "hired": "işe alındı",
+  "honor": "onur",
+  "hope": "umut, umut etmek",
+  "hospital": "hastane",
+  "hours": "saat",
+  "how": "nasıl",
+  "however": "yine de",
+  "human": "insan",
+  "hydraulic": "hidrolik",
+  "hypothesized": "varsayılmış",
+  "ice": "buz",
+  "identical": "birebir aynı",
+  "ignite": "tutuşturmak",
+  "ignored": "görmezden gelindi",
+  "ill": "hasta",
+  "immense": "engin",
+  "immune": "bağışıklık",
+  "implication": "ima",
+  "impossible": "imkansız",
+  "improve": "geliştirmek, iyileştirmek",
+  "improvement": "gelişme, iyileşme",
+  "impure": "saf olmayan, kirli",
+  "in front of": "önünde",
+  "inasmuch": "o kadar ki",
+  "inbound": "gelen",
+  "inches": "inç",
+  "incomplete": "tamamlanmamış",
+  "increase": "artırmak, artış",
+  "indoors": "kapalı alanlarda",
+  "industrialized": "sanayileşmiş",
+  "infant's": "bebeğin",
+  "initiated": "başlatılan",
+  "injection": "enjeksiyon, iğne yapma",
+  "installation": "kurulum",
+  "institutes": "enstitüler",
+  "instructional": "öğretici",
+  "instructions": "talimatlar",
+  "intend": "niyet etmek",
+  "intensive": "yoğun",
+  "intervals": "aralıklar",
+  "intervention": "araya girmek",
+  "into": "içine",
+  "invasive": "istilacı",
+  "investors": "yatırımcılar",
+  "iron": "ütü",
+  "irreversibly": "geri dönülemez biçimde",
+  "just": "sadece, henüz, adil",
+  "keep": "kale",
+  "kept": "tutulmuş",
+  "lab": "laboratuvar",
+  "last": "son, sürmek",
+  "late": "geç",
+  "latency": "gecikme",
+  "later": "daha sonra",
+  "layout": "düzen",
+  "learners": "öğrenciler",
+  "learnt": "öğrenildi",
+  "ledgers": "defterler",
+  "left": "sol",
+  "legacy": "miras",
+  "legitimate": "meşru",
+  "lens": "mercek",
+  "lenses": "lensler",
+  "less": "daha az",
+  "lesson": "ders",
+  "lest": "diye",
+  "license": "lisans",
+  "life": "hayat, yaşam",
+  "lime": "kireç, misket limonu",
+  "linguistic": "dilsel",
+  "literature": "edebiyat",
+  "little": "küçük, az",
+  "loads": "yükler",
+  "location": "konum",
+  "locked": "kilitli",
+  "log": "kayıt",
+  "london": "Londra",
+  "longitudinal": "boyuna",
+  "longstanding": "uzun süredir devam eden",
+  "longterm": "uzun vadeli",
+  "love": "aşk",
+  "lung": "akciğer",
+  "main": "ana",
+  "make": "yapmak, etmek",
+  "malfunction": "arıza",
+  "malware": "kötü amaçlı yazılım",
+  "manner": "biçim",
+  "manufacturer's": "üreticinin",
+  "manuscript": "el yazması",
+  "many": "birçok, çok",
+  "map": "harita",
+  "marginally": "marjinal olarak",
+  "measurable": "ölçülebilir",
+  "mechanical": "mekanik",
+  "mechanism": "mekanizma",
+  "mediate": "arabuluculuk yapmak",
+  "medical": "tıbbi",
+  "medieval": "ortaçağ",
+  "member": "üye",
+  "mentioned": "bahsedilen, adı geçen",
+  "merger": "birleşme",
+  "message": "mesaj",
+  "meticulously": "titizlikle",
+  "metropolitan": "büyükşehir",
+  "microbes": "mikroplar",
+  "microchip": "mikroçip",
+  "microorganisms": "mikroorganizmalar",
+  "microscope": "mikroskop",
+  "microscopes": "mikroskoplar",
+  "mill": "değirmen",
+  "mind": "akıl",
+  "minor": "küçük",
+  "minority": "azınlık",
+  "minutes": "dakika",
+  "module": "modül",
+  "moisture": "nem",
+  "mold": "kalıba dökmek",
+  "molecular": "moleküler",
+  "moment": "an",
+  "monetary": "parasal",
+  "motherboard": "anakart",
+  "much": "çok",
+  "multidisciplinary": "multidisipliner",
+  "multifactor": "çok faktörlü",
+  "multiple": "çoklu",
+  "municipality": "belediye",
+  "names": "isimler, adlar",
+  "nationalisation": "millileştirme",
+  "near": "yakın",
+  "necessary": "gerekli",
+  "neither": "ne de, ikisi de değil",
+  "neural": "sinirsel",
+  "never": "asla, hiçbir zaman",
+  "newlydiscovered": "yeni keşfedilen",
+  "next": "sonraki, gelecek",
+  "next to": "yanında",
+  "no": "hayır, yok, hiçbir",
+  "nobody": "hiç kimse",
+  "noncompliant": "uyumsuz",
+  "none": "hiçbiri, yok",
+  "nonmetallic": "metalik olmayan",
+  "nonprofit": "kar amacı gütmeyen",
+  "not": "değil, olumsuzluk eki",
+  "noticeable": "dikkat çekici",
+  "notification": "bildiri",
+  "numerous": "çeşitli",
+  "nutrients": "besinler, gıdalar",
+  "object": "nesne, itiraz etmek",
+  "observers": "gözlemciler",
+  "occurred": "olmuş",
+  "off": "kapalı, dışarıda, -den uzak",
+  "offline": "çevrimdışı",
+  "offpeak": "yoğun olmayan",
+  "often": "sık sık",
+  "once": "bir kere",
+  "one": "bir",
+  "ongoing": "devam ediyor",
+  "online": "çevrimiçi",
+  "only": "sadece, yalnızca",
+  "onto": "üstüne",
+  "opening": "açılış",
+  "operate": "çalışmak, faaliyet göstermek, yürütülmek",
+  "operates": "çalışır, faaliyet gösterir, yürütülür",
+  "operators": "operatörler",
+  "opinion": "fikir",
+  "optimally": "optimal olarak",
+  "optimistic": "iyimser",
+  "optimization": "optimizasyon",
+  "or": "veya, yahut",
+  "order": "emir",
+  "other": "diğer, başka",
+  "out": "dışarı, dışarıda",
+  "outside": "dışarı, dışarısı",
+  "over": "üzerinde, aşırı, bitti",
+  "overall": "etraflı",
+  "overcame": "üstesinden geldi",
+  "overflow": "taşma",
+  "overheats": "aşırı ısınır",
+  "overnight": "gecede",
+  "oversight": "gözetim",
+  "package": "paket",
+  "packets": "paketler",
+  "paint": "boyamak",
+  "paints": "boyalar",
+  "paragraph": "paragraf",
+  "parliament": "parlamento",
+  "partition": "bölme",
+  "partitions": "bölümler",
+  "partnership": "ortaklık",
+  "passengers": "yolcular",
+  "past": "geçmiş",
+  "paused": "duraklatıldı",
+  "payment": "ödeme",
+  "peerreview": "hakem değerlendirmesi",
+  "peerreviewed": "hakemli",
+  "percent": "yüzde",
+  "permission": "izin",
+  "permissions": "izinler",
+  "phenomenon": "fenomen",
+  "philosophical": "felsefi",
+  "photosynthesis": "fotosentez",
+  "pipeline": "boru hattı",
+  "pipelines": "boru hatları",
+  "piston": "piston",
+  "place": "yer",
+  "planning": "planlama",
+  "plastic": "plastik",
+  "platform": "platformu",
+  "player": "oyuncu",
+  "please": "lütfen",
+  "polluting": "kirletici",
+  "portfolios": "portföyler",
+  "possibility": "olasılık, ihtimal",
+  "postponed": "ertelendi",
+  "practical": "pratik",
+  "precautions": "önlemler",
+  "precious": "değerli, kıymetli",
+  "preferences": "tercihler",
+  "president": "başkan",
+  "presumed": "varsayılan",
+  "print": "baskı",
+  "printed": "baskılı",
+  "processor": "işlemci",
+  "profiles": "profiller",
+  "profitable": "karlı",
+  "programmers": "programcılar",
+  "progress": "ilerlemek",
+  "prominent": "öne çıkan",
+  "proof": "kanıt, ispat",
+  "protective": "koruyucu",
+  "proximity": "yakınlık",
+  "publication": "yayın",
+  "pump": "pompa",
+  "pure": "saf, temiz",
+  "quarter": "çeyrek",
+  "queries": "sorgular",
+  "query": "sorgu",
+  "questions": "sorular",
+  "quite": "epeyce",
+  "radar": "radar",
+  "rainfall": "yağış",
+  "ran": "koştu",
+  "rare": "nadir",
+  "rarely": "nadiren, seyrek",
+  "real": "gerçek",
+  "reauthenticate": "yeniden kimlik doğrulaması yapmak",
+  "recall": "hatırlamak",
+  "receipt": "fiş",
+  "recent": "son",
+  "recession": "durgunluk",
+  "recommend": "tavsiye etmek, önermek",
+  "records": "kayıtlar, rekorlar",
+  "recovery": "iyileşmek",
+  "reduce": "azaltmak",
+  "refactored": "yeniden düzenlendi",
+  "refrained": "kaçındı",
+  "refusal": "reddetme, ret",
+  "refuse": "reddetmek",
+  "region": "bölge",
+  "registration": "kayıt",
+  "relevance": "alaka",
+  "relied": "güvenildi",
+  "religious": "din",
+  "remain": "geriye kalmak",
+  "remained": "kaldı",
+  "remarkably": "dikkat çekici bir şekilde",
+  "remember": "hatırlamak",
+  "rendering": "oluşturma",
+  "renewed": "yenilenmiş",
+  "repetition": "tekrarlama",
+  "rescue": "kurtarmak",
+  "resemblance": "benzerlik",
+  "reservoir": "rezervuar",
+  "resistance": "rezistans",
+  "responsibilities": "sorumluluklar",
+  "restart": "tekrar başlat",
+  "resumed": "devam ettirildi",
+  "rigid": "sert, katı, esnemez",
+  "rigorous": "titiz",
+  "risen": "dirildi",
+  "rises": "yükselir, artar",
+  "robert": "Robert (isim)",
+  "robotic": "robotik",
+  "rocks": "kayalar",
+  "routine": "rutin",
+  "rubber": "lastik",
+  "running": "koşma",
+  "rural": "kırsal",
+  "rust": "pas",
+  "safe": "güvenli",
+  "salvage": "kurtarma",
+  "satisfactory": "tatmin edici",
+  "saved": "kaydedildi",
+  "scanner": "tarayıcı",
+  "scanning": "tarama",
+  "scarce": "kıt",
+  "scarcely": "neredeyse hiç",
+  "schedule": "takvim",
+  "screen": "ekran",
+  "seamlessly": "sorunsuzca",
+  "second": "ikinci, saniye",
+  "seek": "aramak",
+  "seldom": "nadiren",
+  "sensors": "sensörler",
+  "september": "eylül",
+  "serious": "cidden",
+  "serve": "sert",
+  "server": "sunucu",
+  "servers": "sunucular",
+  "session": "oturum",
+  "sessions": "oturumlar",
+  "settings": "ayarlar",
+  "ship": "gemi",
+  "shop": "dükkan, mağaza, alışveriş yapmak",
+  "show": "göstermek",
+  "shown": "gösterilen",
+  "shows": "gösterir, şovlar",
+  "side": "yan, taraf",
+  "silver": "gümüş",
+  "similarity": "benzerlik",
+  "simulation": "simülasyon",
+  "since": "beri, -den beri, çünkü",
+  "site": "alan",
+  "six": "altı",
+  "skin": "cilt, deri",
+  "slight": "hafif",
+  "slow": "yavaş",
+  "smaller": "daha küçük",
+  "snow": "kar",
+  "so": "böylece, bu yüzden, çok",
+  "societies": "toplumlar",
+  "socioeconomic": "sosyoekonomik",
+  "sodium": "sodyum",
+  "soft": "yumuşak",
+  "soldering": "lehimleme",
+  "solid": "sağlam",
+  "soluble": "çözünür",
+  "some": "bazı, biraz",
+  "sometimes": "bazen",
+  "sorted": "sıralanmış",
+  "spatial": "mekansal",
+  "speaking": "konuşma, konuşuyor",
+  "staff": "kadro",
+  "stalled": "durdu",
+  "standardized": "standartlaştırılmış",
+  "steady": "sabit durmak",
+  "still": "hala, hareketsiz",
+  "stir": "karıştırmak",
+  "stock": "stoklamak",
+  "storage": "depolamak",
+  "storm": "fırtına",
+  "strike": "çarpmak",
+  "struggle": "çabalamak",
+  "studies": "çalışmalar",
+  "substrates": "substratlar",
+  "substructures": "altyapılar",
+  "subzero": "sıfırın altında",
+  "success": "başarı",
+  "sugar": "şeker",
+  "suggestion": "öneri, teklif",
+  "sunlight": "güneş ışığı",
+  "superconducting": "süper iletken",
+  "supplies": "tedarik",
+  "suppressed": "bastırılmış",
+  "suspicious": "şüpheli",
+  "syntax": "sözdizimi",
+  "synthetic": "sentetik",
+  "systematic": "sistematik",
+  "systematically": "sistematik olarak",
+  "telecommunications": "telekomünikasyon",
+  "ten": "on",
+  "tendency": "eğilim, meyil",
+  "testimonies": "tanıklıklar",
+  "testtube": "deney tüpü",
+  "testtubes": "deney tüpleri",
+  "than": "göre, -den (karşılaştırma)",
+  "them": "onlara",
+  "then": "o zaman, sonra",
+  "there": "orada, orası",
+  "therefore": "öyleyse",
+  "thermal": "termal",
+  "thick": "kalın",
+  "things": "şeyler",
+  "thinner": "daha ince",
+  "third": "üçüncü",
+  "thirdparty": "üçüncü şahıs",
+  "thorough": "kapsamlı",
+  "though": "yine de",
+  "thought": "düşünce",
+  "threaten": "tehdit etmek",
   "through": "vasıtasıyla, içinden",
   "throughout": "boyunca, genelinde",
-  "between": "arasında (iki şey)",
-  "among": "arasında (çok şey)",
-  "under": "altında",
-  "over": "üzerinde, aşırı, bitti",
-  "above": "üzerinde, yukarıda",
-  "below": "altında, aşağıda",
-  "behind": "arkasında",
-  "in front of": "önünde",
-  "next to": "yanında",
-  "beside": "yanında",
-  "by": "tarafından, yanında, ile",
-  "with": "ile, birlikte",
-  "without": "olmadan, -siz/-sız",
-  "within": "içinde, dahilinde",
-  "about": "hakkında, yaklaşık",
-  "against": "karşı, aleyhinde",
-  "upon": "üzerine, üzerinde",
-  "into": "içine",
-  "onto": "üstüne",
-  "off": "kapalı, dışarıda, -den uzak",
-  "out": "dışarı, dışarıda",
-  "up": "yukarı",
-  "down": "aşağı",
-  "far": "uzak",
-  "near": "yakın",
-  "away": "uzak, uzakta",
+  "till": "kadar, -e kadar",
+  "timber": "kereste",
+  "today's": "bugünün",
+  "toll": "geçiş ücreti",
+  "tonight": "bu akşam",
+  "too": "de/da, aşırı",
+  "total": "toplam",
   "toward": "doğru, yönünde",
-  "towards": "doğru, yönünde"
+  "towards": "doğru, yönünde",
+  "trackers": "izleyiciler",
+  "train": "tren, eğitmek",
+  "transactions": "işlemler",
+  "transferred": "transfer edildi",
+  "translation": "çeviri, tercüme",
+  "transparent": "şeffaf",
+  "transport": "ulaşım",
+  "transported": "taşınan",
+  "treaty": "anlaşma",
+  "trend": "eğilim, gidişat, akım",
+  "tubes": "tüpler",
+  "tuesday": "salı",
+  "turbulent": "çalkantılı",
+  "turkish": "Türkçe, Türk",
+  "twice": "iki kere",
+  "type": "tip, tür, yazmak",
+  "ultimate": "nihai",
+  "under": "altında",
+  "undergo": "katlanmak",
+  "undergone": "geçirilmiş",
+  "uniformly": "eşit olarak",
+  "unit": "birim",
+  "universities": "üniversiteler",
+  "unprecedented": "benzeri görülmemiş",
+  "unpredicted": "öngörülemeyen",
+  "until": "kadar, -e kadar",
+  "unverified": "doğrulanmamış",
+  "up": "yukarı",
+  "upon": "üzerine, üzerinde",
+  "urgent": "acil",
+  "usually": "genellikle",
+  "vacuum": "vakum",
+  "varies": "değişir",
+  "very": "çok",
+  "via": "aracılığıyla",
+  "vibration": "titreşim",
+  "visible": "görünür",
+  "vital": "hayati",
+  "volatile": "uçucu",
+  "vote": "oy",
+  "warehouse": "depo",
+  "wax": "balmumu",
+  "weather": "hava durumu",
+  "weekend": "hafta sonu",
+  "weights": "ağırlıklar",
+  "went": "gitmiş",
+  "wet": "ıslak, nemli",
+  "what": "ne",
+  "wheat": "buğday",
+  "when": "ne zaman, -dığı zaman",
+  "where": "nerede, nereye",
+  "which": "hangi, ki o",
+  "while": "iken, esnasında, süre",
+  "who": "kim",
+  "whom": "kime, kimi",
+  "whose": "kimin",
+  "why": "neden, niçin",
+  "wiped": "silindi",
+  "with": "ile, birlikte",
+  "within": "içinde, dahilinde",
+  "without": "olmadan, -siz/-sız",
+  "woman": "kadın",
+  "wooden": "ahşap",
+  "write": "yazmak",
+  "wrong": "yanlış, hatalı",
+  "xrays": "röntgen ışınları",
+  "yet": "henüz, hala, ama",
+  "young": "genç",
+  "younger": "daha genç"
 };
 
 // Get the meaning of a word with various fallback logic
@@ -454,16 +1096,19 @@ function getWordMeaning(word) {
 // Convert English text into hoverable HTML elements
 function makeTextHoverable(text) {
   if (!text) return '';
-  const wordRegex = /([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'-]+)/g;
+  const wordRegex = /(<[^>]+>)|([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'-<]+)/g;
   let match;
   let html = '';
   
   wordRegex.lastIndex = 0;
   while ((match = wordRegex.exec(text)) !== null) {
-    const word = match[1];
-    const nonWord = match[2];
+    const tag = match[1];
+    const word = match[2];
+    const nonWord = match[3];
     
-    if (word) {
+    if (tag) {
+      html += tag;
+    } else if (word) {
       let meaning = getWordMeaning(word);
       if (!meaning) {
         // Try hyphen/compound splitting
@@ -668,11 +1313,30 @@ function openQuestionPreview(title, questions) {
         detailsHtml = `
           <div class="qp-detail-row">
             <span class="qp-detail-label">Cümle Şablonu:</span>
-            <span class="qp-detail-val">"${q.sentence}"</span>
+            <span class="qp-detail-val">"${q.sentence || q.prompt || ''}"</span>
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Seçenekler:</span>
             <div class="qp-options-list">${dropOpts}</div>
+          </div>
+        `;
+        break;
+
+      case 'fill-blank':
+        typeLabel = "Butonlu Boşluk Doldurma";
+        typeClass = "qp-type-fb";
+        const fbOpts = q.options.map((opt, oIdx) => {
+          const isCorrect = oIdx === q.correctIndex;
+          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+        }).join('');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Cümle Şablonu:</span>
+            <span class="qp-detail-val">"${q.sentence || q.prompt || ''}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Seçenekler:</span>
+            <div class="qp-options-list">${fbOpts}</div>
           </div>
         `;
         break;
@@ -1233,7 +1897,9 @@ function getLessonIllustration(lessonId, unitId) {
   // Default fallback
   let category = 'school';
 
-  if (unitId === 1 || unitId === 6) {
+  if (unitId === 0) {
+    category = 'chatbot';
+  } else if (unitId === 1 || unitId === 6) {
     category = 'grammar';
   } else if (unitId === 2) {
     category = 'soup';
@@ -1519,7 +2185,7 @@ function renderLessonTree() {
 
     // 2. Create Unit Banner
     const banner = document.createElement('div');
-    const colorIndex = ((unit.id - 1) % 10) + 1;
+    const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
     banner.className = `unit-banner unit-color-${colorIndex}`;
     banner.innerHTML = `
       <div class="unit-banner-info">
@@ -1696,15 +2362,9 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   if (topic) {
     if (lesson.formula && lesson.example) {
-      let styledExample = lesson.example;
-      if (styledExample.includes(':') && !styledExample.includes('<strong>')) {
-        const parts = styledExample.split(':');
-        styledExample = `<strong>${parts[0]}</strong>:${parts[1]}`;
-      }
       previewHTML = `
         <div class="grammar-preview-box">
           <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>
-          <div class="grammar-example">Örnek: ${styledExample}</div>
           ${lesson.description ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.4; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);">${lesson.description}</div>` : ''}
         </div>
       `;
@@ -1908,27 +2568,36 @@ document.addEventListener('click', () => {
 function isLessonUnlocked(lessonId) {
   return true; // Şimdilik içerik kontrolü için tüm kilitler açıldı
 
-  if (lessonId === 1) return true;
-
   // Find the lesson and its unit
   const lesson = lessons.find(l => l.id === lessonId);
   if (!lesson) return false;
 
   const currentUnitId = lesson.unitId;
 
-  // Ensure all lessons of all previous units are fully completed
-  if (currentUnitId > 1) {
-    for (let uId = 1; uId < currentUnitId; uId++) {
-      const prevUnit = units.find(u => u.id === uId);
-      if (prevUnit) {
-        const allCompleted = prevUnit.lessons.every(lId => state.completedLessons.includes(lId));
-        if (!allCompleted) return false;
-      }
+  // Sort units by ID to match display order
+  const sortedUnits = [...units].sort((a, b) => a.id - b.id);
+  const sortedLessons = [];
+  sortedUnits.forEach(u => {
+    u.lessons.forEach(lId => {
+      sortedLessons.push(lId);
+    });
+  });
+
+  const idx = sortedLessons.indexOf(lessonId);
+  if (idx === 0) return true; // Very first lesson is always unlocked
+
+  // Check if all lessons in all previous units are completed
+  const currentUnitIndex = sortedUnits.findIndex(u => u.id === currentUnitId);
+  if (currentUnitIndex > 0) {
+    for (let i = 0; i < currentUnitIndex; i++) {
+      const prevUnit = sortedUnits[i];
+      const allCompleted = prevUnit.lessons.every(lId => state.completedLessons.includes(lId));
+      if (!allCompleted) return false;
     }
   }
 
-  // The lesson is only unlocked if the previous lesson is completed
-  return state.completedLessons.includes(lessonId - 1);
+  // Current lesson is unlocked if the previous lesson in visual progression is completed
+  return state.completedLessons.includes(sortedLessons[idx - 1]);
 }
 
 // ============================================================
@@ -1957,6 +2626,7 @@ function renderAchievements() {
 // QUIZ MOTORU
 // ============================================================
 function startLesson(lessonId, exerciseId = null) {
+  quizSessionId++;
   currentLesson = lessons.find(l => l.id === lessonId);
   if (!currentLesson) return;
 
@@ -2057,6 +2727,14 @@ function renderQuestion() {
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   if (!question) return;
 
+  // Dynamically assign render type for blank questions
+  if (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
+    if (question._dynamicSessionId !== quizSessionId) {
+      question._dynamicSessionId = quizSessionId;
+      question._dynamicType = Math.random() < 0.5 ? 'fill-blank-dropdown' : 'fill-blank';
+    }
+  }
+
   selectedAnswer = null;
   isAnswerChecked = false;
   matchState = null;
@@ -2076,7 +2754,19 @@ function renderQuestion() {
 
   updateQuizUI();
 
-  switch (question.type) {
+  const activeType = (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank')
+    ? question._dynamicType
+    : question.type;
+
+  // Adjust prompt text to fit the visual type
+  const originalPrompt = question.prompt;
+  if (activeType === 'fill-blank-dropdown' && question.prompt === 'Boşluğu doldur') {
+    question.prompt = 'Boşluğa gelecek en uygun kelimeyi seçin:';
+  } else if (activeType === 'fill-blank' && question.prompt.startsWith('Boşluğa gelecek en uygun kelimeyi seçin')) {
+    question.prompt = 'Boşluğu doldur';
+  }
+
+  switch (activeType) {
     case 'multiple-choice':
       renderMultipleChoice(body, question);
       break;
@@ -2102,6 +2792,9 @@ function renderQuestion() {
       renderMultipleFillBlank(body, question);
       break;
   }
+
+  // Restore prompt text so data remains unmodified
+  question.prompt = originalPrompt;
 }
 
 // ── Çoktan Seçmeli ──────────────────────────────────────────
@@ -2320,8 +3013,10 @@ function renderFillBlankDropdown(container, question) {
   const part0Html = makeTextHoverable(parts[0]);
   const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
 
+  const displayPrompt = question.prompt === 'Boşluğu doldur' ? 'Boşluğu doldur!' : question.prompt;
+
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-prompt">${displayPrompt}</p>
     <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
       ${part0Html}<select class="inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${part1Html}
     </div>
@@ -2372,8 +3067,10 @@ function renderFillBlank(container, question) {
     </button>`;
   }).join('');
 
+  const displayPrompt = question.prompt === 'Boşluğu doldur' ? 'Boşluğu doldur!' : question.prompt;
+
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-prompt">${displayPrompt}</p>
     <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
       ${part0Html}<span class="fb-blank" id="fb-blank-word">______</span>${part1Html}
     </div>
@@ -2393,7 +3090,7 @@ function renderFillBlank(container, question) {
       const idx = parseInt(btn.dataset.index);
       selectedAnswer = idx;
       
-      blankEl.textContent = question.options[idx];
+      blankEl.innerHTML = question.options[idx];
       
       document.getElementById('btn-check').disabled = false;
 
@@ -2407,13 +3104,23 @@ function renderFillBlank(container, question) {
 // ── Tam Metin Çeviri Testi (Klavyeli Girdi) ──────────────────
 function renderTranslationText(container, question) {
   const placeholderText = question.isEngToTr ? "Türkçe çeviriyi buraya yazın..." : "İngilizce çeviriyi buraya yazın...";
-  let promptHtml = question.prompt;
-  if (question.enSentence && question.isEngToTr) {
-    promptHtml = promptHtml.replace(question.enSentence, makeTextHoverable(question.enSentence));
+  
+  let headerText = question.isEngToTr ? "Aşağıdaki ifadeyi Türkçe'ye çevirin;" : "Aşağıdaki ifadeyi İngilizce'ye çevirin;";
+  
+  let sentenceToTranslate = question.enSentence || "";
+  if (!sentenceToTranslate) {
+    const match = question.prompt.match(/"([^"]+)"/);
+    sentenceToTranslate = match ? match[1] : question.prompt;
+  }
+  
+  let sentenceHtml = `"${sentenceToTranslate}"`;
+  if (question.isEngToTr) {
+    sentenceHtml = `"${makeTextHoverable(sentenceToTranslate)}"`;
   }
 
   container.innerHTML = `
-    <p class="quiz-prompt">${promptHtml}</p>
+    <p class="quiz-prompt" style="text-align: center; margin-bottom: 8px;">${headerText}</p>
+    <p class="quiz-translation-source" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 16px 0 24px 0; color: var(--text-primary); line-height: 1.6;">${sentenceHtml}</p>
     <div class="translation-input-wrap">
       <textarea class="translation-textarea" id="translation-text-area" placeholder="${placeholderText}" autocomplete="off"></textarea>
     </div>
@@ -2472,7 +3179,11 @@ function checkAnswer() {
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   let isCorrect = false;
 
-  switch (question.type) {
+  const activeType = (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank')
+    ? question._dynamicType
+    : question.type;
+
+  switch (activeType) {
     case 'multiple-choice':
       isCorrect = selectedAnswer === question.correctIndex;
       showMCFeedback(question);
@@ -3950,6 +4661,7 @@ function checkPlacementBanner() {
 }
 
 function startPlacementTest() {
+  quizSessionId++;
   isPlacementMode = true;
   placementCorrectCount = 0;
   placementCurrentIndex = 0;
@@ -3964,6 +4676,14 @@ function startPlacementTest() {
 function renderPlacementQuestion() {
   const question = placementQuestionsList[placementCurrentIndex];
   if (!question) return;
+
+  // Dynamically assign render type for blank questions
+  if (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
+    if (question._dynamicSessionId !== quizSessionId) {
+      question._dynamicSessionId = quizSessionId;
+      question._dynamicType = Math.random() < 0.5 ? 'fill-blank-dropdown' : 'fill-blank';
+    }
+  }
 
   placementSelectedAnswer = null;
   isPlacementAnswerChecked = false;
@@ -3986,7 +4706,19 @@ function renderPlacementQuestion() {
   const progress = (placementCurrentIndex / total) * 100;
   document.getElementById('placement-progress').style.width = `${progress}%`;
 
-  switch (question.type) {
+  const activeType = (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank')
+    ? question._dynamicType
+    : question.type;
+
+  // Adjust prompt text to fit the visual type
+  const originalPrompt = question.prompt;
+  if (activeType === 'fill-blank-dropdown' && question.prompt === 'Boşluğu doldur') {
+    question.prompt = 'Boşluğa gelecek en uygun kelimeyi seçin:';
+  } else if (activeType === 'fill-blank' && question.prompt.startsWith('Boşluğa gelecek en uygun kelimeyi seçin')) {
+    question.prompt = 'Boşluğu doldur';
+  }
+
+  switch (activeType) {
     case 'multiple-choice':
       renderPlacementMultipleChoice(body, question);
       break;
@@ -4000,6 +4732,9 @@ function renderPlacementQuestion() {
       renderPlacementFillBlankText(body, question);
       break;
   }
+
+  // Restore prompt text so data remains unmodified
+  question.prompt = originalPrompt;
 }
 
 function renderPlacementMultipleChoice(container, question) {
@@ -4023,12 +4758,18 @@ function renderPlacementMultipleChoice(container, question) {
 }
 
 function renderPlacementFillBlankDropdown(container, question) {
-  const parts = question.sentence.split('___');
+  const sentence = question.sentence || question.prompt || '';
+  const parts = sentence.split('___');
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
 
+  let displayPrompt = question.sentence ? question.prompt : 'Boşluğa gelecek en uygun kelimeyi seçin:';
+  if (displayPrompt === 'Boşluğu doldur') {
+    displayPrompt = 'Boşluğu doldur!';
+  }
+
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-prompt">${displayPrompt}</p>
     <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary);">
       ${parts[0]}<select class="inline-dropdown" id="fb-placement-dropdown-select">${selectOptions}</select>${parts[1] || ''}
     </div>
@@ -4063,7 +4804,8 @@ function renderPlacementFillBlankText(container, question) {
 }
 
 function renderPlacementFillBlank(container, question) {
-  const parts = question.prompt.split('___');
+  const sentence = question.sentence || question.prompt || '';
+  const parts = sentence.split('___');
   const part0Html = parts[0];
   const part1Html = parts[1] || '';
 
@@ -4074,8 +4816,13 @@ function renderPlacementFillBlank(container, question) {
     </button>`;
   }).join('');
 
+  let displayPrompt = question.sentence ? question.prompt : 'Boşluğu doldur';
+  if (displayPrompt === 'Boşluğu doldur') {
+    displayPrompt = 'Boşluğu doldur!';
+  }
+
   container.innerHTML = `
-    <p class="quiz-prompt">Boşluğu doldur</p>
+    <p class="quiz-prompt">${displayPrompt}</p>
     <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
       ${part0Html}<span class="fb-blank" id="fb-placement-blank-word">______</span>${part1Html}
     </div>
@@ -4095,7 +4842,7 @@ function renderPlacementFillBlank(container, question) {
       const idx = parseInt(btn.dataset.index);
       placementSelectedAnswer = idx;
       
-      blankEl.textContent = question.options[idx];
+      blankEl.innerHTML = question.options[idx];
       
       document.getElementById('btn-placement-check').disabled = false;
     });
@@ -4106,10 +4853,15 @@ function checkPlacementAnswer() {
   const question = placementQuestionsList[placementCurrentIndex];
   isPlacementAnswerChecked = true;
 
+  const body = document.getElementById('placement-body');
+  const activeType = (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank')
+    ? question._dynamicType
+    : question.type;
+
   let isCorrect = false;
-  if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
+  if (activeType === 'multiple-choice' || activeType === 'fill-blank-dropdown' || activeType === 'fill-blank') {
     isCorrect = placementSelectedAnswer === question.correctIndex;
-    if (question.type === 'fill-blank') {
+    if (activeType === 'fill-blank') {
       const options = body.querySelectorAll('.fb-option');
       options.forEach(btn => {
         const idx = parseInt(btn.dataset.index);
@@ -4126,7 +4878,7 @@ function checkPlacementAnswer() {
         }
       });
     }
-  } else if (question.type === 'fill-blank-text') {
+  } else if (activeType === 'fill-blank-text') {
     const userVal = (placementSelectedAnswer || "").toLowerCase().trim();
     const correctVal = question.correct.toLowerCase().trim();
     isCorrect = userVal === correctVal;
@@ -4461,6 +5213,7 @@ function checkReviewBanner() {
 function startReviewMode() {
   if (!state.wrongQuestions || state.wrongQuestions.length === 0) return;
 
+  quizSessionId++;
   isReviewMode = true;
   currentQuestionIndex = 0;
   correctCount = 0;

@@ -11,11 +11,17 @@
   },
   "dependencies": {
     "@capacitor/android": "^6.0.0",
-    "@capacitor/core": "^6.0.0"
+    "@capacitor/core": "^6.0.0",
+    "docx": "^9.7.1"
   },
   "devDependencies": {
     "@capacitor/cli": "^6.0.0"
   },
-  "keywords": ["english", "learning", "turkish", "gamification"],
+  "keywords": [
+    "english",
+    "learning",
+    "turkish",
+    "gamification"
+  ],
   "license": "MIT"
 }

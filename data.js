@@ -13968,6 +13968,23 @@ const rawTopics = [
     subtitles: [
       "Neden ve Etki Strüktürleri (Sayfa 256)"
     ]
+  },
+  {
+    id: 0,
+    title: "DENEME",
+    desc: "Time-Link: Connectors & Tenses",
+    icon: "🧪",
+    numLessons: 3,
+    formulas: [
+      { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
+      { formula: "Subject + V2", example: "Yesterday, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
+      { formula: "Subject + has/have + V3", example: "Since the team <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> the project, the automatic system <span style=\"color: #51cf66; font-weight: bold;\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." }
+    ],
+    subtitles: [
+      "Present Continuous (is Ving) - Zaman Zarfları",
+      "Past Simple (v2) - Zaman Zarfları",
+      "Present Perfect (have V3) - Zaman Zarfları"
+    ]
   }
 ];
 
@@ -15577,6 +15594,1604 @@ const lessons = [];
 let globalLessonCounter = 1;
 
 const unitSentencesMap = {
+  0: {
+  "1": {
+    "exercises": [
+      {
+        "id": "u0l95ex1",
+        "title": "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I",
+        "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+        "questions": [
+          {
+            "id": "u0l95_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "At the moment, heavy rain is ___ the simulation site.",
+            "options": [
+              "affects",
+              "affecting",
+              "affected",
+              "affect"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l95_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, heavy rain is affecting the simulation site.",
+            "options": [
+              "Since 2020",
+              "Yesterday",
+              "At the moment",
+              "In 2012"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l95_ex1_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Right now, the central server is ___ user credentials.",
+            "options": [
+              "validates",
+              "validate",
+              "validated",
+              "validating"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex1_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, the central server is validating user credentials.",
+            "options": [
+              "Last week",
+              "Right now",
+              "Yesterday",
+              "Since 2020"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l95_ex1_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The academic team is currently ___ the new device.",
+            "options": [
+              "testing",
+              "tests",
+              "tested",
+              "test"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic team is ___ testing the new device.",
+            "options": [
+              "currently",
+              "yesterday",
+              "since 2020",
+              "yet"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research facility currently ___ additional financial resources.",
+            "options": [
+              "will require",
+              "requiring",
+              "required",
+              "requires"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research facility ___ requires additional financial resources.",
+            "options": [
+              "currently",
+              "yesterday",
+              "since",
+              "yet"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex1_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "At the moment, the compiler is ___ the data blocks.",
+            "options": [
+              "processing",
+              "processes",
+              "processed",
+              "process"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex1_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "At the moment, the ___ is processing the data blocks.",
+            "options": [
+              "compiler",
+              "compile",
+              "compilation",
+              "compiled"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "u0l95ex2",
+        "title": "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+        "questions": [
+          {
+            "id": "u0l95_ex2_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system is presently ___ a unique cryptographic key.",
+            "options": [
+              "generate",
+              "generates",
+              "generated",
+              "generating"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system is ___ generating a unique cryptographic key.",
+            "options": [
+              "presently",
+              "since",
+              "ago",
+              "last week"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "At present, the automatic system is ___ pressure parameters.",
+            "options": [
+              "monitoring",
+              "monitored",
+              "monitor",
+              "monitors"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, the automatic system is monitoring pressure parameters.",
+            "options": [
+              "At present",
+              "In 2012",
+              "Yesterday",
+              "Since 2020"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These days, public laboratories are ___ their security protocols.",
+            "options": [
+              "adjusting",
+              "adjusted",
+              "adjusts",
+              "adjust"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, public laboratories are adjusting their security protocols.",
+            "options": [
+              "Yesterday",
+              "Next year",
+              "These days",
+              "Since 2020"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l95_ex2_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These days, local institutions are ___ their internal laws.",
+            "options": [
+              "altering",
+              "altered",
+              "alter",
+              "alters"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "These days, local institutions ___ altering their internal laws.",
+            "options": [
+              "will be",
+              "are",
+              "were",
+              "have been"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l95_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Nowadays, software developers ___ gamified mobile design patterns.",
+            "options": [
+              "prefer",
+              "preferred",
+              "preferring",
+              "prefers"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex2_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, software developers prefer gamified mobile design patterns.",
+            "options": [
+              "Nowadays",
+              "Last year",
+              "Yesterday",
+              "Since 2020"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "u0l95ex3",
+        "title": "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III",
+        "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+        "questions": [
+          {
+            "id": "u0l95_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The international research facility currently ___ additional financial resources to optimize its secondary structural frameworks.",
+            "options": [
+              "requires",
+              "will require",
+              "required",
+              "requiring"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "At the moment, the compiler is ___ the data blocks while the network firewall blocks external traffic.",
+            "options": [
+              "processing",
+              "processed",
+              "process",
+              "processes"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex3_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These days, public laboratories are ___ their security protocols because malicious malware attacks threaten sensitive files.",
+            "options": [
+              "adjusting",
+              "adjust",
+              "adjusts",
+              "adjusted"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system is presently ___ a unique cryptographic key as soon as the administrator grants verification clearance.",
+            "options": [
+              "generates",
+              "generate",
+              "generated",
+              "generating"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex3_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Nowadays, software developers ___ gamified mobile design patterns in order that students might learn complex grammar easily.",
+            "options": [
+              "prefers",
+              "preferred",
+              "preferring",
+              "prefer"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex3_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The international research facility ___ requires additional financial resources to optimize its ___ structural frameworks.",
+            "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor.",
+            "corrects": [
+              "currently",
+              "secondary"
+            ]
+          },
+          {
+            "id": "u0l95_ex3_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "At the moment, the compiler ___ the data blocks ___ the network firewall blocks external traffic.",
+            "translation": "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor.",
+            "corrects": [
+              "is processing",
+              "while"
+            ]
+          },
+          {
+            "id": "u0l95_ex3_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "These days, public laboratories ___ adjusting their security protocols because malicious malware attacks ___ sensitive files.",
+            "translation": "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor.",
+            "corrects": [
+              "are",
+              "threaten"
+            ]
+          },
+          {
+            "id": "u0l95_ex3_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The system ___ presently generating a unique cryptographic key as soon as the administrator ___ verification clearance.",
+            "translation": "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor.",
+            "corrects": [
+              "is",
+              "grants"
+            ]
+          },
+          {
+            "id": "u0l95_ex3_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Nowadays, software developers ___ gamified mobile design patterns in order that students ___ learn complex grammar easily.",
+            "translation": "Günümüzde yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih ediyor.",
+            "corrects": [
+              "prefer",
+              "might"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u0l95ex4",
+        "title": "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV",
+        "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+        "questions": [
+          {
+            "id": "u0l95_ex4_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Right now, the central server is ___ user credentials on grounds that previous login requests were corrupted.",
+            "options": [
+              "validated",
+              "validate",
+              "validating",
+              "validates"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l95_ex4_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "At present, the automatic system is ___ pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
+            "options": [
+              "monitoring",
+              "monitored",
+              "monitor",
+              "monitors"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex4_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These days, local institutions are ___ their internal laws inasmuch as regional environmental regulations have become stricter.",
+            "options": [
+              "alters",
+              "alter",
+              "altered",
+              "altering"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l95_ex4_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic team is currently ___ the new device just as the original mathematical physics formulas predicted.",
+            "options": [
+              "tests",
+              "testing",
+              "test",
+              "tested"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l95_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "At the moment, heavy rain is ___ the simulation site; therefore, field operations are temporarily suspended.",
+            "options": [
+              "affecting",
+              "affected",
+              "affect",
+              "affects"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l95_ex4_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Right now, the central server ___ validating user credentials on grounds that previous login requests ___ corrupted.",
+            "translation": "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor.",
+            "corrects": [
+              "is",
+              "were"
+            ]
+          },
+          {
+            "id": "u0l95_ex4_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "At present, the automatic system is monitoring pressure parameters ___ the industrial mechanical piston ___ fail unexpectedly.",
+            "translation": "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor.",
+            "corrects": [
+              "lest",
+              "should"
+            ]
+          },
+          {
+            "id": "u0l95_ex4_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "These days, local institutions ___ altering their internal laws inasmuch as regional environmental regulations ___ become stricter.",
+            "translation": "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor.",
+            "corrects": [
+              "are",
+              "have"
+            ]
+          },
+          {
+            "id": "u0l95_ex4_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The academic team ___ currently testing the new device just as the original mathematical physics formulas ___ .",
+            "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi şu anda yeni cihazı test ediyor.",
+            "corrects": [
+              "is",
+              "predicted"
+            ]
+          },
+          {
+            "id": "u0l95_ex4_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "At the moment, heavy rain ___ affecting the simulation site; therefore, field operations ___ temporarily suspended.",
+            "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor; bu nedenle, saha operasyonları geçici olarak durduruldu.",
+            "corrects": [
+              "is",
+              "are"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "exercises": [
+      {
+        "id": "u0l96ex1",
+        "title": "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I",
+        "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+        "questions": [
+          {
+            "id": "u0l96_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "A heavy rain ___ the simulation site yesterday.",
+            "options": [
+              "affected",
+              "affects",
+              "affecting",
+              "affect"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "A heavy rain affected the simulation site ___ .",
+            "options": [
+              "yesterday",
+              "yet",
+              "currently",
+              "since"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Yesterday, the central server ___ all user credentials.",
+            "options": [
+              "validated",
+              "validating",
+              "validate",
+              "validates"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___, the central server validated all user credentials.",
+            "options": [
+              "Lately",
+              "Right now",
+              "Since 2020",
+              "Yesterday"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex1_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The academic team ___ the new device test in 2020.",
+            "options": [
+              "completed",
+              "completing",
+              "completes",
+              "complete"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic team completed the new device test ___ 2020.",
+            "options": [
+              "in",
+              "at",
+              "on",
+              "since"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research facility successfully ___ the database yesterday.",
+            "options": [
+              "upgraded",
+              "upgrades",
+              "will upgrade",
+              "upgrading"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research facility successfully upgraded the database ___ .",
+            "options": [
+              "yesterday",
+              "now",
+              "since then",
+              "yet"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex1_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Two years ago, the compiler ___ the data blocks without errors.",
+            "options": [
+              "process",
+              "processes",
+              "processing",
+              "processed"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex1_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Two years ___, the compiler processed the data blocks without errors.",
+            "options": [
+              "now",
+              "lately",
+              "ago",
+              "since"
+            ],
+            "correctIndex": 2
+          }
+        ]
+      },
+      {
+        "id": "u0l96ex2",
+        "title": "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+        "questions": [
+          {
+            "id": "u0l96_ex2_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system ___ a unique cryptographic key last week.",
+            "options": [
+              "generate",
+              "generated",
+              "generates",
+              "generating"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l96_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system generated a unique cryptographic key ___ week.",
+            "options": [
+              "ago",
+              "next",
+              "this",
+              "last"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic system ___ pressure parameters three hours ago.",
+            "options": [
+              "monitored",
+              "monitoring",
+              "monitor",
+              "monitors"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The automatic system monitored pressure parameters three hours ___ .",
+            "options": [
+              "before",
+              "lately",
+              "since",
+              "ago"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex2_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Last month, public laboratories ___ their security protocols.",
+            "options": [
+              "adjusted",
+              "adjusting",
+              "adjusts",
+              "adjust"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ month, public laboratories adjusted their security protocols.",
+            "options": [
+              "Last",
+              "Next",
+              "This",
+              "Since"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex2_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Last year, local institutions ___ their internal laws.",
+            "options": [
+              "alter",
+              "altering",
+              "alters",
+              "altered"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Last year, local institutions ___ altering their internal laws.",
+            "options": [
+              "completed",
+              "were",
+              "have been",
+              "are"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "In 2012, software developers ___ traditional mobile design patterns.",
+            "options": [
+              "prefer",
+              "preferred",
+              "prefers",
+              "preferring"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l96_ex2_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ 2012, software developers preferred traditional mobile design patterns.",
+            "options": [
+              "Since",
+              "In",
+              "At",
+              "On"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "id": "u0l96ex3",
+        "title": "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III",
+        "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+        "questions": [
+          {
+            "id": "u0l96_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The international research facility successfully ___ the database yesterday to optimize its secondary structural frameworks.",
+            "options": [
+              "upgrades",
+              "upgraded",
+              "upgrade",
+              "upgrading"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l96_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Two years ago, the compiler ___ the data blocks while the network firewall blocked external traffic.",
+            "options": [
+              "processes",
+              "process",
+              "processing",
+              "processed"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex3_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Last month, public laboratories ___ their security protocols because malicious malware attacks threatened sensitive files.",
+            "options": [
+              "adjust",
+              "adjusting",
+              "adjusts",
+              "adjusted"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system ___ a unique cryptographic key as soon as the administrator granted verification clearance last week.",
+            "options": [
+              "generates",
+              "generate",
+              "generating",
+              "generated"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l96_ex3_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "In 2012, software developers ___ traditional mobile design patterns in order that students might learn basic grammar easily.",
+            "options": [
+              "prefers",
+              "prefer",
+              "preferred",
+              "preferring"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l96_ex3_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The international research facility successfully ___ the database yesterday to optimize its ___ structural frameworks.",
+            "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için dün veri tabanını başarıyla yükseltti.",
+            "corrects": [
+              "upgraded",
+              "secondary"
+            ]
+          },
+          {
+            "id": "u0l96_ex3_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Two years ago, the compiler ___ the data blocks while the network firewall ___ external traffic.",
+            "translation": "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+            "corrects": [
+              "processed",
+              "blocked"
+            ]
+          },
+          {
+            "id": "u0l96_ex3_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Last month, public laboratories ___ adjusting their security protocols because malicious malware attacks ___ sensitive files.",
+            "translation": "Geçen ay, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+            "corrects": [
+              "adjusted",
+              "threatened"
+            ]
+          },
+          {
+            "id": "u0l96_ex3_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The system ___ a unique cryptographic key as soon as the administrator ___ verification clearance last week.",
+            "translation": "Sistem, yönetici geçen hafta doğrulama izni verir vermez benzersiz bir kriptografik anahtar üretti.",
+            "corrects": [
+              "generated",
+              "granted"
+            ]
+          },
+          {
+            "id": "u0l96_ex3_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "In 2012, software developers ___ traditional mobile design patterns in order that students ___ learn basic grammar easily.",
+            "translation": "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti.",
+            "corrects": [
+              "preferred",
+              "might"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u0l96ex4",
+        "title": "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV",
+        "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+        "questions": [
+          {
+            "id": "u0l96_ex4_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Yesterday, the central server ___ all user credentials on grounds that previous login requests were corrupted.",
+            "options": [
+              "validating",
+              "validates",
+              "validated",
+              "validate"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l96_ex4_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The automatic system ___ pressure parameters three hours ago lest the industrial mechanical piston should fail unexpectedly.",
+            "options": [
+              "monitored",
+              "monitoring",
+              "monitor",
+              "monitors"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex4_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Last year, local institutions ___ their internal laws inasmuch as regional environmental regulations became stricter.",
+            "options": [
+              "altered",
+              "altering",
+              "alter",
+              "alters"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex4_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic team ___ the new device test in 2020 just as the original mathematical physics formulas predicted.",
+            "options": [
+              "completed",
+              "completing",
+              "complete",
+              "completes"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l96_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Yesterday, a heavy rain ___ the simulation site; therefore, field operations were temporarily suspended.",
+            "options": [
+              "affect",
+              "affected",
+              "affects",
+              "affecting"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l96_ex4_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Yesterday, the central server ___ all user credentials on grounds that previous login requests ___ corrupted.",
+            "translation": "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı.",
+            "corrects": [
+              "validated",
+              "were"
+            ]
+          },
+          {
+            "id": "u0l96_ex4_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The automatic system monitored pressure parameters three hours ___ lest the industrial mechanical piston ___ fail unexpectedly.",
+            "translation": "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi.",
+            "corrects": [
+              "ago",
+              "should"
+            ]
+          },
+          {
+            "id": "u0l96_ex4_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Last year, local institutions ___ their internal laws inasmuch as regional environmental regulations ___ stricter.",
+            "translation": "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+            "corrects": [
+              "altered",
+              "became"
+            ]
+          },
+          {
+            "id": "u0l96_ex4_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The academic team ___ the new device test in 2020 just as the original mathematical physics formulas ___ .",
+            "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı.",
+            "corrects": [
+              "completed",
+              "predicted"
+            ]
+          },
+          {
+            "id": "u0l96_ex4_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Yesterday, a heavy rain ___ the simulation site; therefore, field operations ___ temporarily suspended.",
+            "translation": "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu.",
+            "corrects": [
+              "affected",
+              "were"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "exercises": [
+      {
+        "id": "u0l97ex1",
+        "title": "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I",
+        "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+        "questions": [
+          {
+            "id": "u0l97_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Up to now, heavy rain ___ the simulation site.",
+            "options": [
+              "affects",
+              "affecting",
+              "affected",
+              "has affected"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ now, heavy rain has affected the simulation site.",
+            "options": [
+              "At",
+              "By",
+              "Since",
+              "Up to"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex1_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The central server ___ user credentials.",
+            "options": [
+              "has just validated",
+              "just validated",
+              "validating",
+              "validates"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex1_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The central server has ___ validated the user credentials.",
+            "options": [
+              "currently",
+              "yet",
+              "ago",
+              "just"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex1_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Since 2020, the academic team ___ the new device.",
+            "options": [
+              "testing",
+              "tested",
+              "has tested",
+              "tests"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ 2020, the academic team has tested the new device.",
+            "options": [
+              "In",
+              "Lately",
+              "For",
+              "Since"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research facility ___ required additional financial resources.",
+            "options": [
+              "yesterday",
+              "currently",
+              "has recently",
+              "recently"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research facility has recently ___ additional financial resources.",
+            "options": [
+              "required",
+              "requiring",
+              "requires",
+              "will require"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex1_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Up to now, the compiler ___ all the data blocks.",
+            "options": [
+              "processes",
+              "processed",
+              "has processed",
+              "processing"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex1_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Up to now, the compiler has ___ all the data blocks.",
+            "options": [
+              "processes",
+              "processed",
+              "processing",
+              "process"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "id": "u0l97ex2",
+        "title": "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+        "questions": [
+          {
+            "id": "u0l97_ex2_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system ___ already generated a unique cryptographic key.",
+            "options": [
+              "is",
+              "has",
+              "have",
+              "had"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l97_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system has ___ generated a unique cryptographic key.",
+            "options": [
+              "ago",
+              "yet",
+              "already",
+              "currently"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Since the team started the project, the automatic system ___ pressure parameters.",
+            "options": [
+              "monitored",
+              "monitors",
+              "monitoring",
+              "has monitored"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Since the team ___ the project, the automatic system has monitored pressure parameters.",
+            "options": [
+              "starting",
+              "starts",
+              "has started",
+              "started"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex2_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Lately, public laboratories ___ adjusted their security protocols.",
+            "options": [
+              "have",
+              "has",
+              "are",
+              "had"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Lately, public laboratories ___ their security protocols.",
+            "options": [
+              "adjusts",
+              "adjusted",
+              "have adjusted",
+              "adjusting"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex2_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Lately, local institutions ___ altered their internal laws.",
+            "options": [
+              "had",
+              "are",
+              "have",
+              "has"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u0l97_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Lately, local institutions ___ their internal laws.",
+            "options": [
+              "have altered",
+              "altered",
+              "altering",
+              "alters"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "So far, software developers ___ gamified mobile design patterns.",
+            "options": [
+              "have preferred",
+              "preferred",
+              "preferring",
+              "prefers"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex2_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ far, software developers have preferred gamified mobile design patterns.",
+            "options": [
+              "Too",
+              "So",
+              "As",
+              "By"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "id": "u0l97ex3",
+        "title": "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III",
+        "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+        "questions": [
+          {
+            "id": "u0l97_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The international research facility ___ additional financial resources to optimize its secondary structural frameworks.",
+            "options": [
+              "requires",
+              "requiring",
+              "required",
+              "has recently required"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Up to now, the compiler has processed the data blocks while the network firewall ___ external traffic.",
+            "options": [
+              "blocking",
+              "blocks",
+              "will block",
+              "has blocked"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex3_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Lately, public laboratories have adjusted their security protocols because malicious malware attacks ___ sensitive files.",
+            "options": [
+              "have threatened",
+              "threaten",
+              "threatening",
+              "threatens"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The system has already generated a unique cryptographic key since the administrator ___ verification clearance.",
+            "options": [
+              "grants",
+              "granted",
+              "granting",
+              "will grant"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l97_ex3_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "So far, software developers have preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
+            "options": [
+              "might",
+              "can",
+              "will",
+              "may"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex3_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The international research facility ___ recently ___ additional financial resources to optimize its secondary structural frameworks.",
+            "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu.",
+            "corrects": [
+              "has",
+              "required"
+            ]
+          },
+          {
+            "id": "u0l97_ex3_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Up to now, the compiler ___ processed the data blocks while the network firewall ___ blocked external traffic.",
+            "translation": "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+            "corrects": [
+              "has",
+              "has"
+            ]
+          },
+          {
+            "id": "u0l97_ex3_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Lately, public laboratories ___ adjusted their security protocols because malicious malware attacks ___ threatened sensitive files.",
+            "translation": "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+            "corrects": [
+              "have",
+              "have"
+            ]
+          },
+          {
+            "id": "u0l97_ex3_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The system ___ already generated a unique cryptographic key since the administrator ___ verification clearance.",
+            "translation": "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti.",
+            "corrects": [
+              "has",
+              "granted"
+            ]
+          },
+          {
+            "id": "u0l97_ex3_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "So far, software developers ___ preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
+            "translation": "Şu ana kadar yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih etti.",
+            "corrects": [
+              "have",
+              "might"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u0l97ex4",
+        "title": "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV",
+        "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+        "questions": [
+          {
+            "id": "u0l97_ex4_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The central server has just validated user credentials on grounds that previous login requests ___ corrupted.",
+            "options": [
+              "have been",
+              "were",
+              "are",
+              "will be"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex4_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Since the experiment began, the automatic system has monitored pressure parameters lest the industrial mechanical piston ___ fail unexpectedly.",
+            "options": [
+              "will",
+              "would",
+              "shall",
+              "should"
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u0l97_ex4_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Lately, local institutions have altered their internal laws inasmuch as regional environmental regulations ___ become stricter.",
+            "options": [
+              "have",
+              "has",
+              "are",
+              "had"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u0l97_ex4_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Since 2020, the academic team has tested the new device just as the original mathematical physics formulas ___ .",
+            "options": [
+              "predicting",
+              "predicted",
+              "predicts",
+              "will predict"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l97_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Up to now, heavy rain has affected the simulation site; therefore, field operations ___ temporarily suspended.",
+            "options": [
+              "will be",
+              "have been",
+              "were",
+              "are"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u0l97_ex4_q6",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "The central server ___ just validated user credentials on grounds that previous login requests ___ corrupted.",
+            "translation": "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı.",
+            "corrects": [
+              "has",
+              "have been"
+            ]
+          },
+          {
+            "id": "u0l97_ex4_q7",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Since the experiment ___ , the automatic system ___ monitored pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
+            "translation": "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi.",
+            "corrects": [
+              "began",
+              "has"
+            ]
+          },
+          {
+            "id": "u0l97_ex4_q8",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Lately, local institutions ___ altered their internal laws inasmuch as regional environmental regulations ___ become stricter.",
+            "translation": "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+            "corrects": [
+              "have",
+              "have"
+            ]
+          },
+          {
+            "id": "u0l97_ex4_q9",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Since 2020, the academic team ___ tested the new device just as the original mathematical physics formulas ___ .",
+            "translation": "2020'den beri akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihazı test etti.",
+            "corrects": [
+              "has",
+              "predicted"
+            ]
+          },
+          {
+            "id": "u0l97_ex4_q10",
+            "type": "multiple-fill-blank",
+            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
+            "sentence": "Up to now, heavy rain ___ affected the simulation site; therefore, field operations ___ temporarily suspended.",
+            "translation": "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu.",
+            "corrects": [
+              "has",
+              "have been"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+},
   1: {
     1: unit1IntroSentences,
     2: unit1Lesson2Exercises,
@@ -15976,7 +17591,7 @@ rawTopics.forEach((topic, uIdx) => {
     );
   }
 
-  const unitId = uIdx + 1;
+  const unitId = topic.id !== undefined ? topic.id : (uIdx + 1);
   const numLessons = topic.numLessons;
   const unitLessonIds = [];
   for (let l = 0; l < numLessons; l++) {

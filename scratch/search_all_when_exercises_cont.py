@@ -1,7 +1,7 @@
 from docx import Document
 
 doc = Document("/Users/faruknafizfazlioglu/Desktop/amok düzenleme.docx")
-for idx in range(6175, min(len(doc.paragraphs), 6450)):
+for idx in range(6450, min(len(doc.paragraphs), 6900)):
     txt = doc.paragraphs[idx].text.strip()
-    if txt:
+    if txt.startswith("Alıştırma") or "when" in txt.lower():
         print(f"P {idx}: {txt}")
