@@ -4625,44 +4625,48 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     ruleTitle = '💡 Boşluk Doldurma Kuralları';
 
     if (preDefinedExplanation) {
+      title = 'Dilbilgisi Analizi';
+      ruleTitle = '💡 Dilbilgisi Kuralı';
       ruleText = preDefinedExplanation;
-    }
-
-    // will/would error check
-    if (chosenWord.includes('will') || chosenWord.includes('would')) {
-      title = 'Zaman Uyumsuzluğu (will/would Kullanımı)';
-      ruleTitle = '💡 Zaman Zarfı Cümleciklerinde Gelecek Zaman';
-      ruleText = `İngilizcede zaman zarfı cümlelerinin (Time Clauses) kendi içerisinde gelecek zaman yardımcı fiili (<strong>will / would</strong>) kullanılmaz. Gelecek kastedilse bile <strong>Present Simple (Geniş Zaman)</strong> tercih edilir.`;
-      wrongExample = `when/before/since it will ... ❌`;
-      correctExample = `when/before/since it ${correctWord} ✔️`;
-    } 
-    // gerund/participle error check
-    else if (chosenWord.endsWith('ing') && !correctWord.endsWith('ing')) {
-      title = 'Çekimsiz Fiil (Gerund/Participle) Kullanımı';
-      ruleTitle = '💡 Çekimli Fiil (Finite Verb) Gereksinimi';
-      ruleText = `Zaman bağlaçlarından sonra doğrudan bir özne geliyorsa, arkasından gelen fiilin çekimli (finite) yüklem olması şarttır. Tek başına kullanılan <strong>"-ing"</strong> takılı fiiller yüklem oluşturamaz.`;
-      wrongExample = `when it ${chosenWord} ❌`;
-      correctExample = `when it ${correctWord} ✔️`;
-    } 
-    // subject-verb agreement check
-    else if (chosenWord && correctWord && (chosenWord.endsWith('s') !== correctWord.endsWith('s')) && !correctWord.endsWith('ss') && !chosenWord.endsWith('ss')) {
-      title = 'Özne-Yüklem Uyuşmazlığı (Subject-Verb Agreement)';
-      ruleTitle = '💡 Özne-Fiil Tekillik/Çoğulluk Uyum Kuralları';
-      ruleText = `Geniş zamanda (Present Simple), <strong>"he, she, it"</strong> tekil öznelerinden sonra gelen fiillere <strong>"-s"</strong> takısı eklenirken, <strong>"I, you, we, they"</strong> çoğul öznelerinde fiil yalın kalır.`;
-      wrongExample = `Özne ile yüklem uyumsuz çekimlendi ❌`;
-      correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
-    }
-    // past simple mismatch
-    else if (correctWord.endsWith('ed') && !chosenWord.endsWith('ed')) {
-      title = 'Geçmiş Zaman (Past Simple) Uyumsuzluğu';
-      ruleTitle = '💡 Zaman Uyumu (Past Tense)';
-      ruleText = `Bu cümlede geçmişte gerçekleşen bir eylem veya durum anlatılmaktadır. Bu yüzden fiilin 2. hali (<strong>V2 / -ed takısı</strong>) kullanılmalıdır.`;
-      wrongExample = `Şimdiki/Geniş Zaman çekimi ❌`;
-      correctExample = `Geçmiş Zaman: "${correctWord}" ✔️`;
-    }
-    // Default ruleText if none matches
-    if (!ruleText) {
-      ruleText = `Boşluğa getirilecek kelime, cümledeki zaman uyumu (Tense Agreement), özne-yüklem uyumu (Subject-Verb Agreement) ve eylemin aktif/pasif (Active/Passive) çatı durumuna uygun olmalıdır.`;
+      wrongExample = '';
+      correctExample = '';
+    } else {
+      // will/would error check
+      if (chosenWord.includes('will') || chosenWord.includes('would')) {
+        title = 'Zaman Uyumsuzluğu (will/would Kullanımı)';
+        ruleTitle = '💡 Zaman Zarfı Cümleciklerinde Gelecek Zaman';
+        ruleText = `İngilizcede zaman zarfı cümlelerinin (Time Clauses) kendi içerisinde gelecek zaman yardımcı fiili (<strong>will / would</strong>) kullanılmaz. Gelecek kastedilse bile <strong>Present Simple (Geniş Zaman)</strong> tercih edilir.`;
+        wrongExample = `when/before/since it will ... ❌`;
+        correctExample = `when/before/since it ${correctWord} ✔️`;
+      } 
+      // gerund/participle error check
+      else if (chosenWord.endsWith('ing') && !correctWord.endsWith('ing')) {
+        title = 'Çekimsiz Fiil (Gerund/Participle) Kullanımı';
+        ruleTitle = '💡 Çekimli Fiil (Finite Verb) Gereksinimi';
+        ruleText = `Zaman bağlaçlarından sonra doğrudan bir özne geliyorsa, arkasından gelen fiilin çekimli (finite) yüklem olması şarttır. Tek başına kullanılan <strong>"-ing"</strong> takılı fiiller yüklem oluşturamaz.`;
+        wrongExample = `when it ${chosenWord} ❌`;
+        correctExample = `when it ${correctWord} ✔️`;
+      } 
+      // subject-verb agreement check
+      else if (chosenWord && correctWord && (chosenWord.endsWith('s') !== correctWord.endsWith('s')) && !correctWord.endsWith('ss') && !chosenWord.endsWith('ss')) {
+        title = 'Özne-Yüklem Uyuşmazlığı (Subject-Verb Agreement)';
+        ruleTitle = '💡 Özne-Fiil Tekillik/Çoğulluk Uyum Kuralları';
+        ruleText = `Geniş zamanda (Present Simple), <strong>"he, she, it"</strong> tekil öznelerinden sonra gelen fiillere <strong>"-s"</strong> takısı eklenirken, <strong>"I, you, we, they"</strong> çoğul öznelerinde fiil yalın kalır.`;
+        wrongExample = `Özne ile yüklem uyumsuz çekimlendi ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
+      }
+      // past simple mismatch
+      else if (correctWord.endsWith('ed') && !chosenWord.endsWith('ed')) {
+        title = 'Geçmiş Zaman (Past Simple) Uyumsuzluğu';
+        ruleTitle = '💡 Zaman Uyumu (Past Tense)';
+        ruleText = `Bu cümlede geçmişte gerçekleşen bir eylem veya durum anlatılmaktadır. Bu yüzden fiilin 2. hali (<strong>V2 / -ed takısı</strong>) kullanılmalıdır.`;
+        wrongExample = `Şimdiki/Geniş Zaman çekimi ❌`;
+        correctExample = `Geçmiş Zaman: "${correctWord}" ✔️`;
+      }
+      // Default ruleText if none matches
+      if (!ruleText) {
+        ruleText = `Boşluğa getirilecek kelime, cümledeki zaman uyumu (Tense Agreement), özne-yüklem uyumu (Subject-Verb Agreement) ve eylemin aktif/pasif (Active/Passive) çatı durumuna uygun olmalıdır.`;
+      }
     }
   }
 
