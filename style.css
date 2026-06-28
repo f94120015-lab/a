@@ -1609,24 +1609,27 @@ input {
   flex: 1;
 }
 
+.quiz-meta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px 0 24px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
 .quiz-metadata {
-  position: absolute;
-  top: 18px;
-  left: 24px;
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 4px;
-  z-index: 10;
   pointer-events: none;
 }
 
 .quiz-report-btn {
-  position: absolute;
-  top: 15px;
-  right: 24px;
   background: var(--color-wrong-bg);
   border: 1.5px solid var(--color-wrong-border);
   color: var(--color-wrong);
@@ -1639,8 +1642,8 @@ input {
   align-items: center;
   gap: 6px;
   transition: all var(--transition-fast);
-  z-index: 10;
   box-shadow: var(--shadow-sm);
+  white-space: nowrap;
 }
 
 .quiz-report-btn:hover {
@@ -1655,14 +1658,14 @@ input {
 }
 
 @media (max-width: 580px) {
+  .quiz-meta-header {
+    padding: 8px 16px 0 16px;
+    gap: 8px;
+  }
   .quiz-metadata {
-    top: 8px;
-    left: 16px;
     font-size: 0.65rem;
   }
   .quiz-report-btn {
-    top: 8px;
-    right: 16px;
     padding: 4px 10px;
     font-size: 0.72rem;
   }
