@@ -4561,27 +4561,26 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
 
   const buildMCQuestion = (s, id) => {
     const tr = s.tr;
-    let d1 = tr.replace(/önce/g, "sonra").replace(/öncesinde/g, "sonrasında");
-    if (d1 === tr) d1 = tr.replace(/ve/g, "veya") + " (yanlış)";
-    let d2 = tr.replace(/edilmeden/g, "edildikten").replace(/yapılmadan/g, "yapıldıktan");
-    if (d2 === tr) d2 = tr + " (değil)";
-    
-    let d3 = tr;
     const candidates = sentences.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/önce/g, "sonra").replace(/öncesinde/g, "sonrasında");
+    let d2 = tr.replace(/edilmeden/g, "edildikten").replace(/yapılmadan/g, "yapıldıktan");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    if (d2 !== tr) rawDistractors.push(d2);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
     if (candidates.length > 0) {
-      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
-    } else {
-      d3 = tr + " (diğer)";
-    }
-    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
-    while (distractors.length < 3) {
-      const extra = candidates[Math.floor(Math.random() * candidates.length)];
-      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
-        distractors.push(extra.tr);
-      } else {
-        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
       }
     }
+    
+    const distractors = Array.from(distractorsSet);
     const choices = shuffle([tr, ...distractors]);
     return {
       id: id,
@@ -5176,27 +5175,26 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
 
   const buildMCQuestion = (s, id) => {
     const tr = s.tr;
-    let d1 = tr.replace(/sonra/g, "önce");
-    if (d1 === tr) d1 = tr + " (değil)";
-    let d2 = tr.replace(/eridikten/g, "erimeden").replace(/başladıktan/g, "başlamadan").replace(/tarandıktan/g, "taranmadan");
-    if (d2 === tr) d2 = tr + " (yanlış)";
-    
-    let d3 = tr;
     const candidates = unit19Lesson1SentencesRaw.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/sonra/g, "önce");
+    let d2 = tr.replace(/eridikten/g, "erimeden").replace(/başladıktan/g, "başlamadan").replace(/tarandıktan/g, "taranmadan");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    if (d2 !== tr) rawDistractors.push(d2);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
     if (candidates.length > 0) {
-      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
-    } else {
-      d3 = tr + " (başka)";
-    }
-    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
-    while (distractors.length < 3) {
-      const extra = candidates[Math.floor(Math.random() * candidates.length)];
-      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
-        distractors.push(extra.tr);
-      } else {
-        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
       }
     }
+    
+    const distractors = Array.from(distractorsSet);
     const choices = shuffle([tr, ...distractors]);
     return {
       id: id,
@@ -5684,28 +5682,26 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
 
   const buildMCQuestion = (s, id, allSentences) => {
     const tr = s.tr;
-    // Generate distractors based on whether it is a clause or full sentence
-    let d1 = tr.replace(/diğinde/g, "meden önce").replace(/duğunda/g, "madan önce").replace(/tiğinde/g, "meden önce");
-    if (d1 === tr) d1 = tr + " (önce)";
-    let d2 = tr.replace(/erittiğinde/g, "erittikten sonra").replace(/çöktüğünde/g, "çöktükten sonra").replace(/düştüğünde/g, "düştükten sonra");
-    if (d2 === tr) d2 = tr + " (sonra)";
-    
-    let d3 = tr;
     const candidates = allSentences.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/diğinde/g, "meden önce").replace(/duğunda/g, "madan önce").replace(/tiğinde/g, "meden önce");
+    let d2 = tr.replace(/erittiğinde/g, "erittikten sonra").replace(/çöktüğünde/g, "çöktükten sonra").replace(/düştüğünde/g, "düştükten sonra");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    if (d2 !== tr) rawDistractors.push(d2);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
     if (candidates.length > 0) {
-      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
-    } else {
-      d3 = tr + " (başka)";
-    }
-    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
-    while (distractors.length < 3) {
-      const extra = candidates[Math.floor(Math.random() * candidates.length)];
-      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
-        distractors.push(extra.tr);
-      } else {
-        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
       }
     }
+    
+    const distractors = Array.from(distractorsSet);
     const choices = shuffle([tr, ...distractors]);
     return {
       id: id,
