@@ -4693,10 +4693,6 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       </div>
       ` : ''}
     </div>
-    <div class="grammar-timeline" style="margin-top: 10px; background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 12px; font-size: 0.8rem; text-align: center; border: 1px solid var(--border-color); color: var(--text-secondary);">
-      <strong>ZAMAN ÇİZGİSİ (${timelineLabel}):</strong><br>
-      ${timelineGraphic}
-    </div>
   `;
 }
 
