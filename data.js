@@ -11296,25 +11296,45 @@ const rawTopics = [
   },
   {
     title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği (Sayfa 164)",
-    desc: "after, before, when, since, while/as, until bağlaçları ile kurulan zaman cümleleri",
+    desc: "after, before bağlaçları ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 6,
+    numLessons: 2,
     formulas: [
       { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" },
-      { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" },
+      { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" }
+    ],
+    subtitles: [
+      "A. After (Sayfa 169)",
+      "B. Before (Sayfa 164)"
+    ]
+  },
+  {
+    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, When",
+    desc: "when bağlacı ile kurulan zaman cümleleri",
+    icon: "🎻",
+    numLessons: 1,
+    formulas: [
       { 
         formula: "When + Clause", 
         example: "When the pressure increases, the temperature rises: Basınç arttığında sıcaklık yükselir",
         description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nKural Açıklaması:\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir."
-      },
+      }
+    ],
+    subtitles: [
+      "C. When"
+    ]
+  },
+  {
+    title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği (Sayfa 164) - Devamı",
+    desc: "since, while/as, until bağlaçları ile kurulan zaman cümleleri",
+    icon: "🎻",
+    numLessons: 3,
+    formulas: [
       { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" },
       { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" },
       { formula: "Until + Clause", example: "Until the mixture cools down, do not touch the container: Karışım soğuyana kadar kaba dokunmayın" }
     ],
     subtitles: [
-      "A. After (Sayfa 169)",
-      "B. Before (Sayfa 164)",
-      "C. When",
       "D. Since",
       "E. While / As",
       "F. Until"
@@ -13326,18 +13346,22 @@ const unitSentencesMap = {
   },
   22: {
     1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
-    2: { exercises: buildAra3ExercisesForLesson67(22, 67) },
-    3: { exercises: buildUnit19Lesson68Exercises(22, 68) },
-    4: { exercises: [] },
-    5: { exercises: [] },
-    6: { exercises: [] }
+    2: { exercises: buildAra3ExercisesForLesson67(22, 67) }
   },
   23: {
+    1: { exercises: buildUnit19Lesson68Exercises(23, 68) }
+  },
+  24: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] }
   },
-  24: {
+  25: {
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] }
+  },
+  26: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
@@ -13346,19 +13370,19 @@ const unitSentencesMap = {
     6: { exercises: [] },
     7: { exercises: [] }
   },
-  25: {
+  27: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
     4: { exercises: [] }
   },
-  26: {
-    1: { exercises: [] }
-  },
-  27: {
-    1: { exercises: [] }
-  },
   28: {
+    1: { exercises: [] }
+  },
+  29: {
+    1: { exercises: [] }
+  },
+  30: {
     1: { exercises: [] }
   }
 };

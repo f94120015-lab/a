@@ -1278,13 +1278,19 @@ function getLessonIllustration(lessonId, unitId) {
   } else if (unitId === 23) {
     category = 'time';
   } else if (unitId === 24) {
-    category = 'grammar';
+    category = 'time';
   } else if (unitId === 25) {
-    category = 'blocks';
+    category = 'time';
   } else if (unitId === 26) {
-    category = 'teacher';
+    category = 'grammar';
   } else if (unitId === 27) {
+    category = 'blocks';
+  } else if (unitId === 28) {
+    category = 'teacher';
+  } else if (unitId === 29) {
     category = 'globe';
+  } else if (unitId === 30) {
+    category = 'train';
   }
 
   // Inject variety
@@ -1499,7 +1505,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 23, 24, 25, 26, 27, 28]);
+    const notUploadedUnits = new Set([21, 24, 25, 26, 27, 28, 29, 30]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -1761,7 +1767,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 23, 24, 25, 26, 27, 28]);
+  const notUploadedUnitsPopover = new Set([21, 24, 25, 26, 27, 28, 29, 30]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
