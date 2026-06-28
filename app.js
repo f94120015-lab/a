@@ -1295,6 +1295,8 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'globe';
   } else if (unitId === 32) {
     category = 'train';
+  } else if (unitId === 33) {
+    category = 'chatbot';
   }
 
   // Inject variety
@@ -1509,7 +1511,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 24, 25, 26, 27, 28, 29, 30, 31, 32]);
+    const notUploadedUnits = new Set([21, 25, 26, 27, 28, 29, 30, 31, 32, 33]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -1771,7 +1773,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 24, 25, 26, 27, 28, 29, 30, 31, 32]);
+  const notUploadedUnitsPopover = new Set([21, 25, 26, 27, 28, 29, 30, 31, 32, 33]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">

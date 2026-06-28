@@ -11295,16 +11295,26 @@ const rawTopics = [
     ]
   },
   {
-    title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği (Sayfa 164)",
-    desc: "after, before bağlaçları ile kurulan zaman cümleleri",
+    title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği, After (Sayfa 169)",
+    desc: "after bağlacı ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 2,
+    numLessons: 1,
     formulas: [
-      { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" },
+      { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" }
+    ],
+    subtitles: [
+      "A. After (Sayfa 169)"
+    ]
+  },
+  {
+    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, Before",
+    desc: "before bağlacı ile kurulan zaman cümleleri",
+    icon: "🎻",
+    numLessons: 1,
+    formulas: [
       { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" }
     ],
     subtitles: [
-      "A. After (Sayfa 169)",
       "B. Before (Sayfa 164)"
     ]
   },
@@ -13365,14 +13375,13 @@ const unitSentencesMap = {
     4: { exercises: [] }
   },
   22: {
-    1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
-    2: { exercises: buildAra3ExercisesForLesson67(22, 67) }
+    1: { exercises: buildUnit19Lesson66Exercises(22, 66) }
   },
   23: {
-    1: { exercises: buildUnit19Lesson68Exercises(23, 68) }
+    1: { exercises: buildAra3ExercisesForLesson67(23, 67) }
   },
   24: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit19Lesson68Exercises(24, 68) }
   },
   25: {
     1: { exercises: [] }
@@ -13381,11 +13390,14 @@ const unitSentencesMap = {
     1: { exercises: [] }
   },
   27: {
+    1: { exercises: [] }
+  },
+  28: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] }
   },
-  28: {
+  29: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
@@ -13394,19 +13406,19 @@ const unitSentencesMap = {
     6: { exercises: [] },
     7: { exercises: [] }
   },
-  29: {
+  30: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
     4: { exercises: [] }
   },
-  30: {
-    1: { exercises: [] }
-  },
   31: {
     1: { exercises: [] }
   },
   32: {
+    1: { exercises: [] }
+  },
+  33: {
     1: { exercises: [] }
   }
 };
