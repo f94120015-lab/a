@@ -1280,18 +1280,16 @@ function getLessonIllustration(lessonId, unitId) {
   } else if (unitId === 24) {
     category = 'time';
   } else if (unitId === 25) {
-    category = 'time';
-  } else if (unitId === 26) {
     category = 'grammar';
-  } else if (unitId === 27) {
+  } else if (unitId === 26) {
     category = 'blocks';
-  } else if (unitId === 28) {
+  } else if (unitId === 27) {
     category = 'teacher';
-  } else if (unitId === 29) {
+  } else if (unitId === 28) {
     category = 'globe';
-  } else if (unitId === 30) {
+  } else if (unitId === 29) {
     category = 'train';
-  } else if (unitId === 31) {
+  } else if (unitId === 30) {
     category = 'chatbot';
   }
 
@@ -1507,7 +1505,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 26, 27, 28, 29, 30, 31]);
+    const notUploadedUnits = new Set([21, 25, 26, 27, 28, 29, 30]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -1769,7 +1767,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 26, 27, 28, 29, 30, 31]);
+  const notUploadedUnitsPopover = new Set([21, 25, 26, 27, 28, 29, 30]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">

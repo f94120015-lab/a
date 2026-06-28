@@ -12568,27 +12568,17 @@ const rawTopics = [
     ]
   },
   {
-    title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği, After (Sayfa 169)",
-    desc: "after bağlacı ile kurulan zaman cümleleri",
+    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before",
+    desc: "after ve before bağlaçları ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 1,
+    numLessons: 2,
     formulas: [
-      { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" }
-    ],
-    subtitles: [
-      "A. After (Sayfa 169)"
-    ]
-  },
-  {
-    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, Before",
-    desc: "before bağlacı ile kurulan zaman cümleleri",
-    icon: "🎻",
-    numLessons: 1,
-    formulas: [
+      { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" },
       { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" }
     ],
     subtitles: [
-      "A. Before (Sayfa 164)"
+      "A. After (Sayfa 169)",
+      "B. Before (Sayfa 164)"
     ]
   },
   {
@@ -14652,22 +14642,25 @@ const unitSentencesMap = {
     4: { exercises: [] }
   },
   22: {
-    1: { exercises: buildUnit19Lesson66Exercises(22, 66) }
+    1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
+    2: { exercises: buildAra3ExercisesForLesson67(22, 67) }
   },
   23: {
-    1: { exercises: buildAra3ExercisesForLesson67(23, 67) }
+    1: { exercises: buildUnit19Lesson68Exercises(23, 68, 1) },
+    2: { exercises: buildUnit19Lesson68Exercises(23, 69, 2) },
+    3: { exercises: buildUnit19Lesson68Exercises(23, 70, 3) },
+    4: { exercises: buildUnit19Lesson68Exercises(23, 71, 4) },
+    5: { exercises: buildUnit19Lesson68Exercises(23, 72, 5) }
   },
   24: {
-    1: { exercises: buildUnit19Lesson68Exercises(24, 68, 1) },
-    2: { exercises: buildUnit19Lesson68Exercises(24, 69, 2) },
-    3: { exercises: buildUnit19Lesson68Exercises(24, 70, 3) },
-    4: { exercises: buildUnit19Lesson68Exercises(24, 71, 4) },
-    5: { exercises: buildUnit19Lesson68Exercises(24, 72, 5) }
+    1: { exercises: buildUnit22SinceExercises(24, 73) },
+    2: { exercises: buildUnit23WhileExercises(24, 74) },
+    3: { exercises: buildUnit24UntilExercises(24, 75) }
   },
   25: {
-    1: { exercises: buildUnit22SinceExercises(25, 73) },
-    2: { exercises: buildUnit23WhileExercises(25, 74) },
-    3: { exercises: buildUnit24UntilExercises(25, 75) }
+    1: { exercises: [] },
+    2: { exercises: [] },
+    3: { exercises: [] }
   },
   26: {
     1: { exercises: [] },
@@ -14693,9 +14686,6 @@ const unitSentencesMap = {
     1: { exercises: [] }
   },
   30: {
-    1: { exercises: [] }
-  },
-  31: {
     1: { exercises: [] }
   }
 };
