@@ -6725,6 +6725,224 @@ const unit24Lesson1SentencesL3Raw = [
   }
 ];
 
+const unit24Lesson1GroupAPurRaw = [
+  { en: "Until when was it held?", tr: "O ne zamana kadar tutuldu?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ it held?", options: ['was', 'is', 'did', 'been'], blocks: ['Until', 'when', 'was', 'it', 'held?'] },
+  { en: "Until when cannot it be carried out?", tr: "O ne zamana kadar yürütülemez?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "Until when ___ it be carried out?", options: ['cannot', 'was not', 'not', 'did not'], blocks: ['Until', 'when', 'cannot', 'it', 'be', 'carried', 'out?'] },
+  { en: "Until when are they produced?", tr: "Onlar ne zamana kadar üretilir?", word: "are", trWord: "olmak", correct: "are", blank: "Until when ___ they produced?", options: ['are', 'were', 'do', 'have'], blocks: ['Until', 'when', 'are', 'they', 'produced?'] },
+  { en: "Until when was it left?", tr: "O ne zamana kadar bırakıldı?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ it left?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'it', 'left?'] },
+  { en: "Until when could it be used?", tr: "O ne zamana kadar kullanılabilirdi?", word: "could", trWord: "olmak", correct: "could", blank: "Until when ___ it be used?", options: ['could', 'was', 'can', 'should'], blocks: ['Until', 'when', 'could', 'it', 'be', 'used?'] },
+  { en: "Until when is it delayed?", tr: "O ne zamana kadar ertelenir?", word: "is", trWord: "olmak", correct: "is", blank: "Until when ___ it delayed?", options: ['is', 'was', 'does', 'has'], blocks: ['Until', 'when', 'is', 'it', 'delayed?'] },
+  { en: "Until when was it blocked?", tr: "O ne zamana kadar engellendi?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ it blocked?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'it', 'blocked?'] },
+  { en: "Until when must it wait?", tr: "O ne zamana kadar beklemeli?", word: "must", trWord: "olmak", correct: "must", blank: "Until when ___ it wait?", options: ['must', 'should', 'was', 'does'], blocks: ['Until', 'when', 'must', 'it', 'wait?'] },
+  { en: "Until when are they locked?", tr: "Onlar ne zamana kadar kilitlidir?", word: "are", trWord: "olmak", correct: "are", blank: "Until when ___ they locked?", options: ['are', 'were', 'do', 'have'], blocks: ['Until', 'when', 'are', 'they', 'locked?'] },
+  { en: "Until when was it stored?", tr: "O ne zamana kadar depolandı?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ it stored?", options: ['was', 'is', 'did', 'been'], blocks: ['Until', 'when', 'was', 'it', 'stored?'] }
+];
+
+const unit24Lesson1GroupAYalinRaw = [
+  { en: "Until when was the piston held up during the test?", tr: "Test sırasında piston ne zamana kadar yukarıda tutuldu?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ the piston held up during the test?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'the', 'piston', 'held', 'up', 'during', 'the', 'test?'] },
+  { en: "Until when cannot the functions of government be carried out properly?", tr: "Hükümetin işlevleri ne zamana kadar düzgün bir şekilde yürütülemez?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "Until when ___ the functions of government be carried out properly?", options: ['cannot', 'was not', 'not', 'did not'], blocks: ['Until', 'when', 'cannot', 'the', 'functions', 'of', 'government', 'be', 'carried', 'out', 'properly?'] },
+  { en: "Until when was no great advance made in the study of anatomy?", tr: "Anatomi çalışmasında ne zamana kadar büyük bir ilerleme kaydedilmedi?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ no great advance made in the study of anatomy?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'no', 'great', 'advance', 'made', 'in', 'the', 'study', 'of', 'anatomy?'] },
+  { en: "Until when are antibodies not produced naturally by the body?", tr: "Antikorlar vücut tarafından doğal olarak ne zamana kadar üretilmez?", word: "are", trWord: "olmak", correct: "are", blank: "Until when ___ antibodies not produced naturally by the body?", options: ['are', 'were', 'do', 'have'], blocks: ['Until', 'when', 'are', 'antibodies', 'not', 'produced', 'naturally', 'by', 'the', 'body?'] },
+  { en: "Until when was the establishment of schools left to private groups?", tr: "Okulların kurulması ne zamana kadar özel gruplara bırakıldı?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ the establishment of schools left to private groups?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'the', 'establishment', 'of', 'schools', 'left', 'to', 'private', 'groups?'] },
+  { en: "Until when could not real practical use be made of Galileo's compound microscope?", tr: "Galileo'nun bileşik mikroskobundan ne zamana kadar gerçek pratik bir yarar sağlanamadı?", word: "could", trWord: "olmak", correct: "could", blank: "Until when ___ not real practical use be made of Galileo's compound microscope?", options: ['could', 'can', 'was', 'should'], blocks: ['Until', 'when', 'could', 'not', 'real', 'practical', 'use', 'be', 'made', 'of', "Galileo's", 'compound', 'microscope?'] },
+  { en: "Until when must the system database remain offline?", tr: "Sistem veri tabanı ne zamana kadar çevrimdışı kalmalı?", word: "must", trWord: "olmak", correct: "must", blank: "Until when ___ the system database remain offline?", options: ['must', 'should', 'was', 'does'], blocks: ['Until', 'when', 'must', 'the', 'system', 'database', 'remain', 'offline?'] },
+  { en: "Until when was the chemical liquid kept in the incubator?", tr: "Kimyasal sıvı ne zamana kadar kuluçka makinesinde tutuldu?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ the chemical liquid kept in the incubator?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'the', 'chemical', 'liquid', 'kept', 'in', 'the', 'incubator?'] },
+  { en: "Until when are user configuration accounts frozen?", tr: "Kullanıcı yapılandırma hesapları ne zamana kadar dondurulur?", word: "are", trWord: "olmak", correct: "are", blank: "Until when ___ user configuration accounts frozen?", options: ['are', 'were', 'do', 'have'], blocks: ['Until', 'when', 'are', 'user', 'configuration', 'accounts', 'frozen?'] },
+  { en: "Until when was the historical castle defended by the soldiers?", tr: "Tarihi kale askerler tarafından ne zamana kadar savunuldu?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ the historical castle defended by the soldiers?", options: ['was', 'is', 'did', 'were'], blocks: ['Until', 'when', 'was', 'the', 'historical', 'castle', 'defended', 'by', 'the', 'soldiers?'] }
+];
+
+const unit24Lesson1GroupAGenisRaw = [
+  {
+    en: "Until when was the high-pressure mechanical piston held up by the automated system during the simulation?",
+    tr: "Simülasyon sırasında yüksek basınçlı mekanik piston otomatik sistem tarafından ne zamana kadar yukarıda tutuldu?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "Until when ___ the high-pressure mechanical piston held up by the automated system during the simulation?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['Until', 'when', 'was', 'the', 'high-pressure', 'mechanical', 'piston', 'held', 'up', 'by', 'the', 'automated', 'system', 'during', 'the', 'simulation?']
+  },
+  {
+    en: "Until when cannot the primary legislative functions of government be carried out properly without crisis modules?",
+    tr: "Kriz modülleri olmadan hükümetin birincil yasama işlevleri ne zamana kadar düzgün bir şekilde yürütülemez?",
+    word: "cannot", trWord: "yürütülemez", correct: "cannot",
+    blank: "Until when ___ the primary legislative functions of government be carried out properly without crisis modules?",
+    options: ['cannot', 'was not', 'not', 'did not'],
+    blocks: ['Until', 'when', 'cannot', 'the', 'primary', 'legislative', 'functions', 'of', 'government', 'be', 'carried', 'out', 'properly', 'without', 'crisis', 'modules?']
+  },
+  {
+    en: "Until when was no great structural advance made in the cross-disciplinary study of comparative anatomy?",
+    tr: "Karşılaştırmalı anatominin disiplinler arası çalışmasında ne zamana kadar büyük bir yapısal ilerleme kaydedilmedi?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "Until when ___ no great structural advance made in the cross-disciplinary study of comparative anatomy?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['Until', 'when', 'was', 'no', 'great', 'structural', 'advance', 'made', 'in', 'the', 'cross-disciplinary', 'study', 'of', 'comparative', 'anatomy?']
+  },
+  {
+    en: "Until when are specific protective antibodies not produced naturally by the infant's immune system?",
+    tr: "Spesifik koruyucu antikorlar, bebeğin bağışıklık sistemi tarafından doğal olarak ne zamana kadar üretilmez?",
+    word: "are", trWord: "olmak", correct: "are",
+    blank: "Until when ___ specific protective antibodies not produced naturally by the infant's immune system?",
+    options: ['are', 'were', 'do', 'have'],
+    blocks: ['Until', 'when', 'are', 'specific', 'protective', 'antibodies', 'not', 'produced', 'naturally', 'by', 'the', "infant's", 'immune', 'system?']
+  },
+  {
+    en: "Until when was the institutional establishment of primary schools left entirely to religious bodies?",
+    tr: "İlkokulların kurumsal kuruluşu ne zamana kadar tamamen dini kurumlara bırakıldı?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "Until when ___ the institutional establishment of primary schools left entirely to religious bodies?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['Until', 'when', 'was', 'the', 'institutional', 'establishment', 'of', 'primary', 'schools', 'left', 'entirely', 'to', 'religious', 'bodies?']
+  },
+  {
+    en: "Until when could not real practical use be made of Galileo's primitive compound microscope in laboratory fields?",
+    tr: "Galileo'nun ilkel bileşik mikroskobundan laboratuvar alanlarında ne zamana kadar gerçek pratik bir yarar sağlanamadı?",
+    word: "could", trWord: "olmak", correct: "could",
+    blank: "Until when ___ not real practical use be made of Galileo's primitive compound microscope in laboratory fields?",
+    options: ['could', 'can', 'was', 'should'],
+    blocks: ['Until', 'when', 'could', 'not', 'real', 'practical', 'use', 'be', 'made', 'of', "Galileo's", 'primitive', 'compound', 'microscope', 'in', 'laboratory', 'fields?']
+  },
+  {
+    en: "Until when must the cloud computing infrastructure remain completely restricted to external api queries?",
+    tr: "Bulut bilişim altyapısı ne zamana kadar harici API sorgularına tamamen kapalı kalmalı?",
+    word: "must", trWord: "olmak", correct: "must",
+    blank: "Until when ___ the cloud computing infrastructure remain completely restricted to external api queries?",
+    options: ['must', 'should', 'was', 'does'],
+    blocks: ['Until', 'when', 'must', 'the', 'cloud', 'computing', 'infrastructure', 'remain', 'completely', 'restricted', 'to', 'external', 'api', 'queries?']
+  },
+  {
+    en: "Until when was the unstable chemical compound kept under extreme sub-zero temperatures inside the chamber?",
+    tr: "Kararsız kimyasal bileşik, oda içinde sıfırın altındaki aşırı sıcaklıklarda ne zamana kadar tutuldu?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "Until when ___ the unstable chemical compound kept under extreme sub-zero temperatures inside the chamber?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['Until', 'when', 'was', 'the', 'unstable', 'chemical', 'compound', 'kept', 'under', 'extreme', 'sub-zero', 'temperatures', 'inside', 'the', 'chamber?']
+  },
+  {
+    en: "Until when are secondary administrative database accounts frozen by the cybersecurity network?",
+    tr: "İkincil idari veri tabanı hesapları siber güvenlik ağı tarafından ne zamana kadar dondurulur?",
+    word: "are", trWord: "olmak", correct: "are",
+    blank: "Until when ___ secondary administrative database accounts frozen by the cybersecurity network?",
+    options: ['are', 'were', 'do', 'have'],
+    blocks: ['Until', 'when', 'are', 'secondary', 'administrative', 'database', 'accounts', 'frozen', 'by', 'the', 'cybersecurity', 'network?']
+  },
+  {
+    en: "Until when was the heavily fortified border area defended by the alliance forces before the treaty?",
+    tr: "Yoğun bir şekilde tahkim edilmiş sınır bölgesi antlaşmadan önce ittifak kuvvetleri tarafından ne zamana kadar savunuldu?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "Until when ___ the heavily fortified border area defended by the alliance forces before the treaty?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['Until', 'when', 'was', 'the', 'heavily', 'fortified', 'border', 'area', 'defended', 'by', 'the', 'alliance', 'forces', 'before', 'the', 'treaty?']
+  }
+];
+
+const unit24Lesson1GroupBPurRaw = [
+  { en: "What was done until it cooled?", tr: "O soğuyana kadar ne yapıldı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ done until it cooled?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'done', 'until', 'it', 'cooled?'] },
+  { en: "What cannot be done until they are educated?", tr: "Onlar eğitilene kadar ne yapılamaz?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "What ___ be done until they are educated?", options: ['cannot', 'was not', 'not', 'should not'], blocks: ['What', 'cannot', 'be', 'done', 'until', 'they', 'are', 'educated?'] },
+  { en: "What was not made until it changed?", tr: "O değişene kadar ne yapılmadı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ not made until it changed?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'not', 'made', 'until', 'it', 'changed?'] },
+  { en: "What is not done until it happens?", tr: "O gerçekleşene kadar ne yapılmaz?", word: "is", trWord: "olmak", correct: "is", blank: "What ___ not done until it happens?", options: ['is', 'was', 'does', 'has'], blocks: ['What', 'is', 'not', 'done', 'until', 'it', 'happens?'] },
+  { en: "What could not be done until it was developed?", tr: "O geliştirilene kadar ne yapılamazdı?", word: "could", trWord: "olmak", correct: "could", blank: "What ___ not be done until it was developed?", options: ['could', 'can', 'was', 'should'], blocks: ['What', 'could', 'not', 'be', 'done', 'until', 'it', 'was', 'developed?'] },
+  { en: "What will change until it finishes?", tr: "O bitene kadar ne değişecek?", word: "will", trWord: "olmak", correct: "will", blank: "What ___ change until it finishes?", options: ['will', 'shall', 'would', 'is'], blocks: ['What', 'will', 'change', 'until', 'it', 'finishes?'] },
+  { en: "What was checked until it arrived?", tr: "O varana kadar ne kontrol edildi?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ checked until it arrived?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'checked', 'until', 'it', 'arrived?'] },
+  { en: "What cannot operate until it is verified?", tr: "O doğrulanana kadar ne çalışamaz?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "What ___ operate until it is verified?", options: ['cannot', 'was not', 'not', 'should not'], blocks: ['What', 'cannot', 'operate', 'until', 'it', 'is', 'verified?'] },
+  { en: "What was postponed until it dried?", tr: "O kuruyana kadar ne ertelendi?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ postponed until it dried?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'postponed', 'until', 'it', 'dried?'] },
+  { en: "What is monitored until it disappears?", tr: "O gözden kaybolana kadar ne izlenir?", word: "is", trWord: "olmak", correct: "is", blank: "What ___ monitored until it disappears?", options: ['is', 'was', 'does', 'has'], blocks: ['What', 'is', 'monitored', 'until', 'it', 'disappears?'] }
+];
+
+const unit24Lesson1GroupBYalinRaw = [
+  { en: "What was done until the cylinder cooled?", tr: "Silindir soğuyana kadar ne yapıldı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ done until the cylinder cooled?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'done', 'until', 'the', 'cylinder', 'cooled?'] },
+  { en: "What cannot be carried out properly until all the members are educated and experienced?", tr: "Tüm üyeler eğitilip deneyim kazanana kadar ne düzgün bir şekilde yürütülemez?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "What ___ be carried out properly until all the members are educated and experienced?", options: ['cannot', 'was not', 'not', 'should not'], blocks: ['What', 'cannot', 'be', 'carried', 'out', 'properly', 'until', 'all', 'the', 'members', 'are', 'educated', 'and', 'experienced?'] },
+  { en: "What was not made until dissections were carried out in the medieval universities?", tr: "Orta çağ üniversitelerinde diseksiyonlar yapılana kadar ne yapılmadı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ not made until dissections were carried out in the medieval universities?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'not', 'made', 'until', 'dissections', 'were', 'carried', 'out', 'in', 'the', 'medieval', 'universities?'] },
+  { en: "What is not done until the body is attacked by bacteria?", tr: "Vücut bakterilerin saldırısına uğrayana kadar ne yapılmaz?", word: "is", trWord: "olmak", correct: "is", blank: "What ___ not done until the body is attacked by bacteria?", options: ['is', 'was', 'does', 'has'], blocks: ['What', 'is', 'not', 'done', 'until', 'the', 'body', 'is', 'attacked', 'by', 'bacteria?'] },
+  { en: "What was done until education became a public service in Britain?", tr: "Britanya'da eğitim bir kamu hizmeti haline gelene kadar ne yapıldı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ done until education became a public service in Britain?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'done', 'until', 'education', 'became', 'a', 'public', 'service', 'in', 'Britain?'] },
+  { en: "What could not be done until German and British technicians in the 19th century could make satisfactory lenses?", tr: "19. yüzyılda Alman ve İngiliz teknisyenler tatmin edici lensler yapana kadar ne yapılamazdı?", word: "could", trWord: "olmak", correct: "could", blank: "What ___ not be done until German and British technicians in the 19th century could make satisfactory lenses?", options: ['could', 'can', 'was', 'should'], blocks: ['What', 'could', 'not', 'be', 'done', 'until', 'German', 'and', 'British', 'technicians', 'in', 'the', '19th', 'century', 'could', 'make', 'satisfactory', 'lenses?'] },
+  { en: "What will be paused until the new source code is uploaded?", tr: "Yeni kaynak kodu yüklenene kadar ne duraklatılacak?", word: "will", trWord: "olmak", correct: "will", blank: "What ___ be paused until the new source code is uploaded?", options: ['will', 'shall', 'would', 'is'], blocks: ['What', 'will', 'be', 'paused', 'until', 'the', 'new', 'source', 'code', 'is', 'uploaded?'] },
+  { en: "What cannot be accessed until the administrator grants permission?", tr: "Yönetici izin verene kadar neye erişilemez?", word: "cannot", trWord: "yürütülemez", correct: "cannot", blank: "What ___ be accessed until the administrator grants permission?", options: ['cannot', 'was not', 'not', 'should not'], blocks: ['What', 'cannot', 'be', 'accessed', 'until', 'the', 'administrator', 'grants', 'permission?'] },
+  { en: "What was suspended until the financial market stabilized?", tr: "Finans piyasası istikrara kavuşana kadar ne askıya alındı?", word: "was", trWord: "olmak", correct: "was", blank: "What ___ suspended until the financial market stabilized?", options: ['was', 'is', 'did', 'were'], blocks: ['What', 'was', 'suspended', 'until', 'the', 'financial', 'market', 'stabilized?'] },
+  { en: "What is continuously scanned until the malware signature matches?", tr: "Kötü amaçlı yazılım imzası eşleşene kadar ne sürekli olarak taranır?", word: "is", trWord: "olmak", correct: "is", blank: "What ___ continuously scanned until the malware signature matches?", options: ['is', 'was', 'does', 'has'], blocks: ['What', 'is', 'continuously', 'scanned', 'until', 'the', 'malware', 'signature', 'matches?'] }
+];
+
+const unit24Lesson1GroupBGenisRaw = [
+  {
+    en: "What precise industrial tasks were done until the engine cylinder cooled down to safe working levels?",
+    tr: "Motor silindiri güvenli çalışma seviyelerine soğuyana kadar tam olarak hangi endüstriyel görevler yapıldı?",
+    word: "were", trWord: "olmak", correct: "were",
+    blank: "What precise industrial tasks ___ done until the engine cylinder cooled down to safe working levels?",
+    options: ['were', 'was', 'did', 'are'],
+    blocks: ['What', 'precise', 'industrial', 'tasks', 'were', 'done', 'until', 'the', 'engine', 'cylinder', 'cooled', 'down', 'to', 'safe', 'working', 'levels?']
+  },
+  {
+    en: "What complex operational procedures cannot be carried out properly until all committee members are fully experienced?",
+    tr: "Tüm komite üyeleri tamamen deneyimli olana kadar hangi karmaşık operasyonel prosedürler düzgün bir şekilde yürütülemez?",
+    word: "cannot", trWord: "yürütülemez", correct: "cannot",
+    blank: "What complex operational procedures ___ be carried out properly until all committee members are fully experienced?",
+    options: ['cannot', 'was not', 'not', 'should not'],
+    blocks: ['What', 'complex', 'operational', 'procedures', 'cannot', 'be', 'carried', 'out', 'properly', 'until', 'all', 'committee', 'members', 'are', 'fully', 'experienced?']
+  },
+  {
+    en: "What historical breakthrough was not made until human dissections were systematically carried out in medieval universities?",
+    tr: "Orta çağ üniversitelerinde insan diseksiyonları sistematik olarak yapılana kadar hangi tarihi buluş yapılmadı?",
+    word: "was", trWord: "olmak", correct: "was",
+    blank: "What historical breakthrough ___ not made until human dissections were systematically carried out in medieval universities?",
+    options: ['was', 'is', 'did', 'were'],
+    blocks: ['What', 'historical', 'breakthrough', 'was', 'not', 'made', 'until', 'human', 'dissections', 'were', 'systematically', 'carried', 'out', 'in', 'the', 'medieval', 'universities?']
+  },
+  {
+    en: "What specific biological defense mechanism is not done until the human body is directly attacked by invasive bacteria?",
+    tr: "İnsan vücudu istilacı bakteriler tarafından doğrudan saldırıya uğrayana kadar hangi spesifik biyolojik savunma mekanizması gerçekleştirilmez?",
+    word: "is", trWord: "olmak", correct: "is",
+    blank: "What specific biological defense mechanism ___ not done until the human body is directly attacked by invasive bacteria?",
+    options: ['is', 'was', 'does', 'has'],
+    blocks: ['What', 'specific', 'biological', 'defense', 'mechanism', 'is', 'not', 'done', 'until', 'the', 'human', 'body', 'is', 'directly', 'attacked', 'by', 'invasive', 'bacteria?']
+  },
+  {
+    en: "What alternative instructional methods were done until basic education finally became an organized public service in Britain?",
+    tr: "Temel eğitim nihayet Britanya'da organize bir kamu hizmeti haline gelene kadar hangi alternatif öğretim yöntemleri uygulandı?",
+    word: "were", trWord: "olmak", correct: "were",
+    blank: "What alternative instructional methods ___ done until basic education finally became an organized public service in Britain?",
+    options: ['were', 'was', 'did', 'are'],
+    blocks: ['What', 'alternative', 'instructional', 'methods', 'were', 'done', 'until', 'basic', 'education', 'finally', 'became', 'an', 'organized', 'public', 'service', 'in', 'Britain?']
+  },
+  {
+    en: "What real practical research could not be done until European technicians in the 19th century could manufacture satisfactory lenses?",
+    tr: "19. yüzyıldaki Avrupalı teknisyenler tatmin edici mercekler üretene kadar hangi gerçek pratik araştırma yapılamazdı?",
+    word: "could", trWord: "olmak", correct: "could",
+    blank: "What real practical research ___ not be done until European technicians in the 19th century could manufacture satisfactory lenses?",
+    options: ['could', 'can', 'was', 'should'],
+    blocks: ['What', 'real', 'practical', 'research', 'could', 'not', 'be', 'done', 'until', 'European', 'technicians', 'in', 'the', '19th', 'century', 'could', 'manufacture', 'satisfactory', 'lenses?']
+  },
+  {
+    en: "What primary cloud server processes will be completely paused until the optimized source code is compiled?",
+    tr: "Optimize edilmiş kaynak kodu derlenene kadar hangi birincil bulut sunucu işlemleri tamamen duraklatılacak?",
+    word: "will", trWord: "olmak", correct: "will",
+    blank: "What primary cloud server processes ___ be completely paused until the optimized source code is compiled?",
+    options: ['will', 'shall', 'would', 'is'],
+    blocks: ['What', 'primary', 'cloud', 'server', 'processes', 'will', 'be', 'completely', 'paused', 'until', 'the', 'optimized', 'source', 'code', 'is', 'compiled?']
+  },
+  {
+    en: "What secure database partitions cannot be accessed until the system administrator grants cryptographic verification permission?",
+    tr: "Sistem yöneticisi kriptografik doğrulama izni verene kadar hangi güvenli veri tabanı bölümlerine erişilemez?",
+    word: "cannot", trWord: "yürütülemez", correct: "cannot",
+    blank: "What secure database partitions ___ be accessed until the system administrator grants cryptographic verification permission?",
+    options: ['cannot', 'was not', 'not', 'should not'],
+    blocks: ['What', 'secure', 'database', 'partitions', 'cannot', 'be', 'accessed', 'until', 'the', 'system', 'administrator', 'grants', 'cryptographic', 'verification', 'permission?']
+  },
+  {
+    en: "What major international commercial investments were suspended until the domestic financial market stabilized?",
+    tr: "Yurtiçi finans piyasası istikrara kavuşana kadar hangi büyük uluslararası ticari yatırımlar askıya alındı?",
+    word: "were", trWord: "olmak", correct: "were",
+    blank: "What major international commercial investments ___ suspended until the domestic financial market stabilized?",
+    options: ['were', 'was', 'did', 'are'],
+    blocks: ['What', 'major', 'international', 'commercial', 'investments', 'were', 'suspended', 'until', 'the', 'domestic', 'financial', 'market', 'stabilized?']
+  },
+  {
+    en: "What specific network traffic data is continuously scanned until the active malware signature matches the firewall rule?",
+    tr: "Aktif kötü amaçlı yazılım imzası güvenlik duvarı kuralıyla eşleşene kadar hangi belirli ağ trafiği verileri sürekli olarak taranır?",
+    word: "is", trWord: "olmak", correct: "is",
+    blank: "What specific network traffic data ___ continuously scanned until the active malware signature matches the firewall rule?",
+    options: ['is', 'was', 'does', 'has'],
+    blocks: ['What', 'specific', 'network', 'traffic', 'data', 'is', 'continuously', 'scanned', 'until', 'the', 'active', 'malware', 'signature', 'matches', 'the', 'firewall', 'rule?']
+  }
+];
+
 function buildUnit24UntilExercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
@@ -6948,7 +7166,11 @@ function buildUnit24UntilExercises(unitId, lessonId) {
   return [
     compileClauseExercise(unit24Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "until ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
     compileClauseExercise(unit24Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "until bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
-    compileSentenceExercise(unit24Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "until bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+    compileSentenceExercise(unit24Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "until bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma"),
+    compileClauseExercise([...unit24Lesson1GroupAPurRaw, ...unit24Lesson1GroupAYalinRaw], "ex4", "Alıştırma 4: Soru Yapıları (Until when...?) — Pür Hal ve Yalın Cümleler", "until when sorusuyla başlayan yapısal soru örnekleri ve çevirileri"),
+    compileSentenceExercise(unit24Lesson1GroupAGenisRaw, "ex5", "Alıştırma 5: Soru Yapıları (Until when...?) — Gelişmiş Akademik Cümleler", "until when sorusuyla başlayan akademik soru cümleleri"),
+    compileClauseExercise([...unit24Lesson1GroupBPurRaw, ...unit24Lesson1GroupBYalinRaw], "ex6", "Alıştırma 6: Soru Yapıları (What... until...?) — Pür Hal ve Yalın Cümleler", "what... until... yapısı ile kurulan temel soru cümleleri ve eşleştirmeleri"),
+    compileSentenceExercise(unit24Lesson1GroupBGenisRaw, "ex7", "Alıştırma 7: Soru Yapıları (What... until...?) — Gelişmiş Akademik Cümleler", "what... until... yapısı ile kurulan akademik düzeyde soru ve çeviri örnekleri")
   ];
 }
 
