@@ -1578,12 +1578,12 @@ function buildExercises(rawList, lessonId) {
     const mcQs = rawSubList.filter(q => q.type !== "multiple-fill-blank");
     const fbQs = rawSubList.filter(q => q.type === "multiple-fill-blank");
     const sorted = [...mcQs, ...fbQs];
-    return sorted.map((q, idx) => processQuestion(q, `u0l${lessonId}_ex${exId}_q${idx + 1}`));
+    return sorted.map((q, idx) => processQuestion(q, `u${lessonId < 98 ? 0 : 101}l${lessonId}_ex${exId}_q${idx + 1}`));
   };
 
   return [
     {
-      id: `u0l${lessonId}ex1`,
+      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex1`,
       title: lessonId === 95 ? "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I" :
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
@@ -1595,7 +1595,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
     {
-      id: `u0l${lessonId}ex2`,
+      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex2`,
       title: lessonId === 95 ? "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II" :
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
@@ -1607,7 +1607,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
     {
-      id: `u0l${lessonId}ex3`,
+      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex3`,
       title: lessonId === 95 ? "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III" :
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
@@ -1619,7 +1619,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
     {
-      id: `u0l${lessonId}ex4`,
+      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex4`,
       title: lessonId === 95 ? "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV" :
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
@@ -1636,11 +1636,14 @@ function buildExercises(rawList, lessonId) {
 const unit0Exercises = {
   1: { exercises: buildExercises(L95_raw, 95) },
   2: { exercises: buildExercises(L96_raw, 96) },
-  3: { exercises: buildExercises(L97_raw, 97) },
-  4: { exercises: buildExercises(L98_raw, 98) },
-  5: { exercises: buildExercises(L99_raw, 99) },
-  6: { exercises: buildExercises(L100_raw, 100) },
-  7: { exercises: buildExercises(L101_raw, 101) }
+  3: { exercises: buildExercises(L97_raw, 97) }
+};
+
+const unit101Exercises = {
+  1: { exercises: buildExercises(L98_raw, 98) },
+  2: { exercises: buildExercises(L99_raw, 99) },
+  3: { exercises: buildExercises(L100_raw, 100) },
+  4: { exercises: buildExercises(L101_raw, 101) }
 };
 
 const dataPath = '../data.js';
@@ -1655,23 +1658,34 @@ if (topicStartIdx !== -1) {
   if (openBraceIdx !== -1 && closeArrayIdx !== -1) {
     const newTopicBlock = `{
     id: 0,
-    title: "DENEME",
-    desc: "Time-Link: Connectors & Tenses",
-    icon: "🧪",
-    numLessons: 7,
+    title: "Zaman Zarfları ve Zaman Uyumu",
+    desc: "Zaman Zarfları ve Zaman Uyumu Pratikleri",
+    icon: "⏳",
+    numLessons: 3,
     formulas: [
       { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
       { formula: "Subject + V2", example: "Yesterday, the central server <span style=\\"color: #ff6b6b; font-weight: bold;\\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
-      { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
+      { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." }
+    ],
+    subtitles: [
+      "Present Continuous (is Ving) - Zaman Zarfları",
+      "Past Simple (v2) - Zaman Zarfları",
+      "Present Perfect (have V3) - Zaman Zarfları"
+    ]
+  },
+  {
+    id: 101,
+    title: "DENEME",
+    desc: "Time-Link: Connectors & Tenses",
+    icon: "🧪",
+    numLessons: 4,
+    formulas: [
       { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect) yapısındadır." },
       { formula: "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)", example: "By the time we <span style=\\"color: #ff6b6b; font-weight: bold;\\">arrived</span>, most people <span style=\\"color: #da77f2; font-weight: bold;\\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.", description: "By the time konnektörü geçmiş bir bağlama uygulandığında yan cümle v2 (Past Simple), ana cümle had v3 (Past Perfect) olur. Geleceğe bağlandığında ise yan cümle v1 (Present Simple / Geniş Zaman) olurken ana cümle will have v3 (Future Perfect) kombinasyonunu alır. Hedeflenen zaman sınırına ulaşıldığında bir eylemin çoktan gerçekleşmiş olduğunu matematiksel olarak garantiler." },
       { formula: "It is (high) time + Subject + V2 (Past Simple)", example: "It is high time the administration <span style=\\"color: #ff6b6b; font-weight: bold;\\">updated</span> the safety laws: Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.", description: "Bu kalıp, yapısal olarak it is time / it is high time + v2 (Past Simple) dizilimini zorunlu kılar. Anlam olarak şu ana (present) yönelik bir gecikmişlik, şikayet veya zorunluluk bildirse de dil bilgisi kuralı gereği eylem geçmiş zamandadır. Öğrencilerin en sık hata yaptığı yapısal tuzaklardan biridir." },
       { formula: "Superlative / Restrictive Adjective + Present Perfect (Have/Has V3)", example: "This is the best academic article I <span style=\\"color: #51cf66; font-weight: bold;\\">have read</span> this year: Bu, bu yıl okuduğum en iyi akademik makaledir.", description: "Bir özneye veya duruma yönelik en uç değerlendirmeyi yapan süperlatif veya kısıtlayıcı sıfat ifadelerinden sonra gelen cümle, hayat boyu edinilen birikimi ve deneyimi sorguladığı için have/has v3 (Present Perfect) yapısıyla kurulur. Akademik dilde eşsizlik ve deneyim kalitesi vurgulanırken kullanılır." }
     ],
     subtitles: [
-      "Present Continuous (is Ving) - Zaman Zarfları",
-      "Past Simple (v2) - Zaman Zarfları",
-      "Present Perfect (have V3) - Zaman Zarfları",
       "\\\"Since\\\" Zaman Uyumu Kalıpları",
       "\\\"By the time\\\" Zaman Uyumu Kalıpları",
       "\\\"It is (high) time\\\" Kalıbı",
@@ -1690,7 +1704,7 @@ if (mapStartIndex !== -1) {
   const key1Index = content.indexOf('\n  1: ', openingBraceIndex);
   
   if (key0Index !== -1 && key1Index !== -1) {
-    const formattedObjStr = `\n  0: ${JSON.stringify(unit0Exercises, null, 2)},\n`;
+    const formattedObjStr = `\n  0: ${JSON.stringify(unit0Exercises, null, 2)},\n  101: ${JSON.stringify(unit101Exercises, null, 2)},\n`;
     content = content.substring(0, key0Index) + formattedObjStr + content.substring(key1Index);
   }
 }
