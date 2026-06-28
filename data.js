@@ -5446,6 +5446,228 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
   ];
 }
 
+
+// ─── BÖLÜM 19 68. DERS RAW SENTENCES (When + Present Simple) ──────────────
+const unit19Lesson3SentencesRaw = [
+  // Pür Hal Örnekleri (Kalıbın Ham Hali)
+  { en: "When he comes", tr: "O geldiğinde", word: "come", trWord: "gelmek", blank: "When he ___", correct: "comes", options: ["comes", "come", "came", "coming"] },
+  { en: "When it starts", tr: "Başladığında", word: "start", trWord: "başlamak", blank: "When it ___", correct: "starts", options: ["starts", "start", "started", "starting"] },
+  { en: "When the bell rings", tr: "Zil çaldığında", word: "ring", trWord: "çalmak", blank: "When the bell ___", correct: "rings", options: ["rings", "ring", "rang", "ringing"] },
+  { en: "When she arrives", tr: "O vardığında", word: "arrive", trWord: "varmak", blank: "When she ___", correct: "arrives", options: ["arrives", "arrive", "arrived", "arriving"] },
+  { en: "When the train leaves", tr: "Tren hareket ettiğinde", word: "leave", trWord: "ayrılmak", blank: "When the train ___", correct: "leaves", options: ["leaves", "leave", "left", "leaving"] },
+  { en: "When the shop opens", tr: "Dükkan açıldığında", word: "open", trWord: "açılmak", blank: "When the shop ___", correct: "opens", options: ["opens", "open", "opened", "opening"] },
+  { en: "When the water boils", tr: "Su kaynadığında", word: "boil", trWord: "kaynamak", blank: "When the water ___", correct: "boils", options: ["boils", "boil", "boiled", "boiling"] },
+  { en: "When it rains", tr: "Yağmur yağdığında", word: "rain", trWord: "yağmak", blank: "When it ___", correct: "rains", options: ["rains", "rain", "rained", "raining"] },
+  { en: "When the game ends", tr: "Oyun bittiğinde", word: "end", trWord: "bitmek", blank: "When the game ___", correct: "ends", options: ["ends", "end", "ended", "ending"] },
+  { en: "When the sun rises", tr: "Güneş doğduğunda", word: "rise", trWord: "doğmak", blank: "When the sun ___", correct: "rises", options: ["rises", "rise", "rose", "rising"] },
+
+  // Yalın Örnekler
+  { en: "When he comes, we will start the meeting.", tr: "O geldiğinde toplantıya başlayacağız.", word: "start", trWord: "başlamak", blank: "When he comes, we ___ start the meeting.", correct: "will", options: ["will", "would", "are", "have"], blocks: ["When", "he", "comes,", "we", "will", "start", "the", "meeting."] },
+  { en: "When it starts, please turn off your mobile phones.", tr: "Başladığında lütfen cep telefonlarınızı kapatın.", word: "turn", trWord: "kapatmak", blank: "When it starts, please ___ off your mobile phones.", correct: "turn", options: ["turn", "turning", "turned", "to turn"], blocks: ["When", "it", "starts,", "please", "turn", "off", "your", "mobile", "phones."] },
+  { en: "When the bell rings, the students leave the classroom.", tr: "Zil çaldığında öğrenciler sınıftan çıkar.", word: "leave", trWord: "ayrılmak", blank: "When the bell rings, the students ___ the classroom.", correct: "leave", options: ["leave", "leaves", "left", "leaving"], blocks: ["When", "the", "bell", "rings,", "the", "students", "leave", "the", "classroom."] },
+  { en: "When she arrives, she will call you immediately.", tr: "O vardığında seni hemen arayacak.", word: "call", trWord: "aramak", blank: "When she arrives, she ___ call you immediately.", correct: "will", options: ["will", "would", "does", "did"], blocks: ["When", "she", "arrives,", "she", "will", "call", "you", "immediately."] },
+  { en: "When the train leaves, I will send you a text message.", tr: "Tren hareket ettiğinde sana bir kısa mesaj göndereceğim.", word: "send", trWord: "gönderilmek", blank: "When the train leaves, I will ___ you a text message.", correct: "send", options: ["send", "sends", "sent", "sending"], blocks: ["When", "the", "train", "leaves,", "I", "will", "send", "you", "a", "text", "message."] },
+  { en: "When the shop opens, we can buy some fresh bread.", tr: "Dükkan açıldığında taze ekmek alabiliriz.", word: "buy", trWord: "satın almak", blank: "When the shop opens, we ___ buy some fresh bread.", correct: "can", options: ["can", "could", "are", "have"], blocks: ["When", "the", "shop", "opens,", "we", "can", "buy", "some", "fresh", "bread."] },
+  { en: "When the water boils, add the pasta into the pot.", tr: "Su kaynadığında makarnayı tencereye ekleyin.", word: "add", trWord: "eklemek", blank: "When the water boils, ___ the pasta into the pot.", correct: "add", options: ["add", "adding", "added", "to add"], blocks: ["When", "the", "water", "boils,", "add", "the", "pasta", "into", "the", "pot."] },
+  { en: "When it rains, the streets get wet very quickly.", tr: "Yağmur yağdığında sokaklar çok hızlı ıslanır.", word: "get", trWord: "olmak", blank: "When it rains, the streets ___ wet very quickly.", correct: "get", options: ["get", "gets", "got", "getting"], blocks: ["When", "it", "rains,", "the", "streets", "get", "wet", "very", "quickly."] },
+  { en: "When the game ends, the players shake hands.", tr: "Oyun bittiğinde oyuncular el sıkışır.", word: "shake", trWord: "sıkışmak", blank: "When the game ends, the players ___ hands.", correct: "shake", options: ["shake", "shakes", "shook", "shaking"], blocks: ["When", "the", "game", "ends,", "the", "players", "shake", "hands."] },
+  { en: "When the sun rises, birds begin to sing.", tr: "Güneş doğduğunda kuşlar ötmeye başlar.", word: "begin", trWord: "başlamak", blank: "When the sun rises, birds ___ to sing.", correct: "begin", options: ["begin", "begins", "began", "beginning"], blocks: ["When", "the", "sun", "rises,", "birds", "begin", "to", "sing."] },
+
+  // Genişletilmiş Örnekler
+  { en: "When the economic market stabilizes, major investors will allocate more capital to emerging tech startups.", tr: "Ekonomik piyasa istikrar kazandığında, büyük yatırımcılar yeni gelişen teknoloji girişimlerine daha fazla sermaye tahsis edecektir.", word: "allocate", trWord: "tahsis etmek", blocks: ["When", "the", "economic", "market", "stabilizes,", "major", "investors", "will", "allocate", "more", "capital", "to", "emerging", "tech", "startups."] },
+  { en: "When the application core initialization starts, the backend server validates all incoming API configuration tokens.", tr: "Uygulama çekirdeği başlatılması başladığında, arka uç sunucusu gelen tüm API yapılandırma belirteçlerini doğrular.", word: "validate", trWord: "doğrulamak", blocks: ["When", "the", "application", "core", "initialization", "starts,", "the", "backend", "server", "validates", "all", "incoming", "API", "configuration", "tokens."] },
+  { en: "When the system administrator updates the database rules, users must re-authenticate their login credentials.", tr: "Sistem yöneticisi veritabanı kurallarını güncellediğinde, kullanıcılar giriş kimlik bilgilerini yeniden doğrulamalıdır.", word: "re-authenticate", trWord: "doğrulamak", blocks: ["When", "the", "system", "administrator", "updates", "the", "database", "rules,", "users", "must", "re-authenticate", "their", "login", "credentials."] },
+  { en: "When global temperatures rise by even half a degree, polar ice sheets undergo rapid and irreversible acceleration in melting.", tr: "Küresel sıcaklıklar yarım derece bile yükseldiğinde, kutup buzulları erimede hızlı ve geri döndürülemez bir hızlanma yaşar.", word: "undergo", trWord: "geçirmek", blocks: ["When", "global", "temperatures", "rise", "by", "even", "half", "a", "degree,", "polar", "ice", "sheets", "undergo", "rapid", "and", "irreversible", "acceleration", "in", "melting."] },
+  { en: "When the user requests a password reset, our security algorithm automatically generates a one-time cryptographic code.", tr: "Kullanıcı şifre sıfırlama talebinde bulunduğunda, güvenlik algoritmamız otomatik olarak tek kullanımlık bir şifreleme kodu üretir.", word: "generate", trWord: "üretmek", blocks: ["When", "the", "user", "requests", "a", "password", "reset,", "our", "security", "algorithm", "automatically", "generates", "a", "one-time", "cryptographic", "code."] },
+  { en: "When the political committee announces the final voting figures, journalists will broadcast the results worldwide.", tr: "Siyasi komite nihai oylama rakamlarını açıkladığında, gazeteciler sonuçları dünya çapında yayınlayacaktır.", word: "broadcast", trWord: "yayınlamak", blocks: ["When", "the", "political", "committee", "announces", "the", "final", "voting", "figures,", "journalists", "will", "broadcast", "the", "results", "worldwide."] }
+];
+
+function buildUnit19Lesson68Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // Greedy interleaving algorithm
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id) => {
+    const tr = s.tr;
+    let d1 = tr.replace(/geldiğinde/g, "gelmeden önce").replace(/başladığında/g, "başlamadan önce").replace(/çaldığında/g, "çalmadan önce");
+    if (d1 === tr) d1 = tr + " (önce)";
+    let d2 = tr.replace(/başlayacağız/g, "başladık").replace(/kapatın/g, "kapatmıştık").replace(/çıkar/g, "çıkıyordu");
+    if (d2 === tr) d2 = tr + " (yanlış zaman)";
+    let d3 = tr.replace(/toplantıya/g, "sunuma").replace(/öğrenciler/g, "öğretmenler").replace(/oyuncular/g, "hakemler");
+    if (d3 === tr) d3 = "Farklı sürüm: " + tr;
+    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
+    while (distractors.length < 3) {
+      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+    }
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  // Organize by lengths
+  const rawPur = unit19Lesson3SentencesRaw.slice(0, 10).sort((a, b) => a.en.length - b.en.length);
+  const rawYalin = unit19Lesson3SentencesRaw.slice(10, 20).sort((a, b) => a.en.length - b.en.length);
+  const rawGenis = unit19Lesson3SentencesRaw.slice(20, 26).sort((a, b) => a.en.length - b.en.length);
+
+  // ==========================================
+  // EXERCISE 1: Level 1 - Pür Hal & Yalın Cümleler (12 questions)
+  // ==========================================
+  const ex1List = [];
+  
+  // matching vocab 1 (Pür Hal 1-5)
+  const v1 = rawPur.slice(0, 5).map(s => ({ left: s.tr, right: s.en }));
+  ex1List.push({
+    id: `u${unitId}l${lessonId}_ex1_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: v1
+  });
+
+  // matching vocab 2 (Pür Hal 6-10)
+  const v2 = rawPur.slice(5, 10).map(s => ({ left: s.tr, right: s.en }));
+  ex1List.push({
+    id: `u${unitId}l${lessonId}_ex1_match2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: v2
+  });
+
+  // Cloze questions (Yalın 1-5)
+  rawYalin.slice(0, 5).forEach((s, idx) => {
+    ex1List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex1_cloze_${idx}`, idx % 2 === 0));
+  });
+
+  // Multiple Choice questions (Yalın 1-3)
+  rawYalin.slice(0, 3).forEach((s, idx) => {
+    ex1List.push(buildMCQuestion(s, `u${unitId}l${lessonId}_ex1_mc_${idx}`));
+  });
+
+  // Keyboard Translation questions (Yalın 4-5) - to be placed at the end
+  const ex1Trans = rawYalin.slice(3, 5).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex1_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 2: Level 2 - İleri Düzey Akademik Cümleler (14 questions)
+  // ==========================================
+  const ex2List = [];
+
+  // Cloze questions (Yalın 6-10)
+  rawYalin.slice(5, 10).forEach((s, idx) => {
+    ex2List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex2_cloze_${idx}`, idx % 2 === 0));
+  });
+
+  // Multiple Choice questions (Yalın 6-8)
+  rawYalin.slice(5, 8).forEach((s, idx) => {
+    ex2List.push(buildMCQuestion(s, `u${unitId}l${lessonId}_ex2_mc_${idx}`));
+  });
+
+  // Word Bank questions (Genişletilmiş 1-4)
+  rawGenis.slice(0, 4).forEach((s, idx) => {
+    ex2List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex2_wb_${idx}`));
+  });
+
+  // Keyboard Translation questions (Genişletilmiş 5-6) - to be placed at the end
+  const ex2Trans = rawGenis.slice(4, 6).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex2_tr_${idx}`));
+
+  return [
+    {
+      id: `u${unitId}l${lessonId}ex1`,
+      title: "Alıştırma 1: Kelime Isınma & Cümle Yapıları (Present Simple)",
+      description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir.",
+      questions: [...interleaveQuestions(ex1List), ...ex1Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex2`,
+      title: "Alıştırma 2: Akademik ve Karmaşık Cümle Yapıları (When + Present)",
+      description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir.",
+      questions: [...interleaveQuestions(ex2List), ...ex2Trans]
+    }
+  ];
+}
+
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -10845,7 +11067,11 @@ const rawTopics = [
     formulas: [
       { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" },
       { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" },
-      { formula: "When + Clause", example: "When the pressure increases, the temperature rises: Basınç arttığında sıcaklık yükselir" },
+      { 
+        formula: "When + Clause", 
+        example: "When the pressure increases, the temperature rises: Basınç arttığında sıcaklık yükselir",
+        description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nKural Açıklaması:\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir."
+      },
       { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" },
       { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" },
       { formula: "Until + Clause", example: "Until the mixture cools down, do not touch the container: Karışım soğuyana kadar kaba dokunmayın" }
@@ -12866,7 +13092,7 @@ const unitSentencesMap = {
   22: {
     1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
     2: { exercises: buildAra3ExercisesForLesson67(22, 67) },
-    3: { exercises: [] },
+    3: { exercises: buildUnit19Lesson68Exercises(22, 68) },
     4: { exercises: [] },
     5: { exercises: [] },
     6: { exercises: [] }
