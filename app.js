@@ -115,31 +115,337 @@ function buildDynamicDictionary() {
   });
 }
 
+// Fallback dictionary for common English words that might be missing from lesson-specific data
+const fallbackDictionary = {
+  "trend": "eğilim, gidişat, akım",
+  "card": "kart",
+  "one": "bir",
+  "none": "hiçbiri, yok",
+  "proof": "kanıt, ispat",
+  "improve": "geliştirmek, iyileştirmek",
+  "allowed": "izin verilmiş, serbest",
+  "achieved": "başarılmış, elde edilmiş",
+  "aims": "amaçlar, hedefler",
+  "existence": "varoluş, varlık",
+  "form": "form, şekil, biçim, oluşturmak",
+  "life": "hayat, yaşam",
+  "injection": "enjeksiyon, iğne yapma",
+  "region": "bölge",
+  "arm": "kol, silahlandırmak",
+  "skin": "cilt, deri",
+  "testtube": "deney tüpü",
+  "near": "yakın, yanında",
+  "testtubes": "deney tüpleri",
+  "questions": "sorular",
+  "translation": "çeviri, tercüme",
+  "nutrients": "besinler, gıdalar",
+  "favour": "iyilik, lütuf, desteklemek",
+  "object": "nesne, itiraz etmek",
+  "comprehension": "anlama, kavrama",
+  "lung": "akciğer",
+  "date": "tarih, randevu",
+  "box": "kutu, boks yapmak",
+  "refusal": "reddetme, ret",
+  "names": "isimler, adlar",
+  "hospital": "hastane",
+  "records": "kayıtlar, rekorlar",
+  "files": "dosyalar",
+  "address": "adres, hitap etmek",
+  "london": "Londra",
+  "addresses": "adresler",
+  "below": "aşağıda, altında",
+  "speaking": "konuşma, konuşuyor",
+  "nobody": "hiç kimse",
+  "never": "asla, hiçbir zaman",
+  "less": "daha az",
+  "dense": "yoğun, sık",
+  "approve": "onaylamak, beğenmek",
+  "xrays": "röntgen ışınları",
+  "make": "yapmak, etmek",
+  "sodium": "sodyum",
+  "chloride": "klorür",
+  "rises": "yükselir, artar",
+  "mentioned": "bahsedilen, adı geçen",
+  "remember": "hatırlamak",
+  "robert": "Robert (isim)",
+  "brown": "kahverengi, Brown (isim)",
+  "file": "dosya",
+  "map": "harita",
+  "shows": "gösterir, şovlar",
+  "overcame": "üstesinden geldi",
+  "recommend": "tavsiye etmek, önermek",
+  "increase": "artırmak, artış",
+  "decrease": "azaltmak, azalış",
+  "possibility": "olasılık, ihtimal",
+  "tendency": "eğilim, meyil",
+  "hope": "umut, umut etmek",
+  "improvement": "gelişme, iyileşme",
+  "vibration": "titreşim",
+  "type": "tip, tür, yazmak",
+  "suggestion": "öneri, teklif",
+  "similarity": "benzerlik",
+  "wet": "ıslak, nemli",
+  "wrong": "yanlış, hatalı",
+  "expenses": "giderler, masraflar",
+  "pure": "saf, temiz",
+  "impure": "saf olmayan, kirli",
+  "favourable": "uygun, olumlu, elverişli",
+  "slow": "yavaş",
+  "turkish": "Türkçe, Türk",
+  "french": "Fransızca, Fransız",
+  "dictionary": "sözlük",
+  "woman": "kadın",
+  "confession": "itiraf",
+  "lesson": "ders",
+  "success": "başarı",
+  "gold": "altın",
+  "precious": "değerli, kıymetli",
+  "nonmetallic": "metalik olmayan",
+  "train": "tren, eğitmek",
+  "shop": "dükkan, mağaza, alışveriş yapmak",
+  "side": "yan, taraf",
+  "outside": "dışarı, dışarısı",
+  "lime": "kireç, misket limonu",
+  "extensive": "kapsamlı, geniş",
+  "rigid": "sert, katı, esnemez",
+  "and": "ve",
+  "or": "veya, yahut",
+  "but": "ama, fakat",
+  "because": "çünkü, zira",
+  "so": "böylece, bu yüzden, çok",
+  "very": "çok",
+  "highly": "yüksek derecede, son derece",
+  "too": "de/da, aşırı",
+  "also": "ayrıca, hem de",
+  "either": "ya, ikisinden biri",
+  "neither": "ne de, ikisi de değil",
+  "both": "her ikisi",
+  "only": "sadece, yalnızca",
+  "even": "bile, hatta, çift",
+  "just": "sadece, henüz, adil",
+  "then": "o zaman, sonra",
+  "than": "göre, -den (karşılaştırma)",
+  "first": "birinci, ilk",
+  "second": "ikinci, saniye",
+  "third": "üçüncü",
+  "last": "son, sürmek",
+  "next": "sonraki, gelecek",
+  "here": "burada, burası",
+  "there": "orada, orası",
+  "where": "nerede, nereye",
+  "when": "ne zaman, -dığı zaman",
+  "why": "neden, niçin",
+  "how": "nasıl",
+  "what": "ne",
+  "who": "kim",
+  "which": "hangi, ki o",
+  "whose": "kimin",
+  "whom": "kime, kimi",
+  "some": "bazı, biraz",
+  "any": "hiç, herhangi bir",
+  "many": "birçok, çok",
+  "much": "çok",
+  "few": "az, birkaç",
+  "little": "küçük, az",
+  "all": "tüm, bütün, hepsi",
+  "every": "her",
+  "each": "her biri",
+  "other": "diğer, başka",
+  "another": "başka bir, diğer bir",
+  "no": "hayır, yok, hiçbir",
+  "not": "değil, olumsuzluk eki",
+  "always": "her zaman, daima",
+  "usually": "genellikle",
+  "often": "sık sık",
+  "sometimes": "bazen",
+  "rarely": "nadiren, seyrek",
+  "seldom": "nadiren",
+  "hardly": "neredeyse hiç, güç bela",
+  "scarcely": "neredeyse hiç",
+  "barely": "ucu ucuna, zar zor",
+  "almost": "neredeyse, hemen hemen",
+  "already": "zaten, çoktan",
+  "yet": "henüz, hala, ama",
+  "still": "hala, hareketsiz",
+  "since": "beri, -den beri, çünkü",
+  "ago": "önce",
+  "before": "önce, önünde",
+  "after": "sonra",
+  "during": "esnasında, boyunca",
+  "until": "kadar, -e kadar",
+  "till": "kadar, -e kadar",
+  "while": "iken, esnasında, süre",
+  "through": "vasıtasıyla, içinden",
+  "throughout": "boyunca, genelinde",
+  "between": "arasında (iki şey)",
+  "among": "arasında (çok şey)",
+  "under": "altında",
+  "over": "üzerinde, aşırı, bitti",
+  "above": "üzerinde, yukarıda",
+  "below": "altında, aşağıda",
+  "behind": "arkasında",
+  "in front of": "önünde",
+  "next to": "yanında",
+  "beside": "yanında",
+  "by": "tarafından, yanında, ile",
+  "with": "ile, birlikte",
+  "without": "olmadan, -siz/-sız",
+  "within": "içinde, dahilinde",
+  "about": "hakkında, yaklaşık",
+  "against": "karşı, aleyhinde",
+  "upon": "üzerine, üzerinde",
+  "into": "içine",
+  "onto": "üstüne",
+  "off": "kapalı, dışarıda, -den uzak",
+  "out": "dışarı, dışarıda",
+  "up": "yukarı",
+  "down": "aşağı",
+  "far": "uzak",
+  "near": "yakın",
+  "away": "uzak, uzakta",
+  "toward": "doğru, yönünde",
+  "towards": "doğru, yönünde"
+};
+
 // Get the meaning of a word with various fallback logic
 function getWordMeaning(word) {
   const clean = word.toLowerCase().trim();
+  
+  // Check main dictionary
   if (wordDictionary[clean]) return wordDictionary[clean];
   
-  // Plural -> Singular check
+  // Check fallback dictionary
+  if (fallbackDictionary[clean]) return fallbackDictionary[clean];
+  
+  // 1. Common Irregular Verbs
+  const irregulars = {
+    "taken": "take", "took": "take", "chosen": "choose", "chose": "choose",
+    "spent": "spend", "got": "get", "done": "do", "did": "do",
+    "made": "make", "written": "write", "wrote": "write", "read": "read",
+    "built": "build", "shown": "show", "held": "hold", "drawn": "draw",
+    "drew": "draw", "begun": "begin", "began": "begin", "felt": "feel",
+    "met": "meet", "lost": "lose", "slept": "sleep", "run": "run", "ran": "run",
+    "is": "be", "was": "be", "were": "be", "been": "be", "are": "be", "am": "be"
+  };
+  if (irregulars[clean]) {
+    const base = irregulars[clean];
+    if (wordDictionary[base]) return wordDictionary[base];
+    if (fallbackDictionary[base]) return fallbackDictionary[base];
+  }
+  
+  // 2. Plurals / Third Person -s
   if (clean.endsWith('s')) {
-    const singular = clean.slice(0, -1);
-    if (wordDictionary[singular]) return wordDictionary[singular];
+    if (clean.endsWith('ies')) {
+      const base = clean.slice(0, -3) + 'y';
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+    }
+    if (clean.endsWith('es')) {
+      const base = clean.slice(0, -2);
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+    }
+    const base = clean.slice(0, -1);
+    if (wordDictionary[base]) return wordDictionary[base];
+    if (fallbackDictionary[base]) return fallbackDictionary[base];
   }
   
-  // Verb past tense suffix check
+  // 3. Past Tense -ed
   if (clean.endsWith('ed')) {
-    const base1 = clean.slice(0, -2);
-    if (wordDictionary[base1]) return wordDictionary[base1];
-    const base2 = clean.slice(0, -1);
-    if (wordDictionary[base2]) return wordDictionary[base2];
+    if (clean.endsWith('ied')) {
+      const base = clean.slice(0, -3) + 'y';
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+    }
+    const baseEd = clean.slice(0, -2);
+    if (wordDictionary[baseEd]) return wordDictionary[baseEd];
+    if (fallbackDictionary[baseEd]) return fallbackDictionary[baseEd];
+    
+    const baseD = clean.slice(0, -1);
+    if (wordDictionary[baseD]) return wordDictionary[baseD];
+    if (fallbackDictionary[baseD]) return fallbackDictionary[baseD];
+    
+    if (clean.match(/[bcdfghjklmnpqrstvwxyz]\1ed$/)) {
+      const baseDouble = clean.slice(0, -3);
+      if (wordDictionary[baseDouble]) return wordDictionary[baseDouble];
+      if (fallbackDictionary[baseDouble]) return fallbackDictionary[baseDouble];
+    }
   }
   
-  // Gerund suffix check
+  // 4. Gerund / Progressive -ing
   if (clean.endsWith('ing')) {
-    const base1 = clean.slice(0, -3);
+    if (clean.endsWith('ying')) {
+      const base = clean.slice(0, -4) + 'y';
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+    }
+    const baseIng = clean.slice(0, -3);
+    if (wordDictionary[baseIng]) return wordDictionary[baseIng];
+    if (fallbackDictionary[baseIng]) return fallbackDictionary[baseIng];
+    
+    const baseE = baseIng + 'e';
+    if (wordDictionary[baseE]) return wordDictionary[baseE];
+    if (fallbackDictionary[baseE]) return fallbackDictionary[baseE];
+    
+    if (clean.match(/[bcdfghjklmnpqrstvwxyz]\1ing$/)) {
+      const baseDouble = clean.slice(0, -4);
+      if (wordDictionary[baseDouble]) return wordDictionary[baseDouble];
+      if (fallbackDictionary[baseDouble]) return fallbackDictionary[baseDouble];
+    }
+  }
+  
+  // 5. Adverbs -ly
+  if (clean.endsWith('ly')) {
+    if (clean.endsWith('ily')) {
+      const base = clean.slice(0, -3) + 'y';
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+    }
+    const baseLy = clean.slice(0, -2);
+    if (wordDictionary[baseLy]) return wordDictionary[baseLy];
+    if (fallbackDictionary[baseLy]) return fallbackDictionary[baseLy];
+  }
+  
+  // 6. Comparative / Superlative -er/-est
+  if (clean.endsWith('er')) {
+    const base = clean.slice(0, -2);
+    if (wordDictionary[base]) return wordDictionary[base];
+    if (fallbackDictionary[base]) return fallbackDictionary[base];
+    if (clean.match(/[bcdfghjklmnpqrstvwxyz]\1er$/)) {
+      const baseDouble = clean.slice(0, -3);
+      if (wordDictionary[baseDouble]) return wordDictionary[baseDouble];
+      if (fallbackDictionary[baseDouble]) return fallbackDictionary[baseDouble];
+    }
+  }
+  if (clean.endsWith('est')) {
+    const base = clean.slice(0, -3);
+    if (wordDictionary[base]) return wordDictionary[base];
+    if (fallbackDictionary[base]) return fallbackDictionary[base];
+    if (clean.match(/[bcdfghjklmnpqrstvwxyz]\1est$/)) {
+      const baseDouble = clean.slice(0, -4);
+      if (wordDictionary[baseDouble]) return wordDictionary[baseDouble];
+      if (fallbackDictionary[baseDouble]) return fallbackDictionary[baseDouble];
+    }
+  }
+  
+  // 7. Suffixes (-ment, -tion, -sion)
+  if (clean.endsWith('ment')) {
+    const base = clean.slice(0, -4);
+    if (wordDictionary[base]) return wordDictionary[base];
+    if (fallbackDictionary[base]) return fallbackDictionary[base];
+  }
+  if (clean.endsWith('tion')) {
+    const base1 = clean.slice(0, -4) + 'e';
     if (wordDictionary[base1]) return wordDictionary[base1];
-    const base2 = base1 + 'e';
+    if (fallbackDictionary[base1]) return fallbackDictionary[base1];
+    const base2 = clean.slice(0, -4) + 't';
     if (wordDictionary[base2]) return wordDictionary[base2];
+    if (fallbackDictionary[base2]) return fallbackDictionary[base2];
+  }
+  if (clean.endsWith('sion')) {
+    const base1 = clean.slice(0, -4) + 'de';
+    if (wordDictionary[base1]) return wordDictionary[base1];
+    if (fallbackDictionary[base1]) return fallbackDictionary[base1];
   }
   
   return null;
@@ -158,12 +464,22 @@ function makeTextHoverable(text) {
     const nonWord = match[2];
     
     if (word) {
-      const meaning = getWordMeaning(word);
-      if (meaning) {
-        html += `<span class="hoverable-word" data-meaning="${meaning}">${word}</span>`;
-      } else {
-        html += `<span class="hoverable-word no-meaning">${word}</span>`;
+      let meaning = getWordMeaning(word);
+      if (!meaning) {
+        // Try hyphen/compound splitting
+        if (word.includes('-')) {
+          const parts = word.split('-');
+          const meanings = parts.map(p => getWordMeaning(p)).filter(Boolean);
+          if (meanings.length > 0) meaning = meanings.join(' - ');
+        }
       }
+      if (!meaning) {
+        // Ultimate fallback: capitalize the word itself (perfect for proper names like Robert, London)
+        meaning = word.charAt(0).toUpperCase() + word.slice(1);
+      }
+      // Escape double quotes inside attribute
+      const escapedMeaning = meaning.replace(/"/g, '&quot;');
+      html += `<span class="hoverable-word" data-meaning="${escapedMeaning}">${word}</span>`;
     } else if (nonWord) {
       html += nonWord;
     }
@@ -1183,7 +1499,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([22, 23, 24, 25, 26, 27, 28]);
+    const notUploadedUnits = new Set([21, 23, 24, 25, 26, 27, 28]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -1445,7 +1761,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([22, 23, 24, 25, 26, 27, 28]);
+  const notUploadedUnitsPopover = new Set([21, 23, 24, 25, 26, 27, 28]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
@@ -1462,14 +1778,18 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       
       const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
       const rowClass = isExUnlocked ? '' : 'locked';
+      const badgeClass = isExCompleted ? 'completed' : '';
       
       return `
         <div class="popover-exercise-row ${rowClass}" data-exercise-id="${ex.id}">
           <div class="exercise-info">
             <span class="exercise-icon">${isExCompleted ? '✅' : '📝'}</span>
             <div class="exercise-meta">
-              <span class="exercise-title">${ex.title}</span>
-              <span class="exercise-subtitle">${ex.description || '20 Soru'}</span>
+              <div class="exercise-title-wrap">
+                <span class="exercise-title">${ex.title}</span>
+                <span class="exercise-q-badge ${badgeClass}">${ex.questions ? ex.questions.length : 0} Soru</span>
+              </div>
+              <span class="exercise-subtitle">${ex.description || ''}</span>
             </div>
           </div>
           <div class="qp-btn-group">
@@ -1664,6 +1984,56 @@ function startLesson(lessonId, exerciseId = null) {
   renderQuestion();
 }
 
+function getUnitDisplayTitle(unitId) {
+  let normalUnitIndex = 0;
+  for (let i = 0; i < units.length; i++) {
+    const u = units[i];
+    if (u.title.startsWith("Ara Bölüm")) {
+      if (u.id === unitId) return u.title;
+    } else {
+      normalUnitIndex++;
+      if (u.id === unitId) return `Bölüm ${normalUnitIndex}`;
+    }
+  }
+  return '';
+}
+
+function updateQuizMetadata() {
+  const metadataEl = document.getElementById('quiz-metadata');
+  if (!metadataEl) return;
+
+  if (isReviewMode) {
+    const total = reviewQuestions.length;
+    metadataEl.textContent = `Hızlı Tekrar • Soru ${currentQuestionIndex + 1}/${total}`;
+    return;
+  }
+
+  if (typeof isPlacementMode !== 'undefined' && isPlacementMode) {
+    const total = typeof placementQuestions !== 'undefined' && placementQuestions ? placementQuestions.length : 0;
+    metadataEl.textContent = `Seviye Sınavı • Soru ${currentQuestionIndex + 1}/${total}`;
+    return;
+  }
+
+  if (!currentLesson) {
+    metadataEl.textContent = '';
+    return;
+  }
+
+  const unitTitle = getUnitDisplayTitle(currentLesson.unitId);
+  const lessonLabel = `${currentLesson.title} (${currentLesson.subtitle})`;
+  
+  let exLabel = '';
+  if (currentLesson.activeExerciseTitle) {
+    const exMatch = /(Alıştırma \d+)/i.exec(currentLesson.activeExerciseTitle);
+    exLabel = exMatch ? exMatch[1] : currentLesson.activeExerciseTitle;
+  }
+
+  const total = currentQuizQuestions.length;
+  const qNum = `${currentQuestionIndex + 1}/${total}`;
+
+  metadataEl.textContent = `${unitTitle} • ${lessonLabel}${exLabel ? ` • ${exLabel}` : ''} • Soru ${qNum}`;
+}
+
 function updateQuizUI() {
   // İlerleme çubuğu
   const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
@@ -1672,6 +2042,9 @@ function updateQuizUI() {
 
   // Can
   document.getElementById('quiz-hearts-count').textContent = state.hearts;
+
+  // Metadata güncelleme
+  updateQuizMetadata();
 }
 
 function renderQuestion() {
@@ -1709,6 +2082,9 @@ function renderQuestion() {
       break;
     case 'fill-blank-dropdown':
       renderFillBlankDropdown(body, question);
+      break;
+    case 'fill-blank':
+      renderFillBlank(body, question);
       break;
     case 'fill-blank-text':
       renderFillBlankText(body, question);
@@ -1977,6 +2353,51 @@ function renderFillBlankText(container, question) {
   });
 }
 
+// ── Boşluk Doldurma - Butonlu Seçenekler (fill-blank) ──────────
+function renderFillBlank(container, question) {
+  const parts = question.sentence.split('___');
+  const part0Html = makeTextHoverable(parts[0]);
+  const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="fb-option" data-index="${i}">
+      <span class="fb-number">${i + 1}</span>
+      <span class="fb-text">${opt}</span>
+    </button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
+      ${part0Html}<span class="fb-blank" id="fb-blank-word">______</span>${part1Html}
+    </div>
+    <div class="fb-options">
+      ${optionsHtml}
+    </div>
+  `;
+
+  const blankEl = document.getElementById('fb-blank-word');
+  
+  container.querySelectorAll('.fb-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      container.querySelectorAll('.fb-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      
+      const idx = parseInt(btn.dataset.index);
+      selectedAnswer = idx;
+      
+      blankEl.textContent = question.options[idx];
+      
+      document.getElementById('btn-check').disabled = false;
+
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
+    });
+  });
+}
+
 // ── Tam Metin Çeviri Testi (Klavyeli Girdi) ──────────────────
 function renderTranslationText(container, question) {
   const placeholderText = question.isEngToTr ? "Türkçe çeviriyi buraya yazın..." : "İngilizce çeviriyi buraya yazın...";
@@ -2066,6 +2487,10 @@ function checkAnswer() {
         selectEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
         selectEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
       }
+      break;
+    case 'fill-blank':
+      isCorrect = selectedAnswer === question.correctIndex;
+      showFBFeedback(question);
       break;
     case 'fill-blank-text':
       {
@@ -2158,7 +2583,7 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown') {
+    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'fill-blank-text') {
       correctAnswerText = question.correct;
@@ -2220,12 +2645,15 @@ function showFBFeedback(question) {
   options.forEach(btn => {
     const idx = parseInt(btn.dataset.index);
     if (idx === question.correctIndex) {
-      btn.classList.add('selected');
+      btn.classList.add('correct');
       btn.style.borderColor = 'var(--color-correct)';
       btn.style.background = 'var(--color-correct-bg)';
-    } else if (idx === selectedAnswer) {
+      btn.style.color = 'var(--color-correct)';
+    } else if (idx === selectedAnswer && idx !== question.correctIndex) {
+      btn.classList.add('wrong');
       btn.style.borderColor = 'var(--color-wrong)';
       btn.style.background = 'var(--color-wrong-bg)';
+      btn.style.color = 'var(--color-wrong)';
     }
   });
 }
@@ -3209,8 +3637,21 @@ function initEventListeners() {
     document.getElementById('user-dropdown').classList.toggle('open');
   });
 
-  document.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
     document.getElementById('user-dropdown').classList.remove('open');
+    
+    // Toggle active state for hoverable words on tap/click
+    const hoverable = e.target.closest('.hoverable-word');
+    if (hoverable) {
+      const wasActive = hoverable.classList.contains('active');
+      document.querySelectorAll('.hoverable-word.active').forEach(w => w.classList.remove('active'));
+      if (!wasActive) {
+        hoverable.classList.add('active');
+      }
+      e.stopPropagation();
+    } else {
+      document.querySelectorAll('.hoverable-word.active').forEach(w => w.classList.remove('active'));
+    }
   });
 
   // Çıkış
@@ -3543,6 +3984,9 @@ function renderPlacementQuestion() {
     case 'fill-blank-dropdown':
       renderPlacementFillBlankDropdown(body, question);
       break;
+    case 'fill-blank':
+      renderPlacementFillBlank(body, question);
+      break;
     case 'fill-blank-text':
       renderPlacementFillBlankText(body, question);
       break;
@@ -3609,13 +4053,70 @@ function renderPlacementFillBlankText(container, question) {
   });
 }
 
+function renderPlacementFillBlank(container, question) {
+  const parts = question.prompt.split('___');
+  const part0Html = parts[0];
+  const part1Html = parts[1] || '';
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="fb-option" data-index="${i}">
+      <span class="fb-number">${i + 1}</span>
+      <span class="fb-text">${opt}</span>
+    </button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">Boşluğu doldur</p>
+    <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
+      ${part0Html}<span class="fb-blank" id="fb-placement-blank-word">______</span>${part1Html}
+    </div>
+    <div class="fb-options">
+      ${optionsHtml}
+    </div>
+  `;
+
+  const blankEl = document.getElementById('fb-placement-blank-word');
+  
+  container.querySelectorAll('.fb-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isPlacementAnswerChecked) return;
+      container.querySelectorAll('.fb-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      
+      const idx = parseInt(btn.dataset.index);
+      placementSelectedAnswer = idx;
+      
+      blankEl.textContent = question.options[idx];
+      
+      document.getElementById('btn-placement-check').disabled = false;
+    });
+  });
+}
+
 function checkPlacementAnswer() {
   const question = placementQuestionsList[placementCurrentIndex];
   isPlacementAnswerChecked = true;
 
   let isCorrect = false;
-  if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown') {
+  if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
     isCorrect = placementSelectedAnswer === question.correctIndex;
+    if (question.type === 'fill-blank') {
+      const options = body.querySelectorAll('.fb-option');
+      options.forEach(btn => {
+        const idx = parseInt(btn.dataset.index);
+        if (idx === question.correctIndex) {
+          btn.classList.add('correct');
+          btn.style.borderColor = 'var(--color-correct)';
+          btn.style.background = 'var(--color-correct-bg)';
+          btn.style.color = 'var(--color-correct)';
+        } else if (idx === placementSelectedAnswer && idx !== question.correctIndex) {
+          btn.classList.add('wrong');
+          btn.style.borderColor = 'var(--color-wrong)';
+          btn.style.background = 'var(--color-wrong-bg)';
+          btn.style.color = 'var(--color-wrong)';
+        }
+      });
+    }
   } else if (question.type === 'fill-blank-text') {
     const userVal = (placementSelectedAnswer || "").toLowerCase().trim();
     const correctVal = question.correct.toLowerCase().trim();
@@ -3656,7 +4157,7 @@ function checkPlacementAnswer() {
     panel.classList.remove('correct');
     icon.textContent = '✗';
     let correctText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown') {
+    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
       correctText = question.options[question.correctIndex];
     } else if (question.type === 'fill-blank-text') {
       correctText = question.correct;

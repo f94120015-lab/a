@@ -1609,6 +1609,20 @@ input {
   flex: 1;
 }
 
+.quiz-metadata {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+  pointer-events: none;
+}
+
 .quiz-report-btn {
   position: absolute;
   top: 15px;
@@ -1641,6 +1655,11 @@ input {
 }
 
 @media (max-width: 580px) {
+  .quiz-metadata {
+    top: 8px;
+    left: 16px;
+    font-size: 0.65rem;
+  }
   .quiz-report-btn {
     top: 8px;
     right: 16px;
@@ -1988,13 +2007,18 @@ input {
 
 .fb-options {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 12px;
-  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  margin-top: 16px;
 }
 
 .fb-option {
-  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 16px 20px;
   background: var(--bg-card);
   border: 2px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -2005,16 +2029,70 @@ input {
   box-shadow: 0 2px 0 var(--border-color);
   color: var(--text-primary);
   font-family: var(--font-body);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.fb-option:hover:not(.selected) {
+.fb-option:hover:not(.selected):not(.correct):not(.wrong) {
   border-color: var(--accent-primary);
+  background: var(--accent-primary-light);
 }
 
 .fb-option.selected {
   border-color: var(--accent-primary);
   background: var(--accent-primary-light);
   box-shadow: 0 2px 0 var(--accent-primary-shadow);
+}
+
+.fb-option.correct {
+  border-color: var(--color-correct) !important;
+  background: var(--color-correct-bg) !important;
+  color: var(--color-correct) !important;
+  box-shadow: 0 2px 0 var(--color-correct-border) !important;
+}
+
+.fb-option.wrong {
+  border-color: var(--color-wrong) !important;
+  background: var(--color-wrong-bg) !important;
+  color: var(--color-wrong) !important;
+  box-shadow: 0 2px 0 var(--color-wrong-border) !important;
+  animation: shake 0.4s ease;
+}
+
+.fb-number {
+  position: absolute;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.fb-option.selected .fb-number {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.fb-option.correct .fb-number {
+  border-color: var(--color-correct) !important;
+  color: var(--color-correct) !important;
+}
+
+.fb-option.wrong .fb-number {
+  border-color: var(--color-wrong) !important;
+  color: var(--color-wrong) !important;
+}
+
+.fb-text {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ── Quiz Footer & Feedback ─────────────────────────────── */
@@ -4269,9 +4347,11 @@ input {
   pointer-events: none;
 }
 
-/* Hover durumunda göster */
+/* Hover ve active durumlarında göster */
 .hoverable-word:not(.no-meaning):hover::after,
-.hoverable-word:not(.no-meaning):hover::before {
+.hoverable-word:not(.no-meaning):hover::before,
+.hoverable-word:not(.no-meaning).active::after,
+.hoverable-word:not(.no-meaning).active::before {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
@@ -4581,6 +4661,30 @@ input {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.popover-exercise-row .exercise-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.popover-exercise-row .exercise-q-badge {
+  background: var(--accent-primary-light);
+  color: var(--accent-primary);
+  font-size: 0.62rem;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm, 4px);
+  font-weight: 800;
+  flex-shrink: 0;
+  border: 1px solid rgba(139, 126, 200, 0.2);
+}
+
+.popover-exercise-row .exercise-q-badge.completed {
+  background: var(--color-correct-bg);
+  color: var(--color-correct);
+  border-color: var(--color-correct-border);
 }
 
 .popover-exercise-row .exercise-subtitle {

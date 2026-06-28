@@ -4496,15 +4496,98 @@ function buildCustom10QuestionExercises(sentences, unitId, lessonId, exId, offse
 }
 
 
+function buildAra3ExercisesForLesson67(unitId, lessonId) {
+  const exercises = [
+    ...buildAra3Exercises(unitAra3Lesson1SentencesRaw, unitId, lessonId),
+    ...buildAra3Exercises(unitAra3Lesson2SentencesRaw, unitId, lessonId),
+    ...buildAra3Exercises(unitAra3Lesson3SentencesRaw, unitId, lessonId),
+    ...buildAra3Exercises(unitAra3Lesson4SentencesRaw, unitId, lessonId)
+  ];
+  
+  exercises.forEach((ex, idx) => {
+    const exNum = idx + 1;
+    ex.id = `u${unitId}l${lessonId}ex${exNum}`;
+    ex.title = ex.title.replace(/^Alıştırma \d+/, `Alıştırma ${exNum}`);
+    
+    if (Array.isArray(ex.questions)) {
+      ex.questions.forEach(q => {
+        q.id = q.id + `_ex${exNum}`;
+      });
+    }
+  });
+  
+  return exercises;
+}
+
+
 function buildAra3Exercises(sentences, unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // Greedy interleaving algorithm to prevent consecutive identical question types
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id) => {
+    const tr = s.tr;
+    let d1 = tr.replace(/önce/g, "sonra").replace(/öncesinde/g, "sonrasında");
+    if (d1 === tr) d1 = tr.replace(/ve/g, "veya") + " (yanlış)";
+    let d2 = tr.replace(/edilmeden/g, "edildikten").replace(/yapılmadan/g, "yapıldıktan");
+    if (d2 === tr) d2 = tr + " (değil)";
+    let d3 = tr.replace(/Geçerli/g, "Geçersiz").replace(/belirgin/g, "belirsiz").replace(/en/g, "daha az");
+    if (d3 === tr) d3 = "Farklı bir yorum: " + tr;
+    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
+    while (distractors.length < 3) {
+      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+    }
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
   
   const yalinSentences = sentences.filter(s => !s.en.includes(','));
   const akademikSentences = sentences.filter(s => s.en.includes(','));
   
-  const qList1 = [];
-  const qList2 = [];
-  const qList3 = [];
+  const baseList1 = [];
+  const finalList1 = [];
   
   // ==========================================
   // EXERCISE 1: Kelime Isınma & Cümle Kurma (Yalın)
@@ -4519,7 +4602,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       vocabPairs1.push({ left: s.trWord, right: s.word });
     }
   }
-  qList1.push({
+  baseList1.push({
     id: `u${unitId}l${lessonId}_ex1_match1`,
     type: "matching",
     prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
@@ -4536,7 +4619,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     }
   }
   if (vocabPairs2.length > 0) {
-    qList1.push({
+    baseList1.push({
       id: `u${unitId}l${lessonId}_ex1_match2`,
       type: "matching",
       prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
@@ -4544,12 +4627,12 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     });
   }
   
-  // Q3-Q11: Word Bank (first 9 Yalın Cümleler)
-  yalinSentences.slice(0, 9).forEach((s, idx) => {
+  // Yalın Cümleler (0-3 -> Word Bank, 4-7 -> MC)
+  yalinSentences.slice(0, 4).forEach((s, idx) => {
     const isPast = s.en.includes('debated') || s.en.includes('collapsed') || s.en.includes('investigated') || s.en.includes('responded') || s.en.includes('expanded') || s.en.includes('evolved') || s.en.includes('shifted') || s.en.includes('intervened') || s.en.includes('started') || s.en.includes('concluded') || s.en.includes('had') || s.en.includes('was') || s.en.includes('were') || s.en.includes('been');
     const distractors = isPast ? ["is", "had", "was"] : ["was", "has", "did"];
     const allWords = shuffle([...s.blocks, ...distractors]);
-    qList1.push({
+    baseList1.push({
       id: `u${unitId}l${lessonId}_ex1_wb_${idx}`,
       type: "word-bank",
       prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
@@ -4560,21 +4643,30 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       isEngToTr: false
     });
   });
-  
-  // Q12: Keyboard Translation (the 10th Yalın Cümle)
-  const lastYalin = yalinSentences[9];
-  qList1.push({
-    id: `u${unitId}l${lessonId}_ex1_trans_last`,
-    type: "translation-text",
-    prompt: `"${lastYalin.en}" ifadesini Türkçe'ye çevirin:`,
-    enSentence: lastYalin.en,
-    correctSentence: lastYalin.tr,
-    isEngToTr: true
+
+  yalinSentences.slice(4, 8).forEach((s, idx) => {
+    baseList1.push(buildMCQuestion(s, `u${unitId}l${lessonId}_ex1_mc_${idx}`));
+  });
+
+  // Last 2 Yalın Cümleler (8-9 -> Keyboard Translation)
+  const translationList1 = [];
+  yalinSentences.slice(8, 10).forEach((s, idx) => {
+    translationList1.push({
+      id: `u${unitId}l${lessonId}_ex1_trans_${idx}`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    });
   });
   
   // ==========================================
   // EXERCISE 2: Dil Bilgisi & Zaman Uyumu (Cloze Test)
   // ==========================================
+  const baseList2 = [];
+  const translationList2 = [];
+  
   // Q1-Q10: Cloze Test on 10 Academic sentences
   akademikSentences.forEach((s, idx) => {
     let options = [];
@@ -4655,38 +4747,37 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     const correctVal = options[0];
     const shuffledOptions = shuffle(options);
     
-    qList2.push({
+    const isFirstType = idx % 2 === 0;
+    
+    baseList2.push({
       id: `u${unitId}l${lessonId}_ex2_fb_${idx}`,
-      type: "fill-blank-dropdown",
-      prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
       correctIndex: shuffledOptions.indexOf(correctVal)
     });
   });
   
-  // Q11-Q14: Multiple Choice translation questions (academic sentences 0 to 3)
+  // Q11-Q14: Word Bank on academic sentences 0 to 3 (instead of multiple choice)
   akademikSentences.slice(0, 4).forEach((s, idx) => {
-    const fakeTrs = [
-      s.tr.replace("önce", "sonra").replace("edilmelidir", "edilebilir"),
-      s.tr.replace("titizlikle", "geçici olarak").replace("kapsamlı", "yüzeysel"),
-      s.tr.replace("önce", "esnasında").replace("gerekir", "yasaklanmıştır")
-    ];
-    const choices = shuffle([s.tr, ...fakeTrs]);
-    qList2.push({
-      id: `u${unitId}l${lessonId}_ex2_mc_${idx}`,
-      type: "multiple-choice",
-      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
-      options: choices,
-      correctIndex: choices.indexOf(s.tr),
-      isEngToTr: true,
-      enSentence: s.en
+    const distractors = ["is", "had", "was"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    baseList2.push({
+      id: `u${unitId}l${lessonId}_ex2_wb_${idx}`,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
     });
   });
   
-  // Q15: Keyboard Translation (the 5th Academic sentence)
+  // Last 1 Academic sentence as Keyboard Translation
   const lastMcAcad = akademikSentences[4];
-  qList2.push({
+  translationList2.push({
     id: `u${unitId}l${lessonId}_ex2_trans_last`,
     type: "translation-text",
     prompt: `"${lastMcAcad.en}" ifadesini Türkçe'ye çevirin:`,
@@ -4698,6 +4789,8 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
   // ==========================================
   // EXERCISE 3: Akademik Okuma & Cümle Eşleştirme (Halves)
   // ==========================================
+  const baseList3 = [];
+  
   // Q1: Match the Halves 1 (first 5 Academic sentences)
   const halvesPairs1 = [];
   akademikSentences.slice(0, 5).forEach(s => {
@@ -4709,7 +4802,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       });
     }
   });
-  qList3.push({
+  baseList3.push({
     id: `u${unitId}l${lessonId}_ex3_halves1`,
     type: "matching",
     prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
@@ -4729,7 +4822,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       });
     }
   });
-  qList3.push({
+  baseList3.push({
     id: `u${unitId}l${lessonId}_ex3_halves2`,
     type: "matching",
     prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
@@ -4738,11 +4831,11 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     pairs: halvesPairs2
   });
   
-  // Q3-Q11: Word Bank for first 9 Academic sentences
-  akademikSentences.slice(0, 9).forEach((s, idx) => {
+  // Akademik Cümleler (0-7 -> Word Bank)
+  akademikSentences.slice(0, 8).forEach((s, idx) => {
     const distractors = ["is", "had", "was"];
     const allWords = shuffle([...s.blocks, ...distractors]);
-    qList3.push({
+    baseList3.push({
       id: `u${unitId}l${lessonId}_ex3_wb_${idx}`,
       type: "word-bank",
       prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
@@ -4753,16 +4846,18 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       isEngToTr: false
     });
   });
-  
-  // Q12: Keyboard Translation (the 10th Academic sentence)
-  const lastAcad = akademikSentences[9];
-  qList3.push({
-    id: `u${unitId}l${lessonId}_ex3_trans_last`,
-    type: "translation-text",
-    prompt: `"${lastAcad.en}" ifadesini Türkçe'ye çevirin:`,
-    enSentence: lastAcad.en,
-    correctSentence: lastAcad.tr,
-    isEngToTr: true
+
+  // Last 2 Academic sentences (8-9 -> Keyboard Translation)
+  const translationList3 = [];
+  akademikSentences.slice(8, 10).forEach((s, idx) => {
+    translationList3.push({
+      id: `u${unitId}l${lessonId}_ex3_trans_${idx}`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    });
   });
   
   return [
@@ -4770,19 +4865,583 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
       id: `u${unitId}l${lessonId}ex1`,
       title: "Alıştırma 1: Kelime Isınma & Cümle Kurma (Yalın)",
       description: "Kelime eşleştirme kartları ve 10 yalın cümlenin söz dizimi (Word Bank)",
-      questions: qList1
+      questions: [...interleaveQuestions(baseList1), ...translationList1]
     },
     {
       id: `u${unitId}l${lessonId}ex2`,
       title: "Alıştırma 2: Dil Bilgisi & Zaman Uyumu (Cloze Test)",
       description: "Çoktan seçmeli boşluk doldurma ve çoktan seçmeli cümle çevirileri",
-      questions: qList2
+      questions: [...interleaveQuestions(baseList2), ...translationList2]
     },
     {
       id: `u${unitId}l${lessonId}ex3`,
       title: "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme (Halves)",
       description: "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
-      questions: qList3
+      questions: [...interleaveQuestions(baseList3), ...translationList3]
+    }
+  ];
+}
+
+// ─── BÖLÜM 19 66. DERS RAW SENTENCES ──────────────────────
+const unit19Lesson1SentencesRaw = [
+  { en: "after the ice melts", tr: "buz eridikten sonra", word: "melt", trWord: "eridikten", correct: "melts", blank: "after the ice ___", blocks: ["after", "the ice", "melts"] },
+  { en: "after the sun sets", tr: "güneş battıktan sonra", word: "set", trWord: "battıktan", correct: "sets", blank: "after the sun ___", blocks: ["after", "the sun", "sets"] },
+  { en: "after the application starts", tr: "uygulama başladıktan sonra", word: "start", trWord: "başladıktan", correct: "starts", blank: "after the application ___", blocks: ["after", "the application", "starts"] },
+  { en: "after the mixture is heated", tr: "karışım ısıtıldıktan sonra", word: "heat", trWord: "ısıtıldıktan", correct: "heated", blank: "after the mixture is ___", blocks: ["after", "the mixture is", "heated"] },
+  { en: "after the document is scanned", tr: "belge tarandıktan sonra", word: "scan", trWord: "tarandıktan", correct: "scanned", blank: "after the document is ___", blocks: ["after", "the document is", "scanned"] },
+  { en: "after the metal is exposed to air", tr: "metal havaya maruz kaldıktan sonra", word: "expose", trWord: "maruz kaldıktan", correct: "exposed", blank: "after the metal is ___ to air", blocks: ["after", "the metal is", "exposed to air"] },
+  { en: "after the user has clicked the button", tr: "kullanıcı butona tıkladıktan sonra", word: "click", trWord: "tıkladıktan", correct: "clicked", blank: "after the user has ___ the button", blocks: ["after", "the user has", "clicked the button"] },
+  { en: "after the guest of honor has arrived", tr: "onur konuğu vardıktan sonra", word: "arrive", trWord: "vardıktan", correct: "arrived", blank: "after the guest of honor has ___", blocks: ["after", "the guest of honor has", "arrived"] },
+  { en: "after the data has been verified", tr: "veriler doğrulandıktan sonra", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "after the data has been ___", blocks: ["after", "the data has been", "verified"] },
+  { en: "after the files have been backed up", tr: "dosyalar yedeklendikten sonra", word: "back up", trWord: "yedeklendikten", correct: "backed up", blank: "after the files have been ___", blocks: ["after", "the files have been", "backed up"] },
+  { en: "after the decision has been finalized", tr: "karar kesinleştikten sonra", word: "finalize", trWord: "kesinleştikten", correct: "finalized", blank: "after the decision has been ___", blocks: ["after", "the decision has been", "finalized"] },
+  { en: "after they had completed the training", tr: "onlar eğitimi tamamladıktan sonra", word: "complete", trWord: "tamamladıktan", correct: "completed", blank: "after they had ___ the training", blocks: ["after", "they had", "completed the training"] },
+  { en: "after the armies had rested", tr: "ordular dinlendikten sonra", word: "rest", trWord: "dinlendikten", correct: "rested", blank: "after the armies had ___", blocks: ["after", "the armies had", "rested"] },
+  { en: "after the draft had been approved", tr: "taslak onaylandıktan sonra", word: "approve", trWord: "onaylandıktan", correct: "approved", blank: "after the draft had been ___", blocks: ["after", "the draft had been", "approved"] },
+  { en: "after the building was completed", tr: "bina tamamlandıktan sonra", word: "complete", trWord: "tamamlandıktan", correct: "completed", blank: "after the building was ___", blocks: ["after", "the building was", "completed"] }
+];
+
+const unit19Lesson1SentencesL2Raw = [
+  { en: "After the ice melts, the water level rises.", tr: "Buz eridikten sonra, su seviyesi yükselir.", word: "melt", trWord: "eridikten", correct: "melts", blank: "After the ice ___, the water level rises.", blocks: ["After the ice melts,", "the water level", "rises."] },
+  { en: "After the application starts, it loads the configuration files.", tr: "Uygulama başladıktan sonra, yapılandırma dosyalarını yükler.", word: "start", trWord: "başladıktan", correct: "starts", blank: "After the application ___, it loads the configuration files.", blocks: ["After the application starts,", "it loads", "the configuration files."] },
+  { en: "After the user clicks the button, a secure connection is established.", tr: "Kullanıcı butona tıkladıktan sonra, güvenli bir bağlantı kurulur.", word: "click", trWord: "tıkladıktan", correct: "clicks", blank: "After the user ___ the button, a secure connection is established.", blocks: ["After the user clicks the button,", "a secure connection", "is established."] },
+  { en: "After the sun sets, the temperature drops significantly.", tr: "Güneş battıktan sonra, sıcaklık önemli ölçüde düşer.", word: "set", trWord: "battıktan", correct: "sets", blank: "After the sun ___, the temperature drops significantly.", blocks: ["After the sun sets,", "the temperature", "drops significantly."] },
+  { en: "After the engine turns off, the cooling fan runs for two minutes.", tr: "Motor kapandıktan sonra, soğutma fanı iki dakika boyunca çalışır.", word: "turn off", trWord: "kapandıktan", correct: "turns", blank: "After the engine ___ off, the cooling fan runs for two minutes.", blocks: ["After the engine turns off,", "the cooling fan", "runs for two minutes."] },
+  { en: "After the player completes the level, the game saves automatically.", tr: "Oyuncu seviyeyi tamamladıktan sonra, oyun otomatik olarak kaydedilir.", word: "complete", trWord: "tamamladıktan", correct: "completes", blank: "After the player ___ the level, the game saves automatically.", blocks: ["After the player completes the level,", "the game", "saves automatically."] },
+  { en: "After the liquid boils, it evaporates rapidly.", tr: "Sıvı kaynadıktan sonra, hızla buharlaşır.", word: "boil", trWord: "kaynadıktan", correct: "boils", blank: "After the liquid ___, it evaporates rapidly.", blocks: ["After the liquid boils,", "it evaporates", "rapidly."] },
+  { en: "After the algorithm finishes, it outputs the optimized results.", tr: "Algoritma bittikten sonra, optimize edilmiş sonuçları verir.", word: "finish", trWord: "bittikten", correct: "finishes", blank: "After the algorithm ___, it outputs the optimized results.", blocks: ["After the algorithm finishes,", "it outputs", "the optimized results."] },
+  { en: "After the mixture is heated, it turns into a blue liquid.", tr: "Karışım ısıtıldıktan sonra, mavi bir sıvıya dönüşür.", word: "heat", trWord: "ısıtıldıktan", correct: "heated", blank: "After the mixture is ___, it turns into a blue liquid.", blocks: ["After the mixture is heated,", "it turns into", "a blue liquid."] },
+  { en: "After the seed is planted, it requires regular watering.", tr: "Tohum ekildikten sonra, düzenli sulama gerektirir.", word: "plant", trWord: "ekildikten", correct: "planted", blank: "After the seed is ___, it requires regular watering.", blocks: ["After the seed is planted,", "it requires", "regular watering."] },
+  { en: "After the document is scanned, the software processes the text.", tr: "Belge tarandıktan sonra, yazılım metni işler.", word: "scan", trWord: "tarandıktan", correct: "scanned", blank: "After the document is ___, the software processes the text.", blocks: ["After the document is scanned,", "the software", "processes the text."] },
+  { en: "After the package arrives, it is sorted by destination.", tr: "Paket ulaştıktan sonra, varış noktasına göre sınıflandırılır.", word: "arrive", trWord: "ulaştıktan", correct: "arrives", blank: "After the package ___, it is sorted by destination.", blocks: ["After the package arrives,", "it is sorted", "by destination."] },
+  { en: "After the metal is exposed to air, it slowly begins to rust.", tr: "Metal havaya maruz kaldıktan sonra, yavaşça paslanmaya başlar.", word: "expose", trWord: "maruz kaldıktan", correct: "exposed", blank: "After the metal is ___ to air, it slowly begins to rust.", blocks: ["After the metal is exposed to air,", "it slowly begins", "to rust."] },
+  { en: "After the system reboots, the new settings take effect.", tr: "Sistem yeniden başladıktan sonra, yeni ayarlar geçerli olur.", word: "reboot", trWord: "başladıktan", correct: "reboots", blank: "After the system ___, the new settings take effect.", blocks: ["After the system reboots,", "the new settings", "take effect."] },
+  { en: "After the notification is received, the app displays a badge.", tr: "Bildirim alındıktan sonra, uygulama bir rozet gösterir.", word: "receive", trWord: "alındıktan", correct: "received", blank: "After the notification is ___, the app displays a badge.", blocks: ["After the notification is received,", "the app", "displays a badge."] },
+  { en: "After the chef heats the mixture, it turns into a blue liquid.", tr: "Şef karışımı ısıttıktan sonra, karışım mavi bir sıvıya dönüşür.", word: "heat", trWord: "ısıttıktan", correct: "heats", blank: "After the chef ___ the mixture, it turns into a blue liquid.", blocks: ["After the chef heats the mixture,", "it turns into", "a blue liquid."] },
+  { en: "After the mixture is heated by the chef, it turns into a blue liquid.", tr: "Karışım şef tarafından ısıtıldıktan sonra, mavi bir sıvıya dönüşür.", word: "heat", trWord: "ısıtıldıktan", correct: "heated", blank: "After the mixture is ___ by the chef, it turns into a blue liquid.", blocks: ["After the mixture is heated by the chef,", "it turns into", "a blue liquid."] },
+  { en: "After the scanner processes the document, the software saves the text.", tr: "Tarayıcı belgeyi işledikten sonra, yazılım metni kaydeder.", word: "process", trWord: "işledikten", correct: "processes", blank: "After the scanner ___ the document, the software saves the text.", blocks: ["After the scanner processes the document,", "the software", "saves the text."] },
+  { en: "After the document is processed by the scanner, the text is saved by the software.", tr: "Belge tarayıcı tarafından işlendikten sonra, metin yazılım tarafından kaydedilir.", word: "process", trWord: "işlendikten", correct: "processed", blank: "After the document is ___ by the scanner, the text is saved by the software.", blocks: ["After the document is processed by the scanner,", "the text", "is saved by the software."] }
+];
+
+const unit19Lesson1SentencesL3Raw = [
+  { en: "After the user has clicked the button, a secure connection is established.", tr: "Kullanıcı butona tıkladıktan sonra, güvenli bir bağlantı kurulur.", word: "click", trWord: "tıkladıktan", correct: "clicked", blank: "After the user has ___ the button, a secure connection is established.", blocks: ["After the user has clicked the button,", "a secure connection", "is established."] },
+  { en: "After the guest of honor has arrived, the ceremony begins.", tr: "Onur konuğu vardıktan sonra, tören başlar.", word: "arrive", trWord: "vardıktan", correct: "arrived", blank: "After the guest of honor has ___, the ceremony begins.", blocks: ["After the guest of honor has arrived,", "the ceremony", "begins."] },
+  { en: "After the data has been verified, the system generates a report.", tr: "Veriler doğrulandıktan sonra, sistem bir rapor oluşturur.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "After the data has been ___, the system generates a report.", blocks: ["After the data has been verified,", "the system", "generates a report."] },
+  { en: "After the files have been backed up, the server reboots.", tr: "Dosyalar yedeklendikten sonra, sunucu yeniden başlar.", word: "back up", trWord: "yedeklendikten", correct: "backed up", blank: "After the files have been ___, the server reboots.", blocks: ["After the files have been backed up,", "the server", "reboots."] },
+  { en: "After the decision has been finalized, the project starts.", tr: "Karar kesinleştikten sonra, proje başlar.", word: "finalize", trWord: "kesinleştikten", correct: "finalized", blank: "After the decision has been ___, the project starts.", blocks: ["After the decision has been finalized,", "the project", "starts."] },
+  { en: "After the team has finished the analysis, they present the findings.", tr: "Ekip analizi bitirdikten sonra, bulguları sunar.", word: "finish", trWord: "bitirdikten", correct: "finished", blank: "After the team has ___ the analysis, they present the findings.", blocks: ["After the team has finished the analysis,", "they present", "the findings."] },
+  { en: "After the updates have been installed, the system requires a restart.", tr: "Güncellemeler yüklendikten sonra, sistem yeniden başlatma gerektirir.", word: "install", trWord: "yüklendikten", correct: "installed", blank: "After the updates have been ___, the system requires a restart.", blocks: ["After the updates have been installed,", "the system", "requires a restart."] },
+  { en: "After the report has been signed, it is archived.", tr: "Rapor imzalandıktan sonra arşivlenir.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "After the report has been ___, it is archived.", blocks: ["After the report has been signed,", "it is", "archived."] },
+  { en: "After the samples have been collected, they are sent to the lab.", tr: "Numuneler toplandıktan sonra laboratuvara gönderilir.", word: "collect", trWord: "toplandıktan", correct: "collected", blank: "After the samples have been ___, they are sent to the lab.", blocks: ["After the samples have been collected,", "they are sent", "to the lab."] },
+  { en: "After the contract has been signed, the work begins.", tr: "Sözleşme imzalandıktan sonra iş başlar.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "After the contract has been ___, the work begins.", blocks: ["After the contract has been signed,", "the work", "begins."] },
+  { en: "After the software has processed the files, the team reviews the report.", tr: "Yazılım dosyaları işledikten sonra, ekip raporu gözden geçirir.", word: "process", trWord: "işledikten", correct: "processed", blank: "After the software has ___ the files, the team reviews the report.", blocks: ["After the software has processed the files,", "the team", "reviews the report."] },
+  { en: "After the files have been processed by the software, the report is reviewed by the team.", tr: "Dosyalar yazılım tarafından işlendikten sonra, rapor ekip tarafından gözden geçirilir.", word: "process", trWord: "işlendikten", correct: "processed", blank: "After the files have been ___ by the software, the report is reviewed by the team.", blocks: ["After the files have been processed by the software,", "the report is reviewed", "by the team."] },
+  { en: "After the technician has verified the data, the manager signs the report.", tr: "Teknisyen verileri doğruladıktan sonra, müdür raporu imzalar.", word: "verify", trWord: "doğruladıktan", correct: "verified", blank: "After the technician has ___ the data, the manager signs the report.", blocks: ["After the technician has verified the data,", "the manager", "signs the report."] },
+  { en: "After the data has been verified by the technician, the report is signed by the manager.", tr: "Veriler teknisyen tarafından doğrulandıktan sonra, rapor müdür tarafından imzalanır.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "After the data has been ___ by the technician, the report is signed by the manager.", blocks: ["After the data has been verified by the technician,", "the report is signed", "by the manager."] }
+];
+
+const unit19Lesson1SentencesL4Raw = [
+  { en: "After they had completed the training, they received their certificates.", tr: "Eğitimi tamamladıktan sonra sertifikalarını aldılar.", word: "complete", trWord: "tamamladıktan", correct: "completed", blank: "After they had ___ the training, they received their certificates.", blocks: ["After they had completed the training,", "they received", "their certificates."] },
+  { en: "After the armies had rested, they advanced toward the city.", tr: "Ordular dinlendikten sonra şehre doğru ilerlediler.", word: "rest", trWord: "dinlendikten", correct: "rested", blank: "After the armies had ___, they advanced toward the city.", blocks: ["After the armies had rested,", "they advanced", "toward the city."] },
+  { en: "After the draft had been approved, they printed the final version.", tr: "Taslak onaylandıktan sonra son sürümü bastılar.", word: "approve", trWord: "onaylandıktan", correct: "approved", blank: "After the draft had been ___, they printed the final version.", blocks: ["After the draft had been approved,", "they printed", "the final version."] },
+  { en: "After the building was completed, they moved into the new offices.", tr: "Bina tamamlandıktan sonra yeni ofislere taşındılar.", word: "complete", trWord: "tamamlandıktan", correct: "completed", blank: "After the building was ___, they moved into the new offices.", blocks: ["After the building was completed,", "they moved into", "the new offices."] },
+  { en: "After the storm had passed, the rescue team began the operation.", tr: "Fırtına dindikten sonra kurtarma ekibi operasyona başladı.", word: "pass", trWord: "dindikten", correct: "passed", blank: "After the storm had ___, the rescue team began the operation.", blocks: ["After the storm had passed,", "the rescue team", "began the operation."] },
+  { en: "After the ship had docked, the passengers disembarked.", tr: "Gemi yanaştıktan sonra yolcular indi.", word: "dock", trWord: "yanaştıktan", correct: "docked", blank: "After the ship had ___, the passengers disembarked.", blocks: ["After the ship had docked,", "the passengers", "disembarked."] },
+  { en: "After the crop had failed, the farmers requested financial aid.", tr: "Mahsul zarar gördükten sonra çiftçiler mali yardım talep etti.", word: "fail", trWord: "zarar gördükten", correct: "failed", blank: "After the crop had ___, the farmers requested financial aid.", blocks: ["After the crop had failed,", "the farmers requested", "financial aid."] },
+  { en: "After the experiment had concluded, the researchers published the paper.", tr: "Deney sonuçlandıktan sonra araştırmacılar makaleyi yayınladı.", word: "conclude", trWord: "sonuçlandıktan", correct: "concluded", blank: "After the experiment had ___, the researchers published the paper.", blocks: ["After the experiment had concluded,", "the researchers", "published the paper."] },
+  { en: "After the package had been delivered, they confirmed the receipt.", tr: "Paket teslim edildikten sonra teslim alındığını onayladılar.", word: "deliver", trWord: "teslim edildikten", correct: "delivered", blank: "After the package had been ___, they confirmed the receipt.", blocks: ["After the package had been delivered,", "they confirmed", "the receipt."] },
+  { en: "After the fire was extinguished, they inspected the damage.", tr: "Yangın söndürüldükten sonra hasarı incelediler.", word: "extinguish", trWord: "söndürüldükten", correct: "extinguished", blank: "After the fire was ___, they inspected the damage.", blocks: ["After the fire was extinguished,", "they inspected", "the damage."] },
+  { en: "After they had signed the contract, the client transferred the funds.", tr: "Sözleşmeyi imzaladıktan sonra müşteri fonları transfer etti.", word: "sign", trWord: "imzaladıktan", correct: "signed", blank: "After they had ___ the contract, the client transferred the funds.", blocks: ["After they had signed the contract,", "the client transferred", "the funds."] },
+  { en: "After the contract had been signed by them, the funds were transferred by the client.", tr: "Sözleşme onlar tarafından imzalandıktan sonra fonlar müşteri tarafından transfer edildi.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "After the contract had been ___ by them, the funds were transferred by the client.", blocks: ["After the contract had been signed by them,", "the funds were transferred", "by the client."] },
+  { en: "After the doctor had examined the patient, they started the treatment.", tr: "Doktor hastayı muayene ettikten sonra tedaviye başladılar.", word: "examine", trWord: "muayene ettikten", correct: "examined", blank: "After the doctor had ___ the patient, they started the treatment.", blocks: ["After the doctor had examined the patient,", "they started", "the treatment."] },
+  { en: "After the patient had been examined by the doctor, the treatment was started by them.", tr: "Hasta doktor tarafından muayene edildikten sonra tedavi onlar tarafından başlatıldı.", word: "examine", trWord: "muayene edildikten", correct: "examined", blank: "After the patient had been ___ by the doctor, the treatment was started by them.", blocks: ["After the patient had been examined by the doctor,", "the treatment was started", "by them."] }
+];
+
+const unit19Lesson1SentencesL5Raw = [
+  { en: "After having completed the report, they submitted it to the director.", tr: "Raporu tamamladıktan sonra direktöre sundular.", word: "complete", trWord: "tamamladıktan", correct: "completed", blank: "After having ___ the report, they submitted it to the director.", blocks: ["After having completed the report,", "they submitted it", "to the director."] },
+  { en: "After being exposed to air, the chemical compound decomposes.", tr: "Havaya maruz kaldıktan sonra kimyasal bileşik ayrışır.", word: "expose", trWord: "maruz kaldıktan", correct: "exposed", blank: "After being ___ to air, the chemical compound decomposes.", blocks: ["After being exposed to air,", "the chemical compound", "decomposes."] },
+  { en: "After having been verified twice, the data was considered accurate.", tr: "İki kez doğrulandıktan sonra veriler doğru kabul edildi.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "After having been ___ twice, the data was considered accurate.", blocks: ["After having been verified twice,", "the data was", "considered accurate."] },
+  { en: "After having rested, the team resumed the excavation.", tr: "Dinlendikten sonra ekip kazıya yeniden başladı.", word: "rest", trWord: "dinlendikten", correct: "rested", blank: "After having ___, the team resumed the excavation.", blocks: ["After having rested,", "the team resumed", "the excavation."] },
+  { en: "After being processed, the raw materials are stored in the warehouse.", tr: "İşlendikten sonra hammaddeler depoda saklanır.", word: "process", trWord: "işlendikten", correct: "processed", blank: "After being ___, the raw materials are stored in the warehouse.", blocks: ["After being processed,", "the raw materials are", "stored in the warehouse."] },
+  { en: "After having analyzed the samples, they published the findings.", tr: "Numuneleri analiz ettikten sonra bulguları yayınladılar.", word: "analyze", trWord: "analiz ettikten", correct: "analyzed", blank: "After having ___ the samples, they published the findings.", blocks: ["After having analyzed the samples,", "they published", "the findings."] },
+  { en: "After having been reviewed, the manuscript was accepted.", tr: "Gözden geçirildikten sonra taslak kabul edildi.", word: "review", trWord: "geçirildikten", correct: "reviewed", blank: "After having been ___, the manuscript was accepted.", blocks: ["After having been reviewed,", "the manuscript", "was accepted."] },
+  { en: "After having finished the design, they created the prototype.", tr: "Tasarımı bitirdikten sonra prototipi oluşturdular.", word: "finish", trWord: "bitirdikten", correct: "finished", blank: "After having ___ the design, they created the prototype.", blocks: ["After having finished the design,", "they created", "the prototype."] },
+  { en: "After having been trained, the new employees started the work.", tr: "Eğitildikten sonra yeni çalışanlar işe başladı.", word: "train", trWord: "eğitildikten", correct: "trained", blank: "After having been ___, the new employees started the work.", blocks: ["After having been trained,", "the new employees", "started the work."] },
+  { en: "After having been completed, the project was evaluated.", tr: "Tamamlandıktan sonra proje değerlendirildi.", word: "complete", trWord: "tamamlandıktan", correct: "completed", blank: "After having been ___, the project was evaluated.", blocks: ["After having been completed,", "the project", "was evaluated."] },
+  { en: "After having signed the contract, they started the project.", tr: "Sözleşmeyi imzaladıktan sonra projeye başladılar.", word: "sign", trWord: "imzaladıktan", correct: "signed", blank: "After having ___ the contract, they started the project.", blocks: ["After having signed the contract,", "they started", "the project."] },
+  { en: "After having been signed, the contract was stored in the archive.", tr: "İmzalandıktan sonra sözleşme arşivde saklandı.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "After having been ___, the contract was stored in the archive.", blocks: ["After having been signed,", "the contract was stored", "in the archive."] },
+  { en: "After having analyzed the data, they drew the conclusion.", tr: "Verileri analiz ettikten sonra sonuca vardılar.", word: "analyze", trWord: "analiz ettikten", correct: "analyzed", blank: "After having ___ the data, they drew the conclusion.", blocks: ["After having analyzed the data,", "they drew", "the conclusion."] },
+  { en: "After the data had been analyzed, the conclusion was drawn.", tr: "Veriler analiz edildikten sonra sonuca varıldı.", word: "analyze", trWord: "analiz edildikten", correct: "analyzed", blank: "After the data had been ___, the conclusion was drawn.", blocks: ["After the data had been analyzed,", "the conclusion", "was drawn."] }
+];
+
+const unit19Lesson1SentencesL6Raw = [
+  { en: "Only after the report has been signed can the funds be released.", tr: "Ancak rapor imzalandıktan sonra fonlar serbest bırakılabilir.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "Only after the report has been ___ can the funds be released.", blocks: ["Only after the report has been signed", "can the funds", "be released."] },
+  { en: "Only after the ice melts does the water level rise.", tr: "Ancak buz eridikten sonra su seviyesi yükselir.", word: "melt", trWord: "eridikten", correct: "melts", blank: "Only after the ice ___ does the water level rise.", blocks: ["Only after the ice melts", "does the water level", "rise."] },
+  { en: "Only after the data has been verified will the system accept the input.", tr: "Ancak veriler doğrulandıktan sonra sistem girdiyi kabul eder.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "Only after the data has been ___ will the system accept the input.", blocks: ["Only after the data has been verified", "will the system", "accept the input."] },
+  { en: "Only after the sun sets does the temperature drop.", tr: "Ancak güneş battıktan sonra sıcaklık düşer.", word: "set", trWord: "battıktan", correct: "sets", blank: "Only after the sun ___ does the temperature drop.", blocks: ["Only after the sun sets", "does the temperature", "drop."] },
+  { en: "Only after the document is scanned will the software display the text.", tr: "Ancak belge tarandıktan sonra yazılım metni görüntüler.", word: "scan", trWord: "tarandıktan", correct: "scanned", blank: "Only after the document is ___ will the software display the text.", blocks: ["Only after the document is scanned", "will the software", "display the text."] },
+  { en: "Only after the engine turns off does the cooling fan stop.", tr: "Ancak motor kapandıktan sonra soğutma fanı durur.", word: "turn off", trWord: "kapandıktan", correct: "turns", blank: "Only after the engine ___ off does the cooling fan stop.", blocks: ["Only after the engine turns off", "does the cooling fan", "stop."] },
+  { en: "Only after the package arrives is it sorted.", tr: "Ancak paket ulaştıktan sonra sınıflandırılır.", word: "arrive", trWord: "ulaştıktan", correct: "arrives", blank: "Only after the package ___ is it sorted.", blocks: ["Only after the package arrives", "is it", "sorted."] },
+  { en: "Only after the decision had been finalized did they start the project.", tr: "Ancak karar kesinleştikten sonra projeye başladılar.", word: "finalize", trWord: "kesinleştikten", correct: "finalized", blank: "Only after the decision had been ___ did they start the project.", blocks: ["Only after the decision had been finalized", "did they start", "the project."] },
+  { en: "Only after the draft had been approved did they print the version.", tr: "Ancak taslak onaylandıktan sonra sürümü bastılar.", word: "approve", trWord: "onaylandıktan", correct: "approved", blank: "Only after the draft had been ___ did they print the version.", blocks: ["Only after the draft had been approved", "did they print", "the version."] },
+  { en: "Only after the building was completed did they move.", tr: "Ancak bina tamamlandıktan sonra taşındılar.", word: "complete", trWord: "tamamlandıktan", correct: "completed", blank: "Only after the building was ___ did they move.", blocks: ["Only after the building was completed", "did they", "move."] },
+  { en: "Only after the technician has verified the data does the manager sign the report.", tr: "Ancak teknisyen verileri doğruladıktan sonra müdür raporu imzalar.", word: "verify", trWord: "doğruladıktan", correct: "verified", blank: "Only after the technician has ___ the data does the manager sign the report.", blocks: ["Only after the technician has verified the data", "does the manager", "sign the report."] },
+  { en: "Only after the data has been verified by the technician does the manager sign the report.", tr: "Ancak veriler teknisyen tarafından doğrulandıktan sonra müdür raporu imzalar.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "Only after the data has been ___ by the technician does the manager sign the report.", blocks: ["Only after the data has been verified by the technician", "does the manager", "sign the report."] },
+  { en: "Only after they had signed the contract did they start the project.", tr: "Ancak onlar sözleşmeyi imzaladıktan sonra projeye başladılar.", word: "sign", trWord: "imzaladıktan", correct: "signed", blank: "Only after they had ___ the contract did they start the project.", blocks: ["Only after they had signed the contract", "did they start", "the project."] },
+  { en: "Only after the contract had been signed did they start the project.", tr: "Ancak sözleşme imzalandıktan sonra projeye başladılar.", word: "sign", trWord: "imzalandıktan", correct: "signed", blank: "Only after the contract had been ___ did they start the project.", blocks: ["Only after the contract had been signed", "did they start", "the project."] }
+];
+
+const unit19Lesson1SentencesL7Raw = [
+  { en: "After the application starts, it loads the configuration files.", tr: "Uygulama başladıktan sonra, yapılandırma dosyalarını yükler.", word: "start", trWord: "başladıktan", correct: "starts", blank: "After the application ___, it loads the configuration files.", blocks: ["After the application starts,", "it loads", "the configuration files."] },
+  { en: "After the user has clicked the button, a secure connection is established.", tr: "Kullanıcı butona tıkladıktan sonra, güvenli bir bağlantı kurulur.", word: "click", trWord: "tıkladıktan", correct: "clicked", blank: "After the user has ___ the button, a secure connection is established.", blocks: ["After the user has clicked the button,", "a secure connection", "is established."] },
+  { en: "After the data has been verified, the system generates a report.", tr: "Veriler doğrulandıktan sonra, sistem bir rapor oluşturur.", word: "verify", trWord: "doğrulandıktan", correct: "verified", blank: "After the data has been ___, the system generates a report.", blocks: ["After the data has been verified,", "the system", "generates a report."] },
+  { en: "After the files have been backed up, the server reboots.", tr: "Dosyalar yedeklendikten sonra, sunucu yeniden başlar.", word: "back up", trWord: "yedeklendikten", correct: "backed up", blank: "After the files have been ___, the server reboots.", blocks: ["After the files have been backed up,", "the server", "reboots."] },
+  { en: "After the decision has been finalized, the project starts.", tr: "Karar kesinleştikten sonra, proje başlar.", word: "finalize", trWord: "kesinleştikten", correct: "finalized", blank: "After the decision has been ___, the project starts.", blocks: ["After the decision has been finalized,", "the project", "starts."] },
+  { en: "After the engine turns off, the cooling fan runs for two minutes.", tr: "Motor kapandıktan sonra, soğutma fanı iki dakika boyunca çalışır.", word: "turn off", trWord: "kapandıktan", correct: "turns", blank: "After the engine ___ off, the cooling fan runs for two minutes.", blocks: ["After the engine turns off,", "the cooling fan", "runs for two minutes."] },
+  { en: "After the player completes the level, the game saves automatically.", tr: "Oyuncu seviyeyi tamamladıktan sonra, oyun otomatik olarak kaydedilir.", word: "complete", trWord: "tamamladıktan", correct: "completes", blank: "After the player ___ the level, the game saves automatically.", blocks: ["After the player completes the level,", "the game", "saves automatically."] },
+  { en: "After the liquid boils, it evaporates rapidly.", tr: "Sıvı kaynadıktan sonra, hızla buharlaşır.", word: "boil", trWord: "kaynadıktan", correct: "boils", blank: "After the liquid ___, it evaporates rapidly.", blocks: ["After the liquid boils,", "it evaporates", "rapidly."] },
+  { en: "After the algorithm finishes, it outputs the optimized results.", tr: "Algoritma bittikten sonra, optimize edilmiş sonuçları verir.", word: "finish", trWord: "bittikten", correct: "finishes", blank: "After the algorithm ___, it outputs the optimized results.", blocks: ["After the algorithm finishes,", "it outputs", "the optimized results."] },
+  { en: "After the mixture is heated, it turns into a blue liquid.", tr: "Karışım ısıtıldıktan sonra, mavi bir sıvıya dönüşür.", word: "heat", trWord: "ısıtıldıktan", correct: "heated", blank: "After the mixture is ___, it turns into a blue liquid.", blocks: ["After the mixture is heated,", "it turns into", "a blue liquid."] },
+  { en: "After they had completed the training, they received their certificates.", tr: "Eğitimi tamamladıktan sonra sertifikalarını aldılar.", word: "complete", trWord: "tamamladıktan", correct: "completed", blank: "After they had ___ the training, they received their certificates.", blocks: ["After they had completed the training,", "they received", "their certificates."] },
+  { en: "After the armies had rested, they advanced toward the city.", tr: "Ordular dinlendikten sonra şehre doğru ilerlediler.", word: "rest", trWord: "dinlendikten", correct: "rested", blank: "After the armies had ___, they advanced toward the city.", blocks: ["After the armies had rested,", "they advanced", "toward the city."] },
+  { en: "After the draft had been approved, they printed the final version.", tr: "Taslak onaylandıktan sonra son sürümü bastılar.", word: "approve", trWord: "onaylandıktan", correct: "approved", blank: "After the draft had been ___, they printed the final version.", blocks: ["After the draft had been approved,", "they printed", "the final version."] },
+  { en: "After the building was completed, they moved into the new offices.", tr: "Bina tamamlandıktan sonra yeni ofislere taşındılar.", word: "complete", trWord: "tamamlandıktan", correct: "completed", blank: "After the building was ___, they moved into the new offices.", blocks: ["After the building was completed,", "they moved into", "the new offices."] },
+  { en: "After the storm had passed, the rescue team began the operation.", tr: "Fırtına dindikten sonra kurtarma ekibi operasyona başladı.", word: "pass", trWord: "dindikten", correct: "passed", blank: "After the storm had ___, the rescue team began the operation.", blocks: ["After the storm had passed,", "the rescue team", "began the operation."] },
+  { en: "After the ship had docked, the passengers disembarked.", tr: "Gemi yanaştıktan sonra yolcular indi.", word: "dock", trWord: "yanaştıktan", correct: "docked", blank: "After the ship had ___, the passengers disembarked.", blocks: ["After the ship had docked,", "the passengers", "disembarked."] },
+  { en: "After the crop had failed, the farmers requested financial aid.", tr: "Mahsul zarar gördükten sonra çiftçiler mali yardım talep etti.", word: "fail", trWord: "zarar gördükten", correct: "failed", blank: "After the crop had ___, the farmers requested financial aid.", blocks: ["After the crop had failed,", "the farmers requested", "financial aid."] },
+  { en: "After the experiment had concluded, the researchers published the paper.", tr: "Deney sonuçlandıktan sonra araştırmacılar makaleyi yayınladı.", word: "conclude", trWord: "sonuçlandıktan", correct: "concluded", blank: "After the experiment had ___, the researchers published the paper.", blocks: ["After the experiment had concluded,", "the researchers", "published the paper."] },
+  { en: "After the package had been delivered, they confirmed the receipt.", tr: "Paket teslim edildikten sonra teslim alındığını onayladılar.", word: "deliver", trWord: "teslim edildikten", correct: "delivered", blank: "After the package had been ___, they confirmed the receipt.", blocks: ["After the package had been delivered,", "they confirmed", "the receipt."] },
+  { en: "After the fire was extinguished, they inspected the damage.", tr: "Yangın söndürüldükten sonra hasarı incelediler.", word: "extinguish", trWord: "söndürüldükten", correct: "extinguished", blank: "After the fire was ___, they inspected the damage.", blocks: ["After the fire was extinguished,", "they inspected", "the damage."] }
+];
+
+function getClozeOptions(s) {
+  const word = s.word.toLowerCase();
+  const base = word;
+  
+  if (word === "melt") {
+    return ["melts", "melted", "has melted", "melting"];
+  }
+  if (word === "set") {
+    return ["sets", "setting", "had set", "setted"];
+  }
+  if (word === "start") {
+    return ["starts", "started", "has started", "starting"];
+  }
+  if (word === "heat") {
+    return ["heated", "heats", "has heated", "heating"];
+  }
+  if (word === "scan") {
+    return ["scanned", "scans", "has scanned", "scanning"];
+  }
+  if (word === "expose") {
+    return ["exposed", "exposing", "exposes", "has exposed"];
+  }
+  if (word === "click") {
+    return ["clicked", "clicks", "has clicked", "clicking"];
+  }
+  if (word === "arrive") {
+    return ["arrives", "arrived", "has arrived", "arriving"];
+  }
+  if (word === "verify") {
+    return ["verified", "verifies", "has been verified", "verifying"];
+  }
+  if (word === "back up") {
+    return ["backed up", "backs up", "have been backed up", "backing up"];
+  }
+  if (word === "finalize") {
+    return ["finalized", "finalizes", "has been finalized", "finalizing"];
+  }
+  if (word === "complete") {
+    return ["completed", "completes", "having completed", "completing"];
+  }
+  if (word === "rest") {
+    return ["rested", "rests", "had rested", "resting"];
+  }
+  if (word === "approve") {
+    return ["approved", "approves", "had been approved", "approving"];
+  }
+  if (word === "turn off") {
+    return ["turns off", "turned off", "has turned off", "turning off"];
+  }
+  if (word === "boil") {
+    return ["boils", "boiled", "is boiling", "boil"];
+  }
+  if (word === "finish") {
+    return ["finishes", "finished", "has finished", "finishing"];
+  }
+  if (word === "plant") {
+    return ["planted", "plants", "is planted", "planting"];
+  }
+  if (word === "reboot") {
+    return ["reboots", "rebooted", "has rebooted", "rebooting"];
+  }
+  if (word === "receive") {
+    return ["received", "receives", "is received", "receiving"];
+  }
+  if (word === "process") {
+    return ["processes", "processed", "has processed", "processing"];
+  }
+  if (word === "install") {
+    return ["installed", "installs", "have been installed", "installing"];
+  }
+  if (word === "sign") {
+    return ["signed", "signs", "has been signed", "signing"];
+  }
+  if (word === "collect") {
+    return ["collected", "collects", "have been collected", "collecting"];
+  }
+  if (word === "pass") {
+    return ["passed", "passes", "had passed", "passing"];
+  }
+  if (word === "dock") {
+    return ["docked", "docks", "had docked", "docking"];
+  }
+  if (word === "fail") {
+    return ["failed", "fails", "had failed", "failing"];
+  }
+  if (word === "conclude") {
+    return ["concluded", "concludes", "had concluded", "concluding"];
+  }
+  if (word === "deliver") {
+    return ["delivered", "delivers", "had been delivered", "delivering"];
+  }
+  if (word === "extinguish") {
+    return ["extinguished", "extinguishes", "was extinguished", "extinguishing"];
+  }
+  if (word === "examine") {
+    return ["examined", "examines", "had been examined", "examining"];
+  }
+  if (word === "analyze") {
+    return ["analyzed", "analyzes", "having analyzed", "analyzing"];
+  }
+  if (word === "review") {
+    return ["reviewed", "reviews", "having been reviewed", "reviewing"];
+  }
+  if (word === "train") {
+    return ["trained", "trains", "having been trained", "training"];
+  }
+  
+  return [base, base + "s", base + "ed", "is " + base];
+}
+
+function buildUnit19Lesson66Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  // Greedy interleaving algorithm
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id) => {
+    const tr = s.tr;
+    let d1 = tr.replace(/sonra/g, "önce");
+    if (d1 === tr) d1 = tr + " (değil)";
+    let d2 = tr.replace(/eridikten/g, "erimeden").replace(/başladıktan/g, "başlamadan").replace(/tarandıktan/g, "taranmadan");
+    if (d2 === tr) d2 = tr + " (yanlış)";
+    let d3 = tr.replace(/yükselir/g, "düşer").replace(/sıcaklık/g, "basınç");
+    if (d3 === tr) d3 = "Farklı sürüm: " + tr;
+    const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
+    while (distractors.length < 3) {
+      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+    }
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildHalvesQuestion = (sentences, id, count) => {
+    const pairs = [];
+    sentences.forEach(s => {
+      if (pairs.length >= count) return;
+      const parts = s.en.split(',');
+      if (parts.length >= 2) {
+        pairs.push({
+          left: parts[0].trim() + ",",
+          right: parts.slice(1).join(',').trim()
+        });
+      }
+    });
+    return {
+      id: id,
+      type: "matching",
+      prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+      leftHeader: "Yan Cümle (After...)",
+      rightHeader: "Ana Cümle",
+      pairs: pairs
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const options = getClozeOptions(s);
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "before"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  // ==========================================
+  // EXERCISE 1: Level 1 - Zarf Cümlecikleri (15 questions)
+  // ==========================================
+  const ex1List = [];
+  const yalinSentences = [...unit19Lesson1SentencesRaw].sort((a, b) => a.en.length - b.en.length);
+  
+  // matching vocab 1
+  const v1 = [];
+  const seen1 = new Set();
+  for (let s of yalinSentences) {
+    if (v1.length >= 5) break;
+    if (s.word && s.trWord && !seen1.has(s.word)) {
+      seen1.add(s.word);
+      v1.push({ left: s.trWord, right: s.word });
+    }
+  }
+  ex1List.push({
+    id: `u${unitId}l${lessonId}_ex1_match1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: v1
+  });
+
+  // matching vocab 2
+  const v2 = [];
+  for (let s of yalinSentences) {
+    if (v2.length >= 5) break;
+    if (s.word && s.trWord && !seen1.has(s.word)) {
+      seen1.add(s.word);
+      v2.push({ left: s.trWord, right: s.word });
+    }
+  }
+  if (v2.length > 0) {
+    ex1List.push({
+      id: `u${unitId}l${lessonId}_ex1_match2`,
+      type: "matching",
+      prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+      pairs: v2
+    });
+  }
+
+  yalinSentences.slice(0, 5).forEach((s, idx) => {
+    ex1List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex1_wb_${idx}`));
+  });
+  yalinSentences.slice(5, 13).forEach((s, idx) => {
+    ex1List.push(buildMCQuestion(s, `u${unitId}l${lessonId}_ex1_mc_${idx}`));
+  });
+  const ex1Trans = yalinSentences.slice(13, 15).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex1_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 2: Level 2 - Geniş Zaman ve Temel Yapılar (19 questions)
+  // ==========================================
+  const ex2List = [];
+  const l2Sentences = [...unit19Lesson1SentencesL2Raw].sort((a, b) => a.en.length - b.en.length);
+  ex2List.push(buildHalvesQuestion(l2Sentences, `u${unitId}l${lessonId}_ex2_halves`, 5));
+  l2Sentences.slice(0, 10).forEach((s, idx) => {
+    ex2List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex2_cloze_${idx}`, idx % 2 === 0));
+  });
+  l2Sentences.slice(10, 17).forEach((s, idx) => {
+    ex2List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex2_wb_${idx}`));
+  });
+  const ex2Trans = l2Sentences.slice(17, 19).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex2_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 3: Level 3 - Present Perfect ve Süreç Vurgulu (14 questions)
+  // ==========================================
+  const ex3List = [];
+  const l3Sentences = [...unit19Lesson1SentencesL3Raw].sort((a, b) => a.en.length - b.en.length);
+  ex3List.push(buildHalvesQuestion(l3Sentences, `u${unitId}l${lessonId}_ex3_halves`, 5));
+  l3Sentences.slice(0, 8).forEach((s, idx) => {
+    ex3List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex3_cloze_${idx}`, idx % 2 === 0));
+  });
+  l3Sentences.slice(8, 12).forEach((s, idx) => {
+    ex3List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex3_wb_${idx}`));
+  });
+  const ex3Trans = l3Sentences.slice(12, 14).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex3_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 4: Level 4 - Past Perfect ve Tarihsel Bağlam (14 questions)
+  // ==========================================
+  const ex4List = [];
+  const l4Sentences = [...unit19Lesson1SentencesL4Raw].sort((a, b) => a.en.length - b.en.length);
+  ex4List.push(buildHalvesQuestion(l4Sentences, `u${unitId}l${lessonId}_ex4_halves`, 5));
+  l4Sentences.slice(0, 8).forEach((s, idx) => {
+    ex4List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex4_cloze_${idx}`, idx % 2 === 0));
+  });
+  l4Sentences.slice(8, 12).forEach((s, idx) => {
+    ex4List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex4_wb_${idx}`));
+  });
+  const ex4Trans = l4Sentences.slice(12, 14).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex4_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 5: Level 5 - İleri Düzey Karmaşık Yapılar (14 questions)
+  // ==========================================
+  const ex5List = [];
+  const l5Sentences = [...unit19Lesson1SentencesL5Raw].sort((a, b) => a.en.length - b.en.length);
+  ex5List.push(buildHalvesQuestion(l5Sentences, `u${unitId}l${lessonId}_ex5_halves`, 5));
+  l5Sentences.slice(0, 8).forEach((s, idx) => {
+    ex5List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex5_cloze_${idx}`, idx % 2 === 0));
+  });
+  l5Sentences.slice(8, 12).forEach((s, idx) => {
+    ex5List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex5_wb_${idx}`));
+  });
+  const ex5Trans = l5Sentences.slice(12, 14).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex5_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 6: Level 6 - Akademik Vurgu ve Devrik Yapılar (14 questions)
+  // ==========================================
+  const ex6List = [];
+  const l6Sentences = [...unit19Lesson1SentencesL6Raw].sort((a, b) => a.en.length - b.en.length);
+  ex6List.push(buildHalvesQuestion(l6Sentences, `u${unitId}l${lessonId}_ex6_halves`, 5));
+  l6Sentences.slice(0, 8).forEach((s, idx) => {
+    ex6List.push(buildClozeQuestion(s, `u${unitId}l${lessonId}_ex6_cloze_${idx}`, idx % 2 === 0));
+  });
+  l6Sentences.slice(8, 12).forEach((s, idx) => {
+    ex6List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex6_wb_${idx}`));
+  });
+  const ex6Trans = l6Sentences.slice(12, 14).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex6_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 7: Level 7 Part 1 - Anlamsal Eşleştirme I (10 questions)
+  // ==========================================
+  const ex7List = [];
+  const l7Sentences = [...unit19Lesson1SentencesL7Raw].sort((a, b) => a.en.length - b.en.length);
+  const part1Sentences = l7Sentences.slice(0, 10);
+  ex7List.push(buildHalvesQuestion(part1Sentences, `u${unitId}l${lessonId}_ex7_halves`, 5));
+  part1Sentences.slice(0, 8).forEach((s, idx) => {
+    ex7List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex7_wb_${idx}`));
+  });
+  const ex7Trans = part1Sentences.slice(8, 10).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex7_tr_${idx}`));
+
+  // ==========================================
+  // EXERCISE 8: Level 7 Part 2 - Anlamsal Eşleştirme II (10 questions)
+  // ==========================================
+  const ex8List = [];
+  const part2Sentences = l7Sentences.slice(10, 20);
+  ex8List.push(buildHalvesQuestion(part2Sentences, `u${unitId}l${lessonId}_ex8_halves`, 5));
+  part2Sentences.slice(0, 8).forEach((s, idx) => {
+    ex8List.push(buildWBQuestion(s, `u${unitId}l${lessonId}_ex8_wb_${idx}`));
+  });
+  const ex8Trans = part2Sentences.slice(8, 10).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex8_tr_${idx}`));
+
+  return [
+    {
+      id: `u${unitId}l${lessonId}ex1`,
+      title: "Alıştırma 1: Zarf Cümlecikleri (Level 1)",
+      description: "after ile başlayan yalın yan cümle parçacıkları, kelime eşleştirme ve yazma",
+      questions: [...interleaveQuestions(ex1List), ...ex1Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex2`,
+      title: "Alıştırma 2: Geniş Zaman ve Temel Yapılar (Level 2)",
+      description: "Geniş zaman bağlamında temel zarf cümlecikli tam yapılar",
+      questions: [...interleaveQuestions(ex2List), ...ex2Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex3`,
+      title: "Alıştırma 3: Present Perfect ve Süreç Vurgulu (Level 3)",
+      description: "Present Perfect ile kurulan süreç vurgulu akademik yapılar",
+      questions: [...interleaveQuestions(ex3List), ...ex3Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex4`,
+      title: "Alıştırma 4: Past Perfect ve Tarihsel Bağlam (Level 4)",
+      description: "Geçmiş zaman ve süreç ilişkisi (Past Perfect) içeren yapılar",
+      questions: [...interleaveQuestions(ex4List), ...ex4Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex5`,
+      title: "Alıştırma 5: İleri Düzey Karmaşık Yapılar (Level 5)",
+      description: "Kısaltmalar (after having done, after being done) içeren yapılar",
+      questions: [...interleaveQuestions(ex5List), ...ex5Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex6`,
+      title: "Alıştırma 6: Akademik Vurgu ve Devrik Yapılar (Level 6)",
+      description: "Only after ile başlayan devrik (inversion) akademik yapılar",
+      questions: [...interleaveQuestions(ex6List), ...ex6Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex7`,
+      title: "Alıştırma 7: Anlamsal Eşleştirme ve Bütünlük I (Level 7)",
+      description: "Anlamsal cümle yarılarını eşleştirme ve cümle kurma (1-10)",
+      questions: [...interleaveQuestions(ex7List), ...ex7Trans]
+    },
+    {
+      id: `u${unitId}l${lessonId}ex8`,
+      title: "Alıştırma 8: Anlamsal Eşleştirme ve Bütünlük II (Level 7)",
+      description: "Anlamsal cümle yarılarını eşleştirme ve cümle kurma (11-20)",
+      questions: [...interleaveQuestions(ex8List), ...ex8Trans]
     }
   ];
 }
@@ -10179,27 +10838,25 @@ const rawTopics = [
     ]
   },
   {
-    title: "XIX. Zarf Cümleciği (Adverbial Clause) (Sayfa 164)",
-    desc: "Zaman, sebep, zıtlık, derece, amaç, sonuç ve şart anlamı katan zarf tümleçleri",
+    title: "XIX. Zaman Zarfıyla Başlayan Zarf Cümleciği (Sayfa 164)",
+    desc: "after, before, when, since, while/as, until bağlaçları ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 7,
+    numLessons: 6,
     formulas: [
-      { formula: "Conjunction (when/while/since/before...) + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" },
-      { formula: "because / since / as + Clause", example: "Because the weather was bad, the flight was cancelled: Hava kötü olduğu için uçuş iptal edildi" },
-      { formula: "although / even though / while + Clause", example: "Although the test was difficult, they passed it: Test zor olmasına rağmen onu geçtiler" },
-      { formula: "so + adjective/adverb + that + Clause", example: "The weather was so hot that the plants dried up: Hava o kadar sıcaktı ki bitkiler kurudu" },
-      { formula: "so that / in order that + Clause", example: "They heated the liquid so that it would boil: Kaynaması için sıvıyı ısıttılar" },
-      { formula: "Clause, so / therefore / consequently + Clause", example: "The road was blocked, so we turned back: Yol kapalıydı, bu yüzden geri döndük" },
-      { formula: "if / unless + Clause", example: "If you heat water, it turns into steam: Suyu ısıtırsanız buhara dönüşür" }
+      { formula: "After + Clause", example: "After the ice melts, the water level rises: Buz eridikten sonra su seviyesi yükselir" },
+      { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" },
+      { formula: "When + Clause", example: "When the pressure increases, the temperature rises: Basınç arttığında sıcaklık yükselir" },
+      { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" },
+      { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" },
+      { formula: "Until + Clause", example: "Until the mixture cools down, do not touch the container: Karışım soğuyana kadar kaba dokunmayın" }
     ],
     subtitles: [
-      "A. Zaman (Sayfa 164)",
-      "B. Sebep (Sayfa 185)",
-      "C. Zıtlık (Although...) (Sayfa 194 / 198)",
-      "D. Derece (Sayfa 201)",
-      "E. Maksat (Amaç) (Sayfa 204)",
-      "F. Netice (Sonuç) (Sayfa 206)",
-      "G. Şart (Koşul) (Sayfa 206)"
+      "A. After (Sayfa 169)",
+      "B. Before (Sayfa 164)",
+      "C. When",
+      "D. Since",
+      "E. While / As",
+      "F. Until"
     ]
   },
   {
@@ -12201,19 +12858,18 @@ const unitSentencesMap = {
     ] }
   },
   21: {
-    1: { exercises: buildAra3Exercises(unitAra3Lesson1SentencesRaw, 21, 62) },
-    2: { exercises: buildAra3Exercises(unitAra3Lesson2SentencesRaw, 21, 63) },
-    3: { exercises: buildAra3Exercises(unitAra3Lesson3SentencesRaw, 21, 64) },
-    4: { exercises: buildAra3Exercises(unitAra3Lesson4SentencesRaw, 21, 65) }
-  },
-  22: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
+    4: { exercises: [] }
+  },
+  22: {
+    1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
+    2: { exercises: buildAra3ExercisesForLesson67(22, 67) },
+    3: { exercises: [] },
     4: { exercises: [] },
     5: { exercises: [] },
-    6: { exercises: [] },
-    7: { exercises: [] }
+    6: { exercises: [] }
   },
   23: {
     1: { exercises: [] },
@@ -12460,3 +13116,253 @@ const placementQuestions = [
     correctIndex: 1
   }
 ];
+
+// Post-process unitSentencesMap to limit Turkish-to-English (isEngToTr: false) word-bank questions to max 1 per exercise.
+// Also standardizes vocabulary matching questions to use Turkish root/dictionary words.
+(function postProcessExercises() {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const engToTrRoot = {
+    "valid": "geçerli",
+    "available": "mevcut",
+    "fluctuate": "dalgalanmak",
+    "emerge": "ortaya çıkmak",
+    "decline": "azalmak",
+    "expand": "genişlemek",
+    "obvious": "belirgin",
+    "complex": "karmaşık",
+    "function": "çalışmak",
+    "vary": "çeşitlilik göstermek",
+    "debate": "tartışmak",
+    "collapse": "çökmek",
+    "investigate": "araştırmak",
+    "respond": "cevap vermek",
+    "evolve": "evrimleşmek",
+    "shift": "değişmek",
+    "intervene": "müdahale etmek",
+    "cooperate": "işbirliği yapmak",
+    "terminate": "sonlandırmak",
+    "conflict": "çelişmek",
+    "conclude": "sonuçlanmak",
+    "predict": "tahmin etmek",
+    "accumulate": "birikmek",
+    "mature": "olgunlaşmak",
+    "transform": "dönüşmek",
+    "occur": "meydana gelmek",
+    "analyze": "analiz etmek",
+    "implement": "uygulamak",
+    "allocate": "tahsis etmek",
+    "formulate": "formüle etmek",
+    "publish": "yayınlamak",
+    "detect": "tespit etmek",
+    "modify": "değiştirmek",
+    "distribute": "dağıtmak",
+    "enforce": "uygulamak",
+    "melt": "erimek",
+    "set": "batmak",
+    "start": "başlamak",
+    "heat": "ısıtmak",
+    "scan": "taramak",
+    "expose": "maruz kalmak",
+    "click": "tıklamak",
+    "arrive": "varmak",
+    "verify": "doğrulamak",
+    "back up": "yedeklemek",
+    "finalize": "kesinleştirmek",
+    "complete": "tamamlamak",
+    "rest": "dinlenmek",
+    "approve": "onaylamak",
+    "assess": "değerlendirmek",
+    "assume": "varsaymak",
+    "create": "oluşturmak",
+    "define": "tanımlamak",
+    "derive": "türetmek",
+    "estimate": "tahmin etmek",
+    "identify": "tanımlamak",
+    "interpret": "yorumlamak",
+    "indicate": "göstermek",
+    "require": "gerekmek",
+    "establish": "kurmak",
+    "prepare": "hazırlamak",
+    "increase": "artırmak",
+    "develop": "geliştirmek",
+    "solidify": "katılaşmak",
+    "spread": "yayılmak",
+    "penetrate": "nüfuz etmek",
+    "cease": "durmak",
+    "disappear": "yok olmak",
+    "change": "değişmek",
+    "dissolve": "çözünmek",
+    "decay": "çürümek",
+    "observe": "gözlemlemek",
+    "obtain": "elde etmek",
+    "invent": "icat etmek",
+    "use": "kullanmak",
+    "consider": "düşünmek",
+    "introduce": "tanıtmak",
+    "discover": "keşfetmek",
+    "build": "inşa etmek",
+    "remove": "kaldırmak",
+    "refine": "arıtmak",
+    "treat": "tedavi etmek",
+    "plant": "dikmek",
+    "accept": "kabul etmek",
+    "accomplish": "başarmak",
+    "act": "hareket etmek",
+    "adjust": "ayarlamak",
+    "advance": "ilerlemek",
+    "approach": "yaklaşmak",
+    "study": "incelemek",
+    "understand": "anlamak",
+    "meet": "karşılamak",
+    "germinate": "filizlenmek",
+    "divide": "bölünmek",
+    "cool": "soğutmak",
+    "weigh": "tartmak",
+    "destroy": "yok etmek",
+    "classify": "sınıflandırmak",
+    "apply": "uygulamak",
+    "civilise": "uygarlaştırmak",
+    "civilize": "uygarlaştırmak"
+  };
+
+  function cleanTurkishSuffix(tr) {
+    let clean = tr.trim().toLowerCase();
+    
+    // Remove " sonra" or " önce" if present at the end
+    clean = clean.replace(/\s+(sonra|önce)$/g, '');
+    
+    if (clean.endsWith('meden') || clean.endsWith('mekten')) {
+      return clean.slice(0, -5) + 'mek';
+    }
+    if (clean.endsWith('madan') || clean.endsWith('maktan')) {
+      return clean.slice(0, -5) + 'mak';
+    }
+    if (clean.endsWith('tıktan') || clean.endsWith('dıktan')) {
+      return clean.slice(0, -6) + 'mak';
+    }
+    if (clean.endsWith('tikten') || clean.endsWith('dikten')) {
+      return clean.slice(0, -6) + 'mek';
+    }
+    if (clean.endsWith('ildiğinde') || clean.endsWith('eldiğinde')) {
+      return clean.slice(0, -9) + 'mek';
+    }
+    if (clean.endsWith('ıldığında') || clean.endsWith('aldığında')) {
+      return clean.slice(0, -9) + 'mak';
+    }
+    if (clean.endsWith('ldıktan') || clean.endsWith('ndıktan')) {
+      return clean.slice(0, -7) + 'mak';
+    }
+    if (clean.endsWith('ldikten') || clean.endsWith('ndikten')) {
+      return clean.slice(0, -7) + 'mek';
+    }
+    if (clean.endsWith('erek')) {
+      return clean.slice(0, -4) + 'mek';
+    }
+    if (clean.endsWith('arak')) {
+      return clean.slice(0, -4) + 'mak';
+    }
+    if (clean.endsWith('ince')) {
+      return clean.slice(0, -4) + 'mek';
+    }
+    if (clean.endsWith('ınca')) {
+      return clean.slice(0, -4) + 'mak';
+    }
+    return tr;
+  }
+
+  for (let unitId in unitSentencesMap) {
+    const unit = unitSentencesMap[unitId];
+    for (let lessonId in unit) {
+      const lesson = unit[lessonId];
+      if (lesson && Array.isArray(lesson.exercises)) {
+        lesson.exercises.forEach(exercise => {
+          if (exercise && Array.isArray(exercise.questions)) {
+            // Collect all Turkish words in this exercise to use as high-quality distractors
+            const exerciseTrWords = [];
+            exercise.questions.forEach(q => {
+              if (q.type === 'word-bank') {
+                const trText = q.isEngToTr ? (q.correctOrder ? q.correctOrder.join(' ') : '') : q.translation;
+                if (trText) {
+                  trText.split(/\s+/).forEach(w => {
+                    const clean = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"");
+                    if (clean && !exerciseTrWords.includes(clean)) {
+                      exerciseTrWords.push(clean);
+                    }
+                  });
+                }
+              } else if (q.type === 'multiple-choice') {
+                const trText = q.isEngToTr ? q.options[q.correctIndex] : "";
+                if (trText) {
+                  trText.split(/\s+/).forEach(w => {
+                    const clean = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"");
+                    if (clean && !exerciseTrWords.includes(clean)) {
+                      exerciseTrWords.push(clean);
+                    }
+                  });
+                }
+              } else if (q.type === 'translation-text') {
+                const trText = q.isEngToTr ? q.correctSentence : '';
+                if (trText) {
+                  trText.split(/\s+/).forEach(w => {
+                    const clean = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"");
+                    if (clean && !exerciseTrWords.includes(clean)) {
+                      exerciseTrWords.push(clean);
+                    }
+                  });
+                }
+              }
+            });
+
+            // Helper to convert an English-target word-bank to a Turkish-target word-bank
+            const convertToTrWordBank = (q) => {
+              if (!q.translation || !q.enSentence) return;
+              
+              const sourceEn = q.enSentence;
+              const targetWords = q.translation.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+              
+              const unique = exerciseTrWords.filter(w => !targetWords.includes(w));
+              const shuffled = shuffle(unique);
+              while (shuffled.length < 3) {
+                shuffled.push("ve");
+              }
+              const distractors = shuffled.slice(0, 3);
+              const words = shuffle([...targetWords, ...distractors]);
+              
+              q.prompt = "Cümlenin Türkçe karşılığını oluşturun:";
+              q.translation = sourceEn;
+              q.words = words;
+              q.correctOrder = targetWords;
+              q.isEngToTr = true;
+            };
+
+            // Find all word-bank questions with isEngToTr === false
+            const falseWbQuestions = exercise.questions.filter(q => q.type === 'word-bank' && q.isEngToTr === false);
+            if (falseWbQuestions.length > 1) {
+              for (let i = 0; i < falseWbQuestions.length - 1; i++) {
+                convertToTrWordBank(falseWbQuestions[i]);
+              }
+            }
+
+            // Standardize vocabulary matching question pairs
+            const matchingQuestions = exercise.questions.filter(q => q.type === 'matching');
+            matchingQuestions.forEach(q => {
+              if (q.prompt && q.prompt.includes("Kelimeleri Türkçe karşılıklarıyla eşleştirin") && Array.isArray(q.pairs)) {
+                q.pairs.forEach(pair => {
+                  if (pair.left && pair.right) {
+                    const engKey = pair.right.toLowerCase().trim();
+                    if (engToTrRoot[engKey]) {
+                      pair.left = engToTrRoot[engKey];
+                    } else {
+                      pair.left = cleanTurkishSuffix(pair.left);
+                    }
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+    }
+  }
+})();
