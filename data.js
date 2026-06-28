@@ -4565,11 +4565,22 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     if (d1 === tr) d1 = tr.replace(/ve/g, "veya") + " (yanlış)";
     let d2 = tr.replace(/edilmeden/g, "edildikten").replace(/yapılmadan/g, "yapıldıktan");
     if (d2 === tr) d2 = tr + " (değil)";
-    let d3 = tr.replace(/Geçerli/g, "Geçersiz").replace(/belirgin/g, "belirsiz").replace(/en/g, "daha az");
-    if (d3 === tr) d3 = "Farklı bir yorum: " + tr;
+    
+    let d3 = tr;
+    const candidates = sentences.filter(item => item.tr !== tr);
+    if (candidates.length > 0) {
+      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
+    } else {
+      d3 = tr + " (diğer)";
+    }
     const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
     while (distractors.length < 3) {
-      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const extra = candidates[Math.floor(Math.random() * candidates.length)];
+      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
+        distractors.push(extra.tr);
+      } else {
+        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      }
     }
     const choices = shuffle([tr, ...distractors]);
     return {
@@ -5169,11 +5180,22 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
     if (d1 === tr) d1 = tr + " (değil)";
     let d2 = tr.replace(/eridikten/g, "erimeden").replace(/başladıktan/g, "başlamadan").replace(/tarandıktan/g, "taranmadan");
     if (d2 === tr) d2 = tr + " (yanlış)";
-    let d3 = tr.replace(/yükselir/g, "düşer").replace(/sıcaklık/g, "basınç");
-    if (d3 === tr) d3 = "Farklı sürüm: " + tr;
+    
+    let d3 = tr;
+    const candidates = unit19Lesson1SentencesRaw.filter(item => item.tr !== tr);
+    if (candidates.length > 0) {
+      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
+    } else {
+      d3 = tr + " (başka)";
+    }
     const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
     while (distractors.length < 3) {
-      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const extra = candidates[Math.floor(Math.random() * candidates.length)];
+      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
+        distractors.push(extra.tr);
+      } else {
+        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      }
     }
     const choices = shuffle([tr, ...distractors]);
     return {
@@ -5660,17 +5682,29 @@ function buildUnit19Lesson68Exercises(unitId, lessonId) {
     return result;
   };
 
-  const buildMCQuestion = (s, id) => {
+  const buildMCQuestion = (s, id, allSentences) => {
     const tr = s.tr;
     // Generate distractors based on whether it is a clause or full sentence
     let d1 = tr.replace(/diğinde/g, "meden önce").replace(/duğunda/g, "madan önce").replace(/tiğinde/g, "meden önce");
     if (d1 === tr) d1 = tr + " (önce)";
     let d2 = tr.replace(/erittiğinde/g, "erittikten sonra").replace(/çöktüğünde/g, "çöktükten sonra").replace(/düştüğünde/g, "düştükten sonra");
     if (d2 === tr) d2 = tr + " (sonra)";
-    let d3 = "Farklı sürüm: " + tr;
+    
+    let d3 = tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    if (candidates.length > 0) {
+      d3 = candidates[Math.floor(Math.random() * candidates.length)].tr;
+    } else {
+      d3 = tr + " (başka)";
+    }
     const distractors = Array.from(new Set([d1, d2, d3])).filter(d => d !== tr);
     while (distractors.length < 3) {
-      distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      const extra = candidates[Math.floor(Math.random() * candidates.length)];
+      if (extra && !distractors.includes(extra.tr) && extra.tr !== tr) {
+        distractors.push(extra.tr);
+      } else {
+        distractors.push(tr + " (yanlış sürüm " + (distractors.length + 1) + ")");
+      }
     }
     const choices = shuffle([tr, ...distractors]);
     return {
@@ -5798,7 +5832,7 @@ function buildUnit19Lesson68Exercises(unitId, lessonId) {
     // MC questions
     const mcLimit = Math.min(8, sorted.length);
     for (let i = 0; i < mcLimit; i++) {
-      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`));
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
     }
 
     // Keyboard translation (last 2 questions)
