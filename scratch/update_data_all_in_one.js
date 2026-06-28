@@ -1578,12 +1578,12 @@ function buildExercises(rawList, lessonId) {
     const mcQs = rawSubList.filter(q => q.type !== "multiple-fill-blank");
     const fbQs = rawSubList.filter(q => q.type === "multiple-fill-blank");
     const sorted = [...mcQs, ...fbQs];
-    return sorted.map((q, idx) => processQuestion(q, `u${lessonId < 98 ? 0 : 101}l${lessonId}_ex${exId}_q${idx + 1}`));
+    return sorted.map((q, idx) => processQuestion(q, `u${lessonId < 98 ? 102 : 101}l${lessonId}_ex${exId}_q${idx + 1}`));
   };
 
   return [
     {
-      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex1`,
+      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex1`,
       title: lessonId === 95 ? "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I" :
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
@@ -1595,7 +1595,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
     {
-      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex2`,
+      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex2`,
       title: lessonId === 95 ? "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II" :
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
@@ -1607,7 +1607,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
     {
-      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex3`,
+      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex3`,
       title: lessonId === 95 ? "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III" :
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
@@ -1619,7 +1619,7 @@ function buildExercises(rawList, lessonId) {
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
     {
-      id: `u${lessonId < 98 ? 0 : 101}l${lessonId}ex4`,
+      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex4`,
       title: lessonId === 95 ? "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV" :
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
@@ -1633,7 +1633,7 @@ function buildExercises(rawList, lessonId) {
   ];
 }
 
-const unit0Exercises = {
+const unit102Exercises = {
   1: { exercises: buildExercises(L95_raw, 95) },
   2: { exercises: buildExercises(L96_raw, 96) },
   3: { exercises: buildExercises(L97_raw, 97) }
@@ -1650,14 +1650,14 @@ const dataPath = '../data.js';
 let content = fs.readFileSync(dataPath, 'utf8');
 
 // 1. Replace the DENEME topic in rawTopics
-const topicStartMarker = 'id: 0,\n    title: "DENEME",';
+const topicStartMarker = 'id: 0,\n    title: "Zaman Zarfları ve Zaman Uyumu",';
 const topicStartIdx = content.indexOf(topicStartMarker);
 if (topicStartIdx !== -1) {
   const openBraceIdx = content.lastIndexOf('{', topicStartIdx);
   const closeArrayIdx = content.indexOf('];', topicStartIdx);
   if (openBraceIdx !== -1 && closeArrayIdx !== -1) {
     const newTopicBlock = `{
-    id: 0,
+    id: 102,
     title: "Zaman Zarfları ve Zaman Uyumu",
     desc: "Zaman Zarfları ve Zaman Uyumu Pratikleri",
     icon: "⏳",
@@ -1675,7 +1675,7 @@ if (topicStartIdx !== -1) {
   },
   {
     id: 101,
-    title: "DENEME",
+    title: "Zaman Uyumu: By the time, Since, İt is (high) time vs",
     desc: "Time-Link: Connectors & Tenses",
     icon: "🧪",
     numLessons: 4,
@@ -1704,7 +1704,7 @@ if (mapStartIndex !== -1) {
   const key1Index = content.indexOf('\n  1: ', openingBraceIndex);
   
   if (key0Index !== -1 && key1Index !== -1) {
-    const formattedObjStr = `\n  0: ${JSON.stringify(unit0Exercises, null, 2)},\n  101: ${JSON.stringify(unit101Exercises, null, 2)},\n`;
+    const formattedObjStr = `\n  102: ${JSON.stringify(unit102Exercises, null, 2)},\n  101: ${JSON.stringify(unit101Exercises, null, 2)},\n`;
     content = content.substring(0, key0Index) + formattedObjStr + content.substring(key1Index);
   }
 }
