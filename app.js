@@ -2620,6 +2620,11 @@ function checkAnswer() {
         state.wrongQuestions.push(question.id);
       }
     }
+
+    // Lesson 68'e özel gramatik açıklama pop-up'ını tetikle
+    if (currentLesson && currentLesson.id === 68) {
+      showGrammarExplanationModal(question, selectedAnswer);
+    }
   }
 
   saveState();
@@ -4516,6 +4521,131 @@ function init() {
   initSocialSystem();
   enterApp();
   initNotifications();
+}
+
+function showGrammarExplanationModal(question, selectedAnswer) {
+  const modalOverlay = document.getElementById('grammar-modal');
+  const modalContent = document.getElementById('grammar-modal-body-content');
+  if (!modalOverlay || !modalContent) return;
+
+  // Generate explanation HTML
+  const explanationHtml = getGrammarExplanationHtml(question, selectedAnswer);
+  modalContent.innerHTML = explanationHtml;
+
+  modalOverlay.style.display = 'flex';
+
+  const hideModal = () => {
+    modalOverlay.style.display = 'none';
+  };
+
+  // Bind close buttons
+  const closeBtn = document.getElementById('grammar-modal-close-btn');
+  const okBtn = document.getElementById('grammar-modal-ok-btn');
+  if (closeBtn) closeBtn.onclick = hideModal;
+  if (okBtn) okBtn.onclick = hideModal;
+}
+
+function getGrammarExplanationHtml(question, selectedAnswer) {
+  let title = 'Dilbilgisi Analizi';
+  let text = '';
+  let ruleTitle = 'Zaman Zarfı Kuralları';
+  let ruleText = '';
+  let wrongExample = '';
+  let correctExample = '';
+
+  const isMC = question.type === 'multiple-choice';
+
+  if (isMC) {
+    title = 'Çeviri Hatası';
+    const chosenTranslation = question.options[selectedAnswer] || '';
+    const correctTranslation = question.options[question.correctIndex] || '';
+
+    text = `Seçtiğiniz çeviri: <strong>"${chosenTranslation}"</strong>`;
+    ruleTitle = '💡 "When" Bağlacının Türkçe Karşılığı';
+    ruleText = `"when" bağlacı, zaman zarf cümleciği kurar ve eylemin gerçekleştiği anı belirterek Türkçe'ye <strong>"-diğinde / -ınca"</strong> şeklinde çevrilir.`;
+    
+    if (chosenTranslation.includes('önce')) {
+      ruleText += `<br><br>⚠️ Seçeneğinizde geçen <strong>"önce"</strong> ifadesi <strong>"before"</strong> bağlacına aittir, <strong>"when"</strong> bağlacıyla kullanılamaz.`;
+      wrongExample = `when it ceases ➔ ...meden önce ❌`;
+      correctExample = `when it ceases ➔ ...diğinde / ...ince ✔️`;
+    } else if (chosenTranslation.includes('sonra')) {
+      ruleText += `<br><br>⚠️ Seçeneğinizde geçen <strong>"sonra"</strong> ifadesi <strong>"after"</strong> bağlacına aittir, <strong>"when"</strong> bağlacıyla kullanılamaz.`;
+      wrongExample = `when it ceases ➔ ...dikten sonra ❌`;
+      correctExample = `when it ceases ➔ ...diğinde / ...ince ✔️`;
+    } else {
+      wrongExample = `${question.enSentence} ➔ ${chosenTranslation} ❌`;
+      correctExample = `${question.enSentence} ➔ ${correctTranslation} ✔️`;
+    }
+  } else {
+    // Fill blank / Dropdown
+    const chosenWord = (question.options ? question.options[selectedAnswer] : selectedAnswer || "").toLowerCase().trim();
+    const correctWord = (question.correct || (question.options && question.options[question.correctIndex]) || "").toLowerCase().trim();
+    
+    text = `Seçtiğiniz kelime: <strong style="color: var(--color-wrong);">${chosenWord || '(boş)'}</strong> (Doğru cevap: <strong style="color: var(--color-correct);">${correctWord}</strong>)`;
+
+    if (chosenWord.includes('will') || chosenWord.includes('would')) {
+      title = 'Zaman Uyumsuzluğu (will/would Kullanımı)';
+      ruleTitle = '💡 Zaman Cümlelerinde Will/Would Kullanılmaz';
+      ruleText = `İngilizcede zaman zarfı cümleciğinin (When clause) kendi içerisinde gelecek zaman yardımcı fiili (<strong>will / would</strong>) kullanılmaz. Gelecek zaman kastedilse bile <strong>Present Simple (Geniş Zaman)</strong> tercih edilir.`;
+      wrongExample = `when it will ${question.word || 'cease'} ❌`;
+      correctExample = `when it ${correctWord} ✔️`;
+    } else if (chosenWord.endsWith('ing')) {
+      title = 'Çekimsiz Fiil (Gerund/Participle) Kullanımı';
+      ruleTitle = '💡 Çekimli Yüklem Kuralı';
+      ruleText = `Zaman cümlelerinde bağlaçtan ("when") sonra doğrudan bir özne geliyorsa, fiilin çekimli (finite) bir yüklem olması şarttır. Tek başına kullanılan <strong>"-ing"</strong> eki alan fiiller yüklem olamazlar.`;
+      wrongExample = `when it ${chosenWord} ❌`;
+      correctExample = `when it ${correctWord} ✔️`;
+    } else {
+      // Check subject-verb agreement or tense mismatch
+      const isSingularSubject = question.blank && (question.blank.includes('when it') || question.blank.includes('when the process') || question.blank.includes('when the moisture'));
+      const isPluralSubject = question.blank && (question.blank.includes('when the trees') || question.blank.includes('when the armies') || question.blank.includes('when conditions') || question.blank.includes('when the roots') || question.blank.includes('when the profits') || question.blank.includes('when the leaves') || question.blank.includes('when communities'));
+
+      if (isSingularSubject && (chosenWord === 'cease' || chosenWord === 'dry' || chosenWord === 'expand' || chosenWord === 'develop' || chosenWord === 'increase' || chosenWord === 'move' || chosenWord === 'dissolve' || chosenWord === 'change' || chosenWord === 'vary' || chosenWord === 'appear' || chosenWord === 'penetrate' || chosenWord === 'breathe')) {
+        title = 'Özne-Yüklem Uyuşmazlığı';
+        ruleTitle = '💡 Tekil Özne ve -s Takısı';
+        ruleText = `Present Simple (Geniş Zaman) yapısında tekil öznelerden (<strong>he, she, it, the process, vb.</strong>) sonra gelen fiil <strong>"-s / -es / -ies"</strong> takısı almalıdır.`;
+        wrongExample = `when it ${chosenWord} ❌`;
+        correctExample = `when it ${correctWord} ✔️`;
+      } else if (isPluralSubject && chosenWord.endsWith('s') && !chosenWord.endsWith('ss')) {
+        title = 'Özne-Yüklem Uyuşmazlığı';
+        ruleTitle = '💡 Çoğul Öznelerle Yalın Fiil';
+        ruleText = `Çoğul öznelerle (<strong>the trees, profits, conditions, vb.</strong>) geniş zamanda fiil yalın halde kullanılır, <strong>"-s"</strong> takısı almaz.`;
+        wrongExample = `when the conditions ${chosenWord} ❌`;
+        correctExample = `when the conditions ${correctWord} ✔️`;
+      } else if (correctWord.endsWith('ed') && !chosenWord.endsWith('ed')) {
+        title = 'Zaman Uyuşmazlığı (Tense Mismatch)';
+        ruleTitle = '💡 Geçmiş Zaman (Past Simple) Uyum Kuralı';
+        ruleText = `Bu cümle geçmişte gerçekleşen bir eylemi anlattığı için fiilin <strong>2. hali (Past Simple -ed takısı)</strong> kullanılmalıdır.`;
+        wrongExample = `when it ${chosenWord} ❌`;
+        correctExample = `when it ${correctWord} ✔️`;
+      } else {
+        title = 'Dilbilgisi Yapısı Hatası';
+        ruleTitle = '💡 Zaman Zarfı Kuralları';
+        ruleText = `Zaman cümlelerinde zaman uyumu (Tense Agreement), özne-yüklem uyumu (Subject-Verb Agreement) ve bağlaç anlamına uygun doğru fiil çekimi kullanılmalıdır.`;
+        wrongExample = `when ... ${chosenWord} ❌`;
+        correctExample = `when ... ${correctWord} ✔️`;
+      }
+    }
+  }
+
+  return `
+    <div class="grammar-explain-title">${title}</div>
+    <p class="grammar-explain-text">${text}</p>
+    <div class="grammar-rule-box">
+      <span class="grammar-rule-title">${ruleTitle}</span>
+      <span>${ruleText}</span>
+      ${wrongExample && correctExample ? `
+      <div class="grammar-example-comparison">
+        <span class="grammar-example-wrong">${wrongExample}</span>
+        <span class="grammar-example-correct">${correctExample}</span>
+      </div>
+      ` : ''}
+    </div>
+    <div class="grammar-timeline" style="margin-top: 10px; background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 12px; font-size: 0.8rem; text-align: center; border: 1px solid var(--border-color); color: var(--text-secondary);">
+      <strong>ZAMAN ÇİZGİSİ:</strong><br>
+      [Geçmiş / Past] ─── (Eylem: When + Present/Past) ───► [Gelecek / Future]
+    </div>
+  `;
 }
 
 // DOM yüklendiğinde başlat

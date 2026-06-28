@@ -539,8 +539,24 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════
-       6. TOAST BİLDİRİM
+       7. GRAMER AÇIKLAMA MODALI (LESSON 68 ÖZEL)
        ════════════════════════════════════════════════════════ -->
+  <div class="grammar-modal-overlay" id="grammar-modal" style="display: none;">
+    <div class="grammar-modal">
+      <div class="grammar-modal-header">
+        <span class="grammar-modal-icon">💡</span>
+        <h3>Dilbilgisi Kılavuzu</h3>
+        <button class="grammar-modal-close" id="grammar-modal-close-btn">&times;</button>
+      </div>
+      <div class="grammar-modal-body" id="grammar-modal-body-content">
+        <!-- Dinamik gramer açıklaması -->
+      </div>
+      <div class="grammar-modal-footer">
+        <button class="btn btn-primary" id="grammar-modal-ok-btn">Anladım</button>
+      </div>
+    </div>
+  </div>
+
   <div class="toast-container" id="toast-container"></div>
 
   <script src="data.js"></script>

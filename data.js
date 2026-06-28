@@ -5914,6 +5914,344 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
 
 
 
+// ─── BÖLÜM 22 73. DERS RAW SENTENCES (Since) ──────────────
+
+const unit22Lesson1SentencesRaw = [
+  { en: "Since his mother died", tr: "Annesi öldüğünden beri", word: "die", trWord: "ölmek", correct: "died", blank: "since his mother ___", options: ['died', 'dead', 'dying', 'will die'], blocks: ['Since', 'his', 'mother', 'died'] },
+  { en: "Since the new law was passed", tr: "Yeni yasa kabul edildiğinden beri", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "since the new law ___ passed", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'new', 'law', 'was', 'passed'] },
+  { en: "Since they were planted", tr: "Dikildiklerinden beri", word: "plant", trWord: "dikilmek", correct: "were", blank: "since they ___ planted", options: ['were', 'are', 'was', 'have'], blocks: ['Since', 'they', 'were', 'planted'] },
+  { en: "Since they started school", tr: "Okula başladıklarından beri", word: "start", trWord: "başlamak", correct: "started", blank: "since they ___ school", options: ['started', 'start', 'starting', 'will start'], blocks: ['Since', 'they', 'started', 'school'] },
+  { en: "Since the new president was elected", tr: "Yeni başkan seçildiğinden beri", word: "elect", trWord: "seçilmek", correct: "was", blank: "since the new president ___ elected", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'new', 'president', 'was', 'elected'] },
+  { en: "Since it was first passed", tr: "İlk kez kabul edildiğinden beri", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "since it ___ first passed", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'it', 'was', 'first', 'passed'] },
+  { en: "Since electronic equipment has been installed", tr: "Elektronik ekipman kurulduğundan beri", word: "install", trWord: "kurulmak", correct: "has", blank: "since electronic equipment ___ been installed", options: ['has', 'have', 'had', 'having'], blocks: ['Since', 'electronic', 'equipment', 'has', 'been', 'installed'] },
+  { en: "Since the application was launched", tr: "Uygulama başlatıldığından beri", word: "launch", trWord: "başlatılmak", correct: "was", blank: "since the application ___ launched", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'application', 'was', 'launched'] },
+  { en: "Since he moved to Ankara", tr: "Ankara'ya taşındığından beri", word: "move", trWord: "taşınmak", correct: "moved", blank: "since he ___ to Ankara", options: ['moved', 'move', 'moving', 'will move'], blocks: ['Since', 'he', 'moved', 'to', 'Ankara'] },
+  { en: "Since the database crashed", tr: "Veri tabanı çöktüğünden beri", word: "crash", trWord: "çökmek", correct: "crashed", blank: "since the database ___", options: ['crashed', 'crash', 'crashing', 'will crash'], blocks: ['Since', 'the', 'database', 'crashed'] }
+];
+
+const unit22Lesson1SentencesL2Raw = [
+  { en: "Since his mother died, it is a long time.", tr: "Annesi öldüğünden beri uzun zaman geçti.", word: "be", trWord: "olmak", correct: "is", blank: "Since his mother died, it ___ a long time.", options: ['is', 'was', 'will be', 'being'], blocks: ['Since', 'his', 'mother', 'died,', 'it', 'is', 'a', 'long', 'time.'] },
+  { en: "It is not long since the new law was passed.", tr: "Yeni yasa kabul edileli çok olmadı.", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "It is not long since the new law ___ passed.", options: ['was', 'is', 'has', 'were'], blocks: ['It', 'is', 'not', 'long', 'since', 'the', 'new', 'law', 'was', 'passed.'] },
+  { en: "The young plants have grown six inches since they were planted.", tr: "Genç bitkiler dikildiklerinden beri altı inç büyüdü.", word: "have", trWord: "sahip olmak", correct: "have", blank: "The young plants ___ grown six inches since they were planted.", options: ['have', 'has', 'had', 'having'], blocks: ['The', 'young', 'plants', 'have', 'grown', 'six', 'inches', 'since', 'they', 'were', 'planted.'] },
+  { en: "The children have learnt to read and write since they started school last September.", tr: "Çocuklar geçen eylülde okula başladıklarından beri okuma yazma öğrendiler.", word: "start", trWord: "başlamak", correct: "started", blank: "The children have learnt to read and write since they ___ school last September.", options: ['started', 'start', 'starting', 'will start'], blocks: ['The', 'children', 'have', 'learnt', 'to', 'read', 'and', 'write', 'since', 'they', 'started', 'school', 'last', 'September.'] },
+  { en: "The committee has not held any meetings since the new president was elected.", tr: "Komite yeni başkan seçildiğinden beri hiç toplantı yapmadı.", word: "have", trWord: "sahip olmak", correct: "has", blank: "The committee ___ not held any meetings since the new president was elected.", options: ['has', 'have', 'had', 'having'], blocks: ['The', 'committee', 'has', 'not', 'held', 'any', 'meetings', 'since', 'the', 'new', 'president', 'was', 'elected.'] },
+  { en: "The law has not been altered in any way since it was first passed 100 years ago.", tr: "Yasa 100 yıl önce ilk kez kabul edildiğinden beri hiçbir şekilde değiştirilmedi.", word: "be", trWord: "olmak", correct: "been", blank: "The law has not ___ altered in any way since it was first passed 100 years ago.", options: ['been', 'be', 'being', 'was'], blocks: ['The', 'law', 'has', 'not', 'been', 'altered', 'in', 'any', 'way', 'since', 'it', 'was', 'first', 'passed', '100', 'years', 'ago.'] },
+  { en: "Work has been greatly facilitated since electronic equipment has been installed.", tr: "Elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı.", word: "have", trWord: "sahip olmak", correct: "has", blank: "Work has been greatly facilitated since electronic equipment ___ been installed.", options: ['has', 'have', 'had', 'having'], blocks: ['Work', 'has', 'been', 'greatly', 'facilitated', 'since', 'electronic', 'equipment', 'has', 'been', 'installed.'] },
+  { en: "He has developed three mobile applications since he moved to Ankara.", tr: "Ankara'ya taşındığından beri üç mobil uygulama geliştirdi.", word: "move", trWord: "taşınmak", correct: "moved", blank: "He has developed three mobile applications since he ___ to Ankara.", options: ['moved', 'move', 'moving', 'will move'], blocks: ['He', 'has', 'developed', 'three', 'mobile', 'applications', 'since', 'he', 'moved', 'to', 'Ankara.'] },
+  { en: "The team has changed the source code twice since the system crashed.", tr: "Sistem çöktüğünden beri ekip kaynak kodunu iki kez değiştirdi.", word: "crash", trWord: "çökmek", correct: "crashed", blank: "The team has changed the source code twice since the system ___.", options: ['crashed', 'crash', 'crashing', 'will crash'], blocks: ['The', 'team', 'has', 'changed', 'the', 'source', 'code', 'twice', 'since', 'the', 'system', 'crashed.'] },
+  { en: "Many things have changed in the company since she left her job.", tr: "O işinden ayrıldığından beri şirkette çok şey değişti.", word: "leave", trWord: "ayrılmak", correct: "left", blank: "Many things have changed in the company since she ___ her job.", options: ['left', 'leave', 'leaving', 'will leave'], blocks: ['Many', 'things', 'have', 'changed', 'in', 'the', 'company', 'since', 'she', 'left', 'her', 'job.'] }
+];
+
+const unit22Lesson1SentencesL3Raw = [
+  {
+    en: "Global temperature anomalies have risen at an unprecedented rate since industrialized nations shifted heavily toward fossil fuels.",
+    tr: "Sanayileşmiş ülkelerin yoğun şekilde fosil yakıtlara yönelmesinden beri küresel sıcaklık anomalileri benzeri görülmemiş bir oranda arttı.",
+    word: "have", trWord: "sahip olmak", correct: "have",
+    blank: "Global temperature anomalies ___ risen at an unprecedented rate since industrialized nations shifted heavily toward fossil fuels.",
+    options: ['have', 'has', 'had', 'having'],
+    blocks: ['Global', 'temperature', 'anomalies', 'have', 'risen', 'at', 'an', 'unprecedented', 'rate', 'since', 'industrialized', 'nations', 'shifted', 'heavily', 'toward', 'fossil', 'fuels.']
+  },
+  {
+    en: "The cybersecurity framework has undergone comprehensive structural updates since the network was targeted by an anonymous malware attack.",
+    tr: "Ağ anonim bir kötü amaçlı yazılım saldırısı tarafından hedef alındığından beri siber güvenlik çerçevesi kapsamlı yapısal güncellemeler geçirdi.",
+    word: "be", trWord: "olmak", correct: "was",
+    blank: "The cybersecurity framework has undergone comprehensive structural updates since the network ___ targeted by an anonymous malware attack.",
+    options: ['was', 'is', 'has', 'were'],
+    blocks: ['The', 'cybersecurity', 'framework', 'has', 'undergone', 'comprehensive', 'structural', 'updates', 'since', 'the', 'network', 'was', 'targeted', 'by', 'an', 'anonymous', 'malware', 'attack.']
+  },
+  {
+    en: "Educational institutes have increasingly integrated gamified software models into their curricula since mobile learning tools became widely accessible.",
+    tr: "Mobil öğrenme araçları yaygın olarak erişilebilir hale geldiğinden beri eğitim kurumları oyunlaştırılmış yazılım modellerini müfredatlarına giderek daha fazla dahil ettiler.",
+    word: "become", trWord: "olmak", correct: "became",
+    blank: "Educational institutes have increasingly integrated gamified software models into their curricula since mobile learning tools ___ widely accessible.",
+    options: ['became', 'become', 'becoming', 'will become'],
+    blocks: ['Educational', 'institutes', 'have', 'increasingly', 'integrated', 'gamified', 'software', 'models', 'into', 'their', 'curricula', 'since', 'mobile', 'learning', 'tools', 'became', 'widely', 'accessible.']
+  },
+  {
+    en: "The financial sector has experienced a substantial transition toward decentralized ledgers since digital currencies were introduced to the stock market.",
+    tr: "Dijital para birimleri borsaya sunulduğundan beri finans sektörü merkeziyetsiz defterlere doğru önemli bir geçiş yaşadı.",
+    word: "be", trWord: "olmak", correct: "were",
+    blank: "The financial sector has experienced a substantial transition toward decentralized ledgers since digital currencies ___ introduced to the stock market.",
+    options: ['were', 'are', 'was', 'have'],
+    blocks: ['The', 'financial', 'sector', 'has', 'experienced', 'a', 'substantial', 'transition', 'toward', 'decentralized', 'ledgers', 'since', 'digital', 'currencies', 'were', 'introduced', 'to', 'the', 'stock', 'market.']
+  },
+  {
+    en: "Researchers have successfully identified several new cellular sub-structures since advanced high-resolution microscopes were installed in the laboratory.",
+    tr: "Laboratuvara gelişmiş yüksek çözünürlüklü mikroskoplar kurulduğundan beri araştırmacılar birkaç yeni hücresel alt yapıyı başarıyla tanımladılar.",
+    word: "be", trWord: "olmak", correct: "were",
+    blank: "Researchers have successfully identified several new cellular sub-structures since advanced high-resolution microscopes ___ installed in the laboratory.",
+    options: ['were', 'are', 'was', 'have'],
+    blocks: ['Researchers', 'have', 'successfully', 'identified', 'several', 'new', 'cellular', 'sub-structures', 'since', 'advanced', 'high-resolution', 'microscopes', 'were', 'installed', 'in', 'the', 'laboratory.']
+  },
+  {
+    en: "The database infrastructure has not required any manual troubleshooting intervention since the automated balancing algorithm was implemented.",
+    tr: "Otomatik dengeleme algoritması uygulandığından beri veri tabanı altyapısı herhangi bir manuel sorun giderme müdahalesi gerektirmedi.",
+    word: "be", trWord: "olmak", correct: "was",
+    blank: "The database infrastructure has not required any manual troubleshooting intervention since the automated balancing algorithm ___ implemented.",
+    options: ['was', 'is', 'has', 'were'],
+    blocks: ['The', 'database', 'infrastructure', 'has', 'not', 'required', 'any', 'manual', 'troubleshooting', 'intervention', 'since', 'the', 'automated', 'balancing', 'algorithm', 'was', 'implemented.']
+  },
+  {
+    en: "Language learners have shown a measurable improvement in active grammatical recall since spaced repetition algorithms were applied to the system.",
+    tr: "Sistemde aralıklı tekrarlama algoritmaları uygulandığından beri dil öğrenenler aktif gramatik hatırlamada ölçülebilir bir gelişme gösterdiler.",
+    word: "be", trWord: "olmak", correct: "were",
+    blank: "Language learners have shown a measurable improvement in active grammatical recall since spaced repetition algorithms ___ applied to the system.",
+    options: ['were', 'are', 'was', 'have'],
+    blocks: ['Language', 'learners', 'have', 'shown', 'a', 'measurable', 'improvement', 'in', 'active', 'grammatical', 'recall', 'since', 'spaced', 'repetition', 'algorithms', 'were', 'applied', 'to', 'the', 'system.']
+  },
+  {
+    en: "Public transport systems in the metropolitan area have been greatly optimized since the integrated electronic payment framework was enforced.",
+    tr: "Entegre elektronik ödeme çerçevesi zorunlu kılındığından beri metropol bölgesindeki toplu taşıma sistemleri büyük ölçüde optimize edildi.",
+    word: "be", trWord: "olmak", correct: "was",
+    blank: "Public transport systems in the metropolitan area have been greatly optimized since the integrated electronic payment framework ___ enforced.",
+    options: ['was', 'is', 'has', 'were'],
+    blocks: ['Public', 'transport', 'systems', 'in', 'the', 'metropolitan', 'area', 'have', 'been', 'greatly', 'optimized', 'since', 'the', 'integrated', 'electronic', 'payment', 'framework', 'was', 'enforced.']
+  },
+  {
+    en: "The executive board has hesitated to endorse new long-term investment portfolios since the global market indicators fluctuated last quarter.",
+    tr: "Küresel piyasa göstergeleri geçen çeyrekte dalgalandığından beri yönetim kurulu yeni uzun vadeli yatırım portföylerini onaylamakta tereddüt etti.",
+    word: "fluctuate", trWord: "dalgalanmak", correct: "fluctuated",
+    blank: "The executive board has hesitated to endorse new long-term investment portfolios since the global market indicators ___ last quarter.",
+    options: ['fluctuated', 'fluctuate', 'fluctuating', 'will fluctuate'],
+    blocks: ['The', 'executive', 'board', 'has', 'hesitated', 'to', 'endorse', 'new', 'long-term', 'investment', 'portfolios', 'since', 'the', 'global', 'market', 'indicators', 'fluctuated', 'last', 'quarter.']
+  },
+  {
+    en: "Significant progress has been made regarding environmental conservation policies since the international climate convention was finalized by member states.",
+    tr: "Uluslararası iklim sözleşmesi üye devletler tarafından nihai hale getirildiğinden beri çevre koruma politikaları konusunda önemli ilerlemeler kaydedildi.",
+    word: "be", trWord: "olmak", correct: "was",
+    blank: "Significant progress has been made regarding environmental conservation policies since the international climate convention ___ finalized by member states.",
+    options: ['was', 'is', 'has', 'were'],
+    blocks: ['Significant', 'progress', 'has', 'been', 'made', 'regarding', 'environmental', 'conservation', 'policies', 'since', 'the', 'international', 'climate', 'convention', 'was', 'finalized', 'by', 'member', 'states.']
+  }
+];
+
+function buildUnit22SinceExercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/diğinden/g, "meden önce").replace(/diğinde/g, "meden önce").replace(/duktan sonra/g, "madan önce");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
+    if (candidates.length > 0) {
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
+      }
+    }
+    
+    const distractors = Array.from(distractorsSet);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const buildHalvesQuestion = (sentences, id, count) => {
+    const pairs = [];
+    sentences.forEach(s => {
+      if (pairs.length >= count) return;
+      const parts = s.en.split('since');
+      if (parts.length >= 2) {
+        pairs.push({
+          left: parts[0].trim() + " since",
+          right: parts.slice(1).join('since').trim()
+        });
+      } else {
+        // Fallback split in half
+        const words = s.en.split(' ');
+        const mid = Math.floor(words.length / 2);
+        pairs.push({
+          left: words.slice(0, mid).join(' '),
+          right: words.slice(mid).join(' ')
+        });
+      }
+    });
+    return {
+      id: id,
+      type: "matching",
+      prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+      leftHeader: "Ana Cümle",
+      rightHeader: "Yan Cümle (since...)",
+      pairs: pairs
+    };
+  };
+
+  const compileClauseExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+    
+    // 2 Matching (each 5 pairs)
+    const matchCount = Math.min(10, sorted.length);
+    if (matchCount >= 5) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match1`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+    if (matchCount >= 10) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match2`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(5, 10).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+
+    // Cloze questions
+    const clozeLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // MC questions
+    const mcLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < mcLimit; i++) {
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  const compileSentenceExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // Halves matching
+    exList.push(buildHalvesQuestion(sorted, `u${unitId}l${lessonId}_${exId}_halves`, Math.min(5, sorted.length)));
+
+    // Cloze questions
+    const clozeLimit = Math.min(5, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // Word Bank questions
+    const wbLimit = Math.max(0, sorted.length - 2);
+    for (let i = 2; i < wbLimit; i++) {
+      exList.push(buildWBQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileClauseExercise(unit22Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "since ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
+    compileClauseExercise(unit22Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "since bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
+    compileSentenceExercise(unit22Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "since bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+  ];
+}
+
+
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -11326,7 +11664,7 @@ const rawTopics = [
       { formula: "Before + Clause", example: "Before the reaction started, the liquid was cold: Tepkime başlamadan önce sıvı soğuktu" }
     ],
     subtitles: [
-      "B. Before (Sayfa 164)"
+      "A. Before (Sayfa 164)"
     ]
   },
   {
@@ -11338,35 +11676,35 @@ const rawTopics = [
       { 
         formula: "When + Present / Past Simple", 
         example: "When the bells ring: Ziller çaldığında / When he came: O geldiğinde",
-        description: "Bölüm i: Fiil Şimdiki / Geniş Zamanda İse (When + Present Simple)\n\nKural Açıklaması:\nİngilizcede gelecek zamanı kasteden zaman cümlelerinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir. Bu nedenle bu yapı Türkçeye geleceğe yönelik bir anlamla (Gelecek Zaman veya '-diğinde / -eceği zaman') tercüme edilir."
+        description: "Kural Açıklaması:\nİngilizcede zaman zarfı cümleleri ve ana cümleler arasında zaman uyumu (Tense Agreement) bulunmalıdır. Gelecek zaman kastedilse bile zaman cümleciği içinde 'will' kullanılmayıp Geniş Zaman (Present Simple) tercih edilir (örn. 'when it ceases' - durduğunda). Geçmişteki eylemler için ise Geçmiş Zaman (Past Simple) kullanılır (örn. 'when the process ceased' - süreç durduğunda)."
       },
       {
         formula: "When + Present / Past Perfect",
         example: "When they have finished: Bitirdiklerinde / When he had left: Ayrılmış olduğunda",
-        description: "when ile başlayan ve eylemin tamamlanmışlığını vurgulayan perfect zaman yan cümleleri."
+        description: "Kural Açıklaması:\nWhen ile kurulan zaman cümlelerinde eylemin tamamlanmışlığı vurgulanmak istendiğinde Perfect zamanlar tercih edilir. Present Perfect (have/has + V3) gelecekte tamamlanacak durumları, Past Perfect (had + V3) ise geçmişte başka bir eylemden önce gerçekleşen durumları ifade eder."
       },
       {
         formula: "When + Passive (be + V3)",
         example: "When it is heated: Isıtıldığında / When they were examined: İncelendiklerinde",
-        description: "when ile başlayan edilgen ve perfect edilgen çatıya sahip zaman cümleleri."
+        description: "Kural Açıklaması:\nYan cümledeki eylemin yapanı değil de eylemden etkileneni vurgulandığında edilgen (passive) çatı kullanılır. Geniş/geçmiş zaman edilgen (am/is/are + V3, was/were + V3) veya perfect edilgen (has/have/had + been + V3) biçimleri tercih edilir."
       },
       {
         formula: "When + Mixed Tenses",
         example: "When sugar is consumed: Şeker tüketildiğinde",
-        description: "when ile kurulan karışık zaman ilişkilerine sahip yan cümle örnekleri."
+        description: "Kural Açıklaması:\nFarklı zaman biçimlerinin (Present/Past Simple) ve çatıların (Active/Passive) bir arada kullanıldığı karışık zamanlı yan cümle örneklerini kapsar."
       },
       {
         formula: "When + Complex Clause",
         example: "When the substance is dissolved: Madde çözündüğünde",
-        description: "when bağlacı ile kurulan, fen ve doğa bilimlerine yönelik ileri düzey karmaşık akademik cümle yapıları."
+        description: "Kural Açıklaması:\nDoğa bilimleri, fen ve mühendislik alanlarından seçilmiş; when bağlacının tam ana cümle ile birleştiği ileri düzey karmaşık akademik cümle yapılarının incelenmesi."
       }
     ],
     subtitles: [
-      "C. When - Geniş ve Geçmiş Zaman",
-      "C. When - Perfect Zamanlar",
+      "A. When - Geniş ve Geçmiş Zaman",
+      "B. When - Perfect Zamanlar",
       "C. When - Edilgen Yapılar",
-      "C. When - Karışık Zamanlar",
-      "C. When - Akademik Cümleler"
+      "D. When - Karışık Zamanlar",
+      "E. When - Akademik Cümleler"
     ]
   },
   {
@@ -11378,7 +11716,7 @@ const rawTopics = [
       { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" }
     ],
     subtitles: [
-      "D. Since"
+      "A. Since"
     ]
   },
   {
@@ -11390,7 +11728,7 @@ const rawTopics = [
       { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" }
     ],
     subtitles: [
-      "E. While / As"
+      "A. While / As"
     ]
   },
   {
@@ -11402,7 +11740,7 @@ const rawTopics = [
       { formula: "Until + Clause", example: "Until the mixture cools down, do not touch the container: Karışım soğuyana kadar kaba dokunmayın" }
     ],
     subtitles: [
-      "F. Until"
+      "A. Until"
     ]
   },
   {
@@ -13423,7 +13761,7 @@ const unitSentencesMap = {
     5: { exercises: buildUnit19Lesson68Exercises(24, 72, 5) }
   },
   25: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit22SinceExercises(25, 73) }
   },
   26: {
     1: { exercises: [] }

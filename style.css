@@ -5129,6 +5129,150 @@ input {
   font-size: 0.9rem;
 }
 
+/* ════════════════════════════════════════════════════════
+   GRAMER AÇIKLAMA MODALİ (LESSON 68) STİLLERİ
+   ════════════════════════════════════════════════════════ */
+.grammar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  animation: fadeIn 0.25s ease;
+  padding: 20px;
+}
+
+.grammar-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: popoverFadeIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.grammar-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.grammar-modal-icon {
+  font-size: 1.5rem;
+}
+
+.grammar-modal-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.grammar-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.grammar-modal-close:hover {
+  color: var(--color-wrong);
+}
+
+.grammar-modal-body {
+  padding: 24px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grammar-explain-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-wrong);
+}
+
+.grammar-explain-text {
+  background: var(--bg-primary);
+  border-left: 4px solid var(--color-wrong);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.grammar-rule-box {
+  background: var(--accent-primary-light);
+  border: 1px solid rgba(139, 126, 200, 0.2);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grammar-rule-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--accent-primary-hover);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.grammar-example-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 10px;
+}
+
+.grammar-example-wrong {
+  color: var(--color-wrong);
+  font-weight: 600;
+}
+
+.grammar-example-correct {
+  color: var(--color-correct);
+  font-weight: 600;
+}
+
+.grammar-modal-footer {
+  padding: 16px 24px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 
 
