@@ -6252,6 +6252,348 @@ function buildUnit22SinceExercises(unitId, lessonId) {
 
 
 
+// ─── BÖLÜM 23 74. DERS RAW SENTENCES (While / As) ──────────────
+
+const unit23Lesson1SentencesRaw = [
+  { en: "while it is hot", tr: "o sıcakken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ hot", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'hot'] },
+  { en: "while it is cold", tr: "o soğukken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ cold", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'cold'] },
+  { en: "while it is full", tr: "o doluyken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ full", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'full'] },
+  { en: "while it is ready", tr: "o hazırken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ ready", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'ready'] },
+  { en: "while it is empty", tr: "o boşken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ empty", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'empty'] },
+  { en: "while it is here", tr: "o buradayken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ here", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'here'] },
+  { en: "while it grows", tr: "o büyüdükçe", word: "grow", trWord: "büyümek", correct: "grows", blank: "while it ___", options: ['grows', 'grow', 'growing', 'will grow'], blocks: ['while', 'it', 'grows'] },
+  { en: "while it develops", tr: "o geliştikçe", word: "develop", trWord: "gelişmek", correct: "develops", blank: "while it ___", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['while', 'it', 'develops'] },
+  { en: "while it contracts", tr: "o büzüldükçe", word: "contract", trWord: "büzülmek", correct: "contracts", blank: "while it ___", options: ['contracts', 'contract', 'contracting', 'will contract'], blocks: ['while', 'it', 'contracts'] },
+  { en: "while it expands", tr: "o genleştikçe", word: "expand", trWord: "genleşmek", correct: "expands", blank: "while it ___", options: ['expands', 'expand', 'expanding', 'will expand'], blocks: ['while', 'it', 'expands'] }
+];
+
+const unit23Lesson1SentencesL2Raw = [
+  { en: "Strike the iron while it is hot.", tr: "Demiri sıcakken döv.", word: "be", trWord: "olmak", correct: "is", blank: "Strike the iron while it ___ hot.", options: ['is', 'was', 'will be', 'being'], blocks: ['Strike', 'the', 'iron', 'while', 'it', 'is', 'hot.'] },
+  { en: "We cannot store the liquid while it is cold.", tr: "Sıvıyı soğukken depolayamayız.", word: "be", trWord: "olmak", correct: "is", blank: "We cannot store the liquid while it ___ cold.", options: ['is', 'was', 'will be', 'being'], blocks: ['We', 'cannot', 'store', 'the', 'liquid', 'while', 'it', 'is', 'cold.'] },
+  { en: "Do not add more data while the disk is full.", tr: "Disk doluyken daha fazla veri eklemeyin.", word: "be", trWord: "olmak", correct: "is", blank: "Do not add more data while the disk ___ full.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'add', 'more', 'data', 'while', 'the', 'disk', 'is', 'full.'] },
+  { en: "You can download the file while it is ready.", tr: "Dosya hazırken indirebilirsiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You can download the file while it ___ ready.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'can', 'download', 'the', 'file', 'while', 'it', 'is', 'ready.'] },
+  { en: "Please clean the clean-room while it is empty.", tr: "Lütfen temiz odayı boşken temizleyin.", word: "be", trWord: "olmak", correct: "is", blank: "Please clean the clean-room while it ___ empty.", options: ['is', 'was', 'will be', 'being'], blocks: ['Please', 'clean', 'the', 'clean-room', 'while', 'it', 'is', 'empty.'] },
+  { en: "You should check the device while it is here.", tr: "Cihaz buradayken kontrol etmelisiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You should check the device while it ___ here.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'should', 'check', 'the', 'device', 'while', 'it', 'is', 'here.'] },
+  { en: "Our experience grows as we learn.", tr: "Biz öğrendikçe deneyimimiz büyür.", word: "grow", trWord: "büyümek", correct: "grows", blank: "Our experience ___ as we learn.", options: ['grows', 'grow', 'growing', 'will grow'], blocks: ['Our', 'experience', 'grows', 'as', 'we', 'learn.'] },
+  { en: "The child learns new concepts while he develops.", tr: "Çocuk geliştikçe yeni kavramlar öğrenir.", word: "develop", trWord: "gelişmek", correct: "develops", blank: "The child learns new concepts while he ___.", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['The', 'child', 'learns', 'new', 'concepts', 'while', 'he', 'develops.'] },
+  { en: "The metal loses its heat while it contracts.", tr: "Metal büzüldükçe ısısını kaybeder.", word: "contract", trWord: "büzülmek", correct: "contracts", blank: "The metal loses its heat while it ___.", options: ['contracts', 'contract', 'contracting', 'will contract'], blocks: ['The', 'metal', 'loses', 'its', 'heat', 'while', 'it', 'contracts.'] },
+  { en: "The balloon becomes thinner while it expands.", tr: "Balon genleştikçe incelir.", word: "expand", trWord: "genleşmek", correct: "expands", blank: "The balloon becomes thinner while it ___.", options: ['expands', 'expand', 'expanding', 'will expand'], blocks: ['The', 'balloon', 'becomes', 'thinner', 'while', 'it', 'expands.'] }
+];
+
+const unit23Lesson1SentencesL3Raw = [
+  {
+    en: "The software compiler executes the primary script assets seamlessly while the processor core temperature is hot.",
+    tr: "Yazılım derleyicisi, işlemci çekirdek sıcaklığı sıcakken birincil betik varlıklarını sorunsuz bir şekilde yürütür.",
+    word: "execute", trWord: "yürütmek", correct: "executes",
+    blank: "The software compiler ___ the primary script assets seamlessly while the processor core temperature is hot.",
+    options: ['executes', 'execute', 'executing', 'will execute'],
+    blocks: ['The', 'software', 'compiler', 'executes', 'the', 'primary', 'script', 'assets', 'seamlessly', 'while', 'the', 'processor', 'core', 'temperature', 'is', 'hot.']
+  },
+  {
+    en: "Superconducting materials exhibit zero electrical resistance while the testing environment is cold.",
+    tr: "Süperiletken malzemeler, test ortamı soğukken sıfır elektrik direnci gösterir.",
+    word: "exhibit", trWord: "göstermek", correct: "exhibit",
+    blank: "Superconducting materials ___ zero electrical resistance while the testing environment is cold.",
+    options: ['exhibit', 'exhibits', 'exhibiting', 'will exhibit'],
+    blocks: ['Superconducting', 'materials', 'exhibit', 'zero', 'electrical', 'resistance', 'while', 'the', 'testing', 'environment', 'is', 'cold.']
+  },
+  {
+    en: "The automated system automatically redirects incoming server traffic while the main database storage is full.",
+    tr: "Otomatik sistem, ana veri tabanı deposu doluyken gelen sunucu trafiğini otomatik olarak yeniden yönlendirir.",
+    word: "redirect", trWord: "yönlendirmek", correct: "redirects",
+    blank: "The automated system automatically ___ incoming server traffic while the main database storage is full.",
+    options: ['redirects', 'redirect', 'redirecting', 'will redirect'],
+    blocks: ['The', 'automated', 'system', 'automatically', 'redirects', 'incoming', 'server', 'traffic', 'while', 'the', 'main', 'database', 'storage', 'is', 'full.']
+  },
+  {
+    en: "The system administrator deploys the update to production servers while the staging configuration is ready.",
+    tr: "Sistem yöneticisi, hazırlık yapılandırması hazırken güncellemeyi üretim sunucularına dağıtır.",
+    word: "deploy", trWord: "dağıtmak", correct: "deploys",
+    blank: "The system administrator ___ the update to production servers while the staging configuration is ready.",
+    options: ['deploys', 'deploy', 'deploying', 'will deploy'],
+    blocks: ['The', 'system', 'administrator', 'deploys', 'the', 'update', 'to', 'production', 'servers', 'while', 'the', 'staging', 'configuration', 'is', 'ready.']
+  },
+  {
+    en: "The network maintenance crew reinstalls the server hardware modules while the data center facility is empty.",
+    tr: "Ağ bakım ekibi, veri merkezi tesisi boşken sunucu donanım modüllerini yeniden kurar.",
+    word: "reinstall", trWord: "yeniden kurmak", correct: "reinstalls",
+    blank: "The network maintenance crew ___ the server hardware modules while the data center facility is empty.",
+    options: ['reinstalls', 'reinstall', 'reinstalling', 'will reinstall'],
+    blocks: ['The', 'network', 'maintenance', 'crew', 'reinstalls', 'the', 'server', 'hardware', 'modules', 'while', 'the', 'data', 'center', 'facility', 'is', 'empty.']
+  },
+  {
+    en: "The development team must perform comprehensive local testing on the mobile app source code while the device is here.",
+    tr: "Geliştirme ekibi, cihaz buradayken mobil uygulama kaynak kodu üzerinde kapsamlı yerel testler yapmalıdır.",
+    word: "perform", trWord: "yapmak", correct: "perform",
+    blank: "The development team must ___ comprehensive local testing on the mobile app source code while the device is here.",
+    options: ['perform', 'performs', 'performing', 'performance'],
+    blocks: ['The', 'development', 'team', 'must', 'perform', 'comprehensive', 'local', 'testing', 'on', 'the', 'mobile', 'app', 'source', 'code', 'while', 'the', 'device', 'is', 'here.']
+  },
+  {
+    en: "The neural network algorithm adjusts its structural weights and parameters dynamically as the training dataset grows.",
+    tr: "Yapay sinir ağı algoritması, eğitim veri kümesi büyüdükçe yapısal ağırlıklarını ve parametrelerini dinamik olarak ayarlar.",
+    word: "grow", trWord: "büyümek", correct: "grows",
+    blank: "The neural network algorithm adjusts its structural weights and parameters dynamically as the training dataset ___.",
+    options: ['grows', 'grow', 'growing', 'will grow'],
+    blocks: ['The', 'neural', 'network', 'algorithm', 'adjusts', 'its', 'structural', 'weights', 'and', 'parameters', 'dynamically', 'as', 'the', 'training', 'dataset', 'grows.']
+  },
+  {
+    en: "The linguistic software gains a deeper contextual understanding of grammar patterns while the application architecture develops.",
+    tr: "Dilbilimsel yazılım, uygulama mimarisi geliştikçe dilbilgisi kalıplarını daha derin bir bağlamsal anlayışla kazanır.",
+    word: "gain", trWord: "kazanmak", correct: "gains",
+    blank: "The linguistic software ___ a deeper contextual understanding of grammar patterns while the application architecture develops.",
+    options: ['gains', 'gain', 'gaining', 'will gain'],
+    blocks: ['The', 'linguistic', 'software', 'gains', 'a', 'deeper', 'contextual', 'understanding', 'of', 'grammar', 'patterns', 'while', 'the', 'application', 'architecture', 'develops.']
+  },
+  {
+    en: "The dense gas structure generates immense gravitational pressure while it contracts into a new star.",
+    tr: "Yoğun gaz yapısı, yeni bir yıldıza doğru büzüldükçe muazzam bir kütleçekim basıncı üretir.",
+    word: "contract", trWord: "büzülmek", correct: "contracts",
+    blank: "The dense gas structure generates immense gravitational pressure while it ___ into a new star.",
+    options: ['contracts', 'contract', 'contracting', 'will contract'],
+    blocks: ['The', 'dense', 'gas', 'structure', 'generates', 'immense', 'gravitational', 'pressure', 'while', 'it', 'contracts', 'into', 'a', 'new', 'star.']
+  },
+  {
+    en: "The spatial boundary of the universe carries celestial bodies away from each other while it expands continuously.",
+    tr: "Evrenin uzamsal sınırı, sürekli genişledikçe gök cisimlerini birbirinden uzaklaştırır.",
+    word: "expand", trWord: "genleşmek", correct: "expands",
+    blank: "The spatial boundary of the universe carries celestial bodies away from each other while it ___ continuously.",
+    options: ['expands', 'expand', 'expanding', 'will expand'],
+    blocks: ['The', 'spatial', 'boundary', 'of', 'the', 'universe', 'carries', 'celestial', 'bodies', 'away', 'from', 'each', 'other', 'while', 'it', 'expands', 'continuously.']
+  }
+];
+
+function buildUnit23WhileExercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/iken/g, "meden önce").replace(/dikçe/g, "meden önce").replace(/erken/g, "meden önce").replace(/arken/g, "meden önce");
+    let d2 = tr.replace(/iken/g, "dikten sonra").replace(/dikçe/g, "dikten sonra");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    if (d2 !== tr) rawDistractors.push(d2);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
+    if (candidates.length > 0) {
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
+      }
+    }
+    
+    const distractors = Array.from(distractorsSet);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const buildHalvesQuestion = (sentences, id, count) => {
+    const pairs = [];
+    sentences.forEach(s => {
+      if (pairs.length >= count) return;
+      let splitWord = "while";
+      if (s.en.includes("as ")) splitWord = "as";
+      const idx = s.en.indexOf(splitWord);
+      
+      if (idx !== -1) {
+        pairs.push({
+          left: s.en.substring(0, idx + splitWord.length).trim(),
+          right: s.en.substring(idx + splitWord.length).trim()
+        });
+      } else {
+        const words = s.en.split(' ');
+        const mid = Math.floor(words.length / 2);
+        pairs.push({
+          left: words.slice(0, mid).join(' '),
+          right: words.slice(mid).join(' ')
+        });
+      }
+    });
+    return {
+      id: id,
+      type: "matching",
+      prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+      leftHeader: "Yan Cümle",
+      rightHeader: "Ana Cümle",
+      pairs: pairs
+    };
+  };
+
+  const compileClauseExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+    
+    // 2 Matching (each 5 pairs)
+    const matchCount = Math.min(10, sorted.length);
+    if (matchCount >= 5) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match1`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+    if (matchCount >= 10) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match2`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(5, 10).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+
+    // Cloze questions
+    const clozeLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // MC questions
+    const mcLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < mcLimit; i++) {
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  const compileSentenceExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // Halves matching
+    exList.push(buildHalvesQuestion(sorted, `u${unitId}l${lessonId}_${exId}_halves`, Math.min(5, sorted.length)));
+
+    // Cloze questions
+    const clozeLimit = Math.min(5, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // Word Bank questions
+    const wbLimit = Math.max(0, sorted.length - 2);
+    for (let i = 2; i < wbLimit; i++) {
+      exList.push(buildWBQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileClauseExercise(unit23Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "while/as ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
+    compileClauseExercise(unit23Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "while/as bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
+    compileSentenceExercise(unit23Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "while/as bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+  ];
+}
+
+
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -13764,7 +14106,7 @@ const unitSentencesMap = {
     1: { exercises: buildUnit22SinceExercises(25, 73) }
   },
   26: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit23WhileExercises(26, 74) }
   },
   27: {
     1: { exercises: [] }
