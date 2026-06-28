@@ -860,7 +860,7 @@ const L98_raw = [
   },
   {
     type: "multiple-fill-blank",
-    sentence: "Users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
+    sentence: "html text: users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
     translation: "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı.",
     corrects: ["have", "crashed"]
   },
@@ -1105,6 +1105,227 @@ const L99_raw = [
   }
 ];
 
+// Raw question definitions for Lesson 100 ("It is (high) time" Kalıbı) - 40 questions
+const L100_raw = [
+  // Exercise 1 (1-10)
+  {
+    type: "fill-blank",
+    sentence: "It is time the development team ___ the memory leak.",
+    options: ["fixed", "fixes", "fix", "has fixed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "___ time the administration <span style=\"color: #ff6b6b; font-weight: bold;\">updated</span> the safety laws.",
+    options: ["It is high", "It was", "It has been", "There is"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the technical operators ___ the main server.",
+    options: ["rebooted", "reboots", "reboot", "are rebooting"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "___ time the government <span style=\"color: #ff6b6b; font-weight: bold;\">reduced</span> factory carbon emissions.",
+    options: ["It is high", "It had", "There is", "It has"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the principal researcher ___ the statistical data.",
+    options: ["compiled", "compiles", "compile", "has compiled"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It ___ time the development team <span style=\"color: #ff6b6b; font-weight: bold;\">fixed</span> the memory leak.",
+    options: ["is", "was", "has been", "would be"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time the administration ___ the safety laws.",
+    options: ["updated", "updates", "update", "is updating"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time the technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">rebooted</span> the main server.",
+    options: ["time", "high time", "the time", "just time"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time the government ___ factory carbon emissions.",
+    options: ["reduced", "reduces", "reduce", "will reduce"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time the principal researcher <span style=\"color: #ff6b6b; font-weight: bold;\">compiled</span> the statistical data.",
+    options: ["time", "high time", "just time", "the time"]
+  },
+
+  // Exercise 2 (11-20)
+  {
+    type: "fill-blank",
+    sentence: "It is high time we ___ the legacy application components.",
+    options: ["refactored", "refactor", "refactors", "are refactoring"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It ___ time the university <span style=\"color: #ff6b6b; font-weight: bold;\">granted</span> the necessary project funds.",
+    options: ["is", "was", "has been", "will be"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time the field crew ___ the concrete foundation.",
+    options: ["reinforced", "reinforce", "reinforces", "will reinforce"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time companies <span style=\"color: #ff6b6b; font-weight: bold;\">hired</span> compliance policy experts.",
+    options: ["high time", "time", "the time", "just time"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the compiler ___ the source code files.",
+    options: ["optimized", "optimizes", "optimize", "optimizing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time we <span style=\"color: #ff6b6b; font-weight: bold;\">refactored</span> the legacy application components.",
+    options: ["high time", "time", "the time", "just time"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the university ___ the necessary project funds.",
+    options: ["granted", "grants", "grant", "has granted"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time the field crew <span style=\"color: #ff6b6b; font-weight: bold;\">reinforced</span> the concrete foundation.",
+    options: ["high time", "time", "the time", "just time"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time companies ___ compliance policy experts.",
+    options: ["hired", "hires", "hire", "are hiring"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is ___ time the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">optimized</span> the source code files.",
+    options: ["time", "high time", "the time", "just time"]
+  },
+
+  // Exercise 3 (21-30)
+  {
+    type: "fill-blank",
+    sentence: "It is time the development team ___ the background memory leak since users are experiencing constant navigation delay.",
+    options: ["fixed", "fixes", "fix", "has fixed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is high time the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
+    options: ["updated", "updates", "update", "is updating"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the technical operators ___ the main server so that secure cryptographic token generation can resume.",
+    options: ["rebooted", "reboots", "reboot", "are rebooting"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is high time the government ___ factory carbon emissions in order that international environmental limits might be met.",
+    options: ["reduced", "reduces", "reduce", "will reduce"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is time the principal researcher ___ the statistical data before the board requests the annual performance report.",
+    options: ["compiled", "compiles", "compile", "has compiled"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the development team ___ the background memory leak since users are experiencing constant navigation delay.",
+    translation: "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi.",
+    corrects: ["time", "fixed"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
+    translation: "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
+    corrects: ["high time", "updated"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the technical operators ___ the main server so that secure cryptographic token generation can resume.",
+    translation: "Güvenli kriptografik jeton üretimi yeniden başlayabilsin diye, teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi.",
+    corrects: ["time", "rebooted"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the government ___ factory carbon emissions in order that international environmental limits might be met.",
+    translation: "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor.",
+    corrects: ["high time", "reduced"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the principal researcher ___ the statistical data before the board requests the annual performance report.",
+    translation: "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi.",
+    corrects: ["time", "compiled"]
+  },
+
+  // Exercise 4 (31-40)
+  {
+    type: "fill-blank",
+    sentence: "It is high time we ___ the legacy application components lest the system should trigger an irreversible database crash.",
+    options: ["refactored", "refactor", "refactors", "are refactoring"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is time the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
+    options: ["granted", "grants", "grant", "has granted"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
+    options: ["reinforced", "reinforce", "reinforces", "will reinforce"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is time the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
+    options: ["optimized", "optimizes", "optimize", "optimizing"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is high time companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
+    options: ["hired", "hires", "hire", "are hiring"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ we ___ the legacy application components lest the system should trigger an irreversible database crash.",
+    translation: "Sistemin geri döndürülemez bir veritabanı çöküşünü tetiklememesi için, eski uygulama bileşenlerini yeniden yapılandırma zamanımız geldi de geçiyor.",
+    corrects: ["high time", "refactored"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
+    translation: "Sosyoloji bölümünün doktora sonrası akademisyenleri işe alması gerektiğinden, üniversitenin gerekli proje fonlarını sağlama zamanı geldi.",
+    corrects: ["time", "granted"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
+    translation: "Sahadaki çalkantılı hava koşullarına rağmen, saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor.",
+    corrects: ["high time", "reinforced"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
+    translation: "Üretim sunucularındaki işlem gecikme parametrelerini azaltarak, derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi.",
+    corrects: ["time", "optimized"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is ___ companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
+    translation: "Yasama meclisinin katı dijital para kurallarını kabul ettiğini göz önünde bulundurarak, şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor.",
+    corrects: ["high time", "hired"]
+  }
+];
+
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -1146,7 +1367,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
              lessonId === 98 ? "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I" :
-                               "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I",
+             lessonId === 99 ? "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I" :
+                               "Alıştırma 1: \"It is (high) time\" Kalıbı I",
       description: "Boşluk doldurma ve zaman zarfları pratikleri.",
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
@@ -1156,7 +1378,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
              lessonId === 98 ? "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II" :
-                               "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II",
+             lessonId === 99 ? "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II" :
+                               "Alıştırma 2: \"It is (high) time\" Kalıbı II",
       description: "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
@@ -1166,7 +1389,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
              lessonId === 98 ? "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III" :
-                               "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III",
+             lessonId === 99 ? "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III" :
+                               "Alıştırma 3: \"It is (high) time\" Kalıbı III",
       description: "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
@@ -1176,7 +1400,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
              lessonId === 98 ? "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV" :
-                               "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV",
+             lessonId === 99 ? "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV" :
+                               "Alıştırma 4: \"It is (high) time\" Kalıbı IV",
       description: "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
       questions: getExerciseQuestions(rawList.slice(30, 40), lessonId, 4)
     }
@@ -1188,7 +1413,8 @@ const unit0Exercises = {
   2: { exercises: buildExercises(L96_raw, 96) },
   3: { exercises: buildExercises(L97_raw, 97) },
   4: { exercises: buildExercises(L98_raw, 98) },
-  5: { exercises: buildExercises(L99_raw, 99) }
+  5: { exercises: buildExercises(L99_raw, 99) },
+  6: { exercises: buildExercises(L100_raw, 100) }
 };
 
 const dataPath = '../data.js';
@@ -1206,20 +1432,22 @@ if (topicStartIdx !== -1) {
     title: "DENEME",
     desc: "Time-Link: Connectors & Tenses",
     icon: "🧪",
-    numLessons: 5,
+    numLessons: 6,
     formulas: [
       { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
       { formula: "Subject + V2", example: "Yesterday, the central server <span style=\\"color: #ff6b6b; font-weight: bold;\\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
       { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
       { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple, kırmızı) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect, yeşil) yapısındadır." },
-      { formula: "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)", example: "By the time we <span style=\\"color: #ff6b6b; font-weight: bold;\\">arrived</span>, most people <span style=\\"color: #da77f2; font-weight: bold;\\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.", description: "By the time geçmişe uygulandığında yan cümle V2 (kırmızı), ana cümle had V3 (mor) alır; geleceğe uygulandığında yan cümle V1 (mavi), ana cümle will have V3 (yeşil) alır." }
+      { formula: "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)", example: "By the time we <span style=\\"color: #ff6b6b; font-weight: bold;\\">arrived</span>, most people <span style=\\"color: #da77f2; font-weight: bold;\\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.", description: "By the time geçmişe uygulandığında yan cümle V2 (kırmızı), ana cümle had V3 (mor) alır; geleceğe uygulandığında yan cümle V1 (mavi), ana cümle will have V3 (yeşil) alır." },
+      { formula: "It is (high) time + Subject + V2 (Past Simple)", example: "It is high time the administration <span style=\\"color: #ff6b6b; font-weight: bold;\\">updated</span> the safety laws: Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.", description: "Bu kalıp, yapısal olarak it is time / it is high time + v2 (Past Simple, kırmızı) dizilimini zorunlu kılar. Anlam olarak şu ana (present) yönelik bir gecikmişlik veya zorunluluk bildirse de dil bilgisi kuralı gereği eylem geçmiş zamandadır." }
     ],
     subtitles: [
       "Present Continuous (is Ving) - Zaman Zarfları",
       "Past Simple (v2) - Zaman Zarfları",
       "Present Perfect (have V3) - Zaman Zarfları",
       "\\\"Since\\\" Zaman Uyumu Kalıpları",
-      "\\\"By the time\\\" Zaman Uyumu Kalıpları"
+      "\\\"By the time\\\" Zaman Uyumu Kalıpları",
+      "\\\"It is (high) time\\\" Kalıbı"
     ]
   }\n`;
     content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);
