@@ -12632,39 +12632,19 @@ const rawTopics = [
     ]
   },
   {
-    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, Since",
-    desc: "since bağlacı ile kurulan zaman cümleleri",
+    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, Since, While / As, Until",
+    desc: "since, while/as, until bağlaçları ile kurulan zaman cümleleri",
     icon: "🎻",
-    numLessons: 1,
+    numLessons: 3,
     formulas: [
-      { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" }
-    ],
-    subtitles: [
-      "A. Since"
-    ]
-  },
-  {
-    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, While / As",
-    desc: "while/as bağlaçları ile kurulan zaman cümleleri",
-    icon: "🎻",
-    numLessons: 1,
-    formulas: [
-      { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" }
-    ],
-    subtitles: [
-      "A. While / As"
-    ]
-  },
-  {
-    title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, Until",
-    desc: "until bağlacı ile kurulan zaman cümleleri",
-    icon: "🎻",
-    numLessons: 1,
-    formulas: [
+      { formula: "Since + Clause", example: "Since the experiment began, we have observed many changes: Deney başladığından beri birçok değişiklik gözlemledik" },
+      { formula: "While / As + Clause", example: "While they were analyzing the data, a power failure occurred: Onlar verileri analiz ederken elektrik kesintisi oldu" },
       { formula: "Until + Clause", example: "Until the mixture cools down, do not touch the container: Karışım soğuyana kadar kaba dokunmayın" }
     ],
     subtitles: [
-      "A. Until"
+      "A. Since",
+      "B. While / As",
+      "C. Until"
     ]
   },
   {
@@ -14685,20 +14665,16 @@ const unitSentencesMap = {
     5: { exercises: buildUnit19Lesson68Exercises(24, 72, 5) }
   },
   25: {
-    1: { exercises: buildUnit22SinceExercises(25, 73) }
+    1: { exercises: buildUnit22SinceExercises(25, 73) },
+    2: { exercises: buildUnit23WhileExercises(25, 74) },
+    3: { exercises: buildUnit24UntilExercises(25, 75) }
   },
   26: {
-    1: { exercises: buildUnit23WhileExercises(26, 74) }
-  },
-  27: {
-    1: { exercises: buildUnit24UntilExercises(27, 75) }
-  },
-  28: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] }
   },
-  29: {
+  27: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
@@ -14707,19 +14683,19 @@ const unitSentencesMap = {
     6: { exercises: [] },
     7: { exercises: [] }
   },
-  30: {
+  28: {
     1: { exercises: [] },
     2: { exercises: [] },
     3: { exercises: [] },
     4: { exercises: [] }
   },
+  29: {
+    1: { exercises: [] }
+  },
+  30: {
+    1: { exercises: [] }
+  },
   31: {
-    1: { exercises: [] }
-  },
-  32: {
-    1: { exercises: [] }
-  },
-  33: {
     1: { exercises: [] }
   }
 };
