@@ -2357,7 +2357,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   // Render preview details
   let previewHTML = '';
-  const topic = rawTopics[unit.id - 1];
+  const topic = unit.id === 0 ? rawTopics.find(t => t.id === 0) : rawTopics[unit.id - 1];
   const lessonIndex = unit.lessons.indexOf(lessonId);
 
   if (topic) {
