@@ -62,7 +62,7 @@ const L95_raw = [
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "Open target: the system is ___ generating a unique cryptographic key.",
+    sentence: "The system is ___ generating a unique cryptographic key.",
     options: ["presently", "ago", "last week", "since"]
   },
   {
@@ -141,7 +141,7 @@ const L95_raw = [
   {
     type: "multiple-fill-blank",
     sentence: "At the moment, the compiler ___ the data blocks ___ the network firewall blocks external traffic.",
-    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor.",
     corrects: ["is processing", "while"]
   },
   {
@@ -884,6 +884,227 @@ const L98_raw = [
   }
 ];
 
+// Raw question definitions for Lesson 99 ("By the time" Zaman Uyumu Kalıpları) - 40 questions
+const L99_raw = [
+  // Exercise 1 (1-10)
+  {
+    type: "fill-blank",
+    sentence: "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ .",
+    options: ["had left", "will have left", "left", "have left"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time we ___ home, children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed.",
+    options: ["arrive", "arrived", "will arrive", "had arrived"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ .",
+    options: ["had spread", "will have spread", "spreads", "has spread"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the compiler ___ , the server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> it.",
+    options: ["finishes", "finished", "will finish", "had finished"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ .",
+    options: ["had collapsed", "will have collapsed", "collapses", "has collapsed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the law ___ , firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
+    options: ["takes effect", "took effect", "will take effect", "had taken effect"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project ___ .",
+    options: ["had ended", "will have ended", "ends", "has ended"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time you ___ the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
+    options: ["open", "opened", "will open", "had opened"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew ___ .",
+    options: ["had left", "will have left", "leaves", "have left"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the app ___ , the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
+    options: ["launches", "launched", "will launch", "had launched"]
+  },
+
+  // Exercise 2 (11-20)
+  {
+    type: "fill-blank",
+    sentence: "___ the law <span style=\"color: #339af0; font-weight: bold;\">takes effect</span>, firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
+    options: ["By the time", "While", "Since", "Although"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "___ they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project <span style=\"color: #da77f2; font-weight: bold;\">had ended</span>.",
+    options: ["By the time", "Since", "While", "Lest"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "___ you <span style=\"color: #339af0; font-weight: bold;\">open</span> the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
+    options: ["By the time", "Since", "Whereas", "As soon as"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "___ the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.",
+    options: ["By the time", "Since", "While", "Because"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "___ the app <span style=\"color: #339af0; font-weight: bold;\">launches</span>, the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
+    options: ["By the time", "Until", "Since", "Whereas"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ left.",
+    options: ["had", "will have", "have", "were"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time we <span style=\"color: #339af0; font-weight: bold;\">arrive</span> home, children ___ gone to bed.",
+    options: ["will have", "had", "have", "are"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ spread.",
+    options: ["had", "will have", "has", "was"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time the compiler <span style=\"color: #339af0; font-weight: bold;\">finishes</span>, the server ___ saved it.",
+    options: ["will have", "had", "has", "is"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ collapsed.",
+    options: ["had", "will have", "has", "was"]
+  },
+
+  // Exercise 3 (21-30)
+  {
+    type: "fill-blank",
+    sentence: "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span> at the corporate headquarters, most board members ___ the emergency meeting.",
+    options: ["had left", "will have left", "left", "have left"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time we ___ home from the laboratory, the children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed because of the late hour.",
+    options: ["arrive", "arrived", "will arrive", "had arrived"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the structural bug, the dynamic malware ___ across secondary network partitions.",
+    options: ["had spread", "will have spread", "spreads", "has spread"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the compiler ___ code optimization, the backup server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> the configuration metrics.",
+    options: ["finishes", "finished", "will finish", "had finished"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time the severe coastal storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the ancient bridge structure ___ into the turbulent river.",
+    options: ["had collapsed", "will have collapsed", "collapses", "has collapsed"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time we ___ at the corporate headquarters, most board members ___ left the emergency meeting.",
+    translation: "Biz şirket merkezine vardığımızda yönetim kurulu üyelerinin çoğu acil toplantıdan ayrılmıştı.",
+    corrects: ["arrived", "had"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time we ___ home from the laboratory, the children ___ gone to bed because of the late hour.",
+    translation: "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar.",
+    corrects: ["arrive", "will have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time engineers ___ the structural bug, the dynamic malware ___ spread across secondary network partitions.",
+    translation: "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı.",
+    corrects: ["found", "had"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time the compiler ___ code optimization, the backup server ___ saved the configuration metrics.",
+    translation: "Derleyici kod optimizasyonunu tamamlayana kadar, yedek sunucu yapılandırma ölçümlerini kaydetmiş olacak.",
+    corrects: ["finishes", "will have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time the severe coastal storm ___ , the ancient bridge structure ___ collapsed into the turbulent river.",
+    translation: "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü.",
+    corrects: ["cleared", "had"]
+  },
+
+  // Exercise 4 (31-40)
+  {
+    type: "fill-blank",
+    sentence: "By the time the new legislative law ___ , corporate firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span> their data privacy policies.",
+    options: ["takes effect", "took effect", "will take effect", "had taken effect"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> the university research funds, the biology project ___ due to lack of materials.",
+    options: ["had ended", "will have ended", "ends", "has ended"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time you ___ the laboratory door, the automated security system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span> the entry tracking algorithm.",
+    options: ["open", "opened", "will open", "had opened"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span> behind the volcanic mountains, the field research crew ___ the evaluation site.",
+    options: ["had left", "will have left", "left", "have left"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "By the time the mobile application ___ globally, the engineering team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> all core API modules.",
+    options: ["launches", "launched", "will launch", "had launched"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time the new legislative law ___ effect, corporate firms ___ adjusted their data privacy policies.",
+    translation: "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar.",
+    corrects: ["takes", "will have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time they ___ the university research funds, the biology project ___ ended due to lack of materials.",
+    translation: "Üniversite araştırma fonlarını aldıklarında, biyoloji projesi malzeme eksikliği nedeniyle sona ermişti.",
+    corrects: ["received", "had"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time you ___ the laboratory door, the automated security system ___ activated the entry tracking algorithm.",
+    translation: "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak.",
+    corrects: ["open", "will have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time the sun ___ behind the volcanic mountains, the field research crew ___ left the evaluation site.",
+    translation: "Güneş volkanik dağların ardında batana kadar, saha araştırma ekibi değerlendirme alanından ayrılmıştı.",
+    corrects: ["set", "had"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "By the time the mobile application ___ globally, the engineering team ___ tested all core API modules.",
+    translation: "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak.",
+    corrects: ["launches", "will have"]
+  }
+];
+
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -924,7 +1145,8 @@ function buildExercises(rawList, lessonId) {
       title: lessonId === 95 ? "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I" :
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
-                               "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I",
+             lessonId === 98 ? "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I" :
+                               "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I",
       description: "Boşluk doldurma ve zaman zarfları pratikleri.",
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
@@ -933,7 +1155,8 @@ function buildExercises(rawList, lessonId) {
       title: lessonId === 95 ? "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II" :
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
-                               "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II",
+             lessonId === 98 ? "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II" :
+                               "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II",
       description: "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
@@ -942,7 +1165,8 @@ function buildExercises(rawList, lessonId) {
       title: lessonId === 95 ? "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III" :
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
-                               "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III",
+             lessonId === 98 ? "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III" :
+                               "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III",
       description: "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
@@ -951,7 +1175,8 @@ function buildExercises(rawList, lessonId) {
       title: lessonId === 95 ? "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV" :
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
-                               "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV",
+             lessonId === 98 ? "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV" :
+                               "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV",
       description: "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
       questions: getExerciseQuestions(rawList.slice(30, 40), lessonId, 4)
     }
@@ -962,7 +1187,8 @@ const unit0Exercises = {
   1: { exercises: buildExercises(L95_raw, 95) },
   2: { exercises: buildExercises(L96_raw, 96) },
   3: { exercises: buildExercises(L97_raw, 97) },
-  4: { exercises: buildExercises(L98_raw, 98) }
+  4: { exercises: buildExercises(L98_raw, 98) },
+  5: { exercises: buildExercises(L99_raw, 99) }
 };
 
 const dataPath = '../data.js';
@@ -980,18 +1206,20 @@ if (topicStartIdx !== -1) {
     title: "DENEME",
     desc: "Time-Link: Connectors & Tenses",
     icon: "🧪",
-    numLessons: 4,
+    numLessons: 5,
     formulas: [
       { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
       { formula: "Subject + V2", example: "Yesterday, the central server <span style=\\"color: #ff6b6b; font-weight: bold;\\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
       { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
-      { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple, kırmızı) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect, yeşil) yapısındadır." }
+      { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple, kırmızı) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect, yeşil) yapısındadır." },
+      { formula: "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)", example: "By the time we <span style=\\"color: #ff6b6b; font-weight: bold;\\">arrived</span>, most people <span style=\\"color: #da77f2; font-weight: bold;\\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.", description: "By the time geçmişe uygulandığında yan cümle V2 (kırmızı), ana cümle had V3 (mor) alır; geleceğe uygulandığında yan cümle V1 (mavi), ana cümle will have V3 (yeşil) alır." }
     ],
     subtitles: [
       "Present Continuous (is Ving) - Zaman Zarfları",
       "Past Simple (v2) - Zaman Zarfları",
       "Present Perfect (have V3) - Zaman Zarfları",
-      "\\\"Since\\\" Zaman Uyumu Kalıpları"
+      "\\\"Since\\\" Zaman Uyumu Kalıpları",
+      "\\\"By the time\\\" Zaman Uyumu Kalıpları"
     ]
   }\n`;
     content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);
