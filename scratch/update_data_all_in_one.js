@@ -141,7 +141,7 @@ const L95_raw = [
   {
     type: "multiple-fill-blank",
     sentence: "At the moment, the compiler ___ the data blocks ___ the network firewall blocks external traffic.",
-    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor.",
+    translation: "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
     corrects: ["is processing", "while"]
   },
   {
@@ -153,7 +153,7 @@ const L95_raw = [
   {
     type: "multiple-fill-blank",
     sentence: "The system ___ presently generating a unique cryptographic key as soon as the administrator ___ verification clearance.",
-    translation: "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretir.",
+    translation: "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretti.",
     corrects: ["is", "grants"]
   },
   {
@@ -772,7 +772,7 @@ const L98_raw = [
   // Exercise 3 (21-30)
   {
     type: "fill-blank",
-    sentence: "The company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
+    sentence: "html text: the company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
     options: ["has expanded", "expanded", "expands", "is expanding"]
   },
   {
@@ -860,7 +860,7 @@ const L98_raw = [
   },
   {
     type: "multiple-fill-blank",
-    sentence: "html text: users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
+    sentence: "Users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
     translation: "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı.",
     corrects: ["have", "crashed"]
   },
@@ -1326,6 +1326,227 @@ const L100_raw = [
   }
 ];
 
+// Raw question definitions for Lesson 101 (Superlatives / Restrictive Adjectives + Present Perfect) - 40 questions
+const L101_raw = [
+  // Exercise 1 (1-10)
+  {
+    type: "fill-blank",
+    sentence: "This is the best academic article I ___ this year.",
+    options: ["have read", "had read", "read", "am reading"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ film the compiler team has watched together.",
+    options: ["first", "worst", "best", "only"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is the worst software crash we ___ to date.",
+    options: ["have experienced", "had experienced", "experienced", "are experiencing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ configuration option the algorithm has accepted.",
+    options: ["only", "best", "first", "worst"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the most complex simulation model they ___ .",
+    options: ["have built", "had built", "built", "build"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ academic article I have read this year.",
+    options: ["best", "worst", "first", "only"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the first film the compiler team ___ together.",
+    options: ["has watched", "had watched", "watched", "watches"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is the ___ software crash we have experienced to date.",
+    options: ["worst", "best", "first", "only"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the only configuration option the algorithm ___ .",
+    options: ["has accepted", "had accepted", "accepted", "accepts"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ complex simulation model they have built.",
+    options: ["most", "more", "very", "much"]
+  },
+
+  // Exercise 2 (11-20)
+  {
+    type: "fill-blank",
+    sentence: "It is the first time the central bank ___ rates.",
+    options: ["has raised", "had raised", "raised", "raises"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ molecular rendering the researcher has obtained.",
+    options: ["finest", "best", "first", "only"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is the most challenging law the assembly ___ .",
+    options: ["has passed", "had passed", "passed", "passes"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the ___ secure token the server has generated so far.",
+    options: ["only", "best", "first", "worst"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the most efficient engine the factory ___ .",
+    options: ["has produced", "had produced", "produced", "produces"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is the ___ time the central bank has raised rates.",
+    options: ["first", "best", "worst", "only"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the finest molecular rendering the researcher ___ .",
+    options: ["has obtained", "had obtained", "obtained", "obtains"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "It is the most ___ law the assembly has passed.",
+    options: ["challenging", "complex", "efficient", "secure"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the only secure token the server ___ so far.",
+    options: ["has generated", "had generated", "generated", "generates"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the most ___ engine the factory has produced.",
+    options: ["efficient", "challenging", "complex", "fine"]
+  },
+
+  // Exercise 3 (21-30)
+  {
+    type: "fill-blank",
+    sentence: "This is the best academic article I ___ this year because its innovative cross-disciplinary methodology is highly clear.",
+    options: ["have read", "had read", "read", "am reading"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the first film the compiler team ___ together since they moved into the new technological facility.",
+    options: ["has watched", "had watched", "watched", "watches"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is the worst software crash we ___ to date because of a severe database overflow in primary partitions.",
+    options: ["have experienced", "had experienced", "experienced", "are experiencing"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the only configuration option the algorithm ___ although developers provided several alternative code strings.",
+    options: ["has accepted", "had accepted", "accepted", "accepts"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the most complex simulation model they ___ in order that tectonic plate pressure changes might be evaluated.",
+    options: ["have built", "had built", "built", "build"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the ___ academic article I ___ read this year because its innovative cross-disciplinary methodology is highly clear.",
+    translation: "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir.",
+    corrects: ["best", "have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the ___ film the compiler team ___ watched together since they moved into the new technological facility.",
+    translation: "Yeni teknolojik tesise taşındıklarından beri bu, derleyici ekibinin birlikte izlediği ilk filmdir.",
+    corrects: ["first", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is the ___ software crash we ___ experienced to date because of a severe database overflow in primary partitions.",
+    translation: "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür.",
+    corrects: ["worst", "have"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the ___ configuration option the algorithm ___ accepted although developers provided several alternative code strings.",
+    translation: "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir.",
+    corrects: ["only", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the most ___ simulation model they ___ built in order that tectonic plate pressure changes might be evaluated.",
+    translation: "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir.",
+    corrects: ["complex", "have"]
+  },
+
+  // Exercise 4 (31-40)
+  {
+    type: "fill-blank",
+    sentence: "It is the first time the central bank ___ rates now that global financial indicators display unprecedented market inflation.",
+    options: ["has raised", "had raised", "raised", "raises"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the finest molecular rendering the researcher ___ while focusing on cellular sub-structure divisions.",
+    options: ["has obtained", "had obtained", "obtained", "obtains"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "It is the most challenging law the assembly ___ since the new corporate administrative board was elected.",
+    options: ["has passed", "had passed", "passed", "passes"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "This is the only secure token the server ___ so far lest anonymous third-party trackers should intercept the data.",
+    options: ["has generated", "had generated", "generated", "generates"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "This is the most efficient engine the factory ___ inasmuch as its mechanical piston operates with zero friction limits.",
+    options: ["has produced", "had produced", "produced", "produces"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is the ___ time the central bank ___ raised rates now that global financial indicators display unprecedented market inflation.",
+    translation: "Küresel finansal göstergelerin benzeri görülmemiş bir piyasa enflasyonu sergilemesi nedeniyle, merkez bankası ilk kez faiz artırdı.",
+    corrects: ["first", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the ___ molecular rendering the researcher ___ obtained while focusing on cellular sub-structure divisions.",
+    translation: "Hücresel alt yapı bölünmelerine odaklanırken bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir.",
+    corrects: ["finest", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "It is the most ___ law the assembly ___ passed since the new corporate administrative board was elected.",
+    translation: "Yeni kurumsal yönetim kurulu seçildiğinden beri bu, meclisin kabul ettiği en zorlu yasadır.",
+    corrects: ["challenging", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the ___ secure token the server ___ generated so far lest anonymous third-party trackers should intercept the data.",
+    translation: "Anonim üçüncü taraf takipçilerin verileri ele geçirmemesi için bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur.",
+    corrects: ["only", "has"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "This is the most ___ engine the factory ___ produced inasmuch as its mechanical piston operates with zero friction limits.",
+    translation: "Mekanik pistonu sıfır sürtünme sınırıyla çalıştığı için bu, fabrikanın ürettiği en verimli motordur.",
+    corrects: ["efficient", "has"]
+  }
+];
+
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -1368,7 +1589,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
              lessonId === 98 ? "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I" :
              lessonId === 99 ? "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I" :
-                               "Alıştırma 1: \"It is (high) time\" Kalıbı I",
+             lessonId === 100 ? "Alıştırma 1: \"It is (high) time\" Kalıbı I" :
+                               "Alıştırma 1: Süperlatif & Kısıtlayıcı Sıfatlar I",
       description: "Boşluk doldurma ve zaman zarfları pratikleri.",
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
@@ -1379,7 +1601,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
              lessonId === 98 ? "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II" :
              lessonId === 99 ? "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II" :
-                               "Alıştırma 2: \"It is (high) time\" Kalıbı II",
+             lessonId === 100 ? "Alıştırma 2: \"It is (high) time\" Kalıbı II" :
+                               "Alıştırma 2: Süperlatif & Kısıtlayıcı Sıfatlar II",
       description: "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
@@ -1390,7 +1613,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
              lessonId === 98 ? "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III" :
              lessonId === 99 ? "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III" :
-                               "Alıştırma 3: \"It is (high) time\" Kalıbı III",
+             lessonId === 100 ? "Alıştırma 3: \"It is (high) time\" Kalıbı III" :
+                               "Alıştırma 3: Süperlatif & Kısıtlayıcı Sıfatlar III",
       description: "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
@@ -1401,7 +1625,8 @@ function buildExercises(rawList, lessonId) {
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
              lessonId === 98 ? "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV" :
              lessonId === 99 ? "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV" :
-                               "Alıştırma 4: \"It is (high) time\" Kalıbı IV",
+             lessonId === 100 ? "Alıştırma 4: \"It is (high) time\" Kalıbı IV" :
+                               "Alıştırma 4: Süperlatif & Kısıtlayıcı Sıfatlar IV",
       description: "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
       questions: getExerciseQuestions(rawList.slice(30, 40), lessonId, 4)
     }
@@ -1414,7 +1639,8 @@ const unit0Exercises = {
   3: { exercises: buildExercises(L97_raw, 97) },
   4: { exercises: buildExercises(L98_raw, 98) },
   5: { exercises: buildExercises(L99_raw, 99) },
-  6: { exercises: buildExercises(L100_raw, 100) }
+  6: { exercises: buildExercises(L100_raw, 100) },
+  7: { exercises: buildExercises(L101_raw, 101) }
 };
 
 const dataPath = '../data.js';
@@ -1432,14 +1658,15 @@ if (topicStartIdx !== -1) {
     title: "DENEME",
     desc: "Time-Link: Connectors & Tenses",
     icon: "🧪",
-    numLessons: 6,
+    numLessons: 7,
     formulas: [
       { formula: "Subject + am/is/are + V-ing", example: "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.", description: "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları." },
       { formula: "Subject + V2", example: "Yesterday, the central server <span style=\\"color: #ff6b6b; font-weight: bold;\\">validated</span> all user credentials: Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.", description: "Geçmişte belirli bir zamanda gerçekleşmiş ve tamamlanmış eylemler. Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
       { formula: "Subject + has/have + V3", example: "Since the team <span style=\\"color: #ff6b6b; font-weight: bold;\\">started</span> the project, the automatic system <span style=\\"color: #51cf66; font-weight: bold;\\">has monitored</span> pressure parameters: Ekip projeye başladığından beri, otomatik sistem basınç parametrelerini izledi.", description: "Geçmişte başlayıp etkisi günümüze uzanan süreçler. Present Perfect (Have V3) eylemleri yeşil, Past Simple (V2) eylemleri kırmızı renkle kodlanmıştır." },
       { formula: "Present Perfect + since + Past Simple", example: "The company <span style=\\"color: #51cf66; font-weight: bold;\\">has expanded</span> since the new law <span style=\\"color: #ff6b6b; font-weight: bold;\\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.", description: "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple, kırmızı) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect, yeşil) yapısındadır." },
       { formula: "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)", example: "By the time we <span style=\\"color: #ff6b6b; font-weight: bold;\\">arrived</span>, most people <span style=\\"color: #da77f2; font-weight: bold;\\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.", description: "By the time geçmişe uygulandığında yan cümle V2 (kırmızı), ana cümle had V3 (mor) alır; geleceğe uygulandığında yan cümle V1 (mavi), ana cümle will have V3 (yeşil) alır." },
-      { formula: "It is (high) time + Subject + V2 (Past Simple)", example: "It is high time the administration <span style=\\"color: #ff6b6b; font-weight: bold;\\">updated</span> the safety laws: Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.", description: "Bu kalıp, yapısal olarak it is time / it is high time + v2 (Past Simple, kırmızı) dizilimini zorunlu kılar. Anlam olarak şu ana (present) yönelik bir gecikmişlik veya zorunluluk bildirse de dil bilgisi kuralı gereği eylem geçmiş zamandadır." }
+      { formula: "It is (high) time + Subject + V2 (Past Simple)", example: "It is high time the administration <span style=\\"color: #ff6b6b; font-weight: bold;\\">updated</span> the safety laws: Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.", description: "Bu kalıp, yapısal olarak it is time / it is high time + v2 (Past Simple, kırmızı) dizilimini zorunlu kılar. Anlam olarak şu ana (present) yönelik bir gecikmişlik veya zorunluluk bildirse de dil bilgisi kuralı gereği eylem geçmiş zamandadır." },
+      { formula: "Superlative / Restrictive Adjective + Present Perfect (Have/Has V3)", example: "This is the best academic article I <span style=\\"color: #51cf66; font-weight: bold;\\">have read</span> this year: Bu, bu yıl okuduğum en iyi akademik makaledir.", description: "Bir özneye veya duruma yönelik en uç değerlendirmeyi yapan süperlatif (best, worst, most complex) veya kısıtlayıcı sıfat (first, only) ifadelerinden sonra gelen cümle, hayat boyu edinilen birikimi ve deneyimi sorguladığı için have/has v3 (Present Perfect, yeşil) yapısıyla kurulur." }
     ],
     subtitles: [
       "Present Continuous (is Ving) - Zaman Zarfları",
@@ -1447,7 +1674,8 @@ if (topicStartIdx !== -1) {
       "Present Perfect (have V3) - Zaman Zarfları",
       "\\\"Since\\\" Zaman Uyumu Kalıpları",
       "\\\"By the time\\\" Zaman Uyumu Kalıpları",
-      "\\\"It is (high) time\\\" Kalıbı"
+      "\\\"It is (high) time\\\" Kalıbı",
+      "Süperlatif & Kısıtlayıcı Sıfatlar + Present Perfect"
     ]
   }\n`;
     content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);
