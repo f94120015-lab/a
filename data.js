@@ -6986,7 +6986,8 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
     const correctVal = cleanConnector(s.connector);
     const cleanSentence = cleanEn(s.en);
     const shuffledOptions = shuffle(s.options.map(cleanConnector));
-    let clozedSentence = cleanSentence.replace(new RegExp(correctVal, "i"), "___");
+    const cleanWord = correctVal.replace(/[,.]/g, "").trim();
+    let clozedSentence = cleanSentence.replace(new RegExp("\\b" + cleanWord + "\\b", "i"), "___");
     if (!clozedSentence.includes("___")) {
       clozedSentence = cleanSentence.replace(correctVal, "___");
     }
@@ -7073,7 +7074,7 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
         id: `u${unitId}l${lessonId}_ex4_cloze_${idx}`,
         type: "fill-blank-dropdown",
         prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
-        sentence: q.sentence,
+        sentence: q.sentence.replace(/_+/g, "___"),
         options: q.options,
         correctIndex: q.options.indexOf(q.correct),
         explanation: q.explanation
@@ -7158,7 +7159,8 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
     const correctVal = cleanConnector(s.connector);
     const cleanSentence = cleanEn(s.en);
     const shuffledOptions = shuffle(s.options.map(cleanConnector));
-    let clozedSentence = cleanSentence.replace(new RegExp(correctVal, "i"), "___");
+    const cleanWord = correctVal.replace(/[,.]/g, "").trim();
+    let clozedSentence = cleanSentence.replace(new RegExp("\\b" + cleanWord + "\\b", "i"), "___");
     if (!clozedSentence.includes("___")) {
       clozedSentence = cleanSentence.replace(correctVal, "___");
     }
