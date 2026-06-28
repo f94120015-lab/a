@@ -6594,6 +6594,366 @@ function buildUnit23WhileExercises(unitId, lessonId) {
 
 
 
+// ─── BÖLÜM 24 75. DERS RAW SENTENCES (Until) ──────────────
+
+const unit24Lesson1SentencesRaw = [
+  { en: "until it is dry", tr: "kuruyuncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ dry", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'dry'] },
+  { en: "until it is hard", tr: "sertleşinceye kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ hard", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'hard'] },
+  { en: "until it is soft", tr: "yumuşayıncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ soft", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'soft'] },
+  { en: "until it is ready", tr: "hazır oluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ ready", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'ready'] },
+  { en: "until it is finished", tr: "bitinceye kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ finished", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'finished'] },
+  { en: "until it was empty", tr: "boşalıncaya kadar", word: "be", trWord: "olmak", correct: "was", blank: "until it ___ empty", options: ['was', 'is', 'has', 'were'], blocks: ['until', 'it', 'was', 'empty'] },
+  { en: "until it is full", tr: "doluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ full", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'full'] },
+  { en: "until it is necessary", tr: "gerekli oluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ necessary", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'necessary'] },
+  { en: "until it disappears", tr: "gözden kayboluncaya kadar", word: "disappear", trWord: "gözden kaybolmak", correct: "disappears", blank: "until it ___", options: ['disappears', 'disappear', 'disappearing', 'will disappear'], blocks: ['until', 'it', 'disappears'] },
+  { en: "until it changes", tr: "değişinceye kadar", word: "change", trWord: "değişmek", correct: "changes", blank: "until it ___", options: ['changes', 'change', 'changing', 'will change'], blocks: ['until', 'it', 'changes'] },
+  { en: "until it develops", tr: "gelişinceye kadar", word: "develop", trWord: "gelişmek", correct: "develops", blank: "until it ___", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['until', 'it', 'develops'] },
+  { en: "until it gets better", tr: "iyileşinceye kadar", word: "get", trWord: "iyileşmek", correct: "gets", blank: "until it ___ better", options: ['gets', 'get', 'getting', 'will get'], blocks: ['until', 'it', 'gets', 'better'] }
+];
+
+const unit24Lesson1SentencesL2Raw = [
+  { en: "Do not paint the wooden table until it is dry.", tr: "Ahşap masayı kuruyana kadar boyamayın.", word: "be", trWord: "olmak", correct: "is", blank: "Do not paint the wooden table until it ___ dry.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'paint', 'the', 'wooden', 'table', 'until', 'it', 'is', 'dry.'] },
+  { en: "Leave the plastic mixture in the cold mold until it is hard.", tr: "Plastik karışımı sertleşene kadar soğuk kalıpta bırakın.", word: "be", trWord: "olmak", correct: "is", blank: "Leave the plastic mixture in the cold mold until it ___ hard.", options: ['is', 'was', 'will be', 'being'], blocks: ['Leave', 'the', 'plastic', 'mixture', 'in', 'the', 'cold', 'mold', 'until', 'it', 'is', 'hard.'] },
+  { en: "Keep heating the solid chocolate wax until it is soft.", tr: "Katı çikolata balmumunu yumuşayana kadar ısıtmaya devam edin.", word: "be", trWord: "olmak", correct: "is", blank: "Keep heating the solid chocolate wax until it ___ soft.", options: ['is', 'was', 'will be', 'being'], blocks: ['Keep', 'heating', 'the', 'solid', 'chocolate', 'wax', 'until', 'it', 'is', 'soft.'] },
+  { en: "The system manager will delay the server task until it is ready.", tr: "Sistem yöneticisi, sunucu görevini hazır olana kadar erteleyecek.", word: "be", trWord: "olmak", correct: "is", blank: "The system manager will delay the server task until it ___ ready.", options: ['is', 'was', 'will be', 'being'], blocks: ['The', 'system', 'manager', 'will', 'delay', 'the', 'server', 'task', 'until', 'it', 'is', 'ready.'] },
+  { en: "You should wait in the line until it is finished.", tr: "Bitene kadar kuyrukta beklemelisiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You should wait in the line until it ___ finished.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'should', 'wait', 'in', 'the', 'line', 'until', 'it', 'is', 'finished.'] },
+  { en: "The students kept downloading files until the drive was empty.", tr: "Öğrenciler, sürücü boşalana kadar dosya indirmeye devam ettiler.", word: "be", trWord: "olmak", correct: "was", blank: "The students kept downloading files until the drive ___ empty.", options: ['was', 'is', 'has', 'were'], blocks: ['The', 'students', 'kept', 'downloading', 'files', 'until', 'the', 'drive', 'was', 'empty.'] },
+  { en: "Please continue filling the water tank until it is full.", tr: "Lütfen su deposunu dolana kadar doldurmaya devam edin.", word: "be", trWord: "olmak", correct: "is", blank: "Please continue filling the water tank until it ___ full.", options: ['is', 'was', 'will be', 'being'], blocks: ['Please', 'continue', 'filling', 'the', 'water', 'tank', 'until', 'it', 'is', 'full.'] },
+  { en: "Do not activate the recovery script until it is necessary.", tr: "Kurtarma betiğini gerekli olana kadar etkinleştirmeyin.", word: "be", trWord: "olmak", correct: "is", blank: "Do not activate the recovery script until it ___ necessary.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'activate', 'the', 'recovery', 'script', 'until', 'it', 'is', 'necessary.'] },
+  { en: "The radar mechanism tracked the target drone until it disappears.", tr: "Radar mekanizması, hedef İHA'yı gözden kaybolana kadar takip etti.", word: "disappear", trWord: "gözden kaybolmak", correct: "disappears", blank: "The radar mechanism tracked the target drone until it ___.", options: ['disappears', 'disappear', 'disappearing', 'will disappear'], blocks: ['The', 'radar', 'mechanism', 'tracked', 'the', 'target', 'drone', 'until', 'it', 'disappears.'] },
+  { en: "Do not modify any parameters on the display screen until it changes.", tr: "Görüntü ekranındaki herhangi bir parametreyi değişene kadar değiştirmeyin.", word: "change", trWord: "değişmek", correct: "changes", blank: "Do not modify any parameters on the display screen until it ___.", options: ['changes', 'change', 'changing', 'will change'], blocks: ['Do', 'not', 'modify', 'any', 'parameters', 'on', 'the', 'display', 'screen', 'until', 'it', 'changes.'] },
+  { en: "The plant requires constant care and sunlight until it develops.", tr: "Bitki, gelişene kadar sürekli bakım ve güneş ışığı gerektirir.", word: "develop", trWord: "gelişmek", correct: "develops", blank: "The plant requires constant care and sunlight until it ___.", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['The', 'plant', 'requires', 'constant', 'care', 'and', 'sunlight', 'until', 'it', 'develops.'] },
+  { en: "You must take this medicine regularly until it gets better.", tr: "İyileşene kadar bu ilacı düzenli olarak almalısınız.", word: "get", trWord: "iyileşmek", correct: "gets", blank: "You must take this medicine regularly until it ___ better.", options: ['gets', 'get', 'getting', 'will get'], blocks: ['You', 'must', 'take', 'this', 'medicine', 'regularly', 'until', 'it', 'gets', 'better.'] }
+];
+
+const unit24Lesson1SentencesL3Raw = [
+  {
+    en: "Microchip substrates must undergo constant high-temperature drying processes until the surface is dry enough for soldering.",
+    tr: "Mikroçip tabanları, yüzey lehimleme için yeterince kuruyana kadar sürekli yüksek sıcaklıkta kurutma işlemlerine tabi tutulmalıdır.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "Microchip substrates must undergo constant high-temperature drying processes until the surface ___ dry enough for soldering.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['Microchip', 'substrates', 'must', 'undergo', 'constant', 'high-temperature', 'drying', 'processes', 'until', 'the', 'surface', 'is', 'dry', 'enough', 'for', 'soldering.']
+  },
+  {
+    en: "The automated manufacturing machine maintains extreme hydraulic pressure over the compound until it is hard according to safety standards.",
+    tr: "Otomatik üretim makinesi, güvenlik standartlarına göre bileşik sertleşene kadar onun üzerinde aşırı hidrolik basınç sürdürür.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "The automated manufacturing machine maintains extreme hydraulic pressure over the compound until it ___ hard according to safety standards.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['The', 'automated', 'manufacturing', 'machine', 'maintains', 'extreme', 'hydraulic', 'pressure', 'over', 'the', 'compound', 'until', 'it', 'is', 'hard', 'according', 'to', 'safety', 'standards.']
+  },
+  {
+    en: "Industrial chemical engineers must stir the synthetic rubber solution inside the tank until it is soft enough to pass through tubes.",
+    tr: "Endüstriyel kimya mühendisleri, tüplerden geçebilecek kadar yumuşayana kadar tankın içindeki sentetik kauçuk çözeltisini karıştırmalıdır.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "Industrial chemical engineers must stir the synthetic rubber solution inside the tank until it ___ soft enough to pass through tubes.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['Industrial', 'chemical', 'engineers', 'must', 'stir', 'the', 'synthetic', 'rubber', 'solution', 'inside', 'the', 'tank', 'until', 'it', 'is', 'soft', 'enough', 'to', 'pass', 'through', 'tubes.']
+  },
+  {
+    en: "Deployment automation pipelines will temporarily block all user authorization services until the central system framework is ready.",
+    tr: "Dağıtım otomasyon hatları, merkezi sistem çerçevesi hazır olana kadar tüm kullanıcı yetkilendirme hizmetlerini geçici olarak engelleyecektir.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "Deployment automation pipelines will temporarily block all user authorization services until the central system framework ___ ready.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['Deployment', 'automation', 'pipelines', 'will', 'temporarily', 'block', 'all', 'user', 'authorization', 'services', 'until', 'the', 'central', 'system', 'framework', 'is', 'ready.']
+  },
+  {
+    en: "The mobile operating system automatically prevents users from opening background tools until the update patch installation is finished.",
+    tr: "Mobil işletim sistemi, güncelleme yaması kurulumu bitene kadar kullanıcıların arka plan araçlarını açmasını otomatik olarak engeller.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "The mobile operating system automatically prevents users from opening background tools until the update patch installation ___ finished.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['The', 'mobile', 'operating', 'system', 'automatically', 'prevents', 'users', 'from', 'opening', 'background', 'tools', 'until', 'the', 'update', 'patch', 'installation', 'is', 'finished.']
+  },
+  {
+    en: "Digital extraction scripts continued downloading encrypted information from the old hard drive until the memory partition was empty.",
+    tr: "Dijital çıkarma betikleri, bellek bölümü boşalana kadar eski sabit sürücüden şifrelenmiş bilgileri indirmeye devam etti.",
+    word: "be", trWord: "olmak", correct: "was",
+    blank: "Digital extraction scripts continued downloading encrypted information from the old hard drive until the memory partition ___ empty.",
+    options: ['was', 'is', 'has', 'were'],
+    blocks: ['Digital', 'extraction', 'scripts', 'continued', 'downloading', 'encrypted', 'information', 'from', 'the', 'old', 'hard', 'drive', 'until', 'the', 'memory', 'partition', 'was', 'empty.']
+  },
+  {
+    en: "The high-capacity industrial pump feeds fuel into the auxiliary generator reservoir until the storage engine tank is full.",
+    tr: "Yüksek kapasiteli endüstriyel pompa, depolama motoru tankı dolana kadar yedek jeneratör haznesine yakıt besler.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "The high-capacity industrial pump feeds fuel into the auxiliary generator reservoir until the storage engine tank ___ full.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['The', 'high-capacity', 'industrial', 'pump', 'feeds', 'fuel', 'into', 'the', 'auxiliary', 'generator', 'reservoir', 'until', 'the', 'storage', 'engine', 'tank', 'is', 'full.']
+  },
+  {
+    en: "Network security firewalls will block all inbound data packets from unverified IP addresses until it is necessary to grant access.",
+    tr: "Ağ güvenliği güvenlik duvarları, erişim izni vermek gerekli olana kadar doğrulanmamış IP adreslerinden gelen tüm gelen veri paketlerini engelleyecektir.",
+    word: "be", trWord: "olmak", correct: "is",
+    blank: "Network security firewalls will block all inbound data packets from unverified IP addresses until it ___ necessary to grant access.",
+    options: ['is', 'was', 'will be', 'being'],
+    blocks: ['Network', 'security', 'firewalls', 'will', 'block', 'all', 'inbound', 'data', 'packets', 'from', 'unverified', 'IP', 'addresses', 'until', 'it', 'is', 'necessary', 'to', 'grant', 'access.']
+  },
+  {
+    en: "Deep-space telescopes monitor the faint thermal radiation path emitted by the dying star cluster until it disappears behind thick cosmic dust.",
+    tr: "Derin uzay teleskopları, can çekişen yıldız kümesi kalın kozmik tozun arkasında gözden kaybolana kadar onun yaydığı zayıf termal radyasyon yolunu izler.",
+    word: "disappear", trWord: "gözden kaybolmak", correct: "disappears",
+    blank: "Deep-space telescopes monitor the faint thermal radiation path emitted by the dying star cluster until it ___ behind thick cosmic dust.",
+    options: ['disappears', 'disappear', 'disappearing', 'will disappear'],
+    blocks: ['Deep-space', 'telescopes', 'monitor', 'the', 'faint', 'thermal', 'radiation', 'path', 'emitted', 'by', 'the', 'dying', 'star', 'cluster', 'until', 'it', 'disappears', 'behind', 'thick', 'cosmic', 'dust.']
+  },
+  {
+    en: "The digital encryption system maintains the current cryptographic security token value until the user verification state changes.",
+    tr: "Dijital şifreleme sistemi, kullanıcı doğrulama durumu değişene kadar mevcut kriptografik güvenlik jetonu değerini korur.",
+    word: "change", trWord: "değişmek", correct: "changes",
+    blank: "The digital encryption system maintains the current cryptographic security token value until the user verification state ___.",
+    options: ['changes', 'change', 'changing', 'will change'],
+    blocks: ['The', 'digital', 'encryption', 'system', 'maintains', 'the', 'current', 'cryptographic', 'security', 'token', 'value', 'until', 'the', 'user', 'verification', 'state', 'changes.']
+  },
+  {
+    en: "Machine learning models require massive amounts of structured training data and computational power until the neural network develops high accuracy.",
+    tr: "Makine öğrenimi modelleri, yapay sinir ağı yüksek doğruluk geliştirene kadar muazzam miktarda yapılandırılmış eğitim verisi ve hesaplama gücü gerektirir.",
+    word: "develop", trWord: "gelişmek", correct: "develops",
+    blank: "Machine learning models require massive amounts of structured training data and computational power until the neural network ___ high accuracy.",
+    options: ['develops', 'develop', 'developing', 'will develop'],
+    blocks: ['Machine', 'learning', 'models', 'require', 'massive', 'amounts', 'of', 'structured', 'training', 'data', 'and', 'computational', 'power', 'until', 'the', 'neural', 'network', 'develops', 'high', 'accuracy.']
+  },
+  {
+    en: "The optimization algorithm will continue adjusting the background application performance metrics until the overall frame rate gets better.",
+    tr: "Optimizasyon algoritması, genel kare hızı iyileşene kadar arka plan uygulama performans ölçümlerini ayarlamaya devam edecektir.",
+    word: "get", trWord: "iyileşmek", correct: "gets",
+    blank: "The optimization algorithm will continue adjusting the background application performance metrics until the overall frame rate ___ better.",
+    options: ['gets', 'get', 'getting', 'will get'],
+    blocks: ['The', 'optimization', 'algorithm', 'will', 'continue', 'adjusting', 'the', 'background', 'application', 'performance', 'metrics', 'until', 'the', 'overall', 'frame', 'rate', 'gets', 'better.']
+  }
+];
+
+function buildUnit24UntilExercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    
+    let d1 = tr.replace(/kadar/g, "önce").replace(/dek/g, "önce");
+    let d2 = tr.replace(/kadar/g, "sonra").replace(/dek/g, "sonra");
+    
+    const rawDistractors = [];
+    if (d1 !== tr) rawDistractors.push(d1);
+    if (d2 !== tr) rawDistractors.push(d2);
+    
+    const distractorsSet = new Set(rawDistractors.filter(d => d !== tr));
+    
+    if (candidates.length > 0) {
+      const candidateList = shuffle(candidates);
+      for (let c of candidateList) {
+        if (distractorsSet.size >= 3) break;
+        distractorsSet.add(c.tr);
+      }
+    }
+    
+    const distractors = Array.from(distractorsSet);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal)
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const buildHalvesQuestion = (sentences, id, count) => {
+    const pairs = [];
+    sentences.forEach(s => {
+      if (pairs.length >= count) return;
+      const idx = s.en.indexOf("until");
+      
+      if (idx !== -1) {
+        pairs.push({
+          left: s.en.substring(0, idx + 5).trim(),
+          right: s.en.substring(idx + 5).trim()
+        });
+      } else {
+        const words = s.en.split(' ');
+        const mid = Math.floor(words.length / 2);
+        pairs.push({
+          left: words.slice(0, mid).join(' '),
+          right: words.slice(mid).join(' ')
+        });
+      }
+    });
+    return {
+      id: id,
+      type: "matching",
+      prompt: "Aşağıdaki cümle yarılarını anlamlı olacak şekilde eşleştirin.",
+      leftHeader: "Ana Cümle",
+      rightHeader: "Yan Cümle (until...)",
+      pairs: pairs
+    };
+  };
+
+  const compileClauseExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+    
+    // 2 Matching (each 5 pairs)
+    const matchCount = Math.min(10, sorted.length);
+    if (matchCount >= 5) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match1`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+    if (matchCount >= 10) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match2`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(5, 10).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+
+    // Cloze questions
+    const clozeLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // MC questions
+    const mcLimit = Math.min(8, sorted.length);
+    for (let i = 0; i < mcLimit; i++) {
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  const compileSentenceExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // Halves matching
+    exList.push(buildHalvesQuestion(sorted, `u${unitId}l${lessonId}_${exId}_halves`, Math.min(5, sorted.length)));
+
+    // Cloze questions
+    const clozeLimit = Math.min(5, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    // Word Bank questions
+    const wbLimit = Math.max(0, sorted.length - 2);
+    for (let i = 2; i < wbLimit; i++) {
+      exList.push(buildWBQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileClauseExercise(unit24Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "until ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
+    compileClauseExercise(unit24Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "until bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
+    compileSentenceExercise(unit24Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "until bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+  ];
+}
+
+
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -14109,7 +14469,7 @@ const unitSentencesMap = {
     1: { exercises: buildUnit23WhileExercises(26, 74) }
   },
   27: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit24UntilExercises(27, 75) }
   },
   28: {
     1: { exercises: [] },
