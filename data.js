@@ -6025,6 +6025,1206 @@ const unit22Lesson1SentencesL3Raw = [
   }
 ];
 
+const unit22Lesson1PhraseRaw = [
+  {
+    en: "<strong>Because of</strong> the unexpected network latency, the app installation failed.",
+    tr: "Beklenmedik ağ gecikmesi nedeniyle uygulama kurulumu başarısız oldu.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "the", "unexpected", "network", "latency,", "the", "app", "installation", "failed."],
+    explanation: "Because of bir Phrase Connector'dır. Kendisinden sonra bir isim öbeği (the unexpected network latency) alır; tam cümle almaz."
+  },
+  {
+    en: "The team completed the migration process on time <strong>despite</strong> the lack of documentation.",
+    tr: "Ekip, belge eksikliğine rağmen geçiş işlemini zamanında tamamladı.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["The", "team", "completed", "the", "migration", "process", "on", "time", "despite", "the", "lack", "of", "documentation."],
+    explanation: "Despite bir Phrase Connector'dır. Kendisinden sonra sadece bir isim öbeği (the lack of documentation) alır; tam cümle almaz."
+  },
+  {
+    en: "<strong>Because of</strong> a severe database overflow, primary configuration tasks were suspended.",
+    tr: "Ciddi bir veri tabanı taşması nedeniyle birincil yapılandırma görevleri askıya alındı.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "a", "severe", "database", "overflow,", "primary", "configuration", "tasks", "were", "suspended."],
+    explanation: "Because of bir Phrase Connector'dır ve sadece bir isim öbeği alır."
+  },
+  {
+    en: "He successfully deployed the new firmware version <strong>despite</strong> several hardware limitations.",
+    tr: "Çeşitli donanım sınırlamalarına rağmen yeni ürün yazılımı sürümünü başarıyla yükledi.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["He", "successfully", "deployed", "the", "new", "firmware", "version", "despite", "several", "hardware", "limitations."],
+    explanation: "Despite bir Phrase Connector'dır. Kendisinden sonra bir isim veya isim öbeği (several hardware limitations) gelir."
+  },
+  {
+    en: "<strong>Because of</strong> automated security protocols, the administrative account was locked out.",
+    tr: "Otomatik güvenlik protokolleri nedeniyle yönetici hesabı kilitlendi.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "automated", "security", "protocols,", "the", "administrative", "account", "was", "locked", "out."],
+    explanation: "Because of bir Phrase Connector'dır ve isim öbeği alır."
+  },
+  {
+    en: "The compiler optimization was carried out successfully <strong>despite</strong> the high code complexity.",
+    tr: "Yüksek kod karmaşıklığına rağmen derleyici optimizasyonu başarıyla gerçekleştirildi.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["The", "compiler", "optimization", "was", "carried", "out", "successfully", "despite", "the", "high", "code", "complexity."],
+    explanation: "Despite bir Phrase Connector'dır ve isim öbeği alır."
+  },
+  {
+    en: "<strong>Because of</strong> extensive API refactoring, frontend developers restructured the components.",
+    tr: "Kapsamlı API yeniden yapılandırması nedeniyle ön uç geliştiriciler bileşenleri yeniden düzenledi.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "extensive", "API", "refactoring,", "frontend", "developers", "restructured", "the", "components."],
+    explanation: "Because of bir Phrase Connector'dır ve isim öbeği alır."
+  },
+  {
+    en: "The legacy server maintained full operational capacity <strong>despite</strong> the sudden traffic spike.",
+    tr: "Ani trafik artışına rağmen eski sunucu tam çalışma kapasitesini korudu.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["The", "legacy", "server", "maintained", "full", "operational", "capacity", "despite", "the", "sudden", "traffic", "spike."],
+    explanation: "Despite bir Phrase Connector'dır ve isim öbeği alır."
+  },
+  {
+    en: "<strong>Because of</strong> strict quality compliance laws, the launch date was postponed.",
+    tr: "Sıkı kalite uyumluluk yasaları nedeniyle lansman tarihi ertelendi.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "strict", "quality", "compliance", "laws,", "the", "launch", "date", "was", "postponed."],
+    explanation: "Because of bir Phrase Connector'dır ve isim öbeği alır."
+  },
+  {
+    en: "We managed to salvage the corrupted system partitions <strong>despite</strong> the hardware failure.",
+    tr: "Donanım arızasına rağmen bozuk sistem bölümlerini kurtarmayı başardık.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["We", "managed", "to", "salvage", "the", "corrupted", "system", "partitions", "despite", "the", "hardware", "failure."],
+    explanation: "Despite bir Phrase Connector'dır."
+  },
+  {
+    en: "<strong>Because of</strong> an unexpected memory leak, the mobile background runtime was terminated.",
+    tr: "Beklenmedik bir bellek sızıntısı nedeniyle mobil arka plan çalışma zamanı sonlandırıldı.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "an", "unexpected", "memory", "leak,", "the", "mobile", "background", "runtime", "was", "terminated."],
+    explanation: "Because of bir Phrase Connector'dır."
+  },
+  {
+    en: "The experimental drone achieved stable flight parameters <strong>despite</strong> the turbulent weather conditions.",
+    tr: "Türbülanslı hava koşullarına rağmen deneysel insansız hava aracı kararlı uçuş parametrelerine ulaştı.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["The", "experimental", "drone", "achieved", "stable", "flight", "parameters", "despite", "the", "turbulent", "weather", "conditions."],
+    explanation: "Despite bir Phrase Connector'dır."
+  },
+  {
+    en: "<strong>Because of</strong> rapid industrial automation, manual administrative tasks are decreasing.",
+    tr: "Hızlı endüstriyel otomasyon nedeniyle manuel idari görevler azalıyor.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "rapid", "industrial", "automation,", "manual", "administrative", "tasks", "are", "decreasing."],
+    explanation: "Because of bir Phrase Connector'dır."
+  },
+  {
+    en: "The academic research group obtained accurate molecular rendering data <strong>despite</strong> the faulty microscope lenses.",
+    tr: "Kusurlu mikroskop merceklerine rağmen akademik araştırma grubu doğru moleküler modelleme verileri elde etti.",
+    connector: "despite",
+    options: ["despite", "although", "however", "because of"],
+    blocks: ["The", "academic", "research", "group", "obtained", "accurate", "molecular", "rendering", "data", "despite", "the", "faulty", "microscope", "lenses."],
+    explanation: "Despite bir Phrase Connector'dır."
+  },
+  {
+    en: "<strong>Because of</strong> strategic financial constraints, the corporate board trimmed the marketing budget.",
+    tr: "Stratejik finansal kısıtlamalar nedeniyle şirket yönetim kurulu pazarlama bütçesini düşürdü.",
+    connector: "Because of",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    blocks: ["Because of", "strategic", "financial", "constraints,", "the", "corporate", "board", "trimmed", "the", "marketing", "budget."],
+    explanation: "Because of bir Phrase Connector'dır."
+  }
+];
+
+const unit22Lesson1ClauseRaw = [
+  {
+    en: "<strong>Because</strong> the system administrator updated the rules, users must re-authenticate.",
+    tr: "Sistem yöneticisi kuralları güncellediği için kullanıcılar yeniden kimlik doğrulaması yapmalıdır.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "system", "administrator", "updated", "the", "rules,", "users", "must", "re-authenticate."],
+    explanation: "Because bir Clause Connector'dır ve kendisinden sonra tam bir cümle (SVO) alır."
+  },
+  {
+    en: "The backend server terminates the session <strong>because</strong> the client token has expired.",
+    tr: "İstemci jetonunun süresi dolduğu için arka uç sunucusu oturumu sonlandırır.",
+    connector: "because",
+    options: ["because", "because of", "therefore", "although"],
+    blocks: ["The", "backend", "server", "terminates", "the", "session", "because", "the", "client", "token", "has", "expired."],
+    explanation: "Because bir Clause Connector'dır ve kendisinden sonra bir yan cümle (SVO) alır."
+  },
+  {
+    en: "<strong>Although</strong> the source code contained minor visual bugs, the application ran smoothly.",
+    tr: "Kaynak kod küçük görsel hatalar içermesine rağmen uygulama sorunsuz çalıştı.",
+    connector: "Although",
+    options: ["Although", "Despite", "However", "Because"],
+    blocks: ["Although", "the", "source", "code", "contained", "minor", "visual", "bugs,", "the", "application", "ran", "smoothly."],
+    explanation: "Although bir Clause Connector'dır ve zıtlık bildiren tam bir yan cümle alır."
+  },
+  {
+    en: "The simulation framework generated accurate data <strong>although</strong> it lacked adequate computing power.",
+    tr: "Yeterli bilgi işlem gücünden yoksun olmasına rağmen simülasyon çerçevesi doğru veriler üretti.",
+    connector: "although",
+    options: ["although", "despite", "however", "because"],
+    blocks: ["The", "simulation", "framework", "generated", "accurate", "data", "although", "it", "lacked", "adequate", "computing", "power."],
+    explanation: "Although bir Clause Connector'dır ve tam bir yan cümle alır."
+  },
+  {
+    en: "<strong>Because</strong> the local database crashed, late transactions were processed manually.",
+    tr: "Yerel veri tabanı çöktüğü için geciken işlemler manuel olarak işlendi.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "local", "database", "crashed,", "late", "transactions", "were", "processed", "manually."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "Mobile learning applications became highly popular <strong>because</strong> they utilize gamified design patterns.",
+    tr: "Oyunlaştırılmış tasarım desenleri kullandıkları için mobil öğrenme uygulamaları son derece popüler hale geldi.",
+    connector: "because",
+    options: ["because", "because of", "therefore", "although"],
+    blocks: ["Mobile", "learning", "applications", "became", "highly", "popular", "because", "they", "utilize", "gamified", "design", "patterns."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Although</strong> the legislation was passed recently, several state institutions adjusted their policies immediately.",
+    tr: "Yasa yakın zamanda kabul edilmesine rağmen bazı devlet kurumları politikalarını derhal ayarladı.",
+    connector: "Although",
+    options: ["Although", "Despite", "However", "Because"],
+    blocks: ["Although", "the", "legislation", "was", "passed", "recently,", "several", "state", "institutions", "adjusted", "their", "policies", "immediately."],
+    explanation: "Although bir Clause Connector'dır."
+  },
+  {
+    en: "The industrial machine operators halted production <strong>because</strong> the piston pressure rose critically.",
+    tr: "Piston basıncı kritik düzeyde yükseldiği için endüstriyel makine operatörleri üretimi durdurdu.",
+    connector: "because",
+    options: ["because", "because of", "therefore", "although"],
+    blocks: ["The", "industrial", "machine", "operators", "halted", "production", "because", "the", "piston", "pressure", "rose", "critically."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Although</strong> the development team worked overnight, the deployment pipeline remained blocked.",
+    tr: "Geliştirme ekibi gece boyunca çalışmasına rağmen dağıtım hattı engellenmiş olarak kaldı.",
+    connector: "Although",
+    options: ["Although", "Despite", "However", "Because"],
+    blocks: ["Although", "the", "development", "team", "worked", "overnight,", "the", "deployment", "pipeline", "remained", "blocked."],
+    explanation: "Although bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Because</strong> the new legislative framework is highly strict, companies are hiring compliance experts.",
+    tr: "Yeni yasal çerçeve oldukça katı olduğu için şirketler uyum uzmanları işe alıyor.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "new", "legislative", "framework", "is", "highly", "strict,", "companies", "are", "hiring", "compliance", "experts."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "The encryption software updates the keys automatically <strong>because</strong> security threats evolve constantly.",
+    tr: "Güvenlik tehditleri sürekli geliştiği için şifreleme yazılımı anahtarları otomatik olarak günceller.",
+    connector: "because",
+    options: ["because", "because of", "therefore", "although"],
+    blocks: ["The", "encryption", "software", "updates", "the", "keys", "automatically", "because", "security", "threats", "evolve", "constantly."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Although</strong> human dissections were restricted, medieval universities accumulated vital anatomical knowledge.",
+    tr: "İnsan diseksiyonları kısıtlanmış olmasına rağmen orta çağ üniversiteleri hayati anatomik bilgiler biriktirdi.",
+    connector: "Although",
+    options: ["Although", "Despite", "However", "Because"],
+    blocks: ["Although", "human", "dissections", "were", "restricted,", "medieval", "universities", "accumulated", "vital", "anatomical", "knowledge."],
+    explanation: "Although bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Because</strong> the chemical solution was exposed to sunlight, an exothermic reaction occurred.",
+    tr: "Kimyasal çözelti güneş ışığına maruz kaldığı için ekzotermik bir reaksiyon meydana geldi.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "chemical", "solution", "was", "exposed", "to", "sunlight,", "an", "exothermic", "reaction", "occurred."],
+    explanation: "Because bir Clause Connector'dır."
+  },
+  {
+    en: "The drone model retained its market dominance <strong>although</strong> a new corporate rival emerged last month.",
+    tr: "Geçen ay yeni bir kurumsal rakip ortaya çıkmasına rağmen insansız hava aracı modeli pazardaki hakimiyetini korudu.",
+    connector: "although",
+    options: ["although", "despite", "however", "because"],
+    blocks: ["The", "drone", "model", "retained", "its", "market", "dominance", "although", "a", "new", "corporate", "rival", "emerged", "last", "month."],
+    explanation: "Although bir Clause Connector'dır."
+  },
+  {
+    en: "<strong>Because</strong> the main power supply failed, emergency backup generators restored electricity instantly.",
+    tr: "Ana güç kaynağı arızalandığı için acil durum yedek jeneratörleri elektriği anında geri yükledi.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "main", "power", "supply", "failed,", "emergency", "backup", "generators", "restored", "electricity", "instantly."],
+    explanation: "Because bir Clause Connector'dır."
+  }
+];
+
+const unit22Lesson1SentenceRaw = [
+  {
+    en: "The primary database server crashed unexpectedly. <strong>Therefore,</strong> all active sessions were terminated.",
+    tr: "Birincil veri tabanı sunucusu beklenmedik şekilde çöktü. Bu nedenle tüm aktif oturumlar sonlandırıldı.",
+    connector: "Therefore,",
+    options: ["Therefore,", "Because,", "Because of,", "Although,"],
+    blocks: ["The", "primary", "database", "server", "crashed", "unexpectedly.", "Therefore,", "all", "active", "sessions", "were", "terminated."],
+    explanation: "Therefore bir Sentence Connector'dır. İki bağımsız cümleyi birbirine bağlar ve genellikle yeni bir cümleye başlarken arkasından virgül alır."
+  },
+  {
+    en: "The core algorithm optimized memory usage; <strong>therefore,</strong> query response times dropped significantly.",
+    tr: "Çekirdek algoritma bellek kullanımını optimize etti; bu nedenle sorgu yanıt süreleri önemli ölçüde düştü.",
+    connector: "therefore,",
+    options: ["therefore,", "because,", "because of,", "however,"],
+    blocks: ["The", "core", "algorithm", "optimized", "memory", "usage;", "therefore,", "query", "response", "times", "dropped", "significantly."],
+    explanation: "Therefore bir Sentence Connector'dır. İki cümleyi noktalı virgül (;) ve virgül (,) arasında bağlar."
+  },
+  {
+    en: "The cryptographic verification process was successful. I, <strong>however,</strong> could not log into the main panel.",
+    tr: "Kriptografik doğrulama işlemi başarılı oldu. Ancak ben ana panele giriş yapamadım.",
+    connector: "however,",
+    options: ["however,", "although,", "despite,", "therefore,"],
+    blocks: ["The", "cryptographic", "verification", "process", "was", "successful.", "I,", "however,", "could", "not", "log", "into", "the", "main", "panel."],
+    explanation: "However bir Sentence Connector'dır ve özne ile fiil arasına (I, however, could not...) virgüllerle sıkışabilir."
+  },
+  {
+    en: "The new legal regulations are highly complex. <strong>Therefore,</strong> corporate boards must consult specialized lawyers.",
+    tr: "Yeni yasal düzenlemeler oldukça karmaşık. Bu yüzden şirket yönetim kurulları uzman avukatlara danışmalıdır.",
+    connector: "Therefore,",
+    options: ["Therefore,", "Because,", "Because of,", "Although,"],
+    blocks: ["The", "new", "legal", "regulations", "are", "highly", "complex.", "Therefore,", "corporate", "boards", "must", "consult", "specialized", "lawyers."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The research group requested additional university funds; <strong>therefore,</strong> they hired two postdoctoral scholars.",
+    tr: "Araştırma grubu üniversiteden ek fon talep etti; bu nedenle iki doktora sonrası araştırmacı işe aldılar.",
+    connector: "therefore,",
+    options: ["therefore,", "because,", "because of,", "however,"],
+    blocks: ["The", "research", "group", "requested", "additional", "university", "funds;", "therefore,", "they", "hired", "two", "postdoctoral", "scholars."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The application architecture was validated. The frontend team, <strong>however,</strong> delayed the visual design phase.",
+    tr: "Uygulama mimarisi doğrulandı. Ancak ön uç ekibi görsel tasarım aşamasını erteledi.",
+    connector: "however,",
+    options: ["however,", "although,", "despite,", "therefore,"],
+    blocks: ["The", "application", "architecture", "was", "validated.", "The", "frontend", "team,", "however,", "delayed", "the", "visual", "design", "phase."],
+    explanation: "However bir Sentence Connector'dır."
+  },
+  {
+    en: "The extreme sub-zero environment was maintained. <strong>Therefore,</strong> the chemical compound remained stable.",
+    tr: "Sıfırın altındaki aşırı sıcaklık ortamı korundu. Bu nedenle kimyasal bileşik kararlı kaldı.",
+    connector: "Therefore,",
+    options: ["Therefore,", "Because,", "Because of,", "Although,"],
+    blocks: ["The", "extreme", "sub-zero", "environment", "was", "maintained.", "Therefore,", "the", "chemical", "compound", "remained", "stable."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The local municipality funded the community center; <strong>therefore,</strong> civic engagement indicators improved.",
+    tr: "Yerel belediye toplum merkezini finanse etti; bu nedenle sivil katılım göstergeleri iyileşti.",
+    connector: "therefore,",
+    options: ["therefore,", "because,", "because of,", "however,"],
+    blocks: ["The", "local", "municipality", "funded", "the", "community", "center;", "therefore,", "civic", "engagement", "indicators", "improved."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The automated tracking system recorded the target coordinates. It, <strong>however,</strong> lost the signal after midnight.",
+    tr: "Otomatik takip sistemi hedef koordinatlarını kaydetti. Ancak gece yarısından sonra sinyali kaybetti.",
+    connector: "however,",
+    options: ["however,", "although,", "despite,", "therefore,"],
+    blocks: ["The", "automated", "tracking", "system", "recorded", "the", "target", "coordinates.", "It,", "however,", "lost", "the", "signal", "after", "midnight."],
+    explanation: "However bir Sentence Connector'dır."
+  },
+  {
+    en: "The severe coastal storm caused massive network damage. <strong>Therefore,</strong> emergency teams worked offline.",
+    tr: "Şiddetli kıyı fırtınası büyük ağ hasarına neden oldu. Bu yüzden acil durum ekipleri çevrimdışı çalıştı.",
+    connector: "Therefore,",
+    options: ["Therefore,", "Because,", "Because of,", "Although,"],
+    blocks: ["The", "severe", "coastal", "storm", "caused", "massive", "network", "damage.", "Therefore,", "emergency", "teams", "worked", "offline."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The structural engineers inspected the concrete foundation; <strong>therefore,</strong> the construction permit was renewed.",
+    tr: "İnşaat mühendisleri beton temeli inceledi; bu nedenle inşaat izni yenilendi.",
+    connector: "therefore,",
+    options: ["therefore,", "because,", "because of,", "however,"],
+    blocks: ["The", "structural", "engineers", "inspected", "the", "concrete", "foundation;", "therefore,", "the", "construction", "permit", "was", "renewed."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The compiler detected a critical syntax error. The user, <strong>however,</strong> ignored the diagnostic warning.",
+    tr: "Derleyici kritik bir sözdizimi hatası tespit etti. Ancak kullanıcı tanı uyarısını görmezden geldi.",
+    connector: "however,",
+    options: ["however,", "although,", "despite,", "therefore,"],
+    blocks: ["The", "compiler", "detected", "a", "critical", "syntax", "error.", "The", "user,", "however,", "ignored", "the", "diagnostic", "warning."],
+    explanation: "However bir Sentence Connector'dır."
+  },
+  {
+    en: "Global temperatures rose at an alarming rate. <strong>Therefore,</strong> polar ice sheets underwent rapid degradation.",
+    tr: "Küresel sıcaklıklar endişe verici bir oranda arttı. Bu nedenle kutup buzulları hızlı bir bozulmaya uğradı.",
+    connector: "Therefore,",
+    options: ["Therefore,", "Because,", "Because of,", "Although,"],
+    blocks: ["Global", "temperatures", "rose", "at", "an", "alarming", "rate.", "Therefore,", "polar", "ice", "sheets", "underwent", "rapid", "degradation."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The executive manager rejected the initial budget draft; <strong>therefore,</strong> the project roadmap was modified.",
+    tr: "Yönetici ilk bütçe taslağını reddetti; bu nedenle proje yol haritası değiştirildi.",
+    connector: "therefore,",
+    options: ["therefore,", "because,", "because of,", "however,"],
+    blocks: ["The", "executive", "manager", "rejected", "the", "initial", "budget", "draft;", "therefore,", "the", "project", "roadmap", "was", "modified."],
+    explanation: "Therefore bir Sentence Connector'dır."
+  },
+  {
+    en: "The mobile software package is completely ready. The release coordinators, <strong>however,</strong> are waiting for store approval.",
+    tr: "Mobil yazılım paketi tamamen hazır. Ancak sürüm koordinatörleri mağaza onayını bekliyor.",
+    connector: "however,",
+    options: ["however,", "although,", "despite,", "therefore,"],
+    blocks: ["The", "mobile", "software", "package", "is", "completely", "ready.", "The", "release", "coordinators,", "however,", "are", "waiting", "for", "store", "approval."],
+    explanation: "However bir Sentence Connector'dır."
+  }
+];
+
+const unit22Lesson1Contrasts = [
+  {
+    sentence: "I was ill; ________, I went to hospital.",
+    options: ["therefore", "because", "because of", "although"],
+    correct: "therefore",
+    explanation: "Noktalı virgül (;) ve virgülden (,) dolayı bu boşluğa bir Sentence Connector (yani therefore) gelmelidir. because bir Clause Connector, because of ise bir Phrase Connector'dır."
+  },
+  {
+    sentence: "________ the heavy rain, the football match was cancelled.",
+    options: ["Because of", "Because", "Therefore", "Although"],
+    correct: "Because of",
+    explanation: "heavy rain (ağır yağmur) bir isim öbeği olduğu için boşluğa Phrase Connector (Because of) gelmelidir. Because kendisinden sonra tam cümle (SVO) ister."
+  },
+  {
+    sentence: "We stayed indoors ________ it was raining heavily.",
+    options: ["because", "because of", "therefore", "despite"],
+    correct: "because",
+    explanation: "it was raining heavily tam bir cümle (SVO) olduğu için Clause Connector (because) kullanılmalıdır. because of sadece isim öbekleriyle kullanılır."
+  },
+  {
+    sentence: "________ we worked hard, we could not finish the project on time.",
+    options: ["Although", "Despite", "However", "Because of"],
+    correct: "Although",
+    explanation: "we worked hard tam bir cümle (SVO) olduğu için zıtlık bildiren Clause Connector (Although) kullanılmalıdır. Despite kendisinden sonra isim öbeği alır."
+  },
+  {
+    sentence: "The software was validated. The frontend team, ________, delayed the design phase.",
+    options: ["however", "although", "despite", "because of"],
+    correct: "however",
+    explanation: "Özne ile fiil arasına virgüllerle sıkışan zıtlık bağlacı Sentence Connector olan 'however'dır."
+  },
+  {
+    sentence: "The project succeeded ________ the complete lack of team coordination.",
+    options: ["despite", "although", "however", "because"],
+    correct: "despite",
+    explanation: "the complete lack of team coordination bir isim öbeği olduğu için boşluğa zıtlık bildiren Phrase Connector (despite) gelmelidir."
+  },
+  {
+    sentence: "The primary server crashed unexpectedly. ________, all active sessions were terminated.",
+    options: ["Therefore", "Because", "Because of", "Although"],
+    correct: "Therefore",
+    explanation: "Cümlenin başında yeni bir cümleye başlarken arkasından virgül alan ve sebep bildiren bağlaç Sentence Connector olan 'Therefore'dır."
+  }
+];
+
+const unit22Lesson2TimeRaw = [
+  {
+    en: "<strong>Once</strong> the automated algorithm has verified the signature, the gateway transfers the funds.",
+    tr: "Otomatik algoritma imzayı doğruladıktan sonra geçiş kapısı fonları aktarır.",
+    connector: "Once",
+    options: ["Once", "As soon as", "Until", "Before"],
+    blocks: ["Once", "the", "automated", "algorithm", "has", "verified", "the", "signature,", "the", "gateway", "transfers", "the", "funds."],
+    explanation: "Once, bir eylemin tamamlanmasının ardından diğerinin hemen gerçekleşeceğini bildiren bir zaman bağlacıdır."
+  },
+  {
+    en: "The software executes the cleanup script <strong>as soon as</strong> the installation process finishes.",
+    tr: "Yazılım, kurulum işlemi biter bitmez temizleme betiğini yürütür.",
+    connector: "as soon as",
+    options: ["as soon as", "once", "until", "before"],
+    blocks: ["The", "software", "executes", "the", "cleanup", "script", "as soon as", "the", "installation", "process", "finishes."],
+    explanation: "As soon as, bir eylemin hemen ardıllığını veya anlık birlikteliğini vurgulayan zaman bağlacıdır."
+  },
+  {
+    en: "<strong>Whenever</strong> the application requests a layout refresh, the engine recalculates the spatial models.",
+    tr: "Uygulama ne zaman bir düzen yenilemesi talep etse motor uzamsal modelleri yeniden hesaplar.",
+    connector: "Whenever",
+    options: ["Whenever", "Once", "While", "By the time"],
+    blocks: ["Whenever", "the", "application", "requests", "a", "layout", "refresh,", "the", "engine", "recalculates", "the", "spatial", "models."],
+    explanation: "Whenever (her ne zaman / her ...dığında), eylemin her tekrarlanışında gerçekleşen durumları bağlar."
+  },
+  {
+    en: "The backup systems continuously clone active log files <strong>while</strong> the main database is running.",
+    tr: "Ana veri tabanı çalışırken yedekleme sistemleri aktif günlük dosyalarını sürekli olarak kopyalar.",
+    connector: "while",
+    options: ["while", "until", "before", "after"],
+    blocks: ["The", "backup", "systems", "continuously", "clone", "active", "log", "files", "while", "the", "main", "database", "is", "running."],
+    explanation: "While, iki eylemin aynı anda paralel olarak gerçekleştiği süreçleri ifade etmek için kullanılır."
+  },
+  {
+    en: "<strong>By the time</strong> the technical support team discovered the security bug, the malware had spread.",
+    tr: "Teknik destek ekibi güvenlik açığını keşfedene kadar kötü amaçlı yazılım yayılmıştı.",
+    connector: "By the time",
+    options: ["By the time", "As soon as", "Whenever", "Once"],
+    blocks: ["By the time", "the", "technical", "support", "team", "discovered", "the", "security", "bug,", "the", "malware", "had", "spread."],
+    explanation: "By the time (-e kadar), genellikle bir eylemin tamamlandığı ana kadar diğer eylemin çoktan gerçekleşmiş olduğunu (Past Perfect) anlatır."
+  },
+  {
+    en: "The device triggers an internal cooling mechanism <strong>the moment</strong> the mechanical core overheats.",
+    tr: "Mekanik çekirdek aşırı ısındığı an cihaz dahili bir soğutma mekanizmasını tetikler.",
+    connector: "the moment",
+    options: ["the moment", "while", "until", "before"],
+    blocks: ["The", "device", "triggers", "an", "internal", "cooling", "mechanism", "the moment", "the", "mechanical", "core", "overheats."],
+    explanation: "The moment (-er -mez / ... olduğu an), eylemin gerçekleştiği tam saniyeyi veya anı belirtir."
+  },
+  {
+    en: "<strong>Every time</strong> a user clicks the registration button, the server generates a unique cryptographic key.",
+    tr: "Bir kullanıcı kayıt düğmesine her tıkladığında sunucu benzersiz bir kriptografik anahtar oluşturur.",
+    connector: "Every time",
+    options: ["Every time", "By the time", "While", "Until"],
+    blocks: ["Every time", "a", "user", "clicks", "the", "registration", "button,", "the", "server", "generates", "a", "unique", "cryptographic", "key."],
+    explanation: "Every time, eylemin her tekrarında gerçekleşen genel veya sistemsel döngüleri kurar."
+  },
+  {
+    en: "Technicians must monitor the temperature parameters closely <strong>while</strong> the concrete is hardening.",
+    tr: "Beton sertleşirken teknisyenler sıcaklık parametrelerini yakından izlemelidir.",
+    connector: "while",
+    options: ["while", "until", "before", "after"],
+    blocks: ["Technicians", "must", "monitor", "the", "temperature", "parameters", "closely", "while", "the", "concrete", "is", "hardening."],
+    explanation: "While, devam etmekte olan bir sürecin (hardening) gerçekleştiği zaman dilimini nitelemektedir."
+  },
+  {
+    en: "<strong>Until</strong> the system architect grants administrative clearance, no one can alter the configuration files.",
+    tr: "Sistem mimarı idari yetki verene kadar hiç kimse yapılandırma dosyalarını değiştiremez.",
+    connector: "Until",
+    options: ["Until", "Once", "As soon as", "Before"],
+    blocks: ["Until", "the", "system", "architect", "grants", "administrative", "clearance,", "no", "one", "can", "alter", "the", "configuration", "files."],
+    explanation: "Until (-e kadar), bir durumun veya eylemin sınırlandığı bitiş noktasını veya koşulunu belirler."
+  },
+  {
+    en: "The laboratory team compiled the statistical metrics <strong>before</strong> they presented the research data.",
+    tr: "Laboratuvar ekibi araştırma verilerini sunmadan önce istatistiksel metrikleri derledi.",
+    connector: "before",
+    options: ["before", "after", "while", "until"],
+    blocks: ["The", "laboratory", "team", "compiled", "the", "statistical", "metrics", "before", "they", "presented", "the", "research", "data."],
+    explanation: "Before (-meden önce), eylemlerin kronolojik sırasını belirleyen temel bir zaman bağlacıdır."
+  },
+  {
+    en: "<strong>Just as</strong> the main supply lines were restored, a secondary power surge disabled the switches.",
+    tr: "Tam ana besleme hatları onarılmışken ikincil bir güç dalgalanması şalterleri devre dışı bıraktı.",
+    connector: "Just as",
+    options: ["Just as", "Once", "Whenever", "Before"],
+    blocks: ["Just as", "the", "main", "supply", "lines", "were", "restored,", "a", "secondary", "power", "surge", "disabled", "the", "switches."],
+    explanation: "Just as (tam ... iken), iki eylemin çakıştığı tam o kritik anı yakalamak için kullanılır."
+  },
+  {
+    en: "The legislative committee will draft a new document <strong>after</strong> they have reviewed the public feedback.",
+    tr: "Yasama komitesi halktan gelen geri bildirimleri inceledikten sonra yeni bir belge taslağı hazırlayacak.",
+    connector: "after",
+    options: ["after", "before", "while", "until"],
+    blocks: ["The", "legislative", "committee", "will", "draft", "a", "new", "document", "after", "they", "have", "reviewed", "the", "public", "feedback."],
+    explanation: "After (-dikten sonra), bir eylemin tamamlanmasının ardından gerçekleşen sonraki adımı gösterir."
+  },
+  {
+    en: "<strong>As soon as</strong> the central bank announced the interest rates, stock market indicators dropped.",
+    tr: "Merkez bankası faiz oranlarını açıklar açıklamaz borsa göstergeleri düştü.",
+    connector: "As soon as",
+    options: ["As soon as", "Until", "Before", "While"],
+    blocks: ["As soon as", "the", "central", "bank", "announced", "the", "interest", "rates,", "stock", "market", "indicators", "dropped."],
+    explanation: "As soon as, iki eylemin birbirini anında takip ettiğini belirten zaman bağlacıdır."
+  },
+  {
+    en: "The mobile application saves the player's progress automatically <strong>the moment</strong> a level is completed.",
+    tr: "Bir seviye tamamlandığı an mobil uygulama oyuncunun ilerlemesini otomatik olarak kaydeder.",
+    connector: "the moment",
+    options: ["the moment", "while", "until", "before"],
+    blocks: ["The", "mobile", "application", "saves", "the", "player's", "progress", "automatically", "the moment", "a", "level", "is", "completed."],
+    explanation: "The moment, eylemin bittiği anlık olaya odaklanır."
+  },
+  {
+    en: "<strong>By the time</strong> the ancient artifact reached the national museum, its molecular coating had decayed.",
+    tr: "Antik eser ulusal müzeye ulaşana kadar moleküler kaplaması çürümüştü.",
+    connector: "By the time",
+    options: ["By the time", "Once", "Whenever", "As soon as"],
+    blocks: ["By the time", "the", "ancient", "artifact", "reached", "the", "national", "museum,", "its", "molecular", "coating", "had", "decayed."],
+    explanation: "By the time, geçmişte bir olay gerçekleştiğinde (reached), başka bir durumun zaten tamamlanmış olduğunu (had decayed) ifade eder."
+  }
+];
+
+const unit22Lesson2MannerRaw = [
+  {
+    en: "<strong>As you know</strong>, security firewalls block all suspicious external traffic automatically.",
+    tr: "Bildiğiniz gibi, güvenlik duvarları tüm şüpheli harici trafiği otomatik olarak engeller.",
+    connector: "As you know",
+    options: ["As you know", "Just as", "As if", "As though"],
+    blocks: ["As you know,", "security", "firewalls", "block", "all", "suspicious", "external", "traffic", "automatically."],
+    explanation: "As you know (bildiğiniz gibi), konuşmacı ve dinleyici arasındaki ortak bilgiyi tasdik etmek için kullanılan bir manner/tarz bağlacıdır."
+  },
+  {
+    en: "The industrial robotic arm paints the vehicle frame <strong>just as</strong> the programming script dictates.",
+    tr: "Endüstriyel robotik kol, araç gövdesini tam olarak programlama betiğinin emrettiği gibi boyar.",
+    connector: "just as",
+    options: ["just as", "as if", "as though", "as you know"],
+    blocks: ["The", "industrial", "robotic", "arm", "paints", "the", "vehicle", "frame", "just as", "the", "programming", "script", "dictates."],
+    explanation: "Just as (tıpkı ... gibi), iki durum arasındaki biçimsel ve tarzsallık benzerliğini ve birebir uyuşmayı vurgular."
+  },
+  {
+    en: "<strong>As you know</strong>, the secondary legislative committee meets every Tuesday to review budget drafts.",
+    tr: "Bildiğiniz gibi, ikincil yasama komitesi bütçe taslaklarını incelemek için her salı toplanır.",
+    connector: "As you know",
+    options: ["As you know", "Just as", "As if", "As though"],
+    blocks: ["As you know,", "the", "secondary", "legislative", "committee", "meets", "every", "Tuesday", "to", "review", "budget", "drafts."],
+    explanation: "As you know, bilinen genel durumları ve protokolleri doğrulamak için kullanılır."
+  },
+  {
+    en: "The automated simulation model operates <strong>just as</strong> the original physics equations predicted.",
+    tr: "Otomatik simülasyon modeli, tam da orijinal fizik denklemlerinin öngördüğü gibi çalışır.",
+    connector: "just as",
+    options: ["just as", "as if", "as though", "as you know"],
+    blocks: ["The", "automated", "simulation", "model", "operates", "just as", "the", "original", "physics", "equations", "predicted."],
+    explanation: "Just as, eylemin öngörülen teorik modele uygun olarak gerçekleştiğini belirtir."
+  },
+  {
+    en: "The voice synthesizer generated the automated announcement <strong>as though</strong> a native speaker were talking.",
+    tr: "Ses sentezleyici otomatik anonsu sanki ana dili İngilizce olan biri konuşuyormuş gibi oluşturdu.",
+    connector: "as though",
+    options: ["as though", "as you know", "just as", "as if"],
+    blocks: ["The", "voice", "synthesizer", "generated", "the", "automated", "announcement", "as though", "a", "native", "speaker", "were", "talking."],
+    explanation: "As though (-miş gibi), as if gibi gerçek dışı varsayımlar için kullanılır ve arkasından gelen cümlenin zamanını bir derece past yapar."
+  },
+  {
+    en: "<strong>As you know</strong>, the mobile language learning application focuses on structured grammar pedagogy.",
+    tr: "Bildiğiniz gibi, mobil dil öğrenme uygulaması yapılandırılmış dil bilgisi öğretimine odaklanır.",
+    connector: "As you know",
+    options: ["As you know", "Just as", "As if", "As though"],
+    blocks: ["As you know,", "the", "mobile", "language", "learning", "application", "focuses", "on", "structured", "grammar", "pedagogy."],
+    explanation: "As you know, paylaşılan bilgiyi pekiştirmek için manner zarfı olarak işlev görür."
+  },
+  {
+    en: "The chemical solution changed its color parameters <strong>just as</strong> the lead researcher had anticipated.",
+    tr: "Kimyasal çözelti, tam da baş araştırmacının beklediği gibi renk parametrelerini değiştirdi.",
+    connector: "just as",
+    options: ["just as", "as if", "as though", "as you know"],
+    blocks: ["The", "chemical", "solution", "changed", "its", "color", "parameters", "just as", "the", "lead", "researcher", "had", "anticipated."],
+    explanation: "Just as, iki durum arasındaki birebir uyumu vurgulayan manner bağlacıdır."
+  },
+  {
+    en: "The digital avatar navigated the virtual laboratory space <strong>as if</strong> it were controlled by an operator.",
+    tr: "Dijital avatar, sanal laboratuvar alanında sanki bir operatör tarafından kontrol ediliyormuş gibi hareket etti.",
+    connector: "as if",
+    options: ["as if", "as you know", "just as", "as though"],
+    blocks: ["The", "digital", "avatar", "navigated", "the", "virtual", "laboratory", "space", "as if", "it", "were", "controlled", "by", "an", "operator."],
+    explanation: "As if, sanal ortamdaki gerçek dışı benzerliği nitelemektedir."
+  },
+  {
+    en: "<strong>As you know</strong>, the compiler terminates execution the moment it encounters a critical syntax error.",
+    tr: "Bildiğiniz gibi, derleyici kritik bir sözdizimi hatasıyla karşılaştığı an yürütmeyi sonlandırır.",
+    connector: "As you know",
+    options: ["As you know", "Just as", "As if", "As though"],
+    blocks: ["As you know,", "the", "compiler", "terminates", "execution", "the", "moment", "it", "encounters", "a", "critical", "syntax", "error."],
+    explanation: "As you know, yazılım ve derleme kuralları gibi genel doğruları bildirmek için kullanılır."
+  },
+  {
+    en: "The automated drone adjusted its flight altitude <strong>just as</strong> the proximity sensors calculated.",
+    tr: "Otomatik drone, uçuş yüksekliğini tam da yakınlık sensörlerinin hesapladığı gibi ayarladı.",
+    connector: "just as",
+    options: ["just as", "as if", "as though", "as you know"],
+    blocks: ["The", "automated", "drone", "adjusted", "its", "flight", "altitude", "just as", "the", "proximity", "sensors", "calculated."],
+    explanation: "Just as, anlık veri uyuşmasını manner bağlamında niteler."
+  },
+  {
+    en: "The corporate president addressed the international press conference <strong>as though</strong> the merger were finalized.",
+    tr: "Şirket başkan, uluslararası basın toplantısında sanki birleşme tamamlanmış gibi konuştu.",
+    connector: "as though",
+    options: ["as though", "as you know", "just as", "as if"],
+    blocks: ["The", "corporate", "president", "addressed", "the", "international", "press", "conference", "as though", "the", "merger", "were", "finalized."],
+    explanation: "As though, henüz tamamlanmamış bir durumu tamamlanmış gibi sunma varsayımını niteler."
+  },
+  {
+    en: "<strong>As you know</strong>, human anatomy studies made little progress before medieval universities allowed dissections.",
+    tr: "Bildiğiniz gibi, orta çağ üniversiteleri diseksiyonlara izin vermeden önce insan anatomisi çalışmaları çok az ilerleme kaydetti.",
+    connector: "As you know",
+    options: ["As you know", "Just as", "As if", "As though"],
+    blocks: ["As you know,", "human", "anatomy", "studies", "made", "little", "progress", "before", "medieval", "universities", "allowed", "dissections."],
+    explanation: "As you know, tarihsel gerçekleri doğrulamak için manner bağlacı olarak yer alır."
+  },
+  {
+    en: "The system administrative bot distributes network resources <strong>just as</strong> the load balancing script instructs.",
+    tr: "Sistem yönetim botu, ağ kaynaklarını tam da yük dengeleme betiğinin talimat verdiği gibi dağıtır.",
+    connector: "just as",
+    options: ["just as", "as if", "as though", "as you know"],
+    blocks: ["The", "system", "administrative", "bot", "distributes", "network", "resources", "just as", "the", "load", "balancing", "script", "instructs."],
+    explanation: "Just as, botun çalışma şeklini manner olarak betimler."
+  },
+  {
+    en: "The digital display screen flickered erratically <strong>as if</strong> the primary motherboard were failing.",
+    tr: "Dijital gösterge ekranı sanki ana anakart arızalanıyormuş gibi düzensizce titredi.",
+    connector: "as if",
+    options: ["as if", "as you know", "just as", "as though"],
+    blocks: ["The", "digital", "display", "screen", "flickered", "erratically", "as if", "the", "primary", "motherboard", "were", "failing."],
+    explanation: "As if, arıza durumunun dışarıdan görünen varsayımsal durumunu niteler."
+  }
+];
+
+const unit22Lesson2PurposeRaw = [
+  {
+    en: "The engineering team added a secondary firewall <strong>so that</strong> external hackers could not exploit the data.",
+    tr: "Mühendislik ekibi, harici korsanlar verileri kötüye kullanamasın diye ikincil bir güvenlik duvarı ekledi.",
+    connector: "so that",
+    options: ["so that", "lest", "for fear that", "because"],
+    blocks: ["The", "engineering", "team", "added", "a", "secondary", "firewall", "so that", "external", "hackers", "could", "not", "exploit", "the", "data."],
+    explanation: "So that (-sin diye), bir eylemin amacını bildiren en yaygın amaç bağlacıdır. Genellikle yan cümlede can, could, may, might, will, would ile kullanılır."
+  },
+  {
+    en: "The system administrators automated the backup routine <strong>in order that</strong> user files might be protected.",
+    tr: "Sistem yöneticileri, kullanıcı dosyaları korunabilsin diye yedekleme rutini otomatikleştirdi.",
+    connector: "in order that",
+    options: ["in order that", "lest", "for fear that", "because of"],
+    blocks: ["The", "system", "administrators", "automated", "the", "backup", "routine", "in order that", "user", "files", "might", "be", "protected."],
+    explanation: "In order that (-sin diye), so that ile eş anlamlı olup resmi/akademik dilde amaç belirtir. Genellikle modallarla kullanılır."
+  },
+  {
+    en: "The research facility locked the laboratory doors <strong>for fear that</strong> the hazardous gas should leak out.",
+    tr: "Araştırma tesisi, tehlikeli gaz dışarı sızabilir korkusuyla laboratuvar kapılarını kilitledi.",
+    connector: "for fear that",
+    options: ["for fear that", "so that", "in order that", "although"],
+    blocks: ["The", "research", "facility", "locked", "the", "laboratory", "doors", "for fear that", "the", "hazardous", "gas", "should", "leak", "out."],
+    explanation: "For fear that (-er korkusuyla), olumsuz bir durumun gerçekleşme ihtimalinden kaçınmak için alınan önlemleri ifade eder."
+  },
+  {
+    en: "The software developer refactored the legacy functions <strong>lest</strong> the compiler should generate a syntax error.",
+    tr: "Yazılım geliştirici, derleyici bir sözdizimi hatası oluşturmasın diye eski fonksiyonları yeniden yapılandırdı.",
+    connector: "lest",
+    options: ["lest", "so that", "in order that", "since"],
+    blocks: ["The", "software", "developer", "refactored", "the", "legacy", "functions", "lest", "the", "compiler", "should", "generate", "a", "syntax", "error."],
+    explanation: "Lest (-mesin diye), olumsuz amaç bildirir. Cümleye kendiliğinden olumsuzluk kattığı için lest yan cümlesinde 'not' kullanılmaz ve genellikle should veya bare infinitive kullanılır."
+  },
+  {
+    en: "Chemists kept the volatile liquid in an absolute vacuum chamber <strong>so that</strong> it would not ignite.",
+    tr: "Kimyagerler uçucu sıvıyı alev almasın diye mutlak vakum odasında tuttular.",
+    connector: "so that",
+    options: ["so that", "lest", "for fear that", "seeing that"],
+    blocks: ["Chemists", "kept", "the", "volatile", "liquid", "in", "an", "absolute", "vacuum", "chamber", "so that", "it", "would", "not", "ignite."],
+    explanation: "So that, alev almasını önleme amacını bildirmektedir."
+  },
+  {
+    en: "The municipality reinforced the ancient bridge structure <strong>in order that</strong> heavy vehicles could pass safely.",
+    tr: "Belediye, ağır vasıtalar güvenli bir şekilde geçebilsin diye tarihi köprü yapısını güçlendirdi.",
+    connector: "in order that",
+    options: ["in order that", "lest", "for fear that", "because of"],
+    blocks: ["The", "municipality", "reinforced", "the", "ancient", "bridge", "structure", "in order that", "heavy", "vehicles", "could", "pass", "safely."],
+    explanation: "In order that, ağır vasıtaların güvenli geçişini sağlama amacını ifade eder."
+  },
+  {
+    en: "The flight coordinators delayed the aircraft departure <strong>for fear that</strong> the extreme storm might damage the wings.",
+    tr: "Uçuş koordinatörleri, şiddetli fırtına kanatlara zarar verebilir korkusuyla uçağın kalkışını erteledi.",
+    connector: "for fear that",
+    options: ["for fear that", "so that", "in order that", "despite"],
+    blocks: ["The", "flight", "coordinators", "delayed", "the", "aircraft", "departure", "for fear that", "the", "extreme", "storm", "might", "damage", "the", "wings."],
+    explanation: "For fear that, fırtınanın zarar verme ihtimali korkusuyla alınan önlemi niteler."
+  },
+  {
+    en: "The mobile application requests strict privacy permissions <strong>lest</strong> third-party trackers should access user location.",
+    tr: "Mobil uygulama, üçüncü taraf takipçiler kullanıcı konumuna erişmesin diye sıkı gizlilik izinleri talep eder.",
+    connector: "lest",
+    options: ["lest", "so that", "in order that", "as"],
+    blocks: ["The", "mobile", "application", "requests", "strict", "privacy", "permissions", "lest", "third-party", "trackers", "should", "access", "user", "location."],
+    explanation: "Lest, üçüncü şahısların konuma erişimini engelleme amacını (olumsuz amaç) yapısal olarak olumsuz ek kullanmadan kurar."
+  },
+  {
+    en: "Teachers integrated gamified models into the online curriculum <strong>so that</strong> students can learn grammar faster.",
+    tr: "Öğretmenler, öğrenciler dil bilgisini daha hızlı öğrenebilsin diye çevrimiçi müfredata oyunlaştırılmış modeller entegre etti.",
+    connector: "so that",
+    options: ["so that", "lest", "for fear that", "now that"],
+    blocks: ["Teachers", "integrated", "gamified", "models", "into", "the", "online", "curriculum", "so that", "students", "can", "learn", "grammar", "faster."],
+    explanation: "So that, öğrencilerin daha hızlı öğrenmesi amacını niteleyen amaç bağlacıdır."
+  },
+  {
+    en: "The financial firm updated its cryptographic rules <strong>in order that</strong> digital transactions may remain secure.",
+    tr: "Finans firması, dijital işlemler güvenli kalabilsin diye kriptografik kurallarını güncelledi.",
+    connector: "in order that",
+    options: ["in order that", "lest", "for fear that", "inasmuch as"],
+    blocks: ["The", "financial", "firm", "updated", "its", "cryptographic", "rules", "in order that", "digital", "transactions", "may", "remain", "secure."],
+    explanation: "In order that, dijital işlemlerin güvenli kalması amacını niteler."
+  },
+  {
+    en: "Astronomers adjusted the lens focus parameters <strong>for fear that</strong> cosmic dust should obscure the binary star.",
+    tr: "Gökbilimciler, kozmik toz ikili yıldızı gölgeleyebilir korkusuyla mercek odak parametrelerini ayarladı.",
+    connector: "for fear that",
+    options: ["for fear that", "so that", "in order that", "although"],
+    blocks: ["Astronomers", "adjusted", "the", "lens", "focus", "parameters", "for fear that", "cosmic", "dust", "should", "obscure", "the", "binary", "star."],
+    explanation: "For fear that, tozun gölgeleme ihtimali korkusunu amaç olarak niteler."
+  },
+  {
+    en: "The military deployment unit fortified the coastal border checkpoint <strong>lest</strong> hostile forces should advance.",
+    tr: "Askeri intikal birimi, düşman kuvvetleri ilerlemesin diye kıyı sınır kontrol noktasını tahkim etti.",
+    connector: "lest",
+    options: ["lest", "so that", "in order that", "seeing that"],
+    blocks: ["The", "military", "deployment", "unit", "fortified", "the", "coastal", "border", "checkpoint", "lest", "hostile", "forces", "should", "advance."],
+    explanation: "Lest, düşmanın ilerlemesini engelleme olumsuz amacını kurar."
+  },
+  {
+    en: "The company published the detailed financial balance sheets <strong>so that</strong> investors can evaluate fiscal health.",
+    tr: "Şirket, yatırımcılar mali durumu değerlendirebilsin diye ayrıntılı mali bilançoları yayımladı.",
+    connector: "so that",
+    options: ["so that", "lest", "for fear that", "because of"],
+    blocks: ["The", "company", "published", "the", "detailed", "financial", "balance", "sheets", "so that", "investors", "can", "evaluate", "fiscal", "health."],
+    explanation: "So that, yatırımcıların değerlendirme yapabilmesi amacını niteleyen amaç bağlacıdır."
+  },
+  {
+    en: "The medical center administered an immediate dose of adrenaline <strong>in order that</strong> the allergic reaction might be suppressed.",
+    tr: "Tıp merkezi, alerjik reaksiyon baskılanabilsin diye hemen bir doz adrenalin uyguladı.",
+    connector: "in order that",
+    options: ["in order that", "lest", "for fear that", "on grounds that"],
+    blocks: ["The", "medical", "center", "administered", "an", "immediate", "dose", "of", "adrenaline", "in order that", "the", "allergic", "reaction", "might", "be", "suppressed."],
+    explanation: "In order that, alerjinin baskılanması amacını kurmaktadır."
+  },
+  {
+    en: "The automated system checks the oil pressure levels every minute <strong>lest</strong> the engine should seize unexpectedly.",
+    tr: "Otomatik sistem, motor beklenmedik şekilde arızalanmasın diye yağ basıncı seviyelerini her dakika kontrol eder.",
+    connector: "lest",
+    options: ["lest", "so that", "in order that", "since"],
+    blocks: ["The", "automated", "system", "checks", "the", "oil", "pressure", "levels", "every", "minute", "lest", "the", "engine", "should", "seize", "unexpectedly."],
+    explanation: "Lest, motorun aniden arızalanmasını önleme olumsuz amacını niteler."
+  }
+];
+
+const unit22Lesson2CauseRaw = [
+  {
+    en: "<strong>Because</strong> the primary database experienced a massive overflow, query response operations stalled.",
+    tr: "Birincil veri tabanı büyük bir taşma yaşadığı için sorgu yanıt işlemleri durdu.",
+    connector: "Because",
+    options: ["Because", "Because of", "Therefore", "Although"],
+    blocks: ["Because", "the", "primary", "database", "experienced", "a", "massive", "overflow,", "query", "response", "operations", "stalled."],
+    explanation: "Because (-dığı için), sebep bildiren en temel Clause Connector'dır ve kendisinden sonra SVO alır."
+  },
+  {
+    en: "The system administrator manually wiped the log folders, <strong>for</strong> the memory storage unit was full.",
+    tr: "Sistem yöneticisi günlük klasörlerini manuel olarak temizledi, zira bellek depolama birimi doluydu.",
+    connector: "for",
+    options: ["for", "because of", "therefore", "although"],
+    blocks: ["The", "system", "administrator", "manually", "wiped", "the", "log", "folders,", "for", "the", "memory", "storage", "unit", "was", "full."],
+    explanation: "For (zira/çünkü), sadece iki cümle arasında gerekçe bildirmek için kullanılan ve önünde virgül bulunan bir koordinasyon bağlacıdır."
+  },
+  {
+    en: "<strong>Now that</strong> the development team has optimized the compiler, the app loads configuration data instantly.",
+    tr: "Geliştirme ekibi derleyiciyi optimize ettiği için artık uygulama yapılandırma verilerini anında yüklüyor.",
+    connector: "Now that",
+    options: ["Now that", "Because of", "Therefore", "Although"],
+    blocks: ["Now that", "the", "development", "team", "has", "optimized", "the", "compiler,", "the", "app", "loads", "configuration", "data", "instantly."],
+    explanation: "Now that (mademki / artık ... olduğuna göre), zaman içinde değişen yeni bir durumun getirdiği gerekçeyi belirtmek için kullanılır."
+  },
+  {
+    en: "The corporate board rejected the partnership proposal <strong>on grounds that</strong> the financial parameters were highly unstable.",
+    tr: "Şirket yönetim kurulu, mali parametrelerin son derece istikrarsız olduğu gerekçesiyle ortaklık teklifini reddetti.",
+    connector: "on grounds that",
+    options: ["on grounds that", "so that", "lest", "despite"],
+    blocks: ["The", "corporate", "board", "rejected", "the", "partnership", "proposal", "on grounds that", "the", "financial", "parameters", "were", "highly", "unstable."],
+    explanation: "On grounds that (-gerekçesiyle), idari ve resmi raporlarda bir kararın gerekçesini açıklamak amacıyla yaygın kullanılan akademik sebep bağlacıdır."
+  },
+  {
+    en: "<strong>Inasmuch as</strong> the regional climate regulations have changed, factories must reduce emission metrics.",
+    tr: "Bölgesel iklim düzenlemeleri değiştiğinden dolayı fabrikalar emisyon metriklerini azaltmalıdır.",
+    connector: "Inasmuch as",
+    options: ["Inasmuch as", "Because of", "Therefore", "Although"],
+    blocks: ["Inasmuch as", "the", "regional", "climate", "regulations", "have", "changed,", "factories", "must", "reduce", "emission", "metrics."],
+    explanation: "Inasmuch as (-diğinden dolayı), resmi ve hukuki belgelerde gerekçe bildiren gelişmiş bir sebep bağlacıdır."
+  },
+  {
+    en: "The security system locked the administrative dashboard <strong>since</strong> a user entered an incorrect code three times.",
+    tr: "Bir kullanıcı üç kez yanlış kod girdiği için güvenlik sistemi yönetici panelini kilitledi.",
+    connector: "since",
+    options: ["since", "because of", "therefore", "although"],
+    blocks: ["The", "security", "system", "locked", "the", "administrative", "dashboard", "since", "a", "user", "entered", "an", "incorrect", "code", "three", "times."],
+    explanation: "Since (-dığı için), 'because' gibi gerekçe bildirmek için kullanılan yaygın bir sebep bağlacıdır."
+  },
+  {
+    en: "The project coordinator postponed the laboratory testing phase, <strong>as</strong> the required chemical samples had not arrived.",
+    tr: "Gerekli kimyasal örnekler gelmediği için proje koordinatörü laboratuvar test aşamasını erteledi.",
+    connector: "as",
+    options: ["as", "because of", "therefore", "although"],
+    blocks: ["The", "project", "coordinator", "postponed", "the", "laboratory", "testing", "phase,", "as", "the", "required", "chemical", "samples", "had", "not", "arrived."],
+    explanation: "As (-dığı için / çünkü), sebep/gerekçe bildirmek için cümle başında veya ortasında kullanılabilen Clause Connector'dır."
+  },
+  {
+    en: "<strong>Seeing that</strong> the legislative assembly has passed the new law, institutions must adjust their inner policies.",
+    tr: "Yasama meclisi yeni yasayı kabul ettiğinden dolayı kurumlar iç politikalarını ayarlamalıdır.",
+    connector: "Seeing that",
+    options: ["Seeing that", "Because of", "Therefore", "Although"],
+    blocks: ["Seeing that", "the", "legislative", "assembly", "has", "passed", "the", "new", "law,", "institutions", "must", "adjust", "their", "inner", "policies."],
+    explanation: "Seeing that (mademki / -dığına göre), bilinen güncel bir durumun eylemler üzerindeki nedensel etkisini kurar."
+  },
+  {
+    en: "The mobile language app achieved rapid commercial growth <strong>on grounds that</strong> its algorithm utilizes spaced repetition.",
+    tr: "Mobil dil uygulaması, algoritmasının aralıklı tekrar kullanması gerekçesiyle hızlı bir ticari büyüme elde etti.",
+    connector: "on grounds that",
+    options: ["on grounds that", "so that", "lest", "despite"],
+    blocks: ["The", "mobile", "language", "app", "achieved", "rapid", "commercial", "growth", "on grounds that", "its", "algorithm", "utilizes", "spaced", "repetition."],
+    explanation: "On grounds that, ticari başarının dayandığı akademik ve sistemsel gerekçeyi niteler."
+  },
+  {
+    en: "<strong>Inasmuch as</strong> the structural concrete has completely hardened, construction crews can build the next floor.",
+    tr: "Yapısal beton tamamen sertleştiğinden dolayı inşaat ekipleri bir sonraki katı inşa edebilir.",
+    connector: "Inasmuch as",
+    options: ["Inasmuch as", "Because of", "Therefore", "Although"],
+    blocks: ["Inasmuch as", "the", "structural", "concrete", "has", "completely", "hardened,", "construction", "crews", "can", "build", "the", "next", "floor."],
+    explanation: "Inasmuch as, betonun sertleşmesinin sonraki sürece olan nedensel ve mantıksal zeminini niteler."
+  },
+  {
+    en: "The automated toll booth camera failed to read the license plate <strong>because</strong> the lens was covered in dust.",
+    tr: "Mercek tozla kaplandığı için otomatik geçiş gişesi kamerası plakayı okuyamadı.",
+    connector: "because",
+    options: ["because", "because of", "therefore", "although"],
+    blocks: ["The", "automated", "toll", "booth", "camera", "failed", "to", "read", "the", "license", "plate", "because", "the", "lens", "was", "covered", "in", "dust."],
+    explanation: "Because, kameranın okuyamama nedenini niteleyen temel sebep bağlacıdır."
+  },
+  {
+    en: "The elderly patient was moved to the intensive care unit, <strong>for</strong> her respiratory parameters dropped suddenly.",
+    tr: "Yaşlı hasta yoğun bakım ünitesine taşındı, çünkü solunum parametreleri aniden düştü.",
+    connector: "for",
+    options: ["for", "because of", "therefore", "although"],
+    blocks: ["The", "elderly", "patient", "was", "moved", "to", "the", "intensive", "care", "unit,", "for", "her", "respiratory", "parameters", "dropped", "suddenly."],
+    explanation: "For, iki cümle arasındaki nedensel bağı bir gerekçelendirme olarak virgülle bağlar."
+  },
+  {
+    en: "<strong>Now that</strong> the international space station has crossed the shadow of Earth, astronauts can capture the aurora.",
+    tr: "Uluslararası uzay istasyonu Dünya'nın gölgesinden geçtiği için artık astronotlar kutup ışıklarını yakalayabilir.",
+    connector: "Now that",
+    options: ["Now that", "Because of", "Therefore", "Although"],
+    blocks: ["Now that", "the", "international", "space", "station", "has", "crossed", "the", "shadow", "of", "Earth,", "astronauts", "can", "capture", "the", "aurora."],
+    explanation: "Now that, değişen uzamsal konumun getirdiği yeni çekim imkanının gerekçesini niteler."
+  },
+  {
+    en: "The engineering group redesigned the mechanical piston model <strong>on grounds that</strong> the original design caused friction.",
+    tr: "Mühendislik grubu, orijinal tasarımın sürtünmeye neden olduğu gerekçesiyle mekanik piston modelini yeniden tasarladı.",
+    connector: "on grounds that",
+    options: ["on grounds that", "so that", "lest", "despite"],
+    blocks: ["The", "engineering", "group", "redesigned", "the", "mechanical", "piston", "model", "on grounds that", "the", "original", "design", "caused", "friction."],
+    explanation: "On grounds that, yeniden tasarımın sürtünme sorunu gerekçesiyle yapıldığını belirtir."
+  },
+  {
+    en: "<strong>Seeing that</strong> the database encryption token has expired, the server terminates all client operations.",
+    tr: "Veri tabanı şifreleme jetonunun süresi dolduğundan dolayı sunucu tüm istemci işlemlerini sonlandırır.",
+    connector: "Seeing that",
+    options: ["Seeing that", "Because of", "Therefore", "Although"],
+    blocks: ["Seeing that", "the", "database", "encryption", "token", "has", "expired,", "the", "server", "terminates", "all", "client", "operations."],
+    explanation: "Seeing that, jetonun süresinin dolması durumunun sunucudaki doğrudan nedensel sonucunu niteler."
+  }
+];
+
+function buildKonnektorLesson1Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en,
+      explanation: s.explanation
+    };
+  };
+
+  const buildClozeQuestion = (s, id) => {
+    const correctVal = s.connector;
+    const shuffledOptions = shuffle(s.options);
+    return {
+      id: id,
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
+      sentence: s.en.replace(/<strong>.*?<\/strong>/, "___"),
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      explanation: s.explanation
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const cleanBlocks = s.blocks.map(b => b.replace(/<strong>/g, "").replace(/<\/strong>/g, ""));
+    const distractors = ["and", "but", "so", "or"];
+    const allWords = shuffle([...cleanBlocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: cleanBlocks,
+      enSentence: s.en,
+      isEngToTr: false,
+      explanation: s.explanation
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true,
+      explanation: s.explanation
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+    
+    if (sorted.length >= 5) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+
+    for (let i = 0; i < Math.min(5, sorted.length); i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`));
+    }
+
+    for (let i = 0; i < Math.min(5, sorted.length); i++) {
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+    }
+
+    for (let i = 2; i < Math.min(6, sorted.length); i++) {
+      exList.push(buildWBQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+    }
+
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  const compileContrastsExercise = () => {
+    const list = unit22Lesson1Contrasts.map((q, idx) => {
+      return {
+        id: `u${unitId}l${lessonId}_ex4_cloze_${idx}`,
+        type: "fill-blank-dropdown",
+        prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
+        sentence: q.sentence,
+        options: q.options,
+        correctIndex: q.options.indexOf(q.correct),
+        explanation: q.explanation
+      };
+    });
+    return {
+      id: `u${unitId}l${lessonId}ex4`,
+      title: "Alıştırma 4: Söz Dizimsel Karşılaştırmalar (Phrase vs Clause vs Sentence)",
+      description: "Connektörlerin söz dizimsel kurallarına (isim öbeği, tam cümle ve noktalama) göre kullanım farklılıkları",
+      questions: list
+    };
+  };
+
+  return [
+    compileExercise(unit22Lesson1PhraseRaw, "ex1", "Alıştırma 1: Söz Dizimsel İşlevler — Kategori A (Phrase Connectors)", "Because of ve Despite gibi isim öbeği alan bağlaçların kullanımı"),
+    compileExercise(unit22Lesson1ClauseRaw, "ex2", "Alıştırma 2: Söz Dizimsel İşlevler — Kategori B (Clause Connectors)", "Because ve Although gibi tam cümle alan bağlaçların kullanımı"),
+    compileExercise(unit22Lesson1SentenceRaw, "ex3", "Alıştırma 3: Söz Dizimsel İşlevler — Kategori C (Sentence Connectors)", "Therefore ve However gibi bağımsız cümleleri bağlayan zarfların kullanımı"),
+    compileContrastsExercise()
+  ];
+}
+
+function buildKonnektorLesson2Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en,
+      explanation: s.explanation
+    };
+  };
+
+  const buildClozeQuestion = (s, id) => {
+    const correctVal = s.connector;
+    const shuffledOptions = shuffle(s.options);
+    return {
+      id: id,
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun konnektörü seçin:",
+      sentence: s.en.replace(/<strong>.*?<\/strong>/, "___"),
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      explanation: s.explanation
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const cleanBlocks = s.blocks.map(b => b.replace(/<strong>/g, "").replace(/<\/strong>/g, ""));
+    const distractors = ["and", "but", "so", "or"];
+    const allWords = shuffle([...cleanBlocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: cleanBlocks,
+      enSentence: s.en,
+      isEngToTr: false,
+      explanation: s.explanation
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true,
+      explanation: s.explanation
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+    
+    if (sorted.length >= 5) {
+      exList.push({
+        id: `u${unitId}l${lessonId}_${exId}_match`,
+        type: "matching",
+        prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+        pairs: sorted.slice(0, 5).map(s => ({ left: s.tr, right: s.en }))
+      });
+    }
+
+    for (let i = 0; i < Math.min(5, sorted.length); i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`));
+    }
+
+    for (let i = 0; i < Math.min(5, sorted.length); i++) {
+      exList.push(buildMCQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+    }
+
+    for (let i = 2; i < Math.min(6, sorted.length); i++) {
+      exList.push(buildWBQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+    }
+
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileExercise(unit22Lesson2TimeRaw, "ex1", "Alıştırma 1: Anlamsal Kategoriler — Zaman Bağlaçları (Time)", "Once, as soon as, while, until gibi zaman bildiren bağlaçların kullanımı"),
+    compileExercise(unit22Lesson2MannerRaw, "ex2", "Alıştırma 2: Anlamsal Kategoriler — Durum/Tarz Bağlaçları (Manner)", "As you know, just as, as if, as though gibi durum/tarz bildiren bağlaçların kullanımı"),
+    compileExercise(unit22Lesson2PurposeRaw, "ex3", "Alıştırma 3: Anlamsal Kategoriler — Amaç Bağlaçları (Purpose)", "So that, in order that, for fear that, lest gibi amaç bildiren bağlaçların kullanımı"),
+    compileExercise(unit22Lesson2CauseRaw, "ex4", "Alıştırma 4: Anlamsal Kategoriler — Sebep/Gerekçe Bağlaçları (Cause)", "Because, since, now that, seeing that, for gibi sebep bildiren bağlaçların kullanımı")
+  ];
+}
+
 function buildUnit22SinceExercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
@@ -12568,6 +13768,20 @@ const rawTopics = [
     ]
   },
   {
+    title: "Konnektörler",
+    desc: "Cümle ve isim öbeklerini birbirine bağlayan söz dizimsel ve anlamsal bağlaçlar",
+    icon: "🔗",
+    numLessons: 2,
+    formulas: [
+      { formula: "Phrase Connector + Noun / Clause Connector + SVO / Sentence Connector", example: "Because of the delay (Phrase) / Because it was delayed (Clause) / Therefore, it failed (Sentence)", description: "Konnektörler (bağlaçlar) söz dizimsel işlevlerine göre 3'e ayrılır: 1. Phrase Connectors: Kendisinden sonra sadece isim/isim öbeği alır. 2. Clause Connectors: İki tam cümleyi bağlar. 3. Sentence Connectors: Noktalama işaretlerine bağlı olarak iki bağımsız cümleyi bağlar." },
+      { formula: "Time / Manner / Purpose / Cause Clause", example: "As soon as / As if / So that / Because + SVO", description: "Konnektörler anlamsal işlevlerine göre sınıflandırılır: Zaman (Time), Durum/Tarz (Manner), Amaç (Purpose) ve Gerekçe/Sebep (Cause) bağlaçları." }
+    ],
+    subtitles: [
+      "A. Söz Dizimsel İşlevlerine Göre Konnektörler",
+      "B. Anlamsal İşlevlerine Göre Konnektörler"
+    ]
+  },
+  {
     title: "Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before",
     desc: "after ve before bağlaçları ile kurulan zaman cümleleri",
     icon: "🎻",
@@ -14642,25 +15856,24 @@ const unitSentencesMap = {
     4: { exercises: [] }
   },
   22: {
-    1: { exercises: buildUnit19Lesson66Exercises(22, 66) },
-    2: { exercises: buildAra3ExercisesForLesson67(22, 67) }
+    1: { exercises: buildKonnektorLesson1Exercises(22, 66) },
+    2: { exercises: buildKonnektorLesson2Exercises(22, 67) }
   },
   23: {
-    1: { exercises: buildUnit19Lesson68Exercises(23, 68, 1) },
-    2: { exercises: buildUnit19Lesson68Exercises(23, 69, 2) },
-    3: { exercises: buildUnit19Lesson68Exercises(23, 70, 3) },
-    4: { exercises: buildUnit19Lesson68Exercises(23, 71, 4) },
-    5: { exercises: buildUnit19Lesson68Exercises(23, 72, 5) }
+    1: { exercises: buildUnit19Lesson66Exercises(23, 68) },
+    2: { exercises: buildAra3ExercisesForLesson67(23, 69) }
   },
   24: {
-    1: { exercises: buildUnit22SinceExercises(24, 73) },
-    2: { exercises: buildUnit23WhileExercises(24, 74) },
-    3: { exercises: buildUnit24UntilExercises(24, 75) }
+    1: { exercises: buildUnit19Lesson68Exercises(24, 70, 1) },
+    2: { exercises: buildUnit19Lesson68Exercises(24, 71, 2) },
+    3: { exercises: buildUnit19Lesson68Exercises(24, 72, 3) },
+    4: { exercises: buildUnit19Lesson68Exercises(24, 73, 4) },
+    5: { exercises: buildUnit19Lesson68Exercises(24, 74, 5) }
   },
   25: {
-    1: { exercises: [] },
-    2: { exercises: [] },
-    3: { exercises: [] }
+    1: { exercises: buildUnit22SinceExercises(25, 75) },
+    2: { exercises: buildUnit23WhileExercises(25, 76) },
+    3: { exercises: buildUnit24UntilExercises(25, 77) }
   },
   26: {
     1: { exercises: [] },
@@ -14686,6 +15899,9 @@ const unitSentencesMap = {
     1: { exercises: [] }
   },
   30: {
+    1: { exercises: [] }
+  },
+  31: {
     1: { exercises: [] }
   }
 };
