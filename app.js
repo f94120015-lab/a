@@ -3100,7 +3100,7 @@ function renderFillBlank(container, question) {
       
       document.getElementById('btn-check').disabled = false;
 
-      const isTargetUnit = question.id.startsWith('u101') || question.id.startsWith('u102');
+      const isTargetUnit = question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103');
       const isCorrect = idx === question.correctIndex;
 
       if (isTargetUnit && isCorrect && question.translation) {
@@ -3411,7 +3411,7 @@ function checkAnswer() {
       break;
   }
 
-  const isTargetUnit = question && question.id && (question.id.startsWith('u101') || question.id.startsWith('u102'));
+  const isTargetUnit = question && question.id && (question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103'));
   if (isTargetUnit && question.translation && !wasTranslationCorrect) {
     isCorrect = false;
   }
@@ -4572,7 +4572,7 @@ function initEventListeners() {
       onTranslationGateVerify();
     } else if (!isAnswerChecked) {
       const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
-      const isTargetUnit = question && (question.id.startsWith('u101') || question.id.startsWith('u102'));
+      const isTargetUnit = question && (question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103'));
       const activeType = question ? ((question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') ? question._dynamicType : question.type) : '';
       const isCorrectDropdown = activeType === 'fill-blank-dropdown' && selectedAnswer === question.correctIndex;
 
@@ -5606,6 +5606,12 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
         ruleText = `Bir durumun en uç derecesini (<strong>the best, the worst, the first, the only vb.</strong>) niteleyen ifadelerden sonra gelen relative clause cümleleri, hayat boyu edinilen birikim ve tecrübeleri sorguladığı için <strong>Present Perfect (have/has + V3)</strong> yapısıyla çekimlenir.`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" tecrübe bağlamına uymuyor ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" (have/has + V3) ✔️`;
+      } else if (lessonNum === 102) {
+        title = 'be used to / be accustomed to (Alışkanlık Durumu)';
+        ruleTitle = '💡 Alışkanlık Bildiren Yapı Kuralları';
+        ruleText = `<strong>be used to</strong> veya <strong>be accustomed to</strong> kalıpları bir şeye <strong>"alışkın olmak"</strong> anlamı taşır. Bu kalıplar arkasından gelen fiili yalın (V1) değil, mutlaka isim-fiil (Gerund / <strong>V-ing</strong>) veya doğrudan isim olarak alır. (Formül: <strong>be used to / be accustomed to + Noun / V-ing</strong>)`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" gerund (V-ing) veya be used to kuralına uygun değildir ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" (V-ing çekimi) ✔️`;
       }
 
       if (!ruleText) {

@@ -1547,6 +1547,250 @@ const L101_raw = [
   }
 ];
 
+// Raw question definitions for Lesson 102 (be used to (Alışkın olmak)) - 40 questions
+const L102_raw = [
+  // Exercise 1 (1-10)
+  {
+    type: "fill-blank",
+    sentence: "The senior developer is used to ___ large data streams.",
+    options: ["processing", "process", "processed", "to process"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The senior developer ___ processing large data streams.",
+    options: ["is used to", "used to", "is used", "uses to"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Technical operators are used to ___ heavy industrial machinery.",
+    options: ["operating", "operate", "operated", "to operate"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Technical operators ___ operating heavy industrial machinery.",
+    options: ["are used to", "used to", "are used", "uses to"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "I am used to ___ unoptimized legacy source codes.",
+    options: ["refactoring", "refactor", "refactored", "to refactor"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "I ___ refactoring unoptimized legacy source codes.",
+    options: ["am used to", "used to", "am used", "uses to"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The supervisor was used to ___ severe database overflows.",
+    options: ["handling", "handle", "handled", "to handle"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The supervisor ___ handling severe database overflows.",
+    options: ["was used to", "used to", "was used", "uses to"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Engineers were used to ___ data fields manually.",
+    options: ["compiling", "compile", "compiled", "to compile"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Engineers ___ compiling data fields manually.",
+    options: ["were used to", "used to", "were used", "uses to"]
+  },
+
+  // Exercise 2 (11-20)
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The senior developer ___ processing large data streams.",
+    options: ["is accustomed to", "accustomed to", "is accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Technical operators ___ operating heavy industrial machinery.",
+    options: ["are accustomed to", "accustomed to", "are accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "I ___ refactoring unoptimized legacy source codes.",
+    options: ["am accustomed to", "accustomed to", "am accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The supervisor ___ handling severe database overflows.",
+    options: ["was accustomed to", "accustomed to", "was accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Engineers ___ compiling data fields manually.",
+    options: ["were accustomed to", "accustomed to", "were accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The senior developer is accustomed to ___ large data streams.",
+    options: ["processing", "process", "processed", "to process"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Technical operators are accustomed to ___ heavy industrial machinery.",
+    options: ["operating", "operate", "operated", "to operate"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "I am accustomed to ___ unoptimized legacy source codes.",
+    options: ["refactoring", "refactor", "refactored", "to refactor"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The supervisor was accustomed to ___ severe database overflows.",
+    options: ["handling", "handle", "handled", "to handle"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Engineers were accustomed to ___ data fields manually.",
+    options: ["compiling", "compile", "compiled", "to compile"]
+  },
+
+  // Exercise 3 (21-30)
+  {
+    type: "multiple-fill-blank",
+    sentence: "The network infrastructure branch ___ to ___ massive cloud database queries while secondary firewalls screen external traffic.",
+    translation: "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
+    corrects: ["is used", "processing"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Industrial field crews ___ to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+    translation: "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
+    corrects: ["are used", "operating"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "I ___ used to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
+    translation: "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
+    corrects: ["am", "refactoring"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The senior architect ___ used to ___ critical configuration anomalies before the automated framework took over the backup routine.",
+    translation: "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
+    corrects: ["was", "handling"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Technical specialists ___ used to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+    translation: "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
+    corrects: ["were", "compiling"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The network infrastructure branch ___ accustomed to ___ massive cloud database queries while secondary firewalls screen external traffic.",
+    translation: "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
+    corrects: ["is", "processing"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Industrial field crews ___ accustomed to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+    translation: "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
+    corrects: ["are used", "operating"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "I ___ accustomed to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
+    translation: "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
+    corrects: ["am", "refactoring"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "The senior architect ___ accustomed to ___ critical configuration anomalies before the automated framework took over the backup routine.",
+    translation: "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
+    corrects: ["was", "handling"]
+  },
+  {
+    type: "multiple-fill-blank",
+    sentence: "Technical specialists ___ accustomed to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+    translation: "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
+    corrects: ["were", "compiling"]
+  },
+
+  // Exercise 4 (31-40)
+  {
+    type: "fill-blank",
+    sentence: "The network infrastructure branch is used to ___ massive cloud database queries while secondary firewalls screen external traffic.",
+    options: ["processing", "process", "processed", "to process"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Industrial field crews ___ operating heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+    options: ["are accustomed to", "accustomed to", "are accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "I am accustomed to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
+    options: ["refactoring", "refactor", "refactored", "to refactor"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The senior architect ___ handling critical configuration anomalies before the automated framework took over the backup routine.",
+    options: ["was used to", "used to", "was used", "uses to"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Technical specialists were used to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+    options: ["compiling", "compile", "compiled", "to compile"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "The network infrastructure branch ___ processing massive cloud database queries while secondary firewalls screen external traffic.",
+    options: ["is accustomed to", "accustomed to", "is accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "Industrial field crews are used to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+    options: ["operating", "operate", "operated", "to operate"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "I ___ refactoring complex application systems in order that frontend developers can integrate visual components cleanly.",
+    options: ["am accustomed to", "accustomed to", "am accustomed", "accustomed"]
+  },
+  {
+    type: "fill-blank",
+    sentence: "The senior architect was accustomed to ___ critical configuration anomalies before the automated framework took over the backup routine.",
+    options: ["handling", "handle", "handled", "to handle"]
+  },
+  {
+    type: "fill-blank-dropdown",
+    sentence: "Technical specialists ___ compiling loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+    options: ["were used to", "used to", "were used", "uses to"]
+  }
+];
+
+const L102_tr = [
+  "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+  "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır.",
+  "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım.",
+  "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı.",
+  "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar.",
+  "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+  "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır.",
+  "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım.",
+  "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı.",
+  "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar.",
+  "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
+  "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
+  "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
+  "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
+  "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
+  "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
+  "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
+  "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
+  "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
+  "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar."
+];
+
 const L95_tr = [
   "Şu anda şiddetli yağmur simülasyon alanını etkiliyor.",
   "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor.",
@@ -1841,6 +2085,33 @@ function buildExercises(rawList, lessonId) {
         }
       }
     }
+    if (lessonId === 102) {
+      const markers = [
+        "is used to", "are used to", "am used to", "was used to", "were used to",
+        "is accustomed to", "are accustomed to", "am accustomed to", "was accustomed to", "were accustomed to"
+      ];
+      const gerunds = [
+        "processing", "operating", "refactoring", "handling", "compiling"
+      ];
+      
+      const isGerundQuestion = gerunds.some(g => g === cw);
+      
+      if (isGerundQuestion) {
+        for (const marker of markers) {
+          if (sentence.includes(marker)) {
+            sentence = sentence.replace(marker, `<span style="color: #ff6b6b; font-weight: bold;">${marker}</span>`);
+            break;
+          }
+        }
+      } else {
+        for (const gerund of gerunds) {
+          if (sentence.includes(gerund)) {
+            sentence = sentence.replace(gerund, `<span style="color: #ff6b6b; font-weight: bold;">${gerund}</span>`);
+            break;
+          }
+        }
+      }
+    }
     
     return sentence;
   };
@@ -1893,8 +2164,9 @@ function buildExercises(rawList, lessonId) {
                           lessonId === 98 ? L98_tr[trIdx] :
                           lessonId === 99 ? L99_tr[trIdx] :
                           lessonId === 100 ? L100_tr[trIdx] :
-                          lessonId === 101 ? L101_tr[trIdx] : undefined;
-      const processed = processQuestion(q, `u${lessonId < 98 ? 102 : 101}l${lessonId}_ex${exId}_q${idx + 1}`);
+                          lessonId === 101 ? L101_tr[trIdx] :
+                          lessonId === 102 ? L102_tr[trIdx] : undefined;
+      const processed = processQuestion(q, `u${unitPrefixId}l${lessonId}_ex${exId}_q${idx + 1}`);
       if (translation && processed.type !== "multiple-fill-blank") {
         processed.translation = translation;
       }
@@ -1902,53 +2174,55 @@ function buildExercises(rawList, lessonId) {
     });
   };
 
-
+  const unitPrefixId = lessonId === 102 ? 103 : (lessonId < 98 ? 102 : 101);
   return [
     {
-      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex1`,
+      id: `u${unitPrefixId}l${lessonId}ex1`,
       title: lessonId === 95 ? "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I" :
              lessonId === 96 ? "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I" :
              lessonId === 97 ? "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I" :
              lessonId === 98 ? "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I" :
              lessonId === 99 ? "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I" :
              lessonId === 100 ? "Alıştırma 1: \"It is (high) time\" Kalıbı I" :
-                               "Alıştırma 1: Süperlatif & Kısıtlayıcı Sıfatlar I",
+             lessonId === 102 ? "Alıştırma 1: be used to (Alışkın olmak) I" :
+                                "Alıştırma 1: Süperlatif & Kısıtlayıcı Sıfatlar I",
       description: "Boşluk doldurma ve zaman zarfları pratikleri.",
       questions: getExerciseQuestions(rawList.slice(0, 10), lessonId, 1)
     },
     {
-      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex2`,
+      id: `u${unitPrefixId}l${lessonId}ex2`,
       title: lessonId === 95 ? "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II" :
              lessonId === 96 ? "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II" :
              lessonId === 97 ? "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II" :
              lessonId === 98 ? "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II" :
              lessonId === 99 ? "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II" :
              lessonId === 100 ? "Alıştırma 2: \"It is (high) time\" Kalıbı II" :
-                               "Alıştırma 2: Süperlatif & Kısıtlayıcı Sıfatlar II",
+             lessonId === 102 ? "Alıştırma 2: be used to (Alışkın olmak) II" :
+                                "Alıştırma 2: Süperlatif & Kısıtlayıcı Sıfatlar II",
       description: "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
       questions: getExerciseQuestions(rawList.slice(10, 20), lessonId, 2)
     },
     {
-      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex3`,
+      id: `u${unitPrefixId}l${lessonId}ex3`,
       title: lessonId === 95 ? "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III" :
              lessonId === 96 ? "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III" :
              lessonId === 97 ? "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III" :
              lessonId === 98 ? "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III" :
              lessonId === 99 ? "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III" :
              lessonId === 100 ? "Alıştırma 3: \"It is (high) time\" Kalıbı III" :
-                               "Alıştırma 3: Süperlatif & Kısıtlayıcı Sıfatlar III",
+             lessonId === 102 ? "Alıştırma 3: be used to (Alışkın olmak) III" : "Alıştırma 3: Süperlatif & Kısıtlayıcı Sıfatlar III",
       description: "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
       questions: getExerciseQuestions(rawList.slice(20, 30), lessonId, 3)
     },
     {
-      id: `u${lessonId < 98 ? 102 : 101}l${lessonId}ex4`,
+      id: `u${unitPrefixId}l${lessonId}ex4`,
       title: lessonId === 95 ? "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV" :
              lessonId === 96 ? "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV" :
              lessonId === 97 ? "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV" :
              lessonId === 98 ? "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV" :
              lessonId === 99 ? "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV" :
              lessonId === 100 ? "Alıştırma 4: \"It is (high) time\" Kalıbı IV" :
-                               "Alıştırma 4: Süperlatif & Kısıtlayıcı Sıfatlar IV",
+             lessonId === 102 ? "Alıştırma 4: be used to (Alışkın olmak) IV" : "Alıştırma 4: Süperlatif & Kısıtlayıcı Sıfatlar IV",
       description: "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
       questions: getExerciseQuestions(rawList.slice(30, 40), lessonId, 4)
     }
@@ -1968,11 +2242,15 @@ const unit101Exercises = {
   4: { exercises: buildExercises(L101_raw, 101) }
 };
 
+const unit103Exercises = {
+  1: { exercises: buildExercises(L102_raw, 102) }
+};
+
 const dataPath = '../data.js';
 let content = fs.readFileSync(dataPath, 'utf8');
 
 // 1. Replace the DENEME topic in rawTopics
-const topicStartMarker = 'id: 0,\n    title: "Zaman Zarfları ve Zaman Uyumu",';
+const topicStartMarker = 'title: "Zaman Zarfları ve Zaman Uyumu",';
 const topicStartIdx = content.indexOf(topicStartMarker);
 if (topicStartIdx !== -1) {
   const openBraceIdx = content.lastIndexOf('{', topicStartIdx);
@@ -2013,6 +2291,19 @@ if (topicStartIdx !== -1) {
       "\\\"It is (high) time\\\" Kalıbı",
       "Süperlatif & Kısıtlayıcı Sıfatlar + Present Perfect"
     ]
+  },
+  {
+    id: 103,
+    title: "Alışkanlık Durumu: Be used to / Be accustomed to",
+    desc: "Alışkanlık Bildiren Yapılar",
+    icon: "🎯",
+    numLessons: 1,
+    formulas: [
+      { formula: "Subject + be used to + Noun / V-ing", example: "The senior developer <span style=\\"color: #ff6b6b; font-weight: bold;\\">is used to</span> processing large data streams: Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.", description: "Alışkanlık durumu bildiren bu kalıplar, arkalarından kesinlikle yalın fiil almazlar; eylemler mutlaka -ing takısıyla isimleştirilerek (Gerund) bağlanır." }
+    ],
+    subtitles: [
+      "be used to (Alışkın olmak)"
+    ]
   }\n`;
     content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);
   }
@@ -2029,7 +2320,7 @@ if (mapStartIndex !== -1) {
   const key1Index = content.indexOf('\n  1: ', openingBraceIndex);
   
   if (key0Index !== -1 && key1Index !== -1) {
-    const formattedObjStr = `\n  102: ${JSON.stringify(unit102Exercises, null, 2)},\n  101: ${JSON.stringify(unit101Exercises, null, 2)},\n`;
+    const formattedObjStr = `\n  102: ${JSON.stringify(unit102Exercises, null, 2)},\n  101: ${JSON.stringify(unit101Exercises, null, 2)},\n  103: ${JSON.stringify(unit103Exercises, null, 2)},\n`;
     content = content.substring(0, key0Index) + formattedObjStr + content.substring(key1Index);
   }
 }
