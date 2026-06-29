@@ -2686,7 +2686,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 25, 26, 27, 28, 29, 30]);
+    const notUploadedUnits = new Set([21, 26, 27, 28, 29, 30]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -2937,7 +2937,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 25, 26, 27, 28, 29, 30]);
+  const notUploadedUnitsPopover = new Set([21, 26, 27, 28, 29, 30]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
