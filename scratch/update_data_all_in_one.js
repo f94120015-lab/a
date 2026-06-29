@@ -1547,6 +1547,167 @@ const L101_raw = [
   }
 ];
 
+const L95_tr = [
+  "Şu anda şiddetli yağmur simülasyon alanını etkiliyor.",
+  "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor.",
+  "Akademik ekip şu anda yeni cihazı test ediyor.",
+  "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor.",
+  "Şu anda derleyici veri bloklarını işliyor.",
+  "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor.",
+  "Şu anda otomatik sistem basınç parametrelerini izleyip.",
+  "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor.",
+  "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor.",
+  "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor.",
+  "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor.",
+  "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor.",
+  "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor.",
+  "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor.",
+  "Günümüzde yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih ediyor.",
+  "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor.",
+  "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor.",
+  "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor.",
+  "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi şu anda yeni cihazı test ediyor.",
+  "Şu anda şiddetli yağmur simülasyon alanını etkiliyor; bu nedenle, saha operasyonları geçici olarak durduruldu."
+];
+
+const L96_tr = [
+  "Dün şiddetli bir yağmur simülasyon alanını etkiledi.",
+  "Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı.",
+  "Akademik ekip yeni cihaz testini 2020'de tamamladı.",
+  "Araştırma tesisi dün veri tabanını başarıyla yükseltti.",
+  "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi.",
+  "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti.",
+  "Otomatik sistem üç saat önce basınç parametrelerini izledi.",
+  "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı.",
+  "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi.",
+  "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti.",
+  "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için dün veri tabanını başarıyla yükseltti.",
+  "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+  "Geçen ay, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+  "Sistem, yönetici geçen hafta doğrulama izni verir vermez benzersiz bir kriptografik anahtar üretti.",
+  "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti.",
+  "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı.",
+  "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi.",
+  "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+  "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı.",
+  "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
+];
+
+const L97_tr = [
+  "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi.",
+  "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı.",
+  "2020'den beri akademik ekip yeni cihazı test etti.",
+  "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu.",
+  "Şu ana kadar derleyici tüm veri bloklarını işledi.",
+  "Sistem zaten benzersiz bir kriptografik anahtar üretti.",
+  "Ekip projeye başladığından beri otomatik sistem basınç parametrelerini izledi.",
+  "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı.",
+  "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi.",
+  "Şu ana kadar yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih etti.",
+  "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu.",
+  "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+  "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+  "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti.",
+  "Şu ana kadar yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih etti.",
+  "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı.",
+  "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi.",
+  "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+  "2020'den beri akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihazı test etti.",
+  "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
+];
+
+const L98_tr = [
+  "Yeni yasa kabul edildiğinden beri şirket büyüdü.",
+  "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler.",
+  "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler.",
+  "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı.",
+  "Tasarım yapıldığından beri düzen değişmedi.",
+  "Ekipman kurulduğundan beri işler kolaylaştı.",
+  "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı.",
+  "Teknoloji firması açıldığından beri otomasyon arttı.",
+  "Kış başladığından beri sıcaklıklar dalgalandı.",
+  "Finansal piyasa gerilediğinden beri karlar düştü.",
+  "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti.",
+  "Bitkiler, son derece kontrollü laboratuvar sera ortamına dikildiklerinden beri önemli ölçüde büyüdüler.",
+  "Çocuklar, oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullanmaya başladıklarından beri dilbilgisi kurallarını daha hızlı öğrendiler.",
+  "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı.",
+  "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi.",
+  "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı.",
+  "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı.",
+  "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı.",
+  "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi.",
+  "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü."
+];
+
+const L99_tr = [
+  "Biz vardığımızda çoğu insan ayrılmıştı.",
+  "Biz eve vardığımızda çocuklar yatmış olacaklar.",
+  "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı.",
+  "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak.",
+  "Fırtına dindiğinde köprü çökmüştü.",
+  "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar.",
+  "Fonları aldıklarında proje sona ermişti.",
+  "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak.",
+  "Güneş battığında araştırma ekibi ayrılmıştı.",
+  "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak.",
+  "Biz şirket merkezine vardığımızda yönetim kurulu üyelerinin çoğu acil toplantıdan ayrılmıştı.",
+  "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar.",
+  "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı.",
+  "Derleyici kod optimizasyonunu tamamlayana kadar, yedek sunucu yapılandırma ölçümlerini kaydetmiş olacak.",
+  "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü.",
+  "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar.",
+  "Üniversite araştırma fonlarını aldıklarında, biyoloji projesi malzeme eksikliği nedeniyle sona ermişti.",
+  "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak.",
+  "Güneş volkanik dağların ardında batana kadar, saha araştırma ekibi değerlendirme alanından ayrılmıştı.",
+  "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak."
+];
+
+const L100_tr = [
+  "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi.",
+  "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
+  "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi.",
+  "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor.",
+  "Baş araştırmacının istatistiksel verileri derleme zamanı geldi.",
+  "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi.",
+  "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
+  "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi.",
+  "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor.",
+  "Baş araştırmacının istatistiksel verileri derleme zamanı geldi.",
+  "Geliştirme ekibinin eski uygulama bileşenlerini yeniden yapılandırma zamanı geldi de geçiyor.",
+  "Üniversitenin gerekli proje fonlarını sağlama zamanı geldi.",
+  "Saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor.",
+  "Derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi.",
+  "Şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor.",
+  "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi.",
+  "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
+  "Güvenli kriptografik jeton üretimi yeniden başlayabilsin diye, teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi.",
+  "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor.",
+  "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi."
+];
+
+const L101_tr = [
+  "Bu, bu yıl okuduğum en iyi akademik makaledir.",
+  "Bu, derleyici ekibinin birlikte izlediği ilk filmdir.",
+  "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür.",
+  "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir.",
+  "Bu, onların inşa ettiği en karmaşık simülasyon modelidir.",
+  "Bu, bu yıl okuduğum en iyi akademik makaledir.",
+  "Bu, derleyici ekibinin birlikte izlediği ilk filmdir.",
+  "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür.",
+  "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir.",
+  "Bu, onların inşa ettiği en karmaşık simülasyon modelidir.",
+  "Merkez bankasının faizleri ilk kez artırmasıdır.",
+  "Bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir.",
+  "Bu, meclisin kabul ettiği en zorlu yasadır.",
+  "Bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur.",
+  "Bu, fabrikanın ürettiği en verimli motordur.",
+  "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir.",
+  "Yeni teknolojik tesise taşındıklarından beri bu, derleyici ekibinin birlikte izlediği ilk filmdir.",
+  "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür.",
+  "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir.",
+  "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir."
+];
+
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -1578,8 +1739,23 @@ function buildExercises(rawList, lessonId) {
     const mcQs = rawSubList.filter(q => q.type !== "multiple-fill-blank");
     const fbQs = rawSubList.filter(q => q.type === "multiple-fill-blank");
     const sorted = [...mcQs, ...fbQs];
-    return sorted.map((q, idx) => processQuestion(q, `u${lessonId < 98 ? 102 : 101}l${lessonId}_ex${exId}_q${idx + 1}`));
+    return sorted.map((q, idx) => {
+      const origIdx = rawList.indexOf(q);
+      const translation = lessonId === 95 ? L95_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 96 ? L96_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 97 ? L97_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 98 ? L98_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 99 ? L99_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 100 ? L100_tr[Math.floor(origIdx / 2)] :
+                          lessonId === 101 ? L101_tr[Math.floor(origIdx / 2)] : undefined;
+      const processed = processQuestion(q, `u${lessonId < 98 ? 102 : 101}l${lessonId}_ex${exId}_q${idx + 1}`);
+      if (translation && processed.type !== "multiple-fill-blank") {
+        processed.translation = translation;
+      }
+      return processed;
+    });
   };
+
 
   return [
     {
@@ -1700,7 +1876,10 @@ if (topicStartIdx !== -1) {
 const mapStartIndex = content.indexOf('const unitSentencesMap = {');
 if (mapStartIndex !== -1) {
   const openingBraceIndex = content.indexOf('{', mapStartIndex);
-  const key0Index = content.indexOf('\n  0: ', openingBraceIndex);
+  let key0Index = content.indexOf('\n  0: ', openingBraceIndex);
+  if (key0Index === -1) {
+    key0Index = content.indexOf('\n  102: ', openingBraceIndex);
+  }
   const key1Index = content.indexOf('\n  1: ', openingBraceIndex);
   
   if (key0Index !== -1 && key1Index !== -1) {

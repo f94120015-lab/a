@@ -54,6 +54,8 @@ let autoAdvanceTimeout = null;
 let homeScreenScrollY = 0;
 
 // Ek mod durumları
+let isTranslationGateActive = false;
+let onTranslationGateVerify = null;
 let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
@@ -2738,6 +2740,8 @@ function renderQuestion() {
   selectedAnswer = null;
   isAnswerChecked = false;
   matchState = null;
+  isTranslationGateActive = false;
+  onTranslationGateVerify = null;
 
   const body = document.getElementById('quiz-body');
   const btnCheck = document.getElementById('btn-check');
@@ -3094,11 +3098,154 @@ function renderFillBlank(container, question) {
       
       document.getElementById('btn-check').disabled = false;
 
-      setTimeout(() => {
-        checkAnswer();
-      }, 250);
+      const isTargetUnit = question.id.startsWith('u101') || question.id.startsWith('u102');
+      const isCorrect = idx === question.correctIndex;
+
+      if (isTargetUnit && isCorrect && question.translation) {
+        setTimeout(() => {
+          startTranslationGate(container, question);
+        }, 300);
+      } else {
+        setTimeout(() => {
+          checkAnswer();
+        }, 250);
+      }
+}
+
+// ── Scrambled Words Translation Gate ────────────────────────
+function startTranslationGate(container, question) {
+  isTranslationGateActive = true;
+  
+  // Set primary check button state
+  const btnCheck = document.getElementById('btn-check');
+  btnCheck.disabled = true;
+  btnCheck.textContent = 'ÇEVİRİYİ KONTROL ET';
+
+  // Hide skip button to focus on translation
+  const btnSkip = document.getElementById('btn-skip');
+  if (btnSkip) {
+    btnSkip.style.display = 'none';
+  }
+
+  // Make the sentence complete
+  let completedSentence = question.sentence;
+  const correctWord = question.options[question.correctIndex];
+  const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
+  completedSentence = completedSentence.replace('___', highlightedChoice);
+
+  // Clean translation and split into words
+  const rawWords = question.translation.split(/\s+/);
+  const cleanWord = (w) => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+  const correctWords = rawWords.map(cleanWord).filter(Boolean);
+  
+  // Distractors
+  const distractorsList = ["farklı", "başlayana", "her zaman", "sonra", "önce", "tüm", "ancak", "çünkü", "kadar", "yeni", "hızlı", "güvenli", "sistem", "sunucu", "ekip", "uygulama", "veri", "kod", "zaman", "büyük", "olarak"];
+  const correctCleaned = correctWords.map(w => w.toLowerCase());
+  const filteredDistractors = distractorsList.filter(d => !correctCleaned.includes(d.toLowerCase()));
+  const selectedDistractors = [...filteredDistractors].sort(() => 0.5 - Math.random()).slice(0, 3);
+  
+  // Combine chips
+  let chips = [...correctWords, ...selectedDistractors];
+  chips = chips.sort(() => 0.5 - Math.random());
+  
+  container.innerHTML = `
+    <p class="quiz-prompt">Cümleyi Türkçe'ye Çevirin!</p>
+    <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
+      ${completedSentence}
+    </div>
+    
+    <div class="gate-title">Çeviri Geçidi</div>
+    <div class="assembled-translation-area" id="assembled-area"></div>
+    <div class="scrambled-words-container" id="scrambled-container"></div>
+  `;
+
+  const assembledArea = document.getElementById('assembled-area');
+  const scrambledContainer = document.getElementById('scrambled-container');
+
+  let assembledWords = [];
+
+  const renderChips = () => {
+    assembledArea.innerHTML = '';
+    assembledWords.forEach((word, idx) => {
+      const chip = document.createElement('button');
+      chip.className = 'word-chip';
+      chip.textContent = word;
+      chip.addEventListener('click', () => {
+        assembledWords.splice(idx, 1);
+        renderChips();
+      });
+      assembledArea.appendChild(chip);
     });
-  });
+
+    if (assembledWords.length > 0) {
+      assembledArea.classList.add('active');
+      btnCheck.disabled = false;
+    } else {
+      assembledArea.classList.remove('active');
+      btnCheck.disabled = true;
+    }
+
+    scrambledContainer.innerHTML = '';
+    chips.forEach((word) => {
+      const chip = document.createElement('button');
+      chip.className = 'word-chip';
+      chip.textContent = word;
+      
+      const countInAssembled = assembledWords.filter(w => w === word).length;
+      const totalInChips = chips.filter(w => w === word).length;
+      
+      if (countInAssembled >= totalInChips) {
+        chip.classList.add('disabled');
+      } else {
+        chip.addEventListener('click', () => {
+          assembledWords.push(word);
+          renderChips();
+        });
+      }
+      scrambledContainer.appendChild(chip);
+    });
+  };
+
+  renderChips();
+
+  onTranslationGateVerify = () => {
+    const cleanWordForComparison = (w) => w.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+    const userCleaned = assembledWords.map(cleanWordForComparison);
+    const correctCleaned = correctWords.map(cleanWordForComparison);
+    
+    const isCorrect = userCleaned.length === correctCleaned.length && userCleaned.every((w, i) => w === correctCleaned[i]);
+    
+    if (isCorrect) {
+      isTranslationGateActive = false;
+      onTranslationGateVerify = null;
+      
+      assembledArea.querySelectorAll('.word-chip').forEach(chip => {
+        chip.classList.add('correct-assemble');
+        chip.disabled = true;
+      });
+      scrambledContainer.querySelectorAll('.word-chip').forEach(chip => {
+        chip.classList.add('disabled');
+        chip.disabled = true;
+      });
+      
+      checkAnswer();
+      btnCheck.textContent = 'DEVAM ET';
+    } else {
+      assembledArea.classList.add('shake');
+      assembledArea.querySelectorAll('.word-chip').forEach(chip => {
+        chip.style.borderColor = 'var(--color-wrong)';
+        chip.style.color = 'var(--color-wrong)';
+      });
+      
+      setTimeout(() => {
+        assembledArea.classList.remove('shake');
+        assembledArea.querySelectorAll('.word-chip').forEach(chip => {
+          chip.style.borderColor = '';
+          chip.style.color = '';
+        });
+      }, 500);
+    }
+  };
 }
 
 // ── Tam Metin Çeviri Testi (Klavyeli Girdi) ──────────────────
@@ -4402,8 +4549,19 @@ function initEventListeners() {
 
   // Kontrol Et / Devam Et butonu
   document.getElementById('btn-check').addEventListener('click', () => {
-    if (!isAnswerChecked) {
-      checkAnswer();
+    if (isTranslationGateActive && onTranslationGateVerify) {
+      onTranslationGateVerify();
+    } else if (!isAnswerChecked) {
+      const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
+      const isTargetUnit = question && (question.id.startsWith('u101') || question.id.startsWith('u102'));
+      const activeType = question ? ((question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') ? question._dynamicType : question.type) : '';
+      const isCorrectDropdown = activeType === 'fill-blank-dropdown' && selectedAnswer === question.correctIndex;
+
+      if (isTargetUnit && isCorrectDropdown && question.translation) {
+        startTranslationGate(document.getElementById('quiz-body'), question);
+      } else {
+        checkAnswer();
+      }
     } else {
       nextQuestion();
     }
