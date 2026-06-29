@@ -5242,7 +5242,8 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
       prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
-      correctIndex: shuffledOptions.indexOf(correctVal)
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
     };
   };
 
@@ -5726,7 +5727,8 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
       prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
-      correctIndex: shuffledOptions.indexOf(correctVal)
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
     };
   };
 
@@ -7000,6 +7002,7 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
       sentence: clozedSentence,
       options: shuffledOptions,
       correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr,
       explanation: s.explanation
     };
   };
@@ -7173,6 +7176,7 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
       sentence: clozedSentence,
       options: shuffledOptions,
       correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr,
       explanation: s.explanation
     };
   };
@@ -7333,7 +7337,8 @@ function buildUnit22SinceExercises(unitId, lessonId) {
       prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
-      correctIndex: shuffledOptions.indexOf(correctVal)
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
     };
   };
 
@@ -7675,7 +7680,8 @@ function buildUnit23WhileExercises(unitId, lessonId) {
       prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
-      correctIndex: shuffledOptions.indexOf(correctVal)
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
     };
   };
 
@@ -8237,7 +8243,8 @@ function buildUnit24UntilExercises(unitId, lessonId) {
       prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
       sentence: s.blank,
       options: shuffledOptions,
-      correctIndex: shuffledOptions.indexOf(correctVal)
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
     };
   };
 

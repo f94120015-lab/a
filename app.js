@@ -3748,7 +3748,7 @@ function renderFillBlank(container, question) {
       
       document.getElementById('btn-check').disabled = false;
 
-      const isTargetUnit = question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103');
+      const isTargetUnit = question.translation ? true : false;
       const isCorrect = idx === question.correctIndex;
 
       if (isTargetUnit && isCorrect && question.translation) {
@@ -4059,7 +4059,7 @@ function checkAnswer() {
       break;
   }
 
-  const isTargetUnit = question && question.id && (question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103'));
+  const isTargetUnit = question && question.translation ? true : false;
   if (isTargetUnit && question.translation && !wasTranslationCorrect) {
     isCorrect = false;
   }
@@ -5220,7 +5220,7 @@ function initEventListeners() {
       onTranslationGateVerify();
     } else if (!isAnswerChecked) {
       const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
-      const isTargetUnit = question && (question.id.startsWith('u101') || question.id.startsWith('u102') || question.id.startsWith('u103'));
+      const isTargetUnit = question && question.translation ? true : false;
       const activeType = question ? ((question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') ? question._dynamicType : question.type) : '';
       const isCorrectDropdown = activeType === 'fill-blank-dropdown' && selectedAnswer === question.correctIndex;
 
