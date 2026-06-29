@@ -3110,6 +3110,8 @@ function renderFillBlank(container, question) {
           checkAnswer();
         }, 250);
       }
+    });
+  });
 }
 
 // ── Scrambled Words Translation Gate ────────────────────────
