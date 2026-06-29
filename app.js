@@ -5647,6 +5647,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       }
     }
   }
+}
 
   // Determine Timeline representation based on the correct answer's tense / keywords
   const correctWordStr = (question.correct || (question.options && question.options[question.correctIndex]) || "").toLowerCase();
