@@ -1554,7 +1554,7 @@ const L95_tr = [
   "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor.",
   "Şu anda derleyici veri bloklarını işliyor.",
   "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor.",
-  "Şu anda otomatik sistem basınç parametrelerini izleyip.",
+  "Şu anda otomatik sistem basınç parametrelerini izliyor.",
   "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor.",
   "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor.",
   "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor.",
@@ -1739,15 +1739,27 @@ function buildExercises(rawList, lessonId) {
     const mcQs = rawSubList.filter(q => q.type !== "multiple-fill-blank");
     const fbQs = rawSubList.filter(q => q.type === "multiple-fill-blank");
     const sorted = [...mcQs, ...fbQs];
+    
+    const getTranslationIndex = (idx) => {
+      if (idx < 10) return idx;
+      if (idx < 15) return idx - 5;
+      if (idx < 20) return idx - 15;
+      if (idx < 25) return idx - 10;
+      if (idx < 30) return idx - 15;
+      if (idx < 35) return idx - 15;
+      return idx - 20;
+    };
+
     return sorted.map((q, idx) => {
       const origIdx = rawList.indexOf(q);
-      const translation = lessonId === 95 ? L95_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 96 ? L96_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 97 ? L97_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 98 ? L98_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 99 ? L99_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 100 ? L100_tr[Math.floor(origIdx / 2)] :
-                          lessonId === 101 ? L101_tr[Math.floor(origIdx / 2)] : undefined;
+      const trIdx = getTranslationIndex(origIdx);
+      const translation = lessonId === 95 ? L95_tr[trIdx] :
+                          lessonId === 96 ? L96_tr[trIdx] :
+                          lessonId === 97 ? L97_tr[trIdx] :
+                          lessonId === 98 ? L98_tr[trIdx] :
+                          lessonId === 99 ? L99_tr[trIdx] :
+                          lessonId === 100 ? L100_tr[trIdx] :
+                          lessonId === 101 ? L101_tr[trIdx] : undefined;
       const processed = processQuestion(q, `u${lessonId < 98 ? 102 : 101}l${lessonId}_ex${exId}_q${idx + 1}`);
       if (translation && processed.type !== "multiple-fill-blank") {
         processed.translation = translation;
