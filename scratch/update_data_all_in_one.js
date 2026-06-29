@@ -1721,16 +1721,16 @@ function buildExercises(rawList, lessonId) {
     
     const knownAdverbs = [
       "at the moment", "at present", "right now", "currently", "presently", "these days", "nowadays",
-      "yesterday", "in", "in 2020", "ago", "last",
-      "so far", "recently", "since", "yet", "already", "up to", "up to now", "just"
+      "yesterday", "in", "in 2020", "in 2012", "ago", "last", "last week", "last month", "last year",
+      "so far", "recently", "since", "yet", "already", "up to", "up to now", "just", "lately", "so"
     ];
     
     const cw = correctWord.toLowerCase().trim();
-    const isAdverbQuestion = knownAdverbs.some(adv => adv === cw || adv.includes(cw) || cw.includes(adv));
+    const isAdverbQuestion = knownAdverbs.includes(cw);
     
     if (lessonId === 95) {
       const adverbs = ["At the moment", "At present", "Right now", "currently", "presently", "These days", "Nowadays"];
-      const verbs = ["is affecting", "is validating", "testing", "requires", "is processing", "is generating", "is monitoring", "are adjusting", "are altering", "prefer"];
+      const verbs = ["is affecting", "is validating", "testing", "requires", "is processing", "is generating", "is monitoring", "are adjusting", "are altering", "prefer", "is testing"];
       
       if (isAdverbQuestion) {
         for (const verb of verbs) {
@@ -1764,7 +1764,7 @@ function buildExercises(rawList, lessonId) {
     }
     
     if (lessonId === 96) {
-      const adverbs = ["yesterday", "Yesterday", "in 2020", "Two years ago", "Two years", "last week"];
+      const adverbs = ["yesterday", "Yesterday", "in 2020", "in 2012", "Two years ago", "Two years", "three hours ago", "last week", "last month", "Last month", "last year", "Last year"];
       const verbs = ["affected", "validated", "completed", "upgraded", "processed", "generated", "monitored", "adjusted", "altered", "preferred"];
       
       if (isAdverbQuestion) {
@@ -1787,8 +1787,11 @@ function buildExercises(rawList, lessonId) {
     }
 
     if (lessonId === 97) {
-      const adverbs = ["so far", "recently", "since", "yet", "already", "up to now"];
-      const verbs = ["has affected", "has validated", "has completed", "has upgraded", "has processed", "has generated", "has monitored", "have adjusted", "have altered", "have preferred"];
+      const adverbs = ["so far", "recently", "since", "yet", "already", "up to now", "up to", "lately", "Lately"];
+      const verbs = [
+        "has affected", "has validated", "has completed", "has upgraded", "has processed", "has generated", "has monitored",
+        "have adjusted", "have altered", "have preferred", "has tested", "has required", "has recently required", "have threatened", "have been"
+      ];
       
       if (isAdverbQuestion) {
         for (const verb of verbs) {
