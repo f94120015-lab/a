@@ -5917,113 +5917,115 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
 // ─── BÖLÜM 22 73. DERS RAW SENTENCES (Since) ──────────────
 
 const unit22Lesson1SentencesRaw = [
-  { en: "Since his mother died", tr: "Annesi öldüğünden beri", word: "die", trWord: "ölmek", correct: "died", blank: "since his mother ___", options: ['died', 'dead', 'dying', 'will die'], blocks: ['Since', 'his', 'mother', 'died'] },
-  { en: "Since the new law was passed", tr: "Yeni yasa kabul edildiğinden beri", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "since the new law ___ passed", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'new', 'law', 'was', 'passed'] },
-  { en: "Since they were planted", tr: "Dikildiklerinden beri", word: "plant", trWord: "dikilmek", correct: "were", blank: "since they ___ planted", options: ['were', 'are', 'was', 'have'], blocks: ['Since', 'they', 'were', 'planted'] },
-  { en: "Since they started school", tr: "Okula başladıklarından beri", word: "start", trWord: "başlamak", correct: "started", blank: "since they ___ school", options: ['started', 'start', 'starting', 'will start'], blocks: ['Since', 'they', 'started', 'school'] },
-  { en: "Since the new president was elected", tr: "Yeni başkan seçildiğinden beri", word: "elect", trWord: "seçilmek", correct: "was", blank: "since the new president ___ elected", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'new', 'president', 'was', 'elected'] },
-  { en: "Since it was first passed", tr: "İlk kez kabul edildiğinden beri", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "since it ___ first passed", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'it', 'was', 'first', 'passed'] },
-  { en: "Since electronic equipment has been installed", tr: "Elektronik ekipman kurulduğundan beri", word: "install", trWord: "kurulmak", correct: "has", blank: "since electronic equipment ___ been installed", options: ['has', 'have', 'had', 'having'], blocks: ['Since', 'electronic', 'equipment', 'has', 'been', 'installed'] },
-  { en: "Since the application was launched", tr: "Uygulama başlatıldığından beri", word: "launch", trWord: "başlatılmak", correct: "was", blank: "since the application ___ launched", options: ['was', 'is', 'has', 'were'], blocks: ['Since', 'the', 'application', 'was', 'launched'] },
-  { en: "Since he moved to Ankara", tr: "Ankara'ya taşındığından beri", word: "move", trWord: "taşınmak", correct: "moved", blank: "since he ___ to Ankara", options: ['moved', 'move', 'moving', 'will move'], blocks: ['Since', 'he', 'moved', 'to', 'Ankara'] },
-  { en: "Since the database crashed", tr: "Veri tabanı çöktüğünden beri", word: "crash", trWord: "çökmek", correct: "crashed", blank: "since the database ___", options: ['crashed', 'crash', 'crashing', 'will crash'], blocks: ['Since', 'the', 'database', 'crashed'] }
+  { en: "since the new law was passed", tr: "yeni yasa kabul edildiğinden beri", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "since the new law ___ passed", options: ['was', 'is', 'has', 'were'], blocks: ['since', 'the', 'new', 'law', 'was', 'passed'] },
+  { en: "since they were planted", tr: "dikildiklerinden beri", word: "plant", trWord: "dikilmek", correct: "were", blank: "since they ___ planted", options: ['were', 'are', 'was', 'have'], blocks: ['since', 'they', 'were', 'planted'] },
+  { en: "since they started school last September", tr: "geçen Eylül'de okula başladıklarından beri", word: "start", trWord: "başlamak", correct: "started", blank: "since they ___ school last September", options: ['started', 'start', 'starting', 'will start'], blocks: ['since', 'they', 'started', 'school', 'last', 'September'] },
+  { en: "since the database crashed", tr: "veri tabanı çöktüğünden beri", word: "crash", trWord: "çökmek", correct: "crashed", blank: "since the database ___", options: ['crashed', 'crash', 'crashing', 'will crash'], blocks: ['since', 'the', 'database', 'crashed'] },
+  { en: "since the component initialized", tr: "bileşen kurulduğundan beri", word: "initialize", trWord: "başlatılmak, kurulmak", correct: "initialized", blank: "since the component ___", options: ['initialized', 'initialize', 'initializing', 'will initialize'], blocks: ['since', 'the', 'component', 'initialized'] },
+  { en: "since the central bank raised rates", tr: "merkez bankası faizleri artırdığından beri", word: "raise", trWord: "yükseltmek, artırmak", correct: "raised", blank: "since the central bank ___ rates", options: ['raised', 'raise', 'raising', 'raises'], blocks: ['since', 'the', 'central', 'bank', 'raised', 'rates'] },
+  { en: "since the tech firm opened", tr: "teknoloji firması açıldığından beri", word: "open", trWord: "açılmak", correct: "opened", blank: "since the tech firm ___", options: ['opened', 'open', 'opening', 'opens'], blocks: ['since', 'the', 'tech', 'firm', 'opened'] },
+  { en: "since winter began", tr: "kış başladığından beri", word: "begin", trWord: "başlamak", correct: "began", blank: "since winter ___", options: ['began', 'begin', 'beginning', 'begins'], blocks: ['since', 'winter', 'began'] },
+  { en: "since the financial market declined", tr: "finansal piyasa gerilediğinden beri", word: "decline", trWord: "gerilemek, düşmek", correct: "declined", blank: "since the financial market ___", options: ['declined', 'decline', 'declining', 'declines'], blocks: ['since', 'the', 'financial', 'market', 'declined'] },
+  { en: "since the laboratory opened", tr: "laboratuvar açıldığından beri", word: "open", trWord: "açılmak", correct: "opened", blank: "since the laboratory ___", options: ['opened', 'open', 'opening', 'opens'], blocks: ['since', 'the', 'laboratory', 'opened'] }
 ];
 
 const unit22Lesson1SentencesL2Raw = [
-  { en: "Since his mother died, it is a long time.", tr: "Annesi öldüğünden beri uzun zaman geçti.", word: "be", trWord: "olmak", correct: "is", blank: "Since his mother died, it ___ a long time.", options: ['is', 'was', 'will be', 'being'], blocks: ['Since', 'his', 'mother', 'died,', 'it', 'is', 'a', 'long', 'time.'] },
   { en: "It is not long since the new law was passed.", tr: "Yeni yasa kabul edileli çok olmadı.", word: "pass", trWord: "kabul edilmek", correct: "was", blank: "It is not long since the new law ___ passed.", options: ['was', 'is', 'has', 'were'], blocks: ['It', 'is', 'not', 'long', 'since', 'the', 'new', 'law', 'was', 'passed.'] },
   { en: "The young plants have grown six inches since they were planted.", tr: "Genç bitkiler dikildiklerinden beri altı inç büyüdü.", word: "have", trWord: "sahip olmak", correct: "have", blank: "The young plants ___ grown six inches since they were planted.", options: ['have', 'has', 'had', 'having'], blocks: ['The', 'young', 'plants', 'have', 'grown', 'six', 'inches', 'since', 'they', 'were', 'planted.'] },
-  { en: "The children have learnt to read and write since they started school last September.", tr: "Çocuklar geçen eylülde okula başladıklarından beri okuma yazma öğrendiler.", word: "start", trWord: "başlamak", correct: "started", blank: "The children have learnt to read and write since they ___ school last September.", options: ['started', 'start', 'starting', 'will start'], blocks: ['The', 'children', 'have', 'learnt', 'to', 'read', 'and', 'write', 'since', 'they', 'started', 'school', 'last', 'September.'] },
-  { en: "The committee has not held any meetings since the new president was elected.", tr: "Komite yeni başkan seçildiğinden beri hiç toplantı yapmadı.", word: "have", trWord: "sahip olmak", correct: "has", blank: "The committee ___ not held any meetings since the new president was elected.", options: ['has', 'have', 'had', 'having'], blocks: ['The', 'committee', 'has', 'not', 'held', 'any', 'meetings', 'since', 'the', 'new', 'president', 'was', 'elected.'] },
-  { en: "The law has not been altered in any way since it was first passed 100 years ago.", tr: "Yasa 100 yıl önce ilk kez kabul edildiğinden beri hiçbir şekilde değiştirilmedi.", word: "be", trWord: "olmak", correct: "been", blank: "The law has not ___ altered in any way since it was first passed 100 years ago.", options: ['been', 'be', 'being', 'was'], blocks: ['The', 'law', 'has', 'not', 'been', 'altered', 'in', 'any', 'way', 'since', 'it', 'was', 'first', 'passed', '100', 'years', 'ago.'] },
-  { en: "Work has been greatly facilitated since electronic equipment has been installed.", tr: "Elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı.", word: "have", trWord: "sahip olmak", correct: "has", blank: "Work has been greatly facilitated since electronic equipment ___ been installed.", options: ['has', 'have', 'had', 'having'], blocks: ['Work', 'has', 'been', 'greatly', 'facilitated', 'since', 'electronic', 'equipment', 'has', 'been', 'installed.'] },
-  { en: "He has developed three mobile applications since he moved to Ankara.", tr: "Ankara'ya taşındığından beri üç mobil uygulama geliştirdi.", word: "move", trWord: "taşınmak", correct: "moved", blank: "He has developed three mobile applications since he ___ to Ankara.", options: ['moved', 'move', 'moving', 'will move'], blocks: ['He', 'has', 'developed', 'three', 'mobile', 'applications', 'since', 'he', 'moved', 'to', 'Ankara.'] },
-  { en: "The team has changed the source code twice since the system crashed.", tr: "Sistem çöktüğünden beri ekip kaynak kodunu iki kez değiştirdi.", word: "crash", trWord: "çökmek", correct: "crashed", blank: "The team has changed the source code twice since the system ___.", options: ['crashed', 'crash', 'crashing', 'will crash'], blocks: ['The', 'team', 'has', 'changed', 'the', 'source', 'code', 'twice', 'since', 'the', 'system', 'crashed.'] },
-  { en: "Many things have changed in the company since she left her job.", tr: "O işinden ayrıldığından beri şirkette çok şey değişti.", word: "leave", trWord: "ayrılmak", correct: "left", blank: "Many things have changed in the company since she ___ her job.", options: ['left', 'leave', 'leaving', 'will leave'], blocks: ['Many', 'things', 'have', 'changed', 'in', 'the', 'company', 'since', 'she', 'left', 'her', 'job.'] }
+  { en: "The children have learnt to read and write since they started school last September.", tr: "Çocuklar geçen eylülde okula başladıklarından beri okuma yazma öğrendiler.", word: "have", trWord: "sahip olmak", correct: "have", blank: "The children have learnt to read and write since they ___ school last September.", options: ['have', 'has', 'had', 'having'], blocks: ['The', 'children', 'have', 'learnt', 'to', 'read', 'and', 'write', 'since', 'they', 'started', 'school', 'last', 'September.'] },
+  { en: "Users have experienced constant network errors since the database crashed.", tr: "Veri tabanı çöktüğünden beri kullanıcılar sürekli ağ hataları yaşadı.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Users ___ experienced constant network errors since the database crashed.", options: ['have', 'has', 'had', 'having'], blocks: ['Users', 'have', 'experienced', 'constant', 'network', 'errors', 'since', 'the', 'database', 'crashed.'] },
+  { en: "The system has updated the cryptographic keys since the component initialized.", tr: "Bileşen kurulduğundan beri sistem kriptografik anahtarları güncelledi.", word: "have", trWord: "sahip olmak", correct: "has", blank: "The system ___ updated the cryptographic keys since the component initialized.", options: ['has', 'have', 'had', 'having'], blocks: ['The', 'system', 'has', 'updated', 'the', 'cryptographic', 'keys', 'since', 'the', 'component', 'initialized.'] },
+  { en: "Domestic stock market indicators have dropped since the central bank raised rates.", tr: "Merkez bankası faizleri artırdığından beri yerel borsa göstergeleri düştü.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Domestic stock market indicators ___ dropped since the central bank raised rates.", options: ['have', 'has', 'had', 'having'], blocks: ['Domestic', 'stock', 'market', 'indicators', 'have', 'dropped', 'since', 'the', 'central', 'bank', 'raised', 'rates.'] },
+  { en: "Industrial automation metrics have increased since the tech firm opened.", tr: "Teknoloji firması açıldığından beri endüstriyel otomasyon ölçümleri arttı.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Industrial automation metrics ___ increased since the tech firm opened.", options: ['have', 'has', 'had', 'having'], blocks: ['Industrial', 'automation', 'metrics', 'have', 'increased', 'since', 'the', 'tech', 'firm', 'opened.'] },
+  { en: "Ambient temperatures inside the chamber have fluctuated since winter began.", tr: "Kış başladığından beri hazne içindeki ortam sıcaklıkları dalgalandı.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Ambient temperatures inside the chamber ___ fluctuated since winter began.", options: ['have', 'has', 'had', 'having'], blocks: ['Ambient', 'temperatures', 'inside', 'the', 'chamber', 'have', 'fluctuated', 'since', 'winter', 'began.'] },
+  { en: "Corporate profits have dropped dramatically since the financial market declined.", tr: "Finansal piyasa gerilediğinden beri şirket karları önemli ölçüde düştü.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Corporate profits ___ dropped dramatically since the financial market declined.", options: ['have', 'has', 'had', 'having'], blocks: ['Corporate', 'profits', 'have', 'dropped', 'dramatically', 'since', 'the', 'financial', 'market', 'declined.'] },
+  { en: "Academic research groups have compiled several datasets since the laboratory opened.", tr: "Laboratuvar açıldığından beri akademik araştırma grupları birkaç veri seti derledi.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Academic research groups ___ compiled several datasets since the laboratory opened.", options: ['have', 'has', 'had', 'having'], blocks: ['Academic', 'research', 'groups', 'have', 'compiled', 'several', 'datasets', 'since', 'the', 'laboratory', 'opened.'] }
 ];
 
 const unit22Lesson1SentencesL3Raw = [
   {
-    en: "Global temperature anomalies have risen at an unprecedented rate since industrialized nations shifted heavily toward fossil fuels.",
-    tr: "Sanayileşmiş ülkelerin yoğun şekilde fosil yakıtlara yönelmesinden beri küresel sıcaklık anomalileri benzeri görülmemiş bir oranda arttı.",
-    word: "have", trWord: "sahip olmak", correct: "have",
-    blank: "Global temperature anomalies ___ risen at an unprecedented rate since industrialized nations shifted heavily toward fossil fuels.",
-    options: ['have', 'has', 'had', 'having'],
-    blocks: ['Global', 'temperature', 'anomalies', 'have', 'risen', 'at', 'an', 'unprecedented', 'rate', 'since', 'industrialized', 'nations', 'shifted', 'heavily', 'toward', 'fossil', 'fuels.']
-  },
-  {
-    en: "The cybersecurity framework has undergone comprehensive structural updates since the network was targeted by an anonymous malware attack.",
-    tr: "Ağ anonim bir kötü amaçlı yazılım saldırısı tarafından hedef alındığından beri siber güvenlik çerçevesi kapsamlı yapısal güncellemeler geçirdi.",
-    word: "be", trWord: "olmak", correct: "was",
-    blank: "The cybersecurity framework has undergone comprehensive structural updates since the network ___ targeted by an anonymous malware attack.",
+    en: "It is not long since the new law was passed by the legislative assembly after a series of controversial voting rounds.",
+    tr: "Bir dizi tartışmalı oylama turunun ardından yeni yasa yasama meclisi tarafından kabul edileli çok olmadı.",
+    word: "pass", trWord: "kabul edilmek", correct: "was",
+    blank: "It is not long since the new law ___ passed by the legislative assembly after a series of controversial voting rounds.",
     options: ['was', 'is', 'has', 'were'],
-    blocks: ['The', 'cybersecurity', 'framework', 'has', 'undergone', 'comprehensive', 'structural', 'updates', 'since', 'the', 'network', 'was', 'targeted', 'by', 'an', 'anonymous', 'malware', 'attack.']
+    blocks: ['It', 'is', 'not', 'long', 'since', 'the', 'new', 'law', 'was', 'passed', 'by', 'the', 'legislative', 'assembly', 'after', 'a', 'series', 'of', 'controversial', 'voting', 'rounds.']
   },
   {
-    en: "Educational institutes have increasingly integrated gamified software models into their curricula since mobile learning tools became widely accessible.",
-    tr: "Mobil öğrenme araçları yaygın olarak erişilebilir hale geldiğinden beri eğitim kurumları oyunlaştırılmış yazılım modellerini müfredatlarına giderek daha fazla dahil ettiler.",
-    word: "become", trWord: "olmak", correct: "became",
-    blank: "Educational institutes have increasingly integrated gamified software models into their curricula since mobile learning tools ___ widely accessible.",
-    options: ['became', 'become', 'becoming', 'will become'],
-    blocks: ['Educational', 'institutes', 'have', 'increasingly', 'integrated', 'gamified', 'software', 'models', 'into', 'their', 'curricula', 'since', 'mobile', 'learning', 'tools', 'became', 'widely', 'accessible.']
-  },
-  {
-    en: "The financial sector has experienced a substantial transition toward decentralized ledgers since digital currencies were introduced to the stock market.",
-    tr: "Dijital para birimleri borsaya sunulduğundan beri finans sektörü merkeziyetsiz defterlere doğru önemli bir geçiş yaşadı.",
-    word: "be", trWord: "olmak", correct: "were",
-    blank: "The financial sector has experienced a substantial transition toward decentralized ledgers since digital currencies ___ introduced to the stock market.",
+    en: "The young plants have grown six inches since they were planted in the highly controlled laboratory greenhouse environment.",
+    tr: "Genç bitkiler, son derece kontrollü laboratuvar serası ortamına dikildiklerinden beri altı inç büyüdü.",
+    word: "plant", trWord: "dikilmek", correct: "were",
+    blank: "The young plants have grown six inches since they ___ planted in the highly controlled laboratory greenhouse environment.",
     options: ['were', 'are', 'was', 'have'],
-    blocks: ['The', 'financial', 'sector', 'has', 'experienced', 'a', 'substantial', 'transition', 'toward', 'decentralized', 'ledgers', 'since', 'digital', 'currencies', 'were', 'introduced', 'to', 'the', 'stock', 'market.']
+    blocks: ['The', 'young', 'plants', 'have', 'grown', 'six', 'inches', 'since', 'they', 'were', 'planted', 'in', 'the', 'highly', 'controlled', 'laboratory', 'greenhouse', 'environment.']
   },
   {
-    en: "Researchers have successfully identified several new cellular sub-structures since advanced high-resolution microscopes were installed in the laboratory.",
-    tr: "Laboratuvara gelişmiş yüksek çözünürlüklü mikroskoplar kurulduğundan beri araştırmacılar birkaç yeni hücresel alt yapıyı başarıyla tanımladılar.",
-    word: "be", trWord: "olmak", correct: "were",
-    blank: "Researchers have successfully identified several new cellular sub-structures since advanced high-resolution microscopes ___ installed in the laboratory.",
-    options: ['were', 'are', 'was', 'have'],
-    blocks: ['Researchers', 'have', 'successfully', 'identified', 'several', 'new', 'cellular', 'sub-structures', 'since', 'advanced', 'high-resolution', 'microscopes', 'were', 'installed', 'in', 'the', 'laboratory.']
+    en: "The children have learnt to read and write since they started school last September and utilized mobile applications with gamified designs.",
+    tr: "Çocuklar geçen Eylül'de okula başladıklarından ve oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullandıklarından beri okuma yazma öğrendiler.",
+    word: "start", trWord: "başlamak", correct: "started",
+    blank: "The children have learnt to read and write since they ___ school last September and utilized mobile applications with gamified designs.",
+    options: ['started', 'start', 'starting', 'will start'],
+    blocks: ['The', 'children', 'have', 'learnt', 'to', 'read', 'and', 'write', 'since', 'they', 'started', 'school', 'last', 'September', 'and', 'utilized', 'mobile', 'applications', 'with', 'gamified', 'designs.']
   },
   {
-    en: "The database infrastructure has not required any manual troubleshooting intervention since the automated balancing algorithm was implemented.",
-    tr: "Otomatik dengeleme algoritması uygulandığından beri veri tabanı altyapısı herhangi bir manuel sorun giderme müdahalesi gerektirmedi.",
-    word: "be", trWord: "olmak", correct: "was",
-    blank: "The database infrastructure has not required any manual troubleshooting intervention since the automated balancing algorithm ___ implemented.",
-    options: ['was', 'is', 'has', 'were'],
-    blocks: ['The', 'database', 'infrastructure', 'has', 'not', 'required', 'any', 'manual', 'troubleshooting', 'intervention', 'since', 'the', 'automated', 'balancing', 'algorithm', 'was', 'implemented.']
+    en: "Users have experienced constant network errors since the database crashed, causing temporary suspension of active data token generations.",
+    tr: "Veri tabanının çökmesi aktif veri simgesi üretimlerinin geçici olarak durdurulmasına neden olduğundan beri kullanıcılar sürekli ağ hataları yaşadı.",
+    word: "crash", trWord: "çökmek", correct: "crashed",
+    blank: "Users have experienced constant network errors since the database ___ , causing temporary suspension of active data token generations.",
+    options: ['crashed', 'crash', 'crashing', 'will crash'],
+    blocks: ['Users', 'have', 'experienced', 'constant', 'network', 'errors', 'since', 'the', 'database', 'crashed,', 'causing', 'temporary', 'suspension', 'of', 'active', 'data', 'token', 'generations.']
   },
   {
-    en: "Language learners have shown a measurable improvement in active grammatical recall since spaced repetition algorithms were applied to the system.",
-    tr: "Sistemde aralıklı tekrarlama algoritmaları uygulandığından beri dil öğrenenler aktif gramatik hatırlamada ölçülebilir bir gelişme gösterdiler.",
-    word: "be", trWord: "olmak", correct: "were",
-    blank: "Language learners have shown a measurable improvement in active grammatical recall since spaced repetition algorithms ___ applied to the system.",
-    options: ['were', 'are', 'was', 'have'],
-    blocks: ['Language', 'learners', 'have', 'shown', 'a', 'measurable', 'improvement', 'in', 'active', 'grammatical', 'recall', 'since', 'spaced', 'repetition', 'algorithms', 'were', 'applied', 'to', 'the', 'system.']
+    en: "The system has updated the cryptographic keys since the component initialized to prevent third-party data tracking systems from breaching privacy.",
+    tr: "Üçüncü taraf veri izleme sistemlerinin gizliliği ihlal etmesini önlemek amacıyla bileşen kurulduğundan beri sistem kriptografik anahtarları güncelledi.",
+    word: "initialize", trWord: "başlatılmak, kurulmak", correct: "initialized",
+    blank: "The system has updated the cryptographic keys since the component ___ to prevent third-party data tracking systems from breaching privacy.",
+    options: ['initialized', 'initialize', 'initializing', 'will initialize'],
+    blocks: ['The', 'system', 'has', 'updated', 'the', 'cryptographic', 'keys', 'since', 'the', 'component', 'initialized', 'to', 'prevent', 'third-party', 'data', 'tracking', 'systems', 'from', 'breaching', 'privacy.']
   },
   {
-    en: "Public transport systems in the metropolitan area have been greatly optimized since the integrated electronic payment framework was enforced.",
-    tr: "Entegre elektronik ödeme çerçevesi zorunlu kılındığından beri metropol bölgesindeki toplu taşıma sistemleri büyük ölçüde optimize edildi.",
-    word: "be", trWord: "olmak", correct: "was",
-    blank: "Public transport systems in the metropolitan area have been greatly optimized since the integrated electronic payment framework ___ enforced.",
-    options: ['was', 'is', 'has', 'were'],
-    blocks: ['Public', 'transport', 'systems', 'in', 'the', 'metropolitan', 'area', 'have', 'been', 'greatly', 'optimized', 'since', 'the', 'integrated', 'electronic', 'payment', 'framework', 'was', 'enforced.']
+    en: "Domestic stock market indicators have dropped since the central bank raised rates on grounds that international trade parameters were unstable.",
+    tr: "Uluslararası ticaret parametrelerinin istikrarsız olduğu gerekçesiyle merkez bankasının faiz oranlarını artırmasından beri yerel borsa göstergeleri düştü.",
+    word: "raise", trWord: "yükseltmek, artırmak", correct: "raised",
+    blank: "Domestic stock market indicators have dropped since the central bank ___ rates on grounds that international trade parameters were unstable.",
+    options: ['raised', 'raise', 'raising', 'raises'],
+    blocks: ['Domestic', 'stock', 'market', 'indicators', 'have', 'dropped', 'since', 'the', 'central', 'bank', 'raised', 'rates', 'on', 'grounds', 'that', 'international', 'trade', 'parameters', 'were', 'unstable.']
   },
   {
-    en: "The executive board has hesitated to endorse new long-term investment portfolios since the global market indicators fluctuated last quarter.",
-    tr: "Küresel piyasa göstergeleri geçen çeyrekte dalgalandığından beri yönetim kurulu yeni uzun vadeli yatırım portföylerini onaylamakta tereddüt etti.",
-    word: "fluctuate", trWord: "dalgalanmak", correct: "fluctuated",
-    blank: "The executive board has hesitated to endorse new long-term investment portfolios since the global market indicators ___ last quarter.",
-    options: ['fluctuated', 'fluctuate', 'fluctuating', 'will fluctuate'],
-    blocks: ['The', 'executive', 'board', 'has', 'hesitated', 'to', 'endorse', 'new', 'long-term', 'investment', 'portfolios', 'since', 'the', 'global', 'market', 'indicators', 'fluctuated', 'last', 'quarter.']
+    en: "Industrial automation metrics have increased since the tech firm opened, reducing overall corporate expenditure on manual administrative tasks.",
+    tr: "Teknoloji firması açıldığından ve manuel idari işlere yapılan genel şirket harcamalarını azalttığından beri endüstriyel otomasyon ölçümleri arttı.",
+    word: "open", trWord: "açılmak", correct: "opened",
+    blank: "Industrial automation metrics have increased since the tech firm ___ , reducing overall corporate expenditure on manual administrative tasks.",
+    options: ['opened', 'open', 'opening', 'opens'],
+    blocks: ['Industrial', 'automation', 'metrics', 'have', 'increased', 'since', 'the', 'tech', 'firm', 'opened,', 'reducing', 'overall', 'corporate', 'expenditure', 'on', 'manual', 'administrative', 'tasks.']
   },
   {
-    en: "Significant progress has been made regarding environmental conservation policies since the international climate convention was finalized by member states.",
-    tr: "Uluslararası iklim sözleşmesi üye devletler tarafından nihai hale getirildiğinden beri çevre koruma politikaları konusunda önemli ilerlemeler kaydedildi.",
-    word: "be", trWord: "olmak", correct: "was",
-    blank: "Significant progress has been made regarding environmental conservation policies since the international climate convention ___ finalized by member states.",
-    options: ['was', 'is', 'has', 'were'],
-    blocks: ['Significant', 'progress', 'has', 'been', 'made', 'regarding', 'environmental', 'conservation', 'policies', 'since', 'the', 'international', 'climate', 'convention', 'was', 'finalized', 'by', 'member', 'states.']
+    en: "Ambient temperatures inside the chamber have fluctuated since winter began, affecting the validation accuracy of the active simulation models.",
+    tr: "Kış başladığından ve aktif simülasyon modellerinin doğrulama doğruluğunu etkilediğinden beri hazne içindeki ortam sıcaklıkları dalgalandı.",
+    word: "begin", trWord: "başlamak", correct: "began",
+    blank: "Ambient temperatures inside the chamber have fluctuated since winter ___ , affecting the validation accuracy of the active simulation models.",
+    options: ['began', 'begin', 'beginning', 'begins'],
+    blocks: ['Ambient', 'temperatures', 'inside', 'the', 'chamber', 'have', 'fluctuated', 'since', 'winter', 'began,', 'affecting', 'the', 'validation', 'accuracy', 'of', 'the', 'active', 'simulation', 'models.']
+  },
+  {
+    en: "Corporate profits have dropped dramatically since the financial market declined due to unexpected international trade and tariff restrictions.",
+    tr: "Beklenmedik uluslararası ticaret ve tarife kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri şirket karları önemli ölçüde düştü.",
+    word: "decline", trWord: "gerilemek, düşmek", correct: "declined",
+    blank: "Corporate profits have dropped dramatically since the financial market ___ due to unexpected international trade and tariff restrictions.",
+    options: ['declined', 'decline', 'declining', 'declines'],
+    blocks: ['Corporate', 'profits', 'have', 'dropped', 'dramatically', 'since', 'the', 'financial', 'market', 'declined', 'due', 'to', 'unexpected', 'international', 'trade', 'and', 'tariff', 'restrictions.']
+  },
+  {
+    en: "Academic research groups have compiled several datasets since the laboratory opened to evaluate how organic polymers react under extreme heat pressure.",
+    tr: "Organik polimerlerin aşırı ısı basıncı altında nasıl reaksiyon gösterdiğini değerlendirmek amacıyla laboratuvar açıldığından beri akademik araştırma grupları birkaç veri seti derledi.",
+    word: "open", trWord: "açılmak", correct: "opened",
+    blank: "Academic research groups have compiled several datasets since the laboratory ___ to evaluate how organic polymers react under extreme heat pressure.",
+    options: ['opened', 'open', 'opening', 'opens'],
+    blocks: ['Academic', 'research', 'groups', 'have', 'compiled', 'several', 'datasets', 'since', 'the', 'laboratory', 'opened', 'to', 'evaluate', 'how', 'organic', 'polymers', 'react', 'under', 'extreme', 'heat', 'pressure.']
   }
 ];
+
+
 
 const unit22Lesson1PhraseRaw = [
   {
@@ -7482,110 +7484,112 @@ const unit23Lesson1SentencesRaw = [
   { en: "while it is hot", tr: "o sıcakken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ hot", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'hot'] },
   { en: "while it is cold", tr: "o soğukken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ cold", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'cold'] },
   { en: "while it is full", tr: "o doluyken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ full", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'full'] },
-  { en: "while it is ready", tr: "o hazırken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ ready", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'ready'] },
-  { en: "while it is empty", tr: "o boşken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ empty", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'empty'] },
-  { en: "while it is here", tr: "o buradayken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ here", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'here'] },
-  { en: "while it grows", tr: "o büyüdükçe", word: "grow", trWord: "büyümek", correct: "grows", blank: "while it ___", options: ['grows', 'grow', 'growing', 'will grow'], blocks: ['while', 'it', 'grows'] },
-  { en: "while it develops", tr: "o geliştikçe", word: "develop", trWord: "gelişmek", correct: "develops", blank: "while it ___", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['while', 'it', 'develops'] },
-  { en: "while it contracts", tr: "o büzüldükçe", word: "contract", trWord: "büzülmek", correct: "contracts", blank: "while it ___", options: ['contracts', 'contract', 'contracting', 'will contract'], blocks: ['while', 'it', 'contracts'] },
-  { en: "while it expands", tr: "o genleştikçe", word: "expand", trWord: "genleşmek", correct: "expands", blank: "while it ___", options: ['expands', 'expand', 'expanding', 'will expand'], blocks: ['while', 'it', 'expands'] }
+  { en: "while wages are low", tr: "ücretler düşükken", word: "be", trWord: "olmak", correct: "are", blank: "while wages ___ low", options: ['are', 'is', 'were', 'being'], blocks: ['while', 'wages', 'are', 'low'] },
+  { en: "while it is still wet", tr: "hala ıslakken", word: "be", trWord: "olmak", correct: "is", blank: "while it ___ still wet", options: ['is', 'was', 'will be', 'being'], blocks: ['while', 'it', 'is', 'still', 'wet'] },
+  { en: "while they are still young", tr: "onlar hala gençken", word: "be", trWord: "olmak", correct: "are", blank: "while they ___ still young", options: ['are', 'is', 'were', 'being'], blocks: ['while', 'they', 'are', 'still', 'young'] },
+  { en: "as the wood decays", tr: "odun çürüdükçe", word: "decay", trWord: "çürümek", correct: "decays", blank: "as the wood ___", options: ['decays', 'decay', 'decaying', 'will decay'], blocks: ['as', 'the', 'wood', 'decays'] },
+  { en: "as it grows up", tr: "o büyüdükçe", word: "grow", trWord: "büyümek", correct: "grows", blank: "as it ___ up", options: ['grows', 'grow', 'growing', 'will grow'], blocks: ['as', 'it', 'grows', 'up'] },
+  { en: "as inflation increases", tr: "enflasyon arttıkça", word: "increase", trWord: "artmak", correct: "increases", blank: "as inflation ___", options: ['increases', 'increase', 'increasing', 'will increase'], blocks: ['as', 'inflation', 'increases'] },
+  { en: "as the application requests a layout refresh", tr: "uygulama düzen yenilemesi talep ettikçe", word: "request", trWord: "istemek, talep etmek", correct: "requests", blank: "as the application ___ a layout refresh", options: ['requests', 'request', 'requesting', 'will request'], blocks: ['as', 'the', 'application', 'requests', 'a', 'layout', 'refresh'] }
 ];
 
 const unit23Lesson1SentencesL2Raw = [
-  { en: "Strike the iron while it is hot.", tr: "Demiri sıcakken döv.", word: "be", trWord: "olmak", correct: "is", blank: "Strike the iron while it ___ hot.", options: ['is', 'was', 'will be', 'being'], blocks: ['Strike', 'the', 'iron', 'while', 'it', 'is', 'hot.'] },
-  { en: "We cannot store the liquid while it is cold.", tr: "Sıvıyı soğukken depolayamayız.", word: "be", trWord: "olmak", correct: "is", blank: "We cannot store the liquid while it ___ cold.", options: ['is', 'was', 'will be', 'being'], blocks: ['We', 'cannot', 'store', 'the', 'liquid', 'while', 'it', 'is', 'cold.'] },
-  { en: "Do not add more data while the disk is full.", tr: "Disk doluyken daha fazla veri eklemeyin.", word: "be", trWord: "olmak", correct: "is", blank: "Do not add more data while the disk ___ full.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'add', 'more', 'data', 'while', 'the', 'disk', 'is', 'full.'] },
-  { en: "You can download the file while it is ready.", tr: "Dosya hazırken indirebilirsiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You can download the file while it ___ ready.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'can', 'download', 'the', 'file', 'while', 'it', 'is', 'ready.'] },
-  { en: "Please clean the clean-room while it is empty.", tr: "Lütfen temiz odayı boşken temizleyin.", word: "be", trWord: "olmak", correct: "is", blank: "Please clean the clean-room while it ___ empty.", options: ['is', 'was', 'will be', 'being'], blocks: ['Please', 'clean', 'the', 'clean-room', 'while', 'it', 'is', 'empty.'] },
-  { en: "You should check the device while it is here.", tr: "Cihaz buradayken kontrol etmelisiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You should check the device while it ___ here.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'should', 'check', 'the', 'device', 'while', 'it', 'is', 'here.'] },
-  { en: "Our experience grows as we learn.", tr: "Biz öğrendikçe deneyimimiz büyür.", word: "grow", trWord: "büyümek", correct: "grows", blank: "Our experience ___ as we learn.", options: ['grows', 'grow', 'growing', 'will grow'], blocks: ['Our', 'experience', 'grows', 'as', 'we', 'learn.'] },
-  { en: "The child learns new concepts while he develops.", tr: "Çocuk geliştikçe yeni kavramlar öğrenir.", word: "develop", trWord: "gelişmek", correct: "develops", blank: "The child learns new concepts while he ___.", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['The', 'child', 'learns', 'new', 'concepts', 'while', 'he', 'develops.'] },
-  { en: "The metal loses its heat while it contracts.", tr: "Metal büzüldükçe ısısını kaybeder.", word: "contract", trWord: "büzülmek", correct: "contracts", blank: "The metal loses its heat while it ___.", options: ['contracts', 'contract', 'contracting', 'will contract'], blocks: ['The', 'metal', 'loses', 'its', 'heat', 'while', 'it', 'contracts.'] },
-  { en: "The balloon becomes thinner while it expands.", tr: "Balon genleştikçe incelir.", word: "expand", trWord: "genleşmek", correct: "expands", blank: "The balloon becomes thinner while it ___.", options: ['expands', 'expand', 'expanding', 'will expand'], blocks: ['The', 'balloon', 'becomes', 'thinner', 'while', 'it', 'expands.'] }
+  { en: "The metal frame must be shaped while it is hot.", tr: "Metal çerçeve sıcakken şekillendirilmelidir.", word: "must", trWord: "-meli, -malı", correct: "must", blank: "The metal frame ___ be shaped while it is hot.", options: ['must', 'should', 'can', 'may'], blocks: ['The', 'metal', 'frame', 'must', 'be', 'shaped', 'while', 'it', 'is', 'hot.'] },
+  { en: "Concrete structures contract while it is cold.", tr: "Beton yapılar soğukken büzülür.", word: "contract", trWord: "büzülmek", correct: "contract", blank: "Concrete structures ___ while it is cold.", options: ['contract', 'contracts', 'contracting', 'will contract'], blocks: ['Concrete', 'structures', 'contract', 'while', 'it', 'is', 'cold.'] },
+  { en: "The processing queue halts while it is full.", tr: "İşlem kuyruğu doluyken durur.", word: "halt", trWord: "durmak", correct: "halts", blank: "The processing queue ___ while it is full.", options: ['halts', 'halt', 'halting', 'will halt'], blocks: ['The', 'processing', 'queue', 'halts', 'while', 'it', 'is', 'full.'] },
+  { en: "Health is an important factor while wages are low and conditions are bad.", tr: "Ücretler düşük ve koşullar kötüyken sağlık önemli bir faktördür.", word: "be", trWord: "olmak", correct: "is", blank: "Health ___ an important factor while wages are low and conditions are bad.", options: ['is', 'was', 'will be', 'being'], blocks: ['Health', 'is', 'an', 'important', 'factor', 'while', 'wages', 'are', 'low', 'and', 'conditions', 'are', 'bad.'] },
+  { en: "The photographic plate must be exposed while it is still wet.", tr: "Fotoğraf plakası hala ıslakken pozlanmalıdır.", word: "must", trWord: "-meli, -malı", correct: "must", blank: "The photographic plate ___ be exposed while it is still wet.", options: ['must', 'should', 'can', 'may'], blocks: ['The', 'photographic', 'plate', 'must', 'be', 'exposed', 'while', 'it', 'is', 'still', 'wet.'] },
+  { en: "Educationists should teach their pupils to appreciate life while they are still young.", tr: "Eğitimciler, öğrencilerine hala gençken hayatın kıymetini bilmeyi öğretmelidir.", word: "should", trWord: "-meli, -malı (tavsiye)", correct: "should", blank: "Educationists ___ teach their pupils to appreciate life while they are still young.", options: ['should', 'must', 'can', 'may'], blocks: ['Educationists', 'should', 'teach', 'their', 'pupils', 'to', 'appreciate', 'life', 'while', 'they', 'are', 'still', 'young.'] },
+  { en: "Thousands of bacteria find a suitable environment as the wood decays.", tr: "Odun çürüdükçe binlerce bakteri uygun bir ortam bulur.", word: "find", trWord: "bulmak", correct: "find", blank: "Thousands of bacteria ___ a suitable environment as the wood decays.", options: ['find', 'finds', 'finding', 'will find'], blocks: ['Thousands', 'of', 'bacteria', 'find', 'a', 'suitable', 'environment', 'as', 'the', 'wood', 'decays.'] },
+  { en: "A lot can be learned by limiting the experiences of an animal as it grows up.", tr: "Bir hayvan büyüdükçe deneyimlerini sınırlayarak çok şey öğrenilebilir.", word: "can", trWord: "-ebilmek", correct: "can", blank: "A lot ___ be learned by limiting the experiences of an animal as it grows up.", options: ['can', 'could', 'may', 'must'], blocks: ['A', 'lot', 'can', 'be', 'learned', 'by', 'limiting', 'the', 'experiences', 'of', 'an', 'animal', 'as', 'it', 'grows', 'up.'] },
+  { en: "Purchasing power decreases rapidly as inflation increases.", tr: "Enflasyon arttıkça satın alma gücü hızla azalır.", word: "decrease", trWord: "azalmak, düşmek", correct: "decreases", blank: "Purchasing power ___ rapidly as inflation increases.", options: ['decreases', 'decrease', 'decreasing', 'will decrease'], blocks: ['Purchasing', 'power', 'decreases', 'rapidly', 'as', 'inflation', 'increases.'] },
+  { en: "The software engine recalculates spatial models as the application requests a layout refresh.", tr: "Uygulama düzen yenilemesi talep ettikçe yazılım motoru uzamsal modelleri yeniden hesaplar.", word: "recalculate", trWord: "yeniden hesaplamak", correct: "recalculates", blank: "The software engine ___ spatial models as the application requests a layout refresh.", options: ['recalculates', 'recalculate', 'recalculating', 'will recalculate'], blocks: ['The', 'software', 'engine', 'recalculates', 'spatial', 'models', 'as', 'the', 'application', 'requests', 'a', 'layout', 'refresh.'] }
 ];
 
 const unit23Lesson1SentencesL3Raw = [
   {
-    en: "The software compiler executes the primary script assets seamlessly while the processor core temperature is hot.",
-    tr: "Yazılım derleyicisi, işlemci çekirdek sıcaklığı sıcakken birincil betik varlıklarını sorunsuz bir şekilde yürütür.",
-    word: "execute", trWord: "yürütmek", correct: "executes",
-    blank: "The software compiler ___ the primary script assets seamlessly while the processor core temperature is hot.",
-    options: ['executes', 'execute', 'executing', 'will execute'],
-    blocks: ['The', 'software', 'compiler', 'executes', 'the', 'primary', 'script', 'assets', 'seamlessly', 'while', 'the', 'processor', 'core', 'temperature', 'is', 'hot.']
+    en: "The heavy mechanical piston must be shaped while it is hot lest the structure should suffer from internal friction cracks.",
+    tr: "Yapının iç sürtünme çatlaklarından zarar görmemesi için ağır mekanik piston sıcakken şekillendirilmelidir.",
+    word: "should", trWord: "-meli, -malı (lest ile)", correct: "should",
+    blank: "The heavy mechanical piston must be shaped while it is hot lest the structure ___ suffer from internal friction cracks.",
+    options: ['should', 'must', 'can', 'may'],
+    blocks: ['The', 'heavy', 'mechanical', 'piston', 'must', 'be', 'shaped', 'while', 'it', 'is', 'hot', 'lest', 'the', 'structure', 'should', 'suffer', 'from', 'internal', 'friction', 'cracks.']
   },
   {
-    en: "Superconducting materials exhibit zero electrical resistance while the testing environment is cold.",
-    tr: "Süperiletken malzemeler, test ortamı soğukken sıfır elektrik direnci gösterir.",
-    word: "exhibit", trWord: "göstermek", correct: "exhibit",
-    blank: "Superconducting materials ___ zero electrical resistance while the testing environment is cold.",
-    options: ['exhibit', 'exhibits', 'exhibiting', 'will exhibit'],
-    blocks: ['Superconducting', 'materials', 'exhibit', 'zero', 'electrical', 'resistance', 'while', 'the', 'testing', 'environment', 'is', 'cold.']
+    en: "Concrete foundations contract while it is cold; therefore, structural field crews must monitor the setting process under precise parameters.",
+    tr: "Beton temeller soğukken büzülür; bu nedenle, yapısal saha ekipleri priz alma sürecini kesin parametreler altında izlemelidir.",
+    word: "monitor", trWord: "izlemek, gözlemlemek", correct: "monitor",
+    blank: "Concrete foundations contract while it is cold; therefore, structural field crews must ___ the setting process under precise parameters.",
+    options: ['monitor', 'monitoring', 'monitored', 'monitors'],
+    blocks: ['Concrete', 'foundations', 'contract', 'while', 'it', 'is', 'cold;', 'therefore,', 'structural', 'field', 'crews', 'must', 'monitor', 'the', 'setting', 'process', 'under', 'precise', 'parameters.']
   },
   {
-    en: "The automated system automatically redirects incoming server traffic while the main database storage is full.",
-    tr: "Otomatik sistem, ana veri tabanı deposu doluyken gelen sunucu trafiğini otomatik olarak yeniden yönlendirir.",
-    word: "redirect", trWord: "yönlendirmek", correct: "redirects",
-    blank: "The automated system automatically ___ incoming server traffic while the main database storage is full.",
-    options: ['redirects', 'redirect', 'redirecting', 'will redirect'],
-    blocks: ['The', 'automated', 'system', 'automatically', 'redirects', 'incoming', 'server', 'traffic', 'while', 'the', 'main', 'database', 'storage', 'is', 'full.']
+    en: "The central processing queue halts while it is full until the system execution script clears the redundant log partitions.",
+    tr: "Sistem yürütme betiği gereksiz günlük bölümlerini temizleyene kadar merkezi işlem kuyruğu doluyken durur.",
+    word: "clear", trWord: "temizlemek", correct: "clears",
+    blank: "The central processing queue halts while it is full until the system execution script ___ the redundant log partitions.",
+    options: ['clears', 'clear', 'clearing', 'will clear'],
+    blocks: ['The', 'central', 'processing', 'queue', 'halts', 'while', 'it', 'is', 'full', 'until', 'the', 'system', 'execution', 'script', 'clears', 'the', 'redundant', 'log', 'partitions.']
   },
   {
-    en: "The system administrator deploys the update to production servers while the staging configuration is ready.",
-    tr: "Sistem yöneticisi, hazırlık yapılandırması hazırken güncellemeyi üretim sunucularına dağıtır.",
-    word: "deploy", trWord: "dağıtmak", correct: "deploys",
-    blank: "The system administrator ___ the update to production servers while the staging configuration is ready.",
-    options: ['deploys', 'deploy', 'deploying', 'will deploy'],
-    blocks: ['The', 'system', 'administrator', 'deploys', 'the', 'update', 'to', 'production', 'servers', 'while', 'the', 'staging', 'configuration', 'is', 'ready.']
+    en: "Health is an important factor in society while wages are low and conditions of work are bad within industrialized urban centers.",
+    tr: "Sanayileşmiş kentsel merkezlerde ücretler düşük ve çalışma koşulları kötüyken sağlık toplumda önemli bir faktördür.",
+    word: "be", trWord: "olmak", correct: "are",
+    blank: "Health is an important factor in society while wages ___ low and conditions of work are bad within industrialized urban centers.",
+    options: ['are', 'is', 'were', 'being'],
+    blocks: ['Health', 'is', 'an', 'important', 'factor', 'in', 'society', 'while', 'wages', 'are', 'low', 'and', 'conditions', 'of', 'work', 'are', 'bad', 'within', 'industrialized', 'urban', 'centers.']
   },
   {
-    en: "The network maintenance crew reinstalls the server hardware modules while the data center facility is empty.",
-    tr: "Ağ bakım ekibi, veri merkezi tesisi boşken sunucu donanım modüllerini yeniden kurar.",
-    word: "reinstall", trWord: "yeniden kurmak", correct: "reinstalls",
-    blank: "The network maintenance crew ___ the server hardware modules while the data center facility is empty.",
-    options: ['reinstalls', 'reinstall', 'reinstalling', 'will reinstall'],
-    blocks: ['The', 'network', 'maintenance', 'crew', 'reinstalls', 'the', 'server', 'hardware', 'modules', 'while', 'the', 'data', 'center', 'facility', 'is', 'empty.']
+    en: "The photographic plate must be exposed while it is still wet in order that high-resolution molecular renderings can be captured cleanly.",
+    tr: "Yüksek çözünürlüklü moleküler çizimlerin temiz bir şekilde yakalanabilmesi için fotoğraf plakası hala ıslakken pozlanmalıdır.",
+    word: "be", trWord: "olmak (pasif)", correct: "be",
+    blank: "The photographic plate must ___ exposed while it is still wet in order that high-resolution molecular renderings can be captured cleanly.",
+    options: ['be', 'been', 'being', 'is'],
+    blocks: ['The', 'photographic', 'plate', 'must', 'be', 'exposed', 'while', 'it', 'is', 'still', 'wet', 'in', 'order', 'that', 'high-resolution', 'molecular', 'renderings', 'can', 'be', 'captured', 'cleanly.']
   },
   {
-    en: "The development team must perform comprehensive local testing on the mobile app source code while the device is here.",
-    tr: "Geliştirme ekibi, cihaz buradayken mobil uygulama kaynak kodu üzerinde kapsamlı yerel testler yapmalıdır.",
-    word: "perform", trWord: "yapmak", correct: "perform",
-    blank: "The development team must ___ comprehensive local testing on the mobile app source code while the device is here.",
-    options: ['perform', 'performs', 'performing', 'performance'],
-    blocks: ['The', 'development', 'team', 'must', 'perform', 'comprehensive', 'local', 'testing', 'on', 'the', 'mobile', 'app', 'source', 'code', 'while', 'the', 'device', 'is', 'here.']
+    en: "Educationists should teach their pupils to appreciate the beauty of life while they are still young to enhance civic engagement indicators.",
+    tr: "Eğitimciler, yurttaş katılımı göstergelerini artırmak için öğrencilerine henüz gençken hayatın güzelliğini takdir etmeyi öğretmelidir.",
+    word: "teach", trWord: "öğretmek", correct: "teach",
+    blank: "Educationists should ___ their pupils to appreciate the beauty of life while they are still young to enhance civic engagement indicators.",
+    options: ['teach', 'teaches', 'teaching', 'taught'],
+    blocks: ['Educationists', 'should', 'teach', 'their', 'pupils', 'to', 'appreciate', 'the', 'beauty', 'of', 'life', 'while', 'they', 'are', 'still', 'young', 'to', 'enhance', 'civic', 'engagement', 'indicators.']
   },
   {
-    en: "The neural network algorithm adjusts its structural weights and parameters dynamically as the training dataset grows.",
-    tr: "Yapay sinir ağı algoritması, eğitim veri kümesi büyüdükçe yapısal ağırlıklarını ve parametrelerini dinamik olarak ayarlar.",
+    en: "Thousands of bacteria find a suitable environment for their rapid growth as the wood decays inside the humid tropical ecosystem.",
+    tr: "Nemli tropikal ekosistem içinde odun çürüdükçe, binlerce bakteri hızlı büyümeleri için uygun bir ortam bulur.",
+    word: "decay", trWord: "çürümek", correct: "decays",
+    blank: "Thousands of bacteria find a suitable environment for their rapid growth as the wood ___ inside the humid tropical ecosystem.",
+    options: ['decays', 'decay', 'decaying', 'will decay'],
+    blocks: ['Thousands', 'of', 'bacteria', 'find', 'a', 'suitable', 'environment', 'for', 'their', 'rapid', 'growth', 'as', 'the', 'wood', 'decays', 'inside', 'the', 'humid', 'tropical', 'ecosystem.']
+  },
+  {
+    en: "A lot can be learned by limiting the natural experiences of an animal as it grows up under structured laboratory conditions.",
+    tr: "Yapılandırılmış laboratuvar koşulları altında bir hayvan büyüdükçe, onun doğal deneyimlerini sınırlayarak çok şey öğrenilebilir.",
     word: "grow", trWord: "büyümek", correct: "grows",
-    blank: "The neural network algorithm adjusts its structural weights and parameters dynamically as the training dataset ___.",
+    blank: "A lot can be learned by limiting the natural experiences of an animal as it ___ up under structured laboratory conditions.",
     options: ['grows', 'grow', 'growing', 'will grow'],
-    blocks: ['The', 'neural', 'network', 'algorithm', 'adjusts', 'its', 'structural', 'weights', 'and', 'parameters', 'dynamically', 'as', 'the', 'training', 'dataset', 'grows.']
+    blocks: ['A', 'lot', 'can', 'be', 'learned', 'by', 'limiting', 'the', 'natural', 'experiences', 'of', 'an', 'animal', 'as', 'it', 'grows', 'up', 'under', 'structured', 'laboratory', 'conditions.']
   },
   {
-    en: "The linguistic software gains a deeper contextual understanding of grammar patterns while the application architecture develops.",
-    tr: "Dilbilimsel yazılım, uygulama mimarisi geliştikçe dilbilgisi kalıplarını daha derin bir bağlamsal anlayışla kazanır.",
-    word: "gain", trWord: "kazanmak", correct: "gains",
-    blank: "The linguistic software ___ a deeper contextual understanding of grammar patterns while the application architecture develops.",
-    options: ['gains', 'gain', 'gaining', 'will gain'],
-    blocks: ['The', 'linguistic', 'software', 'gains', 'a', 'deeper', 'contextual', 'understanding', 'of', 'grammar', 'patterns', 'while', 'the', 'application', 'architecture', 'develops.']
+    en: "Overall purchasing power decreases rapidly as inflation increases because the legislative body fails to implement robust tax regulation codes.",
+    tr: "Yasama organı sağlam vergi düzenleme kuralları uygulamakta yetersiz kaldığı için, enflasyon arttıkça genel satın alma gücü hızla azalır.",
+    word: "fail", trWord: "başarısız olmak, yetersiz kalmak", correct: "fails",
+    blank: "Overall purchasing power decreases rapidly as inflation increases because the legislative body ___ to implement robust tax regulation codes.",
+    options: ['fails', 'fail', 'failing', 'failed'],
+    blocks: ['Overall', 'purchasing', 'power', 'decreases', 'rapidly', 'as', 'inflation', 'increases', 'because', 'the', 'legislative', 'body', 'fails', 'to', 'implement', 'robust', 'tax', 'regulation', 'codes.']
   },
   {
-    en: "The dense gas structure generates immense gravitational pressure while it contracts into a new star.",
-    tr: "Yoğun gaz yapısı, yeni bir yıldıza doğru büzüldükçe muazzam bir kütleçekim basıncı üretir.",
-    word: "contract", trWord: "büzülmek", correct: "contracts",
-    blank: "The dense gas structure generates immense gravitational pressure while it ___ into a new star.",
-    options: ['contracts', 'contract', 'contracting', 'will contract'],
-    blocks: ['The', 'dense', 'gas', 'structure', 'generates', 'immense', 'gravitational', 'pressure', 'while', 'it', 'contracts', 'into', 'a', 'new', 'star.']
-  },
-  {
-    en: "The spatial boundary of the universe carries celestial bodies away from each other while it expands continuously.",
-    tr: "Evrenin uzamsal sınırı, sürekli genişledikçe gök cisimlerini birbirinden uzaklaştırır.",
-    word: "expand", trWord: "genleşmek", correct: "expands",
-    blank: "The spatial boundary of the universe carries celestial bodies away from each other while it ___ continuously.",
-    options: ['expands', 'expand', 'expanding', 'will expand'],
-    blocks: ['The', 'spatial', 'boundary', 'of', 'the', 'universe', 'carries', 'celestial', 'bodies', 'away', 'from', 'each', 'other', 'while', 'it', 'expands', 'continuously.']
+    en: "The software engine recalculates spatial models as the application requests a layout refresh to keep the gamified interface running smoothly.",
+    tr: "Oyunlaştırılmış arayüzün sorunsuz çalışmasını sağlamak için uygulama düzen yenilemesi talep ettikçe yazılım motoru uzamsal modelleri yeniden hesaplar.",
+    word: "keep", trWord: "tutmak, korumak", correct: "keep",
+    blank: "The software engine recalculates spatial models as the application requests a layout refresh to ___ the gamified interface running smoothly.",
+    options: ['keep', 'keeping', 'kept', 'keeps'],
+    blocks: ['The', 'software', 'engine', 'recalculates', 'spatial', 'models', 'as', 'the', 'application', 'requests', 'a', 'layout', 'refresh', 'to', 'keep', 'the', 'gamified', 'interface', 'running', 'smoothly.']
   }
 ];
+
+
 
 function buildUnit23WhileExercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -7823,131 +7827,113 @@ function buildUnit23WhileExercises(unitId, lessonId) {
 const unit24Lesson1SentencesRaw = [
   { en: "until it is dry", tr: "kuruyuncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ dry", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'dry'] },
   { en: "until it is hard", tr: "sertleşinceye kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ hard", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'hard'] },
-  { en: "until it is soft", tr: "yumuşayıncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ soft", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'soft'] },
-  { en: "until it is ready", tr: "hazır oluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ ready", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'ready'] },
-  { en: "until it is finished", tr: "bitinceye kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ finished", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'finished'] },
-  { en: "until it was empty", tr: "boşalıncaya kadar", word: "be", trWord: "olmak", correct: "was", blank: "until it ___ empty", options: ['was', 'is', 'has', 'were'], blocks: ['until', 'it', 'was', 'empty'] },
-  { en: "until it is full", tr: "doluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ full", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'full'] },
-  { en: "until it is necessary", tr: "gerekli oluncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until it ___ necessary", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'it', 'is', 'necessary'] },
-  { en: "until it disappears", tr: "gözden kayboluncaya kadar", word: "disappear", trWord: "gözden kaybolmak", correct: "disappears", blank: "until it ___", options: ['disappears', 'disappear', 'disappearing', 'will disappear'], blocks: ['until', 'it', 'disappears'] },
-  { en: "until it changes", tr: "değişinceye kadar", word: "change", trWord: "değişmek", correct: "changes", blank: "until it ___", options: ['changes', 'change', 'changing', 'will change'], blocks: ['until', 'it', 'changes'] },
-  { en: "until it develops", tr: "gelişinceye kadar", word: "develop", trWord: "gelişmek", correct: "develops", blank: "until it ___", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['until', 'it', 'develops'] },
-  { en: "until it gets better", tr: "iyileşinceye kadar", word: "get", trWord: "iyileşmek", correct: "gets", blank: "until it ___ better", options: ['gets', 'get', 'getting', 'will get'], blocks: ['until', 'it', 'gets', 'better'] }
+  { en: "until all the members are educated", tr: "tüm üyeler eğitilinceye kadar", word: "be", trWord: "olmak", correct: "are", blank: "until all the members ___ educated", options: ['are', 'is', 'were', 'being'], blocks: ['until', 'all', 'the', 'members', 'are', 'educated'] },
+  { en: "until dissections were carried out", tr: "kadavra kesimleri yapılıncaya kadar", word: "be", trWord: "olmak", correct: "were", blank: "until dissections ___ carried out", options: ['were', 'are', 'was', 'have'], blocks: ['until', 'dissections', 'were', 'carried', 'out'] },
+  { en: "until the body is attacked by bacteria", tr: "vücut bakteriler tarafından saldırıya uğrayıncaya kadar", word: "be", trWord: "olmak", correct: "is", blank: "until the body ___ attacked by bacteria", options: ['is', 'was', 'will be', 'being'], blocks: ['until', 'the', 'body', 'is', 'attacked', 'by', 'bacteria'] },
+  { en: "until education became a public service", tr: "eğitim kamu hizmeti haline gelene kadar", word: "become", trWord: "olmak, haline gelmek", correct: "became", blank: "until education ___ a public service", options: ['became', 'become', 'becoming', 'becomes'], blocks: ['until', 'education', 'became', 'a', 'public', 'service'] },
+  { en: "until the system architect grants clearance", tr: "sistem mimarı izin verene kadar", word: "grant", trWord: "vermek, onaylamak", correct: "grants", blank: "until the system architect ___ clearance", options: ['grants', 'grant', 'granting', 'will grant'], blocks: ['until', 'the', 'system', 'architect', 'grants', 'clearance'] },
+  { en: "until the network firewall blocks traffic", tr: "ağ güvenlik duvarı trafiği engelleyene kadar", word: "block", trWord: "engellemek", correct: "blocks", blank: "until the network firewall ___ traffic", options: ['blocks', 'block', 'blocking', 'will block'], blocks: ['until', 'the', 'network', 'firewall', 'blocks', 'traffic'] },
+  { en: "until the chemical solution reacts", tr: "kimyasal çözelti reaksiyona girene kadar", word: "react", trWord: "reaksiyon göstermek", correct: "reacts", blank: "until the chemical solution ___", options: ['reacts', 'react', 'reacting', 'will react'], blocks: ['until', 'the', 'chemical', 'solution', 'reacts'] },
+  { en: "until the release coordinators receive store approval", tr: "sürüm koordinatörleri mağaza onayını alana kadar", word: "receive", trWord: "almak", correct: "receive", blank: "until the release coordinators ___ store approval", options: ['receive', 'receives', 'receiving', 'will receive'], blocks: ['until', 'the', 'release', 'coordinators', 'receive', 'store', 'approval'] }
 ];
 
 const unit24Lesson1SentencesL2Raw = [
-  { en: "Do not paint the wooden table until it is dry.", tr: "Ahşap masayı kuruyana kadar boyamayın.", word: "be", trWord: "olmak", correct: "is", blank: "Do not paint the wooden table until it ___ dry.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'paint', 'the', 'wooden', 'table', 'until', 'it', 'is', 'dry.'] },
-  { en: "Leave the plastic mixture in the cold mold until it is hard.", tr: "Plastik karışımı sertleşene kadar soğuk kalıpta bırakın.", word: "be", trWord: "olmak", correct: "is", blank: "Leave the plastic mixture in the cold mold until it ___ hard.", options: ['is', 'was', 'will be', 'being'], blocks: ['Leave', 'the', 'plastic', 'mixture', 'in', 'the', 'cold', 'mold', 'until', 'it', 'is', 'hard.'] },
-  { en: "Keep heating the solid chocolate wax until it is soft.", tr: "Katı çikolata balmumunu yumuşayana kadar ısıtmaya devam edin.", word: "be", trWord: "olmak", correct: "is", blank: "Keep heating the solid chocolate wax until it ___ soft.", options: ['is', 'was', 'will be', 'being'], blocks: ['Keep', 'heating', 'the', 'solid', 'chocolate', 'wax', 'until', 'it', 'is', 'soft.'] },
-  { en: "The system manager will delay the server task until it is ready.", tr: "Sistem yöneticisi, sunucu görevini hazır olana kadar erteleyecek.", word: "be", trWord: "olmak", correct: "is", blank: "The system manager will delay the server task until it ___ ready.", options: ['is', 'was', 'will be', 'being'], blocks: ['The', 'system', 'manager', 'will', 'delay', 'the', 'server', 'task', 'until', 'it', 'is', 'ready.'] },
-  { en: "You should wait in the line until it is finished.", tr: "Bitene kadar kuyrukta beklemelisiniz.", word: "be", trWord: "olmak", correct: "is", blank: "You should wait in the line until it ___ finished.", options: ['is', 'was', 'will be', 'being'], blocks: ['You', 'should', 'wait', 'in', 'the', 'line', 'until', 'it', 'is', 'finished.'] },
-  { en: "The students kept downloading files until the drive was empty.", tr: "Öğrenciler, sürücü boşalana kadar dosya indirmeye devam ettiler.", word: "be", trWord: "olmak", correct: "was", blank: "The students kept downloading files until the drive ___ empty.", options: ['was', 'is', 'has', 'were'], blocks: ['The', 'students', 'kept', 'downloading', 'files', 'until', 'the', 'drive', 'was', 'empty.'] },
-  { en: "Please continue filling the water tank until it is full.", tr: "Lütfen su deposunu dolana kadar doldurmaya devam edin.", word: "be", trWord: "olmak", correct: "is", blank: "Please continue filling the water tank until it ___ full.", options: ['is', 'was', 'will be', 'being'], blocks: ['Please', 'continue', 'filling', 'the', 'water', 'tank', 'until', 'it', 'is', 'full.'] },
-  { en: "Do not activate the recovery script until it is necessary.", tr: "Kurtarma betiğini gerekli olana kadar etkinleştirmeyin.", word: "be", trWord: "olmak", correct: "is", blank: "Do not activate the recovery script until it ___ necessary.", options: ['is', 'was', 'will be', 'being'], blocks: ['Do', 'not', 'activate', 'the', 'recovery', 'script', 'until', 'it', 'is', 'necessary.'] },
-  { en: "The radar mechanism tracked the target drone until it disappears.", tr: "Radar mekanizması, hedef İHA'yı gözden kaybolana kadar takip etti.", word: "disappear", trWord: "gözden kaybolmak", correct: "disappears", blank: "The radar mechanism tracked the target drone until it ___.", options: ['disappears', 'disappear', 'disappearing', 'will disappear'], blocks: ['The', 'radar', 'mechanism', 'tracked', 'the', 'target', 'drone', 'until', 'it', 'disappears.'] },
-  { en: "Do not modify any parameters on the display screen until it changes.", tr: "Görüntü ekranındaki herhangi bir parametreyi değişene kadar değiştirmeyin.", word: "change", trWord: "değişmek", correct: "changes", blank: "Do not modify any parameters on the display screen until it ___.", options: ['changes', 'change', 'changing', 'will change'], blocks: ['Do', 'not', 'modify', 'any', 'parameters', 'on', 'the', 'display', 'screen', 'until', 'it', 'changes.'] },
-  { en: "The plant requires constant care and sunlight until it develops.", tr: "Bitki, gelişene kadar sürekli bakım ve güneş ışığı gerektirir.", word: "develop", trWord: "gelişmek", correct: "develops", blank: "The plant requires constant care and sunlight until it ___.", options: ['develops', 'develop', 'developing', 'will develop'], blocks: ['The', 'plant', 'requires', 'constant', 'care', 'and', 'sunlight', 'until', 'it', 'develops.'] },
-  { en: "You must take this medicine regularly until it gets better.", tr: "İyileşene kadar bu ilacı düzenli olarak almalısınız.", word: "get", trWord: "iyileşmek", correct: "gets", blank: "You must take this medicine regularly until it ___ better.", options: ['gets', 'get', 'getting', 'will get'], blocks: ['You', 'must', 'take', 'this', 'medicine', 'regularly', 'until', 'it', 'gets', 'better.'] }
+  { en: "Technicians must wait until it is dry.", tr: "Teknisyenler kuruyana kadar beklemelidir.", word: "wait", trWord: "beklemek", correct: "wait", blank: "Technicians must ___ until it is dry.", options: ['wait', 'waiting', 'waited', 'waits'], blocks: ['Technicians', 'must', 'wait', 'until', 'it', 'is', 'dry.'] },
+  { en: "Construction crews cannot build until it is hard.", tr: "İnşaat ekipleri sertleşene kadar inşa edemezler.", word: "build", trWord: "inşa etmek", correct: "build", blank: "Construction crews cannot ___ until it is hard.", options: ['build', 'building', 'built', 'builds'], blocks: ['Construction', 'crews', 'cannot', 'build', 'until', 'it', 'is', 'hard.'] },
+  { en: "Hükümetin işlevleri cannot be carried out properly until all the members are educated and experienced.", tr: "Tüm üyeler eğitimli ve deneyimli olana kadar hükümetin işlevleri düzgün bir şekilde yürütülemez.", word: "be", trWord: "olmak", correct: "be", blank: "Hükümetin işlevleri cannot ___ carried out properly until all the members are educated and experienced.", options: ['be', 'been', 'being', 'is'], blocks: ['Hükümetin', 'işlevleri', 'cannot', 'be', 'carried', 'out', 'properly', 'until', 'all', 'the', 'members', 'are', 'educated', 'and', 'experienced.'] },
+  { en: "No great advance in anatomy was made until dissections were carried out in the medieval universities.", tr: "Ortaçağ üniversitelerinde kadavra kesimleri yapılana kadar anatomide büyük bir ilerleme kaydedilmedi.", word: "be", trWord: "olmak", correct: "was", blank: "No great advance in anatomy ___ made until dissections were carried out in the medieval universities.", options: ['was', 'is', 'has', 'were'], blocks: ['No', 'great', 'advance', 'in', 'anatomy', 'was', 'made', 'until', 'dissections', 'were', 'carried', 'out', 'in', 'the', 'medieval', 'universities.'] },
+  { en: "Antibodies are not produced naturally until the body is attacked by bacteria.", tr: "Vücut bakteriler tarafından saldırıya uğrayana kadar antikorlar doğal olarak üretilmez.", word: "be", trWord: "olmak", correct: "are", blank: "Antibodies ___ not produced naturally until the body is attacked by bacteria.", options: ['are', 'is', 'were', 'being'], blocks: ['Antibodies', 'are', 'not', 'produced', 'naturally', 'until', 'the', 'body', 'is', 'attacked', 'by', 'bacteria.'] },
+  { en: "The establishment of schools was left to private groups until education became a public service in Britain.", tr: "Britanya'da eğitim bir kamu hizmeti haline gelene kadar okulların kurulması özel gruplara bırakılmıştı.", word: "be", trWord: "olmak", correct: "was", blank: "The establishment of schools ___ left to private groups until education became a public service in Britain.", options: ['was', 'is', 'has', 'were'], blocks: ['The', 'establishment', 'of', 'schools', 'was', 'left', 'to', 'private', 'groups', 'until', 'education', 'became', 'a', 'public', 'service', 'in', 'Britain.'] },
+  { en: "No developer can alter configuration files until the system architect grants clearance.", tr: "Sistem mimarı izin verene kadar hiçbir geliştirici yapılandırma dosyalarını değiştiremez.", word: "alter", trWord: "değiştirmek", correct: "alter", blank: "No developer can ___ configuration files until the system architect grants clearance.", options: ['alter', 'altering', 'altered', 'alters'], blocks: ['No', 'developer', 'can', 'alter', 'configuration', 'files', 'until', 'the', 'system', 'architect', 'grants', 'clearance.'] },
+  { en: "Unauthorized external users will continue accessing files until the network firewall blocks traffic.", tr: "Ağ güvenlik duvarı trafiği engelleyene kadar yetkisiz harici kullanıcılar dosyalara erişmeye devam edecek.", word: "continue", trWord: "devam etmek", correct: "continue", blank: "Unauthorized external users will ___ accessing files until the network firewall blocks traffic.", options: ['continue', 'continues', 'continuing', 'will continue'], blocks: ['Unauthorized', 'external', 'users', 'will', 'continue', 'accessing', 'files', 'until', 'the', 'network', 'firewall', 'blocks', 'traffic.'] },
+  { en: "The volatile liquid remains completely stable until the chemical solution reacts.", tr: "Kimyasal çözelti reaksiyona girene kadar uçucu sıvı tamamen kararlı kalır.", word: "remain", trWord: "kalmak", correct: "remains", blank: "The volatile liquid ___ completely stable until the chemical solution reacts.", options: ['remains', 'remain', 'remaining', 'will remain'], blocks: ['The', 'volatile', 'liquid', 'remains', 'completely', 'stable', 'until', 'the', 'chemical', 'solution', 'reacts.'] },
+  { en: "The engineering team will postpone operations until the release coordinators receive store approval.", tr: "Mühendislik ekibi, sürüm koordinatörleri mağaza onayını alana kadar operasyonları erteleyecek.", word: "postpone", trWord: "ertelemek", correct: "postpone", blank: "The engineering team will ___ operations until the release coordinators receive store approval.", options: ['postpone', 'postponing', 'postponed', 'will postpone'], blocks: ['The', 'engineering', 'team', 'will', 'postpone', 'operations', 'until', 'the', 'release', 'coordinators', 'receive', 'store', 'approval.'] }
 ];
 
 const unit24Lesson1SentencesL3Raw = [
   {
-    en: "Microchip substrates must undergo constant high-temperature drying processes until the surface is dry enough for soldering.",
-    tr: "Mikroçip tabanları, yüzey lehimleme için yeterince kuruyana kadar sürekli yüksek sıcaklıkta kurutma işlemlerine tabi tutulmalıdır.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "Microchip substrates must undergo constant high-temperature drying processes until the surface ___ dry enough for soldering.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['Microchip', 'substrates', 'must', 'undergo', 'constant', 'high-temperature', 'drying', 'processes', 'until', 'the', 'surface', 'is', 'dry', 'enough', 'for', 'soldering.']
+    en: "Laboratory technicians must wait until it is dry before they send the organic polymer mixture to the dynamic scanning unit.",
+    tr: "Laboratuvar teknisyenleri, organik polimer karışımını dinamik tarama ünitesine göndermeden önce kuruyana kadar beklemelidir.",
+    word: "send", trWord: "göndermek", correct: "send",
+    blank: "Laboratory technicians must wait until it is dry before they ___ the organic polymer mixture to the dynamic scanning unit.",
+    options: ['send', 'sending', 'sent', 'sends'],
+    blocks: ['Laboratory', 'technicians', 'must', 'wait', 'until', 'it', 'is', 'dry', 'before', 'they', 'send', 'the', 'organic', 'polymer', 'mixture', 'to', 'the', 'dynamic', 'scanning', 'unit.']
   },
   {
-    en: "The automated manufacturing machine maintains extreme hydraulic pressure over the compound until it is hard according to safety standards.",
-    tr: "Otomatik üretim makinesi, güvenlik standartlarına göre bileşik sertleşene kadar onun üzerinde aşırı hidrolik basınç sürdürür.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "The automated manufacturing machine maintains extreme hydraulic pressure over the compound until it ___ hard according to safety standards.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['The', 'automated', 'manufacturing', 'machine', 'maintains', 'extreme', 'hydraulic', 'pressure', 'over', 'the', 'compound', 'until', 'it', 'is', 'hard', 'according', 'to', 'safety', 'standards.']
+    en: "Construction crews cannot build the next floor until it is hard inasmuch as the structural concrete requires complete moisture stabilization.",
+    tr: "Yapısal beton tam nem stabilizasyonu gerektirdiğinden, inşaat ekipleri sertleşene kadar bir sonraki katı inşa edemezler.",
+    word: "require", trWord: "gerektirmek", correct: "requires",
+    blank: "Construction crews cannot build the next floor until it is hard inasmuch as the structural concrete ___ complete moisture stabilization.",
+    options: ['requires', 'require', 'requiring', 'required'],
+    blocks: ['Construction', 'crews', 'cannot', 'build', 'the', 'next', 'floor', 'until', 'it', 'is', 'hard', 'inasmuch', 'as', 'the', 'structural', 'concrete', 'requires', 'complete', 'moisture', 'stabilization.']
   },
   {
-    en: "Industrial chemical engineers must stir the synthetic rubber solution inside the tank until it is soft enough to pass through tubes.",
-    tr: "Endüstriyel kimya mühendisleri, tüplerden geçebilecek kadar yumuşayana kadar tankın içindeki sentetik kauçuk çözeltisini karıştırmalıdır.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "Industrial chemical engineers must stir the synthetic rubber solution inside the tank until it ___ soft enough to pass through tubes.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['Industrial', 'chemical', 'engineers', 'must', 'stir', 'the', 'synthetic', 'rubber', 'solution', 'inside', 'the', 'tank', 'until', 'it', 'is', 'soft', 'enough', 'to', 'pass', 'through', 'tubes.']
+    en: "The functions of government cannot be carried out properly until all the members are educated and experienced in legislative compliance matters.",
+    tr: "Tüm üyeler yasal uyum konularında eğitimli ve deneyimli olana kadar hükümetin işlevleri düzgün bir şekilde yürütülemez.",
+    word: "compliance", trWord: "uyum, uygunluk", correct: "compliance",
+    blank: "The functions of government cannot be carried out properly until all the members are educated and experienced in legislative ___ matters.",
+    options: ['compliance', 'comply', 'compliant', 'complying'],
+    blocks: ['The', 'functions', 'of', 'government', 'cannot', 'be', 'carried', 'out', 'properly', 'until', 'all', 'the', 'members', 'are', 'educated', 'and', 'experienced', 'in', 'legislative', 'compliance', 'matters.']
   },
   {
-    en: "Deployment automation pipelines will temporarily block all user authorization services until the central system framework is ready.",
-    tr: "Dağıtım otomasyon hatları, merkezi sistem çerçevesi hazır olana kadar tüm kullanıcı yetkilendirme hizmetlerini geçici olarak engelleyecektir.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "Deployment automation pipelines will temporarily block all user authorization services until the central system framework ___ ready.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['Deployment', 'automation', 'pipelines', 'will', 'temporarily', 'block', 'all', 'user', 'authorization', 'services', 'until', 'the', 'central', 'system', 'framework', 'is', 'ready.']
+    en: "No great advance in the study of anatomy was made until dissections were carried out systematically in the medieval universities.",
+    tr: "Ortaçağ üniversitelerinde kadavra kesimleri sistemli bir şekilde yapılana kadar anatomi çalışmalarında büyük bir ilerleme kaydedilmedi.",
+    word: "systematic", trWord: "sistemli bir şekilde", correct: "systematically",
+    blank: "No great advance in the study of anatomy was made until dissections were carried out ___ in the medieval universities.",
+    options: ['systematically', 'systematic', 'system', 'systematize'],
+    blocks: ['No', 'great', 'advance', 'in', 'the', 'study', 'of', 'anatomy', 'was', 'made', 'until', 'dissections', 'were', 'carried', 'out', 'systematically', 'in', 'the', 'medieval', 'universities.']
   },
   {
-    en: "The mobile operating system automatically prevents users from opening background tools until the update patch installation is finished.",
-    tr: "Mobil işletim sistemi, güncelleme yaması kurulumu bitene kadar kullanıcıların arka plan araçlarını açmasını otomatik olarak engeller.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "The mobile operating system automatically prevents users from opening background tools until the update patch installation ___ finished.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['The', 'mobile', 'operating', 'system', 'automatically', 'prevents', 'users', 'from', 'opening', 'background', 'tools', 'until', 'the', 'update', 'patch', 'installation', 'is', 'finished.']
+    en: "Protective antibodies are not produced naturally until the body is attacked by bacteria or exposed to diagnostic laboratory stimuli.",
+    tr: "Vücut bakterilerin saldırısına uğrayana veya tanısal laboratuvar uyarıcılarına maruz kalana kadar koruyucu antikorlar doğal olarak üretilmez.",
+    word: "expose", trWord: "maruz kalmak", correct: "exposed",
+    blank: "Protective antibodies are not produced naturally until the body is attacked by bacteria or ___ to diagnostic laboratory stimuli.",
+    options: ['exposed', 'expose', 'exposing', 'exposes'],
+    blocks: ['Protective', 'antibodies', 'are', 'not', 'produced', 'naturally', 'until', 'the', 'body', 'is', 'attacked', 'by', 'bacteria', 'or', 'exposed', 'to', 'diagnostic', 'laboratory', 'stimuli.']
   },
   {
-    en: "Digital extraction scripts continued downloading encrypted information from the old hard drive until the memory partition was empty.",
-    tr: "Dijital çıkarma betikleri, bellek bölümü boşalana kadar eski sabit sürücüden şifrelenmiş bilgileri indirmeye devam etti.",
-    word: "be", trWord: "olmak", correct: "was",
-    blank: "Digital extraction scripts continued downloading encrypted information from the old hard drive until the memory partition ___ empty.",
-    options: ['was', 'is', 'has', 'were'],
-    blocks: ['Digital', 'extraction', 'scripts', 'continued', 'downloading', 'encrypted', 'information', 'from', 'the', 'old', 'hard', 'drive', 'until', 'the', 'memory', 'partition', 'was', 'empty.']
+    en: "The establishment of schools was left to religious bodies or private groups until education became an integrated public service in Britain.",
+    tr: "Britanya'da eğitim bütünleşik bir kamu hizmeti haline gelene kadar okulların kurulması dini kurumlara veya özel gruplara bırakılmıştı.",
+    word: "integrate", trWord: "bütünleşik, entegre", correct: "integrated",
+    blank: "The establishment of schools was left to religious bodies or private groups until education became an ___ public service in Britain.",
+    options: ['integrated', 'integrate', 'integrating', 'integrates'],
+    blocks: ['The', 'establishment', 'of', 'schools', 'was', 'left', 'to', 'religious', 'bodies', 'or', 'private', 'groups', 'until', 'education', 'became', 'an', 'integrated', 'public', 'service', 'in', 'Britain.']
   },
   {
-    en: "The high-capacity industrial pump feeds fuel into the auxiliary generator reservoir until the storage engine tank is full.",
-    tr: "Yüksek kapasiteli endüstriyel pompa, depolama motoru tankı dolana kadar yedek jeneratör haznesine yakıt besler.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "The high-capacity industrial pump feeds fuel into the auxiliary generator reservoir until the storage engine tank ___ full.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['The', 'high-capacity', 'industrial', 'pump', 'feeds', 'fuel', 'into', 'the', 'auxiliary', 'generator', 'reservoir', 'until', 'the', 'storage', 'engine', 'tank', 'is', 'full.']
+    en: "No frontend developer can alter core configuration files until the system architect grants administrative verification clearance codes.",
+    tr: "Sistem mimarı idari doğrulama izni kodlarını verene kadar hiçbir ön yüz geliştiricisi temel yapılandırma dosyalarını değiştiremez.",
+    word: "verify", trWord: "doğrulama", correct: "verification",
+    blank: "No frontend developer can alter core configuration files until the system architect grants administrative ___ clearance codes.",
+    options: ['verification', 'verify', 'verifying', 'verified'],
+    blocks: ['No', 'frontend', 'developer', 'can', 'alter', 'core', 'configuration', 'files', 'until', 'the', 'system', 'architect', 'grants', 'administrative', 'verification', 'clearance', 'codes.']
   },
   {
-    en: "Network security firewalls will block all inbound data packets from unverified IP addresses until it is necessary to grant access.",
-    tr: "Ağ güvenliği güvenlik duvarları, erişim izni vermek gerekli olana kadar doğrulanmamış IP adreslerinden gelen tüm gelen veri paketlerini engelleyecektir.",
-    word: "be", trWord: "olmak", correct: "is",
-    blank: "Network security firewalls will block all inbound data packets from unverified IP addresses until it ___ necessary to grant access.",
-    options: ['is', 'was', 'will be', 'being'],
-    blocks: ['Network', 'security', 'firewalls', 'will', 'block', 'all', 'inbound', 'data', 'packets', 'from', 'unverified', 'IP', 'addresses', 'until', 'it', 'is', 'necessary', 'to', 'grant', 'access.']
+    en: "Unauthorized external client profiles will continue accessing sensitive log folders until the network firewall blocks incoming traffic floods.",
+    tr: "Ağ güvenlik duvarı gelen trafik akınlarını engelleyene kadar yetkisiz harici istemci profilleri hassas günlük klasörlerine erişmeye devam edecek.",
+    word: "come", trWord: "gelen", correct: "incoming",
+    blank: "Unauthorized external client profiles will continue accessing sensitive log folders until the network firewall blocks ___ traffic floods.",
+    options: ['incoming', 'income', 'incomes', 'inbound'],
+    blocks: ['Unauthorized', 'external', 'client', 'profiles', 'will', 'continue', 'accessing', 'sensitive', 'log', 'folders', 'until', 'the', 'network', 'firewall', 'blocks', 'incoming', 'traffic', 'floods.']
   },
   {
-    en: "Deep-space telescopes monitor the faint thermal radiation path emitted by the dying star cluster until it disappears behind thick cosmic dust.",
-    tr: "Derin uzay teleskopları, can çekişen yıldız kümesi kalın kozmik tozun arkasında gözden kaybolana kadar onun yaydığı zayıf termal radyasyon yolunu izler.",
-    word: "disappear", trWord: "gözden kaybolmak", correct: "disappears",
-    blank: "Deep-space telescopes monitor the faint thermal radiation path emitted by the dying star cluster until it ___ behind thick cosmic dust.",
-    options: ['disappears', 'disappear', 'disappearing', 'will disappear'],
-    blocks: ['Deep-space', 'telescopes', 'monitor', 'the', 'faint', 'thermal', 'radiation', 'path', 'emitted', 'by', 'the', 'dying', 'star', 'cluster', 'until', 'it', 'disappears', 'behind', 'thick', 'cosmic', 'dust.']
+    en: "The volatile liquid remains completely stable inside the vacuum chamber until the chemical solution reacts with the ambient gas molecules.",
+    tr: "Kimyasal çözelti ortamdaki gas molekülleriyle reaksiyona girene kadar uçucu sıvı vakum odası içinde tamamen kararlı kalır.",
+    word: "ambient", trWord: "ortam (çevreleyen)", correct: "ambient",
+    blank: "The volatile liquid remains completely stable inside the vacuum chamber until the chemical solution reacts with the ___ gas molecules.",
+    options: ['ambient', 'ambience', 'ambients', 'surrounding'],
+    blocks: ['The', 'volatile', 'liquid', 'remains', 'completely', 'stable', 'inside', 'the', 'vacuum', 'chamber', 'until', 'the', 'chemical', 'solution', 'reacts', 'with', 'the', 'ambient', 'gas', 'molecules.']
   },
   {
-    en: "The digital encryption system maintains the current cryptographic security token value until the user verification state changes.",
-    tr: "Dijital şifreleme sistemi, kullanıcı doğrulama durumu değişene kadar mevcut kriptografik güvenlik jetonu değerini korur.",
-    word: "change", trWord: "değişmek", correct: "changes",
-    blank: "The digital encryption system maintains the current cryptographic security token value until the user verification state ___.",
-    options: ['changes', 'change', 'changing', 'will change'],
-    blocks: ['The', 'digital', 'encryption', 'system', 'maintains', 'the', 'current', 'cryptographic', 'security', 'token', 'value', 'until', 'the', 'user', 'verification', 'state', 'changes.']
-  },
-  {
-    en: "Machine learning models require massive amounts of structured training data and computational power until the neural network develops high accuracy.",
-    tr: "Makine öğrenimi modelleri, yapay sinir ağı yüksek doğruluk geliştirene kadar muazzam miktarda yapılandırılmış eğitim verisi ve hesaplama gücü gerektirir.",
-    word: "develop", trWord: "gelişmek", correct: "develops",
-    blank: "Machine learning models require massive amounts of structured training data and computational power until the neural network ___ high accuracy.",
-    options: ['develops', 'develop', 'developing', 'will develop'],
-    blocks: ['Machine', 'learning', 'models', 'require', 'massive', 'amounts', 'of', 'structured', 'training', 'data', 'and', 'computational', 'power', 'until', 'the', 'neural', 'network', 'develops', 'high', 'accuracy.']
-  },
-  {
-    en: "The optimization algorithm will continue adjusting the background application performance metrics until the overall frame rate gets better.",
-    tr: "Optimizasyon algoritması, genel kare hızı iyileşene kadar arka plan uygulama performans ölçümlerini ayarlamaya devam edecektir.",
-    word: "get", trWord: "iyileşmek", correct: "gets",
-    blank: "The optimization algorithm will continue adjusting the background application performance metrics until the overall frame rate ___ better.",
-    options: ['gets', 'get', 'getting', 'will get'],
-    blocks: ['The', 'optimization', 'algorithm', 'will', 'continue', 'adjusting', 'the', 'background', 'application', 'performance', 'metrics', 'until', 'the', 'overall', 'frame', 'rate', 'gets', 'better.']
+    en: "The mobile development team will postpone deployment operations until the release coordinators receive store approval from the application platform.",
+    tr: "Mobil geliştirme ekibi, sürüm koordinatörleri uygulama platformundan mağaza onayını alana kadar yayına alma operasyonlarını erteleyecek.",
+    word: "deploy", trWord: "dağıtım, yayına alma", correct: "deployment",
+    blank: "The mobile development team will postpone deployment operations until the release coordinators receive store approval from the ___ platform.",
+    options: ['deployment', 'deploy', 'deploying', 'deployed'],
+    blocks: ['The', 'mobile', 'development', 'team', 'will', 'postpone', 'deployment', 'operations', 'until', 'the', 'release', 'coordinators', 'receive', 'store', 'approval', 'from', 'the', 'application', 'platform.']
   }
 ];
+
+
 
 const unit24Lesson1GroupAPurRaw = [
   { en: "Until when was it held?", tr: "O ne zamana kadar tutuldu?", word: "was", trWord: "olmak", correct: "was", blank: "Until when ___ it held?", options: ['was', 'is', 'did', 'been'], blocks: ['Until', 'when', 'was', 'it', 'held?'] },
@@ -14007,15 +13993,30 @@ const rawTopics = [
   },
   {
     id: 103,
-    title: "Alışkanlık Durumu: Be used to / Be accustomed to",
-    desc: "Alışkanlık Bildiren Yapılar",
+    title: "Öbeksel Kipler (Phrasal Modals)",
+    desc: "15 Farklı Öbeksel Kip İle Alıştırmalar",
     icon: "🎯",
-    numLessons: 1,
+    numLessons: 16,
     formulas: [
-      { formula: "Subject + be used to + Noun / V-ing", example: "The senior developer <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> processing large data streams: Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.", description: "Alışkanlık durumu bildiren bu kalıplar, arkalarından kesinlikle yalın fiil almazlar; eylemler mutlaka -ing takısıyla isimleştirilerek (Gerund) bağlanır." }
+      { formula: "Subject + Phrasal Modal + Verb", example: "The system administrator is accustomed to monitoring real-time network traffic: Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.", description: "Öbeksel kipler (phrasal modals), anlam ve yapı olarak modal gibi davranan fakat yardımcı fiiller barındıran kalıplardır. Bazı yapılar arkasından V-ing alırken, bazıları yalın fiil (V1) gerektirir." }
     ],
     subtitles: [
-      "be used to (Alışkın olmak)"
+      "be used to (-e alışkın olmak)",
+      "be accustomed to (-e alışkın olmak)",
+      "be willing to (... yapmaya istekli/gönüllü olmak)",
+      "be unwilling to (... yapmaya isteksiz olmak)",
+      "be reluctant to (... yapmaya gönülsüz olmak)",
+      "be likely to (... yapması muhtemel olmak)",
+      "be unlikely to (... yapması muhtemel olmamak)",
+      "be bound to (... yapması kaçınılmaz/kesin olmak)",
+      "be certain to (... yapacağı kesin olmak)",
+      "be doomed to (kötü bir sona mahkum olmak)",
+      "be to (-mesi planlanmak / -mek zorundadır)",
+      "be supposed to (... yapması gerekir/beklenir)",
+      "be unable to (-i yapamamak / yetersizlik)",
+      "be about to (-mek üzere olmak)",
+      "be certain to (kesinlikle ... yapacak olmak)",
+      "Karma Test"
     ]
   }
 ];
@@ -15641,9 +15642,9 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, heavy rain is ___ the simulation site.",
             "options": [
               "affecting",
+              "affected",
               "affect",
-              "affects",
-              "affected"
+              "affects"
             ],
             "correctIndex": 0,
             "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
@@ -15655,11 +15656,11 @@ const unitSentencesMap = {
             "sentence": "___, heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">is affecting</span> the simulation site.",
             "options": [
               "In 2012",
+              "Yesterday",
               "At the moment",
-              "Since 2020",
-              "Yesterday"
+              "Since 2020"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -15668,12 +15669,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Right now</span>, the central server is ___ user credentials.",
             "options": [
-              "validating",
-              "validated",
+              "validates",
               "validate",
-              "validates"
+              "validated",
+              "validating"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
           },
           {
@@ -15682,10 +15683,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">is validating</span> user credentials.",
             "options": [
-              "Yesterday",
+              "Last week",
               "Right now",
-              "Since 2020",
-              "Last week"
+              "Yesterday",
+              "Since 2020"
             ],
             "correctIndex": 1,
             "translation": "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor."
@@ -15697,9 +15698,9 @@ const unitSentencesMap = {
             "sentence": "The academic team is <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ the new device.",
             "options": [
               "testing",
-              "tested",
+              "tests",
               "test",
-              "tests"
+              "tested"
             ],
             "correctIndex": 0,
             "translation": "Şu anda derleyici veri bloklarını işliyor."
@@ -15710,12 +15711,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The academic team is ___ <span style=\"color: #ff6b6b; font-weight: bold;\">testing</span> the new device.",
             "options": [
-              "yet",
-              "since 2020",
+              "currently",
               "yesterday",
-              "currently"
+              "yet",
+              "since 2020"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor."
           },
           {
@@ -15724,8 +15725,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The research facility <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ additional financial resources.",
             "options": [
-              "will require",
               "required",
+              "will require",
               "requires",
               "requiring"
             ],
@@ -15738,12 +15739,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The research facility ___ <span style=\"color: #ff6b6b; font-weight: bold;\">requires</span> additional financial resources.",
             "options": [
-              "currently",
               "since",
+              "currently",
               "yet",
               "yesterday"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
           },
           {
@@ -15752,12 +15753,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the compiler is ___ the data blocks.",
             "options": [
+              "processing",
               "processes",
               "process",
-              "processed",
-              "processing"
+              "processed"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -15766,12 +15767,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the ___ is processing the data blocks.",
             "options": [
-              "compile",
-              "compiled",
+              "compiler",
               "compilation",
-              "compiler"
+              "compile",
+              "compiled"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
           }
         ]
@@ -15788,11 +15789,11 @@ const unitSentencesMap = {
             "sentence": "The system is <span style=\"color: #ff6b6b; font-weight: bold;\">presently</span> ___ a unique cryptographic key.",
             "options": [
               "generate",
-              "generating",
+              "generated",
               "generates",
-              "generated"
+              "generating"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor."
           },
           {
@@ -15815,12 +15816,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At present</span>, the automatic system is ___ pressure parameters.",
             "options": [
-              "monitors",
-              "monitoring",
               "monitor",
-              "monitored"
+              "monitors",
+              "monitored",
+              "monitoring"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
           },
           {
@@ -15829,12 +15830,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, the automatic system <span style=\"color: #ff6b6b; font-weight: bold;\">is monitoring</span> pressure parameters.",
             "options": [
-              "At present",
-              "Yesterday",
               "Since 2020",
-              "In 2012"
+              "In 2012",
+              "At present",
+              "Yesterday"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -15843,12 +15844,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, public laboratories are ___ their security protocols.",
             "options": [
-              "adjusts",
-              "adjusting",
               "adjusted",
-              "adjust"
+              "adjusts",
+              "adjust",
+              "adjusting"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
           },
           {
@@ -15857,12 +15858,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, public laboratories <span style=\"color: #ff6b6b; font-weight: bold;\">are adjusting</span> their security protocols.",
             "options": [
-              "Yesterday",
-              "Since 2020",
+              "These days",
               "Next year",
-              "These days"
+              "Yesterday",
+              "Since 2020"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
           },
           {
@@ -15871,12 +15872,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions are ___ their internal laws.",
             "options": [
-              "altering",
-              "altered",
               "alter",
-              "alters"
+              "altered",
+              "alters",
+              "altering"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -15885,12 +15886,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions ___ altering their internal laws.",
             "options": [
-              "are",
               "will be",
               "have been",
-              "were"
+              "were",
+              "are"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
           },
           {
@@ -15900,9 +15901,9 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Nowadays</span>, software developers ___ gamified mobile design patterns.",
             "options": [
               "prefer",
+              "prefers",
               "preferred",
-              "preferring",
-              "prefers"
+              "preferring"
             ],
             "correctIndex": 0,
             "translation": "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor."
@@ -15914,11 +15915,11 @@ const unitSentencesMap = {
             "sentence": "___, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">prefer</span> gamified mobile design patterns.",
             "options": [
               "Last year",
-              "Nowadays",
               "Since 2020",
-              "Yesterday"
+              "Yesterday",
+              "Nowadays"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Şu anda derleyici veri bloklarını işliyor."
           }
         ]
@@ -15934,12 +15935,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The international research facility <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ additional financial resources to optimize its secondary structural frameworks.",
             "options": [
-              "requiring",
               "will require",
-              "requires",
-              "required"
+              "requiring",
+              "required",
+              "requires"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor."
           },
           {
@@ -15948,12 +15949,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the compiler is ___ the data blocks while the network firewall blocks external traffic.",
             "options": [
-              "processes",
-              "process",
+              "processing",
               "processed",
-              "processing"
+              "process",
+              "processes"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor."
           },
           {
@@ -15962,12 +15963,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, public laboratories are ___ their security protocols because malicious malware attacks threaten sensitive files.",
             "options": [
-              "adjusting",
               "adjusted",
+              "adjusts",
               "adjust",
-              "adjusts"
+              "adjusting"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor."
           },
           {
@@ -15976,12 +15977,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system is <span style=\"color: #ff6b6b; font-weight: bold;\">presently</span> ___ a unique cryptographic key as soon as the administrator grants verification clearance.",
             "options": [
-              "generates",
               "generating",
+              "generated",
               "generate",
-              "generated"
+              "generates"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor."
           },
           {
@@ -15990,12 +15991,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Nowadays</span>, software developers ___ gamified mobile design patterns in order that students might learn complex grammar easily.",
             "options": [
-              "prefers",
               "preferring",
               "preferred",
-              "prefer"
+              "prefer",
+              "prefers"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Günümüzde yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
           },
           {
@@ -16066,12 +16067,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Right now</span>, the central server is ___ user credentials on grounds that previous login requests were corrupted.",
             "options": [
-              "validated",
-              "validating",
               "validate",
-              "validates"
+              "validates",
+              "validated",
+              "validating"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -16080,12 +16081,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At present</span>, the automatic system is ___ pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
             "options": [
-              "monitors",
               "monitoring",
               "monitored",
-              "monitor"
+              "monitor",
+              "monitors"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor."
           },
           {
@@ -16094,12 +16095,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions are ___ their internal laws inasmuch as regional environmental regulations have become stricter.",
             "options": [
-              "alters",
-              "altering",
               "altered",
-              "alter"
+              "alter",
+              "altering",
+              "alters"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -16109,8 +16110,8 @@ const unitSentencesMap = {
             "sentence": "The academic team is <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ the new device just as the original mathematical physics formulas predicted.",
             "options": [
               "testing",
-              "test",
               "tested",
+              "test",
               "tests"
             ],
             "correctIndex": 0,
@@ -16123,8 +16124,8 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, heavy rain is ___ the simulation site; therefore, field operations are temporarily suspended.",
             "options": [
               "affects",
-              "affect",
               "affected",
+              "affect",
               "affecting"
             ],
             "correctIndex": 3,
@@ -16202,10 +16203,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "A heavy rain ___ the simulation site <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
             "options": [
-              "affect",
+              "affects",
               "affecting",
               "affected",
-              "affects"
+              "affect"
             ],
             "correctIndex": 2,
             "translation": "Dün şiddetli bir yağmur simülasyon alanını etkiledi."
@@ -16217,8 +16218,8 @@ const unitSentencesMap = {
             "sentence": "A heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">affected</span> the simulation site ___ .",
             "options": [
               "yesterday",
-              "yet",
               "currently",
+              "yet",
               "since"
             ],
             "correctIndex": 0,
@@ -16244,12 +16245,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> all user credentials.",
             "options": [
+              "Lately",
               "Right now",
               "Since 2020",
-              "Yesterday",
-              "Lately"
+              "Yesterday"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
           },
           {
@@ -16258,12 +16259,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span>.",
             "options": [
-              "completing",
               "completes",
-              "completed",
-              "complete"
+              "complete",
+              "completing",
+              "completed"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
           },
           {
@@ -16272,12 +16273,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The academic team <span style=\"color: #ff6b6b; font-weight: bold;\">completed</span> the new device test ___ 2020.",
             "options": [
-              "on",
               "in",
-              "since",
-              "at"
+              "at",
+              "on",
+              "since"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16286,12 +16287,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
             "options": [
-              "upgraded",
-              "upgrades",
               "will upgrade",
-              "upgrading"
+              "upgrading",
+              "upgrades",
+              "upgraded"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Otomatik sistem üç saat önce basınç parametrelerini izledi."
           },
           {
@@ -16300,12 +16301,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The research facility successfully <span style=\"color: #ff6b6b; font-weight: bold;\">upgraded</span> the database ___ .",
             "options": [
-              "since then",
-              "yet",
+              "now",
               "yesterday",
-              "now"
+              "since then",
+              "yet"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16314,12 +16315,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Two years ago</span>, the compiler ___ the data blocks without errors.",
             "options": [
-              "processes",
-              "processed",
               "processing",
-              "process"
+              "processes",
+              "process",
+              "processed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16328,12 +16329,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Two years ___, the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">processed</span> the data blocks without errors.",
             "options": [
-              "lately",
-              "ago",
+              "now",
               "since",
-              "now"
+              "lately",
+              "ago"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti."
           }
         ]
@@ -16349,12 +16350,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The system ___ a unique cryptographic key <span style=\"color: #ff6b6b; font-weight: bold;\">last week</span>.",
             "options": [
-              "generated",
               "generates",
+              "generate",
               "generating",
-              "generate"
+              "generated"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16363,12 +16364,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system <span style=\"color: #ff6b6b; font-weight: bold;\">generated</span> a unique cryptographic key ___ week.",
             "options": [
+              "this",
               "last",
               "next",
-              "this",
               "ago"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Otomatik sistem üç saat önce basınç parametrelerini izledi."
           },
           {
@@ -16379,8 +16380,8 @@ const unitSentencesMap = {
             "options": [
               "monitored",
               "monitor",
-              "monitoring",
-              "monitors"
+              "monitors",
+              "monitoring"
             ],
             "correctIndex": 0,
             "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
@@ -16391,9 +16392,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The automatic system <span style=\"color: #ff6b6b; font-weight: bold;\">monitored</span> pressure parameters three hours ___ .",
             "options": [
-              "since",
               "before",
               "lately",
+              "since",
               "ago"
             ],
             "correctIndex": 3,
@@ -16406,11 +16407,11 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last month</span>, public laboratories ___ their security protocols.",
             "options": [
               "adjusts",
+              "adjusted",
               "adjusting",
-              "adjust",
-              "adjusted"
+              "adjust"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti."
           },
           {
@@ -16419,12 +16420,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ month, public laboratories <span style=\"color: #ff6b6b; font-weight: bold;\">adjusted</span> their security protocols.",
             "options": [
+              "Last",
               "Since",
-              "This",
               "Next",
-              "Last"
+              "This"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Dün şiddetli bir yağmur simülasyon alanını etkiledi."
           },
           {
@@ -16434,11 +16435,11 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ their internal laws.",
             "options": [
               "alters",
-              "alter",
+              "altered",
               "altering",
-              "altered"
+              "alter"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı."
           },
           {
@@ -16447,12 +16448,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ altering their internal laws.",
             "options": [
-              "completed",
+              "have been",
               "were",
               "are",
-              "have been"
+              "completed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Akademik ekip yeni cihaz testini 2020'de tamamladı."
           },
           {
@@ -16461,12 +16462,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">In 2012</span>, software developers ___ traditional mobile design patterns.",
             "options": [
-              "prefer",
-              "preferred",
+              "prefers",
               "preferring",
-              "prefers"
+              "preferred",
+              "prefer"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
           },
           {
@@ -16475,10 +16476,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ 2012, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">preferred</span> traditional mobile design patterns.",
             "options": [
-              "At",
+              "Since",
               "In",
-              "On",
-              "Since"
+              "At",
+              "On"
             ],
             "correctIndex": 1,
             "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
@@ -16496,8 +16497,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The international research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span> to optimize its secondary structural frameworks.",
             "options": [
-              "upgrades",
               "upgrade",
+              "upgrades",
               "upgrading",
               "upgraded"
             ],
@@ -16512,10 +16513,10 @@ const unitSentencesMap = {
             "options": [
               "processes",
               "process",
-              "processed",
-              "processing"
+              "processing",
+              "processed"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
           },
           {
@@ -16524,12 +16525,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last month</span>, public laboratories ___ their security protocols because malicious malware attacks threatened sensitive files.",
             "options": [
-              "adjusted",
-              "adjusting",
               "adjust",
-              "adjusts"
+              "adjusts",
+              "adjusting",
+              "adjusted"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Geçen ay, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16538,12 +16539,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system ___ a unique cryptographic key as soon as the administrator granted verification clearance <span style=\"color: #ff6b6b; font-weight: bold;\">last week</span>.",
             "options": [
-              "generates",
               "generated",
-              "generate",
-              "generating"
+              "generates",
+              "generating",
+              "generate"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Sistem, yönetici geçen hafta doğrulama izni verir vermez benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16552,12 +16553,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">In 2012</span>, software developers ___ traditional mobile design patterns in order that students might learn basic grammar easily.",
             "options": [
-              "prefers",
               "preferred",
               "preferring",
+              "prefers",
               "prefer"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti."
           },
           {
@@ -16628,12 +16629,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, the central server ___ all user credentials on grounds that previous login requests were corrupted.",
             "options": [
-              "validate",
-              "validating",
+              "validates",
               "validated",
-              "validates"
+              "validating",
+              "validate"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı."
           },
           {
@@ -16642,12 +16643,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The automatic system ___ pressure parameters <span style=\"color: #ff6b6b; font-weight: bold;\">three hours ago</span> lest the industrial mechanical piston should fail unexpectedly.",
             "options": [
-              "monitored",
-              "monitoring",
+              "monitors",
               "monitor",
-              "monitors"
+              "monitoring",
+              "monitored"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi."
           },
           {
@@ -16656,10 +16657,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ their internal laws inasmuch as regional environmental regulations became stricter.",
             "options": [
-              "alter",
+              "alters",
               "altered",
               "altering",
-              "alters"
+              "alter"
             ],
             "correctIndex": 1,
             "translation": "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
@@ -16670,12 +16671,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span> just as the original mathematical physics formulas predicted.",
             "options": [
+              "complete",
               "completing",
-              "completed",
               "completes",
-              "complete"
+              "completed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı."
           },
           {
@@ -16684,12 +16685,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, a heavy rain ___ the simulation site; therefore, field operations were temporarily suspended.",
             "options": [
-              "affecting",
               "affected",
+              "affecting",
               "affected",
               "affects"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
           },
           {
@@ -16764,12 +16765,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, heavy rain ___ the simulation site.",
             "options": [
-              "affecting",
-              "affects",
+              "has affected",
               "affected",
-              "has affected"
+              "affecting",
+              "affects"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
           },
           {
@@ -16778,12 +16779,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ now, heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">has affected</span> the simulation site.",
             "options": [
-              "At",
               "Up to",
               "Since",
-              "By"
+              "By",
+              "At"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı."
           },
           {
@@ -16792,12 +16793,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The central server ___ user credentials.",
             "options": [
-              "just validated",
-              "has just validated",
               "validates",
-              "validating"
+              "validating",
+              "just validated",
+              "has just validated"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "2020'den beri akademik ekip yeni cihazı test etti."
           },
           {
@@ -16806,12 +16807,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The central server <span style=\"color: #ff6b6b; font-weight: bold;\">has</span> ___ <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> the user credentials.",
             "options": [
-              "just",
               "ago",
+              "currently",
               "yet",
-              "currently"
+              "just"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
           },
           {
@@ -16820,12 +16821,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> 2020, the academic team ___ the new device.",
             "options": [
-              "tests",
-              "testing",
+              "has tested",
               "tested",
-              "has tested"
+              "testing",
+              "tests"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
           },
           {
@@ -16836,8 +16837,8 @@ const unitSentencesMap = {
             "options": [
               "Since",
               "For",
-              "In",
-              "Lately"
+              "Lately",
+              "In"
             ],
             "correctIndex": 0,
             "translation": "Sistem zaten benzersiz bir kriptografik anahtar üretti."
@@ -16848,12 +16849,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The research facility ___ required additional financial resources.",
             "options": [
-              "recently",
               "currently",
-              "has recently",
-              "yesterday"
+              "yesterday",
+              "recently",
+              "has recently"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Ekip projeye başladığından beri otomatik sistem basınç parametrelerini izledi."
           },
           {
@@ -16862,12 +16863,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The research facility has <span style=\"color: #ff6b6b; font-weight: bold;\">recently</span> ___ additional financial resources.",
             "options": [
+              "will require",
               "required",
               "requiring",
-              "requires",
-              "will require"
+              "requires"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16876,12 +16877,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler ___ all the data blocks.",
             "options": [
-              "processes",
-              "processed",
               "has processed",
-              "processing"
+              "processing",
+              "processes",
+              "processed"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16890,10 +16891,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler has ___ all the data blocks.",
             "options": [
-              "processes",
-              "processed",
               "process",
-              "processing"
+              "processed",
+              "processing",
+              "processes"
             ],
             "correctIndex": 1,
             "translation": "Şu ana kadar yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih etti."
@@ -16911,12 +16912,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The system ___ <span style=\"color: #ff6b6b; font-weight: bold;\">already</span> generated a unique cryptographic key.",
             "options": [
-              "has",
-              "have",
               "had",
-              "is"
+              "have",
+              "is",
+              "has"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Sistem zaten benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16925,12 +16926,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system <span style=\"color: #ff6b6b; font-weight: bold;\">has</span> ___ <span style=\"color: #ff6b6b; font-weight: bold;\">generated</span> a unique cryptographic key.",
             "options": [
-              "already",
-              "yet",
               "currently",
-              "ago"
+              "ago",
+              "yet",
+              "already"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Ekip projeye başladığından beri otomatik sistem basınç parametrelerini izledi."
           },
           {
@@ -16939,12 +16940,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the team started the project, the automatic system ___ pressure parameters.",
             "options": [
-              "monitoring",
-              "monitored",
               "has monitored",
+              "monitored",
+              "monitoring",
               "monitors"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16953,12 +16954,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the team ___ the project, the automatic system has monitored pressure parameters.",
             "options": [
-              "starting",
-              "started",
               "has started",
-              "starts"
+              "starts",
+              "started",
+              "starting"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16967,12 +16968,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories ___ adjusted their security protocols.",
             "options": [
-              "have",
+              "are",
               "has",
               "had",
-              "are"
+              "have"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu ana kadar yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih etti."
           },
           {
@@ -16981,12 +16982,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories ___ their security protocols.",
             "options": [
-              "adjusting",
-              "adjusts",
               "have adjusted",
-              "adjusted"
+              "adjusts",
+              "adjusted",
+              "adjusting"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
           },
           {
@@ -16995,12 +16996,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions ___ altered their internal laws.",
             "options": [
-              "had",
-              "has",
               "have",
+              "has",
+              "had",
               "are"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı."
           },
           {
@@ -17009,12 +17010,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions ___ their internal laws.",
             "options": [
-              "have altered",
               "altered",
+              "alters",
               "altering",
-              "alters"
+              "have altered"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "2020'den beri akademik ekip yeni cihazı test etti."
           },
           {
@@ -17024,8 +17025,8 @@ const unitSentencesMap = {
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">So far</span>, software developers ___ gamified mobile design patterns.",
             "options": [
               "have preferred",
-              "prefers",
               "preferred",
+              "prefers",
               "preferring"
             ],
             "correctIndex": 0,
@@ -17037,12 +17038,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ far, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">have preferred</span> gamified mobile design patterns.",
             "options": [
-              "Too",
+              "So",
               "As",
-              "By",
-              "So"
+              "Too",
+              "By"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
           }
         ]
@@ -17058,12 +17059,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The international research facility ___ additional financial resources to optimize its secondary structural frameworks.",
             "options": [
-              "has recently required",
               "requires",
-              "requiring",
-              "required"
+              "required",
+              "has recently required",
+              "requiring"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
           },
           {
@@ -17072,12 +17073,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler has processed the data blocks while the network firewall ___ external traffic.",
             "options": [
-              "blocks",
               "has blocked",
-              "will block",
-              "blocking"
+              "blocks",
+              "blocking",
+              "will block"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
           },
           {
@@ -17086,12 +17087,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories have adjusted their security protocols because malicious malware attacks ___ sensitive files.",
             "options": [
-              "threatens",
               "threatening",
               "threaten",
-              "have threatened"
+              "have threatened",
+              "threatens"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -17100,10 +17101,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system has already generated a unique cryptographic key <span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the administrator ___ verification clearance.",
             "options": [
-              "grants",
               "granting",
+              "will grant",
               "granted",
-              "will grant"
+              "grants"
             ],
             "correctIndex": 2,
             "translation": "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti."
@@ -17114,12 +17115,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">So far</span>, software developers have preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
             "options": [
-              "will",
               "may",
               "might",
+              "will",
               "can"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Şu ana kadar yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih etti."
           },
           {
@@ -17190,12 +17191,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The central server has just validated user credentials on grounds that previous login requests ___ corrupted.",
             "options": [
-              "were",
               "have been",
               "will be",
-              "are"
+              "are",
+              "were"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı."
           },
           {
@@ -17204,12 +17205,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the experiment began, the automatic system has monitored pressure parameters lest the industrial mechanical piston ___ fail unexpectedly.",
             "options": [
-              "should",
               "shall",
+              "will",
               "would",
-              "will"
+              "should"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi."
           },
           {
@@ -17218,12 +17219,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions have altered their internal laws inasmuch as regional environmental regulations ___ become stricter.",
             "options": [
-              "have",
               "has",
+              "have",
               "had",
               "are"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
           },
           {
@@ -17232,12 +17233,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> 2020, the academic team has tested the new device just as the original mathematical physics formulas ___ .",
             "options": [
+              "will predict",
               "predicted",
               "predicting",
-              "predicts",
-              "will predict"
+              "predicts"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "2020'den beri akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihazı test etti."
           },
           {
@@ -17246,12 +17247,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, heavy rain has affected the simulation site; therefore, field operations ___ temporarily suspended.",
             "options": [
-              "have been",
-              "were",
               "are",
-              "will be"
+              "will be",
+              "were",
+              "have been"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
           },
           {
@@ -17343,11 +17344,11 @@ const unitSentencesMap = {
             "sentence": "The company <span style=\"color: #51cf66; font-weight: bold;\">has expanded</span> ___ the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
             "options": [
               "while",
+              "when",
               "for",
-              "since",
-              "when"
+              "since"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler."
           },
           {
@@ -17356,12 +17357,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Plants ___ significantly since they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
             "options": [
-              "grow",
-              "have grown",
+              "are growing",
               "grew",
-              "are growing"
+              "have grown",
+              "grow"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler."
           },
           {
@@ -17371,11 +17372,11 @@ const unitSentencesMap = {
             "sentence": "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
             "options": [
               "during",
+              "since",
               "until",
-              "before",
-              "since"
+              "before"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17384,12 +17385,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Children ___ grammar since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
             "options": [
-              "have learned",
+              "learn",
               "are learning",
               "learned",
-              "learn"
+              "have learned"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Tasarım yapıldığından beri düzen değişmedi."
           },
           {
@@ -17400,8 +17401,8 @@ const unitSentencesMap = {
             "options": [
               "since",
               "for",
-              "when",
-              "as"
+              "as",
+              "when"
             ],
             "correctIndex": 0,
             "translation": "Ekipman kurulduğundan beri işler kolaylaştı."
@@ -17413,8 +17414,8 @@ const unitSentencesMap = {
             "sentence": "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
             "options": [
               "has not held",
-              "is not holding",
               "did not hold",
+              "is not holding",
               "does not hold"
             ],
             "correctIndex": 0,
@@ -17426,12 +17427,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The board <span style=\"color: #51cf66; font-weight: bold;\">has not held</span> meetings ___ the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
             "options": [
+              "since",
               "although",
               "until",
-              "while",
-              "since"
+              "while"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Teknoloji firması açıldığından beri otomasyon arttı."
           },
           {
@@ -17440,12 +17441,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The layout ___ since it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
             "options": [
-              "did not change",
-              "has not changed",
               "is not changing",
-              "does not change"
+              "does not change",
+              "did not change",
+              "has not changed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Kış başladığından beri sıcaklıklar dalgalandı."
           },
           {
@@ -17454,12 +17455,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> ___ it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
             "options": [
-              "for",
-              "since",
               "because",
-              "when"
+              "when",
+              "for",
+              "since"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
           }
         ]
@@ -17477,8 +17478,8 @@ const unitSentencesMap = {
             "options": [
               "was installed",
               "is installed",
-              "installs",
-              "has installed"
+              "has installed",
+              "installs"
             ],
             "correctIndex": 0,
             "translation": "Ekipman kurulduğundan beri işler kolaylaştı."
@@ -17489,12 +17490,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Work ___ since equipment <span style=\"color: #ff6b6b; font-weight: bold;\">was installed</span>.",
             "options": [
+              "has been facilitated",
               "was facilitated",
-              "is facilitated",
               "facilitates",
-              "has been facilitated"
+              "is facilitated"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı."
           },
           {
@@ -17503,12 +17504,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Users <span style=\"color: #51cf66; font-weight: bold;\">have experienced</span> errors since the server ___ .",
             "options": [
-              "has crashed",
               "crashed",
+              "has crashed",
               "is crashing",
               "crashes"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Teknoloji firması açıldığından beri otomasyon arttı."
           },
           {
@@ -17532,9 +17533,9 @@ const unitSentencesMap = {
             "sentence": "Automation <span style=\"color: #51cf66; font-weight: bold;\">has increased</span> since the tech firm ___ .",
             "options": [
               "opened",
-              "opens",
+              "is opening",
               "has opened",
-              "is opening"
+              "opens"
             ],
             "correctIndex": 0,
             "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
@@ -17545,12 +17546,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Automation ___ since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>.",
             "options": [
-              "has increased",
+              "increased",
               "is increasing",
-              "increases",
-              "increased"
+              "has increased",
+              "increases"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Yeni yasa kabul edildiğinden beri şirket büyüdü."
           },
           {
@@ -17559,12 +17560,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ .",
             "options": [
+              "began",
               "begins",
               "has begun",
-              "is beginning",
-              "began"
+              "is beginning"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler."
           },
           {
@@ -17573,12 +17574,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Temperatures ___ since winter <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.",
             "options": [
-              "are fluctuating",
-              "fluctuate",
+              "have fluctuated",
               "fluctuated",
-              "have fluctuated"
+              "fluctuate",
+              "are fluctuating"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler."
           },
           {
@@ -17587,12 +17588,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Profits <span style=\"color: #51cf66; font-weight: bold;\">have dropped</span> since the financial market ___ .",
             "options": [
-              "declined",
-              "has declined",
+              "is declining",
               "declines",
-              "is declining"
+              "has declined",
+              "declined"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17601,12 +17602,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Profits ___ since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span>.",
             "options": [
-              "drop",
               "have dropped",
-              "are dropping",
-              "dropped"
+              "dropped",
+              "drop",
+              "are dropping"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Tasarım yapıldığından beri düzen değişmedi."
           }
         ]
@@ -17623,9 +17624,9 @@ const unitSentencesMap = {
             "sentence": "The company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
             "options": [
               "has expanded",
-              "is expanding",
               "expanded",
-              "expands"
+              "expands",
+              "is expanding"
             ],
             "correctIndex": 0,
             "translation": "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti."
@@ -17636,12 +17637,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly since they ___ in the highly controlled laboratory greenhouse environment.",
             "options": [
-              "plant",
-              "have been planted",
+              "were planted",
               "are planted",
-              "were planted"
+              "have been planted",
+              "plant"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bitkiler, son derece kontrollü laboratuvar sera ortamına dikildiklerinden beri önemli ölçüde büyüdüler."
           },
           {
@@ -17666,10 +17667,10 @@ const unitSentencesMap = {
             "options": [
               "does not hold",
               "did not hold",
-              "has not held",
-              "is not holding"
+              "is not holding",
+              "has not held"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17678,12 +17679,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> since it ___ although several frontend developers requested visual interface updates.",
             "options": [
-              "was designed",
-              "is designed",
+              "designs",
               "has designed",
-              "designs"
+              "is designed",
+              "was designed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi."
           },
           {
@@ -17754,12 +17755,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> greatly since electronic equipment ___ by the technical infrastructure branch.",
             "options": [
-              "installs",
               "was installed",
               "is installed",
+              "installs",
               "has installed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı."
           },
           {
@@ -17768,12 +17769,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, causing temporary suspension of data token generations.",
             "options": [
-              "are experiencing",
               "have experienced",
               "experienced",
-              "experience"
+              "experience",
+              "are experiencing"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı."
           },
           {
@@ -17783,11 +17784,11 @@ const unitSentencesMap = {
             "sentence": "Automation ___ rapidly since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>, reducing corporate expenditure on manual operations.",
             "options": [
               "is increasing",
-              "has increased",
+              "increases",
               "increased",
-              "increases"
+              "has increased"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı."
           },
           {
@@ -17796,12 +17797,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
             "options": [
-              "is beginning",
               "has begun",
+              "began",
               "begins",
-              "began"
+              "is beginning"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi."
           },
           {
@@ -17810,10 +17811,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Profits ___ dropped since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span> due to unexpected international trade restrictions.",
             "options": [
-              "are",
               "had",
+              "has",
               "have",
-              "has"
+              "are"
             ],
             "correctIndex": 2,
             "translation": "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü."
@@ -17890,12 +17891,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ .",
             "options": [
+              "left",
               "have left",
               "had left",
-              "will have left",
-              "left"
+              "will have left"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Biz vardığımızda çoğu insan ayrılmıştı."
           },
           {
@@ -17904,12 +17905,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time we ___ home, children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed.",
             "options": [
-              "had arrived",
               "arrive",
+              "arrived",
               "will arrive",
-              "arrived"
+              "had arrived"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
           },
           {
@@ -17919,11 +17920,11 @@ const unitSentencesMap = {
             "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ .",
             "options": [
               "has spread",
-              "spreads",
+              "had spread",
               "will have spread",
-              "had spread"
+              "spreads"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
           },
           {
@@ -17932,12 +17933,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the compiler ___ , the server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> it.",
             "options": [
-              "had finished",
               "will finish",
-              "finished",
-              "finishes"
+              "finishes",
+              "had finished",
+              "finished"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak."
           },
           {
@@ -17947,11 +17948,11 @@ const unitSentencesMap = {
             "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ .",
             "options": [
               "has collapsed",
-              "collapses",
+              "had collapsed",
               "will have collapsed",
-              "had collapsed"
+              "collapses"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Fırtına dindiğinde köprü çökmüştü."
           },
           {
@@ -17960,12 +17961,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the law ___ , firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
             "options": [
-              "will take effect",
+              "takes effect",
               "took effect",
               "had taken effect",
-              "takes effect"
+              "will take effect"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar."
           },
           {
@@ -17976,8 +17977,8 @@ const unitSentencesMap = {
             "options": [
               "had ended",
               "will have ended",
-              "has ended",
-              "ends"
+              "ends",
+              "has ended"
             ],
             "correctIndex": 0,
             "translation": "Fonları aldıklarında proje sona ermişti."
@@ -17989,8 +17990,8 @@ const unitSentencesMap = {
             "sentence": "By the time you ___ the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
             "options": [
               "open",
-              "had opened",
               "opened",
+              "had opened",
               "will open"
             ],
             "correctIndex": 0,
@@ -18002,12 +18003,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew ___ .",
             "options": [
+              "will have left",
               "leaves",
-              "had left",
               "have left",
-              "will have left"
+              "had left"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
           },
           {
@@ -18016,12 +18017,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the app ___ , the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
             "options": [
-              "launched",
+              "will launch",
               "had launched",
-              "launches",
-              "will launch"
+              "launched",
+              "launches"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
           }
         ]
@@ -18037,9 +18038,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "___ the law <span style=\"color: #339af0; font-weight: bold;\">takes effect</span>, firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
             "options": [
-              "While",
               "Since",
               "Although",
+              "While",
               "By the time"
             ],
             "correctIndex": 3,
@@ -18053,8 +18054,8 @@ const unitSentencesMap = {
             "options": [
               "By the time",
               "Since",
-              "While",
-              "Lest"
+              "Lest",
+              "While"
             ],
             "correctIndex": 0,
             "translation": "Fonları aldıklarında proje sona ermişti."
@@ -18065,12 +18066,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "___ you <span style=\"color: #339af0; font-weight: bold;\">open</span> the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
             "options": [
-              "As soon as",
-              "Whereas",
+              "By the time",
               "Since",
-              "By the time"
+              "Whereas",
+              "As soon as"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak."
           },
           {
@@ -18079,12 +18080,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.",
             "options": [
-              "Since",
               "By the time",
-              "Because",
-              "While"
+              "Since",
+              "While",
+              "Because"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
           },
           {
@@ -18093,12 +18094,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "___ the app <span style=\"color: #339af0; font-weight: bold;\">launches</span>, the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
             "options": [
-              "By the time",
-              "Until",
               "Whereas",
-              "Since"
+              "Since",
+              "Until",
+              "By the time"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
           },
           {
@@ -18108,8 +18109,8 @@ const unitSentencesMap = {
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ left.",
             "options": [
               "have",
-              "were",
               "will have",
+              "were",
               "had"
             ],
             "correctIndex": 3,
@@ -18122,9 +18123,9 @@ const unitSentencesMap = {
             "sentence": "By the time we <span style=\"color: #339af0; font-weight: bold;\">arrive</span> home, children ___ gone to bed.",
             "options": [
               "will have",
-              "are",
               "had",
-              "have"
+              "have",
+              "are"
             ],
             "correctIndex": 0,
             "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
@@ -18135,12 +18136,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ spread.",
             "options": [
-              "was",
-              "has",
+              "had",
               "will have",
-              "had"
+              "has",
+              "was"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
           },
           {
@@ -18149,12 +18150,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the compiler <span style=\"color: #339af0; font-weight: bold;\">finishes</span>, the server ___ saved it.",
             "options": [
-              "is",
-              "will have",
+              "has",
               "had",
-              "has"
+              "is",
+              "will have"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak."
           },
           {
@@ -18163,10 +18164,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ collapsed.",
             "options": [
-              "will have",
+              "was",
               "had",
-              "has",
-              "was"
+              "will have",
+              "has"
             ],
             "correctIndex": 1,
             "translation": "Fırtına dindiğinde köprü çökmüştü."
@@ -18184,12 +18185,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span> at the corporate headquarters, most board members ___ the emergency meeting.",
             "options": [
-              "had left",
-              "left",
               "have left",
-              "will have left"
+              "had left",
+              "will have left",
+              "left"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Biz şirket merkezine vardığımızda yönetim kurulu üyelerinin çoğu acil toplantıdan ayrılmıştı."
           },
           {
@@ -18198,12 +18199,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time we ___ home from the laboratory, the children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed because of the late hour.",
             "options": [
-              "arrived",
-              "had arrived",
               "arrive",
-              "will arrive"
+              "arrived",
+              "will arrive",
+              "had arrived"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar."
           },
           {
@@ -18214,8 +18215,8 @@ const unitSentencesMap = {
             "options": [
               "had spread",
               "will have spread",
-              "spreads",
-              "has spread"
+              "has spread",
+              "spreads"
             ],
             "correctIndex": 0,
             "translation": "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı."
@@ -18226,12 +18227,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the compiler ___ code optimization, the backup server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> the configuration metrics.",
             "options": [
-              "finishes",
-              "finished",
               "had finished",
+              "finished",
+              "finishes",
               "will finish"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Derleyici kod optimizasyonunu tamamlayana kadar, yedek sunucu yapılandırma ölçümlerini kaydetmiş olacak."
           },
           {
@@ -18240,12 +18241,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the severe coastal storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the ancient bridge structure ___ into the turbulent river.",
             "options": [
-              "will have collapsed",
               "has collapsed",
-              "collapses",
-              "had collapsed"
+              "will have collapsed",
+              "had collapsed",
+              "collapses"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü."
           },
           {
@@ -18316,12 +18317,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the new legislative law ___ , corporate firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span> their data privacy policies.",
             "options": [
-              "will take effect",
+              "takes effect",
               "took effect",
-              "had taken effect",
-              "takes effect"
+              "will take effect",
+              "had taken effect"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar."
           },
           {
@@ -18344,12 +18345,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time you ___ the laboratory door, the automated security system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span> the entry tracking algorithm.",
             "options": [
-              "opened",
               "open",
+              "opened",
               "will open",
               "had opened"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak."
           },
           {
@@ -18358,12 +18359,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span> behind the volcanic mountains, the field research crew ___ the evaluation site.",
             "options": [
-              "had left",
-              "will have left",
+              "have left",
               "left",
-              "have left"
+              "will have left",
+              "had left"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Güneş volkanik dağların ardında batana kadar, saha araştırma ekibi değerlendirme alanından ayrılmıştı."
           },
           {
@@ -18372,12 +18373,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the mobile application ___ globally, the engineering team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> all core API modules.",
             "options": [
-              "will launch",
-              "launched",
               "launches",
-              "had launched"
+              "will launch",
+              "had launched",
+              "launched"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak."
           },
           {
@@ -18452,12 +18453,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the development team ___ the memory leak.",
             "options": [
-              "fixes",
               "fixed",
+              "fixes",
               "fix",
               "has fixed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18466,12 +18467,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ time the administration <span style=\"color: #ff6b6b; font-weight: bold;\">updated</span> the safety laws.",
             "options": [
-              "It is high",
+              "It has been",
               "It was",
-              "There is",
-              "It has been"
+              "It is high",
+              "There is"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18480,12 +18481,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the technical operators ___ the main server.",
             "options": [
-              "reboot",
-              "reboots",
               "rebooted",
-              "are rebooting"
+              "are rebooting",
+              "reboots",
+              "reboot"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18495,9 +18496,9 @@ const unitSentencesMap = {
             "sentence": "___ time the government <span style=\"color: #ff6b6b; font-weight: bold;\">reduced</span> factory carbon emissions.",
             "options": [
               "It is high",
-              "There is",
+              "It had",
               "It has",
-              "It had"
+              "There is"
             ],
             "correctIndex": 0,
             "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
@@ -18508,12 +18509,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the principal researcher ___ the statistical data.",
             "options": [
-              "compile",
-              "has compiled",
+              "compiled",
               "compiles",
-              "compiled"
+              "compile",
+              "has compiled"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           },
           {
@@ -18522,12 +18523,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It ___ time the development team <span style=\"color: #ff6b6b; font-weight: bold;\">fixed</span> the memory leak.",
             "options": [
-              "would be",
               "has been",
-              "was",
-              "is"
+              "would be",
+              "is",
+              "was"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18550,12 +18551,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time the technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">rebooted</span> the main server.",
             "options": [
-              "high time",
+              "time",
               "just time",
               "the time",
-              "time"
+              "high time"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18565,8 +18566,8 @@ const unitSentencesMap = {
             "sentence": "It is high time the government ___ factory carbon emissions.",
             "options": [
               "will reduce",
-              "reduce",
               "reduces",
+              "reduce",
               "reduced"
             ],
             "correctIndex": 3,
@@ -18578,12 +18579,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time the principal researcher <span style=\"color: #ff6b6b; font-weight: bold;\">compiled</span> the statistical data.",
             "options": [
+              "the time",
               "just time",
               "high time",
-              "time",
-              "the time"
+              "time"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           }
         ]
@@ -18599,10 +18600,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time we ___ the legacy application components.",
             "options": [
-              "are refactoring",
+              "refactor",
               "refactored",
-              "refactors",
-              "refactor"
+              "are refactoring",
+              "refactors"
             ],
             "correctIndex": 1,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
@@ -18613,12 +18614,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It ___ time the university <span style=\"color: #ff6b6b; font-weight: bold;\">granted</span> the necessary project funds.",
             "options": [
-              "is",
               "was",
               "has been",
-              "will be"
+              "will be",
+              "is"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18627,12 +18628,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time the field crew ___ the concrete foundation.",
             "options": [
-              "will reinforce",
-              "reinforced",
               "reinforce",
-              "reinforces"
+              "will reinforce",
+              "reinforces",
+              "reinforced"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18641,9 +18642,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time companies <span style=\"color: #ff6b6b; font-weight: bold;\">hired</span> compliance policy experts.",
             "options": [
-              "time",
               "just time",
               "the time",
+              "time",
               "high time"
             ],
             "correctIndex": 3,
@@ -18669,12 +18670,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time we <span style=\"color: #ff6b6b; font-weight: bold;\">refactored</span> the legacy application components.",
             "options": [
+              "the time",
               "high time",
               "time",
-              "just time",
-              "the time"
+              "just time"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18683,12 +18684,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the university ___ the necessary project funds.",
             "options": [
-              "grants",
+              "granted",
               "has granted",
-              "grant",
-              "granted"
+              "grants",
+              "grant"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18712,8 +18713,8 @@ const unitSentencesMap = {
             "sentence": "It is high time companies ___ compliance policy experts.",
             "options": [
               "hires",
-              "hire",
               "are hiring",
+              "hire",
               "hired"
             ],
             "correctIndex": 3,
@@ -18746,12 +18747,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the development team ___ the background memory leak since users are experiencing constant navigation delay.",
             "options": [
-              "fix",
+              "fixed",
               "fixes",
               "has fixed",
-              "fixed"
+              "fix"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Geliştirme ekibinin eski uygulama bileşenlerini yeniden yapılandırma zamanı geldi de geçiyor."
           },
           {
@@ -18760,12 +18761,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is high time the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
             "options": [
-              "updates",
               "update",
-              "updated",
-              "is updating"
+              "is updating",
+              "updates",
+              "updated"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Üniversitenin gerekli proje fonlarını sağlama zamanı geldi."
           },
           {
@@ -18774,12 +18775,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the technical operators ___ the main server so that secure cryptographic token generation can resume.",
             "options": [
+              "are rebooting",
               "reboot",
               "reboots",
-              "rebooted",
-              "are rebooting"
+              "rebooted"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor."
           },
           {
@@ -18789,9 +18790,9 @@ const unitSentencesMap = {
             "sentence": "It is high time the government ___ factory carbon emissions in order that international environmental limits might be met.",
             "options": [
               "reduced",
-              "reduces",
+              "will reduce",
               "reduce",
-              "will reduce"
+              "reduces"
             ],
             "correctIndex": 0,
             "translation": "Derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi."
@@ -18802,12 +18803,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the principal researcher ___ the statistical data before the board requests the annual performance report.",
             "options": [
-              "compiles",
-              "compiled",
               "has compiled",
-              "compile"
+              "compile",
+              "compiled",
+              "compiles"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor."
           },
           {
@@ -18878,12 +18879,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time we ___ the legacy application components lest the system should trigger an irreversible database crash.",
             "options": [
-              "refactor",
-              "refactored",
+              "refactors",
               "are refactoring",
-              "refactors"
+              "refactor",
+              "refactored"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18892,12 +18893,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is time the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
             "options": [
-              "has granted",
-              "granted",
               "grant",
-              "grants"
+              "has granted",
+              "grants",
+              "granted"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18906,9 +18907,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
             "options": [
-              "will reinforce",
-              "reinforces",
               "reinforce",
+              "reinforces",
+              "will reinforce",
               "reinforced"
             ],
             "correctIndex": 3,
@@ -18920,10 +18921,10 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is time the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
             "options": [
-              "optimizing",
+              "optimize",
               "optimizes",
               "optimized",
-              "optimize"
+              "optimizing"
             ],
             "correctIndex": 2,
             "translation": "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
@@ -18934,12 +18935,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
             "options": [
-              "hired",
               "hire",
-              "are hiring",
-              "hires"
+              "hires",
+              "hired",
+              "are hiring"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           },
           {
@@ -19014,8 +19015,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the best academic article I ___ this year.",
             "options": [
-              "had read",
               "am reading",
+              "had read",
               "have read",
               "read"
             ],
@@ -19042,12 +19043,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the worst software crash we ___ to date.",
             "options": [
+              "experienced",
               "have experienced",
               "had experienced",
-              "experienced",
               "are experiencing"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19056,12 +19057,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ configuration option the algorithm has accepted.",
             "options": [
-              "first",
-              "worst",
+              "only",
               "best",
-              "only"
+              "first",
+              "worst"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19084,12 +19085,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ academic article I have read this year.",
             "options": [
-              "best",
               "worst",
-              "first",
-              "only"
+              "best",
+              "only",
+              "first"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19098,12 +19099,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the first film the compiler team ___ together.",
             "options": [
+              "watched",
               "watches",
               "had watched",
-              "has watched",
-              "watched"
+              "has watched"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19112,12 +19113,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is the ___ software crash we have experienced to date.",
             "options": [
-              "worst",
               "best",
               "first",
-              "only"
+              "only",
+              "worst"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19127,8 +19128,8 @@ const unitSentencesMap = {
             "sentence": "This is the only configuration option the algorithm ___ .",
             "options": [
               "has accepted",
-              "had accepted",
               "accepted",
+              "had accepted",
               "accepts"
             ],
             "correctIndex": 0,
@@ -19142,8 +19143,8 @@ const unitSentencesMap = {
             "options": [
               "most",
               "more",
-              "much",
-              "very"
+              "very",
+              "much"
             ],
             "correctIndex": 0,
             "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
@@ -19162,8 +19163,8 @@ const unitSentencesMap = {
             "sentence": "It is the first time the central bank ___ rates.",
             "options": [
               "has raised",
-              "had raised",
               "raises",
+              "had raised",
               "raised"
             ],
             "correctIndex": 0,
@@ -19175,12 +19176,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ molecular rendering the researcher has obtained.",
             "options": [
-              "best",
               "finest",
-              "first",
-              "only"
+              "best",
+              "only",
+              "first"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19189,12 +19190,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the most challenging law the assembly ___ .",
             "options": [
-              "passes",
-              "passed",
+              "has passed",
               "had passed",
-              "has passed"
+              "passed",
+              "passes"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19203,8 +19204,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ secure token the server has generated so far.",
             "options": [
-              "worst",
               "first",
+              "worst",
               "best",
               "only"
             ],
@@ -19219,8 +19220,8 @@ const unitSentencesMap = {
             "options": [
               "has produced",
               "had produced",
-              "produced",
-              "produces"
+              "produces",
+              "produced"
             ],
             "correctIndex": 0,
             "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
@@ -19232,9 +19233,9 @@ const unitSentencesMap = {
             "sentence": "It is the ___ time the central bank has raised rates.",
             "options": [
               "first",
-              "only",
               "best",
-              "worst"
+              "worst",
+              "only"
             ],
             "correctIndex": 0,
             "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
@@ -19273,12 +19274,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the only secure token the server ___ so far.",
             "options": [
+              "generated",
               "generates",
-              "has generated",
               "had generated",
-              "generated"
+              "has generated"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19288,8 +19289,8 @@ const unitSentencesMap = {
             "sentence": "This is the most ___ engine the factory has produced.",
             "options": [
               "challenging",
-              "complex",
               "fine",
+              "complex",
               "efficient"
             ],
             "correctIndex": 3,
@@ -19308,12 +19309,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the best academic article I ___ this year because its innovative cross-disciplinary methodology is highly clear.",
             "options": [
-              "have read",
               "had read",
-              "read",
-              "am reading"
+              "am reading",
+              "have read",
+              "read"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Merkez bankasının faizleri ilk kez artırmasıdır."
           },
           {
@@ -19322,12 +19323,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the first film the compiler team ___ together since they moved into the new technological facility.",
             "options": [
-              "has watched",
-              "had watched",
               "watched",
-              "watches"
+              "watches",
+              "had watched",
+              "has watched"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir."
           },
           {
@@ -19336,12 +19337,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the worst software crash we ___ to date because of a severe database overflow in primary partitions.",
             "options": [
-              "had experienced",
               "are experiencing",
               "have experienced",
+              "had experienced",
               "experienced"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Bu, meclisin kabul ettiği en zorlu yasadır."
           },
           {
@@ -19352,8 +19353,8 @@ const unitSentencesMap = {
             "options": [
               "has accepted",
               "had accepted",
-              "accepts",
-              "accepted"
+              "accepted",
+              "accepts"
             ],
             "correctIndex": 0,
             "translation": "Bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur."
@@ -19440,12 +19441,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the first time the central bank ___ rates now that global financial indicators display unprecedented market inflation.",
             "options": [
-              "raised",
               "has raised",
               "raises",
-              "had raised"
+              "had raised",
+              "raised"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19468,12 +19469,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the most challenging law the assembly ___ since the new corporate administrative board was elected.",
             "options": [
-              "passed",
               "has passed",
+              "passes",
               "had passed",
-              "passes"
+              "passed"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19482,12 +19483,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the only secure token the server ___ so far lest anonymous third-party trackers should intercept the data.",
             "options": [
-              "had generated",
-              "has generated",
+              "generates",
               "generated",
-              "generates"
+              "had generated",
+              "has generated"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19496,12 +19497,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the most efficient engine the factory ___ inasmuch as its mechanical piston operates with zero friction limits.",
             "options": [
-              "produces",
-              "produced",
+              "has produced",
               "had produced",
-              "has produced"
+              "produces",
+              "produced"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir."
           },
           {
@@ -19569,123 +19570,11 @@ const unitSentencesMap = {
     "exercises": [
       {
         "id": "u103l102ex1",
-        "title": "Alıştırma 1: be used to (Alışkın olmak) I",
-        "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+        "title": "Alıştırma 1: be used to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
         "questions": [
           {
             "id": "u103l102_ex1_q1",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "The senior developer <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> ___ large data streams.",
-            "options": [
-              "processing",
-              "to process",
-              "process",
-              "processed"
-            ],
-            "correctIndex": 0,
-            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
-          },
-          {
-            "id": "u103l102_ex1_q2",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The senior developer ___ <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> large data streams.",
-            "options": [
-              "is used",
-              "uses to",
-              "used to",
-              "is used to"
-            ],
-            "correctIndex": 3,
-            "translation": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
-          },
-          {
-            "id": "u103l102_ex1_q3",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "Technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">are used to</span> ___ heavy industrial machinery.",
-            "options": [
-              "operated",
-              "to operate",
-              "operating",
-              "operate"
-            ],
-            "correctIndex": 2,
-            "translation": "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım."
-          },
-          {
-            "id": "u103l102_ex1_q4",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Technical operators ___ <span style=\"color: #ff6b6b; font-weight: bold;\">operating</span> heavy industrial machinery.",
-            "options": [
-              "used to",
-              "are used to",
-              "are used",
-              "uses to"
-            ],
-            "correctIndex": 1,
-            "translation": "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı."
-          },
-          {
-            "id": "u103l102_ex1_q5",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unoptimized legacy source codes.",
-            "options": [
-              "to refactor",
-              "refactored",
-              "refactor",
-              "refactoring"
-            ],
-            "correctIndex": 3,
-            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar."
-          },
-          {
-            "id": "u103l102_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "I ___ <span style=\"color: #ff6b6b; font-weight: bold;\">refactoring</span> unoptimized legacy source codes.",
-            "options": [
-              "uses to",
-              "am used",
-              "used to",
-              "am used to"
-            ],
-            "correctIndex": 3,
-            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
-          },
-          {
-            "id": "u103l102_ex1_q7",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "The supervisor <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> ___ severe database overflows.",
-            "options": [
-              "handle",
-              "handling",
-              "handled",
-              "to handle"
-            ],
-            "correctIndex": 1,
-            "translation": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
-          },
-          {
-            "id": "u103l102_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The supervisor ___ <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> severe database overflows.",
-            "options": [
-              "was used",
-              "uses to",
-              "was used to",
-              "used to"
-            ],
-            "correctIndex": 2,
-            "translation": "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım."
-          },
-          {
-            "id": "u103l102_ex1_q9",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
             "sentence": "Engineers <span style=\"color: #ff6b6b; font-weight: bold;\">were used to</span> ___ data fields manually.",
@@ -19696,160 +19585,1071 @@ const unitSentencesMap = {
               "compiling"
             ],
             "correctIndex": 3,
-            "translation": "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı."
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+          },
+          {
+            "id": "u103l102_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unoptimized legacy source codes.",
+            "options": [
+              "refactoring",
+              "to refactor",
+              "refactor",
+              "refactored"
+            ],
+            "correctIndex": 0,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Karmaşık ağ altyapılarını yapılandırmaya alışkınım.",
+            "words": [
+              "infrastructures",
+              "complex",
+              "configuring",
+              "codes",
+              "to",
+              "systems",
+              "used",
+              "am",
+              "I",
+              "Engineers",
+              "network"
+            ],
+            "correctOrder": [
+              "I",
+              "am",
+              "used",
+              "to",
+              "configuring",
+              "complex",
+              "network",
+              "infrastructures"
+            ],
+            "enSentence": "I am used to configuring complex network infrastructures.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unexpected system latency anomalies.",
+            "options": [
+              "to handle",
+              "handling",
+              "handled",
+              "handle"
+            ],
+            "correctIndex": 1,
+            "translation": "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım."
+          },
+          {
+            "id": "u103l102_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ corrupted device firmware packages.",
+            "options": [
+              "isolating",
+              "isolate",
+              "isolated",
+              "to isolate"
+            ],
+            "correctIndex": 0,
+            "translation": "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "words": [
+              "properties",
+              "developer",
+              "to",
+              "streams",
+              "is",
+              "The",
+              "large",
+              "used",
+              "data",
+              "senior",
+              "Engineers",
+              "processing",
+              "file"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "developer",
+              "is",
+              "used",
+              "to",
+              "processing",
+              "large",
+              "data",
+              "streams"
+            ],
+            "enSentence": "The senior developer is used to processing large data streams.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The supervisor <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> ___ severe database overflows.",
+            "options": [
+              "handling",
+              "handle",
+              "handled",
+              "to handle"
+            ],
+            "correctIndex": 0,
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
+          },
+          {
+            "id": "u103l102_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Cloud technicians <span style=\"color: #ff6b6b; font-weight: bold;\">are used to</span> ___ sensitive database records.",
+            "options": [
+              "migrating",
+              "migrate",
+              "to migrate",
+              "migrated"
+            ],
+            "correctIndex": 0,
+            "translation": "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır."
+          },
+          {
+            "id": "u103l102_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The diagnostic software is used to scanning massive file partitions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
           },
           {
             "id": "u103l102_ex1_q10",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Engineers ___ <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> data fields manually.",
-            "options": [
-              "were used",
-              "used to",
-              "uses to",
-              "were used to"
-            ],
-            "correctIndex": 3,
-            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar."
+            "type": "translation-text",
+            "prompt": "\"Local laboratories are used to testing chemical solution properties.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
           }
         ]
       },
       {
         "id": "u103l102ex2",
-        "title": "Alıştırma 2: be used to (Alışkın olmak) II",
-        "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+        "title": "Alıştırma 2: be used to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
         "questions": [
           {
             "id": "u103l102_ex2_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The senior developer ___ <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> large data streams.",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
             "options": [
-              "is accustomed to",
-              "accustomed",
-              "is accustomed",
-              "accustomed to"
+              "The client is willing to extend the project deadline.",
+              "Engineers were used to <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> data fields manually.",
+              "The client is unlikely to accept the modified contract terms.",
+              "The server is likely to crash if the database overflow continues."
             ],
-            "correctIndex": 0,
-            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
+            "correctIndex": 1
           },
           {
             "id": "u103l102_ex2_q2",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Technical operators ___ <span style=\"color: #ff6b6b; font-weight: bold;\">operating</span> heavy industrial machinery.",
-            "options": [
-              "accustomed to",
-              "accustomed",
-              "are accustomed",
-              "are accustomed to"
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım.",
+            "words": [
+              "codes",
+              "to",
+              "variations",
+              "sensitive",
+              "used",
+              "I",
+              "am",
+              "unoptimized",
+              "source",
+              "configuring",
+              "refactoring",
+              "legacy"
             ],
-            "correctIndex": 3,
-            "translation": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+            "correctOrder": [
+              "I",
+              "am",
+              "used",
+              "to",
+              "refactoring",
+              "unoptimized",
+              "legacy",
+              "source",
+              "codes"
+            ],
+            "enSentence": "I am used to refactoring unoptimized legacy source codes.",
+            "isEngToTr": false
           },
           {
             "id": "u103l102_ex2_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "I ___ <span style=\"color: #ff6b6b; font-weight: bold;\">refactoring</span> unoptimized legacy source codes.",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Karmaşık ağ altyapılarını yapılandırmaya alışkınım.",
             "options": [
-              "am accustomed",
-              "am accustomed to",
-              "accustomed",
-              "accustomed to"
+              "I am used to <span style=\"color: #ff6b6b; font-weight: bold;\">configuring</span> complex network infrastructures.",
+              "The chief architect was used to designing cross-disciplinary software modules.",
+              "I am accustomed to refactoring unoptimized legacy source codes.",
+              "The company was willing to invest in advanced cybersecurity tools."
             ],
-            "correctIndex": 1,
-            "translation": "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım."
+            "correctIndex": 0
           },
           {
             "id": "u103l102_ex2_q4",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The supervisor ___ <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> severe database overflows.",
-            "options": [
-              "was accustomed",
-              "accustomed to",
-              "was accustomed to",
-              "accustomed"
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım.",
+            "words": [
+              "unexpected",
+              "monitoring",
+              "anomalies",
+              "I",
+              "to",
+              "am",
+              "used",
+              "latency",
+              "student",
+              "system",
+              "cleanly",
+              "handling"
             ],
-            "correctIndex": 2,
-            "translation": "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı."
+            "correctOrder": [
+              "I",
+              "am",
+              "used",
+              "to",
+              "handling",
+              "unexpected",
+              "system",
+              "latency",
+              "anomalies"
+            ],
+            "enSentence": "I am used to handling unexpected system latency anomalies.",
+            "isEngToTr": false
           },
           {
             "id": "u103l102_ex2_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Engineers ___ <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> data fields manually.",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım.",
             "options": [
-              "were accustomed to",
-              "accustomed",
-              "accustomed to",
-              "were accustomed"
+              "I am used to <span style=\"color: #ff6b6b; font-weight: bold;\">isolating</span> corrupted device firmware packages.",
+              "The software is about to execute the backup routine.",
+              "The engineers were bound to notice the database conflict.",
+              "The analyst is supposed to evaluate comprehensive regional surveys with your inputs."
             ],
-            "correctIndex": 0,
-            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar."
+            "correctIndex": 0
           },
           {
             "id": "u103l102_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "words": [
+              "senior",
+              "is",
+              "to",
+              "developer",
+              "large",
+              "crews",
+              "processing",
+              "loose",
+              "data",
+              "took",
+              "streams",
+              "The",
+              "used"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "developer",
+              "is",
+              "used",
+              "to",
+              "processing",
+              "large",
+              "data",
+              "streams"
+            ],
+            "enSentence": "The senior developer is used to processing large data streams.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+            "options": [
+              "The evaluation committee was unlikely to approve the additional funding.",
+              "The supervisor was used to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> severe database overflows.",
+              "Technicians are not supposed to modify the system parameters on Sundays.",
+              "Engineers were used to compiling data fields manually."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l102_ex2_q8",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "The senior developer <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> ___ large data streams.",
+            "sentence": "Cloud technicians <span style=\"color: #ff6b6b; font-weight: bold;\">are used to</span> ___ sensitive database records.",
             "options": [
-              "processed",
-              "to process",
+              "to migrate",
+              "migrated",
+              "migrate",
+              "migrating"
+            ],
+            "correctIndex": 3,
+            "translation": "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır."
+          },
+          {
+            "id": "u103l102_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The diagnostic software is used to scanning massive file partitions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
+          },
+          {
+            "id": "u103l102_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Local laboratories are used to testing chemical solution properties.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l102ex3",
+        "title": "Alıştırma 3: be used to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l102_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Engineers <span style=\"color: #ff6b6b; font-weight: bold;\">were used to</span> ___ data fields manually.",
+            "options": [
+              "compile",
+              "compiling",
+              "to compile",
+              "compiled"
+            ],
+            "correctIndex": 1,
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+          },
+          {
+            "id": "u103l102_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unoptimized legacy source codes.",
+            "options": [
+              "refactored",
+              "to refactor",
+              "refactor",
+              "refactoring"
+            ],
+            "correctIndex": 3,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "I am used to <span style=\"color: #ff6b6b; font-weight: bold;\">configuring</span> complex network infrastructures.",
+            "options": [
+              "Karmaşık ağ altyapılarını yapılandırmaya alışkınım.",
+              "Müşteri proje teslim tarihini uzatmaya isteklidir.",
+              "Proje yöneticileri katı kalite uyum çerçevelerini uygulamaya alışıktı.",
+              "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l102_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unexpected system latency anomalies.",
+            "options": [
+              "to handle",
+              "handling",
+              "handled",
+              "handle"
+            ],
+            "correctIndex": 1,
+            "translation": "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım."
+          },
+          {
+            "id": "u103l102_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ corrupted device firmware packages.",
+            "options": [
+              "isolating",
+              "isolate",
+              "to isolate",
+              "isolated"
+            ],
+            "correctIndex": 0,
+            "translation": "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "options": [
+              "Most operators were willing to work extra hours to fix the database issue.",
+              "The diagnostic software is used to scanning massive file partitions.",
+              "The evaluation committee was unlikely to approve the additional funding.",
+              "The senior developer is used to <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> large data streams."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l102_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+            "words": [
+              "database",
+              "supervisor",
+              "overflows",
+              "was",
+              "severe",
+              "volatile",
+              "used",
+              "to",
+              "handling",
+              "operators",
+              "cryptographic",
+              "The"
+            ],
+            "correctOrder": [
+              "The",
+              "supervisor",
+              "was",
+              "used",
+              "to",
+              "handling",
+              "severe",
+              "database",
+              "overflows"
+            ],
+            "enSentence": "The supervisor was used to handling severe database overflows.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır.",
+            "words": [
+              "to",
+              "massive",
+              "machinery",
+              "are",
+              "cleanly",
+              "technicians",
+              "Cloud",
+              "records",
+              "used",
+              "database",
+              "migrating",
+              "sensitive"
+            ],
+            "correctOrder": [
+              "Cloud",
+              "technicians",
+              "are",
+              "used",
+              "to",
+              "migrating",
+              "sensitive",
+              "database",
+              "records"
+            ],
+            "enSentence": "Cloud technicians are used to migrating sensitive database records.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The diagnostic software is used to scanning massive file partitions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
+          },
+          {
+            "id": "u103l102_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Local laboratories are used to testing chemical solution properties.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l102ex4",
+        "title": "Alıştırma 4: be used to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l102_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+            "options": [
+              "Technical specialists were used to <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+              "The supervisor was reluctant to report the minor configuration failure.",
+              "The financial analyst was used to evaluating volatile market metrics.",
+              "Engineers were used to <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> data fields manually."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l102_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unoptimized legacy source codes.",
+            "options": [
+              "refactored",
+              "to refactor",
+              "refactor",
+              "refactoring"
+            ],
+            "correctIndex": 3,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Karmaşık ağ altyapılarını yapılandırmaya alışkınım.",
+            "words": [
+              "administrators",
+              "complex",
+              "I",
+              "partitions",
+              "infrastructures",
+              "am",
+              "used",
+              "to",
+              "configuring",
+              "network",
+              "visual"
+            ],
+            "correctOrder": [
+              "I",
+              "am",
+              "used",
+              "to",
+              "configuring",
+              "complex",
+              "network",
+              "infrastructures"
+            ],
+            "enSentence": "I am used to configuring complex network infrastructures.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım.",
+            "options": [
+              "I am used to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> unexpected system latency anomalies.",
+              "Senior analysts are reluctant to change the initial investigative project scope.",
+              "Technical specialists were used to compiling loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+              "The research team is used to analyzing structural variations in cells."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l102_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ corrupted device firmware packages.",
+            "options": [
+              "isolate",
+              "isolating",
+              "isolated",
+              "to isolate"
+            ],
+            "correctIndex": 1,
+            "translation": "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım."
+          },
+          {
+            "id": "u103l102_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "words": [
+              "processing",
+              "is",
+              "The",
+              "used",
+              "senior",
+              "fields",
+              "refactoring",
+              "to",
+              "data",
+              "developer",
+              "specialists",
+              "streams",
+              "large"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "developer",
+              "is",
+              "used",
+              "to",
+              "processing",
+              "large",
+              "data",
+              "streams"
+            ],
+            "enSentence": "The senior developer is used to processing large data streams.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The supervisor was used to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> severe database overflows.",
+            "options": [
+              "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+              "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir.",
+              "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir.",
+              "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l102_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır.",
+            "words": [
+              "database",
+              "processing",
+              "are",
+              "student",
+              "to",
+              "technicians",
+              "Cloud",
+              "sensitive",
+              "used",
+              "records",
+              "migrating",
+              "frameworks"
+            ],
+            "correctOrder": [
+              "Cloud",
+              "technicians",
+              "are",
+              "used",
+              "to",
+              "migrating",
+              "sensitive",
+              "database",
+              "records"
+            ],
+            "enSentence": "Cloud technicians are used to migrating sensitive database records.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l102_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The diagnostic software is used to scanning massive file partitions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
+          },
+          {
+            "id": "u103l102_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Local laboratories are used to testing chemical solution properties.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "exercises": [
+      {
+        "id": "u103l103ex1",
+        "title": "Alıştırma 1: be accustomed to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l103_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "We are accustomed to ___ under high-pressure conditions.",
+            "options": [
+              "worked",
+              "work",
+              "to work",
+              "working"
+            ],
+            "correctIndex": 3,
+            "translation": "Yüksek basınç koşulları altında çalışmaya alışkınız."
+          },
+          {
+            "id": "u103l103_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Engineers were accustomed to ___ data fields manually.",
+            "options": [
+              "to compile",
+              "compiling",
+              "compile",
+              "compiled"
+            ],
+            "correctIndex": 1,
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+          },
+          {
+            "id": "u103l103_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+            "words": [
+              "Our",
+              "servers",
+              "working",
+              "were",
+              "handling",
+              "accustomed",
+              "sudden",
+              "spikes",
+              "to",
+              "I",
+              "database",
+              "traffic"
+            ],
+            "correctOrder": [
+              "Our",
+              "servers",
+              "were",
+              "accustomed",
+              "to",
+              "handling",
+              "sudden",
+              "traffic",
+              "spikes"
+            ],
+            "enSentence": "Our servers were accustomed to handling sudden traffic spikes.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I am accustomed to ___ unoptimized legacy source codes.",
+            "options": [
+              "refactored",
+              "refactor",
+              "to refactor",
+              "refactoring"
+            ],
+            "correctIndex": 3,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l103_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research team was accustomed to ___ complex data sets.",
+            "options": [
+              "analyze",
+              "analyzed",
+              "to analyze",
+              "analyzing"
+            ],
+            "correctIndex": 3,
+            "translation": "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
+          },
+          {
+            "id": "u103l103_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+            "words": [
+              "accustomed",
+              "developers",
+              "deploying",
+              "network",
+              "builds",
+              "Most",
+              "senior",
+              "are",
+              "automatically",
+              "heavy",
+              "to"
+            ],
+            "correctOrder": [
+              "Most",
+              "developers",
+              "are",
+              "accustomed",
+              "to",
+              "deploying",
+              "builds",
+              "automatically"
+            ],
+            "enSentence": "Most developers are accustomed to deploying builds automatically.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The senior developer is accustomed to ___ large data streams.",
+            "options": [
               "process",
+              "to process",
+              "processed",
               "processing"
             ],
             "correctIndex": 3,
             "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
           },
           {
-            "id": "u103l102_ex2_q7",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "Technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> ___ heavy industrial machinery.",
+            "id": "u103l103_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The supervisor was accustomed to ___ severe database overflows.",
             "options": [
-              "to operate",
-              "operated",
-              "operate",
-              "operating"
-            ],
-            "correctIndex": 3,
-            "translation": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
-          },
-          {
-            "id": "u103l102_ex2_q8",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am accustomed to</span> ___ unoptimized legacy source codes.",
-            "options": [
-              "refactoring",
-              "refactor",
-              "refactored",
-              "to refactor"
+              "handling",
+              "handle",
+              "to handle",
+              "handled"
             ],
             "correctIndex": 0,
-            "translation": "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım."
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
           },
           {
-            "id": "u103l102_ex2_q9",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "The supervisor <span style=\"color: #ff6b6b; font-weight: bold;\">was accustomed to</span> ___ severe database overflows.",
+            "id": "u103l103_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Technical operators are accustomed to operating heavy industrial machinery.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+          },
+          {
+            "id": "u103l103_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"The system administrator is accustomed to monitoring real-time network traffic.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l103ex2",
+        "title": "Alıştırma 2: be accustomed to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l103_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "We are accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">working</span> under high-pressure conditions.",
             "options": [
-              "handled",
-              "to handle",
-              "handle",
-              "handling"
+              "Çevre grupları küresel ısı anomalisi endekslerini izlemeye alışıktı.",
+              "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir.",
+              "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır.",
+              "Yüksek basınç koşulları altında çalışmaya alışkınız."
             ],
-            "correctIndex": 3,
-            "translation": "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı."
+            "correctIndex": 3
           },
           {
-            "id": "u103l102_ex2_q10",
+            "id": "u103l103_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+            "words": [
+              "data",
+              "Engineers",
+              "handling",
+              "to",
+              "system",
+              "were",
+              "compiling",
+              "accustomed",
+              "developers",
+              "manually",
+              "fields"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "were",
+              "accustomed",
+              "to",
+              "compiling",
+              "data",
+              "fields",
+              "manually"
+            ],
+            "enSentence": "Engineers were accustomed to compiling data fields manually.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Our servers were accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> sudden traffic spikes.",
+            "options": [
+              "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+              "Çoğu yönetici güvenlik protokollerini düzenli olarak değiştirmeye alışıktır.",
+              "Otomatik altyapının sorguları optimize edeceği kesindir.",
+              "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l103_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım.",
+            "words": [
+              "source",
+              "supervisor",
+              "I",
+              "am",
+              "unoptimized",
+              "refactoring",
+              "highpressure",
+              "accustomed",
+              "codes",
+              "to",
+              "legacy",
+              "Most"
+            ],
+            "correctOrder": [
+              "I",
+              "am",
+              "accustomed",
+              "to",
+              "refactoring",
+              "unoptimized",
+              "legacy",
+              "source",
+              "codes"
+            ],
+            "enSentence": "I am accustomed to refactoring unoptimized legacy source codes.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı.",
+            "options": [
+              "The automatic framework is certain to optimize the queries.",
+              "I am used to configuring complex network infrastructures.",
+              "The research team was accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">analyzing</span> complex data sets.",
+              "The server is unlikely to crash under moderate user load."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l103_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+            "words": [
+              "builds",
+              "accustomed",
+              "administrator",
+              "Most",
+              "under",
+              "to",
+              "developers",
+              "are",
+              "highpressure",
+              "deploying",
+              "automatically"
+            ],
+            "correctOrder": [
+              "Most",
+              "developers",
+              "are",
+              "accustomed",
+              "to",
+              "deploying",
+              "builds",
+              "automatically"
+            ],
+            "enSentence": "Most developers are accustomed to deploying builds automatically.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "options": [
+              "The senior developer is accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> large data streams.",
+              "Technicians were unable to deploy an automated background script during the system blackout.",
+              "Cloud technicians are used to migrating sensitive database records.",
+              "The engineers were bound to notice the database conflict."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l103_ex2_q8",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "Engineers <span style=\"color: #ff6b6b; font-weight: bold;\">were accustomed to</span> ___ data fields manually.",
+            "sentence": "The supervisor was accustomed to ___ severe database overflows.",
+            "options": [
+              "handling",
+              "handle",
+              "handled",
+              "to handle"
+            ],
+            "correctIndex": 0,
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
+          },
+          {
+            "id": "u103l103_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Technical operators are accustomed to operating heavy industrial machinery.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+          },
+          {
+            "id": "u103l103_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The system administrator is accustomed to monitoring real-time network traffic.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l103ex3",
+        "title": "Alıştırma 3: be accustomed to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l103_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "We are accustomed to ___ under high-pressure conditions.",
+            "options": [
+              "working",
+              "work",
+              "worked",
+              "to work"
+            ],
+            "correctIndex": 0,
+            "translation": "Yüksek basınç koşulları altında çalışmaya alışkınız."
+          },
+          {
+            "id": "u103l103_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Engineers were accustomed to ___ data fields manually.",
             "options": [
               "to compile",
               "compiled",
@@ -19857,271 +20657,11114 @@ const unitSentencesMap = {
               "compiling"
             ],
             "correctIndex": 3,
-            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar."
-          }
-        ]
-      },
-      {
-        "id": "u103l102ex3",
-        "title": "Alıştırma 3: be used to (Alışkın olmak) III",
-        "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
-        "questions": [
-          {
-            "id": "u103l102_ex3_q1",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "The network infrastructure branch ___ to ___ massive cloud database queries while secondary firewalls screen external traffic.",
-            "translation": "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-            "corrects": [
-              "is used",
-              "processing"
-            ]
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
           },
           {
-            "id": "u103l102_ex3_q2",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "Industrial field crews ___ to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-            "translation": "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-            "corrects": [
-              "are used",
-              "operating"
-            ]
+            "id": "u103l103_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+            "options": [
+              "Our servers were accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> sudden traffic spikes.",
+              "Institutional authorities are supposed to protect sensitive user information privacy.",
+              "The new interface is certain to improve user interaction metrics.",
+              "The operators were about to launch the migration process."
+            ],
+            "correctIndex": 0
           },
           {
-            "id": "u103l102_ex3_q3",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "I ___ used to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-            "translation": "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-            "corrects": [
-              "am",
-              "refactoring"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q4",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "The senior architect ___ used to ___ critical configuration anomalies before the automated framework took over the backup routine.",
-            "translation": "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-            "corrects": [
-              "was",
-              "handling"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q5",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "Technical specialists ___ used to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-            "translation": "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
-            "corrects": [
-              "were",
-              "compiling"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q6",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "The network infrastructure branch ___ accustomed to ___ massive cloud database queries while secondary firewalls screen external traffic.",
-            "translation": "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-            "corrects": [
-              "is",
-              "processing"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q7",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "Industrial field crews ___ accustomed to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-            "translation": "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-            "corrects": [
-              "are used",
-              "operating"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q8",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "I ___ accustomed to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-            "translation": "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-            "corrects": [
-              "am",
-              "refactoring"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q9",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "The senior architect ___ accustomed to ___ critical configuration anomalies before the automated framework took over the backup routine.",
-            "translation": "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-            "corrects": [
-              "was",
-              "handling"
-            ]
-          },
-          {
-            "id": "u103l102_ex3_q10",
-            "type": "multiple-fill-blank",
-            "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-            "sentence": "Technical specialists ___ accustomed to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-            "translation": "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
-            "corrects": [
-              "were",
-              "compiling"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "u103l102ex4",
-        "title": "Alıştırma 4: be used to (Alışkın olmak) IV",
-        "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
-        "questions": [
-          {
-            "id": "u103l102_ex4_q1",
+            "id": "u103l103_ex3_q4",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "The network infrastructure branch <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> ___ massive cloud database queries while secondary firewalls screen external traffic.",
+            "sentence": "I am accustomed to ___ unoptimized legacy source codes.",
             "options": [
-              "processed",
-              "to process",
-              "process",
-              "processing"
-            ],
-            "correctIndex": 3,
-            "translation": "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır."
-          },
-          {
-            "id": "u103l102_ex4_q2",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Industrial field crews ___ <span style=\"color: #ff6b6b; font-weight: bold;\">operating</span> heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-            "options": [
-              "are accustomed",
-              "accustomed to",
-              "accustomed",
-              "are accustomed to"
-            ],
-            "correctIndex": 3,
-            "translation": "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır."
-          },
-          {
-            "id": "u103l102_ex4_q3",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am accustomed to</span> ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-            "options": [
-              "refactoring",
               "to refactor",
+              "refactor",
               "refactored",
-              "refactor"
+              "refactoring"
             ],
-            "correctIndex": 0,
-            "translation": "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım."
+            "correctIndex": 3,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
           },
           {
-            "id": "u103l102_ex4_q4",
+            "id": "u103l103_ex3_q5",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The senior architect ___ <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> critical configuration anomalies before the automated framework took over the backup routine.",
+            "sentence": "The research team was accustomed to ___ complex data sets.",
             "options": [
-              "was used to",
-              "used to",
-              "was used",
-              "uses to"
+              "analyzing",
+              "analyze",
+              "to analyze",
+              "analyzed"
             ],
             "correctIndex": 0,
-            "translation": "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı."
+            "translation": "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
           },
           {
-            "id": "u103l102_ex4_q5",
+            "id": "u103l103_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+            "options": [
+              "Without comprehensive empirical evaluation, the database script is bound to fail.",
+              "Most developers are accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">deploying</span> builds automatically.",
+              "The legacy system is doomed to fail without proper maintenance.",
+              "The application was doomed to run slowly on older devices."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l103_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+            "words": [
+              "senior",
+              "large",
+              "traffic",
+              "developer",
+              "is",
+              "were",
+              "source",
+              "processing",
+              "streams",
+              "data",
+              "The",
+              "to",
+              "accustomed"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "developer",
+              "is",
+              "accustomed",
+              "to",
+              "processing",
+              "large",
+              "data",
+              "streams"
+            ],
+            "enSentence": "The senior developer is accustomed to processing large data streams.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+            "words": [
+              "The",
+              "overflows",
+              "accustomed",
+              "supervisor",
+              "fields",
+              "to",
+              "severe",
+              "was",
+              "working",
+              "handling",
+              "under",
+              "database"
+            ],
+            "correctOrder": [
+              "The",
+              "supervisor",
+              "was",
+              "accustomed",
+              "to",
+              "handling",
+              "severe",
+              "database",
+              "overflows"
+            ],
+            "enSentence": "The supervisor was accustomed to handling severe database overflows.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Technical operators are accustomed to operating heavy industrial machinery.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+          },
+          {
+            "id": "u103l103_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The system administrator is accustomed to monitoring real-time network traffic.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l103ex4",
+        "title": "Alıştırma 4: be accustomed to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l103_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "We are accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">working</span> under high-pressure conditions.",
+            "options": [
+              "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi.",
+              "Yüksek basınç koşulları altında çalışmaya alışkınız.",
+              "Sistem otomatik olarak yeniden başlamak üzeredir.",
+              "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l103_ex4_q2",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "Technical specialists <span style=\"color: #ff6b6b; font-weight: bold;\">were used to</span> ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+            "sentence": "Engineers were accustomed to ___ data fields manually.",
             "options": [
               "compiling",
-              "to compile",
               "compile",
+              "to compile",
               "compiled"
             ],
             "correctIndex": 0,
-            "translation": "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar."
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
           },
           {
-            "id": "u103l102_ex4_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The network infrastructure branch ___ <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> massive cloud database queries while secondary firewalls screen external traffic.",
-            "options": [
-              "accustomed",
-              "is accustomed to",
-              "is accustomed",
-              "accustomed to"
-            ],
-            "correctIndex": 1,
-            "translation": "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır."
-          },
-          {
-            "id": "u103l102_ex4_q7",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "Industrial field crews <span style=\"color: #ff6b6b; font-weight: bold;\">are used to</span> ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-            "options": [
-              "operate",
-              "to operate",
-              "operating",
-              "operated"
-            ],
-            "correctIndex": 2,
-            "translation": "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır."
-          },
-          {
-            "id": "u103l102_ex4_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "I ___ <span style=\"color: #ff6b6b; font-weight: bold;\">refactoring</span> complex application systems in order that frontend developers can integrate visual components cleanly.",
-            "options": [
-              "accustomed",
-              "am accustomed to",
-              "am accustomed",
-              "accustomed to"
-            ],
-            "correctIndex": 1,
-            "translation": "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım."
-          },
-          {
-            "id": "u103l102_ex4_q9",
-            "type": "fill-blank",
-            "prompt": "Boşluğu doldur",
-            "sentence": "The senior architect <span style=\"color: #ff6b6b; font-weight: bold;\">was accustomed to</span> ___ critical configuration anomalies before the automated framework took over the backup routine.",
-            "options": [
-              "handled",
+            "id": "u103l103_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+            "words": [
               "handling",
-              "handle",
-              "to handle"
+              "We",
+              "sudden",
+              "to",
+              "spikes",
+              "industrial",
+              "developer",
+              "accustomed",
+              "Our",
+              "servers",
+              "were",
+              "traffic"
             ],
-            "correctIndex": 1,
-            "translation": "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı."
+            "correctOrder": [
+              "Our",
+              "servers",
+              "were",
+              "accustomed",
+              "to",
+              "handling",
+              "sudden",
+              "traffic",
+              "spikes"
+            ],
+            "enSentence": "Our servers were accustomed to handling sudden traffic spikes.",
+            "isEngToTr": false
           },
           {
-            "id": "u103l102_ex4_q10",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Technical specialists ___ <span style=\"color: #ff6b6b; font-weight: bold;\">compiling</span> loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+            "id": "u103l103_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "I am accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">refactoring</span> unoptimized legacy source codes.",
             "options": [
-              "used to",
-              "were used",
-              "uses to",
-              "were used to"
+              "Finansal analist değişken piyasa ölçümlerini değerlendirmeye alışıktı.",
+              "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+              "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+              "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l103_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research team was accustomed to ___ complex data sets.",
+            "options": [
+              "analyzing",
+              "analyze",
+              "to analyze",
+              "analyzed"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
+          },
+          {
+            "id": "u103l103_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+            "words": [
+              "accustomed",
+              "are",
+              "to",
+              "legacy",
+              "developers",
+              "builds",
+              "Most",
+              "compiling",
+              "automatically",
+              "deploying",
+              "highpressure"
+            ],
+            "correctOrder": [
+              "Most",
+              "developers",
+              "are",
+              "accustomed",
+              "to",
+              "deploying",
+              "builds",
+              "automatically"
+            ],
+            "enSentence": "Most developers are accustomed to deploying builds automatically.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The senior developer is accustomed to <span style=\"color: #ff6b6b; font-weight: bold;\">processing</span> large data streams.",
+            "options": [
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler.",
+              "Otomasyon rutininin sistem performansını artırması muhtemeldi.",
+              "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l103_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+            "words": [
+              "database",
+              "handling",
+              "under",
+              "severe",
+              "supervisor",
+              "overflows",
+              "accustomed",
+              "highpressure",
+              "to",
+              "The",
+              "refactoring",
+              "was"
+            ],
+            "correctOrder": [
+              "The",
+              "supervisor",
+              "was",
+              "accustomed",
+              "to",
+              "handling",
+              "severe",
+              "database",
+              "overflows"
+            ],
+            "enSentence": "The supervisor was accustomed to handling severe database overflows.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l103_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Technical operators are accustomed to operating heavy industrial machinery.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+          },
+          {
+            "id": "u103l103_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"The system administrator is accustomed to monitoring real-time network traffic.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır."
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "exercises": [
+      {
+        "id": "u103l104ex1",
+        "title": "Alıştırma 1: be willing to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l104_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The client is willing to ___ the project deadline.",
+            "options": [
+              "to extend",
+              "extended",
+              "extending",
+              "extend"
             ],
             "correctIndex": 3,
-            "translation": "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar."
+            "translation": "Müşteri proje teslim tarihini uzatmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Engineers are willing to ___ on cross-platform integration.",
+            "options": [
+              "to cooperate",
+              "cooperate",
+              "cooperating",
+              "cooperated"
+            ],
+            "correctIndex": 1,
+            "translation": "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler."
+          },
+          {
+            "id": "u103l104_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+            "words": [
+              "willing",
+              "to",
+              "cybersecurity",
+              "tools",
+              "invest",
+              "company",
+              "was",
+              "inputs",
+              "The",
+              "educational",
+              "in",
+              "budget",
+              "advanced"
+            ],
+            "correctOrder": [
+              "The",
+              "company",
+              "was",
+              "willing",
+              "to",
+              "invest",
+              "in",
+              "advanced",
+              "cybersecurity",
+              "tools"
+            ],
+            "enSentence": "The company was willing to invest in advanced cybersecurity tools.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The junior developer is willing to ___ new programming languages.",
+            "options": [
+              "learned",
+              "learn",
+              "to learn",
+              "learning"
+            ],
+            "correctIndex": 1,
+            "translation": "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir."
+          },
+          {
+            "id": "u103l104_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Most operators were willing to ___ extra hours to fix the database issue.",
+            "options": [
+              "to work",
+              "worked",
+              "working",
+              "work"
+            ],
+            "correctIndex": 3,
+            "translation": "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi."
+          },
+          {
+            "id": "u103l104_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir.",
+            "words": [
+              "is",
+              "team",
+              "Engineers",
+              "overtime",
+              "software",
+              "centralized",
+              "model",
+              "cloud",
+              "database",
+              "The",
+              "the",
+              "willing",
+              "to",
+              "modify",
+              "extend"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "team",
+              "is",
+              "willing",
+              "to",
+              "modify",
+              "the",
+              "centralized",
+              "cloud",
+              "database",
+              "model"
+            ],
+            "enSentence": "The software team is willing to modify the centralized cloud database model.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The ministry is willing to ___ the rapid regional infrastructure expansion.",
+            "options": [
+              "fund",
+              "to fund",
+              "funded",
+              "funding"
+            ],
+            "correctIndex": 0,
+            "translation": "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir."
+          },
+          {
+            "id": "u103l104_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Institutional authorities were willing to ___ the additional server budget.",
+            "options": [
+              "approving",
+              "approve",
+              "approved",
+              "to approve"
+            ],
+            "correctIndex": 1,
+            "translation": "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi."
+          },
+          {
+            "id": "u103l104_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent experts are willing to share their empirical data inputs with the team.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız uzmanlar deneysel veri girdilerini ekiple paylaşmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Operators are willing to work overtime during the comprehensive regional educational surveys.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+          }
+        ]
+      },
+      {
+        "id": "u103l104ex2",
+        "title": "Alıştırma 2: be willing to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l104_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Müşteri proje teslim tarihini uzatmaya isteklidir.",
+            "options": [
+              "The operators were about to launch the migration process.",
+              "Technicians were unwilling to shut down the main server during production.",
+              "The management was unwilling to approve the additional server budget.",
+              "The client is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">extend</span> the project deadline."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l104_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler.",
+            "words": [
+              "integration",
+              "Engineers",
+              "work",
+              "crossplatform",
+              "on",
+              "are",
+              "modify",
+              "willing",
+              "infrastructure",
+              "cooperate",
+              "to"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "are",
+              "willing",
+              "to",
+              "cooperate",
+              "on",
+              "crossplatform",
+              "integration"
+            ],
+            "enSentence": "Engineers are willing to cooperate on cross-platform integration.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The company was willing to <span style=\"color: #ff6b6b; font-weight: bold;\">invest</span> in advanced cybersecurity tools.",
+            "options": [
+              "Yönetim ekibi kuralları yarın güncelleyecektir.",
+              "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+              "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır.",
+              "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l104_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir.",
+            "words": [
+              "The",
+              "in",
+              "junior",
+              "languages",
+              "data",
+              "is",
+              "was",
+              "developer",
+              "willing",
+              "programming",
+              "new",
+              "to",
+              "learn"
+            ],
+            "correctOrder": [
+              "The",
+              "junior",
+              "developer",
+              "is",
+              "willing",
+              "to",
+              "learn",
+              "new",
+              "programming",
+              "languages"
+            ],
+            "enSentence": "The junior developer is willing to learn new programming languages.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi.",
+            "options": [
+              "The backup database is unlikely to lose any transaction records.",
+              "Corrupted device firmware is likely to cause system failures.",
+              "The education ministry was unable to organize a specialized local committee last semester.",
+              "Most operators were willing to <span style=\"color: #ff6b6b; font-weight: bold;\">work</span> extra hours to fix the database issue."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l104_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir.",
+            "words": [
+              "work",
+              "centralized",
+              "the",
+              "client",
+              "cloud",
+              "rapid",
+              "modify",
+              "to",
+              "willing",
+              "is",
+              "team",
+              "model",
+              "database",
+              "software",
+              "The"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "team",
+              "is",
+              "willing",
+              "to",
+              "modify",
+              "the",
+              "centralized",
+              "cloud",
+              "database",
+              "model"
+            ],
+            "enSentence": "The software team is willing to modify the centralized cloud database model.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The ministry is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">fund</span> the rapid regional infrastructure expansion.",
+            "options": [
+              "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir.",
+              "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır.",
+              "Operatörler taşıma işlemini başlatmak üzereydiler.",
+              "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l104_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Institutional authorities were willing to ___ the additional server budget.",
+            "options": [
+              "approve",
+              "approving",
+              "approved",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi."
+          },
+          {
+            "id": "u103l104_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent experts are willing to share their empirical data inputs with the team.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız uzmanlar deneysel veri girdilerini ekiple paylaşmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Operators are willing to work overtime during the comprehensive regional educational surveys.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+          }
+        ]
+      },
+      {
+        "id": "u103l104ex3",
+        "title": "Alıştırma 3: be willing to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l104_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The client is willing to ___ the project deadline.",
+            "options": [
+              "extend",
+              "extending",
+              "extended",
+              "to extend"
+            ],
+            "correctIndex": 0,
+            "translation": "Müşteri proje teslim tarihini uzatmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Engineers are willing to ___ on cross-platform integration.",
+            "options": [
+              "to cooperate",
+              "cooperated",
+              "cooperating",
+              "cooperate"
+            ],
+            "correctIndex": 3,
+            "translation": "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler."
+          },
+          {
+            "id": "u103l104_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+            "options": [
+              "The company was willing to <span style=\"color: #ff6b6b; font-weight: bold;\">invest</span> in advanced cybersecurity tools.",
+              "I am accustomed to refactoring unoptimized legacy source codes.",
+              "The research team was accustomed to analyzing complex data sets.",
+              "We were about to run the automated diagnostic script."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l104_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The junior developer is willing to ___ new programming languages.",
+            "options": [
+              "learning",
+              "to learn",
+              "learned",
+              "learn"
+            ],
+            "correctIndex": 3,
+            "translation": "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir."
+          },
+          {
+            "id": "u103l104_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Most operators were willing to ___ extra hours to fix the database issue.",
+            "options": [
+              "working",
+              "work",
+              "worked",
+              "to work"
+            ],
+            "correctIndex": 1,
+            "translation": "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi."
+          },
+          {
+            "id": "u103l104_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir.",
+            "options": [
+              "The software team is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the centralized cloud database model.",
+              "Without proper technical parameters, you are bound to make a logical mistake.",
+              "The operators were about to launch the migration process.",
+              "The engineers were bound to notice the database conflict."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l104_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir.",
+            "words": [
+              "The",
+              "willing",
+              "expansion",
+              "ministry",
+              "regional",
+              "fund",
+              "rapid",
+              "project",
+              "the",
+              "to",
+              "infrastructure",
+              "is",
+              "invest",
+              "additional"
+            ],
+            "correctOrder": [
+              "The",
+              "ministry",
+              "is",
+              "willing",
+              "to",
+              "fund",
+              "the",
+              "rapid",
+              "regional",
+              "infrastructure",
+              "expansion"
+            ],
+            "enSentence": "The ministry is willing to fund the rapid regional infrastructure expansion.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi.",
+            "words": [
+              "server",
+              "Institutional",
+              "issue",
+              "authorities",
+              "the",
+              "to",
+              "were",
+              "budget",
+              "willing",
+              "in",
+              "additional",
+              "approve",
+              "Independent"
+            ],
+            "correctOrder": [
+              "Institutional",
+              "authorities",
+              "were",
+              "willing",
+              "to",
+              "approve",
+              "the",
+              "additional",
+              "server",
+              "budget"
+            ],
+            "enSentence": "Institutional authorities were willing to approve the additional server budget.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent experts are willing to share their empirical data inputs with the team.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız uzmanlar deneysel veri girdilerini ekiple paylaşmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Operators are willing to work overtime during the comprehensive regional educational surveys.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+          }
+        ]
+      },
+      {
+        "id": "u103l104ex4",
+        "title": "Alıştırma 4: be willing to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l104_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Müşteri proje teslim tarihini uzatmaya isteklidir.",
+            "options": [
+              "The client is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">extend</span> the project deadline.",
+              "Cloud technicians are used to migrating sensitive database records.",
+              "The internal board is unable to call an emergency committee meeting this week.",
+              "The lead developer is reluctant to use unverified external libraries."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l104_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Engineers are willing to ___ on cross-platform integration.",
+            "options": [
+              "to cooperate",
+              "cooperate",
+              "cooperating",
+              "cooperated"
+            ],
+            "correctIndex": 1,
+            "translation": "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler."
+          },
+          {
+            "id": "u103l104_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+            "words": [
+              "to",
+              "company",
+              "cybersecurity",
+              "The",
+              "advanced",
+              "willing",
+              "extra",
+              "was",
+              "junior",
+              "in",
+              "Operators",
+              "invest",
+              "tools"
+            ],
+            "correctOrder": [
+              "The",
+              "company",
+              "was",
+              "willing",
+              "to",
+              "invest",
+              "in",
+              "advanced",
+              "cybersecurity",
+              "tools"
+            ],
+            "enSentence": "The company was willing to invest in advanced cybersecurity tools.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir.",
+            "options": [
+              "Government agencies are unable to process the newly collected empirical data securely.",
+              "This new protocol is certain to secure all external connections.",
+              "I was about to modify the security protocols when the database crashed.",
+              "The junior developer is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">learn</span> new programming languages."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l104_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Most operators were willing to ___ extra hours to fix the database issue.",
+            "options": [
+              "worked",
+              "to work",
+              "working",
+              "work"
+            ],
+            "correctIndex": 3,
+            "translation": "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi."
+          },
+          {
+            "id": "u103l104_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir.",
+            "words": [
+              "model",
+              "overtime",
+              "empirical",
+              "database",
+              "The",
+              "software",
+              "cloud",
+              "is",
+              "advanced",
+              "to",
+              "the",
+              "team",
+              "modify",
+              "willing",
+              "centralized"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "team",
+              "is",
+              "willing",
+              "to",
+              "modify",
+              "the",
+              "centralized",
+              "cloud",
+              "database",
+              "model"
+            ],
+            "enSentence": "The software team is willing to modify the centralized cloud database model.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The ministry is willing to <span style=\"color: #ff6b6b; font-weight: bold;\">fund</span> the rapid regional infrastructure expansion.",
+            "options": [
+              "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+              "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi.",
+              "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir.",
+              "Otomasyon rutininin sistem performansını artırması muhtemeldi."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l104_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi.",
+            "words": [
+              "client",
+              "additional",
+              "server",
+              "willing",
+              "were",
+              "budget",
+              "to",
+              "authorities",
+              "the",
+              "developer",
+              "Institutional",
+              "Operators",
+              "approve"
+            ],
+            "correctOrder": [
+              "Institutional",
+              "authorities",
+              "were",
+              "willing",
+              "to",
+              "approve",
+              "the",
+              "additional",
+              "server",
+              "budget"
+            ],
+            "enSentence": "Institutional authorities were willing to approve the additional server budget.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l104_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent experts are willing to share their empirical data inputs with the team.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız uzmanlar deneysel veri girdilerini ekiple paylaşmaya isteklidir."
+          },
+          {
+            "id": "u103l104_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Operators are willing to work overtime during the comprehensive regional educational surveys.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "exercises": [
+      {
+        "id": "u103l105ex1",
+        "title": "Alıştırma 1: be unwilling to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l105_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The team was unwilling to ___ the core application structure.",
+            "options": [
+              "change",
+              "changing",
+              "changed",
+              "to change"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip, temel uygulama yapısını değiştirmeye isteksizdi."
+          },
+          {
+            "id": "u103l105_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Users are unwilling to ___ their private data without encryption.",
+            "options": [
+              "to share",
+              "shared",
+              "sharing",
+              "share"
+            ],
+            "correctIndex": 3,
+            "translation": "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir."
+          },
+          {
+            "id": "u103l105_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+            "words": [
+              "unwilling",
+              "was",
+              "programmer",
+              "legacy",
+              "to",
+              "down",
+              "senior",
+              "codebase",
+              "The",
+              "the",
+              "refactor",
+              "production",
+              "companies"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "programmer",
+              "was",
+              "unwilling",
+              "to",
+              "refactor",
+              "the",
+              "legacy",
+              "codebase"
+            ],
+            "enSentence": "The senior programmer was unwilling to refactor the legacy codebase.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The management was unwilling to ___ the additional server budget.",
+            "options": [
+              "approved",
+              "to approve",
+              "approving",
+              "approve"
+            ],
+            "correctIndex": 3,
+            "translation": "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi."
+          },
+          {
+            "id": "u103l105_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The administrator is unwilling to ___ root access to external users.",
+            "options": [
+              "granting",
+              "grant",
+              "to grant",
+              "granted"
+            ],
+            "correctIndex": 1,
+            "translation": "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi.",
+            "words": [
+              "during",
+              "change",
+              "Technicians",
+              "production",
+              "were",
+              "down",
+              "to",
+              "corporate",
+              "the",
+              "unwilling",
+              "main",
+              "shut",
+              "server",
+              "formal"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "were",
+              "unwilling",
+              "to",
+              "shut",
+              "down",
+              "the",
+              "main",
+              "server",
+              "during",
+              "production"
+            ],
+            "enSentence": "Technicians were unwilling to shut down the main server during production.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Many legacy companies are unwilling to ___ their databases to the cloud.",
+            "options": [
+              "migrating",
+              "to migrate",
+              "migrate",
+              "migrated"
+            ],
+            "correctIndex": 2,
+            "translation": "Birçok köklü şirket, veritabanlarını buluta taşımaya isteksizdir."
+          },
+          {
+            "id": "u103l105_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Technical experts are unwilling to ___ the outdated architectural framework.",
+            "options": [
+              "to adopt",
+              "adopted",
+              "adopting",
+              "adopt"
+            ],
+            "correctIndex": 3,
+            "translation": "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The internal board is unwilling to accept the sudden corporate paradigm shift.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are unwilling to sign the formal bilateral commercial agreements.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+          }
+        ]
+      },
+      {
+        "id": "u103l105ex2",
+        "title": "Alıştırma 2: be unwilling to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l105_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Ekip, temel uygulama yapısını değiştirmeye isteksizdi.",
+            "options": [
+              "The team was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">change</span> the core application structure.",
+              "The analyst is supposed to evaluate comprehensive regional surveys with your inputs.",
+              "Technical experts are unwilling to adopt the outdated architectural framework.",
+              "The lead developer is reluctant to use unverified external libraries."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l105_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir.",
+            "words": [
+              "unwilling",
+              "are",
+              "data",
+              "private",
+              "encryption",
+              "Technicians",
+              "to",
+              "without",
+              "share",
+              "were",
+              "Users",
+              "production",
+              "their"
+            ],
+            "correctOrder": [
+              "Users",
+              "are",
+              "unwilling",
+              "to",
+              "share",
+              "their",
+              "private",
+              "data",
+              "without",
+              "encryption"
+            ],
+            "enSentence": "Users are unwilling to share their private data without encryption.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+            "options": [
+              "I am used to refactoring unoptimized legacy source codes.",
+              "The security branch was unlikely to detect the encrypted breach.",
+              "This new protocol is certain to secure all external connections.",
+              "The senior programmer was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">refactor</span> the legacy codebase."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l105_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi.",
+            "words": [
+              "internal",
+              "The",
+              "approve",
+              "the",
+              "management",
+              "server",
+              "share",
+              "are",
+              "unwilling",
+              "was",
+              "budget",
+              "to",
+              "additional"
+            ],
+            "correctOrder": [
+              "The",
+              "management",
+              "was",
+              "unwilling",
+              "to",
+              "approve",
+              "the",
+              "additional",
+              "server",
+              "budget"
+            ],
+            "enSentence": "The management was unwilling to approve the additional server budget.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir.",
+            "options": [
+              "Technical operators are used to operating heavy industrial machinery.",
+              "Institutional authorities are unwilling to sign the formal bilateral commercial agreements.",
+              "The administrator is unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">grant</span> root access to external users.",
+              "I am used to refactoring complex application systems in order that frontend developers can integrate visual components cleanly."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l105_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi.",
+            "words": [
+              "Technicians",
+              "shift",
+              "during",
+              "server",
+              "private",
+              "the",
+              "down",
+              "were",
+              "production",
+              "unwilling",
+              "to",
+              "companies",
+              "shut",
+              "main"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "were",
+              "unwilling",
+              "to",
+              "shut",
+              "down",
+              "the",
+              "main",
+              "server",
+              "during",
+              "production"
+            ],
+            "enSentence": "Technicians were unwilling to shut down the main server during production.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Many legacy companies are unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">migrate</span> their databases to the cloud.",
+            "options": [
+              "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım.",
+              "Birçok köklü şirket, veritabanlarını buluta taşımaya isteksizdir.",
+              "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir.",
+              "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l105_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technical experts are unwilling to ___ the outdated architectural framework.",
+            "options": [
+              "to adopt",
+              "adopted",
+              "adopting",
+              "adopt"
+            ],
+            "correctIndex": 3,
+            "translation": "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The internal board is unwilling to accept the sudden corporate paradigm shift.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are unwilling to sign the formal bilateral commercial agreements.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+          }
+        ]
+      },
+      {
+        "id": "u103l105ex3",
+        "title": "Alıştırma 3: be unwilling to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l105_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The team was unwilling to ___ the core application structure.",
+            "options": [
+              "change",
+              "changing",
+              "to change",
+              "changed"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip, temel uygulama yapısını değiştirmeye isteksizdi."
+          },
+          {
+            "id": "u103l105_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Users are unwilling to ___ their private data without encryption.",
+            "options": [
+              "shared",
+              "to share",
+              "sharing",
+              "share"
+            ],
+            "correctIndex": 3,
+            "translation": "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir."
+          },
+          {
+            "id": "u103l105_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The senior programmer was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">refactor</span> the legacy codebase.",
+            "options": [
+              "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+              "Baş araştırmacının politika belgelerini incelemesi planlanmıştı.",
+              "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+              "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l105_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The management was unwilling to ___ the additional server budget.",
+            "options": [
+              "to approve",
+              "approving",
+              "approved",
+              "approve"
+            ],
+            "correctIndex": 3,
+            "translation": "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi."
+          },
+          {
+            "id": "u103l105_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The administrator is unwilling to ___ root access to external users.",
+            "options": [
+              "grant",
+              "granting",
+              "granted",
+              "to grant"
+            ],
+            "correctIndex": 0,
+            "translation": "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Technicians were unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">shut</span> down the main server during production.",
+            "options": [
+              "Kamu araştırma enstitülerinde yüksek çözünürlüklü kayıt cihazları bulunmadığından, teknik uzmanlar dağınık istatistiksel ölçümleri derlemeye alışıktı.",
+              "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+              "Sunucularımız ani trafik artışlarını yönetmeye alışıktı.",
+              "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l105_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Birçok köklü şirket, veritabanlarını buluta taşımaya isteksizdir.",
+            "words": [
+              "are",
+              "companies",
+              "migrate",
+              "legacy",
+              "databases",
+              "cloud",
+              "refactor",
+              "unwilling",
+              "administrator",
+              "Many",
+              "to",
+              "their",
+              "to",
+              "was",
+              "the"
+            ],
+            "correctOrder": [
+              "Many",
+              "legacy",
+              "companies",
+              "are",
+              "unwilling",
+              "to",
+              "migrate",
+              "their",
+              "databases",
+              "to",
+              "the",
+              "cloud"
+            ],
+            "enSentence": "Many legacy companies are unwilling to migrate their databases to the cloud.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir.",
+            "words": [
+              "board",
+              "unwilling",
+              "experts",
+              "architectural",
+              "adopt",
+              "to",
+              "Technical",
+              "are",
+              "the",
+              "agreements",
+              "was",
+              "framework",
+              "outdated"
+            ],
+            "correctOrder": [
+              "Technical",
+              "experts",
+              "are",
+              "unwilling",
+              "to",
+              "adopt",
+              "the",
+              "outdated",
+              "architectural",
+              "framework"
+            ],
+            "enSentence": "Technical experts are unwilling to adopt the outdated architectural framework.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The internal board is unwilling to accept the sudden corporate paradigm shift.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are unwilling to sign the formal bilateral commercial agreements.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+          }
+        ]
+      },
+      {
+        "id": "u103l105ex4",
+        "title": "Alıştırma 4: be unwilling to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l105_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The team was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">change</span> the core application structure.",
+            "options": [
+              "Ekip, temel uygulama yapısını değiştirmeye isteksizdi.",
+              "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l105_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Users are unwilling to ___ their private data without encryption.",
+            "options": [
+              "share",
+              "sharing",
+              "to share",
+              "shared"
+            ],
+            "correctIndex": 0,
+            "translation": "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir."
+          },
+          {
+            "id": "u103l105_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+            "words": [
+              "budget",
+              "was",
+              "programmer",
+              "senior",
+              "unwilling",
+              "codebase",
+              "The",
+              "the",
+              "corporate",
+              "refactor",
+              "to",
+              "legacy",
+              "structure"
+            ],
+            "correctOrder": [
+              "The",
+              "senior",
+              "programmer",
+              "was",
+              "unwilling",
+              "to",
+              "refactor",
+              "the",
+              "legacy",
+              "codebase"
+            ],
+            "enSentence": "The senior programmer was unwilling to refactor the legacy codebase.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The management was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">approve</span> the additional server budget.",
+            "options": [
+              "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi.",
+              "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım.",
+              "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi.",
+              "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l105_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The administrator is unwilling to ___ root access to external users.",
+            "options": [
+              "to grant",
+              "granted",
+              "granting",
+              "grant"
+            ],
+            "correctIndex": 3,
+            "translation": "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi.",
+            "words": [
+              "main",
+              "to",
+              "server",
+              "unwilling",
+              "during",
+              "sign",
+              "were",
+              "down",
+              "production",
+              "root",
+              "the",
+              "board",
+              "shut",
+              "Technicians"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "were",
+              "unwilling",
+              "to",
+              "shut",
+              "down",
+              "the",
+              "main",
+              "server",
+              "during",
+              "production"
+            ],
+            "enSentence": "Technicians were unwilling to shut down the main server during production.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Birçok köklü şirket, veritabanlarını buluta taşımaya isteksizdir.",
+            "options": [
+              "Many legacy companies are unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">migrate</span> their databases to the cloud.",
+              "Institutional authorities are unwilling to sign the formal bilateral commercial agreements.",
+              "Sooner or later, the administrative council is bound to learn the truth.",
+              "The administrative council is likely to approve the new security protocol."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l105_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir.",
+            "words": [
+              "Technical",
+              "experts",
+              "change",
+              "the",
+              "unwilling",
+              "formal",
+              "to",
+              "adopt",
+              "are",
+              "framework",
+              "was",
+              "outdated",
+              "architectural"
+            ],
+            "correctOrder": [
+              "Technical",
+              "experts",
+              "are",
+              "unwilling",
+              "to",
+              "adopt",
+              "the",
+              "outdated",
+              "architectural",
+              "framework"
+            ],
+            "enSentence": "Technical experts are unwilling to adopt the outdated architectural framework.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l105_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The internal board is unwilling to accept the sudden corporate paradigm shift.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir."
+          },
+          {
+            "id": "u103l105_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are unwilling to sign the formal bilateral commercial agreements.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "exercises": [
+      {
+        "id": "u103l106ex1",
+        "title": "Alıştırma 1: be reluctant to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l106_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The client was reluctant to ___ the contract terms.",
+            "options": [
+              "modify",
+              "modifying",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 0,
+            "translation": "Müşteri, sözleşme şartlarını değiştirmeye gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The manager was reluctant to ___ the unverified data backup.",
+            "options": [
+              "approving",
+              "approved",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 2,
+            "translation": "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+            "words": [
+              "reluctant",
+              "adopt",
+              "Engineers",
+              "committee",
+              "authorization",
+              "framework",
+              "report",
+              "testing",
+              "to",
+              "the",
+              "outdated",
+              "were"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "were",
+              "reluctant",
+              "to",
+              "adopt",
+              "the",
+              "outdated",
+              "testing",
+              "framework"
+            ],
+            "enSentence": "Engineers were reluctant to adopt the outdated testing framework.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The lead developer is reluctant to ___ unverified external libraries.",
+            "options": [
+              "use",
+              "using",
+              "used",
+              "to use"
+            ],
+            "correctIndex": 0,
+            "translation": "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The supervisor was reluctant to ___ the minor configuration failure.",
+            "options": [
+              "report",
+              "reporting",
+              "reported",
+              "to report"
+            ],
+            "correctIndex": 0,
+            "translation": "Gözetmen, küçük yapılandırma hatasını bildirmeye gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yöneticiler, yüklenicilere idari erişim izni vermeye gönülsüzdü.",
+            "words": [
+              "grant",
+              "to",
+              "to",
+              "reluctant",
+              "terms",
+              "research",
+              "administrative",
+              "were",
+              "Administrators",
+              "access",
+              "contractors",
+              "contract"
+            ],
+            "correctOrder": [
+              "Administrators",
+              "were",
+              "reluctant",
+              "to",
+              "grant",
+              "administrative",
+              "access",
+              "to",
+              "contractors"
+            ],
+            "enSentence": "Administrators were reluctant to grant administrative access to contractors.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research team was reluctant to ___ the incomplete empirical results.",
+            "options": [
+              "publish",
+              "publishing",
+              "published",
+              "to publish"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma ekibi tamamlanmamış deneysel sonuçları yayınlamaya gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Technicians are reluctant to ___ the script without explicit authorization.",
+            "options": [
+              "to deploy",
+              "deploy",
+              "deployed",
+              "deploying"
+            ],
+            "correctIndex": 1,
+            "translation": "Teknisyenler açık yetki olmadan betiği çalıştırmaya gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee is reluctant to reallocate the annual research budget.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi yıllık araştırma bütçesini yeniden tahsis etmeye gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Senior analysts are reluctant to change the initial investigative project scope.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür."
+          }
+        ]
+      },
+      {
+        "id": "u103l106ex2",
+        "title": "Alıştırma 2: be reluctant to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l106_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The client was reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the contract terms.",
+            "options": [
+              "Müşteri, sözleşme şartlarını değiştirmeye gönülsüzdü.",
+              "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı.",
+              "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+              "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l106_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü.",
+            "words": [
+              "client",
+              "approve",
+              "manager",
+              "data",
+              "the",
+              "The",
+              "administrative",
+              "external",
+              "was",
+              "reluctant",
+              "unverified",
+              "backup",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "manager",
+              "was",
+              "reluctant",
+              "to",
+              "approve",
+              "the",
+              "unverified",
+              "data",
+              "backup"
+            ],
+            "enSentence": "The manager was reluctant to approve the unverified data backup.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Engineers were reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">adopt</span> the outdated testing framework.",
+            "options": [
+              "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir.",
+              "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+              "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu.",
+              "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l106_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür.",
+            "words": [
+              "developer",
+              "The",
+              "client",
+              "reluctant",
+              "is",
+              "libraries",
+              "use",
+              "Senior",
+              "external",
+              "lead",
+              "manager",
+              "unverified",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "lead",
+              "developer",
+              "is",
+              "reluctant",
+              "to",
+              "use",
+              "unverified",
+              "external",
+              "libraries"
+            ],
+            "enSentence": "The lead developer is reluctant to use unverified external libraries.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Gözetmen, küçük yapılandırma hatasını bildirmeye gönülsüzdü.",
+            "options": [
+              "The supervisor was reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">report</span> the minor configuration failure.",
+              "Most administrators are used to modifying security protocols regularly.",
+              "I was about to modify the security protocols when the database crashed.",
+              "The legacy system is doomed to fail without proper maintenance."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l106_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yöneticiler, yüklenicilere idari erişim izni vermeye gönülsüzdü.",
+            "words": [
+              "Administrators",
+              "were",
+              "reluctant",
+              "failure",
+              "contractors",
+              "testing",
+              "incomplete",
+              "to",
+              "access",
+              "grant",
+              "administrative",
+              "to"
+            ],
+            "correctOrder": [
+              "Administrators",
+              "were",
+              "reluctant",
+              "to",
+              "grant",
+              "administrative",
+              "access",
+              "to",
+              "contractors"
+            ],
+            "enSentence": "Administrators were reluctant to grant administrative access to contractors.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The research team was reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> the incomplete empirical results.",
+            "options": [
+              "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi.",
+              "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı.",
+              "Ekip uygulamayı Vercel'e dağıtmak üzeredir.",
+              "Araştırma ekibi tamamlanmamış deneysel sonuçları yayınlamaya gönülsüzdü."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l106_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are reluctant to ___ the script without explicit authorization.",
+            "options": [
+              "deploy",
+              "deploying",
+              "deployed",
+              "to deploy"
+            ],
+            "correctIndex": 0,
+            "translation": "Teknisyenler açık yetki olmadan betiği çalıştırmaya gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee is reluctant to reallocate the annual research budget.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi yıllık araştırma bütçesini yeniden tahsis etmeye gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Senior analysts are reluctant to change the initial investigative project scope.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür."
+          }
+        ]
+      },
+      {
+        "id": "u103l106ex3",
+        "title": "Alıştırma 3: be reluctant to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l106_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The client was reluctant to ___ the contract terms.",
+            "options": [
+              "modifying",
+              "modify",
+              "to modify",
+              "modified"
+            ],
+            "correctIndex": 1,
+            "translation": "Müşteri, sözleşme şartlarını değiştirmeye gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The manager was reluctant to ___ the unverified data backup.",
+            "options": [
+              "approve",
+              "approving",
+              "approved",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Engineers were reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">adopt</span> the outdated testing framework.",
+            "options": [
+              "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+              "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti.",
+              "Akademik kurumlar öğrenciyi elde tutma göstergelerini takip etmeye alışıktı.",
+              "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l106_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The lead developer is reluctant to ___ unverified external libraries.",
+            "options": [
+              "using",
+              "used",
+              "to use",
+              "use"
+            ],
+            "correctIndex": 3,
+            "translation": "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The supervisor was reluctant to ___ the minor configuration failure.",
+            "options": [
+              "reported",
+              "reporting",
+              "report",
+              "to report"
+            ],
+            "correctIndex": 2,
+            "translation": "Gözetmen, küçük yapılandırma hatasını bildirmeye gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yöneticiler, yüklenicilere idari erişim izni vermeye gönülsüzdü.",
+            "options": [
+              "The outdated hardware was doomed to overheat under heavy workload.",
+              "The administrator is unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">grant</span> root access to external users.",
+              "Administrators were reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">grant</span> administrative access to contractors.",
+              "The primary query was likely to fail due to network latency."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l106_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Araştırma ekibi tamamlanmamış deneysel sonuçları yayınlamaya gönülsüzdü.",
+            "words": [
+              "team",
+              "was",
+              "to",
+              "reluctant",
+              "empirical",
+              "administrative",
+              "research",
+              "the",
+              "were",
+              "The",
+              "publish",
+              "incomplete",
+              "results",
+              "outdated"
+            ],
+            "correctOrder": [
+              "The",
+              "research",
+              "team",
+              "was",
+              "reluctant",
+              "to",
+              "publish",
+              "the",
+              "incomplete",
+              "empirical",
+              "results"
+            ],
+            "enSentence": "The research team was reluctant to publish the incomplete empirical results.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler açık yetki olmadan betiği çalıştırmaya gönülsüzdür.",
+            "words": [
+              "script",
+              "explicit",
+              "Technicians",
+              "are",
+              "the",
+              "Engineers",
+              "without",
+              "reluctant",
+              "to",
+              "authorization",
+              "deploy",
+              "publish",
+              "manager"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "are",
+              "reluctant",
+              "to",
+              "deploy",
+              "the",
+              "script",
+              "without",
+              "explicit",
+              "authorization"
+            ],
+            "enSentence": "Technicians are reluctant to deploy the script without explicit authorization.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee is reluctant to reallocate the annual research budget.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi yıllık araştırma bütçesini yeniden tahsis etmeye gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Senior analysts are reluctant to change the initial investigative project scope.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür."
+          }
+        ]
+      },
+      {
+        "id": "u103l106ex4",
+        "title": "Alıştırma 4: be reluctant to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l106_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The client was reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the contract terms.",
+            "options": [
+              "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır.",
+              "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir.",
+              "Otomatik sistem benzersiz kriptografik jetonlar üretmeye alışıktır.",
+              "Müşteri, sözleşme şartlarını değiştirmeye gönülsüzdü."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l106_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The manager was reluctant to ___ the unverified data backup.",
+            "options": [
+              "approving",
+              "approve",
+              "to approve",
+              "approved"
+            ],
+            "correctIndex": 1,
+            "translation": "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+            "words": [
+              "to",
+              "were",
+              "framework",
+              "reluctant",
+              "Engineers",
+              "was",
+              "testing",
+              "the",
+              "adopt",
+              "supervisor",
+              "outdated",
+              "manager"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "were",
+              "reluctant",
+              "to",
+              "adopt",
+              "the",
+              "outdated",
+              "testing",
+              "framework"
+            ],
+            "enSentence": "Engineers were reluctant to adopt the outdated testing framework.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The lead developer is reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">use</span> unverified external libraries.",
+            "options": [
+              "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Çevre grupları küresel ısı anomalisi endekslerini izlemeye alışıktı.",
+              "Akademik kurumlar öğrenciyi elde tutma göstergelerini takip etmeye alışıktı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l106_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The supervisor was reluctant to ___ the minor configuration failure.",
+            "options": [
+              "reported",
+              "reporting",
+              "report",
+              "to report"
+            ],
+            "correctIndex": 2,
+            "translation": "Gözetmen, küçük yapılandırma hatasını bildirmeye gönülsüzdü."
+          },
+          {
+            "id": "u103l106_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yöneticiler, yüklenicilere idari erişim izni vermeye gönülsüzdü.",
+            "words": [
+              "Administrators",
+              "are",
+              "access",
+              "were",
+              "lead",
+              "contractors",
+              "script",
+              "to",
+              "reluctant",
+              "grant",
+              "to",
+              "administrative"
+            ],
+            "correctOrder": [
+              "Administrators",
+              "were",
+              "reluctant",
+              "to",
+              "grant",
+              "administrative",
+              "access",
+              "to",
+              "contractors"
+            ],
+            "enSentence": "Administrators were reluctant to grant administrative access to contractors.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The research team was reluctant to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> the incomplete empirical results.",
+            "options": [
+              "Otomatik teşhis betiğini çalıştırmak üzereydik.",
+              "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.",
+              "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı.",
+              "Araştırma ekibi tamamlanmamış deneysel sonuçları yayınlamaya gönülsüzdü."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l106_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler açık yetki olmadan betiği çalıştırmaya gönülsüzdür.",
+            "words": [
+              "Technicians",
+              "explicit",
+              "are",
+              "authorization",
+              "reluctant",
+              "to",
+              "script",
+              "deploy",
+              "the",
+              "modify",
+              "configuration",
+              "without",
+              "outdated"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "are",
+              "reluctant",
+              "to",
+              "deploy",
+              "the",
+              "script",
+              "without",
+              "explicit",
+              "authorization"
+            ],
+            "enSentence": "Technicians are reluctant to deploy the script without explicit authorization.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l106_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee is reluctant to reallocate the annual research budget.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi yıllık araştırma bütçesini yeniden tahsis etmeye gönülsüzdür."
+          },
+          {
+            "id": "u103l106_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Senior analysts are reluctant to change the initial investigative project scope.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür."
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "exercises": [
+      {
+        "id": "u103l107ex1",
+        "title": "Alıştırma 1: be likely to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l107_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The new update is likely to ___ the latency issues.",
+            "options": [
+              "resolved",
+              "to resolve",
+              "resolving",
+              "resolve"
+            ],
+            "correctIndex": 3,
+            "translation": "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The primary query was likely to ___ due to network latency.",
+            "options": [
+              "fail",
+              "failing",
+              "failed",
+              "to fail"
+            ],
+            "correctIndex": 0,
+            "translation": "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi."
+          },
+          {
+            "id": "u103l107_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir.",
+            "words": [
+              "is",
+              "Corrupted",
+              "growth",
+              "simulation",
+              "firmware",
+              "likely",
+              "device",
+              "system",
+              "cause",
+              "failures",
+              "to",
+              "findings"
+            ],
+            "correctOrder": [
+              "Corrupted",
+              "device",
+              "firmware",
+              "is",
+              "likely",
+              "to",
+              "cause",
+              "system",
+              "failures"
+            ],
+            "enSentence": "Corrupted device firmware is likely to cause system failures.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automation routine was likely to ___ system performance.",
+            "options": [
+              "to improve",
+              "improved",
+              "improving",
+              "improve"
+            ],
+            "correctIndex": 3,
+            "translation": "Otomasyon rutininin sistem performansını artırması muhtemeldi."
+          },
+          {
+            "id": "u103l107_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The corporate tax rate is likely to ___ next fiscal quarter.",
+            "options": [
+              "increase",
+              "increasing",
+              "increased",
+              "to increase"
+            ],
+            "correctIndex": 0,
+            "translation": "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+            "words": [
+              "if",
+              "the",
+              "continues",
+              "likely",
+              "is",
+              "increase",
+              "server",
+              "The",
+              "overflow",
+              "network",
+              "database",
+              "to",
+              "crash",
+              "primary"
+            ],
+            "correctOrder": [
+              "The",
+              "server",
+              "is",
+              "likely",
+              "to",
+              "crash",
+              "if",
+              "the",
+              "database",
+              "overflow",
+              "continues"
+            ],
+            "enSentence": "The server is likely to crash if the database overflow continues.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research team is likely to ___ their findings next month.",
+            "options": [
+              "publishing",
+              "publish",
+              "to publish",
+              "published"
+            ],
+            "correctIndex": 1,
+            "translation": "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "These configuration errors are likely to ___ the final simulation.",
+            "options": [
+              "affected",
+              "affecting",
+              "to affect",
+              "affect"
+            ],
+            "correctIndex": 3,
+            "translation": "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The administrative council is likely to approve the new security protocol.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yönetim kurulunun yeni güvenlik protokolünü onaylaması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Significant annual financial growth is likely to occur within the dynamic sector.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+          }
+        ]
+      },
+      {
+        "id": "u103l107ex2",
+        "title": "Alıştırma 2: be likely to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l107_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The new update is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">resolve</span> the latency issues.",
+            "options": [
+              "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi.",
+              "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+              "Akademik kurumlar öğrenciyi elde tutma göstergelerini takip etmeye alışıktı.",
+              "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l107_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi.",
+            "words": [
+              "issues",
+              "fail",
+              "The",
+              "is",
+              "primary",
+              "query",
+              "due",
+              "to",
+              "latency",
+              "to",
+              "network",
+              "was",
+              "approve",
+              "likely"
+            ],
+            "correctOrder": [
+              "The",
+              "primary",
+              "query",
+              "was",
+              "likely",
+              "to",
+              "fail",
+              "due",
+              "to",
+              "network",
+              "latency"
+            ],
+            "enSentence": "The primary query was likely to fail due to network latency.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir.",
+            "options": [
+              "The automated system is used to generating unique cryptographic tokens.",
+              "Corrupted device firmware is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> system failures.",
+              "The primary query was likely to fail due to network latency.",
+              "The diagnostic software is used to scanning massive file partitions."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l107_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Otomasyon rutininin sistem performansını artırması muhtemeldi.",
+            "words": [
+              "routine",
+              "automation",
+              "Corrupted",
+              "system",
+              "performance",
+              "to",
+              "latency",
+              "continues",
+              "likely",
+              "The",
+              "was",
+              "improve"
+            ],
+            "correctOrder": [
+              "The",
+              "automation",
+              "routine",
+              "was",
+              "likely",
+              "to",
+              "improve",
+              "system",
+              "performance"
+            ],
+            "enSentence": "The automation routine was likely to improve system performance.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The corporate tax rate is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">increase</span> next fiscal quarter.",
+            "options": [
+              "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi.",
+              "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l107_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+            "words": [
+              "is",
+              "Significant",
+              "likely",
+              "continues",
+              "crash",
+              "server",
+              "to",
+              "findings",
+              "overflow",
+              "The",
+              "if",
+              "database",
+              "the",
+              "simulation"
+            ],
+            "correctOrder": [
+              "The",
+              "server",
+              "is",
+              "likely",
+              "to",
+              "crash",
+              "if",
+              "the",
+              "database",
+              "overflow",
+              "continues"
+            ],
+            "enSentence": "The server is likely to crash if the database overflow continues.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The research team is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> their findings next month.",
+            "options": [
+              "Kamu araştırma enstitülerinde yüksek çözünürlüklü kayıt cihazları bulunmadığından, teknik uzmanlar dağınık istatistiksel ölçümleri derlemeye alışıktı.",
+              "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı.",
+              "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir.",
+              "Bu test parametrelerinin doğru sonuçlar vereceği kesindir."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l107_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These configuration errors are likely to ___ the final simulation.",
+            "options": [
+              "to affect",
+              "affected",
+              "affecting",
+              "affect"
+            ],
+            "correctIndex": 3,
+            "translation": "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The administrative council is likely to approve the new security protocol.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yönetim kurulunun yeni güvenlik protokolünü onaylaması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Significant annual financial growth is likely to occur within the dynamic sector.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+          }
+        ]
+      },
+      {
+        "id": "u103l107ex3",
+        "title": "Alıştırma 3: be likely to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l107_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The new update is likely to ___ the latency issues.",
+            "options": [
+              "resolve",
+              "resolving",
+              "resolved",
+              "to resolve"
+            ],
+            "correctIndex": 0,
+            "translation": "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The primary query was likely to ___ due to network latency.",
+            "options": [
+              "failed",
+              "to fail",
+              "failing",
+              "fail"
+            ],
+            "correctIndex": 3,
+            "translation": "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi."
+          },
+          {
+            "id": "u103l107_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Corrupted device firmware is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> system failures.",
+            "options": [
+              "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir.",
+              "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi.",
+              "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir.",
+              "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l107_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automation routine was likely to ___ system performance.",
+            "options": [
+              "improved",
+              "improving",
+              "improve",
+              "to improve"
+            ],
+            "correctIndex": 2,
+            "translation": "Otomasyon rutininin sistem performansını artırması muhtemeldi."
+          },
+          {
+            "id": "u103l107_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The corporate tax rate is likely to ___ next fiscal quarter.",
+            "options": [
+              "increased",
+              "increasing",
+              "to increase",
+              "increase"
+            ],
+            "correctIndex": 3,
+            "translation": "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+            "options": [
+              "Engineers were used to compiling data fields manually.",
+              "If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.",
+              "The server is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">crash</span> if the database overflow continues.",
+              "The automatic framework is certain to optimize the queries."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l107_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir.",
+            "words": [
+              "is",
+              "latency",
+              "fail",
+              "team",
+              "to",
+              "research",
+              "findings",
+              "month",
+              "their",
+              "performance",
+              "The",
+              "next",
+              "publish",
+              "likely"
+            ],
+            "correctOrder": [
+              "The",
+              "research",
+              "team",
+              "is",
+              "likely",
+              "to",
+              "publish",
+              "their",
+              "findings",
+              "next",
+              "month"
+            ],
+            "enSentence": "The research team is likely to publish their findings next month.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir.",
+            "words": [
+              "affect",
+              "to",
+              "are",
+              "simulation",
+              "final",
+              "corporate",
+              "is",
+              "errors",
+              "the",
+              "month",
+              "configuration",
+              "These",
+              "likely"
+            ],
+            "correctOrder": [
+              "These",
+              "configuration",
+              "errors",
+              "are",
+              "likely",
+              "to",
+              "affect",
+              "the",
+              "final",
+              "simulation"
+            ],
+            "enSentence": "These configuration errors are likely to affect the final simulation.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The administrative council is likely to approve the new security protocol.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yönetim kurulunun yeni güvenlik protokolünü onaylaması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Significant annual financial growth is likely to occur within the dynamic sector.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+          }
+        ]
+      },
+      {
+        "id": "u103l107ex4",
+        "title": "Alıştırma 4: be likely to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l107_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir.",
+            "options": [
+              "The new update is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">resolve</span> the latency issues.",
+              "The primary query was likely to fail due to network latency.",
+              "The research team was to publish their final empirical report last Monday.",
+              "Technical specialists were used to compiling loose statistical metrics since public research institutes lacked high-resolution logging devices."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l107_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The primary query was likely to ___ due to network latency.",
+            "options": [
+              "fail",
+              "failing",
+              "failed",
+              "to fail"
+            ],
+            "correctIndex": 0,
+            "translation": "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi."
+          },
+          {
+            "id": "u103l107_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir.",
+            "words": [
+              "system",
+              "fail",
+              "to",
+              "is",
+              "device",
+              "likely",
+              "tax",
+              "Corrupted",
+              "increase",
+              "firmware",
+              "cause",
+              "failures"
+            ],
+            "correctOrder": [
+              "Corrupted",
+              "device",
+              "firmware",
+              "is",
+              "likely",
+              "to",
+              "cause",
+              "system",
+              "failures"
+            ],
+            "enSentence": "Corrupted device firmware is likely to cause system failures.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomasyon rutininin sistem performansını artırması muhtemeldi.",
+            "options": [
+              "The automation routine was likely to <span style=\"color: #ff6b6b; font-weight: bold;\">improve</span> system performance.",
+              "This new protocol is certain to secure all external connections.",
+              "Cold weather anomalies are bound to happen in the northern regional facility every winter.",
+              "The continuous chemical process is doomed to stop if the concrete core cracks."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l107_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The corporate tax rate is likely to ___ next fiscal quarter.",
+            "options": [
+              "increasing",
+              "to increase",
+              "increase",
+              "increased"
+            ],
+            "correctIndex": 2,
+            "translation": "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+            "words": [
+              "The",
+              "overflow",
+              "the",
+              "crash",
+              "continues",
+              "database",
+              "affect",
+              "likely",
+              "to",
+              "protocol",
+              "simulation",
+              "if",
+              "server",
+              "is"
+            ],
+            "correctOrder": [
+              "The",
+              "server",
+              "is",
+              "likely",
+              "to",
+              "crash",
+              "if",
+              "the",
+              "database",
+              "overflow",
+              "continues"
+            ],
+            "enSentence": "The server is likely to crash if the database overflow continues.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir.",
+            "options": [
+              "The lead developer is reluctant to use unverified external libraries.",
+              "Without proper technical parameters, you are bound to make a logical mistake.",
+              "The research team is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> their findings next month.",
+              "The principal laboratory researcher is to go to the education ministry tomorrow."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l107_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir.",
+            "words": [
+              "simulation",
+              "final",
+              "affect",
+              "protocol",
+              "These",
+              "likely",
+              "errors",
+              "issues",
+              "the",
+              "configuration",
+              "are",
+              "to",
+              "occur"
+            ],
+            "correctOrder": [
+              "These",
+              "configuration",
+              "errors",
+              "are",
+              "likely",
+              "to",
+              "affect",
+              "the",
+              "final",
+              "simulation"
+            ],
+            "enSentence": "These configuration errors are likely to affect the final simulation.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l107_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The administrative council is likely to approve the new security protocol.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yönetim kurulunun yeni güvenlik protokolünü onaylaması muhtemeldir."
+          },
+          {
+            "id": "u103l107_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Significant annual financial growth is likely to occur within the dynamic sector.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "exercises": [
+      {
+        "id": "u103l108ex1",
+        "title": "Alıştırma 1: be unlikely to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l108_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system was unlikely to ___ without a full reboot.",
+            "options": [
+              "to recover",
+              "recovering",
+              "recover",
+              "recovered"
+            ],
+            "correctIndex": 2,
+            "translation": "Sistemin tam bir yeniden başlatma olmadan düzelmesi muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The server is unlikely to ___ under moderate user load.",
+            "options": [
+              "crash",
+              "crashing",
+              "crashed",
+              "to crash"
+            ],
+            "correctIndex": 0,
+            "translation": "Sunucunun orta düzeyde kullanıcı yükü altında çökmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Müşterinin değiştirilmiş sözleşme şartlarını kabul etmesi muhtemel değildir.",
+            "words": [
+              "terms",
+              "contract",
+              "accept",
+              "additional",
+              "unlikely",
+              "The",
+              "today",
+              "client",
+              "is",
+              "breach",
+              "modified",
+              "the",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "client",
+              "is",
+              "unlikely",
+              "to",
+              "accept",
+              "the",
+              "modified",
+              "contract",
+              "terms"
+            ],
+            "enSentence": "The client is unlikely to accept the modified contract terms.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The backup database is unlikely to ___ any transaction records.",
+            "options": [
+              "lose",
+              "losing",
+              "lost",
+              "to lose"
+            ],
+            "correctIndex": 0,
+            "translation": "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The compiler is unlikely to ___ errors with the new syntax.",
+            "options": [
+              "generate",
+              "generating",
+              "generated",
+              "to generate"
+            ],
+            "correctIndex": 0,
+            "translation": "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi.",
+            "words": [
+              "under",
+              "was",
+              "breach",
+              "are",
+              "the",
+              "branch",
+              "recover",
+              "security",
+              "encrypted",
+              "unlikely",
+              "to",
+              "The",
+              "detect"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "branch",
+              "was",
+              "unlikely",
+              "to",
+              "detect",
+              "the",
+              "encrypted",
+              "breach"
+            ],
+            "enSentence": "The security branch was unlikely to detect the encrypted breach.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians were unlikely to ___ the migration process today.",
+            "options": [
+              "to complete",
+              "completed",
+              "completing",
+              "complete"
+            ],
+            "correctIndex": 3,
+            "translation": "Teknisyenlerin taşıma işlemini bugün tamamlaması muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "It is unlikely to ___ during the international summit at the facility.",
+            "options": [
+              "rain",
+              "raining",
+              "rained",
+              "to rain"
+            ],
+            "correctIndex": 0,
+            "translation": "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unlikely to approve the additional funding.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"These old devices are unlikely to support the high-resolution logging feature.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir."
+          }
+        ]
+      },
+      {
+        "id": "u103l108ex2",
+        "title": "Alıştırma 2: be unlikely to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l108_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The system was unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">recover</span> without a full reboot.",
+            "options": [
+              "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir.",
+              "Sistemin tam bir yeniden başlatma olmadan düzelmesi muhtemel değildi.",
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l108_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Sunucunun orta düzeyde kullanıcı yükü altında çökmesi muhtemel değildir.",
+            "words": [
+              "moderate",
+              "is",
+              "server",
+              "The",
+              "user",
+              "crash",
+              "process",
+              "backup",
+              "unlikely",
+              "facility",
+              "to",
+              "load",
+              "under"
+            ],
+            "correctOrder": [
+              "The",
+              "server",
+              "is",
+              "unlikely",
+              "to",
+              "crash",
+              "under",
+              "moderate",
+              "user",
+              "load"
+            ],
+            "enSentence": "The server is unlikely to crash under moderate user load.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The client is unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">accept</span> the modified contract terms.",
+            "options": [
+              "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir.",
+              "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim.",
+              "Otomatik betiğin gece yarısı çalışacağı kesindir.",
+              "Müşterinin değiştirilmiş sözleşme şartlarını kabul etmesi muhtemel değildir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l108_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir.",
+            "words": [
+              "unlikely",
+              "to",
+              "is",
+              "any",
+              "database",
+              "compiler",
+              "records",
+              "transaction",
+              "backup",
+              "The",
+              "recover",
+              "lose",
+              "load"
+            ],
+            "correctOrder": [
+              "The",
+              "backup",
+              "database",
+              "is",
+              "unlikely",
+              "to",
+              "lose",
+              "any",
+              "transaction",
+              "records"
+            ],
+            "enSentence": "The backup database is unlikely to lose any transaction records.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir.",
+            "options": [
+              "The lead investigator was used to reviewing legislative policy documents.",
+              "The compiler is unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">generate</span> errors with the new syntax.",
+              "Project managers were used to implementing strict quality compliance frameworks.",
+              "Institutional authorities are supposed to protect sensitive user information privacy."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l108_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi.",
+            "words": [
+              "branch",
+              "the",
+              "breach",
+              "full",
+              "evaluation",
+              "security",
+              "to",
+              "The",
+              "encrypted",
+              "was",
+              "a",
+              "unlikely",
+              "detect"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "branch",
+              "was",
+              "unlikely",
+              "to",
+              "detect",
+              "the",
+              "encrypted",
+              "breach"
+            ],
+            "enSentence": "The security branch was unlikely to detect the encrypted breach.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Technicians were unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the migration process today.",
+            "options": [
+              "Teknisyenlerin taşıma işlemini bugün tamamlaması muhtemel değildi.",
+              "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir.",
+              "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir.",
+              "İkincil güvenlik duvarları harici trafiği tararken ağ altyapısı şubesi devasa bulut veritabanı sorgularını işlemeye alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l108_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "It is unlikely to ___ during the international summit at the facility.",
+            "options": [
+              "rained",
+              "raining",
+              "to rain",
+              "rain"
+            ],
+            "correctIndex": 3,
+            "translation": "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unlikely to approve the additional funding.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"These old devices are unlikely to support the high-resolution logging feature.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir."
+          }
+        ]
+      },
+      {
+        "id": "u103l108ex3",
+        "title": "Alıştırma 3: be unlikely to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l108_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system was unlikely to ___ without a full reboot.",
+            "options": [
+              "recovering",
+              "recovered",
+              "to recover",
+              "recover"
+            ],
+            "correctIndex": 3,
+            "translation": "Sistemin tam bir yeniden başlatma olmadan düzelmesi muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The server is unlikely to ___ under moderate user load.",
+            "options": [
+              "crashed",
+              "to crash",
+              "crashing",
+              "crash"
+            ],
+            "correctIndex": 3,
+            "translation": "Sunucunun orta düzeyde kullanıcı yükü altında çökmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The client is unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">accept</span> the modified contract terms.",
+            "options": [
+              "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır.",
+              "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Müşterinin değiştirilmiş sözleşme şartlarını kabul etmesi muhtemel değildir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l108_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The backup database is unlikely to ___ any transaction records.",
+            "options": [
+              "lose",
+              "losing",
+              "lost",
+              "to lose"
+            ],
+            "correctIndex": 0,
+            "translation": "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The compiler is unlikely to ___ errors with the new syntax.",
+            "options": [
+              "to generate",
+              "generated",
+              "generating",
+              "generate"
+            ],
+            "correctIndex": 3,
+            "translation": "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi.",
+            "options": [
+              "Independent experts are supposed to wear identity badges inside the facility.",
+              "The diagnostic software is used to scanning massive file partitions.",
+              "The security branch was unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">detect</span> the encrypted breach.",
+              "Technicians are supposed to know the advanced encryption password of this central module."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l108_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenlerin taşıma işlemini bugün tamamlaması muhtemel değildi.",
+            "words": [
+              "Technicians",
+              "migration",
+              "without",
+              "were",
+              "unlikely",
+              "to",
+              "process",
+              "today",
+              "encrypted",
+              "complete",
+              "the",
+              "was"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "were",
+              "unlikely",
+              "to",
+              "complete",
+              "the",
+              "migration",
+              "process",
+              "today"
+            ],
+            "enSentence": "Technicians were unlikely to complete the migration process today.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+            "words": [
+              "at",
+              "during",
+              "international",
+              "the",
+              "the",
+              "old",
+              "to",
+              "database",
+              "today",
+              "rain",
+              "unlikely",
+              "facility",
+              "is",
+              "summit",
+              "It"
+            ],
+            "correctOrder": [
+              "It",
+              "is",
+              "unlikely",
+              "to",
+              "rain",
+              "during",
+              "the",
+              "international",
+              "summit",
+              "at",
+              "the",
+              "facility"
+            ],
+            "enSentence": "It is unlikely to rain during the international summit at the facility.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unlikely to approve the additional funding.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"These old devices are unlikely to support the high-resolution logging feature.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir."
+          }
+        ]
+      },
+      {
+        "id": "u103l108ex4",
+        "title": "Alıştırma 4: be unlikely to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l108_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Sistemin tam bir yeniden başlatma olmadan düzelmesi muhtemel değildi.",
+            "options": [
+              "The system was unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">recover</span> without a full reboot.",
+              "The engineers were bound to notice the database conflict.",
+              "Independent technical experts were unable to explain the investigative project scope yesterday.",
+              "With such an advanced encryption algorithm, the security system is bound to succeed."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l108_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The server is unlikely to ___ under moderate user load.",
+            "options": [
+              "crashed",
+              "crash",
+              "to crash",
+              "crashing"
+            ],
+            "correctIndex": 1,
+            "translation": "Sunucunun orta düzeyde kullanıcı yükü altında çökmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Müşterinin değiştirilmiş sözleşme şartlarını kabul etmesi muhtemel değildir.",
+            "words": [
+              "client",
+              "unlikely",
+              "modified",
+              "The",
+              "accept",
+              "terms",
+              "contract",
+              "to",
+              "is",
+              "feature",
+              "moderate",
+              "the",
+              "records"
+            ],
+            "correctOrder": [
+              "The",
+              "client",
+              "is",
+              "unlikely",
+              "to",
+              "accept",
+              "the",
+              "modified",
+              "contract",
+              "terms"
+            ],
+            "enSentence": "The client is unlikely to accept the modified contract terms.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir.",
+            "options": [
+              "The compiler was about to complete the process when the network disconnected.",
+              "I am used to configuring complex network infrastructures.",
+              "The backup database is unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">lose</span> any transaction records.",
+              "Without proper technical parameters, you are bound to make a logical mistake."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l108_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The compiler is unlikely to ___ errors with the new syntax.",
+            "options": [
+              "to generate",
+              "generating",
+              "generate",
+              "generated"
+            ],
+            "correctIndex": 2,
+            "translation": "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l108_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi.",
+            "words": [
+              "was",
+              "branch",
+              "breach",
+              "to",
+              "the",
+              "today",
+              "The",
+              "crash",
+              "security",
+              "under",
+              "encrypted",
+              "unlikely",
+              "detect"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "branch",
+              "was",
+              "unlikely",
+              "to",
+              "detect",
+              "the",
+              "encrypted",
+              "breach"
+            ],
+            "enSentence": "The security branch was unlikely to detect the encrypted breach.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenlerin taşıma işlemini bugün tamamlaması muhtemel değildi.",
+            "options": [
+              "The research team was to publish their final empirical report last Monday.",
+              "Technicians were unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the migration process today.",
+              "The senior developer is used to processing large data streams.",
+              "The lead investigator was used to reviewing legislative policy documents."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l108_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+            "words": [
+              "summit",
+              "rain",
+              "to",
+              "unlikely",
+              "during",
+              "user",
+              "the",
+              "international",
+              "is",
+              "the",
+              "It",
+              "facility",
+              "at",
+              "encrypted",
+              "reboot"
+            ],
+            "correctOrder": [
+              "It",
+              "is",
+              "unlikely",
+              "to",
+              "rain",
+              "during",
+              "the",
+              "international",
+              "summit",
+              "at",
+              "the",
+              "facility"
+            ],
+            "enSentence": "It is unlikely to rain during the international summit at the facility.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l108_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unlikely to approve the additional funding.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi."
+          },
+          {
+            "id": "u103l108_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"These old devices are unlikely to support the high-resolution logging feature.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir."
+          }
+        ]
+      }
+    ]
+  },
+  "8": {
+    "exercises": [
+      {
+        "id": "u103l109ex1",
+        "title": "Alıştırma 1: be bound to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l109_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system is bound to ___ if you ignore the warnings.",
+            "options": [
+              "fail",
+              "failing",
+              "failed",
+              "to fail"
+            ],
+            "correctIndex": 0,
+            "translation": "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The engineers were bound to ___ the database conflict.",
+            "options": [
+              "to notice",
+              "noticed",
+              "noticing",
+              "notice"
+            ],
+            "correctIndex": 3,
+            "translation": "Mühendislerin veritabanı çelişkisini fark etmesi kaçınılmazdı."
+          },
+          {
+            "id": "u103l109_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır.",
+            "words": [
+              "Any",
+              "network",
+              "Without",
+              "latency",
+              "is",
+              "bound",
+              "delays",
+              "fail",
+              "cause",
+              "to",
+              "conflict",
+              "communication"
+            ],
+            "correctOrder": [
+              "Any",
+              "network",
+              "latency",
+              "is",
+              "bound",
+              "to",
+              "cause",
+              "communication",
+              "delays"
+            ],
+            "enSentence": "Any network latency is bound to cause communication delays.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "This software update is bound to ___ operational efficiency.",
+            "options": [
+              "improve",
+              "improving",
+              "improved",
+              "to improve"
+            ],
+            "correctIndex": 0,
+            "translation": "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Sooner or later, the administrative council is bound to ___ the truth.",
+            "options": [
+              "learning",
+              "learn",
+              "learned",
+              "to learn"
+            ],
+            "correctIndex": 1,
+            "translation": "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir."
+          },
+          {
+            "id": "u103l109_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+            "words": [
+              "Without",
+              "to",
+              "a",
+              "regional",
+              "logical",
+              "encryption",
+              "bound",
+              "proper",
+              "council",
+              "technical",
+              "parameters",
+              "you",
+              "are",
+              "make",
+              "mistake"
+            ],
+            "correctOrder": [
+              "Without",
+              "proper",
+              "technical",
+              "parameters",
+              "you",
+              "are",
+              "bound",
+              "to",
+              "make",
+              "a",
+              "logical",
+              "mistake"
+            ],
+            "enSentence": "Without proper technical parameters, you are bound to make a logical mistake.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Without comprehensive empirical evaluation, the database script is bound to ___.",
+            "options": [
+              "failed",
+              "failing",
+              "to fail",
+              "fail"
+            ],
+            "correctIndex": 3,
+            "translation": "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "With such an advanced encryption algorithm, the security system is bound to ___.",
+            "options": [
+              "succeeded",
+              "succeeding",
+              "to succeed",
+              "succeed"
+            ],
+            "correctIndex": 3,
+            "translation": "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık genişlemeyi finanse etmezse, dinamik sektörün durgunlukla karşılaşması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Cold weather anomalies are bound to happen in the northern regional facility every winter.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+          }
+        ]
+      },
+      {
+        "id": "u103l109ex2",
+        "title": "Alıştırma 2: be bound to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l109_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The system is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span> if you ignore the warnings.",
+            "options": [
+              "Otomatik betiğin gece yarısı çalışacağı kesindir.",
+              "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir.",
+              "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır.",
+              "Otomatik altyapının sorguları optimize edeceği kesindir."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l109_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendislerin veritabanı çelişkisini fark etmesi kaçınılmazdı.",
+            "words": [
+              "engineers",
+              "The",
+              "proper",
+              "the",
+              "were",
+              "to",
+              "ignore",
+              "conflict",
+              "bound",
+              "database",
+              "notice",
+              "warnings"
+            ],
+            "correctOrder": [
+              "The",
+              "engineers",
+              "were",
+              "bound",
+              "to",
+              "notice",
+              "the",
+              "database",
+              "conflict"
+            ],
+            "enSentence": "The engineers were bound to notice the database conflict.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Any network latency is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> communication delays.",
+            "options": [
+              "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır.",
+              "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+              "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi.",
+              "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l109_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır.",
+            "words": [
+              "efficiency",
+              "software",
+              "if",
+              "update",
+              "is",
+              "This",
+              "operational",
+              "bound",
+              "to",
+              "notice",
+              "With",
+              "improve"
+            ],
+            "correctOrder": [
+              "This",
+              "software",
+              "update",
+              "is",
+              "bound",
+              "to",
+              "improve",
+              "operational",
+              "efficiency"
+            ],
+            "enSentence": "This software update is bound to improve operational efficiency.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir.",
+            "options": [
+              "Sooner or later, the administrative council is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">learn</span> the truth.",
+              "I am used to refactoring unoptimized legacy source codes.",
+              "You are supposed to submit your historical system logs before Friday afternoon.",
+              "The automation routine was likely to improve system performance."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l109_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+            "words": [
+              "technical",
+              "make",
+              "delays",
+              "bound",
+              "parameters",
+              "proper",
+              "logical",
+              "to",
+              "empirical",
+              "happen",
+              "Without",
+              "mistake",
+              "a",
+              "you",
+              "are"
+            ],
+            "correctOrder": [
+              "Without",
+              "proper",
+              "technical",
+              "parameters",
+              "you",
+              "are",
+              "bound",
+              "to",
+              "make",
+              "a",
+              "logical",
+              "mistake"
+            ],
+            "enSentence": "Without proper technical parameters, you are bound to make a logical mistake.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Without comprehensive empirical evaluation, the database script is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span>.",
+            "options": [
+              "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+              "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır.",
+              "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu.",
+              "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l109_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "With such an advanced encryption algorithm, the security system is bound to ___.",
+            "options": [
+              "succeed",
+              "succeeding",
+              "succeeded",
+              "to succeed"
+            ],
+            "correctIndex": 0,
+            "translation": "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık genişlemeyi finanse etmezse, dinamik sektörün durgunlukla karşılaşması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Cold weather anomalies are bound to happen in the northern regional facility every winter.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+          }
+        ]
+      },
+      {
+        "id": "u103l109ex3",
+        "title": "Alıştırma 3: be bound to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l109_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system is bound to ___ if you ignore the warnings.",
+            "options": [
+              "failing",
+              "fail",
+              "failed",
+              "to fail"
+            ],
+            "correctIndex": 1,
+            "translation": "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The engineers were bound to ___ the database conflict.",
+            "options": [
+              "noticed",
+              "to notice",
+              "noticing",
+              "notice"
+            ],
+            "correctIndex": 3,
+            "translation": "Mühendislerin veritabanı çelişkisini fark etmesi kaçınılmazdı."
+          },
+          {
+            "id": "u103l109_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Any network latency is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> communication delays.",
+            "options": [
+              "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+              "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım.",
+              "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı.",
+              "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l109_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "This software update is bound to ___ operational efficiency.",
+            "options": [
+              "improve",
+              "improving",
+              "improved",
+              "to improve"
+            ],
+            "correctIndex": 0,
+            "translation": "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Sooner or later, the administrative council is bound to ___ the truth.",
+            "options": [
+              "learning",
+              "learn",
+              "to learn",
+              "learned"
+            ],
+            "correctIndex": 1,
+            "translation": "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir."
+          },
+          {
+            "id": "u103l109_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+            "options": [
+              "Technicians were unwilling to shut down the main server during production.",
+              "Local laboratories are used to testing chemical solution properties.",
+              "The software team is about to optimize the centralized cloud database modules.",
+              "Without proper technical parameters, you are bound to <span style=\"color: #ff6b6b; font-weight: bold;\">make</span> a logical mistake."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l109_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+            "words": [
+              "the",
+              "bound",
+              "evaluation",
+              "script",
+              "ministry",
+              "is",
+              "winter",
+              "empirical",
+              "mistake",
+              "comprehensive",
+              "database",
+              "fail",
+              "to",
+              "Without"
+            ],
+            "correctOrder": [
+              "Without",
+              "comprehensive",
+              "empirical",
+              "evaluation",
+              "the",
+              "database",
+              "script",
+              "is",
+              "bound",
+              "to",
+              "fail"
+            ],
+            "enSentence": "Without comprehensive empirical evaluation, the database script is bound to fail.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır.",
+            "words": [
+              "notice",
+              "to",
+              "an",
+              "software",
+              "encryption",
+              "the",
+              "advanced",
+              "system",
+              "bound",
+              "such",
+              "security",
+              "is",
+              "algorithm",
+              "administrative",
+              "With",
+              "succeed"
+            ],
+            "correctOrder": [
+              "With",
+              "such",
+              "an",
+              "advanced",
+              "encryption",
+              "algorithm",
+              "the",
+              "security",
+              "system",
+              "is",
+              "bound",
+              "to",
+              "succeed"
+            ],
+            "enSentence": "With such an advanced encryption algorithm, the security system is bound to succeed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık genişlemeyi finanse etmezse, dinamik sektörün durgunlukla karşılaşması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Cold weather anomalies are bound to happen in the northern regional facility every winter.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+          }
+        ]
+      },
+      {
+        "id": "u103l109ex4",
+        "title": "Alıştırma 4: be bound to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l109_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The system is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span> if you ignore the warnings.",
+            "options": [
+              "Çoğu yönetici güvenlik protokollerini düzenli olarak değiştirmeye alışıktır.",
+              "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi.",
+              "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır.",
+              "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l109_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The engineers were bound to ___ the database conflict.",
+            "options": [
+              "notice",
+              "noticing",
+              "noticed",
+              "to notice"
+            ],
+            "correctIndex": 0,
+            "translation": "Mühendislerin veritabanı çelişkisini fark etmesi kaçınılmazdı."
+          },
+          {
+            "id": "u103l109_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır.",
+            "words": [
+              "latency",
+              "communication",
+              "fail",
+              "network",
+              "is",
+              "delays",
+              "Any",
+              "if",
+              "bound",
+              "cause",
+              "doesn't",
+              "to"
+            ],
+            "correctOrder": [
+              "Any",
+              "network",
+              "latency",
+              "is",
+              "bound",
+              "to",
+              "cause",
+              "communication",
+              "delays"
+            ],
+            "enSentence": "Any network latency is bound to cause communication delays.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır.",
+            "options": [
+              "The system administrator is accustomed to monitoring real-time network traffic.",
+              "This software update is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">improve</span> operational efficiency.",
+              "The software team is unable to modify substantial empirical inputs at the moment.",
+              "Most operators were willing to work extra hours to fix the database issue."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l109_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Sooner or later, the administrative council is bound to ___ the truth.",
+            "options": [
+              "learn",
+              "learning",
+              "learned",
+              "to learn"
+            ],
+            "correctIndex": 0,
+            "translation": "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir."
+          },
+          {
+            "id": "u103l109_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+            "words": [
+              "bound",
+              "are",
+              "you",
+              "anomalies",
+              "make",
+              "parameters",
+              "logical",
+              "database",
+              "mistake",
+              "a",
+              "to",
+              "technical",
+              "proper",
+              "Without",
+              "latency"
+            ],
+            "correctOrder": [
+              "Without",
+              "proper",
+              "technical",
+              "parameters",
+              "you",
+              "are",
+              "bound",
+              "to",
+              "make",
+              "a",
+              "logical",
+              "mistake"
+            ],
+            "enSentence": "Without proper technical parameters, you are bound to make a logical mistake.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+            "options": [
+              "The supervisor was used to handling severe database overflows.",
+              "The management was unwilling to approve the additional server budget.",
+              "Without comprehensive empirical evaluation, the database script is bound to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span>.",
+              "Environmental groups were used to monitoring global heat anomaly indexes."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l109_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır.",
+            "words": [
+              "bound",
+              "an",
+              "security",
+              "is",
+              "you",
+              "such",
+              "succeed",
+              "advanced",
+              "warnings",
+              "encryption",
+              "the",
+              "system",
+              "With",
+              "algorithm",
+              "efficiency",
+              "to"
+            ],
+            "correctOrder": [
+              "With",
+              "such",
+              "an",
+              "advanced",
+              "encryption",
+              "algorithm",
+              "the",
+              "security",
+              "system",
+              "is",
+              "bound",
+              "to",
+              "succeed"
+            ],
+            "enSentence": "With such an advanced encryption algorithm, the security system is bound to succeed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l109_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık genişlemeyi finanse etmezse, dinamik sektörün durgunlukla karşılaşması kaçınılmazdır."
+          },
+          {
+            "id": "u103l109_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Cold weather anomalies are bound to happen in the northern regional facility every winter.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+          }
+        ]
+      }
+    ]
+  },
+  "9": {
+    "exercises": [
+      {
+        "id": "u103l110ex1",
+        "title": "Alıştırma 1: be certain to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l110_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic script is certain to ___ at midnight.",
+            "options": [
+              "executed",
+              "execute",
+              "to execute",
+              "executing"
+            ],
+            "correctIndex": 1,
+            "translation": "Otomatik betiğin gece yarısı çalışacağı kesindir."
+          },
+          {
+            "id": "u103l110_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "to detect",
+              "detect",
+              "detecting",
+              "detected"
+            ],
+            "correctIndex": 1,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l110_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+            "words": [
+              "execute",
+              "The",
+              "architecture",
+              "security",
+              "attacks",
+              "updates",
+              "to",
+              "external",
+              "all",
+              "certain",
+              "are",
+              "block"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "updates",
+              "are",
+              "certain",
+              "to",
+              "block",
+              "external",
+              "attacks"
+            ],
+            "enSentence": "The security updates are certain to block external attacks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic framework is certain to ___ the queries.",
+            "options": [
+              "optimize",
+              "optimizing",
+              "optimized",
+              "to optimize"
+            ],
+            "correctIndex": 0,
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir."
+          },
+          {
+            "id": "u103l110_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "These test parameters are certain to ___ accurate results.",
+            "options": [
+              "yielding",
+              "yield",
+              "to yield",
+              "yielded"
+            ],
+            "correctIndex": 1,
+            "translation": "Bu test parametrelerinin doğru sonuçlar vereceği kesindir."
+          },
+          {
+            "id": "u103l110_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Projenin yeni mimariyle başarılı olacağı kesindi.",
+            "words": [
+              "certain",
+              "midnight",
+              "The",
+              "the",
+              "project",
+              "succeed",
+              "advanced",
+              "is",
+              "to",
+              "architecture",
+              "was",
+              "with",
+              "new"
+            ],
+            "correctOrder": [
+              "The",
+              "project",
+              "was",
+              "certain",
+              "to",
+              "succeed",
+              "with",
+              "the",
+              "new",
+              "architecture"
+            ],
+            "enSentence": "The project was certain to succeed with the new architecture.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The main server was certain to ___ under that heavy load.",
+            "options": [
+              "overheated",
+              "overheating",
+              "overheat",
+              "to overheat"
+            ],
+            "correctIndex": 2,
+            "translation": "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi."
+          },
+          {
+            "id": "u103l110_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "This new protocol is certain to ___ all external connections.",
+            "options": [
+              "secure",
+              "securing",
+              "secured",
+              "to secure"
+            ],
+            "correctIndex": 0,
+            "translation": "Bu yeni protokolün tüm dış bağlantıları güvence altına alacağı kesindir."
+          },
+          {
+            "id": "u103l110_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          },
+          {
+            "id": "u103l110_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"He is certain to pass the advanced encryption algorithms certification test.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+          }
+        ]
+      },
+      {
+        "id": "u103l110ex2",
+        "title": "Alıştırma 2: be certain to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l110_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomatik betiğin gece yarısı çalışacağı kesindir.",
+            "options": [
+              "The senior developer is used to processing large data streams.",
+              "I am used to configuring complex network infrastructures.",
+              "Our servers were accustomed to handling sudden traffic spikes.",
+              "The automatic script is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">execute</span> at midnight."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l110_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi.",
+            "words": [
+              "to",
+              "simulation",
+              "attacks",
+              "The",
+              "were",
+              "latency",
+              "automatic",
+              "operators",
+              "the",
+              "certain",
+              "network",
+              "detect"
+            ],
+            "correctOrder": [
+              "The",
+              "operators",
+              "were",
+              "certain",
+              "to",
+              "detect",
+              "the",
+              "network",
+              "latency"
+            ],
+            "enSentence": "The operators were certain to detect the network latency.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The security updates are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">block</span> external attacks.",
+            "options": [
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Baş araştırmacının politika belgelerini incelemesi planlanmıştı.",
+              "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l110_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir.",
+            "words": [
+              "is",
+              "The",
+              "queries",
+              "to",
+              "automatic",
+              "external",
+              "framework",
+              "certain",
+              "optimize",
+              "architecture",
+              "the",
+              "heavy"
+            ],
+            "correctOrder": [
+              "The",
+              "automatic",
+              "framework",
+              "is",
+              "certain",
+              "to",
+              "optimize",
+              "the",
+              "queries"
+            ],
+            "enSentence": "The automatic framework is certain to optimize the queries.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Bu test parametrelerinin doğru sonuçlar vereceği kesindir.",
+            "options": [
+              "Technicians are about to induce a safe system emergency reset right now.",
+              "Institutional authorities are supposed to protect sensitive user information privacy.",
+              "The engineers were bound to notice the database conflict.",
+              "These test parameters are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">yield</span> accurate results."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l110_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Projenin yeni mimariyle başarılı olacağı kesindi.",
+            "words": [
+              "to",
+              "was",
+              "project",
+              "architecture",
+              "succeed",
+              "with",
+              "new",
+              "certain",
+              "The",
+              "the",
+              "automatic",
+              "latency",
+              "under"
+            ],
+            "correctOrder": [
+              "The",
+              "project",
+              "was",
+              "certain",
+              "to",
+              "succeed",
+              "with",
+              "the",
+              "new",
+              "architecture"
+            ],
+            "enSentence": "The project was certain to succeed with the new architecture.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi.",
+            "options": [
+              "The application was doomed to run slowly on older devices.",
+              "Technicians are not supposed to modify the system parameters on Sundays.",
+              "This software update is bound to improve operational efficiency.",
+              "The main server was certain to <span style=\"color: #ff6b6b; font-weight: bold;\">overheat</span> under that heavy load."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l110_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "This new protocol is certain to ___ all external connections.",
+            "options": [
+              "securing",
+              "secured",
+              "to secure",
+              "secure"
+            ],
+            "correctIndex": 3,
+            "translation": "Bu yeni protokolün tüm dış bağlantıları güvence altına alacağı kesindir."
+          },
+          {
+            "id": "u103l110_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          },
+          {
+            "id": "u103l110_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"He is certain to pass the advanced encryption algorithms certification test.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+          }
+        ]
+      },
+      {
+        "id": "u103l110ex3",
+        "title": "Alıştırma 3: be certain to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l110_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic script is certain to ___ at midnight.",
+            "options": [
+              "to execute",
+              "executed",
+              "executing",
+              "execute"
+            ],
+            "correctIndex": 3,
+            "translation": "Otomatik betiğin gece yarısı çalışacağı kesindir."
+          },
+          {
+            "id": "u103l110_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "detecting",
+              "detect",
+              "to detect",
+              "detected"
+            ],
+            "correctIndex": 1,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l110_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The security updates are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">block</span> external attacks.",
+            "options": [
+              "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi.",
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı.",
+              "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l110_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic framework is certain to ___ the queries.",
+            "options": [
+              "to optimize",
+              "optimizing",
+              "optimize",
+              "optimized"
+            ],
+            "correctIndex": 2,
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir."
+          },
+          {
+            "id": "u103l110_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "These test parameters are certain to ___ accurate results.",
+            "options": [
+              "yield",
+              "yielding",
+              "yielded",
+              "to yield"
+            ],
+            "correctIndex": 0,
+            "translation": "Bu test parametrelerinin doğru sonuçlar vereceği kesindir."
+          },
+          {
+            "id": "u103l110_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Projenin yeni mimariyle başarılı olacağı kesindi.",
+            "options": [
+              "The project was certain to <span style=\"color: #ff6b6b; font-weight: bold;\">succeed</span> with the new architecture.",
+              "The senior developer is used to processing large data streams.",
+              "The supervisor was accustomed to handling severe database overflows.",
+              "The software update was supposed to arrive at noon, but it is heavily delayed."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l110_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi.",
+            "words": [
+              "was",
+              "overheat",
+              "that",
+              "is",
+              "certain",
+              "to",
+              "server",
+              "main",
+              "load",
+              "heavy",
+              "under",
+              "The",
+              "all",
+              "at"
+            ],
+            "correctOrder": [
+              "The",
+              "main",
+              "server",
+              "was",
+              "certain",
+              "to",
+              "overheat",
+              "under",
+              "that",
+              "heavy",
+              "load"
+            ],
+            "enSentence": "The main server was certain to overheat under that heavy load.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bu yeni protokolün tüm dış bağlantıları güvence altına alacağı kesindir.",
+            "words": [
+              "were",
+              "protocol",
+              "to",
+              "is",
+              "connections",
+              "all",
+              "main",
+              "certain",
+              "new",
+              "external",
+              "the",
+              "This",
+              "secure"
+            ],
+            "correctOrder": [
+              "This",
+              "new",
+              "protocol",
+              "is",
+              "certain",
+              "to",
+              "secure",
+              "all",
+              "external",
+              "connections"
+            ],
+            "enSentence": "This new protocol is certain to secure all external connections.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          },
+          {
+            "id": "u103l110_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"He is certain to pass the advanced encryption algorithms certification test.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+          }
+        ]
+      },
+      {
+        "id": "u103l110ex4",
+        "title": "Alıştırma 4: be certain to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l110_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomatik betiğin gece yarısı çalışacağı kesindir.",
+            "options": [
+              "Heavy machinery was unable to modify its technical system parameters under high pressure.",
+              "Institutional authorities are supposed to protect sensitive user information privacy.",
+              "The supervisor was reluctant to report the minor configuration failure.",
+              "The automatic script is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">execute</span> at midnight."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l110_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "to detect",
+              "detected",
+              "detecting",
+              "detect"
+            ],
+            "correctIndex": 3,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l110_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+            "words": [
+              "The",
+              "new",
+              "security",
+              "updates",
+              "are",
+              "certain",
+              "to",
+              "block",
+              "external",
+              "attacks",
+              "after",
+              "parameters"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "updates",
+              "are",
+              "certain",
+              "to",
+              "block",
+              "external",
+              "attacks"
+            ],
+            "enSentence": "The security updates are certain to block external attacks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The automatic framework is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">optimize</span> the queries.",
+            "options": [
+              "Otomatik altyapının sorguları optimize edeceği kesindir.",
+              "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+              "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir.",
+              "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l110_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "These test parameters are certain to ___ accurate results.",
+            "options": [
+              "yielded",
+              "to yield",
+              "yield",
+              "yielding"
+            ],
+            "correctIndex": 2,
+            "translation": "Bu test parametrelerinin doğru sonuçlar vereceği kesindir."
+          },
+          {
+            "id": "u103l110_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Projenin yeni mimariyle başarılı olacağı kesindi.",
+            "words": [
+              "new",
+              "was",
+              "after",
+              "security",
+              "are",
+              "the",
+              "with",
+              "to",
+              "succeed",
+              "architecture",
+              "project",
+              "The",
+              "certain"
+            ],
+            "correctOrder": [
+              "The",
+              "project",
+              "was",
+              "certain",
+              "to",
+              "succeed",
+              "with",
+              "the",
+              "new",
+              "architecture"
+            ],
+            "enSentence": "The project was certain to succeed with the new architecture.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi.",
+            "options": [
+              "The compiler is unlikely to generate errors with the new syntax.",
+              "The main server was certain to <span style=\"color: #ff6b6b; font-weight: bold;\">overheat</span> under that heavy load.",
+              "The client is unlikely to accept the modified contract terms.",
+              "The supervisor was reluctant to report the minor configuration failure."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l110_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bu yeni protokolün tüm dış bağlantıları güvence altına alacağı kesindir.",
+            "words": [
+              "secure",
+              "This",
+              "all",
+              "new",
+              "external",
+              "yield",
+              "heavy",
+              "is",
+              "protocol",
+              "certain",
+              "to",
+              "connections",
+              "queries"
+            ],
+            "correctOrder": [
+              "This",
+              "new",
+              "protocol",
+              "is",
+              "certain",
+              "to",
+              "secure",
+              "all",
+              "external",
+              "connections"
+            ],
+            "enSentence": "This new protocol is certain to secure all external connections.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l110_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          },
+          {
+            "id": "u103l110_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"He is certain to pass the advanced encryption algorithms certification test.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+          }
+        ]
+      }
+    ]
+  },
+  "10": {
+    "exercises": [
+      {
+        "id": "u103l111ex1",
+        "title": "Alıştırma 1: be doomed to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l111_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The application was doomed to ___ slowly on older devices.",
+            "options": [
+              "ran",
+              "running",
+              "to run",
+              "run"
+            ],
+            "correctIndex": 3,
+            "translation": "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The unencrypted network is doomed to ___ breached eventually.",
+            "options": [
+              "be",
+              "being",
+              "been",
+              "to be"
+            ],
+            "correctIndex": 0,
+            "translation": "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur."
+          },
+          {
+            "id": "u103l111_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+            "words": [
+              "proper",
+              "without",
+              "is",
+              "doomed",
+              "system",
+              "to",
+              "legacy",
+              "The",
+              "slowly",
+              "fail",
+              "under",
+              "maintenance",
+              "engineers"
+            ],
+            "correctOrder": [
+              "The",
+              "legacy",
+              "system",
+              "is",
+              "doomed",
+              "to",
+              "fail",
+              "without",
+              "proper",
+              "maintenance"
+            ],
+            "enSentence": "The legacy system is doomed to fail without proper maintenance.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The outdated hardware was doomed to ___ under heavy workload.",
+            "options": [
+              "overheated",
+              "overheating",
+              "to overheat",
+              "overheat"
+            ],
+            "correctIndex": 3,
+            "translation": "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Their startup was doomed to ___ bankrupt due to poor database management.",
+            "options": [
+              "go",
+              "gone",
+              "to go",
+              "going"
+            ],
+            "correctIndex": 0,
+            "translation": "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+          },
+          {
+            "id": "u103l111_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Beton çekirdek çatlarsa sürekli kimyasal sürecin durması kaçınılmazdır.",
+            "words": [
+              "The",
+              "process",
+              "concrete",
+              "to",
+              "doomed",
+              "facility",
+              "stop",
+              "if",
+              "continuous",
+              "is",
+              "core",
+              "chemical",
+              "cracks",
+              "the",
+              "industrial",
+              "experts"
+            ],
+            "correctOrder": [
+              "The",
+              "continuous",
+              "chemical",
+              "process",
+              "is",
+              "doomed",
+              "to",
+              "stop",
+              "if",
+              "the",
+              "concrete",
+              "core",
+              "cracks"
+            ],
+            "enSentence": "The continuous chemical process is doomed to stop if the concrete core cracks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Reckless engineers are doomed to ___ a major crash in the industrial facility.",
+            "options": [
+              "cause",
+              "causing",
+              "caused",
+              "to cause"
+            ],
+            "correctIndex": 0,
+            "translation": "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur."
+          },
+          {
+            "id": "u103l111_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The project was doomed to ___ from the beginning due to a lack of technical experts.",
+            "options": [
+              "to fail",
+              "fail",
+              "failed",
+              "failing"
+            ],
+            "correctIndex": 1,
+            "translation": "Proje, teknik uzman eksikliği nedeniyle başlangıçtan itibaren başarısız olmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Without automated tools, the operators were doomed to repeat the same compiling tasks.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Otomatik araçlar olmadan, operatörler aynı derleme görevlerini tekrarlamaya mahkumdular."
+          },
+          {
+            "id": "u103l111_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Outdated architectural frameworks are doomed to collapse sooner or later in technology.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+          }
+        ]
+      },
+      {
+        "id": "u103l111ex2",
+        "title": "Alıştırma 2: be doomed to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l111_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The application was doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">run</span> slowly on older devices.",
+            "options": [
+              "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+              "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti.",
+              "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir.",
+              "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l111_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur.",
+            "words": [
+              "be",
+              "The",
+              "doomed",
+              "major",
+              "overheat",
+              "to",
+              "core",
+              "is",
+              "breached",
+              "eventually",
+              "unencrypted",
+              "network"
+            ],
+            "correctOrder": [
+              "The",
+              "unencrypted",
+              "network",
+              "is",
+              "doomed",
+              "to",
+              "be",
+              "breached",
+              "eventually"
+            ],
+            "enSentence": "The unencrypted network is doomed to be breached eventually.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The legacy system is doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span> without proper maintenance.",
+            "options": [
+              "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "İç kurul bu hafta acil komite toplantısı çağıramamaktadır.",
+              "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l111_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu.",
+            "words": [
+              "The",
+              "outdated",
+              "chemical",
+              "automated",
+              "application",
+              "workload",
+              "hardware",
+              "was",
+              "under",
+              "doomed",
+              "to",
+              "overheat",
+              "heavy"
+            ],
+            "correctOrder": [
+              "The",
+              "outdated",
+              "hardware",
+              "was",
+              "doomed",
+              "to",
+              "overheat",
+              "under",
+              "heavy",
+              "workload"
+            ],
+            "enSentence": "The outdated hardware was doomed to overheat under heavy workload.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu.",
+            "options": [
+              "Technicians were unlikely to complete the migration process today.",
+              "Their startup was doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">go</span> bankrupt due to poor database management.",
+              "The automated system is used to generating unique cryptographic tokens.",
+              "Technicians were unwilling to shut down the main server during production."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l111_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Beton çekirdek çatlarsa sürekli kimyasal sürecin durması kaçınılmazdır.",
+            "words": [
+              "process",
+              "The",
+              "is",
+              "doomed",
+              "major",
+              "the",
+              "core",
+              "frameworks",
+              "repeat",
+              "concrete",
+              "continuous",
+              "chemical",
+              "cracks",
+              "to",
+              "stop",
+              "if"
+            ],
+            "correctOrder": [
+              "The",
+              "continuous",
+              "chemical",
+              "process",
+              "is",
+              "doomed",
+              "to",
+              "stop",
+              "if",
+              "the",
+              "concrete",
+              "core",
+              "cracks"
+            ],
+            "enSentence": "The continuous chemical process is doomed to stop if the concrete core cracks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur.",
+            "options": [
+              "You are to report any security breaches immediately.",
+              "Without proper technical parameters, you are bound to make a logical mistake.",
+              "The supervisor was used to handling severe database overflows.",
+              "Reckless engineers are doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> a major crash in the industrial facility."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l111_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The project was doomed to ___ from the beginning due to a lack of technical experts.",
+            "options": [
+              "failed",
+              "failing",
+              "fail",
+              "to fail"
+            ],
+            "correctIndex": 2,
+            "translation": "Proje, teknik uzman eksikliği nedeniyle başlangıçtan itibaren başarısız olmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Without automated tools, the operators were doomed to repeat the same compiling tasks.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Otomatik araçlar olmadan, operatörler aynı derleme görevlerini tekrarlamaya mahkumdular."
+          },
+          {
+            "id": "u103l111_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Outdated architectural frameworks are doomed to collapse sooner or later in technology.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+          }
+        ]
+      },
+      {
+        "id": "u103l111ex3",
+        "title": "Alıştırma 3: be doomed to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l111_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The application was doomed to ___ slowly on older devices.",
+            "options": [
+              "running",
+              "run",
+              "ran",
+              "to run"
+            ],
+            "correctIndex": 1,
+            "translation": "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The unencrypted network is doomed to ___ breached eventually.",
+            "options": [
+              "be",
+              "being",
+              "been",
+              "to be"
+            ],
+            "correctIndex": 0,
+            "translation": "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur."
+          },
+          {
+            "id": "u103l111_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+            "options": [
+              "The legacy system is doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">fail</span> without proper maintenance.",
+              "The backup database is unlikely to lose any transaction records.",
+              "These test parameters are certain to yield accurate results.",
+              "Engineers are willing to cooperate on cross-platform integration."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l111_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The outdated hardware was doomed to ___ under heavy workload.",
+            "options": [
+              "overheat",
+              "to overheat",
+              "overheating",
+              "overheated"
+            ],
+            "correctIndex": 0,
+            "translation": "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu."
+          },
+          {
+            "id": "u103l111_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Their startup was doomed to ___ bankrupt due to poor database management.",
+            "options": [
+              "to go",
+              "gone",
+              "going",
+              "go"
+            ],
+            "correctIndex": 3,
+            "translation": "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+          },
+          {
+            "id": "u103l111_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Beton çekirdek çatlarsa sürekli kimyasal sürecin durması kaçınılmazdır.",
+            "options": [
+              "The ministry is willing to fund the rapid regional infrastructure expansion.",
+              "The administrative team is to update the rules tomorrow.",
+              "The supervisor was used to handling severe database overflows.",
+              "The continuous chemical process is doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">stop</span> if the concrete core cracks."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l111_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur.",
+            "words": [
+              "doomed",
+              "are",
+              "in",
+              "technology",
+              "the",
+              "engineers",
+              "crash",
+              "a",
+              "facility",
+              "major",
+              "or",
+              "Reckless",
+              "to",
+              "industrial",
+              "cause",
+              "outdated"
+            ],
+            "correctOrder": [
+              "Reckless",
+              "engineers",
+              "are",
+              "doomed",
+              "to",
+              "cause",
+              "a",
+              "major",
+              "crash",
+              "in",
+              "the",
+              "industrial",
+              "facility"
+            ],
+            "enSentence": "Reckless engineers are doomed to cause a major crash in the industrial facility.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Proje, teknik uzman eksikliği nedeniyle başlangıçtan itibaren başarısız olmaya mahkumdu.",
+            "words": [
+              "technical",
+              "was",
+              "a",
+              "of",
+              "project",
+              "doomed",
+              "fail",
+              "lack",
+              "experts",
+              "to",
+              "beginning",
+              "to",
+              "the",
+              "technology",
+              "Without",
+              "collapse",
+              "from",
+              "due",
+              "The"
+            ],
+            "correctOrder": [
+              "The",
+              "project",
+              "was",
+              "doomed",
+              "to",
+              "fail",
+              "from",
+              "the",
+              "beginning",
+              "due",
+              "to",
+              "a",
+              "lack",
+              "of",
+              "technical",
+              "experts"
+            ],
+            "enSentence": "The project was doomed to fail from the beginning due to a lack of technical experts.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Without automated tools, the operators were doomed to repeat the same compiling tasks.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Otomatik araçlar olmadan, operatörler aynı derleme görevlerini tekrarlamaya mahkumdular."
+          },
+          {
+            "id": "u103l111_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Outdated architectural frameworks are doomed to collapse sooner or later in technology.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+          }
+        ]
+      },
+      {
+        "id": "u103l111ex4",
+        "title": "Alıştırma 4: be doomed to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l111_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The application was doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">run</span> slowly on older devices.",
+            "options": [
+              "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu.",
+              "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+              "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir.",
+              "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l111_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The unencrypted network is doomed to ___ breached eventually.",
+            "options": [
+              "been",
+              "being",
+              "be",
+              "to be"
+            ],
+            "correctIndex": 2,
+            "translation": "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur."
+          },
+          {
+            "id": "u103l111_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+            "words": [
+              "older",
+              "is",
+              "the",
+              "legacy",
+              "proper",
+              "frameworks",
+              "doomed",
+              "fail",
+              "maintenance",
+              "to",
+              "without",
+              "system",
+              "The"
+            ],
+            "correctOrder": [
+              "The",
+              "legacy",
+              "system",
+              "is",
+              "doomed",
+              "to",
+              "fail",
+              "without",
+              "proper",
+              "maintenance"
+            ],
+            "enSentence": "The legacy system is doomed to fail without proper maintenance.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The outdated hardware was doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">overheat</span> under heavy workload.",
+            "options": [
+              "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu.",
+              "Yönetim ekibi kuralları yarın güncelleyecektir.",
+              "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi.",
+              "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l111_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Their startup was doomed to ___ bankrupt due to poor database management.",
+            "options": [
+              "to go",
+              "going",
+              "go",
+              "gone"
+            ],
+            "correctIndex": 2,
+            "translation": "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+          },
+          {
+            "id": "u103l111_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Beton çekirdek çatlarsa sürekli kimyasal sürecin durması kaçınılmazdır.",
+            "words": [
+              "chemical",
+              "The",
+              "concrete",
+              "if",
+              "cracks",
+              "stop",
+              "Reckless",
+              "the",
+              "facility",
+              "is",
+              "continuous",
+              "project",
+              "doomed",
+              "process",
+              "to",
+              "core"
+            ],
+            "correctOrder": [
+              "The",
+              "continuous",
+              "chemical",
+              "process",
+              "is",
+              "doomed",
+              "to",
+              "stop",
+              "if",
+              "the",
+              "concrete",
+              "core",
+              "cracks"
+            ],
+            "enSentence": "The continuous chemical process is doomed to stop if the concrete core cracks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur.",
+            "options": [
+              "Most administrators are used to modifying security protocols regularly.",
+              "I am used to handling unexpected system latency anomalies.",
+              "Operators are willing to work overtime during the comprehensive regional educational surveys.",
+              "Reckless engineers are doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> a major crash in the industrial facility."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l111_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Proje, teknik uzman eksikliği nedeniyle başlangıçtan itibaren başarısız olmaya mahkumdu.",
+            "words": [
+              "project",
+              "lack",
+              "to",
+              "beginning",
+              "to",
+              "technical",
+              "a",
+              "was",
+              "the",
+              "bankrupt",
+              "doomed",
+              "due",
+              "of",
+              "sooner",
+              "from",
+              "The",
+              "fail",
+              "experts",
+              "or"
+            ],
+            "correctOrder": [
+              "The",
+              "project",
+              "was",
+              "doomed",
+              "to",
+              "fail",
+              "from",
+              "the",
+              "beginning",
+              "due",
+              "to",
+              "a",
+              "lack",
+              "of",
+              "technical",
+              "experts"
+            ],
+            "enSentence": "The project was doomed to fail from the beginning due to a lack of technical experts.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l111_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Without automated tools, the operators were doomed to repeat the same compiling tasks.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Otomatik araçlar olmadan, operatörler aynı derleme görevlerini tekrarlamaya mahkumdular."
+          },
+          {
+            "id": "u103l111_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Outdated architectural frameworks are doomed to collapse sooner or later in technology.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "exercises": [
+      {
+        "id": "u103l112ex1",
+        "title": "Alıştırma 1: be to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l112_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The new interface is to ___ next week.",
+            "options": [
+              "launch",
+              "launching",
+              "launched",
+              "to launch"
+            ],
+            "correctIndex": 0,
+            "translation": "Yeni arayüzün önümüzdeki hafta yayına girmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "You are to ___ any security breaches immediately.",
+            "options": [
+              "to report",
+              "reported",
+              "reporting",
+              "report"
+            ],
+            "correctIndex": 3,
+            "translation": "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+          },
+          {
+            "id": "u103l112_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yönetim ekibi kuralları yarın güncelleyecektir.",
+            "words": [
+              "team",
+              "The",
+              "security",
+              "regional",
+              "administrative",
+              "update",
+              "You",
+              "rules",
+              "tomorrow",
+              "the",
+              "is",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "administrative",
+              "team",
+              "is",
+              "to",
+              "update",
+              "the",
+              "rules",
+              "tomorrow"
+            ],
+            "enSentence": "The administrative team is to update the rules tomorrow.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Engineers were to ___ the compiler tests yesterday.",
+            "options": [
+              "to complete",
+              "complete",
+              "completing",
+              "completed"
+            ],
+            "correctIndex": 1,
+            "translation": "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The chief investigator was to ___ the policy documents.",
+            "options": [
+              "reviewing",
+              "reviewed",
+              "to review",
+              "review"
+            ],
+            "correctIndex": 3,
+            "translation": "Baş araştırmacının politika belgelerini incelemesi planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır.",
+            "words": [
+              "software",
+              "production",
+              "server",
+              "policy",
+              "the",
+              "breaches",
+              "launch",
+              "The",
+              "on",
+              "is",
+              "update",
+              "tonight",
+              "to",
+              "council"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "update",
+              "is",
+              "to",
+              "launch",
+              "on",
+              "the",
+              "production",
+              "server",
+              "tonight"
+            ],
+            "enSentence": "The software update is to launch on the production server tonight.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The research team was to ___ their final empirical report last Monday.",
+            "options": [
+              "to publish",
+              "published",
+              "publishing",
+              "publish"
+            ],
+            "correctIndex": 3,
+            "translation": "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The emergency committee meeting is to ___ at precisely nine o'clock tomorrow.",
+            "options": [
+              "start",
+              "starting",
+              "started",
+              "to start"
+            ],
+            "correctIndex": 0,
+            "translation": "Acil durum komitesi toplantısının yarın tam saat dokuzda başlaması planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The principal laboratory researcher is to go to the education ministry tomorrow.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"The regional administrative council is to revise the strict security protocol next week.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bölgesel yönetim kurulunun önümüzdeki hafta sıkı güvenlik protokolünü revize etmesi planlanmaktadır."
+          }
+        ]
+      },
+      {
+        "id": "u103l112ex2",
+        "title": "Alıştırma 2: be to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l112_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yeni arayüzün önümüzdeki hafta yayına girmesi planlanmaktadır.",
+            "options": [
+              "The new interface is to <span style=\"color: #ff6b6b; font-weight: bold;\">launch</span> next week.",
+              "Most developers are accustomed to deploying builds automatically.",
+              "The server is likely to crash if the database overflow continues.",
+              "The senior developer is used to processing large data streams."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l112_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız.",
+            "words": [
+              "immediately",
+              "report",
+              "is",
+              "to",
+              "tests",
+              "breaches",
+              "You",
+              "council",
+              "security",
+              "are",
+              "any"
+            ],
+            "correctOrder": [
+              "You",
+              "are",
+              "to",
+              "report",
+              "any",
+              "security",
+              "breaches",
+              "immediately"
+            ],
+            "enSentence": "You are to report any security breaches immediately.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The administrative team is to <span style=\"color: #ff6b6b; font-weight: bold;\">update</span> the rules tomorrow.",
+            "options": [
+              "Yönetim ekibi kuralları yarın güncelleyecektir.",
+              "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır.",
+              "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir.",
+              "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l112_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı.",
+            "words": [
+              "compiler",
+              "yesterday",
+              "week",
+              "Engineers",
+              "tests",
+              "the",
+              "complete",
+              "empirical",
+              "were",
+              "to",
+              "next"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "were",
+              "to",
+              "complete",
+              "the",
+              "compiler",
+              "tests",
+              "yesterday"
+            ],
+            "enSentence": "Engineers were to complete the compiler tests yesterday.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Baş araştırmacının politika belgelerini incelemesi planlanmıştı.",
+            "options": [
+              "The outdated hardware was doomed to overheat under heavy workload.",
+              "The chief investigator was to <span style=\"color: #ff6b6b; font-weight: bold;\">review</span> the policy documents.",
+              "Sooner or later, the administrative council is bound to learn the truth.",
+              "Reckless engineers are doomed to cause a major crash in the industrial facility."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l112_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır.",
+            "words": [
+              "The",
+              "software",
+              "launch",
+              "update",
+              "empirical",
+              "is",
+              "on",
+              "tonight",
+              "new",
+              "production",
+              "to",
+              "the",
+              "documents",
+              "server"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "update",
+              "is",
+              "to",
+              "launch",
+              "on",
+              "the",
+              "production",
+              "server",
+              "tonight"
+            ],
+            "enSentence": "The software update is to launch on the production server tonight.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The research team was to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> their final empirical report last Monday.",
+            "options": [
+              "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler.",
+              "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı.",
+              "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir.",
+              "Projenin yeni mimariyle başarılı olacağı kesindi."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l112_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The emergency committee meeting is to ___ at precisely nine o'clock tomorrow.",
+            "options": [
+              "to start",
+              "start",
+              "starting",
+              "started"
+            ],
+            "correctIndex": 1,
+            "translation": "Acil durum komitesi toplantısının yarın tam saat dokuzda başlaması planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The principal laboratory researcher is to go to the education ministry tomorrow.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The regional administrative council is to revise the strict security protocol next week.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bölgesel yönetim kurulunun önümüzdeki hafta sıkı güvenlik protokolünü revize etmesi planlanmaktadır."
+          }
+        ]
+      },
+      {
+        "id": "u103l112ex3",
+        "title": "Alıştırma 3: be to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l112_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The new interface is to ___ next week.",
+            "options": [
+              "to launch",
+              "launch",
+              "launched",
+              "launching"
+            ],
+            "correctIndex": 1,
+            "translation": "Yeni arayüzün önümüzdeki hafta yayına girmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "You are to ___ any security breaches immediately.",
+            "options": [
+              "report",
+              "reporting",
+              "reported",
+              "to report"
+            ],
+            "correctIndex": 0,
+            "translation": "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+          },
+          {
+            "id": "u103l112_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The administrative team is to <span style=\"color: #ff6b6b; font-weight: bold;\">update</span> the rules tomorrow.",
+            "options": [
+              "Otomatik altyapının sorguları optimize edeceği kesindir.",
+              "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir.",
+              "İkincil güvenlik duvarları harici trafiği tararken ağ altyapısı şubesi devasa bulut veritabanı sorgularını işlemeye alışıktır.",
+              "Yönetim ekibi kuralları yarın güncelleyecektir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l112_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Engineers were to ___ the compiler tests yesterday.",
+            "options": [
+              "completed",
+              "completing",
+              "complete",
+              "to complete"
+            ],
+            "correctIndex": 2,
+            "translation": "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The chief investigator was to ___ the policy documents.",
+            "options": [
+              "to review",
+              "reviewed",
+              "reviewing",
+              "review"
+            ],
+            "correctIndex": 3,
+            "translation": "Baş araştırmacının politika belgelerini incelemesi planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The software update is to <span style=\"color: #ff6b6b; font-weight: bold;\">launch</span> on the production server tonight.",
+            "options": [
+              "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir.",
+              "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım.",
+              "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır.",
+              "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l112_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı.",
+            "words": [
+              "research",
+              "new",
+              "report",
+              "publish",
+              "last",
+              "team",
+              "final",
+              "empirical",
+              "The",
+              "was",
+              "to",
+              "their",
+              "committee",
+              "Monday",
+              "security"
+            ],
+            "correctOrder": [
+              "The",
+              "research",
+              "team",
+              "was",
+              "to",
+              "publish",
+              "their",
+              "final",
+              "empirical",
+              "report",
+              "last",
+              "Monday"
+            ],
+            "enSentence": "The research team was to publish their final empirical report last Monday.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Acil durum komitesi toplantısının yarın tam saat dokuzda başlaması planlanmaktadır.",
+            "words": [
+              "precisely",
+              "next",
+              "at",
+              "complete",
+              "meeting",
+              "o'clock",
+              "The",
+              "emergency",
+              "to",
+              "Monday",
+              "tomorrow",
+              "start",
+              "nine",
+              "is",
+              "committee"
+            ],
+            "correctOrder": [
+              "The",
+              "emergency",
+              "committee",
+              "meeting",
+              "is",
+              "to",
+              "start",
+              "at",
+              "precisely",
+              "nine",
+              "o'clock",
+              "tomorrow"
+            ],
+            "enSentence": "The emergency committee meeting is to start at precisely nine o'clock tomorrow.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The principal laboratory researcher is to go to the education ministry tomorrow.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The regional administrative council is to revise the strict security protocol next week.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bölgesel yönetim kurulunun önümüzdeki hafta sıkı güvenlik protokolünü revize etmesi planlanmaktadır."
+          }
+        ]
+      },
+      {
+        "id": "u103l112ex4",
+        "title": "Alıştırma 4: be to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l112_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yeni arayüzün önümüzdeki hafta yayına girmesi planlanmaktadır.",
+            "options": [
+              "The security updates are certain to block external attacks.",
+              "The new interface is to <span style=\"color: #ff6b6b; font-weight: bold;\">launch</span> next week.",
+              "The chief investigator was to review the policy documents.",
+              "The diagnostic software is used to scanning massive file partitions."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l112_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "You are to ___ any security breaches immediately.",
+            "options": [
+              "to report",
+              "reported",
+              "reporting",
+              "report"
+            ],
+            "correctIndex": 3,
+            "translation": "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+          },
+          {
+            "id": "u103l112_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yönetim ekibi kuralları yarın güncelleyecektir.",
+            "words": [
+              "The",
+              "administrative",
+              "emergency",
+              "the",
+              "nine",
+              "tomorrow",
+              "update",
+              "team",
+              "breaches",
+              "is",
+              "rules",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "administrative",
+              "team",
+              "is",
+              "to",
+              "update",
+              "the",
+              "rules",
+              "tomorrow"
+            ],
+            "enSentence": "The administrative team is to update the rules tomorrow.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Engineers were to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the compiler tests yesterday.",
+            "options": [
+              "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı.",
+              "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir.",
+              "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir.",
+              "Otomatik teşhis betiğini çalıştırmak üzereydik."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l112_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The chief investigator was to ___ the policy documents.",
+            "options": [
+              "to review",
+              "review",
+              "reviewing",
+              "reviewed"
+            ],
+            "correctIndex": 1,
+            "translation": "Baş araştırmacının politika belgelerini incelemesi planlanmıştı."
+          },
+          {
+            "id": "u103l112_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır.",
+            "words": [
+              "The",
+              "software",
+              "launch",
+              "server",
+              "revise",
+              "production",
+              "to",
+              "yesterday",
+              "update",
+              "the",
+              "tonight",
+              "is",
+              "compiler",
+              "on"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "update",
+              "is",
+              "to",
+              "launch",
+              "on",
+              "the",
+              "production",
+              "server",
+              "tonight"
+            ],
+            "enSentence": "The software update is to launch on the production server tonight.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı.",
+            "options": [
+              "The research team was to <span style=\"color: #ff6b6b; font-weight: bold;\">publish</span> their final empirical report last Monday.",
+              "Our servers were accustomed to handling sudden traffic spikes.",
+              "The junior developer is willing to learn new programming languages.",
+              "Environmental groups were used to monitoring global heat anomaly indexes."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l112_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Acil durum komitesi toplantısının yarın tam saat dokuzda başlaması planlanmaktadır.",
+            "words": [
+              "at",
+              "meeting",
+              "yesterday",
+              "o'clock",
+              "precisely",
+              "is",
+              "nine",
+              "to",
+              "tests",
+              "committee",
+              "emergency",
+              "The",
+              "start",
+              "tomorrow",
+              "new"
+            ],
+            "correctOrder": [
+              "The",
+              "emergency",
+              "committee",
+              "meeting",
+              "is",
+              "to",
+              "start",
+              "at",
+              "precisely",
+              "nine",
+              "o'clock",
+              "tomorrow"
+            ],
+            "enSentence": "The emergency committee meeting is to start at precisely nine o'clock tomorrow.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l112_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The principal laboratory researcher is to go to the education ministry tomorrow.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır."
+          },
+          {
+            "id": "u103l112_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"The regional administrative council is to revise the strict security protocol next week.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bölgesel yönetim kurulunun önümüzdeki hafta sıkı güvenlik protokolünü revize etmesi planlanmaktadır."
+          }
+        ]
+      }
+    ]
+  },
+  "12": {
+    "exercises": [
+      {
+        "id": "u103l113ex1",
+        "title": "Alıştırma 1: be supposed to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l113_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are not supposed to ___ the system parameters on Sundays.",
+            "options": [
+              "to modify",
+              "modified",
+              "modifying",
+              "modify"
+            ],
+            "correctIndex": 3,
+            "translation": "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir."
+          },
+          {
+            "id": "u103l113_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Independent experts are supposed to ___ identity badges inside the facility.",
+            "options": [
+              "wearing",
+              "wear",
+              "worn",
+              "to wear"
+            ],
+            "correctIndex": 1,
+            "translation": "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir."
+          },
+          {
+            "id": "u103l113_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü.",
+            "words": [
+              "system",
+              "three",
+              "not",
+              "but",
+              "The",
+              "to",
+              "supposed",
+              "legislative",
+              "be",
+              "tax",
+              "was",
+              "took",
+              "reform",
+              "it",
+              "of",
+              "months",
+              "easy"
+            ],
+            "correctOrder": [
+              "The",
+              "legislative",
+              "tax",
+              "reform",
+              "was",
+              "supposed",
+              "to",
+              "be",
+              "easy",
+              "but",
+              "it",
+              "took",
+              "three",
+              "months"
+            ],
+            "enSentence": "The legislative tax reform was supposed to be easy, but it took three months.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The software update was supposed to ___ at noon, but it is heavily delayed.",
+            "options": [
+              "arrive",
+              "arriving",
+              "arrived",
+              "to arrive"
+            ],
+            "correctIndex": 0,
+            "translation": "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti."
+          },
+          {
+            "id": "u103l113_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "This framework is supposed to ___ the best architectural solution in the sector.",
+            "options": [
+              "been",
+              "be",
+              "to be",
+              "being"
+            ],
+            "correctIndex": 1,
+            "translation": "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir."
+          },
+          {
+            "id": "u103l113_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir.",
+            "words": [
+              "your",
+              "You",
+              "logs",
+              "Technicians",
+              "The",
+              "before",
+              "are",
+              "supposed",
+              "submit",
+              "to",
+              "afternoon",
+              "information",
+              "historical",
+              "system",
+              "Friday"
+            ],
+            "correctOrder": [
+              "You",
+              "are",
+              "supposed",
+              "to",
+              "submit",
+              "your",
+              "historical",
+              "system",
+              "logs",
+              "before",
+              "Friday",
+              "afternoon"
+            ],
+            "enSentence": "You are supposed to submit your historical system logs before Friday afternoon.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "We are not supposed to ___ the secure network area without biometric clearance.",
+            "options": [
+              "to access",
+              "accessed",
+              "accessing",
+              "access"
+            ],
+            "correctIndex": 3,
+            "translation": "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir."
+          },
+          {
+            "id": "u103l113_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The analyst is supposed to ___ comprehensive regional surveys with your inputs.",
+            "options": [
+              "to evaluate",
+              "evaluated",
+              "evaluating",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir."
+          },
+          {
+            "id": "u103l113_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are supposed to protect sensitive user information privacy.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir."
+          },
+          {
+            "id": "u103l113_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Technicians are supposed to know the advanced encryption password of this central module.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknisyenlerin bu merkezi modülün gelişmiş şifreleme şifresini bilmesi gerekir."
+          }
+        ]
+      },
+      {
+        "id": "u103l113ex2",
+        "title": "Alıştırma 2: be supposed to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l113_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir.",
+            "options": [
+              "The operators were about to launch the migration process.",
+              "Our servers were accustomed to handling sudden traffic spikes.",
+              "The company was willing to invest in advanced cybersecurity tools.",
+              "Technicians are not supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the system parameters on Sundays."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l113_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir.",
+            "words": [
+              "Independent",
+              "experts",
+              "wear",
+              "to",
+              "inside",
+              "facility",
+              "badges",
+              "are",
+              "three",
+              "the",
+              "identity",
+              "supposed",
+              "this",
+              "advanced"
+            ],
+            "correctOrder": [
+              "Independent",
+              "experts",
+              "are",
+              "supposed",
+              "to",
+              "wear",
+              "identity",
+              "badges",
+              "inside",
+              "the",
+              "facility"
+            ],
+            "enSentence": "Independent experts are supposed to wear identity badges inside the facility.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü.",
+            "options": [
+              "The legislative tax reform was supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">be</span> easy, but it took three months.",
+              "The automatic script is certain to execute at midnight.",
+              "We were about to run the automated diagnostic script.",
+              "Project managers were used to implementing strict quality compliance frameworks."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l113_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti.",
+            "words": [
+              "heavily",
+              "comprehensive",
+              "months",
+              "The",
+              "arrive",
+              "it",
+              "but",
+              "was",
+              "software",
+              "noon",
+              "supposed",
+              "is",
+              "your",
+              "at",
+              "update",
+              "to",
+              "delayed"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "update",
+              "was",
+              "supposed",
+              "to",
+              "arrive",
+              "at",
+              "noon",
+              "but",
+              "it",
+              "is",
+              "heavily",
+              "delayed"
+            ],
+            "enSentence": "The software update was supposed to arrive at noon, but it is heavily delayed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir.",
+            "options": [
+              "The internal board is unwilling to accept the sudden corporate paradigm shift.",
+              "This framework is supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">be</span> the best architectural solution in the sector.",
+              "Local laboratories are used to testing chemical solution properties.",
+              "I am used to handling unexpected system latency anomalies."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l113_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir.",
+            "words": [
+              "logs",
+              "clearance",
+              "supposed",
+              "submit",
+              "three",
+              "biometric",
+              "You",
+              "before",
+              "are",
+              "to",
+              "historical",
+              "your",
+              "system",
+              "Friday",
+              "afternoon"
+            ],
+            "correctOrder": [
+              "You",
+              "are",
+              "supposed",
+              "to",
+              "submit",
+              "your",
+              "historical",
+              "system",
+              "logs",
+              "before",
+              "Friday",
+              "afternoon"
+            ],
+            "enSentence": "You are supposed to submit your historical system logs before Friday afternoon.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "We are not supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">access</span> the secure network area without biometric clearance.",
+            "options": [
+              "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür.",
+              "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir.",
+              "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir.",
+              "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l113_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The analyst is supposed to ___ comprehensive regional surveys with your inputs.",
+            "options": [
+              "evaluated",
+              "evaluating",
+              "evaluate",
+              "to evaluate"
+            ],
+            "correctIndex": 2,
+            "translation": "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir."
+          },
+          {
+            "id": "u103l113_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are supposed to protect sensitive user information privacy.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir."
+          },
+          {
+            "id": "u103l113_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"Technicians are supposed to know the advanced encryption password of this central module.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknisyenlerin bu merkezi modülün gelişmiş şifreleme şifresini bilmesi gerekir."
+          }
+        ]
+      },
+      {
+        "id": "u103l113ex3",
+        "title": "Alıştırma 3: be supposed to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l113_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are not supposed to ___ the system parameters on Sundays.",
+            "options": [
+              "modifying",
+              "modify",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 1,
+            "translation": "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir."
+          },
+          {
+            "id": "u103l113_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Independent experts are supposed to ___ identity badges inside the facility.",
+            "options": [
+              "wear",
+              "wearing",
+              "to wear",
+              "worn"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir."
+          },
+          {
+            "id": "u103l113_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The legislative tax reform was supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">be</span> easy, but it took three months.",
+            "options": [
+              "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü.",
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi.",
+              "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l113_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The software update was supposed to ___ at noon, but it is heavily delayed.",
+            "options": [
+              "arriving",
+              "arrive",
+              "arrived",
+              "to arrive"
+            ],
+            "correctIndex": 1,
+            "translation": "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti."
+          },
+          {
+            "id": "u103l113_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "This framework is supposed to ___ the best architectural solution in the sector.",
+            "options": [
+              "being",
+              "to be",
+              "be",
+              "been"
+            ],
+            "correctIndex": 2,
+            "translation": "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir."
+          },
+          {
+            "id": "u103l113_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir.",
+            "options": [
+              "Auditors are certain to flag the unencrypted database password.",
+              "The primary query was likely to fail due to network latency.",
+              "Government agencies are unable to process the newly collected empirical data securely.",
+              "You are supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">submit</span> your historical system logs before Friday afternoon."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l113_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir.",
+            "words": [
+              "We",
+              "not",
+              "on",
+              "access",
+              "supposed",
+              "secure",
+              "are",
+              "but",
+              "privacy",
+              "area",
+              "network",
+              "to",
+              "the",
+              "biometric",
+              "clearance",
+              "without"
+            ],
+            "correctOrder": [
+              "We",
+              "are",
+              "not",
+              "supposed",
+              "to",
+              "access",
+              "the",
+              "secure",
+              "network",
+              "area",
+              "without",
+              "biometric",
+              "clearance"
+            ],
+            "enSentence": "We are not supposed to access the secure network area without biometric clearance.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir.",
+            "words": [
+              "evaluate",
+              "comprehensive",
+              "with",
+              "regional",
+              "Sundays",
+              "inputs",
+              "is",
+              "The",
+              "your",
+              "analyst",
+              "to",
+              "supposed",
+              "best",
+              "Friday",
+              "surveys"
+            ],
+            "correctOrder": [
+              "The",
+              "analyst",
+              "is",
+              "supposed",
+              "to",
+              "evaluate",
+              "comprehensive",
+              "regional",
+              "surveys",
+              "with",
+              "your",
+              "inputs"
+            ],
+            "enSentence": "The analyst is supposed to evaluate comprehensive regional surveys with your inputs.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are supposed to protect sensitive user information privacy.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir."
+          },
+          {
+            "id": "u103l113_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Technicians are supposed to know the advanced encryption password of this central module.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknisyenlerin bu merkezi modülün gelişmiş şifreleme şifresini bilmesi gerekir."
+          }
+        ]
+      },
+      {
+        "id": "u103l113ex4",
+        "title": "Alıştırma 4: be supposed to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l113_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir.",
+            "options": [
+              "The junior developer is willing to learn new programming languages.",
+              "This software update is bound to improve operational efficiency.",
+              "Technicians are not supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the system parameters on Sundays.",
+              "Technical experts are unwilling to adopt the outdated architectural framework."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l113_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Independent experts are supposed to ___ identity badges inside the facility.",
+            "options": [
+              "wear",
+              "to wear",
+              "wearing",
+              "worn"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir."
+          },
+          {
+            "id": "u103l113_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü.",
+            "words": [
+              "The",
+              "it",
+              "easy",
+              "supposed",
+              "architectural",
+              "was",
+              "but",
+              "be",
+              "to",
+              "tax",
+              "system",
+              "months",
+              "three",
+              "took",
+              "legislative",
+              "the",
+              "reform"
+            ],
+            "correctOrder": [
+              "The",
+              "legislative",
+              "tax",
+              "reform",
+              "was",
+              "supposed",
+              "to",
+              "be",
+              "easy",
+              "but",
+              "it",
+              "took",
+              "three",
+              "months"
+            ],
+            "enSentence": "The legislative tax reform was supposed to be easy, but it took three months.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The software update was supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">arrive</span> at noon, but it is heavily delayed.",
+            "options": [
+              "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir.",
+              "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir.",
+              "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti.",
+              "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l113_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "This framework is supposed to ___ the best architectural solution in the sector.",
+            "options": [
+              "be",
+              "to be",
+              "been",
+              "being"
+            ],
+            "correctIndex": 0,
+            "translation": "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir."
+          },
+          {
+            "id": "u103l113_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir.",
+            "words": [
+              "historical",
+              "sensitive",
+              "You",
+              "afternoon",
+              "submit",
+              "your",
+              "are",
+              "advanced",
+              "sector",
+              "before",
+              "to",
+              "supposed",
+              "system",
+              "Friday",
+              "logs"
+            ],
+            "correctOrder": [
+              "You",
+              "are",
+              "supposed",
+              "to",
+              "submit",
+              "your",
+              "historical",
+              "system",
+              "logs",
+              "before",
+              "Friday",
+              "afternoon"
+            ],
+            "enSentence": "You are supposed to submit your historical system logs before Friday afternoon.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "We are not supposed to <span style=\"color: #ff6b6b; font-weight: bold;\">access</span> the secure network area without biometric clearance.",
+            "options": [
+              "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir.",
+              "Otomasyon rutininin sistem performansını artırması muhtemeldi.",
+              "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir.",
+              "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l113_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir.",
+            "words": [
+              "regional",
+              "inputs",
+              "comprehensive",
+              "is",
+              "with",
+              "architectural",
+              "surveys",
+              "analyst",
+              "The",
+              "to",
+              "noon",
+              "supposed",
+              "your",
+              "evaluate",
+              "protect"
+            ],
+            "correctOrder": [
+              "The",
+              "analyst",
+              "is",
+              "supposed",
+              "to",
+              "evaluate",
+              "comprehensive",
+              "regional",
+              "surveys",
+              "with",
+              "your",
+              "inputs"
+            ],
+            "enSentence": "The analyst is supposed to evaluate comprehensive regional surveys with your inputs.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l113_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Institutional authorities are supposed to protect sensitive user information privacy.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir."
+          },
+          {
+            "id": "u103l113_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Technicians are supposed to know the advanced encryption password of this central module.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Teknisyenlerin bu merkezi modülün gelişmiş şifreleme şifresini bilmesi gerekir."
+          }
+        ]
+      }
+    ]
+  },
+  "13": {
+    "exercises": [
+      {
+        "id": "u103l114ex1",
+        "title": "Alıştırma 1: be unable to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l114_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The internal board is unable to ___ an emergency committee meeting this week.",
+            "options": [
+              "calling",
+              "called",
+              "call",
+              "to call"
+            ],
+            "correctIndex": 2,
+            "translation": "İç kurul bu hafta acil komite toplantısı çağıramamaktadır."
+          },
+          {
+            "id": "u103l114_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The software team is unable to ___ substantial empirical inputs at the moment.",
+            "options": [
+              "modified",
+              "modifying",
+              "to modify",
+              "modify"
+            ],
+            "correctIndex": 3,
+            "translation": "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir."
+          },
+          {
+            "id": "u103l114_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Devlet kurumları yeni toplanan deneysel verileri güvenli bir şekilde işleyememektedir.",
+            "words": [
+              "unable",
+              "newly",
+              "under",
+              "empirical",
+              "annual",
+              "process",
+              "analysts",
+              "to",
+              "are",
+              "agencies",
+              "Government",
+              "securely",
+              "data",
+              "the",
+              "collected"
+            ],
+            "correctOrder": [
+              "Government",
+              "agencies",
+              "are",
+              "unable",
+              "to",
+              "process",
+              "the",
+              "newly",
+              "collected",
+              "empirical",
+              "data",
+              "securely"
+            ],
+            "enSentence": "Government agencies are unable to process the newly collected empirical data securely.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Senior financial analysts are unable to ___ significant annual financial growth.",
+            "options": [
+              "anticipate",
+              "anticipating",
+              "to anticipate",
+              "anticipated"
+            ],
+            "correctIndex": 0,
+            "translation": "Kıdemli finansal analistler önemli yıllık finansal büyümeyi tahmin edememektedir."
+          },
+          {
+            "id": "u103l114_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Heavy machinery was unable to ___ its technical system parameters under high pressure.",
+            "options": [
+              "modify",
+              "modifying",
+              "to modify",
+              "modified"
+            ],
+            "correctIndex": 0,
+            "translation": "Ağır makineler yüksek basınç altında teknik sistem parametrelerini değiştiremedi."
+          },
+          {
+            "id": "u103l114_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Eğitim bakanlığı geçen dönem özel bir yerel komite düzenleyemedi.",
+            "words": [
+              "empirical",
+              "organize",
+              "was",
+              "local",
+              "last",
+              "semester",
+              "inputs",
+              "a",
+              "ministry",
+              "committee",
+              "education",
+              "securely",
+              "to",
+              "The",
+              "specialized",
+              "unable"
+            ],
+            "correctOrder": [
+              "The",
+              "education",
+              "ministry",
+              "was",
+              "unable",
+              "to",
+              "organize",
+              "a",
+              "specialized",
+              "local",
+              "committee",
+              "last",
+              "semester"
+            ],
+            "enSentence": "The education ministry was unable to organize a specialized local committee last semester.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians were unable to ___ an automated background script during the system blackout.",
+            "options": [
+              "deploy",
+              "deploying",
+              "to deploy",
+              "deployed"
+            ],
+            "correctIndex": 0,
+            "translation": "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı."
+          },
+          {
+            "id": "u103l114_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Engineers are unable to ___ crucial internal device components without additional tools.",
+            "options": [
+              "stabilized",
+              "stabilizing",
+              "to stabilize",
+              "stabilize"
+            ],
+            "correctIndex": 3,
+            "translation": "Mühendisler ek araçlar olmadan kritik dahili cihaz bileşenlerini stabilize edememektedir."
+          },
+          {
+            "id": "u103l114_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent technical experts were unable to explain the investigative project scope yesterday.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+          },
+          {
+            "id": "u103l114_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unable to determine where to shift separate international research funds.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi ayrı uluslararası araştırma fonlarının nereye aktarılacağını belirleyemedi."
+          }
+        ]
+      },
+      {
+        "id": "u103l114ex2",
+        "title": "Alıştırma 2: be unable to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l114_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "İç kurul bu hafta acil komite toplantısı çağıramamaktadır.",
+            "options": [
+              "The internal board is unable to <span style=\"color: #ff6b6b; font-weight: bold;\">call</span> an emergency committee meeting this week.",
+              "The simulation was certain to succeed after the configuration change.",
+              "The chief architect was used to designing cross-disciplinary software modules.",
+              "I am used to refactoring complex application systems in order that frontend developers can integrate visual components cleanly."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l114_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir.",
+            "words": [
+              "Engineers",
+              "substantial",
+              "empirical",
+              "the",
+              "at",
+              "inputs",
+              "team",
+              "software",
+              "moment",
+              "unable",
+              "is",
+              "under",
+              "to",
+              "The",
+              "modify",
+              "analysts"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "team",
+              "is",
+              "unable",
+              "to",
+              "modify",
+              "substantial",
+              "empirical",
+              "inputs",
+              "at",
+              "the",
+              "moment"
+            ],
+            "enSentence": "The software team is unable to modify substantial empirical inputs at the moment.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Devlet kurumları yeni toplanan deneysel verileri güvenli bir şekilde işleyememektedir.",
+            "options": [
+              "Institutional authorities were willing to approve the additional server budget.",
+              "These configuration errors are likely to affect the final simulation.",
+              "Technicians are supposed to know the advanced encryption password of this central module.",
+              "Government agencies are unable to <span style=\"color: #ff6b6b; font-weight: bold;\">process</span> the newly collected empirical data securely."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l114_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kıdemli finansal analistler önemli yıllık finansal büyümeyi tahmin edememektedir.",
+            "words": [
+              "The",
+              "Senior",
+              "financial",
+              "a",
+              "analysts",
+              "financial",
+              "are",
+              "annual",
+              "unable",
+              "to",
+              "growth",
+              "anticipate",
+              "significant",
+              "process"
+            ],
+            "correctOrder": [
+              "Senior",
+              "financial",
+              "analysts",
+              "are",
+              "unable",
+              "to",
+              "anticipate",
+              "significant",
+              "annual",
+              "financial",
+              "growth"
+            ],
+            "enSentence": "Senior financial analysts are unable to anticipate significant annual financial growth.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Ağır makineler yüksek basınç altında teknik sistem parametrelerini değiştiremedi.",
+            "options": [
+              "Heavy machinery was unable to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> its technical system parameters under high pressure.",
+              "The analyst is supposed to evaluate comprehensive regional surveys with your inputs.",
+              "The technician was about to deploy the script when the structural anomaly occurred.",
+              "This framework is supposed to be the best architectural solution in the sector."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l114_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Eğitim bakanlığı geçen dönem özel bir yerel komite düzenleyemedi.",
+            "words": [
+              "organize",
+              "The",
+              "a",
+              "data",
+              "semester",
+              "committee",
+              "last",
+              "specialized",
+              "explain",
+              "was",
+              "education",
+              "unable",
+              "local",
+              "to",
+              "ministry",
+              "week"
+            ],
+            "correctOrder": [
+              "The",
+              "education",
+              "ministry",
+              "was",
+              "unable",
+              "to",
+              "organize",
+              "a",
+              "specialized",
+              "local",
+              "committee",
+              "last",
+              "semester"
+            ],
+            "enSentence": "The education ministry was unable to organize a specialized local committee last semester.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı.",
+            "options": [
+              "Significant annual financial growth is likely to occur within the dynamic sector.",
+              "The compiler is unlikely to generate errors with the new syntax.",
+              "Technicians were unable to <span style=\"color: #ff6b6b; font-weight: bold;\">deploy</span> an automated background script during the system blackout.",
+              "Technical experts are unwilling to adopt the outdated architectural framework."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l114_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Engineers are unable to ___ crucial internal device components without additional tools.",
+            "options": [
+              "stabilize",
+              "stabilizing",
+              "stabilized",
+              "to stabilize"
+            ],
+            "correctIndex": 0,
+            "translation": "Mühendisler ek araçlar olmadan kritik dahili cihaz bileşenlerini stabilize edememektedir."
+          },
+          {
+            "id": "u103l114_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent technical experts were unable to explain the investigative project scope yesterday.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+          },
+          {
+            "id": "u103l114_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unable to determine where to shift separate international research funds.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi ayrı uluslararası araştırma fonlarının nereye aktarılacağını belirleyemedi."
+          }
+        ]
+      },
+      {
+        "id": "u103l114ex3",
+        "title": "Alıştırma 3: be unable to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l114_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The internal board is unable to ___ an emergency committee meeting this week.",
+            "options": [
+              "call",
+              "calling",
+              "called",
+              "to call"
+            ],
+            "correctIndex": 0,
+            "translation": "İç kurul bu hafta acil komite toplantısı çağıramamaktadır."
+          },
+          {
+            "id": "u103l114_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The software team is unable to ___ substantial empirical inputs at the moment.",
+            "options": [
+              "modify",
+              "modifying",
+              "to modify",
+              "modified"
+            ],
+            "correctIndex": 0,
+            "translation": "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir."
+          },
+          {
+            "id": "u103l114_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Government agencies are unable to <span style=\"color: #ff6b6b; font-weight: bold;\">process</span> the newly collected empirical data securely.",
+            "options": [
+              "Ekip uygulamayı Vercel'e dağıtmak üzeredir.",
+              "İkincil güvenlik duvarları harici trafiği tararken ağ altyapısı şubesi devasa bulut veritabanı sorgularını işlemeye alışıktır.",
+              "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir.",
+              "Devlet kurumları yeni toplanan deneysel verileri güvenli bir şekilde işleyememektedir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l114_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Senior financial analysts are unable to ___ significant annual financial growth.",
+            "options": [
+              "anticipate",
+              "anticipated",
+              "to anticipate",
+              "anticipating"
+            ],
+            "correctIndex": 0,
+            "translation": "Kıdemli finansal analistler önemli yıllık finansal büyümeyi tahmin edememektedir."
+          },
+          {
+            "id": "u103l114_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Heavy machinery was unable to ___ its technical system parameters under high pressure.",
+            "options": [
+              "modify",
+              "to modify",
+              "modified",
+              "modifying"
+            ],
+            "correctIndex": 0,
+            "translation": "Ağır makineler yüksek basınç altında teknik sistem parametrelerini değiştiremedi."
+          },
+          {
+            "id": "u103l114_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Eğitim bakanlığı geçen dönem özel bir yerel komite düzenleyemedi.",
+            "options": [
+              "Cloud technicians are used to migrating sensitive database records.",
+              "The server is likely to crash if the database overflow continues.",
+              "The backup database is unlikely to lose any transaction records.",
+              "The education ministry was unable to <span style=\"color: #ff6b6b; font-weight: bold;\">organize</span> a specialized local committee last semester."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l114_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı.",
+            "words": [
+              "to",
+              "background",
+              "an",
+              "the",
+              "were",
+              "blackout",
+              "system",
+              "inputs",
+              "during",
+              "emergency",
+              "deploy",
+              "script",
+              "unable",
+              "organize",
+              "automated",
+              "Technicians"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "were",
+              "unable",
+              "to",
+              "deploy",
+              "an",
+              "automated",
+              "background",
+              "script",
+              "during",
+              "the",
+              "system",
+              "blackout"
+            ],
+            "enSentence": "Technicians were unable to deploy an automated background script during the system blackout.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler ek araçlar olmadan kritik dahili cihaz bileşenlerini stabilize edememektedir.",
+            "words": [
+              "Engineers",
+              "device",
+              "without",
+              "additional",
+              "to",
+              "crucial",
+              "are",
+              "tools",
+              "internal",
+              "unable",
+              "components",
+              "call",
+              "stabilize",
+              "The",
+              "annual"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "are",
+              "unable",
+              "to",
+              "stabilize",
+              "crucial",
+              "internal",
+              "device",
+              "components",
+              "without",
+              "additional",
+              "tools"
+            ],
+            "enSentence": "Engineers are unable to stabilize crucial internal device components without additional tools.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent technical experts were unable to explain the investigative project scope yesterday.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+          },
+          {
+            "id": "u103l114_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unable to determine where to shift separate international research funds.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi ayrı uluslararası araştırma fonlarının nereye aktarılacağını belirleyemedi."
+          }
+        ]
+      },
+      {
+        "id": "u103l114ex4",
+        "title": "Alıştırma 4: be unable to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l114_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The internal board is unable to <span style=\"color: #ff6b6b; font-weight: bold;\">call</span> an emergency committee meeting this week.",
+            "options": [
+              "Karmaşık ağ altyapılarını yapılandırmaya alışkınım.",
+              "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir.",
+              "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir.",
+              "İç kurul bu hafta acil komite toplantısı çağıramamaktadır."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l114_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The software team is unable to ___ substantial empirical inputs at the moment.",
+            "options": [
+              "modify",
+              "modifying",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 0,
+            "translation": "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir."
+          },
+          {
+            "id": "u103l114_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Devlet kurumları yeni toplanan deneysel verileri güvenli bir şekilde işleyememektedir.",
+            "words": [
+              "process",
+              "Government",
+              "securely",
+              "device",
+              "empirical",
+              "collected",
+              "newly",
+              "agencies",
+              "script",
+              "the",
+              "are",
+              "unable",
+              "to",
+              "data",
+              "semester"
+            ],
+            "correctOrder": [
+              "Government",
+              "agencies",
+              "are",
+              "unable",
+              "to",
+              "process",
+              "the",
+              "newly",
+              "collected",
+              "empirical",
+              "data",
+              "securely"
+            ],
+            "enSentence": "Government agencies are unable to process the newly collected empirical data securely.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kıdemli finansal analistler önemli yıllık finansal büyümeyi tahmin edememektedir.",
+            "options": [
+              "The senior developer is used to processing large data streams.",
+              "Senior financial analysts are unable to <span style=\"color: #ff6b6b; font-weight: bold;\">anticipate</span> significant annual financial growth.",
+              "It is unlikely to rain during the international summit at the facility.",
+              "You are supposed to submit your historical system logs before Friday afternoon."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l114_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Heavy machinery was unable to ___ its technical system parameters under high pressure.",
+            "options": [
+              "modifying",
+              "modify",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 1,
+            "translation": "Ağır makineler yüksek basınç altında teknik sistem parametrelerini değiştiremedi."
+          },
+          {
+            "id": "u103l114_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Eğitim bakanlığı geçen dönem özel bir yerel komite düzenleyemedi.",
+            "words": [
+              "The",
+              "analysts",
+              "education",
+              "organize",
+              "to",
+              "ministry",
+              "was",
+              "semester",
+              "international",
+              "specialized",
+              "unable",
+              "a",
+              "local",
+              "securely",
+              "committee",
+              "last"
+            ],
+            "correctOrder": [
+              "The",
+              "education",
+              "ministry",
+              "was",
+              "unable",
+              "to",
+              "organize",
+              "a",
+              "specialized",
+              "local",
+              "committee",
+              "last",
+              "semester"
+            ],
+            "enSentence": "The education ministry was unable to organize a specialized local committee last semester.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Technicians were unable to <span style=\"color: #ff6b6b; font-weight: bold;\">deploy</span> an automated background script during the system blackout.",
+            "options": [
+              "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür.",
+              "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+              "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır.",
+              "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l114_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler ek araçlar olmadan kritik dahili cihaz bileşenlerini stabilize edememektedir.",
+            "words": [
+              "Engineers",
+              "are",
+              "device",
+              "unable",
+              "without",
+              "internal",
+              "was",
+              "tools",
+              "to",
+              "The",
+              "stabilize",
+              "is",
+              "components",
+              "crucial",
+              "additional"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "are",
+              "unable",
+              "to",
+              "stabilize",
+              "crucial",
+              "internal",
+              "device",
+              "components",
+              "without",
+              "additional",
+              "tools"
+            ],
+            "enSentence": "Engineers are unable to stabilize crucial internal device components without additional tools.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l114_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Independent technical experts were unable to explain the investigative project scope yesterday.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+          },
+          {
+            "id": "u103l114_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"The evaluation committee was unable to determine where to shift separate international research funds.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Değerlendirme komitesi ayrı uluslararası araştırma fonlarının nereye aktarılacağını belirleyemedi."
+          }
+        ]
+      }
+    ]
+  },
+  "14": {
+    "exercises": [
+      {
+        "id": "u103l115ex1",
+        "title": "Alıştırma 1: be about to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l115_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system is about to ___ automatically.",
+            "options": [
+              "reboot",
+              "to reboot",
+              "rebooting",
+              "rebooted"
+            ],
+            "correctIndex": 0,
+            "translation": "Sistem otomatik olarak yeniden başlamak üzeredir."
+          },
+          {
+            "id": "u103l115_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The software is about to ___ the backup routine.",
+            "options": [
+              "executing",
+              "execute",
+              "executed",
+              "to execute"
+            ],
+            "correctIndex": 1,
+            "translation": "Yazılım yedekleme rutinini çalıştırmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Otomatik teşhis betiğini çalıştırmak üzereydik.",
+            "words": [
+              "automated",
+              "We",
+              "system",
+              "The",
+              "diagnostic",
+              "script",
+              "were",
+              "about",
+              "cloud",
+              "to",
+              "run",
+              "the"
+            ],
+            "correctOrder": [
+              "We",
+              "were",
+              "about",
+              "to",
+              "run",
+              "the",
+              "automated",
+              "diagnostic",
+              "script"
+            ],
+            "enSentence": "We were about to run the automated diagnostic script.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The team is about to ___ the application to Vercel.",
+            "options": [
+              "deploy",
+              "deploying",
+              "deployed",
+              "to deploy"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip uygulamayı Vercel'e dağıtmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were about to ___ the migration process.",
+            "options": [
+              "to launch",
+              "launched",
+              "launching",
+              "launch"
+            ],
+            "correctIndex": 3,
+            "translation": "Operatörler taşıma işlemini başlatmak üzereydiler."
+          },
+          {
+            "id": "u103l115_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim.",
+            "words": [
+              "crashed",
+              "was",
+              "database",
+              "script",
+              "I",
+              "protocols",
+              "application",
+              "process",
+              "modify",
+              "the",
+              "the",
+              "security",
+              "to",
+              "about",
+              "when"
+            ],
+            "correctOrder": [
+              "I",
+              "was",
+              "about",
+              "to",
+              "modify",
+              "the",
+              "security",
+              "protocols",
+              "when",
+              "the",
+              "database",
+              "crashed"
+            ],
+            "enSentence": "I was about to modify the security protocols when the database crashed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are about to ___ a safe system emergency reset right now.",
+            "options": [
+              "inducing",
+              "induce",
+              "induced",
+              "to induce"
+            ],
+            "correctIndex": 1,
+            "translation": "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The compiler was about to ___ the process when the network disconnected.",
+            "options": [
+              "to complete",
+              "complete",
+              "completing",
+              "completed"
+            ],
+            "correctIndex": 1,
+            "translation": "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi."
+          },
+          {
+            "id": "u103l115_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"The software team is about to optimize the centralized cloud database modules.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yazılım ekibi merkezi bulut veritabanı modüllerini optimize etmek üzeredir."
+          },
+          {
+            "id": "u103l115_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"The technician was about to deploy the script when the structural anomaly occurred.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi."
+          }
+        ]
+      },
+      {
+        "id": "u103l115ex2",
+        "title": "Alıştırma 2: be about to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l115_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The system is about to <span style=\"color: #ff6b6b; font-weight: bold;\">reboot</span> automatically.",
+            "options": [
+              "Sistem otomatik olarak yeniden başlamak üzeredir.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
+              "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+              "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım yedekleme rutinini çalıştırmak üzeredir.",
+            "words": [
+              "about",
+              "backup",
+              "to",
+              "is",
+              "Vercel",
+              "The",
+              "run",
+              "the",
+              "routine",
+              "reset",
+              "software",
+              "execute"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "is",
+              "about",
+              "to",
+              "execute",
+              "the",
+              "backup",
+              "routine"
+            ],
+            "enSentence": "The software is about to execute the backup routine.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomatik teşhis betiğini çalıştırmak üzereydik.",
+            "options": [
+              "Sooner or later, the administrative council is bound to learn the truth.",
+              "Technicians are not supposed to modify the system parameters on Sundays.",
+              "We were about to <span style=\"color: #ff6b6b; font-weight: bold;\">run</span> the automated diagnostic script.",
+              "The junior developer is willing to learn new programming languages."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l115_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ekip uygulamayı Vercel'e dağıtmak üzeredir.",
+            "words": [
+              "is",
+              "software",
+              "team",
+              "Vercel",
+              "The",
+              "emergency",
+              "the",
+              "application",
+              "about",
+              "to",
+              "to",
+              "deploy",
+              "protocols"
+            ],
+            "correctOrder": [
+              "The",
+              "team",
+              "is",
+              "about",
+              "to",
+              "deploy",
+              "the",
+              "application",
+              "to",
+              "Vercel"
+            ],
+            "enSentence": "The team is about to deploy the application to Vercel.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The operators were about to <span style=\"color: #ff6b6b; font-weight: bold;\">launch</span> the migration process.",
+            "options": [
+              "Operatörler taşıma işlemini başlatmak üzereydiler.",
+              "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+              "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır.",
+              "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim.",
+            "words": [
+              "script",
+              "protocols",
+              "reboot",
+              "I",
+              "was",
+              "about",
+              "to",
+              "when",
+              "database",
+              "occurred",
+              "modify",
+              "the",
+              "security",
+              "the",
+              "crashed"
+            ],
+            "correctOrder": [
+              "I",
+              "was",
+              "about",
+              "to",
+              "modify",
+              "the",
+              "security",
+              "protocols",
+              "when",
+              "the",
+              "database",
+              "crashed"
+            ],
+            "enSentence": "I was about to modify the security protocols when the database crashed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir.",
+            "options": [
+              "Technicians are about to <span style=\"color: #ff6b6b; font-weight: bold;\">induce</span> a safe system emergency reset right now.",
+              "I am used to refactoring unoptimized legacy source codes.",
+              "The operators were certain to detect the network latency.",
+              "The software team is unable to modify substantial empirical inputs at the moment."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The compiler was about to ___ the process when the network disconnected.",
+            "options": [
+              "completing",
+              "to complete",
+              "completed",
+              "complete"
+            ],
+            "correctIndex": 3,
+            "translation": "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi."
+          },
+          {
+            "id": "u103l115_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The software team is about to optimize the centralized cloud database modules.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yazılım ekibi merkezi bulut veritabanı modüllerini optimize etmek üzeredir."
+          },
+          {
+            "id": "u103l115_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The technician was about to deploy the script when the structural anomaly occurred.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi."
+          }
+        ]
+      },
+      {
+        "id": "u103l115ex3",
+        "title": "Alıştırma 3: be about to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l115_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The system is about to ___ automatically.",
+            "options": [
+              "reboot",
+              "rebooted",
+              "to reboot",
+              "rebooting"
+            ],
+            "correctIndex": 0,
+            "translation": "Sistem otomatik olarak yeniden başlamak üzeredir."
+          },
+          {
+            "id": "u103l115_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The software is about to ___ the backup routine.",
+            "options": [
+              "execute",
+              "executing",
+              "to execute",
+              "executed"
+            ],
+            "correctIndex": 0,
+            "translation": "Yazılım yedekleme rutinini çalıştırmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "We were about to <span style=\"color: #ff6b6b; font-weight: bold;\">run</span> the automated diagnostic script.",
+            "options": [
+              "Otomatik teşhis betiğini çalıştırmak üzereydik.",
+              "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir.",
+              "Çevre grupları küresel ısı anomalisi endekslerini izlemeye alışıktı.",
+              "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The team is about to ___ the application to Vercel.",
+            "options": [
+              "deploy",
+              "deploying",
+              "deployed",
+              "to deploy"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip uygulamayı Vercel'e dağıtmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were about to ___ the migration process.",
+            "options": [
+              "launch",
+              "to launch",
+              "launching",
+              "launched"
+            ],
+            "correctIndex": 0,
+            "translation": "Operatörler taşıma işlemini başlatmak üzereydiler."
+          },
+          {
+            "id": "u103l115_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "I was about to <span style=\"color: #ff6b6b; font-weight: bold;\">modify</span> the security protocols when the database crashed.",
+            "options": [
+              "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim.",
+              "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir.",
+              "Otomatik sistem benzersiz kriptografik jetonlar üretmeye alışıktır.",
+              "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir.",
+            "words": [
+              "safe",
+              "a",
+              "execute",
+              "emergency",
+              "reset",
+              "system",
+              "anomaly",
+              "induce",
+              "run",
+              "to",
+              "about",
+              "now",
+              "right",
+              "are",
+              "Technicians"
+            ],
+            "correctOrder": [
+              "Technicians",
+              "are",
+              "about",
+              "to",
+              "induce",
+              "a",
+              "safe",
+              "system",
+              "emergency",
+              "reset",
+              "right",
+              "now"
+            ],
+            "enSentence": "Technicians are about to induce a safe system emergency reset right now.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi.",
+            "words": [
+              "about",
+              "was",
+              "centralized",
+              "software",
+              "process",
+              "when",
+              "disconnected",
+              "compiler",
+              "the",
+              "to",
+              "The",
+              "complete",
+              "network",
+              "the",
+              "safe"
+            ],
+            "correctOrder": [
+              "The",
+              "compiler",
+              "was",
+              "about",
+              "to",
+              "complete",
+              "the",
+              "process",
+              "when",
+              "the",
+              "network",
+              "disconnected"
+            ],
+            "enSentence": "The compiler was about to complete the process when the network disconnected.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The software team is about to optimize the centralized cloud database modules.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yazılım ekibi merkezi bulut veritabanı modüllerini optimize etmek üzeredir."
+          },
+          {
+            "id": "u103l115_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The technician was about to deploy the script when the structural anomaly occurred.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi."
+          }
+        ]
+      },
+      {
+        "id": "u103l115ex4",
+        "title": "Alıştırma 4: be about to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l115_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The system is about to <span style=\"color: #ff6b6b; font-weight: bold;\">reboot</span> automatically.",
+            "options": [
+              "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır.",
+              "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi.",
+              "İç kurul bu hafta acil komite toplantısı çağıramamaktadır.",
+              "Sistem otomatik olarak yeniden başlamak üzeredir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l115_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The software is about to ___ the backup routine.",
+            "options": [
+              "executed",
+              "executing",
+              "execute",
+              "to execute"
+            ],
+            "correctIndex": 2,
+            "translation": "Yazılım yedekleme rutinini çalıştırmak üzeredir."
+          },
+          {
+            "id": "u103l115_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Otomatik teşhis betiğini çalıştırmak üzereydik.",
+            "words": [
+              "about",
+              "run",
+              "the",
+              "were",
+              "team",
+              "diagnostic",
+              "We",
+              "automated",
+              "network",
+              "script",
+              "software",
+              "to"
+            ],
+            "correctOrder": [
+              "We",
+              "were",
+              "about",
+              "to",
+              "run",
+              "the",
+              "automated",
+              "diagnostic",
+              "script"
+            ],
+            "enSentence": "We were about to run the automated diagnostic script.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The team is about to <span style=\"color: #ff6b6b; font-weight: bold;\">deploy</span> the application to Vercel.",
+            "options": [
+              "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+              "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi için karmaşık uygulama sistemlerini yeniden yapılandırmaya alışkınım.",
+              "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir.",
+              "Ekip uygulamayı Vercel'e dağıtmak üzeredir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l115_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The operators were about to ___ the migration process.",
+            "options": [
+              "launch",
+              "launched",
+              "launching",
+              "to launch"
+            ],
+            "correctIndex": 0,
+            "translation": "Operatörler taşıma işlemini başlatmak üzereydiler."
+          },
+          {
+            "id": "u103l115_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim.",
+            "words": [
+              "was",
+              "about",
+              "when",
+              "security",
+              "structural",
+              "the",
+              "database",
+              "induce",
+              "crashed",
+              "I",
+              "to",
+              "modify",
+              "the",
+              "protocols",
+              "run"
+            ],
+            "correctOrder": [
+              "I",
+              "was",
+              "about",
+              "to",
+              "modify",
+              "the",
+              "security",
+              "protocols",
+              "when",
+              "the",
+              "database",
+              "crashed"
+            ],
+            "enSentence": "I was about to modify the security protocols when the database crashed.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir.",
+            "options": [
+              "Technicians are about to <span style=\"color: #ff6b6b; font-weight: bold;\">induce</span> a safe system emergency reset right now.",
+              "I am used to refactoring complex application systems in order that frontend developers can integrate visual components cleanly.",
+              "The company was willing to invest in advanced cybersecurity tools.",
+              "The system administrator is accustomed to monitoring real-time network traffic."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l115_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi.",
+            "words": [
+              "compiler",
+              "The",
+              "safe",
+              "about",
+              "the",
+              "network",
+              "when",
+              "disconnected",
+              "technician",
+              "was",
+              "process",
+              "the",
+              "to",
+              "automated",
+              "complete"
+            ],
+            "correctOrder": [
+              "The",
+              "compiler",
+              "was",
+              "about",
+              "to",
+              "complete",
+              "the",
+              "process",
+              "when",
+              "the",
+              "network",
+              "disconnected"
+            ],
+            "enSentence": "The compiler was about to complete the process when the network disconnected.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l115_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The software team is about to optimize the centralized cloud database modules.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yazılım ekibi merkezi bulut veritabanı modüllerini optimize etmek üzeredir."
+          },
+          {
+            "id": "u103l115_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"The technician was about to deploy the script when the structural anomaly occurred.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi."
+          }
+        ]
+      }
+    ]
+  },
+  "15": {
+    "exercises": [
+      {
+        "id": "u103l116ex1",
+        "title": "Alıştırma 1: be certain to I",
+        "description": "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+        "questions": [
+          {
+            "id": "u103l116_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The developer is certain to ___ the memory leak.",
+            "options": [
+              "to fix",
+              "fixed",
+              "fixing",
+              "fix"
+            ],
+            "correctIndex": 3,
+            "translation": "Geliştiricinin bellek sızıntısını düzelteceği kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "detected",
+              "detect",
+              "to detect",
+              "detecting"
+            ],
+            "correctIndex": 1,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l116_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+            "words": [
+              "are",
+              "The",
+              "security",
+              "new",
+              "attacks",
+              "block",
+              "updates",
+              "is",
+              "certain",
+              "developer",
+              "external",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "updates",
+              "are",
+              "certain",
+              "to",
+              "block",
+              "external",
+              "attacks"
+            ],
+            "enSentence": "The security updates are certain to block external attacks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic framework is certain to ___ the queries.",
+            "options": [
+              "optimize",
+              "optimizing",
+              "optimized",
+              "to optimize"
+            ],
+            "correctIndex": 0,
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Technicians are certain to ___ the server after the crash.",
+            "options": [
+              "to restart",
+              "restart",
+              "restarted",
+              "restarting"
+            ],
+            "correctIndex": 1,
+            "translation": "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir.",
+            "words": [
+              "is",
+              "certain",
+              "complete",
+              "external",
+              "the",
+              "on",
+              "database",
+              "to",
+              "team",
+              "The",
+              "migration",
+              "time",
+              "Auditors",
+              "was"
+            ],
+            "correctOrder": [
+              "The",
+              "team",
+              "is",
+              "certain",
+              "to",
+              "complete",
+              "the",
+              "database",
+              "migration",
+              "on",
+              "time"
+            ],
+            "enSentence": "The team is certain to complete the database migration on time.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Auditors are certain to ___ the unencrypted database password.",
+            "options": [
+              "flagged",
+              "to flag",
+              "flagging",
+              "flag"
+            ],
+            "correctIndex": 3,
+            "translation": "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The new interface is certain to ___ user interaction metrics.",
+            "options": [
+              "improve",
+              "improving",
+              "improved",
+              "to improve"
+            ],
+            "correctIndex": 0,
+            "translation": "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Advanced algorithms are certain to identify any structural anomaly.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          }
+        ]
+      },
+      {
+        "id": "u103l116ex2",
+        "title": "Alıştırma 2: be certain to II",
+        "description": "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l116_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The developer is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">fix</span> the memory leak.",
+            "options": [
+              "Geliştiricinin bellek sızıntısını düzelteceği kesindir.",
+              "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür.",
+              "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir.",
+              "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l116_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi.",
+            "words": [
+              "certain",
+              "were",
+              "attacks",
+              "The",
+              "to",
+              "the",
+              "detect",
+              "network",
+              "anomaly",
+              "password",
+              "latency",
+              "operators"
+            ],
+            "correctOrder": [
+              "The",
+              "operators",
+              "were",
+              "certain",
+              "to",
+              "detect",
+              "the",
+              "network",
+              "latency"
+            ],
+            "enSentence": "The operators were certain to detect the network latency.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The security updates are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">block</span> external attacks.",
+            "options": [
+              "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+              "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir.",
+              "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur.",
+              "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l116_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir.",
+            "words": [
+              "automatic",
+              "configuration",
+              "certain",
+              "to",
+              "the",
+              "time",
+              "The",
+              "queries",
+              "optimize",
+              "is",
+              "framework",
+              "interface"
+            ],
+            "correctOrder": [
+              "The",
+              "automatic",
+              "framework",
+              "is",
+              "certain",
+              "to",
+              "optimize",
+              "the",
+              "queries"
+            ],
+            "enSentence": "The automatic framework is certain to optimize the queries.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir.",
+            "options": [
+              "I am used to isolating corrupted device firmware packages.",
+              "The lead investigator was used to reviewing legislative policy documents.",
+              "The software team is willing to modify the centralized cloud database model.",
+              "Technicians are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">restart</span> the server after the crash."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l116_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir.",
+            "words": [
+              "on",
+              "is",
+              "memory",
+              "was",
+              "time",
+              "security",
+              "team",
+              "migration",
+              "database",
+              "the",
+              "certain",
+              "The",
+              "complete",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "team",
+              "is",
+              "certain",
+              "to",
+              "complete",
+              "the",
+              "database",
+              "migration",
+              "on",
+              "time"
+            ],
+            "enSentence": "The team is certain to complete the database migration on time.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Auditors are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">flag</span> the unencrypted database password.",
+            "options": [
+              "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir.",
+              "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir.",
+              "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı.",
+              "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l116_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The new interface is certain to ___ user interaction metrics.",
+            "options": [
+              "improving",
+              "to improve",
+              "improve",
+              "improved"
+            ],
+            "correctIndex": 2,
+            "translation": "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir."
+          },
+          {
+            "id": "u103l116_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"Advanced algorithms are certain to identify any structural anomaly.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          }
+        ]
+      },
+      {
+        "id": "u103l116ex3",
+        "title": "Alıştırma 3: be certain to III",
+        "description": "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l116_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The developer is certain to ___ the memory leak.",
+            "options": [
+              "fixing",
+              "fixed",
+              "fix",
+              "to fix"
+            ],
+            "correctIndex": 2,
+            "translation": "Geliştiricinin bellek sızıntısını düzelteceği kesindir."
+          },
+          {
+            "id": "u103l116_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "detect",
+              "detecting",
+              "detected",
+              "to detect"
+            ],
+            "correctIndex": 0,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l116_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+            "options": [
+              "The security updates are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">block</span> external attacks.",
+              "The main server was certain to overheat under that heavy load.",
+              "Independent experts are willing to share their empirical data inputs with the team.",
+              "Institutional authorities were willing to approve the additional server budget."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l116_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The automatic framework is certain to ___ the queries.",
+            "options": [
+              "optimized",
+              "optimizing",
+              "optimize",
+              "to optimize"
+            ],
+            "correctIndex": 2,
+            "translation": "Otomatik altyapının sorguları optimize edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Technicians are certain to ___ the server after the crash.",
+            "options": [
+              "to restart",
+              "restarted",
+              "restart",
+              "restarting"
+            ],
+            "correctIndex": 2,
+            "translation": "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir."
+          },
+          {
+            "id": "u103l116_ex3_q6",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The team is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the database migration on time.",
+            "options": [
+              "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+              "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir.",
+              "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir.",
+              "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l116_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir.",
+            "words": [
+              "the",
+              "to",
+              "database",
+              "server",
+              "password",
+              "was",
+              "certain",
+              "are",
+              "Auditors",
+              "flag",
+              "identify",
+              "unencrypted"
+            ],
+            "correctOrder": [
+              "Auditors",
+              "are",
+              "certain",
+              "to",
+              "flag",
+              "the",
+              "unencrypted",
+              "database",
+              "password"
+            ],
+            "enSentence": "Auditors are certain to flag the unencrypted database password.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir.",
+            "words": [
+              "The",
+              "new",
+              "Auditors",
+              "to",
+              "metrics",
+              "interaction",
+              "is",
+              "certain",
+              "password",
+              "developer",
+              "user",
+              "interface",
+              "improve"
+            ],
+            "correctOrder": [
+              "The",
+              "new",
+              "interface",
+              "is",
+              "certain",
+              "to",
+              "improve",
+              "user",
+              "interaction",
+              "metrics"
+            ],
+            "enSentence": "The new interface is certain to improve user interaction metrics.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Advanced algorithms are certain to identify any structural anomaly.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          }
+        ]
+      },
+      {
+        "id": "u103l116ex4",
+        "title": "Alıştırma 4: be certain to IV",
+        "description": "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+        "questions": [
+          {
+            "id": "u103l116_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The developer is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">fix</span> the memory leak.",
+            "options": [
+              "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım.",
+              "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir.",
+              "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi.",
+              "Geliştiricinin bellek sızıntısını düzelteceği kesindir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l116_ex4_q2",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The operators were certain to ___ the network latency.",
+            "options": [
+              "to detect",
+              "detected",
+              "detecting",
+              "detect"
+            ],
+            "correctIndex": 3,
+            "translation": "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+          },
+          {
+            "id": "u103l116_ex4_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir.",
+            "words": [
+              "block",
+              "external",
+              "attacks",
+              "to",
+              "security",
+              "certain",
+              "updates",
+              "detect",
+              "The",
+              "password",
+              "are",
+              "developer"
+            ],
+            "correctOrder": [
+              "The",
+              "security",
+              "updates",
+              "are",
+              "certain",
+              "to",
+              "block",
+              "external",
+              "attacks"
+            ],
+            "enSentence": "The security updates are certain to block external attacks.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex4_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomatik altyapının sorguları optimize edeceği kesindir.",
+            "options": [
+              "Technical operators are used to operating heavy industrial machinery.",
+              "Local laboratories are used to testing chemical solution properties.",
+              "The internal board is unwilling to accept the sudden corporate paradigm shift.",
+              "The automatic framework is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">optimize</span> the queries."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l116_ex4_q5",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are certain to ___ the server after the crash.",
+            "options": [
+              "restart",
+              "to restart",
+              "restarting",
+              "restarted"
+            ],
+            "correctIndex": 0,
+            "translation": "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir."
+          },
+          {
+            "id": "u103l116_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir.",
+            "words": [
+              "the",
+              "The",
+              "Auditors",
+              "team",
+              "time",
+              "block",
+              "complete",
+              "migration",
+              "is",
+              "certain",
+              "simulation",
+              "to",
+              "on",
+              "database"
+            ],
+            "correctOrder": [
+              "The",
+              "team",
+              "is",
+              "certain",
+              "to",
+              "complete",
+              "the",
+              "database",
+              "migration",
+              "on",
+              "time"
+            ],
+            "enSentence": "The team is certain to complete the database migration on time.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir.",
+            "options": [
+              "Institutional authorities were willing to approve the additional server budget.",
+              "The new update is likely to resolve the latency issues.",
+              "Auditors are certain to <span style=\"color: #ff6b6b; font-weight: bold;\">flag</span> the unencrypted database password.",
+              "Technicians are reluctant to deploy the script without explicit authorization."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l116_ex4_q8",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir.",
+            "words": [
+              "security",
+              "The",
+              "were",
+              "certain",
+              "metrics",
+              "new",
+              "to",
+              "improve",
+              "interaction",
+              "interface",
+              "time",
+              "user",
+              "is"
+            ],
+            "correctOrder": [
+              "The",
+              "new",
+              "interface",
+              "is",
+              "certain",
+              "to",
+              "improve",
+              "user",
+              "interaction",
+              "metrics"
+            ],
+            "enSentence": "The new interface is certain to improve user interaction metrics.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l116_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"Advanced algorithms are certain to identify any structural anomaly.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir."
+          },
+          {
+            "id": "u103l116_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"The simulation was certain to succeed after the configuration change.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+          }
+        ]
+      }
+    ]
+  },
+  "16": {
+    "exercises": [
+      {
+        "id": "u103l117ex1",
+        "title": "Alıştırma 1: Karma Test I",
+        "description": "Tüm öbeksel kiplerden karışık genel tarama ve gramer pratikleri.",
+        "questions": [
+          {
+            "id": "u103l117_ex1_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Their startup was doomed to ___ bankrupt due to poor database management.",
+            "options": [
+              "to go",
+              "gone",
+              "go",
+              "going"
+            ],
+            "correctIndex": 2,
+            "translation": "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+          },
+          {
+            "id": "u103l117_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research team was accustomed to ___ complex data sets.",
+            "options": [
+              "analyzing",
+              "analyze",
+              "analyzed",
+              "to analyze"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
+          },
+          {
+            "id": "u103l117_ex1_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü.",
+            "words": [
+              "backup",
+              "reluctant",
+              "was",
+              "proper",
+              "approve",
+              "manager",
+              "corrupted",
+              "data",
+              "The",
+              "extend",
+              "unverified",
+              "the",
+              "to"
+            ],
+            "correctOrder": [
+              "The",
+              "manager",
+              "was",
+              "reluctant",
+              "to",
+              "approve",
+              "the",
+              "unverified",
+              "data",
+              "backup"
+            ],
+            "enSentence": "The manager was reluctant to approve the unverified data backup.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The chief architect <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> ___ cross-disciplinary software modules.",
+            "options": [
+              "designed",
+              "design",
+              "designing",
+              "to design"
+            ],
+            "correctIndex": 2,
+            "translation": "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı."
+          },
+          {
+            "id": "u103l117_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The new update is likely to ___ the latency issues.",
+            "options": [
+              "resolve",
+              "resolving",
+              "resolved",
+              "to resolve"
+            ],
+            "correctIndex": 0,
+            "translation": "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir."
+          },
+          {
+            "id": "u103l117_ex1_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır.",
+            "words": [
+              "properties",
+              "laboratories",
+              "Local",
+              "testing",
+              "solution",
+              "noon",
+              "scanning",
+              "chemical",
+              "are",
+              "databases",
+              "used",
+              "to"
+            ],
+            "correctOrder": [
+              "Local",
+              "laboratories",
+              "are",
+              "used",
+              "to",
+              "testing",
+              "chemical",
+              "solution",
+              "properties"
+            ],
+            "enSentence": "Local laboratories are used to testing chemical solution properties.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The lead developer is reluctant to ___ unverified external libraries.",
+            "options": [
+              "use",
+              "using",
+              "to use",
+              "used"
+            ],
+            "correctIndex": 0,
+            "translation": "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür."
+          },
+          {
+            "id": "u103l117_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Technicians are about to ___ a safe system emergency reset right now.",
+            "options": [
+              "induce",
+              "inducing",
+              "induced",
+              "to induce"
+            ],
+            "correctIndex": 0,
+            "translation": "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir."
+          },
+          {
+            "id": "u103l117_ex1_q9",
+            "type": "translation-text",
+            "prompt": "\"Reckless engineers are doomed to cause a major crash in the industrial facility.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur."
+          },
+          {
+            "id": "u103l117_ex1_q10",
+            "type": "translation-text",
+            "prompt": "\"Significant annual financial growth is likely to occur within the dynamic sector.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+          }
+        ]
+      },
+      {
+        "id": "u103l117ex2",
+        "title": "Alıştırma 2: Karma Test II",
+        "description": "Karışık cümlelerde anlam ve çeviri çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l117_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Otomatik altyapı yedekleme rutinini devralmadan önce, kıdemli mimar kritik yapılandırma anomalilerini yönetmeye alışıktı.",
+            "options": [
+              "Technical operators are accustomed to operating heavy industrial machinery.",
+              "The evaluation committee is reluctant to reallocate the annual research budget.",
+              "The junior developer is willing to learn new programming languages.",
+              "The senior architect was used to <span style=\"color: #ff6b6b; font-weight: bold;\">handling</span> critical configuration anomalies before the automated framework took over the backup routine."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex2_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir.",
+            "words": [
+              "internal",
+              "accept",
+              "to",
+              "paradigm",
+              "sudden",
+              "corporate",
+              "board",
+              "is",
+              "continues",
+              "users",
+              "unwilling",
+              "cleanly",
+              "The",
+              "shift",
+              "the"
+            ],
+            "correctOrder": [
+              "The",
+              "internal",
+              "board",
+              "is",
+              "unwilling",
+              "to",
+              "accept",
+              "the",
+              "sudden",
+              "corporate",
+              "paradigm",
+              "shift"
+            ],
+            "enSentence": "The internal board is unwilling to accept the sudden corporate paradigm shift.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Engineers were to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the compiler tests yesterday.",
+            "options": [
+              "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti.",
+              "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı.",
+              "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür.",
+              "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l117_ex2_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yönetim ekibi kuralları yarın güncelleyecektir.",
+            "words": [
+              "sooner",
+              "update",
+              "Many",
+              "the",
+              "rules",
+              "is",
+              "badges",
+              "The",
+              "tomorrow",
+              "to",
+              "administrative",
+              "team"
+            ],
+            "correctOrder": [
+              "The",
+              "administrative",
+              "team",
+              "is",
+              "to",
+              "update",
+              "the",
+              "rules",
+              "tomorrow"
+            ],
+            "enSentence": "The administrative team is to update the rules tomorrow.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The evaluation committee was unlikely to <span style=\"color: #ff6b6b; font-weight: bold;\">approve</span> the additional funding.",
+            "options": [
+              "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+              "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi.",
+              "Finansal analist değişken piyasa ölçümlerini değerlendirmeye alışıktı.",
+              "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+            ],
+            "correctIndex": 1
+          },
+          {
+            "id": "u103l117_ex2_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır.",
+            "words": [
+              "investigative",
+              "to",
+              "the",
+              "controls",
+              "work",
+              "are",
+              "operating",
+              "heavy",
+              "although",
+              "crews",
+              "pressure",
+              "components",
+              "used",
+              "Industrial",
+              "environment",
+              "laboratory",
+              "stable",
+              "mechanical",
+              "lacks",
+              "authorities",
+              "field"
+            ],
+            "correctOrder": [
+              "Industrial",
+              "field",
+              "crews",
+              "are",
+              "used",
+              "to",
+              "operating",
+              "heavy",
+              "mechanical",
+              "components",
+              "although",
+              "the",
+              "laboratory",
+              "environment",
+              "lacks",
+              "stable",
+              "pressure",
+              "controls"
+            ],
+            "enSentence": "Industrial field crews are used to operating heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex2_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The senior programmer was unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">refactor</span> the legacy codebase.",
+            "options": [
+              "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler.",
+              "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir.",
+              "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+              "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "You are to ___ any security breaches immediately.",
+            "options": [
+              "to report",
+              "report",
+              "reporting",
+              "reported"
+            ],
+            "correctIndex": 1,
+            "translation": "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+          },
+          {
+            "id": "u103l117_ex2_q9",
+            "type": "translation-text",
+            "prompt": "\"The automatic framework is certain to optimize the queries.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Otomatik altyapının sorguları optimize edeceği kesindir."
+          },
+          {
+            "id": "u103l117_ex2_q10",
+            "type": "translation-text",
+            "prompt": "\"The legacy system is doomed to fail without proper maintenance.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur."
+          }
+        ]
+      },
+      {
+        "id": "u103l117ex3",
+        "title": "Alıştırma 3: Karma Test III",
+        "description": "İleri düzey yapılarla genel pekiştirme ve kelime bankası çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l117_ex3_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Technicians are not supposed to ___ the system parameters on Sundays.",
+            "options": [
+              "modify",
+              "modifying",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 0,
+            "translation": "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir."
+          },
+          {
+            "id": "u103l117_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The software update was supposed to ___ at noon, but it is heavily delayed.",
+            "options": [
+              "arrived",
+              "arriving",
+              "arrive",
+              "to arrive"
+            ],
+            "correctIndex": 2,
+            "translation": "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti."
+          },
+          {
+            "id": "u103l117_ex3_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır.",
+            "words": [
+              "developers",
+              "Most",
+              "deploying",
+              "to",
+              "query",
+              "infrastructure",
+              "automatically",
+              "accustomed",
+              "are",
+              "core",
+              "builds"
+            ],
+            "correctOrder": [
+              "Most",
+              "developers",
+              "are",
+              "accustomed",
+              "to",
+              "deploying",
+              "builds",
+              "automatically"
+            ],
+            "enSentence": "Most developers are accustomed to deploying builds automatically.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex3_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The backup database is unlikely to ___ any transaction records.",
+            "options": [
+              "lose",
+              "losing",
+              "lost",
+              "to lose"
+            ],
+            "correctIndex": 0,
+            "translation": "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir."
+          },
+          {
+            "id": "u103l117_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Auditors are certain to ___ the unencrypted database password.",
+            "options": [
+              "flag",
+              "flagging",
+              "to flag",
+              "flagged"
+            ],
+            "correctIndex": 0,
+            "translation": "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir."
+          },
+          {
+            "id": "u103l117_ex3_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir.",
+            "words": [
+              "unwilling",
+              "adopt",
+              "are",
+              "framework",
+              "to",
+              "model",
+              "the",
+              "experts",
+              "Technical",
+              "logs",
+              "lead",
+              "architectural",
+              "outdated"
+            ],
+            "correctOrder": [
+              "Technical",
+              "experts",
+              "are",
+              "unwilling",
+              "to",
+              "adopt",
+              "the",
+              "outdated",
+              "architectural",
+              "framework"
+            ],
+            "enSentence": "Technical experts are unwilling to adopt the outdated architectural framework.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex3_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "Outdated architectural frameworks are doomed to ___ sooner or later in technology.",
+            "options": [
+              "collapse",
+              "collapsing",
+              "collapsed",
+              "to collapse"
+            ],
+            "correctIndex": 0,
+            "translation": "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+          },
+          {
+            "id": "u103l117_ex3_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The corporate tax rate is likely to ___ next fiscal quarter.",
+            "options": [
+              "increasing",
+              "increase",
+              "increased",
+              "to increase"
+            ],
+            "correctIndex": 1,
+            "translation": "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+          },
+          {
+            "id": "u103l117_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"With such an advanced encryption algorithm, the security system is bound to succeed.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır."
+          },
+          {
+            "id": "u103l117_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Engineers were accustomed to compiling data fields manually.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+          }
+        ]
+      },
+      {
+        "id": "u103l117ex4",
+        "title": "Alıştırma 4: Karma Test IV",
+        "description": "Çeviri ve çoktan seçmeli sorularla tarama testleri.",
+        "questions": [
+          {
+            "id": "u103l117_ex4_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Proje yöneticileri katı kalite uyum çerçevelerini uygulamaya alışıktı.",
+            "options": [
+              "The outdated hardware was doomed to overheat under heavy workload.",
+              "The administrative team is to update the rules tomorrow.",
+              "The evaluation committee was unlikely to approve the additional funding.",
+              "Project managers were used to <span style=\"color: #ff6b6b; font-weight: bold;\">implementing</span> strict quality compliance frameworks."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex4_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Finansal analist değişken piyasa ölçümlerini değerlendirmeye alışıktı.",
+            "words": [
+              "was",
+              "financial",
+              "market",
+              "evaluating",
+              "The",
+              "analyst",
+              "to",
+              "metrics",
+              "interaction",
+              "volatile",
+              "used",
+              "report",
+              "server"
+            ],
+            "correctOrder": [
+              "The",
+              "financial",
+              "analyst",
+              "was",
+              "used",
+              "to",
+              "evaluating",
+              "volatile",
+              "market",
+              "metrics"
+            ],
+            "enSentence": "The financial analyst was used to evaluating volatile market metrics.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex4_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir.",
+            "options": [
+              "Users are unwilling to <span style=\"color: #ff6b6b; font-weight: bold;\">share</span> their private data without encryption.",
+              "I am used to configuring complex network infrastructures.",
+              "The main server was certain to overheat under that heavy load.",
+              "The internal board is unable to call an emergency committee meeting this week."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l117_ex4_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.",
+            "words": [
+              "traffic",
+              "administrator",
+              "realtime",
+              "to",
+              "system",
+              "is",
+              "Reckless",
+              "The",
+              "know",
+              "migration",
+              "accustomed",
+              "monitoring",
+              "network"
+            ],
+            "correctOrder": [
+              "The",
+              "system",
+              "administrator",
+              "is",
+              "accustomed",
+              "to",
+              "monitoring",
+              "realtime",
+              "network",
+              "traffic"
+            ],
+            "enSentence": "The system administrator is accustomed to monitoring real-time network traffic.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex4_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "Corrupted device firmware is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> system failures.",
+            "options": [
+              "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır.",
+              "Araştırma ekibi hücrelerdeki yapısal varyasyonları analiz etmeye alışıktır.",
+              "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+              "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex4_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım.",
+            "words": [
+              "am",
+              "used",
+              "device",
+              "to",
+              "corrupted",
+              "packages",
+              "isolating",
+              "detect",
+              "rate",
+              "firmware",
+              "proper",
+              "I"
+            ],
+            "correctOrder": [
+              "I",
+              "am",
+              "used",
+              "to",
+              "isolating",
+              "corrupted",
+              "device",
+              "firmware",
+              "packages"
+            ],
+            "enSentence": "I am used to isolating corrupted device firmware packages.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex4_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi.",
+            "options": [
+              "We are accustomed to working under high-pressure conditions.",
+              "The administrator is unwilling to grant root access to external users.",
+              "The network infrastructure branch is used to processing massive cloud database queries while secondary firewalls screen external traffic.",
+              "The simulation was certain to <span style=\"color: #ff6b6b; font-weight: bold;\">succeed</span> after the configuration change."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex4_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "He is certain to ___ the advanced encryption algorithms certification test.",
+            "options": [
+              "pass",
+              "passed",
+              "passing",
+              "to pass"
+            ],
+            "correctIndex": 0,
+            "translation": "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+          },
+          {
+            "id": "u103l117_ex4_q9",
+            "type": "translation-text",
+            "prompt": "\"The security updates are certain to block external attacks.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir."
+          },
+          {
+            "id": "u103l117_ex4_q10",
+            "type": "translation-text",
+            "prompt": "\"Cloud technicians are used to migrating sensitive database records.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır."
+          }
+        ]
+      },
+      {
+        "id": "u103l117ex5",
+        "title": "Alıştırma 5: Karma Test V",
+        "description": "Gramer ve cümle yapısını pekiştirme çalışmaları.",
+        "questions": [
+          {
+            "id": "u103l117_ex5_q1",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The company was willing to ___ in advanced cybersecurity tools.",
+            "options": [
+              "invest",
+              "investing",
+              "to invest",
+              "invested"
+            ],
+            "correctIndex": 0,
+            "translation": "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi."
+          },
+          {
+            "id": "u103l117_ex5_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ complex network infrastructures.",
+            "options": [
+              "to configure",
+              "configure",
+              "configured",
+              "configuring"
+            ],
+            "correctIndex": 3,
+            "translation": "Karmaşık ağ altyapılarını yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l117_ex5_q3",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi.",
+            "words": [
+              "was",
+              "the",
+              "succeed",
+              "configuration",
+              "simulation",
+              "identity",
+              "certain",
+              "change",
+              "to",
+              "fund",
+              "chemical",
+              "The",
+              "after"
+            ],
+            "correctOrder": [
+              "The",
+              "simulation",
+              "was",
+              "certain",
+              "to",
+              "succeed",
+              "after",
+              "the",
+              "configuration",
+              "change"
+            ],
+            "enSentence": "The simulation was certain to succeed after the configuration change.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex5_q4",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The legislative tax reform was supposed to ___ easy, but it took three months.",
+            "options": [
+              "to be",
+              "be",
+              "being",
+              "been"
+            ],
+            "correctIndex": 1,
+            "translation": "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü."
+          },
+          {
+            "id": "u103l117_ex5_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Most administrators <span style=\"color: #ff6b6b; font-weight: bold;\">are used to</span> ___ security protocols regularly.",
+            "options": [
+              "modifying",
+              "modify",
+              "modified",
+              "to modify"
+            ],
+            "correctIndex": 0,
+            "translation": "Çoğu yönetici güvenlik protokollerini düzenli olarak değiştirmeye alışıktır."
+          },
+          {
+            "id": "u103l117_ex5_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı.",
+            "words": [
+              "Engineers",
+              "manually",
+              "This",
+              "were",
+              "invest",
+              "fields",
+              "to",
+              "used",
+              "compiling",
+              "sets",
+              "data"
+            ],
+            "correctOrder": [
+              "Engineers",
+              "were",
+              "used",
+              "to",
+              "compiling",
+              "data",
+              "fields",
+              "manually"
+            ],
+            "enSentence": "Engineers were used to compiling data fields manually.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex5_q7",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "The supervisor <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> ___ severe database overflows.",
+            "options": [
+              "handle",
+              "handled",
+              "handling",
+              "to handle"
+            ],
+            "correctIndex": 2,
+            "translation": "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
+          },
+          {
+            "id": "u103l117_ex5_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The outdated hardware was doomed to ___ under heavy workload.",
+            "options": [
+              "overheat",
+              "to overheat",
+              "overheating",
+              "overheated"
+            ],
+            "correctIndex": 0,
+            "translation": "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu."
+          },
+          {
+            "id": "u103l117_ex5_q9",
+            "type": "translation-text",
+            "prompt": "\"The internal board is unable to call an emergency committee meeting this week.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İç kurul bu hafta acil komite toplantısı çağıramamaktadır."
+          },
+          {
+            "id": "u103l117_ex5_q10",
+            "type": "translation-text",
+            "prompt": "\"The compiler is unlikely to generate errors with the new syntax.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+          }
+        ]
+      },
+      {
+        "id": "u103l117ex6",
+        "title": "Alıştırma 6: Karma Test VI",
+        "description": "Karma konulardan oluşan serbest çeviri ve yazım testleri.",
+        "questions": [
+          {
+            "id": "u103l117_ex6_q1",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir.",
+            "options": [
+              "The new update is likely to resolve the latency issues.",
+              "The software update is to launch on the production server tonight.",
+              "The team is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">complete</span> the database migration on time.",
+              "The junior developer is willing to learn new programming languages."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l117_ex6_q2",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi.",
+            "words": [
+              "about",
+              "anomaly",
+              "deploy",
+              "ignore",
+              "structural",
+              "solution",
+              "corporate",
+              "was",
+              "to",
+              "the",
+              "script",
+              "the",
+              "occurred",
+              "technician",
+              "The",
+              "when"
+            ],
+            "correctOrder": [
+              "The",
+              "technician",
+              "was",
+              "about",
+              "to",
+              "deploy",
+              "the",
+              "script",
+              "when",
+              "the",
+              "structural",
+              "anomaly",
+              "occurred"
+            ],
+            "enSentence": "The technician was about to deploy the script when the structural anomaly occurred.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex6_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The server is likely to <span style=\"color: #ff6b6b; font-weight: bold;\">crash</span> if the database overflow continues.",
+            "options": [
+              "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir.",
+              "Otomatik sistem benzersiz kriptografik jetonlar üretmeye alışıktır.",
+              "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir.",
+              "Baş araştırmacı yasal politika belgelerini incelemeye alışıktı."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u103l117_ex6_q4",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir.",
+            "words": [
+              "moment",
+              "modify",
+              "devices",
+              "substantial",
+              "The",
+              "software",
+              "team",
+              "is",
+              "unable",
+              "to",
+              "empirical",
+              "at",
+              "extend",
+              "inputs",
+              "the",
+              "sign"
+            ],
+            "correctOrder": [
+              "The",
+              "software",
+              "team",
+              "is",
+              "unable",
+              "to",
+              "modify",
+              "substantial",
+              "empirical",
+              "inputs",
+              "at",
+              "the",
+              "moment"
+            ],
+            "enSentence": "The software team is unable to modify substantial empirical inputs at the moment.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex6_q5",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru Türkçe çevirisini seçin:",
+            "sentence": "The automatic framework is certain to <span style=\"color: #ff6b6b; font-weight: bold;\">optimize</span> the queries.",
+            "options": [
+              "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur.",
+              "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı.",
+              "Otomatik altyapının sorguları optimize edeceği kesindir.",
+              "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır."
+            ],
+            "correctIndex": 2
+          },
+          {
+            "id": "u103l117_ex6_q6",
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "translation": "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır.",
+            "words": [
+              "empirical",
+              "the",
+              "fail",
+              "to",
+              "database",
+              "is",
+              "bound",
+              "evaluation",
+              "handling",
+              "comprehensive",
+              "Without",
+              "visual",
+              "script",
+              "developers"
+            ],
+            "correctOrder": [
+              "Without",
+              "comprehensive",
+              "empirical",
+              "evaluation",
+              "the",
+              "database",
+              "script",
+              "is",
+              "bound",
+              "to",
+              "fail"
+            ],
+            "enSentence": "Without comprehensive empirical evaluation, the database script is bound to fail.",
+            "isEngToTr": false
+          },
+          {
+            "id": "u103l117_ex6_q7",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin doğru İngilizce çevirisini seçin:",
+            "sentence": "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu.",
+            "options": [
+              "The senior programmer was unwilling to refactor the legacy codebase.",
+              "Institutional authorities are unwilling to sign the formal bilateral commercial agreements.",
+              "I am used to refactoring complex application systems in order that frontend developers can integrate visual components cleanly.",
+              "The application was doomed to <span style=\"color: #ff6b6b; font-weight: bold;\">run</span> slowly on older devices."
+            ],
+            "correctIndex": 3
+          },
+          {
+            "id": "u103l117_ex6_q8",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldur",
+            "sentence": "I <span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> ___ unoptimized legacy source codes.",
+            "options": [
+              "refactoring",
+              "refactor",
+              "refactored",
+              "to refactor"
+            ],
+            "correctIndex": 0,
+            "translation": "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+          },
+          {
+            "id": "u103l117_ex6_q9",
+            "type": "translation-text",
+            "prompt": "\"The lead investigator was used to reviewing legislative policy documents.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Baş araştırmacı yasal politika belgelerini incelemeye alışıktı."
+          },
+          {
+            "id": "u103l117_ex6_q10",
+            "type": "translation-text",
+            "prompt": "\"Environmental groups were used to monitoring global heat anomaly indexes.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Çevre grupları küresel ısı anomalisi endekslerini izlemeye alışıktı."
           }
         ]
       }
