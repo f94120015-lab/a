@@ -226,52 +226,52 @@ const L96_raw = [
   // Exercise 1 (1-10)
   {
     type: "fill-blank",
-    sentence: "A heavy rain ___ the simulation site yesterday.",
+    sentence: "A heavy rain ___ the simulation site <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
     options: ["affected", "affecting", "affect", "affects"]
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "A heavy rain affected the simulation site ___ .",
+    sentence: "A heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">affected</span> the simulation site ___ .",
     options: ["yesterday", "currently", "since", "yet"]
   },
   {
     type: "fill-blank",
-    sentence: "Yesterday, the central server ___ all user credentials.",
+    sentence: "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, the central server ___ all user credentials.",
     options: ["validated", "validating", "validate", "validates"]
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "___, the central server validated all user credentials.",
+    sentence: "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> all user credentials.",
     options: ["Yesterday", "Right now", "Since 2020", "Lately"]
   },
   {
     type: "fill-blank",
-    sentence: "The academic team ___ the new device test in 2020.",
+    sentence: "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span>.",
     options: ["completed", "completing", "complete", "completes"]
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "The academic team completed the new device test ___ 2020.",
+    sentence: "The academic team <span style=\"color: #ff6b6b; font-weight: bold;\">completed</span> the new device test ___ 2020.",
     options: ["in", "at", "on", "since"]
   },
   {
     type: "fill-blank",
-    sentence: "The research facility successfully ___ the database yesterday.",
+    sentence: "The research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
     options: ["upgraded", "upgrades", "upgrading", "will upgrade"]
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "The research facility successfully upgraded the database ___ .",
+    sentence: "The research facility successfully <span style=\"color: #ff6b6b; font-weight: bold;\">upgraded</span> the database ___ .",
     options: ["yesterday", "now", "since then", "yet"]
   },
   {
     type: "fill-blank",
-    sentence: "Two years ago, the compiler ___ the data blocks without errors.",
+    sentence: "<span style=\"color: #ff6b6b; font-weight: bold;\">Two years ago</span>, the compiler ___ the data blocks without errors.",
     options: ["processed", "processing", "process", "processes"]
   },
   {
     type: "fill-blank-dropdown",
-    sentence: "Two years ___, the compiler processed the data blocks without errors.",
+    sentence: "Two years ___, the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">processed</span> the data blocks without errors.",
     options: ["ago", "since", "lately", "now"]
   },
 

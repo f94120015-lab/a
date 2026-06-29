@@ -15627,12 +15627,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "At the moment, heavy rain is ___ the simulation site.",
             "options": [
-              "affects",
               "affect",
+              "affecting",
               "affected",
-              "affecting"
+              "affects"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
           },
           {
@@ -15641,12 +15641,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, heavy rain is affecting the simulation site.",
             "options": [
-              "At the moment",
               "Yesterday",
-              "Since 2020",
-              "In 2012"
+              "At the moment",
+              "In 2012",
+              "Since 2020"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -15655,12 +15655,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Right now, the central server is ___ user credentials.",
             "options": [
-              "validating",
-              "validated",
+              "validates",
               "validate",
-              "validates"
+              "validated",
+              "validating"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
           },
           {
@@ -15683,12 +15683,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The academic team is currently ___ the new device.",
             "options": [
-              "testing",
               "tested",
+              "testing",
               "test",
               "tests"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Şu anda derleyici veri bloklarını işliyor."
           },
           {
@@ -15712,8 +15712,8 @@ const unitSentencesMap = {
             "sentence": "The research facility currently ___ additional financial resources.",
             "options": [
               "will require",
-              "requiring",
               "required",
+              "requiring",
               "requires"
             ],
             "correctIndex": 3,
@@ -15726,9 +15726,9 @@ const unitSentencesMap = {
             "sentence": "The research facility ___ requires additional financial resources.",
             "options": [
               "currently",
-              "yesterday",
               "since",
-              "yet"
+              "yet",
+              "yesterday"
             ],
             "correctIndex": 0,
             "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
@@ -15739,12 +15739,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "At the moment, the compiler is ___ the data blocks.",
             "options": [
-              "process",
               "processes",
               "processed",
-              "processing"
+              "processing",
+              "process"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -15753,12 +15753,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "At the moment, the ___ is processing the data blocks.",
             "options": [
+              "compiler",
               "compile",
               "compilation",
-              "compiler",
               "compiled"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
           }
         ]
@@ -15774,12 +15774,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The system is presently ___ a unique cryptographic key.",
             "options": [
+              "generate",
               "generates",
-              "generating",
               "generated",
-              "generate"
+              "generating"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor."
           },
           {
@@ -15788,12 +15788,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system is ___ generating a unique cryptographic key.",
             "options": [
-              "presently",
+              "since",
               "ago",
-              "last week",
-              "since"
+              "presently",
+              "last week"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Şu anda otomatik sistem basınç parametrelerini izliyor."
           },
           {
@@ -15802,12 +15802,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "At present, the automatic system is ___ pressure parameters.",
             "options": [
-              "monitors",
-              "monitor",
+              "monitoring",
               "monitored",
-              "monitoring"
+              "monitor",
+              "monitors"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
           },
           {
@@ -15817,11 +15817,11 @@ const unitSentencesMap = {
             "sentence": "___, the automatic system is monitoring pressure parameters.",
             "options": [
               "In 2012",
+              "At present",
               "Since 2020",
-              "Yesterday",
-              "At present"
+              "Yesterday"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -15830,12 +15830,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "These days, public laboratories are ___ their security protocols.",
             "options": [
-              "adjusting",
-              "adjusted",
               "adjust",
+              "adjusted",
+              "adjusting",
               "adjusts"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
           },
           {
@@ -15845,11 +15845,11 @@ const unitSentencesMap = {
             "sentence": "___, public laboratories are adjusting their security protocols.",
             "options": [
               "Next year",
-              "Since 2020",
+              "These days",
               "Yesterday",
-              "These days"
+              "Since 2020"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
           },
           {
@@ -15858,12 +15858,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "These days, local institutions are ___ their internal laws.",
             "options": [
-              "alter",
-              "altering",
+              "alters",
               "altered",
-              "alters"
+              "altering",
+              "alter"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -15873,9 +15873,9 @@ const unitSentencesMap = {
             "sentence": "These days, local institutions ___ altering their internal laws.",
             "options": [
               "are",
-              "will be",
+              "were",
               "have been",
-              "were"
+              "will be"
             ],
             "correctIndex": 0,
             "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
@@ -15886,12 +15886,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Nowadays, software developers ___ gamified mobile design patterns.",
             "options": [
+              "prefers",
               "prefer",
-              "preferring",
               "preferred",
-              "prefers"
+              "preferring"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor."
           },
           {
@@ -15900,12 +15900,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___, software developers prefer gamified mobile design patterns.",
             "options": [
+              "Nowadays",
               "Since 2020",
-              "Yesterday",
               "Last year",
-              "Nowadays"
+              "Yesterday"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şu anda derleyici veri bloklarını işliyor."
           }
         ]
@@ -15923,8 +15923,8 @@ const unitSentencesMap = {
             "options": [
               "requires",
               "required",
-              "will require",
-              "requiring"
+              "requiring",
+              "will require"
             ],
             "correctIndex": 0,
             "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor."
@@ -15935,12 +15935,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "At the moment, the compiler is ___ the data blocks while the network firewall blocks external traffic.",
             "options": [
-              "processing",
-              "processed",
               "processes",
+              "processed",
+              "processing",
               "process"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor."
           },
           {
@@ -15949,12 +15949,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "These days, public laboratories are ___ their security protocols because malicious malware attacks threaten sensitive files.",
             "options": [
+              "adjusts",
               "adjusting",
               "adjusted",
-              "adjust",
-              "adjusts"
+              "adjust"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor."
           },
           {
@@ -15963,12 +15963,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The system is presently ___ a unique cryptographic key as soon as the administrator grants verification clearance.",
             "options": [
-              "generating",
-              "generated",
               "generate",
-              "generates"
+              "generates",
+              "generated",
+              "generating"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor."
           },
           {
@@ -16053,12 +16053,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Right now, the central server is ___ user credentials on grounds that previous login requests were corrupted.",
             "options": [
+              "validate",
               "validating",
               "validated",
-              "validate",
               "validates"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor."
           },
           {
@@ -16067,12 +16067,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "At present, the automatic system is ___ pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
             "options": [
-              "monitoring",
-              "monitored",
+              "monitors",
               "monitor",
-              "monitors"
+              "monitored",
+              "monitoring"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor."
           },
           {
@@ -16081,12 +16081,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "These days, local institutions are ___ their internal laws inasmuch as regional environmental regulations have become stricter.",
             "options": [
-              "alter",
-              "altered",
+              "altering",
               "alters",
-              "altering"
+              "altered",
+              "alter"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor."
           },
           {
@@ -16109,12 +16109,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "At the moment, heavy rain is ___ the simulation site; therefore, field operations are temporarily suspended.",
             "options": [
-              "affecting",
               "affects",
+              "affect",
               "affected",
-              "affect"
+              "affecting"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor; bu nedenle, saha operasyonları geçici olarak durduruldu."
           },
           {
@@ -16187,25 +16187,25 @@ const unitSentencesMap = {
             "id": "u102l96_ex1_q1",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "A heavy rain ___ the simulation site yesterday.",
+            "sentence": "A heavy rain ___ the simulation site <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
             "options": [
-              "affects",
-              "affect",
+              "affected",
               "affecting",
-              "affected"
+              "affect",
+              "affects"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Dün şiddetli bir yağmur simülasyon alanını etkiledi."
           },
           {
             "id": "u102l96_ex1_q2",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "A heavy rain affected the simulation site ___ .",
+            "sentence": "A heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">affected</span> the simulation site ___ .",
             "options": [
               "yesterday",
-              "currently",
               "yet",
+              "currently",
               "since"
             ],
             "correctIndex": 0,
@@ -16215,54 +16215,54 @@ const unitSentencesMap = {
             "id": "u102l96_ex1_q3",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "Yesterday, the central server ___ all user credentials.",
+            "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, the central server ___ all user credentials.",
             "options": [
-              "validated",
               "validating",
+              "validates",
               "validate",
-              "validates"
+              "validated"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Akademik ekip yeni cihaz testini 2020'de tamamladı."
           },
           {
             "id": "u102l96_ex1_q4",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "___, the central server validated all user credentials.",
+            "sentence": "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> all user credentials.",
             "options": [
+              "Yesterday",
               "Lately",
               "Since 2020",
-              "Right now",
-              "Yesterday"
+              "Right now"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
           },
           {
             "id": "u102l96_ex1_q5",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "The academic team ___ the new device test in 2020.",
+            "sentence": "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span>.",
             "options": [
-              "completes",
               "complete",
+              "completed",
               "completing",
-              "completed"
+              "completes"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
           },
           {
             "id": "u102l96_ex1_q6",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The academic team completed the new device test ___ 2020.",
+            "sentence": "The academic team <span style=\"color: #ff6b6b; font-weight: bold;\">completed</span> the new device test ___ 2020.",
             "options": [
               "since",
               "in",
-              "on",
-              "at"
+              "at",
+              "on"
             ],
             "correctIndex": 1,
             "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
@@ -16271,11 +16271,11 @@ const unitSentencesMap = {
             "id": "u102l96_ex1_q7",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "The research facility successfully ___ the database yesterday.",
+            "sentence": "The research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
             "options": [
-              "upgrades",
               "will upgrade",
               "upgrading",
+              "upgrades",
               "upgraded"
             ],
             "correctIndex": 3,
@@ -16285,42 +16285,42 @@ const unitSentencesMap = {
             "id": "u102l96_ex1_q8",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The research facility successfully upgraded the database ___ .",
+            "sentence": "The research facility successfully <span style=\"color: #ff6b6b; font-weight: bold;\">upgraded</span> the database ___ .",
             "options": [
-              "since then",
+              "yesterday",
               "now",
-              "yet",
-              "yesterday"
+              "since then",
+              "yet"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
             "id": "u102l96_ex1_q9",
             "type": "fill-blank",
             "prompt": "Boşluğu doldur",
-            "sentence": "Two years ago, the compiler ___ the data blocks without errors.",
+            "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Two years ago</span>, the compiler ___ the data blocks without errors.",
             "options": [
-              "processing",
-              "processed",
               "processes",
-              "process"
+              "process",
+              "processed",
+              "processing"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
             "id": "u102l96_ex1_q10",
             "type": "fill-blank-dropdown",
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Two years ___, the compiler processed the data blocks without errors.",
+            "sentence": "Two years ___, the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">processed</span> the data blocks without errors.",
             "options": [
               "lately",
               "now",
-              "ago",
-              "since"
+              "since",
+              "ago"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti."
           }
         ]
@@ -16336,12 +16336,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The system ___ a unique cryptographic key last week.",
             "options": [
-              "generate",
-              "generating",
               "generates",
-              "generated"
+              "generated",
+              "generate",
+              "generating"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16352,8 +16352,8 @@ const unitSentencesMap = {
             "options": [
               "last",
               "ago",
-              "next",
-              "this"
+              "this",
+              "next"
             ],
             "correctIndex": 0,
             "translation": "Otomatik sistem üç saat önce basınç parametrelerini izledi."
@@ -16364,12 +16364,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The automatic system ___ pressure parameters three hours ago.",
             "options": [
-              "monitored",
+              "monitors",
               "monitoring",
               "monitor",
-              "monitors"
+              "monitored"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16378,12 +16378,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The automatic system monitored pressure parameters three hours ___ .",
             "options": [
-              "ago",
-              "since",
               "lately",
-              "before"
+              "before",
+              "since",
+              "ago"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16421,9 +16421,9 @@ const unitSentencesMap = {
             "sentence": "Last year, local institutions ___ their internal laws.",
             "options": [
               "altered",
-              "altering",
+              "alters",
               "alter",
-              "alters"
+              "altering"
             ],
             "correctIndex": 0,
             "translation": "Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı."
@@ -16434,12 +16434,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Last year, local institutions ___ altering their internal laws.",
             "options": [
-              "were",
-              "are",
               "completed",
-              "have been"
+              "were",
+              "have been",
+              "are"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Akademik ekip yeni cihaz testini 2020'de tamamladı."
           },
           {
@@ -16448,12 +16448,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "In 2012, software developers ___ traditional mobile design patterns.",
             "options": [
-              "preferred",
-              "preferring",
+              "prefers",
               "prefer",
-              "prefers"
+              "preferring",
+              "preferred"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
           },
           {
@@ -16462,12 +16462,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ 2012, software developers preferred traditional mobile design patterns.",
             "options": [
-              "In",
-              "At",
               "On",
-              "Since"
+              "Since",
+              "At",
+              "In"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
           }
         ]
@@ -16483,12 +16483,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The international research facility successfully ___ the database yesterday to optimize its secondary structural frameworks.",
             "options": [
-              "upgrades",
-              "upgrade",
+              "upgraded",
               "upgrading",
-              "upgraded"
+              "upgrade",
+              "upgrades"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için dün veri tabanını başarıyla yükseltti."
           },
           {
@@ -16497,12 +16497,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Two years ago, the compiler ___ the data blocks while the network firewall blocked external traffic.",
             "options": [
-              "processed",
               "processes",
+              "process",
               "processing",
-              "process"
+              "processed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
           },
           {
@@ -16539,12 +16539,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "In 2012, software developers ___ traditional mobile design patterns in order that students might learn basic grammar easily.",
             "options": [
-              "prefers",
-              "prefer",
+              "preferred",
               "preferring",
-              "preferred"
+              "prefers",
+              "prefer"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti."
           },
           {
@@ -16615,12 +16615,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Yesterday, the central server ___ all user credentials on grounds that previous login requests were corrupted.",
             "options": [
-              "validates",
-              "validating",
               "validated",
+              "validating",
+              "validates",
               "validate"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı."
           },
           {
@@ -16629,12 +16629,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The automatic system ___ pressure parameters three hours ago lest the industrial mechanical piston should fail unexpectedly.",
             "options": [
-              "monitors",
-              "monitor",
               "monitoring",
-              "monitored"
+              "monitored",
+              "monitor",
+              "monitors"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi."
           },
           {
@@ -16644,11 +16644,11 @@ const unitSentencesMap = {
             "sentence": "Last year, local institutions ___ their internal laws inasmuch as regional environmental regulations became stricter.",
             "options": [
               "alters",
-              "alter",
+              "altered",
               "altering",
-              "altered"
+              "alter"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
           },
           {
@@ -16657,12 +16657,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The academic team ___ the new device test in 2020 just as the original mathematical physics formulas predicted.",
             "options": [
-              "completes",
               "completed",
+              "completes",
               "completing",
               "complete"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı."
           },
           {
@@ -16671,12 +16671,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Yesterday, a heavy rain ___ the simulation site; therefore, field operations were temporarily suspended.",
             "options": [
-              "affects",
               "affected",
               "affecting",
-              "affected"
+              "affected",
+              "affects"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
           },
           {
@@ -16751,12 +16751,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Up to now, heavy rain ___ the simulation site.",
             "options": [
-              "has affected",
+              "affected",
               "affecting",
               "affects",
-              "affected"
+              "has affected"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
           },
           {
@@ -16765,9 +16765,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ now, heavy rain has affected the simulation site.",
             "options": [
+              "Since",
               "At",
               "By",
-              "Since",
               "Up to"
             ],
             "correctIndex": 3,
@@ -16779,12 +16779,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The central server ___ user credentials.",
             "options": [
-              "validates",
-              "just validated",
               "has just validated",
+              "just validated",
+              "validates",
               "validating"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "2020'den beri akademik ekip yeni cihazı test etti."
           },
           {
@@ -16793,12 +16793,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The central server has ___ validated the user credentials.",
             "options": [
-              "yet",
-              "ago",
               "just",
-              "currently"
+              "currently",
+              "yet",
+              "ago"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
           },
           {
@@ -16807,12 +16807,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Since 2020, the academic team ___ the new device.",
             "options": [
-              "tests",
               "has tested",
               "tested",
-              "testing"
+              "testing",
+              "tests"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
           },
           {
@@ -16821,12 +16821,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ 2020, the academic team has tested the new device.",
             "options": [
-              "Since",
-              "For",
+              "Lately",
               "In",
-              "Lately"
+              "For",
+              "Since"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Sistem zaten benzersiz bir kriptografik anahtar üretti."
           },
           {
@@ -16849,12 +16849,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The research facility has recently ___ additional financial resources.",
             "options": [
-              "requiring",
-              "required",
+              "will require",
               "requires",
-              "will require"
+              "requiring",
+              "required"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16864,11 +16864,11 @@ const unitSentencesMap = {
             "sentence": "Up to now, the compiler ___ all the data blocks.",
             "options": [
               "processed",
+              "processes",
               "has processed",
-              "processing",
-              "processes"
+              "processing"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16926,12 +16926,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Since the team started the project, the automatic system ___ pressure parameters.",
             "options": [
+              "has monitored",
               "monitors",
-              "monitoring",
               "monitored",
-              "has monitored"
+              "monitoring"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
           },
           {
@@ -16941,11 +16941,11 @@ const unitSentencesMap = {
             "sentence": "Since the team ___ the project, the automatic system has monitored pressure parameters.",
             "options": [
               "starts",
-              "starting",
               "started",
-              "has started"
+              "has started",
+              "starting"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
           },
           {
@@ -16954,9 +16954,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Lately, public laboratories ___ adjusted their security protocols.",
             "options": [
-              "are",
               "had",
               "has",
+              "are",
               "have"
             ],
             "correctIndex": 3,
@@ -16968,12 +16968,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Lately, public laboratories ___ their security protocols.",
             "options": [
-              "have adjusted",
               "adjusted",
+              "have adjusted",
               "adjusts",
               "adjusting"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
           },
           {
@@ -16984,8 +16984,8 @@ const unitSentencesMap = {
             "options": [
               "have",
               "has",
-              "had",
-              "are"
+              "are",
+              "had"
             ],
             "correctIndex": 0,
             "translation": "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı."
@@ -16996,12 +16996,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Lately, local institutions ___ their internal laws.",
             "options": [
-              "have altered",
               "altered",
+              "alters",
               "altering",
-              "alters"
+              "have altered"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "2020'den beri akademik ekip yeni cihazı test etti."
           },
           {
@@ -17011,11 +17011,11 @@ const unitSentencesMap = {
             "sentence": "So far, software developers ___ gamified mobile design patterns.",
             "options": [
               "preferred",
-              "have preferred",
               "prefers",
-              "preferring"
+              "preferring",
+              "have preferred"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
           },
           {
@@ -17024,12 +17024,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ far, software developers have preferred gamified mobile design patterns.",
             "options": [
-              "Too",
-              "So",
+              "By",
               "As",
-              "By"
+              "Too",
+              "So"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
           }
         ]
@@ -17045,12 +17045,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The international research facility ___ additional financial resources to optimize its secondary structural frameworks.",
             "options": [
-              "has recently required",
               "required",
+              "has recently required",
               "requiring",
               "requires"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
           },
           {
@@ -17059,12 +17059,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Up to now, the compiler has processed the data blocks while the network firewall ___ external traffic.",
             "options": [
-              "has blocked",
-              "will block",
               "blocking",
-              "blocks"
+              "blocks",
+              "will block",
+              "has blocked"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
           },
           {
@@ -17075,8 +17075,8 @@ const unitSentencesMap = {
             "options": [
               "have threatened",
               "threaten",
-              "threatens",
-              "threatening"
+              "threatening",
+              "threatens"
             ],
             "correctIndex": 0,
             "translation": "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı."
@@ -17088,9 +17088,9 @@ const unitSentencesMap = {
             "sentence": "The system has already generated a unique cryptographic key since the administrator ___ verification clearance.",
             "options": [
               "granted",
-              "will grant",
               "grants",
-              "granting"
+              "granting",
+              "will grant"
             ],
             "correctIndex": 0,
             "translation": "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti."
@@ -17101,9 +17101,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "So far, software developers have preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
             "options": [
-              "may",
               "can",
               "will",
+              "may",
               "might"
             ],
             "correctIndex": 3,
@@ -17177,12 +17177,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The central server has just validated user credentials on grounds that previous login requests ___ corrupted.",
             "options": [
+              "are",
               "were",
               "have been",
-              "are",
               "will be"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı."
           },
           {
@@ -17191,12 +17191,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Since the experiment began, the automatic system has monitored pressure parameters lest the industrial mechanical piston ___ fail unexpectedly.",
             "options": [
-              "shall",
               "will",
-              "would",
-              "should"
+              "should",
+              "shall",
+              "would"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi."
           },
           {
@@ -17207,8 +17207,8 @@ const unitSentencesMap = {
             "options": [
               "have",
               "has",
-              "had",
-              "are"
+              "are",
+              "had"
             ],
             "correctIndex": 0,
             "translation": "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
@@ -17235,8 +17235,8 @@ const unitSentencesMap = {
             "options": [
               "have been",
               "were",
-              "are",
-              "will be"
+              "will be",
+              "are"
             ],
             "correctIndex": 0,
             "translation": "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
@@ -17315,12 +17315,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The company ___ since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
             "options": [
-              "expanded",
               "has expanded",
-              "expands",
-              "is expanding"
+              "expanded",
+              "is expanding",
+              "expands"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Yeni yasa kabul edildiğinden beri şirket büyüdü."
           },
           {
@@ -17329,9 +17329,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The company <span style=\"color: #51cf66; font-weight: bold;\">has expanded</span> ___ the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
             "options": [
+              "while",
               "when",
               "for",
-              "while",
               "since"
             ],
             "correctIndex": 3,
@@ -17343,12 +17343,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Plants ___ significantly since they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
             "options": [
-              "have grown",
-              "grew",
               "grow",
-              "are growing"
+              "are growing",
+              "grew",
+              "have grown"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler."
           },
           {
@@ -17357,12 +17357,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
             "options": [
+              "before",
               "until",
               "during",
-              "since",
-              "before"
+              "since"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17371,12 +17371,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Children ___ grammar since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
             "options": [
-              "learned",
-              "are learning",
+              "learn",
               "have learned",
-              "learn"
+              "are learning",
+              "learned"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Tasarım yapıldığından beri düzen değişmedi."
           },
           {
@@ -17399,12 +17399,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
             "options": [
-              "is not holding",
               "has not held",
               "did not hold",
-              "does not hold"
+              "does not hold",
+              "is not holding"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı."
           },
           {
@@ -17413,12 +17413,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The board <span style=\"color: #51cf66; font-weight: bold;\">has not held</span> meetings ___ the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
             "options": [
+              "although",
               "since",
-              "while",
               "until",
-              "although"
+              "while"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Teknoloji firması açıldığından beri otomasyon arttı."
           },
           {
@@ -17427,12 +17427,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The layout ___ since it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
             "options": [
+              "has not changed",
               "is not changing",
               "does not change",
-              "did not change",
-              "has not changed"
+              "did not change"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Kış başladığından beri sıcaklıklar dalgalandı."
           },
           {
@@ -17441,12 +17441,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> ___ it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
             "options": [
-              "because",
               "since",
+              "for",
               "when",
-              "for"
+              "because"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
           }
         ]
@@ -17462,12 +17462,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> since equipment ___ .",
             "options": [
+              "installs",
               "has installed",
               "is installed",
-              "was installed",
-              "installs"
+              "was installed"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Ekipman kurulduğundan beri işler kolaylaştı."
           },
           {
@@ -17477,11 +17477,11 @@ const unitSentencesMap = {
             "sentence": "Work ___ since equipment <span style=\"color: #ff6b6b; font-weight: bold;\">was installed</span>.",
             "options": [
               "facilitates",
-              "is facilitated",
               "was facilitated",
-              "has been facilitated"
+              "has been facilitated",
+              "is facilitated"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı."
           },
           {
@@ -17491,8 +17491,8 @@ const unitSentencesMap = {
             "sentence": "Users <span style=\"color: #51cf66; font-weight: bold;\">have experienced</span> errors since the server ___ .",
             "options": [
               "is crashing",
-              "crashes",
               "has crashed",
+              "crashes",
               "crashed"
             ],
             "correctIndex": 3,
@@ -17504,12 +17504,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>.",
             "options": [
-              "have experienced",
               "experienced",
-              "are experiencing",
-              "experience"
+              "experience",
+              "have experienced",
+              "are experiencing"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Kış başladığından beri sıcaklıklar dalgalandı."
           },
           {
@@ -17518,12 +17518,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Automation <span style=\"color: #51cf66; font-weight: bold;\">has increased</span> since the tech firm ___ .",
             "options": [
-              "opens",
+              "opened",
               "has opened",
-              "is opening",
-              "opened"
+              "opens",
+              "is opening"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
           },
           {
@@ -17532,12 +17532,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Automation ___ since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>.",
             "options": [
-              "is increasing",
-              "increased",
+              "increases",
               "has increased",
-              "increases"
+              "is increasing",
+              "increased"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Yeni yasa kabul edildiğinden beri şirket büyüdü."
           },
           {
@@ -17546,12 +17546,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ .",
             "options": [
-              "is beginning",
-              "begins",
+              "began",
               "has begun",
-              "began"
+              "begins",
+              "is beginning"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler."
           },
           {
@@ -17560,8 +17560,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Temperatures ___ since winter <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.",
             "options": [
-              "are fluctuating",
               "fluctuate",
+              "are fluctuating",
               "fluctuated",
               "have fluctuated"
             ],
@@ -17575,11 +17575,11 @@ const unitSentencesMap = {
             "sentence": "Profits <span style=\"color: #51cf66; font-weight: bold;\">have dropped</span> since the financial market ___ .",
             "options": [
               "is declining",
-              "declines",
+              "declined",
               "has declined",
-              "declined"
+              "declines"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17588,12 +17588,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Profits ___ since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span>.",
             "options": [
-              "are dropping",
-              "drop",
+              "have dropped",
               "dropped",
-              "have dropped"
+              "drop",
+              "are dropping"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Tasarım yapıldığından beri düzen değişmedi."
           }
         ]
@@ -17609,12 +17609,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
             "options": [
+              "expands",
               "has expanded",
               "is expanding",
-              "expands",
               "expanded"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti."
           },
           {
@@ -17637,12 +17637,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Children ___ grammar rules faster since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> utilizing mobile applications with gamified designs.",
             "options": [
-              "have learned",
-              "learned",
               "learn",
-              "are learning"
+              "are learning",
+              "learned",
+              "have learned"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Çocuklar, oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullanmaya başladıklarından beri dilbilgisi kurallarını daha hızlı öğrendiler."
           },
           {
@@ -17651,12 +17651,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span> because internal administrative conflicts remain unresolved.",
             "options": [
-              "is not holding",
               "did not hold",
               "has not held",
-              "does not hold"
+              "does not hold",
+              "is not holding"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
           },
           {
@@ -17665,12 +17665,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> since it ___ although several frontend developers requested visual interface updates.",
             "options": [
-              "was designed",
-              "is designed",
+              "designs",
               "has designed",
-              "designs"
+              "was designed",
+              "is designed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi."
           },
           {
@@ -17741,12 +17741,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> greatly since electronic equipment ___ by the technical infrastructure branch.",
             "options": [
-              "was installed",
+              "installs",
               "has installed",
               "is installed",
-              "installs"
+              "was installed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı."
           },
           {
@@ -17755,12 +17755,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, causing temporary suspension of data token generations.",
             "options": [
+              "are experiencing",
               "experience",
               "experienced",
-              "have experienced",
-              "are experiencing"
+              "have experienced"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı."
           },
           {
@@ -17769,12 +17769,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Automation ___ rapidly since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>, reducing corporate expenditure on manual operations.",
             "options": [
-              "increases",
-              "is increasing",
               "increased",
-              "has increased"
+              "has increased",
+              "increases",
+              "is increasing"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı."
           },
           {
@@ -17783,12 +17783,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
             "options": [
-              "is beginning",
-              "begins",
               "has begun",
-              "began"
+              "began",
+              "begins",
+              "is beginning"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi."
           },
           {
@@ -17797,12 +17797,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "Profits ___ dropped since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span> due to unexpected international trade restrictions.",
             "options": [
+              "are",
               "had",
-              "have",
               "has",
-              "are"
+              "have"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü."
           },
           {
@@ -17877,12 +17877,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ .",
             "options": [
-              "had left",
-              "will have left",
               "left",
+              "will have left",
+              "had left",
               "have left"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Biz vardığımızda çoğu insan ayrılmıştı."
           },
           {
@@ -17891,12 +17891,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time we ___ home, children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed.",
             "options": [
-              "arrive",
               "had arrived",
               "arrived",
-              "will arrive"
+              "will arrive",
+              "arrive"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
           },
           {
@@ -17906,9 +17906,9 @@ const unitSentencesMap = {
             "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ .",
             "options": [
               "had spread",
-              "will have spread",
               "has spread",
-              "spreads"
+              "spreads",
+              "will have spread"
             ],
             "correctIndex": 0,
             "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
@@ -17920,11 +17920,11 @@ const unitSentencesMap = {
             "sentence": "By the time the compiler ___ , the server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> it.",
             "options": [
               "had finished",
-              "will finish",
+              "finishes",
               "finished",
-              "finishes"
+              "will finish"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak."
           },
           {
@@ -17933,12 +17933,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ .",
             "options": [
-              "had collapsed",
-              "will have collapsed",
               "collapses",
+              "will have collapsed",
+              "had collapsed",
               "has collapsed"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Fırtına dindiğinde köprü çökmüştü."
           },
           {
@@ -17947,12 +17947,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the law ___ , firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
             "options": [
-              "had taken effect",
               "takes effect",
               "took effect",
-              "will take effect"
+              "will take effect",
+              "had taken effect"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar."
           },
           {
@@ -17961,12 +17961,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project ___ .",
             "options": [
-              "had ended",
-              "will have ended",
               "ends",
-              "has ended"
+              "has ended",
+              "had ended",
+              "will have ended"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Fonları aldıklarında proje sona ermişti."
           },
           {
@@ -17975,12 +17975,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time you ___ the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
             "options": [
+              "opened",
               "had opened",
               "open",
-              "opened",
               "will open"
             ],
-            "correctIndex": 1,
+            "correctIndex": 2,
             "translation": "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak."
           },
           {
@@ -17989,12 +17989,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew ___ .",
             "options": [
-              "will have left",
               "had left",
               "have left",
+              "will have left",
               "leaves"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
           },
           {
@@ -18003,12 +18003,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the app ___ , the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
             "options": [
+              "had launched",
               "launches",
               "launched",
-              "will launch",
-              "had launched"
+              "will launch"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
           }
         ]
@@ -18026,8 +18026,8 @@ const unitSentencesMap = {
             "options": [
               "By the time",
               "While",
-              "Although",
-              "Since"
+              "Since",
+              "Although"
             ],
             "correctIndex": 0,
             "translation": "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar."
@@ -18038,12 +18038,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project <span style=\"color: #da77f2; font-weight: bold;\">had ended</span>.",
             "options": [
-              "By the time",
               "Since",
-              "Lest",
-              "While"
+              "By the time",
+              "While",
+              "Lest"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Fonları aldıklarında proje sona ermişti."
           },
           {
@@ -18053,11 +18053,11 @@ const unitSentencesMap = {
             "sentence": "___ you <span style=\"color: #339af0; font-weight: bold;\">open</span> the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
             "options": [
               "As soon as",
-              "Whereas",
+              "By the time",
               "Since",
-              "By the time"
+              "Whereas"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak."
           },
           {
@@ -18066,12 +18066,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.",
             "options": [
-              "By the time",
-              "Since",
               "While",
-              "Because"
+              "By the time",
+              "Because",
+              "Since"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
           },
           {
@@ -18080,12 +18080,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "___ the app <span style=\"color: #339af0; font-weight: bold;\">launches</span>, the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
             "options": [
-              "By the time",
-              "Until",
               "Since",
-              "Whereas"
+              "Until",
+              "Whereas",
+              "By the time"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
           },
           {
@@ -18094,12 +18094,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ left.",
             "options": [
-              "will have",
-              "have",
               "had",
-              "were"
+              "were",
+              "will have",
+              "have"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Biz vardığımızda çoğu insan ayrılmıştı."
           },
           {
@@ -18108,12 +18108,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time we <span style=\"color: #339af0; font-weight: bold;\">arrive</span> home, children ___ gone to bed.",
             "options": [
-              "are",
               "will have",
+              "have",
               "had",
-              "have"
+              "are"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
           },
           {
@@ -18123,11 +18123,11 @@ const unitSentencesMap = {
             "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ spread.",
             "options": [
               "was",
-              "has",
               "will have",
-              "had"
+              "had",
+              "has"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
           },
           {
@@ -18137,8 +18137,8 @@ const unitSentencesMap = {
             "sentence": "By the time the compiler <span style=\"color: #339af0; font-weight: bold;\">finishes</span>, the server ___ saved it.",
             "options": [
               "has",
-              "had",
               "is",
+              "had",
               "will have"
             ],
             "correctIndex": 3,
@@ -18150,9 +18150,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ collapsed.",
             "options": [
-              "was",
               "has",
               "will have",
+              "was",
               "had"
             ],
             "correctIndex": 3,
@@ -18171,8 +18171,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span> at the corporate headquarters, most board members ___ the emergency meeting.",
             "options": [
-              "will have left",
               "left",
+              "will have left",
               "have left",
               "had left"
             ],
@@ -18186,9 +18186,9 @@ const unitSentencesMap = {
             "sentence": "By the time we ___ home from the laboratory, the children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed because of the late hour.",
             "options": [
               "arrive",
-              "had arrived",
+              "arrived",
               "will arrive",
-              "arrived"
+              "had arrived"
             ],
             "correctIndex": 0,
             "translation": "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar."
@@ -18199,12 +18199,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the structural bug, the dynamic malware ___ across secondary network partitions.",
             "options": [
-              "had spread",
               "will have spread",
-              "has spread",
-              "spreads"
+              "spreads",
+              "had spread",
+              "has spread"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı."
           },
           {
@@ -18214,8 +18214,8 @@ const unitSentencesMap = {
             "sentence": "By the time the compiler ___ code optimization, the backup server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> the configuration metrics.",
             "options": [
               "finished",
-              "will finish",
               "had finished",
+              "will finish",
               "finishes"
             ],
             "correctIndex": 3,
@@ -18227,12 +18227,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the severe coastal storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the ancient bridge structure ___ into the turbulent river.",
             "options": [
-              "has collapsed",
+              "had collapsed",
               "collapses",
               "will have collapsed",
-              "had collapsed"
+              "has collapsed"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü."
           },
           {
@@ -18303,12 +18303,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the new legislative law ___ , corporate firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span> their data privacy policies.",
             "options": [
-              "had taken effect",
-              "takes effect",
               "took effect",
-              "will take effect"
+              "had taken effect",
+              "will take effect",
+              "takes effect"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar."
           },
           {
@@ -18317,12 +18317,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> the university research funds, the biology project ___ due to lack of materials.",
             "options": [
-              "has ended",
               "ends",
-              "will have ended",
-              "had ended"
+              "had ended",
+              "has ended",
+              "will have ended"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Üniversite araştırma fonlarını aldıklarında, biyoloji projesi malzeme eksikliği nedeniyle sona ermişti."
           },
           {
@@ -18331,12 +18331,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time you ___ the laboratory door, the automated security system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span> the entry tracking algorithm.",
             "options": [
-              "will open",
-              "had opened",
+              "open",
               "opened",
-              "open"
+              "will open",
+              "had opened"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak."
           },
           {
@@ -18359,12 +18359,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "By the time the mobile application ___ globally, the engineering team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> all core API modules.",
             "options": [
-              "had launched",
               "launched",
               "launches",
-              "will launch"
+              "will launch",
+              "had launched"
             ],
-            "correctIndex": 2,
+            "correctIndex": 1,
             "translation": "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak."
           },
           {
@@ -18441,8 +18441,8 @@ const unitSentencesMap = {
             "options": [
               "fixed",
               "fixes",
-              "fix",
-              "has fixed"
+              "has fixed",
+              "fix"
             ],
             "correctIndex": 0,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
@@ -18453,12 +18453,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ time the administration <span style=\"color: #ff6b6b; font-weight: bold;\">updated</span> the safety laws.",
             "options": [
-              "It is high",
-              "There is",
               "It was",
-              "It has been"
+              "It has been",
+              "It is high",
+              "There is"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18467,12 +18467,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the technical operators ___ the main server.",
             "options": [
-              "reboots",
-              "are rebooting",
               "rebooted",
+              "are rebooting",
+              "reboots",
               "reboot"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18481,12 +18481,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "___ time the government <span style=\"color: #ff6b6b; font-weight: bold;\">reduced</span> factory carbon emissions.",
             "options": [
-              "There is",
+              "It is high",
               "It had",
-              "It has",
-              "It is high"
+              "There is",
+              "It has"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
           },
           {
@@ -18495,9 +18495,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the principal researcher ___ the statistical data.",
             "options": [
-              "compile",
-              "compiles",
               "has compiled",
+              "compiles",
+              "compile",
               "compiled"
             ],
             "correctIndex": 3,
@@ -18509,12 +18509,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It ___ time the development team <span style=\"color: #ff6b6b; font-weight: bold;\">fixed</span> the memory leak.",
             "options": [
-              "would be",
-              "has been",
               "is",
-              "was"
+              "was",
+              "has been",
+              "would be"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18524,11 +18524,11 @@ const unitSentencesMap = {
             "sentence": "It is high time the administration ___ the safety laws.",
             "options": [
               "is updating",
-              "updated",
+              "update",
               "updates",
-              "update"
+              "updated"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18537,12 +18537,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time the technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">rebooted</span> the main server.",
             "options": [
-              "the time",
               "just time",
-              "time",
-              "high time"
+              "the time",
+              "high time",
+              "time"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18551,12 +18551,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time the government ___ factory carbon emissions.",
             "options": [
-              "reduce",
               "reduces",
-              "will reduce",
-              "reduced"
+              "reduced",
+              "reduce",
+              "will reduce"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
           },
           {
@@ -18565,12 +18565,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time the principal researcher <span style=\"color: #ff6b6b; font-weight: bold;\">compiled</span> the statistical data.",
             "options": [
-              "time",
-              "the time",
               "high time",
-              "just time"
+              "just time",
+              "the time",
+              "time"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           }
         ]
@@ -18586,12 +18586,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time we ___ the legacy application components.",
             "options": [
-              "refactored",
-              "refactor",
               "refactors",
+              "refactor",
+              "refactored",
               "are refactoring"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18600,12 +18600,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It ___ time the university <span style=\"color: #ff6b6b; font-weight: bold;\">granted</span> the necessary project funds.",
             "options": [
-              "is",
-              "was",
               "will be",
-              "has been"
+              "has been",
+              "was",
+              "is"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18614,12 +18614,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time the field crew ___ the concrete foundation.",
             "options": [
-              "reinforced",
-              "reinforce",
               "reinforces",
-              "will reinforce"
+              "will reinforce",
+              "reinforce",
+              "reinforced"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18628,12 +18628,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time companies <span style=\"color: #ff6b6b; font-weight: bold;\">hired</span> compliance policy experts.",
             "options": [
-              "just time",
               "high time",
               "time",
-              "the time"
+              "the time",
+              "just time"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
           },
           {
@@ -18642,12 +18642,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the compiler ___ the source code files.",
             "options": [
-              "optimized",
-              "optimize",
               "optimizing",
-              "optimizes"
+              "optimize",
+              "optimizes",
+              "optimized"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           },
           {
@@ -18656,12 +18656,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time we <span style=\"color: #ff6b6b; font-weight: bold;\">refactored</span> the legacy application components.",
             "options": [
-              "time",
               "high time",
+              "just time",
               "the time",
-              "just time"
+              "time"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18670,12 +18670,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the university ___ the necessary project funds.",
             "options": [
-              "grants",
               "has granted",
-              "grant",
-              "granted"
+              "grants",
+              "granted",
+              "grant"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18684,9 +18684,9 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is ___ time the field crew <span style=\"color: #ff6b6b; font-weight: bold;\">reinforced</span> the concrete foundation.",
             "options": [
-              "just time",
               "the time",
               "time",
+              "just time",
               "high time"
             ],
             "correctIndex": 3,
@@ -18713,9 +18713,9 @@ const unitSentencesMap = {
             "sentence": "It is ___ time the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">optimized</span> the source code files.",
             "options": [
               "time",
-              "just time",
               "high time",
-              "the time"
+              "the time",
+              "just time"
             ],
             "correctIndex": 0,
             "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
@@ -18733,8 +18733,8 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the development team ___ the background memory leak since users are experiencing constant navigation delay.",
             "options": [
-              "has fixed",
               "fix",
+              "has fixed",
               "fixes",
               "fixed"
             ],
@@ -18747,12 +18747,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is high time the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
             "options": [
-              "update",
-              "updates",
               "is updating",
-              "updated"
+              "updates",
+              "updated",
+              "update"
             ],
-            "correctIndex": 3,
+            "correctIndex": 2,
             "translation": "Üniversitenin gerekli proje fonlarını sağlama zamanı geldi."
           },
           {
@@ -18761,12 +18761,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is time the technical operators ___ the main server so that secure cryptographic token generation can resume.",
             "options": [
-              "are rebooting",
               "rebooted",
+              "reboots",
               "reboot",
-              "reboots"
+              "are rebooting"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor."
           },
           {
@@ -18776,9 +18776,9 @@ const unitSentencesMap = {
             "sentence": "It is high time the government ___ factory carbon emissions in order that international environmental limits might be met.",
             "options": [
               "reduces",
-              "reduce",
+              "will reduce",
               "reduced",
-              "will reduce"
+              "reduce"
             ],
             "correctIndex": 2,
             "translation": "Derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi."
@@ -18790,9 +18790,9 @@ const unitSentencesMap = {
             "sentence": "It is time the principal researcher ___ the statistical data before the board requests the annual performance report.",
             "options": [
               "compiled",
-              "compile",
               "has compiled",
-              "compiles"
+              "compiles",
+              "compile"
             ],
             "correctIndex": 0,
             "translation": "Şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor."
@@ -18865,12 +18865,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time we ___ the legacy application components lest the system should trigger an irreversible database crash.",
             "options": [
+              "are refactoring",
               "refactors",
               "refactor",
-              "refactored",
-              "are refactoring"
+              "refactored"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi."
           },
           {
@@ -18879,12 +18879,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is time the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
             "options": [
+              "granted",
               "grant",
               "grants",
-              "granted",
               "has granted"
             ],
-            "correctIndex": 2,
+            "correctIndex": 0,
             "translation": "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
           },
           {
@@ -18893,12 +18893,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
             "options": [
-              "reinforces",
-              "will reinforce",
+              "reinforced",
               "reinforce",
-              "reinforced"
+              "reinforces",
+              "will reinforce"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Güvenli kriptografik jeton üretimi yeniden başlayabilsin diye, teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
           },
           {
@@ -18907,12 +18907,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is time the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
             "options": [
-              "optimize",
+              "optimized",
               "optimizes",
-              "optimizing",
-              "optimized"
+              "optimize",
+              "optimizing"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
           },
           {
@@ -18921,12 +18921,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is high time companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
             "options": [
-              "hired",
-              "hire",
               "are hiring",
-              "hires"
+              "hires",
+              "hired",
+              "hire"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi."
           },
           {
@@ -19001,12 +19001,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the best academic article I ___ this year.",
             "options": [
-              "have read",
-              "am reading",
               "had read",
+              "am reading",
+              "have read",
               "read"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19015,12 +19015,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ film the compiler team has watched together.",
             "options": [
-              "worst",
-              "first",
+              "only",
               "best",
-              "only"
+              "worst",
+              "first"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19029,12 +19029,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the worst software crash we ___ to date.",
             "options": [
+              "have experienced",
               "had experienced",
               "experienced",
-              "are experiencing",
-              "have experienced"
+              "are experiencing"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19043,12 +19043,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ configuration option the algorithm has accepted.",
             "options": [
-              "only",
-              "best",
               "worst",
-              "first"
+              "first",
+              "best",
+              "only"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19058,9 +19058,9 @@ const unitSentencesMap = {
             "sentence": "This is the most complex simulation model they ___ .",
             "options": [
               "have built",
+              "build",
               "had built",
-              "built",
-              "build"
+              "built"
             ],
             "correctIndex": 0,
             "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
@@ -19071,12 +19071,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ academic article I have read this year.",
             "options": [
-              "best",
               "worst",
+              "best",
               "first",
               "only"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19085,12 +19085,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the first film the compiler team ___ together.",
             "options": [
-              "had watched",
               "watches",
-              "has watched",
-              "watched"
+              "watched",
+              "had watched",
+              "has watched"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19099,12 +19099,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is the ___ software crash we have experienced to date.",
             "options": [
-              "worst",
               "only",
               "first",
-              "best"
+              "best",
+              "worst"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19113,12 +19113,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the only configuration option the algorithm ___ .",
             "options": [
-              "has accepted",
-              "had accepted",
+              "accepts",
               "accepted",
-              "accepts"
+              "had accepted",
+              "has accepted"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19128,9 +19128,9 @@ const unitSentencesMap = {
             "sentence": "This is the ___ complex simulation model they have built.",
             "options": [
               "most",
+              "very",
               "more",
-              "much",
-              "very"
+              "much"
             ],
             "correctIndex": 0,
             "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
@@ -19162,12 +19162,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ molecular rendering the researcher has obtained.",
             "options": [
-              "best",
-              "finest",
+              "only",
               "first",
-              "only"
+              "best",
+              "finest"
             ],
-            "correctIndex": 1,
+            "correctIndex": 3,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19178,8 +19178,8 @@ const unitSentencesMap = {
             "options": [
               "has passed",
               "had passed",
-              "passes",
-              "passed"
+              "passed",
+              "passes"
             ],
             "correctIndex": 0,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
@@ -19190,12 +19190,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the ___ secure token the server has generated so far.",
             "options": [
-              "only",
-              "best",
               "worst",
-              "first"
+              "first",
+              "best",
+              "only"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19218,12 +19218,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is the ___ time the central bank has raised rates.",
             "options": [
-              "only",
               "first",
+              "best",
               "worst",
-              "best"
+              "only"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19232,12 +19232,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the finest molecular rendering the researcher ___ .",
             "options": [
+              "obtained",
               "obtains",
               "had obtained",
-              "has obtained",
-              "obtained"
+              "has obtained"
             ],
-            "correctIndex": 2,
+            "correctIndex": 3,
             "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19246,12 +19246,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "It is the most ___ law the assembly has passed.",
             "options": [
-              "challenging",
               "secure",
               "efficient",
-              "complex"
+              "complex",
+              "challenging"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19260,12 +19260,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the only secure token the server ___ so far.",
             "options": [
-              "has generated",
-              "generates",
               "had generated",
-              "generated"
+              "generates",
+              "generated",
+              "has generated"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19275,8 +19275,8 @@ const unitSentencesMap = {
             "sentence": "This is the most ___ engine the factory has produced.",
             "options": [
               "efficient",
-              "challenging",
               "fine",
+              "challenging",
               "complex"
             ],
             "correctIndex": 0,
@@ -19296,8 +19296,8 @@ const unitSentencesMap = {
             "sentence": "This is the best academic article I ___ this year because its innovative cross-disciplinary methodology is highly clear.",
             "options": [
               "have read",
-              "am reading",
               "had read",
+              "am reading",
               "read"
             ],
             "correctIndex": 0,
@@ -19310,11 +19310,11 @@ const unitSentencesMap = {
             "sentence": "This is the first film the compiler team ___ together since they moved into the new technological facility.",
             "options": [
               "watches",
+              "has watched",
               "watched",
-              "had watched",
-              "has watched"
+              "had watched"
             ],
-            "correctIndex": 3,
+            "correctIndex": 1,
             "translation": "Bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir."
           },
           {
@@ -19324,8 +19324,8 @@ const unitSentencesMap = {
             "sentence": "It is the worst software crash we ___ to date because of a severe database overflow in primary partitions.",
             "options": [
               "have experienced",
-              "had experienced",
               "are experiencing",
+              "had experienced",
               "experienced"
             ],
             "correctIndex": 0,
@@ -19337,12 +19337,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the only configuration option the algorithm ___ although developers provided several alternative code strings.",
             "options": [
-              "has accepted",
-              "had accepted",
+              "accepts",
               "accepted",
-              "accepts"
+              "had accepted",
+              "has accepted"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur."
           },
           {
@@ -19351,12 +19351,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the most complex simulation model they ___ in order that tectonic plate pressure changes might be evaluated.",
             "options": [
+              "build",
               "have built",
               "built",
-              "build",
               "had built"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "translation": "Bu, fabrikanın ürettiği en verimli motordur."
           },
           {
@@ -19427,12 +19427,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the first time the central bank ___ rates now that global financial indicators display unprecedented market inflation.",
             "options": [
-              "raises",
               "has raised",
               "had raised",
-              "raised"
+              "raised",
+              "raises"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir."
           },
           {
@@ -19441,12 +19441,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the finest molecular rendering the researcher ___ while focusing on cellular sub-structure divisions.",
             "options": [
-              "obtains",
-              "obtained",
+              "has obtained",
               "had obtained",
-              "has obtained"
+              "obtained",
+              "obtains"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Yeni teknolojik tesise taşındıklarından beri bu, derleyici ekibinin birlikte izlediği ilk filmdir."
           },
           {
@@ -19455,12 +19455,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "It is the most challenging law the assembly ___ since the new corporate administrative board was elected.",
             "options": [
-              "passes",
+              "has passed",
               "had passed",
               "passed",
-              "has passed"
+              "passes"
             ],
-            "correctIndex": 3,
+            "correctIndex": 0,
             "translation": "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
           },
           {
@@ -19469,12 +19469,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
             "sentence": "This is the only secure token the server ___ so far lest anonymous third-party trackers should intercept the data.",
             "options": [
-              "has generated",
               "had generated",
               "generates",
+              "has generated",
               "generated"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "translation": "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
           },
           {
@@ -19483,12 +19483,12 @@ const unitSentencesMap = {
             "prompt": "Boşluğu doldur",
             "sentence": "This is the most efficient engine the factory ___ inasmuch as its mechanical piston operates with zero friction limits.",
             "options": [
-              "has produced",
-              "had produced",
               "produced",
-              "produces"
+              "had produced",
+              "produces",
+              "has produced"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "translation": "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir."
           },
           {
