@@ -1711,6 +1711,137 @@ const L101_tr = [
 function buildExercises(rawList, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
+  const autoHighlight = (rawQ, lessonId) => {
+    if (rawQ.type === "multiple-fill-blank") return rawQ.sentence;
+    
+    let sentence = rawQ.sentence;
+    if (sentence.includes('style=')) return sentence;
+    
+    const correctWord = rawQ.options[0];
+    
+    const knownAdverbs = [
+      "at the moment", "at present", "right now", "currently", "presently", "these days", "nowadays",
+      "yesterday", "in", "in 2020", "ago", "last",
+      "so far", "recently", "since", "yet", "already", "up to", "up to now", "just"
+    ];
+    
+    const cw = correctWord.toLowerCase().trim();
+    const isAdverbQuestion = knownAdverbs.some(adv => adv === cw || adv.includes(cw) || cw.includes(adv));
+    
+    if (lessonId === 95) {
+      const adverbs = ["At the moment", "At present", "Right now", "currently", "presently", "These days", "Nowadays"];
+      const verbs = ["is affecting", "is validating", "testing", "requires", "is processing", "is generating", "is monitoring", "are adjusting", "are altering", "prefer"];
+      
+      if (isAdverbQuestion) {
+        for (const verb of verbs) {
+          if (sentence.includes(verb)) {
+            sentence = sentence.replace(verb, `<span style="color: #ff6b6b; font-weight: bold;">${verb}</span>`);
+            break;
+          }
+        }
+        if (sentence.includes("is ___ testing")) {
+          sentence = sentence.replace("is ___ testing", `<span style="color: #ff6b6b; font-weight: bold;">is</span> ___ <span style="color: #ff6b6b; font-weight: bold;">testing</span>`);
+        }
+        if (sentence.includes("is ___ generating")) {
+          sentence = sentence.replace("is ___ generating", `<span style="color: #ff6b6b; font-weight: bold;">is</span> ___ <span style="color: #ff6b6b; font-weight: bold;">generating</span>`);
+        }
+        if (sentence.includes("are ___ altering")) {
+          sentence = sentence.replace("are ___ altering", `<span style="color: #ff6b6b; font-weight: bold;">are</span> ___ <span style="color: #ff6b6b; font-weight: bold;">altering</span>`);
+        }
+        if (sentence.includes("are ___ adjusting")) {
+          sentence = sentence.replace("are ___ adjusting", `<span style="color: #ff6b6b; font-weight: bold;">are</span> ___ <span style="color: #ff6b6b; font-weight: bold;">adjusting</span>`);
+        }
+      } else {
+        for (const adv of adverbs) {
+          const idx = sentence.toLowerCase().indexOf(adv.toLowerCase());
+          if (idx !== -1) {
+            const originalAdv = sentence.substring(idx, idx + adv.length);
+            sentence = sentence.replace(originalAdv, `<span style="color: #ff6b6b; font-weight: bold;">${originalAdv}</span>`);
+            break;
+          }
+        }
+      }
+    }
+    
+    if (lessonId === 96) {
+      const adverbs = ["yesterday", "Yesterday", "in 2020", "Two years ago", "Two years", "last week"];
+      const verbs = ["affected", "validated", "completed", "upgraded", "processed", "generated", "monitored", "adjusted", "altered", "preferred"];
+      
+      if (isAdverbQuestion) {
+        for (const verb of verbs) {
+          if (sentence.includes(verb)) {
+            sentence = sentence.replace(verb, `<span style="color: #ff6b6b; font-weight: bold;">${verb}</span>`);
+            break;
+          }
+        }
+      } else {
+        for (const adv of adverbs) {
+          const idx = sentence.toLowerCase().indexOf(adv.toLowerCase());
+          if (idx !== -1) {
+            const originalAdv = sentence.substring(idx, idx + adv.length);
+            sentence = sentence.replace(originalAdv, `<span style="color: #ff6b6b; font-weight: bold;">${originalAdv}</span>`);
+            break;
+          }
+        }
+      }
+    }
+
+    if (lessonId === 97) {
+      const adverbs = ["so far", "recently", "since", "yet", "already", "up to now"];
+      const verbs = ["has affected", "has validated", "has completed", "has upgraded", "has processed", "has generated", "has monitored", "have adjusted", "have altered", "have preferred"];
+      
+      if (isAdverbQuestion) {
+        for (const verb of verbs) {
+          if (sentence.includes(verb)) {
+            sentence = sentence.replace(verb, `<span style="color: #ff6b6b; font-weight: bold;">${verb}</span>`);
+            break;
+          }
+        }
+        if (sentence.includes("has ___ affected")) {
+          sentence = sentence.replace("has ___ affected", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">affected</span>`);
+        }
+        if (sentence.includes("has ___ validated")) {
+          sentence = sentence.replace("has ___ validated", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">validated</span>`);
+        }
+        if (sentence.includes("has ___ completed")) {
+          sentence = sentence.replace("has ___ completed", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">completed</span>`);
+        }
+        if (sentence.includes("has ___ upgraded")) {
+          sentence = sentence.replace("has ___ upgraded", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">upgraded</span>`);
+        }
+        if (sentence.includes("has ___ processed")) {
+          sentence = sentence.replace("has ___ processed", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">processed</span>`);
+        }
+        if (sentence.includes("has ___ generated")) {
+          sentence = sentence.replace("has ___ generated", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">generated</span>`);
+        }
+        if (sentence.includes("has ___ monitored")) {
+          sentence = sentence.replace("has ___ monitored", `<span style="color: #ff6b6b; font-weight: bold;">has</span> ___ <span style="color: #ff6b6b; font-weight: bold;">monitored</span>`);
+        }
+        if (sentence.includes("have ___ adjusted")) {
+          sentence = sentence.replace("have ___ adjusted", `<span style="color: #ff6b6b; font-weight: bold;">have</span> ___ <span style="color: #ff6b6b; font-weight: bold;">adjusted</span>`);
+        }
+        if (sentence.includes("have ___ altered")) {
+          sentence = sentence.replace("have ___ altered", `<span style="color: #ff6b6b; font-weight: bold;">have</span> ___ <span style="color: #ff6b6b; font-weight: bold;">altered</span>`);
+        }
+        if (sentence.includes("have ___ preferred")) {
+          sentence = sentence.replace("have ___ preferred", `<span style="color: #ff6b6b; font-weight: bold;">have</span> ___ <span style="color: #ff6b6b; font-weight: bold;">preferred</span>`);
+        }
+      } else {
+        for (const adv of adverbs) {
+          const idx = sentence.toLowerCase().indexOf(adv.toLowerCase());
+          if (idx !== -1) {
+            const originalAdv = sentence.substring(idx, idx + adv.length);
+            sentence = sentence.replace(originalAdv, `<span style="color: #ff6b6b; font-weight: bold;">${originalAdv}</span>`);
+            break;
+          }
+        }
+      }
+    }
+    
+    return sentence;
+  };
+  
   const processQuestion = (rawQ, qId) => {
     if (rawQ.type === "multiple-fill-blank") {
       return {
@@ -1728,7 +1859,7 @@ function buildExercises(rawList, lessonId) {
         id: qId,
         type: rawQ.type,
         prompt: rawQ.type === "fill-blank" ? "Boşluğu doldur" : "Boşluğa gelecek en uygun kelimeyi seçin:",
-        sentence: rawQ.sentence,
+        sentence: autoHighlight(rawQ, lessonId),
         options: shuffledOptions,
         correctIndex: shuffledOptions.indexOf(correctOption)
       };
