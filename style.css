@@ -5367,6 +5367,53 @@ input {
   text-align: center;
 }
 
+.highlight-red, .highlight-red .hoverable-word {
+  color: #ff6b6b !important;
+  font-weight: bold !important;
+}
+
+span[style*="color: #ff6b6b"] .hoverable-word,
+span[style*="color:#ff6b6b"] .hoverable-word,
+span[style*="color: #ff6b6b"] *,
+span[style*="color:#ff6b6b"] * {
+  color: #ff6b6b !important;
+  font-weight: bold !important;
+}
+
+span[style*="color: #51cf66"] .hoverable-word,
+span[style*="color:#51cf66"] .hoverable-word,
+span[style*="color: #51cf66"] *,
+span[style*="color:#51cf66"] * {
+  color: #51cf66 !important;
+  font-weight: bold !important;
+}
+
+span[style*="color: #20c997"] .hoverable-word,
+span[style*="color:#20c997"] .hoverable-word,
+span[style*="color: #20c997"] *,
+span[style*="color:#20c997"] * {
+  color: #20c997 !important;
+  font-weight: bold !important;
+}
+
+span[style*="color: #da77f2"] .hoverable-word,
+span[style*="color:#da77f2"] .hoverable-word,
+span[style*="color: #da77f2"] *,
+span[style*="color:#da77f2"] * {
+  color: #da77f2 !important;
+  font-weight: bold !important;
+}
+
+span[style*="color: #339af0"] .hoverable-word,
+span[style*="color:#339af0"] .hoverable-word,
+span[style*="color: #339af0"] *,
+span[style*="color:#339af0"] * {
+  color: #339af0 !important;
+  font-weight: bold !important;
+}
+
+
+
 
 
 
