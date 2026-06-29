@@ -56,6 +56,7 @@ let homeScreenScrollY = 0;
 // Ek mod durumları
 let isTranslationGateActive = false;
 let onTranslationGateVerify = null;
+let wasTranslationCorrect = true;
 let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
@@ -2742,6 +2743,7 @@ function renderQuestion() {
   matchState = null;
   isTranslationGateActive = false;
   onTranslationGateVerify = null;
+  wasTranslationCorrect = true;
 
   const body = document.getElementById('quiz-body');
   const btnCheck = document.getElementById('btn-check');
@@ -3220,6 +3222,7 @@ function startTranslationGate(container, question) {
     if (isCorrect) {
       isTranslationGateActive = false;
       onTranslationGateVerify = null;
+      wasTranslationCorrect = true;
       
       assembledArea.querySelectorAll('.word-chip').forEach(chip => {
         chip.classList.add('correct-assemble');
@@ -3233,19 +3236,24 @@ function startTranslationGate(container, question) {
       checkAnswer();
       btnCheck.textContent = 'DEVAM ET';
     } else {
+      isTranslationGateActive = false;
+      onTranslationGateVerify = null;
+      wasTranslationCorrect = false;
+
       assembledArea.classList.add('shake');
       assembledArea.querySelectorAll('.word-chip').forEach(chip => {
         chip.style.borderColor = 'var(--color-wrong)';
+        chip.style.backgroundColor = 'var(--color-wrong-bg)';
         chip.style.color = 'var(--color-wrong)';
+        chip.disabled = true;
       });
-      
-      setTimeout(() => {
-        assembledArea.classList.remove('shake');
-        assembledArea.querySelectorAll('.word-chip').forEach(chip => {
-          chip.style.borderColor = '';
-          chip.style.color = '';
-        });
-      }, 500);
+      scrambledContainer.querySelectorAll('.word-chip').forEach(chip => {
+        chip.classList.add('disabled');
+        chip.disabled = true;
+      });
+
+      checkAnswer();
+      btnCheck.textContent = 'DEVAM ET';
     }
   };
 }
@@ -3403,6 +3411,11 @@ function checkAnswer() {
       break;
   }
 
+  const isTargetUnit = question && question.id && (question.id.startsWith('u101') || question.id.startsWith('u102'));
+  if (isTargetUnit && question.translation && !wasTranslationCorrect) {
+    isCorrect = false;
+  }
+
   // Feedback panel
   const feedbackPanel = document.getElementById('feedback-panel');
   const feedbackIcon = document.getElementById('feedback-icon');
@@ -3461,7 +3474,11 @@ function checkAnswer() {
       correctAnswerText = question.corrects.join(', ');
     }
 
-    feedbackText.textContent = `Doğru cevap: ${correctAnswerText}`;
+    if (isTargetUnit && question.translation && !wasTranslationCorrect) {
+      feedbackText.innerHTML = `<strong>Yanlış çeviri!</strong> Doğrusu:<br><span style="color: var(--color-correct); font-weight: 600;">${question.translation}</span>`;
+    } else {
+      feedbackText.textContent = `Doğru cevap: ${correctAnswerText}`;
+    }
     wrongCount++;
     
     if (!isReviewMode) {
