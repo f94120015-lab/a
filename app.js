@@ -5561,8 +5561,56 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       wrongExample = '';
       correctExample = '';
     } else {
-      // will/would error check
-      if (chosenWord.includes('will') || chosenWord.includes('would')) {
+      const match = question.id ? question.id.match(/l(\d+)_/) : null;
+      const lessonNum = match ? parseInt(match[1]) : 0;
+      
+      if (lessonNum === 95) {
+        title = 'Present Continuous ve Zaman Zarfları';
+        ruleTitle = '💡 Şimdiki Zaman & Süreç Kuralları';
+        ruleText = `Şu anda devam etmekte olan süreçleri anlatan bu cümlede zaman zarfı (<strong>at the moment, right now, currently, presently, at present, these days</strong>) kullanılmıştır. Bu zarflar eylemin şimdiki zamanda (<strong>am/is/are + V-ing</strong>) çekimlenmesini zorunlu kılar.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" süreç anlamı taşımaz ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
+      } else if (lessonNum === 96) {
+        title = 'Past Simple ve Net Geçmiş Zaman';
+        ruleTitle = '💡 Geçmiş Zaman Çekim Kuralları';
+        ruleText = `Geçmişte belirli bir noktada tamamlanmış eylemleri bildiren bu cümlede net bir geçmiş zaman zarfı (<strong>yesterday, ago, last week, in 2020</strong>) bulunmaktadır. Bu durum, fiilin 2. halinin (<strong>V2 / -ed</strong>) kullanılmasını gerektirir.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" geçmiş zamanı nitelemez ❌`;
+        correctExample = `Geçmiş Zaman (V2): "${correctWord}" ✔️`;
+      } else if (lessonNum === 97) {
+        title = 'Present Perfect ve Süreç Zarfları';
+        ruleTitle = '💡 Present Perfect Çekim Kuralları';
+        ruleText = `Geçmişte başlayıp etkisi günümüze uzanan veya henüz tamamlanmış durumları ifade eden bu cümlede <strong>so far, recently, since, yet, already, up to now</strong> gibi zarflar yer almaktadır. Bu zarflar <strong>have/has + V3</strong> yapısıyla çekimlenir.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" süreç çekimine uygun değil ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" (have/has + V3) ✔️`;
+      } else if (lessonNum === 98) {
+        title = 'Since Zaman Uyumu Kuralları';
+        ruleTitle = '💡 Since Bağlacı ve Zaman Uyumu';
+        ruleText = `<strong>Since</strong> bağlacının bağlı olduğu yan cümle eylemin başlangıç noktasını bildirdiği için <strong>Past Simple (V2)</strong> ile çekimlenirken, ana cümle bu başlangıçtan günümüze kadar geçen süreci anlattığı için <strong>Present Perfect (have/has + V3)</strong> ile kurulur. (Formül: <strong>Present Perfect + since + Past Simple</strong>)`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" zaman uyumu kuralını ihlal etmektedir ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
+      } else if (lessonNum === 99) {
+        title = 'By the time Zaman Uyumu';
+        ruleTitle = '💡 By the time ve Eylem Sınır Kuralları';
+        ruleText = `<strong>By the time</strong> konnektörü eylemlerin zaman sınırını belirler ve şu kurallara uyar:<br>1. Geçmiş bağlamda: <strong>By the time + Past (V2), Past Perfect (had + V3)</strong> (Sınır noktasına kadar eylemin çoktan tamamlandığını belirtir).<br>2. Gelecek bağlamda: <strong>By the time + Present (V1/V5), Future Perfect (will have + V3)</strong>.<br>Cümledeki diğer fiilin zamanı doğrultusunda uygun eşleşmeyi seçmelisiniz.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" uyum kuralını bozmaktadır ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
+      } else if (lessonNum === 100) {
+        title = 'It is (high) time Yapısı';
+        ruleTitle = '💡 It is high time Çekim Kuralları';
+        ruleText = `<strong>It is time / It is high time / It is about time</strong> kalıbı kendisinden sonra bir özne (subject) aldığında fiil mutlaka <strong>Past Simple (V2)</strong> olarak çekimlenir. Anlam olarak şimdiki veya gelecek zamana yönelik bir gecikmişliği veya zorunluluğu ifade etse de, dil bilgisel yapı olarak geçmiş zaman çekimi (V2) zorunludur.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" bu kalıpla kullanılamaz ❌`;
+        correctExample = `Geçmiş Zaman (V2): "${correctWord}" ✔️`;
+      } else if (lessonNum === 101) {
+        title = 'Süperlatif & Kısıtlayıcı Sıfatlar ve Deneyim';
+        ruleTitle = '💡 Sıfat Dereceleri ve Present Perfect';
+        ruleText = `Bir durumun en uç derecesini (<strong>the best, the worst, the first, the only vb.</strong>) niteleyen ifadelerden sonra gelen relative clause cümleleri, hayat boyu edinilen birikim ve tecrübeleri sorguladığı için <strong>Present Perfect (have/has + V3)</strong> yapısıyla çekimlenir.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" tecrübe bağlamına uymuyor ❌`;
+        correctExample = `Doğru Çekim: "${correctWord}" (have/has + V3) ✔️`;
+      }
+
+      if (!ruleText) {
+        // will/would error check
+        if (chosenWord.includes('will') || chosenWord.includes('would')) {
         title = 'Zaman Uyumsuzluğu (will/would Kullanımı)';
         ruleTitle = '💡 Zaman Zarfı Cümleciklerinde Gelecek Zaman';
         ruleText = `İngilizcede zaman zarfı cümlelerinin (Time Clauses) kendi içerisinde gelecek zaman yardımcı fiili (<strong>will / would</strong>) kullanılmaz. Gelecek kastedilse bile <strong>Present Simple (Geniş Zaman)</strong> tercih edilir.`;
