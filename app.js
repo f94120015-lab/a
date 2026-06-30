@@ -1501,6 +1501,10 @@ function getWordMeaning(word) {
       const base = clean.slice(0, -2);
       if (wordDictionary[base]) return wordDictionary[base];
       if (fallbackDictionary[base]) return fallbackDictionary[base];
+      
+      const baseE = base + 'e';
+      if (wordDictionary[baseE]) return wordDictionary[baseE];
+      if (fallbackDictionary[baseE]) return fallbackDictionary[baseE];
     }
     const base = clean.slice(0, -1);
     if (wordDictionary[base]) return wordDictionary[base];
@@ -1558,6 +1562,15 @@ function getWordMeaning(word) {
       if (wordDictionary[base]) return wordDictionary[base];
       if (fallbackDictionary[base]) return fallbackDictionary[base];
     }
+    if (clean.endsWith('ally')) {
+      const base = clean.slice(0, -4);
+      if (wordDictionary[base]) return wordDictionary[base];
+      if (fallbackDictionary[base]) return fallbackDictionary[base];
+      
+      const baseIc = base + 'ic';
+      if (wordDictionary[baseIc]) return wordDictionary[baseIc];
+      if (fallbackDictionary[baseIc]) return fallbackDictionary[baseIc];
+    }
     const baseLy = clean.slice(0, -2);
     if (wordDictionary[baseLy]) return wordDictionary[baseLy];
     if (fallbackDictionary[baseLy]) return fallbackDictionary[baseLy];
@@ -1590,6 +1603,19 @@ function getWordMeaning(word) {
     const base = clean.slice(0, -4);
     if (wordDictionary[base]) return wordDictionary[base];
     if (fallbackDictionary[base]) return fallbackDictionary[base];
+  }
+  if (clean.endsWith('ation')) {
+    const base1 = clean.slice(0, -5) + 'ate';
+    if (wordDictionary[base1]) return wordDictionary[base1];
+    if (fallbackDictionary[base1]) return fallbackDictionary[base1];
+    
+    const base2 = clean.slice(0, -5);
+    if (wordDictionary[base2]) return wordDictionary[base2];
+    if (fallbackDictionary[base2]) return fallbackDictionary[base2];
+    
+    const base3 = clean.slice(0, -5) + 'e';
+    if (wordDictionary[base3]) return wordDictionary[base3];
+    if (fallbackDictionary[base3]) return fallbackDictionary[base3];
   }
   if (clean.endsWith('tion')) {
     const base1 = clean.slice(0, -4) + 'e';
@@ -1633,13 +1659,13 @@ function makeTextHoverable(text) {
           if (meanings.length > 0) meaning = meanings.join(' - ');
         }
       }
-      if (!meaning) {
-        // Ultimate fallback: capitalize the word itself (perfect for proper names like Robert, London)
-        meaning = word.charAt(0).toUpperCase() + word.slice(1);
+      if (meaning) {
+        // Escape double quotes inside attribute
+        const escapedMeaning = meaning.replace(/"/g, '&quot;');
+        html += `<span class="hoverable-word" data-meaning="${escapedMeaning}">${word}</span>`;
+      } else {
+        html += `<span class="hoverable-word no-meaning">${word}</span>`;
       }
-      // Escape double quotes inside attribute
-      const escapedMeaning = meaning.replace(/"/g, '&quot;');
-      html += `<span class="hoverable-word" data-meaning="${escapedMeaning}">${word}</span>`;
     } else if (nonWord) {
       html += nonWord;
     }
@@ -5309,7 +5335,7 @@ function initEventListeners() {
     
     // Toggle active state for hoverable words on tap/click
     const hoverable = e.target.closest('.hoverable-word');
-    if (hoverable) {
+    if (hoverable && !hoverable.classList.contains('no-meaning')) {
       const wasActive = hoverable.classList.contains('active');
       document.querySelectorAll('.hoverable-word.active').forEach(w => w.classList.remove('active'));
       if (!wasActive) {
