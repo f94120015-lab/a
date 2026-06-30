@@ -3508,16 +3508,120 @@ function renderMultipleChoice(container, question) {
 function renderWordBank(container, question) {
   // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
   if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
-    const correctOrderBlocks = [];
-    const chunkSize = question.correctOrder.length >= 14 ? 4 : 3;
-    for (let i = 0; i < question.correctOrder.length; i += chunkSize) {
-      correctOrderBlocks.push(question.correctOrder.slice(i, i + chunkSize).join(' '));
+    const fullSentence = question.correctOrder.join(' ');
+    
+    const splitBeforeAndAfter = [
+      "give rise to", "gives rise to",
+      "result in", "results in", "has resulted in", "have resulted in",
+      "is responsible for", "are responsible for",
+      "lead to", "leads to",
+      "bring about", "brings about",
+      "contribute to", "contributes to",
+      "stem from", "stems from",
+      "trigger", "triggers",
+      "causes", "produce", "produces",
+      "therefore", "consequently", "as a result", "hence", "thus", "accordingly", "so",
+      "caused", "causes"
+    ];
+
+    const splitBefore = [
+      "due to", "because of", "owing to", "on account of", "thanks to",
+      "because", "since", "inasmuch as", "although", "even though", "whereas",
+      "forcing", "reducing", "degrading", "altering",
+      "to inspect", "to meet", "to request", "to isolate", "to maintain", "to validate",
+      "to change", "to vary", "to collapse", "to contract", "to shift", "to minimize",
+      "to induce", "to interact", "to mutate", "to decline", "to expand", "to decay",
+      "to evolve", "to conflict", "unless", "if", "the moment", "under", "in order that",
+      "on grounds that", "with the result that", "as a consequence", "for this reason",
+      "as an immediate result", "on that account", "inside", "during", "before", "after", "until"
+    ];
+
+    let segments = [fullSentence];
+
+    function applySplitBeforeAndAfter(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          const parts = s.split(match[0]);
+          if (parts[0].trim()) result.push(parts[0].trim());
+          result.push(match[0].trim());
+          if (parts[1].trim()) result.push(parts[1].trim());
+        } else {
+          result.push(s);
+        }
+      }
+      return result;
     }
+
+    function applySplitBefore(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          const idx = s.indexOf(match[0]);
+          const part1 = s.substring(0, idx).trim();
+          const part2 = s.substring(idx).trim();
+          if (part1) result.push(part1);
+          if (part2) result.push(part2);
+        } else {
+          result.push(s);
+        }
+      }
+      return result;
+    }
+
+    // 1. Semicolon split
+    let temp = [];
+    for (let s of segments) {
+      if (s.includes(';')) {
+        const parts = s.split(';');
+        temp.push(parts[0].trim() + ';');
+        if (parts[1].trim()) temp.push(parts[1].trim());
+      } else {
+        temp.push(s);
+      }
+    }
+    segments = temp;
+
+    // 2. Split before/after
+    const sortedBeforeAndAfter = [...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
+    for (let marker of sortedBeforeAndAfter) {
+      segments = applySplitBeforeAndAfter(segments, marker);
+    }
+
+    // 3. Split before
+    const sortedBefore = [...splitBefore].sort((a, b) => b.length - a.length);
+    for (let marker of sortedBefore) {
+      segments = applySplitBefore(segments, marker);
+    }
+
+    // 4. Preposition fallback if too few segments
+    if (segments.length < 3) {
+      const prepMarkers = ["in", "on", "at", "for", "with", "by", "from", "to", "about", "that", "which", "who", "when", "while"];
+      for (let prep of prepMarkers) {
+        if (segments.length >= 3) break;
+        segments = applySplitBefore(segments, prep);
+      }
+    }
+
+    // 5. Final equal-size chunking fallback
+    if (segments.length < 3) {
+      const words = fullSentence.split(' ');
+      const chunkSize = Math.max(2, Math.ceil(words.length / 3));
+      segments = [];
+      for (let i = 0; i < words.length; i += chunkSize) {
+        segments.push(words.slice(i, i + chunkSize).join(' '));
+      }
+    }
+
+    segments = segments.map(s => s.trim()).filter(s => s.length > 0);
     const distractors = question.words.filter(w => !question.correctOrder.includes(w));
     
-    // Update question properties inline for this rendering session
-    question.correctOrder = correctOrderBlocks;
-    question.words = [...correctOrderBlocks, ...distractors];
+    question.correctOrder = segments;
+    question.words = [...segments, ...distractors];
   }
 
   const shuffledWords = [...question.words].sort(() => Math.random() - 0.5);
