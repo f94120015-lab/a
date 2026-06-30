@@ -3798,6 +3798,7 @@ function startTranslationGate(container, question) {
   const correctWord = question.options[question.correctIndex];
   const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
   completedSentence = completedSentence.replace('___', highlightedChoice);
+  completedSentence = makeTextHoverable(completedSentence);
 
   // Clean translation and split into words
   const rawWords = question.translation.split(/\s+/);
