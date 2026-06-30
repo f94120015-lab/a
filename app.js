@@ -3531,156 +3531,200 @@ function renderMultipleChoice(container, question) {
 }
 
 // ── Kelime Bankası ──────────────────────────────────────────
-function renderWordBank(container, question) {
-  // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
-  if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
-    const fullSentence = question.correctOrder.join(' ');
-    const isEngToTr = question.isEngToTr || (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
+function segmentSentence(fullSentence, isEngToTr) {
+  let segments = [fullSentence];
 
-    let segments = [fullSentence];
+  if (isEngToTr) {
+    // ─── TURKISH GRAMMATICAL SPLITTER ───
+    const splitBeforeAndAfterTr = [
+      "sonuç olarak", "bu nedenle", "bu yüzden", "böylece", "buna göre",
+      "ve sonuç olarak", "bunun bir sonucu olarak", "bu sebepten",
+      "ani bir sonuç olarak", "gerekçesiyle"
+    ];
 
-    if (isEngToTr) {
-      // ─── TURKISH GRAMMATICAL SPLITTER ───
-      const splitBeforeAndAfterTr = [
-        "sonuç olarak", "bu nedenle", "bu yüzden", "böylece", "buna göre",
-        "ve sonuç olarak", "bunun bir sonucu olarak", "bu sebepten",
-        "ani bir sonuç olarak", "gerekçesiyle"
-      ];
+    const splitAfterTr = [
+      "meydana geldi", "ortaya çıktı", "yol açar", "sonuçlanır", "neden olur",
+      "sorumludur", "kaynaklanır", "katkıda bulunur", "tetikler", "geciktirir",
+      "çöktü", "düştü", "güvende kalır", "ertelendi", "gecikti", "tetiklendi",
+      "yol açmıştır", "sonuçlanmıştır", "neden olmuştur", "kaynaklanmaktadır",
+      "geciktirmiştir", "çökmüştür", "düşmüştür", "ertelenmiştir", "gelişti",
+      "açındı", "aşındı", "kilitlendi", "arttı", "durgunlaştı", "engellendi",
+      "azalttı", "çeşitlilik gösterir", "çeşitlilik göstermesine neden oldu",
+      "değişmesine neden oldu", "daralmasına neden oldu", "kaymasına neden oldu",
+      "en aza indirmesine neden oldu", "hatalara yol açmasına neden oldu",
+      "etkileşime girmesine neden oldu", "değişmesine neden oldu", "düşmesine neden oldu",
+      "genişlemesine neden oldu", "aşınmasına neden oldu", "doğrulamasına neden oldu",
+      "evrilmesine neden oldu", "çakışmasına neden oldu",
+      "izlemelidir", "gelişir", "artar", "değişiklik gerektirir", "genişleme gerektirir",
+      "talep etti", "yansıtılmıştır",
+      "sırasında", "esnasında", "boyunca", "nedeniyle", "yüzünden", "dolayı",
+      "sayesinde", "için", "ölçüde", "kadar", "başka", "itibaren", "rağmen",
+      "katmanlarında", "merkezinde", "bölümünde", "düğümlerinde", "odasında",
+      "altında", "aşamasında", "durumunda", "çerçevesinde", "yönünde", "genelinde",
+      "üzerinde", "altından", "dışında", "yakınında", "öncesinde", "sonrasında"
+    ];
 
-      const splitAfterTr = [
-        "meydana geldi", "ortaya çıktı", "yol açar", "sonuçlanır", "neden olur",
-        "sorumludur", "kaynaklanır", "katkıda bulunur", "tetikler", "geciktirir",
-        "çöktü", "düştü", "güvende kalır", "ertelendi", "gecikti", "tetiklendi",
-        "yol açmıştır", "sonuçlanmıştır", "neden olmuştur", "kaynaklanmaktadır",
-        "geciktirmiştir", "çökmüştür", "düşmüştür", "ertelenmiştir", "gelişti",
-        "açındı", "aşındı", "kilitlendi", "arttı", "durgunlaştı", "engellendi",
-        "azalttı", "çeşitlilik gösterir", "çeşitlilik göstermesine neden oldu",
-        "değişmesine neden oldu", "daralmasına neden oldu", "kaymasına neden oldu",
-        "en aza indirmesine neden oldu", "hatalara yol açmasına neden oldu",
-        "etkileşime girmesine neden oldu", "değişmesine neden oldu", "düşmesine neden oldu",
-        "genişlemesine neden oldu", "aşınmasına neden oldu", "doğrulamasına neden oldu",
-        "evrilmesine neden oldu", "çakışmasına neden oldu",
-        "izlemelidir", "gelişir", "artar", "değişiklik gerektirir", "genişleme gerektirir",
-        "talep etti", "yansıtılmıştır",
-        "sırasında", "esnasında", "boyunca", "nedeniyle", "yüzünden", "dolayı",
-        "sayesinde", "için", "ölçüde", "kadar", "başka", "itibaren", "rağmen",
-        "katmanlarında", "merkezinde", "bölümünde", "düğümlerinde", "odasında",
-        "altında", "aşamasında", "durumunda", "çerçevesinde", "yönünde", "genelinde",
-        "üzerinde", "altından", "dışında", "yakınında", "öncesinde", "sonrasında"
-      ];
-
-      function applySplitBeforeAndAfterTr(segs, substring) {
-        const result = [];
-        const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-        for (let s of segs) {
-          const match = s.match(regex);
-          if (match) {
-            const parts = s.split(match[0]);
-            if (parts[0].trim()) result.push(parts[0].trim());
-            result.push(match[0].trim());
-            if (parts[1].trim()) result.push(parts[1].trim());
-          } else {
-            result.push(s);
-          }
-        }
-        return result;
-      }
-
-      function applySplitAfterTr(segs, substring) {
-        const result = [];
-        const regex = new RegExp(`\\b(${substring})`, 'i');
-        for (let s of segs) {
-          const match = s.match(regex);
-          if (match) {
-            let idx = s.indexOf(match[0]) + match[0].length;
-            while (idx < s.length && [';', ',', '.', '?', '!'].includes(s[idx])) {
-              idx++;
-            }
-            const part1 = s.substring(0, idx).trim();
-            const part2 = s.substring(idx).trim();
-            if (part1) result.push(part1);
-            if (part2) result.push(part2);
-          } else {
-            result.push(s);
-          }
-        }
-        return result;
-      }
-
-      // 1. Semicolon split
-      let temp = [];
-      for (let s of segments) {
-        if (s.includes(';')) {
-          const parts = s.split(';');
-          temp.push(parts[0].trim() + ';');
-          if (parts[1].trim()) temp.push(parts[1].trim());
+    function applySplitBeforeAndAfterTr(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          const parts = s.split(match[0]);
+          if (parts[0].trim()) result.push(parts[0].trim());
+          result.push(match[0].trim());
+          if (parts[1].trim()) result.push(parts[1].trim());
         } else {
-          temp.push(s);
+          result.push(s);
         }
       }
-      segments = temp;
+      return result;
+    }
 
-      // 2. Split before/after
-      const sortedBeforeAndAfter = [...splitBeforeAndAfterTr].sort((a, b) => b.length - a.length);
-      for (let marker of sortedBeforeAndAfter) {
-        segments = applySplitBeforeAndAfterTr(segments, marker);
-      }
-
-      // 3. Split after
-      const sortedAfter = [...splitAfterTr].sort((a, b) => b.length - a.length);
-      for (let marker of sortedAfter) {
-        segments = applySplitAfterTr(segments, marker);
-      }
-
-    } else {
-      // ─── ENGLISH GRAMMATICAL SPLITTER ───
-      const splitBeforeAndAfter = [
-        "give rise to", "gives rise to",
-        "result in", "results in", "has resulted in", "have resulted in",
-        "is responsible for", "are responsible for",
-        "lead to", "leads to",
-        "bring about", "brings about",
-        "contribute to", "contributes to",
-        "stem from", "stems from",
-        "trigger", "triggers",
-        "causes", "produce", "produces",
-        "therefore", "consequently", "as a result", "hence", "thus", "accordingly", "so",
-        "caused", "causes"
-      ];
-
-      const splitBefore = [
-        "due to", "because of", "owing to", "on account of", "thanks to",
-        "because", "since", "inasmuch as", "although", "even though", "whereas",
-        "forcing", "reducing", "degrading", "altering",
-        "to inspect", "to meet", "to request", "to isolate", "to maintain", "to validate",
-        "to change", "to vary", "to collapse", "to contract", "to shift", "to minimize",
-        "to induce", "to interact", "to mutate", "to decline", "to expand", "to decay",
-        "to evolve", "to conflict", "unless", "if", "the moment", "under", "in order that",
-        "on grounds that", "with the result that", "as a consequence", "for this reason",
-        "as an immediate result", "on that account", "inside", "during", "before", "after", "until"
-      ];
-
-      function applySplitBeforeAndAfter(segs, substring) {
-        const result = [];
-        const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-        for (let s of segs) {
-          const match = s.match(regex);
-          if (match) {
-            const parts = s.split(match[0]);
-            if (parts[0].trim()) result.push(parts[0].trim());
-            result.push(match[0].trim());
-            if (parts[1].trim()) result.push(parts[1].trim());
-          } else {
-            result.push(s);
+    function applySplitAfterTr(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          let idx = s.indexOf(match[0]) + match[0].length;
+          while (idx < s.length && [';', ',', '.', '?', '!'].includes(s[idx])) {
+            idx++;
           }
+          const part1 = s.substring(0, idx).trim();
+          const part2 = s.substring(idx).trim();
+          if (part1) result.push(part1);
+          if (part2) result.push(part2);
+        } else {
+          result.push(s);
         }
-        return result;
       }
+      return result;
+    }
 
-      function applySplitBefore(segs, substring) {
+    // 1. Semicolon split
+    let temp = [];
+    for (let s of segments) {
+      if (s.includes(';')) {
+        const parts = s.split(';');
+        temp.push(parts[0].trim() + ';');
+        if (parts[1].trim()) temp.push(parts[1].trim());
+      } else {
+        temp.push(s);
+      }
+    }
+    segments = temp;
+
+    // 2. Split before/after
+    const sortedBeforeAndAfter = [...splitBeforeAndAfterTr].sort((a, b) => b.length - a.length);
+    for (let marker of sortedBeforeAndAfter) {
+      segments = applySplitBeforeAndAfterTr(segments, marker);
+    }
+
+    // 3. Split after
+    const sortedAfter = [...splitAfterTr].sort((a, b) => b.length - a.length);
+    for (let marker of sortedAfter) {
+      segments = applySplitAfterTr(segments, marker);
+    }
+
+  } else {
+    // ─── ENGLISH GRAMMATICAL SPLITTER ───
+    const splitBeforeAndAfter = [
+      "give rise to", "gives rise to",
+      "result in", "results in", "has resulted in", "have resulted in",
+      "is responsible for", "are responsible for",
+      "lead to", "leads to",
+      "bring about", "brings about",
+      "contribute to", "contributes to",
+      "stem from", "stems from",
+      "trigger", "triggers",
+      "causes", "produce", "produces",
+      "therefore", "consequently", "as a result", "hence", "thus", "accordingly", "so",
+      "caused", "causes"
+    ];
+
+    const splitBefore = [
+      "due to", "because of", "owing to", "on account of", "thanks to",
+      "because", "since", "inasmuch as", "although", "even though", "whereas",
+      "forcing", "reducing", "degrading", "altering",
+      "to inspect", "to meet", "to request", "to isolate", "to maintain", "to validate",
+      "to change", "to vary", "to collapse", "to contract", "to shift", "to minimize",
+      "to induce", "to interact", "to mutate", "to decline", "to expand", "to decay",
+      "to evolve", "to conflict", "unless", "if", "the moment", "under", "in order that",
+      "on grounds that", "with the result that", "as a consequence", "for this reason",
+      "as an immediate result", "on that account", "inside", "during", "before", "after", "until"
+    ];
+
+    function applySplitBeforeAndAfter(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          const parts = s.split(match[0]);
+          if (parts[0].trim()) result.push(parts[0].trim());
+          result.push(match[0].trim());
+          if (parts[1].trim()) result.push(parts[1].trim());
+        } else {
+          result.push(s);
+        }
+      }
+      return result;
+    }
+
+    function applySplitBefore(segs, substring) {
+      const result = [];
+      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
+      for (let s of segs) {
+        const match = s.match(regex);
+        if (match) {
+          const idx = s.indexOf(match[0]);
+          const part1 = s.substring(0, idx).trim();
+          const part2 = s.substring(idx).trim();
+          if (part1) result.push(part1);
+          if (part2) result.push(part2);
+        } else {
+          result.push(s);
+        }
+      }
+      return result;
+    }
+
+    // 1. Semicolon split
+    let temp = [];
+    for (let s of segments) {
+      if (s.includes(';')) {
+        const parts = s.split(';');
+        temp.push(parts[0].trim() + ';');
+        if (parts[1].trim()) temp.push(parts[1].trim());
+      } else {
+        temp.push(s);
+      }
+    }
+    segments = temp;
+
+    // 2. Split before/after
+    const sortedBeforeAndAfter = [...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
+    for (let marker of sortedBeforeAndAfter) {
+      segments = applySplitBeforeAndAfter(segments, marker);
+    }
+
+    // 3. Split before
+    const sortedBefore = [...splitBefore].sort((a, b) => b.length - a.length);
+    for (let marker of sortedBefore) {
+      segments = applySplitBefore(segments, marker);
+    }
+  }
+
+  // ─── FALLBACKS FOR BOTH LANGUAGES ───
+  if (segments.length < 3) {
+    if (isEngToTr) {
+      const prepMarkersTr = ["ile", "veya", "ve", "olarak", "altında", "önce", "sonra", "karşın", "rağmen"];
+      for (let prep of prepMarkersTr) {
+        if (segments.length >= 3) break;
         const result = [];
-        const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-        for (let s of segs) {
+        const regex = new RegExp(`\\b(${prep})\\b`, 'i');
+        for (let s of segments) {
           const match = s.match(regex);
           if (match) {
             const idx = s.indexOf(match[0]);
@@ -3692,92 +3736,51 @@ function renderWordBank(container, question) {
             result.push(s);
           }
         }
-        return result;
+        segments = result;
       }
-
-      // 1. Semicolon split
-      let temp = [];
-      for (let s of segments) {
-        if (s.includes(';')) {
-          const parts = s.split(';');
-          temp.push(parts[0].trim() + ';');
-          if (parts[1].trim()) temp.push(parts[1].trim());
-        } else {
-          temp.push(s);
-        }
-      }
-      segments = temp;
-
-      // 2. Split before/after
-      const sortedBeforeAndAfter = [...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
-      for (let marker of sortedBeforeAndAfter) {
-        segments = applySplitBeforeAndAfter(segments, marker);
-      }
-
-      // 3. Split before
-      const sortedBefore = [...splitBefore].sort((a, b) => b.length - a.length);
-      for (let marker of sortedBefore) {
-        segments = applySplitBefore(segments, marker);
-      }
-    }
-
-    // ─── FALLBACKS FOR BOTH LANGUAGES ───
-    if (segments.length < 3) {
-      if (isEngToTr) {
-        // Turkish fallback prep/conjunction markers
-        const prepMarkersTr = ["ile", "veya", "ve", "olarak", "altında", "önce", "sonra", "karşın", "rağmen"];
-        for (let prep of prepMarkersTr) {
-          if (segments.length >= 3) break;
-          const result = [];
-          const regex = new RegExp(`\\b(${prep})\\b`, 'i');
-          for (let s of segments) {
-            const match = s.match(regex);
-            if (match) {
-              const idx = s.indexOf(match[0]);
-              const part1 = s.substring(0, idx).trim();
-              const part2 = s.substring(idx).trim();
-              if (part1) result.push(part1);
-              if (part2) result.push(part2);
-            } else {
-              result.push(s);
-            }
+    } else {
+      const prepMarkers = ["in", "on", "at", "for", "with", "by", "from", "to", "about", "that", "which", "who", "when", "while"];
+      for (let prep of prepMarkers) {
+        if (segments.length >= 3) break;
+        const result = [];
+        const regex = new RegExp(`\\b(${prep})\\b`, 'i');
+        for (let s of segments) {
+          const match = s.match(regex);
+          if (match) {
+            const idx = s.indexOf(match[0]);
+            const part1 = s.substring(0, idx).trim();
+            const part2 = s.substring(idx).trim();
+            if (part1) result.push(part1);
+            if (part2) result.push(part2);
+          } else {
+            result.push(s);
           }
-          segments = result;
         }
-      } else {
-        const prepMarkers = ["in", "on", "at", "for", "with", "by", "from", "to", "about", "that", "which", "who", "when", "while"];
-        for (let prep of prepMarkers) {
-          if (segments.length >= 3) break;
-          const result = [];
-          const regex = new RegExp(`\\b(${prep})\\b`, 'i');
-          for (let s of segments) {
-            const match = s.match(regex);
-            if (match) {
-              const idx = s.indexOf(match[0]);
-              const part1 = s.substring(0, idx).trim();
-              const part2 = s.substring(idx).trim();
-              if (part1) result.push(part1);
-              if (part2) result.push(part2);
-            } else {
-              result.push(s);
-            }
-          }
-          segments = result;
-        }
+        segments = result;
       }
     }
+  }
 
-    // Final fallback: chunking
-    if (segments.length < 3) {
-      const words = fullSentence.split(' ');
-      const chunkSize = Math.max(2, Math.ceil(words.length / 3));
-      segments = [];
-      for (let i = 0; i < words.length; i += chunkSize) {
-        segments.push(words.slice(i, i + chunkSize).join(' '));
-      }
+  // Final fallback
+  if (segments.length < 3) {
+    const words = fullSentence.split(' ');
+    const chunkSize = Math.max(2, Math.ceil(words.length / 3));
+    segments = [];
+    for (let i = 0; i < words.length; i += chunkSize) {
+      segments.push(words.slice(i, i + chunkSize).join(' '));
     }
+  }
 
-    segments = segments.map(s => s.trim()).filter(s => s.length > 0);
+  return segments.map(s => s.trim()).filter(s => s.length > 0);
+}
+
+// ── Kelime Bankası ──────────────────────────────────────────
+function renderWordBank(container, question) {
+  // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
+  if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
+    const fullSentence = question.correctOrder.join(' ');
+    const isEngToTr = question.isEngToTr || (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
+    const segments = segmentSentence(fullSentence, isEngToTr);
     const distractors = question.words.filter(w => !question.correctOrder.includes(w));
     
     question.correctOrder = segments;
@@ -4078,10 +4081,16 @@ function startTranslationGate(container, question) {
   completedSentence = completedSentence.replace('___', highlightedChoice);
   completedSentence = makeTextHoverable(completedSentence);
 
-  // Clean translation and split into words
-  const rawWords = question.translation.split(/\s+/);
-  const cleanWord = (w) => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
-  const correctWords = rawWords.map(cleanWord).filter(Boolean);
+  // Clean translation and split into words or grammatical blocks if > 12 words
+  let correctWords;
+  const rawWordCount = question.translation.split(/\s+/).filter(Boolean).length;
+  if (rawWordCount > 12) {
+    correctWords = segmentSentence(question.translation, true);
+  } else {
+    const rawWords = question.translation.split(/\s+/);
+    const cleanWord = (w) => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim();
+    correctWords = rawWords.map(cleanWord).filter(Boolean);
+  }
   
   // Distractors
   const distractorsList = ["farklı", "başlayana", "her zaman", "sonra", "önce", "tüm", "ancak", "çünkü", "kadar", "yeni", "hızlı", "güvenli", "sistem", "sunucu", "ekip", "uygulama", "veri", "kod", "zaman", "büyük", "olarak"];
