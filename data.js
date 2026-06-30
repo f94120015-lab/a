@@ -1,58 +1,4 @@
 const wordDictionary = {
-  "confidential": "gizli, mahrem",
-  "wonder": "merak etmek, acaba",
-  "double-check": "tekrar kontrol etmek, yeniden incelemek",
-  "introduce": "tanıtmak, sunmak, getirmek",
-  "fine-tune": "ince ayar yapmak",
-  "experimental": "deneysel",
-  "metrics": "ölçümler, metrikler",
-  "rather": "tercihen, daha ziyade",
-  "would rather": "tercih etmek, yeğlemek",
-  "bodrum": "Bodrum (ilçe)",
-  "ankara": "Ankara (il)",
-  "optimize": "optimize etmek, eniyilemek",
-  "request": "talep etmek, rica etmek",
-  "reinforce": "güçlendirmek, takviye etmek",
-  "diesel": "dizel",
-  "settle": "çözmek, halletmek, yerleşmek",
-  "dispute": "anlaşmazlık, tartışma",
-  "lawsuit": "dava (hukuk)",
-  "regarding": "ilişkin, dair, hakkında",
-  "locally": "yerel olarak",
-  "travelled": "seyahat etti, seyahat etmiş",
-  "stayed": "kaldı, kalmış",
-  "designing": "tasarlama, tasarlarken",
-  "shorter": "daha kısa",
-  "path": "yol, patika",
-  "congestion": "sıkışıklık, tıkanıklık",
-  "declined": "reddedildi, reddetti",
-  "politely": "kibarca, nazikçe",
-  "testing": "test etme, deneme",
-  "patch": "yama, düzeltme",
-  "peak": "zirve, yoğun",
-  "sooner": "daha erken, daha önce",
-  "initially": "başlangıçta, ilk olarak",
-  "breakdown": "kırılım, analiz, arıza",
-  "plane": "uçak",
-  "junior": "kıdemce küçük, genç",
-  "didnt": "yapmadı, etmedi (-di geçmiş zaman olumsuzu)",
-  "come": "gelmek",
-  "console": "konsol, kumanda masası",
-  "now": "şimdi, şu anda",
-  "worked": "çalıştı, çalışmış",
-  "inside": "içinde, içeride",
-  "resolved": "çözüldü, kararlaştırıldı",
-  "sterilized": "sterilize edildi",
-  "test-tubes": "deney tüpleri",
-  "week": "hafta",
-  "presentation": "sunum",
-  "next": "sonraki, gelecek",
-  "month": "ay (takvim)",
-  "night": "gece",
-  "vehicle": "araç, taşıt",
-  "scripts": "kodlar, senaryolar",
-  "meetings": "toplantılar",
-
   "a": "bir",
   "abandoned": "terk edilmiş / terk edildi",
   "abolishing": "yürürlükten kaldırma / kaldırma",
@@ -79,12 +25,15 @@ const wordDictionary = {
   "accurate": "doğru",
   "accurately": "doğru bir şekilde / hassasiyetle",
   "accused": "suçlanan / suçlandı",
+  "achieve": "başarmak, elde etmek",
   "achievements": "başarılar",
   "acids": "asitler",
+  "acknowledged": "kabul edilmiş, onaylanmış",
   "acquisition": "edinme / kazanım / elde etme",
   "across": "karşıdan karşıya / genelinde",
   "act": "yasa / kanun / eylem",
   "action": "eylem / hareket / eylemi",
+  "activate": "etkinleştirmek, aktive etmek",
   "active": "aktif",
   "activity": "faaliyet",
   "adapt": "uyum sağlamak / adapte olmak",
@@ -149,6 +98,7 @@ const wordDictionary = {
   "and": "ve",
   "animal": "hayvan",
   "animals": "hayvanlar",
+  "ankara": "Ankara (il)",
   "announced": "duyurdu / ilan etti",
   "annual": "yıllık",
   "anomaly": "anomali",
@@ -161,6 +111,7 @@ const wordDictionary = {
   "anticipates": "öngörür",
   "any": "hiç, herhangi bir",
   "app": "uygulama",
+  "apparent": "açık, aşikar, belirgin",
   "appears": "görünür / ortaya çıkar",
   "application": "uygulama",
   "applications": "uygulamalar",
@@ -172,12 +123,15 @@ const wordDictionary = {
   "appropriate": "uygun / yerinde",
   "approved": "onayladı",
   "approving": "onaylayan",
+  "arbitrary": "keyfi, rastgele",
   "archaeological": "arkeolojik",
+  "architect": "mimar",
   "architectural": "mimari",
   "archive": "arşiv",
   "are": "-dirler / -dırlar (olmak fiili)",
   "area": "alan / bölge",
   "areas": "alanlar / bölgeler",
+  "argued": "tartışılmış, iddia edilmiş",
   "argument": "argüman / tartışma",
   "arguments": "argümanlar",
   "arranged": "ayarladı / düzenledi",
@@ -187,6 +141,7 @@ const wordDictionary = {
   "as": "olarak, gibi, -dikçe",
   "ask": "sormak / istemek",
   "asked": "sordu",
+  "assembly": "meclis, kurul, montaj",
   "assess": "değerlendirmek / ölçmek",
   "assessing": "değerlendirme / değerlendiren",
   "assessment": "değerlendirme / değerlendirilmesi",
@@ -194,6 +149,8 @@ const wordDictionary = {
   "assets": "varlıklar",
   "assignment": "ödev / görev",
   "assistant": "asistan / yardımcı",
+  "assume": "varsaymak, üstlenmek",
+  "assumed": "varsayılmış, farz edilmiş",
   "assumption": "varsayım",
   "assumptions": "varsayımlar",
   "at": "-de / -da (noktasal konum / zaman)",
@@ -221,6 +178,7 @@ const wordDictionary = {
   "automatically": "otomatik olarak",
   "avoid": "kaçınmak / önlemek",
   "background": "arka plan",
+  "backup": "yedek, yedekleme",
   "backward": "geri kalmış / geri",
   "bacteria": "bakteri",
   "bad": "kötü",
@@ -229,7 +187,10 @@ const wordDictionary = {
   "balance": "bakiye",
   "balanced": "dengelenmiş / dengeledi",
   "bank": "banka",
+  "banks": "bankalar",
   "base": "taban / üs",
+  "based": "dayalı, kurulmuş",
+  "baseline": "temel, referans çizgisi",
   "basis": "temel / esas",
   "battery": "batarya / pil",
   "be": "olmak",
@@ -248,14 +209,17 @@ const wordDictionary = {
   "between": "arasında (iki şeyin)",
   "bias": "önyargı",
   "bilateral": "ikili",
+  "bill": "yasa tasarısı, fatura",
   "binding": "bağlayıcı",
   "binds": "bağlar",
   "biologist": "biyolog",
   "biometric": "biyometrik",
   "black": "siyah / kara",
+  "block": "engellemek, blok",
   "blood": "kan",
   "board": "kurul / yönetim kurulu",
   "boards": "kurullar / yönetim kurulları",
+  "bodrum": "Bodrum (ilçe)",
   "bone": "kemik",
   "bones": "kemikler",
   "book": "kitap",
@@ -267,12 +231,15 @@ const wordDictionary = {
   "boundaries": "sınırlar",
   "boundary": "sınır",
   "brain": "beyin / beyni",
+  "breach": "ihlal etmek, sızmak",
+  "breakdown": "kırılım, analiz, arıza",
   "breakthrough": "dönüm noktası / ilerleme",
   "breath-taking": "nefes kesen",
   "brief": "özet",
   "broader": "daha geniş",
   "broken": "kırık / kırılmış",
   "budget": "bütçe",
+  "budgets": "bütçeler",
   "bug": "hata / böcek",
   "bugs": "hatalar / böcekler",
   "building": "bina",
@@ -282,6 +249,7 @@ const wordDictionary = {
   "button": "düğme / buton",
   "buy": "satın almak / almak",
   "by": "tarafından, vasıtasıyla, -e göre",
+  "cache": "önbellek",
   "caffeine-containing": "kafein içeren",
   "calculate": "hesaplamak",
   "calculated": "hesaplanmış",
@@ -296,6 +264,7 @@ const wordDictionary = {
   "capacity": "kapasite / kapasitesini",
   "capital": "sermaye / başkent",
   "car": "araba / otomobil",
+  "carbon": "karbon",
   "care": "özen / bakım / önemsemek",
   "career": "kariyer",
   "career-defining": "kariyer belirleyici",
@@ -316,9 +285,11 @@ const wordDictionary = {
   "central": "merkezi",
   "centralized": "merkezi",
   "centre": "merkez",
+  "centuries": "yüzyıllar",
   "chain": "zincir",
   "challenges": "meydan okur / zorluklar",
   "challenging": "zorlu / zorlayıcı",
+  "chamber": "oda, bölme",
   "change": "değişiklik / değişim",
   "changed": "değiştirdi",
   "changes": "değişiklikler",
@@ -352,18 +323,21 @@ const wordDictionary = {
   "clause": "madde / fıkra",
   "clauses": "maddeler / fıkralar",
   "clean": "temiz",
+  "cleanly": "temiz bir şekilde",
   "clear": "açık / net",
   "clearly": "açıkça / net bir şekilde",
   "client": "müşteri",
   "clients": "müşteriler",
   "climate": "iklim",
   "climate-changing": "iklimi değiştiren",
+  "clone": "klonlamak, kopyalamak",
   "closed": "kapalı",
   "closely": "yakından / sıkı sıkıya",
   "cloud": "bulut",
   "coal": "kömür",
   "cobalt": "kobalt",
   "code": "kod",
+  "codes": "kodlar",
   "coding": "kodlama",
   "cold": "soğuk",
   "collapse": "çökmek / yıkılmak",
@@ -375,6 +349,7 @@ const wordDictionary = {
   "colors": "renkler",
   "column": "sütun / kolon",
   "combined": "birleşik",
+  "come": "gelmek",
   "command": "komut / emir / kumanda",
   "commercial": "ticari",
   "committee": "komite",
@@ -387,11 +362,14 @@ const wordDictionary = {
   "comparison": "karşılaştırma",
   "competing": "rekabet eden",
   "competitive": "rekabetçi",
+  "compilation": "derleme",
+  "compiler": "derleyici",
   "completed": "tamamladı / tamamlanmış",
   "completely": "tamamen",
   "completion": "tamamlama / bitirme",
   "complex": "karmaşık",
   "complexity": "karmaşıklık / karmaşıklığı",
+  "compliance": "uyumluluk, itaat",
   "complications": "karmaşıklıklar / komplikasyonlar",
   "component": "bileşen / unsur",
   "components": "bileşenler / unsurlar",
@@ -407,6 +385,7 @@ const wordDictionary = {
   "conceptual": "kavramsal",
   "concerned": "endişeli / ilgili",
   "conclude": "sonuçlandırmak",
+  "concluded": "sonuçlandırılmış, bitirilmiş",
   "concluding": "sonuç / kapanış",
   "conclusion": "sonuç / sonuçlanma",
   "concrete": "beton / somut",
@@ -415,6 +394,7 @@ const wordDictionary = {
   "conduct": "yürütmek / yönetmek",
   "conducted": "yürüttü",
   "conducting": "yürüten / yürütme",
+  "confidential": "gizli, mahrem",
   "confidently": "güvenle / kendinden emin bir şekilde",
   "confirm": "onaylamak",
   "confirmed": "doğruladı",
@@ -422,6 +402,7 @@ const wordDictionary = {
   "conflicting": "çelişen",
   "conflicts": "çatışmalar",
   "confusion": "kafa karışıklığı",
+  "congestion": "sıkışıklık, tıkanıklık",
   "connect": "bağlamak",
   "connected": "bağlanmış",
   "connecting": "bağlayan",
@@ -432,6 +413,9 @@ const wordDictionary = {
   "consistent": "tutarlı",
   "consisting": "oluşan",
   "consists": "oluşur",
+  "console": "konsol, kumanda masası",
+  "constituent": "bileşen, kurucu",
+  "constituents": "bileşenler",
   "constitution": "anayasa",
   "constitutional": "anayasal",
   "consumer": "tüketici",
@@ -449,6 +433,7 @@ const wordDictionary = {
   "continuous": "sürekli",
   "contract": "sözleşme",
   "contradicting": "çelişen",
+  "contradictory": "çelişkili, çelişen",
   "contradicts": "çelişir",
   "contributing": "katkıda bulunan",
   "control": "kontrol / denetim",
@@ -478,7 +463,9 @@ const wordDictionary = {
   "cover": "kapak / örtü",
   "covered": "kaplı / kaplanmış",
   "cow": "inek",
+  "cracked": "çatlamış, yarılmış",
   "crashed": "çöktü",
+  "crashes": "çökmeler, kazalar",
   "created": "oluşturdu",
   "creates": "yaratır / oluşturur",
   "creating": "yaratan / oluşturan",
@@ -486,11 +473,13 @@ const wordDictionary = {
   "creative": "yaratıcı",
   "creator": "yaratıcı / yaratıcısı",
   "credit": "kredi",
+  "crews": "ekipler, mürettebat",
   "crisis": "kriz",
   "criteria": "kriterler / ölçütler",
   "critical": "kritik / son derece önemli",
   "criticising": "eleştirmek",
   "criticized": "eleştirdi",
+  "cross-disciplinary": "disiplinler arası",
   "crucial": "çok önemli / hayati",
   "cryptographic": "kriptografik",
   "cultivating": "işleyen / ekip biçen",
@@ -515,12 +504,14 @@ const wordDictionary = {
   "debate": "tartışmak",
   "debates": "tartışmalar",
   "debts": "borçlar",
+  "decay": "çürümek, bozulmak",
   "decide": "karar vermek",
   "decided": "karar verdi",
   "decision": "karar",
   "decision-making": "karar alma",
   "decisions": "kararlar",
   "decline": "düşüş / azalma",
+  "declined": "reddedildi, reddetti",
   "decreased": "azaltılmış",
   "decreasing": "azalan",
   "deep": "derin",
@@ -533,11 +524,13 @@ const wordDictionary = {
   "defining": "belirleyici",
   "definition": "tanım / tanımı",
   "degradation": "bozulma / bozunma",
+  "degrades": "bozulur, yozlaşır",
   "degree": "derece",
   "delayed": "gecikmiş",
   "delegate": "delege / temsilci",
   "delegates": "delegeler / temsilciler",
   "demand": "talep",
+  "demanded": "talep edilmiş, istenen",
   "demanding": "talepkar",
   "demands": "talepler",
   "democracy": "demokrasi",
@@ -561,6 +554,7 @@ const wordDictionary = {
   "design": "tasarım / tasarımı / tasarlamak",
   "design-simplifying": "tasarımı basitleştiren",
   "designed": "tasarladı / tasarlanmış",
+  "designing": "tasarlama, tasarlarken",
   "desire": "arzu / istek",
   "despite": "-e rağmen",
   "destroying": "yok etmek / mahvetmek",
@@ -576,6 +570,7 @@ const wordDictionary = {
   "determining": "belirleyen",
   "develop": "geliştirmek",
   "developed": "gelişen / gelişti",
+  "developers": "geliştiriciler",
   "developing": "gelişen",
   "development": "geliştirme / gelişim",
   "device": "cihaz / aygıt",
@@ -584,6 +579,8 @@ const wordDictionary = {
   "diagram": "diyagram / şema",
   "dialogue": "diyalog",
   "did": "yaptı (geçmiş zaman)",
+  "didnt": "yapmadı, etmedi (-di geçmiş zaman olumsuzu)",
+  "diesel": "dizel",
   "diet": "diyet",
   "difference": "fark",
   "differences": "farklar",
@@ -612,6 +609,7 @@ const wordDictionary = {
   "diseases": "hastalıklar",
   "dish": "yemek",
   "displayed": "görüntülendi / gösterildi",
+  "dispute": "anlaşmazlık, tartışma",
   "distance": "mesafe",
   "distinguishing": "ayıran / ayırt edici",
   "distortion": "bozulma / çarpıtma",
@@ -620,6 +618,7 @@ const wordDictionary = {
   "distributing": "dağıtma / dağıtan",
   "distribution": "dağılım / dağılımı / dağıtma",
   "distributive": "dağıtımsal",
+  "divide": "bölünmek, bölmek",
   "divided": "bölünmüş",
   "division": "bölünme / bölüm / bölünmesi",
   "do": "yapmak",
@@ -631,11 +630,14 @@ const wordDictionary = {
   "dominant": "baskın",
   "dominating": "baskın",
   "done": "yapılmış, tamamlanmış",
+  "double-check": "tekrar kontrol etmek, yeniden incelemek",
   "down": "aşağı",
+  "draft": "taslak",
   "drafted": "hazırladı",
   "drink": "içmek",
   "driver": "sürücü / şoför",
   "drop": "düşüş / damla",
+  "dropped": "düştü, düşürülmüş",
   "drug": "ilaç",
   "drugs": "ilaçlar / uyuşturucular",
   "due": "-den dolayı / bağlı",
@@ -673,6 +675,7 @@ const wordDictionary = {
   "emergency": "acil durum / olağanüstü hal",
   "emerging": "gelişmekte olan",
   "emission": "emisyon",
+  "emissions": "emisyonlar, salınımlar",
   "emitted": "yayılan / salınan",
   "empirical": "deneysel",
   "empirically": "deneysel olarak / ampirik olarak",
@@ -686,8 +689,10 @@ const wordDictionary = {
   "encryption": "şifreleme",
   "end": "son / bitiş",
   "endangering": "tehlikeye atan",
+  "ended": "sona erdi, bitmiş",
   "energy": "enerji",
   "energy-consuming": "enerji tüketen",
+  "enforce": "zorla uygulamak, dayatmak",
   "enforcing": "uygulama / uygulayan",
   "engaged": "meşgul / uğraşan",
   "engineer": "mühendis",
@@ -695,9 +700,11 @@ const wordDictionary = {
   "england": "İngiltere",
   "english": "İngilizce",
   "enough": "yeterince / yeterli",
+  "ensure": "sağlamak, garantiye almak",
   "ensures": "sağlar / garanti eder",
   "entire": "tüm / bütün",
   "entities": "varlıklar",
+  "entry": "giriş, kayıt",
   "environment": "çevre / ortam",
   "environment-protecting": "çevreyi koruyan",
   "environmental": "çevresel",
@@ -716,6 +723,7 @@ const wordDictionary = {
   "established": "kurulmuş / kurdu",
   "establishing": "kuran / tesis eden",
   "estimate": "tahmin",
+  "estimated": "tahmin edilen",
   "estimates": "tahminler",
   "estimating": "tahmin etmek / oranlamak",
   "estimation": "tahmin / kestirim",
@@ -731,6 +739,7 @@ const wordDictionary = {
   "every": "her / her bir",
   "evidence": "kanıt",
   "evident": "bariz",
+  "evolves": "evrilir, gelişir",
   "evolving": "gelişen",
   "exact": "kesin / tam",
   "examination": "sınav / muayene",
@@ -740,6 +749,7 @@ const wordDictionary = {
   "exclude": "hariç tutmak",
   "excluded": "hariç tutmuş / hariç tuttu",
   "excluding": "hariç tutma / hariç tutan",
+  "executes": "çalıştırır, yürütür",
   "execution": "yürütme / uygulama",
   "executive": "yürütücü / yönetim",
   "exercise": "egzersiz / alıştırma",
@@ -750,6 +760,7 @@ const wordDictionary = {
   "expand": "genişletmek / büyümek",
   "expanded": "genişletilmiş / genişletildi / genişletilmektedir",
   "expanding": "genişleyen",
+  "expands": "genişler",
   "expansion": "genişleme / yayılma",
   "expectancy": "beklenti",
   "expectation": "beklenti / beklentisi var",
@@ -759,6 +770,7 @@ const wordDictionary = {
   "experience": "deneyim",
   "experiences": "yaşıyor",
   "experiment": "deney / deneyi",
+  "experimental": "deneysel",
   "experiments": "deneyler",
   "expert": "uzman",
   "experts": "uzmanlar",
@@ -777,7 +789,9 @@ const wordDictionary = {
   "exposed": "maruz kalmış / açıkta kalmış",
   "exposes": "ortaya çıkarır",
   "expression": "ifade / dışa vurum",
+  "extensive": "kapsamlı, geniş",
   "extent": "boyut / ölçü / kapsam",
+  "external": "harici, dış",
   "extract": "çıkarmak / özünü çıkarmak",
   "extracted": "çıkarılmış / çıkardı",
   "extracting": "çıkarma / çıkaran",
@@ -794,7 +808,9 @@ const wordDictionary = {
   "factors": "faktörler",
   "factory": "fabrika",
   "facts": "gerçekler",
+  "fail": "başarısız olmak, kalmak",
   "failed": "başaramadı / başarısız oldu",
+  "failure": "başarısızlık, arıza",
   "falling": "düşen",
   "far": "uzak",
   "farm": "çiftlik",
@@ -808,10 +824,13 @@ const wordDictionary = {
   "feedback": "geri bildirim",
   "fever": "ateş",
   "few": "az / birkaç",
+  "field": "alan, saha",
   "fields": "tarlalar / alanlar",
   "figure": "anlamak / çözmek / rakam",
   "figures": "şahsiyetler / rakamlar",
+  "files": "dosyalar",
   "film": "film",
+  "filter": "filtre, süzgeç",
   "final": "nihai / son",
   "finalized": "tamamladı",
   "finally": "sonunda / nihayet",
@@ -819,20 +838,25 @@ const wordDictionary = {
   "financial": "finansal",
   "find": "bulmak",
   "finding": "bulgu",
+  "fine-tune": "ince ayar yapmak",
   "fine-tuned": "ince ayar yapılmış",
   "finished": "bitmiş / tamamlanmış",
   "fire": "ateş",
+  "firewalls": "güvenlik duvarları",
   "firmly": "sağlam bir şekilde / sıkıca",
+  "firms": "firmalar, şirketler",
   "first": "ilk / birinci",
   "fiscal": "mali",
   "fix": "tamir etmek / düzeltmek",
   "fixed": "sabit",
+  "flag": "bayrak, işaret koymak",
   "flask": "şişe / balon",
   "flaws": "kusurlar / hatalar",
   "flood": "sel",
   "floods": "seller",
   "fluctuating": "dalgalanan",
   "fluctuation": "dalgalanma",
+  "fluid": "sıvı, akışkan",
   "flutter": "Flutter (mobil uygulama iskeleti)",
   "focus": "odaklanmak / odak / odağı",
   "follow": "takip etmek / uymak",
@@ -853,6 +877,7 @@ const wordDictionary = {
   "found": "buldu / bulunmuş",
   "foundation": "temel / vakıf",
   "framework": "çerçeve / çerçevesi / yapı",
+  "frameworks": "çerçeveler, çalışma yapıları",
   "freedom": "özgürlük",
   "freezes": "donar",
   "frequently": "sıklıkla / sık sık",
@@ -870,6 +895,7 @@ const wordDictionary = {
   "funds": "fonlar / kaynaklar",
   "fungi": "mantarlar",
   "further": "daha fazla / ileri",
+  "gamified": "oyunlaştırılmış",
   "gamma": "gama",
   "gardener": "bahçıvan",
   "gas": "gaz / gazı",
@@ -892,6 +918,7 @@ const wordDictionary = {
   "good": "iyi",
   "goods": "mallar / eşyalar",
   "got": "aldı / elde etti",
+  "governance": "yönetişim, yönetim",
   "governing": "yöneten / yönetici",
   "government": "hükümet / devlet / hükümeti",
   "gradually": "kademeli olarak / yavaş yavaş",
@@ -900,7 +927,9 @@ const wordDictionary = {
   "gravity": "yerçekimi / ağırlık",
   "great": "büyük / harika",
   "greatly": "büyük ölçüde / çok",
+  "grid": "ızgara, şebeke",
   "ground": "yer / zemin / toprak",
+  "grounds": "gerekçeler, zeminler",
   "group": "grup",
   "groups": "gruplar",
   "growing": "büyüyen / büyüyor / artan",
@@ -915,6 +944,9 @@ const wordDictionary = {
   "habit-forming": "alışkanlık yapan",
   "had": "sahip olmak (geçmiş) / -miş olmak",
   "half": "yarım / yarısı",
+  "handles": "yönetir, ele alır",
+  "happen": "olmak, meydana gelmek",
+  "hard": "zor, sert",
   "harmful": "zararlı",
   "harvested": "hasat etti / topladı",
   "has": "sahip olmak / -miş olmak",
@@ -931,6 +963,7 @@ const wordDictionary = {
   "heavy": "şiddetli / ağır",
   "help": "yardım",
   "helped": "yardımcı oldu",
+  "helpful": "faydalı, yardımcı",
   "helps": "yardımcı olur",
   "her": "onun (kadın)",
   "here": "burada",
@@ -948,9 +981,11 @@ const wordDictionary = {
   "holds": "barındırır / tutar",
   "holiday": "tatil / tatili",
   "how": "nasıl",
+  "humid": "nemli, rutubetli",
   "hunger": "açlık",
   "hypotheses": "hipotezler",
   "hypothesis": "hipotez",
+  "hypothesized": "hipotez edilmiş, varsayılmış",
   "i": "ben",
   "idea": "fikir",
   "ideas": "fikirler",
@@ -973,6 +1008,7 @@ const wordDictionary = {
   "implement": "uygulamak",
   "implementation": "uygulama / yürürlüğe koyma",
   "implemented": "uyguladı / uygulamaya koydu",
+  "imply": "ima etmek, anlamına gelmek",
   "importance": "önem / önemi",
   "important": "önemli",
   "imported": "ithal edilir / ithal edilmiş",
@@ -1001,8 +1037,10 @@ const wordDictionary = {
   "induced": "yol açılmış / yol açıldı",
   "induces": "yol açar",
   "industrial": "endüstriyel / sanayi",
+  "industrialized": "sanayileşmiş, endüstrileşmiş",
   "industries": "sanayiler / endüstriler",
   "industry": "endüstri / sanayi",
+  "inflation": "enflasyon",
   "influence": "etki / nüfuz",
   "informal": "resmi olmayan",
   "information": "bilgi",
@@ -1010,7 +1048,9 @@ const wordDictionary = {
   "inhabitants": "sakinleri / yaşayanlar",
   "inhabited": "insan yaşayan / yerleşilmiş",
   "initial": "başlangıç / ilk",
+  "initially": "başlangıçta, ilk olarak",
   "injury": "yaralanma / sakatlanma / zarar",
+  "ink": "mürekkep",
   "innovation": "yenilik",
   "innovations": "yenilikler",
   "innovative": "yenilikçi",
@@ -1018,6 +1058,7 @@ const wordDictionary = {
   "inputs": "girdiler",
   "insect": "böcek",
   "insects": "böcekler",
+  "inside": "içinde, içeride",
   "insights": "öngörüler",
   "inspect": "denetlemek / incelemek",
   "inspected": "incelenen / incelendi / incelenmektedir",
@@ -1033,7 +1074,9 @@ const wordDictionary = {
   "integration": "entegrasyon / uyum",
   "intended": "amaçlanan",
   "intense": "yoğun",
+  "intensely": "yoğun bir şekilde",
   "intensity": "şiddet / yoğunluk",
+  "interact": "etkileşime girmek",
   "interacting": "etkileşen",
   "interaction": "etkileşim",
   "interest": "ilgi",
@@ -1042,6 +1085,7 @@ const wordDictionary = {
   "interface": "arayüz",
   "internal": "içsel / iç",
   "international": "uluslararası",
+  "interpret": "yorumlamak, çevirmek",
   "interpretation": "yorumlama / yorum / yorumlanması",
   "interpreted": "yorumlanmış / çevrilmiş",
   "interpreting": "yorumlama / yorumlayan",
@@ -1049,6 +1093,7 @@ const wordDictionary = {
   "interview": "mülakat / görüşme",
   "interviewer": "görüşmeci / mülakatçı",
   "into": "içine doğru",
+  "introduce": "tanıtmak, sunmak, getirmek",
   "introduced": "uygulamaya konuldu / tanıtıldı",
   "introducing": "tanıtan / getiren",
   "invalidates": "geçersiz kılar",
@@ -1078,6 +1123,8 @@ const wordDictionary = {
   "journal": "dergi / akademik dergi",
   "journalists": "gazeteciler",
   "json": "JSON (veri formatı)",
+  "junior": "kıdemce küçük, genç",
+  "just": "tam da, sadece",
   "justification": "gerekçe / haklı çıkarma",
   "key": "anahtar / kilit",
   "kind": "tür / çeşit",
@@ -1097,9 +1144,11 @@ const wordDictionary = {
   "large": "büyük / çok sayıda",
   "last": "son / geçen",
   "lasting": "kalıcı",
+  "latency": "gecikme süresi",
   "law": "kanun / yasa",
   "law-abiding": "yasalara uyan",
   "laws": "kanunlar / yasalar",
+  "lawsuit": "dava (hukuk)",
   "lawyer": "avukat",
   "layers": "tabakalar / katmanlar",
   "lead": "kurşun / yönlendirmek",
@@ -1119,6 +1168,7 @@ const wordDictionary = {
   "legislation": "mevzuat / yasa koyma",
   "legislative": "yasal / yasama",
   "legs": "bacaklar / bacakları",
+  "lest": "-mesin diye, korkusuyla",
   "letters": "mektuplar",
   "level": "seviye",
   "levels": "seviyeler",
@@ -1133,6 +1183,8 @@ const wordDictionary = {
   "limitations": "sınırlılıklar / limitler",
   "limiting": "sınırlayan",
   "line": "çizgi / hat",
+  "lines": "satırlar, çizgiler",
+  "linguistic": "dilsel, dilbilimsel",
   "linkage": "bağlantı / ilişki",
   "liquid": "sıvı / sıvısı",
   "list": "liste",
@@ -1141,7 +1193,9 @@ const wordDictionary = {
   "live": "yaşamak",
   "lives": "hayatlar / yaşamlar",
   "living": "yaşam / hayat",
+  "loads": "yükler",
   "local": "yerel",
+  "locally": "yerel olarak",
   "logic": "mantık",
   "logic-defying": "mantığa meydan okuyan",
   "logical": "mantıklı",
@@ -1149,7 +1203,9 @@ const wordDictionary = {
   "long": "uzun",
   "long-standing": "uzun süredir var olan",
   "long-term": "uzun vadeli",
+  "look": "görünmek, bakmak",
   "loop": "döngü",
+  "loose": "gevşek, serbest",
   "lose": "kaybetmek",
   "loss": "kayıp",
   "lost": "kaybetti / kaybolmuş",
@@ -1165,6 +1221,7 @@ const wordDictionary = {
   "maintenance": "bakım",
   "major": "büyük / önemli",
   "majority": "çoğunluk",
+  "malicious": "kötü niyetli",
   "malnutrition": "yetersiz beslenme",
   "man": "adam",
   "manage": "yönetmek",
@@ -1189,6 +1246,7 @@ const wordDictionary = {
   "material": "malzeme / madde",
   "materials": "malzemeler / maddeler",
   "mathematical": "matematiksel",
+  "matrix": "matris",
   "matter": "madde / husus",
   "maximize": "maksimize etmek / en üst düzeye çıkarmak",
   "maximized": "maksimize edilmiş / maksimize edildi",
@@ -1203,6 +1261,7 @@ const wordDictionary = {
   "medicine": "ilaç / tıp",
   "meet": "buluşmak / tanışmak / karşılamak",
   "meeting": "toplantı / buluşma",
+  "meetings": "toplantılar",
   "members": "üyeler",
   "membership": "üyelik",
   "memory": "bellek",
@@ -1216,6 +1275,7 @@ const wordDictionary = {
   "methodological": "metodolojik",
   "methodology": "metodoloji / yöntem bilim",
   "methods": "yöntemler",
+  "metrics": "ölçümler, metrikler",
   "micro-organisms": "mikroorganizmalar",
   "microscopic": "mikroskobik",
   "might": "-ebilir / -abilir (düşük olasılık)",
@@ -1249,6 +1309,7 @@ const wordDictionary = {
   "money-making": "para kazandıran",
   "monitor": "izlemek",
   "monitoring": "izleme / izleyen",
+  "month": "ay (takvim)",
   "monthly": "aylık",
   "more": "daha fazla",
   "morning": "sabah",
@@ -1261,9 +1322,11 @@ const wordDictionary = {
   "movement": "hareket / hareketi",
   "moving": "hareket eden",
   "multi": "çok / çoklu",
+  "municipal": "belediye, belediyeye ait",
   "muscle": "kas",
   "muscles": "kaslar / kasları",
   "must": "-meli / -malı (zorunluluk)",
+  "mutate": "değişmek, mutasyona uğramak",
   "mutual": "karşılıklı",
   "mutually": "karşılıklı olarak",
   "my": "benim",
@@ -1271,6 +1334,7 @@ const wordDictionary = {
   "national": "ulusal / milli",
   "nations": "uluslar / milletler",
   "natural": "doğal",
+  "necessary": "gerekli, zorunlu",
   "necessitating": "gerektiren",
   "need": "ihtiyaç / gerekmek",
   "needed": "gerekli / ihtiyaç duyulan",
@@ -1286,12 +1350,16 @@ const wordDictionary = {
   "newly-planted": "yeni dikilmiş",
   "news": "haber / haberler",
   "newspaper": "gazete",
+  "next": "sonraki, gelecek",
+  "night": "gece",
   "no": "hayır, hiçbir, yok",
   "noise-reducing": "gürültü azaltan",
   "nomads": "göçebeler",
   "non-compliant": "uyumsuz / kurallara uymayan",
+  "normal": "normal, olağan",
   "not": "değil, olumsuzluk eki",
   "notice": "fark etmek / bildirim",
+  "now": "şimdi, şu anda",
   "number": "sayı / adet",
   "objects": "nesneler / objeler",
   "observation": "gözlem",
@@ -1313,17 +1381,23 @@ const wordDictionary = {
   "oil": "petrol / yağ",
   "old": "eski, yaşlı",
   "on": "üzerinde, -de / -da",
+  "once": "bir kez, -ince / -ir -mez",
   "operates": "yürütülmektedir / çalışır",
   "operation": "ameliyat / operasyon",
   "operational": "operasyonel",
+  "operations": "işlemler, operasyonlar",
   "opinions": "fikirler",
   "opportunities": "fırsatlar",
   "opposing": "muhalif",
   "opposition": "muhalefet / karşıtlık",
+  "optimize": "optimize etmek, eniyilemek",
+  "optimizes": "optimize eder",
   "option": "seçenek",
   "or": "veya, yoksa",
+  "order": "düzen, sipariş, emir",
   "order-defining": "sırayı belirleyen",
   "organ": "organ",
+  "organic": "organik",
   "organism": "organizma",
   "organisms": "organizmalar",
   "organization": "organizasyon / organizasyonu",
@@ -1346,6 +1420,7 @@ const wordDictionary = {
   "over-estimated": "aşırı tahmin edilmiş",
   "over-populated": "aşırı nüfuslu",
   "overlap": "çakışma / örtüşme",
+  "override": "geçersiz kılmak, baskın gelmek",
   "owner": "sahip / malik",
   "oxygen": "oksijen",
   "packed": "paketlenmiş",
@@ -1357,6 +1432,7 @@ const wordDictionary = {
   "paradigm": "paradigma",
   "parameter": "parametre",
   "parameterize": "parametrelendirmek",
+  "parameterized": "parametrelendirilmiş",
   "parameters": "parametreler",
   "park": "park etmek / park",
   "parliamentary": "parlamento / parlamenter",
@@ -1368,6 +1444,8 @@ const wordDictionary = {
   "passed": "geçti / kabul edildi",
   "passes": "geçer",
   "passive": "edilgen",
+  "patch": "yama, düzeltme",
+  "path": "yol, patika",
   "patient": "hasta",
   "patients": "hastalar",
   "pattern": "kalıp / kalıbı / model",
@@ -1375,9 +1453,11 @@ const wordDictionary = {
   "pdf": "PDF (belge formatı)",
   "peace": "barış",
   "peace-loving": "barışsever",
+  "peak": "zirve, yoğun",
   "peer-reviewed": "hakemli",
   "penetrate": "nüfuz eder / içine işler",
   "people": "halk / insanlar",
+  "perceive": "algılamak, hissetmek",
   "percentages": "yüzdeler",
   "perfect": "mükemmel",
   "perfectly": "kusursuzca / mükemmel bir şekilde",
@@ -1406,16 +1486,19 @@ const wordDictionary = {
   "pile": "reaktör / yığın",
   "pipes": "borular",
   "plan": "planlamak / plan",
+  "plane": "uçak",
   "planned": "planlanmış",
   "plant": "bitki",
   "plants": "bitkiler",
   "plate": "levha / plaka / tabak",
+  "platform": "platform",
   "point": "nokta",
   "police": "polis",
   "policies": "politikalar",
   "policy": "politika / politikası",
   "policy-defining": "politikayı tanımlayan",
   "policymakers": "politika yapıcılar",
+  "politely": "kibarca, nazikçe",
   "political": "siyasi / politik",
   "politically": "siyasi olarak / siyaseten",
   "politicians": "politikacılar",
@@ -1439,6 +1522,7 @@ const wordDictionary = {
   "predictable": "öngörülebilir",
   "predicted": "tahmin edilmiş / tahmin etti",
   "predicting": "tahmin etme / tahmin eden",
+  "predicts": "öngörür, tahmin eder",
   "prefer": "tercih etmek",
   "preferred": "tercih edilen",
   "preliminary": "ön",
@@ -1447,6 +1531,7 @@ const wordDictionary = {
   "prepared": "hazırlanmış / hazırladı",
   "presence": "varlık / mevcudiyet",
   "present": "mevcut / burada",
+  "presentation": "sunum",
   "presented": "sundu / takdim etti",
   "preserve": "korumak / muhafaza etmek",
   "preserved": "korunmuş / korudu",
@@ -1469,6 +1554,7 @@ const wordDictionary = {
   "privacy": "gizlilik",
   "problem": "problem / sorun / problemi",
   "problem-solving": "problem çözen",
+  "problematic": "sorunlu, şüpheli",
   "problems": "problemler / sorunlar",
   "procedural": "yöntemsel",
   "procedure": "prosedür / yöntem",
@@ -1529,6 +1615,9 @@ const wordDictionary = {
   "puzzle": "bulmaca",
   "qualitative": "nitel",
   "quality": "kalite",
+  "quarter": "çeyrek, bölge",
+  "queries": "sorgular",
+  "query": "sorgu",
   "quickly": "hızlıca / çabucak",
   "radiation": "radyasyon",
   "radio": "radyo",
@@ -1540,6 +1629,7 @@ const wordDictionary = {
   "rarely": "nadiren / seyrek olarak",
   "rate": "oran",
   "rates": "oranlar",
+  "rather": "tercihen, daha ziyade",
   "ratios": "oranlar",
   "raw": "ham / işlenmemiş",
   "rays": "ışınlar",
@@ -1547,11 +1637,13 @@ const wordDictionary = {
   "reactions": "tepkiler / reaksiyonlar",
   "read": "okumak",
   "reading": "okuma / okumak",
+  "reads": "okur",
   "ready": "hazır",
   "reallocate": "yeniden tahsis etmek",
   "reallocated": "yeniden tahsis edilmiş",
   "reason": "sebep / neden",
   "reasons": "sebepler / nedenler",
+  "reassuring": "rahatlatıcı, güven verici",
   "rebuilt": "yeniden inşa etti",
   "receive": "alır / almak",
   "recently": "yakın zamanda / son günlerde",
@@ -1559,14 +1651,19 @@ const wordDictionary = {
   "recognized": "tanıdı / kabul etti",
   "record-breaking": "rekor kıran",
   "recorded": "kaydedilmiş",
+  "records": "kayıtlar",
+  "redefine": "yeniden tanımlamak",
   "redesigned": "yeniden tasarlanmış / tasarladı",
   "redesigning": "yeniden tasarlama / yeniden tasarlayan",
+  "reduce": "azaltmak, düşürmek",
   "reduced": "azaltılmış",
   "reduces": "azaltır",
   "reform": "reform",
   "refused": "reddetti",
+  "regarding": "ilişkin, dair, hakkında",
   "regime": "rejim",
   "regime-supporting": "rejimi destekleyen",
+  "regimes": "rejimler",
   "regional": "bölgesel",
   "regions": "bölgeler",
   "regular": "düzenli",
@@ -1575,6 +1672,7 @@ const wordDictionary = {
   "regulation": "düzenleme / yönetmelik",
   "regulations": "düzenlemeler / kurallar",
   "regulatory": "düzenleyici",
+  "reinforce": "güçlendirmek, takviye etmek",
   "reinforced": "güçlendirilmiş",
   "reject": "reddetmek",
   "rejection": "ret / reddetme",
@@ -1588,6 +1686,7 @@ const wordDictionary = {
   "rely": "güvenmek / dayanmak",
   "remains": "kalır / olmaya devam eder",
   "remarks": "konuşmalar / sözler",
+  "remembered": "hatırlanan",
   "removed": "kaldırılmalıdır / kaldırılmış",
   "renaissance": "rönesans",
   "repeated": "tekrarlanan",
@@ -1597,6 +1696,7 @@ const wordDictionary = {
   "representation": "temsil / gösterim",
   "representatives": "temsilciler",
   "reputation": "itibar / ün",
+  "request": "talep etmek, rica etmek",
   "requested": "talep etti / istedi",
   "require": "gerekmek / istemek",
   "required": "gerekli",
@@ -1609,8 +1709,10 @@ const wordDictionary = {
   "researchers": "araştırmacılar",
   "reshaping": "yeniden şekillendirme / yeniden şekillendiren",
   "resident": "mukim",
+  "resins": "reçineler",
   "resolution": "çözüm",
   "resolve": "çözmek / kararlaştırmak",
+  "resolved": "çözüldü, kararlaştırıldı",
   "resolves": "çözer / giderir",
   "resource": "kaynak",
   "resource-limiting": "kaynağı sınırlandıran",
@@ -1640,12 +1742,15 @@ const wordDictionary = {
   "reviewed": "inceledi / gözden geçirdi",
   "reviewing": "inceleme / inceleyen",
   "revised": "gözden geçirilmiş",
+  "revision": "revizyon, düzeltme",
   "revolving": "dönen / devreden",
+  "rewarding": "ödüllendirici, tatmin edici",
   "rich": "zengin",
   "right": "hak / doğru",
   "rights": "haklar",
   "rigidity": "katılık / sertlik",
   "rigorously": "titizlikle / sıkı bir şekilde",
+  "rise": "yükselmek, artmak",
   "rising": "yükselen",
   "risk": "risk / riski",
   "risk-mitigating": "riski azaltan",
@@ -1657,6 +1762,7 @@ const wordDictionary = {
   "room": "oda / odası",
   "rooms": "odalar",
   "roots": "kökler",
+  "rose": "yükseldi",
   "roughly": "kabaca / yaklaşık olarak",
   "round": "etrafında / yuvarlak",
   "router": "yönlendirici / yönseçici",
@@ -1664,6 +1770,8 @@ const wordDictionary = {
   "rules": "kurallar / yönetmelikler",
   "run": "koşu / gidişat",
   "runs": "çalıştırır / koşar",
+  "runtime": "çalışma zamanı",
+  "safe": "güvenli, emin",
   "safely": "güvenli bir şekilde",
   "safety": "güvenlik",
   "salary": "maaş / ücret",
@@ -1691,7 +1799,9 @@ const wordDictionary = {
   "scientists": "bilim insanları",
   "scope": "kapsam",
   "script": "betik / kod",
+  "scripts": "kodlar, senaryolar",
   "sea": "deniz",
+  "seamlessly": "sorunsuz bir şekilde",
   "secondary": "ikincil",
   "secretary": "sekreter",
   "section": "bölüm / kısım",
@@ -1702,7 +1812,9 @@ const wordDictionary = {
   "secures": "güvenceye alır",
   "security": "güvenlik / güvenliği",
   "see": "görmek",
+  "seeing": "gören, mademki",
   "seen": "görülebilir / görülmüş",
+  "seismic": "sismik, depremsel",
   "select": "seçmek",
   "selection": "seçim",
   "seminar": "seminer",
@@ -1715,8 +1827,10 @@ const wordDictionary = {
   "separate": "ayrı / bağımsız",
   "sequences": "sıralar / diziler",
   "serum": "serum",
+  "servers": "sunucular",
   "service": "hizmet",
   "set": "set / küme",
+  "settle": "çözmek, halletmek, yerleşmek",
   "several": "birkaç / çeşitli",
   "severe": "ciddi",
   "severely": "ciddi derecede / şiddetle",
@@ -1727,6 +1841,7 @@ const wordDictionary = {
   "shifted": "kaydırılmış / kaydırıldı",
   "shifting": "kaydırma / değiştiren",
   "short": "kısa",
+  "shorter": "daha kısa",
   "should": "-meli / -malı (tavsiye / gereklilik)",
   "showed": "gösterdi",
   "showing": "gösteren",
@@ -1748,6 +1863,7 @@ const wordDictionary = {
   "skill": "beceri",
   "sleep": "uyumak",
   "slightly": "hafifçe / biraz",
+  "slots": "yuvalar, boşluklar",
   "slowly": "yavaşça / yavaş",
   "small": "küçük",
   "smell": "koku",
@@ -1768,6 +1884,7 @@ const wordDictionary = {
   "solved": "çözdü",
   "some": "bazı, biraz",
   "soon": "yakında / kısa sürede",
+  "sooner": "daha erken, daha önce",
   "sound": "ses",
   "soup": "çorba",
   "source": "kaynak",
@@ -1807,8 +1924,10 @@ const wordDictionary = {
   "statistical": "istatistiksel",
   "statistics": "istatistikler",
   "status": "statü / durum",
+  "stayed": "kaldı, kalmış",
   "step": "adım",
   "sterile": "steril / arındırılmış",
+  "sterilized": "sterilize edildi",
   "stolen": "çalınmış",
   "stop": "durmak / durdurmak",
   "stopped": "durdu / durdurdu",
@@ -1838,6 +1957,7 @@ const wordDictionary = {
   "subject": "maruz kalacak / konu",
   "submit": "teslim etmek / sunmak",
   "submitted": "sunulmuş / sundu",
+  "subsequent": "sonraki, ardışık",
   "substance": "madde",
   "substances": "maddeler",
   "substantial": "önemli / büyük miktarda",
@@ -1909,6 +2029,9 @@ const wordDictionary = {
   "terminated": "feshetti",
   "test": "test / deneme",
   "test-tube": "deney tüpü",
+  "test-tubes": "deney tüpleri",
+  "testing": "test etme, deneme",
+  "tests": "testler",
   "text": "metin / metni",
   "textbook": "ders kitabı",
   "than": "-den / -dan (karşılaştırma)",
@@ -1933,6 +2056,7 @@ const wordDictionary = {
   "through": "içinden, vasıtasıyla",
   "time": "zaman",
   "time-saving": "zaman kazandıran",
+  "timeline": "zaman çizelgesi",
   "times": "zamanlar",
   "tissue": "doku",
   "tissues": "dokular",
@@ -1940,6 +2064,7 @@ const wordDictionary = {
   "to": "-e / -a (yönelme / kadar), -mek / -mak için",
   "today": "bugün",
   "token": "belirteç / jeton",
+  "tokens": "belirteçler, jetonlar",
   "told": "söyledi",
   "tomorrow": "yarın",
   "took": "aldı",
@@ -1952,18 +2077,23 @@ const wordDictionary = {
   "towns": "kasabalar / kentler",
   "toxic": "toksik / zehirli",
   "trace": "takip etmek / izini sürmek",
+  "traces": "izler",
   "track": "izlemek / takip etmek",
   "tracked": "izlenmiş / takip etti",
   "tracking": "takip etme / izleme",
   "trade": "ticaret",
+  "trading": "ticaret",
   "traditional": "geleneksel",
   "traffic": "trafik",
   "training": "eğitim / antrenman",
+  "transactions": "işlemler",
   "transfer": "aktarmak / transfer etmek",
+  "transform": "dönüştürmek",
   "transforms": "dönüştürür",
   "transition": "geçiş / dönüşüm",
   "translating": "çevirmek / tercüme etmek",
   "transmitted": "taşınır / iletilir",
+  "travelled": "seyahat etti, seyahat etmiş",
   "treatment": "tedavi / tedaviye",
   "tree": "ağaç",
   "trees": "ağaçlar",
@@ -1984,7 +2114,9 @@ const wordDictionary = {
   "turn": "dönüş / sıra",
   "two": "iki",
   "typical": "tipik",
+  "unauthenticated": "kimliği doğrulanmamış",
   "unauthorized": "yetkisiz",
+  "unconstitutional": "anayasaya aykırı",
   "uncooked": "pişmemiş",
   "under": "altında",
   "under-developed": "az gelişmiş / yetersiz gelişmiş",
@@ -2003,13 +2135,16 @@ const wordDictionary = {
   "unexposed": "banyo edilmemiş",
   "uninhabited": "insansız / yerleşilmemiş",
   "unique": "benzersiz / kendine özgü",
+  "unit": "birim, ünite",
   "united": "birleşmiş",
+  "units": "birimler, üniteler",
   "universe": "evren / evreni",
   "university": "üniversite",
   "unknown": "bilinmeyen / bilinmiyordu",
   "unless": "-medikçe / -madıkça",
   "unnecessary": "gereksiz",
   "unpredictable": "öngörülemeyen",
+  "unreinforced": "güçlendirilmemiş",
   "unstable": "kararsız / dengesiz",
   "until": "-e kadar",
   "untried": "denenmemiş",
@@ -2019,6 +2154,7 @@ const wordDictionary = {
   "updated": "güncellenmiş / güncelledi",
   "updating": "güncelleme / güncelleyen",
   "upgraded": "yükseltti",
+  "urgent": "acil, ivedi",
   "us": "bize / bizi",
   "usage": "kullanım",
   "use": "kullanım / kullanımı",
@@ -2046,9 +2182,11 @@ const wordDictionary = {
   "variation": "değişim / varyasyon",
   "variations": "varyasyonlar",
   "varied": "çeşitli",
+  "vary": "çeşitlilik göstermek, değişmek",
   "varying": "değişen",
   "vase": "vazo",
   "vegetable": "bitkisel / sebze",
+  "vehicle": "araç, taşıt",
   "verification": "doğrulama",
   "verified": "doğruladı / doğruladılar",
   "verify": "doğrulamak",
@@ -2085,6 +2223,7 @@ const wordDictionary = {
   "waves": "dalgalar",
   "way": "yol / yöntem",
   "we": "biz",
+  "week": "hafta",
   "weeks": "haftalar",
   "welfare": "refah",
   "well": "kuyu",
@@ -2095,6 +2234,7 @@ const wordDictionary = {
   "were": "-diler / -dılar (geçmiş zaman olmak fiili)",
   "what": "ne",
   "when": "ne zaman, -diğinde / -duğunda",
+  "whenever": "her ne zaman, -diğinde",
   "where": "nerede, nereye",
   "whether": "olup olmadığını",
   "which": "hangi, -ki o (nesne niteleme)",
@@ -2115,15 +2255,18 @@ const wordDictionary = {
   "without": "-sız / -sızın / olmadan",
   "witness": "tanık",
   "won": "kazanılmış / kazandı",
+  "wonder": "merak etmek, acaba",
   "wood": "odun / tahta / odunu",
   "woods": "ormanlar",
   "words": "kelimeler",
   "work": "iş / işi",
+  "worked": "çalıştı, çalışmış",
   "worker": "işçi / çalışan",
   "workers": "işçiler / işçileri",
   "workplace": "işyeri",
   "worn-out": "eskitilmiş / yıpranmış",
   "would": "-erdi / -ardı (istek / koşul)",
+  "would rather": "tercih etmek, yeğlemek",
   "written": "yazılı",
   "wrote": "yazdı",
   "year": "yıl",
@@ -2134,7 +2277,6 @@ const wordDictionary = {
   "your": "senin / sizin",
   "zero": "sıfır",
   "zone": "bölge / alan"
-
 };;
 
 const unit1IntroSentencesRaw = [
@@ -8393,6 +8535,1226 @@ function buildUnit24UntilExercises(unitId, lessonId) {
 
 
 
+
+// ─── BÖLÜM 26 RAW SENTENCES (It + to be + that / to V1 + that) ──────────────────
+
+const unit26Lesson1Group1Raw = [
+  {
+    en: "It is apparent that the constituent variables change.",
+    tr: "Bileşen değişkenlerin değiştiği açıktır.",
+    word: "apparent",
+    trWord: "açık, aşikar",
+    correct: "apparent",
+    blank: "It is ___ that the constituent variables change.",
+    options: ["apparent", "apparently", "appearance", "appear"],
+    blocks: ["It is apparent", "that the constituent", "variables change."]
+  },
+  {
+    en: "It has been hypothesized that linguistic output evolves.",
+    tr: "Dilsel çıktının evrildiği hipotezi öne sürülmüştür.",
+    word: "hypothesized",
+    trWord: "varsayılmış, hipotez edilmiş",
+    correct: "hypothesized",
+    blank: "It has been ___ that linguistic output evolves.",
+    options: ["hypothesized", "hypothesis", "hypothetically", "hypothesize"],
+    blocks: ["It has been hypothesized", "that linguistic", "output evolves."]
+  },
+  {
+    en: "It was evident that the data format shifted.",
+    tr: "Veri formatının değiştiği belliydi.",
+    word: "evident",
+    trWord: "belli, açık",
+    correct: "evident",
+    blank: "It was ___ that the data format shifted.",
+    options: ["evident", "evidently", "evidence", "evidenced"],
+    blocks: ["It was evident", "that the data", "format shifted."]
+  },
+  {
+    en: "It must be acknowledged that the parameterized matrix expands.",
+    tr: "Parametrelendirilmiş matrisin genişlediği kabul edilmelidir.",
+    word: "acknowledged",
+    trWord: "kabul edilmiş",
+    correct: "acknowledged",
+    blank: "It must be ___ that the parameterized matrix expands.",
+    options: ["acknowledged", "acknowledging", "acknowledgement", "acknowledge"],
+    blocks: ["It must be acknowledged", "that the parameterized", "matrix expands."]
+  },
+  {
+    en: "It should be assumed that the draft clauses vary.",
+    tr: "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır.",
+    word: "assumed",
+    trWord: "varsayılmış, farz edilmiş",
+    correct: "assumed",
+    blank: "It should be ___ that the draft clauses vary.",
+    options: ["assumed", "assumption", "assuming", "assume"],
+    blocks: ["It should be assumed", "that the draft", "clauses vary."]
+  },
+  {
+    en: "It is predicted that alternative regimes will collapse.",
+    tr: "Alternatif rejimlerin çökeceği öngörülmektedir.",
+    word: "predicted",
+    trWord: "öngörülen, tahmin edilen",
+    correct: "predicted",
+    blank: "It is ___ that alternative regimes will collapse.",
+    options: ["predicted", "predictive", "prediction", "predict"],
+    blocks: ["It is predicted", "that alternative", "regimes will collapse."]
+  },
+  {
+    en: "It had been established that chemical innovations transform structures.",
+    tr: "Kimyasal yeniliklerin yapıları dönüştürdüğü saptanmıştı.",
+    word: "established",
+    trWord: "saptanmış, kanıtlanmış",
+    correct: "established",
+    blank: "It had been ___ that chemical innovations transform structures.",
+    options: ["established", "establishment", "establishing", "establish"],
+    blocks: ["It had been established", "that chemical innovations", "transform structures."]
+  },
+  {
+    en: "It is estimated that arbitrary criteria induce errors.",
+    tr: "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir.",
+    word: "estimated",
+    trWord: "tahmin edilen",
+    correct: "estimated",
+    blank: "It is ___ that arbitrary criteria induce errors.",
+    options: ["estimated", "estimation", "estimating", "estimate"],
+    blocks: ["It is estimated", "that arbitrary criteria", "induce errors."]
+  },
+  {
+    en: "It must be remembered that unstable frameworks fail.",
+    tr: "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
+    word: "remembered",
+    trWord: "hatırlanan",
+    correct: "remembered",
+    blank: "It must be ___ that unstable frameworks fail.",
+    options: ["remembered", "remembrance", "remembering", "remember"],
+    blocks: ["It must be remembered", "that unstable", "frameworks fail."]
+  },
+  {
+    en: "It was concluded that automated scripts optimize files.",
+    tr: "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı.",
+    word: "concluded",
+    trWord: "sonuçlandırılmış",
+    correct: "concluded",
+    blank: "It was ___ that automated scripts optimize files.",
+    options: ["concluded", "conclusion", "conclusive", "conclude"],
+    blocks: ["It was concluded", "that automated scripts", "optimize files."]
+  },
+  {
+    en: "It has been verified that unconstitutional laws mutate.",
+    tr: "Anayasaya aykırı yasaların değişime uğradığı doğrulanmıştır.",
+    word: "verified",
+    trWord: "doğrulanmış",
+    correct: "verified",
+    blank: "It has been ___ that unconstitutional laws mutate.",
+    options: ["verified", "verification", "verifiable", "verify"],
+    blocks: ["It has been verified", "that unconstitutional", "laws mutate."]
+  },
+  {
+    en: "It should be recognized that specific indicators decline.",
+    tr: "Belirli göstergelerin düştüğü kabul edilmelidir.",
+    word: "recognized",
+    trWord: "kabul edilmiş, tanınmış",
+    correct: "recognized",
+    blank: "It should be ___ that specific indicators decline.",
+    options: ["recognized", "recognition", "recognizably", "recognize"],
+    blocks: ["It should be recognized", "that specific", "indicators decline."]
+  },
+  {
+    en: "It was discovered that raw components decay.",
+    tr: "Ham bileşenlerin çürüdüğü keşfedilmişti.",
+    word: "discovered",
+    trWord: "keşfedilmiş",
+    correct: "discovered",
+    blank: "It was ___ that raw components decay.",
+    options: ["discovered", "discovery", "discovering", "discover"],
+    blocks: ["It was discovered", "that raw", "components decay."]
+  },
+  {
+    en: "It is anticipated that subsequent metrics will rise.",
+    tr: "Sonraki metriklerin yükseleceği beklenmektedir.",
+    word: "anticipated",
+    trWord: "beklenen, umulan",
+    correct: "anticipated",
+    blank: "It is ___ that subsequent metrics will rise.",
+    options: ["anticipated", "anticipation", "anticipatory", "anticipate"],
+    blocks: ["It is anticipated", "that subsequent", "metrics will rise."]
+  },
+  {
+    en: "It had been argued that contradictory codes conflict.",
+    tr: "Çelişkili kodların çakıştığı iddia edilmişti.",
+    word: "argued",
+    trWord: "iddia edilmiş, tartışılmış",
+    correct: "argued",
+    blank: "It had been ___ that contradictory codes conflict.",
+    options: ["argued", "argument", "arguable", "argue"],
+    blocks: ["It had been argued", "that contradictory", "codes conflict."]
+  }
+];
+
+const unit26Lesson1Group2Raw = [
+  {
+    en: "It is apparent that the constituent variables change.",
+    tr: "Bileşen değişkenlerin değiştiği açıktır.",
+    word: "constituent",
+    trWord: "bileşen, kurucu",
+    correct: "constituent",
+    blank: "It is apparent that the ___ variables change.",
+    options: ["constituent", "constitute", "constituency", "constitution"],
+    blocks: ["It is apparent", "that the constituent", "variables change."]
+  },
+  {
+    en: "It has been hypothesized that linguistic output evolves.",
+    tr: "Dilsel çıktının evrildiği hipotezi öne sürülmüştür.",
+    word: "linguistic",
+    trWord: "dilsel",
+    correct: "linguistic",
+    blank: "It has been hypothesized that ___ output evolves.",
+    options: ["linguistic", "linguistics", "linguist", "lingo"],
+    blocks: ["It has been hypothesized", "that linguistic", "output evolves."]
+  },
+  {
+    en: "It was evident that the data format shifted.",
+    tr: "Veri formatının değiştiği belliydi.",
+    word: "shifted",
+    trWord: "değişti, kaydı",
+    correct: "shifted",
+    blank: "It was evident that the data format ___.",
+    options: ["shifted", "shift", "shifting", "shifter"],
+    blocks: ["It was evident", "that the data", "format shifted."]
+  },
+  {
+    en: "It must be acknowledged that the parameterized matrix expands.",
+    tr: "Parametrelendirilmiş matrisin genişlediği kabul edilmelidir.",
+    word: "expands",
+    trWord: "genişler",
+    correct: "expands",
+    blank: "It must be acknowledged that the parameterized matrix ___.",
+    options: ["expands", "expansion", "expansive", "expand"],
+    blocks: ["It must be acknowledged", "that the parameterized", "matrix expands."]
+  },
+  {
+    en: "It should be assumed that the draft clauses vary.",
+    tr: "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır.",
+    word: "draft",
+    trWord: "taslak",
+    correct: "draft",
+    blank: "It should be assumed that the ___ clauses vary.",
+    options: ["draft", "drafting", "drafted", "drafts"],
+    blocks: ["It should be assumed", "that the draft", "clauses vary."]
+  },
+  {
+    en: "It is predicted that alternative regimes will collapse.",
+    tr: "Alternatif rejimlerin çökeceği öngörülmektedir.",
+    word: "alternative",
+    trWord: "alternatif",
+    correct: "alternative",
+    blank: "It is predicted that ___ regimes will collapse.",
+    options: ["alternative", "alternatively", "alternate", "alteration"],
+    blocks: ["It is predicted", "that alternative", "regimes will collapse."]
+  },
+  {
+    en: "It had been established that chemical innovations transform structures.",
+    tr: "Kimyasal yeniliklerin yapıları dönüştürdüğü saptanmıştı.",
+    word: "transform",
+    trWord: "dönüştürür",
+    correct: "transform",
+    blank: "It had been established that chemical innovations ___ structures.",
+    options: ["transform", "transformation", "transformer", "transforming"],
+    blocks: ["It had been established", "that chemical innovations", "transform structures."]
+  },
+  {
+    en: "It is estimated that arbitrary criteria induce errors.",
+    tr: "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir.",
+    word: "arbitrary",
+    trWord: "keyfi",
+    correct: "arbitrary",
+    blank: "It is estimated that ___ criteria induce errors.",
+    options: ["arbitrary", "arbitrarily", "arbitrate", "arbitration"],
+    blocks: ["It is estimated", "that arbitrary criteria", "induce errors."]
+  },
+  {
+    en: "It must be remembered that unstable frameworks fail.",
+    tr: "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
+    word: "unstable",
+    trWord: "kararsız",
+    correct: "unstable",
+    blank: "It must be remembered that ___ frameworks fail.",
+    options: ["unstable", "stability", "stabilize", "stably"],
+    blocks: ["It must be remembered", "that unstable", "frameworks fail."]
+  },
+  {
+    en: "It was concluded that automated scripts optimize files.",
+    tr: "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı.",
+    word: "optimize",
+    trWord: "optimize eder",
+    correct: "optimize",
+    blank: "It was concluded that automated scripts ___ files.",
+    options: ["optimize", "optimization", "optimum", "optimized"],
+    blocks: ["It was concluded", "that automated scripts", "optimize files."]
+  },
+  {
+    en: "It has been verified that unconstitutional laws mutate.",
+    tr: "Anayasaya aykırı yasaların değişime uğradığı doğrulanmıştır.",
+    word: "unconstitutional",
+    trWord: "anayasaya aykırı",
+    correct: "unconstitutional",
+    blank: "It has been verified that ___ laws mutate.",
+    options: ["unconstitutional", "constitution", "constitutional", "constitute"],
+    blocks: ["It has been verified", "that unconstitutional", "laws mutate."]
+  },
+  {
+    en: "It should be recognized that specific indicators decline.",
+    tr: "Belirli göstergelerin düştüğü kabul edilmelidir.",
+    word: "indicators",
+    trWord: "göstergeler",
+    correct: "indicators",
+    blank: "It should be recognized that specific ___ decline.",
+    options: ["indicators", "indicate", "indication", "indicative"],
+    blocks: ["It should be recognized", "that specific", "indicators decline."]
+  },
+  {
+    en: "It was discovered that raw components decay.",
+    tr: "Ham bileşenlerin çürüdüğü keşfedilmişti.",
+    word: "raw",
+    trWord: "ham",
+    correct: "raw",
+    blank: "It was discovered that ___ components decay.",
+    options: ["raw", "rawly", "rawness", "rare"],
+    blocks: ["It was discovered", "that raw", "components decay."]
+  },
+  {
+    en: "It is anticipated that subsequent metrics will rise.",
+    tr: "Sonraki metriklerin yükseleceği beklenmektedir.",
+    word: "subsequent",
+    trWord: "sonraki",
+    correct: "subsequent",
+    blank: "It is anticipated that ___ metrics will rise.",
+    options: ["subsequent", "subsequently", "sequence", "sequentially"],
+    blocks: ["It is anticipated", "that subsequent", "metrics will rise."]
+  },
+  {
+    en: "It had been argued that contradictory codes conflict.",
+    tr: "Çelişkili kodların çakıştığı iddia edilmişti.",
+    word: "contradictory",
+    trWord: "çelişkili",
+    correct: "contradictory",
+    blank: "It had been argued that ___ codes conflict.",
+    options: ["contradictory", "contradict", "contradiction", "contradicted"],
+    blocks: ["It had been argued", "that contradictory", "codes conflict."]
+  }
+];
+
+const unit26Lesson1Group3Raw = [
+  {
+    en: "It is apparent that the constituent variables change during the test phase, so developers must monitor lines closely.",
+    tr: "Bileşen değişkenlerin test aşamasında değiştiği açıktır, bu nedenle geliştiriciler satırları yakından izlemelidir.",
+    word: "monitor",
+    trWord: "izlemek",
+    correct: "monitor",
+    blank: "It is apparent that the constituent variables change during the test phase, so developers must ___ lines closely.",
+    options: ["monitor", "monitored", "monitoring", "monitors"],
+    blocks: ["It is apparent that", "the constituent variables change", "during the test phase,", "so developers must monitor", "lines closely."]
+  },
+  {
+    en: "It has been hypothesized that linguistic output evolves smoothly over time now that gamified tools are used in classrooms.",
+    tr: "Sınıflarda oyunlaştırılmış araçlar kullanıldığı için dilsel çıktının zamanla sorunsuz bir şekilde evrildiği hipotezi öne sürülmüştür.",
+    word: "smoothly",
+    trWord: "sorunsuz bir şekilde",
+    correct: "smoothly",
+    blank: "It has been hypothesized that linguistic output evolves ___ over time now that gamified tools are used in classrooms.",
+    options: ["smoothly", "smooth", "smoothness", "smoothing"],
+    blocks: ["It has been hypothesized that", "linguistic output evolves smoothly", "over time now that", "gamified tools are used", "in classrooms."]
+  },
+  {
+    en: "It was evident that the data format shifted before the migration ended, which triggered an immediate override flag.",
+    tr: "Veri göçü sona ermeden önce veri formatının değiştiği belliydi, bu durum anında bir geçersiz kılma bayrağını tetikledi.",
+    word: "triggered",
+    trWord: "tetikledi",
+    correct: "triggered",
+    blank: "It was evident that the data format shifted before the migration ended, which ___ an immediate override flag.",
+    options: ["triggered", "trigger", "triggering", "triggers"],
+    blocks: ["It was evident that", "the data format shifted", "before the migration ended,", "which triggered an immediate", "override flag."]
+  },
+  {
+    en: "It must be acknowledged that the parameterized matrix expands under pressure unless the filter units activate cleanly.",
+    tr: "Filtre üniteleri temiz bir şekilde etkinleşmedikçe parametrelendirilmiş matrisin basınç altında genişlediği kabul edilmelidir.",
+    word: "activate",
+    trWord: "etkinleşmek",
+    correct: "activate",
+    blank: "It must be acknowledged that the parameterized matrix expands under pressure unless the filter units ___ cleanly.",
+    options: ["activate", "activation", "active", "actively"],
+    blocks: ["It must be acknowledged that", "the parameterized matrix expands", "under pressure unless", "the filter units activate", "cleanly."]
+  },
+  {
+    en: "It should be assumed that the draft clauses vary based on new evidence since the assembly demanded an immediate revision.",
+    tr: "Meclis acil bir revizyon talep ettiğinden beri taslak maddelerin yeni kanıtlara dayanarak değişiklik gösterdiği varsayılmalıdır.",
+    word: "revision",
+    trWord: "revizyon",
+    correct: "revision",
+    blank: "It should be assumed that the draft clauses vary based on new evidence since the assembly demanded an immediate ___.",
+    options: ["revision", "revise", "revised", "revising"],
+    blocks: ["It should be assumed that", "the draft clauses vary", "based on new evidence", "since the assembly demanded", "an immediate revision."]
+  },
+  {
+    en: "It is predicted that alternative regimes will collapse if inflation increases because central banks fail to regulate values.",
+    tr: "Merkez bankaları değerleri düzenleyemediği için enflasyon artarsa alternatif rejimlerin çökeceği öngörülmektedir.",
+    word: "regulate",
+    trWord: "düzenlemek",
+    correct: "regulate",
+    blank: "It is predicted that alternative regimes will collapse if inflation increases because central banks fail to ___ values.",
+    options: ["regulate", "regulation", "regulatory", "regulated"],
+    blocks: ["It is predicted that", "alternative regimes will collapse", "if inflation increases", "because central banks fail", "to regulate values."]
+  },
+  {
+    en: "It had been established that chemical innovations transform organic structures long before the project timeline was modified.",
+    tr: "Proje zaman çizelgesi değiştirilmeden çok önce kimyasal yeniliklerin organik yapıları dönüştürdüğü saptanmıştı.",
+    word: "modified",
+    trWord: "değiştirildi",
+    correct: "modified",
+    blank: "It had been established that chemical innovations transform organic structures long before the project timeline was ___.",
+    options: ["modified", "modify", "modification", "modifying"],
+    blocks: ["It had been established that", "chemical innovations transform", "organic structures long before", "the project timeline", "was modified."]
+  },
+  {
+    en: "It is estimated that arbitrary criteria induce analytical errors whenever the database runs an loose query loop.",
+    tr: "Veri tabanı gevşek bir sorgu döngüsü çalıştırdığında keyfi kriterlerin analitik hatalara yol açtığı tahmin edilmektedir.",
+    word: "analytical",
+    trWord: "analitik",
+    correct: "analytical",
+    blank: "It is estimated that arbitrary criteria induce ___ errors whenever the database runs an loose query loop.",
+    options: ["analytical", "analysis", "analyst", "analytically"],
+    blocks: ["It is estimated that", "arbitrary criteria induce", "analytical errors whenever", "the database runs", "an loose query loop."]
+  },
+  {
+    en: "It must be remembered that unstable frameworks fail during stress tests lest the platform should suffer cache crashes.",
+    tr: "Platform önbellek çökmeleri yaşamasın diye kararsız çerçevelerin stres testleri sırasında başarısız olduğu unutulmamalıdır.",
+    word: "suffer",
+    trWord: "maruz kalmak, yaşamak",
+    correct: "suffer",
+    blank: "It must be remembered that unstable frameworks fail during stress tests lest the platform should ___ cache crashes.",
+    options: ["suffer", "suffering", "suffered", "suffers"],
+    blocks: ["It must be remembered that", "unstable frameworks fail", "during stress tests lest", "the platform should suffer", "cache crashes."]
+  },
+  {
+    en: "It was concluded that automated scripts optimize runtime latency just as the statistical compiler metrics predicted.",
+    tr: "İstatistiksel derleyici metriklerinin öngördüğü gibi otomatikleştirilmiş kodların çalışma süresi gecikmesini optimize ettiği sonucuna varılmıştı.",
+    word: "latency",
+    trWord: "gecikme",
+    correct: "latency",
+    blank: "It was concluded that automated scripts optimize runtime ___ just as the statistical compiler metrics predicted.",
+    options: ["latency", "latent", "late", "lately"],
+    blocks: ["It was concluded that", "automated scripts optimize", "runtime latency just as", "the statistical compiler", "metrics predicted."]
+  },
+  {
+    en: "It has been verified that unconstitutional laws mutate local governance seeing that municipal budgets dropped significantly.",
+    tr: "Belediye bütçelerinin önemli ölçüde düştüğü göz önüne alındığında, anayasaya aykırı yasaların yerel yönetimi değiştirdiği doğrulanmıştır.",
+    word: "significantly",
+    trWord: "önemli ölçüde",
+    correct: "significantly",
+    blank: "It has been verified that unconstitutional laws mutate local governance seeing that municipal budgets dropped ___.",
+    options: ["significantly", "significant", "significance", "signify"],
+    blocks: ["It has been verified that", "unconstitutional laws mutate", "local governance seeing that", "municipal budgets dropped", "significantly."]
+  },
+  {
+    en: "It should be recognized that specific indicators decline without modern resins although field crews work intensely.",
+    tr: "Saha ekipleri yoğun çalışmasına rağmen modern reçineler olmadan belirli göstergelerin düştüğü kabul edilmelidir.",
+    word: "intensely",
+    trWord: "yoğun bir şekilde",
+    correct: "intensely",
+    blank: "It should be recognized that specific indicators decline without modern resins although field crews work ___.",
+    options: ["intensely", "intense", "intensity", "intensify"],
+    blocks: ["It should be recognized that", "specific indicators decline", "without modern resins", "although field crews", "work intensely."]
+  },
+  {
+    en: "It was discovered that raw components decay inside the humid chamber before the technical team isolated the container.",
+    tr: "Teknik ekip konteyneri izole etmeden önce ham bileşenlerin nemli oda içinde çürüdüğü keşfedilmişti.",
+    word: "humid",
+    trWord: "nemli",
+    correct: "humid",
+    blank: "It was discovered that raw components decay inside the ___ chamber before the technical team isolated the container.",
+    options: ["humid", "humidity", "humidifier", "humidly"],
+    blocks: ["It was discovered that", "raw components decay", "inside the humid chamber", "before the technical team", "isolated the container."]
+  },
+  {
+    en: "It is anticipated that subsequent metrics will rise next quarter once the trading committee reads the compliance code.",
+    tr: "Ticaret komitesi uyumluluk kodunu okuduğunda sonraki çeyrekte metriklerin yükseleceği beklenmektedir.",
+    word: "compliance",
+    trWord: "uyumluluk",
+    correct: "compliance",
+    blank: "It is anticipated that subsequent metrics will rise next quarter once the trading committee reads the ___ code.",
+    options: ["compliance", "compliant", "comply", "complying"],
+    blocks: ["It is anticipated that", "subsequent metrics will rise", "next quarter once", "the trading committee reads", "the compliance code."]
+  },
+  {
+    en: "It had been argued that contradictory codes conflict with system security until the primary software patch was deployed.",
+    tr: "Birincil yazılım yaması dağıtılana kadar çelişkili kodların sistem güvenliği ile çakıştığı iddia edilmişti.",
+    word: "security",
+    trWord: "güvenlik",
+    correct: "security",
+    blank: "It had been argued that contradictory codes conflict with system ___ until the primary software patch was deployed.",
+    options: ["security", "secure", "securely", "securing"],
+    blocks: ["It had been argued that", "contradictory codes conflict", "with system security", "until the primary software", "patch was deployed."]
+  }
+];
+
+const unit26Lesson2Group1Raw = [
+  {
+    en: "It is easy to assume that constituents expand.",
+    tr: "Bileşenlerin genişlediğini varsaymak kolaydır.",
+    word: "assume",
+    trWord: "varsaymak",
+    correct: "assume",
+    blank: "It is easy to ___ that constituents expand.",
+    options: ["assume", "assumption", "assumed", "assuming"],
+    blocks: ["It is easy to", "assume that", "constituents expand."]
+  },
+  {
+    en: "It was difficult to interpret that the draft varied.",
+    tr: "Taslağın değiştiğini yorumlamak zordu.",
+    word: "interpret",
+    trWord: "yorumlamak",
+    correct: "interpret",
+    blank: "It was difficult to ___ that the draft varied.",
+    options: ["interpret", "interpretation", "interpreting", "interpreted"],
+    blocks: ["It was difficult to", "interpret that", "the draft varied."]
+  },
+  {
+    en: "It must be rewarding to achieve that output optimizes.",
+    tr: "Çıktının optimize olduğunu elde etmek ödüllendirici olmalı.",
+    word: "achieve",
+    trWord: "elde etmek, başarmak",
+    correct: "achieve",
+    blank: "It must be rewarding to ___ that output optimizes.",
+    options: ["achieve", "achievement", "achieving", "achieved"],
+    blocks: ["It must be rewarding to", "achieve that", "output optimizes."]
+  },
+  {
+    en: "It should be simple to demonstrate that variables interact.",
+    tr: "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
+    word: "demonstrate",
+    trWord: "göstermek, kanıtlamak",
+    correct: "demonstrate",
+    blank: "It should be simple to ___ that variables interact.",
+    options: ["demonstrate", "demonstrated", "demonstration", "demonstrative"],
+    blocks: ["It should be simple to", "demonstrate that", "variables interact."]
+  },
+  {
+    en: "It is critical to ensure that compliance laws validate.",
+    tr: "Uyumluluk yasalarının doğruladığından emin olmak kritik önem taşır.",
+    word: "ensure",
+    trWord: "emin olmak, garanti etmek",
+    correct: "ensure",
+    blank: "It is critical to ___ that compliance laws validate.",
+    options: ["ensure", "ensured", "ensuring", "ensures"],
+    blocks: ["It is critical to", "ensure that", "compliance laws validate."]
+  },
+  {
+    en: "It was reassuring to confirm that firewalls block.",
+    tr: "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
+    word: "confirm",
+    trWord: "doğrulamak",
+    correct: "confirm",
+    blank: "It was reassuring to ___ that firewalls block.",
+    options: ["confirm", "confirmation", "confirmed", "confirming"],
+    blocks: ["It was reassuring to", "confirm that", "firewalls block."]
+  },
+  {
+    en: "It might be hard to perceive that data degrades.",
+    tr: "Verilerin bozulduğunu algılamak zor olabilir.",
+    word: "perceive",
+    trWord: "algılamak",
+    correct: "perceive",
+    blank: "It might be hard to ___ that data degrades.",
+    options: ["perceive", "perception", "perceived", "perceiving"],
+    blocks: ["It might be hard to", "perceive that", "data degrades."]
+  },
+  {
+    en: "It is necessary to redefine that parameters change.",
+    tr: "Parametrelerin değiştiğini yeniden tanımlamak gerekir.",
+    word: "redefine",
+    trWord: "yeniden tanımlamak",
+    correct: "redefine",
+    blank: "It is necessary to ___ that parameters change.",
+    options: ["redefine", "redefinition", "redefined", "redefining"],
+    blocks: ["It is necessary to", "redefine that", "parameters change."]
+  },
+  {
+    en: "It was legal to specify that firms reallocate.",
+    tr: "Firmaların yeniden tahsisat yaptığını belirtmek yasalara uygundu.",
+    word: "specify",
+    trWord: "belirtmek",
+    correct: "specify",
+    blank: "It was legal to ___ that firms reallocate.",
+    options: ["specify", "specification", "specified", "specifying"],
+    blocks: ["It was legal to", "specify that", "firms reallocate."]
+  },
+  {
+    en: "It will be mandatory to enforce that factories reduce.",
+    tr: "Fabrikaların azalttığını uygulamak zorunlu olacaktır.",
+    word: "enforce",
+    trWord: "uygulamak",
+    correct: "enforce",
+    blank: "It will be mandatory to enforce that factories reduce.",
+    options: ["enforce", "enforcement", "enforced", "enforcing"],
+    blocks: ["It will be mandatory to", "enforce that", "factories reduce."]
+  },
+  {
+    en: "It is helpful to clarify that algorithms run.",
+    tr: "Algoritmaların çalıştığını netleştirmek faydalıdır.",
+    word: "clarify",
+    trWord: "netleştirmek",
+    correct: "clarify",
+    blank: "It is helpful to ___ that algorithms run.",
+    options: ["clarify", "clarification", "clarifying", "clarified"],
+    blocks: ["It is helpful to", "clarify that", "algorithms run."]
+  },
+  {
+    en: "It was problematic to imply that structures fail.",
+    tr: "Yapıların başarısız olduğunu ima etmek sorunluydu.",
+    word: "imply",
+    trWord: "ima etmek",
+    correct: "imply",
+    blank: "It was problematic to ___ that structures fail.",
+    options: ["imply", "implication", "implied", "implying"],
+    blocks: ["It was problematic to", "imply that", "structures fail."]
+  },
+  {
+    en: "It must be safe to assume that servers clone.",
+    tr: "Sunucuların klonladığını varsaymak güvenli olmalı.",
+    word: "assume",
+    trWord: "varsaymak",
+    correct: "assume",
+    blank: "It must be safe to ___ that servers clone.",
+    options: ["assume", "assumption", "assumed", "assuming"],
+    blocks: ["It must be safe to", "assume that", "servers clone."]
+  },
+  {
+    en: "It should be interesting to observe that cells divide.",
+    tr: "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
+    word: "observe",
+    trWord: "gözlemlemek",
+    correct: "observe",
+    blank: "It should be interesting to ___ that cells divide.",
+    options: ["observe", "observation", "observing", "observed"],
+    blocks: ["It should be interesting to", "observe that", "cells divide."]
+  },
+  {
+    en: "It is urgent to report that systems override.",
+    tr: "Sistemlerin geçersiz kıldığını bildirmek acildir.",
+    word: "report",
+    trWord: "bildirmek",
+    correct: "report",
+    blank: "It is urgent to ___ that systems override.",
+    options: ["report", "reported", "reporting", "reports"],
+    blocks: ["It is urgent to", "report that", "systems override."]
+  }
+];
+
+const unit26Lesson2Group2Raw = [
+  {
+    en: "It is easy to assume that constituents expand.",
+    tr: "Bileşenlerin genişlediğini varsaymak kolaydır.",
+    word: "constituents",
+    trWord: "bileşenler",
+    correct: "constituents",
+    blank: "It is easy to assume that ___ expand.",
+    options: ["constituents", "constituent", "constitute", "constitution"],
+    blocks: ["It is easy to", "assume that", "constituents expand."]
+  },
+  {
+    en: "It was difficult to interpret that the draft varied.",
+    tr: "Taslağın değiştiğini yorumlamak zordu.",
+    word: "varied",
+    trWord: "değişti",
+    correct: "varied",
+    blank: "It was difficult to interpret that the draft ___.",
+    options: ["varied", "vary", "varying", "varies"],
+    blocks: ["It was difficult to", "interpret that", "the draft varied."]
+  },
+  {
+    en: "It must be rewarding to achieve that output optimizes.",
+    tr: "Çıktının optimize olduğunu elde etmek ödüllendirici olmalı.",
+    word: "optimizes",
+    trWord: "optimize olur",
+    correct: "optimizes",
+    blank: "It must be rewarding to achieve that output ___.",
+    options: ["optimizes", "optimization", "optimum", "optimizing"],
+    blocks: ["It must be rewarding to", "achieve that", "output optimizes."]
+  },
+  {
+    en: "It should be simple to demonstrate that variables interact.",
+    tr: "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
+    word: "variables",
+    trWord: "değişkenler",
+    correct: "variables",
+    blank: "It should be simple to demonstrate that ___ interact.",
+    options: ["variables", "variable", "vary", "variation"],
+    blocks: ["It should be simple to", "demonstrate that", "variables interact."]
+  },
+  {
+    en: "It is critical to ensure that compliance laws validate.",
+    tr: "Uyumluluk yasalarının doğruladığından emin olmak kritik önem taşır.",
+    word: "validate",
+    trWord: "doğrular, geçerli kılar",
+    correct: "validate",
+    blank: "It is critical to ensure that compliance laws ___.",
+    options: ["validate", "validation", "validity", "validating"],
+    blocks: ["It is critical to", "ensure that", "compliance laws validate."]
+  },
+  {
+    en: "It was reassuring to confirm that firewalls block.",
+    tr: "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
+    word: "firewalls",
+    trWord: "güvenlik duvarları",
+    correct: "firewalls",
+    blank: "It was reassuring to confirm that ___ block.",
+    options: ["firewalls", "firewall", "fire", "walls"],
+    blocks: ["It was reassuring to", "confirm that", "firewalls block."]
+  },
+  {
+    en: "It might be hard to perceive that data degrades.",
+    tr: "Verilerin bozulduğunu algılamak zor olabilir.",
+    word: "degrades",
+    trWord: "bozulur",
+    correct: "degrades",
+    blank: "It might be hard to perceive that data ___.",
+    options: ["degrades", "degradation", "degraded", "degrading"],
+    blocks: ["It might be hard to", "perceive that", "data degrades."]
+  },
+  {
+    en: "It is necessary to redefine that parameters change.",
+    tr: "Parametrelerin değiştiğini yeniden tanımlamak gerekir.",
+    word: "parameters",
+    trWord: "parametreler",
+    correct: "parameters",
+    blank: "It is necessary to redefine that ___ change.",
+    options: ["parameters", "parameter", "parametric", "parametrizing"],
+    blocks: ["It is necessary to", "redefine that", "parameters change."]
+  },
+  {
+    en: "It was legal to specify that firms reallocate.",
+    tr: "Firmaların yeniden tahsisat yaptığını belirtmek yasalara uygundu.",
+    word: "reallocate",
+    trWord: "yeniden tahsisat yaptığını",
+    correct: "reallocate",
+    blank: "It was legal to specify that firms ___.",
+    options: ["reallocate", "reallocation", "reallocated", "reallocating"],
+    blocks: ["It was legal to", "specify that", "firms reallocate."]
+  },
+  {
+    en: "It will be mandatory to enforce that factories reduce.",
+    tr: "Fabrikaların azalttığını uygulamak zorunlu olacaktır.",
+    word: "reduce",
+    trWord: "azalttığını",
+    correct: "reduce",
+    blank: "It will be mandatory to enforce that factories ___.",
+    options: ["reduce", "reduction", "reduced", "reducing"],
+    blocks: ["It will be mandatory to", "enforce that", "factories reduce."]
+  },
+  {
+    en: "It is helpful to clarify that algorithms run.",
+    tr: "Algoritmaların çalıştığını netleştirmek faydalıdır.",
+    word: "algorithms",
+    trWord: "algoritmalar",
+    correct: "algorithms",
+    blank: "It is helpful to clarify that ___ run.",
+    options: ["algorithms", "algorithm", "algorithmic", "algorithmically"],
+    blocks: ["It is helpful to", "clarify that", "algorithms run."]
+  },
+  {
+    en: "It was problematic to imply that structures fail.",
+    tr: "Yapıların başarısız olduğunu ima etmek sorunluydu.",
+    word: "structures",
+    trWord: "yapılar",
+    correct: "structures",
+    blank: "It was problematic to imply that ___ fail.",
+    options: ["structures", "structure", "structural", "structuring"],
+    blocks: ["It was problematic to", "imply that", "structures fail."]
+  },
+  {
+    en: "It must be safe to assume that servers clone.",
+    tr: "Sunucuların klonladığını varsaymak güvenli olmalı.",
+    word: "clone",
+    trWord: "klonlar, kopyalar",
+    correct: "clone",
+    blank: "It must be safe to assume that servers ___.",
+    options: ["clone", "cloning", "cloned", "clones"],
+    blocks: ["It must be safe to", "assume that", "servers clone."]
+  },
+  {
+    en: "It should be interesting to observe that cells divide.",
+    tr: "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
+    word: "cells",
+    trWord: "hücreler",
+    correct: "cells",
+    blank: "It should be interesting to observe that ___ divide.",
+    options: ["cells", "cell", "cellular", "celled"],
+    blocks: ["It should be interesting to", "observe that", "cells divide."]
+  },
+  {
+    en: "It is urgent to report that systems override.",
+    tr: "Sistemlerin geçersiz kıldığını bildirmek acildir.",
+    word: "override",
+    trWord: "geçersiz kılmak",
+    correct: "override",
+    blank: "It is urgent to report that systems ___.",
+    options: ["override", "overridden", "overriding", "overrides"],
+    blocks: ["It is urgent to", "report that", "systems override."]
+  }
+];
+
+const unit26Lesson2Group3Raw = [
+  {
+    en: "It is easy to assume that constituent elements expand during compilation while the network handles baseline operations.",
+    tr: "Ağ temel işlemleri yürütürken derleme sırasında bileşen unsurların genişlediğini varsaymak kolaydır.",
+    word: "elements",
+    trWord: "unsurlar, elemanlar",
+    correct: "elements",
+    blank: "It is easy to assume that constituent ___ expand during compilation while the network handles baseline operations.",
+    options: ["elements", "elemental", "elementary", "element"],
+    blocks: ["It is easy to assume that", "constituent elements expand", "during compilation while", "the network handles", "baseline operations."]
+  },
+  {
+    en: "It was difficult to interpret that the draft clauses varied significantly before the legal architect analyzed the text.",
+    tr: "Hukuk mimarı metni analiz etmeden önce taslak maddelerin önemli ölçüde değişiklik gösterdiğini yorumlamak zordu.",
+    word: "clauses",
+    trWord: "maddeler, fıkralar",
+    correct: "clauses",
+    blank: "It was difficult to interpret that the draft ___ varied significantly before the legal architect analyzed the text.",
+    options: ["clauses", "clause", "clausal", "claused"],
+    blocks: ["It was difficult to interpret that", "the draft clauses varied", "significantly before the", "legal architect analyzed", "the text."]
+  },
+  {
+    en: "It must be rewarding to achieve that software output optimizes runtime latency as soon as the unit tests end.",
+    tr: "Birim testleri biter bitmez yazılım çıktısının çalışma süresi gecikmesini optimize ettiğini görmek ödüllendirici olmalı.",
+    word: "optimizes",
+    trWord: "optimize ettiği",
+    correct: "optimizes",
+    blank: "It must be rewarding to achieve that software output ___ runtime latency as soon as the unit tests end.",
+    options: ["optimizes", "optimization", "optimum", "optimizing"],
+    blocks: ["It must be rewarding to achieve that", "software output optimizes", "runtime latency as soon", "as the unit tests", "end."]
+  },
+  {
+    en: "It should be simple to demonstrate that variables interact under normal loads just as the physics concept predicts.",
+    tr: "Değişkenlerin fizik kavramının öngördüğü gibi normal yükler altında etkileşime girdiğini göstermek basit olmalı.",
+    word: "interact",
+    trWord: "etkileşime girdiğini",
+    correct: "interact",
+    blank: "It should be simple to demonstrate that variables ___ under normal loads just as the physics concept predicts.",
+    options: ["interact", "interaction", "interactive", "interacting"],
+    blocks: ["It should be simple to demonstrate that", "variables interact under", "normal loads just as", "the physics concept", "predicts."]
+  },
+  {
+    en: "It is critical to ensure that compliance laws validate database transactions lest anonymous scripts should breach records.",
+    tr: "Anonim kodlar kayıtları ihlal etmesin diye uyumluluk yasalarının veri tabanı işlemlerini doğruladığından emin olmak kritik önem taşır.",
+    word: "validate",
+    trWord: "doğruladığından",
+    correct: "validate",
+    blank: "It is critical to ensure that compliance laws ___ database transactions lest anonymous scripts should breach records.",
+    options: ["validate", "validation", "validity", "validating"],
+    blocks: ["It is critical to ensure that", "compliance laws validate", "database transactions lest", "anonymous scripts should", "breach records."]
+  },
+  {
+    en: "It was reassuring to confirm that automated firewalls block unauthenticated traffic whenever a query loop executes.",
+    tr: "Bir sorgu döngüsü çalıştığında otomatik güvenlik duvarlarının kimliği doğrulanmamış trafiği engellediğini doğrulamak rahatlatıcıydı.",
+    word: "unauthenticated",
+    trWord: "kimliği doğrulanmamış",
+    correct: "unauthenticated",
+    blank: "It was reassuring to confirm that automated firewalls block ___ traffic whenever a query loop executes.",
+    options: ["unauthenticated", "authenticated", "authentication", "authenticity"],
+    blocks: ["It was reassuring to confirm that", "automated firewalls block", "unauthenticated traffic whenever", "a query loop", "executes."]
+  },
+  {
+    en: "It might be hard to perceive that historical data degrades over centuries due to extensive ink and paper degradation.",
+    tr: "Yoğun mürekkep ve kağıt bozulması nedeniyle tarihi verilerin yüzyıllar boyunca bozulduğunu algılamak zor olabilir.",
+    word: "degrades",
+    trWord: "bozulduğunu",
+    correct: "degrades",
+    blank: "It might be hard to perceive that historical data ___ over centuries due to extensive ink and paper degradation.",
+    options: ["degrades", "degradation", "degraded", "degrading"],
+    blocks: ["It might be hard to perceive that", "historical data degrades", "over centuries due to", "extensive ink and", "paper degradation."]
+  },
+  {
+    en: "It is necessary to redefine that environmental parameters change rapidly since industrialized carbon metrics rose.",
+    tr: "Endüstrileşmiş karbon metrikleri yükseldiğinden beri çevresel parametrelerin hızla değiştiğini yeniden tanımlamak gerekir.",
+    word: "environmental",
+    trWord: "çevresel",
+    correct: "environmental",
+    blank: "It is necessary to redefine that ___ parameters change rapidly since industrialized carbon metrics rose.",
+    options: ["environmental", "environment", "environmentally", "environments"],
+    blocks: ["It is necessary to redefine that", "environmental parameters change", "rapidly since industrialized", "carbon metrics", "rose."]
+  },
+  {
+    en: "It was legal to specify that corporate entities reallocate office resources in order that cross-disciplinary groups could function.",
+    tr: "Disiplinler arası grupların çalışabilmesi için kurumsal yapıların ofis kaynaklarını yeniden tahsis ettiğini belirtmek yasalara uygundur.",
+    word: "reallocate",
+    trWord: "yeniden tahsis ettiğini",
+    correct: "reallocate",
+    blank: "It was legal to specify that corporate entities ___ office resources in order that cross-disciplinary groups could function.",
+    options: ["reallocate", "reallocation", "reallocated", "reallocating"],
+    blocks: ["It was legal to specify that", "corporate entities reallocate", "office resources in order that", "cross-disciplinary groups", "could function."]
+  },
+  {
+    en: "It will be mandatory to enforce that manufacturing factories reduce carbon emissions once the assembly passes the bill.",
+    tr: "Meclis yasayı geçirdiğinde üretim fabrikalarının karbon emisyonlarını azalttığını uygulamak zorunlu olacaktır.",
+    word: "manufacturing",
+    trWord: "üretim",
+    correct: "manufacturing",
+    blank: "It will be mandatory to enforce that ___ factories reduce carbon emissions once the assembly passes the bill.",
+    options: ["manufacturing", "manufacture", "manufacturer", "manufactured"],
+    blocks: ["It will be mandatory to enforce that", "manufacturing factories reduce", "carbon emissions once", "the assembly passes", "the bill."]
+  },
+  {
+    en: "It is helpful to clarify that advanced algorithms run queries seamlessly now that cloud memory slots are upgraded.",
+    tr: "Bulut bellek yuvaları yükseltildiği için gelişmiş algoritmaların sorguları sorunsuz bir şekilde çalıştırdığını netleştirmek faydalıdır.",
+    word: "seamlessly",
+    trWord: "sorunsuz bir şekilde",
+    correct: "seamlessly",
+    blank: "It is helpful to clarify that advanced algorithms run queries ___ now that cloud memory slots are upgraded.",
+    options: ["seamlessly", "seamless", "seam", "seaming"],
+    blocks: ["It is helpful to clarify that", "advanced algorithms run queries", "seamlessly now that", "cloud memory slots", "are upgraded."]
+  },
+  {
+    en: "It was problematic to imply that unreinforced structures fail seismic stress on grounds that the foundation grid cracked.",
+    tr: "Temel ızgarasının çatlaması gerekçesiyle güçlendirilmemiş yapıların sismik strese yenik düştüğünü ima etmek sorunluydu.",
+    word: "unreinforced",
+    trWord: "güçlendirilmemiş",
+    correct: "unreinforced",
+    blank: "It was problematic to imply that ___ structures fail seismic stress on grounds that the foundation grid cracked.",
+    options: ["unreinforced", "reinforced", "reinforcement", "reinforce"],
+    blocks: ["It was problematic to imply that", "unreinforced structures fail", "seismic stress on grounds that", "the foundation grid", "cracked."]
+  },
+  {
+    en: "It must be safe to assume that backup servers clone files instantly for fear that a device failure should happen.",
+    tr: "Cihaz arızası meydana gelebilir korkusuyla yedekleme sunucularının dosyaları anında kopyaladığını varsaymak güvenli olmalı.",
+    word: "instantly",
+    trWord: "anında",
+    correct: "instantly",
+    blank: "It must be safe to assume that backup servers clone files ___ for fear that a device failure should happen.",
+    options: ["instantly", "instant", "instance", "instances"],
+    blocks: ["It must be safe to assume that", "backup servers clone files", "instantly for fear that", "a device failure", "should happen."]
+  },
+  {
+    en: "It should be interesting to observe that organic cells divide inside the mixture although the laboratory fluid is sterile.",
+    tr: "Laboratuvar sıvısı steril olmasına rağmen karışımın içindeki organik hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
+    word: "sterile",
+    trWord: "steril",
+    correct: "sterile",
+    blank: "It should be interesting to observe that organic cells divide inside the mixture although the laboratory fluid is ___.",
+    options: ["sterile", "sterility", "sterilize", "sterilizing"],
+    blocks: ["It should be interesting to observe that", "organic cells divide inside", "the mixture although the", "laboratory fluid is", "sterile."]
+  },
+  {
+    en: "It is urgent to report that secondary systems override active entry tokens seeing that external client traces look malicious.",
+    tr: "Harici istemci izleri kötü niyetli göründüğü için ikincil sistemlerin aktif giriş belirteçlerini geçersiz kıldığını bildirmek acildir.",
+    word: "malicious",
+    trWord: "kötü niyetli",
+    correct: "malicious",
+    blank: "It is urgent to report that secondary systems override active entry tokens seeing that external client traces look ___.",
+    options: ["malicious", "malice", "maliciously", "malign"],
+    blocks: ["It is urgent to report that", "secondary systems override", "active entry tokens seeing that", "external client traces look", "malicious."]
+  }
+];
+
+function buildUnit26Lesson1Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc, hasMC) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // 10 Cloze questions
+    const clozeLimit = Math.min(10, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u\${unitId}l\${lessonId}_\${exId}_cloze_\${i}`, i % 2 === 0));
+    }
+
+    if (hasMC) {
+      // 5 MC questions
+      const mcLimit = Math.min(5, sorted.length);
+      for (let i = 0; i < mcLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildMCQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_mc_\${i}`, sorted));
+      }
+      
+      // 3 Word Bank questions
+      const wbLimit = Math.min(3, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 10) % sorted.length];
+        exList.push(buildWBQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_wb_\${i}`));
+      }
+    } else {
+      // No MC allowed (like in Exercise 3 with long commas sentences)
+      // 8 Word Bank questions
+      const wbLimit = Math.min(8, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildWBQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_wb_\${i}`));
+      }
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_tr_\${idx}`));
+
+    return {
+      id: `u\${unitId}l\${lessonId}\${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileExercise(unit26Lesson1Group1Raw, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "It is apparent that... gibi kişisiz giriş yapılarını tanıma ve tamamlama çalışmaları.", true),
+    compileExercise(unit26Lesson1Group2Raw, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde kişisiz kalıpların analizi.", true),
+    compileExercise(unit26Lesson1Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde Impersonal It kalıbının pekiştirilmesi.", false)
+  ];
+}
+
+function buildUnit26Lesson2Exercises(unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc, hasMC) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // 10 Cloze questions
+    const clozeLimit = Math.min(10, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u\${unitId}l\${lessonId}_\${exId}_cloze_\${i}`, i % 2 === 0));
+    }
+
+    if (hasMC) {
+      // 5 MC questions
+      const mcLimit = Math.min(5, sorted.length);
+      for (let i = 0; i < mcLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildMCQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_mc_\${i}`, sorted));
+      }
+      
+      // 3 Word Bank questions
+      const wbLimit = Math.min(3, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 10) % sorted.length];
+        exList.push(buildWBQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_wb_\${i}`));
+      }
+    } else {
+      // No MC allowed (like in Exercise 3 with long commas sentences)
+      // 8 Word Bank questions
+      const wbLimit = Math.min(8, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildWBQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_wb_\${i}`));
+      }
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u\${unitId}l\${lessonId}_\${exId}_tr_\${idx}`));
+
+    return {
+      id: `u\${unitId}l\${lessonId}\${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileExercise(unit26Lesson2Group1Raw, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "It is easy to assume that... gibi mastar ve bağlaçlı giriş kalıplarını kavrama çalışmaları.", true),
+    compileExercise(unit26Lesson2Group2Raw, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde mastarlı It kalıplarının analizi.", true),
+    compileExercise(unit26Lesson2Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde mastarlı It kalıbının pekiştirilmesi.", false)
+  ];
+}
+
+
 function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
   const qList = [];
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
@@ -13930,24 +15292,14 @@ const rawTopics = [
     title: "XXIII. It + to be + sıfat/past participle + that (Sayfa 251)",
     desc: "It is clear that..., It is believed that... gibi edilgen ve açıklayıcı cümle girişleri",
     icon: "🔌",
-    numLessons: 1,
+    numLessons: 2,
     formulas: [
-      { formula: "It + is + Adjective / Past Participle + that + Clause", example: "It is clear that the experiment was successful: Deneyin başarılı olduğu açıktır" }
+      { formula: "It + is/was/has been + Adjective/Past Participle + that + Clause", example: "It is apparent that the constituent variables change: Bileşen değişkenlerin değiştiği açıktır.", description: "Bu yapı, bir durumu, kanaati veya nesnel bir gerçeği vurgulamak için kullanılan kişisiz bir yapısal kalıptır (Impersonal Construction). that ifadesinden sonra tam bir cümle (S + V + O) gelir." },
+      { formula: "It + is/was + Adjective/Past Participle + to + Verb + that + Clause", example: "It is easy to assume that constituents expand: Bileşenlerin genişlediğini varsaymak kolaydır.", description: "Bu yapı, bir durumun veya eylemin zorluk, kolaylık, önem derecesini bir mastar (to V1) eylemi aracılığıyla that cümleciğine bağlar." }
     ],
     subtitles: [
-      "It + to be + sıfat/past participle + that (Sayfa 251)"
-    ]
-  },
-  {
-    title: "XXIV. It + to be + sıfat/past participle + mastar + that (Sayfa 254)",
-    desc: "It is useful to know that... gibi mastar takımlı açıklayıcı ve yönlendirici yapılar",
-    icon: "🛸",
-    numLessons: 1,
-    formulas: [
-      { formula: "It + is + Adjective + to + Verb + that + Clause", example: "It is useful to remember that the earth is round: Dünyanın yuvarlak olduğunu hatırlamak faydalıdır" }
-    ],
-    subtitles: [
-      "It + to be + sıfat/past participle + mastar + that (Sayfa 254)"
+      "It + to be / modal + Sıfat / Past Participle + that Modeli",
+      "It + to be / modal + Sıfat / Past Participle + Mastar (to V1) + that Modeli"
     ]
   },
   {
@@ -32122,12 +33474,10 @@ const unitSentencesMap = {
     4: { exercises: [] }
   },
   29: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit26Lesson1Exercises(29, 92) },
+    2: { exercises: buildUnit26Lesson2Exercises(29, 93) }
   },
   30: {
-    1: { exercises: [] }
-  },
-  31: {
     1: { exercises: [] }
   }
 };
