@@ -3448,12 +3448,26 @@ function renderQuestion() {
 
 // ── Çoktan Seçmeli ──────────────────────────────────────────
 function renderMultipleChoice(container, question) {
-  const promptHtml = question.prompt;
-  const isEngToTr = question.prompt.includes("Türkçe");
+  let promptHtml = question.prompt;
+  const isEngToTr = question.prompt.includes("Türkçe") || question.isEngToTr;
   
   let sentenceHtml = question.sentence || "";
+  if (isEngToTr) {
+    let enSent = question.enSentence;
+    if (!enSent && promptHtml.includes("<strong>")) {
+      const match = promptHtml.match(/<strong>["'\u201c\u201d]?([^<]+?)["'\u201c\u201d]?<\/strong>/);
+      if (match) {
+        enSent = match[1];
+      }
+    }
+    if (enSent) {
+      sentenceHtml = enSent;
+      promptHtml = "Cümlenin en uygun Türkçe karşılığını seçin:";
+    }
+  }
+
   if (isEngToTr && sentenceHtml) {
-    sentenceHtml = makeTextHoverable(sentenceHtml);
+    sentenceHtml = `"${makeTextHoverable(sentenceHtml)}"`;
   }
 
   const renderedOptions = question.options.map((opt, i) => {
