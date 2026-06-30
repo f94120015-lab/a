@@ -7,6 +7,7 @@ const wordDictionary = {
   "absorbing": "emme / emici",
   "absorbs": "emer / soğurur",
   "academic": "akademik",
+  "academics": "akademisyenler",
   "academy": "akademi",
   "accept": "kabul etmek",
   "accepted": "kabul etti",
@@ -35,6 +36,7 @@ const wordDictionary = {
   "action": "eylem / hareket / eylemi",
   "activate": "etkinleştirmek, aktive etmek",
   "active": "aktif",
+  "activities": "activities",
   "activity": "faaliyet",
   "adapt": "uyum sağlamak / adapte olmak",
   "adaptable": "uyarlanabilir / uyumlu",
@@ -45,8 +47,10 @@ const wordDictionary = {
   "adjust": "ayarlamak / düzenlemek",
   "adjusted": "ayarlanmış / ayarlandı",
   "adjusting": "ayarlama / ayarlayan",
+  "adjustments": "adjustments",
   "administration": "yönetim / idare",
   "administrative": "idari",
+  "administrator": "administrator",
   "adopting": "benimseme / benimseyen",
   "advanced": "ileri düzey",
   "advantageous": "avantajlı",
@@ -72,6 +76,7 @@ const wordDictionary = {
   "allocated": "tahsis edilmiş",
   "allocating": "tahsis etme / tahsis eden",
   "allocation": "tahsis / paylaştırma",
+  "allocations": "allocations",
   "allows": "sağlar / izin verir",
   "along": "boyunca",
   "also": "ayrıca / de",
@@ -84,6 +89,7 @@ const wordDictionary = {
   "although": "-e rağmen / karşın",
   "ambiguity": "belirsizlik",
   "amendment": "değişiklik / yasa değişikliği",
+  "amendments": "değişiklikler, düzeltmeler",
   "america": "Amerika",
   "among": "arasında (ikiden fazla şeyin)",
   "an": "bir",
@@ -92,6 +98,7 @@ const wordDictionary = {
   "analyst": "analist",
   "analysts": "analistler",
   "analytical": "analitik",
+  "analytics": "analytics",
   "analyzed": "analiz edilmiş",
   "analyzing": "analiz etme / analiz eden",
   "ancient": "antik / eski",
@@ -101,6 +108,7 @@ const wordDictionary = {
   "ankara": "Ankara (il)",
   "announced": "duyurdu / ilan etti",
   "annual": "yıllık",
+  "anomalies": "anomaliler, sapmalar",
   "anomaly": "anomali",
   "anonymous": "anonim / adsız",
   "another": "başka / diğer / bir diğeri",
@@ -153,6 +161,7 @@ const wordDictionary = {
   "assumed": "varsayılmış, farz edilmiş",
   "assumption": "varsayım",
   "assumptions": "varsayımlar",
+  "assurance": "güvence",
   "at": "-de / -da (noktasal konum / zaman)",
   "athlete": "sporcu / atlet",
   "atmosphere": "atmosfer",
@@ -166,6 +175,7 @@ const wordDictionary = {
   "audience": "dinleyiciler / izleyiciler",
   "audit": "denetim / teftiş",
   "auditors": "denetçiler",
+  "audits": "denetimler, teftişler",
   "authentication": "kimlik doğrulama",
   "author": "yazar",
   "authorities": "otoriteler / yetkililer",
@@ -176,6 +186,7 @@ const wordDictionary = {
   "automated": "otomatik",
   "automatic": "otomatik",
   "automatically": "otomatik olarak",
+  "automation": "otomasyon",
   "avoid": "kaçınmak / önlemek",
   "background": "arka plan",
   "backup": "yedek, yedekleme",
@@ -186,6 +197,7 @@ const wordDictionary = {
   "badly-developed": "kötü gelişmiş",
   "balance": "bakiye",
   "balanced": "dengelenmiş / dengeledi",
+  "balancing": "dengeleme, dengeleyen",
   "bank": "banka",
   "banks": "bankalar",
   "base": "taban / üs",
@@ -213,6 +225,7 @@ const wordDictionary = {
   "binding": "bağlayıcı",
   "binds": "bağlar",
   "biologist": "biyolog",
+  "biologists": "biologists",
   "biometric": "biyometrik",
   "black": "siyah / kara",
   "block": "engellemek, blok",
@@ -226,6 +239,7 @@ const wordDictionary = {
   "books": "kitaplar",
   "boosts": "canlandırır / artırır",
   "both": "her iki / ikisi de",
+  "bots": "botlar, robotlar",
   "bottle": "şişe",
   "bound": "zorunda / mahkum",
   "boundaries": "sınırlar",
@@ -238,10 +252,12 @@ const wordDictionary = {
   "brief": "özet",
   "broader": "daha geniş",
   "broken": "kırık / kırılmış",
+  "brokers": "komisyoncular, aracılar",
   "budget": "bütçe",
   "budgets": "bütçeler",
   "bug": "hata / böcek",
   "bugs": "hatalar / böcekler",
+  "build": "build",
   "building": "bina",
   "buildings": "binalar",
   "business": "iş / işletme",
@@ -261,6 +277,7 @@ const wordDictionary = {
   "can": "-ebilmek / -abilmek (yetenek / olasılık)",
   "candidate": "aday",
   "cannot": "yapamaz / edemez",
+  "capacities": "kapasiteler",
   "capacity": "kapasite / kapasitesini",
   "capital": "sermaye / başkent",
   "car": "araba / otomobil",
@@ -271,6 +288,7 @@ const wordDictionary = {
   "careful": "dikkatli",
   "carefully": "dikkatlice",
   "case": "durum / vaka / dava",
+  "catalog": "catalog",
   "cataloged": "katalogladı / kaydetti",
   "categories": "kategoriler",
   "category": "kategori / sınıf",
@@ -290,6 +308,7 @@ const wordDictionary = {
   "challenges": "meydan okur / zorluklar",
   "challenging": "zorlu / zorlayıcı",
   "chamber": "oda, bölme",
+  "chambers": "chambers",
   "change": "değişiklik / değişim",
   "changed": "değiştirdi",
   "changes": "değişiklikler",
@@ -300,8 +319,10 @@ const wordDictionary = {
   "charts": "grafikler",
   "cheap": "ucuz",
   "checked": "kontrol etti",
+  "checks": "kontrol eder",
   "chemical": "kimyasal",
   "chemist": "kimyager",
+  "chief": "chief",
   "child": "çocuk",
   "children": "çocuklar",
   "chimney": "baca",
@@ -311,7 +332,9 @@ const wordDictionary = {
   "chosen": "seçilmiş",
   "chronological": "kronolojik",
   "citizen": "vatandaş",
+  "citizens": "vatandaşlar",
   "city": "şehir",
+  "civic": "civic",
   "civilisation": "medeniyet",
   "clarified": "açıklanmış / netleştirilmiş / açıklandı",
   "clarifies": "netleştirir / açıklar",
@@ -325,6 +348,7 @@ const wordDictionary = {
   "clean": "temiz",
   "cleanly": "temiz bir şekilde",
   "clear": "açık / net",
+  "clearance": "izin, yetki, tasfiye",
   "clearly": "açıkça / net bir şekilde",
   "client": "müşteri",
   "clients": "müşteriler",
@@ -353,6 +377,7 @@ const wordDictionary = {
   "command": "komut / emir / kumanda",
   "commercial": "ticari",
   "committee": "komite",
+  "committees": "committees",
   "common": "yaygın / ortak",
   "commonly": "yaygın",
   "community": "topluluk",
@@ -363,6 +388,7 @@ const wordDictionary = {
   "competing": "rekabet eden",
   "competitive": "rekabetçi",
   "compilation": "derleme",
+  "compiled": "derledi",
   "compiler": "derleyici",
   "completed": "tamamladı / tamamlanmış",
   "completely": "tamamen",
@@ -396,6 +422,8 @@ const wordDictionary = {
   "conducting": "yürüten / yürütme",
   "confidential": "gizli, mahrem",
   "confidently": "güvenle / kendinden emin bir şekilde",
+  "configuration": "configuration",
+  "configurations": "configurations",
   "confirm": "onaylamak",
   "confirmed": "doğruladı",
   "conflict": "çatışma",
@@ -421,6 +449,7 @@ const wordDictionary = {
   "consumer": "tüketici",
   "contained": "bulunan / içeren",
   "container": "kap / kutu",
+  "containers": "containers",
   "containing": "içeren",
   "contains": "içerir",
   "contents": "içerik / içindekiler",
@@ -445,11 +474,14 @@ const wordDictionary = {
   "cooked": "pişmiş / pişirilmiş",
   "cooling": "soğuma / soğutma",
   "cooperation": "işbirliği",
+  "coordinator": "koordinatör",
   "core": "öz / çekirdek / özü",
   "corner": "köşe",
   "corporate": "kurumsal",
   "corporation": "şirket / kurum",
   "corresponding": "karşılık gelen",
+  "corrupted": "corrupted",
+  "corruption": "corruption",
   "cost": "maliyet / masraf",
   "cost-reducing": "maliyeti düşüren",
   "cost-saving": "maliyet tasarrufu sağlayan",
@@ -457,12 +489,14 @@ const wordDictionary = {
   "cotton": "pamuk",
   "could": "-ebilirdi / -ebildi",
   "council": "konsey / meclis",
+  "counsel": "counsel",
   "countries": "ülkeler",
   "country": "ülke",
   "court": "mahkeme",
   "cover": "kapak / örtü",
   "covered": "kaplı / kaplanmış",
   "cow": "inek",
+  "crack": "crack",
   "cracked": "çatlamış, yarılmış",
   "crashed": "çöktü",
   "crashes": "çökmeler, kazalar",
@@ -486,6 +520,7 @@ const wordDictionary = {
   "cultural": "kültürel",
   "culture": "kültür",
   "cure": "tedavi etmek / iyileştirmek",
+  "currency": "para birimi",
   "current": "akım / cereyan",
   "currents": "akımlar",
   "curriculum": "müfredat",
@@ -502,6 +537,7 @@ const wordDictionary = {
   "day": "gün",
   "days": "günler",
   "debate": "tartışmak",
+  "debated": "tartıştı",
   "debates": "tartışmalar",
   "debts": "borçlar",
   "decay": "çürümek, bozulmak",
@@ -536,6 +572,7 @@ const wordDictionary = {
   "democracy": "demokrasi",
   "demographic": "demografik",
   "demonstrate": "göstermek / kanıtlamak",
+  "demonstrated": "gösterdi, kanıtladı",
   "demonstrating": "gösteren / kanıtlayan",
   "densely": "yoğun olarak / yoğun bir şekilde",
   "density": "yoğunluk / yoğun",
@@ -543,6 +580,7 @@ const wordDictionary = {
   "departments": "departmanlar / bölümler",
   "depends": "bağlıdır",
   "deployed": "dağıttı / yükledi / konuşlandırdı",
+  "deployment": "deployment",
   "derive": "elde etmek / türetmek",
   "derived": "türetilen / elde edilen / çıkarılan",
   "deriving": "türetme / türeten",
@@ -554,6 +592,7 @@ const wordDictionary = {
   "design": "tasarım / tasarımı / tasarlamak",
   "design-simplifying": "tasarımı basitleştiren",
   "designed": "tasarladı / tasarlanmış",
+  "designer": "tasarımcı",
   "designing": "tasarlama, tasarlarken",
   "desire": "arzu / istek",
   "despite": "-e rağmen",
@@ -567,6 +606,7 @@ const wordDictionary = {
   "detects": "tespit ediyor",
   "determine": "belirlemek / kararlaştırmak",
   "determined": "belirlenmiş",
+  "determines": "belirler, saptar",
   "determining": "belirleyen",
   "develop": "geliştirmek",
   "developed": "gelişen / gelişti",
@@ -592,6 +632,7 @@ const wordDictionary = {
   "digital": "dijital",
   "dimensions": "boyutlar / boyutları",
   "diode": "diyot",
+  "direct": "direct",
   "direction": "yön",
   "directly": "doğrudan / aracısız",
   "director": "direktör / müdür",
@@ -618,12 +659,14 @@ const wordDictionary = {
   "distributing": "dağıtma / dağıtan",
   "distribution": "dağılım / dağılımı / dağıtma",
   "distributive": "dağıtımsal",
+  "diverges": "ayrışır, dallanır",
   "divide": "bölünmek, bölmek",
   "divided": "bölünmüş",
   "division": "bölünme / bölüm / bölünmesi",
   "do": "yapmak",
   "doctor": "doktor",
   "document": "belgelemek / belge",
+  "documentation": "dokümantasyon, belgelendirme",
   "does": "yapmak (3. tekil şahıs)",
   "domestic": "yerli / evcil",
   "domestically": "ülke içinde / yerel olarak",
@@ -631,6 +674,7 @@ const wordDictionary = {
   "dominating": "baskın",
   "done": "yapılmış, tamamlanmış",
   "double-check": "tekrar kontrol etmek, yeniden incelemek",
+  "doubt": "şüphe duymak, şüphe",
   "down": "aşağı",
   "draft": "taslak",
   "drafted": "hazırladı",
@@ -693,8 +737,10 @@ const wordDictionary = {
   "energy": "enerji",
   "energy-consuming": "enerji tüketen",
   "enforce": "zorla uygulamak, dayatmak",
+  "enforces": "uygular, zorla yürütür",
   "enforcing": "uygulama / uygulayan",
   "engaged": "meşgul / uğraşan",
+  "engagement": "engagement",
   "engineer": "mühendis",
   "engineers": "mühendisler",
   "england": "İngiltere",
@@ -712,6 +758,7 @@ const wordDictionary = {
   "enzyme": "enzim",
   "equal": "eşit",
   "equality": "eşitlik",
+  "equations": "denklemler",
   "equipment": "ekipman / malzeme",
   "erosion": "erozyon / aşınma",
   "error": "hata",
@@ -744,6 +791,7 @@ const wordDictionary = {
   "exact": "kesin / tam",
   "examination": "sınav / muayene",
   "examine": "incelemek",
+  "examined": "inceledi, muayene etti",
   "excavated": "kazılıp çıkarıldı / çıkarıldı",
   "excellent": "mükemmel",
   "exclude": "hariç tutmak",
@@ -781,6 +829,7 @@ const wordDictionary = {
   "explanations": "açıklamalar",
   "explicit": "açık / net",
   "explicitly": "açıkça / net olarak",
+  "exploit": "istismar etmek, sömürmek",
   "explored": "keşfetti / araştırdı",
   "export": "ihracat / ihraç",
   "exported": "ihraç edilmiş / ihraç etti",
@@ -788,6 +837,7 @@ const wordDictionary = {
   "expose": "ifşa etmek / ortaya çıkarmak",
   "exposed": "maruz kalmış / açıkta kalmış",
   "exposes": "ortaya çıkarır",
+  "exposing": "exposing",
   "expression": "ifade / dışa vurum",
   "extensive": "kapsamlı, geniş",
   "extent": "boyut / ölçü / kapsam",
@@ -795,6 +845,7 @@ const wordDictionary = {
   "extract": "çıkarmak / özünü çıkarmak",
   "extracted": "çıkarılmış / çıkardı",
   "extracting": "çıkarma / çıkaran",
+  "extreme": "extreme",
   "eye-opening": "göz açıcı",
   "face-saving": "itibar kurtaran",
   "faced": "karşılaştı / karşı karşıya kaldı",
@@ -841,7 +892,9 @@ const wordDictionary = {
   "fine-tune": "ince ayar yapmak",
   "fine-tuned": "ince ayar yapılmış",
   "finished": "bitmiş / tamamlanmış",
+  "finishes": "finishes",
   "fire": "ateş",
+  "firewall": "firewall",
   "firewalls": "güvenlik duvarları",
   "firmly": "sağlam bir şekilde / sıkıca",
   "firms": "firmalar, şirketler",
@@ -854,6 +907,8 @@ const wordDictionary = {
   "flaws": "kusurlar / hatalar",
   "flood": "sel",
   "floods": "seller",
+  "fluctuate": "fluctuate",
+  "fluctuated": "fluctuated",
   "fluctuating": "dalgalanan",
   "fluctuation": "dalgalanma",
   "fluid": "sıvı, akışkan",
@@ -865,6 +920,7 @@ const wordDictionary = {
   "foods": "yiyecekler / gıdalar",
   "for": "için, -dir (süreç)",
   "force": "güç",
+  "forcing": "forcing",
   "forested": "ormanlık",
   "forests": "ormanlar / ormanları",
   "forgot": "unuttu",
@@ -876,6 +932,9 @@ const wordDictionary = {
   "formulation": "formüle etme / biçimlendirme",
   "found": "buldu / bulunmuş",
   "foundation": "temel / vakıf",
+  "foundations": "foundations",
+  "fragile": "fragile",
+  "frames": "frames",
   "framework": "çerçeve / çerçevesi / yapı",
   "frameworks": "çerçeveler, çalışma yapıları",
   "freedom": "özgürlük",
@@ -899,6 +958,7 @@ const wordDictionary = {
   "gamma": "gama",
   "gardener": "bahçıvan",
   "gas": "gaz / gazı",
+  "gateway": "gateway",
   "gave": "verdi / yaptı",
   "general": "genel",
   "generated": "üretilen / oluşturulan",
@@ -906,6 +966,7 @@ const wordDictionary = {
   "generating": "oluşturma / oluşturan",
   "genes": "genler",
   "genetically": "genetik olarak / genetiği",
+  "geologists": "geologists",
   "germany": "Almanya",
   "gift": "hediye",
   "give": "vermek",
@@ -942,6 +1003,7 @@ const wordDictionary = {
   "guidelines": "yönergeler / kılavuz ilkeler",
   "guilt": "suçluluk",
   "habit-forming": "alışkanlık yapan",
+  "hackers": "hackers",
   "had": "sahip olmak (geçmiş) / -miş olmak",
   "half": "yarım / yarısı",
   "handles": "yönetir, ele alır",
@@ -975,6 +1037,7 @@ const wordDictionary = {
   "highlights": "vurguluyor / vurgulamaktadır",
   "highly": "son derece / büyük ölçüde",
   "his": "onun (erkek)",
+  "historians": "tarihçiler",
   "historic": "tarihi",
   "historical": "tarihsel / tarihi",
   "history": "tarih",
@@ -991,6 +1054,7 @@ const wordDictionary = {
   "ideas": "fikirler",
   "identification": "tanımlama / belirleme",
   "identified": "belirlenmiş",
+  "identifies": "identifies",
   "identify": "belirlemek / tanımlamak",
   "identifying": "belirleme / belirleyen",
   "identity": "kimlik",
@@ -1018,6 +1082,7 @@ const wordDictionary = {
   "in": "içinde, -de / -da",
   "inactive": "aktif olmayan / geçersiz",
   "inappropriately": "uygunsuz şekilde / yersizce",
+  "inasmuch": "inasmuch",
   "income": "gelir / geliri",
   "income-maximizing": "geliri maksimize eden",
   "inconsistencies": "tutarsızlıklar",
@@ -1028,6 +1093,7 @@ const wordDictionary = {
   "independent": "bağımsız",
   "independently": "bağımsız olarak",
   "index": "endeks",
+  "indicated": "gösterdi, işaret etti",
   "indicative": "gösterge niteliğindeki",
   "indicator": "gösterge",
   "indicators": "göstergeler",
@@ -1042,6 +1108,7 @@ const wordDictionary = {
   "industry": "endüstri / sanayi",
   "inflation": "enflasyon",
   "influence": "etki / nüfuz",
+  "influenced": "influenced",
   "informal": "resmi olmayan",
   "information": "bilgi",
   "infrastructure": "altyapı",
@@ -1056,6 +1123,7 @@ const wordDictionary = {
   "innovative": "yenilikçi",
   "input": "girdi",
   "inputs": "girdiler",
+  "inquired": "sordu, soruşturdu",
   "insect": "böcek",
   "insects": "böcekler",
   "inside": "içinde, içeride",
@@ -1072,6 +1140,7 @@ const wordDictionary = {
   "integrated": "entegre / bütünleşmiş",
   "integrating": "entegre etme / birleştiren",
   "integration": "entegrasyon / uyum",
+  "intellectual": "entelektüel",
   "intended": "amaçlanan",
   "intense": "yoğun",
   "intensely": "yoğun bir şekilde",
@@ -1102,6 +1171,7 @@ const wordDictionary = {
   "inverters": "invertörler / çeviriciler",
   "invested": "yatırım yapılmış",
   "investigate": "araştırmak",
+  "investigated": "araştırdı, soruşturdu",
   "investigation": "soruşturma",
   "investigative": "araştırmacı / soruşturmacı",
   "investment": "yatırım",
@@ -1126,7 +1196,9 @@ const wordDictionary = {
   "junior": "kıdemce küçük, genç",
   "just": "tam da, sadece",
   "justification": "gerekçe / haklı çıkarma",
+  "keep": "keep",
   "key": "anahtar / kilit",
+  "keys": "keys",
   "kind": "tür / çeşit",
   "kingdom": "alem / krallık",
   "know": "bilmek",
@@ -1163,6 +1235,7 @@ const wordDictionary = {
   "lecture": "konferans / ders",
   "led": "yol açtı / götürdü",
   "leg": "bacak",
+  "legacy": "legacy",
   "legal": "yasal",
   "legally": "yasal olarak",
   "legislation": "mevzuat / yasa koyma",
@@ -1193,9 +1266,12 @@ const wordDictionary = {
   "live": "yaşamak",
   "lives": "hayatlar / yaşamlar",
   "living": "yaşam / hayat",
+  "load": "yük, yüklemek",
   "loads": "yükler",
   "local": "yerel",
   "locally": "yerel olarak",
+  "log": "günlük, kütük",
+  "logging": "günlüğe kaydetme",
   "logic": "mantık",
   "logic-defying": "mantığa meydan okuyan",
   "logical": "mantıklı",
@@ -1205,6 +1281,7 @@ const wordDictionary = {
   "long-term": "uzun vadeli",
   "look": "görünmek, bakmak",
   "loop": "döngü",
+  "loops": "döngüler",
   "loose": "gevşek, serbest",
   "lose": "kaybetmek",
   "loss": "kayıp",
@@ -1233,9 +1310,11 @@ const wordDictionary = {
   "manipulate": "manipüle etmek / yönlendirmek",
   "manipulated": "manipüle edilmiş / manipüle edildi",
   "manipulates": "manipüle eder",
+  "manipulations": "manipülasyonlar",
   "manual": "kılavuz / el kitabı",
   "manufacturing": "üretim",
   "many": "birçok / çok",
+  "maps": "maps",
   "market": "piyasa / pazar / piyasası",
   "market-expanding": "pazarı büyüten",
   "markets": "pazarlar / piyasalar",
@@ -1256,6 +1335,8 @@ const wordDictionary = {
   "measured": "ölçtü / ölçtüler",
   "measurement": "ölçüm / ölçme",
   "meat": "et",
+  "mechanical": "mechanical",
+  "mechanisms": "mekanizmalar",
   "media": "medya",
   "mediator": "arabulucu",
   "medicine": "ilaç / tıp",
@@ -1268,6 +1349,7 @@ const wordDictionary = {
   "memory-enhancing": "bellek geliştiren",
   "men": "adamlar",
   "met": "karşılaştı / tanıştı / karşılaştım / tanıştım",
+  "metadata": "meta veri",
   "metal": "metal",
   "metals": "metaller",
   "method": "yöntem / metot",
@@ -1284,6 +1366,7 @@ const wordDictionary = {
   "milk": "süt",
   "mind-boggling": "akıl almaz",
   "mine": "maden / benimki / çıkarmak",
+  "minimize": "minimize",
   "minimized": "en aza indirilmiş / minimize etti",
   "minimizes": "en aza indirir / minimize eder",
   "mining": "madencilik / kömür çıkarma",
@@ -1296,6 +1379,7 @@ const wordDictionary = {
   "mixture": "karışım",
   "mobile": "mobil",
   "model": "model",
+  "models": "modeller",
   "modern": "modern",
   "modification": "modifikasyon / değişiklik / düzenleme",
   "modified": "değiştirilmiş",
@@ -1305,9 +1389,11 @@ const wordDictionary = {
   "modules": "modüller",
   "molecules": "moleküller / molekülleri",
   "moments": "anlar",
+  "monetary": "monetary",
   "money": "para",
   "money-making": "para kazandıran",
   "monitor": "izlemek",
+  "monitored": "izledi, gözlemledi",
   "monitoring": "izleme / izleyen",
   "month": "ay (takvim)",
   "monthly": "aylık",
@@ -1322,6 +1408,7 @@ const wordDictionary = {
   "movement": "hareket / hareketi",
   "moving": "hareket eden",
   "multi": "çok / çoklu",
+  "multi-factor": "multi-factor",
   "municipal": "belediye, belediyeye ait",
   "muscle": "kas",
   "muscles": "kaslar / kasları",
@@ -1358,7 +1445,9 @@ const wordDictionary = {
   "non-compliant": "uyumsuz / kurallara uymayan",
   "normal": "normal, olağan",
   "not": "değil, olumsuzluk eki",
+  "notes": "kaydeder, notlar",
   "notice": "fark etmek / bildirim",
+  "noticed": "fark etti",
   "now": "şimdi, şu anda",
   "number": "sayı / adet",
   "objects": "nesneler / objeler",
@@ -1368,8 +1457,10 @@ const wordDictionary = {
   "obtained": "elde etti / edinilmiş",
   "occupational": "mesleki",
   "occupying": "işgal eden / oturan",
+  "occurred": "occurred",
   "occurrence": "olay",
   "occurring": "meydana gelen",
+  "occurs": "occurs",
   "ocr": "OCR (optik karakter tanıma)",
   "of": "-in / -ın (iyelik / parçası), -den / -dan",
   "off": "off (yayınlama / kapalı)",
@@ -1382,6 +1473,7 @@ const wordDictionary = {
   "old": "eski, yaşlı",
   "on": "üzerinde, -de / -da",
   "once": "bir kez, -ince / -ir -mez",
+  "one": "one",
   "operates": "yürütülmektedir / çalışır",
   "operation": "ameliyat / operasyon",
   "operational": "operasyonel",
@@ -1419,14 +1511,17 @@ const wordDictionary = {
   "over-developed": "aşırı gelişmiş",
   "over-estimated": "aşırı tahmin edilmiş",
   "over-populated": "aşırı nüfuslu",
+  "overflow": "taşma, aşırı yük",
   "overlap": "çakışma / örtüşme",
   "override": "geçersiz kılmak, baskın gelmek",
   "owner": "sahip / malik",
   "oxygen": "oksijen",
+  "package": "package",
   "packed": "paketlenmiş",
   "page": "sayfa",
   "pages": "sayfalar",
   "painted": "boyanmış",
+  "panel": "panel, kurul",
   "paper": "kağıt",
   "papers": "kağıtlar / evraklar",
   "paradigm": "paradigma",
@@ -1441,6 +1536,7 @@ const wordDictionary = {
   "participants": "katılımcılar",
   "participation": "katılım",
   "parties": "taraflar",
+  "partitions": "partitions",
   "passed": "geçti / kabul edildi",
   "passes": "geçer",
   "passive": "edilgen",
@@ -1454,6 +1550,7 @@ const wordDictionary = {
   "peace": "barış",
   "peace-loving": "barışsever",
   "peak": "zirve, yoğun",
+  "peaks": "zirveler, yoğun zamanlar",
   "peer-reviewed": "hakemli",
   "penetrate": "nüfuz eder / içine işler",
   "people": "halk / insanlar",
@@ -1480,6 +1577,7 @@ const wordDictionary = {
   "photograph": "fotoğraf / fotoğrafı",
   "physical": "fiziksel",
   "physics": "fizik",
+  "physiological": "fizyolojik",
   "picture": "resim / fotoğraf",
   "pictures": "resimler / resimleri",
   "piece": "parça",
@@ -1503,6 +1601,7 @@ const wordDictionary = {
   "politically": "siyasi olarak / siyaseten",
   "politicians": "politikacılar",
   "pollen": "polen",
+  "pool": "pool",
   "poor": "verimsiz / fakir / kötü",
   "poorly": "kötü / yetersiz bir şekilde",
   "populated": "nüfuslu / yerleşilmiş",
@@ -1552,6 +1651,7 @@ const wordDictionary = {
   "priorities": "öncelikler",
   "priority": "öncelik",
   "privacy": "gizlilik",
+  "private": "private",
   "problem": "problem / sorun / problemi",
   "problem-solving": "problem çözen",
   "problematic": "sorunlu, şüpheli",
@@ -1597,6 +1697,7 @@ const wordDictionary = {
   "protected": "korunmuş / korundu",
   "protecting": "koruyan",
   "protection": "koruma",
+  "protective": "protective",
   "protects": "korur",
   "protein": "protein",
   "protocol": "protokol",
@@ -1611,6 +1712,7 @@ const wordDictionary = {
   "publish": "yayınlamak",
   "published": "yayınladı",
   "publishing": "yayınlama / yayınlayan",
+  "pumps": "pompalar",
   "punish": "cezalandırmak",
   "puzzle": "bulmaca",
   "qualitative": "nitel",
@@ -1618,6 +1720,7 @@ const wordDictionary = {
   "quarter": "çeyrek, bölge",
   "queries": "sorgular",
   "query": "sorgu",
+  "questioned": "sorguladı",
   "quickly": "hızlıca / çabucak",
   "radiation": "radyasyon",
   "radio": "radyo",
@@ -1639,6 +1742,7 @@ const wordDictionary = {
   "reading": "okuma / okumak",
   "reads": "okur",
   "ready": "hazır",
+  "realized": "fark etti, gerçekleştirdi",
   "reallocate": "yeniden tahsis etmek",
   "reallocated": "yeniden tahsis edilmiş",
   "reason": "sebep / neden",
@@ -1658,6 +1762,7 @@ const wordDictionary = {
   "reduce": "azaltmak, düşürmek",
   "reduced": "azaltılmış",
   "reduces": "azaltır",
+  "refactors": "yeniden düzenler",
   "reform": "reform",
   "refused": "reddetti",
   "regarding": "ilişkin, dair, hakkında",
@@ -1667,6 +1772,7 @@ const wordDictionary = {
   "regional": "bölgesel",
   "regions": "bölgeler",
   "regular": "düzenli",
+  "regularly": "düzenli olarak",
   "regulate": "düzenlemek",
   "regulating": "düzenleme / düzenleyen",
   "regulation": "düzenleme / yönetmelik",
@@ -1687,12 +1793,15 @@ const wordDictionary = {
   "remains": "kalır / olmaya devam eder",
   "remarks": "konuşmalar / sözler",
   "remembered": "hatırlanan",
+  "remote": "remote",
   "removed": "kaldırılmalıdır / kaldırılmış",
   "renaissance": "rönesans",
   "repeated": "tekrarlanan",
   "repeating": "tekrarlamak / tekrar eden",
   "report": "rapor / rapor etmek / bildirmek",
+  "reported": "reported",
   "reports": "raporlar",
+  "repositories": "repositories",
   "representation": "temsil / gösterim",
   "representatives": "temsilciler",
   "reputation": "itibar / ün",
@@ -1708,6 +1817,7 @@ const wordDictionary = {
   "researcher": "araştırmacı",
   "researchers": "araştırmacılar",
   "reshaping": "yeniden şekillendirme / yeniden şekillendiren",
+  "reside": "yer almak, bulunmak",
   "resident": "mukim",
   "resins": "reçineler",
   "resolution": "çözüm",
@@ -1766,6 +1876,7 @@ const wordDictionary = {
   "roughly": "kabaca / yaklaşık olarak",
   "round": "etrafında / yuvarlak",
   "router": "yönlendirici / yönseçici",
+  "routes": "routes",
   "rule": "kural",
   "rules": "kurallar / yönetmelikler",
   "run": "koşu / gidişat",
@@ -1790,6 +1901,7 @@ const wordDictionary = {
   "scarcity": "kıtlık",
   "scenario": "senaryo",
   "schedules": "programlar / takvimler",
+  "schema": "şema",
   "scheme": "plan / tasarı",
   "school": "okul",
   "schools": "okullar",
@@ -1825,8 +1937,10 @@ const wordDictionary = {
   "sent": "gönderilen / gönderildi",
   "sentence": "cümle",
   "separate": "ayrı / bağımsız",
+  "sequence": "sequence",
   "sequences": "sıralar / diziler",
   "serum": "serum",
+  "server": "server",
   "servers": "sunucular",
   "service": "hizmet",
   "set": "set / küme",
@@ -1845,6 +1959,7 @@ const wordDictionary = {
   "should": "-meli / -malı (tavsiye / gereklilik)",
   "showed": "gösterdi",
   "showing": "gösteren",
+  "shows": "shows",
   "signals": "sinyaller",
   "signature": "imza",
   "signed": "imzaladı",
@@ -1855,6 +1970,7 @@ const wordDictionary = {
   "simple": "basit",
   "simplified": "basitleştirilmiş",
   "simplifies": "basitleştirir",
+  "simulation": "simülasyon",
   "since": "-den beri / çünkü",
   "single": "tek / tek bir",
   "situation": "durum / durumu",
@@ -1892,6 +2008,7 @@ const wordDictionary = {
   "space": "uzay / boşluk",
   "space-saving": "yer kazandıran",
   "special": "özel",
+  "specialists": "specialists",
   "specialized": "özelleşmiş / uzmanlaşmış",
   "species": "tür / türler / türleri",
   "specific": "belirli",
@@ -1903,6 +2020,7 @@ const wordDictionary = {
   "speed": "hız",
   "spent": "harcanmış / harcadı",
   "sphere": "küre",
+  "spike": "spike",
   "split": "parçalanmak / bölmek",
   "spoke": "konuştu",
   "spread": "yayıldı",
@@ -1967,6 +2085,7 @@ const wordDictionary = {
   "successfully": "başarıyla",
   "sudden": "ani",
   "suffer": "muzdarip olmak / acı çekmek",
+  "suffered": "suffered",
   "suffering": "muzdarip / acı çeken",
   "sufficient": "yeterli",
   "suitcase": "valiz / bavul",
@@ -1976,6 +2095,7 @@ const wordDictionary = {
   "summit": "zirve",
   "sun": "güneş",
   "supervision": "gözetim / denetim",
+  "supervisors": "supervisors",
   "supply": "kaynak / arz",
   "support": "desteklemek",
   "supports": "destekler",
@@ -1993,6 +2113,7 @@ const wordDictionary = {
   "sustaining": "sürdürme / sürdüren",
   "swim": "yüzmek",
   "synchronization": "senkronizasyon",
+  "syntax": "sözdizimi",
   "system": "sistem",
   "systems": "sistemler",
   "table": "masa",
@@ -2002,6 +2123,7 @@ const wordDictionary = {
   "tank": "tank / depo",
   "target": "hedef",
   "targeted": "hedeflenen",
+  "tariff": "tariff",
   "task": "görev / görevi",
   "tasks": "görevler",
   "tax": "vergi",
@@ -2010,11 +2132,13 @@ const wordDictionary = {
   "teachers": "öğretmenler",
   "teaching": "öğretim",
   "team": "ekip",
+  "teams": "teams",
   "technical": "teknik",
   "technician": "teknisyen",
   "technicians": "teknisyenler",
   "technologies": "teknolojiler",
   "technology": "teknoloji",
+  "tectonic": "tektonik",
   "telescope": "teleskop",
   "telescopes": "teleskoplar",
   "temperature": "sıcaklık",
@@ -2030,6 +2154,7 @@ const wordDictionary = {
   "test": "test / deneme",
   "test-tube": "deney tüpü",
   "test-tubes": "deney tüpleri",
+  "tested": "test etti",
   "testing": "test etme, deneme",
   "tests": "testler",
   "text": "metin / metni",
@@ -2053,6 +2178,7 @@ const wordDictionary = {
   "those": "şunlar, onlar",
   "threatened": "tehdit etti",
   "three": "üç",
+  "thresholds": "eşikler",
   "through": "içinden, vasıtasıyla",
   "time": "zaman",
   "time-saving": "zaman kazandıran",
@@ -2086,6 +2212,7 @@ const wordDictionary = {
   "traditional": "geleneksel",
   "traffic": "trafik",
   "training": "eğitim / antrenman",
+  "transaction": "transaction",
   "transactions": "işlemler",
   "transfer": "aktarmak / transfer etmek",
   "transform": "dönüştürmek",
@@ -2104,11 +2231,13 @@ const wordDictionary = {
   "trigger": "tetiklemek / yol açmak",
   "triggered": "tetiklenen / tetiklendi / tetiklenmektedir",
   "triggers": "tetikler",
+  "trimming": "trimming",
   "trouble-making": "sorun çıkaran",
   "troubleshooting": "sorun giderme / arıza giderme",
   "truck": "kamyon",
   "truth-revealing": "gerçeği ortaya çıkaran",
   "try": "denemek / çalışmak",
+  "tubes": "tubes",
   "turbine": "türbin",
   "turkey": "Türkiye",
   "turn": "dönüş / sıra",
@@ -2129,10 +2258,13 @@ const wordDictionary = {
   "undetected": "tespit edilemeyen",
   "uneconomic": "ekonomik olmayan / verimsiz",
   "unemployed": "işsiz",
+  "unencrypted": "unencrypted",
   "unequal": "eşitsiz",
   "unequally": "eşitsiz bir şekilde",
   "unexpected": "beklenmedik",
+  "unexpectedly": "unexpectedly",
   "unexposed": "banyo edilmemiş",
+  "unhandled": "unhandled",
   "uninhabited": "insansız / yerleşilmemiş",
   "unique": "benzersiz / kendine özgü",
   "unit": "birim, ünite",
@@ -2166,6 +2298,7 @@ const wordDictionary = {
   "utilized": "kullanılmış / yararlanıldı",
   "utilizes": "kullanıyor / faydalanıyor",
   "utilizing": "kullanma / kullanan",
+  "vacuum": "vakum",
   "valid": "geçerli",
   "validate": "doğrulamak",
   "validated": "doğrulanan / doğrulandı",
@@ -2176,6 +2309,7 @@ const wordDictionary = {
   "value": "değer",
   "value-adding": "değer katan",
   "values": "değerler",
+  "valve": "valve",
   "vapour": "buhar",
   "variable": "değişken",
   "variables": "değişkenler / varyasyonlar",
@@ -2189,6 +2323,7 @@ const wordDictionary = {
   "vehicle": "araç, taşıt",
   "verification": "doğrulama",
   "verified": "doğruladı / doğruladılar",
+  "verifies": "doğrular",
   "verify": "doğrulamak",
   "version": "versiyon / sürüm",
   "very": "çok",
@@ -2205,6 +2340,7 @@ const wordDictionary = {
   "visual": "görsel",
   "vitamin": "vitamin",
   "vocabulary": "kelime bilgisi / kelime",
+  "volatile": "volatile",
   "volume": "hacim / hacmi",
   "voted": "oy kullandı",
   "wait": "beklemek",
@@ -2213,6 +2349,7 @@ const wordDictionary = {
   "walls": "surlar / duvarlar",
   "want": "istemek",
   "wants": "istiyor",
+  "warn": "uyarmak",
   "warning": "uyarı",
   "was": "-di / -dı (geçmiş zaman olmak fiili)",
   "wasted": "boşa harcanmış",
@@ -2225,6 +2362,7 @@ const wordDictionary = {
   "we": "biz",
   "week": "hafta",
   "weeks": "haftalar",
+  "weight": "weight",
   "welfare": "refah",
   "well": "kuyu",
   "well-coordinated": "iyi koordine edilmiş",
@@ -2257,6 +2395,7 @@ const wordDictionary = {
   "won": "kazanılmış / kazandı",
   "wonder": "merak etmek, acaba",
   "wood": "odun / tahta / odunu",
+  "wooden": "wooden",
   "woods": "ormanlar",
   "words": "kelimeler",
   "work": "iş / işi",
@@ -8534,6 +8673,1550 @@ function buildUnit24UntilExercises(unitId, lessonId) {
 }
 
 
+
+
+
+
+// ─── BÖLÜM 25 RAW SENTENCES (Noun Clauses) ──────────────────
+
+const unit25Lesson1Group1Raw = [
+  {
+    en: "how the constituent framework functions",
+    tr: "bile\u015fen \u00e7er\u00e7evenin nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131",
+    word: "functions",
+    trWord: "",
+    correct: "functions",
+    blank: "how the constituent framework ___",
+    options: ["functions", "functional", "functioned", "functioning"],
+    blocks: ["how the", "constituent framework", "functions"]
+  },
+  {
+    en: "why the economic indicators fluctuated",
+    tr: "ekonomik g\u00f6stergelerin neden dalgaland\u0131\u011f\u0131",
+    word: "fluctuated",
+    trWord: "",
+    correct: "fluctuated",
+    blank: "why the economic indicators ___",
+    options: ["fluctuated", "fluctuation", "fluctuate", "fluctuating"],
+    blocks: ["why the", "economic indicators", "fluctuated"]
+  },
+  {
+    en: "where the unconstitutional laws mutate",
+    tr: "anayasaya ayk\u0131r\u0131 yasalar\u0131n nerede de\u011fi\u015fime u\u011frad\u0131\u011f\u0131",
+    word: "mutate",
+    trWord: "",
+    correct: "mutate",
+    blank: "where the unconstitutional laws ___",
+    options: ["mutate", "mutation", "mutated", "mutative"],
+    blocks: ["where the", "unconstitutional laws", "mutate"]
+  },
+  {
+    en: "what the dynamic simulation models predict",
+    tr: "dinamik sim\u00fclasyon modellerinin neyi \u00f6ng\u00f6rd\u00fc\u011f\u00fc",
+    word: "predict",
+    trWord: "",
+    correct: "predict",
+    blank: "what the dynamic simulation models ___",
+    options: ["predict", "prediction", "predictive", "predictable"],
+    blocks: ["what the", "dynamic simulation", "models predict"]
+  },
+  {
+    en: "who compiled the analytical data files",
+    tr: "analitik veri dosyalar\u0131n\u0131 kimin derledi\u011fi",
+    word: "compiled",
+    trWord: "",
+    correct: "compiled",
+    blank: "who ___ the analytical data files",
+    options: ["compiled", "compilation", "compiler", "compiling"],
+    blocks: ["who compiled", "the analytical", "data files"]
+  },
+  {
+    en: "how the parameterized matrix expands",
+    tr: "parametrelendirilmi\u015f matrisin nas\u0131l geni\u015fledi\u011fi",
+    word: "expands",
+    trWord: "",
+    correct: "expands",
+    blank: "how the parameterized matrix ___",
+    options: ["expands", "expansion", "expansive", "expand"],
+    blocks: ["how the", "parameterized matrix", "expands"]
+  },
+  {
+    en: "why alternative regimes collapse",
+    tr: "alternatif rejimlerin neden \u00e7\u00f6kt\u00fc\u011f\u00fc",
+    word: "collapse",
+    trWord: "",
+    correct: "collapse",
+    blank: "why alternative regimes ___",
+    options: ["collapse", "collapsing", "collapsed", "collapsible"],
+    blocks: ["why alternative", "regimes", "collapse"]
+  },
+  {
+    en: "where the metadata parameters reside",
+    tr: "meta veri parametrelerinin nerede bulundu\u011fu",
+    word: "reside",
+    trWord: "",
+    correct: "reside",
+    blank: "where the metadata parameters ___",
+    options: ["reside", "residence", "resident", "residing"],
+    blocks: ["where the", "metadata parameters", "reside"]
+  },
+  {
+    en: "what the software compiler refactors",
+    tr: "yaz\u0131l\u0131m derleyicisinin neyi yeniden d\u00fczenledi\u011fi",
+    word: "refactors",
+    trWord: "",
+    correct: "refactors",
+    blank: "what the software compiler ___",
+    options: ["refactors", "refactoring", "refactored", "refactor"],
+    blocks: ["what the", "software compiler", "refactors"]
+  },
+  {
+    en: "how the chemical innovations transform structures",
+    tr: "kimyasal yeniliklerin yap\u0131lar\u0131 nas\u0131l d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fc",
+    word: "transform",
+    trWord: "",
+    correct: "transform",
+    blank: "how the chemical innovations ___ structures",
+    options: ["transform", "transformation", "transformer", "transformative"],
+    blocks: ["how the", "chemical innovations", "transform structures"]
+  },
+  {
+    en: "why the specific indicators decline",
+    tr: "belirli g\u00f6stergelerin neden d\u00fc\u015ft\u00fc\u011f\u00fc",
+    word: "decline",
+    trWord: "",
+    correct: "decline",
+    blank: "why the specific indicators ___",
+    options: ["decline", "declining", "declined", "declination"],
+    blocks: ["why the", "specific indicators", "decline"]
+  },
+  {
+    en: "what the legislative assembly enforces",
+    tr: "yasama meclisinin neyi uygulad\u0131\u011f\u0131",
+    word: "enforces",
+    trWord: "",
+    correct: "enforces",
+    blank: "what the legislative assembly ___",
+    options: ["enforces", "enforcement", "enforceable", "enforce"],
+    blocks: ["what the", "legislative assembly", "enforces"]
+  },
+  {
+    en: "how the raw components decay",
+    tr: "ham bile\u015fenlerin nas\u0131l \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fc",
+    word: "decay",
+    trWord: "",
+    correct: "decay",
+    blank: "how the raw components ___",
+    options: ["decay", "decayed", "decaying", "decays"],
+    blocks: ["how the", "raw components", "decay"]
+  },
+  {
+    en: "why the contradictory codes conflict",
+    tr: "\u00e7eli\u015fkili kodlar\u0131n neden \u00e7ak\u0131\u015ft\u0131\u011f\u0131",
+    word: "conflict",
+    trWord: "",
+    correct: "conflict",
+    blank: "why the contradictory codes ___",
+    options: ["conflict", "conflicting", "conflicted", "conflicts"],
+    blocks: ["why the", "contradictory codes", "conflict"]
+  },
+  {
+    en: "where the distributed network traffic diverges",
+    tr: "da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin nerede ayr\u0131\u015ft\u0131\u011f\u0131",
+    word: "diverges",
+    trWord: "",
+    correct: "diverges",
+    blank: "where the distributed network traffic ___",
+    options: ["diverges", "divergence", "diverging", "divergent"],
+    blocks: ["where the", "distributed network", "traffic diverges"]
+  }
+];
+
+const unit25Lesson1Group2Raw = [
+  {
+    en: "The system designer explained how the constituent framework functions.",
+    tr: "Sistem tasar\u0131mc\u0131s\u0131 bile\u015fen \u00e7er\u00e7evenin nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 a\u00e7\u0131klad\u0131.",
+    word: "explained",
+    trWord: "",
+    correct: "explained",
+    blank: "The system designer ___ how the constituent framework functions.",
+    options: ["explained", "explanation", "explain", "explanatory"],
+    blocks: ["The system designer", "explained how the", "constituent framework functions."]
+  },
+  {
+    en: "The chief researcher analyzed why the economic indicators fluctuated.",
+    tr: "Ba\u015f ara\u015ft\u0131rmac\u0131 ekonomik g\u00f6stergelerin neden dalgaland\u0131\u011f\u0131n\u0131 analiz etti.",
+    word: "analyzed",
+    trWord: "",
+    correct: "analyzed",
+    blank: "The chief researcher ___ why the economic indicators fluctuated.",
+    options: ["analyzed", "analysis", "analyst", "analyze"],
+    blocks: ["The chief researcher", "analyzed why the", "economic indicators fluctuated."]
+  },
+  {
+    en: "Legal experts monitored where the unconstitutional laws mutate.",
+    tr: "Hukuk uzmanlar\u0131 anayasaya ayk\u0131r\u0131 yasalar\u0131n nerede de\u011fi\u015fime u\u011frad\u0131\u011f\u0131n\u0131 izledi.",
+    word: "monitored",
+    trWord: "",
+    correct: "monitored",
+    blank: "Legal experts ___ where the unconstitutional laws mutate.",
+    options: ["monitored", "monitor", "monitoring", "monitors"],
+    blocks: ["Legal experts monitored", "where the unconstitutional", "laws mutate."]
+  },
+  {
+    en: "The report highlights what the dynamic simulation models predict.",
+    tr: "Rapor dinamik sim\u00fclasyon modellerinin neyi \u00f6ng\u00f6rd\u00fc\u011f\u00fcn\u00fc vurguluyor.",
+    word: "highlights",
+    trWord: "",
+    correct: "highlights",
+    blank: "The report ___ what the dynamic simulation models predict.",
+    options: ["highlights", "highlight", "highlighting", "highlighted"],
+    blocks: ["The report highlights", "what the dynamic", "simulation models predict."]
+  },
+  {
+    en: "No one discovered who compiled the analytical data files.",
+    tr: "Analitik veri dosyalar\u0131n\u0131 kimin derledi\u011fini kimse ke\u015ffedemedi.",
+    word: "discovered",
+    trWord: "",
+    correct: "discovered",
+    blank: "No one ___ who compiled the analytical data files.",
+    options: ["discovered", "discovery", "discover", "discovering"],
+    blocks: ["No one discovered", "who compiled the", "analytical data files."]
+  },
+  {
+    en: "Technicians calculated how the parameterized matrix expands.",
+    tr: "Teknisyenler parametrelendirilmi\u015f matrisin nas\u0131l geni\u015fledi\u011fini hesaplad\u0131.",
+    word: "calculated",
+    trWord: "",
+    correct: "calculated",
+    blank: "Technicians ___ how the parameterized matrix expands.",
+    options: ["calculated", "calculation", "calculating", "calculate"],
+    blocks: ["Technicians calculated how", "the parameterized", "matrix expands."]
+  },
+  {
+    en: "Historians investigated why alternative regimes collapse.",
+    tr: "Tarih\u00e7iler alternatif rejimlerin neden \u00e7\u00f6kt\u00fc\u011f\u00fcn\u00fc ara\u015ft\u0131rd\u0131.",
+    word: "investigated",
+    trWord: "",
+    correct: "investigated",
+    blank: "Historians ___ why alternative regimes collapse.",
+    options: ["investigated", "investigation", "investigative", "investigate"],
+    blocks: ["Historians investigated", "why alternative", "regimes collapse."]
+  },
+  {
+    en: "The database tracking script records where the metadata parameters reside.",
+    tr: "Veri taban\u0131 takip beti\u011fi meta veri parametrelerinin nerede bulundu\u011funu kaydeder.",
+    word: "records",
+    trWord: "",
+    correct: "records",
+    blank: "The database tracking script ___ where the metadata parameters reside.",
+    options: ["records", "record", "recording", "recorded"],
+    blocks: ["The database tracking script", "records where the", "metadata parameters reside."]
+  },
+  {
+    en: "The development documentation describes what the software compiler refactors.",
+    tr: "Geli\u015ftirme dok\u00fcmantasyonu yaz\u0131l\u0131m derleyicisinin neyi yeniden d\u00fczenledi\u011fini a\u00e7\u0131klar.",
+    word: "describes",
+    trWord: "",
+    correct: "describes",
+    blank: "The development documentation ___ what the software compiler refactors.",
+    options: ["describes", "description", "descriptive", "describe"],
+    blocks: ["The development documentation", "describes what the", "software compiler refactors."]
+  },
+  {
+    en: "Biologists demonstrated how the chemical innovations transform structures.",
+    tr: "Biyologlar kimyasal yeniliklerin yap\u0131lar\u0131 nas\u0131l d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fcn\u00fc g\u00f6sterdi.",
+    word: "demonstrated",
+    trWord: "",
+    correct: "demonstrated",
+    blank: "Biologists ___ how the chemical innovations transform structures.",
+    options: ["demonstrated", "demonstration", "demonstrative", "demonstrate"],
+    blocks: ["Biologists demonstrated how", "the chemical innovations", "transform structures."]
+  },
+  {
+    en: "The summary paper shows why the specific indicators decline.",
+    tr: "\u00d6zet rapor belirli g\u00f6stergelerin neden d\u00fc\u015ft\u00fc\u011f\u00fcn\u00fc g\u00f6steriyor.",
+    word: "shows",
+    trWord: "",
+    correct: "shows",
+    blank: "The summary paper ___ why the specific indicators decline.",
+    options: ["shows", "show", "showing", "showed"],
+    blocks: ["The summary paper", "shows why the", "specific indicators decline."]
+  },
+  {
+    en: "Independent committees reviewed what the legislative assembly enforces.",
+    tr: "Ba\u011f\u0131ms\u0131z komiteler yasama meclisinin neyi uygulad\u0131\u011f\u0131n\u0131 inceledi.",
+    word: "reviewed",
+    trWord: "",
+    correct: "reviewed",
+    blank: "Independent committees ___ what the legislative assembly enforces.",
+    options: ["reviewed", "review", "reviewing", "reviewer"],
+    blocks: ["Independent committees reviewed", "what the legislative", "assembly enforces."]
+  },
+  {
+    en: "The laboratory log notes how the raw components decay.",
+    tr: "Laboratuvar g\u00fcnl\u00fc\u011f\u00fc ham bile\u015fenlerin nas\u0131l \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fcn\u00fc kaydeder.",
+    word: "notes",
+    trWord: "",
+    correct: "notes",
+    blank: "The laboratory log ___ how the raw components decay.",
+    options: ["notes", "note", "noted", "noting"],
+    blocks: ["The laboratory log", "notes how the", "raw components decay."]
+  },
+  {
+    en: "Security software identifies why the contradictory codes conflict.",
+    tr: "G\u00fcvenlik yaz\u0131l\u0131m\u0131 \u00e7eli\u015fkili kodlar\u0131n neden \u00e7ak\u0131\u015ft\u0131\u011f\u0131n\u0131 tespit eder.",
+    word: "identifies",
+    trWord: "",
+    correct: "identifies",
+    blank: "Security software ___ why the contradictory codes conflict.",
+    options: ["identifies", "identification", "identifying", "identify"],
+    blocks: ["Security software identifies", "why the contradictory", "codes conflict."]
+  },
+  {
+    en: "The baseline configuration maps where the distributed network traffic diverges.",
+    tr: "Temel yap\u0131land\u0131rma da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin nerede ayr\u0131\u015ft\u0131\u011f\u0131n\u0131 haritaland\u0131r\u0131r.",
+    word: "maps",
+    trWord: "",
+    correct: "maps",
+    blank: "The baseline configuration ___ where the distributed network traffic diverges.",
+    options: ["maps", "map", "mapping", "mapped"],
+    blocks: ["The baseline configuration maps", "where the distributed", "network traffic diverges."]
+  }
+];
+
+const unit25Lesson1Group3Raw = [
+  {
+    en: "The chief automation engineer explained how the constituent framework functions under pressure before the cloud deployment units optimize memory slots.",
+    tr: "Bulut da\u011f\u0131t\u0131m birimleri bellek yuvalar\u0131n\u0131 optimize etmeden \u00f6nce, ba\u015f otomasyon m\u00fchendisi bile\u015fen \u00e7er\u00e7evenin bas\u0131n\u00e7 alt\u0131nda nas\u0131l \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 a\u00e7\u0131klad\u0131.",
+    word: "optimize",
+    trWord: "",
+    correct: "optimize",
+    blank: "The chief automation engineer explained how the constituent framework functions under pressure before the cloud deployment units ___ memory slots.",
+    options: ["optimize", "optimization", "optimizing", "optimized"],
+    blocks: ["The chief automation engineer", "explained how the constituent", "framework functions under pressure", "before the cloud deployment", "units optimize memory slots."]
+  },
+  {
+    en: "The senior project coordinator analyzed why the economic indicators fluctuated next quarter since international trading restrictions caused inflation.",
+    tr: "Uluslararas\u0131 ticaret k\u0131s\u0131tlamalar\u0131 enflasyona neden oldu\u011fundan, k\u0131demli proje koordinat\u00f6r\u00fc ekonomik g\u00f6stergelerin gelecek \u00e7eyrekte neden dalgaland\u0131\u011f\u0131n\u0131 analiz etti.",
+    word: "restrictions",
+    trWord: "",
+    correct: "restrictions",
+    blank: "The senior project coordinator analyzed why the economic indicators fluctuated next quarter since international trading ___ caused inflation.",
+    options: ["restrictions", "restrict", "restricted", "restrictive"],
+    blocks: ["The senior project coordinator", "analyzed why the economic", "indicators fluctuated next quarter", "since international trading", "restrictions caused inflation."]
+  },
+  {
+    en: "Cross-disciplinary teams monitored where the unconstitutional laws mutate local governance patterns on grounds that municipal budgets dropped.",
+    tr: "Belediye b\u00fct\u00e7elerinin d\u00fc\u015fmesi gerek\u00e7esiyle, disiplinler aras\u0131 ekipler anayasaya ayk\u0131r\u0131 yasalar\u0131n yerel y\u00f6netim modellerini nerede de\u011fi\u015ftirdi\u011fini izledi.",
+    word: "governance",
+    trWord: "",
+    correct: "governance",
+    blank: "Cross-disciplinary teams monitored where the unconstitutional laws mutate local ___ patterns on grounds that municipal budgets dropped.",
+    options: ["governance", "govern", "government", "governing"],
+    blocks: ["Cross-disciplinary teams monitored where", "the unconstitutional laws mutate", "local governance patterns", "on grounds that", "municipal budgets dropped."]
+  },
+  {
+    en: "The comprehensive evaluation report highlights what the dynamic simulation models predict regarding tectonic plate pressure changes over centuries.",
+    tr: "Kapsaml\u0131 de\u011ferlendirme raporu, dinamik sim\u00fclasyon modellerinin y\u00fczy\u0131llar boyunca tektonik plaka bas\u0131n\u00e7 de\u011fi\u015fimlerine ili\u015fkin neyi \u00f6ng\u00f6rd\u00fc\u011f\u00fcn\u00fc vurguluyor.",
+    word: "tectonic",
+    trWord: "",
+    correct: "tectonic",
+    blank: "The comprehensive evaluation report highlights what the dynamic simulation models predict regarding ___ plate pressure changes over centuries.",
+    options: ["tectonic", "tectonics", "tectonically", "tectonism"],
+    blocks: ["The comprehensive evaluation report", "highlights what the dynamic", "simulation models predict regarding", "tectonic plate pressure", "changes over centuries."]
+  },
+  {
+    en: "No one in the laboratory facility discovered who compiled the analytical data files before the server memory pool suffered a severe leak anomaly.",
+    tr: "Sunucu bellek havuzu ciddi bir s\u0131z\u0131nt\u0131 anomalisi ya\u015famadan \u00f6nce, laboratuvar tesisinde hi\u00e7 kimse analitik veri dosyalar\u0131n\u0131 kimin derledi\u011fini ke\u015ffedemedi.",
+    word: "anomaly",
+    trWord: "",
+    correct: "anomaly",
+    blank: "No one in the laboratory facility discovered who compiled the analytical data files before the server memory pool suffered a severe leak ___.",
+    options: ["anomaly", "anomalies", "anomalous", "anomalously"],
+    blocks: ["No one in the laboratory", "facility discovered who compiled the", "analytical data files before the", "server memory pool suffered", "a severe leak anomaly."]
+  },
+  {
+    en: "Technicians calculated how the parameterized matrix expands under extreme heat metrics to ensure that heavy weight capacities were verified.",
+    tr: "Teknisyenler, a\u011f\u0131r a\u011f\u0131rl\u0131k kapasitelerinin do\u011frulanmas\u0131n\u0131 sa\u011flamak i\u00e7in parametrelendirilmi\u015f matrisin a\u015f\u0131r\u0131 \u0131s\u0131 metrikleri alt\u0131nda nas\u0131l geni\u015fledi\u011fini hesaplad\u0131.",
+    word: "verified",
+    trWord: "",
+    correct: "verified",
+    blank: "Technicians calculated how the parameterized matrix expands under extreme heat metrics to ensure that heavy weight capacities were ___.",
+    options: ["verified", "verify", "verification", "verifying"],
+    blocks: ["Technicians calculated how the", "parameterized matrix expands under", "extreme heat metrics to", "ensure that heavy weight", "capacities were verified."]
+  },
+  {
+    en: "Intellectual academics investigated why alternative regimes collapse into structural instability whenever central banks fail to regulate monetary values.",
+    tr: "Entelekt\u00fcel akademisyenler, merkez bankalar\u0131 parasal de\u011ferleri d\u00fczenleyemedi\u011finde alternatif rejimlerin neden yap\u0131sal istikrars\u0131zl\u0131\u011fa \u00e7\u00f6kt\u00fc\u011f\u00fcn\u00fc ara\u015ft\u0131rd\u0131.",
+    word: "instability",
+    trWord: "",
+    correct: "instability",
+    blank: "Intellectual academics investigated why alternative regimes collapse into structural ___ whenever central banks fail to regulate monetary values.",
+    options: ["instability", "stability", "unstable", "stabilize"],
+    blocks: ["Intellectual academics investigated why", "alternative regimes collapse into", "structural instability whenever central", "banks fail to", "regulate monetary values."]
+  },
+  {
+    en: "The database tracking script records where the metadata parameters reside while the secondary load balancing algorithm routes cloud traffic.",
+    tr: "\u0130kincil y\u00fck dengeleme algoritmas\u0131 bulut trafi\u011fini y\u00f6nlendirirken, veri taban\u0131 takip beti\u011fi meta veri parametrelerinin nerede bulundu\u011funu kaydeder.",
+    word: "balancing",
+    trWord: "",
+    correct: "balancing",
+    blank: "The database tracking script records where the metadata parameters reside while the secondary load ___ algorithm routes cloud traffic.",
+    options: ["balancing", "balance", "balanced", "balancer"],
+    blocks: ["The database tracking script", "records where the metadata", "parameters reside while the", "secondary load balancing algorithm", "routes cloud traffic."]
+  },
+  {
+    en: "The development documentation describes what the software compiler refactors inside the legacy source code files to reduce runtime latency.",
+    tr: "Geli\u015ftirme dok\u00fcmantasyonu, yaz\u0131l\u0131m derleyicisinin \u00e7al\u0131\u015fma s\u00fcresi gecikmesini azaltmak i\u00e7in eski kaynak kod dosyalar\u0131n\u0131n i\u00e7inde neyi yeniden d\u00fczenledi\u011fini a\u00e7\u0131klar.",
+    word: "latency",
+    trWord: "",
+    correct: "latency",
+    blank: "The development documentation describes what the software compiler refactors inside the legacy source code files to reduce runtime ___.",
+    options: ["latency", "latent", "lately", "late"],
+    blocks: ["The development documentation describes", "what the software compiler", "refactors inside the legacy", "source code files to", "reduce runtime latency."]
+  },
+  {
+    en: "Biologists demonstrated how the chemical innovations transform organic structures by exposing fragile cell samples to direct laboratory radiation.",
+    tr: "Biyologlar, hassas h\u00fccre \u00f6rneklerini do\u011frudan laboratuvar radyasyonuna maruz b\u0131rakarak kimyasal yeniliklerin organik yap\u0131lar\u0131 nas\u0131l d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fcn\u00fc g\u00f6sterdi.",
+    word: "radiation",
+    trWord: "",
+    correct: "radiation",
+    blank: "Biologists demonstrated how the chemical innovations transform organic structures by exposing fragile cell samples to direct laboratory ___.",
+    options: ["radiation", "radiate", "radiant", "radiator"],
+    blocks: ["Biologists demonstrated how the", "chemical innovations transform organic", "structures by exposing fragile", "cell samples to", "direct laboratory radiation."]
+  },
+  {
+    en: "The summary paper shows why the specific indicators decline rapidly unless specialists apply advanced protective resins to the wooden frames.",
+    tr: "\u00d6zet rapor, uzmanlar ah\u015fap \u00e7er\u00e7evelere geli\u015fmi\u015f koruyucu re\u00e7ineler uygulamad\u0131k\u00e7a, belirli g\u00f6stergelerin neden h\u0131zla d\u00fc\u015ft\u00fc\u011f\u00fcn\u00fc g\u00f6steriyor.",
+    word: "resins",
+    trWord: "",
+    correct: "resins",
+    blank: "The summary paper shows why the specific indicators decline rapidly unless specialists apply advanced protective ___ to the wooden frames.",
+    options: ["resins", "resin", "resinous", "resined"],
+    blocks: ["The summary paper shows", "why the specific indicators", "decline rapidly unless specialists", "apply advanced protective resins", "to the wooden frames."]
+  },
+  {
+    en: "Independent compliance committees reviewed what the legislative assembly enforces regarding digital currency assets and private token logging.",
+    tr: "Ba\u011f\u0131ms\u0131z uyumluluk komiteleri, yasama meclisinin dijital para varl\u0131klar\u0131 ve \u00f6zel belirte\u00e7 g\u00fcnl\u00fc\u011f\u00fc konusunda neyi uygulad\u0131\u011f\u0131n\u0131 inceledi.",
+    word: "compliance",
+    trWord: "",
+    correct: "compliance",
+    blank: "Independent ___ committees reviewed what the legislative assembly enforces regarding digital currency assets and private token logging.",
+    options: ["compliance", "compliant", "comply", "complying"],
+    blocks: ["Independent compliance committees reviewed", "what the legislative assembly", "enforces regarding digital", "currency assets and", "private token logging."]
+  },
+  {
+    en: "The laboratory log notes how the raw components decay inside the humid vacuum chamber when cooling valve mechanisms fail unexpectedly.",
+    tr: "So\u011futma valfi mekanizmalar\u0131 beklenmedik \u015fekilde ar\u0131zaland\u0131\u011f\u0131nda, laboratuvar g\u00fcnl\u00fc\u011f\u00fc ham bile\u015fenlerin nemli vakum odas\u0131 i\u00e7inde nas\u0131l \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fcn\u00fc kaydeder.",
+    word: "mechanisms",
+    trWord: "",
+    correct: "mechanisms",
+    blank: "The laboratory log notes how the raw components decay inside the humid vacuum chamber when cooling valve ___ fail unexpectedly.",
+    options: ["mechanisms", "mechanism", "mechanic", "mechanical"],
+    blocks: ["The laboratory log notes", "how the raw components", "decay inside the humid", "vacuum chamber when cooling", "valve mechanisms fail unexpectedly."]
+  },
+  {
+    en: "Security software automatically identifies why the contradictory codes conflict with system firewall configurations during background data synchronization loops.",
+    tr: "G\u00fcvenlik yaz\u0131l\u0131m\u0131, arka plan veri senkronizasyonu d\u00f6ng\u00fcleri s\u0131ras\u0131nda \u00e7eli\u015fkili kodlar\u0131n sistem g\u00fcvenlik duvar\u0131 yap\u0131land\u0131rmalar\u0131yla neden \u00e7ak\u0131\u015ft\u0131\u011f\u0131n\u0131 otomatik olarak tespit eder.",
+    word: "synchronization",
+    trWord: "",
+    correct: "synchronization",
+    blank: "Security software automatically identifies why the contradictory codes conflict with system firewall configurations during background data ___ loops.",
+    options: ["synchronization", "synchronize", "synchronous", "synchronously"],
+    blocks: ["Security software automatically identifies", "why the contradictory codes", "conflict with system firewall", "configurations during background", "data synchronization loops."]
+  },
+  {
+    en: "The baseline configuration maps where the distributed network traffic diverges lest anonymous hackers should exploit the unencrypted gateway.",
+    tr: "Temel yap\u0131land\u0131rma, kimli\u011fi belirsiz bilgisayar korsanlar\u0131n\u0131n \u015fifrelenmemi\u015f ge\u00e7idi istismar etmemesi i\u00e7in da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin nerede ayr\u0131\u015ft\u0131\u011f\u0131n\u0131 haritaland\u0131r\u0131r.",
+    word: "exploit",
+    trWord: "",
+    correct: "exploit",
+    blank: "The baseline configuration maps where the distributed network traffic diverges lest anonymous hackers should ___ the unencrypted gateway.",
+    options: ["exploit", "exploitation", "exploited", "exploiting"],
+    blocks: ["The baseline configuration maps", "where the distributed network", "traffic diverges lest anonymous", "hackers should exploit", "the unencrypted gateway."]
+  }
+];
+
+const unit25Lesson2Group1Raw = [
+  {
+    en: "that the constituent framework functions perfectly",
+    tr: "bile\u015fen \u00e7er\u00e7evenin kusursuz \u00e7al\u0131\u015ft\u0131\u011f\u0131 ger\u00e7e\u011fi",
+    word: "perfectly",
+    trWord: "",
+    correct: "perfectly",
+    blank: "that the constituent framework functions ___",
+    options: ["perfectly", "perfect", "perfection", "perfecting"],
+    blocks: ["that the", "constituent framework", "functions perfectly"]
+  },
+  {
+    en: "that economic indicators fluctuate regularly",
+    tr: "ekonomik g\u00f6stergelerin d\u00fczenli olarak dalgaland\u0131\u011f\u0131",
+    word: "regularly",
+    trWord: "",
+    correct: "regularly",
+    blank: "that economic indicators fluctuate ___",
+    options: ["regularly", "regular", "regularity", "regulate"],
+    blocks: ["that economic", "indicators fluctuate", "regularly"]
+  },
+  {
+    en: "that unconstitutional laws mutate local governance",
+    tr: "anayasaya ayk\u0131r\u0131 yasalar\u0131n yerel y\u00f6netimi de\u011fi\u015ftirdi\u011fi",
+    word: "governance",
+    trWord: "",
+    correct: "governance",
+    blank: "that unconstitutional laws mutate local ___",
+    options: ["governance", "govern", "government", "governing"],
+    blocks: ["that unconstitutional", "laws mutate", "local governance"]
+  },
+  {
+    en: "that dynamic simulation models predict anomalies",
+    tr: "dinamik sim\u00fclasyon modellerinin anomalileri \u00f6ng\u00f6rd\u00fc\u011f\u00fc",
+    word: "anomalies",
+    trWord: "",
+    correct: "anomalies",
+    blank: "that dynamic simulation models predict ___",
+    options: ["anomalies", "anomaly", "anomalous", "anomalously"],
+    blocks: ["that dynamic", "simulation models", "predict anomalies"]
+  },
+  {
+    en: "that the analytical data files were corrupted",
+    tr: "analitik veri dosyalar\u0131n\u0131n bozulmu\u015f oldu\u011fu",
+    word: "corrupted",
+    trWord: "",
+    correct: "corrupted",
+    blank: "that the analytical data files were ___",
+    options: ["corrupted", "corruption", "corrupt", "corrupting"],
+    blocks: ["that the analytical", "data files", "were corrupted"]
+  },
+  {
+    en: "that the parameterized matrix expands under heat",
+    tr: "parametrelendirilmi\u015f matrisin \u0131s\u0131 alt\u0131nda geni\u015fledi\u011fi",
+    word: "heat",
+    trWord: "",
+    correct: "heat",
+    blank: "that the parameterized matrix expands under ___",
+    options: ["heat", "heater", "heating", "hot"],
+    blocks: ["that the parameterized", "matrix expands", "under heat"]
+  },
+  {
+    en: "that alternative regimes will collapse soon",
+    tr: "alternatif rejimlerin yak\u0131nda \u00e7\u00f6kece\u011fi",
+    word: "soon",
+    trWord: "",
+    correct: "soon",
+    blank: "that alternative regimes will collapse ___",
+    options: ["soon", "sooner", "soonest", "early"],
+    blocks: ["that alternative", "regimes will", "collapse soon"]
+  },
+  {
+    en: "that metadata parameters reside in cloud servers",
+    tr: "meta veri parametrelerinin bulut sunucular\u0131nda bulundu\u011fu",
+    word: "cloud",
+    trWord: "",
+    correct: "cloud",
+    blank: "that metadata parameters reside in ___ servers",
+    options: ["cloud", "cloudy", "clouds", "clouding"],
+    blocks: ["that metadata parameters", "reside in", "cloud servers"]
+  },
+  {
+    en: "that the software compiler refactors syntax loops",
+    tr: "yaz\u0131l\u0131m derleyicisinin s\u00f6zdizimi d\u00f6ng\u00fclerini yeniden yap\u0131land\u0131rd\u0131\u011f\u0131",
+    word: "syntax",
+    trWord: "",
+    correct: "syntax",
+    blank: "that the software compiler refactors ___ loops",
+    options: ["syntax", "syntactic", "syntactically", "syntaxes"],
+    blocks: ["that the software", "compiler refactors", "syntax loops"]
+  },
+  {
+    en: "that chemical innovations transform organic structures",
+    tr: "kimyasal yeniliklerin organik yap\u0131lar\u0131 d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fc",
+    word: "organic",
+    trWord: "",
+    correct: "organic",
+    blank: "that chemical innovations transform ___ structures",
+    options: ["organic", "organically", "organ", "organism"],
+    blocks: ["that chemical", "innovations transform", "organic structures"]
+  },
+  {
+    en: "that specific infrastructure indicators decline without resins",
+    tr: "re\u00e7ine olmadan belirli altyap\u0131 g\u00f6stergelerinin d\u00fc\u015ft\u00fc\u011f\u00fc",
+    word: "resins",
+    trWord: "",
+    correct: "resins",
+    blank: "that specific infrastructure indicators decline without ___",
+    options: ["resins", "resin", "resinous", "resining"],
+    blocks: ["that specific infrastructure", "indicators decline", "without resins"]
+  },
+  {
+    en: "that the legislative assembly enforces strict compliance",
+    tr: "yasama meclisinin s\u0131k\u0131 uyumluluk uygulad\u0131\u011f\u0131",
+    word: "compliance",
+    trWord: "",
+    correct: "compliance",
+    blank: "that the legislative assembly enforces strict ___",
+    options: ["compliance", "compliant", "comply", "complying"],
+    blocks: ["that the legislative", "assembly enforces", "strict compliance"]
+  },
+  {
+    en: "that raw organic components decay inside chambers",
+    tr: "ham organik bile\u015fenlerin odalar\u0131n i\u00e7inde \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fc",
+    word: "chambers",
+    trWord: "",
+    correct: "chambers",
+    blank: "that raw organic components decay inside ___",
+    options: ["chambers", "chamber", "chambered", "chambering"],
+    blocks: ["that raw organic", "components decay", "inside chambers"]
+  },
+  {
+    en: "that contradictory codes conflict with system security",
+    tr: "\u00e7eli\u015fkili kodlar\u0131n sistem g\u00fcvenli\u011fi ile \u00e7ak\u0131\u015ft\u0131\u011f\u0131",
+    word: "security",
+    trWord: "",
+    correct: "security",
+    blank: "that contradictory codes conflict with system ___",
+    options: ["security", "secure", "securely", "securing"],
+    blocks: ["that contradictory codes", "conflict with", "system security"]
+  },
+  {
+    en: "that distributed network traffic diverges during peaks",
+    tr: "da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin yo\u011fun zamanlarda ayr\u0131\u015ft\u0131\u011f\u0131",
+    word: "peaks",
+    trWord: "",
+    correct: "peaks",
+    blank: "that distributed network traffic diverges during ___",
+    options: ["peaks", "peak", "peaked", "peaking"],
+    blocks: ["that distributed network", "traffic diverges", "during peaks"]
+  }
+];
+
+const unit25Lesson2Group2Raw = [
+  {
+    en: "The system architect confirmed that the constituent framework functions perfectly.",
+    tr: "Sistem mimar\u0131, bile\u015fen \u00e7er\u00e7evenin kusursuz \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 onaylad\u0131.",
+    word: "confirmed",
+    trWord: "",
+    correct: "confirmed",
+    blank: "The system architect ___ that the constituent framework functions perfectly.",
+    options: ["confirmed", "confirm", "confirmation", "confirming"],
+    blocks: ["The system architect confirmed", "that the constituent", "framework functions perfectly."]
+  },
+  {
+    en: "Financial brokers assume that economic indicators fluctuate regularly.",
+    tr: "Finansal komisyoncular, ekonomik g\u00f6stergelerin d\u00fczenli olarak dalgaland\u0131\u011f\u0131n\u0131 varsayar.",
+    word: "assume",
+    trWord: "",
+    correct: "assume",
+    blank: "Financial brokers ___ that economic indicators fluctuate regularly.",
+    options: ["assume", "assumption", "assumed", "assuming"],
+    blocks: ["Financial brokers assume", "that economic indicators", "fluctuate regularly."]
+  },
+  {
+    en: "The legal counsel proved that unconstitutional laws mutate local governance.",
+    tr: "Hukuk dan\u0131\u015fman\u0131, anayasaya ayk\u0131r\u0131 yasalar\u0131n yerel y\u00f6netimi de\u011fi\u015ftirdi\u011fini kan\u0131tlad\u0131.",
+    word: "proved",
+    trWord: "",
+    correct: "proved",
+    blank: "The legal counsel ___ that unconstitutional laws mutate local governance.",
+    options: ["proved", "proof", "prove", "proving"],
+    blocks: ["The legal counsel proved", "that unconstitutional laws", "mutate local governance."]
+  },
+  {
+    en: "Geologists accept that dynamic simulation models predict anomalies.",
+    tr: "Jeologlar, dinamik sim\u00fclasyon modellerinin anomalileri \u00f6ng\u00f6rd\u00fc\u011f\u00fcn\u00fc kabul eder.",
+    word: "accept",
+    trWord: "",
+    correct: "accept",
+    blank: "Geologists ___ that dynamic simulation models predict anomalies.",
+    options: ["accept", "acceptance", "acceptable", "accepting"],
+    blocks: ["Geologists accept that", "dynamic simulation models", "predict anomalies."]
+  },
+  {
+    en: "The administrator reported that the analytical data files were corrupted.",
+    tr: "Y\u00f6netici, analitik veri dosyalar\u0131n\u0131n bozuldu\u011funu bildirdi.",
+    word: "reported",
+    trWord: "",
+    correct: "reported",
+    blank: "The administrator ___ that the analytical data files were corrupted.",
+    options: ["reported", "report", "reporter", "reporting"],
+    blocks: ["The administrator reported that", "the analytical data", "files were corrupted."]
+  },
+  {
+    en: "Mechanical tests demonstrate that the parameterized matrix expands under heat.",
+    tr: "Mekanik testler, parametrelendirilmi\u015f matrisin \u0131s\u0131 alt\u0131nda geni\u015fledi\u011fini g\u00f6sterir.",
+    word: "demonstrate",
+    trWord: "",
+    correct: "demonstrate",
+    blank: "Mechanical tests ___ that the parameterized matrix expands under heat.",
+    options: ["demonstrate", "demonstrated", "demonstration", "demonstrative"],
+    blocks: ["Mechanical tests demonstrate that", "the parameterized matrix", "expands under heat."]
+  },
+  {
+    en: "Political scientists warn that alternative regimes will collapse soon.",
+    tr: "Siyaset bilimciler, alternatif rejimlerin yak\u0131nda \u00e7\u00f6kece\u011fi konusunda uyar\u0131yor.",
+    word: "warn",
+    trWord: "",
+    correct: "warn",
+    blank: "Political scientists ___ that alternative regimes will collapse soon.",
+    options: ["warn", "warning", "warned", "warner"],
+    blocks: ["Political scientists warn", "that alternative regimes", "will collapse soon."]
+  },
+  {
+    en: "Technicians discovered that metadata parameters reside in cloud servers.",
+    tr: "Teknisyenler, meta veri parametrelerinin bulut sunucular\u0131nda yer ald\u0131\u011f\u0131n\u0131 ke\u015ffetti.",
+    word: "discovered",
+    trWord: "",
+    correct: "discovered",
+    blank: "Technicians ___ that metadata parameters reside in cloud servers.",
+    options: ["discovered", "discovery", "discover", "discovering"],
+    blocks: ["Technicians discovered that", "metadata parameters reside", "in cloud servers."]
+  },
+  {
+    en: "Software developers realized that the software compiler refactors syntax loops.",
+    tr: "Yaz\u0131l\u0131m geli\u015ftiriciler, yaz\u0131l\u0131m derleyicisinin s\u00f6zdizimi d\u00f6ng\u00fclerini yeniden yap\u0131land\u0131rd\u0131\u011f\u0131n\u0131 fark etti.",
+    word: "realized",
+    trWord: "",
+    correct: "realized",
+    blank: "Software developers ___ that the software compiler refactors syntax loops.",
+    options: ["realized", "realization", "realize", "realizing"],
+    blocks: ["Software developers realized that", "the software compiler", "refactors syntax loops."]
+  },
+  {
+    en: "Research teams verified that chemical innovations transform organic structures.",
+    tr: "Ara\u015ft\u0131rma ekipleri, kimyasal yeniliklerin organik yap\u0131lar\u0131 d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fcn\u00fc do\u011frulad\u0131.",
+    word: "verified",
+    trWord: "",
+    correct: "verified",
+    blank: "Research teams ___ that chemical innovations transform organic structures.",
+    options: ["verified", "verification", "verify", "verifying"],
+    blocks: ["Research teams verified", "that chemical innovations", "transform organic structures."]
+  },
+  {
+    en: "Field crews acknowledged that specific infrastructure indicators decline without resins.",
+    tr: "Saha ekipleri, re\u00e7ine olmadan belirli altyap\u0131 g\u00f6stergelerinin d\u00fc\u015ft\u00fc\u011f\u00fcn\u00fc kabul etti.",
+    word: "acknowledged",
+    trWord: "",
+    correct: "acknowledged",
+    blank: "Field crews ___ that specific infrastructure indicators decline without resins.",
+    options: ["acknowledged", "acknowledgement", "acknowledging", "acknowledge"],
+    blocks: ["Field crews acknowledged that", "specific infrastructure indicators", "decline without resins."]
+  },
+  {
+    en: "Corporate firms recognized that the legislative assembly enforces strict compliance.",
+    tr: "Kurumsal firmalar, yasama meclisinin s\u0131k\u0131 uyumluluk uygulad\u0131\u011f\u0131n\u0131 kabul etti.",
+    word: "recognized",
+    trWord: "",
+    correct: "recognized",
+    blank: "Corporate firms ___ that the legislative assembly enforces strict compliance.",
+    options: ["recognized", "recognition", "recognizably", "recognize"],
+    blocks: ["Corporate firms recognized that", "the legislative assembly", "enforces strict compliance."]
+  },
+  {
+    en: "Laboratory supervisors noticed that raw organic components decay inside chambers.",
+    tr: "Laboratuvar denet\u00e7ileri, ham organik bile\u015fenlerin odalar\u0131n i\u00e7inde \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fcn\u00fc fark etti.",
+    word: "noticed",
+    trWord: "",
+    correct: "noticed",
+    blank: "Laboratory supervisors ___ that raw organic components decay inside chambers.",
+    options: ["noticed", "notice", "noticeable", "noticing"],
+    blocks: ["Laboratory supervisors noticed that", "raw organic components", "decay inside chambers."]
+  },
+  {
+    en: "Security audits revealed that contradictory codes conflict with system security.",
+    tr: "G\u00fcvenlik denetimleri, \u00e7eli\u015fkili kodlar\u0131n sistem g\u00fcvenli\u011fi ile \u00e7ak\u0131\u015ft\u0131\u011f\u0131n\u0131 ortaya \u00e7\u0131kard\u0131.",
+    word: "revealed",
+    trWord: "",
+    correct: "revealed",
+    blank: "Security audits ___ that contradictory codes conflict with system security.",
+    options: ["revealed", "revelation", "reveal", "revealing"],
+    blocks: ["Security audits revealed that", "contradictory codes conflict", "with system security."]
+  },
+  {
+    en: "Network analytics indicated that distributed network traffic diverges during peaks.",
+    tr: "A\u011f analiti\u011fi, da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin yo\u011fun zamanlarda ayr\u0131\u015ft\u0131\u011f\u0131n\u0131 g\u00f6sterdi.",
+    word: "indicated",
+    trWord: "",
+    correct: "indicated",
+    blank: "Network analytics ___ that distributed network traffic diverges during peaks.",
+    options: ["indicated", "indicative", "indication", "indicate"],
+    blocks: ["Network analytics indicated that", "distributed network traffic", "diverges during peaks."]
+  }
+];
+
+const unit25Lesson2Group3Raw = [
+  {
+    en: "The system architect confirmed that the constituent framework functions perfectly after the database migration process completed its validation sequence.",
+    tr: "Sistem mimar\u0131, veri taban\u0131 g\u00f6\u00e7\u00fc s\u00fcreci do\u011frulama s\u0131ras\u0131n\u0131 tamamlad\u0131ktan sonra bile\u015fen \u00e7er\u00e7evenin kusursuz \u00e7al\u0131\u015ft\u0131\u011f\u0131n\u0131 onaylad\u0131.",
+    word: "validation",
+    trWord: "",
+    correct: "validation",
+    blank: "The system architect confirmed that the constituent framework functions perfectly after the database migration process completed its ___ sequence.",
+    options: ["validation", "validate", "valid", "validity"],
+    blocks: ["The system architect confirmed", "that the constituent framework", "functions perfectly after the", "database migration process completed", "its validation sequence."]
+  },
+  {
+    en: "Financial brokers assume that economic indicators fluctuate regularly because volatile market indicators are influenced by global tariff adjustments.",
+    tr: "Finansal komisyoncular, de\u011fi\u015fken piyasa g\u00f6stergeleri k\u00fcresel tarife ayarlamalar\u0131ndan etkilendi\u011fi i\u00e7in ekonomik g\u00f6stergelerin d\u00fczenli olarak dalgaland\u0131\u011f\u0131n\u0131 varsayar.",
+    word: "adjustments",
+    trWord: "",
+    correct: "adjustments",
+    blank: "Financial brokers assume that economic indicators fluctuate regularly because volatile market indicators are influenced by global tariff ___.",
+    options: ["adjustments", "adjustment", "adjust", "adjustable"],
+    blocks: ["Financial brokers assume that", "economic indicators fluctuate regularly", "because volatile market indicators", "are influenced by", "global tariff adjustments."]
+  },
+  {
+    en: "The legal counsel proved that unconstitutional laws mutate local governance structures, forcing regional state departments to demand immediate amendments.",
+    tr: "Hukuk dan\u0131\u015fman\u0131, anayasaya ayk\u0131r\u0131 yasalar\u0131n yerel y\u00f6netim yap\u0131lar\u0131n\u0131 de\u011fi\u015ftirdi\u011fini kan\u0131tlayarak b\u00f6lgesel devlet dairelerini acil de\u011fi\u015fiklikler talep etmeye zorlad\u0131.",
+    word: "amendments",
+    trWord: "",
+    correct: "amendments",
+    blank: "The legal counsel proved that unconstitutional laws mutate local governance structures, forcing regional state departments to demand immediate ___.",
+    options: ["amendments", "amendment", "amend", "amending"],
+    blocks: ["The legal counsel proved", "that unconstitutional laws mutate", "local governance structures, forcing", "regional state departments to", "demand immediate amendments."]
+  },
+  {
+    en: "Geologists accept that dynamic simulation models predict anomalies just as the original mathematical equations from the research study indicated.",
+    tr: "Jeologlar, dinamik sim\u00fclasyon modellerinin t\u0131pk\u0131 ara\u015ft\u0131rma \u00e7al\u0131\u015fmas\u0131ndaki orijinal matematiksel denklemlerin g\u00f6sterdi\u011fi gibi anomalileri \u00f6ng\u00f6rd\u00fc\u011f\u00fcn\u00fc kabul eder.",
+    word: "equations",
+    trWord: "",
+    correct: "equations",
+    blank: "Geologists accept that dynamic simulation models predict anomalies just as the original mathematical ___ from the research study indicated.",
+    options: ["equations", "equation", "equate", "equality"],
+    blocks: ["Geologists accept that dynamic", "simulation models predict anomalies", "just as the original", "mathematical equations from the", "research study indicated."]
+  },
+  {
+    en: "The platform administrator reported that the analytical data files were corrupted because an unhandled database overflow occurred last night.",
+    tr: "Platform y\u00f6neticisi, d\u00fcn gece i\u015flenmemi\u015f bir veri taban\u0131 ta\u015fmas\u0131 meydana geldi\u011fi i\u00e7in analitik veri dosyalar\u0131n\u0131n bozuldu\u011funu bildirdi.",
+    word: "overflow",
+    trWord: "",
+    correct: "overflow",
+    blank: "The platform administrator reported that the analytical data files were corrupted because an unhandled database ___ occurred last night.",
+    options: ["overflow", "overflowed", "overflowing", "overflows"],
+    blocks: ["The platform administrator reported", "that the analytical data", "files were corrupted because", "an unhandled database overflow", "occurred last night."]
+  },
+  {
+    en: "Mechanical tests demonstrate that the parameterized matrix expands under heat metrics unless field technicians activate cooling valve pumps.",
+    tr: "Mekanik testler, saha teknisyenleri so\u011futma valfi pompalar\u0131n\u0131 etkinle\u015ftirmedik\u00e7e parametrelendirilmi\u015f matrisin \u0131s\u0131 metrikleri alt\u0131nda geni\u015fledi\u011fini g\u00f6sterir.",
+    word: "pumps",
+    trWord: "",
+    correct: "pumps",
+    blank: "Mechanical tests demonstrate that the parameterized matrix expands under heat metrics unless field technicians activate cooling valve ___.",
+    options: ["pumps", "pump", "pumped", "pumping"],
+    blocks: ["Mechanical tests demonstrate that", "the parameterized matrix expands", "under heat metrics unless", "field technicians activate", "cooling valve pumps."]
+  },
+  {
+    en: "Political scientists warn that alternative regimes will collapse soon seeing that civic engagement indicators dropped significantly this year.",
+    tr: "Siyaset bilimciler, sivil kat\u0131l\u0131m g\u00f6stergelerinin bu y\u0131l \u00f6nemli \u00f6l\u00e7\u00fcde d\u00fc\u015ft\u00fc\u011f\u00fcn\u00fc g\u00f6z \u00f6n\u00fcne alarak alternatif rejimlerin yak\u0131nda \u00e7\u00f6kece\u011fi konusunda uyar\u0131yor.",
+    word: "engagement",
+    trWord: "",
+    correct: "engagement",
+    blank: "Political scientists warn that alternative regimes will collapse soon seeing that civic ___ indicators dropped significantly this year.",
+    options: ["engagement", "engage", "engaged", "engaging"],
+    blocks: ["Political scientists warn that", "alternative regimes will collapse", "soon seeing that civic", "engagement indicators dropped", "significantly this year."]
+  },
+  {
+    en: "Technicians discovered that metadata parameters reside in cloud servers that lack advanced multi-factor authentication validation clearance.",
+    tr: "Teknisyenler, meta veri parametrelerinin geli\u015fmi\u015f \u00e7ok fakt\u00f6rl\u00fc kimlik do\u011frulama do\u011frulama yetkisi olmayan bulut sunucular\u0131nda bulundu\u011funu ke\u015ffetti.",
+    word: "authentication",
+    trWord: "",
+    correct: "authentication",
+    blank: "Technicians discovered that metadata parameters reside in cloud servers that lack advanced multi-factor ___ validation clearance.",
+    options: ["authentication", "authenticate", "authentic", "authenticity"],
+    blocks: ["Technicians discovered that metadata", "parameters reside in", "cloud servers that", "lack advanced multi-factor", "authentication validation clearance."]
+  },
+  {
+    en: "Software developers realized that the software compiler refactors syntax loops automatically to minimize query response latency thresholds.",
+    tr: "Yaz\u0131l\u0131m geli\u015ftiriciler, yaz\u0131l\u0131m derleyicisinin sorgu yan\u0131t gecikme e\u015fiklerini en aza indirmek i\u00e7in s\u00f6zdizimi d\u00f6ng\u00fclerini otomatik olarak yeniden yap\u0131land\u0131rd\u0131\u011f\u0131n\u0131 fark etti.",
+    word: "thresholds",
+    trWord: "",
+    correct: "thresholds",
+    blank: "Software developers realized that the software compiler refactors syntax loops automatically to minimize query response latency ___.",
+    options: ["thresholds", "threshold", "thresh", "threshed"],
+    blocks: ["Software developers realized that", "the software compiler refactors", "syntax loops automatically", "to minimize query", "response latency thresholds."]
+  },
+  {
+    en: "Research teams verified that chemical innovations transform organic structures long before the project development timeline was modified.",
+    tr: "Ara\u015ft\u0131rma ekipleri, kimyasal yeniliklerin organik yap\u0131lar\u0131 proje geli\u015ftirme zaman \u00e7izelgesi de\u011fi\u015ftirilmeden \u00e7ok \u00f6nce d\u00f6n\u00fc\u015ft\u00fcrd\u00fc\u011f\u00fcn\u00fc do\u011frulad\u0131.",
+    word: "timeline",
+    trWord: "",
+    correct: "timeline",
+    blank: "Research teams verified that chemical innovations transform organic structures long before the project development ___ was modified.",
+    options: ["timeline", "time", "lines", "timely"],
+    blocks: ["Research teams verified that", "chemical innovations transform organic", "structures long before", "the project development", "timeline was modified."]
+  },
+  {
+    en: "Field crews acknowledged that specific infrastructure indicators decline without resins although they worked intensely to reinforce foundations.",
+    tr: "Saha ekipleri, temelleri g\u00fc\u00e7lendirmek i\u00e7in yo\u011fun bir \u015fekilde \u00e7al\u0131\u015fmalar\u0131na ra\u011fmen re\u00e7ine olmadan belirli altyap\u0131 g\u00f6stergelerinin d\u00fc\u015ft\u00fc\u011f\u00fcn\u00fc kabul etti.",
+    word: "reinforce",
+    trWord: "",
+    correct: "reinforce",
+    blank: "Field crews acknowledged that specific infrastructure indicators decline without resins although they worked intensely to ___ foundations.",
+    options: ["reinforce", "reinforcement", "reinforced", "reinforcing"],
+    blocks: ["Field crews acknowledged that", "specific infrastructure indicators decline", "without resins although", "they worked intensely", "to reinforce foundations."]
+  },
+  {
+    en: "Corporate firms recognized that the legislative assembly enforces strict compliance seeing that strict privacy codes were implemented.",
+    tr: "Kurumsal firmalar, s\u0131k\u0131 gizlilik kurallar\u0131n\u0131n uyguland\u0131\u011f\u0131n\u0131 g\u00f6z \u00f6n\u00fcne alarak yasama meclisinin s\u0131k\u0131 uyumluluk uygulad\u0131\u011f\u0131n\u0131 kabul etti.",
+    word: "privacy",
+    trWord: "",
+    correct: "privacy",
+    blank: "Corporate firms recognized that the legislative assembly enforces strict compliance seeing that strict ___ codes were implemented.",
+    options: ["privacy", "private", "privately", "privatize"],
+    blocks: ["Corporate firms recognized that", "the legislative assembly enforces", "strict compliance seeing", "that strict privacy", "codes were implemented."]
+  },
+  {
+    en: "Laboratory supervisors noticed that raw organic components decay inside chambers before technicians isolated the sterile fluid containers.",
+    tr: "Laboratuvar denet\u00e7ileri, teknisyenler steril s\u0131v\u0131 kaplar\u0131n\u0131 izole etmeden \u00f6nce ham organik bile\u015fenlerin odalar\u0131n i\u00e7inde \u00e7\u00fcr\u00fcd\u00fc\u011f\u00fcn\u00fc fark etti.",
+    word: "sterile",
+    trWord: "",
+    correct: "sterile",
+    blank: "Laboratory supervisors noticed that raw organic components decay inside chambers before technicians isolated the ___ fluid containers.",
+    options: ["sterile", "sterility", "sterilize", "sterilizing"],
+    blocks: ["Laboratory supervisors noticed that", "raw organic components decay", "inside chambers before", "technicians isolated the", "sterile fluid containers."]
+  },
+  {
+    en: "Security audits revealed that contradictory codes conflict with system security until the primary software patch package was deployed globally.",
+    tr: "G\u00fcvenlik denetimleri, birincil yaz\u0131l\u0131m yamas\u0131 paketi k\u00fcresel olarak da\u011f\u0131t\u0131lana kadar \u00e7eli\u015fkili kodlar\u0131n sistem g\u00fcvenli\u011fi ile \u00e7ak\u0131\u015ft\u0131\u011f\u0131n\u0131 ortaya \u00e7\u0131kard\u0131.",
+    word: "globally",
+    trWord: "",
+    correct: "globally",
+    blank: "Security audits revealed that contradictory codes conflict with system security until the primary software patch package was deployed ___.",
+    options: ["globally", "global", "globe", "globalize"],
+    blocks: ["Security audits revealed that", "contradictory codes conflict with", "system security until the", "primary software patch package", "was deployed globally."]
+  },
+  {
+    en: "Network analytics indicated that distributed network traffic diverges during peaks while the automated balancing script routes queries.",
+    tr: "A\u011f analiti\u011fi, otomatik dengeleme beti\u011fi sorgular\u0131 y\u00f6nlendirirken da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin yo\u011fun zamanlarda ayr\u0131\u015ft\u0131\u011f\u0131n\u0131 g\u00f6sterdi.",
+    word: "routing",
+    trWord: "",
+    correct: "routing",
+    blank: "Network analytics indicated that distributed network traffic diverges during peaks while the automated balancing script routes queries.",
+    options: ["routing", "route", "routed", "routes"],
+    blocks: ["Network analytics indicated that", "distributed network traffic diverges", "during peaks while", "the automated balancing", "script routes queries."]
+  }
+];
+
+const unit25Lesson3Group1Raw = [
+  {
+    en: "whether the constituent framework functions under load",
+    tr: "bile\u015fen \u00e7er\u00e7evenin y\u00fck alt\u0131nda \u00e7al\u0131\u015f\u0131p \u00e7al\u0131\u015fmad\u0131\u011f\u0131",
+    word: "load",
+    trWord: "",
+    correct: "load",
+    blank: "whether the constituent framework functions under ___",
+    options: ["load", "loading", "loaded", "loader"],
+    blocks: ["whether the constituent", "framework functions", "under load"]
+  },
+  {
+    en: "whether the economic indicators fluctuated next quarter",
+    tr: "ekonomik g\u00f6stergelerin gelecek \u00e7eyrekte dalgalan\u0131p dalgalanmad\u0131\u011f\u0131",
+    word: "economic",
+    trWord: "",
+    correct: "economic",
+    blank: "whether the ___ indicators fluctuated next quarter",
+    options: ["economic", "economical", "economy", "economics"],
+    blocks: ["whether the economic", "indicators fluctuated", "next quarter"]
+  },
+  {
+    en: "if unconstitutional laws mutate regional codes",
+    tr: "anayasaya ayk\u0131r\u0131 yasalar\u0131n b\u00f6lgesel kodlar\u0131 de\u011fi\u015ftirip de\u011fi\u015ftirmedi\u011fi",
+    word: "mutate",
+    trWord: "",
+    correct: "mutate",
+    blank: "if unconstitutional laws ___ regional codes",
+    options: ["mutate", "mutation", "mutated", "mutative"],
+    blocks: ["if unconstitutional", "laws mutate", "regional codes"]
+  },
+  {
+    en: "whether dynamic simulation models predict heat anomalies",
+    tr: "dinamik sim\u00fclasyon modellerinin \u0131s\u0131 anomalilerini \u00f6ng\u00f6r\u00fcp \u00f6ng\u00f6rmedi\u011fi",
+    word: "predict",
+    trWord: "",
+    correct: "predict",
+    blank: "whether dynamic simulation models ___ heat anomalies",
+    options: ["predict", "prediction", "predictive", "predicted"],
+    blocks: ["whether dynamic simulation", "models predict", "heat anomalies"]
+  },
+  {
+    en: "if the analytical data files suffered corruption",
+    tr: "analitik veri dosyalar\u0131n\u0131n bozulmaya u\u011fray\u0131p u\u011framad\u0131\u011f\u0131",
+    word: "corruption",
+    trWord: "",
+    correct: "corruption",
+    blank: "if the analytical data files suffered ___",
+    options: ["corruption", "corrupt", "corrupted", "corrupting"],
+    blocks: ["if the analytical", "data files", "suffered corruption"]
+  },
+  {
+    en: "whether the parameterized matrix expands during tests",
+    tr: "parametrelendirilmi\u015f matrisin testler s\u0131ras\u0131nda geni\u015fleyip geni\u015flemedi\u011fi",
+    word: "during",
+    trWord: "",
+    correct: "during",
+    blank: "whether the parameterized matrix expands ___ tests",
+    options: ["during", "while", "before", "after"],
+    blocks: ["whether the parameterized", "matrix expands", "during tests"]
+  },
+  {
+    en: "if alternative regimes will collapse under inflation",
+    tr: "alternatif rejimlerin enflasyon alt\u0131nda \u00e7\u00f6k\u00fcp \u00e7\u00f6kmeyece\u011fi",
+    word: "inflation",
+    trWord: "",
+    correct: "inflation",
+    blank: "if alternative regimes will collapse under ___",
+    options: ["inflation", "inflate", "inflated", "inflationary"],
+    blocks: ["if alternative regimes", "will collapse", "under inflation"]
+  },
+  {
+    en: "whether metadata parameters reside in local repositories",
+    tr: "meta veri parametrelerinin yerel depolarda bulunup bulunmad\u0131\u011f\u0131",
+    word: "repositories",
+    trWord: "",
+    correct: "repositories",
+    blank: "whether metadata parameters reside in local ___",
+    options: ["repositories", "repository", "repose", "reposition"],
+    blocks: ["whether metadata parameters", "reside in", "local repositories"]
+  },
+  {
+    en: "if the software compiler refactors syntax errors",
+    tr: "yaz\u0131l\u0131m derleyicisinin s\u00f6zdizimi hatalar\u0131n\u0131 yeniden d\u00fczenleyip d\u00fczenlemedi\u011fi",
+    word: "refactors",
+    trWord: "",
+    correct: "refactors",
+    blank: "if the software compiler ___ syntax errors",
+    options: ["refactors", "refactoring", "refactored", "refactor"],
+    blocks: ["if the software", "compiler refactors", "syntax errors"]
+  },
+  {
+    en: "whether chemical innovations transform cell structures",
+    tr: "kimyasal yeniliklerin h\u00fccre yap\u0131lar\u0131n\u0131 d\u00f6n\u00fc\u015ft\u00fcr\u00fcp d\u00f6n\u00fc\u015ft\u00fcrmedi\u011fi",
+    word: "structures",
+    trWord: "",
+    correct: "structures",
+    blank: "whether chemical innovations transform cell ___",
+    options: ["structures", "structure", "structural", "structured"],
+    blocks: ["whether chemical", "innovations transform", "cell structures"]
+  },
+  {
+    en: "if specific infrastructure indicators decline over time",
+    tr: "belirli altyap\u0131 g\u00f6stergelerinin zamanla d\u00fc\u015f\u00fcp d\u00fc\u015fmedi\u011fi",
+    word: "decline",
+    trWord: "",
+    correct: "decline",
+    blank: "if specific infrastructure indicators ___ over time",
+    options: ["decline", "declined", "declining", "declination"],
+    blocks: ["if specific infrastructure", "indicators decline", "over time"]
+  },
+  {
+    en: "whether the legislative assembly enforces regulatory frameworks",
+    tr: "yasama meclisinin d\u00fczenleyici \u00e7er\u00e7eveler uygulay\u0131p uygulamad\u0131\u011f\u0131",
+    word: "regulatory",
+    trWord: "",
+    correct: "regulatory",
+    blank: "whether the legislative assembly enforces ___ frameworks",
+    options: ["regulatory", "regulate", "regulation", "regulator"],
+    blocks: ["whether the legislative", "assembly enforces", "regulatory frameworks"]
+  },
+  {
+    en: "if raw organic components decay inside vacuum tubes",
+    tr: "ham organik bile\u015fenlerin vakum t\u00fcplerinin i\u00e7inde \u00e7\u00fcr\u00fcy\u00fcp \u00e7\u00fcr\u00fcmedi\u011fi",
+    word: "vacuum",
+    trWord: "",
+    correct: "vacuum",
+    blank: "if raw organic components decay inside ___ tubes",
+    options: ["vacuum", "vacuums", "vacuous", "vacuity"],
+    blocks: ["if raw organic", "components decay inside", "vacuum tubes"]
+  },
+  {
+    en: "whether contradictory codes conflict with active firewalls",
+    tr: "\u00e7eli\u015fkili kodlar\u0131n aktif g\u00fcvenlik duvarlar\u0131yla \u00e7ak\u0131\u015f\u0131p \u00e7ak\u0131\u015fmad\u0131\u011f\u0131",
+    word: "active",
+    trWord: "",
+    correct: "active",
+    blank: "whether contradictory codes conflict with ___ firewalls",
+    options: ["active", "activity", "actively", "activation"],
+    blocks: ["whether contradictory codes", "conflict with", "active firewalls"]
+  },
+  {
+    en: "if distributed network traffic diverges from the baseline",
+    tr: "da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin referans \u00e7izgisinden ayr\u0131\u015f\u0131p ayr\u0131\u015fmad\u0131\u011f\u0131",
+    word: "diverges",
+    trWord: "",
+    correct: "diverges",
+    blank: "if distributed network traffic ___ from the baseline",
+    options: ["diverges", "divergence", "diverging", "divergent"],
+    blocks: ["if distributed network", "traffic diverges from", "the baseline"]
+  }
+];
+
+const unit25Lesson3Group2Raw = [
+  {
+    en: "The coordinator questioned whether the constituent framework functions under load.",
+    tr: "Koordinat\u00f6r, bile\u015fen \u00e7er\u00e7evenin y\u00fck alt\u0131nda \u00e7al\u0131\u015f\u0131p \u00e7al\u0131\u015fmad\u0131\u011f\u0131n\u0131 sorgulad\u0131.",
+    word: "questioned",
+    trWord: "",
+    correct: "questioned",
+    blank: "The coordinator ___ whether the constituent framework functions under load.",
+    options: ["questioned", "question", "questioning", "questionable"],
+    blocks: ["The coordinator questioned whether", "the constituent framework", "functions under load."]
+  },
+  {
+    en: "Financial experts debated whether the economic indicators fluctuated next quarter.",
+    tr: "Finans uzmanlar\u0131, ekonomik g\u00f6stergelerin gelecek \u00e7eyrekte dalgalan\u0131p dalgalanmad\u0131\u011f\u0131n\u0131 tart\u0131\u015ft\u0131.",
+    word: "debated",
+    trWord: "",
+    correct: "debated",
+    blank: "Financial experts ___ whether the economic indicators fluctuated next quarter.",
+    options: ["debated", "debate", "debating", "debators"],
+    blocks: ["Financial experts debated whether", "the economic indicators", "fluctuated next quarter."]
+  },
+  {
+    en: "Citizens wonder if unconstitutional laws mutate regional codes.",
+    tr: "Vatanda\u015flar, anayasaya ayk\u0131r\u0131 yasalar\u0131n b\u00f6lgesel kodlar\u0131 de\u011fi\u015ftirip de\u011fi\u015ftirmedi\u011fini merak ediyor.",
+    word: "wonder",
+    trWord: "",
+    correct: "wonder",
+    blank: "Citizens ___ if unconstitutional laws mutate regional codes.",
+    options: ["wonder", "wonderful", "wondering", "wondered"],
+    blocks: ["Citizens wonder if", "unconstitutional laws mutate", "regional codes."]
+  },
+  {
+    en: "The panel evaluated whether dynamic simulation models predict heat anomalies.",
+    tr: "Panel, dinamik sim\u00fclasyon modellerinin \u0131s\u0131 anomalilerini \u00f6ng\u00f6r\u00fcp \u00f6ng\u00f6rmedi\u011fini de\u011ferlendirdi.",
+    word: "evaluated",
+    trWord: "",
+    correct: "evaluated",
+    blank: "The panel ___ whether dynamic simulation models predict heat anomalies.",
+    options: ["evaluated", "evaluation", "evaluating", "evaluate"],
+    blocks: ["The panel evaluated whether", "dynamic simulation models", "predict heat anomalies."]
+  },
+  {
+    en: "I doubt if the analytical data files suffered corruption.",
+    tr: "Analitik veri dosyalar\u0131n\u0131n bozulmaya u\u011fray\u0131p u\u011framad\u0131\u011f\u0131ndan \u015f\u00fcphe duyuyorum.",
+    word: "doubt",
+    trWord: "",
+    correct: "doubt",
+    blank: "I ___ if the analytical data files suffered corruption.",
+    options: ["doubt", "doubtful", "doubting", "doubted"],
+    blocks: ["I doubt if", "the analytical data", "files suffered corruption."]
+  },
+  {
+    en: "Engineers tested whether the parameterized matrix expands during tests.",
+    tr: "M\u00fchendisler, parametrelendirilmi\u015f matrisin testler s\u0131ras\u0131nda geni\u015fleyip geni\u015flemedi\u011fini test etti.",
+    word: "tested",
+    trWord: "",
+    correct: "tested",
+    blank: "Engineers ___ whether the parameterized matrix expands during tests.",
+    options: ["tested", "test", "testing", "tests"],
+    blocks: ["Engineers tested whether", "the parameterized matrix", "expands during tests."]
+  },
+  {
+    en: "Analysts wonder if alternative regimes will collapse under inflation.",
+    tr: "Analistler, alternatif rejimlerin enflasyon alt\u0131nda \u00e7\u00f6k\u00fcp \u00e7\u00f6kmeyece\u011fini merak ediyor.",
+    word: "wonder",
+    trWord: "",
+    correct: "wonder",
+    blank: "Analysts ___ if alternative regimes will collapse under inflation.",
+    options: ["wonder", "wondering", "wondered", "wonderful"],
+    blocks: ["Analysts wonder if", "alternative regimes will", "collapse under inflation."]
+  },
+  {
+    en: "The tracking script verifies whether metadata parameters reside in local repositories.",
+    tr: "Takip beti\u011fi, meta veri parametrelerinin yerel depolarda bulunup bulunmad\u0131\u011f\u0131n\u0131 do\u011frular.",
+    word: "verifies",
+    trWord: "",
+    correct: "verifies",
+    blank: "The tracking script ___ whether metadata parameters reside in local repositories.",
+    options: ["verifies", "verify", "verification", "verifying"],
+    blocks: ["The tracking script verifies", "whether metadata parameters reside", "in local repositories."]
+  },
+  {
+    en: "The quality assurance team checks if the software compiler refactors syntax errors.",
+    tr: "Kalite g\u00fcvence ekibi, yaz\u0131l\u0131m derleyicisinin s\u00f6zdizimi hatalar\u0131n\u0131 yeniden d\u00fczenleyip d\u00fczenlemedi\u011fini kontrol eder.",
+    word: "checks",
+    trWord: "",
+    correct: "checks",
+    blank: "The quality assurance team ___ if the software compiler refactors syntax errors.",
+    options: ["checks", "check", "checking", "checked"],
+    blocks: ["The quality assurance team", "checks if the software", "compiler refactors syntax errors."]
+  },
+  {
+    en: "Biologists investigated whether chemical innovations transform cell structures.",
+    tr: "Biyologlar, kimyasal yeniliklerin h\u00fccre yap\u0131lar\u0131n\u0131 d\u00f6n\u00fc\u015ft\u00fcr\u00fcp d\u00f6n\u00fc\u015ft\u00fcrmedi\u011fini ara\u015ft\u0131rd\u0131.",
+    word: "investigated",
+    trWord: "",
+    correct: "investigated",
+    blank: "Biologists ___ whether chemical innovations transform cell structures.",
+    options: ["investigated", "investigation", "investigative", "investigate"],
+    blocks: ["Biologists investigated whether", "chemical innovations transform", "cell structures."]
+  },
+  {
+    en: "The city council monitored if specific infrastructure indicators decline over time.",
+    tr: "Belediye meclisi, belirli altyap\u0131 g\u00f6stergelerinin zamanla d\u00fc\u015f\u00fcp d\u00fc\u015fmedi\u011fini izledi.",
+    word: "monitored",
+    trWord: "",
+    correct: "monitored",
+    blank: "The city council ___ if specific infrastructure indicators decline over time.",
+    options: ["monitored", "monitor", "monitoring", "monitors"],
+    blocks: ["The city council monitored", "if specific infrastructure indicators", "decline over time."]
+  },
+  {
+    en: "Corporate firms inquired whether the legislative assembly enforces regulatory frameworks.",
+    tr: "Kurumsal firmalar, yasama meclisinin d\u00fczenleyici \u00e7er\u00e7eveler uygulay\u0131p uygulamad\u0131\u011f\u0131n\u0131 sordu.",
+    word: "inquired",
+    trWord: "",
+    correct: "inquired",
+    blank: "Corporate firms ___ whether the legislative assembly enforces regulatory frameworks.",
+    options: ["inquired", "inquiry", "inquiring", "inquire"],
+    blocks: ["Corporate firms inquired whether", "the legislative assembly", "enforces regulatory frameworks."]
+  },
+  {
+    en: "Technicians examined if raw organic components decay inside vacuum tubes.",
+    tr: "Teknisyenler, ham organik bile\u015fenlerin vakum t\u00fcplerinin i\u00e7inde \u00e7\u00fcr\u00fcy\u00fcp \u00e7\u00fcr\u00fcmedi\u011fini inceledi.",
+    word: "examined",
+    trWord: "",
+    correct: "examined",
+    blank: "Technicians ___ if raw organic components decay inside vacuum tubes.",
+    options: ["examined", "examination", "examining", "examine"],
+    blocks: ["Technicians examined if raw", "organic components decay", "inside vacuum tubes."]
+  },
+  {
+    en: "Security bots evaluate whether contradictory codes conflict with active firewalls.",
+    tr: "G\u00fcvenlik botlar\u0131, \u00e7eli\u015fkili kodlar\u0131n aktif g\u00fcvenlik duvarlar\u0131yla \u00e7ak\u0131\u015f\u0131p \u00e7ak\u0131\u015fmad\u0131\u011f\u0131n\u0131 de\u011ferlendirir.",
+    word: "evaluate",
+    trWord: "",
+    correct: "evaluate",
+    blank: "Security bots ___ whether contradictory codes conflict with active firewalls.",
+    options: ["evaluate", "evaluation", "evaluating", "evaluated"],
+    blocks: ["Security bots evaluate whether", "contradictory codes conflict", "with active firewalls."]
+  },
+  {
+    en: "The baseline schema determines if distributed network traffic diverges from the baseline.",
+    tr: "Temel \u015fema, da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin referans \u00e7izgisinden ayr\u0131\u015f\u0131p ayr\u0131\u015fmad\u0131\u011f\u0131n\u0131 belirler.",
+    word: "determines",
+    trWord: "",
+    correct: "determines",
+    blank: "The baseline schema ___ if distributed network traffic diverges from the baseline.",
+    options: ["determines", "determination", "determining", "determine"],
+    blocks: ["The baseline schema determines", "if distributed network traffic", "diverges from the baseline."]
+  }
+];
+
+const unit25Lesson3Group3Raw = [
+  {
+    en: "The coordinator questioned whether the constituent framework functions under load while the secondary database platform executes heavy transaction queries.",
+    tr: "\u0130kincil veri taban\u0131 platformu a\u011f\u0131r i\u015flem sorgular\u0131 \u00e7al\u0131\u015ft\u0131r\u0131rken, koordinat\u00f6r bile\u015fen \u00e7er\u00e7evenin y\u00fck alt\u0131nda \u00e7al\u0131\u015f\u0131p \u00e7al\u0131\u015fmad\u0131\u011f\u0131n\u0131 sorgulad\u0131.",
+    word: "transaction",
+    trWord: "",
+    correct: "transaction",
+    blank: "The coordinator questioned whether the constituent framework functions under load while the secondary database platform executes heavy ___ queries.",
+    options: ["transaction", "transactions", "transact", "transacting"],
+    blocks: ["The coordinator questioned whether", "the constituent framework functions", "under load while the", "secondary database platform executes", "heavy transaction queries."]
+  },
+  {
+    en: "Financial experts debated whether the economic indicators fluctuated next quarter due to unexpected central bank interest rate manipulations.",
+    tr: "Finans uzmanlar\u0131, beklenmedik merkez bankas\u0131 faiz oran\u0131 manip\u00fclasyonlar\u0131 nedeniyle ekonomik g\u00f6stergelerin gelecek \u00e7eyrekte dalgalan\u0131p dalgalanmad\u0131\u011f\u0131n\u0131 tart\u0131\u015ft\u0131.",
+    word: "manipulations",
+    trWord: "",
+    correct: "manipulations",
+    blank: "Financial experts debated whether the economic indicators fluctuated next quarter due to unexpected central bank interest rate ___.",
+    options: ["manipulations", "manipulation", "manipulate", "manipulative"],
+    blocks: ["Financial experts debated whether", "the economic indicators fluctuated", "next quarter due to", "unexpected central bank", "interest rate manipulations."]
+  },
+  {
+    en: "Citizens wonder if unconstitutional laws mutate regional codes since the state council refused to catalog public feedback guidelines.",
+    tr: "Devlet konseyi halk\u0131n geri bildirim y\u00f6nergelerini kataloglamay\u0131 reddetti\u011finden beri, vatanda\u015flar anayasaya ayk\u0131r\u0131 yasalar\u0131n b\u00f6lgesel kodlar\u0131 de\u011fi\u015ftirip de\u011fi\u015ftirmedi\u011fini merak ediyor.",
+    word: "refused",
+    trWord: "",
+    correct: "refused",
+    blank: "Citizens wonder if unconstitutional laws mutate regional codes since the state council ___ to catalog public feedback guidelines.",
+    options: ["refused", "refuse", "refusal", "refusing"],
+    blocks: ["Citizens wonder if unconstitutional", "laws mutate regional codes", "since the state council", "refused to catalog", "public feedback guidelines."]
+  },
+  {
+    en: "The panel evaluated whether dynamic simulation models predict heat anomalies based on data compiled by cross-disciplinary research teams.",
+    tr: "Panel, disiplinler aras\u0131 ara\u015ft\u0131rma ekipleri taraf\u0131ndan derlenen verilere dayanarak dinamik sim\u00fclasyon modellerinin \u0131s\u0131 anomalilerini \u00f6ng\u00f6r\u00fcp \u00f6ng\u00f6rmedi\u011fini de\u011ferlendirdi.",
+    word: "compiled",
+    trWord: "",
+    correct: "compiled",
+    blank: "The panel evaluated whether dynamic simulation models predict heat anomalies based on data ___ by cross-disciplinary research teams.",
+    options: ["compiled", "compilation", "compile", "compiler"],
+    blocks: ["The panel evaluated whether", "dynamic simulation models predict", "heat anomalies based on", "data compiled by", "cross-disciplinary research teams."]
+  },
+  {
+    en: "I doubt if the analytical data files suffered corruption because our automated cloud synchronization tools use advanced validation keys.",
+    tr: "Otomatik bulut senkronizasyon ara\u00e7lar\u0131m\u0131z geli\u015fmi\u015f do\u011frulama anahtarlar\u0131 kulland\u0131\u011f\u0131ndan, analitik veri dosyalar\u0131n\u0131n bozulmaya u\u011frad\u0131\u011f\u0131ndan \u015f\u00fcphe duyuyorum.",
+    word: "synchronization",
+    trWord: "",
+    correct: "synchronization",
+    blank: "I doubt if the analytical data files suffered corruption because our automated cloud ___ tools use advanced validation keys.",
+    options: ["synchronization", "synchronize", "synchronous", "synchronously"],
+    blocks: ["I doubt if the", "analytical data files suffered", "corruption because our automated", "cloud synchronization tools use", "advanced validation keys."]
+  },
+  {
+    en: "Engineers tested whether the parameterized matrix expands during stress tests lest the structural concrete foundation should crack unexpectedly.",
+    tr: "Yap\u0131sal beton temelin beklenmedik \u015fekilde \u00e7atlamamas\u0131 i\u00e7in m\u00fchendisler, parametrelendirilmi\u015f matrisin stres testleri s\u0131ras\u0131nda geni\u015fleyip geni\u015flemedi\u011fini test etti.",
+    word: "foundation",
+    trWord: "",
+    correct: "foundation",
+    blank: "Engineers tested whether the parameterized matrix expands during stress tests lest the structural concrete ___ should crack unexpectedly.",
+    options: ["foundation", "foundations", "found", "founder"],
+    blocks: ["Engineers tested whether the", "parameterized matrix expands during", "stress tests lest the", "structural concrete foundation", "should crack unexpectedly."]
+  },
+  {
+    en: "Analysts wonder if alternative regimes will collapse under inflation because industrialized corporate firms keep trimming their annual budgets.",
+    tr: "Sanayile\u015fmi\u015f kurumsal firmalar y\u0131ll\u0131k b\u00fct\u00e7elerini k\u0131smaya devam ettikleri i\u00e7in analistler, alternatif rejimlerin enflasyon alt\u0131nda \u00e7\u00f6k\u00fcp \u00e7\u00f6kmeyece\u011fini merak ediyor.",
+    word: "trimming",
+    trWord: "",
+    correct: "trimming",
+    blank: "Analysts wonder if alternative regimes will collapse under inflation because industrialized corporate firms keep ___ their annual budgets.",
+    options: ["trimming", "trim", "trimmed", "trimmer"],
+    blocks: ["Analysts wonder if alternative", "regimes will collapse under", "inflation because industrialized corporate", "firms keep trimming", "their annual budgets."]
+  },
+  {
+    en: "The tracking script verifies whether metadata parameters reside in local repositories before granting remote administrative clearance files.",
+    tr: "Takip beti\u011fi, uzaktan idari yetki dosyalar\u0131n\u0131 vermeden \u00f6nce meta veri parametrelerinin yerel depolarda bulunup bulunmad\u0131\u011f\u0131n\u0131 do\u011frular.",
+    word: "clearance",
+    trWord: "",
+    correct: "clearance",
+    blank: "The tracking script verifies whether metadata parameters reside in local repositories before granting remote administrative ___ files.",
+    options: ["clearance", "clear", "cleared", "clearly"],
+    blocks: ["The tracking script verifies", "whether metadata parameters reside", "in local repositories", "before granting remote", "administrative clearance files."]
+  },
+  {
+    en: "The quality assurance team checks if the software compiler refactors syntax errors as soon as the development build finishes compilation.",
+    tr: "Kalite g\u00fcvence ekibi, geli\u015ftirme derlemesi derlemeyi bitirir bitirmez yaz\u0131l\u0131m derleyicisinin s\u00f6zdizimi hatalar\u0131n\u0131 d\u00fczeltip d\u00fczeltmedi\u011fini kontrol eder.",
+    word: "compilation",
+    trWord: "",
+    correct: "compilation",
+    blank: "The quality assurance team checks if the software compiler refactors syntax errors as soon as the development build finishes ___.",
+    options: ["compilation", "compile", "compiler", "compiling"],
+    blocks: ["The quality assurance team", "checks if the software", "compiler refactors syntax errors", "as soon as the", "development build finishes compilation."]
+  },
+  {
+    en: "Biologists investigated whether chemical innovations transform cell structures in order that advanced physiological models can be created.",
+    tr: "Geli\u015fmi\u015f fizyolojik modellerin olu\u015fturulabilmesi i\u00e7in biyologlar, kimyasal yeniliklerin h\u00fccre yap\u0131lar\u0131n\u0131 d\u00f6n\u00fc\u015ft\u00fcr\u00fcp d\u00f6n\u00fc\u015ft\u00fcrmedi\u011fini ara\u015ft\u0131rd\u0131.",
+    word: "physiological",
+    trWord: "",
+    correct: "physiological",
+    blank: "Biologists investigated whether chemical innovations transform cell structures in order that advanced ___ models can be created.",
+    options: ["physiological", "physiology", "physiologically", "physiologist"],
+    blocks: ["Biologists investigated whether chemical", "innovations transform cell structures", "in order that", "advanced physiological models", "can be created."]
+  },
+  {
+    en: "The city council monitored if specific infrastructure indicators decline over time inasmuch as municipal resource allocations dropped last year.",
+    tr: "Ge\u00e7en y\u0131l belediye kaynak tahsisleri d\u00fc\u015ft\u00fc\u011f\u00fc i\u00e7in belediye meclisi, belirli altyap\u0131 g\u00f6stergelerinin zamanla d\u00fc\u015f\u00fcp d\u00fc\u015fmedi\u011fini izledi.",
+    word: "allocations",
+    trWord: "",
+    correct: "allocations",
+    blank: "The city council monitored if specific infrastructure indicators decline over time inasmuch as municipal resource ___ dropped last year.",
+    options: ["allocations", "allocation", "allocate", "allocated"],
+    blocks: ["The city council monitored", "if specific infrastructure indicators", "decline over time inasmuch", "as municipal resource allocations", "dropped last year."]
+  },
+  {
+    en: "Corporate firms inquired whether the legislative assembly enforces regulatory frameworks to restrict digital currency asset trading activities.",
+    tr: "Kurumsal firmalar, dijital para varl\u0131\u011f\u0131 ticaret faaliyetlerini k\u0131s\u0131tlamak i\u00e7in yasama meclisinin d\u00fczenleyici \u00e7er\u00e7eveler uygulay\u0131p uygulamad\u0131\u011f\u0131n\u0131 sordu.",
+    word: "restrict",
+    trWord: "",
+    correct: "restrict",
+    blank: "Corporate firms inquired whether the legislative assembly enforces regulatory frameworks to ___ digital currency asset trading activities.",
+    options: ["restrict", "restriction", "restricted", "restrictive"],
+    blocks: ["Corporate firms inquired whether", "the legislative assembly enforces", "regulatory frameworks to", "restrict digital currency", "asset trading activities."]
+  },
+  {
+    en: "Technicians examined if raw organic components decay inside vacuum tubes before the laboratory fluid is sterilized completely by specialists.",
+    tr: "Uzmanlar laboratuvar s\u0131v\u0131s\u0131n\u0131 tamamen sterilize etmeden \u00f6nce teknisyenler, ham organik bile\u015fenlerin vakum t\u00fcplerinin i\u00e7inde \u00e7\u00fcr\u00fcy\u00fcp \u00e7\u00fcr\u00fcmedi\u011fini inceledi.",
+    word: "sterilized",
+    trWord: "",
+    correct: "sterilized",
+    blank: "Technicians examined if raw organic components decay inside vacuum tubes before the laboratory fluid is ___ completely by specialists.",
+    options: ["sterilized", "sterilization", "sterile", "sterilizing"],
+    blocks: ["Technicians examined if raw", "organic components decay inside", "vacuum tubes before the", "laboratory fluid is sterilized", "completely by specialists."]
+  },
+  {
+    en: "Security bots evaluate whether contradictory codes conflict with active firewalls for fear that anonymous scripts should breach partitions.",
+    tr: "G\u00fcvenlik botlar\u0131, kimli\u011fi belirsiz kodlar b\u00f6l\u00fcmleri ihlal etmesin diye \u00e7eli\u015fkili kodlar\u0131n aktif g\u00fcvenlik duvar\u0131yla \u00e7ak\u0131\u015f\u0131p \u00e7ak\u0131\u015fmad\u0131\u011f\u0131n\u0131 de\u011ferlendirir.",
+    word: "partitions",
+    trWord: "",
+    correct: "partitions",
+    blank: "Security bots evaluate whether contradictory codes conflict with active firewalls for fear that anonymous scripts should breach ___.",
+    options: ["partitions", "partition", "partitioned", "partitioning"],
+    blocks: ["Security bots evaluate whether", "contradictory codes conflict with", "active firewalls for fear", "that anonymous scripts", "should breach partitions."]
+  },
+  {
+    en: "The baseline schema determines if distributed network traffic diverges from the baseline whenever a distributed override traffic spike occurs.",
+    tr: "Temel \u015fema, da\u011f\u0131t\u0131lm\u0131\u015f bir ge\u00e7ersiz k\u0131lma trafik art\u0131\u015f\u0131 meydana geldi\u011finde da\u011f\u0131t\u0131lm\u0131\u015f a\u011f trafi\u011finin referans \u00e7izgisinden ayr\u0131\u015f\u0131p ayr\u0131\u015fmad\u0131\u011f\u0131n\u0131 belirler.",
+    word: "spike",
+    trWord: "",
+    correct: "spike",
+    blank: "The baseline schema determines if distributed network traffic diverges from the baseline whenever a distributed override traffic ___ occurs.",
+    options: ["spike", "spikes", "spiked", "spiking"],
+    blocks: ["The baseline schema determines", "if distributed network traffic", "diverges from the baseline", "whenever a distributed override", "traffic spike occurs."]
+  }
+];
+
+
+function buildUnit25Lesson1Exercises(unitId, lessonId) {
+  return buildUnit25GeneralExercises(unit25Lesson1Group1Raw, unit25Lesson1Group2Raw, unit25Lesson1Group3Raw, unitId, lessonId);
+}
+
+function buildUnit25Lesson2Exercises(unitId, lessonId) {
+  return buildUnit25GeneralExercises(unit25Lesson2Group1Raw, unit25Lesson2Group2Raw, unit25Lesson2Group3Raw, unitId, lessonId);
+}
+
+function buildUnit25Lesson3Exercises(unitId, lessonId) {
+  return buildUnit25GeneralExercises(unit25Lesson3Group1Raw, unit25Lesson3Group2Raw, unit25Lesson3Group3Raw, unitId, lessonId);
+}
+
+function buildUnit25GeneralExercises(group1, group2, group3, unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc, hasMC) => {
+    const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+    const exList = [];
+
+    // 10 Cloze questions
+    const clozeLimit = Math.min(10, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    if (hasMC) {
+      // 5 MC questions
+      const mcLimit = Math.min(5, sorted.length);
+      for (let i = 0; i < mcLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildMCQuestion(s, `u${unitId}l${lessonId}_${exId}_mc_${i}`, sorted));
+      }
+      
+      // 3 Word Bank questions
+      const wbLimit = Math.min(3, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 10) % sorted.length];
+        exList.push(buildWBQuestion(s, `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+      }
+    } else {
+      // No MC allowed for long sentences
+      // 8 Word Bank questions
+      const wbLimit = Math.min(8, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildWBQuestion(s, `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+      }
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...interleaveQuestions(exList), ...transList]
+    };
+  };
+
+  return [
+    compileExercise(group1, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "İsim cümleciği yan cümlecik yapısını ve girişlerini tanıma çalışmaları.", true),
+    compileExercise(group2, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde isim cümleciği nesnelerinin analizi.", true),
+    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde isim cümleciği yapısının pekiştirilmesi.", false)
+  ];
+}
 
 
 // ─── BÖLÜM 26 RAW SENTENCES (It + to be + that / to V1 + that) ──────────────────
@@ -15274,18 +16957,16 @@ const rawTopics = [
     title: "XXII. İsim Cümleciği (Noun Clause) (Sayfa 240)",
     desc: "Cümlede özne veya nesne görevindeki wh- soru kelimeleri, that ve whether yan cümleleri",
     icon: "🔋",
-    numLessons: 4,
+    numLessons: 3,
     formulas: [
-      { formula: "What / How / Why / When / Where + Subject + Verb", example: "What he said was very important: Söylediği şey çok önemliydi" },
-      { formula: "Subject + Verb + that + Subject + Verb", example: "He announced that the project was completed: Projenin tamamlandığını duyurdu" },
-      { formula: "Subject + Verb + if / whether + Subject + Verb", example: "Whether they will attend the meeting is not decided: Toplantıya katılıp katılmayacakları kararlaştırılmadı" },
-      { formula: "The fact that + Subject + Verb + is + Adjective", example: "The fact that the experiment failed surprised everyone: Deneyin başarısız olması gerçeği herkesi şaşırttı" }
+      { formula: "What / How / Why / When / Where + Subject + Verb", example: "The system designer explained how the constituent framework functions: Sistem tasarımcısı bileşen çerçevenin nasıl çalıştığını açıkladı.", description: "Yan cümlenin içindeki soru kelimesinin anlamına göre '... ne olduğu / niçin yapıldığı / nasıl dönüştüğü' şeklinde çevrilir. Cümle içinde genellikle ana fiilin nesnesi konumunda yer alır." },
+      { formula: "Subject + Verb + that + Subject + Verb", example: "The system architect confirmed that the constituent framework functions perfectly: Sistem mimarı bileşen çerçevenin kusursuz çalıştığını onayladı.", description: "that ile başlayan bu cümlecikler, bir durumun gerçekleşmiş veya gerçekleşecek olduğunu bildirdiği için Türkçeye '...-diğini / -ceğini' veya '... olduğu gerçeğini' şeklinde nesneleştirilerek çevrilir." },
+      { formula: "Subject + Verb + if / whether + Subject + Verb", example: "The coordinator questioned whether the constituent framework functions under load: Koordinatör bileşen çerçevenin yük altında çalışıp çalışmadığını sorguladı.", description: "Cümleye şüphe, merak veya belirsizlik katan bu yapılar Türkçeye '...-ip yapmadığı / ... olup olmadığı' şeklinde çevrilir. Whether akademik dilde daha yaygındır." }
     ],
     subtitles: [
-      "a) Soru kelimesi ile başlayanlar (Sayfa 241)",
-      "b) \"that\" ile başlayanlar (Sayfa 244)",
-      "c) if / whether (Sayfa 247)",
-      "d) the fact that (Sayfa 248)"
+      "Soru Kelimesi İle Başlayan İsim Cümlecikleri",
+      "That İle Başlayan İsim Cümlecikleri",
+      "If Veya Whether İle Başlayan İsim Cümlecikleri"
     ]
   },
   {
@@ -33468,14 +35149,13 @@ const unitSentencesMap = {
     7: { exercises: [] }
   },
   28: {
-    1: { exercises: [] },
-    2: { exercises: [] },
-    3: { exercises: [] },
-    4: { exercises: [] }
+    1: { exercises: buildUnit25Lesson1Exercises(28, 88) },
+    2: { exercises: buildUnit25Lesson2Exercises(28, 89) },
+    3: { exercises: buildUnit25Lesson3Exercises(28, 90) }
   },
   29: {
-    1: { exercises: buildUnit26Lesson1Exercises(29, 92) },
-    2: { exercises: buildUnit26Lesson2Exercises(29, 93) }
+    1: { exercises: buildUnit26Lesson1Exercises(29, 91) },
+    2: { exercises: buildUnit26Lesson2Exercises(29, 92) }
   },
   30: {
     1: { exercises: [] }
