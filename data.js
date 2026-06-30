@@ -43004,8 +43004,11 @@ const unitSentencesMap = {
     1: { exercises: [] },
     2: { exercises: [
       buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 1, 0),
-      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 2, 10),
-      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 3, 20)
+      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 2, 5),
+      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 3, 10),
+      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 4, 15),
+      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 5, 20),
+      buildCustom10QuestionExercises(unit26Lesson2SentencesRaw, 26, 79, 6, 23)
     ] },
     3: { exercises: [
       buildCustom10QuestionExercises(unit26Lesson3SentencesRaw, 26, 80, 1, 0),
