@@ -3506,6 +3506,20 @@ function renderMultipleChoice(container, question) {
 
 // ── Kelime Bankası ──────────────────────────────────────────
 function renderWordBank(container, question) {
+  // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
+  if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
+    const correctOrderBlocks = [];
+    const chunkSize = question.correctOrder.length >= 14 ? 4 : 3;
+    for (let i = 0; i < question.correctOrder.length; i += chunkSize) {
+      correctOrderBlocks.push(question.correctOrder.slice(i, i + chunkSize).join(' '));
+    }
+    const distractors = question.words.filter(w => !question.correctOrder.includes(w));
+    
+    // Update question properties inline for this rendering session
+    question.correctOrder = correctOrderBlocks;
+    question.words = [...correctOrderBlocks, ...distractors];
+  }
+
   const shuffledWords = [...question.words].sort(() => Math.random() - 0.5);
 
   let translationHtml = question.translation;
