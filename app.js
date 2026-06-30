@@ -2712,8 +2712,10 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 26, 27]);
-    const isNotUploadedUnit = notUploadedUnits.has(unit.id);
+    const isNotUploadedUnit = unit.lessons.every(lId => {
+      const l = lessons.find(lesson => lesson.id === lId);
+      return !l || ((!l.exercises || l.exercises.length === 0) && (!l.questions || l.questions.length === 0));
+    });
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
       notUploadedBadgeHTML = `
@@ -2832,7 +2834,7 @@ function renderLessonTree() {
 
       // Progress Badge content
       let progressBadgeContent = '';
-      const isNotUploadedLesson = isNotUploadedUnit;
+      const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
       if (isNotUploadedLesson) {
         progressBadgeContent = `<div class="node-progress-badge">0</div>`;
       } else if (lesson.exercises && lesson.exercises.length > 0) {
@@ -2963,8 +2965,8 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 26, 27]);
-  if (notUploadedUnitsPopover.has(unit.id)) {
+  const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
+  if (isNotUploadedLesson) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
         <div class="popover-not-uploaded-message">
