@@ -2671,12 +2671,39 @@ function renderLessonTree() {
 
   let normalUnitIndex = 0;
   const unitDisplayNames = {};
+
+  function getOldBölümName(originalId) {
+    if (originalId === 13) return "Ara Bölüm 1";
+    if (originalId === 17) return "Ara Bölüm 2";
+    if (originalId === 21) return "Ara Bölüm 3";
+    
+    let oldNum;
+    if (originalId < 13) {
+      oldNum = originalId;
+    } else if (originalId < 17) {
+      oldNum = originalId - 1;
+    } else if (originalId < 21) {
+      oldNum = originalId - 2;
+    } else if (originalId < 31) {
+      oldNum = originalId - 3;
+    } else if (originalId === 31) {
+      oldNum = 29;
+    } else if (originalId === 32) {
+      oldNum = 28;
+    } else if (originalId === 33) {
+      oldNum = 30;
+    }
+    return `Bölüm ${oldNum}`;
+  }
+
   renderedUnits.forEach(u => {
+    const oldName = getOldBölümName(u.originalId || u.id);
+    const oldBadge = ` <span style="color: #ff6b6b; font-weight: bold; font-size: 0.85em; margin-left: 6px;">(${oldName})</span>`;
     if (u.title.startsWith("Ara Bölüm")) {
-      unitDisplayNames[u.id] = u.title;
+      unitDisplayNames[u.id] = `${u.title}${oldBadge}`;
     } else {
       normalUnitIndex++;
-      unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}`;
+      unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}${oldBadge}`;
     }
   });
 
@@ -2686,7 +2713,7 @@ function renderLessonTree() {
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
-    const notUploadedUnits = new Set([21, 26, 27, 30]);
+    const notUploadedUnits = new Set([26, 29, 30, 31]);
     const isNotUploadedUnit = notUploadedUnits.has(unit.id);
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
@@ -2937,7 +2964,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   }
 
   let popoverFooterHTML = '';
-  const notUploadedUnitsPopover = new Set([21, 26, 27, 30]);
+  const notUploadedUnitsPopover = new Set([26, 29, 30, 31]);
   if (notUploadedUnitsPopover.has(unit.id)) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">

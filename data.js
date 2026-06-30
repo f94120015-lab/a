@@ -35673,6 +35673,53 @@ const unitSentencesMap = {
   }
 };
 
+// Reorder rawTopics to the recommended pedagogical sequence
+const originalOrder = [...rawTopics];
+originalOrder.forEach((t, idx) => {
+  t.originalId = t.id !== undefined ? t.id : (idx + 1);
+});
+
+const recommendedOrder = [
+  1,  // İsim ve Edat Yapıları (Sayfa 13)
+  2,  // Fiil ve Edat Yapıları (Sayfa 21)
+  3,  // İsim Tamlaması (Sayfa 72)
+  6,  // Yapılar (Sayfa 1)
+  7,  // Özne - Geçişli Fiil + Nesne (Sayfa 32)
+  8,  // "There" Yapıları (Sayfa 38)
+  31, // Zaman Zarfları ve Zaman Uyumu
+  9,  // Soru Yapıları (Sayfa 49)
+  17, // Ara Bölüm 2: Rica ve İzin İsteme Yapıları
+  13, // Ara Bölüm 1: Tercih Bildiren Yapılar (Would rather)
+  4,  // Present Participle Sıfatı (-ing) (Sayfa 81)
+  5,  // Past Participle Sıfatı (-ed) (Sayfa 85)
+  12, // Participle Yapıları (Sayfa 88)
+  18, // Fiil İsmi (Gerund) + Nesnesi (Özne Olarak) (Sayfa 112)
+  14, // Mastar (Infinitive) (Sayfa 95)
+  10, // Edilgen (Passive) Yapısı (Sayfa 55)
+  11, // Edilgen (Passive) Mastarı (Sayfa 63)
+  32, // Zaman Uyumu: By the time, Since, İt is (high) time vs
+  19, // Edattan Sonra Gelen Fiil (+ Nesnesi) (Sayfa 113)
+  20, // Soru Kelimesinden Sonra Gelen Mastar (Sayfa 124)
+  15, // Yapısal "It" Cümlesinin Öznesi (Sayfa 103)
+  16, // Maksat ve Amaç Yapıları (Sayfa 107)
+  33, // Öbeksel Kipler (Phrasal Modals)
+  22, // Konnektörler
+  23, // Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before
+  21, // Ara Bölüm 3: Before Bağlaçlı Cümle Yapıları
+  24, // Zaman Zarfıyla Başlayan Zarf Cümleciği, When
+  25, // Zaman Zarfıyla Başlayan Zarf Cümleciği, Since, While / As, Until
+  30, // Neden ve Etki Yapıları (Sayfa 256)
+  26, // Mukayese (Karşılaştırma) Yapıları (Sayfa 216)
+  27, // Sıfat Cümleciği (Adjectival Clause / Relative Clause) (Sayfa 224)
+  28, // İsim Cümleciği (Noun Clause) (Sayfa 240)
+  29  // It + to be + sıfat/past participle + that (Sayfa 251)
+];
+
+rawTopics.length = 0;
+recommendedOrder.forEach(origId => {
+  rawTopics.push(originalOrder[origId - 1]);
+});
+
 rawTopics.forEach((topic, uIdx) => {
   // Clean page numbers and replace "takım" and "strüktür" with "yapı" in title, desc, and subtitles
   if (topic.title) {
@@ -35719,7 +35766,7 @@ rawTopics.forEach((topic, uIdx) => {
     );
   }
 
-  const unitId = topic.id !== undefined ? topic.id : (uIdx + 1);
+  const unitId = uIdx + 1;
   const numLessons = topic.numLessons;
   const unitLessonIds = [];
   for (let l = 0; l < numLessons; l++) {
@@ -35729,6 +35776,7 @@ rawTopics.forEach((topic, uIdx) => {
   // Üniteyi oluştur
   units.push({
     id: unitId,
+    originalId: topic.originalId || unitId,
     title: topic.title,
     description: topic.desc,
     lessons: unitLessonIds
@@ -35740,7 +35788,7 @@ rawTopics.forEach((topic, uIdx) => {
     // Ders indeksine göre soruları dinamik oluştur veya doğrudan soru listesini ekle
     const questions = [];
     let lessonExercises = null;
-    const unitSentsObj = unitSentencesMap[unitId];
+    const unitSentsObj = unitSentencesMap[topic.originalId || unitId];
 
     if (unitSentsObj && unitSentsObj[lIdx + 1]) {
       const data = unitSentsObj[lIdx + 1];
