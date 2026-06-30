@@ -17494,15 +17494,49 @@ const rawTopics = [
     ]
   },
   {
-    title: "XXV. Neden ve Etki Strüktürleri (Sayfa 256)",
-    desc: "Cümleler arası neden-sonuç bağlaçları (therefore, thus, consequently, hence) kullanımı",
+    title: "XXV. Neden ve Etki Yapıları (Sayfa 256)",
+    desc: "Neden-sonuç bildiren bağlaçlar, aktif fiiller, zarflar ve edat grupları",
     icon: "🪐",
-    numLessons: 1,
+    numLessons: 6,
     formulas: [
-      { formula: "Clause; therefore / thus / consequently / hence, Clause", example: "The cost was very high, therefore they changed the design: Maliyet çok yüksekti, bu nedenle tasarımı değiştirdiler" }
+      {
+        formula: "Subject + Active Verb (causes/leads to/results in/...) + Object",
+        example: "Severe data formatting issues <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> validation anomalies.",
+        description: "Neden-sonuç ilişkilerini doğrudan aktif fiillerle kuran doğrusal cümle şablonudur."
+      },
+      {
+        formula: "Clause; therefore / thus / consequently / hence / as a result, Clause",
+        example: "Data formatting issues occurred; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, validation anomalies arose.",
+        description: "İki bağımsız cümleyi noktalı virgül ve zarfsal geçişlerle bağlayan neden-sonuç şablonudur."
+      },
+      {
+        formula: "Subject + cause + Object + to V1",
+        example: "High temperatures <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">to change</span>.",
+        description: "Bir etkenin başka bir eylemi tetiklemesini cause + nesne + mastar ile ifade eden şablondur."
+      },
+      {
+        formula: "because / as / since / inasmuch as + Clause, Clause",
+        example: "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, developers must monitor lines.",
+        description: "Yan cümle düzeyinde neden bildiren bağlaçlarla kurulan zarf cümlesi şablonudur."
+      },
+      {
+        formula: "Subject + Verb + due to / because of / owing to / on account of / thanks to + Noun Phrase",
+        example: "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
+        description: "İsim öbeği alan edat gruplarıyla neden bildiren şablondur."
+      },
+      {
+        formula: "Subject (Effect) + stem from / stems from + Object (Cause)",
+        example: "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
+        description: "Sonucun hangi nedenden kaynaklandığını geriye doğru ifade eden fiil şablonudur."
+      }
     ],
     subtitles: [
-      "Neden ve Etki Strüktürleri (Sayfa 256)"
+      "Doğrusal Aktif Fiil Şablonu",
+      "Zarfal Geçiş Şablonu (Semicolon + Transition Adverb)",
+      "Karmaşık Yönlendirmeli Şablon (Cause + Object + to V1)",
+      "Cümle Alan Bağlaç Şablonu (Adverbial Clauses of Cause)",
+      "İsim Alan Edat Şablonu (Prepositions of Cause)",
+      "Köken Bildiren Ters Dönüşümlü Şablon (Stem From)"
     ]
   },
   {
@@ -19171,6 +19205,7117 @@ const unit5Lesson15Exercises = {
     }
   ]
 };
+
+// ─── BÖLÜM 27 RAW SENTENCES (Neden ve Etki Yapıları) ──────────────────
+
+const unit30Lesson1Group1Raw = [
+  {
+    "en": "severe data formatting issues <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> validation anomalies",
+    "tr": "ciddi veri formatlama sorunları doğrulama anomalilerine yol açar",
+    "word": "give rise to",
+    "trWord": "ciddi veri formatlama sorunları doğrulama anomalilerine yol açar",
+    "correct": "give rise to",
+    "blank": "severe data formatting issues ___ validation anomalies",
+    "options": [
+      "give rise to",
+      "results from",
+      "stems from",
+      "inhibits"
+    ],
+    "blocks": [
+      "severe data formatting",
+      "issues give rise",
+      "to validation anomalies"
+    ]
+  },
+  {
+    "en": "inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">result in</span> comprehensive compilation errors",
+    "tr": "tutarsız veri kümeleri kapsamlı derleme hatalarıyla sonuçlanır",
+    "word": "result in",
+    "trWord": "tutarsız veri kümeleri kapsamlı derleme hatalarıyla sonuçlanır",
+    "correct": "result in",
+    "blank": "inconsistent datasets ___ comprehensive compilation errors",
+    "options": [
+      "result in",
+      "results from",
+      "stems from",
+      "stabilizes"
+    ],
+    "blocks": [
+      "inconsistent datasets",
+      "result in",
+      "comprehensive compilation errors"
+    ]
+  },
+  {
+    "en": "dynamic parameter shifts <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> baseline calculation overrides",
+    "tr": "dinamik parametre kaymaları temel hesaplama geçersiz kılmalarından sorumludur",
+    "word": "are responsible for",
+    "trWord": "dinamik parametre kaymaları temel hesaplama geçersiz kılmalarından sorumludur",
+    "correct": "are responsible for",
+    "blank": "dynamic parameter shifts ___ baseline calculation overrides",
+    "options": [
+      "are responsible for",
+      "stems from",
+      "contribute to",
+      "results in"
+    ],
+    "blocks": [
+      "dynamic parameter shifts",
+      "are responsible for",
+      "baseline calculation overrides"
+    ]
+  },
+  {
+    "en": "unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> immediate firewall warnings",
+    "tr": "yetkisiz harici girişler anında güvenlik duvarı uyarıları üretir",
+    "word": "produce",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarıları üretir",
+    "correct": "produce",
+    "blank": "unauthorized external entries ___ immediate firewall warnings",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "unauthorized external",
+      "entries produce",
+      "immediate firewall warnings"
+    ]
+  },
+  {
+    "en": "arbitrary compliance criteria <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> significant implementation delays",
+    "tr": "keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur",
+    "word": "cause",
+    "trWord": "keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur",
+    "correct": "cause",
+    "blank": "arbitrary compliance criteria ___ significant implementation delays",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "arbitrary compliance",
+      "criteria cause",
+      "significant implementation delays"
+    ]
+  },
+  {
+    "en": "unexpected memory leaks <span style=\"color: #ff6b6b; font-weight: bold;\">lead to</span> permanent system latency",
+    "tr": "beklenmedik bellek sızıntıları kalıcı sistem gecikmesine yol açar",
+    "word": "lead to",
+    "trWord": "beklenmedik bellek sızıntıları kalıcı sistem gecikmesine yol açar",
+    "correct": "lead to",
+    "blank": "unexpected memory leaks ___ permanent system latency",
+    "options": [
+      "lead to",
+      "leads to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "unexpected memory",
+      "leaks lead",
+      "to permanent system latency"
+    ]
+  },
+  {
+    "en": "unconstitutional state laws <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> public institutional collapse",
+    "tr": "anayasa dışı devlet yasaları kamu kurumu çöküşüne yol açar",
+    "word": "give rise to",
+    "trWord": "anayasa dışı devlet yasaları kamu kurumu çöküşüne yol açar",
+    "correct": "give rise to",
+    "blank": "unconstitutional state laws ___ public institutional collapse",
+    "options": [
+      "give rise to",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "unconstitutional state laws",
+      "give rise to",
+      "public institutional collapse"
+    ]
+  },
+  {
+    "en": "faulty legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> the assembly suspension",
+    "tr": "kusurlu yasama taslağı maddeleri meclis askıya alınmasından sorumludur",
+    "word": "are responsible for",
+    "trWord": "kusurlu yasama taslağı maddeleri meclis askıya alınmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "faulty legislative draft clauses ___ the assembly suspension",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "faulty legislative draft",
+      "clauses are responsible",
+      "for the assembly suspension"
+    ]
+  },
+  {
+    "en": "a complete lack of infrastructure <span style=\"color: #ff6b6b; font-weight: bold;\">causes</span> economic stagnation",
+    "tr": "altyapı eksikliği ekonomik durgunluğa neden olur",
+    "word": "causes",
+    "trWord": "altyapı eksikliği ekonomik durgunluğa neden olur",
+    "correct": "causes",
+    "blank": "a complete lack of infrastructure ___ economic stagnation",
+    "options": [
+      "causes",
+      "cause",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "a complete",
+      "lack of",
+      "infrastructure causes economic stagnation"
+    ]
+  },
+  {
+    "en": "unoptimized application builds <span style=\"color: #ff6b6b; font-weight: bold;\">result in</span> negative platform ratings",
+    "tr": "optimize edilmemiş uygulama derlemeleri olumsuz platform derecelendirmeleriyle sonuçlanır",
+    "word": "result in",
+    "trWord": "optimize edilmemiş uygulama derlemeleri olumsuz platform derecelendirmeleriyle sonuçlanır",
+    "correct": "result in",
+    "blank": "unoptimized application builds ___ negative platform ratings",
+    "options": [
+      "result in",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "unoptimized application",
+      "builds result",
+      "in negative platform ratings"
+    ]
+  },
+  {
+    "en": "unstable chemical mixtures <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> explosive exothermic chain reactions",
+    "tr": "kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir",
+    "word": "produce",
+    "trWord": "kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir",
+    "correct": "produce",
+    "blank": "unstable chemical mixtures ___ explosive exothermic chain reactions",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "unstable chemical",
+      "mixtures produce",
+      "explosive exothermic chain reactions"
+    ]
+  },
+  {
+    "en": "high mechanical piston friction <span style=\"color: #ff6b6b; font-weight: bold;\">leads to</span> permanent engine decay",
+    "tr": "yüksek mekanik piston sürtünmesi kalıcı motor aşınmasına yol açar",
+    "word": "leads to",
+    "trWord": "yüksek mekanik piston sürtünmesi kalıcı motor aşınmasına yol açar",
+    "correct": "leads to",
+    "blank": "high mechanical piston friction ___ permanent engine decay",
+    "options": [
+      "leads to",
+      "lead to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "high mechanical piston",
+      "friction leads to",
+      "permanent engine decay"
+    ]
+  },
+  {
+    "en": "cryptographic validation failures <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> transient profile lockouts",
+    "tr": "kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur",
+    "word": "cause",
+    "trWord": "kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur",
+    "correct": "cause",
+    "blank": "cryptographic validation failures ___ transient profile lockouts",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "cryptographic validation",
+      "failures cause",
+      "transient profile lockouts"
+    ]
+  },
+  {
+    "en": "loose query loops <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> severe execution bottlenecks",
+    "tr": "gevşek sorgu döngüleri ciddi yürütme darboğazları üretir",
+    "word": "produce",
+    "trWord": "gevşek sorgu döngüleri ciddi yürütme darboğazları üretir",
+    "correct": "produce",
+    "blank": "loose query loops ___ severe execution bottlenecks",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "loose query",
+      "loops produce",
+      "severe execution bottlenecks"
+    ]
+  },
+  {
+    "en": "unmonitored server fluctuations <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> data degradation",
+    "tr": "izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur",
+    "word": "are responsible for",
+    "trWord": "izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "unmonitored server fluctuations ___ data degradation",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "unmonitored server",
+      "fluctuations are",
+      "responsible for data degradation"
+    ]
+  },
+  {
+    "en": "flexible parameter fields <span style=\"color: #ff6b6b; font-weight: bold;\">contribute to</span> significant implementation delays",
+    "tr": "esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur",
+    "word": "contribute to",
+    "trWord": "esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur",
+    "correct": "contribute to",
+    "blank": "flexible parameter fields ___ significant implementation delays",
+    "options": [
+      "contribute to",
+      "contributes to",
+      "contributing to",
+      "contributed to"
+    ],
+    "blocks": [
+      "flexible parameter",
+      "fields contribute",
+      "to significant implementation delays"
+    ]
+  },
+  {
+    "en": "loose database integration <span style=\"color: #ff6b6b; font-weight: bold;\">has resulted in</span> severe compilation errors",
+    "tr": "gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır",
+    "word": "has resulted in",
+    "trWord": "gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır",
+    "correct": "has resulted in",
+    "blank": "loose database integration ___ severe compilation errors",
+    "options": [
+      "has resulted in",
+      "have resulted in",
+      "result in",
+      "results from"
+    ],
+    "blocks": [
+      "loose database integration",
+      "has resulted in",
+      "severe compilation errors"
+    ]
+  },
+  {
+    "en": "sudden technical overrides <span style=\"color: #ff6b6b; font-weight: bold;\">trigger</span> baseline calculation overrides",
+    "tr": "ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler",
+    "word": "trigger",
+    "trWord": "ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler",
+    "correct": "trigger",
+    "blank": "sudden technical overrides ___ baseline calculation overrides",
+    "options": [
+      "trigger",
+      "triggers",
+      "triggering",
+      "triggered"
+    ],
+    "blocks": [
+      "sudden technical",
+      "overrides trigger",
+      "baseline calculation overrides"
+    ]
+  },
+  {
+    "en": "unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">bring about</span> immediate firewall warnings",
+    "tr": "yetkisiz harici girişler anında güvenlik duvarı uyarılarına yol açar",
+    "word": "bring about",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarılarına yol açar",
+    "correct": "bring about",
+    "blank": "unauthorized external entries ___ immediate firewall warnings",
+    "options": [
+      "bring about",
+      "brings about",
+      "bringing about",
+      "brought about"
+    ],
+    "blocks": [
+      "unauthorized external",
+      "entries bring",
+      "about immediate firewall warnings"
+    ]
+  },
+  {
+    "en": "unverified cryptographic tokens <span style=\"color: #ff6b6b; font-weight: bold;\">are one of the causes of</span> validation anomalies",
+    "tr": "doğrulanmamış kriptografik belirteçler doğrulama anomalilerinin nedenlerinden biridir",
+    "word": "are one of the causes of",
+    "trWord": "doğrulanmamış kriptografik belirteçler doğrulama anomalilerinin nedenlerinden biridir",
+    "correct": "are one of the causes of",
+    "blank": "unverified cryptographic tokens ___ validation anomalies",
+    "options": [
+      "are one of the causes of",
+      "causes of",
+      "causes",
+      "stems from"
+    ],
+    "blocks": [
+      "unverified cryptographic tokens",
+      "are one of",
+      "the causes of validation anomalies"
+    ]
+  }
+];
+
+const unit30Lesson1Group2Raw = [
+  {
+    "en": "Severe data formatting issues <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> validation anomalies.",
+    "tr": "Ciddi veri formatlama sorunları doğrulama anomalilerine yol açar.",
+    "word": "give rise to",
+    "trWord": "ciddi veri formatlama sorunları doğrulama anomalilerine yol açar",
+    "correct": "give rise to",
+    "blank": "Severe data formatting issues ___ validation anomalies.",
+    "options": [
+      "give rise to",
+      "results from",
+      "stems from",
+      "inhibits"
+    ],
+    "blocks": [
+      "Severe data formatting",
+      "issues give rise",
+      "to validation anomalies"
+    ]
+  },
+  {
+    "en": "Inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">result in</span> comprehensive compilation errors.",
+    "tr": "Tutarsız veri kümeleri kapsamlı derleme hatalarıyla sonuçlanır.",
+    "word": "result in",
+    "trWord": "tutarsız veri kümeleri kapsamlı derleme hatalarıyla sonuçlanır",
+    "correct": "result in",
+    "blank": "Inconsistent datasets ___ comprehensive compilation errors.",
+    "options": [
+      "result in",
+      "results from",
+      "stems from",
+      "stabilizes"
+    ],
+    "blocks": [
+      "Inconsistent datasets",
+      "result in",
+      "comprehensive compilation errors"
+    ]
+  },
+  {
+    "en": "Dynamic parameter shifts <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> baseline calculation overrides.",
+    "tr": "Dinamik parametre kaymaları temel hesaplama geçersiz kılmalarından sorumludur.",
+    "word": "are responsible for",
+    "trWord": "dinamik parametre kaymaları temel hesaplama geçersiz kılmalarından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Dynamic parameter shifts ___ baseline calculation overrides.",
+    "options": [
+      "are responsible for",
+      "stems from",
+      "contribute to",
+      "results in"
+    ],
+    "blocks": [
+      "Dynamic parameter shifts",
+      "are responsible for",
+      "baseline calculation overrides"
+    ]
+  },
+  {
+    "en": "Unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> immediate firewall warnings.",
+    "tr": "Yetkisiz harici girişler anında güvenlik duvarı uyarıları üretir.",
+    "word": "produce",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarıları üretir",
+    "correct": "produce",
+    "blank": "Unauthorized external entries ___ immediate firewall warnings.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Unauthorized external",
+      "entries produce",
+      "immediate firewall warnings"
+    ]
+  },
+  {
+    "en": "Arbitrary compliance criteria <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> significant implementation delays.",
+    "tr": "Keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur.",
+    "word": "cause",
+    "trWord": "keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur",
+    "correct": "cause",
+    "blank": "Arbitrary compliance criteria ___ significant implementation delays.",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "Arbitrary compliance",
+      "criteria cause",
+      "significant implementation delays"
+    ]
+  },
+  {
+    "en": "Unexpected memory leaks <span style=\"color: #ff6b6b; font-weight: bold;\">lead to</span> permanent system latency.",
+    "tr": "Beklenmedik bellek sızıntıları kalıcı sistem gecikmesine yol açar.",
+    "word": "lead to",
+    "trWord": "beklenmedik bellek sızıntıları kalıcı sistem gecikmesine yol açar",
+    "correct": "lead to",
+    "blank": "Unexpected memory leaks ___ permanent system latency.",
+    "options": [
+      "lead to",
+      "leads to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "Unexpected memory",
+      "leaks lead",
+      "to permanent system latency"
+    ]
+  },
+  {
+    "en": "Unconstitutional state laws <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> public institutional collapse.",
+    "tr": "Anayasa dışı devlet yasaları kamu kurumu çöküşüne yol açar.",
+    "word": "give rise to",
+    "trWord": "anayasa dışı devlet yasaları kamu kurumu çöküşüne yol açar",
+    "correct": "give rise to",
+    "blank": "Unconstitutional state laws ___ public institutional collapse.",
+    "options": [
+      "give rise to",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "Unconstitutional state laws",
+      "give rise to",
+      "public institutional collapse"
+    ]
+  },
+  {
+    "en": "Faulty legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> the assembly suspension.",
+    "tr": "Kusurlu yasama taslağı maddeleri meclis askıya alınmasından sorumludur.",
+    "word": "are responsible for",
+    "trWord": "kusurlu yasama taslağı maddeleri meclis askıya alınmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Faulty legislative draft clauses ___ the assembly suspension.",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "Faulty legislative draft",
+      "clauses are responsible",
+      "for the assembly suspension"
+    ]
+  },
+  {
+    "en": "A complete lack of infrastructure <span style=\"color: #ff6b6b; font-weight: bold;\">causes</span> economic stagnation.",
+    "tr": "Altyapı eksikliği ekonomik durgunluğa neden olur.",
+    "word": "causes",
+    "trWord": "altyapı eksikliği ekonomik durgunluğa neden olur",
+    "correct": "causes",
+    "blank": "A complete lack of infrastructure ___ economic stagnation.",
+    "options": [
+      "causes",
+      "cause",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "A complete",
+      "lack of",
+      "infrastructure causes economic stagnation"
+    ]
+  },
+  {
+    "en": "Unoptimized application builds <span style=\"color: #ff6b6b; font-weight: bold;\">result in</span> negative platform ratings.",
+    "tr": "Optimize edilmemiş uygulama derlemeleri olumsuz platform derecelendirmeleriyle sonuçlanır.",
+    "word": "result in",
+    "trWord": "optimize edilmemiş uygulama derlemeleri olumsuz platform derecelendirmeleriyle sonuçlanır",
+    "correct": "result in",
+    "blank": "Unoptimized application builds ___ negative platform ratings.",
+    "options": [
+      "result in",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "Unoptimized application",
+      "builds result",
+      "in negative platform ratings"
+    ]
+  },
+  {
+    "en": "Unstable chemical mixtures <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> explosive exothermic chain reactions.",
+    "tr": "Kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir.",
+    "word": "produce",
+    "trWord": "kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir",
+    "correct": "produce",
+    "blank": "Unstable chemical mixtures ___ explosive exothermic chain reactions.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Unstable chemical",
+      "mixtures produce",
+      "explosive exothermic chain reactions"
+    ]
+  },
+  {
+    "en": "High mechanical piston friction <span style=\"color: #ff6b6b; font-weight: bold;\">leads to</span> permanent engine decay.",
+    "tr": "Yüksek mekanik piston sürtünmesi kalıcı motor aşınmasına yol açar.",
+    "word": "leads to",
+    "trWord": "yüksek mekanik piston sürtünmesi kalıcı motor aşınmasına yol açar",
+    "correct": "leads to",
+    "blank": "High mechanical piston friction ___ permanent engine decay.",
+    "options": [
+      "leads to",
+      "lead to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "High mechanical piston",
+      "friction leads to",
+      "permanent engine decay"
+    ]
+  },
+  {
+    "en": "Cryptographic validation failures <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> transient profile lockouts.",
+    "tr": "Kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur.",
+    "word": "cause",
+    "trWord": "kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur",
+    "correct": "cause",
+    "blank": "Cryptographic validation failures ___ transient profile lockouts.",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "Cryptographic validation",
+      "failures cause",
+      "transient profile lockouts"
+    ]
+  },
+  {
+    "en": "Loose query loops <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> severe execution bottlenecks.",
+    "tr": "Gevşek sorgu döngüleri ciddi yürütme darboğazları üretir.",
+    "word": "produce",
+    "trWord": "gevşek sorgu döngüleri ciddi yürütme darboğazları üretir",
+    "correct": "produce",
+    "blank": "Loose query loops ___ severe execution bottlenecks.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Loose query",
+      "loops produce",
+      "severe execution bottlenecks"
+    ]
+  },
+  {
+    "en": "Unmonitored server fluctuations <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> data degradation.",
+    "tr": "Izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur.",
+    "word": "are responsible for",
+    "trWord": "izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Unmonitored server fluctuations ___ data degradation.",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "Unmonitored server",
+      "fluctuations are",
+      "responsible for data degradation"
+    ]
+  },
+  {
+    "en": "Flexible parameter fields <span style=\"color: #ff6b6b; font-weight: bold;\">contribute to</span> significant implementation delays.",
+    "tr": "Esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur.",
+    "word": "contribute to",
+    "trWord": "esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur",
+    "correct": "contribute to",
+    "blank": "Flexible parameter fields ___ significant implementation delays.",
+    "options": [
+      "contribute to",
+      "contributes to",
+      "contributing to",
+      "contributed to"
+    ],
+    "blocks": [
+      "Flexible parameter",
+      "fields contribute",
+      "to significant implementation delays"
+    ]
+  },
+  {
+    "en": "Loose database integration <span style=\"color: #ff6b6b; font-weight: bold;\">has resulted in</span> severe compilation errors.",
+    "tr": "Gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır.",
+    "word": "has resulted in",
+    "trWord": "gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır",
+    "correct": "has resulted in",
+    "blank": "Loose database integration ___ severe compilation errors.",
+    "options": [
+      "has resulted in",
+      "have resulted in",
+      "result in",
+      "results from"
+    ],
+    "blocks": [
+      "Loose database integration",
+      "has resulted in",
+      "severe compilation errors"
+    ]
+  },
+  {
+    "en": "Sudden technical overrides <span style=\"color: #ff6b6b; font-weight: bold;\">trigger</span> baseline calculation overrides.",
+    "tr": "Ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler.",
+    "word": "trigger",
+    "trWord": "ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler",
+    "correct": "trigger",
+    "blank": "Sudden technical overrides ___ baseline calculation overrides.",
+    "options": [
+      "trigger",
+      "triggers",
+      "triggering",
+      "triggered"
+    ],
+    "blocks": [
+      "Sudden technical",
+      "overrides trigger",
+      "baseline calculation overrides"
+    ]
+  },
+  {
+    "en": "Unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">bring about</span> immediate firewall warnings.",
+    "tr": "Yetkisiz harici girişler anında güvenlik duvarı uyarılarına yol açar.",
+    "word": "bring about",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarılarına yol açar",
+    "correct": "bring about",
+    "blank": "Unauthorized external entries ___ immediate firewall warnings.",
+    "options": [
+      "bring about",
+      "brings about",
+      "bringing about",
+      "brought about"
+    ],
+    "blocks": [
+      "Unauthorized external",
+      "entries bring",
+      "about immediate firewall warnings"
+    ]
+  },
+  {
+    "en": "Unverified cryptographic tokens <span style=\"color: #ff6b6b; font-weight: bold;\">are one of the causes of</span> validation anomalies.",
+    "tr": "Doğrulanmamış kriptografik belirteçler doğrulama anomalilerinin nedenlerinden biridir.",
+    "word": "are one of the causes of",
+    "trWord": "doğrulanmamış kriptografik belirteçler doğrulama anomalilerinin nedenlerinden biridir",
+    "correct": "are one of the causes of",
+    "blank": "Unverified cryptographic tokens ___ validation anomalies.",
+    "options": [
+      "are one of the causes of",
+      "causes of",
+      "causes",
+      "stems from"
+    ],
+    "blocks": [
+      "Unverified cryptographic tokens",
+      "are one of",
+      "the causes of validation anomalies"
+    ]
+  }
+];
+
+const unit30Lesson1Group3Raw = [
+  {
+    "en": "Severe data formatting issues <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> validation anomalies, forcing international software engineering teams to inspect raw binary code strings thoroughly.",
+    "tr": "Ciddi veri formatlama sorunları doğrulama anomalilerine yol açarak uluslararası yazılım mühendisliği ekiplerini ham ikili kod dizilerini derinlemesine incelemeye zorlar.",
+    "word": "give rise to",
+    "trWord": "ciddi veri formatlama sorunları doğrulama anomalilerine yol açar",
+    "correct": "give rise to",
+    "blank": "Severe data formatting issues ___ validation anomalies, forcing international software engineering teams to inspect raw binary code strings thoroughly.",
+    "options": [
+      "give rise to",
+      "results from",
+      "stems from",
+      "inhibits"
+    ],
+    "blocks": [
+      "Severe data formatting issues give",
+      "rise to validation anomalies forcing",
+      "international software engineering teams to",
+      "inspect raw binary code strings thoroughly"
+    ]
+  },
+  {
+    "en": "Inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">result in</span> comprehensive compilation errors because the local database schema lacks adaptive multi-layer configurations.",
+    "tr": "Tutarsız veri kümeleri, yerel veritabanı şeması uyarlanabilir çok katmanlı yapılandırmalardan yoksun olduğu için kapsamlı derleme hatalarıyla sonuçlanır.",
+    "word": "result in",
+    "trWord": "tutarsız veri kümeleri kapsamlı derleme hatalarıyla sonuçlanır",
+    "correct": "result in",
+    "blank": "Inconsistent datasets ___ comprehensive compilation errors because the local database schema lacks adaptive multi-layer configurations.",
+    "options": [
+      "result in",
+      "results from",
+      "stems from",
+      "stabilizes"
+    ],
+    "blocks": [
+      "Inconsistent datasets result in",
+      "comprehensive compilation errors because",
+      "the local database schema",
+      "lacks adaptive multi-layer configurations"
+    ]
+  },
+  {
+    "en": "Dynamic parameter shifts <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> baseline calculation overrides since central server nodes experience high-volume synchronization traffic.",
+    "tr": "Merkez sunucu düğümleri yüksek hacimli senkronizasyon trafiği yaşadığından, temel hesaplama geçersiz kılmalarından dinamik parametre kaymaları sorumludur.",
+    "word": "are responsible for",
+    "trWord": "dinamik parametre kaymaları temel hesaplama geçersiz kılmalarından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Dynamic parameter shifts ___ baseline calculation overrides since central server nodes experience high-volume synchronization traffic.",
+    "options": [
+      "are responsible for",
+      "stems from",
+      "contribute to",
+      "results in"
+    ],
+    "blocks": [
+      "Dynamic parameter shifts are",
+      "responsible for baseline calculation",
+      "overrides since central server",
+      "nodes experience high-volume synchronization traffic"
+    ]
+  },
+  {
+    "en": "Unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> immediate firewall warnings, which triggers an automated security script to isolate corrupted connection profiles.",
+    "tr": "Yetkisiz harici girişler, bozulmuş bağlantı profillerini izole etmek için otomatik bir güvenlik komut dosyasını tetikleyen anında güvenlik duvarı uyarıları üretir.",
+    "word": "produce",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarıları üretir",
+    "correct": "produce",
+    "blank": "Unauthorized external entries ___ immediate firewall warnings, which triggers an automated security script to isolate corrupted connection profiles.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Unauthorized external entries produce",
+      "immediate firewall warnings which",
+      "triggers an automated security",
+      "script to isolate corrupted connection profiles"
+    ]
+  },
+  {
+    "en": "Arbitrary compliance criteria <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> significant implementation delays although cross-disciplinary development groups work intensely to meet trade guidelines.",
+    "tr": "Disiplinler arası geliştirme grupları ticari yönergeleri karşılamak için yoğun bir şekilde çalışsa da, keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur.",
+    "word": "cause",
+    "trWord": "keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur",
+    "correct": "cause",
+    "blank": "Arbitrary compliance criteria ___ significant implementation delays although cross-disciplinary development groups work intensely to meet trade guidelines.",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "Arbitrary compliance criteria cause",
+      "significant implementation delays although",
+      "cross-disciplinary development groups work",
+      "intensely to meet trade guidelines"
+    ]
+  },
+  {
+    "en": "Unexpected background memory leaks <span style=\"color: #ff6b6b; font-weight: bold;\">lead to</span> permanent system latency, degrading active user performance indicators during long platform sessions.",
+    "tr": "Beklenmedik arka plan bellek sızıntıları, uzun platform oturumları sırasında aktif kullanıcı performans göstergelerini düşürerek kalıcı sistem gecikmesine yol açar.",
+    "word": "lead to",
+    "trWord": "beklenmedik bellek sızıntıları kalıcı sistem gecikmesine yol açar",
+    "correct": "lead to",
+    "blank": "Unexpected background memory leaks ___ permanent system latency, degrading active user performance indicators during long platform sessions.",
+    "options": [
+      "lead to",
+      "leads to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "Unexpected background memory leaks",
+      "lead to permanent system",
+      "latency degrading active user",
+      "performance indicators during long platform sessions"
+    ]
+  },
+  {
+    "en": "Unconstitutional state laws <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> public institutional collapse, forcing regional municipalities to request immediate statutory amendments.",
+    "tr": "Anayasaya aykırı eyalet yasaları kamu kurumu çöküşüne yol açarak bölgesel belediyeleri derhal yasal değişiklikler talep etmeye zorlar.",
+    "word": "give rise to",
+    "trWord": "anayasa dışı devlet yasaları kamu kurumu çöküşüne yol açar",
+    "correct": "give rise to",
+    "blank": "Unconstitutional state laws ___ public institutional collapse, forcing regional municipalities to request immediate statutory amendments.",
+    "options": [
+      "give rise to",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "Unconstitutional state laws give",
+      "rise to public institutional",
+      "collapse forcing regional municipalities",
+      "to request immediate statutory amendments"
+    ]
+  },
+  {
+    "en": "Faulty legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> the assembly suspension until the constitutional committee finalizes the policy codes.",
+    "tr": "Anayasa komisyonu politika kurallarını nihai hale getirene kadar, meclis askıya alınmasından kusurlu yasama taslağı maddeleri sorumludur.",
+    "word": "are responsible for",
+    "trWord": "kusurlu yasama taslağı maddeleri meclis askıya alınmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Faulty legislative draft clauses ___ the assembly suspension until the constitutional committee finalizes the policy codes.",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "Faulty legislative draft clauses",
+      "are responsible for the",
+      "assembly suspension until the",
+      "constitutional committee finalizes the policy codes"
+    ]
+  },
+  {
+    "en": "A complete lack of regional infrastructure devices <span style=\"color: #ff6b6b; font-weight: bold;\">causes</span> economic stagnation, reducing overall corporate investment metrics across the province.",
+    "tr": "Bölgesel altyapı cihazlarının tamamen eksikliği ekonomik durgunluğa neden olarak eyalet genelindeki toplam kurumsal yatırım metriklerini düşürür.",
+    "word": "causes",
+    "trWord": "altyapı eksikliği ekonomik durgunluğa neden olur",
+    "correct": "causes",
+    "blank": "A complete lack of regional infrastructure devices ___ economic stagnation, reducing overall corporate investment metrics across the province.",
+    "options": [
+      "causes",
+      "cause",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "A complete lack of",
+      "regional infrastructure devices causes",
+      "economic stagnation reducing overall",
+      "corporate investment metrics across the province"
+    ]
+  },
+  {
+    "en": "Unoptimized mobile application builds are doomed to face negative user reviews since clients encounter constant navigation lag thresholds.",
+    "tr": "Müşteriler sürekli navigasyon gecikme eşikleriyle karşılaştığından, optimize edilmemiş mobil uygulama derlemeleri olumsuz kullanıcı yorumlarıyla karşılaşmaya mahkumdur.",
+    "word": "result in",
+    "trWord": "optimize edilmemiş uygulama derlemeleri olumsuz platform derecelendirmeleriyle sonuçlanır",
+    "correct": "result in",
+    "blank": "Unoptimized mobile application builds are doomed to face negative user reviews since clients encounter constant navigation lag thresholds.",
+    "options": [
+      "result in",
+      "stems from",
+      "results from",
+      "alters"
+    ],
+    "blocks": [
+      "Unoptimized mobile application builds",
+      "are doomed to face",
+      "negative user reviews since",
+      "clients encounter constant navigation lag thresholds"
+    ]
+  },
+  {
+    "en": "Unstable chemical mixtures <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> explosive exothermic chain reactions the moment technicians expose the unsealed container to sunlight.",
+    "tr": "Teknisyenler mühürlenmemiş kabı güneş ışığına maruz bıraktığı an, kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir.",
+    "word": "produce",
+    "trWord": "kararsız kimyasal karışımlar patlayıcı ekzotermik zincirleme reaksiyonlar üretir",
+    "correct": "produce",
+    "blank": "Unstable chemical mixtures ___ explosive exothermic chain reactions the moment technicians expose the unsealed container to sunlight.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Unstable chemical mixtures produce",
+      "explosive exothermic chain reactions",
+      "the moment technicians expose",
+      "the unsealed container to sunlight"
+    ]
+  },
+  {
+    "en": "High mechanical piston friction inevitably <span style=\"color: #ff6b6b; font-weight: bold;\">leads to</span> permanent engine core decay under high-pressure simulation workloads.",
+    "tr": "Yüksek mekanik piston sürtünmesi, yüksek basınçlı simülasyon iş yükleri altında kaçınılmaz olarak kalıcı motor çekirdeği aşınmasına yol açar.",
+    "word": "leads to",
+    "trWord": "yüksek mekanik piston sürtünmesi kalıcı motor aşınmasına yol açar",
+    "correct": "leads to",
+    "blank": "High mechanical piston friction inevitably ___ permanent engine core decay under high-pressure simulation workloads.",
+    "options": [
+      "leads to",
+      "lead to",
+      "leading to",
+      "led to"
+    ],
+    "blocks": [
+      "High mechanical piston",
+      "friction inevitably leads",
+      "to permanent engine",
+      "core decay under high-pressure simulation workloads"
+    ]
+  },
+  {
+    "en": "Cryptographic validation failures <span style=\"color: #ff6b6b; font-weight: bold;\">cause</span> transient profile lockouts in order that sensitive server partitions can maintain data safety parameters.",
+    "tr": "Hassas sunucu bölümlerinin veri güvenliği parametrelerini koruyabilmesi için, kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur.",
+    "word": "cause",
+    "trWord": "kriptografik doğrulama hataları geçici profil kilitlenmelerine neden olur",
+    "correct": "cause",
+    "blank": "Cryptographic validation failures ___ transient profile lockouts in order that sensitive server partitions can maintain data safety parameters.",
+    "options": [
+      "cause",
+      "causes",
+      "causing",
+      "caused"
+    ],
+    "blocks": [
+      "Cryptographic validation failures cause",
+      "transient profile lockouts in",
+      "order that sensitive server",
+      "partitions can maintain data safety parameters"
+    ]
+  },
+  {
+    "en": "Loose query loops <span style=\"color: #ff6b6b; font-weight: bold;\">produce</span> severe execution bottlenecks.",
+    "tr": "Gevşek sorgu döngüleri ciddi yürütme darboğazları üretir.",
+    "word": "produce",
+    "trWord": "gevşek sorgu döngüleri ciddi yürütme darboğazları üretir",
+    "correct": "produce",
+    "blank": "Loose query loops ___ severe execution bottlenecks.",
+    "options": [
+      "produce",
+      "produces",
+      "producing",
+      "produced"
+    ],
+    "blocks": [
+      "Loose query",
+      "loops produce",
+      "severe execution bottlenecks"
+    ]
+  },
+  {
+    "en": "Unmonitored server fluctuations <span style=\"color: #ff6b6b; font-weight: bold;\">are responsible for</span> data degradation.",
+    "tr": "Izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur.",
+    "word": "are responsible for",
+    "trWord": "izlenmeyen sunucu dalgalanmaları veri bozulmasından sorumludur",
+    "correct": "are responsible for",
+    "blank": "Unmonitored server fluctuations ___ data degradation.",
+    "options": [
+      "are responsible for",
+      "contributes to",
+      "causes",
+      "results in"
+    ],
+    "blocks": [
+      "Unmonitored server",
+      "fluctuations are",
+      "responsible for data degradation"
+    ]
+  },
+  {
+    "en": "Flexible parameter fields <span style=\"color: #ff6b6b; font-weight: bold;\">contribute to</span> significant implementation delays although cross-disciplinary groups work intensely to meet guidelines.",
+    "tr": "Disiplinler arası gruplar yönergeleri karşılamak için yoğun bir şekilde çalışsa da, esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur.",
+    "word": "contribute to",
+    "trWord": "esnek parametre alanları önemli uygulama gecikmelerine katkıda bulunur",
+    "correct": "contribute to",
+    "blank": "Flexible parameter fields ___ significant implementation delays although cross-disciplinary groups work intensely to meet guidelines.",
+    "options": [
+      "contribute to",
+      "contributes to",
+      "contributing to",
+      "contributed to"
+    ],
+    "blocks": [
+      "Flexible parameter fields contribute",
+      "to significant implementation delays",
+      "although cross-disciplinary groups work",
+      "intensely to meet guidelines"
+    ]
+  },
+  {
+    "en": "Loose database integration <span style=\"color: #ff6b6b; font-weight: bold;\">has resulted in</span> severe compilation errors because the regional schema lacks adaptive multi-layer configurations.",
+    "tr": "Bölgesel şema uyarlanabilir çok katmanlı yapılandırmalardan yoksun olduğu için, gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır.",
+    "word": "has resulted in",
+    "trWord": "gevşek veritabanı entegrasyonu ciddi derleme hatalarıyla sonuçlanmıştır",
+    "correct": "has resulted in",
+    "blank": "Loose database integration ___ severe compilation errors because the regional schema lacks adaptive multi-layer configurations.",
+    "options": [
+      "has resulted in",
+      "have resulted in",
+      "result in",
+      "results from"
+    ],
+    "blocks": [
+      "Loose database integration has",
+      "resulted in severe compilation",
+      "errors because the regional",
+      "schema lacks adaptive multi-layer configurations"
+    ]
+  },
+  {
+    "en": "Sudden technical overrides <span style=\"color: #ff6b6b; font-weight: bold;\">trigger</span> baseline calculation overrides when central server nodes experience unexpected high-volume data traffic.",
+    "tr": "Merkez sunucu düğümleri beklenmedik yüksek hacimli veri trafiği yaşadığında, ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler.",
+    "word": "trigger",
+    "trWord": "ani teknik geçersiz kılmalar temel hesaplama geçersiz kılmalarını tetikler",
+    "correct": "trigger",
+    "blank": "Sudden technical overrides ___ baseline calculation overrides when central server nodes experience unexpected high-volume data traffic.",
+    "options": [
+      "trigger",
+      "triggers",
+      "triggering",
+      "triggered"
+    ],
+    "blocks": [
+      "Sudden technical overrides trigger",
+      "baseline calculation overrides when",
+      "central server nodes experience",
+      "unexpected high-volume data traffic"
+    ]
+  },
+  {
+    "en": "Unauthorized external entries <span style=\"color: #ff6b6b; font-weight: bold;\">bring about</span> immediate firewall warnings, forcing the automated security package to isolate corrupted profiles.",
+    "tr": "Yetkisiz harici girişler, otomatik güvenlik paketini bozulmuş profilleri izole etmeye zorlayarak anında güvenlik duvarı uyarılarına yol açar.",
+    "word": "bring about",
+    "trWord": "yetkisiz harici girişler anında güvenlik duvarı uyarılarına yol açar",
+    "correct": "bring about",
+    "blank": "Unauthorized external entries ___ immediate firewall warnings, forcing the automated security package to isolate corrupted profiles.",
+    "options": [
+      "bring about",
+      "brings about",
+      "bringing about",
+      "brought about"
+    ],
+    "blocks": [
+      "Unauthorized external entries bring",
+      "about immediate firewall warnings",
+      "forcing the automated security",
+      "package to isolate corrupted profiles"
+    ]
+  },
+  {
+    "en": "Inconsistent technical datasets <span style=\"color: #ff6b6b; font-weight: bold;\">are one of the causes of</span> validation anomalies, forcing software engineering teams to analyze binary code strings.",
+    "tr": "Tutarsız teknik veri kümeleri, yazılım mühendisliği ekiplerini ikili kod dizilerini analiz etmeye zorlayarak doğrulama anomalilerinin nedenlerinden biridir.",
+    "word": "are one of the causes of",
+    "trWord": "doğrulanmamış kriptografik belirteçler doğrulama anomalilerinin nedenlerinden biridir",
+    "correct": "are one of the causes of",
+    "blank": "Inconsistent technical datasets ___ validation anomalies, forcing software engineering teams to analyze binary code strings.",
+    "options": [
+      "are one of the causes of",
+      "causes of",
+      "causes",
+      "stems from"
+    ],
+    "blocks": [
+      "Inconsistent technical datasets are one",
+      "of the causes of validation",
+      "anomalies forcing software engineering teams",
+      "to analyze binary code strings"
+    ]
+  }
+];
+
+const unit30Lesson2Group1Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>",
+    "tr": "bu nedenle",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "___",
+    "options": [
+      "therefore",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "therefore"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>",
+    "tr": "sonuç olarak",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "___",
+    "options": [
+      "consequently",
+      "nonetheless",
+      "whereas",
+      "but"
+    ],
+    "blocks": [
+      "consequently"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>",
+    "tr": "sonuç olarak",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "___",
+    "options": [
+      "as a result",
+      "on the contrary",
+      "although",
+      "since"
+    ],
+    "blocks": [
+      "as a",
+      "result"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span>",
+    "tr": "bunun sonucunda",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "___",
+    "options": [
+      "with the result that",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "with the",
+      "result that"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>",
+    "tr": "bunun bir sonucu olarak",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "___",
+    "options": [
+      "as a consequence",
+      "nonetheless",
+      "even though",
+      "likewise"
+    ],
+    "blocks": [
+      "as a",
+      "consequence"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>",
+    "tr": "bu nedenle",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "___",
+    "options": [
+      "for this reason",
+      "in contrast",
+      "although",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "for this",
+      "reason"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>",
+    "tr": "sonuç olarak",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "___",
+    "options": [
+      "consequently",
+      "but",
+      "although",
+      "unless"
+    ],
+    "blocks": [
+      "consequently"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>",
+    "tr": "sonuç olarak",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "___",
+    "options": [
+      "as a result",
+      "even though",
+      "otherwise",
+      "besides"
+    ],
+    "blocks": [
+      "as a",
+      "result"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span>",
+    "tr": "bunun sonucunda",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "___",
+    "options": [
+      "with the result that",
+      "provided that",
+      "whereas",
+      "nonetheless"
+    ],
+    "blocks": [
+      "with the",
+      "result that"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>",
+    "tr": "bu nedenle",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "___",
+    "options": [
+      "therefore",
+      "however",
+      "though",
+      "whereas"
+    ],
+    "blocks": [
+      "therefore"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>",
+    "tr": "sonuç olarak",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "___",
+    "options": [
+      "consequently",
+      "nevertheless",
+      "in order that",
+      "since"
+    ],
+    "blocks": [
+      "consequently"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>",
+    "tr": "sonuç olarak",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "___",
+    "options": [
+      "as a result",
+      "in spite of",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "as a",
+      "result"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>",
+    "tr": "bunun bir sonucu olarak",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "___",
+    "options": [
+      "as a consequence",
+      "instead of",
+      "provided",
+      "likewise"
+    ],
+    "blocks": [
+      "as a",
+      "consequence"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>",
+    "tr": "bu nedenle",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "___",
+    "options": [
+      "for this reason",
+      "though",
+      "on the contrary",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "for this",
+      "reason"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>",
+    "tr": "sonuç olarak",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "___",
+    "options": [
+      "consequently",
+      "otherwise",
+      "whereas",
+      "although"
+    ],
+    "blocks": [
+      "consequently"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">thus</span>",
+    "tr": "böylece",
+    "word": "thus",
+    "trWord": "böylece",
+    "correct": "thus",
+    "blank": "___",
+    "options": [
+      "thus",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "thus"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">so</span>",
+    "tr": "bu yüzden",
+    "word": "so",
+    "trWord": "bu yüzden",
+    "correct": "so",
+    "blank": "___",
+    "options": [
+      "so",
+      "yet",
+      "although",
+      "but"
+    ],
+    "blocks": [
+      "so"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as an immediate result</span>",
+    "tr": "ani bir sonuç olarak",
+    "word": "as an immediate result",
+    "trWord": "ani bir sonuç olarak",
+    "correct": "as an immediate result",
+    "blank": "___",
+    "options": [
+      "as an immediate result",
+      "contrarily",
+      "although",
+      "while"
+    ],
+    "blocks": [
+      "as an",
+      "immediate result"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">on that account</span>",
+    "tr": "bu nedenle",
+    "word": "on that account",
+    "trWord": "bu nedenle",
+    "correct": "on that account",
+    "blank": "___",
+    "options": [
+      "on that account",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "on that",
+      "account"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">accordingly</span>",
+    "tr": "buna göre",
+    "word": "accordingly",
+    "trWord": "buna göre",
+    "correct": "accordingly",
+    "blank": "___",
+    "options": [
+      "accordingly",
+      "nonetheless",
+      "even though",
+      "otherwise"
+    ],
+    "blocks": [
+      "accordingly"
+    ]
+  }
+];
+
+const unit30Lesson2Group2Raw = [
+  {
+    "en": "Vitamins were lacking; <span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>, health was poor.",
+    "tr": "Vitaminler eksikti; bu nedenle sağlık zayıftı.",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "Vitamins were lacking; ___, health was poor.",
+    "options": [
+      "therefore",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "Vitamins were",
+      "lacking therefore",
+      "health was poor"
+    ]
+  },
+  {
+    "en": "Data formatting issues occurred; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, validation anomalies arose.",
+    "tr": "Veri formatlama sorunları meydana geldi; sonuç olarak doğrulama anomalileri ortaya çıktı.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Data formatting issues occurred; ___, validation anomalies arose.",
+    "options": [
+      "consequently",
+      "nonetheless",
+      "whereas",
+      "but"
+    ],
+    "blocks": [
+      "Data formatting",
+      "issues occurred",
+      "consequently validation anomalies arose"
+    ]
+  },
+  {
+    "en": "Datasets were inconsistent; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, compilation errors developed.",
+    "tr": "Veri kümeleri tutarsızdı ve sonuç olarak derleme hataları gelişti.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "Datasets were inconsistent; and ___, compilation errors developed.",
+    "options": [
+      "as a result",
+      "on the contrary",
+      "although",
+      "since"
+    ],
+    "blocks": [
+      "Datasets were inconsistent",
+      "and as a",
+      "result compilation errors developed"
+    ]
+  },
+  {
+    "en": "Parameter fields shifted; <span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span> calculation overrides triggered.",
+    "tr": "Parametre alanları kaydı; bunun sonucunda hesaplama geçersiz kılmaları tetiklendi.",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "Parameter fields shifted; ___ calculation overrides triggered.",
+    "options": [
+      "with the result that",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "Parameter fields shifted",
+      "with the result",
+      "that calculation overrides triggered"
+    ]
+  },
+  {
+    "en": "External entries were unauthorized; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>, firewalls locked.",
+    "tr": "Harici girişler yetkisizdi ve bunun bir sonucu olarak güvenlik duvarları kilitlendi.",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "External entries were unauthorized; and ___, firewalls locked.",
+    "options": [
+      "as a consequence",
+      "nonetheless",
+      "even though",
+      "likewise"
+    ],
+    "blocks": [
+      "External entries were",
+      "unauthorized and as",
+      "a consequence firewalls locked"
+    ]
+  },
+  {
+    "en": "Compliance criteria were arbitrary; <span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>, implementation delayed.",
+    "tr": "Uyumluluk kriterleri keyfiydi; bu nedenle uygulama gecikti.",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "Compliance criteria were arbitrary; ___, implementation delayed.",
+    "options": [
+      "for this reason",
+      "in contrast",
+      "although",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "Compliance criteria were",
+      "arbitrary for this",
+      "reason implementation delayed"
+    ]
+  },
+  {
+    "en": "Memory leaks occurred unexpectedly; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, system latency increased.",
+    "tr": "Bellek sızıntıları beklenmedik bir şekilde meydana geldi; sonuç olarak sistem gecikmesi arttı.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Memory leaks occurred unexpectedly; ___, system latency increased.",
+    "options": [
+      "consequently",
+      "but",
+      "although",
+      "unless"
+    ],
+    "blocks": [
+      "Memory leaks",
+      "occurred unexpectedly",
+      "consequently system latency increased"
+    ]
+  },
+  {
+    "en": "State laws were unconstitutional; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, institutions collapsed.",
+    "tr": "Eyalet yasaları anayasaya aykırıydı ve sonuç olarak kurumlar çöktü.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "State laws were unconstitutional; and ___, institutions collapsed.",
+    "options": [
+      "as a result",
+      "even though",
+      "otherwise",
+      "besides"
+    ],
+    "blocks": [
+      "State laws were",
+      "unconstitutional and as",
+      "a result institutions collapsed"
+    ]
+  },
+  {
+    "en": "Draft clauses were faulty; <span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span> the assembly suspended.",
+    "tr": "Taslak maddeler kusurluydu; bunun sonucunda meclis askıya alındı.",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "Draft clauses were faulty; ___ the assembly suspended.",
+    "options": [
+      "with the result that",
+      "provided that",
+      "whereas",
+      "nonetheless"
+    ],
+    "blocks": [
+      "Draft clauses were",
+      "faulty with the",
+      "result that the assembly suspended"
+    ]
+  },
+  {
+    "en": "Regional infrastructure was lacking; <span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>, the economy stagnated.",
+    "tr": "Bölgesel altyapı eksikti; bu nedenle ekonomi durgunlaştı.",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "Regional infrastructure was lacking; ___, the economy stagnated.",
+    "options": [
+      "therefore",
+      "however",
+      "though",
+      "whereas"
+    ],
+    "blocks": [
+      "Regional infrastructure",
+      "was lacking",
+      "therefore the economy stagnated"
+    ]
+  },
+  {
+    "en": "Application builds were unoptimized; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, user ratings dropped.",
+    "tr": "Uygulama derlemeleri optimize edilmemişti; sonuç olarak kullanıcı puanları düştü.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Application builds were unoptimized; ___, user ratings dropped.",
+    "options": [
+      "consequently",
+      "nevertheless",
+      "in order that",
+      "since"
+    ],
+    "blocks": [
+      "Application builds",
+      "were unoptimized",
+      "consequently user ratings dropped"
+    ]
+  },
+  {
+    "en": "Chemical mixtures were unstable; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, reactions triggered.",
+    "tr": "Kimyasal karışımlar kararsızdı ve sonuç olarak reaksiyonlar tetiklendi.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "Chemical mixtures were unstable; and ___, reactions triggered.",
+    "options": [
+      "as a result",
+      "in spite of",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Chemical mixtures were",
+      "unstable and as",
+      "a result reactions triggered"
+    ]
+  },
+  {
+    "en": "Piston friction was high; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>, the engine decayed.",
+    "tr": "Piston sürtünmesi yüksekti ve bunun bir sonucu olarak motor aşındı.",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "Piston friction was high; and ___, the engine decayed.",
+    "options": [
+      "as a consequence",
+      "instead of",
+      "provided",
+      "likewise"
+    ],
+    "blocks": [
+      "Piston friction was",
+      "high and as",
+      "a consequence the engine decayed"
+    ]
+  },
+  {
+    "en": "Validation tokens failed; <span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>, profile logouts occurred.",
+    "tr": "Doğrulama belirteçleri başarısız oldu; bu nedenle profil çıkışları gerçekleşti.",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "Validation tokens failed; ___, profile logouts occurred.",
+    "options": [
+      "for this reason",
+      "though",
+      "on the contrary",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "Validation tokens failed",
+      "for this reason",
+      "profile logouts occurred"
+    ]
+  },
+  {
+    "en": "Query loops were loose; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, execution bottlenecks formed.",
+    "tr": "Sorgu döngüleri gevşekti; sonuç olarak yürütme darboğazları oluştu.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Query loops were loose; ___, execution bottlenecks formed.",
+    "options": [
+      "consequently",
+      "otherwise",
+      "whereas",
+      "although"
+    ],
+    "blocks": [
+      "Query loops",
+      "were loose",
+      "consequently execution bottlenecks formed"
+    ]
+  },
+  {
+    "en": "Vitamins were lacking; <span style=\"color: #ff6b6b; font-weight: bold;\">thus</span>, health was poor.",
+    "tr": "Vitaminler eksikti; böylece sağlık zayıftı.",
+    "word": "thus",
+    "trWord": "böylece",
+    "correct": "thus",
+    "blank": "Vitamins were lacking; ___, health was poor.",
+    "options": [
+      "thus",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "Vitamins were",
+      "lacking thus",
+      "health was poor"
+    ]
+  },
+  {
+    "en": "Data formatting issues occurred, <span style=\"color: #ff6b6b; font-weight: bold;\">so</span> validation anomalies arose.",
+    "tr": "Veri formatlama sorunları meydana geldi, bu yüzden doğrulama anomalileri ortaya çıktı.",
+    "word": "so",
+    "trWord": "bu yüzden",
+    "correct": "so",
+    "blank": "Data formatting issues occurred, ___ validation anomalies arose.",
+    "options": [
+      "so",
+      "yet",
+      "although",
+      "but"
+    ],
+    "blocks": [
+      "Data formatting",
+      "issues occurred",
+      "so validation anomalies arose"
+    ]
+  },
+  {
+    "en": "Datasets were inconsistent; <span style=\"color: #ff6b6b; font-weight: bold;\">as an immediate result</span>, compilation errors developed.",
+    "tr": "Veri kümeleri tutarsızdı; ani bir sonuç olarak derleme hataları gelişti.",
+    "word": "as an immediate result",
+    "trWord": "ani bir sonuç olarak",
+    "correct": "as an immediate result",
+    "blank": "Datasets were inconsistent; ___, compilation errors developed.",
+    "options": [
+      "as an immediate result",
+      "contrarily",
+      "although",
+      "while"
+    ],
+    "blocks": [
+      "Datasets were inconsistent",
+      "as an immediate",
+      "result compilation errors developed"
+    ]
+  },
+  {
+    "en": "Parameter fields shifted; <span style=\"color: #ff6b6b; font-weight: bold;\">on that account</span>, calculation overrides triggered.",
+    "tr": "Parametre alanları kaydı; bu nedenle hesaplama geçersiz kılmaları tetiklendi.",
+    "word": "on that account",
+    "trWord": "bu nedenle",
+    "correct": "on that account",
+    "blank": "Parameter fields shifted; ___, calculation overrides triggered.",
+    "options": [
+      "on that account",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "Parameter fields shifted",
+      "on that account",
+      "calculation overrides triggered"
+    ]
+  },
+  {
+    "en": "Compliance criteria were arbitrary; <span style=\"color: #ff6b6b; font-weight: bold;\">accordingly</span>, implementation delayed.",
+    "tr": "Uyumluluk kriterleri keyfiydi; buna göre uygulama gecikti.",
+    "word": "accordingly",
+    "trWord": "buna göre",
+    "correct": "accordingly",
+    "blank": "Compliance criteria were arbitrary; ___, implementation delayed.",
+    "options": [
+      "accordingly",
+      "nonetheless",
+      "even though",
+      "otherwise"
+    ],
+    "blocks": [
+      "Compliance criteria",
+      "were arbitrary",
+      "accordingly implementation delayed"
+    ]
+  }
+];
+
+const unit30Lesson2Group3Raw = [
+  {
+    "en": "Vitamins were lacking inside the urban center; <span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>, public health indicators remained exceptionally poor last quarter.",
+    "tr": "Kent merkezinde vitaminler eksikti; bu nedenle halk sağlığı göstergeleri geçen çeyrekte son derece zayıf kaldı.",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "Vitamins were lacking inside the urban center; ___, public health indicators remained exceptionally poor last quarter.",
+    "options": [
+      "therefore",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "Vitamins were lacking inside",
+      "the urban center therefore",
+      "public health indicators remained",
+      "exceptionally poor last quarter"
+    ]
+  },
+  {
+    "en": "Serious data formatting issues occurred during migration; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, severe validation anomalies arose within the central schema layers.",
+    "tr": "Geçiş sırasında ciddi veri formatlama sorunları meydana geldi; sonuç olarak merkezi şema katmanlarında ciddi doğrulama anomalileri ortaya çıktı.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Serious data formatting issues occurred during migration; ___, severe validation anomalies arose within the central schema layers.",
+    "options": [
+      "consequently",
+      "nonetheless",
+      "whereas",
+      "but"
+    ],
+    "blocks": [
+      "Serious data formatting issues",
+      "occurred during migration consequently",
+      "severe validation anomalies arose",
+      "within the central schema layers"
+    ]
+  },
+  {
+    "en": "Underlying datasets were completely inconsistent within the main directory; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, comprehensive compilation errors developed before technicians isolated the drive.",
+    "tr": "Temel veri kümeleri tamamen tutarsızdı ve sonuç olarak teknisyenler sürücüyü izole etmeden önce kapsamlı derleme hataları gelişti.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "Underlying datasets were completely inconsistent within the main directory; and ___, comprehensive compilation errors developed before technicians isolated the drive.",
+    "options": [
+      "as a result",
+      "on the contrary",
+      "although",
+      "since"
+    ],
+    "blocks": [
+      "Underlying datasets were completely inconsistent",
+      "within the main directory and",
+      "as a result comprehensive compilation",
+      "errors developed before technicians isolated the drive"
+    ]
+  },
+  {
+    "en": "Core parameter fields shifted during stress diagnostic loops; <span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span> calculation overrides triggered across production nodes.",
+    "tr": "Stres teşhis döngüleri sırasında temel parametre alanları kaydı; bunun sonucunda üretim düğümlerinde hesaplama geçersiz kılmaları tetiklendi.",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "Core parameter fields shifted during stress diagnostic loops; ___ calculation overrides triggered across production nodes.",
+    "options": [
+      "with the result that",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "Core parameter fields shifted",
+      "during stress diagnostic loops",
+      "with the result that",
+      "calculation overrides triggered across production nodes"
+    ]
+  },
+  {
+    "en": "External client profiles were unauthenticated and unauthorized; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>, automated firewalls locked down the primary gateway.",
+    "tr": "Harici istemci profilleri kimlik doğrulaması yapılmamış ve yetkisizdi; bunun bir sonucu olarak otomatik güvenlik duvarları birincil geçidi kilitledi.",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "External client profiles were unauthenticated and unauthorized; and ___, automated firewalls locked down the primary gateway.",
+    "options": [
+      "as a consequence",
+      "nonetheless",
+      "even though",
+      "likewise"
+    ],
+    "blocks": [
+      "External client profiles were",
+      "unauthenticated and unauthorized and",
+      "as a consequence automated",
+      "firewalls locked down the primary gateway"
+    ]
+  },
+  {
+    "en": "Compliance criteria were highly arbitrary; <span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>, software implementation delayed despite developers utilizing advanced artificial intelligence tools.",
+    "tr": "Uyumluluk kriterleri son derece keyfiydi; bu nedenle geliştiriciler gelişmiş yapay zeka araçları kullanmalarına rağmen yazılım uygulaması gecikti.",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "Compliance criteria were highly arbitrary; ___, software implementation delayed despite developers utilizing advanced artificial intelligence tools.",
+    "options": [
+      "for this reason",
+      "in contrast",
+      "although",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "Compliance criteria were highly",
+      "arbitrary for this reason",
+      "software implementation delayed despite",
+      "developers utilizing advanced artificial intelligence tools"
+    ]
+  },
+  {
+    "en": "Background memory leaks occurred unexpectedly over the weekend; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, system latency increased, degrading the gamified learning interface runtime.",
+    "tr": "Hafta sonu beklenmedik bir şekilde arka plan bellek sızıntıları meydana geldi; sonuç olarak sistem gecikmesi artarak oyunlaştırılmış öğrenme arayüzü çalışma süresini düşürdü.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Background memory leaks occurred unexpectedly over the weekend; ___, system latency increased, degrading the gamified learning interface runtime.",
+    "options": [
+      "consequently",
+      "but",
+      "although",
+      "unless"
+    ],
+    "blocks": [
+      "Background memory leaks occurred",
+      "unexpectedly over the weekend",
+      "consequently system latency increased",
+      "degrading the gamified learning interface runtime"
+    ]
+  },
+  {
+    "en": "Regional state laws were unconstitutional; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, local public institutions collapsed once the ministry enforced statutory checks.",
+    "tr": "Bölgesel eyalet yasaları anayasaya aykırıydı ve sonuç olarak bakanlık yasal kontrolleri uyguladığında yerel kamu kurumları çöktü.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "Regional state laws were unconstitutional; and ___, local public institutions collapsed once the ministry enforced statutory checks.",
+    "options": [
+      "as a result",
+      "even though",
+      "otherwise",
+      "besides"
+    ],
+    "blocks": [
+      "Regional state laws were",
+      "unconstitutional and as a",
+      "result local public institutions",
+      "collapsed once the ministry enforced statutory checks"
+    ]
+  },
+  {
+    "en": "Legislative draft clauses were significantly faulty; <span style=\"color: #ff6b6b; font-weight: bold;\">with the result that</span> the assembly suspended further voting rounds until next month.",
+    "tr": "Yasama taslağı maddeleri önemli ölçüde kusurluydu; bunun sonucunda meclis gelecek aya kadar sonraki oylama turlarını askıya aldı.",
+    "word": "with the result that",
+    "trWord": "bunun sonucunda",
+    "correct": "with the result that",
+    "blank": "Legislative draft clauses were significantly faulty; ___ the assembly suspended further voting rounds until next month.",
+    "options": [
+      "with the result that",
+      "provided that",
+      "whereas",
+      "nonetheless"
+    ],
+    "blocks": [
+      "Legislative draft clauses were",
+      "significantly faulty with the",
+      "result that the assembly",
+      "suspended further voting rounds until next month"
+    ]
+  },
+  {
+    "en": "Vital infrastructure components were completely lacking; <span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>, the regional commercial economy stagnated despite initial corporate investment packages.",
+    "tr": "Hayati altyapı bileşenleri tamamen eksikti; bu nedenle ilk kurumsal yatırım paketlerine rağmen bölgesel ticari ekonomi durgunlaştı.",
+    "word": "therefore",
+    "trWord": "bu nedenle",
+    "correct": "therefore",
+    "blank": "Vital infrastructure components were completely lacking; ___, the regional commercial economy stagnated despite initial corporate investment packages.",
+    "options": [
+      "therefore",
+      "however",
+      "though",
+      "whereas"
+    ],
+    "blocks": [
+      "Vital infrastructure components were",
+      "completely lacking therefore the",
+      "regional commercial economy stagnated",
+      "despite initial corporate investment packages"
+    ]
+  },
+  {
+    "en": "Mobile application builds were unoptimized; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, active user ratings dropped significantly ahead of the global marketing campaign.",
+    "tr": "Mobil uygulama derlemeleri optimize edilmemişti; sonuç olarak küresel pazarlama kampanyası öncesinde aktif kullanıcı puanları önemli ölçüde düştü.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Mobile application builds were unoptimized; ___, active user ratings dropped significantly ahead of the global marketing campaign.",
+    "options": [
+      "consequently",
+      "nevertheless",
+      "in order that",
+      "since"
+    ],
+    "blocks": [
+      "Mobile application builds were",
+      "unoptimized consequently active user",
+      "ratings dropped significantly ahead",
+      "of the global marketing campaign"
+    ]
+  },
+  {
+    "en": "Organic chemical mixtures were highly unstable; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a result</span>, explosive exothermic reactions triggered inside the laboratory vacuum chamber.",
+    "tr": "Organik kimyasal karışımlar son derece kararsızdı ve sonuç olarak laboratuvar vakum odasında patlayıcı ekzotermik reaksiyonlar tetiklendi.",
+    "word": "as a result",
+    "trWord": "sonuç olarak",
+    "correct": "as a result",
+    "blank": "Organic chemical mixtures were highly unstable; and ___, explosive exothermic reactions triggered inside the laboratory vacuum chamber.",
+    "options": [
+      "as a result",
+      "in spite of",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Organic chemical mixtures were",
+      "highly unstable and as",
+      "a result explosive exothermic",
+      "reactions triggered inside the laboratory vacuum chamber"
+    ]
+  },
+  {
+    "en": "Mechanical piston friction values were exceptionally high; and <span style=\"color: #ff6b6b; font-weight: bold;\">as a consequence</span>, the main engine core decayed under high-pressure testing.",
+    "tr": "Mekanik piston sürtünme değerleri son derece yüksekti ve bunun bir sonucu olarak ana motor çekirdeği yüksek basınçlı testler altında aşındı.",
+    "word": "as a consequence",
+    "trWord": "bunun bir sonucu olarak",
+    "correct": "as a consequence",
+    "blank": "Mechanical piston friction values were exceptionally high; and ___, the main engine core decayed under high-pressure testing.",
+    "options": [
+      "as a consequence",
+      "instead of",
+      "provided",
+      "likewise"
+    ],
+    "blocks": [
+      "Mechanical piston friction values",
+      "were exceptionally high and",
+      "as a consequence the",
+      "main engine core decayed under high-pressure testing"
+    ]
+  },
+  {
+    "en": "Cryptographic validation tokens failed the authentication loop; <span style=\"color: #ff6b6b; font-weight: bold;\">for this reason</span>, transient profile logouts occurred to secure client identity logs.",
+    "tr": "Kriptografik doğrulama belirteçleri kimlik doğrulama döngüsünde başarısız oldu; bu nedenle istemci kimliği günlüklerini güvence altına almak için geçici profil çıkışları gerçekleşti.",
+    "word": "for this reason",
+    "trWord": "bu nedenle",
+    "correct": "for this reason",
+    "blank": "Cryptographic validation tokens failed the authentication loop; ___, transient profile logouts occurred to secure client identity logs.",
+    "options": [
+      "for this reason",
+      "though",
+      "on the contrary",
+      "inasmuch as"
+    ],
+    "blocks": [
+      "Cryptographic validation tokens failed",
+      "the authentication loop for",
+      "this reason transient profile",
+      "logouts occurred to secure client identity logs"
+    ]
+  },
+  {
+    "en": "Database query loops were loose and unhandled; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, catastrophic execution bottlenecks formed while handling high-volume transaction traffic.",
+    "tr": "Veritabanı sorgu döngüleri gevşek ve işlenmemişti; sonuç olarak yüksek hacimli işlem trafiği yönetilirken yıkıcı yürütme darboğazları oluştu.",
+    "word": "consequently",
+    "trWord": "sonuç olarak",
+    "correct": "consequently",
+    "blank": "Database query loops were loose and unhandled; ___, catastrophic execution bottlenecks formed while handling high-volume transaction traffic.",
+    "options": [
+      "consequently",
+      "otherwise",
+      "whereas",
+      "although"
+    ],
+    "blocks": [
+      "Database query loops were",
+      "loose and unhandled consequently",
+      "catastrophic execution bottlenecks formed",
+      "while handling high-volume transaction traffic"
+    ]
+  },
+  {
+    "en": "Vitamins were lacking inside the central urban zone; <span style=\"color: #ff6b6b; font-weight: bold;\">thus</span>, public health indicators remained exceptionally poor throughout the year.",
+    "tr": "Merkezi kent bölgesinde vitaminler eksikti; böylece halk sağlığı göstergeleri yıl boyunca son derece zayıf kaldı.",
+    "word": "thus",
+    "trWord": "böylece",
+    "correct": "thus",
+    "blank": "Vitamins were lacking inside the central urban zone; ___, public health indicators remained exceptionally poor throughout the year.",
+    "options": [
+      "thus",
+      "however",
+      "although",
+      "despite"
+    ],
+    "blocks": [
+      "Vitamins were lacking inside",
+      "the central urban zone",
+      "thus public health indicators",
+      "remained exceptionally poor throughout the year"
+    ]
+  },
+  {
+    "en": "Serious data formatting issues occurred inside the primary database partition, <span style=\"color: #ff6b6b; font-weight: bold;\">so</span> severe validation anomalies arose within the central schema layers.",
+    "tr": "Birincil veritabanı bölümünde ciddi veri formatlama sorunları meydana geldi, bu yüzden merkezi şema katmanlarında ciddi doğrulama anomalileri ortaya çıktı.",
+    "word": "so",
+    "trWord": "bu yüzden",
+    "correct": "so",
+    "blank": "Serious data formatting issues occurred inside the primary database partition, ___ severe validation anomalies arose within the central schema layers.",
+    "options": [
+      "so",
+      "yet",
+      "although",
+      "but"
+    ],
+    "blocks": [
+      "Serious data formatting issues occurred",
+      "inside the primary database partition",
+      "so severe validation anomalies arose",
+      "within the central schema layers"
+    ]
+  },
+  {
+    "en": "Underlying datasets were completely inconsistent within the main directory; <span style=\"color: #ff6b6b; font-weight: bold;\">as an immediate result</span>, comprehensive compilation errors developed rapidly.",
+    "tr": "Ana dizin içindeki temel veri kümeleri tamamen tutarsızdı; ani bir sonuç olarak kapsamlı derleme hataları hızla gelişti.",
+    "word": "as an immediate result",
+    "trWord": "ani bir sonuç olarak",
+    "correct": "as an immediate result",
+    "blank": "Underlying datasets were completely inconsistent within the main directory; ___, comprehensive compilation errors developed rapidly.",
+    "options": [
+      "as an immediate result",
+      "contrarily",
+      "although",
+      "while"
+    ],
+    "blocks": [
+      "Underlying datasets were completely",
+      "inconsistent within the main",
+      "directory as an immediate",
+      "result comprehensive compilation errors developed rapidly"
+    ]
+  },
+  {
+    "en": "Core parameter fields shifted during stress diagnostic loops over the weekend; <span style=\"color: #ff6b6b; font-weight: bold;\">on that account</span>, calculation overrides triggered across production nodes.",
+    "tr": "Hafta sonu stres teşhis döngüleri sırasında temel parametre alanları kaydı; bu nedenle üretim düğümlerinde hesaplama geçersiz kılmaları tetiklendi.",
+    "word": "on that account",
+    "trWord": "bu nedenle",
+    "correct": "on that account",
+    "blank": "Core parameter fields shifted during stress diagnostic loops over the weekend; ___, calculation overrides triggered across production nodes.",
+    "options": [
+      "on that account",
+      "even if",
+      "in spite of",
+      "whereas"
+    ],
+    "blocks": [
+      "Core parameter fields shifted during",
+      "stress diagnostic loops over the",
+      "weekend on that account calculation",
+      "overrides triggered across production nodes"
+    ]
+  },
+  {
+    "en": "Compliance criteria were highly arbitrary across specific sectors; <span style=\"color: #ff6b6b; font-weight: bold;\">accordingly</span>, software implementation delayed despite developers utilizing advanced digital platforms.",
+    "tr": "Belirli sektörlerde uyumluluk kriterleri son derece keyfiydi; buna göre geliştiriciler gelişmiş dijital platformlar kullanmalarına rağmen yazılım uygulaması gecikti.",
+    "word": "accordingly",
+    "trWord": "buna göre",
+    "correct": "accordingly",
+    "blank": "Compliance criteria were highly arbitrary across specific sectors; ___, software implementation delayed despite developers utilizing advanced digital platforms.",
+    "options": [
+      "accordingly",
+      "nonetheless",
+      "even though",
+      "otherwise"
+    ],
+    "blocks": [
+      "Compliance criteria were highly",
+      "arbitrary across specific sectors",
+      "accordingly software implementation delayed",
+      "despite developers utilizing advanced digital platforms"
+    ]
+  }
+];
+
+const unit30Lesson3Group1Raw = [
+  {
+    "en": "caused constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">to change</span>",
+    "tr": "bileşen değişkenlerin değişmesine neden oldu",
+    "word": "to change",
+    "trWord": "bileşen değişkenlerin değişmesine neden oldu",
+    "correct": "to change",
+    "blank": "caused constituent variables ___",
+    "options": [
+      "to change",
+      "changing",
+      "changed",
+      "change"
+    ],
+    "blocks": [
+      "caused constituent",
+      "variables to change"
+    ]
+  },
+  {
+    "en": "caused analytical methodologies <span style=\"color: #ff6b6b; font-weight: bold;\">to vary</span>",
+    "tr": "analitik metodolojilerin çeşitlilik göstermesine neden oldu",
+    "word": "to vary",
+    "trWord": "analitik metodolojilerin çeşitlilik göstermesine neden oldu",
+    "correct": "to vary",
+    "blank": "caused analytical methodologies ___",
+    "options": [
+      "to vary",
+      "varying",
+      "varied",
+      "vary"
+    ],
+    "blocks": [
+      "caused analytical",
+      "methodologies to vary"
+    ]
+  },
+  {
+    "en": "caused unconstitutional regimes <span style=\"color: #ff6b6b; font-weight: bold;\">to collapse</span>",
+    "tr": "anayasa dışı rejimlerin çökmesine neden oldu",
+    "word": "to collapse",
+    "trWord": "anayasa dışı rejimlerin çökmesine neden oldu",
+    "correct": "to collapse",
+    "blank": "caused unconstitutional regimes ___",
+    "options": [
+      "to collapse",
+      "collapsing",
+      "collapsed",
+      "collapse"
+    ],
+    "blocks": [
+      "caused unconstitutional",
+      "regimes to collapse"
+    ]
+  },
+  {
+    "en": "caused environmental boundaries <span style=\"color: #ff6b6b; font-weight: bold;\">to contract</span>",
+    "tr": "çevresel sınırların daralmasına neden oldu",
+    "word": "to contract",
+    "trWord": "çevresel sınırların daralmasına neden oldu",
+    "correct": "to contract",
+    "blank": "caused environmental boundaries ___",
+    "options": [
+      "to contract",
+      "contracting",
+      "contracted",
+      "contract"
+    ],
+    "blocks": [
+      "caused environmental",
+      "boundaries to contract"
+    ]
+  },
+  {
+    "en": "caused dynamic parameters <span style=\"color: #ff6b6b; font-weight: bold;\">to shift</span>",
+    "tr": "dinamik parametrelerin kaymasına neden oldu",
+    "word": "to shift",
+    "trWord": "dinamik parametrelerin kaymasına neden oldu",
+    "correct": "to shift",
+    "blank": "caused dynamic parameters ___",
+    "options": [
+      "to shift",
+      "shifting",
+      "shifted",
+      "shift"
+    ],
+    "blocks": [
+      "caused dynamic",
+      "parameters to shift"
+    ]
+  },
+  {
+    "en": "caused automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency",
+    "tr": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "caused automated procedures ___ latency",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "caused automated",
+      "procedures to",
+      "minimize latency"
+    ]
+  },
+  {
+    "en": "caused arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> errors",
+    "tr": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "caused arbitrary criteria ___ errors",
+    "options": [
+      "to induce",
+      "inducing",
+      "induced",
+      "induce"
+    ],
+    "blocks": [
+      "caused arbitrary",
+      "criteria to",
+      "induce errors"
+    ]
+  },
+  {
+    "en": "caused discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span>",
+    "tr": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "caused discrete variables ___",
+    "options": [
+      "to interact",
+      "interacting",
+      "interacted",
+      "interact"
+    ],
+    "blocks": [
+      "caused discrete",
+      "variables to interact"
+    ]
+  },
+  {
+    "en": "caused legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>",
+    "tr": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "caused legislative draft clauses ___",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutated",
+      "mutate"
+    ],
+    "blocks": [
+      "caused legislative",
+      "draft clauses",
+      "to mutate"
+    ]
+  },
+  {
+    "en": "caused specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span>",
+    "tr": "belirli göstergelerin düşmesine neden oldu",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "caused specific indicators ___",
+    "options": [
+      "to decline",
+      "declining",
+      "declined",
+      "decline"
+    ],
+    "blocks": [
+      "caused specific",
+      "indicators to decline"
+    ]
+  },
+  {
+    "en": "caused subsequent matrix outputs <span style=\"color: #ff6b6b; font-weight: bold;\">to expand</span>",
+    "tr": "sonraki matris çıktılarının genişlemesine neden oldu",
+    "word": "to expand",
+    "trWord": "sonraki matris çıktılarının genişlemesine neden oldu",
+    "correct": "to expand",
+    "blank": "caused subsequent matrix outputs ___",
+    "options": [
+      "to expand",
+      "expanding",
+      "expanded",
+      "expand"
+    ],
+    "blocks": [
+      "caused subsequent",
+      "matrix outputs",
+      "to expand"
+    ]
+  },
+  {
+    "en": "caused raw infrastructure components <span style=\"color: #ff6b6b; font-weight: bold;\">to decay</span>",
+    "tr": "ham altyapı bileşenlerinin aşınmasına neden oldu",
+    "word": "to decay",
+    "trWord": "ham altyapı bileşenlerinin aşınmasına neden oldu",
+    "correct": "to decay",
+    "blank": "caused raw infrastructure components ___",
+    "options": [
+      "to decay",
+      "decaying",
+      "decayed",
+      "decay"
+    ],
+    "blocks": [
+      "caused raw",
+      "infrastructure components",
+      "to decay"
+    ]
+  },
+  {
+    "en": "caused cryptographic tokens <span style=\"color: #ff6b6b; font-weight: bold;\">to validate</span> entries",
+    "tr": "kriptografik belirteçlerin girişleri doğrulamasına neden oldu",
+    "word": "to validate",
+    "trWord": "kriptografik belirteçlerin girişleri doğrulamasına neden oldu",
+    "correct": "to validate",
+    "blank": "caused cryptographic tokens ___ entries",
+    "options": [
+      "to validate",
+      "validating",
+      "validated",
+      "validate"
+    ],
+    "blocks": [
+      "caused cryptographic",
+      "tokens to",
+      "validate entries"
+    ]
+  },
+  {
+    "en": "caused linguistic structures <span style=\"color: #ff6b6b; font-weight: bold;\">to evolve</span>",
+    "tr": "dilsel yapıların evrilmesine neden oldu",
+    "word": "to evolve",
+    "trWord": "dilsel yapıların evrilmesine neden oldu",
+    "correct": "to evolve",
+    "blank": "caused linguistic structures ___",
+    "options": [
+      "to evolve",
+      "evolving",
+      "evolved",
+      "evolve"
+    ],
+    "blocks": [
+      "caused linguistic",
+      "structures to evolve"
+    ]
+  },
+  {
+    "en": "caused inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">to conflict</span>",
+    "tr": "tutarsız veri kümelerinin çakışmasına neden oldu",
+    "word": "to conflict",
+    "trWord": "tutarsız veri kümelerinin çakışmasına neden oldu",
+    "correct": "to conflict",
+    "blank": "caused inconsistent datasets ___",
+    "options": [
+      "to conflict",
+      "conflicting",
+      "conflicted",
+      "conflict"
+    ],
+    "blocks": [
+      "caused inconsistent",
+      "datasets to conflict"
+    ]
+  },
+  {
+    "en": "caused automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency",
+    "tr": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "caused automated procedures ___ latency",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "caused automated",
+      "procedures to",
+      "minimize latency"
+    ]
+  },
+  {
+    "en": "caused arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> errors",
+    "tr": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "caused arbitrary criteria ___ errors",
+    "options": [
+      "to induce",
+      "inducing",
+      "induce",
+      "induced"
+    ],
+    "blocks": [
+      "caused arbitrary",
+      "criteria to",
+      "induce errors"
+    ]
+  },
+  {
+    "en": "caused discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span>",
+    "tr": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "caused discrete variables ___",
+    "options": [
+      "to interact",
+      "interacting",
+      "interact",
+      "interacted"
+    ],
+    "blocks": [
+      "caused discrete",
+      "variables to interact"
+    ]
+  },
+  {
+    "en": "caused legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>",
+    "tr": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "caused legislative draft clauses ___",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutate",
+      "mutated"
+    ],
+    "blocks": [
+      "caused legislative",
+      "draft clauses",
+      "to mutate"
+    ]
+  },
+  {
+    "en": "caused specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span>",
+    "tr": "belirli göstergelerin düşmesine neden oldu",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "caused specific indicators ___",
+    "options": [
+      "to decline",
+      "declining",
+      "decline",
+      "declined"
+    ],
+    "blocks": [
+      "caused specific",
+      "indicators to decline"
+    ]
+  }
+];
+
+const unit30Lesson3Group2Raw = [
+  {
+    "en": "High temperatures caused constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">to change</span>.",
+    "tr": "Yüksek sıcaklıklar bileşen değişkenlerin değişmesine neden oldu.",
+    "word": "to change",
+    "trWord": "bileşen değişkenlerin değişmesine neden oldu",
+    "correct": "to change",
+    "blank": "High temperatures caused constituent variables ___.",
+    "options": [
+      "to change",
+      "changing",
+      "changed",
+      "change"
+    ],
+    "blocks": [
+      "High temperatures",
+      "caused constituent",
+      "variables to change"
+    ]
+  },
+  {
+    "en": "New software requirements caused analytical methodologies <span style=\"color: #ff6b6b; font-weight: bold;\">to vary</span>.",
+    "tr": "Yeni yazılım gereksinimleri analitik metodolojilerin çeşitlilik göstermesine neden oldu.",
+    "word": "to vary",
+    "trWord": "analitik metodolojilerin çeşitlilik göstermesine neden oldu",
+    "correct": "to vary",
+    "blank": "New software requirements caused analytical methodologies ___.",
+    "options": [
+      "to vary",
+      "varying",
+      "varied",
+      "vary"
+    ],
+    "blocks": [
+      "New software",
+      "requirements caused",
+      "analytical methodologies to vary"
+    ]
+  },
+  {
+    "en": "Public unrest caused unconstitutional regimes <span style=\"color: #ff6b6b; font-weight: bold;\">to collapse</span>.",
+    "tr": "Halk huzursuzluğu anayasa dışı rejimlerin çökmesine neden oldu.",
+    "word": "to collapse",
+    "trWord": "anayasa dışı rejimlerin çökmesine neden oldu",
+    "correct": "to collapse",
+    "blank": "Public unrest caused unconstitutional regimes ___.",
+    "options": [
+      "to collapse",
+      "collapsing",
+      "collapsed",
+      "collapse"
+    ],
+    "blocks": [
+      "Public unrest",
+      "caused unconstitutional",
+      "regimes to collapse"
+    ]
+  },
+  {
+    "en": "Climate shifts caused environmental boundaries <span style=\"color: #ff6b6b; font-weight: bold;\">to contract</span>.",
+    "tr": "İklim kaymaları çevresel sınırların daralmasına neden oldu.",
+    "word": "to contract",
+    "trWord": "çevresel sınırların daralmasına neden oldu",
+    "correct": "to contract",
+    "blank": "Climate shifts caused environmental boundaries ___.",
+    "options": [
+      "to contract",
+      "contracting",
+      "contracted",
+      "contract"
+    ],
+    "blocks": [
+      "Climate shifts",
+      "caused environmental",
+      "boundaries to contract"
+    ]
+  },
+  {
+    "en": "Technical overrides caused dynamic parameters <span style=\"color: #ff6b6b; font-weight: bold;\">to shift</span>.",
+    "tr": "Teknik geçersiz kılmalar dinamik parametrelerin kaymasına neden oldu.",
+    "word": "to shift",
+    "trWord": "dinamik parametrelerin kaymasına neden oldu",
+    "correct": "to shift",
+    "blank": "Technical overrides caused dynamic parameters ___.",
+    "options": [
+      "to shift",
+      "shifting",
+      "shifted",
+      "shift"
+    ],
+    "blocks": [
+      "Technical overrides",
+      "caused dynamic",
+      "parameters to shift"
+    ]
+  },
+  {
+    "en": "Code optimizations caused automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency.",
+    "tr": "Kod optimizasyonları otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu.",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "Code optimizations caused automated procedures ___ latency.",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "Code optimizations",
+      "caused automated",
+      "procedures to minimize latency"
+    ]
+  },
+  {
+    "en": "Loose control filters caused arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> errors.",
+    "tr": "Gevşek kontrol filtreleri keyfi kriterlerin hatalara yol açmasına neden oldu.",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "Loose control filters caused arbitrary criteria ___ errors.",
+    "options": [
+      "to induce",
+      "inducing",
+      "induced",
+      "induce"
+    ],
+    "blocks": [
+      "Loose control filters",
+      "caused arbitrary criteria",
+      "to induce errors"
+    ]
+  },
+  {
+    "en": "High pressure caused discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span>.",
+    "tr": "Yüksek basınç ayrık değişkenlerin etkileşime girmesine neden oldu.",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "High pressure caused discrete variables ___.",
+    "options": [
+      "to interact",
+      "interacting",
+      "interacted",
+      "interact"
+    ],
+    "blocks": [
+      "High pressure",
+      "caused discrete",
+      "variables to interact"
+    ]
+  },
+  {
+    "en": "Assembly demands caused legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>.",
+    "tr": "Meclis talepleri yasama taslağı maddelerinin değişmesine neden oldu.",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "Assembly demands caused legislative draft clauses ___.",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutated",
+      "mutate"
+    ],
+    "blocks": [
+      "Assembly demands",
+      "caused legislative",
+      "draft clauses to mutate"
+    ]
+  },
+  {
+    "en": "Market inflation caused specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span>.",
+    "tr": "Piyasa enflasyonu belirli göstergelerin düşmesine neden oldu.",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "Market inflation caused specific indicators ___.",
+    "options": [
+      "to decline",
+      "declining",
+      "declined",
+      "decline"
+    ],
+    "blocks": [
+      "Market inflation",
+      "caused specific",
+      "indicators to decline"
+    ]
+  },
+  {
+    "en": "Extensive memory allocations caused subsequent matrix outputs <span style=\"color: #ff6b6b; font-weight: bold;\">to expand</span>.",
+    "tr": "Kapsamlı bellek tahsisleri sonraki matris çıktılarının genişlemesine neden oldu.",
+    "word": "to expand",
+    "trWord": "sonraki matris çıktılarının genişlemesine neden oldu",
+    "correct": "to expand",
+    "blank": "Extensive memory allocations caused subsequent matrix outputs ___.",
+    "options": [
+      "to expand",
+      "expanding",
+      "expanded",
+      "expand"
+    ],
+    "blocks": [
+      "Extensive memory allocations",
+      "caused subsequent matrix",
+      "outputs to expand"
+    ]
+  },
+  {
+    "en": "Intense moisture variations caused raw infrastructure components <span style=\"color: #ff6b6b; font-weight: bold;\">to decay</span>.",
+    "tr": "Yoğun nem dalgalanmaları ham altyapı bileşenlerinin aşınmasına neden oldu.",
+    "word": "to decay",
+    "trWord": "ham altyapı bileşenlerinin aşınmasına neden oldu",
+    "correct": "to decay",
+    "blank": "Intense moisture variations caused raw infrastructure components ___.",
+    "options": [
+      "to decay",
+      "decaying",
+      "decayed",
+      "decay"
+    ],
+    "blocks": [
+      "Intense moisture variations",
+      "caused raw infrastructure",
+      "components to decay"
+    ]
+  },
+  {
+    "en": "Security updates caused cryptographic tokens <span style=\"color: #ff6b6b; font-weight: bold;\">to validate</span> entries.",
+    "tr": "Güvenlik güncellemeleri kriptografik belirteçlerin girişleri doğrulamasına neden oldu.",
+    "word": "to validate",
+    "trWord": "kriptografik belirteçlerin girişleri doğrulamasına neden oldu",
+    "correct": "to validate",
+    "blank": "Security updates caused cryptographic tokens ___ entries.",
+    "options": [
+      "to validate",
+      "validating",
+      "validated",
+      "validate"
+    ],
+    "blocks": [
+      "Security updates",
+      "caused cryptographic",
+      "tokens to validate entries"
+    ]
+  },
+  {
+    "en": "Gamified mobile designs caused linguistic structures <span style=\"color: #ff6b6b; font-weight: bold;\">to evolve</span>.",
+    "tr": "Oyunlaştırılmış mobil tasarımlar dilsel yapıların evrilmesine neden oldu.",
+    "word": "to evolve",
+    "trWord": "dilsel yapıların evrilmesine neden oldu",
+    "correct": "to evolve",
+    "blank": "Gamified mobile designs caused linguistic structures ___.",
+    "options": [
+      "to evolve",
+      "evolving",
+      "evolved",
+      "evolve"
+    ],
+    "blocks": [
+      "Gamified mobile",
+      "designs caused",
+      "linguistic structures to evolve"
+    ]
+  },
+  {
+    "en": "Transmission corruption errors caused inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">to conflict</span>.",
+    "tr": "İletim bozulma hataları tutarsız veri kümelerinin çakışmasına neden oldu.",
+    "word": "to conflict",
+    "trWord": "tutarsız veri kümelerinin çakışmasına neden oldu",
+    "correct": "to conflict",
+    "blank": "Transmission corruption errors caused inconsistent datasets ___.",
+    "options": [
+      "to conflict",
+      "conflicting",
+      "conflicted",
+      "conflict"
+    ],
+    "blocks": [
+      "Transmission corruption",
+      "errors caused",
+      "inconsistent datasets to conflict"
+    ]
+  },
+  {
+    "en": "Code optimizations caused automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency.",
+    "tr": "Kod optimizasyonları otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu.",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "Code optimizations caused automated procedures ___ latency.",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "Code optimizations",
+      "caused automated",
+      "procedures to minimize latency"
+    ]
+  },
+  {
+    "en": "Loose control filters caused arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> errors.",
+    "tr": "Gevşek kontrol filtreleri keyfi kriterlerin hatalara yol açmasına neden oldu.",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "Loose control filters caused arbitrary criteria ___ errors.",
+    "options": [
+      "to induce",
+      "inducing",
+      "induce",
+      "induced"
+    ],
+    "blocks": [
+      "Loose control filters",
+      "caused arbitrary criteria",
+      "to induce errors"
+    ]
+  },
+  {
+    "en": "High pressure caused discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span>.",
+    "tr": "Yüksek basınç ayrık değişkenlerin etkileşime girmesine neden oldu.",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "High pressure caused discrete variables ___.",
+    "options": [
+      "to interact",
+      "interacting",
+      "interact",
+      "interacted"
+    ],
+    "blocks": [
+      "High pressure",
+      "caused discrete",
+      "variables to interact"
+    ]
+  },
+  {
+    "en": "Assembly demands caused legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>.",
+    "tr": "Meclis talepleri yasama taslağı maddelerinin değişmesine neden oldu.",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "Assembly demands caused legislative draft clauses ___.",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutate",
+      "mutated"
+    ],
+    "blocks": [
+      "Assembly demands",
+      "caused legislative",
+      "draft clauses to mutate"
+    ]
+  },
+  {
+    "en": "Market inflation caused specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span>.",
+    "tr": "Piyasa enflasyonu belirli göstergelerin düşmesine neden oldu.",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "Market inflation caused specific indicators ___.",
+    "options": [
+      "to decline",
+      "declining",
+      "decline",
+      "declined"
+    ],
+    "blocks": [
+      "Market inflation",
+      "caused specific",
+      "indicators to decline"
+    ]
+  }
+];
+
+const unit30Lesson3Group3Raw = [
+  {
+    "en": "Unexpected high temperatures <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">to change</span> rapidly during the primary validation loops of the simulation.",
+    "tr": "Beklenmedik yüksek sıcaklıklar, simülasyonun birincil doğrulama döngüleri sırasında bileşen değişkenlerin hızla değişmesine neden oldu.",
+    "word": "to change",
+    "trWord": "bileşen değişkenlerin değişmesine neden oldu",
+    "correct": "to change",
+    "blank": "Unexpected high temperatures caused constituent variables ___ rapidly during the primary validation loops of the simulation.",
+    "options": [
+      "to change",
+      "changing",
+      "changed",
+      "change"
+    ],
+    "blocks": [
+      "Unexpected high temperatures caused",
+      "constituent variables to change",
+      "rapidly during the primary",
+      "validation loops of the simulation"
+    ]
+  },
+  {
+    "en": "New software deployment requirements <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> analytical methodologies <span style=\"color: #ff6b6b; font-weight: bold;\">to vary</span> significantly across cross-disciplinary development teams.",
+    "tr": "Yeni yazılım dağıtım gereksinimleri, disiplinler arası geliştirme ekipleri genelinde analitik metodolojilerin önemli ölçüde çeşitlilik göstermesine neden oldu.",
+    "word": "to vary",
+    "trWord": "analitik metodolojilerin çeşitlilik göstermesine neden oldu",
+    "correct": "to vary",
+    "blank": "New software deployment requirements caused analytical methodologies ___ significantly across cross-disciplinary development teams.",
+    "options": [
+      "to vary",
+      "varying",
+      "varied",
+      "vary"
+    ],
+    "blocks": [
+      "New software deployment",
+      "requirements caused analytical",
+      "methodologies to vary",
+      "significantly across cross-disciplinary development teams"
+    ]
+  },
+  {
+    "en": "Persistent public unrest <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> unconstitutional regimes <span style=\"color: #ff6b6b; font-weight: bold;\">to collapse</span>, forcing regional administrators to state entirely unique statutory compliance rules.",
+    "tr": "Süregelen halk huzursuzluğu anayasa dışı rejimlerin çökmesine neden olarak bölgesel yöneticileri tamamen benzersiz yasal uyumluluk kuralları belirlemeye zorladı.",
+    "word": "to collapse",
+    "trWord": "anayasa dışı rejimlerin çökmesine neden oldu",
+    "correct": "to collapse",
+    "blank": "Persistent public unrest caused unconstitutional regimes ___, forcing regional administrators to state entirely unique statutory compliance rules.",
+    "options": [
+      "to collapse",
+      "collapsing",
+      "collapsed",
+      "collapse"
+    ],
+    "blocks": [
+      "Persistent public unrest caused",
+      "unconstitutional regimes to collapse",
+      "forcing regional administrators to",
+      "state entirely unique statutory compliance rules"
+    ]
+  },
+  {
+    "en": "Global regional climate shifts <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> environmental boundaries <span style=\"color: #ff6b6b; font-weight: bold;\">to contract</span> because the earth crust experienced rapid temperature distribution anomalies.",
+    "tr": "Yer kabuğu hızlı sıcaklık dağılımı anomalileri yaşadığı için, küresel bölgesel iklim kaymaları çevresel sınırların daralmasına neden oldu.",
+    "word": "to contract",
+    "trWord": "çevresel sınırların daralmasına neden oldu",
+    "correct": "to contract",
+    "blank": "Global regional climate shifts caused environmental boundaries ___ because the earth crust experienced rapid temperature distribution anomalies.",
+    "options": [
+      "to contract",
+      "contracting",
+      "contracted",
+      "contract"
+    ],
+    "blocks": [
+      "Global regional climate shifts",
+      "caused environmental boundaries to",
+      "contract because the earth",
+      "crust experienced rapid temperature distribution anomalies"
+    ]
+  },
+  {
+    "en": "Sudden technical overrides <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> dynamic parameters <span style=\"color: #ff6b6b; font-weight: bold;\">to shift</span>, which triggered an immediate security script to isolate database log repositories.",
+    "tr": "Ani teknik geçersiz kılmalar dinamik parametrelerin kaymasına neden oldu ve bu da veritabanı günlük depolarını izole etmek için derhal bir güvenlik komut dosyasını tetikledi.",
+    "word": "to shift",
+    "trWord": "dinamik parametrelerin kaymasına neden oldu",
+    "correct": "to shift",
+    "blank": "Sudden technical overrides caused dynamic parameters ___, which triggered an immediate security script to isolate database log repositories.",
+    "options": [
+      "to shift",
+      "shifting",
+      "shifted",
+      "shift"
+    ],
+    "blocks": [
+      "Sudden technical overrides caused",
+      "dynamic parameters to shift",
+      "which triggered an immediate",
+      "security script to isolate database log repositories"
+    ]
+  },
+  {
+    "en": "Strategic code optimizations <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency in order that the active mobile language learning application runs smoothly.",
+    "tr": "Stratejik kod optimizasyonları, oyunlaştırılmış mobil dil öğrenme uygulamasının sorunsuz çalışması için otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu.",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "Strategic code optimizations caused automated procedures ___ latency in order that the active mobile language learning application runs smoothly.",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "Strategic code optimizations caused automated",
+      "procedures to minimize latency in",
+      "order that the active mobile",
+      "language learning application runs smoothly"
+    ]
+  },
+  {
+    "en": "Loose laboratory control filters <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> analytical errors before the investigator compiled the final performance metrics.",
+    "tr": "Gevşek laboratuvar kontrol filtreleri, araştırmacı nihai performans metriklerini derlemeden önce keyfi kriterlerin analitik hatalara yol açmasına neden oldu.",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "Loose laboratory control filters caused arbitrary criteria ___ analytical errors before the investigator compiled the final performance metrics.",
+    "options": [
+      "to induce",
+      "inducing",
+      "induced",
+      "induce"
+    ],
+    "blocks": [
+      "Loose laboratory control filters",
+      "caused arbitrary criteria to",
+      "induce analytical errors before",
+      "the investigator compiled the final performance metrics"
+    ]
+  },
+  {
+    "en": "High pressure inside the vacuum incubator <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span> just as the original mathematical physics formula predicted.",
+    "tr": "Vakum inkübatörü içindeki yüksek basınç, tıpkı orijinal matematiksel fizik formülünün öngördüğü gibi ayrık değişkenlerin etkileşime girmesine neden oldu.",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "High pressure inside the vacuum incubator caused discrete variables ___ just as the original mathematical physics formula predicted.",
+    "options": [
+      "to interact",
+      "interacting",
+      "interacted",
+      "interact"
+    ],
+    "blocks": [
+      "High pressure inside the",
+      "vacuum incubator caused discrete",
+      "variables to interact just",
+      "as the original mathematical physics formula predicted"
+    ]
+  },
+  {
+    "en": "Rigid assembly demands <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>, delaying further voting rounds until state departments completed the documentation.",
+    "tr": "Katı meclis talepleri yasama taslağı maddelerinin değişmesine neden oldu ve devlet kurumları belgeleri tamamlayana kadar sonraki oylama turlarını geciktirdi.",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "Rigid assembly demands caused legislative draft clauses ___, delaying further voting rounds until state departments completed the documentation.",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutated",
+      "mutate"
+    ],
+    "blocks": [
+      "Rigid assembly demands caused",
+      "legislative draft clauses to",
+      "mutate delaying further voting",
+      "rounds until state departments completed the documentation"
+    ]
+  },
+  {
+    "en": "Persistent market inflation <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span> on grounds that the central bank failed to regulate domestic asset valuations.",
+    "tr": "Merkez bankasının yerel varlık değerlemelerini düzenlemede başarısız olması gerekçesiyle, süregelen piyasa enflasyonu belirli göstergelerin düşmesine neden oldu.",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "Persistent market inflation caused specific indicators ___ on grounds that the central bank failed to regulate domestic asset valuations.",
+    "options": [
+      "to decline",
+      "declining",
+      "declined",
+      "decline"
+    ],
+    "blocks": [
+      "Persistent market inflation caused specific",
+      "indicators to decline on grounds",
+      "that the central bank failed",
+      "to regulate domestic asset valuations"
+    ]
+  },
+  {
+    "en": "Extensive memory allocations <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> subsequent matrix outputs <span style=\"color: #ff6b6b; font-weight: bold;\">to expand</span>, forcing backend server production nodes to maximize their storage capacity thresholds.",
+    "tr": "Kapsamlı bellek tahsisleri sonraki matris çıktılarının genişlemesine neden olarak arka uç sunucu üretim düğümlerini depolama kapasitesi eşiklerini en üst düzeye çıkarmaya zorladı.",
+    "word": "to expand",
+    "trWord": "sonraki matris çıktılarının genişlemesine neden oldu",
+    "correct": "to expand",
+    "blank": "Extensive memory allocations caused subsequent matrix outputs ___, forcing backend server production nodes to maximize their storage capacity thresholds.",
+    "options": [
+      "to expand",
+      "expanding",
+      "expanded",
+      "expand"
+    ],
+    "blocks": [
+      "Extensive memory allocations caused subsequent",
+      "matrix outputs to expand forcing",
+      "backend server production nodes to",
+      "maximize their storage capacity thresholds"
+    ]
+  },
+  {
+    "en": "Intense moisture variations inside the chamber <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> raw infrastructure components <span style=\"color: #ff6b6b; font-weight: bold;\">to decay</span> before field crews apply protective chemical resins.",
+    "tr": "Saha ekipleri koruyucu kimyasal reçineler uygulamadan önce, oda içindeki yoğun nem dalgalanmaları ham altyapı bileşenlerinin aşınmasına neden oldu.",
+    "word": "to decay",
+    "trWord": "ham altyapı bileşenlerinin aşınmasına neden oldu",
+    "correct": "to decay",
+    "blank": "Intense moisture variations inside the chamber caused raw infrastructure components ___ before field crews apply protective chemical resins.",
+    "options": [
+      "to decay",
+      "decaying",
+      "decayed",
+      "decay"
+    ],
+    "blocks": [
+      "Intense moisture variations inside",
+      "the chamber caused raw",
+      "infrastructure components to decay",
+      "before field crews apply protective chemical resins"
+    ]
+  },
+  {
+    "en": "Recent cybersecurity updates <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> cryptographic tokens <span style=\"color: #ff6b6b; font-weight: bold;\">to validate</span> entries automatically the moment an external client profile requested access parameters.",
+    "tr": "Son siber güvenlik güncellemeleri, harici bir istemci profili erişim parametreleri talep ettiği an kriptografik belirteçlerin girişleri otomatik olarak doğrulamasına neden oldu.",
+    "word": "to validate",
+    "trWord": "kriptografik belirteçlerin girişleri doğrulamasına neden oldu",
+    "correct": "to validate",
+    "blank": "Recent cybersecurity updates caused cryptographic tokens ___ entries automatically the moment an external client profile requested access parameters.",
+    "options": [
+      "to validate",
+      "validating",
+      "validated",
+      "validate"
+    ],
+    "blocks": [
+      "Recent cybersecurity updates caused",
+      "cryptographic tokens to validate",
+      "entries automatically the moment",
+      "an external client profile requested access parameters"
+    ]
+  },
+  {
+    "en": "Modern gamified mobile designs <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> linguistic structures <span style=\"color: #ff6b6b; font-weight: bold;\">to evolve</span>, altering how language learners absorb grammar pedagogy curriculum matrix fields.",
+    "tr": "Modern oyunlaştırılmış mobil tasarımlar dilsel yapıların evrilmesine neden olarak dil öğrenenlerin dil bilgisi pedagojisi müfredat matrisi alanlarını özümseme şeklini değiştirdi.",
+    "word": "to evolve",
+    "trWord": "dilsel yapıların evrilmesine neden oldu",
+    "correct": "to evolve",
+    "blank": "Modern gamified mobile designs caused linguistic structures ___, altering how language learners absorb grammar pedagogy curriculum matrix fields.",
+    "options": [
+      "to evolve",
+      "evolving",
+      "evolved",
+      "evolve"
+    ],
+    "blocks": [
+      "Modern gamified mobile designs",
+      "caused linguistic structures to",
+      "evolve altering how language",
+      "learners absorb grammar pedagogy curriculum matrix fields"
+    ]
+  },
+  {
+    "en": "Severe transmission corruption errors <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> inconsistent datasets <span style=\"color: #ff6b6b; font-weight: bold;\">to conflict</span>, making it virtually impossible to interpret the raw baseline configuration tracking logs.",
+    "tr": "Ciddi iletim bozulma hataları tutarsız veri kümelerinin çakışmasına neden olarak ham temel yapılandırma izleme günlüklerini yorumlamayı neredeyse imkansız hale getirdi.",
+    "word": "to conflict",
+    "trWord": "tutarsız veri kümelerinin çakışmasına neden oldu",
+    "correct": "to conflict",
+    "blank": "Severe transmission corruption errors caused inconsistent datasets ___, making it virtually impossible to interpret the raw baseline configuration tracking logs.",
+    "options": [
+      "to conflict",
+      "conflicting",
+      "conflicted",
+      "conflict"
+    ],
+    "blocks": [
+      "Severe transmission corruption errors caused",
+      "inconsistent datasets to conflict making",
+      "it virtually impossible to interpret",
+      "the raw baseline configuration tracking logs"
+    ]
+  },
+  {
+    "en": "Strategic code optimizations <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> automated procedures <span style=\"color: #ff6b6b; font-weight: bold;\">to minimize</span> latency in order that the active mobile application runs smoothly without framework errors.",
+    "tr": "Stratejik kod optimizasyonları, aktif mobil uygulamanın çerçeve hataları olmadan sorunsuz çalışması için otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu.",
+    "word": "to minimize",
+    "trWord": "otomatik prosedürlerin gecikmeyi en aza indirmesine neden oldu",
+    "correct": "to minimize",
+    "blank": "Strategic code optimizations caused automated procedures ___ latency in order that the active mobile application runs smoothly without framework errors.",
+    "options": [
+      "to minimize",
+      "minimizing",
+      "minimized",
+      "minimize"
+    ],
+    "blocks": [
+      "Strategic code optimizations caused automated",
+      "procedures to minimize latency in",
+      "order that the active mobile",
+      "application runs smoothly without framework errors"
+    ]
+  },
+  {
+    "en": "Loose laboratory control filters <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">to induce</span> analytical errors before the technical unit compiled the final performance parameters.",
+    "tr": "Gevşek laboratuvar kontrol filtreleri, teknik birim nihai performans parametrelerini derlemeden önce keyfi kriterlerin analitik hatalara yol açmasına neden oldu.",
+    "word": "to induce",
+    "trWord": "keyfi kriterlerin hatalara yol açmasına neden oldu",
+    "correct": "to induce",
+    "blank": "Loose laboratory control filters caused arbitrary criteria ___ analytical errors before the technical unit compiled the final performance parameters.",
+    "options": [
+      "to induce",
+      "inducing",
+      "induce",
+      "induced"
+    ],
+    "blocks": [
+      "Loose laboratory control filters caused",
+      "arbitrary criteria to induce analytical",
+      "errors before the technical unit",
+      "compiled the final performance parameters"
+    ]
+  },
+  {
+    "en": "High pressure inside the vacuum incubator <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> discrete variables <span style=\"color: #ff6b6b; font-weight: bold;\">to interact</span> just as the original mathematical computing formula predicted.",
+    "tr": "Vakum inkübatörü içindeki yüksek basınç, tıpkı orijinal matematiksel hesaplama formülünün öngördüğü gibi ayrık değişkenlerin etkileşime girmesine neden oldu.",
+    "word": "to interact",
+    "trWord": "ayrık değişkenlerin etkileşime girmesine neden oldu",
+    "correct": "to interact",
+    "blank": "High pressure inside the vacuum incubator caused discrete variables ___ just as the original mathematical computing formula predicted.",
+    "options": [
+      "to interact",
+      "interacting",
+      "interact",
+      "interacted"
+    ],
+    "blocks": [
+      "High pressure inside the",
+      "vacuum incubator caused discrete",
+      "variables to interact just",
+      "as the original mathematical computing formula predicted"
+    ]
+  },
+  {
+    "en": "Rigid assembly demands <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> legislative draft clauses <span style=\"color: #ff6b6b; font-weight: bold;\">to mutate</span>, delaying further voting rounds until specific state departments completed the validation folders.",
+    "tr": "Katı meclis talepleri yasama taslağı maddelerinin değişmesine neden oldu ve belirli devlet kurumları doğrulama klasörlerini tamamlayana kadar sonraki oylama turlarını geciktirdi.",
+    "word": "to mutate",
+    "trWord": "yasama taslağı maddelerinin değişmesine neden oldu",
+    "correct": "to mutate",
+    "blank": "Rigid assembly demands caused legislative draft clauses ___, delaying further voting rounds until specific state departments completed the validation folders.",
+    "options": [
+      "to mutate",
+      "mutating",
+      "mutate",
+      "mutated"
+    ],
+    "blocks": [
+      "Rigid assembly demands caused legislative",
+      "draft clauses to mutate delaying",
+      "further voting rounds until specific",
+      "state departments completed the validation folders"
+    ]
+  },
+  {
+    "en": "Persistent market inflation <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> specific indicators <span style=\"color: #ff6b6b; font-weight: bold;\">to decline</span> on grounds that the central bank failed to regulate domestic resource metrics over the decade.",
+    "tr": "Merkez bankasının on yıl boyunca yerel kaynak metriklerini düzenlemede başarısız olması gerekçesiyle, süregelen piyasa enflasyonu belirli göstergelerin düşmesine neden oldu.",
+    "word": "to decline",
+    "trWord": "belirli göstergelerin düşmesine neden oldu",
+    "correct": "to decline",
+    "blank": "Persistent market inflation caused specific indicators ___ on grounds that the central bank failed to regulate domestic resource metrics over the decade.",
+    "options": [
+      "to decline",
+      "declining",
+      "decline",
+      "declined"
+    ],
+    "blocks": [
+      "Persistent market inflation caused specific",
+      "indicators to decline on grounds",
+      "that the central bank failed",
+      "to regulate domestic resource metrics over the decade"
+    ]
+  }
+];
+
+const unit30Lesson4Group1Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> constituent variables change",
+    "tr": "bileşen değişkenler değiştiği için",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "because constituent",
+      "variables change"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as</span> linguistic output evolves",
+    "tr": "dilsel çıktı evrildikçe",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "as linguistic",
+      "output evolves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the data format shifted",
+    "tr": "veri formatı değiştiği için",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "since the",
+      "data format shifted"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">inasmuch as</span> the parameterized matrix expands",
+    "tr": "parametrelendirilmiş matris genişlediği ölçüde",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "inasmuch as",
+      "the parameterized",
+      "matrix expands"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> draft clauses vary",
+    "tr": "taslak maddeler çeşitlilik gösterdiği için",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "because draft",
+      "clauses vary"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> constituent variables change",
+    "tr": "bileşen değişkenler değiştiği için",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "because constituent",
+      "variables change"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as</span> linguistic output evolves",
+    "tr": "dilsel çıktı evrildikçe",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "as linguistic",
+      "output evolves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the data format shifted",
+    "tr": "veri formatı değiştiği için",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "since the",
+      "data format shifted"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">inasmuch as</span> the parameterized matrix expands",
+    "tr": "parametrelendirilmiş matris genişlediği ölçüde",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "inasmuch as",
+      "the parameterized",
+      "matrix expands"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> draft clauses vary",
+    "tr": "taslak maddeler çeşitlilik gösterdiği için",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "because draft",
+      "clauses vary"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> constituent variables change",
+    "tr": "bileşen değişkenler değiştiği için",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "because constituent",
+      "variables change"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as</span> linguistic output evolves",
+    "tr": "dilsel çıktı evrildikçe",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "as linguistic",
+      "output evolves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the data format shifted",
+    "tr": "veri formatı değiştiği için",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "since the",
+      "data format shifted"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">inasmuch as</span> the parameterized matrix expands",
+    "tr": "parametrelendirilmiş matris genişlediği ölçüde",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "inasmuch as",
+      "the parameterized",
+      "matrix expands"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> draft clauses vary",
+    "tr": "taslak maddeler çeşitlilik gösterdiği için",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "because draft",
+      "clauses vary"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> constituent variables change",
+    "tr": "bileşen değişkenler değiştiği için",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "because constituent",
+      "variables change"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">as</span> linguistic output evolves",
+    "tr": "dilsel çıktı evrildikçe",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "as linguistic",
+      "output evolves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the data format shifted",
+    "tr": "veri formatı değiştiği için",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "since the",
+      "data format shifted"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">inasmuch as</span> the parameterized matrix expands",
+    "tr": "parametrelendirilmiş matris genişlediği ölçüde",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "inasmuch as",
+      "the parameterized",
+      "matrix expands"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because</span> draft clauses vary",
+    "tr": "taslak maddeler çeşitlilik gösterdiği için",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "because draft",
+      "clauses vary"
+    ]
+  }
+];
+
+const unit30Lesson4Group2Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, developers must monitor lines.",
+    "tr": "Bileşen değişkenler değiştiği için geliştiriciler hatları izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change, developers must monitor lines.",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "Because constituent",
+      "variables change",
+      "developers must monitor lines"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly, communication improves.",
+    "tr": "Dilsel çıktı sorunsuz bir şekilde evrildikçe iletişim gelişir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly, communication improves.",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "As linguistic",
+      "output evolves",
+      "smoothly communication improves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted, an override flag triggered.",
+    "tr": "Veri formatı değiştiğinden, bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted, an override flag triggered.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data",
+      "format shifted an",
+      "override flag triggered"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands, filter units activate.",
+    "tr": "Parametrelendirilmiş matris genişlediği ölçüde filtre üniteleri etkinleşir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands, filter units activate.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the",
+      "parameterized matrix expands",
+      "filter units activate"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary, the assembly postponed voting.",
+    "tr": "Taslak maddeler çeşitlilik gösterdiği için meclis oylamayı erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary, the assembly postponed voting.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft",
+      "clauses vary",
+      "the assembly postponed voting"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, technicians check validation frameworks.",
+    "tr": "Bileşen değişkenler değiştiği için teknisyenler doğrulama çerçevelerini kontrol eder.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change, technicians check validation frameworks.",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "Because constituent",
+      "variables change",
+      "technicians check validation frameworks"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly, educational metrics increase.",
+    "tr": "Dilsel çıktı sorunsuz bir şekilde evrildikçe eğitim metrikleri artar.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly, educational metrics increase.",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "As linguistic",
+      "output evolves",
+      "smoothly educational metrics increase"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted, system architectures requires modifications.",
+    "tr": "Veri formatı değiştiğinden, sistem mimarileri değişiklik gerektirir.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted, system architectures requires modifications.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data",
+      "format shifted system",
+      "architectures requires modifications"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands, storage thresholds require expansion.",
+    "tr": "Parametrelendirilmiş matris genişlediği ölçüde depolama eşikleri genişleme gerektirir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands, storage thresholds require expansion.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the",
+      "parameterized matrix expands",
+      "storage thresholds require expansion"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary, specific legal coordinators demanded revision.",
+    "tr": "Taslak maddeler çeşitlilik gösterdiği için belirli yasal koordinatörler revizyon talep etti.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary, specific legal coordinators demanded revision.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses",
+      "vary specific legal",
+      "coordinators demanded revision"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, developers must monitor lines.",
+    "tr": "Bileşen değişkenler değiştiği için geliştiriciler hatları izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change, developers must monitor lines.",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "Because constituent",
+      "variables change",
+      "developers must monitor lines"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly, communication improves.",
+    "tr": "Dilsel çıktı sorunsuz bir şekilde evrildikçe iletişim gelişir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly, communication improves.",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "As linguistic",
+      "output evolves",
+      "smoothly communication improves"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted, an override flag triggered.",
+    "tr": "Veri formatı değiştiğinden, bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted, an override flag triggered.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data",
+      "format shifted an",
+      "override flag triggered"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands, filter units activate.",
+    "tr": "Parametrelendirilmiş matris genişlediği ölçüde filtre üniteleri etkinleşir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands, filter units activate.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the",
+      "parameterized matrix expands",
+      "filter units activate"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary, the assembly postponed voting.",
+    "tr": "Taslak maddeler çeşitlilik gösterdiği için meclis oylamayı erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary, the assembly postponed voting.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft",
+      "clauses vary",
+      "the assembly postponed voting"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, technicians check validation frameworks.",
+    "tr": "Bileşen değişkenler değiştiği için teknisyenler doğrulama çerçevelerini kontrol eder.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change, technicians check validation frameworks.",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "Because constituent",
+      "variables change",
+      "technicians check validation frameworks"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly, educational metrics increase.",
+    "tr": "Dilsel çıktı sorunsuz bir şekilde evrildikçe eğitim metrikleri artar.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly, educational metrics increase.",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "As linguistic",
+      "output evolves",
+      "smoothly educational metrics increase"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted, system architectures requires modifications.",
+    "tr": "Veri formatı değiştiğinden, sistem mimarileri değişiklik gerektirir.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted, system architectures requires modifications.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data",
+      "format shifted system",
+      "architectures requires modifications"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands, storage thresholds require expansion.",
+    "tr": "Parametrelendirilmiş matris genişlediği ölçüde depolama eşikleri genişleme gerektirir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands, storage thresholds require expansion.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the",
+      "parameterized matrix expands",
+      "storage thresholds require expansion"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary, specific legal coordinators demanded revision.",
+    "tr": "Taslak maddeler çeşitlilik gösterdiği için belirli yasal koordinatörler revizyon talep etti.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary, specific legal coordinators demanded revision.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses",
+      "vary specific legal",
+      "coordinators demanded revision"
+    ]
+  }
+];
+
+const unit30Lesson4Group3Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change rapidly during the test phase, developers must monitor internal communication lines closely.",
+    "tr": "Bileşen değişkenler test aşamasında hızla değiştiği için geliştiriciler dahili iletişim hatlarını yakından izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change rapidly during the test phase, developers must monitor internal communication lines closely.",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "Because constituent variables change",
+      "rapidly during the test",
+      "phase developers must monitor",
+      "internal communication lines closely"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly over time now that gamified tools are used, academic research groups report high active recall indicators.",
+    "tr": "Oyunlaştırılmış araçlar kullanıldığı için dilsel çıktı zamanla sorunsuz bir şekilde evrildikçe, akademik araştırma grupları yüksek aktif hatırlama göstergeleri bildirmektedir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly over time now that gamified tools are used, academic research groups report high active recall indicators.",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "As linguistic output evolves smoothly",
+      "over time now that gamified",
+      "tools are used academic research",
+      "groups report high active recall indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted before the migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "tr": "Geçiş sona ermeden önce veri formatı değiştiğinden, tüm merkezi olmayan bulut depolarında derhal bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted before the migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data format",
+      "shifted before the migration",
+      "ended an immediate override",
+      "flag triggered across all decentralized cloud repositories"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands under extreme pressure, secondary backup filter units must activate cleanly to maintain balance.",
+    "tr": "Parametrelendirilmiş matris aşırı basınç altında genişlediği ölçüde, dengeyi korumak için ikincil yedek filtre üniteleri temiz bir şekilde etkinleşmelidir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands under extreme pressure, secondary backup filter units must activate cleanly to maintain balance.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the parameterized",
+      "matrix expands under extreme",
+      "pressure secondary backup filter",
+      "units must activate cleanly to maintain balance"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary significantly based on new qualitative evidence, the legislative assembly postponed further voting rounds until next month.",
+    "tr": "Taslak maddeler yeni nitel kanıtlara dayanarak önemli ölçüde çeşitlilik gösterdiği için yasama meclisi sonraki oylama turlarını gelecek aya erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary significantly based on new qualitative evidence, the legislative assembly postponed further voting rounds until next month.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses vary significantly",
+      "based on new qualitative evidence",
+      "the legislative assembly postponed further",
+      "voting rounds until next month"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change rapidly during the test phase, software developers must monitor internal communication lines closely.",
+    "tr": "Bileşen değişkenler test aşamasında hızla değiştiği için yazılım geliştiriciler dahili iletişim hatlarını yakından izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change rapidly during the test phase, software developers must monitor internal communication lines closely.",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "Because constituent variables change",
+      "rapidly during the test",
+      "phase software developers must",
+      "monitor internal communication lines closely"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly over time now that gamified applications are used, academic research groups report high active recall indicators.",
+    "tr": "Oyunlaştırılmış uygulamalar kullanıldığı için dilsel çıktı zamanla sorunsuz bir şekilde evrildikçe, akademik araştırma grupları yüksek aktif hatırlama göstergeleri bildirmektedir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly over time now that gamified applications are used, academic research groups report high active recall indicators.",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "As linguistic output evolves smoothly",
+      "over time now that gamified",
+      "applications are used academic research",
+      "groups report high active recall indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted before the system migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "tr": "Sistem geçişi sona ermeden önce veri formatı değiştiğinden, tüm merkezi olmayan bulut depolarında derhal bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted before the system migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data format shifted",
+      "before the system migration ended",
+      "an immediate override flag triggered",
+      "across all decentralized cloud repositories"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands under extreme laboratory pressure, secondary backup filter units must activate cleanly to maintain system stability.",
+    "tr": "Parametrelendirilmiş matris aşırı laboratuvar basıncı altında genişlediği ölçüde, sistem kararlılığını korumak için ikincil yedek filtre üniteleri temiz bir şekilde etkinleşmelidir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands under extreme laboratory pressure, secondary backup filter units must activate cleanly to maintain system stability.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the parameterized matrix",
+      "expands under extreme laboratory pressure",
+      "secondary backup filter units must",
+      "activate cleanly to maintain system stability"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary significantly based on new qualitative evidence, the local legislative assembly postponed further voting rounds until next month.",
+    "tr": "Taslak maddeler yeni nitel kanıtlara dayanarak önemli ölçüde çeşitlilik gösterdiği için yerel yasama meclisi sonraki oylama turlarını gelecek aya erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary significantly based on new qualitative evidence, the local legislative assembly postponed further voting rounds until next month.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses vary significantly",
+      "based on new qualitative evidence",
+      "the local legislative assembly postponed",
+      "further voting rounds until next month"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change rapidly during the test phase, developers must monitor internal communication lines closely.",
+    "tr": "Bileşen değişkenler test aşamasında hızla değiştiği için geliştiriciler dahili iletişim hatlarını yakından izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change rapidly during the test phase, developers must monitor internal communication lines closely.",
+    "options": [
+      "Because",
+      "Although",
+      "Whereas",
+      "Despite"
+    ],
+    "blocks": [
+      "Because constituent variables change",
+      "rapidly during the test",
+      "phase developers must monitor",
+      "internal communication lines closely"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly over time now that gamified tools are used, academic research groups report high active recall indicators.",
+    "tr": "Oyunlaştırılmış araçlar kullanıldığı için dilsel çıktı zamanla sorunsuz bir şekilde evrildikçe, akademik araştırma grupları yüksek aktif hatırlama göstergeleri bildirmektedir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly over time now that gamified tools are used, academic research groups report high active recall indicators.",
+    "options": [
+      "As",
+      "But",
+      "Although",
+      "Unless"
+    ],
+    "blocks": [
+      "As linguistic output evolves smoothly",
+      "over time now that gamified",
+      "tools are used academic research",
+      "groups report high active recall indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted before the migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "tr": "Geçiş sona ermeden önce veri formatı değiştiğinden, tüm merkezi olmayan bulut depolarında derhal bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted before the migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data format",
+      "shifted before the migration",
+      "ended an immediate override",
+      "flag triggered across all decentralized cloud repositories"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands under extreme pressure, secondary backup filter units must activate cleanly to maintain balance.",
+    "tr": "Parametrelendirilmiş matris aşırı basınç altında genişlediği ölçüde, dengeyi korumak için ikincil yedek filtre üniteleri temiz bir şekilde etkinleşmelidir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands under extreme pressure, secondary backup filter units must activate cleanly to maintain balance.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the parameterized",
+      "matrix expands under extreme",
+      "pressure secondary backup filter",
+      "units must activate cleanly to maintain balance"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary significantly based on new qualitative evidence, the legislative assembly postponed further voting rounds until next month.",
+    "tr": "Taslak maddeler yeni nitel kanıtlara dayanarak önemli ölçüde çeşitlilik gösterdiği için yasama meclisi sonraki oylama turlarını gelecek aya erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary significantly based on new qualitative evidence, the legislative assembly postponed further voting rounds until next month.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses vary significantly",
+      "based on new qualitative evidence",
+      "the legislative assembly postponed further",
+      "voting rounds until next month"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change rapidly during the test phase, software developers must monitor internal communication lines closely.",
+    "tr": "Bileşen değişkenler test aşamasında hızla değiştiği için yazılım geliştiriciler dahili iletişim hatlarını yakından izlemelidir.",
+    "word": "Because",
+    "trWord": "bileşen değişkenler değiştiği için",
+    "correct": "Because",
+    "blank": "___ constituent variables change rapidly during the test phase, software developers must monitor internal communication lines closely.",
+    "options": [
+      "Because",
+      "Provided",
+      "Unless",
+      "While"
+    ],
+    "blocks": [
+      "Because constituent variables change",
+      "rapidly during the test",
+      "phase software developers must",
+      "monitor internal communication lines closely"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">As</span> linguistic output evolves smoothly over time now that gamified applications are used, academic research groups report high active recall indicators.",
+    "tr": "Oyunlaştırılmış uygulamalar kullanıldığı için dilsel çıktı zamanla sorunsuz bir şekilde evrildikçe, akademik araştırma grupları yüksek aktif hatırlama göstergeleri bildirmektedir.",
+    "word": "As",
+    "trWord": "dilsel çıktı evrildikçe",
+    "correct": "As",
+    "blank": "___ linguistic output evolves smoothly over time now that gamified applications are used, academic research groups report high active recall indicators.",
+    "options": [
+      "As",
+      "Though",
+      "Whereas",
+      "Even if"
+    ],
+    "blocks": [
+      "As linguistic output evolves smoothly",
+      "over time now that gamified",
+      "applications are used academic research",
+      "groups report high active recall indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the data format shifted before the system migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "tr": "Sistem geçişi sona ermeden önce veri formatı değiştiğinden, tüm merkezi olmayan bulut depolarında derhal bir geçersiz kılma bayrağı tetiklendi.",
+    "word": "Since",
+    "trWord": "veri formatı değiştiği için",
+    "correct": "Since",
+    "blank": "___ the data format shifted before the system migration ended, an immediate override flag triggered across all decentralized cloud repositories.",
+    "options": [
+      "Since",
+      "Whereas",
+      "Provided that",
+      "Even if"
+    ],
+    "blocks": [
+      "Since the data format shifted",
+      "before the system migration ended",
+      "an immediate override flag triggered",
+      "across all decentralized cloud repositories"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Inasmuch as</span> the parameterized matrix expands under extreme laboratory pressure, secondary backup filter units must activate cleanly to maintain system stability.",
+    "tr": "Parametrelendirilmiş matris aşırı laboratuvar basıncı altında genişlediği ölçüde, sistem kararlılığını korumak için ikincil yedek filtre üniteleri temiz bir şekilde etkinleşmelidir.",
+    "word": "Inasmuch as",
+    "trWord": "parametrelendirilmiş matris genişlediği ölçüde",
+    "correct": "Inasmuch as",
+    "blank": "___ the parameterized matrix expands under extreme laboratory pressure, secondary backup filter units must activate cleanly to maintain system stability.",
+    "options": [
+      "Inasmuch as",
+      "Nonetheless",
+      "Even though",
+      "Regardless of"
+    ],
+    "blocks": [
+      "Inasmuch as the parameterized matrix",
+      "expands under extreme laboratory pressure",
+      "secondary backup filter units must",
+      "activate cleanly to maintain system stability"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> draft clauses vary significantly based on new qualitative evidence, the local legislative assembly postponed further voting rounds until next month.",
+    "tr": "Taslak maddeler yeni nitel kanıtlara dayanarak önemli ölçüde çeşitlilik gösterdiği için yerel yasama meclisi sonraki oylama turlarını gelecek aya erteledi.",
+    "word": "Because",
+    "trWord": "taslak maddeler çeşitlilik gösterdiği için",
+    "correct": "Because",
+    "blank": "___ draft clauses vary significantly based on new qualitative evidence, the local legislative assembly postponed further voting rounds until next month.",
+    "options": [
+      "Because",
+      "Although",
+      "In contrast",
+      "In order that"
+    ],
+    "blocks": [
+      "Because draft clauses vary significantly",
+      "based on new qualitative evidence",
+      "the local legislative assembly postponed",
+      "further voting rounds until next month"
+    ]
+  }
+];
+
+const unit30Lesson5Group1Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators",
+    "tr": "dalgalı ekonomik göstergeler nedeniyle",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "___ volatile economic indicators",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "due to",
+      "volatile economic indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption",
+    "tr": "ciddi veritabanı bozulması yüzünden",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "___ severe database corruption",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "because of",
+      "severe database corruption"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest",
+    "tr": "süregelen halk huzursuzluğundan dolayı",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "___ persistent public unrest",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "owing to",
+      "persistent public unrest"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses",
+    "tr": "kusurlu taslak maddeler nedeniyle",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "___ faulty draft clauses",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "on account",
+      "of faulty",
+      "draft clauses"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches",
+    "tr": "optimize edilmiş yazılım yamaları sayesinde",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "___ optimized software patches",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators",
+    "tr": "dalgalı ekonomik göstergeler nedeniyle",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "___ volatile economic indicators",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "due to",
+      "volatile economic indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption",
+    "tr": "ciddi veritabanı bozulması yüzünden",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "___ severe database corruption",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "because of",
+      "severe database corruption"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest",
+    "tr": "süregelen halk huzursuzluğundan dolayı",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "___ persistent public unrest",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "owing to",
+      "persistent public unrest"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses",
+    "tr": "kusurlu taslak maddeler nedeniyle",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "___ faulty draft clauses",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "on account",
+      "of faulty",
+      "draft clauses"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches",
+    "tr": "optimize edilmiş yazılım yamaları sayesinde",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "___ optimized software patches",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators",
+    "tr": "dalgalı ekonomik göstergeler nedeniyle",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "___ volatile economic indicators",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "due to",
+      "volatile economic indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption",
+    "tr": "ciddi veritabanı bozulması yüzünden",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "___ severe database corruption",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "because of",
+      "severe database corruption"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest",
+    "tr": "süregelen halk huzursuzluğundan dolayı",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "___ persistent public unrest",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "owing to",
+      "persistent public unrest"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses",
+    "tr": "kusurlu taslak maddeler nedeniyle",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "___ faulty draft clauses",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "on account",
+      "of faulty",
+      "draft clauses"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches",
+    "tr": "optimize edilmiş yazılım yamaları sayesinde",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "___ optimized software patches",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators",
+    "tr": "dalgalı ekonomik göstergeler nedeniyle",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "___ volatile economic indicators",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "due to",
+      "volatile economic indicators"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption",
+    "tr": "ciddi veritabanı bozulması yüzünden",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "___ severe database corruption",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "because of",
+      "severe database corruption"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest",
+    "tr": "süregelen halk huzursuzluğundan dolayı",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "___ persistent public unrest",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "owing to",
+      "persistent public unrest"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses",
+    "tr": "kusurlu taslak maddeler nedeniyle",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "___ faulty draft clauses",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "on account",
+      "of faulty",
+      "draft clauses"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches",
+    "tr": "optimize edilmiş yazılım yamaları sayesinde",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "___ optimized software patches",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "thanks to",
+      "optimized software patches"
+    ]
+  }
+];
+
+const unit30Lesson5Group2Raw = [
+  {
+    "en": "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
+    "tr": "Kurumsal karlar dalgalı ekonomik göstergeler nedeniyle düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped ___ volatile economic indicators.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits",
+      "dropped due",
+      "to volatile economic indicators"
+    ]
+  },
+  {
+    "en": "Compilation errors developed <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption.",
+    "tr": "Derleme hataları ciddi veritabanı bozulması yüzünden gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Compilation errors developed ___ severe database corruption.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Compilation errors",
+      "developed because",
+      "of severe database corruption"
+    ]
+  },
+  {
+    "en": "Unconstitutional regimes collapsed <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest.",
+    "tr": "Anayasa dışı rejimler süregelen halk huzursuzluğundan dolayı çöktü.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional regimes collapsed ___ persistent public unrest.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional regimes",
+      "collapsed owing",
+      "to persistent public unrest"
+    ]
+  },
+  {
+    "en": "Voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses.",
+    "tr": "Oylama turları kusurlu taslak maddeler nedeniyle gecikti.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Voting rounds were delayed ___ faulty draft clauses.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Voting rounds were",
+      "delayed on account",
+      "of faulty draft clauses"
+    ]
+  },
+  {
+    "en": "Network gateways remain secure <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches.",
+    "tr": "Ağ geçitleri optimize edilmiş yazılım yamaları sayesinde güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Network gateways remain secure ___ optimized software patches.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Network gateways remain",
+      "secure thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
+    "tr": "Kurumsal karlar dalgalı ekonomik göstergeler nedeniyle düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped ___ volatile economic indicators.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits",
+      "dropped due",
+      "to volatile economic indicators"
+    ]
+  },
+  {
+    "en": "Compilation errors developed <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption.",
+    "tr": "Derleme hataları ciddi veritabanı bozulması yüzünden gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Compilation errors developed ___ severe database corruption.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Compilation errors",
+      "developed because",
+      "of severe database corruption"
+    ]
+  },
+  {
+    "en": "Unconstitutional regimes collapsed <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest.",
+    "tr": "Anayasa dışı rejimler süregelen halk huzursuzluğundan dolayı çöktü.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional regimes collapsed ___ persistent public unrest.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional regimes",
+      "collapsed owing",
+      "to persistent public unrest"
+    ]
+  },
+  {
+    "en": "Voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses.",
+    "tr": "Oylama turları kusurlu taslak maddeler nedeniyle gecikti.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Voting rounds were delayed ___ faulty draft clauses.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Voting rounds were",
+      "delayed on account",
+      "of faulty draft clauses"
+    ]
+  },
+  {
+    "en": "Network gateways remain secure <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches.",
+    "tr": "Ağ geçitleri optimize edilmiş yazılım yamaları sayesinde güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Network gateways remain secure ___ optimized software patches.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Network gateways remain",
+      "secure thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
+    "tr": "Kurumsal karlar dalgalı ekonomik göstergeler nedeniyle düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped ___ volatile economic indicators.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits",
+      "dropped due",
+      "to volatile economic indicators"
+    ]
+  },
+  {
+    "en": "Compilation errors developed <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption.",
+    "tr": "Derleme hataları ciddi veritabanı bozulması yüzünden gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Compilation errors developed ___ severe database corruption.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Compilation errors",
+      "developed because",
+      "of severe database corruption"
+    ]
+  },
+  {
+    "en": "Unconstitutional regimes collapsed <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest.",
+    "tr": "Anayasa dışı rejimler süregelen halk huzursuzluğundan dolayı çöktü.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional regimes collapsed ___ persistent public unrest.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional regimes",
+      "collapsed owing",
+      "to persistent public unrest"
+    ]
+  },
+  {
+    "en": "Voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses.",
+    "tr": "Oylama turları kusurlu taslak maddeler nedeniyle gecikti.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Voting rounds were delayed ___ faulty draft clauses.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Voting rounds were",
+      "delayed on account",
+      "of faulty draft clauses"
+    ]
+  },
+  {
+    "en": "Network gateways remain secure <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches.",
+    "tr": "Ağ geçitleri optimize edilmiş yazılım yamaları sayesinde güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Network gateways remain secure ___ optimized software patches.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Network gateways remain",
+      "secure thanks to",
+      "optimized software patches"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
+    "tr": "Kurumsal karlar dalgalı ekonomik göstergeler nedeniyle düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped ___ volatile economic indicators.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits",
+      "dropped due",
+      "to volatile economic indicators"
+    ]
+  },
+  {
+    "en": "Compilation errors developed <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption.",
+    "tr": "Derleme hataları ciddi veritabanı bozulması yüzünden gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Compilation errors developed ___ severe database corruption.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Compilation errors",
+      "developed because",
+      "of severe database corruption"
+    ]
+  },
+  {
+    "en": "Unconstitutional regimes collapsed <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest.",
+    "tr": "Anayasa dışı rejimler süregelen halk huzursuzluğundan dolayı çöktü.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional regimes collapsed ___ persistent public unrest.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional regimes",
+      "collapsed owing",
+      "to persistent public unrest"
+    ]
+  },
+  {
+    "en": "Voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses.",
+    "tr": "Oylama turları kusurlu taslak maddeler nedeniyle gecikti.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Voting rounds were delayed ___ faulty draft clauses.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Voting rounds were",
+      "delayed on account",
+      "of faulty draft clauses"
+    ]
+  },
+  {
+    "en": "Network gateways remain secure <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches.",
+    "tr": "Ağ geçitleri optimize edilmiş yazılım yamaları sayesinde güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Network gateways remain secure ___ optimized software patches.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Network gateways remain",
+      "secure thanks to",
+      "optimized software patches"
+    ]
+  }
+];
+
+const unit30Lesson5Group3Raw = [
+  {
+    "en": "Corporate profits dropped dramatically next quarter <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators and unexpected international trade tariff restrictions.",
+    "tr": "Kurumsal karlar, dalgalı ekonomik göstergeler ve beklenmedik uluslararası ticaret tarifesi kısıtlamaları nedeniyle gelecek çeyrekte dramatik bir şekilde düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped dramatically next quarter ___ volatile economic indicators and unexpected international trade tariff restrictions.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits dropped dramatically",
+      "next quarter due to",
+      "volatile economic indicators and",
+      "unexpected international trade tariff restrictions"
+    ]
+  },
+  {
+    "en": "Comprehensive compilation errors developed across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption before technicians isolated the drive.",
+    "tr": "Teknisyenler sürücüyü izole etmeden önce, ciddi veritabanı bozulması yüzünden üretim düğümlerinde kapsamlı derleme hataları gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Comprehensive compilation errors developed across production nodes ___ severe database corruption before technicians isolated the drive.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Comprehensive compilation errors developed",
+      "across production nodes because",
+      "of severe database corruption",
+      "before technicians isolated the drive"
+    ]
+  },
+  {
+    "en": "Unconstitutional state regimes collapsed within the zone <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest, forcing administrators to state unique compliance codes.",
+    "tr": "Süregelen halk huzursuzluğundan dolayı bölgedeki anayasa dışı eyalet rejimleri çöktü ve yöneticileri benzersiz uyumluluk kodları belirlemeye zorladı.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional state regimes collapsed within the zone ___ persistent public unrest, forcing administrators to state unique compliance codes.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional state regimes collapsed",
+      "within the zone owing",
+      "to persistent public unrest",
+      "forcing administrators to state unique compliance codes"
+    ]
+  },
+  {
+    "en": "Future legislative voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses until the constitutional committee finalized the documentation.",
+    "tr": "Anayasa komisyonu belgeleri nihai hale getirene kadar, kusurlu taslak maddeler nedeniyle gelecekteki yasama oylama turları ertelendi.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Future legislative voting rounds were delayed ___ faulty draft clauses until the constitutional committee finalized the documentation.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Future legislative voting rounds",
+      "were delayed on account",
+      "of faulty draft clauses",
+      "until the constitutional committee finalized the documentation"
+    ]
+  },
+  {
+    "en": "Primary network gateways remain secure during transaction spikes <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches and advanced cryptographic validation token frameworks.",
+    "tr": "Optimize edilmiş yazılım yamaları ve gelişmiş kriptografik doğrulama belirteci çerçeveleri sayesinde, işlem dalgalanmaları sırasında birincil ağ geçitleri güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Primary network gateways remain secure during transaction spikes ___ optimized software patches and advanced cryptographic validation token frameworks.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Primary network gateways remain",
+      "secure during transaction spikes",
+      "thanks to optimized software",
+      "patches and advanced cryptographic validation token frameworks"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped dramatically next quarter <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators and unexpected international trade tariff restrictions.",
+    "tr": "Kurumsal karlar, dalgalı ekonomik göstergeler ve beklenmedik uluslararası ticaret tarifesi kısıtlamaları nedeniyle gelecek çeyrekte dramatik bir şekilde düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped dramatically next quarter ___ volatile economic indicators and unexpected international trade tariff restrictions.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits dropped dramatically",
+      "next quarter due to",
+      "volatile economic indicators and",
+      "unexpected international trade tariff restrictions"
+    ]
+  },
+  {
+    "en": "Comprehensive compilation errors developed across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption before technicians isolated the drive.",
+    "tr": "Teknisyenler sürücüyü izole etmeden önce, ciddi veritabanı bozulması yüzünden üretim düğümlerinde kapsamlı derleme hataları gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Comprehensive compilation errors developed across production nodes ___ severe database corruption before technicians isolated the drive.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Comprehensive compilation errors developed",
+      "across production nodes because",
+      "of severe database corruption",
+      "before technicians isolated the drive"
+    ]
+  },
+  {
+    "en": "Unconstitutional state regimes collapsed within the zone <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest, forcing administrators to state unique compliance codes.",
+    "tr": "Süregelen halk huzursuzluğundan dolayı bölgedeki anayasa dışı eyalet rejimleri çöktü ve yöneticileri benzersiz uyumluluk kodları belirlemeye zorladı.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional state regimes collapsed within the zone ___ persistent public unrest, forcing administrators to state unique compliance codes.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional state regimes collapsed",
+      "within the zone owing",
+      "to persistent public unrest",
+      "forcing administrators to state unique compliance codes"
+    ]
+  },
+  {
+    "en": "Future legislative voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses until the constitutional committee finalized the documentation.",
+    "tr": "Anayasa komisyonu belgeleri nihai hale getirene kadar, kusurlu taslak maddeler nedeniyle gelecekteki yasama oylama turları ertelendi.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Future legislative voting rounds were delayed ___ faulty draft clauses until the constitutional committee finalized the documentation.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Future legislative voting rounds",
+      "were delayed on account",
+      "of faulty draft clauses",
+      "until the constitutional committee finalized the documentation"
+    ]
+  },
+  {
+    "en": "Primary network gateways remain secure during transaction spikes <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches and advanced cryptographic validation token frameworks.",
+    "tr": "Optimize edilmiş yazılım yamaları ve gelişmiş kriptografik doğrulama belirteci çerçeveleri sayesinde, işlem dalgalanmaları sırasında birincil ağ geçitleri güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Primary network gateways remain secure during transaction spikes ___ optimized software patches and advanced cryptographic validation token frameworks.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Primary network gateways remain",
+      "secure during transaction spikes",
+      "thanks to optimized software",
+      "patches and advanced cryptographic validation token frameworks"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped dramatically next quarter <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators and unexpected international trade tariff restrictions.",
+    "tr": "Kurumsal karlar, dalgalı ekonomik göstergeler ve beklenmedik uluslararası ticaret tarifesi kısıtlamaları nedeniyle gelecek çeyrekte dramatik bir şekilde düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped dramatically next quarter ___ volatile economic indicators and unexpected international trade tariff restrictions.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits dropped dramatically",
+      "next quarter due to",
+      "volatile economic indicators and",
+      "unexpected international trade tariff restrictions"
+    ]
+  },
+  {
+    "en": "Comprehensive compilation errors developed across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption before technicians isolated the drive.",
+    "tr": "Teknisyenler sürücüyü izole etmeden önce, ciddi veritabanı bozulması yüzünden üretim düğümlerinde kapsamlı derleme hataları gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Comprehensive compilation errors developed across production nodes ___ severe database corruption before technicians isolated the drive.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Comprehensive compilation errors developed",
+      "across production nodes because",
+      "of severe database corruption",
+      "before technicians isolated the drive"
+    ]
+  },
+  {
+    "en": "Unconstitutional state regimes collapsed within the zone <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest, forcing administrators to state unique compliance codes.",
+    "tr": "Süregelen halk huzursuzluğundan dolayı bölgedeki anayasa dışı eyalet rejimleri çöktü ve yöneticileri benzersiz uyumluluk kodları belirlemeye zorladı.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional state regimes collapsed within the zone ___ persistent public unrest, forcing administrators to state unique compliance codes.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional state regimes collapsed",
+      "within the zone owing",
+      "to persistent public unrest",
+      "forcing administrators to state unique compliance codes"
+    ]
+  },
+  {
+    "en": "Future legislative voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses until the constitutional committee finalized the documentation.",
+    "tr": "Anayasa komisyonu belgeleri nihai hale getirene kadar, kusurlu taslak maddeler nedeniyle gelecekteki yasama oylama turları ertelendi.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Future legislative voting rounds were delayed ___ faulty draft clauses until the constitutional committee finalized the documentation.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Future legislative voting rounds",
+      "were delayed on account",
+      "of faulty draft clauses",
+      "until the constitutional committee finalized the documentation"
+    ]
+  },
+  {
+    "en": "Primary network gateways remain secure during transaction spikes <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches and advanced cryptographic validation token frameworks.",
+    "tr": "Optimize edilmiş yazılım yamaları ve gelişmiş kriptografik doğrulama belirteci çerçeveleri sayesinde, işlem dalgalanmaları sırasında birincil ağ geçitleri güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Primary network gateways remain secure during transaction spikes ___ optimized software patches and advanced cryptographic validation token frameworks.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Primary network gateways remain",
+      "secure during transaction spikes",
+      "thanks to optimized software",
+      "patches and advanced cryptographic validation token frameworks"
+    ]
+  },
+  {
+    "en": "Corporate profits dropped dramatically next quarter <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators and unexpected international trade tariff restrictions.",
+    "tr": "Kurumsal karlar, dalgalı ekonomik göstergeler ve beklenmedik uluslararası ticaret tarifesi kısıtlamaları nedeniyle gelecek çeyrekte dramatik bir şekilde düştü.",
+    "word": "due to",
+    "trWord": "dalgalı ekonomik göstergeler nedeniyle",
+    "correct": "due to",
+    "blank": "Corporate profits dropped dramatically next quarter ___ volatile economic indicators and unexpected international trade tariff restrictions.",
+    "options": [
+      "due to",
+      "despite",
+      "although",
+      "whereas"
+    ],
+    "blocks": [
+      "Corporate profits dropped dramatically",
+      "next quarter due to",
+      "volatile economic indicators and",
+      "unexpected international trade tariff restrictions"
+    ]
+  },
+  {
+    "en": "Comprehensive compilation errors developed across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">because of</span> severe database corruption before technicians isolated the drive.",
+    "tr": "Teknisyenler sürücüyü izole etmeden önce, ciddi veritabanı bozulması yüzünden üretim düğümlerinde kapsamlı derleme hataları gelişti.",
+    "word": "because of",
+    "trWord": "ciddi veritabanı bozulması yüzünden",
+    "correct": "because of",
+    "blank": "Comprehensive compilation errors developed across production nodes ___ severe database corruption before technicians isolated the drive.",
+    "options": [
+      "because of",
+      "regardless of",
+      "in spite of",
+      "even if"
+    ],
+    "blocks": [
+      "Comprehensive compilation errors developed",
+      "across production nodes because",
+      "of severe database corruption",
+      "before technicians isolated the drive"
+    ]
+  },
+  {
+    "en": "Unconstitutional state regimes collapsed within the zone <span style=\"color: #ff6b6b; font-weight: bold;\">owing to</span> persistent public unrest, forcing administrators to state unique compliance codes.",
+    "tr": "Süregelen halk huzursuzluğundan dolayı bölgedeki anayasa dışı eyalet rejimleri çöktü ve yöneticileri benzersiz uyumluluk kodları belirlemeye zorladı.",
+    "word": "owing to",
+    "trWord": "süregelen halk huzursuzluğundan dolayı",
+    "correct": "owing to",
+    "blank": "Unconstitutional state regimes collapsed within the zone ___ persistent public unrest, forcing administrators to state unique compliance codes.",
+    "options": [
+      "owing to",
+      "despite",
+      "in contrast to",
+      "instead of"
+    ],
+    "blocks": [
+      "Unconstitutional state regimes collapsed",
+      "within the zone owing",
+      "to persistent public unrest",
+      "forcing administrators to state unique compliance codes"
+    ]
+  },
+  {
+    "en": "Future legislative voting rounds were delayed <span style=\"color: #ff6b6b; font-weight: bold;\">on account of</span> faulty draft clauses until the constitutional committee finalized the documentation.",
+    "tr": "Anayasa komisyonu belgeleri nihai hale getirene kadar, kusurlu taslak maddeler nedeniyle gelecekteki yasama oylama turları ertelendi.",
+    "word": "on account of",
+    "trWord": "kusurlu taslak maddeler nedeniyle",
+    "correct": "on account of",
+    "blank": "Future legislative voting rounds were delayed ___ faulty draft clauses until the constitutional committee finalized the documentation.",
+    "options": [
+      "on account of",
+      "instead of",
+      "provided",
+      "in spite of"
+    ],
+    "blocks": [
+      "Future legislative voting rounds",
+      "were delayed on account",
+      "of faulty draft clauses",
+      "until the constitutional committee finalized the documentation"
+    ]
+  },
+  {
+    "en": "Primary network gateways remain secure during transaction spikes <span style=\"color: #ff6b6b; font-weight: bold;\">thanks to</span> optimized software patches and advanced cryptographic validation token frameworks.",
+    "tr": "Optimize edilmiş yazılım yamaları ve gelişmiş kriptografik doğrulama belirteci çerçeveleri sayesinde, işlem dalgalanmaları sırasında birincil ağ geçitleri güvende kalır.",
+    "word": "thanks to",
+    "trWord": "optimize edilmiş yazılım yamaları sayesinde",
+    "correct": "thanks to",
+    "blank": "Primary network gateways remain secure during transaction spikes ___ optimized software patches and advanced cryptographic validation token frameworks.",
+    "options": [
+      "thanks to",
+      "due to",
+      "in spite of",
+      "regardless of"
+    ],
+    "blocks": [
+      "Primary network gateways remain",
+      "secure during transaction spikes",
+      "thanks to optimized software",
+      "patches and advanced cryptographic validation token frameworks"
+    ]
+  }
+];
+
+const unit30Lesson6Group1Raw = [
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters",
+    "tr": "gevşek kontrol filtrelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose control filters",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose control filters"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds",
+    "tr": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ unoptimized framework builds",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction",
+    "tr": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "___ high mechanical piston friction",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "stems from",
+      "high mechanical",
+      "piston friction"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures",
+    "tr": "kriptografik doğrulama hatalarından kaynaklanır",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ cryptographic validation failures",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops",
+    "tr": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose database query loops",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose database",
+      "query loops"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters",
+    "tr": "gevşek kontrol filtrelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose control filters",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose control filters"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds",
+    "tr": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ unoptimized framework builds",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction",
+    "tr": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "___ high mechanical piston friction",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "stems from",
+      "high mechanical",
+      "piston friction"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures",
+    "tr": "kriptografik doğrulama hatalarından kaynaklanır",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ cryptographic validation failures",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops",
+    "tr": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose database query loops",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose database",
+      "query loops"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters",
+    "tr": "gevşek kontrol filtrelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose control filters",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose control filters"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds",
+    "tr": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ unoptimized framework builds",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction",
+    "tr": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "___ high mechanical piston friction",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "stems from",
+      "high mechanical",
+      "piston friction"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures",
+    "tr": "kriptografik doğrulama hatalarından kaynaklanır",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ cryptographic validation failures",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops",
+    "tr": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose database query loops",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose database",
+      "query loops"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters",
+    "tr": "gevşek kontrol filtrelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose control filters",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose control filters"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds",
+    "tr": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ unoptimized framework builds",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction",
+    "tr": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "___ high mechanical piston friction",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "stems from",
+      "high mechanical",
+      "piston friction"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures",
+    "tr": "kriptografik doğrulama hatalarından kaynaklanır",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ cryptographic validation failures",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "<span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops",
+    "tr": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "___ loose database query loops",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "stem from",
+      "loose database",
+      "query loops"
+    ]
+  }
+];
+
+const unit30Lesson6Group2Raw = [
+  {
+    "en": "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
+    "tr": "Analitik doğrulama hataları gevşek kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Analytical validation errors ___ loose control filters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Analytical validation",
+      "errors stem",
+      "from loose control filters"
+    ]
+  },
+  {
+    "en": "Negative user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds.",
+    "tr": "Olumsuz kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative user reviews ___ unoptimized framework builds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative user",
+      "reviews stem",
+      "from unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "Permanent engine decay <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction.",
+    "tr": "Kalıcı motor aşınması yüksek mekanik piston sürtünmesinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine decay ___ high mechanical piston friction.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine decay",
+      "stems from high",
+      "mechanical piston friction"
+    ]
+  },
+  {
+    "en": "Transient profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures.",
+    "tr": "Geçici profil kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient profile lockouts ___ cryptographic validation failures.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient profile",
+      "lockouts stem",
+      "from cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops.",
+    "tr": "Yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks ___ loose database query loops.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks",
+      "stem from loose",
+      "database query loops"
+    ]
+  },
+  {
+    "en": "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
+    "tr": "Analitik doğrulama hataları gevşek kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Analytical validation errors ___ loose control filters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Analytical validation",
+      "errors stem",
+      "from loose control filters"
+    ]
+  },
+  {
+    "en": "Negative user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds.",
+    "tr": "Olumsuz kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative user reviews ___ unoptimized framework builds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative user",
+      "reviews stem",
+      "from unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "Permanent engine decay <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction.",
+    "tr": "Kalıcı motor aşınması yüksek mekanik piston sürtünmesinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine decay ___ high mechanical piston friction.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine decay",
+      "stems from high",
+      "mechanical piston friction"
+    ]
+  },
+  {
+    "en": "Transient profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures.",
+    "tr": "Geçici profil kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient profile lockouts ___ cryptographic validation failures.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient profile",
+      "lockouts stem",
+      "from cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops.",
+    "tr": "Yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks ___ loose database query loops.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks",
+      "stem from loose",
+      "database query loops"
+    ]
+  },
+  {
+    "en": "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
+    "tr": "Analitik doğrulama hataları gevşek kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Analytical validation errors ___ loose control filters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Analytical validation",
+      "errors stem",
+      "from loose control filters"
+    ]
+  },
+  {
+    "en": "Negative user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds.",
+    "tr": "Olumsuz kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative user reviews ___ unoptimized framework builds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative user",
+      "reviews stem",
+      "from unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "Permanent engine decay <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction.",
+    "tr": "Kalıcı motor aşınması yüksek mekanik piston sürtünmesinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine decay ___ high mechanical piston friction.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine decay",
+      "stems from high",
+      "mechanical piston friction"
+    ]
+  },
+  {
+    "en": "Transient profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures.",
+    "tr": "Geçici profil kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient profile lockouts ___ cryptographic validation failures.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient profile",
+      "lockouts stem",
+      "from cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops.",
+    "tr": "Yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks ___ loose database query loops.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks",
+      "stem from loose",
+      "database query loops"
+    ]
+  },
+  {
+    "en": "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
+    "tr": "Analitik doğrulama hataları gevşek kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Analytical validation errors ___ loose control filters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Analytical validation",
+      "errors stem",
+      "from loose control filters"
+    ]
+  },
+  {
+    "en": "Negative user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds.",
+    "tr": "Olumsuz kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative user reviews ___ unoptimized framework builds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative user",
+      "reviews stem",
+      "from unoptimized framework builds"
+    ]
+  },
+  {
+    "en": "Permanent engine decay <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction.",
+    "tr": "Kalıcı motor aşınması yüksek mekanik piston sürtünmesinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine decay ___ high mechanical piston friction.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine decay",
+      "stems from high",
+      "mechanical piston friction"
+    ]
+  },
+  {
+    "en": "Transient profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures.",
+    "tr": "Geçici profil kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient profile lockouts ___ cryptographic validation failures.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient profile",
+      "lockouts stem",
+      "from cryptographic validation failures"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops.",
+    "tr": "Yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks ___ loose database query loops.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks",
+      "stem from loose",
+      "database query loops"
+    ]
+  }
+];
+
+const unit30Lesson6Group3Raw = [
+  {
+    "en": "Severe analytical validation errors frequently <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose laboratory control filters before investigators compile the final performance metrics.",
+    "tr": "Ciddi analitik doğrulama hataları, araştırmacılar nihai performans metriklerini derlemeden önce sıklıkla gevşek laboratuvar kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Severe analytical validation errors frequently ___ loose laboratory control filters before investigators compile the final performance metrics.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Severe analytical validation errors",
+      "frequently stem from loose",
+      "laboratory control filters before",
+      "investigators compile the final performance metrics"
+    ]
+  },
+  {
+    "en": "Negative mobile platform user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "tr": "Müşteriler sürekli navigasyon gecikme eşikleriyle karşılaştığından, olumsuz mobil platform kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative mobile platform user reviews ___ unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative mobile platform user",
+      "reviews stem from unoptimized",
+      "framework builds since clients",
+      "encounter constant navigation lag thresholds"
+    ]
+  },
+  {
+    "en": "Permanent engine core decay inevitably <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction values under high-pressure simulation workloads.",
+    "tr": "Kalıcı motor çekirdeği aşınması, yüksek basınçlı simülasyon iş yükleri altında kaçınılmaz olarak yüksek mekanik piston sürtünme değerlerinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine core decay inevitably ___ high mechanical piston friction values under high-pressure simulation workloads.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine core decay",
+      "inevitably stems from high",
+      "mechanical piston friction values",
+      "under high-pressure simulation workloads"
+    ]
+  },
+  {
+    "en": "Transient device profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "tr": "Hassas sunucu bölümlerinin veri güvenliği parametrelerini koruyabilmesi için, geçici cihaz profili kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient device profile lockouts ___ cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient device profile lockouts",
+      "stem from cryptographic validation",
+      "failures in order that",
+      "sensitive server partitions maintain data safety parameters"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops while handling high-volume transaction traffic floods.",
+    "tr": "Yüksek hacimli işlem trafiği dalgalanmaları yönetilirken, üretim düğümlerindeki yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks across production nodes ___ loose database query loops while handling high-volume transaction traffic floods.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks across",
+      "production nodes stem from",
+      "loose database query loops",
+      "while handling high-volume transaction traffic floods"
+    ]
+  },
+  {
+    "en": "Severe analytical validation errors frequently <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose laboratory control filters before investigators compile the final performance metrics.",
+    "tr": "Ciddi analitik doğrulama hataları, araştırmacılar nihai performans metriklerini derlemeden önce sıklıkla gevşek laboratuvar kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Severe analytical validation errors frequently ___ loose laboratory control filters before investigators compile the final performance metrics.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Severe analytical validation errors",
+      "frequently stem from loose",
+      "laboratory control filters before",
+      "investigators compile the final performance metrics"
+    ]
+  },
+  {
+    "en": "Negative mobile platform user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "tr": "Müşteriler sürekli navigasyon gecikme eşikleriyle karşılaştığından, olumsuz mobil platform kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative mobile platform user reviews ___ unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative mobile platform user",
+      "reviews stem from unoptimized",
+      "framework builds since clients",
+      "encounter constant navigation lag thresholds"
+    ]
+  },
+  {
+    "en": "Permanent engine core decay inevitably <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction values under high-pressure simulation workloads.",
+    "tr": "Kalıcı motor çekirdeği aşınması, yüksek basınçlı simülasyon iş yükleri altında kaçınılmaz olarak yüksek mekanik piston sürtünme değerlerinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine core decay inevitably ___ high mechanical piston friction values under high-pressure simulation workloads.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine core decay",
+      "inevitably stems from high",
+      "mechanical piston friction values",
+      "under high-pressure simulation workloads"
+    ]
+  },
+  {
+    "en": "Transient device profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "tr": "Hassas sunucu bölümlerinin veri güvenliği parametrelerini koruyabilmesi için, geçici cihaz profili kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient device profile lockouts ___ cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient device profile lockouts",
+      "stem from cryptographic validation",
+      "failures in order that",
+      "sensitive server partitions maintain data safety parameters"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops while handling high-volume transaction traffic floods.",
+    "tr": "Yüksek hacimli işlem trafiği dalgalanmaları yönetilirken, üretim düğümlerindeki yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks across production nodes ___ loose database query loops while handling high-volume transaction traffic floods.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks across",
+      "production nodes stem from",
+      "loose database query loops",
+      "while handling high-volume transaction traffic floods"
+    ]
+  },
+  {
+    "en": "Severe analytical validation errors frequently <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose laboratory control filters before investigators compile the final performance metrics.",
+    "tr": "Ciddi analitik doğrulama hataları, araştırmacılar nihai performans metriklerini derlemeden önce sıklıkla gevşek laboratuvar kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Severe analytical validation errors frequently ___ loose laboratory control filters before investigators compile the final performance metrics.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Severe analytical validation errors",
+      "frequently stem from loose",
+      "laboratory control filters before",
+      "investigators compile the final performance metrics"
+    ]
+  },
+  {
+    "en": "Negative mobile platform user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "tr": "Müşteriler sürekli navigasyon gecikme eşikleriyle karşılaştığından, olumsuz mobil platform kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative mobile platform user reviews ___ unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative mobile platform user",
+      "reviews stem from unoptimized",
+      "framework builds since clients",
+      "encounter constant navigation lag thresholds"
+    ]
+  },
+  {
+    "en": "Permanent engine core decay inevitably <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction values under high-pressure simulation workloads.",
+    "tr": "Kalıcı motor çekirdeği aşınması, yüksek basınçlı simülasyon iş yükleri altında kaçınılmaz olarak yüksek mekanik piston sürtünme değerlerinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine core decay inevitably ___ high mechanical piston friction values under high-pressure simulation workloads.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine core decay",
+      "inevitably stems from high",
+      "mechanical piston friction values",
+      "under high-pressure simulation workloads"
+    ]
+  },
+  {
+    "en": "Transient device profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "tr": "Hassas sunucu bölümlerinin veri güvenliği parametrelerini koruyabilmesi için, geçici cihaz profili kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient device profile lockouts ___ cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient device profile lockouts",
+      "stem from cryptographic validation",
+      "failures in order that",
+      "sensitive server partitions maintain data safety parameters"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops while handling high-volume transaction traffic floods.",
+    "tr": "Yüksek hacimli işlem trafiği dalgalanmaları yönetilirken, üretim düğümlerindeki yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks across production nodes ___ loose database query loops while handling high-volume transaction traffic floods.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks across",
+      "production nodes stem from",
+      "loose database query loops",
+      "while handling high-volume transaction traffic floods"
+    ]
+  },
+  {
+    "en": "Severe analytical validation errors frequently <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose laboratory control filters before investigators compile the final performance metrics.",
+    "tr": "Ciddi analitik doğrulama hataları, araştırmacılar nihai performans metriklerini derlemeden önce sıklıkla gevşek laboratuvar kontrol filtrelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek kontrol filtrelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Severe analytical validation errors frequently ___ loose laboratory control filters before investigators compile the final performance metrics.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Severe analytical validation errors",
+      "frequently stem from loose",
+      "laboratory control filters before",
+      "investigators compile the final performance metrics"
+    ]
+  },
+  {
+    "en": "Negative mobile platform user reviews <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "tr": "Müşteriler sürekli navigasyon gecikme eşikleriyle karşılaştığından, olumsuz mobil platform kullanıcı yorumları optimize edilmemiş çerçeve derlemelerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "optimize edilmiş çerçeve derlemelerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Negative mobile platform user reviews ___ unoptimized framework builds since clients encounter constant navigation lag thresholds.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Negative mobile platform user",
+      "reviews stem from unoptimized",
+      "framework builds since clients",
+      "encounter constant navigation lag thresholds"
+    ]
+  },
+  {
+    "en": "Permanent engine core decay inevitably <span style=\"color: #ff6b6b; font-weight: bold;\">stems from</span> high mechanical piston friction values under high-pressure simulation workloads.",
+    "tr": "Kalıcı motor çekirdeği aşınması, yüksek basınçlı simülasyon iş yükleri altında kaçınılmaz olarak yüksek mekanik piston sürtünme değerlerinden kaynaklanır.",
+    "word": "stems from",
+    "trWord": "yüksek mekanik piston sürtünmesinden kaynaklanır",
+    "correct": "stems from",
+    "blank": "Permanent engine core decay inevitably ___ high mechanical piston friction values under high-pressure simulation workloads.",
+    "options": [
+      "stems from",
+      "results in",
+      "leads to",
+      "causes"
+    ],
+    "blocks": [
+      "Permanent engine core decay",
+      "inevitably stems from high",
+      "mechanical piston friction values",
+      "under high-pressure simulation workloads"
+    ]
+  },
+  {
+    "en": "Transient device profile lockouts <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "tr": "Hassas sunucu bölümlerinin veri güvenliği parametrelerini koruyabilmesi için, geçici cihaz profili kilitlenmeleri kriptografik doğrulama hatalarından kaynaklanır.",
+    "word": "stem from",
+    "trWord": "kriptografik doğrulama hatalarından kaynaklanır",
+    "correct": "stem from",
+    "blank": "Transient device profile lockouts ___ cryptographic validation failures in order that sensitive server partitions maintain data safety parameters.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Transient device profile lockouts",
+      "stem from cryptographic validation",
+      "failures in order that",
+      "sensitive server partitions maintain data safety parameters"
+    ]
+  },
+  {
+    "en": "Catastrophic execution bottlenecks across production nodes <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose database query loops while handling high-volume transaction traffic floods.",
+    "tr": "Yüksek hacimli işlem trafiği dalgalanmaları yönetilirken, üretim düğümlerindeki yıkıcı yürütme darboğazları gevşek veritabanı sorgu döngülerinden kaynaklanır.",
+    "word": "stem from",
+    "trWord": "gevşek veritabanı sorgu döngülerinden kaynaklanır",
+    "correct": "stem from",
+    "blank": "Catastrophic execution bottlenecks across production nodes ___ loose database query loops while handling high-volume transaction traffic floods.",
+    "options": [
+      "stem from",
+      "result in",
+      "lead to",
+      "cause"
+    ],
+    "blocks": [
+      "Catastrophic execution bottlenecks across",
+      "production nodes stem from",
+      "loose database query loops",
+      "while handling high-volume transaction traffic floods"
+    ]
+  }
+];
+
+function buildUnit30Lesson1Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson1Group1Raw, unit30Lesson1Group2Raw, unit30Lesson1Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30Lesson2Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson2Group1Raw, unit30Lesson2Group2Raw, unit30Lesson2Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30Lesson3Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson3Group1Raw, unit30Lesson3Group2Raw, unit30Lesson3Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30Lesson4Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson4Group1Raw, unit30Lesson4Group2Raw, unit30Lesson4Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30Lesson5Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson5Group1Raw, unit30Lesson5Group2Raw, unit30Lesson5Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30Lesson6Exercises(unitId, lessonId) {
+  return buildUnit30GeneralExercises(unit30Lesson6Group1Raw, unit30Lesson6Group2Raw, unit30Lesson6Group3Raw, unitId, lessonId);
+}
+
+function buildUnit30GeneralExercises(group1, group2, group3, unitId, lessonId) {
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const interleaveQuestions = (questions) => {
+    if (questions.length <= 1) return questions;
+    const buckets = {};
+    questions.forEach(q => {
+      if (!buckets[q.type]) buckets[q.type] = [];
+      buckets[q.type].push(q);
+    });
+    const result = [];
+    let lastType = null;
+    while (true) {
+      let bestType = null;
+      let maxCount = 0;
+      for (let type in buckets) {
+        if (type !== lastType && buckets[type].length > maxCount) {
+          maxCount = buckets[type].length;
+          bestType = type;
+        }
+      }
+      if (!bestType) {
+        for (let type in buckets) {
+          if (buckets[type].length > maxCount) {
+            maxCount = buckets[type].length;
+            bestType = type;
+          }
+        }
+      }
+      if (!bestType || buckets[bestType].length === 0) break;
+      const q = buckets[bestType].shift();
+      result.push(q);
+      lastType = q.type;
+      if (buckets[bestType].length === 0) delete buckets[bestType];
+    }
+    return result;
+  };
+
+  const buildMCQuestion = (s, id, allSentences) => {
+    const tr = s.tr;
+    const candidates = allSentences.filter(item => item.tr !== tr);
+    const distractors = shuffle(candidates).slice(0, 3).map(c => c.tr);
+    const choices = shuffle([tr, ...distractors]);
+    return {
+      id: id,
+      type: "multiple-choice",
+      prompt: `Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>"${s.en}"</strong>`,
+      options: choices,
+      correctIndex: choices.indexOf(tr),
+      isEngToTr: true,
+      enSentence: s.en
+    };
+  };
+
+  const buildClozeQuestion = (s, id, isFirstType) => {
+    const correctVal = s.correct;
+    const shuffledOptions = shuffle(s.options);
+    if (shuffledOptions.indexOf(correctVal) === -1) {
+      shuffledOptions[0] = correctVal;
+    }
+    return {
+      id: id,
+      type: isFirstType ? "fill-blank-dropdown" : "fill-blank",
+      prompt: isFirstType ? "Boşluğa gelecek en uygun kelimeyi seçin:" : "Boşluğu doldur",
+      sentence: s.blank,
+      options: shuffledOptions,
+      correctIndex: shuffledOptions.indexOf(correctVal),
+      translation: s.tr
+    };
+  };
+
+  const buildWBQuestion = (s, id) => {
+    const distractors = ["is", "was", "will", "before", "after"];
+    const allWords = shuffle([...s.blocks, ...distractors]);
+    return {
+      id: id,
+      type: "word-bank",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      translation: s.tr,
+      words: allWords,
+      correctOrder: s.blocks,
+      enSentence: s.en,
+      isEngToTr: false
+    };
+  };
+
+  const buildTransQuestion = (s, id) => {
+    return {
+      id: id,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      enSentence: s.en,
+      correctSentence: s.tr,
+      isEngToTr: true
+    };
+  };
+
+  const compileExercise = (sentences, exId, title, desc, hasMC) => {
+    const sorted = [...sentences].sort((a, b) => {
+      // Strips standard html tags for sorting length comparison
+      const cleanA = a.en.replace(/<[^>]+>/g, "");
+      const cleanB = b.en.replace(/<[^>]+>/g, "");
+      return cleanA.length - cleanB.length;
+    });
+    const exList = [];
+
+    // 10 Cloze questions
+    const clozeLimit = Math.min(10, sorted.length);
+    for (let i = 0; i < clozeLimit; i++) {
+      exList.push(buildClozeQuestion(sorted[i], `u${unitId}l${lessonId}_${exId}_cloze_${i}`, i % 2 === 0));
+    }
+
+    if (hasMC) {
+      // 5 MC questions (only if sentence doesn't contain a comma)
+      const nonCommaSentences = sorted.filter(s => !s.en.replace(/<[^>]+>/g, "").includes(",") && !s.en.replace(/<[^>]+>/g, "").includes(";"));
+      const mcLimit = Math.min(5, nonCommaSentences.length);
+      for (let i = 0; i < mcLimit; i++) {
+        exList.push(buildMCQuestion(nonCommaSentences[i], `u${unitId}l${lessonId}_${exId}_mc_${i}`, nonCommaSentences));
+      }
+      
+      // Fill the rest of the 5 MC slots with Word Bank if there aren't enough non-comma sentences
+      const remainingMCSlots = 5 - mcLimit;
+      
+      // 3 Word Bank questions (plus any remaining MC slots)
+      const wbLimit = Math.min(3 + remainingMCSlots, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 10) % sorted.length];
+        exList.push(buildWBQuestion(s, `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+      }
+    } else {
+      // No MC allowed for long sentences
+      // 8 Word Bank questions
+      const wbLimit = Math.min(8, sorted.length);
+      for (let i = 0; i < wbLimit; i++) {
+        const s = sorted[(i + 5) % sorted.length];
+        exList.push(buildWBQuestion(s, `u${unitId}l${lessonId}_${exId}_wb_${i}`));
+      }
+    }
+
+    // Keyboard translation (last 2 questions)
+    const transList = sorted.slice(-2).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_${exId}_tr_${idx}`));
+
+    return {
+      id: `u${unitId}l${lessonId}${exId}`,
+      title: title,
+      description: desc,
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
+    };
+  };
+
+  return [
+    compileExercise(group1, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "Neden-sonuç yapılarını ve cümle girişlerini tanıma çalışmaları.", true),
+    compileExercise(group2, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.", true),
+    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.", false)
+  ];
+}
 
 const units = [];
 const lessons = [];
@@ -35669,7 +42814,12 @@ const unitSentencesMap = {
     2: { exercises: buildUnit26Lesson2Exercises(29, 93) }
   },
   30: {
-    1: { exercises: [] }
+    1: { exercises: buildUnit30Lesson1Exercises(30, 94) },
+    2: { exercises: buildUnit30Lesson2Exercises(30, 95) },
+    3: { exercises: buildUnit30Lesson3Exercises(30, 96) },
+    4: { exercises: buildUnit30Lesson4Exercises(30, 97) },
+    5: { exercises: buildUnit30Lesson5Exercises(30, 98) },
+    6: { exercises: buildUnit30Lesson6Exercises(30, 99) }
   }
 };
 
