@@ -7762,7 +7762,7 @@ function buildUnit22SinceExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -7792,7 +7792,7 @@ function buildUnit22SinceExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -8107,7 +8107,7 @@ function buildUnit23WhileExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -8137,7 +8137,7 @@ function buildUnit23WhileExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -8668,7 +8668,7 @@ function buildUnit24UntilExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -8698,7 +8698,7 @@ function buildUnit24UntilExercises(unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -10715,7 +10715,7 @@ function buildUnit25GeneralExercises(group1, group2, group3, unitId, lessonId) {
       id: `u${unitId}l${lessonId}${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -11785,7 +11785,7 @@ function buildUnit26Lesson1Exercises(unitId, lessonId) {
       id: `u\${unitId}l\${lessonId}\${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
@@ -11934,7 +11934,7 @@ function buildUnit26Lesson2Exercises(unitId, lessonId) {
       id: `u\${unitId}l\${lessonId}\${exId}`,
       title: title,
       description: desc,
-      questions: [...interleaveQuestions(exList), ...transList]
+      questions: [...exList.filter(q => q.type === "multiple-choice"), ...interleaveQuestions(exList.filter(q => q.type !== "multiple-choice")), ...transList]
     };
   };
 
