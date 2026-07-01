@@ -1548,248 +1548,1521 @@ const L101_raw = [
 ];
 
 // Raw question definitions for Lesson 102 (be used to (Alışkın olmak)) - 40 questions
-const L102_raw = [
-  // Exercise 1 (1-10)
-  {
-    type: "fill-blank",
-    sentence: "The senior developer is used to ___ large data streams.",
-    options: ["processing", "process", "processed", "to process"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The senior developer ___ processing large data streams.",
-    options: ["is used to", "used to", "is used", "uses to"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Technical operators are used to ___ heavy industrial machinery.",
-    options: ["operating", "operate", "operated", "to operate"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Technical operators ___ operating heavy industrial machinery.",
-    options: ["are used to", "used to", "are used", "uses to"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "I am used to ___ unoptimized legacy source codes.",
-    options: ["refactoring", "refactor", "refactored", "to refactor"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "I ___ refactoring unoptimized legacy source codes.",
-    options: ["am used to", "used to", "am used", "uses to"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "The supervisor was used to ___ severe database overflows.",
-    options: ["handling", "handle", "handled", "to handle"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The supervisor ___ handling severe database overflows.",
-    options: ["was used to", "used to", "was used", "uses to"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Engineers were used to ___ data fields manually.",
-    options: ["compiling", "compile", "compiled", "to compile"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Engineers ___ compiling data fields manually.",
-    options: ["were used to", "used to", "were used", "uses to"]
-  },
+const unit103SentenceData = {
+  102: [
+    {
+      en: "The senior developer is used to processing large data streams.",
+      word: "processing",
+      trWord: "işlemeye",
+      blankOptions: ["processing", "process", "processed", "to process"],
+      tr: "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
+    },
+    {
+      en: "The network infrastructure branch is used to processing massive cloud database queries while secondary firewalls screen external traffic.",
+      word: "processing",
+      trWord: "işlemeye",
+      blankOptions: ["processing", "process", "processed", "to process"],
+      tr: "İkincil güvenlik duvarları harici trafiği tararken ağ altyapısı şubesi devasa bulut veritabanı sorgularını işlemeye alışıktır."
+    },
+    {
+      en: "The research team is used to analyzing structural variations in cells.",
+      word: "analyzing",
+      trWord: "analiz etmeye",
+      blankOptions: ["analyzing", "analyze", "analyzed", "to analyze"],
+      tr: "Araştırma ekibi hücrelerdeki yapısal varyasyonları analiz etmeye alışıktır."
+    },
+    {
+      en: "The diagnostic software is used to scanning massive file partitions.",
+      word: "scanning",
+      trWord: "taramaya",
+      blankOptions: ["scanning", "scan", "scanned", "to scan"],
+      tr: "Tanı yazılımı, devasa dosya bölümlerini taramaya alışıktır."
+    },
+    {
+      en: "The automated system is used to generating unique cryptographic tokens.",
+      word: "generating",
+      trWord: "üretmeye",
+      blankOptions: ["generating", "generate", "generated", "to generate"],
+      tr: "Otomatik sistem benzersiz kriptografik jetonlar üretmeye alışıktır."
+    },
+    {
+      en: "Technical operators are used to operating heavy industrial machinery.",
+      word: "operating",
+      trWord: "çalıştırmaya",
+      blankOptions: ["operating", "operate", "operated", "to operate"],
+      tr: "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+    },
+    {
+      en: "I am used to refactoring unoptimized legacy source codes.",
+      word: "refactoring",
+      trWord: "yeniden yapılandırmaya",
+      blankOptions: ["refactoring", "refactor", "refactored", "to refactor"],
+      tr: "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+    },
+    {
+      en: "The supervisor was used to handling severe database overflows.",
+      word: "handling",
+      trWord: "yönetmeye",
+      blankOptions: ["handling", "handle", "handled", "to handle"],
+      tr: "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
+    },
+    {
+      en: "Engineers were used to compiling data fields manually.",
+      word: "compiling",
+      trWord: "derlemeye",
+      blankOptions: ["compiling", "compile", "compiled", "to compile"],
+      tr: "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+    },
+    {
+      en: "Most administrators are used to modifying security protocols regularly.",
+      word: "modifying",
+      trWord: "değiştirmeye",
+      blankOptions: ["modifying", "modify", "modified", "to modify"],
+      tr: "Çoğu yönetici güvenlik protokollerini düzenli olarak değiştirmeye alışıktır."
+    },
+    {
+      en: "I am used to configuring complex network infrastructures.",
+      word: "configuring",
+      trWord: "yapılandırmaya",
+      blankOptions: ["configuring", "configure", "configured", "to configure"],
+      tr: "Karmaşık ağ altyapılarını yapılandırmaya alışkınım."
+    },
+    {
+      en: "The financial analyst was used to evaluating volatile market metrics.",
+      word: "evaluating",
+      trWord: "değerlendirmeye",
+      blankOptions: ["evaluating", "evaluate", "evaluated", "to evaluate"],
+      tr: "Finansal analist değişken piyasa ölçümlerini değerlendirmeye alışıktı."
+    },
+    {
+      en: "Project managers were used to implementing strict quality compliance frameworks.",
+      word: "implementing",
+      trWord: "uygulamaya",
+      blankOptions: ["implementing", "implement", "implemented", "to implement"],
+      tr: "Proje yöneticileri katı kalite uyum çerçevelerini uygulamaya alışıktı."
+    },
+    {
+      en: "Local laboratories are used to testing chemical solution properties.",
+      word: "testing",
+      trWord: "test etmeye",
+      blankOptions: ["testing", "test", "tested", "to test"],
+      tr: "Yerel laboratuvarlar kimyasal çözelti özelliklerini test etmeye alışıktır."
+    },
+    {
+      en: "I am used to handling unexpected system latency anomalies.",
+      word: "handling",
+      trWord: "yönetmeye",
+      blankOptions: ["handling", "handle", "handled", "to handle"],
+      tr: "Beklenmedik sistem gecikme anomalilerini yönetmeye alışkınım."
+    },
+    {
+      en: "The chief architect was used to designing cross-disciplinary software modules.",
+      word: "designing",
+      trWord: "tasarlamaya",
+      blankOptions: ["designing", "design", "designed", "to design"],
+      tr: "Baş mimar disiplinler arası yazılım modülleri tasarlamaya alışıktı."
+    },
+    {
+      en: "Academic institutions were used to tracking student retention indicators.",
+      word: "tracking",
+      trWord: "takip etmeye",
+      blankOptions: ["tracking", "track", "tracked", "to track"],
+      tr: "Akademik kurumlar öğrenciyi elde tutma göstergelerini takip etmeye alışıktı."
+    },
+    {
+      en: "Cloud technicians are used to migrating sensitive database records.",
+      word: "migrating",
+      trWord: "taşımaya",
+      blankOptions: ["migrating", "migrate", "migrated", "to migrate"],
+      tr: "Bulut teknisyenleri hassas veritabanı kayıtlarını taşımaya alışıktır."
+    },
+    {
+      en: "I am used to isolating corrupted device firmware packages.",
+      word: "isolating",
+      trWord: "yalıtmaya",
+      blankOptions: ["isolating", "isolate", "isolated", "to isolate"],
+      tr: "Bozuk cihaz bellenim paketlerini yalıtmaya alışkınım."
+    },
+    {
+      en: "The lead investigator was used to reviewing legislative policy documents.",
+      word: "reviewing",
+      trWord: "incelemeye",
+      blankOptions: ["reviewing", "review", "reviewed", "to review"],
+      tr: "Baş araştırmacı yasal politika belgelerini incelemeye alışıktı."
+    },
+    {
+      en: "Environmental groups were used to monitoring global heat anomaly indexes.",
+      word: "monitoring",
+      trWord: "izlemeye",
+      blankOptions: ["monitoring", "monitor", "monitored", "to monitor"],
+      tr: "Çevre grupları küresel ısı anomalisi endekslerini izlemeye alışıktı."
+    },
+    {
+      en: "Industrial field crews are used to operating heavy mechanical components although the laboratory environment lacks stable pressure controls.",
+      word: "operating",
+      trWord: "çalıştırmaya",
+      blankOptions: ["operating", "operate", "operated", "to operate"],
+      tr: "Laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen, endüstriyel saha ekipleri ağır mekanik bileşenleri çalıştırmaya alışıktır."
+    },
+    {
+      en: "I am used to refactoring complex application systems in order that frontend developers can integrate visual components cleanly.",
+      word: "refactoring",
+      trWord: "yeniden yapılandırmaya",
+      blankOptions: ["refactoring", "refactor", "refactored", "to refactor"],
+      tr: "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi için karmaşık uygulama sistemlerini yeniden yapılandırmaya alışkınım."
+    },
+    {
+      en: "The senior architect was used to handling critical configuration anomalies before the automated framework took over the backup routine.",
+      word: "handling",
+      trWord: "yönetmeye",
+      blankOptions: ["handling", "handle", "handled", "to handle"],
+      tr: "Otomatik altyapı yedekleme rutinini devralmadan önce, kıdemli mimar kritik yapılandırma anomalilerini yönetmeye alışıktı."
+    },
+    {
+      en: "Technical specialists were used to compiling loose statistical metrics since public research institutes lacked high-resolution logging devices.",
+      word: "compiling",
+      trWord: "derlemeye",
+      blankOptions: ["compiling", "compile", "compiled", "to compile"],
+      tr: "Kamu araştırma enstitülerinde yüksek çözünürlüklü kayıt cihazları bulunmadığından, teknik uzmanlar dağınık istatistiksel ölçümleri derlemeye alışıktı."
+    }
+  ],
+  103: [
+    {
+      en: "The system administrator is accustomed to monitoring real-time network traffic.",
+      word: "monitoring",
+      trWord: "izlemeye",
+      blankOptions: ["monitoring", "monitor", "monitored", "to monitor"],
+      tr: "Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır."
+    },
+    {
+      en: "Most developers are accustomed to deploying builds automatically.",
+      word: "deploying",
+      trWord: "yayınlamaya",
+      blankOptions: ["deploying", "deploy", "deployed", "to deploy"],
+      tr: "Çoğu geliştirici sürümleri otomatik olarak yayınlamaya alışıktır."
+    },
+    {
+      en: "We are accustomed to working under high-pressure conditions.",
+      word: "working",
+      trWord: "çalışmaya",
+      blankOptions: ["working", "work", "worked", "to work"],
+      tr: "Yüksek basınç koşulları altında çalışmaya alışkınız."
+    },
+    {
+      en: "The research team was accustomed to analyzing complex data sets.",
+      word: "analyzing",
+      trWord: "analiz etmeye",
+      blankOptions: ["analyzing", "analyze", "analyzed", "to analyze"],
+      tr: "Araştırma ekibi karmaşık veri setlerini analiz etmeye alışıktı."
+    },
+    {
+      en: "Our servers were accustomed to handling sudden traffic spikes.",
+      word: "handling",
+      trWord: "yönetmeye",
+      blankOptions: ["handling", "handle", "handled", "to handle"],
+      tr: "Sunucularımız ani trafik artışlarını yönetmeye alışıktı."
+    },
+    {
+      en: "The senior developer is accustomed to processing large data streams.",
+      word: "processing",
+      trWord: "işlemeye",
+      blankOptions: ["processing", "process", "processed", "to process"],
+      tr: "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır."
+    },
+    {
+      en: "Technical operators are accustomed to operating heavy industrial machinery.",
+      word: "operating",
+      trWord: "çalıştırmaya",
+      blankOptions: ["operating", "operate", "operated", "to operate"],
+      tr: "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır."
+    },
+    {
+      en: "I am accustomed to refactoring unoptimized legacy source codes.",
+      word: "refactoring",
+      trWord: "yeniden yapılandırmaya",
+      blankOptions: ["refactoring", "refactor", "refactored", "to refactor"],
+      tr: "Optimize edilmemiş eski kaynak kodlarını yeniden yapılandırmaya alışkınım."
+    },
+    {
+      en: "The supervisor was accustomed to handling severe database overflows.",
+      word: "handling",
+      trWord: "yönetmeye",
+      blankOptions: ["handling", "handle", "handled", "to handle"],
+      tr: "Gözetmen ciddi veritabanı taşmalarını yönetmeye alışıktı."
+    },
+    {
+      en: "Engineers were accustomed to compiling data fields manually.",
+      word: "compiling",
+      trWord: "derlemeye",
+      blankOptions: ["compiling", "compile", "compiled", "to compile"],
+      tr: "Mühendisler veri alanlarını manuel olarak derlemeye alışıktı."
+    }
+  ],
+  104: [
+    {
+      en: "The software team is willing to modify the centralized cloud database model.",
+      word: "modify",
+      trWord: "değiştirmeye",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Yazılım ekibi merkezi bulut veritabanı modelini değiştirmeye isteklidir."
+    },
+    {
+      en: "The ministry is willing to fund the rapid regional infrastructure expansion.",
+      word: "fund",
+      trWord: "finanse etmeye",
+      blankOptions: ["fund", "funding", "funded", "to fund"],
+      tr: "Bakanlık, hızlı bölgesel altyapı genişletmesini finanse etmeye isteklidir."
+    },
+    {
+      en: "Operators are willing to work overtime during the comprehensive regional educational surveys.",
+      word: "work",
+      trWord: "çalışmaya",
+      blankOptions: ["work", "working", "worked", "to work"],
+      tr: "Operatörler kapsamlı bölgesel eğitim anketleri sırasında fazla mesai yapmaya isteklidir."
+    },
+    {
+      en: "Independent experts are willing to share their empirical data inputs with the team.",
+      word: "share",
+      trWord: "paylaşmaya",
+      blankOptions: ["share", "sharing", "shared", "to share"],
+      tr: "Bağımsız uzmanlar deneysel veri girdilerini ekiple paylaşmaya isteklidir."
+    },
+    {
+      en: "The client is willing to extend the project deadline.",
+      word: "extend",
+      trWord: "uzatmaya",
+      blankOptions: ["extend", "extending", "extended", "to extend"],
+      tr: "Müşteri proje teslim tarihini uzatmaya isteklidir."
+    },
+    {
+      en: "Engineers are willing to cooperate on cross-platform integration.",
+      word: "cooperate",
+      trWord: "iş birliği yapmaya",
+      blankOptions: ["cooperate", "cooperating", "cooperated", "to cooperate"],
+      tr: "Mühendisler platformlar arası entegrasyonda iş birliği yapmaya isteklidirler."
+    },
+    {
+      en: "The company was willing to invest in advanced cybersecurity tools.",
+      word: "invest",
+      trWord: "yatırım yapmaya",
+      blankOptions: ["invest", "investing", "invested", "to invest"],
+      tr: "Şirket gelişmiş siber güvenlik araçlarına yatırım yapmaya istekliydi."
+    },
+    {
+      en: "The junior developer is willing to learn new programming languages.",
+      word: "learn",
+      trWord: "öğrenmeye",
+      blankOptions: ["learn", "learning", "learned", "to learn"],
+      tr: "Genç geliştirici yeni programlama dillerini öğrenmeye isteklidir."
+    },
+    {
+      en: "Most operators were willing to work extra hours to fix the database issue.",
+      word: "work",
+      trWord: "çalışmaya",
+      blankOptions: ["work", "working", "worked", "to work"],
+      tr: "Çoğu operatör veritabanı sorununu düzeltmek için ekstra saatler çalışmaya istekliydi."
+    },
+    {
+      en: "Institutional authorities were willing to approve the additional server budget.",
+      word: "approve",
+      trWord: "onaylamaya",
+      blankOptions: ["approve", "approving", "approved", "to approve"],
+      tr: "Kurumsal makamlar ek sunucu bütçesini onaylamaya istekliydi."
+    }
+  ],
+  105: [
+    {
+      en: "Technical experts are unwilling to adopt the outdated architectural framework.",
+      word: "adopt",
+      trWord: "benimsemeye",
+      blankOptions: ["adopt", "adopting", "adopted", "to adopt"],
+      tr: "Teknik uzmanlar güncelliğini yitirmiş mimari çerçeveyi benimsemeye isteksizdir."
+    },
+    {
+      en: "Institutional authorities are unwilling to sign the formal bilateral commercial agreements.",
+      word: "sign",
+      trWord: "imzalamaya",
+      blankOptions: ["sign", "signing", "signed", "to sign"],
+      tr: "Kurumsal makamlar resmi ikili ticari anlaşmaları imzalamaya isteksizdir."
+    },
+    {
+      en: "The internal board is unwilling to accept the sudden corporate paradigm shift.",
+      word: "accept",
+      trWord: "kabul etmeye",
+      blankOptions: ["accept", "accepting", "accepted", "to accept"],
+      tr: "İç yönetim kurulu ani kurumsal paradigma değişimini kabul etmeye isteksizdir."
+    },
+    {
+      en: "The administrator is unwilling to grant root access to external users.",
+      word: "grant",
+      trWord: "vermeye",
+      blankOptions: ["grant", "granting", "granted", "to grant"],
+      tr: "Yönetici, dış kullanıcılara kök erişimi vermeye isteksizdir."
+    },
+    {
+      en: "Many legacy companies are unwilling to migrate their databases to the cloud.",
+      word: "migrate",
+      trWord: "taşımaya",
+      blankOptions: ["migrate", "migrating", "migrated", "to migrate"],
+      tr: "Birçok köklü şirket, veritabanlarını buluta taşımaya isteksizdir."
+    },
+    {
+      en: "The team was unwilling to change the core application structure.",
+      word: "change",
+      trWord: "değiştirmeye",
+      blankOptions: ["change", "changing", "changed", "to change"],
+      tr: "Ekip, temel uygulama yapısını değiştirmeye isteksizdi."
+    },
+    {
+      en: "Users are unwilling to share their private data without encryption.",
+      word: "share",
+      trWord: "paylaşmaya",
+      blankOptions: ["share", "sharing", "shared", "to share"],
+      tr: "Kullanıcılar şifreleme olmadan özel verilerini paylaşmaya isteksizdir."
+    },
+    {
+      en: "The management was unwilling to approve the additional server budget.",
+      word: "approve",
+      trWord: "onaylamaya",
+      blankOptions: ["approve", "approving", "approved", "to approve"],
+      tr: "Yönetim, ek sunucu bütçesini onaylamaya isteksizdi."
+    },
+    {
+      en: "The senior programmer was unwilling to refactor the legacy codebase.",
+      word: "refactor",
+      trWord: "yeniden yapılandırmaya",
+      blankOptions: ["refactor", "refactoring", "refactored", "to refactor"],
+      tr: "Kıdemli programcı eski kod tabanını yeniden yapılandırmaya isteksizdi."
+    },
+    {
+      en: "Technicians were unwilling to shut down the main server during production.",
+      word: "shut",
+      trWord: "kapatmaya",
+      blankOptions: ["shut", "shutting", "shuts", "to shut"],
+      tr: "Teknisyenler üretim sırasında ana sunucuyu kapatmaya isteksizdi."
+    }
+  ],
+  106: [
+    {
+      en: "Senior analysts are reluctant to change the initial investigative project scope.",
+      word: "change",
+      trWord: "değiştirmeye",
+      blankOptions: ["change", "changing", "changed", "to change"],
+      tr: "Kıdemli analistler başlangıçtaki araştırma projesi kapsamını değiştirmeye gönülsüzdür."
+    },
+    {
+      en: "Technicians are reluctant to deploy the script without explicit authorization.",
+      word: "deploy",
+      trWord: "çalıştırmaya",
+      blankOptions: ["deploy", "deploying", "deployed", "to deploy"],
+      tr: "Teknisyenler açık yetki olmadan betiği çalıştırmaya gönülsüzdür."
+    },
+    {
+      en: "The evaluation committee is reluctant to reallocate the annual research budget.",
+      word: "reallocate",
+      trWord: "yeniden tahsis etmeye",
+      blankOptions: ["reallocate", "reallocating", "reallocated", "to reallocate"],
+      tr: "Değerlendirme komitesi yıllık araştırma bütçesini yeniden tahsis etmeye gönülsüzdür."
+    },
+    {
+      en: "The lead developer is reluctant to use unverified external libraries.",
+      word: "use",
+      trWord: "kullanmaya",
+      blankOptions: ["use", "using", "used", "to use"],
+      tr: "Lider geliştirici, doğrulanmamış harici kütüphaneleri kullanmaya gönülsüzdür."
+    },
+    {
+      en: "The supervisor was reluctant to report the minor configuration failure.",
+      word: "report",
+      trWord: "bildirmeye",
+      blankOptions: ["report", "reporting", "reported", "to report"],
+      tr: "Gözetmen, küçük yapılandırma hatasını bildirmeye gönülsüzdü."
+    },
+    {
+      en: "The client was reluctant to modify the contract terms.",
+      word: "modify",
+      trWord: "değiştirmeye",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Müşteri, sözleşme şartlarını değiştirmeye gönülsüzdü."
+    },
+    {
+      en: "Engineers were reluctant to adopt the outdated testing framework.",
+      word: "adopt",
+      trWord: "benimsemeye",
+      blankOptions: ["adopt", "adopting", "adopted", "to adopt"],
+      tr: "Mühendisler, güncelliğini yitirmiş test çerçevesini benimsemeye gönülsüzdüler."
+    },
+    {
+      en: "The manager was reluctant to approve the unverified data backup.",
+      word: "approve",
+      trWord: "onaylamaya",
+      blankOptions: ["approve", "approving", "approved", "to approve"],
+      tr: "Müdür, doğrulanmamış veri yedeğini onaylamaya gönülsüzdü."
+    },
+    {
+      en: "Administrators were reluctant to grant administrative access to contractors.",
+      word: "grant",
+      trWord: "vermeye",
+      blankOptions: ["grant", "granting", "granted", "to grant"],
+      tr: "Yöneticiler, yüklenicilere idari erişim izni vermeye gönülsüzdü."
+    },
+    {
+      en: "The research team was reluctant to publish the incomplete empirical results.",
+      word: "publish",
+      trWord: "yayınlamaya",
+      blankOptions: ["publish", "publishing", "published", "to publish"],
+      tr: "Araştırma ekibi tamamlanmamış deneysel sonuçları yayınlamaya gönülsüzdü."
+    }
+  ],
+  107: [
+    {
+      en: "The corporate tax rate is likely to increase next fiscal quarter.",
+      word: "increase",
+      trWord: "artması",
+      blankOptions: ["increase", "increasing", "increased", "to increase"],
+      tr: "Kurumlar vergisi oranının önümüzdeki mali çeyrekte artması muhtemeldir."
+    },
+    {
+      en: "Significant annual financial growth is likely to occur within the dynamic sector.",
+      word: "occur",
+      trWord: "gerçekleşmesi",
+      blankOptions: ["occur", "occurring", "occurred", "to occur"],
+      tr: "Dinamik sektörde önemli yıllık finansal büyümenin gerçekleşmesi muhtemeldir."
+    },
+    {
+      en: "The new update is likely to resolve the latency issues.",
+      word: "resolve",
+      trWord: "çözmesi",
+      blankOptions: ["resolve", "resolving", "resolved", "to resolve"],
+      tr: "Yeni güncellemenin gecikme sorunlarını çözmesi muhtemeldir."
+    },
+    {
+      en: "The server is likely to crash if the database overflow continues.",
+      word: "crash",
+      trWord: "çökmesi",
+      blankOptions: ["crash", "crashing", "crashed", "to crash"],
+      tr: "Veritabanı taşması devam ederse sunucunun çökmesi muhtemeldir."
+    },
+    {
+      en: "These configuration errors are likely to affect the final simulation.",
+      word: "affect",
+      trWord: "etkilemesi",
+      blankOptions: ["affect", "affecting", "affected", "to affect"],
+      tr: "Bu yapılandırma hatalarının nihai simülasyonu etkilemesi muhtemeldir."
+    },
+    {
+      en: "The automation routine was likely to improve system performance.",
+      word: "improve",
+      trWord: "artırması",
+      blankOptions: ["improve", "improving", "improved", "to improve"],
+      tr: "Otomasyon rutininin sistem performansını artırması muhtemeldi."
+    },
+    {
+      en: "The primary query was likely to fail due to network latency.",
+      word: "fail",
+      trWord: "başarısız olması",
+      blankOptions: ["fail", "failing", "failed", "to fail"],
+      tr: "Birincil sorgunun ağ gecikmesi nedeniyle başarısız olması muhtemeldi."
+    },
+    {
+      en: "The administrative council is likely to approve the new security protocol.",
+      word: "approve",
+      trWord: "onaylaması",
+      blankOptions: ["approve", "approving", "approved", "to approve"],
+      tr: "Yönetim kurulunun yeni güvenlik protokolünü onaylaması muhtemeldir."
+    },
+    {
+      en: "Corrupted device firmware is likely to cause system failures.",
+      word: "cause",
+      trWord: "neden olması",
+      blankOptions: ["cause", "causing", "caused", "to cause"],
+      tr: "Bozuk cihaz bellenimi sistem hatalarına neden olması muhtemeldir."
+    },
+    {
+      en: "The research team is likely to publish their findings next month.",
+      word: "publish",
+      trWord: "yayınlaması",
+      blankOptions: ["publish", "publishing", "published", "to publish"],
+      tr: "Araştırma ekibinin bulgularını önümüzdeki ay yayınlaması muhtemeldir."
+    }
+  ],
+  108: [
+    {
+      en: "It is unlikely to rain during the international summit at the facility.",
+      word: "rain",
+      trWord: "yağması",
+      blankOptions: ["rain", "raining", "rained", "to rain"],
+      tr: "Tesisteki uluslararası zirve sırasında yağmur yağması muhtemel değildir."
+    },
+    {
+      en: "The backup database is unlikely to lose any transaction records.",
+      word: "lose",
+      trWord: "kaybetmesi",
+      blankOptions: ["lose", "losing", "lost", "to lose"],
+      tr: "Yedek veritabanının herhangi bir işlem kaydını kaybetmesi muhtemel değildir."
+    },
+    {
+      en: "The compiler is unlikely to generate errors with the new syntax.",
+      word: "generate",
+      trWord: "üretmesi",
+      blankOptions: ["generate", "generating", "generated", "to generate"],
+      tr: "Derleyicinin yeni sözdizimi ile hata üretmesi muhtemel değildir."
+    },
+    {
+      en: "The system was unlikely to recover without a full reboot.",
+      word: "recover",
+      trWord: "düzelmesi",
+      blankOptions: ["recover", "recovering", "recovered", "to recover"],
+      tr: "Sistemin tam bir yeniden başlatma olmadan düzelmesi muhtemel değildi."
+    },
+    {
+      en: "These old devices are unlikely to support the high-resolution logging feature.",
+      word: "support",
+      trWord: "desteklemesi",
+      blankOptions: ["support", "supporting", "supported", "to support"],
+      tr: "Bu eski cihazların yüksek çözünürlüklü kayıt özelliğini desteklemesi muhtemel değildir."
+    },
+    {
+      en: "The security branch was unlikely to detect the encrypted breach.",
+      word: "detect",
+      trWord: "tespit etmesi",
+      blankOptions: ["detect", "detecting", "detected", "to detect"],
+      tr: "Güvenlik şubesinin şifrelenmiş ihlali tespit etmesi muhtemel değildi."
+    },
+    {
+      en: "The server is unlikely to crash under moderate user load.",
+      word: "crash",
+      trWord: "çökmesi",
+      blankOptions: ["crash", "crashing", "crashed", "to crash"],
+      tr: "Sunucunun orta düzeyde kullanıcı yükü altında çökmesi muhtemel değildir."
+    },
+    {
+      en: "The client is unlikely to accept the modified contract terms.",
+      word: "accept",
+      trWord: "kabul etmesi",
+      blankOptions: ["accept", "accepting", "accepted", "to accept"],
+      tr: "Müşterinin değiştirilmiş sözleşme şartlarını kabul etmesi muhtemel değildir."
+    },
+    {
+      en: "The evaluation committee was unlikely to approve the additional funding.",
+      word: "approve",
+      trWord: "onaylaması",
+      blankOptions: ["approve", "approving", "approved", "to approve"],
+      tr: "Değerlendirme komitesinin ek fonu onaylaması muhtemel değildi."
+    },
+    {
+      en: "Technicians were unlikely to complete the migration process today.",
+      word: "complete",
+      trWord: "tamamlaması",
+      blankOptions: ["complete", "completing", "completed", "to complete"],
+      tr: "Teknisyenlerin taşıma işlemini bugün tamamlaması muhtemel değildi."
+    }
+  ],
+  109: [
+    {
+      en: "Sooner or later, the administrative council is bound to learn the truth.",
+      word: "learn",
+      trWord: "öğrenmek",
+      blankOptions: ["learn", "learning", "learned", "to learn"],
+      tr: "Er ya da geç, yönetim kurulu gerçeği öğrenmek zorundadır / gerçeği öğrenecektir."
+    },
+    {
+      en: "Without proper technical parameters, you are bound to make a logical mistake.",
+      word: "make",
+      trWord: "yapmanız",
+      blankOptions: ["make", "making", "made", "to make"],
+      tr: "Düzgün teknik parametreler olmadan, mantıksal bir hata yapmanız kaçınılmazdır."
+    },
+    {
+      en: "Without comprehensive empirical evaluation, the database script is bound to fail.",
+      word: "fail",
+      trWord: "başarısız olması",
+      blankOptions: ["fail", "failing", "failed", "to fail"],
+      tr: "Kapsamlı deneysel değerlendirme olmadan, veritabanı betiğinin başarısız olması kaçınılmazdır."
+    },
+    {
+      en: "With such an advanced encryption algorithm, the security system is bound to succeed.",
+      word: "succeed",
+      trWord: "başarılı olması",
+      blankOptions: ["succeed", "succeeding", "succeeded", "to succeed"],
+      tr: "Böylesine gelişmiş bir şifreleme algoritmasıyla, güvenlik sisteminin başarılı olması kaçınılmazdır."
+    },
+    {
+      en: "If the ministry doesn't fund expansion, the dynamic sector is bound to face stagnation.",
+      word: "face",
+      trWord: "karşılaşması",
+      blankOptions: ["face", "facing", "faced", "to face"],
+      tr: "Bakanlık genişlemeyi finanse etmezse, dinamik sektörün durgunlukla karşılaşması kaçınılmazdır."
+    },
+    {
+      en: "Cold weather anomalies are bound to happen in the northern regional facility every winter.",
+      word: "happen",
+      trWord: "yaşanması",
+      blankOptions: ["happen", "happening", "happened", "to happen"],
+      tr: "Kuzey bölgesel tesisinde her kış soğuk hava anomalilerinin yaşanması kaçınılmazdır."
+    },
+    {
+      en: "The system is bound to fail if you ignore the warnings.",
+      word: "fail",
+      trWord: "başarısız olması",
+      blankOptions: ["fail", "failing", "failed", "to fail"],
+      tr: "Uyarıları göz ardı ederseniz sistemin başarısız olması kaçınılmazdır."
+    },
+    {
+      en: "This software update is bound to improve operational efficiency.",
+      word: "improve",
+      trWord: "artırması",
+      blankOptions: ["improve", "improving", "improved", "to improve"],
+      tr: "Bu yazılım güncellemesinin operasyonel verimliliği artırması kaçınılmazdır."
+    },
+    {
+      en: "Any network latency is bound to cause communication delays.",
+      word: "cause",
+      trWord: "neden olması",
+      blankOptions: ["cause", "causing", "caused", "to cause"],
+      tr: "Herhangi bir ağ gecikmesinin iletişim gecikmelerine neden olması kaçınılmazdır."
+    },
+    {
+      en: "The engineers were bound to notice the database conflict.",
+      word: "notice",
+      trWord: "fark etmesi",
+      blankOptions: ["notice", "noticing", "noticed", "to notice"],
+      tr: "Mühendislerin veritabanı çelişkisini fark etmesi kaçınılmazdı."
+    }
+  ],
+  110: [
+    {
+      en: "He is certain to pass the advanced encryption algorithms certification test.",
+      word: "pass",
+      trWord: "geçeceği",
+      blankOptions: ["pass", "passing", "passed", "to pass"],
+      tr: "Gelişmiş şifreleme algoritmaları sertifika sınavını geçeceği kesindir."
+    },
+    {
+      en: "The automatic script is certain to execute at midnight.",
+      word: "execute",
+      trWord: "çalışacağı",
+      blankOptions: ["execute", "executing", "executed", "to execute"],
+      tr: "Otomatik betiğin gece yarısı çalışacağı kesindir."
+    },
+    {
+      en: "This new protocol is certain to secure all external connections.",
+      word: "secure",
+      trWord: "güvence altına alacağı",
+      blankOptions: ["secure", "securing", "secured", "to secure"],
+      tr: "Bu yeni protokolün tüm dış bağlantıları güvence altına alacağı kesindir."
+    },
+    {
+      en: "The main server was certain to overheat under that heavy load.",
+      word: "overheat",
+      trWord: "aşırı ısınacağı",
+      blankOptions: ["overheat", "overheating", "overheated", "to overheat"],
+      tr: "Ana sunucunun bu ağır yük altında aşırı ısınacağı kesindi."
+    },
+    {
+      en: "These test parameters are certain to yield accurate results.",
+      word: "yield",
+      trWord: "vereceği",
+      blankOptions: ["yield", "yielding", "yielded", "to yield"],
+      tr: "Bu test parametrelerinin doğru sonuçlar vereceği kesindir."
+    },
+    {
+      en: "The project was certain to succeed with the new architecture.",
+      word: "succeed",
+      trWord: "başarılı olacağı",
+      blankOptions: ["succeed", "succeeding", "succeeded", "to succeed"],
+      tr: "Projenin yeni mimariyle başarılı olacağı kesindi."
+    },
+    {
+      en: "The security updates are certain to block external attacks.",
+      word: "block",
+      trWord: "engelleyeceği",
+      blankOptions: ["block", "blocking", "blocked", "to block"],
+      tr: "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir."
+    },
+    {
+      en: "The simulation was certain to succeed after the configuration change.",
+      word: "succeed",
+      trWord: "başarılı olacağı",
+      blankOptions: ["succeed", "succeeding", "succeeded", "to succeed"],
+      tr: "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+    },
+    {
+      en: "The automatic framework is certain to optimize the queries.",
+      word: "optimize",
+      trWord: "optimize edeceği",
+      blankOptions: ["optimize", "optimizing", "optimized", "to optimize"],
+      tr: "Otomatik altyapının sorguları optimize edeceği kesindir."
+    },
+    {
+      en: "The operators were certain to detect the network latency.",
+      word: "detect",
+      trWord: "tespit edeceği",
+      blankOptions: ["detect", "detecting", "detected", "to detect"],
+      tr: "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+    }
+  ],
+  111: [
+    {
+      en: "Reckless engineers are doomed to cause a major crash in the industrial facility.",
+      word: "cause",
+      trWord: "neden olmaya",
+      blankOptions: ["cause", "causing", "caused", "to cause"],
+      tr: "Dikkatsiz mühendisler endüstriyel tesiste büyük bir kazaya neden olmaya mahkumdur."
+    },
+    {
+      en: "Outdated architectural frameworks are doomed to collapse sooner or later in technology.",
+      word: "collapse",
+      trWord: "çökmeye",
+      blankOptions: ["collapse", "collapsing", "collapsed", "to collapse"],
+      tr: "Güncelliğini yitirmiş mimari çerçeveler teknolojide er ya da geç çökmeye mahkumdur."
+    },
+    {
+      en: "The project was doomed to fail from the beginning due to a lack of technical experts.",
+      word: "fail",
+      trWord: "başarısız olmaya",
+      blankOptions: ["fail", "failing", "failed", "to fail"],
+      tr: "Proje, teknik uzman eksikliği nedeniyle başlangıçtan itibaren başarısız olmaya mahkumdu."
+    },
+    {
+      en: "The continuous chemical process is doomed to stop if the concrete core cracks.",
+      word: "stop",
+      trWord: "durması",
+      blankOptions: ["stop", "stopping", "stopped", "to stop"],
+      tr: "Beton çekirdek çatlarsa sürekli kimyasal sürecin durması kaçınılmazdır."
+    },
+    {
+      en: "The legacy system is doomed to fail without proper maintenance.",
+      word: "fail",
+      trWord: "çökmeye",
+      blankOptions: ["fail", "failing", "failed", "to fail"],
+      tr: "Eski sistem, düzgün bakım yapılmazsa çökmeye mahkumdur."
+    },
+    {
+      en: "The unencrypted network is doomed to be breached eventually.",
+      word: "be",
+      trWord: "ihlal edilmeye",
+      blankOptions: ["be", "being", "been", "to be"],
+      tr: "Şifrelenmemiş ağ, eninde sonunda ihlal edilmeye mahkumdur."
+    },
+    {
+      en: "Their startup was doomed to go bankrupt due to poor database management.",
+      word: "go",
+      trWord: "iflas etmeye",
+      blankOptions: ["go", "going", "gone", "to go"],
+      tr: "Girişimleri, kötü veritabanı yönetimi nedeniyle iflas etmeye mahkumdu."
+    },
+    {
+      en: "The application was doomed to run slowly on older devices.",
+      word: "run",
+      trWord: "yavaş çalışmaya",
+      blankOptions: ["run", "running", "ran", "to run"],
+      tr: "Uygulama, eski cihazlarda yavaş çalışmaya mahkumdu."
+    },
+    {
+      en: "Without automated tools, the operators were doomed to repeat the same compiling tasks.",
+      word: "repeat",
+      trWord: "tekrarlamaya",
+      blankOptions: ["repeat", "repeating", "repeated", "to repeat"],
+      tr: "Otomatik araçlar olmadan, operatörler aynı derleme görevlerini tekrarlamaya mahkumdular."
+    },
+    {
+      en: "The outdated hardware was doomed to overheat under heavy workload.",
+      word: "overheat",
+      trWord: "aşırı ısınmaya",
+      blankOptions: ["overheat", "overheating", "overheated", "to overheat"],
+      tr: "Güncelliğini yitirmiş donanım, ağır iş yükü altında aşırı ısınmaya mahkumdu."
+    }
+  ],
+  112: [
+    {
+      en: "The principal laboratory researcher is to go to the education ministry tomorrow.",
+      word: "go",
+      trWord: "gitmesi",
+      blankOptions: ["go", "going", "gone", "to go"],
+      tr: "Baş laboratuvar araştırmacısının yarın eğitim bakanlığına gitmesi planlanmaktadır."
+    },
+    {
+      en: "The emergency committee meeting is to start at precisely nine o'clock tomorrow.",
+      word: "start",
+      trWord: "başlaması",
+      blankOptions: ["start", "starting", "started", "to start"],
+      tr: "Acil durum komitesi toplantısının yarın tam saat dokuzda başlaması planlanmaktadır."
+    },
+    {
+      en: "The regional administrative council is to revise the strict security protocol next week.",
+      word: "revise",
+      trWord: "revize etmesi",
+      blankOptions: ["revise", "revising", "revised", "to revise"],
+      tr: "Bölgesel yönetim kurulunun önümüzdeki hafta sıkı güvenlik protokolünü revize etmesi planlanmaktadır."
+    },
+    {
+      en: "The administrative team is to update the rules tomorrow.",
+      word: "update",
+      trWord: "güncelleyecektir",
+      blankOptions: ["update", "updating", "updated", "to update"],
+      tr: "Yönetim ekibi kuralları yarın güncelleyecektir."
+    },
+    {
+      en: "You are to report any security breaches immediately.",
+      word: "report",
+      trWord: "bildirmek",
+      blankOptions: ["report", "reporting", "reported", "to report"],
+      tr: "Herhangi bir güvenlik ihlalini derhal bildirmek zorundasınız."
+    },
+    {
+      en: "The new interface is to launch next week.",
+      word: "launch",
+      trWord: "yayına girmesi",
+      blankOptions: ["launch", "launching", "launched", "to launch"],
+      tr: "Yeni arayüzün önümüzdeki hafta yayına girmesi planlanmaktadır."
+    },
+    {
+      en: "The chief investigator was to review the policy documents.",
+      word: "review",
+      trWord: "incelemesi",
+      blankOptions: ["review", "reviewing", "reviewed", "to review"],
+      tr: "Baş araştırmacının politika belgelerini incelemesi planlanmıştı."
+    },
+    {
+      en: "Engineers were to complete the compiler tests yesterday.",
+      word: "complete",
+      trWord: "tamamlaması",
+      blankOptions: ["complete", "completing", "completed", "to complete"],
+      tr: "Mühendislerin derleyici testlerini dün tamamlaması planlanmıştı."
+    },
+    {
+      en: "The software update is to launch on the production server tonight.",
+      word: "launch",
+      trWord: "yayına girmesi",
+      blankOptions: ["launch", "launching", "launched", "to launch"],
+      tr: "Yazılım güncellemesinin bu gece üretim sunucusunda yayına girmesi planlanmaktadır."
+    },
+    {
+      en: "The research team was to publish their final empirical report last Monday.",
+      word: "publish",
+      trWord: "yayınlaması",
+      blankOptions: ["publish", "publishing", "published", "to publish"],
+      tr: "Araştırma ekibinin geçen Pazartesi son deneysel raporunu yayınlaması planlanmıştı."
+    }
+  ],
+  113: [
+    {
+      en: "Technicians are not supposed to modify the system parameters on Sundays.",
+      word: "modify",
+      trWord: "değiştirmemesi",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Teknisyenlerin Pazar günleri sistem parametrelerini değiştirmemesi gerekir."
+    },
+    {
+      en: "We are not supposed to access the secure network area without biometric clearance.",
+      word: "access",
+      trWord: "erişmememiz",
+      blankOptions: ["access", "accessing", "accessed", "to access"],
+      tr: "Biyometrik izin olmadan güvenli ağ alanına erişmememiz gerekir."
+    },
+    {
+      en: "This framework is supposed to be the best architectural solution in the sector.",
+      word: "be",
+      trWord: "olması",
+      blankOptions: ["be", "being", "been", "to be"],
+      tr: "Bu çerçevenin sektördeki en iyi mimari çözüm olması beklenir."
+    },
+    {
+      en: "The analyst is supposed to evaluate comprehensive regional surveys with your inputs.",
+      word: "evaluate",
+      trWord: "değerlendirmesi",
+      blankOptions: ["evaluate", "evaluating", "evaluated", "to evaluate"],
+      tr: "Analistin sizin girdilerinizle kapsamlı bölgesel anketleri değerlendirmesi gerekir."
+    },
+    {
+      en: "You are supposed to submit your historical system logs before Friday afternoon.",
+      word: "submit",
+      trWord: "göndermeniz",
+      blankOptions: ["submit", "submitting", "submitted", "to submit"],
+      tr: "Cuma öğleden önce geçmiş sistem günlüklerinizi göndermeniz gerekir."
+    },
+    {
+      en: "Independent experts are supposed to wear identity badges inside the facility.",
+      word: "wear",
+      trWord: "takması",
+      blankOptions: ["wear", "wearing", "worn", "to wear"],
+      tr: "Bağımsız uzmanların tesis içinde kimlik kartı takması gerekir."
+    },
+    {
+      en: "The software update was supposed to arrive at noon, but it is heavily delayed.",
+      word: "arrive",
+      trWord: "gelmesi",
+      blankOptions: ["arrive", "arriving", "arrived", "to arrive"],
+      tr: "Yazılım güncellemesinin öğlen gelmesi gerekiyordu, ancak çok gecikti."
+    },
+    {
+      en: "Technicians are supposed to know the advanced encryption password of this central module.",
+      word: "know",
+      trWord: "bilmesi",
+      blankOptions: ["know", "knowing", "known", "to know"],
+      tr: "Teknisyenlerin bu merkezi modülün gelişmiş şifreleme şifresini bilmesi gerekir."
+    },
+    {
+      en: "Institutional authorities are supposed to protect sensitive user information privacy.",
+      word: "protect",
+      trWord: "koruması",
+      blankOptions: ["protect", "protecting", "protected", "to protect"],
+      tr: "Kurumsal makamların hassas kullanıcı bilgilerinin gizliliğini koruması gerekir."
+    },
+    {
+      en: "The legislative tax reform was supposed to be easy, but it took three months.",
+      word: "be",
+      trWord: "kolay olması",
+      blankOptions: ["be", "being", "been", "to be"],
+      tr: "Yasal vergi reformunun kolay olması gerekiyordu, ancak üç ay sürdü."
+    }
+  ],
+  114: [
+    {
+      en: "The software team is unable to modify substantial empirical inputs at the moment.",
+      word: "modify",
+      trWord: "değiştirememektedir",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Yazılım ekibi şu anda önemli deneysel girdileri değiştirememektedir."
+    },
+    {
+      en: "Independent technical experts were unable to explain the investigative project scope yesterday.",
+      word: "explain",
+      trWord: "açıklayamadı",
+      blankOptions: ["explain", "explaining", "explained", "to explain"],
+      tr: "Bağımsız teknik uzmanlar dün araştırma projesi kapsamını açıklayamadı."
+    },
+    {
+      en: "Government agencies are unable to process the newly collected empirical data securely.",
+      word: "process",
+      trWord: "işleyememektedir",
+      blankOptions: ["process", "processing", "processed", "to process"],
+      tr: "Devlet kurumları yeni toplanan deneysel verileri güvenli bir şekilde işleyememektedir."
+    },
+    {
+      en: "Technicians were unable to deploy an automated background script during the system blackout.",
+      word: "deploy",
+      trWord: "çalıştıramadı",
+      blankOptions: ["deploy", "deploying", "deployed", "to deploy"],
+      tr: "Teknisyenler sistem kesintisi sırasında otomatik bir arka plan betiği çalıştıramadı."
+    },
+    {
+      en: "The internal board is unable to call an emergency committee meeting this week.",
+      word: "call",
+      trWord: "çağıramamaktadır",
+      blankOptions: ["call", "calling", "called", "to call"],
+      tr: "İç kurul bu hafta acil komite toplantısı çağıramamaktadır."
+    },
+    {
+      en: "Heavy machinery was unable to modify its technical system parameters under high pressure.",
+      word: "modify",
+      trWord: "değiştiremedi",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Ağır makineler yüksek basınç altında teknik sistem parametrelerini değiştiremedi."
+    },
+    {
+      en: "Senior financial analysts are unable to anticipate significant annual financial growth.",
+      word: "anticipate",
+      trWord: "tahmin edememektedir",
+      blankOptions: ["anticipate", "anticipating", "anticipated", "to anticipate"],
+      tr: "Kıdemli finansal analistler önemli yıllık finansal büyümeyi tahmin edememektedir."
+    },
+    {
+      en: "The education ministry was unable to organize a specialized local committee last semester.",
+      word: "organize",
+      trWord: "düzenleyemedi",
+      blankOptions: ["organize", "organizing", "organized", "to organize"],
+      tr: "Eğitim bakanlığı geçen dönem özel bir yerel komite düzenleyemedi."
+    },
+    {
+      en: "Engineers are unable to stabilize crucial internal device components without additional tools.",
+      word: "stabilize",
+      trWord: "stabilize edememektedir",
+      blankOptions: ["stabilize", "stabilizing", "stabilized", "to stabilize"],
+      tr: "Mühendisler ek araçlar olmadan kritik dahili cihaz bileşenlerini stabilize edememektedir."
+    },
+    {
+      en: "The evaluation committee was unable to determine where to shift separate international research funds.",
+      word: "determine",
+      trWord: "belirleyemedi",
+      blankOptions: ["determine", "determining", "determined", "to determine"],
+      tr: "Değerlendirme komitesi ayrı uluslararası araştırma fonlarının nereye aktarılacağını belirleyemedi."
+    }
+  ],
+  115: [
+    {
+      en: "The technician was about to deploy the script when the structural anomaly occurred.",
+      word: "deploy",
+      trWord: "çalıştırmak",
+      blankOptions: ["deploy", "deploying", "deployed", "to deploy"],
+      tr: "Yapısal anomali meydana geldiğinde teknisyen betiği çalıştırmak üzereydi."
+    },
+    {
+      en: "The software team is about to optimize the centralized cloud database modules.",
+      word: "optimize",
+      trWord: "optimize etmek",
+      blankOptions: ["optimize", "optimizing", "optimized", "to optimize"],
+      tr: "Yazılım ekibi merkezi bulut veritabanı modüllerini optimize etmek üzeredir."
+    },
+    {
+      en: "Technicians are about to induce a safe system emergency reset right now.",
+      word: "induce",
+      trWord: "başlatmak",
+      blankOptions: ["induce", "inducing", "induced", "to induce"],
+      tr: "Teknisyenler şu anda güvenli bir sistem acil durum sıfırlaması başlatmak üzeredir."
+    },
+    {
+      en: "The system is about to reboot automatically.",
+      word: "reboot",
+      trWord: "yeniden başlamak",
+      blankOptions: ["reboot", "rebooting", "rebooted", "to reboot"],
+      tr: "Sistem otomatik olarak yeniden başlamak üzeredir."
+    },
+    {
+      en: "The team is about to deploy the application to Vercel.",
+      word: "deploy",
+      trWord: "dağıtmak",
+      blankOptions: ["deploy", "deploying", "deployed", "to deploy"],
+      tr: "Ekip uygulamayı Vercel'e dağıtmak üzeredir."
+    },
+    {
+      en: "I was about to modify the security protocols when the database crashed.",
+      word: "modify",
+      trWord: "değiştirmek",
+      blankOptions: ["modify", "modifying", "modified", "to modify"],
+      tr: "Veritabanı çöktüğünde güvenlik protokollerini değiştirmek üzereydim."
+    },
+    {
+      en: "The operators were about to launch the migration process.",
+      word: "launch",
+      trWord: "başlatmak",
+      blankOptions: ["launch", "launching", "launched", "to launch"],
+      tr: "Operatörler taşıma işlemini başlatmak üzereydiler."
+    },
+    {
+      en: "The software is about to execute the backup routine.",
+      word: "execute",
+      trWord: "çalıştırmak",
+      blankOptions: ["execute", "executing", "executed", "to execute"],
+      tr: "Yazılım yedekleme rutinini çalıştırmak üzeredir."
+    },
+    {
+      en: "The compiler was about to complete the process when the network disconnected.",
+      word: "complete",
+      trWord: "tamamlamak",
+      blankOptions: ["complete", "completing", "completed", "to complete"],
+      tr: "Ağ bağlantısı kesildiğinde derleyici işlemi tamamlamak üzereydi."
+    },
+    {
+      en: "We were about to run the automated diagnostic script.",
+      word: "run",
+      trWord: "çalıştırmak",
+      blankOptions: ["run", "running", "ran", "to run"],
+      tr: "Otomatik teşhis betiğini çalıştırmak üzereydik."
+    }
+  ],
+  116: [
+    {
+      en: "The developer is certain to fix the memory leak.",
+      word: "fix",
+      trWord: "düzelteceği",
+      blankOptions: ["fix", "fixing", "fixed", "to fix"],
+      tr: "Geliştiricinin bellek sızıntısını düzelteceği kesindir."
+    },
+    {
+      en: "The security updates are certain to block external attacks.",
+      word: "block",
+      trWord: "engelleyeceği",
+      blankOptions: ["block", "blocking", "blocked", "to block"],
+      tr: "Güvenlik güncellemelerinin dış saldırıları engelleyeceği kesindir."
+    },
+    {
+      en: "The simulation was certain to succeed after the configuration change.",
+      word: "succeed",
+      trWord: "başarılı olacağı",
+      blankOptions: ["succeed", "succeeding", "succeeded", "to succeed"],
+      tr: "Simülasyonun yapılandırma değişikliğinden sonra başarılı olacağı kesindi."
+    },
+    {
+      en: "The automatic framework is certain to optimize the queries.",
+      word: "optimize",
+      trWord: "optimize edeceği",
+      blankOptions: ["optimize", "optimizing", "optimized", "to optimize"],
+      tr: "Otomatik altyapının sorguları optimize edeceği kesindir."
+    },
+    {
+      en: "The operators were certain to detect the network latency.",
+      word: "detect",
+      trWord: "tespit edeceği",
+      blankOptions: ["detect", "detecting", "detected", "to detect"],
+      tr: "Operatörlerin ağ gecikmesini tespit edeceği kesindi."
+    },
+    {
+      en: "The team is certain to complete the database migration on time.",
+      word: "complete",
+      trWord: "tamamlayacağı",
+      blankOptions: ["complete", "completing", "completed", "to complete"],
+      tr: "Ekibin veritabanı taşıma işlemini zamanında tamamlayacağı kesindir."
+    },
+    {
+      en: "Advanced algorithms are certain to identify any structural anomaly.",
+      word: "identify",
+      trWord: "tespit edeceği",
+      blankOptions: ["identify", "identifying", "identified", "to identify"],
+      tr: "Gelişmiş algoritmaların herhangi bir yapısal anomaliyi tespit edeceği kesindir."
+    },
+    {
+      en: "The new interface is certain to improve user interaction metrics.",
+      word: "improve",
+      trWord: "iyileştireceği",
+      blankOptions: ["improve", "improving", "improved", "to improve"],
+      tr: "Yeni arayüzün kullanıcı etkileşim metriklerini iyileştireceği kesindir."
+    },
+    {
+      en: "Auditors are certain to flag the unencrypted database password.",
+      word: "flag",
+      trWord: "işaretleyeceği",
+      blankOptions: ["flag", "flagging", "flagged", "to flag"],
+      tr: "Denetçilerin şifrelenmemiş veritabanı şifresini işaretleyeceği kesindir."
+    },
+    {
+      en: "Technicians are certain to restart the server after the crash.",
+      word: "restart",
+      trWord: "yeniden başlatacağı",
+      blankOptions: ["restart", "restarting", "restarted", "to restart"],
+      tr: "Teknisyenlerin çöküşten sonra sunucuyu yeniden başlatacağı kesindir."
+    }
+  ]
+};
 
-  // Exercise 2 (11-20)
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The senior developer ___ processing large data streams.",
-    options: ["is accustomed to", "accustomed to", "is accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Technical operators ___ operating heavy industrial machinery.",
-    options: ["are accustomed to", "accustomed to", "are accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "I ___ refactoring unoptimized legacy source codes.",
-    options: ["am accustomed to", "accustomed to", "am accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The supervisor ___ handling severe database overflows.",
-    options: ["was accustomed to", "accustomed to", "was accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Engineers ___ compiling data fields manually.",
-    options: ["were accustomed to", "accustomed to", "were accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "The senior developer is accustomed to ___ large data streams.",
-    options: ["processing", "process", "processed", "to process"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Technical operators are accustomed to ___ heavy industrial machinery.",
-    options: ["operating", "operate", "operated", "to operate"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "I am accustomed to ___ unoptimized legacy source codes.",
-    options: ["refactoring", "refactor", "refactored", "to refactor"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "The supervisor was accustomed to ___ severe database overflows.",
-    options: ["handling", "handle", "handled", "to handle"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Engineers were accustomed to ___ data fields manually.",
-    options: ["compiling", "compile", "compiled", "to compile"]
-  },
+function buildLessonExercises(sentences, lessonId) {
+  if (lessonId === 117) {
+    const allSents = [];
+    for (let l = 102; l <= 116; l++) {
+      allSents.push(...unit103SentenceData[l]);
+    }
+    const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+    const shuffledSents = shuffle(allSents).slice(0, 60);
+    
+    const highlightTarget = (sentence, word) => {
+      const regex = new RegExp('\\b' + word + '\\b', 'i');
+      return sentence.replace(regex, '<span style="color: #ff6b6b; font-weight: bold;">$&</span>');
+    };
 
-  // Exercise 3 (21-30)
-  {
-    type: "multiple-fill-blank",
-    sentence: "The network infrastructure branch ___ to ___ massive cloud database queries while secondary firewalls screen external traffic.",
-    translation: "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-    corrects: ["is used", "processing"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "Industrial field crews ___ to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-    translation: "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-    corrects: ["are used", "operating"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "I ___ used to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-    translation: "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-    corrects: ["am", "refactoring"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "The senior architect ___ used to ___ critical configuration anomalies before the automated framework took over the backup routine.",
-    translation: "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-    corrects: ["was", "handling"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "Technical specialists ___ used to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-    translation: "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
-    corrects: ["were", "compiling"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "The network infrastructure branch ___ accustomed to ___ massive cloud database queries while secondary firewalls screen external traffic.",
-    translation: "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-    corrects: ["is", "processing"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "Industrial field crews ___ accustomed to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-    translation: "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-    corrects: ["are used", "operating"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "I ___ accustomed to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-    translation: "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-    corrects: ["am", "refactoring"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "The senior architect ___ accustomed to ___ critical configuration anomalies before the automated framework took over the backup routine.",
-    translation: "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-    corrects: ["was", "handling"]
-  },
-  {
-    type: "multiple-fill-blank",
-    sentence: "Technical specialists ___ accustomed to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-    translation: "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
-    corrects: ["were", "compiling"]
-  },
+    const makeQuestion = (sA, type, idx, exId) => {
+      const qId = "u103l117_ex" + exId + "_q" + (idx + 1);
+      if (!sA) return null;
+      
+      if (type === "fill-blank" || type === "fill-blank-dropdown") {
+        const blankedSentence = sA.en.replace(new RegExp('\\b' + sA.word + '\\b', 'i'), "___");
+        let highlighted = blankedSentence;
+        const cues = ["is used to", "are used to", "am used to", "was used to", "were used to", "got used to", "will get used to"];
+        for (const cue of cues) {
+          if (highlighted.includes(cue)) {
+            highlighted = highlighted.replace(cue, '<span style="color: #ff6b6b; font-weight: bold;">' + cue + '</span>');
+            break;
+          }
+        }
+        const shuffledOptions = shuffle(sA.blankOptions);
+        return {
+          id: qId,
+          type: type,
+          prompt: type === "fill-blank" ? "Boşluğu doldur" : "Boşluğa gelecek en uygun kelimeyi seçin:",
+          sentence: highlighted,
+          options: shuffledOptions,
+          correctIndex: shuffledOptions.indexOf(sA.word),
+          translation: sA.tr
+        };
+      }
+      
+      if (type === "word-bank") {
+        const targetWords = sA.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+        const allOtherEnWords = allSents.map(s => s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+        const uniqueDistractors = [...new Set(allOtherEnWords)].filter(w => !targetWords.includes(w));
+        const shuffledDistractors = shuffle(uniqueDistractors);
+        while (shuffledDistractors.length < 3) {
+          shuffledDistractors.push("the");
+        }
+        const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+        return {
+          id: qId,
+          type: "word-bank",
+          prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+          translation: sA.tr,
+          words: words,
+          correctOrder: targetWords,
+          enSentence: sA.en,
+          isEngToTr: false
+        };
+      }
+      
+      if (type === "multiple-choice") {
+        const isEnToTr = Math.random() > 0.5;
+        if (isEnToTr) {
+          const wrongOptions = shuffle(allSents.filter(s => s.en !== sA.en).map(s => s.tr)).slice(0, 3);
+          const options = shuffle([sA.tr, ...wrongOptions]);
+          return {
+            id: qId,
+            type: "multiple-choice",
+            prompt: "Cümlenin doğru Türkçe çevirisini seçin:",
+            sentence: highlightTarget(sA.en, sA.word),
+            options: options,
+            correctIndex: options.indexOf(sA.tr)
+          };
+        } else {
+          const wrongOptions = shuffle(allSents.filter(s => s.en !== sA.en).map(s => s.en)).slice(0, 3);
+          const options = shuffle([sA.en, ...wrongOptions]);
+          return {
+            id: qId,
+            type: "multiple-choice",
+            prompt: "Cümlenin doğru İngilizce çevirisini seçin:",
+            sentence: sA.tr,
+            options: options.map(opt => highlightTarget(opt, sA.word)),
+            correctIndex: options.indexOf(sA.en)
+          };
+        }
+      }
+      
+      if (type === "translation-text") {
+        return {
+          id: qId,
+          type: "translation-text",
+          prompt: '"' + sA.en + '" ifadesini Türkçe\'ye çevirin:',
+          correctSentence: sA.tr
+        };
+      }
+    };
 
-  // Exercise 4 (31-40)
-  {
-    type: "fill-blank",
-    sentence: "The network infrastructure branch is used to ___ massive cloud database queries while secondary firewalls screen external traffic.",
-    options: ["processing", "process", "processed", "to process"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Industrial field crews ___ operating heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-    options: ["are accustomed to", "accustomed to", "are accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "I am accustomed to ___ complex application systems in order that frontend developers can integrate visual components cleanly.",
-    options: ["refactoring", "refactor", "refactored", "to refactor"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The senior architect ___ handling critical configuration anomalies before the automated framework took over the backup routine.",
-    options: ["was used to", "used to", "was used", "uses to"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Technical specialists were used to ___ loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-    options: ["compiling", "compile", "compiled", "to compile"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "The network infrastructure branch ___ processing massive cloud database queries while secondary firewalls screen external traffic.",
-    options: ["is accustomed to", "accustomed to", "is accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "Industrial field crews are used to ___ heavy mechanical components although the laboratory environment lacks stable pressure controls.",
-    options: ["operating", "operate", "operated", "to operate"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "I ___ refactoring complex application systems in order that frontend developers can integrate visual components cleanly.",
-    options: ["am accustomed to", "accustomed to", "am accustomed", "accustomed"]
-  },
-  {
-    type: "fill-blank",
-    sentence: "The senior architect was accustomed to ___ critical configuration anomalies before the automated framework took over the backup routine.",
-    options: ["handling", "handle", "handled", "to handle"]
-  },
-  {
-    type: "fill-blank-dropdown",
-    sentence: "Technical specialists ___ compiling loose statistical metrics since public research institutes lacked high-resolution logging devices.",
-    options: ["were used to", "used to", "were used", "uses to"]
+    const exTypes1_5 = [
+      "fill-blank", "fill-blank-dropdown", "word-bank",
+      "fill-blank", "fill-blank-dropdown", "word-bank",
+      "fill-blank", "fill-blank-dropdown", "translation-text", "translation-text"
+    ];
+
+    const exTypes2_6 = [
+      "multiple-choice", "word-bank", "multiple-choice", "word-bank",
+      "multiple-choice", "word-bank", "multiple-choice", "fill-blank",
+      "translation-text", "translation-text"
+    ];
+
+    const ex1Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[idx], exTypes1_5[idx], idx, 1));
+    const ex2Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[10 + idx], exTypes2_6[idx], idx, 2));
+    const ex3Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[20 + idx], exTypes1_5[idx], idx, 3));
+    const ex4Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[30 + idx], exTypes2_6[idx], idx, 4));
+    const ex5Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[40 + idx], exTypes1_5[idx], idx, 5));
+    const ex6Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(shuffledSents[50 + idx], exTypes2_6[idx], idx, 6));
+
+    return [
+      {
+        id: "u103l117ex1",
+        title: "Alıştırma 1: Karma Test I",
+        description: "Tüm öbeksel kiplerden karışık genel tarama ve gramer pratikleri.",
+        questions: ex1Questions
+      },
+      {
+        id: "u103l117ex2",
+        title: "Alıştırma 2: Karma Test II",
+        description: "Karışık cümlelerde anlam ve çeviri çalışmaları.",
+        questions: ex2Questions
+      },
+      {
+        id: "u103l117ex3",
+        title: "Alıştırma 3: Karma Test III",
+        description: "İleri düzey yapılarla genel pekiştirme ve kelime bankası çalışmaları.",
+        questions: ex3Questions
+      },
+      {
+        id: "u103l117ex4",
+        title: "Alıştırma 4: Karma Test IV",
+        description: "Çeviri ve çoktan seçmeli sorularla tarama testleri.",
+        questions: ex4Questions
+      },
+      {
+        id: "u103l117ex5",
+        title: "Alıştırma 5: Karma Test V",
+        description: "Gramer ve cümle yapısını pekiştirme çalışmaları.",
+        questions: ex5Questions
+      },
+      {
+        id: "u103l117ex6",
+        title: "Alıştırma 6: Karma Test VI",
+        description: "Karma konulardan oluşan serbest çeviri ve yazım testleri.",
+        questions: ex6Questions
+      }
+    ];
   }
-];
+  const sorted = [...sentences].sort((a, b) => a.en.length - b.en.length);
+  const numSents = sorted.length;
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  
+  const highlightTarget = (sentence, word) => {
+    const regex = new RegExp('\\b' + word + '\\b', 'i');
+    return sentence.replace(regex, '<span style="color: #ff6b6b; font-weight: bold;">$&</span>');
+  };
 
-const L102_tr = [
-  "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
-  "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır.",
-  "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım.",
-  "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı.",
-  "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar.",
-  "Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.",
-  "Teknik operatörler ağır endüstriyel makineleri çalıştırmaya alışıktır.",
-  "Optimize edilmemiş eski kaynak kodların yapısını yeniden düzenlemeye alışkınım.",
-  "Gözetmen, ciddi veri tabanı taşmalarını idare etmeye alışkındı.",
-  "Mühendisler veri alanlarını manuel olarak derlemeye alışıktılar.",
-  "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-  "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-  "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-  "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-  "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar.",
-  "Ağ altyapısı şubesi, ikincil güvenlik duvarları harici trafiği tararken devasa bulut veri tabanı sorgularını işlemeye alışıktır.",
-  "Endüstriyel saha ekipleri, laboratuvar ortamında kararlı basınç kontrolleri olmamasına rağmen ağır mekanik bileşenleri çalıştırmaya alışıktır.",
-  "Arayüz geliştiricilerinin görsel bileşenleri temiz bir şekilde entegre edebilmesi amacıyla karmaşık uygulama sistemlerini yeniden düzenlemeye alışkınım.",
-  "Kıdemli mimar, otomatik altyapı yedekleme rutinini devralmadan önce kritik yapılandırma anomalilerini yönetmeye alışkındı.",
-  "Teknik uzmanlar, kamu araştırma enstitüleri yüksek çözünürlüklü kayıt cihazlarından yoksun olduğu için gevşek istatistiksel metrikleri derlemeye alışıktılar."
-];
+  const makeQuestion = (sA, type, idx, exId) => {
+    const qId = "u103l" + lessonId + "_ex" + exId + "_q" + (idx + 1);
+    
+    if (type === "fill-blank" || type === "fill-blank-dropdown") {
+      const blankedSentence = sA.en.replace(new RegExp('\\b' + sA.word + '\\b', 'i'), "___");
+      let highlighted = blankedSentence;
+      
+      const cues = ["is used to", "are used to", "am used to", "was used to", "were used to", "got used to", "will get used to"];
+      for (const cue of cues) {
+        if (highlighted.includes(cue)) {
+          highlighted = highlighted.replace(cue, '<span style="color: #ff6b6b; font-weight: bold;">' + cue + '</span>');
+          break;
+        }
+      }
+
+      const shuffledOptions = shuffle(sA.blankOptions);
+      return {
+        id: qId,
+        type: type,
+        prompt: type === "fill-blank" ? "Boşluğu doldur" : "Boşluğa gelecek en uygun kelimeyi seçin:",
+        sentence: highlighted,
+        options: shuffledOptions,
+        correctIndex: shuffledOptions.indexOf(sA.word),
+        translation: sA.tr
+      };
+    }
+    
+    if (type === "word-bank") {
+      const targetWords = sA.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""));
+      const allOtherEnWords = sorted.map(s => s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""))).flat();
+      const uniqueDistractors = [...new Set(allOtherEnWords)].filter(w => !targetWords.includes(w));
+      const shuffledDistractors = shuffle(uniqueDistractors);
+      while (shuffledDistractors.length < 3) {
+        shuffledDistractors.push("the");
+      }
+      const words = shuffle([...targetWords, shuffledDistractors[0], shuffledDistractors[1], shuffledDistractors[2]]);
+      return {
+        id: qId,
+        type: "word-bank",
+        prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+        translation: sA.tr,
+        words: words,
+        correctOrder: targetWords,
+        enSentence: sA.en,
+        isEngToTr: false
+      };
+    }
+    
+    if (type === "multiple-choice") {
+      const isEnToTr = Math.random() > 0.5;
+      if (isEnToTr) {
+        const allUnitSents = Object.values(unit103SentenceData).flat();
+        const wrongOptions = shuffle(allUnitSents.filter(s => s.en !== sA.en).map(s => s.tr)).slice(0, 3);
+        const options = shuffle([sA.tr, ...wrongOptions]);
+        return {
+          id: qId,
+          type: "multiple-choice",
+          prompt: "Cümlenin doğru Türkçe çevirisini seçin:",
+          sentence: highlightTarget(sA.en, sA.word),
+          options: options,
+          correctIndex: options.indexOf(sA.tr)
+        };
+      } else {
+        const allUnitSents = Object.values(unit103SentenceData).flat();
+        const wrongOptions = shuffle(allUnitSents.filter(s => s.en !== sA.en).map(s => s.en)).slice(0, 3);
+        const options = shuffle([sA.en, ...wrongOptions]);
+        return {
+          id: qId,
+          type: "multiple-choice",
+          prompt: "Cümlenin doğru İngilizce çevirisini seçin:",
+          sentence: sA.tr,
+          options: options.map(opt => highlightTarget(opt, sA.word)),
+          correctIndex: options.indexOf(sA.en)
+        };
+      }
+    }
+    
+    if (type === "translation-text") {
+      return {
+        id: qId,
+        type: "translation-text",
+        prompt: '"' + sA.en + '" ifadesini Türkçe\'ye çevirin:',
+        correctSentence: sA.tr
+      };
+    }
+  };
+
+  const ex1Types = [
+    "fill-blank", "fill-blank-dropdown", "word-bank",
+    "fill-blank", "fill-blank-dropdown", "word-bank",
+    "fill-blank", "fill-blank-dropdown", "translation-text", "translation-text"
+  ];
+
+  const ex2Types = [
+    "multiple-choice", "word-bank", "multiple-choice", "word-bank",
+    "multiple-choice", "word-bank", "multiple-choice", "fill-blank",
+    "translation-text", "translation-text"
+  ];
+
+  const ex3Types = [
+    "fill-blank", "fill-blank-dropdown", "multiple-choice",
+    "fill-blank", "fill-blank-dropdown", "multiple-choice",
+    "word-bank", "word-bank", "translation-text", "translation-text"
+  ];
+
+  const ex4Types = [
+    "multiple-choice", "fill-blank", "word-bank",
+    "multiple-choice", "fill-blank", "word-bank",
+    "multiple-choice", "word-bank", "translation-text", "translation-text"
+  ];
+
+  const ex1Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(sorted[idx % numSents], ex1Types[idx], idx, 1));
+  const ex2Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(sorted[idx % numSents], ex2Types[idx], idx, 2));
+  const ex3Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(sorted[idx % numSents], ex3Types[idx], idx, 3));
+  const ex4Questions = Array.from({ length: 10 }, (_, idx) => makeQuestion(sorted[idx % numSents], ex4Types[idx], idx, 4));
+
+  const modalNames = {
+    102: "be used to",
+    103: "be accustomed to",
+    104: "be willing to",
+    105: "be unwilling to",
+    106: "be reluctant to",
+    107: "be likely to",
+    108: "be unlikely to",
+    109: "be bound to",
+    110: "be certain to",
+    111: "be doomed to",
+    112: "be to",
+    113: "be supposed to",
+    114: "be unable to",
+    115: "be about to",
+    116: "be certain to"
+  };
+  const modalName = modalNames[lessonId] || "phrasal modal";
+
+  return [
+    {
+      id: "u103l" + lessonId + "ex1",
+      title: "Alıştırma 1: " + modalName + " I",
+      description: "Basit ve yaygın akademik cümle yapılarıyla gramer ve kelime pratikleri.",
+      questions: ex1Questions
+    },
+    {
+      id: "u103l" + lessonId + "ex2",
+      title: "Alıştırma 2: " + modalName + " II",
+      description: "Akademik cümlelerde anlam ve Türkçe-İngilizce çeviri çalışmaları.",
+      questions: ex2Questions
+    },
+    {
+      id: "u103l" + lessonId + "ex3",
+      title: "Alıştırma 3: " + modalName + " III",
+      description: "İleri düzey yapılarla pekiştirme ve kelime yerleştirme çalışmaları.",
+      questions: ex3Questions
+    },
+    {
+      id: "u103l" + lessonId + "ex4",
+      title: "Alıştırma 4: " + modalName + " IV",
+      description: "Bölüm sonu değerlendirme ve serbest çeviri testleri.",
+      questions: ex4Questions
+    }
+  ];
+}
 
 const L95_tr = [
   "Şu anda şiddetli yağmur simülasyon alanını etkiliyor.",
@@ -1953,6 +3226,9 @@ const L101_tr = [
 ];
 
 function buildExercises(rawList, lessonId) {
+  if (lessonId >= 102 && lessonId <= 117) {
+    return buildLessonExercises(unit103SentenceData[lessonId], lessonId);
+  }
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
   const autoHighlight = (rawQ, lessonId) => {
@@ -2243,7 +3519,22 @@ const unit101Exercises = {
 };
 
 const unit103Exercises = {
-  1: { exercises: buildExercises(L102_raw, 102) }
+  1: { exercises: buildExercises(null, 102) },
+  2: { exercises: buildExercises(null, 103) },
+  3: { exercises: buildExercises(null, 104) },
+  4: { exercises: buildExercises(null, 105) },
+  5: { exercises: buildExercises(null, 106) },
+  6: { exercises: buildExercises(null, 107) },
+  7: { exercises: buildExercises(null, 108) },
+  8: { exercises: buildExercises(null, 109) },
+  9: { exercises: buildExercises(null, 110) },
+  10: { exercises: buildExercises(null, 111) },
+  11: { exercises: buildExercises(null, 112) },
+  12: { exercises: buildExercises(null, 113) },
+  13: { exercises: buildExercises(null, 114) },
+  14: { exercises: buildExercises(null, 115) },
+  15: { exercises: buildExercises(null, 116) },
+  16: { exercises: buildExercises(null, 117) }
 };
 
 const dataPath = '../data.js';
@@ -2294,15 +3585,30 @@ if (topicStartIdx !== -1) {
   },
   {
     id: 103,
-    title: "Alışkanlık Durumu: Be used to / Be accustomed to",
-    desc: "Alışkanlık Bildiren Yapılar",
+    title: "Öbeksel Kipler (Phrasal Modals)",
+    desc: "15 Farklı Öbeksel Kip İle Alıştırmalar",
     icon: "🎯",
-    numLessons: 1,
+    numLessons: 16,
     formulas: [
-      { formula: "Subject + be used to + Noun / V-ing", example: "The senior developer <span style=\\"color: #ff6b6b; font-weight: bold;\\">is used to</span> processing large data streams: Kıdemli geliştirici büyük veri akışlarını işlemeye alışıktır.", description: "Alışkanlık durumu bildiren bu kalıplar, arkalarından kesinlikle yalın fiil almazlar; eylemler mutlaka -ing takısıyla isimleştirilerek (Gerund) bağlanır." }
+      { formula: "Subject + Phrasal Modal + Verb", example: "The system administrator is accustomed to monitoring real-time network traffic: Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.", description: "Öbeksel kipler (phrasal modals), anlam ve yapı olarak modal gibi davranan fakat yardımcı fiiller barındıran kalıplardır. Bazı yapılar arkasından V-ing alırken, bazıları yalın fiil (V1) gerektirir." }
     ],
     subtitles: [
-      "be used to (Alışkın olmak)"
+      "be used to (-e alışkın olmak)",
+      "be accustomed to (-e alışkın olmak)",
+      "be willing to (... yapmaya istekli/gönüllü olmak)",
+      "be unwilling to (... yapmaya isteksiz olmak)",
+      "be reluctant to (... yapmaya gönülsüz olmak)",
+      "be likely to (... yapması muhtemel olmak)",
+      "be unlikely to (... yapması muhtemel olmamak)",
+      "be bound to (... yapması kaçınılmaz/kesin olmak)",
+      "be certain to (... yapacağı kesin olmak)",
+      "be doomed to (kötü bir sona mahkum olmak)",
+      "be to (-mesi planlanmak / -mek zorundadır)",
+      "be supposed to (... yapması gerekir/beklenir)",
+      "be unable to (-i yapamamak / yetersizlik)",
+      "be about to (-mek üzere olmak)",
+      "be certain to (kesinlikle ... yapacak olmak)",
+      "Karma Test"
     ]
   }\n`;
     content = content.substring(0, openBraceIdx) + newTopicBlock + content.substring(closeArrayIdx);

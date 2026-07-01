@@ -62,7 +62,11 @@ let isReviewMode = false;
 let reviewQuestions = [];
 let placementQuestionsList = [];
 let quizSessionId = 0;
+let isCurrentExercisePassed = true;
 
+let reflexTimer = null;
+let reflexInterval = null;
+let blitzKeyHandler = null;
 
 // E-posta Bildirim Ayarları
 const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
@@ -1697,6 +1701,12 @@ async function hashPassword(password) {
     .map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+function isLocalEnvironment() {
+  return window.location.hostname === 'localhost' ||
+         window.location.hostname === '127.0.0.1' ||
+         window.location.protocol === 'file:';
+}
+
 function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
@@ -2692,8 +2702,8 @@ function renderLessonTree() {
     </svg>
   `;
 
-  // Sort all units sequentially by their ID (from Unit 1 to Unit 25)
-  const renderedUnits = [...units].sort((a, b) => a.id - b.id);
+  // Render units in their database/TOC sequence
+  const renderedUnits = [...units];
 
   let normalUnitIndex = 0;
   const unitDisplayNames = {};
@@ -2706,7 +2716,7 @@ function renderLessonTree() {
     }
   });
 
-  renderedUnits.forEach(unit => {
+  renderedUnits.forEach((unit, uIdx) => {
     // 1. Calculate progress in this unit
     const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
     const totalInUnit = unit.lessons.length;
@@ -2726,15 +2736,28 @@ function renderLessonTree() {
       `;
     }
 
+    let originalBadgeHTML = '';
+    const newVisualPos = uIdx + 1;
+    /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
+    if (unit.originalIndex && unit.originalIndex !== newVisualPos) {
+      originalBadgeHTML = `
+        <span class="original-pos-badge" title="Müfredat sıralaması öncesindeki bölüm numarası">
+          Eski Sırası: Bölüm ${unit.originalIndex}
+        </span>
+      `;
+    }
+    */
+
     // 2. Create Unit Banner
     const banner = document.createElement('div');
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
-    banner.className = `unit-banner unit-color-${colorIndex}`;
+    banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
     banner.innerHTML = `
       <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
           <span>${unitDisplayNames[unit.id]}</span>
           ${notUploadedBadgeHTML}
+          ${originalBadgeHTML}
         </h2>
         <p>${unit.description}</p>
       </div>
@@ -2842,16 +2865,25 @@ function renderLessonTree() {
         const totalCount = lesson.exercises.length;
         const isAllExCompleted = completedCount === totalCount;
         progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
-          ${isAllExCompleted ? '✓' : `${completedCount}/${totalCount}`}
+          ${completedCount}/${totalCount}
         </div>`;
       } else {
+        const totalCount = 1;
+        const completedCount = isCompleted ? 1 : 0;
         progressBadgeContent = `<div class="node-progress-badge ${isCompleted ? 'completed' : ''}">
-          ${isCompleted ? '✓' : `0/${lesson.questions.length}`}
+          ${completedCount}/${totalCount}
         </div>`;
       }
 
       // New Banner for active lesson
       const activeBannerContent = isActive ? '<div class="lesson-node-banner">Yeni</div>' : '';
+
+      let lessonOriginalTagHTML = '';
+      /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
+      if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
+        lessonOriginalTagHTML = `<div class="lesson-original-pos-tag">Eski: ${lesson.originalLessonId}. Ders</div>`;
+      }
+      */
 
       nodeWrapper.innerHTML = `
         ${isActive ? '<div class="pulse-ring"></div>' : ''}
@@ -2867,6 +2899,7 @@ function renderLessonTree() {
         <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
           <strong>${lesson.title}</strong>
           <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
+          ${lessonOriginalTagHTML}
           ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Alıştırma henüz yüklenmemiş</div>' : ''}
         </div>
       `;
@@ -2963,6 +2996,11 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   if (lesson.formula && lesson.example) {
     popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">Örnek Çeviri: <strong>${lesson.example}</strong></span>`;
   }
+  /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
+  if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
+    popoverSubtitleHTML += `<br><span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 4px; font-weight: normal;">Eski Sırası: ${lesson.originalLessonId}. Ders</span>`;
+  }
+  */
 
   let popoverFooterHTML = '';
   const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
@@ -2978,7 +3016,14 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   } else if (lesson.exercises && lesson.exercises.length > 0) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
-      const isExUnlocked = true; // Şimdilik soruları/düzenlemeleri görebilmek için kilitler açıldı
+      let isExUnlocked = true;
+      if (!isLocalEnvironment()) {
+        if (index === 0) {
+          isExUnlocked = isUnlocked;
+        } else {
+          isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+        }
+      }
       
       const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
       const rowClass = isExUnlocked ? '' : 'locked';
@@ -2997,7 +3042,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
             </div>
           </div>
           <div class="qp-btn-group">
-            <button class="exercise-preview-btn" data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>
+            <button class="exercise-preview-btn" ${isExUnlocked ? '' : 'disabled style="opacity: 0.5; pointer-events: none;"'} data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>
             <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
               ${statusText}
             </button>
@@ -3104,7 +3149,9 @@ document.addEventListener('click', () => {
 });
 
 function isLessonUnlocked(lessonId) {
-  return true; // Şimdilik içerik kontrolü için tüm kilitler açıldı
+  if (isLocalEnvironment()) {
+    return true;
+  }
 
   // Find the lesson and its unit
   const lesson = lessons.find(l => l.id === lessonId);
@@ -3112,8 +3159,8 @@ function isLessonUnlocked(lessonId) {
 
   const currentUnitId = lesson.unitId;
 
-  // Sort units by ID to match display order
-  const sortedUnits = [...units].sort((a, b) => a.id - b.id);
+  // Get units in their database/TOC sequence
+  const sortedUnits = [...units];
   const sortedLessons = [];
   sortedUnits.forEach(u => {
     u.lessons.forEach(lId => {
@@ -3165,6 +3212,7 @@ function renderAchievements() {
 // ============================================================
 function startLesson(lessonId, exerciseId = null) {
   quizSessionId++;
+  isCurrentExercisePassed = false;
   currentLesson = lessons.find(l => l.id === lessonId);
   if (!currentLesson) return;
 
@@ -3397,6 +3445,19 @@ function renderQuestion() {
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   if (!question) return;
 
+  if (reflexTimer) {
+    clearTimeout(reflexTimer);
+    reflexTimer = null;
+  }
+  if (reflexInterval) {
+    clearInterval(reflexInterval);
+    reflexInterval = null;
+  }
+  if (blitzKeyHandler) {
+    window.removeEventListener('keydown', blitzKeyHandler);
+    blitzKeyHandler = null;
+  }
+
   if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown') {
     applyClozeHighlighting(question);
   }
@@ -3468,6 +3529,12 @@ function renderQuestion() {
     case 'multiple-fill-blank':
       renderMultipleFillBlank(body, question);
       break;
+    case 'true-false':
+      renderTrueFalse(body, question);
+      break;
+    case 'spotlight':
+      renderSpotlight(body, question);
+      break;
   }
 
   // Restore prompt text so data remains unmodified
@@ -3477,7 +3544,7 @@ function renderQuestion() {
 // ── Çoktan Seçmeli ──────────────────────────────────────────
 function renderMultipleChoice(container, question) {
   let promptHtml = question.prompt;
-  const isEngToTr = question.prompt.includes("Türkçe") || question.isEngToTr;
+  const isEngToTr = (question.prompt.includes("Türkçe") || question.isEngToTr) && !question.prompt.includes("_______");
   
   let sentenceHtml = question.sentence || "";
   if (isEngToTr) {
@@ -3508,7 +3575,7 @@ function renderMultipleChoice(container, question) {
 
   container.innerHTML = `
     <p class="quiz-prompt">${promptHtml}</p>
-    <div class="quiz-sentence-container" style="text-align: center; margin-bottom: 25px; font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6;">
+    <div class="quiz-sentence-container" style="text-align: center; margin-bottom: 25px; font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; ${sentenceHtml ? '' : 'display: none;'}">
       ${sentenceHtml}
     </div>
     <div class="mc-options">
@@ -3778,6 +3845,26 @@ function segmentSentence(fullSentence, isEngToTr) {
 
 // ── Kelime Bankası ──────────────────────────────────────────
 function renderWordBank(container, question) {
+  // Clean up any inline HTML style tags and residues from correctOrder and words arrays
+  if (Array.isArray(question.correctOrder)) {
+    const rawTargetSentence = question.correctOrder.join(' ');
+    const cleanTargetSentence = rawTargetSentence.replace(/<[^>]+>/g, '');
+    const cleanTargetWords = cleanTargetSentence.split(/\s+/)
+      .map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
+      .filter(Boolean);
+    
+    const rawDistractors = Array.isArray(question.words)
+      ? question.words.filter(w => !question.correctOrder.includes(w))
+      : [];
+    const cleanDistractors = rawDistractors
+      .map(w => w.replace(/<[^>]+>/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
+      .filter(Boolean)
+      .filter(w => !cleanTargetWords.includes(w));
+    
+    question.correctOrder = cleanTargetWords;
+    question.words = [...cleanTargetWords, ...cleanDistractors];
+  }
+
   // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
   if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
     const fullSentence = question.correctOrder.join(' ');
@@ -4281,6 +4368,229 @@ function renderMultipleFillBlank(container, question) {
     });
   });
 }
+
+// ── Hız Tüneli (Time-Attack Reflex Blitz - true-false) ──────────
+function renderTrueFalse(container, question) {
+  if (reflexTimer) {
+    clearTimeout(reflexTimer);
+    reflexTimer = null;
+  }
+  if (reflexInterval) {
+    clearInterval(reflexInterval);
+    reflexInterval = null;
+  }
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || 'Hız Tüneli: Hızlıca karar ver!'}</p>
+    <div class="blitz-timer-container" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 20px;">
+      <div id="blitz-timer-bar" style="width: 100%; height: 100%; background: var(--accent-color, #a855f7); transition: width 50ms linear;"></div>
+    </div>
+    
+    <div class="blitz-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+      <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #a855f7); margin-bottom: 15px; line-height: 1.4;">
+        ${question.englishPhrase}
+      </div>
+      <div class="blitz-turkish" style="font-size: 1.3rem; font-weight: 500; color: var(--text-primary); line-height: 1.4;">
+        ${question.turkishTranslation}
+      </div>
+    </div>
+
+    <div class="blitz-buttons" style="display: flex; gap: 20px; justify-content: center; width: 100%;">
+      <button class="blitz-btn wrong-btn" id="blitz-btn-wrong" style="flex: 1; padding: 18px; border-radius: 12px; border: none; font-size: 1.2rem; font-weight: 700; cursor: pointer; background: rgba(239, 68, 68, 0.15); border: 2px solid rgb(239, 68, 68); color: rgb(239, 68, 68); transition: all 0.2s ease;">
+        ✗ YANLIŞ (←)
+      </button>
+      <button class="blitz-btn correct-btn" id="blitz-btn-correct" style="flex: 1; padding: 18px; border-radius: 12px; border: none; font-size: 1.2rem; font-weight: 700; cursor: pointer; background: rgba(34, 197, 94, 0.15); border: 2px solid rgb(34, 197, 94); color: rgb(34, 197, 94); transition: all 0.2s ease;">
+        ✓ DOĞRU (→)
+      </button>
+    </div>
+  `;
+
+  const duration = 3000;
+  const startTime = Date.now();
+  const timerBar = document.getElementById('blitz-timer-bar');
+
+  const updateTimer = () => {
+    const elapsed = Date.now() - startTime;
+    const remainingPercent = Math.max(0, 100 - (elapsed / duration) * 100);
+    if (timerBar) {
+      timerBar.style.width = remainingPercent + '%';
+    }
+    
+    if (elapsed >= duration) {
+      clearInterval(reflexInterval);
+      reflexInterval = null;
+      handleBlitzAnswer(null);
+    }
+  };
+
+  reflexInterval = setInterval(updateTimer, 50);
+
+  const handleBlitzAnswer = (answer) => {
+    if (isAnswerChecked) return;
+    
+    if (reflexTimer) {
+      clearTimeout(reflexTimer);
+      reflexTimer = null;
+    }
+    if (reflexInterval) {
+      clearInterval(reflexInterval);
+      reflexInterval = null;
+    }
+
+    selectedAnswer = answer;
+    
+    document.getElementById('btn-check').disabled = false;
+    checkAnswer();
+  };
+
+  const btnWrong = document.getElementById('blitz-btn-wrong');
+  const btnCorrect = document.getElementById('blitz-btn-correct');
+  
+  if (btnWrong) {
+    btnWrong.addEventListener('click', () => handleBlitzAnswer(false));
+    btnWrong.addEventListener('mouseenter', () => {
+      if (isAnswerChecked) return;
+      btnWrong.style.background = 'rgb(239, 68, 68)';
+      btnWrong.style.color = '#fff';
+    });
+    btnWrong.addEventListener('mouseleave', () => {
+      if (isAnswerChecked) return;
+      btnWrong.style.background = 'rgba(239, 68, 68, 0.15)';
+      btnWrong.style.color = 'rgb(239, 68, 68)';
+    });
+  }
+  if (btnCorrect) {
+    btnCorrect.addEventListener('click', () => handleBlitzAnswer(true));
+    btnCorrect.addEventListener('mouseenter', () => {
+      if (isAnswerChecked) return;
+      btnCorrect.style.background = 'rgb(34, 197, 94)';
+      btnCorrect.style.color = '#fff';
+    });
+    btnCorrect.addEventListener('mouseleave', () => {
+      if (isAnswerChecked) return;
+      btnCorrect.style.background = 'rgba(34, 197, 94, 0.15)';
+      btnCorrect.style.color = 'rgb(34, 197, 94)';
+    });
+  }
+
+  if (blitzKeyHandler) {
+    window.removeEventListener('keydown', blitzKeyHandler);
+  }
+
+  blitzKeyHandler = (e) => {
+    if (isAnswerChecked) return;
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      window.removeEventListener('keydown', blitzKeyHandler);
+      blitzKeyHandler = null;
+      handleBlitzAnswer(false);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      window.removeEventListener('keydown', blitzKeyHandler);
+      blitzKeyHandler = null;
+      handleBlitzAnswer(true);
+    }
+  };
+
+  window.addEventListener('keydown', blitzKeyHandler);
+}
+
+function showTFFeedback(question) {
+  const btnWrong = document.getElementById('blitz-btn-wrong');
+  const btnCorrect = document.getElementById('blitz-btn-correct');
+  
+  if (question.correctAnswer === true) {
+    if (btnCorrect) {
+      btnCorrect.style.background = 'var(--color-correct-bg)';
+      btnCorrect.style.color = 'var(--color-correct)';
+      btnCorrect.style.borderColor = 'var(--color-correct)';
+    }
+    if (selectedAnswer === false && btnWrong) {
+      btnWrong.style.background = 'var(--color-wrong-bg)';
+      btnWrong.style.color = 'var(--color-wrong)';
+      btnWrong.style.borderColor = 'var(--color-wrong)';
+    }
+  } else {
+    if (btnWrong) {
+      btnWrong.style.background = 'var(--color-correct-bg)';
+      btnWrong.style.color = 'var(--color-correct)';
+      btnWrong.style.borderColor = 'var(--color-correct)';
+    }
+    if (selectedAnswer === true && btnCorrect) {
+      btnCorrect.style.background = 'var(--color-wrong-bg)';
+      btnCorrect.style.color = 'var(--color-wrong)';
+      btnCorrect.style.borderColor = 'var(--color-wrong)';
+    }
+  }
+}
+
+// ── Projektör Modu (The Spotlight Match - spotlight) ──────────
+function renderSpotlight(container, question) {
+  const paragraph = question.paragraph;
+  const target = question.highlightChunk;
+  
+  let displayHtml = "";
+  const escapedTarget = target.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const regex = new RegExp(`(${escapedTarget})`, 'i');
+  const parts = paragraph.split(regex);
+  if (parts.length >= 3) {
+    const prefix = parts[0];
+    const matched = parts[1];
+    const suffix = parts.slice(2).join('');
+    displayHtml = `<span class="spotlight-dim-text">${prefix}</span>` + 
+                  `<span class="spotlight-bright">${matched}</span>` + 
+                  `<span class="spotlight-dim-text">${suffix}</span>`;
+  } else {
+    displayHtml = paragraph;
+  }
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="spotlight-option-card" data-index="${i}" style="padding: 16px; border-radius: 12px; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; text-align: center; width: 100%;">
+      ${opt}
+    </button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || 'Projektör Modu: Parlayan öbeğin Türkçe anlamını seçin!'}</p>
+    
+    <div class="spotlight-paragraph-container" style="text-align: left; position: relative; margin-bottom: 25px;">
+      ${displayHtml}
+    </div>
+    
+    <div class="spotlight-options-grid" style="display: grid; grid-template-columns: 1fr; gap: 12px; width: 100%;">
+      ${optionsHtml}
+    </div>
+  `;
+
+  container.querySelectorAll('.spotlight-option-card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      
+      const idx = parseInt(btn.dataset.index);
+      selectedAnswer = idx;
+      
+      document.getElementById('btn-check').disabled = false;
+      checkAnswer();
+    });
+  });
+}
+
+function showSpotlightFeedback(question) {
+  const options = document.querySelectorAll('.spotlight-option-card');
+  options.forEach(btn => {
+    const idx = parseInt(btn.dataset.index);
+    if (idx === question.correctIndex) {
+      btn.style.borderColor = 'var(--color-correct)';
+      btn.style.background = 'var(--color-correct-bg)';
+      btn.style.color = 'var(--color-correct)';
+    } else if (idx === selectedAnswer && idx !== question.correctIndex) {
+      btn.style.borderColor = 'var(--color-wrong)';
+      btn.style.background = 'var(--color-wrong-bg)';
+      btn.style.color = 'var(--color-wrong)';
+    }
+  });
+}
+
 function checkAnswer() {
   if (isAnswerChecked) return;
   isAnswerChecked = true;
@@ -4361,6 +4671,14 @@ function checkAnswer() {
         });
       }
       break;
+    case 'true-false':
+      isCorrect = selectedAnswer === question.correctAnswer;
+      showTFFeedback(question);
+      break;
+    case 'spotlight':
+      isCorrect = selectedAnswer === question.correctIndex;
+      showSpotlightFeedback(question);
+      break;
   }
 
   const isTargetUnit = question && question.translation ? true : false;
@@ -4414,7 +4732,7 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
+    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'fill-blank-text') {
       correctAnswerText = question.correct;
@@ -4424,9 +4742,17 @@ function checkAnswer() {
       correctAnswerText = question.correctOrder.join(' ');
     } else if (question.type === 'multiple-fill-blank') {
       correctAnswerText = question.corrects.join(', ');
+    } else if (question.type === 'true-false') {
+      correctAnswerText = question.correctAnswer ? 'DOĞRU' : 'YANLIŞ';
     }
 
-    if (isTargetUnit && question.translation && !wasTranslationCorrect) {
+    if (question.type === 'true-false') {
+      if (selectedAnswer === null) {
+        feedbackText.textContent = `Süre Doldu! Doğru cevap: ${correctAnswerText}`;
+      } else {
+        feedbackText.textContent = `Yanlış! Doğru cevap: ${correctAnswerText}`;
+      }
+    } else if (isTargetUnit && question.translation && !wasTranslationCorrect) {
       feedbackText.innerHTML = `<strong>Yanlış çeviri!</strong> Doğrusu:<br><span style="color: var(--color-correct); font-weight: 600;">${question.translation}</span>`;
     } else {
       feedbackText.textContent = `Doğru cevap: ${correctAnswerText}`;
@@ -4444,8 +4770,10 @@ function checkAnswer() {
       }
     }
 
-    // Hatalı cevaplarda gramatik açıklama pop-up'ını tetikle
-    showGrammarExplanationModal(question, selectedAnswer);
+    // Hatalı cevaplarda gramatik açıklama pop-up'ını tetikle (Hız Tüneli hariç)
+    if (question.type !== 'true-false') {
+      showGrammarExplanationModal(question, selectedAnswer);
+    }
   }
 
   saveState();
@@ -4560,53 +4888,79 @@ function completeReviewSession() {
 // DERS TAMAMLAMA
 // ============================================================
 function completeLesson() {
-  // Dersi tamamlanan listesine ekle
-  if (currentLesson.activeExerciseId) {
-    const exerciseKey = `${currentLesson.id}_${currentLesson.activeExerciseId}`;
-    if (!state.completedLessons.includes(exerciseKey)) {
-      state.completedLessons.push(exerciseKey);
-    }
-    // Eğer bu ders altındaki tüm alıştırmalar tamamlandıysa, dersin kendisini de tamamlandı olarak işaretle
-    const allExercisesCompleted = currentLesson.exercises.every(ex =>
-      state.completedLessons.includes(`${currentLesson.id}_${ex.id}`)
-    );
-    if (allExercisesCompleted && !state.completedLessons.includes(currentLesson.id)) {
-      state.completedLessons.push(currentLesson.id);
-    }
-  } else {
-    if (!state.completedLessons.includes(currentLesson.id)) {
-      state.completedLessons.push(currentLesson.id);
-    }
-  }
-
-  // Gece kuşu kontrolü
-  const hour = new Date().getHours();
-  if (hour >= 22 || hour < 6) {
-    state.nightOwlTriggered = true;
-  }
-
-  // Mükemmeliyetçi kontrolü
-  if (wrongCount === 0) {
-    state.perfectLessonTriggered = true;
-    updateDailyTaskProgress('perfect', 1);
-  }
-
-  updateDailyTaskProgress('lessons', 1);
-
-  saveState();
-
-  // Başarım kontrolü
-  const newAchievements = checkAchievements();
-
-  // Özet ekranı güncelle
   const total = currentQuizQuestions.length;
   const accuracy = Math.round((correctCount / total) * 100);
-  const earnedXP = correctCount * XP_PER_CORRECT;
+  const isSuccess = isLocalEnvironment() || accuracy >= 80;
+  
+  isCurrentExercisePassed = isSuccess;
+
+  let newAchievements = [];
+
+  if (isSuccess) {
+    // Dersi tamamlanan listesine ekle
+    if (currentLesson.activeExerciseId) {
+      const exerciseKey = `${currentLesson.id}_${currentLesson.activeExerciseId}`;
+      if (!state.completedLessons.includes(exerciseKey)) {
+        state.completedLessons.push(exerciseKey);
+      }
+      // Eğer bu ders altındaki tüm alıştırmalar tamamlandıysa, dersin kendisini de tamamlandı olarak işaretle
+      const allExercisesCompleted = currentLesson.exercises.every(ex =>
+        state.completedLessons.includes(`${currentLesson.id}_${ex.id}`)
+      );
+      if (allExercisesCompleted && !state.completedLessons.includes(currentLesson.id)) {
+        state.completedLessons.push(currentLesson.id);
+      }
+    } else {
+      if (!state.completedLessons.includes(currentLesson.id)) {
+        state.completedLessons.push(currentLesson.id);
+      }
+    }
+
+    // Gece kuşu kontrolü
+    const hour = new Date().getHours();
+    if (hour >= 22 || hour < 6) {
+      state.nightOwlTriggered = true;
+    }
+
+    // Mükemmeliyetçi kontrolü
+    if (wrongCount === 0) {
+      state.perfectLessonTriggered = true;
+      updateDailyTaskProgress('perfect', 1);
+    }
+
+    updateDailyTaskProgress('lessons', 1);
+    saveState();
+
+    // Başarım kontrolü
+    newAchievements = checkAchievements();
+  }
+
+  const earnedXP = isSuccess ? correctCount * XP_PER_CORRECT : 0;
 
   const exTitle = currentLesson.activeExerciseTitle ? ` - ${currentLesson.activeExerciseTitle}` : '';
-  document.getElementById('summary-lesson-name').textContent = `"${currentLesson.title}${exTitle}" alıştırmasını tamamladın!`;
-  document.getElementById('summary-xp').textContent = `+${earnedXP}`;
-  document.getElementById('summary-accuracy').textContent = `${accuracy}%`;
+  const trophyEl = document.querySelector('.summary-trophy');
+  const titleEl = document.querySelector('.summary-title');
+  const subtitleEl = document.getElementById('summary-lesson-name');
+  const xpEl = document.getElementById('summary-xp');
+  const accuracyEl = document.getElementById('summary-accuracy');
+  const continueBtn = document.getElementById('btn-summary-continue');
+
+  if (isSuccess) {
+    if (trophyEl) trophyEl.textContent = '🏆';
+    if (titleEl) titleEl.textContent = 'Tebrikler!';
+    if (subtitleEl) subtitleEl.textContent = `"${currentLesson.title}${exTitle}" alıştırmasını tamamladın!`;
+    if (xpEl) xpEl.textContent = `+${earnedXP}`;
+    if (continueBtn) continueBtn.textContent = 'DEVAM ET';
+  } else {
+    if (trophyEl) trophyEl.textContent = '❌';
+    if (titleEl) titleEl.textContent = 'Başarısız!';
+    if (subtitleEl) subtitleEl.textContent = `Bu alıştırmayı geçmek için en az %80 doğruluk oranı elde etmelisin. Tekrar deneyerek barajı geçebilirsin.`;
+    if (xpEl) xpEl.textContent = `+0`;
+    if (continueBtn) continueBtn.textContent = 'TEKRAR DENE';
+  }
+
+  if (accuracyEl) accuracyEl.textContent = `${accuracy}%`;
+
   // Yeni başarımları göster
   const summaryAch = document.getElementById('summary-achievements');
   const achList = document.getElementById('summary-achievement-list');
@@ -4690,6 +5044,7 @@ function toggleTheme() {
 // SEKME YÖNETİMİ
 // ============================================================
 function switchTab(tabId) {
+  if (!tabId) return;
   document.querySelectorAll('.nav-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tabId);
   });
@@ -4703,6 +5058,42 @@ function switchTab(tabId) {
   } else if (tabId === 'profile') {
     renderProfile();
   }
+}
+
+// ============================================================
+// BOŞ ALİŞTIRMALI DERS BULUCU (DEVELOPER TOOL)
+// ============================================================
+let lastVisitedEmptyLessonIndex = -1;
+
+function navigateToNextEmptyLesson() {
+  if (typeof lessons === 'undefined' || !lessons) return;
+
+  const emptyLessons = lessons.filter(l => {
+    return (!l.exercises || l.exercises.length === 0) && (!l.questions || l.questions.length === 0);
+  });
+
+  if (emptyLessons.length === 0) {
+    showToast("Eksik alıştırması olan ders kalmamış! 🎉", "success");
+    return;
+  }
+
+  lastVisitedEmptyLessonIndex = (lastVisitedEmptyLessonIndex + 1) % emptyLessons.length;
+  const targetLesson = emptyLessons[lastVisitedEmptyLessonIndex];
+
+  switchTab('lessons');
+
+  setTimeout(() => {
+    const btn = document.querySelector(`.lesson-node[data-lesson-id="${targetLesson.id}"]`);
+    if (btn) {
+      btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        btn.click();
+        showToast(`Boş Ders: ${targetLesson.title} - ${targetLesson.subtitle} (${lastVisitedEmptyLessonIndex + 1}/${emptyLessons.length})`, "info");
+      }, 400);
+    } else {
+      showToast(`Ders düğmesi bulunamadı: ${targetLesson.title}`, "error");
+    }
+  }, 100);
 }
 
 // ============================================================
@@ -5548,6 +5939,11 @@ function initEventListeners() {
 
   // Özet ekranı devam
   document.getElementById('btn-summary-continue').addEventListener('click', () => {
+    if (!isCurrentExercisePassed) {
+      startLesson(currentLesson.id, currentLesson.activeExerciseId);
+      return;
+    }
+
     updateTopBar();
     renderLessonTree();
     renderAchievements();
@@ -5631,9 +6027,19 @@ function initEventListeners() {
   // Sekmeler (Nav Tabs)
   document.querySelectorAll('.nav-tab').forEach(btn => {
     btn.addEventListener('click', () => {
-      switchTab(btn.dataset.tab);
+      if (btn.dataset.tab) {
+        switchTab(btn.dataset.tab);
+      }
     });
   });
+
+  // Dev Tool: Boş Ders Bul
+  const devTabBtn = document.getElementById('btn-next-empty-lesson');
+  if (devTabBtn) {
+    devTabBtn.addEventListener('click', () => {
+      navigateToNextEmptyLesson();
+    });
+  }
 
   // Mağaza Satın Alma Butonları
   document.getElementById('buy-hearts-btn').addEventListener('click', () => buyStoreItem('hearts', 50));
@@ -5768,6 +6174,67 @@ function initEventListeners() {
       }
     }
   });
+
+  // Son Düzenlemeler Kutusu (Recent Changes Box) Tıklama Dinleyicisi
+  const recentChangesBox = document.getElementById('recent-changes-box');
+  if (recentChangesBox) {
+    recentChangesBox.addEventListener('click', (e) => {
+      const item = e.target.closest('.recent-change-item');
+      if (!item) return;
+
+      const action = item.dataset.action;
+      const target = item.dataset.target;
+
+      if (action === 'lesson') {
+        const lessonId = parseInt(target, 10);
+        switchTab('lessons');
+        
+        setTimeout(() => {
+          const btn = document.querySelector(`.lesson-node[data-lesson-id="${lessonId}"]`);
+          if (btn) {
+            btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            btn.classList.add('navigation-highlight');
+            setTimeout(() => {
+              btn.click();
+            }, 600);
+            setTimeout(() => {
+              btn.classList.remove('navigation-highlight');
+            }, 2500);
+            showToast(`Derse gidildi: ${lessonId}. Ders`, "success");
+          } else {
+            showToast(`Ders bulunamadı: ${lessonId}. Ders`, "error");
+          }
+        }, 150);
+      } else if (action === 'element') {
+        if (target === '#btn-admin') {
+          switchTab('admin');
+          const adminBtn = document.getElementById('btn-admin');
+          if (adminBtn) {
+            adminBtn.classList.add('navigation-highlight');
+            setTimeout(() => {
+              adminBtn.classList.remove('navigation-highlight');
+            }, 2000);
+          }
+          showToast(`Admin Sekmesi Açıldı`, "success");
+        } else if (target === '#placement-banner') {
+          switchTab('lessons');
+          setTimeout(() => {
+            const banner = document.querySelector('#placement-banner');
+            if (banner) {
+              banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              banner.classList.add('navigation-highlight');
+              setTimeout(() => {
+                banner.classList.remove('navigation-highlight');
+              }, 2500);
+              showToast(`Seviye Sınavı Kutusuna Gidildi`, "success");
+            } else {
+              showToast(`Sınav Kutusu Bulunamadı! (Seviyeniz zaten belirlenmiş olabilir)`, "info");
+            }
+          }, 150);
+        }
+      }
+    });
+  }
 }
 
 // ============================================================
@@ -6222,12 +6689,12 @@ function submitReport(question, errorType, comment) {
   localStorage.setItem('amok_question_reports', JSON.stringify(reports));
   
   // E-posta bildirimi gönder
-  sendReportEmail(newReport);
+  sendReportEmail(newReport, question);
   
   showToast('Hata bildiriminiz gönderildi. Teşekkür ederiz! 🙏', 'success');
 }
 
-function sendReportEmail(report) {
+function sendReportEmail(report, question) {
   if (typeof OBFUSCATED_EMAIL === 'undefined' || !OBFUSCATED_EMAIL) return;
 
   try {
@@ -6237,6 +6704,27 @@ function sendReportEmail(report) {
     // FormSubmit AJAX API endpoint
     const url = `https://formsubmit.co/ajax/${emailAddress}`;
     
+    // Generate AI Prompt
+    const qClean = question ? { ...question } : {};
+    delete qClean._dynamicType;
+    
+    const aiPrompt = `[HATA BİLDİRİMİ - YAPAY ZEKA GELİŞTİRİCİ PROMPTU]
+Lütfen aşağıdaki sorudaki hatayı düzelt:
+
+- Ders Bilgisi: ${report.lessonTitle}
+- Soru ID: ${report.questionId}
+- Soru Türü: ${report.questionType}
+- Bildirilen Hata Türü: ${translateErrorType(report.errorType)}
+- Kullanıcı Açıklaması: "${report.userComment}"
+
+Mevcut Soru Verisi (JSON):
+${JSON.stringify(qClean, null, 2)}
+
+Yapılması Gerekenler:
+1. data.js dosyasında "${report.questionId}" ID'li soruyu bulun.
+2. Kullanıcının belirttiği "${report.userComment}" açıklamasını inceleyip hatayı (çeviri, imla, yanlış cevap anahtarı veya seçenekler) düzeltin.
+3. Sorudaki gerekli alanları (en, tr, options, word, trWord, correctIndex vb.) güncelleyip dosyayı kaydedin.`;
+
     const body = {
       _subject: `AMOK Soru Hata Bildirimi - ${report.lessonTitle}`,
       "Ders Bilgisi": report.lessonTitle,
@@ -6245,6 +6733,7 @@ function sendReportEmail(report) {
       "Soru Metni": report.questionPrompt,
       "Hata Türü": translateErrorType(report.errorType),
       "Kullanıcı Açıklaması": report.userComment,
+      "Yapay Zeka Hazır Promptu (AI Ready Prompt)": aiPrompt,
       "Bildiren Kullanıcı": report.username,
       "Bildirim Zamanı": report.timestamp
     };
@@ -6381,6 +6870,47 @@ function initNotifications() {
 // BAŞLATMA
 // ============================================================
 function init() {
+  // Show dev tools tab only if running locally (localhost / 127.0.0.1 / Class A, B, C private IPs / file protocol)
+  const checkIsLocal = () => {
+    const hn = window.location.hostname;
+    const proto = window.location.protocol;
+    
+    if (proto === 'file:' || !hn) return true;
+    if (hn === 'localhost' || hn === '127.0.0.1' || hn === '0.0.0.0' || hn === '[::1]') return true;
+    
+    if (hn.startsWith('192.168.')) return true;
+    if (hn.startsWith('10.')) return true;
+    if (hn.startsWith('172.')) {
+      const parts = hn.split('.');
+      if (parts.length >= 2) {
+        const sec = parseInt(parts[1], 10);
+        if (sec >= 16 && sec <= 31) return true;
+      }
+    }
+    
+    if (hn.endsWith('.local') || hn.endsWith('.lan')) return true;
+    return false;
+  };
+
+  const isLocal = checkIsLocal();
+  if (isLocal) {
+    const devTab = document.getElementById('btn-next-empty-lesson');
+    if (devTab) devTab.style.setProperty('display', 'flex', 'important');
+    const adminTab = document.getElementById('btn-admin');
+    if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
+    const recentBox = document.getElementById('recent-changes-box');
+    if (recentBox) recentBox.style.setProperty('display', 'block', 'important');
+  } else {
+    const devTab = document.getElementById('btn-next-empty-lesson');
+    if (devTab) devTab.remove();
+    const adminTab = document.getElementById('btn-admin');
+    if (adminTab) adminTab.remove();
+    const adminContent = document.getElementById('tab-content-admin');
+    if (adminContent) adminContent.remove();
+    const recentBox = document.getElementById('recent-changes-box');
+    if (recentBox) recentBox.remove();
+  }
+
   initTheme();
   loadState();
   initAuth();

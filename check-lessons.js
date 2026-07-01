@@ -40,7 +40,7 @@ let emptyLessonsCount = 0;
 
 let normalUnitIndex = 0;
 const unitDisplayNames = {};
-[...units].sort((a, b) => a.id - b.id).forEach(u => {
+[...units].forEach(u => {
   if (u.title.startsWith("Ara Bölüm")) {
     unitDisplayNames[u.id] = u.title;
   } else {
