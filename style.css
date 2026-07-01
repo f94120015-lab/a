@@ -2554,8 +2554,8 @@ input {
   }
   
   .sidebar-brand {
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    border: none;
     border-radius: var(--radius-lg);
     padding: 20px 16px;
     display: flex;
@@ -2564,14 +2564,13 @@ input {
     gap: 12px;
     margin-bottom: 28px;
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
   }
 
   .sidebar-brand:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-lg);
   }
   
   .sidebar-logo-frame {
@@ -2610,7 +2609,7 @@ input {
     font-weight: 800;
     margin: 4px 0 0 0;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary-hover) 100%);
+    background: #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -2619,9 +2618,9 @@ input {
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 0.62rem;
     font-weight: 800;
-    color: var(--accent-primary-hover);
-    background: var(--accent-primary-light);
-    border: 1px solid rgba(126, 200, 200, 0.25);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 4px 10px;
     border-radius: 20px;
     letter-spacing: 0.06em;
@@ -2669,9 +2668,9 @@ input {
   }
   
   .sidebar-menu .nav-tab.active {
-    background: var(--accent-primary-light);
-    color: var(--accent-primary);
-    box-shadow: inset 4px 0 0 var(--accent-primary);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    color: #fff;
+    box-shadow: var(--shadow-md);
   }
   
   .home-main-wrapper {
@@ -3065,13 +3064,28 @@ input {
 }
 
 /* ─── Banner Stilleri ────────────────────────────────────── */
-.placement-banner,
+.placement-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+  animation: fadeIn 0.4s ease;
+  gap: 16px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 .review-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
   border-radius: var(--radius-lg);
   padding: 20px 24px;
   margin-bottom: 24px;
@@ -3091,7 +3105,7 @@ input {
 .placement-banner h3,
 .review-banner h3 {
   font-family: var(--font-heading);
-  color: var(--accent-primary);
+  color: #fff;
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 4px;
@@ -3101,10 +3115,38 @@ input {
 
 .placement-banner p,
 .review-banner p {
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 0.95rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.placement-banner .btn {
+  background: #fff !important;
+  color: #6d28d9 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.placement-banner .btn:hover {
+  background: #f3f4f6 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.review-banner .btn {
+  background: #fff !important;
+  color: #059669 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.review-banner .btn:hover {
+  background: #f3f4f6 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
 @media (max-width: 600px) {
