@@ -4225,18 +4225,143 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   };
   mc2.correctIndex = mc2.options.indexOf("Bakteriler canlı organizmalardır.");
 
+  // Additional dynamic questions for Ex 1 (Matching and Word-Bank)
+  const match2 = {
+    id: `u${unitId}l${lessonId}_match_2`,
+    type: "matching",
+    prompt: "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
+    pairs: [
+      { left: "sterile container", right: "steril kap" },
+      { left: "initial reaction", right: "ilk reaksiyon" },
+      { left: "positive response", right: "olumlu tepki" },
+      { left: "slow process", right: "yavaş süreç" },
+      { left: "laboratory research", right: "laboratuvar araştırması" }
+    ]
+  };
+
+  const targetWords5 = ["Bu", "koşullar", "altında"];
+  const wb5 = {
+    id: `u${unitId}l${lessonId}_layered_5`,
+    type: "word-bank",
+    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"Under these conditions\"</strong>",
+    translation: "Under these conditions",
+    words: shuffle([...targetWords5, "üzerinde", "deneyler", "aktif"]),
+    correctOrder: targetWords5,
+    enSentence: "Under these conditions",
+    isEngToTr: true
+  };
+
+  const targetWords6 = ["nihai", "sonuç", "beklenen", "bir", "çıktıdır"];
+  const wb6 = {
+    id: `u${unitId}l${lessonId}_layered_6`,
+    type: "word-bank",
+    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the final result is an expected outcome\"</strong>",
+    translation: "the final result is an expected outcome",
+    words: shuffle([...targetWords6, "izole", "saf", "tepkidir"]),
+    correctOrder: targetWords6,
+    enSentence: "the final result is an expected outcome",
+    isEngToTr: true
+  };
+
+  const targetWords7 = ["izole", "edilmiş", "numune", "saf", "bir", "maddedir"];
+  const wb7 = {
+    id: `u${unitId}l${lessonId}_layered_7`,
+    type: "word-bank",
+    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the isolated specimen is a pure substance\"</strong>",
+    translation: "the isolated specimen is a pure substance",
+    words: shuffle([...targetWords7, "aktif", "kararsız", "izotoptur"]),
+    correctOrder: targetWords7,
+    enSentence: "the isolated specimen is a pure substance",
+    isEngToTr: true
+  };
+
+  const targetWords8 = ["Bu", "koşullar", "altında", "nihai", "sonuç", "beklenen", "bir", "çıktıdır", "ve", "izole", "edilmiş", "numune", "saf", "bir", "maddedir"];
+  const wb8 = {
+    id: `u${unitId}l${lessonId}_layered_8`,
+    type: "word-bank",
+    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.\"</strong>",
+    translation: "Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.",
+    words: shuffle([...targetWords8, "aktif", "hızlı", "izotop", "tepkidir"]),
+    correctOrder: targetWords8,
+    enSentence: "Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.",
+    isEngToTr: true
+  };
+
+  // Additional dynamic questions for Ex 2 (Gap Fill and Multiple Choice)
+  const gap4 = {
+    id: `u${unitId}l${lessonId}_gap_4`,
+    type: "fill-blank",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "In most cases, the experimental subject is a ___ variable.",
+    options: ["critical", "critically", "criticism", "criticize"],
+    correctIndex: 0,
+    translation: "Çoğu durumda, deneysel denek kritik bir değişkendir."
+  };
+
+  const gap5 = {
+    id: `u${unitId}l${lessonId}_gap_5`,
+    type: "fill-blank",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "In addition, the final measurement is a ___ calculation.",
+    options: ["precise", "precisely", "precision", "preciseness"],
+    correctIndex: 0,
+    translation: "Buna ek olarak, nihai ölçüm kesin bir hesaplamadır."
+  };
+
+  const gap6 = {
+    id: `u${unitId}l${lessonId}_gap_6`,
+    type: "fill-blank-dropdown",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (durum bildiren sıfat yapısına dikkat edin):",
+    sentence: "Within the sterile container, the isolated specimen is a ___ substance.",
+    options: ["pure", "purely", "purity", "purify"],
+    correctIndex: 0,
+    translation: "Steril kap içerisinde, izole edilmiş numune saf bir maddedir."
+  };
+
+  const mc3 = {
+    id: `u${unitId}l${lessonId}_mc_3`,
+    type: "multiple-choice",
+    prompt: "\"This active specimen is a dangerous substance.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "Bu aktif numune tehlikeli bir maddedir.",
+      "Bu numune aktif ve tehlikelidir.",
+      "Aktif numuneler tehlike yaratır.",
+      "Bu numuneyi aktif hale getirmek tehlikelidir."
+    ]),
+    correctIndex: 0,
+    enSentence: "This active specimen is a dangerous substance.",
+    isEngToTr: true
+  };
+  mc3.correctIndex = mc3.options.indexOf("Bu aktif numune tehlikeli bir maddedir.");
+
+  const mc4 = {
+    id: `u${unitId}l${lessonId}_mc_4`,
+    type: "multiple-choice",
+    prompt: "\"The initial response is a negative result.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "İlk tepki olumsuz bir sonuçtur.",
+      "Olumsuz sonuçlar ilk tepkiyi belirler.",
+      "İlk tepkinin olumsuz olması normaldir.",
+      "Sonuç ilk tepkiden daha olumsuzdur."
+    ]),
+    correctIndex: 0,
+    enSentence: "The initial response is a negative result.",
+    isEngToTr: true
+  };
+  mc4.correctIndex = mc4.options.indexOf("İlk tepki olumsuz bir sonuçtur.");
+
   return [
     {
       id: `u${unitId}l${lessonId}ex1`,
       title: "Alıştırma 1: Söz Dizimsel Refleks İnşası",
       description: "Öbek Eşleştirme ve Katmanlı Çeviri İnşası",
-      questions: [match1, wb1, wb2, wb3, wb4]
+      questions: [match1, wb1, wb2, wb3, wb4, match2, wb5, wb6, wb7, wb8]
     },
     {
       id: `u${unitId}l${lessonId}ex2`,
       title: "Alıştırma 2: Akademik Yapı ve Çeviri Testi",
       description: "Boşluk Doldurma ve Çoktan Seçmeli Bağlamsal Çeviri",
-      questions: [gap1, gap2, gap3, mc1, mc2]
+      questions: [gap1, gap2, gap3, mc1, mc2, gap4, gap5, gap6, mc3, mc4]
     }
   ];
 }
