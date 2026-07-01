@@ -4281,6 +4281,56 @@ function buildUnit6Lesson5Exercises(unitId, lessonId) {
   ];
 }
 
+function buildUnitReviewExercises(unitId, lessonId, qPool) {
+  if (!qPool || qPool.length === 0) {
+    return [
+      {
+        id: `u${unitId}l${lessonId}_ex1`,
+        title: "Alıştırma 1: Bölüm Sonu Değerlendirme (Karma Test)",
+        description: "Bölümdeki konulardan oluşan karma değerlendirme testi.",
+        questions: []
+      }
+    ];
+  }
+
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  const shuffledPool = shuffle(qPool);
+  
+  const selectedQuestions = [];
+  const seenSentences = new Set();
+  
+  for (const q of shuffledPool) {
+    if (selectedQuestions.length >= 20) break;
+    const sentenceKey = q.en || q.sentence || q.prompt;
+    if (sentenceKey && !seenSentences.has(sentenceKey)) {
+      seenSentences.add(sentenceKey);
+      
+      const copiedQ = JSON.parse(JSON.stringify(q));
+      copiedQ.id = `u${unitId}l${lessonId}_rev_${selectedQuestions.length}`;
+      selectedQuestions.push(copiedQ);
+    }
+  }
+  
+  // Fallback
+  if (selectedQuestions.length < 20) {
+    for (const q of shuffledPool) {
+      if (selectedQuestions.length >= 20) break;
+      const copiedQ = JSON.parse(JSON.stringify(q));
+      copiedQ.id = `u${unitId}l${lessonId}_rev_${selectedQuestions.length}`;
+      selectedQuestions.push(copiedQ);
+    }
+  }
+
+  return [
+    {
+      id: `u${unitId}l${lessonId}_ex1`,
+      title: "Alıştırma 1: Bölüm Sonu Değerlendirme (Karma Test)",
+      description: "Bölümdeki konulardan oluşan 20 soruluk karma değerlendirme testi.",
+      questions: selectedQuestions
+    }
+  ];
+}
+
 function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -65087,6 +65137,25 @@ const unitSentencesMap = {
   }
 };
 
+// Pre-process rawTopics to append a karma review lesson to every unit with 3 or more lessons
+rawTopics.forEach(topic => {
+  topic.originalNumLessons = topic.numLessons;
+  if (topic.id !== 6 && topic.numLessons >= 3) {
+    topic.numLessons += 1;
+    if (topic.subtitles) {
+      const letter = String.fromCharCode(65 + topic.subtitles.length);
+      topic.subtitles.push(`${letter}. Bölüm Sonu Karma Değerlendirme (Sayfa Özeti)`);
+    }
+    if (topic.formulas) {
+      topic.formulas.push({
+        formula: "Karma Test",
+        example: "Bölüm Sonu Genel Tekrar",
+        description: "Bu bölümdeki tüm yapıların karışık olarak sunulduğu genel değerlendirme ve pekiştirme testi."
+      });
+    }
+  }
+});
+
 let displayLessonCounter = 1;
 rawTopics.forEach((topic, uIdx) => {
   let unitTitle = topic.title || "";
@@ -65157,7 +65226,28 @@ rawTopics.forEach((topic, uIdx) => {
     let lessonExercises = null;
     const unitSentsObj = unitSentencesMap[unitId];
 
-    if (unitSentsObj && unitSentsObj[lIdx + 1]) {
+    const isLastReviewLesson = (topic.originalNumLessons !== undefined && topic.numLessons > topic.originalNumLessons) && (lIdx === numLessons - 1);
+
+    if (isLastReviewLesson) {
+      const qPool = [];
+      for (let prevL = 1; prevL <= topic.originalNumLessons; prevL++) {
+        const prevData = unitSentsObj ? unitSentsObj[prevL] : null;
+        if (prevData) {
+          if (Array.isArray(prevData)) {
+            prevData.forEach(item => {
+              if (item.en && item.tr) qPool.push(item);
+            });
+          } else if (prevData.exercises) {
+            prevData.exercises.forEach(ex => {
+              if (ex.questions) {
+                ex.questions.forEach(q => qPool.push(q));
+              }
+            });
+          }
+        }
+      }
+      lessonExercises = buildUnitReviewExercises(unitId, lessonId, qPool);
+    } else if (unitSentsObj && unitSentsObj[lIdx + 1]) {
       const data = unitSentsObj[lIdx + 1];
       if (data && typeof data === 'object' && !Array.isArray(data) && data.exercises) {
         // Ders altında birden fazla alıştırma (exercise) tanımlanmış
