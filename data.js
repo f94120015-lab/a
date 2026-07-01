@@ -3034,24 +3034,29 @@ const unit1Lesson2Exercises = {
       title: "Alıştırma 4: Orta Yapılar II",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (46-60)",
       questions: build15Questions(unit1Lesson2SentencesRaw.slice(45, 60), 1, 2, 4)
-    },
+    }
+  ]
+};
+
+const unit1Lesson2Backups = {
+  exercises: [
     {
-      id: "u1l2ex5",
-      title: "Alıştırma 5: İleri Yapılar I",
+      id: "u1l8ex1",
+      title: "Alıştırma 1: İleri Yapılar I",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (61-75)",
-      questions: build15Questions(unit1Lesson2SentencesRaw.slice(60, 75), 1, 2, 5)
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(60, 75), 1, 8, 1)
     },
     {
-      id: "u1l2ex6",
-      title: "Alıştırma 6: İleri Yapılar II",
+      id: "u1l8ex2",
+      title: "Alıştırma 2: İleri Yapılar II",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (76-90)",
-      questions: build15Questions(unit1Lesson2SentencesRaw.slice(75, 90), 1, 2, 6)
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(75, 90), 1, 8, 2)
     },
     {
-      id: "u1l2ex7",
-      title: "Alıştırma 7: Karmaşık Yapılar",
+      id: "u1l8ex3",
+      title: "Alıştırma 3: Karmaşık Yapılar",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası (91-105)",
-      questions: build15Questions(unit1Lesson2SentencesRaw.slice(90, 105), 1, 2, 7)
+      questions: build15Questions(unit1Lesson2SentencesRaw.slice(90, 105), 1, 8, 3)
     }
   ]
 };
@@ -17812,7 +17817,7 @@ const rawTopics = [
     title: "I. İsim ve Edat Takımları (Sayfa 13)",
     desc: "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
     icon: "👋",
-    numLessons: 7,
+    numLessons: 8,
     formulas: [
       { 
         formula: "", 
@@ -17828,7 +17833,8 @@ const rawTopics = [
       { formula: "Noun + of + Noun", example: "The invention of fire: Ateşin icadı" },
       { formula: "Noun + from + Noun", example: "A student from England: İngiltere'den bir öğrenci" },
       { formula: "Noun + Prepositional Phrase", example: "the house on the corner: köşedeki ev / köşede olan ev / köşede bulunan ev (Edat takımı önündeki ismi tamamlar - çevrilirken '-ki', '-olan', '-bulunan' eklenebilir)" },
-      { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" }
+      { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" },
+      { formula: "Yedek Alıştırmalar", example: "Daha sonra kullanılacak yedekler", description: "Bu ders, bu ünitedeki diğer derslerden taşınan ve ileride kullanılmak üzere yedeklenen alıştırmaları içerir." }
     ],
     subtitles: [
       "Giriş. İsim ve Edat Takımlarına Giriş (Sayfa 13)",
@@ -17837,7 +17843,8 @@ const rawTopics = [
       "C. İsim + of + isim (Sayfa 16)",
       "D. İsim + from + isim (Sayfa 17)",
       "E. İsim + edat takımı (Sayfa 13)",
-      "F. İsim + edat takımı + edat takımı (Sayfa 19)"
+      "F. İsim + edat takımı + edat takımı (Sayfa 19)",
+      "G. Yedekler"
     ]
   },
 {
@@ -18731,21 +18738,6 @@ const rawTopics = [
       "be about to (-mek üzere olmak)",
       "be certain to (kesinlikle ... yapacak olmak)",
       "Karma Test"
-    ]
-  },
-  {
-    id: 999,
-    startLessonId: 9990,
-    originalIndex: 99,
-    title: "Yedekler",
-    desc: "Daha sonra kullanılmak üzere yedeklenen alıştırmalar",
-    icon: "💾",
-    numLessons: 1,
-    subtitles: [
-      "A. Yedek Alıştırmalar"
-    ],
-    formulas: [
-      { formula: "Yedek Alıştırmalar", example: "Geçici olarak saklanan alıştırma grupları", description: "Bu bölüm, diğer ünitelerden taşınan ve ileride kullanılmak üzere yedeklenen alıştırmaları içerir." }
     ]
   }
 ];
@@ -44369,7 +44361,8 @@ const unitSentencesMap = {
     4: unit1Lesson4Exercises,
     5: unit1Lesson5Exercises,
     6: unit1Lesson6Exercises,
-    7: unit1Lesson7Exercises
+    7: unit1Lesson7Exercises,
+    8: unit1Lesson2Backups
   },
   2: {
     1: unit2Lesson1Exercises,
@@ -44405,7 +44398,10 @@ const unitSentencesMap = {
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 6, 50),
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 7, 60),
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 8, 70),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 9, 80)
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 9, 80),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 10, 90),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 11, 100),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 12, 110)
       ]
     }
   },
@@ -65145,15 +65141,6 @@ const unitSentencesMap = {
         ]
       }
     ]
-    }
-  },
-  999: {
-    1: {
-      exercises: [
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 1, 90),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 2, 100),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 3, 110)
-      ]
     }
   }
 };
