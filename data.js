@@ -4095,6 +4095,192 @@ const unit6Lesson4SentencesRaw = [
 // Correcting the blank for "The machine is in the factory" in unit6Lesson4SentencesRaw
 unit6Lesson4SentencesRaw[3].blank = "The machine is in the ___";
 
+const unit6Lesson5SentencesRaw = [
+  { en: "The statement is a summary.", tr: "İfade bir özettir.", word: "summary", trWord: "özet", blank: "The statement is a ___." },
+  { en: "The document is a contract.", tr: "Belge bir sözleşmedir.", word: "contract", trWord: "sözleşme", blank: "The document is a ___." },
+  { en: "The outcome is a guarantee.", tr: "Sonuç bir garantidir.", word: "guarantee", trWord: "garanti", blank: "The outcome is a ___." },
+  { en: "The respondent is a lawyer.", tr: "Katılımcı bir avukattır.", word: "lawyer", trWord: "avukat", blank: "The respondent is a ___." },
+  { en: "The journal is a source.", tr: "Dergi bir kaynaktır.", word: "source", trWord: "kaynak", blank: "The journal is a ___." },
+  { en: "The explanation is wrong.", tr: "Açıklama yanlıştır.", word: "wrong", trWord: "yanlış", blank: "The explanation is ___." },
+  { en: "The assessment is important.", tr: "Değerlendirme önemlidir.", word: "important", trWord: "önemli", blank: "The assessment is ___." },
+  { en: "The method is expensive.", tr: "Yöntem pahalıdır.", word: "expensive", trWord: "pahalı", blank: "The method is ___." },
+  { en: "The outcomes are favourable.", tr: "Sonuçlar olumludur.", word: "favourable", trWord: "olumlu", blank: "The outcomes are ___." },
+  { en: "The experiments are slow.", tr: "Deneyler yavaştır.", word: "slow", trWord: "yavaş", blank: "The experiments are ___." },
+  { en: "The respondent is a successful doctor.", tr: "Katılımcı başarılı bir doktordur.", word: "successful", trWord: "başarılı", blank: "The respondent is a ___ doctor." },
+  { en: "The journal is a reliable source.", tr: "Dergi güvenilir bir kaynaktır.", word: "reliable", trWord: "güvenilir", blank: "The journal is a ___ source." },
+  { en: "The contract is a short document.", tr: "Sözleşme kısa bir belgedir.", word: "short", trWord: "kısa", blank: "The contract is a ___ document." },
+  { en: "The analysis is an easy procedure.", tr: "Analiz kolay bir prosedürdür.", word: "easy", trWord: "kolay", blank: "The analysis is an ___ procedure." },
+  { en: "The factory is a modern building.", tr: "Fabrika modern bir binadır.", word: "modern", trWord: "modern", blank: "The factory is a ___ building." },
+  { en: "The substances are in the test-tube.", tr: "Maddeler deney tüpündedir.", word: "test-tube", trWord: "deney tüpü", blank: "The substances are in the ___." },
+  { en: "The professor is at the office.", tr: "Profesör ofistedir.", word: "office", trWord: "ofis", blank: "The professor is at the ___." },
+  { en: "The documents are on my table.", tr: "Belgeler masamın üzerindedir.", word: "table", trWord: "masa", blank: "The documents are on my ___." },
+  { en: "The dictionary is in the corner.", tr: "Sözlük köşededir.", word: "corner", trWord: "köşe", blank: "The dictionary is in the ___." },
+  { en: "The doctor is in the hospital.", tr: "Doktor hastanededir.", word: "hospital", trWord: "hastane", blank: "The doctor is in the ___." }
+];
+
+function buildUnit6Lesson5Exercises(unitId, lessonId) {
+  const qList = [];
+  const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
+  const sentences = unit6Lesson5SentencesRaw;
+
+  const getMcDistractors = (s, isTr) => {
+    const targetVal = isTr ? s.tr : s.en;
+    const list = sentences.filter(item => (isTr ? item.tr : item.en) !== targetVal).map(item => isTr ? item.tr : item.en);
+    const shuffled = shuffle([...new Set(list)]);
+    return shuffled.slice(0, 3);
+  };
+
+  const getWbDistractors = (targetWords, isTr) => {
+    const list = sentences.map(s => (isTr ? s.tr : s.en).split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""))).flat();
+    const unique = [...new Set(list)].filter(w => !targetWords.includes(w));
+    const shuffled = shuffle(unique);
+    while (shuffled.length < 3) {
+      shuffled.push(isTr ? "ve" : "the");
+    }
+    return shuffled.slice(0, 3);
+  };
+
+  // 1. Matching (2 questions)
+  qList.push({
+    id: `u${unitId}l${lessonId}_match_1`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: sentences.slice(0, 4).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  qList.push({
+    id: `u${unitId}l${lessonId}_match_2`,
+    type: "matching",
+    prompt: "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+    pairs: sentences.slice(4, 8).map(s => ({
+      left: s.trWord,
+      right: s.word
+    }))
+  });
+
+  // 2. Multiple Choice (6 questions)
+  // 3 Eng -> Tr
+  for (let i = 8; i < 11; i++) {
+    const s = sentences[i];
+    const dist = getMcDistractors(s, true);
+    const options = shuffle([s.tr, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_mc_${i}`,
+      type: "multiple-choice",
+      prompt: `"${s.en}" cümlesinin Türkçe karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.tr),
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  // 3 Tr -> Eng
+  for (let i = 11; i < 14; i++) {
+    const s = sentences[i];
+    const dist = getMcDistractors(s, false);
+    const options = shuffle([s.en, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_mc_${i}`,
+      type: "multiple-choice",
+      prompt: `"${s.tr}" cümlesinin İngilizce karşılığı hangisidir?`,
+      options: options,
+      correctIndex: options.indexOf(s.en),
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 3. Word Bank (8 questions)
+  // 4 Eng -> Tr
+  for (let i = 14; i < 18; i++) {
+    const s = sentences[i];
+    const targetWords = s.tr.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, true);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_wb_${i}`,
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: s.en,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  // 4 Tr -> Eng
+  for (let i = 18; i < 20; i++) {
+    const s = sentences[i];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_wb_${i}`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+  for (let i = 0; i < 2; i++) {
+    const s = sentences[i];
+    const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,""));
+    const dist = getWbDistractors(targetWords, false);
+    const words = shuffle([...targetWords, ...dist]);
+    qList.push({
+      id: `u${unitId}l${lessonId}_wb_extra_${i}`,
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: s.tr,
+      words: words,
+      correctOrder: targetWords,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  // 4. Translation Text (4 questions)
+  // 2 Eng -> Tr
+  for (let i = 2; i < 4; i++) {
+    const s = sentences[i];
+    qList.push({
+      id: `u${unitId}l${lessonId}_tx_${i}`,
+      type: "translation-text",
+      prompt: `"${s.en}" ifadesini Türkçe'ye çevirin:`,
+      correctSentence: s.tr,
+      enSentence: s.en,
+      isEngToTr: true
+    });
+  }
+  // 2 Tr -> Eng
+  for (let i = 4; i < 6; i++) {
+    const s = sentences[i];
+    qList.push({
+      id: `u${unitId}l${lessonId}_tx_${i}`,
+      type: "translation-text",
+      prompt: `"${s.tr}" ifadesini İngilizce'ye çevirin:`,
+      correctSentence: s.en,
+      enSentence: s.en,
+      isEngToTr: false
+    });
+  }
+
+  return [
+    {
+      id: `u${unitId}l${lessonId}_ex1`,
+      title: "Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)",
+      description: "İlk 4 dersin yapılarından oluşan 20 soruluk karma değerlendirme testi.",
+      questions: qList
+    }
+  ];
+}
+
 function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
@@ -17553,18 +17739,20 @@ const rawTopics = [
     title: "VI. Yapılar (Sayfa 1)",
     desc: "Özne + Olmak Fiili + İsim/Sıfat/Sıfat+İsim/Edat Takımı ile temel cümle yapıları",
     icon: "⭐",
-    numLessons: 4,
+    numLessons: 5,
     formulas: [
       { formula: "Subject + Be + Noun", example: "The student is a doctor: Öğrenci bir doktordur" },
       { formula: "Subject + Be + Adjective", example: "The ground is wet: Zemin ıslaktır" },
       { formula: "Subject + Be + Adjective + Noun", example: "The student is an English doctor: Öğrenci İngiliz bir doktordur" },
-      { formula: "Subject + Be + Prepositional Phrase", example: "The student is in the train: Öğrenci trendedir" }
+      { formula: "Subject + Be + Prepositional Phrase", example: "The student is in the train: Öğrenci trendedir" },
+      { formula: "Karma Yapılar", example: "Bölüm Sonu Karma Test", description: "Bölüm 1'deki ilk 4 dersin yapılarının (isim, sıfat, sıfat+isim ve edat takımları) karışık olarak sunulduğu genel tekrar ve pekiştirme testi." }
     ],
     subtitles: [
       "A. Özne + olmak + isim (Sayfa 1)",
       "B. Özne + olmak + sıfat (Sayfa 2)",
       "C. Özne + olmak + sıfat + isim (Sayfa 4)",
-      "D. Özne + olmak + edat takımı (Sayfa 6)"
+      "D. Özne + olmak + edat takımı (Sayfa 6)",
+      "E. Bölüm Sonu Karma Değerlendirme (Sayfa Özeti)"
     ]
   },
 {
@@ -44138,7 +44326,8 @@ const unitSentencesMap = {
     1: { exercises: [buildCustom15QuestionExercises(unit6Lesson1SentencesRaw, 6, 16, 1, 0), buildCustom15QuestionExercises(unit6Lesson1SentencesRaw, 6, 16, 2, 5)] },
     2: { exercises: [buildCustom15QuestionExercises(unit6Lesson2SentencesRaw, 6, 17, 1, 0), buildCustom15QuestionExercises(unit6Lesson2SentencesRaw, 6, 17, 2, 1)] },
     3: { exercises: buildPedagogicalLesson17Exercises(6, 18) },
-    4: { exercises: [buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 1, 0), buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 2, 1)] }
+    4: { exercises: [buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 1, 0), buildCustom15QuestionExercises(unit6Lesson4SentencesRaw, 6, 19, 2, 1)] },
+    5: { exercises: buildUnit6Lesson5Exercises(6, 20) }
   },
   7: {
     1: {
