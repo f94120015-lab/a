@@ -4098,21 +4098,39 @@ unit6Lesson4SentencesRaw[3].blank = "The machine is in the ___";
 function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
   
-  // Section 1: In-Context Chunk Matching
+  // ==========================================
+  // EXERCISE 1: 15 QUESTIONS (2 MATCHING + 13 WORD-BANK)
+  // ==========================================
+
+  // Matching 1
   const match1 = {
     id: `u${unitId}l${lessonId}_match_1`,
     type: "matching",
     prompt: "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
     pairs: [
-      { left: "living organisms", right: "canlı organizmalar" },
       { left: "experimental subject", right: "deneysel denek" },
       { left: "active variable", right: "aktif değişken" },
       { left: "expected outcome", right: "beklenen çıktı" },
-      { left: "unstable isotope", right: "kararsız izotop" }
+      { left: "unstable isotope", right: "kararsız izotop" },
+      { left: "sterile container", right: "steril kap" }
     ]
   };
 
-  // Section 2: Layered Translation Builder
+  // Matching 2
+  const match2 = {
+    id: `u${unitId}l${lessonId}_match_2`,
+    type: "matching",
+    prompt: "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
+    pairs: [
+      { left: "initial reaction", right: "ilk reaksiyon" },
+      { left: "positive response", right: "olumlu tepki" },
+      { left: "slow process", right: "yavaş süreç" },
+      { left: "laboratory research", right: "laboratuvar araştırması" },
+      { left: "pure substance", right: "saf madde" }
+    ]
+  };
+
+  // Layered Set A: In laboratory research...
   const targetWords1 = ["Laboratuvar", "araştırmalarında"];
   const wb1 = {
     id: `u${unitId}l${lessonId}_layered_1`,
@@ -4161,21 +4179,136 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
     isEngToTr: true
   };
 
-  // Section 3: Academic Vocabulary & Structure Gap Fill
+  // Layered Set B: In scientific analysis...
+  const targetWords5 = ["Bilimsel", "analizlerde"];
+  const wb5 = {
+    id: `u${unitId}l${lessonId}_layered_5`,
+    type: "word-bank",
+    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"In scientific analysis\"</strong>",
+    translation: "In scientific analysis",
+    words: shuffle([...targetWords5, "karar", "deneysel", "yöntem"]),
+    correctOrder: targetWords5,
+    enSentence: "In scientific analysis",
+    isEngToTr: true
+  };
+
+  const targetWords6 = ["birincil", "faktör", "önemli", "bir", "unsurdur"];
+  const wb6 = {
+    id: `u${unitId}l${lessonId}_layered_6`,
+    type: "word-bank",
+    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the primary factor is a significant element\"</strong>",
+    translation: "the primary factor is a significant element",
+    words: shuffle([...targetWords6, "koşullar", "güvenilir", "kaynaktır"]),
+    correctOrder: targetWords6,
+    enSentence: "the primary factor is a significant element",
+    isEngToTr: true
+  };
+
+  const targetWords7 = ["ve", "deneysel", "kanıt", "güvenilir", "bir", "kaynaktır"];
+  const wb7 = {
+    id: `u${unitId}l${lessonId}_layered_7`,
+    type: "word-bank",
+    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"and the empirical evidence is a reliable source\"</strong>",
+    translation: "and the empirical evidence is a reliable source",
+    words: shuffle([...targetWords7, "hedef", "gerçekçi", "adım"]),
+    correctOrder: targetWords7,
+    enSentence: "and the empirical evidence is a reliable source",
+    isEngToTr: true
+  };
+
+  const targetWords8 = ["Bilimsel", "analizlerde", "birincil", "faktör", "önemli", "bir", "unsurdur", "ve", "deneysel", "kanıt", "güvenilir", "bir", "kaynaktır"];
+  const wb8 = {
+    id: `u${unitId}l${lessonId}_layered_8`,
+    type: "word-bank",
+    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.\"</strong>",
+    translation: "In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.",
+    words: shuffle([...targetWords8, "amaç", "izole", "hedef", "adım"]),
+    correctOrder: targetWords8,
+    enSentence: "In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.",
+    isEngToTr: true
+  };
+
+  // Layered Set C: Under the new guidelines...
+  const targetWords9 = ["Yeni", "yönergeler", "altında"];
+  const wb9 = {
+    id: `u${unitId}l${lessonId}_layered_9`,
+    type: "word-bank",
+    prompt: "9. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"Under the new guidelines\"</strong>",
+    translation: "Under the new guidelines",
+    words: shuffle([...targetWords9, "üzerinde", "koşul", "altından"]),
+    correctOrder: targetWords9,
+    enSentence: "Under the new guidelines",
+    isEngToTr: true
+  };
+
+  const targetWords10 = ["ana", "hedef", "gerçekçi", "bir", "amaçtır"];
+  const wb10 = {
+    id: `u${unitId}l${lessonId}_layered_10`,
+    type: "word-bank",
+    prompt: "10. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the main objective is a realistic goal\"</strong>",
+    translation: "the main objective is a realistic goal",
+    words: shuffle([...targetWords10, "sonraki", "adım", "seçilen"]),
+    correctOrder: targetWords10,
+    enSentence: "the main objective is a realistic goal",
+    isEngToTr: true
+  };
+
+  const targetWords11 = ["ve", "sonraki", "çalışma", "mantıklı", "bir", "adımdır"];
+  const wb11 = {
+    id: `u${unitId}l${lessonId}_layered_11`,
+    type: "word-bank",
+    prompt: "11. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"and the subsequent study is a logical step\"</strong>",
+    translation: "and the subsequent study is a logical step",
+    words: shuffle([...targetWords11, "birincil", "unsurdur", "kaynak"]),
+    correctOrder: targetWords11,
+    enSentence: "and the subsequent study is a logical step",
+    isEngToTr: true
+  };
+
+  const targetWords12 = ["Yeni", "yönergeler", "altında", "ana", "hedef", "gerçekçi", "bir", "amaçtır", "ve", "sonraki", "çalışma", "mantıklı", "bir", "adımdır"];
+  const wb12 = {
+    id: `u${unitId}l${lessonId}_layered_12`,
+    type: "word-bank",
+    prompt: "12. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.\"</strong>",
+    translation: "Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.",
+    words: shuffle([...targetWords12, "analizler", "unsur", "kaynak", "veri"]),
+    correctOrder: targetWords12,
+    enSentence: "Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.",
+    isEngToTr: true
+  };
+
+  // Word-Bank 13: Single Clause
+  const targetWords13 = ["önceki", "girişim", "başarısız", "bir", "denemedir"];
+  const wb13 = {
+    id: `u${unitId}l${lessonId}_layered_13`,
+    type: "word-bank",
+    prompt: "13. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"The previous attempt is an unsuccessful trial.\"</strong>",
+    translation: "The previous attempt is an unsuccessful trial.",
+    words: shuffle([...targetWords13, "sonuç", "hızlı", "izotop"]),
+    correctOrder: targetWords13,
+    enSentence: "The previous attempt is an unsuccessful trial.",
+    isEngToTr: true
+  };
+
+
+  // ==========================================
+  // EXERCISE 2: 15 QUESTIONS (8 FILL-BLANK + 7 MULTIPLE-CHOICE)
+  // ==========================================
+
   const gap1 = {
     id: `u${unitId}l${lessonId}_gap_1`,
     type: "fill-blank",
-    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (durum bildiren sıfat yapısına dikkat edin):",
-    sentence: "Within the sterile container, the isolated specimen is a ___ substance.",
-    options: ["pure", "purely", "purity", "purify"],
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "Under these conditions, the final result is an ___ outcome.",
+    options: ["expected", "expectantly", "expectation", "expecting"],
     correctIndex: 0,
-    translation: "Steril kap içerisinde, izole edilmiş numune saf bir maddedir."
+    translation: "Bu koşullar altında, nihai sonuç beklenen bir çıktıdır."
   };
 
   const gap2 = {
     id: `u${unitId}l${lessonId}_gap_2`,
     type: "fill-blank",
-    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (durum bildiren sıfat yapısına dikkat edin):",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
     sentence: "Furthermore, the newly synthesized compound is an ___ isotope.",
     options: ["unstable", "unstably", "instability", "stabilize"],
     correctIndex: 0,
@@ -4185,109 +4318,13 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const gap3 = {
     id: `u${unitId}l${lessonId}_gap_3`,
     type: "fill-blank",
-    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (durum bildiren sıfat yapısına dikkat edin):",
-    sentence: "According to the research protocol, the final result is an ___ outcome.",
-    options: ["expected", "expectantly", "expectation", "expecting"],
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "Within the sterile container, the isolated specimen is a ___ substance.",
+    options: ["pure", "purely", "purity", "purify"],
     correctIndex: 0,
-    translation: "Araştırma protokolüne göre nihai sonuç beklenen bir çıktıdır."
+    translation: "Steril kap içerisinde, izole edilmiş numune saf bir maddedir."
   };
 
-  // Section 4: Contextual Multiple-Choice Translation
-  const mc1 = {
-    id: `u${unitId}l${lessonId}_mc_1`,
-    type: "multiple-choice",
-    prompt: "\"Although the test is a success, the general methodology is a slow process.\" cümlesinin Türkçe karşılığı hangisidir?",
-    options: shuffle([
-      "Test bir başarı olmasına rağmen, genel metodoloji yavaş bir süreçtir.",
-      "Test başarılı olmasına rağmen, genel metodoloji süreci yavaşlatır.",
-      "Test başarılı olduğundan dolayı genel metodoloji süreci yavaş işler.",
-      "Test başarılı olsa da genel metodoloji yavaşlamaya neden olur."
-    ]),
-    correctIndex: 0,
-    enSentence: "Although the test is a success, the general methodology is a slow process.",
-    isEngToTr: true
-  };
-  mc1.correctIndex = mc1.options.indexOf("Test bir başarı olmasına rağmen, genel metodoloji yavaş bir süreçtir.");
-
-  const mc2 = {
-    id: `u${unitId}l${lessonId}_mc_2`,
-    type: "multiple-choice",
-    prompt: "\"Bacteria are living organisms.\" cümlesinin Türkçe karşılığı hangisidir?",
-    options: shuffle([
-      "Bakteriler canlı organizmalardır.",
-      "Bakteriler organizmaları canlandırır.",
-      "Organizmalar bakterileri canlı tutar.",
-      "Bakteriler canlı organizma olmaya ihtiyaç duyar."
-    ]),
-    correctIndex: 0,
-    enSentence: "Bacteria are living organisms.",
-    isEngToTr: true
-  };
-  mc2.correctIndex = mc2.options.indexOf("Bakteriler canlı organizmalardır.");
-
-  // Additional dynamic questions for Ex 1 (Matching and Word-Bank)
-  const match2 = {
-    id: `u${unitId}l${lessonId}_match_2`,
-    type: "matching",
-    prompt: "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
-    pairs: [
-      { left: "sterile container", right: "steril kap" },
-      { left: "initial reaction", right: "ilk reaksiyon" },
-      { left: "positive response", right: "olumlu tepki" },
-      { left: "slow process", right: "yavaş süreç" },
-      { left: "laboratory research", right: "laboratuvar araştırması" }
-    ]
-  };
-
-  const targetWords5 = ["Bu", "koşullar", "altında"];
-  const wb5 = {
-    id: `u${unitId}l${lessonId}_layered_5`,
-    type: "word-bank",
-    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"Under these conditions\"</strong>",
-    translation: "Under these conditions",
-    words: shuffle([...targetWords5, "üzerinde", "deneyler", "aktif"]),
-    correctOrder: targetWords5,
-    enSentence: "Under these conditions",
-    isEngToTr: true
-  };
-
-  const targetWords6 = ["nihai", "sonuç", "beklenen", "bir", "çıktıdır"];
-  const wb6 = {
-    id: `u${unitId}l${lessonId}_layered_6`,
-    type: "word-bank",
-    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the final result is an expected outcome\"</strong>",
-    translation: "the final result is an expected outcome",
-    words: shuffle([...targetWords6, "izole", "saf", "tepkidir"]),
-    correctOrder: targetWords6,
-    enSentence: "the final result is an expected outcome",
-    isEngToTr: true
-  };
-
-  const targetWords7 = ["izole", "edilmiş", "numune", "saf", "bir", "maddedir"];
-  const wb7 = {
-    id: `u${unitId}l${lessonId}_layered_7`,
-    type: "word-bank",
-    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the isolated specimen is a pure substance\"</strong>",
-    translation: "the isolated specimen is a pure substance",
-    words: shuffle([...targetWords7, "aktif", "kararsız", "izotoptur"]),
-    correctOrder: targetWords7,
-    enSentence: "the isolated specimen is a pure substance",
-    isEngToTr: true
-  };
-
-  const targetWords8 = ["Bu", "koşullar", "altında", "nihai", "sonuç", "beklenen", "bir", "çıktıdır", "ve", "izole", "edilmiş", "numune", "saf", "bir", "maddedir"];
-  const wb8 = {
-    id: `u${unitId}l${lessonId}_layered_8`,
-    type: "word-bank",
-    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.\"</strong>",
-    translation: "Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.",
-    words: shuffle([...targetWords8, "aktif", "hızlı", "izotop", "tepkidir"]),
-    correctOrder: targetWords8,
-    enSentence: "Under these conditions, the final result is an expected outcome, and the isolated specimen is a pure substance.",
-    isEngToTr: true
-  };
-
-  // Additional dynamic questions for Ex 2 (Gap Fill and Multiple Choice)
   const gap4 = {
     id: `u${unitId}l${lessonId}_gap_4`,
     type: "fill-blank",
@@ -4311,15 +4348,36 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const gap6 = {
     id: `u${unitId}l${lessonId}_gap_6`,
     type: "fill-blank-dropdown",
-    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (durum bildiren sıfat yapısına dikkat edin):",
-    sentence: "Within the sterile container, the isolated specimen is a ___ substance.",
-    options: ["pure", "purely", "purity", "purify"],
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "According to the latest report, the primary factor is a ___ element.",
+    options: ["significant", "significantly", "significance", "signify"],
     correctIndex: 0,
-    translation: "Steril kap içerisinde, izole edilmiş numune saf bir maddedir."
+    translation: "Son rapora göre, birincil faktör önemli bir unsurdur."
   };
 
-  const mc3 = {
-    id: `u${unitId}l${lessonId}_mc_3`,
+  const gap7 = {
+    id: `u${unitId}l${lessonId}_gap_7`,
+    type: "fill-blank-dropdown",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "For the research team, the empirical evidence is a ___ source.",
+    options: ["reliable", "reliably", "reliability", "rely"],
+    correctIndex: 0,
+    translation: "Araştırma ekibi için, deneysel kanıt güvenilir bir kaynaktır."
+  };
+
+  const gap8 = {
+    id: `u${unitId}l${lessonId}_gap_8`,
+    type: "fill-blank-dropdown",
+    prompt: "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
+    sentence: "In this situation, the main objective is a ___ goal.",
+    options: ["realistic", "realistically", "realism", "realize"],
+    correctIndex: 0,
+    translation: "Bu durumda, ana hedef gerçekçi bir amaçtır."
+  };
+
+  // Multiple Choice Questions
+  const mc1 = {
+    id: `u${unitId}l${lessonId}_mc_1`,
     type: "multiple-choice",
     prompt: "\"This active specimen is a dangerous substance.\" cümlesinin Türkçe karşılığı hangisidir?",
     options: shuffle([
@@ -4332,10 +4390,10 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
     enSentence: "This active specimen is a dangerous substance.",
     isEngToTr: true
   };
-  mc3.correctIndex = mc3.options.indexOf("Bu aktif numune tehlikeli bir maddedir.");
+  mc1.correctIndex = mc1.options.indexOf("Bu aktif numune tehlikeli bir maddedir.");
 
-  const mc4 = {
-    id: `u${unitId}l${lessonId}_mc_4`,
+  const mc2 = {
+    id: `u${unitId}l${lessonId}_mc_2`,
     type: "multiple-choice",
     prompt: "\"The initial response is a negative result.\" cümlesinin Türkçe karşılığı hangisidir?",
     options: shuffle([
@@ -4348,20 +4406,100 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
     enSentence: "The initial response is a negative result.",
     isEngToTr: true
   };
-  mc4.correctIndex = mc4.options.indexOf("İlk tepki olumsuz bir sonuçtur.");
+  mc2.correctIndex = mc2.options.indexOf("İlk tepki olumsuz bir sonuçtur.");
+
+  const mc3 = {
+    id: `u${unitId}l${lessonId}_mc_3`,
+    type: "multiple-choice",
+    prompt: "\"The subsequent study is a logical step.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "Sonraki çalışma mantıklı bir adımdır.",
+      "Çalışma mantıklı adımlarla takip edilir.",
+      "Sonraki çalışmalar mantık sınırlarını zorlar.",
+      "Çalışmanın mantığı adımlarla açıklanır."
+    ]),
+    correctIndex: 0,
+    enSentence: "The subsequent study is a logical step.",
+    isEngToTr: true
+  };
+  mc3.correctIndex = mc3.options.indexOf("Sonraki çalışma mantıklı bir adımdır.");
+
+  const mc4 = {
+    id: `u${unitId}l${lessonId}_mc_4`,
+    type: "multiple-choice",
+    prompt: "\"Although the test is a partial success, the general methodology is a slow process.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "Test kısmi bir başarı olmasına rağmen, genel metodoloji yavaş bir süreçtir.",
+      "Test başarılı olmasına rağmen, genel metodoloji süreci yavaşlatır.",
+      "Test başarılı olduğundan dolayı genel metodoloji süreci yavaş işler.",
+      "Test başarılı olsa da genel metodoloji yavaşlamaya neden olur."
+    ]),
+    correctIndex: 0,
+    enSentence: "Although the test is a partial success, the general methodology is a slow process.",
+    isEngToTr: true
+  };
+  mc4.correctIndex = mc4.options.indexOf("Test kısmi bir başarı olmasına rağmen, genel metodoloji yavaş bir süreçtir.");
+
+  const mc5 = {
+    id: `u${unitId}l${lessonId}_mc_5`,
+    type: "multiple-choice",
+    prompt: "\"The selected methodology is a complex system.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "Seçilen metodoloji karmaşık bir sistemdir.",
+      "Metodoloji seçimi sistemi karmaşıklaştırır.",
+      "Sistem karmaşık bir metodolojiye dayanır.",
+      "Seçilen sistem metodolojiyi zorlaştırır."
+    ]),
+    correctIndex: 0,
+    enSentence: "The selected methodology is a complex system.",
+    isEngToTr: true
+  };
+  mc5.correctIndex = mc5.options.indexOf("Seçilen metodoloji karmaşık bir sistemdir.");
+
+  const mc6 = {
+    id: `u${unitId}l${lessonId}_mc_6`,
+    type: "multiple-choice",
+    prompt: "\"The initial phase is a critical period.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "İlk aşama kritik bir dönemdir.",
+      "Kritik dönem ilk aşamada başlar.",
+      "Aşamanın kritik olması döneme bağlıdir.",
+      "İlk aşamada dönemsel krizler yaşanır."
+    ]),
+    correctIndex: 0,
+    enSentence: "The initial phase is a critical period.",
+    isEngToTr: true
+  };
+  mc6.correctIndex = mc6.options.indexOf("İlk aşama kritik bir dönemdir.");
+
+  const mc7 = {
+    id: `u${unitId}l${lessonId}_mc_7`,
+    type: "multiple-choice",
+    prompt: "\"The previous attempt is an unsuccessful trial.\" cümlesinin Türkçe karşılığı hangisidir?",
+    options: shuffle([
+      "Önceki girişim başarısız bir denemedir.",
+      "Önceki deneme başarısızlıkla sonuçlanmıştır.",
+      "Girişimler başarısız denemelere yol açar.",
+      "Önceki denemelerin başarısız olması normaldir."
+    ]),
+    correctIndex: 0,
+    enSentence: "The previous attempt is an unsuccessful trial.",
+    isEngToTr: true
+  };
+  mc7.correctIndex = mc7.options.indexOf("Önceki girişim başarısız bir denemedir.");
 
   return [
     {
       id: `u${unitId}l${lessonId}ex1`,
       title: "Alıştırma 1: Söz Dizimsel Refleks İnşası",
       description: "Öbek Eşleştirme ve Katmanlı Çeviri İnşası",
-      questions: [match1, wb1, wb2, wb3, wb4, match2, wb5, wb6, wb7, wb8]
+      questions: [match1, match2, wb1, wb2, wb3, wb4, wb5, wb6, wb7, wb8, wb9, wb10, wb11, wb12, wb13]
     },
     {
       id: `u${unitId}l${lessonId}ex2`,
       title: "Alıştırma 2: Akademik Yapı ve Çeviri Testi",
       description: "Boşluk Doldurma ve Çoktan Seçmeli Bağlamsal Çeviri",
-      questions: [gap1, gap2, gap3, mc1, mc2, gap4, gap5, gap6, mc3, mc4]
+      questions: [gap1, gap2, gap3, gap4, gap5, gap6, gap7, gap8, mc1, mc2, mc3, mc4, mc5, mc6, mc7]
     }
   ];
 }
