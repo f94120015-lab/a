@@ -4135,7 +4135,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb1 = {
     id: `u${unitId}l${lessonId}_layered_1`,
     type: "word-bank",
-    prompt: "1. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
+    prompt: "Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "In laboratory research",
     words: shuffle([...targetWords1, "aktif", "izole", "deney"]),
     correctOrder: targetWords1,
@@ -4147,7 +4147,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb2 = {
     id: `u${unitId}l${lessonId}_layered_2`,
     type: "word-bank",
-    prompt: "2. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the experimental subject is an active variable",
     words: shuffle([...targetWords2, "laboratuvar", "saf", "beklenen"]),
     correctOrder: targetWords2,
@@ -4159,7 +4159,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb3 = {
     id: `u${unitId}l${lessonId}_layered_3`,
     type: "word-bank",
-    prompt: "3. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the initial reaction is a positive response",
     words: shuffle([...targetWords3, "çıkış", "kararsız", "izotop"]),
     correctOrder: targetWords3,
@@ -4171,7 +4171,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb4 = {
     id: `u${unitId}l${lessonId}_layered_4`,
     type: "word-bank",
-    prompt: "4. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
+    prompt: "Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "In laboratory research, the experimental subject is an active variable, and the initial reaction is a positive response.",
     words: shuffle([...targetWords4, "saf", "izotop", "beklenen", "yavaş"]),
     correctOrder: targetWords4,
@@ -4184,7 +4184,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb5 = {
     id: `u${unitId}l${lessonId}_layered_5`,
     type: "word-bank",
-    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
+    prompt: "Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "In scientific analysis",
     words: shuffle([...targetWords5, "karar", "deneysel", "yöntem"]),
     correctOrder: targetWords5,
@@ -4196,7 +4196,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb6 = {
     id: `u${unitId}l${lessonId}_layered_6`,
     type: "word-bank",
-    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the primary factor is a significant element",
     words: shuffle([...targetWords6, "koşullar", "güvenilir", "kaynaktır"]),
     correctOrder: targetWords6,
@@ -4208,7 +4208,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb7 = {
     id: `u${unitId}l${lessonId}_layered_7`,
     type: "word-bank",
-    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the empirical evidence is a reliable source",
     words: shuffle([...targetWords7, "hedef", "gerçekçi", "adım"]),
     correctOrder: targetWords7,
@@ -4220,7 +4220,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb8 = {
     id: `u${unitId}l${lessonId}_layered_8`,
     type: "word-bank",
-    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
+    prompt: "Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.",
     words: shuffle([...targetWords8, "amaç", "izole", "hedef", "adım"]),
     correctOrder: targetWords8,
@@ -4233,7 +4233,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb9 = {
     id: `u${unitId}l${lessonId}_layered_9`,
     type: "word-bank",
-    prompt: "9. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
+    prompt: "Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "Under the new guidelines",
     words: shuffle([...targetWords9, "üzerinde", "koşul", "altından"]),
     correctOrder: targetWords9,
@@ -4245,7 +4245,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb10 = {
     id: `u${unitId}l${lessonId}_layered_10`,
     type: "word-bank",
-    prompt: "10. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the main objective is a realistic goal",
     words: shuffle([...targetWords10, "sonraki", "adım", "seçilen"]),
     correctOrder: targetWords10,
@@ -4257,7 +4257,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb11 = {
     id: `u${unitId}l${lessonId}_layered_11`,
     type: "word-bank",
-    prompt: "11. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the subsequent study is a logical step",
     words: shuffle([...targetWords11, "birincil", "unsurdur", "kaynak"]),
     correctOrder: targetWords11,
@@ -4269,7 +4269,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb12 = {
     id: `u${unitId}l${lessonId}_layered_12`,
     type: "word-bank",
-    prompt: "12. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
+    prompt: "Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.",
     words: shuffle([...targetWords12, "analizler", "unsur", "kaynak", "veri"]),
     correctOrder: targetWords12,
@@ -4282,7 +4282,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb13 = {
     id: `u${unitId}l${lessonId}_layered_13`,
     type: "word-bank",
-    prompt: "13. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
+    prompt: "Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "The previous attempt is an unsuccessful trial.",
     words: shuffle([...targetWords13, "sonuç", "hızlı", "izotop"]),
     correctOrder: targetWords13,
@@ -63958,7 +63958,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q1",
             type: "word-bank",
-            prompt: "<strong>Cümle 1 - Aşama 1:</strong> Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
             translation: "Cross-disciplinary engineering groups must finalize the baseline documentation...",
             words: ["Disiplinler", "arası", "mühendislik", "grupları", "temel", "dokümantasyonu", "tamamlamalıdır", "hızlıca", "çözmek", "için"],
             correctOrder: ["Disiplinler", "arası", "mühendislik", "grupları", "temel", "dokümantasyonu", "tamamlamalıdır"],
@@ -63968,7 +63968,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q2",
             type: "word-bank",
-            prompt: "<strong>Cümle 1 - Aşama 2:</strong> Cümlenin amaç bildiren kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin amaç bildiren kısmını Türkçe karşılığına çevirin:",
             translation: "...to resolve these structural issues.",
             words: ["bu", "yapısal", "sorunları", "çözmek", "için", "tamamlayarak", "belgelemek"],
             correctOrder: ["bu", "yapısal", "sorunları", "çözmek", "için"],
@@ -63978,7 +63978,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q3",
             type: "word-bank",
-            prompt: "<strong>Cümle 1 - Aşama 3 (Bütünleştirme):</strong> İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
+            prompt: "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
             translation: "Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
             words: ["Disiplinler", "arası", "mühendislik", "grupları,", "bu", "yapısal", "sorunları", "çözmek", "için", "temel", "dokümantasyonu", "tamamlamalıdır.", "hızlıca", "çözerek"],
             correctOrder: ["Disiplinler", "arası", "mühendislik", "grupları,", "bu", "yapısal", "sorunları", "çözmek", "için", "temel", "dokümantasyonu", "tamamlamalıdır."],
@@ -63988,7 +63988,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q4",
             type: "word-bank",
-            prompt: "<strong>Cümle 2 - Aşama 1:</strong> Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
             translation: "The sudden collapse of the central infrastructure...",
             words: ["Merkezi", "altyapının", "ani", "çöküşü", "gerektirir", "değişiklikler", "sistemin"],
             correctOrder: ["Merkezi", "altyapının", "ani", "çöküşü"],
@@ -63998,7 +63998,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q5",
             type: "word-bank",
-            prompt: "<strong>Cümle 2 - Aşama 2:</strong> Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
             translation: "...requires immediate technical modifications.",
             words: ["acil", "teknik", "değişiklikler", "gerektirir", "çöküşü", "önemli", "adımlar"],
             correctOrder: ["acil", "teknik", "değişiklikler", "gerektirir"],
@@ -64008,7 +64008,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q6",
             type: "word-bank",
-            prompt: "<strong>Cümle 2 - Aşama 3 (Bütünleştirme):</strong> İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
+            prompt: "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
             translation: "The sudden collapse of the central infrastructure requires immediate technical modifications.",
             words: ["Merkezi", "altyapının", "ani", "çöküşü,", "acil", "teknik", "değişiklikler", "gerektirir.", "sistemin", "hızlıca"],
             correctOrder: ["Merkezi", "altyapının", "ani", "çöküşü,", "acil", "teknik", "değişiklikler", "gerektirir."],
@@ -64018,7 +64018,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q7",
             type: "word-bank",
-            prompt: "<strong>Cümle 3 - Aşama 1:</strong> Cümlenin özne kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
             translation: "Data formatting discrepancies inside the repository...",
             words: ["Deponun", "içerisindeki", "veri", "biçimlendirme", "tutarsızlıkları", "tetikler", "hataları", "sistem"],
             correctOrder: ["Deponun", "içerisindeki", "veri", "biçimlendirme", "tutarsızlıkları"],
@@ -64028,7 +64028,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q8",
             type: "word-bank",
-            prompt: "<strong>Cümle 3 - Aşama 2:</strong> Cümlenin yüklem ve nesne kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin yüklem ve nesne kısmını Türkçe karşılığına çevirin:",
             translation: "...trigger extensive compilation errors.",
             words: ["kapsamlı", "derleme", "hatalarını", "tetikler", "tutarsızlıklar", "büyük", "dosya"],
             correctOrder: ["kapsamlı", "derleme", "hatalarını", "tetikler"],
@@ -64038,7 +64038,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q9",
             type: "word-bank",
-            prompt: "<strong>Cümle 3 - Aşama 3 (Bütünleştirme):</strong> İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
+            prompt: "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
             translation: "Data formatting discrepancies inside the repository trigger extensive compilation errors.",
             words: ["Deponun", "içerisindeki", "veri", "biçimlendirme", "tutarsızlıkları,", "kapsamlı", "derleme", "hatalarını", "tetikler.", "dosyaların", "büyük"],
             correctOrder: ["Deponun", "içerisindeki", "veri", "biçimlendirme", "tutarsızlıkları,", "kapsamlı", "derleme", "hatalarını", "tetikler."],
@@ -64048,7 +64048,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q10",
             type: "word-bank",
-            prompt: "<strong>Cümle 4 - Aşama 1:</strong> Cümlenin özne kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
             translation: "Severe runtime bottlenecks from loose query loops...",
             words: ["Gevşek", "sorgu", "döngülerinden", "kaynaklanan", "ciddi", "çalışma", "zamanı", "darboğazları", "doğrudan", "başarısızlığa"],
             correctOrder: ["Gevşek", "sorgu", "döngülerinden", "kaynaklanan", "ciddi", "çalışma", "zamanı", "darboğazları"],
@@ -64058,7 +64058,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q11",
             type: "word-bank",
-            prompt: "<strong>Cümle 4 - Aşama 2:</strong> Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
             translation: "...contribute directly to transaction failures.",
             words: ["doğrudan", "işlem", "başarısızlıklarına", "katkıda", "bulunur", "ciddi", "darboğaz", "oluşturur"],
             correctOrder: ["doğrudan", "işlem", "başarısızlıklarına", "katkıda", "bulunur"],
@@ -64068,7 +64068,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q12",
             type: "word-bank",
-            prompt: "<strong>Cümle 4 - Aşama 3 (Bütünleştirme):</strong> İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
+            prompt: "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
             translation: "Severe runtime bottlenecks from loose query loops contribute directly to transaction failures.",
             words: ["Gevşek", "sorgu", "döngülerinden", "kaynaklanan", "ciddi", "çalışma", "zamanı", "darboğazları,", "doğrudan", "işlem", "başarısızlıklarına", "katkıda", "bulunur.", "sistemin"],
             correctOrder: ["Gevşek", "sorgu", "döngülerinden", "kaynaklanan", "ciddi", "çalışma", "zamanı", "darboğazları,", "doğrudan", "işlem", "başarısızlıklarına", "katkıda", "bulunur."],
@@ -64078,7 +64078,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q13",
             type: "word-bank",
-            prompt: "<strong>Cümle 5 - Aşama 1:</strong> Cümlenin varlık bildiren kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin varlık bildiren kısmını Türkçe karşılığına çevirin:",
             translation: "There are several architecture constraints...",
             words: ["Çeşitli", "mimari", "kısıtlamalar", "vardır", "restorasyon", "karmaşıklaştıran"],
             correctOrder: ["Çeşitli", "mimari", "kısıtlamalar", "vardır"],
@@ -64088,7 +64088,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q14",
             type: "word-bank",
-            prompt: "<strong>Cümle 5 - Aşama 2:</strong> Cümlenin niteleyici kısmını Türkçe karşılığına çevirin:",
+            prompt: "Cümlenin niteleyici kısmını Türkçe karşılığına çevirin:",
             translation: "...complicating the restoration cycle.",
             words: ["kurtarma", "döngüsünü", "karmaşıklaştıran", "mimari", "yapılar", "kısıtlamalar"],
             correctOrder: ["kurtarma", "döngüsünü", "karmaşıklaştıran"],
@@ -64098,7 +64098,7 @@ const unitSentencesMap = {
           {
             id: "u33l135_ex2_q15",
             type: "word-bank",
-            prompt: "<strong>Cümle 5 - Aşama 3 (Bütünleştirme):</strong> İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
+            prompt: "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
             translation: "There are several architecture constraints complicating the restoration cycle.",
             words: ["Kurtarma", "döngüsünü", "karmaşıklaştıran", "çeşitli", "mimari", "kısıtlamalar", "vardır.", "süreçte", "büyük"],
             correctOrder: ["Kurtarma", "döngüsünü", "karmaşıklaştıran", "çeşitli", "mimari", "kısıtlamalar", "vardır."],
