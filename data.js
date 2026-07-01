@@ -4135,7 +4135,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb1 = {
     id: `u${unitId}l${lessonId}_layered_1`,
     type: "word-bank",
-    prompt: "1. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"In laboratory research\"</strong>",
+    prompt: "1. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "In laboratory research",
     words: shuffle([...targetWords1, "aktif", "izole", "deney"]),
     correctOrder: targetWords1,
@@ -4147,7 +4147,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb2 = {
     id: `u${unitId}l${lessonId}_layered_2`,
     type: "word-bank",
-    prompt: "2. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the experimental subject is an active variable\"</strong>",
+    prompt: "2. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the experimental subject is an active variable",
     words: shuffle([...targetWords2, "laboratuvar", "saf", "beklenen"]),
     correctOrder: targetWords2,
@@ -4159,7 +4159,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb3 = {
     id: `u${unitId}l${lessonId}_layered_3`,
     type: "word-bank",
-    prompt: "3. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"and the initial reaction is a positive response\"</strong>",
+    prompt: "3. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the initial reaction is a positive response",
     words: shuffle([...targetWords3, "çıkış", "kararsız", "izotop"]),
     correctOrder: targetWords3,
@@ -4171,7 +4171,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb4 = {
     id: `u${unitId}l${lessonId}_layered_4`,
     type: "word-bank",
-    prompt: "4. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"In laboratory research, the experimental subject is an active variable, and the initial reaction is a positive response.\"</strong>",
+    prompt: "4. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "In laboratory research, the experimental subject is an active variable, and the initial reaction is a positive response.",
     words: shuffle([...targetWords4, "saf", "izotop", "beklenen", "yavaş"]),
     correctOrder: targetWords4,
@@ -4184,7 +4184,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb5 = {
     id: `u${unitId}l${lessonId}_layered_5`,
     type: "word-bank",
-    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"In scientific analysis\"</strong>",
+    prompt: "5. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "In scientific analysis",
     words: shuffle([...targetWords5, "karar", "deneysel", "yöntem"]),
     correctOrder: targetWords5,
@@ -4196,7 +4196,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb6 = {
     id: `u${unitId}l${lessonId}_layered_6`,
     type: "word-bank",
-    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the primary factor is a significant element\"</strong>",
+    prompt: "6. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the primary factor is a significant element",
     words: shuffle([...targetWords6, "koşullar", "güvenilir", "kaynaktır"]),
     correctOrder: targetWords6,
@@ -4208,7 +4208,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb7 = {
     id: `u${unitId}l${lessonId}_layered_7`,
     type: "word-bank",
-    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"and the empirical evidence is a reliable source\"</strong>",
+    prompt: "7. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the empirical evidence is a reliable source",
     words: shuffle([...targetWords7, "hedef", "gerçekçi", "adım"]),
     correctOrder: targetWords7,
@@ -4220,7 +4220,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb8 = {
     id: `u${unitId}l${lessonId}_layered_8`,
     type: "word-bank",
-    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.\"</strong>",
+    prompt: "8. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.",
     words: shuffle([...targetWords8, "amaç", "izole", "hedef", "adım"]),
     correctOrder: targetWords8,
@@ -4233,7 +4233,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb9 = {
     id: `u${unitId}l${lessonId}_layered_9`,
     type: "word-bank",
-    prompt: "9. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:<br><br><strong>\"Under the new guidelines\"</strong>",
+    prompt: "9. Aşama: Bu öbeğin Türkçe çevirisini oluşturun:",
     translation: "Under the new guidelines",
     words: shuffle([...targetWords9, "üzerinde", "koşul", "altından"]),
     correctOrder: targetWords9,
@@ -4245,7 +4245,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb10 = {
     id: `u${unitId}l${lessonId}_layered_10`,
     type: "word-bank",
-    prompt: "10. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"the main objective is a realistic goal\"</strong>",
+    prompt: "10. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "the main objective is a realistic goal",
     words: shuffle([...targetWords10, "sonraki", "adım", "seçilen"]),
     correctOrder: targetWords10,
@@ -4257,7 +4257,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb11 = {
     id: `u${unitId}l${lessonId}_layered_11`,
     type: "word-bank",
-    prompt: "11. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"and the subsequent study is a logical step\"</strong>",
+    prompt: "11. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "and the subsequent study is a logical step",
     words: shuffle([...targetWords11, "birincil", "unsurdur", "kaynak"]),
     correctOrder: targetWords11,
@@ -4269,7 +4269,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb12 = {
     id: `u${unitId}l${lessonId}_layered_12`,
     type: "word-bank",
-    prompt: "12. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:<br><br><strong>\"Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.\"</strong>",
+    prompt: "12. Aşama (Birleştirme): Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
     translation: "Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.",
     words: shuffle([...targetWords12, "analizler", "unsur", "kaynak", "veri"]),
     correctOrder: targetWords12,
@@ -4282,7 +4282,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
   const wb13 = {
     id: `u${unitId}l${lessonId}_layered_13`,
     type: "word-bank",
-    prompt: "13. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:<br><br><strong>\"The previous attempt is an unsuccessful trial.\"</strong>",
+    prompt: "13. Aşama: Bu cümlenin Türkçe çevirisini oluşturun:",
     translation: "The previous attempt is an unsuccessful trial.",
     words: shuffle([...targetWords13, "sonuç", "hızlı", "izotop"]),
     correctOrder: targetWords13,
