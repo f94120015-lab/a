@@ -2832,7 +2832,7 @@ function renderLessonTree() {
       const lesson = lessons.find(l => l.id === lId);
       if (!lesson) return;
 
-      const isCompleted = state.completedLessons.includes(lId);
+      const isCompleted = !isLocalEnvironment() && state.completedLessons.includes(lId);
       const isActive = !isCompleted && isLessonUnlocked(lId);
       const isLocked = !isCompleted && !isActive;
 
@@ -2980,7 +2980,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     }
   }
 
-  const isCompleted = state.completedLessons.includes(lessonId);
+  const isCompleted = !isLocalEnvironment() && state.completedLessons.includes(lessonId);
 
   // Create popover element
   const popover = document.createElement('div');
@@ -3015,7 +3015,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     `;
   } else if (lesson.exercises && lesson.exercises.length > 0) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
-      const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
+      const isExCompleted = !isLocalEnvironment() && state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
       if (!isLocalEnvironment()) {
         if (index === 0) {
