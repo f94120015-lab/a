@@ -631,6 +631,29 @@
     </div>
   </div>
 
+  <!-- ════════════════════════════════════════════════════════
+       7b. AKILLI TEKRARE DAVET MODALİ
+       ════════════════════════════════════════════════════════ -->
+  <div class="grammar-modal-overlay" id="review-prompt-modal">
+    <div class="grammar-modal" style="max-width: 440px;">
+      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-secondary, #10b981), #059669);">
+        <span class="grammar-modal-icon">🔄</span>
+        <h3>Akıllı Tekrar Zamanı!</h3>
+        <button class="grammar-modal-close" id="review-prompt-close-btn">&times;</button>
+      </div>
+      <div class="grammar-modal-body" style="text-align: center; gap: 12px; padding: 24px 20px;">
+        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;" id="review-prompt-title">Hata Yaptığın Soruları Yeniden Denemek İster misin?</p>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.5;" id="review-prompt-desc">
+          Şu ana kadar hata yaptığın <strong id="review-prompt-count" style="color: var(--accent-secondary);">0</strong> soru birikti. Bunları çözerek hatalarını hemen pekiştirebilirsin!
+        </p>
+      </div>
+      <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
+        <button class="btn btn-secondary" id="review-prompt-cancel-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Daha Sonra</button>
+        <button class="btn btn-primary" id="review-prompt-confirm-btn" style="flex: 1; padding: 12px; margin-bottom: 0; background: var(--accent-secondary, #10b981); border-color: var(--accent-secondary, #10b981);">Şimdi Çöz</button>
+      </div>
+    </div>
+  </div>
+
   <div class="toast-container" id="toast-container"></div>
 
   <script src="data.js?v=1.0.2"></script>

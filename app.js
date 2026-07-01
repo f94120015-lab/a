@@ -37,7 +37,8 @@ let state = {
     { username: 'Elif Demir', xp: 320, streak: 3, avatarColor: '#B4A7D6' },
     { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' },
     { username: 'Melis Şen', xp: 90, streak: 2, avatarColor: '#E8CB6E' }
-  ]
+  ],
+  lastPromptedWrongCount: 0
 };
 
 // Quiz ve diğer durumlar
@@ -1802,6 +1803,7 @@ function showScreen(screenId) {
     requestAnimationFrame(() => {
       window.scrollTo(0, homeScreenScrollY);
     });
+    setTimeout(checkAndShowReviewPrompt, 600);
   }
 
   // Update body scroll lock state based on active screen & overlays
@@ -6094,6 +6096,39 @@ function initEventListeners() {
     });
   }
 
+  // Akıllı Tekrar Davet Modali Event Listeners
+  const reviewPromptCloseBtn = document.getElementById('review-prompt-close-btn');
+  const reviewPromptCancelBtn = document.getElementById('review-prompt-cancel-btn');
+  const reviewPromptConfirmBtn = document.getElementById('review-prompt-confirm-btn');
+
+  const hideReviewPromptModal = () => {
+    const modal = document.getElementById('review-prompt-modal');
+    if (modal) modal.classList.remove('show');
+  };
+
+  if (reviewPromptCloseBtn) {
+    reviewPromptCloseBtn.addEventListener('click', () => {
+      state.lastPromptedWrongCount = state.wrongQuestions ? state.wrongQuestions.length : 0;
+      saveState();
+      hideReviewPromptModal();
+    });
+  }
+
+  if (reviewPromptCancelBtn) {
+    reviewPromptCancelBtn.addEventListener('click', () => {
+      state.lastPromptedWrongCount = state.wrongQuestions ? state.wrongQuestions.length : 0;
+      saveState();
+      hideReviewPromptModal();
+    });
+  }
+
+  if (reviewPromptConfirmBtn) {
+    reviewPromptConfirmBtn.addEventListener('click', () => {
+      hideReviewPromptModal();
+      startReviewMode();
+    });
+  }
+
   // Klavye Kısayolları (Quiz ve Placement ekranları için)
   document.addEventListener('keydown', (e) => {
     // Eğer kullanıcı bir metin kutusuna veya alana yazıyorsa kısayolları engelle
@@ -6828,6 +6863,27 @@ function checkReviewBanner() {
   }
 }
 
+function checkAndShowReviewPrompt() {
+  const currentCount = state.wrongQuestions ? state.wrongQuestions.length : 0;
+  let lastCount = state.lastPromptedWrongCount || 0;
+
+  if (currentCount < lastCount) {
+    state.lastPromptedWrongCount = currentCount;
+    lastCount = currentCount;
+    saveState();
+  }
+
+  // Her 20 hata yapılmış soruda bir pop-up göster
+  if (currentCount >= 20 && Math.floor(currentCount / 20) > Math.floor(lastCount / 20)) {
+    const modal = document.getElementById('review-prompt-modal');
+    const countEl = document.getElementById('review-prompt-count');
+    if (modal && countEl) {
+      countEl.textContent = currentCount;
+      modal.classList.add('show');
+    }
+  }
+}
+
 function startReviewMode() {
   if (!state.wrongQuestions || state.wrongQuestions.length === 0) return;
 
@@ -6854,6 +6910,9 @@ function startReviewMode() {
     showToast('Tekrar edilecek soru bulunamadı.', 'info');
     return;
   }
+
+  // Karma/Karışık test olması için soruları karıştır
+  reviewQuestions.sort(() => Math.random() - 0.5);
 
   showScreen('quiz-screen');
   renderQuestion();
