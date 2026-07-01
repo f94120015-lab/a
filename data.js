@@ -17786,6 +17786,12 @@ const unit25LessonSentences = {
   ]
 };
 
+const isLocalEnv = typeof window !== 'undefined' && (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1' ||
+  window.location.protocol === 'file:'
+);
+
 const rawTopics = [
 {
     id: 6,
@@ -17817,7 +17823,7 @@ const rawTopics = [
     title: "I. İsim ve Edat Takımları (Sayfa 13)",
     desc: "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
     icon: "👋",
-    numLessons: 8,
+    numLessons: isLocalEnv ? 8 : 7,
     formulas: [
       { 
         formula: "", 
@@ -17834,7 +17840,7 @@ const rawTopics = [
       { formula: "Noun + from + Noun", example: "A student from England: İngiltere'den bir öğrenci" },
       { formula: "Noun + Prepositional Phrase", example: "the house on the corner: köşedeki ev / köşede olan ev / köşede bulunan ev (Edat takımı önündeki ismi tamamlar - çevrilirken '-ki', '-olan', '-bulunan' eklenebilir)" },
       { formula: "Noun + Prep Phrase + Prep Phrase", example: "The difference in the results of the experiments: Deneylerin sonuçlarındaki fark" },
-      { formula: "Yedek Alıştırmalar", example: "Daha sonra kullanılacak yedekler", description: "Bu ders, bu ünitedeki diğer derslerden taşınan ve ileride kullanılmak üzere yedeklenen alıştırmaları içerir." }
+      ...(isLocalEnv ? [{ formula: "Yedek Alıştırmalar", example: "Daha sonra kullanılacak yedekler", description: "Bu ders, bu ünitedeki diğer derslerden taşınan ve ileride kullanılmak üzere yedeklenen alıştırmaları içerir." }] : [])
     ],
     subtitles: [
       "Giriş. İsim ve Edat Takımlarına Giriş (Sayfa 13)",
@@ -17844,7 +17850,7 @@ const rawTopics = [
       "D. İsim + from + isim (Sayfa 17)",
       "E. İsim + edat takımı (Sayfa 13)",
       "F. İsim + edat takımı + edat takımı (Sayfa 19)",
-      "G. Yedekler"
+      ...(isLocalEnv ? ["G. Yedekler"] : [])
     ]
   },
 {
