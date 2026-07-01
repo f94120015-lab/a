@@ -1641,7 +1641,7 @@ function getWordMeaning(word) {
 // Convert English text into hoverable HTML elements
 function makeTextHoverable(text) {
   if (!text) return '';
-  const wordRegex = /(<[^>]+>)|([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'-<]+)/g;
+  const wordRegex = /(<[^>]+>)|([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'<-]+)/g;
   let match;
   let html = '';
   
