@@ -3017,10 +3017,12 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
-      if (index === 0) {
-        isExUnlocked = isUnlocked;
-      } else {
-        isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+      if (!isLocalEnvironment()) {
+        if (index === 0) {
+          isExUnlocked = isUnlocked;
+        } else {
+          isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+        }
       }
       
       const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
@@ -3147,6 +3149,10 @@ document.addEventListener('click', () => {
 });
 
 function isLessonUnlocked(lessonId) {
+  if (isLocalEnvironment()) {
+    return true;
+  }
+
   // Find the lesson and its unit
   const lesson = lessons.find(l => l.id === lessonId);
   if (!lesson) return false;
@@ -4884,7 +4890,7 @@ function completeReviewSession() {
 function completeLesson() {
   const total = currentQuizQuestions.length;
   const accuracy = Math.round((correctCount / total) * 100);
-  const isSuccess = accuracy >= 80;
+  const isSuccess = isLocalEnvironment() || accuracy >= 80;
   
   isCurrentExercisePassed = isSuccess;
 
