@@ -2861,7 +2861,7 @@ function renderLessonTree() {
       if (isNotUploadedLesson) {
         progressBadgeContent = `<div class="node-progress-badge">0</div>`;
       } else if (lesson.exercises && lesson.exercises.length > 0) {
-        const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
+        const completedCount = isLocalEnvironment() ? 0 : lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
         const totalCount = lesson.exercises.length;
         const isAllExCompleted = completedCount === totalCount;
         progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
