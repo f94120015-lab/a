@@ -800,7 +800,7 @@ input {
   z-index: 10;
   width: 122px;
   height: 122px;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.02);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2641,8 +2641,8 @@ input {
     align-items: center;
     gap: 16px;
     width: 100%;
-    padding: 14px 16px;
-    font-size: 0.95rem;
+    padding: 16px 20px;
+    font-size: 1.2rem;
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-secondary);
@@ -2655,11 +2655,11 @@ input {
   }
 
   .sidebar-menu .nav-tab .nav-tab-icon {
-    font-size: 1.25rem;
+    font-size: 1.56rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
+    width: 30px;
   }
   
   .sidebar-menu .nav-tab:hover {
