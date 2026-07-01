@@ -18732,6 +18732,21 @@ const rawTopics = [
       "be certain to (kesinlikle ... yapacak olmak)",
       "Karma Test"
     ]
+  },
+  {
+    id: 999,
+    startLessonId: 9990,
+    originalIndex: 99,
+    title: "Yedekler",
+    desc: "Daha sonra kullanılmak üzere yedeklenen alıştırmalar",
+    icon: "💾",
+    numLessons: 1,
+    subtitles: [
+      "A. Yedek Alıştırmalar"
+    ],
+    formulas: [
+      { formula: "Yedek Alıştırmalar", example: "Geçici olarak saklanan alıştırma grupları", description: "Bu bölüm, diğer ünitelerden taşınan ve ileride kullanılmak üzere yedeklenen alıştırmaları içerir." }
+    ]
   }
 ];
 
@@ -44390,10 +44405,7 @@ const unitSentencesMap = {
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 6, 50),
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 7, 60),
         buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 8, 70),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 9, 80),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 10, 90),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 11, 100),
-        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 12, 110)
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 7, 20, 9, 80)
       ]
     }
   },
@@ -65133,6 +65145,15 @@ const unitSentencesMap = {
         ]
       }
     ]
+    }
+  },
+  999: {
+    1: {
+      exercises: [
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 1, 90),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 2, 100),
+        buildCustom10QuestionExercises(unit7LessonSentences[1], 999, 9990, 3, 110)
+      ]
     }
   }
 };
