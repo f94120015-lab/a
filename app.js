@@ -5962,9 +5962,18 @@ function initEventListeners() {
         }
       }
       if (!targetLessonId) {
-        const nextLesson = lessons.find(l => l.id === currentLesson.id + 1);
-        if (nextLesson && isLessonUnlocked(nextLesson.id)) {
-          targetLessonId = nextLesson.id;
+        const sortedLessons = [];
+        units.forEach(u => {
+          u.lessons.forEach(lId => {
+            sortedLessons.push(lId);
+          });
+        });
+        const currentIdx = sortedLessons.indexOf(currentLesson.id);
+        if (currentIdx !== -1 && currentIdx + 1 < sortedLessons.length) {
+          const nextLessonId = sortedLessons[currentIdx + 1];
+          if (isLessonUnlocked(nextLessonId)) {
+            targetLessonId = nextLessonId;
+          }
         }
       }
     }
