@@ -1,31 +1,18 @@
-import zipfile
-import xml.etree.ElementTree as ET
-import os
+import docx
 
-def get_docx_text(path):
-    try:
-        doc = zipfile.ZipFile(path)
-        xml_content = doc.read('word/document.xml')
-        root = ET.fromstring(xml_content)
-        
-        # Word XML namespaces
-        ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
-        
-        text = []
-        for paragraph in root.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'):
-            p_text = []
-            for run in paragraph.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}r'):
-                for t in run.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t'):
-                    p_text.append(t.text)
-            if p_text:
-                text.append("".join(p_text))
-        return "\n".join(text)
-    except Exception as e:
-        return f"Error reading {path}: {e}"
+doc = docx.Document("AMOK İçindekiler.docx")
+print("Number of paragraphs:", len(doc.paragraphs))
+print("Number of tables:", len(doc.tables))
 
-path = "/Users/faruknafizfazlioglu/Desktop/amok/Alıstırma_Yazılı_Ceviri_Sınırlandırma_Raporu.docx"
-if os.path.exists(path):
-    print("--- Alıstırma_Yazılı_Ceviri_Sınırlandırma_Raporu.docx TEXT ---")
-    print(get_docx_text(path)[:2000])  # print first 2000 chars
-else:
-    print("Docx file does not exist")
+with open("scratch/toc_text.txt", "w", encoding="utf-8") as f:
+    for i, p in enumerate(doc.paragraphs):
+        if p.text.strip():
+            f.write(f"P{i}: {p.text}\n")
+    
+    for i, table in enumerate(doc.tables):
+        f.write(f"\n--- Table {i} ---\n")
+        for row in table.rows:
+            row_text = [cell.text.strip().replace('\n', ' ') for cell in row.cells]
+            f.write(" | ".join(row_text) + "\n")
+
+print("Done writing scratch/toc_text.txt")

@@ -1,0 +1,225 @@
+[36m
+======================================================[0m
+[36m   AMOK DERS VE SORU YÜKLEME RAPORU (DURUM KONTROLÜ)[0m
+[36m======================================================
+[0m
+[1mBölüm 1: Yapılar[0m
+  - [33m1. Ders[0m (A. Özne + olmak + isim): [32m2 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m2. Ders[0m (B. Özne + olmak + sıfat): [32m2 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m3. Ders[0m (C. Özne + olmak + sıfat + isim): [32m2 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m4. Ders[0m (D. Özne + olmak + edat yapısı): [32m2 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m5. Ders[0m (E. Bölüm Sonu Karma Değerlendirme (Sayfa Özeti)): [32m1 alıştırma (20 soru) yüklendi ✓[0m
+
+[1mBölüm 2: İsim ve Edat Yapıları[0m
+  - [33m6. Ders[0m (Giriş. İsim ve Edat Yapılarına Giriş): [32m3 alıştırma (35 soru) yüklendi ✓[0m
+  - [33m7. Ders[0m (A. İsim + of the + isim): [32m4 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m8. Ders[0m (B. Zamir + of the + isim): [32m4 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m9. Ders[0m (C. İsim + of + isim): [32m3 alıştırma (45 soru) yüklendi ✓[0m
+  - [33m10. Ders[0m (D. İsim + from + isim): [32m4 alıştırma (54 soru) yüklendi ✓[0m
+  - [33m11. Ders[0m (E. İsim + edat yapısı): [32m5 alıştırma (101 soru) yüklendi ✓[0m
+  - [33m12. Ders[0m (F. İsim + edat yapısı + edat yapısı): [32m3 alıştırma (46 soru) yüklendi ✓[0m
+  - [33m13. Ders[0m (G. Yedekler): [32m3 alıştırma (45 soru) yüklendi ✓[0m
+  - [33m14. Ders[0m (I. Bölüm Sonu Karma Değerlendirme (Sayfa Özeti)): [32m1 alıştırma (20 soru) yüklendi ✓[0m
+
+[1mBölüm 3: Fiil ve Edat Yapıları[0m
+  - [33m15. Ders[0m (A. Fiil + edat yapısı): [32m5 alıştırma (75 soru) yüklendi ✓[0m
+  - [33m16. Ders[0m (B. Edat yapısı + edat yapısı): [32m5 alıştırma (75 soru) yüklendi ✓[0m
+
+[1mBölüm 4: Özne - Geçişli Fiil + Nesne[0m
+  - [33m17. Ders[0m (Özne - Geçişli Fiil + Nesne): [32m12 alıştırma (120 soru) yüklendi ✓[0m
+
+[1mBölüm 5: "There" Yapıları[0m
+  - [33m18. Ders[0m (A. There + olmak + isim): [32m5 alıştırma (99 soru) yüklendi ✓[0m
+  - [33m19. Ders[0m (B. There + olmak + sıfat + isim): [32m4 alıştırma (50 soru) yüklendi ✓[0m
+
+[1mBölüm 6: Okuma Parçaları 1[0m
+  - [33m20. Ders[0m (Genel Okuma Metinleri 1): [32m7 alıştırma (105 soru) yüklendi ✓[0m
+  - [33m21. Ders[0m (Genel Okuma Metinleri 2): [32m7 alıştırma (48 soru) yüklendi ✓[0m
+
+[1mBölüm 7: Soru Yapıları[0m
+  - [33m22. Ders[0m (A. Fiil + Özne): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m23. Ders[0m (B. do, does, did fiili + özne + mastar): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m24. Ders[0m (C. Soru kelimesi + fiil + özne): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m25. Ders[0m (D. Soru kelimesi + do, does, did + özne + mastar): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m26. Ders[0m (E. Edat + soru kelimesi + fiil + özne): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+
+[1mBölüm 8: Edilgen (Passive) Yapısı[0m
+  - [33m27. Ders[0m (A. Geniş ve Geçmiş Zaman Edilgen): [32m2 alıştırma (20 soru) yüklendi ✓[0m
+  - [33m28. Ders[0m (B. Gelecek Zaman ve Present Perfect Edilgen): [32m1 alıştırma (10 soru) yüklendi ✓[0m
+  - [33m29. Ders[0m (C. Olumsuz Edilgen Yapılar): [32m2 alıştırma (20 soru) yüklendi ✓[0m
+  - [33m30. Ders[0m (D. Karmaşık Edilgen Yapılar (by + Eyleyen)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+
+[1mBölüm 9: Edilgen (Passive) Mastarı[0m
+  - [33m31. Ders[0m (A. Modal Tabanlı Yalın Edilgen Örnekler (Positive Modals)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m32. Ders[0m (B. Modal Tabanlı Yalın Edilgenlerin Olumsuzları (Negative Modals)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m33. Ders[0m (C. Modal Tabanlı Yalın Edilgenlerin Soru Biçimleri (Interrogative Modals)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m34. Ders[0m (D. Modal Tabanlı Tam Genişletilmiş Edilgen Örnekler (Full Modal Passive)): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m35. Ders[0m (E. Arasına Zarf Girmiş Yalın Edilgen Örnekler (Split Passive)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m36. Ders[0m (F. Arasına Zarf Girmiş Tam Genişletilmiş Örnekler (Split Full Passive)): [32m2 alıştırma (20 soru) yüklendi ✓[0m
+
+[1mBölüm 10: İsim Tamlaması[0m
+  - [33m37. Ders[0m (A. İsim + isim): [32m6 alıştırma (90 soru) yüklendi ✓[0m
+  - [33m38. Ders[0m (B. İsim + isim + isim): [32m6 alıştırma (90 soru) yüklendi ✓[0m
+
+[1mBölüm 11: Present Participle Sıfatı (-ing)[0m
+  - [33m39. Ders[0m (A. ...ing + isim): [32m8 alıştırma (120 soru) yüklendi ✓[0m
+  - [33m40. Ders[0m (B. İsim + ...ing + isim): [32m4 alıştırma (60 soru) yüklendi ✓[0m
+
+[1mBölüm 12: Past Participle Sıfatı (-ed)[0m
+  - [33m41. Ders[0m (A. ...ed + isim): [32m8 alıştırma (120 soru) yüklendi ✓[0m
+  - [33m42. Ders[0m (B. Zarf + past participle + isim): [32m8 alıştırma (120 soru) yüklendi ✓[0m
+
+[1mBölüm 13: Participle Yapıları[0m
+  - [33m43. Ders[0m (A. İsim + present participle + edat yapısı): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m44. Ders[0m (B. İsim + present participle + nesne (isim)): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m45. Ders[0m (C. İsim + past participle + edat yapısı): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+
+[1mBölüm 14: Mastar (Infinitive)[0m
+  - [33m46. Ders[0m (A. Fiil + mastar): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m47. Ders[0m (B. Fiil + mastar + nesnesi (Sayfa 98 / 100)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mBölüm 15: Yapısal "It" Cümlesinin Öznesi[0m
+  - [33m48. Ders[0m (A. It + olmak + sıfat + mastar): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m49. Ders[0m (B. It + olmak + sıfat + mastar + nesnesi): [32m2 alıştırma (20 soru) yüklendi ✓[0m
+
+[1mBölüm 16: Maksat ve Amac Yapıları[0m
+  - [33m50. Ders[0m (A. Maksat için kullanılan mastar): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m51. Ders[0m (B. Maksat için kullanılan mastarın nesnesi): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m52. Ders[0m (C. Maksat Yapıları (Tam Genişletilmiş Akademik Örnekler)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+
+[1mBölüm 17: Fiil İsmi (Gerund) + Nesnesi (Özne Olarak)[0m
+  - [33m53. Ders[0m (A. ...ing + isim): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+
+[1mBölüm 18: Edattan Sonra Gelen Fiil (+ Nesnesi)[0m
+  - [33m54. Ders[0m (A. on / by / in / without + ...ing + nesne): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m55. Ders[0m (B. when / while / before / after / since + ...ing (+ nesnesi) (Sayfa 116 / 118)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m56. Ders[0m (C. when / if / unless / although / until / as / where + past participle): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mBölüm 19: Soru Kelimesinden Sonra Gelen Mastar[0m
+  - [33m57. Ders[0m (A. Soru Kelimesinden Sonra Gelen Mastar — Temel Giriş Yapıları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m58. Ders[0m (B. Soru Kelimesinden Sonra Gelen Mastar — Günlük Dil ve Cümle Yapıları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m59. Ders[0m (C. Soru Kelimesinden Sonra Gelen Mastar — İleri Akademik Cümleler): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mAra Bölüm 1: Faydalı Mutad Cümle Yapıları[0m
+  - [33m60. Ders[0m (A. Mantıksal Çıkarım, Özet ve Netice Konnektörleri): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m61. Ders[0m (B. Referans, Örneklendirme ve Açıklama Kalıpları): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m62. Ders[0m (C. Durumsal Koşul ve İhtimal Zarf Cümlecikleri): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m63. Ders[0m (D. Zaman, Derece ve Nicelik Belirteçleri (Quantifiers)): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+
+[1mBölüm 20: Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before[0m
+  - [33m64. Ders[0m (A. After): [32m8 alıştırma (119 soru) yüklendi ✓[0m
+  - [33m65. Ders[0m (B. Before): [32m12 alıştırma (156 soru) yüklendi ✓[0m
+
+[1mBölüm 21: Zaman Zarfıyla Başlayan Zarf Cümleciği, When[0m
+  - [33m66. Ders[0m (A. When - Geniş ve Geçmiş Zaman): [32m2 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m67. Ders[0m (B. When - Perfect Zamanlar): [32m1 alıştırma (20 soru) yüklendi ✓[0m
+  - [33m68. Ders[0m (C. When - Edilgen Yapılar): [32m2 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m69. Ders[0m (D. When - Karışık Zamanlar): [32m1 alıştırma (20 soru) yüklendi ✓[0m
+  - [33m70. Ders[0m (E. When - Akademik Cümleler): [32m3 alıştırma (36 soru) yüklendi ✓[0m
+
+[1mBölüm 22: Zaman Zarfıyla Başlayan Zarf Cümleciği, Since, While / As, Until[0m
+  - [33m71. Ders[0m (A. Since): [32m3 alıştırma (54 soru) yüklendi ✓[0m
+  - [33m72. Ders[0m (B. While / As): [32m3 alıştırma (54 soru) yüklendi ✓[0m
+  - [33m73. Ders[0m (C. Until): [32m7 alıştırma (122 soru) yüklendi ✓[0m
+
+[1mBölüm 23: Zarf Cümlecikleri (Sebep, Karşıtlık, Derece, Maksat, Netice, Şart)[0m
+  - [33m74. Ders[0m (Sebep - a) because): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m75. Ders[0m (Sebep - b) since): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m76. Ders[0m (Sebep - c) as): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m77. Ders[0m (Karşıtlık - 'Although'): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m78. Ders[0m (Derece): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m79. Ders[0m (Maksat): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m80. Ders[0m (Netice): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m81. Ders[0m (Şart - a) if): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m82. Ders[0m (Şart - b) unless): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m83. Ders[0m (Şart - c) provided that / on condition that): [32m5 alıştırma (50 soru) yüklendi ✓[0m
+  - [33m84. Ders[0m (Bölüm Sonu Karma Değerlendirme (Sayfa Özeti)): [32m1 alıştırma (20 soru) yüklendi ✓[0m
+
+[1mBölüm 24: Mukayese (Karşılaştırma) Yapıları[0m
+  - [33m85. Ders[0m (A. 'Than' Kullanılmayan Yalın Kıyaslama Yapısı (Absolute Comparative)): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m86. Ders[0m (B. "than"): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m87. Ders[0m (C. "as...as", "the same"): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+
+[1mBölüm 25: Sıfat Cümleciği (Adjectival Clause / Relative Clause)[0m
+  - [33m88. Ders[0m (a) Who): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m89. Ders[0m (b) Which): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m90. Ders[0m (c) Where): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m91. Ders[0m (d) Whom): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m92. Ders[0m (e) Edat ile başlayanlar): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m93. Ders[0m (f) Whose): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+  - [33m94. Ders[0m (g) İşaret kelimesi olmayanlar): [32m8 alıştırma (80 soru) yüklendi ✓[0m
+
+[1mBölüm 26: İsim Cümleciği (Noun Clause)[0m
+  - [33m95. Ders[0m (Soru Kelimesi İle Başlayan İsim Cümlecikleri): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m96. Ders[0m (That İle Başlayan İsim Cümlecikleri): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m97. Ders[0m (If Veya Whether İle Başlayan İsim Cümlecikleri): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m98. Ders[0m ("The fact that" Yapısı İle Kurulan İsim Cümlecikleri): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+
+[1mBölüm 27: It + to be + sıfat/past participle + that[0m
+  - [33m99. Ders[0m (It + to be / modal + Sıfat / Past Participle + that Modeli): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m100. Ders[0m (It + to be / modal + Sıfat / Past Participle + Mastar (to V1) + that Modeli): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+
+[1mBölüm 28: Neden ve Etki Yapıları[0m
+  - [33m101. Ders[0m (Doğrusal Aktif Fiil Şablonu): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m102. Ders[0m (Zarfal Geçiş Şablonu (Semicolon + Transition Adverb)): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m103. Ders[0m (Karmaşık Yönlendirmeli Şablon (Cause + Object + to V1)): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m104. Ders[0m (Cümle Alan Bağlaç Şablonu (Adverbial Clauses of Cause)): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m105. Ders[0m (İsim Alan Edat Şablonu (Prepositions of Cause)): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m106. Ders[0m (Köken Bildiren Ters Dönüşümlü Şablon (Stem From)): [32m3 alıştırma (60 soru) yüklendi ✓[0m
+
+[1mBölüm 29: [Değer Eklenmiş Bölüm] Ara Bölüm 2: Tercih Bildiren Yapılar (Would rather)[0m
+  - [33m107. Ders[0m (A. Tercih Bildiren Yapılar — Present (Would rather + V1)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m108. Ders[0m (B. Tercih Bildiren Yapılar — Past (Would rather + have + V3)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m109. Ders[0m (C. Diğer Kişilerin Tercihleri — Present (Would rather + subject + V2)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+  - [33m110. Ders[0m (D. Diğer Kişilerin Tercihleri — Past (Would rather + subject + had + V3)): [32m3 alıştırma (30 soru) yüklendi ✓[0m
+
+[1mBölüm 30: [Değer Eklenmiş Bölüm] Ara Bölüm 3: Rica ve İzin İsteme Yapıları[0m
+  - [33m111. Ders[0m (A. Rica Yapıları — Modallar (Would you / Could you / Will you / Can you)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m112. Ders[0m (B. Rica Yapıları — I wonder (I wonder if you could)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m113. Ders[0m (C. İzin İsteme Yapıları — Present (Do you mind if I)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m114. Ders[0m (D. İzin İsteme Yapıları — Past (Would you mind if I)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mBölüm 31: [Değer Eklenmiş Bölüm] Ara Bölüm 4: Before Bağlaçlı Cümle Yapıları[0m
+  - [33m115. Ders[0m (A. Geniş Zaman Aktif ve Durum Cümleleri): [31mSoru bulunamadı! ⚠️ BOŞ[0m
+  - [33m116. Ders[0m (B. Basit Geçmiş Zaman Aktif Cümleleri): [31mSoru bulunamadı! ⚠️ BOŞ[0m
+  - [33m117. Ders[0m (C. Miş'li Geçmiş Zaman (Past Perfect) Aktif): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+  - [33m118. Ders[0m (D. Edilgen Çatı (Passive Voice)): [31mSoru bulunamadı! ⚠️ BOŞ[0m
+
+[1mBölüm 32: Konnektörler[0m
+  - [33m119. Ders[0m (A. Söz Dizimsel İşlevlerine Göre Konnektörler): [32m4 alıştırma (58 soru) yüklendi ✓[0m
+  - [33m120. Ders[0m (B. Anlamsal İşlevlerine Göre Konnektörler): [32m4 alıştırma (68 soru) yüklendi ✓[0m
+
+[1mBölüm 33: [Değer Eklenmiş Bölüm] Zaman Zarfları ve Zaman Uyumu (Ekstra Pratik)[0m
+  - [33m121. Ders[0m (Present Continuous (is Ving) - Zaman Zarfları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m122. Ders[0m (Past Simple (v2) - Zaman Zarfları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m123. Ders[0m (Present Perfect (have V3) - Zaman Zarfları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mBölüm 34: [Değer Eklenmiş Bölüm] Zaman Uyumu: By the time, Since, It is (high) time (Ekstra Pratik)[0m
+  - [33m124. Ders[0m ("Since" Zaman Uyumu Kalıpları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m125. Ders[0m ("By the time" Zaman Uyumu Kalıpları): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m126. Ders[0m ("It is (high) time" Kalıbı): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m127. Ders[0m (Süperlatif & Kısıtlayıcı Sıfatlar + Present Perfect): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+
+[1mBölüm 35: [Değer Eklenmiş Bölüm] Öbeksel Kipler (Phrasal Modals) (Ekstra Pratik)[0m
+  - [33m128. Ders[0m (be used to (-e alışkın olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m129. Ders[0m (be accustomed to (-e alışkın olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m130. Ders[0m (be willing to (... yapmaya istekli/gönüllü olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m131. Ders[0m (be unwilling to (... yapmaya isteksiz olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m132. Ders[0m (be reluctant to (... yapmaya gönülsüz olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m133. Ders[0m (be likely to (... yapması muhtemel olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m134. Ders[0m (be unlikely to (... yapması muhtemel olmamak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m135. Ders[0m (be bound to (... yapması kaçınılmaz/kesin olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m136. Ders[0m (be certain to (... yapacağı kesin olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m137. Ders[0m (be doomed to (kötü bir sona mahkum olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m138. Ders[0m (be to (-mesi planlanmak / -mek zorundadır)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m139. Ders[0m (be supposed to (... yapması gerekir/beklenir)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m140. Ders[0m (be unable to (-i yapamamak / yetersizlik)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m141. Ders[0m (be about to (-mek üzere olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m142. Ders[0m (be certain to (kesinlikle ... yapacak olmak)): [32m4 alıştırma (40 soru) yüklendi ✓[0m
+  - [33m143. Ders[0m (Karma Test): [32m6 alıştırma (60 soru) yüklendi ✓[0m
+
+======================================================
+Toplam Yüklenen Soru Sayısı: [32m7315[0m
+Soru Yüklenmemiş/Eksik Ders Sayısı: [31m3[0m ⚠️
+======================================================
+

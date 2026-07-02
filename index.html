@@ -46,7 +46,19 @@
         </div>
         <div class="form-group">
           <label for="login-password">Şifre</label>
-          <input type="password" id="login-password" placeholder="••••••" required autocomplete="current-password">
+          <div class="password-wrapper">
+            <input type="password" id="login-password" placeholder="••••••" required autocomplete="current-password">
+            <button type="button" class="password-toggle-btn" tabindex="-1" aria-label="Şifreyi Göster" data-toggle-for="login-password">
+              <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary btn-full" id="btn-login">Giriş Yap</button>
       </form>
@@ -63,7 +75,19 @@
         </div>
         <div class="form-group">
           <label for="register-password">Şifre</label>
-          <input type="password" id="register-password" placeholder="En az 6 karakter" required minlength="6" autocomplete="new-password">
+          <div class="password-wrapper">
+            <input type="password" id="register-password" placeholder="En az 6 karakter" required minlength="6" autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" tabindex="-1" aria-label="Şifreyi Göster" data-toggle-for="register-password">
+              <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary btn-full" id="btn-register">Kayıt Ol</button>
       </form>
@@ -650,6 +674,24 @@
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
         <button class="btn btn-secondary" id="review-prompt-cancel-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Daha Sonra</button>
         <button class="btn btn-primary" id="review-prompt-confirm-btn" style="flex: 1; padding: 12px; margin-bottom: 0; background: var(--accent-secondary, #10b981); border-color: var(--accent-secondary, #10b981);">Şimdi Çöz</button>
+      </div>
+    </div>
+  <div class="grammar-modal-overlay" id="guest-block-modal">
+    <div class="grammar-modal" style="max-width: 440px;">
+      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
+        <span class="grammar-modal-icon">🔒</span>
+        <h3>Bölüm Kilitli</h3>
+        <button class="grammar-modal-close" id="guest-block-close-btn">&times;</button>
+      </div>
+      <div class="grammar-modal-body" style="text-align: center; gap: 12px; padding: 28px 20px;">
+        <p style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0; font-family: var(--font-heading);">Devam Etmek İçin Üye Ol!</p>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+          Misafir hesapları sadece ilk bölümü tamamlayabilir. İlerlemeyi kaydetmek, diğer bölümleri açmak ve liglerde yarışmak için ücretsiz üye olun!
+        </p>
+      </div>
+      <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
+        <button class="btn btn-secondary" id="guest-block-login-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Giriş Yap</button>
+        <button class="btn btn-primary" id="guest-block-register-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Kayıt Ol</button>
       </div>
     </div>
   </div>

@@ -2191,6 +2191,31 @@ function initAuth() {
   const loginForm = document.getElementById('login-form');
   const registerForm = document.getElementById('register-form');
 
+  // Şifre Göster/Gizle
+  const toggleButtons = document.querySelectorAll('.password-toggle-btn');
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const inputId = btn.dataset.toggleFor;
+      const input = document.getElementById(inputId);
+      if (!input) return;
+
+      const eyeOpen = btn.querySelector('.eye-open');
+      const eyeClosed = btn.querySelector('.eye-closed');
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        eyeOpen.style.display = 'none';
+        eyeClosed.style.display = 'block';
+        btn.setAttribute('aria-label', 'Şifreyi Gizle');
+      } else {
+        input.type = 'password';
+        eyeOpen.style.display = 'block';
+        eyeClosed.style.display = 'none';
+        btn.setAttribute('aria-label', 'Şifreyi Göster');
+      }
+    });
+  });
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
@@ -2209,72 +2234,107 @@ function initAuth() {
   // Giriş
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submitBtn = loginForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Giriş yapılıyor...';
+    submitBtn.disabled = true;
+
     const username = document.getElementById('login-username').value.trim();
     const password = document.getElementById('login-password').value;
 
-    const users = getUsers();
-    if (!users[username]) {
-      showToast('Kullanıcı bulunamadı!', 'error');
-      return;
-    }
-    const hashedInput = await hashPassword(password);
-    if (users[username].password !== hashedInput) {
-      showToast('Şifre yanlış!', 'error');
-      return;
-    }
-
-    // Kullanıcının state'ini yükle
-    const userState = localStorage.getItem(`amok_state_${username}`);
-    if (userState) {
-      try {
-        state = { ...state, ...JSON.parse(userState) };
-      } catch (e) {
-        console.error('Kullanıcı state yükleme hatası:', e);
+    try {
+      const users = getUsers();
+      if (!users[username]) {
+        showToast('Kullanıcı bulunamadı!', 'error');
+        return;
       }
-    }
+      const hashedInput = await hashPassword(password);
+      if (users[username].password !== hashedInput) {
+        showToast('Şifre yanlış!', 'error');
+        return;
+      }
 
-    state.username = username;
-    state.isGuest = false;
-    saveState();
-    enterApp();
+      // Kullanıcının state'ini yükle
+      const userState = localStorage.getItem(`amok_state_${username}`);
+      if (userState) {
+        try {
+          state = { ...state, ...JSON.parse(userState) };
+        } catch (e) {
+          console.error('Kullanıcı state yükleme hatası:', e);
+        }
+      }
+
+      state.username = username;
+      state.isGuest = false;
+      saveState();
+      showToast(`Hoş geldin, ${username}! 🎉`, 'success');
+      enterApp();
+    } catch (err) {
+      console.error('Login error:', err);
+      showToast('Giriş yapılırken bir hata oluştu!', 'error');
+    } finally {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    }
   });
 
   // Kayıt
   registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submitBtn = registerForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = 'Kayıt yapılıyor...';
+    submitBtn.disabled = true;
+
     const username = document.getElementById('register-username').value.trim();
     const email = document.getElementById('register-email').value.trim();
     const password = document.getElementById('register-password').value;
 
     if (username.length < 3) {
       showToast('Kullanıcı adı en az 3 karakter olmalı!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
       return;
     }
 
-    const users = getUsers();
-    if (users[username]) {
-      showToast('Bu kullanıcı adı zaten alınmış!', 'error');
-      return;
-    }
+    try {
+      const users = getUsers();
+      if (users[username]) {
+        showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+        return;
+      }
 
-    await saveUser(username, password);
-    state = {
-      ...state,
-      username,
-      isGuest: false,
-      streak: 0,
-      xp: 0,
-      hearts: MAX_HEARTS,
-      completedLessons: [],
-      unlockedAchievements: [],
-      lastActiveDate: null,
-      nightOwlTriggered: false,
-      perfectLessonTriggered: false,
-      warriorTriggered: false
-    };
-    saveState();
-    showToast('Hesap oluşturuldu! Hoş geldin 🎉', 'success');
-    enterApp();
+      await saveUser(username, password);
+      
+      const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+      const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+      state = {
+        ...state,
+        username,
+        isGuest: false,
+        streak: 0,
+        xp: 0,
+        hearts: MAX_HEARTS,
+        completedLessons: [],
+        unlockedAchievements: [],
+        lastActiveDate: null,
+        nightOwlTriggered: false,
+        perfectLessonTriggered: false,
+        warriorTriggered: false,
+        avatarColor: randomColor,
+        following: []
+      };
+      saveState();
+      showToast('Hesap oluşturuldu! Hoş geldin 🎉', 'success');
+      enterApp();
+    } catch (err) {
+      console.error('Registration error:', err);
+      showToast('Kayıt yapılırken bir hata oluştu!', 'error');
+    } finally {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    }
   });
 
   // Misafir
@@ -2356,6 +2416,7 @@ function logout() {
   }
   localStorage.removeItem(STATE_KEY);
   
+
   // Temayı sıfırla
   document.documentElement.removeAttribute('data-theme');
   
@@ -2784,9 +2845,9 @@ function renderLessonTree() {
       
       // Calculate parameters unique to each unit's ID
       const phase = (u * 1.7) % (2 * Math.PI);      // Unique phase shift
-      const freq = 1.0 + (u * 0.15) % 1.2;          // Unique frequency
-      const amp = 14 + (u * 3) % 9;                 // Unique amplitude
-      const tilt = ((u % 3) - 1) * (2 + (u % 4));    // Unique diagonal tilt slope (negative, flat, or positive)
+      const freq = 1.1 + (u * 0.1) % 0.6;           // Unique frequency
+      const amp = 26 + (u * 2) % 6;                 // Increased amplitude for a more dramatic curved swing
+      const tilt = ((u % 3) - 1) * (0.8 + (u % 2));  // Reduced diagonal tilt slope to avoid edge clipping
       
       // Combine wave and diagonal tilt
       const centerIndex = (totalInUnit - 1) / 2;
@@ -2834,7 +2895,7 @@ function renderLessonTree() {
       const lesson = lessons.find(l => l.id === lId);
       if (!lesson) return;
 
-      const isCompleted = !isLocalEnvironment() && state.completedLessons.includes(lId);
+      const isCompleted = state.completedLessons.includes(lId);
       const isActive = !isCompleted && isLessonUnlocked(lId);
       const isLocked = !isCompleted && !isActive;
 
@@ -2863,7 +2924,7 @@ function renderLessonTree() {
       if (isNotUploadedLesson) {
         progressBadgeContent = `<div class="node-progress-badge">0</div>`;
       } else if (lesson.exercises && lesson.exercises.length > 0) {
-        const completedCount = isLocalEnvironment() ? 0 : lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
+        const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
         const totalCount = lesson.exercises.length;
         const isAllExCompleted = completedCount === totalCount;
         progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
@@ -2909,6 +2970,18 @@ function renderLessonTree() {
       const btn = nodeWrapper.querySelector('.lesson-node');
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
+
+        // Check guest restriction
+        if (state.isGuest) {
+          const firstUnit = units.find(u => u.id === 1);
+          const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
+          const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
+          if (unit.id !== 1 || isUnit1Completed) {
+            showGuestBlockModal();
+            return;
+          }
+        }
+
         togglePopover(btn, lId, unit.id, pt.x, pt.y);
       });
 
@@ -2982,7 +3055,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     }
   }
 
-  const isCompleted = !isLocalEnvironment() && state.completedLessons.includes(lessonId);
+  const isCompleted = state.completedLessons.includes(lessonId);
 
   // Create popover element
   const popover = document.createElement('div');
@@ -3017,7 +3090,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     `;
   } else if (lesson.exercises && lesson.exercises.length > 0) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
-      const isExCompleted = !isLocalEnvironment() && state.completedLessons.includes(`${lesson.id}_${ex.id}`);
+      const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
       if (!isLocalEnvironment()) {
         if (index === 0) {
@@ -5118,6 +5191,8 @@ const MOCK_ONLINE_USERS = [
   { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' }
 ];
 
+
+
 function handleProfilePhotoUpload(file) {
   if (!file) return;
   if (!file.type.startsWith('image/')) {
@@ -5514,6 +5589,7 @@ function renderSocialList() {
 
 function searchSocialUsers() {
   const input = document.getElementById('social-search-input');
+  const SchoolResultsEl = document.getElementById('social-search-results'); // wait, resultsEl
   const resultsEl = document.getElementById('social-search-results');
   if (!input || !resultsEl) return;
 
@@ -5623,16 +5699,6 @@ function toggleFollowUser(username, isFollowing) {
   if (searchInput && searchInput.value.trim().length > 0) {
     searchSocialUsers();
   }
-
-  // Update tabs numbers
-  const tabFollowing = document.getElementById('subtab-following');
-  if (tabFollowing) tabFollowing.textContent = `Takip Ettiklerim (${state.following.length})`;
-  
-  const tabFollowers = document.getElementById('subtab-followers');
-  if (tabFollowers) tabFollowers.textContent = `Takipçilerim (${state.followers.length})`;
-
-  // Re-render lists
-  renderSocialList();
 }
 
 function congratulateFriend(username) {
@@ -5663,7 +5729,7 @@ function renderLeaderboard() {
 
   const competitors = [
     ...baseCompetitors,
-    { name: escapeHtml((state.username || 'Misafir') + " (Sen)"), xp: state.xp, isUser: true }
+    { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true }
   ];
 
   competitors.sort((a, b) => b.xp - a.xp);
@@ -5855,10 +5921,49 @@ function renderStore() {
   }
 }
 
+function showGuestBlockModal() {
+  const modal = document.getElementById('guest-block-modal');
+  if (modal) {
+    modal.classList.add('show');
+  }
+}
+
 // ============================================================
 // EVENT LİSTENERLER
 // ============================================================
 function initEventListeners() {
+  // Misafir Engel Modali
+  const guestBlockCloseBtn = document.getElementById('guest-block-close-btn');
+  const guestBlockLoginBtn = document.getElementById('guest-block-login-btn');
+  const guestBlockRegisterBtn = document.getElementById('guest-block-register-btn');
+
+  const hideGuestBlockModal = () => {
+    const modal = document.getElementById('guest-block-modal');
+    if (modal) modal.classList.remove('show');
+  };
+
+  if (guestBlockCloseBtn) {
+    guestBlockCloseBtn.addEventListener('click', hideGuestBlockModal);
+  }
+
+  if (guestBlockLoginBtn) {
+    guestBlockLoginBtn.addEventListener('click', () => {
+      hideGuestBlockModal();
+      logout();
+      const tabLogin = document.getElementById('tab-login');
+      if (tabLogin) tabLogin.click();
+    });
+  }
+
+  if (guestBlockRegisterBtn) {
+    guestBlockRegisterBtn.addEventListener('click', () => {
+      hideGuestBlockModal();
+      logout();
+      const tabRegister = document.getElementById('tab-register');
+      if (tabRegister) tabRegister.click();
+    });
+  }
+
   // Tema
   document.getElementById('btn-theme').addEventListener('click', toggleTheme);
 
@@ -5950,6 +6055,17 @@ function initEventListeners() {
     renderLessonTree();
     renderAchievements();
     showScreen('home-screen');
+
+    // Check guest restriction
+    if (state.isGuest) {
+      const firstUnit = units.find(u => u.id === 1);
+      const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
+      const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
+      if (isUnit1Completed) {
+        showGuestBlockModal();
+        return;
+      }
+    }
 
     // Find the next target lesson to open
     let targetLessonId = null;
@@ -6065,6 +6181,10 @@ function initEventListeners() {
   const startPlacementBtn = document.getElementById('btn-start-placement');
   if (startPlacementBtn) {
     startPlacementBtn.addEventListener('click', () => {
+      if (state.isGuest) {
+        showGuestBlockModal();
+        return;
+      }
       startPlacementTest();
     });
   }
@@ -6101,6 +6221,15 @@ function initEventListeners() {
   const startReviewBtn = document.getElementById('btn-start-review');
   if (startReviewBtn) {
     startReviewBtn.addEventListener('click', () => {
+      if (state.isGuest) {
+        const firstUnit = units.find(u => u.id === 1);
+        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
+        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
+        if (isUnit1Completed) {
+          showGuestBlockModal();
+          return;
+        }
+      }
       startReviewMode();
     });
   }
@@ -6134,6 +6263,15 @@ function initEventListeners() {
   if (reviewPromptConfirmBtn) {
     reviewPromptConfirmBtn.addEventListener('click', () => {
       hideReviewPromptModal();
+      if (state.isGuest) {
+        const firstUnit = units.find(u => u.id === 1);
+        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
+        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
+        if (isUnit1Completed) {
+          showGuestBlockModal();
+          return;
+        }
+      }
       startReviewMode();
     });
   }
@@ -6984,7 +7122,6 @@ function init() {
   initAuth();
   initEventListeners();
 
-  // Eğer giriş yapılmamışsa varsayılan olarak misafir moduna al
   if (!state.username) {
     state.username = 'Misafir';
     state.isGuest = true;

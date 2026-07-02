@@ -1,0 +1,466 @@
+[
+  {
+    "id": 6,
+    "originalIndex": 6,
+    "title": "Yapılar",
+    "description": "Özne + Olmak Fiili + İsim/Sıfat/Sıfat+İsim/Edat Takımı ile temel cümle yapıları",
+    "lessons": [
+      16,
+      17,
+      18,
+      19,
+      906
+    ],
+    "pages": "1"
+  },
+  {
+    "id": 1,
+    "originalIndex": 1,
+    "title": "İsim ve Edat Yapıları",
+    "description": "İsimlerin edatlarla niteleme yapıları ve zincirleme edat grupları",
+    "lessons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      901,
+      9
+    ],
+    "pages": "13"
+  },
+  {
+    "id": 2,
+    "originalIndex": 2,
+    "title": "Fiil ve Edat Yapıları",
+    "description": "Fiillerin edat grupları ve zarflarla olan ilişkileri",
+    "lessons": [
+      8
+    ],
+    "pages": "21"
+  },
+  {
+    "id": 7,
+    "originalIndex": 7,
+    "title": "Özne - Geçişli Fiil + Nesne",
+    "description": "Geçişli fiil ile nesne arasındaki temel ilişkiler",
+    "lessons": [
+      20
+    ],
+    "pages": "32"
+  },
+  {
+    "id": 8,
+    "originalIndex": 8,
+    "title": "\"There\" Yapıları",
+    "description": "There is/are ve modal fiillerle varlık durumları",
+    "lessons": [
+      21,
+      22
+    ],
+    "pages": "38"
+  },
+  {
+    "id": 33,
+    "originalIndex": 6,
+    "title": "Okuma Parçaları 1",
+    "description": "Okuma anlama becerisini geliştirmeye yönelik temel düzey okuma parçaları ve analiz çalışmaları",
+    "lessons": [
+      135
+    ],
+    "pages": null
+  },
+  {
+    "id": 9,
+    "originalIndex": 9,
+    "title": "Soru Yapıları",
+    "description": "Wh- soru kelimeleri, yardımcı fiiller ve edatlı soru yapıları",
+    "lessons": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "pages": "49"
+  },
+  {
+    "id": 10,
+    "originalIndex": 10,
+    "title": "Edilgen (Passive) Yapısı",
+    "description": "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri",
+    "lessons": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "pages": "55"
+  },
+  {
+    "id": 11,
+    "originalIndex": 11,
+    "title": "Edilgen (Passive) Mastarı",
+    "description": "Edilgen mastar (to be + V3) yapıları ve bölünmüş edilgen fiiller",
+    "lessons": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "pages": "63"
+  },
+  {
+    "id": 3,
+    "originalIndex": 3,
+    "title": "İsim Tamlaması",
+    "description": "İsim tamlamaları ve bileşik isim grupları",
+    "lessons": [
+      10,
+      11
+    ],
+    "pages": "72"
+  },
+  {
+    "id": 4,
+    "originalIndex": 4,
+    "title": "Present Participle Sıfatı (-ing)",
+    "description": "Present participle sıfat olarak kullanımı ve niteleme yapıları",
+    "lessons": [
+      12,
+      13
+    ],
+    "pages": "81"
+  },
+  {
+    "id": 5,
+    "originalIndex": 5,
+    "title": "Past Participle Sıfatı (-ed)",
+    "description": "Past participle sıfat olarak kullanımı ve zarflı niteleme grupları",
+    "lessons": [
+      14,
+      15
+    ],
+    "pages": "85"
+  },
+  {
+    "id": 12,
+    "originalIndex": 12,
+    "title": "Participle Yapıları",
+    "description": "Present ve past participle yapıları ile niteleme",
+    "lessons": [
+      38,
+      39,
+      40
+    ],
+    "pages": "88"
+  },
+  {
+    "id": 14,
+    "originalIndex": 14,
+    "title": "Mastar (Infinitive)",
+    "description": "Mastar (infinitive) yapıları ve eylemsiler",
+    "lessons": [
+      45,
+      46
+    ],
+    "pages": "95"
+  },
+  {
+    "id": 15,
+    "originalIndex": 15,
+    "title": "Yapısal \"It\" Cümlesinin Öznesi",
+    "description": "Strüktürel It cümlesinin öznesi ve sıfat/mastar yapıları",
+    "lessons": [
+      47
+    ],
+    "pages": "103"
+  },
+  {
+    "id": 16,
+    "originalIndex": 16,
+    "title": "Maksat ve Amac Yapıları",
+    "description": "Maksat ve amaç bildiren mastar (infinitive of purpose) yapıları",
+    "lessons": [
+      48,
+      49,
+      50
+    ],
+    "pages": "107"
+  },
+  {
+    "id": 18,
+    "originalIndex": 18,
+    "title": "Fiil İsmi (Gerund) + Nesnesi (Özne Olarak)",
+    "description": "Fiil isminin (gerund) cümle öznesi olarak kullanımı",
+    "lessons": [
+      55
+    ],
+    "pages": "112"
+  },
+  {
+    "id": 19,
+    "originalIndex": 19,
+    "title": "Edattan Sonra Gelen Fiil (+ Nesnesi)",
+    "description": "Edatlardan sonra gerund ve past participle kullanımı",
+    "lessons": [
+      56,
+      57,
+      58
+    ],
+    "pages": "113"
+  },
+  {
+    "id": 20,
+    "originalIndex": 20,
+    "title": "Soru Kelimesinden Sonra Gelen Mastar",
+    "description": "Soru kelimelerinden sonra mastar (Wh- word + to V) yapısı",
+    "lessons": [
+      59,
+      60,
+      61
+    ],
+    "pages": "124"
+  },
+  {
+    "id": 31,
+    "originalIndex": 19,
+    "title": "Ara Bölüm 1: Faydalı Mutad Cümle Yapıları",
+    "description": "Günlük ve akademik dilde sıkça kullanılan faydalı ve yaygın cümle yapıları",
+    "lessons": [
+      124,
+      125,
+      126,
+      127
+    ],
+    "pages": "127"
+  },
+  {
+    "id": 23,
+    "originalIndex": 23,
+    "title": "Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before",
+    "description": "after ve before bağlaçları ile kurulan zaman cümleleri",
+    "lessons": [
+      68,
+      69
+    ],
+    "pages": null
+  },
+  {
+    "id": 24,
+    "originalIndex": 24,
+    "title": "Zaman Zarfıyla Başlayan Zarf Cümleciği, When",
+    "description": "when bağlacı ile kurulan zaman cümleleri",
+    "lessons": [
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "pages": null
+  },
+  {
+    "id": 25,
+    "originalIndex": 25,
+    "title": "Zaman Zarfıyla Başlayan Zarf Cümleciği, Since, While / As, Until",
+    "description": "since, while/as, until bağlaçları ile kurulan zaman cümleleri",
+    "lessons": [
+      75,
+      76,
+      77
+    ],
+    "pages": null
+  },
+  {
+    "id": 32,
+    "originalIndex": 23,
+    "title": "Zarf Cümlecikleri (Sebep, Karşıtlık, Derece, Maksat, Netice, Şart)",
+    "description": "Zarf cümleciklerinde sebep, karşıtlık, derece, maksat, netice ve şart bildiren bağlaçlar ve yapısal kullanımları",
+    "lessons": [
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138
+    ],
+    "pages": "187-213"
+  },
+  {
+    "id": 26,
+    "originalIndex": 26,
+    "title": "Mukayese (Karşılaştırma) Yapıları",
+    "description": "Karşılaştırma ve üstünlük yapıları, as...as ve the same kullanımları",
+    "lessons": [
+      78,
+      79,
+      80
+    ],
+    "pages": "216"
+  },
+  {
+    "id": 27,
+    "originalIndex": 27,
+    "title": "Sıfat Cümleciği (Adjectival Clause / Relative Clause)",
+    "description": "İsimleri niteleyen relative pronoun (who, which, where, whose, whom) yapıları",
+    "lessons": [
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87
+    ],
+    "pages": "224"
+  },
+  {
+    "id": 28,
+    "originalIndex": 28,
+    "title": "İsim Cümleciği (Noun Clause)",
+    "description": "Cümlede özne veya nesne görevindeki wh- soru kelimeleri, that ve whether yan cümleleri",
+    "lessons": [
+      88,
+      89,
+      90,
+      91
+    ],
+    "pages": "240"
+  },
+  {
+    "id": 29,
+    "originalIndex": 29,
+    "title": "It + to be + sıfat/past participle + that",
+    "description": "It is clear that..., It is believed that... gibi edilgen ve açıklayıcı cümle girişleri",
+    "lessons": [
+      92,
+      93
+    ],
+    "pages": "251"
+  },
+  {
+    "id": 30,
+    "originalIndex": 30,
+    "title": "Neden ve Etki Yapıları",
+    "description": "Neden-sonuç bildiren bağlaçlar, aktif fiiller, zarflar ve edat grupları",
+    "lessons": [
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "pages": "256"
+  },
+  {
+    "id": 13,
+    "originalIndex": 13,
+    "title": "[Değer Eklenmiş Bölüm] Ara Bölüm 2: Tercih Bildiren Yapılar (Would rather)",
+    "description": "[Değer Eklenmiş Bölüm] Kitapta olmayıp müfredatı zenginleştirmek için eklenmiş, would rather yapılarını içeren dersler.",
+    "lessons": [
+      41,
+      42,
+      43,
+      44
+    ],
+    "pages": "93-94"
+  },
+  {
+    "id": 17,
+    "originalIndex": 17,
+    "title": "[Değer Eklenmiş Bölüm] Ara Bölüm 3: Rica ve İzin İsteme Yapıları",
+    "description": "[Değer Eklenmiş Bölüm] Kitapta olmayıp günlük ve akademik dil kullanımını pekiştirmek için eklenmiş rica ve izin isteme yapıları.",
+    "lessons": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "pages": "99-100"
+  },
+  {
+    "id": 21,
+    "originalIndex": 21,
+    "title": "[Değer Eklenmiş Bölüm] Ara Bölüm 4: Before Bağlaçlı Cümle Yapıları",
+    "description": "[Değer Eklenmiş Bölüm] Kitapta yer alan before yapılarını genişleten ve zaman/çatı uyumunu pekiştiren ara ünite.",
+    "lessons": [
+      62,
+      63,
+      64,
+      65
+    ],
+    "pages": "1-4"
+  },
+  {
+    "id": 22,
+    "originalIndex": 22,
+    "title": "Konnektörler",
+    "description": "Cümle ve isim öbeklerini birbirine bağlayan söz dizimsel ve anlamsal bağlaçlar",
+    "lessons": [
+      66,
+      67
+    ],
+    "pages": null
+  },
+  {
+    "id": 102,
+    "originalIndex": 32,
+    "title": "[Değer Eklenmiş Bölüm] Zaman Zarfları ve Zaman Uyumu (Ekstra Pratik)",
+    "description": "[Değer Eklenmiş Bölüm] Zaman zarfları ve akademik zaman uyumunu pekiştirmek için tasarlanmış ek alıştırma ünitesi.",
+    "lessons": [
+      100,
+      101,
+      102
+    ],
+    "pages": null
+  },
+  {
+    "id": 101,
+    "originalIndex": 31,
+    "title": "[Değer Eklenmiş Bölüm] Zaman Uyumu: By the time, Since, It is (high) time (Ekstra Pratik)",
+    "description": "[Değer Eklenmiş Bölüm] 'By the time', 'Since', 'It is (high) time' ve süperlatif bağlamlı zaman uyumu pratikleri.",
+    "lessons": [
+      103,
+      104,
+      105,
+      106
+    ],
+    "pages": null
+  },
+  {
+    "id": 103,
+    "originalIndex": 33,
+    "title": "[Değer Eklenmiş Bölüm] Öbeksel Kipler (Phrasal Modals) (Ekstra Pratik)",
+    "description": "[Değer Eklenmiş Bölüm] 15 farklı öbeksel kip yapısını içeren ek alıştırma ünitesi.",
+    "lessons": [
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122
+    ],
+    "pages": null
+  }
+]

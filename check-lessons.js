@@ -6,7 +6,7 @@ const dataCode = fs.readFileSync('data.js', 'utf8');
 // Create a sandbox to run data.js in Node environment safely
 const sandbox = {
   console: console,
-  window: {},
+  window: { location: { hostname: 'localhost', protocol: 'http:' } },
   document: {}
 };
 
