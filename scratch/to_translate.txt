@@ -1,0 +1,467 @@
+[
+  {
+    "exId": "u40l1ex1",
+    "qId": "u40_l1_q1",
+    "en": "Although the book was very long, I finished it in two days."
+  },
+  {
+    "exId": "u40l1ex1",
+    "qId": "u40_l1_q2",
+    "en": "We enjoyed our camping trip although it rained almost every night."
+  },
+  {
+    "exId": "u40l1ex1",
+    "qId": "u40_l1_q5",
+    "en": "However excellent the design may be, it won't sell without proper marketing."
+  },
+  {
+    "exId": "u40l1ex2",
+    "qId": "u40_l1_q6",
+    "en": "She went to work even though she was feeling very sick."
+  },
+  {
+    "exId": "u40l1ex2",
+    "qId": "u40_l1_q7",
+    "en": "They bought the house even though they knew it needed a lot of repairs."
+  },
+  {
+    "exId": "u40l1ex2",
+    "qId": "u40_l1_q10",
+    "en": "Choose the correct structure: 'Even though he had no formal training, his performance was flawless.'"
+  },
+  {
+    "exId": "u40l1ex3",
+    "qId": "u40_l1_q11",
+    "en": "I don't like his attitude. He is a good teacher, though."
+  },
+  {
+    "exId": "u40l1ex3",
+    "qId": "u40_l1_q12",
+    "en": "The food was delicious, though the service was quite slow."
+  },
+  {
+    "exId": "u40l1ex3",
+    "qId": "u40_l1_q14",
+    "en": "Tired though he was after the long journey, he attended the meeting."
+  },
+  {
+    "exId": "u40l1ex3",
+    "qId": "u40_l1_q15",
+    "en": "The strategy, though risky in the short term, proved to be highly lucrative."
+  },
+  {
+    "exId": "u40l1ex4",
+    "qId": "u40_l1_q16",
+    "en": "Much as I want to help you, I simply do not have the time right now."
+  },
+  {
+    "exId": "u40l1ex4",
+    "qId": "u40_l1_q17",
+    "en": "Much as they admired his intellect, they could not support his radical methods."
+  },
+  {
+    "exId": "u40l1ex4",
+    "qId": "u40_l1_q20",
+    "en": "Identify the illegal structure: 'Much as (Yanlış - tam cümle ister) his great desire to win, he refused to train.'"
+  },
+  {
+    "exId": "u40l1ex5",
+    "qId": "u40_l1_q21",
+    "en": "Despite his great effort, he lost the match."
+  },
+  {
+    "exId": "u40l1ex5",
+    "qId": "u40_l1_q22",
+    "en": "They arrived on time in spite of the heavy traffic on the highway."
+  },
+  {
+    "exId": "u40l1ex5",
+    "qId": "u40_l1_q24",
+    "en": "In spite of the fact that she was injured, she completed the marathon."
+  },
+  {
+    "exId": "u40l2ex1",
+    "qId": "u40_l2_q1",
+    "en": "The tablet is affordable, but it lacks a high-resolution screen."
+  },
+  {
+    "exId": "u40l2ex1",
+    "qId": "u40_l2_q2",
+    "en": "Kelly was a convicted criminal, yet many people admired him."
+  },
+  {
+    "exId": "u40l2ex1",
+    "qId": "u40_l2_q5",
+    "en": "Identify the grammatically illegal sentence structure:"
+  },
+  {
+    "exId": "u40l2ex2",
+    "qId": "u40_l2_q6",
+    "en": "The air conditioner is working; however , it is still hot inside."
+  },
+  {
+    "exId": "u40l2ex2",
+    "qId": "u40_l2_q7",
+    "en": "The initial results were promising. However , further testing revealed several bugs."
+  },
+  {
+    "exId": "u40l2ex2",
+    "qId": "u40_l2_q10",
+    "en": "The director, however , decided to reject the proposal despite the board's approval."
+  },
+  {
+    "exId": "u40l2ex3",
+    "qId": "u40_l2_q11",
+    "en": "The economic data was discouraging; nevertheless , the stock market reached an all-time high."
+  },
+  {
+    "exId": "u40l2ex3",
+    "qId": "u40_l2_q12",
+    "en": "There were serious security concerns. Nonetheless , the festival organizers decided to proceed."
+  },
+  {
+    "exId": "u40l2ex3",
+    "qId": "u40_l2_q15",
+    "en": "Select the correct punctuation environment for 'Nonetheless' when connecting two full sentences:"
+  },
+  {
+    "exId": "u40l2ex4",
+    "qId": "u40_l2_q16",
+    "en": "Working from home offers great flexibility. On the other hand , it can lead to isolation."
+  },
+  {
+    "exId": "u40l2ex4",
+    "qId": "u40_l2_q17",
+    "en": "Nuclear energy is highly efficient. On the other hand , the disposal of radioactive waste remains unsolved."
+  },
+  {
+    "exId": "u40l2ex4",
+    "qId": "u40_l2_q20",
+    "en": "Which connector fits a 'Direct Contrast' setup comparing two different entities with a semicolon?"
+  },
+  {
+    "exId": "u40l3ex1",
+    "qId": "u40_l3_q1",
+    "en": "In Turkey, the summer is usually hot, whereas in England it is often rainy."
+  },
+  {
+    "exId": "u40l3ex1",
+    "qId": "u40_l3_q2",
+    "en": "Some people prefer saving their money, while others enjoy spending it immediately."
+  },
+  {
+    "exId": "u40l3ex1",
+    "qId": "u40_l3_q5",
+    "en": "Identify the correct position: 'While master's programs focus on coursework, doctoral programs require original research.'"
+  },
+  {
+    "exId": "u40l3ex2",
+    "qId": "u40_l3_q6",
+    "en": "Unlike his brother, who loves sports, Tom prefers reading books."
+  },
+  {
+    "exId": "u40l3ex2",
+    "qId": "u40_l3_q7",
+    "en": "Unlike traditional cars, electric vehicles produce zero direct emissions."
+  },
+  {
+    "exId": "u40l3ex2",
+    "qId": "u40_l3_q9",
+    "en": "Despite (Doğru - beklenti aksı) the fact that she is usually introverted, she spoke confidently at the conference."
+  },
+  {
+    "exId": "u40l3ex2",
+    "qId": "u40_l3_q10",
+    "en": "Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture."
+  },
+  {
+    "exId": "u40l3ex3",
+    "qId": "u40_l3_q11",
+    "en": "Contrary to popular belief, bats are not actually blind."
+  },
+  {
+    "exId": "u40l3ex3",
+    "qId": "u40_l3_q12",
+    "en": "The company selected a centralized framework, as opposed to a decentralized one."
+  },
+  {
+    "exId": "u40l3ex3",
+    "qId": "u40_l3_q15",
+    "en": "Identify the grammatically correct prepositional setup:"
+  },
+  {
+    "exId": "u40l3ex4",
+    "qId": "u40_l3_q16",
+    "en": "High tariff walls protect domestic industries; conversely , they reduce international trade volumes."
+  },
+  {
+    "exId": "u40l3ex4",
+    "qId": "u40_l3_q17",
+    "en": "An increase in price reduces demand. Conversely , a sharp decrease in price usually stimulates it."
+  },
+  {
+    "exId": "u40l3ex4",
+    "qId": "u40_l3_q20",
+    "en": "Select the sentence with legal punctuation for 'Conversely':"
+  },
+  {
+    "exId": "u40l4ex1",
+    "qId": "u40_l4_q1",
+    "en": "The ozone hole is potentially dangerous because the ozone in the atmosphere prevents ultraviolet light."
+  },
+  {
+    "exId": "u40l4ex1",
+    "qId": "u40_l4_q2",
+    "en": "We decided to stay at home since it was snowing heavily outside."
+  },
+  {
+    "exId": "u40l4ex1",
+    "qId": "u40_l4_q5",
+    "en": "The new algorithm is revolutionary in that it process data in parallel layers."
+  },
+  {
+    "exId": "u40l4ex2",
+    "qId": "u40_l4_q6",
+    "en": "Now that you have completed the advanced training, you can now operate the system alone."
+  },
+  {
+    "exId": "u40l4ex2",
+    "qId": "u40_l4_q7",
+    "en": "Seeing that the global economy is unstable, investors are moving towards gold."
+  },
+  {
+    "exId": "u40l4ex2",
+    "qId": "u40_l4_q10",
+    "en": "Which of the following cannot be followed directly by a full noun phrase without a verb?"
+  },
+  {
+    "exId": "u40l5ex1",
+    "qId": "u40_l5_q1",
+    "en": "The flight was severely delayed because of the thick fog covering the runway."
+  },
+  {
+    "exId": "u40l5ex1",
+    "qId": "u40_l5_q2",
+    "en": "Due to his excellent communication skills, he was chosen as the group leader."
+  },
+  {
+    "exId": "u40l5ex1",
+    "qId": "u40_l5_q5",
+    "en": "Due to the fact that the company lost its major investor, the project was cancelled."
+  },
+  {
+    "exId": "u40l5ex2",
+    "qId": "u40_l5_q6",
+    "en": "The festival was cancelled on account of public safety concerns raised by the police."
+  },
+  {
+    "exId": "u40l5ex2",
+    "qId": "u40_l5_q7",
+    "en": "In view of the latest medical reports, the treatment was stopped immediately."
+  },
+  {
+    "exId": "u40l5ex2",
+    "qId": "u40_l5_q10",
+    "en": "By reason of the intense heat and lack of water, the expedition team turned back."
+  },
+  {
+    "exId": "u40l6ex1",
+    "qId": "u40_l6_q1",
+    "en": "The roads were icy and dangerous, so we drove extremely slowly."
+  },
+  {
+    "exId": "u40l6ex1",
+    "qId": "u40_l6_q2",
+    "en": "In a natural disaster, seconds of warning are really vital; therefore , scientists use the latest advances to predict them."
+  },
+  {
+    "exId": "u40l6ex1",
+    "qId": "u40_l6_q5",
+    "en": "Select the grammatically illegal sentence structure for 'Therefore':"
+  },
+  {
+    "exId": "u40l6ex2",
+    "qId": "u40_l6_q6",
+    "en": "The country lacks natural resources; hence , it depends heavily on imports."
+  },
+  {
+    "exId": "u40l6ex2",
+    "qId": "u40_l6_q7",
+    "en": "The experiment was conducted under strict vacuum; thus , no contamination occurred."
+  },
+  {
+    "exId": "u40l7ex1",
+    "qId": "u40_l7_q1",
+    "en": "The resort has untouched forests as well as several valuable minerals."
+  },
+  {
+    "exId": "u40l7ex1",
+    "qId": "u40_l7_q2",
+    "en": "In addition to renting the venue, we also had to pay for the catering services."
+  },
+  {
+    "exId": "u40l7ex1",
+    "qId": "u40_l7_q5",
+    "en": "Besides the heavy fines, the company faced a complete suspension of its license."
+  },
+  {
+    "exId": "u40l7ex2",
+    "qId": "u40_l7_q6",
+    "en": "The new laptop is lightweight; furthermore , its battery lasts up to 15 hours."
+  },
+  {
+    "exId": "u40l7ex2",
+    "qId": "u40_l7_q7",
+    "en": "The marketing strategy boosted local sales. Moreover , it attracted international buyers."
+  },
+  {
+    "exId": "u40l7ex2",
+    "qId": "u40_l7_q10",
+    "en": "Identify the illegal addition structure connecting two independent clauses:"
+  },
+  {
+    "exId": "u40l8ex1",
+    "qId": "u40_l8_q1",
+    "en": "The first generation antihistamines may produce side effects, such as drowsiness and dry mouth."
+  },
+  {
+    "exId": "u40l8ex1",
+    "qId": "u40_l8_q2",
+    "en": "The Earth has a unique set of characteristics; for instance , it has an atmosphere that supports life."
+  },
+  {
+    "exId": "u40l8ex1",
+    "qId": "u40_l8_q5",
+    "en": "Choose the correct format: 'Many clean energy sources exist, such as (Doğru - arkasından isim gelir)[cite: 10] solar and wind power.'"
+  },
+  {
+    "exId": "u40l8ex2",
+    "qId": "u40_l8_q6",
+    "en": "The patient is completely asymptomatic; in other words , she shows no signs of illness."
+  },
+  {
+    "exId": "u40l8ex2",
+    "qId": "u40_l8_q7",
+    "en": "We need to focus on our primary goal, namely , increasing user engagement."
+  },
+  {
+    "exId": "u40l8ex2",
+    "qId": "u40_l8_q10",
+    "en": "The system operates on a binary logic; that is , it recognizes only true or false inputs."
+  },
+  {
+    "exId": "u40l9ex1",
+    "qId": "u40_l9_q1",
+    "en": "The Earth is neither / nor too hot, like Mercury, neither / nor too cold, like distant Mars."
+  },
+  {
+    "exId": "u40l9ex1",
+    "qId": "u40_l9_q2",
+    "en": "You can choose either / or the online course either / or the weekend seminar."
+  },
+  {
+    "exId": "u40l9ex1",
+    "qId": "u40_l9_q5",
+    "en": "Neither the director nor the actors were (Doğru - 'actors' çoğul olduğu için) present at the rehearsal yesterday."
+  },
+  {
+    "exId": "u40l9ex2",
+    "qId": "u40_l9_q6",
+    "en": "The experience was so / that fascinating so / that I will never forget it."
+  },
+  {
+    "exId": "u40l9ex2",
+    "qId": "u40_l9_q7",
+    "en": "It was such / that a complex algorithm such / that the junior developers couldn't solve it."
+  },
+  {
+    "exId": "u40l9ex2",
+    "qId": "u40_l9_q10",
+    "en": "Identify the legal inverted (devrik) structure for emphatic addition:"
+  },
+  {
+    "exId": "u40l10ex1",
+    "qId": "u40_l10_q1",
+    "en": "He woke up early in order to catch the first train to Ankara."
+  },
+  {
+    "exId": "u40l10ex1",
+    "qId": "u40_l10_q2",
+    "en": "We packed our bags quickly so as to not be late for the flight."
+  },
+  {
+    "exId": "u40l10ex1",
+    "qId": "u40_l10_q5",
+    "en": "Identify the grammatically correct purpose structure followed by a verb phrase:"
+  },
+  {
+    "exId": "u40l10ex2",
+    "qId": "u40_l10_q6",
+    "en": "He left the door open so that the dog could go out easily."
+  },
+  {
+    "exId": "u40l10ex2",
+    "qId": "u40_l10_q7",
+    "en": "The encrypted file was hidden in order that unauthorized users in order that they might not access it."
+  },
+  {
+    "exId": "u40l10ex2",
+    "qId": "u40_l10_q10",
+    "en": "Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'"
+  },
+  {
+    "exId": "u40l11ex1",
+    "qId": "u40_l11_q1",
+    "en": "The laboratory is open every day except for Sundays."
+  },
+  {
+    "exId": "u40l11ex1",
+    "qId": "u40_l11_q2",
+    "en": "Aside from a few minor errors, the software architecture is absolutely flawless."
+  },
+  {
+    "exId": "u40l11ex1",
+    "qId": "u40_l11_q5",
+    "en": "Which connector fits an exclusion context directly followed by a noun phrase?"
+  },
+  {
+    "exId": "u40l12ex1",
+    "qId": "u40_l12_q1",
+    "en": "According to recent studies, your biological clock can be confused by computer light."
+  },
+  {
+    "exId": "u40l12ex1",
+    "qId": "u40_l12_q2",
+    "en": "The project was a huge success in terms of revenue, but not in terms of user satisfaction."
+  },
+  {
+    "exId": "u40l12ex1",
+    "qId": "u40_l12_q5",
+    "en": "The committee voted in favor of the new design, abandoning the old prototype completely."
+  },
+  {
+    "exId": "u40l12ex2",
+    "qId": "u40_l12_q6",
+    "en": "We should use clean energy sources instead of burning fossil fuels."
+  },
+  {
+    "exId": "u40l12ex2",
+    "qId": "u40_l12_q7",
+    "en": "Investors prefer to see tangible results rather than theoretical promises."
+  },
+  {
+    "exId": "u40l12ex2",
+    "qId": "u40_l12_q10",
+    "en": "Choose the illegal structure before a noun phrase: 'They used a digital tool instead (YANLIŞ - arkasından isim alamaz)[cite: 10] the manual calculation.'"
+  },
+  {
+    "exId": "u40l12ex3",
+    "qId": "u40_l12_q11",
+    "en": "He talked about the complex quantum theory as if he were an expert in that field."
+  },
+  {
+    "exId": "u40l12ex3",
+    "qId": "u40_l12_q12",
+    "en": "When it comes to data security, the firm leaves nothing to chance."
+  }
+]

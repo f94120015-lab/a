@@ -1,0 +1,77 @@
+<USER_REQUEST>
+// data.js - Unit 40 / Lesson 1
+{
+  lessonId: "u40_l1",
+  lessonTitle: "Ders 1: Zıtlık Bağlaçları - Giriş (Although, Even Though, Though, Much as, Despite, In Spite Of)",
+  exercises: [
+    // ==========================================
+    // ALTHOUGH (5 Alıştırma - Basitten Karmaşığa)
+    // ==========================================
+    {
+      id: "u40_l1_q1",
+      type: "multiple-choice",
+      level: "Easy (A2)",
+      question: "__________ the book was very long, I finished it in two days.",
+      options: ["Although", "Despite", "However", "In contrast"],
+      correctAnswer: "Although",
+      grammarExplain: "'Although' bir Grup 1 bağlacıdır; kendisinden sonra tam bir cümle (SVO: 'the book was very long') gerektirir."
+    },
+    {
+      id: "u40_l1_q2",
+      type: "word-bank",
+      level: "Intermediate (B1)",
+      question: "We enjoyed our camping trip __________ it rained almost every night.",
+      tokens: ["although", "in spite of", "conversely", "but"],
+      correctAnswer: "although",
+      grammarExplain: "Cümle ortasına gelen 'although' yapısında, iki durum arasındaki beklenmedik zıtlık (Concessive Contrast) vurgulanır[cite: 10]."
+    },
+    {
+      id: "u40_l1_q3",
+      type: "translate",
+      direction: "en-to-tr",
+      level: "Intermediate (B2)",
+      question: "Although working under extreme pressure, the medical team remained focused.",
+      correctAnswer: "Aşırı baskı altında çalışıyor olmalarına rağmen, tıbbi ekip odaklanmış durumda kaldı.",
+      grammarExplain: "Grup 1 bağlaçlarından 'although', özneler ortak olduğunda doğrudan zarf-fiil (Participle -ing) kısaltmasını kabul eder."
+    },
+    {
+      id: "u40_l1_q4",
+      type: "translate",
+      direction: "tr-to-en",
+      level: "Advanced (B2)",
+      question: "Tüm kanıtlar aksini göstermesine rağmen, şirket hatasını kabul etmeyi reddetti.",
+      correctAnswer: "Although all the evidence suggested otherwise, the company refused to admit its mistake.",
+     
+<truncated 9672 bytes>
+ough", "However", "Much as"],
+      correctAnswer: "In spite of",
+      grammarExplain: "DİKKAT! Normalde 'In spite of' tam cümle alamaz ancak sonuna '+ the fact that' kalıbı eklendiğinde arkasından tam bir cümle (SVO) alabilir ve Grup 1'e dönüşür[cite: 10]."
+    },
+    {
+      id: "u40_l1_q25",
+      type: "matching",
+      level: "Intermediate to Advanced",
+      question: "Match the following structures with their correct operational grammar rules:",
+      pairs: [
+        { left: "Although / Even though", right: "Requires a full sentence (S+V+O)[cite: 10]" },
+        { left: "Despite / In spite of", right: "Requires a Noun, Noun Phrase or V-ing[cite: 10]" },
+        { left: "In spite of the fact that", right: "Converts a preposition to take a full sentence[cite: 10]" },
+        { left: "Veli is poor; he works, though.", right: "Can be placed at the very end of a sentence[cite: 10]" }
+      ]
+    }
+  ]
+}Sana yukarıda verdiğim u40_l1 (Unit 40, Lesson 1) objesini, @data.js dosyasının içindeki ana veri yapısını bozmadan, uygun dizinin (lessons veya ilgili ünite yapısının) içine ekle. Mevcut hiçbir soruyu silme veya değiştirme. İşlem bittikten sonra projedeki syntax hatası oluşmadığından emin ol.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-07-03T20:36:21+03:00.
+
+The user's current state is as follows:
+Active Document: /Users/faruknafizfazlioglu/Desktop/amok/data.js (LANGUAGE_JAVASCRIPT)
+Cursor is on line: 68099
+Other open documents:
+- /Users/faruknafizfazlioglu/Desktop/amok/capacitor.config.json (LANGUAGE_JSON)
+- /Users/faruknafizfazlioglu/Desktop/amok/scratch/update_unit36_lesson14_metadata.js (LANGUAGE_JAVASCRIPT)
+- /Users/faruknafizfazlioglu/Desktop/amok/scratch/update_unit36_lesson13_metadata.js (LANGUAGE_JAVASCRIPT)
+- /Users/faruknafizfazlioglu/Desktop/amok/scratch/update_unit36_lesson5_metadata.js (LANGUAGE_JAVASCRIPT)
+- /Users/faruknafizfazlioglu/Desktop/amok/scratch/integrate_unit36_lesson2_exercises.js (LANGUAGE_JAVASCRIPT)
+</ADDITIONAL_METADATA>

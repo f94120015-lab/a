@@ -68,6 +68,7 @@ let isCurrentExercisePassed = true;
 let reflexTimer = null;
 let reflexInterval = null;
 let blitzKeyHandler = null;
+let blitzStreak = 0;
 
 // E-posta Bildirim Ayarları
 const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
@@ -1705,6 +1706,7 @@ async function hashPassword(password) {
 function isLocalEnvironment() {
   return window.location.hostname === 'localhost' ||
          window.location.hostname === '127.0.0.1' ||
+         window.location.hostname.includes('vercel.app') ||
          window.location.protocol === 'file:';
 }
 
@@ -1820,6 +1822,7 @@ function showScreen(screenId) {
 
   // If returning to home-screen, restore scroll position
   if (screenId === 'home-screen') {
+    updateActiveUnitTheme();
     requestAnimationFrame(() => {
       window.scrollTo(0, homeScreenScrollY);
     });
@@ -2439,6 +2442,7 @@ function logout() {
 
   // Temayı sıfırla
   document.documentElement.removeAttribute('data-theme');
+  document.documentElement.removeAttribute('data-unit-theme');
   
   state = {
     username: null,
@@ -2791,7 +2795,7 @@ function renderLessonTree() {
   let normalUnitIndex = 0;
   const unitDisplayNames = {};
   renderedUnits.forEach(u => {
-    if (u.title.startsWith("Ara Bölüm")) {
+    if (u.title.startsWith("Ara Bölüm") || u.title.startsWith("Bölüm")) {
       unitDisplayNames[u.id] = u.title;
     } else {
       normalUnitIndex++;
@@ -2862,7 +2866,7 @@ function renderLessonTree() {
 
     // 3. Create Winding Path Container (Height expanded to 190px per lesson to support larger nodes without overlapping)
     const pathContainer = document.createElement('div');
-    pathContainer.className = 'unit-path-container';
+    pathContainer.className = `unit-path-container unit-path-color-${colorIndex}`;
     pathContainer.style.height = `${totalInUnit * 190}px`;
 
     // Compute coordinates for the lessons (Using a mathematical formula to guarantee all 20 units have unique shapes)
@@ -2912,7 +2916,7 @@ function renderLessonTree() {
     const svgHTML = `
       <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
         <path class="path-bg" d="${pathD}" />
-        ${progressD ? `<path class="path-progress" d="${progressD}" stroke="url(#path-gradient)" />` : ''}
+        ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
       </svg>
     `;
     pathContainer.innerHTML = svgHTML;
@@ -2937,7 +2941,7 @@ function renderLessonTree() {
 
       let statusClass = 'locked';
       if (isCompleted) {
-        statusClass = 'completed';
+        statusClass = `completed unit-pin-color-${colorIndex}`;
       } else if (isActive) {
         statusClass = `active unit-pin-color-${colorIndex}`;
       }
@@ -3292,6 +3296,7 @@ function isLessonUnlocked(lessonId) {
 // ============================================================
 function renderAchievements() {
   const grid = document.getElementById('achievements-grid');
+  if (!grid) return;
   grid.innerHTML = '';
 
   achievements.forEach(ach => {
@@ -3637,6 +3642,18 @@ function renderQuestion() {
       break;
     case 'spotlight':
       renderSpotlight(body, question);
+      break;
+    case 'swipe':
+      renderSwipeQuestion(body, question);
+      break;
+    case 'preposition-magnet':
+      renderPrepositionMagnet(body, question);
+      break;
+    case 'collocation-matching':
+      renderCollocationMatching(body, question);
+      break;
+    case 'reflex-blitz':
+      renderReflexBlitz(body, question);
       break;
   }
 
@@ -4406,7 +4423,10 @@ function renderTranslationText(container, question) {
   
   let headerText = question.isEngToTr ? "Aşağıdaki ifadeyi Türkçe'ye çevirin;" : "Aşağıdaki ifadeyi İngilizce'ye çevirin;";
   
-  let sentenceToTranslate = question.enSentence || "";
+  let sentenceToTranslate = question.isEngToTr ? (question.enSentence || "") : (question.translation || "");
+  if (!sentenceToTranslate) {
+    sentenceToTranslate = question.enSentence || "";
+  }
   if (!sentenceToTranslate) {
     const match = question.prompt.match(/"([^"]+)"/);
     sentenceToTranslate = match ? match[1] : question.prompt;
@@ -4694,6 +4714,523 @@ function showSpotlightFeedback(question) {
   });
 }
 
+// ── Hata Avcısı / Bug Debugger (Swipe Mode) ──
+function renderSwipeQuestion(container, question) {
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    
+    <div class="swipe-area" id="swipe-area">
+      <div class="swipe-timer-container">
+        <div class="swipe-timer-bar" id="swipe-timer-bar"></div>
+      </div>
+      
+      <div class="swipe-card" id="swipe-card">
+        <div class="swipe-overlay swipe-overlay-bug">BUG</div>
+        <div class="swipe-overlay swipe-overlay-valid">VALID</div>
+        <div class="swipe-card-content">
+          <div class="swipe-phrase">${question.phrase}</div>
+          <div class="swipe-translation-hint">${question.translation || ''}</div>
+        </div>
+      </div>
+      
+      <div class="swipe-buttons">
+        <button class="swipe-btn bug-btn" id="swipe-bug-btn" title="Hatalı (Bug) - Sol">
+          <span class="swipe-btn-icon">🪲</span>
+          <span class="swipe-btn-label">BUG</span>
+        </button>
+        <button class="swipe-btn valid-btn" id="swipe-valid-btn" title="Doğru (Valid) - Sağ">
+          <span class="swipe-btn-icon">✓</span>
+          <span class="swipe-btn-label">VALID</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  const card = document.getElementById('swipe-card');
+  const overlayBug = card.querySelector('.swipe-overlay-bug');
+  const overlayValid = card.querySelector('.swipe-overlay-valid');
+  const timerBar = document.getElementById('swipe-timer-bar');
+
+  let startX = 0;
+  let startY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let isDragging = false;
+
+  const dragStart = (e) => {
+    if (isAnswerChecked) return;
+    isDragging = true;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    startX = clientX;
+    startY = clientY;
+    card.style.transition = 'none';
+
+    window.addEventListener('mousemove', dragMove);
+    window.addEventListener('mouseup', dragEnd);
+    window.addEventListener('touchmove', dragMove, { passive: true });
+    window.addEventListener('touchend', dragEnd);
+  };
+
+  const dragMove = (e) => {
+    if (!isDragging || isAnswerChecked) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    currentX = clientX - startX;
+    currentY = clientY - startY;
+
+    const rotate = currentX * 0.1;
+    card.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotate}deg)`;
+
+    const limit = 100;
+    if (currentX > 0) {
+      const opacity = Math.min(1, currentX / limit);
+      overlayValid.style.opacity = opacity;
+      overlayBug.style.opacity = 0;
+    } else {
+      const opacity = Math.min(1, -currentX / limit);
+      overlayBug.style.opacity = opacity;
+      overlayValid.style.opacity = 0;
+    }
+  };
+
+  const removeWindowListeners = () => {
+    window.removeEventListener('mousemove', dragMove);
+    window.removeEventListener('mouseup', dragEnd);
+    window.removeEventListener('touchmove', dragMove);
+    window.removeEventListener('touchend', dragEnd);
+  };
+
+  const dragEnd = () => {
+    if (!isDragging || isAnswerChecked) return;
+    isDragging = false;
+    removeWindowListeners();
+    
+    const threshold = 120;
+    if (currentX > threshold) {
+      swipeRight();
+    } else if (currentX < -threshold) {
+      swipeLeft();
+    } else {
+      card.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease';
+      card.style.transform = 'translate(0px, 0px) rotate(0deg)';
+      overlayBug.style.opacity = 0;
+      overlayValid.style.opacity = 0;
+    }
+  };
+
+  card.addEventListener('mousedown', dragStart);
+  card.addEventListener('touchstart', dragStart, { passive: true });
+
+  const swipeLeft = () => {
+    if (isAnswerChecked) return;
+    removeWindowListeners();
+    clearInterval(reflexInterval);
+    clearTimeout(reflexTimer);
+    
+    card.style.transition = 'transform 0.4s cubic-bezier(0.1, 0.8, 0.3, 1), opacity 0.4s';
+    card.style.transform = 'translate(-400px, 50px) rotate(-30deg)';
+    card.style.opacity = 0;
+    overlayBug.style.opacity = 1;
+    overlayValid.style.opacity = 0;
+
+    selectedAnswer = false; 
+    document.getElementById('btn-check').disabled = false;
+    setTimeout(() => {
+      checkAnswer();
+    }, 200);
+  };
+
+  const swipeRight = () => {
+    if (isAnswerChecked) return;
+    removeWindowListeners();
+    clearInterval(reflexInterval);
+    clearTimeout(reflexTimer);
+
+    card.style.transition = 'transform 0.4s cubic-bezier(0.1, 0.8, 0.3, 1), opacity 0.4s';
+    card.style.transform = 'translate(400px, 50px) rotate(30deg)';
+    card.style.opacity = 0;
+    overlayValid.style.opacity = 1;
+    overlayBug.style.opacity = 0;
+
+    selectedAnswer = true; 
+    document.getElementById('btn-check').disabled = false;
+    setTimeout(() => {
+      checkAnswer();
+    }, 200);
+  };
+
+  document.getElementById('swipe-bug-btn').addEventListener('click', swipeLeft);
+  document.getElementById('swipe-valid-btn').addEventListener('click', swipeRight);
+
+  let remainingTime = 3000;
+  const timerTick = 50;
+  timerBar.style.width = '100%';
+
+  reflexInterval = setInterval(() => {
+    if (isAnswerChecked) {
+      clearInterval(reflexInterval);
+      return;
+    }
+    remainingTime -= timerTick;
+    const percentage = Math.max(0, (remainingTime / 3000) * 100);
+    timerBar.style.width = `${percentage}%`;
+
+    if (remainingTime <= 0) {
+      clearInterval(reflexInterval);
+      removeWindowListeners();
+      selectedAnswer = null; 
+      document.getElementById('btn-check').disabled = false;
+      checkAnswer();
+    }
+  }, timerTick);
+}
+
+// ── Edat Mıknatısı (The Preposition Magnet) ──
+function renderPrepositionMagnet(container, question) {
+  const parts = question.sentence.split("______");
+  let sentenceHtml = "";
+  if (parts.length >= 2) {
+    sentenceHtml = `${parts[0]} <span class="magnet-blank-slot" id="magnet-drop-target">_____</span> ${parts[1]}`;
+  } else {
+    sentenceHtml = question.sentence;
+  }
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<div class="magnet-draggable" data-index="${i}" id="magnet-opt-${i}">${opt}</div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-translation" style="margin-bottom: 20px;">${question.translation || ''}</p>
+    
+    <div class="magnet-sentence-container">
+      ${sentenceHtml}
+    </div>
+    
+    <div class="magnet-bank-container" id="magnet-bank">
+      ${optionsHtml}
+    </div>
+  `;
+
+  const draggables = container.querySelectorAll('.magnet-draggable');
+  const target = document.getElementById('magnet-drop-target');
+
+  draggables.forEach(el => {
+    let startX = 0, startY = 0;
+    let currentX = 0, currentY = 0;
+    let isDragging = false;
+
+    const onStart = (e) => {
+      if (isAnswerChecked) return;
+      isDragging = true;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      startX = clientX;
+      startY = clientY;
+      el.style.transition = 'none';
+      el.style.zIndex = '1000';
+      el.classList.add('dragging');
+
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onEnd);
+      window.addEventListener('touchmove', onMove, { passive: false });
+      window.addEventListener('touchend', onEnd);
+    };
+
+    const onMove = (e) => {
+      if (!isDragging) return;
+      if (e.cancelable) e.preventDefault();
+      
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      currentX = clientX - startX;
+      currentY = clientY - startY;
+
+      el.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(1.05)`;
+
+      const rectEl = el.getBoundingClientRect();
+      const rectTarget = target.getBoundingClientRect();
+
+      const overlap = !(rectEl.right < rectTarget.left || 
+                        rectEl.left > rectTarget.right || 
+                        rectEl.bottom < rectTarget.top || 
+                        rectEl.top > rectTarget.bottom);
+
+      if (overlap) {
+        target.classList.add('magnet-slot-hover');
+      } else {
+        target.classList.remove('magnet-slot-hover');
+      }
+    };
+
+    const onEnd = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      el.classList.remove('dragging');
+
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onEnd);
+      window.removeEventListener('touchmove', onMove);
+      window.removeEventListener('touchend', onEnd);
+
+      const rectEl = el.getBoundingClientRect();
+      const rectTarget = target.getBoundingClientRect();
+
+      const overlap = !(rectEl.right < rectTarget.left || 
+                        rectEl.left > rectTarget.right || 
+                        rectEl.bottom < rectTarget.top || 
+                        rectEl.top > rectTarget.bottom);
+
+      target.classList.remove('magnet-slot-hover');
+
+      if (overlap) {
+        const index = parseInt(el.dataset.index);
+        if (index === question.correctIndex) {
+          el.style.display = 'none';
+          target.textContent = el.textContent;
+          target.classList.add('correct-snapped');
+          selectedAnswer = index;
+          document.getElementById('btn-check').disabled = false;
+          checkAnswer();
+        } else {
+          target.classList.add('magnet-shake');
+          el.classList.add('magnet-shake');
+          
+          el.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+          el.style.transform = 'translate3d(0, 0, 0)';
+          
+          setTimeout(() => {
+            target.classList.remove('magnet-shake');
+            el.classList.remove('magnet-shake');
+            el.style.zIndex = '';
+          }, 500);
+        }
+      } else {
+        el.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        el.style.transform = 'translate3d(0, 0, 0)';
+        setTimeout(() => {
+          el.style.zIndex = '';
+        }, 300);
+      }
+    };
+
+    el.addEventListener('mousedown', onStart);
+    el.addEventListener('touchstart', onStart, { passive: true });
+  });
+}
+
+// ── Bağlantı Kilidi (Collocation Matcher) ──
+function renderCollocationMatching(container, question) {
+  const words = question.pairs.map(p => ({ type: 'word', text: p.word, prep: p.prep }));
+  const preps = question.pairs.map(p => ({ type: 'prep', text: p.prep }));
+  const allCards = [...words, ...preps].sort(() => Math.random() - 0.5);
+
+  const cardsHtml = allCards.map((card, i) => {
+    return `<div class="match-card" data-index="${i}" data-type="${card.type}" data-text="${card.text}" data-prep="${card.prep || ''}">
+      ${card.text}
+    </div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    <div class="collocation-matching-grid">
+      ${cardsHtml}
+    </div>
+  `;
+
+  const matchCards = container.querySelectorAll('.match-card');
+  let selectedWordEl = null;
+  let selectedPrepEl = null;
+  let matchesCount = 0;
+
+  matchCards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (card.classList.contains('matched') || card.classList.contains('error') || isAnswerChecked) return;
+
+      const type = card.dataset.type;
+
+      if (type === 'word') {
+        if (selectedWordEl) {
+          selectedWordEl.classList.remove('selected');
+        }
+        selectedWordEl = card;
+        card.classList.add('selected');
+      } else {
+        if (selectedPrepEl) {
+          selectedPrepEl.classList.remove('selected');
+        }
+        selectedPrepEl = card;
+        card.classList.add('selected');
+      }
+
+      if (selectedWordEl && selectedPrepEl) {
+        const reqPrep = selectedWordEl.dataset.prep;
+        const actPrep = selectedPrepEl.dataset.text;
+
+        const wEl = selectedWordEl;
+        const pEl = selectedPrepEl;
+        selectedWordEl = null;
+        selectedPrepEl = null;
+
+        if (reqPrep === actPrep) {
+          wEl.classList.remove('selected');
+          pEl.classList.remove('selected');
+          wEl.classList.add('matched');
+          pEl.classList.add('matched');
+          matchesCount++;
+
+          if (matchesCount === question.pairs.length) {
+            selectedAnswer = 'perfect';
+            document.getElementById('btn-check').disabled = false;
+            setTimeout(() => {
+              checkAnswer();
+            }, 600);
+          }
+        } else {
+          wEl.classList.add('error');
+          pEl.classList.add('error');
+
+          setTimeout(() => {
+            wEl.classList.remove('selected', 'error');
+            pEl.classList.remove('selected', 'error');
+          }, 600);
+        }
+      }
+    });
+  });
+}
+
+// ── Refleks Blitz (Hız Tüneli) ──
+function renderReflexBlitz(container, question) {
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="blitz-option-btn" data-index="${i}">
+      <span class="blitz-shortcut-hint">${i + 1}</span>
+      <span class="blitz-opt-text">${opt}</span>
+    </button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="blitz-header-row">
+      <div class="blitz-timer-container">
+        <div class="blitz-timer-bar" id="blitz-timer-bar"></div>
+      </div>
+      <div class="blitz-streak-badge ${blitzStreak >= 3 ? 'streak-ignited' : ''}" id="blitz-streak-badge">
+        🔥 COMBO: ${blitzStreak}
+      </div>
+    </div>
+    
+    <p class="quiz-prompt">${question.prompt}</p>
+    <div class="blitz-sentence-box">
+      ${question.sentence}
+    </div>
+    
+    <div class="blitz-options-grid">
+      ${optionsHtml}
+    </div>
+  `;
+
+  // Apply ignited glow to container
+  const quizBox = document.querySelector('.quiz-screen .quiz-box') || document.querySelector('.quiz-container');
+  if (quizBox) {
+    if (blitzStreak >= 3) {
+      quizBox.classList.add('quiz-container-streak-ignited');
+    } else {
+      quizBox.classList.remove('quiz-container-streak-ignited');
+    }
+  }
+
+  const selectOption = (idx) => {
+    if (isAnswerChecked) return;
+    clearInterval(reflexInterval);
+    if (blitzKeyHandler) {
+      window.removeEventListener('keydown', blitzKeyHandler);
+      blitzKeyHandler = null;
+    }
+    
+    selectedAnswer = idx;
+    
+    const buttons = container.querySelectorAll('.blitz-option-btn');
+    buttons.forEach((btn, i) => {
+      if (i === idx) btn.classList.add('selected');
+    });
+
+    if (idx === question.correctIndex) {
+      blitzStreak++;
+    } else {
+      blitzStreak = 0;
+    }
+
+    document.getElementById('btn-check').disabled = false;
+    checkAnswer();
+  };
+
+  const onKey = (e) => {
+    if (isAnswerChecked) return;
+    if (e.key === '1') {
+      selectOption(0);
+    } else if (e.key === '2' && question.options.length > 1) {
+      selectOption(1);
+    }
+  };
+  window.addEventListener('keydown', onKey);
+  blitzKeyHandler = onKey;
+
+  container.querySelectorAll('.blitz-option-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = parseInt(btn.dataset.index);
+      selectOption(idx);
+    });
+  });
+
+  const timerBar = document.getElementById('blitz-timer-bar');
+  let remainingTime = 3000;
+  const tick = 50;
+
+  reflexInterval = setInterval(() => {
+    if (isAnswerChecked) {
+      clearInterval(reflexInterval);
+      return;
+    }
+    remainingTime -= tick;
+    const percentage = Math.max(0, (remainingTime / 3000) * 100);
+    timerBar.style.width = `${percentage}%`;
+
+    if (remainingTime <= 0) {
+      clearInterval(reflexInterval);
+      if (blitzKeyHandler) {
+        window.removeEventListener('keydown', blitzKeyHandler);
+        blitzKeyHandler = null;
+      }
+      
+      selectedAnswer = null;
+      blitzStreak = 0;
+      document.getElementById('btn-check').disabled = false;
+      checkAnswer();
+    }
+  }, tick);
+}
+
+function showBlitzFeedback(question) {
+  const buttons = document.querySelectorAll('.blitz-option-btn');
+  buttons.forEach(btn => {
+    const idx = parseInt(btn.dataset.index);
+    if (idx === question.correctIndex) {
+      btn.classList.add('correct');
+    } else if (idx === selectedAnswer && idx !== question.correctIndex) {
+      btn.classList.add('wrong');
+    }
+  });
+
+  // Remove streak animation from box if incorrect
+  if (selectedAnswer !== question.correctIndex) {
+    const quizBox = document.querySelector('.quiz-screen .quiz-box') || document.querySelector('.quiz-container');
+    if (quizBox) {
+      quizBox.classList.remove('quiz-container-streak-ignited');
+    }
+  }
+}
+
 function checkAnswer() {
   if (isAnswerChecked) return;
   isAnswerChecked = true;
@@ -4782,6 +5319,19 @@ function checkAnswer() {
       isCorrect = selectedAnswer === question.correctIndex;
       showSpotlightFeedback(question);
       break;
+    case 'swipe':
+      isCorrect = selectedAnswer === question.isCorrect;
+      break;
+    case 'preposition-magnet':
+      isCorrect = selectedAnswer === question.correctIndex;
+      break;
+    case 'collocation-matching':
+      isCorrect = selectedAnswer === 'perfect';
+      break;
+    case 'reflex-blitz':
+      isCorrect = selectedAnswer === question.correctIndex;
+      showBlitzFeedback(question);
+      break;
   }
 
   const isTargetUnit = question && question.translation ? true : false;
@@ -4835,8 +5385,12 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight') {
+    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz') {
       correctAnswerText = question.options[question.correctIndex];
+    } else if (question.type === 'swipe') {
+      correctAnswerText = question.isCorrect ? 'VALID (DOĞRU)' : 'BUG (HATALI)';
+    } else if (question.type === 'collocation-matching') {
+      correctAnswerText = question.explanation;
     } else if (question.type === 'fill-blank-text') {
       correctAnswerText = question.correct;
     } else if (question.type === 'translation-text') {
@@ -4874,7 +5428,7 @@ function checkAnswer() {
     }
 
     // Hatalı cevaplarda gramatik açıklama pop-up'ını tetikle (Hız Tüneli hariç)
-    if (question.type !== 'true-false') {
+    if (question.type !== 'true-false' && question.type !== 'reflex-blitz') {
       showGrammarExplanationModal(question, selectedAnswer);
     }
   }
@@ -5202,7 +5756,7 @@ function navigateToNextEmptyLesson() {
 // ============================================================
 // PROFİL SEKME RENDER
 // ============================================================
-let activeSocialSubTab = 'online'; // Global tab state for social section
+let activeSocialSubTab = 'following'; // Global tab state for social section
 
 const MOCK_USER_DATABASE = [
   { username: 'John Doe', xp: 600, streak: 15, avatarColor: '#8BB8E8' },
@@ -5347,7 +5901,17 @@ function renderProfile() {
       </div>
     </div>
 
-    <h3 class="profile-section-title">🏆 Başarımların İlerlemesi</h3>
+    <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 16px;">
+      <div class="daily-tasks-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 16px;">
+        <h3 class="profile-section-title" style="margin: 0; display: flex; align-items: center; gap: 8px;">📅 Günlük Görevler</h3>
+        <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
+      </div>
+      <div class="daily-tasks-list" id="daily-tasks-list">
+        <!-- Dinamik olarak app.js tarafından doldurulacak -->
+      </div>
+    </div>
+
+    <h3 class="profile-section-title">🏆 Başarımlar</h3>
     <div class="profile-achievements-list">
       ${achievementsHTML}
     </div>
@@ -5362,6 +5926,11 @@ function renderProfile() {
 
     ${getReportsHTML()}
   `;
+
+  renderDailyTasks();
+  if (typeof updateResetTimer === 'function') {
+    updateResetTimer();
+  }
 
   // Attach event listeners
   const avatarTrigger = document.getElementById('profile-avatar-trigger');

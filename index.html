@@ -19,6 +19,10 @@
 </head>
 <body>
 
+  <!-- Arka Plan Dinamik Işık Küreleri (Floating Blobs) -->
+  <div class="bg-glow-ball blob-1"></div>
+  <div class="bg-glow-ball blob-2"></div>
+
   <!-- ════════════════════════════════════════════════════════
        1. AUTH EKRANI — Giriş / Kayıt
        ════════════════════════════════════════════════════════ -->
@@ -311,9 +315,8 @@
               <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">👥 Arkadaşlar</h3>
               
               <div class="social-tabs">
-                <button class="social-tab" data-subtab="following" id="subtab-following">Takip Ettiklerim (0)</button>
+                <button class="social-tab active" data-subtab="following" id="subtab-following">Takip Ettiklerim (0)</button>
                 <button class="social-tab" data-subtab="followers" id="subtab-followers">Takipçilerim (0)</button>
-                <button class="social-tab active" data-subtab="online" id="subtab-online">Çevrimiçi (0)</button>
               </div>
               
               <div class="social-search-wrap">
@@ -337,25 +340,6 @@
                 <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
               </div>
               <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
-            </div>
-
-            <!-- Günlük Görevler Bölümü -->
-            <div class="daily-tasks-section" id="daily-tasks-section">
-              <div class="daily-tasks-header">
-                <h2 class="section-title">📅 Günlük Görevler</h2>
-                <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
-              </div>
-              <div class="daily-tasks-list" id="daily-tasks-list">
-                <!-- Dinamik olarak app.js tarafından doldurulacak -->
-              </div>
-            </div>
-
-            <!-- Başarımlar Bölümü -->
-            <div class="achievements-section" id="achievements-section">
-              <h2 class="section-title">🏆 Başarımlar</h2>
-              <div class="achievements-grid" id="achievements-grid">
-                <!-- Dinamik olarak app.js tarafından doldurulacak -->
-              </div>
             </div>
           </div>
         </div>
