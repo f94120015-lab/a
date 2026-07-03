@@ -1712,6 +1712,26 @@ function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
 
+function setUnitTheme(unitId) {
+  if (unitId === null || unitId === undefined) {
+    document.documentElement.removeAttribute('data-unit-theme');
+  } else {
+    // Map unitId to theme numbers 1-10
+    const themeNum = unitId === 0 ? 10 : (((unitId - 1) % 10) + 1);
+    document.documentElement.setAttribute('data-unit-theme', themeNum);
+  }
+}
+
+function updateActiveUnitTheme() {
+  // Find the first lesson that is not completed
+  const nextLesson = lessons.find(l => !state.completedLessons.includes(l.id));
+  if (nextLesson) {
+    setUnitTheme(nextLesson.unitId);
+  } else {
+    setUnitTheme(null);
+  }
+}
+
 function loadState() {
   const saved = localStorage.getItem(STATE_KEY);
   if (saved) {
@@ -2393,7 +2413,7 @@ function enterApp() {
   checkPlacementBanner();
   checkReviewBanner();
   renderSocialList();
-  
+  updateActiveUnitTheme();
   // Temaları yükle
   if (['gold', 'canva', 'mint', 'sakura', 'sunset'].includes(state.activeTheme)) {
     document.documentElement.setAttribute('data-theme', state.activeTheme);
@@ -2832,6 +2852,13 @@ function renderLessonTree() {
       </div>
     `;
     container.appendChild(banner);
+
+    banner.addEventListener('mouseenter', () => {
+      setUnitTheme(unit.id);
+    });
+    banner.addEventListener('mouseleave', () => {
+      updateActiveUnitTheme();
+    });
 
     // 3. Create Winding Path Container (Height expanded to 190px per lesson to support larger nodes without overlapping)
     const pathContainer = document.createElement('div');
@@ -3290,6 +3317,7 @@ function startLesson(lessonId, exerciseId = null) {
   isCurrentExercisePassed = false;
   currentLesson = lessons.find(l => l.id === lessonId);
   if (!currentLesson) return;
+  setUnitTheme(currentLesson.unitId);
 
   if (exerciseId && currentLesson.exercises) {
     const exercise = currentLesson.exercises.find(ex => ex.id === exerciseId);
