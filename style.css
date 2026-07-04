@@ -6621,3 +6621,21 @@ span[style*="color:#339af0"] * {
     max-width: 92vw !important;
   }
 }
+
+
+.unit-banner-extra-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  margin-left: 8px;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  vertical-align: middle;
+}

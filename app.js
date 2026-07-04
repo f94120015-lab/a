@@ -2838,6 +2838,19 @@ function renderLessonTree() {
     }
     */
 
+    let extraBadgeHTML = '';
+    const isStrictlyLocal = window.location.hostname === 'localhost' ||
+                            window.location.hostname === '127.0.0.1' ||
+                            window.location.protocol === 'file:';
+    const extraUnitIds = [13, 17, 21, 22, 40, 101, 102, 103];
+    if (isStrictlyLocal && extraUnitIds.includes(unit.id)) {
+      extraBadgeHTML = `
+        <span class="unit-banner-extra-tag">
+          Ekstra
+        </span>
+      `;
+    }
+
     // 2. Create Unit Banner
     const banner = document.createElement('div');
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
@@ -2848,6 +2861,7 @@ function renderLessonTree() {
           <span>${unitDisplayNames[unit.id]}</span>
           ${notUploadedBadgeHTML}
           ${originalBadgeHTML}
+          ${extraBadgeHTML}
         </h2>
         <p>${unit.description}</p>
       </div>
