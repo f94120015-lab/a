@@ -3112,15 +3112,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   // Positioned directly below the scaled-up labels (pxY + 95px) to prevent overlap with the smaller pins/labels
   popover.style.top = `${pxY + 95}px`;
   
-  // Set arrow position custom property for styling the pseudoelement
-  popover.style.setProperty('--arrow-left', `${pctX}%`);
-
-  const isMobile = window.innerWidth <= 576;
-  if (isMobile) {
-    popover.style.left = '50%';
-  } else {
-    popover.style.left = `${pctX}%`;
-  }
+  popover.style.left = `${pctX}%`;
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
@@ -3259,15 +3251,59 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     pathContainer.appendChild(popover);
     updateBodyScrollLock();
     
-    // Auto-center or align to top of screen so everything is visible
-    setTimeout(() => {
+    // Dynamically adjust popover position to fit within the visible viewport bounds
+    requestAnimationFrame(() => {
+      const popoverRect = popover.getBoundingClientRect();
+      const containerRect = pathContainer.getBoundingClientRect();
+      const sidebar = document.querySelector('.sidebar-nav');
+      
+      const isSidebarLeft = sidebar && window.innerWidth >= 820;
+      const leftBound = isSidebarLeft ? sidebar.getBoundingClientRect().right : 0;
+      const rightBound = window.innerWidth;
+      
+      const W_p = popoverRect.width || 450;
+      const W_container = containerRect.width || 440;
+      
+      const X_btn = (pctX / 100) * W_container;
+      let X_p = X_btn; // center of popover relative to container
+      
+      // Calculate current screen bounds of the popover
+      let popLeftScreen = containerRect.left + X_p - W_p / 2;
+      let popRightScreen = containerRect.left + X_p + W_p / 2;
+      
+      // Adjust for left boundary overflow
+      if (popLeftScreen < leftBound) {
+        const overflowL = leftBound - popLeftScreen;
+        X_p += overflowL;
+      }
+      // Adjust for right boundary overflow
+      else if (popRightScreen > rightBound) {
+        const overflowR = popRightScreen - rightBound;
+        X_p -= overflowR;
+      }
+      
+      // Double check new bounds to make sure we didn't push it off the other side on very small screens
+      popLeftScreen = containerRect.left + X_p - W_p / 2;
+      if (popLeftScreen < leftBound) {
+        X_p = leftBound - containerRect.left + W_p / 2;
+      }
+      
+      // Apply the adjusted position
+      popover.style.left = `${X_p}px`;
+      
+      // Calculate where the arrow should point (aligned with X_btn) relative to the popover's left edge
+      const X_btn_rel_pop = X_btn - (X_p - W_p / 2);
+      const arrowPct = Math.max(5, Math.min(95, (X_btn_rel_pop / W_p) * 100)); // Clamp between 5% and 95% to keep arrow within popover bounds
+      popover.style.setProperty('--arrow-left', `${arrowPct}%`);
+
+      // Auto-scroll to show the popover
       const rect = popover.getBoundingClientRect();
       if (rect.height > window.innerHeight) {
         popover.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
         popover.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-    }, 50);
+    });
   }
 }
 

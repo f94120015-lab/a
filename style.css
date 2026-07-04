@@ -6639,3 +6639,12 @@ span[style*="color:#339af0"] * {
   height: fit-content;
   vertical-align: middle;
 }
+
+
+/* Performance Optimization: Disable heavy blur background blobs on tablets and mobile screens to prevent GPU lag */
+@media (max-width: 1024px) {
+  .bg-glow-ball {
+    display: none !important;
+    animation: none !important;
+  }
+}
