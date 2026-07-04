@@ -3041,6 +3041,19 @@ function renderLessonTree() {
 }
 
 
+
+function cleanExerciseTitle(title, idx) {
+  if (!title) return `${idx}. Alıştırma`;
+  let cleaned = title.replace(/^Alıştırma\s*\d+\s*:\s*/i, '');
+  cleaned = cleaned.replace(/^Alıştırma\s*\d+\s*/i, '');
+  cleaned = cleaned.trim();
+  if (cleaned.length > 0) {
+    cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+    return `${idx}. ${cleaned}`;
+  }
+  return `${idx}. Alıştırma`;
+}
+
 function cleanExerciseDescription(desc) {
   if (!desc) return '';
   
@@ -3198,7 +3211,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
             <span class="exercise-icon">${isExCompleted ? '✅' : '📝'}</span>
             <div class="exercise-meta">
               <div class="exercise-title-wrap">
-                <span class="exercise-title">${ex.title}</span>
+                <span class="exercise-title">${cleanExerciseTitle(ex.title, index + 1)}</span>
                 <span class="exercise-q-badge ${badgeClass}">${ex.questions ? ex.questions.length : 0} Soru</span>
               </div>
               <span class="exercise-subtitle">${cleanExerciseDescription(ex.description)}</span>
