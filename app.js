@@ -7435,6 +7435,46 @@ function initEventListeners() {
       }
     });
   }
+
+  // Scroll tab theme listener
+  const updateThemeOnScroll = () => {
+    const homeScreen = document.getElementById('home-screen');
+    const tabLessons = document.getElementById('tab-content-lessons');
+    if (!homeScreen || !homeScreen.classList.contains('active') || !tabLessons || !tabLessons.classList.contains('active')) {
+      return;
+    }
+
+    const sections = document.querySelectorAll('.unit-section');
+    let activeUnitId = null;
+    const threshold = 82;
+
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= threshold && rect.bottom > threshold) {
+        activeUnitId = parseInt(section.dataset.unitId, 10);
+        break;
+      }
+    }
+
+    if (activeUnitId !== null && !isNaN(activeUnitId)) {
+      setUnitTheme(activeUnitId);
+    } else if (sections.length > 0) {
+      const firstRect = sections[0].getBoundingClientRect();
+      if (firstRect.top > threshold) {
+        setUnitTheme(parseInt(sections[0].dataset.unitId, 10));
+      }
+    }
+  };
+
+  window.addEventListener('scroll', updateThemeOnScroll);
+  
+  // Trigger on initial loads and tab transitions
+  document.querySelectorAll('.sidebar-menu .nav-tab, .nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      setTimeout(updateThemeOnScroll, 50);
+    });
+  });
 }
 
 // ============================================================
