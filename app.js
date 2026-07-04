@@ -58,6 +58,7 @@ let homeScreenScrollY = 0;
 let isTranslationGateActive = false;
 let onTranslationGateVerify = null;
 let wasTranslationCorrect = true;
+let isTranslationGateTriggered = false;
 let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
@@ -3698,6 +3699,7 @@ function renderQuestion() {
   isTranslationGateActive = false;
   onTranslationGateVerify = null;
   wasTranslationCorrect = true;
+  isTranslationGateTriggered = false;
 
   const body = document.getElementById('quiz-body');
   const btnCheck = document.getElementById('btn-check');
@@ -4537,6 +4539,7 @@ function renderFillBlank(container, question) {
 // ── Scrambled Words Translation Gate ────────────────────────
 function startTranslationGate(container, question) {
   isTranslationGateActive = true;
+  isTranslationGateTriggered = true;
   
   // Set primary check button state
   const btnCheck = document.getElementById('btn-check');
@@ -4550,10 +4553,10 @@ function startTranslationGate(container, question) {
   }
 
   // Make the sentence complete
-  let completedSentence = question.sentence;
+  let completedSentence = question.sentence || "";
   const correctWord = question.options[question.correctIndex];
   const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
-  completedSentence = completedSentence.replace('___', highlightedChoice);
+  completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
   completedSentence = makeTextHoverable(completedSentence);
 
   // Clean translation and split into words or grammatical blocks if > 12 words
@@ -5499,7 +5502,6 @@ function showBlitzFeedback(question) {
 
 function checkAnswer() {
   if (isAnswerChecked) return;
-  isAnswerChecked = true;
 
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   let isCorrect = false;
@@ -5513,7 +5515,6 @@ function checkAnswer() {
     case 'punctuation-check':
     case 'structure-match':
       isCorrect = selectedAnswer === question.correctIndex;
-      showMCFeedback(question);
       break;
     case 'idiom-builder':
       isCorrect = Array.isArray(selectedAnswer) &&
@@ -5530,27 +5531,15 @@ function checkAnswer() {
       break;
     case 'fill-blank-dropdown':
       isCorrect = selectedAnswer === question.correctIndex;
-      const selectEl = document.getElementById('fb-dropdown-select');
-      if (selectEl) {
-        selectEl.style.borderColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-        selectEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
-        selectEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-      }
       break;
     case 'fill-blank':
       isCorrect = selectedAnswer === question.correctIndex;
-      showFBFeedback(question);
       break;
     case 'fill-blank-text':
       {
         const userVal = (selectedAnswer || "").toLowerCase().trim();
         const correctVal = question.correct.toLowerCase().trim();
         isCorrect = userVal === correctVal;
-        const inputEl = document.getElementById('fb-text-input');
-        if (inputEl) {
-          inputEl.style.borderBottomColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-          inputEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-        }
       }
       break;
     case 'translation-text':
@@ -5558,39 +5547,20 @@ function checkAnswer() {
         const cleanUser = (selectedAnswer || "").toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim();
         const cleanCorrect = question.correctSentence.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").replace(/\s+/g, " ").trim();
         isCorrect = cleanUser === cleanCorrect;
-        const textEl = document.getElementById('translation-text-area');
-        if (textEl) {
-          textEl.style.borderColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-          textEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
-          textEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-        }
       }
       break;
     case 'multiple-fill-blank':
       {
         const userVals = (selectedAnswer || []).map(val => val.toLowerCase().trim());
         const correctVals = question.corrects.map(val => val.toLowerCase().trim());
-        
         isCorrect = userVals.length === correctVals.length && userVals.every((val, i) => val === correctVals[i]);
-        
-        const inputs = document.querySelectorAll('.multi-fb-input');
-        inputs.forEach((inputEl, idx) => {
-          const isInputCorrect = userVals[idx] === correctVals[idx];
-          if (inputEl) {
-            inputEl.style.borderColor = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-            inputEl.style.backgroundColor = isInputCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
-            inputEl.style.color = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
-          }
-        });
       }
       break;
     case 'true-false':
       isCorrect = selectedAnswer === question.correctAnswer;
-      showTFFeedback(question);
       break;
     case 'spotlight':
       isCorrect = selectedAnswer === question.correctIndex;
-      showSpotlightFeedback(question);
       break;
     case 'swipe':
       isCorrect = selectedAnswer === question.isCorrect;
@@ -5603,6 +5573,77 @@ function checkAnswer() {
       break;
     case 'reflex-blitz':
       isCorrect = selectedAnswer === question.correctIndex;
+      break;
+  }
+
+  // Intercept if translation exists, primary is correct, and translation gate hasn't been triggered yet
+  if (question && question.translation && isCorrect && !isTranslationGateTriggered && !isTranslationGateActive) {
+    isTranslationGateTriggered = true;
+    startTranslationGate(document.getElementById('quiz-body'), question);
+    return;
+  }
+
+  isAnswerChecked = true;
+
+  // Apply visual styles and call feedback rendering functions
+  switch (activeType) {
+    case 'multiple-choice':
+    case 'punctuation-check':
+    case 'structure-match':
+      showMCFeedback(question);
+      break;
+    case 'fill-blank-dropdown':
+      const selectEl = document.getElementById('fb-dropdown-select');
+      if (selectEl) {
+        selectEl.style.borderColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+        selectEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+        selectEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+      }
+      break;
+    case 'fill-blank':
+      showFBFeedback(question);
+      break;
+    case 'fill-blank-text':
+      {
+        const inputEl = document.getElementById('fb-text-input');
+        if (inputEl) {
+          inputEl.style.borderBottomColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+          inputEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+        }
+      }
+      break;
+    case 'translation-text':
+      {
+        const textEl = document.getElementById('translation-text-area');
+        if (textEl) {
+          textEl.style.borderColor = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+          textEl.style.backgroundColor = isCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+          textEl.style.color = isCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+        }
+      }
+      break;
+    case 'multiple-fill-blank':
+      {
+        const userVals = (selectedAnswer || []).map(val => val.toLowerCase().trim());
+        const correctVals = question.corrects.map(val => val.toLowerCase().trim());
+        const inputs = document.querySelectorAll('.multi-fb-input');
+        inputs.forEach((inputEl, idx) => {
+          const isInputCorrect = userVals[idx] === correctVals[idx];
+          if (inputEl) {
+            inputEl.style.borderColor = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+            inputEl.style.backgroundColor = isInputCorrect ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+            inputEl.style.color = isInputCorrect ? 'var(--color-correct)' : 'var(--color-wrong)';
+          }
+        });
+      }
+      break;
+    case 'true-false':
+      showTFFeedback(question);
+      break;
+    case 'spotlight':
+      showSpotlightFeedback(question);
+      break;
+    case 'reflex-blitz':
       showBlitzFeedback(question);
       break;
   }
