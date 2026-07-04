@@ -4417,6 +4417,12 @@ function tryMatch(container, question) {
 
 // ── Boşluk Doldurma - Açılır Menü (Dropdown) ──────────────────
 function renderFillBlankDropdown(container, question) {
+  // Normalize arguments in case it is called as renderFillBlankDropdown(question)
+  if (!question && container && !container.nodeType) {
+    question = container;
+    container = document.getElementById("exercise-container") || document.querySelector(".quiz-card-body");
+  }
+
   const parts = question.sentence.split(/_{3,}/);
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
@@ -4427,9 +4433,9 @@ function renderFillBlankDropdown(container, question) {
   const displayPrompt = question.prompt === 'Boşluğu doldur' ? 'Boşluğu doldur!' : question.prompt;
 
   container.innerHTML = `
-    <p class="quiz-prompt">${displayPrompt}</p>
-    <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
-      ${part0Html}<select class="inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${part1Html}
+    <div class="question-prompt-title quiz-prompt">${displayPrompt}</div>
+    <div class="question-sentence-body dropdown-sentence-layout" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.8; display: block; width: 100%;">
+      ${part0Html}<select class="amok-inline-select inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${part1Html}
     </div>
   `;
 
