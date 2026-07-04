@@ -3742,6 +3742,9 @@ function renderQuestion() {
     case 'multiple-choice':
       renderMultipleChoice(body, question);
       break;
+    case 'inversion-transformer':
+      renderInversionTransformer(body, question);
+      break;
     case 'punctuation-check':
       renderPunctuationCheck(body, question);
       break;
@@ -3847,6 +3850,51 @@ function renderMultipleChoice(container, question) {
       document.getElementById('btn-check').disabled = false;
 
       // Seçim yapıldıktan 250ms sonra cevabı otomatik olarak kontrol et
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
+    });
+  });
+}
+
+// ── Inversion Transformer ──────────────────────────────────
+function renderInversionTransformer(container, question) {
+  const mainSentence = question.mainSentence || "";
+  const promptHtml = question.prompt || "Verilen düz akademik cümleyi devrik forma dönüştürün:";
+
+  const optionsHtml = question.options.map((opt, i) => {
+    const letter = String.fromCharCode(65 + i);
+    const optHtml = makeTextHoverable(opt);
+    return `
+      <button class="mc-option it-option" data-index="${i}" style="display: flex; align-items: flex-start; gap: 14px; width: 100%;">
+        <span class="it-option-letter" style="display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 24px; background: var(--bg-secondary, #f1f5f9); border-radius: 6px; font-weight: 700; font-size: 0.8rem; color: var(--text-muted, #64748b); flex-shrink: 0;">${letter}</span>
+        <span class="it-option-text" style="flex: 1; text-align: left;">${optHtml}</span>
+      </button>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${promptHtml}</p>
+    
+    <div class="it-main-sentence-card" style="margin: 16px 8px; padding: 20px; background-color: var(--bg-secondary, #f1f5f9); border-radius: 16px; border: 1.5px solid var(--border-color, #cbd5e1); width: 100%; box-sizing: border-box; text-align: left;">
+      <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted, #64748b); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">DÜZ CÜMLE (DÖNÜŞTÜRÜN):</div>
+      <div style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(mainSentence)}</div>
+    </div>
+
+    <div class="mc-options" style="width: 100%;">
+      ${optionsHtml}
+    </div>
+  `;
+
+  container.querySelectorAll('.it-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      container.querySelectorAll('.it-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedAnswer = parseInt(btn.dataset.index);
+      document.getElementById('btn-check').disabled = false;
+
+      // Automatically check answer after 250ms selection
       setTimeout(() => {
         checkAnswer();
       }, 250);
@@ -5622,6 +5670,7 @@ function checkAnswer() {
 
   switch (activeType) {
     case 'multiple-choice':
+    case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
       isCorrect = selectedAnswer === question.correctIndex;
@@ -5698,6 +5747,7 @@ function checkAnswer() {
   // Apply visual styles and call feedback rendering functions
   switch (activeType) {
     case 'multiple-choice':
+    case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
       showMCFeedback(question);
@@ -5809,7 +5859,7 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
+    if (question.type === 'multiple-choice' || question.type === 'inversion-transformer' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'swipe') {
       correctAnswerText = question.isCorrect ? 'VALID (DOĞRU)' : 'BUG (HATALI)';

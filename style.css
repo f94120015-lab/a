@@ -6897,4 +6897,22 @@ span[style*="color:#339af0"] * {
   }
 }
 
+/* Inversion Transformer */
+.it-option.selected .it-option-letter {
+  background: var(--theme-accent-light) !important;
+  color: var(--theme-accent) !important;
+  border-color: var(--theme-accent) !important;
+}
+.it-option.correct .it-option-letter {
+  background: var(--color-correct-bg) !important;
+  color: var(--color-correct) !important;
+  border-color: var(--color-correct-border) !important;
+}
+.it-option.wrong .it-option-letter {
+  background: var(--color-wrong-bg) !important;
+  color: var(--color-wrong) !important;
+  border-color: var(--color-wrong-border) !important;
+}
+
+
 
