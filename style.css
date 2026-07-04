@@ -1517,7 +1517,7 @@ input {
 .popover-arrow {
   position: absolute;
   top: -8px;
-  left: 50%;
+  left: var(--arrow-left, 50%);
   transform: translateX(-50%);
   width: 0;
   height: 0;
@@ -1531,7 +1531,7 @@ input {
   content: '';
   position: absolute;
   top: -9px;
-  left: 50%;
+  left: var(--arrow-left, 50%);
   transform: translateX(-50%);
   width: 0;
   height: 0;
@@ -6509,13 +6509,115 @@ span[style*="color:#339af0"] * {
   border-color: #ff007f !important;
 }
 
+/* Amok Yeni Soru Tipleri Tasarımı */
+.punctuation-gap {
+  color: var(--accent-secondary, #ff9800);
+  font-weight: bold;
+  border-bottom: 2px dashed var(--accent-secondary, #ff9800);
+  padding: 0 5px;
+}
+
+.structure-helper-badge {
+  background-color: var(--accent-primary-light, #e3f2fd);
+  color: var(--accent-primary-hover, #0d47a1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid var(--border-color, #bbdefb);
+  font-weight: 600;
+}
+
+.punctuation-context, .structure-context {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 20px;
+}
+
+/* Idiom Builder UI Tasarımı */
+.idiom-meaning-badge {
+  background-color: var(--accent-primary-light, #f1f8e9);
+  color: var(--accent-primary-hover, #33691e);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px dashed var(--border-color, #7cb342);
+}
+
+.idiom-build-zone {
+  min-height: 60px;
+  background-color: var(--bg-secondary, #fafafa);
+  border-bottom: 3px solid var(--border-color, #ccc);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.build-placeholder {
+  color: var(--text-secondary, #999);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.selected-idiom-word {
+  background-color: var(--accent-primary, #2196f3);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.amok-token-btn {
+  background-color: var(--bg-primary, white);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 0 var(--border-color, #e0e0e0);
+}
+
+.amok-token-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.token-used {
+  background-color: var(--border-color, #e0e0e0) !important;
+  color: var(--text-secondary, #a0a0a0) !important;
+  border-color: var(--border-color, #e0e0e0) !important;
+  box-shadow: none !important;
+  cursor: default;
+}
+
+.context-sentence {
+  font-size: 1.15rem;
+  color: var(--text-secondary, #555);
+  margin: 20px 0;
+  font-style: italic;
+}
 
 
-
-
-
-
-
-
-
-
+/* Responsive lesson-popover alignment on mobile */
+@media (max-width: 576px) {
+  .lesson-popover {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(450px, 92vw) !important;
+    max-width: 92vw !important;
+  }
+}

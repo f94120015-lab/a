@@ -1795,10 +1795,9 @@ async function saveUser(username, password) {
 function updateBodyScrollLock() {
   const homeScreen = document.getElementById('home-screen');
   const homeScreenActive = homeScreen && homeScreen.classList.contains('active');
-  const hasPopover = document.querySelector('.lesson-popover') !== null;
   const hasModal = document.querySelector('.qp-modal-overlay') !== null;
 
-  if (homeScreenActive && (hasPopover || hasModal)) {
+  if (homeScreenActive && hasModal) {
     document.body.classList.add('no-scroll');
   } else {
     document.body.classList.remove('no-scroll');
@@ -1827,6 +1826,8 @@ function showScreen(screenId) {
       window.scrollTo(0, homeScreenScrollY);
     });
     setTimeout(checkAndShowReviewPrompt, 600);
+  } else {
+    window.scrollTo(0, 0);
   }
 
   // Update body scroll lock state based on active screen & overlays
@@ -2595,6 +2596,8 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'train';
   } else if (unitId === 30) {
     category = 'chatbot';
+  } else if (unitId === 34) {
+    category = 'grammar';
   }
 
   // Inject variety
@@ -3094,7 +3097,16 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   popover.dataset.lessonId = lessonId;
   // Positioned directly below the scaled-up labels (pxY + 95px) to prevent overlap with the smaller pins/labels
   popover.style.top = `${pxY + 95}px`;
-  popover.style.left = `${pctX}%`;
+  
+  // Set arrow position custom property for styling the pseudoelement
+  popover.style.setProperty('--arrow-left', `${pctX}%`);
+
+  const isMobile = window.innerWidth <= 576;
+  if (isMobile) {
+    popover.style.left = '50%';
+  } else {
+    popover.style.left = `${pctX}%`;
+  }
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
@@ -3616,6 +3628,15 @@ function renderQuestion() {
     case 'multiple-choice':
       renderMultipleChoice(body, question);
       break;
+    case 'punctuation-check':
+      renderPunctuationCheck(body, question);
+      break;
+    case 'structure-match':
+      renderStructureMatch(body, question);
+      break;
+    case 'idiom-builder':
+      renderIdiomBuilder(body, question);
+      break;
     case 'word-bank':
       renderWordBank(body, question);
       break;
@@ -3716,6 +3737,136 @@ function renderMultipleChoice(container, question) {
         checkAnswer();
       }, 250);
     });
+  });
+}
+
+// ── Noktalama İşaretli Seçim (punctuation-check) ──────────
+function renderPunctuationCheck(container, question) {
+  const formattedQuestion = question.sentence.replace(
+    /__________/g, 
+    `<span class="punctuation-gap">[ ? ]</span>`
+  ).replace(
+    /___/g,
+    `<span class="punctuation-gap">[ ? ]</span>`
+  );
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="mc-option" data-index="${i}">${opt}</button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || "Noktalama İşaretlerine Dikkat Ederek Doğru Bağlacı Seçin"}</p>
+    <div class="punctuation-context" style="text-align: center; margin: 24px 0;">
+      ${formattedQuestion}
+    </div>
+    <div class="mc-options">
+      ${optionsHtml}
+    </div>
+  `;
+
+  container.querySelectorAll('.mc-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      container.querySelectorAll('.mc-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedAnswer = parseInt(btn.dataset.index);
+      document.getElementById('btn-check').disabled = false;
+
+      // Seçim yapıldıktan 250ms sonra cevabı otomatik olarak kontrol et
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
+    });
+  });
+}
+
+// ── Gramer Yapısı Eşleştirme (structure-match) ──────────
+function renderStructureMatch(container, question) {
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<button class="mc-option" data-index="${i}">${opt}</button>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || "Cümlenin Gramer Yapısına Uygun Bağlacı Seçin"}</p>
+    <div class="structure-context" style="text-align: center; margin: 24px 0;">
+      ${question.sentence}
+    </div>
+    <div class="mc-options">
+      ${optionsHtml}
+    </div>
+  `;
+
+  container.querySelectorAll('.mc-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      container.querySelectorAll('.mc-option').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedAnswer = parseInt(btn.dataset.index);
+      document.getElementById('btn-check').disabled = false;
+
+      // Seçim yapıldıktan 250ms sonra cevabı otomatik olarak kontrol et
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
+    });
+  });
+}
+
+// ── Deyim İnşa Etme (idiom-builder) ──────────
+function renderIdiomBuilder(container, question) {
+  let currentSelection = [];
+  const shuffledTokens = [...question.tokens].sort(() => Math.random() - 0.5);
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin"}</p>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <span class="idiom-meaning-badge">Anlamı: ${question.meaningTr}</span>
+    </div>
+    
+    <div class="idiom-build-zone" id="build-zone">
+      <span class="build-placeholder">Deyimi tamamlamak için aşağıdaki kelimelere sırasıyla tıklayın...</span>
+    </div>
+    
+    <div class="context-sentence" style="text-align: center; margin: 20px 0;">
+      ${question.sentence || question.question}
+    </div>
+    
+    <div class="tokens-flex" id="idiom-tokens" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;"></div>
+  `;
+
+  const tokensParent = document.getElementById("idiom-tokens");
+  const buildZone = document.getElementById("build-zone");
+
+  shuffledTokens.forEach(token => {
+    const button = document.createElement("button");
+    button.className = "amok-token-btn";
+    button.innerText = token;
+    
+    button.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      if (button.classList.contains("token-used")) return;
+      
+      if (currentSelection.length === 0) buildZone.innerHTML = "";
+      
+      currentSelection.push(token);
+      button.classList.add("token-used");
+      
+      const wordSpan = document.createElement("span");
+      wordSpan.className = "selected-idiom-word animate-pop";
+      wordSpan.innerText = token;
+      buildZone.appendChild(wordSpan);
+      
+      if (currentSelection.length === question.correctSequence.length) {
+        selectedAnswer = currentSelection;
+        document.getElementById('btn-check').disabled = false;
+        
+        setTimeout(() => {
+          checkAnswer();
+        }, 300);
+      }
+    });
+    
+    tokensParent.appendChild(button);
   });
 }
 
@@ -5244,8 +5395,15 @@ function checkAnswer() {
 
   switch (activeType) {
     case 'multiple-choice':
+    case 'punctuation-check':
+    case 'structure-match':
       isCorrect = selectedAnswer === question.correctIndex;
       showMCFeedback(question);
+      break;
+    case 'idiom-builder':
+      isCorrect = Array.isArray(selectedAnswer) &&
+        selectedAnswer.length === question.correctSequence.length &&
+        selectedAnswer.every((w, i) => w === question.correctSequence[i]);
       break;
     case 'word-bank':
       isCorrect = Array.isArray(selectedAnswer) &&
@@ -5385,7 +5543,7 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz') {
+    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'swipe') {
       correctAnswerText = question.isCorrect ? 'VALID (DOĞRU)' : 'BUG (HATALI)';
@@ -5397,6 +5555,8 @@ function checkAnswer() {
       correctAnswerText = question.correctSentence;
     } else if (question.type === 'word-bank') {
       correctAnswerText = question.correctOrder.join(' ');
+    } else if (question.type === 'idiom-builder') {
+      correctAnswerText = question.correctSequence.join(' ');
     } else if (question.type === 'multiple-fill-blank') {
       correctAnswerText = question.corrects.join(', ');
     } else if (question.type === 'true-false') {
@@ -7803,8 +7963,13 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     const correctText = Array.isArray(question.correctOrder) ? question.correctOrder.join(' ') : (question.enSentence || '');
 
     text = `Oluşturduğunuz cümle: <span style="color: var(--color-wrong); font-weight: 500;">"${chosenText}"</span>`;
-    ruleTitle = '💡 İngilizce Cümle Yapısı (Syntax)';
-    ruleText = preDefinedExplanation || `İngilizce akademik cümlelerde eklentiler, zaman zarfları ve ana cümle dizilimi kurallara uygun sıralanmalıdır. Yan cümle bağlacından (when, since, although vb.) hemen sonra bir özne ve çekimli fiil gelmelidir.`;
+    if (question.isEngToTr) {
+      ruleTitle = '💡 Türkçe Cümle Yapısı (Sözdizimi)';
+      ruleText = preDefinedExplanation || `Türkçe cümle yapısında özneler, tümleçler ve yüklem uyumu kurallara uygun sıralanmalıdır. Türkçe cümlelerde genellikle yüklem sonda yer alır ve kelime grubu ilişkilerine özen gösterilmelidir.`;
+    } else {
+      ruleTitle = '💡 İngilizce Cümle Yapısı (Syntax)';
+      ruleText = preDefinedExplanation || `İngilizce akademik cümlelerde eklentiler, zaman zarfları ve ana cümle dizilimi kurallara uygun sıralanmalıdır. Yan cümle bağlacından (when, since, although vb.) hemen sonra bir özne ve çekimli fiil gelmelidir.`;
+    }
     
     wrongExample = `Dizilim Hatası ❌`;
     correctExample = `Doğru Sıralama: "${correctText}" ✔️`;
@@ -7821,11 +7986,17 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     const correctText = question.correctSentence || '';
 
     text = `Yazdığınız çeviri: <span style="color: var(--color-wrong); font-weight: 500;">"${chosenText}"</span>`;
-    ruleTitle = '💡 Dilbilgisi ve Zaman Uyumu';
-    ruleText = preDefinedExplanation || `Akademik cümlelerin Türkçe çevirilerinde, yüklem zamanları ve ek uyumuna (suffix harmony) özen gösterilmelidir.`;
+    if (question.isEngToTr) {
+      ruleTitle = '💡 Türkçe Dilbilgisi ve Suffix Uyumu';
+      ruleText = preDefinedExplanation || `Akademik cümlelerin Türkçe çevirilerinde, yüklem zamanları ve ek uyumuna (suffix harmony) özen gösterilmelidir.`;
+    } else {
+      ruleTitle = '💡 İngilizce Zaman ve Özne-Yüklem Uyumu';
+      ruleText = preDefinedExplanation || `İngilizce akademik yazılı çevirilerde, özne-yüklem uyumuna (Subject-Verb Agreement) ve doğru zaman (Tense) seçimine özen gösterilmelidir.`;
+    }
     
     wrongExample = `Yazılan Çeviri ❌`;
     correctExample = `Kılavuz Çeviri: "${correctText}" ✔️`;
+
 
   } else {
     // Cloze questions (fill-blank, fill-blank-dropdown, fill-blank-text, multiple-fill-blank)
