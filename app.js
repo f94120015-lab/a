@@ -4417,7 +4417,7 @@ function tryMatch(container, question) {
 
 // ── Boşluk Doldurma - Açılır Menü (Dropdown) ──────────────────
 function renderFillBlankDropdown(container, question) {
-  const parts = question.sentence.split('___');
+  const parts = question.sentence.split(/_{3,}/);
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
 
@@ -4443,7 +4443,7 @@ function renderFillBlankDropdown(container, question) {
 
 // ── Boşluk Doldurma - Serbest Metin (Text) ────────────────────
 function renderFillBlankText(container, question) {
-  const parts = question.sentence.split('___');
+  const parts = question.sentence.split(/_{3,}/);
 
   const part0Html = makeTextHoverable(parts[0]);
   const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
@@ -4467,7 +4467,14 @@ function renderFillBlankText(container, question) {
 
 // ── Boşluk Doldurma - Butonlu Seçenekler (fill-blank) ──────────
 function renderFillBlank(container, question) {
-  const parts = question.sentence.split('___');
+  // Normalize arguments in case it is called as renderFillBlank(question)
+  if (!question && container && !container.nodeType) {
+    question = container;
+    container = document.getElementById("exercise-container") || document.querySelector(".quiz-card-body");
+  }
+
+  // Cümle içindeki boşluğu (3 veya daha fazla alt çizgiyi) belirgin bir görsel çizgiye dönüştürüyoruz
+  const parts = question.sentence.split(/_{3,}/);
   const part0Html = makeTextHoverable(parts[0]);
   const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
 
@@ -4710,7 +4717,7 @@ function renderTranslationText(container, question) {
 
 // ── Çoklu Boşluk Doldurma (multiple-fill-blank) ────────────────────
 function renderMultipleFillBlank(container, question) {
-  const parts = question.sentence.split('___');
+  const parts = question.sentence.split(/_{3,}/);
   let sentenceHtml = '';
   
   parts.forEach((part, index) => {
@@ -7396,7 +7403,7 @@ function renderPlacementMultipleChoice(container, question) {
 
 function renderPlacementFillBlankDropdown(container, question) {
   const sentence = question.sentence || question.prompt || '';
-  const parts = sentence.split('___');
+  const parts = sentence.split(/_{3,}/);
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
 
@@ -7421,7 +7428,7 @@ function renderPlacementFillBlankDropdown(container, question) {
 }
 
 function renderPlacementFillBlankText(container, question) {
-  const parts = question.sentence.split('___');
+  const parts = question.sentence.split(/_{3,}/);
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
@@ -7442,7 +7449,7 @@ function renderPlacementFillBlankText(container, question) {
 
 function renderPlacementFillBlank(container, question) {
   const sentence = question.sentence || question.prompt || '';
-  const parts = sentence.split('___');
+  const parts = sentence.split(/_{3,}/);
   const part0Html = parts[0];
   const part1Html = parts[1] || '';
 
