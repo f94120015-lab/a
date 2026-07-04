@@ -4772,20 +4772,27 @@ function renderTrueFalse(container, question) {
     reflexInterval = null;
   }
 
+  const hasPhrases = question.englishPhrase || question.turkishTranslation;
+  const cardHtml = hasPhrases ? `
+    <div class="blitz-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+      ${question.englishPhrase ? `
+      <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #a855f7); margin-bottom: 15px; line-height: 1.4;">
+        ${question.englishPhrase}
+      </div>` : ''}
+      ${question.turkishTranslation ? `
+      <div class="blitz-turkish" style="font-size: 1.3rem; font-weight: 500; color: var(--text-primary); line-height: 1.4;">
+        ${question.turkishTranslation}
+      </div>` : ''}
+    </div>
+  ` : '';
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || 'Hız Tüneli: Hızlıca karar ver!'}</p>
     <div class="blitz-timer-container" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 20px;">
       <div id="blitz-timer-bar" style="width: 100%; height: 100%; background: var(--accent-color, #a855f7); transition: width 50ms linear;"></div>
     </div>
     
-    <div class="blitz-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
-      <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #a855f7); margin-bottom: 15px; line-height: 1.4;">
-        ${question.englishPhrase}
-      </div>
-      <div class="blitz-turkish" style="font-size: 1.3rem; font-weight: 500; color: var(--text-primary); line-height: 1.4;">
-        ${question.turkishTranslation}
-      </div>
-    </div>
+    ${cardHtml}
 
     <div class="blitz-buttons" style="display: flex; gap: 20px; justify-content: center; width: 100%;">
       <button class="blitz-btn wrong-btn" id="blitz-btn-wrong" style="flex: 1; padding: 18px; border-radius: 12px; border: none; font-size: 1.2rem; font-weight: 700; cursor: pointer; background: rgba(239, 68, 68, 0.15); border: 2px solid rgb(239, 68, 68); color: rgb(239, 68, 68); transition: all 0.2s ease;">
@@ -4797,7 +4804,8 @@ function renderTrueFalse(container, question) {
     </div>
   `;
 
-  const duration = 3000;
+  const textContent = (question.prompt || "") + (question.englishPhrase || "") + (question.turkishTranslation || "");
+  const duration = Math.min(20000, Math.max(5000, textContent.length * 100));
   const startTime = Date.now();
   const timerBar = document.getElementById('blitz-timer-bar');
 
@@ -4985,6 +4993,9 @@ function showSpotlightFeedback(question) {
 
 // ── Hata Avcısı / Bug Debugger (Swipe Mode) ──
 function renderSwipeQuestion(container, question) {
+  const mainText = question.phrase || question.prompt || "";
+  const subText = question.translation || "";
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
     
@@ -4997,8 +5008,8 @@ function renderSwipeQuestion(container, question) {
         <div class="swipe-overlay swipe-overlay-bug">BUG</div>
         <div class="swipe-overlay swipe-overlay-valid">VALID</div>
         <div class="swipe-card-content">
-          <div class="swipe-phrase">${question.phrase}</div>
-          <div class="swipe-translation-hint">${question.translation || ''}</div>
+          <div class="swipe-phrase">${mainText}</div>
+          <div class="swipe-translation-hint">${subText}</div>
         </div>
       </div>
       
@@ -5132,7 +5143,9 @@ function renderSwipeQuestion(container, question) {
   document.getElementById('swipe-bug-btn').addEventListener('click', swipeLeft);
   document.getElementById('swipe-valid-btn').addEventListener('click', swipeRight);
 
-  let remainingTime = 3000;
+  const textContent = (question.phrase || "") + (question.prompt || "") + (question.translation || "");
+  const duration = Math.min(20000, Math.max(5000, textContent.length * 100));
+  let remainingTime = duration;
   const timerTick = 50;
   timerBar.style.width = '100%';
 
@@ -5142,7 +5155,7 @@ function renderSwipeQuestion(container, question) {
       return;
     }
     remainingTime -= timerTick;
-    const percentage = Math.max(0, (remainingTime / 3000) * 100);
+    const percentage = Math.max(0, (remainingTime / duration) * 100);
     timerBar.style.width = `${percentage}%`;
 
     if (remainingTime <= 0) {
@@ -5289,6 +5302,85 @@ function renderPrepositionMagnet(container, question) {
   });
 }
 
+const COLLOCATION_DICT = {
+  // u36_l14_q1
+  "to a certain extent": "Belirli bir dereceye kadar",
+  "by no means certain": "Hiçbir şekilde kesin değil",
+  "a matter of opinion": "Bir görüş meselesi",
+  "under the assumption": "Varsayımı altında",
+  // u36_l14_q2
+  "tend to": "-e eğilimi olmak",
+  "appear to": "Görünmek / Belirmek",
+  "seem to": "Gibi görünmek",
+  "shed light on": "Işık tutmak / Aydınlatmak",
+  // u36_l14_q3
+  "there is a likelihood that": "... olması ihtimali vardır",
+  "there is a possibility that": "... olması olasılığı vardır",
+  "there is a probability that": "... olması muhtemeldir",
+  "there is no guarantee that": "... olacağının garantisi yoktur",
+  // u36_l14_q4
+  "with the anticipation of": "Beklentisiyle",
+  "to some extent": "Bir ölçüye kadar / Kısmen",
+  "reasonable to assume": "Varsaymak mantıklıdır",
+  "shed some light on": "Biraz ışık tutmak",
+  // u36_l14_q5
+  "may have v3": "Yapmış olabilir (Belirsiz)",
+  "might have v3": "Yapmış olabilir (Zayıf ihtimal)",
+  "could have v3": "Yapabilirdi / Olabilirdi",
+  "could have been v3": "Yapılmış/olmuş olabilirdi",
+  // u36_l14_q6
+  "have a tendency to": "-e eğilimi olmak",
+  "have a propensity to": "-e meyli/yatkınlığı olmak",
+  "safe from": "-den korunmuş / Güvenli",
+  "consistent with": "-ile uyumlu / Tutarlı",
+  // u36_l14_q7
+  "partially systematic": "Kısmen sistematik",
+  "virtually identical": "Neredeyse tamamen aynı",
+  "predominantly caused": "Ağırlıklı olarak kaynaklanan / Çoğunlukla sebep olunan",
+  "relatively sound": "Nispeten sağlam / Mantıklı",
+  // u36_l14_q8
+  "operate under the assumption": "Varsayımlar altında çalışmak",
+  "a matter of opinion": "Görüş meselesi",
+  // u36_l14_q9
+  "suggest that": "İleri sürmek / Önermek",
+  "indicate that": "İşaret etmek / Göstermek",
+  "speculate that": "Tahminde bulunmak / Kuramsallaştırmak",
+  "hypothesize that": "Hipotez ileri sürmek"
+};
+
+function showCollocationPopup(english, turkish) {
+  const existing = document.getElementById('collocation-popup');
+  if (existing) {
+    existing.remove();
+  }
+
+  const popup = document.createElement('div');
+  popup.id = 'collocation-popup';
+  popup.className = 'collocation-success-popup';
+  popup.innerHTML = `
+    <div class="collocation-popup-icon">🔑</div>
+    <div class="collocation-popup-content">
+      <div class="collocation-popup-en">${english}</div>
+      <div class="collocation-popup-tr">${turkish}</div>
+    </div>
+  `;
+
+  document.body.appendChild(popup);
+
+  // Trigger animation after append
+  setTimeout(() => {
+    popup.classList.add('show');
+  }, 10);
+
+  // Auto remove after 3 seconds
+  setTimeout(() => {
+    popup.classList.remove('show');
+    setTimeout(() => {
+      popup.remove();
+    }, 300);
+  }, 3000);
+}
+
 // ── Bağlantı Kilidi (Collocation Matcher) ──
 function renderCollocationMatching(container, question) {
   const words = question.pairs.map(p => ({ type: 'word', text: p.word, prep: p.prep }));
@@ -5348,6 +5440,14 @@ function renderCollocationMatching(container, question) {
           wEl.classList.add('matched');
           pEl.classList.add('matched');
           matchesCount++;
+
+          // Show Collocation Success Popup
+          const englishPhrase = wEl.dataset.text + " " + pEl.dataset.text;
+          const normalized = englishPhrase.toLowerCase().replace(/\s+/g, " ").trim();
+          const turkishTranslation = COLLOCATION_DICT[normalized] || "";
+          if (turkishTranslation) {
+            showCollocationPopup(englishPhrase, turkishTranslation);
+          }
 
           if (matchesCount === question.pairs.length) {
             selectedAnswer = 'perfect';
@@ -7051,7 +7151,7 @@ function initEventListeners() {
     saveState();
     updateTopBar();
     if (currentLesson) {
-      startLesson(currentLesson.id);
+      startLesson(currentLesson.id, currentLesson.activeExerciseId);
     }
   });
 
