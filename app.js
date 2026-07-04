@@ -2599,6 +2599,8 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'chatbot';
   } else if (unitId === 34) {
     category = 'grammar';
+  } else if (unitId === 37) {
+    category = 'grammar';
   }
 
   // Inject variety
@@ -2855,6 +2857,7 @@ function renderLessonTree() {
     // 2. Create Unit Section wrapper
     const unitSection = document.createElement('div');
     unitSection.className = 'unit-section';
+    unitSection.dataset.unitId = unit.id;
 
     // Create Unit Banner
     const banner = document.createElement('div');
@@ -4323,7 +4326,7 @@ function renderWordBank(container, question) {
   function updateSentenceDisplay() {
     sentenceContainer.classList.toggle('has-words', selectedWords.length > 0);
     selectedAnswer = selectedWords.length > 0 ? [...selectedWords] : null;
-    document.getElementById('btn-check').disabled = selectedWords.length === 0;
+    document.getElementById('btn-check').disabled = false; // Keep enabled to allow click validation & shake feedback
   }
 }
 
@@ -7040,8 +7043,27 @@ function initEventListeners() {
       onTranslationGateVerify();
     } else if (!isAnswerChecked) {
       const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
-      const isTargetUnit = question && question.translation ? true : false;
       const activeType = question ? ((question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') ? question._dynamicType : question.type) : '';
+
+      // Empty selection validation for word-bank questions
+      if (activeType === 'word-bank' && (!selectedAnswer || selectedAnswer.length === 0)) {
+        const sentenceContainer = document.getElementById('wb-sentence');
+        const checkBtn = document.getElementById('btn-check');
+
+        if (sentenceContainer) {
+          sentenceContainer.classList.add('shake-anim');
+          setTimeout(() => sentenceContainer.classList.remove('shake-anim'), 500);
+        }
+        if (checkBtn) {
+          checkBtn.classList.add('shake-anim');
+          setTimeout(() => checkBtn.classList.remove('shake-anim'), 500);
+        }
+
+        showToast('Lütfen kelimeleri sürükleyerek veya seçerek bir cevap oluşturun!', 'info');
+        return;
+      }
+
+      const isTargetUnit = question && question.translation ? true : false;
       const isCorrectDropdown = activeType === 'fill-blank-dropdown' && selectedAnswer === question.correctIndex;
 
       if (isTargetUnit && isCorrectDropdown && question.translation) {
@@ -8174,6 +8196,31 @@ function init() {
     const recentBox = document.getElementById('recent-changes-box');
     if (recentBox) recentBox.remove();
   }
+
+  // Initialize VisualViewport API updates for keyboard / layout safety on mobile
+  if (window.visualViewport) {
+    const updateVV = () => {
+      const vv = window.visualViewport;
+      document.documentElement.style.setProperty('--vv-height', `${vv.height}px`);
+      document.documentElement.style.setProperty('--vv-offsetTop', `${vv.offsetTop}px`);
+    };
+    window.visualViewport.addEventListener('resize', updateVV);
+    window.visualViewport.addEventListener('scroll', updateVV);
+    updateVV();
+  }
+
+  // Calculate top-bar height dynamically for sticky positioning alignment
+  const updateTopBarHeight = () => {
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) {
+      const rect = topBar.getBoundingClientRect();
+      document.documentElement.style.setProperty('--topbar-height', `${rect.height}px`);
+    }
+  };
+  window.addEventListener('resize', updateTopBarHeight);
+  window.addEventListener('load', updateTopBarHeight);
+  setTimeout(updateTopBarHeight, 100);
+  updateTopBarHeight();
 
   initTheme();
   loadState();

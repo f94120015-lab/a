@@ -890,7 +890,7 @@ input {
 
 .unit-banner {
   position: sticky;
-  top: 60px; /* Aligns below top-bar on mobile */
+  top: var(--topbar-height, 60px); /* Aligns below top-bar dynamically */
   z-index: 200; /* Stays above winding path lesson nodes (z-index 100-119) */
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -908,7 +908,7 @@ input {
 
 @media (min-width: 820px) {
   .unit-banner {
-    top: 72px; /* Aligns below top-bar on desktop */
+    top: var(--topbar-height, 72px); /* Aligns below top-bar dynamically */
   }
 }
 
@@ -2684,6 +2684,10 @@ input {
   animation: heartLose 0.4s ease;
 }
 
+.shake-anim {
+  animation: shake 0.4s ease;
+}
+
 /* XP kazanma animasyonu */
 @keyframes xpGain {
   0% { transform: scale(1); }
@@ -2868,8 +2872,8 @@ input {
 
   .sidebar-nav {
     position: sticky;
-    top: 72px;
-    height: calc(100vh - 72px);
+    top: var(--topbar-height, 72px);
+    height: calc(100vh - var(--topbar-height, 72px));
     width: 240px;
     display: flex;
     flex-direction: column;
@@ -2970,9 +2974,10 @@ input {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-secondary);
-    border-radius: var(--radius-md);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0; /* Straight left for color bar flush look */
     background: none;
     border: none;
+    border-left: 5px solid transparent; /* default hidden/transparent bar */
     cursor: pointer;
     text-align: left;
     transition: all var(--transition-fast);
@@ -2985,16 +2990,91 @@ input {
     justify-content: center;
     width: 30px;
   }
-  
-  .sidebar-menu .nav-tab:hover {
-    background: var(--bg-secondary);
-    color: var(--theme-accent);
+
+  /* Specific color bars for each navigation tab */
+
+  /* Lessons (Dersler) Tab - Dynamic color */
+  .sidebar-menu .nav-tab[data-tab="lessons"] {
+    border-left-color: var(--theme-accent);
   }
-  
-  .sidebar-menu .nav-tab.active {
-    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%);
-    color: #fff;
-    box-shadow: var(--shadow-md);
+  .sidebar-menu .nav-tab[data-tab="lessons"]:hover {
+    background: var(--theme-accent-light);
+    color: var(--theme-accent-hover);
+  }
+  .sidebar-menu .nav-tab[data-tab="lessons"].active {
+    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px var(--theme-accent-light);
+  }
+
+  /* Leaderboard (Ligler) Tab - Gold color */
+  .sidebar-menu .nav-tab[data-tab="leaderboard"] {
+    border-left-color: #f59e0b;
+  }
+  .sidebar-menu .nav-tab[data-tab="leaderboard"]:hover {
+    background: rgba(245, 158, 11, 0.08);
+    color: #d97706;
+  }
+  .sidebar-menu .nav-tab[data-tab="leaderboard"].active {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+  }
+
+  /* Store (Mağaza) Tab - Blue color */
+  .sidebar-menu .nav-tab[data-tab="store"] {
+    border-left-color: #3b82f6;
+  }
+  .sidebar-menu .nav-tab[data-tab="store"]:hover {
+    background: rgba(59, 130, 246, 0.08);
+    color: #1d4ed8;
+  }
+  .sidebar-menu .nav-tab[data-tab="store"].active {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  }
+
+  /* Profile (Profil) Tab - Pink/Magenta color */
+  .sidebar-menu .nav-tab[data-tab="profile"] {
+    border-left-color: #ec4899;
+  }
+  .sidebar-menu .nav-tab[data-tab="profile"]:hover {
+    background: rgba(236, 72, 153, 0.08);
+    color: #db2777;
+  }
+  .sidebar-menu .nav-tab[data-tab="profile"].active {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+  }
+
+  /* About (Hakkında) Tab - Emerald green */
+  .sidebar-menu .nav-tab[data-tab="about"] {
+    border-left-color: #10b981;
+  }
+  .sidebar-menu .nav-tab[data-tab="about"]:hover {
+    background: rgba(16, 185, 129, 0.08);
+    color: #059669;
+  }
+  .sidebar-menu .nav-tab[data-tab="about"].active {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  }
+
+  /* Admin Tab - Slate gray */
+  .sidebar-menu .nav-tab[data-tab="admin"] {
+    border-left-color: #6b7280;
+  }
+  .sidebar-menu .nav-tab[data-tab="admin"]:hover {
+    background: rgba(107, 114, 128, 0.08);
+    color: #4b5563;
+  }
+  .sidebar-menu .nav-tab[data-tab="admin"].active {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.25);
   }
   
   .home-main-wrapper {
@@ -3081,10 +3161,15 @@ input {
   }
   
   .sidebar-menu .nav-tab.active {
-    color: var(--theme-accent);
     background: none;
     box-shadow: none;
   }
+  .sidebar-menu .nav-tab[data-tab="lessons"].active { color: var(--theme-accent) !important; }
+  .sidebar-menu .nav-tab[data-tab="leaderboard"].active { color: #f59e0b !important; }
+  .sidebar-menu .nav-tab[data-tab="store"].active { color: #3b82f6 !important; }
+  .sidebar-menu .nav-tab[data-tab="profile"].active { color: #ec4899 !important; }
+  .sidebar-menu .nav-tab[data-tab="about"].active { color: #10b981 !important; }
+  .sidebar-menu .nav-tab[data-tab="admin"].active { color: #6b7280 !important; }
   
   .home-main-wrapper {
     margin-left: 0;
@@ -6783,6 +6868,33 @@ span[style*="color:#339af0"] * {
   0% { transform: scale(0.5) rotate(-20deg); }
   50% { transform: scale(1.2) rotate(10deg); }
   100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Mobile visualViewport and keyboard height optimization */
+.quiz-body {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.quiz-container {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 819px) {
+  #quiz-screen.active,
+  #placement-screen.active {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: var(--vv-height, 100vh) !important;
+    transform: translateY(var(--vv-offsetTop, 0px)) !important;
+    z-index: 1200 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
 
 
