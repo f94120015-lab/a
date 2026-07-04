@@ -2601,6 +2601,8 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'grammar';
   } else if (unitId === 37) {
     category = 'grammar';
+  } else if (unitId === 38) {
+    category = 'grammar';
   }
 
   // Inject variety
