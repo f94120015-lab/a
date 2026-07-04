@@ -884,7 +884,14 @@ input {
    BÖLÜM VE DERS KARTLARI (Duolingo Style Winding Path Layout)
    ============================================================ */
 
+.unit-section {
+  position: relative;
+}
+
 .unit-banner {
+  position: sticky;
+  top: 60px; /* Aligns below top-bar on mobile */
+  z-index: 200; /* Stays above winding path lesson nodes (z-index 100-119) */
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -897,6 +904,12 @@ input {
   padding: 20px 24px;
   color: #fff;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+@media (min-width: 820px) {
+  .unit-banner {
+    top: 72px; /* Aligns below top-bar on desktop */
+  }
 }
 
 /* Bölüm 1 – Canlı Zümrüt & Mint */

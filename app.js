@@ -2852,7 +2852,11 @@ function renderLessonTree() {
       `;
     }
 
-    // 2. Create Unit Banner
+    // 2. Create Unit Section wrapper
+    const unitSection = document.createElement('div');
+    unitSection.className = 'unit-section';
+
+    // Create Unit Banner
     const banner = document.createElement('div');
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
@@ -2873,7 +2877,7 @@ function renderLessonTree() {
         </div>
       </div>
     `;
-    container.appendChild(banner);
+    unitSection.appendChild(banner);
 
     banner.addEventListener('mouseenter', () => {
       setUnitTheme(unit.id);
@@ -3037,7 +3041,8 @@ function renderLessonTree() {
       pathContainer.appendChild(nodeWrapper);
     });
 
-    container.appendChild(pathContainer);
+    unitSection.appendChild(pathContainer);
+    container.appendChild(unitSection);
   });
 }
 
