@@ -3040,6 +3040,45 @@ function renderLessonTree() {
   });
 }
 
+
+function cleanExerciseDescription(desc) {
+  if (!desc) return '';
+  
+  // Detect range like (1-15), (Cümleler 1-15), (13-24)
+  const rangeMatch = desc.match(/\((?:Cümleler\s+)?(\d+-\d+)\)/i) || desc.match(/\b(\d+-\d+)\b/);
+  const rangeStr = rangeMatch ? `Cümleler ${rangeMatch[1]}` : '';
+  
+  // Remove range from original description
+  let baseText = desc.replace(/\((?:Cümleler\s+)?\d+-\d+\)/gi, '').replace(/\b\d+-\d+\b/gi, '');
+  
+  // Keywords to remove (question types)
+  const keywords = [
+    'eşleştirme', 'çoktan seçmeli', 'seçmeli', 'sıralama', 'çeviri', 'kelime bankası', 
+    'kelime havuzu', 'yazarak çeviri', 'yazma', 'boşluk doldurma', 
+    'kelime eşleştirme', 'blok sıralama', 'cümle çevirileri', 'bağlamsal çeviri',
+    'öbek eşleştirme', 'katmanlı çeviri', 'paketleri', 'soruları'
+  ];
+  
+  keywords.forEach(kw => {
+    const regex = new RegExp(kw, 'gi');
+    baseText = baseText.replace(regex, '');
+  });
+  
+  // Clean leftovers like commas, conjunctions, symbols
+  baseText = baseText
+    .replace(/[\s,;&+•\-\/]+/g, ' ')
+    .replace(/\bve\b/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+    
+  if (baseText.length > 10) {
+    baseText = baseText.charAt(0).toUpperCase() + baseText.slice(1);
+    return rangeStr ? `${baseText} (${rangeStr})` : baseText;
+  }
+  
+  return rangeStr || 'Genel Pratik';
+}
+
 function togglePopover(button, lessonId, unitId, pctX, pxY) {
   // Remove existing popover if any
   const existingPopover = document.querySelector('.lesson-popover');
@@ -3162,7 +3201,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
                 <span class="exercise-title">${ex.title}</span>
                 <span class="exercise-q-badge ${badgeClass}">${ex.questions ? ex.questions.length : 0} Soru</span>
               </div>
-              <span class="exercise-subtitle">${ex.description || ''}</span>
+              <span class="exercise-subtitle">${cleanExerciseDescription(ex.description)}</span>
             </div>
           </div>
           <div class="qp-btn-group">
