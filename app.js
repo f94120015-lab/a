@@ -8462,8 +8462,16 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
   let wrongExample = '';
   let correctExample = '';
 
-  // Check if we already have an explanation field in the question object
-  const preDefinedExplanation = question.explanation || '';
+  const explanationDictionary = {
+    "gerund_infinitive_cheat": "Gerund & Infinitive Taktik Kuralı: Suggest, Insist on, It is no use, There is no point in, Have difficulty, Be used to, Get used to kalıpları kendilerinden sonra her zaman V-ing (Gerund) alırlar. Fiiller (manage, fail vb.) ise 'to V1' alarak kurulurlar.",
+    "phrase_connector_desc": "Phrase Connector: Kendisinden sonra çekimli fiil barındıran tam bir cümle değil, sadece bir isim veya isim öbeği (Noun Phrase) alır.",
+    "clause_connector_desc": "Clause Connector: İki tam cümleyi (öznesi ve çekimli fiili olan) birbirine bağlar.",
+    "sentence_connector_desc": "Sentence Connector: Noktalama işaretlerine (genellikle nokta veya noktalı virgül ve ardından virgül) bağlı olarak iki bağımsız cümleyi birbirine bağlar."
+  };
+
+  const preDefinedExplanation = question.explanation || 
+                                (question.explanationKey ? explanationDictionary[question.explanationKey] : '') || 
+                                '';
 
   const isMC = question.type === 'multiple-choice';
 
