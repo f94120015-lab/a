@@ -2597,11 +2597,7 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'train';
   } else if (unitId === 30) {
     category = 'chatbot';
-  } else if (unitId === 34) {
-    category = 'grammar';
-  } else if (unitId === 37) {
-    category = 'grammar';
-  } else if (unitId === 38) {
+  } else if (unitId === 34 || unitId === 38) {
     category = 'grammar';
   }
 
@@ -2800,15 +2796,14 @@ function renderLessonTree() {
   // Render units in their database/TOC sequence
   const renderedUnits = [...units];
 
-  let normalUnitIndex = 0;
   const unitDisplayNames = {};
-  renderedUnits.forEach(u => {
-    if (u.title.startsWith("Ara Bölüm") || u.title.startsWith("Bölüm")) {
-      unitDisplayNames[u.id] = u.title;
-    } else {
-      normalUnitIndex++;
-      unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}`;
-    }
+  renderedUnits.forEach((u, index) => {
+    const cleanTitle = u.title
+      .replace(/^Ara Bölüm\s*\d+\s*:\s*/i, "")
+      .replace(/^Bölüm\s*\d+\s*:\s*/i, "")
+      .replace(/^Ara Bölüm\s*\d+\s*/i, "")
+      .replace(/^Bölüm\s*\d+\s*/i, "");
+    unitDisplayNames[u.id] = `Bölüm ${index + 1}: ${cleanTitle}`;
   });
 
   renderedUnits.forEach((unit, uIdx) => {
@@ -2917,36 +2912,38 @@ function renderLessonTree() {
       });
     }
 
-    // Build SVG path data
-    let pathD = `M ${points[0].x} ${points[0].y}`;
-    for (let i = 0; i < points.length - 1; i++) {
-      const p0 = points[i];
-      const p1 = points[i + 1];
-      const cy = (p0.y + p1.y) / 2;
-      pathD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
-    }
-
-    // Build SVG progress path data
-    let progressD = "";
-    const progressLimit = Math.min(totalInUnit - 1, completedInUnit);
-    if (progressLimit > 0) {
-      progressD = `M ${points[0].x} ${points[0].y}`;
-      for (let i = 0; i < progressLimit; i++) {
-         const p0 = points[i];
-         const p1 = points[i + 1];
-         const cy = (p0.y + p1.y) / 2;
-         progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
+    // Build SVG path data and progress path data if there are lessons
+    if (totalInUnit > 0) {
+      let pathD = `M ${points[0].x} ${points[0].y}`;
+      for (let i = 0; i < points.length - 1; i++) {
+        const p0 = points[i];
+        const p1 = points[i + 1];
+        const cy = (p0.y + p1.y) / 2;
+        pathD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
       }
-    }
 
-    // Render path SVG (Expanded viewBox height matching the 190px vertical spacing)
-    const svgHTML = `
-      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
-        <path class="path-bg" d="${pathD}" />
-        ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
-      </svg>
-    `;
-    pathContainer.innerHTML = svgHTML;
+      // Build SVG progress path data
+      let progressD = "";
+      const progressLimit = Math.min(totalInUnit - 1, completedInUnit);
+      if (progressLimit > 0) {
+        progressD = `M ${points[0].x} ${points[0].y}`;
+        for (let i = 0; i < progressLimit; i++) {
+           const p0 = points[i];
+           const p1 = points[i + 1];
+           const cy = (p0.y + p1.y) / 2;
+           progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
+        }
+      }
+
+      // Render path SVG (Expanded viewBox height matching the 190px vertical spacing)
+      const svgHTML = `
+        <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
+          <path class="path-bg" d="${pathD}" />
+          ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
+        </svg>
+      `;
+      pathContainer.innerHTML = svgHTML;
+    }
 
     // Render each lesson node
     unit.lessons.forEach((lId, idx) => {
@@ -3480,15 +3477,9 @@ function startLesson(lessonId, exerciseId = null) {
 }
 
 function getUnitDisplayTitle(unitId) {
-  let normalUnitIndex = 0;
-  for (let i = 0; i < units.length; i++) {
-    const u = units[i];
-    if (u.title.startsWith("Ara Bölüm")) {
-      if (u.id === unitId) return u.title;
-    } else {
-      normalUnitIndex++;
-      if (u.id === unitId) return `Bölüm ${normalUnitIndex}`;
-    }
+  const index = units.findIndex(u => u.id === unitId);
+  if (index !== -1) {
+    return `Bölüm ${index + 1}`;
   }
   return '';
 }

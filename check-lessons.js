@@ -38,15 +38,14 @@ if (!units || !lessons) {
 let totalLoadedQuestions = 0;
 let emptyLessonsCount = 0;
 
-let normalUnitIndex = 0;
 const unitDisplayNames = {};
-[...units].forEach(u => {
-  if (u.title.startsWith("Ara Bölüm") || u.title.startsWith("Bölüm")) {
-    unitDisplayNames[u.id] = u.title;
-  } else {
-    normalUnitIndex++;
-    unitDisplayNames[u.id] = `Bölüm ${normalUnitIndex}: ${u.title}`;
-  }
+[...units].forEach((u, index) => {
+  const cleanTitle = u.title
+    .replace(/^Ara Bölüm\s*\d+\s*:\s*/i, "")
+    .replace(/^Bölüm\s*\d+\s*:\s*/i, "")
+    .replace(/^Ara Bölüm\s*\d+\s*/i, "")
+    .replace(/^Bölüm\s*\d+\s*/i, "");
+  unitDisplayNames[u.id] = `Bölüm ${index + 1}: ${cleanTitle}`;
 });
 
 units.forEach(unit => {
