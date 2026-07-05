@@ -15,7 +15,9 @@ vm.createContext(sandbox);
 let dataResult;
 try {
   // Appending an object expression at the end of the script to return the const arrays
-  const wrapperCode = dataCode + '\n; ({ units, lessons });';
+  // Strip export statements to prevent VM syntax errors in script mode
+  const executableCode = dataCode.replace(/\bexport\s+/g, '');
+  const wrapperCode = executableCode + '\n; ({ units, lessons });';
   dataResult = vm.runInContext(wrapperCode, sandbox);
 } catch (err) {
   console.error('data.js çalıştırılırken bir hata oluştu:', err);

@@ -3473,7 +3473,102 @@ function startLesson(lessonId, exerciseId = null) {
 
   updateQuizUI();
   showScreen('quiz-screen');
-  renderQuestion();
+
+  if (currentLesson.konuAnlatimi) {
+    showKonuAnlatimi(currentLesson.konuAnlatimi, () => {
+      renderQuestion();
+    });
+  } else {
+    renderQuestion();
+  }
+}
+
+function showKonuAnlatimi(konu, callback) {
+  const oldModal = document.getElementById('konu-anlatimi-modal');
+  if (oldModal) oldModal.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'konu-anlatimi-modal';
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 18, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  `;
+
+  modal.innerHTML = `
+    <div style="background: #1e1e2f; color: #fff; width: 100%; max-width: 550px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 30px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border: 1px solid rgba(255,255,255,0.1); transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+      
+      <!-- Header -->
+      <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+        <span style="font-size: 28px;">📖</span>
+        <h2 style="margin: 0; font-size: 1.4rem; font-weight: 700; color: #ff6b6b; font-family: 'Outfit', sans-serif;">${konu.baslik}</h2>
+      </div>
+      
+      <!-- Body -->
+      <div style="display: flex; flex-direction: column; gap: 15px; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6;">
+        <div>
+          <strong style="color: #ffb86c; font-size: 1rem; display: block; margin-bottom: 5px;">💡 Teorik Mantık:</strong>
+          <p style="margin: 0; color: #e0e0e0;">${konu.teorikMantik}</p>
+        </div>
+        
+        <div style="background: rgba(255,255,255,0.05); padding: 12px 15px; border-radius: 8px; border-left: 4px solid #50fa7b;">
+          <strong style="color: #50fa7b; font-size: 0.9rem; display: block; margin-bottom: 5px;">🧪 Matematiksel Formül:</strong>
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 1rem; color: #fff; font-weight: bold; word-break: break-all;">${konu.formul}</code>
+        </div>
+        
+        <div style="background: rgba(255,107,107,0.1); padding: 12px 15px; border-radius: 8px; border-left: 4px solid #ff5555;">
+          <strong style="color: #ff5555; font-size: 0.9rem; display: block; margin-bottom: 5px;">⚠️ Altın Kural (Sınav Tuzağı):</strong>
+          <p style="margin: 0; color: #ffb8b8; font-size: 0.9rem;">${konu.altinKural}</p>
+        </div>
+      </div>
+      
+      <!-- Footer Button -->
+      <button id="btn-konu-anlatimi-tamam" style="background: linear-gradient(135deg, #ff6b6b, #ff8e53); border: none; border-radius: 8px; color: #fff; padding: 12px 20px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-family: 'Outfit', sans-serif; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+        <span>ANLADIM, BAŞLA</span>
+        <span>🚀</span>
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  setTimeout(() => {
+    const dialog = modal.querySelector('div');
+    if (dialog) dialog.style.transform = 'scale(1)';
+  }, 10);
+
+  const btn = modal.querySelector('#btn-konu-anlatimi-tamam');
+  
+  btn.addEventListener('mouseenter', () => {
+    btn.style.transform = 'scale(1.02)';
+    btn.style.boxShadow = '0 5px 15px rgba(255, 107, 107, 0.4)';
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'scale(1)';
+    btn.style.boxShadow = 'none';
+  });
+
+  btn.addEventListener('click', () => {
+    const dialog = modal.querySelector('div');
+    if (dialog) dialog.style.transform = 'scale(0.9)';
+    modal.style.opacity = '0';
+    modal.style.transition = 'opacity 0.2s ease';
+    setTimeout(() => {
+      modal.remove();
+      if (callback) callback();
+    }, 200);
+  });
 }
 
 function getUnitDisplayTitle(unitId) {
