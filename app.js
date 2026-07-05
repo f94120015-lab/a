@@ -38,7 +38,9 @@ let state = {
     { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' },
     { username: 'Melis Şen', xp: 90, streak: 2, avatarColor: '#E8CB6E' }
   ],
-  lastPromptedWrongCount: 0
+  lastPromptedWrongCount: 0,
+  totalQuestionsAnswered: 0,
+  lastPromptedQuestionCount: 0
 };
 
 // Quiz ve diğer durumlar
@@ -5861,6 +5863,7 @@ function checkAnswer() {
   }
 
   isAnswerChecked = true;
+  state.totalQuestionsAnswered = (state.totalQuestionsAnswered || 0) + 1;
 
   // Apply visual styles and call feedback rendering functions
   switch (activeType) {
@@ -8279,22 +8282,20 @@ function checkReviewBanner() {
 }
 
 function checkAndShowReviewPrompt() {
-  const currentCount = state.wrongQuestions ? state.wrongQuestions.length : 0;
-  let lastCount = state.lastPromptedWrongCount || 0;
+  if (!state.wrongQuestions || state.wrongQuestions.length === 0) return;
 
-  if (currentCount < lastCount) {
-    state.lastPromptedWrongCount = currentCount;
-    lastCount = currentCount;
-    saveState();
-  }
+  const totalAnswered = state.totalQuestionsAnswered || 0;
+  const lastPrompted = state.lastPromptedQuestionCount || 0;
+  const answeredSinceLastPrompt = totalAnswered - lastPrompted;
 
-  // Her 20 hata yapılmış soruda bir pop-up göster
-  if (currentCount >= 20 && Math.floor(currentCount / 20) > Math.floor(lastCount / 20)) {
+  if (answeredSinceLastPrompt >= 15) {
     const modal = document.getElementById('review-prompt-modal');
     const countEl = document.getElementById('review-prompt-count');
     if (modal && countEl) {
-      countEl.textContent = currentCount;
+      countEl.textContent = state.wrongQuestions.length;
       modal.classList.add('show');
+      state.lastPromptedQuestionCount = totalAnswered;
+      saveState();
     }
   }
 }
