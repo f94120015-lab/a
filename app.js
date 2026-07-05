@@ -4916,12 +4916,12 @@ function renderTrueFalse(container, question) {
     reflexInterval = null;
   }
 
-  const hasPhrases = question.englishPhrase || question.turkishTranslation;
+  const hasPhrases = question.englishPhrase || question.turkishTranslation || question.sentence;
   const cardHtml = hasPhrases ? `
     <div class="blitz-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
-      ${question.englishPhrase ? `
+      ${(question.sentence || question.englishPhrase) ? `
       <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #a855f7); margin-bottom: 15px; line-height: 1.4;">
-        ${question.englishPhrase}
+        ${question.sentence || question.englishPhrase}
       </div>` : ''}
       ${question.turkishTranslation ? `
       <div class="blitz-turkish" style="font-size: 1.3rem; font-weight: 500; color: var(--text-primary); line-height: 1.4;">
@@ -4948,7 +4948,7 @@ function renderTrueFalse(container, question) {
     </div>
   `;
 
-  const textContent = (question.prompt || "") + (question.englishPhrase || "") + (question.turkishTranslation || "");
+  const textContent = (question.prompt || "") + (question.englishPhrase || "") + (question.turkishTranslation || "") + (question.sentence || "");
   const duration = Math.min(20000, Math.max(5000, textContent.length * 100));
   const startTime = Date.now();
   const timerBar = document.getElementById('blitz-timer-bar');
@@ -5802,7 +5802,10 @@ function checkAnswer() {
       }
       break;
     case 'true-false':
-      isCorrect = selectedAnswer === question.correctAnswer;
+      {
+        const correctVal = (question.correctAnswer !== undefined) ? question.correctAnswer : question.isTrue;
+        isCorrect = selectedAnswer === correctVal;
+      }
       break;
     case 'spotlight':
       isCorrect = selectedAnswer === question.correctIndex;
@@ -5962,7 +5965,8 @@ function checkAnswer() {
     } else if (question.type === 'multiple-fill-blank') {
       correctAnswerText = question.corrects.join(', ');
     } else if (question.type === 'true-false') {
-      correctAnswerText = question.correctAnswer ? 'DOĞRU' : 'YANLIŞ';
+      const correctVal = (question.correctAnswer !== undefined) ? question.correctAnswer : question.isTrue;
+      correctAnswerText = correctVal ? 'DOĞRU' : 'YANLIŞ';
     }
 
     if (question.type === 'true-false') {
