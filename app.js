@@ -3824,61 +3824,83 @@ function renderQuestion() {
     question.prompt = 'Boşluğu doldur';
   }
 
-  switch (activeType) {
-    case 'multiple-choice':
-      renderMultipleChoice(body, question);
-      break;
-    case 'inversion-transformer':
-      renderInversionTransformer(body, question);
-      break;
-    case 'punctuation-check':
-      renderPunctuationCheck(body, question);
-      break;
-    case 'structure-match':
-      renderStructureMatch(body, question);
-      break;
-    case 'idiom-builder':
-      renderIdiomBuilder(body, question);
-      break;
-    case 'word-bank':
-      renderWordBank(body, question);
-      break;
-    case 'matching':
-      renderMatching(body, question);
-      break;
-    case 'fill-blank-dropdown':
-      renderFillBlankDropdown(body, question);
-      break;
-    case 'fill-blank':
-      renderFillBlank(body, question);
-      break;
-    case 'fill-blank-text':
-      renderFillBlankText(body, question);
-      break;
-    case 'translation-text':
-      renderTranslationText(body, question);
-      break;
-    case 'multiple-fill-blank':
-      renderMultipleFillBlank(body, question);
-      break;
-    case 'true-false':
-      renderTrueFalse(body, question);
-      break;
-    case 'spotlight':
-      renderSpotlight(body, question);
-      break;
-    case 'swipe':
-      renderSwipeQuestion(body, question);
-      break;
-    case 'preposition-magnet':
-      renderPrepositionMagnet(body, question);
-      break;
-    case 'collocation-matching':
-      renderCollocationMatching(body, question);
-      break;
-    case 'reflex-blitz':
-      renderReflexBlitz(body, question);
-      break;
+  try {
+    switch (activeType) {
+      case 'multiple-choice':
+        renderMultipleChoice(body, question);
+        break;
+      case 'inversion-transformer':
+        renderInversionTransformer(body, question);
+        break;
+      case 'punctuation-check':
+        renderPunctuationCheck(body, question);
+        break;
+      case 'structure-match':
+        renderStructureMatch(body, question);
+        break;
+      case 'idiom-builder':
+        renderIdiomBuilder(body, question);
+        break;
+      case 'word-bank':
+        renderWordBank(body, question);
+        break;
+      case 'matching':
+        renderMatching(body, question);
+        break;
+      case 'fill-blank-dropdown':
+        renderFillBlankDropdown(body, question);
+        break;
+      case 'fill-blank':
+        renderFillBlank(body, question);
+        break;
+      case 'fill-blank-text':
+        renderFillBlankText(body, question);
+        break;
+      case 'translation-text':
+        renderTranslationText(body, question);
+        break;
+      case 'multiple-fill-blank':
+        renderMultipleFillBlank(body, question);
+        break;
+      case 'true-false':
+        renderTrueFalse(body, question);
+        break;
+      case 'spotlight':
+        renderSpotlight(body, question);
+        break;
+      case 'swipe':
+        renderSwipeQuestion(body, question);
+        break;
+      case 'preposition-magnet':
+        renderPrepositionMagnet(body, question);
+        break;
+      case 'collocation-matching':
+        renderCollocationMatching(body, question);
+        break;
+      case 'reflex-blitz':
+        renderReflexBlitz(body, question);
+        break;
+    }
+  } catch (error) {
+    console.error("Soru render edilirken hata oluştu:", error);
+    body.innerHTML = `
+      <div style="padding: 40px 20px; text-align: center; color: var(--text-primary);">
+        <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
+        <h3 style="margin: 0 0 10px 0; font-family: 'Outfit', sans-serif; color: #ff6b6b;">Soru Yüklenemedi</h3>
+        <p style="margin: 0 0 20px 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Bu sorunun veri şemasında eksik alanlar bulunmaktadır.</p>
+        <button id="btn-fallback-skip" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s;">Soruyu Atla ➔</button>
+      </div>
+    `;
+    const fallbackSkipBtn = document.getElementById('btn-fallback-skip');
+    if (fallbackSkipBtn) {
+      fallbackSkipBtn.addEventListener('click', () => {
+        // Mark as skipped/handled
+        isAnswerChecked = true;
+        selectedAnswer = -1; 
+        document.getElementById('btn-check').disabled = false;
+        checkAnswer();
+      });
+    }
   }
 
   // Restore prompt text so data remains unmodified
