@@ -213,9 +213,6 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
-  background-image: radial-gradient(var(--bg-dot-color) 1.5px, transparent 1.5px);
-  background-size: 28px 28px;
-  background-attachment: scroll;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
@@ -224,16 +221,7 @@ body {
 }
 
 .bg-glow-ball {
-  position: fixed;
-  border-radius: 50%;
-  background-color: var(--theme-accent);
-  filter: blur(130px);
-  z-index: -1;
-  pointer-events: none;
-  transition: background-color 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
+  display: none !important;
 }
 
 .bg-glow-ball.blob-1 {
