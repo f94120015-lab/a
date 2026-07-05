@@ -8467,7 +8467,8 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     "phrase_connector_desc": "Phrase Connector: Kendisinden sonra çekimli fiil barındıran tam bir cümle değil, sadece bir isim veya isim öbeği (Noun Phrase) alır.",
     "clause_connector_desc": "Clause Connector: İki tam cümleyi (öznesi ve çekimli fiili olan) birbirine bağlar.",
     "sentence_connector_desc": "Sentence Connector: Noktalama işaretlerine (genellikle nokta veya noktalı virgül ve ardından virgül) bağlı olarak iki bağımsız cümleyi birbirine bağlar.",
-    "timeline_master_cheat": "Zaman ve Kronoloji Taktik Kuralı: Zaman bağlaçlarının içinde 'will/would' kullanılmaz; 'By the time + V2' yapısı ana cümlede 'Had V3' gerektirir; durum bildiren stative verb'ler (contain, belong vb.) continuous (-ing) takısı almaz."
+    "timeline_master_cheat": "Zaman ve Kronoloji Taktik Kuralı: Zaman bağlaçlarının içinde 'will/would' kullanılmaz; 'By the time + V2' yapısı ana cümlede 'Had V3' gerektirir; durum bildiren stative verb'ler (contain, belong vb.) continuous (-ing) takısı almaz.",
+    "dialogue_matrix_cheat": "Diyalog ve Mülakat Taktik Kuralı: 'such as' ile örnekleme yaparken araya virgül konulmaz; olumsuz onaylamalar 'Neither + yardımcı fiil + özne' şeklinde kurulur; 'What' ile başlayan mülakat sorularına 'Well...' duraksama ünlemiyle başlamak yaygın bir akıcılık refleksidir."
   };
 
   const preDefinedExplanation = question.explanation || 
