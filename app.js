@@ -2759,9 +2759,163 @@ function getLessonIllustration(lessonId, unitId) {
 
 
 
+function renderUnitPathAndNodes(pContainer, unitId) {
+  if (pContainer.dataset.rendered === "true") return;
+  pContainer.dataset.rendered = "true";
+
+  const unit = units.find(u => u.id === parseInt(unitId, 10));
+  if (!unit) return;
+
+  const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
+  const totalInUnit = unit.lessons.length;
+  const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
+
+  const points = [];
+  for (let idx = 0; idx < totalInUnit; idx++) {
+    const u = unit.id;
+    const phase = (u * 1.7) % (2 * Math.PI);
+    const freq = 1.1 + (u * 0.1) % 0.6;
+    const amp = 26 + (u * 2) % 6;
+    const tilt = ((u % 3) - 1) * (0.8 + (u % 2));
+    const centerIndex = (totalInUnit - 1) / 2;
+    const offsetPercent = Math.sin(idx * freq + phase) * amp + (idx - centerIndex) * tilt;
+
+    points.push({
+      x: 50 + offsetPercent,
+      y: idx * 190 + 95
+    });
+  }
+
+  if (totalInUnit > 0) {
+    let pathD = `M ${points[0].x} ${points[0].y}`;
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[i];
+      const p1 = points[i + 1];
+      const cy = (p0.y + p1.y) / 2;
+      pathD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
+    }
+
+    let progressD = "";
+    const progressLimit = Math.min(totalInUnit - 1, completedInUnit);
+    if (progressLimit > 0) {
+      progressD = `M ${points[0].x} ${points[0].y}`;
+      for (let i = 0; i < progressLimit; i++) {
+         const p0 = points[i];
+         const p1 = points[i + 1];
+         const cy = (p0.y + p1.y) / 2;
+         progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
+      }
+    }
+
+    const svgHTML = `
+      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
+        <path class="path-bg" d="${pathD}" />
+        ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
+      </svg>
+    `;
+    pContainer.innerHTML = svgHTML;
+  }
+
+  unit.lessons.forEach((lId, idx) => {
+    const lesson = lessons.find(l => l.id === lId);
+    if (!lesson) return;
+
+    const isCompleted = state.completedLessons.includes(lId);
+    const isActive = !isCompleted && isLessonUnlocked(lId);
+    const isLocked = !isCompleted && !isActive;
+
+    const pt = points[idx];
+
+    const nodeWrapper = document.createElement('div');
+    nodeWrapper.className = 'lesson-node-wrapper';
+    nodeWrapper.style.left = `${pt.x}%`;
+    nodeWrapper.style.top = `${pt.y}px`;
+    nodeWrapper.style.zIndex = `${100 + idx}`;
+
+    let statusClass = 'locked';
+    if (isCompleted) {
+      statusClass = `completed unit-pin-color-${colorIndex}`;
+    } else if (isActive) {
+      statusClass = `active unit-pin-color-${colorIndex}`;
+    }
+
+    const illustrationContent = getLessonIllustration(lId, unit.id);
+
+    let progressBadgeContent = '';
+    const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
+    if (isNotUploadedLesson) {
+      progressBadgeContent = `<div class="node-progress-badge">0</div>`;
+    } else if (lesson.exercises && lesson.exercises.length > 0) {
+      const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
+      const totalCount = lesson.exercises.length;
+      const isAllExCompleted = completedCount === totalCount;
+      progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
+        ${completedCount}/${totalCount}
+      </div>`;
+    } else {
+      const totalCount = 1;
+      const completedCount = isCompleted ? 1 : 0;
+      progressBadgeContent = `<div class="node-progress-badge ${isCompleted ? 'completed' : ''}">
+        ${completedCount}/${totalCount}
+      </div>`;
+    }
+
+    const activeBannerContent = isActive ? '<div class="lesson-node-banner">Yeni</div>' : '';
+
+    let lessonOriginalTagHTML = '';
+
+    nodeWrapper.innerHTML = `
+      ${isActive ? '<div class="pulse-ring"></div>' : ''}
+      ${activeBannerContent}
+      <button class="lesson-node ${statusClass}" data-lesson-id="${lId}">
+        <div class="pin-bg"></div>
+        <div class="pin-inner">
+          ${illustrationContent}
+        </div>
+        ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
+        ${progressBadgeContent}
+      </button>
+      <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
+        <strong>${lesson.title}</strong>
+        <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
+        ${lessonOriginalTagHTML}
+        ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Alıştırma henüz yüklenmemiş</div>' : ''}
+      </div>
+    `;
+
+    const btn = nodeWrapper.querySelector('.lesson-node');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      if (state.isGuest) {
+        const firstUnit = units.find(u => u.id === 1);
+        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
+        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
+        if (unit.id !== 1 || isUnit1Completed) {
+          showGuestBlockModal();
+          return;
+        }
+      }
+
+      togglePopover(btn, lId, unit.id, pt.x, pt.y);
+    });
+
+    pContainer.appendChild(nodeWrapper);
+  });
+}
+
+function ensureLessonRendered(lessonId) {
+  const lesson = lessons.find(l => l.id === lessonId);
+  if (!lesson) return;
+  const unitId = lesson.unitId;
+  const pContainer = document.querySelector(`.unit-section[data-unit-id="${unitId}"] .unit-path-container`);
+  if (pContainer && pContainer.dataset.rendered === "false") {
+    renderUnitPathAndNodes(pContainer, unitId);
+  }
+}
+
 function renderLessonTree() {
   const container = document.getElementById('tree-container');
-  // Render definitions SVG for the path gradients
   container.innerHTML = `
     <svg style="position: absolute; width: 0; height: 0; overflow: hidden;">
       <defs>
@@ -2793,7 +2947,6 @@ function renderLessonTree() {
     </svg>
   `;
 
-  // Render units in their database/TOC sequence
   const renderedUnits = [...units];
 
   const unitDisplayNames = {};
@@ -2806,8 +2959,27 @@ function renderLessonTree() {
     unitDisplayNames[u.id] = `Bölüm ${index + 1}: ${cleanTitle}`;
   });
 
+  const observerOptions = {
+    root: null,
+    rootMargin: '500px 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries, self) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const section = entry.target;
+        const pContainer = section.querySelector('.unit-path-container');
+        const unitId = section.dataset.unitId;
+        if (pContainer && pContainer.dataset.rendered === "false") {
+          renderUnitPathAndNodes(pContainer, unitId);
+        }
+        self.unobserve(section);
+      }
+    });
+  }, observerOptions);
+
   renderedUnits.forEach((unit, uIdx) => {
-    // 1. Calculate progress in this unit
     const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
     const totalInUnit = unit.lessons.length;
     const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
@@ -2827,16 +2999,6 @@ function renderLessonTree() {
     }
 
     let originalBadgeHTML = '';
-    const newVisualPos = uIdx + 1;
-    /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
-    if (unit.originalIndex && unit.originalIndex !== newVisualPos) {
-      originalBadgeHTML = `
-        <span class="original-pos-badge" title="Müfredat sıralaması öncesindeki bölüm numarası">
-          Eski Sırası: Bölüm ${unit.originalIndex}
-        </span>
-      `;
-    }
-    */
 
     let extraBadgeHTML = '';
     const isStrictlyLocal = window.location.hostname === 'localhost' ||
@@ -2851,12 +3013,10 @@ function renderLessonTree() {
       `;
     }
 
-    // 2. Create Unit Section wrapper
     const unitSection = document.createElement('div');
     unitSection.className = 'unit-section';
     unitSection.dataset.unitId = unit.id;
 
-    // Create Unit Banner
     const banner = document.createElement('div');
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
@@ -2886,165 +3046,15 @@ function renderLessonTree() {
       updateActiveUnitTheme();
     });
 
-    // 3. Create Winding Path Container (Height expanded to 190px per lesson to support larger nodes without overlapping)
     const pathContainer = document.createElement('div');
     pathContainer.className = `unit-path-container unit-path-color-${colorIndex}`;
     pathContainer.style.height = `${totalInUnit * 190}px`;
-
-    // Compute coordinates for the lessons (Using a mathematical formula to guarantee all 20 units have unique shapes)
-    const points = [];
-    for (let idx = 0; idx < totalInUnit; idx++) {
-      const u = unit.id;
-      
-      // Calculate parameters unique to each unit's ID
-      const phase = (u * 1.7) % (2 * Math.PI);      // Unique phase shift
-      const freq = 1.1 + (u * 0.1) % 0.6;           // Unique frequency
-      const amp = 26 + (u * 2) % 6;                 // Increased amplitude for a more dramatic curved swing
-      const tilt = ((u % 3) - 1) * (0.8 + (u % 2));  // Reduced diagonal tilt slope to avoid edge clipping
-      
-      // Combine wave and diagonal tilt
-      const centerIndex = (totalInUnit - 1) / 2;
-      const offsetPercent = Math.sin(idx * freq + phase) * amp + (idx - centerIndex) * tilt;
-
-      points.push({
-        x: 50 + offsetPercent,
-        y: idx * 190 + 95
-      });
-    }
-
-    // Build SVG path data and progress path data if there are lessons
-    if (totalInUnit > 0) {
-      let pathD = `M ${points[0].x} ${points[0].y}`;
-      for (let i = 0; i < points.length - 1; i++) {
-        const p0 = points[i];
-        const p1 = points[i + 1];
-        const cy = (p0.y + p1.y) / 2;
-        pathD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
-      }
-
-      // Build SVG progress path data
-      let progressD = "";
-      const progressLimit = Math.min(totalInUnit - 1, completedInUnit);
-      if (progressLimit > 0) {
-        progressD = `M ${points[0].x} ${points[0].y}`;
-        for (let i = 0; i < progressLimit; i++) {
-           const p0 = points[i];
-           const p1 = points[i + 1];
-           const cy = (p0.y + p1.y) / 2;
-           progressD += ` C ${p0.x} ${cy}, ${p1.x} ${cy}, ${p1.x} ${p1.y}`;
-        }
-      }
-
-      // Render path SVG (Expanded viewBox height matching the 190px vertical spacing)
-      const svgHTML = `
-        <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
-          <path class="path-bg" d="${pathD}" />
-          ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
-        </svg>
-      `;
-      pathContainer.innerHTML = svgHTML;
-    }
-
-    // Render each lesson node
-    unit.lessons.forEach((lId, idx) => {
-      const lesson = lessons.find(l => l.id === lId);
-      if (!lesson) return;
-
-      const isCompleted = state.completedLessons.includes(lId);
-      const isActive = !isCompleted && isLessonUnlocked(lId);
-      const isLocked = !isCompleted && !isActive;
-
-      const pt = points[idx];
-
-      const nodeWrapper = document.createElement('div');
-      nodeWrapper.className = 'lesson-node-wrapper';
-      nodeWrapper.style.left = `${pt.x}%`;
-      nodeWrapper.style.top = `${pt.y}px`;
-      // Increasing z-index prevents subsequent lesson labels from rendering behind previous lesson nodes
-      nodeWrapper.style.zIndex = `${100 + idx}`;
-
-      let statusClass = 'locked';
-      if (isCompleted) {
-        statusClass = `completed unit-pin-color-${colorIndex}`;
-      } else if (isActive) {
-        statusClass = `active unit-pin-color-${colorIndex}`;
-      }
-
-      // Generate the premium SVG illustration instead of emoji
-      const illustrationContent = getLessonIllustration(lId, unit.id);
-
-      // Progress Badge content
-      let progressBadgeContent = '';
-      const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
-      if (isNotUploadedLesson) {
-        progressBadgeContent = `<div class="node-progress-badge">0</div>`;
-      } else if (lesson.exercises && lesson.exercises.length > 0) {
-        const completedCount = lesson.exercises.filter(ex => state.completedLessons.includes(`${lesson.id}_${ex.id}`)).length;
-        const totalCount = lesson.exercises.length;
-        const isAllExCompleted = completedCount === totalCount;
-        progressBadgeContent = `<div class="node-progress-badge ${isAllExCompleted ? 'completed' : ''}">
-          ${completedCount}/${totalCount}
-        </div>`;
-      } else {
-        const totalCount = 1;
-        const completedCount = isCompleted ? 1 : 0;
-        progressBadgeContent = `<div class="node-progress-badge ${isCompleted ? 'completed' : ''}">
-          ${completedCount}/${totalCount}
-        </div>`;
-      }
-
-      // New Banner for active lesson
-      const activeBannerContent = isActive ? '<div class="lesson-node-banner">Yeni</div>' : '';
-
-      let lessonOriginalTagHTML = '';
-      /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
-      if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
-        lessonOriginalTagHTML = `<div class="lesson-original-pos-tag">Eski: ${lesson.originalLessonId}. Ders</div>`;
-      }
-      */
-
-      nodeWrapper.innerHTML = `
-        ${isActive ? '<div class="pulse-ring"></div>' : ''}
-        ${activeBannerContent}
-        <button class="lesson-node ${statusClass}" data-lesson-id="${lId}">
-          <div class="pin-bg"></div>
-          <div class="pin-inner">
-            ${illustrationContent}
-          </div>
-          ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
-          ${progressBadgeContent}
-        </button>
-        <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
-          <strong>${lesson.title}</strong>
-          <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
-          ${lessonOriginalTagHTML}
-          ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Alıştırma henüz yüklenmemiş</div>' : ''}
-        </div>
-      `;
-
-      const btn = nodeWrapper.querySelector('.lesson-node');
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        // Check guest restriction
-        if (state.isGuest) {
-          const firstUnit = units.find(u => u.id === 1);
-          const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
-          const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
-          if (unit.id !== 1 || isUnit1Completed) {
-            showGuestBlockModal();
-            return;
-          }
-        }
-
-        togglePopover(btn, lId, unit.id, pt.x, pt.y);
-      });
-
-      pathContainer.appendChild(nodeWrapper);
-    });
+    pathContainer.dataset.rendered = "false";
 
     unitSection.appendChild(pathContainer);
     container.appendChild(unitSection);
+
+    observer.observe(unitSection);
   });
 }
 
@@ -6324,6 +6334,7 @@ function navigateToNextEmptyLesson() {
   switchTab('lessons');
 
   setTimeout(() => {
+    ensureLessonRendered(targetLesson.id);
     const btn = document.querySelector(`.lesson-node[data-lesson-id="${targetLesson.id}"]`);
     if (btn) {
       btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -7296,6 +7307,7 @@ function initEventListeners() {
 
     if (targetLessonId) {
       setTimeout(() => {
+        ensureLessonRendered(targetLessonId);
         const button = document.querySelector(`.lesson-node[data-lesson-id="${targetLessonId}"]`);
         if (button) {
           button.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -7572,6 +7584,7 @@ function initEventListeners() {
         switchTab('lessons');
         
         setTimeout(() => {
+          ensureLessonRendered(lessonId);
           const btn = document.querySelector(`.lesson-node[data-lesson-id="${lessonId}"]`);
           if (btn) {
             btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -7618,35 +7631,50 @@ function initEventListeners() {
     });
   }
 
-  // Scroll tab theme listener
+  // Scroll tab theme listener with requestAnimationFrame throttling and theme change optimization
+  let updateThemeTimeout = null;
+  let lastActiveUnitThemeId = null;
+
   const updateThemeOnScroll = () => {
-    const homeScreen = document.getElementById('home-screen');
-    const tabLessons = document.getElementById('tab-content-lessons');
-    if (!homeScreen || !homeScreen.classList.contains('active') || !tabLessons || !tabLessons.classList.contains('active')) {
-      return;
-    }
+    if (updateThemeTimeout) return;
 
-    const sections = document.querySelectorAll('.unit-section');
-    let activeUnitId = null;
-    const threshold = 82;
+    updateThemeTimeout = requestAnimationFrame(() => {
+      updateThemeTimeout = null;
 
-    for (let i = 0; i < sections.length; i++) {
-      const section = sections[i];
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= threshold && rect.bottom > threshold) {
-        activeUnitId = parseInt(section.dataset.unitId, 10);
-        break;
+      const homeScreen = document.getElementById('home-screen');
+      const tabLessons = document.getElementById('tab-content-lessons');
+      if (!homeScreen || !homeScreen.classList.contains('active') || !tabLessons || !tabLessons.classList.contains('active')) {
+        return;
       }
-    }
 
-    if (activeUnitId !== null && !isNaN(activeUnitId)) {
-      setUnitTheme(activeUnitId);
-    } else if (sections.length > 0) {
-      const firstRect = sections[0].getBoundingClientRect();
-      if (firstRect.top > threshold) {
-        setUnitTheme(parseInt(sections[0].dataset.unitId, 10));
+      const sections = document.querySelectorAll('.unit-section');
+      let activeUnitId = null;
+      const threshold = 82;
+
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= threshold && rect.bottom > threshold) {
+          activeUnitId = parseInt(section.dataset.unitId, 10);
+          break;
+        }
       }
-    }
+
+      let targetUnitId = null;
+      if (activeUnitId !== null && !isNaN(activeUnitId)) {
+        targetUnitId = activeUnitId;
+      } else if (sections.length > 0) {
+        const firstRect = sections[0].getBoundingClientRect();
+        if (firstRect.top > threshold) {
+          targetUnitId = parseInt(sections[0].dataset.unitId, 10);
+        }
+      }
+
+      if (targetUnitId !== null && targetUnitId !== lastActiveUnitThemeId) {
+        lastActiveUnitThemeId = targetUnitId;
+        setUnitTheme(targetUnitId);
+      }
+    });
   };
 
   window.addEventListener('scroll', updateThemeOnScroll);
