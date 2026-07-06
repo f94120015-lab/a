@@ -352,9 +352,52 @@
       <!-- VAGON SİMÜLATÖRÜ SEKMESİ -->
       <div id="tab-content-simulator" class="tab-content">
         <div class="simulator-container">
-          <div class="simulator-header">
-            <h2 class="simulator-title">🚂 Vagon Simülatörü</h2>
-            <p class="simulator-subtitle">İngilizce tren vagonlarının ekler yardımıyla Türkçe diline morfolojik bükülüşünü interaktif olarak simüle edin.</p>
+          <div class="simulator-top-row">
+            <div class="simulator-header">
+              <h2 class="simulator-title">🚂 Vagon Simülatörü</h2>
+              <p class="simulator-subtitle">İngilizce tren vagonlarının ekler yardımıyla Türkçe diline morfolojik bükülüşünü interaktif olarak simüle edin.</p>
+            </div>
+
+            <!-- Kokpit Ayar Paneli -->
+            <div class="cockpit-settings-card" id="cockpit-settings-card">
+              <h3 class="cockpit-title">🎛️ Kokpit Ayar Paneli</h3>
+              <div class="cockpit-controls">
+                <!-- Vites 1: Olumsuzluk -->
+                <div class="control-group">
+                  <span class="control-label">OLUMSUZLUK ANAHTARI</span>
+                  <div class="toggle-switch-wrapper">
+                    <span class="toggle-status-label" id="negation-status-label">KAPALI</span>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="toggle-negation">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Vites 2: Modal Seçici (Seviye 12 için aktif) -->
+                <div class="control-group" id="control-group-modal" style="display: none;">
+                  <span class="control-label">MODAL SEÇİCİ (Lvl 12)</span>
+                  <select id="select-modal" class="cockpit-select">
+                    <option value="could" selected>could</option>
+                    <option value="should">should</option>
+                    <option value="must">must</option>
+                    <option value="might">might</option>
+                  </select>
+                </div>
+
+                <!-- Vites 3: Aktif/Edilgen Vitesi -->
+                <div class="control-group">
+                  <span class="control-label">AKTİF / EDİLGEN VİTESİ</span>
+                  <div class="toggle-switch-wrapper">
+                    <span class="toggle-status-label" id="voice-status-label">EDİLGEN</span>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="toggle-voice">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Disiplin Seçim Butonları -->

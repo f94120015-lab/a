@@ -41,7 +41,10 @@ let state = {
   lastPromptedWrongCount: 0,
   totalQuestionsAnswered: 0,
   lastPromptedQuestionCount: 0,
-  activeDomain: 'history'
+  activeDomain: 'history',
+  negationOn: false,
+  modalSelectLevel12: 'could',
+  activePassiveMode: 'passive'
 };
 
 // Quiz ve diğer durumlar
@@ -1753,6 +1756,9 @@ function loadState() {
   if (!state.activeDomain) {
     state.activeDomain = 'history';
   }
+  if (state.negationOn === undefined) state.negationOn = false;
+  if (state.modalSelectLevel12 === undefined) state.modalSelectLevel12 = 'could';
+  if (state.activePassiveMode === undefined) state.activePassiveMode = 'passive';
   // Initialize daily tasks if missing or empty
   if (!state.dailyTasks || !state.dailyTasks.tasks || state.dailyTasks.tasks.length === 0) {
     state.dailyTasks = {
@@ -9660,6 +9666,336 @@ const labMissions = [
   }
 ];
 
+// ============================================================
+// COCKPIT HELPER FUNCTIONS
+// ============================================================
+function toIngForm(verb) {
+  let clean = verb.replace(/[\.\?,]/g, '').trim();
+  let ending = verb.endsWith('.') ? '.' : '';
+  
+  const ingMap = {
+    'read': 'reading',
+    'preserve': 'preserving',
+    'preserved': 'preserving',
+    'censor': 'censoring',
+    'censored': 'censoring',
+    'monitor': 'monitoring',
+    'monitored': 'monitoring',
+    'marginalized': 'marginalizing',
+    'marginalize': 'marginalizing',
+    'restored': 'restoring',
+    'restore': 'restoring',
+    'digitized': 'digitizing',
+    'digitize': 'digitizing',
+    'manipulated': 'manipulating',
+    'manipulate': 'manipulating',
+    'assimilated': 'assimilating',
+    'assimilate': 'assimilating',
+    'interpreted': 'interpreting',
+    'interpret': 'interpreting',
+    'looted': 'looting',
+    'loot': 'looting',
+    're-edited': 're-editing',
+    're-edit': 're-editing',
+    'cataloged': 'cataloging',
+    'catalog': 'cataloging',
+    'banned': 'banning',
+    'ban': 'banning',
+    'balanced': 'balancing',
+    'balance': 'balancing',
+    'forced': 'forcing',
+    'force': 'forcing',
+    'transformed': 'transforming',
+    'transform': 'transforming',
+    'structured': 'structuring',
+    'structure': 'structuring',
+    'normalized': 'normalizing',
+    'normalize': 'normalizing'
+  };
+  
+  return (ingMap[clean.toLowerCase()] || (clean + 'ing')) + ending;
+}
+
+function toBaseForm(verb) {
+  let clean = verb.replace(/[\.\?,]/g, '').trim();
+  let ending = verb.endsWith('.') ? '.' : '';
+  
+  const baseMap = {
+    'preserved': 'preserve',
+    'censored': 'censor',
+    'monitored': 'monitor',
+    'marginalized': 'marginalize'
+  };
+  
+  return (baseMap[clean.toLowerCase()] || clean) + ending;
+}
+
+function negateTurkishReflex(text) {
+  let res = text;
+  
+  // Stative Copula
+  res = res.replace(/tablettir\./g, 'tablet değildir.');
+  res = res.replace(/tablet<span style="color:#3b82f6; font-weight:800;">tir<\/span>\./g, 'tablet <span style="color:#3b82f6; font-weight:800;">değildir<\/span>.');
+  res = res.replace(/senaryodur\./g, 'senaryo değildir.');
+  res = res.replace(/senaryo<span style="color:#3b82f6; font-weight:800;">dur<\/span>\./g, 'senaryo <span style="color:#3b82f6; font-weight:800;">değildir<\/span>.');
+  res = res.replace(/endekstir\./g, 'endeks değildir.');
+  res = res.replace(/endeks<span style="color:#3b82f6; font-weight:800;">tir<\/span>\./g, 'endeks <span style="color:#3b82f6; font-weight:800;">değildir<\/span>.');
+  res = res.replace(/sınıftır\./g, 'sınıf değildir.');
+  res = res.replace(/sınıf<span style="color:#3b82f6; font-weight:800;">tır<\/span>\./g, 'sınıf <span style="color:#3b82f6; font-weight:800;">değildir<\/span>.');
+
+  // Simple Past Passives (di -> madı / medi)
+  res = res.replace(/okundu\./g, 'okunmadı.');
+  res = res.replace(/okun<\/span><span style="color:#3b82f6; font-weight:800;">du<\/span>\./g, 'okun<\/span><span style="color:#3b82f6; font-weight:800;">madı<\/span>.');
+  res = res.replace(/gösterildi\./g, 'gösterilmedi.');
+  res = res.replace(/gösteril<\/span><span style="color:#3b82f6; font-weight:800;">di<\/span>\./g, 'gösteril<\/span><span style="color:#3b82f6; font-weight:800;">medi<\/span>.');
+  res = res.replace(/ayarlandı\./g, 'ayarlanmadı.');
+  res = res.replace(/ayarlan<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>\./g, 'ayarlan<\/span><span style="color:#3b82f6; font-weight:800;">madı<\/span>.');
+  res = res.replace(/zorlandı\./g, 'zorlanmadı.');
+  res = res.replace(/zorlan<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>\./g, 'zorlan<\/span><span style="color:#3b82f6; font-weight:800;">madı<\/span>.');
+
+  // Future Passives (acak/ecek -> mayacak/meyecek)
+  res = res.replace(/korunacak\./g, 'korunmayacak.');
+  res = res.replace(/korun<\/span><span style="color:#3b82f6; font-weight:800;">acak<\/span>\./g, 'korun<\/span><span style="color:#3b82f6; font-weight:800;">mayacak<\/span>.');
+  res = res.replace(/sansürlenecek\./g, 'sansürlenmeyecek.');
+  res = res.replace(/sansürlen<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>\./g, 'sansürlen<\/span><span style="color:#3b82f6; font-weight:800;">meyecek<\/span>.');
+  res = res.replace(/izlenecek\./g, 'izlenmeyecek.');
+  res = res.replace(/izlen<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>\./g, 'izlen<\/span><span style="color:#3b82f6; font-weight:800;">meyecek<\/span>.');
+  res = res.replace(/marjinalleştirilecek\./g, 'marjinalleştirilmeyecek.');
+  res = res.replace(/marjinalleştiril<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>\./g, 'marjinalleştiril<\/span><span style="color:#3b82f6; font-weight:800;">meyecek<\/span>.');
+
+  // Continuous Passives (makta/mekte -> mamakta/memekte)
+  res = res.replace(/makta/g, 'mamakta');
+  res = res.replace(/mekte/g, 'memekte');
+  
+  // Perfect Passives (çoktan -> henüz, zaten -> henüz, di -> madı,mişti -> memişti)
+  res = res.replace(/çoktan/g, 'henüz');
+  res = res.replace(/zaten/g, 'henüz');
+  
+  // Level 6/7 verb endings
+  res = res.replace(/okundu\./g, 'okunmadı.');
+  res = res.replace(/gösterildi\./g, 'gösterilmedi.');
+  res = res.replace(/düşürüldü\./g, 'düşürülmedi.');
+  res = res.replace(/asimile edildi\./g, 'asimile edilmedi.');
+  
+  res = res.replace(/okunmuştu\./g, 'okunmamıştı.');
+  res = res.replace(/okun<\/span><span style="color:#ec4899; font-weight:800;">muştu<\/span>\./g, 'okun<\/span><span style="color:#ec4899; font-weight:800;">mamıştı<\/span>.');
+  res = res.replace(/kesilmişti\./g, 'kesilmemişti.');
+  res = res.replace(/kesil<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>\./g, 'kesil<\/span><span style="color:#ec4899; font-weight:800;">memişti<\/span>.');
+  res = res.replace(/düşürülmüştü\./g, 'düşürülmemişti.');
+  res = res.replace(/düşürül<\/span><span style="color:#ec4899; font-weight:800;">müştü<\/span>\./g, 'düşürül<\/span><span style="color:#ec4899; font-weight:800;">memişti<\/span>.');
+  res = res.replace(/düşürülmüştür\./g, 'düşürülmemişti.');
+  res = res.replace(/asimile edilmişti\./g, 'asimile edilmemişti.');
+  res = res.replace(/asimile edil<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>\./g, 'asimile edil<\/span><span style="color:#ec4899; font-weight:800;">memişti<\/span>.');
+
+  // Level 8 Future Perfect Passive: miş olacak -> memiş olacak
+  res = res.replace(/miş olacak\./g, 'memiş olacak.');
+  res = res.replace(/miş<\/span> <span style="color:#3b82f6; font-weight:800;">olacak<\/span>\./g, 'memiş<\/span> <span style="color:#3b82f6; font-weight:800;">olacak<\/span>.');
+
+  // Level 10 probability shift
+  res = res.replace(/yorumlanmış olması/g, 'yorumlanmamış olması');
+  res = res.replace(/yorumlan<\/span><span style="color:#10b981; font-weight:800;">mış olması<\/span>/g, 'yorumlan<\/span><span style="color:#10b981; font-weight:800;">mamış olması<\/span>');
+  res = res.replace(/restore edilmiş olması/g, 'restore edilmemiş olması');
+  res = res.replace(/restore edil<\/span><span style="color:#10b981; font-weight:800;">miş olması<\/span>/g, 'restore edil<\/span><span style="color:#10b981; font-weight:800;">memiş olması<\/span>');
+  res = res.replace(/ayarlanmış olması/g, 'ayarlanmamış olması');
+  res = res.replace(/ayarlan<\/span><span style="color:#10b981; font-weight:800;">mış olması<\/span>/g, 'ayarlan<\/span><span style="color:#10b981; font-weight:800;">mamış olması<\/span>');
+  res = res.replace(/yapılandırılmış olması/g, 'yapılandırılmamış olması');
+  res = res.replace(/yapılandırıl<\/span><span style="color:#10b981; font-weight:800;">mış olması<\/span>/g, 'yapılandırıl<\/span><span style="color:#10b981; font-weight:800;">memiş olması<\/span>');
+
+  // Level 12 double perfect shift
+  res = res.replace(/mümkündü\./g, 'mümkün değildi.');
+  res = res.replace(/mümkündü<\/span>\./g, 'mümkün değildi<\/span>.');
+
+  return res;
+}
+
+function activeTurkishReflex(text) {
+  let res = text;
+  
+  // Okundu -> Okudu
+  res = res.replace(/okundu/g, 'okudu');
+  res = res.replace(/okun<\/span><span style="color:#3b82f6; font-weight:800;">du<\/span>/g, 'oku<\/span><span style="color:#3b82f6; font-weight:800;">du<\/span>');
+  res = res.replace(/okun<\/span><span style="color:#ec4899; font-weight:800;">du<\/span>/g, 'oku<\/span><span style="color:#ec4899; font-weight:800;">du<\/span>');
+  res = res.replace(/okun<\/span><span style="color:#f59e0b; font-weight:800;">du<\/span>/g, 'oku<\/span><span style="color:#f59e0b; font-weight:800;">du<\/span>');
+  
+  // Gösterildi -> Gösterdi
+  res = res.replace(/gösterildi/g, 'gösterdi');
+  res = res.replace(/gösteril<\/span><span style="color:#3b82f6; font-weight:800;">di<\/span>/g, 'göster<\/span><span style="color:#3b82f6; font-weight:800;">di<\/span>');
+  res = res.replace(/gösteril<\/span><span style="color:#ec4899; font-weight:800;">di<\/span>/g, 'göster<\/span><span style="color:#ec4899; font-weight:800;">di<\/span>');
+  
+  // Ayarlandı -> Ayarladı
+  res = res.replace(/ayarlandı/g, 'ayarladı');
+  res = res.replace(/ayarlan<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>/g, 'ayarla<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>');
+  res = res.replace(/ayarlan<\/span><span style="color:#ec4899; font-weight:800;">dı<\/span>/g, 'ayarla<\/span><span style="color:#ec4899; font-weight:800;">dı<\/span>');
+
+  // Zorlandı -> Zorladı
+  res = res.replace(/zorlandı/g, 'zorladı');
+  res = res.replace(/zorlan<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>/g, 'zorla<\/span><span style="color:#3b82f6; font-weight:800;">dı<\/span>');
+  
+  // Korunacak -> Koruyacak
+  res = res.replace(/korunacak/g, 'koruyacak');
+  res = res.replace(/korun<\/span><span style="color:#3b82f6; font-weight:800;">acak<\/span>/g, 'koruy<\/span><span style="color:#3b82f6; font-weight:800;">acak<\/span>');
+  
+  // Sansürlenecek -> Sansürleyecek
+  res = res.replace(/sansürlenecek/g, 'sansürleyecek');
+  res = res.replace(/sansürlen<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>/g, 'sansürley<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>');
+  
+  // İzlenecek -> İzleyecek
+  res = res.replace(/izlenecek/g, 'izleyecek');
+  res = res.replace(/izlen<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>/g, 'izley<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>');
+  
+  // Marjinalleştirilecek -> Marjinalleştirecek
+  res = res.replace(/marjinalleştirilecek/g, 'marjinalleştirecek');
+  res = res.replace(/marjinalleştiril<\/span><span style="color:#3b82f6; font-weight:800;">ecek<\/span>/g, 'marjinalleştire<\/span><span style="color:#3b82f6; font-weight:800;">cek<\/span>');
+
+  // Korunmaktadır -> Korumaktadır, Korunmaktaydı -> Korumaktaydı
+  res = res.replace(/korunmak/g, 'korumak');
+  res = res.replace(/korun<\/span><span style="color:#10b981; font-weight:800;">makta<\/span>/g, 'koru<\/span><span style="color:#10b981; font-weight:800;">makta<\/span>');
+  
+  // Sansürlenmektedir -> Sansürlemektedir, Sansürlenmekteydi -> Sansürlemekteydi
+  res = res.replace(/sansürlenmek/g, 'sansürlemek');
+  res = res.replace(/sansürlen<\/span><span style="color:#10b981; font-weight:800;">mekte<\/span>/g, 'sansürle<\/span><span style="color:#10b981; font-weight:800;">mekte<\/span>');
+  
+  // İzlenmektedir -> İzlemektedir, İzlenmekteydi -> İzlemekteydi
+  res = res.replace(/izlenmak/g, 'izlemek');
+  res = res.replace(/izlenmek/g, 'izlemek');
+  res = res.replace(/izlen<\/span><span style="color:#10b981; font-weight:800;">makta<\/span>/g, 'izle<\/span><span style="color:#10b981; font-weight:800;">mekte<\/span>');
+  
+  // Marjinalleştirilmektedir -> Marjinalleştirmektedir, Marjinalleştirilmekteydi -> Marjinalleştirmekteydi
+  res = res.replace(/marjinalleştirilmak/g, 'marjinalleştirmek');
+  res = res.replace(/marjinalleştirilmek/g, 'marjinalleştirmek');
+  res = res.replace(/marjinalleştiril<\/span><span style="color:#10b981; font-weight:800;">makta<\/span>/g, 'marjinalleştire<\/span><span style="color:#10b981; font-weight:800;">mekte<\/span>');
+
+  // Düşürüldü -> Düşürdü
+  res = res.replace(/düşürüldü/g, 'düşürdü');
+  res = res.replace(/düşürül<\/span><span style="color:#ec4899; font-weight:800;">dü<\/span>/g, 'düşür<\/span><span style="color:#ec4899; font-weight:800;">dü<\/span>');
+
+  // Asimile edildi -> Asimile etti
+  res = res.replace(/asimile edildi/g, 'asimile etti');
+  res = res.replace(/asimile edil<\/span><span style="color:#ec4899; font-weight:800;">di<\/span>/g, 'asimile et<\/span><span style="color:#ec4899; font-weight:800;">ti<\/span>');
+
+  // Kesildi -> Kesti
+  res = res.replace(/kesildi/g, 'kesti');
+  res = res.replace(/kesil<\/span><span style="color:#ec4899; font-weight:800;">di<\/span>/g, 'kes<\/span><span style="color:#ec4899; font-weight:800;">ti<\/span>');
+
+  // Zaten ...mişti -> Zaten ...mişti (but active)
+  res = res.replace(/okunmuştu/g, 'okumuştu');
+  res = res.replace(/okun<\/span><span style="color:#ec4899; font-weight:800;">muştu<\/span>/g, 'oku<\/span><span style="color:#ec4899; font-weight:800;">muştu<\/span>');
+  res = res.replace(/kesilmişti/g, 'kesmişti');
+  res = res.replace(/kesil<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>/g, 'kes<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>');
+  res = res.replace(/düşürülmüştü/g, 'düşürmüştü');
+  res = res.replace(/düşürül<\/span><span style="color:#ec4899; font-weight:800;">müştü<\/span>/g, 'düşür<\/span><span style="color:#ec4899; font-weight:800;">müştü<\/span>');
+  res = res.replace(/asimile edilmişti/g, 'asimile etmişti');
+  res = res.replace(/asimile edil<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>/g, 'asimile et<\/span><span style="color:#ec4899; font-weight:800;">mişti<\/span>');
+
+  // Restore edilmiş -> Restore etmiş
+  res = res.replace(/restore edilmiş/g, 'restore etmiş');
+  res = res.replace(/restore edil<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>/g, 'restore et<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>');
+  res = res.replace(/restore edil<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'restore et<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Dijitalleştirilmiş -> Dijitalleştirmiş
+  res = res.replace(/dijitalleştirilmiş/g, 'dijitalleştirmiş');
+  res = res.replace(/dijitalleştiril<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>/g, 'dijitalleştir<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>');
+  res = res.replace(/dijitalleştiril<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'dijitalleştir<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Manipüle edilmiş -> Manipüle etmiş
+  res = res.replace(/manipüle edilmiş/g, 'manipüle etmiş');
+  res = res.replace(/manipüle edil<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>/g, 'manipüle et<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>');
+  res = res.replace(/manipüle edil<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'manipüle et<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Asimile edilmiş -> Asimile etmiş
+  res = res.replace(/asimile edilmiş/g, 'asimile etmiş');
+  res = res.replace(/asimile edil<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>/g, 'asimile et<\/span><span style="color:#ec4899; font-weight:800;">miş<\/span>');
+  res = res.replace(/asimile edil<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'asimile et<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Yorumlanmış -> Yorumlamış
+  res = res.replace(/yorumlanmış/g, 'yorumlamış');
+  res = res.replace(/yorumlan<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'yorumla<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Yapılandırılmış -> Yapılandırmış
+  res = res.replace(/yapılandırılmış/g, 'yapılandırmış');
+  res = res.replace(/yapılandırıl<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'yapılandır<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Yağmalanmakta -> Yağmalamakta
+  res = res.replace(/yağmalanmakta/g, 'yağmalamakta');
+  res = res.replace(/yağmalan<\/span><span style="color:#10b981; font-weight:800;">makta/g, 'yağmala<\/span><span style="color:#10b981; font-weight:800;">makta');
+
+  // Yeniden kurgulanmakta -> Yeniden kurgulamakta
+  res = res.replace(/yeniden kurgulanmakta/g, 'yeniden kurgulamakta');
+  res = res.replace(/yeniden kurgulan<\/span><span style="color:#10b981; font-weight:800;">makta/g, 'yeniden kurgula<\/span><span style="color:#10b981; font-weight:800;">makta');
+
+  // Normalleştirilmekte -> Normalleştirmekte
+  res = res.replace(/normalleştirilmekte/g, 'normalleştirmekte');
+  res = res.replace(/normalleştiril<\/span><span style="color:#10b981; font-weight:800;">mekte/g, 'normalleştir<\/span><span style="color:#10b981; font-weight:800;">mekte');
+
+  // Kataloglanmış -> Kataloglamış
+  res = res.replace(/kataloglanmış/g, 'kataloglamış');
+  res = res.replace(/kataloglan<\/span><span style="color:#10b981; font-weight:800;">mış/g, 'katalogla<\/span><span style="color:#10b981; font-weight:800;">mış');
+
+  // Yasaklanmış -> Yasaklamış
+  res = res.replace(/yasaklanmış/g, 'yasaklamış');
+  res = res.replace(/yasaklan<\/span><span style="color:#10b981; font-weight:800;">mış/g, 'yasakla<\/span><span style="color:#10b981; font-weight:800;">mış');
+
+  // Dengelenmiş -> Dengelemiş
+  res = res.replace(/dengelenmiş/g, 'dengelemiş');
+  res = res.replace(/dengelen<\/span><span style="color:#10b981; font-weight:800;">miş/g, 'dengele<\/span><span style="color:#10b981; font-weight:800;">miş');
+
+  // Dönüştürülmüş -> Dönüştürmüş
+  res = res.replace(/dönüştürülmüş/g, 'dönüştürmüş');
+  res = res.replace(/dönüştürül<\/span><span style="color:#10b981; font-weight:800;">müş/g, 'dönüştür<\/span><span style="color:#10b981; font-weight:800;">müş');
+
+  return res;
+}
+
+function getLevel12TurkishReflex(domain, activePassiveMode, negationOn, modalSelectLevel12) {
+  let firstPart = "";
+  if (activePassiveMode === 'active') {
+    if (domain === 'cinema') {
+      firstPart = 'Deneysel belgesel filmleri <span style="color:#f59e0b; font-weight:800;">yasakla</span><span style="color:#10b981; font-weight:800;">mış olmasını</span> ';
+    } else if (domain === 'economy') {
+      firstPart = 'Dış ticaret açıklarını <span style="color:#f59e0b; font-weight:800;">dengele</span><span style="color:#10b981; font-weight:800;">miş olmasını</span> ';
+    } else if (domain === 'history') {
+      firstPart = 'Tarihi taş yapıları <span style="color:#f59e0b; font-weight:800;">katalogla</span><span style="color:#10b981; font-weight:800;">mış olmasını</span> ';
+    } else { // core
+      firstPart = 'Antik tabletleri <span style="color:#f59e0b; font-weight:800;">oku</span><span style="color:#10b981; font-weight:800;">muş olmasını</span> ';
+    }
+  } else { // passive
+    if (domain === 'cinema') {
+      firstPart = 'Deneysel belgesel filmlerinin <span style="color:#f59e0b; font-weight:800;">yasaklan</span><span style="color:#10b981; font-weight:800;">miş olmasının</span> ';
+    } else if (domain === 'economy') {
+      firstPart = 'Dış ticaret açıklarının <span style="color:#f59e0b; font-weight:800;">dengelen</span><span style="color:#10b981; font-weight:800;">miş olmasının</span> ';
+    } else if (domain === 'history') {
+      firstPart = 'Tarihi taş yapıların <span style="color:#f59e0b; font-weight:800;">kataloglan</span><span style="color:#10b981; font-weight:800;">mış olmasının</span> ';
+    } else { // core
+      firstPart = 'Antik tabletlerin <span style="color:#f59e0b; font-weight:800;">okun</span><span style="color:#10b981; font-weight:800;">muş olmasının</span> ';
+    }
+  }
+
+  const stem = (activePassiveMode === 'active') ? 'bekle' : 'beklen';
+  let secondPart = "";
+
+  if (modalSelectLevel12 === 'should') {
+    if (negationOn) {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}memesi</span> <span style="color:#3b82f6; font-weight:800;">gerekirdi</span>.`;
+    } else {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}mesi</span> <span style="color:#3b82f6; font-weight:800;">gerekirdi</span>.`;
+    }
+  } else if (modalSelectLevel12 === 'must') {
+    if (negationOn) {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}memiş olması</span> <span style="color:#3b82f6; font-weight:800;">gerekirdi</span>.`;
+    } else {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}miş olması</span> <span style="color:#3b82f6; font-weight:800;">gerekirdi</span>.`;
+    }
+  } else { // could
+    if (negationOn) {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}memiş olabilmesi</span> <span style="color:#3b82f6; font-weight:800;">mümkün değildi</span>.`;
+    } else {
+      secondPart = `<span style="color:#ec4899; font-weight:800;">${stem}miş olabilmesi</span> <span style="color:#3b82f6; font-weight:800;">mümkündü</span>.`;
+    }
+  }
+
+  return firstPart + secondPart;
+}
+
 function getActiveLevelData(lvlNum) {
   const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
   if (!baseLvl) return null;
@@ -9683,6 +10019,142 @@ function getActiveLevelData(lvlNum) {
       }
     }
   }
+
+  // Handle Level 12 specifically
+  if (lvlNum === 12) {
+    const modalVal = state.modalSelectLevel12 || 'could';
+    const isPassive = state.activePassiveMode !== 'active';
+    const isNeg = state.negationOn || false;
+    
+    // 1. Mutate Modal Wagon (Index 1)
+    let modalWord = "";
+    if (modalVal === 'should') {
+      modalWord = isPassive ? (isNeg ? "should not have been" : "should have been") : (isNeg ? "should not have" : "should have");
+    } else if (modalVal === 'must') {
+      modalWord = isPassive ? (isNeg ? "must not have been" : "must have been") : (isNeg ? "must not have" : "must have");
+    } else { // could
+      modalWord = isPassive ? (isNeg ? "could not have been" : "could have been") : (isNeg ? "could not have" : "could have");
+    }
+    
+    const modalSuffix = (modalVal === 'should' || modalVal === 'must') ? 'gerekirdi' : 'mümkündü';
+    
+    currentLvl.wagon_chain[1].word = modalWord;
+    currentLvl.wagon_chain[1].suffix_tr = modalSuffix;
+    currentLvl.wagon_chain[1].role = "modal_shield";
+    
+    // 2. Mutate Expectation Wagon (Index 2)
+    const stem = isPassive ? 'beklen' : 'bekle';
+    let expectationSuffix = "";
+    if (modalVal === 'should') {
+      expectationSuffix = isNeg ? `${stem}memesi` : `${stem}mesi`;
+    } else if (modalVal === 'must') {
+      expectationSuffix = isNeg ? `${stem}memiş olması` : `${stem}miş olması`;
+    } else { // could
+      expectationSuffix = isNeg ? `${stem}memiş olabilmesi` : `${stem}miş olabilmesi`;
+    }
+    currentLvl.wagon_chain[2].suffix_tr = expectationSuffix;
+    
+    // 3. Mutate Infinitive Wagon (Index 3)
+    currentLvl.wagon_chain[3].word = isPassive ? "to have been" : "to have";
+    currentLvl.wagon_chain[3].suffix_tr = isPassive ? "-miş olmasının" : "-miş olmasını";
+    
+    // 4. Mutate Main Verb Wagon (Index 4)
+    if (domain === 'cinema') {
+      currentLvl.wagon_chain[4].suffix_tr = isPassive ? "yasaklan-" : "yasakla-";
+    } else if (domain === 'economy') {
+      currentLvl.wagon_chain[4].suffix_tr = isPassive ? "dengelen-" : "dengele-";
+    } else if (domain === 'history') {
+      currentLvl.wagon_chain[4].suffix_tr = isPassive ? "kataloglan-" : "katalogla-";
+    } else {
+      currentLvl.wagon_chain[4].suffix_tr = isPassive ? "oku-n-" : "oku-";
+    }
+
+    currentLvl.turkish_reflex_colored = getLevel12TurkishReflex(domain, state.activePassiveMode || 'passive', state.negationOn || false, state.modalSelectLevel12 || 'could');
+    currentLvl.turkish_reflex = currentLvl.turkish_reflex_colored.replace(/<[^>]*>/g, '');
+    
+    // For wagon_chain negation, add a red "not" wagon if negation is ON
+    if (isNeg) {
+      currentLvl.wagon_chain.splice(2, 0, {
+        word: "not",
+        role: "negation",
+        color: "#ef4444",
+        suffix_tr: null
+      });
+    }
+  } else {
+    // 2. AKTİF / EDİLGEN VİTESİ (Levels 1 to 11)
+    if (state.activePassiveMode === 'active') {
+      // 2a. Modify wagon chain
+      if (lvlNum === 2) {
+        currentLvl.wagon_chain = currentLvl.wagon_chain.filter(w => w.role !== 'past_tense');
+      } else if (lvlNum === 3) {
+        currentLvl.wagon_chain.forEach(w => {
+          if (w.word === 'will be') {
+            w.word = 'will';
+            w.role = 'future';
+            w.suffix_tr = '-acak/-ecek';
+          }
+          if (w.role === 'main_verb_v3') {
+            w.word = toBaseForm(w.word);
+          }
+        });
+      } else {
+        const hasBeing = currentLvl.wagon_chain.some(w => w.word === 'being');
+        if (hasBeing) {
+          currentLvl.wagon_chain = currentLvl.wagon_chain.filter(w => w.word !== 'being');
+          currentLvl.wagon_chain.forEach(w => {
+            if (w.role === 'main_verb_v3') {
+              w.word = toIngForm(w.word);
+              w.role = 'main_verb_ing';
+            }
+          });
+        } else {
+          currentLvl.wagon_chain.forEach(w => {
+            if (w.word === 'have been') {
+              w.word = 'have';
+            } else if (w.word === 'to have been') {
+              w.word = 'to have';
+            } else if (w.word === 'could have been' || w.word === 'should have been' || w.word === 'must have been' || w.word === 'might have been') {
+              w.word = w.word.replace(' have been', ' have');
+            } else if (w.word === 'could have' || w.word === 'should have' || w.word === 'must have' || w.word === 'might have') {
+              // Keep unchanged
+            }
+          });
+          currentLvl.wagon_chain = currentLvl.wagon_chain.filter(w => w.word !== 'been');
+        }
+      }
+      
+      // 2b. Transform Turkish reflex to active
+      currentLvl.turkish_reflex = activeTurkishReflex(currentLvl.turkish_reflex);
+      currentLvl.turkish_reflex_colored = activeTurkishReflex(currentLvl.turkish_reflex_colored);
+    }
+
+    // 3. OLUMSUZLUK ANAHTARI (Levels 1 to 11)
+    if (state.negationOn) {
+      if (currentLvl.wagon_chain.length >= 2) {
+        currentLvl.wagon_chain.splice(2, 0, {
+          word: "not",
+          role: "negation",
+          color: "#ef4444",
+          suffix_tr: null
+        });
+      } else if (currentLvl.wagon_chain.length === 1) {
+        currentLvl.wagon_chain.splice(1, 0, {
+          word: "not",
+          role: "negation",
+          color: "#ef4444",
+          suffix_tr: null
+        });
+      }
+      
+      currentLvl.turkish_reflex = negateTurkishReflex(currentLvl.turkish_reflex);
+      currentLvl.turkish_reflex_colored = negateTurkishReflex(currentLvl.turkish_reflex_colored);
+    }
+  }
+  
+  // 4. Reconstruct English sentence
+  currentLvl.english_sentence = currentLvl.wagon_chain.map(w => w.word).join(' ');
+  currentLvl.english_sentence = currentLvl.english_sentence.replace(/\s+\./g, '.').replace(/\.+/g, '.');
   return currentLvl;
 }
 
@@ -9759,6 +10231,7 @@ function initSimulator() {
     };
   }
 
+  initCockpitEventListeners();
   renderSimulatorContent();
   renderActiveMission();
 }
@@ -9877,6 +10350,12 @@ function renderSimulatorContent() {
     } else if (domain === 'sociology') {
       finalTrReflex = 'Göçebe topluluk kültürleri <span style="color:#f59e0b; font-weight:800;">asimile edil</span><span style="color:#ec4899; font-weight:800;">miş</span> <span style="color:#3b82f6; font-weight:800;">olacak</span>.';
     }
+    if (state.activePassiveMode === 'active') {
+      finalTrReflex = activeTurkishReflex(finalTrReflex);
+    }
+    if (state.negationOn) {
+      finalTrReflex = negateTurkishReflex(finalTrReflex);
+    }
   } else if (selectedLevel === 9 && deactivatedWagons.includes("are rumored")) {
     const domain = state.activeDomain || 'history';
     if (domain === 'history') {
@@ -9888,6 +10367,12 @@ function renderSimulatorContent() {
     } else if (domain === 'sociology') {
       finalTrReflex = 'Sapan sosyal davranışlar <span style="color:#f59e0b; font-weight:800;">normalleştiril</span><span style="color:#10b981; font-weight:800;">mekteydi</span>.';
     }
+    if (state.activePassiveMode === 'active') {
+      finalTrReflex = activeTurkishReflex(finalTrReflex);
+    }
+    if (state.negationOn) {
+      finalTrReflex = negateTurkishReflex(finalTrReflex);
+    }
   }
 
   const englishText = document.getElementById('simulator-english-sentence');
@@ -9897,6 +10382,71 @@ function renderSimulatorContent() {
   if (englishText) englishText.textContent = currentLvlData.english_sentence;
   if (turkishText) turkishText.innerHTML = finalTrReflex;
   if (noteText) noteText.textContent = currentLvlData.mechanic_note;
+
+  syncCockpitUI();
+}
+
+function syncCockpitUI() {
+  const negationCheckbox = document.getElementById('toggle-negation');
+  const negationStatus = document.getElementById('negation-status-label');
+  if (negationCheckbox) {
+    negationCheckbox.checked = state.negationOn || false;
+    if (negationStatus) {
+      negationStatus.textContent = negationCheckbox.checked ? "AÇIK" : "KAPALI";
+    }
+  }
+  
+  const voiceCheckbox = document.getElementById('toggle-voice');
+  const voiceStatus = document.getElementById('voice-status-label');
+  if (voiceCheckbox) {
+    voiceCheckbox.checked = (state.activePassiveMode === 'active');
+    if (voiceStatus) {
+      voiceStatus.textContent = voiceCheckbox.checked ? "AKTİF" : "EDİLGEN";
+    }
+  }
+  
+  const modalSelect = document.getElementById('select-modal');
+  if (modalSelect) {
+    modalSelect.value = state.modalSelectLevel12 || 'could';
+  }
+  
+  const modalCtrlGroup = document.getElementById('control-group-modal');
+  if (modalCtrlGroup) {
+    if (selectedLevel === 12) {
+      modalCtrlGroup.style.display = 'block';
+    } else {
+      modalCtrlGroup.style.display = 'none';
+    }
+  }
+}
+
+function initCockpitEventListeners() {
+  const negationCheckbox = document.getElementById('toggle-negation');
+  if (negationCheckbox) {
+    negationCheckbox.onchange = (e) => {
+      state.negationOn = e.target.checked;
+      saveState();
+      renderSimulatorContent();
+    };
+  }
+  
+  const voiceCheckbox = document.getElementById('toggle-voice');
+  if (voiceCheckbox) {
+    voiceCheckbox.onchange = (e) => {
+      state.activePassiveMode = e.target.checked ? 'active' : 'passive';
+      saveState();
+      renderSimulatorContent();
+    };
+  }
+  
+  const modalSelect = document.getElementById('select-modal');
+  if (modalSelect) {
+    modalSelect.onchange = (e) => {
+      state.modalSelectLevel12 = e.target.value;
+      saveState();
+      renderSimulatorContent();
+    };
+  }
 }
 
 function renderMissionsList() {
