@@ -64,6 +64,7 @@ let isTranslationGateTriggered = false;
 let isPlacementMode = false;
 let isReviewMode = false;
 let reviewQuestions = [];
+let reviewSessionCorrectIds = [];
 let placementQuestionsList = [];
 let quizSessionId = 0;
 let isCurrentExercisePassed = true;
@@ -6046,10 +6047,16 @@ function checkAnswer() {
       });
     }
     
-    // Remove from wrongQuestions if answered correctly
-    const qIndex = state.wrongQuestions.indexOf(question.id);
-    if (qIndex > -1) {
-      state.wrongQuestions.splice(qIndex, 1);
+    // Remove from wrongQuestions if answered correctly (or defer to session completion if in review mode)
+    if (isReviewMode) {
+      if (!reviewSessionCorrectIds.includes(question.id)) {
+        reviewSessionCorrectIds.push(question.id);
+      }
+    } else {
+      const qIndex = state.wrongQuestions.indexOf(question.id);
+      if (qIndex > -1) {
+        state.wrongQuestions.splice(qIndex, 1);
+      }
     }
   } else {
     feedbackPanel.classList.add('wrong');
@@ -6204,6 +6211,17 @@ function nextQuestion() {
 
 function completeReviewSession() {
   isReviewMode = false;
+
+  // Oturum bittiğinde doğru cevaplanan soruları hatalı listesinden düşür
+  if (reviewSessionCorrectIds && reviewSessionCorrectIds.length > 0) {
+    reviewSessionCorrectIds.forEach(id => {
+      const idx = state.wrongQuestions.indexOf(id);
+      if (idx > -1) {
+        state.wrongQuestions.splice(idx, 1);
+      }
+    });
+  }
+
   updateDailyTaskProgress('review', 1);
   saveState();
   showToast('Tekrar oturumu tamamlandı! Yanlışlarını pekiştirdin. 🎉', 'success');
@@ -8364,12 +8382,9 @@ function checkReviewBanner() {
   const banner = document.getElementById('review-banner');
   const btn = document.getElementById('btn-start-review');
   if (banner && btn) {
-    if (state.wrongQuestions && state.wrongQuestions.length > 0) {
-      banner.style.display = 'flex';
-      btn.textContent = `Hızlı Tekrar (${state.wrongQuestions.length} Soru)`;
-    } else {
-      banner.style.display = 'none';
-    }
+    banner.style.display = 'flex';
+    const count = (state.wrongQuestions && state.wrongQuestions.length) || 0;
+    btn.textContent = `Hızlı Tekrar (${count} Soru)`;
   }
 }
 
@@ -8380,7 +8395,10 @@ function checkAndShowReviewPrompt() {
 }
 
 function startReviewMode() {
-  if (!state.wrongQuestions || state.wrongQuestions.length === 0) return;
+  if (!state.wrongQuestions || state.wrongQuestions.length === 0) {
+    showToast('Harika! Tekrar edilecek hatalı sorunuz bulunmamaktadır.', 'success');
+    return;
+  }
 
   quizSessionId++;
   isReviewMode = true;
@@ -8390,6 +8408,7 @@ function startReviewMode() {
   selectedAnswer = null;
   isAnswerChecked = false;
   matchState = null;
+  reviewSessionCorrectIds = []; // Reset correctly answered list for this session
 
   // Hata yapılan soruları veritabanından çek
   reviewQuestions = [];
@@ -8409,6 +8428,9 @@ function startReviewMode() {
 
   // Karma/Karışık test olması için soruları karıştır
   reviewQuestions.sort(() => Math.random() - 0.5);
+
+  // Sadece ilk 10 soruyu al (10'ar soruluk testler yapmak için)
+  reviewQuestions = reviewQuestions.slice(0, 10);
 
   showScreen('quiz-screen');
   renderQuestion();
@@ -8525,14 +8547,6 @@ function init() {
 
   initTheme();
   loadState();
-
-  // Tek seferlik Hızlı Tekrar sıfırlama (kullanıcı talebi üzerine)
-  if (!localStorage.getItem('amok_wrong_questions_reset_2026')) {
-    state.wrongQuestions = [];
-    saveState();
-    localStorage.setItem('amok_wrong_questions_reset_2026', 'true');
-  }
-
   initAuth();
   initEventListeners();
 
