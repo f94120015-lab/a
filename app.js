@@ -7678,7 +7678,7 @@ function initEventListeners() {
       const target = item.dataset.target;
 
       if (action === 'lesson') {
-        const lessonId = parseInt(target, 10);
+        const lessonId = isNaN(target) ? target : parseInt(target, 10);
         switchTab('lessons');
         
         setTimeout(() => {
