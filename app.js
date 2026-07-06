@@ -1943,6 +1943,27 @@ function openQuestionPreview(title, questions, parentObj = null) {
         `;
         break;
 
+      case 'vector-assembly':
+        typeLabel = "Öğe Sıralama (vector-assembly)";
+        typeClass = "qp-type-wb";
+        const vectorScrambled = q.scrambled_elements.map(w => `<span class="qp-option-item">${w}</span>`).join('');
+        const vectorCorrect = q.correct_sequence.join(' ');
+        detailsHtml = `
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Cümle:</span>
+            <span class="qp-detail-val">"${q.sentence}"</span>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Öğeler:</span>
+            <div class="qp-options-list">${vectorScrambled}</div>
+          </div>
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Doğru Sıralama:</span>
+            <span class="qp-detail-val qp-correct">"${vectorCorrect}"</span>
+          </div>
+        `;
+        break;
+
       case 'fill-blank-text':
         typeLabel = "Yazılı Boşluk Doldurma";
         typeClass = "qp-type-text";
@@ -3935,6 +3956,9 @@ function renderQuestion() {
       case 'idiom-builder':
         renderIdiomBuilder(body, question);
         break;
+      case 'vector-assembly':
+        renderVectorAssembly(body, question);
+        break;
       case 'word-bank':
         renderWordBank(body, question);
         break;
@@ -4221,6 +4245,61 @@ function renderIdiomBuilder(container, question) {
       buildZone.appendChild(wordSpan);
       
       if (currentSelection.length === question.correctSequence.length) {
+        selectedAnswer = currentSelection;
+        document.getElementById('btn-check').disabled = false;
+        
+        setTimeout(() => {
+          checkAnswer();
+        }, 300);
+      }
+    });
+    
+    tokensParent.appendChild(button);
+  });
+}
+
+// ── Vector Assembly (vector-assembly) ──────────
+function renderVectorAssembly(container, question) {
+  let currentSelection = [];
+  const tokens = [...question.scrambled_elements];
+  
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt || "Öğeleri doğru sırayla birleştirerek eylemi inşa edin:"}</p>
+    
+    <div class="vector-build-zone" id="vector-build-zone" style="min-height: 50px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 15px; background: var(--bg-secondary); margin-bottom: 20px;">
+      <span class="build-placeholder" style="color: var(--text-muted); font-size: 0.95rem;">Öğeleri sırasıyla seçerek eylemi oluşturun...</span>
+    </div>
+    
+    <div class="context-sentence" style="text-align: center; margin: 20px 0; font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">
+      ${question.sentence || question.question}
+    </div>
+    
+    <div class="tokens-flex" id="vector-tokens" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;"></div>
+  `;
+
+  const tokensParent = document.getElementById("vector-tokens");
+  const buildZone = document.getElementById("vector-build-zone");
+
+  tokens.forEach(token => {
+    const button = document.createElement("button");
+    button.className = "amok-token-btn";
+    button.innerText = token;
+    
+    button.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      if (button.classList.contains("token-used")) return;
+      
+      if (currentSelection.length === 0) buildZone.innerHTML = "";
+      
+      currentSelection.push(token);
+      button.classList.add("token-used");
+      
+      const wordSpan = document.createElement("span");
+      wordSpan.className = "selected-idiom-word animate-pop";
+      wordSpan.innerText = token;
+      buildZone.appendChild(wordSpan);
+      
+      if (currentSelection.length === question.correct_sequence.length) {
         selectedAnswer = currentSelection;
         document.getElementById('btn-check').disabled = false;
         
@@ -5884,6 +5963,11 @@ function checkAnswer() {
         selectedAnswer.length === question.correctSequence.length &&
         selectedAnswer.every((w, i) => w === question.correctSequence[i]);
       break;
+    case 'vector-assembly':
+      isCorrect = Array.isArray(selectedAnswer) &&
+        selectedAnswer.length === question.correct_sequence.length &&
+        selectedAnswer.every((w, i) => w === question.correct_sequence[i]);
+      break;
     case 'word-bank':
       isCorrect = Array.isArray(selectedAnswer) &&
         selectedAnswer.length === question.correctOrder.length &&
@@ -6086,6 +6170,8 @@ function checkAnswer() {
       correctAnswerText = question.correctOrder.join(' ');
     } else if (question.type === 'idiom-builder') {
       correctAnswerText = question.correctSequence.join(' ');
+    } else if (question.type === 'vector-assembly') {
+      correctAnswerText = question.correct_sequence.join(' ');
     } else if (question.type === 'multiple-fill-blank') {
       correctAnswerText = question.corrects.join(', ');
     } else if (question.type === 'true-false') {
