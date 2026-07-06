@@ -7134,14 +7134,14 @@ span[style*="color:#339af0"] * {
 
 .wagon-formula {
   position: absolute;
-  top: -32px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   background: #ffffff;
   color: #1f2937;
   border-radius: 6px;
-  padding: 3px 10px;
-  font-size: 0.75rem;
+  padding: 4px 12px;
+  font-size: 0.85rem;
   font-weight: 800;
   text-shadow: none;
   box-shadow: 0 2px 4px rgba(0,0,0,0.15);
