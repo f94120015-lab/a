@@ -7117,7 +7117,7 @@ span[style*="color:#339af0"] * {
 
 .wagon-box {
   width: 155px;
-  min-height: 135px;
+  min-height: 165px;
   border-radius: var(--radius-md);
   padding: 16px 12px;
   color: #fff;
@@ -7130,6 +7130,21 @@ span[style*="color:#339af0"] * {
   border: 1px solid rgba(255,255,255,0.15);
   z-index: 5;
   transition: transform var(--transition-base);
+}
+
+.wagon-formula {
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  display: inline-block;
+  line-height: 1.1;
+  text-align: center;
 }
 
 .wagon-box:hover {

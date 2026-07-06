@@ -10263,9 +10263,61 @@ function renderSimulatorContent() {
       const textStyle = isDeactivated ? "text-decoration: line-through; opacity: 0.5;" : "";
       const suffixHtml = w.suffix_tr ? `<span class="wagon-suffix" style="${textStyle}">tr: ${w.suffix_tr}</span>` : '';
       
+      // Compute grammatical formula for this wagon
+      let formula = "";
+      const roleLower = (w.role || '').toLowerCase();
+      const wordLower = (w.word || '').toLowerCase();
+      
+      if (roleLower === 'subject') {
+        formula = 'Subject';
+      } else if (roleLower === 'object') {
+        formula = 'Object';
+      } else if (roleLower === 'negation' || wordLower === 'not') {
+        formula = 'not';
+      } else if (roleLower === 'status_linker') {
+        formula = 'am/is/are';
+      } else if (roleLower === 'past_tense') {
+        formula = 'was/were';
+      } else if (roleLower === 'future_passive') {
+        formula = 'will be';
+      } else if (roleLower === 'future' || roleLower === 'future_will') {
+        formula = 'will';
+      } else if (roleLower === 'present_tense') {
+        formula = 'am/is/are';
+      } else if (roleLower === 'continuous_motor') {
+        formula = 'being';
+      } else if (roleLower === 'main_verb_ing') {
+        formula = 'V+ing';
+      } else if (roleLower === 'main_verb_v3') {
+        formula = 'V3';
+      } else if (roleLower === 'main_verb') {
+        formula = 'V1';
+      } else if (roleLower === 'perfect_bridge') {
+        formula = (wordLower === 'had') ? 'had' : 'have/has';
+      } else if (roleLower === 'perfect_passive') {
+        formula = 'been';
+      } else if (roleLower === 'perfect_inf') {
+        formula = 'to have';
+      } else if (roleLower === 'passive_inf') {
+        formula = 'to be';
+      } else if (roleLower === 'rumor_linker') {
+        formula = 'am/is/are';
+      } else if (roleLower === 'rumor_verb') {
+        formula = 'V3';
+      } else if (roleLower === 'modal_shield' || roleLower === 'modal_passive' || roleLower === 'modal_active') {
+        if (wordLower.includes('should')) formula = 'should';
+        else if (wordLower.includes('must')) formula = 'must';
+        else if (wordLower.includes('could')) formula = 'could';
+        else if (wordLower.includes('might')) formula = 'might';
+        else formula = 'modal';
+      } else {
+        formula = w.role || '';
+      }
+      
       return `
         <div class="wagon-wrapper" data-word="${w.word}">
           <div class="wagon-box ${activeClass}" style="background-color: ${w.color};" data-target="${isTarget}">
+            <span class="wagon-formula" style="${textStyle}">${formula}</span>
             <span class="wagon-word" style="${textStyle}">${w.word}</span>
             <span class="wagon-role" style="${textStyle}">${w.role.replace(/_/g, ' ')}</span>
             ${suffixHtml}
