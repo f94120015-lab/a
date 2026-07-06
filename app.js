@@ -1889,6 +1889,8 @@ function openQuestionPreview(title, questions, parentObj = null) {
 
     switch (q.type) {
       case 'multiple-choice':
+      case 'error-spotting':
+      case 'context-clue':
         typeLabel = q.isEngToTr ? "Çoktan Seçmeli (Eng -> Tr)" : "Çoktan Seçmeli (Tr -> Eng)";
         typeClass = "qp-type-mc";
         const opts = q.options.map((opt, oIdx) => {
@@ -3917,6 +3919,8 @@ function renderQuestion() {
   try {
     switch (activeType) {
       case 'multiple-choice':
+      case 'error-spotting':
+      case 'context-clue':
         renderMultipleChoice(body, question);
         break;
       case 'inversion-transformer':
@@ -5868,6 +5872,8 @@ function checkAnswer() {
 
   switch (activeType) {
     case 'multiple-choice':
+    case 'error-spotting':
+    case 'context-clue':
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
@@ -5946,6 +5952,8 @@ function checkAnswer() {
   // Apply visual styles and call feedback rendering functions
   switch (activeType) {
     case 'multiple-choice':
+    case 'error-spotting':
+    case 'context-clue':
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
@@ -6064,7 +6072,7 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'inversion-transformer' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
+    if (question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'inversion-transformer' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'swipe') {
       correctAnswerText = question.isCorrect ? 'VALID (DOĞRU)' : 'BUG (HATALI)';
@@ -7864,6 +7872,8 @@ function renderPlacementQuestion() {
 
   switch (activeType) {
     case 'multiple-choice':
+    case 'error-spotting':
+    case 'context-clue':
       renderPlacementMultipleChoice(body, question);
       break;
     case 'fill-blank-dropdown':
@@ -8003,7 +8013,7 @@ function checkPlacementAnswer() {
     : question.type;
 
   let isCorrect = false;
-  if (activeType === 'multiple-choice' || activeType === 'fill-blank-dropdown' || activeType === 'fill-blank') {
+  if (activeType === 'multiple-choice' || activeType === 'error-spotting' || activeType === 'context-clue' || activeType === 'fill-blank-dropdown' || activeType === 'fill-blank') {
     isCorrect = placementSelectedAnswer === question.correctIndex;
     if (activeType === 'fill-blank') {
       const options = body.querySelectorAll('.fb-option');
@@ -8062,7 +8072,7 @@ function checkPlacementAnswer() {
     panel.classList.remove('correct');
     icon.textContent = '✗';
     let correctText = '';
-    if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
+    if (question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
       correctText = question.options[question.correctIndex];
     } else if (question.type === 'fill-blank-text') {
       correctText = question.correct || question.correctAnswer;
@@ -8613,7 +8623,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
                                 (question.explanationKey ? explanationDictionary[question.explanationKey] : '') || 
                                 '';
 
-  const isMC = question.type === 'multiple-choice';
+  const isMC = question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue';
 
   if (isMC) {
     title = 'Çeviri Analizi';
