@@ -40,7 +40,8 @@ let state = {
   ],
   lastPromptedWrongCount: 0,
   totalQuestionsAnswered: 0,
-  lastPromptedQuestionCount: 0
+  lastPromptedQuestionCount: 0,
+  activeDomain: 'history'
 };
 
 // Quiz ve diğer durumlar
@@ -1748,6 +1749,9 @@ function loadState() {
       console.error('State yükleme hatası, varsayılan state kullanılacak:', e);
       localStorage.removeItem(STATE_KEY);
     }
+  }
+  if (!state.activeDomain) {
+    state.activeDomain = 'history';
   }
   // Initialize daily tasks if missing or empty
   if (!state.dailyTasks || !state.dailyTasks.tasks || state.dailyTasks.tasks.length === 0) {
@@ -6592,6 +6596,8 @@ function switchTab(tabId) {
     renderStore();
   } else if (tabId === 'profile') {
     renderProfile();
+  } else if (tabId === 'simulator') {
+    renderSimulator();
   }
 }
 
@@ -8753,6 +8759,7 @@ function init() {
   initSocialSystem();
   enterApp();
   initNotifications();
+  initSimulator();
 }
 
 function showGrammarExplanationModal(question, selectedAnswer) {
@@ -9092,6 +9099,956 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     </div>
     ` : ''}
   `;
+}
+
+// ============================================================
+// VAGON SİMÜLATÖRÜ (THE TRAIN MECHANIC) DATA & CONTROLLER
+// ============================================================
+let selectedLevel = 1;
+let activeMissionId = "mission_1";
+let completedMissions = [];
+let deactivatedWagons = [];
+let selectedMissionOption = null;
+let showMissionQuestion = false;
+
+const simulatorData = {
+  "levels": [
+    {
+      "level": 1,
+      "title": "Durum Kilitlenmesi (Sıfır Eylem)",
+      "english_sentence": "This is the tablet.",
+      "wagon_chain": [
+        { "word": "This", "role": "subject", "color": "#1f2937" },
+        { "word": "is", "role": "status_linker", "color": "#3b82f6", "suffix_tr": "-dir/-dır" },
+        { "word": "the tablet.", "role": "object", "color": "#1f2937" }
+      ],
+      "turkish_reflex": "Bu tablettir.",
+      "turkish_reflex_colored": "Bu tablet<span style=\"color:#3b82f6; font-weight:800;\">tir</span>.",
+      "mechanic_note": "Yardımcı eylem (copula) kullanımıyla kurulan durum bildiren (stative) ve eylemsiz cümle yapısıdır. Özne ile nesne arasındaki statik ilişkiyi tanımlar."
+    },
+    {
+      "level": 2,
+      "title": "Simple Past Passive (2 Vagon)",
+      "english_sentence": "Ancient tablets were read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "were", "role": "past_tense", "color": "#3b82f6", "suffix_tr": "-di/-dı" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okundu.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#3b82f6; font-weight:800;\">du</span>.",
+      "mechanic_note": "Geçmiş zaman edilgen (Past Simple Passive) yapısıdır. Geçmişte tamamlenmiş ve etkisini yitirmiş edilgen bir eylemi ifade etmek için kullanılır."
+    },
+    {
+      "level": 3,
+      "title": "Simple Future Passive (2 Vagon)",
+      "english_sentence": "Ancient tablets will be read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "will be", "role": "future_passive", "color": "#3b82f6", "suffix_tr": "-acak/-ecek" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okunacak.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#3b82f6; font-weight:800;\">acak</span>.",
+      "mechanic_note": "Gelecek zaman edilgen (Future Simple Passive) yapısıdır. Gelecekte gerçekleşecek olan edilgen bir eylemi ve özne üzerindeki etkisini bildirir."
+    },
+    {
+      "level": 4,
+      "title": "Present Continuous Passive (3 Vagon)",
+      "english_sentence": "Ancient tablets are being read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "are", "role": "present_tense", "color": "#3b82f6", "suffix_tr": "-dir" },
+        { "word": "being", "role": "continuous_motor", "color": "#10b981", "suffix_tr": "-makta/-mekte" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okunmaktadır.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">dır</span>.",
+      "mechanic_note": "Şimdiki zaman süreç edilgeni (Present Continuous Passive) yapısıdır. Yardımcı fiil (are), süreç belirteci (being) ve fiilin 3. hali (V3) kullanılarak, eylemin konuşma anında devam ettiğini gösterir."
+    },
+    {
+      "level": 5,
+      "title": "Past Continuous Passive (3 Vagon)",
+      "english_sentence": "Ancient tablets were being read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "were", "role": "past_tense", "color": "#3b82f6", "suffix_tr": "-di/-aydı" },
+        { "word": "being", "role": "continuous_motor", "color": "#10b981", "suffix_tr": "-makta" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okunmaktaydı.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">ydı</span>.",
+      "mechanic_note": "Geçmiş zaman süreç edilgeni (Past Continuous Passive) yapısıdır. Geçmişte belirli bir zaman aralığında kesintisiz devam etmiş olan edilgen bir süreci ifade eder."
+    },
+    {
+      "level": 6,
+      "title": "Present Perfect Passive (3 Vagon)",
+      "english_sentence": "Ancient tablets have been read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "have", "role": "perfect_bridge", "color": "#3b82f6", "suffix_tr": "çoktan" },
+        { "word": "been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-di" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler çoktan okundu.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#3b82f6; font-weight:800;\">çoktan</span> <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">du</span>.",
+      "mechanic_note": "Yakın geçmiş zaman edilgen (Present Perfect Passive) yapısıdır. Eylemin geçmişte tamamlandığını ancak etkisinin referans anında (şimdiki zamanda) sürdüğünü ifade eder."
+    },
+    {
+      "level": 7,
+      "title": "Past Perfect Passive (3 Vagon)",
+      "english_sentence": "Ancient tablets had been read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "had", "role": "perfect_bridge", "color": "#3b82f6", "suffix_tr": "zaten" },
+        { "word": "been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-mişti" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler zaten okunmuştu.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#3b82f6; font-weight:800;\">zaten</span> <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">muştu</span>.",
+      "mechanic_note": "Öncelik-sonralık ilişkisi kuran geçmiş zaman edilgen (Past Perfect Passive) yapısıdır. Geçmişteki başka bir eylem veya referans noktasından daha önce tamamlenmiş olan edilgen eylemleri tanımlar."
+    },
+    {
+      "level": 8,
+      "title": "Future Perfect Passive (4 Vagon)",
+      "english_sentence": "Ancient tablets will have been read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "will", "role": "future_locomotive", "color": "#3b82f6", "suffix_tr": "olacak" },
+        { "word": "have been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-miş" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okunmuş olacak.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">muş</span> <span style=\"color:#3b82f6; font-weight:800;\">olacak</span>.",
+      "mechanic_note": "Gelecekte tamamlanmışlık edilgen (Future Perfect Passive) yapısıdır. Gelecekte belirlenen bir zaman sınırından önce tamamlenmiş olacak edilgen durumları projeksiyon olarak sunar."
+    },
+    {
+      "level": 9,
+      "title": "Future Perfect Continuous Passive (5 Vagon - Saf Zaman Tavanı)",
+      "english_sentence": "Ancient tablets will have been being read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "will", "role": "future", "color": "#3b82f6", "suffix_tr": "-acak" },
+        { "word": "have", "role": "perfect", "color": "#3b82f6", "suffix_tr": "olmuş" },
+        { "word": "been", "role": "stabilizer", "color": "#ec4899", "suffix_tr": "ol-" },
+        { "word": "being", "role": "continuous", "color": "#10b981", "suffix_tr": "-makta" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletler okunmakta olmuş olacak.",
+      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
+      "mechanic_note": "Gelecekte süregelen bitmişlik edilgen (Future Perfect Continuous Passive) yapısıdır. Gelecekte belirli bir ana kadar sürecek olan edilgen eylem akışını ifade eden en karmaşık morfolojik dizilimlerden biridir."
+    },
+    {
+      "level": 10,
+      "title": "Olasılık Kalkanı (6 Vagon)",
+      "english_sentence": "Ancient tablets are likely to have been read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "are likely", "role": "probability_shield", "color": "#ec4899", "suffix_tr": "muhtemeldir" },
+        { "word": "to have been", "role": "past_shift", "color": "#10b981", "suffix_tr": "-miş olması" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletlerin okunmuş olması muhtemeldir.",
+      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">muş olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
+      "mechanic_note": "Sıfat ve infinitive (adjective + perfect passive infinitive) birleşimidir. 'be likely to + have been V3' kalıbı, geçmişteki edilgen eyleme yönelik güçlü bir olasılık bildirir."
+    },
+    {
+      "level": 11,
+      "title": "Söylenti Kalkanı (7 Vagon)",
+      "english_sentence": "Ancient tablets are rumored to have been being read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "are rumored", "role": "rumor_shield", "color": "#ec4899", "suffix_tr": "söyleniyor" },
+        { "word": "to have been being", "role": "past_continuous_motor", "color": "#10b981", "suffix_tr": "-makta olduğu" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletlerin okunmakta olduğu söyleniyor.",
+      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
+      "mechanic_note": "Kişisiz edilgen (Impersonal Passive) ve perfect continuous passive infinitive kalıbıdır. 'be rumored to have been being V3' yapısı, eylemin hem başkaları tarafından iddia edildiğini hem de geçmişte bir süreç olarak sürdüğünü ifade eder."
+    },
+    {
+      "level": 12,
+      "title": "Çift Zaman Kayması (8 Vagon - Titan Sınırı)",
+      "english_sentence": "Ancient tablets could have been expected to have been read.",
+      "wagon_chain": [
+        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
+        { "word": "could have been", "role": "past_possibility", "color": "#3b82f6", "suffix_tr": "mümkündü" },
+        { "word": "expected", "role": "expectation_shield", "color": "#ec4899", "suffix_tr": "beklenmiş olabilmesi" },
+        { "word": "to have been", "role": "deep_past", "color": "#10b981", "suffix_tr": "-miş olmasının" },
+        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
+      ],
+      "turkish_reflex": "Antik tabletlerin okunmuş olmasının beklenmiş olabilmesi mümkündü.",
+      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">muş olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
+      "mechanic_note": "Kazanılmış/varsayımsal geçmiş zaman modal edilgen yapısıdır (double perfect shift). Geçmişte gerçekleşmeyen bir beklentinin edilgenliğini, 'could have been expected' ve 'to have been V3' yapılarının ardışık dizilimiyle kurar."
+    }
+  ]
+};
+
+const domainData = {
+  "history": {
+    1: {
+      "english_sentence": "This is the tablet.",
+      "turkish_reflex": "Bu tablettir.",
+      "turkish_reflex_colored": "Bu tablet<span style=\"color:#3b82f6; font-weight:800;\">tir</span>.",
+      "wagon_words": ["This", "is", "the tablet."],
+      "verb_suffixes": [null, "-tir", null]
+    },
+    2: {
+      "english_sentence": "Ancient clay tablets were read.",
+      "turkish_reflex": "Antik kil tabletler okundu.",
+      "turkish_reflex_colored": "Antik kil tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#3b82f6; font-weight:800;\">du</span>.",
+      "wagon_words": ["Ancient clay tablets", "were", "read."],
+      "verb_suffixes": [null, "-di", "oku-n-"]
+    },
+    3: {
+      "english_sentence": "Historic archive collections will be preserved.",
+      "turkish_reflex": "Tarihi arşiv koleksiyonları korunacak.",
+      "turkish_reflex_colored": "Tarihi arşiv koleksiyonları <span style=\"color:#f59e0b; font-weight:800;\">korun</span><span style=\"color:#3b82f6; font-weight:800;\">acak</span>.",
+      "wagon_words": ["Historic archive collections", "will be", "preserved."],
+      "verb_suffixes": [null, "-acak", "koru-n-"]
+    },
+    4: {
+      "english_sentence": "Historic archive collections are being preserved.",
+      "turkish_reflex": "Tarihi arşiv koleksiyonları korunmaktadır.",
+      "turkish_reflex_colored": "Tarihi arşiv koleksiyonları <span style=\"color:#f59e0b; font-weight:800;\">korun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">dır</span>.",
+      "wagon_words": ["Historic archive collections", "are", "being", "preserved."],
+      "verb_suffixes": [null, "-dır", "-makta", "koru-n-"]
+    },
+    5: {
+      "english_sentence": "Historic archive collections were being preserved.",
+      "turkish_reflex": "Tarihi arşiv koleksiyonları korunmaktaydı.",
+      "turkish_reflex_colored": "Tarihi arşiv koleksiyonları <span style=\"color:#f59e0b; font-weight:800;\">korun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">ydı</span>.",
+      "wagon_words": ["Historic archive collections", "were", "being", "preserved."],
+      "verb_suffixes": [null, "-di", "-makta", "koru-n-"]
+    },
+    6: {
+      "english_sentence": "Ancient royal tombs have been excavated.",
+      "turkish_reflex": "Antik kraliyet mezarları çoktan kazıldı.",
+      "turkish_reflex_colored": "Antik kraliyet mezarları <span style=\"color:#3b82f6; font-weight:800;\">çoktan</span> <span style=\"color:#f59e0b; font-weight:800;\">kazıl</span><span style=\"color:#ec4899; font-weight:800;\">di</span>.",
+      "wagon_words": ["Ancient royal tombs", "have", "been", "excavated."],
+      "verb_suffixes": [null, "çoktan", "-di", "kazıl-"]
+    },
+    7: {
+      "english_sentence": "Ancient royal tombs had been excavated.",
+      "turkish_reflex": "Antik kraliyet mezarları zaten kazılmıştı.",
+      "turkish_reflex_colored": "Antik kraliyet mezarları <span style=\"color:#3b82f6; font-weight:800;\">zaten</span> <span style=\"color:#f59e0b; font-weight:800;\">kazıl</span><span style=\"color:#ec4899; font-weight:800;\">mıştı</span>.",
+      "wagon_words": ["Ancient royal tombs", "had", "been", "excavated."],
+      "verb_suffixes": [null, "zaten", "-mişti", "kazıl-"]
+    },
+    8: {
+      "english_sentence": "Medieval parchment papers will have been restored.",
+      "turkish_reflex": "Orta çağ parşömen kağıtları restore edilmiş olacak.",
+      "turkish_reflex_colored": "Orta çağ parşömen kağıtları <span style=\"color:#f59e0b; font-weight:800;\">restore edil</span><span style=\"color:#ec4899; font-weight:800;\">miş</span> <span style=\"color:#3b82f6; font-weight:800;\">olacak</span>.",
+      "wagon_words": ["Medieval parchment papers", "will", "have been", "restored."],
+      "verb_suffixes": [null, "olacak", "-miş", "restore edil-"]
+    },
+    9: {
+      "english_sentence": "Medieval parchment papers will have been being restored.",
+      "turkish_reflex": "Orta çağ parşömen kağıtları restore edilmekte olmuş olacak.",
+      "turkish_reflex_colored": "Orta çağ parşömen kağıtları <span style=\"color:#f59e0b; font-weight:800;\">restore edil</span><span style=\"color:#10b981; font-weight:800;\">mekte</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
+      "wagon_words": ["Medieval parchment papers", "will", "have", "been", "being", "restored."],
+      "verb_suffixes": [null, "-acak", "olmuş", "ol-", "-makta", "restore edil-"]
+    },
+    10: {
+      "english_sentence": "Ancient clay tablets are likely to have been interpreted.",
+      "turkish_reflex": "Antik kil tabletlerin yorumlanmış olması muhtemeldir.",
+      "turkish_reflex_colored": "Antik kil tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">yorumlan</span><span style=\"color:#10b981; font-weight:800;\">mış olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
+      "wagon_words": ["Ancient clay tablets", "are likely", "to have been", "interpreted."],
+      "verb_suffixes": [null, "muhtemeldir", "-mış olması", "yorumlan-"]
+    },
+    11: {
+      "english_sentence": "Royal treasury gold assets are rumored to have been being looted.",
+      "turkish_reflex": "İmparatorluk hazinesi altın varlıklarının yağmalanmakta olduğu söyleniyor.",
+      "turkish_reflex_colored": "İmparatorluk hazinesi altın varlıklarının <span style=\"color:#f59e0b; font-weight:800;\">yağmalan</span><span style=\"color:#10b981; font-weight:800;\">makta olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
+      "wagon_words": ["Royal treasury gold assets", "are rumored", "to have been being", "looted."],
+      "verb_suffixes": [null, "söyleniyor", "-makta olduğu", "yağmalan-"]
+    },
+    12: {
+      "english_sentence": "Historic stone structures could have been expected to have been cataloged.",
+      "turkish_reflex": "Tarihi taş yapıların kataloglanmış olmasının beklenmiş olabilmesi mümkündü.",
+      "turkish_reflex_colored": "Tarihi taş yapıların <span style=\"color:#f59e0b; font-weight:800;\">kataloglan</span><span style=\"color:#10b981; font-weight:800;\">mış olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
+      "wagon_words": ["Historic stone structures", "could have been", "expected", "to have been", "cataloged."],
+      "verb_suffixes": [null, "mümkündü", "beklenmiş olabilmesi", "-miş olmasının", "kataloglan-"]
+    }
+  },
+  "cinema": {
+    1: {
+      "english_sentence": "This is the script.",
+      "turkish_reflex": "Bu senaryodur.",
+      "turkish_reflex_colored": "Bu senaryo<span style=\"color:#3b82f6; font-weight:800;\">dur</span>.",
+      "wagon_words": ["This", "is", "the script."],
+      "verb_suffixes": [null, "-dur", null]
+    },
+    2: {
+      "english_sentence": "Silent film reels were screened.",
+      "turkish_reflex": "Sessiz film makaraları gösterildi.",
+      "turkish_reflex_colored": "Sessiz film makaraları <span style=\"color:#f59e0b; font-weight:800;\">gösteril</span><span style=\"color:#3b82f6; font-weight:800;\">di</span>.",
+      "wagon_words": ["Silent film reels", "were", "screened."],
+      "verb_suffixes": [null, "-di", "gösteril-"]
+    },
+    3: {
+      "english_sentence": "Avant-garde masterpieces will be censored.",
+      "turkish_reflex": "Avangart şaheserler sansürlenecek.",
+      "turkish_reflex_colored": "Avangart şaheserler <span style=\"color:#f59e0b; font-weight:800;\">sansürlen</span><span style=\"color:#3b82f6; font-weight:800;\">ecek</span>.",
+      "wagon_words": ["Avant-garde masterpieces", "will be", "censored."],
+      "verb_suffixes": [null, "-ecek", "sansürlen-"]
+    },
+    4: {
+      "english_sentence": "Avant-garde masterpieces are being censored.",
+      "turkish_reflex": "Avangart şaheserler sansürlenmektedir.",
+      "turkish_reflex_colored": "Avangart şaheserler <span style=\"color:#f59e0b; font-weight:800;\">sansürlen</span><span style=\"color:#10b981; font-weight:800;\">mekte</span><span style=\"color:#3b82f6; font-weight:800;\">dir</span>.",
+      "wagon_words": ["Avant-garde masterpieces", "are", "being", "censored."],
+      "verb_suffixes": [null, "-dir", "-mekte", "sansürlen-"]
+    },
+    5: {
+      "english_sentence": "Avant-garde masterpieces were being censored.",
+      "turkish_reflex": "Avangart şaheserler sansürlenmekteydi.",
+      "turkish_reflex_colored": "Avangart şaheserler <span style=\"color:#f59e0b; font-weight:800;\">sansürlen</span><span style=\"color:#10b981; font-weight:800;\">mekte</span><span style=\"color:#3b82f6; font-weight:800;\">ydi</span>.",
+      "wagon_words": ["Avant-garde masterpieces", "were", "being", "censored."],
+      "verb_suffixes": [null, "-di", "-mekte", "sansürlen-"]
+    },
+    6: {
+      "english_sentence": "Independent movie scenes have been cut.",
+      "turkish_reflex": "Bağımsız film sahneleri çoktan kesildi.",
+      "turkish_reflex_colored": "Bağımsız film sahneleri <span style=\"color:#3b82f6; font-weight:800;\">çoktan</span> <span style=\"color:#f59e0b; font-weight:800;\">kesil</span><span style=\"color:#ec4899; font-weight:800;\">di</span>.",
+      "wagon_words": ["Independent movie scenes", "have", "been", "cut."],
+      "verb_suffixes": [null, "çoktan", "-di", "kesil-"]
+    },
+    7: {
+      "english_sentence": "Independent movie scenes had been cut.",
+      "turkish_reflex": "Bağımsız film sahneleri zaten kesilmişti.",
+      "turkish_reflex_colored": "Bağımsız film sahneleri <span style=\"color:#3b82f6; font-weight:800;\">zaten</span> <span style=\"color:#f59e0b; font-weight:800;\">kesil</span><span style=\"color:#ec4899; font-weight:800;\">mişti</span>.",
+      "wagon_words": ["Independent movie scenes", "had", "been", "cut."],
+      "verb_suffixes": [null, "zaten", "-mişti", "kesil-"]
+    },
+    8: {
+      "english_sentence": "Underground cinema archives will have been digitized.",
+      "turkish_reflex": "Yeraltı sinema arşivleri dijitalleştirilmiş olacak.",
+      "turkish_reflex_colored": "Yeraltı sinema arşivleri <span style=\"color:#f59e0b; font-weight:800;\">dijitalleştiril</span><span style=\"color:#ec4899; font-weight:800;\">miş</span> <span style=\"color:#3b82f6; font-weight:800;\">olacak</span>.",
+      "wagon_words": ["Underground cinema archives", "will", "have been", "digitized."],
+      "verb_suffixes": [null, "olacak", "-miş", "dijitalleştiril-"]
+    },
+    9: {
+      "english_sentence": "Underground cinema archives will have been being digitized.",
+      "turkish_reflex": "Yeraltı sinema arşivleri dijitalleştirilmekte olmuş olacak.",
+      "turkish_reflex_colored": "Yeraltı sinema arşivleri <span style=\"color:#f59e0b; font-weight:800;\">dijitalleştiril</span><span style=\"color:#10b981; font-weight:800;\">mekte</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
+      "wagon_words": ["Underground cinema archives", "will", "have", "been", "being", "digitized."],
+      "verb_suffixes": [null, "-acak", "olmuş", "ol-", "-makta", "dijitalleştiril-"]
+    },
+    10: {
+      "english_sentence": "Classic film reels are likely to have been restored.",
+      "turkish_reflex": "Klasik film makaralarının restore edilmiş olması muhtemeldir.",
+      "turkish_reflex_colored": "Klasik film makaralarının <span style=\"color:#f59e0b; font-weight:800;\">restore edil</span><span style=\"color:#10b981; font-weight:800;\">miş olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
+      "wagon_words": ["Classic film reels", "are likely", "to have been", "restored."],
+      "verb_suffixes": [null, "muhtemeldir", "-mış olması", "restore edil-"]
+    },
+    11: {
+      "english_sentence": "Censored movie scenes are rumored to have been being re-edited.",
+      "turkish_reflex": "Sansürlü film sahnelerinin yeniden kurgulanmakta olduğu söyleniyor.",
+      "turkish_reflex_colored": "Sansürlü film sahnelerinin <span style=\"color:#f59e0b; font-weight:800;\">yeniden kurgulan</span><span style=\"color:#10b981; font-weight:800;\">makta olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
+      "wagon_words": ["Censored movie scenes", "are rumored", "to have been being", "re-edited."],
+      "verb_suffixes": [null, "söyleniyor", "-makta olduğu", "yeniden kurgulan-"]
+    },
+    12: {
+      "english_sentence": "Experimental documentary movies could have been expected to have been banned.",
+      "turkish_reflex": "Deneysel belgesel filmlerinin yasaklanmış olmasının beklenmiş olabilmesi mümkündü.",
+      "turkish_reflex_colored": "Deneysel belgesel filmlerinin <span style=\"color:#f59e0b; font-weight:800;\">yasaklan</span><span style=\"color:#10b981; font-weight:800;\">miş olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
+      "wagon_words": ["Experimental documentary movies", "could have been", "expected", "to have been", "banned."],
+      "verb_suffixes": [null, "mümkündü", "beklenmiş olabilmesi", "-miş olmasının", "yasaklan-"]
+    }
+  },
+  "economy": {
+    1: {
+      "english_sentence": "This is the index.",
+      "turkish_reflex": "Bu endekstir.",
+      "turkish_reflex_colored": "Bu endeks<span style=\"color:#3b82f6; font-weight:800;\">tir</span>.",
+      "wagon_words": ["This", "is", "the index."],
+      "verb_suffixes": [null, "-tir", null]
+    },
+    2: {
+      "english_sentence": "Market liquidity indexes were adjusted.",
+      "turkish_reflex": "Piyasa likidite endeksleri ayarlandı.",
+      "turkish_reflex_colored": "Piyasa likidite endeksleri <span style=\"color:#f59e0b; font-weight:800;\">ayarlan</span><span style=\"color:#3b82f6; font-weight:800;\">dı</span>.",
+      "wagon_words": ["Market liquidity indexes", "were", "adjusted."],
+      "verb_suffixes": [null, "-dı", "ayarlan-"]
+    },
+    3: {
+      "english_sentence": "Foreign exchange reserves will be monitored.",
+      "turkish_reflex": "Döviz rezervleri izlenecek.",
+      "turkish_reflex_colored": "Döviz rezervleri <span style=\"color:#f59e0b; font-weight:800;\">izlen</span><span style=\"color:#3b82f6; font-weight:800;\">ecek</span>.",
+      "wagon_words": ["Foreign exchange reserves", "will be", "monitored."],
+      "verb_suffixes": [null, "-ecek", "izlen-"]
+    },
+    4: {
+      "english_sentence": "Foreign exchange reserves are being monitored.",
+      "turkish_reflex": "Döviz rezervleri izlenmektedir.",
+      "turkish_reflex_colored": "Döviz rezervleri <span style=\"color:#f59e0b; font-weight:800;\">izlen</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">dır</span>.",
+      "wagon_words": ["Foreign exchange reserves", "are", "being", "monitored."],
+      "verb_suffixes": [null, "-dır", "-makta", "izlen-"]
+    },
+    5: {
+      "english_sentence": "Foreign exchange reserves were being monitored.",
+      "turkish_reflex": "Döviz rezervleri izlenmekteydi.",
+      "turkish_reflex_colored": "Döviz rezervleri <span style=\"color:#f59e0b; font-weight:800;\">izlen</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">ydı</span>.",
+      "wagon_words": ["Foreign exchange reserves", "were", "being", "monitored."],
+      "verb_suffixes": [null, "-di", "-makta", "izlen-"]
+    },
+    6: {
+      "english_sentence": "Central bank interest rates have been cut.",
+      "turkish_reflex": "Merkez bankası faiz oranları çoktan düşürüldü.",
+      "turkish_reflex_colored": "Merkez bankası faiz oranları <span style=\"color:#3b82f6; font-weight:800;\">çoktan</span> <span style=\"color:#f59e0b; font-weight:800;\">düşürül</span><span style=\"color:#ec4899; font-weight:800;\">dü</span>.",
+      "wagon_words": ["Central bank interest rates", "have", "been", "cut."],
+      "verb_suffixes": [null, "çoktan", "-di", "düşürül-"]
+    },
+    7: {
+      "english_sentence": "Central bank interest rates had been cut.",
+      "turkish_reflex": "Merkez bankası faiz oranları zaten düşürülmüştür.",
+      "turkish_reflex_colored": "Merkez bankası faiz oranları <span style=\"color:#3b82f6; font-weight:800;\">zaten</span> <span style=\"color:#f59e0b; font-weight:800;\">düşürül</span><span style=\"color:#ec4899; font-weight:800;\">müştü</span>.",
+      "wagon_words": ["Central bank interest rates", "had", "been", "cut."],
+      "verb_suffixes": [null, "zaten", "-müştü", "düşürül-"]
+    },
+    8: {
+      "english_sentence": "Market liquidity indexes will have been manipulated.",
+      "turkish_reflex": "Piyasa likidite endeksleri manipüle edilmiş olacak.",
+      "turkish_reflex_colored": "Piyasa likidite endeksleri <span style=\"color:#f59e0b; font-weight:800;\">manipüle edil</span><span style=\"color:#ec4899; font-weight:800;\">miş</span> <span style=\"color:#3b82f6; font-weight:800;\">olacak</span>.",
+      "wagon_words": ["Market liquidity indexes", "will", "have been", "manipulated."],
+      "verb_suffixes": [null, "olacak", "-miş", "manipüle edil-"]
+    },
+    9: {
+      "english_sentence": "Market liquidity indexes will have been being manipulated.",
+      "turkish_reflex": "Piyasa likidite endeksleri manipüle edilmekte olmuş olacak.",
+      "turkish_reflex_colored": "Piyasa likidite endeksleri <span style=\"color:#f59e0b; font-weight:800;\">manipüle edil</span><span style=\"color:#10b981; font-weight:800;\">mekte</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
+      "wagon_words": ["Market liquidity indexes", "will", "have", "been", "being", "manipulated."],
+      "verb_suffixes": [null, "-acak", "olmuş", "ol-", "-makta", "manipüle edil-"]
+    },
+    10: {
+      "english_sentence": "Inflation statistics are likely to have been adjusted.",
+      "turkish_reflex": "Enflasyon istatistiklerinin ayarlanmış olması muhtemeldir.",
+      "turkish_reflex_colored": "Enflasyon istatistiklerinin <span style=\"color:#f59e0b; font-weight:800;\">ayarlan</span><span style=\"color:#10b981; font-weight:800;\">mış olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
+      "wagon_words": ["Inflation statistics", "are likely", "to have been", "adjusted."],
+      "verb_suffixes": [null, "muhtemeldir", "-mış olması", "ayarlan-"]
+    },
+    11: {
+      "english_sentence": "Market liquidity indexes are rumored to have been being manipulated.",
+      "turkish_reflex": "Piyasa likidite endekslerinin manipüle edilmekte olduğu söyleniyor.",
+      "turkish_reflex_colored": "Piyasa likidite endekslerinin <span style=\"color:#f59e0b; font-weight:800;\">manipüle edil</span><span style=\"color:#10b981; font-weight:800;\">makta olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
+      "wagon_words": ["Market liquidity indexes", "are rumored", "to have been being", "manipulated."],
+      "verb_suffixes": [null, "söyleniyor", "-makta olduğu", "manipüle edil-"]
+    },
+    12: {
+      "english_sentence": "Foreign trade deficits could have been expected to have been balanced.",
+      "turkish_reflex": "Dış ticaret açıklarının dengelenmiş olmasının beklenmiş olabilmesi mümkündü.",
+      "turkish_reflex_colored": "Dış ticaret açıklarının <span style=\"color:#f59e0b; font-weight:800;\">dengelen</span><span style=\"color:#10b981; font-weight:800;\">miş olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
+      "wagon_words": ["Foreign trade deficits", "could have been", "expected", "to have been", "balanced."],
+      "verb_suffixes": [null, "mümkündü", "beklenmiş olabilmesi", "-miş olmasının", "dengelen-"]
+    }
+  },
+  "sociology": {
+    1: {
+      "english_sentence": "This is the class.",
+      "turkish_reflex": "Bu sınıftır.",
+      "turkish_reflex_colored": "Bu sınıf<span style=\"color:#3b82f6; font-weight:800;\">tır</span>.",
+      "wagon_words": ["This", "is", "the class."],
+      "verb_suffixes": [null, "-tır", null]
+    },
+    2: {
+    },
+    3: {
+      "english_sentence": "Subcultural communities are marginalized.",
+      "turkish_reflex": "Alt kültür toplulukları marjinalleştirilir.",
+      "turkish_reflex_colored": "Alt kültür toplulukları <span style=\"color:#f59e0b; font-weight:800;\">marjinalleştiril</span><span style=\"color:#3b82f6; font-weight:800;\">ir</span>.",
+      "wagon_words": ["Subcultural communities", "are", "marginalized."],
+      "verb_suffixes": [null, "-ir", "marjinalleştiril-"]
+    },
+    4: {
+      "english_sentence": "Subcultural communities are being marginalized.",
+      "turkish_reflex": "Alt kültür toplulukları marjinalleştirilmektedir.",
+      "turkish_reflex_colored": "Alt kültür toplulukları <span style=\"color:#f59e0b; font-weight:800;\">marjinalleştiril</span><span style=\"color:#10b981; font-weight:800;\">mekte</span><span style=\"color:#3b82f6; font-weight:800;\">dir</span>.",
+      "wagon_words": ["Subcultural communities", "are", "being", "marginalized."],
+      "verb_suffixes": [null, "-dir", "-mekte", "marjinalleştiril-"]
+    },
+    5: {
+      "english_sentence": "Minority group cultures have been assimilated.",
+      "turkish_reflex": "Azınlık grubu kültürleri asimile edilmiştir.",
+      "turkish_reflex_colored": "Azınlık grubu kültürleri <span style=\"color:#f59e0b; font-weight:800;\">asimile edil</span><span style=\"color:#ec4899; font-weight:800;\">miş</span><span style=\"color:#3b82f6; font-weight:800;\">tir</span>.",
+      "wagon_words": ["Minority group cultures", "have", "been", "assimilated."],
+      "verb_suffixes": [null, "-tir", "-miş", "asimile edil-"]
+    },
+    6: {
+      "english_sentence": "Nomadic tribe cultures have been being assimilated.",
+      "turkish_reflex": "Göçebe topluluk kültürleri asimile edilmekte olmuştur.",
+      "turkish_reflex_colored": "Göçebe topluluk kültürleri <span style=\"color:#f59e0b; font-weight:800;\">asimile edil</span><span style=\"color:#10b981; font-weight:800;\">mekte</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muştur</span>.",
+      "wagon_words": ["Nomadic tribe cultures", "have", "been", "being", "assimilated."],
+      "verb_suffixes": [null, "-muştur", "ol-", "-makta", "asimile edil-"]
+    },
+    7: {
+      "english_sentence": "Nomadic tribe cultures will have been being assimilated.",
+      "turkish_reflex": "Göçebe topluluk kültürleri asimile edilmekte olmuş olacak.",
+      "turkish_reflex_colored": "Göçebe topluluk kültürleri <span style=\"color:#f59e0b; font-weight:800;\">asimile edil</span><span style=\"color:#10b981; font-weight:800;\">mekte</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
+      "wagon_words": ["Nomadic tribe cultures", "will", "have", "been", "being", "assimilated."],
+      "verb_suffixes": [null, "-acak", "olmuş", "ol-", "-makta", "asimile edil-"]
+    },
+    8: {
+      "english_sentence": "Class status hierarchies are likely to have been structured.",
+      "turkish_reflex": "Sınıf statü hiyerarşilerinin yapılandırılmış olması muhtemeldir.",
+      "turkish_reflex_colored": "Sınıf statü hiyerarşilerinin <span style=\"color:#f59e0b; font-weight:800;\">yapılandırıl</span><span style=\"color:#10b981; font-weight:800;\">mış olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
+      "wagon_words": ["Class status hierarchies", "are likely", "to have been", "structured."],
+      "verb_suffixes": [null, "muhtemeldir", "-mış olması", "yapılandırıl-"]
+    },
+    9: {
+      "english_sentence": "Deviant social behaviors are rumored to have been being normalized.",
+      "turkish_reflex": "Sapan sosyal davranışların normalleştirilmekte olduğu söyleniyor.",
+      "turkish_reflex_colored": "Sapan sosyal davranışların <span style=\"color:#f59e0b; font-weight:800;\">normalleştiril</span><span style=\"color:#10b981; font-weight:800;\">mekte olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
+      "wagon_words": ["Deviant social behaviors", "are rumored", "to have been being", "normalized."],
+      "verb_suffixes": [null, "söyleniyor", "-makta olduğu", "normalleştiril-"]
+    },
+    10: {
+      "english_sentence": "Traditional family structures could have been expected to have been transformed.",
+      "turkish_reflex": "Geleneksel aile yapılarının dönüştürülmüş olmasının beklenmiş olabilmesi mümkündü.",
+      "turkish_reflex_colored": "Geleneksel aile yapılarının <span style=\"color:#f59e0b; font-weight:800;\">dönüştürül</span><span style=\"color:#10b981; font-weight:800;\">müş olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
+      "wagon_words": ["Traditional family structures", "could have been", "expected", "to have been", "transformed."],
+      "verb_suffixes": [null, "mümkündü", "beklenmiş olabilmesi", "-miş olmasının", "dönüştürül-"]
+    }
+  }
+};
+
+const labMissions = [
+  {
+    "id": "mission_1",
+    "level_target": 7,
+    "task_title": "Görev 1: Süreç Motorunu Sabote Et!",
+    "instructions": "Level 7 trenini aktif edin. Ardından ekrandaki yeşil kodlu [being] vagonunu sanal makasla kesin (devre dışı bırakın).",
+    "validation_trigger": "being_inactive",
+    "target_word": "being",
+    "question": "Yeşil [being] vagonu trenden söküldüğünde, Türkçe ek fabrikasındaki hangi hayati ek imha oldu ve yeni cümle neye dönüştü?",
+    "options": [
+      "'-makta' (süreç) eki imha oldu; cümle 'Metinler okunmuş olacak' anlık edilgenliğine düştü.",
+      "'-acak' (gelecek zaman) eki imha oldu; cümle geçmiş zamana kaydı.",
+      "Edilgenlik tamamen çöktü; cümle aktif bir emir kipine evrildi."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mission_2",
+    "level_target": 9,
+    "task_title": "Görev 2: Kurumsal Koruma Kalkanını Kaldır!",
+    "instructions": "Level 9 trenini aktif edin. Yazarın sorumluluktan kaçmasını sağlayan pembe [rumored] vagonunu devre dışı bırakın.",
+    "validation_trigger": "rumored_inactive",
+    "target_word": "are rumored",
+    "question": "Pembe [rumored] kalkanı söküldüğünde, Türkçe çevirinin sonundaki hangi 'sabit tuğla' düşer?",
+    "options": [
+      "'-söyleniyor' (söylenti) tuğlası düşer ve eylem 'yağmalanmaktaydı' geçmiş süreç zeminine basar.",
+      "'-mış olması' (geçmişe kaydırma) tuğlası düşer.",
+      "Cümledeki 'veya' bağlacı tamamen kopar."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mission_3",
+    "level_target": 10,
+    "task_title": "Görev 3: Limitleri Zorla!",
+    "instructions": "Level 10 treni etkinken en sondaki '+' butonuna tıklayarak 9. vagonu (by the time...) eklemeye çalışın.",
+    "validation_trigger": "glitch_active",
+    "target_word": null,
+    "question": "Trenin 9. vagonu kabul etmemesinin ve işlemci aşırı yüklenme hatası vermesinin dildeki gerçek sebebi nedir?",
+    "options": [
+      "İngilizce sentaksta modalsız kurulabilecek maksimum vagon (yardımcı fiil) sayısının 8 olması ve 9 vagonlu bir zincirin mantıksız olması.",
+      "Vagonun renk kodunun kırmızı olması.",
+      "Tarayıcı bellek sınırının aşılmış olması."
+    ],
+    "correctIndex": 0
+  }
+];
+
+function getActiveLevelData(lvlNum) {
+  const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
+  if (!baseLvl) return null;
+  
+  const domain = state.activeDomain || 'history';
+  const dataForDomain = domainData[domain] && domainData[domain][lvlNum];
+  if (!dataForDomain) return baseLvl;
+  
+  const currentLvl = JSON.parse(JSON.stringify(baseLvl));
+  currentLvl.english_sentence = dataForDomain.english_sentence;
+  currentLvl.turkish_reflex = dataForDomain.turkish_reflex;
+  currentLvl.turkish_reflex_colored = dataForDomain.turkish_reflex_colored;
+  
+  if (dataForDomain.wagon_words) {
+    for (let i = 0; i < currentLvl.wagon_chain.length; i++) {
+      if (dataForDomain.wagon_words[i] !== undefined) {
+        currentLvl.wagon_chain[i].word = dataForDomain.wagon_words[i];
+      }
+      if (dataForDomain.verb_suffixes && dataForDomain.verb_suffixes[i] !== undefined) {
+        currentLvl.wagon_chain[i].suffix_tr = dataForDomain.verb_suffixes[i];
+      }
+    }
+  }
+  return currentLvl;
+}
+
+function initSimulator() {
+  const levelBtnsContainer = document.getElementById('simulator-level-buttons');
+  if (!levelBtnsContainer) return;
+
+  const domainBtnsContainer = document.getElementById('simulator-domain-buttons');
+  if (domainBtnsContainer) {
+    const activeDomain = state.activeDomain || 'history';
+    domainBtnsContainer.querySelectorAll('.domain-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.domain === activeDomain);
+      
+      btn.onclick = () => {
+        const selectedDom = btn.dataset.domain;
+        state.activeDomain = selectedDom;
+        saveState();
+        
+        deactivatedWagons = [];
+        showMissionQuestion = false;
+        selectedMissionOption = null;
+        const glitchOverlay = document.getElementById('glitch-overlay');
+        if (glitchOverlay) {
+          glitchOverlay.classList.remove('show');
+        }
+        
+        domainBtnsContainer.querySelectorAll('.domain-btn').forEach(b => {
+          b.classList.toggle('active', b.dataset.domain === selectedDom);
+        });
+        
+        renderSimulatorContent();
+        renderActiveMission();
+      };
+    });
+  }
+
+  levelBtnsContainer.innerHTML = simulatorData.levels.map(lvl => {
+    return `
+      <button class="simulator-level-btn ${lvl.level === selectedLevel ? 'active' : ''}" data-level="${lvl.level}">
+        <span class="lvl-num">Lvl ${lvl.level}</span>
+        <span class="lvl-title">${lvl.title}</span>
+      </button>
+    `;
+  }).join('');
+
+  levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(btn => {
+    btn.onclick = () => {
+      selectedLevel = parseInt(btn.dataset.level, 10);
+      levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+      });
+      
+      deactivatedWagons = [];
+      showMissionQuestion = false;
+      selectedMissionOption = null;
+      
+      const glitchOverlay = document.getElementById('glitch-overlay');
+      if (glitchOverlay) {
+        glitchOverlay.classList.remove('show');
+      }
+
+      renderSimulatorContent();
+      renderActiveMission();
+    };
+  });
+
+  const dismissGlitchBtn = document.getElementById('btn-glitch-dismiss');
+  if (dismissGlitchBtn) {
+    dismissGlitchBtn.onclick = () => {
+      const glitchOverlay = document.getElementById('glitch-overlay');
+      if (glitchOverlay) {
+        glitchOverlay.classList.remove('show');
+      }
+    };
+  }
+
+  renderSimulatorContent();
+  renderActiveMission();
+}
+
+function renderSimulator() {
+  initSimulator();
+}
+
+function renderSimulatorContent() {
+  const currentLvlData = getActiveLevelData(selectedLevel);
+  if (!currentLvlData) return;
+
+  const chainContainer = document.getElementById('train-wagon-chain');
+  if (chainContainer) {
+    let wagonsHtml = currentLvlData.wagon_chain.map((w, index) => {
+      const isLast = index === currentLvlData.wagon_chain.length - 1;
+      
+      let sabotageClass = "";
+      let isTarget = false;
+      const activeMission = labMissions.find(m => m.id === activeMissionId);
+      if (activeMission && activeMission.level_target === selectedLevel && activeMission.target_word === w.word && !completedMissions.includes(activeMissionId)) {
+        isTarget = true;
+        sabotageClass = deactivatedWagons.includes(w.word) ? "deactivated" : "sabotage-target";
+      }
+
+      const isDeactivated = deactivatedWagons.includes(w.word);
+      const activeClass = isDeactivated ? "deactivated" : sabotageClass;
+      
+      const textStyle = isDeactivated ? "text-decoration: line-through; opacity: 0.5;" : "";
+      const suffixHtml = w.suffix_tr ? `<span class="wagon-suffix" style="${textStyle}">tr: ${w.suffix_tr}</span>` : '';
+      
+      return `
+        <div class="wagon-wrapper" data-word="${w.word}">
+          <div class="wagon-box ${activeClass}" style="background-color: ${w.color};" data-target="${isTarget}">
+            <span class="wagon-word" style="${textStyle}">${w.word}</span>
+            <span class="wagon-role" style="${textStyle}">${w.role.replace(/_/g, ' ')}</span>
+            ${suffixHtml}
+            <div class="wagon-wheels">
+              <span class="wheel"></span>
+              <span class="wheel"></span>
+            </div>
+          </div>
+          ${!isLast ? '<div class="wagon-coupler"></div>' : ''}
+        </div>
+      `;
+    }).join('');
+
+    if (selectedLevel === 10) {
+      wagonsHtml += `
+        <div class="wagon-wrapper">
+          <button class="wagon-add-btn" id="btn-add-wagon" title="Vagon Ekle">+</button>
+        </div>
+      `;
+    }
+
+    chainContainer.innerHTML = wagonsHtml;
+
+    chainContainer.querySelectorAll('.wagon-box.sabotage-target').forEach(box => {
+      box.onclick = () => {
+        const word = box.closest('.wagon-wrapper').dataset.word;
+        if (!deactivatedWagons.includes(word)) {
+          deactivatedWagons.push(word);
+          showMissionQuestion = true;
+          selectedMissionOption = null;
+          renderSimulatorContent();
+          renderActiveMission();
+        }
+      };
+    });
+
+    const addWagonBtn = document.getElementById('btn-add-wagon');
+    if (addWagonBtn) {
+      addWagonBtn.onclick = () => {
+        const glitchOverlay = document.getElementById('glitch-overlay');
+        if (glitchOverlay) {
+          glitchOverlay.classList.add('show');
+        }
+        
+        const activeMission = labMissions.find(m => m.id === activeMissionId);
+        if (activeMission && activeMission.id === "mission_3" && !completedMissions.includes("mission_3")) {
+          showMissionQuestion = true;
+          selectedMissionOption = null;
+          renderActiveMission();
+        }
+      };
+    }
+
+    const wheels = chainContainer.querySelectorAll('.wheel');
+    wheels.forEach(wh => {
+      wh.style.animationPlayState = 'running';
+    });
+
+    setTimeout(() => {
+      chainContainer.scrollTo({
+        left: chainContainer.scrollWidth,
+        behavior: 'smooth'
+      });
+    }, 150);
+
+    setTimeout(() => {
+      wheels.forEach(wh => {
+        wh.style.animationPlayState = 'paused';
+      });
+    }, 1200);
+  }
+
+  let finalTrReflex = currentLvlData.turkish_reflex_colored;
+  if (selectedLevel === 7 && deactivatedWagons.includes("being")) {
+    const domain = state.activeDomain || 'history';
+    if (domain === 'history') {
+      finalTrReflex = 'Orta çağ parşömen kağıtları <span style="color:#f59e0b; font-weight:800;">restore edil</span><span style="color:#ec4899; font-weight:800;">miş</span> <span style="color:#3b82f6; font-weight:800;">olacak</span>.';
+    } else if (domain === 'cinema') {
+      finalTrReflex = 'Yeraltı sinema arşivleri <span style="color:#f59e0b; font-weight:800;">dijitalleştiril</span><span style="color:#ec4899; font-weight:800;">miş</span> <span style="color:#3b82f6; font-weight:800;">olacak</span>.';
+    } else if (domain === 'economy') {
+      finalTrReflex = 'Piyasa likidite endeksleri <span style="color:#f59e0b; font-weight:800;">manipüle edil</span><span style="color:#ec4899; font-weight:800;">miş</span> <span style="color:#3b82f6; font-weight:800;">olacak</span>.';
+    } else if (domain === 'sociology') {
+      finalTrReflex = 'Göçebe topluluk kültürleri <span style="color:#f59e0b; font-weight:800;">asimile edil</span><span style="color:#ec4899; font-weight:800;">miş</span> <span style="color:#3b82f6; font-weight:800;">olacak</span>.';
+    }
+  } else if (selectedLevel === 9 && deactivatedWagons.includes("are rumored")) {
+    const domain = state.activeDomain || 'history';
+    if (domain === 'history') {
+      finalTrReflex = 'İmparatorluk hazinesi altın varlıkları <span style="color:#f59e0b; font-weight:800;">yağmalan</span><span style="color:#10b981; font-weight:800;">maktaydı</span>.';
+    } else if (domain === 'cinema') {
+      finalTrReflex = 'Sansürlü film sahneleri <span style="color:#f59e0b; font-weight:800;">yeniden kurgulan</span><span style="color:#10b981; font-weight:800;">maktaydı</span>.';
+    } else if (domain === 'economy') {
+      finalTrReflex = 'Piyasa likidite endeksleri <span style="color:#f59e0b; font-weight:800;">manipüle edil</span><span style="color:#10b981; font-weight:800;">maktaydı</span>.';
+    } else if (domain === 'sociology') {
+      finalTrReflex = 'Sapan sosyal davranışlar <span style="color:#f59e0b; font-weight:800;">normalleştiril</span><span style="color:#10b981; font-weight:800;">mekteydi</span>.';
+    }
+  }
+
+  const englishText = document.getElementById('simulator-english-sentence');
+  const turkishText = document.getElementById('simulator-turkish-reflex');
+  const noteText = document.getElementById('simulator-mechanic-note');
+
+  if (englishText) englishText.textContent = currentLvlData.english_sentence;
+  if (turkishText) turkishText.innerHTML = finalTrReflex;
+  if (noteText) noteText.textContent = currentLvlData.mechanic_note;
+}
+
+function renderMissionsList() {
+  const listContainer = document.getElementById('missions-list');
+  const countEl = document.getElementById('missions-count');
+  if (!listContainer || !countEl) return;
+
+  countEl.textContent = `${completedMissions.length}/3 Tamamlandı`;
+
+  listContainer.innerHTML = labMissions.map(m => {
+    let statusLabel = "🔒 Kilitli";
+    let statusClass = "locked";
+
+    if (completedMissions.includes(m.id)) {
+      statusLabel = "✓ Tamamlandı";
+      statusClass = "completed";
+    } else if (m.id === activeMissionId) {
+      statusLabel = "➜ Aktif";
+      statusClass = "active";
+    }
+
+    return `
+      <div class="mission-item ${statusClass}" data-id="${m.id}">
+        <span class="mission-item-title">${m.task_title}</span>
+        <span class="mission-item-status">${statusLabel}</span>
+      </div>
+    `;
+  }).join('');
+
+  listContainer.querySelectorAll('.mission-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const missionId = item.dataset.id;
+      if (completedMissions.includes(missionId)) return;
+
+      activeMissionId = missionId;
+      showMissionQuestion = false;
+      selectedMissionOption = null;
+      deactivatedWagons = [];
+      document.getElementById('glitch-overlay').classList.remove('show');
+
+      const targetLvl = labMissions.find(x => x.id === missionId).level_target;
+      selectedLevel = targetLvl;
+
+      const btnsContainer = document.getElementById('simulator-level-buttons');
+      if (btnsContainer) {
+        btnsContainer.querySelectorAll('.simulator-level-btn').forEach(b => {
+          b.classList.toggle('active', parseInt(b.dataset.level, 10) === selectedLevel);
+        });
+      }
+
+      renderSimulatorContent();
+      renderMissionsList();
+      renderActiveMission();
+    });
+  });
+}
+
+function renderActiveMission() {
+  const detailsContainer = document.getElementById('active-mission-details');
+  if (!detailsContainer) return;
+
+  const mission = labMissions.find(m => m.id === activeMissionId);
+  if (!mission) {
+    detailsContainer.innerHTML = `<p style="color: var(--text-secondary); font-size: 0.85rem;">Aktif görev bulunmuyor.</p>`;
+    return;
+  }
+
+  let questionHtml = "";
+  if (showMissionQuestion) {
+    questionHtml = `
+      <div class="mission-question-box">
+        <p class="mission-question">${mission.question}</p>
+        <div class="mission-options">
+          ${mission.options.map((opt, i) => {
+            let optClass = "";
+            if (selectedMissionOption !== null) {
+              if (i === mission.correctIndex) optClass = "correct";
+              else if (i === selectedMissionOption) optClass = "wrong";
+              else optClass = "disabled";
+            } else {
+              optClass = "";
+            }
+            return `
+              <button class="mission-option-btn ${optClass}" data-index="${i}">${opt}</button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  detailsContainer.innerHTML = `
+    <h4>${mission.task_title}</h4>
+    <div class="mission-instruction">${mission.instructions}</div>
+    ${questionHtml}
+  `;
+
+  if (showMissionQuestion && selectedMissionOption === null) {
+    detailsContainer.querySelectorAll('.mission-option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const index = parseInt(btn.dataset.index, 10);
+        selectedMissionOption = index;
+        
+        renderActiveMission();
+
+        if (index === mission.correctIndex) {
+          if (typeof confetti === 'function') {
+            confetti({
+              particleCount: 80,
+              spread: 60,
+              origin: { y: 0.7 }
+            });
+          }
+          
+          showToast("Görev başarıyla tamamlandı! 🎉", "success");
+          completedMissions.push(activeMissionId);
+
+          const nextMission = labMissions.find(m => !completedMissions.includes(m.id));
+          if (nextMission) {
+            setTimeout(() => {
+              activeMissionId = nextMission.id;
+              selectedLevel = nextMission.level_target;
+              deactivatedWagons = [];
+              showMissionQuestion = false;
+              selectedMissionOption = null;
+              
+              const btnsContainer = document.getElementById('simulator-level-buttons');
+              if (btnsContainer) {
+                btnsContainer.querySelectorAll('.simulator-level-btn').forEach(b => {
+                  b.classList.toggle('active', parseInt(b.dataset.level, 10) === selectedLevel);
+                });
+              }
+
+              document.getElementById('glitch-overlay').classList.remove('show');
+              renderSimulatorContent();
+              renderMissionsList();
+              renderActiveMission();
+            }, 2500);
+          } else {
+            showToast("Tüm laboratuvar görevlerini tamamladınız! Harika iş, Mühendis! 🏆", "success");
+            renderMissionsList();
+          }
+        } else {
+          showToast("Yanlış seçenek! Lütfen tekrar deneyin.", "error");
+          setTimeout(() => {
+            selectedMissionOption = null;
+            renderActiveMission();
+          }, 2000);
+        }
+      });
+    });
+  }
 }
 
 // DOM yüklendiğinde başlat

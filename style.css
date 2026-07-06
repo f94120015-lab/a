@@ -6909,5 +6909,813 @@ span[style*="color:#339af0"] * {
   border-color: var(--color-wrong-border) !important;
 }
 
+/* ============================================================
+   VAGON SİMÜLATÖRÜ (THE TRAIN MECHANIC) STYLES
+   ============================================================ */
 
+.simulator-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  animation: fadeIn 0.4s ease;
+}
 
+.simulator-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.simulator-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.simulator-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Seviye Seçim Butonları */
+.simulator-levels-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.levels-label {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.simulator-level-buttons {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+/* Scrollbar styling for buttons row */
+.simulator-level-buttons::-webkit-scrollbar {
+  height: 6px;
+}
+.simulator-level-buttons::-webkit-scrollbar-track {
+  background: transparent;
+}
+.simulator-level-buttons::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.simulator-level-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 10px;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  width: 135px;
+  min-height: 85px;
+  flex: 0 0 auto;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.simulator-level-btn .btn-num {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.simulator-level-btn .btn-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.simulator-level-btn:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-card-hover);
+}
+
+.simulator-level-btn.active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+  border-color: var(--accent-primary);
+  box-shadow: 0 6px 20px rgba(139, 126, 200, 0.25);
+  transform: translateY(-1px);
+}
+
+.simulator-level-btn.active .btn-num {
+  color: #fff;
+}
+
+.simulator-level-btn.active .btn-title {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Platform ve Raylar */
+.railway-platform {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 16px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+}
+
+/* Railway Tracks design */
+.railway-tracks {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, #4b5563 0%, #1f2937 40%, #1f2937 60%, #4b5563 100%);
+  border-top: 2px solid #9ca3af;
+  border-bottom: 2px solid #374151;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.railway-tracks::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #78350f,
+    #78350f 12px,
+    transparent 12px,
+    transparent 48px
+  );
+  opacity: 0.85;
+}
+
+/* Train Wagon Chain */
+.train-wagon-chain {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 20px 24px;
+  z-index: 2;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for wagon chain */
+.train-wagon-chain::-webkit-scrollbar {
+  height: 8px;
+}
+.train-wagon-chain::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+.train-wagon-chain::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.wagon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.wagon-box {
+  width: 155px;
+  min-height: 135px;
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.18), inset 0 2px 4px rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
+  z-index: 5;
+  transition: transform var(--transition-base);
+}
+
+.wagon-box:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.wagon-word {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  line-height: 1.25;
+}
+
+.wagon-role {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 2px 6px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.wagon-suffix {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-top: 8px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+/* Wagon Wheels */
+.wagon-wheels {
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.wagon-wheels .wheel {
+  width: 18px;
+  height: 18px;
+  background: #374151;
+  border: 3px solid #9ca3af;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  animation: spin-wheel 1.2s linear infinite paused;
+}
+
+@keyframes spin-wheel {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Wagon Coupler Connection */
+.wagon-coupler {
+  width: 24px;
+  height: 8px;
+  background: linear-gradient(to bottom, #9ca3af 0%, #4b5563 50%, #1f2937 100%);
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #111827;
+  z-index: 1;
+  margin: 0 -2px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Bilgi Kartları Paneli */
+.simulator-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-card .card-icon {
+  font-size: 2rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-card .card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card .card-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-card .card-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 6px;
+  line-height: 1.45;
+}
+
+/* Specific styling for notes card */
+.note-card .card-value {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Disiplin Seçim Butonları */
+.simulator-domains-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.domains-label {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.simulator-domain-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.domain-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.domain-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-card-hover);
+}
+
+.domain-btn.active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+  border-color: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(139, 126, 200, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Responsive Simulator styling */
+@media (max-width: 900px) {
+  .simulator-info-panel {
+    gap: 12px;
+  }
+  
+  .simulator-level-buttons {
+    gap: 8px;
+  }
+  
+  .simulator-level-btn {
+    width: 110px;
+    padding: 10px 6px;
+    min-height: 75px;
+  }
+
+  .domain-btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================================
+   VAGON SİMÜLATÖRÜ LABORATUVAR GÖREVLERİ (LAB MISSIONS) STYLES
+   ============================================================ */
+
+.simulator-workspace {
+  display: flex;
+  gap: 24px;
+  align-items: start;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.simulator-main-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.simulator-side-panel {
+  width: 270px;
+  flex-shrink: 0;
+}
+
+.missions-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.missions-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.missions-card-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.missions-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: var(--accent-primary-light);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.missions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mission-item {
+  padding: 12px 14px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.mission-item:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+.mission-item.active {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-light);
+  box-shadow: 0 0 0 2px var(--accent-primary-light);
+}
+
+.mission-item.completed {
+  border-color: var(--color-correct);
+  background: var(--color-correct-bg);
+}
+
+.mission-item-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.mission-item-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mission-item.completed .mission-item-status {
+  color: var(--color-correct);
+}
+
+.mission-item.active .mission-item-status {
+  color: var(--accent-primary);
+}
+
+.mission-item.locked .mission-item-status {
+  color: var(--text-muted);
+}
+
+.active-mission-details {
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.active-mission-details h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.mission-instruction {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-primary);
+  line-height: 1.45;
+}
+
+.mission-question-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.mission-question {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.mission-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mission-option-btn {
+  padding: 10px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-card);
+  font-size: 0.8rem;
+  text-align: left;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  line-height: 1.4;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mission-option-btn:hover:not(.disabled) {
+  background: var(--bg-secondary);
+  border-color: var(--text-muted);
+}
+
+.mission-option-btn.selected {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-light);
+  font-weight: 700;
+}
+
+.mission-option-btn.correct {
+  border-color: var(--color-correct) !important;
+  background: var(--color-correct-bg) !important;
+  color: var(--color-correct) !important;
+  font-weight: 700;
+}
+
+.mission-option-btn.wrong {
+  border-color: var(--color-wrong) !important;
+  background: var(--color-wrong-bg) !important;
+  color: var(--color-wrong) !important;
+}
+
+/* Glitch Overlay */
+.glitch-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(139, 0, 0, 0.95);
+  z-index: 100;
+  border-radius: var(--radius-lg);
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 24px;
+  animation: glitch-flash 0.15s ease-in-out infinite alternate;
+}
+
+.glitch-overlay.show {
+  display: flex;
+}
+
+.glitch-content {
+  text-align: center;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: glitch-shake 0.3s linear infinite;
+}
+
+.glitch-icon {
+  font-size: 3rem;
+}
+
+.glitch-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fca5a5;
+  text-shadow: 2px 2px #000;
+  margin: 0;
+}
+
+.glitch-msg {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #f3f4f6;
+}
+
+@keyframes glitch-flash {
+  0% { background: rgba(139, 0, 0, 0.95); }
+  100% { background: rgba(185, 28, 28, 0.95); }
+}
+
+@keyframes glitch-shake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Sabotage Targets */
+.wagon-box.sabotage-target {
+  animation: sabotage-pulse 1.5s infinite;
+  cursor: pointer;
+}
+
+.wagon-box.sabotage-target::after {
+  content: '✂️';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ef4444;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.wagon-box.sabotage-target:hover {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.8), inset 0 2px 4px rgba(255,255,255,0.25) !important;
+}
+
+.wagon-box.deactivated {
+  opacity: 0.35 !important;
+  border: 2px dashed #9ca3af !important;
+  background-color: #374151 !important;
+  text-decoration: line-through;
+  transform: scale(0.95);
+  box-shadow: none !important;
+}
+
+.wagon-box.deactivated .wagon-wheels .wheel {
+  animation: none !important;
+  background: #1f2937;
+  border-color: #4b5563;
+}
+
+@keyframes sabotage-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7), inset 0 2px 4px rgba(255,255,255,0.25); border-color: rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0), inset 0 2px 4px rgba(255,255,255,0.25); border-color: rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), inset 0 2px 4px rgba(255,255,255,0.25); border-color: rgba(239, 68, 68, 0); }
+}
+
+/* Wagon Add Button */
+.wagon-add-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px dashed var(--accent-primary);
+  color: var(--accent-primary);
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  margin-left: 20px;
+}
+
+.wagon-add-btn:hover {
+  background: var(--accent-primary-light);
+  transform: scale(1.1) rotate(90deg);
+  border-color: var(--accent-primary-hover);
+  color: var(--accent-primary-hover);
+}
+
+/* Responsive workspace */
+@media (max-width: 950px) {
+  .simulator-workspace {
+    flex-direction: column;
+  }
+  
+  .simulator-side-panel {
+    width: 100%;
+  }
+}

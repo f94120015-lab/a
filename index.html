@@ -185,6 +185,10 @@
             <span class="nav-tab-icon">📚</span>
             <span class="nav-tab-label">Dersler</span>
           </button>
+          <button class="nav-tab" data-tab="simulator">
+            <span class="nav-tab-icon">🚂</span>
+            <span class="nav-tab-label">Simülatör</span>
+          </button>
           <button class="nav-tab" data-tab="leaderboard">
             <span class="nav-tab-icon">🏆</span>
             <span class="nav-tab-label">Ligler</span>
@@ -341,6 +345,88 @@
               </div>
               <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VAGON SİMÜLATÖRÜ SEKMESİ -->
+      <div id="tab-content-simulator" class="tab-content">
+        <div class="simulator-container">
+          <div class="simulator-header">
+            <h2 class="simulator-title">🚂 Vagon Simülatörü</h2>
+            <p class="simulator-subtitle">İngilizce tren vagonlarının ekler yardımıyla Türkçe diline morfolojik bükülüşünü interaktif olarak simüle edin.</p>
+          </div>
+
+          <!-- Disiplin Seçim Butonları -->
+          <div class="simulator-domains-wrapper">
+            <span class="domains-label">Disiplin Seçin:</span>
+            <div class="simulator-domain-buttons" id="simulator-domain-buttons">
+              <button class="domain-btn" data-domain="history">📜 Tarih</button>
+              <button class="domain-btn" data-domain="cinema">🎬 Sinema</button>
+              <button class="domain-btn" data-domain="economy">💼 Ekonomi</button>
+              <button class="domain-btn" data-domain="sociology">👥 Sosyoloji</button>
+            </div>
+          </div>
+
+          <!-- Seviye Seçim Butonları -->
+          <div class="simulator-levels-wrapper">
+            <span class="levels-label">Seviye Seçin:</span>
+            <div class="simulator-level-buttons" id="simulator-level-buttons">
+              <!-- JS ile dinamik doldurulacak -->
+            </div>
+          </div>
+
+          <!-- Ray ve Tren Platformu (Bütün satırı kaplasın!) -->
+          <div class="railway-platform" style="width: 100%; margin-top: 10px;">
+            <div class="railway-tracks"></div>
+            <!-- Glitch Ekranı (Görev 3 için) -->
+            <div class="glitch-overlay" id="glitch-overlay">
+              <div class="glitch-content">
+                <span class="glitch-icon">⚠️</span>
+                <h3 class="glitch-title">PROCESSOR OVERLOAD DEFENSE</h3>
+                <p class="glitch-msg">Sistem Limit Aşımı: Eylemin tüm yuvaları dolu. 9. vagonun eklenmesi mantıksal paradoksa yol açtığı için engellendi.</p>
+                <button class="btn btn-secondary" id="btn-glitch-dismiss" style="margin-top: 15px; padding: 8px 16px; background: rgba(255,255,255,0.2); border-color: #fff; color: #fff;">Hatayı Kapat</button>
+              </div>
+            </div>
+            <!-- Tren Vagonları Zinciri -->
+            <div class="train-wagon-chain" id="train-wagon-chain">
+              <!-- JS ile dinamik vagonlar basılacak -->
+            </div>
+          </div>
+
+          <!-- Ana Simülatör ve Görev Workspace'i (Bilgiler ve Görevler Alt Alta/Yan Yana) -->
+          <div class="simulator-workspace">
+            <!-- Sol Panel: Bilgiler -->
+            <div class="simulator-main-panel">
+              <!-- Bilgi Kartları Paneli -->
+              <div class="simulator-info-panel">
+                <div class="info-card english-card">
+                  <div class="card-icon">🇬🇧</div>
+                  <div class="card-details">
+                    <span class="card-label">Orijinal İngilizce Cümle</span>
+                    <p class="card-value" id="simulator-english-sentence">-</p>
+                  </div>
+                </div>
+
+                <div class="info-card turkish-card">
+                  <div class="card-icon">🇹🇷</div>
+                  <div class="card-details">
+                    <span class="card-label">Türkçe Çeviri Refleksi</span>
+                    <p class="card-value" id="simulator-turkish-reflex">-</p>
+                  </div>
+                </div>
+
+                <div class="info-card note-card">
+                  <div class="card-icon">🔧</div>
+                  <div class="card-details">
+                    <span class="card-label">Mekanik Mühendislik Notu</span>
+                    <p class="card-value" id="simulator-mechanic-note">-</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
