@@ -10379,7 +10379,18 @@ function renderSimulatorContent() {
   const turkishText = document.getElementById('simulator-turkish-reflex');
   const noteText = document.getElementById('simulator-mechanic-note');
 
-  if (englishText) englishText.textContent = currentLvlData.english_sentence;
+  if (englishText) {
+    let coloredEnglishHtml = currentLvlData.wagon_chain.map(w => {
+      let color = w.color || 'var(--text-primary)';
+      if (color === '#1f2937' || color === '#1F2937') {
+        color = 'var(--text-primary)';
+      }
+      const isDeactivated = deactivatedWagons.includes(w.word);
+      const textStyle = isDeactivated ? "text-decoration: line-through; opacity: 0.5;" : "";
+      return `<span style="color: ${color}; font-weight: 800; ${textStyle}">${w.word}</span>`;
+    }).join(' ');
+    englishText.innerHTML = coloredEnglishHtml;
+  }
   if (turkishText) turkishText.innerHTML = finalTrReflex;
   if (noteText) noteText.textContent = currentLvlData.mechanic_note;
 
