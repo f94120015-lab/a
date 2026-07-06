@@ -1891,18 +1891,55 @@ function openQuestionPreview(title, questions, parentObj = null) {
       case 'multiple-choice':
       case 'error-spotting':
       case 'context-clue':
+      case 'chain-expansion-differential':
+      case 'structural-deconstruction':
+      case 'vector-velocity-shift':
+      case 'titan-boundary-defense':
+      case 'vagon-to-suffix-match':
+      case 'reverse-engineering-translation':
+      case 'suffix-decapitation':
         typeLabel = q.isEngToTr ? "Çoktan Seçmeli (Eng -> Tr)" : "Çoktan Seçmeli (Tr -> Eng)";
         typeClass = "qp-type-mc";
         const opts = q.options.map((opt, oIdx) => {
           const isCorrect = oIdx === q.correctIndex;
           return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
         }).join('');
-        detailsHtml = `
-          <div class="qp-detail-row">
-            <span class="qp-detail-label">Seçenekler:</span>
-            <div class="qp-options-list">${opts}</div>
-          </div>
-        `;
+        if (q.type === 'suffix-decapitation') {
+          if (q.sentence_before) {
+            detailsHtml = `
+              <div class="qp-detail-row">
+                <span class="qp-detail-label">Önceki Cümle:</span>
+                <span class="qp-detail-val">"${q.sentence_before || ''}"</span>
+              </div>
+              <div class="qp-detail-row">
+                <span class="qp-detail-label">Sonraki Cümle:</span>
+                <span class="qp-detail-val">"${q.sentence_after || ''}"</span>
+              </div>
+              <div class="qp-detail-row">
+                <span class="qp-detail-label">Seçenekler:</span>
+                <div class="qp-options-list">${opts}</div>
+              </div>
+            `;
+          } else {
+            detailsHtml = `
+              <div class="qp-detail-row">
+                <span class="qp-detail-label">Cümle:</span>
+                <span class="qp-detail-val">"${q.sentence || ''}"</span>
+              </div>
+              <div class="qp-detail-row">
+                <span class="qp-detail-label">Seçenekler:</span>
+                <div class="qp-options-list">${opts}</div>
+              </div>
+            `;
+          }
+        } else {
+          detailsHtml = `
+            <div class="qp-detail-row">
+              <span class="qp-detail-label">Seçenekler:</span>
+              <div class="qp-options-list">${opts}</div>
+            </div>
+          `;
+        }
         break;
 
       case 'fill-blank-dropdown':
@@ -2929,7 +2966,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     const illustrationContent = getLessonIllustration(lId, unit.id);
 
     let progressBadgeContent = '';
-    const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
+    const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0 || lesson.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!lesson.questions || lesson.questions.length === 0);
     if (isNotUploadedLesson) {
       progressBadgeContent = `<div class="node-progress-badge">0</div>`;
     } else if (lesson.exercises && lesson.exercises.length > 0) {
@@ -2967,7 +3004,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
         <strong>${lesson.title}</strong>
         <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
         ${lessonOriginalTagHTML}
-        ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Alıştırma henüz yüklenmemiş</div>' : ''}
+        ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Ders eklenmemiştir</div>' : ''}
       </div>
     `;
 
@@ -3074,14 +3111,14 @@ function renderLessonTree() {
 
     const isNotUploadedUnit = unit.lessons.every(lId => {
       const l = lessons.find(lesson => lesson.id === lId);
-      return !l || ((!l.exercises || l.exercises.length === 0) && (!l.questions || l.questions.length === 0));
+      return !l || ((!l.exercises || l.exercises.length === 0 || l.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!l.questions || l.questions.length === 0));
     });
     let notUploadedBadgeHTML = '';
     if (isNotUploadedUnit) {
       notUploadedBadgeHTML = `
         <span class="unit-banner-not-uploaded-tag">
           <span class="tag-pulse-dot"></span>
-          <span>Alıştırma Hazırlanacak</span>
+          <span>Ders eklenmemiştir</span>
         </span>
       `;
     }
@@ -3285,13 +3322,13 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   */
 
   let popoverFooterHTML = '';
-  const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0) && (!lesson.questions || lesson.questions.length === 0);
+  const isNotUploadedLesson = (!lesson.exercises || lesson.exercises.length === 0 || lesson.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!lesson.questions || lesson.questions.length === 0);
   if (isNotUploadedLesson) {
     popoverFooterHTML = `
       <div class="popover-exercises-container">
         <div class="popover-not-uploaded-message">
           <span class="not-uploaded-icon">⏳</span>
-          <span class="not-uploaded-text">Alıştırma henüz yüklenmemiş</span>
+          <span class="not-uploaded-text">Ders eklenmemiştir</span>
         </div>
       </div>
     `;
@@ -3876,6 +3913,9 @@ function applyClozeHighlighting(question) {
 function renderQuestion() {
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   if (!question) return;
+  if (!question.prompt && question.question) {
+    question.prompt = question.question;
+  }
 
   if (reflexTimer) {
     clearTimeout(reflexTimer);
@@ -3942,6 +3982,13 @@ function renderQuestion() {
       case 'multiple-choice':
       case 'error-spotting':
       case 'context-clue':
+      case 'chain-expansion-differential':
+      case 'structural-deconstruction':
+      case 'vector-velocity-shift':
+      case 'titan-boundary-defense':
+      case 'vagon-to-suffix-match':
+      case 'reverse-engineering-translation':
+      case 'suffix-decapitation':
         renderMultipleChoice(body, question);
         break;
       case 'inversion-transformer':
@@ -4031,6 +4078,37 @@ function renderMultipleChoice(container, question) {
   const isEngToTr = (question.prompt.includes("Türkçe") || question.isEngToTr) && !question.prompt.includes("_______");
   
   let sentenceHtml = question.sentence || "";
+  if (question.type === 'chain-expansion-differential') {
+    sentenceHtml = `
+      <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 12px; margin-top: 8px;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Cümle 1:</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_1}</span>
+      </div>
+      <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ec4899; margin-bottom: 8px;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Cümle 2:</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_2}</span>
+      </div>
+    `;
+  } else if (question.type === 'vector-velocity-shift') {
+    sentenceHtml = `
+      <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 8px; margin-top: 8px;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Mevcut Yapı:</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.current_structure}</span>
+      </div>
+    `;
+  } else if (question.type === 'suffix-decapitation') {
+    sentenceHtml = `
+      <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ef4444; margin-bottom: 12px; margin-top: 8px;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Önceki Cümle:</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_before}</span>
+      </div>
+      <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 8px;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Sonraki Cümle:</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_after}</span>
+      </div>
+    `;
+  }
+
   if (isEngToTr) {
     let enSent = question.enSentence;
     if (!enSent && promptHtml.includes("<strong>")) {
@@ -5953,6 +6031,13 @@ function checkAnswer() {
     case 'multiple-choice':
     case 'error-spotting':
     case 'context-clue':
+    case 'chain-expansion-differential':
+    case 'structural-deconstruction':
+    case 'vector-velocity-shift':
+    case 'titan-boundary-defense':
+    case 'vagon-to-suffix-match':
+    case 'reverse-engineering-translation':
+    case 'suffix-decapitation':
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
@@ -6038,6 +6123,13 @@ function checkAnswer() {
     case 'multiple-choice':
     case 'error-spotting':
     case 'context-clue':
+    case 'chain-expansion-differential':
+    case 'structural-deconstruction':
+    case 'vector-velocity-shift':
+    case 'titan-boundary-defense':
+    case 'vagon-to-suffix-match':
+    case 'reverse-engineering-translation':
+    case 'suffix-decapitation':
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
@@ -7960,6 +8052,13 @@ function renderPlacementQuestion() {
     case 'multiple-choice':
     case 'error-spotting':
     case 'context-clue':
+    case 'chain-expansion-differential':
+    case 'structural-deconstruction':
+    case 'vector-velocity-shift':
+    case 'titan-boundary-defense':
+    case 'vagon-to-suffix-match':
+    case 'reverse-engineering-translation':
+    case 'suffix-decapitation':
       renderPlacementMultipleChoice(body, question);
       break;
     case 'fill-blank-dropdown':
