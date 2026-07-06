@@ -1846,7 +1846,25 @@ function showToast(message, type = 'info') {
   setTimeout(() => toast.remove(), 3000);
 }
 
-function openQuestionPreview(title, questions) {
+function isQuestionNew(q, parentObj = null) {
+  if (!q) return false;
+  const thirtySixHoursMs = 36 * 60 * 60 * 1000;
+  const now = Date.now();
+
+  const isRecent = (dateStr) => {
+    if (!dateStr) return false;
+    const parsed = Date.parse(dateStr);
+    if (isNaN(parsed)) return false;
+    const diff = now - parsed;
+    return diff <= thirtySixHoursMs && diff >= -600000;
+  };
+
+  if (q.createdAt && isRecent(q.createdAt)) return true;
+  if (parentObj && parentObj.createdAt && isRecent(parentObj.createdAt)) return true;
+  return false;
+}
+
+function openQuestionPreview(title, questions, parentObj = null) {
   if (!questions || questions.length === 0) {
     showToast("Bu alıştırmada henüz soru bulunmuyor.", "info");
     return;
@@ -1863,6 +1881,7 @@ function openQuestionPreview(title, questions) {
   `;
 
   let cardsHtml = questions.map((q, idx) => {
+    const isNew = isQuestionNew(q, parentObj);
     let typeLabel = "Soru";
     let typeClass = "";
     let detailsHtml = "";
@@ -1931,7 +1950,7 @@ function openQuestionPreview(title, questions) {
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Doğru Kelime:</span>
-            <span class="qp-detail-val qp-correct">${q.correct}</span>
+            <span class="qp-detail-val qp-correct">${q.correct || q.correctAnswer}</span>
           </div>
         `;
         break;
@@ -2001,6 +2020,7 @@ function openQuestionPreview(title, questions) {
       <div class="qp-question-card">
         <div class="qp-question-header">
           <span class="qp-qnumber">Soru #${idx + 1}</span>
+          ${isNew ? '<span class="qp-new-badge" style="background: #ff3b30; color: #fff; font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 6px; display: inline-block; vertical-align: middle; line-height: 1.2;">YENİ</span>' : ''}
           <span class="qp-type-badge ${typeClass}">${typeLabel}</span>
         </div>
         <p class="qp-prompt">${q.prompt}</p>
@@ -2759,7 +2779,48 @@ function getLessonIllustration(lessonId, unitId) {
   return svgs[category] || svgs.school;
 }
 
+function isLessonNew(lesson) {
+  if (!lesson) return false;
+  const thirtySixHoursMs = 36 * 60 * 60 * 1000;
+  const now = Date.now();
 
+  const isRecent = (dateStr) => {
+    if (!dateStr) return false;
+    const parsed = Date.parse(dateStr);
+    if (isNaN(parsed)) return false;
+    const diff = now - parsed;
+    return diff <= thirtySixHoursMs && diff >= -600000;
+  };
+
+  if (lesson.createdAt && isRecent(lesson.createdAt)) {
+    return true;
+  }
+
+  if (lesson.exercises && Array.isArray(lesson.exercises)) {
+    for (const ex of lesson.exercises) {
+      if (ex.createdAt && isRecent(ex.createdAt)) {
+        return true;
+      }
+      if (ex.questions && Array.isArray(ex.questions)) {
+        for (const q of ex.questions) {
+          if (q.createdAt && isRecent(q.createdAt)) {
+            return true;
+          }
+        }
+      }
+    }
+  }
+
+  if (lesson.questions && Array.isArray(lesson.questions)) {
+    for (const q of lesson.questions) {
+      if (q.createdAt && isRecent(q.createdAt)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
 
 function renderUnitPathAndNodes(pContainer, unitId) {
   if (pContainer.dataset.rendered === "true") return;
@@ -2862,7 +2923,8 @@ function renderUnitPathAndNodes(pContainer, unitId) {
       </div>`;
     }
 
-    const activeBannerContent = isActive ? '<div class="lesson-node-banner">Yeni</div>' : '';
+    const isNew = isLessonNew(lesson);
+    const activeBannerContent = ''; // Simgeler üzerinden Yeni butonu kaldırıldı.
 
     let lessonOriginalTagHTML = '';
 
@@ -3298,7 +3360,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         const exerciseId = btn.dataset.exerciseId;
         const exercise = lesson.exercises.find(ex => ex.id === exerciseId);
         if (exercise) {
-          openQuestionPreview(exercise.title, exercise.questions);
+          openQuestionPreview(exercise.title, exercise.questions, exercise);
         }
       });
     });
@@ -3311,7 +3373,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        openQuestionPreview(lesson.title, lesson.questions);
+        openQuestionPreview(lesson.title, lesson.questions, lesson);
       });
     }
   }
@@ -3595,20 +3657,35 @@ function updateQuizMetadata() {
   const metadataEl = document.getElementById('quiz-metadata');
   if (!metadataEl) return;
 
+  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : (currentQuizQuestions ? currentQuizQuestions[currentQuestionIndex] : null);
+  let isNew = false;
+  if (question) {
+    let parentObj = null;
+    if (!isReviewMode && currentLesson) {
+      if (currentLesson.activeExerciseId && currentLesson.exercises) {
+        parentObj = currentLesson.exercises.find(ex => ex.id === currentLesson.activeExerciseId);
+      } else {
+        parentObj = currentLesson;
+      }
+    }
+    isNew = isQuestionNew(question, parentObj);
+  }
+  const newBadge = isNew ? ' <span class="quiz-new-badge" style="background: #ff3b30; color: #fff; font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 6px; display: inline-block; vertical-align: middle; line-height: 1.2;">YENİ</span>' : '';
+
   if (isReviewMode) {
     const total = reviewQuestions.length;
-    metadataEl.textContent = `Hızlı Tekrar • Soru ${currentQuestionIndex + 1}/${total}`;
+    metadataEl.innerHTML = `Hızlı Tekrar • Soru ${currentQuestionIndex + 1}/${total}${newBadge}`;
     return;
   }
 
   if (typeof isPlacementMode !== 'undefined' && isPlacementMode) {
     const total = typeof placementQuestions !== 'undefined' && placementQuestions ? placementQuestions.length : 0;
-    metadataEl.textContent = `Seviye Sınavı • Soru ${currentQuestionIndex + 1}/${total}`;
+    metadataEl.innerHTML = `Seviye Sınavı • Soru ${currentQuestionIndex + 1}/${total}${newBadge}`;
     return;
   }
 
   if (!currentLesson) {
-    metadataEl.textContent = '';
+    metadataEl.innerHTML = '';
     return;
   }
 
@@ -3624,7 +3701,7 @@ function updateQuizMetadata() {
   const total = currentQuizQuestions.length;
   const qNum = `${currentQuestionIndex + 1}/${total}`;
 
-  metadataEl.textContent = `${unitTitle} • ${lessonLabel}${exLabel ? ` • ${exLabel}` : ''} • Soru ${qNum}`;
+  metadataEl.innerHTML = `${unitTitle} • ${lessonLabel}${exLabel ? ` • ${exLabel}` : ''} • Soru ${qNum}${newBadge}`;
 }
 
 function updateQuizUI() {
@@ -5348,7 +5425,7 @@ function renderSwipeQuestion(container, question) {
 
 // ── Edat Mıknatısı (The Preposition Magnet) ──
 function renderPrepositionMagnet(container, question) {
-  const parts = question.sentence.split("______");
+  const parts = question.sentence.split(/_{3,}/);
   let sentenceHtml = "";
   if (parts.length >= 2) {
     sentenceHtml = `${parts[0]} <span class="magnet-blank-slot" id="magnet-drop-target">_____</span> ${parts[1]}`;
@@ -5817,7 +5894,7 @@ function checkAnswer() {
     case 'fill-blank-text':
       {
         const userVal = (selectedAnswer || "").toLowerCase().trim();
-        const correctVal = question.correct.toLowerCase().trim();
+        const correctVal = (question.correct || question.correctAnswer || "").toLowerCase().trim();
         isCorrect = userVal === correctVal;
       }
       break;
@@ -5987,7 +6064,7 @@ function checkAnswer() {
     } else if (question.type === 'collocation-matching') {
       correctAnswerText = question.explanation;
     } else if (question.type === 'fill-blank-text') {
-      correctAnswerText = question.correct;
+      correctAnswerText = question.correct || question.correctAnswer;
     } else if (question.type === 'translation-text') {
       correctAnswerText = question.correctSentence;
     } else if (question.type === 'word-bank') {
@@ -7929,7 +8006,7 @@ function checkPlacementAnswer() {
     }
   } else if (activeType === 'fill-blank-text') {
     const userVal = (placementSelectedAnswer || "").toLowerCase().trim();
-    const correctVal = question.correct.toLowerCase().trim();
+    const correctVal = (question.correct || question.correctAnswer || "").toLowerCase().trim();
     isCorrect = userVal === correctVal;
   }
 
@@ -7970,7 +8047,7 @@ function checkPlacementAnswer() {
     if (question.type === 'multiple-choice' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
       correctText = question.options[question.correctIndex];
     } else if (question.type === 'fill-blank-text') {
-      correctText = question.correct;
+      correctText = question.correct || question.correctAnswer;
     }
     text.textContent = `Yanlış. Doğru cevap: "${correctText}"`;
   }
@@ -8112,6 +8189,21 @@ function showReportModal() {
   });
 }
 
+function getLessonQuestions(l) {
+  let list = [];
+  if (l.questions && Array.isArray(l.questions)) {
+    list = list.concat(l.questions);
+  }
+  if (l.exercises && Array.isArray(l.exercises)) {
+    l.exercises.forEach(ex => {
+      if (ex.questions && Array.isArray(ex.questions)) {
+        list = list.concat(ex.questions);
+      }
+    });
+  }
+  return list;
+}
+
 function submitReport(question, errorType, comment) {
   let reports;
   try {
@@ -8120,7 +8212,7 @@ function submitReport(question, errorType, comment) {
     console.error('Rapor veritabanı bozuk, sıfırlanıyor:', e);
     reports = [];
   }
-  const questionLesson = (typeof lessons !== 'undefined') ? lessons.find(l => l.questions.some(q => q.id === question.id)) : null;
+  const questionLesson = (typeof lessons !== 'undefined') ? lessons.find(l => getLessonQuestions(l).some(q => q.id === question.id)) : null;
   const activeLesson = questionLesson || currentLesson;
   const lessonTitleStr = activeLesson ? `${activeLesson.id}. Ders (${activeLesson.subtitle})` : (isReviewMode ? 'Hızlı Tekrar' : 'N/A');
   const lessonIdStr = activeLesson ? activeLesson.id : 'N/A';
@@ -8282,22 +8374,9 @@ function checkReviewBanner() {
 }
 
 function checkAndShowReviewPrompt() {
-  if (!state.wrongQuestions || state.wrongQuestions.length === 0) return;
-
-  const totalAnswered = state.totalQuestionsAnswered || 0;
-  const lastPrompted = state.lastPromptedQuestionCount || 0;
-  const answeredSinceLastPrompt = totalAnswered - lastPrompted;
-
-  if (answeredSinceLastPrompt >= 15) {
-    const modal = document.getElementById('review-prompt-modal');
-    const countEl = document.getElementById('review-prompt-count');
-    if (modal && countEl) {
-      countEl.textContent = state.wrongQuestions.length;
-      modal.classList.add('show');
-      state.lastPromptedQuestionCount = totalAnswered;
-      saveState();
-    }
-  }
+  // Otomatik davet modali kullanıcı isteği üzerine tamamen devre dışı bırakıldı.
+  // Kullanıcı Hızlı Tekrar sınavına sadece ana sayfadaki banner üzerinden kendi isteğiyle başlayabilir.
+  return;
 }
 
 function startReviewMode() {
@@ -8316,7 +8395,8 @@ function startReviewMode() {
   reviewQuestions = [];
   state.wrongQuestions.forEach(qId => {
     lessons.forEach(l => {
-      const q = l.questions.find(quest => quest.id === qId);
+      const allQs = getLessonQuestions(l);
+      const q = allQs.find(quest => quest.id === qId);
       if (q) reviewQuestions.push(q);
     });
   });
@@ -8375,6 +8455,38 @@ function init() {
     if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
     const recentBox = document.getElementById('recent-changes-box');
     if (recentBox) recentBox.style.setProperty('display', 'block', 'important');
+
+    const addWrongBtn = document.getElementById('btn-admin-add-wrong-questions');
+    if (addWrongBtn) {
+      addWrongBtn.addEventListener('click', () => {
+        state.wrongQuestions = state.wrongQuestions || [];
+        const sampleIds = [
+          "c40_l22_e1_q11",
+          "c40_l24_e1_q9",
+          "c40_l21_e1_q11",
+          "c40_l23_e1_q11",
+          "c40_l24_e1_q11"
+        ];
+        sampleIds.forEach(id => {
+          if (!state.wrongQuestions.includes(id)) {
+            state.wrongQuestions.push(id);
+          }
+        });
+        saveState();
+        checkReviewBanner();
+        showToast("Hatalı sorular eklendi. Ana sayfadaki 'Hızlı Tekrar' banner'ını kullanabilirsiniz!", "success");
+      });
+    }
+
+    const clearWrongBtn = document.getElementById('btn-admin-clear-wrong-questions');
+    if (clearWrongBtn) {
+      clearWrongBtn.addEventListener('click', () => {
+        state.wrongQuestions = [];
+        saveState();
+        checkReviewBanner();
+        showToast("Hızlı tekrar soruları sıfırlandı!", "success");
+      });
+    }
   } else {
     const devTab = document.getElementById('btn-next-empty-lesson');
     if (devTab) devTab.remove();
@@ -8413,6 +8525,14 @@ function init() {
 
   initTheme();
   loadState();
+
+  // Tek seferlik Hızlı Tekrar sıfırlama (kullanıcı talebi üzerine)
+  if (!localStorage.getItem('amok_wrong_questions_reset_2026')) {
+    state.wrongQuestions = [];
+    saveState();
+    localStorage.setItem('amok_wrong_questions_reset_2026', 'true');
+  }
+
   initAuth();
   initEventListeners();
 
@@ -8469,7 +8589,10 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     "clause_connector_desc": "Clause Connector: İki tam cümleyi (öznesi ve çekimli fiili olan) birbirine bağlar.",
     "sentence_connector_desc": "Sentence Connector: Noktalama işaretlerine (genellikle nokta veya noktalı virgül ve ardından virgül) bağlı olarak iki bağımsız cümleyi birbirine bağlar.",
     "timeline_master_cheat": "Zaman ve Kronoloji Taktik Kuralı: Zaman bağlaçlarının içinde 'will/would' kullanılmaz; 'By the time + V2' yapısı ana cümlede 'Had V3' gerektirir; durum bildiren stative verb'ler (contain, belong vb.) continuous (-ing) takısı almaz.",
-    "dialogue_matrix_cheat": "Diyalog ve Mülakat Taktik Kuralı: 'such as' ile örnekleme yaparken araya virgül konulmaz; olumsuz onaylamalar 'Neither + yardımcı fiil + özne' şeklinde kurulur; 'What' ile başlayan mülakat sorularına 'Well...' duraksama ünlemiyle başlamak yaygın bir akıcılık refleksidir."
+    "dialogue_matrix_cheat": "Diyalog ve Mülakat Taktik Kuralı: 'such as' ile örnekleme yaparken araya virgül konulmaz; olumsuz onaylamalar 'Neither + yardımcı fiil + özne' şeklinde kurulur; 'What' ile başlayan mülakat sorularına 'Well...' duraksama ünlemiyle başlamak yaygın bir akıcılık refleksidir.",
+    "noun_phrase_tactic": "İsim ve Edat Takımı Taktik Kuralı: İngilizce'de edatsız isim zincirleri soldan sağa çözülürken, edatlı (of, from, in vb.) tamlamalar Türkçe'ye sağdan sola doğru zincirleme olarak çevrilir. Niteleyen edat grubu ismin sağında yer alır.",
+    "perfect_modal_reflector": "Perfect & Continuous Modals Refleks Kuralı: 'should have done' pişmanlık/sitem (yapmalıydı ama yapmadı), 'must have done' güçlü geçmiş tahmin (yapmış olmalı), 'can't have done' geçmiş imkansızlık (yapmış olamaz), 'should be doing' şimdiki sitem (şu an yapıyor olması gerekirdi ama yapmıyor), 'must have been doing' geçmiş süreç tahmini (bir süredir yapıyor olmalıydı/yapıyordu herhalde) ifade eder.",
+    "perfect_shift_matrix": "Perfect Shift Matrix Refleks Kuralı: 'likely to have done' (yapmış olması muhtemel), 'was/were to have done' (yapmış olması planlanmıştı - ama olmadı), 'supposed to have done' (yapmış olması gerekiyordu - ama yapmadı), 'must have been doing' (yapıyor olmalıydı - süreç çıkarımı), 'couldn't/can't have done' (yapmış olamaz), 'had to do' (yapmak zorunda kaldı), 'had been supposed to do' (yapması beklenmekteydi/beklenmişti)."
   };
 
   const preDefinedExplanation = question.explanation || 
@@ -8555,7 +8678,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       correctWord = Array.isArray(question.corrects) ? question.corrects.join(', ') : '';
     } else {
       chosenWord = (question.options ? question.options[selectedAnswer] : selectedAnswer || "").toLowerCase().trim();
-      correctWord = (question.correct || (question.options && question.options[question.correctIndex]) || "").toLowerCase().trim();
+      correctWord = (question.correct || question.correctAnswer || (question.options && question.options[question.correctIndex]) || "").toLowerCase().trim();
     }
 
     text = `Seçtiğiniz kelime: <strong style="color: var(--color-wrong);">${chosenWord || '(boş)'}</strong> (Doğru cevap: <strong style="color: var(--color-correct);">${correctWord}</strong>)`;
