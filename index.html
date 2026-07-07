@@ -355,7 +355,6 @@
           <div class="simulator-top-row">
             <div class="simulator-header">
               <h2 class="simulator-title">🚂 Vagon Simülatörü</h2>
-              <p class="simulator-subtitle">İngilizce tren vagonlarının ekler yardımıyla Türkçe diline morfolojik bükülüşünü interaktif olarak simüle edin.</p>
             </div>
 
             <!-- Kokpit Ayar Paneli -->
@@ -372,6 +371,30 @@
                       <span class="slider round"></span>
                     </label>
                   </div>
+                </div>
+
+                <!-- Özne Seçici -->
+                <div class="control-group">
+                  <span class="control-label">ÖZNE SEÇİCİ</span>
+                  <select id="select-subject" class="cockpit-select">
+                    <!-- Dinamik doldurulacak -->
+                  </select>
+                </div>
+
+                <!-- Fiil Seçici -->
+                <div class="control-group">
+                  <span class="control-label">FİİL SEÇİCİ</span>
+                  <select id="select-verb" class="cockpit-select">
+                    <!-- Dinamik doldurulacak -->
+                  </select>
+                </div>
+
+                <!-- Kalkan Seçici (Seviye 10-11 için) -->
+                <div class="control-group" id="control-group-shield" style="display: none;">
+                  <span class="control-label">KALKAN SEÇİCİ (Lvl 10-11)</span>
+                  <select id="select-shield" class="cockpit-select">
+                    <!-- Dinamik doldurulacak -->
+                  </select>
                 </div>
 
                 <!-- Vites 2: Modal Seçici (Seviye 12 için aktif) -->
@@ -400,16 +423,7 @@
             </div>
           </div>
 
-          <!-- Disiplin Seçim Butonları -->
-          <div class="simulator-domains-wrapper">
-            <span class="domains-label">Disiplin Seçin:</span>
-            <div class="simulator-domain-buttons" id="simulator-domain-buttons">
-              <button class="domain-btn" data-domain="history">📜 Tarih</button>
-              <button class="domain-btn" data-domain="cinema">🎬 Sinema</button>
-              <button class="domain-btn" data-domain="economy">💼 Ekonomi</button>
-              <button class="domain-btn" data-domain="sociology">👥 Sosyoloji</button>
-            </div>
-          </div>
+
 
           <!-- Seviye Seçim Butonları -->
           <div class="simulator-levels-wrapper">
