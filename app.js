@@ -10864,6 +10864,11 @@ function initSimulatorMatrixEventListeners() {
 
     btn.onclick = () => {
       state.pureTense = { tense: t, aspect: a };
+      state.selectedSimulatorModal = 'none';
+      const modalSelector = document.getElementById('select-simulator-modal');
+      if (modalSelector) {
+        modalSelector.value = 'none';
+      }
       saveState();
       
       // Clear highlight of regular level buttons
