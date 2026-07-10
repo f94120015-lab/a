@@ -1651,9 +1651,60 @@ function getWordMeaning(word) {
   return null;
 }
 
-// Convert English text into hoverable HTML elements
-function makeTextHoverable(text) {
+function highlightGrammarPatterns(text) {
   if (!text) return '';
+  let res = text;
+  
+  // 1. Zarf + past participle + isim
+  res = res.replace(/\b(strictly|highly|well|quite|extremely)\s+([a-zA-Z]+ed)\s+([a-zA-Z]+s?)\b/gi, 
+    '<span class="gpattern-adv-ed-noun">$1 $2 $3</span>');
+    
+  // 2. Zamir + of the + isim
+  res = res.replace(/\b(both|each|all|some|any|many|few|several|none|one|most|those|these|which)\s+of\s+the\s+([a-zA-Z]+s?)\b/gi,
+    '<span class="gpattern-pron-of-the-noun">$1 of the $2</span>');
+
+  // 3. İsim + of the + isim
+  res = res.replace(/\b(?!(?:both|each|all|some|any|many|few|several|none|one|most|those|these|which)\b)([a-zA-Z]+s?)\s+of\s+the\s+([a-zA-Z]+s?)\b/gi,
+    '<span class="gpattern-noun-of-the-noun">$1 of the $2</span>');
+
+  // 4. İsim + of + isim
+  res = res.replace(/\b(?!(?:both|each|all|some|any|many|few|several|none|one|most|those|these|which)\b)([a-zA-Z]+s?)\s+of\s+(?!(?:the)\b)([a-zA-Z]+s?)\b/gi,
+    '<span class="gpattern-noun-of-noun">$1 of $2</span>');
+
+  // 5. İsim + from + isim
+  res = res.replace(/\b([a-zA-Z]+s?)\s+from\s+([a-zA-Z]+s?)\b/gi,
+    '<span class="gpattern-noun-from-noun">$1 from $2</span>');
+
+  // 6. .........ed + isim
+  res = res.replace(/\b([a-zA-Z]+ed)\s+([a-zA-Z]+s?)\b/gi, (match, p1, p2) => {
+    if (p1.toLowerCase() === 'enforced' && p2.toLowerCase() === 'as') return match;
+    return `<span class="gpattern-ed-noun">${p1} ${p2}</span>`;
+  });
+
+  // 7. .........ing + isim
+  res = res.replace(/\b([a-zA-Z]+ing)\s+(?!(?:is|are|was|were|been|am|be|to|of|in|on|at|for|with|by|from|about)\b)([a-zA-Z]+s?)\b/gi,
+    '<span class="gpattern-ing-noun">$1 $2</span>');
+
+  // 8. Edattan sonra gelen fiil (+ nesnesi)
+  res = res.replace(/\b(before|after|by|in|on|at|for|with|about|without)\s+([a-zA-Z]+ing)\b/gi,
+    '<span class="gpattern-prep-ing">$1 $2</span>');
+
+  // 9. İsim + isim (Common compounds)
+  res = res.replace(/\b(budget allocation|server failure|project proposal|marketing director|team members|software architecture|database logs|staging server|network latency|app installation|river delta|delta infrastructure|flooding anomalies|monetary variables|inflation crisis|cinema history|film directors|sound tech|validation criteria|wealth fund|investment parameters|literary movement|philosophical variables|historical infrastructure)\b/gi,
+    '<span class="gpattern-noun-noun">$1</span>');
+
+  return res;
+}
+
+// Convert English text into hoverable HTML elements
+function makeTextHoverable(text, isOption = false) {
+  if (!text) return '';
+  
+  // Highlight abstract grammar patterns in question prompts/sentences (not options)
+  if (!isOption) {
+    text = highlightGrammarPatterns(text);
+  }
+
   const wordRegex = /(<[^>]+>)|([a-zA-Z0-9'-]+)|([^a-zA-Z0-9'<-]+)/g;
   let match;
   let html = '';
@@ -1676,12 +1727,23 @@ function makeTextHoverable(text) {
           if (meanings.length > 0) meaning = meanings.join(' - ');
         }
       }
+      
+      // Highlight "to be" verbs in red for Unit 1, but NOT for options/answers
+      let isToBe = false;
+      if (!isOption && currentLesson && currentLesson.unitId === 1) {
+        const lowerWord = word.toLowerCase();
+        if (['am', 'is', 'are', 'was', 'were', 'be', 'been', 'being'].includes(lowerWord)) {
+          isToBe = true;
+        }
+      }
+      const className = isToBe ? 'hoverable-word to-be-highlight' : 'hoverable-word';
+
       if (meaning) {
         // Escape double quotes inside attribute
         const escapedMeaning = meaning.replace(/"/g, '&quot;');
-        html += `<span class="hoverable-word" data-meaning="${escapedMeaning}">${word}</span>`;
+        html += `<span class="${className}" data-meaning="${escapedMeaning}">${word}</span>`;
       } else {
-        html += `<span class="hoverable-word no-meaning">${word}</span>`;
+        html += `<span class="${className} no-meaning">${word}</span>`;
       }
     } else if (nonWord) {
       html += nonWord;
@@ -2529,7 +2591,7 @@ function enterApp() {
   renderSocialList();
   updateActiveUnitTheme();
   // Temaları yükle
-  if (['gold', 'canva', 'mint', 'sakura', 'sunset'].includes(state.activeTheme)) {
+  if (['gold', 'canva', 'mint', 'sakura', 'sunset', 'kutup', 'siber', 'orman'].includes(state.activeTheme)) {
     document.documentElement.setAttribute('data-theme', state.activeTheme);
   } else {
     const saved = localStorage.getItem('amok_theme');
@@ -3618,6 +3680,29 @@ function startLesson(lessonId, exerciseId = null) {
     currentLesson.activeExerciseTitle = '';
   }
 
+  // Dynamic Bridge translation injection logic
+  if (currentQuizQuestions && currentQuizQuestions.length > 0) {
+    let expandedQuestions = [];
+    currentQuizQuestions.forEach(q => {
+      expandedQuestions.push(q);
+      if (q.bridgeTranslation) {
+        // Create a dynamic word-bank bridge question
+        const bridgeQ = {
+          id: `${q.id}_bridge`,
+          type: 'word-bank',
+          prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
+          translation: q.bridgeTranslation.sentence,
+          sentence: q.bridgeTranslation.sentence,
+          correctOrder: q.bridgeTranslation.translation,
+          words: q.bridgeTranslation.words,
+          explanationKey: q.explanationKey || 'academic_tips_master'
+        };
+        expandedQuestions.push(bridgeQ);
+      }
+    });
+    currentQuizQuestions = expandedQuestions;
+  }
+
   currentQuestionIndex = 0;
   correctCount = 0;
   wrongCount = 0;
@@ -3939,6 +4024,16 @@ function applyClozeHighlighting(question) {
 function renderQuestion() {
   const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
   if (!question) return;
+
+  const quizScreen = document.getElementById('quiz-screen');
+  if (quizScreen) {
+    if (currentLesson && currentLesson.unitId === 10) {
+      quizScreen.setAttribute('data-unit-id', '10');
+    } else {
+      quizScreen.removeAttribute('data-unit-id');
+    }
+  }
+
   if (!question.prompt && question.question) {
     question.prompt = question.question;
   }
@@ -4001,6 +4096,14 @@ function renderQuestion() {
     question.prompt = 'Boşluğa gelecek en uygun kelimeyi seçin:';
   } else if (activeType === 'fill-blank' && question.prompt.startsWith('Boşluğa gelecek en uygun kelimeyi seçin')) {
     question.prompt = 'Boşluğu doldur';
+  }
+
+  // Highlight quotes in prompts dynamically for better scanability, ignoring HTML attributes
+  if (question.prompt) {
+    question.prompt = question.prompt.replace(/([^=]|^)(["'\u201c\u201d])([^"'\u201c\u201d]+)(["'\u201c\u201d])/g, (match, prefix, openQ, text, closeQ) => {
+      if (text.includes('<') || text.includes('>') || text.includes('=')) return match;
+      return `${prefix}${openQ}<span class="prompt-quote-highlight">${text}</span>${closeQ}`;
+    });
   }
 
   try {
@@ -4101,7 +4204,9 @@ function renderQuestion() {
 // ── Çoktan Seçmeli ──────────────────────────────────────────
 function renderMultipleChoice(container, question) {
   let promptHtml = question.prompt;
-  const isEngToTr = (question.prompt.includes("Türkçe") || question.isEngToTr) && !question.prompt.includes("_______");
+  const isEngToTr = (question.prompt.includes("Türkçe") || question.isEngToTr) && 
+                    !question.prompt.includes("_______") &&
+                    !question.prompt.includes("İngilizce:");
   
   let sentenceHtml = question.sentence || "";
   if (question.type === 'chain-expansion-differential') {
@@ -4149,19 +4254,52 @@ function renderMultipleChoice(container, question) {
     }
   }
 
-  if (isEngToTr && sentenceHtml) {
-    sentenceHtml = `"${makeTextHoverable(sentenceHtml)}"`;
+  if (sentenceHtml) {
+    // Apply hoverable meanings and grammar pattern highlights to raw English sentences
+    if (!sentenceHtml.includes('<span') && !sentenceHtml.includes('<div')) {
+      sentenceHtml = `"${makeTextHoverable(sentenceHtml)}"`;
+    }
   }
 
   const renderedOptions = question.options.map((opt, i) => {
     let optHtml = opt;
     if (!isEngToTr && optHtml) {
-      optHtml = makeTextHoverable(optHtml);
+      optHtml = makeTextHoverable(optHtml, true);
     }
     return `<button class="mc-option" data-index="${i}">${optHtml}</button>`;
   }).join('');
 
+  let tipsHtml = '';
+  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_'))) {
+    let tipText = '';
+    if (question.id.startsWith('c51_l01') || question.id.startsWith('c51_l1')) {
+      tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
+    } else if (question.id.startsWith('c51_l02') || question.id.startsWith('c51_l2')) {
+      tipText = '<strong>Ettirgen (Causative):</strong> Aktiflerde <em>Have/Let/Make + Kişi + V0</em> ve <em>Get + Kişi + to V1</em>; Pasiflerde <em>Have/Get + Nesne + V3</em> kullanılır.';
+    } else if (question.id.startsWith('c51_l03') || question.id.startsWith('c51_l3')) {
+      tipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
+    } else if (question.id.startsWith('c52_l01') || question.id.startsWith('c52_l1')) {
+      tipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
+    } else if (question.id.startsWith('c52_l02') || question.id.startsWith('c52_l2')) {
+      tipText = '<strong>Eşikte Olma (-e Üzere Olmak):</strong> <em>Be about to + V0</em>, <em>Be due to + V0</em> ve <em>Be on the verge/brink/point/edge of + V-ing</em> eşikte olma ve yakın gelecek bildirir.';
+    } else if (question.id.startsWith('c52_l03') || question.id.startsWith('c52_l3')) {
+      tipText = '<strong>Subjunctive & Gizli Şart:</strong> Aciliyet ve önem bildiren sıfatlardan sonra <em>that + Subject + V0 (yalın)</em> subjunctive yapısı; aksi takdirde anlamında <em>otherwise</em> veya -olmasaydı anlamında <em>but for</em> kullanılır.';
+    } else if (question.id.startsWith('c52_l04') || question.id.startsWith('c52_l4')) {
+      tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
+    }
+
+    if (tipText) {
+      tipsHtml = `
+        <div class="tips-reminder-card">
+          <span class="tips-reminder-icon">💡</span>
+          <div class="tips-reminder-text"><strong>TIPS HATIRLATICISI:</strong> ${tipText}</div>
+        </div>
+      `;
+    }
+  }
+
   container.innerHTML = `
+    ${tipsHtml}
     <p class="quiz-prompt">${promptHtml}</p>
     <div class="quiz-sentence-container" style="text-align: center; margin-bottom: 25px; font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; ${sentenceHtml ? '' : 'display: none;'}">
       ${sentenceHtml}
@@ -4194,7 +4332,7 @@ function renderInversionTransformer(container, question) {
 
   const optionsHtml = question.options.map((opt, i) => {
     const letter = String.fromCharCode(65 + i);
-    const optHtml = makeTextHoverable(opt);
+    const optHtml = makeTextHoverable(opt, true);
     return `
       <button class="mc-option it-option" data-index="${i}" style="display: flex; align-items: flex-start; gap: 14px; width: 100%;">
         <span class="it-option-letter" style="display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 24px; background: var(--bg-secondary, #f1f5f9); border-radius: 6px; font-weight: 700; font-size: 0.8rem; color: var(--text-muted, #64748b); flex-shrink: 0;">${letter}</span>
@@ -4426,10 +4564,12 @@ function segmentSentence(fullSentence, isEngToTr) {
     const splitBeforeAndAfterTr = [
       "sonuç olarak", "bu nedenle", "bu yüzden", "böylece", "buna göre",
       "ve sonuç olarak", "bunun bir sonucu olarak", "bu sebepten",
-      "ani bir sonuç olarak", "gerekçesiyle"
+      "ani bir sonuç olarak", "gerekçesiyle", "veya", "ya da", "ve", "ile",
+      "gelince", "aksine", "birlikte", "ilişkin", "konusunda", "açısından"
     ];
 
     const splitAfterTr = [
+      "olarak", "ederek", "yaparak", "edildiğinde", "yapıldığında", "olduğunda", "olduğu gibi",
       "meydana geldi", "ortaya çıktı", "yol açar", "sonuçlanır", "neden olur",
       "sorumludur", "kaynaklanır", "katkıda bulunur", "tetikler", "geciktirir",
       "çöktü", "düştü", "güvende kalır", "ertelendi", "gecikti", "tetiklendi",
@@ -4501,6 +4641,26 @@ function segmentSentence(fullSentence, isEngToTr) {
       }
     }
     segments = temp;
+
+    // 1b. Comma split for natural phrase clauses
+    let tempComma = [];
+    for (let s of segments) {
+      if (s.includes(',')) {
+        const parts = s.split(',');
+        for (let i = 0; i < parts.length; i++) {
+          let p = parts[i].trim();
+          if (!p) continue;
+          if (i < parts.length - 1) {
+            tempComma.push(p + ',');
+          } else {
+            tempComma.push(p);
+          }
+        }
+      } else {
+        tempComma.push(s);
+      }
+    }
+    segments = tempComma;
 
     // 2. Split before/after
     const sortedBeforeAndAfter = [...splitBeforeAndAfterTr].sort((a, b) => b.length - a.length);
@@ -4665,22 +4825,37 @@ function segmentSentence(fullSentence, isEngToTr) {
 function renderWordBank(container, question) {
   // Clean up any inline HTML style tags and residues from correctOrder and words arrays
   if (Array.isArray(question.correctOrder)) {
-    const rawTargetSentence = question.correctOrder.join(' ');
-    const cleanTargetSentence = rawTargetSentence.replace(/<[^>]+>/g, '');
-    const cleanTargetWords = cleanTargetSentence.split(/\s+/)
-      .map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
-      .filter(Boolean);
-    
-    const rawDistractors = Array.isArray(question.words)
-      ? question.words.filter(w => !question.correctOrder.includes(w))
-      : [];
-    const cleanDistractors = rawDistractors
-      .map(w => w.replace(/<[^>]+>/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
-      .filter(Boolean)
-      .filter(w => !cleanTargetWords.includes(w));
-    
-    question.correctOrder = cleanTargetWords;
-    question.words = [...cleanTargetWords, ...cleanDistractors];
+    const isPreSegmented = question.correctOrder.some(w => w.includes(' '));
+    if (isPreSegmented) {
+      const cleanTargetWords = question.correctOrder.map(w => w.replace(/<[^>]+>/g, '').trim()).filter(Boolean);
+      const rawDistractors = Array.isArray(question.words)
+        ? question.words.filter(w => !question.correctOrder.includes(w))
+        : [];
+      const cleanDistractors = rawDistractors
+        .map(w => w.replace(/<[^>]+>/g, '').trim())
+        .filter(Boolean)
+        .filter(w => !cleanTargetWords.includes(w));
+      
+      question.correctOrder = cleanTargetWords;
+      question.words = [...cleanTargetWords, ...cleanDistractors];
+    } else {
+      const rawTargetSentence = question.correctOrder.join(' ');
+      const cleanTargetSentence = rawTargetSentence.replace(/<[^>]+>/g, '');
+      const cleanTargetWords = cleanTargetSentence.split(/\s+/)
+        .map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
+        .filter(Boolean);
+      
+      const rawDistractors = Array.isArray(question.words)
+        ? question.words.filter(w => !question.correctOrder.includes(w))
+        : [];
+      const cleanDistractors = rawDistractors
+        .map(w => w.replace(/<[^>]+>/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim())
+        .filter(Boolean)
+        .filter(w => !cleanTargetWords.includes(w));
+      
+      question.correctOrder = cleanTargetWords;
+      question.words = [...cleanTargetWords, ...cleanDistractors];
+    }
   }
 
   // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
@@ -4776,7 +4951,7 @@ function renderMatching(container, question) {
       <span class="match-col-header">${question.rightHeader || "İngilizce"}</span>
       ${question.pairs.map((pair, i) => `
         <button class="match-item match-left" data-left="${pair.left}" data-pair-index="${i}">${pair.left}</button>
-        <button class="match-item match-right" data-right="${shuffledRight[i].right}">${makeTextHoverable(shuffledRight[i].right)}</button>
+        <button class="match-item match-right" data-right="${shuffledRight[i].right}">${makeTextHoverable(shuffledRight[i].right, true)}</button>
       `).join('')}
     </div>
   `;
@@ -6575,7 +6750,7 @@ function showGameOver() {
 // ============================================================
 function initTheme() {
   const saved = localStorage.getItem('amok_theme');
-  if (['gold', 'canva', 'mint', 'sakura', 'sunset'].includes(state.activeTheme)) {
+  if (['gold', 'canva', 'mint', 'sakura', 'sunset', 'kutup', 'siber', 'orman'].includes(state.activeTheme)) {
     document.documentElement.setAttribute('data-theme', state.activeTheme);
   } else if (saved === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -6584,7 +6759,7 @@ function initTheme() {
 }
 
 function toggleTheme() {
-  if (['gold', 'canva', 'mint', 'sakura', 'sunset'].includes(state.activeTheme)) {
+  if (['gold', 'canva', 'mint', 'sakura', 'sunset', 'kutup', 'siber', 'orman'].includes(state.activeTheme)) {
     state.activeTheme = 'light';
     saveState();
   }
@@ -7257,6 +7432,9 @@ function renderLeaderboard() {
 // SANAL MAĞAZA İŞLEMLERİ
 // ============================================================
 function buyStoreItem(item, price) {
+  if (isLocalEnvironment()) {
+    price = 0;
+  }
   const xpBefore = state.xp;
   if (state.xp < price) {
     showToast('Yeterli puan yok!', 'error');
@@ -7334,6 +7512,39 @@ function buyStoreItem(item, price) {
       document.documentElement.setAttribute('data-theme', 'sunset');
       showToast('Pastel Sunset teması aktif edildi! 🌅', 'success');
     }
+  } else if (item === 'kutup-theme') {
+    if (state.activeTheme === 'kutup') {
+      state.activeTheme = 'light';
+      document.documentElement.removeAttribute('data-theme');
+      showToast('Nordic Frost teması kapatıldı.', 'info');
+    } else {
+      state.activeTheme = 'kutup';
+      state.xp -= price;
+      document.documentElement.setAttribute('data-theme', 'kutup');
+      showToast('Nordic Frost teması aktif edildi! ❄️', 'success');
+    }
+  } else if (item === 'siber-theme') {
+    if (state.activeTheme === 'siber') {
+      state.activeTheme = 'light';
+      document.documentElement.removeAttribute('data-theme');
+      showToast('Cyberpunk Neon teması kapatıldı.', 'info');
+    } else {
+      state.activeTheme = 'siber';
+      state.xp -= price;
+      document.documentElement.setAttribute('data-theme', 'siber');
+      showToast('Cyberpunk Neon teması aktif edildi! 🌌', 'success');
+    }
+  } else if (item === 'orman-theme') {
+    if (state.activeTheme === 'orman') {
+      state.activeTheme = 'light';
+      document.documentElement.removeAttribute('data-theme');
+      showToast('Forest Zen teması kapatıldı.', 'info');
+    } else {
+      state.activeTheme = 'orman';
+      state.xp -= price;
+      document.documentElement.setAttribute('data-theme', 'orman');
+      showToast('Forest Zen teması aktif edildi! 🍂', 'success');
+    }
   }
 
   if (state.xp < xpBefore) {
@@ -7408,6 +7619,45 @@ function renderStore() {
       sunsetThemeBtn.textContent = '130 Puan';
       sunsetThemeBtn.classList.add('btn-primary');
       sunsetThemeBtn.classList.remove('btn-secondary');
+    }
+  }
+
+  const kutupThemeBtn = document.getElementById('buy-kutup-theme-btn');
+  if (kutupThemeBtn) {
+    if (state.activeTheme === 'kutup') {
+      kutupThemeBtn.textContent = 'Aktif (Kapat)';
+      kutupThemeBtn.classList.remove('btn-primary');
+      kutupThemeBtn.classList.add('btn-secondary');
+    } else {
+      kutupThemeBtn.textContent = '140 Puan';
+      kutupThemeBtn.classList.add('btn-primary');
+      kutupThemeBtn.classList.remove('btn-secondary');
+    }
+  }
+
+  const siberThemeBtn = document.getElementById('buy-siber-theme-btn');
+  if (siberThemeBtn) {
+    if (state.activeTheme === 'siber') {
+      siberThemeBtn.textContent = 'Aktif (Kapat)';
+      siberThemeBtn.classList.remove('btn-primary');
+      siberThemeBtn.classList.add('btn-secondary');
+    } else {
+      siberThemeBtn.textContent = '180 Puan';
+      siberThemeBtn.classList.add('btn-primary');
+      siberThemeBtn.classList.remove('btn-secondary');
+    }
+  }
+
+  const ormanThemeBtn = document.getElementById('buy-orman-theme-btn');
+  if (ormanThemeBtn) {
+    if (state.activeTheme === 'orman') {
+      ormanThemeBtn.textContent = 'Aktif (Kapat)';
+      ormanThemeBtn.classList.remove('btn-primary');
+      ormanThemeBtn.classList.add('btn-secondary');
+    } else {
+      ormanThemeBtn.textContent = '120 Puan';
+      ormanThemeBtn.classList.add('btn-primary');
+      ormanThemeBtn.classList.remove('btn-secondary');
     }
   }
 
@@ -7700,6 +7950,9 @@ function initEventListeners() {
   document.getElementById('buy-mint-theme-btn').addEventListener('click', () => buyStoreItem('mint-theme', 100));
   document.getElementById('buy-sakura-theme-btn').addEventListener('click', () => buyStoreItem('sakura-theme', 120));
   document.getElementById('buy-sunset-theme-btn').addEventListener('click', () => buyStoreItem('sunset-theme', 130));
+  document.getElementById('buy-kutup-theme-btn').addEventListener('click', () => buyStoreItem('kutup-theme', 140));
+  document.getElementById('buy-siber-theme-btn').addEventListener('click', () => buyStoreItem('siber-theme', 180));
+  document.getElementById('buy-orman-theme-btn').addEventListener('click', () => buyStoreItem('orman-theme', 120));
 
   // Seviye Belirleme Sınavı
   const startPlacementBtn = document.getElementById('btn-start-placement');
