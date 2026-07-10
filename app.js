@@ -12086,38 +12086,152 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'have_to') mWord = activeSubjectObj.plural ? 'have' : 'has';
   if (modal === 'had_to') mWord = 'had';
   
+  // New Core Modals:
+  if (modal === 'cant') mWord = "can't";
+  if (modal === 'couldnt') mWord = "couldn't";
+  if (modal === 'may_not') mWord = "may not";
+  if (modal === 'mustnt') mWord = "mustn't";
+  if (modal === 'shall') mWord = "shall";
+  if (modal === 'shouldnt') mWord = "shouldn't";
+  
+  // New Semi / Phrasal Modals:
+  if (modal === 'be_able_to') mWord = activeSubjectObj.plural ? 'are able' : 'is able';
+  if (modal === 'was_were_able_to') mWord = activeSubjectObj.plural ? 'were able' : 'was able';
+  if (modal === 'wasnt_werent_able_to') mWord = activeSubjectObj.plural ? "weren't able" : "wasn't able";
+  if (modal === 'will_have_to') mWord = 'will have';
+  if (modal === 'have_got_to') mWord = activeSubjectObj.plural ? 'have got' : 'has got';
+  if (modal === 'dont_doesnt_have_to') mWord = activeSubjectObj.plural ? "don't have" : "doesn't have";
+  if (modal === 'dont_doesnt_need_to') mWord = activeSubjectObj.plural ? "don't need" : "doesn't need";
+  if (modal === 'didnt_have_to') mWord = "didn't have";
+  if (modal === 'didnt_need_to') mWord = "didn't need";
+  if (modal === 'neednt') mWord = "needn't";
+  if (modal === 'ought_not_to') mWord = 'ought not';
+  if (modal === 'had_better') mWord = 'had better';
+  if (modal === 'had_better_not') mWord = 'had better not';
+  if (modal === 'didnt_use_to') mWord = "didn't use";
+  if (modal === 'be_used_to_ing') mWord = activeSubjectObj.plural ? 'are used' : 'is used';
+  if (modal === 'was_were_used_to_ing') mWord = activeSubjectObj.plural ? 'were used' : 'was used';
+  if (modal === 'get_used_to_ing') mWord = activeSubjectObj.plural ? 'get used' : 'gets used';
+  
+  // Negation form:
   let mNotWord = mWord + " not";
   if (modal === 'can') mNotWord = "cannot";
+  if (modal === 'cant') mNotWord = "can't";
+  if (modal === 'couldnt') mNotWord = "couldn't";
+  if (modal === 'may_not') mNotWord = "may not";
+  if (modal === 'mustnt') mNotWord = "mustn't";
+  if (modal === 'shouldnt') mNotWord = "shouldn't";
   if (modal === 'ought_to') mNotWord = "ought not";
   if (modal === 'used_to') mNotWord = "did not use";
   if (modal === 'have_to') mNotWord = activeSubjectObj.plural ? "do not have" : "does not have";
   if (modal === 'had_to') mNotWord = "did not have";
+  if (modal === 'be_able_to') mNotWord = activeSubjectObj.plural ? 'are not able' : 'is not able';
+  if (modal === 'was_were_able_to') mNotWord = activeSubjectObj.plural ? 'were not able' : 'was not able';
+  if (modal === 'wasnt_werent_able_to') mNotWord = activeSubjectObj.plural ? "weren't able" : "wasn't able";
+  if (modal === 'will_have_to') mNotWord = 'will not have';
+  if (modal === 'have_got_to') mNotWord = activeSubjectObj.plural ? 'have not got' : 'has not got';
+  if (modal === 'dont_doesnt_have_to') mNotWord = activeSubjectObj.plural ? "don't have" : "doesn't have";
+  if (modal === 'dont_doesnt_need_to') mNotWord = activeSubjectObj.plural ? "don't need" : "doesn't need";
+  if (modal === 'didnt_have_to') mNotWord = "didn't have";
+  if (modal === 'didnt_need_to') mNotWord = "didn't need";
+  if (modal === 'neednt') mNotWord = "needn't";
+  if (modal === 'ought_not_to') mNotWord = "ought not";
+  if (modal === 'had_better') mNotWord = "had better not";
+  if (modal === 'had_better_not') mNotWord = "had better not";
+  if (modal === 'didnt_use_to') mNotWord = "didn't use";
+  if (modal === 'be_used_to_ing') mNotWord = activeSubjectObj.plural ? 'are not used' : 'is not used';
+  if (modal === 'was_were_used_to_ing') mNotWord = activeSubjectObj.plural ? 'were not used' : 'was not used';
+  if (modal === 'get_used_to_ing') mNotWord = activeSubjectObj.plural ? 'do not get used' : 'does not get used';
 
   // Build the wagonChain according to the aspect, voice, negation, and question
   const subjectWagon = isPassive ? 
     { word: activeSubjectObj.eng, role: "subject", color: colorSubject } :
     { word: activeSpeaker, role: "subject", color: colorSubject };
     
+  const isIngModal = modal.endsWith('_ing');
+  const needsTo = modal.includes('to');
+  
   const verbWagon = isPassive ?
     { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
-    { word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" };
+    (isIngModal ?
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" } :
+      { word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" }
+    );
     
+  // Splitting for Question mode:
+  let qFirst = mWord;
+  let qRem = "";
+  if (isQuestion) {
+    if (modal === 'be_able_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not able" : "able";
+    } else if (modal === 'was_were_able_to') {
+      qFirst = activeSubjectObj.plural ? "were" : "was";
+      qRem = isNeg ? "not able" : "able";
+    } else if (modal === 'wasnt_werent_able_to') {
+      qFirst = activeSubjectObj.plural ? "weren't" : "wasn't";
+      qRem = "able";
+    } else if (modal === 'will_have_to') {
+      qFirst = isNeg ? "won't" : "will";
+      qRem = "have";
+    } else if (modal === 'have_to') {
+      qFirst = activeSubjectObj.plural ? (isNeg ? "don't" : "do") : (isNeg ? "doesn't" : "does");
+      qRem = "have";
+    } else if (modal === 'had_to') {
+      qFirst = isNeg ? "didn't" : "did";
+      qRem = "have";
+    } else if (modal === 'have_got_to') {
+      qFirst = activeSubjectObj.plural ? "have" : "has";
+      qRem = isNeg ? "not got" : "got";
+    } else if (modal === 'dont_doesnt_have_to') {
+      qFirst = activeSubjectObj.plural ? "do" : "does";
+      qRem = "have";
+    } else if (modal === 'dont_doesnt_need_to') {
+      qFirst = activeSubjectObj.plural ? "do" : "does";
+      qRem = "need";
+    } else if (modal === 'didnt_have_to') {
+      qFirst = "did";
+      qRem = "have";
+    } else if (modal === 'didnt_need_to') {
+      qFirst = "did";
+      qRem = "need";
+    } else if (modal === 'didnt_use_to') {
+      qFirst = "did";
+      qRem = "use";
+    } else if (modal === 'used_to') {
+      qFirst = isNeg ? "didn't" : "did";
+      qRem = "use";
+    } else if (modal === 'be_used_to_ing') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not used" : "used";
+    } else if (modal === 'was_were_used_to_ing') {
+      qFirst = activeSubjectObj.plural ? "were" : "was";
+      qRem = isNeg ? "not used" : "used";
+    } else if (modal === 'get_used_to_ing') {
+      qFirst = activeSubjectObj.plural ? (isNeg ? "don't" : "do") : (isNeg ? "doesn't" : "does");
+      qRem = "get used";
+    } else {
+      qFirst = isNeg ? mNotWord : mWord;
+      qRem = "";
+    }
+  }
+
   if (aspect === 'simple') {
     if (isQuestion) {
-      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
       wagonChain.push(subjectWagon);
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
-      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      if (qRem) wagonChain.push({ word: qRem, role: "status_linker", color: colorAux });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       if (isPassive) {
-        wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
+        wagonChain.push({ word: isIngModal ? "being" : "be", role: "passive_inf", color: colorAux });
       }
       wagonChain.push(verbWagon);
     } else {
       wagonChain.push(subjectWagon);
       wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       if (isPassive) {
-        wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
+        wagonChain.push({ word: isIngModal ? "being" : "be", role: "passive_inf", color: colorAux });
       }
       wagonChain.push(verbWagon);
     }
@@ -12130,10 +12244,10 @@ function getModalTenseData(modal, tense, aspect) {
       { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
       
     if (isQuestion) {
-      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
       wagonChain.push(subjectWagon);
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
-      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      if (qRem) wagonChain.push({ word: qRem, role: "status_linker", color: colorAux });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "be", role: "continuous_motor", color: colorContinuous });
       if (isPassive) {
         wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
@@ -12142,7 +12256,7 @@ function getModalTenseData(modal, tense, aspect) {
     } else {
       wagonChain.push(subjectWagon);
       wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "be", role: "continuous_motor", color: colorContinuous });
       if (isPassive) {
         wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
@@ -12154,10 +12268,10 @@ function getModalTenseData(modal, tense, aspect) {
     }
   } else if (aspect === 'perfect') {
     if (isQuestion) {
-      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
       wagonChain.push(subjectWagon);
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
-      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      if (qRem) wagonChain.push({ word: qRem, role: "status_linker", color: colorAux });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
       if (isPassive) {
         wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
@@ -12166,7 +12280,7 @@ function getModalTenseData(modal, tense, aspect) {
     } else {
       wagonChain.push(subjectWagon);
       wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
       if (isPassive) {
         wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
@@ -12182,10 +12296,10 @@ function getModalTenseData(modal, tense, aspect) {
       { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
 
     if (isQuestion) {
-      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
       wagonChain.push(subjectWagon);
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
-      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      if (qRem) wagonChain.push({ word: qRem, role: "status_linker", color: colorAux });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
       if (isPassive) {
@@ -12195,7 +12309,7 @@ function getModalTenseData(modal, tense, aspect) {
     } else {
       wagonChain.push(subjectWagon);
       wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
-      if (modal === 'ought_to' || modal === 'used_to' || modal === 'have_to' || modal === 'had_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
       if (isPassive) {
@@ -12211,7 +12325,7 @@ function getModalTenseData(modal, tense, aspect) {
   // Handle capitalization of first word and question mark
   if (isQuestion) {
     wagonChain[0].word = wagonChain[0].word.charAt(0).toUpperCase() + wagonChain[0].word.slice(1);
-    if (wagonChain[1] && wagonChain[1].role === "subject") {
+    if (wagonChain[1] && wagonChain[1].role == "subject") {
       wagonChain[1].word = wagonChain[1].word.charAt(0).toLowerCase() + wagonChain[1].word.slice(1);
     }
     wagonChain[wagonChain.length - 1].word += "?";
@@ -12228,11 +12342,7 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'can' || modal === 'may') {
     const isCan = modal === 'can';
     if (aspect === 'simple') {
-      if (isNeg) {
-        verbForm = isCan ? (stem + "amaz") : (stem + "mayabilir");
-      } else {
-        verbForm = stem + "abilir";
-      }
+      verbForm = isNeg ? (isCan ? (stem + "amaz") : (stem + "mayabilir")) : (stem + "abilir");
     } else if (aspect === 'progressive') {
       verbForm = isNeg ? (stem + "mıyor olabilir") : (stem + "yor olabilir");
     } else if (aspect === 'perfect') {
@@ -12240,20 +12350,46 @@ function getModalTenseData(modal, tense, aspect) {
     } else if (aspect === 'perfect-progressive') {
       verbForm = isNeg ? (stem + "mamakta olabilir") : (stem + "makta olabilir");
     }
+  } else if (modal === 'cant') {
+    if (aspect === 'simple') {
+      verbForm = stem + "amaz";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "ıyor olamaz";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "mış olamaz";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "makta olamaz";
+    }
   } else if (modal === 'could' || modal === 'might') {
     const isCould = modal === 'could';
     if (aspect === 'simple') {
-      if (isNeg) {
-        verbForm = isCould ? (stem + "amazdı") : (stem + "mayabilirdi");
-      } else {
-        verbForm = stem + "abilirdi";
-      }
+      verbForm = isNeg ? (isCould ? (stem + "amazdı") : (stem + "mayabilirdi")) : (stem + "abilirdi");
     } else if (aspect === 'progressive') {
       verbForm = isNeg ? (stem + "mıyor olabilirdi") : (stem + "yor olabilirdi");
     } else if (aspect === 'perfect') {
       verbForm = isNeg ? (stem + "mamış olabilirdi") : (stem + "mış olabilirdi");
     } else if (aspect === 'perfect-progressive') {
       verbForm = isNeg ? (stem + "mamakta olabilirdi") : (stem + "makta olabilirdi");
+    }
+  } else if (modal === 'couldnt') {
+    if (aspect === 'simple') {
+      verbForm = stem + "amazdı";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "ıyor olamazdı";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "mış olamazdı";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "makta olamazdı";
+    }
+  } else if (modal === 'may_not') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mayabilir";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olabilir";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "mamış olabilir";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "mamakta olabilir";
     }
   } else if (modal === 'must') {
     if (aspect === 'simple') {
@@ -12265,6 +12401,26 @@ function getModalTenseData(modal, tense, aspect) {
     } else if (aspect === 'perfect-progressive') {
       verbForm = isNeg ? (stem + "mamakta olmalıdır") : (stem + "makta olmalıdır");
     }
+  } else if (modal === 'mustnt') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mamalıdır";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olmalıdır";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "mamış olmalıdır";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "mamakta olmalıdır";
+    }
+  } else if (modal === 'shall') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mayacak") : (stem + "acak");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olacak") : (stem + "yor olacak");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mamış olacak") : (stem + "mış olacak");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mamakta olacak") : (stem + "makta olacak");
+    }
   } else if (modal === 'should' || modal === 'ought_to') {
     if (aspect === 'simple') {
       verbForm = isNeg ? (stem + "mamalıdır") : (stem + "malıdır");
@@ -12274,6 +12430,16 @@ function getModalTenseData(modal, tense, aspect) {
       verbForm = isNeg ? (stem + "mamış olmalıydı") : (stem + "mış olmalıydı");
     } else if (aspect === 'perfect-progressive') {
       verbForm = isNeg ? (stem + "mamakta olmalıydı") : (stem + "makta olmalıydı");
+    }
+  } else if (modal === 'shouldnt') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mamalıdır";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olmalıdır";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "mamış olmalıydı";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "mamakta olmalıydı";
     }
   } else if (modal === 'would') {
     if (aspect === 'simple') {
@@ -12315,42 +12481,214 @@ function getModalTenseData(modal, tense, aspect) {
     } else if (aspect === 'perfect-progressive') {
       verbForm = isNeg ? (stem + "mak zorunda kalmamıştı") : (stem + "mak zorunda kalmıştı");
     }
+  } else if (modal === 'be_able_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "amaz") : (stem + "abilir");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "abiliyor değil") : (stem + "abiliyor");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "abilmiş değil") : (stem + "abilmiştir");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "abilmekte değil") : (stem + "abilmektedir");
+    }
+  } else if (modal === 'was_were_able_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "amadı") : (stem + "abildi");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "abiliyordu değil") : (stem + "abiliyordu");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "abilmişti değil") : (stem + "abilmişti");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "abilmekteydi değil") : (stem + "abilmekteydi");
+    }
+  } else if (modal === 'wasnt_werent_able_to') {
+    if (aspect === 'simple') {
+      verbForm = stem + "amadı";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "abiliyordu değil";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "abilmişti değil";
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = stem + "abilmekteydi değil";
+    }
+  } else if (modal === 'will_have_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmayacak") : (stem + "mak zorunda kalacak");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmıyor olacak") : (stem + "mak zorunda kalıyor olacak");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmamış olacak") : (stem + "mak zorunda kalmış olacak");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmamakta olacak") : (stem + "mak zorunda kalmakta olacak");
+    }
+  } else if (modal === 'have_got_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+    }
+  } else if (modal === 'dont_doesnt_have_to') {
+    if (aspect === 'simple' || aspect === 'progressive') {
+      verbForm = stem + "mak zorunda değil";
+    } else {
+      verbForm = stem + "mak zorunda kalmadı";
+    }
+  } else if (modal === 'dont_doesnt_need_to') {
+    if (aspect === 'simple' || aspect === 'progressive') {
+      verbForm = stem + "masına gerek yok";
+    } else {
+      verbForm = stem + "masına gerek kalmadı";
+    }
+  } else if (modal === 'didnt_have_to') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mak zorunda kalmadı";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "masına gerek kalmıyordu";
+    } else {
+      verbForm = stem + "masına gerek kalmamıştı";
+    }
+  } else if (modal === 'didnt_need_to') {
+    if (aspect === 'simple') {
+      verbForm = stem + "masına gerek kalmadı";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "masına gerek kalmıyordu";
+    } else {
+      verbForm = stem + "masına gerek kalmamıştı";
+    }
+  } else if (modal === 'neednt') {
+    if (aspect === 'simple') {
+      verbForm = stem + "ması gerekmez";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "ması gerekmiyor";
+    } else if (aspect === 'perfect') {
+      verbForm = stem + "ması gerekmezdi";
+    } else {
+      verbForm = stem + "ması gerekmemekte";
+    }
+  } else if (modal === 'ought_not_to') {
+    if (aspect === 'simple') {
+      verbForm = stem + "masa iyi olur";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olsa iyi olur";
+    } else {
+      verbForm = stem + "mamış olsa iyi olurdu";
+    }
+  } else if (modal === 'had_better') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "masa iyi olur") : (stem + "sa iyi olur");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olsa iyi olur") : (stem + "yor olsa iyi olur");
+    } else {
+      verbForm = isNeg ? (stem + "mamış olsa iyi olurdu") : (stem + "mış olsa iyi olurdu");
+    }
+  } else if (modal === 'had_better_not') {
+    if (aspect === 'simple') {
+      verbForm = stem + "masa iyi olur";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olsa iyi olur";
+    } else {
+      verbForm = stem + "mamış olsa iyi olurdu";
+    }
+  } else if (modal === 'didnt_use_to') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mazdı";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olurdu";
+    } else {
+      verbForm = stem + "mamış olurdu";
+    }
+  } else if (modal === 'be_used_to_ing') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "maya alışık değil") : (stem + "maya alışıktır");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "maya alışıyor değil") : (stem + "maya alışmaktadır");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "maya alışmış değil") : (stem + "maya alışmıştır");
+    } else {
+      verbForm = isNeg ? (stem + "maya alışmakta değil") : (stem + "maya alışmaktadır");
+    }
+  } else if (modal === 'was_were_used_to_ing') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "maya alışık değildi") : (stem + "maya alışıktı");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "maya alışıyor değildi") : (stem + "maya alışmaktaydı");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "maya alışmış değildi") : (stem + "maya alışmıştı");
+    } else {
+      verbForm = isNeg ? (stem + "maya alışmakta değildi") : (stem + "maya alışmaktaydı");
+    }
+  } else if (modal === 'get_used_to_ing') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "maya alışmaz") : (stem + "maya alışır");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "maya alışmıyor") : (stem + "maya alışıyor");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "maya alışmadı") : (stem + "maya alıştı");
+    } else {
+      verbForm = isNeg ? (stem + "maya alışmamakta") : (stem + "maya alışmakta");
+    }
   }
 
   // Handle Turkish question particle
   if (isQuestion) {
-    if (verbForm.endsWith("bilir")) verbForm += " mi?";
-    else if (verbForm.endsWith("bilirdi")) verbForm = verbForm.replace("bilirdi", "bilir miydi?");
-    else if (verbForm.endsWith("amaz")) verbForm += " mı?";
-    else if (verbForm.endsWith("amazdı")) verbForm = verbForm.replace("amazdı", "amaz mıydı?");
-    else if (verbForm.endsWith("mayabilir")) verbForm += " mi?";
-    else if (verbForm.endsWith("mayabilirdi")) verbForm = verbForm.replace("mayabilirdi", "mayabilir miydi?");
-    else if (verbForm.endsWith("malıdır")) verbForm = verbForm.replace("malıdır", "malı mıdır?");
-    else if (verbForm.endsWith("mamalıdır")) verbForm = verbForm.replace("mamalıdır", "mamalı mıdır?");
-    else if (verbForm.endsWith("olabilir")) verbForm = verbForm.replace("olabilir", "olabilir mi?");
-    else if (verbForm.endsWith("olabilirdi")) verbForm = verbForm.replace("olabilirdi", "olabilir miydi?");
-    else if (verbForm.endsWith("olmalıdır")) verbForm = verbForm.replace("olmalıdır", "olmalı mıdır?");
-    else if (verbForm.endsWith("olmalıydı")) verbForm = verbForm.replace("olmalıydı", "olmalı mıydı?");
-    else if (verbForm.endsWith("olurdu")) verbForm = verbForm.replace("olurdu", "olur muydu?");
-    else if (verbForm.endsWith("zorunda")) verbForm += " mı?";
-    else if (verbForm.endsWith("zorunda değil")) verbForm = verbForm.replace("zorunda değil", "zorunda değil mi?");
-    else if (verbForm.endsWith("zorundaydı")) verbForm = verbForm.replace("zorundaydı", "zorunda mıydı?");
-    else if (verbForm.endsWith("zorunda değildi")) verbForm = verbForm.replace("zorunda değildi", "zorunda değil miydi?");
-    else if (verbForm.endsWith("kaldı")) verbForm = verbForm.replace("kaldı", "kaldı mı?");
-    else if (verbForm.endsWith("kalmadı")) verbForm = verbForm.replace("kalmadı", "kalmadı mı?");
-    else if (verbForm.endsWith("kalmıştı")) verbForm = verbForm.replace("kalmıştı", "kalmış mıydı?");
-    else if (verbForm.endsWith("kalmamıştı")) verbForm = verbForm.replace("kalmamıştı", "kalmamış mıydı?");
-    else if (verbForm.endsWith("ardı")) {
-      const lastV = getLastVowel(stem);
-      const harmony = get4WayHarmony(lastV);
-      verbForm = verbForm.replace("ardı", "ar m" + harmony + "dı?");
+    function convertTrToQuestion(f) {
+      let trimmed = f.trim();
+      if (trimmed.endsWith('.')) trimmed = trimmed.slice(0, -1);
+      
+      if (trimmed.endsWith("olabilir")) return trimmed.replace("olabilir", "olabilir mi?");
+      if (trimmed.endsWith("olabilirdi")) return trimmed.replace("olabilirdi", "olabilir miydi?");
+      if (trimmed.endsWith("olurdu")) return trimmed.replace("olurdu", "olur muydu?");
+      if (trimmed.endsWith("zorunda")) return trimmed + " mı?";
+      if (trimmed.endsWith("zorunda değil")) return trimmed.replace("zorunda değil", "zorunda değil mi?");
+      if (trimmed.endsWith("zorundaydı")) return trimmed.replace("zorundaydı", "zorunda mıydı?");
+      if (trimmed.endsWith("zorunda değildi")) return trimmed.replace("zorunda değildi", "zorunda değil miydi?");
+      if (trimmed.endsWith("kaldı")) return trimmed.replace("kaldı", "kaldı mı?");
+      if (trimmed.endsWith("kalmadı")) return trimmed.replace("kalmadı", "kalmadı mı?");
+      if (trimmed.endsWith("kalmıştı")) return trimmed.replace("kalmıştı", "kalmış mıydı?");
+      if (trimmed.endsWith("kalmamıştı")) return trimmed.replace("kalmamıştı", "kalmamış mıydı?");
+      if (trimmed.endsWith("alışıktır")) return trimmed.replace("alışıktır", "alışık mıdır?");
+      if (trimmed.endsWith("alışıktı")) return trimmed.replace("alışıktı", "alışık mıydı?");
+      if (trimmed.endsWith("alışır")) return trimmed.replace("alışır", "alışır mı?");
+      if (trimmed.endsWith("alışıyor")) return trimmed.replace("alışıyor", "alışıyor mu?");
+      if (trimmed.endsWith("alıştı")) return trimmed.replace("alıştı", "alıştı mı?");
+      if (trimmed.endsWith("alışmadı")) return trimmed.replace("alışmadı", "alışmadı mı?");
+      if (trimmed.endsWith("gerekmez")) return trimmed.replace("gerekmez", "gerekmez mi?");
+      if (trimmed.endsWith("gerekmezdi")) return trimmed.replace("gerekmezdi", "gerekmez miydi?");
+      if (trimmed.endsWith("gerekmiyor")) return trimmed.replace("gerekmiyor", "gerekmiyor mu?");
+      if (trimmed.endsWith("gerek yok")) return trimmed.replace("gerek yok", "gerek yok mu?");
+      if (trimmed.endsWith("gerek kalmadı")) return trimmed.replace("gerek kalmadı", "gerek kalmadı mı?");
+      if (trimmed.endsWith("gerek kalmıyordu")) return trimmed.replace("gerek kalmıyordu", "gerek kalmıyor muydu?");
+      if (trimmed.endsWith("gerek kalmamıştı")) return trimmed.replace("gerek kalmamıştı", "gerek kalmamış mıydı?");
+      if (trimmed.endsWith("iyi olur")) return trimmed.replace("iyi olur", "iyi olur mu?");
+      if (trimmed.endsWith("iyi olurdu")) return trimmed.replace("iyi olurdu", "iyi olur muydu?");
+      if (trimmed.endsWith("bilir")) return trimmed + " mi?";
+      if (trimmed.endsWith("bilirdi")) return trimmed.replace("bilirdi", "bilir miydi?");
+      if (trimmed.endsWith("amaz")) return trimmed + " mı?";
+      if (trimmed.endsWith("amazdı")) return trimmed.replace("amazdı", "amaz mıydı?");
+      if (trimmed.endsWith("mayabilir")) return trimmed + " mi?";
+      if (trimmed.endsWith("mayabilirdi")) return trimmed.replace("mayabilirdi", "mayabilir miydi?");
+      if (trimmed.endsWith("malıdır")) return trimmed.replace("malıdır", "malı mıdır?");
+      if (trimmed.endsWith("mamalıdır")) return trimmed.replace("mamalıdır", "mamalı mıdır?");
+      if (trimmed.endsWith("acak")) return trimmed + " mı?";
+      if (trimmed.endsWith("ecek")) return trimmed + " mi?";
+      if (trimmed.endsWith("acaklar")) return trimmed.replace("acaklar", "acaklar mı?");
+      if (trimmed.endsWith("ecekler")) return trimmed.replace("ecekler", "ecekler mi?");
+      if (trimmed.endsWith("ardı")) {
+        const lastV = getLastVowel(trimmed.slice(0, -4));
+        const harmony = get4WayHarmony(lastV);
+        return trimmed.replace("ardı", "ar m" + harmony + "dı?");
+      }
+      if (trimmed.endsWith("erdi")) return trimmed.replace("erdi", "er miydi?");
+      if (trimmed.endsWith("mazdı")) return trimmed.replace("mazdı", "maz mıydı?");
+      if (trimmed.endsWith("mezdi")) return trimmed.replace("mezdi", "mez miydi?");
+      
+      return trimmed + " mu?";
     }
-    else if (verbForm.endsWith("erdi")) {
-      verbForm = verbForm.replace("erdi", "er miydi?");
-    }
-    else if (verbForm.endsWith("mazdı")) verbForm = verbForm.replace("mazdı", "maz mıydı?");
-    else if (verbForm.endsWith("mezdi")) verbForm = verbForm.replace("mezdi", "mez miydi?");
-    else verbForm += " mi?";
+    verbForm = convertTrToQuestion(verbForm);
   } else {
     verbForm += ".";
   }
