@@ -10957,18 +10957,8 @@ function initSimulator() {
 function initSimulatorMatrixEventListeners() {
   const matrixBtns = document.querySelectorAll('.matrix-cell-btn');
   matrixBtns.forEach(btn => {
-    // Style initial active state
     const t = btn.dataset.tense;
     const a = btn.dataset.aspect;
-    if (state.pureTense && state.pureTense.tense === t && state.pureTense.aspect === a) {
-      btn.style.background = 'var(--accent-primary)';
-      btn.style.color = '#fff';
-      btn.style.borderColor = 'var(--accent-primary)';
-    } else {
-      btn.style.background = 'var(--bg-body)';
-      btn.style.color = 'var(--text-primary)';
-      btn.style.borderColor = 'var(--border-color)';
-    }
 
     btn.onclick = () => {
       state.pureTense = { tense: t, aspect: a };
@@ -10986,19 +10976,6 @@ function initSimulatorMatrixEventListeners() {
           b.classList.remove('active');
         });
       }
-
-      // Update matrix buttons highlight
-      matrixBtns.forEach(b => {
-        if (b.dataset.tense === t && b.dataset.aspect === a) {
-          b.style.background = 'var(--accent-primary)';
-          b.style.color = '#fff';
-          b.style.borderColor = 'var(--accent-primary)';
-        } else {
-          b.style.background = 'var(--bg-body)';
-          b.style.color = 'var(--text-primary)';
-          b.style.borderColor = 'var(--border-color)';
-        }
-      });
 
       deactivatedWagons = [];
       showMissionQuestion = false;
@@ -11226,6 +11203,7 @@ function renderSimulatorContent() {
 
   syncCockpitUI();
   syncPredicateLevelsHighlight();
+  syncPureTenseMatrixHighlight();
   syncModalMatrixHighlight();
 }
 
@@ -13031,7 +13009,29 @@ function syncPredicateLevelsHighlight() {
 }
 
 
+function syncPureTenseMatrixHighlight() {
+  const currentLvlData = getActiveLevelData(selectedLevel);
+  const currentCount = getPredicateElementCount(currentLvlData ? currentLvlData.wagon_chain : null);
+
+  document.querySelectorAll('.matrix-cell-btn').forEach(btn => {
+    const t = btn.dataset.tense;
+    const a = btn.dataset.aspect;
+    
+    const isActivelySelected = (state.pureTense && state.pureTense.tense === t && state.pureTense.aspect === a && (!state.selectedSimulatorModal || state.selectedSimulatorModal === 'none'));
+    btn.classList.toggle('active', isActivelySelected);
+    
+    const data = getPureTenseData(t, a);
+    const btnCount = getPredicateElementCount(data ? data.wagon_chain : null);
+    
+    const isMatch = (btnCount === currentCount);
+    btn.classList.toggle('match', isMatch);
+  });
+}
+
 function syncModalMatrixHighlight() {
+  const currentLvlData = getActiveLevelData(selectedLevel);
+  const currentCount = getPredicateElementCount(currentLvlData ? currentLvlData.wagon_chain : null);
+
   document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
     const btnModal = btn.dataset.modal;
     const btnAspect = btn.dataset.aspect || 'simple';
@@ -13054,5 +13054,15 @@ function syncModalMatrixHighlight() {
       currentTense === btnTense
     );
     btn.classList.toggle('active', isMatch);
+
+    // Calculate count match
+    const originalNeg = state.negationOn;
+    state.negationOn = btnNeg;
+    const data = getModalTenseData(btnModal, btnTense, btnAspect);
+    state.negationOn = originalNeg;
+    const btnCount = getPredicateElementCount(data ? data.wagon_chain : null);
+
+    const isCountMatch = (btnCount === currentCount);
+    btn.classList.toggle('match', isCountMatch);
   });
 }

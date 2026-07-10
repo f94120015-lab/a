@@ -8164,6 +8164,13 @@ input:checked + .slider:before {
   transform: translateY(-1px);
 }
 
+.matrix-cell-btn.match, .modal-matrix-btn.match {
+  border-color: rgba(59, 130, 246, 0.45) !important;
+  background: rgba(59, 130, 246, 0.05) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 4px rgba(59, 130, 246, 0.18);
+}
+
 .matrix-cell-btn.active, .modal-matrix-btn.active {
   border-color: var(--accent-primary) !important;
   background: rgba(139, 126, 200, 0.12) !important;
