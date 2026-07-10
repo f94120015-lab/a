@@ -7017,10 +7017,10 @@ span[style*="color:#339af0"] * {
 .simulator-container {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 32px 20px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 14px;
   animation: fadeIn 0.4s ease;
 }
 
@@ -7051,11 +7051,11 @@ span[style*="color:#339af0"] * {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 20px 24px;
+  padding: 10px 16px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .levels-label {
@@ -7868,11 +7868,11 @@ span[style*="color:#339af0"] * {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 16px 20px;
+  padding: 10px 16px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   transition: all var(--transition-base);
 }
 
