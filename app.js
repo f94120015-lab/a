@@ -10792,41 +10792,45 @@ function initSimulator() {
 
   // TAB SWITCHING LOGIC FOR MATRIX
   const btnTabPure = document.getElementById('btn-tab-pure');
-  const btnTabModals = document.getElementById('btn-tab-modals');
+  const btnTabCore = document.getElementById('btn-tab-core');
+  const btnTabSemi = document.getElementById('btn-tab-semi');
+  const btnTabPref = document.getElementById('btn-tab-pref');
+  
   const tabPureContent = document.getElementById('matrix-tab-pure-content');
-  const tabModalsContent = document.getElementById('matrix-tab-modals-content');
+  const tabCoreContent = document.getElementById('matrix-tab-core-content');
+  const tabSemiContent = document.getElementById('matrix-tab-semi-content');
+  const tabPrefContent = document.getElementById('matrix-tab-pref-content');
 
-  if (btnTabPure && btnTabModals && tabPureContent && tabModalsContent) {
-    btnTabPure.onclick = () => {
-      btnTabPure.classList.add('active');
-      btnTabPure.style.border = '1px solid var(--accent-primary)';
-      btnTabPure.style.background = 'rgba(59, 130, 246, 0.1)';
-      btnTabPure.style.color = 'var(--accent-primary)';
+  const tabs = [
+    { btn: btnTabPure, content: tabPureContent },
+    { btn: btnTabCore, content: tabCoreContent },
+    { btn: btnTabSemi, content: tabSemiContent },
+    { btn: btnTabPref, content: tabPrefContent }
+  ];
 
-      btnTabModals.classList.remove('active');
-      btnTabModals.style.border = '1px solid var(--border-color)';
-      btnTabModals.style.background = 'var(--bg-body)';
-      btnTabModals.style.color = 'var(--text-secondary)';
-
-      tabPureContent.style.display = 'block';
-      tabModalsContent.style.display = 'none';
-    };
-
-    btnTabModals.onclick = () => {
-      btnTabModals.classList.add('active');
-      btnTabModals.style.border = '1px solid var(--accent-primary)';
-      btnTabModals.style.background = 'rgba(59, 130, 246, 0.1)';
-      btnTabModals.style.color = 'var(--accent-primary)';
-
-      btnTabPure.classList.remove('active');
-      btnTabPure.style.border = '1px solid var(--border-color)';
-      btnTabPure.style.background = 'var(--bg-body)';
-      btnTabPure.style.color = 'var(--text-secondary)';
-
-      tabPureContent.style.display = 'none';
-      tabModalsContent.style.display = 'block';
-    };
-  }
+  tabs.forEach(tab => {
+    if (tab.btn && tab.content) {
+      tab.btn.onclick = () => {
+        tabs.forEach(t => {
+          if (t.btn && t.content) {
+            if (t === tab) {
+              t.btn.classList.add('active');
+              t.btn.style.border = '1px solid var(--accent-primary)';
+              t.btn.style.background = 'rgba(59, 130, 246, 0.1)';
+              t.btn.style.color = 'var(--accent-primary)';
+              t.content.style.display = 'block';
+            } else {
+              t.btn.classList.remove('active');
+              t.btn.style.border = '1px solid var(--border-color)';
+              t.btn.style.background = 'var(--bg-body)';
+              t.btn.style.color = 'var(--text-secondary)';
+              t.content.style.display = 'none';
+            }
+          }
+        });
+      };
+    }
+  });
 
   // MODAL MATRIX BUTTONS CLICK HANDLERS
   document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
