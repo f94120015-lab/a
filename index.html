@@ -441,6 +441,7 @@
                 <button type="button" class="matrix-tab-btn" id="btn-tab-core" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Saf Modallar</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-semi" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Yarı-Modallar &amp; Phrasal Yapılar</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-pref" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Tercih Yapıları (Preferences)</button>
+                <button type="button" class="matrix-tab-btn" id="btn-tab-perfect" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Geçmiş Zaman Modalları (Perfect Modals)</button>
               </div>
 
               <!-- Saf Zamanlar İçeriği -->
@@ -544,6 +545,27 @@
                     <button type="button" class="modal-matrix-btn" data-modal="would_rather" data-aspect="progressive">would rather be doing</button>
                     <button type="button" class="modal-matrix-btn" data-modal="would_rather" data-aspect="perfect">would rather have done</button>
                     <button type="button" class="modal-matrix-btn" data-modal="would_rather_not" data-aspect="simple">would rather not do</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Geçmiş Zaman Modalları İçeriği -->
+              <div id="matrix-tab-perfect-content" style="display: none;">
+                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px;">
+                    <button type="button" class="modal-matrix-btn" data-modal="must" data-aspect="perfect">must have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="must" data-aspect="perfect" data-neg="true">must not have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="must" data-aspect="perfect-progressive">must have been doing</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="cant" data-aspect="perfect">can't have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="couldnt" data-aspect="perfect">couldn't have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="neednt" data-aspect="perfect">needn't have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="should" data-aspect="perfect">should have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="shouldnt" data-aspect="perfect">shouldn't have done</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="should" data-aspect="progressive">should be doing</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="should" data-aspect="perfect-progressive">should have been doing</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="ought_to" data-aspect="perfect-progressive">ought to have been doing</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_able_to" data-aspect="perfect" data-tense="future">will have been able to do</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="would" data-aspect="perfect">would have done</button>
                   </div>
                 </div>
               </div>

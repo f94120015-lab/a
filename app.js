@@ -10795,17 +10795,20 @@ function initSimulator() {
   const btnTabCore = document.getElementById('btn-tab-core');
   const btnTabSemi = document.getElementById('btn-tab-semi');
   const btnTabPref = document.getElementById('btn-tab-pref');
+  const btnTabPerfect = document.getElementById('btn-tab-perfect');
   
   const tabPureContent = document.getElementById('matrix-tab-pure-content');
   const tabCoreContent = document.getElementById('matrix-tab-core-content');
   const tabSemiContent = document.getElementById('matrix-tab-semi-content');
   const tabPrefContent = document.getElementById('matrix-tab-pref-content');
+  const tabPerfectContent = document.getElementById('matrix-tab-perfect-content');
 
   const tabs = [
     { btn: btnTabPure, content: tabPureContent },
     { btn: btnTabCore, content: tabCoreContent },
     { btn: btnTabSemi, content: tabSemiContent },
-    { btn: btnTabPref, content: tabPrefContent }
+    { btn: btnTabPref, content: tabPrefContent },
+    { btn: btnTabPerfect, content: tabPerfectContent }
   ];
 
   tabs.forEach(tab => {
@@ -10836,17 +10839,30 @@ function initSimulator() {
   document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
     btn.onclick = () => {
       const modalVal = btn.dataset.modal;
-      const aspectVal = btn.dataset.aspect;
+      const aspectVal = btn.dataset.aspect || 'simple';
+      const tenseVal = btn.dataset.tense || 'present';
+      const isNeg = btn.dataset.neg === 'true';
 
       state.selectedSimulatorModal = modalVal;
-      const modalSelect = document.getElementById('select-simulator-modal');
-      if (modalSelect) modalSelect.value = modalVal;
+      state.negationOn = isNeg;
 
-      // Update aspect settings based on target aspect
-      if (aspectVal === 'simple') selectedLevel = 2;
-      else if (aspectVal === 'progressive') selectedLevel = 4;
-      else if (aspectVal === 'perfect') selectedLevel = 6;
-      else selectedLevel = 9;
+      // Determine selectedLevel based on tense and aspect
+      if (tenseVal === 'future') {
+        if (aspectVal === 'simple') selectedLevel = 3;
+        else if (aspectVal === 'progressive') selectedLevel = 4;
+        else if (aspectVal === 'perfect') selectedLevel = 8;
+        else selectedLevel = 9;
+      } else if (tenseVal === 'past') {
+        if (aspectVal === 'simple') selectedLevel = 2;
+        else if (aspectVal === 'progressive') selectedLevel = 5;
+        else if (aspectVal === 'perfect') selectedLevel = 7;
+        else selectedLevel = 12;
+      } else {
+        if (aspectVal === 'simple') selectedLevel = 2;
+        else if (aspectVal === 'progressive') selectedLevel = 4;
+        else if (aspectVal === 'perfect') selectedLevel = 6;
+        else selectedLevel = 9;
+      }
 
       state.pureTense = null;
       saveState();
@@ -12954,14 +12970,25 @@ function syncPredicateLevelsHighlight() {
 function syncModalMatrixHighlight() {
   document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
     const btnModal = btn.dataset.modal;
-    const btnAspect = btn.dataset.aspect;
+    const btnAspect = btn.dataset.aspect || 'simple';
+    const btnNeg = btn.dataset.neg === 'true';
+    const btnTense = btn.dataset.tense || 'present';
     
     let currentAspect = 'simple';
     if (selectedLevel === 4 || selectedLevel === 5) currentAspect = 'progressive';
     if (selectedLevel === 6 || selectedLevel === 7 || selectedLevel === 8 || selectedLevel === 10 || selectedLevel === 12) currentAspect = 'perfect';
     if (selectedLevel === 9 || selectedLevel === 11) currentAspect = 'perfect-progressive';
 
-    const isMatch = (state.selectedSimulatorModal === btnModal && currentAspect === btnAspect);
+    let currentTense = 'present';
+    if (selectedLevel === 2 || selectedLevel === 5 || selectedLevel === 7 || selectedLevel === 12) currentTense = 'past';
+    if (selectedLevel === 3 || selectedLevel === 8 || selectedLevel === 9) currentTense = 'future';
+
+    const isMatch = (
+      state.selectedSimulatorModal === btnModal && 
+      currentAspect === btnAspect && 
+      (state.negationOn || false) === btnNeg &&
+      currentTense === btnTense
+    );
     btn.classList.toggle('active', isMatch);
   });
 }
