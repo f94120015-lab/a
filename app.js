@@ -10136,7 +10136,21 @@ function getActiveLevelData(lvlNum) {
     if (ptData) return ptData;
   }
   
-  const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
+    // Intercept for Modal Selector
+  if (state.selectedSimulatorModal && state.selectedSimulatorModal !== 'none') {
+    // Map lvlNum to aspect
+    let aspect = 'simple';
+    if (lvlNum === 4 || lvlNum === 5) aspect = 'progressive';
+    if (lvlNum === 6 || lvlNum === 7 || lvlNum === 8 || lvlNum === 10 || lvlNum === 12) aspect = 'perfect';
+    if (lvlNum === 9 || lvlNum === 11) aspect = 'perfect-progressive';
+    
+    let tense = 'present';
+    if (lvlNum === 2 || lvlNum === 5 || lvlNum === 7 || lvlNum === 12) tense = 'past';
+    if (lvlNum === 3 || lvlNum === 8 || lvlNum === 9) tense = 'future';
+    
+    return getModalTenseData(state.selectedSimulatorModal, tense, aspect);
+  }
+const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
   if (!baseLvl) return null;
   
   const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
@@ -11102,6 +11116,11 @@ function syncCockpitUI() {
       questionStatus.textContent = questionCheckbox.checked ? "SORU" : "DÜZ CÜMLE";
     }
   }
+
+  const modalSelector = document.getElementById('select-simulator-modal');
+  if (modalSelector) {
+    modalSelector.value = state.selectedSimulatorModal || 'none';
+  }
 const voiceCheckbox = document.getElementById('toggle-voice');
   const voiceStatus = document.getElementById('voice-status-label');
   if (voiceCheckbox) {
@@ -11198,6 +11217,15 @@ function initCockpitEventListeners() {
   if (questionCheckbox) {
     questionCheckbox.onchange = (e) => {
       state.questionOn = e.target.checked;
+      saveState();
+      renderSimulatorContent();
+    };
+  }
+
+  const modalSelector = document.getElementById('select-simulator-modal');
+  if (modalSelector) {
+    modalSelector.onchange = (e) => {
+      state.selectedSimulatorModal = e.target.value;
       saveState();
       renderSimulatorContent();
     };
@@ -11407,7 +11435,11 @@ function renderActiveMission() {
 // DOM yüklendiğinde başlat
 document.addEventListener('DOMContentLoaded', init);
 function getPureTenseData(tense, aspect) {
-  const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
+    // Intercept for Modal Selector
+  if (state.selectedSimulatorModal && state.selectedSimulatorModal !== 'none') {
+    return getModalTenseData(state.selectedSimulatorModal, tense, aspect);
+  }
+const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
   const verbIndex = state.selectedVerbIndex !== undefined ? state.selectedVerbIndex : 0;
   
   const activeSubjectObj = subjects[subjectIndex] || subjects[0];
@@ -11972,4 +12004,276 @@ function replaceLastOccurrence(str, search, replace) {
   const index = str.lastIndexOf(search);
   if (index === -1) return str;
   return str.substring(0, index) + replace + str.substring(index + search.length);
+}
+
+function getModalTenseData(modal, tense, aspect) {
+  const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
+  const verbIndex = state.selectedVerbIndex !== undefined ? state.selectedVerbIndex : 0;
+  
+  const activeSubjectObj = subjects[subjectIndex] || subjects[0];
+  const activeVerbObj = verbs[verbIndex] || verbs[0];
+  
+  const isPassive = state.activePassiveMode !== 'active';
+  const isNeg = state.negationOn || false;
+  const isQuestion = state.questionOn || false;
+  
+  let activeSpeaker = "Researchers";
+  let activeSpeakerTr = "Araştırmacılar";
+  const domain = state.activeDomain || 'history';
+  if (domain === 'history') {
+    activeSpeaker = "Historians";
+    activeSpeakerTr = "Tarihçiler";
+  } else if (domain === 'cinema') {
+    activeSpeaker = "Critics";
+    activeSpeakerTr = "Eleştirmenler";
+  } else if (domain === 'economy') {
+    activeSpeaker = "Economists";
+    activeSpeakerTr = "Ekonomistler";
+  } else if (domain === 'sociology') {
+    activeSpeaker = "Sociologists";
+    activeSpeakerTr = "Sosyologlar";
+  }
+  
+  const currentLvl = {
+    level: 99,
+    title: modal + ' ' + aspect,
+    mechanic_note: "Modal seçici ile üretilen " + modal + " + " + aspect + " yapısıdır."
+  };
+  
+  const passiveStem = makePassiveStem(activeVerbObj.trStem);
+  const activeStem = activeVerbObj.trStem;
+  
+  let trReflexColored = "";
+  let wagonChain = [];
+  
+  const colorSubject = "#1f2937";
+  const colorObject = "#1f2937";
+  const colorNegation = "#ef4444";
+  const colorAux = "#3b82f6";
+  const colorContinuous = "#10b981";
+  const colorPerfect = "#ec4899";
+  const colorVerb = "#f59e0b";
+  const colorInfinitive = "#10b981";
+  
+  const accusativeObj = applyAccusative(activeSubjectObj.tr);
+  
+  // English Modal Word and negation form
+  let mWord = modal;
+  if (modal === 'ought_to') mWord = 'ought';
+  
+  let mNotWord = mWord + " not";
+  if (modal === 'can') mNotWord = "cannot";
+  if (modal === 'ought_to') mNotWord = "ought not";
+
+  // Build the wagonChain according to the aspect, voice, negation, and question
+  const subjectWagon = isPassive ? 
+    { word: activeSubjectObj.eng, role: "subject", color: colorSubject } :
+    { word: activeSpeaker, role: "subject", color: colorSubject };
+    
+  const verbWagon = isPassive ?
+    { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
+    { word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" };
+    
+  if (aspect === 'simple') {
+    if (isQuestion) {
+      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push(subjectWagon);
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      if (isPassive) {
+        wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
+      }
+      wagonChain.push(verbWagon);
+    } else {
+      wagonChain.push(subjectWagon);
+      wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (isPassive) {
+        wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
+      }
+      wagonChain.push(verbWagon);
+    }
+    if (!isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+    }
+  } else if (aspect === 'progressive') {
+    const verbWagonIng = isPassive ?
+      { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
+      
+    if (isQuestion) {
+      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push(subjectWagon);
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "be", role: "continuous_motor", color: colorContinuous });
+      if (isPassive) {
+        wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
+      }
+      wagonChain.push(verbWagonIng);
+    } else {
+      wagonChain.push(subjectWagon);
+      wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      wagonChain.push({ word: "be", role: "continuous_motor", color: colorContinuous });
+      if (isPassive) {
+        wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
+      }
+      wagonChain.push(verbWagonIng);
+    }
+    if (!isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+    }
+  } else if (aspect === 'perfect') {
+    if (isQuestion) {
+      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push(subjectWagon);
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
+      if (isPassive) {
+        wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      }
+      wagonChain.push(verbWagon);
+    } else {
+      wagonChain.push(subjectWagon);
+      wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
+      if (isPassive) {
+        wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      }
+      wagonChain.push(verbWagon);
+    }
+    if (!isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+    }
+  } else if (aspect === 'perfect-progressive') {
+    const verbWagonIng = isPassive ?
+      { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
+
+    if (isQuestion) {
+      wagonChain.push({ word: mWord, role: "status_linker", color: colorAux });
+      wagonChain.push(subjectWagon);
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      if (isPassive) {
+        wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
+      }
+      wagonChain.push(verbWagonIng);
+    } else {
+      wagonChain.push(subjectWagon);
+      wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
+      if (modal === 'ought_to') wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
+      wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      if (isPassive) {
+        wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
+      }
+      wagonChain.push(verbWagonIng);
+    }
+    if (!isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+    }
+  }
+
+  // Handle capitalization of first word and question mark
+  if (isQuestion) {
+    wagonChain[0].word = wagonChain[0].word.charAt(0).toUpperCase() + wagonChain[0].word.slice(1);
+    if (wagonChain[1] && wagonChain[1].role === "subject") {
+      wagonChain[1].word = wagonChain[1].word.charAt(0).toLowerCase() + wagonChain[1].word.slice(1);
+    }
+    wagonChain[wagonChain.length - 1].word += "?";
+  } else {
+    wagonChain[0].word = wagonChain[0].word.charAt(0).toUpperCase() + wagonChain[0].word.slice(1);
+    wagonChain[wagonChain.length - 1].word += ".";
+  }
+
+  // Generate Turkish reflection translation
+  const stem = isPassive ? passiveStem : activeStem;
+  const startPart = isPassive ? activeSubjectObj.tr : (activeSpeakerTr + " " + accusativeObj);
+  
+  let verbForm = "";
+  if (modal === 'can' || modal === 'may') {
+    const isCan = modal === 'can';
+    if (aspect === 'simple') {
+      if (isNeg) {
+        verbForm = isCan ? (stem + "amaz") : (stem + "mayabilir");
+      } else {
+        verbForm = stem + "abilir";
+      }
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olabilir") : (stem + "yor olabilir");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mamış olabilir") : (stem + "mış olabilir");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mamakta olabilir") : (stem + "makta olabilir");
+    }
+  } else if (modal === 'could' || modal === 'might') {
+    const isCould = modal === 'could';
+    if (aspect === 'simple') {
+      if (isNeg) {
+        verbForm = isCould ? (stem + "amazdı") : (stem + "mayabilirdi");
+      } else {
+        verbForm = stem + "abilirdi";
+      }
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olabilirdi") : (stem + "yor olabilirdi");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mamış olabilirdi") : (stem + "mış olabilirdi");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mamakta olabilirdi") : (stem + "makta olabilirdi");
+    }
+  } else if (modal === 'must') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mamalıdır") : (stem + "malıdır");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olmalıdır") : (stem + "yor olmalıdır");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mamış olmalıdır") : (stem + "mış olmalıdır");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mamakta olmalıdır") : (stem + "makta olmalıdır");
+    }
+  } else if (modal === 'should' || modal === 'ought_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mamalıdır") : (stem + "malıdır");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olmalıdır") : (stem + "yor olmalıdır");
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (stem + "mamış olmalıydı") : (stem + "mış olmalıydı");
+    } else if (aspect === 'perfect-progressive') {
+      verbForm = isNeg ? (stem + "mamakta olmalıydı") : (stem + "makta olmalıydı");
+    }
+  }
+
+  // Handle Turkish question particle
+  if (isQuestion) {
+    if (verbForm.endsWith("bilir")) verbForm += " mi?";
+    else if (verbForm.endsWith("bilirdi")) verbForm = verbForm.replace("bilirdi", "bilir miydi?");
+    else if (verbForm.endsWith("amaz")) verbForm += " mı?";
+    else if (verbForm.endsWith("amazdı")) verbForm = verbForm.replace("amazdı", "amaz mıydı?");
+    else if (verbForm.endsWith("mayabilir")) verbForm += " mi?";
+    else if (verbForm.endsWith("mayabilirdi")) verbForm = verbForm.replace("mayabilirdi", "mayabilir miydi?");
+    else if (verbForm.endsWith("malıdır")) verbForm = verbForm.replace("malıdır", "malı mıdır?");
+    else if (verbForm.endsWith("mamalıdır")) verbForm = verbForm.replace("mamalıdır", "mamalı mıdır?");
+    else if (verbForm.endsWith("olabilir")) verbForm = verbForm.replace("olabilir", "olabilir mi?");
+    else if (verbForm.endsWith("olabilirdi")) verbForm = verbForm.replace("olabilirdi", "olabilir miydi?");
+    else if (verbForm.endsWith("olmalıdır")) verbForm = verbForm.replace("olmalıdır", "olmalı mıdır?");
+    else if (verbForm.endsWith("olmalıydı")) verbForm = verbForm.replace("olmalıydı", "olmalı mıydı?");
+    else verbForm += " mi?";
+  } else {
+    verbForm += ".";
+  }
+
+  trReflexColored = startPart + " " + `<span style="color:${colorVerb}; font-weight:800;">${verbForm}</span>`;
+
+  currentLvl.wagon_chain = wagonChain;
+  currentLvl.english_sentence = wagonChain.map(w => w.word).join(' ').replace(/\s+\./g, '.').replace(/\.+/g, '.').replace(/\s+\?/g, '?');
+  currentLvl.turkish_reflex_colored = trReflexColored;
+  currentLvl.turkish_reflex = trReflexColored.replace(/<[^>]*>/g, '');
+  
+  return currentLvl;
 }
