@@ -10654,7 +10654,71 @@ function getActiveLevelData(lvlNum) {
     }
   }
 
-  currentLvl.wagon_chain = wagonChain;
+  
+  if (state.questionOn) {
+    let auxIndex = -1;
+    const auxList = ["is", "are", "was", "were", "will", "do", "does", "did", "have", "has", "had", "could", "should", "must", "might", "would", "can"];
+    
+    // Check if there is an auxiliary verb in the chain
+    for (let i = 0; i < wagonChain.length; i++) {
+      const firstWord = wagonChain[i].word.split(" ")[0].toLowerCase();
+      if (auxList.includes(firstWord)) {
+        auxIndex = i;
+        break;
+      }
+    }
+    
+    if (auxIndex > 0) {
+      // Remove aux wagon and insert at index 0
+      const auxWagon = wagonChain.splice(auxIndex, 1)[0];
+      
+      // Capitalize first letter of aux
+      auxWagon.word = auxWagon.word.charAt(0).toUpperCase() + auxWagon.word.slice(1);
+      
+      // Lowercase first letter of the subject if it was at index 0
+      const subjectWagon = wagonChain[0];
+      if (subjectWagon && subjectWagon.role === "subject") {
+        subjectWagon.word = subjectWagon.word.charAt(0).toLowerCase() + subjectWagon.word.slice(1);
+      }
+      
+      wagonChain.unshift(auxWagon);
+    } else {
+      // No aux verb found (Present Simple Active Affirmative or Past Simple Active Affirmative)
+      const isPast = (wagonChain.some(w => w.word === activeVerbObj.pastActive));
+      const subjectWagon = wagonChain[0];
+      
+      if (isPast) {
+        // Insert Did
+        wagonChain.unshift({ word: "Did", role: "status_linker", color: colorAux });
+        // Reset verb to V1
+        const verbWagon = wagonChain.find(w => w.role === "main_verb");
+        if (verbWagon) {
+          verbWagon.word = activeVerbObj.engV1;
+        }
+      } else {
+        // Insert Do or Does
+        const doWord = activeSubjectObj.plural ? "Do" : "Does";
+        wagonChain.unshift({ word: doWord, role: "status_linker", color: colorAux });
+        
+        // Reset verb to V1 if singular (e.g. writes -> write)
+        const verbWagon = wagonChain.find(w => w.role === "main_verb");
+        if (verbWagon) {
+          verbWagon.word = activeVerbObj.engV1;
+        }
+      }
+      
+      if (subjectWagon && subjectWagon.role === "subject") {
+        subjectWagon.word = subjectWagon.word.charAt(0).toLowerCase() + subjectWagon.word.slice(1);
+      }
+    }
+    
+    // Add question mark to final english sentence
+    wagonChain[wagonChain.length - 1].word = wagonChain[wagonChain.length - 1].word.replace(/\.$/, "") + "?";
+    
+    // Transform Turkish reflection to question
+    trReflexColored = convertTrToQuestion(trReflexColored);
+  }
+currentLvl.wagon_chain = wagonChain;
   currentLvl.english_sentence = wagonChain.map(w => w.word).join(' ').replace(/\s+\./g, '.').replace(/\.+/g, '.');
   currentLvl.turkish_reflex_colored = trReflexColored;
   currentLvl.turkish_reflex = trReflexColored.replace(/<[^>]*>/g, '');
@@ -11029,7 +11093,16 @@ function syncCockpitUI() {
     }
   }
   
-  const voiceCheckbox = document.getElementById('toggle-voice');
+  
+  const questionCheckbox = document.getElementById('toggle-question');
+  const questionStatus = document.getElementById('question-status-label');
+  if (questionCheckbox) {
+    questionCheckbox.checked = state.questionOn || false;
+    if (questionStatus) {
+      questionStatus.textContent = questionCheckbox.checked ? "SORU" : "DÜZ CÜMLE";
+    }
+  }
+const voiceCheckbox = document.getElementById('toggle-voice');
   const voiceStatus = document.getElementById('voice-status-label');
   if (voiceCheckbox) {
     voiceCheckbox.checked = (state.activePassiveMode === 'active');
@@ -11120,7 +11193,16 @@ function initCockpitEventListeners() {
     };
   }
   
-  const voiceCheckbox = document.getElementById('toggle-voice');
+  
+  const questionCheckbox = document.getElementById('toggle-question');
+  if (questionCheckbox) {
+    questionCheckbox.onchange = (e) => {
+      state.questionOn = e.target.checked;
+      saveState();
+      renderSimulatorContent();
+    };
+  }
+const voiceCheckbox = document.getElementById('toggle-voice');
   if (voiceCheckbox) {
     voiceCheckbox.onchange = (e) => {
       state.activePassiveMode = e.target.checked ? 'active' : 'passive';
@@ -11711,10 +11793,183 @@ function getPureTenseData(tense, aspect) {
     }
   }
 
-  currentLvl.wagon_chain = wagonChain;
+  
+  if (state.questionOn) {
+    let auxIndex = -1;
+    const auxList = ["is", "are", "was", "were", "will", "do", "does", "did", "have", "has", "had", "could", "should", "must", "might", "would", "can"];
+    
+    // Check if there is an auxiliary verb in the chain
+    for (let i = 0; i < wagonChain.length; i++) {
+      const firstWord = wagonChain[i].word.split(" ")[0].toLowerCase();
+      if (auxList.includes(firstWord)) {
+        auxIndex = i;
+        break;
+      }
+    }
+    
+    if (auxIndex > 0) {
+      // Remove aux wagon and insert at index 0
+      const auxWagon = wagonChain.splice(auxIndex, 1)[0];
+      
+      // Capitalize first letter of aux
+      auxWagon.word = auxWagon.word.charAt(0).toUpperCase() + auxWagon.word.slice(1);
+      
+      // Lowercase first letter of the subject if it was at index 0
+      const subjectWagon = wagonChain[0];
+      if (subjectWagon && subjectWagon.role === "subject") {
+        subjectWagon.word = subjectWagon.word.charAt(0).toLowerCase() + subjectWagon.word.slice(1);
+      }
+      
+      wagonChain.unshift(auxWagon);
+    } else {
+      // No aux verb found (Present Simple Active Affirmative or Past Simple Active Affirmative)
+      const isPast = (wagonChain.some(w => w.word === activeVerbObj.pastActive));
+      const subjectWagon = wagonChain[0];
+      
+      if (isPast) {
+        // Insert Did
+        wagonChain.unshift({ word: "Did", role: "status_linker", color: colorAux });
+        // Reset verb to V1
+        const verbWagon = wagonChain.find(w => w.role === "main_verb");
+        if (verbWagon) {
+          verbWagon.word = activeVerbObj.engV1;
+        }
+      } else {
+        // Insert Do or Does
+        const doWord = activeSubjectObj.plural ? "Do" : "Does";
+        wagonChain.unshift({ word: doWord, role: "status_linker", color: colorAux });
+        
+        // Reset verb to V1 if singular (e.g. writes -> write)
+        const verbWagon = wagonChain.find(w => w.role === "main_verb");
+        if (verbWagon) {
+          verbWagon.word = activeVerbObj.engV1;
+        }
+      }
+      
+      if (subjectWagon && subjectWagon.role === "subject") {
+        subjectWagon.word = subjectWagon.word.charAt(0).toLowerCase() + subjectWagon.word.slice(1);
+      }
+    }
+    
+    // Add question mark to final english sentence
+    wagonChain[wagonChain.length - 1].word = wagonChain[wagonChain.length - 1].word.replace(/\.$/, "") + "?";
+    
+    // Transform Turkish reflection to question
+    trReflexColored = convertTrToQuestion(trReflexColored);
+  }
+currentLvl.wagon_chain = wagonChain;
   currentLvl.english_sentence = wagonChain.map(w => w.word).join(' ').replace(/\s+\./g, '.').replace(/\.+/g, '.');
   currentLvl.turkish_reflex_colored = trReflexColored;
   currentLvl.turkish_reflex = trReflexColored.replace(/<[^>]*>/g, '');
   
   return currentLvl;
+}
+
+function convertTrToQuestion(trText) {
+  let text = trText.trim();
+  if (text.endsWith('.')) {
+    text = text.slice(0, -1);
+  }
+  
+  const cleanEnd = text.replace(/<[^>]*>/g, '').trim();
+  
+  if (cleanEnd.endsWith('dir') || cleanEnd.endsWith('dır') || cleanEnd.endsWith('tir') || cleanEnd.endsWith('tır') || cleanEnd.endsWith('dur') || cleanEnd.endsWith('dür') || cleanEnd.endsWith('tur') || cleanEnd.endsWith('tür')) {
+    text = replaceLastOccurrence(text, 'dir', ' miydi'); // fallback or direct handling
+    if (cleanEnd.endsWith('dir')) text = replaceLastOccurrence(trText.slice(0, -1), 'dir', ' midir');
+    else if (cleanEnd.endsWith('dır')) text = replaceLastOccurrence(trText.slice(0, -1), 'dır', ' mıdır');
+    else if (cleanEnd.endsWith('tir')) text = replaceLastOccurrence(trText.slice(0, -1), 'tir', ' midir');
+    else if (cleanEnd.endsWith('tır')) text = replaceLastOccurrence(trText.slice(0, -1), 'tır', ' mıdır');
+    else if (cleanEnd.endsWith('dur')) text = replaceLastOccurrence(trText.slice(0, -1), 'dur', ' mudur');
+    else if (cleanEnd.endsWith('dür')) text = replaceLastOccurrence(trText.slice(0, -1), 'dür', ' müdür');
+    else if (cleanEnd.endsWith('tur')) text = replaceLastOccurrence(trText.slice(0, -1), 'tur', ' mudur');
+    else if (cleanEnd.endsWith('tür')) text = replaceLastOccurrence(trText.slice(0, -1), 'tür', ' müdür');
+  } else if (cleanEnd.endsWith('yordu') || cleanEnd.endsWith('lardı') || cleanEnd.endsWith('lerdi')) {
+    text = replaceLastOccurrence(text, 'yordu', 'yor muydu');
+    text = replaceLastOccurrence(text, 'lardı', 'lar mıydı');
+    text = replaceLastOccurrence(text, 'lerdi', 'ler miydi');
+  } else if (cleanEnd.endsWith('maktaydı') || cleanEnd.endsWith('mekteydi')) {
+    text = replaceLastOccurrence(text, 'maktaydı', 'makta mıydı');
+    text = replaceLastOccurrence(text, 'mekteydi', 'mekte miydi');
+  } else if (cleanEnd.endsWith('dı') || cleanEnd.endsWith('di') || cleanEnd.endsWith('du') || cleanEnd.endsWith('dü') || cleanEnd.endsWith('tı') || cleanEnd.endsWith('ti') || cleanEnd.endsWith('tu') || cleanEnd.endsWith('tü')) {
+    if (cleanEnd.endsWith('dı')) text = replaceLastOccurrence(text, 'dı', 'dı mı');
+    else if (cleanEnd.endsWith('di')) text = replaceLastOccurrence(text, 'di', 'di mi');
+    else if (cleanEnd.endsWith('du')) text = replaceLastOccurrence(text, 'du', 'du mu');
+    else if (cleanEnd.endsWith('dü')) text = replaceLastOccurrence(text, 'dü', 'dü mü');
+    else if (cleanEnd.endsWith('tı')) text = replaceLastOccurrence(text, 'tı', 'tı mı');
+    else if (cleanEnd.endsWith('ti')) text = replaceLastOccurrence(text, 'ti', 'ti mi');
+    else if (cleanEnd.endsWith('tu')) text = replaceLastOccurrence(text, 'tu', 'tu mu');
+    else if (cleanEnd.endsWith('tü')) text = replaceLastOccurrence(text, 'tü', 'tü mü');
+  } else if (cleanEnd.endsWith('mümkündü')) {
+    text = replaceLastOccurrence(text, 'mümkündü', 'mümkün müydü');
+  } else if (cleanEnd.endsWith('gerekirdi')) {
+    text = replaceLastOccurrence(text, 'gerekirdi', 'gerekir miydi');
+  } else if (cleanEnd.endsWith('olacak') || cleanEnd.endsWith('ecek')) {
+    text = replaceLastOccurrence(text, 'olacak', 'olacak mı');
+    text = replaceLastOccurrence(text, 'ecek', 'ecek mi');
+  } else if (cleanEnd.endsWith('yor') || cleanEnd.endsWith('yorlar')) {
+    text = replaceLastOccurrence(text, 'yor', 'yor mu');
+  } else if (cleanEnd.endsWith('yazar') || cleanEnd.endsWith('yazarlar') || cleanEnd.endsWith('yazmaz') || cleanEnd.endsWith('yazmazlar')) {
+    text = replaceLastOccurrence(text, 'yazar', 'yazar mı');
+    text = replaceLastOccurrence(text, 'yazmaz', 'yazmaz mı');
+  } else if (cleanEnd.endsWith('korur') || cleanEnd.endsWith('korumaz')) {
+    text = replaceLastOccurrence(text, 'korur', 'korur mu');
+    text = replaceLastOccurrence(text, 'korumaz', 'korumaz mı');
+  } else if (cleanEnd.endsWith('kazar') || cleanEnd.endsWith('kazmaz')) {
+    text = replaceLastOccurrence(text, 'kazar', 'kazar mı');
+    text = replaceLastOccurrence(text, 'kazmaz', 'kazmaz mı');
+  } else if (cleanEnd.endsWith('eder') || cleanEnd.endsWith('etmez')) {
+    text = replaceLastOccurrence(text, 'eder', 'eder mi');
+    text = replaceLastOccurrence(text, 'etmez', 'etmez mi');
+  } else if (cleanEnd.endsWith('yorumlar') || cleanEnd.endsWith('yorumlamaz')) {
+    text = replaceLastOccurrence(text, 'yorumlar', 'yorumlar mı');
+    text = replaceLastOccurrence(text, 'yorumlamaz', 'yorumlamaz mı');
+  } else if (cleanEnd.endsWith('yağmalar') || cleanEnd.endsWith('yağmalamaz')) {
+    text = replaceLastOccurrence(text, 'yağmalar', 'yağmalar mı');
+    text = replaceLastOccurrence(text, 'yağmalamaz', 'yağmalamaz mı');
+  } else if (cleanEnd.endsWith('kataloglar') || cleanEnd.endsWith('kataloglamaz')) {
+    text = replaceLastOccurrence(text, 'kataloglar', 'kataloglar mı');
+    text = replaceLastOccurrence(text, 'kataloglamaz', 'kataloglamaz mı');
+  } else if (cleanEnd.endsWith('gösterir') || cleanEnd.endsWith('göstermez')) {
+    text = replaceLastOccurrence(text, 'gösterir', 'gösterir mi');
+    text = replaceLastOccurrence(text, 'göstermez', 'göstermez mi');
+  } else if (cleanEnd.endsWith('sansürler') || cleanEnd.endsWith('sansürlemez')) {
+    text = replaceLastOccurrence(text, 'sansürler', 'sansürler mi');
+    text = replaceLastOccurrence(text, 'sansürlemez', 'sansürlemez mi');
+  } else if (cleanEnd.endsWith('yasaklar') || cleanEnd.endsWith('yasaklamaz')) {
+    text = replaceLastOccurrence(text, 'yasaklar', 'yasaklar mı');
+    text = replaceLastOccurrence(text, 'yasaklamaz', 'yasaklamaz mı');
+  } else if (cleanEnd.endsWith('yönetir') || cleanEnd.endsWith('yönetmez')) {
+    text = replaceLastOccurrence(text, 'yönetir', 'yönetir mi');
+    text = replaceLastOccurrence(text, 'yönetmez', 'yönetmez mi');
+  } else if (cleanEnd.endsWith('çalışır') || cleanEnd.endsWith('çalışmaz')) {
+    text = replaceLastOccurrence(text, 'çalışır', 'çalışır mı');
+    text = replaceLastOccurrence(text, 'çalışmaz', 'çalışmaz mı');
+  } else if (cleanEnd.endsWith('gözlemler') || cleanEnd.endsWith('gözlemlemez')) {
+    text = replaceLastOccurrence(text, 'gözlemler', 'gözlemler mi');
+    text = replaceLastOccurrence(text, 'gözlemlemez', 'gözlemlemez mi');
+  } else if (cleanEnd.endsWith('inceler') || cleanEnd.endsWith('incelemez')) {
+    text = replaceLastOccurrence(text, 'inceler', 'inceler mi');
+    text = replaceLastOccurrence(text, 'incelemez', 'incelemez mi');
+  } else if (cleanEnd.endsWith('araştırır') || cleanEnd.endsWith('araştırmaz')) {
+    text = replaceLastOccurrence(text, 'araştırır', 'araştırır mı');
+    text = replaceLastOccurrence(text, 'araştırmaz', 'araştırmaz mı');
+  } else if (cleanEnd.endsWith('değerlendirir') || cleanEnd.endsWith('değerlendirmez')) {
+    text = replaceLastOccurrence(text, 'değerlendirir', 'değerlendirir mi');
+    text = replaceLastOccurrence(text, 'değerlendirmez', 'değerlendirmez mi');
+  } else if (cleanEnd.endsWith('yayınlar') || cleanEnd.endsWith('yayınlamaz')) {
+    text = replaceLastOccurrence(text, 'yayınlar', 'yayınlar mı');
+    text = replaceLastOccurrence(text, 'yayınlamaz', 'yayınlamaz mı');
+  } else {
+    const lastVowel = getLastVowel(cleanEnd);
+    const harmony = get4WayHarmony(lastVowel);
+    text += ' m' + harmony;
+  }
+  
+  return text + '?';
+}
+
+function replaceLastOccurrence(str, search, replace) {
+  const index = str.lastIndexOf(search);
+  if (index === -1) return str;
+  return str.substring(0, index) + replace + str.substring(index + search.length);
 }
