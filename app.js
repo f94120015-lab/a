@@ -4270,7 +4270,7 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_'))) {
+  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_') || question.id.startsWith('c54_'))) {
     let tipText = '';
     if (question.id.startsWith('c51_l01') || question.id.startsWith('c51_l1')) {
       tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
@@ -4288,6 +4288,12 @@ function renderMultipleChoice(container, question) {
       tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
     } else if (question.id.startsWith('c53_')) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
+    } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1')) {
+      tipText = '<strong>Bağlaç Sentaksı (G1, G2, G4):</strong> G1 (cümle alanlar) arkasına tam cümle (SVO) alır; G2 (edatlar) arkasına isim / V-ing alır; G4 (geçiş kelimeleri) noktalı virgül (;) veya nokta (.) ile ayrılıp arkasından virgül (,) ile kullanılır.';
+    } else if (question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2')) {
+      tipText = '<strong>Bağlaç Semantiği (Anlamsal İlişki):</strong> Cümlelerin iki tarafındaki anlam akışının olumlu/olumsuz yönünü (+ / - veya + / +) analiz ederek Zıtlık (Contrast), Sebep-Sonuç (Cause-Effect) veya Koşul (Condition) bağlacına karar verilir.';
+    } else if (question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
+      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen fakat farklı yapısal gruplara ait bağlaçların (örn: <em>Although</em> vs. <em>Despite</em>) birbirleri yerine kullanımı sırasında cümle yapısının (cümle / isim) uygun şekilde dönüştürülmesi gerekir.';
     }
 
     if (tipText) {
