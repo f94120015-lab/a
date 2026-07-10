@@ -5597,6 +5597,21 @@ function renderSpotlight(container, question) {
       checkAnswer();
     });
   });
+
+  // Automatically scroll the highlighted text into view within the container
+  setTimeout(() => {
+    const brightEl = container.querySelector('.spotlight-bright');
+    const scrollParent = container.querySelector('.spotlight-paragraph-container');
+    if (brightEl && scrollParent) {
+      const parentRect = scrollParent.getBoundingClientRect();
+      const elRect = brightEl.getBoundingClientRect();
+      const relativeTop = elRect.top - parentRect.top + scrollParent.scrollTop;
+      scrollParent.scrollTo({
+        top: relativeTop - (parentRect.height / 2) + (elRect.height / 2),
+        behavior: 'smooth'
+      });
+    }
+  }, 120);
 }
 
 function showSpotlightFeedback(question) {
