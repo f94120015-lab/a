@@ -9868,7 +9868,6 @@ function activeTurkishReflex(text) {
 }
 
 const subjects = [
-  { eng: "Omer", tr: "Ömer", plural: false, noun_eng: "a researcher", noun_tr: "araştırmacı" },
   { eng: "Ancient clay tablets", tr: "Antik kil tabletler", plural: true, noun_eng: "historical artifacts", noun_tr: "tarihi eser" },
   { eng: "Medieval parchment papers", tr: "Orta çağ parşömen kağıtları", plural: true, noun_eng: "medieval documents", noun_tr: "orta çağ belgesi" },
   { eng: "Historic archive collections", tr: "Tarihi arşiv koleksiyonları", plural: true, noun_eng: "valuable records", noun_tr: "değerli kayıt" },
