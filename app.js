@@ -10705,6 +10705,19 @@ function initSimulator() {
         b.classList.toggle('active', b === btn);
       });
       
+      // Update matrix buttons highlight
+      document.querySelectorAll('.matrix-cell-btn').forEach(b => {
+        if (parseInt(b.dataset.level, 10) === selectedLevel) {
+          b.style.background = 'var(--accent-primary)';
+          b.style.color = '#fff';
+          b.style.borderColor = 'var(--accent-primary)';
+        } else {
+          b.style.background = 'var(--bg-body)';
+          b.style.color = 'var(--text-primary)';
+          b.style.borderColor = 'var(--border-color)';
+        }
+      });
+      
       deactivatedWagons = [];
       showMissionQuestion = false;
       selectedMissionOption = null;
@@ -10729,9 +10742,65 @@ function initSimulator() {
     };
   }
 
+  initSimulatorMatrixEventListeners();
   initCockpitEventListeners();
   renderSimulatorContent();
   renderActiveMission();
+}
+
+function initSimulatorMatrixEventListeners() {
+  const matrixBtns = document.querySelectorAll('.matrix-cell-btn');
+  matrixBtns.forEach(btn => {
+    // Style initial active state
+    const lvl = parseInt(btn.dataset.level, 10);
+    if (lvl === selectedLevel) {
+      btn.style.background = 'var(--accent-primary)';
+      btn.style.color = '#fff';
+      btn.style.borderColor = 'var(--accent-primary)';
+    } else {
+      btn.style.background = 'var(--bg-body)';
+      btn.style.color = 'var(--text-primary)';
+      btn.style.borderColor = 'var(--border-color)';
+    }
+
+    btn.onclick = () => {
+      const targetLvl = parseInt(btn.dataset.level, 10);
+      selectedLevel = targetLvl;
+      
+      // Update level buttons highlight
+      const levelBtnsContainer = document.getElementById('simulator-level-buttons');
+      if (levelBtnsContainer) {
+        levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(b => {
+          b.classList.toggle('active', parseInt(b.dataset.level, 10) === targetLvl);
+        });
+      }
+
+      // Update matrix buttons highlight
+      matrixBtns.forEach(b => {
+        if (parseInt(b.dataset.level, 10) === targetLvl) {
+          b.style.background = 'var(--accent-primary)';
+          b.style.color = '#fff';
+          b.style.borderColor = 'var(--accent-primary)';
+        } else {
+          b.style.background = 'var(--bg-body)';
+          b.style.color = 'var(--text-primary)';
+          b.style.borderColor = 'var(--border-color)';
+        }
+      });
+
+      deactivatedWagons = [];
+      showMissionQuestion = false;
+      selectedMissionOption = null;
+      
+      const glitchOverlay = document.getElementById('glitch-overlay');
+      if (glitchOverlay) {
+        glitchOverlay.classList.remove('show');
+      }
+
+      renderSimulatorContent();
+      renderActiveMission();
+    };
+  });
 }
 
 function renderSimulator() {
