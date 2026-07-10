@@ -8925,6 +8925,27 @@ function initNotifications() {
 // BAŞLATMA
 // ============================================================
 function init() {
+  // Empty lessons and units filter logic
+  if (typeof lessons !== 'undefined' && Array.isArray(lessons)) {
+    const validLessons = lessons.filter(lesson => {
+      const isNotUploaded = (!lesson.exercises || lesson.exercises.length === 0 || lesson.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!lesson.questions || lesson.questions.length === 0);
+      return !isNotUploaded;
+    });
+    lessons.length = 0;
+    lessons.push(...validLessons);
+  }
+  
+  if (typeof units !== 'undefined' && Array.isArray(units)) {
+    const validUnits = units.filter(unit => {
+      return unit.lessons.some(lId => lessons.some(l => l.id === lId));
+    });
+    validUnits.forEach(unit => {
+      unit.lessons = unit.lessons.filter(lId => lessons.some(l => l.id === lId));
+    });
+    units.length = 0;
+    units.push(...validUnits);
+  }
+
   // Show dev tools tab only if running locally (localhost / 127.0.0.1 / Class A, B, C private IPs / file protocol)
   const checkIsLocal = () => {
     const hn = window.location.hostname;
