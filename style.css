@@ -8141,3 +8141,34 @@ input:checked + .slider:before {
   border-bottom: 2px dashed #f59e0b;
   display: inline-block;
 }
+
+/* Matrix & Modal Selection Button Styling */
+.matrix-cell-btn, .modal-matrix-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.matrix-cell-btn:hover, .modal-matrix-btn:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+.matrix-cell-btn.active, .modal-matrix-btn.active {
+  border-color: var(--accent-primary) !important;
+  background: rgba(139, 126, 200, 0.12) !important;
+  color: var(--accent-primary) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 0 2px rgba(139, 126, 200, 0.2);
+}
+
