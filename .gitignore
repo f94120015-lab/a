@@ -1,7 +1,23 @@
+# Node/React/Vue projeleri için kota canavarı klasör
 node_modules/
+
+# Sitenin derlenmiş/çıktı klasörleri (Yapay zekanın okumasına gerek yok)
+dist/
+build/
+.next/
+.nuxt/
 www/
-android/
+
+# Sistem ve Editör dosyaları
 .DS_Store
+.vscode/
+.idea/
 *.log
-.vercel
 scratch/
+
+# Çevre Değişkenleri (Gizli anahtarlar)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
