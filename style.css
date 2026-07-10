@@ -2004,6 +2004,13 @@ input {
   letter-spacing: 0.5px;
 }
 
+.quiz-prompt strong,
+.quiz-prompt span,
+.quiz-prompt em {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
 .quiz-sentence-container {
   font-family: var(--font-heading) !important;
   font-size: 1.45rem !important;
