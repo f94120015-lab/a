@@ -4289,11 +4289,11 @@ function renderMultipleChoice(container, question) {
     } else if (question.id.startsWith('c53_')) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
     } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1')) {
-      tipText = '<strong>Bağlaç Sentaksı (G1, G2, G4):</strong> G1 (cümle alanlar) arkasına tam cümle (SVO) alır; G2 (edatlar) arkasına isim / V-ing alır; G4 (geçiş kelimeleri) noktalı virgül (;) veya nokta (.) ile ayrılıp arkasından virgül (,) ile kullanılır.';
+      tipText = '<strong>Bağlaç Sentaksı (G1, G2, G4):</strong><br>• <strong>G1 (Cümle Alanlar - <em>Although, Because, If</em>):</strong> + tam cümle (SVO)<br>• <strong>G2 (İsim Alanlar - <em>Despite, Because of, In addition to</em>):</strong> + isim / V-ing<br>• <strong>G4 (Geçişler - <em>However, Therefore, Moreover</em>):</strong> noktalı virgül (;) veya nokta (.) ile ayrılıp virgül (,) ile kullanılır.';
     } else if (question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2')) {
-      tipText = '<strong>Bağlaç Semantiği (Anlamsal İlişki):</strong> Cümlelerin iki tarafındaki anlam akışının olumlu/olumsuz yönünü (+ / - veya + / +) analiz ederek Zıtlık (Contrast), Sebep-Sonuç (Cause-Effect) veya Koşul (Condition) bağlacına karar verilir.';
+      tipText = '<strong>Bağlaç Semantiği (Anlamsal İlişki):</strong><br>• <strong>Zıtlık (Contrast - <em>Although, Despite, However</em>):</strong> Zıt yönlü (+ / -) cümleleri bağlar.<br>• <strong>Sebep-Sonuç (Cause/Effect - <em>Because, Due to, Therefore</em>):</strong> Paralel yönlü (+ & +) ilişkileri bağlar.<br>• <strong>Koşul (Condition - <em>Unless, In case of</em>):</strong> Eylemin şartını/önlemini bildirir.';
     } else if (question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
-      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen fakat farklı yapısal gruplara ait bağlaçların (örn: <em>Although</em> vs. <em>Despite</em>) birbirleri yerine kullanımı sırasında cümle yapısının (cümle / isim) uygun şekilde dönüştürülmesi gerekir.';
+      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen bağlaçlar arası geçiş yaparken sentaksı dönüştürün:<br>• <em>Although</em> (G1 + Cümle) ➔ <em>Despite</em> (G2 + İsim / V-ing)<br>• <em>Because</em> (G1) ➔ <em>Because of</em> (G2)';
     }
 
     if (tipText) {
