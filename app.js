@@ -12138,6 +12138,54 @@ function replaceLastOccurrence(str, search, replace) {
   return str.substring(0, index) + replace + str.substring(index + search.length);
 }
 
+function appendAoristArdi(stem) {
+  if (!stem) return "";
+  const vowels = "aeıioöuüAEIİOÖUÜ";
+  
+  function countSyllables(word) {
+    let cnt = 0;
+    for (let char of word) {
+      if (vowels.includes(char)) cnt++;
+    }
+    return cnt;
+  }
+  
+  const lastChar = stem.slice(-1);
+  const endsInVowel = vowels.includes(lastChar);
+  
+  let lastV = 'a';
+  for (let i = stem.length - 1; i >= 0; i--) {
+    if (vowels.includes(stem[i])) {
+      lastV = stem[i].toLowerCase();
+      break;
+    }
+  }
+  
+  if (endsInVowel) {
+    if ("aıou".includes(lastV)) return stem + "rdı";
+    return stem + "rdi";
+  }
+  
+  if (stem.endsWith("et")) {
+    return stem.slice(0, -2) + "ederdi";
+  }
+  
+  const words = stem.trim().split(/\s+/);
+  const lastWord = words[words.length - 1];
+  const syllables = countSyllables(lastWord);
+  
+  if (syllables === 1) {
+    if ("aıou".includes(lastV)) return stem + "ardı";
+    return stem + "erdi";
+  } else {
+    if (lastV === 'a' || lastV === 'ı') return stem + "ırdı";
+    if (lastV === 'e' || lastV === 'i') return stem + "irdi";
+    if (lastV === 'o' || lastV === 'u') return stem + "urdu";
+    if (lastV === 'ö' || lastV === 'ü') return stem + "ürdü";
+  }
+  return stem + "ardı";
+}
+
 function appendTrSuffix(stem, suffix) {
   if (!stem) return suffix;
   if (!suffix) return stem;
@@ -12583,7 +12631,7 @@ function getModalTenseData(modal, tense, aspect) {
     }
   } else if (modal === 'would') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendTrSuffix(stem, "ardı"));
+      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendAoristArdi(stem));
     } else if (aspect === 'progressive') {
       verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olurdu")) : (appendTrSuffix(stem, "yor olurdu"));
     } else if (aspect === 'perfect') {
@@ -12593,7 +12641,7 @@ function getModalTenseData(modal, tense, aspect) {
     }
   } else if (modal === 'used_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendTrSuffix(stem, "ardı"));
+      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendAoristArdi(stem));
     } else if (aspect === 'progressive') {
       verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olurdu")) : (appendTrSuffix(stem, "yor olurdu"));
     } else if (aspect === 'perfect') {
