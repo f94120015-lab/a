@@ -10790,6 +10790,84 @@ function initSimulator() {
     });
   }
 
+  // TAB SWITCHING LOGIC FOR MATRIX
+  const btnTabPure = document.getElementById('btn-tab-pure');
+  const btnTabModals = document.getElementById('btn-tab-modals');
+  const tabPureContent = document.getElementById('matrix-tab-pure-content');
+  const tabModalsContent = document.getElementById('matrix-tab-modals-content');
+
+  if (btnTabPure && btnTabModals && tabPureContent && tabModalsContent) {
+    btnTabPure.onclick = () => {
+      btnTabPure.classList.add('active');
+      btnTabPure.style.border = '1px solid var(--accent-primary)';
+      btnTabPure.style.background = 'rgba(59, 130, 246, 0.1)';
+      btnTabPure.style.color = 'var(--accent-primary)';
+
+      btnTabModals.classList.remove('active');
+      btnTabModals.style.border = '1px solid var(--border-color)';
+      btnTabModals.style.background = 'var(--bg-body)';
+      btnTabModals.style.color = 'var(--text-secondary)';
+
+      tabPureContent.style.display = 'block';
+      tabModalsContent.style.display = 'none';
+    };
+
+    btnTabModals.onclick = () => {
+      btnTabModals.classList.add('active');
+      btnTabModals.style.border = '1px solid var(--accent-primary)';
+      btnTabModals.style.background = 'rgba(59, 130, 246, 0.1)';
+      btnTabModals.style.color = 'var(--accent-primary)';
+
+      btnTabPure.classList.remove('active');
+      btnTabPure.style.border = '1px solid var(--border-color)';
+      btnTabPure.style.background = 'var(--bg-body)';
+      btnTabPure.style.color = 'var(--text-secondary)';
+
+      tabPureContent.style.display = 'none';
+      tabModalsContent.style.display = 'block';
+    };
+  }
+
+  // MODAL MATRIX BUTTONS CLICK HANDLERS
+  document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
+    btn.onclick = () => {
+      const modalVal = btn.dataset.modal;
+      const aspectVal = btn.dataset.aspect;
+
+      state.selectedSimulatorModal = modalVal;
+      const modalSelect = document.getElementById('select-simulator-modal');
+      if (modalSelect) modalSelect.value = modalVal;
+
+      // Update aspect settings based on target aspect
+      if (aspectVal === 'simple') selectedLevel = 2;
+      else if (aspectVal === 'progressive') selectedLevel = 4;
+      else if (aspectVal === 'perfect') selectedLevel = 6;
+      else selectedLevel = 9;
+
+      state.pureTense = null;
+      saveState();
+
+      // Clear pure tense matrix highlights
+      document.querySelectorAll('.matrix-cell-btn').forEach(b => {
+        b.style.background = 'var(--bg-body)';
+        b.style.color = 'var(--text-primary)';
+        b.style.borderColor = 'var(--border-color)';
+      });
+
+      deactivatedWagons = [];
+      showMissionQuestion = false;
+      selectedMissionOption = null;
+
+      const glitchOverlay = document.getElementById('glitch-overlay');
+      if (glitchOverlay) {
+        glitchOverlay.classList.remove('show');
+      }
+
+      renderSimulatorContent();
+      renderActiveMission();
+    };
+  });
+
   const predicateLevelsList = [
     { count: 0, title: "Durum (0 Eylem)" },
     { count: 1, title: "1 Öğeli Yüklem" },
@@ -11125,6 +11203,7 @@ function renderSimulatorContent() {
 
   syncCockpitUI();
   syncPredicateLevelsHighlight();
+  syncModalMatrixHighlight();
 }
 
 function syncCockpitUI() {
@@ -12121,6 +12200,11 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'was_were_used_to_ing') mWord = activeSubjectObj.plural ? 'were used' : 'was used';
   if (modal === 'get_used_to_ing') mWord = activeSubjectObj.plural ? 'get used' : 'gets used';
   
+  // Preferences:
+  if (modal === 'would_prefer') mWord = 'would prefer';
+  if (modal === 'would_rather') mWord = 'would rather';
+  if (modal === 'would_rather_not') mWord = 'would rather';
+  
   // Negation form:
   let mNotWord = mWord + " not";
   if (modal === 'can') mNotWord = "cannot";
@@ -12150,6 +12234,9 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'be_used_to_ing') mNotWord = activeSubjectObj.plural ? 'are not used' : 'is not used';
   if (modal === 'was_were_used_to_ing') mNotWord = activeSubjectObj.plural ? 'were not used' : 'was not used';
   if (modal === 'get_used_to_ing') mNotWord = activeSubjectObj.plural ? 'do not get used' : 'does not get used';
+  if (modal === 'would_prefer') mNotWord = 'would not prefer';
+  if (modal === 'would_rather') mNotWord = 'would rather not';
+  if (modal === 'would_rather_not') mNotWord = 'would rather not';
 
   // Build the wagonChain according to the aspect, voice, negation, and question
   const subjectWagon = isPassive ? 
@@ -12157,7 +12244,7 @@ function getModalTenseData(modal, tense, aspect) {
     { word: activeSpeaker, role: "subject", color: colorSubject };
     
   const isIngModal = modal.endsWith('_ing');
-  const needsTo = modal.includes('to');
+  const needsTo = modal.includes('to') || modal === 'would_prefer';
   
   const verbWagon = isPassive ?
     { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
@@ -12218,6 +12305,15 @@ function getModalTenseData(modal, tense, aspect) {
     } else if (modal === 'get_used_to_ing') {
       qFirst = activeSubjectObj.plural ? (isNeg ? "don't" : "do") : (isNeg ? "doesn't" : "does");
       qRem = "get used";
+    } else if (modal === 'would_prefer') {
+      qFirst = "would";
+      qRem = isNeg ? "not prefer" : "prefer";
+    } else if (modal === 'would_rather') {
+      qFirst = "would";
+      qRem = isNeg ? "rather not" : "rather";
+    } else if (modal === 'would_rather_not') {
+      qFirst = "would";
+      qRem = "rather not";
     } else {
       qFirst = isNeg ? mNotWord : mWord;
       qRem = "";
@@ -12639,6 +12735,22 @@ function getModalTenseData(modal, tense, aspect) {
     } else {
       verbForm = isNeg ? (stem + "maya alışmamakta") : (stem + "maya alışmakta");
     }
+  } else if (modal === 'would_prefer' || modal === 'would_rather') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (stem + "mamayı tercih eder") : (stem + "mayı tercih eder");
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (stem + "mıyor olmayı tercih eder") : (stem + "yor olmayı tercih eder");
+    } else {
+      verbForm = isNeg ? (stem + "mamış olmayı tercih ederdi") : (stem + "mış olmayı tercih ederdi");
+    }
+  } else if (modal === 'would_rather_not') {
+    if (aspect === 'simple') {
+      verbForm = stem + "mamayı tercih eder";
+    } else if (aspect === 'progressive') {
+      verbForm = stem + "mıyor olmayı tercih eder";
+    } else {
+      verbForm = stem + "mamış olmayı tercih ederdi";
+    }
   }
 
   // Handle Turkish question particle
@@ -12685,6 +12797,8 @@ function getModalTenseData(modal, tense, aspect) {
       if (trimmed.endsWith("ecek")) return trimmed + " mi?";
       if (trimmed.endsWith("acaklar")) return trimmed.replace("acaklar", "acaklar mı?");
       if (trimmed.endsWith("ecekler")) return trimmed.replace("ecekler", "ecekler mi?");
+      if (trimmed.endsWith("tercih eder")) return trimmed.replace("tercih eder", "tercih eder mi?");
+      if (trimmed.endsWith("tercih ederdi")) return trimmed.replace("tercih ederdi", "tercih eder miydi?");
       if (trimmed.endsWith("ardı")) {
         const lastV = getLastVowel(trimmed.slice(0, -4));
         const harmony = get4WayHarmony(lastV);
@@ -12830,4 +12944,20 @@ function syncPredicateLevelsHighlight() {
       btn.classList.toggle('active', btnCount === currentCount);
     });
   }
+}
+
+
+function syncModalMatrixHighlight() {
+  document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
+    const btnModal = btn.dataset.modal;
+    const btnAspect = btn.dataset.aspect;
+    
+    let currentAspect = 'simple';
+    if (selectedLevel === 4 || selectedLevel === 5) currentAspect = 'progressive';
+    if (selectedLevel === 6 || selectedLevel === 7 || selectedLevel === 8 || selectedLevel === 10 || selectedLevel === 12) currentAspect = 'perfect';
+    if (selectedLevel === 9 || selectedLevel === 11) currentAspect = 'perfect-progressive';
+
+    const isMatch = (state.selectedSimulatorModal === btnModal && currentAspect === btnAspect);
+    btn.classList.toggle('active', isMatch);
+  });
 }
