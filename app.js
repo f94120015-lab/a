@@ -5564,9 +5564,13 @@ function renderSpotlight(container, question) {
     displayHtml = paragraph;
   }
 
-  const optionsHtml = question.options.map((opt, i) => {
-    return `<button class="spotlight-option-card" data-index="${i}" style="padding: 16px; border-radius: 12px; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; text-align: center; width: 100%;">
-      ${opt}
+  // Shuffle spotlight options dynamically to randomize UI layout
+  const indexedOptions = question.options.map((opt, i) => ({ opt, originalIndex: i }));
+  const shuffledOptions = [...indexedOptions].sort(() => Math.random() - 0.5);
+
+  const optionsHtml = shuffledOptions.map((item) => {
+    return `<button class="spotlight-option-card" data-index="${item.originalIndex}" style="padding: 16px; border-radius: 12px; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; text-align: center; width: 100%;">
+      ${item.opt}
     </button>`;
   }).join('');
 
