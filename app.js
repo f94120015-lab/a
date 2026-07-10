@@ -4289,18 +4289,17 @@ function renderMultipleChoice(container, question) {
     } else if (question.id.startsWith('c53_')) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
     } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1')) {
-      tipText = '<strong>Bağlaç Sentaksı (G1, G2, G4):</strong><br>• <strong>G1 (Cümle Alanlar - <em>Although, Because, If</em>):</strong> + tam cümle (SVO)<br>• <strong>G2 (İsim Alanlar - <em>Despite, Because of, In addition to</em>):</strong> + isim / V-ing<br>• <strong>G4 (Geçişler - <em>However, Therefore, Moreover</em>):</strong> noktalı virgül (;) veya nokta (.) ile ayrılıp virgül (,) ile kullanılır.';
+      tipText = '<strong>Bağlaçların Cümle ve İsim Yapıları:</strong><br>• <strong>Cümle Alan Bağlaçlar (<em>Although, Because, If</em>):</strong> + tam cümle (SVO)<br>• <strong>İsim Alan Bağlaçlar (<em>Despite, Because of, In addition to</em>):</strong> + isim / V-ing<br>• <strong>Geçiş Kelimeleri (<em>However, Therefore, Moreover</em>):</strong> noktalı virgül (;) veya nokta (.) ile ayrılıp virgül (,) ile kullanılır.';
     } else if (question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2')) {
-      tipText = '<strong>Bağlaç Semantiği (Anlamsal İlişki):</strong><br>• <strong>Zıtlık (Contrast - <em>Although, Despite, However</em>):</strong> Zıt yönlü (+ / -) cümleleri bağlar.<br>• <strong>Sebep-Sonuç (Cause/Effect - <em>Because, Due to, Therefore</em>):</strong> Paralel yönlü (+ & +) ilişkileri bağlar.<br>• <strong>Koşul (Condition - <em>Unless, In case of</em>):</strong> Eylemin şartını/önlemini bildirir.';
+      tipText = '<strong>Bağlaçların Anlamsal İlişkisi:</strong><br>• <strong>Zıtlık (Contrast - <em>Although, Despite, However</em>):</strong> Zıt yönlü (+ / -) cümleleri bağlar.<br>• <strong>Sebep-Sonuç (Cause/Effect - <em>Because, Due to, Therefore</em>):</strong> Paralel yönlü (+ & +) ilişkileri bağlar.<br>• <strong>Koşul (Condition - <em>Unless, In case of</em>):</strong> Eylemin şartını veya önlemini bildirir.';
     } else if (question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
-      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen bağlaçlar arası geçiş yaparken sentaksı dönüştürün:<br>• <em>Although</em> (G1 + Cümle) ➔ <em>Despite</em> (G2 + İsim / V-ing)<br>• <em>Because</em> (G1) ➔ <em>Because of</em> (G2)';
+      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen bağlaçlar arası geçiş yaparken yapıyı dönüştürün:<br>• <em>Although</em> (Cümle Alan) ➔ <em>Despite</em> (İsim / V-ing Alan)<br>• <em>Because</em> (Cümle Alan) ➔ <em>Because of</em> (İsim Alan)';
     }
 
     if (tipText) {
       tipsHtml = `
-        <div class="tips-reminder-card">
-          <span class="tips-reminder-icon">💡</span>
-          <div class="tips-reminder-text"><strong>TIPS HATIRLATICISI:</strong> ${tipText}</div>
+        <div class="tips-reminder-card" style="padding: 10px 14px; margin-bottom: 15px;">
+          <div class="tips-reminder-text" style="font-size: 0.9rem; line-height: 1.5;"><strong>Tips:</strong> ${tipText}</div>
         </div>
       `;
     }
