@@ -10790,26 +10790,32 @@ function initSimulator() {
     });
   }
 
-  levelBtnsContainer.innerHTML = simulatorData.levels.map(lvl => {
+  const predicateLevelsList = [
+    { count: 0, title: "Durum (0 Eylem)" },
+    { count: 1, title: "1 Öğeli Yüklem" },
+    { count: 2, title: "2 Öğeli Yüklem" },
+    { count: 3, title: "3 Öğeli Yüklem" },
+    { count: 4, title: "4 Öğeli Yüklem" },
+    { count: 5, title: "5 Öğeli Yüklem" },
+    { count: 6, title: "6 Öğeli Yüklem" },
+    { count: 7, title: "7 Öğeli Yüklem" },
+    { count: 8, title: "8 Öğeli Yüklem" }
+  ];
+
+  levelBtnsContainer.innerHTML = predicateLevelsList.map(item => {
     return `
-      <button class="simulator-level-btn ${lvl.level === selectedLevel ? 'active' : ''}" data-level="${lvl.level}">
-        <span class="lvl-num">Lvl ${lvl.level}</span>
-        <span class="lvl-title">${lvl.title}</span>
+      <button class="simulator-level-btn" data-pred-count="${item.count}">
+        <span class="lvl-num">${item.count} Öğe</span>
+        <span class="lvl-title">${item.title}</span>
       </button>
     `;
   }).join('');
 
   levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(btn => {
     btn.onclick = () => {
-      selectedLevel = parseInt(btn.dataset.level, 10);
-      levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(b => {
-        b.classList.toggle('active', b === btn);
-      });
+      const targetCount = parseInt(btn.dataset.predCount, 10);
       
-      state.pureTense = null;
-      saveState();
-      
-      // Clear matrix highlight
+      // Clear highlight of matrix buttons
       document.querySelectorAll('.matrix-cell-btn').forEach(b => {
         b.style.background = 'var(--bg-body)';
         b.style.color = 'var(--text-primary)';
@@ -10825,6 +10831,7 @@ function initSimulator() {
         glitchOverlay.classList.remove('show');
       }
 
+      configureCockpitForPredicateCount(targetCount);
       renderSimulatorContent();
       renderActiveMission();
     };
@@ -11117,6 +11124,7 @@ function renderSimulatorContent() {
   if (noteText) noteText.textContent = currentLvlData.mechanic_note;
 
   syncCockpitUI();
+  syncPredicateLevelsHighlight();
 }
 
 function syncCockpitUI() {
@@ -12701,4 +12709,125 @@ function getModalTenseData(modal, tense, aspect) {
   currentLvl.turkish_reflex = trReflexColored.replace(/<[^>]*>/g, '');
   
   return currentLvl;
+}
+
+
+// ============================================================
+// YÜKLEM ÖBEĞİ ÖĞE SAYISI VE OTOMATİK FİLTRELEME SİSTEMİ
+// ============================================================
+function getPredicateElementCount(wagonChain) {
+  if (!wagonChain) return 0;
+  if (selectedLevel === 1 && (!state.selectedSimulatorModal || state.selectedSimulatorModal === 'none')) {
+    return 0;
+  }
+  
+  let count = 0;
+  for (const wagon of wagonChain) {
+    const word = (wagon.word || '').toLowerCase().replace(/[^a-z']/g, '').trim();
+    if (wagon.role === 'subject' || wagon.role === 'object' || wagon.role === 'negation' || word === 'to') {
+      continue;
+    }
+    count++;
+  }
+  return count;
+}
+
+function configureCockpitForPredicateCount(targetCount) {
+  const origLevel = selectedLevel;
+  const origModal = state.selectedSimulatorModal;
+  const origVoice = state.activePassiveMode;
+  const origPureTense = state.pureTense;
+  
+  function testConfig(lvl, modalVal, voiceVal) {
+    selectedLevel = lvl;
+    state.selectedSimulatorModal = modalVal;
+    state.activePassiveMode = voiceVal;
+    state.pureTense = null;
+    
+    let data = null;
+    if (modalVal && modalVal !== 'none') {
+      let aspect = 'simple';
+      if (lvl === 4 || lvl === 5) aspect = 'progressive';
+      if (lvl === 6 || lvl === 7 || lvl === 8 || lvl === 10 || lvl === 12) aspect = 'perfect';
+      if (lvl === 9 || lvl === 11) aspect = 'perfect-progressive';
+      
+      let tense = 'present';
+      if (lvl === 2 || lvl === 5 || lvl === 7 || lvl === 12) tense = 'past';
+      if (lvl === 3 || lvl === 8 || lvl === 9) tense = 'future';
+      
+      data = getModalTenseData(modalVal, tense, aspect);
+    } else {
+      data = getActiveLevelData(lvl);
+    }
+    
+    if (data) {
+      const count = getPredicateElementCount(data.wagon_chain);
+      if (count === targetCount) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  // 1. Try base levels with current voice
+  for (let lvl = 1; lvl <= 12; lvl++) {
+    if (testConfig(lvl, 'none', origVoice)) {
+      saveState();
+      syncCockpitUI();
+      return;
+    }
+  }
+  
+  // 2. Try base levels with other voice
+  const otherVoice = origVoice === 'active' ? 'passive' : 'active';
+  for (let lvl = 1; lvl <= 12; lvl++) {
+    if (testConfig(lvl, 'none', otherVoice)) {
+      saveState();
+      syncCockpitUI();
+      return;
+    }
+  }
+
+  // 3. Try modal combinations
+  const modalOptions = [
+    'can', 'cant', 'could', 'couldnt', 'may', 'may_not', 'might', 'must', 'mustnt',
+    'shall', 'should', 'shouldnt', 'would', 'used_to', 'have_to', 'had_to',
+    'be_able_to', 'was_were_able_to', 'wasnt_werent_able_to', 'will_have_to',
+    'have_got_to', 'dont_doesnt_have_to', 'dont_doesnt_need_to', 'didnt_have_to',
+    'didnt_need_to', 'neednt', 'ought_to', 'ought_not_to', 'had_better', 'had_better_not',
+    'didnt_use_to', 'be_used_to_ing', 'was_were_used_to_ing', 'get_used_to_ing'
+  ];
+  
+  const lvlOptions = [1, 2, 4, 6, 9];
+  const voiceOptions = ['active', 'passive'];
+
+  for (const m of modalOptions) {
+    for (const lvl of lvlOptions) {
+      for (const voice of voiceOptions) {
+        if (testConfig(lvl, m, voice)) {
+          saveState();
+          syncCockpitUI();
+          return;
+        }
+      }
+    }
+  }
+  
+  // If not found, restore original state
+  selectedLevel = origLevel;
+  state.selectedSimulatorModal = origModal;
+  state.activePassiveMode = origVoice;
+  state.pureTense = origPureTense;
+}
+
+function syncPredicateLevelsHighlight() {
+  const levelBtnsContainer = document.getElementById('simulator-level-buttons');
+  if (levelBtnsContainer) {
+    const currentLvlData = getActiveLevelData(selectedLevel);
+    const currentCount = getPredicateElementCount(currentLvlData ? currentLvlData.wagon_chain : null);
+    levelBtnsContainer.querySelectorAll('.simulator-level-btn').forEach(btn => {
+      const btnCount = parseInt(btn.dataset.predCount, 10);
+      btn.classList.toggle('active', btnCount === currentCount);
+    });
+  }
 }
