@@ -9437,171 +9437,99 @@ const simulatorData = {
   "levels": [
     {
       "level": 1,
-      "title": "Durum Kilitlenmesi (Sıfır Eylem)",
-      "english_sentence": "This is the tablet.",
-      "wagon_chain": [
-        { "word": "This", "role": "subject", "color": "#1f2937" },
-        { "word": "is", "role": "status_linker", "color": "#3b82f6", "suffix_tr": "-dir/-dır" },
-        { "word": "the tablet.", "role": "object", "color": "#1f2937" }
-      ],
-      "turkish_reflex": "Bu tablettir.",
-      "turkish_reflex_colored": "Bu tablet<span style=\"color:#3b82f6; font-weight:800;\">tir</span>.",
-      "mechanic_note": "Yardımcı eylem (copula) kullanımıyla kurulan durum bildiren (stative) ve eylemsiz cümle yapısıdır. Özne ile nesne arasındaki statik ilişkiyi tanımlar."
+      "title": "Present Simple (Geniş Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Geniş zaman (Simple Present) yapısıdır. Genel doğruları, alışkanlıkları ve kalıcı durumları ifade eder. Edilgen yapıda am/is/are + V3 kullanılır."
     },
     {
       "level": 2,
-      "title": "Simple Past Passive (2 Vagon)",
-      "english_sentence": "Ancient tablets were read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "were", "role": "past_tense", "color": "#3b82f6", "suffix_tr": "-di/-dı" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okundu.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#3b82f6; font-weight:800;\">du</span>.",
-      "mechanic_note": "Geçmiş zaman edilgen (Past Simple Passive) yapısıdır. Geçmişte tamamlenmiş ve etkisini yitirmiş edilgen bir eylemi ifade etmek için kullanılır."
+      "title": "Past Simple (Di'li Geçmiş Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Geçmiş zaman (Simple Past) yapısıdır. Geçmişte tamamlanmış eylemleri ifade eder. Edilgen yapıda was/were + V3 kullanılır."
     },
     {
       "level": 3,
-      "title": "Simple Future Passive (2 Vagon)",
-      "english_sentence": "Ancient tablets will be read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "will be", "role": "future_passive", "color": "#3b82f6", "suffix_tr": "-acak/-ecek" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okunacak.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#3b82f6; font-weight:800;\">acak</span>.",
-      "mechanic_note": "Gelecek zaman edilgen (Future Simple Passive) yapısıdır. Gelecekte gerçekleşecek olan edilgen bir eylemi ve özne üzerindeki etkisini bildirir."
+      "title": "Future Simple (Gelecek Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Gelecek zaman (Simple Future) yapısıdır. Gelecekte gerçekleşecek eylemleri ifade eder. Edilgen yapıda will be + V3 kullanılır."
     },
     {
       "level": 4,
-      "title": "Present Continuous Passive (3 Vagon)",
-      "english_sentence": "Ancient tablets are being read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "are", "role": "present_tense", "color": "#3b82f6", "suffix_tr": "-dir" },
-        { "word": "being", "role": "continuous_motor", "color": "#10b981", "suffix_tr": "-makta/-mekte" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okunmaktadır.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">dır</span>.",
-      "mechanic_note": "Şimdiki zaman süreç edilgeni (Present Continuous Passive) yapısıdır. Yardımcı fiil (are), süreç belirteci (being) ve fiilin 3. hali (V3) kullanılarak, eylemin konuşma anında devam ettiğini gösterir."
+      "title": "Present Progressive (Şimdiki Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Şimdiki zaman süreç (Present Continuous) yapısıdır. Konuşma anında devam etmekte olan eylemleri gösterir. Edilgen yapıda am/is/are + being + V3 kullanılır."
     },
     {
       "level": 5,
-      "title": "Past Continuous Passive (3 Vagon)",
-      "english_sentence": "Ancient tablets were being read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "were", "role": "past_tense", "color": "#3b82f6", "suffix_tr": "-di/-aydı" },
-        { "word": "being", "role": "continuous_motor", "color": "#10b981", "suffix_tr": "-makta" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okunmaktaydı.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span><span style=\"color:#3b82f6; font-weight:800;\">ydı</span>.",
-      "mechanic_note": "Geçmiş zaman süreç edilgeni (Past Continuous Passive) yapısıdır. Geçmişte belirli bir zaman aralığında kesintisiz devam etmiş olan edilgen bir süreci ifade eder."
+      "title": "Past Progressive (Şimdiki Zamanın Hikayesi)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Geçmişte süreç (Past Continuous) yapısıdır. Geçmişte belirli bir anda devam etmekte olan eylemleri anlatır. Edilgen yapıda was/were + being + V3 kullanılır."
     },
     {
       "level": 6,
-      "title": "Present Perfect Passive (3 Vagon)",
-      "english_sentence": "Ancient tablets have been read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "have", "role": "perfect_bridge", "color": "#3b82f6", "suffix_tr": "çoktan" },
-        { "word": "been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-di" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler çoktan okundu.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#3b82f6; font-weight:800;\">çoktan</span> <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">du</span>.",
-      "mechanic_note": "Yakın geçmiş zaman edilgen (Present Perfect Passive) yapısıdır. Eylemin geçmişte tamamlandığını ancak etkisinin referans anında (şimdiki zamanda) sürdüğünü ifade eder."
+      "title": "Future Progressive (Gelecekte Süreç)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Gelecekte süreç (Future Continuous) yapısıdır. Gelecekte belirli bir anda devam edecek olan eylemleri ifade eder. Edilgen yapıda will be + being + V3 kullanılır."
     },
     {
       "level": 7,
-      "title": "Past Perfect Passive (3 Vagon)",
-      "english_sentence": "Ancient tablets had been read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "had", "role": "perfect_bridge", "color": "#3b82f6", "suffix_tr": "zaten" },
-        { "word": "been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-mişti" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler zaten okunmuştu.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#3b82f6; font-weight:800;\">zaten</span> <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">muştu</span>.",
-      "mechanic_note": "Öncelik-sonralık ilişkisi kuran geçmiş zaman edilgen (Past Perfect Passive) yapısıdır. Geçmişteki başka bir eylem veya referans noktasından daha önce tamamlenmiş olan edilgen eylemleri tanımlar."
+      "title": "Present Perfect (Yakın Geçmiş Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Yakın geçmiş zaman (Present Perfect) yapısıdır. Geçmişte başlamış ancak etkisi veya süreci günümüze uzanan durumları gösterir. Edilgen yapıda has/have + been + V3 kullanılır."
     },
     {
       "level": 8,
-      "title": "Future Perfect Passive (4 Vagon)",
-      "english_sentence": "Ancient tablets will have been read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "will", "role": "future_locomotive", "color": "#3b82f6", "suffix_tr": "olacak" },
-        { "word": "have been", "role": "perfect_passive", "color": "#ec4899", "suffix_tr": "-miş" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okunmuş olacak.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#ec4899; font-weight:800;\">muş</span> <span style=\"color:#3b82f6; font-weight:800;\">olacak</span>.",
-      "mechanic_note": "Gelecekte tamamlanmışlık edilgen (Future Perfect Passive) yapısıdır. Gelecekte belirlenen bir zaman sınırından önce tamamlenmiş olacak edilgen durumları projeksiyon olarak sunar."
+      "title": "Past Perfect (Miş'li Geçmiş Zaman)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Önceki geçmiş zaman (Past Perfect) yapısıdır. Geçmişteki bir eylemden daha önce yapılmış olan eylemleri tanımlar. Edilgen yapıda had + been + V3 kullanılır."
     },
     {
       "level": 9,
-      "title": "Future Perfect Continuous Passive (5 Vagon - Saf Zaman Tavanı)",
-      "english_sentence": "Ancient tablets will have been being read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "will", "role": "future", "color": "#3b82f6", "suffix_tr": "-acak" },
-        { "word": "have", "role": "perfect", "color": "#3b82f6", "suffix_tr": "olmuş" },
-        { "word": "been", "role": "stabilizer", "color": "#ec4899", "suffix_tr": "ol-" },
-        { "word": "being", "role": "continuous", "color": "#10b981", "suffix_tr": "-makta" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletler okunmakta olmuş olacak.",
-      "turkish_reflex_colored": "Antik tabletler <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta</span> <span style=\"color:#ec4899; font-weight:800;\">ol</span><span style=\"color:#3b82f6; font-weight:800;\">muş olacak</span>.",
-      "mechanic_note": "Gelecekte süregelen bitmişlik edilgen (Future Perfect Continuous Passive) yapısıdır. Gelecekte belirli bir ana kadar sürecek olan edilgen eylem akışını ifade eden en karmaşık morfolojik dizilimlerden biridir."
+      "title": "Future Perfect (Gelecekte Tamamlanmışlık)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Gelecekte tamamlanmışlık (Future Perfect) yapısıdır. Gelecekte belirli bir sınıra kadar bitmiş olacak eylemleri anlatır. Edilgen yapıda will have + been + V3 kullanılır."
     },
     {
       "level": 10,
-      "title": "Olasılık Kalkanı (6 Vagon)",
-      "english_sentence": "Ancient tablets are likely to have been read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "are likely", "role": "probability_shield", "color": "#ec4899", "suffix_tr": "muhtemeldir" },
-        { "word": "to have been", "role": "past_shift", "color": "#10b981", "suffix_tr": "-miş olması" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletlerin okunmuş olması muhtemeldir.",
-      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">muş olması</span> <span style=\"color:#ec4899; font-weight:800;\">muhtemeldir</span>.",
-      "mechanic_note": "Sıfat ve infinitive (adjective + perfect passive infinitive) birleşimidir. 'be likely to + have been V3' kalıbı, geçmişteki edilgen eyleme yönelik güçlü bir olasılık bildirir."
+      "title": "Present Perfect Progressive (Süreçli Yakın Geçmiş)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Yakın geçmişte süreç (Present Perfect Continuous) yapısıdır. Geçmişte başlayıp konuşma anına kadar kesintisiz süren eylemleri anlatır. Edilgen yapıda has/have + been + being + V3 kullanılır."
     },
     {
       "level": 11,
-      "title": "Söylenti Kalkanı (7 Vagon)",
-      "english_sentence": "Ancient tablets are rumored to have been being read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "are rumored", "role": "rumor_shield", "color": "#ec4899", "suffix_tr": "söyleniyor" },
-        { "word": "to have been being", "role": "past_continuous_motor", "color": "#10b981", "suffix_tr": "-makta olduğu" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletlerin okunmakta olduğu söyleniyor.",
-      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">makta olduğu</span> <span style=\"color:#ec4899; font-weight:800;\">söyleniyor</span>.",
-      "mechanic_note": "Kişisiz edilgen (Impersonal Passive) ve perfect continuous passive infinitive kalıbıdır. 'be rumored to have been being V3' yapısı, eylemin hem başkaları tarafından iddia edildiğini hem de geçmişte bir süreç olarak sürdüğünü ifade eder."
+      "title": "Past Perfect Progressive (Süreçli Miş'li Geçmiş)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Geçmişte süregelmişlik (Past Perfect Continuous) yapısıdır. Geçmişte bir noktaya kadar kesintisiz sürmüş olan eylemleri gösterir. Edilgen yapıda had + been + being + V3 kullanılır."
     },
     {
       "level": 12,
-      "title": "Çift Zaman Kayması (8 Vagon - Titan Sınırı)",
-      "english_sentence": "Ancient tablets could have been expected to have been read.",
-      "wagon_chain": [
-        { "word": "Ancient tablets", "role": "subject", "color": "#1f2937" },
-        { "word": "could have been", "role": "past_possibility", "color": "#3b82f6", "suffix_tr": "mümkündü" },
-        { "word": "expected", "role": "expectation_shield", "color": "#ec4899", "suffix_tr": "beklenmiş olabilmesi" },
-        { "word": "to have been", "role": "deep_past", "color": "#10b981", "suffix_tr": "-miş olmasının" },
-        { "word": "read.", "role": "main_verb_v3", "color": "#f59e0b", "suffix_tr": "oku-n-" }
-      ],
-      "turkish_reflex": "Antik tabletlerin okunmuş olmasının beklenmiş olabilmesi mümkündü.",
-      "turkish_reflex_colored": "Antik tabletlerin <span style=\"color:#f59e0b; font-weight:800;\">okun</span><span style=\"color:#10b981; font-weight:800;\">muş olmasının</span> <span style=\"color:#ec4899; font-weight:800;\">beklenmiş olabilmesi</span> <span style=\"color:#3b82f6; font-weight:800;\">mümkündü</span>.",
-      "mechanic_note": "Kazanılmış/varsayımsal geçmiş zaman modal edilgen yapısıdır (double perfect shift). Geçmişte gerçekleşmeyen bir beklentinin edilgenliğini, 'could have been expected' ve 'to have been V3' yapılarının ardışık dizilimiyle kurar."
+      "title": "Future Perfect Progressive (Gelecekte Süreçli Tamamlanmışlık)",
+      "english_sentence": "",
+      "wagon_chain": [],
+      "turkish_reflex": "",
+      "mechanic_note": "Gelecekte süregelmişlik (Future Perfect Continuous) yapısıdır. Gelecekteki bir noktaya kadar devam etmekte olan eylemleri anlatır. Edilgen yapıda will have + been + being + V3 kullanılır."
     }
   ]
 };
@@ -10135,11 +10063,9 @@ function getActiveLevelData(lvlNum) {
   
   const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
   const verbIndex = state.selectedVerbIndex !== undefined ? state.selectedVerbIndex : 0;
-  const shieldId = state.selectedShieldId || 'likely';
   
   const activeSubjectObj = subjects[subjectIndex] || subjects[0];
   const activeVerbObj = verbs[verbIndex] || verbs[0];
-  const activeShieldObj = shields.find(s => s.id === shieldId) || shields[0];
   
   const isPassive = state.activePassiveMode !== 'active';
   const isNeg = state.negationOn || false;
@@ -10178,38 +10104,55 @@ function getActiveLevelData(lvlNum) {
   const colorVerb = "#f59e0b";
   const colorInfinitive = "#10b981";
   
+  const accusativeObj = applyAccusative(activeSubjectObj.tr);
+
+  // Helper functions for dynamic verb conjugation inside the function
+  function getV1Verb(plural) {
+    if (plural) return activeVerbObj.engV1;
+    // Singular s-ending rule
+    const v = activeVerbObj.engV1;
+    if (v.endsWith('y') && !'aeiou'.includes(v.charAt(v.length - 2))) {
+      return v.slice(0, -1) + 'ies';
+    } else if (v.endsWith('ch') || v.endsWith('sh') || v.endsWith('x') || v.endsWith('s') || v.endsWith('o')) {
+      return v + 'es';
+    }
+    return v + 's';
+  }
+
   if (lvlNum === 1) {
-    const copulaWord = activeSubjectObj.plural ? "are" : "is";
-    const objectWord = activeSubjectObj.plural ? activeSubjectObj.noun_eng + "s" : "a " + activeSubjectObj.noun_eng;
-    
-    wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-    wagonChain.push({ word: copulaWord, role: "status_linker", color: colorAux, suffix_tr: "-dir/-dır" });
-    if (isNeg) {
-      wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-    }
-    wagonChain.push({ word: objectWord, role: "object", color: colorObject });
-    
-    const trNounBase = activeSubjectObj.noun_tr + (activeSubjectObj.plural ? (get2WayHarmony(getLastVowel(activeSubjectObj.noun_tr)) === 'a' ? 'lar' : 'ler') : '');
-    let trVerbPart = "";
-    if (isNeg) {
-      trVerbPart = trNounBase + ` değil<span style="color:${colorAux}; font-weight:800;">dir</span>`;
-    } else {
-      const lastChar = trNounBase.slice(-1);
-      const isHard = isHardConsonant(lastChar);
-      const lastV = getLastVowel(trNounBase);
-      const harmony = get4WayHarmony(lastV);
-      trVerbPart = trNounBase + `<span style="color:${colorAux}; font-weight:800;">${isHard ? 't' : 'd'}${harmony}r</span>`;
-    }
-    trReflexColored = activeSubjectObj.tr + " " + trVerbPart + ".";
-    
-  } else if (lvlNum === 2) {
+    // Present Simple
     if (isPassive) {
-      const auxWord = activeSubjectObj.plural ? "were" : "was";
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-      wagonChain.push({ word: auxWord, role: "past_tense", color: colorAux, suffix_tr: "-di/-dı" });
+      wagonChain.push({ word: activeSubjectObj.plural ? "are" : "is", role: "status_linker", color: colorAux, suffix_tr: "-ir/-ur" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
+      
+      const lastV = getLastVowel(passiveStem);
+      const harmony = get4WayHarmony(lastV);
+      const isHard = isHardConsonant(passiveStem.slice(-1));
+      let suffixPart = (isHard ? 't' : 'd') + harmony + 'r';
+      if (isNeg) suffixPart = 'z';
+      trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorAux}; font-weight:800;">${isNeg ? 'me' : ''}${suffixPart}</span>.`;
+    } else {
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+        wagonChain.push({ word: "do not", role: "negation", color: colorNegation });
+        wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
+      } else {
+        wagonChain.push({ word: getV1Verb(true), role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
       }
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      
+      const suffixPart = isNeg ? 'mez' : 'r';
+      trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorAux}; font-weight:800;">${isNeg ? 'me' : ''}${suffixPart}</span>.`;
+    }
+
+  } else if (lvlNum === 2) {
+    // Past Simple
+    if (isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: activeSubjectObj.plural ? "were" : "was", role: "past_tense", color: colorAux, suffix_tr: "-di/-dı" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
       
       const verbSuffix = applyPast(passiveStem, isNeg);
@@ -10218,7 +10161,7 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       if (isNeg) {
-        wagonChain.push({ word: "did", role: "past_tense", color: colorAux, suffix_tr: "-di" });
+        wagonChain.push({ word: "did", role: "past_tense", color: colorAux });
         wagonChain.push({ word: "not", role: "negation", color: colorNegation });
         wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
       } else {
@@ -10226,17 +10169,17 @@ function getActiveLevelData(lvlNum) {
       }
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const verbSuffix = applyPast(activeStem, isNeg);
       const suffixPart = verbSuffix.slice(activeStem.length);
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorAux}; font-weight:800;">${suffixPart}</span>.`;
     }
-    
+
   } else if (lvlNum === 3) {
+    // Future Simple
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       if (isNeg) {
-        wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "-acak" });
+        wagonChain.push({ word: "will", role: "future", color: colorAux });
         wagonChain.push({ word: "not", role: "negation", color: colorNegation });
         wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
       } else {
@@ -10250,26 +10193,22 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "-acak" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const verbSuffix = applyFuture(activeStem, isNeg);
       const suffixPart = verbSuffix.slice(activeStem.length);
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorAux}; font-weight:800;">${suffixPart}</span>.`;
     }
-    
+
   } else if (lvlNum === 4) {
+    // Present Progressive
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       wagonChain.push({ word: activeSubjectObj.plural ? "are" : "is", role: "present_tense", color: colorAux, suffix_tr: "-dir" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta/-mekte" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
       
       const verbSuffix = applyContinuous(passiveStem, isNeg, true);
@@ -10278,38 +10217,29 @@ function getActiveLevelData(lvlNum) {
       trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${continuousPart}</span><span style="color:${colorAux}; font-weight:800;">${copulaPart}</span>.`;
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
-      wagonChain.push({ word: "are", role: "present_tense", color: colorAux, suffix_tr: "-iyor/-iyorlar" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-ıyor / -iyor" });
+      wagonChain.push({ word: "are", role: "present_tense", color: colorAux, suffix_tr: "-iyor" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-ıyor" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
-      
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       
       const conjugatedVerb = applyPresentContinuousActive(activeStem, isNeg);
       let displayStem = activeStem;
       if (!isNeg && "aeıioöuüAEIİOÖUÜ".includes(activeStem.slice(-1)) && !activeStem.endsWith(" et")) {
         displayStem = activeStem.slice(0, -1);
       }
-      if (activeStem.endsWith(" et")) {
-        displayStem = activeStem.slice(0, -2) + "ed";
-      }
       const suffixPart = conjugatedVerb.slice(displayStem.length);
-      const lenCont = suffixPart.length - 3; // "lar" or "ler" is 3 chars
+      const lenCont = suffixPart.length - 3;
       const continuousPart = suffixPart.slice(0, lenCont);
       const copulaPart = suffixPart.slice(lenCont);
-      
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${displayStem}</span><span style="color:${colorContinuous}; font-weight:800;">${continuousPart}</span><span style="color:${colorAux}; font-weight:800;">${copulaPart}</span>.`;
     }
-    
+
   } else if (lvlNum === 5) {
+    // Past Progressive
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-      wagonChain.push({ word: activeSubjectObj.plural ? "were" : "was", role: "past_tense", color: colorAux, suffix_tr: "-di/-ydı" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      wagonChain.push({ word: activeSubjectObj.plural ? "were" : "was", role: "past_tense", color: colorAux, suffix_tr: "-di" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
       
@@ -10319,38 +10249,58 @@ function getActiveLevelData(lvlNum) {
       trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${continuousPart}</span><span style="color:${colorAux}; font-weight:800;">${pastPart}</span>.`;
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
-      wagonChain.push({ word: "were", role: "past_tense", color: colorAux, suffix_tr: "-iyordu/-iyorlardı" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-ıyor / -iyor" });
+      wagonChain.push({ word: "were", role: "past_tense", color: colorAux, suffix_tr: "-iyordu" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-ıyor" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
-      
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       
       const conjugatedVerb = applyPastContinuousActive(activeStem, isNeg);
       let displayStem = activeStem;
       if (!isNeg && "aeıioöuüAEIİOÖUÜ".includes(activeStem.slice(-1)) && !activeStem.endsWith(" et")) {
         displayStem = activeStem.slice(0, -1);
       }
-      if (activeStem.endsWith(" et")) {
-        displayStem = activeStem.slice(0, -2) + "ed";
-      }
       const suffixPart = conjugatedVerb.slice(displayStem.length);
-      const lenCont = suffixPart.length - 5; // "lardı" or "lerdi" is 5 chars
+      const lenCont = suffixPart.length - 5;
       const continuousPart = suffixPart.slice(0, lenCont);
       const pastPart = suffixPart.slice(lenCont);
-      
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${displayStem}</span><span style="color:${colorContinuous}; font-weight:800;">${continuousPart}</span><span style="color:${colorAux}; font-weight:800;">${pastPart}</span>.`;
     }
-    
+
   } else if (lvlNum === 6) {
+    // Future Progressive
+    if (isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      if (isNeg) {
+        wagonChain.push({ word: "will", role: "future", color: colorAux });
+        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+        wagonChain.push({ word: "be", role: "passive_inf", color: colorAux });
+      } else {
+        wagonChain.push({ word: "will be", role: "future_passive", color: colorAux, suffix_tr: "-acak" });
+      }
+      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
+      
+      const contPhrase = applyContinuous(passiveStem, isNeg, false);
+      const contSuffix = contPhrase.slice(passiveStem.length);
+      trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorAux}; font-weight:800;">olacak</span>.`;
+    } else {
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "will be", role: "future_continuous", color: colorAux, suffix_tr: "-acak" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-ıyor" });
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      
+      const contPhrase = applyContinuous(activeStem, isNeg, false);
+      const contSuffix = contPhrase.slice(activeStem.length);
+      trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorAux}; font-weight:800;">olacak</span>.`;
+    }
+
+  } else if (lvlNum === 7) {
+    // Present Perfect
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       wagonChain.push({ word: activeSubjectObj.plural ? "have" : "has", role: "perfect_bridge", color: colorAux, suffix_tr: "çoktan" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "-di" });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
       
@@ -10361,26 +10311,22 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "çoktan" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: activeStem + "-" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
       const timeMarker = isNeg ? "henüz" : "çoktan";
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const verbSuffix = applyPast(activeStem, isNeg);
       const suffixPart = verbSuffix.slice(activeStem.length);
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorAux}; font-weight:800;">${timeMarker}</span> <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorPerfect}; font-weight:800;">${suffixPart}</span>.`;
     }
-    
-  } else if (lvlNum === 7) {
+
+  } else if (lvlNum === 8) {
+    // Past Perfect
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       wagonChain.push({ word: "had", role: "perfect_bridge", color: colorAux, suffix_tr: "zaten" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "-mişti" });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
       
@@ -10391,26 +10337,22 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "had", role: "perfect_bridge", color: colorAux, suffix_tr: "zaten" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: activeStem + "-" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
       const timeMarker = isNeg ? "henüz" : "zaten";
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const verbSuffix = applyPluperfect(activeStem, isNeg);
       const suffixPart = verbSuffix.slice(activeStem.length);
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorAux}; font-weight:800;">${timeMarker}</span> <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorPerfect}; font-weight:800;">${suffixPart}</span>.`;
     }
-    
-  } else if (lvlNum === 8) {
+
+  } else if (lvlNum === 9) {
+    // Future Perfect
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "olacak" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "-miş" });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
@@ -10422,27 +10364,75 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "olacak" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux });
       wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: activeStem + "-miş" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const partSuffix = applyPerfectiveParticiple(activeStem, isNeg);
       const partSuffixPart = partSuffix.slice(activeStem.length);
       const futAux = isNeg ? "olmayacak" : "olacak";
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorPerfect}; font-weight:800;">${partSuffixPart}</span> <span style="color:${colorAux}; font-weight:800;">${futAux}</span>.`;
     }
-    
-  } else if (lvlNum === 9) {
+
+  } else if (lvlNum === 10) {
+    // Present Perfect Progressive
+    if (isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: activeSubjectObj.plural ? "have" : "has", role: "perfect_bridge", color: colorAux, suffix_tr: "çoktan" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
+      
+      const contPhrase = applyContinuous(passiveStem, isNeg, false);
+      const contSuffix = contPhrase.slice(passiveStem.length);
+      trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorPerfect}; font-weight:800;">bulunmaktadır</span>.`;
+    } else {
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      
+      const contPhrase = applyContinuous(activeStem, isNeg, false);
+      const contSuffix = contPhrase.slice(activeStem.length);
+      trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorPerfect}; font-weight:800;">bulunmaktadır</span>.`;
+    }
+
+  } else if (lvlNum === 11) {
+    // Past Perfect Progressive
+    if (isPassive) {
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "perfect_bridge", color: colorAux, suffix_tr: "zaten" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
+      
+      const contPhrase = applyContinuous(passiveStem, isNeg, false);
+      const contSuffix = contPhrase.slice(passiveStem.length);
+      trReflexColored = activeSubjectObj.tr + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorPerfect}; font-weight:800;">bulunmaktaydı</span>.`;
+    } else {
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "perfect_bridge", color: colorAux, suffix_tr: "zaten" });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      
+      const contPhrase = applyContinuous(activeStem, isNeg, false);
+      const contSuffix = contPhrase.slice(activeStem.length);
+      trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorPerfect}; font-weight:800;">bulunmaktaydı</span>.`;
+    }
+
+  } else if (lvlNum === 12) {
+    // Future Perfect Progressive
     if (isPassive) {
       wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "-acak" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta" });
@@ -10454,197 +10444,15 @@ function getActiveLevelData(lvlNum) {
     } else {
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "-acak" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
       wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
       const contPhrase = applyContinuous(activeStem, isNeg, false);
       const contSuffix = contPhrase.slice(activeStem.length);
       trReflexColored = activeSpeakerTr + " " + accusativeObj + ` <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix}</span> <span style="color:${colorPerfect}; font-weight:800;">ol</span><span style="color:${colorAux}; font-weight:800;">muş olacak</span>.`;
-    }
-    
-  } else if (lvlNum === 10) {
-    const shieldEng = isPassive ? activeShieldObj.engPassive : activeShieldObj.engActive;
-    const verbBeOrTo = isPassive ? (activeShieldObj.id === 'capable' ? "of being" : "to be") : (activeShieldObj.id === 'capable' ? "of" : "to");
-    const mainVerbWord = isPassive ? activeVerbObj.engV3 : (activeShieldObj.id === 'capable' ? activeVerbObj.engIng : activeVerbObj.engV1);
-    
-    const splitShield = shieldEng.split(" ");
-    const shieldCoreWord = splitShield[0];
-    
-    if (isPassive) {
-      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-      wagonChain.push({ word: activeSubjectObj.plural ? "are" : "is", role: "present_tense", color: colorAux, suffix_tr: "-dır" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: shieldCoreWord, role: "modal_shield", color: colorPerfect, suffix_tr: activeShieldObj.trLabel });
-      wagonChain.push({ word: verbBeOrTo, role: "passive_inf", color: colorInfinitive });
-      wagonChain.push({ word: mainVerbWord, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
-      
-      const possessiveSubj = applyPossessive(activeSubjectObj.tr);
-      let trShieldSuffix = "";
-      if (activeShieldObj.id === 'likely') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memiş olması' : 'miş olması'}</span> <span style="color:${colorPerfect}; font-weight:800;">muhtemeldir</span>.`;
-      } else if (activeShieldObj.id === 'expected') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">bekleniyor</span>.`;
-      } else if (activeShieldObj.id === 'required') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">gerekiyor</span>.`;
-      } else if (activeShieldObj.id === 'bound') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">kaçınılmazdır</span>.`;
-      } else if (activeShieldObj.id === 'authorized') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesine' : 'mesine'}</span> <span style="color:${colorPerfect}; font-weight:800;">izin verilmiştir</span>.`;
-      } else if (activeShieldObj.id === 'capable') {
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'mama' : 'ebilme'}</span> <span style="color:${colorPerfect}; font-weight:800;">yetisine sahiptir</span>.`;
-      } else {
-        const trVerbBase = isNeg ? (passiveStem + (get2WayHarmony(getLastVowel(passiveStem)) === 'a' ? 'madığı' : 'mediği')) : (passiveStem + applyDigi(passiveStem));
-        const trVerbStemPart = trVerbBase.slice(0, passiveStem.length);
-        const trVerbSuffixPart = trVerbBase.slice(passiveStem.length);
-        const shieldWord = activeShieldObj.id === 'rumored' ? 'söyleniyor' : 'bildiriliyor';
-        trShieldSuffix = ` <span style="color:${colorVerb}; font-weight:800;">${trVerbStemPart}</span><span style="color:${colorInfinitive}; font-weight:800;">${trVerbSuffixPart}</span> <span style="color:${colorPerfect}; font-weight:800;">${shieldWord}</span>.`;
-      }
-      trReflexColored = possessiveSubj + trShieldSuffix;
-    } else {
-      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
-      wagonChain.push({ word: "are", role: "present_tense", color: colorAux, suffix_tr: "-dır" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: shieldCoreWord, role: "modal_shield", color: colorPerfect, suffix_tr: activeShieldObj.trLabel });
-      wagonChain.push({ word: verbBeOrTo, role: "active_inf", color: colorInfinitive });
-      wagonChain.push({ word: mainVerbWord, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
-      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
-      
-      const possessiveSpeaker = applyPossessive(activeSpeakerTr);
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
-      let trShieldSuffix = "";
-      if (activeShieldObj.id === 'likely') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memiş olması' : 'miş olması'}</span> <span style="color:${colorPerfect}; font-weight:800;">muhtemeldir</span>.`;
-      } else if (activeShieldObj.id === 'expected') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">bekleniyor</span>.`;
-      } else if (activeShieldObj.id === 'required') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">gerekiyor</span>.`;
-      } else if (activeShieldObj.id === 'bound') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorPerfect}; font-weight:800;">kaçınılmazdır</span>.`;
-      } else if (activeShieldObj.id === 'authorized') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'memesine' : 'mesine'}</span> <span style="color:${colorPerfect}; font-weight:800;">izin verilmiştir</span>.`;
-      } else if (activeShieldObj.id === 'capable') {
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">${isNeg ? 'mama' : 'ebilme'}</span> <span style="color:${colorPerfect}; font-weight:800;">yetisine sahiptir</span>.`;
-      } else {
-        const trVerbBase = isNeg ? (activeStem + (get2WayHarmony(getLastVowel(activeStem)) === 'a' ? 'madığı' : 'mediği')) : (activeStem + applyDigi(activeStem));
-        const trVerbStemPart = trVerbBase.slice(0, activeStem.length);
-        const trVerbSuffixPart = trVerbBase.slice(activeStem.length);
-        const shieldWord = activeShieldObj.id === 'rumored' ? 'söyleniyor' : 'bildiriliyor';
-        trShieldSuffix = ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${trVerbStemPart}</span><span style="color:${colorInfinitive}; font-weight:800;">${trVerbSuffixPart}</span> <span style="color:${colorPerfect}; font-weight:800;">${shieldWord}</span>.`;
-      }
-      trReflexColored = possessiveSpeaker + trShieldSuffix;
-    }
-    
-  } else if (lvlNum === 11) {
-    const shieldEng = isPassive ? activeShieldObj.engPassive : activeShieldObj.engActive;
-    const splitShield = shieldEng.split(" ");
-    const shieldCoreWord = splitShield[0];
-    
-    if (isPassive) {
-      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-      wagonChain.push({ word: activeSubjectObj.plural ? "are" : "is", role: "present_tense", color: colorAux, suffix_tr: "-dır" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: shieldCoreWord, role: "modal_shield", color: colorPerfect, suffix_tr: activeShieldObj.trLabel });
-      wagonChain.push({ word: "to be", role: "passive_inf", color: colorInfinitive });
-      wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous, suffix_tr: "-makta olduğu" });
-      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
-      
-      const possessiveSubj = applyPossessive(activeSubjectObj.tr);
-      const contPhrase = applyContinuous(passiveStem, isNeg, false);
-      const contSuffix = contPhrase.slice(passiveStem.length);
-      const shieldWord = activeShieldObj.id === 'rumored' ? 'söyleniyor' : (activeShieldObj.id === 'reported' ? 'bildiriliyor' : (activeShieldObj.id === 'expected' ? 'bekleniyor' : 'muhtemeldir'));
-      trReflexColored = possessiveSubj + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix} olduğu</span> <span style="color:${colorPerfect}; font-weight:800;">${shieldWord}</span>.`;
-    } else {
-      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
-      wagonChain.push({ word: "are", role: "present_tense", color: colorAux, suffix_tr: "-dır" });
-      if (isNeg) {
-        wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      }
-      wagonChain.push({ word: shieldCoreWord, role: "modal_shield", color: colorPerfect, suffix_tr: activeShieldObj.trLabel });
-      wagonChain.push({ word: "to be", role: "active_inf", color: colorInfinitive });
-      wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta olduğu" });
-      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
-      
-      const possessiveSpeaker = applyPossessive(activeSpeakerTr);
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
-      const contPhrase = applyContinuous(activeStem, isNeg, false);
-      const contSuffix = contPhrase.slice(activeStem.length);
-      const shieldWord = activeShieldObj.id === 'rumored' ? 'söyleniyor' : (activeShieldObj.id === 'reported' ? 'bildiriliyor' : (activeShieldObj.id === 'expected' ? 'bekleniyor' : 'muhtemeldir'));
-      trReflexColored = possessiveSpeaker + ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorContinuous}; font-weight:800;">${contSuffix} olduğu</span> <span style="color:${colorPerfect}; font-weight:800;">${shieldWord}</span>.`;
-    }
-    
-  } else if (lvlNum === 12) {
-    const modalVal = state.modalSelectLevel12 || 'could';
-    let modalWord = "";
-    if (modalVal === 'should') {
-      modalWord = isPassive ? (isNeg ? "should not have been" : "should have been") : (isNeg ? "should not have" : "should have");
-    } else if (modalVal === 'must') {
-      modalWord = isPassive ? (isNeg ? "must not have been" : "must have been") : (isNeg ? "must not have" : "must have");
-    } else if (modalVal === 'might') {
-      modalWord = isPassive ? (isNeg ? "might not have been" : "might have been") : (isNeg ? "might not have" : "might have");
-    } else {
-      modalWord = isPassive ? (isNeg ? "could not have been" : "could have been") : (isNeg ? "could not have" : "could have");
-    }
-    
-    const modalSuffix = (modalVal === 'should' || modalVal === 'must' || modalVal === 'might') ? 'gerekirdi' : 'mümkündü';
-    
-    const stemExp = isPassive ? 'beklen' : 'bekle';
-    let expectationSuffix = "";
-    if (modalVal === 'should') {
-      expectationSuffix = isNeg ? `${stemExp}memesi` : `${stemExp}mesi`;
-    } else if (modalVal === 'must' || modalVal === 'might') {
-      expectationSuffix = isNeg ? `${stemExp}memiş olması` : `${stemExp}miş olması`;
-    } else {
-      expectationSuffix = isNeg ? `${stemExp}memiş olabilmesi` : `${stemExp}miş olabilmesi`;
-    }
-    
-    if (isPassive) {
-      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
-      wagonChain.push({ word: modalWord, role: "modal_shield", color: colorAux, suffix_tr: modalSuffix });
-      wagonChain.push({ word: "expected", role: "expectation_shield", color: colorPerfect, suffix_tr: expectationSuffix });
-      wagonChain.push({ word: "to have been", role: "passive_inf", color: colorInfinitive, suffix_tr: "-miş olmasının" });
-      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" });
-      
-      const possessiveSubj = applyPossessive(activeSubjectObj.tr);
-      let secondPart = "";
-      if (modalVal === 'should') {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorAux}; font-weight:800;">gerekirdi</span>.`;
-      } else if (modalVal === 'must' || modalVal === 'might') {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memiş olması' : 'miş olması'}</span> <span style="color:${colorAux}; font-weight:800;">gerekirdi</span>.`;
-      } else {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memiş olabilmesi' : 'miş olabilmesi'}</span> <span style="color:${colorAux}; font-weight:800;">${isNeg ? 'mümkün değildi' : 'mümkündü'}</span>.`;
-      }
-      trReflexColored = possessiveSubj + ` <span style="color:${colorVerb}; font-weight:800;">${passiveStem}</span><span style="color:${colorInfinitive}; font-weight:800;">miş olmasının</span> ` + secondPart;
-    } else {
-      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
-      wagonChain.push({ word: modalWord, role: "modal_shield", color: colorAux, suffix_tr: modalSuffix });
-      wagonChain.push({ word: "expected", role: "expectation_shield", color: colorPerfect, suffix_tr: expectationSuffix });
-      wagonChain.push({ word: "to have", role: "perfect_inf", color: colorInfinitive, suffix_tr: "-miş olmasını" });
-      wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" });
-      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
-      
-      const possessiveSpeaker = applyPossessive(activeSpeakerTr);
-      const accusativeObj = applyAccusative(activeSubjectObj.tr);
-      let secondPart = "";
-      if (modalVal === 'should') {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memesi' : 'mesi'}</span> <span style="color:${colorAux}; font-weight:800;">gerekirdi</span>.`;
-      } else if (modalVal === 'must' || modalVal === 'might') {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memiş olması' : 'miş olması'}</span> <span style="color:${colorAux}; font-weight:800;">gerekirdi</span>.`;
-      } else {
-        secondPart = `<span style="color:${colorPerfect}; font-weight:800;">${stemExp}${isNeg ? 'memiş olabilmesi' : 'miş olabilmesi'}</span> <span style="color:${colorAux}; font-weight:800;">${isNeg ? 'mümkün değildi' : 'mümkündü'}</span>.`;
-      }
-      trReflexColored = possessiveSpeaker + ` ${accusativeObj} <span style="color:${colorVerb}; font-weight:800;">${activeStem}</span><span style="color:${colorInfinitive}; font-weight:800;">miş olmasını</span> ` + secondPart;
     }
   }
 
