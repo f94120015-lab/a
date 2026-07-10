@@ -4270,7 +4270,7 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_'))) {
+  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_'))) {
     let tipText = '';
     if (question.id.startsWith('c51_l01') || question.id.startsWith('c51_l1')) {
       tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
@@ -4286,6 +4286,8 @@ function renderMultipleChoice(container, question) {
       tipText = '<strong>Subjunctive & Gizli Şart:</strong> Aciliyet ve önem bildiren sıfatlardan sonra <em>that + Subject + V0 (yalın)</em> subjunctive yapısı; aksi takdirde anlamında <em>otherwise</em> veya -olmasaydı anlamında <em>but for</em> kullanılır.';
     } else if (question.id.startsWith('c52_l04') || question.id.startsWith('c52_l4')) {
       tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
+    } else if (question.id.startsWith('c53_')) {
+      tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
     }
 
     if (tipText) {
