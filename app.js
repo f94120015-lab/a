@@ -9970,12 +9970,15 @@ function applyAccusative(word) {
   const lastV = getLastVowel(word);
   const harmony = get4WayHarmony(lastV);
   
+  let result = "";
   if (endsInVowel) {
     const isPossessivePlural = word.endsWith("ları") || word.endsWith("leri") || word.endsWith("LARI") || word.endsWith("LERİ");
     const buffer = isPossessivePlural ? 'n' : 'y';
-    return word + buffer + harmony;
+    result = word + buffer + harmony;
+  } else {
+    result = word + harmony;
   }
-  return word + harmony;
+  return result.charAt(0).toLowerCase() + result.slice(1);
 }
 
 function applyPossessive(word) {
@@ -12135,6 +12138,19 @@ function replaceLastOccurrence(str, search, replace) {
   return str.substring(0, index) + replace + str.substring(index + search.length);
 }
 
+function appendTrSuffix(stem, suffix) {
+  if (!stem) return suffix;
+  if (!suffix) return stem;
+  const vowels = "aeıioöuüAEIİOÖUÜ";
+  const lastChar = stem.slice(-1);
+  const firstCharOfSuffix = suffix.trim().charAt(0);
+  
+  if (vowels.includes(lastChar) && vowels.includes(firstCharOfSuffix)) {
+    return stem + 'y' + suffix;
+  }
+  return stem + suffix;
+}
+
 function getModalTenseData(modal, tense, aspect) {
   const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
   const verbIndex = state.selectedVerbIndex !== undefined ? state.selectedVerbIndex : 0;
@@ -12466,310 +12482,310 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'can' || modal === 'may') {
     const isCan = modal === 'can';
     if (aspect === 'simple') {
-      verbForm = isNeg ? (isCan ? (stem + "amaz") : (stem + "mayabilir")) : (stem + "abilir");
+      verbForm = isNeg ? (isCan ? (appendTrSuffix(stem, "amaz")) : (appendTrSuffix(stem, "mayabilir"))) : (appendTrSuffix(stem, "abilir"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olabilir") : (stem + "yor olabilir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olabilir")) : (appendTrSuffix(stem, "yor olabilir"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olabilir") : (stem + "mış olabilir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olabilir")) : (appendTrSuffix(stem, "mış olabilir"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olabilir") : (stem + "makta olabilir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olabilir")) : (appendTrSuffix(stem, "makta olabilir"));
     }
   } else if (modal === 'cant') {
     if (aspect === 'simple') {
-      verbForm = stem + "amaz";
+      verbForm = appendTrSuffix(stem, "amaz");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "ıyor olamaz";
+      verbForm = appendTrSuffix(stem, "ıyor olamaz");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "mış olamaz";
+      verbForm = appendTrSuffix(stem, "mış olamaz");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "makta olamaz";
+      verbForm = appendTrSuffix(stem, "makta olamaz");
     }
   } else if (modal === 'could' || modal === 'might') {
     const isCould = modal === 'could';
     if (aspect === 'simple') {
-      verbForm = isNeg ? (isCould ? (stem + "amazdı") : (stem + "mayabilirdi")) : (stem + "abilirdi");
+      verbForm = isNeg ? (isCould ? (appendTrSuffix(stem, "amazdı")) : (appendTrSuffix(stem, "mayabilirdi"))) : (appendTrSuffix(stem, "abilirdi"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olabilirdi") : (stem + "yor olabilirdi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olabilirdi")) : (appendTrSuffix(stem, "yor olabilirdi"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olabilirdi") : (stem + "mış olabilirdi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olabilirdi")) : (appendTrSuffix(stem, "mış olabilirdi"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olabilirdi") : (stem + "makta olabilirdi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olabilirdi")) : (appendTrSuffix(stem, "makta olabilirdi"));
     }
   } else if (modal === 'couldnt') {
     if (aspect === 'simple') {
-      verbForm = stem + "amazdı";
+      verbForm = appendTrSuffix(stem, "amazdı");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "ıyor olamazdı";
+      verbForm = appendTrSuffix(stem, "ıyor olamazdı");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "mış olamazdı";
+      verbForm = appendTrSuffix(stem, "mış olamazdı");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "makta olamazdı";
+      verbForm = appendTrSuffix(stem, "makta olamazdı");
     }
   } else if (modal === 'may_not') {
     if (aspect === 'simple') {
-      verbForm = stem + "mayabilir";
+      verbForm = appendTrSuffix(stem, "mayabilir");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olabilir";
+      verbForm = appendTrSuffix(stem, "mıyor olabilir");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "mamış olabilir";
+      verbForm = appendTrSuffix(stem, "mamış olabilir");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "mamakta olabilir";
+      verbForm = appendTrSuffix(stem, "mamakta olabilir");
     }
   } else if (modal === 'must') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mamalıdır") : (stem + "malıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamalıdır")) : (appendTrSuffix(stem, "malıdır"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olmalıdır") : (stem + "yor olmalıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olmalıdır")) : (appendTrSuffix(stem, "yor olmalıdır"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olmalıdır") : (stem + "mış olmalıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olmalıdır")) : (appendTrSuffix(stem, "mış olmalıdır"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olmalıdır") : (stem + "makta olmalıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olmalıdır")) : (appendTrSuffix(stem, "makta olmalıdır"));
     }
   } else if (modal === 'mustnt') {
     if (aspect === 'simple') {
-      verbForm = stem + "mamalıdır";
+      verbForm = appendTrSuffix(stem, "mamalıdır");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olmalıdır";
+      verbForm = appendTrSuffix(stem, "mıyor olmalıdır");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "mamış olmalıdır";
+      verbForm = appendTrSuffix(stem, "mamış olmalıdır");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "mamakta olmalıdır";
+      verbForm = appendTrSuffix(stem, "mamakta olmalıdır");
     }
   } else if (modal === 'shall') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mayacak") : (stem + "acak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mayacak")) : (appendTrSuffix(stem, "acak"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olacak") : (stem + "yor olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olacak")) : (appendTrSuffix(stem, "yor olacak"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olacak") : (stem + "mış olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olacak")) : (appendTrSuffix(stem, "mış olacak"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olacak") : (stem + "makta olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olacak")) : (appendTrSuffix(stem, "makta olacak"));
     }
   } else if (modal === 'should' || modal === 'ought_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mamalıdır") : (stem + "malıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamalıdır")) : (appendTrSuffix(stem, "malıdır"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olmalıdır") : (stem + "yor olmalıdır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olmalıdır")) : (appendTrSuffix(stem, "yor olmalıdır"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olmalıydı") : (stem + "mış olmalıydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olmalıydı")) : (appendTrSuffix(stem, "mış olmalıydı"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olmalıydı") : (stem + "makta olmalıydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olmalıydı")) : (appendTrSuffix(stem, "makta olmalıydı"));
     }
   } else if (modal === 'shouldnt') {
     if (aspect === 'simple') {
-      verbForm = stem + "mamalıdır";
+      verbForm = appendTrSuffix(stem, "mamalıdır");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olmalıdır";
+      verbForm = appendTrSuffix(stem, "mıyor olmalıdır");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "mamış olmalıydı";
+      verbForm = appendTrSuffix(stem, "mamış olmalıydı");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "mamakta olmalıydı";
+      verbForm = appendTrSuffix(stem, "mamakta olmalıydı");
     }
   } else if (modal === 'would') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mazdı") : (stem + "ardı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendTrSuffix(stem, "ardı"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olurdu") : (stem + "yor olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olurdu")) : (appendTrSuffix(stem, "yor olurdu"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olurdu") : (stem + "mış olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olurdu")) : (appendTrSuffix(stem, "mış olurdu"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olurdu") : (stem + "makta olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olurdu")) : (appendTrSuffix(stem, "makta olurdu"));
     }
   } else if (modal === 'used_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mazdı") : (stem + "ardı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mazdı")) : (appendTrSuffix(stem, "ardı"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olurdu") : (stem + "yor olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olurdu")) : (appendTrSuffix(stem, "yor olurdu"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mamış olurdu") : (stem + "mış olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olurdu")) : (appendTrSuffix(stem, "mış olurdu"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mamakta olurdu") : (stem + "makta olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olurdu")) : (appendTrSuffix(stem, "makta olurdu"));
     }
   } else if (modal === 'have_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değil")) : (appendTrSuffix(stem, "mak zorunda"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değil")) : (appendTrSuffix(stem, "mak zorunda"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmadı")) : (appendTrSuffix(stem, "mak zorunda kaldı"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmadı")) : (appendTrSuffix(stem, "mak zorunda kaldı"));
     }
   } else if (modal === 'had_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mak zorunda değildi") : (stem + "mak zorundaydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değildi")) : (appendTrSuffix(stem, "mak zorundaydı"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda değildi") : (stem + "mak zorundaydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değildi")) : (appendTrSuffix(stem, "mak zorundaydı"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmamıştı") : (stem + "mak zorunda kalmıştı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmamıştı")) : (appendTrSuffix(stem, "mak zorunda kalmıştı"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmamıştı") : (stem + "mak zorunda kalmıştı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmamıştı")) : (appendTrSuffix(stem, "mak zorunda kalmıştı"));
     }
   } else if (modal === 'be_able_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "amaz") : (stem + "abilir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "amaz")) : (appendTrSuffix(stem, "abilir"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "abiliyor değil") : (stem + "abiliyor");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abiliyor değil")) : (appendTrSuffix(stem, "abiliyor"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "abilmiş değil") : (stem + "abilmiştir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abilmiş değil")) : (appendTrSuffix(stem, "abilmiştir"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "abilmekte değil") : (stem + "abilmektedir");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abilmekte değil")) : (appendTrSuffix(stem, "abilmektedir"));
     }
   } else if (modal === 'was_were_able_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "amadı") : (stem + "abildi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "amadı")) : (appendTrSuffix(stem, "abildi"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "abiliyordu değil") : (stem + "abiliyordu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abiliyordu değil")) : (appendTrSuffix(stem, "abiliyordu"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "abilmişti değil") : (stem + "abilmişti");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abilmişti değil")) : (appendTrSuffix(stem, "abilmişti"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "abilmekteydi değil") : (stem + "abilmekteydi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "abilmekteydi değil")) : (appendTrSuffix(stem, "abilmekteydi"));
     }
   } else if (modal === 'wasnt_werent_able_to') {
     if (aspect === 'simple') {
-      verbForm = stem + "amadı";
+      verbForm = appendTrSuffix(stem, "amadı");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "abiliyordu değil";
+      verbForm = appendTrSuffix(stem, "abiliyordu değil");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "abilmişti değil";
+      verbForm = appendTrSuffix(stem, "abilmişti değil");
     } else if (aspect === 'perfect-progressive') {
-      verbForm = stem + "abilmekteydi değil";
+      verbForm = appendTrSuffix(stem, "abilmekteydi değil");
     }
   } else if (modal === 'will_have_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmayacak") : (stem + "mak zorunda kalacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmayacak")) : (appendTrSuffix(stem, "mak zorunda kalacak"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmıyor olacak") : (stem + "mak zorunda kalıyor olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmıyor olacak")) : (appendTrSuffix(stem, "mak zorunda kalıyor olacak"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmamış olacak") : (stem + "mak zorunda kalmış olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmamış olacak")) : (appendTrSuffix(stem, "mak zorunda kalmış olacak"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmamakta olacak") : (stem + "mak zorunda kalmakta olacak");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmamakta olacak")) : (appendTrSuffix(stem, "mak zorunda kalmakta olacak"));
     }
   } else if (modal === 'have_got_to') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değil")) : (appendTrSuffix(stem, "mak zorunda"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda değil") : (stem + "mak zorunda");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değil")) : (appendTrSuffix(stem, "mak zorunda"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmadı")) : (appendTrSuffix(stem, "mak zorunda kaldı"));
     } else if (aspect === 'perfect-progressive') {
-      verbForm = isNeg ? (stem + "mak zorunda kalmadı") : (stem + "mak zorunda kaldı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmadı")) : (appendTrSuffix(stem, "mak zorunda kaldı"));
     }
   } else if (modal === 'dont_doesnt_have_to') {
     if (aspect === 'simple' || aspect === 'progressive') {
-      verbForm = stem + "mak zorunda değil";
+      verbForm = appendTrSuffix(stem, "mak zorunda değil");
     } else {
-      verbForm = stem + "mak zorunda kalmadı";
+      verbForm = appendTrSuffix(stem, "mak zorunda kalmadı");
     }
   } else if (modal === 'dont_doesnt_need_to') {
     if (aspect === 'simple' || aspect === 'progressive') {
-      verbForm = stem + "masına gerek yok";
+      verbForm = appendTrSuffix(stem, "masına gerek yok");
     } else {
-      verbForm = stem + "masına gerek kalmadı";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmadı");
     }
   } else if (modal === 'didnt_have_to') {
     if (aspect === 'simple') {
-      verbForm = stem + "mak zorunda kalmadı";
+      verbForm = appendTrSuffix(stem, "mak zorunda kalmadı");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "masına gerek kalmıyordu";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmıyordu");
     } else {
-      verbForm = stem + "masına gerek kalmamıştı";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmamıştı");
     }
   } else if (modal === 'didnt_need_to') {
     if (aspect === 'simple') {
-      verbForm = stem + "masına gerek kalmadı";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmadı");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "masına gerek kalmıyordu";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmıyordu");
     } else {
-      verbForm = stem + "masına gerek kalmamıştı";
+      verbForm = appendTrSuffix(stem, "masına gerek kalmamıştı");
     }
   } else if (modal === 'neednt') {
     if (aspect === 'simple') {
-      verbForm = stem + "ması gerekmez";
+      verbForm = appendTrSuffix(stem, "ması gerekmez");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "ması gerekmiyor";
+      verbForm = appendTrSuffix(stem, "ması gerekmiyor");
     } else if (aspect === 'perfect') {
-      verbForm = stem + "ması gerekmezdi";
+      verbForm = appendTrSuffix(stem, "ması gerekmezdi");
     } else {
-      verbForm = stem + "ması gerekmemekte";
+      verbForm = appendTrSuffix(stem, "ması gerekmemekte");
     }
   } else if (modal === 'ought_not_to') {
     if (aspect === 'simple') {
-      verbForm = stem + "masa iyi olur";
+      verbForm = appendTrSuffix(stem, "masa iyi olur");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olsa iyi olur";
+      verbForm = appendTrSuffix(stem, "mıyor olsa iyi olur");
     } else {
-      verbForm = stem + "mamış olsa iyi olurdu";
+      verbForm = appendTrSuffix(stem, "mamış olsa iyi olurdu");
     }
   } else if (modal === 'had_better') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "masa iyi olur") : (stem + "sa iyi olur");
+      verbForm = isNeg ? (appendTrSuffix(stem, "masa iyi olur")) : (appendTrSuffix(stem, "sa iyi olur"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olsa iyi olur") : (stem + "yor olsa iyi olur");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olsa iyi olur")) : (appendTrSuffix(stem, "yor olsa iyi olur"));
     } else {
-      verbForm = isNeg ? (stem + "mamış olsa iyi olurdu") : (stem + "mış olsa iyi olurdu");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olsa iyi olurdu")) : (appendTrSuffix(stem, "mış olsa iyi olurdu"));
     }
   } else if (modal === 'had_better_not') {
     if (aspect === 'simple') {
-      verbForm = stem + "masa iyi olur";
+      verbForm = appendTrSuffix(stem, "masa iyi olur");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olsa iyi olur";
+      verbForm = appendTrSuffix(stem, "mıyor olsa iyi olur");
     } else {
-      verbForm = stem + "mamış olsa iyi olurdu";
+      verbForm = appendTrSuffix(stem, "mamış olsa iyi olurdu");
     }
   } else if (modal === 'didnt_use_to') {
     if (aspect === 'simple') {
-      verbForm = stem + "mazdı";
+      verbForm = appendTrSuffix(stem, "mazdı");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olurdu";
+      verbForm = appendTrSuffix(stem, "mıyor olurdu");
     } else {
-      verbForm = stem + "mamış olurdu";
+      verbForm = appendTrSuffix(stem, "mamış olurdu");
     }
   } else if (modal === 'be_used_to_ing') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "maya alışık değil") : (stem + "maya alışıktır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışık değil")) : (appendTrSuffix(stem, "maya alışıktır"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "maya alışıyor değil") : (stem + "maya alışmaktadır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışıyor değil")) : (appendTrSuffix(stem, "maya alışmaktadır"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "maya alışmış değil") : (stem + "maya alışmıştır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmış değil")) : (appendTrSuffix(stem, "maya alışmıştır"));
     } else {
-      verbForm = isNeg ? (stem + "maya alışmakta değil") : (stem + "maya alışmaktadır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmakta değil")) : (appendTrSuffix(stem, "maya alışmaktadır"));
     }
   } else if (modal === 'was_were_used_to_ing') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "maya alışık değildi") : (stem + "maya alışıktı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışık değildi")) : (appendTrSuffix(stem, "maya alışıktı"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "maya alışıyor değildi") : (stem + "maya alışmaktaydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışıyor değildi")) : (appendTrSuffix(stem, "maya alışmaktaydı"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "maya alışmış değildi") : (stem + "maya alışmıştı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmış değildi")) : (appendTrSuffix(stem, "maya alışmıştı"));
     } else {
-      verbForm = isNeg ? (stem + "maya alışmakta değildi") : (stem + "maya alışmaktaydı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmakta değildi")) : (appendTrSuffix(stem, "maya alışmaktaydı"));
     }
   } else if (modal === 'get_used_to_ing') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "maya alışmaz") : (stem + "maya alışır");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmaz")) : (appendTrSuffix(stem, "maya alışır"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "maya alışmıyor") : (stem + "maya alışıyor");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmıyor")) : (appendTrSuffix(stem, "maya alışıyor"));
     } else if (aspect === 'perfect') {
-      verbForm = isNeg ? (stem + "maya alışmadı") : (stem + "maya alıştı");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmadı")) : (appendTrSuffix(stem, "maya alıştı"));
     } else {
-      verbForm = isNeg ? (stem + "maya alışmamakta") : (stem + "maya alışmakta");
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmamakta")) : (appendTrSuffix(stem, "maya alışmakta"));
     }
   } else if (modal === 'would_prefer' || modal === 'would_rather') {
     if (aspect === 'simple') {
-      verbForm = isNeg ? (stem + "mamayı tercih eder") : (stem + "mayı tercih eder");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamayı tercih eder")) : (appendTrSuffix(stem, "mayı tercih eder"));
     } else if (aspect === 'progressive') {
-      verbForm = isNeg ? (stem + "mıyor olmayı tercih eder") : (stem + "yor olmayı tercih eder");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olmayı tercih eder")) : (appendTrSuffix(stem, "yor olmayı tercih eder"));
     } else {
-      verbForm = isNeg ? (stem + "mamış olmayı tercih ederdi") : (stem + "mış olmayı tercih ederdi");
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamış olmayı tercih ederdi")) : (appendTrSuffix(stem, "mış olmayı tercih ederdi"));
     }
   } else if (modal === 'would_rather_not') {
     if (aspect === 'simple') {
-      verbForm = stem + "mamayı tercih eder";
+      verbForm = appendTrSuffix(stem, "mamayı tercih eder");
     } else if (aspect === 'progressive') {
-      verbForm = stem + "mıyor olmayı tercih eder";
+      verbForm = appendTrSuffix(stem, "mıyor olmayı tercih eder");
     } else {
-      verbForm = stem + "mamış olmayı tercih ederdi";
+      verbForm = appendTrSuffix(stem, "mamış olmayı tercih ederdi");
     }
   }
 
