@@ -4860,51 +4860,56 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_') || question.id.startsWith('c54_') || question.id.startsWith('u55_') || question.id.startsWith('c56_'))) {
+  if (currentLesson && [8, 51, 52, 53, 54, 55, 56].includes(currentLesson.unitId)) {
     let tipText = '';
-    if (question.id.startsWith('c51_l01') || question.id.startsWith('c51_l1')) {
-      tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
-    } else if (question.id.startsWith('c51_l02') || question.id.startsWith('c51_l2')) {
-      tipText = '<strong>Ettirgen (Causative):</strong> Aktiflerde <em>Have/Let/Make + Kişi + V0</em> ve <em>Get + Kişi + to V1</em>; Pasiflerde <em>Have/Get + Nesne + V3</em> kullanılır.';
-    } else if (question.id.startsWith('c51_l03') || question.id.startsWith('c51_l3')) {
-      tipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
-    } else if (question.id.startsWith('c52_l01') || question.id.startsWith('c52_l1')) {
-      tipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
-    } else if (question.id.startsWith('c52_l02') || question.id.startsWith('c52_l2')) {
-      tipText = '<strong>Eşikte Olma (-e Üzere Olmak):</strong> <em>Be about to + V0</em>, <em>Be due to + V0</em> ve <em>Be on the verge/brink/point/edge of + V-ing</em> eşikte olma ve yakın gelecek bildirir.';
-    } else if (question.id.startsWith('c52_l03') || question.id.startsWith('c52_l3')) {
-      tipText = '<strong>Subjunctive & Gizli Şart:</strong> Aciliyet ve önem bildiren sıfatlardan sonra <em>that + Subject + V0 (yalın)</em> subjunctive yapısı; aksi takdirde anlamında <em>otherwise</em> veya -olmasaydı anlamında <em>but for</em> kullanılır.';
-    } else if (question.id.startsWith('c52_l04') || question.id.startsWith('c52_l4')) {
-      tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
-    } else if (question.id.startsWith('c53_')) {
+    const unitId = currentLesson.unitId;
+    if (unitId === 8) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-    } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1') || question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2') || question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
+    } else if (unitId === 51) {
+      if (question.id.includes('_l01') || question.id.includes('_l1')) {
+        tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
+      } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
+        tipText = '<strong>Ettirgen (Causative):</strong> Aktiflerde <em>Have/Let/Make + Kişi + V0</em> ve <em>Get + Kişi + to V1</em>; Pasiflerde <em>Have/Get + Nesne + V3</em> kullanılır.';
+      } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
+        tipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
+      }
+    } else if (unitId === 52) {
+      if (question.id.includes('_l01') || question.id.includes('_l1')) {
+        tipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
+      } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
+        tipText = '<strong>Eşikte Olma (-e Üzere Olmak):</strong> <em>Be about to + V0</em>, <em>Be due to + V0</em> ve <em>Be on the verge/brink/point/edge of + V-ing</em> eşikte olma ve yakın gelecek bildirir.';
+      } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
+        tipText = '<strong>Subjunctive & Gizli Şart:</strong> Aciliyet ve önem bildiren sıfatlardan sonra <em>that + Subject + V0 (yalın)</em> subjunctive yapısı; aksi takdirde anlamında <em>otherwise</em> veya -olmasaydı anlamında <em>but for</em> kullanılır.';
+      } else if (question.id.includes('_l04') || question.id.includes('_l4')) {
+        tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
+      }
+    } else if (unitId === 53 || unitId === 54) {
       tipText = '<strong>Bağlaç Formülleri ve Örnekleri (Grup Kuralları):</strong><br>' +
-                '• <strong>G1: Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
+                '• <strong>Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
                 '  <em>Örnek:</em> Although it was raining, we went out.<br>' +
-                '• <strong>G2: İsim Alanlar (+ İsim / V-ing):</strong> <em>Despite</em> (rağmen), <em>Because of</em> (yüzünden), <em>In addition to</em> (ek olarak).<br>' +
+                '• <strong>İsim Alanlar (+ İsim / V-ing):</strong> <em>Despite</em> (rağmen), <em>Because of</em> (yüzünden), <em>In addition to</em> (ek olarak).<br>' +
                 '  <em>Örnek:</em> Despite the heavy rain, we went out.<br>' +
-                '• <strong>G4: Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
+                '• <strong>Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
                 '  <em>Örnek:</em> It was raining; however, we decided to go out.';
-    } else if (question.id.startsWith('u55_') || question.id.startsWith('c56_')) {
-      if (question.id.includes('_l7_')) {
+    } else if (unitId === 55 || unitId === 56) {
+      if (question.id.includes('_l7_') || question.id.includes('_l7')) {
         tipText = '<strong>Keşke Yapıları (I wish / If only):</strong><br>' +
                   '• <strong>Şikayet / Gelecek:</strong> wish + would V1. <em>(Örn: I wish you would listen)</em><br>' +
                   '• <strong>Şimdiki Zaman:</strong> wish + V2 / could V1. <em>(Örn: I wish I knew / could swim)</em><br>' +
                   '• <strong>Geçmiş Zaman (Pişmanlık):</strong> wish + had V3 / could have V3. <em>(Örn: I wish had called)</em><br>' +
                   '• <strong>Özne Uyumu Kısıtı:</strong> Aynı özneyle would kullanılamaz <em>(I wish I would ❌ ➔ I wish I could/V2 ✔️)</em>.';
-      } else if (question.id.includes('_l6_')) {
+      } else if (question.id.includes('_l6_') || question.id.includes('_l6')) {
         tipText = '<strong>Diğer Koşul Bağlaçları:</strong><br>' +
                   '• <strong>unless</strong> (-medikçe), <strong>as long as</strong> (-diği sürece), <strong>provided that / providing</strong> (-şartıyla).<br>' +
                   '• <strong>supposing / assuming</strong> (varsayalım ki), <strong>in case</strong> (durumunda/diye), <strong>on condition that</strong> (koşuluyla).<br>' +
                   '• <strong>only if</strong> (cümle başında devriklik yapar: <em>Only if we leave, can we catch...</em>).<br>' +
                   '• <strong>in case of / in the event of + noun</strong> (-durumunda / -halinde).';
-      } else if (question.id.includes('_l5_')) {
+      } else if (question.id.includes('_l5_') || question.id.includes('_l5')) {
         tipText = '<strong>Alternatif Koşul Yapıları:</strong><br>' +
                   '• <strong>If ..., then ...:</strong> Koşul sonucunu vurgular. <em>(If you tell, then I can...)</em><br>' +
                   '• <strong>Otherwise / Or / Or else:</strong> Aksi takdirde / yoksa. <em>(Study; otherwise, you will fail)</em><br>' +
                   '• <strong>Without + Noun:</strong> ... olmasaydı/olmadan. <em>(Without air, we couldn\'t live / Without help, we would have failed)</em>';
-      } else if (question.id.includes('_l4_')) {
+      } else if (question.id.includes('_l4_') || question.id.includes('_l4')) {
         tipText = '<strong>Devrik Koşul Yapıları (If Inversion):</strong> "If" kaldırıldığında yardımcı fiil başa gelir:<br>' +
                   '• <strong>Type 1:</strong> <em>Should + S + V1</em>. (If a problem should arise ➔ Should a problem arise)<br>' +
                   '• <strong>Type 2:</strong> <em>Were + S + ... / Were + S + to V1</em>. (If I were you ➔ Were I you)<br>' +
@@ -5802,10 +5807,14 @@ function startTranslationGate(container, question) {
   }
 
   // Make the sentence complete
-  let completedSentence = question.sentence || "";
-  const correctWord = question.options[question.correctIndex];
-  const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
-  completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
+  let completedSentence = question.sentence || question.enSentence || question.en || "";
+  if (question.options && question.correctIndex !== undefined) {
+    const correctWord = question.options[question.correctIndex];
+    if (correctWord) {
+      const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
+      completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
+    }
+  }
   completedSentence = makeTextHoverable(completedSentence);
 
   // Clean translation and split into words or grammatical blocks if > 12 words
@@ -6959,8 +6968,8 @@ function checkAnswer() {
       break;
   }
 
-  // Intercept if translation exists, primary is correct, and translation gate hasn't been triggered yet
-  if (question && question.translation && isCorrect && !isTranslationGateTriggered && !isTranslationGateActive) {
+  // Intercept if translation exists, primary is correct, type is fill-blank, and translation gate hasn't been triggered yet
+  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;
