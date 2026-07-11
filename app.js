@@ -1804,7 +1804,6 @@ async function hashPassword(password) {
 function isLocalEnvironment() {
   return window.location.hostname === 'localhost' ||
          window.location.hostname === '127.0.0.1' ||
-         window.location.hostname.includes('vercel.app') ||
          window.location.protocol === 'file:';
 }
 
@@ -3800,10 +3799,12 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     let exercisesRows = lesson.exercises.map((ex, index) => {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
-      if (index === 0) {
-        isExUnlocked = isUnlocked;
-      } else {
-        isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+      if (!isLocalEnvironment()) {
+        if (index === 0) {
+          isExUnlocked = isUnlocked;
+        } else {
+          isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+        }
       }
       
       const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
@@ -3974,6 +3975,10 @@ document.addEventListener('click', () => {
 });
 
 function isLessonUnlocked(lessonId) {
+  if (isLocalEnvironment()) {
+    return true;
+  }
+
   // Find the lesson and its unit
   const lesson = lessons.find(l => l.id === lessonId);
   if (!lesson) return false;
