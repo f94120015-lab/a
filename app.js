@@ -7,6 +7,30 @@ const HEARTS_REFILL_COST = 50;
 const XP_PER_CORRECT = 10;
 const MAX_HEARTS = 5;
 
+// ============================================================
+// SUPABASE YAPILANDIRMASI
+// ============================================================
+// Vercel deployment'ında ortak veritabanını kullanmak için aşağıdaki alanları doldurabilir
+// veya Admin Panelinden kaydedebilirsiniz. Admin panelinden kaydedilenler yerelde saklanır.
+const SUPABASE_URL = ""; 
+const SUPABASE_ANON_KEY = ""; 
+
+const getSupabaseConfig = () => {
+  const url = SUPABASE_URL || localStorage.getItem('amok_supabase_url') || '';
+  const key = SUPABASE_ANON_KEY || localStorage.getItem('amok_supabase_anon_key') || '';
+  return { url, key };
+};
+
+let supabaseClient = null;
+const supabaseConfig = getSupabaseConfig();
+if (typeof supabase !== 'undefined' && supabaseConfig.url && supabaseConfig.key) {
+  try {
+    supabaseClient = supabase.createClient(supabaseConfig.url, supabaseConfig.key);
+  } catch (e) {
+    console.error('Supabase initialization failed:', e);
+  }
+}
+
 let state = {
   username: null,
   isGuest: false,
@@ -1786,6 +1810,40 @@ function isLocalEnvironment() {
 
 function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
+  if (supabaseClient && state.username && !state.isGuest) {
+    supabaseClient
+      .from('user_states')
+      .upsert({
+        username: state.username,
+        xp: state.xp || 0,
+        streak: state.streak || 0,
+        hearts: state.hearts || 0,
+        completed_lessons: state.completedLessons || [],
+        avatar_color: state.avatarColor || '#E88A9A'
+      })
+      .then(({ error }) => {
+        if (error) console.error('Supabase state sync error:', error);
+      });
+  }
+}
+
+function sendTelegramNotification(message) {
+  const token = localStorage.getItem('amok_telegram_token') || '';
+  const chatId = localStorage.getItem('amok_telegram_chat_id') || '';
+  if (!token || !chatId) return;
+
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: message,
+      parse_mode: 'Markdown'
+    })
+  }).catch(err => console.error('Telegram notification failed:', err));
 }
 
 function setUnitTheme(unitId) {
@@ -2440,15 +2498,71 @@ function initAuth() {
     const password = document.getElementById('login-password').value;
 
     try {
-      const users = getUsers();
-      if (!users[username]) {
-        showToast('Kullanıcı bulunamadı!', 'error');
-        return;
+      let loggedIn = false;
+      let dbStateData = null;
+
+      if (supabaseClient) {
+        // Supabase'den kullanıcıyı sorgula
+        const { data: dbUser, error: dbUserError } = await supabaseClient
+          .from('profiles')
+          .select('*')
+          .eq('username', username)
+          .maybeSingle();
+
+        if (dbUserError) {
+          console.error('Supabase query error:', dbUserError);
+        }
+
+        if (dbUser) {
+          const hashedInput = await hashPassword(password);
+          if (dbUser.password_hash !== hashedInput) {
+            showToast('Şifre yanlış!', 'error');
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            return;
+          }
+          // Çevrimiçi aktiflik zamanını güncelle
+          await supabaseClient
+            .from('profiles')
+            .update({ last_seen_at: new Date().toISOString() })
+            .eq('username', username);
+
+          // Durumu Supabase'den çek
+          const { data: dbState, error: dbStateError } = await supabaseClient
+            .from('user_states')
+            .select('*')
+            .eq('username', username)
+            .maybeSingle();
+
+          if (dbState) {
+            dbStateData = {
+              xp: dbState.xp,
+              streak: dbState.streak,
+              hearts: dbState.hearts,
+              completedLessons: dbState.completed_lessons || [],
+              avatarColor: dbState.avatar_color
+            };
+          }
+          loggedIn = true;
+        }
       }
-      const hashedInput = await hashPassword(password);
-      if (users[username].password !== hashedInput) {
-        showToast('Şifre yanlış!', 'error');
-        return;
+
+      // Supabase'de bulunamadı veya Supabase kapalıysa, localStorage'a bak
+      if (!loggedIn) {
+        const users = getUsers();
+        if (!users[username]) {
+          showToast('Kullanıcı bulunamadı!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
+        const hashedInput = await hashPassword(password);
+        if (users[username].password !== hashedInput) {
+          showToast('Şifre yanlış!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
       }
 
       // Kullanıcının state'ini yükle
@@ -2461,9 +2575,17 @@ function initAuth() {
         }
       }
 
+      // Supabase'den çekilen bir durum varsa onu ezerek güncelle
+      if (dbStateData) {
+        state = { ...state, ...dbStateData };
+      }
+
       state.username = username;
       state.isGuest = false;
       saveState();
+      try {
+        sendTelegramNotification(`🔑 *Giriş Yapıldı!*\n👤 *Kullanıcı:* ${username}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
+      } catch (e) {}
       showToast(`Hoş geldin, ${username}! 🎉`, 'success');
       enterApp();
     } catch (err) {
@@ -2495,13 +2617,51 @@ function initAuth() {
     }
 
     try {
-      const users = getUsers();
-      if (users[username]) {
-        showToast('Bu kullanıcı adı zaten alınmış!', 'error');
-        return;
-      }
+      if (supabaseClient) {
+        // Supabase'de var mı diye kontrol et
+        const { data: dbUser, error: checkError } = await supabaseClient
+          .from('profiles')
+          .select('username')
+          .eq('username', username)
+          .maybeSingle();
 
-      await saveUser(username, password);
+        if (checkError) {
+          console.error('Supabase checking error:', checkError);
+        }
+
+        if (dbUser) {
+          showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
+
+        const hashed = await hashPassword(password);
+        const { error: insertError } = await supabaseClient
+          .from('profiles')
+          .insert({
+            username: username,
+            email: email || null,
+            password_hash: hashed
+          });
+
+        if (insertError) {
+          console.error('Supabase registration error:', insertError);
+          showToast('Kayıt oluşturulurken bir hata oluştu!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
+      } else {
+        const users = getUsers();
+        if (users[username]) {
+          showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
+        await saveUser(username, password);
+      }
       
       const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
       const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
@@ -2524,6 +2684,9 @@ function initAuth() {
         following: []
       };
       saveState();
+      try {
+        sendTelegramNotification(`🚀 *Yeni Üyelik!*\n👤 *Kullanıcı Adı:* ${username}\n📧 *E-posta:* ${email || 'Belirtilmedi'}`);
+      } catch (e) {}
       showToast('Hesap oluşturuldu! Hoş geldin 🎉', 'success');
       enterApp();
     } catch (err) {
@@ -2635,6 +2798,9 @@ function initAuth() {
         localStorage.setItem(platformKey, JSON.stringify({ fullName, email }));
         
         saveState();
+        try {
+          sendTelegramNotification(`🌐 *Sosyal Giriş (${platform})!*\n👤 *Kullanıcı:* ${fullName}\n📧 *E-posta:* ${email || 'Belirtilmedi'}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
+        } catch (e) {}
         showToast(`Hoş geldin, ${fullName}! 🎉`, 'success');
         enterApp();
       }, 600);
@@ -6937,6 +7103,12 @@ function completeLesson() {
     updateDailyTaskProgress('lessons', 1);
     saveState();
 
+    // Telegram notification
+    try {
+      const message = `🔔 *Ders Tamamlandı!*\n👤 *Kullanıcı:* ${state.username}\n📚 *Ders:* ${currentLesson.title}${exTitle}\n🎯 *Doğruluk:* %${accuracy}\n🏆 *Kazanılan XP:* +${earnedXP}\n🔥 *Seri:* ${state.streak} Gün`;
+      sendTelegramNotification(message);
+    } catch(e) {}
+
     // Başarım kontrolü
     newAchievements = checkAchievements();
   }
@@ -7818,22 +7990,61 @@ function congratulateFriend(username) {
 // ============================================================
 // LİDERLİK TABLOSU
 // ============================================================
-function renderLeaderboard() {
+async function renderLeaderboard() {
   const list = document.getElementById('leaderboard-list');
   if (!list) return;
 
   const baseCompetitors = [
-    { name: "Ahmet Yılmaz", xp: 450 },
-    { name: "Elif Demir", xp: 320 },
-    { name: "Can Kaya", xp: 210 },
-    { name: "Sarah Connor", xp: 180 },
-    { name: "Melis Şen", xp: 90 }
+    { name: "Ahmet Yılmaz", xp: 450, avatarColor: '#E88A9A' },
+    { name: "Elif Demir", xp: 320, avatarColor: '#B4A7D6' },
+    { name: "Can Kaya", xp: 210, avatarColor: '#8BC6A0' },
+    { name: "Sarah Connor", xp: 180, avatarColor: '#E8CB6E' },
+    { name: "Melis Şen", xp: 90, avatarColor: '#8B7EC8' }
   ];
 
-  const competitors = [
-    ...baseCompetitors,
-    { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true }
-  ];
+  let competitors = [];
+
+  if (supabaseClient) {
+    try {
+      const { data, error } = await supabaseClient
+        .from('user_states')
+        .select('username, xp, avatar_color')
+        .order('xp', { ascending: false })
+        .limit(100);
+
+      if (!error && data && data.length > 0) {
+        let userFound = false;
+        competitors = data.map(item => {
+          const isUser = item.username === state.username;
+          if (isUser) userFound = true;
+          return {
+            name: isUser ? `${item.username} (Sen)` : item.username,
+            xp: item.xp,
+            isUser: isUser,
+            avatarColor: item.avatar_color || '#B4A7D6'
+          };
+        });
+
+        if (!userFound && state.username && state.username !== 'Misafir') {
+          competitors.push({
+            name: `${state.username} (Sen)`,
+            xp: state.xp,
+            isUser: true,
+            avatarColor: state.avatarColor || '#B4A7D6'
+          });
+        }
+      }
+    } catch (e) {
+      console.error('Leaderboard fetch error:', e);
+    }
+  }
+
+  if (competitors.length === 0) {
+    competitors = [
+      ...baseCompetitors,
+      { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true, avatarColor: state.avatarColor || '#B4A7D6' }
+    ];
+  }
 
   competitors.sort((a, b) => b.xp - a.xp);
 
@@ -7845,7 +8056,14 @@ function renderLeaderboard() {
     return `
       <tr class="leaderboard-row ${c.isUser ? 'user-row' : ''} ${rankClass}">
         <td><span class="rank-badge">${rank}</span></td>
-        <td>${escapeHtml(c.name)}</td>
+        <td>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background: ${c.avatarColor || '#B4A7D6'}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px;">
+              ${(c.name || 'U').charAt(0).toUpperCase()}
+            </div>
+            <span>${escapeHtml(c.name)}</span>
+          </div>
+        </td>
         <td>${c.xp} Puan</td>
       </tr>
     `;
@@ -9428,6 +9646,57 @@ function init() {
         saveState();
         checkReviewBanner();
         showToast("Hızlı tekrar soruları sıfırlandı!", "success");
+      });
+    }
+
+    // Load existing Supabase credentials
+    const supabaseUrlInput = document.getElementById('admin-supabase-url');
+    const supabaseAnonKeyInput = document.getElementById('admin-supabase-anon-key');
+    if (supabaseUrlInput) {
+      supabaseUrlInput.value = localStorage.getItem('amok_supabase_url') || '';
+    }
+    if (supabaseAnonKeyInput) {
+      supabaseAnonKeyInput.value = localStorage.getItem('amok_supabase_anon_key') || '';
+    }
+
+    const saveSupabaseBtn = document.getElementById('btn-admin-save-supabase');
+    if (saveSupabaseBtn) {
+      saveSupabaseBtn.addEventListener('click', () => {
+        const url = (supabaseUrlInput ? supabaseUrlInput.value : '').trim();
+        const key = (supabaseAnonKeyInput ? supabaseAnonKeyInput.value : '').trim();
+        localStorage.setItem('amok_supabase_url', url);
+        localStorage.setItem('amok_supabase_anon_key', key);
+        showToast('Supabase ayarları başarıyla kaydedildi! Sayfayı yenileyerek yeni yapılandırmayı aktif edebilirsiniz. 💾', 'success');
+      });
+    }
+
+    const testSupabaseBtn = document.getElementById('btn-admin-test-supabase');
+    if (testSupabaseBtn) {
+      testSupabaseBtn.addEventListener('click', async () => {
+        const url = (supabaseUrlInput ? supabaseUrlInput.value : '').trim();
+        const key = (supabaseAnonKeyInput ? supabaseAnonKeyInput.value : '').trim();
+        if (!url || !key) {
+          showToast('Lütfen URL ve Anon Key giriniz!', 'error');
+          return;
+        }
+        testSupabaseBtn.disabled = true;
+        const originalText = testSupabaseBtn.innerHTML;
+        testSupabaseBtn.innerHTML = '<span>⚡</span> Bağlanıyor...';
+        try {
+          if (typeof supabase === 'undefined') {
+            throw new Error('Supabase kütüphanesi henüz yüklenmedi!');
+          }
+          const tempClient = supabase.createClient(url, key);
+          const { data, error } = await tempClient.from('profiles').select('username').limit(1);
+          if (error) throw error;
+          showToast('Bağlantı Başarılı! 🎉 Veritabanı ve tablolar hazır.', 'success');
+        } catch (err) {
+          console.error(err);
+          showToast('Bağlantı Hatası: ' + err.message, 'error');
+        } finally {
+          testSupabaseBtn.disabled = false;
+          testSupabaseBtn.innerHTML = originalText;
+        }
       });
     }
   } else {

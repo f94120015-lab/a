@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>amok — İngilizce Öğren</title>
   <meta name="description" content="Türkçe konuşanlar için oyunlaştırılmış ve etkileşimli İngilizce öğrenme platformu.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; img-src 'self' data:;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formsubmit.co; img-src 'self' data:;">
 
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,12 @@
 
   <!-- Canvas Confetti -->
   <script src="canvas-confetti.min.js" defer></script>
+
+  <!-- Vercel Insights & Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Supabase client library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <link rel="stylesheet" href="style.css?v=1.0.5">
 </head>
@@ -312,6 +318,7 @@
               <div class="social-tabs">
                 <button class="social-tab active" data-subtab="following" id="subtab-following">Takip Ettiklerim (0)</button>
                 <button class="social-tab" data-subtab="followers" id="subtab-followers">Takipçilerim (0)</button>
+                <button class="social-tab" data-subtab="online" id="subtab-online">Çevrimiçi (1)</button>
               </div>
               
               <div class="social-search-wrap">
@@ -782,22 +789,125 @@
 
       <!-- 6. ADMIN SEKMESİ (YEREL-ÖZEL) -->
       <div id="tab-content-admin" class="tab-content">
-        <div class="admin-container" style="padding: 24px 16px; max-width: 800px; margin: 0 auto;">
-          <h2 style="font-family: var(--font-heading); color: var(--accent-primary); font-weight: 800; font-size: 1.8rem; margin-bottom: 8px;">🔑 Admin Panel</h2>
-          <p style="color: var(--text-secondary); margin-bottom: 24px;">Yerel geliştirme ve yönetim araçları.</p>
-          <!-- Geliştiricinin ekleyeceği ögeler buraya gelebilir -->
-          <div class="admin-placeholder-content" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px; text-align: center; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 15px; align-items: center;">
-            <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Yerel Admin Alanı</p>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; width: 100%;">
-              <button id="btn-admin-add-wrong-questions" class="btn btn-primary" style="max-width: 380px; padding: 12px 24px; font-weight: bold; border-radius: 8px;">
-                Hızlı Tekrar İçin Hatalı Sorular Ekle (5 Soru)
+        <div class="admin-container" style="padding: 32px 20px; max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+          
+          <!-- Header Area -->
+          <div class="admin-header-card" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--border-color); padding-bottom: 20px; margin-bottom: 8px;">
+            <div>
+              <h2 style="font-family: var(--font-heading); color: var(--accent-primary); font-weight: 800; font-size: 2.2rem; margin: 0; display: flex; align-items: center; gap: 12px;">
+                <span>🛠️</span> Yönetim Paneli
+              </h2>
+              <p style="color: var(--text-secondary); margin: 6px 0 0 0; font-size: 1rem; font-weight: 500;">
+                Yerel geliştirme araçları ve sistem entegrasyonu yönetim alanı.
+              </p>
+            </div>
+            <div style="background: var(--accent-primary-light); color: var(--accent-primary); font-weight: 700; font-size: 0.8rem; padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(139, 126, 200, 0.3); text-transform: uppercase; letter-spacing: 0.5px;">
+              Yerel Mod (Local)
+            </div>
+          </div>
+
+          <!-- Section 1: Hızlı Tekrar Yönetimi -->
+          <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+              <span style="font-size: 1.5rem;">🔄</span>
+              <div style="text-align: left;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Akıllı Tekrar Simülasyonu</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Akıllı Tekrar (Spaced Repetition / Review) modunun test süreçlerini yönetin.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; width: 100%;">
+              <button id="btn-admin-add-wrong-questions" class="btn btn-primary" style="flex: 1; min-width: 250px; padding: 14px 22px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; font-size: 0.9rem;">
+                <span>➕</span> Hatalı Sorular Ekle (5 Soru)
               </button>
-              <button id="btn-admin-clear-wrong-questions" class="btn btn-secondary" style="max-width: 380px; padding: 12px 24px; font-weight: bold; border-radius: 8px; background-color: #ff3b30; color: #fff; border-color: #ff3b30;">
-                Hızlı Tekrar Sorularını Sıfırla (Temizle)
+              <button id="btn-admin-clear-wrong-questions" class="btn btn-secondary" style="flex: 1; min-width: 250px; padding: 14px 22px; font-weight: 700; border-radius: var(--radius-md); background: #ff3b30; color: #fff; border: 1px solid #ff3b30; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; font-size: 0.9rem; box-shadow: 0 2px 0 #cc2f26;">
+                <span>🗑️</span> Sıfırla (Temizle)
               </button>
             </div>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Bu araçlar Akıllı Tekrar (Review) modunun test süreçlerini yönetmenizi sağlar.</p>
           </div>
+
+          <!-- Section 2: Telegram Entegrasyonu -->
+          <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 1.5rem;">✈️</span>
+                <div style="text-align: left;">
+                  <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Telegram Bildirim Entegrasyonu</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcı aktivitelerini anlık olarak Telegram kanalınıza / grubunuza aktarın.</p>
+                </div>
+              </div>
+              <div style="background: rgba(0, 136, 204, 0.1); color: #0088cc; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(0, 136, 204, 0.25);">
+                API
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                <label for="admin-telegram-token" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                  Bot Token <span style="font-weight: normal; color: var(--text-secondary);">(HTTP API Token)</span>
+                </label>
+                <input type="text" id="admin-telegram-token" placeholder="örn: 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
+              </div>
+              
+              <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                <label for="admin-telegram-chat-id" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                  Chat ID <span style="font-weight: normal; color: var(--text-secondary);">(Kanal, Grup veya Sohbet ID)</span>
+                </label>
+                <input type="text" id="admin-telegram-chat-id" placeholder="örn: -100123456789 veya 987654321" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; width: 100%; margin-top: 6px; flex-wrap: wrap;">
+              <button id="btn-admin-save-telegram" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                <span>💾</span> Ayarları Kaydet
+              </button>
+              <button id="btn-admin-test-telegram" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
+                <span>⚡</span> Test Mesajı Gönder
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 3: Supabase Entegrasyonu -->
+          <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 1.5rem;">⚡</span>
+                <div style="text-align: left;">
+                  <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Supabase Bulut Veritabanı</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıları, durumları ve çevrimiçi kişileri ortak bir veritabanında senkronize edin.</p>
+                </div>
+              </div>
+              <div style="background: rgba(62, 207, 142, 0.1); color: #3ecf8e; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(62, 207, 142, 0.25);">
+                SUPABASE
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                <label for="admin-supabase-url" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                  Supabase URL
+                </label>
+                <input type="text" id="admin-supabase-url" placeholder="örn: https://xxxxxxxxxxxxxx.supabase.co" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
+              </div>
+              
+              <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                <label for="admin-supabase-anon-key" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                  Supabase Anon Key
+                </label>
+                <input type="text" id="admin-supabase-anon-key" placeholder="örn: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; width: 100%; margin-top: 6px; flex-wrap: wrap;">
+              <button id="btn-admin-save-supabase" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                <span>💾</span> Ayarları Kaydet
+              </button>
+              <button id="btn-admin-test-supabase" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
+                <span>⚡</span> Test Bağlantısı Yap
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
 
