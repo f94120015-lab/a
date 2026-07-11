@@ -9995,7 +9995,123 @@ function init() {
           testSupabaseBtn.disabled = false;
           testSupabaseBtn.innerHTML = originalText;
         }
+      });
+    }
+
+    // ============================================================
+    // ADMIN: LİSANS YÖNETİMİ
+    // ============================================================
+    const licenceEmailInput = document.getElementById('licence-owner-email');
+    const licencePhoneInput = document.getElementById('licence-owner-phone');
+    const licenceDurationSelect = document.getElementById('licence-duration');
+    const generateLicenceBtn = document.getElementById('btn-admin-generate-key');
+    const licenceTableBody = document.getElementById('licence-keys-table-body');
+
+    // Helper: Local storage list load
+    const loadGeneratedLicences = () => {
+      if (!licenceTableBody) return;
+      const stored = localStorage.getItem('amok_generated_licences');
+      const licences = stored ? JSON.parse(stored) : [];
+      
+      if (licences.length === 0) {
+        licenceTableBody.innerHTML = `
+          <tr>
+            <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz lisans anahtarı üretilmemiş.</td>
+          </tr>`;
+        return;
+      }
+
+      licenceTableBody.innerHTML = licences.map((lic, idx) => {
+        return `
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 10px; text-align: left; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+              <div>${lic.email}</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary);">${lic.phone}</div>
+            </td>
+            <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${lic.expiryStr}</td>
+            <td style="padding: 10px; text-align: left; font-family: monospace; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px;">${lic.key}</td>
+            <td style="padding: 10px; text-align: center;">
+              <button class="btn btn-secondary btn-delete-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Sil</button>
+            </td>
+          </tr>`;
+      }).join('');
+
+      // Add delete listeners
+      licenceTableBody.querySelectorAll('.btn-delete-licence').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(btn.dataset.idx, 10);
+          const current = localStorage.getItem('amok_generated_licences');
+          const currentList = current ? JSON.parse(current) : [];
+          currentList.splice(idx, 1);
+          localStorage.setItem('amok_generated_licences', JSON.stringify(currentList));
+          loadGeneratedLicences();
+          showToast('Lisans anahtarı listeden silindi! 🗑️', 'info');
         });
+      });
+    };
+
+    // Load initially
+    loadGeneratedLicences();
+
+    if (generateLicenceBtn) {
+      generateLicenceBtn.addEventListener('click', () => {
+        const email = licenceEmailInput ? licenceEmailInput.value.trim() : '';
+        const phone = licencePhoneInput ? licencePhoneInput.value.trim() : '';
+        const durationDays = licenceDurationSelect ? parseInt(licenceDurationSelect.value, 10) : 30;
+
+        if (!email || !phone) {
+          showToast('Lütfen alıcı e-posta ve telefon bilgilerini giriniz!', 'error');
+          return;
+        }
+
+        // Calculate expiry string YYYYMMDD
+        const expDate = new Date();
+        expDate.setDate(expDate.getDate() + durationDays);
+        const yyyy = expDate.getFullYear();
+        const mm = String(expDate.getMonth() + 1).padStart(2, '0');
+        const dd = String(expDate.getDate()).padStart(2, '0');
+        const expiryStr = `${yyyy}${mm}${dd}`;
+
+        // Hash components for licence code
+        let eHash = 0;
+        const cleanEmail = email.toLowerCase();
+        for (let i = 0; i < cleanEmail.length; i++) {
+          eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+          eHash = eHash & eHash;
+        }
+        const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+
+        let pHash = 0;
+        const cleanPhone = phone.replace(/\D/g, '');
+        for (let i = 0; i < cleanPhone.length; i++) {
+          pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+          pHash = pHash & pHash;
+        }
+        const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+
+        const signature = generateLicenceSignature(email, phone, expiryStr);
+
+        // Code format: AMOK-[EMAIL-HASH]-[PHONE-HASH]-[DATE]-[SIGNATURE]
+        const licenceKey = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
+
+        // Save licence key
+        const stored = localStorage.getItem('amok_generated_licences');
+        const licences = stored ? JSON.parse(stored) : [];
+        licences.push({
+          email: email,
+          phone: phone,
+          expiryStr: expDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' }),
+          key: licenceKey
+        });
+        localStorage.setItem('amok_generated_licences', JSON.stringify(licences));
+        
+        // Reset input fields
+        if (licenceEmailInput) licenceEmailInput.value = '';
+        if (licencePhoneInput) licencePhoneInput.value = '';
+
+        loadGeneratedLicences();
+        showToast('Lisans anahtarı başarıyla üretildi ve listeye eklendi! 🔑', 'success');
+      });
     }
 
     // ============================================================
