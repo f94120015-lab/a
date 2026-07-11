@@ -10896,11 +10896,15 @@ function init() {
 
           if (supabaseClient) {
             // Check if profile exists
-            const { data: dbUser } = await supabaseClient
+            const { data: dbUser, error: checkError } = await supabaseClient
               .from('profiles')
               .select('username')
               .eq('username', cleanUsername)
               .maybeSingle();
+
+            if (checkError) {
+              throw new Error(`Kullanıcı adı kontrolü başarısız: ${checkError.message}`);
+            }
 
             if (dbUser) {
               showToast(`@${cleanUsername} kullanıcı adı zaten alınmış!`, 'error');
@@ -10910,7 +10914,7 @@ function init() {
             }
 
             const hashed = await hashPassword(passwordVal);
-            await supabaseClient
+            const { error: profileInsertError } = await supabaseClient
               .from('profiles')
               .insert({
                 username: cleanUsername,
@@ -10918,7 +10922,11 @@ function init() {
                 password_hash: hashed
               });
 
-            await supabaseClient
+            if (profileInsertError) {
+              throw new Error(`Profil tablosuna ekleme başarısız: ${profileInsertError.message}`);
+            }
+
+            const { error: stateInsertError } = await supabaseClient
               .from('user_states')
               .insert({
                 username: cleanUsername,
@@ -10929,6 +10937,12 @@ function init() {
                 avatar_color: randomColor,
                 licence_key: ''
               });
+
+            if (stateInsertError) {
+              // Rollback profile insert if state insert fails
+              await supabaseClient.from('profiles').delete().eq('username', cleanUsername);
+              throw new Error(`Kullanıcı istatistik tablosuna ekleme başarısız: ${stateInsertError.message}`);
+            }
           } else {
             // Local
             const users = getUsers();
