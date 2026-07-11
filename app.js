@@ -2509,6 +2509,7 @@ function initAuth() {
       state = {
         ...state,
         username,
+        email,
         isGuest: false,
         streak: 0,
         xp: 0,
@@ -2543,40 +2544,101 @@ function initAuth() {
   });
 
   // Sosyal Giriş Seçenekleri
-  const handleSocialLogin = (platform, displayName) => {
-    showToast(`${platform} ile giriş yapılıyor...`, 'success');
-    setTimeout(() => {
-      // Mock social user state initialization
-      state = {
-        ...state,
-        username: displayName,
-        isGuest: false,
-        streak: 0,
-        xp: 0,
-        hearts: MAX_HEARTS,
-        completedLessons: [],
-        unlockedAchievements: [],
-        lastActiveDate: null,
-        nightOwlTriggered: false,
-        perfectLessonTriggered: false,
-        warriorTriggered: false
-      };
-      saveState();
-      showToast(`Hoş geldin, ${displayName}! 🎉`, 'success');
-      enterApp();
-    }, 800);
+  const handleSocialLogin = (platform) => {
+    const modal = document.createElement('div');
+    modal.className = 'custom-modal-overlay';
+    modal.id = 'social-login-modal';
+    
+    modal.innerHTML = `
+      <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Devam Et
+          </h3>
+          <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+        </div>
+        <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+            Giriş işlemini tamamlamak için lütfen aşağıdaki bilgileri doldurun:
+          </p>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
+            <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
+            <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet@example.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+          </div>
+        </div>
+        <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+          <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
+          <button class="btn btn-primary" id="btn-submit-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Devam Et</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
+    document.getElementById('btn-cancel-social').addEventListener('click', () => modal.remove());
+    
+    document.getElementById('btn-submit-social').addEventListener('click', () => {
+      const fullName = document.getElementById('social-fullname').value.trim();
+      const email = document.getElementById('social-email').value.trim();
+      
+      if (!fullName || fullName.indexOf(' ') === -1) {
+        showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+        return;
+      }
+
+      showToast(`${platform} ile giriş yapılıyor...`, 'success');
+      
+      setTimeout(() => {
+        // Kullanıcının state'ini yükle
+        const userState = localStorage.getItem(`amok_state_${fullName}`);
+        if (userState) {
+          try {
+            state = { ...state, ...JSON.parse(userState) };
+          } catch (e) {
+            console.error('Kullanıcı state yükleme hatası:', e);
+          }
+        }
+
+        // Bilgileri güncelle
+        const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+        const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+        state.username = fullName;
+        state.email = email;
+        state.isGuest = false;
+        if (!state.avatarColor) {
+          state.avatarColor = randomColor;
+        }
+        
+        saveState();
+        showToast(`Hoş geldin, ${fullName}! 🎉`, 'success');
+        modal.remove();
+        enterApp();
+      }, 600);
+    });
   };
 
   document.getElementById('btn-google-login').addEventListener('click', () => {
-    handleSocialLogin('Google', 'Google Kullanıcısı');
+    handleSocialLogin('Google');
   });
 
   document.getElementById('btn-facebook-login').addEventListener('click', () => {
-    handleSocialLogin('Facebook', 'Facebook Kullanıcısı');
+    handleSocialLogin('Facebook');
   });
 
   document.getElementById('btn-apple-login').addEventListener('click', () => {
-    handleSocialLogin('Apple', 'Apple Kullanıcısı');
+    handleSocialLogin('Apple');
   });
 }
 
@@ -3218,7 +3280,7 @@ function renderLessonTree() {
     const isStrictlyLocal = window.location.hostname === 'localhost' ||
                             window.location.hostname === '127.0.0.1' ||
                             window.location.protocol === 'file:';
-    const extraUnitIds = [13, 17, 21, 22, 40, 101, 102, 103];
+    const extraUnitIds = [];
     if (isStrictlyLocal && extraUnitIds.includes(unit.id)) {
       extraBadgeHTML = `
         <span class="unit-banner-extra-tag">
@@ -3234,6 +3296,10 @@ function renderLessonTree() {
     const banner = document.createElement('div');
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
+    
+    const noDescUnitIds = [13, 17, 21, 22, 40, 101, 102, 103];
+    const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${unit.description}</p>`;
+    
     banner.innerHTML = `
       <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
@@ -3242,10 +3308,10 @@ function renderLessonTree() {
           ${originalBadgeHTML}
           ${extraBadgeHTML}
         </h2>
-        <p>${unit.description}</p>
+        ${descHTML}
       </div>
       <div class="unit-progress-container">
-        <span class="unit-progress-text">${completedInUnit}/${totalInUnit} Tamamlandı</span>
+        <span class="unit-progress-text">${completedInUnit}/${totalInUnit}</span>
         <div class="unit-progress-bar-wrap">
           <div class="unit-progress-bar" style="width: ${progressPercent}%"></div>
         </div>
@@ -6997,6 +7063,7 @@ function renderProfile() {
       </div>
       <div class="profile-user-details">
         <h2 class="profile-username">${escapeHtml(state.username || 'Kullanıcı')}</h2>
+        ${state.email ? `<span class="profile-email" style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-top: 4px; margin-bottom: 6px; font-weight: 500;">✉️ ${escapeHtml(state.email)}</span>` : ''}
         <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
       </div>
     </div>
