@@ -811,13 +811,17 @@
 
             <!-- Left Sidebar Navigation -->
             <nav class="admin-sidebar" style="width: 240px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
-              <button class="admin-nav-item active" data-admin-section="review" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔄</span>
-                <span>Akıllı Tekrar</span>
+              <button class="admin-nav-item active" data-admin-section="users" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">👥</span>
+                <span>Kullanıcılar</span>
               </button>
               <button class="admin-nav-item" data-admin-section="licensing" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔑</span>
                 <span>Lisans Anahtarları</span>
+              </button>
+              <button class="admin-nav-item" data-admin-section="review" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔄</span>
+                <span>Akıllı Tekrar</span>
               </button>
               <button class="admin-nav-item" data-admin-section="telegram" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">✈️</span>
@@ -827,19 +831,13 @@
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">⚡</span>
                 <span>Supabase</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="users" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">👥</span>
-                <span>Kullanıcılar</span>
-              </button>
             </nav>
-
-
 
             <!-- Right Main Content Area -->
             <div class="admin-main-content" style="flex: 1; min-width: 0;">
 
               <!-- Panel 1: Akıllı Tekrar Simülasyonu -->
-              <div class="admin-panel active" id="admin-panel-review" style="display: flex; flex-direction: column; gap: 20px;">
+              <div class="admin-panel" id="admin-panel-review" style="display: none; flex-direction: column; gap: 20px;">
                 <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 20px;">
                   <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
                     <span style="font-size: 1.5rem;">🔄</span>
@@ -859,7 +857,7 @@
                 </div>
               </div>
 
-              <!-- Panel 2: Lisans Yönetimi (Yeni) -->
+              <!-- Panel 2: Lisans Yönetimi -->
               <div class="admin-panel" id="admin-panel-licensing" style="display: none; flex-direction: column; gap: 20px;">
                 <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
@@ -922,7 +920,7 @@
                 </div>
               </div>
 
-              <!-- Panel 2: Telegram Entegrasyonu -->
+              <!-- Panel 3: Telegram Entegrasyonu -->
               <div class="admin-panel" id="admin-panel-telegram" style="display: none; flex-direction: column; gap: 20px;">
                 <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
@@ -1003,7 +1001,7 @@
               </div>
 
               <!-- Panel 4: Kullanıcı Yönetimi -->
-              <div class="admin-panel" id="admin-panel-users" style="display: none; flex-direction: column; gap: 20px;">
+              <div class="admin-panel active" id="admin-panel-users" style="display: flex; flex-direction: column; gap: 20px;">
                 <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
                     <div style="display: flex; align-items: center; gap: 12px;">
