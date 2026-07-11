@@ -3659,7 +3659,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
 
-      if (state.isGuest) {
+      if (state.isGuest && !checkIsLocal()) {
         const firstUnit = units.find(u => u.id === 1);
         const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
         const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
@@ -8825,7 +8825,7 @@ function initEventListeners() {
     showScreen('home-screen');
 
     // Check guest restriction
-    if (state.isGuest) {
+    if (state.isGuest && !checkIsLocal()) {
       const firstUnit = units.find(u => u.id === 1);
       const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
       const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
@@ -8953,7 +8953,7 @@ function initEventListeners() {
   const startPlacementBtn = document.getElementById('btn-start-placement');
   if (startPlacementBtn) {
     startPlacementBtn.addEventListener('click', () => {
-      if (state.isGuest) {
+      if (state.isGuest && !checkIsLocal()) {
         showGuestBlockModal();
         return;
       }
@@ -8993,7 +8993,7 @@ function initEventListeners() {
   const startReviewBtn = document.getElementById('btn-start-review');
   if (startReviewBtn) {
     startReviewBtn.addEventListener('click', () => {
-      if (state.isGuest) {
+      if (state.isGuest && !checkIsLocal()) {
         const firstUnit = units.find(u => u.id === 1);
         const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
         const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
@@ -9035,7 +9035,7 @@ function initEventListeners() {
   if (reviewPromptConfirmBtn) {
     reviewPromptConfirmBtn.addEventListener('click', () => {
       hideReviewPromptModal();
-      if (state.isGuest) {
+      if (state.isGuest && !checkIsLocal()) {
         const firstUnit = units.find(u => u.id === 1);
         const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
         const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
@@ -9914,6 +9914,28 @@ function initNotifications() {
   // Bildirim izni istemi kaldırıldı.
 }
 
+// Show dev tools tab only if running locally (localhost / 127.0.0.1 / Class A, B, C private IPs / file protocol)
+function checkIsLocal() {
+  const hn = window.location.hostname;
+  const proto = window.location.protocol;
+  
+  if (proto === 'file:' || !hn) return true;
+  if (hn === 'localhost' || hn === '127.0.0.1' || hn === '0.0.0.0' || hn === '[::1]') return true;
+  
+  if (hn.startsWith('192.168.')) return true;
+  if (hn.startsWith('10.')) return true;
+  if (hn.startsWith('172.')) {
+    const parts = hn.split('.');
+    if (parts.length >= 2) {
+      const sec = parseInt(parts[1], 10);
+      if (sec >= 16 && sec <= 31) return true;
+    }
+  }
+  
+  if (hn.endsWith('.local') || hn.endsWith('.lan')) return true;
+  return false;
+}
+
 // ============================================================
 // BAŞLATMA
 // ============================================================
@@ -9938,28 +9960,6 @@ function init() {
     units.length = 0;
     units.push(...validUnits);
   }
-
-  // Show dev tools tab only if running locally (localhost / 127.0.0.1 / Class A, B, C private IPs / file protocol)
-  const checkIsLocal = () => {
-    const hn = window.location.hostname;
-    const proto = window.location.protocol;
-    
-    if (proto === 'file:' || !hn) return true;
-    if (hn === 'localhost' || hn === '127.0.0.1' || hn === '0.0.0.0' || hn === '[::1]') return true;
-    
-    if (hn.startsWith('192.168.')) return true;
-    if (hn.startsWith('10.')) return true;
-    if (hn.startsWith('172.')) {
-      const parts = hn.split('.');
-      if (parts.length >= 2) {
-        const sec = parseInt(parts[1], 10);
-        if (sec >= 16 && sec <= 31) return true;
-      }
-    }
-    
-    if (hn.endsWith('.local') || hn.endsWith('.lan')) return true;
-    return false;
-  };
 
   const isLocal = checkIsLocal();
   if (isLocal) {
