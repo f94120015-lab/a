@@ -9943,6 +9943,44 @@ function init() {
       });
     }
 
+    // Sidebar navigation logic for admin section panels
+    document.querySelectorAll('.admin-nav-item').forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all nav items
+        document.querySelectorAll('.admin-nav-item').forEach(nav => {
+          nav.style.border = '1px solid var(--border-color)';
+          nav.style.background = 'var(--bg-card)';
+          nav.style.color = 'var(--text-secondary)';
+          nav.classList.remove('active');
+        });
+
+        // Set active to clicked item
+        item.style.border = '1px solid var(--accent-primary)';
+        item.style.background = 'rgba(139, 126, 200, 0.1)';
+        item.style.color = 'var(--accent-primary)';
+        item.classList.add('active');
+
+        // Hide all admin panels
+        document.querySelectorAll('.admin-panel').forEach(panel => {
+          panel.style.display = 'none';
+          panel.classList.remove('active');
+        });
+
+        // Show targets panel
+        const targetSection = item.dataset.adminSection;
+        const targetPanel = document.getElementById(`admin-panel-${targetSection}`);
+        if (targetPanel) {
+          targetPanel.style.display = 'flex';
+          targetPanel.classList.add('active');
+        }
+
+        // If switching to users section, load users
+        if (targetSection === 'users') {
+          loadAdminUsers();
+        }
+      });
+    });
+
     // Auto-load users when admin tab is opened
     const adminTabObserver = new MutationObserver(() => {
       const adminContent = document.getElementById('tab-content-admin');
