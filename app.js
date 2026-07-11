@@ -9706,8 +9706,260 @@ function init() {
           testSupabaseBtn.disabled = false;
           testSupabaseBtn.innerHTML = originalText;
         }
+        });
+    }
+
+    // ============================================================
+    // ADMIN: KULLANICI YÖNETİMİ
+    // ============================================================
+    let adminUsersCache = [];
+    let adminUsersActiveTab = 'all';
+
+    async function loadAdminUsers() {
+      const listEl = document.getElementById('admin-users-list');
+      const badgeEl = document.getElementById('admin-users-badge');
+      if (!listEl) return;
+
+      if (!supabaseClient) {
+        listEl.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+            <span style="font-size: 2rem; display: block; margin-bottom: 8px;">⚠️</span>
+            <p style="margin: 0; font-weight: 600;">Supabase Bağlantısı Yok</p>
+            <p style="margin: 4px 0 0 0; font-size: 0.8rem;">Kullanıcıları görmek için Supabase bağlantısını yapılandırın.</p>
+          </div>`;
+        return;
+      }
+
+      listEl.innerHTML = `
+        <div style="text-align: center; padding: 30px 20px; color: var(--text-secondary);">
+          <span style="font-size: 1.5rem; display: block; margin-bottom: 8px; animation: pulse 1.5s infinite;">⏳</span>
+          <p style="margin: 0; font-weight: 600;">Kullanıcılar yükleniyor...</p>
+        </div>`;
+
+      try {
+        // Fetch profiles
+        const { data: profiles, error: profilesError } = await supabaseClient
+          .from('profiles')
+          .select('username, email, created_at, last_seen_at')
+          .order('created_at', { ascending: false });
+
+        if (profilesError) throw profilesError;
+
+        // Fetch user_states for XP/streak/hearts/progress
+        const { data: states, error: statesError } = await supabaseClient
+          .from('user_states')
+          .select('username, xp, streak, hearts, completed_lessons, avatar_color');
+
+        const statesMap = {};
+        if (!statesError && states) {
+          states.forEach(s => {
+            statesMap[s.username] = s;
+          });
+        }
+
+        // Merge data
+        const now = new Date();
+        const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+        const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+        const fiveMinutesAgo = new Date(now.getTime() - 5 * 60 * 1000);
+
+        adminUsersCache = (profiles || []).map(p => {
+          const st = statesMap[p.username] || {};
+          const createdAt = p.created_at ? new Date(p.created_at) : null;
+          const lastSeen = p.last_seen_at ? new Date(p.last_seen_at) : null;
+          const completedCount = (st.completed_lessons || []).length;
+          return {
+            username: p.username,
+            email: p.email || '—',
+            createdAt: createdAt,
+            lastSeen: lastSeen,
+            xp: st.xp || 0,
+            streak: st.streak || 0,
+            hearts: st.hearts || 0,
+            completedLessons: completedCount,
+            avatarColor: st.avatar_color || '#B4A7D6',
+            isNew: createdAt && createdAt >= sevenDaysAgo,
+            isOnline: lastSeen && lastSeen >= fiveMinutesAgo,
+            isActive24h: lastSeen && lastSeen >= twentyFourHoursAgo
+          };
+        });
+
+        // Update stats
+        const totalCount = adminUsersCache.length;
+        const newCount = adminUsersCache.filter(u => u.isNew).length;
+        const onlineCount = adminUsersCache.filter(u => u.isOnline).length;
+        const activeCount = adminUsersCache.filter(u => u.isActive24h).length;
+
+        const totalEl = document.getElementById('admin-stat-total-count');
+        const newEl = document.getElementById('admin-stat-new-count');
+        const onlineEl = document.getElementById('admin-stat-online-count');
+        const activeEl = document.getElementById('admin-stat-active-count');
+        if (totalEl) totalEl.textContent = totalCount;
+        if (newEl) newEl.textContent = newCount;
+        if (onlineEl) onlineEl.textContent = onlineCount;
+        if (activeEl) activeEl.textContent = activeCount;
+        if (badgeEl) badgeEl.textContent = `${totalCount} Kullanıcı`;
+
+        renderAdminUsers();
+
+      } catch (err) {
+        console.error('Admin users fetch error:', err);
+        listEl.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: #ff3b30;">
+            <span style="font-size: 2rem; display: block; margin-bottom: 8px;">❌</span>
+            <p style="margin: 0; font-weight: 600;">Veri Yükleme Hatası</p>
+            <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: var(--text-secondary);">${err.message || 'Bilinmeyen hata'}</p>
+          </div>`;
+      }
+    }
+
+    function renderAdminUsers() {
+      const listEl = document.getElementById('admin-users-list');
+      if (!listEl) return;
+
+      let filtered = adminUsersCache;
+      if (adminUsersActiveTab === 'new') {
+        filtered = adminUsersCache.filter(u => u.isNew);
+      } else if (adminUsersActiveTab === 'online') {
+        filtered = adminUsersCache.filter(u => u.isOnline);
+      }
+
+      if (filtered.length === 0) {
+        const emptyMsgs = {
+          all: { icon: '👥', title: 'Henüz kullanıcı yok', desc: 'Kayıtlı kullanıcı bulunmuyor.' },
+          new: { icon: '🆕', title: 'Yeni üye yok', desc: 'Son 7 günde yeni kayıt olmamış.' },
+          online: { icon: '🟢', title: 'Çevrimiçi kullanıcı yok', desc: 'Şu anda aktif kullanıcı bulunmuyor.' }
+        };
+        const msg = emptyMsgs[adminUsersActiveTab] || emptyMsgs.all;
+        listEl.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+            <span style="font-size: 2rem; display: block; margin-bottom: 8px;">${msg.icon}</span>
+            <p style="margin: 0; font-weight: 600;">${msg.title}</p>
+            <p style="margin: 4px 0 0 0; font-size: 0.8rem;">${msg.desc}</p>
+          </div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map((user, idx) => {
+        const initial = (user.username || '?')[0].toUpperCase();
+        const onlineDot = user.isOnline
+          ? '<span style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid var(--bg-card); box-shadow: 0 0 4px rgba(34,197,94,0.5);"></span>'
+          : '';
+        const newBadge = user.isNew
+          ? '<span style="background: #10b981; color: #fff; font-size: 0.6rem; padding: 1px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; margin-left: 6px;">YENİ</span>'
+          : '';
+
+        const lastSeenText = user.lastSeen
+          ? formatTimeAgo(user.lastSeen)
+          : 'Hiç giriş yapmadı';
+
+        const createdText = user.createdAt
+          ? user.createdAt.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' })
+          : '—';
+
+        return `
+          <div style="display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.15s; cursor: default;"
+               onmouseover="this.style.borderColor='var(--accent-primary)'; this.style.boxShadow='0 2px 8px rgba(139,126,200,0.1)'"
+               onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
+            <!-- Avatar -->
+            <div style="position: relative; flex-shrink: 0;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+                ${initial}
+              </div>
+              ${onlineDot}
+            </div>
+            <!-- Info -->
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px;">
+                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px;">${user.username}</span>
+                ${newBadge}
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 3px; flex-wrap: wrap;">
+                <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Son görülme">🕐 ${lastSeenText}</span>
+                <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Kayıt tarihi">📅 ${createdText}</span>
+              </div>
+            </div>
+            <!-- Stats -->
+            <div style="display: flex; gap: 10px; flex-shrink: 0; align-items: center;">
+              <div style="text-align: center; min-width: 36px;" title="XP">
+                <div style="font-weight: 800; font-size: 0.9rem; color: var(--accent-primary); line-height: 1;">${user.xp}</div>
+                <div style="font-size: 0.6rem; color: var(--text-secondary); font-weight: 600;">XP</div>
+              </div>
+              <div style="text-align: center; min-width: 30px;" title="Seri">
+                <div style="font-weight: 800; font-size: 0.9rem; color: #f59e0b; line-height: 1;">🔥${user.streak}</div>
+              </div>
+              <div style="text-align: center; min-width: 30px;" title="Tamamlanan ders">
+                <div style="font-weight: 800; font-size: 0.9rem; color: #10b981; line-height: 1;">📚${user.completedLessons}</div>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function formatTimeAgo(date) {
+      const now = new Date();
+      const diff = now - date;
+      const seconds = Math.floor(diff / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+
+      if (seconds < 60) return 'Az önce';
+      if (minutes < 60) return `${minutes} dk önce`;
+      if (hours < 24) return `${hours} saat önce`;
+      if (days < 7) return `${days} gün önce`;
+      return date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
+    }
+
+    // Tab switching
+    document.querySelectorAll('.admin-users-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.admin-users-tab').forEach(t => {
+          t.style.border = '1px solid var(--border-color)';
+          t.style.background = 'var(--bg-body)';
+          t.style.color = 'var(--text-secondary)';
+          t.classList.remove('active');
+        });
+        tab.style.border = '1px solid var(--accent-primary)';
+        tab.style.background = 'rgba(139, 126, 200, 0.12)';
+        tab.style.color = 'var(--accent-primary)';
+        tab.classList.add('active');
+        adminUsersActiveTab = tab.dataset.adminTab;
+        renderAdminUsers();
+      });
+    });
+
+    // Refresh button
+    const refreshUsersBtn = document.getElementById('btn-admin-refresh-users');
+    if (refreshUsersBtn) {
+      refreshUsersBtn.addEventListener('click', async () => {
+        refreshUsersBtn.disabled = true;
+        const origHTML = refreshUsersBtn.innerHTML;
+        refreshUsersBtn.innerHTML = '<span>⏳</span> Yükleniyor...';
+        await loadAdminUsers();
+        refreshUsersBtn.disabled = false;
+        refreshUsersBtn.innerHTML = origHTML;
+        showToast('Kullanıcı listesi güncellendi! 🔄', 'success');
       });
     }
+
+    // Auto-load users when admin tab is opened
+    const adminTabObserver = new MutationObserver(() => {
+      const adminContent = document.getElementById('tab-content-admin');
+      if (adminContent && adminContent.classList.contains('active')) {
+        loadAdminUsers();
+      }
+    });
+    const adminContentEl = document.getElementById('tab-content-admin');
+    if (adminContentEl) {
+      adminTabObserver.observe(adminContentEl, { attributes: true, attributeFilter: ['class'] });
+    }
+
+    // Initial load if admin tab is already active
+    if (adminContentEl && adminContentEl.classList.contains('active')) {
+      loadAdminUsers();
+    }
+
   } else {
     const devTab = document.getElementById('btn-next-empty-lesson');
     if (devTab) devTab.remove();
