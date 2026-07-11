@@ -4786,6 +4786,15 @@ function renderQuestion() {
       });
     }
   }
+  
+  if (question.topic) {
+    const badgeHtml = `
+      <div class="topic-reminder-badge" style="display: block; text-align: center; background: var(--theme-accent-light); color: var(--theme-accent); padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin: 0 auto 16px auto; max-width: max-content; border: 1.5px solid rgba(139, 126, 200, 0.25); letter-spacing: 0.3px; box-shadow: var(--shadow-sm); font-family: var(--font-heading);">
+        🔍 Odak Konu: ${question.topic}
+      </div>
+    `;
+    body.insertAdjacentHTML('afterbegin', badgeHtml);
+  }
 
   // Restore prompt text so data remains unmodified
   question.prompt = originalPrompt;
@@ -11431,7 +11440,72 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     if (preDefinedExplanation) {
       ruleText = preDefinedExplanation;
     } else {
-      ruleText = `İngilizceden Türkçeye (veya tersi) çevirilerde zaman zarflarının (when: -diğinde, since: -den beri, before: -meden önce, after: -dikten sonra) ve yardımcı fiillerin anlamına dikkat edilmelidir.`;
+      let lessonTipText = '';
+      if (currentLesson && [8, 51, 52, 53, 54, 55, 56].includes(currentLesson.unitId)) {
+        const unitId = currentLesson.unitId;
+        if (unitId === 8) {
+          lessonTipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
+        } else if (unitId === 51) {
+          if (question.id.includes('_l01') || question.id.includes('_l1')) {
+            lessonTipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
+          } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
+            lessonTipText = '<strong>Ettirgen (Causative):</strong> Aktiflerde <em>Have/Let/Make + Kişi + V0</em> ve <em>Get + Kişi + to V1</em>; Pasiflerde <em>Have/Get + Nesne + V3</em> kullanılır.';
+          } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
+            lessonTipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
+          }
+        } else if (unitId === 52) {
+          if (question.id.includes('_l01') || question.id.includes('_l1')) {
+            lessonTipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
+          } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
+            lessonTipText = '<strong>Eşikte Olma (-e Üzere Olmak):</strong> <em>Be about to + V0</em>, <em>Be due to + V0</em> ve <em>Be on the verge/brink/point/edge of + V-ing</em> eşikte olma ve yakın gelecek bildirir.';
+          } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
+            lessonTipText = '<strong>Subjunctive & Gizli Şart:</strong> Aciliyet ve önem bildiren sıfatlardan sonra <em>that + Subject + V0 (yalın)</em> subjunctive yapısı; aksi takdirde anlamında <em>otherwise</em> veya -olmasaydı anlamında <em>but for</em> kullanılır.';
+          } else if (question.id.includes('_l04') || question.id.includes('_l4')) {
+            lessonTipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
+          }
+        } else if (unitId === 53 || unitId === 54) {
+          lessonTipText = '<strong>Bağlaç Formülleri ve Örnekleri (Grup Kuralları):</strong><br>' +
+                    '• <strong>Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
+                    '  <em>Örnek:</em> Although it was raining, we went out.<br>' +
+                    '• <strong>İsim Alanlar (+ İsim / V-ing):</strong> <em>Despite</em> (rağmen), <em>Because of</em> (yüzünden), <em>In addition to</em> (ek olarak).<br>' +
+                    '  <em>Örnek:</em> Despite the heavy rain, we went out.<br>' +
+                    '• <strong>Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
+                    '  <em>Örnek:</em> It was raining; however, we decided to go out.';
+        } else if (unitId === 55 || unitId === 56) {
+          if (question.id.includes('_l7_') || question.id.includes('_l7')) {
+            lessonTipText = '<strong>Keşke Yapıları (I wish / If only):</strong><br>' +
+                      '• <strong>Şikayet / Gelecek:</strong> wish + would V1. <em>(Örn: I wish you would listen)</em><br>' +
+                      '• <strong>Şimdiki Zaman:</strong> wish + V2 / could V1. <em>(Örn: I wish I knew / could swim)</em><br>' +
+                      '• <strong>Geçmiş Zaman (Pişmanlık):</strong> wish + had V3 / could have V3. <em>(Örn: I wish had called)</em><br>' +
+                      '• <strong>Özne Uyumu Kısıtı:</strong> Aynı özneyle would kullanılamaz <em>(I wish I would ❌ ➔ I wish I could/V2 ✔️)</em>.';
+          } else if (question.id.includes('_l6_') || question.id.includes('_l6')) {
+            lessonTipText = '<strong>Diğer Koşul Bağlaçları:</strong><br>' +
+                      '• <strong>unless</strong> (-medikçe), <strong>as long as</strong> (-diği sürece), <strong>provided that / providing</strong> (-şartıyla).<br>' +
+                      '• <strong>supposing / assuming</strong> (varsayalım ki), <strong>in case</strong> (durumunda/diye), <strong>on condition that</strong> (koşuluyla).<br>' +
+                      '• <strong>only if</strong> (cümle başında devriklik yapar: <em>Only if we leave, can we catch...</em>).<br>' +
+                      '• <strong>in case of / in the event of + noun</strong> (-durumunda / -halinde).';
+          } else if (question.id.includes('_l5_') || question.id.includes('_l5')) {
+            lessonTipText = '<strong>Alternatif Koşul Yapıları:</strong><br>' +
+                      '• <strong>If ..., then ...:</strong> Koşul sonucunu vurgular. <em>(If you tell, then I can...)</em><br>' +
+                      '• <strong>Otherwise / Or / Or else:</strong> Aksi takdirde / yoksa. <em>(Study; otherwise, you will fail)</em><br>' +
+                      '• <strong>Without + Noun:</strong> ... olmasaydı/olmadan. <em>(Without air, we couldn\'t live / Without help, we would have failed)</em>';
+          } else if (question.id.includes('_l4_') || question.id.includes('_l4')) {
+            lessonTipText = '<strong>Devrik Koşul Yapıları (If Inversion):</strong> "If" kaldırıldığında yardımcı fiil başa gelir:<br>' +
+                      '• <strong>Type 1:</strong> <em>Should + S + V1</em>. (If a problem should arise ➔ Should a problem arise)<br>' +
+                      '• <strong>Type 2:</strong> <em>Were + S + ... / Were + S + to V1</em>. (If I were you ➔ Were I you)<br>' +
+                      '• <strong>Type 3:</strong> <em>Had + S + V3</em>. (If you had called ➔ Had you called)';
+          } else {
+            lessonTipText = '<strong>If Clause Tipleri Özet Tablosu:</strong><br>' +
+                      '• <strong>Type 0 (Genel Doğrular):</strong> If + Present Simple, Present Simple. <em>(boils)</em><br>' +
+                      '• <strong>Type 1 (Gelecek İhtimal):</strong> If + Present, Will / Can / May + V1. <em>(will pass)</em><br>' +
+                      '• <strong>Type 2 (Şu Anki Hayal):</strong> If + Past Simple (were), Would / Could + V1. <em>(would buy)</em><br>' +
+                      '• <strong>Type 3 (Geçmiş Pişmanlık):</strong> If + Past Perfect (had V3), Would have + V3. <em>(had driven / would have survived)</em><br>' +
+                      '• <strong>Mix 1 (Geçmiş ➔ Bugün):</strong> If + had V3, Would + V1 (now). <em>(had driven / wouldn\'t be in hospital now)</em><br>' +
+                      '• <strong>Mix 2 (Genel ➔ Geçmiş):</strong> If + V2 (were), Would have + V3. <em>(were taller / would have been chosen yesterday)</em>';
+          }
+        }
+      }
+      ruleText = lessonTipText || `İngilizceden Türkçeye (veya tersi) çevirilerde zaman zarflarının (when: -diğinde, since: -den beri, before: -meden önce, after: -dikten sonra) ve yardımcı fiillerin anlamına dikkat edilmelidir.`;
     }
 
     // Check specific conjunction errors
