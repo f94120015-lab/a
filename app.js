@@ -7695,7 +7695,11 @@ function renderProfile() {
         <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
       </div>
       <div class="profile-user-details">
-        <h2 class="profile-username">${escapeHtml(state.username || 'Kullanıcı')}</h2>
+        <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px;">
+          ${escapeHtml(state.username || 'Kullanıcı')}
+          ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
+        </h2>
+        ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
         ${state.email ? `<span class="profile-email" style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-top: 4px; margin-bottom: 6px; font-weight: 500;">✉️ ${escapeHtml(state.email)}</span>` : ''}
         <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
       </div>
