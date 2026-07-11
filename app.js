@@ -10737,9 +10737,10 @@ function init() {
               <!-- Lisans Durumu ve Yönetim Butonları -->
               <div style="display: flex; align-items: center; gap: 8px; margin: 8px 0; flex-wrap: wrap;">
                 ${licenceBadge}
-                <div style="display: inline-flex; gap: 4px;">
+                <div style="display: inline-flex; gap: 4px; flex-wrap: wrap;">
                   <button class="btn-admin-manage-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='var(--accent-primary)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-primary)';">Lisans Yönet</button>
                   ${showDeleteBtn ? `<button class="btn-admin-delete-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid #ff3b30; background: transparent; color: #ff3b30; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#ff3b30'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#ff3b30';">Lisans Sil</button>` : ''}
+                  <button class="btn-admin-delete-user" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid #dc2626; background: transparent; color: #dc2626; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#dc2626'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#dc2626';">Kullanıcıyı Sil</button>
                 </div>
               </div>
 
@@ -10781,6 +10782,16 @@ function init() {
           const username = btn.dataset.username;
           if (confirm(`${username} kullanıcısının lisansını silmek istediğinize emin misiniz?`)) {
             await deleteUserLicence(username);
+          }
+        });
+      });
+
+      // Attach click listeners to delete user button
+      listEl.querySelectorAll('.btn-admin-delete-user').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const username = btn.dataset.username;
+          if (confirm(`${username} kullanıcısını ve tüm verilerini TAMAMEN silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`)) {
+            await deleteUser(username);
           }
         });
       });
@@ -11047,6 +11058,65 @@ function init() {
       } catch (err) {
         console.error(err);
         showToast('Lisans silinirken bir hata oluştu!', 'error');
+      }
+    }
+
+    async function deleteUser(username) {
+      if (state.username === username) {
+        showToast('Kendi hesabınızı silemezsiniz!', 'error');
+        return;
+      }
+
+      try {
+        // 1. Delete from local storage users list if exists
+        const localUsers = getUsers();
+        if (localUsers[username]) {
+          delete localUsers[username];
+          localStorage.setItem(USERS_KEY, JSON.stringify(localUsers));
+        }
+
+        // 2. Delete user states/metadata from local storage
+        localStorage.removeItem(`amok_state_${username}`);
+
+        const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+        if (localStates[username]) {
+          delete localStates[username];
+          localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+        }
+
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        if (metaRegistry[username]) {
+          delete metaRegistry[username];
+          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+        }
+
+        // 3. Supabase deletion
+        if (supabaseClient) {
+          // Delete from user_states first
+          const { error: stateDeleteError } = await supabaseClient
+            .from('user_states')
+            .delete()
+            .eq('username', username);
+
+          if (stateDeleteError) {
+            console.error('Supabase user_states delete error:', stateDeleteError);
+          }
+
+          const { error: profileDeleteError } = await supabaseClient
+            .from('profiles')
+            .delete()
+            .eq('username', username);
+
+          if (profileDeleteError) {
+            throw new Error(`Kullanıcı profili silinirken hata: ${profileDeleteError.message}`);
+          }
+        }
+
+        showToast('Kullanıcı başarıyla silindi! 🗑️', 'success');
+        await loadAdminUsers();
+      } catch (err) {
+        console.error(err);
+        showToast('Kullanıcı silinirken bir hata oluştu!', 'error');
       }
     }
 
