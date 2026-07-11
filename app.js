@@ -3954,10 +3954,19 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
       if (!isLocalEnvironment()) {
-        if (index === 0) {
-          isExUnlocked = isUnlocked;
+        if (!checkLicence()) {
+          // If no license, only the first exercise of the first 3 lessons is unlocked.
+          if (index === 0) {
+            isExUnlocked = isUnlocked;
+          } else {
+            isExUnlocked = false; // Lock everything else
+          }
         } else {
-          isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+          if (index === 0) {
+            isExUnlocked = isUnlocked;
+          } else {
+            isExUnlocked = state.completedLessons.includes(`${lesson.id}_${lesson.exercises[index - 1].id}`);
+          }
         }
       }
       
@@ -4144,10 +4153,18 @@ function isLessonUnlocked(lessonId) {
 
   // Rule: First 3 lessons of Unit 1 are open by default
   const firstUnit = sortedUnits[0];
+  let isFreeLesson = false;
   if (firstUnit && currentUnitId === firstUnit.id) {
     const lessonIdxInUnit = firstUnit.lessons.indexOf(lessonId);
     if (lessonIdxInUnit >= 0 && lessonIdxInUnit < 3) {
-      return true; // First 3 lessons of Unit 1 are always unlocked
+      isFreeLesson = true;
+    }
+  }
+
+  // If NOT a free lesson, check if a valid license is present
+  if (!isFreeLesson) {
+    if (!checkLicence()) {
+      return false; // Lock all other lessons without licence
     }
   }
 
