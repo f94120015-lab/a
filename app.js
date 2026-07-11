@@ -10190,7 +10190,10 @@ function init() {
          showToast(`Kullanıcı @${username} başarıyla oluşturuldu! 🎉`, 'success');
          
          if (typeof loadAdminUsers === 'function') {
-           loadAdminUsers();
+           await loadAdminUsers();
+           if (typeof switchAdminUsersTab === 'function') {
+             switchAdminUsersTab('all');
+           }
          }
        } catch (err) {
          console.error('Error manual-creating user for license:', err);
@@ -10575,6 +10578,13 @@ function init() {
           };
         });
 
+        // Sort by creation date descending to show newest users first
+        adminUsersCache.sort((a, b) => {
+          const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+          const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+          return dateB - dateA;
+        });
+
         // Update stats
         const totalCount = adminUsersCache.length;
         const newCount = adminUsersCache.filter(u => u.isNew).length;
@@ -10773,21 +10783,29 @@ function init() {
       return date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
     }
 
-    // Tab switching
-    document.querySelectorAll('.admin-users-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.admin-users-tab').forEach(t => {
+    // Tab switching helper
+    function switchAdminUsersTab(tabName) {
+      adminUsersActiveTab = tabName;
+      document.querySelectorAll('.admin-users-tab').forEach(t => {
+        if (t.dataset.adminTab === tabName) {
+          t.style.border = '1px solid var(--accent-primary)';
+          t.style.background = 'rgba(139, 126, 200, 0.12)';
+          t.style.color = 'var(--accent-primary)';
+          t.classList.add('active');
+        } else {
           t.style.border = '1px solid var(--border-color)';
           t.style.background = 'var(--bg-body)';
           t.style.color = 'var(--text-secondary)';
           t.classList.remove('active');
-        });
-        tab.style.border = '1px solid var(--accent-primary)';
-        tab.style.background = 'rgba(139, 126, 200, 0.12)';
-        tab.style.color = 'var(--accent-primary)';
-        tab.classList.add('active');
-        adminUsersActiveTab = tab.dataset.adminTab;
-        renderAdminUsers();
+        }
+      });
+      renderAdminUsers();
+    }
+
+    // Tab switching
+    document.querySelectorAll('.admin-users-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        switchAdminUsersTab(tab.dataset.adminTab);
       });
     });
 
@@ -10947,6 +10965,9 @@ function init() {
 
           // Refresh user list
           await loadAdminUsers();
+          if (typeof switchAdminUsersTab === 'function') {
+            switchAdminUsersTab('all');
+          }
         } catch (err) {
           console.error(err);
           showToast('Kullanıcı oluşturulurken hata oluştu!', 'error');
