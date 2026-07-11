@@ -10131,41 +10131,59 @@ function init() {
          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
 
          if (supabaseClient) {
-           // Check if user profile already exists
-           const { data: dbUserProfile } = await supabaseClient
-             .from('profiles')
-             .select('username')
-             .eq('username', username)
-             .maybeSingle();
+            // Check if user profile already exists
+            const { data: dbUserProfile, error: checkError } = await supabaseClient
+              .from('profiles')
+              .select('username')
+              .eq('username', username)
+              .maybeSingle();
 
-           if (!dbUserProfile) {
-             const hashed = await hashPassword(defaultPassword);
-             await supabaseClient
-               .from('profiles')
-               .insert({
-                 username: username,
-                 email: email,
-                 password_hash: hashed
-               });
+            if (checkError) {
+              throw new Error(`Kullanıcı adı kontrolü başarısız: ${checkError.message}`);
+            }
 
-             await supabaseClient
-               .from('user_states')
-               .insert({
-                 username: username,
-                 xp: 0,
-                 streak: 0,
-                 hearts: 5,
-                 completed_lessons: [],
-                 avatar_color: randomColor,
-                 licence_key: licenceKey
-               });
-           } else {
-             // Update license key on existing profile
-             await supabaseClient
-               .from('user_states')
-               .update({ licence_key: licenceKey })
-               .eq('username', username);
-           }
+            if (!dbUserProfile) {
+              const hashed = await hashPassword(defaultPassword);
+              const { error: profileInsertError } = await supabaseClient
+                .from('profiles')
+                .insert({
+                  username: username,
+                  email: email || null,
+                  password_hash: hashed
+                });
+
+              if (profileInsertError) {
+                throw new Error(`Profil tablosuna ekleme başarısız: ${profileInsertError.message}`);
+              }
+
+              const { error: stateInsertError } = await supabaseClient
+                .from('user_states')
+                .insert({
+                  username: username,
+                  xp: 0,
+                  streak: 0,
+                  hearts: 5,
+                  completed_lessons: [],
+                  avatar_color: randomColor,
+                  licence_key: licenceKey
+                });
+
+              if (stateInsertError) {
+                // Rollback profile insert if state insert fails
+                await supabaseClient.from('profiles').delete().eq('username', username);
+                throw new Error(`Kullanıcı istatistik tablosuna ekleme başarısız: ${stateInsertError.message}`);
+              }
+            } else {
+              // Update license key on existing profile
+              const { error: updateError } = await supabaseClient
+                .from('user_states')
+                .update({ licence_key: licenceKey })
+                .eq('username', username);
+
+              if (updateError) {
+                throw new Error(`Lisans anahtarı güncellenirken hata: ${updateError.message}`);
+              }
+            }
          } else {
            // Local Database save
            const users = getUsers();
@@ -10197,7 +10215,7 @@ function init() {
          }
        } catch (err) {
          console.error('Error manual-creating user for license:', err);
-         showToast('Kullanıcı oluşturulurken hata oluştu!', 'error');
+         showToast(`Kullanıcı oluşturulurken hata oluştu! ${err.message || ''}`, 'error');
        }
      };
 
@@ -10984,7 +11002,7 @@ function init() {
           }
         } catch (err) {
           console.error(err);
-          showToast('Kullanıcı oluşturulurken hata oluştu!', 'error');
+          showToast(`Kullanıcı oluşturulurken hata oluştu! ${err.message || ''}`, 'error');
         } finally {
           addUserSubmitBtn.disabled = false;
           addUserSubmitBtn.textContent = origText;
@@ -11062,28 +11080,24 @@ function init() {
 
       // 4. Update Supabase client if configured
       if (supabaseClient) {
-        try {
-          const { error: stateErr } = await supabaseClient
-            .from('user_states')
-            .update({ licence_key: licenceKey })
+        const { error: stateErr } = await supabaseClient
+          .from('user_states')
+          .update({ licence_key: licenceKey })
+          .eq('username', username);
+
+        if (stateErr) {
+          throw new Error(`Kullanıcı istatistik güncelleme hatası: ${stateErr.message}`);
+        }
+
+        if (email) {
+          const { error: profileErr } = await supabaseClient
+            .from('profiles')
+            .update({ email: email })
             .eq('username', username);
 
-          if (stateErr) {
-            console.error('Supabase user_states update error:', stateErr);
+          if (profileErr) {
+            throw new Error(`Kullanıcı profil güncelleme hatası: ${profileErr.message}`);
           }
-
-          if (email) {
-            const { error: profileErr } = await supabaseClient
-              .from('profiles')
-              .update({ email: email })
-              .eq('username', username);
-
-            if (profileErr) {
-              console.error('Supabase profiles update error:', profileErr);
-            }
-          }
-        } catch (e) {
-          console.error('Supabase sync database error:', e);
         }
       }
     }
