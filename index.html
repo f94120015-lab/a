@@ -811,9 +811,13 @@
 
             <!-- Left Sidebar Navigation -->
             <nav class="admin-sidebar" style="width: 240px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
-              <button class="admin-nav-item active" data-admin-section="review" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--accent-primary); background: rgba(139, 126, 200, 0.1); color: var(--accent-primary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
+              <button class="admin-nav-item active" data-admin-section="review" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔄</span>
                 <span>Akıllı Tekrar</span>
+              </button>
+              <button class="admin-nav-item" data-admin-section="licensing" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔑</span>
+                <span>Lisans Anahtarları</span>
               </button>
               <button class="admin-nav-item" data-admin-section="telegram" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">✈️</span>
@@ -828,6 +832,8 @@
                 <span>Kullanıcılar</span>
               </button>
             </nav>
+
+
 
             <!-- Right Main Content Area -->
             <div class="admin-main-content" style="flex: 1; min-width: 0;">
@@ -849,6 +855,69 @@
                     <button id="btn-admin-clear-wrong-questions" class="btn btn-secondary" style="flex: 1; min-width: 250px; padding: 14px 22px; font-weight: 700; border-radius: var(--radius-md); background: #ff3b30; color: #fff; border: 1px solid #ff3b30; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; font-size: 0.9rem; box-shadow: 0 2px 0 #cc2f26;">
                       <span>🗑️</span> Sıfırla (Temizle)
                     </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel 2: Lisans Yönetimi (Yeni) -->
+              <div class="admin-panel" id="admin-panel-licensing" style="display: none; flex-direction: column; gap: 20px;">
+                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <span style="font-size: 1.5rem;">🔑</span>
+                      <div style="text-align: left;">
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Lisans Anahtarı Oluşturucu</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcılarınız için şifreli, süreli ve güvenli çevrimdışı lisans kodları üretin.</p>
+                      </div>
+                    </div>
+                    <div style="background: rgba(139, 126, 200, 0.1); color: var(--accent-primary); font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(139, 126, 200, 0.25);">
+                      LİSANS
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
+                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                      <label for="licence-owner-email" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı E-Posta</label>
+                      <input type="email" id="licence-owner-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    </div>
+                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                      <label for="licence-owner-phone" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Telefon</label>
+                      <input type="tel" id="licence-owner-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    </div>
+                    <div style="flex: 1; min-width: 130px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                      <label for="licence-duration" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Süre</label>
+                      <select id="licence-duration" class="report-select" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                        <option value="90" selected>3 Ay (90 Gün)</option>
+                        <option value="30">1 Ay (30 Gün)</option>
+                        <option value="180">6 Ay (180 Gün)</option>
+                        <option value="365">1 Yıl (365 Gün)</option>
+                        <option value="3">3 Gün (Test)</option>
+                      </select>
+                    </div>
+                    <button id="btn-admin-generate-key" class="btn btn-primary" style="padding: 12px 24px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; gap: 8px; height: 46px;">
+                      <span>⚡</span> Lisans Üret
+                    </button>
+                  </div>
+                  
+                  <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px; text-align: left;">
+                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0;">Üretilen Lisanslar</h4>
+                    <div style="overflow-x: auto; background: var(--bg-body); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                        <thead>
+                          <tr style="border-bottom: 1px solid var(--border-color); background: rgba(0,0,0,0.05);">
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Alıcı</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Bitiş Tarihi</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Lisans Anahtarı</th>
+                            <th style="padding: 10px; text-align: center; font-weight: 700;">İşlem</th>
+                          </tr>
+                        </thead>
+                        <tbody id="licence-keys-table-body">
+                          <!-- JS tarafından doldurulacak -->
+                          <tr>
+                            <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz lisans anahtarı üretilmemiş.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

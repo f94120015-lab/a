@@ -8,6 +8,94 @@ const XP_PER_CORRECT = 10;
 const MAX_HEARTS = 5;
 
 // ============================================================
+// LİSANS SİSTEMİ YAPILANDIRMASI
+// ============================================================
+// Güvenli dijital imza oluşturmak için gizli kelime (Bunu sadece siz bilmelisiniz)
+const LICENCE_SECRET_SALT = "amok_academy_key_2026"; 
+
+// Basit ama güvenli kriptografik imza üretici
+// E-posta + Telefon + Bitiş Tarihi formatını birleştirerek eşsiz lisans kodu oluşturur.
+function generateLicenceSignature(email, phone, expiryDateStr) {
+  const cleanEmail = email.trim().toLowerCase();
+  const cleanPhone = phone.replace(/\D/g, ''); // Sadece rakamlar
+  const rawString = `amok:${cleanEmail}:${cleanPhone}:${expiryDateStr}:${LICENCE_SECRET_SALT}`;
+  let hash = 0;
+  for (let i = 0; i < rawString.length; i++) {
+    const char = rawString.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // 32bit integer
+  }
+  return Math.abs(hash).toString(16).toUpperCase();
+}
+
+// Lisans Doğrulama Fonksiyonu
+// email ve phone parametreleri opsiyoneldir. Profil UI doğrulaması esnasında lisans kodundan
+// email, phone ve tarihi ayrıştırıp doğrular.
+function verifyLicenceKey(licenceKey, email = '', phone = '') {
+  if (!licenceKey) return { valid: false, message: "Lisans anahtarı eksik!" };
+  const parts = licenceKey.trim().toUpperCase().split('-');
+  
+  // Format: AMOK-[EMAIL-HASH]-[PHONE-HASH]-[DATE]-[SIGNATURE]
+  if (parts.length < 5 || parts[0] !== 'AMOK') {
+    return { valid: false, message: "Geçersiz lisans anahtarı formatı!" };
+  }
+  
+  const emailHash = parts[1];
+  const phoneHash = parts[2];
+  const expiryStr = parts[3];
+  const signature = parts[4];
+  
+  // Tarih formatı kontrolü (YYYYMMDD)
+  if (expiryStr.length !== 8 || isNaN(expiryStr)) {
+    return { valid: false, message: "Geçersiz son kullanma tarihi formatı!" };
+  }
+
+  // Eğer doğrulayan kişi e-posta ve telefon girdiyse, hash uyumunu denetle
+  if (email && phone) {
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanPhone = phone.replace(/\D/g, '');
+    
+    // Hash email
+    let eHash = 0;
+    for (let i = 0; i < cleanEmail.length; i++) {
+      eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+      eHash = eHash & eHash;
+    }
+    const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+    
+    // Hash phone
+    let pHash = 0;
+    for (let i = 0; i < cleanPhone.length; i++) {
+      pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+      pHash = pHash & pHash;
+    }
+    const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+    
+    if (hexEmail !== emailHash || hexPhone !== phoneHash) {
+      return { valid: false, message: "E-Posta veya Telefon bilgisi bu lisans kodu ile uyuşmuyor!" };
+    }
+
+    // İmzayı doğrula
+    const calculatedSig = generateLicenceSignature(cleanEmail, cleanPhone, expiryStr);
+    if (calculatedSig !== signature) {
+      return { valid: false, message: "Lisans imza doğrulaması başarısız!" };
+    }
+  }
+  
+  // Tarih hesaplama
+  const year = parseInt(expiryStr.substring(0, 4), 10);
+  const month = parseInt(expiryStr.substring(4, 6), 10) - 1;
+  const day = parseInt(expiryStr.substring(6, 8), 10);
+  const expiryDate = new Date(year, month, day, 23, 59, 59);
+  
+  return {
+    valid: true,
+    owner: "Premium Üye",
+    expiryDate: expiryDate
+  };
+}
+
+// ============================================================
 // SUPABASE YAPILANDIRMASI
 // ============================================================
 // Vercel deployment'ında ortak veritabanını kullanmak için aşağıdaki alanları doldurabilir
@@ -1819,7 +1907,8 @@ function saveState() {
         streak: state.streak || 0,
         hearts: state.hearts || 0,
         completed_lessons: state.completedLessons || [],
-        avatar_color: state.avatarColor || '#E88A9A'
+        avatar_color: state.avatarColor || '#E88A9A',
+        licence_key: state.licenceKey || ''
       })
       .then(({ error }) => {
         if (error) console.error('Supabase state sync error:', error);
@@ -2556,7 +2645,8 @@ function initAuth() {
               streak: dbState.streak,
               hearts: dbState.hearts,
               completedLessons: dbState.completed_lessons || [],
-              avatarColor: dbState.avatar_color
+              avatarColor: dbState.avatar_color,
+              licenceKey: dbState.licence_key || ''
             };
           }
           loggedIn = true;
@@ -3888,7 +3978,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
             </div>
           </div>
           <div class="qp-btn-group">
-            <button class="exercise-preview-btn" ${isExUnlocked ? '' : 'disabled style="opacity: 0.5; pointer-events: none;"'} data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>
+            ${isLocalEnvironment() ? `<button class="exercise-preview-btn" ${isExUnlocked ? '' : 'disabled style="opacity: 0.5; pointer-events: none;"'} data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>` : ''}
             <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
               ${statusText}
             </button>
@@ -3909,7 +3999,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     popoverFooterHTML = `
       <div class="popover-footer" style="display: flex; gap: 8px; justify-content: flex-end; align-items: center;">
         ${isUnlocked ? `
-          <button class="popover-preview-btn" title="Tüm Soruları Önizle">👁️ Önizle</button>
+          ${isLocalEnvironment() ? `<button class="popover-preview-btn" title="Tüm Soruları Önizle">👁️ Önizle</button>` : ''}
           <button class="btn btn-primary popover-start-btn" style="flex: 1;">
             ${isCompleted ? 'Tekrar Et (+5 Puan)' : 'Dersi Başlat (+10 Puan)'}
           </button>
@@ -7652,6 +7742,39 @@ function renderProfile() {
       ${achievementsHTML}
     </div>
 
+    <div class="profile-actions-card" style="margin-top: 16px;">
+      <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
+      <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
+        <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
+          </div>
+          <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
+        </div>
+        
+        <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+              <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+              <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+            </div>
+            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+              <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+              <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
+              <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="profile-actions-card">
       <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
       <div class="profile-actions-buttons">
@@ -7692,6 +7815,108 @@ function renderProfile() {
         logout();
       });
     }
+  }
+
+  // Lisans durumu UI güncellemesi
+  const statusBox = document.getElementById('profile-licence-status-box');
+  const statusText = document.getElementById('licence-status-text');
+  const expiryText = document.getElementById('licence-expiry-text');
+  const statusBadge = document.getElementById('licence-status-badge');
+  const licenceInput = document.getElementById('profile-licence-input');
+  const activateBtn = document.getElementById('btn-profile-activate-licence');
+
+  function updateProfileLicenceUI() {
+    const key = state.licenceKey || '';
+    if (!key) {
+      if (statusText) statusText.textContent = "Durum: Ücretsiz Sürüm (Kilitli)";
+      if (expiryText) expiryText.textContent = "Dersler ve bölümler kilitlidir.";
+      if (statusBadge) {
+        statusBadge.textContent = "ÜCRETSİZ / KİLİTLİ";
+        statusBadge.style.background = "rgba(255,59,48,0.1)";
+        statusBadge.style.color = "#ff3b30";
+        statusBadge.style.borderColor = "rgba(255,59,48,0.25)";
+      }
+      return;
+    }
+
+    const check = verifyLicenceKey(key);
+    if (check.valid) {
+      const now = new Date();
+      if (now > check.expiryDate) {
+        if (statusText) statusText.textContent = `Durum: Süresi Dolan Lisans (${check.owner})`;
+        if (expiryText) expiryText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
+        if (statusBadge) {
+          statusBadge.textContent = "SÜRESİ DOLDU";
+          statusBadge.style.background = "rgba(245,158,11,0.1)";
+          statusBadge.style.color = "#f59e0b";
+          statusBadge.style.borderColor = "rgba(245,158,11,0.25)";
+        }
+      } else {
+        if (statusText) statusText.textContent = `Durum: Premium Aktif (${check.owner})`;
+        if (expiryText) expiryText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
+        if (statusBadge) {
+          statusBadge.textContent = "PREMIUM AKTİF";
+          statusBadge.style.background = "rgba(34,197,94,0.1)";
+          statusBadge.style.color = "#22c55e";
+          statusBadge.style.borderColor = "rgba(34,197,94,0.25)";
+        }
+      }
+    } else {
+      if (statusText) statusText.textContent = "Durum: Geçersiz Lisans";
+      if (expiryText) expiryText.textContent = check.message || "Lütfen geçerli bir kod girin.";
+      if (statusBadge) {
+        statusBadge.textContent = "GEÇERSİZ";
+        statusBadge.style.background = "rgba(255,59,48,0.1)";
+        statusBadge.style.color = "#ff3b30";
+        statusBadge.style.borderColor = "rgba(255,59,48,0.25)";
+      }
+    }
+  }
+
+  updateProfileLicenceUI();
+
+  if (activateBtn && licenceInput) {
+    activateBtn.addEventListener('click', async () => {
+      const inputVal = licenceInput.value.trim();
+      if (!inputVal) {
+        showToast("Lütfen lisans anahtarınızı girin!", "error");
+        return;
+      }
+      const check = verifyLicenceKey(inputVal);
+      if (check.valid) {
+        const now = new Date();
+        if (now > check.expiryDate) {
+          showToast(`Bu lisansın süresi ${check.expiryDate.toLocaleDateString('tr-TR')} tarihinde dolmuştur!`, "error");
+          return;
+        }
+        
+        state.licenceKey = inputVal;
+        saveState();
+        showToast(`Tebrikler! Premium Lisans Aktifleştirildi (Sahibi: ${check.owner}) 🎉`, "success");
+        updateProfileLicenceUI();
+        licenceInput.value = '';
+        
+        // Supabase varsa oraya da kaydet
+        if (supabaseClient && state.username && !state.isGuest) {
+          try {
+            await supabaseClient
+              .from('user_states')
+              .update({ licence_key: inputVal })
+              .eq('username', state.username);
+          } catch(e) {
+            console.error('Licence sync error:', e);
+          }
+        }
+        
+        // Ekrana yansıması için yeniden oluştur/yenile
+        setTimeout(() => {
+          enterApp();
+          switchTab('profile');
+        }, 1500);
+      } else {
+        showToast(`Aktivasyon Hatası: ${check.message}`, "error");
+      }
+    });
   }
 
   document.getElementById('btn-profile-logout').addEventListener('click', () => {
@@ -9812,7 +10037,7 @@ function init() {
         // Fetch user_states for XP/streak/hearts/progress
         const { data: states, error: statesError } = await supabaseClient
           .from('user_states')
-          .select('username, xp, streak, hearts, completed_lessons, avatar_color');
+          .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key');
 
         const statesMap = {};
         if (!statesError && states) {
@@ -9842,6 +10067,7 @@ function init() {
             hearts: st.hearts || 0,
             completedLessons: completedCount,
             avatarColor: st.avatar_color || '#B4A7D6',
+            licenceKey: st.licence_key || '',
             isNew: createdAt && createdAt >= sevenDaysAgo,
             isOnline: lastSeen && lastSeen >= fiveMinutesAgo,
             isActive24h: lastSeen && lastSeen >= twentyFourHoursAgo
@@ -14366,3 +14592,30 @@ function syncModalMatrixHighlight() {
     btn.classList.toggle('match', isCountMatch);
   });
 }
+
+// ============================================================
+// LİSANS VE PREMİUM SİSTEMİ YENİ METODLAR
+// ============================================================
+
+/**
+ * Uygulama içi lisans kontrolü. Aktif kullanıcının lisansı varsa
+ * ve geçerliyse true döner. Aksi halde false döner.
+ */
+function checkLicence() {
+  if (!state.licenceKey) {
+    return false;
+  }
+  // Eğer email ve telefon varsa (Supabase veya profil state'inden alınabiliyorsa) doğrulamaya gönder
+  const email = state.email || (supabase.auth.user && supabase.auth.user())?.email || '';
+  const phone = state.phone || '';
+  const check = verifyLicenceKey(state.licenceKey, email, phone);
+  if (!check.valid) {
+    return false;
+  }
+  const now = new Date();
+  if (now > check.expiryDate) {
+    return false;
+  }
+  return true;
+}
+
