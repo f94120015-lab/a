@@ -2545,58 +2545,68 @@ function initAuth() {
 
   // Sosyal Giriş Seçenekleri
   const handleSocialLogin = (platform) => {
-    const modal = document.createElement('div');
-    modal.className = 'custom-modal-overlay';
-    modal.id = 'social-login-modal';
-    
-    modal.innerHTML = `
-      <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
-        <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Devam Et
-          </h3>
-          <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
-        </div>
-        <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-            Giriş işlemini tamamlamak için lütfen aşağıdaki bilgileri doldurun:
-          </p>
-          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-            <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
-            <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
-          </div>
-          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-            <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
-            <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet@example.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
-          </div>
-        </div>
-        <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
-          <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
-          <button class="btn btn-primary" id="btn-submit-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Devam Et</button>
-        </div>
-      </div>
-    `;
+    const platformKey = `amok_social_${platform.toLowerCase()}`;
+    const savedAccountStr = localStorage.getItem(platformKey);
 
-    document.body.appendChild(modal);
-
-    document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
-    document.getElementById('btn-cancel-social').addEventListener('click', () => modal.remove());
-    
-    document.getElementById('btn-submit-social').addEventListener('click', () => {
-      const fullName = document.getElementById('social-fullname').value.trim();
-      const email = document.getElementById('social-email').value.trim();
+    const showRegistrationForm = () => {
+      const modal = document.createElement('div');
+      modal.className = 'custom-modal-overlay';
+      modal.id = 'social-login-modal';
       
-      if (!fullName || fullName.indexOf(' ') === -1) {
-        showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
-        return;
-      }
-      
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!email || !emailRegex.test(email)) {
-        showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
-        return;
-      }
+      modal.innerHTML = `
+        <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+          <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Kayıt Ol
+            </h3>
+            <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+          </div>
+          <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+              Giriş işlemini tamamlamak için lütfen aşağıdaki bilgileri doldurun:
+            </p>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
+              <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
+              <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet@example.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+            </div>
+          </div>
+          <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+            <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
+            <button class="btn btn-primary" id="btn-submit-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Devam Et</button>
+          </div>
+        </div>
+      `;
 
+      document.body.appendChild(modal);
+
+      document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
+      document.getElementById('btn-cancel-social').addEventListener('click', () => modal.remove());
+      
+      document.getElementById('btn-submit-social').addEventListener('click', () => {
+        const fullName = document.getElementById('social-fullname').value.trim();
+        const email = document.getElementById('social-email').value.trim();
+        
+        if (!fullName || fullName.indexOf(' ') === -1) {
+          showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
+          return;
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+          return;
+        }
+
+        modal.remove();
+        proceedWithLogin(fullName, email);
+      });
+    };
+
+    const proceedWithLogin = (fullName, email) => {
       showToast(`${platform} ile giriş yapılıyor...`, 'success');
       
       setTimeout(() => {
@@ -2621,12 +2631,65 @@ function initAuth() {
           state.avatarColor = randomColor;
         }
         
+        // Bu platform için hesabı kaydet
+        localStorage.setItem(platformKey, JSON.stringify({ fullName, email }));
+        
         saveState();
         showToast(`Hoş geldin, ${fullName}! 🎉`, 'success');
-        modal.remove();
         enterApp();
       }, 600);
-    });
+    };
+
+    if (savedAccountStr) {
+      try {
+        const savedAccount = JSON.parse(savedAccountStr);
+        const modal = document.createElement('div');
+        modal.className = 'custom-modal-overlay';
+        modal.id = 'social-login-modal';
+        
+        modal.innerHTML = `
+          <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+            <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Giriş Yap
+              </h3>
+              <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+            </div>
+            <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+                Daha önce bu cihazda giriş yaptığınız hesap bulundu:
+              </p>
+              <div style="padding: 14px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-sm);">
+                <span style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">${escapeHtml(savedAccount.fullName)}</span>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">✉️ ${escapeHtml(savedAccount.email)}</span>
+              </div>
+            </div>
+            <div class="custom-modal-footer" style="display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+              <button class="btn btn-secondary" id="btn-another-account" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">Farklı Hesap</button>
+              <button class="btn btn-primary" id="btn-continue-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Bu Hesapla Devam Et</button>
+            </div>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
+        document.getElementById('btn-another-account').addEventListener('click', () => {
+          modal.remove();
+          showRegistrationForm();
+        });
+        document.getElementById('btn-continue-social').addEventListener('click', () => {
+          modal.remove();
+          proceedWithLogin(savedAccount.fullName, savedAccount.email);
+        });
+
+      } catch (e) {
+        console.error('Kayıtlı hesap okuma hatası:', e);
+        showRegistrationForm();
+      }
+    } else {
+      showRegistrationForm();
+    }
   };
 
   document.getElementById('btn-google-login').addEventListener('click', () => {
