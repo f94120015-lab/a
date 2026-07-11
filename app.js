@@ -10064,6 +10064,140 @@ function init() {
      const generateLicenceBtn = document.getElementById('btn-admin-generate-key');
      const licenceTableBody = document.getElementById('licence-keys-table-body');
 
+     // Helper: Create user dynamically from generated licence details
+     const createUserForLicence = async (lic) => {
+       const parts = (lic.name || '').trim().split(' ');
+       const firstName = parts[0] || '';
+       const lastName = parts.slice(1).join(' ') || '';
+       const email = lic.email || '';
+       const phone = lic.phone || '';
+       const licenceKey = lic.key || '';
+
+       try {
+         const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+         const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+         const defaultPassword = 'amok123456';
+         
+         let baseUsername = (lic.name || 'user').toLowerCase()
+           .replace(/ı/g, 'i')
+           .replace(/ğ/g, 'g')
+           .replace(/ü/g, 'u')
+           .replace(/ş/g, 's')
+           .replace(/ö/g, 'o')
+           .replace(/ç/g, 'c')
+           .replace(/[^a-z0-9]/g, '_')
+           .replace(/_+/g, '_');
+         if (baseUsername.endsWith('_')) baseUsername = baseUsername.slice(0, -1);
+         if (baseUsername.startsWith('_')) baseUsername = baseUsername.slice(1);
+         if (!baseUsername) baseUsername = 'user';
+
+         let username = baseUsername;
+         let exists = true;
+         let counter = 1;
+
+         while (exists) {
+           if (supabaseClient) {
+             const { data: dbUser } = await supabaseClient
+               .from('profiles')
+               .select('username')
+               .eq('username', username)
+               .maybeSingle();
+             if (!dbUser) {
+               exists = false;
+             } else {
+               username = `${baseUsername}_${counter}`;
+               counter++;
+             }
+           } else {
+             const users = getUsers();
+             if (!users[username]) {
+               exists = false;
+             } else {
+               username = `${baseUsername}_${counter}`;
+               counter++;
+             }
+           }
+         }
+
+         // Save to local metadata registry
+         const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+         metaRegistry[username] = {
+           firstName: firstName,
+           lastName: lastName,
+           email: email,
+           phone: phone,
+           licenceKey: licenceKey
+         };
+         localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+         if (supabaseClient) {
+           // Check if user profile already exists
+           const { data: dbUserProfile } = await supabaseClient
+             .from('profiles')
+             .select('username')
+             .eq('username', username)
+             .maybeSingle();
+
+           if (!dbUserProfile) {
+             const hashed = await hashPassword(defaultPassword);
+             await supabaseClient
+               .from('profiles')
+               .insert({
+                 username: username,
+                 email: email,
+                 password_hash: hashed
+               });
+
+             await supabaseClient
+               .from('user_states')
+               .insert({
+                 username: username,
+                 xp: 0,
+                 streak: 0,
+                 hearts: 5,
+                 completed_lessons: [],
+                 avatar_color: randomColor,
+                 licence_key: licenceKey
+               });
+           } else {
+             // Update license key on existing profile
+             await supabaseClient
+               .from('user_states')
+               .update({ licence_key: licenceKey })
+               .eq('username', username);
+           }
+         } else {
+           // Local Database save
+           const users = getUsers();
+           if (!users[username]) {
+             await saveUser(username, defaultPassword);
+             
+             // Simulate user_states locally
+             const localStates = localStorage.getItem('amok_user_states') || '{}';
+             const parsedLocalStates = JSON.parse(localStates);
+             parsedLocalStates[username] = {
+               xp: 0,
+               streak: 0,
+               hearts: 5,
+               completed_lessons: [],
+               avatar_color: randomColor,
+               licence_key: licenceKey
+             };
+             localStorage.setItem('amok_user_states', JSON.stringify(parsedLocalStates));
+           }
+         }
+
+         showToast(`Kullanıcı @${username} başarıyla oluşturuldu! 🎉`, 'success');
+         
+         if (typeof loadAdminUsers === 'function') {
+           loadAdminUsers();
+         }
+       } catch (err) {
+         console.error('Error manual-creating user for license:', err);
+         showToast('Kullanıcı oluşturulurken hata oluştu!', 'error');
+       }
+     };
+
      // Helper: Local storage list load
      const loadGeneratedLicences = () => {
        if (!licenceTableBody) return;
@@ -10088,11 +10222,32 @@ function init() {
              </td>
              <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${lic.expiryStr}</td>
              <td style="padding: 10px; text-align: left; font-family: monospace; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px;">${lic.key}</td>
-             <td style="padding: 10px; text-align: center;">
+             <td style="padding: 10px; text-align: center; white-space: nowrap;">
+               <button class="btn btn-primary btn-add-user-from-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: var(--accent-primary, #8B7EC8); color: #fff; border: 1px solid var(--accent-primary, #8B7EC8); border-radius: 4px; cursor: pointer; margin-right: 6px;">Kullanıcı Ekle</button>
                <button class="btn btn-secondary btn-delete-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Sil</button>
              </td>
            </tr>`;
        }).join('');
+
+       // Add add-user listeners
+       licenceTableBody.querySelectorAll('.btn-add-user-from-licence').forEach(btn => {
+         btn.addEventListener('click', async (e) => {
+           btn.disabled = true;
+           const originalText = btn.textContent;
+           btn.textContent = 'Ekleniyor...';
+           
+           const idx = parseInt(btn.dataset.idx, 10);
+           const current = localStorage.getItem('amok_generated_licences');
+           const currentList = current ? JSON.parse(current) : [];
+           const lic = currentList[idx];
+           if (lic) {
+             await createUserForLicence(lic);
+           }
+           
+           btn.disabled = false;
+           btn.textContent = originalText;
+         });
+       });
 
        // Add delete listeners
        licenceTableBody.querySelectorAll('.btn-delete-licence').forEach(btn => {
