@@ -2797,6 +2797,30 @@ function initAuth() {
           return;
         }
         
+        const nameParts = fullName.split(/\s+/);
+        if (nameParts.length < 2) {
+          showToast('Lütfen hem adınızı hem de soyadınızı girin!', 'error');
+          return;
+        }
+
+        // Her bir ismin minimum 2 karakter olması ve sadece harflerden oluşması kontrolü (Türkçe harfler dahil)
+        const nameRegex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ]+$/;
+        for (const part of nameParts) {
+          if (part.length < 2) {
+            showToast('Ad ve soyadın her biri en az 2 karakter olmalıdır!', 'error');
+            return;
+          }
+          if (!nameRegex.test(part)) {
+            showToast('Ad ve soyad sadece harflerden oluşmalıdır!', 'error');
+            return;
+          }
+          // Ardışık 4 aynı harf kontrolü (örneğin: asdddd veya aaaaa)
+          if (/(.)\1\1\1/.test(part.toLowerCase())) {
+            showToast('Lütfen gerçek bir isim giriniz (ardışık tekrarlayan harfler içeriyor)!', 'error');
+            return;
+          }
+        }
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
           showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
