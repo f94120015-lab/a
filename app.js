@@ -1897,31 +1897,54 @@ function isLocalEnvironment() {
 
 function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
-  if (supabaseClient && state.username && !state.isGuest) {
-    // Sync state (XP, streaks, etc.)
-    supabaseClient
-      .from('user_states')
-      .upsert({
+  if (state.username && !state.isGuest) {
+    if (supabaseClient) {
+      // Sync state (XP, streaks, etc.)
+      const upsertData = {
         username: state.username,
         xp: state.xp || 0,
         streak: state.streak || 0,
         hearts: state.hearts || 0,
         completed_lessons: state.completedLessons || [],
-        avatar_color: state.avatarColor || '#E88A9A',
-        licence_key: state.licenceKey || ''
-      })
-      .then(({ error }) => {
-        if (error) console.error('Supabase state sync error:', error);
-      });
+        avatar_color: state.avatarColor || '#E88A9A'
+      };
+      if (state.licenceKey) {
+        upsertData.licence_key = state.licenceKey;
+      }
+      supabaseClient
+        .from('user_states')
+        .upsert(upsertData)
+        .then(({ error }) => {
+          if (error) console.error('Supabase state sync error:', error);
+        });
 
-    // Also update last_seen_at heartbeat in profiles table
-    supabaseClient
-      .from('profiles')
-      .update({ last_seen_at: new Date().toISOString() })
-      .eq('username', state.username)
-      .then(({ error }) => {
-        if (error) console.error('Supabase heartbeat sync error:', error);
-      });
+      // Also update last_seen_at heartbeat in profiles table
+      supabaseClient
+        .from('profiles')
+        .update({ last_seen_at: new Date().toISOString() })
+        .eq('username', state.username)
+        .then(({ error }) => {
+          if (error) console.error('Supabase heartbeat sync error:', error);
+        });
+    } else {
+      // Local Database sync to amok_user_states
+      try {
+        const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+        const existing = localStates[state.username] || {};
+        localStates[state.username] = {
+          username: state.username,
+          xp: state.xp || 0,
+          streak: state.streak || 0,
+          hearts: state.hearts || 0,
+          completed_lessons: state.completedLessons || [],
+          avatar_color: state.avatarColor || '#E88A9A',
+          licence_key: state.licenceKey || existing.licence_key || ''
+        };
+        localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+      } catch (e) {
+        console.error('Local states sync error:', e);
+      }
+    }
   }
 }
 
@@ -1973,6 +1996,17 @@ function loadState() {
     } catch (e) {
       console.error('State yükleme hatası, varsayılan state kullanılacak:', e);
       localStorage.removeItem(STATE_KEY);
+    }
+  }
+  // Sync license key from local states if in local fallback mode
+  if (!supabaseClient && state.username) {
+    try {
+      const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+      if (localStates[state.username] && localStates[state.username].licence_key) {
+        state.licenceKey = localStates[state.username].licence_key;
+      }
+    } catch (e) {
+      console.error('Local states parse error in loadState:', e);
     }
   }
   if (!state.activeDomain) {
@@ -7716,6 +7750,39 @@ function renderProfile() {
       </div>
     ` : ''}
 
+    <div class="profile-actions-card" style="margin-top: 16px;">
+      <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
+      <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
+        <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
+          </div>
+          <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
+        </div>
+        
+        <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+              <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+              <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+            </div>
+            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+              <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+              <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
+              <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h3 class="profile-section-title">📊 İstatistiklerin</h3>
     <div class="profile-stats-grid">
       <div class="profile-stat-box">
@@ -7761,39 +7828,6 @@ function renderProfile() {
     <h3 class="profile-section-title">🏆 Başarımlar</h3>
     <div class="profile-achievements-list">
       ${achievementsHTML}
-    </div>
-
-    <div class="profile-actions-card" style="margin-top: 16px;">
-      <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
-      <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
-        <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
-          </div>
-          <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
-        </div>
-        
-        <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-              <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-              <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
-            </div>
-            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-              <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-              <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
-            </div>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-            <div style="display: flex; gap: 8px;">
-              <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
-              <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="profile-actions-card">
@@ -10022,118 +10056,252 @@ function init() {
     // ============================================================
     // ADMIN: LİSANS YÖNETİMİ
     // ============================================================
-    const licenceEmailInput = document.getElementById('licence-owner-email');
-    const licencePhoneInput = document.getElementById('licence-owner-phone');
-    const licenceDurationSelect = document.getElementById('licence-duration');
-    const generateLicenceBtn = document.getElementById('btn-admin-generate-key');
-    const licenceTableBody = document.getElementById('licence-keys-table-body');
+     const licenceFirstNameInput = document.getElementById('licence-owner-first-name');
+     const licenceLastNameInput = document.getElementById('licence-owner-last-name');
+     const licenceEmailInput = document.getElementById('licence-owner-email');
+     const licencePhoneInput = document.getElementById('licence-owner-phone');
+     const licenceDurationSelect = document.getElementById('licence-duration');
+     const generateLicenceBtn = document.getElementById('btn-admin-generate-key');
+     const licenceTableBody = document.getElementById('licence-keys-table-body');
 
-    // Helper: Local storage list load
-    const loadGeneratedLicences = () => {
-      if (!licenceTableBody) return;
-      const stored = localStorage.getItem('amok_generated_licences');
-      const licences = stored ? JSON.parse(stored) : [];
-      
-      if (licences.length === 0) {
-        licenceTableBody.innerHTML = `
-          <tr>
-            <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz lisans anahtarı üretilmemiş.</td>
-          </tr>`;
-        return;
-      }
+     // Helper: Local storage list load
+     const loadGeneratedLicences = () => {
+       if (!licenceTableBody) return;
+       const stored = localStorage.getItem('amok_generated_licences');
+       const licences = stored ? JSON.parse(stored) : [];
+       
+       if (licences.length === 0) {
+         licenceTableBody.innerHTML = `
+           <tr>
+             <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz lisans anahtarı üretilmemiş.</td>
+           </tr>`;
+         return;
+       }
 
-      licenceTableBody.innerHTML = licences.map((lic, idx) => {
-        return `
-          <tr style="border-bottom: 1px solid var(--border-color);">
-            <td style="padding: 10px; text-align: left; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-              <div>${lic.email}</div>
-              <div style="font-size: 0.75rem; color: var(--text-secondary);">${lic.phone}</div>
-            </td>
-            <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${lic.expiryStr}</td>
-            <td style="padding: 10px; text-align: left; font-family: monospace; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px;">${lic.key}</td>
-            <td style="padding: 10px; text-align: center;">
-              <button class="btn btn-secondary btn-delete-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Sil</button>
-            </td>
-          </tr>`;
-      }).join('');
+       licenceTableBody.innerHTML = licences.map((lic, idx) => {
+         return `
+           <tr style="border-bottom: 1px solid var(--border-color);">
+             <td style="padding: 10px; text-align: left; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+               <div style="font-weight: bold; color: var(--text-primary);">${lic.name || 'İsimsiz'}</div>
+               <div>${lic.email}</div>
+               <div style="font-size: 0.75rem; color: var(--text-secondary);">${lic.phone}</div>
+             </td>
+             <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${lic.expiryStr}</td>
+             <td style="padding: 10px; text-align: left; font-family: monospace; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px;">${lic.key}</td>
+             <td style="padding: 10px; text-align: center;">
+               <button class="btn btn-secondary btn-delete-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Sil</button>
+             </td>
+           </tr>`;
+       }).join('');
 
-      // Add delete listeners
-      licenceTableBody.querySelectorAll('.btn-delete-licence').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const idx = parseInt(btn.dataset.idx, 10);
-          const current = localStorage.getItem('amok_generated_licences');
-          const currentList = current ? JSON.parse(current) : [];
-          currentList.splice(idx, 1);
-          localStorage.setItem('amok_generated_licences', JSON.stringify(currentList));
-          loadGeneratedLicences();
-          showToast('Lisans anahtarı listeden silindi! 🗑️', 'info');
-        });
-      });
-    };
+       // Add delete listeners
+       licenceTableBody.querySelectorAll('.btn-delete-licence').forEach(btn => {
+         btn.addEventListener('click', (e) => {
+           const idx = parseInt(btn.dataset.idx, 10);
+           const current = localStorage.getItem('amok_generated_licences');
+           const currentList = current ? JSON.parse(current) : [];
+           currentList.splice(idx, 1);
+           localStorage.setItem('amok_generated_licences', JSON.stringify(currentList));
+           loadGeneratedLicences();
+           showToast('Lisans anahtarı listeden silindi! 🗑️', 'info');
+         });
+       });
+     };
 
-    // Load initially
-    loadGeneratedLicences();
+     // Load initially
+     loadGeneratedLicences();
 
-    if (generateLicenceBtn) {
-      generateLicenceBtn.addEventListener('click', () => {
-        const email = licenceEmailInput ? licenceEmailInput.value.trim() : '';
-        const phone = licencePhoneInput ? licencePhoneInput.value.trim() : '';
-        const durationDays = licenceDurationSelect ? parseInt(licenceDurationSelect.value, 10) : 30;
+     if (generateLicenceBtn) {
+       generateLicenceBtn.addEventListener('click', async () => {
+         const firstName = licenceFirstNameInput ? licenceFirstNameInput.value.trim() : '';
+         const lastName = licenceLastNameInput ? licenceLastNameInput.value.trim() : '';
+         const email = licenceEmailInput ? licenceEmailInput.value.trim() : '';
+         const phone = licencePhoneInput ? licencePhoneInput.value.trim() : '';
+         const durationDays = licenceDurationSelect ? parseInt(licenceDurationSelect.value, 10) : 30;
 
-        if (!email || !phone) {
-          showToast('Lütfen alıcı e-posta ve telefon bilgilerini giriniz!', 'error');
-          return;
-        }
+         if (!firstName || !lastName || !email || !phone) {
+           showToast('Lütfen alıcı adı, soyadı, e-posta ve telefon bilgilerini giriniz!', 'error');
+           return;
+         }
 
-        // Calculate expiry string YYYYMMDD
-        const expDate = new Date();
-        expDate.setDate(expDate.getDate() + durationDays);
-        const yyyy = expDate.getFullYear();
-        const mm = String(expDate.getMonth() + 1).padStart(2, '0');
-        const dd = String(expDate.getDate()).padStart(2, '0');
-        const expiryStr = `${yyyy}${mm}${dd}`;
+         const fullName = `${firstName} ${lastName}`;
 
-        // Hash components for licence code
-        let eHash = 0;
-        const cleanEmail = email.toLowerCase();
-        for (let i = 0; i < cleanEmail.length; i++) {
-          eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
-          eHash = eHash & eHash;
-        }
-        const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+         // Calculate expiry string YYYYMMDD
+         const expDate = new Date();
+         expDate.setDate(expDate.getDate() + durationDays);
+         const yyyy = expDate.getFullYear();
+         const mm = String(expDate.getMonth() + 1).padStart(2, '0');
+         const dd = String(expDate.getDate()).padStart(2, '0');
+         const expiryStr = `${yyyy}${mm}${dd}`;
 
-        let pHash = 0;
-        const cleanPhone = phone.replace(/\D/g, '');
-        for (let i = 0; i < cleanPhone.length; i++) {
-          pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
-          pHash = pHash & pHash;
-        }
-        const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+         // Hash components for licence code
+         let eHash = 0;
+         const cleanEmail = email.toLowerCase();
+         for (let i = 0; i < cleanEmail.length; i++) {
+           eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+           eHash = eHash & eHash;
+         }
+         const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
 
-        const signature = generateLicenceSignature(email, phone, expiryStr);
+         let pHash = 0;
+         const cleanPhone = phone.replace(/\D/g, '');
+         for (let i = 0; i < cleanPhone.length; i++) {
+           pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+           pHash = pHash & pHash;
+         }
+         const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
 
-        // Code format: AMOK-[EMAIL-HASH]-[PHONE-HASH]-[DATE]-[SIGNATURE]
-        const licenceKey = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
+         const signature = generateLicenceSignature(email, phone, expiryStr);
 
-        // Save licence key
-        const stored = localStorage.getItem('amok_generated_licences');
-        const licences = stored ? JSON.parse(stored) : [];
-        licences.push({
-          email: email,
-          phone: phone,
-          expiryStr: expDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' }),
-          key: licenceKey
-        });
-        localStorage.setItem('amok_generated_licences', JSON.stringify(licences));
-        
-        // Reset input fields
-        if (licenceEmailInput) licenceEmailInput.value = '';
-        if (licencePhoneInput) licencePhoneInput.value = '';
+         // Code format: AMOK-[EMAIL-HASH]-[PHONE-HASH]-[DATE]-[SIGNATURE]
+         const licenceKey = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
 
-        loadGeneratedLicences();
-        showToast('Lisans anahtarı başarıyla üretildi ve listeye eklendi! 🔑', 'success');
-      });
-    }
+         // Save licence key
+         const stored = localStorage.getItem('amok_generated_licences');
+         const licences = stored ? JSON.parse(stored) : [];
+         licences.push({
+           name: fullName,
+           email: email,
+           phone: phone,
+           expiryStr: expDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' }),
+           key: licenceKey
+         });
+         localStorage.setItem('amok_generated_licences', JSON.stringify(licences));
+
+         // Auto-register this user in Supabase/Local Database
+         try {
+           const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+           const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+           const defaultPassword = 'amok123456'; // Default password for automatically created users
+           // Clean turkish letters and keep username alphanumeric
+           let baseUsername = fullName.toLowerCase()
+             .replace(/ı/g, 'i')
+             .replace(/ğ/g, 'g')
+             .replace(/ü/g, 'u')
+             .replace(/ş/g, 's')
+             .replace(/ö/g, 'o')
+             .replace(/ç/g, 'c')
+             .replace(/[^a-z0-9]/g, '_')
+             .replace(/_+/g, '_');
+           if (baseUsername.endsWith('_')) baseUsername = baseUsername.slice(0, -1);
+           if (baseUsername.startsWith('_')) baseUsername = baseUsername.slice(1);
+           if (!baseUsername) baseUsername = 'user';
+
+           let username = baseUsername;
+           let exists = true;
+           let counter = 1;
+
+           while (exists) {
+             if (supabaseClient) {
+               const { data: dbUser } = await supabaseClient
+                 .from('profiles')
+                 .select('username')
+                 .eq('username', username)
+                 .maybeSingle();
+               if (!dbUser) {
+                 exists = false;
+               } else {
+                 username = `${baseUsername}_${counter}`;
+                 counter++;
+               }
+             } else {
+               const users = getUsers();
+               if (!users[username]) {
+                 exists = false;
+               } else {
+                 username = `${baseUsername}_${counter}`;
+                 counter++;
+               }
+             }
+           }
+
+           // Save to local metadata registry
+           const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+           metaRegistry[username] = {
+             firstName: firstName,
+             lastName: lastName,
+             email: email,
+             phone: phone,
+             licenceKey: licenceKey
+           };
+           localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+           if (supabaseClient) {
+             // 1. Check if user already exists
+             const { data: dbUser } = await supabaseClient
+               .from('profiles')
+               .select('username')
+               .eq('username', username)
+               .maybeSingle();
+
+             if (!dbUser) {
+               // 2. Insert into profiles
+               const hashed = await hashPassword(defaultPassword);
+               await supabaseClient
+                 .from('profiles')
+                 .insert({
+                   username: username,
+                   email: email,
+                   password_hash: hashed
+                 });
+
+               // 3. Insert into user_states
+               await supabaseClient
+                 .from('user_states')
+                 .insert({
+                   username: username,
+                   xp: 0,
+                   streak: 0,
+                   hearts: 5,
+                   completed_lessons: [],
+                   avatar_color: randomColor,
+                   licence_key: licenceKey
+                 });
+             } else {
+               // If user exists, update license key
+               await supabaseClient
+                 .from('user_states')
+                 .update({ licence_key: licenceKey })
+                 .eq('username', username);
+             }
+           } else {
+             // Local Database save
+             const users = getUsers();
+             if (!users[username]) {
+               await saveUser(username, defaultPassword);
+               
+               // Simulate user_states locally
+               const localStates = localStorage.getItem('amok_user_states') || '{}';
+               const parsedLocalStates = JSON.parse(localStates);
+               parsedLocalStates[username] = {
+                 xp: 0,
+                 streak: 0,
+                 hearts: 5,
+                 completed_lessons: [],
+                 avatar_color: randomColor,
+                 licence_key: licenceKey
+               };
+               localStorage.setItem('amok_user_states', JSON.stringify(parsedLocalStates));
+             }
+           }
+         } catch (userCreateErr) {
+           console.error('Error auto-creating user for license:', userCreateErr);
+         }
+
+         // Reset input fields
+         if (licenceFirstNameInput) licenceFirstNameInput.value = '';
+         if (licenceLastNameInput) licenceLastNameInput.value = '';
+         if (licenceEmailInput) licenceEmailInput.value = '';
+         if (licencePhoneInput) licencePhoneInput.value = '';
+
+         loadGeneratedLicences();
+         // Refresh admin users list if loaded
+         if (typeof loadAdminUsers === 'function') {
+           loadAdminUsers();
+         }
+         showToast('Lisans anahtarı başarıyla üretildi ve kullanıcı otomatik kaydedildi! 🔑', 'success');
+       });
+     }
 
     // ============================================================
     // ADMIN: KULLANICI YÖNETİMİ
@@ -10146,16 +10314,6 @@ function init() {
       const badgeEl = document.getElementById('admin-users-badge');
       if (!listEl) return;
 
-      if (!supabaseClient) {
-        listEl.innerHTML = `
-          <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
-            <span style="font-size: 2rem; display: block; margin-bottom: 8px;">⚠️</span>
-            <p style="margin: 0; font-weight: 600;">Supabase Bağlantısı Yok</p>
-            <p style="margin: 4px 0 0 0; font-size: 0.8rem;">Kullanıcıları görmek için Supabase bağlantısını yapılandırın.</p>
-          </div>`;
-        return;
-      }
-
       listEl.innerHTML = `
         <div style="text-align: center; padding: 30px 20px; color: var(--text-secondary);">
           <span style="font-size: 1.5rem; display: block; margin-bottom: 8px; animation: pulse 1.5s infinite;">⏳</span>
@@ -10163,40 +10321,91 @@ function init() {
         </div>`;
 
       try {
-        // Fetch profiles
-        const { data: profiles, error: profilesError } = await supabaseClient
-          .from('profiles')
-          .select('username, email, created_at, last_seen_at')
-          .order('created_at', { ascending: false });
+        let profiles = [];
+        let statesMap = {};
 
-        if (profilesError) throw profilesError;
+        if (supabaseClient) {
+          try {
+            // Fetch profiles
+            const { data: dbProfiles, error: profilesError } = await supabaseClient
+              .from('profiles')
+              .select('username, email, created_at, last_seen_at')
+              .order('created_at', { ascending: false });
 
-        // Fetch user_states for XP/streak/hearts/progress
-        const { data: states, error: statesError } = await supabaseClient
-          .from('user_states')
-          .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key');
+            if (!profilesError && dbProfiles) {
+              profiles = dbProfiles;
+            }
 
-        const statesMap = {};
-        if (!statesError && states) {
-          states.forEach(s => {
-            statesMap[s.username] = s;
-          });
+            // Fetch user_states
+            const { data: dbStates, error: statesError } = await supabaseClient
+              .from('user_states')
+              .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key');
+
+            if (!statesError && dbStates) {
+              dbStates.forEach(s => {
+                statesMap[s.username] = s;
+              });
+            }
+          } catch (dbErr) {
+            console.error('Supabase query error in loadAdminUsers:', dbErr);
+          }
         }
 
-        // Merge data
+        // Load local profiles and states
+        const localUsers = getUsers();
+        const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+
+        // Merge local users into profiles if they don't exist in fetched profiles
+        Object.keys(localUsers).forEach(uname => {
+          const uData = localUsers[uname] || {};
+          const uState = localStates[uname] || {};
+          
+          // If we don't have it in profiles, push it
+          if (!profiles.some(p => p.username === uname)) {
+            profiles.push({
+              username: uname,
+              email: uData.email || uState.email || '',
+              created_at: uData.createdAt || new Date().toISOString(),
+              last_seen_at: uState.lastSeen || new Date().toISOString()
+            });
+          }
+
+          // If not in statesMap, add it
+          if (!statesMap[uname]) {
+            statesMap[uname] = {
+              username: uname,
+              xp: uState.xp || 0,
+              streak: uState.streak || 0,
+              hearts: uState.hearts || 0,
+              completed_lessons: uState.completed_lessons || [],
+              avatar_color: uState.avatar_color || '#B4A7D6',
+              licence_key: uState.licence_key || ''
+            };
+          }
+        });
+
+        // Load metadata registry
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+
+        // Merge & build cache
         const now = new Date();
         const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
         const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
         const fiveMinutesAgo = new Date(now.getTime() - 5 * 60 * 1000);
 
-        adminUsersCache = (profiles || []).map(p => {
+        adminUsersCache = profiles.map(p => {
           const st = statesMap[p.username] || {};
+          const meta = metaRegistry[p.username] || {};
           const createdAt = p.created_at ? new Date(p.created_at) : null;
           const lastSeen = p.last_seen_at ? new Date(p.last_seen_at) : null;
           const completedCount = (st.completed_lessons || []).length;
+
           return {
             username: p.username,
-            email: p.email || '—',
+            email: meta.email || p.email || '—',
+            phone: meta.phone || '—',
+            firstName: meta.firstName || '',
+            lastName: meta.lastName || '',
             createdAt: createdAt,
             lastSeen: lastSeen,
             xp: st.xp || 0,
@@ -10268,7 +10477,12 @@ function init() {
       }
 
       listEl.innerHTML = filtered.map((user, idx) => {
-        const initial = (user.username || '?')[0].toUpperCase();
+        const displayName = (user.firstName || user.lastName)
+          ? `${user.firstName} ${user.lastName}`.trim()
+          : user.username;
+        const subName = (user.firstName || user.lastName) ? `@${user.username}` : '';
+        const initial = (displayName || '?')[0].toUpperCase();
+
         const onlineDot = user.isOnline
           ? '<span style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; background: #22c55e; border-radius: 50%; border: 2px solid var(--bg-card); box-shadow: 0 0 4px rgba(34,197,94,0.5);"></span>'
           : '';
@@ -10284,12 +10498,35 @@ function init() {
           ? user.createdAt.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' })
           : '—';
 
+        // Calculate Licence Badge & Status
+        const key = user.licenceKey || '';
+        let licenceBadge = '';
+        let showDeleteBtn = false;
+        
+        if (key) {
+          const verify = verifyLicenceKey(key, user.email !== '—' ? user.email : '', user.phone !== '—' ? user.phone : '');
+          if (verify.valid) {
+            const now = new Date();
+            if (now > verify.expiryDate) {
+              licenceBadge = `<span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(239, 68, 68, 0.2);">⏳ Süresi Doldu</span>`;
+            } else {
+              const dateStr = verify.expiryDate.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' });
+              licenceBadge = `<span style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.12)); color: #d97706; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(217, 119, 6, 0.3);" title="${key}">👑 Premium (Son: ${dateStr})</span>`;
+            }
+          } else {
+            licenceBadge = `<span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(239, 68, 68, 0.2);" title="${verify.message}">⚠️ Hatalı Lisans</span>`;
+          }
+          showDeleteBtn = true;
+        } else {
+          licenceBadge = `<span style="background: var(--bg-secondary); color: var(--text-secondary); font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid var(--border-color);">Ücretsiz Üye</span>`;
+        }
+
         return `
-          <div style="display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.15s; cursor: default;"
-               onmouseover="this.style.borderColor='var(--accent-primary)'; this.style.boxShadow='0 2px 8px rgba(139,126,200,0.1)'"
+          <div style="display: flex; align-items: flex-start; gap: 14px; padding: 16px; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.15s; cursor: default;"
+               onmouseover="this.style.borderColor='var(--accent-primary)'; this.style.boxShadow='0 2px 8px rgba(139,126,200,0.06)'"
                onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
             <!-- Avatar -->
-            <div style="position: relative; flex-shrink: 0;">
+            <div style="position: relative; flex-shrink: 0; margin-top: 2px;">
               <div style="width: 44px; height: 44px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
                 ${initial}
               </div>
@@ -10297,17 +10534,39 @@ function init() {
             </div>
             <!-- Info -->
             <div style="flex: 1; min-width: 0;">
-              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px;">
-                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px;">${user.username}</span>
+              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px;">
+                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px;">${displayName}</span>
+                ${subName ? `<span style="font-size: 0.75rem; color: var(--text-secondary);">${subName}</span>` : ''}
                 ${newBadge}
               </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 3px; flex-wrap: wrap;">
+              
+              <!-- Personal Details (Email & Phone) -->
+              <div style="display: flex; flex-direction: column; gap: 3px; margin: 6px 0; font-size: 0.78rem; color: var(--text-secondary);">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span>✉️</span> <span style="word-break: break-all;">${user.email}</span>
+                </div>
+                ${user.phone && user.phone !== '—' ? `
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span>📞</span> <span>${user.phone}</span>
+                </div>` : ''}
+              </div>
+
+              <!-- Lisans Durumu ve Yönetim Butonları -->
+              <div style="display: flex; align-items: center; gap: 8px; margin: 8px 0; flex-wrap: wrap;">
+                ${licenceBadge}
+                <div style="display: inline-flex; gap: 4px;">
+                  <button class="btn-admin-manage-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='var(--accent-primary)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-primary)';">Lisans Yönet</button>
+                  ${showDeleteBtn ? `<button class="btn-admin-delete-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid #ff3b30; background: transparent; color: #ff3b30; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#ff3b30'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#ff3b30';">Lisans Sil</button>` : ''}
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 6px;">
                 <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Son görülme">🕐 ${lastSeenText}</span>
                 <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Kayıt tarihi">📅 ${createdText}</span>
               </div>
             </div>
             <!-- Stats -->
-            <div style="display: flex; gap: 10px; flex-shrink: 0; align-items: center;">
+            <div style="display: flex; gap: 10px; flex-shrink: 0; align-items: center; margin-top: 2px;">
               <div style="text-align: center; min-width: 36px;" title="XP">
                 <div style="font-weight: 800; font-size: 0.9rem; color: var(--accent-primary); line-height: 1;">${user.xp}</div>
                 <div style="font-size: 0.6rem; color: var(--text-secondary); font-weight: 600;">XP</div>
@@ -10321,6 +10580,27 @@ function init() {
             </div>
           </div>`;
       }).join('');
+
+      // Attach click listeners to manage button
+      listEl.querySelectorAll('.btn-admin-manage-licence').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const username = btn.dataset.username;
+          const userObj = adminUsersCache.find(u => u.username === username);
+          if (userObj) {
+            openAdminLicenceModal(userObj);
+          }
+        });
+      });
+
+      // Attach click listeners to delete button
+      listEl.querySelectorAll('.btn-admin-delete-licence').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const username = btn.dataset.username;
+          if (confirm(`${username} kullanıcısının lisansını silmek istediğinize emin misiniz?`)) {
+            await deleteUserLicence(username);
+          }
+        });
+      });
     }
 
     function formatTimeAgo(date) {
@@ -10367,6 +10647,179 @@ function init() {
         refreshUsersBtn.disabled = false;
         refreshUsersBtn.innerHTML = origHTML;
         showToast('Kullanıcı listesi güncellendi! 🔄', 'success');
+      });
+    }
+
+    // Modal Control Functions & Database Updates
+    function openAdminLicenceModal(user) {
+      const modal = document.getElementById('admin-user-licence-modal');
+      if (!modal) return;
+
+      document.getElementById('admin-licence-username').value = user.username;
+      
+      const displayName = (user.firstName || user.lastName)
+        ? `${user.firstName} ${user.lastName} (@${user.username})`
+        : `@${user.username}`;
+      document.getElementById('admin-licence-user-display').textContent = displayName;
+
+      const keyText = user.licenceKey ? `Lisans Kodu: ${user.licenceKey}` : 'Lisans Kodu: Yok';
+      document.getElementById('admin-licence-current-key').textContent = keyText;
+
+      document.getElementById('admin-licence-email').value = (user.email && user.email !== '—') ? user.email : '';
+      document.getElementById('admin-licence-phone').value = (user.phone && user.phone !== '—') ? user.phone : '';
+      document.getElementById('admin-licence-key-input').value = user.licenceKey || '';
+
+      modal.classList.add('show');
+    }
+
+    function closeAdminLicenceModal() {
+      const modal = document.getElementById('admin-user-licence-modal');
+      if (modal) {
+        modal.classList.remove('show');
+      }
+    }
+
+    async function deleteUserLicence(username) {
+      try {
+        await saveUserLicenceDirectly(username, '', '', '');
+        showToast('Lisans başarıyla silindi! 🗑️', 'success');
+        await loadAdminUsers();
+      } catch (err) {
+        console.error(err);
+        showToast('Lisans silinirken bir hata oluştu!', 'error');
+      }
+    }
+
+    async function saveUserLicenceDirectly(username, licenceKey, email, phone) {
+      // 1. Update local storage user states
+      const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+      if (!localStates[username]) localStates[username] = {};
+      localStates[username].licence_key = licenceKey;
+      localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+
+      // 2. Update local storage metadata registry
+      const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+      if (!metaRegistry[username]) metaRegistry[username] = {};
+      if (email) metaRegistry[username].email = email;
+      if (phone) metaRegistry[username].phone = phone;
+      metaRegistry[username].licenceKey = licenceKey;
+      localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+      // 3. Update current active state if matches active logged-in user
+      if (state.username === username) {
+        state.licenceKey = licenceKey;
+        if (email) state.email = email;
+        if (phone) state.phone = phone;
+        saveState();
+        if (typeof updateProfileLicenceUI === 'function') {
+          try {
+            updateProfileLicenceUI();
+          } catch(e) {}
+        }
+      }
+
+      // 4. Update Supabase client if configured
+      if (supabaseClient) {
+        try {
+          const { error: stateErr } = await supabaseClient
+            .from('user_states')
+            .update({ licence_key: licenceKey })
+            .eq('username', username);
+
+          if (stateErr) {
+            console.error('Supabase user_states update error:', stateErr);
+          }
+
+          if (email) {
+            const { error: profileErr } = await supabaseClient
+              .from('profiles')
+              .update({ email: email })
+              .eq('username', username);
+
+            if (profileErr) {
+              console.error('Supabase profiles update error:', profileErr);
+            }
+          }
+        } catch (e) {
+          console.error('Supabase sync database error:', e);
+        }
+      }
+    }
+
+    // Modal Action Bindings
+    const modalCloseBtn = document.getElementById('admin-licence-modal-close-btn');
+    const modalCancelBtn = document.getElementById('admin-licence-modal-cancel-btn');
+    const modalSaveBtn = document.getElementById('admin-licence-modal-save-btn');
+    const modalGenerateBtn = document.getElementById('btn-admin-licence-generate');
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeAdminLicenceModal);
+    if (modalCancelBtn) modalCancelBtn.addEventListener('click', closeAdminLicenceModal);
+    if (modalGenerateBtn) {
+      modalGenerateBtn.addEventListener('click', () => {
+        const email = document.getElementById('admin-licence-email').value.trim();
+        const phone = document.getElementById('admin-licence-phone').value.trim();
+        const durationDays = parseInt(document.getElementById('admin-licence-duration').value, 10);
+
+        if (!email || !phone) {
+          showToast('Lisans üretmek için alıcı e-posta ve telefon bilgileri girilmelidir!', 'error');
+          return;
+        }
+
+        const expDate = new Date();
+        expDate.setDate(expDate.getDate() + durationDays);
+        const yyyy = expDate.getFullYear();
+        const mm = String(expDate.getMonth() + 1).padStart(2, '0');
+        const dd = String(expDate.getDate()).padStart(2, '0');
+        const expiryStr = `${yyyy}${mm}${dd}`;
+
+        // Cryptographic generation matching system signature rules
+        let eHash = 0;
+        const cleanEmail = email.toLowerCase();
+        for (let i = 0; i < cleanEmail.length; i++) {
+          eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+          eHash = eHash & eHash;
+        }
+        const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+
+        let pHash = 0;
+        const cleanPhone = phone.replace(/\D/g, '');
+        for (let i = 0; i < cleanPhone.length; i++) {
+          pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+          pHash = pHash & pHash;
+        }
+        const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+
+        const signature = generateLicenceSignature(email, phone, expiryStr);
+        const generatedKey = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
+
+        document.getElementById('admin-licence-key-input').value = generatedKey;
+        showToast('Kriptografik lisans anahtarı üretildi! ⚡', 'success');
+      });
+    }
+
+    if (modalSaveBtn) {
+      modalSaveBtn.addEventListener('click', async () => {
+        const username = document.getElementById('admin-licence-username').value;
+        const email = document.getElementById('admin-licence-email').value.trim();
+        const phone = document.getElementById('admin-licence-phone').value.trim();
+        const licenceKey = document.getElementById('admin-licence-key-input').value.trim();
+
+        modalSaveBtn.disabled = true;
+        const originalText = modalSaveBtn.textContent;
+        modalSaveBtn.textContent = 'Kaydediliyor...';
+
+        try {
+          await saveUserLicenceDirectly(username, licenceKey, email, phone);
+          showToast('Kullanıcı lisansı başarıyla güncellendi! 💾', 'success');
+          closeAdminLicenceModal();
+          await loadAdminUsers();
+        } catch (err) {
+          console.error(err);
+          showToast('Lisans kaydedilirken hata oluştu!', 'error');
+        } finally {
+          modalSaveBtn.disabled = false;
+          modalSaveBtn.textContent = originalText;
+        }
       });
     }
 

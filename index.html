@@ -874,6 +874,14 @@
                   </div>
                   <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
                     <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                      <label for="licence-owner-first-name" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Adı</label>
+                      <input type="text" id="licence-owner-first-name" placeholder="örn: Ahmet" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    </div>
+                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
+                      <label for="licence-owner-last-name" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Soyadı</label>
+                      <input type="text" id="licence-owner-last-name" placeholder="örn: Yılmaz" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    </div>
+                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
                       <label for="licence-owner-email" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı E-Posta</label>
                       <input type="email" id="licence-owner-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
                     </div>
@@ -1252,6 +1260,66 @@
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
         <button class="btn btn-secondary" id="guest-block-login-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Giriş Yap</button>
         <button class="btn btn-primary" id="guest-block-register-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Kayıt Ol</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       7c. ADMIN KULLANICI LİSANS YÖNETİM MODALİ
+       ════════════════════════════════════════════════════════ -->
+  <div class="grammar-modal-overlay" id="admin-user-licence-modal">
+    <div class="grammar-modal" style="max-width: 500px;">
+      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
+        <span class="grammar-modal-icon">🔑</span>
+        <h3 id="admin-licence-modal-title">Kullanıcı Lisans Yönetimi</h3>
+        <button class="grammar-modal-close" id="admin-licence-modal-close-btn">&times;</button>
+      </div>
+      <div class="grammar-modal-body" style="gap: 16px; padding: 24px 20px; text-align: left; display: flex; flex-direction: column;">
+        <input type="hidden" id="admin-licence-username">
+        
+        <!-- User summary -->
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px 14px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 4px;">
+          <div style="font-weight: 700; color: var(--text-primary);" id="admin-licence-user-display">Ahmet Yılmaz (@ahmet)</div>
+          <div style="color: var(--text-secondary); font-family: monospace; font-size: 0.75rem; word-break: break-all;" id="admin-licence-current-key">Lisans Kodu: Yok</div>
+        </div>
+
+        <!-- License management fields -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; gap: 10px;">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <label for="admin-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+              <input type="email" id="admin-licence-email" placeholder="E-posta girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <label for="admin-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+              <input type="tel" id="admin-licence-phone" placeholder="Telefon girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: flex-end;">
+            <div style="flex: 1.5; display: flex; flex-direction: column; gap: 4px;">
+              <label for="admin-licence-duration" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Süresi</label>
+              <select id="admin-licence-duration" class="report-select" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; height: 36px; box-sizing: border-box;">
+                <option value="90" selected>3 Ay (90 Gün)</option>
+                <option value="30">1 Ay (30 Gün)</option>
+                <option value="180">6 Ay (180 Gün)</option>
+                <option value="365">1 Yıl (365 Gün)</option>
+                <option value="3">3 Gün (Test)</option>
+              </select>
+            </div>
+            <button id="btn-admin-licence-generate" class="btn btn-secondary" style="flex: 1; padding: 0 10px; font-size: 0.8rem; font-weight: 700; border-radius: var(--radius-md); height: 36px; margin-bottom: 0; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary); display: flex; align-items: center; justify-content: center; gap: 4px; cursor: pointer;">
+              <span>⚡</span> Üret
+            </button>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <label for="admin-licence-key-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+            <input type="text" id="admin-licence-key-input" placeholder="AMOK-XXXX-XXXX-YYYYMMDD-SIG" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box;">
+          </div>
+        </div>
+
+      </div>
+      <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: flex-end; padding: 16px 20px; background: var(--bg-secondary);">
+        <button class="btn btn-secondary" id="admin-licence-modal-cancel-btn" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer;">İptal</button>
+        <button class="btn btn-primary" id="admin-licence-modal-save-btn" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer;">Kaydet</button>
       </div>
     </div>
   </div>
