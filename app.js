@@ -2506,6 +2506,13 @@ function initAuth() {
     const username = document.getElementById('login-username').value.trim();
     const password = document.getElementById('login-password').value;
 
+    if (!username || !password) {
+      showToast('Kullanıcı adı ve şifre boş bırakılamaz!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
     try {
       let loggedIn = false;
       let dbStateData = null;
@@ -2553,11 +2560,17 @@ function initAuth() {
             };
           }
           loggedIn = true;
+        } else {
+          // Supabase aktifse ve kullanıcı bulunamadıysa giriş başarısız olmalıdır, local storage'a düşmemeli
+          showToast('Kullanıcı bulunamadı!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
         }
       }
 
-      // Supabase'de bulunamadı veya Supabase kapalıysa, localStorage'a bak
-      if (!loggedIn) {
+      // Supabase kapalıysa, localStorage fallback kullan
+      if (!supabaseClient && !loggedIn) {
         const users = getUsers();
         if (!users[username]) {
           showToast('Kullanıcı bulunamadı!', 'error');
@@ -2620,6 +2633,23 @@ function initAuth() {
 
     if (username.length < 3) {
       showToast('Kullanıcı adı en az 3 karakter olmalı!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    // Email formatı kontrolü
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && !emailRegex.test(email)) {
+      showToast('Geçerli bir e-posta adresi giriniz!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    // Şifre gücü kontrolü
+    if (password.length < 6) {
+      showToast('Şifre en az 6 karakter olmalı!', 'error');
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
       return;
