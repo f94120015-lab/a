@@ -1044,6 +1044,35 @@
                     </div>
                   </div>
 
+                  <!-- Manual User Addition Form (Collapsible) -->
+                  <div id="admin-add-user-form-container" style="display: none; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; text-align: left; flex-direction: column; gap: 14px;">
+                    <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                      <span>👤</span> Yeni Kullanıcı Oluştur
+                    </h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                      <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <label for="admin-add-user-name" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
+                        <input type="text" id="admin-add-user-name" placeholder="örn: Ahmet Yılmaz" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <label for="admin-add-user-username" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Kullanıcı Adı</label>
+                        <input type="text" id="admin-add-user-username" placeholder="örn: ahmetyilmaz" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <label for="admin-add-user-email" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+                        <input type="email" id="admin-add-user-email" placeholder="örn: ahmet@gmail.com" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <label for="admin-add-user-password" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Şifre</label>
+                        <input type="password" id="admin-add-user-password" value="amok123456" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px;">
+                      <button id="btn-admin-add-user-cancel" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8rem; border-radius: var(--radius-md); background: var(--bg-body); color: var(--text-primary); border: 1px solid var(--border-color); cursor: pointer;">İptal</button>
+                      <button id="btn-admin-add-user-submit" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.8rem; border-radius: var(--radius-md); background: var(--accent-primary); color: #fff; border: 1px solid var(--accent-primary); cursor: pointer;">Oluştur</button>
+                    </div>
+                  </div>
+
                   <!-- Sub-tabs -->
                   <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                     <button class="admin-users-tab active" data-admin-tab="all" style="padding: 8px 16px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; border: 1px solid var(--accent-primary); background: rgba(139, 126, 200, 0.12); color: var(--accent-primary);">
@@ -1066,10 +1095,13 @@
                     </div>
                   </div>
 
-                  <!-- Refresh Button -->
+                  <!-- Refresh Button & Add User Button -->
                   <div style="display: flex; gap: 12px; width: 100%; margin-top: 2px; flex-wrap: wrap;">
-                    <button id="btn-admin-refresh-users" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                    <button id="btn-admin-refresh-users" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
                       <span>🔄</span> Kullanıcıları Yenile
+                    </button>
+                    <button id="btn-admin-add-user-toggle" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                      <span>➕</span> Kullanıcı Ekle
                     </button>
                   </div>
                 </div>

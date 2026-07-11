@@ -10805,6 +10805,158 @@ function init() {
       });
     }
 
+    // Manual Add User Form controls
+    const addUserToggleBtn = document.getElementById('btn-admin-add-user-toggle');
+    const addUserCancelBtn = document.getElementById('btn-admin-add-user-cancel');
+    const addUserSubmitBtn = document.getElementById('btn-admin-add-user-submit');
+    const addUserFormContainer = document.getElementById('admin-add-user-form-container');
+
+    if (addUserToggleBtn && addUserFormContainer) {
+      addUserToggleBtn.addEventListener('click', () => {
+        const isHidden = addUserFormContainer.style.display === 'none';
+        addUserFormContainer.style.display = isHidden ? 'flex' : 'none';
+        if (isHidden) {
+          const nameInput = document.getElementById('admin-add-user-name');
+          if (nameInput) nameInput.focus();
+        }
+      });
+    }
+
+    if (addUserCancelBtn && addUserFormContainer) {
+      addUserCancelBtn.addEventListener('click', () => {
+        addUserFormContainer.style.display = 'none';
+      });
+    }
+
+    if (addUserSubmitBtn && addUserFormContainer) {
+      addUserSubmitBtn.addEventListener('click', async () => {
+        const nameVal = document.getElementById('admin-add-user-name').value.trim();
+        const usernameVal = document.getElementById('admin-add-user-username').value.trim();
+        const emailVal = document.getElementById('admin-add-user-email').value.trim();
+        const passwordVal = document.getElementById('admin-add-user-password').value;
+
+        if (!usernameVal || !passwordVal) {
+          showToast('Kullanıcı adı ve şifre zorunludur!', 'error');
+          return;
+        }
+
+        addUserSubmitBtn.disabled = true;
+        const origText = addUserSubmitBtn.textContent;
+        addUserSubmitBtn.textContent = 'Oluşturuluyor...';
+
+        try {
+          const parts = nameVal.split(' ');
+          const firstName = parts[0] || '';
+          const lastName = parts.slice(1).join(' ') || '';
+          const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+          const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+          // Normalise username
+          let cleanUsername = usernameVal.toLowerCase()
+            .replace(/ı/g, 'i')
+            .replace(/ğ/g, 'g')
+            .replace(/ü/g, 'u')
+            .replace(/ş/g, 's')
+            .replace(/ö/g, 'o')
+            .replace(/ç/g, 'c')
+            .replace(/[^a-z0-9]/g, '_')
+            .replace(/_+/g, '_');
+          if (cleanUsername.endsWith('_')) cleanUsername = cleanUsername.slice(0, -1);
+          if (cleanUsername.startsWith('_')) cleanUsername = cleanUsername.slice(1);
+          if (!cleanUsername) cleanUsername = 'user';
+
+          // Save metadata
+          const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+          metaRegistry[cleanUsername] = {
+            firstName: firstName,
+            lastName: lastName,
+            email: emailVal,
+            phone: '',
+            licenceKey: ''
+          };
+          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+          if (supabaseClient) {
+            // Check if profile exists
+            const { data: dbUser } = await supabaseClient
+              .from('profiles')
+              .select('username')
+              .eq('username', cleanUsername)
+              .maybeSingle();
+
+            if (dbUser) {
+              showToast(`@${cleanUsername} kullanıcı adı zaten alınmış!`, 'error');
+              addUserSubmitBtn.disabled = false;
+              addUserSubmitBtn.textContent = origText;
+              return;
+            }
+
+            const hashed = await hashPassword(passwordVal);
+            await supabaseClient
+              .from('profiles')
+              .insert({
+                username: cleanUsername,
+                email: emailVal || null,
+                password_hash: hashed
+              });
+
+            await supabaseClient
+              .from('user_states')
+              .insert({
+                username: cleanUsername,
+                xp: 0,
+                streak: 0,
+                hearts: 5,
+                completed_lessons: [],
+                avatar_color: randomColor,
+                licence_key: ''
+              });
+          } else {
+            // Local
+            const users = getUsers();
+            if (users[cleanUsername]) {
+              showToast(`@${cleanUsername} kullanıcı adı zaten alınmış!`, 'error');
+              addUserSubmitBtn.disabled = false;
+              addUserSubmitBtn.textContent = origText;
+              return;
+            }
+
+            await saveUser(cleanUsername, passwordVal);
+
+            const localStates = localStorage.getItem('amok_user_states') || '{}';
+            const parsedLocalStates = JSON.parse(localStates);
+            parsedLocalStates[cleanUsername] = {
+              xp: 0,
+              streak: 0,
+              hearts: 5,
+              completed_lessons: [],
+              avatar_color: randomColor,
+              licence_key: ''
+            };
+            localStorage.setItem('amok_user_states', JSON.stringify(parsedLocalStates));
+          }
+
+          showToast(`Kullanıcı @${cleanUsername} başarıyla oluşturuldu! 🎉`, 'success');
+          
+          // Clear form inputs
+          document.getElementById('admin-add-user-name').value = '';
+          document.getElementById('admin-add-user-username').value = '';
+          document.getElementById('admin-add-user-email').value = '';
+          document.getElementById('admin-add-user-password').value = 'amok123456';
+          addUserFormContainer.style.display = 'none';
+
+          // Refresh user list
+          await loadAdminUsers();
+        } catch (err) {
+          console.error(err);
+          showToast('Kullanıcı oluşturulurken hata oluştu!', 'error');
+        } finally {
+          addUserSubmitBtn.disabled = false;
+          addUserSubmitBtn.textContent = origText;
+        }
+      });
+    }
+
     // Modal Control Functions & Database Updates
     function openAdminLicenceModal(user) {
       const modal = document.getElementById('admin-user-licence-modal');
