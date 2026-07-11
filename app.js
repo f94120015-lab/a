@@ -47,7 +47,8 @@ let state = {
   activePassiveMode: 'passive',
   selectedSubjectIndex: 0,
   selectedVerbIndex: 0,
-  selectedShieldId: 'likely'
+  selectedShieldId: 'likely',
+  conditionalType: 'none'
 };
 
 // Quiz ve diğer durumlar
@@ -4270,7 +4271,7 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_') || question.id.startsWith('c54_'))) {
+  if (question.id && (question.id.startsWith('c51_') || question.id.startsWith('c52_') || question.id.startsWith('c53_') || question.id.startsWith('c54_') || question.id.startsWith('u55_') || question.id.startsWith('c56_'))) {
     let tipText = '';
     if (question.id.startsWith('c51_l01') || question.id.startsWith('c51_l1')) {
       tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
@@ -4288,12 +4289,46 @@ function renderMultipleChoice(container, question) {
       tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
     } else if (question.id.startsWith('c53_')) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-    } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1')) {
-      tipText = '<strong>Bağlaçların Cümle ve İsim Yapıları:</strong><br>• <strong>Cümle Alan Bağlaçlar (<em>Although, Because, If</em>):</strong> + tam cümle (SVO)<br>• <strong>İsim Alan Bağlaçlar (<em>Despite, Because of, In addition to</em>):</strong> + isim / V-ing<br>• <strong>Geçiş Kelimeleri (<em>However, Therefore, Moreover</em>):</strong> noktalı virgül (;) veya nokta (.) ile ayrılıp virgül (,) ile kullanılır.';
-    } else if (question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2')) {
-      tipText = '<strong>Bağlaçların Anlamsal İlişkisi:</strong><br>• <strong>Zıtlık (Contrast - <em>Although, Despite, However</em>):</strong> Zıt yönlü (+ / -) cümleleri bağlar.<br>• <strong>Sebep-Sonuç (Cause/Effect - <em>Because, Due to, Therefore</em>):</strong> Paralel yönlü (+ & +) ilişkileri bağlar.<br>• <strong>Koşul (Condition - <em>Unless, In case of</em>):</strong> Eylemin şartını veya önlemini bildirir.';
-    } else if (question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
-      tipText = '<strong>Anlam İkizleri ve Dönüşüm:</strong> Aynı anlama gelen bağlaçlar arası geçiş yaparken yapıyı dönüştürün:<br>• <em>Although</em> (Cümle Alan) ➔ <em>Despite</em> (İsim / V-ing Alan)<br>• <em>Because</em> (Cümle Alan) ➔ <em>Because of</em> (İsim Alan)';
+    } else if (question.id.startsWith('c54_l01') || question.id.startsWith('c54_l1') || question.id.startsWith('c54_l02') || question.id.startsWith('c54_l2') || question.id.startsWith('c54_l03') || question.id.startsWith('c54_l3')) {
+      tipText = '<strong>Bağlaç Formülleri ve Örnekleri (Grup Kuralları):</strong><br>' +
+                '• <strong>G1: Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
+                '  <em>Örnek:</em> Although it was raining, we went out.<br>' +
+                '• <strong>G2: İsim Alanlar (+ İsim / V-ing):</strong> <em>Despite</em> (rağmen), <em>Because of</em> (yüzünden), <em>In addition to</em> (ek olarak).<br>' +
+                '  <em>Örnek:</em> Despite the heavy rain, we went out.<br>' +
+                '• <strong>G4: Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
+                '  <em>Örnek:</em> It was raining; however, we decided to go out.';
+    } else if (question.id.startsWith('u55_') || question.id.startsWith('c56_')) {
+      if (question.id.includes('_l7_')) {
+        tipText = '<strong>Keşke Yapıları (I wish / If only):</strong><br>' +
+                  '• <strong>Şikayet / Gelecek:</strong> wish + would V1. <em>(Örn: I wish you would listen)</em><br>' +
+                  '• <strong>Şimdiki Zaman:</strong> wish + V2 / could V1. <em>(Örn: I wish I knew / could swim)</em><br>' +
+                  '• <strong>Geçmiş Zaman (Pişmanlık):</strong> wish + had V3 / could have V3. <em>(Örn: I wish had called)</em><br>' +
+                  '• <strong>Özne Uyumu Kısıtı:</strong> Aynı özneyle would kullanılamaz <em>(I wish I would ❌ ➔ I wish I could/V2 ✔️)</em>.';
+      } else if (question.id.includes('_l6_')) {
+        tipText = '<strong>Diğer Koşul Bağlaçları:</strong><br>' +
+                  '• <strong>unless</strong> (-medikçe), <strong>as long as</strong> (-diği sürece), <strong>provided that / providing</strong> (-şartıyla).<br>' +
+                  '• <strong>supposing / assuming</strong> (varsayalım ki), <strong>in case</strong> (durumunda/diye), <strong>on condition that</strong> (koşuluyla).<br>' +
+                  '• <strong>only if</strong> (cümle başında devriklik yapar: <em>Only if we leave, can we catch...</em>).<br>' +
+                  '• <strong>in case of / in the event of + noun</strong> (-durumunda / -halinde).';
+      } else if (question.id.includes('_l5_')) {
+        tipText = '<strong>Alternatif Koşul Yapıları:</strong><br>' +
+                  '• <strong>If ..., then ...:</strong> Koşul sonucunu vurgular. <em>(If you tell, then I can...)</em><br>' +
+                  '• <strong>Otherwise / Or / Or else:</strong> Aksi takdirde / yoksa. <em>(Study; otherwise, you will fail)</em><br>' +
+                  '• <strong>Without + Noun:</strong> ... olmasaydı/olmadan. <em>(Without air, we couldn\'t live / Without help, we would have failed)</em>';
+      } else if (question.id.includes('_l4_')) {
+        tipText = '<strong>Devrik Koşul Yapıları (If Inversion):</strong> "If" kaldırıldığında yardımcı fiil başa gelir:<br>' +
+                  '• <strong>Type 1:</strong> <em>Should + S + V1</em>. (If a problem should arise ➔ Should a problem arise)<br>' +
+                  '• <strong>Type 2:</strong> <em>Were + S + ... / Were + S + to V1</em>. (If I were you ➔ Were I you)<br>' +
+                  '• <strong>Type 3:</strong> <em>Had + S + V3</em>. (If you had called ➔ Had you called)';
+      } else {
+        tipText = '<strong>If Clause Tipleri Özet Tablosu:</strong><br>' +
+                  '• <strong>Type 0 (Genel Doğrular):</strong> If + Present Simple, Present Simple. <em>(boils)</em><br>' +
+                  '• <strong>Type 1 (Gelecek İhtimal):</strong> If + Present, Will / Can / May + V1. <em>(will pass)</em><br>' +
+                  '• <strong>Type 2 (Şu Anki Hayal):</strong> If + Past Simple (were), Would / Could + V1. <em>(would buy)</em><br>' +
+                  '• <strong>Type 3 (Geçmiş Pişmanlık):</strong> If + Past Perfect (had V3), Would have + V3. <em>(had driven / would have survived)</em><br>' +
+                  '• <strong>Mix 1 (Geçmiş ➔ Bugün):</strong> If + had V3, Would + V1 (now). <em>(had driven / wouldn\'t be in hospital now)</em><br>' +
+                  '• <strong>Mix 2 (Genel ➔ Geçmiş):</strong> If + V2 (were), Would have + V3. <em>(were taller / would have been chosen yesterday)</em>';
+      }
     }
 
     if (tipText) {
@@ -10132,8 +10167,264 @@ function applyDigi(stem) {
 // ============================================================
 // DİNAMİK PARÇALAYICI VE SEVİYE OLUŞTURUCU MOTOR
 // ============================================================
+// ============================================================
+// DİNAMİK PARÇALAYICI VE SEVİYE OLUŞTURUCU MOTOR
+// ============================================================
+function getConditionalSimulatorData(condType) {
+  const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSubjectIndex : 0;
+  const verbIndex = state.selectedVerbIndex !== undefined ? state.selectedVerbIndex : 0;
+  const activeSubjectObj = subjects[subjectIndex] || subjects[0];
+  const activeVerbObj = verbs[verbIndex] || verbs[0];
+  
+  const isPassive = state.activePassiveMode !== 'active';
+  const isNeg = state.negationOn || false;
+  
+  let activeSpeaker = "Historians";
+  let activeSpeakerTr = "Tarihçiler";
+  const domain = state.activeDomain || 'history';
+  if (domain === 'history') { activeSpeaker = "Historians"; activeSpeakerTr = "Tarihçiler"; }
+  else if (domain === 'cinema') { activeSpeaker = "Critics"; activeSpeakerTr = "Eleştirmenler"; }
+  else if (domain === 'economy') { activeSpeaker = "Economists"; activeSpeakerTr = "Ekonomistler"; }
+  else if (domain === 'sociology') { activeSpeaker = "Sociologists"; activeSpeakerTr = "Sosyologlar"; }
+
+  const colorSubject = "#1f2937";
+  const colorObject = "#1f2937";
+  const colorNegation = "#ef4444";
+  const colorAux = "#3b82f6";
+  const colorVerb = "#f59e0b";
+  const colorIf = "#8b5cf6";
+  const colorComma = "#6b7280";
+  const colorPerfect = "#10b981";
+
+  let wagonChain = [];
+  let trReflexColored = "";
+  let mechanicNote = "";
+
+  const accusativeObj = applyAccusative(activeSubjectObj.tr);
+  const passiveStem = makePassiveStem(activeVerbObj.trStem);
+  const activeStem = activeVerbObj.trStem;
+
+  if (condType === 'type0') {
+    mechanicNote = "Type 0: Bilimsel gerçekler ve genel doğrular. Her iki tarafta da Geniş Zaman (Simple Present) kullanılır.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "are", role: "auxiliary", color: colorAux });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "become", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "mazsa" : "sa";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, onlar kullanışsız hale gelir.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      if (isNeg) wagonChain.push({ word: "do not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "lose", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "mazsa" : "sa";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorAux};">${negSuffix}</span>, bilgi kaybederler.`;
+    }
+  } else if (condType === 'type1') {
+    mechanicNote = "Type 1: Gelecekte gerçekleşmesi olası durumlar. Koşul cümlesinde Present, ana cümlede Future/Modal (will/can/may) kullanılır.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "are", role: "auxiliary", color: colorAux });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "will", role: "future", color: colorAux });
+      wagonChain.push({ word: "become", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "mazsa" : "sa";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, onlar kullanışsız hale gelecektir.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      if (isNeg) wagonChain.push({ word: "do not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "will", role: "future", color: colorAux });
+      wagonChain.push({ word: "lose", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "mazsa" : "sa";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorAux};">${negSuffix}</span>, bilgi kaybedeceklerdir.`;
+    }
+  } else if (condType === 'type2') {
+    mechanicNote = "Type 2: Şu an için hayali, gerçek dışı durumlar. Koşul cümlesinde Past Simple (V2), ana cümlede would/could/might + V1 kullanılır.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "were", role: "past_tense", color: colorAux });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "become", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, onlar kullanışsız hale gelirdi.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      if (isNeg) {
+        wagonChain.push({ word: "did not", role: "negation", color: colorNegation });
+        wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb });
+      } else {
+        wagonChain.push({ word: activeVerbObj.pastActive, role: "main_verb", color: colorVerb });
+      }
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "lose", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorAux};">${negSuffix}</span>, bilgi kaybederlerdi.`;
+    }
+  } else if (condType === 'type3') {
+    mechanicNote = "Type 3: Geçmişteki gerçek dışı durumlar, pişmanlıklar. Koşul cümlesinde Past Perfect (had V3), ana cümlede would/could/might have + V3 kullanılır.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "past_perfect", color: colorPerfect });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "passive_perfect", color: colorAux });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "have", role: "aux_perfect", color: colorPerfect });
+      wagonChain.push({ word: "become", role: "main_verb", color: colorVerb }); // note: become V3 is become
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorPerfect};">miş ol</span><span style="color:${colorAux};">${negSuffix}</span>, onlar kullanışsız hale gelmiş olurdu.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "past_perfect", color: colorPerfect });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "have", role: "aux_perfect", color: colorPerfect });
+      wagonChain.push({ word: "lost", role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorPerfect};">miş ol</span><span style="color:${colorAux};">${negSuffix}</span>, bilgi kaybetmiş olurlardı.`;
+    }
+  } else if (condType === 'mix1') {
+    mechanicNote = "Mix 1: Geçmişteki nedenin (had V3) şu andaki sonucu (would V1). Geçmiş ➔ Şimdiki zaman bağlantısı sağlar.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "past_perfect", color: colorPerfect });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: "been", role: "passive_perfect", color: colorAux });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "be", role: "status_linker", color: colorAux });
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
+      wagonChain.push({ word: "now", role: "time_adverb", color: colorPerfect });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorPerfect};">miş ol</span><span style="color:${colorAux};">${negSuffix}</span>, onlar <span style="color:${colorPerfect};">şimdi</span> kullanışsız olurdu.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "had", role: "past_perfect", color: colorPerfect });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "lose", role: "main_verb", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+      wagonChain.push({ word: "now", role: "time_adverb", color: colorPerfect });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorPerfect};">miş ol</span><span style="color:${colorAux};">${negSuffix}</span>, <span style="color:${colorPerfect};">şimdi</span> bilgi kaybederlerdi.`;
+    }
+  } else if (condType === 'mix2') {
+    mechanicNote = "Mix 2: Genel / sürekli durumun (V2) geçmişteki sonucu (would have V3). Genel durumun geçmişe etkisini gösterir.";
+    if (isPassive) {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSubjectObj.eng, role: "subject", color: colorSubject });
+      wagonChain.push({ word: "were", role: "past_tense", color: colorAux });
+      if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
+      wagonChain.push({ word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "have", role: "aux_perfect", color: colorPerfect });
+      wagonChain.push({ word: "been", role: "passive_perfect", color: colorAux });
+      wagonChain.push({ word: "destroyed", role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: "yesterday", role: "time_adverb", color: colorPerfect });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSubjectObj.tr} (genel olarak) <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, <span style="color:${colorPerfect};">dün</span> mahvolmuş olurlardı.`;
+    } else {
+      wagonChain.push({ word: "If", role: "condition", color: colorIf });
+      wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
+      if (isNeg) {
+        wagonChain.push({ word: "did not", role: "negation", color: colorNegation });
+        wagonChain.push({ word: activeVerbObj.engV1, role: "main_verb", color: colorVerb });
+      } else {
+        wagonChain.push({ word: activeVerbObj.pastActive, role: "main_verb", color: colorVerb });
+      }
+      wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
+      wagonChain.push({ word: ",", role: "comma", color: colorComma });
+      wagonChain.push({ word: "they", role: "subject", color: colorSubject });
+      wagonChain.push({ word: "would", role: "conditional", color: colorAux });
+      wagonChain.push({ word: "have", role: "aux_perfect", color: colorPerfect });
+      wagonChain.push({ word: "lost", role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: "information", role: "object", color: colorObject });
+      wagonChain.push({ word: "yesterday", role: "time_adverb", color: colorPerfect });
+
+      const negSuffix = isNeg ? "masaydı" : "saydı";
+      trReflexColored = `Eğer ${activeSpeakerTr} ${accusativeObj} (genel olarak) <span style="color:${colorVerb};">${activeStem}</span><span style="color:${colorAux};">${negSuffix}</span>, <span style="color:${colorPerfect};">dün</span> bilgi kaybetmiş olurlardı.`;
+    }
+  }
+
+  return {
+    level: 99,
+    title: "If Clause (" + condType.toUpperCase() + ")",
+    mechanic_note: mechanicNote,
+    wagon_chain: wagonChain,
+    turkish_reflex_colored: trReflexColored
+  };
+}
+
 function getActiveLevelData(lvlNum) {
-    // Intercept for Pure Tense Mode
+  // Intercept for Conditional Mode
+  if (state.conditionalType && state.conditionalType !== 'none') {
+    const condData = getConditionalSimulatorData(state.conditionalType);
+    if (condData) return condData;
+  }
+
+  // Intercept for Pure Tense Mode
   if (state.pureTense) {
     const ptData = getPureTenseData(state.pureTense.tense, state.pureTense.aspect);
     if (ptData) return ptData;
@@ -11254,6 +11545,11 @@ const voiceCheckbox = document.getElementById('toggle-voice');
     }
   }
 
+  const condSelector = document.getElementById('select-conditional');
+  if (condSelector) {
+    condSelector.value = state.conditionalType || 'none';
+  }
+
   // Populate and set dynamic Subject Select
   const subjectSelect = document.getElementById('select-subject');
   if (subjectSelect) {
@@ -11353,6 +11649,15 @@ const voiceCheckbox = document.getElementById('toggle-voice');
   if (modalSelect) {
     modalSelect.onchange = (e) => {
       state.modalSelectLevel12 = e.target.value;
+      saveState();
+      renderSimulatorContent();
+    };
+  }
+
+  const condSelector = document.getElementById('select-conditional');
+  if (condSelector) {
+    condSelector.onchange = (e) => {
+      state.conditionalType = e.target.value;
       saveState();
       renderSimulatorContent();
     };

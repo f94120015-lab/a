@@ -429,6 +429,20 @@
                     </label>
                   </div>
                 </div>
+
+                <!-- Koşul Seçici (If Clause) -->
+                <div class="control-group select-group" id="control-group-conditional">
+                  <span class="control-label">KOŞUL SEÇİCİ (IF)</span>
+                  <select id="select-conditional" class="cockpit-select">
+                    <option value="none" selected>Yok (Standart)</option>
+                    <option value="type0">Type 0 (Genel Doğrular)</option>
+                    <option value="type1">Type 1 (Olasılıklar)</option>
+                    <option value="type2">Type 2 (Şu An Gerçek Dışı)</option>
+                    <option value="type3">Type 3 (Geçmiş Gerçek Dışı)</option>
+                    <option value="mix1">Mix 1 (Geçmiş ➔ Şimdiki)</option>
+                    <option value="mix2">Mix 2 (Genel ➔ Geçmiş)</option>
+                  </select>
+                </div>
               </div>
             </div>
 
@@ -981,7 +995,8 @@
 
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="data.js?v=1.0.6"></script>
-  <script src="app.js?v=1.0.6"></script>
+  <script src="data.js?v=1.0.7"></script>
+  <script src="data-extra.js?v=1.0.7"></script>
+  <script src="app.js?v=1.0.7"></script>
 </body>
 </html>

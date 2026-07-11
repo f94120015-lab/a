@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npx -y http-server -p 3000 -o -c-1",
-    "build": "mkdir -p www && cp index.html app.js data.js style.css canvas-confetti.min.js www/ && cp -R assets www/",
+    "build": "mkdir -p www && cp index.html app.js data.js data-extra.js style.css canvas-confetti.min.js www/ && cp -R assets www/",
     "cap:sync": "npx cap sync",
     "status": "node check-lessons.js"
   },
