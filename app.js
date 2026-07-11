@@ -2808,6 +2808,86 @@ function updateTopBar() {
     if (loginTopbarBtn) loginTopbarBtn.style.display = 'none';
     if (userMenu) userMenu.style.display = 'block';
   }
+
+  const userMenuBtn = document.getElementById('btn-user-menu');
+  if (userMenuBtn) {
+    if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
+      const emoji = state.profilePhoto.split(':')[1];
+      userMenuBtn.innerHTML = `<span style="font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
+      userMenuBtn.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      userMenuBtn.style.display = 'flex';
+      userMenuBtn.style.alignItems = 'center';
+      userMenuBtn.style.justifyContent = 'center';
+      userMenuBtn.style.borderRadius = '50%';
+      userMenuBtn.style.width = '34px';
+      userMenuBtn.style.height = '34px';
+      userMenuBtn.style.padding = '0';
+      userMenuBtn.style.border = 'none';
+    } else if (state.profilePhoto) {
+      userMenuBtn.innerHTML = `<img src="${state.profilePhoto}" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover; display: block;">`;
+      userMenuBtn.style.backgroundColor = 'transparent';
+      userMenuBtn.style.display = 'flex';
+      userMenuBtn.style.alignItems = 'center';
+      userMenuBtn.style.justifyContent = 'center';
+      userMenuBtn.style.borderRadius = '50%';
+      userMenuBtn.style.width = '34px';
+      userMenuBtn.style.height = '34px';
+      userMenuBtn.style.padding = '0';
+      userMenuBtn.style.border = 'none';
+    } else {
+      const firstLetter = (state.username || 'K').charAt(0).toUpperCase();
+      userMenuBtn.innerHTML = `<span style="font-size: 0.95rem; font-weight: bold; color: white; display: flex; align-items: center; justify-content: center;">${firstLetter}</span>`;
+      userMenuBtn.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      userMenuBtn.style.display = 'flex';
+      userMenuBtn.style.alignItems = 'center';
+      userMenuBtn.style.justifyContent = 'center';
+      userMenuBtn.style.borderRadius = '50%';
+      userMenuBtn.style.width = '34px';
+      userMenuBtn.style.height = '34px';
+      userMenuBtn.style.padding = '0';
+      userMenuBtn.style.border = 'none';
+    }
+  }
+
+  const profileTabIcon = document.getElementById('profile-tab-icon');
+  if (profileTabIcon) {
+    if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
+      const emoji = state.profilePhoto.split(':')[1];
+      profileTabIcon.innerHTML = `<span style="font-size: 1.1rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
+      profileTabIcon.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      profileTabIcon.style.display = 'inline-flex';
+      profileTabIcon.style.alignItems = 'center';
+      profileTabIcon.style.justifyContent = 'center';
+      profileTabIcon.style.borderRadius = '50%';
+      profileTabIcon.style.width = '30px';
+      profileTabIcon.style.height = '30px';
+      profileTabIcon.style.minWidth = '30px';
+      profileTabIcon.style.minHeight = '30px';
+    } else if (state.profilePhoto) {
+      profileTabIcon.innerHTML = `<img src="${state.profilePhoto}" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; display: block;">`;
+      profileTabIcon.style.backgroundColor = 'transparent';
+      profileTabIcon.style.display = 'inline-flex';
+      profileTabIcon.style.alignItems = 'center';
+      profileTabIcon.style.justifyContent = 'center';
+      profileTabIcon.style.borderRadius = '50%';
+      profileTabIcon.style.width = '30px';
+      profileTabIcon.style.height = '30px';
+      profileTabIcon.style.minWidth = '30px';
+      profileTabIcon.style.minHeight = '30px';
+    } else {
+      const firstLetter = (state.username || 'K').charAt(0).toUpperCase();
+      profileTabIcon.innerHTML = `<span style="font-size: 0.85rem; font-weight: bold; color: white; display: flex; align-items: center; justify-content: center;">${firstLetter}</span>`;
+      profileTabIcon.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      profileTabIcon.style.display = 'inline-flex';
+      profileTabIcon.style.alignItems = 'center';
+      profileTabIcon.style.justifyContent = 'center';
+      profileTabIcon.style.borderRadius = '50%';
+      profileTabIcon.style.width = '30px';
+      profileTabIcon.style.height = '30px';
+      profileTabIcon.style.minWidth = '30px';
+      profileTabIcon.style.minHeight = '30px';
+    }
+  }
 }
 
 function animateStat(elementId, className) {
@@ -7078,6 +7158,138 @@ function handleProfilePhotoUpload(file) {
   reader.readAsDataURL(file);
 }
 
+function showAvatarSelectorModal() {
+  const modal = document.createElement('div');
+  modal.className = 'custom-modal-overlay';
+  modal.id = 'avatar-selector-modal';
+  
+  const avatars = ['🦉', '🦊', '🦁', '🐨', '🦄', '🐼', '🦖', '🐝', '🚀', '🎓', '🧠', '👾', '🎨', '⚽', '🎸', '🎮'];
+  const colors = [
+    { value: '#E88A9A', name: 'Gül Kurusu' },
+    { value: '#B4A7D6', name: 'Lavanta' },
+    { value: '#8BC6A0', name: 'Nane' },
+    { value: '#E8CB6E', name: 'Altın' },
+    { value: '#8B7EC8', name: 'İndigo' },
+    { value: '#7EC8C8', name: 'Teal' },
+    { value: '#ED8936', name: 'Turuncu' },
+    { value: '#4A5568', name: 'Kömür' }
+  ];
+
+  let selectedAvatar = state.profilePhoto && state.profilePhoto.startsWith('avatar:') 
+    ? state.profilePhoto.split(':')[1] 
+    : '🦉';
+  let selectedColor = state.avatarColor || '#E88A9A';
+
+  const getPreviewHTML = () => {
+    return `<div style="background: ${selectedColor}; width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: var(--shadow-md); border: 3px solid var(--border-color); transition: all var(--transition-normal);">${selectedAvatar}</div>`;
+  };
+
+  modal.innerHTML = `
+    <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: 400px; width: 90%;">
+      <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+          <span>🎭</span> Avatarını Seç
+        </h3>
+        <button class="modal-close-btn" id="btn-close-avatar-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+      </div>
+      <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+        
+        <div id="avatar-preview-container">
+          ${getPreviewHTML()}
+        </div>
+
+        <div style="width: 100%;">
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 8px;">Karakter Seçin</span>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-height: 160px; overflow-y: auto; padding: 4px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-body);">
+            ${avatars.map(av => `
+              <button class="avatar-option-btn" data-avatar="${av}" style="font-size: 1.8rem; background: var(--bg-card); border: 2px solid ${av === selectedAvatar ? 'var(--accent-primary)' : 'var(--border-color)'}; border-radius: var(--radius-md); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-fast); outline: none;">
+                ${av}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+
+        <div style="width: 100%;">
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 8px;">Arka Plan Rengi</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+            ${colors.map(col => `
+              <button class="color-option-btn" data-color="${col.value}" style="width: 32px; height: 32px; border-radius: 50%; background: ${col.value}; border: 2px solid ${col.value === selectedColor ? 'var(--text-primary)' : 'transparent'}; box-shadow: var(--shadow-sm); cursor: pointer; position: relative; transition: all var(--transition-fast); outline: none;" title="${col.name}">
+                ${col.value === selectedColor ? '<span style="color: #fff; font-size: 0.8rem; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">✓</span>' : ''}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+
+        <div style="width: 100%; border-top: 1px dashed var(--border-color); padding-top: 14px; text-align: center;">
+          <button class="btn btn-ghost" id="btn-trigger-upload" style="font-size: 0.85rem; padding: 6px 12px; display: inline-flex; align-items: center; gap: 6px;">
+            📸 Cihazdan Fotoğraf Yükle
+          </button>
+        </div>
+
+      </div>
+      <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+        <button class="btn btn-secondary" id="btn-cancel-avatar" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer;">İptal</button>
+        <button class="btn btn-primary" id="btn-save-avatar" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; background: var(--accent-primary);">Kaydet</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const closeModal = () => modal.remove();
+  document.getElementById('btn-close-avatar-modal').addEventListener('click', closeModal);
+  document.getElementById('btn-cancel-avatar').addEventListener('click', closeModal);
+
+  const previewContainer = document.getElementById('avatar-preview-container');
+  const avatarButtons = modal.querySelectorAll('.avatar-option-btn');
+  const colorButtons = modal.querySelectorAll('.color-option-btn');
+
+  avatarButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      avatarButtons.forEach(b => {
+        b.style.borderColor = 'var(--border-color)';
+      });
+      btn.style.borderColor = 'var(--accent-primary)';
+      selectedAvatar = btn.getAttribute('data-avatar');
+      previewContainer.innerHTML = getPreviewHTML();
+    });
+  });
+
+  colorButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      colorButtons.forEach(b => {
+        b.style.borderColor = 'transparent';
+        const check = b.querySelector('span');
+        if (check) check.remove();
+      });
+      btn.style.borderColor = 'var(--text-primary)';
+      btn.innerHTML = '<span style="color: #fff; font-size: 0.8rem; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">✓</span>';
+      selectedColor = btn.getAttribute('data-color');
+      previewContainer.innerHTML = getPreviewHTML();
+    });
+  });
+
+  document.getElementById('btn-trigger-upload').addEventListener('click', () => {
+    closeModal();
+    const fileInput = document.getElementById('profile-photo-input');
+    if (fileInput) {
+      fileInput.click();
+    }
+  });
+
+  document.getElementById('btn-save-avatar').addEventListener('click', () => {
+    state.profilePhoto = `avatar:${selectedAvatar}`;
+    state.avatarColor = selectedColor;
+    saveState();
+    
+    updateTopBar();
+    renderProfile();
+    renderSocialList();
+    showToast('Profil avatarınız güncellendi! 🎭', 'success');
+    closeModal();
+  });
+}
+
 function renderProfile() {
   const container = document.querySelector('#tab-content-profile .profile-container');
   if (!container) return;
@@ -7109,9 +7321,15 @@ function renderProfile() {
     `;
   }).join('');
 
-  const avatarContent = state.profilePhoto 
-    ? `<img src="${state.profilePhoto}" alt="Profil Fotoğrafı" class="profile-avatar-img">`
-    : escapeHtml(firstLetter);
+  let avatarContent;
+  if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
+    const avatarEmoji = state.profilePhoto.split(':')[1];
+    avatarContent = `<div class="avatar-emoji-display" style="background: ${state.avatarColor || 'var(--accent-primary)'}; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; border-radius: 50%; color: white;">${avatarEmoji}</div>`;
+  } else if (state.profilePhoto) {
+    avatarContent = `<img src="${state.profilePhoto}" alt="Profil Fotoğrafı" class="profile-avatar-img">`;
+  } else {
+    avatarContent = `<div class="avatar-emoji-display" style="background: ${state.avatarColor || 'var(--accent-primary)'}; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 50%; color: white; font-weight: bold;">${escapeHtml(firstLetter)}</div>`;
+  }
 
   container.innerHTML = `
     <div class="profile-header-card">
@@ -7211,7 +7429,7 @@ function renderProfile() {
   
   if (avatarTrigger && fileInput) {
     avatarTrigger.addEventListener('click', () => {
-      fileInput.click();
+      showAvatarSelectorModal();
     });
     
     fileInput.addEventListener('change', (e) => {
@@ -7427,10 +7645,25 @@ function renderSocialList() {
     const isOnlineTab = activeSocialSubTab === 'online';
     const onlineDotHtml = isOnlineTab ? `<span class="online-dot"></span>` : '';
 
+    let avatarContent = escapeHtml(letter);
+    let avatarStyle = `background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}; display: flex; align-items: center; justify-content: center;`;
+    
+    if (user.isSelf) {
+      if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
+        avatarContent = state.profilePhoto.split(':')[1];
+        avatarStyle = `background-color: ${escapeHtml(state.avatarColor || '#5856D6')}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;`;
+      } else if (state.profilePhoto) {
+        avatarContent = `<img src="${state.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        avatarStyle = `background-color: transparent; display: flex; align-items: center; justify-content: center;`;
+      } else {
+        avatarStyle = `background-color: ${escapeHtml(state.avatarColor || '#5856D6')}; display: flex; align-items: center; justify-content: center; font-weight: bold;`;
+      }
+    }
+
     return `
       <div class="friend-card">
-        <div class="friend-avatar" style="background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}">
-          ${escapeHtml(letter)}
+        <div class="friend-avatar" style="${avatarStyle}">
+          ${avatarContent}
           ${onlineDotHtml}
         </div>
         <div class="friend-details">

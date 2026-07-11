@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">amok</string>
+    <string name="title_activity_main">amok</string>
+    <string name="package_name">com.faruk.amok</string>
+    <string name="custom_url_scheme">com.faruk.amok</string>
+</resources>

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "u1l6_ex6_coll1",
+    "type": "collocation-matching",
+    "prompt": "İsim ve takip eden edat grubunu doğru şekilde eşleştirin:",
+    "pairs": [
+      {
+        "word": "damage",
+        "prep": "to the head"
+      },
+      {
+        "word": "cure",
+        "prep": "for this disease"
+      },
+      {
+        "word": "injection",
+        "prep": "under the skin"
+      },
+      {
+        "word": "preparation",
+        "prep": "for an examination"
+      }
+    ]
+  },
+  {
+    "id": "u1l6_ex6_match1",
+    "type": "matching",
+    "prompt": "Kelime öbeklerini Türkçe karşılıklarıyla eşleştirin.",
+    "pairs": [
+      {
+        "left": "fabrikadaki işçiler",
+        "right": "the workers in the factory"
+      },
+      {
+        "left": "masamın üzerindeki kağıtlar",
+        "right": "the papers on my table"
+      },
+      {
+        "left": "gazetedeki fotoğraf",
+        "right": "the photograph in the newspaper"
+      },
+      {
+        "left": "sıvıdaki moleküller",
+        "right": "the molecules in the liquid"
+      }
+    ]
+  },
+  {
+    "id": "u1l6_ex6_mc1",
+    "type": "multiple-choice",
+    "prompt": "\"the difference between the results\" ifadesinin Türkçe karşılığı hangisidir?",
+    "options": [
+      "sonuçlar arasındaki fark",
+      "deneylerin sonuçları",
+      "gazdaki moleküller",
+      "bu hastalığın tedavisi"
+    ],
+    "correctIndex": 0,
+    "enSentence": "the difference between the results",
+    "isEngToTr": true
+  },
+  {
+    "id": "u1l6_ex6_cloze1",
+    "type": "fill-blank-dropdown",
+    "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+    "enSentence": "the policy of the government",
+    "isEngToTr": true,
+    "sentence": "the policy ___ the government",
+    "options": [
+      "of",
+      "to",
+      "for",
+      "under"
+    ],
+    "correctIndex": 0,
+    "translation": "hükümetin politikası"
+  },
+  {
+    "id": "u1l6_ex6_cloze2",
+    "type": "fill-blank",
+    "prompt": "Boşluğu doldur",
+    "enSentence": "damage to the head",
+    "isEngToTr": true,
+    "sentence": "damage ___ the head",
+    "options": [
+      "to",
+      "in",
+      "by",
+      "from"
+    ],
+    "correctIndex": 0,
+    "translation": "kafadaki hasar"
+  },
+  {
+    "id": "u1l6_ex6_cloze3",
+    "type": "fill-blank-text",
+    "prompt": "Boşluğu doğru edat ile doldurunuz (for):",
+    "sentence": "the cure ___ this disease",
+    "translation": "bu hastalığın tedavisi"
+  },
+  {
+    "id": "u1l6_ex6_wb1",
+    "type": "word-bank",
+    "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+    "translation": "bu noktadan uzaklık",
+    "enSentence": "the distance from this point",
+    "isEngToTr": true,
+    "words": [
+      "bu",
+      "noktadan",
+      "uzaklık",
+      "yol",
+      "zaman",
+      "hedef"
+    ],
+    "correctOrder": [
+      "bu",
+      "noktadan",
+      "uzaklık"
+    ]
+  },
+  {
+    "id": "u1l6_ex6_tx1",
+    "type": "translation-text",
+    "prompt": "\"the water under the ground\" ifadesini Türkçe'ye çevirin:",
+    "correctSentence": "yerin altındaki su",
+    "enSentence": "the water under the ground",
+    "isEngToTr": true
+  },
+  {
+    "id": "u1l6_ex6_punc1",
+    "type": "punctuation-check",
+    "prompt": "Noktalama işaretine dikkat ederek boşluğa gelecek en uygun edatı seçin:",
+    "sentence": "the situation __________ America",
+    "options": [
+      "in",
+      "to,",
+      "on;",
+      "by:"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "u1l6_ex6_struct1",
+    "type": "structure-match",
+    "prompt": "Cümlenin gramer yapısına uygun edatı seçin:",
+    "sentence": "government __________ the people",
+    "options": [
+      "by",
+      "in",
+      "to",
+      "on"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "u1l6_ex6_spot1",
+    "type": "spotlight",
+    "prompt": "Projektör Modu: Parlayan öbeğin Türkçe anlamını seçin!",
+    "paragraph": "The physician recommended injection under the skin for rapid absorption.",
+    "highlightChunk": "injection under the skin",
+    "options": [
+      "deri altındaki enjeksiyon",
+      "hastalığın tedavisi",
+      "fabrikadaki çalışma",
+      "masanın üzerindeki kağıtlar"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "u1l6_ex6_swipe1",
+    "type": "swipe",
+    "prompt": "Hata Avcısı: Verilen çeviri doğru ise VALID (sağa), yanlış ise BUG (sola) kaydırın:",
+    "phrase": "the photograph in the newspaper",
+    "translation": "gazetedeki fotoğraf",
+    "isCorrect": true
+  }
+]
