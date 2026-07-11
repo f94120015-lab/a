@@ -1810,6 +1810,7 @@ function isLocalEnvironment() {
 function saveState() {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
   if (supabaseClient && state.username && !state.isGuest) {
+    // Sync state (XP, streaks, etc.)
     supabaseClient
       .from('user_states')
       .upsert({
@@ -1822,6 +1823,15 @@ function saveState() {
       })
       .then(({ error }) => {
         if (error) console.error('Supabase state sync error:', error);
+      });
+
+    // Also update last_seen_at heartbeat in profiles table
+    supabaseClient
+      .from('profiles')
+      .update({ last_seen_at: new Date().toISOString() })
+      .eq('username', state.username)
+      .then(({ error }) => {
+        if (error) console.error('Supabase heartbeat sync error:', error);
       });
   }
 }
