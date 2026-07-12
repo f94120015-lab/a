@@ -3181,14 +3181,31 @@ input {
   }
 }
 
-/* ─── Profil Sekmesi Stilleri ───────────────────────────── */
 .profile-container {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 24px 16px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.profile-col-left,
+.profile-col-right {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 .profile-header-card {
