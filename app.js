@@ -2550,7 +2550,9 @@ function updateStreak() {
 }
 
 // ============================================================
-// BAŞARIM SİSTEMİ
+// BAŞARIM SİSTEMİ (DEVRE DIŞI — UI'dan kaldırıldı, geri almak için
+// bu bölümdeki yorumları ve renderAchievements/checkAchievements
+// çağrılarını aktifleştirin)
 // ============================================================
 function checkAchievements() {
   const newlyUnlocked = [];
@@ -3062,7 +3064,7 @@ function enterApp() {
   updateStreak();
   updateTopBar();
   renderLessonTree();
-  renderAchievements();
+  // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
   renderDailyTasks();
   startDailyTasksTimer();
   checkPlacementBanner();
@@ -4229,24 +4231,25 @@ function isLessonUnlocked(lessonId) {
 // ============================================================
 // BAŞARIMLAR RENDER
 // ============================================================
+// BAŞARIMLAR DEVRE DIŞI — Geri almak için bu fonksiyonu aktifleştirin
 function renderAchievements() {
-  const grid = document.getElementById('achievements-grid');
-  if (!grid) return;
-  grid.innerHTML = '';
-
-  achievements.forEach(ach => {
-    const isUnlocked = state.unlockedAchievements.includes(ach.id);
-    const card = document.createElement('div');
-    card.className = `achievement-card ${isUnlocked ? 'unlocked' : 'locked'}`;
-    card.innerHTML = `
-      <span class="achievement-icon">${ach.icon}</span>
-      <div class="achievement-info">
-        <span class="achievement-title">${ach.title}</span>
-        <span class="achievement-desc">${ach.description}</span>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
+  // const grid = document.getElementById('achievements-grid');
+  // if (!grid) return;
+  // grid.innerHTML = '';
+  // achievements.forEach(ach => {
+  //   const isUnlocked = state.unlockedAchievements.includes(ach.id);
+  //   const card = document.createElement('div');
+  //   card.className = `achievement-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+  //   card.innerHTML = `
+  //     <span class="achievement-icon">${ach.icon}</span>
+  //     <div class="achievement-info">
+  //       <span class="achievement-title">${ach.title}</span>
+  //       <span class="achievement-desc">${ach.description}</span>
+  //     </div>
+  //   `;
+  //   grid.appendChild(card);
+  // });
+  return; // no-op — başarımlar devre dışı
 }
 
 // ============================================================
@@ -7359,7 +7362,7 @@ function completeReviewSession() {
   
   updateTopBar();
   renderLessonTree();
-  renderAchievements();
+  // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
   checkReviewBanner();
   showScreen('home-screen');
 }
@@ -7418,7 +7421,7 @@ function completeLesson() {
     } catch(e) {}
 
     // Başarım kontrolü
-    newAchievements = checkAchievements();
+    // newAchievements = checkAchievements(); // BAŞARIMLAR DEVRE DIŞI
   }
 
   const earnedXP = isSuccess ? correctCount * XP_PER_CORRECT : 0;
@@ -7447,18 +7450,19 @@ function completeLesson() {
 
   if (accuracyEl) accuracyEl.textContent = `${accuracy}%`;
 
-  // Yeni başarımları göster
+  // BAŞARIMLAR DEVRE DIŞI — Yeni başarımları göster
+  // const summaryAch = document.getElementById('summary-achievements');
+  // const achList = document.getElementById('summary-achievement-list');
+  // if (newAchievements.length > 0) {
+  //   summaryAch.style.display = 'block';
+  //   achList.innerHTML = newAchievements.map(a =>
+  //     `<span class="summary-achievement-badge">${a.icon} ${a.title}</span>`
+  //   ).join('');
+  // } else {
+  //   summaryAch.style.display = 'none';
+  // }
   const summaryAch = document.getElementById('summary-achievements');
-  const achList = document.getElementById('summary-achievement-list');
-
-  if (newAchievements.length > 0) {
-    summaryAch.style.display = 'block';
-    achList.innerHTML = newAchievements.map(a =>
-      `<span class="summary-achievement-badge">${a.icon} ${a.title}</span>`
-    ).join('');
-  } else {
-    summaryAch.style.display = 'none';
-  }
+  if (summaryAch) summaryAch.style.display = 'none';
 
   // Konfeti
   showScreen('summary-screen');
@@ -7782,24 +7786,22 @@ function renderProfile() {
   const totalLessons = lessons.length;
   const progressPercent = Math.round((completedCount / totalLessons) * 100) || 0;
 
-  // Count achievements
-  const unlockedCount = state.unlockedAchievements.length;
-  const totalAchievements = achievements.length;
-  
-  // Generate achievements HTML
-  const achievementsHTML = achievements.map(ach => {
-    const isUnlocked = state.unlockedAchievements.includes(ach.id);
-    return `
-      <div class="profile-achievement-item ${isUnlocked ? 'unlocked' : 'locked'}">
-        <span class="p-ach-icon">${ach.icon}</span>
-        <div class="p-ach-info">
-          <span class="p-ach-title">${ach.title}</span>
-          <span class="p-ach-desc">${ach.description}</span>
-        </div>
-        ${isUnlocked ? '<span class="p-ach-status">✓</span>' : '<span class="p-ach-status">🔒</span>'}
-      </div>
-    `;
-  }).join('');
+  // BAŞARIMLAR DEVRE DIŞI — Count achievements
+  // const unlockedCount = state.unlockedAchievements.length;
+  // const totalAchievements = achievements.length;
+  // const achievementsHTML = achievements.map(ach => {
+  //   const isUnlocked = state.unlockedAchievements.includes(ach.id);
+  //   return `
+  //     <div class="profile-achievement-item ${isUnlocked ? 'unlocked' : 'locked'}">
+  //       <span class="p-ach-icon">${ach.icon}</span>
+  //       <div class="p-ach-info">
+  //         <span class="p-ach-title">${ach.title}</span>
+  //         <span class="p-ach-desc">${ach.description}</span>
+  //       </div>
+  //       ${isUnlocked ? '<span class="p-ach-status">✓</span>' : '<span class="p-ach-status">🔒</span>'}
+  //     </div>
+  //   `;
+  // }).join('');
 
   let avatarContent;
   if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
@@ -7900,6 +7902,7 @@ function renderProfile() {
           <span class="stat-box-label">Ders İlerlemesi (${progressPercent}%)</span>
         </div>
       </div>
+      <!-- BAŞARIMLAR DEVRE DIŞI
       <div class="profile-stat-box">
         <span class="stat-box-icon">🏆</span>
         <div class="stat-box-values">
@@ -7907,6 +7910,7 @@ function renderProfile() {
           <span class="stat-box-label">Başarımlar</span>
         </div>
       </div>
+      -->
     </div>
 
     <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 16px;">
@@ -7919,10 +7923,12 @@ function renderProfile() {
       </div>
     </div>
 
+    <!-- BAŞARIMLAR DEVRE DIŞI — Geri almak için bu bölümü aktifleştirin
     <h3 class="profile-section-title">🏆 Başarımlar</h3>
     <div class="profile-achievements-list">
       ${achievementsHTML}
     </div>
+    -->
 
     <div class="profile-actions-card">
       <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
@@ -8849,7 +8855,7 @@ function initEventListeners() {
     if (confirm('Dersten çıkmak istediğine emin misin? İlerleme kaybedilecek.')) {
       updateTopBar();
       renderLessonTree();
-      renderAchievements();
+      // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
       showScreen('home-screen');
     }
   });
@@ -8915,7 +8921,7 @@ function initEventListeners() {
 
     updateTopBar();
     renderLessonTree();
-    renderAchievements();
+    // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
     showScreen('home-screen');
 
     // Check guest restriction
@@ -8977,7 +8983,7 @@ function initEventListeners() {
       state.hearts = MAX_HEARTS;
       state.warriorTriggered = true;
       saveState();
-      checkAchievements();
+      // checkAchievements(); // BAŞARIMLAR DEVRE DIŞI
       updateTopBar();
       showToast('Canlar dolduruldu! ❤️', 'success');
 
@@ -8988,7 +8994,7 @@ function initEventListeners() {
         renderQuestion();
       } else {
         renderLessonTree();
-        renderAchievements();
+        // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
         showScreen('home-screen');
       }
     } else {
@@ -9010,7 +9016,7 @@ function initEventListeners() {
     saveState();
     updateTopBar();
     renderLessonTree();
-    renderAchievements();
+    // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
     showScreen('home-screen');
   });
 
