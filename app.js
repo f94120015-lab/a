@@ -7814,7 +7814,6 @@ function renderProfile() {
   }
 
   container.innerHTML = `
-  container.innerHTML = `
     <div class="profile-grid">
       <!-- Sol Sütun: Profil Bilgileri, Üyelik/Lisans, Ayarlar ve Raporlar -->
       <div class="profile-col-left">
