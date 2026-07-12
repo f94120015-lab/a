@@ -7902,15 +7902,6 @@ function renderProfile() {
           <span class="stat-box-label">Ders İlerlemesi (${progressPercent}%)</span>
         </div>
       </div>
-      <!-- BAŞARIMLAR DEVRE DIŞI
-      <div class="profile-stat-box">
-        <span class="stat-box-icon">🏆</span>
-        <div class="stat-box-values">
-          <span class="stat-box-num">${unlockedCount}/${totalAchievements}</span>
-          <span class="stat-box-label">Başarımlar</span>
-        </div>
-      </div>
-      -->
     </div>
 
     <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 16px;">
@@ -7922,13 +7913,6 @@ function renderProfile() {
         <!-- Dinamik olarak app.js tarafından doldurulacak -->
       </div>
     </div>
-
-    <!-- BAŞARIMLAR DEVRE DIŞI — Geri almak için bu bölümü aktifleştirin
-    <h3 class="profile-section-title">🏆 Başarımlar</h3>
-    <div class="profile-achievements-list">
-      ${achievementsHTML}
-    </div>
-    -->
 
     <div class="profile-actions-card">
       <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
