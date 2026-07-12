@@ -7814,115 +7814,126 @@ function renderProfile() {
   }
 
   container.innerHTML = `
-    <div class="profile-header-card">
-      <div class="profile-avatar-wrap">
-        <div class="profile-avatar" id="profile-avatar-trigger" title="Profil fotoğrafını değiştir">
-          ${avatarContent}
-          <div class="avatar-edit-overlay">
-            <span>📷 Düzenle</span>
-          </div>
-        </div>
-        <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
-      </div>
-      <div class="profile-user-details">
-        <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px;">
-          ${escapeHtml(state.username || 'Kullanıcı')}
-          ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
-        </h2>
-        ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
-        ${state.email ? `<span class="profile-email" style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-top: 4px; margin-bottom: 6px; font-weight: 500;">✉️ ${escapeHtml(state.email)}</span>` : ''}
-        <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
-      </div>
-    </div>
-
-    ${isGuest ? `
-      <div class="profile-guest-alert">
-        <div class="guest-alert-icon">💡</div>
-        <div class="guest-alert-body">
-          <h3>İlerlemeni Kaydet!</h3>
-          <p>Misafir modunda tarayıcı verileri silindiğinde ilerlemen kaybolabilir. Ücretsiz bir hesap açarak serini ve puanlarını koru!</p>
-          <button class="btn btn-primary btn-full" id="btn-profile-register">Hesap Oluştur / Giriş Yap</button>
-        </div>
-      </div>
-    ` : ''}
-
-    <div class="profile-actions-card" style="margin-top: 16px;">
-      <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
-      <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
-        <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
-          </div>
-          <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
-        </div>
-        
-        <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-              <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-              <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+  container.innerHTML = `
+    <div class="profile-grid">
+      <!-- Sol Sütun: Profil Bilgileri, Üyelik/Lisans, Ayarlar ve Raporlar -->
+      <div class="profile-col-left">
+        <div class="profile-header-card">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar" id="profile-avatar-trigger" title="Profil fotoğrafını değiştir">
+              ${avatarContent}
+              <div class="avatar-edit-overlay">
+                <span>📷 Düzenle</span>
+              </div>
             </div>
-            <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-              <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-              <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+            <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
+          </div>
+          <div class="profile-user-details">
+            <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px;">
+              ${escapeHtml(state.username || 'Kullanıcı')}
+              ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
+            </h2>
+            ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
+            ${state.email ? `<span class="profile-email" style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-top: 4px; margin-bottom: 6px; font-weight: 500;">✉️ ${escapeHtml(state.email)}</span>` : ''}
+            <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
+          </div>
+        </div>
+
+        ${isGuest ? `
+          <div class="profile-guest-alert">
+            <div class="guest-alert-icon">💡</div>
+            <div class="guest-alert-body">
+              <h3>İlerlemeni Kaydet!</h3>
+              <p>Misafir modunda tarayıcı verileri silindiğinde ilerlemen kaybolabilir. Ücretsiz bir hesap açarak serini ve puanlarını koru!</p>
+              <button class="btn btn-primary btn-full" id="btn-profile-register">Hesap Oluştur / Giriş Yap</button>
             </div>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-            <div style="display: flex; gap: 8px;">
-              <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
-              <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
+        ` : ''}
+
+        <div class="profile-actions-card" style="margin-top: 0;">
+          <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
+            <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
+              </div>
+              <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
             </div>
+            
+            <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+                  <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+                  <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+                </div>
+                <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
+                  <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+                  <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 4px;">
+                <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
+                  <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-actions-card" style="margin-top: 0;">
+          <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
+          <div class="profile-actions-buttons">
+            <button class="btn btn-secondary" id="btn-profile-logout">Çıkış Yap / Hesap Değiştir</button>
+            <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border);">İlerlemeyi Sıfırla</button>
+          </div>
+        </div>
+
+        ${getReportsHTML()}
+      </div>
+
+      <!-- Sağ Sütun: İstatistikler ve Günlük Görevler -->
+      <div class="profile-col-right">
+        <div class="profile-actions-card" style="margin-top: 0;">
+          <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px;">📊 İstatistiklerin</h3>
+          <div class="profile-stats-grid">
+            <div class="profile-stat-box">
+              <span class="stat-box-icon">🔥</span>
+              <div class="stat-box-values">
+                <span class="stat-box-num">${state.streak}</span>
+                <span class="stat-box-label">Günlük Seri</span>
+              </div>
+            </div>
+            <div class="profile-stat-box">
+              <span class="stat-box-icon">⚡</span>
+              <div class="stat-box-values">
+                <span class="stat-box-num">${state.xp}</span>
+                <span class="stat-box-label">Toplam Puan</span>
+              </div>
+            </div>
+            <div class="profile-stat-box" style="grid-column: span 2;">
+              <span class="stat-box-icon">📚</span>
+              <div class="stat-box-values">
+                <span class="stat-box-num">${completedCount}/${totalLessons}</span>
+                <span class="stat-box-label">Ders İlerlemesi (${progressPercent}%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 0;">
+          <div class="daily-tasks-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 16px;">
+            <h3 class="profile-section-title" style="margin: 0; display: flex; align-items: center; gap: 8px;">📅 Günlük Görevler</h3>
+            <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
+          </div>
+          <div class="daily-tasks-list" id="daily-tasks-list">
+            <!-- Dinamik olarak app.js tarafından doldurulacak -->
           </div>
         </div>
       </div>
     </div>
-
-    <h3 class="profile-section-title">📊 İstatistiklerin</h3>
-    <div class="profile-stats-grid">
-      <div class="profile-stat-box">
-        <span class="stat-box-icon">🔥</span>
-        <div class="stat-box-values">
-          <span class="stat-box-num">${state.streak}</span>
-          <span class="stat-box-label">Günlük Seri</span>
-        </div>
-      </div>
-      <div class="profile-stat-box">
-        <span class="stat-box-icon">⚡</span>
-        <div class="stat-box-values">
-          <span class="stat-box-num">${state.xp}</span>
-          <span class="stat-box-label">Toplam Puan</span>
-        </div>
-      </div>
-      <div class="profile-stat-box">
-        <span class="stat-box-icon">📚</span>
-        <div class="stat-box-values">
-          <span class="stat-box-num">${completedCount}/${totalLessons}</span>
-          <span class="stat-box-label">Ders İlerlemesi (${progressPercent}%)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 16px;">
-      <div class="daily-tasks-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 16px;">
-        <h3 class="profile-section-title" style="margin: 0; display: flex; align-items: center; gap: 8px;">📅 Günlük Görevler</h3>
-        <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
-      </div>
-      <div class="daily-tasks-list" id="daily-tasks-list">
-        <!-- Dinamik olarak app.js tarafından doldurulacak -->
-      </div>
-    </div>
-
-    <div class="profile-actions-card">
-      <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
-      <div class="profile-actions-buttons">
-        <button class="btn btn-secondary" id="btn-profile-logout">Çıkış Yap / Hesap Değiştir</button>
-        <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border);">İlerlemeyi Sıfırla</button>
-      </div>
-    </div>
-
-    ${getReportsHTML()}
   `;
 
   renderDailyTasks();
