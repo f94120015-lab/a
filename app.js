@@ -2412,7 +2412,7 @@ function getInitialDailyTasks() {
 
 function checkAndResetDailyTasks() {
   const today = new Date().toDateString();
-  if (!state.dailyTasks || state.dailyTasks.lastResetDate !== today) {
+  if (!state.dailyTasks || !state.dailyTasks.tasks || !Array.isArray(state.dailyTasks.tasks) || state.dailyTasks.lastResetDate !== today) {
     state.dailyTasks = {
       lastResetDate: today,
       tasks: getInitialDailyTasks()
