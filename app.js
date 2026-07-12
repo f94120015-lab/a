@@ -4708,7 +4708,11 @@ function renderQuestion() {
       case 'vagon-to-suffix-match':
       case 'reverse-engineering-translation':
       case 'suffix-decapitation':
+      case 'sentence-connector':
         renderMultipleChoice(body, question);
+        break;
+      case 'error-finder':
+        renderErrorFinder(body, question);
         break;
       case 'inversion-transformer':
         renderInversionTransformer(body, question);
@@ -4731,6 +4735,7 @@ function renderQuestion() {
       case 'matching':
         renderMatching(body, question);
         break;
+      case 'context-distractor':
       case 'fill-blank-dropdown':
         renderFillBlankDropdown(body, question);
         break;
@@ -4807,7 +4812,7 @@ function renderMultipleChoice(container, question) {
                     !question.prompt.includes("_______") &&
                     !question.prompt.includes("İngilizce:");
   
-  let sentenceHtml = question.sentence || "";
+  let sentenceHtml = question.sentence || question.mainSentence || "";
   if (question.type === 'chain-expansion-differential') {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 12px; margin-top: 8px;">
@@ -4963,6 +4968,47 @@ function renderMultipleChoice(container, question) {
       document.getElementById('btn-check').disabled = false;
 
       // Seçim yapıldıktan 250ms sonra cevabı otomatik olarak kontrol et
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
+    });
+  });
+}
+
+// ── Error Finder (Clickable Tokens) ─────────────────────────
+function renderErrorFinder(container, question) {
+  const promptHtml = question.prompt || "Cümledeki gramer hatasını bulun:";
+  const tokens = question.sentenceTokens || [];
+  
+  const tokensHtml = tokens.map((tok, i) => {
+    return `<span class="ef-token" data-index="${i}" style="cursor: pointer; display: inline-block; padding: 4px 8px; margin: 4px; font-size: 1.15rem; font-weight: 500; border-radius: 8px; transition: all 0.2s; border: 1.5px dashed rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); color: var(--text-primary);">${tok}</span>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${promptHtml}</p>
+    <div class="error-finder-tokens-container" style="display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 25px 0; max-width: 100%; box-sizing: border-box; line-height: 2;">
+      ${tokensHtml}
+    </div>
+  `;
+
+  container.querySelectorAll('.ef-token').forEach(tokenSpan => {
+    tokenSpan.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      container.querySelectorAll('.ef-token').forEach(s => {
+        s.classList.remove('selected');
+        s.style.borderColor = 'rgba(255,255,255,0.25)';
+        s.style.background = 'rgba(255,255,255,0.03)';
+        s.style.color = 'var(--text-primary)';
+      });
+      tokenSpan.classList.add('selected');
+      tokenSpan.style.borderColor = 'var(--accent-primary)';
+      tokenSpan.style.background = 'var(--accent-primary-light)';
+      tokenSpan.style.color = 'var(--accent-primary)';
+      
+      selectedAnswer = parseInt(tokenSpan.dataset.index);
+      document.getElementById('btn-check').disabled = false;
+      
+      // Auto-check after 250ms
       setTimeout(() => {
         checkAnswer();
       }, 250);
@@ -6910,6 +6956,9 @@ function checkAnswer() {
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
+    case 'sentence-connector':
+    case 'context-distractor':
+    case 'error-finder':
       isCorrect = selectedAnswer === question.correctIndex;
       break;
     case 'idiom-builder':
@@ -7002,8 +7051,13 @@ function checkAnswer() {
     case 'inversion-transformer':
     case 'punctuation-check':
     case 'structure-match':
+    case 'sentence-connector':
       showMCFeedback(question);
       break;
+    case 'error-finder':
+      showEFFeedback(question);
+      break;
+    case 'context-distractor':
     case 'fill-blank-dropdown':
       const selectEl = document.getElementById('fb-dropdown-select');
       if (selectEl) {
@@ -7117,7 +7171,11 @@ function checkAnswer() {
     feedbackIcon.textContent = '✗';
 
     let correctAnswerText = '';
-    if (question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'inversion-transformer' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
+    if (question.type === 'error-finder') {
+      correctAnswerText = question.sentenceTokens[question.correctIndex] + (question.suggestedCorrection ? ` (Doğrusu: ${question.suggestedCorrection})` : '');
+    } else if (question.type === 'context-distractor' || question.type === 'sentence-connector') {
+      correctAnswerText = question.options[question.correctIndex];
+    } else if (question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'inversion-transformer' || question.type === 'fill-blank-dropdown' || question.type === 'fill-blank' || question.type === 'spotlight' || question.type === 'preposition-magnet' || question.type === 'reflex-blitz' || question.type === 'punctuation-check' || question.type === 'structure-match') {
       correctAnswerText = question.options[question.correctIndex];
     } else if (question.type === 'swipe') {
       correctAnswerText = question.isCorrect ? 'VALID (DOĞRU)' : 'BUG (HATALI)';
@@ -7195,6 +7253,24 @@ function showMCFeedback(question) {
       btn.classList.add('correct');
     } else if (idx === selectedAnswer && idx !== question.correctIndex) {
       btn.classList.add('wrong');
+    }
+  });
+}
+
+function showEFFeedback(question) {
+  const tokens = document.querySelectorAll('.ef-token');
+  tokens.forEach(span => {
+    const idx = parseInt(span.dataset.index);
+    if (idx === question.correctIndex) {
+      span.classList.add('correct');
+      span.style.borderColor = 'var(--color-correct)';
+      span.style.background = 'var(--color-correct-bg)';
+      span.style.color = 'var(--color-correct)';
+    } else if (idx === selectedAnswer && idx !== question.correctIndex) {
+      span.classList.add('wrong');
+      span.style.borderColor = 'var(--color-wrong)';
+      span.style.background = 'var(--color-wrong-bg)';
+      span.style.color = 'var(--color-wrong)';
     }
   });
 }
@@ -9958,23 +10034,41 @@ function checkIsLocal() {
 // BAŞLATMA
 // ============================================================
 function init() {
+  console.log("DEBUG: Initializing app...");
+  console.log("DEBUG: Total units initially:", typeof units !== 'undefined' ? units.length : 'undefined');
+  console.log("DEBUG: Total lessons initially:", typeof lessons !== 'undefined' ? lessons.length : 'undefined');
+
   // Empty lessons and units filter logic
   if (typeof lessons !== 'undefined' && Array.isArray(lessons)) {
     const validLessons = lessons.filter(lesson => {
       const isNotUploaded = (!lesson.exercises || lesson.exercises.length === 0 || lesson.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!lesson.questions || lesson.questions.length === 0);
       return !isNotUploaded;
     });
+    console.log("DEBUG: Valid lessons count:", validLessons.length);
     lessons.length = 0;
     lessons.push(...validLessons);
   }
   
   if (typeof units !== 'undefined' && Array.isArray(units)) {
     const validUnits = units.filter(unit => {
-      return unit.lessons.some(lId => lessons.some(l => l.id === lId));
+      const hasLessons = unit.lessons.some(lId => {
+        const found = lessons.some(l => l.id === lId);
+        return found;
+      });
+      if (unit.id === 31 || unit.id === 62 || unit.id === 23) {
+        console.log(`DEBUG: Unit ${unit.id} (${unit.title}) - hasLessons check:`, hasLessons);
+        console.log(`DEBUG: Unit ${unit.id} lesson IDs:`, unit.lessons);
+        unit.lessons.forEach(lId => {
+          const match = lessons.find(l => l.id === lId);
+          console.log(`  Lesson ${lId} match in lessons:`, match ? `Found (${match.title})` : 'Not Found ❌');
+        });
+      }
+      return hasLessons;
     });
     validUnits.forEach(unit => {
       unit.lessons = unit.lessons.filter(lId => lessons.some(l => l.id === lId));
     });
+    console.log("DEBUG: Valid units count:", validUnits.length);
     units.length = 0;
     units.push(...validUnits);
   }
@@ -11427,7 +11521,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
                                 (question.explanationKey ? explanationDictionary[question.explanationKey] : '') || 
                                 '';
 
-  const isMC = question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue';
+  const isMC = question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'sentence-connector' || question.type === 'context-distractor';
 
   if (isMC) {
     title = 'Çeviri Analizi';
@@ -11519,6 +11613,16 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
 
     wrongExample = `${question.enSentence || 'Cümle'} ➔ ${chosenTranslation} ❌`;
     correctExample = `${question.enSentence || 'Cümle'} ➔ ${correctTranslation} ✔️`;
+
+  } else if (question.type === 'error-finder') {
+    title = 'Gramer Hata Analizi';
+    const chosenToken = question.sentenceTokens[selectedAnswer] || 'Seçim yok';
+    const correctToken = question.sentenceTokens[question.correctIndex];
+    text = `Seçtiğiniz kelime: <strong style="color: var(--color-wrong);">${chosenToken}</strong>`;
+    ruleTitle = '💡 Gramer Hatası Düzeltmesi';
+    ruleText = question.translation || 'Gramer kurallarına göre bu cümlede bir relative clause veya bağlaç uyuşmazlığı bulunmaktadır.';
+    wrongExample = `Hatalı Kullanım: "${chosenToken}" ❌`;
+    correctExample = `Doğru Kullanım: "${correctToken}"` + (question.suggestedCorrection ? ` ➔ "${question.suggestedCorrection}" ✔️` : ' ✔️');
 
   } else if (question.type === 'word-bank') {
     title = 'Cümle Yapısı ve Kelime Dizilimi (Word Order)';
@@ -13410,19 +13514,25 @@ function initSimulator() {
   const btnTabSemi = document.getElementById('btn-tab-semi');
   const btnTabPref = document.getElementById('btn-tab-pref');
   const btnTabPerfect = document.getElementById('btn-tab-perfect');
+  const btnTabPhrasal = document.getElementById('btn-tab-phrasal');
+  const btnTabCond = document.getElementById('btn-tab-cond');
   
   const tabPureContent = document.getElementById('matrix-tab-pure-content');
   const tabCoreContent = document.getElementById('matrix-tab-core-content');
   const tabSemiContent = document.getElementById('matrix-tab-semi-content');
   const tabPrefContent = document.getElementById('matrix-tab-pref-content');
   const tabPerfectContent = document.getElementById('matrix-tab-perfect-content');
+  const tabPhrasalContent = document.getElementById('matrix-tab-phrasal-content');
+  const tabCondContent = document.getElementById('matrix-tab-cond-content');
 
   const tabs = [
     { btn: btnTabPure, content: tabPureContent },
     { btn: btnTabCore, content: tabCoreContent },
     { btn: btnTabSemi, content: tabSemiContent },
     { btn: btnTabPref, content: tabPrefContent },
-    { btn: btnTabPerfect, content: tabPerfectContent }
+    { btn: btnTabPerfect, content: tabPerfectContent },
+    { btn: btnTabPhrasal, content: tabPhrasalContent },
+    { btn: btnTabCond, content: tabCondContent }
   ];
 
   tabs.forEach(tab => {
@@ -13459,6 +13569,7 @@ function initSimulator() {
 
       state.selectedSimulatorModal = modalVal;
       state.negationOn = isNeg;
+      state.conditionalType = 'none'; // Clear conditional selection!
 
       // Determine selectedLevel based on tense and aspect
       if (tenseVal === 'future') {
@@ -13472,20 +13583,50 @@ function initSimulator() {
         else if (aspectVal === 'perfect') selectedLevel = 7;
         else selectedLevel = 12;
       } else {
-        if (aspectVal === 'simple') selectedLevel = 2;
+        if (aspectVal === 'simple') selectedLevel = 1;
         else if (aspectVal === 'progressive') selectedLevel = 4;
         else if (aspectVal === 'perfect') selectedLevel = 6;
-        else selectedLevel = 9;
+        else selectedLevel = 11;
       }
 
       state.pureTense = null;
       saveState();
 
-      // Clear pure tense matrix highlights
+      // Clear pure tense matrix highlights inline styles
       document.querySelectorAll('.matrix-cell-btn').forEach(b => {
-        b.style.background = 'var(--bg-body)';
-        b.style.color = 'var(--text-primary)';
-        b.style.borderColor = 'var(--border-color)';
+        b.style.background = '';
+        b.style.color = '';
+        b.style.borderColor = '';
+      });
+
+      deactivatedWagons = [];
+      showMissionQuestion = false;
+      selectedMissionOption = null;
+
+      const glitchOverlay = document.getElementById('glitch-overlay');
+      if (glitchOverlay) {
+        glitchOverlay.classList.remove('show');
+      }
+
+      renderSimulatorContent();
+      renderActiveMission();
+    };
+  });
+
+  // CONDITIONAL MATRIX BUTTONS CLICK HANDLERS
+  document.querySelectorAll('.cond-matrix-btn').forEach(btn => {
+    btn.onclick = () => {
+      const condVal = btn.dataset.cond;
+      state.conditionalType = condVal;
+      state.selectedSimulatorModal = 'none';
+      state.pureTense = null;
+      saveState();
+
+      // Clear pure tense matrix highlights inline styles
+      document.querySelectorAll('.matrix-cell-btn').forEach(b => {
+        b.style.background = '';
+        b.style.color = '';
+        b.style.borderColor = '';
       });
 
       deactivatedWagons = [];
@@ -13517,7 +13658,6 @@ function initSimulator() {
   levelBtnsContainer.innerHTML = predicateLevelsList.map(item => {
     return `
       <button class="simulator-level-btn" data-pred-count="${item.count}">
-        <span class="lvl-num">${item.count} Öğe</span>
         <span class="lvl-title">${item.title}</span>
       </button>
     `;
@@ -14887,6 +15027,23 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'was_were_used_to_ing') mWord = activeSubjectObj.plural ? 'were used' : 'was used';
   if (modal === 'get_used_to_ing') mWord = activeSubjectObj.plural ? 'get used' : 'gets used';
   
+  // New Phrasal Modals:
+  if (modal === 'be_used_to') mWord = activeSubjectObj.plural ? 'are used' : 'is used';
+  if (modal === 'be_accustomed_to') mWord = activeSubjectObj.plural ? 'are accustomed' : 'is accustomed';
+  if (modal === 'be_willing_to') mWord = activeSubjectObj.plural ? 'are willing' : 'is willing';
+  if (modal === 'be_unwilling_to') mWord = activeSubjectObj.plural ? 'are unwilling' : 'is unwilling';
+  if (modal === 'be_reluctant_to') mWord = activeSubjectObj.plural ? 'are reluctant' : 'is reluctant';
+  if (modal === 'be_likely_to') mWord = activeSubjectObj.plural ? 'are likely' : 'is likely';
+  if (modal === 'be_unlikely_to') mWord = activeSubjectObj.plural ? 'are unlikely' : 'is unlikely';
+  if (modal === 'be_supposed_to') mWord = activeSubjectObj.plural ? 'are supposed' : 'is supposed';
+  if (modal === 'be_bound_to') mWord = activeSubjectObj.plural ? 'are bound' : 'is bound';
+  if (modal === 'be_obliged_to') mWord = activeSubjectObj.plural ? 'are obliged' : 'is obliged';
+  if (modal === 'be_doomed_to') mWord = activeSubjectObj.plural ? 'are doomed' : 'is doomed';
+  if (modal === 'be_to') mWord = activeSubjectObj.plural ? 'are' : 'is';
+  if (modal === 'be_unable_to') mWord = activeSubjectObj.plural ? 'are unable' : 'is unable';
+  if (modal === 'be_about_to') mWord = activeSubjectObj.plural ? 'are about' : 'is about';
+  if (modal === 'be_certain_to') mWord = activeSubjectObj.plural ? 'are certain' : 'is certain';
+
   // Preferences:
   if (modal === 'would_prefer') mWord = 'would prefer';
   if (modal === 'would_rather') mWord = 'would rather';
@@ -14921,6 +15078,23 @@ function getModalTenseData(modal, tense, aspect) {
   if (modal === 'be_used_to_ing') mNotWord = activeSubjectObj.plural ? 'are not used' : 'is not used';
   if (modal === 'was_were_used_to_ing') mNotWord = activeSubjectObj.plural ? 'were not used' : 'was not used';
   if (modal === 'get_used_to_ing') mNotWord = activeSubjectObj.plural ? 'do not get used' : 'does not get used';
+  
+  if (modal === 'be_used_to') mNotWord = activeSubjectObj.plural ? 'are not used' : 'is not used';
+  if (modal === 'be_accustomed_to') mNotWord = activeSubjectObj.plural ? 'are not accustomed' : 'is not accustomed';
+  if (modal === 'be_willing_to') mNotWord = activeSubjectObj.plural ? 'are not willing' : 'is not willing';
+  if (modal === 'be_unwilling_to') mNotWord = activeSubjectObj.plural ? 'are not unwilling' : 'is not unwilling';
+  if (modal === 'be_reluctant_to') mNotWord = activeSubjectObj.plural ? 'are not reluctant' : 'is not reluctant';
+  if (modal === 'be_likely_to') mNotWord = activeSubjectObj.plural ? 'are not likely' : 'is not likely';
+  if (modal === 'be_unlikely_to') mNotWord = activeSubjectObj.plural ? 'are not unlikely' : 'is not unlikely';
+  if (modal === 'be_supposed_to') mNotWord = activeSubjectObj.plural ? 'are not supposed' : 'is not supposed';
+  if (modal === 'be_bound_to') mNotWord = activeSubjectObj.plural ? 'are not bound' : 'is not bound';
+  if (modal === 'be_obliged_to') mNotWord = activeSubjectObj.plural ? 'are not obliged' : 'is not obliged';
+  if (modal === 'be_doomed_to') mNotWord = activeSubjectObj.plural ? 'are not doomed' : 'is not doomed';
+  if (modal === 'be_to') mNotWord = activeSubjectObj.plural ? 'are not' : 'is not';
+  if (modal === 'be_unable_to') mNotWord = activeSubjectObj.plural ? 'are not unable' : 'is not unable';
+  if (modal === 'be_about_to') mNotWord = activeSubjectObj.plural ? 'are not about' : 'is not about';
+  if (modal === 'be_certain_to') mNotWord = activeSubjectObj.plural ? 'are not certain' : 'is not certain';
+
   if (modal === 'would_prefer') mNotWord = 'would not prefer';
   if (modal === 'would_rather') mNotWord = 'would rather not';
   if (modal === 'would_rather_not') mNotWord = 'would rather not';
@@ -14930,7 +15104,7 @@ function getModalTenseData(modal, tense, aspect) {
     { word: activeSubjectObj.eng, role: "subject", color: colorSubject } :
     { word: activeSpeaker, role: "subject", color: colorSubject };
     
-  const isIngModal = modal.endsWith('_ing');
+  const isIngModal = modal.endsWith('_ing') || modal === 'be_used_to' || modal === 'be_accustomed_to';
   const needsTo = modal.includes('to') || modal === 'would_prefer';
   
   const verbWagon = isPassive ?
@@ -14992,6 +15166,51 @@ function getModalTenseData(modal, tense, aspect) {
     } else if (modal === 'get_used_to_ing') {
       qFirst = activeSubjectObj.plural ? (isNeg ? "don't" : "do") : (isNeg ? "doesn't" : "does");
       qRem = "get used";
+    } else if (modal === 'be_used_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not used" : "used";
+    } else if (modal === 'be_accustomed_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not accustomed" : "accustomed";
+    } else if (modal === 'be_willing_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not willing" : "willing";
+    } else if (modal === 'be_unwilling_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not unwilling" : "unwilling";
+    } else if (modal === 'be_reluctant_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not reluctant" : "reluctant";
+    } else if (modal === 'be_likely_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not likely" : "likely";
+    } else if (modal === 'be_unlikely_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not unlikely" : "unlikely";
+    } else if (modal === 'be_supposed_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not supposed" : "supposed";
+    } else if (modal === 'be_bound_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not bound" : "bound";
+    } else if (modal === 'be_obliged_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not obliged" : "obliged";
+    } else if (modal === 'be_doomed_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not doomed" : "doomed";
+    } else if (modal === 'be_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not" : "";
+    } else if (modal === 'be_unable_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not unable" : "unable";
+    } else if (modal === 'be_about_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not about" : "about";
+    } else if (modal === 'be_certain_to') {
+      qFirst = activeSubjectObj.plural ? "are" : "is";
+      qRem = isNeg ? "not certain" : "certain";
     } else if (modal === 'would_prefer') {
       qFirst = "would";
       qRem = isNeg ? "not prefer" : "prefer";
@@ -15421,6 +15640,137 @@ function getModalTenseData(modal, tense, aspect) {
       verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmadı")) : (appendTrSuffix(stem, "maya alıştı"));
     } else {
       verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmamakta")) : (appendTrSuffix(stem, "maya alışmakta"));
+    }
+  } else if (modal === 'be_used_to' || modal === 'be_accustomed_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışık değil")) : (appendTrSuffix(stem, "maya alışıktır"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışıyor değil")) : (appendTrSuffix(stem, "maya alışmaktadır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmış değil")) : (appendTrSuffix(stem, "maya alışmıştır"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya alışmakta değil")) : (appendTrSuffix(stem, "maya alışmaktadır"));
+    }
+  } else if (modal === 'be_willing_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya istekli değil")) : (appendTrSuffix(stem, "maya isteklidir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mayı istiyor değil")) : (appendTrSuffix(stem, "mayı istemektedir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mayı istemiş değil")) : (appendTrSuffix(stem, "mayı istemiştir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mayı istemekte değil")) : (appendTrSuffix(stem, "mayı istemektedir"));
+    }
+  } else if (modal === 'be_unwilling_to' || modal === 'be_reluctant_to') {
+    const label = modal === 'be_unwilling_to' ? "isteksiz" : "gönülsüz";
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya " + label + " değil")) : (appendTrSuffix(stem, "maya " + label + "dir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya " + label + " davranmıyor")) : (appendTrSuffix(stem, "maya " + label + " davranmaktadır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya " + label + " yaklaşmadı")) : (appendTrSuffix(stem, "maya " + label + " yaklaşmıştır"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya " + label + " davranmakta değil")) : (appendTrSuffix(stem, "maya " + label + " davranmaktadır"));
+    }
+  } else if (modal === 'be_likely_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mesi muhtemel değil")) : (appendTrSuffix(stem, "mesi muhtemeldir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "yor olması muhtemel değil")) : (appendTrSuffix(stem, "yor olması muhtemeldir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "miş olması muhtemel değil")) : (appendTrSuffix(stem, "miş olması muhtemeldir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "makta olması muhtemel değil")) : (appendTrSuffix(stem, "makta olması muhtemeldir"));
+    }
+  } else if (modal === 'be_unlikely_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mesi muhtemeldir")) : (appendTrSuffix(stem, "mesi muhtemel değildir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "yor olması muhtemeldir")) : (appendTrSuffix(stem, "yor olması muhtemel değildir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "miş olması muhtemeldir")) : (appendTrSuffix(stem, "miş olması muhtemel değildir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "makta olması muhtemeldir")) : (appendTrSuffix(stem, "makta olması muhtemel değildir"));
+    }
+  } else if (modal === 'be_supposed_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mesi beklenmiyor")) : (appendTrSuffix(stem, "mesi bekleniyor"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "yor olması beklenmiyor")) : (appendTrSuffix(stem, "yor olması bekleniyor"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "miş olması beklenmiyordu")) : (appendTrSuffix(stem, "miş olması gerekiyordu"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "makta olması beklenmiyor")) : (appendTrSuffix(stem, "makta olması bekleniyor"));
+    }
+  } else if (modal === 'be_bound_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mesi kaçınılmaz değil")) : (appendTrSuffix(stem, "mesi kaçınılmazdır"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "yor olması kaçınılmaz değil")) : (appendTrSuffix(stem, "yor olması kaçınılmazdır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "miş olması kaçınılmaz değil")) : (appendTrSuffix(stem, "miş olması kaçınılmazdır"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "makta olması kaçınılmaz değil")) : (appendTrSuffix(stem, "makta olması kaçınılmazdır"));
+    }
+  } else if (modal === 'be_obliged_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda değil")) : (appendTrSuffix(stem, "mak zorundadır"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalıyor değil")) : (appendTrSuffix(stem, "mak zorunda kalmaktadır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmış değil")) : (appendTrSuffix(stem, "mak zorunda kalmıştır"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mak zorunda kalmakta değil")) : (appendTrSuffix(stem, "mak zorunda kalmaktadır"));
+    }
+  } else if (modal === 'be_doomed_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya mahkum değil")) : (appendTrSuffix(stem, "maya mahkumdur"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya mahkum ediliyor değil")) : (appendTrSuffix(stem, "maya mahkum edilmektedir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya mahkum edilmiş değil")) : (appendTrSuffix(stem, "maya mahkum edilmiştir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "maya mahkum edilmekte değil")) : (appendTrSuffix(stem, "maya mahkum edilmektedir"));
+    }
+  } else if (modal === 'be_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "meyecektir")) : (appendTrSuffix(stem, "cektir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mıyor olacaktır")) : (appendTrSuffix(stem, "yor olacaktır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "memiş olması gerekiyordu")) : (appendTrSuffix(stem, "miş olması gerekiyordu"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mamakta olması gerekiyordu")) : (appendTrSuffix(stem, "makta olması gerekiyordu"));
+    }
+  } else if (modal === 'be_unable_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "ebilmektedir")) : (appendTrSuffix(stem, "ememektedir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "ebiliyor değildir")) : (appendTrSuffix(stem, "ememektedir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "ebilmiş değildir")) : (appendTrSuffix(stem, "ememiştir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "ebilmekte değildir")) : (appendTrSuffix(stem, "ememektedir"));
+    }
+  } else if (modal === 'be_about_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mek üzere değil")) : (appendTrSuffix(stem, "mek üzeredir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mek üzere oluyor değil")) : (appendTrSuffix(stem, "mek üzere olmaktadır"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mek üzere kalmış değil")) : (appendTrSuffix(stem, "mek üzere kalmıştır"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "mek üzere bulunmakta değil")) : (appendTrSuffix(stem, "mek üzere bulunmaktadır"));
+    }
+  } else if (modal === 'be_certain_to') {
+    if (aspect === 'simple') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "eceği kesin değil")) : (appendTrSuffix(stem, "eceği kesindir"));
+    } else if (aspect === 'progressive') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "yor olacağı kesin değil")) : (appendTrSuffix(stem, "yor olacağı kesindir"));
+    } else if (aspect === 'perfect') {
+      verbForm = isNeg ? (appendTrSuffix(stem, "miş olacağı kesin değil")) : (appendTrSuffix(stem, "miş olacağı kesindir"));
+    } else {
+      verbForm = isNeg ? (appendTrSuffix(stem, "makta olacağı kesin değil")) : (appendTrSuffix(stem, "makta olacağı kesindir"));
     }
   } else if (modal === 'would_prefer' || modal === 'would_rather') {
     if (aspect === 'simple') {

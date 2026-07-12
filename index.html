@@ -21,7 +21,7 @@
   <!-- Supabase client library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-  <link rel="stylesheet" href="style.css?v=1.0.5">
+  <link rel="stylesheet" href="style.css?v=1.0.6">
 </head>
 <body>
 
@@ -423,20 +423,6 @@
                     </label>
                   </div>
                 </div>
-
-                <!-- Koşul Seçici (If Clause) -->
-                <div class="control-group select-group" id="control-group-conditional">
-                  <span class="control-label">KOŞUL SEÇİCİ (IF)</span>
-                  <select id="select-conditional" class="cockpit-select">
-                    <option value="none" selected>Yok (Standart)</option>
-                    <option value="type0">Type 0 (Genel Doğrular)</option>
-                    <option value="type1">Type 1 (Olasılıklar)</option>
-                    <option value="type2">Type 2 (Şu An Gerçek Dışı)</option>
-                    <option value="type3">Type 3 (Geçmiş Gerçek Dışı)</option>
-                    <option value="mix1">Mix 1 (Geçmiş ➔ Şimdiki)</option>
-                    <option value="mix2">Mix 2 (Genel ➔ Geçmiş)</option>
-                  </select>
-                </div>
               </div>
             </div>
 
@@ -450,6 +436,8 @@
                 <button type="button" class="matrix-tab-btn" id="btn-tab-semi" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Yarı Modallar</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-pref" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Tercih Yapıları</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-perfect" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Perfect Modals</button>
+                <button type="button" class="matrix-tab-btn" id="btn-tab-phrasal" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Phrasal Modals</button>
+                <button type="button" class="matrix-tab-btn" id="btn-tab-cond" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">KOŞUL SEÇİCİ (IF)</button>
               </div>
 
               <!-- Saf Zamanlar İçeriği -->
@@ -554,6 +542,44 @@
                     <button type="button" class="modal-matrix-btn" data-modal="ought_to" data-aspect="perfect-progressive">ought to have been doing</button>
                     <button type="button" class="modal-matrix-btn" data-modal="be_able_to" data-aspect="perfect" data-tense="future">will have been able to do</button>
                     <button type="button" class="modal-matrix-btn" data-modal="would" data-aspect="perfect">would have done</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phrasal Modals İçeriği -->
+              <div id="matrix-tab-phrasal-content" style="display: none;">
+                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px;">
+                    <button type="button" class="modal-matrix-btn" data-modal="be_used_to" data-aspect="simple">be used to: alışkın</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_accustomed_to" data-aspect="simple">be accustomed to: alışkın</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_willing_to" data-aspect="simple">be willing to: istekli</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_unwilling_to" data-aspect="simple">be unwilling to: isteksiz</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_reluctant_to" data-aspect="simple">be reluctant to: gönülsüz</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_likely_to" data-aspect="simple">be likely to: muhtemel</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_unlikely_to" data-aspect="simple">be unlikely to: beklenmeyen</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_supposed_to" data-aspect="simple">be supposed to: gerek</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_bound_to" data-aspect="simple">be bound to: kaçınılmaz</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_obliged_to" data-aspect="simple">be obliged to: zorunlu</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_doomed_to" data-aspect="simple">be doomed to: mahkum</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_to" data-aspect="simple">be to: will / have to</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_unable_to" data-aspect="simple">be unable to: yapamamak</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_about_to" data-aspect="simple">be about to: üzere</button>
+                    <button type="button" class="modal-matrix-btn" data-modal="be_certain_to" data-aspect="simple">be certain to: kesin</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Koşul Seçici İçeriği -->
+              <div id="matrix-tab-cond-content" style="display: none;">
+                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px;">
+                    <button type="button" class="cond-matrix-btn" data-cond="none">Yok (Standart)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="type0">Type 0 (Genel Doğrular)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="type1">Type 1 (Olasılıklar)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="type2">Type 2 (Şu An Gerçek Dışı)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="type3">Type 3 (Geçmiş Gerçek Dışı)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="mix1">Mix 1 (Geçmiş ➔ Şimdiki)</button>
+                    <button type="button" class="cond-matrix-btn" data-cond="mix2">Mix 2 (Genel ➔ Geçmiş)</button>
                   </div>
                 </div>
               </div>
@@ -1358,8 +1384,8 @@
 
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="data.js?v=1.0.7"></script>
-  <script src="data-extra.js?v=1.0.7"></script>
-  <script src="app.js?v=1.0.7"></script>
+  <script src="data.js?v=1.1.0"></script>
+  <script src="data-extra.js?v=1.1.0"></script>
+  <script src="app.js?v=1.1.0"></script>
 </body>
 </html>
