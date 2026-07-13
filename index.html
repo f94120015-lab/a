@@ -19,7 +19,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
 
   <!-- Supabase client library -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 
   <link rel="stylesheet" href="style.css?v=1.2.0">
 </head>
@@ -223,62 +223,7 @@
             <span class="nav-tab-label">Admin</span>
           </button>
           
-          <!-- Son Düzenlemeler Kutusu (Sadece Yerel Geliştirmede Görünür) -->
-          <div id="recent-changes-box" class="recent-changes-box dev-only-box" style="display: none;">
-            <div class="recent-changes-title">
-              <span>📝</span> Son 6 Değişiklik
-            </div>
-            <div class="recent-changes-list">
-              <div class="recent-change-item" data-action="lesson" data-target="c47_l1">
-                <div class="recent-change-item-title">1. Bölüm 47 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 47 Ders 1 Entegre Edildi</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 23:59</div>
-              </div>
-              <div class="recent-change-item" data-action="lesson" data-target="c46_l1">
-                <div class="recent-change-item-title">2. Bölüm 46 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 46 Ders 1 Entegre Edildi</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 21:50</div>
-              </div>
-              <div class="recent-change-item" data-action="lesson" data-target="c45_l2">
-                <div class="recent-change-item-title">3. Bölüm 45 Ders 2 Akademik Soruları ve Müfredatı Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 45 Ders 2 Entegre Edildi</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 21:40</div>
-              </div>
-              <div class="recent-change-item" data-action="lesson" data-target="c45_l1">
-                <div class="recent-change-item-title">4. Bölüm 45 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 45 Ders 1 Entegre Edildi</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 21:30</div>
-              </div>
-              <div class="recent-change-item" data-action="lesson" data-target="c44_l1">
-                <div class="recent-change-item-title">5. Bölüm 44 Akademik Soruları ve Müfredatı Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 44 Entegre Edildi</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 21:21</div>
-              </div>
-              <div class="recent-change-item" data-action="lesson" data-target="c43_l4">
-                <div class="recent-change-item-title">6. Bölüm 43 Akademik Soruları ve Müfredatı Tamamen Entegre Edildi</div>
-                <div class="recent-change-item-meta">
-                  <span>Bölüm 43 Tamamlandı</span>
-                  <span class="recent-change-item-go">Git ➔</span>
-                </div>
-                <div class="recent-change-item-time">06.07.2026 20:47</div>
-              </div>
-            </div>
-          </div>
+          
         </nav>
       </aside>
 
@@ -849,35 +794,93 @@
           <div class="admin-layout" style="display: flex; gap: 20px; min-height: 500px;">
 
             <!-- Left Sidebar Navigation -->
-            <nav class="admin-sidebar" style="width: 240px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
-              <button class="admin-nav-item active" data-admin-section="users" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">👥</span>
+            <nav class="admin-sidebar" style="width: 195px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
+              <button class="admin-nav-item active" data-admin-section="users" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">👥</span>
                 <span>Kullanıcılar</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="licensing" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔑</span>
+              <button class="admin-nav-item" data-admin-section="licensing" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">🔑</span>
                 <span>Lisans Anahtarları</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="review" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🔄</span>
+              <button class="admin-nav-item" data-admin-section="review" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">🔄</span>
                 <span>Akıllı Tekrar</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="telegram" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">✈️</span>
+              <button class="admin-nav-item" data-admin-section="telegram" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">✈️</span>
                 <span>Telegram</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="supabase" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">⚡</span>
+              <button class="admin-nav-item" data-admin-section="supabase" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">⚡</span>
                 <span>Supabase</span>
               </button>
-              <button class="admin-nav-item" data-admin-section="reports" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">⚠️</span>
+              <button class="admin-nav-item" data-admin-section="reports" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">⚠️</span>
                 <span>Hata Bildirimleri</span>
               </button>
-              <button id="btn-next-empty-lesson" style="display: none; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🛠️</span>
+              <button id="btn-next-empty-lesson" style="display: none; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">🛠️</span>
                 <span>Boş Ders Bul</span>
               </button>
+
+              <!-- Son Düzenlemeler Kutusu -->
+              <!-- Son Düzenlemeler Kutusu (Sadece Yerel Geliştirmede Görünür) -->
+          <div id="recent-changes-box" class="recent-changes-box dev-only-box" style="margin-top: 15px;" style="display: none;">
+            <div class="recent-changes-title">
+              <span>📝</span> Son 6 Değişiklik
+            </div>
+            <div class="recent-changes-list">
+              <div class="recent-change-item" data-action="lesson" data-target="c47_l1">
+                <div class="recent-change-item-title">1. Bölüm 47 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 47 Ders 1 Entegre Edildi</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 23:59</div>
+              </div>
+              <div class="recent-change-item" data-action="lesson" data-target="c46_l1">
+                <div class="recent-change-item-title">2. Bölüm 46 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 46 Ders 1 Entegre Edildi</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 21:50</div>
+              </div>
+              <div class="recent-change-item" data-action="lesson" data-target="c45_l2">
+                <div class="recent-change-item-title">3. Bölüm 45 Ders 2 Akademik Soruları ve Müfredatı Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 45 Ders 2 Entegre Edildi</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 21:40</div>
+              </div>
+              <div class="recent-change-item" data-action="lesson" data-target="c45_l1">
+                <div class="recent-change-item-title">4. Bölüm 45 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 45 Ders 1 Entegre Edildi</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 21:30</div>
+              </div>
+              <div class="recent-change-item" data-action="lesson" data-target="c44_l1">
+                <div class="recent-change-item-title">5. Bölüm 44 Akademik Soruları ve Müfredatı Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 44 Entegre Edildi</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 21:21</div>
+              </div>
+              <div class="recent-change-item" data-action="lesson" data-target="c43_l4">
+                <div class="recent-change-item-title">6. Bölüm 43 Akademik Soruları ve Müfredatı Tamamen Entegre Edildi</div>
+                <div class="recent-change-item-meta">
+                  <span>Bölüm 43 Tamamlandı</span>
+                  <span class="recent-change-item-go">Git ➔</span>
+                </div>
+                <div class="recent-change-item-time">06.07.2026 20:47</div>
+              </div>
+            </div>
+          </div>
             </nav>
 
             <!-- Right Main Content Area -->
@@ -990,6 +993,30 @@
                           <!-- JS tarafından doldurulacak -->
                           <tr>
                             <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz lisans anahtarı üretilmemiş.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- Gelen Lisans Talepleri -->
+                  <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; text-align: left; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                      <span>📩</span> Gelen Lisans Talepleri
+                    </h4>
+                    <div style="overflow-x: auto; background: var(--bg-body); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                        <thead>
+                          <tr style="border-bottom: 1px solid var(--border-color); background: rgba(0,0,0,0.05);">
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Kullanıcı</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">İletişim Bilgileri</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Talep Tarihi</th>
+                            <th style="padding: 10px; text-align: center; font-weight: 700;">İşlem</th>
+                          </tr>
+                        </thead>
+                        <tbody id="licence-requests-table-body">
+                          <tr>
+                            <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz gelen bir lisans talebi yok.</td>
                           </tr>
                         </tbody>
                       </table>
@@ -1156,17 +1183,8 @@
                     </button>
                   </div>
 
-                  <!-- Users List -->
-                  <div id="admin-users-list" style="max-height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding: 4px 2px;">
-                    <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
-                      <span style="font-size: 2rem; display: block; margin-bottom: 8px;">⏳</span>
-                      <p style="margin: 0; font-weight: 600;">Yükleniyor...</p>
-                      <p style="margin: 4px 0 0 0; font-size: 0.8rem;">Supabase bağlantısı kontrol ediliyor.</p>
-                    </div>
-                  </div>
-
                   <!-- Refresh Button & Add User Button -->
-                  <div style="display: flex; gap: 12px; width: 100%; margin-top: 2px; flex-wrap: wrap;">
+                  <div style="display: flex; gap: 12px; width: 100%; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;">
                     <button id="btn-admin-refresh-users" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
                       <span>🔄</span> Kullanıcıları Yenile
                     </button>
@@ -1176,6 +1194,15 @@
                     <button id="btn-admin-export-users-excel" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: #107c41; border-color: #107c41; color: #fff;">
                       <span>📥</span> Excel Dışa Aktar
                     </button>
+                  </div>
+
+                  <!-- Users List -->
+                  <div id="admin-users-list" style="max-height: 920px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding: 4px 2px;">
+                    <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+                      <span style="font-size: 2rem; display: block; margin-bottom: 8px;">⏳</span>
+                      <p style="margin: 0; font-weight: 600;">Yükleniyor...</p>
+                      <p style="margin: 4px 0 0 0; font-size: 0.8rem;">Supabase bağlantısı kontrol ediliyor.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1412,7 +1439,7 @@
     <div class="grammar-modal" style="max-width: 500px;">
       <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
         <span class="grammar-modal-icon">🔑</span>
-        <h3 id="admin-licence-modal-title">Kullanıcı Lisans Yönetimi</h3>
+        <h3 id="admin-licence-modal-title">Kullanıcı Yönetimi & Lisans</h3>
         <button class="grammar-modal-close" id="admin-licence-modal-close-btn">&times;</button>
       </div>
       <div class="grammar-modal-body" style="gap: 16px; padding: 24px 20px; text-align: left; display: flex; flex-direction: column;">
@@ -1434,6 +1461,12 @@
             <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
               <label for="admin-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
               <input type="tel" id="admin-licence-phone" placeholder="Telefon girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <label for="admin-user-xp-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">XP Puanı</label>
+              <input type="number" id="admin-user-xp-input" placeholder="XP puanı girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
             </div>
           </div>
           <div style="display: flex; gap: 10px; align-items: flex-end;">
@@ -1467,9 +1500,9 @@
 
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="data.js?v=1.2.0"></script>
-  <script src="data-extra.js?v=1.2.0"></script>
-  <script src="app.js?v=1.2.0"></script>
+  <script src="data.js?v=1.2.0" defer></script>
+  <script src="data-extra.js?v=1.2.0" defer></script>
+  <script src="app.js?v=1.2.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">

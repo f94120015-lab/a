@@ -2253,37 +2253,40 @@ function isLocalEnvironment() {
          window.location.protocol === 'file:';
 }
 
-function saveState() {
+function saveState(immediate = false) {
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
   if (state.username && !state.isGuest) {
     if (supabaseClient) {
-      // Sync state (XP, streaks, etc.)
-      const upsertData = {
-        username: state.username,
-        xp: state.xp || 0,
-        streak: state.streak || 0,
-        hearts: state.hearts || 0,
-        completed_lessons: state.completedLessons || [],
-        avatar_color: state.avatarColor || '#E88A9A'
+      const performSync = () => {
+        const upsertData = {
+          username: state.username,
+          xp: state.xp || 0,
+          streak: state.streak || 0,
+          hearts: state.hearts || 0,
+          completed_lessons: state.completedLessons || [],
+          avatar_color: state.avatarColor || '#E88A9A'
+        };
+        if (state.licenceKey) {
+          upsertData.licence_key = state.licenceKey;
+        }
+        supabaseClient
+          .from('user_states')
+          .upsert(upsertData)
+          .then(({ error }) => {
+            if (error) console.error('Supabase state sync error:', error);
+          });
       };
-      if (state.licenceKey) {
-        upsertData.licence_key = state.licenceKey;
-      }
-      supabaseClient
-        .from('user_states')
-        .upsert(upsertData)
-        .then(({ error }) => {
-          if (error) console.error('Supabase state sync error:', error);
-        });
 
-      // Also update last_seen_at heartbeat in profiles table
-      supabaseClient
-        .from('profiles')
-        .update({ last_seen_at: new Date().toISOString() })
-        .eq('username', state.username)
-        .then(({ error }) => {
-          if (error) console.error('Supabase heartbeat sync error:', error);
-        });
+      if (saveStateDebounceTimeout) {
+        clearTimeout(saveStateDebounceTimeout);
+        saveStateDebounceTimeout = null;
+      }
+
+      if (immediate) {
+        performSync();
+      } else {
+        saveStateDebounceTimeout = setTimeout(performSync, 3000);
+      }
     } else {
       // Local Database sync to amok_user_states
       try {
@@ -2305,6 +2308,13 @@ function saveState() {
     }
   }
 }
+
+// Add tab unload handler to flush save state immediately
+window.addEventListener('beforeunload', () => {
+  if (saveStateDebounceTimeout) {
+    saveState(true);
+  }
+});
 
 function sendTelegramNotification(message) {
   const token = localStorage.getItem('amok_telegram_token') || '';
@@ -3562,6 +3572,7 @@ function initAuth() {
 }
 
 function enterApp() {
+  startHeartbeat();
   validateLicenseDevices();
   updateStreak();
   updateTopBar();
@@ -3607,8 +3618,10 @@ function enterApp() {
 }
 
 function logout() {
+  stopHeartbeat();
   // Kullanıcıya özel state kaydet
   if (state.username && !state.isGuest) {
+    saveState(true);
     localStorage.setItem(`amok_state_${state.username}`, JSON.stringify(state));
   }
   localStorage.removeItem(STATE_KEY);
@@ -8158,7 +8171,10 @@ function completeLesson() {
     }
 
     updateDailyTaskProgress('lessons', 1);
-    saveState();
+    saveState(true);
+    if (typeof addRecentChange === 'function') {
+      addRecentChange(`Ders Tamamlandı: ${currentLesson.title}`, `Kazanılan XP: +${earnedXP}`, 'lesson', currentLesson.id);
+    }
 
     // Telegram notification
     try {
@@ -8952,7 +8968,10 @@ function renderProfile() {
         { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' },
         { username: 'Melis Şen', xp: 90, streak: 2, avatarColor: '#E8CB6E' }
       ];
-      saveState();
+      saveState(true);
+      if (typeof addRecentChange === 'function') {
+        addRecentChange('İlerleme Sıfırlandı', 'Tüm XP ve Dersler Temizlendi', 'element', '#btn-profile-clear');
+      }
       showToast('Tüm verileriniz sıfırlandı!', 'info');
       enterApp();
       switchTab('profile');
@@ -11129,6 +11148,146 @@ function checkIsLocal() {
   return false;
 }
 
+function renderRecentChanges() {
+  const recentBox = document.getElementById('recent-changes-box');
+  if (!recentBox) return;
+  const listEl = recentBox.querySelector('.recent-changes-list');
+  if (!listEl) return;
+  
+  let stored = localStorage.getItem('amok_recent_changes');
+  let changes = [];
+  if (stored) {
+    try {
+      changes = JSON.parse(stored);
+    } catch(e) {
+      console.error(e);
+    }
+  }
+  
+  if (changes.length === 0) {
+    changes = [
+      {
+        title: "1. Bölüm 47 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
+        meta: "Bölüm 47 Ders 1 Entegre Edildi",
+        action: "lesson",
+        target: "c47_l1",
+        time: "06.07.2026 23:59"
+      },
+      {
+        title: "2. Bölüm 46 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
+        meta: "Bölüm 46 Ders 1 Entegre Edildi",
+        action: "lesson",
+        target: "c46_l1",
+        time: "06.07.2026 21:50"
+      },
+      {
+        title: "3. Bölüm 45 Ders 2 Akademik Soruları ve Müfredatı Entegre Edildi",
+        meta: "Bölüm 45 Ders 2 Entegre Edildi",
+        action: "lesson",
+        target: "c45_l2",
+        time: "06.07.2026 21:40"
+      },
+      {
+        title: "4. Bölüm 45 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
+        meta: "Bölüm 45 Ders 1 Entegre Edildi",
+        action: "lesson",
+        target: "c45_l1",
+        time: "06.07.2026 21:30"
+      },
+      {
+        title: "5. Bölüm 44 Akademik Soruları ve Müfredatı Entegre Edildi",
+        meta: "Bölüm 44 Entegre Edildi",
+        action: "lesson",
+        target: "c44_l1",
+        time: "06.07.2026 21:21"
+      },
+      {
+        title: "6. Bölüm 43 Akademik Soruları ve Müfredatı Tamamen Entegre Edildi",
+        meta: "Bölüm 43 Tamamlandı",
+        action: "lesson",
+        target: "c43_l4",
+        time: "06.07.2026 20:47"
+      }
+    ];
+    localStorage.setItem('amok_recent_changes', JSON.stringify(changes));
+  }
+  
+  listEl.innerHTML = changes.map(item => {
+    return `
+      <div class="recent-change-item" data-action="${item.action}" data-target="${item.target}">
+        <div class="recent-change-item-title">${item.title}</div>
+        <div class="recent-change-item-meta">
+          <span>${item.meta}</span>
+          <span class="recent-change-item-go">Git ➔</span>
+        </div>
+        <div class="recent-change-item-time">${item.time}</div>
+      </div>`;
+  }).join('');
+}
+
+function addRecentChange(title, meta, action, target) {
+  let stored = localStorage.getItem('amok_recent_changes');
+  let changes = [];
+  if (stored) {
+    try {
+      changes = JSON.parse(stored);
+    } catch(e) {}
+  }
+  
+  if (changes.length === 0) {
+    renderRecentChanges();
+    stored = localStorage.getItem('amok_recent_changes');
+    if (stored) {
+      try { changes = JSON.parse(stored); } catch(e) {}
+    }
+  }
+  
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' +
+                  now.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+                  
+  const newItem = { title, meta, action, target, time: dateStr };
+  changes.unshift(newItem);
+  
+  if (changes.length > 6) {
+    changes = changes.slice(0, 6);
+  }
+  
+  localStorage.setItem('amok_recent_changes', JSON.stringify(changes));
+  renderRecentChanges();
+}
+
+let saveStateDebounceTimeout = null;
+let heartbeatInterval = null;
+
+function startHeartbeat() {
+  if (heartbeatInterval) clearInterval(heartbeatInterval);
+  
+  const sendHeartbeat = () => {
+    if (supabaseClient && state.username && !state.isGuest) {
+      supabaseClient
+        .from('profiles')
+        .update({ last_seen_at: new Date().toISOString() })
+        .eq('username', state.username)
+        .then(({ error }) => {
+          if (error) console.error('Supabase heartbeat sync error:', error);
+        });
+    }
+  };
+  
+  sendHeartbeat();
+  heartbeatInterval = setInterval(sendHeartbeat, 60000);
+}
+
+function stopHeartbeat() {
+  if (heartbeatInterval) {
+    clearInterval(heartbeatInterval);
+    heartbeatInterval = null;
+  }
+}
+
+
+
 // ============================================================
 // BAŞLATMA
 // ============================================================
@@ -11417,16 +11576,20 @@ function init() {
          }
 
          showToast(`Kullanıcı @${username} başarıyla oluşturuldu! 🎉`, 'success');
-         
+         if (typeof addRecentChange === 'function') {
+           addRecentChange(`Kullanıcı Eklendi: @${username}`, `Lisans: ${licenceKey.substring(0, 14)}...`, 'element', '#btn-admin');
+         }
          if (typeof loadAdminUsers === 'function') {
            await loadAdminUsers();
            if (typeof switchAdminUsersTab === 'function') {
              switchAdminUsersTab('all');
            }
          }
+         return true;
        } catch (err) {
          console.error('Error manual-creating user for license:', err);
          showToast(`Kullanıcı oluşturulurken hata oluştu! ${err.message || ''}`, 'error');
+         return false;
        }
      };
 
@@ -11445,6 +11608,10 @@ function init() {
        }
 
        licenceTableBody.innerHTML = licences.map((lic, idx) => {
+         const isAdded = lic.added === true;
+         const btnHtml = isAdded
+           ? `<button class="btn btn-primary btn-add-user-from-licence" disabled style="padding: 4px 8px; font-size: 0.75rem; background: #6b7280; color: #fff; border: 1px solid #6b7280; border-radius: 4px; cursor: not-allowed; margin-right: 6px; opacity: 0.6;">Eklendi</button>`
+           : `<button class="btn btn-primary btn-add-user-from-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: var(--accent-primary, #8B7EC8); color: #fff; border: 1px solid var(--accent-primary, #8B7EC8); border-radius: 4px; cursor: pointer; margin-right: 6px;">Kullanıcı Ekle</button>`;
          return `
            <tr style="border-bottom: 1px solid var(--border-color);">
              <td style="padding: 10px; text-align: left; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
@@ -11455,7 +11622,7 @@ function init() {
              <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${lic.expiryStr}</td>
              <td style="padding: 10px; text-align: left; font-family: monospace; font-weight: 700; color: var(--accent-primary); letter-spacing: 0.5px;">${lic.key}</td>
              <td style="padding: 10px; text-align: center; white-space: nowrap;">
-               <button class="btn btn-primary btn-add-user-from-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: var(--accent-primary, #8B7EC8); color: #fff; border: 1px solid var(--accent-primary, #8B7EC8); border-radius: 4px; cursor: pointer; margin-right: 6px;">Kullanıcı Ekle</button>
+               ${btnHtml}
                <button class="btn btn-secondary btn-delete-licence" data-idx="${idx}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Sil</button>
              </td>
            </tr>`;
@@ -11463,9 +11630,9 @@ function init() {
 
        // Add add-user listeners
        licenceTableBody.querySelectorAll('.btn-add-user-from-licence').forEach(btn => {
+         if (btn.disabled) return;
          btn.addEventListener('click', async (e) => {
            btn.disabled = true;
-           const originalText = btn.textContent;
            btn.textContent = 'Ekleniyor...';
            
            const idx = parseInt(btn.dataset.idx, 10);
@@ -11473,11 +11640,26 @@ function init() {
            const currentList = current ? JSON.parse(current) : [];
            const lic = currentList[idx];
            if (lic) {
-             await createUserForLicence(lic);
+             // Pre-emptively mark as added to avoid race condition during loadAdminUsers() -> loadGeneratedLicences()
+             lic.added = true;
+             currentList[idx] = lic;
+             localStorage.setItem('amok_generated_licences', JSON.stringify(currentList));
+             
+             const success = await createUserForLicence(lic);
+             if (!success) {
+               // Rollback if failed
+               const rollbackCurrent = localStorage.getItem('amok_generated_licences');
+               const rollbackList = rollbackCurrent ? JSON.parse(rollbackCurrent) : [];
+               if (rollbackList[idx]) {
+                 delete rollbackList[idx].added;
+                 localStorage.setItem('amok_generated_licences', JSON.stringify(rollbackList));
+               }
+               loadGeneratedLicences();
+             }
+           } else {
+             btn.disabled = false;
+             btn.textContent = 'Kullanıcı Ekle';
            }
-           
-           btn.disabled = false;
-           btn.textContent = originalText;
          });
        });
 
@@ -11487,9 +11669,13 @@ function init() {
            const idx = parseInt(btn.dataset.idx, 10);
            const current = localStorage.getItem('amok_generated_licences');
            const currentList = current ? JSON.parse(current) : [];
+           const lic = currentList[idx];
            currentList.splice(idx, 1);
            localStorage.setItem('amok_generated_licences', JSON.stringify(currentList));
            loadGeneratedLicences();
+           if (lic && typeof addRecentChange === 'function') {
+             addRecentChange(`Lisans Anahtarı Silindi`, `Sahibi: ${lic.name || 'İsimsiz'}`, 'element', '#btn-admin');
+           }
            showToast('Lisans anahtarı listeden silindi! 🗑️', 'info');
          });
        });
@@ -11682,6 +11868,9 @@ function init() {
          if (licencePhoneInput) licencePhoneInput.value = '';
 
          loadGeneratedLicences();
+         if (typeof addRecentChange === 'function') {
+           addRecentChange(`Lisans Üretildi: @${username}`, `Alıcı: ${fullName}`, 'element', '#btn-admin');
+         }
          // Refresh admin users list if loaded
          if (typeof loadAdminUsers === 'function') {
            loadAdminUsers();
@@ -11919,64 +12108,71 @@ function init() {
           licenceBadge = `<span style="background: var(--bg-secondary); color: var(--text-secondary); font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700; border: 1px solid var(--border-color);">Ücretsiz Üye</span>`;
         }
 
-        return `
-          <div style="display: flex; align-items: flex-start; gap: 14px; padding: 16px; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.15s; cursor: default;"
+return `
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 12px; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.15s; cursor: default; flex-wrap: wrap;"
                onmouseover="this.style.borderColor='var(--accent-primary)'; this.style.boxShadow='0 2px 8px rgba(139,126,200,0.06)'"
                onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none'">
-            <!-- Avatar -->
-            <div style="position: relative; flex-shrink: 0; margin-top: 2px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-                ${initial}
-              </div>
-              ${onlineDot}
-            </div>
-            <!-- Info -->
-            <div style="flex: 1; min-width: 0;">
-              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px;">
-                <span style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px;">${displayName}</span>
-                ${subName ? `<span style="font-size: 0.75rem; color: var(--text-secondary);">${subName}</span>` : ''}
-                ${newBadge}
-              </div>
-              
-              <!-- Personal Details (Email & Phone) -->
-              <div style="display: flex; flex-direction: column; gap: 3px; margin: 6px 0; font-size: 0.78rem; color: var(--text-secondary);">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span>✉️</span> <span style="word-break: break-all;">${user.email}</span>
+            
+            <!-- Sütun 1: Profil Bilgisi -->
+            <div style="display: flex; align-items: center; gap: 10px; min-width: 180px; flex: 1;">
+              <!-- Avatar -->
+              <div style="position: relative; flex-shrink: 0;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+                  ${initial}
                 </div>
-                ${user.phone && user.phone !== '—' ? `
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span>📞</span> <span>${user.phone}</span>
-                </div>` : ''}
+                ${onlineDot}
               </div>
-
-              <!-- Lisans Durumu ve Yönetim Butonları -->
-              <div style="display: flex; align-items: center; gap: 8px; margin: 8px 0; flex-wrap: wrap;">
-                ${licenceBadge}
-                <div style="display: inline-flex; gap: 4px; flex-wrap: wrap;">
-                  <button class="btn-admin-manage-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='var(--accent-primary)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-primary)';">Lisans Yönet</button>
-                  ${showDeleteBtn ? `<button class="btn-admin-delete-licence" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid #ff3b30; background: transparent; color: #ff3b30; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#ff3b30'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#ff3b30';">Lisans Sil</button>` : ''}
-                  <button class="btn-admin-delete-user" data-username="${user.username}" style="padding: 2px 8px; font-size: 0.7rem; font-weight: 700; border-radius: 4px; border: 1px solid #dc2626; background: transparent; color: #dc2626; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#dc2626'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#dc2626';">Kullanıcıyı Sil</button>
+              <!-- İsim & Kullanıcı Adı -->
+              <div style="display: flex; flex-direction: column; gap: 1px; min-width: 0;">
+                <div style="display: flex; align-items: center; gap: 4px; flex-wrap: wrap;">
+                  <span style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px;" title="${displayName}">${displayName}</span>
+                  ${newBadge}
                 </div>
+                ${subName ? `<span style="font-size: 0.7rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px;">${subName}</span>` : ''}
               </div>
+            </div>
 
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 6px;">
-                <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Son görülme">🕐 ${lastSeenText}</span>
-                <span style="font-size: 0.72rem; color: var(--text-secondary);" title="Kayıt tarihi">📅 ${createdText}</span>
+            <!-- Sütun 2: İletişim -->
+            <div style="display: flex; flex-direction: column; gap: 1px; font-size: 0.74rem; color: var(--text-secondary); min-width: 165px; flex: 1;">
+              <div style="display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${user.email}">
+                <span style="flex-shrink: 0;">✉️</span> <span>${user.email}</span>
+              </div>
+              ${user.phone && user.phone !== '—' ? `
+              <div style="display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                <span style="flex-shrink: 0;">📞</span> <span>${user.phone}</span>
+              </div>` : ''}
+            </div>
+
+            <!-- Sütun 3: Lisans & Zaman -->
+            <div style="display: flex; flex-direction: column; gap: 3px; min-width: 140px; flex: 0.8;">
+              <div>${licenceBadge}</div>
+              <div style="display: flex; flex-direction: column; gap: 1px; font-size: 0.65rem; color: var(--text-secondary);">
+                <span title="Son görülme">Son: ${lastSeenText}</span>
+                <span title="Kayıt tarihi">Kayıt: ${createdText}</span>
               </div>
             </div>
-            <!-- Stats -->
-            <div style="display: flex; gap: 10px; flex-shrink: 0; align-items: center; margin-top: 2px;">
-              <div style="text-align: center; min-width: 36px;" title="XP">
-                <div style="font-weight: 800; font-size: 0.9rem; color: var(--accent-primary); line-height: 1;">${user.xp}</div>
-                <div style="font-size: 0.6rem; color: var(--text-secondary); font-weight: 600;">XP</div>
+
+            <!-- Sütun 4: İstatistik İkonları -->
+            <div style="display: flex; gap: 10px; flex-shrink: 0; min-width: 110px; justify-content: center; align-items: center;">
+              <div style="text-align: center; min-width: 32px;" title="XP">
+                <div style="font-weight: 800; font-size: 0.85rem; color: var(--accent-primary); line-height: 1;">${user.xp}</div>
+                <div style="font-size: 0.55rem; color: var(--text-secondary); font-weight: 600;">XP</div>
               </div>
-              <div style="text-align: center; min-width: 30px;" title="Seri">
-                <div style="font-weight: 800; font-size: 0.9rem; color: #f59e0b; line-height: 1;">🔥${user.streak}</div>
+              <div style="text-align: center; min-width: 28px;" title="Seri">
+                <div style="font-weight: 800; font-size: 0.85rem; color: #f59e0b; line-height: 1;">🔥${user.streak}</div>
               </div>
-              <div style="text-align: center; min-width: 30px;" title="Tamamlanan ders">
-                <div style="font-weight: 800; font-size: 0.9rem; color: #10b981; line-height: 1;">📚${user.completedLessons}</div>
+              <div style="text-align: center; min-width: 28px;" title="Tamamlanan ders">
+                <div style="font-weight: 800; font-size: 0.85rem; color: #10b981; line-height: 1;">📚${user.completedLessons}</div>
               </div>
             </div>
+
+            <!-- Sütun 5: İşlem Butonları -->
+            <div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; min-width: 175px; flex-shrink: 0;">
+              <button class="btn-admin-manage-licence" data-username="${user.username}" style="padding: 3px 6px; font-size: 0.65rem; font-weight: 700; border-radius: 4px; border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='var(--accent-primary)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--accent-primary)';">Lisans Yönet</button>
+              ${showDeleteBtn ? `<button class="btn-admin-delete-licence" data-username="${user.username}" style="padding: 3px 6px; font-size: 0.65rem; font-weight: 700; border-radius: 4px; border: 1px solid #ff3b30; background: transparent; color: #ff3b30; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#ff3b30'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#ff3b30';">Lisans Sil</button>` : ''}
+              <button class="btn-admin-delete-user" data-username="${user.username}" style="padding: 3px 6px; font-size: 0.65rem; font-weight: 700; border-radius: 4px; border: 1px solid #dc2626; background: transparent; color: #dc2626; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#dc2626'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#dc2626';">Sil</button>
+            </div>
+
           </div>`;
       }).join('');
 
@@ -12310,6 +12506,9 @@ function init() {
             newResetBtn.textContent = 'Sıfırlanıyor...';
             try {
               await resetUserDevices(user.username);
+              if (typeof addRecentChange === 'function') {
+                addRecentChange(`Cihazlar Sıfırlandı: @${user.username}`, 'Cihaz Kayıtları Temizlendi', 'element', '#btn-admin');
+              }
               showToast('Cihaz kayıtları başarıyla sıfırlandı! 📱', 'success');
               user.licenceDevices = '';
               document.getElementById('admin-licence-current-devices').textContent = 'Cihazlar: Yok';
@@ -12359,6 +12558,9 @@ function init() {
     async function deleteUserLicence(username) {
       try {
         await saveUserLicenceDirectly(username, '', '', '');
+        if (typeof addRecentChange === 'function') {
+          addRecentChange(`Lisans Kaldırıldı: @${username}`, 'Lisans Anahtarı Silindi', 'element', '#btn-admin');
+        }
         showToast('Lisans başarıyla silindi! 🗑️', 'success');
         await loadAdminUsers();
       } catch (err) {
@@ -12418,6 +12620,9 @@ function init() {
           }
         }
 
+        if (typeof addRecentChange === 'function') {
+          addRecentChange(`Kullanıcı Silindi: @${username}`, 'Tüm veriler temizlendi', 'element', '#btn-admin');
+        }
         showToast('Kullanıcı başarıyla silindi! 🗑️', 'success');
         await loadAdminUsers();
       } catch (err) {
@@ -12440,6 +12645,9 @@ function init() {
       if (phone) metaRegistry[username].phone = phone;
 metaRegistry[username].licenceKey = licenceKey;
       localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+      if (licenceKey && typeof addRecentChange === 'function') {
+        addRecentChange(`Lisans Güncellendi: @${username}`, `Anahtar: ${licenceKey.substring(0, 14)}...`, 'element', '#btn-admin');
+      }
 
       // 3. Update current active state if matches active logged-in user
       if (state.username === username) {
@@ -12856,6 +13064,7 @@ metaRegistry[username].licenceKey = licenceKey;
   }
   initSocialSystem();
   enterApp();
+  renderRecentChanges();
   initNotifications();
   initSimulator();
 }
