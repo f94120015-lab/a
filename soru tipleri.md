@@ -71,3 +71,8 @@ Bu belgede, uygulamada kullanılan tüm interaktif soru tiplerinin açıklamalar
 ### 17. [Hız Tüneli (reflex-blitz)](file:///Users/faruknafizfazlioglu/Desktop/amok/app.js#L5597)
 * **Açıklama:** Zaman kısıtlı hızlı tepki verme oyunudur.
 * **Kullanımı:** Süreli refleks ölçümleri yaparak öğrencinin gramer yapılarını hızlıca tanımasını ve kelime-işlev reflekslerini pekiştirmesini sağlar.
+
+### 18. [Hata Avcısı (error-finder)](file:///Users/faruknafizfazlioglu/Desktop/amok/app.js#L5464)
+* **Açıklama:** Cümledeki kelimelerin/öbeklerin tıklanabilir butonlar halinde sunulduğu hata bulma oyunudur.
+* **Kullanımı:** Akademik cümlede gramer veya bilgi hatası barındıran kelimeyi/öbeği üzerine dokunarak seçmeyi hedefler.
+

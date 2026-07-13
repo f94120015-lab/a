@@ -7221,7 +7221,16 @@ const COLLOCATION_DICT = {
   "suggest that": "İleri sürmek / Önermek",
   "indicate that": "İşaret etmek / Göstermek",
   "speculate that": "Tahminde bulunmak / Kuramsallaştırmak",
-  "hypothesize that": "Hipotez ileri sürmek"
+  "hypothesize that": "Hipotez ileri sürmek",
+  // u99_l1_ex5 collocations
+  "extract free nitrogen": "Serbest azotu çekmek",
+  "belongs to the family": "Familyasına aittir",
+  "consists of seeds": "Tohumlardan oluşur",
+  "treated with manure": "Gübreyle işlenmiş",
+  "rich in protein": "Protein bakımından zengin",
+  "needed for growth": "Büyüme için gereklidir",
+  "provide heat for living": "Yaşamak için ısı sağlamak",
+  "in the form of a bush": "Bir çalı şeklinde"
 };
 
 function showCollocationPopup(english, turkish) {
@@ -7248,13 +7257,13 @@ function showCollocationPopup(english, turkish) {
     popup.classList.add('show');
   }, 10);
 
-  // Auto remove after 3 seconds
+  // Auto remove after 1.5 seconds
   setTimeout(() => {
     popup.classList.remove('show');
     setTimeout(() => {
       popup.remove();
     }, 300);
-  }, 3000);
+  }, 1500);
 }
 
 // ── Bağlantı Kilidi (Collocation Matcher) ──

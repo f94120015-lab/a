@@ -6952,17 +6952,17 @@ span[style*="color:#339af0"] * {
 /* Collocation Success Popup */
 .collocation-success-popup {
   position: fixed;
-  bottom: 120px;
+  bottom: 140px;
   left: 50%;
   transform: translate(-50%, 20px);
   background: var(--bg-card);
-  border: 2.5px solid var(--color-correct);
-  border-radius: 16px;
-  padding: 16px 24px;
+  border: 3.5px solid var(--color-correct);
+  border-radius: 20px;
+  padding: 22px 36px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 15px rgba(34, 197, 94, 0.1);
+  gap: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), 0 0 25px rgba(34, 197, 94, 0.25);
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
@@ -6975,27 +6975,27 @@ span[style*="color:#339af0"] * {
 }
 
 .collocation-popup-icon {
-  font-size: 2rem;
+  font-size: 2.6rem;
   animation: popIcon 0.5s ease;
 }
 
 .collocation-popup-content {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .collocation-popup-en {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--color-correct);
 }
 
 .collocation-popup-tr {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 @keyframes popIcon {
