@@ -3420,6 +3420,145 @@ function initAuth() {
   document.getElementById('btn-apple-login').addEventListener('click', () => {
     handleSocialLogin('Apple');
   });
+
+  document.getElementById('btn-activate-licence-login').addEventListener('click', () => {
+    const modal = document.createElement('div');
+    modal.className = 'custom-modal-overlay';
+    modal.id = 'licence-login-modal';
+    
+    modal.innerHTML = `
+      <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: 420px; width: 90%;">
+        <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.3rem;">🔑</span> Lisans Anahtarı Ekle
+          </h3>
+          <button class="modal-close-btn" id="btn-close-licence-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+        </div>
+        <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+            Uygulamayı aktifleştirmek için lütfen lisans bilgilerinizi giriniz:
+          </p>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="licence-login-name" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
+            <input type="text" id="licence-login-name" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none;" required>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="licence-login-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
+            <input type="email" id="licence-login-email" class="report-select" placeholder="Örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none;" required>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="licence-login-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
+            <input type="tel" id="licence-login-phone" class="report-select" placeholder="Örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none;" required>
+          </div>
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label for="licence-login-key" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Lisans Anahtarı</label>
+            <input type="text" id="licence-login-key" class="report-select" placeholder="Örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: monospace; font-size: 0.9rem; box-sizing: border-box; outline: none;" required>
+          </div>
+        </div>
+        <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+          <button class="btn btn-secondary" id="btn-cancel-licence-login" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
+          <button class="btn btn-primary" id="btn-submit-licence-login" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Aktifleştir ve Giriş Yap</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    document.getElementById('btn-close-licence-modal').addEventListener('click', () => modal.remove());
+    document.getElementById('btn-cancel-licence-login').addEventListener('click', () => modal.remove());
+    
+    document.getElementById('btn-submit-licence-login').addEventListener('click', async () => {
+      const fullName = document.getElementById('licence-login-name').value.trim();
+      const email = document.getElementById('licence-login-email').value.trim();
+      const phone = document.getElementById('licence-login-phone').value.trim();
+      const licenceKey = document.getElementById('licence-login-key').value.trim();
+
+      if (!fullName) {
+        showToast('Lütfen adınızı ve soyadınızı girin!', 'error');
+        return;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+        return;
+      }
+      if (!phone) {
+        showToast('Lütfen telefon numaranızı girin!', 'error');
+        return;
+      }
+      if (!licenceKey) {
+        showToast('Lütfen lisans anahtarınızı girin!', 'error');
+        return;
+      }
+
+      // verifyLicenceKey ile doğrula
+      const check = verifyLicenceKey(licenceKey, email, phone);
+      if (check.valid) {
+        const now = new Date();
+        if (now > check.expiryDate) {
+          showToast(`Bu lisansın süresi ${check.expiryDate.toLocaleDateString('tr-TR')} tarihinde dolmuştur!`, "error");
+          return;
+        }
+
+        modal.remove();
+        showToast('Lisans doğrulandı! Giriş yapılıyor...', 'success');
+
+        setTimeout(async () => {
+          // Kullanıcının state'ini yükle
+          const userState = localStorage.getItem(`amok_state_${fullName}`);
+          if (userState) {
+            try {
+              state = { ...state, ...JSON.parse(userState) };
+            } catch (e) {
+              console.error('Kullanıcı state yükleme hatası:', e);
+            }
+          }
+
+          // Bilgileri güncelle
+          const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+          const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+          state.username = fullName;
+          state.email = email;
+          state.isGuest = false;
+          state.licenceKey = licenceKey;
+          if (!state.avatarColor) {
+            state.avatarColor = randomColor;
+          }
+
+          const deviceOk = await validateLicenseDevices();
+          if (!deviceOk) {
+            return;
+          }
+
+          saveState();
+
+          // Supabase varsa oraya da kaydet
+          if (supabaseClient && state.username && !state.isGuest) {
+            try {
+              await supabaseClient
+                .from('user_states')
+                .upsert({ 
+                  username: state.username,
+                  licence_key: licenceKey
+                }, { onConflict: 'username' });
+            } catch(e) {
+              console.error('Licence sync error:', e);
+            }
+          }
+
+          try {
+            sendTelegramNotification(`🔑 *Lisans Girişi!*\n👤 *Kullanıcı:* ${fullName}\n📧 *E-posta:* ${email}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
+          } catch (e) {}
+
+          showToast(`Hoş geldin, ${fullName}! 🎉`, 'success');
+          enterApp();
+        }, 800);
+      } else {
+        showToast(`Doğrulama Hatası: ${check.message}`, 'error');
+      }
+    });
+  });
 }
 
 function enterApp() {
@@ -8386,6 +8525,177 @@ function showAvatarSelectorModal() {
   });
 }
 
+function updateLicenceUI() {
+  const key = state.licenceKey || '';
+  
+  // Nodes for Profile
+  const statusText = document.getElementById('licence-status-text');
+  const expiryText = document.getElementById('licence-expiry-text');
+  const statusBadge = document.getElementById('licence-status-badge');
+  
+  // Nodes for Store
+  const storeStatusText = document.getElementById('store-licence-status-text');
+  const storeExpiryText = document.getElementById('store-licence-expiry-text');
+  const storeStatusBadge = document.getElementById('store-licence-status-badge');
+
+  const updateElements = (sText, eText, sBadge) => {
+    if (!sText && !eText && !sBadge) return;
+    if (key === 'REQUESTED') {
+      if (sText) sText.textContent = "Durum: Lisans Talebi Bekleniyor 📩";
+      if (eText) eText.textContent = "Talebiniz yöneticiye iletildi, değerlendiriliyor.";
+      if (sBadge) {
+        sBadge.textContent = "TALEP EDİLDİ";
+        sBadge.style.background = "rgba(59, 130, 246, 0.1)";
+        sBadge.style.color = "#3b82f6";
+        sBadge.style.borderColor = "rgba(59, 130, 246, 0.25)";
+      }
+    } else if (!key) {
+      if (sText) sText.textContent = "Durum: Ücretsiz Sürüm (Kilitli)";
+      if (eText) eText.textContent = "Dersler ve bölümler kilitlidir.";
+      if (sBadge) {
+        sBadge.textContent = "ÜCRETSİZ / KİLİTLİ";
+        sBadge.style.background = "rgba(255,59,48,0.1)";
+        sBadge.style.color = "#ff3b30";
+        sBadge.style.borderColor = "rgba(255,59,48,0.25)";
+      }
+    } else {
+      const check = verifyLicenceKey(key);
+      if (check.valid) {
+        const now = new Date();
+        if (now > check.expiryDate) {
+          if (sText) sText.textContent = `Durum: Süresi Dolan Lisans (${check.owner})`;
+          if (eText) eText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
+          if (sBadge) {
+            sBadge.textContent = "SÜRESİ DOLDU";
+            sBadge.style.background = "rgba(245,158,11,0.1)";
+            sBadge.style.color = "#f59e0b";
+            sBadge.style.borderColor = "rgba(245,158,11,0.25)";
+          }
+        } else {
+          if (sText) sText.textContent = `Durum: Premium Aktif (${check.owner})`;
+          if (eText) eText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
+          if (sBadge) {
+            sBadge.textContent = "PREMIUM AKTİF";
+            sBadge.style.background = "rgba(34,197,94,0.1)";
+            sBadge.style.color = "#22c55e";
+            sBadge.style.borderColor = "rgba(34,197,94,0.25)";
+          }
+        }
+      } else {
+        if (sText) sText.textContent = "Durum: Geçersiz Lisans";
+        if (eText) eText.textContent = check.message || "Lütfen geçerli bir kod girin.";
+        if (sBadge) {
+          sBadge.textContent = "GEÇERSİZ";
+          sBadge.style.background = "rgba(255,59,48,0.1)";
+          sBadge.style.color = "#ff3b30";
+          sBadge.style.borderColor = "rgba(255,59,48,0.25)";
+        }
+      }
+    }
+  };
+
+  updateElements(statusText, expiryText, statusBadge);
+  updateElements(storeStatusText, storeExpiryText, storeStatusBadge);
+
+  // Sync inputs values
+  const storeEmailInput = document.getElementById('store-licence-email');
+  const storePhoneInput = document.getElementById('store-licence-phone');
+  const profileEmailInput = document.getElementById('profile-licence-email');
+  const profilePhoneInput = document.getElementById('profile-licence-phone');
+  
+  if (storeEmailInput) storeEmailInput.value = state.email || '';
+  if (storePhoneInput) storePhoneInput.value = state.phone || '';
+  if (profileEmailInput) profileEmailInput.value = state.email || '';
+  if (profilePhoneInput) profilePhoneInput.value = state.phone || '';
+}
+
+async function activateLicence(inputVal) {
+  if (!inputVal) {
+    showToast("Lütfen lisans anahtarınızı girin!", "error");
+    return false;
+  }
+  const check = verifyLicenceKey(inputVal);
+  if (check.valid) {
+    const now = new Date();
+    if (now > check.expiryDate) {
+      showToast(`Bu lisansın süresi ${check.expiryDate.toLocaleDateString('tr-TR')} tarihinde dolmuştur!`, "error");
+      return false;
+    }
+    
+    state.licenceKey = inputVal;
+    const deviceOk = await validateLicenseDevices();
+    if (!deviceOk) {
+      return false;
+    }
+    saveState();
+    showToast(`Tebrikler! Premium Lisans Aktifleştirildi (Sahibi: ${check.owner}) 🎉`, "success");
+    updateLicenceUI();
+    
+    const licenceInput = document.getElementById('profile-licence-input');
+    const storeLicenceInput = document.getElementById('store-licence-input');
+    if (licenceInput) licenceInput.value = '';
+    if (storeLicenceInput) storeLicenceInput.value = '';
+    
+    // Supabase varsa oraya da kaydet
+    if (supabaseClient && state.username && !state.isGuest) {
+      try {
+        await supabaseClient
+          .from('user_states')
+          .update({ licence_key: inputVal })
+          .eq('username', state.username);
+      } catch(e) {
+        console.error('Licence sync error:', e);
+      }
+    }
+    
+    // Ekrana yansıması için yeniden oluştur/yenile
+    setTimeout(() => {
+      const activeTab = document.querySelector('.tab-button.active')?.getAttribute('data-tab') || 'profile';
+      enterApp();
+      switchTab(activeTab);
+    }, 1500);
+    return true;
+  } else {
+    showToast(`Aktivasyon Hatası: ${check.message}`, "error");
+    return false;
+  }
+}
+
+async function requestLicence() {
+  if (!state.username || state.isGuest) {
+    showToast("Lisans talebinde bulunabilmek için üye girişi yapmalısınız!", "error");
+    return false;
+  }
+  if (state.licenceKey === 'REQUESTED') {
+    showToast("Zaten bekleyen bir lisans talebiniz bulunmaktadır.", "info");
+    return false;
+  }
+  if (state.licenceKey) {
+    const check = verifyLicenceKey(state.licenceKey);
+    if (check.valid && new Date() <= check.expiryDate) {
+      showToast("Zaten aktif bir premium lisansınız var!", "info");
+      return false;
+    }
+  }
+  
+  state.licenceKey = 'REQUESTED';
+  saveState();
+  showToast("Lisans talebiniz başarıyla iletildi! 🎉", "success");
+  updateLicenceUI();
+  
+  if (supabaseClient && state.username) {
+    try {
+      await supabaseClient
+        .from('user_states')
+        .update({ licence_key: 'REQUESTED' })
+        .eq('username', state.username);
+    } catch(e) {
+      console.error('Licence request sync error:', e);
+    }
+  }
+  return true;
+}
+
 function renderProfile() {
   const container = document.querySelector('#tab-content-profile .profile-container');
   if (!container) return;
@@ -8472,23 +8782,24 @@ function renderProfile() {
               <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
             </div>
             
-            <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 12px;">
               <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
                   <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-                  <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+                  <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
                 </div>
                 <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
                   <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-                  <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem;">
+                  <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
                 </div>
               </div>
               <div style="display: flex; flex-direction: column; gap: 4px;">
                 <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-                <div style="display: flex; gap: 8px;">
-                  <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace;">
-                  <button id="btn-profile-activate-licence" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md);">Aktifleştir</button>
-                </div>
+                <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box;">
+              </div>
+              <div style="display: flex; gap: 8px; width: 100%; margin-top: 4px;">
+                <button id="btn-profile-activate-licence" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0;">Aktifleştir</button>
+                <button id="btn-profile-request-licence" class="btn btn-secondary-outline" style="flex: 1; padding: 10px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent; margin-bottom: 0;">Lisans Anahtarı Al</button>
               </div>
             </div>
           </div>
@@ -8578,119 +8889,38 @@ function renderProfile() {
   }
 
   // Lisans durumu UI güncellemesi
-  const statusBox = document.getElementById('profile-licence-status-box');
-  const statusText = document.getElementById('licence-status-text');
-  const expiryText = document.getElementById('licence-expiry-text');
-  const statusBadge = document.getElementById('licence-status-badge');
   const licenceInput = document.getElementById('profile-licence-input');
   const activateBtn = document.getElementById('btn-profile-activate-licence');
+  const requestBtn = document.getElementById('btn-profile-request-licence');
+  const profileEmail = document.getElementById('profile-licence-email');
+  const profilePhone = document.getElementById('profile-licence-phone');
 
-  function updateProfileLicenceUI() {
-    const key = state.licenceKey || '';
-    if (key === 'REQUESTED') {
-      if (statusText) statusText.textContent = "Durum: Lisans Talebi Bekleniyor 📩";
-      if (expiryText) expiryText.textContent = "Talebiniz yöneticiye iletildi, değerlendiriliyor.";
-      if (statusBadge) {
-        statusBadge.textContent = "TALEP EDİLDİ";
-        statusBadge.style.background = "rgba(59, 130, 246, 0.1)";
-        statusBadge.style.color = "#3b82f6";
-        statusBadge.style.borderColor = "rgba(59, 130, 246, 0.25)";
-      }
-      return;
-    }
-    if (!key) {
-      if (statusText) statusText.textContent = "Durum: Ücretsiz Sürüm (Kilitli)";
-      if (expiryText) expiryText.textContent = "Dersler ve bölümler kilitlidir.";
-      if (statusBadge) {
-        statusBadge.textContent = "ÜCRETSİZ / KİLİTLİ";
-        statusBadge.style.background = "rgba(255,59,48,0.1)";
-        statusBadge.style.color = "#ff3b30";
-        statusBadge.style.borderColor = "rgba(255,59,48,0.25)";
-      }
-      return;
-    }
+  updateLicenceUI();
 
-    const check = verifyLicenceKey(key);
-    if (check.valid) {
-      const now = new Date();
-      if (now > check.expiryDate) {
-        if (statusText) statusText.textContent = `Durum: Süresi Dolan Lisans (${check.owner})`;
-        if (expiryText) expiryText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
-        if (statusBadge) {
-          statusBadge.textContent = "SÜRESİ DOLDU";
-          statusBadge.style.background = "rgba(245,158,11,0.1)";
-          statusBadge.style.color = "#f59e0b";
-          statusBadge.style.borderColor = "rgba(245,158,11,0.25)";
-        }
-      } else {
-        if (statusText) statusText.textContent = `Durum: Premium Aktif (${check.owner})`;
-        if (expiryText) expiryText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
-        if (statusBadge) {
-          statusBadge.textContent = "PREMIUM AKTİF";
-          statusBadge.style.background = "rgba(34,197,94,0.1)";
-          statusBadge.style.color = "#22c55e";
-          statusBadge.style.borderColor = "rgba(34,197,94,0.25)";
-        }
-      }
-    } else {
-      if (statusText) statusText.textContent = "Durum: Geçersiz Lisans";
-      if (expiryText) expiryText.textContent = check.message || "Lütfen geçerli bir kod girin.";
-      if (statusBadge) {
-        statusBadge.textContent = "GEÇERSİZ";
-        statusBadge.style.background = "rgba(255,59,48,0.1)";
-        statusBadge.style.color = "#ff3b30";
-        statusBadge.style.borderColor = "rgba(255,59,48,0.25)";
-      }
-    }
+  if (profileEmail) {
+    profileEmail.addEventListener('input', (e) => {
+      state.email = e.target.value.trim();
+      const storeEmail = document.getElementById('store-licence-email');
+      if (storeEmail) storeEmail.value = state.email;
+    });
   }
-
-  updateProfileLicenceUI();
+  if (profilePhone) {
+    profilePhone.addEventListener('input', (e) => {
+      state.phone = e.target.value.trim();
+      const storePhone = document.getElementById('store-licence-phone');
+      if (storePhone) storePhone.value = state.phone;
+    });
+  }
 
   if (activateBtn && licenceInput) {
     activateBtn.addEventListener('click', async () => {
-      const inputVal = licenceInput.value.trim();
-      if (!inputVal) {
-        showToast("Lütfen lisans anahtarınızı girin!", "error");
-        return;
-      }
-      const check = verifyLicenceKey(inputVal);
-      if (check.valid) {
-        const now = new Date();
-        if (now > check.expiryDate) {
-          showToast(`Bu lisansın süresi ${check.expiryDate.toLocaleDateString('tr-TR')} tarihinde dolmuştur!`, "error");
-          return;
-        }
-        
-        state.licenceKey = inputVal;
-        const deviceOk = await validateLicenseDevices();
-        if (!deviceOk) {
-          return;
-        }
-        saveState();
-        showToast(`Tebrikler! Premium Lisans Aktifleştirildi (Sahibi: ${check.owner}) 🎉`, "success");
-        updateProfileLicenceUI();
-        licenceInput.value = '';
-        
-        // Supabase varsa oraya da kaydet
-        if (supabaseClient && state.username && !state.isGuest) {
-          try {
-            await supabaseClient
-              .from('user_states')
-              .update({ licence_key: inputVal })
-              .eq('username', state.username);
-          } catch(e) {
-            console.error('Licence sync error:', e);
-          }
-        }
-        
-        // Ekrana yansıması için yeniden oluştur/yenile
-        setTimeout(() => {
-          enterApp();
-          switchTab('profile');
-        }, 1500);
-      } else {
-        showToast(`Aktivasyon Hatası: ${check.message}`, "error");
-      }
+      await activateLicence(licenceInput.value.trim());
+    });
+  }
+
+  if (requestBtn) {
+    requestBtn.addEventListener('click', async () => {
+      await requestLicence();
     });
   }
 
@@ -9397,16 +9627,26 @@ function showGuestBlockModal() {
     const descEl = modal.querySelector('.grammar-modal-body p:last-of-type');
     const loginBtn = document.getElementById('guest-block-login-btn');
     const registerBtn = document.getElementById('guest-block-register-btn');
+    const activateBtn = document.getElementById('guest-block-activate-btn');
+    const licenceBtn = document.getElementById('guest-block-licence-btn');
     const loginRegisterRow = loginBtn ? loginBtn.parentElement : null;
 
     if (state.isGuest) {
       if (titleEl) titleEl.textContent = "Devam Etmek İçin Üye Ol ve Lisans Anahtarı Al!";
       if (descEl) descEl.textContent = "Misafir hesapları sadece ilk bölümü tamamlayabilir. İlerlemeyi kaydetmek, diğer bölümleri açmak ve liglerde yarışmak için ücretsiz üye olun!";
+      if (loginBtn) loginBtn.style.display = 'block';
+      if (registerBtn) registerBtn.style.display = 'block';
+      if (activateBtn) activateBtn.style.display = 'none';
+      if (licenceBtn) licenceBtn.style.display = 'none';
       if (loginRegisterRow) loginRegisterRow.style.display = 'flex';
     } else {
       if (titleEl) titleEl.textContent = "Premium Lisans Gerekli! 🔑";
       if (descEl) descEl.textContent = "Deneme sürümünüzün sonuna geldiniz (Maksimum 2 ders). Öğrenmeye devam etmek için lütfen geçerli bir lisans anahtarı etkinleştirin.";
-      if (loginRegisterRow) loginRegisterRow.style.display = 'none';
+      if (loginBtn) loginBtn.style.display = 'none';
+      if (registerBtn) registerBtn.style.display = 'none';
+      if (activateBtn) activateBtn.style.display = 'block';
+      if (licenceBtn) licenceBtn.style.display = 'block';
+      if (loginRegisterRow) loginRegisterRow.style.display = 'flex';
     }
 
     modal.classList.add('show');
@@ -9482,9 +9722,9 @@ function initEventListeners() {
     });
   }
 
-  const guestBlockLicenceBtn = document.getElementById('guest-block-licence-btn');
-  if (guestBlockLicenceBtn) {
-    guestBlockLicenceBtn.addEventListener('click', () => {
+  const guestBlockActivateBtn = document.getElementById('guest-block-activate-btn');
+  if (guestBlockActivateBtn) {
+    guestBlockActivateBtn.addEventListener('click', () => {
       hideGuestBlockModal();
       switchTab('profile');
       setTimeout(() => {
@@ -9498,13 +9738,13 @@ function initEventListeners() {
     });
   }
 
-  const guestBlockRequestBtn = document.getElementById('guest-block-request-btn');
+  const guestBlockLicenceBtn = document.getElementById('guest-block-licence-btn');
   const guestLicenceRequestModal = document.getElementById('guest-licence-request-modal');
   const guestLicenceRequestCloseBtn = document.getElementById('guest-licence-request-close-btn');
   const guestLicenceRequestForm = document.getElementById('guest-licence-request-form');
 
-  if (guestBlockRequestBtn && guestLicenceRequestModal) {
-    guestBlockRequestBtn.addEventListener('click', () => {
+  if (guestBlockLicenceBtn && guestLicenceRequestModal) {
+    guestBlockLicenceBtn.addEventListener('click', () => {
       if (state.isGuest) {
         showToast("Lisans talep edebilmek için lütfen önce üye olun veya giriş yapın!", "warning");
         hideGuestBlockModal();
@@ -9534,10 +9774,18 @@ function initEventListeners() {
     });
   }
 
-  if (guestLicenceRequestCloseBtn && guestLicenceRequestModal) {
-    guestLicenceRequestCloseBtn.addEventListener('click', () => {
-      guestLicenceRequestModal.classList.remove('show');
-    });
+  if (guestLicenceRequestModal) {
+    if (guestLicenceRequestCloseBtn) {
+      guestLicenceRequestCloseBtn.addEventListener('click', () => {
+        guestLicenceRequestModal.classList.remove('show');
+      });
+    }
+    const guestLicenceRequestCancelBtn = document.getElementById('guest-licence-request-cancel-btn');
+    if (guestLicenceRequestCancelBtn) {
+      guestLicenceRequestCancelBtn.addEventListener('click', () => {
+        guestLicenceRequestModal.classList.remove('show');
+      });
+    }
   }
 
   if (guestLicenceRequestForm && guestLicenceRequestModal) {
@@ -9812,6 +10060,38 @@ function initEventListeners() {
   document.getElementById('buy-kutup-theme-btn').addEventListener('click', () => buyStoreItem('kutup-theme', 140));
   document.getElementById('buy-siber-theme-btn').addEventListener('click', () => buyStoreItem('siber-theme', 180));
   document.getElementById('buy-orman-theme-btn').addEventListener('click', () => buyStoreItem('orman-theme', 120));
+
+  // Mağaza Lisans Butonları ve Girişleri
+  const storeLicenceInput = document.getElementById('store-licence-input');
+  const storeActivateBtn = document.getElementById('btn-store-activate-licence');
+  const storeRequestBtn = document.getElementById('btn-store-request-licence');
+  const storeEmail = document.getElementById('store-licence-email');
+  const storePhone = document.getElementById('store-licence-phone');
+
+  if (storeEmail) {
+    storeEmail.addEventListener('input', (e) => {
+      state.email = e.target.value.trim();
+      const profileEmail = document.getElementById('profile-licence-email');
+      if (profileEmail) profileEmail.value = state.email;
+    });
+  }
+  if (storePhone) {
+    storePhone.addEventListener('input', (e) => {
+      state.phone = e.target.value.trim();
+      const profilePhone = document.getElementById('profile-licence-phone');
+      if (profilePhone) profilePhone.value = state.phone;
+    });
+  }
+  if (storeActivateBtn && storeLicenceInput) {
+    storeActivateBtn.addEventListener('click', async () => {
+      await activateLicence(storeLicenceInput.value.trim());
+    });
+  }
+  if (storeRequestBtn) {
+    storeRequestBtn.addEventListener('click', async () => {
+      await requestLicence();
+    });
+  }
 
   // Home Screen Scroll tracking
   window.addEventListener('scroll', () => {
@@ -15451,51 +15731,6 @@ function renderActiveMission() {
     });
   }
 
-  // Scroll to Top Button
-  const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
-  if (scrollToTopBtn) {
-    const handleScroll = (e) => {
-      const target = e ? e.target : null;
-      const scrollTop = window.scrollY || document.documentElement.scrollTop || (target && target.scrollTop) || 0;
-      if (scrollTop > 100) {
-        scrollToTopBtn.classList.add('show');
-      } else {
-        scrollToTopBtn.classList.remove('show');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('scroll', handleScroll, true);
-
-    // Fallback polling for layout edge cases (e.g. nested scrolling in webviews)
-    setInterval(() => {
-      let maxScroll = window.scrollY || document.documentElement.scrollTop || 0;
-      const scrollables = document.querySelectorAll('.tab-content, .app-screen, .home-content, .leaderboard-container, .store-container, .profile-container, .about-container');
-      scrollables.forEach(el => {
-        if (el.scrollTop > maxScroll) {
-          maxScroll = el.scrollTop;
-        }
-      });
-      if (maxScroll > 100) {
-        scrollToTopBtn.classList.add('show');
-      } else {
-        scrollToTopBtn.classList.remove('show');
-      }
-    }, 400);
-
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-      document.body.scrollTo({ top: 0, behavior: 'smooth' });
-      
-      const scrollables = document.querySelectorAll('.tab-content, .app-screen, .home-content, .leaderboard-container, .store-container, .profile-container, .about-container');
-      scrollables.forEach(el => {
-        if (el.scrollTop > 0) {
-          el.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      });
-    });
-  }
 }
 
 // DOM yüklendiğinde başlat
@@ -17441,6 +17676,98 @@ async function handleFeedbackSubmit(e) {
   }
 }
 window.handleFeedbackSubmit = handleFeedbackSubmit;
+
+// Scroll to Top Button (Isolated self-executing function to avoid any earlier runtime errors block registration)
+(function() {
+  function initScrollToTop() {
+    const btn = document.getElementById('scroll-to-top-btn');
+    if (!btn) return;
+
+    // Click handler
+    btn.addEventListener('click', function() {
+      console.log('Scroll to top button clicked');
+      
+      // Scroll window/document
+      try {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+      
+      try {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (e) {
+        document.documentElement.scrollTop = 0;
+      }
+      
+      try {
+        document.body.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (e) {
+        document.body.scrollTop = 0;
+      }
+
+      // Scroll all possible scrollable containers
+      const scrollables = document.querySelectorAll(
+        '.tab-content, .app-screen, .home-content, .lessons-layout, .tree-container, .leaderboard-container, .store-container, .profile-container, .about-container, .home-main-wrapper'
+      );
+      scrollables.forEach(function(el) {
+        if (el.scrollTop > 0) {
+          try {
+            el.scrollTo({ top: 0, behavior: 'smooth' });
+          } catch (e) {
+            el.scrollTop = 0;
+          }
+          // Extra fallback to ensure it resets immediately if smooth scrolling fails or gets stuck
+          setTimeout(function() {
+            el.scrollTop = 0;
+          }, 50);
+          setTimeout(function() {
+            el.scrollTop = 0;
+          }, 150);
+        }
+      });
+    });
+
+    // Scroll listener for showing/hiding
+    function checkScroll(e) {
+      const target = e ? e.target : null;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop || (target && target.scrollTop) || 0;
+      if (scrollTop > 100) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    document.addEventListener('scroll', checkScroll, true);
+
+    // Dynamic polling check for nested divs
+    setInterval(function() {
+      let maxScroll = window.scrollY || document.documentElement.scrollTop || 0;
+      const scrollables = document.querySelectorAll(
+        '.tab-content, .app-screen, .home-content, .lessons-layout, .tree-container, .leaderboard-container, .store-container, .profile-container, .about-container, .home-main-wrapper'
+      );
+      scrollables.forEach(function(el) {
+        if (el.scrollTop > maxScroll) {
+          maxScroll = el.scrollTop;
+        }
+      });
+      if (maxScroll > 100) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    }, 400);
+  }
+
+  // Register immediately or on DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollToTop);
+  } else {
+    initScrollToTop();
+  }
+})();
 
 
 
