@@ -8623,6 +8623,25 @@ function updateLicenceUI() {
   if (storePhoneInput) storePhoneInput.value = state.phone || '';
   if (profileEmailInput) profileEmailInput.value = state.email || '';
   if (profilePhoneInput) profilePhoneInput.value = state.phone || '';
+  
+  const activateBtn = document.getElementById('btn-store-activate-licence');
+  if (activateBtn) {
+    const check = verifyLicenceKey(key);
+    const isPremiumActive = check.valid && (new Date() <= check.expiryDate);
+    if (isPremiumActive) {
+      activateBtn.disabled = true;
+      activateBtn.style.setProperty('background', '#e5e7eb', 'important');
+      activateBtn.style.setProperty('color', '#9ca3af', 'important');
+      activateBtn.style.setProperty('border-color', '#e5e7eb', 'important');
+      activateBtn.style.setProperty('cursor', 'not-allowed', 'important');
+    } else {
+      activateBtn.disabled = false;
+      activateBtn.style.background = "";
+      activateBtn.style.color = "";
+      activateBtn.style.borderColor = "";
+      activateBtn.style.cursor = "";
+    }
+  }
 }
 
 async function activateLicence(inputVal) {
