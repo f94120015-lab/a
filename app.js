@@ -6223,6 +6223,12 @@ function tryMatch(container, question) {
 
   if (isCorrectMatch) {
     // Doğru eşleşme
+    if (typeof window.completedReadingHighlights === 'undefined') {
+      window.completedReadingHighlights = [];
+    }
+    window.completedReadingHighlights.push(rightText.trim());
+    applyReadingPassageHighlights();
+
     const leftBtn = matchState.selectedLeftBtn;
     const rightBtn = matchState.selectedRightBtn;
 
