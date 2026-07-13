@@ -5227,6 +5227,20 @@ function renderQuestion() {
         renderReflexBlitz(body, question);
         break;
     }
+    
+    // Dynamically insert reading passage box at the very top of quiz-body using DOM insertBefore
+    if (question.paragraph && activeType !== 'spotlight') {
+      if (!body.querySelector('.reading-passage-box')) {
+        const div = document.createElement('div');
+        div.className = 'reading-passage-box';
+        div.style.cssText = 'background: var(--bg-card); padding: 14px; border-radius: 12px; font-size: 0.95rem; line-height: 1.6; color: var(--text-primary); border-left: 5px solid var(--accent-primary); margin-bottom: 20px; max-height: 160px; overflow-y: auto; font-style: italic; font-family: var(--font-body); box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left;';
+        div.innerHTML = `<strong>Okuma Parçası (Reading Passage):</strong><br>${question.paragraph}`;
+        body.insertBefore(div, body.firstChild);
+      }
+    }
+
+    // Apply reading passage highlights after question rendering
+    applyReadingPassageHighlights();
   } catch (error) {
     console.error("Soru render edilirken hata oluştu:", error);
     body.innerHTML = `
@@ -6102,6 +6116,43 @@ function renderWordBank(container, question) {
 }
 
 // ── Eşleştirme ──────────────────────────────────────────────
+function applyReadingPassageHighlights() {
+  const passageBox = document.querySelector('.reading-passage-box');
+  if (!passageBox) return;
+
+  if (currentQuestionIndex === 0) {
+    window.completedReadingHighlights = [];
+  }
+
+  if (typeof window.completedReadingHighlights === 'undefined') {
+    window.completedReadingHighlights = [];
+  }
+
+  if (!passageBox.dataset.originalHtml) {
+    passageBox.dataset.originalHtml = passageBox.innerHTML;
+  }
+
+  let html = passageBox.dataset.originalHtml;
+
+  const sortedHighlights = [...new Set(window.completedReadingHighlights)]
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length);
+
+  sortedHighlights.forEach(phrase => {
+    // Avoid double wrapping and regex errors
+    const cleanPhrase = phrase.replace(/<[^>]+>/g, "").replace(/^[\.\?!,;\s]+|[\.\?!,;\s]+$/g, "");
+    if (cleanPhrase.length < 3) return;
+    
+    const escaped = cleanPhrase.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const regex = new RegExp(`(?<!<[^>]*)${escaped}(?![^<]*>)`, 'gi');
+    html = html.replace(regex, match => {
+      return `<span style="background: rgba(46, 204, 113, 0.12); color: #2ecc71; border-bottom: 2px dashed #2ecc71; border-radius: 4px; padding: 1px 3px; font-weight: bold; transition: all 0.3s ease;">${match}</span>`;
+    });
+  });
+
+  passageBox.innerHTML = html;
+}
+
 function renderMatching(container, question) {
   const shuffledRight = [...question.pairs].sort(() => Math.random() - 0.5);
 
@@ -6200,11 +6251,8 @@ function tryMatch(container, question) {
   matchState.selectedLeftBtn = null;
   matchState.selectedRightBtn = null;
 
-  // Restore original passage HTML after match attempt
-  const passageBox = document.querySelector('.reading-passage-box');
-  if (passageBox && passageBox.dataset.originalHtml) {
-    passageBox.innerHTML = passageBox.dataset.originalHtml;
-  }
+  // Re-apply correct highlights after matching cleanup
+  applyReadingPassageHighlights();
 
   // Tüm çiftler eşleşti mi?
   if (matchState.matchedCount === matchState.totalPairs) {
@@ -7617,6 +7665,28 @@ function checkAnswer() {
   feedbackPanel.classList.add('show');
 
   if (isCorrect) {
+    if (typeof window.completedReadingHighlights === 'undefined') {
+      window.completedReadingHighlights = [];
+    }
+    if (question) {
+      if (question.enSentence) window.completedReadingHighlights.push(question.enSentence.trim());
+      if (question.highlightChunk) window.completedReadingHighlights.push(question.highlightChunk.trim());
+      if (question.translation) window.completedReadingHighlights.push(question.translation.trim());
+      if (question.pairs) {
+        question.pairs.forEach(p => {
+          if (p.right) window.completedReadingHighlights.push(p.right.trim());
+        });
+      }
+      if (question.type === 'multiple-choice' && question.options && typeof question.correctIndex === 'number') {
+        const correctOpt = question.options[question.correctIndex];
+        const isEnglish = /^(It|Will|Is|Has|They)\b/i.test(correctOpt) || /\b(to|be|is|was|has|been|that)\b/i.test(correctOpt);
+        if (isEnglish) {
+          window.completedReadingHighlights.push(correctOpt.trim());
+        }
+      }
+    }
+    applyReadingPassageHighlights();
+
     feedbackPanel.classList.add('correct');
     feedbackPanel.classList.remove('wrong');
     feedbackIcon.textContent = '✓';
