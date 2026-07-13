@@ -15446,12 +15446,33 @@ function renderActiveMission() {
             showToast("Tüm laboratuvar görevlerini tamamladınız! Harika iş, Mühendis! 🏆", "success");
             renderMissionsList();
           }
-        } else {
-          showToast("Yanlış seçenek! Lütfen tekrar deneyin.", "error");
-          setTimeout(() => {
-            selectedMissionOption = null;
-            renderActiveMission();
-          }, 2000);
+        }
+      });
+    });
+  }
+
+  // Scroll to Top Button
+  const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+  if (scrollToTopBtn) {
+    document.addEventListener('scroll', (e) => {
+      const target = e.target;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop || (target && target.scrollTop) || 0;
+      if (scrollTop > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    }, true);
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      const scrollables = document.querySelectorAll('.tab-content, .app-screen, .home-content, .leaderboard-container, .store-container, .profile-container, .about-container');
+      scrollables.forEach(el => {
+        if (el.scrollTop > 0) {
+          el.scrollTo({ top: 0, behavior: 'smooth' });
         }
       });
     });
