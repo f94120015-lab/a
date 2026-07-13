@@ -4696,6 +4696,7 @@ function renderAchievements() {
 // QUIZ MOTORU
 // ============================================================
 function startLesson(lessonId, exerciseId = null) {
+  window.completedReadingHighlights = [];
   quizSessionId++;
   isCurrentExercisePassed = false;
   currentLesson = lessons.find(l => l.id === lessonId);
@@ -6120,9 +6121,7 @@ function applyReadingPassageHighlights() {
   const passageBox = document.querySelector('.reading-passage-box');
   if (!passageBox) return;
 
-  if (currentQuestionIndex === 0) {
-    window.completedReadingHighlights = [];
-  }
+
 
   if (typeof window.completedReadingHighlights === 'undefined') {
     window.completedReadingHighlights = [];
@@ -6226,6 +6225,7 @@ function tryMatch(container, question) {
     if (typeof window.completedReadingHighlights === 'undefined') {
       window.completedReadingHighlights = [];
     }
+    window.completedReadingHighlights.push(leftText.trim());
     window.completedReadingHighlights.push(rightText.trim());
     applyReadingPassageHighlights();
 
@@ -7680,6 +7680,7 @@ function checkAnswer() {
       if (question.translation) window.completedReadingHighlights.push(question.translation.trim());
       if (question.pairs) {
         question.pairs.forEach(p => {
+          if (p.left) window.completedReadingHighlights.push(p.left.trim());
           if (p.right) window.completedReadingHighlights.push(p.right.trim());
         });
       }
