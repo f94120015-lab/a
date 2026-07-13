@@ -15454,15 +15454,34 @@ function renderActiveMission() {
   // Scroll to Top Button
   const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
   if (scrollToTopBtn) {
-    document.addEventListener('scroll', (e) => {
-      const target = e.target;
+    const handleScroll = (e) => {
+      const target = e ? e.target : null;
       const scrollTop = window.scrollY || document.documentElement.scrollTop || (target && target.scrollTop) || 0;
-      if (scrollTop > 300) {
+      if (scrollTop > 100) {
         scrollToTopBtn.classList.add('show');
       } else {
         scrollToTopBtn.classList.remove('show');
       }
-    }, true);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, true);
+
+    // Fallback polling for layout edge cases (e.g. nested scrolling in webviews)
+    setInterval(() => {
+      let maxScroll = window.scrollY || document.documentElement.scrollTop || 0;
+      const scrollables = document.querySelectorAll('.tab-content, .app-screen, .home-content, .leaderboard-container, .store-container, .profile-container, .about-container');
+      scrollables.forEach(el => {
+        if (el.scrollTop > maxScroll) {
+          maxScroll = el.scrollTop;
+        }
+      });
+      if (maxScroll > 100) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    }, 400);
 
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
