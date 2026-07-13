@@ -6142,6 +6142,20 @@ function renderMatching(container, question) {
       container.querySelectorAll('.match-right').forEach(b => b.classList.remove('selected'));
       btn.classList.add('selected');
       matchState.selectedRightBtn = btn;
+
+      // Highlight target chunk in reading-passage-box if it exists
+      const passageBox = document.querySelector('.reading-passage-box');
+      if (passageBox) {
+        if (!passageBox.dataset.originalHtml) {
+          passageBox.dataset.originalHtml = passageBox.innerHTML;
+        }
+        const originalHtml = passageBox.dataset.originalHtml;
+        const rightText = btn.dataset.right;
+        const escaped = rightText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const regex = new RegExp(`(${escaped})`, 'gi');
+        passageBox.innerHTML = originalHtml.replace(regex, `<mark style="background: #ffe066; color: #000; font-weight: bold; border-radius: 4px; padding: 2px 4px; box-shadow: 0 0 8px rgba(255,224,102,0.6);">$1</mark>`);
+      }
+
       tryMatch(container, question);
     });
   });
@@ -6185,6 +6199,12 @@ function tryMatch(container, question) {
 
   matchState.selectedLeftBtn = null;
   matchState.selectedRightBtn = null;
+
+  // Restore original passage HTML after match attempt
+  const passageBox = document.querySelector('.reading-passage-box');
+  if (passageBox && passageBox.dataset.originalHtml) {
+    passageBox.innerHTML = passageBox.dataset.originalHtml;
+  }
 
   // Tüm çiftler eşleşti mi?
   if (matchState.matchedCount === matchState.totalPairs) {
