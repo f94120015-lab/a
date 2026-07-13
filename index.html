@@ -209,7 +209,7 @@
           </button>
           <button class="nav-tab" data-tab="about">
             <span class="nav-tab-icon">ℹ️</span>
-            <span class="nav-tab-label">Hakkında</span>
+            <span class="nav-tab-label">Ben kimim?</span>
           </button>
           <button class="nav-tab dev-only-tab" data-tab="admin" id="btn-admin" style="display: none;">
             <span class="nav-tab-icon">🔑</span>
@@ -352,18 +352,6 @@
             <!-- Kokpit Ayar Paneli -->
             <div class="cockpit-settings-card" id="cockpit-settings-card">
               <div class="cockpit-controls">
-                <!-- Vites 1: Olumsuzluk -->
-                <div class="control-group toggle-group">
-                  <span class="control-label">OLUMSUZ</span>
-                  <div class="toggle-switch-wrapper">
-                    <span class="toggle-status-label" id="negation-status-label">KAPALI</span>
-                    <label class="toggle-switch">
-                      <input type="checkbox" id="toggle-negation">
-                      <span class="slider round"></span>
-                    </label>
-                  </div>
-                </div>
-
                 <!-- Özne Seçici -->
                 <div class="control-group select-group">
                   <span class="control-label">ÖZNE</span>
@@ -379,7 +367,6 @@
                     <!-- Dinamik doldurulacak -->
                   </select>
                 </div>
-
 
                 <!-- Kalkan Seçici (Seviye 10-11 için) -->
                 <div class="control-group" id="control-group-shield" style="display: none;">
@@ -400,13 +387,13 @@
                   </select>
                 </div>
 
-                <!-- Vites 3: Aktif/Edilgen Vitesi -->
+                <!-- Vites 1: Olumsuzluk -->
                 <div class="control-group toggle-group">
-                  <span class="control-label">AKTİF / EDİLGEN</span>
+                  <span class="control-label">OLUMSUZ</span>
                   <div class="toggle-switch-wrapper">
-                    <span class="toggle-status-label" id="voice-status-label">EDİLGEN</span>
+                    <span class="toggle-status-label" id="negation-status-label">KAPALI</span>
                     <label class="toggle-switch">
-                      <input type="checkbox" id="toggle-voice">
+                      <input type="checkbox" id="toggle-negation">
                       <span class="slider round"></span>
                     </label>
                   </div>
@@ -419,6 +406,18 @@
                     <span class="toggle-status-label" id="question-status-label">DÜZ CÜMLE</span>
                     <label class="toggle-switch">
                       <input type="checkbox" id="toggle-question">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Vites 3: Aktif/Edilgen Vitesi -->
+                <div class="control-group toggle-group">
+                  <span class="control-label">AKTİF / EDİLGEN</span>
+                  <div class="toggle-switch-wrapper">
+                    <span class="toggle-status-label" id="voice-status-label">AKTİF</span>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="toggle-voice" checked>
                       <span class="slider round"></span>
                     </label>
                   </div>
@@ -437,7 +436,7 @@
                 <button type="button" class="matrix-tab-btn" id="btn-tab-pref" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Tercih Yapıları</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-perfect" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Perfect Modals</button>
                 <button type="button" class="matrix-tab-btn" id="btn-tab-phrasal" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Phrasal Modals</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-cond" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">KOŞUL SEÇİCİ (IF)</button>
+                <button type="button" class="matrix-tab-btn" id="btn-tab-cond" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Koşul Seçici (If)</button>
               </div>
 
               <!-- Saf Zamanlar İçeriği -->
@@ -573,8 +572,7 @@
               <div id="matrix-tab-cond-content" style="display: none;">
                 <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px;">
-                    <button type="button" class="cond-matrix-btn" data-cond="none">Yok (Standart)</button>
-                    <button type="button" class="cond-matrix-btn" data-cond="type0">Type 0 (Genel Doğrular)</button>
+                    <button type="button" class="cond-matrix-btn active" data-cond="type0">Type 0 (Genel Doğrular)</button>
                     <button type="button" class="cond-matrix-btn" data-cond="type1">Type 1 (Olasılıklar)</button>
                     <button type="button" class="cond-matrix-btn" data-cond="type2">Type 2 (Şu An Gerçek Dışı)</button>
                     <button type="button" class="cond-matrix-btn" data-cond="type3">Type 3 (Geçmiş Gerçek Dışı)</button>
@@ -620,7 +618,7 @@
                 <div class="info-card english-card">
                   <div class="card-icon">🇬🇧</div>
                   <div class="card-details">
-                    <span class="card-label">Orijinal İngilizce Cümle</span>
+                    <span class="card-label">İngilizce Cümle</span>
                     <p class="card-value" id="simulator-english-sentence">-</p>
                   </div>
                 </div>
@@ -628,7 +626,7 @@
                 <div class="info-card turkish-card">
                   <div class="card-icon">🇹🇷</div>
                   <div class="card-details">
-                    <span class="card-label">Türkçe Çeviri Refleksi</span>
+                    <span class="card-label">Türkçe Çeviri</span>
                     <p class="card-value" id="simulator-turkish-reflex">-</p>
                   </div>
                 </div>
@@ -636,7 +634,7 @@
                 <div class="info-card note-card">
                   <div class="card-icon">🔧</div>
                   <div class="card-details">
-                    <span class="card-label">Mekanik Mühendislik Notu</span>
+                    <span class="card-label">Notlar</span>
                     <p class="card-value" id="simulator-mechanic-note">-</p>
                   </div>
                 </div>
@@ -759,57 +757,67 @@
 
       <!-- 5. HAKKINDA SEKMESİ -->
       <div id="tab-content-about" class="tab-content">
-        <div class="about-container">
-          <div class="about-hero">
-            <img src="assets/logo.png" alt="amok logo" class="about-hero-logo">
-            <h1 class="about-hero-title">amok</h1>
-            <p class="about-hero-subtitle">Akademik Metinleri Okuma Kılavuzu</p>
-            <p class="about-hero-description">
-              amok, akademik İngilizce metinleri daha rahat okuyabilmeniz ve doğru bir şekilde analiz edebilmeniz için tasarlanmış oyunlaştırılmış bir dil öğrenme platformudur.
-            </p>
+        <div class="about-container" style="max-width: 760px; margin: 0 auto; padding: 24px 16px;">
+          
+          <!-- Hero Section -->
+          <div class="about-hero" style="text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1.5px dashed var(--border-color);">
+            <div style="margin-bottom: 16px;">
+              <img src="assets/writer.jpg" alt="amok geliştiricisi" style="width: 110px; height: 110px; border-radius: 50%; border: 3.5px solid var(--accent-primary); object-fit: cover; box-shadow: var(--shadow-md);">
+            </div>
+            <h1 class="about-hero-title" style="font-size: 2.2rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--accent-primary); margin: 0 0 4px 0;">Ben kimim?</h1>
+            <p class="about-hero-subtitle" style="font-size: 1.1rem; color: var(--text-secondary); margin: 0; font-weight: 600;">amok'un Geliştiricisinden Kişisel Bir Not</p>
           </div>
 
-          <div class="about-sections-grid">
-            <div class="about-card">
-              <div class="about-card-icon">📚</div>
-              <h3>Pedagojik Yaklaşım</h3>
-              <p>
-                Platformumuzdaki tüm cümleler, dil bilimsel ve pedagojik kurallara uygun şekilde <strong>basitten karmaşığa</strong> doğru sıralanmıştır. En temel yapılardan başlayarak ileri düzey akademik cümlelere kadar aşamalı bir öğrenim sunulur.
+          <!-- Letter / Story Content -->
+          <div class="about-story" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-primary); text-align: justify; display: flex; flex-direction: column; gap: 24px;">
+            
+            <section style="background: rgba(139, 126, 200, 0.05); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-primary); padding: 20px;">
+              <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--accent-primary); margin-top: 0; margin-bottom: 12px; font-weight: 700;">20 Yıllık Bir İtiraf: "Nasıl Öğrenilemeyeceğini Biliyorum"</h2>
+              <p style="margin: 0 0 12px 0;">
+                Merhaba, ben bu uygulamanın geliştiricisiyim. 20'li yaşlarımdan 50'lerime kadar İngilizce barajı yüzünden akademik kariyer kapılarında yıllarca beklemek zorunda kalmış biriyim.
               </p>
+              <p style="margin: 0 0 12px 0;">
+                Bu süreçte onlarca kursa gittim, özel dersler aldım, popüler uygulamaları satın aldım. Peki neden 20 yıl sürdü? Çünkü tembel biriyim. Her seferinde kaytaracak bir yol buldum. İşte bu yüzden; Türkiye’de yaşayan biri olarak İngilizcenin nasıl öğrenileceğinden ziyade, <strong>nasıl öğrenilemeyeceğini</strong> ve tembel bir insanın nerede pes edeceğini çok iyi biliyorum.
+              </p>
+              <p style="margin: 0;">
+                Size bir mucize vaat etmiyorum. Çalışma disiplininiz varsa bu uygulama size fayda sağlar; ama zaten çalışkan biriyseniz, her şey size katkı sağlar.
+              </p>
+            </section>
+
+            <section style="background: rgba(139, 126, 200, 0.02); border-radius: var(--radius-lg); border-left: 4px solid var(--border-color); padding: 20px;">
+              <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--text-primary); margin-top: 0; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">📚 Bu Uygulama Ne İşe Yarar?</h2>
+              <p style="margin: 0 0 12px 0;">
+                İngilizce öğrenirken bir sürü gereksiz detayla uğraşıyoruz. Oysa akademik metinleri anlamak için kusursuz bir İngilizceye ihtiyacınız yok. Bu uygulamanın tek bir odağı var: <strong>Akademik Dünya ve İngilizce Metinler</strong>.
+              </p>
+              <ul style="margin: 0 0 12px 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li><strong>Telaffuz (Pronunciation) yok:</strong> Kelimeyi nasıl okuduğunuzla ilgilenmiyoruz. Temel amacımız, o metni anlamanız.</li>
+                <li><strong>Günlük muhabbetler veya çocuk hikayeleri yok:</strong> Doğrudan bilimsel ve akademik metinleri çözmeye odaklanıyoruz.</li>
+                <li><strong>Yöntemimiz:</strong> En basit yapılardan karmaşık cümlelere uzanan haritayı, soyut kurallarla değil bizzat canlı cümlelerin içinde görerek anlamanızı sağlamak.</li>
+              </ul>
+            </section>
+
+            <section style="background: rgba(139, 126, 200, 0.05); border-radius: var(--radius-lg); border-left: 4px solid var(--accent-primary); padding: 20px;">
+              <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; color: var(--accent-primary); margin-top: 0; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">🚂 "Simülatör" Bölümü Nedir?</h2>
+              <p style="margin: 0 0 12px 0;">
+                Bu uygulama benim en çok duvara tosladığım meseleler üzerinden tasarlandı. Hayatım boyunca beni en çok tıkayan şey; o içine modalların girdiği, bazen 5, 6, hatta 7-8 öğeden oluşan upuzun yüklem öbekleriydi.
+              </p>
+              <p style="margin: 0 0 12px 0;">
+                Türkçede tek kelimeyle hallettiğimiz bu devasa yapıların mantığını çözmek için uygulamaya bir <strong>Simülatör (Vakum Sistemi)</strong> ekledim.
+              </p>
+              <p style="margin: 0;">
+                Bu simülatör sayesinde karmaşık yapıların arka planda yapısal olarak nasıl kodlandığını göreceksiniz. Böylece yarın bir gün ağır bir akademik metinde korkutucu bir cümleyle karşılaştığınızda paniklemeyecek, o yapının gramatik olarak net bir karşılığı olduğunu bilmenin rahatlığını yaşayacaksınız.
+              </p>
+            </section>
+
+            <div style="text-align: center; margin-top: 16px; padding-top: 20px; border-top: 1px solid var(--border-color); font-weight: 600; color: var(--accent-primary);">
+              Özetle bu uygulama; süslü yalanlardan arındırılmış, benim bizzat yaşayarak geliştirdiğim kişisel bir panzehirdir.<br>
+              <span style="font-size: 1.1rem; display: block; margin-top: 8px;">Fikir size uygun geliyorsa, hoş geldiniz!</span>
             </div>
 
-            <div class="about-card">
-              <div class="about-card-icon">🔄</div>
-              <h3>Doğal Çeviri & Ek Uyumu</h3>
-              <p>
-                İngilizce yapıların Türkçe çevirileri yapılırken birebir kelime çevirisi yerine doğal Türkçe kullanımı ve dil bilgisi eklerinin doğru uyarlanması (suffix harmony) temel alınmıştır.
-              </p>
-            </div>
-
-            <div class="about-card">
-              <div class="about-card-icon">🏆</div>
-              <h3>Oyunlaştırılmış Öğrenme</h3>
-              <p>
-                Dersleri tamamlayarak deneyim puanları (XP) kazanın, günlük serinizi (streak) koruyun ve haftalık liglerde diğer kullanıcılarla rekabet ederek üst liglere yükselin.
-              </p>
-            </div>
-
-            <div class="about-card">
-              <div class="about-card-icon">🛍️</div>
-              <h3>Mağaza & Özelleştirme</h3>
-              <p>
-                Kazandığınız puanlarla canlarınızı doldurabilir, serinizi dondurabilir veya uygulamayı kişiselleştirmek için mağazadan özel renk temaları satın alabilirsiniz.
-              </p>
-            </div>
-          </div>
-
-          <div class="about-footer-info">
-            <p>Sürüm 1.0.0 — amok ekibi tarafından sevgiyle ve özenle geliştirilmiştir. ❤️</p>
           </div>
         </div>
       </div>
-
-      <!-- 6. ADMIN SEKMESİ (YEREL-ÖZEL) -->
+    <!-- 6. ADMIN SEKMESİ (YEREL-ÖZEL) -->
       <div id="tab-content-admin" class="tab-content">
         <div class="admin-container" style="padding: 20px; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
           
@@ -853,6 +861,10 @@
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">⚡</span>
                 <span>Supabase</span>
               </button>
+              <button class="admin-nav-item" data-admin-section="reports" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
+                <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">⚠️</span>
+                <span>Hata Bildirimleri</span>
+              </button>
               <button id="btn-next-empty-lesson" style="display: none; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.88rem; font-weight: 600; width: 100%;">
                 <span style="font-size: 1.3rem; flex-shrink: 0; width: 28px; text-align: center;">🛠️</span>
                 <span>Boş Ders Bul</span>
@@ -861,6 +873,29 @@
 
             <!-- Right Main Content Area -->
             <div class="admin-main-content" style="flex: 1; min-width: 0;">
+
+              <!-- Panel 6: Soru Hata Bildirimleri -->
+              <div class="admin-panel" id="admin-panel-reports" style="display: none; flex-direction: column; gap: 20px;">
+                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <span style="font-size: 1.5rem;">⚠️</span>
+                      <div style="text-align: left;">
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Soru Hata Bildirimleri</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıların alıştırma esnasında bildirdiği hataları inceleyin ve yönetin.</p>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                      <button id="btn-admin-export-reports" class="btn btn-secondary" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">JSON Dışa Aktar</button>
+                      <button id="btn-admin-clear-reports" class="btn btn-ghost" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; color: var(--color-wrong); border: 1px solid var(--color-wrong-border);">Hepsini Temizle</button>
+                    </div>
+                  </div>
+
+                  <div id="admin-reports-list-container" style="display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; padding-right: 6px;">
+                    <!-- JavaScript ile doldurulacak -->
+                  </div>
+                </div>
+              </div>
 
               <!-- Panel 1: Akıllı Tekrar Simülasyonu -->
               <div class="admin-panel" id="admin-panel-review" style="display: none; flex-direction: column; gap: 20px;">
@@ -1128,6 +1163,9 @@
                     </button>
                     <button id="btn-admin-add-user-toggle" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
                       <span>➕</span> Kullanıcı Ekle
+                    </button>
+                    <button id="btn-admin-export-users-excel" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: #107c41; border-color: #107c41; color: #fff;">
+                      <span>📥</span> Excel Dışa Aktar
                     </button>
                   </div>
                 </div>

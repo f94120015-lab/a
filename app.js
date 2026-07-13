@@ -12,6 +12,16 @@ const MAX_HEARTS = 5;
 // ============================================================
 // Güvenli dijital imza oluşturmak için gizli kelime (Bunu sadece siz bilmelisiniz)
 const LICENCE_SECRET_SALT = "amok_academy_key_2026"; 
+const MAX_LICENCE_DEVICES = 2;
+
+function getOrCreateDeviceId() {
+  let devId = localStorage.getItem('amok_device_uuid');
+  if (!devId) {
+    devId = 'DEV-' + Math.random().toString(36).substring(2, 15) + '-' + Date.now().toString(36);
+    localStorage.setItem('amok_device_uuid', devId);
+  }
+  return devId;
+}
 
 // Basit ama güvenli kriptografik imza üretici
 // E-posta + Telefon + Bitiş Tarihi formatını birleştirerek eşsiz lisans kodu oluşturur.
@@ -155,15 +165,363 @@ let state = {
   lastPromptedQuestionCount: 0,
   activeDomain: 'history',
   negationOn: false,
-  modalSelectLevel12: 'could',
-  activePassiveMode: 'passive',
   selectedSubjectIndex: 0,
   selectedVerbIndex: 0,
   selectedShieldId: 'likely',
-  conditionalType: 'none'
+  conditionalType: 'none',
+  formationTourCompleted: false,
+  activePassiveMode: 'active'
 };
 
+// Formasyon Turu Soruları (30 Adet Özet Soru)
+const FORMATION_QUESTIONS = [
+  {
+    id: "fq1",
+    type: "multiple-choice",
+    grammarTags: ["İsim Cümlesi", "To Be"],
+    prompt: "Aşağıdaki cümlenin Türkçe çevirisini bulunuz: 'The student is a doctor.'",
+    sentence: "The student is a doctor.",
+    options: ["Öğrenci bir doktordur", "Öğrenci doktora gider", "Öğrenci doktordur", "Öğrenci ve doktor"],
+    correctIndex: 0,
+    translation: "Öğrenci bir doktordur.",
+    mechanicNote: "<strong>1. Adım: İsim Cümleleri (To Be)</strong><br>İngilizce'de en temel cümle yapısı olan 'Subject + Be + Noun' kalıbını ve bu yapıların Türkçe'ye '-dir/-dur' ekleriyle aktarımını öğrenirsiniz."
+  },
+  {
+    id: "fq2",
+    type: "word-bank",
+    grammarTags: ["Kelime Sırası", "Word Order"],
+    prompt: "Kelimeleri doğru sıraya dizerek cümleyi İngilizce'ye çeviriniz: 'Sınav zordur.'",
+    sentence: "The exam is difficult",
+    words: ["difficult", "is", "The", "exam"],
+    correctOrder: ["The", "exam", "is", "difficult"],
+    translation: "Sınav zordur.",
+    mechanicNote: "<strong>2. Adım: Vagon Simülatörü</strong><br>Kelime sıralama mantığını tren vagonları mekaniği ile pekiştirirsiniz."
+  },
+  {
+    id: "fq3",
+    type: "matching",
+    grammarTags: ["İsim Tamlaması", "Of Phrase"],
+    prompt: "Aşağıdaki edatlı tamlamaları doğru eşleştiriniz:",
+    pairs: [
+      { left: "legs of the animal", right: "hayvanın bacakları" },
+      { left: "eyes of the cat", right: "kedinin gözleri" }
+    ],
+    translation: "Eşleştirme tamamlandı.",
+    mechanicNote: "<strong>3. Adım: İsim Tamlamaları ('of')</strong><br>İngilizce'de 'of' edatı ile kurulan isim tamlamalarının Türkçe mantığının tam tersine, sondan başa doğru zincirleme olarak çevrilmesi kuralını kavrarsınız."
+  },
+  {
+    id: "fq4",
+    type: "fill-blank-dropdown",
+    grammarTags: ["Edat Takımları", "Prepositions"],
+    prompt: "Boşluğa uygun olan edatı seçiniz:",
+    sentence: "The house [on] the corner is blue.",
+    options: ["on", "at", "in", "of"],
+    correctIndex: 0,
+    translation: "Köşedeki ev mavidir.",
+    mechanicNote: "<strong>4. Adım: Edat Takımları (Prepositional Phrases)</strong><br>Edat takımlarının önündeki isimleri nasıl nitelediğini ve Türkçe'ye '-ki', '-olan' ekleriyle aktarıldığını öğrenirsiniz."
+  },
+  {
+    id: "fq5",
+    type: "fill-blank",
+    grammarTags: ["Zamanlar", "Present Perfect"],
+    prompt: "Boşluğa uygun olan fiil biçimini bulunuz:",
+    sentence: "We have [lived] here since 2010.",
+    options: ["lived", "living", "live", "lives"],
+    correctIndex: 0,
+    translation: "2010'dan beri burada yaşıyoruz.",
+    mechanicNote: "<strong>5. Adım: Süreç Zamanları (Present Perfect)</strong><br>Geçmişte başlayıp günümüze kadar devam eden veya günümüzde etkisi süren eylemleri (have/has + V3) ve 'since/for' zaman bağlaçlarını öğrenirsiniz."
+  },
+  {
+    id: "fq6",
+    type: "fill-blank-text",
+    grammarTags: ["Zaman Uyumu", "While Clause"],
+    prompt: "Boşluğa gelebilecek en uygun fiili (past simple) klavyeden yazınız: 'While I was studying, the phone ___.' (çaldı)",
+    sentence: "While I was studying, the phone [rang].",
+    correctAnswer: "rang",
+    translation: "Ben ders çalışırken telefon çaldı.",
+    mechanicNote: "<strong>6. Adım: Zaman Uyumu (Past Continuous & Past Simple)</strong><br>Süreç bildiren geçmiş zaman eylemleri esnasında anlık gerçekleşen kesintileri ('while/when' yapıları ile) öğrenirsiniz."
+  },
+  {
+    id: "fq7",
+    type: "translation-text",
+    grammarTags: ["Edilgen Çatı", "Passive Voice"],
+    prompt: "Verilen İngilizce cümlenin Türkçe karşılığını klavyeden yazınız: 'The book was written by the professor.'",
+    sentence: "The book was written by the professor.",
+    correctSentence: "Kitap profesör tarafından yazıldı.",
+    translation: "Kitap profesör tarafından yazıldı.",
+    mechanicNote: "<strong>7. Adım: Etken / Edilgen (Active & Passive)</strong><br>Akademik metinlerin bel kemiği olan edilgen çatıyı (be + V3) ve eylemin kimin tarafından yapıldığını belirten 'by' edatının kullanımını çözersiniz."
+  },
+  {
+    id: "fq8",
+    type: "inversion-transformer",
+    grammarTags: ["Devrik Cümleler", "Inversion"],
+    prompt: "Verilen düz akademik cümleyi devrik (inverted) forma dönüştürün:",
+    mainSentence: "We had seldom encountered such a complex theory.",
+    options: [
+      "Seldom had we encountered such a complex theory.",
+      "Seldom we had encountered such a complex theory.",
+      "We had encountered seldom such a complex theory.",
+      "Seldom had encountered we such a complex theory."
+    ],
+    correctIndex: 0,
+    translation: "Böylesine karmaşık bir teoriyle nadiren karşılaşmıştık.",
+    mechanicNote: "<strong>8. Adım: Devrik Cümleler (Inversion)</strong><br>Vurgu amacıyla yardımcı fiilin öznenin önüne geldiği devrik yapıları çözersiniz."
+  },
+  {
+    id: "fq9",
+    type: "punctuation-check",
+    grammarTags: ["Noktalama & Bağlaçlar", "Punctuation Check"],
+    prompt: "Noktalama işaretlerine dikkat ederek boşluğa gelmesi gereken en uygun seçeneği bulunuz:",
+    sentence: "The theory was complex__________ however, it was proven correct.",
+    options: [";", ",", ".", ":"],
+    correctIndex: 0,
+    translation: "Teori karmaşıktı; bununla birlikte, doğruluğu kanıtlandı.",
+    mechanicNote: "<strong>9. Adım: Noktalama ve Yapı Kontrolü (Punctuation-Check)</strong><br>Cümle içindeki noktalı virgül gibi noktalama işaretlerini analiz ederek boşluğa gelmesi gereken bağlacı bulmaya yöneliktir."
+  },
+  {
+    id: "fq10",
+    type: "structure-match",
+    grammarTags: ["Bağlaç Yapıları", "Structure Match"],
+    prompt: "Cümlenin gramer yapısına uygun olan bağlacı seçin:",
+    sentence: "Not only did he complete the project, but he ___ received an award.",
+    options: ["also", "too", "as well", "either"],
+    correctIndex: 0,
+    translation: "Sadece projeyi tamamlamakla kalmadı, aynı zamanda bir ödül de aldı.",
+    mechanicNote: "<strong>10. Adım: Gramer Yapısı Eşleştirme (Structure-Match)</strong><br>Cümlenin sentaks kurallarına ve edat gereksinimlerine göre en doğru bağlacı veya kelime yapısını bulmayı amaçlar."
+  },
+  {
+    id: "fq11",
+    type: "idiom-builder",
+    grammarTags: ["Deyim İnşa Etme", "Idioms"],
+    prompt: "Akademik deyimi oluşturmak için aşağıdaki kelimelere sırasıyla tıklayınız:",
+    tokens: ["shed", "light", "on"],
+    correctSequence: ["shed", "light", "on"],
+    meaningTr: "ışık tutmak, aydınlatmak",
+    sentence: "The study will shed light on the disease.",
+    translation: "Çalışma hastalık üzerine ışık tutacak.",
+    mechanicNote: "<strong>11. Adım: Deyim İnşa Etme (Idiom-Builder)</strong><br>Türkçe anlamı verilen akademik deyimi aşağıdaki kelimelere doğru sırayla tıklayarak oluşturursunuz."
+  },
+  {
+    id: "fq12",
+    type: "multiple-fill-blank",
+    grammarTags: ["Sebep Bağlaçları", "Multiple Fill-Blank"],
+    prompt: "Cümledeki boşlukları sırasıyla klavyeden doldurunuz (örn: Since ... at):",
+    sentence: "___ the weather was bad, they decided to stay ___ home.",
+    corrects: ["Since", "at"],
+    translation: "Hava kötü olduğu için evde kalmaya karar verdiler.",
+    mechanicNote: "<strong>12. Adım: Çoklu Boşluk Doldurma (Multiple-Fill-Blank)</strong><br>Tek bir cümlede birden fazla boşluk içeren yapıları çözmeyi hedefler."
+  },
+  {
+    id: "fq13",
+    type: "true-false",
+    grammarTags: ["Dil Bilgisi Kuralı", "True / False"],
+    prompt: "Verilen kural ifadesi doğru mudur, yanlış mıdır?",
+    turkishTranslation: "Present Perfect Tense (have/has + V3) geçmişte başlayıp günümüzde de etkisi devam eden eylemler için kullanılır.",
+    correctAnswer: "true",
+    translation: "Doğru.",
+    mechanicNote: "<strong>13. Adım: Doğru / Yanlış (True-False)</strong><br>Sunulan dil bilgisi kuralı veya çeviri eşleşmesinin doğruluğunu hızlıca test eder."
+  },
+  {
+    id: "fq14",
+    type: "spotlight",
+    grammarTags: ["Cümle Analizi", "Spotlight"],
+    prompt: "Aşağıdaki seçeneklerden cümlenin içindeki zarfı (adverb) bulunuz:",
+    paragraph: "The researchers recently published a groundbreaking study.",
+    highlightChunk: "recently",
+    options: ["recently", "published", "groundbreaking", "study"],
+    correctIndex: 0,
+    translation: "Araştırmacılar yakın zamanda çığır açan bir çalışma yayınladılar.",
+    mechanicNote: "<strong>14. Adım: Projektör Modu (Spotlight)</strong><br>Cümlenin içindeki belirli dil bilgisi rollerine sahip (edat, zarf, bağlaç) kelimeleri doğrudan bulmayı hedefler."
+  },
+  {
+    id: "fq15",
+    type: "swipe",
+    grammarTags: ["Hızlı Çeviri", "Swipe Mode"],
+    prompt: "Kartı eşleşme doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+    phrase: "Although it was raining, they went out.",
+    translation: "Yağmur yağdığı için dışarı çıktılar.",
+    isCorrect: false,
+    translationHint: "Rağmen bağlacı 'için' olarak çevrilmiştir, yanlıştır.",
+    mechanicNote: "<strong>15. Adım: Kaydırma Kartları (Swipe)</strong><br>Hızlı refleks ölçümü için ekrana gelen bilgilerin doğruluğuna göre kartı sağa veya sola kaydırırsınız."
+  },
+  {
+    id: "fq16",
+    type: "reflex-blitz",
+    grammarTags: ["Refleks Hız Testi", "Reflex Blitz"],
+    prompt: "Zaman dolmadan 'Unless' bağlacının anlamını seçiniz:",
+    sentence: "Unless you study, you will fail the exam.",
+    options: ["Medikçe / Mezse", "Çünkü", "Eğer", "Rağmen"],
+    correctIndex: 0,
+    translation: "Ders çalışmadıkça sınavda başarısız olursun.",
+    mechanicNote: "<strong>16. Adım: Hız Tüneli (Reflex-Blitz)</strong><br>Zaman kısıtlı hızlı tepki verme oyunudur."
+  },
+  {
+    id: "fq17",
+    type: "collocation-matching",
+    grammarTags: ["Kelime & Edat Uyumları", "Collocation Matching"],
+    prompt: "Sıfatları ve ilgili edat kartlarını eşleştirerek bağlantı kilidini açınız:",
+    pairs: [
+      { word: "interested", prep: "in" },
+      { word: "good", prep: "at" },
+      { word: "responsible", prep: "for" },
+      { word: "afraid", prep: "of" }
+    ],
+    translation: "Eşleştirme tamamlandı.",
+    mechanicNote: "<strong>17. Adım: Bağlantı Kilidi (Collocation-Matching)</strong><br>Eşleştirme tabanlı kelime ve edat grupları eşleştirme kart oyunudur."
+  },
+  {
+    id: "fq18",
+    type: "multiple-choice",
+    grammarTags: ["İsim Tamlaması", "Of Phrase"],
+    prompt: "Aşağıdaki edatlı tamlamanın Türkçe karşılığını seçiniz: 'The legs of the animal'",
+    sentence: "The legs of the animal",
+    options: ["Hayvanın bacakları", "Bacaklı hayvan", "Bacaktaki hayvan", "Hayvan ve bacaklar"],
+    correctIndex: 0,
+    translation: "Hayvanın bacakları",
+    mechanicNote: "<strong>18. Adım: İsim Tamlamaları ('of')</strong><br>Geriye doğru çevrilen isim tamlamalarını pekiştirirsiniz."
+  },
+  {
+    id: "fq19",
+    type: "word-bank",
+    grammarTags: ["Edilgen Yapı", "Word Order"],
+    prompt: "Kelimeleri doğru sıraya dizerek edilgen cümleyi İngilizce oluşturun: 'Hırsız yakalandı.'",
+    sentence: "The thief was arrested",
+    words: ["arrested", "was", "thief", "The"],
+    correctOrder: ["The", "thief", "was", "arrested"],
+    translation: "Hırsız yakalandı.",
+    mechanicNote: "<strong>19. Adım: Edilgen Yapılar (Passive Word Order)</strong><br>Edilgen yapıların kelime dizilimi kurallarını pekiştirirsiniz."
+  },
+  {
+    id: "fq20",
+    type: "matching",
+    grammarTags: ["Sıfat Cümleciği", "Relative Clause"],
+    prompt: "İlgi zamirlerini kullanım amaçlarıyla eşleştiriniz:",
+    pairs: [
+      { left: "who", right: "insanlar için" },
+      { left: "which", right: "nesneler için" },
+      { left: "where", right: "yerler için" }
+    ],
+    translation: "Eşleştirme tamamlandı.",
+    mechanicNote: "<strong>20. Adım: Sıfat Cümleciği Eşleştirme</strong><br>İlgi zamirlerinin niteledikleri öğelere göre eşleştirilmesini çözersiniz."
+  },
+  {
+    id: "fq21",
+    type: "fill-blank-dropdown",
+    grammarTags: ["Sıfat Cümleciği Kısaltması", "Reduction"],
+    prompt: "Boşluğa gelebilecek en uygun edilgen kısaltma fiil biçimini seçiniz:",
+    sentence: "The report [written] by the secretary was sent.",
+    options: ["written", "writing", "to write", "writes"],
+    correctIndex: 0,
+    translation: "Sekreter tarafından yazılan rapor gönderildi.",
+    mechanicNote: "<strong>21. Adım: Sıfat Cümleciklerinde Kısaltma</strong><br>İsimlerden sonra gelen edilgen kısaltmaları öğrenirsiniz."
+  },
+  {
+    id: "fq22",
+    type: "fill-blank",
+    grammarTags: ["İsim Cümlecikleri", "Noun Clauses"],
+    prompt: "Boşluğa uygun olan isim cümleciği bağlacını seçiniz:",
+    sentence: "I don't know [what] he wants.",
+    options: ["what", "that", "whether", "if"],
+    correctIndex: 0,
+    translation: "Onun ne istediğini bilmiyorum.",
+    mechanicNote: "<strong>22. Adım: İsim Cümlecikleri (Noun Clauses)</strong><br>İsim cümleciği bağlaçlarını ve nesne konumundaki cümleleri çözersiniz."
+  },
+  {
+    id: "fq23",
+    type: "fill-blank-text",
+    grammarTags: ["Geçmiş Zaman Modalları", "Perfect Modals"],
+    prompt: "Boşluğa uygun olan modal kelimesini klavyeden yazınız: 'You ___ have studied harder.' (Çalışmalıydın)",
+    sentence: "You [should] have studied harder.",
+    correctAnswer: "should",
+    translation: "Daha çok çalışmalıydın.",
+    mechanicNote: "<strong>23. Adım: Geçmişe Dair Pişmanlıklar</strong><br>Perfect modal (should have V3) yapılarını pekiştirirsiniz."
+  },
+  {
+    id: "fq24",
+    type: "inversion-transformer",
+    grammarTags: ["Hardly ... When Devrik Yapısı", "Inversion"],
+    prompt: "Verilen düz cümleyi 'Hardly' ile başlayan devrik forma dönüştürün:",
+    mainSentence: "He had hardly finished speaking when the audience cheered.",
+    options: [
+      "Hardly had he finished speaking when the audience cheered.",
+      "Hardly he had finished speaking when the audience cheered.",
+      "Hardly had finished he speaking when the audience cheered.",
+      "Hardly he finished speaking when the audience cheered."
+    ],
+    correctIndex: 0,
+    translation: "Konuşmasını henüz bitirmişti ki seyirciler alkışladı.",
+    mechanicNote: "<strong>24. Adım: Hardly ... When Devrik Yapısı</strong><br>Yardımcı fiilin başa alındığı devrik yapıları çözersiniz."
+  },
+  {
+    id: "fq25",
+    type: "punctuation-check",
+    grammarTags: ["Noktalama & Geçişler", "Punctuation"],
+    prompt: "Boşluğa gelmesi gereken noktalama işaretleri ile birlikte doğru geçiş bağlacını bulunuz:",
+    sentence: "She completed the report__________ she did not submit it.",
+    options: ["; however,", ", but", ". Therefore,", ": indeed"],
+    correctIndex: 0,
+    translation: "Raporu tamamladı; ancak teslim etmedi.",
+    mechanicNote: "<strong>25. Adım: Cümleler Arası Noktalama Kuralları</strong><br>Noktalı virgül ve virgül arasındaki geçiş bağlaçlarının kullanımını çözersiniz."
+  },
+  {
+    id: "fq26",
+    type: "structure-match",
+    grammarTags: ["Zarf Kısaltması Uyum", "Structure Match"],
+    prompt: "Cümlenin gramer yapısına uygun fiil çekimini seçiniz:",
+    sentence: "Having ___ the book, he returned it to the library.",
+    options: ["read", "reading", "to read", "reads"],
+    correctIndex: 0,
+    translation: "Kitabı okuduktan sonra kütüphaneye iade etti.",
+    mechanicNote: "<strong>26. Adım: Perfect Participle Kısaltmaları</strong><br>Geçmiş eylemlerin kısaltma yapılarındaki sentaks kurallarını çözersiniz."
+  },
+  {
+    id: "fq27",
+    type: "idiom-builder",
+    grammarTags: ["Akdemik Deyim", "Idioms"],
+    prompt: "Deyimi oluşturmak için aşağıdaki kelimelere sırasıyla tıklayınız:",
+    tokens: ["keep", "track", "of"],
+    correctSequence: ["keep", "track", "of"],
+    meaningTr: "takip etmek, izini sürmek",
+    sentence: "We need to keep track of the expenses.",
+    translation: "Masrafları takip etmemiz gerekiyor.",
+    mechanicNote: "<strong>27. Adım: Deyim Yapıları</strong><br>Akademik deyimlerin sentaksını pekiştirirsiniz."
+  },
+  {
+    id: "fq28",
+    type: "multiple-fill-blank",
+    grammarTags: ["Koşul Yapıları", "Multiple Fill-Blank"],
+    prompt: "Boşlukları sırasıyla klavyeden doldurunuz (örn: had ... would):",
+    sentence: "If I ___ known, I ___ have helped.",
+    corrects: ["had", "would"],
+    translation: "Bilseydim yardım ederdim.",
+    mechanicNote: "<strong>28. Adım: Koşul Cümlelerinde Yardımcı Fiiller</strong><br>Varsayımsal koşul yardımcı fiil kombinasyonlarını çözersiniz."
+  },
+  {
+    id: "fq29",
+    type: "true-false",
+    grammarTags: ["Ettirgen Yapı", "True / False"],
+    prompt: "Aşağıdaki ettirgen kuralı ifadesi doğru mudur?",
+    turkishTranslation: "'Have something done' yapısı bir işi başkasına yaptırmak (ettirgen) için kullanılır.",
+    correctAnswer: "true",
+    translation: "Doğru.",
+    mechanicNote: "<strong>29. Adım: Ettirgen Yapılar</strong><br>Ettirgen yapı kural ve reflekslerini doğrularsınız."
+  },
+  {
+    id: "fq30",
+    type: "spotlight",
+    grammarTags: ["Cümle Ögesi Analizi", "Spotlight"],
+    prompt: "Seçeneklerden cümlenin ana yüklemini (main verb) bulunuz:",
+    paragraph: "The novel written by Orwell depicts a dystopian future.",
+    highlightChunk: "depicts",
+    options: ["written", "depicts", "novel", "future"],
+    correctIndex: 1,
+    translation: "Orwell tarafından yazılan roman distopik bir geleceği tasvir eder.",
+    mechanicNote: "<strong>30. Adım: Ana Yüklemi Bulma</strong><br>Araya niteleyiciler girmiş uzun cümlelerde ana eylemi bulmayı çözersiniz."
+  }
+];
+
 // Quiz ve diğer durumlar
+let isFormationMode = false;
 let currentLesson = null;
 let currentQuizQuestions = [];
 let currentQuestionIndex = 0;
@@ -2014,7 +2372,7 @@ function loadState() {
   }
   if (state.negationOn === undefined || state.negationOn === null) state.negationOn = false;
   if (state.modalSelectLevel12 === undefined || state.modalSelectLevel12 === null) state.modalSelectLevel12 = 'could';
-  if (state.activePassiveMode === undefined || state.activePassiveMode === null) state.activePassiveMode = 'passive';
+  state.activePassiveMode = 'active';
   if (state.selectedSubjectIndex === undefined || state.selectedSubjectIndex === null || isNaN(parseInt(state.selectedSubjectIndex, 10))) {
     state.selectedSubjectIndex = 0;
   } else {
@@ -2097,7 +2455,10 @@ function showScreen(screenId) {
   const activeScreen = document.querySelector('.app-screen.active');
   if (activeScreen && activeScreen.id === 'home-screen') {
     homeScreenScrollY = window.scrollY;
+    localStorage.setItem('amok_last_scroll_y', window.scrollY);
   }
+
+  localStorage.setItem('amok_last_screen', screenId);
 
   document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
@@ -2105,8 +2466,9 @@ function showScreen(screenId) {
   // If returning to home-screen, restore scroll position
   if (screenId === 'home-screen') {
     updateActiveUnitTheme();
+    const lastScrollY = parseInt(localStorage.getItem('amok_last_scroll_y'), 10) || homeScreenScrollY;
     requestAnimationFrame(() => {
-      window.scrollTo(0, homeScreenScrollY);
+      window.scrollTo(0, lastScrollY);
     });
     setTimeout(checkAndShowReviewPrompt, 600);
   } else {
@@ -3061,6 +3423,7 @@ function initAuth() {
 }
 
 function enterApp() {
+  validateLicenseDevices();
   updateStreak();
   updateTopBar();
   renderLessonTree();
@@ -3083,7 +3446,25 @@ function enterApp() {
     }
   }
 
-  showScreen('home-screen');
+  // Restore screen, tab, and scroll position
+  let lastScreen = localStorage.getItem('amok_last_screen') || 'home-screen';
+  if (lastScreen === 'auth-screen') {
+    lastScreen = 'home-screen';
+  }
+  const lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
+  
+  showScreen(lastScreen);
+  switchTab(lastTab);
+
+  if (lastScreen === 'home-screen') {
+    const lastScrollY = parseInt(localStorage.getItem('amok_last_scroll_y'), 10);
+    if (!isNaN(lastScrollY) && lastScrollY > 0) {
+      homeScreenScrollY = lastScrollY;
+      requestAnimationFrame(() => {
+        window.scrollTo(0, lastScrollY);
+      });
+    }
+  }
 }
 
 function logout() {
@@ -3114,6 +3495,7 @@ function logout() {
     wrongQuestions: [],
     streakFreezeBought: false,
     activeTheme: 'canva',
+    activePassiveMode: 'active',
     dailyTasks: {
       lastResetDate: null,
       tasks: []
@@ -3661,14 +4043,9 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
 
-      if (state.isGuest && !checkIsLocal()) {
-        const firstUnit = units.find(u => u.id === 1);
-        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
-        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
-        if (unit.id !== 1 || isUnit1Completed) {
-          showGuestBlockModal();
-          return;
-        }
+      if (!hasLicenseOrTrialAccess(lId)) {
+        showGuestBlockModal();
+        return;
       }
 
       togglePopover(btn, lId, unit.id, pt.x, pt.y);
@@ -3720,6 +4097,41 @@ function renderLessonTree() {
       </defs>
     </svg>
   `;
+
+  // Dynamic injection of Formasyon Turu as starter lesson
+  const isCompleted = state.formationTourCompleted;
+  const buttonText = isCompleted ? "Turu Tekrarla (Keşfet)" : "Turu Başlat (Keşfet)";
+  const btnClass = isCompleted ? "btn-secondary" : "btn-primary";
+  const btnStyle = isCompleted 
+    ? "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s;" 
+    : "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; background: linear-gradient(135deg, #a855f7 0%, #db2777 100%); border: none; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4); cursor: pointer; transition: all 0.2s;";
+
+  const tourBlock = document.createElement('div');
+  tourBlock.className = 'formation-tour-start-block heartbeat-card';
+  tourBlock.style.cssText = "margin-bottom: 32px; padding: 24px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.2) 100%); border: 2.2px solid rgba(168, 85, 247, 0.55); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: left; position: relative; overflow: hidden;";
+  tourBlock.innerHTML = `
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div style="flex: 1; min-width: 250px;">
+        <span style="background: linear-gradient(135deg, #a855f7, #ec4899); color: white; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">🚀 BAŞLANGIÇ / ORYANTASYON</span>
+        <h3 style="margin: 0 0 6px 0; font-size: 1.4rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--accent-primary);">🎓 Formasyon Turu</h3>
+        <p style="margin: 0; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.4; font-weight: 500;">
+          amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>30 doğrusal soruda</strong> hızlıca keşfedin.
+        </p>
+      </div>
+      <div style="flex-shrink: 0; display: flex; justify-content: flex-end;">
+        <button class="btn ${btnClass}" id="btn-tree-start-formation" style="${btnStyle}">${buttonText}</button>
+      </div>
+    </div>
+  `;
+  container.appendChild(tourBlock);
+
+  // Bind click
+  const startBtn = tourBlock.querySelector('#btn-tree-start-formation');
+  if (startBtn) {
+    startBtn.addEventListener('click', () => {
+      startFormationTour();
+    });
+  }
 
   const renderedUnits = [...units];
 
@@ -3986,6 +4398,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       </div>
     `;
   } else if (lesson.exercises && lesson.exercises.length > 0) {
+    let hasAnyLockedExercise = false;
     let exercisesRows = lesson.exercises.map((ex, index) => {
       const isExCompleted = state.completedLessons.includes(`${lesson.id}_${ex.id}`);
       let isExUnlocked = true;
@@ -3996,6 +4409,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
             isExUnlocked = isUnlocked;
           } else {
             isExUnlocked = false; // Lock everything else
+            hasAnyLockedExercise = true;
           }
         } else {
           if (index === 0) {
@@ -4024,7 +4438,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
           </div>
           <div class="qp-btn-group">
             ${isLocalEnvironment() ? `<button class="exercise-preview-btn" ${isExUnlocked ? '' : 'disabled style="opacity: 0.5; pointer-events: none;"'} data-exercise-id="${ex.id}" title="Soruları Önizle">👁️ Önizle</button>` : ''}
-            <button class="btn btn-primary exercise-start-btn" ${isExUnlocked ? '' : 'disabled'} data-exercise-id="${ex.id}">
+            <button class="btn btn-primary exercise-start-btn" data-exercise-id="${ex.id}" data-locked="${!isExUnlocked}" style="${isExUnlocked ? '' : 'opacity: 0.85; background: var(--color-locked, #b5b5b5); border-color: var(--color-locked, #b5b5b5); color: var(--text-primary); cursor: pointer;'}">
               ${statusText}
             </button>
           </div>
@@ -4038,6 +4452,19 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         <div class="popover-exercises-list">
           ${exercisesRows}
         </div>
+        ${hasAnyLockedExercise ? `
+          <div style="margin-top: 12px; padding: 10px 12px; background: rgba(245, 158, 11, 0.08); border: 1px dashed var(--accent-primary); border-radius: var(--radius-md); font-size: 0.8rem; color: var(--text-primary); display: flex; flex-direction: column; gap: 6px; text-align: left;">
+            <div style="font-weight: 700; color: var(--accent-primary); display: flex; align-items: center; gap: 6px;">
+              <span>🔑</span> Devam Etmek İçin Lisans Gerekli
+            </div>
+            <div style="color: var(--text-secondary); font-size: 0.75rem; line-height: 1.4;">
+              Bu dersin sonraki alıştırmalarını tamamlamak ve diğer tüm bölümleri açmak için bir lisans anahtarı etkinleştirmeniz gerekmektedir.
+            </div>
+            <button id="popover-activate-licence-btn" style="background: var(--accent-primary); color: white; border: none; border-radius: 6px; padding: 6px 12px; font-weight: bold; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; align-self: flex-start; margin-top: 2px;">
+              Lisans Anahtarı Gir
+            </button>
+          </div>
+        ` : ''}
       </div>
     `;
   } else {
@@ -4073,10 +4500,23 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     popover.querySelectorAll('.exercise-start-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const exerciseId = btn.dataset.exerciseId;
+        const isLocked = btn.dataset.locked === 'true';
+        if (isLocked) {
+          popover.remove();
+          showGuestBlockModal();
+          return;
+        }
         popover.remove();
         startLesson(lessonId, exerciseId);
       });
     });
+    const popoverActivateBtn = popover.querySelector('#popover-activate-licence-btn');
+    if (popoverActivateBtn) {
+      popoverActivateBtn.addEventListener('click', () => {
+        popover.remove();
+        showGuestBlockModal();
+      });
+    }
     popover.querySelectorAll('.exercise-preview-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -4422,7 +4862,7 @@ function updateQuizMetadata() {
   const metadataEl = document.getElementById('quiz-metadata');
   if (!metadataEl) return;
 
-  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : (currentQuizQuestions ? currentQuizQuestions[currentQuestionIndex] : null);
+  const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : (currentQuizQuestions ? currentQuizQuestions[currentQuestionIndex] : null));
   let isNew = false;
   if (question) {
     let parentObj = null;
@@ -4436,6 +4876,12 @@ function updateQuizMetadata() {
     isNew = isQuestionNew(question, parentObj);
   }
   const newBadge = isNew ? ' <span class="quiz-new-badge" style="background: #ff3b30; color: #fff; font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 6px; display: inline-block; vertical-align: middle; line-height: 1.2;">YENİ</span>' : '';
+
+  if (isFormationMode) {
+    const total = FORMATION_QUESTIONS.length;
+    metadataEl.innerHTML = `amok Haritası • Formasyon Turu • Soru ${currentQuestionIndex + 1}/${total}`;
+    return;
+  }
 
   if (isReviewMode) {
     const total = reviewQuestions.length;
@@ -4471,7 +4917,7 @@ function updateQuizMetadata() {
 
 function updateQuizUI() {
   // İlerleme çubuğu
-  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
+  const total = isFormationMode ? FORMATION_QUESTIONS.length : (isReviewMode ? reviewQuestions.length : currentQuizQuestions.length);
   const progress = (currentQuestionIndex / total) * 100;
   document.getElementById('quiz-progress').style.width = `${progress}%`;
 
@@ -4615,8 +5061,16 @@ function applyClozeHighlighting(question) {
 }
 
 function renderQuestion() {
-  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
+  const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex]);
   if (!question) return;
+
+  // Convert bracketed answers [word] to gap underscores ___ for fill-blank question types
+  if (question.type && question.type.startsWith('fill-blank') && question.sentence && question.sentence.includes('[') && question.sentence.includes(']')) {
+    if (!question._originalSentence) {
+      question._originalSentence = question.sentence;
+    }
+    question.sentence = question.sentence.replace(/\[.*?\]/g, '___');
+  }
 
   const quizScreen = document.getElementById('quiz-screen');
   if (quizScreen) {
@@ -4795,6 +5249,19 @@ function renderQuestion() {
     }
   }
   
+  if (question.grammarTags && question.grammarTags.length > 0) {
+    const tagsHtml = `
+      <div class="quiz-grammar-tags-inside" style="display: flex; gap: 6px; flex-wrap: wrap; margin: 0 auto 16px auto; justify-content: center; width: 100%;">
+        ${question.grammarTags.map(tag => `
+          <span class="quiz-grammar-tag-badge" style="font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 9999px; background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); border: 1px solid rgba(139, 126, 200, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
+            ${tag}
+          </span>
+        `).join('')}
+      </div>
+    `;
+    body.insertAdjacentHTML('afterbegin', tagsHtml);
+  }
+
   if (question.topic) {
     const badgeHtml = `
       <div class="topic-reminder-badge" style="display: block; text-align: center; background: var(--theme-accent-light); color: var(--theme-accent); padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin: 0 auto 16px auto; max-width: max-content; border: 1.5px solid rgba(139, 126, 200, 0.25); letter-spacing: 0.3px; box-shadow: var(--shadow-sm); font-family: var(--font-heading);">
@@ -6938,7 +7405,7 @@ function showBlitzFeedback(question) {
 function checkAnswer() {
   if (isAnswerChecked) return;
 
-  const question = isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex];
+  const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex]);
   let isCorrect = false;
 
   const activeType = (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank')
@@ -7158,7 +7625,9 @@ function checkAnswer() {
     }
     
     // Remove from wrongQuestions if answered correctly (or defer to session completion if in review mode)
-    if (isReviewMode) {
+    if (isFormationMode) {
+      // Do nothing for wrong questions
+    } else if (isReviewMode) {
       if (!reviewSessionCorrectIds.includes(question.id)) {
         reviewSessionCorrectIds.push(question.id);
       }
@@ -7213,7 +7682,7 @@ function checkAnswer() {
     }
     wrongCount++;
     
-    if (!isReviewMode) {
+    if (!isReviewMode && !isFormationMode) {
       state.hearts = Math.max(0, state.hearts - 1);
       animateStat('stat-hearts', 'heart-lose');
       updateTopBar();
@@ -7303,9 +7772,11 @@ function skipQuestion() {
   }
   currentQuestionIndex++;
 
-  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
+  const total = isFormationMode ? FORMATION_QUESTIONS.length : (isReviewMode ? reviewQuestions.length : currentQuizQuestions.length);
   if (currentQuestionIndex >= total) {
-    if (isReviewMode) {
+    if (isFormationMode) {
+      completeFormationTour();
+    } else if (isReviewMode) {
       completeReviewSession();
     } else {
       completeLesson();
@@ -7324,15 +7795,17 @@ function nextQuestion() {
   currentQuestionIndex++;
 
   // Canlar bitti mi?
-  if (!isReviewMode && state.hearts <= 0) {
+  if (!isReviewMode && !isFormationMode && state.hearts <= 0) {
     showGameOver();
     return;
   }
 
   // Ders/Tekrar bitti mi?
-  const total = isReviewMode ? reviewQuestions.length : currentQuizQuestions.length;
+  const total = isFormationMode ? FORMATION_QUESTIONS.length : (isReviewMode ? reviewQuestions.length : currentQuizQuestions.length);
   if (currentQuestionIndex >= total) {
-    if (isReviewMode) {
+    if (isFormationMode) {
+      completeFormationTour();
+    } else if (isReviewMode) {
       completeReviewSession();
     } else {
       completeLesson();
@@ -7365,6 +7838,34 @@ function completeReviewSession() {
   // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
   checkReviewBanner();
   showScreen('home-screen');
+}
+
+function completeFormationTour() {
+  isFormationMode = false;
+  
+  const isFirstTime = !state.formationTourCompleted;
+  state.formationTourCompleted = true;
+
+  if (isFirstTime) {
+    state.xp += 50;
+    showToast('Tebrikler! Formasyon Turunu tamamladınız ve 50 XP kazandınız! 🎓', 'success');
+  } else {
+    showToast('Tebrikler! Formasyon Turunu tekrar tamamladınız! 🎓', 'success');
+  }
+
+  // Confetti explosion
+  if (typeof confetti === 'function') {
+    confetti({
+      particleCount: 150,
+      spread: 80,
+      origin: { y: 0.6 }
+    });
+  }
+
+  saveState();
+  updateTopBar();
+  showScreen('home-screen');
+  updateFormationTourCardUI();
 }
 
 // ============================================================
@@ -7535,6 +8036,9 @@ function toggleTheme() {
 // ============================================================
 function switchTab(tabId) {
   if (!tabId) return;
+  
+  localStorage.setItem('amok_last_tab', tabId);
+
   document.querySelectorAll('.nav-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tabId);
   });
@@ -7548,6 +8052,8 @@ function switchTab(tabId) {
   } else if (tabId === 'profile') {
     renderProfile();
   } else if (tabId === 'simulator') {
+    state.activePassiveMode = 'active';
+    saveState();
     renderSimulator();
   }
 }
@@ -7890,7 +8396,6 @@ function renderProfile() {
           </div>
         </div>
 
-        ${getReportsHTML()}
       </div>
 
       <!-- Sağ Sütun: İstatistikler ve Günlük Görevler -->
@@ -7976,6 +8481,17 @@ function renderProfile() {
 
   function updateProfileLicenceUI() {
     const key = state.licenceKey || '';
+    if (key === 'REQUESTED') {
+      if (statusText) statusText.textContent = "Durum: Lisans Talebi Bekleniyor 📩";
+      if (expiryText) expiryText.textContent = "Talebiniz yöneticiye iletildi, değerlendiriliyor.";
+      if (statusBadge) {
+        statusBadge.textContent = "TALEP EDİLDİ";
+        statusBadge.style.background = "rgba(59, 130, 246, 0.1)";
+        statusBadge.style.color = "#3b82f6";
+        statusBadge.style.borderColor = "rgba(59, 130, 246, 0.25)";
+      }
+      return;
+    }
     if (!key) {
       if (statusText) statusText.textContent = "Durum: Ücretsiz Sürüm (Kilitli)";
       if (expiryText) expiryText.textContent = "Dersler ve bölümler kilitlidir.";
@@ -8040,6 +8556,10 @@ function renderProfile() {
         }
         
         state.licenceKey = inputVal;
+        const deviceOk = await validateLicenseDevices();
+        if (!deviceOk) {
+          return;
+        }
         saveState();
         showToast(`Tebrikler! Premium Lisans Aktifleştirildi (Sahibi: ${check.owner}) 🎉`, "success");
         updateProfileLicenceUI();
@@ -8767,14 +9287,63 @@ function renderStore() {
 function showGuestBlockModal() {
   const modal = document.getElementById('guest-block-modal');
   if (modal) {
+    const titleEl = modal.querySelector('.grammar-modal-body p:first-of-type');
+    const descEl = modal.querySelector('.grammar-modal-body p:last-of-type');
+    const loginBtn = document.getElementById('guest-block-login-btn');
+    const registerBtn = document.getElementById('guest-block-register-btn');
+    const loginRegisterRow = loginBtn ? loginBtn.parentElement : null;
+
+    if (state.isGuest) {
+      if (titleEl) titleEl.textContent = "Devam Etmek İçin Üye Ol ve Lisans Anahtarı Al!";
+      if (descEl) descEl.textContent = "Misafir hesapları sadece ilk bölümü tamamlayabilir. İlerlemeyi kaydetmek, diğer bölümleri açmak ve liglerde yarışmak için ücretsiz üye olun!";
+      if (loginRegisterRow) loginRegisterRow.style.display = 'flex';
+    } else {
+      if (titleEl) titleEl.textContent = "Premium Lisans Gerekli! 🔑";
+      if (descEl) descEl.textContent = "Deneme sürümünüzün sonuna geldiniz (Maksimum 2 ders). Öğrenmeye devam etmek için lütfen geçerli bir lisans anahtarı etkinleştirin.";
+      if (loginRegisterRow) loginRegisterRow.style.display = 'none';
+    }
+
     modal.classList.add('show');
   }
+}
+
+function startFormationTour() {
+  quizSessionId++;
+  isFormationMode = true;
+  currentQuestionIndex = 0;
+  correctCount = 0;
+  wrongCount = 0;
+  selectedAnswer = null;
+  isAnswerChecked = false;
+  matchState = null;
+
+  updateQuizUI();
+  showScreen('quiz-screen');
+  renderQuestion();
 }
 
 // ============================================================
 // EVENT LİSTENERLER
 // ============================================================
 function initEventListeners() {
+  // Formasyon Turu Kartı Güncelleme
+  function updateFormationTourCardUI() {
+    const btn = document.getElementById('btn-tree-start-formation');
+    if (btn) {
+      if (state.formationTourCompleted) {
+        btn.textContent = "Turu Tekrarla (Keşfet)";
+        btn.className = "btn btn-secondary";
+        btn.style.cssText = "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; border-radius: var(--radius-md); cursor: pointer;";
+      } else {
+        btn.textContent = "Turu Başlat (Keşfet)";
+        btn.className = "btn btn-primary";
+        btn.style.cssText = "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; background: linear-gradient(135deg, #a855f7 0%, #db2777 100%); border: none; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4); cursor: pointer;";
+      }
+    }
+  }
+  window.updateFormationTourCardUI = updateFormationTourCardUI;
+  updateFormationTourCardUI();
+
   // Misafir Engel Modali
   const guestBlockCloseBtn = document.getElementById('guest-block-close-btn');
   const guestBlockLoginBtn = document.getElementById('guest-block-login-btn');
@@ -8804,6 +9373,106 @@ function initEventListeners() {
       logout();
       const tabRegister = document.getElementById('tab-register');
       if (tabRegister) tabRegister.click();
+    });
+  }
+
+  const guestBlockLicenceBtn = document.getElementById('guest-block-licence-btn');
+  if (guestBlockLicenceBtn) {
+    guestBlockLicenceBtn.addEventListener('click', () => {
+      hideGuestBlockModal();
+      switchTab('profile');
+      setTimeout(() => {
+        const statusBox = document.getElementById('profile-licence-status-box');
+        if (statusBox) {
+          statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const emailInput = document.getElementById('profile-licence-email');
+          if (emailInput) emailInput.focus();
+        }
+      }, 300);
+    });
+  }
+
+  const guestBlockRequestBtn = document.getElementById('guest-block-request-btn');
+  const guestLicenceRequestModal = document.getElementById('guest-licence-request-modal');
+  const guestLicenceRequestCloseBtn = document.getElementById('guest-licence-request-close-btn');
+  const guestLicenceRequestForm = document.getElementById('guest-licence-request-form');
+
+  if (guestBlockRequestBtn && guestLicenceRequestModal) {
+    guestBlockRequestBtn.addEventListener('click', () => {
+      if (state.isGuest) {
+        showToast("Lisans talep edebilmek için lütfen önce üye olun veya giriş yapın!", "warning");
+        hideGuestBlockModal();
+        const tabRegister = document.getElementById('tab-register');
+        if (tabRegister) tabRegister.click();
+        return;
+      }
+
+      if (state.licenceKey === 'REQUESTED') {
+        showToast("Lisans talebiniz zaten beklemede! 📩", "info");
+        hideGuestBlockModal();
+        return;
+      }
+
+      // Prefill fields if available in user state
+      const nameInput = document.getElementById('req-name-surname');
+      if (nameInput) nameInput.value = ''; // Let them write full Name & Surname
+      
+      const emailInput = document.getElementById('req-email');
+      if (emailInput) emailInput.value = state.email || '';
+
+      const phoneInput = document.getElementById('req-phone');
+      if (phoneInput) phoneInput.value = state.phone || '';
+
+      hideGuestBlockModal();
+      guestLicenceRequestModal.classList.add('show');
+    });
+  }
+
+  if (guestLicenceRequestCloseBtn && guestLicenceRequestModal) {
+    guestLicenceRequestCloseBtn.addEventListener('click', () => {
+      guestLicenceRequestModal.classList.remove('show');
+    });
+  }
+
+  if (guestLicenceRequestForm && guestLicenceRequestModal) {
+    guestLicenceRequestForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const adSoyad = document.getElementById('req-name-surname').value.trim();
+      const emailVal = document.getElementById('req-email').value.trim();
+      const phoneVal = document.getElementById('req-phone').value.trim();
+
+      if (!adSoyad || !emailVal || !phoneVal) {
+        showToast("Lütfen tüm alanları doldurun!", "warning");
+        return;
+      }
+
+      try {
+        state.licenceKey = 'REQUESTED';
+        saveState();
+
+        const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+        if (localStates[state.username]) {
+          localStates[state.username].licence_key = 'REQUESTED';
+          localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+        }
+
+        if (supabaseClient && state.username) {
+          await supabaseClient
+            .from('user_states')
+            .update({ licence_key: 'REQUESTED' })
+            .eq('username', state.username);
+        }
+
+        sendLicenceRequestEmail(state.username, adSoyad, emailVal, phoneVal);
+
+        showToast("Lisans anahtarı talebiniz yöneticinize başarıyla iletildi! 📩", "success");
+        guestLicenceRequestModal.classList.remove('show');
+        updateProfileLicenceUI();
+      } catch (err) {
+        console.error('Request licence key error:', err);
+        showToast("Talep iletilirken bir sorun oluştu.", "error");
+      }
     });
   }
 
@@ -8918,15 +9587,10 @@ function initEventListeners() {
     // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
     showScreen('home-screen');
 
-    // Check guest restriction
-    if (state.isGuest && !checkIsLocal()) {
-      const firstUnit = units.find(u => u.id === 1);
-      const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
-      const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
-      if (isUnit1Completed) {
-        showGuestBlockModal();
-        return;
-      }
+    // Check licence trial limit restriction
+    if (!hasLicenseOrTrialAccess() && !checkIsLocal()) {
+      showGuestBlockModal();
+      return;
     }
 
     // Find the next target lesson to open
@@ -9043,11 +9707,19 @@ function initEventListeners() {
   document.getElementById('buy-siber-theme-btn').addEventListener('click', () => buyStoreItem('siber-theme', 180));
   document.getElementById('buy-orman-theme-btn').addEventListener('click', () => buyStoreItem('orman-theme', 120));
 
+  // Home Screen Scroll tracking
+  window.addEventListener('scroll', () => {
+    const activeScreen = document.querySelector('.app-screen.active');
+    if (activeScreen && activeScreen.id === 'home-screen') {
+      localStorage.setItem('amok_last_scroll_y', window.scrollY);
+    }
+  });
+
   // Seviye Belirleme Sınavı
   const startPlacementBtn = document.getElementById('btn-start-placement');
   if (startPlacementBtn) {
     startPlacementBtn.addEventListener('click', () => {
-      if (state.isGuest && !checkIsLocal()) {
+      if (!hasLicenseOrTrialAccess() && !checkIsLocal()) {
         showGuestBlockModal();
         return;
       }
@@ -9087,14 +9759,9 @@ function initEventListeners() {
   const startReviewBtn = document.getElementById('btn-start-review');
   if (startReviewBtn) {
     startReviewBtn.addEventListener('click', () => {
-      if (state.isGuest && !checkIsLocal()) {
-        const firstUnit = units.find(u => u.id === 1);
-        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
-        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
-        if (isUnit1Completed) {
-          showGuestBlockModal();
-          return;
-        }
+      if (!hasLicenseOrTrialAccess() && !checkIsLocal()) {
+        showGuestBlockModal();
+        return;
       }
       startReviewMode();
     });
@@ -9129,14 +9796,9 @@ function initEventListeners() {
   if (reviewPromptConfirmBtn) {
     reviewPromptConfirmBtn.addEventListener('click', () => {
       hideReviewPromptModal();
-      if (state.isGuest && !checkIsLocal()) {
-        const firstUnit = units.find(u => u.id === 1);
-        const firstUnitLessons = firstUnit ? firstUnit.lessons : [];
-        const isUnit1Completed = firstUnitLessons.every(lId => state.completedLessons.includes(lId));
-        if (isUnit1Completed) {
-          showGuestBlockModal();
-          return;
-        }
+      if (!hasLicenseOrTrialAccess() && !checkIsLocal()) {
+        showGuestBlockModal();
+        return;
       }
       startReviewMode();
     });
@@ -9815,6 +10477,24 @@ function submitReport(question, errorType, comment) {
 
   reports.push(newReport);
   localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+
+  if (supabaseClient) {
+    supabaseClient
+      .from('question_reports')
+      .insert([{
+        username: newReport.username,
+        lesson_id: newReport.lessonId,
+        lesson_title: newReport.lessonTitle,
+        question_id: newReport.questionId,
+        question_prompt: newReport.questionPrompt,
+        question_type: newReport.questionType,
+        error_type: newReport.errorType,
+        user_comment: newReport.userComment
+      }])
+      .then(({ error }) => {
+        if (error) console.error('Supabase error saving report:', error);
+      });
+  }
   
   // E-posta bildirimi gönder
   sendReportEmail(newReport, question);
@@ -9884,6 +10564,39 @@ Yapılması Gerekenler:
     });
   } catch (err) {
     console.error('Error decoding obfuscated email:', err);
+  }
+}
+
+function sendLicenceRequestEmail(username, adSoyad, email, tel) {
+  try {
+    const url = 'https://formsubmit.co/ajax/f94120015@gmail.com';
+    const body = {
+      _subject: `AMOK Lisans Talebi - ${username}`,
+      "Ad Soyad": adSoyad || 'Belirtilmemiş',
+      "Kullanıcı Adı": username || 'Belirtilmemiş',
+      "E-posta": email || 'Belirtilmemiş',
+      "Telefon": tel || 'Belirtilmemiş',
+      "Talep Zamanı": new Date().toLocaleString('tr-TR')
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    .then(response => {
+      if (!response.ok) {
+        console.error('Licence request email API returned non-ok status');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending licence request email:', error);
+    });
+  } catch (err) {
+    console.error('Error sending licence request email:', err);
   }
 }
 
@@ -10627,7 +11340,7 @@ function init() {
             // Fetch user_states
             const { data: dbStates, error: statesError } = await supabaseClient
               .from('user_states')
-              .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key');
+              .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key, licence_devices');
 
             if (!statesError && dbStates) {
               dbStates.forEach(s => {
@@ -10667,7 +11380,8 @@ function init() {
               hearts: uState.hearts || 0,
               completed_lessons: uState.completed_lessons || [],
               avatar_color: uState.avatar_color || '#B4A7D6',
-              licence_key: uState.licence_key || ''
+              licence_key: uState.licence_key || '',
+              licence_devices: uState.licence_devices || ''
             };
           }
         });
@@ -10702,6 +11416,7 @@ function init() {
             completedLessons: completedCount,
             avatarColor: st.avatar_color || '#B4A7D6',
             licenceKey: st.licence_key || '',
+            licenceDevices: st.licence_devices || '',
             isNew: createdAt && createdAt >= sevenDaysAgo,
             isOnline: lastSeen && lastSeen >= fiveMinutesAgo,
             isActive24h: lastSeen && lastSeen >= twentyFourHoursAgo
@@ -10798,7 +11513,9 @@ function init() {
         let licenceBadge = '';
         let showDeleteBtn = false;
         
-        if (key) {
+        if (key === 'REQUESTED') {
+          licenceBadge = `<span style="background: rgba(239, 68, 68, 0.15); color: #ff3b30; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.3); animation: pulse 1.5s infinite; display: inline-flex; align-items: center; gap: 4px;">📩 Lisans Talep Etti!</span>`;
+        } else if (key) {
           const verify = verifyLicenceKey(key, user.email !== '—' ? user.email : '', user.phone !== '—' ? user.phone : '');
           if (verify.valid) {
             const now = new Date();
@@ -10950,6 +11667,44 @@ function init() {
       });
     });
 
+    function exportUsersToExcel() {
+      if (!adminUsersCache || adminUsersCache.length === 0) {
+        showToast('Aktif kullanıcı listesi boş!', 'error');
+        return;
+      }
+
+      // CSV Header with UTF-8 BOM
+      let csvContent = "\ufeff";
+      csvContent += "Ad;Soyad;Kullanıcı Adı;E-posta;Telefon;Lisans Anahtarı;Kayıt Tarihi;Son Görülme;XP;Günlük Seri\n";
+
+      // Rows
+      adminUsersCache.forEach(u => {
+        const ad = (u.firstName || '').trim();
+        const soyad = (u.lastName || '').trim();
+        const kAdi = (u.username || '').trim();
+        const email = (u.email || '').trim();
+        const tel = (u.phone || '').trim();
+        const lisans = (u.licenceKey || '').trim();
+        const kayit = u.createdAt ? new Date(u.createdAt).toLocaleString('tr-TR') : '—';
+        const sonGorulme = u.lastSeen ? new Date(u.lastSeen).toLocaleString('tr-TR') : '—';
+        const xp = u.xp || 0;
+        const seri = u.streak || 0;
+
+        csvContent += `"${ad}";"${soyad}";"${kAdi}";"${email}";"${tel}";"${lisans}";"${kayit}";"${sonGorulme}";${xp};${seri}\n`;
+      });
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement("a");
+      const url = URL.createObjectURL(blob);
+      link.setAttribute("href", url);
+      link.setAttribute("download", `amok_kullanici_listesi_${Date.now()}.csv`);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Kullanıcı listesi Excel formatında başarıyla indirildi. 📥', 'success');
+    }
+
     // Refresh button
     const refreshUsersBtn = document.getElementById('btn-admin-refresh-users');
     if (refreshUsersBtn) {
@@ -10961,6 +11716,14 @@ function init() {
         refreshUsersBtn.disabled = false;
         refreshUsersBtn.innerHTML = origHTML;
         showToast('Kullanıcı listesi güncellendi! 🔄', 'success');
+      });
+    }
+
+    // Export Excel button
+    const exportUsersExcelBtn = document.getElementById('btn-admin-export-users-excel');
+    if (exportUsersExcelBtn) {
+      exportUsersExcelBtn.addEventListener('click', () => {
+        exportUsersToExcel();
       });
     }
 
@@ -11148,11 +11911,56 @@ function init() {
       const keyText = user.licenceKey ? `Lisans Kodu: ${user.licenceKey}` : 'Lisans Kodu: Yok';
       document.getElementById('admin-licence-current-key').textContent = keyText;
 
+      const devicesText = user.licenceDevices ? `Cihazlar: ${user.licenceDevices}` : 'Cihazlar: Yok';
+      document.getElementById('admin-licence-current-devices').textContent = devicesText;
+
+      const resetDevicesBtn = document.getElementById('btn-admin-reset-devices');
+      if (resetDevicesBtn) {
+        const newResetBtn = resetDevicesBtn.cloneNode(true);
+        resetDevicesBtn.parentNode.replaceChild(newResetBtn, resetDevicesBtn);
+        newResetBtn.addEventListener('click', async () => {
+          if (confirm(`${user.username} kullanıcısının tüm kayıtlı cihaz lisans eşleşmelerini sıfırlamak istiyor musunuz?`)) {
+            newResetBtn.disabled = true;
+            newResetBtn.textContent = 'Sıfırlanıyor...';
+            try {
+              await resetUserDevices(user.username);
+              showToast('Cihaz kayıtları başarıyla sıfırlandı! 📱', 'success');
+              user.licenceDevices = '';
+              document.getElementById('admin-licence-current-devices').textContent = 'Cihazlar: Yok';
+              await loadAdminUsers();
+            } catch(e) {
+              console.error(e);
+              showToast('Cihazlar sıfırlanırken hata oluştu!', 'error');
+            } finally {
+              newResetBtn.disabled = false;
+              newResetBtn.textContent = 'Cihazları Sıfırla';
+            }
+          }
+        });
+      }
+
       document.getElementById('admin-licence-email').value = (user.email && user.email !== '—') ? user.email : '';
       document.getElementById('admin-licence-phone').value = (user.phone && user.phone !== '—') ? user.phone : '';
       document.getElementById('admin-licence-key-input').value = user.licenceKey || '';
 
       modal.classList.add('show');
+    }
+
+    async function resetUserDevices(username) {
+      const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+      if (localStates[username]) {
+        localStates[username].licence_devices = '';
+        localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+      }
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('user_states')
+          .update({ licence_devices: '' })
+          .eq('username', username);
+        if (error) {
+          throw new Error(`Cihaz sıfırlama veritabanı hatası: ${error.message}`);
+        }
+      }
     }
 
     function closeAdminLicenceModal() {
@@ -11244,7 +12052,7 @@ function init() {
       if (!metaRegistry[username]) metaRegistry[username] = {};
       if (email) metaRegistry[username].email = email;
       if (phone) metaRegistry[username].phone = phone;
-      metaRegistry[username].licenceKey = licenceKey;
+metaRegistry[username].licenceKey = licenceKey;
       localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
 
       // 3. Update current active state if matches active logged-in user
@@ -11361,6 +12169,193 @@ function init() {
       });
     }
 
+    function loadAdminFeedbacks() {
+      const tbody = document.getElementById('admin-feedbacks-table-body');
+      if (!tbody) return;
+
+      let feedbacks = [];
+      try {
+        feedbacks = JSON.parse(localStorage.getItem('amok_feedbacks')) || [];
+      } catch (err) {
+        feedbacks = [];
+      }
+
+      if (feedbacks.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="4" style="text-align: center; padding: 30px; color: var(--text-secondary);">
+              Gelen herhangi bir geri bildirim bulunmamaktadır.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      // Sort newest first
+      feedbacks.sort((a, b) => b.id.localeCompare(a.id));
+
+      tbody.innerHTML = feedbacks.map(fb => `
+        <tr style="border-bottom: 1px solid var(--border-color); color: var(--text-primary);">
+          <td style="padding: 12px 8px; white-space: nowrap; font-size: 0.85rem; color: var(--text-secondary);">${fb.date}</td>
+          <td style="padding: 12px 8px; font-weight: 700; font-size: 0.85rem;"><span style="background: rgba(139,126,200,0.1); color: var(--accent-primary); padding: 4px 8px; border-radius: 4px;">${fb.category}</span></td>
+          <td style="padding: 12px 8px; line-height: 1.4; max-width: 350px; word-wrap: break-word; white-space: normal;">${fb.message}</td>
+          <td style="padding: 12px 8px; font-size: 0.85rem; color: var(--text-secondary);">${fb.username} <br><small>${fb.email}</small></td>
+        </tr>
+      `).join('');
+    }
+    window.loadAdminFeedbacks = loadAdminFeedbacks;
+
+    async function loadAdminReports() {
+      const container = document.getElementById('admin-reports-list-container');
+      if (!container) return;
+
+      container.innerHTML = `
+        <div style="text-align: center; padding: 30px; color: var(--text-secondary);">
+          <span>⏳</span> Yükleniyor...
+        </div>
+      `;
+
+      let reports = [];
+      if (supabaseClient) {
+        try {
+          const { data, error } = await supabaseClient
+            .from('question_reports')
+            .select('*')
+            .order('created_at', { ascending: false });
+          
+          if (!error && data) {
+            reports = data.map(row => ({
+              id: row.id,
+              dbId: row.id,
+              username: row.username,
+              lessonId: row.lesson_id,
+              lessonTitle: row.lesson_title,
+              questionId: row.question_id,
+              questionPrompt: row.question_prompt,
+              questionType: row.question_type,
+              errorType: row.error_type,
+              userComment: row.user_comment,
+              timestamp: new Date(row.created_at).toLocaleString('tr-TR')
+            }));
+          } else {
+            console.error('Supabase reports fetch error:', error);
+            reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+            reports.reverse();
+          }
+        } catch (e) {
+          console.error('Supabase reports fetch exception:', e);
+          reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+          reports.reverse();
+        }
+      } else {
+        reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+        reports.reverse();
+      }
+
+      if (reports.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; color: var(--text-muted); padding: 40px; font-size: 0.95rem; font-weight: 500;">
+            Henüz bildirilmiş bir soru hatası bulunmuyor. 🎉
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = reports.map((rep, idx) => `
+        <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; font-size: 0.88rem; line-height: 1.5; text-align: left; position: relative;">
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: var(--font-heading); color: var(--accent-primary); font-size: 0.95rem;">
+              ${escapeHtml(rep.lessonTitle)} 
+              <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-secondary); margin-left: 6px;">(ID: ${escapeHtml(rep.questionId)})</span>
+            </span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: auto;">${escapeHtml(rep.timestamp)}</span>
+            <button class="btn-delete-single-report" data-id="${rep.dbId || ''}" data-index="${idx}" style="background: transparent; border: none; color: var(--color-wrong); cursor: pointer; font-size: 1.1rem; padding: 0 4px; margin-left: 10px; display: inline-flex; align-items: center;" title="Sil">×</button>
+          </div>
+          <div style="margin-bottom: 6px; color: var(--text-secondary);">
+            <strong>Soru Metni:</strong> <span style="font-style: italic; color: var(--text-primary); font-family: monospace; background: var(--bg-card); padding: 2px 6px; border-radius: 4px; display: inline-block;">${escapeHtml(rep.questionPrompt)}</span>
+          </div>
+          <div style="margin-bottom: 8px; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
+            <strong>Hata Türü:</strong> 
+            <span style="background: rgba(255, 59, 48, 0.1); color: #ff3b30; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; border: 1px solid rgba(255, 59, 48, 0.2);">
+              ${translateErrorType(rep.errorType)}
+            </span>
+          </div>
+          <div style="background: var(--bg-card); border-left: 4px solid var(--accent-primary); padding: 10px 14px; border-radius: 2px 6px 6px 2px; color: var(--text-primary); font-weight: 500;">
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+              <span>👤</span> ${escapeHtml(rep.username || 'Bilinmeyen Kullanıcı')}
+            </div>
+            "${escapeHtml(rep.userComment || 'Açıklama belirtilmedi.')}"
+          </div>
+        </div>
+      `).join('');
+
+      // Add delete listeners
+      container.querySelectorAll('.btn-delete-single-report').forEach(btn => {
+        btn.onclick = async () => {
+          const dbId = btn.dataset.id;
+          const idx = parseInt(btn.dataset.index, 10);
+          
+          if (supabaseClient && dbId) {
+            try {
+              const { error } = await supabaseClient.from('question_reports').delete().eq('id', dbId);
+              if (error) throw error;
+              showToast('Hata bildirimi veritabanından silindi.', 'success');
+            } catch (e) {
+              console.error('Supabase delete error:', e);
+              showToast('Bildirim silinirken hata oluştu!', 'error');
+            }
+          } else {
+            let localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+            localReps.reverse();
+            localReps.splice(idx, 1);
+            localReps.reverse();
+            localStorage.setItem('amok_question_reports', JSON.stringify(localReps));
+            showToast('Hata bildirimi yerel hafızadan silindi.', 'success');
+          }
+          loadAdminReports();
+        };
+      });
+    }
+    window.loadAdminReports = loadAdminReports;
+
+    // Setup exports/clear buttons inside reports section
+    const btnAdminExport = document.getElementById('btn-admin-export-reports');
+    if (btnAdminExport) {
+      btnAdminExport.onclick = () => {
+        const reports = localStorage.getItem('amok_question_reports') || '[]';
+        const blob = new Blob([reports], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `amok_question_reports_${Date.now()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast('Raporlar başarıyla dışa aktarıldı. 📥', 'success');
+      };
+    }
+
+    const btnAdminClear = document.getElementById('btn-admin-clear-reports');
+    if (btnAdminClear) {
+      btnAdminClear.onclick = async () => {
+        if (confirm('Tüm hata bildirimlerini silmek istediğinize emin misiniz?')) {
+          if (supabaseClient) {
+            try {
+              const { error } = await supabaseClient.from('question_reports').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+              if (error) throw error;
+              showToast('Tüm hata bildirimleri veritabanından temizlendi. 🗑️', 'success');
+            } catch (e) {
+              console.error('Supabase clear error:', e);
+              showToast('Bildirimler temizlenirken hata oluştu!', 'error');
+            }
+          } else {
+            localStorage.removeItem('amok_question_reports');
+            showToast('Tüm hata bildirimleri yerel hafızadan temizlendi. 🗑️', 'success');
+          }
+          loadAdminReports();
+        }
+      };
+    }
+
     // Sidebar navigation logic for admin section panels
     document.querySelectorAll('.admin-nav-item').forEach(item => {
       item.addEventListener('click', () => {
@@ -11395,6 +12390,10 @@ function init() {
         // If switching to users section, load users
         if (targetSection === 'users') {
           loadAdminUsers();
+        } else if (targetSection === 'feedbacks') {
+          loadAdminFeedbacks();
+        } else if (targetSection === 'reports') {
+          loadAdminReports();
         }
       });
     });
@@ -11457,10 +12456,17 @@ function init() {
   initAuth();
   initEventListeners();
 
-  if (!state.username) {
-    state.username = 'Misafir';
-    state.isGuest = true;
-    saveState();
+  if (!state.username || state.username === 'Misafir') {
+    const isLocal = checkIsLocal();
+    if (isLocal) {
+      state.username = 'Admin';
+      state.isGuest = false;
+      saveState();
+    } else if (!state.username) {
+      state.username = 'Misafir';
+      state.isGuest = true;
+      saveState();
+    }
   }
   initSocialSystem();
   enterApp();
@@ -12803,12 +13809,12 @@ function getConditionalSimulatorData(condType) {
       wagonChain.push({ word: "they", role: "subject", color: colorSubject });
       wagonChain.push({ word: "would", role: "conditional", color: colorAux });
       wagonChain.push({ word: "have", role: "aux_perfect", color: colorPerfect });
-      wagonChain.push({ word: "been", role: "passive_perfect", color: colorAux });
-      wagonChain.push({ word: "destroyed", role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: "become", role: "main_verb_v3", color: colorVerb });
+      wagonChain.push({ word: "useless", role: "object", color: colorObject });
       wagonChain.push({ word: "yesterday", role: "time_adverb", color: colorPerfect });
 
       const negSuffix = isNeg ? "masaydı" : "saydı";
-      trReflexColored = `Eğer ${activeSubjectObj.tr} (genel olarak) <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, <span style="color:${colorPerfect};">dün</span> mahvolmuş olurlardı.`;
+      trReflexColored = `Eğer ${activeSubjectObj.tr} (genel olarak) <span style="color:${colorVerb};">${passiveStem}</span><span style="color:${colorAux};">${negSuffix}</span>, onlar <span style="color:${colorPerfect};">dün</span> kullanışsız hale gelmiş olurdu.`;
     } else {
       wagonChain.push({ word: "If", role: "condition", color: colorIf });
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
@@ -12834,7 +13840,7 @@ function getConditionalSimulatorData(condType) {
 
   return {
     level: 99,
-    title: "If Clause (" + condType.toUpperCase() + ")",
+    title: "If Clause (" + condType.charAt(0).toUpperCase() + condType.slice(1).replace(/(\d)/, ' $1') + ")",
     mechanic_note: mechanicNote,
     wagon_chain: wagonChain,
     turkish_reflex_colored: trReflexColored
@@ -13526,13 +14532,13 @@ function initSimulator() {
   const tabCondContent = document.getElementById('matrix-tab-cond-content');
 
   const tabs = [
-    { btn: btnTabPure, content: tabPureContent },
-    { btn: btnTabCore, content: tabCoreContent },
-    { btn: btnTabSemi, content: tabSemiContent },
-    { btn: btnTabPref, content: tabPrefContent },
-    { btn: btnTabPerfect, content: tabPerfectContent },
-    { btn: btnTabPhrasal, content: tabPhrasalContent },
-    { btn: btnTabCond, content: tabCondContent }
+    { btn: btnTabPure, content: tabPureContent, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.08)', shadow: 'rgba(59, 130, 246, 0.25)', border: '#3b82f6' },
+    { btn: btnTabCore, content: tabCoreContent, color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.08)', shadow: 'rgba(139, 92, 246, 0.25)', border: '#8b5cf6' },
+    { btn: btnTabSemi, content: tabSemiContent, color: '#ec4899', bg: 'rgba(236, 72, 153, 0.08)', shadow: 'rgba(236, 72, 153, 0.25)', border: '#ec4899' },
+    { btn: btnTabPref, content: tabPrefContent, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.08)', shadow: 'rgba(245, 158, 11, 0.25)', border: '#f59e0b' },
+    { btn: btnTabPerfect, content: tabPerfectContent, color: '#ef4444', bg: 'rgba(239, 68, 68, 0.08)', shadow: 'rgba(239, 68, 68, 0.25)', border: '#ef4444' },
+    { btn: btnTabPhrasal, content: tabPhrasalContent, color: '#10b981', bg: 'rgba(16, 185, 129, 0.08)', shadow: 'rgba(16, 185, 129, 0.25)', border: '#10b981' },
+    { btn: btnTabCond, content: tabCondContent, color: '#06b6d4', bg: 'rgba(6, 182, 212, 0.08)', shadow: 'rgba(6, 182, 212, 0.25)', border: '#06b6d4' }
   ];
 
   tabs.forEach(tab => {
@@ -13542,10 +14548,31 @@ function initSimulator() {
           if (t.btn && t.content) {
             if (t === tab) {
               t.btn.classList.add('active');
-              t.btn.style.border = '1px solid var(--accent-primary)';
-              t.btn.style.background = 'rgba(59, 130, 246, 0.1)';
-              t.btn.style.color = 'var(--accent-primary)';
+              t.btn.style.border = `1.5px solid ${tab.border}`;
+              t.btn.style.background = tab.bg;
+              t.btn.style.color = tab.color;
               t.content.style.display = 'block';
+
+              const simulatorContainer = document.getElementById('tab-content-simulator');
+              if (simulatorContainer) {
+                simulatorContainer.style.setProperty('--matrix-tab-color', tab.color);
+                simulatorContainer.style.setProperty('--matrix-tab-bg-active', tab.bg);
+                simulatorContainer.style.setProperty('--matrix-tab-shadow', tab.shadow);
+              }
+
+              if (tab.btn === btnTabCond) {
+                if (!state.conditionalType || state.conditionalType === 'none') {
+                  state.conditionalType = 'type0';
+                  state.selectedSimulatorModal = 'none';
+                  state.pureTense = null;
+                  saveState();
+                  
+                  document.querySelectorAll('.cond-matrix-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.cond === 'type0');
+                  });
+                  renderSimulatorContent();
+                }
+              }
             } else {
               t.btn.classList.remove('active');
               t.btn.style.border = '1px solid var(--border-color)';
@@ -13558,6 +14585,12 @@ function initSimulator() {
       };
     }
   });
+
+  // Programmatically click active tab to initialize colors
+  const activeTab = tabs.find(t => t.btn && t.btn.classList.contains('active'));
+  if (activeTab) {
+    activeTab.btn.click();
+  }
 
   // MODAL MATRIX BUTTONS CLICK HANDLERS
   document.querySelectorAll('.modal-matrix-btn').forEach(btn => {
@@ -13621,6 +14654,11 @@ function initSimulator() {
       state.selectedSimulatorModal = 'none';
       state.pureTense = null;
       saveState();
+
+      // Update active state on conditional buttons
+      document.querySelectorAll('.cond-matrix-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+      });
 
       // Clear pure tense matrix highlights inline styles
       document.querySelectorAll('.matrix-cell-btn').forEach(b => {
@@ -14008,6 +15046,13 @@ const voiceCheckbox = document.getElementById('toggle-voice');
   const condSelector = document.getElementById('select-conditional');
   if (condSelector) {
     condSelector.value = state.conditionalType || 'none';
+  }
+
+  // Update active state class on conditional buttons on load
+  if (state.conditionalType) {
+    document.querySelectorAll('.cond-matrix-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.cond === state.conditionalType);
+    });
   }
 
   // Populate and set dynamic Subject Select
@@ -15868,7 +16913,10 @@ function getModalTenseData(modal, tense, aspect) {
 // ============================================================
 function getPredicateElementCount(wagonChain) {
   if (!wagonChain) return 0;
-  if (selectedLevel === 1 && (!state.selectedSimulatorModal || state.selectedSimulatorModal === 'none')) {
+  if (selectedLevel === 1 && 
+      (!state.selectedSimulatorModal || state.selectedSimulatorModal === 'none') &&
+      (!state.pureTense) &&
+      (!state.conditionalType || state.conditionalType === 'none')) {
     return 0;
   }
   
@@ -16067,4 +17115,186 @@ function checkLicence() {
   }
   return true;
 }
+
+async function validateLicenseDevices() {
+  if (!state.licenceKey || state.isGuest) return true;
+
+  const email = state.email || (supabaseClient ? (supabaseClient.auth.user && supabaseClient.auth.user())?.email : '') || '';
+  const phone = state.phone || '';
+  const check = verifyLicenceKey(state.licenceKey, email, phone);
+  if (!check.valid) {
+    state.licenceKey = '';
+    saveState();
+    return false;
+  }
+
+  const devId = getOrCreateDeviceId();
+
+  if (supabaseClient) {
+    try {
+      const { data, error } = await supabaseClient
+        .from('user_states')
+        .select('licence_devices')
+        .eq('username', state.username)
+        .maybeSingle();
+
+      if (error) {
+        console.error('validateLicenseDevices error fetching:', error);
+        return true;
+      }
+
+      let devicesListStr = (data && data.licence_devices) ? data.licence_devices.trim() : '';
+      let devices = devicesListStr ? devicesListStr.split(',').map(d => d.trim()).filter(Boolean) : [];
+
+      if (!devices.includes(devId)) {
+        if (devices.length >= MAX_LICENCE_DEVICES) {
+          showToast(`Lisans cihaz limiti (${MAX_LICENCE_DEVICES}) aşıldı! Bu lisans başka bir cihazda kayıtlıdır.`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        } else {
+          devices.push(devId);
+          const newDevicesStr = devices.join(',');
+          await supabaseClient
+            .from('user_states')
+            .update({ licence_devices: newDevicesStr })
+            .eq('username', state.username);
+        }
+      }
+    } catch (dbErr) {
+      console.error('Database connection error during device validation:', dbErr);
+    }
+  } else {
+    try {
+      const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+      const userState = localStates[state.username] || {};
+      let devicesListStr = userState.licence_devices ? userState.licence_devices.trim() : '';
+      let devices = devicesListStr ? devicesListStr.split(',').map(d => d.trim()).filter(Boolean) : [];
+
+      if (!devices.includes(devId)) {
+        if (devices.length >= MAX_LICENCE_DEVICES) {
+          showToast(`Lisans cihaz limiti (${MAX_LICENCE_DEVICES}) aşıldı!`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        } else {
+          devices.push(devId);
+          userState.licence_devices = devices.join(',');
+          localStates[state.username] = userState;
+          localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+        }
+      }
+    } catch (e) {
+      console.error('Local device validation error:', e);
+    }
+  }
+  return true;
+}
+
+function hasLicenseOrTrialAccess(targetLessonId = null) {
+  if (checkIsLocal() || checkLicence()) {
+    return true;
+  }
+  
+  if (targetLessonId && state.completedLessons.includes(targetLessonId)) {
+    return true;
+  }
+
+  if (state.isGuest) {
+    if (targetLessonId === 1) {
+      return true;
+    }
+    return false;
+  }
+
+  const completedLessonsCount = state.completedLessons.filter(item => {
+    return typeof item === 'number' || (typeof item === 'string' && !item.includes('_'));
+  }).length;
+
+  if (completedLessonsCount < 2) {
+    return true;
+  }
+  return false;
+}
+
+async function handleFeedbackSubmit(e) {
+  e.preventDefault();
+  
+  const form = document.getElementById('feedback-form');
+  if (!form) return;
+
+  const category = document.getElementById('feedback-category').value;
+  const message = document.getElementById('feedback-message').value;
+  const email = document.getElementById('feedback-email').value || 'Belirtilmedi';
+  const username = (state && state.currentUser) ? state.currentUser.username : 'Misafir';
+
+  const feedbackItem = {
+    id: 'fb-' + Date.now(),
+    date: new Date().toLocaleString('tr-TR'),
+    category: category,
+    message: message,
+    email: email,
+    username: username
+  };
+
+  // Yerel hafızaya kaydet
+  let feedbacks = [];
+  try {
+    feedbacks = JSON.parse(localStorage.getItem('amok_feedbacks')) || [];
+  } catch (err) {
+    feedbacks = [];
+  }
+  feedbacks.push(feedbackItem);
+  localStorage.setItem('amok_feedbacks', JSON.stringify(feedbacks));
+
+  // Eğer açıksa Yönetici tablosunu güncelle
+  if (typeof loadAdminFeedbacks === 'function') {
+    loadAdminFeedbacks();
+  }
+
+  // Butonu gönderim aşamasına sok
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const origText = submitBtn ? submitBtn.textContent : 'Gönder';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Gönderiliyor...';
+  }
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/f94120015@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        "Kategori": category,
+        "Mesaj": message,
+        "Gönderen Kullanıcı": username,
+        "E-posta": email,
+        "_subject": "Eleştiri ve Öneri"
+      })
+    });
+
+    if (response.ok) {
+      showToast('Geri bildiriminiz e-postayla iletildi ve sisteme kaydedildi! Teşekkürler. 🚀', 'success');
+    } else {
+      showToast('Mesaj sisteme kaydedildi ancak e-posta gönderilemedi.', 'warning');
+    }
+  } catch (err) {
+    console.error('Geri bildirim e-posta gönderim hatası:', err);
+    showToast('Mesaj sisteme kaydedildi ancak bağlantı hatası nedeniyle e-posta gönderilemedi.', 'warning');
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = origText;
+    }
+    form.reset();
+  }
+}
+window.handleFeedbackSubmit = handleFeedbackSubmit;
+
+
 
