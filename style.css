@@ -8266,7 +8266,7 @@ input:checked + .slider:before {
   position: fixed;
   bottom: 85px;
   right: 24px;
-  z-index: 1001;
+  z-index: 99999 !important;
   background: var(--accent-primary);
   color: #fff;
   border: none;
@@ -8281,15 +8281,9 @@ input:checked + .slider:before {
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px) scale(0.8);
-}
-
-.scroll-to-top-btn.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0) scale(1);
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
 }
 
 .scroll-to-top-btn:hover {
