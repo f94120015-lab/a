@@ -2987,7 +2987,7 @@ function initAuth() {
             </div>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
-              <input type="tel" id="social-phone" class="report-select" placeholder="Örn: +905551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+              <input type="tel" id="social-phone" class="report-select" placeholder="Örn: +905551234567" value="+90" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
             </div>
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
