@@ -3196,7 +3196,7 @@ function initAuth() {
         return 'Karakter tekrarları çok fazla, lütfen gerçek bilgiler giriniz.';
       }
       // Sayısal olmayan ve 4 karakterden uzun girdilerde sesli harf kontrolü
-      if (clean.length > 4 && !/^\d+$/.test(clean)) {
+      if (clean.length > 4 && !/\d/.test(clean)) {
         const vowels = clean.match(/[aeıioöuü]/gi);
         if (!vowels || vowels.length === 0) {
           return 'Lütfen geçerli/okunabilir bir kullanıcı adı giriniz.';
@@ -3545,7 +3545,7 @@ function initAuth() {
         const checkGibberish = (str) => {
           const clean = str.trim().toLowerCase();
           if (/([a-z0-9])\1\1\1+/.test(clean)) return true;
-          if (clean.length > 4 && !/^\d+$/.test(clean)) {
+          if (clean.length > 4 && !/\d/.test(clean)) {
             const vowels = clean.match(/[aeıioöuü]/gi);
             if (!vowels || vowels.length === 0) return true;
             if (/[bçdfgğhjklmnprsştvyz]{4,}/i.test(clean)) return true;
