@@ -3094,8 +3094,13 @@ function initAuth() {
 
       const triggerOtp = async (target, email) => {
         startCooldown();
-        currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
-        console.log("Generated local fallback OTP code:", currentLocalOtp);
+        const isLocal = checkIsLocal();
+        if (isLocal) {
+          currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
+          console.log("Generated local fallback OTP code:", currentLocalOtp);
+        } else {
+          currentLocalOtp = null;
+        }
 
         if (supabaseClient) {
           showToast('Doğrulama kodları gönderiliyor...', 'info');
@@ -3132,10 +3137,18 @@ function initAuth() {
           } else if (emailSuccess) {
             showToast('Doğrulama kodu e-postanıza gönderildi (SMS başarısız)!', 'warning');
           } else {
-            showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+            if (isLocal) {
+              showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+            } else {
+              showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
+            }
           }
         } else {
-          showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+          if (isLocal) {
+            showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+          } else {
+            showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
+          }
         }
       };
 
@@ -3257,8 +3270,8 @@ function initAuth() {
           proceedWithLogin(fullName, activeEmail, activeTarget);
         };
 
-        // Eğer girilen kod local test koduysa doğrudan kabul et
-        if (currentLocalOtp && otpInput === currentLocalOtp) {
+        // Eğer girilen kod local test koduysa doğrudan kabul et (Sadece yerel test ortamında)
+        if (checkIsLocal() && currentLocalOtp && otpInput === currentLocalOtp) {
           showToast('Test modunda doğrulama başarılı! 🎉', 'success');
           proceed();
           return;
