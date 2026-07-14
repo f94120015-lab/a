@@ -11260,112 +11260,11 @@ function checkIsLocal() {
 }
 
 function renderRecentChanges() {
-  const recentBox = document.getElementById('recent-changes-box');
-  if (!recentBox) return;
-  const listEl = recentBox.querySelector('.recent-changes-list');
-  if (!listEl) return;
-  
-  let stored = localStorage.getItem('amok_recent_changes');
-  let changes = [];
-  if (stored) {
-    try {
-      changes = JSON.parse(stored);
-    } catch(e) {
-      console.error(e);
-    }
-  }
-  
-  if (changes.length === 0) {
-    changes = [
-      {
-        title: "1. Bölüm 47 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
-        meta: "Bölüm 47 Ders 1 Entegre Edildi",
-        action: "lesson",
-        target: "c47_l1",
-        time: "06.07.2026 23:59"
-      },
-      {
-        title: "2. Bölüm 46 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
-        meta: "Bölüm 46 Ders 1 Entegre Edildi",
-        action: "lesson",
-        target: "c46_l1",
-        time: "06.07.2026 21:50"
-      },
-      {
-        title: "3. Bölüm 45 Ders 2 Akademik Soruları ve Müfredatı Entegre Edildi",
-        meta: "Bölüm 45 Ders 2 Entegre Edildi",
-        action: "lesson",
-        target: "c45_l2",
-        time: "06.07.2026 21:40"
-      },
-      {
-        title: "4. Bölüm 45 Ders 1 Akademik Soruları ve Müfredatı Entegre Edildi",
-        meta: "Bölüm 45 Ders 1 Entegre Edildi",
-        action: "lesson",
-        target: "c45_l1",
-        time: "06.07.2026 21:30"
-      },
-      {
-        title: "5. Bölüm 44 Akademik Soruları ve Müfredatı Entegre Edildi",
-        meta: "Bölüm 44 Entegre Edildi",
-        action: "lesson",
-        target: "c44_l1",
-        time: "06.07.2026 21:21"
-      },
-      {
-        title: "6. Bölüm 43 Akademik Soruları ve Müfredatı Tamamen Entegre Edildi",
-        meta: "Bölüm 43 Tamamlandı",
-        action: "lesson",
-        target: "c43_l4",
-        time: "06.07.2026 20:47"
-      }
-    ];
-    localStorage.setItem('amok_recent_changes', JSON.stringify(changes));
-  }
-  
-  listEl.innerHTML = changes.map(item => {
-    return `
-      <div class="recent-change-item" data-action="${item.action}" data-target="${item.target}">
-        <div class="recent-change-item-title">${item.title}</div>
-        <div class="recent-change-item-meta">
-          <span>${item.meta}</span>
-          <span class="recent-change-item-go">Git ➔</span>
-        </div>
-        <div class="recent-change-item-time">${item.time}</div>
-      </div>`;
-  }).join('');
+  return;
 }
 
 function addRecentChange(title, meta, action, target) {
-  let stored = localStorage.getItem('amok_recent_changes');
-  let changes = [];
-  if (stored) {
-    try {
-      changes = JSON.parse(stored);
-    } catch(e) {}
-  }
-  
-  if (changes.length === 0) {
-    renderRecentChanges();
-    stored = localStorage.getItem('amok_recent_changes');
-    if (stored) {
-      try { changes = JSON.parse(stored); } catch(e) {}
-    }
-  }
-  
-  const now = new Date();
-  const dateStr = now.toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' +
-                  now.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-                  
-  const newItem = { title, meta, action, target, time: dateStr };
-  changes.unshift(newItem);
-  
-  if (changes.length > 6) {
-    changes = changes.slice(0, 6);
-  }
-  
-  localStorage.setItem('amok_recent_changes', JSON.stringify(changes));
-  renderRecentChanges();
+  return;
 }
 
 let saveStateDebounceTimeout = null;
