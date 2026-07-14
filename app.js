@@ -2894,11 +2894,7 @@ function renderDailyTasks() {
             <span class="task-text">${task.text}</span>
             <div class="task-meta">
               <span class="task-progress-text">${task.current}/${task.target}</span>
-              <span class="task-reward">+${task.xpReward} Puan</span>
-            </div>
-          </div>
-        </div>
-        <div class="task-progress-bar-wrap">
+          <div class="task-progress-bar-wrap">
           <div class="task-progress-bar" style="width: ${progressPercent}%"></div>
         </div>
       </div>
@@ -3009,16 +3005,23 @@ function initAuth() {
           <!-- Screen 1: Giriş Bilgileri -->
           <div id="social-modal-screen-1" class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Lütfen adınızı ve soyadınızı ve telefon numaranızı girerek devam edin:
+              Lütfen adınızı, soyadınızı, e-posta adresinizi ve telefon numaranızı girerek devam edin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
               <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
             </div>
+            
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
+              <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+            </div>
+            
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
               <input type="tel" id="social-phone" class="report-select" placeholder="Örn: +905551234567" value="+90" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
             </div>
+            
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
               <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Doğrulama Kodu Gönder</button>
@@ -3028,7 +3031,7 @@ function initAuth() {
           <!-- Screen 2: OTP Doğrulama -->
           <div id="social-modal-screen-2" class="custom-modal-body" style="display: none; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Güvenliğiniz için <strong><span id="otp-target-phone"></span></strong> numaralı telefona 6 haneli bir doğrulama kodu gönderildi. Lütfen kodu girin:
+              Güvenliğiniz için <strong><span id="otp-target-label"></span></strong> numaralı telefona 6 haneli bir doğrulama kodu gönderildi. Lütfen kodu girin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; text-align: center;">
               <input type="text" id="social-otp-code" maxlength="6" placeholder="000000" style="width: 150px; margin: 10px auto; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--accent-primary); background: var(--bg-card); color: var(--text-primary); font-family: monospace; font-size: 1.4rem; text-align: center; letter-spacing: 4px; outline: none;" required>
@@ -3048,9 +3051,18 @@ function initAuth() {
 
       const screen1 = document.getElementById('social-modal-screen-1');
       const screen2 = document.getElementById('social-modal-screen-2');
-      const phoneTargetSpan = document.getElementById('otp-target-phone');
+      const otpTargetLabel = document.getElementById('otp-target-label');
+      const phoneInput = document.getElementById('social-phone');
+
+      phoneInput.addEventListener('input', () => {
+        if (!phoneInput.value.startsWith('+90')) {
+          phoneInput.value = '+90';
+        }
+      });
       
-      let localOtpCode = '';
+      let activeMode = 'phone';
+      let activeTarget = '';
+      let activeEmail = '';
       let resendTimer = null;
       let cooldown = 0;
 
@@ -3081,32 +3093,25 @@ function initAuth() {
         }, 1000);
       };
 
-      const triggerOtp = async (phoneNumber) => {
+      const triggerOtp = async (target) => {
         startCooldown();
         if (supabaseClient) {
           try {
             showToast('Doğrulama kodu gönderiliyor...', 'info');
-            const { error } = await supabaseClient.auth.signInWithOtp({
-              phone: phoneNumber
-            });
+            const otpOptions = { phone: target };
+            const { error } = await supabaseClient.auth.signInWithOtp(otpOptions);
             if (error) {
               console.error('Supabase OTP error:', error);
-              localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-              console.log(`[LOCAL DEV OTP COOLDOWN FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
-              showToast(`Doğrulama kodu gönderilemedi. Test için kod: ${localOtpCode}`, 'warning');
+              showToast(`Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.`, 'error');
             } else {
-              showToast('Doğrulama kodu SMS ile telefonunuza gönderildi!', 'success');
+              showToast('Doğrulama kodu başarıyla gönderildi!', 'success');
             }
           } catch (e) {
             console.error('Supabase OTP exception:', e);
-            localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-            console.log(`[LOCAL DEV OTP FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
-            showToast(`Bağlantı hatası. Test için kod: ${localOtpCode}`, 'warning');
+            showToast(`Bağlantı hatası oluştu. Lütfen ağ bağlantınızı kontrol edin.`, 'error');
           }
         } else {
-          localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-          console.log(`[LOCAL DEV OTP FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
-          showToast(`Yerel Mod: Test doğrulaması için kod konsola yazdırıldı: ${localOtpCode}`, 'success');
+          showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
         }
       };
 
@@ -3126,14 +3131,13 @@ function initAuth() {
       });
 
       document.getElementById('btn-resend-otp').addEventListener('click', () => {
-        const phone = document.getElementById('social-phone').value.trim();
-        const cleanPhone = phone.replace(/[\s\-()]/g, '');
-        triggerOtp(cleanPhone);
+        triggerOtp(activeTarget);
       });
 
       document.getElementById('btn-submit-social-next').addEventListener('click', () => {
         const fullName = document.getElementById('social-fullname').value.trim();
-        const phone = document.getElementById('social-phone').value.trim();
+        const emailVal = document.getElementById('social-email').value.trim();
+        const phoneVal = phoneInput.value.trim();
         
         if (!fullName || fullName.indexOf(' ') === -1) {
           showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
@@ -3147,7 +3151,7 @@ function initAuth() {
         }
 
         const nameRegex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/;
-        const consonantsRegex = /[bcdfghjklmnprstvyzxqBCDFGHJKLMNPRSTVYZXQçÇğĞıİöÖşŞüÜ]{4,}/; // Blok 4+ yan yana sessiz harf
+        const consonantsRegex = /[bcdfghjklmnprstvyzxqBCDFGHJKLMNPRSTVYZXQçÇğĞıİöÖşŞüÜ]{4,}/;
         
         for (const part of nameParts) {
           if (part.length < 2) {
@@ -3158,7 +3162,6 @@ function initAuth() {
             showToast('Ad ve soyad sadece harflerden oluşmalıdır!', 'error');
             return;
           }
-          // Sessiz harf yığılması kontrolü (örn: wretre veya egwtert gibi uydurma kelimeleri engellemek için)
           if (consonantsRegex.test(part)) {
             showToast('Lütfen geçerli bir ad ve soyad giriniz (geçersiz harf dizilimi)!', 'error');
             return;
@@ -3169,17 +3172,20 @@ function initAuth() {
           }
         }
         
-        // Telefon formatı kontrolü
-        const cleanPhone = phone.replace(/[\s\-()]/g, '');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailVal || !emailRegex.test(emailVal)) {
+          showToast('Lütfen geçerli bir e-posta adresi giriniz!', 'error');
+          return;
+        }
+
+        const cleanPhone = phoneVal.replace(/[\s\-()]/g, '');
         
-        // Türkiye numaraları için katı kontrol (+905XXXXXXXXX formatı)
         if (cleanPhone.startsWith('+90')) {
           if (cleanPhone.length !== 13 || !/^\+905\d{9}$/.test(cleanPhone)) {
             showToast('Lütfen geçerli bir Türkiye telefon numarası giriniz! Numaralar +905 ile başlamalı ve toplam 13 haneli olmalıdır (örn: +905551234567).', 'error');
             return;
           }
         } else {
-          // Yabancı numaralar için genel regex
           const phoneRegex = /^\+[1-9]\d{9,14}$/;
           if (!phoneRegex.test(cleanPhone)) {
             showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
@@ -3188,30 +3194,29 @@ function initAuth() {
         }
         
         const digitsOnly = cleanPhone.replace(/^\+/, '');
-        // Aynı rakam tekrarları engeli (örn: 5555555...)
         if (/^(\d)\1+$/.test(digitsOnly)) {
           showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
           return;
         }
         
-        // Sıralı/sallama numaraları engelleme (örn: 1234567, 987654 gibi ardışık dizileri engelle)
         if (digitsOnly.includes('12345') || digitsOnly.includes('54321') || digitsOnly.includes('23456') || digitsOnly.includes('65432') || digitsOnly.includes('34567') || digitsOnly.includes('76543')) {
           showToast('Sallama/geçersiz bir telefon numarası girdiniz! Lütfen gerçek numaranızı girin.', 'error');
           return;
         }
+        
+        activeTarget = cleanPhone;
+        activeEmail = emailVal;
+        activeMode = 'phone';
 
-        // Screen geçişi
-        phoneTargetSpan.textContent = cleanPhone;
+        otpTargetLabel.textContent = activeTarget;
         screen1.style.display = 'none';
         screen2.style.display = 'flex';
         
-        triggerOtp(cleanPhone);
+        triggerOtp(activeTarget);
       });
 
       document.getElementById('btn-submit-social-verify').addEventListener('click', () => {
         const fullName = document.getElementById('social-fullname').value.trim();
-        const phone = document.getElementById('social-phone').value.trim();
-        const cleanPhone = phone.replace(/[\s\-()]/g, '');
         const otpInput = document.getElementById('social-otp-code').value.trim();
 
         if (otpInput.length !== 6 || isNaN(otpInput)) {
@@ -3226,22 +3231,24 @@ function initAuth() {
         const proceed = () => {
           if (resendTimer) clearInterval(resendTimer);
           modal.remove();
-          proceedWithLogin(fullName, cleanPhone);
+          proceedWithLogin(fullName, activeEmail, activeTarget);
         };
 
-        if (supabaseClient && !localOtpCode) {
-          supabaseClient.auth.verifyOtp({
-            phone: cleanPhone,
+        if (supabaseClient) {
+          const verifyOptions = {
             token: otpInput,
-            type: 'sms'
-          }).then(({ data, error }) => {
+            type: 'sms',
+            phone: activeTarget
+          };
+
+          supabaseClient.auth.verifyOtp(verifyOptions).then(({ data, error }) => {
             if (error) {
               console.error('OTP verification failed:', error);
               showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
               verifyBtn.disabled = false;
               verifyBtn.textContent = 'Doğrula ve Giriş Yap';
             } else {
-              showToast('Telefon numarası başarıyla doğrulandı!', 'success');
+              showToast('Doğrulama başarılı!', 'success');
               proceed();
             }
           }).catch(err => {
@@ -3251,20 +3258,15 @@ function initAuth() {
             verifyBtn.textContent = 'Doğrula ve Giriş Yap';
           });
         } else {
-          if (otpInput === localOtpCode) {
-            showToast('Telefon numarası başarıyla doğrulandı!', 'success');
-            proceed();
-          } else {
-            showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
-            verifyBtn.disabled = false;
-            verifyBtn.textContent = 'Doğrula ve Giriş Yap';
-          }
+          showToast('Supabase yapılandırılmamış, doğrulama gerçekleştirilemiyor!', 'error');
+          verifyBtn.disabled = false;
+          verifyBtn.textContent = 'Doğrula ve Giriş Yap';
         }
       });
     };
 
-    const proceedWithLogin = async (fullName, email) => {
-      showToast(`Telefon ile giriş yapılıyor...`, 'success');
+    const proceedWithLogin = async (fullName, email, phone) => {
+      showToast(`Giriş yapılıyor...`, 'success');
       
       const cleanUsername = fullName.toLowerCase()
         .replace(/ı/g, 'i')
@@ -3280,7 +3282,6 @@ function initAuth() {
 
       if (supabaseClient) {
         try {
-          // Telefon (email kolonu) ile kayıtlı kullanıcı var mı kontrol et
           const { data: profile, error: profileErr } = await supabaseClient
             .from('profiles')
             .select('username')
@@ -3290,7 +3291,6 @@ function initAuth() {
           if (profileErr) console.error('Phone login profiles check error:', profileErr);
 
           if (profile) {
-            // Kullanıcı var, verilerini çek
             const { data: dbState, error: stateErr } = await supabaseClient
               .from('user_states')
               .select('*')
@@ -3320,7 +3320,6 @@ function initAuth() {
               finalState.isGuest = false;
             }
           } else {
-            // Profil yok, yeni oluştur
             let checkUsername = cleanUsername;
             let counter = 1;
             let isUnique = false;
@@ -3341,7 +3340,6 @@ function initAuth() {
             const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
             const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
 
-            // Profil ekle
             const { error: insertProfileErr } = await supabaseClient
               .from('profiles')
               .insert({
@@ -3352,7 +3350,6 @@ function initAuth() {
 
             if (insertProfileErr) console.error('Phone login insert profile error:', insertProfileErr);
 
-            // State ekle
             const { error: insertStateErr } = await supabaseClient
               .from('user_states')
               .insert({
@@ -3376,11 +3373,11 @@ function initAuth() {
             finalState.completedLessons = [];
           }
 
-          // Metadata listesine ekle
           const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
           metaRegistry[finalState.username] = {
             username: finalState.username,
-            phone: email
+            email: email,
+            phone: phone
           };
           localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
 
@@ -3388,9 +3385,8 @@ function initAuth() {
           console.error('Supabase phone login flow error:', err);
         }
       } else {
-        // Yerel Veritabanı modu
         const users = getUsers();
-        const existingLocalUser = Object.entries(users).find(([uname, u]) => u.email && u.email.replace(/[\s\-()]/g, '') === email.replace(/[\s\-()]/g, ''));
+        const existingLocalUser = Object.entries(users).find(([uname, u]) => u.email === email);
         
         if (existingLocalUser) {
           const [uname, u] = existingLocalUser;
@@ -3448,11 +3444,11 @@ function initAuth() {
           finalState.completedLessons = [];
         }
 
-        // Yerel metadata listesine ekle
         const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
         metaRegistry[finalState.username] = {
           username: finalState.username,
-          phone: email
+          email: email,
+          phone: phone
         };
         localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
       }
