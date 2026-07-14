@@ -14,6 +14,13 @@ const MAX_HEARTS = 5;
 const LICENCE_SECRET_SALT = "amok_academy_key_2026"; 
 const MAX_LICENCE_DEVICES = 2;
 
+// ============================================================
+// BEYAZ LİSTE (WHITELIST) YAPILANDIRMASI
+// ============================================================
+// Sadece bu listedeki e-posta veya telefon numaralarına sahip kullanıcılar uygulamaya girebilir.
+const APPROVED_USERS_WHITELIST = [];
+
+
 function getOrCreateDeviceId() {
   let devId = localStorage.getItem('amok_device_uuid');
   if (!devId) {
@@ -3092,12 +3099,20 @@ function initAuth() {
         }, 1000);
       };
 
+      const PRODUCTION_TESTERS_WHITELIST = APPROVED_USERS_WHITELIST;
+      const PRODUCTION_TESTERS_MASTER_OTP = "192837"; // Test kullanıcılarının gireceği ortak şifre (Master OTP)
+
       const triggerOtp = async (target, email) => {
         startCooldown();
         const isLocal = checkIsLocal();
+        const isWhitelisted = PRODUCTION_TESTERS_WHITELIST.includes(target) || PRODUCTION_TESTERS_WHITELIST.includes(email);
+
         if (isLocal) {
           currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
           console.log("Generated local fallback OTP code:", currentLocalOtp);
+        } else if (isWhitelisted) {
+          currentLocalOtp = PRODUCTION_TESTERS_MASTER_OTP;
+          console.log("Whitelisted tester. Master OTP active:", currentLocalOtp);
         } else {
           currentLocalOtp = null;
         }
@@ -3139,6 +3154,8 @@ function initAuth() {
           } else {
             if (isLocal) {
               showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+            } else if (isWhitelisted) {
+              showToast('⚠️ Supabase doğrulama sunucusu yanıt vermiyor. Lütfen size iletilen test kodunu girin.', 'warning', 15000);
             } else {
               showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
             }
@@ -3146,6 +3163,8 @@ function initAuth() {
         } else {
           if (isLocal) {
             showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+          } else if (isWhitelisted) {
+            showToast('⚠️ Supabase yapılandırılmamış. Lütfen size iletilen test kodunu girin.', 'warning', 15000);
           } else {
             showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
           }
@@ -3270,9 +3289,12 @@ function initAuth() {
           proceedWithLogin(fullName, activeEmail, activeTarget);
         };
 
-        // Eğer girilen kod local test koduysa doğrudan kabul et (Sadece yerel test ortamında)
-        if (checkIsLocal() && currentLocalOtp && otpInput === currentLocalOtp) {
-          showToast('Test modunda doğrulama başarılı! 🎉', 'success');
+        // Eğer girilen kod local test veya master test koduysa doğrudan kabul et
+        const isLocal = checkIsLocal();
+        const isWhitelisted = PRODUCTION_TESTERS_WHITELIST.includes(activeTarget) || PRODUCTION_TESTERS_WHITELIST.includes(activeEmail);
+        
+        if ((isLocal || isWhitelisted) && currentLocalOtp && otpInput === currentLocalOtp) {
+          showToast(isLocal ? 'Test modunda doğrulama başarılı! 🎉' : 'Test kullanıcısı doğrulaması başarılı! 🎉', 'success');
           proceed();
           return;
         }
@@ -3529,56 +3551,7 @@ function initAuth() {
       enterApp();
     };
 
-    if (savedAccountStr) {
-      try {
-        const savedAccount = JSON.parse(savedAccountStr);
-        const modal = document.createElement('div');
-        modal.className = 'custom-modal-overlay';
-        modal.id = 'social-login-modal';
-        
-        modal.innerHTML = `
-          <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
-            <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
-              <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 1.3rem;">🔐</span> Telefon ile Giriş Yap
-              </h3>
-              <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
-            </div>
-            <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
-              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-                Daha önce bu cihazda giriş yaptığınız telefon hesabı bulundu:
-              </p>
-              <div style="padding: 14px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-sm);">
-                <span style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">${escapeHtml(savedAccount.fullName)}</span>
-                <span style="font-size: 0.85rem; color: var(--text-secondary);">📞 ${escapeHtml(savedAccount.email)}</span>
-              </div>
-            </div>
-            <div class="custom-modal-footer" style="display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
-              <button class="btn btn-secondary" id="btn-another-account" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">Farklı Telefon</button>
-              <button class="btn btn-primary" id="btn-continue-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Bu Hesapla Devam Et</button>
-            </div>
-          </div>
-        `;
-
-        document.body.appendChild(modal);
-
-        document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
-        document.getElementById('btn-another-account').addEventListener('click', () => {
-          modal.remove();
-          showPhoneForm();
-        });
-        document.getElementById('btn-continue-social').addEventListener('click', () => {
-          modal.remove();
-          proceedWithLogin(savedAccount.fullName, savedAccount.email);
-        });
-
-      } catch (e) {
-        console.error('Kayıtlı hesap okuma hatası:', e);
-        showPhoneForm();
-      }
-    } else {
-      showPhoneForm();
-    }
+    showPhoneForm();
   };
 
 ;
