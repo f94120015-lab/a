@@ -6,7 +6,7 @@ dist/
 build/
 .next/
 .nuxt/
-www/
+
 
 # Sistem ve Editör dosyaları
 .DS_Store
