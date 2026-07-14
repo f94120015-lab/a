@@ -11368,44 +11368,10 @@ function init() {
 
   const isLocal = checkIsLocal();
   if (isLocal) {
-    const devTab = document.getElementById('btn-next-empty-lesson');
-    if (devTab) devTab.style.setProperty('display', 'flex', 'important');
     const adminTab = document.getElementById('btn-admin');
     if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
     const recentBox = document.getElementById('recent-changes-box');
     if (recentBox) recentBox.style.setProperty('display', 'block', 'important');
-
-    const addWrongBtn = document.getElementById('btn-admin-add-wrong-questions');
-    if (addWrongBtn) {
-      addWrongBtn.addEventListener('click', () => {
-        state.wrongQuestions = state.wrongQuestions || [];
-        const sampleIds = [
-          "c40_l22_e1_q11",
-          "c40_l24_e1_q9",
-          "c40_l21_e1_q11",
-          "c40_l23_e1_q11",
-          "c40_l24_e1_q11"
-        ];
-        sampleIds.forEach(id => {
-          if (!state.wrongQuestions.includes(id)) {
-            state.wrongQuestions.push(id);
-          }
-        });
-        saveState();
-        checkReviewBanner();
-        showToast("Hatalı sorular eklendi. Ana sayfadaki 'Hızlı Tekrar' banner'ını kullanabilirsiniz!", "success");
-      });
-    }
-
-    const clearWrongBtn = document.getElementById('btn-admin-clear-wrong-questions');
-    if (clearWrongBtn) {
-      clearWrongBtn.addEventListener('click', () => {
-        state.wrongQuestions = [];
-        saveState();
-        checkReviewBanner();
-        showToast("Hızlı tekrar soruları sıfırlandı!", "success");
-      });
-    }
 
     // Load existing Supabase credentials
     const supabaseUrlInput = document.getElementById('admin-supabase-url');
@@ -13127,8 +13093,6 @@ metaRegistry[username].licenceKey = licenceKey;
     }
 
   } else {
-    const devTab = document.getElementById('btn-next-empty-lesson');
-    if (devTab) devTab.remove();
     const adminTab = document.getElementById('btn-admin');
     if (adminTab) adminTab.remove();
     const adminContent = document.getElementById('tab-content-admin');
