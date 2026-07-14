@@ -3091,22 +3091,44 @@ function initAuth() {
         }, 1000);
       };
 
-      const triggerOtp = async (target) => {
+      const triggerOtp = async (target, email) => {
         startCooldown();
         if (supabaseClient) {
+          showToast('Doğrulama kodları gönderiliyor...', 'info');
+          
+          let phoneSuccess = false;
+          let emailSuccess = false;
+
           try {
-            showToast('Doğrulama kodu gönderiliyor...', 'info');
-            const otpOptions = { phone: target };
-            const { error } = await supabaseClient.auth.signInWithOtp(otpOptions);
+            const { error } = await supabaseClient.auth.signInWithOtp({ phone: target });
             if (error) {
-              console.error('Supabase OTP error:', error);
-              showToast(`Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.`, 'error');
+              console.error('Supabase Phone OTP error:', error);
             } else {
-              showToast('Doğrulama kodu başarıyla gönderildi!', 'success');
+              phoneSuccess = true;
             }
           } catch (e) {
-            console.error('Supabase OTP exception:', e);
-            showToast(`Bağlantı hatası oluştu. Lütfen ağ bağlantınızı kontrol edin.`, 'error');
+            console.error('Supabase Phone OTP exception:', e);
+          }
+
+          try {
+            const { error } = await supabaseClient.auth.signInWithOtp({ email: email });
+            if (error) {
+              console.error('Supabase Email OTP error:', error);
+            } else {
+              emailSuccess = true;
+            }
+          } catch (e) {
+            console.error('Supabase Email OTP exception:', e);
+          }
+
+          if (phoneSuccess && emailSuccess) {
+            showToast('Doğrulama kodu hem telefonunuza hem de e-postanıza gönderildi!', 'success');
+          } else if (phoneSuccess) {
+            showToast('Doğrulama kodu telefonunuza gönderildi (E-posta başarısız)!', 'warning');
+          } else if (emailSuccess) {
+            showToast('Doğrulama kodu e-postanıza gönderildi (SMS başarısız)!', 'warning');
+          } else {
+            showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
           }
         } else {
           showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
@@ -3129,7 +3151,7 @@ function initAuth() {
       });
 
       document.getElementById('btn-resend-otp').addEventListener('click', () => {
-        triggerOtp(activeTarget);
+        triggerOtp(activeTarget, activeEmail);
       });
 
       document.getElementById('btn-submit-social-next').addEventListener('click', () => {
@@ -3209,7 +3231,7 @@ function initAuth() {
         screen1.style.display = 'none';
         screen2.style.display = 'flex';
         
-        triggerOtp(activeTarget);
+        triggerOtp(activeTarget, activeEmail);
       });
 
       document.getElementById('btn-submit-social-verify').addEventListener('click', () => {
@@ -3232,24 +3254,44 @@ function initAuth() {
         };
 
         if (supabaseClient) {
-          const verifyOptions = {
-            token: otpInput,
-            type: 'sms',
-            phone: activeTarget
+          const verifySms = () => {
+            return supabaseClient.auth.verifyOtp({
+              token: otpInput,
+              type: 'sms',
+              phone: activeTarget
+            });
           };
 
-          supabaseClient.auth.verifyOtp(verifyOptions).then(({ data, error }) => {
-            if (error) {
-              console.error('OTP verification failed:', error);
-              showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
-              verifyBtn.disabled = false;
-              verifyBtn.textContent = 'Doğrula ve Giriş Yap';
-            } else {
-              showToast('Doğrulama başarılı!', 'success');
+          const verifyEmail = () => {
+            return supabaseClient.auth.verifyOtp({
+              token: otpInput,
+              type: 'email',
+              email: activeEmail
+            });
+          };
+
+          verifySms().then(({ data, error }) => {
+            if (!error) {
+              showToast('Telefon doğrulaması başarılı!', 'success');
               proceed();
+            } else {
+              verifyEmail().then(({ data: emailData, error: emailErr }) => {
+                if (!emailErr) {
+                  showToast('E-posta doğrulaması başarılı!', 'success');
+                  proceed();
+                } else {
+                  console.error('OTP verification failed for both SMS and Email:', { smsErr: error, emailErr });
+                  showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
+                  verifyBtn.disabled = false;
+                  verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+                }
+              }).catch(err => {
+                showToast('Doğrulama sırasında bir hata oluştu!', 'error');
+                verifyBtn.disabled = false;
+                verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+              });
             }
           }).catch(err => {
-            console.error('OTP verification exception:', err);
             showToast('Doğrulama sırasında bir hata oluştu!', 'error');
             verifyBtn.disabled = false;
             verifyBtn.textContent = 'Doğrula ve Giriş Yap';
