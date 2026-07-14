@@ -3019,7 +3019,10 @@ function initAuth() {
             
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
-              <input type="tel" id="social-phone" class="report-select" placeholder="Örn: +905551234567" value="+90" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+              <div class="report-select" style="display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card); padding: 0 12px; transition: border-color var(--transition-fast); box-sizing: border-box; width: 100%;">
+                <span style="color: var(--text-primary); font-size: 0.9rem; font-family: var(--font-body); font-weight: 700; padding-right: 8px; border-right: 1px solid var(--border-color); margin-right: 8px; user-select: none;">+90</span>
+                <input type="tel" id="social-phone" placeholder="5051234567" style="flex: 1; border: none; background: transparent; padding: 10px 0; outline: none; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; width: 100%;" required>
+              </div>
             </div>
             
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
@@ -3054,11 +3057,6 @@ function initAuth() {
       const otpTargetLabel = document.getElementById('otp-target-label');
       const phoneInput = document.getElementById('social-phone');
 
-      phoneInput.addEventListener('input', () => {
-        if (!phoneInput.value.startsWith('+90')) {
-          phoneInput.value = '+90';
-        }
-      });
       
       let activeMode = 'phone';
       let activeTarget = '';
@@ -3178,22 +3176,21 @@ function initAuth() {
           return;
         }
 
-        const cleanPhone = phoneVal.replace(/[\s\-()]/g, '');
-        
+        let cleanPhone = phoneVal.replace(/[\s\-()]/g, '');
         if (cleanPhone.startsWith('+90')) {
-          if (cleanPhone.length !== 13 || !/^\+905\d{9}$/.test(cleanPhone)) {
-            showToast('Lütfen geçerli bir Türkiye telefon numarası giriniz! Numaralar +905 ile başlamalı ve toplam 13 haneli olmalıdır (örn: +905551234567).', 'error');
-            return;
-          }
-        } else {
-          const phoneRegex = /^\+[1-9]\d{9,14}$/;
-          if (!phoneRegex.test(cleanPhone)) {
-            showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
-            return;
-          }
+          cleanPhone = cleanPhone.slice(3);
+        } else if (cleanPhone.startsWith('0090')) {
+          cleanPhone = cleanPhone.slice(4);
+        } else if (cleanPhone.startsWith('0')) {
+          cleanPhone = cleanPhone.slice(1);
         }
         
-        const digitsOnly = cleanPhone.replace(/^\+/, '');
+        if (!/^[5]\d{9}$/.test(cleanPhone)) {
+          showToast('Lütfen geçerli bir telefon numarası giriniz (örn: 5551234567)! Numaralar 10 haneli olmalı ve 5 ile başlamalıdır.', 'error');
+          return;
+        }
+
+        const digitsOnly = cleanPhone;
         if (/^(\d)\1+$/.test(digitsOnly)) {
           showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
           return;
@@ -3204,7 +3201,7 @@ function initAuth() {
           return;
         }
         
-        activeTarget = cleanPhone;
+        activeTarget = '+90' + cleanPhone;
         activeEmail = emailVal;
         activeMode = 'phone';
 
