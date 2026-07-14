@@ -2457,11 +2457,17 @@ function updateBodyScrollLock() {
   const homeScreen = document.getElementById('home-screen');
   const homeScreenActive = homeScreen && homeScreen.classList.contains('active');
   const hasModal = document.querySelector('.qp-modal-overlay') !== null;
+  const quizScreen = document.getElementById('quiz-screen');
+  const quizActive = quizScreen && quizScreen.classList.contains('active');
+  const placementScreen = document.getElementById('placement-screen');
+  const placementActive = placementScreen && placementScreen.classList.contains('active');
 
-  if (homeScreenActive && hasModal) {
+  if ((homeScreenActive && hasModal) || quizActive || placementActive) {
     document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
   } else {
     document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
   }
 }
 
@@ -2497,6 +2503,9 @@ function showScreen(screenId) {
 
   // Update body scroll lock state based on active screen & overlays
   updateBodyScrollLock();
+
+  // Dispatch resize event to force visual viewport calculations to update
+  window.dispatchEvent(new Event('resize'));
 }
 
 function showToast(message, type = 'info') {
