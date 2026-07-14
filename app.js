@@ -2453,6 +2453,8 @@ async function saveUser(username, password) {
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
 }
 
+let _scrollLockY = 0;
+
 function updateBodyScrollLock() {
   const homeScreen = document.getElementById('home-screen');
   const homeScreenActive = homeScreen && homeScreen.classList.contains('active');
@@ -2462,12 +2464,28 @@ function updateBodyScrollLock() {
   const placementScreen = document.getElementById('placement-screen');
   const placementActive = placementScreen && placementScreen.classList.contains('active');
 
-  if ((homeScreenActive && hasModal) || quizActive || placementActive) {
+  const shouldLock = (homeScreenActive && hasModal) || quizActive || placementActive;
+  const isLocked = document.body.classList.contains('no-scroll');
+
+  if (shouldLock && !isLocked) {
+    // Save current scroll position before locking
+    _scrollLockY = window.scrollY;
     document.body.classList.add('no-scroll');
     document.documentElement.classList.add('no-scroll');
-  } else {
+    // Pin body in place with negative top to prevent iOS bounce
+    document.body.style.top = `-${_scrollLockY}px`;
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    document.body.style.left = '0';
+  } else if (!shouldLock && isLocked) {
     document.body.classList.remove('no-scroll');
     document.documentElement.classList.remove('no-scroll');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    document.body.style.left = '';
+    // Restore scroll position
+    window.scrollTo(0, _scrollLockY);
   }
 }
 
@@ -2486,6 +2504,11 @@ function showScreen(screenId) {
 
   localStorage.setItem('amok_last_screen', screenId);
 
+  // Scroll to top instantly before screen state changes
+  if (screenId !== 'home-screen') {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
+
   document.querySelectorAll('.app-screen').forEach(s => s.classList.remove('active'));
   document.getElementById(screenId).classList.add('active');
 
@@ -2497,8 +2520,6 @@ function showScreen(screenId) {
       window.scrollTo(0, lastScrollY);
     });
     setTimeout(checkAndShowReviewPrompt, 600);
-  } else {
-    window.scrollTo(0, 0);
   }
 
   // Update body scroll lock state based on active screen & overlays
@@ -13245,11 +13266,36 @@ metaRegistry[username].licenceKey = licenceKey;
   if (window.visualViewport) {
     const updateVV = () => {
       const vv = window.visualViewport;
-      document.documentElement.style.setProperty('--vv-height', `${vv.height}px`);
-      document.documentElement.style.setProperty('--vv-offsetTop', `${vv.offsetTop}px`);
+      const isKeyboardOpen = document.activeElement &&
+        (document.activeElement.tagName === 'INPUT' ||
+         document.activeElement.tagName === 'TEXTAREA' ||
+         document.activeElement.isContentEditable);
+
+      if (isKeyboardOpen) {
+        // When keyboard is open, adjust quiz screen height to visible viewport
+        document.documentElement.style.setProperty('--vv-height', `${vv.height}px`);
+        // Apply the height to quiz/placement screen
+        const quizScreen = document.getElementById('quiz-screen');
+        const placementScreen = document.getElementById('placement-screen');
+        if (quizScreen && quizScreen.classList.contains('active')) {
+          quizScreen.style.height = `${vv.height}px`;
+        }
+        if (placementScreen && placementScreen.classList.contains('active')) {
+          placementScreen.style.height = `${vv.height}px`;
+        }
+      } else {
+        // When no keyboard, reset to full viewport
+        document.documentElement.style.removeProperty('--vv-height');
+        const quizScreen = document.getElementById('quiz-screen');
+        const placementScreen = document.getElementById('placement-screen');
+        if (quizScreen) quizScreen.style.height = '';
+        if (placementScreen) placementScreen.style.height = '';
+      }
     };
     window.visualViewport.addEventListener('resize', updateVV);
     window.visualViewport.addEventListener('scroll', updateVV);
+    window.addEventListener('focus', updateVV, true);
+    window.addEventListener('blur', updateVV, true);
     updateVV();
   }
 
