@@ -7049,6 +7049,25 @@ span[style*="color:#339af0"] * {
     display: flex !important;
     flex-direction: column !important;
   }
+
+  /* Ensure footer buttons are visible above mobile browser toolbar */
+  #quiz-screen .quiz-footer,
+  #placement-screen .quiz-footer {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 16px)) !important;
+  }
+
+  /* Reduce body padding on mobile to give footer more room */
+  #quiz-screen .quiz-body,
+  #placement-screen .quiz-body {
+    padding: 16px 16px !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Compact header on mobile */
+  #quiz-screen .quiz-header,
+  #placement-screen .quiz-header {
+    padding: 10px 16px !important;
+  }
 }
 
 /* Inversion Transformer */
