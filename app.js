@@ -8696,6 +8696,7 @@ function updateLicenceUI() {
   const storeStatusText = document.getElementById('store-licence-status-text');
   const storeExpiryText = document.getElementById('store-licence-expiry-text');
   const storeStatusBadge = document.getElementById('store-licence-status-badge');
+  const storeHeaderBadge = document.getElementById('store-licence-status-badge-header');
 
   const updateElements = (sText, eText, sBadge) => {
     if (!sText && !eText && !sBadge) return;
@@ -8755,6 +8756,7 @@ function updateLicenceUI() {
 
   updateElements(statusText, expiryText, statusBadge);
   updateElements(storeStatusText, storeExpiryText, storeStatusBadge);
+  updateElements(null, null, storeHeaderBadge);
 
   // Sync inputs values
   const storeEmailInput = document.getElementById('store-licence-email');
@@ -10241,6 +10243,28 @@ function initEventListeners() {
   document.getElementById('buy-kutup-theme-btn').addEventListener('click', () => buyStoreItem('kutup-theme', 140));
   document.getElementById('buy-siber-theme-btn').addEventListener('click', () => buyStoreItem('siber-theme', 180));
   document.getElementById('buy-orman-theme-btn').addEventListener('click', () => buyStoreItem('orman-theme', 120));
+
+  // Collapsible Üyelik & Lisans Kartı
+  const licenceHeader = document.getElementById('store-licence-header');
+  const licenceBody = document.getElementById('store-licence-body');
+  const licenceArrow = document.getElementById('store-licence-arrow');
+  
+  if (licenceHeader && licenceBody) {
+    licenceHeader.addEventListener('click', () => {
+      const isExpanded = licenceBody.style.maxHeight && licenceBody.style.maxHeight !== '0px';
+      if (isExpanded) {
+        licenceBody.style.maxHeight = '0px';
+        licenceBody.style.opacity = '0';
+        licenceBody.style.borderTopColor = 'transparent';
+        if (licenceArrow) licenceArrow.style.transform = 'rotate(0deg)';
+      } else {
+        licenceBody.style.maxHeight = '800px';
+        licenceBody.style.opacity = '1';
+        licenceBody.style.borderTopColor = 'var(--border-color)';
+        if (licenceArrow) licenceArrow.style.transform = 'rotate(180deg)';
+      }
+    });
+  }
 
   // Mağaza Lisans Butonları ve Girişleri
   const storeLicenceInput = document.getElementById('store-licence-input');
