@@ -2271,9 +2271,18 @@ function saveState(immediate = false) {
         }
         supabaseClient
           .from('user_states')
-          .upsert(upsertData)
+          .upsert(upsertData, { onConflict: 'username' })
           .then(({ error }) => {
             if (error) console.error('Supabase state sync error:', error);
+          });
+        
+        // Update user last active time in profiles table
+        supabaseClient
+          .from('profiles')
+          .update({ last_seen_at: new Date().toISOString() })
+          .eq('username', state.username)
+          .then(({ error }) => {
+            if (error) console.error('Supabase profile last_seen_at sync error:', error);
           });
       };
 
@@ -2299,7 +2308,8 @@ function saveState(immediate = false) {
           hearts: state.hearts || 0,
           completed_lessons: state.completedLessons || [],
           avatar_color: state.avatarColor || '#E88A9A',
-          licence_key: state.licenceKey || existing.licence_key || ''
+          licence_key: state.licenceKey || existing.licence_key || '',
+          lastSeen: new Date().toISOString()
         };
         localStorage.setItem('amok_user_states', JSON.stringify(localStates));
       } catch (e) {
@@ -8138,6 +8148,9 @@ function completeLesson() {
 
   let newAchievements = [];
 
+  const earnedXP = isSuccess ? correctCount * XP_PER_CORRECT : 0;
+  const exTitle = currentLesson.activeExerciseTitle ? ` - ${currentLesson.activeExerciseTitle}` : '';
+
   if (isSuccess) {
     // Dersi tamamlanan listesine ekle
     if (currentLesson.activeExerciseId) {
@@ -8185,10 +8198,6 @@ function completeLesson() {
     // Başarım kontrolü
     // newAchievements = checkAchievements(); // BAŞARIMLAR DEVRE DIŞI
   }
-
-  const earnedXP = isSuccess ? correctCount * XP_PER_CORRECT : 0;
-
-  const exTitle = currentLesson.activeExerciseTitle ? ` - ${currentLesson.activeExerciseTitle}` : '';
   const trophyEl = document.querySelector('.summary-trophy');
   const titleEl = document.querySelector('.summary-title');
   const subtitleEl = document.getElementById('summary-lesson-name');
@@ -10903,21 +10912,28 @@ function submitReport(question, errorType, comment) {
   localStorage.setItem('amok_question_reports', JSON.stringify(reports));
 
   if (supabaseClient) {
-    supabaseClient
-      .from('question_reports')
-      .insert([{
-        username: newReport.username,
-        lesson_id: newReport.lessonId,
-        lesson_title: newReport.lessonTitle,
-        question_id: newReport.questionId,
-        question_prompt: newReport.questionPrompt,
-        question_type: newReport.questionType,
-        error_type: newReport.errorType,
-        user_comment: newReport.userComment
-      }])
-      .then(({ error }) => {
-        if (error) console.error('Supabase error saving report:', error);
-      });
+    try {
+      supabaseClient
+        .from('question_reports')
+        .insert([{
+          username: newReport.username,
+          lesson_id: newReport.lessonId,
+          lesson_title: newReport.lessonTitle,
+          question_id: newReport.questionId,
+          question_prompt: newReport.questionPrompt,
+          question_type: newReport.questionType,
+          error_type: newReport.errorType,
+          user_comment: newReport.userComment
+        }])
+        .then(({ error }) => {
+          if (error) console.error('Supabase error saving report:', error);
+        })
+        .catch(err => {
+          console.error('Supabase insert promise rejection in submitReport:', err);
+        });
+    } catch (dbErr) {
+      console.error('Supabase insert exception in submitReport:', dbErr);
+    }
   }
   
   // E-posta bildirimi gönder
@@ -12818,6 +12834,8 @@ metaRegistry[username].licenceKey = licenceKey;
     }
     window.loadAdminFeedbacks = loadAdminFeedbacks;
 
+    let adminReportsCache = [];
+
     async function loadAdminReports() {
       const container = document.getElementById('admin-reports-list-container');
       if (!container) return;
@@ -12829,6 +12847,13 @@ metaRegistry[username].licenceKey = licenceKey;
       `;
 
       let reports = [];
+      let localReports = [];
+      try {
+        localReports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+      } catch (err) {
+        console.error('Local reports parse error:', err);
+      }
+
       if (supabaseClient) {
         try {
           const { data, error } = await supabaseClient
@@ -12837,7 +12862,7 @@ metaRegistry[username].licenceKey = licenceKey;
             .order('created_at', { ascending: false });
           
           if (!error && data) {
-            reports = data.map(row => ({
+            const dbReports = data.map(row => ({
               id: row.id,
               dbId: row.id,
               username: row.username,
@@ -12850,20 +12875,35 @@ metaRegistry[username].licenceKey = licenceKey;
               userComment: row.user_comment,
               timestamp: new Date(row.created_at).toLocaleString('tr-TR')
             }));
+
+            // Start with DB reports
+            reports = [...dbReports];
+
+            // Merge local reports that are not already present in dbReports.
+            localReports.forEach(localRep => {
+              const isDuplicate = dbReports.some(dbRep => 
+                dbRep.questionId === localRep.questionId &&
+                dbRep.userComment === localRep.userComment &&
+                dbRep.username === localRep.username
+              );
+              if (!isDuplicate) {
+                reports.push(localRep);
+              }
+            });
           } else {
             console.error('Supabase reports fetch error:', error);
-            reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-            reports.reverse();
+            reports = [...localReports].reverse();
           }
         } catch (e) {
           console.error('Supabase reports fetch exception:', e);
-          reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-          reports.reverse();
+          reports = [...localReports].reverse();
         }
       } else {
-        reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-        reports.reverse();
+        reports = [...localReports].reverse();
       }
+
+      // Store in cache for exporting
+      adminReportsCache = reports;
 
       if (reports.length === 0) {
         container.innerHTML = `
@@ -12874,7 +12914,7 @@ metaRegistry[username].licenceKey = licenceKey;
         return;
       }
 
-      container.innerHTML = reports.map((rep, idx) => `
+      container.innerHTML = reports.map((rep) => `
         <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; font-size: 0.88rem; line-height: 1.5; text-align: left; position: relative;">
           <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
             <span style="font-family: var(--font-heading); color: var(--accent-primary); font-size: 0.95rem;">
@@ -12882,7 +12922,7 @@ metaRegistry[username].licenceKey = licenceKey;
               <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-secondary); margin-left: 6px;">(ID: ${escapeHtml(rep.questionId)})</span>
             </span>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: auto;">${escapeHtml(rep.timestamp)}</span>
-            <button class="btn-delete-single-report" data-id="${rep.dbId || ''}" data-index="${idx}" style="background: transparent; border: none; color: var(--color-wrong); cursor: pointer; font-size: 1.1rem; padding: 0 4px; margin-left: 10px; display: inline-flex; align-items: center;" title="Sil">×</button>
+            <button class="btn-delete-single-report" data-id="${rep.id}" style="background: transparent; border: none; color: var(--color-wrong); cursor: pointer; font-size: 1.1rem; padding: 0 4px; margin-left: 10px; display: inline-flex; align-items: center;" title="Sil">×</button>
           </div>
           <div style="margin-bottom: 6px; color: var(--text-secondary);">
             <strong>Soru Metni:</strong> <span style="font-style: italic; color: var(--text-primary); font-family: monospace; background: var(--bg-card); padding: 2px 6px; border-radius: 4px; display: inline-block;">${escapeHtml(rep.questionPrompt)}</span>
@@ -12905,27 +12945,32 @@ metaRegistry[username].licenceKey = licenceKey;
       // Add delete listeners
       container.querySelectorAll('.btn-delete-single-report').forEach(btn => {
         btn.onclick = async () => {
-          const dbId = btn.dataset.id;
-          const idx = parseInt(btn.dataset.index, 10);
-          
-          if (supabaseClient && dbId) {
-            try {
-              const { error } = await supabaseClient.from('question_reports').delete().eq('id', dbId);
-              if (error) throw error;
-              showToast('Hata bildirimi veritabanından silindi.', 'success');
-            } catch (e) {
-              console.error('Supabase delete error:', e);
-              showToast('Bildirim silinirken hata oluştu!', 'error');
+          const reportId = btn.dataset.id;
+          if (!reportId) return;
+
+          if (confirm('Bu hata bildirimini silmek istediğinize emin misiniz?')) {
+            if (supabaseClient && !reportId.toString().startsWith('rep_')) {
+              try {
+                const { error } = await supabaseClient.from('question_reports').delete().eq('id', reportId);
+                if (error) throw error;
+                showToast('Hata bildirimi veritabanından silindi.', 'success');
+              } catch (e) {
+                console.error('Supabase delete error:', e);
+                showToast('Bildirim veritabanından silinirken hata oluştu!', 'error');
+              }
+            } else {
+              let localReps = [];
+              try {
+                localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+              } catch (err) {
+                console.error(err);
+              }
+              localReps = localReps.filter(r => r.id !== reportId);
+              localStorage.setItem('amok_question_reports', JSON.stringify(localReps));
+              showToast('Hata bildirimi yerel hafızadan silindi.', 'success');
             }
-          } else {
-            let localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-            localReps.reverse();
-            localReps.splice(idx, 1);
-            localReps.reverse();
-            localStorage.setItem('amok_question_reports', JSON.stringify(localReps));
-            showToast('Hata bildirimi yerel hafızadan silindi.', 'success');
+            loadAdminReports();
           }
-          loadAdminReports();
         };
       });
     }
@@ -12935,8 +12980,8 @@ metaRegistry[username].licenceKey = licenceKey;
     const btnAdminExport = document.getElementById('btn-admin-export-reports');
     if (btnAdminExport) {
       btnAdminExport.onclick = () => {
-        const reports = localStorage.getItem('amok_question_reports') || '[]';
-        const blob = new Blob([reports], { type: 'application/json' });
+        const reportsData = adminReportsCache.length > 0 ? JSON.stringify(adminReportsCache, null, 2) : (localStorage.getItem('amok_question_reports') || '[]');
+        const blob = new Blob([reportsData], { type: 'application/json' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = `amok_question_reports_${Date.now()}.json`;
@@ -12947,21 +12992,74 @@ metaRegistry[username].licenceKey = licenceKey;
       };
     }
 
+    const btnAdminExportCSV = document.getElementById('btn-admin-export-csv-reports');
+    if (btnAdminExportCSV) {
+      btnAdminExportCSV.onclick = () => {
+        const rawList = adminReportsCache.length > 0 ? adminReportsCache : JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+        if (rawList.length === 0) {
+          showToast('Dışa aktarılacak hata bildirimi bulunmuyor.', 'info');
+          return;
+        }
+
+        const headers = [
+          'Rapor ID',
+          'Tarih',
+          'Ders ID',
+          'Ders Başlığı',
+          'Soru ID',
+          'Soru Türü',
+          'Soru Metni',
+          'Hata Türü',
+          'Kullanıcı Açıklaması',
+          'Bildiren Kullanıcı'
+        ];
+
+        const rows = rawList.map(rep => {
+          return [
+            rep.id || '',
+            rep.timestamp || '',
+            rep.lessonId || '',
+            rep.lessonTitle || '',
+            rep.questionId || '',
+            rep.questionType || '',
+            rep.questionPrompt || '',
+            translateErrorType ? translateErrorType(rep.errorType) : (rep.errorType || ''),
+            rep.userComment || '',
+            rep.username || ''
+          ].map(val => {
+            const cleaned = String(val).replace(/"/g, '""');
+            return `"${cleaned}"`;
+          }).join(';');
+        });
+
+        const csvContent = '\uFEFF' + [headers.join(';'), ...rows].join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `amok_hata_bildirimleri_${Date.now()}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast('Raporlar CSV/Excel formatında başarıyla dışa aktarıldı. 📥', 'success');
+      };
+    }
+
     const btnAdminClear = document.getElementById('btn-admin-clear-reports');
     if (btnAdminClear) {
       btnAdminClear.onclick = async () => {
         if (confirm('Tüm hata bildirimlerini silmek istediğinize emin misiniz?')) {
+          localStorage.removeItem('amok_question_reports');
+
           if (supabaseClient) {
             try {
-              const { error } = await supabaseClient.from('question_reports').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+              const { error } = await supabaseClient.from('question_reports').delete().gt('created_at', '1970-01-01T00:00:00Z');
               if (error) throw error;
-              showToast('Tüm hata bildirimleri veritabanından temizlendi. 🗑️', 'success');
+              showToast('Tüm hata bildirimleri temizlendi. 🗑️', 'success');
             } catch (e) {
               console.error('Supabase clear error:', e);
-              showToast('Bildirimler temizlenirken hata oluştu!', 'error');
+              showToast('Veritabanındaki bildirimler temizlenirken hata oluştu!', 'error');
             }
           } else {
-            localStorage.removeItem('amok_question_reports');
             showToast('Tüm hata bildirimleri yerel hafızadan temizlendi. 🗑️', 'success');
           }
           loadAdminReports();
@@ -13086,6 +13184,21 @@ metaRegistry[username].licenceKey = licenceKey;
   renderRecentChanges();
   initNotifications();
   initSimulator();
+
+  // Vagon Simülatörü kilit ekranı buton olay dinleyicileri
+  const btnUnlockSim = document.getElementById('btn-simulator-unlock-login');
+  if (btnUnlockSim) {
+    btnUnlockSim.onclick = () => {
+      const loginBtn = document.getElementById('btn-activate-licence-login');
+      if (loginBtn) loginBtn.click();
+    };
+  }
+  const btnGotoProfile = document.getElementById('btn-simulator-goto-profile');
+  if (btnGotoProfile) {
+    btnGotoProfile.onclick = () => {
+      switchTab('profile');
+    };
+  }
 }
 
 function showGrammarExplanationModal(question, selectedAnswer) {
@@ -15395,10 +15508,31 @@ function initSimulatorMatrixEventListeners() {
   });
 }
 function renderSimulator() {
+  const isLicensed = checkIsLocal() || checkLicence();
+  const isRegistered = checkIsLocal() || (state.username && !state.isGuest);
+  
+  const lockOverlay = document.getElementById('simulator-lock-overlay');
+  const mainContainer = document.getElementById('simulator-main-container');
+  
+  if (lockOverlay && mainContainer) {
+    if (!isLicensed || !isRegistered) {
+      lockOverlay.style.display = 'flex';
+      mainContainer.style.display = 'none';
+      return;
+    } else {
+      lockOverlay.style.display = 'none';
+      mainContainer.style.display = 'block';
+    }
+  }
+
   initSimulator();
 }
 
 function renderSimulatorContent() {
+  const isLicensed = checkIsLocal() || checkLicence();
+  const isRegistered = checkIsLocal() || (state.username && !state.isGuest);
+  if (!isLicensed || !isRegistered) return;
+
   const currentLvlData = getActiveLevelData(selectedLevel);
   if (!currentLvlData) return;
 
