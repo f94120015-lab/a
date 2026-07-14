@@ -3139,14 +3139,30 @@ function initAuth() {
     const email = document.getElementById('register-email').value.trim();
     const password = document.getElementById('register-password').value;
 
+    // 1. Kullanıcı adı uzunluk kontrolü
     if (username.length < 3) {
       showToast('Kullanıcı adı en az 3 karakter olmalı!', 'error');
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
       return;
     }
+    if (username.length > 20) {
+      showToast('Kullanıcı adı en fazla 20 karakter olmalı!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
 
-    // Email formatı kontrolü
+    // 2. Kullanıcı adı karakter kontrolü (Boşluk içeremez, harf, rakam, alt çizgi, nokta ve tire içerebilir)
+    const usernameRegex = /^[a-zA-Z0-9_ğüşıöçĞÜŞİÖÇ.\-]+$/;
+    if (!usernameRegex.test(username)) {
+      showToast('Kullanıcı adı boşluk içeremez ve sadece harf, rakam, nokta (.), tire (-) ve alt çizgi (_) içerebilir!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    // 3. Email formatı kontrolü
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email && !emailRegex.test(email)) {
       showToast('Geçerli bir e-posta adresi giriniz!', 'error');
@@ -3155,7 +3171,69 @@ function initAuth() {
       return;
     }
 
-    // Şifre gücü kontrolü
+    // 4. Tek kullanımlık/Geçici e-posta (Disposable Email) kontrolü
+    const disposableDomains = [
+      'mailinator.com', '10minutemail.com', 'yopmail.com', 'tempmail.com', 
+      'temp-mail.org', 'guerrillamail.com', 'dispostable.com', 'getairmail.com', 
+      'sharklasers.com', 'guerillamailblock.com', 'guerillamail.net', 
+      'guerillamail.org', 'guerillamail.biz', 'guerillamail.co', 'grr.la', 
+      'pokemail.net', 'duck.com', 'tempmailo.com', 'internets.org', 
+      'maildrop.cc', 'disposable.com', 'tempmail.net'
+    ];
+    const emailDomain = email.split('@')[1]?.toLowerCase();
+    if (disposableDomains.includes(emailDomain)) {
+      showToast('Geçici/Tek kullanımlık e-posta adresleri ile kayıt olunamaz!', 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    // 5. Anlamsız/Rastgele Karakter Tuşlaması (Gibberish) Koruması
+    const checkGibberish = (str) => {
+      const clean = str.trim().toLowerCase();
+      // Ardışık 4+ aynı karakter (örn: aaaa, xxxx)
+      if (/([a-z0-9])\1\1\1+/.test(clean)) {
+        return 'Karakter tekrarları çok fazla, lütfen gerçek bilgiler giriniz.';
+      }
+      // Sayısal olmayan ve 4 karakterden uzun girdilerde sesli harf kontrolü
+      if (clean.length > 4 && !/^\d+$/.test(clean)) {
+        const vowels = clean.match(/[aeıioöuü]/gi);
+        if (!vowels || vowels.length === 0) {
+          return 'Lütfen geçerli/okunabilir bir kullanıcı adı giriniz.';
+        }
+        // Ardışık 4+ sessiz harf bloğu (örn: sdfsdf)
+        if (/[bçdfgğhjklmnprsştvyz]{4,}/i.test(clean)) {
+          return 'Art arda çok fazla sessiz harf bulunuyor, lütfen geçerli bir isim giriniz.';
+        }
+      }
+      // Klavye tuşlama dizilimleri
+      const keyboardMashes = ['asdf', 'sdfg', 'dfgh', 'fghj', 'ghjk', 'hjkl', 'qwer', 'wert', 'erty', 'rtyu', 'tyui', 'yuio', 'uiop', 'zxcv', 'xcvb', 'cvbn', 'vbnm', 'asfa', 'sfas', 'fasa', 'dfsd', 'fsfs'];
+      for (const mash of keyboardMashes) {
+        if (clean.includes(mash)) {
+          return 'Geçersiz karakter dizilimi (klavye tuşlaması algılandı).';
+        }
+      }
+      return null;
+    };
+
+    const usernameErr = checkGibberish(username);
+    if (usernameErr) {
+      showToast(`Kullanıcı Adı hatası: ${usernameErr}`, 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    const emailMailbox = email.split('@')[0];
+    const emailErr = checkGibberish(emailMailbox);
+    if (emailErr) {
+      showToast(`E-posta hatası: ${emailErr}`, 'error');
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+      return;
+    }
+
+    // 6. Şifre gücü kontrolü
     if (password.length < 6) {
       showToast('Şifre en az 6 karakter olmalı!', 'error');
       submitBtn.textContent = originalBtnText;
@@ -3165,19 +3243,23 @@ function initAuth() {
 
     try {
       if (supabaseClient) {
-        // Supabase'de var mı diye kontrol et
-        const { data: dbUser, error: checkError } = await supabaseClient
+        // Hem kullanıcı adı hem de e-posta çakışmasını kontrol et
+        const { data: dbUsers, error: checkError } = await supabaseClient
           .from('profiles')
-          .select('username')
-          .eq('username', username)
-          .maybeSingle();
+          .select('username, email')
+          .or(`username.eq.${username},email.eq.${email}`);
 
         if (checkError) {
           console.error('Supabase checking error:', checkError);
         }
 
-        if (dbUser) {
-          showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+        if (dbUsers && dbUsers.length > 0) {
+          const hasUsernameMatch = dbUsers.some(u => u.username.toLowerCase() === username.toLowerCase());
+          if (hasUsernameMatch) {
+            showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+          } else {
+            showToast('Bu e-posta adresi ile zaten bir hesap oluşturulmuş!', 'error');
+          }
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
           return;
@@ -3203,6 +3285,13 @@ function initAuth() {
         const users = getUsers();
         if (users[username]) {
           showToast('Bu kullanıcı adı zaten alınmış!', 'error');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          return;
+        }
+        const emailExists = Object.values(users).some(u => u.email && u.email.toLowerCase() === email.toLowerCase());
+        if (emailExists) {
+          showToast('Bu e-posta adresi ile zaten bir hesap oluşturulmuş!', 'error');
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
           return;
