@@ -3147,6 +3147,8 @@ function initAuth() {
         }
 
         const nameRegex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/;
+        const consonantsRegex = /[bcdfghjklmnprstvyzxqBCDFGHJKLMNPRSTVYZXQçÇğĞıİöÖşŞüÜ]{4,}/; // Blok 4+ yan yana sessiz harf
+        
         for (const part of nameParts) {
           if (part.length < 2) {
             showToast('Ad ve soyadın her biri en az 2 karakter olmalıdır!', 'error');
@@ -3156,7 +3158,12 @@ function initAuth() {
             showToast('Ad ve soyad sadece harflerden oluşmalıdır!', 'error');
             return;
           }
-          if (/(.)\1\1\1/.test(part.toLowerCase())) {
+          // Sessiz harf yığılması kontrolü (örn: wretre veya egwtert gibi uydurma kelimeleri engellemek için)
+          if (consonantsRegex.test(part)) {
+            showToast('Lütfen geçerli bir ad ve soyad giriniz (geçersiz harf dizilimi)!', 'error');
+            return;
+          }
+          if (/(.)\1\1/.test(part.toLowerCase())) {
             showToast('Lütfen gerçek bir isim giriniz (ardışık tekrarlayan harfler içeriyor)!', 'error');
             return;
           }
@@ -3164,15 +3171,32 @@ function initAuth() {
         
         // Telefon formatı kontrolü
         const cleanPhone = phone.replace(/[\s\-()]/g, '');
-        const phoneRegex = /^\+[1-9]\d{9,14}$/;
-        if (!phoneRegex.test(cleanPhone)) {
-          showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
-          return;
+        
+        // Türkiye numaraları için katı kontrol (+905XXXXXXXXX formatı)
+        if (cleanPhone.startsWith('+90')) {
+          if (cleanPhone.length !== 13 || !/^\+905\d{9}$/.test(cleanPhone)) {
+            showToast('Lütfen geçerli bir Türkiye telefon numarası giriniz! Numaralar +905 ile başlamalı ve toplam 13 haneli olmalıdır (örn: +905551234567).', 'error');
+            return;
+          }
+        } else {
+          // Yabancı numaralar için genel regex
+          const phoneRegex = /^\+[1-9]\d{9,14}$/;
+          if (!phoneRegex.test(cleanPhone)) {
+            showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
+            return;
+          }
         }
-
+        
         const digitsOnly = cleanPhone.replace(/^\+/, '');
+        // Aynı rakam tekrarları engeli (örn: 5555555...)
         if (/^(\d)\1+$/.test(digitsOnly)) {
           showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
+          return;
+        }
+        
+        // Sıralı/sallama numaraları engelleme (örn: 1234567, 987654 gibi ardışık dizileri engelle)
+        if (digitsOnly.includes('12345') || digitsOnly.includes('54321') || digitsOnly.includes('23456') || digitsOnly.includes('65432') || digitsOnly.includes('34567') || digitsOnly.includes('76543')) {
+          showToast('Sallama/geçersiz bir telefon numarası girdiniz! Lütfen gerçek numaranızı girin.', 'error');
           return;
         }
 
