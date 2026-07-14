@@ -42,8 +42,19 @@
         <p class="auth-subtitle">İngilizceyi eğlenerek öğren</p>
       </div>
 
+      <!-- Telefon ile Giriş Yap / Kayıt Ol Butonu -->
+      <button class="btn btn-primary btn-full" id="btn-phone-login" style="margin-top: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: var(--radius-md); font-family: var(--font-heading); font-size: 0.95rem; background: var(--accent-primary); border: none; cursor: pointer; color: white; width: 100%;">
+        📞 Telefon ile Giriş Yap / Kayıt Ol
+      </button>
+
+      <div class="auth-divider-custom" style="margin-top: 20px; margin-bottom: 16px; text-align: center; color: var(--text-secondary); font-size: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body);">
+        <span style="flex-grow: 1; height: 1px; background: var(--border-color); opacity: 0.6;"></span>
+        <span>veya şununla devam et</span>
+        <span style="flex-grow: 1; height: 1px; background: var(--border-color); opacity: 0.6;"></span>
+      </div>
+
       <!-- Giriş Seçenekleri (Sadece Google, Facebook ve Apple görünür olacak) -->
-      <div class="social-auth-container" style="margin-top: 24px; margin-bottom: 8px;">
+      <div class="social-auth-container" style="margin-top: 8px; margin-bottom: 8px;">
         <button class="btn-social" id="btn-google-login" type="button" title="Google ile Devam Et">
           <svg class="social-icon" viewBox="0 0 24 24">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -111,8 +122,8 @@
             <input type="text" id="register-username" placeholder="örn: ahmet123" required autocomplete="username">
           </div>
           <div class="form-group">
-            <label for="register-email">E-posta</label>
-            <input type="email" id="register-email" placeholder="ornek@email.com" required autocomplete="email">
+            <label for="register-phone">Telefon Numarası</label>
+            <input type="tel" id="register-phone" placeholder="örn: +905551234567" required autocomplete="tel">
           </div>
           <div class="form-group">
             <label for="register-password">Şifre</label>

@@ -3136,7 +3136,7 @@ function initAuth() {
     submitBtn.disabled = true;
 
     const username = document.getElementById('register-username').value.trim();
-    const email = document.getElementById('register-email').value.trim();
+    const phone = document.getElementById('register-phone').value.trim();
     const password = document.getElementById('register-password').value;
 
     // 1. Kullanıcı adı uzunluk kontrolü
@@ -3162,33 +3162,26 @@ function initAuth() {
       return;
     }
 
-    // 3. Email formatı kontrolü
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email && !emailRegex.test(email)) {
-      showToast('Geçerli bir e-posta adresi giriniz!', 'error');
+    // 3. Telefon formatı kontrolü (E.164 standardı: örn: +905551234567)
+    const cleanPhone = phone.replace(/[\s\-()]/g, '');
+    const phoneRegex = /^\+[1-9]\d{9,14}$/;
+    if (!phoneRegex.test(cleanPhone)) {
+      showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
       return;
     }
 
-    // 4. Tek kullanımlık/Geçici e-posta (Disposable Email) kontrolü
-    const disposableDomains = [
-      'mailinator.com', '10minutemail.com', 'yopmail.com', 'tempmail.com', 
-      'temp-mail.org', 'guerrillamail.com', 'dispostable.com', 'getairmail.com', 
-      'sharklasers.com', 'guerillamailblock.com', 'guerillamail.net', 
-      'guerillamail.org', 'guerillamail.biz', 'guerillamail.co', 'grr.la', 
-      'pokemail.net', 'duck.com', 'tempmailo.com', 'internets.org', 
-      'maildrop.cc', 'disposable.com', 'tempmail.net'
-    ];
-    const emailDomain = email.split('@')[1]?.toLowerCase();
-    if (disposableDomains.includes(emailDomain)) {
-      showToast('Geçici/Tek kullanımlık e-posta adresleri ile kayıt olunamaz!', 'error');
+    // Telefon numarasında tüm rakamların aynı olması kontrolü (örn: +905555555555 veya +90000000000)
+    const digitsOnly = cleanPhone.replace(/^\+/, '');
+    if (/^(\d)\1+$/.test(digitsOnly)) {
+      showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
       return;
     }
 
-    // 5. Anlamsız/Rastgele Karakter Tuşlaması (Gibberish) Koruması
+    // 4. Anlamsız/Rastgele Karakter Tuşlaması (Gibberish) Koruması (Kullanıcı adı için)
     const checkGibberish = (str) => {
       const clean = str.trim().toLowerCase();
       // Ardışık 4+ aynı karakter (örn: aaaa, xxxx)
@@ -3224,16 +3217,7 @@ function initAuth() {
       return;
     }
 
-    const emailMailbox = email.split('@')[0];
-    const emailErr = checkGibberish(emailMailbox);
-    if (emailErr) {
-      showToast(`E-posta hatası: ${emailErr}`, 'error');
-      submitBtn.textContent = originalBtnText;
-      submitBtn.disabled = false;
-      return;
-    }
-
-    // 6. Şifre gücü kontrolü
+    // 5. Şifre gücü kontrolü
     if (password.length < 6) {
       showToast('Şifre en az 6 karakter olmalı!', 'error');
       submitBtn.textContent = originalBtnText;
@@ -3241,13 +3225,16 @@ function initAuth() {
       return;
     }
 
+    // E-posta değişkeni geriye dönük uyumluluk için telefon numarasını tutacaktır
+    const email = cleanPhone;
+
     try {
       if (supabaseClient) {
-        // Hem kullanıcı adı hem de e-posta çakışmasını kontrol et
+        // Hem kullanıcı adı hem de telefon çakışmasını kontrol et
         const { data: dbUsers, error: checkError } = await supabaseClient
           .from('profiles')
           .select('username, email')
-          .or(`username.eq.${username},email.eq.${email}`);
+          .or(`username.eq.${username},email.eq.${cleanPhone}`);
 
         if (checkError) {
           console.error('Supabase checking error:', checkError);
@@ -3258,7 +3245,7 @@ function initAuth() {
           if (hasUsernameMatch) {
             showToast('Bu kullanıcı adı zaten alınmış!', 'error');
           } else {
-            showToast('Bu e-posta adresi ile zaten bir hesap oluşturulmuş!', 'error');
+            showToast('Bu telefon numarası ile zaten bir hesap oluşturulmuş!', 'error');
           }
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
@@ -3270,7 +3257,7 @@ function initAuth() {
           .from('profiles')
           .insert({
             username: username,
-            email: email || null,
+            email: cleanPhone, // telefon numarasını email alanına yazıyoruz
             password_hash: hashed
           });
 
@@ -3281,6 +3268,14 @@ function initAuth() {
           submitBtn.disabled = false;
           return;
         }
+
+        // Kullanıcı telefon numarasını metadata listesine ekle (Admin Panelinde listelenebilmesi için)
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        metaRegistry[username] = {
+          username: username,
+          phone: cleanPhone
+        };
+        localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
       } else {
         const users = getUsers();
         if (users[username]) {
@@ -3289,14 +3284,29 @@ function initAuth() {
           submitBtn.disabled = false;
           return;
         }
-        const emailExists = Object.values(users).some(u => u.email && u.email.toLowerCase() === email.toLowerCase());
+        const emailExists = Object.values(users).some(u => u.email && u.email.replace(/[\s\-()]/g, '') === cleanPhone);
         if (emailExists) {
-          showToast('Bu e-posta adresi ile zaten bir hesap oluşturulmuş!', 'error');
+          showToast('Bu telefon numarası ile zaten bir hesap oluşturulmuş!', 'error');
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
           return;
         }
         await saveUser(username, password);
+        
+        // Yerel kullanıcıya telefonu kaydet
+        const localUsers = getUsers();
+        if (localUsers[username]) {
+          localUsers[username].email = cleanPhone;
+          localStorage.setItem('amok_users', JSON.stringify(localUsers));
+        }
+
+        // Yerel metadata listesine ekle
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        metaRegistry[username] = {
+          username: username,
+          phone: cleanPhone
+        };
+        localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
       }
       
       const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
@@ -3321,7 +3331,7 @@ function initAuth() {
       };
       saveState();
       try {
-        sendTelegramNotification(`🚀 *Yeni Üyelik!*\n👤 *Kullanıcı Adı:* ${username}\n📧 *E-posta:* ${email || 'Belirtilmedi'}`);
+        sendTelegramNotification(`🚀 *Yeni Üyelik!*\n👤 *Kullanıcı Adı:* ${username}\n📞 *Telefon:* ${email || 'Belirtilmedi'}`);
       } catch (e) {}
       showToast('Hesap oluşturuldu! Hoş geldin 🎉', 'success');
       enterApp();
@@ -3342,13 +3352,11 @@ function initAuth() {
     enterApp();
   });
 
-  // Sosyal Giriş Seçenekleri
-  // Sosyal Giriş Seçenekleri
-  const handleSocialLogin = (platform) => {
-    const platformKey = `amok_social_${platform.toLowerCase()}`;
+  const handlePhoneLogin = () => {
+    const platformKey = 'amok_phone_login';
     const savedAccountStr = localStorage.getItem(platformKey);
 
-    const showRegistrationForm = () => {
+    const showPhoneForm = () => {
       const modal = document.createElement('div');
       modal.className = 'custom-modal-overlay';
       modal.id = 'social-login-modal';
@@ -3357,7 +3365,7 @@ function initAuth() {
         <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: 400px; width: 90%;">
           <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
             <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Giriş Yap
+              <span style="font-size: 1.3rem;">📞</span> Telefon ile Giriş Yap / Kayıt Ol
             </h3>
             <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
           </div>
@@ -3365,26 +3373,26 @@ function initAuth() {
           <!-- Screen 1: Giriş Bilgileri -->
           <div id="social-modal-screen-1" class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Giriş işlemini tamamlamak için lütfen bilgilerinizi doldurun:
+              Lütfen adınızı ve soyadınızı ve telefon numaranızı girerek devam edin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
               <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
             </div>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-              <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
-              <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet@example.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+              <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
+              <input type="tel" id="social-phone" class="report-select" placeholder="Örn: +905551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
             </div>
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
-              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Devam Et</button>
+              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Doğrulama Kodu Gönder</button>
             </div>
           </div>
           
           <!-- Screen 2: OTP Doğrulama -->
           <div id="social-modal-screen-2" class="custom-modal-body" style="display: none; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Güvenliğiniz için <strong><span id="otp-target-email"></span></strong> adresine 6 haneli bir doğrulama kodu gönderildi. Lütfen kodu girin:
+              Güvenliğiniz için <strong><span id="otp-target-phone"></span></strong> numaralı telefona 6 haneli bir doğrulama kodu gönderildi. Lütfen kodu girin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; text-align: center;">
               <input type="text" id="social-otp-code" maxlength="6" placeholder="000000" style="width: 150px; margin: 10px auto; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--accent-primary); background: var(--bg-card); color: var(--text-primary); font-family: monospace; font-size: 1.4rem; text-align: center; letter-spacing: 4px; outline: none;" required>
@@ -3404,7 +3412,7 @@ function initAuth() {
 
       const screen1 = document.getElementById('social-modal-screen-1');
       const screen2 = document.getElementById('social-modal-screen-2');
-      const emailTargetSpan = document.getElementById('otp-target-email');
+      const phoneTargetSpan = document.getElementById('otp-target-phone');
       
       let localOtpCode = '';
       let resendTimer = null;
@@ -3437,31 +3445,31 @@ function initAuth() {
         }, 1000);
       };
 
-      const triggerOtp = async (emailAddress) => {
+      const triggerOtp = async (phoneNumber) => {
         startCooldown();
         if (supabaseClient) {
           try {
             showToast('Doğrulama kodu gönderiliyor...', 'info');
             const { error } = await supabaseClient.auth.signInWithOtp({
-              email: emailAddress
+              phone: phoneNumber
             });
             if (error) {
               console.error('Supabase OTP error:', error);
               localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-              console.log(`[LOCAL DEV OTP COOLDOWN FALLBACK] E-posta doğrulama kodu: ${localOtpCode}`);
+              console.log(`[LOCAL DEV OTP COOLDOWN FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
               showToast(`Doğrulama kodu gönderilemedi. Test için kod: ${localOtpCode}`, 'warning');
             } else {
-              showToast('Doğrulama kodu e-postanıza gönderildi!', 'success');
+              showToast('Doğrulama kodu SMS ile telefonunuza gönderildi!', 'success');
             }
           } catch (e) {
             console.error('Supabase OTP exception:', e);
             localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-            console.log(`[LOCAL DEV OTP FALLBACK] E-posta doğrulama kodu: ${localOtpCode}`);
+            console.log(`[LOCAL DEV OTP FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
             showToast(`Bağlantı hatası. Test için kod: ${localOtpCode}`, 'warning');
           }
         } else {
           localOtpCode = Math.floor(100000 + Math.random() * 900000).toString();
-          console.log(`[LOCAL DEV OTP FALLBACK] E-posta doğrulama kodu: ${localOtpCode}`);
+          console.log(`[LOCAL DEV OTP FALLBACK] SMS doğrulama kodu: ${localOtpCode}`);
           showToast(`Yerel Mod: Test doğrulaması için kod konsola yazdırıldı: ${localOtpCode}`, 'success');
         }
       };
@@ -3482,15 +3490,14 @@ function initAuth() {
       });
 
       document.getElementById('btn-resend-otp').addEventListener('click', () => {
-        if (cooldown <= 0) {
-          const email = document.getElementById('social-email').value.trim();
-          triggerOtp(email);
-        }
+        const phone = document.getElementById('social-phone').value.trim();
+        const cleanPhone = phone.replace(/[\s\-()]/g, '');
+        triggerOtp(cleanPhone);
       });
 
       document.getElementById('btn-submit-social-next').addEventListener('click', () => {
         const fullName = document.getElementById('social-fullname').value.trim();
-        const email = document.getElementById('social-email').value.trim();
+        const phone = document.getElementById('social-phone').value.trim();
         
         if (!fullName || fullName.indexOf(' ') === -1) {
           showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
@@ -3519,59 +3526,32 @@ function initAuth() {
           }
         }
         
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailRegex.test(email)) {
-          showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+        // Telefon formatı kontrolü
+        const cleanPhone = phone.replace(/[\s\-()]/g, '');
+        const phoneRegex = /^\+[1-9]\d{9,14}$/;
+        if (!phoneRegex.test(cleanPhone)) {
+          showToast('Lütfen geçerli bir telefon numarası giriniz! Ülke koduyla birlikte "+" işareti içermelidir (örn: +905551234567)', 'error');
           return;
         }
 
-        // Disposable e-posta kontrolü
-        const disposableDomains = [
-          'mailinator.com', '10minutemail.com', 'yopmail.com', 'tempmail.com', 
-          'temp-mail.org', 'guerrillamail.com', 'dispostable.com', 'getairmail.com', 
-          'sharklasers.com', 'guerillamailblock.com', 'guerillamail.net', 
-          'guerillamail.org', 'guerillamail.biz', 'guerillamail.co', 'grr.la', 
-          'pokemail.net', 'duck.com', 'tempmailo.com', 'internets.org', 
-          'maildrop.cc', 'disposable.com', 'tempmail.net'
-        ];
-        const emailDomain = email.split('@')[1]?.toLowerCase();
-        if (disposableDomains.includes(emailDomain)) {
-          showToast('Geçici/Tek kullanımlık e-posta adresleri ile kayıt olunamaz!', 'error');
-          return;
-        }
-
-        // Gibberish e-posta kontrolü
-        const mailbox = email.split('@')[0];
-        const checkGibberish = (str) => {
-          const clean = str.trim().toLowerCase();
-          if (/([a-z0-9])\1\1\1+/.test(clean)) return true;
-          if (clean.length > 4 && !/\d/.test(clean)) {
-            const vowels = clean.match(/[aeıioöuü]/gi);
-            if (!vowels || vowels.length === 0) return true;
-            if (/[bçdfgğhjklmnprsştvyz]{4,}/i.test(clean)) return true;
-          }
-          const keyboardMashes = ['asdf', 'sdfg', 'dfgh', 'fghj', 'ghjk', 'hjkl', 'qwer', 'wert', 'erty', 'rtyu', 'tyui', 'yuio', 'uiop', 'zxcv', 'xcvb', 'cvbn', 'vbnm', 'asfa', 'sfas', 'fasa', 'dfsd', 'fsfs'];
-          for (const mash of keyboardMashes) {
-            if (clean.includes(mash)) return true;
-          }
-          return false;
-        };
-        if (checkGibberish(mailbox)) {
-          showToast('Lütfen geçerli/okunabilir bir e-posta adresi girin!', 'error');
+        const digitsOnly = cleanPhone.replace(/^\+/, '');
+        if (/^(\d)\1+$/.test(digitsOnly)) {
+          showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
           return;
         }
 
         // Screen geçişi
-        emailTargetSpan.textContent = email;
+        phoneTargetSpan.textContent = cleanPhone;
         screen1.style.display = 'none';
         screen2.style.display = 'flex';
         
-        triggerOtp(email);
+        triggerOtp(cleanPhone);
       });
 
       document.getElementById('btn-submit-social-verify').addEventListener('click', () => {
         const fullName = document.getElementById('social-fullname').value.trim();
-        const email = document.getElementById('social-email').value.trim();
+        const phone = document.getElementById('social-phone').value.trim();
+        const cleanPhone = phone.replace(/[\s\-()]/g, '');
         const otpInput = document.getElementById('social-otp-code').value.trim();
 
         if (otpInput.length !== 6 || isNaN(otpInput)) {
@@ -3586,14 +3566,14 @@ function initAuth() {
         const proceed = () => {
           if (resendTimer) clearInterval(resendTimer);
           modal.remove();
-          proceedWithLogin(fullName, email);
+          proceedWithLogin(fullName, cleanPhone);
         };
 
         if (supabaseClient && !localOtpCode) {
           supabaseClient.auth.verifyOtp({
-            email: email,
+            phone: cleanPhone,
             token: otpInput,
-            type: 'email'
+            type: 'sms'
           }).then(({ data, error }) => {
             if (error) {
               console.error('OTP verification failed:', error);
@@ -3601,7 +3581,7 @@ function initAuth() {
               verifyBtn.disabled = false;
               verifyBtn.textContent = 'Doğrula ve Giriş Yap';
             } else {
-              showToast('E-posta başarıyla doğrulandı!', 'success');
+              showToast('Telefon numarası başarıyla doğrulandı!', 'success');
               proceed();
             }
           }).catch(err => {
@@ -3612,7 +3592,7 @@ function initAuth() {
           });
         } else {
           if (otpInput === localOtpCode) {
-            showToast('E-posta başarıyla doğrulandı!', 'success');
+            showToast('Telefon numarası başarıyla doğrulandı!', 'success');
             proceed();
           } else {
             showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
@@ -3620,6 +3600,328 @@ function initAuth() {
             verifyBtn.textContent = 'Doğrula ve Giriş Yap';
           }
         }
+      });
+    };
+
+    const proceedWithLogin = async (fullName, email) => {
+      showToast(`Telefon ile giriş yapılıyor...`, 'success');
+      
+      const cleanUsername = fullName.toLowerCase()
+        .replace(/ı/g, 'i')
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ş/g, 's')
+        .replace(/ö/g, 'o')
+        .replace(/ç/g, 'c')
+        .replace(/[^a-z0-9]/g, '_')
+        .replace(/_+/g, '_');
+      
+      let finalState = { ...state };
+
+      if (supabaseClient) {
+        try {
+          // Telefon (email kolonu) ile kayıtlı kullanıcı var mı kontrol et
+          const { data: profile, error: profileErr } = await supabaseClient
+            .from('profiles')
+            .select('username')
+            .eq('email', email)
+            .maybeSingle();
+
+          if (profileErr) console.error('Phone login profiles check error:', profileErr);
+
+          if (profile) {
+            // Kullanıcı var, verilerini çek
+            const { data: dbState, error: stateErr } = await supabaseClient
+              .from('user_states')
+              .select('*')
+              .eq('username', profile.username)
+              .maybeSingle();
+
+            if (stateErr) console.error('Phone login state load error:', stateErr);
+
+            if (dbState) {
+              finalState = {
+                ...finalState,
+                username: profile.username,
+                email: email,
+                isGuest: false,
+                xp: dbState.xp || 0,
+                streak: dbState.streak || 0,
+                hearts: dbState.hearts || MAX_HEARTS,
+                completedLessons: dbState.completed_lessons || [],
+                avatarColor: dbState.avatar_color || '#E88A9A'
+              };
+              if (dbState.licence_key) {
+                finalState.licenceKey = dbState.licence_key;
+              }
+            } else {
+              finalState.username = profile.username;
+              finalState.email = email;
+              finalState.isGuest = false;
+            }
+          } else {
+            // Profil yok, yeni oluştur
+            let checkUsername = cleanUsername;
+            let counter = 1;
+            let isUnique = false;
+            while (!isUnique) {
+              const { data: existingUser } = await supabaseClient
+                .from('profiles')
+                .select('username')
+                .eq('username', checkUsername)
+                .maybeSingle();
+              if (!existingUser) {
+                isUnique = true;
+              } else {
+                checkUsername = `${cleanUsername}${counter}`;
+                counter++;
+              }
+            }
+
+            const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+            const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+            // Profil ekle
+            const { error: insertProfileErr } = await supabaseClient
+              .from('profiles')
+              .insert({
+                username: checkUsername,
+                email: email,
+                password_hash: null
+              });
+
+            if (insertProfileErr) console.error('Phone login insert profile error:', insertProfileErr);
+
+            // State ekle
+            const { error: insertStateErr } = await supabaseClient
+              .from('user_states')
+              .insert({
+                username: checkUsername,
+                xp: 0,
+                streak: 0,
+                hearts: MAX_HEARTS,
+                completed_lessons: [],
+                avatar_color: randomColor
+              });
+
+            if (insertStateErr) console.error('Phone login insert state error:', insertStateErr);
+
+            finalState.username = checkUsername;
+            finalState.email = email;
+            finalState.isGuest = false;
+            finalState.avatarColor = randomColor;
+            finalState.xp = 0;
+            finalState.streak = 0;
+            finalState.hearts = MAX_HEARTS;
+            finalState.completedLessons = [];
+          }
+
+          // Metadata listesine ekle
+          const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+          metaRegistry[finalState.username] = {
+            username: finalState.username,
+            phone: email
+          };
+          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+        } catch (err) {
+          console.error('Supabase phone login flow error:', err);
+        }
+      } else {
+        // Yerel Veritabanı modu
+        const users = getUsers();
+        const existingLocalUser = Object.entries(users).find(([uname, u]) => u.email && u.email.replace(/[\s\-()]/g, '') === email.replace(/[\s\-()]/g, ''));
+        
+        if (existingLocalUser) {
+          const [uname, u] = existingLocalUser;
+          const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+          const savedState = localStates[uname] || {};
+          finalState = {
+            ...finalState,
+            username: uname,
+            email: email,
+            isGuest: false,
+            xp: savedState.xp || 0,
+            streak: savedState.streak || 0,
+            hearts: savedState.hearts || MAX_HEARTS,
+            completedLessons: savedState.completed_lessons || [],
+            avatarColor: savedState.avatar_color || '#E88A9A'
+          };
+          if (savedState.licence_key) {
+            finalState.licenceKey = savedState.licence_key;
+          }
+        } else {
+          const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+          const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+          
+          let checkUsername = cleanUsername;
+          let counter = 1;
+          while (users[checkUsername]) {
+            checkUsername = `${cleanUsername}_${counter}`;
+            counter++;
+          }
+
+          users[checkUsername] = {
+            username: checkUsername,
+            email: email,
+            password: 'phone-auth-no-password'
+          };
+          localStorage.setItem('amok_users', JSON.stringify(users));
+
+          const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
+          localStates[checkUsername] = {
+            xp: 0,
+            streak: 0,
+            hearts: MAX_HEARTS,
+            completed_lessons: [],
+            avatar_color: randomColor
+          };
+          localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+
+          finalState.username = checkUsername;
+          finalState.email = email;
+          finalState.isGuest = false;
+          finalState.avatarColor = randomColor;
+          finalState.xp = 0;
+          finalState.streak = 0;
+          finalState.hearts = MAX_HEARTS;
+          finalState.completedLessons = [];
+        }
+
+        // Yerel metadata listesine ekle
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        metaRegistry[finalState.username] = {
+          username: finalState.username,
+          phone: email
+        };
+        localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+      }
+
+      state = { ...state, ...finalState };
+      localStorage.setItem(platformKey, JSON.stringify({ fullName: state.username, email }));
+      
+      saveState(true);
+      
+      try {
+        sendTelegramNotification(`📞 *Telefon ile Giriş Yapıldı!*\n👤 *Kullanıcı:* ${state.username}\n📞 *Telefon:* ${email}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
+      } catch (e) {}
+      
+      showToast(`Hoş geldin, ${state.username}! 🎉`, 'success');
+      enterApp();
+    };
+
+    if (savedAccountStr) {
+      try {
+        const savedAccount = JSON.parse(savedAccountStr);
+        const modal = document.createElement('div');
+        modal.className = 'custom-modal-overlay';
+        modal.id = 'social-login-modal';
+        
+        modal.innerHTML = `
+          <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+            <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.3rem;">🔐</span> Telefon ile Giriş Yap
+              </h3>
+              <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+            </div>
+            <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+                Daha önce bu cihazda giriş yaptığınız telefon hesabı bulundu:
+              </p>
+              <div style="padding: 14px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 4px; box-shadow: var(--shadow-sm);">
+                <span style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">${escapeHtml(savedAccount.fullName)}</span>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">📞 ${escapeHtml(savedAccount.email)}</span>
+              </div>
+            </div>
+            <div class="custom-modal-footer" style="display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
+              <button class="btn btn-secondary" id="btn-another-account" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">Farklı Telefon</button>
+              <button class="btn btn-primary" id="btn-continue-social" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Bu Hesapla Devam Et</button>
+            </div>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
+        document.getElementById('btn-another-account').addEventListener('click', () => {
+          modal.remove();
+          showPhoneForm();
+        });
+        document.getElementById('btn-continue-social').addEventListener('click', () => {
+          modal.remove();
+          proceedWithLogin(savedAccount.fullName, savedAccount.email);
+        });
+
+      } catch (e) {
+        console.error('Kayıtlı hesap okuma hatası:', e);
+        showPhoneForm();
+      }
+    } else {
+      showPhoneForm();
+    }
+  };
+
+  const handleSocialLogin = (platform) => {
+    const platformKey = `amok_social_${platform.toLowerCase()}`;
+    const savedAccountStr = localStorage.getItem(platformKey);
+
+    const showSocialMockModal = () => {
+      const modal = document.createElement('div');
+      modal.className = 'custom-modal-overlay';
+      modal.id = 'social-login-modal';
+      
+      modal.innerHTML = `
+        <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: 400px; width: 90%;">
+          <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.3rem;">🔐</span> ${platform} ile Giriş Yap
+            </h3>
+            <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+          </div>
+          
+          <div class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+              Giriş işlemini tamamlamak için lütfen ${platform} hesap bilgilerinizi doldurun:
+            </p>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
+              <input type="text" id="social-fullname" class="report-select" placeholder="Örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="social-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">E-posta Adresiniz</label>
+              <input type="email" id="social-email" class="report-select" placeholder="Örn: ahmet.yilmaz@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color var(--transition-fast);" required>
+            </div>
+          </div>
+          <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+            <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
+            <button class="btn btn-primary" id="btn-submit-social-verify" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Giriş Yap</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
+      document.getElementById('btn-cancel-social').addEventListener('click', () => modal.remove());
+      
+      document.getElementById('btn-submit-social-verify').addEventListener('click', () => {
+        const fullName = document.getElementById('social-fullname').value.trim();
+        const email = document.getElementById('social-email').value.trim();
+        
+        if (!fullName || fullName.indexOf(' ') === -1) {
+          showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+          return;
+        }
+
+        modal.remove();
+        proceedWithLogin(fullName, email);
       });
     };
 
@@ -3640,7 +3942,7 @@ function initAuth() {
 
       if (supabaseClient) {
         try {
-          // E-posta ile kayıtlı kullanıcı var mı kontrol et
+          // Sosyal e-posta ile kayıtlı kullanıcı var mı kontrol et
           const { data: profile, error: profileErr } = await supabaseClient
             .from('profiles')
             .select('username')
@@ -3706,7 +4008,7 @@ function initAuth() {
               .from('profiles')
               .insert({
                 username: checkUsername,
-                email: email,
+                email: email, // e-postayı doğrudan kaydediyoruz
                 password_hash: null
               });
 
@@ -3735,6 +4037,15 @@ function initAuth() {
             finalState.hearts = MAX_HEARTS;
             finalState.completedLessons = [];
           }
+
+          // Metadata listesine ekle
+          const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+          metaRegistry[finalState.username] = {
+            username: finalState.username,
+            email: email
+          };
+          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
         } catch (err) {
           console.error('Supabase social login flow error:', err);
         }
@@ -3798,6 +4109,14 @@ function initAuth() {
           finalState.hearts = MAX_HEARTS;
           finalState.completedLessons = [];
         }
+
+        // Yerel metadata listesine ekle
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        metaRegistry[finalState.username] = {
+          username: finalState.username,
+          email: email
+        };
+        localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
       }
 
       state = { ...state, ...finalState };
@@ -3806,7 +4125,7 @@ function initAuth() {
       saveState(true);
       
       try {
-        sendTelegramNotification(`🌐 *Sosyal Giriş (${platform})!*\n👤 *Kullanıcı:* ${state.username}\n📧 *E-posta:* ${email}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
+        sendTelegramNotification(`🌐 *Sosyal Giriş (${platform})!*\n👤 *Kullanıcı:* ${state.username}\n✉️ *E-posta:* ${email}\n🔥 *Seri:* ${state.streak || 0} Gün\n🏆 *XP:* ${state.xp || 0}`);
       } catch (e) {}
       
       showToast(`Hoş geldin, ${state.username}! 🎉`, 'success');
@@ -3849,7 +4168,7 @@ function initAuth() {
         document.getElementById('btn-close-social-modal').addEventListener('click', () => modal.remove());
         document.getElementById('btn-another-account').addEventListener('click', () => {
           modal.remove();
-          showRegistrationForm();
+          showSocialMockModal();
         });
         document.getElementById('btn-continue-social').addEventListener('click', () => {
           modal.remove();
@@ -3858,12 +4177,19 @@ function initAuth() {
 
       } catch (e) {
         console.error('Kayıtlı hesap okuma hatası:', e);
-        showRegistrationForm();
+        showSocialMockModal();
       }
     } else {
-      showRegistrationForm();
+      showSocialMockModal();
     }
   };
+
+  const btnPhoneLoginEl = document.getElementById('btn-phone-login');
+  if (btnPhoneLoginEl) {
+    btnPhoneLoginEl.addEventListener('click', () => {
+      handlePhoneLogin();
+    });
+  }
 
   document.getElementById('btn-google-login').addEventListener('click', () => {
     handleSocialLogin('Google');
@@ -11334,6 +11660,7 @@ function submitReport(question, errorType, comment) {
   const newReport = {
     id: "rep_" + Date.now(),
     timestamp: new Date().toLocaleString('tr-TR'),
+    createdAt: new Date().toISOString(),
     lessonId: lessonIdStr,
     lessonTitle: lessonTitleStr,
     questionId: question.id,
@@ -12414,10 +12741,15 @@ function init() {
           const lastSeen = p.last_seen_at ? new Date(p.last_seen_at) : null;
           const completedCount = (st.completed_lessons || []).length;
 
+          const rawEmail = p.email || '';
+          const isPhoneAsEmail = rawEmail.startsWith('+');
+          const phoneVal = meta.phone || (isPhoneAsEmail ? rawEmail : '—');
+          const emailVal = meta.email || (isPhoneAsEmail ? '—' : (p.email || '—'));
+
           return {
             username: p.username,
-            email: meta.email || p.email || '—',
-            phone: meta.phone || '—',
+            email: emailVal,
+            phone: phoneVal,
             firstName: meta.firstName || '',
             lastName: meta.lastName || '',
             createdAt: createdAt,
@@ -12571,12 +12903,17 @@ return `
 
             <!-- Sütun 2: İletişim -->
             <div style="display: flex; flex-direction: column; gap: 1px; font-size: 0.74rem; color: var(--text-secondary); min-width: 165px; flex: 1;">
+              ${user.email && user.email !== '—' ? `
               <div style="display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${user.email}">
                 <span style="flex-shrink: 0;">✉️</span> <span>${user.email}</span>
-              </div>
+              </div>` : ''}
               ${user.phone && user.phone !== '—' ? `
-              <div style="display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              <div style="display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${user.phone}">
                 <span style="flex-shrink: 0;">📞</span> <span>${user.phone}</span>
+              </div>` : ''}
+              ${(!user.email || user.email === '—') && (!user.phone || user.phone === '—') ? `
+              <div style="color: var(--text-muted); font-style: italic;">
+                İletişim bilgisi yok
               </div>` : ''}
             </div>
 
@@ -13256,6 +13593,63 @@ metaRegistry[username].licenceKey = licenceKey;
         console.error('Local reports parse error:', err);
       }
 
+      // Build a map of usernames to contact details (email / phone)
+      const userContacts = {};
+      
+      // 1. From local users
+      try {
+        const localUsers = getUsers();
+        Object.keys(localUsers).forEach(uname => {
+          const u = localUsers[uname] || {};
+          userContacts[uname] = {
+            email: u.email || '',
+            phone: ''
+          };
+        });
+      } catch (e) {
+        console.error('Error reading local users for report contacts:', e);
+      }
+
+      // 2. From metadata registry
+      try {
+        const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+        Object.keys(metaRegistry).forEach(uname => {
+          const meta = metaRegistry[uname] || {};
+          if (!userContacts[uname]) {
+            userContacts[uname] = { email: '', phone: '' };
+          }
+          if (meta.email) userContacts[uname].email = meta.email;
+          if (meta.phone) userContacts[uname].phone = meta.phone;
+        });
+      } catch (e) {
+        console.error('Error reading metadata registry for report contacts:', e);
+      }
+
+      // 3. If Supabase is available, query profiles to get latest emails/phones
+      if (supabaseClient) {
+        try {
+          const { data: dbProfiles } = await supabaseClient
+            .from('profiles')
+            .select('username, email');
+          if (dbProfiles) {
+            dbProfiles.forEach(p => {
+              if (!userContacts[p.username]) {
+                userContacts[p.username] = { email: '', phone: '' };
+              }
+              const rawEmail = p.email || '';
+              const isPhone = rawEmail.startsWith('+');
+              if (isPhone) {
+                userContacts[p.username].phone = rawEmail;
+              } else if (rawEmail) {
+                userContacts[p.username].email = rawEmail;
+              }
+            });
+          }
+        } catch (err) {
+          console.error('Error fetching profiles in loadAdminReports:', err);
+        }
+      }
+
       if (supabaseClient) {
         try {
           const { data, error } = await supabaseClient
@@ -13275,7 +13669,8 @@ metaRegistry[username].licenceKey = licenceKey;
               questionType: row.question_type,
               errorType: row.error_type,
               userComment: row.user_comment,
-              timestamp: new Date(row.created_at).toLocaleString('tr-TR')
+              timestamp: new Date(row.created_at).toLocaleString('tr-TR'),
+              createdAt: row.created_at
             }));
 
             // Start with DB reports
@@ -13304,6 +13699,13 @@ metaRegistry[username].licenceKey = licenceKey;
         reports = [...localReports].reverse();
       }
 
+      // Sort merged reports chronologically descending (newest first)
+      reports.sort((a, b) => {
+        const timeA = a.createdAt ? new Date(a.createdAt).getTime() : (a.id && a.id.startsWith('rep_') ? parseInt(a.id.replace('rep_', ''), 10) : 0);
+        const timeB = b.createdAt ? new Date(b.createdAt).getTime() : (b.id && b.id.startsWith('rep_') ? parseInt(b.id.replace('rep_', ''), 10) : 0);
+        return timeB - timeA;
+      });
+
       // Store in cache for exporting
       adminReportsCache = reports;
 
@@ -13316,7 +13718,16 @@ metaRegistry[username].licenceKey = licenceKey;
         return;
       }
 
-      container.innerHTML = reports.map((rep) => `
+      container.innerHTML = reports.map((rep) => {
+        const contact = userContacts[rep.username] || { email: '', phone: '' };
+        const contactText = [];
+        if (contact.email) contactText.push(`✉️ ${contact.email}`);
+        if (contact.phone) contactText.push(`📞 ${contact.phone}`);
+        const contactHtml = contactText.length > 0 
+          ? `<span style="font-size: 0.76rem; color: var(--text-secondary); font-weight: normal; margin-left: 6px; opacity: 0.85;">(${escapeHtml(contactText.join(' / '))})</span>`
+          : '';
+
+        return `
         <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; font-size: 0.88rem; line-height: 1.5; text-align: left; position: relative;">
           <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
             <span style="font-family: var(--font-heading); color: var(--accent-primary); font-size: 0.95rem;">
@@ -13336,13 +13747,14 @@ metaRegistry[username].licenceKey = licenceKey;
             </span>
           </div>
           <div style="background: var(--bg-card); border-left: 4px solid var(--accent-primary); padding: 10px 14px; border-radius: 2px 6px 6px 2px; color: var(--text-primary); font-weight: 500;">
-            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
-              <span>👤</span> ${escapeHtml(rep.username || 'Bilinmeyen Kullanıcı')}
+            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+              <span>👤</span> ${escapeHtml(rep.username || 'Bilinmeyen Kullanıcı')} ${contactHtml}
             </div>
             "${escapeHtml(rep.userComment || 'Açıklama belirtilmedi.')}"
           </div>
         </div>
-      `).join('');
+      `;
+      }).join('');
 
       // Add delete listeners
       container.querySelectorAll('.btn-delete-single-report').forEach(btn => {
