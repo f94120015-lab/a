@@ -5764,6 +5764,8 @@ input {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 520px;
+  max-height: 85vh;
+  max-height: 85dvh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -5823,6 +5825,8 @@ input {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow-y: auto;
+  flex: 1 1 auto;
 }
 
 .grammar-explain-title {
