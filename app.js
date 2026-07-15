@@ -8735,6 +8735,7 @@ function completeReviewSession() {
   // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
   checkReviewBanner();
   showScreen('home-screen');
+  switchTab('lessons');
 }
 
 function completeFormationTour() {
@@ -10577,10 +10578,15 @@ function initEventListeners() {
   // Quiz kapatma
   document.getElementById('quiz-close').addEventListener('click', () => {
     if (confirm('Dersten çıkmak istediğine emin misin? İlerleme kaybedilecek.')) {
+      const wasReview = isReviewMode;
+      isReviewMode = false;
       updateTopBar();
       renderLessonTree();
       // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
       showScreen('home-screen');
+      if (wasReview) {
+        switchTab('lessons');
+      }
     }
   });
 
