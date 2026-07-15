@@ -67,6 +67,14 @@ function getOrCreateDeviceId() {
   return devId;
 }
 
+function getDeviceType() {
+  const ua = (navigator.userAgent || '').toLowerCase();
+  const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua) ||
+                   (navigator.maxTouchPoints && navigator.maxTouchPoints > 2) ||
+                   window.matchMedia("(pointer: coarse)").matches;
+  return isMobile ? 'mobile' : 'pc';
+}
+
 // Basit ama güvenli kriptografik imza üretici
 // E-posta + Telefon + Bitiş Tarihi formatını birleştirerek eşsiz lisans kodu oluşturur.
 function generateLicenceSignature(email, phone, expiryDateStr) {
@@ -3986,17 +3994,7 @@ function initAuth() {
         showToast('Lisans doğrulandı! Giriş yapılıyor...', 'success');
 
         setTimeout(async () => {
-          // Kullanıcının state'ini yükle
-          const userState = localStorage.getItem(`amok_state_${fullName}`);
-          if (userState) {
-            try {
-              state = { ...state, ...JSON.parse(userState) };
-            } catch (e) {
-              console.error('Kullanıcı state yükleme hatası:', e);
-            }
-          }
-
-          // Bilgileri güncelle
+          // Bilgileri ve kullanıcı adını hazırla
           const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
           const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
 
@@ -4013,13 +4011,159 @@ function initAuth() {
           if (cleanUsername.startsWith('_')) cleanUsername = cleanUsername.slice(1);
           if (!cleanUsername) cleanUsername = 'user';
 
-          state.username = cleanUsername;
-          state.email = email;
-          state.isGuest = false;
-          state.licenceKey = licenceKey;
-          if (!state.avatarColor) {
-            state.avatarColor = randomColor;
+          let finalState = { ...state };
+          let resolvedUsername = cleanUsername;
+
+          if (supabaseClient) {
+            try {
+              // E-posta veya telefon ile eşleşen profil olup olmadığını kontrol et
+              const { data: profile, error: profileErr } = await supabaseClient
+                .from('profiles')
+                .select('username, phone, first_name, last_name')
+                .or(`email.eq.${email},phone.eq.${phone}`)
+                .maybeSingle();
+
+              if (profile) {
+                resolvedUsername = profile.username;
+                const { data: dbState, error: stateErr } = await supabaseClient
+                  .from('user_states')
+                  .select('*')
+                  .eq('username', resolvedUsername)
+                  .maybeSingle();
+
+                if (dbState) {
+                  finalState = {
+                    ...finalState,
+                    username: resolvedUsername,
+                    email: email,
+                    phone: profile.phone || phone,
+                    isGuest: false,
+                    xp: dbState.xp || 0,
+                    streak: dbState.streak || 0,
+                    hearts: dbState.hearts || MAX_HEARTS,
+                    completedLessons: dbState.completed_lessons || [],
+                    avatarColor: dbState.avatar_color || randomColor,
+                    licenceKey: licenceKey
+                  };
+                } else {
+                  // Profil var ama user_states yoksa
+                  await supabaseClient
+                    .from('user_states')
+                    .insert({
+                      username: resolvedUsername,
+                      licence_key: licenceKey,
+                      xp: 0,
+                      streak: 0,
+                      hearts: MAX_HEARTS,
+                      completed_lessons: [],
+                      avatar_color: randomColor
+                    });
+
+                  finalState = {
+                    ...finalState,
+                    username: resolvedUsername,
+                    email: email,
+                    phone: profile.phone || phone,
+                    isGuest: false,
+                    xp: 0,
+                    streak: 0,
+                    hearts: MAX_HEARTS,
+                    completedLessons: [],
+                    avatarColor: randomColor,
+                    licenceKey: licenceKey
+                  };
+                }
+              } else {
+                // Eşleşen profil yok, yeni profil ve state oluştur
+                let checkUsername = cleanUsername;
+                let counter = 1;
+                let isUnique = false;
+                while (!isUnique) {
+                  const { data: existingUser } = await supabaseClient
+                    .from('profiles')
+                    .select('username')
+                    .eq('username', checkUsername)
+                    .maybeSingle();
+                  if (!existingUser) {
+                    isUnique = true;
+                  } else {
+                    checkUsername = `${cleanUsername}${counter}`;
+                    counter++;
+                  }
+                }
+                resolvedUsername = checkUsername;
+
+                let firstName = '';
+                let lastName = '';
+                const nameParts = fullName.trim().split(/\s+/);
+                if (nameParts.length > 1) {
+                  lastName = nameParts.pop();
+                  firstName = nameParts.join(' ');
+                } else {
+                  firstName = nameParts[0] || '';
+                }
+
+                await supabaseClient
+                  .from('profiles')
+                  .insert({
+                    username: resolvedUsername,
+                    email: email,
+                    phone: phone,
+                    first_name: firstName,
+                    last_name: lastName,
+                    password_hash: null
+                  });
+
+                await supabaseClient
+                  .from('user_states')
+                  .insert({
+                    username: resolvedUsername,
+                    licence_key: licenceKey,
+                    xp: 0,
+                    streak: 0,
+                    hearts: MAX_HEARTS,
+                    completed_lessons: [],
+                    avatar_color: randomColor
+                  });
+
+                finalState = {
+                  ...finalState,
+                  username: resolvedUsername,
+                  email: email,
+                  phone: phone,
+                  isGuest: false,
+                  xp: 0,
+                  streak: 0,
+                  hearts: MAX_HEARTS,
+                  completedLessons: [],
+                  avatarColor: randomColor,
+                  licenceKey: licenceKey
+                };
+              }
+            } catch (e) {
+              console.error('Supabase licence login check error:', e);
+            }
+          } else {
+            // Local storage fallback
+            const userState = localStorage.getItem(`amok_state_${fullName}`);
+            if (userState) {
+              try {
+                finalState = { ...finalState, ...JSON.parse(userState) };
+              } catch (e) {
+                console.error('Kullanıcı state yükleme hatası:', e);
+              }
+            }
+            finalState.username = cleanUsername;
+            finalState.email = email;
+            finalState.phone = phone;
+            finalState.isGuest = false;
+            finalState.licenceKey = licenceKey;
+            if (!finalState.avatarColor) {
+              finalState.avatarColor = randomColor;
+            }
           }
+
+          state = finalState;
 
           const deviceOk = await validateLicenseDevices();
           if (!deviceOk) {
@@ -18878,6 +19022,7 @@ async function validateLicenseDevices() {
   }
 
   const devId = getOrCreateDeviceId();
+  const currentDeviceType = getDeviceType();
 
   if (supabaseClient) {
     try {
@@ -18895,16 +19040,72 @@ async function validateLicenseDevices() {
       let devicesListStr = (data && data.licence_devices) ? data.licence_devices.trim() : '';
       let devices = devicesListStr ? devicesListStr.split(',').map(d => d.trim()).filter(Boolean) : [];
 
-      if (!devices.includes(devId)) {
-        if (devices.length >= MAX_LICENCE_DEVICES) {
-          showToast(`Lisans cihaz limiti (${MAX_LICENCE_DEVICES}) aşıldı! Bu lisans başka bir cihazda kayıtlıdır.`, "error");
+      let hasCurrentDevice = false;
+      let registeredDevices = [];
+
+      for (const d of devices) {
+        let id = d;
+        let type = '';
+        if (d.includes(':')) {
+          const parts = d.split(':');
+          id = parts[0];
+          type = parts[1];
+        }
+        if (id === devId) {
+          hasCurrentDevice = true;
+          type = currentDeviceType;
+        }
+        registeredDevices.push({ id, type, raw: `${id}:${type}` });
+      }
+
+      // Fill missing types for backward compatibility
+      for (const rd of registeredDevices) {
+        if (!rd.type) {
+          if (registeredDevices.length === 2) {
+            rd.type = currentDeviceType === 'pc' ? 'mobile' : 'pc';
+          } else {
+            rd.type = 'pc';
+          }
+          rd.raw = `${rd.id}:${rd.type}`;
+        }
+      }
+
+      if (!hasCurrentDevice) {
+        const sameTypeDevice = registeredDevices.find(d => d.type === currentDeviceType);
+        if (sameTypeDevice) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir ${currentDeviceType === 'pc' ? 'PC' : 'mobil cihaz'} üzerinde kullanılmaktadır.`, "error");
           state.licenceKey = '';
           saveState();
           updateProfileLicenceUI();
           return false;
-        } else {
-          devices.push(devId);
-          const newDevicesStr = devices.join(',');
+        }
+
+        const pcCount = registeredDevices.filter(d => d.type === 'pc').length;
+        const mobileCount = registeredDevices.filter(d => d.type === 'mobile').length;
+        if (currentDeviceType === 'pc' && pcCount >= 1) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir PC üzerinde kullanılmaktadır.`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        }
+        if (currentDeviceType === 'mobile' && mobileCount >= 1) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir mobil cihaz üzerinde kullanılmaktadır.`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        }
+
+        registeredDevices.push({ id: devId, type: currentDeviceType, raw: `${devId}:${currentDeviceType}` });
+        const newDevicesStr = registeredDevices.map(d => d.raw).join(',');
+        await supabaseClient
+          .from('user_states')
+          .update({ licence_devices: newDevicesStr })
+          .eq('username', state.username);
+      } else {
+        const newDevicesStr = registeredDevices.map(d => d.raw).join(',');
+        if (newDevicesStr !== devicesListStr) {
           await supabaseClient
             .from('user_states')
             .update({ licence_devices: newDevicesStr })
@@ -18921,16 +19122,70 @@ async function validateLicenseDevices() {
       let devicesListStr = userState.licence_devices ? userState.licence_devices.trim() : '';
       let devices = devicesListStr ? devicesListStr.split(',').map(d => d.trim()).filter(Boolean) : [];
 
-      if (!devices.includes(devId)) {
-        if (devices.length >= MAX_LICENCE_DEVICES) {
-          showToast(`Lisans cihaz limiti (${MAX_LICENCE_DEVICES}) aşıldı!`, "error");
+      let hasCurrentDevice = false;
+      let registeredDevices = [];
+
+      for (const d of devices) {
+        let id = d;
+        let type = '';
+        if (d.includes(':')) {
+          const parts = d.split(':');
+          id = parts[0];
+          type = parts[1];
+        }
+        if (id === devId) {
+          hasCurrentDevice = true;
+          type = currentDeviceType;
+        }
+        registeredDevices.push({ id, type, raw: `${id}:${type}` });
+      }
+
+      for (const rd of registeredDevices) {
+        if (!rd.type) {
+          if (registeredDevices.length === 2) {
+            rd.type = currentDeviceType === 'pc' ? 'mobile' : 'pc';
+          } else {
+            rd.type = 'pc';
+          }
+          rd.raw = `${rd.id}:${rd.type}`;
+        }
+      }
+
+      if (!hasCurrentDevice) {
+        const sameTypeDevice = registeredDevices.find(d => d.type === currentDeviceType);
+        if (sameTypeDevice) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir ${currentDeviceType === 'pc' ? 'PC' : 'mobil cihaz'} üzerinde kullanılmaktadır.`, "error");
           state.licenceKey = '';
           saveState();
           updateProfileLicenceUI();
           return false;
-        } else {
-          devices.push(devId);
-          userState.licence_devices = devices.join(',');
+        }
+
+        const pcCount = registeredDevices.filter(d => d.type === 'pc').length;
+        const mobileCount = registeredDevices.filter(d => d.type === 'mobile').length;
+        if (currentDeviceType === 'pc' && pcCount >= 1) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir PC üzerinde kullanılmaktadır.`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        }
+        if (currentDeviceType === 'mobile' && mobileCount >= 1) {
+          showToast(`Lisans limit hatası! Bu lisans zaten başka bir mobil cihaz üzerinde kullanılmaktadır.`, "error");
+          state.licenceKey = '';
+          saveState();
+          updateProfileLicenceUI();
+          return false;
+        }
+
+        registeredDevices.push({ id: devId, type: currentDeviceType, raw: `${devId}:${currentDeviceType}` });
+        userState.licence_devices = registeredDevices.map(d => d.raw).join(',');
+        localStates[state.username] = userState;
+        localStorage.setItem('amok_user_states', JSON.stringify(localStates));
+      } else {
+        const newDevicesStr = registeredDevices.map(d => d.raw).join(',');
+        if (newDevicesStr !== devicesListStr) {
+          userState.licence_devices = newDevicesStr;
           localStates[state.username] = userState;
           localStorage.setItem('amok_user_states', JSON.stringify(localStates));
         }
@@ -18941,6 +19196,7 @@ async function validateLicenseDevices() {
   }
   return true;
 }
+
 
 function hasLicenseOrTrialAccess(targetLessonId = null) {
   if (checkIsLocal() || checkLicence()) {
