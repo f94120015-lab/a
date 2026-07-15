@@ -2420,6 +2420,28 @@ function loadState() {
       localStorage.removeItem(STATE_KEY);
     }
   }
+
+  // Normalize username to prevent spaces vs underscores sync mismatch
+  if (state.username && state.username !== 'Misafir') {
+    const original = state.username;
+    let normalized = original.toLowerCase()
+      .replace(/ı/g, 'i')
+      .replace(/ğ/g, 'g')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ö/g, 'o')
+      .replace(/ç/g, 'c')
+      .replace(/[^a-z0-9]/g, '_')
+      .replace(/_+/g, '_');
+    if (normalized.endsWith('_')) normalized = normalized.slice(0, -1);
+    if (normalized.startsWith('_')) normalized = normalized.slice(1);
+    if (!normalized) normalized = 'user';
+    
+    if (normalized !== original) {
+      state.username = normalized;
+      localStorage.setItem(STATE_KEY, JSON.stringify(state));
+    }
+  }
   // Sync license key from local states if in local fallback mode
   if (!supabaseClient && state.username) {
     try {
@@ -3449,6 +3471,9 @@ function initAuth() {
                 .insert({
                   username: username,
                   email: emailVal,
+                  phone: activeTarget,
+                  first_name: firstName,
+                  last_name: lastName,
                   password_hash: hashed
                 });
 
@@ -3467,6 +3492,11 @@ function initAuth() {
                   licence_key: 'REQUESTED'
                 });
             } else {
+              await supabaseClient
+                .from('profiles')
+                .update({ phone: activeTarget, email: emailVal, first_name: firstName, last_name: lastName })
+                .eq('username', username);
+
               await supabaseClient
                 .from('user_states')
                 .update({ licence_key: 'REQUESTED' })
@@ -3951,7 +3981,20 @@ function initAuth() {
           const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
           const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
 
-          state.username = fullName;
+          let cleanUsername = fullName.toLowerCase()
+            .replace(/ı/g, 'i')
+            .replace(/ğ/g, 'g')
+            .replace(/ü/g, 'u')
+            .replace(/ş/g, 's')
+            .replace(/ö/g, 'o')
+            .replace(/ç/g, 'c')
+            .replace(/[^a-z0-9]/g, '_')
+            .replace(/_+/g, '_');
+          if (cleanUsername.endsWith('_')) cleanUsername = cleanUsername.slice(0, -1);
+          if (cleanUsername.startsWith('_')) cleanUsername = cleanUsername.slice(1);
+          if (!cleanUsername) cleanUsername = 'user';
+
+          state.username = cleanUsername;
           state.email = email;
           state.isGuest = false;
           state.licenceKey = licenceKey;
@@ -12266,7 +12309,7 @@ function init() {
             // Fetch profiles
             const { data: dbProfiles, error: profilesError } = await supabaseClient
               .from('profiles')
-              .select('username, email, created_at, last_seen_at')
+              .select('username, email, phone, first_name, last_name, created_at, last_seen_at')
               .order('created_at', { ascending: false });
 
             if (!profilesError && dbProfiles) {
@@ -12340,15 +12383,15 @@ function init() {
 
           const rawEmail = p.email || '';
           const isPhoneAsEmail = rawEmail.startsWith('+');
-          const phoneVal = meta.phone || (isPhoneAsEmail ? rawEmail : '—');
+          const phoneVal = meta.phone || p.phone || (isPhoneAsEmail ? rawEmail : '—');
           const emailVal = meta.email || (isPhoneAsEmail ? '—' : (p.email || '—'));
 
           return {
             username: p.username,
             email: emailVal,
             phone: phoneVal,
-            firstName: meta.firstName || '',
-            lastName: meta.lastName || '',
+            firstName: meta.firstName || p.first_name || '',
+            lastName: meta.lastName || p.last_name || '',
             createdAt: createdAt,
             lastSeen: lastSeen,
             xp: st.xp || 0,
@@ -12990,7 +13033,16 @@ return `
       }
 
       const email = (user.email && user.email !== '—') ? user.email.trim() : '';
-      const phone = (user.phone && user.phone !== '—') ? user.phone.trim() : '';
+      let phone = (user.phone && user.phone !== '—') ? user.phone.trim() : '';
+      if (phone) {
+        let normalized = phone.replace(/\D/g, '');
+        if (normalized.startsWith('90') && normalized.length === 12) {
+          normalized = normalized.slice(2);
+        } else if (normalized.startsWith('0') && normalized.length === 11) {
+          normalized = normalized.slice(1);
+        }
+        phone = normalized;
+      }
       const fullNameVal = (user.firstName || user.lastName) ? `${user.firstName} ${user.lastName}`.trim() : '';
 
       const emailInput = document.getElementById('admin-licence-email');
@@ -13200,11 +13252,14 @@ return `
       }
     }
 
-    async function saveUserLicenceDirectly(username, licenceKey, email, phone, fullname) {
+    async function saveUserLicenceDirectly(username, licenceKey, email, phone, fullname, xp) {
       // 1. Update local storage user states
       const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
       if (!localStates[username]) localStates[username] = {};
       localStates[username].licence_key = licenceKey;
+      if (xp !== undefined && xp !== null) {
+        localStates[username].xp = xp;
+      }
       localStorage.setItem('amok_user_states', JSON.stringify(localStates));
 
       // 2. Update local storage metadata registry
@@ -13213,6 +13268,9 @@ return `
       if (email) metaRegistry[username].email = email;
       if (phone) metaRegistry[username].phone = phone;
       metaRegistry[username].licenceKey = licenceKey;
+      if (xp !== undefined && xp !== null) {
+        metaRegistry[username].xp = xp;
+      }
       
       if (fullname) {
         const parts = fullname.trim().split(/\s+/);
@@ -13230,6 +13288,9 @@ return `
         state.licenceKey = licenceKey;
         if (email) state.email = email;
         if (phone) state.phone = phone;
+        if (xp !== undefined && xp !== null) {
+          state.xp = xp;
+        }
         if (fullname) {
           const parts = fullname.trim().split(/\s+/);
           state.firstName = parts[0] || '';
@@ -13245,19 +13306,26 @@ return `
 
       // 4. Update Supabase client if configured
       if (supabaseClient) {
+        const updateData = { licence_key: licenceKey };
+        if (xp !== undefined && xp !== null) {
+          updateData.xp = xp;
+        }
         const { error: stateErr } = await supabaseClient
           .from('user_states')
-          .update({ licence_key: licenceKey })
+          .update(updateData)
           .eq('username', username);
 
         if (stateErr) {
           throw new Error(`Kullanıcı istatistik güncelleme hatası: ${stateErr.message}`);
         }
 
-        if (email) {
+        if (email || phone || fullname) {
+          const parts = fullname ? fullname.trim().split(/\s+/) : [];
+          const dbFirstName = parts[0] || '';
+          const dbLastName = parts.slice(1).join(' ') || '';
           const { error: profileErr } = await supabaseClient
             .from('profiles')
-            .update({ email: email })
+            .update({ email: email, phone: phone, first_name: dbFirstName, last_name: dbLastName })
             .eq('username', username);
 
           if (profileErr) {
@@ -13272,9 +13340,102 @@ return `
     const modalCancelBtn = document.getElementById('admin-licence-modal-cancel-btn');
     const modalSaveBtn = document.getElementById('admin-licence-modal-save-btn');
     const modalGenerateBtn = document.getElementById('btn-admin-licence-generate');
+    const modalSendEmailBtn = document.getElementById('btn-admin-licence-send-email');
 
     if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeAdminLicenceModal);
     if (modalCancelBtn) modalCancelBtn.addEventListener('click', closeAdminLicenceModal);
+
+    // Fallback email draft modal bindings
+    const draftModal = document.getElementById('admin-email-draft-modal');
+    const closeDraftBtn = document.getElementById('admin-email-draft-close-btn');
+    const okDraftBtn = document.getElementById('admin-email-draft-ok-btn');
+    
+    const closeDraftModal = () => {
+      if (draftModal) draftModal.classList.remove('show');
+    };
+    if (closeDraftBtn) closeDraftBtn.addEventListener('click', closeDraftModal);
+    if (okDraftBtn) okDraftBtn.addEventListener('click', closeDraftModal);
+
+    const copyToClipboard = (elementId, label) => {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.select();
+        el.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(el.value).then(() => {
+          showToast(`${label} kopyalandı! 📋`, 'success');
+        }).catch(() => {
+          showToast('Kopyalama başarısız oldu!', 'error');
+        });
+      }
+    };
+
+    const copyBtnTo = document.getElementById('btn-copy-draft-to');
+    if (copyBtnTo) copyBtnTo.addEventListener('click', () => copyToClipboard('email-draft-to', 'E-posta adresi'));
+
+    const copyBtnSubject = document.getElementById('btn-copy-draft-subject');
+    if (copyBtnSubject) copyBtnSubject.addEventListener('click', () => copyToClipboard('email-draft-subject', 'E-posta konusu'));
+
+    const copyBtnBody = document.getElementById('btn-copy-draft-body');
+    if (copyBtnBody) copyBtnBody.addEventListener('click', () => copyToClipboard('email-draft-body', 'E-posta içeriği'));
+
+    if (modalSendEmailBtn) {
+      modalSendEmailBtn.addEventListener('click', () => {
+        const email = document.getElementById('admin-licence-email').value.trim();
+        const phone = document.getElementById('admin-licence-phone').value.trim();
+        const fullname = document.getElementById('admin-licence-fullname').value.trim();
+        const licenceKey = document.getElementById('admin-licence-key-input').value.trim();
+
+        if (!fullname) {
+          showToast('Lütfen kullanıcının ad ve soyad bilgisini girin!', 'error');
+          return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+          return;
+        }
+        if (!licenceKey) {
+          showToast('Gönderilecek lisans anahtarı bulunamadı! Lütfen önce bir lisans anahtarı üretin.', 'error');
+          return;
+        }
+
+        const subjectText = "amok İngilizce Öğrenme Uygulaması Davetiye Kodunuz";
+        const bodyText = `Merhaba ${fullname},\n\n` +
+          `amok uygulaması için davetiye kodunuz başarıyla tanımlanmıştır!\n\n` +
+          `Giriş Bilgileriniz:\n` +
+          `- Ad Soyad: ${fullname}\n` +
+          `- E-posta: ${email}\n` +
+          `- Telefon: ${phone}\n` +
+          `- Davetiye Kodu: ${licenceKey}\n\n` +
+          `Uygulamaya girerken karşılama ekranındaki "🔑 Davetiye Kodum Var (Giriş Yap)" butonuna basarak yukarıdaki bilgilerinizle giriş yapabilir ve hemen kullanmaya başlayabilirsiniz.\n\n` +
+          `Keyifli öğrenmeler dileriz!\n` +
+          `amok Ekibi`;
+
+        // Fill fallback copy modal fields
+        document.getElementById('email-draft-to').value = email;
+        document.getElementById('email-draft-subject').value = subjectText;
+        document.getElementById('email-draft-body').value = bodyText;
+
+        // Set Webmail Links
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+        const outlookUrl = `https://outlook.live.com/default/?rru=compose&to=${encodeURIComponent(email)}&subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+        
+        const gmailLink = document.getElementById('link-open-gmail');
+        if (gmailLink) gmailLink.href = gmailUrl;
+        
+        const outlookLink = document.getElementById('link-open-outlook');
+        if (outlookLink) outlookLink.href = outlookUrl;
+
+        // Show fallback modal
+        if (draftModal) draftModal.classList.add('show');
+
+        // Execute mailto redirection
+        const subject = encodeURIComponent(subjectText);
+        const body = encodeURIComponent(bodyText);
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        showToast('E-posta istemcisi açılıyor ve kopyalama taslağı hazırlandı! ✉️', 'success');
+      });
+    }
     if (modalGenerateBtn) {
       modalGenerateBtn.addEventListener('click', () => {
         const email = document.getElementById('admin-licence-email').value.trim();
@@ -13325,6 +13486,8 @@ return `
         const phone = document.getElementById('admin-licence-phone').value.trim();
         const fullname = document.getElementById('admin-licence-fullname').value.trim();
         const licenceKey = document.getElementById('admin-licence-key-input').value.trim();
+        const xpInput = document.getElementById('admin-user-xp-input');
+        const xp = xpInput ? (parseInt(xpInput.value, 10) || 0) : undefined;
 
         if (!fullname) {
           showToast('Lütfen kullanıcının ad ve soyad bilgisini girin!', 'error');
@@ -13335,7 +13498,15 @@ return `
           showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
           return;
         }
-        if (!phone || phone.length !== 10) {
+
+        let normalizedPhone = phone.replace(/\D/g, '');
+        if (normalizedPhone.startsWith('90') && normalizedPhone.length === 12) {
+          normalizedPhone = normalizedPhone.slice(2);
+        } else if (normalizedPhone.startsWith('0') && normalizedPhone.length === 11) {
+          normalizedPhone = normalizedPhone.slice(1);
+        }
+
+        if (!normalizedPhone || normalizedPhone.length !== 10) {
           showToast('Lütfen geçerli 10 haneli telefon numarasını girin!', 'error');
           return;
         }
@@ -13349,7 +13520,7 @@ return `
         modalSaveBtn.textContent = 'Kaydediliyor...';
 
         try {
-          await saveUserLicenceDirectly(username, licenceKey, email, phone, fullname);
+          await saveUserLicenceDirectly(username, licenceKey, email, normalizedPhone, fullname, xp);
           showToast('Kullanıcı lisansı başarıyla güncellendi! 💾', 'success');
           
           // Remove local request if exists in local storage list
