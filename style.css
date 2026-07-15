@@ -3,9 +3,9 @@
    Yumuşak pastel tonlar, modern tipografi, responsive tasarım
    ============================================================ *//* ─── CSS Değişkenleri (Açık Tema – Pastel Palet) ───────── */
 :root {
-  /* Arka planlar – sıcak krem ve leylak esinleri */
-  --bg-primary: #FAF8F6;
-  --bg-secondary: #F3EFF2;
+  /* Arka planlar – sıcak krem ve leylak esinleri (gözü yormayan yumuşak fildişi/parşömen) */
+  --bg-primary: #F5F2EB;
+  --bg-secondary: #ECE9DF;
   --bg-card: #ffffff;
   --bg-card-hover: #F8F5FA;
 
