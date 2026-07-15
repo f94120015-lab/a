@@ -10038,16 +10038,37 @@ function congratulateFriend(username) {
 // ============================================================
 // LİDERLİK TABLOSU
 // ============================================================
+function getUserCurrentProgress(completedLessons) {
+  if (typeof units === 'undefined' || !units || !Array.isArray(units)) {
+    return '1. Bölüm, 1. Ders';
+  }
+  const completed = completedLessons || [];
+  
+  for (const unit of units) {
+    if (!unit.lessons || !Array.isArray(unit.lessons)) continue;
+    for (let i = 0; i < unit.lessons.length; i++) {
+      const lessonId = unit.lessons[i];
+      if (!completed.includes(lessonId)) {
+        const lessonIndex = i + 1;
+        const unitTitleMatch = unit.title ? unit.title.match(/^\d+\.\s*Bölüm/i) : null;
+        const unitLabel = unitTitleMatch ? unitTitleMatch[0] : `${unit.id}. Bölüm`;
+        return `${unitLabel}, ${lessonIndex}. Ders`;
+      }
+    }
+  }
+  return 'Tamamlandı 🎓';
+}
+
 async function renderLeaderboard() {
   const list = document.getElementById('leaderboard-list');
   if (!list) return;
 
   const baseCompetitors = [
-    { name: "Ahmet Yılmaz", xp: 450, avatarColor: '#E88A9A' },
-    { name: "Elif Demir", xp: 320, avatarColor: '#B4A7D6' },
-    { name: "Can Kaya", xp: 210, avatarColor: '#8BC6A0' },
-    { name: "Sarah Connor", xp: 180, avatarColor: '#E8CB6E' },
-    { name: "Melis Şen", xp: 90, avatarColor: '#8B7EC8' }
+    { name: "Ahmet Yılmaz", xp: 450, avatarColor: '#E88A9A', completedLessons: [1, 2, 3] },
+    { name: "Elif Demir", xp: 320, avatarColor: '#B4A7D6', completedLessons: [1, 2] },
+    { name: "Can Kaya", xp: 210, avatarColor: '#8BC6A0', completedLessons: [1] },
+    { name: "Sarah Connor", xp: 180, avatarColor: '#E8CB6E', completedLessons: [] },
+    { name: "Melis Şen", xp: 90, avatarColor: '#8B7EC8', completedLessons: [] }
   ];
 
   let competitors = [];
@@ -10056,7 +10077,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, profiles (first_name, last_name)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -10080,7 +10101,8 @@ async function renderLeaderboard() {
             name: isUser ? `${displayName} (Sen)` : displayName,
             xp: item.xp,
             isUser: isUser,
-            avatarColor: item.avatar_color || '#B4A7D6'
+            avatarColor: item.avatar_color || '#B4A7D6',
+            completedLessons: item.completed_lessons || []
           };
         });
 
@@ -10091,7 +10113,8 @@ async function renderLeaderboard() {
             name: `${displayName} (Sen)`,
             xp: state.xp,
             isUser: true,
-            avatarColor: state.avatarColor || '#B4A7D6'
+            avatarColor: state.avatarColor || '#B4A7D6',
+            completedLessons: state.completedLessons || []
           });
         }
       }
@@ -10103,7 +10126,7 @@ async function renderLeaderboard() {
   if (competitors.length === 0) {
     competitors = [
       ...baseCompetitors,
-      { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true, avatarColor: state.avatarColor || '#B4A7D6' }
+      { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true, avatarColor: state.avatarColor || '#B4A7D6', completedLessons: state.completedLessons || [] }
     ];
   }
 
@@ -10122,7 +10145,12 @@ async function renderLeaderboard() {
             <div style="width: 24px; height: 24px; border-radius: 50%; background: ${c.avatarColor || '#B4A7D6'}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px;">
               ${(c.name || 'U').charAt(0).toUpperCase()}
             </div>
-            <span>${escapeHtml(c.name)}</span>
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-weight: 600;">${escapeHtml(c.name)}</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">
+                📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}
+              </span>
+            </div>
           </div>
         </td>
         <td>${c.xp} Puan</td>
