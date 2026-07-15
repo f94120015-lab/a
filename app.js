@@ -4179,6 +4179,12 @@ function updateTopBar() {
   const loginTopbarBtn = document.getElementById('btn-login-topbar');
   const userMenu = document.querySelector('.user-menu');
 
+  const isGuestUser = !state.username || state.isGuest || state.username === 'Misafir';
+  const leaderboardTabBtn = document.querySelector('.sidebar-menu button[data-tab="leaderboard"]');
+  if (leaderboardTabBtn) {
+    leaderboardTabBtn.style.display = isGuestUser ? 'none' : 'flex';
+  }
+
   if (state.isGuest) {
     if (loginTopbarBtn) loginTopbarBtn.style.display = 'block';
     if (userMenu) userMenu.style.display = 'none';
@@ -8785,6 +8791,12 @@ function toggleTheme() {
 // ============================================================
 function switchTab(tabId) {
   if (!tabId) return;
+  
+  const isGuestUser = !state.username || state.isGuest || state.username === 'Misafir';
+  if (tabId === 'leaderboard' && isGuestUser) {
+    switchTab('lessons');
+    return;
+  }
   
   localStorage.setItem('amok_last_tab', tabId);
 
