@@ -11839,13 +11839,12 @@ function checkReviewBanner() {
   const banner = document.getElementById('review-banner');
   const btn = document.getElementById('btn-start-review');
   if (banner && btn) {
-    banner.style.display = 'flex';
     const count = (state.wrongQuestions && state.wrongQuestions.length) || 0;
-    const label = btn.querySelector('.nav-tab-label');
-    if (label) {
-      label.textContent = `Hızlı Tekrar (${count} Soru)`;
-    } else {
+    if (count > 0) {
+      banner.style.display = 'flex';
       btn.textContent = `Hızlı Tekrar (${count} Soru)`;
+    } else {
+      banner.style.display = 'none';
     }
   }
 }
