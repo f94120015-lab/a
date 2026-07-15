@@ -11785,7 +11785,12 @@ function checkReviewBanner() {
   if (banner && btn) {
     banner.style.display = 'flex';
     const count = (state.wrongQuestions && state.wrongQuestions.length) || 0;
-    btn.textContent = `Hızlı Tekrar (${count} Soru)`;
+    const label = btn.querySelector('.nav-tab-label');
+    if (label) {
+      label.textContent = `Hızlı Tekrar (${count} Soru)`;
+    } else {
+      btn.textContent = `Hızlı Tekrar (${count} Soru)`;
+    }
   }
 }
 
