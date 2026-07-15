@@ -42,9 +42,14 @@
         <p class="auth-subtitle">İngilizceyi eğlenerek öğren</p>
       </div>
 
-      <!-- Telefon ile Giriş Yap / Kayıt Ol Butonu -->
+      <!-- Giriş İçin Davetiye İste Butonu -->
       <button class="btn btn-primary btn-full" id="btn-phone-login" style="margin-top: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: var(--radius-md); font-family: var(--font-heading); font-size: 0.95rem; background: var(--accent-primary); border: none; cursor: pointer; color: white; width: 100%;">
-        📞 Telefon ile Giriş Yap / Kayıt Ol
+        📩 Giriş İçin Davetiye İste
+      </button>
+
+      <!-- Davetiye Kodum Var Butonu -->
+      <button class="btn btn-secondary btn-full" id="btn-activate-licence-login" style="margin-top: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: var(--radius-md); font-family: var(--font-heading); font-size: 0.95rem; background: transparent; border: 1px solid var(--border-color); cursor: pointer; color: var(--text-primary); width: 100%; transition: all 0.2s;" onmouseover="this.style.background='rgba(0,0,0,0.02)'" onmouseout="this.style.background='transparent'">
+        🔑 Davetiye Kodum Var (Giriş Yap)
       </button>
 
 
@@ -133,6 +138,30 @@
             <span class="nav-tab-icon">🔑</span>
             <span class="nav-tab-label">Admin</span>
           </button>
+          
+          <!-- Admin Sub-tabs Menu -->
+          <div id="admin-subtabs-menu" class="dev-only-tab" style="display: none; flex-direction: column; gap: 4px; padding-left: 12px; margin-top: 4px; width: 100%; box-sizing: border-box;">
+            <button class="nav-tab admin-nav-item active" data-admin-section="users" style="padding: 8px 10px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1rem; width: 18px; text-align: center;">👥</span>
+              <span style="font-size: 0.78rem; font-weight: 600;">Kullanıcılar</span>
+            </button>
+            <button class="nav-tab admin-nav-item" data-admin-section="licensing" style="padding: 8px 10px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1rem; width: 18px; text-align: center;">🔑</span>
+              <span style="font-size: 0.78rem; font-weight: 600;">Lisanslar</span>
+            </button>
+            <button class="nav-tab admin-nav-item" data-admin-section="supabase" style="padding: 8px 10px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1rem; width: 18px; text-align: center;">⚡</span>
+              <span style="font-size: 0.78rem; font-weight: 600;">Supabase</span>
+            </button>
+            <button class="nav-tab admin-nav-item" data-admin-section="reports" style="padding: 8px 10px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1rem; width: 18px; text-align: center;">⚠️</span>
+              <span style="font-size: 0.78rem; font-weight: 600;">Hata Bildirimleri</span>
+            </button>
+            <button class="nav-tab admin-nav-item" data-admin-section="whitelist" style="padding: 8px 10px; font-size: 0.8rem; display: flex; align-items: center; gap: 8px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1rem; width: 18px; text-align: center;">🛡️</span>
+              <span style="font-size: 0.78rem; font-weight: 600;">Test Beyaz Listesi</span>
+            </button>
+          </div>
           
           
         </nav>
@@ -739,27 +768,7 @@
           <!-- Sidebar + Main Content Layout -->
           <div class="admin-layout" style="display: flex; gap: 20px; min-height: 500px;">
 
-            <!-- Left Sidebar Navigation -->
-            <nav class="admin-sidebar" style="width: 195px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px;">
-              <button class="admin-nav-item active" data-admin-section="users" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">👥</span>
-                <span>Kullanıcılar</span>
-              </button>
-              <button class="admin-nav-item" data-admin-section="licensing" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">🔑</span>
-                <span>Lisans Anahtarları</span>
-              </button>
-              <button class="admin-nav-item" data-admin-section="supabase" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">⚡</span>
-                <span>Supabase</span>
-              </button>
-              <button class="admin-nav-item" data-admin-section="reports" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s; text-align: left; font-size: 0.82rem; font-weight: 600; width: 100%;">
-                <span style="font-size: 1.2rem; flex-shrink: 0; width: 20px; text-align: center;">⚠️</span>
-                <span>Hata Bildirimleri</span>
-              </button>
 
-              <!-- Son Düzenlemeler Kutusu -->
-            </nav>
 
             <!-- Right Main Content Area -->
             <div class="admin-main-content" style="flex: 1; min-width: 0;">
@@ -859,17 +868,18 @@
                     </div>
                   </div>
 
-                  <!-- Gelen Lisans Talepleri -->
+                  <!-- Gelen Lisans ve Davetiye Talepleri -->
                   <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; text-align: left; border-top: 1px solid var(--border-color); padding-top: 20px;">
                     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
-                      <span>📩</span> Gelen Lisans Talepleri
+                      <span>📩</span> Gelen Lisans ve Davetiye Talepleri
                     </h4>
                     <div style="overflow-x: auto; background: var(--bg-body); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                       <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
                         <thead>
                           <tr style="border-bottom: 1px solid var(--border-color); background: rgba(0,0,0,0.05);">
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Kullanıcı</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">İletişim Bilgileri</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Ad Soyad</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">Telefon</th>
+                            <th style="padding: 10px; text-align: left; font-weight: 700;">E-posta</th>
                             <th style="padding: 10px; text-align: left; font-weight: 700;">Talep Tarihi</th>
                             <th style="padding: 10px; text-align: center; font-weight: 700;">İşlem</th>
                           </tr>
@@ -1013,9 +1023,6 @@
                     <button id="btn-admin-add-user-toggle" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
                       <span>➕</span> Kullanıcı Ekle
                     </button>
-                    <button id="btn-admin-export-users-excel" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: #107c41; border-color: #107c41; color: #fff;">
-                      <span>📥</span> Excel Dışa Aktar
-                    </button>
                   </div>
 
                   <!-- Users List -->
@@ -1026,6 +1033,56 @@
                       <p style="margin: 4px 0 0 0; font-size: 0.8rem;">Supabase bağlantısı kontrol ediliyor.</p>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <!-- Panel 5: Test Beyaz Listesi Yönetimi -->
+              <div class="admin-panel" id="admin-panel-whitelist" style="display: none; flex-direction: column; gap: 20px;">
+                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <span style="font-size: 1.5rem;">🛡️</span>
+                      <div style="text-align: left;">
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Test Beyaz Listesi (Whitelist)</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Supabase SMS/OTP hatası olsa dahi Master OTP (571461) ile giriş yapabilecek test kullanıcılarını yönetin.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Add to Whitelist Form -->
+                  <div style="display: flex; gap: 12px; align-items: flex-end; background: var(--bg-body); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
+                      <label for="admin-whitelist-name-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
+                      <input type="text" id="admin-whitelist-name-input" placeholder="örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                    </div>
+                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
+                      <label for="admin-whitelist-phone-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+                      <input type="text" id="admin-whitelist-phone-input" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                    </div>
+                    <div style="flex: 1; min-width: 180px; display: flex; flex-direction: column; gap: 6px;">
+                      <label for="admin-whitelist-email-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">E-posta</label>
+                      <input type="text" id="admin-whitelist-email-input" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                    </div>
+                    <button id="btn-admin-add-whitelist" class="btn btn-primary" style="padding: 10px 20px; font-weight: 700; border-radius: var(--radius-md); height: 38px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-primary); border: none; cursor: pointer; color: white;">Ekle</button>
+                  </div>
+
+                  <!-- Whitelist List -->
+                  <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+                      <thead>
+                        <tr style="background: rgba(0, 0, 0, 0.02); border-bottom: 1px solid var(--border-color);">
+                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">Ad Soyad</th>
+                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">Telefon</th>
+                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">E-posta</th>
+                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600; text-align: right; width: 100px;">İşlemler</th>
+                        </tr>
+                      </thead>
+                      <tbody id="admin-whitelist-table-body">
+                        <!-- Dynamic whitelist items will be rendered here -->
+                      </tbody>
+                    </table>
+                  </div>
+
                 </div>
               </div>
 

@@ -17,8 +17,45 @@ const MAX_LICENCE_DEVICES = 2;
 // ============================================================
 // BEYAZ LİSTE (WHITELIST) YAPILANDIRMASI
 // ============================================================
-// Sadece bu listedeki e-posta veya telefon numaralarına sahip kullanıcılar uygulamaya girebilir.
-const APPROVED_USERS_WHITELIST = [];
+let APPROVED_USERS_WHITELIST = [
+  { name: "Test Kullanıcısı", phone: "5551234567", email: "test@gmail.com" },
+  { name: "Admin Test", phone: "5559876543", email: "admin@gmail.com" }
+];
+try {
+  const savedWhitelist = localStorage.getItem('amok_approved_users_whitelist');
+  if (savedWhitelist) {
+    APPROVED_USERS_WHITELIST = JSON.parse(savedWhitelist);
+  } else {
+    localStorage.setItem('amok_approved_users_whitelist', JSON.stringify(APPROVED_USERS_WHITELIST));
+  }
+} catch (e) {
+  console.error('Failed to load whitelist from localStorage:', e);
+}
+
+const isUserWhitelisted = (phone, email) => {
+  if (!APPROVED_USERS_WHITELIST || APPROVED_USERS_WHITELIST.length === 0) return false;
+  const clean = (val) => String(val || '').trim().toLowerCase().replace(/[\s\-()]/g, '');
+  const cPhone = clean(phone);
+  const cEmail = clean(email);
+  
+  let digitsPhone = cPhone.replace(/\D/g, '');
+  if (digitsPhone.startsWith('90')) digitsPhone = digitsPhone.slice(2);
+  else if (digitsPhone.startsWith('0')) digitsPhone = digitsPhone.slice(1);
+
+  for (const item of APPROVED_USERS_WHITELIST) {
+    const cItem = clean(item);
+    if (cItem === cEmail) return true;
+    if (cItem === cPhone) return true;
+    
+    let digitsItem = cItem.replace(/\D/g, '');
+    if (digitsItem.startsWith('90')) digitsItem = digitsItem.slice(2);
+    else if (digitsItem.startsWith('0')) digitsItem = digitsItem.slice(1);
+    
+    if (digitsItem && digitsItem === digitsPhone) return true;
+  }
+  return false;
+};
+
 
 
 function getOrCreateDeviceId() {
@@ -117,8 +154,8 @@ function verifyLicenceKey(licenceKey, email = '', phone = '') {
 // ============================================================
 // Vercel deployment'ında ortak veritabanını kullanmak için aşağıdaki alanları doldurabilir
 // veya Admin Panelinden kaydedebilirsiniz. Admin panelinden kaydedilenler yerelde saklanır.
-const SUPABASE_URL = ""; 
-const SUPABASE_ANON_KEY = ""; 
+const SUPABASE_URL = "https://hpbjmkimkbjzjwapbief.supabase.co"; 
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhwYmpta2lta2Jqemp3YXBiaWVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NDQ4MjIsImV4cCI6MjA5ODUyMDgyMn0.dHsQ2MbuAmzTbw2BICrM2UEAhXx7IZt92KdN40iJO8g"; 
 
 const getSupabaseConfig = () => {
   const url = SUPABASE_URL || localStorage.getItem('amok_supabase_url') || '';
@@ -2992,9 +3029,7 @@ function checkAchievements() {
 // ============================================================
 function initAuth() {
   const handlePhoneLogin = () => {
-    const platformKey = 'amok_phone_login';
-    const savedAccountStr = localStorage.getItem(platformKey);
-
+    // No saved account continuation - always show the fresh form
     const showPhoneForm = () => {
       const modal = document.createElement('div');
       modal.className = 'custom-modal-overlay';
@@ -3002,17 +3037,14 @@ function initAuth() {
       
       modal.innerHTML = `
         <div class="custom-modal" style="animation: popoverFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-width: 400px; width: 90%;">
-          <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
-            <h3 style="font-family: var(--font-heading); font-size: 1.2rem; margin: 0; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 1.3rem;">📞</span> Telefon ile Giriş Yap / Kayıt Ol
-            </h3>
+          <div class="custom-modal-header" style="display: flex; justify-content: flex-end; align-items: center; padding-bottom: 12px; margin-bottom: 20px; border-bottom: 1px solid transparent;">
             <button class="modal-close-btn" id="btn-close-social-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
           </div>
           
           <!-- Screen 1: Giriş Bilgileri -->
           <div id="social-modal-screen-1" class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Lütfen adınızı, soyadınızı, e-posta adresinizi ve telefon numaranızı girerek devam edin:
+              Lütfen adınızı, soyadınızı, e-posta adresinizi ve telefon numaranızı girerek giriş davetiyesi isteyin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
@@ -3034,14 +3066,14 @@ function initAuth() {
             
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
-              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Doğrulama Kodu Gönder</button>
+              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Davetiye İste / Giriş Yap</button>
             </div>
           </div>
           
           <!-- Screen 2: OTP Doğrulama -->
           <div id="social-modal-screen-2" class="custom-modal-body" style="display: none; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Güvenliğiniz için <strong><span id="otp-target-label"></span></strong> numaralı telefona 6 haneli bir doğrulama kodu gönderildi. Lütfen kodu girin:
+              Güvenliğiniz için <strong><span id="otp-target-label"></span></strong> adresine 6 haneli bir davetiye doğrulama kodu gönderildi. Lütfen kodu girin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; text-align: center;">
               <input type="text" id="social-otp-code" maxlength="6" placeholder="000000" style="width: 150px; margin: 10px auto; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--accent-primary); background: var(--bg-card); color: var(--text-primary); font-family: monospace; font-size: 1.4rem; text-align: center; letter-spacing: 4px; outline: none;" required>
@@ -3051,7 +3083,7 @@ function initAuth() {
             </div>
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-back-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">Geri</button>
-              <button class="btn btn-primary" id="btn-submit-social-verify" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Doğrula ve Giriş Yap</button>
+              <button class="btn btn-primary" id="btn-submit-social-verify" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Kodu Doğrula ve Giriş Yap</button>
             </div>
           </div>
         </div>
@@ -3064,6 +3096,18 @@ function initAuth() {
       const otpTargetLabel = document.getElementById('otp-target-label');
       const phoneInput = document.getElementById('social-phone');
 
+      if (phoneInput) {
+        phoneInput.addEventListener('input', () => {
+          let val = phoneInput.value.replace(/\D/g, '');
+          if (val.startsWith('0')) {
+            val = val.slice(1);
+          }
+          if (val.length > 10) {
+            val = val.slice(0, 10);
+          }
+          phoneInput.value = val;
+        });
+      }
       
       let currentLocalOtp = null;
       let activeMode = 'phone';
@@ -3099,13 +3143,12 @@ function initAuth() {
         }, 1000);
       };
 
-      const PRODUCTION_TESTERS_WHITELIST = APPROVED_USERS_WHITELIST;
-      const PRODUCTION_TESTERS_MASTER_OTP = "192837"; // Test kullanıcılarının gireceği ortak şifre (Master OTP)
+      const PRODUCTION_TESTERS_MASTER_OTP = "571461"; // Test kullanıcılarının gireceği ortak şifre (Master OTP)
 
       const triggerOtp = async (target, email) => {
         startCooldown();
         const isLocal = checkIsLocal();
-        const isWhitelisted = PRODUCTION_TESTERS_WHITELIST.includes(target) || PRODUCTION_TESTERS_WHITELIST.includes(email);
+        const isWhitelisted = isUserWhitelisted(target, email);
 
         if (isLocal) {
           currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
@@ -3117,8 +3160,14 @@ function initAuth() {
           currentLocalOtp = null;
         }
 
+        if (isWhitelisted) {
+          showToast('Test kullanıcısı algılandı. Master OTP (571461) ile giriş yapabilirsiniz.', 'success', 15000);
+        }
+
         if (supabaseClient) {
-          showToast('Doğrulama kodları gönderiliyor...', 'info');
+          if (!isWhitelisted) {
+            showToast('Doğrulama kodları gönderiliyor...', 'info');
+          }
           
           let phoneSuccess = false;
           let emailSuccess = false;
@@ -3145,28 +3194,28 @@ function initAuth() {
             console.error('Supabase Email OTP exception:', e);
           }
 
-          if (phoneSuccess && emailSuccess) {
-            showToast('Doğrulama kodu hem telefonunuza hem de e-postanıza gönderildi!', 'success');
-          } else if (phoneSuccess) {
-            showToast('Doğrulama kodu telefonunuza gönderildi (E-posta başarısız)!', 'warning');
-          } else if (emailSuccess) {
-            showToast('Doğrulama kodu e-postanıza gönderildi (SMS başarısız)!', 'warning');
-          } else {
-            if (isLocal) {
-              showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
-            } else if (isWhitelisted) {
-              showToast('⚠️ Supabase doğrulama sunucusu yanıt vermiyor. Lütfen size iletilen test kodunu girin.', 'warning', 15000);
+          if (!isWhitelisted) {
+            if (phoneSuccess && emailSuccess) {
+              showToast('Doğrulama kodu hem telefonunuza hem de e-postanıza gönderildi!', 'success');
+            } else if (phoneSuccess) {
+              showToast('Doğrulama kodu telefonunuza gönderildi (E-posta başarısız)!', 'warning');
+            } else if (emailSuccess) {
+              showToast('Doğrulama kodu e-postanıza gönderildi (SMS başarısız)!', 'warning');
             } else {
-              showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
+              if (isLocal) {
+                showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+              } else {
+                showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
+              }
             }
           }
         } else {
-          if (isLocal) {
-            showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
-          } else if (isWhitelisted) {
-            showToast('⚠️ Supabase yapılandırılmamış. Lütfen size iletilen test kodunu girin.', 'warning', 15000);
-          } else {
-            showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
+          if (!isWhitelisted) {
+            if (isLocal) {
+              showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
+            } else {
+              showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
+            }
           }
         }
       };
@@ -3190,50 +3239,11 @@ function initAuth() {
         triggerOtp(activeTarget, activeEmail);
       });
 
-      document.getElementById('btn-submit-social-next').addEventListener('click', () => {
+      document.getElementById('btn-submit-social-next').addEventListener('click', async () => {
         const fullName = document.getElementById('social-fullname').value.trim();
         const emailVal = document.getElementById('social-email').value.trim();
         const phoneVal = phoneInput.value.trim();
         
-        if (!fullName || fullName.indexOf(' ') === -1) {
-          showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
-          return;
-        }
-        
-        const nameParts = fullName.split(/\s+/);
-        if (nameParts.length < 2) {
-          showToast('Lütfen hem adınızı hem de soyadınızı girin!', 'error');
-          return;
-        }
-
-        const nameRegex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/;
-        const consonantsRegex = /[bcdfghjklmnprstvyzxqBCDFGHJKLMNPRSTVYZXQçÇğĞıİöÖşŞüÜ]{4,}/;
-        
-        for (const part of nameParts) {
-          if (part.length < 2) {
-            showToast('Ad ve soyadın her biri en az 2 karakter olmalıdır!', 'error');
-            return;
-          }
-          if (!nameRegex.test(part)) {
-            showToast('Ad ve soyad sadece harflerden oluşmalıdır!', 'error');
-            return;
-          }
-          if (consonantsRegex.test(part)) {
-            showToast('Lütfen geçerli bir ad ve soyad giriniz (geçersiz harf dizilimi)!', 'error');
-            return;
-          }
-          if (/(.)\1\1/.test(part.toLowerCase())) {
-            showToast('Lütfen gerçek bir isim giriniz (ardışık tekrarlayan harfler içeriyor)!', 'error');
-            return;
-          }
-        }
-        
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailVal || !emailRegex.test(emailVal)) {
-          showToast('Lütfen geçerli bir e-posta adresi giriniz!', 'error');
-          return;
-        }
-
         let cleanPhone = phoneVal.replace(/[\s\-()]/g, '');
         if (cleanPhone.startsWith('+90')) {
           cleanPhone = cleanPhone.slice(3);
@@ -3242,32 +3252,285 @@ function initAuth() {
         } else if (cleanPhone.startsWith('0')) {
           cleanPhone = cleanPhone.slice(1);
         }
-        
-        if (!/^[5]\d{9}$/.test(cleanPhone)) {
-          showToast('Lütfen geçerli bir telefon numarası giriniz (örn: 5551234567)! Numaralar 10 haneli olmalı ve 5 ile başlamalıdır.', 'error');
-          return;
-        }
 
-        const digitsOnly = cleanPhone;
-        if (/^(\d)\1+$/.test(digitsOnly)) {
-          showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
-          return;
-        }
-        
-        if (digitsOnly.includes('12345') || digitsOnly.includes('54321') || digitsOnly.includes('23456') || digitsOnly.includes('65432') || digitsOnly.includes('34567') || digitsOnly.includes('76543')) {
-          showToast('Sallama/geçersiz bir telefon numarası girdiniz! Lütfen gerçek numaranızı girin.', 'error');
-          return;
+        const isWhitelisted = isUserWhitelisted(cleanPhone, emailVal);
+
+        if (!isWhitelisted) {
+          if (!fullName || fullName.indexOf(' ') === -1) {
+            showToast('Lütfen adınızı ve soyadınızı aralarında boşluk bırakarak yazın!', 'error');
+            return;
+          }
+          
+          const nameParts = fullName.split(/\s+/);
+          if (nameParts.length < 2) {
+            showToast('Lütfen hem adınızı hem de soyadınızı girin!', 'error');
+            return;
+          }
+
+          const nameRegex = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/;
+          const consonantsRegex = /[bcdfghjklmnprstvyzxqBCDFGHJKLMNPRSTVYZXQçÇğĞıİöÖşŞüÜ]{4,}/;
+          
+          for (const part of nameParts) {
+            if (part.length < 2) {
+              showToast('Ad ve soyadın her biri en az 2 karakter olmalıdır!', 'error');
+              return;
+            }
+            if (!nameRegex.test(part)) {
+              showToast('Ad ve soyad sadece harflerden oluşmalıdır!', 'error');
+              return;
+            }
+            if (consonantsRegex.test(part)) {
+              showToast('Lütfen geçerli bir ad ve soyad giriniz (geçersiz harf dizilimi)!', 'error');
+              return;
+            }
+            if (/(.)\1\1/.test(part.toLowerCase())) {
+              showToast('Lütfen gerçek bir isim giriniz (ardışık tekrarlayan harfler içeriyor)!', 'error');
+              return;
+            }
+          }
+          
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailVal || !emailRegex.test(emailVal)) {
+            showToast('Lütfen geçerli bir e-posta adresi giriniz!', 'error');
+            return;
+          }
+
+          if (!/^[5]\d{9}$/.test(cleanPhone)) {
+            showToast('Lütfen geçerli bir telefon numarası giriniz (örn: 5551234567)! Numaralar 10 haneli olmalı ve 5 ile başlamalıdır.', 'error');
+            return;
+          }
+
+          const digitsOnly = cleanPhone;
+          if (/^(\d)\1+$/.test(digitsOnly)) {
+            showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
+            return;
+          }
+          
+          if (digitsOnly.includes('12345') || digitsOnly.includes('54321') || digitsOnly.includes('23456') || digitsOnly.includes('65432') || digitsOnly.includes('34567') || digitsOnly.includes('76543')) {
+            showToast('Sallama/geçersiz bir telefon numarası girdiniz! Lütfen gerçek numaranızı girin.', 'error');
+            return;
+          }
+        } else {
+          // Whitelisted validation: relaxed
+          if (!fullName) {
+            showToast('Lütfen adınızı girin!', 'error');
+            return;
+          }
+          if (!emailVal) {
+            showToast('Lütfen e-posta adresinizi girin!', 'error');
+            return;
+          }
+          if (!cleanPhone) {
+            showToast('Lütfen telefon numaranızı girin!', 'error');
+            return;
+          }
         }
         
         activeTarget = '+90' + cleanPhone;
         activeEmail = emailVal;
         activeMode = 'phone';
 
-        otpTargetLabel.textContent = activeTarget;
-        screen1.style.display = 'none';
-        screen2.style.display = 'flex';
+        // 1. Save request to local storage amok_licence_requests so it is immediately visible in local Admin panel
+        try {
+          const localReqsStored = localStorage.getItem('amok_licence_requests') || '[]';
+          const localReqs = JSON.parse(localReqsStored);
+          const alreadyExists = localReqs.some(r => r.email === emailVal || r.phone === activeTarget);
+          if (!alreadyExists) {
+            localReqs.push({
+              username: emailVal.split('@')[0],
+              name: fullName,
+              email: emailVal,
+              phone: activeTarget,
+              createdAt: new Date().toISOString()
+            });
+            localStorage.setItem('amok_licence_requests', JSON.stringify(localReqs));
+          }
+        } catch (localSaveErr) {
+          console.error("Error saving request locally:", localSaveErr);
+        }
+
+        // 2. Trigger email notification to admin & copy to user
+        try {
+          sendLicenceRequestEmail(emailVal.split('@')[0], fullName, emailVal, activeTarget);
+        } catch (emailErr) {
+          console.error("Error triggering license request email:", emailErr);
+        }
         
-        triggerOtp(activeTarget, activeEmail);
+        // 3. Try auto pre-register/update in database with 'REQUESTED' license state
+        try {
+          const nameParts = fullName.split(/\s+/);
+          const firstName = nameParts[0] || '';
+          const lastName = nameParts.slice(1).join(' ') || '';
+          
+          let baseUsername = fullName.toLowerCase()
+            .replace(/ı/g, 'i')
+            .replace(/ğ/g, 'g')
+            .replace(/ü/g, 'u')
+            .replace(/ş/g, 's')
+            .replace(/ö/g, 'o')
+            .replace(/ç/g, 'c')
+            .replace(/[^a-z0-9]/g, '_')
+            .replace(/_+/g, '_');
+          if (baseUsername.endsWith('_')) baseUsername = baseUsername.slice(0, -1);
+          if (baseUsername.startsWith('_')) baseUsername = baseUsername.slice(1);
+          if (!baseUsername) baseUsername = 'user';
+
+          let username = baseUsername;
+          let exists = false;
+          let counter = 1;
+
+          if (supabaseClient) {
+            const { data: existingProfileByEmail } = await supabaseClient
+              .from('profiles')
+              .select('username')
+              .eq('email', emailVal)
+              .maybeSingle();
+            
+            if (existingProfileByEmail) {
+              username = existingProfileByEmail.username;
+              exists = true;
+            } else {
+              let collision = true;
+              while (collision) {
+                const { data: dbUser } = await supabaseClient
+                  .from('profiles')
+                  .select('username')
+                  .eq('username', username)
+                  .maybeSingle();
+                if (!dbUser) {
+                  collision = false;
+                } else {
+                  username = `${baseUsername}_${counter}`;
+                  counter++;
+                }
+              }
+            }
+          } else {
+            const users = getUsers();
+            const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+            const foundUser = Object.keys(metaRegistry).find(uname => {
+              const m = metaRegistry[uname];
+              return m.email === emailVal || m.phone === activeTarget;
+            });
+
+            if (foundUser) {
+              username = foundUser;
+              exists = true;
+            } else {
+              let collision = true;
+              while (collision) {
+                if (!users[username]) {
+                  collision = false;
+                } else {
+                  username = `${baseUsername}_${counter}`;
+                  counter++;
+                }
+              }
+            }
+          }
+
+          // Save metadata
+          const metaRegistry = JSON.parse(localStorage.getItem('amok_user_metadata') || '{}');
+          metaRegistry[username] = {
+            firstName: firstName,
+            lastName: lastName,
+            email: emailVal,
+            phone: activeTarget,
+            licenceKey: 'REQUESTED'
+          };
+          localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
+          if (supabaseClient) {
+            if (!exists) {
+              const defaultPassword = 'amok123456';
+              const hashed = await hashPassword(defaultPassword);
+              await supabaseClient
+                .from('profiles')
+                .insert({
+                  username: username,
+                  email: emailVal,
+                  password_hash: hashed
+                });
+
+              const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+              const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+              await supabaseClient
+                .from('user_states')
+                .insert({
+                  username: username,
+                  xp: 0,
+                  streak: 0,
+                  hearts: 5,
+                  completed_lessons: [],
+                  avatar_color: randomColor,
+                  licence_key: 'REQUESTED'
+                });
+            } else {
+              await supabaseClient
+                .from('user_states')
+                .update({ licence_key: 'REQUESTED' })
+                .eq('username', username);
+            }
+          } else {
+            const users = getUsers();
+            if (!users[username]) {
+              const defaultPassword = 'amok123456';
+              await saveUser(username, defaultPassword);
+
+              const initialAvatarColors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+              const randomColor = initialAvatarColors[Math.floor(Math.random() * initialAvatarColors.length)];
+
+              const localStates = localStorage.getItem('amok_user_states') || '{}';
+              const parsedLocalStates = JSON.parse(localStates);
+              parsedLocalStates[username] = {
+                xp: 0,
+                streak: 0,
+                hearts: 5,
+                completed_lessons: [],
+                avatar_color: randomColor,
+                licence_key: 'REQUESTED'
+              };
+              localStorage.setItem('amok_user_states', JSON.stringify(parsedLocalStates));
+            } else {
+              const localStates = localStorage.getItem('amok_user_states') || '{}';
+              const parsedLocalStates = JSON.parse(localStates);
+              if (parsedLocalStates[username]) {
+                parsedLocalStates[username].licence_key = 'REQUESTED';
+                localStorage.setItem('amok_user_states', JSON.stringify(parsedLocalStates));
+              }
+            }
+          }
+        } catch (e) {
+          console.warn("Database pre-registration skipped or failed:", e);
+        }
+
+        if (isWhitelisted) {
+          otpTargetLabel.textContent = activeTarget;
+          screen1.style.display = 'none';
+          screen2.style.display = 'flex';
+          triggerOtp(activeTarget, activeEmail);
+        } else {
+          // Render success screen inside the modal
+          screen1.style.display = 'none';
+          const modalContent = document.querySelector('.custom-modal');
+          if (modalContent) {
+            modalContent.innerHTML = `
+              <div style="text-align: center; display: flex; flex-direction: column; gap: 16px; padding: 24px 16px;">
+                <span style="font-size: 3rem; animation: popoverFadeIn 0.5s ease;">🎉</span>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin: 0; font-weight: 700;">Talebiniz Alındı!</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+                  Davetiye talebiniz başarıyla alınmıştır. İnceleme sonrasında giriş davetiyeniz ve kodunuz en kısa sürede tarafınıza ulaştırılacaktır.
+                </p>
+                <button class="btn btn-primary" id="btn-success-close" style="margin-top: 12px; padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; background: var(--accent-primary); border: none; color: white; width: 100%; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Tamam</button>
+              </div>
+            `;
+            document.getElementById('btn-success-close').addEventListener('click', () => {
+              if (resendTimer) clearInterval(resendTimer);
+              modal.remove();
+            });
+          }
+        }
       });
 
       document.getElementById('btn-submit-social-verify').addEventListener('click', () => {
@@ -3291,10 +3554,16 @@ function initAuth() {
 
         // Eğer girilen kod local test veya master test koduysa doğrudan kabul et
         const isLocal = checkIsLocal();
-        const isWhitelisted = PRODUCTION_TESTERS_WHITELIST.includes(activeTarget) || PRODUCTION_TESTERS_WHITELIST.includes(activeEmail);
+        const isWhitelisted = isUserWhitelisted(activeTarget, activeEmail);
         
-        if ((isLocal || isWhitelisted) && currentLocalOtp && otpInput === currentLocalOtp) {
-          showToast(isLocal ? 'Test modunda doğrulama başarılı! 🎉' : 'Test kullanıcısı doğrulaması başarılı! 🎉', 'success');
+        if (isWhitelisted && otpInput === "571461") {
+          showToast('Test kullanıcısı doğrulaması başarılı! 🎉', 'success');
+          proceed();
+          return;
+        }
+
+        if (isLocal && currentLocalOtp && otpInput === currentLocalOtp) {
+          showToast('Test modunda doğrulama başarılı! 🎉', 'success');
           proceed();
           return;
         }
@@ -3329,23 +3598,23 @@ function initAuth() {
                   console.error('OTP verification failed for both SMS and Email:', { smsErr: error, emailErr });
                   showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
                   verifyBtn.disabled = false;
-                  verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+                  verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
                 }
               }).catch(err => {
                 showToast('Doğrulama sırasında bir hata oluştu!', 'error');
                 verifyBtn.disabled = false;
-                verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+                verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
               });
             }
           }).catch(err => {
             showToast('Doğrulama sırasında bir hata oluştu!', 'error');
             verifyBtn.disabled = false;
-            verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+            verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
           });
         } else {
           showToast('Girdiğiniz kod hatalı!', 'error');
           verifyBtn.disabled = false;
-          verifyBtn.textContent = 'Doğrula ve Giriş Yap';
+          verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
         }
       });
     };
@@ -3539,7 +3808,7 @@ function initAuth() {
       }
 
       state = { ...state, ...finalState };
-      localStorage.setItem(platformKey, JSON.stringify({ fullName: state.username, email }));
+      localStorage.setItem('amok_phone_login', JSON.stringify({ fullName: state.username, email }));
       
       saveState(true);
       
@@ -3613,6 +3882,20 @@ function initAuth() {
     `;
 
     document.body.appendChild(modal);
+
+    const licenceLoginPhone = document.getElementById('licence-login-phone');
+    if (licenceLoginPhone) {
+      licenceLoginPhone.addEventListener('input', () => {
+        let val = licenceLoginPhone.value.replace(/\D/g, '');
+        if (val.startsWith('0')) {
+          val = val.slice(1);
+        }
+        if (val.length > 10) {
+          val = val.slice(0, 10);
+        }
+        licenceLoginPhone.value = val;
+      });
+    }
 
     document.getElementById('btn-close-licence-modal').addEventListener('click', () => modal.remove());
     document.getElementById('btn-cancel-licence-login').addEventListener('click', () => modal.remove());
@@ -8443,6 +8726,16 @@ function switchTab(tabId) {
   document.querySelectorAll('.nav-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.tab === tabId);
   });
+  
+  const subtabsMenu = document.getElementById('admin-subtabs-menu');
+  if (subtabsMenu) {
+    if (tabId === 'admin') {
+      subtabsMenu.style.display = 'flex';
+    } else {
+      subtabsMenu.style.display = 'none';
+    }
+  }
+
   document.querySelectorAll('.tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `tab-content-${tabId}`);
   });
@@ -11486,6 +11779,18 @@ function init() {
      const licenceLastNameInput = document.getElementById('licence-owner-last-name');
      const licenceEmailInput = document.getElementById('licence-owner-email');
      const licencePhoneInput = document.getElementById('licence-owner-phone');
+     if (licencePhoneInput) {
+       licencePhoneInput.addEventListener('input', () => {
+         let val = licencePhoneInput.value.replace(/\D/g, '');
+         if (val.startsWith('0')) {
+           val = val.slice(1);
+         }
+         if (val.length > 10) {
+           val = val.slice(0, 10);
+         }
+         licencePhoneInput.value = val;
+       });
+     }
      const licenceDurationSelect = document.getElementById('licence-duration');
      const generateLicenceBtn = document.getElementById('btn-admin-generate-key');
      const licenceTableBody = document.getElementById('licence-keys-table-body');
@@ -12272,6 +12577,97 @@ return `
           }
         });
       });
+
+      // Render Gelen Lisans ve Davetiye Talepleri
+      const requestsTableBody = document.getElementById('licence-requests-table-body');
+      if (requestsTableBody) {
+        const dbRequests = adminUsersCache.filter(u => u.licenceKey === 'REQUESTED');
+        
+        // Load from local storage
+        const localReqsStored = localStorage.getItem('amok_licence_requests');
+        const localRequests = localReqsStored ? JSON.parse(localReqsStored) : [];
+        
+        // Merge them, avoiding duplicates by email/phone
+        const mergedRequests = [...dbRequests];
+        localRequests.forEach(lr => {
+          const phoneClean = lr.phone ? lr.phone.replace(/[\s\-()]/g, '') : '';
+          const alreadyInDb = mergedRequests.some(u => {
+            const uPhoneClean = u.phone ? u.phone.replace(/[\s\-()]/g, '') : '';
+            return (u.email && u.email !== '—' && u.email === lr.email) || (uPhoneClean && uPhoneClean === phoneClean);
+          });
+          if (!alreadyInDb) {
+            mergedRequests.push({
+              username: lr.username || lr.email.split('@')[0],
+              firstName: lr.name ? lr.name.split(' ')[0] : '',
+              lastName: lr.name ? lr.name.split(' ').slice(1).join(' ') : '',
+              email: lr.email,
+              phone: lr.phone,
+              createdAt: lr.createdAt ? new Date(lr.createdAt) : new Date(),
+              licenceKey: 'REQUESTED'
+            });
+          }
+        });
+
+        if (mergedRequests.length === 0) {
+          requestsTableBody.innerHTML = `
+            <tr>
+              <td colspan="5" style="padding: 20px; text-align: center; color: var(--text-secondary);">Henüz gelen bir lisans ve davetiye talebi yok.</td>
+            </tr>`;
+        } else {
+          requestsTableBody.innerHTML = mergedRequests.map((user, idx) => {
+            const displayName = (user.firstName || user.lastName)
+              ? `${user.firstName} ${user.lastName}`.trim()
+              : user.username;
+            const createdText = user.createdAt
+              ? user.createdAt.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' })
+              : '—';
+            
+            return `
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 10px; text-align: left; font-weight: bold; color: var(--text-primary);">${displayName}</td>
+                <td style="padding: 10px; text-align: left; font-family: monospace; color: var(--text-secondary);">${user.phone || '—'}</td>
+                <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${user.email || '—'}</td>
+                <td style="padding: 10px; text-align: left; color: var(--text-secondary);">${createdText}</td>
+                <td style="padding: 10px; text-align: center; white-space: nowrap;">
+                  <button class="btn btn-primary btn-admin-approve-request" data-username="${user.username}" style="padding: 4px 8px; font-size: 0.75rem; background: var(--accent-primary, #8B7EC8); color: #fff; border: 1px solid var(--accent-primary, #8B7EC8); border-radius: 4px; cursor: pointer; margin-right: 6px;">Lisans Tanımla</button>
+                  <button class="btn btn-secondary btn-admin-reject-request" data-username="${user.username}" style="padding: 4px 8px; font-size: 0.75rem; background: #ff3b30; color: #fff; border: 1px solid #ff3b30; border-radius: 4px; cursor: pointer;">Reddet</button>
+                </td>
+              </tr>`;
+          }).join('');
+
+          // Add approve/reject event listeners
+          requestsTableBody.querySelectorAll('.btn-admin-approve-request').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const username = btn.dataset.username;
+              const userObj = mergedRequests.find(u => u.username === username);
+              
+              // Clear from local storage requests list
+              if (userObj) {
+                let localReqs = JSON.parse(localStorage.getItem('amok_licence_requests') || '[]');
+                localReqs = localReqs.filter(r => r.username !== username && r.email !== userObj.email);
+                localStorage.setItem('amok_licence_requests', JSON.stringify(localReqs));
+                openAdminLicenceModal(userObj);
+              }
+            });
+          });
+
+          requestsTableBody.querySelectorAll('.btn-admin-reject-request').forEach(btn => {
+            btn.addEventListener('click', async () => {
+              const username = btn.dataset.username;
+              const userObj = mergedRequests.find(u => u.username === username);
+              
+              // Clear from local storage requests list
+              let localReqs = JSON.parse(localStorage.getItem('amok_licence_requests') || '[]');
+              localReqs = localReqs.filter(r => r.username !== username && (userObj ? r.email !== userObj.email : true));
+              localStorage.setItem('amok_licence_requests', JSON.stringify(localReqs));
+              
+              if (confirm(`${username} kullanıcısının lisans talebini reddetmek istediğinize emin misiniz?`)) {
+                await deleteUserLicence(username);
+              }
+            });
+          });
+        }
+      }
     }
 
     function formatTimeAgo(date) {
@@ -12560,7 +12956,10 @@ return `
       document.getElementById('admin-licence-current-key').textContent = keyText;
 
       const devicesText = user.licenceDevices ? `Cihazlar: ${user.licenceDevices}` : 'Cihazlar: Yok';
-      document.getElementById('admin-licence-current-devices').textContent = devicesText;
+      const devicesEl = document.getElementById('admin-licence-current-devices');
+      if (devicesEl) {
+        devicesEl.textContent = devicesText;
+      }
 
       const resetDevicesBtn = document.getElementById('btn-admin-reset-devices');
       if (resetDevicesBtn) {
@@ -12590,9 +12989,113 @@ return `
         });
       }
 
-      document.getElementById('admin-licence-email').value = (user.email && user.email !== '—') ? user.email : '';
-      document.getElementById('admin-licence-phone').value = (user.phone && user.phone !== '—') ? user.phone : '';
-      document.getElementById('admin-licence-key-input').value = user.licenceKey || '';
+      const email = (user.email && user.email !== '—') ? user.email.trim() : '';
+      const phone = (user.phone && user.phone !== '—') ? user.phone.trim() : '';
+      const fullNameVal = (user.firstName || user.lastName) ? `${user.firstName} ${user.lastName}`.trim() : '';
+
+      const emailInput = document.getElementById('admin-licence-email');
+      const phoneInput = document.getElementById('admin-licence-phone');
+      const durationSelect = document.getElementById('admin-licence-duration');
+      const keyInput = document.getElementById('admin-licence-key-input');
+
+      emailInput.value = email;
+      phoneInput.value = phone;
+
+      const fullNameInput = document.getElementById('admin-licence-fullname');
+      if (fullNameInput) {
+        fullNameInput.value = fullNameVal;
+      }
+      
+      const xpInput = document.getElementById('admin-user-xp-input');
+      if (xpInput) {
+        xpInput.value = user.xp || 0;
+      }
+
+      const autoUpdateKey = () => {
+        const emailVal = emailInput.value.trim();
+        const phoneVal = phoneInput.value.trim();
+        const durationDays = parseInt(durationSelect.value, 10) || 90;
+
+        if (emailVal && phoneVal) {
+          const expDate = new Date();
+          expDate.setDate(expDate.getDate() + durationDays);
+          const yyyy = expDate.getFullYear();
+          const mm = String(expDate.getMonth() + 1).padStart(2, '0');
+          const dd = String(expDate.getDate()).padStart(2, '0');
+          const expiryStr = `${yyyy}${mm}${dd}`;
+
+          let eHash = 0;
+          const cleanEmail = emailVal.toLowerCase();
+          for (let i = 0; i < cleanEmail.length; i++) {
+            eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+            eHash = eHash & eHash;
+          }
+          const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+
+          let pHash = 0;
+          const cleanPhone = phoneVal.replace(/\D/g, '');
+          for (let i = 0; i < cleanPhone.length; i++) {
+            pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+            pHash = pHash & pHash;
+          }
+          const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+
+          const signature = generateLicenceSignature(emailVal, phoneVal, expiryStr);
+          keyInput.value = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
+        } else {
+          keyInput.value = '';
+        }
+      };
+
+      // Set initial key value
+      let keyToFill = user.licenceKey || '';
+      if (!keyToFill || keyToFill === 'REQUESTED' || !keyToFill.startsWith('AMOK')) {
+        if (email && phone) {
+          const durationDays = parseInt(durationSelect.value, 10) || 90;
+          const expDate = new Date();
+          expDate.setDate(expDate.getDate() + durationDays);
+          const yyyy = expDate.getFullYear();
+          const mm = String(expDate.getMonth() + 1).padStart(2, '0');
+          const dd = String(expDate.getDate()).padStart(2, '0');
+          const expiryStr = `${yyyy}${mm}${dd}`;
+
+          let eHash = 0;
+          const cleanEmail = email.toLowerCase();
+          for (let i = 0; i < cleanEmail.length; i++) {
+            eHash = ((eHash << 5) - eHash) + cleanEmail.charCodeAt(i);
+            eHash = eHash & eHash;
+          }
+          const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
+
+          let pHash = 0;
+          const cleanPhone = phone.replace(/\D/g, '');
+          for (let i = 0; i < cleanPhone.length; i++) {
+            pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
+            pHash = pHash & pHash;
+          }
+          const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
+
+          const signature = generateLicenceSignature(email, phone, expiryStr);
+          keyToFill = `AMOK-${hexEmail}-${hexPhone}-${expiryStr}-${signature}`;
+        }
+      }
+      keyInput.value = keyToFill;
+
+      // Bind input events to update the key live as the admin edits the fields
+      emailInput.oninput = autoUpdateKey;
+      durationSelect.onchange = autoUpdateKey;
+      
+      phoneInput.oninput = () => {
+        let val = phoneInput.value.replace(/\D/g, '');
+        if (val.startsWith('0')) {
+          val = val.slice(1);
+        }
+        if (val.length > 10) {
+          val = val.slice(0, 10);
+        }
+        phoneInput.value = val;
+        autoUpdateKey();
+      };
 
       modal.classList.add('show');
     }
@@ -12697,7 +13200,7 @@ return `
       }
     }
 
-    async function saveUserLicenceDirectly(username, licenceKey, email, phone) {
+    async function saveUserLicenceDirectly(username, licenceKey, email, phone, fullname) {
       // 1. Update local storage user states
       const localStates = JSON.parse(localStorage.getItem('amok_user_states') || '{}');
       if (!localStates[username]) localStates[username] = {};
@@ -12709,8 +13212,15 @@ return `
       if (!metaRegistry[username]) metaRegistry[username] = {};
       if (email) metaRegistry[username].email = email;
       if (phone) metaRegistry[username].phone = phone;
-metaRegistry[username].licenceKey = licenceKey;
+      metaRegistry[username].licenceKey = licenceKey;
+      
+      if (fullname) {
+        const parts = fullname.trim().split(/\s+/);
+        metaRegistry[username].firstName = parts[0] || '';
+        metaRegistry[username].lastName = parts.slice(1).join(' ') || '';
+      }
       localStorage.setItem('amok_user_metadata', JSON.stringify(metaRegistry));
+
       if (licenceKey && typeof addRecentChange === 'function') {
         addRecentChange(`Lisans Güncellendi: @${username}`, `Anahtar: ${licenceKey.substring(0, 14)}...`, 'element', '#btn-admin');
       }
@@ -12720,6 +13230,11 @@ metaRegistry[username].licenceKey = licenceKey;
         state.licenceKey = licenceKey;
         if (email) state.email = email;
         if (phone) state.phone = phone;
+        if (fullname) {
+          const parts = fullname.trim().split(/\s+/);
+          state.firstName = parts[0] || '';
+          state.lastName = parts.slice(1).join(' ') || '';
+        }
         saveState();
         if (typeof updateProfileLicenceUI === 'function') {
           try {
@@ -12764,7 +13279,7 @@ metaRegistry[username].licenceKey = licenceKey;
       modalGenerateBtn.addEventListener('click', () => {
         const email = document.getElementById('admin-licence-email').value.trim();
         const phone = document.getElementById('admin-licence-phone').value.trim();
-        const durationDays = parseInt(document.getElementById('admin-licence-duration').value, 10);
+        const durationDays = parseInt(document.getElementById('admin-licence-duration').value, 10) || 90;
 
         if (!email || !phone) {
           showToast('Lisans üretmek için alıcı e-posta ve telefon bilgileri girilmelidir!', 'error');
@@ -12808,15 +13323,45 @@ metaRegistry[username].licenceKey = licenceKey;
         const username = document.getElementById('admin-licence-username').value;
         const email = document.getElementById('admin-licence-email').value.trim();
         const phone = document.getElementById('admin-licence-phone').value.trim();
+        const fullname = document.getElementById('admin-licence-fullname').value.trim();
         const licenceKey = document.getElementById('admin-licence-key-input').value.trim();
+
+        if (!fullname) {
+          showToast('Lütfen kullanıcının ad ve soyad bilgisini girin!', 'error');
+          return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          showToast('Lütfen geçerli bir e-posta adresi girin!', 'error');
+          return;
+        }
+        if (!phone || phone.length !== 10) {
+          showToast('Lütfen geçerli 10 haneli telefon numarasını girin!', 'error');
+          return;
+        }
+        if (!licenceKey) {
+          showToast('Lisans anahtarı boş olamaz! Lütfen bir lisans anahtarı üretin veya girin.', 'error');
+          return;
+        }
 
         modalSaveBtn.disabled = true;
         const originalText = modalSaveBtn.textContent;
         modalSaveBtn.textContent = 'Kaydediliyor...';
 
         try {
-          await saveUserLicenceDirectly(username, licenceKey, email, phone);
+          await saveUserLicenceDirectly(username, licenceKey, email, phone, fullname);
           showToast('Kullanıcı lisansı başarıyla güncellendi! 💾', 'success');
+          
+          // Remove local request if exists in local storage list
+          try {
+            const localReqsStored = localStorage.getItem('amok_licence_requests') || '[]';
+            let localReqs = JSON.parse(localReqsStored);
+            localReqs = localReqs.filter(r => r.username !== username && r.email !== email);
+            localStorage.setItem('amok_licence_requests', JSON.stringify(localReqs));
+          } catch (localClearErr) {
+            console.error(localClearErr);
+          }
+
           closeAdminLicenceModal();
           await loadAdminUsers();
         } catch (err) {
@@ -13176,16 +13721,20 @@ metaRegistry[username].licenceKey = licenceKey;
     // Sidebar navigation logic for admin section panels
     document.querySelectorAll('.admin-nav-item').forEach(item => {
       item.addEventListener('click', () => {
+        // Ensure admin tab is active
+        const lastTab = localStorage.getItem('amok_last_tab');
+        if (lastTab !== 'admin') {
+          switchTab('admin');
+        }
+
         // Remove active class from all nav items
         document.querySelectorAll('.admin-nav-item').forEach(nav => {
-          nav.style.border = '1px solid var(--border-color)';
-          nav.style.background = 'var(--bg-card)';
+          nav.style.background = 'transparent';
           nav.style.color = 'var(--text-secondary)';
           nav.classList.remove('active');
         });
 
         // Set active to clicked item
-        item.style.border = '1px solid var(--accent-primary)';
         item.style.background = 'rgba(139, 126, 200, 0.1)';
         item.style.color = 'var(--accent-primary)';
         item.classList.add('active');
@@ -13211,6 +13760,10 @@ metaRegistry[username].licenceKey = licenceKey;
           loadAdminFeedbacks();
         } else if (targetSection === 'reports') {
           loadAdminReports();
+        } else if (targetSection === 'whitelist') {
+          if (typeof loadAdminWhitelist === 'function') {
+            loadAdminWhitelist();
+          }
         }
       });
     });
@@ -13313,6 +13866,112 @@ metaRegistry[username].licenceKey = licenceKey;
   renderRecentChanges();
   initNotifications();
   initSimulator();
+
+  const initWhitelistAdmin = () => {
+    const listBody = document.getElementById('admin-whitelist-table-body');
+    const nameInput = document.getElementById('admin-whitelist-name-input');
+    const phoneInput = document.getElementById('admin-whitelist-phone-input');
+    const emailInput = document.getElementById('admin-whitelist-email-input');
+    const addBtn = document.getElementById('btn-admin-add-whitelist');
+    
+    if (!listBody || !nameInput || !phoneInput || !emailInput || !addBtn) return;
+
+    phoneInput.addEventListener('input', () => {
+      let val = phoneInput.value.replace(/\D/g, '');
+      if (val.startsWith('0')) {
+        val = val.slice(1);
+      }
+      if (val.length > 10) {
+        val = val.slice(0, 10);
+      }
+      phoneInput.value = val;
+    });
+
+    const renderWhitelistTable = () => {
+      if (APPROVED_USERS_WHITELIST.length === 0) {
+        listBody.innerHTML = `
+          <tr>
+            <td colspan="4" style="padding: 20px; text-align: center; color: var(--text-secondary);">
+              Beyaz listede henüz kayıtlı test kullanıcısı yok.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      listBody.innerHTML = APPROVED_USERS_WHITELIST.map((item, index) => {
+        const isObj = typeof item === 'object' && item !== null;
+        const nameVal = isObj ? (item.name || '—') : 'Test Kullanıcısı';
+        const phoneVal = isObj ? (item.phone || '—') : (item.includes('@') ? '—' : item);
+        const emailVal = isObj ? (item.email || '—') : (item.includes('@') ? item : '—');
+
+        return `
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 12px 16px; font-weight: 500; color: var(--text-primary);">${nameVal}</td>
+            <td style="padding: 12px 16px; font-family: monospace; color: var(--text-primary);">${phoneVal}</td>
+            <td style="padding: 12px 16px; color: var(--text-primary);">${emailVal}</td>
+            <td style="padding: 12px 16px; text-align: right;">
+              <button class="btn-admin-delete-whitelist" data-index="${index}" style="padding: 4px 8px; font-size: 0.75rem; font-weight: 700; border-radius: 4px; border: 1px solid #dc2626; background: transparent; color: #dc2626; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.background='#dc2626'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#dc2626';">Sil</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      listBody.querySelectorAll('.btn-admin-delete-whitelist').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const index = parseInt(btn.dataset.index, 10);
+          if (!isNaN(index) && index >= 0 && index < APPROVED_USERS_WHITELIST.length) {
+            const removed = APPROVED_USERS_WHITELIST[index];
+            const displayName = typeof removed === 'object' && removed !== null ? (removed.name || removed.email || removed.phone) : removed;
+            APPROVED_USERS_WHITELIST.splice(index, 1);
+            localStorage.setItem('amok_approved_users_whitelist', JSON.stringify(APPROVED_USERS_WHITELIST));
+            renderWhitelistTable();
+            showToast(`"${displayName}" listeden silindi.`, 'success');
+          }
+        });
+      });
+    };
+
+    addBtn.addEventListener('click', () => {
+      const nameVal = nameInput.value.trim();
+      const phoneVal = phoneInput.value.trim();
+      const emailVal = emailInput.value.trim();
+
+      if (!nameVal || !phoneVal || !emailVal) {
+        showToast('Lütfen Ad Soyad, Telefon ve E-posta alanlarının tümünü doldurun!', 'error');
+        return;
+      }
+
+      const exists = APPROVED_USERS_WHITELIST.some(item => {
+        if (typeof item === 'object' && item !== null) {
+          return item.phone === phoneVal || item.email === emailVal;
+        }
+        return item === phoneVal || item === emailVal;
+      });
+
+      if (exists) {
+        showToast('Bu telefon veya e-posta adresi zaten listede ekli!', 'error');
+        return;
+      }
+
+      APPROVED_USERS_WHITELIST.push({
+        name: nameVal,
+        phone: phoneVal,
+        email: emailVal
+      });
+
+      localStorage.setItem('amok_approved_users_whitelist', JSON.stringify(APPROVED_USERS_WHITELIST));
+      nameInput.value = '';
+      phoneInput.value = '';
+      emailInput.value = '';
+      renderWhitelistTable();
+      showToast(`"${nameVal}" başarıyla beyaz listeye eklendi!`, 'success');
+    });
+
+    renderWhitelistTable();
+  };
+
+  initWhitelistAdmin();
 
   // Vagon Simülatörü kilit ekranı buton olay dinleyicileri
   const btnUnlockSim = document.getElementById('btn-simulator-unlock-login');
