@@ -2298,6 +2298,25 @@ function isLocalEnvironment() {
 }
 
 function saveState(immediate = false) {
+  if (state.username && state.username !== 'Misafir') {
+    const original = state.username;
+    let normalized = original.toLowerCase()
+      .replace(/ı/g, 'i')
+      .replace(/ğ/g, 'g')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ö/g, 'o')
+      .replace(/ç/g, 'c')
+      .replace(/[^a-z0-9]/g, '_')
+      .replace(/_+/g, '_');
+    if (normalized.endsWith('_')) normalized = normalized.slice(0, -1);
+    if (normalized.startsWith('_')) normalized = normalized.slice(1);
+    if (!normalized) normalized = 'user';
+    
+    if (normalized !== original) {
+      state.username = normalized;
+    }
+  }
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
   if (state.username && !state.isGuest) {
     if (supabaseClient) {
