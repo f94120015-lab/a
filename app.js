@@ -4171,7 +4171,10 @@ function updateTopBar() {
   if (heartsCountSide) heartsCountSide.textContent = state.hearts;
 
   const dropdownName = document.getElementById('dropdown-name');
-  if (dropdownName) dropdownName.textContent = state.username || 'Kullanıcı';
+  if (dropdownName) {
+    const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+    dropdownName.textContent = full || state.username || 'Kullanıcı';
+  }
 
   const loginTopbarBtn = document.getElementById('btn-login-topbar');
   const userMenu = document.querySelector('.user-menu');
@@ -9283,7 +9286,7 @@ function renderProfile() {
           </div>
           <div class="profile-user-details">
             <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px;">
-              ${escapeHtml(state.username || 'Kullanıcı')}
+              ${escapeHtml( (state.firstName || state.lastName) ? `${state.firstName || ''} ${state.lastName || ''}`.trim() : (state.username || 'Kullanıcı') )}
               ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
             </h2>
             ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
@@ -9846,7 +9849,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color')
+        .select('username, xp, avatar_color, profiles (first_name, last_name)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -9855,8 +9858,19 @@ async function renderLeaderboard() {
         competitors = data.map(item => {
           const isUser = item.username === state.username;
           if (isUser) userFound = true;
+          
+          let displayName = item.username;
+          if (item.profiles) {
+            const fName = item.profiles.first_name || '';
+            const lName = item.profiles.last_name || '';
+            const full = `${fName} ${lName}`.trim();
+            if (full) {
+              displayName = full;
+            }
+          }
+
           return {
-            name: isUser ? `${item.username} (Sen)` : item.username,
+            name: isUser ? `${displayName} (Sen)` : displayName,
             xp: item.xp,
             isUser: isUser,
             avatarColor: item.avatar_color || '#B4A7D6'
@@ -9864,8 +9878,10 @@ async function renderLeaderboard() {
         });
 
         if (!userFound && state.username && state.username !== 'Misafir') {
+          const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+          const displayName = full || state.username;
           competitors.push({
-            name: `${state.username} (Sen)`,
+            name: `${displayName} (Sen)`,
             xp: state.xp,
             isUser: true,
             avatarColor: state.avatarColor || '#B4A7D6'
