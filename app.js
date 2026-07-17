@@ -183,6 +183,11 @@ if (typeof supabase !== 'undefined' && supabaseConfig.url && supabaseConfig.key)
 
 let state = {
   username: null,
+  firstName: null,
+  lastName: null,
+  displayName: null,
+  email: null,
+  phone: null,
   isGuest: false,
   streak: 0,
   xp: 0,
@@ -4019,7 +4024,7 @@ function initAuth() {
               // E-posta veya telefon ile eşleşen profil olup olmadığını kontrol et
               const { data: profile, error: profileErr } = await supabaseClient
                 .from('profiles')
-                .select('username, phone, first_name, last_name')
+                .select('username, phone, first_name, last_name, display_name, email')
                 .or(`email.eq.${email},phone.eq.${phone}`)
                 .maybeSingle();
 
@@ -4035,8 +4040,11 @@ function initAuth() {
                   finalState = {
                     ...finalState,
                     username: resolvedUsername,
-                    email: email,
+                    email: profile.email || email,
                     phone: profile.phone || phone,
+                    firstName: profile.first_name || '',
+                    lastName: profile.last_name || '',
+                    displayName: profile.display_name || ((profile.first_name || '') + ' ' + (profile.last_name || '')).trim() || resolvedUsername,
                     isGuest: false,
                     xp: dbState.xp || 0,
                     streak: dbState.streak || 0,
@@ -4131,6 +4139,9 @@ function initAuth() {
                   username: resolvedUsername,
                   email: email,
                   phone: phone,
+                  firstName: firstName,
+                  lastName: lastName,
+                  displayName: fullName.trim() || resolvedUsername,
                   isGuest: false,
                   xp: 0,
                   streak: 0,
@@ -4317,7 +4328,7 @@ function updateTopBar() {
   const dropdownName = document.getElementById('dropdown-name');
   if (dropdownName) {
     const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
-    dropdownName.textContent = full || state.username || 'Kullanıcı';
+    dropdownName.textContent = state.displayName || full || state.username || 'Kullanıcı';
   }
 
   const loginTopbarBtn = document.getElementById('btn-login-topbar');
@@ -9601,7 +9612,7 @@ function renderProfile() {
           </div>
           <div class="profile-user-details">
             <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <span id="profile-display-name-span">${escapeHtml( (state.firstName || state.lastName) ? `${state.firstName || ''} ${state.lastName || ''}`.trim() : (state.username || 'Kullanıcı') )}</span>
+              <span id="profile-display-name-span">${escapeHtml( state.displayName || ((state.firstName || state.lastName) ? `${state.firstName || ''} ${state.lastName || ''}`.trim() : (state.username || 'Kullanıcı')) )}</span>
               <button id="btn-profile-edit-name" style="background: transparent; border: none; cursor: pointer; font-size: 0.9rem; padding: 2px 4px; display: inline-flex; align-items: center; justify-content: center; opacity: 0.65; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="İsmini Düzenle">✏️</button>
               ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
             </h2>
@@ -9621,6 +9632,24 @@ function renderProfile() {
             </div>
           </div>
         ` : ''}
+
+        <div class="profile-actions-card" style="margin-top: 0;">
+          <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">📝 Kayıt Bilgileri (Değiştirilemez)</h3>
+          <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <span style="color: var(--text-secondary); font-weight: 600;">Ad Soyad:</span>
+              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(((state.firstName || '') + ' ' + (state.lastName || '')).trim() || '—')}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <span style="color: var(--text-secondary); font-weight: 600;">E-Posta:</span>
+              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(state.email || '—')}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-bottom: 2px;">
+              <span style="color: var(--text-secondary); font-weight: 600;">Telefon:</span>
+              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(state.phone || '—')}</span>
+            </div>
+          </div>
+        </div>
 
         <div class="profile-actions-card" style="margin-top: 0;">
           <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
@@ -9658,9 +9687,10 @@ function renderProfile() {
 
         <div class="profile-actions-card" style="margin-top: 0;">
           <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
-          <div class="profile-actions-buttons">
-            <button class="btn btn-secondary" id="btn-profile-logout">Çıkış Yap / Hesap Değiştir</button>
-            <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border);">İlerlemeyi Sıfırla</button>
+          <div class="profile-actions-buttons" style="display: flex; flex-direction: column; gap: 8px;">
+            <button class="btn btn-secondary" id="btn-profile-logout" style="margin-bottom: 0;">Çıkış Yap / Hesap Değiştir</button>
+            <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border); margin-bottom: 0;">İlerlemeyi Sıfırla</button>
+            <button class="btn btn-ghost" id="btn-profile-delete-account" style="color: #ff3b30; border-color: rgba(255, 59, 48, 0.4); background: rgba(255, 59, 48, 0.05); font-weight: 700; margin-bottom: 0;">🗑️ Hesabı Sil</button>
           </div>
         </div>
 
@@ -9734,34 +9764,25 @@ function renderProfile() {
   const editNameBtn = document.getElementById('btn-profile-edit-name');
   if (editNameBtn) {
     editNameBtn.addEventListener('click', async () => {
-      const currentName = ((state.firstName || '') + ' ' + (state.lastName || '')).trim() || state.username || '';
+      const currentName = state.displayName || ((state.firstName || '') + ' ' + (state.lastName || '')).trim() || state.username || '';
       const newName = prompt('Yeni isminizi girin (Soyisminizi gizlemek için sadece adınızı yazabilirsiniz):', currentName);
       if (newName === null) return; // Cancelled
       
-      const nameParts = newName.trim().split(/\s+/);
-      let newFirstName = '';
-      let newLastName = '';
-      if (nameParts.length > 1) {
-        newLastName = nameParts.pop();
-        newFirstName = nameParts.join(' ');
-      } else {
-        newFirstName = nameParts[0] || '';
-      }
+      const trimmedName = newName.trim();
 
       // Update state
-      state.firstName = newFirstName;
-      state.lastName = newLastName;
+      state.displayName = trimmedName;
       saveState();
 
       // Update UI elements instantly
       const displayNameSpan = document.getElementById('profile-display-name-span');
       if (displayNameSpan) {
-        displayNameSpan.textContent = newName.trim() || state.username || 'Kullanıcı';
+        displayNameSpan.textContent = trimmedName || state.username || 'Kullanıcı';
       }
       
       const dropdownName = document.getElementById('dropdown-name');
       if (dropdownName) {
-        dropdownName.textContent = newName.trim() || state.username || 'Kullanıcı';
+        dropdownName.textContent = trimmedName || state.username || 'Kullanıcı';
       }
 
       showToast('İsminiz başarıyla güncellendi! 🎉', 'success');
@@ -9771,7 +9792,7 @@ function renderProfile() {
         try {
           await supabaseClient
             .from('profiles')
-            .update({ first_name: newFirstName, last_name: newLastName })
+            .update({ display_name: trimmedName })
             .eq('username', state.username);
             
           // Refresh leaderboard and social list to reflect changes instantly
@@ -9791,6 +9812,48 @@ function renderProfile() {
         logout();
       });
     }
+  }
+
+  // Delete Account listener
+  const deleteAccountBtn = document.getElementById('btn-profile-delete-account');
+  if (deleteAccountBtn) {
+    deleteAccountBtn.addEventListener('click', async () => {
+      const confirm1 = confirm('Hesabınızı kalıcı olarak silmek istediğinize emin misiniz? Tüm ilerlemeniz, puanlarınız ve abonelik lisansınız geri alınamayacak şekilde silinecektir.');
+      if (!confirm1) return;
+
+      const confirm2 = confirm('DİKKAT: Bu işlem geri alınamaz! Hesabınızı silme işlemini onaylıyor musunuz?');
+      if (!confirm2) return;
+
+      showToast('Hesabınız siliniyor...', 'info');
+
+      if (supabaseClient && !state.isGuest && state.username !== 'Misafir' && state.username) {
+        try {
+          const userIdent = state.username;
+          // Delete friends mapping if exists
+          try {
+            await supabaseClient.from('friends').delete().or(`username.eq.${userIdent},friend_username.eq.${userIdent}`);
+          } catch(e) {}
+          
+          // Delete from user_states
+          await supabaseClient.from('user_states').delete().eq('username', userIdent);
+          // Delete from profiles
+          await supabaseClient.from('profiles').delete().eq('username', userIdent);
+        } catch (e) {
+          console.error('Error deleting account from Database:', e);
+        }
+      }
+
+      const activeUser = state.username;
+      if (activeUser) {
+        localStorage.removeItem(`amok_state_${activeUser}`);
+      }
+      localStorage.removeItem(STATE_KEY);
+      
+      showToast('Hesabınız başarıyla silindi. Hoşça kalın! 👋', 'success');
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
   }
 
   // Lisans durumu UI güncellemesi
@@ -9975,7 +10038,7 @@ async function renderSocialList() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name)')
         .order('xp', { ascending: false })
         .limit(50);
 
@@ -9988,7 +10051,7 @@ async function renderSocialList() {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
             const full = `${fName} ${lName}`.trim();
-            if (full) displayName = full;
+            displayName = item.profiles.display_name || full || item.username;
             email = item.profiles.email || '';
             phone = item.profiles.phone || '';
           }
@@ -10396,7 +10459,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -10413,9 +10476,7 @@ async function renderLeaderboard() {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
             const full = `${fName} ${lName}`.trim();
-            if (full) {
-              displayName = full;
-            }
+            displayName = item.profiles.display_name || full || item.username;
             email = item.profiles.email || '';
             phone = item.profiles.phone || '';
           }
