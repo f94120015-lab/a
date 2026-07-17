@@ -9007,6 +9007,9 @@ function switchTab(tabId) {
       subtabsMenu.style.display = 'none';
     }
   }
+  if (typeof updateAdminBadgeCount === 'function') {
+    updateAdminBadgeCount();
+  }
 
   document.querySelectorAll('.tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `tab-content-${tabId}`);
@@ -12151,6 +12154,11 @@ function init() {
   if (isLocal) {
     const adminTab = document.getElementById('btn-admin');
     if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
+    setTimeout(() => {
+      if (typeof updateAdminBadgeCount === 'function') {
+        updateAdminBadgeCount();
+      }
+    }, 1500);
     const recentBox = document.getElementById('recent-changes-box');
     if (recentBox) recentBox.style.setProperty('display', 'block', 'important');
 
@@ -19896,6 +19904,9 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       }
 
       loadAdminFeedback();
+      if (typeof updateAdminBadgeCount === 'function') {
+        updateAdminBadgeCount();
+      }
     }
 
     window.loadAdminFeedback = loadAdminFeedback;
@@ -19947,6 +19958,76 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
     }, 1000);
 
 window.handleFeedbackSubmit = handleFeedbackSubmit;
+
+    // ============================================================
+    // ADMIN: BİLDİRİM/TALEP SAYI BALONCUĞU (BADGE) SİSTEMİ
+    // ============================================================
+    async function updateAdminBadgeCount() {
+      const badgeEl = document.getElementById('admin-nav-badge');
+      const adminBtn = document.getElementById('btn-admin');
+      if (!badgeEl || !adminBtn || adminBtn.style.display === 'none') return;
+
+      let total = 0;
+
+      // 1. Lisans Taleplerini Say (Supabase varsa canlı, yoksa 0)
+      if (supabaseClient) {
+        try {
+          const { data: reqs, error: reqsErr } = await supabaseClient
+            .from('user_states')
+            .select('username')
+            .eq('licence_key', 'REQUESTED');
+          if (!reqsErr && reqs) {
+            total += reqs.length;
+          }
+        } catch (e) {
+          console.error('Error counting licence requests for badge:', e);
+        }
+
+        // 2. Soru Hata Bildirimlerini Say
+        try {
+          const { data: reps, error: repsErr } = await supabaseClient
+            .from('question_reports')
+            .select('id');
+          if (!repsErr && reps) {
+            total += reps.length;
+          }
+        } catch (e) {
+          console.error('Error counting reports for badge:', e);
+        }
+
+        // 3. Genel Geri Bildirim Raporlarını Say
+        try {
+          const { data: fbs, error: fbsErr } = await supabaseClient
+            .from('general_feedback')
+            .select('id');
+          if (!fbsErr && fbs) {
+            total += fbs.length;
+          }
+        } catch (e) {
+          console.error('Error counting feedback for badge:', e);
+        }
+      } else {
+        // Çevrimdışı/Yerel Modda LocalStorage Rapor Sayıları
+        try {
+          const localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+          const localFbs = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+          total = localReps.length + localFbs.length;
+        } catch (e) {
+          console.error('Error calculating local counts for badge:', e);
+        }
+      }
+
+      if (total > 0) {
+        badgeEl.textContent = total;
+        badgeEl.style.setProperty('display', 'flex', 'important');
+      } else {
+        badgeEl.style.setProperty('display', 'none', 'important');
+      }
+    }
+
+    // Polling: Her 10 saniyede bir verileri arka planda güncelle
+    setInterval(updateAdminBadgeCount, 10000);
+    window.updateAdminBadgeCount = updateAdminBadgeCount;
 
 // Scroll to Top Button (Isolated self-executing function to avoid any earlier runtime errors block registration)
 (function() {
