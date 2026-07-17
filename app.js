@@ -13026,7 +13026,7 @@ return `
             <div style="display: flex; align-items: center; gap: 10px; min-width: 180px; flex: 1;">
               <!-- Avatar -->
               <div style="position: relative; flex-shrink: 0;">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+                <div class="${user.isOnline ? 'avatar-online-halo' : ''}" style="width: 36px; height: 36px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
                   ${initial}
                 </div>
                 ${onlineDot}
