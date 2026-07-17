@@ -8315,4 +8315,98 @@ input:checked + .slider:before {
   }
 }
 
+/* ============================================================
+   ADMIN ALT SEKME MENÜSÜ GÖRSEL DÜZENLEMELERİ
+   ============================================================ */
+.admin-subtabs-container {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 14px;
+  margin-left: 28px;
+  margin-top: 6px;
+  border-left: 2px solid var(--border-color);
+  box-sizing: border-box;
+  width: calc(100% - 28px);
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.admin-nav-item .admin-icon {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  transition: transform 0.2s ease;
+}
+
+.admin-nav-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .admin-nav-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.admin-nav-item:hover .admin-icon {
+  transform: scale(1.15);
+}
+
+/* Aktif Sekme Durumları İçin Özel Renk & Gradyan Temaları */
+.admin-nav-item[data-admin-section="users"].active {
+  background: rgba(59, 130, 246, 0.08) !important;
+  color: #3b82f6 !important;
+  box-shadow: inset 3px 0 0 #3b82f6;
+}
+
+.admin-nav-item[data-admin-section="licensing"].active {
+  background: rgba(245, 158, 11, 0.08) !important;
+  color: #d97706 !important;
+  box-shadow: inset 3px 0 0 #d97706;
+}
+
+.admin-nav-item[data-admin-section="supabase"].active {
+  background: rgba(239, 68, 68, 0.08) !important;
+  color: #ef4444 !important;
+  box-shadow: inset 3px 0 0 #ef4444;
+}
+
+.admin-nav-item[data-admin-section="reports"].active {
+  background: rgba(244, 63, 94, 0.08) !important;
+  color: #f43f5e !important;
+  box-shadow: inset 3px 0 0 #f43f5e;
+}
+
+.admin-nav-item[data-admin-section="general-feedback"].active {
+  background: rgba(139, 92, 246, 0.08) !important;
+  color: #8b5cf6 !important;
+  box-shadow: inset 3px 0 0 #8b5cf6;
+}
+
+.admin-nav-item[data-admin-section="whitelist"].active {
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #10b981 !important;
+  box-shadow: inset 3px 0 0 #10b981;
+}
+
 

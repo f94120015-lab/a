@@ -14298,14 +14298,10 @@ return `
 
         // Remove active class from all nav items
         document.querySelectorAll('.admin-nav-item').forEach(nav => {
-          nav.style.background = 'transparent';
-          nav.style.color = 'var(--text-secondary)';
           nav.classList.remove('active');
         });
 
         // Set active to clicked item
-        item.style.background = 'rgba(139, 126, 200, 0.1)';
-        item.style.color = 'var(--accent-primary)';
         item.classList.add('active');
 
         // Hide all admin panels
