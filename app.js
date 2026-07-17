@@ -20065,7 +20065,9 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       const adminBtn = document.getElementById('btn-admin');
       if (!badgeEl || !adminBtn || adminBtn.style.display === 'none') return;
 
-      let total = 0;
+      let licenceCount = 0;
+      let reportsCount = 0;
+      let feedbackCount = 0;
 
       // 1. Lisans Taleplerini Say (Supabase varsa canlı, yoksa 0)
       if (supabaseClient) {
@@ -20075,7 +20077,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             .select('username')
             .eq('licence_key', 'REQUESTED');
           if (!reqsErr && reqs) {
-            total += reqs.length;
+            licenceCount = reqs.length;
           }
         } catch (e) {
           console.error('Error counting licence requests for badge:', e);
@@ -20087,7 +20089,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             .from('question_reports')
             .select('id');
           if (!repsErr && reps) {
-            total += reps.length;
+            reportsCount = reps.length;
           }
         } catch (e) {
           console.error('Error counting reports for badge:', e);
@@ -20099,7 +20101,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             .from('general_feedback')
             .select('id');
           if (!fbsErr && fbs) {
-            total += fbs.length;
+            feedbackCount = fbs.length;
           }
         } catch (e) {
           console.error('Error counting feedback for badge:', e);
@@ -20109,11 +20111,14 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
         try {
           const localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
           const localFbs = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
-          total = localReps.length + localFbs.length;
+          reportsCount = localReps.length;
+          feedbackCount = localFbs.length;
         } catch (e) {
           console.error('Error calculating local counts for badge:', e);
         }
       }
+
+      const total = licenceCount + reportsCount + feedbackCount;
 
       if (total > 0) {
         badgeEl.textContent = total;
@@ -20121,6 +20126,30 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       } else {
         badgeEl.style.setProperty('display', 'none', 'important');
       }
+
+      // Sub-tabs dynamic badge renderer helper
+      function updateSubTabBadge(tabEl, count) {
+        if (!tabEl) return;
+        let badge = tabEl.querySelector('.admin-tab-badge');
+        if (count > 0) {
+          if (!badge) {
+            badge = document.createElement('span');
+            badge.className = 'admin-tab-badge';
+            tabEl.appendChild(badge);
+          }
+          badge.textContent = count;
+        } else if (badge) {
+          badge.remove();
+        }
+      }
+
+      const licTab = document.querySelector('.admin-nav-item[data-admin-section="licensing"]');
+      const repTab = document.querySelector('.admin-nav-item[data-admin-section="reports"]');
+      const fbTab = document.querySelector('.admin-nav-item[data-admin-section="general-feedback"]');
+
+      updateSubTabBadge(licTab, licenceCount);
+      updateSubTabBadge(repTab, reportsCount);
+      updateSubTabBadge(fbTab, feedbackCount);
     }
 
     // Polling: Her 10 saniyede bir verileri arka planda güncelle
