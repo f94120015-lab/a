@@ -208,14 +208,12 @@ let state = {
     tasks: []
   },
   following: [
-    { username: 'Ahmet Yılmaz', xp: 450, streak: 5, avatarColor: '#E88A9A' },
-    { username: 'Elif Demir', xp: 320, streak: 3, avatarColor: '#B4A7D6' }
+    { username: 'sibel_coskun', xp: 0, streak: 0, avatarColor: '#8BC6A0' },
+    { username: 'reyhan_fukili', xp: 0, streak: 0, avatarColor: '#E8CB6E' }
   ],
   followers: [
-    { username: 'Ahmet Yılmaz', xp: 450, streak: 5, avatarColor: '#E88A9A' },
-    { username: 'Elif Demir', xp: 320, streak: 3, avatarColor: '#B4A7D6' },
-    { username: 'Sarah Connor', xp: 180, streak: 12, avatarColor: '#8BC6A0' },
-    { username: 'Melis Şen', xp: 90, streak: 2, avatarColor: '#E8CB6E' }
+    { username: 'sibel_coskun', xp: 0, streak: 0, avatarColor: '#8BC6A0' },
+    { username: 'reyhan_fukili', xp: 0, streak: 0, avatarColor: '#E8CB6E' }
   ],
   lastPromptedWrongCount: 0,
   totalQuestionsAnswered: 0,
@@ -2456,6 +2454,14 @@ function loadState() {
     try {
       const parsed = JSON.parse(saved);
       state = { ...state, ...parsed };
+      
+      const FAKE_USERNAMES = ['ahmet yılmaz', 'elif demir', 'can kaya', 'sarah connor', 'melis şen', 'john doe', 'buse kaya', 'mert yılmaz', 'deniz aksu', 'ahmet_yilmaz', 'elif_demir', 'can_kaya', 'sarah_connor', 'melis_sen'];
+      if (state.following) {
+        state.following = state.following.filter(f => f && f.username && !FAKE_USERNAMES.includes(f.username.toLowerCase().trim()));
+      }
+      if (state.followers) {
+        state.followers = state.followers.filter(f => f && f.username && !FAKE_USERNAMES.includes(f.username.toLowerCase().trim()));
+      }
     } catch (e) {
       console.error('State yükleme hatası, varsayılan state kullanılacak:', e);
       localStorage.removeItem(STATE_KEY);
@@ -10036,11 +10042,8 @@ async function renderSocialList() {
 
   let competitors = [];
   const baseCompetitors = [
-    { username: "ahmet_yilmaz", displayName: "Ahmet Yılmaz", xp: 450, streak: 5, avatarColor: '#E88A9A' },
-    { username: "elif_demir", displayName: "Elif Demir", xp: 320, streak: 3, avatarColor: '#B4A7D6' },
-    { username: "can_kaya", displayName: "Can Kaya", xp: 210, streak: 0, avatarColor: '#F2A871' },
-    { username: "sarah_connor", displayName: "Sarah Connor", xp: 180, streak: 12, avatarColor: '#8BC6A0' },
-    { username: "melis_sen", displayName: "Melis Şen", xp: 90, streak: 2, avatarColor: '#E8CB6E' }
+    { username: "sibel_coskun", displayName: "Sibel Coşkun", xp: 120, streak: 3, avatarColor: '#8BC6A0' },
+    { username: "reyhan_fukili", displayName: "Reyhan Fukili", xp: 80, streak: 1, avatarColor: '#E8CB6E' }
   ];
 
   if (supabaseClient) {
@@ -10478,11 +10481,8 @@ async function renderLeaderboard() {
   if (!list) return;
 
   const baseCompetitors = [
-    { name: "Ahmet Yılmaz", xp: 450, avatarColor: '#E88A9A', completedLessons: [1, 2, 3] },
-    { name: "Elif Demir", xp: 320, avatarColor: '#B4A7D6', completedLessons: [1, 2] },
-    { name: "Can Kaya", xp: 210, avatarColor: '#8BC6A0', completedLessons: [1] },
-    { name: "Sarah Connor", xp: 180, avatarColor: '#E8CB6E', completedLessons: [] },
-    { name: "Melis Şen", xp: 90, avatarColor: '#8B7EC8', completedLessons: [] }
+    { name: "Sibel Coşkun", xp: 120, avatarColor: '#8BC6A0', completedLessons: [1, 2] },
+    { name: "Reyhan Fukili", xp: 80, avatarColor: '#E8CB6E', completedLessons: [1] }
   ];
 
   let competitors = [];
