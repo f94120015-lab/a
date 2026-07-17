@@ -13194,7 +13194,7 @@ function init() {
         const subName = (user.firstName || user.lastName) ? `@${user.username}` : '';
         const initial = (displayName || '?')[0].toUpperCase();
 
-        const onlineDot = `<span class="online-indicator-dot ${user.isOnline ? 'online' : 'offline'}" style="position: absolute; top: -2px; left: -2px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--bg-card); z-index: 2;"></span>`;
+        const onlineDot = `<span class="online-indicator-dot ${user.isOnline ? 'online' : 'offline'}" style="position: absolute; top: -3px; left: -3px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-card); z-index: 2;"></span>`;
         const newBadge = user.isNew
           ? '<span style="background: #10b981; color: #fff; font-size: 0.6rem; padding: 1px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; margin-left: 6px;">YENİ</span>'
           : '';
