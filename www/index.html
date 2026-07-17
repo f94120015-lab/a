@@ -135,6 +135,10 @@
             <span class="nav-tab-icon">ℹ️</span>
             <span class="nav-tab-label">Hakkında</span>
           </button>
+          <button class="nav-tab" data-tab="feedback">
+            <span class="nav-tab-icon">💬</span>
+            <span class="nav-tab-label">Geri Bildirim</span>
+          </button>
           <button class="nav-tab dev-only-tab" data-tab="admin" id="btn-admin" style="display: none;">
             <span class="nav-tab-icon">🔑</span>
             <span class="nav-tab-label">Admin</span>
@@ -156,7 +160,11 @@
             </button>
             <button class="nav-tab admin-nav-item" data-admin-section="reports" style="padding: 10px 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 12px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
               <span style="font-size: 1.5rem; width: 24px; text-align: center;">⚠️</span>
-              <span style="font-size: 1.17rem; font-weight: 600;">Hata Bildirimleri</span>
+              <span style="font-size: 1.17rem; font-weight: 600;">Soru Hata Bildirimleri</span>
+            </button>
+            <button class="nav-tab admin-nav-item" data-admin-section="general-feedback" style="padding: 10px 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 12px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
+              <span style="font-size: 1.5rem; width: 24px; text-align: center;">💬</span>
+              <span style="font-size: 1.17rem; font-weight: 600;">Genel Geri Bildirimler</span>
             </button>
             <button class="nav-tab admin-nav-item" data-admin-section="whitelist" style="padding: 10px 12px; font-size: 1.2rem; display: flex; align-items: center; gap: 12px; border: none; background: transparent; color: var(--text-secondary); width: 100%; border-radius: var(--radius-md); cursor: pointer; text-align: left; transition: all 0.2s;">
               <span style="font-size: 1.5rem; width: 24px; text-align: center;">🛡️</span>
@@ -746,6 +754,54 @@
           </div>
         </div>
       </div>
+
+      <!-- 5.5. GERİ BİLDİRİM SEKMESİ -->
+      <div id="tab-content-feedback" class="tab-content">
+        <div class="feedback-container" style="max-width: 600px; margin: 0 auto; padding: 24px 16px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 20px; text-align: left;">
+            <div>
+              <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-primary); margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">💬 Geri Bildirim & Destek</h2>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Uygulamayla ilgili karşılaştığınız hataları (Mağaza açılmıyor, Tema değişmiyor vb.) veya geliştirilmesini istediğiniz önerileri ekran görüntüsü ekleyerek bize iletebilirsiniz.</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="feedback-category" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Kategori</label>
+              <select id="feedback-category" class="report-select" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; outline: none;">
+                <option value="bug">Hata Bildirimi (Hata / Problem)</option>
+                <option value="feature">Geliştirme Önerisi (Öneri / İstek)</option>
+                <option value="other">Diğer</option>
+              </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="feedback-title" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Konu Başlığı</label>
+              <input type="text" id="feedback-title" placeholder="Hatanın / önerinin kısa bir özeti..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; box-sizing: border-box; outline: none;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="feedback-description" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Açıklamanız</label>
+              <textarea id="feedback-description" placeholder="Sorunu / öneriyi detaylandırın. Hangi adımları izlediğinizde hata oluştu?" style="width: 100%; height: 120px; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; box-sizing: border-box; outline: none; resize: vertical; font-family: var(--font-body);"></textarea>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Ekran Görüntüsü (Opsiyonel)</label>
+              <div style="border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 20px; text-align: center; cursor: pointer; transition: all 0.2s; position: relative;" id="feedback-screenshot-dropzone">
+                <input type="file" id="feedback-screenshot-input" accept="image/*" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                <span style="font-size: 2rem; display: block; margin-bottom: 6px;">📸</span>
+                <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;" id="feedback-screenshot-label">Ekran görüntüsü yüklemek için tıklayın veya dosyayı sürükleyin</span>
+              </div>
+              <div id="feedback-screenshot-preview-container" style="display: none; margin-top: 10px; position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
+                <img id="feedback-screenshot-preview" src="" alt="Önizleme" style="width: 100%; display: block; max-height: 250px; object-fit: contain; background: rgba(0,0,0,0.03);">
+                <button id="btn-feedback-clear-screenshot" style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 0.9rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">✕</button>
+              </div>
+            </div>
+
+            <button id="btn-feedback-submit" class="btn btn-primary" style="padding: 14px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.95rem; width: 100%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              🚀 Bildirimi Gönder
+            </button>
+          </div>
+        </div>
+      </div>
     <!-- 6. ADMIN SEKMESİ (YEREL-ÖZEL) -->
       <div id="tab-content-admin" class="tab-content">
         <div class="admin-container" style="padding: 20px; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 0;">
@@ -792,6 +848,29 @@
                   </div>
 
                   <div id="admin-reports-list-container" style="display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; padding-right: 6px;">
+                    <!-- JavaScript ile doldurulacak -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Panel 6.5: Genel Geri Bildirim Raporları -->
+              <div class="admin-panel" id="admin-panel-general-feedback" style="display: none; flex-direction: column; gap: 20px;">
+                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                      <span style="font-size: 1.5rem;">💬</span>
+                      <div style="text-align: left;">
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Genel Geri Bildirimler</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıların genel hata bildirimlerini ve geliştirme önerilerini inceleyin.</p>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                      <button id="btn-admin-export-feedback" class="btn btn-secondary" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">JSON Dışa Aktar</button>
+                      <button id="btn-admin-clear-feedback" class="btn btn-ghost" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; color: var(--color-wrong); border: 1px solid var(--color-wrong-border);">Hepsini Temizle</button>
+                    </div>
+                  </div>
+
+                  <div id="admin-feedback-list-container" style="display: flex; flex-direction: column; gap: 12px; max-height: 500px; overflow-y: auto; padding-right: 6px;">
                     <!-- JavaScript ile doldurulacak -->
                   </div>
                 </div>

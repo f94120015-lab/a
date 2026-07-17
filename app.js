@@ -9021,6 +9021,8 @@ function switchTab(tabId) {
     state.activePassiveMode = 'active';
     saveState();
     renderSimulator();
+  } else if (tabId === 'feedback') {
+    initFeedbackTab();
   }
 }
 
@@ -14315,8 +14317,8 @@ return `
         // If switching to users section, load users
         if (targetSection === 'users') {
           loadAdminUsers();
-        } else if (targetSection === 'feedbacks') {
-          loadAdminFeedbacks();
+        } else if (targetSection === 'general-feedback') {
+          loadAdminFeedback();
         } else if (targetSection === 'reports') {
           loadAdminReports();
         } else if (targetSection === 'whitelist') {
@@ -19496,6 +19498,454 @@ async function handleFeedbackSubmit(e) {
     form.reset();
   }
 }
+window.handleFeedbackSubmit = handleFeedbackSubmit;
+
+    // ============================================================
+    // GERİ BİLDİRİM VE GENEL HATA RAPORLAMA SİSTEMİ
+    // ============================================================
+    let feedbackScreenshotBase64 = null;
+
+    function initFeedbackTab() {
+      const dropzone = document.getElementById('feedback-screenshot-dropzone');
+      const input = document.getElementById('feedback-screenshot-input');
+      const previewContainer = document.getElementById('feedback-screenshot-preview-container');
+      const previewImage = document.getElementById('feedback-screenshot-preview');
+      const labelText = document.getElementById('feedback-screenshot-label');
+      const clearBtn = document.getElementById('btn-feedback-clear-screenshot');
+      const submitBtn = document.getElementById('btn-feedback-submit');
+
+      if (!submitBtn) return;
+
+      // Handle drag & drop and click actions
+      if (input && dropzone) {
+        // Clear previous event listeners to avoid duplicates if switched back and forth
+        const newFileInput = input.cloneNode(true);
+        input.parentNode.replaceChild(newFileInput, input);
+        
+        newFileInput.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (file) handleFeedbackScreenshot(file);
+        });
+
+        // Drag events
+        const dragOverHandler = (e) => {
+          e.preventDefault();
+          dropzone.style.borderColor = 'var(--accent-primary)';
+          dropzone.style.background = 'rgba(99, 102, 241, 0.04)';
+        };
+        const dragLeaveHandler = () => {
+          dropzone.style.borderColor = 'var(--border-color)';
+          dropzone.style.background = 'transparent';
+        };
+        const dropHandler = (e) => {
+          e.preventDefault();
+          dropzone.style.borderColor = 'var(--border-color)';
+          dropzone.style.background = 'transparent';
+          const file = e.dataTransfer.files[0];
+          if (file && file.type.startsWith('image/')) {
+            handleFeedbackScreenshot(file);
+          }
+        };
+
+        dropzone.removeEventListener('dragover', dragOverHandler);
+        dropzone.removeEventListener('dragleave', dragLeaveHandler);
+        dropzone.removeEventListener('drop', dropHandler);
+
+        dropzone.addEventListener('dragover', dragOverHandler);
+        dropzone.addEventListener('dragleave', dragLeaveHandler);
+        dropzone.addEventListener('drop', dropHandler);
+      }
+
+      if (clearBtn) {
+        clearBtn.onclick = (e) => {
+          e.stopPropagation();
+          clearFeedbackScreenshot();
+        };
+      }
+
+      submitBtn.onclick = async () => {
+        const categoryVal = document.getElementById('feedback-category').value;
+        const titleVal = document.getElementById('feedback-title').value.trim();
+        const descVal = document.getElementById('feedback-description').value.trim();
+
+        if (!titleVal || !descVal) {
+          showToast('Başlık ve açıklama alanları zorunludur!', 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>⏳</span> Gönderiliyor...';
+
+        try {
+          const payload = {
+            username: state.username || 'Misafir',
+            email: state.email || '',
+            category: categoryVal,
+            title: titleVal,
+            description: descVal,
+            screenshot: feedbackScreenshotBase64
+          };
+
+          let supabaseSuccess = false;
+          if (supabaseClient) {
+            try {
+              const { error } = await supabaseClient
+                .from('general_feedback')
+                .insert([payload]);
+
+              if (!error) {
+                supabaseSuccess = true;
+              } else {
+                console.error('Supabase save feedback error:', error);
+              }
+            } catch (dbErr) {
+              console.error('Database connection error in feedback save:', dbErr);
+            }
+          }
+
+          // Save locally
+          let localFeedbacks = [];
+          try {
+            localFeedbacks = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+          } catch (e) {
+            localFeedbacks = [];
+          }
+          payload.id = Date.now().toString();
+          payload.created_at = new Date().toISOString();
+          localFeedbacks.push(payload);
+          localStorage.setItem('amok_general_feedback', JSON.stringify(localFeedbacks));
+
+          // Try FormSubmit Email notification
+          try {
+            await triggerFeedbackEmail(payload);
+          } catch (emailErr) {
+            console.error('Error sending feedback email:', emailErr);
+          }
+
+          showToast('Geri bildiriminiz başarıyla iletildi! Teşekkür ederiz. 💬', 'success');
+
+          // Reset fields
+          document.getElementById('feedback-title').value = '';
+          document.getElementById('feedback-description').value = '';
+          clearFeedbackScreenshot();
+          
+          // Redirect to profile
+          switchTab('profile');
+
+        } catch (submitErr) {
+          console.error('Feedback submit error:', submitErr);
+          showToast('Gönderilirken bir hata oluştu. Lütfen tekrar deneyin.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      };
+
+      function handleFeedbackScreenshot(file) {
+        if (!file.type.startsWith('image/')) {
+          showToast('Lütfen geçerli bir görsel dosyası seçin!', 'error');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onload = function() {
+            // Compress image to canvas max 800px width/height to avoid memory/storage issues
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const maxDim = 800;
+            let width = img.width;
+            let height = img.height;
+
+            if (width > maxDim || height > maxDim) {
+              if (width > height) {
+                height = Math.round((height * maxDim) / width);
+                width = maxDim;
+              } else {
+                width = Math.round((width * maxDim) / height);
+                height = maxDim;
+              }
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
+
+            feedbackScreenshotBase64 = canvas.toDataURL('image/jpeg', 0.75);
+
+            // Display preview
+            const previewImgEl = document.getElementById('feedback-screenshot-preview');
+            const previewCont = document.getElementById('feedback-screenshot-preview-container');
+            const lblTxt = document.getElementById('feedback-screenshot-label');
+            const dz = document.getElementById('feedback-screenshot-dropzone');
+            
+            if (previewImgEl) previewImgEl.src = feedbackScreenshotBase64;
+            if (previewCont) previewCont.style.display = 'block';
+            if (lblTxt) lblTxt.textContent = 'Görsel başarıyla yüklendi';
+            if (dz) {
+              dz.style.borderColor = '#10b981';
+              dz.style.background = 'rgba(16, 185, 129, 0.02)';
+            }
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function clearFeedbackScreenshot() {
+        feedbackScreenshotBase64 = null;
+        const fileInput = document.getElementById('feedback-screenshot-input');
+        const previewImgEl = document.getElementById('feedback-screenshot-preview');
+        const previewCont = document.getElementById('feedback-screenshot-preview-container');
+        const lblTxt = document.getElementById('feedback-screenshot-label');
+        const dz = document.getElementById('feedback-screenshot-dropzone');
+
+        if (fileInput) fileInput.value = '';
+        if (previewImgEl) previewImgEl.src = '';
+        if (previewCont) previewCont.style.display = 'none';
+        if (lblTxt) lblTxt.textContent = 'Ekran görüntüsü yüklemek için tıklayın veya dosyayı sürükleyin';
+        if (dz) {
+          dz.style.borderColor = 'var(--border-color)';
+          dz.style.background = 'transparent';
+        }
+      }
+    }
+
+    async function triggerFeedbackEmail(payload) {
+      const formData = new FormData();
+      formData.append('_subject', `AMOK Genel Rapor: ${payload.title}`);
+      formData.append('Kategori', payload.category === 'bug' ? 'Hata Bildirimi' : (payload.category === 'feature' ? 'Öneri/İstek' : 'Diğer'));
+      formData.append('Kullanıcı', payload.username);
+      formData.append('E-Posta', payload.email || '—');
+      formData.append('Başlık', payload.title);
+      formData.append('Açıklama', payload.description);
+      
+      if (payload.screenshot) {
+        formData.append('Ekran Görüntüsü', 'Base64 formatında Supabase veri tabanına işlendi. Admin panelinden görseli açabilirsiniz.');
+      }
+
+      try {
+        await fetch('https://formsubmit.co/ajax/f94120015@gmail.com', {
+          method: 'POST',
+          body: formData
+        });
+      } catch (err) {
+        console.error('FormSubmit general feedback email failed:', err);
+      }
+    }
+
+    let adminFeedbackCache = [];
+
+    async function loadAdminFeedback() {
+      const container = document.getElementById('admin-feedback-list-container');
+      if (!container) return;
+
+      container.innerHTML = `
+        <div style="text-align: center; padding: 30px; color: var(--text-secondary);">
+          <span>⏳</span> Yükleniyor...
+        </div>
+      `;
+
+      let dbFeedback = [];
+      let localFeedback = [];
+
+      try {
+        localFeedback = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+      } catch (err) {
+        console.error('Local feedbacks parse error:', err);
+      }
+
+      if (supabaseClient) {
+        try {
+          const { data, error } = await supabaseClient
+            .from('general_feedback')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+          if (!error && data) {
+            dbFeedback = data;
+          }
+        } catch (dbErr) {
+          console.error('Supabase query error in loadAdminFeedback:', dbErr);
+        }
+      }
+
+      // Merge & unique by title/desc/timestamp
+      const merged = [...dbFeedback];
+      localFeedback.forEach(lf => {
+        if (!merged.some(df => df.title === lf.title && df.description === lf.description)) {
+          merged.push(lf);
+        }
+      });
+
+      // Sort by date newest first
+      merged.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      adminFeedbackCache = merged;
+
+      if (merged.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 40px; color: var(--text-secondary); font-weight: 600;">
+            Gelen herhangi bir genel geri bildirim veya hata raporu bulunamadı.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = merged.map((fb, idx) => {
+        const dateStr = new Date(fb.created_at).toLocaleString('tr-TR');
+        const categoryLabel = fb.category === 'bug' ? 'Hata Bildirimi ⚠️' : (fb.category === 'feature' ? 'Öneri/İstek 💡' : 'Diğer 💬');
+        const categoryColor = fb.category === 'bug' ? '#ef4444' : (fb.category === 'feature' ? '#3b82f6' : '#a855f7');
+        const screenshotBtn = fb.screenshot 
+          ? `<button class="btn-admin-view-screenshot" data-index="${idx}" style="padding: 6px 12px; font-size: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); font-weight: 700; cursor: pointer; transition: all 0.2s;">📸 Görseli Aç</button>`
+          : '<span style="font-size: 0.75rem; color: var(--text-secondary);">Ekran Görüntüsü Yok</span>';
+
+        return `
+          <div class="admin-feedback-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 10px; text-align: left; margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+              <div>
+                <span style="font-size: 0.72rem; color: var(--text-secondary); display: block;">${dateStr}</span>
+                <h4 style="margin: 4px 0 0 0; font-size: 1.05rem; font-weight: 800; color: var(--text-primary);">${escapeHtml(fb.title)}</h4>
+              </div>
+              <span style="font-size: 0.7rem; font-weight: 700; color: white; background-color: ${categoryColor}; padding: 3px 8px; border-radius: 20px;">${categoryLabel}</span>
+            </div>
+            
+            <p style="font-size: 0.88rem; color: var(--text-primary); line-height: 1.5; margin: 0; white-space: pre-wrap; word-break: break-word;">${escapeHtml(fb.description)}</p>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--border-color); padding-top: 10px; margin-top: 4px; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 0.78rem; color: var(--text-secondary);">Gönderen: <strong>${escapeHtml(fb.username)}</strong> (${escapeHtml(fb.email || 'E-posta Yok')})</span>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                ${screenshotBtn}
+                <button class="btn-admin-delete-feedback-item" data-index="${idx}" style="padding: 6px 12px; font-size: 0.75rem; border-radius: var(--radius-sm); border: 1px solid #ef4444; background: transparent; color: #ef4444; font-weight: 700; cursor: pointer; transition: all 0.2s;">Sil</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Click event for viewing screenshots
+      container.querySelectorAll('.btn-admin-view-screenshot').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const index = parseInt(btn.dataset.index);
+          const feedback = adminFeedbackCache[index];
+          if (feedback && feedback.screenshot) {
+            showAdminFeedbackScreenshotModal(feedback);
+          }
+        });
+      });
+
+      // Click event for deleting feedback item
+      container.querySelectorAll('.btn-admin-delete-feedback-item').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const index = parseInt(btn.dataset.index);
+          const feedback = adminFeedbackCache[index];
+          if (confirm('Bu geri bildirimi silmek istediğinize emin misiniz?')) {
+            await deleteAdminFeedbackItem(feedback);
+          }
+        });
+      });
+    }
+
+    function showAdminFeedbackScreenshotModal(feedback) {
+      const modal = document.createElement('div');
+      modal.id = 'admin-feedback-screenshot-modal';
+      modal.style = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; box-sizing: border-box;';
+      modal.innerHTML = `
+        <div style="background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-color); width: 100%; max-width: 800px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; position: relative; box-shadow: var(--shadow-lg);">
+          <div style="padding: 16px 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 800; color: var(--text-primary); text-align: left;">📸 Ekran Görüntüsü Önizleme</h3>
+            <button id="btn-close-admin-screenshot-modal" style="background: transparent; border: none; color: var(--text-secondary); font-size: 1.6rem; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; font-weight: bold;">✕</button>
+          </div>
+          <div style="flex: 1; padding: 20px; overflow-y: auto; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.02);">
+            <img src="${feedback.screenshot}" alt="Ekran Görüntüsü" style="max-width: 100%; max-height: 60vh; object-fit: contain; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: block;">
+          </div>
+          <div style="padding: 16px 20px; border-top: 1px solid var(--border-color); text-align: left; font-size: 0.82rem; color: var(--text-secondary); background: var(--bg-body);">
+            Konu: <strong>${escapeHtml(feedback.title)}</strong> (Gönderen: ${escapeHtml(feedback.username)})
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      modal.onclick = (e) => {
+        if (e.target === modal) modal.remove();
+      };
+      document.getElementById('btn-close-admin-screenshot-modal').onclick = () => modal.remove();
+    }
+
+    async function deleteAdminFeedbackItem(feedback) {
+      if (supabaseClient && feedback.id && isNaN(feedback.id)) {
+        try {
+          await supabaseClient
+            .from('general_feedback')
+            .delete()
+            .eq('id', feedback.id);
+        } catch (dbErr) {
+          console.error('Database connection error in feedback delete:', dbErr);
+        }
+      }
+
+      try {
+        let local = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+        local = local.filter(lf => lf.title !== feedback.title || lf.description !== feedback.description);
+        localStorage.setItem('amok_general_feedback', JSON.stringify(local));
+        showToast('Geri bildirim başarıyla silindi. 🗑️', 'success');
+      } catch (err) {
+        console.error('Local feedbacks delete error:', err);
+      }
+
+      loadAdminFeedback();
+    }
+
+    window.loadAdminFeedback = loadAdminFeedback;
+
+    // Attach export / clear event listeners for general feedback admin panel
+    setTimeout(() => {
+      const btnFeedbackExport = document.getElementById('btn-admin-export-feedback');
+      if (btnFeedbackExport) {
+        btnFeedbackExport.onclick = () => {
+          const feedbackData = adminFeedbackCache.length > 0 ? JSON.stringify(adminFeedbackCache, null, 2) : (localStorage.getItem('amok_general_feedback') || '[]');
+          const blob = new Blob([feedbackData], { type: 'application/json' });
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = `amok_general_feedback_${Date.now()}.json`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          showToast('Geri bildirimler başarıyla dışa aktarıldı. 📥', 'success');
+        };
+      }
+
+      const btnFeedbackClear = document.getElementById('btn-admin-clear-feedback');
+      if (btnFeedbackClear) {
+        btnFeedbackClear.onclick = async () => {
+          if (confirm('Tüm geri bildirim kayıtlarını silmek istediğinize emin misiniz? Bu işlem geri alınamaz.')) {
+            if (supabaseClient) {
+              try {
+                const { error } = await supabaseClient
+                  .from('general_feedback')
+                  .delete()
+                  .neq('id', '00000000-0000-0000-0000-000000000000');
+
+                if (!error) {
+                  showToast('Tüm geri bildirimler temizlendi! 🗑️', 'success');
+                } else {
+                  showToast('Silerken veritabanı hatası oluştu!', 'error');
+                }
+              } catch (dbErr) {
+                showToast('Veritabanı bağlantı hatası oluştu!', 'error');
+              }
+            } else {
+              showToast('Tüm geri bildirimler yerel hafızadan temizlendi. 🗑️', 'success');
+            }
+            localStorage.removeItem('amok_general_feedback');
+            loadAdminFeedback();
+          }
+        };
+      }
+    }, 1000);
+
 window.handleFeedbackSubmit = handleFeedbackSubmit;
 
 // Scroll to Top Button (Isolated self-executing function to avoid any earlier runtime errors block registration)
