@@ -10293,7 +10293,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -10304,6 +10304,8 @@ async function renderLeaderboard() {
           if (isUser) userFound = true;
           
           let displayName = item.username;
+          let email = '';
+          let phone = '';
           if (item.profiles) {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
@@ -10311,6 +10313,8 @@ async function renderLeaderboard() {
             if (full) {
               displayName = full;
             }
+            email = item.profiles.email || '';
+            phone = item.profiles.phone || '';
           }
 
           return {
@@ -10318,7 +10322,9 @@ async function renderLeaderboard() {
             xp: item.xp,
             isUser: isUser,
             avatarColor: item.avatar_color || '#B4A7D6',
-            completedLessons: item.completed_lessons || []
+            completedLessons: item.completed_lessons || [],
+            email: email,
+            phone: phone
           };
         });
 
@@ -10330,7 +10336,9 @@ async function renderLeaderboard() {
             xp: state.xp,
             isUser: true,
             avatarColor: state.avatarColor || '#B4A7D6',
-            completedLessons: state.completedLessons || []
+            completedLessons: state.completedLessons || [],
+            email: state.email || '',
+            phone: state.phone || ''
           });
         }
       }
@@ -10342,24 +10350,54 @@ async function renderLeaderboard() {
   if (competitors.length === 0) {
     competitors = [
       ...baseCompetitors,
-      { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true, avatarColor: state.avatarColor || '#B4A7D6', completedLessons: state.completedLessons || [] }
+      { name: (state.username || 'Misafir') + " (Sen)", xp: state.xp, isUser: true, avatarColor: state.avatarColor || '#B4A7D6', completedLessons: state.completedLessons || [], email: '', phone: '' }
     ];
   }
 
-  // Deduplicate by normalized display name (case-insensitive, ignoring spaces/underscores)
-  const seen = new Map();
+  // Deduplicate by email, phone, or normalized display name
+  const seenEmail = new Map();
+  const seenPhone = new Map();
+  const seenName = new Map();
+  const finalCompetitors = [];
+
   for (const c of competitors) {
+    const cleanEmail = c.email ? c.email.trim().toLowerCase() : '';
+    const cleanPhone = c.phone ? c.phone.replace(/\D/g, '') : '';
     const normName = c.name.replace(' (Sen)', '').replace(/[_\s]+/g, ' ').trim().toLowerCase();
-    if (!seen.has(normName)) {
-      seen.set(normName, c);
+
+    // Check if we have seen this person by email, phone, or name
+    let existing = null;
+    if (cleanEmail && seenEmail.has(cleanEmail)) {
+      existing = seenEmail.get(cleanEmail);
+    } else if (cleanPhone && seenPhone.has(cleanPhone)) {
+      existing = seenPhone.get(cleanPhone);
+    } else if (seenName.has(normName)) {
+      existing = seenName.get(normName);
+    }
+
+    if (!existing) {
+      // New unique competitor
+      finalCompetitors.push(c);
+      if (cleanEmail) seenEmail.set(cleanEmail, c);
+      if (cleanPhone) seenPhone.set(cleanPhone, c);
+      seenName.set(normName, c);
     } else {
-      const existing = seen.get(normName);
-      if (c.isUser || (!existing.isUser && c.xp > existing.xp)) {
-        seen.set(normName, c);
+      // Duplicate found. Replace if this one is the current user (to keep "Sen" badge),
+      // or if neither is user, replace if this one has higher XP
+      const replace = c.isUser || (!existing.isUser && c.xp > existing.xp);
+      if (replace) {
+        const idx = finalCompetitors.indexOf(existing);
+        if (idx !== -1) {
+          finalCompetitors[idx] = c;
+        }
+        // Update references in seen maps
+        if (cleanEmail) seenEmail.set(cleanEmail, c);
+        if (cleanPhone) seenPhone.set(cleanPhone, c);
+        seenName.set(normName, c);
       }
     }
   }
-  competitors = Array.from(seen.values());
+  competitors = finalCompetitors;
 
   competitors.sort((a, b) => b.xp - a.xp);
 
