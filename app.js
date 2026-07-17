@@ -2352,13 +2352,22 @@ function saveState(immediate = false) {
             if (error) console.error('Supabase state sync error:', error);
           });
         
-        // Update user last active time in profiles table
+        // Update user profile details in profiles table
+        const profileUpdate = {
+          last_seen_at: new Date().toISOString()
+        };
+        if (state.profilePhoto) {
+          profileUpdate.profile_photo = state.profilePhoto;
+        }
+        const currentFullName = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+        profileUpdate.display_name = state.displayName || currentFullName || state.username;
+
         supabaseClient
           .from('profiles')
-          .update({ last_seen_at: new Date().toISOString() })
+          .update(profileUpdate)
           .eq('username', state.username)
           .then(({ error }) => {
-            if (error) console.error('Supabase profile last_seen_at sync error:', error);
+            if (error) console.error('Supabase profile details sync error:', error);
           });
       };
 
@@ -9221,7 +9230,7 @@ function handleProfilePhotoUpload(file) {
       
       const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
       state.profilePhoto = dataUrl;
-      saveState();
+      saveState(true);
       
       updateTopBar();
       renderProfile();
@@ -9355,7 +9364,7 @@ function showAvatarSelectorModal() {
   document.getElementById('btn-save-avatar').addEventListener('click', () => {
     state.profilePhoto = `avatar:${selectedAvatar}`;
     state.avatarColor = selectedColor;
-    saveState();
+    saveState(true);
     
     updateTopBar();
     renderProfile();
@@ -13026,7 +13035,7 @@ function init() {
             // Fetch profiles
             const { data: dbProfiles, error: profilesError } = await supabaseClient
               .from('profiles')
-              .select('username, email, phone, first_name, last_name, created_at, last_seen_at')
+              .select('username, email, phone, first_name, last_name, created_at, last_seen_at, display_name, profile_photo')
               .order('created_at', { ascending: false });
 
             if (!profilesError && dbProfiles) {
@@ -13109,6 +13118,8 @@ function init() {
             phone: phoneVal,
             firstName: meta.firstName || p.first_name || '',
             lastName: meta.lastName || p.last_name || '',
+            displayName: p.display_name || meta.displayName || '',
+            profilePhoto: p.profile_photo || meta.profilePhoto || '',
             createdAt: createdAt,
             lastSeen: lastSeen,
             xp: st.xp || 0,
@@ -13188,11 +13199,23 @@ function init() {
       }
 
       listEl.innerHTML = filtered.map((user, idx) => {
-        const displayName = (user.firstName || user.lastName)
-          ? `${user.firstName} ${user.lastName}`.trim()
-          : user.username;
-        const subName = (user.firstName || user.lastName) ? `@${user.username}` : '';
+        const displayName = user.displayName || ((user.firstName || user.lastName) ? `${user.firstName} ${user.lastName}`.trim() : '') || user.username;
+        const subName = (displayName !== user.username) ? `@${user.username}` : '';
         const initial = (displayName || '?')[0].toUpperCase();
+
+        let avatarContent = initial;
+        let avatarStyle = `background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);`;
+
+        if (user.profilePhoto) {
+          if (user.profilePhoto.startsWith('avatar:')) {
+            const emoji = user.profilePhoto.split(':')[1];
+            avatarContent = emoji;
+            avatarStyle = `background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #fff;`;
+          } else {
+            avatarContent = `<img src="${user.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+            avatarStyle = `background: transparent; display: flex; align-items: center; justify-content: center;`;
+          }
+        }
 
         const onlineDot = `<span class="online-indicator-dot ${user.isOnline ? 'online' : 'offline'}" style="position: absolute; top: -3px; left: -3px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-card); z-index: 2;"></span>`;
         const newBadge = user.isNew
@@ -13241,8 +13264,8 @@ return `
             <div style="display: flex; align-items: center; gap: 10px; min-width: 180px; flex: 1;">
               <!-- Avatar -->
               <div style="position: relative; flex-shrink: 0;">
-                <div class="${user.isOnline ? 'avatar-online-halo' : ''}" style="width: 36px; height: 36px; border-radius: 50%; background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
-                  ${initial}
+                <div class="${user.isOnline ? 'avatar-online-halo' : ''}" style="width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; ${avatarStyle}">
+                  ${avatarContent}
                 </div>
                 ${onlineDot}
               </div>
