@@ -9600,8 +9600,9 @@ function renderProfile() {
             <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
           </div>
           <div class="profile-user-details">
-            <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px;">
-              ${escapeHtml( (state.firstName || state.lastName) ? `${state.firstName || ''} ${state.lastName || ''}`.trim() : (state.username || 'Kullanıcı') )}
+            <h2 class="profile-username" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span id="profile-display-name-span">${escapeHtml( (state.firstName || state.lastName) ? `${state.firstName || ''} ${state.lastName || ''}`.trim() : (state.username || 'Kullanıcı') )}</span>
+              <button id="btn-profile-edit-name" style="background: transparent; border: none; cursor: pointer; font-size: 0.9rem; padding: 2px 4px; display: inline-flex; align-items: center; justify-content: center; opacity: 0.65; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="İsmini Düzenle">✏️</button>
               ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
             </h2>
             ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
@@ -9725,6 +9726,60 @@ function renderProfile() {
       const file = e.target.files[0];
       if (file) {
         handleProfilePhotoUpload(file);
+      }
+    });
+  }
+
+  // Edit Name listener
+  const editNameBtn = document.getElementById('btn-profile-edit-name');
+  if (editNameBtn) {
+    editNameBtn.addEventListener('click', async () => {
+      const currentName = ((state.firstName || '') + ' ' + (state.lastName || '')).trim() || state.username || '';
+      const newName = prompt('Yeni isminizi girin (Soyisminizi gizlemek için sadece adınızı yazabilirsiniz):', currentName);
+      if (newName === null) return; // Cancelled
+      
+      const nameParts = newName.trim().split(/\s+/);
+      let newFirstName = '';
+      let newLastName = '';
+      if (nameParts.length > 1) {
+        newLastName = nameParts.pop();
+        newFirstName = nameParts.join(' ');
+      } else {
+        newFirstName = nameParts[0] || '';
+      }
+
+      // Update state
+      state.firstName = newFirstName;
+      state.lastName = newLastName;
+      saveState();
+
+      // Update UI elements instantly
+      const displayNameSpan = document.getElementById('profile-display-name-span');
+      if (displayNameSpan) {
+        displayNameSpan.textContent = newName.trim() || state.username || 'Kullanıcı';
+      }
+      
+      const dropdownName = document.getElementById('dropdown-name');
+      if (dropdownName) {
+        dropdownName.textContent = newName.trim() || state.username || 'Kullanıcı';
+      }
+
+      showToast('İsminiz başarıyla güncellendi! 🎉', 'success');
+
+      // Update Supabase profiles table if online
+      if (supabaseClient && !state.isGuest && state.username !== 'Misafir') {
+        try {
+          await supabaseClient
+            .from('profiles')
+            .update({ first_name: newFirstName, last_name: newLastName })
+            .eq('username', state.username);
+            
+          // Refresh leaderboard and social list to reflect changes instantly
+          if (typeof renderLeaderboard === 'function') renderLeaderboard();
+          if (typeof renderSocialList === 'function') renderSocialList();
+        } catch (e) {
+          console.error('Error syncing profiles table update:', e);
+        }
       }
     });
   }
