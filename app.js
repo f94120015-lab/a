@@ -4644,14 +4644,83 @@ function getLessonIllustration(lessonId, unitId) {
       </svg>
     `,
     grammar: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <path d="M8 52C18 48 32 50 32 50C32 50 46 48 56 52V24C46 20 32 22 32 22C32 22 18 20 8 24V52Z" fill="#ffffff" stroke="#FFA0B4" stroke-width="4" stroke-linejoin="round"/>
-        <path d="M32 22V50" stroke="#FFA0B4" stroke-width="4"/>
-        <path d="M14 30H24M14 36H26M14 42H22" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
-        <path d="M50 30H40M50 36H38M50 42H44" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
-        <text x="16" y="16" font-family="sans-serif" font-weight="bold" font-size="12" fill="#F9D053" text-anchor="middle">A</text>
-        <text x="32" y="14" font-family="sans-serif" font-weight="bold" font-size="10" fill="#7EB8F0" text-anchor="middle">ü</text>
-        <text x="48" y="16" font-family="sans-serif" font-weight="bold" font-size="12" fill="#74DB96" text-anchor="middle">?</text>
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon animated-lesson-icon">
+        <style>
+          @keyframes floatBookGrammar {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-3px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+          }
+          @keyframes swayLetterGrammar {
+            0% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-2px) scale(1.1); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
+            100% { transform: translateY(0px) scale(1); }
+          }
+          @keyframes glowPulseGrammar {
+            0% { transform: scale(0.92); opacity: 0.3; }
+            50% { transform: scale(1.08); opacity: 0.7; }
+            100% { transform: scale(0.92); opacity: 0.3; }
+          }
+          .animated-glow-grammar {
+            animation: glowPulseGrammar 2.5s ease-in-out infinite;
+            transform-origin: 32px 36px;
+          }
+          .animated-book-grammar {
+            animation: floatBookGrammar 3s ease-in-out infinite;
+            transform-origin: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .animated-letter-g1 {
+            animation: swayLetterGrammar 2.4s ease-in-out infinite;
+            transform-origin: 16px 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .animated-letter-g2 {
+            animation: swayLetterGrammar 2.8s ease-in-out infinite 0.4s;
+            transform-origin: 32px 14px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .animated-letter-g3 {
+            animation: swayLetterGrammar 2.6s ease-in-out infinite 0.2s;
+            transform-origin: 48px 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          /* Hover effects mapped to parent button hover */
+          .lesson-node:hover .animated-book-grammar {
+            transform: scale(1.08) translateY(-2px);
+          }
+          .lesson-node:hover .animated-letter-g1 {
+            animation: none;
+            transform: translateY(-8px) scale(1.3) rotate(-15deg);
+            fill: #f59e0b !important;
+          }
+          .lesson-node:hover .animated-letter-g2 {
+            animation: none;
+            transform: translateY(-12px) scale(1.4);
+            fill: #3b82f6 !important;
+          }
+          .lesson-node:hover .animated-letter-g3 {
+            animation: none;
+            transform: translateY(-8px) scale(1.3) rotate(15deg);
+            fill: #10b981 !important;
+          }
+        </style>
+        <circle cx="32" cy="36" r="22" fill="#FFE3E8" class="animated-glow-grammar" opacity="0.4" />
+        <g class="animated-book-grammar">
+          <path d="M8 52C18 48 32 50 32 50C32 50 46 48 56 52V24C46 20 32 22 32 22C32 22 18 20 8 24V52Z" fill="#ffffff" stroke="#FFA0B4" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M32 22V50" stroke="#FFA0B4" stroke-width="4"/>
+          <path d="M14 30H24M14 36H26M14 42H22" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
+          <path d="M50 30H40M50 36H38M50 42H44" stroke="#FFE3E8" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <g class="animated-letter-g1">
+          <text x="16" y="16" font-family="'Outfit', sans-serif" font-weight="900" font-size="13" fill="#F9D053" text-anchor="middle">A</text>
+        </g>
+        <g class="animated-letter-g2">
+          <text x="32" y="14" font-family="'Outfit', sans-serif" font-weight="900" font-size="11" fill="#7EB8F0" text-anchor="middle">ü</text>
+        </g>
+        <g class="animated-letter-g3">
+          <text x="48" y="16" font-family="'Outfit', sans-serif" font-weight="900" font-size="13" fill="#74DB96" text-anchor="middle">?</text>
+        </g>
       </svg>
     `,
     train: `
