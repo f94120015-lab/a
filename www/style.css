@@ -8459,19 +8459,19 @@ input:checked + .slider:before {
 
 /* Çevrimiçi Kullanıcı Premium Işık Halkası (Online Glow Halo) */
 .avatar-online-halo {
-  box-shadow: 0 0 0 2px #22c55e, 0 0 10px rgba(34, 197, 94, 0.75) !important;
+  box-shadow: 0 0 0 2.5px var(--bg-body), 0 0 0 5px #22c55e, 0 0 10px rgba(34, 197, 94, 0.75) !important;
   animation: online-halo-pulse 2s infinite ease-in-out;
 }
 
 @keyframes online-halo-pulse {
   0% {
-    box-shadow: 0 0 0 1.8px #22c55e, 0 0 5px rgba(34, 197, 94, 0.55) !important;
+    box-shadow: 0 0 0 2.5px var(--bg-body), 0 0 0 4.5px #22c55e, 0 0 5px rgba(34, 197, 94, 0.55) !important;
   }
   50% {
-    box-shadow: 0 0 0 3px #22c55e, 0 0 14px rgba(34, 197, 94, 0.95) !important;
+    box-shadow: 0 0 0 2.5px var(--bg-body), 0 0 0 6px #22c55e, 0 0 14px rgba(34, 197, 94, 0.95) !important;
   }
   100% {
-    box-shadow: 0 0 0 1.8px #22c55e, 0 0 5px rgba(34, 197, 94, 0.55) !important;
+    box-shadow: 0 0 0 2.5px var(--bg-body), 0 0 0 4.5px #22c55e, 0 0 5px rgba(34, 197, 94, 0.55) !important;
   }
 }
 
