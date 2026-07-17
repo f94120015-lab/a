@@ -10346,6 +10346,21 @@ async function renderLeaderboard() {
     ];
   }
 
+  // Deduplicate by normalized display name (case-insensitive, ignoring spaces/underscores)
+  const seen = new Map();
+  for (const c of competitors) {
+    const normName = c.name.replace(' (Sen)', '').replace(/[_\s]+/g, ' ').trim().toLowerCase();
+    if (!seen.has(normName)) {
+      seen.set(normName, c);
+    } else {
+      const existing = seen.get(normName);
+      if (c.isUser || (!existing.isUser && c.xp > existing.xp)) {
+        seen.set(normName, c);
+      }
+    }
+  }
+  competitors = Array.from(seen.values());
+
   competitors.sort((a, b) => b.xp - a.xp);
 
   list.innerHTML = competitors.map((c, index) => {
