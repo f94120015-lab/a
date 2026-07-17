@@ -10036,26 +10036,28 @@ async function renderSocialList() {
 
   let competitors = [];
   const baseCompetitors = [
-    { username: "Ahmet Yılmaz", xp: 450, streak: 5, avatarColor: '#E88A9A' },
-    { username: "Elif Demir", xp: 320, streak: 3, avatarColor: '#B4A7D6' },
-    { username: "Can Kaya", xp: 210, streak: 0, avatarColor: '#F2A871' },
-    { username: "Sarah Connor", xp: 180, streak: 12, avatarColor: '#8BC6A0' },
-    { username: "Melis Şen", xp: 90, streak: 2, avatarColor: '#E8CB6E' }
+    { username: "ahmet_yilmaz", displayName: "Ahmet Yılmaz", xp: 450, streak: 5, avatarColor: '#E88A9A' },
+    { username: "elif_demir", displayName: "Elif Demir", xp: 320, streak: 3, avatarColor: '#B4A7D6' },
+    { username: "can_kaya", displayName: "Can Kaya", xp: 210, streak: 0, avatarColor: '#F2A871' },
+    { username: "sarah_connor", displayName: "Sarah Connor", xp: 180, streak: 12, avatarColor: '#8BC6A0' },
+    { username: "melis_sen", displayName: "Melis Şen", xp: 90, streak: 2, avatarColor: '#E8CB6E' }
   ];
 
   if (supabaseClient) {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo)')
         .order('xp', { ascending: false })
         .limit(50);
 
       if (!error && data && data.length > 0) {
         competitors = data.map(item => {
+          const isUser = item.username === state.username;
           let displayName = item.username;
           let email = '';
           let phone = '';
+          let profilePhoto = '';
           if (item.profiles) {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
@@ -10063,14 +10065,21 @@ async function renderSocialList() {
             displayName = item.profiles.display_name || full || item.username;
             email = item.profiles.email || '';
             phone = item.profiles.phone || '';
+            profilePhoto = item.profiles.profile_photo || '';
+          }
+          if (isUser) {
+            const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+            displayName = state.displayName || localFull || state.username;
           }
           return {
-            username: displayName,
+            username: item.username,
+            displayName: displayName,
             xp: item.xp,
-            avatarColor: item.avatar_color || '#B4A7D6',
-            streak: 0,
+            avatarColor: isUser ? (state.avatarColor || item.avatar_color || '#B4A7D6') : (item.avatar_color || '#B4A7D6'),
+            streak: isUser ? state.streak : 0,
             email: email,
-            phone: phone
+            phone: phone,
+            profilePhoto: profilePhoto
           };
         });
       }
@@ -10086,9 +10095,12 @@ async function renderSocialList() {
 
   // Add self if not present
   const selfUsername = (state.username || 'Misafir');
-  if (!competitors.some(c => c.username === selfUsername || c.username === selfUsername + ' (Sen)')) {
+  if (!competitors.some(c => c.username === selfUsername)) {
+    const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+    const selfDisplayName = state.displayName || localFull || selfUsername;
     competitors.push({
-      username: selfUsername + ' (Sen)',
+      username: selfUsername,
+      displayName: selfDisplayName,
       xp: state.xp,
       avatarColor: state.avatarColor || '#5856D6',
       streak: state.streak,
@@ -10100,13 +10112,22 @@ async function renderSocialList() {
 
   // Mark self
   competitors = competitors.map(c => {
-    if (c.username === selfUsername || c.username === selfUsername + ' (Sen)' || c.isSelf) {
-      return { ...c, isSelf: true, username: selfUsername + ' (Sen)', email: state.email || '', phone: state.phone || '' };
+    if (c.username === selfUsername || c.isSelf) {
+      const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+      const selfDisplayName = state.displayName || localFull || selfUsername;
+      return { 
+        ...c, 
+        isSelf: true, 
+        displayName: selfDisplayName + ' (Sen)', 
+        avatarColor: state.avatarColor || c.avatarColor || '#5856D6', 
+        email: state.email || '', 
+        phone: state.phone || '' 
+      };
     }
     return c;
   });
 
-  // Deduplicate by email, phone, or normalized username
+  // Deduplicate by email, phone, or normalized display name / username
   const seenEmail = new Map();
   const seenPhone = new Map();
   const seenName = new Map();
@@ -10115,7 +10136,7 @@ async function renderSocialList() {
   for (const c of competitors) {
     const cleanEmail = c.email ? c.email.trim().toLowerCase() : '';
     const cleanPhone = c.phone ? c.phone.replace(/\D/g, '') : '';
-    const normName = c.username.replace(' (Sen)', '').replace(/[_\s]+/g, ' ').trim().toLowerCase();
+    const normName = c.displayName.replace(' (Sen)', '').replace(/[_\s]+/g, ' ').trim().toLowerCase();
 
     let existing = null;
     if (cleanEmail && seenEmail.has(cleanEmail)) {
@@ -10159,7 +10180,7 @@ async function renderSocialList() {
 
   contentEl.innerHTML = competitors.map((user, index) => {
     const rank = index + 1;
-    const letter = user.username.charAt(0).toUpperCase();
+    const letter = user.displayName.charAt(0).toUpperCase();
     const isFollowing = state.following && state.following.some(u => u.username === user.username);
     
     let actionBtn = '';
@@ -10177,12 +10198,14 @@ async function renderSocialList() {
     let avatarContent = escapeHtml(letter);
     let avatarStyle = `background-color: ${escapeHtml(user.avatarColor || '#7EC8C8')}; display: flex; align-items: center; justify-content: center; position: relative; width: 44px; height: 44px; border-radius: 50%; color: white; font-weight: bold;`;
     
-    if (user.isSelf && state.profilePhoto) {
-      if (state.profilePhoto.startsWith('avatar:')) {
-        avatarContent = state.profilePhoto.split(':')[1];
-        avatarStyle = `background-color: ${escapeHtml(state.avatarColor || '#5856D6')}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; position: relative; width: 44px; height: 44px; border-radius: 50%; color: white;`;
+    const photo = user.isSelf ? state.profilePhoto : user.profilePhoto;
+    const color = user.isSelf ? (state.avatarColor || '#5856D6') : (user.avatarColor || '#7EC8C8');
+    if (photo) {
+      if (photo.startsWith('avatar:')) {
+        avatarContent = photo.split(':')[1];
+        avatarStyle = `background-color: ${escapeHtml(color)}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; position: relative; width: 44px; height: 44px; border-radius: 50%; color: white;`;
       } else {
-        avatarContent = `<img src="${state.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        avatarContent = `<img src="${photo}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
         avatarStyle = `background-color: transparent; display: flex; align-items: center; justify-content: center; position: relative; width: 44px; height: 44px; border-radius: 50%;`;
       }
     }
@@ -10197,7 +10220,7 @@ async function renderSocialList() {
             ${rankBadgeHtml}
           </div>
           <div class="friend-details" style="display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1;">
-            <span class="friend-name" style="${user.isSelf ? 'font-weight: 800; color: var(--accent-primary);' : 'font-weight: 700; color: var(--text-primary);'} word-break: break-word; line-height: 1.25; display: block; font-size: 0.95rem;">${escapeHtml(user.username)}</span>
+            <span class="friend-name" style="${user.isSelf ? 'font-weight: 800; color: var(--accent-primary);' : 'font-weight: 700; color: var(--text-primary);'} word-break: break-word; line-height: 1.25; display: block; font-size: 0.95rem;">${escapeHtml(user.displayName)}</span>
             <div class="friend-meta" style="display: flex; gap: 6px; font-size: 0.75rem; color: var(--text-secondary); flex-wrap: wrap;">
               <span class="friend-stat">⚡ ${user.xp} Puan</span>
               ${user.streak > 0 ? `<span class="friend-stat">🔥 ${user.streak} Gün</span>` : ''}
@@ -10468,7 +10491,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -10481,6 +10504,7 @@ async function renderLeaderboard() {
           let displayName = item.username;
           let email = '';
           let phone = '';
+          let profilePhoto = '';
           if (item.profiles) {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
@@ -10488,22 +10512,29 @@ async function renderLeaderboard() {
             displayName = item.profiles.display_name || full || item.username;
             email = item.profiles.email || '';
             phone = item.profiles.phone || '';
+            profilePhoto = item.profiles.profile_photo || '';
+          }
+
+          if (isUser) {
+            const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+            displayName = state.displayName || localFull || state.username;
           }
 
           return {
             name: isUser ? `${displayName} (Sen)` : displayName,
             xp: item.xp,
             isUser: isUser,
-            avatarColor: item.avatar_color || '#B4A7D6',
+            avatarColor: isUser ? (state.avatarColor || item.avatar_color || '#B4A7D6') : (item.avatar_color || '#B4A7D6'),
             completedLessons: item.completed_lessons || [],
             email: email,
-            phone: phone
+            phone: phone,
+            profilePhoto: profilePhoto
           };
         });
 
         if (!userFound && state.username && state.username !== 'Misafir') {
-          const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
-          const displayName = full || state.username;
+          const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+          const displayName = state.displayName || localFull || state.username;
           competitors.push({
             name: `${displayName} (Sen)`,
             xp: state.xp,
@@ -10579,13 +10610,28 @@ async function renderLeaderboard() {
     let rankClass = `rank-${rank}`;
     if (rank > 3) rankClass = 'rank-other';
 
+    let avatarContent = (c.name || 'U').replace(' (Sen)', '').charAt(0).toUpperCase();
+    let avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: ${c.avatarColor || '#B4A7D6'}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px; overflow: hidden;`;
+    
+    const photo = c.isUser ? state.profilePhoto : c.profilePhoto;
+    const color = c.isUser ? (state.avatarColor || '#5856D6') : (c.avatarColor || '#B4A7D6');
+    if (photo) {
+      if (photo.startsWith('avatar:')) {
+        avatarContent = photo.split(':')[1];
+        avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: ${color}; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px;`;
+      } else {
+        avatarContent = `<img src="${photo}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center;`;
+      }
+    }
+
     return `
       <tr class="leaderboard-row ${c.isUser ? 'user-row' : ''} ${rankClass}">
         <td><span class="rank-badge">${rank}</span></td>
         <td>
           <div style="display: flex; align-items: center; gap: 8px;">
-            <div style="width: 24px; height: 24px; border-radius: 50%; background: ${c.avatarColor || '#B4A7D6'}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px;">
-              ${(c.name || 'U').charAt(0).toUpperCase()}
+            <div style="${avatarStyle}">
+              ${avatarContent}
             </div>
             <div style="display: flex; flex-direction: column;">
               <span style="font-weight: 600;">${escapeHtml(c.name)}</span>
