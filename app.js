@@ -9920,24 +9920,30 @@ async function renderSocialList() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone)')
         .order('xp', { ascending: false })
         .limit(50);
 
       if (!error && data && data.length > 0) {
         competitors = data.map(item => {
           let displayName = item.username;
+          let email = '';
+          let phone = '';
           if (item.profiles) {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
             const full = `${fName} ${lName}`.trim();
             if (full) displayName = full;
+            email = item.profiles.email || '';
+            phone = item.profiles.phone || '';
           }
           return {
             username: displayName,
             xp: item.xp,
             avatarColor: item.avatar_color || '#B4A7D6',
-            streak: 0
+            streak: 0,
+            email: email,
+            phone: phone
           };
         });
       }
@@ -9948,7 +9954,7 @@ async function renderSocialList() {
 
   // Fallback
   if (competitors.length === 0) {
-    competitors = [...baseCompetitors];
+    competitors = baseCompetitors.map(c => ({ ...c, email: '', phone: '' }));
   }
 
   // Add self if not present
@@ -9959,17 +9965,59 @@ async function renderSocialList() {
       xp: state.xp,
       avatarColor: state.avatarColor || '#5856D6',
       streak: state.streak,
-      isSelf: true
+      isSelf: true,
+      email: state.email || '',
+      phone: state.phone || ''
     });
   }
 
   // Mark self
   competitors = competitors.map(c => {
-    if (c.username === selfUsername || c.username === selfUsername + ' (Sen)') {
-      return { ...c, isSelf: true, username: selfUsername + ' (Sen)' };
+    if (c.username === selfUsername || c.username === selfUsername + ' (Sen)' || c.isSelf) {
+      return { ...c, isSelf: true, username: selfUsername + ' (Sen)', email: state.email || '', phone: state.phone || '' };
     }
     return c;
   });
+
+  // Deduplicate by email, phone, or normalized username
+  const seenEmail = new Map();
+  const seenPhone = new Map();
+  const seenName = new Map();
+  const finalCompetitors = [];
+
+  for (const c of competitors) {
+    const cleanEmail = c.email ? c.email.trim().toLowerCase() : '';
+    const cleanPhone = c.phone ? c.phone.replace(/\D/g, '') : '';
+    const normName = c.username.replace(' (Sen)', '').replace(/[_\s]+/g, ' ').trim().toLowerCase();
+
+    let existing = null;
+    if (cleanEmail && seenEmail.has(cleanEmail)) {
+      existing = seenEmail.get(cleanEmail);
+    } else if (cleanPhone && seenPhone.has(cleanPhone)) {
+      existing = seenPhone.get(cleanPhone);
+    } else if (seenName.has(normName)) {
+      existing = seenName.get(normName);
+    }
+
+    if (!existing) {
+      finalCompetitors.push(c);
+      if (cleanEmail) seenEmail.set(cleanEmail, c);
+      if (cleanPhone) seenPhone.set(cleanPhone, c);
+      seenName.set(normName, c);
+    } else {
+      const replace = c.isSelf || (!existing.isSelf && c.xp > existing.xp);
+      if (replace) {
+        const idx = finalCompetitors.indexOf(existing);
+        if (idx !== -1) {
+          finalCompetitors[idx] = c;
+        }
+        if (cleanEmail) seenEmail.set(cleanEmail, c);
+        if (cleanPhone) seenPhone.set(cleanPhone, c);
+        seenName.set(normName, c);
+      }
+    }
+  }
+  competitors = finalCompetitors;
 
   // Sort by XP
   competitors.sort((a, b) => b.xp - a.xp);
