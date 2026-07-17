@@ -8448,4 +8448,14 @@ input:checked + .slider:before {
   background: rgba(16, 185, 129, 0.15) !important;
 }
 
+/* Müfredat Kopyalama Koruması - Bulanıklaştırma (Blur) Efekti */
+.label-blur-mask {
+  filter: blur(5.5px) !important;
+  opacity: 0.38 !important;
+  user-select: none !important;
+  pointer-events: none !important;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+
 

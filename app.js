@@ -4974,7 +4974,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
         ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
         ${progressBadgeContent}
       </button>
-      <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'}">
+      <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'} ${isLocked ? 'label-blur-mask' : ''}">
         <strong>${lesson.title}</strong>
         <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
         ${lessonOriginalTagHTML}
