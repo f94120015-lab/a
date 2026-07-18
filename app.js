@@ -5168,6 +5168,30 @@ function renderLessonTree() {
       `;
     }
 
+    let localTypesBadgeHTML = '';
+    if (checkIsLocal()) {
+      const qTypes = new Set();
+      unit.lessons.forEach(lId => {
+        const l = lessons.find(lesson => lesson.id === lId);
+        if (l) {
+          const qs = getLessonQuestions(l);
+          qs.forEach(q => {
+            if (q && q.type) {
+              qTypes.add(q.type);
+            }
+          });
+        }
+      });
+      if (qTypes.size > 0) {
+        const typesStr = Array.from(qTypes).join(',');
+        localTypesBadgeHTML = `
+          <span class="unit-banner-types-tag" style="cursor: pointer;" onclick="event.stopPropagation(); window.showQuestionTypesModal('${unitDisplayNames[unit.id].replace(/'/g, "\\'")}', '${typesStr}'.split(','))">
+            ${qTypes.size} Soru Tipi
+          </span>
+        `;
+      }
+    }
+
     const unitSection = document.createElement('div');
     unitSection.className = 'unit-section';
     unitSection.dataset.unitId = unit.id;
@@ -5186,6 +5210,7 @@ function renderLessonTree() {
           ${notUploadedBadgeHTML}
           ${originalBadgeHTML}
           ${extraBadgeHTML}
+          ${localTypesBadgeHTML}
         </h2>
         ${descHTML}
       </div>
@@ -5214,6 +5239,93 @@ function renderLessonTree() {
     container.appendChild(unitSection);
 
     observer.observe(unitSection);
+  });
+}
+
+function getQuestionTypeLabel(type) {
+  switch (type) {
+    case 'multiple-choice':
+    case 'vector-velocity-shift':
+    case 'titan-boundary-defense':
+    case 'vagon-to-suffix-match':
+    case 'reverse-engineering-translation':
+    case 'suffix-decapitation':
+      return "Çoktan Seçmeli";
+    case 'fill-blank-dropdown':
+      return "Açılır Menü Boşluk Doldurma";
+    case 'fill-blank':
+      return "Butonlu Boşluk Doldurma";
+    case 'vector-assembly':
+      return "Öğe Sıralama (vector-assembly)";
+    case 'fill-blank-text':
+      return "Yazılı Boşluk Doldurma";
+    case 'word-bank':
+      return "Kelime Sıralama (Sözcük Kutusu)";
+    case 'translation-text':
+      return "Yazılı Çeviri";
+    case 'matching':
+      return "Eşleştirme";
+    case 'multiple-fill-blank':
+      return "Çoklu Boşluk Doldurma";
+    case 'true-false':
+      return "Doğru / Yanlış";
+    case 'spotlight':
+      return "Spotlight Seçimi";
+    case 'swipe-question':
+      return "Kaydırarak Seçim";
+    case 'preposition-magnet':
+      return "Preposition Magnet";
+    case 'collocation-matching':
+      return "Collocation Eşleştirme";
+    default:
+      return type;
+  }
+}
+
+window.showQuestionTypesModal = showQuestionTypesModal;
+function showQuestionTypesModal(title, typesList) {
+  const modal = document.createElement('div');
+  modal.className = 'custom-modal-overlay';
+  modal.id = 'types-list-modal';
+  
+  const typesHtml = typesList.map(type => {
+    const label = getQuestionTypeLabel(type);
+    return `
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 8px 12px; font-weight: 600; color: var(--text-primary); font-size: 0.82rem; display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-primary, #8B7EC8); flex-shrink: 0;"></span>
+        <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${escapeHtml(label)}">${escapeHtml(label)}</span>
+        <span style="font-size: 0.68rem; color: var(--text-muted); font-family: monospace; margin-left: auto; flex-shrink: 0;">(${escapeHtml(type)})</span>
+      </div>
+    `;
+  }).join('');
+
+  modal.innerHTML = `
+    <div class="custom-modal" style="max-width: 680px; width: 90%;">
+      <div class="custom-modal-header">
+        <h3>ℹ️ Bölüm Soru Tipleri</h3>
+        <button class="modal-close-btn" id="btn-close-types-modal">&times;</button>
+      </div>
+      <div class="custom-modal-body" style="padding: 20px 24px;">
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+          <strong>${escapeHtml(title)}</strong> bünyesinde yer alan toplam <strong>${typesList.length}</strong> farklı soru tipi aşağıda listelenmiştir:
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px;">
+          ${typesHtml}
+        </div>
+      </div>
+      <div class="custom-modal-footer">
+        <button class="btn btn-secondary" id="btn-close-types-modal-footer" style="width: 100%;">Kapat</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const close = () => modal.remove();
+  document.getElementById('btn-close-types-modal').addEventListener('click', close);
+  document.getElementById('btn-close-types-modal-footer').addEventListener('click', close);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) close();
   });
 }
 
@@ -8549,7 +8661,7 @@ function checkAnswer() {
   }
 
   // Intercept if translation exists, primary is correct, type is fill-blank, and translation gate hasn't been triggered yet
-  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;

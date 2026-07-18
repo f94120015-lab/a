@@ -516,4 +516,380 @@
     }
   });
 
+  // ==========================================
+  // BÖLÜM 28 DERS 4 ("The fact that") YENİ SORU TİPLERİ ENTEGRASYONU
+  // ==========================================
+  const u28_l4_ex4_questions = [
+    // 1. structure-match (Yapısal Bileşen Eşleştirme)
+    {
+      id: "u28l91_ex4_sm1",
+      type: "structure-match",
+      prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+      sentence: "<strong>The fact that constituent sectors fluctuate</strong> disrupts global trade.",
+      options: ["İsim cümleciği öznesi (Subordinate Clause Subject)", "Ana cümlenin yüklemi (Main Verb)", "Ana cümlenin nesnesi (Main Object)", "Niteleyici sıfat (Adjective)"],
+      correctIndex: 0,
+      translation: "Bileşen sektörlerin dalgalandığı gerçeği küresel ticareti aksatır."
+    },
+    {
+      id: "u28l91_ex4_sm2",
+      type: "structure-match",
+      prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+      sentence: "The fact that unconstitutional regimes collapse <strong>modifies</strong> regional politics.",
+      options: ["Ana cümlenin yüklemi (Main Verb)", "İsim cümleciği içindeki yüklem (Subordinate Verb)", "Cümlenin öznesi (Subject)", "Niteleyici sıfat (Adjective)"],
+      correctIndex: 0,
+      translation: "Anayasaya aykırı rejimlerin çöktüğü gerçeği bölgesel politikaları şekillendirir."
+    },
+    {
+      id: "u28l91_ex4_sm3",
+      type: "structure-match",
+      prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+      sentence: "The fact that environmental boundaries contract <strong>isolates</strong> rare species.",
+      options: ["Ana cümlenin yüklemi (Main Verb)", "İsim cümleciği içindeki yüklem (Subordinate Verb)", "Özne (Subject)", "Zarf (Adverb)"],
+      correctIndex: 0,
+      translation: "Çevresel sınırların daraldığı gerçeği nadir türleri izole eder."
+    },
+    {
+      id: "u28l91_ex4_sm4",
+      type: "structure-match",
+      prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+      sentence: "The fact that dynamic parameters shift alters <strong>the simulation</strong>.",
+      options: ["Ana cümlenin nesnesi (Main Object)", "İsim cümleciği öznesi (Subordinate Subject)", "Ana yüklem (Main Verb)", "Sıfat (Adjective)"],
+      correctIndex: 0,
+      translation: "Dinamik parametrelerin değişmesi simülasyonu değiştirir."
+    },
+    {
+      id: "u28l91_ex4_sm5",
+      type: "structure-match",
+      prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+      sentence: "The fact that arbitrary criteria <strong>induce</strong> errors invalidates the report.",
+      options: ["İsim cümleciği içindeki yüklem (Subordinate Verb)", "Ana cümlenin yüklemi (Main Verb)", "Zarf (Adverb)", "İsim (Noun)"],
+      correctIndex: 0,
+      translation: "Keyfi kriterlerin hatalara yol açtığı gerçeği raporu geçersiz kılar."
+    },
+
+    // 2. spotlight (Projektör Modu)
+    {
+      id: "u28l91_ex4_sl1",
+      type: "spotlight",
+      prompt: "Projektörle aydınlatılan 'fluctuate' kelimesinin cümledeki rolü nedir?",
+      paragraph: "The fact that constituent sectors fluctuate disrupts global trade.",
+      highlightChunk: "fluctuate",
+      options: ["İsim cümleciğinin içindeki fiil (Subordinate Verb)", "Ana cümlenin yüklemi (Main Verb)", "Özne (Subject)", "Zarf (Adverb)"],
+      correctIndex: 0,
+      translation: "Bileşen sektörlerin dalgalandığı gerçeği küresel ticareti aksatır."
+    },
+    {
+      id: "u28l91_ex4_sl2",
+      type: "spotlight",
+      prompt: "Projektörle aydınlatılan 'modifies' kelimesinin cümledeki görevi nedir?",
+      paragraph: "The fact that unconstitutional regimes collapse modifies regional politics.",
+      highlightChunk: "modifies",
+      options: ["Ana cümlenin yüklemi (Main Verb)", "İsim cümleciğinin içindeki fiil (Subordinate Verb)", "Özne (Subject)", "Sıfat (Adjective)"],
+      correctIndex: 0,
+      translation: "Anayasaya aykırı rejimlerin çöktüğü gerçeği bölgesel politikaları şekillendirir."
+    },
+    {
+      id: "u28l91_ex4_sl3",
+      type: "spotlight",
+      prompt: "Projektörle aydınlatılan 'methodologies' kelimesinin cümledeki görevi nedir?",
+      paragraph: "The fact that analytical methodologies vary creates validation anomalies.",
+      highlightChunk: "methodologies",
+      options: ["İsim cümleciği içindeki özne (Subordinate Subject)", "Ana cümlenin öznesi (Main Subject)", "Nesne (Object)", "Sıfat (Adjective)"],
+      correctIndex: 0,
+      translation: "Analitik metodolojilerin farklılık gösterdiği gerçeği doğrulama anomalileri yaratır."
+    },
+    {
+      id: "u28l91_ex4_sl4",
+      type: "spotlight",
+      prompt: "Projektörle aydınlatılan 'isolates' kelimesinin cümledeki rolü nedir?",
+      paragraph: "The fact that environmental boundaries contract isolates rare species.",
+      highlightChunk: "isolates",
+      options: ["Ana cümlenin yüklemi (Main Verb)", "İsim cümleciği içindeki fiil (Subordinate Verb)", "Cümlenin öznesi (Subject)", "Nesne (Object)"],
+      correctIndex: 0,
+      translation: "Çevresel sınırların daraldığı gerçeği nadir türleri izole eder."
+    },
+    {
+      id: "u28l91_ex4_sl5",
+      type: "spotlight",
+      prompt: "Projektörle aydınlatılan 'errors' kelimesinin cümledeki rolü nedir?",
+      paragraph: "The fact that arbitrary criteria induce errors invalidates the report.",
+      highlightChunk: "errors",
+      options: ["İsim cümleciği içindeki nesne (Subordinate Object)", "Ana cümlenin nesnesi (Main Object)", "Ana yüklem (Main Verb)", "Özne (Subject)"],
+      correctIndex: 0,
+      translation: "Keyfi kriterlerin hatalara yol açtığı gerçeği raporu geçersiz kılar."
+    },
+
+    // 3. true-false (Doğru/Yanlış)
+    {
+      id: "u28l91_ex4_tf1",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+      englishPhrase: "The fact that constituent sectors fluctuate is disrupts global trade.",
+      turkishTranslation: "Hata tespiti: 'is' ve 'disrupts' çift ana fiil oluşturmaktadır.",
+      correctAnswer: "false"
+    },
+    {
+      id: "u28l91_ex4_tf2",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+      englishPhrase: "The fact that environmental boundaries contract isolates rare species.",
+      turkishTranslation: "Açıklama: Noun clause özne konumundadır ve tekil fiil (isolates) almıştır.",
+      correctAnswer: "true"
+    },
+    {
+      id: "u28l91_ex4_tf3",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin Türkçe çevirisi doğru mudur?",
+      englishPhrase: "The fact that unconstitutional regimes collapse modifies regional politics.",
+      turkishTranslation: "Anayasaya aykırı rejimlerin çökmesi bölgesel politikaları değiştirir/şekillendirir.",
+      correctAnswer: "true"
+    },
+    {
+      id: "u28l91_ex4_tf4",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin Türkçe çevirisi doğru mudur?",
+      englishPhrase: "The fact that dynamic parameters shift alters the simulation.",
+      turkishTranslation: "Dinamik parametrelerin sabit kalması simülasyonu değiştirir.",
+      correctAnswer: "false"
+    },
+    {
+      id: "u28l91_ex4_tf5",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+      englishPhrase: "Despite the fact that constituent sectors fluctuate, global trade is disrupted.",
+      turkishTranslation: "Açıklama: 'Despite the fact that' kendisinden sonra tam cümle (SVO) alır.",
+      correctAnswer: "true"
+    },
+
+    // 4. multiple-fill-blank (Çoklu Boşluk Doldurma)
+    {
+      id: "u28l91_ex4_mfb1",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "___ constituent sectors fluctuate ___ global trade.",
+      corrects: ["The fact that", "disrupts"],
+      translation: "Bileşen sektörlerin dalgalandığı gerçeği küresel ticareti aksatır."
+    },
+    {
+      id: "u28l91_ex4_mfb2",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "___ analytical methodologies vary ___ validation anomalies.",
+      corrects: ["The fact that", "creates"],
+      translation: "Analitik metodolojilerin farklılık gösterdiği gerçeği doğrulama anomalileri yaratır."
+    },
+    {
+      id: "u28l91_ex4_mfb3",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "___ unconstitutional regimes collapse ___ regional politics.",
+      corrects: ["The fact that", "modifies"],
+      translation: "Anayasaya aykırı rejimlerin çöktüğü gerçeği bölgesel politikaları değiştirir/şekillendirir."
+    },
+    {
+      id: "u28l91_ex4_mfb4",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "___ dynamic parameters shift ___ the simulation.",
+      corrects: ["The fact that", "alters"],
+      translation: "Dinamik parametrelerin değişmesi simülasyonu değiştirir."
+    },
+    {
+      id: "u28l91_ex4_mfb5",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "___ automated procedures minimize latency ___ performance.",
+      corrects: ["The fact that", "boosts"],
+      translation: "Otomatik prosedürlerin gecikmeyi en aza indirmesi performansı artırır."
+    }
+  ];
+
+  const lesson91 = lessons.find(l => l.id === 91);
+  if (lesson91 && lesson91.exercises) {
+    // 4. alıştırma (İlk 10 Soru)
+    lesson91.exercises.push({
+      id: "u28l91ex4",
+      createdAt: "2026-07-18T17:54:00Z",
+      title: "Alıştırma 4: İnteraktif Hata ve Yapı Analizi — Kısım I",
+      description: "Yeni soru tipleriyle (structure-match, spotlight, true-false, multiple-fill-blank) karma pekiştirme (İlk 10 Soru).",
+      questions: u28_l4_ex4_questions.slice(0, 10)
+    });
+
+    // 5. alıştırma (Son 10 Soru)
+    lesson91.exercises.push({
+      id: "u28l91ex5",
+      createdAt: "2026-07-18T18:02:00Z",
+      title: "Alıştırma 5: İnteraktif Hata ve Yapı Analizi — Kısım II",
+      description: "Yeni soru tipleriyle (structure-match, spotlight, true-false, multiple-fill-blank) karma pekiştirme (Son 10 Soru).",
+      questions: u28_l4_ex4_questions.slice(10, 20)
+    });
+  }
+
+  // ==========================================
+  // BÖLÜM 29 DERS 1 VE DERS 2 SORU DÖNÜŞÜM ALGORİTMASI
+  // ==========================================
+  function getSentenceDetails(q) {
+    let en = "";
+    let tr = "";
+    if (q.type === "multiple-choice") {
+      en = q.enSentence || "";
+      tr = q.options ? q.options[q.correctIndex] : "";
+    } else if (q.type === "fill-blank-dropdown" || q.type === "fill-blank") {
+      const correctVal = q.options ? q.options[q.correctIndex] : "";
+      en = q.sentence ? q.sentence.replace("___", correctVal) : "";
+      tr = q.translation || "";
+    } else if (q.type === "word-bank") {
+      en = q.enSentence || "";
+      tr = q.translation || "";
+    } else if (q.type === "translation-text") {
+      en = q.enSentence || "";
+      tr = q.correctSentence || "";
+    }
+    en = en.replace(/<[^>]+>/g, "");
+    tr = tr.replace(/<[^>]+>/g, "");
+    return { en, tr };
+  }
+
+  const targetLessons = [92, 93];
+  targetLessons.forEach(lId => {
+    const lesson = lessons.find(l => l.id === lId);
+    if (lesson && lesson.exercises) {
+      lesson.exercises.forEach(ex => {
+        if (ex.questions && ex.questions.length > 0) {
+          const mc = ex.questions.filter(q => q.type === "multiple-choice");
+          const fbd = ex.questions.filter(q => q.type === "fill-blank-dropdown");
+          const fb = ex.questions.filter(q => q.type === "fill-blank");
+          const wb = ex.questions.filter(q => q.type === "word-bank");
+          const tx = ex.questions.filter(q => q.type === "translation-text");
+
+          const kept = [
+            ...mc.slice(0, 2),
+            ...fbd.slice(0, 2),
+            ...fb.slice(0, 2),
+            ...wb.slice(0, 2),
+            ...tx.slice(0, 2)
+          ];
+
+          const removed = [
+            ...mc.slice(2),
+            ...fbd.slice(2),
+            ...fb.slice(2),
+            ...wb.slice(2),
+            ...tx.slice(2)
+          ];
+
+          const generated = removed.map((q, index) => {
+            const details = getSentenceDetails(q);
+            const typeSelector = index % 4;
+
+            if (typeSelector === 0) {
+              // structure-match
+              const isLesson2 = details.en.includes(" to ");
+              let bolded = details.en;
+              let correctOption = "";
+              let options = [];
+              if (isLesson2) {
+                bolded = details.en.replace(/to \w+/, match => `<strong>${match}</strong>`);
+                correctOption = "Mastar köprüsü (Infinitive Linker)";
+                options = ["Mastar köprüsü (Infinitive Linker)", "İsim cümleciği öznesi (Subordinate Subject)", "Ana yüklem (Main Verb)", "Nesne (Object)"];
+              } else {
+                bolded = details.en.replace(/It is \w+|It was \w+|It had been \w+|It should be \w+|It must be \w+/, match => `<strong>${match}</strong>`);
+                correctOption = "Kişisiz Giriş Yapısı (Impersonal Introduction)";
+                options = ["Kişisiz Giriş Yapısı (Impersonal Introduction)", "Zarf öbeği (Adverbial Phrase)", "Asıl Yüklem (Main Verb)", "İlgi Zamiri (Relative Pronoun)"];
+              }
+              return {
+                id: q.id + "_new_sm",
+                type: "structure-match",
+                prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+                sentence: bolded,
+                options: options,
+                correctIndex: options.indexOf(correctOption),
+                translation: details.tr
+              };
+            } else if (typeSelector === 1) {
+              // spotlight
+              const words = details.en.split(" ");
+              let highlight = "";
+              if (words[0] && words[0].toLowerCase() === "it" && words[2]) {
+                if (words[1].toLowerCase() === "has" && words[2].toLowerCase() === "been" && words[3]) {
+                  highlight = words[3];
+                } else {
+                  highlight = words[2];
+                }
+              }
+              highlight = highlight.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,"");
+              if (!highlight) highlight = words[1] || "";
+              
+              return {
+                id: q.id + "_new_sl",
+                type: "spotlight",
+                prompt: `Projektörle aydınlatılan '${highlight}' kelimesinin cümledeki rolü nedir?`,
+                paragraph: details.en,
+                highlightChunk: highlight,
+                options: ["Cümle giriş sıfatı/eylemi (Introductory Adjective/Verb)", "Ana cümlenin nesnesi (Main Object)", "Zarf (Adverb)", "Bağlaç (Conjunction)"],
+                correctIndex: 0,
+                translation: details.tr
+              };
+            } else if (typeSelector === 2) {
+              // true-false
+              const makeBug = index % 2 === 0;
+              let phrase = details.en;
+              let trText = details.tr;
+              let correctAns = "true";
+              if (makeBug) {
+                correctAns = "false";
+                if (phrase.includes("is ")) {
+                  phrase = phrase.replace("is ", "is clearly ");
+                  trText = "Hata tespiti: 'is' yardımcı fiilinden sonra zarf (clearly) yerine sıfat (clear) gelmelidir.";
+                } else if (phrase.includes("was ")) {
+                  phrase = phrase.replace("was ", "was obviously ");
+                  trText = "Hata tespiti: 'was' yardımcı fiilinden sonra zarf yerine sıfat gelmelidir.";
+                } else {
+                  phrase = phrase + " is true";
+                  trText = "Hata tespiti: Cümlede iki ana yüklem oluşmuştur.";
+                }
+              } else {
+                trText = "Açıklama: Kalıp 'It + to be + sıfat/past participle + that' kuralına tamamen uygundur.";
+              }
+              return {
+                id: q.id + "_new_tf",
+                type: "true-false",
+                prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+                englishPhrase: phrase,
+                turkishTranslation: trText,
+                correctAnswer: correctAns
+              };
+            } else {
+              // multiple-fill-blank
+              let sentenceWithGaps = details.en;
+              const correctsList = [];
+              if (sentenceWithGaps.toLowerCase().startsWith("it ")) {
+                sentenceWithGaps = sentenceWithGaps.replace(/^[Ii]t\b/, "___");
+                correctsList.push("It");
+              }
+              if (sentenceWithGaps.includes(" that ")) {
+                sentenceWithGaps = sentenceWithGaps.replace(" that ", " ___ ");
+                correctsList.push("that");
+              } else if (sentenceWithGaps.includes(" to ")) {
+                sentenceWithGaps = sentenceWithGaps.replace(" to ", " ___ ");
+                correctsList.push("to");
+              }
+              return {
+                id: q.id + "_new_mfb",
+                type: "multiple-fill-blank",
+                prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+                sentence: sentenceWithGaps,
+                corrects: correctsList,
+                translation: details.tr
+              };
+            }
+          });
+
+          ex.questions = [...kept, ...generated];
+        }
+      });
+    }
+  });
+
 })();
+
