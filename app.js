@@ -3645,6 +3645,43 @@ function openQuestionPreview(title, questions, parentObj = null) {
   });
 }
 
+window.previewQuestionById = function(lessonId, questionId) {
+  if (typeof lessons === 'undefined') {
+    showToast("Dersler yüklenemedi.", "error");
+    return;
+  }
+  let lesson = null;
+  if (lessonId && lessonId !== 'N/A') {
+    lesson = lessons.find(l => l.id.toString() === lessonId.toString());
+  }
+  
+  let targetQuestion = null;
+  if (lesson) {
+    const qs = getLessonQuestions(lesson);
+    targetQuestion = qs.find(q => q.id === questionId);
+  }
+  
+  if (!targetQuestion) {
+    for (const l of lessons) {
+      const qs = getLessonQuestions(l);
+      const q = qs.find(qi => qi.id === questionId);
+      if (q) {
+        targetQuestion = q;
+        lesson = l;
+        break;
+      }
+    }
+  }
+  
+  if (!targetQuestion) {
+    showToast("İlgili soru bulunamadı. Veritabanından silinmiş veya değiştirilmiş olabilir.", "error");
+    return;
+  }
+  
+  openQuestionPreview(`${lesson ? lesson.id + '. Ders (' + lesson.subtitle + ')' : 'Soru Önizleme'}`, [targetQuestion], lesson);
+};
+
+
 // ============================================================
 // GÜNLÜK GÖREVLER (DAILY TASKS) SİSTEMİ
 // ============================================================
@@ -13516,9 +13553,17 @@ function getReportsHTML() {
         <div class="profile-reports-list" style="max-height: 300px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
           ${reports.map(rep => `
             <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px; font-size: 0.82rem; line-height: 1.4; text-align: left;">
-              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
-                <span>${escapeHtml(rep.lessonTitle)} (ID: ${escapeHtml(rep.questionId)})</span>
-                <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${escapeHtml(rep.timestamp)}</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; flex-wrap: wrap; gap: 6px;">
+                <span>
+                  ${escapeHtml(rep.lessonTitle)} 
+                  <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-secondary);">(ID: ${escapeHtml(rep.questionId)})</span>
+                </span>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent;">
+                    👁️ Önizle
+                  </button>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${escapeHtml(rep.timestamp)}</span>
+                </div>
               </div>
               <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Soru:</strong> <span style="font-style: italic;">${escapeHtml(rep.questionPrompt)}</span></div>
               <div style="margin-bottom: 4px; color: var(--text-secondary);"><strong>Hata Türü:</strong> <span style="background: var(--accent-primary-light); color: var(--accent-primary-hover); padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">${translateErrorType(rep.errorType)}</span></div>
@@ -15727,10 +15772,13 @@ return `
 
         return `
         <div class="report-item" style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; font-size: 0.88rem; line-height: 1.5; text-align: left; position: relative;">
-          <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-            <span style="font-family: var(--font-heading); color: var(--accent-primary); font-size: 0.95rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+            <span style="font-family: var(--font-heading); color: var(--accent-primary); font-size: 0.95rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
               ${escapeHtml(rep.lessonTitle)} 
-              <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-secondary); margin-left: 6px;">(ID: ${escapeHtml(rep.questionId)})</span>
+              <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-secondary);">(ID: ${escapeHtml(rep.questionId)})</span>
+              <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent; display: inline-flex; align-items: center;">
+                👁️ Soruyu Önizle
+              </button>
             </span>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: auto;">${escapeHtml(rep.timestamp)}</span>
             <button class="btn-delete-single-report" data-id="${rep.id}" style="background: transparent; border: none; color: var(--color-wrong); cursor: pointer; font-size: 1.1rem; padding: 0 4px; margin-left: 10px; display: inline-flex; align-items: center;" title="Sil">×</button>
