@@ -10461,15 +10461,14 @@ function getUserCurrentProgress(completedLessons) {
   }
   const completed = completedLessons || [];
   
-  for (const unit of units) {
+  for (let idx = 0; idx < units.length; idx++) {
+    const unit = units[idx];
     if (!unit.lessons || !Array.isArray(unit.lessons)) continue;
     for (let i = 0; i < unit.lessons.length; i++) {
       const lessonId = unit.lessons[i];
       if (!completed.includes(lessonId)) {
         const lessonIndex = i + 1;
-        const unitTitleMatch = unit.title ? unit.title.match(/^\d+\.\s*Bölüm/i) : null;
-        const unitLabel = unitTitleMatch ? unitTitleMatch[0] : `${unit.id}. Bölüm`;
-        return `${unitLabel}, ${lessonIndex}. Ders`;
+        return `${idx + 1}. Bölüm, ${lessonIndex}. Ders`;
       }
     }
   }
@@ -14555,27 +14554,32 @@ return `
           if (!reportId) return;
 
           if (confirm('Bu hata bildirimini silmek istediğinize emin misiniz?')) {
+            // Always delete from local storage
+            let localReps = [];
+            try {
+              localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
+            } catch (err) {
+              console.error(err);
+            }
+            localReps = localReps.filter(r => r.id !== reportId);
+            localStorage.setItem('amok_question_reports', JSON.stringify(localReps));
+
             if (supabaseClient && !reportId.toString().startsWith('rep_')) {
               try {
                 const { error } = await supabaseClient.from('question_reports').delete().eq('id', reportId);
                 if (error) throw error;
-                showToast('Hata bildirimi veritabanından silindi.', 'success');
+                showToast('Hata bildirimi veritabanından ve yerel hafızadan silindi.', 'success');
               } catch (e) {
                 console.error('Supabase delete error:', e);
-                showToast('Bildirim veritabanından silinirken hata oluştu!', 'error');
+                showToast('Yerel kopya silindi ancak veritabanından silinirken hata oluştu!', 'warning');
               }
             } else {
-              let localReps = [];
-              try {
-                localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
-              } catch (err) {
-                console.error(err);
-              }
-              localReps = localReps.filter(r => r.id !== reportId);
-              localStorage.setItem('amok_question_reports', JSON.stringify(localReps));
               showToast('Hata bildirimi yerel hafızadan silindi.', 'success');
             }
             loadAdminReports();
+            if (typeof updateAdminBadgeCount === 'function') {
+              updateAdminBadgeCount();
+            }
           }
         };
       });
@@ -19977,6 +19981,9 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             screenshot: feedbackScreenshotBase64
           };
 
+          payload.id = Date.now().toString();
+          payload.created_at = new Date().toISOString();
+
           let supabaseSuccess = false;
           if (supabaseClient) {
             try {
@@ -20001,8 +20008,6 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
           } catch (e) {
             localFeedbacks = [];
           }
-          payload.id = Date.now().toString();
-          payload.created_at = new Date().toISOString();
           localFeedbacks.push(payload);
           localStorage.setItem('amok_general_feedback', JSON.stringify(localFeedbacks));
 
@@ -20162,12 +20167,26 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
         }
       }
 
-      // Merge & unique by title/desc/timestamp
-      const merged = [...dbFeedback];
+      // Filter out locally deleted feedbacks
+      let deletedIds = [];
+      try {
+        deletedIds = JSON.parse(localStorage.getItem('amok_deleted_feedback_ids') || '[]');
+      } catch (e) {}
+
+      // Merge & unique by id first, fallback to title/description
+      let merged = [...dbFeedback];
       localFeedback.forEach(lf => {
-        if (!merged.some(df => df.title === lf.title && df.description === lf.description)) {
+        if (!merged.some(df => (df.id && lf.id && df.id === lf.id) || (df.title === lf.title && df.description === lf.description))) {
           merged.push(lf);
         }
+      });
+
+      // Filter out any that have been deleted
+      merged = merged.filter(fb => {
+        if (fb.id && deletedIds.includes(fb.id.toString())) {
+          return false;
+        }
+        return true;
       });
 
       // Sort by date newest first
@@ -20265,7 +20284,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
     }
 
     async function deleteAdminFeedbackItem(feedback) {
-      if (supabaseClient && feedback.id && isNaN(feedback.id)) {
+      if (supabaseClient && feedback.id) {
         try {
           await supabaseClient
             .from('general_feedback')
@@ -20277,8 +20296,23 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       }
 
       try {
+        if (feedback.id) {
+          let deletedIds = [];
+          try {
+            deletedIds = JSON.parse(localStorage.getItem('amok_deleted_feedback_ids') || '[]');
+          } catch (e) {}
+          if (!deletedIds.includes(feedback.id.toString())) {
+            deletedIds.push(feedback.id.toString());
+            localStorage.setItem('amok_deleted_feedback_ids', JSON.stringify(deletedIds));
+          }
+        }
+
         let local = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
-        local = local.filter(lf => lf.title !== feedback.title || lf.description !== feedback.description);
+        local = local.filter(lf => {
+          const matchId = (lf.id && feedback.id && lf.id === feedback.id);
+          const matchContent = (lf.title === feedback.title && lf.description === feedback.description);
+          return !(matchId || matchContent);
+        });
         localStorage.setItem('amok_general_feedback', JSON.stringify(local));
         showToast('Geri bildirim başarıyla silindi. 🗑️', 'success');
       } catch (err) {
@@ -20322,7 +20356,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
                   .neq('id', '00000000-0000-0000-0000-000000000000');
 
                 if (!error) {
-                  showToast('Tüm geri bildirimler temizlendi! 🗑️', 'success');
+                  showToast('Tüm geri bildirimler veritabanından temizlendi! 🗑️', 'success');
                 } else {
                   showToast('Silerken veritabanı hatası oluştu!', 'error');
                 }
@@ -20334,6 +20368,9 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             }
             localStorage.removeItem('amok_general_feedback');
             loadAdminFeedback();
+            if (typeof updateAdminBadgeCount === 'function') {
+              updateAdminBadgeCount();
+            }
           }
         };
       }
@@ -20385,7 +20422,12 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             .from('general_feedback')
             .select('id');
           if (!fbsErr && fbs) {
-            feedbackCount = fbs.length;
+            let deletedIds = [];
+            try {
+              deletedIds = JSON.parse(localStorage.getItem('amok_deleted_feedback_ids') || '[]');
+            } catch (e) {}
+            const activeFbs = fbs.filter(fb => fb.id && !deletedIds.includes(fb.id.toString()));
+            feedbackCount = activeFbs.length;
           }
         } catch (e) {
           console.error('Error counting feedback for badge:', e);
@@ -20395,8 +20437,19 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
         try {
           const localReps = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
           const localFbs = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+          
+          let deletedIds = [];
+          try {
+            deletedIds = JSON.parse(localStorage.getItem('amok_deleted_feedback_ids') || '[]');
+          } catch (e) {}
+          
+          const activeFbs = localFbs.filter(fb => {
+            const fbIdStr = fb.id ? fb.id.toString() : '';
+            return fbIdStr && !deletedIds.includes(fbIdStr);
+          });
+
           reportsCount = localReps.length;
-          feedbackCount = localFbs.length;
+          feedbackCount = activeFbs.length;
         } catch (e) {
           console.error('Error calculating local counts for badge:', e);
         }
