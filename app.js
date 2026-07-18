@@ -3150,6 +3150,27 @@ function updateActiveUnitTheme() {
   }
 }
 
+function scrollToActiveUnit(behavior = 'smooth') {
+  const nextLesson = lessons.find(l => !state.completedLessons.includes(l.id));
+  const activeUnitId = nextLesson ? nextLesson.unitId : (units[0] ? units[0].id : null);
+  if (activeUnitId !== null) {
+    ensureUnitRendered(activeUnitId);
+    const unitSection = document.querySelector(`.unit-section[data-unit-id="${activeUnitId}"]`);
+    if (unitSection) {
+      unitSection.scrollIntoView({ behavior: behavior, block: 'start' });
+      homeScreenScrollY = window.scrollY;
+      localStorage.setItem('amok_last_scroll_y', window.scrollY);
+    }
+  }
+}
+
+function ensureUnitRendered(unitId) {
+  const pContainer = document.querySelector(`.unit-section[data-unit-id="${unitId}"] .unit-path-container`);
+  if (pContainer && pContainer.dataset.rendered === "false") {
+    renderUnitPathAndNodes(pContainer, unitId);
+  }
+}
+
 function loadState() {
   const saved = localStorage.getItem(STATE_KEY);
   if (saved) {
@@ -4965,13 +4986,9 @@ function enterApp() {
   switchTab(lastTab);
 
   if (lastScreen === 'home-screen') {
-    const lastScrollY = parseInt(localStorage.getItem('amok_last_scroll_y'), 10);
-    if (!isNaN(lastScrollY) && lastScrollY > 0) {
-      homeScreenScrollY = lastScrollY;
-      requestAnimationFrame(() => {
-        window.scrollTo(0, lastScrollY);
-      });
-    }
+    requestAnimationFrame(() => {
+      scrollToActiveUnit('instant');
+    });
   }
 }
 
@@ -6099,7 +6116,60 @@ function renderLessonTree() {
         </div>
       </div>
     `;
-    unitSection.appendChild(banner);
+    if (checkIsLocal()) {
+      const headerWrapper = document.createElement('div');
+      headerWrapper.className = 'unit-header-wrapper';
+      
+      const noteKey = `amok_unit_note_${unit.id}`;
+      const savedNote = localStorage.getItem(noteKey) || '';
+      
+      const noteBox = document.createElement('div');
+      noteBox.className = 'unit-note-box';
+      noteBox.innerHTML = `
+        <div class="unit-note-title-row">
+          <span>📝 Bölüm Notu</span>
+        </div>
+        <textarea class="unit-note-textarea" placeholder="Bölümle ilgili notlar alın...">${savedNote}</textarea>
+        <div class="unit-note-actions" style="${savedNote ? '' : 'display: none;'}">
+          <button class="unit-note-delete-btn" title="Notu Sil">
+            🗑️ Sil
+          </button>
+        </div>
+      `;
+      
+      const textarea = noteBox.querySelector('.unit-note-textarea');
+      const deleteBtn = noteBox.querySelector('.unit-note-delete-btn');
+      const actionsDiv = noteBox.querySelector('.unit-note-actions');
+      
+      textarea.addEventListener('input', () => {
+        const val = textarea.value.trim();
+        if (val) {
+          localStorage.setItem(noteKey, val);
+          actionsDiv.style.display = 'flex';
+        } else {
+          localStorage.removeItem(noteKey);
+          actionsDiv.style.display = 'none';
+        }
+      });
+      
+      deleteBtn.addEventListener('click', () => {
+        if (confirm('Bu bölüm notunu silmek istediğinize emin misiniz?')) {
+          textarea.value = '';
+          localStorage.removeItem(noteKey);
+          actionsDiv.style.display = 'none';
+        }
+      });
+      
+      noteBox.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+      
+      headerWrapper.appendChild(banner);
+      headerWrapper.appendChild(noteBox);
+      unitSection.appendChild(headerWrapper);
+    } else {
+      unitSection.appendChild(banner);
+    }
 
     banner.addEventListener('mouseenter', () => {
       setUnitTheme(unit.id);
@@ -8390,12 +8460,17 @@ function startTranslationGate(container, question) {
   }
 
   // Make the sentence complete
-  let completedSentence = question.sentence || question.enSentence || question.en || "";
-  if (question.options && question.correctIndex !== undefined) {
-    const correctWord = question.options[question.correctIndex];
-    if (correctWord) {
-      const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
-      completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
+  let completedSentence = "";
+  if (question.type === 'multiple-fill-blank' || question.type === 'error-finder' || question.type === 'true-false') {
+    completedSentence = question.enSentence || question.en || "";
+  } else {
+    completedSentence = question.sentence || question.enSentence || question.en || "";
+    if (question.options && question.correctIndex !== undefined) {
+      const correctWord = question.options[question.correctIndex];
+      if (correctWord) {
+        const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
+        completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
+      }
     }
   }
   completedSentence = makeTextHoverable(completedSentence);
@@ -8570,12 +8645,29 @@ function renderMultipleFillBlank(container, question) {
   const parts = question.sentence.split(/_{3,}/);
   let sentenceHtml = '';
   
+  const hasOptions = Array.isArray(question.options) && question.options.length > 0;
+  
   parts.forEach((part, index) => {
     sentenceHtml += makeTextHoverable(part);
     if (index < parts.length - 1) {
-      sentenceHtml += `<input type="text" class="inline-text-input multi-fb-input" data-index="${index}" autocomplete="off" placeholder="...">`;
+      if (hasOptions) {
+        sentenceHtml += `<span class="inline-text-gap multi-fb-gap" data-index="${index}" style="display: inline-block; min-width: 80px; height: 32px; border-bottom: 2px solid var(--accent-primary); margin: 0 6px; text-align: center; vertical-align: middle; cursor: pointer; color: var(--accent-primary); font-weight: bold; padding: 0 8px; line-height: 32px; transition: background-color 0.2s;">...</span>`;
+      } else {
+        sentenceHtml += `<input type="text" class="inline-text-input multi-fb-input" data-index="${index}" autocomplete="off" placeholder="...">`;
+      }
     }
   });
+
+  let optionsHtml = '';
+  if (hasOptions) {
+    optionsHtml = `
+      <div class="multi-fb-options-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;">
+        ${question.options.map((opt, i) => `
+          <button class="multi-fb-option-chip" data-val="${opt}" style="background: var(--bg-card); border: 1.5px solid var(--border-color); border-radius: var(--radius-md); padding: 8px 16px; font-size: 1rem; color: var(--text-primary); cursor: pointer; transition: all 0.2s; font-weight: bold; font-family: var(--font-heading);">${opt}</button>
+        `).join('')}
+      </div>
+    `;
+  }
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
@@ -8583,23 +8675,109 @@ function renderMultipleFillBlank(container, question) {
     <div style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 2;">
       ${sentenceHtml}
     </div>
+    ${optionsHtml}
   `;
 
-  const inputs = container.querySelectorAll('.multi-fb-input');
-  if (inputs.length > 0) {
-    setTimeout(() => inputs[0].focus(), 100);
-  }
+  if (hasOptions) {
+    const gaps = container.querySelectorAll('.multi-fb-gap');
+    const chips = container.querySelectorAll('.multi-fb-option-chip');
+    let activeGapIndex = 0;
+    
+    const updateGapHighlights = () => {
+      gaps.forEach((g, idx) => {
+        if (idx === activeGapIndex) {
+          g.style.borderBottomColor = 'var(--accent-primary)';
+          g.style.backgroundColor = 'rgba(139, 126, 200, 0.15)';
+        } else {
+          g.style.borderBottomColor = 'var(--border-color)';
+          g.style.backgroundColor = 'transparent';
+        }
+      });
+    };
+    updateGapHighlights();
 
-  inputs.forEach(input => {
-    input.addEventListener('input', () => {
-      if (isAnswerChecked) return;
-      
-      const allFilled = Array.from(inputs).every(inp => inp.value.trim().length > 0);
-      document.getElementById('btn-check').disabled = !allFilled;
-      
-      selectedAnswer = Array.from(inputs).map(inp => inp.value.trim());
+    gaps.forEach(gap => {
+      gap.addEventListener('click', () => {
+        if (isAnswerChecked) return;
+        const idx = parseInt(gap.dataset.index);
+        activeGapIndex = idx;
+        
+        const val = gap.textContent.trim();
+        if (val !== '...') {
+          gap.textContent = '...';
+          chips.forEach(chip => {
+            if (chip.dataset.val === val) {
+              chip.disabled = false;
+              chip.style.opacity = '1';
+              chip.style.pointerEvents = 'auto';
+            }
+          });
+          selectedAnswer = Array.from(gaps).map(g => g.textContent.trim() === '...' ? '' : g.textContent.trim());
+          document.getElementById('btn-check').disabled = selectedAnswer.some(s => !s);
+        }
+        updateGapHighlights();
+      });
     });
-  });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (isAnswerChecked) return;
+        const val = chip.dataset.val;
+        
+        const targetGap = gaps[activeGapIndex];
+        if (targetGap) {
+          const prevVal = targetGap.textContent.trim();
+          if (prevVal !== '...') {
+            chips.forEach(c => {
+              if (c.dataset.val === prevVal) {
+                c.disabled = false;
+                c.style.opacity = '1';
+                c.style.pointerEvents = 'auto';
+              }
+            });
+          }
+          
+          targetGap.textContent = val;
+          chip.disabled = true;
+          chip.style.opacity = '0.4';
+          chip.style.pointerEvents = 'none';
+          
+          let nextEmptyIdx = -1;
+          for (let i = 0; i < gaps.length; i++) {
+            const nextIdx = (activeGapIndex + 1 + i) % gaps.length;
+            if (gaps[nextIdx].textContent.trim() === '...') {
+              nextEmptyIdx = nextIdx;
+              break;
+            }
+          }
+          if (nextEmptyIdx !== -1) {
+            activeGapIndex = nextEmptyIdx;
+          }
+          
+          updateGapHighlights();
+          
+          selectedAnswer = Array.from(gaps).map(g => g.textContent.trim() === '...' ? '' : g.textContent.trim());
+          document.getElementById('btn-check').disabled = selectedAnswer.some(s => !s);
+        }
+      });
+    });
+  } else {
+    const inputs = container.querySelectorAll('.multi-fb-input');
+    if (inputs.length > 0) {
+      setTimeout(() => inputs[0].focus(), 100);
+    }
+
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        if (isAnswerChecked) return;
+        
+        const allFilled = Array.from(inputs).every(inp => inp.value.trim().length > 0);
+        document.getElementById('btn-check').disabled = !allFilled;
+        
+        selectedAnswer = Array.from(inputs).map(inp => inp.value.trim());
+      });
+    });
+  }
 }
 
 // ── Hız Tüneli (Time-Attack Reflex Blitz - true-false) ──────────
@@ -9564,7 +9742,7 @@ function checkAnswer() {
   }
 
   // Intercept if translation exists, primary is correct, type is fill-blank, and translation gate hasn't been triggered yet
-  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;
@@ -12270,13 +12448,27 @@ function initEventListeners() {
     if (targetLessonId) {
       setTimeout(() => {
         ensureLessonRendered(targetLessonId);
+        const targetLesson = lessons.find(l => l.id === targetLessonId);
+        if (targetLesson) {
+          const unitSection = document.querySelector(`.unit-section[data-unit-id="${targetLesson.unitId}"]`);
+          if (unitSection) {
+            unitSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => {
+              homeScreenScrollY = window.scrollY;
+              localStorage.setItem('amok_last_scroll_y', window.scrollY);
+            }, 600);
+          }
+        }
         const button = document.querySelector(`.lesson-node[data-lesson-id="${targetLessonId}"]`);
         if (button) {
-          button.scrollIntoView({ behavior: 'smooth', block: 'center' });
           setTimeout(() => {
             button.click();
-          }, 350);
+          }, 600);
         }
+      }, 100);
+    } else {
+      setTimeout(() => {
+        scrollToActiveUnit('smooth');
       }, 100);
     }
   });
@@ -16351,6 +16543,16 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     }
   }
 
+  let formulaHtml = '';
+  if (typeof currentLesson !== 'undefined' && currentLesson && currentLesson.formula) {
+    formulaHtml = `
+    <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
+      <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 4px;">🧪 Ders Formülü (Grammar Formula):</span>
+      <code style="color: var(--text-primary); font-family: monospace; font-size: 0.95rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">${currentLesson.formula}</code>
+    </div>
+    `;
+  }
+
   return `
     <div class="grammar-explain-title">${title}</div>
     <p class="grammar-explain-text">${text}</p>
@@ -16364,6 +16566,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       </div>
       ` : ''}
     </div>
+    ${formulaHtml}
     ${question.translation ? `
     <div style="margin-top: 12px; padding: 12px 16px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.16); border-radius: var(--radius-md); font-size: 0.9rem;">
       <span style="font-weight: 700; color: var(--color-correct); display: block; margin-bottom: 4px;">💬 Cümle Çevirisi:</span>
