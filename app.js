@@ -10763,24 +10763,64 @@ function updateLicenceUI() {
   if (profileEmailInput) profileEmailInput.value = state.email || '';
   if (profilePhoneInput) profilePhoneInput.value = state.phone || '';
   
-  const activateBtn = document.getElementById('btn-store-activate-licence');
-  if (activateBtn) {
-    const check = verifyLicenceKey(key);
-    const isPremiumActive = check.valid && (new Date() <= check.expiryDate);
-    if (isPremiumActive) {
-      activateBtn.disabled = true;
-      activateBtn.style.setProperty('background', '#e5e7eb', 'important');
-      activateBtn.style.setProperty('color', '#9ca3af', 'important');
-      activateBtn.style.setProperty('border-color', '#e5e7eb', 'important');
-      activateBtn.style.setProperty('cursor', 'not-allowed', 'important');
-    } else {
-      activateBtn.disabled = false;
-      activateBtn.style.background = "";
-      activateBtn.style.color = "";
-      activateBtn.style.borderColor = "";
-      activateBtn.style.cursor = "";
+  const check = verifyLicenceKey(key);
+  const isExpired = check.valid && (new Date() > check.expiryDate);
+  const isPremiumActive = check.valid && (new Date() <= check.expiryDate);
+
+  const activateBtns = [
+    document.getElementById('btn-store-activate-licence'),
+    document.getElementById('btn-profile-activate-licence')
+  ];
+
+  activateBtns.forEach(activateBtn => {
+    if (activateBtn) {
+      if (isPremiumActive) {
+        activateBtn.disabled = true;
+        activateBtn.style.setProperty('background', '#e5e7eb', 'important');
+        activateBtn.style.setProperty('color', '#9ca3af', 'important');
+        activateBtn.style.setProperty('border-color', '#e5e7eb', 'important');
+        activateBtn.style.setProperty('cursor', 'not-allowed', 'important');
+      } else {
+        activateBtn.disabled = false;
+        activateBtn.style.background = "";
+        activateBtn.style.color = "";
+        activateBtn.style.borderColor = "";
+        activateBtn.style.cursor = "";
+      }
     }
-  }
+  });
+
+  const requestBtns = [
+    document.getElementById('btn-store-request-licence'),
+    document.getElementById('btn-profile-request-licence')
+  ];
+
+  requestBtns.forEach(requestBtn => {
+    if (requestBtn) {
+      if (isPremiumActive) {
+        requestBtn.disabled = true;
+        requestBtn.style.setProperty('background', '#e5e7eb', 'important');
+        requestBtn.style.setProperty('color', '#9ca3af', 'important');
+        requestBtn.style.setProperty('border-color', '#e5e7eb', 'important');
+        requestBtn.style.setProperty('cursor', 'not-allowed', 'important');
+        requestBtn.textContent = 'Lisans Anahtarı Al';
+      } else if (isExpired) {
+        requestBtn.disabled = false;
+        requestBtn.style.background = "";
+        requestBtn.style.color = "";
+        requestBtn.style.borderColor = "";
+        requestBtn.style.cursor = "";
+        requestBtn.textContent = 'Lisansımı Uzat';
+      } else {
+        requestBtn.disabled = false;
+        requestBtn.style.background = "";
+        requestBtn.style.color = "";
+        requestBtn.style.borderColor = "";
+        requestBtn.style.cursor = "";
+        requestBtn.textContent = 'Lisans Anahtarı Al';
+      }
+    }
+  });
 }
 
 async function activateLicence(inputVal) {
@@ -10844,17 +10884,27 @@ async function requestLicence() {
     showToast("Zaten bekleyen bir lisans talebiniz bulunmaktadır.", "info");
     return false;
   }
+  
+  let isExtension = false;
   if (state.licenceKey) {
     const check = verifyLicenceKey(state.licenceKey);
-    if (check.valid && new Date() <= check.expiryDate) {
-      showToast("Zaten aktif bir premium lisansınız var!", "info");
-      return false;
+    if (check.valid) {
+      if (new Date() <= check.expiryDate) {
+        showToast("Zaten aktif bir premium lisansınız var!", "info");
+        return false;
+      } else {
+        isExtension = true;
+      }
     }
   }
   
   state.licenceKey = 'REQUESTED';
   saveState();
-  showToast("Lisans talebiniz başarıyla iletildi! 🎉", "success");
+  if (isExtension) {
+    showToast("Lisans uzatma talebiniz başarıyla iletildi! 🎉", "success");
+  } else {
+    showToast("Lisans talebiniz başarıyla iletildi! 🎉", "success");
+  }
   updateLicenceUI();
   
   if (supabaseClient && state.username) {
@@ -14547,6 +14597,23 @@ function init() {
         filtered = adminUsersCache.filter(u => u.isOnline);
       }
 
+      const searchInput = document.getElementById('admin-users-search-input');
+      const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (searchQuery) {
+        filtered = filtered.filter(u => {
+          const displayName = (u.displayName || ((u.firstName || u.lastName) ? `${u.firstName} ${u.lastName}`.trim() : '') || u.username || '').toLowerCase();
+          const email = (u.email || '').toLowerCase();
+          const phone = (u.phone || '').replace(/\D/g, '');
+          const cleanQuery = searchQuery.replace(/\D/g, '');
+
+          const nameMatches = displayName.includes(searchQuery) || (u.username || '').toLowerCase().includes(searchQuery);
+          const emailMatches = email.includes(searchQuery);
+          const phoneMatches = cleanQuery && phone.includes(cleanQuery);
+
+          return nameMatches || emailMatches || phoneMatches;
+        });
+      }
+
       if (filtered.length === 0) {
         const emptyMsgs = {
           all: { icon: '👥', title: 'Henüz kullanıcı yok', desc: 'Kayıtlı kullanıcı bulunmuyor.' },
@@ -14906,6 +14973,14 @@ return `
         refreshUsersBtn.disabled = false;
         refreshUsersBtn.innerHTML = origHTML;
         showToast('Kullanıcı listesi güncellendi! 🔄', 'success');
+      });
+    }
+
+    // Search Input event listener
+    const searchUsersInput = document.getElementById('admin-users-search-input');
+    if (searchUsersInput) {
+      searchUsersInput.addEventListener('input', () => {
+        renderAdminUsers();
       });
     }
 
