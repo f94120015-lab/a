@@ -1,4 +1,706 @@
 // ============================================================
+// CONSOLIDATED UNIT 7 EXERCISES OVERRIDE (Option A)
+// ============================================================
+if (typeof unitSentencesMap !== 'undefined' && unitSentencesMap["7"] && unitSentencesMap["7"]["1"]) {
+  const consolidatedExercises = [
+    {
+      "id": "u7l20ex1",
+      "title": "Alıştırma 1: Başlangıç Seviyesi — Giriş Yapıları (1)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (1-10)",
+      "questions": [
+        {
+          "id": "u7l20_ex1_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "çelişir", "right": "contradicts" },
+            { "left": "belirler", "right": "specifies" },
+            { "left": "öngörür", "right": "anticipates" },
+            { "left": "savunmak", "right": "advocate" }
+          ]
+        },
+        {
+          "id": "u7l20_ex1_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "tetikler", "right": "triggers" },
+            { "left": "açıklığa kavuşturmak", "right": "clarify" },
+            { "left": "yol açar", "right": "induces" },
+            { "left": "bozar", "right": "distorts" }
+          ]
+        },
+        {
+          "id": "u7l20_ex1_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"Media manipulates perspective.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Medya bakış açısını biriktirir.",
+            "Medya bakış açısını yürüttü.",
+            "Medya açısını bakış manipüle eder .",
+            "Medya bakış açısını manipüle eder."
+          ],
+          "correctIndex": 3,
+          "enSentence": "Media manipulates perspective.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex1_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Sistem genişlemeye uyum sağlar.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The system accommodates expansion.",
+            "Expansion accommodates the system.",
+            "The system defines expansion.",
+            "The system advocate expansion."
+          ],
+          "correctIndex": 0,
+          "enSentence": "The system accommodates expansion.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex1_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The data contradicts the theory.",
+          "words": ["anlaşmaları", "Bağlam", "oranlarını", "çelişir", "teoriyle", "Veriler"],
+          "correctOrder": ["Veriler", "teoriyle", "çelişir"],
+          "enSentence": "The data contradicts the theory.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex1_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The context specifies the criteria.",
+          "words": ["Bağlam", "kriterleri", "veritabanı", "belirler", "uzmanlar", "bulgu"],
+          "correctOrder": ["Bağlam", "kriterleri", "belirler"],
+          "enSentence": "The context specifies the criteria.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex1_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The sector anticipates growth.",
+          "words": ["Sektör", "büyüme", "öngörür", "açısını", "bakış", "tetikler"],
+          "correctOrder": ["Sektör", "büyüme", "öngörür"],
+          "enSentence": "The sector anticipates growth.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex1_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Uzmanlar kapsamı açıklar.",
+          "words": ["ministry", "the", "reactions", "scope", "newly", "clarify", "Experts"],
+          "correctOrder": ["Experts", "clarify", "the", "scope"],
+          "enSentence": "Experts clarify the scope.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex1_tx_0",
+          "type": "translation-text",
+          "prompt": "\"Authorities advocate reform.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Yetkililer reformu savunur.",
+          "enSentence": "Authorities advocate reform.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex1_tx_1",
+          "type": "translation-text",
+          "prompt": "\"The dynamic triggers reaction.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Dinamik tepkiyi tetikler.",
+          "enSentence": "The dynamic triggers reaction.",
+          "isEngToTr": true
+        }
+      ]
+    },
+    {
+      "id": "u7l20ex2",
+      "title": "Alıştırma 2: Başlangıç Seviyesi — Cümle Pratiği (2)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (11-20)",
+      "questions": [
+        {
+          "id": "u7l20_ex2_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "tanımlar", "right": "defines" },
+            { "left": "bağlar", "right": "binds" },
+            { "left": "denetlemek", "right": "inspect" },
+            { "left": "etkiler", "right": "affects" }
+          ]
+        },
+        {
+          "id": "u7l20_ex2_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "istikrarlı hale getirir", "right": "stabilizes" },
+            { "left": "gösterir", "right": "illustrates" },
+            { "left": "kısıtlar", "right": "restricts" },
+            { "left": "doğrular", "right": "validates" }
+          ]
+        },
+        {
+          "id": "u7l20_ex2_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"The team modifies modules.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Ekip modülleri etkiler.",
+            "Ekip modülleri değiştirir.",
+            "Ekip modülleri çelişir.",
+            "Ekip modülleri maksimize eder."
+          ],
+          "correctIndex": 1,
+          "enSentence": "The team modifies modules.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex2_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Komite geri bildirimi değerlendirir.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The committee evaluates feedback.",
+            "The committee alters feedback.",
+            "Feedback evaluates the committee.",
+            "The committee conducted feedback."
+          ],
+          "correctIndex": 0,
+          "enSentence": "The committee evaluates feedback.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex2_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The protocol defines parameters.",
+          "words": ["tanımlar", "sonuçlarını", "Bağımsız", "parametreleri", "Protokol", "sosyoekonomik"],
+          "correctOrder": ["Protokol", "parametreleri", "tanımlar"],
+          "enSentence": "The protocol defines parameters.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex2_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The contract binds institutions.",
+          "words": ["Sözleşme", "kurumları", "Grafik", "Denetim", "bağlar", "Betik"],
+          "correctOrder": ["Sözleşme", "kurumları", "bağlar"],
+          "enSentence": "The contract binds institutions.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex2_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "Analysts inspect the framework.",
+          "words": ["inceler", "çerçeveyi", "yüzdeleri", "kurumları", "bağlar", "Analistler"],
+          "correctOrder": ["Analistler", "çerçeveyi", "inceler"],
+          "enSentence": "Analysts inspect the framework.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex2_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Grafik yüzdeleri gösterir.",
+          "words": ["percentages", "and", "researcher", "Independent", "illustrates", "The", "graph"],
+          "correctOrder": ["The", "graph", "illustrates", "percentages"],
+          "enSentence": "The graph illustrates percentages.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex2_tx_0",
+          "type": "translation-text",
+          "prompt": "\"The variable affects outcomes.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Değişken sonuçları etkiler.",
+          "enSentence": "The variable affects outcomes.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex2_tx_1",
+          "type": "translation-text",
+          "prompt": "\"The core stabilizes components.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Çekirdek bileşenleri stabilize eder.",
+          "enSentence": "The core stabilizes components.",
+          "isEngToTr": true
+        }
+      ]
+    },
+    {
+      "id": "u7l20ex3",
+      "title": "Alıştırma 3: Orta Seviye — Yapısal Kombinasyonlar (3)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (31-40)",
+      "questions": [
+        {
+          "id": "u7l20_ex3_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "izole eder", "right": "isolates" },
+            { "left": "maksimize etmek", "right": "maximize" },
+            { "left": "hesaplar", "right": "calculates" },
+            { "left": "ortaya çıkarır", "right": "exposes" }
+          ]
+        },
+        {
+          "id": "u7l20_ex3_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "değiştirir", "right": "alters" },
+            { "left": "güvenceye alır", "right": "secures" },
+            { "left": "askıya aldı", "right": "suspended" },
+            { "left": "feshetti", "right": "terminated" }
+          ]
+        },
+        {
+          "id": "u7l20_ex3_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"Mainstream digital media manipulates perspective.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Ana akım dijital medya bakış açısını manipüle eder.",
+            "Ana dijital akım medya bakış açısını manipüle eder .",
+            "Ana akım medya dijital bakış açısını manipüle eder .",
+            "Ana akım dijital medya bakış açısını stabilize eder."
+          ],
+          "correctIndex": 0,
+          "enSentence": "Mainstream digital media manipulates perspective.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex3_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Güncellenmiş operasyonel sistem genişlemeye uyum sağlar.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The updated system operational accommodates expansion.",
+            "Expansion accommodates the updated operational system.",
+            "The updated operational system alters expansion.",
+            "The updated operational system accommodates expansion."
+          ],
+          "correctIndex": 3,
+          "enSentence": "The updated operational system accommodates expansion.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex3_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The newly collected empirical data contradicts the theory.",
+          "words": ["veriler", "Yeni", "teoriyle", "Milli", "çelişir", "araştırmacısı", "toplanan", "deneysel", "bağımsız"],
+          "correctOrder": ["Yeni", "toplanan", "deneysel", "veriler", "teoriyle", "çelişir"],
+          "enSentence": "The newly collected empirical data contradicts the theory.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex3_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The broader socio-economic context specifies the criteria.",
+          "words": ["kurumsal", "kriterleri", "Daha", "Sözleşme", "çıkarır", "belirler", "geniş", "sosyoekonomik", "bağlam"],
+          "correctOrder": ["Daha", "geniş", "sosyoekonomik", "bağlam", "kriterleri", "belirler"],
+          "enSentence": "The broader socio-economic context specifies the criteria.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex3_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The highly competitive dynamic sector anticipates growth.",
+          "words": ["büyüme", "derece", "öngörür", "dinamik", "dijital", "tepkiyi", "Son", "rekabetçi", "sosyoekonomik", "sektör"],
+          "correctOrder": ["Son", "derece", "rekabetçi", "dinamik", "sektör", "büyüme", "öngörür"],
+          "enSentence": "The highly competitive dynamic sector anticipates growth.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex3_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Bağımsız teknik uzmanlar kapsamı açıklar.",
+          "words": ["clarify", "technical", "international", "academic", "Independent", "the", "scope", "experts", "investigative"],
+          "correctOrder": ["Independent", "technical", "experts", "clarify", "the", "scope"],
+          "enSentence": "Independent technical experts clarify the scope.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex3_tx_0",
+          "type": "translation-text",
+          "prompt": "\"Leading institutional authorities advocate reform.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Önde gelen kurumsal yetkililer reformu savunur.",
+          "enSentence": "Leading institutional authorities advocate reform.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex3_tx_1",
+          "type": "translation-text",
+          "prompt": "\"This unpredictable economic dynamic triggers reaction.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Bu öngörülemeyen ekonomik dinamik tepkiyi tetikler.",
+          "enSentence": "This unpredictable economic dynamic triggers reaction.",
+          "isEngToTr": true
+        }
+      ]
+    },
+    {
+      "id": "u7l20ex4",
+      "title": "Alıştırma 4: Orta Seviye — Bağlamsal Pratik (4)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (41-50)",
+      "questions": [
+        {
+          "id": "u7l20_ex4_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "tanımlar", "right": "defines" },
+            { "left": "bağlar", "right": "binds" },
+            { "left": "denetlemek", "right": "inspect" },
+            { "left": "etkiler", "right": "affects" }
+          ]
+        },
+        {
+          "id": "u7l20_ex4_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "istikrarlı hale getirir", "right": "stabilizes" },
+            { "left": "gösterir", "right": "illustrates" },
+            { "left": "kısıtlar", "right": "restricts" },
+            { "left": "doğrular", "right": "validates" }
+          ]
+        },
+        {
+          "id": "u7l20_ex4_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"The software development team modifies modules.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Yazılım geliştirme modülleri ekibi değiştirir .",
+            "Yazılım geliştirme ekibi modülleri değiştirir.",
+            "Yazılım geliştirme ekibi modülleri açıklar.",
+            "Yazılım ekibi geliştirme modülleri değiştirir ."
+          ],
+          "correctIndex": 1,
+          "enSentence": "The software development team modifies modules.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex4_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Etik değerlendirme komitesi geri bildirimi değerlendirir.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The ethics evaluation committee exposes feedback.",
+            "The ethics committee evaluation evaluates feedback.",
+            "Feedback evaluates the ethics evaluation committee.",
+            "The ethics evaluation committee evaluates feedback."
+          ],
+          "correctIndex": 3,
+          "enSentence": "The ethics evaluation committee evaluates feedback.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex4_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The revised security protocol defines parameters.",
+          "words": ["ciddi", "tanımlar", "parametreleri", "derece", "Gözden", "teknik", "geçirilmiş", "güvenlik", "protokolü"],
+          "correctOrder": ["Gözden", "geçirilmiş", "güvenlik", "protokolü", "parametreleri", "tanımlar"],
+          "enSentence": "The revised security protocol defines parameters.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex4_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The legally binding contract binds institutions.",
+          "words": ["olarak", "sözleşme", "var", "kurumları", "bağlayıcı", "bir", "Uzmanlar", "bağlar", "Yasal"],
+          "correctOrder": ["Yasal", "olarak", "bağlayıcı", "sözleşme", "kurumları", "bağlar"],
+          "enSentence": "The legally binding contract binds institutions.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex4_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "Senior financial analysts inspect the framework.",
+          "words": ["analistler", "finansal", "değişken", "bağlayıcı", "Kıdemli", "çerçeveyi", "protokolü", "inceler"],
+          "correctOrder": ["Kıdemli", "finansal", "analistler", "çerçeveyi", "inceler"],
+          "enSentence": "Senior financial analysts inspect the framework.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex4_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Ekli istatistiksel grafik yüzdeleri gösterir.",
+          "words": ["corporate", "reinforced", "educational", "percentages", "illustrates", "graph", "statistical", "attached", "The"],
+          "correctOrder": ["The", "attached", "statistical", "graph", "illustrates", "percentages"],
+          "enSentence": "The attached statistical graph illustrates percentages.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex4_tx_0",
+          "type": "translation-text",
+          "prompt": "\"The primary independent variable affects outcomes.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Birincil bağımsız değişken sonuçları etkiler.",
+          "enSentence": "The primary independent variable affects outcomes.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex4_tx_1",
+          "type": "translation-text",
+          "prompt": "\"The reinforced central core stabilizes components.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Güçlendirilmiş merkezi çekirdek bileşenleri stabilize eder.",
+          "enSentence": "The reinforced central core stabilizes components.",
+          "isEngToTr": true
+        }
+      ]
+    },
+    {
+      "id": "u7l20ex5",
+      "title": "Alıştırma 5: İleri Seviye — Akademik Dil (5)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (61-70)",
+      "questions": [
+        {
+          "id": "u7l20_ex5_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "çelişir", "right": "contradicts" },
+            { "left": "belirler", "right": "specifies" },
+            { "left": "öngörür", "right": "anticipates" },
+            { "left": "savunmak", "right": "advocate" }
+          ]
+        },
+        {
+          "id": "u7l20_ex5_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "tetikler", "right": "triggers" },
+            { "left": "açıklığa kavuşturmak", "right": "clarify" },
+            { "left": "yol açar", "right": "induces" },
+            { "left": "bozar", "right": "distorts" }
+          ]
+        },
+        {
+          "id": "u7l20_ex5_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"Media manipulates public political and cultural perspective.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Medya kamuoyunun ve siyasi kültürel bakış açısını manipüle eder .",
+            "Medya kamuoyunun siyasi ve kültürel bakış açısını stabilize eder.",
+            "Medya siyasi kamuoyunun ve kültürel bakış açısını manipüle eder .",
+            "Medya kamuoyunun siyasi ve kültürel bakış açısını manipüle eder."
+          ],
+          "correctIndex": 3,
+          "enSentence": "Media manipulates public political and cultural perspective.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex5_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Sistem hızlı bölgesel altyapı genişlemesine uyum sağlar.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The system affects rapid regional infrastructure expansion.",
+            "The system accommodates rapid regional expansion infrastructure.",
+            "Rapid regional infrastructure expansion accommodates the system.",
+            "The system accommodates rapid regional infrastructure expansion."
+          ],
+          "correctIndex": 3,
+          "enSentence": "The system accommodates rapid regional infrastructure expansion.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex5_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The data contradicts the long-standing theoretical model.",
+          "words": ["var", "uzun", "çelişir", "olan", "bakış", "modelle", "Veriler", "süredir", "strese", "teorik", "eğitim"],
+          "correctOrder": ["Veriler", "uzun", "süredir", "var", "olan", "teorik", "modelle", "çelişir"],
+          "enSentence": "The data contradicts the long-standing theoretical model.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex5_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The context specifies the strict qualitative selection criteria.",
+          "words": ["çelişir", "Bağlam", "katı", "kriterlerini", "uyum", "belirler", "nitel", "ekonomik", "seçim"],
+          "correctOrder": ["Bağlam", "katı", "nitel", "seçim", "kriterlerini", "belirler"],
+          "enSentence": "The context specifies the strict qualitative selection criteria.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex5_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The sector anticipates significant annual financial growth.",
+          "words": ["öngörür", "önemli", "finansal", "süredir", "siyasi", "yıllık", "Veriler", "Sektör", "büyüme"],
+          "correctOrder": ["Sektör", "yıllık", "önemli", "finansal", "büyüme", "öngörür"],
+          "enSentence": "The sector anticipates significant annual financial growth.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex5_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Uzmanlar başlangıçtaki araştırma projesi kapsamını açıklar.",
+          "words": ["project", "variables", "initial", "Analysts", "the", "clarify", "continuous", "investigative", "Experts", "scope"],
+          "correctOrder": ["Experts", "clarify", "the", "initial", "investigative", "project", "scope"],
+          "enSentence": "Experts clarify the initial investigative project scope.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex5_tx_0",
+          "type": "translation-text",
+          "prompt": "\"Authorities advocate comprehensive legislative tax reform.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Yetkililer kapsamlı yasal vergi reformunu savunur.",
+          "enSentence": "Authorities advocate comprehensive legislative tax reform.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex5_tx_1",
+          "type": "translation-text",
+          "prompt": "\"The dynamic triggers a chain of negative physical reactions.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Dinamik bir dizi olumsuz fiziksel tepkiyi tetikler.",
+          "enSentence": "The dynamic triggers a chain of negative physical reactions.",
+          "isEngToTr": true
+        }
+      ]
+    },
+    {
+      "id": "u7l20ex6",
+      "title": "Alıştırma 6: İleri Seviye — Akademik Çeviri (6)",
+      "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (91-100)",
+      "questions": [
+        {
+          "id": "u7l20_ex6_match1",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "tanımlar", "right": "defines" },
+            { "left": "bağlar", "right": "binds" },
+            { "left": "denetlemek", "right": "inspect" },
+            { "left": "etkiler", "right": "affects" }
+          ]
+        },
+        {
+          "id": "u7l20_ex6_match2",
+          "type": "matching",
+          "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin.",
+          "pairs": [
+            { "left": "istikrarlı hale getirir", "right": "stabilizes" },
+            { "left": "gösterir", "right": "illustrates" },
+            { "left": "kısıtlar", "right": "restricts" },
+            { "left": "doğrular", "right": "validates" }
+          ]
+        },
+        {
+          "id": "u7l20_ex6_mc_0",
+          "type": "multiple-choice",
+          "prompt": "\"The software development team constantly modifies system modules.\" cümlesinin Türkçe karşılığı hangisidir?",
+          "options": [
+            "Yazılım geliştirme ekibi sistem modüllerini sürekli değiştirir.",
+            "Sistem modüllerini sürekli yazılım geliştirme ekibi değiştirir .",
+            "Yazılım geliştirme modülleri ekibi sistemi sürekli değiştirir .",
+            "Yazılım geliştirme ekibi modülleri sistemini sürekli değiştirir ."
+          ],
+          "correctIndex": 0,
+          "enSentence": "The software development team constantly modifies system modules.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex6_mc_1",
+          "type": "multiple-choice",
+          "prompt": "\"Bağımsız etik değerlendirme komitesi geri bildirimi değerlendirir.\" cümlesinin İngilizce karşılığı hangisidir?",
+          "options": [
+            "The ethics evaluation committee independent evaluates feedback.",
+            "Feedback independent evaluates the ethics evaluation committee.",
+            "The independent ethics evaluation committee evaluates feedback.",
+            "The independent committee ethics evaluation evaluates feedback."
+          ],
+          "correctIndex": 2,
+          "enSentence": "The independent ethics evaluation committee evaluates feedback.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex6_wb_0",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The revised global security protocol clearly defines parameters.",
+          "words": ["net", "küresel", "güvenlik", "geçirilmiş", "Gözden", "şekilde", "tanımlar", "bir", "protokolü", "parametreleri"],
+          "correctOrder": ["Gözden", "geçirilmiş", "küresel", "güvenlik", "protokolü", "parametreleri", "net", "bir", "şekilde", "tanımlar"],
+          "enSentence": "The revised global security protocol clearly defines parameters.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex6_wb_1",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "The legally binding contract binds international institutions.",
+          "words": ["bağlayıcı", "uluslararası", "Yasal", "sözleşme", "kurumları", "olarak", "bağlar"],
+          "correctOrder": ["Yasal", "olarak", "bağlayıcı", "sözleşme", "uluslararası", "kurumları", "bağlar"],
+          "enSentence": "The legally binding contract binds international institutions.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex6_wb_2",
+          "type": "word-bank",
+          "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+          "translation": "Experienced financial analysts thoroughly inspect the framework.",
+          "words": ["çerçeveyi", "Deneyimli", "iyice", "finansal", "inceler", "analistler"],
+          "correctOrder": ["Deneyimli", "finansal", "analistler", "çerçeveyi", "iyice", "inceler"],
+          "enSentence": "Experienced financial analysts thoroughly inspect the framework.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex6_wb_3",
+          "type": "word-bank",
+          "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+          "translation": "Aşağıdaki istatistiksel grafik yüzdeleri gösterir.",
+          "words": ["attached", "percentages", "statistical", "illustrates", "The", "graph", "following"],
+          "correctOrder": ["The", "following", "statistical", "graph", "illustrates", "percentages"],
+          "enSentence": "The following statistical graph illustrates percentages.",
+          "isEngToTr": false
+        },
+        {
+          "id": "u7l20_ex6_tx_0",
+          "type": "translation-text",
+          "prompt": "\"This critical independent variable directly affects outcomes.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Bu kritik bağımsız değişken sonuçları doğrudan etkiler.",
+          "enSentence": "This critical independent variable directly affects outcomes.",
+          "isEngToTr": true
+        },
+        {
+          "id": "u7l20_ex6_tx_1",
+          "type": "translation-text",
+          "prompt": "\"The reinforced central core effectively stabilizes components.\" ifadesini Türkçe'ye çevirin:",
+          "correctSentence": "Güçlendirilmiş merkezi çekirdek bileşenleri etkili bir şekilde stabilize eder.",
+          "enSentence": "The reinforced central core effectively stabilizes components.",
+          "isEngToTr": true
+        }
+      ]
+    }
+  ];
+  
+  unitSentencesMap["7"]["1"].exercises = consolidatedExercises;
+
+  // Also dynamically patch the global lessons array if it has already been populated
+  if (typeof lessons !== 'undefined') {
+    const targetLesson = lessons.find(l => l.unitId === 7);
+    if (targetLesson) {
+      targetLesson.exercises = consolidatedExercises.map(ex => ({
+        id: ex.id,
+        title: ex.title,
+        description: ex.description || "",
+        questions: ex.questions || [],
+        createdAt: ex.createdAt
+      }));
+    }
+  }
+}
+
+// ============================================================
 // STATE YÖNETİMİ
 // ============================================================
 const STATE_KEY = 'amok_state_v1';
@@ -5034,6 +5736,156 @@ function ensureLessonRendered(lessonId) {
   }
 }
 
+function getUnitEdits(unit) {
+  const rawEdits = [];
+  unit.lessons.forEach(lId => {
+    const l = lessons.find(lesson => lesson.id === lId);
+    if (!l) return;
+    
+    if (l.createdAt) {
+      rawEdits.push({
+        rawDate: l.createdAt,
+        type: 'lesson'
+      });
+    }
+    
+    if (l.exercises && Array.isArray(l.exercises)) {
+      l.exercises.forEach(ex => {
+        if (ex.createdAt) {
+          rawEdits.push({
+            rawDate: ex.createdAt,
+            type: 'exercise'
+          });
+        }
+        
+        if (ex.questions && Array.isArray(ex.questions)) {
+          ex.questions.forEach(q => {
+            if (q.createdAt) {
+              const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
+              rawEdits.push({
+                rawDate: q.createdAt,
+                type: isFix ? 'fix' : 'question'
+              });
+            }
+          });
+        }
+      });
+    }
+    
+    if (l.questions && Array.isArray(l.questions)) {
+      l.questions.forEach(q => {
+        if (q.createdAt) {
+          const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
+          rawEdits.push({
+            rawDate: q.createdAt,
+            type: isFix ? 'fix' : 'question'
+          });
+        }
+      });
+    }
+  });
+  
+  return groupAndSimplifyEdits(rawEdits);
+}
+
+function getLessonEdits(lesson) {
+  const rawEdits = [];
+  if (lesson.createdAt) {
+    rawEdits.push({
+      rawDate: lesson.createdAt,
+      type: 'lesson'
+    });
+  }
+  if (lesson.exercises && Array.isArray(lesson.exercises)) {
+    lesson.exercises.forEach(ex => {
+      if (ex.createdAt) {
+        rawEdits.push({
+          rawDate: ex.createdAt,
+          type: 'exercise'
+        });
+      }
+      if (ex.questions && Array.isArray(ex.questions)) {
+        ex.questions.forEach(q => {
+          if (q.createdAt) {
+            const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
+            rawEdits.push({
+              rawDate: q.createdAt,
+              type: isFix ? 'fix' : 'question'
+            });
+          }
+        });
+      }
+    });
+  }
+  if (lesson.questions && Array.isArray(lesson.questions)) {
+    lesson.questions.forEach(q => {
+      if (q.createdAt) {
+        const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
+        rawEdits.push({
+          rawDate: q.createdAt,
+          type: isFix ? 'fix' : 'question'
+        });
+      }
+    });
+  }
+  return groupAndSimplifyEdits(rawEdits);
+}
+
+function groupAndSimplifyEdits(rawEdits) {
+  const grouped = {};
+  rawEdits.forEach(e => {
+    const d = new Date(e.rawDate);
+    if (isNaN(d.getTime())) return;
+    const dateKey = e.rawDate.substring(0, 10);
+    const type = e.type;
+    const key = `${dateKey}_${type}`;
+    if (!grouped[key]) {
+      grouped[key] = {
+        date: d,
+        rawDate: e.rawDate,
+        type: type
+      };
+    }
+  });
+
+  const simplified = Object.values(grouped).map(g => {
+    let desc = '';
+    if (g.type === 'lesson') {
+      desc = 'Yeni Dersler Eklendi';
+    } else if (g.type === 'exercise') {
+      desc = 'Yeni Alıştırmalar Eklendi';
+    } else if (g.type === 'fix') {
+      desc = 'Hatalı Soru Düzeltildi';
+    } else {
+      desc = 'Yeni Soru Tipleri Eklendi';
+    }
+    return {
+      date: g.date,
+      rawDate: g.rawDate,
+      desc: desc
+    };
+  });
+
+  simplified.sort((a, b) => b.date - a.date);
+  return simplified.slice(0, 5);
+}
+
+function formatUnitEditDate(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  const pad = (n) => n.toString().padStart(2, '0');
+  
+  const now = new Date();
+  const isToday = d.getDate() === now.getDate() &&
+                  d.getMonth() === now.getMonth() &&
+                  d.getFullYear() === now.getFullYear();
+                  
+  if (isToday) {
+    return `Bugün ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  }
+  return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()}`;
+}
+
 function renderLessonTree() {
   const container = document.getElementById('tree-container');
   container.innerHTML = `
@@ -5203,8 +6055,33 @@ function renderLessonTree() {
     const noDescUnitIds = [13, 17, 21, 22, 40, 101, 102, 103];
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${unit.description}</p>`;
     
+    let localEditsHTML = '';
+    if (checkIsLocal()) {
+      const edits = getUnitEdits(unit);
+      if (edits.length > 0) {
+        const editsListHTML = edits.map(e => `
+          <div style="font-size: 0.78rem; opacity: 0.95; display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding: 4px 0;">
+            <span style="font-weight: 700; color: #ffe3e3; font-family: monospace;">🕒 ${formatUnitEditDate(e.rawDate)}</span>
+            <span style="text-align: right; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.desc.replace(/"/g, '&quot;')}">${e.desc}</span>
+          </div>
+        `).join('');
+        
+        localEditsHTML = `
+          <div class="unit-banner-edits-box" style="margin-top: 12px; padding: 10px 14px; background: rgba(0, 0, 0, 0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-sizing: border-box;">
+            <div style="font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" onclick="event.stopPropagation(); const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-icon').textContent = el.style.display === 'none' ? '▼' : '▲';">
+              <span style="display: flex; align-items: center; gap: 6px;">🛠️ <strong>Düzenleme Geçmişi</strong> <span style="font-size: 0.75rem; opacity: 0.8;">(${edits.length} düzenleme)</span></span>
+              <span class="toggle-icon" style="font-size: 0.75rem;">▲</span>
+            </div>
+            <div class="unit-edits-list" style="display: block; margin-top: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
+              ${editsListHTML}
+            </div>
+          </div>
+        `;
+      }
+    }
+
     banner.innerHTML = `
-      <div class="unit-banner-info">
+      <div class="unit-banner-info" style="width: 100%;">
         <h2 class="unit-banner-title-row">
           <span>${unitDisplayNames[unit.id]}</span>
           ${notUploadedBadgeHTML}
@@ -5213,6 +6090,7 @@ function renderLessonTree() {
           ${localTypesBadgeHTML}
         </h2>
         ${descHTML}
+        ${localEditsHTML}
       </div>
       <div class="unit-progress-container">
         <span class="unit-progress-text">${completedInUnit}/${totalInUnit}</span>
@@ -5446,6 +6324,30 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   const isCompleted = state.completedLessons.includes(lessonId);
 
+  let localEditsHTML = '';
+  if (checkIsLocal()) {
+    const edits = getLessonEdits(lesson);
+    if (edits.length > 0) {
+      const editsListHTML = edits.map(e => `
+        <div style="font-size: 0.72rem; opacity: 0.95; display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding: 4px 0;">
+          <span style="font-weight: 700; color: #ffe3e3; font-family: monospace;">🕒 ${formatUnitEditDate(e.rawDate)}</span>
+          <span style="text-align: right; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.desc.replace(/"/g, '&quot;')}">${e.desc}</span>
+        </div>
+      `).join('');
+      localEditsHTML = `
+        <div class="lesson-popover-edits-box" style="margin-top: 12px; padding: 10px 14px; background: rgba(0, 0, 0, 0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-sizing: border-box;">
+          <div style="font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" onclick="const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-icon').textContent = el.style.display === 'none' ? '▼' : '▲';">
+            <span style="display: flex; align-items: center; gap: 6px;">🛠️ <strong>Düzenleme Geçmişi</strong> <span style="font-size: 0.75rem; opacity: 0.8;">(${edits.length} düzenleme)</span></span>
+            <span class="toggle-icon" style="font-size: 0.75rem;">▲</span>
+          </div>
+          <div class="lesson-edits-list" style="display: block; margin-top: 8px; max-height: 120px; overflow-y: auto; padding-right: 4px;">
+            ${editsListHTML}
+          </div>
+        </div>
+      `;
+    }
+  }
+
   // Create popover element
   const popover = document.createElement('div');
   popover.className = 'lesson-popover';
@@ -5573,6 +6475,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     </div>
     <div class="popover-body">
       ${previewHTML}
+      ${localEditsHTML}
     </div>
     ${popoverFooterHTML}
   `;
