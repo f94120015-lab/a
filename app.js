@@ -3398,6 +3398,20 @@ function openQuestionPreview(title, questions, parentObj = null) {
     return;
   }
 
+  let resolvedLessonId = null;
+  let resolvedExerciseId = null;
+  if (parentObj) {
+    if (parentObj.subtitle !== undefined) {
+      resolvedLessonId = parentObj.id;
+    } else {
+      const foundLesson = lessons.find(l => l.exercises && l.exercises.some(ex => ex.id === parentObj.id));
+      if (foundLesson) {
+        resolvedLessonId = foundLesson.id;
+        resolvedExerciseId = parentObj.id;
+      }
+    }
+  }
+
   const overlay = document.createElement('div');
   overlay.className = 'qp-modal-overlay';
 
@@ -3604,12 +3618,39 @@ function openQuestionPreview(title, questions, parentObj = null) {
         break;
     }
 
+    let finalLessonId = resolvedLessonId;
+    let finalExerciseId = resolvedExerciseId;
+    if (!finalLessonId) {
+      const foundLesson = lessons.find(l => {
+        if (l.questions && l.questions.some(qi => qi.id === q.id)) return true;
+        if (l.exercises && l.exercises.some(ex => ex.questions && ex.questions.some(qi => qi.id === q.id))) return true;
+        return false;
+      });
+      if (foundLesson) {
+        finalLessonId = foundLesson.id;
+        if (foundLesson.exercises) {
+          const foundEx = foundLesson.exercises.find(ex => ex.questions && ex.questions.some(qi => qi.id === q.id));
+          if (foundEx) finalExerciseId = foundEx.id;
+        }
+      }
+    }
+    
+    let startBtnHtml = '';
+    if (checkIsLocal() && finalLessonId) {
+      startBtnHtml = `
+        <button onclick="window.startLessonAtQuestion('${escapeHtml(finalLessonId)}', ${finalExerciseId ? `'${escapeHtml(finalExerciseId)}'` : 'null'}, '${escapeHtml(q.id)}')" class="btn btn-primary" style="font-size: 0.72rem; padding: 4px 10px; border-radius: 4px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; margin-left: 10px; box-shadow: var(--shadow-sm);">
+          ⚡ Bu Soruyu Çöz
+        </button>
+      `;
+    }
+
     return `
       <div class="qp-question-card">
         <div class="qp-question-header">
           <span class="qp-qnumber">Soru #${idx + 1}</span>
           ${isNew ? '<span class="qp-new-badge" style="background: #ff3b30; color: #fff; font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 6px; display: inline-block; vertical-align: middle; line-height: 1.2;">YENİ</span>' : ''}
           <span class="qp-type-badge ${typeClass}">${typeLabel}</span>
+          ${startBtnHtml}
         </div>
         <p class="qp-prompt">${q.prompt}</p>
         <div class="qp-details">
@@ -3680,6 +3721,33 @@ window.previewQuestionById = function(lessonId, questionId) {
   
   openQuestionPreview(`${lesson ? lesson.id + '. Ders (' + lesson.subtitle + ')' : 'Soru Önizleme'}`, [targetQuestion], lesson);
 };
+
+window.startLessonAtQuestion = function(lessonId, exerciseId, questionId) {
+  // Close any popovers
+  const popover = document.querySelector('.lesson-popover');
+  if (popover) popover.remove();
+  
+  // Close the preview modal
+  const qpModal = document.querySelector('.qp-modal-overlay');
+  if (qpModal) qpModal.remove();
+
+  // Call startLesson
+  startLesson(lessonId, exerciseId);
+
+  // Set the correct index
+  const targetIdx = currentQuizQuestions.findIndex(q => q.id === questionId);
+  if (targetIdx !== -1) {
+    currentQuestionIndex = targetIdx;
+  }
+  
+  // Dismiss topic/konuAnlatimi modal if open
+  const konuModal = document.getElementById('konu-anlatimi-modal');
+  if (konuModal) konuModal.remove();
+  
+  // Render the selected question
+  renderQuestion();
+};
+
 
 
 // ============================================================
