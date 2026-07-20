@@ -1,8 +1,1849 @@
+# Silinen Sorular Arşivi (Bölüm 1: Temel Yapılar)
+
+Bu dosya, Bölüm 1 altındaki egzersizlerin basitten zora doğru aşamalı bir pedagojik yaklaşımla, her derste 1 alıştırma ve her alıştırmada 15 soru olacak şekilde yeniden düzenlenmesi sırasında çıkarılan kelime eşleştirme sorularını ve fazla olan alıştırma sorularını içermektedir.
+
+---
+
+## Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Sorularının Kaldırılması ve 15 Soruya İndirgeme Revizyonu (2026-07-20)
+*Çıkarılan Soru Detayları:*
+
+### Lesson 1 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u6l16_ex1_match1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gereklilik <--> requirement
+  - garanti <--> guarantee
+  - deney <--> experiment
+  - gösterge <--> indicator
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u6l16_ex1_match2
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yapı <--> structure
+  - kavram <--> concept
+  - sözleşme <--> contract
+  - prosedür <--> procedure
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u6l16_ex2_match1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kavram <--> concept
+  - sözleşme <--> contract
+  - prosedür <--> procedure
+  - değerlendirme <--> assessment
+
+#### Soru 4 (matching)
+* **Orijinal ID:** u6l16_ex2_match2
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tanım <--> definition
+  - sektör <--> sector
+  - birey <--> individual
+  - fayda <--> benefit
+
+#### Soru 5 (translation-text)
+* **Orijinal ID:** u6l16_ex2_tx_0
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "The institution is an authority." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The institution is an authority.
+* **Doğru Çeviri:** Kurum bir otoritedir.
+
+#### Soru 6 (translation-text)
+* **Orijinal ID:** u6l16_ex2_tx_1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "The revenue is an income." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The revenue is an income.
+* **Doğru Çeviri:** Gelir bir gelirdir.
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u6l16_ex2_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The component is a factor.
+* **Kelimeler:** bir, belgedir, Mevzuat, gelirdir, faktördür, Bileşen
+* **Doğru Çeviri:** Bileşen bir faktördür
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u6l16_ex2_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Sektör bir alandır.
+* **Kelimeler:** a, an, outcome, is, sector, The, area, guarantee
+* **Doğru Çeviri:** The sector is an area
+
+### Lesson 2 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u6l17_ex1_match1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ıslak <--> wet
+  - maliyet <--> cost
+  - fiyat <--> price
+  - yanlış <--> wrong
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u6l17_ex1_match2
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - açıklama <--> explanation
+  - pahalı <--> expensive
+  - sonuçlar <--> results
+  - masraflar <--> expenses
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u6l17_ex2_match1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - maliyet <--> cost
+  - fiyat <--> price
+  - yanlış <--> wrong
+  - açıklama <--> explanation
+
+#### Soru 4 (matching)
+* **Orijinal ID:** u6l17_ex2_match2
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - pahalı <--> expensive
+  - sonuçlar <--> results
+  - masraflar <--> expenses
+  - deneyler <--> experiments
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u6l17_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The answer is wrong
+* **Kelimeler:** saftır, Bakteriler, yanlıştır, mevcuttur, Cevap
+* **Doğru Çeviri:** Cevap yanlıştır
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u6l17_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The explanation is long
+* **Kelimeler:** uzundur, Açıklama, Maliyet, Makine, Fiyat
+* **Doğru Çeviri:** Açıklama uzundur
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u6l17_ex1_tx_0
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** "The costs are low" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The costs are low
+* **Doğru Çeviri:** Maliyetler düşüktür
+
+#### Soru 8 (translation-text)
+* **Orijinal ID:** u6l17_ex1_tx_1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** "The reactions are slow" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The reactions are slow
+* **Doğru Çeviri:** Tepkimeler yavaştır
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u6l17_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Bacteria are present
+* **Kelimeler:** Açıklama, Makine, Zemin, mevcuttur, Bakteriler
+* **Doğru Çeviri:** Bakteriler mevcuttur
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u6l17_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Makine pahalıdır
+* **Kelimeler:** price, expensive, is, machine, present, The, important
+* **Doğru Çeviri:** The machine is expensive
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u6l17_ex2_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The machine is expensive
+* **Kelimeler:** Makine, pahalıdır, Tepkimeler, mevcuttur, Kazançlar
+* **Doğru Çeviri:** Makine pahalıdır
+
+#### Soru 12 (translation-text)
+* **Orijinal ID:** u6l17_ex2_tx_0
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "The reactions are slow" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The reactions are slow
+* **Doğru Çeviri:** Tepkimeler yavaştır
+
+#### Soru 13 (translation-text)
+* **Orijinal ID:** u6l17_ex2_tx_1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "Bacteria are present" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Bacteria are present
+* **Doğru Çeviri:** Bakteriler mevcuttur
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u6l17_ex2_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Profits are high
+* **Kelimeler:** önemlidir, Madde, Sonuçlar, yüksektir, Kazançlar
+* **Doğru Çeviri:** Kazançlar yüksektir
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u6l17_ex2_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Sonuçlar önemlidir
+* **Kelimeler:** are, is, results, present, important, The, explanation
+* **Doğru Çeviri:** The results are important
+
+### Lesson 3 - Çıkarılan Sorular
+#### Soru 1 (word-bank)
+* **Orijinal ID:** u6l18_layered_6
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu cümlenin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** the primary factor is a significant element
+* **Kelimeler:** önemli, unsurdur, güvenilir, birincil, faktör, bir, kaynaktır, koşullar
+* **Doğru Çeviri:** birincil faktör önemli bir unsurdur
+
+#### Soru 2 (word-bank)
+* **Orijinal ID:** u6l18_layered_7
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu cümlenin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** and the empirical evidence is a reliable source
+* **Kelimeler:** gerçekçi, adım, kanıt, deneysel, güvenilir, ve, hedef, bir, kaynaktır
+* **Doğru Çeviri:** ve deneysel kanıt güvenilir bir kaynaktır
+
+#### Soru 3 (word-bank)
+* **Orijinal ID:** u6l18_layered_8
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:
+* **İngilizce Cümle:** In scientific analysis, the primary factor is a significant element, and the empirical evidence is a reliable source.
+* **Kelimeler:** Bilimsel, bir, faktör, izole, deneysel, hedef, kanıt, kaynaktır, amaç, analizlerde, birincil, adım, bir, güvenilir, unsurdur, önemli, ve
+* **Doğru Çeviri:** Bilimsel analizlerde birincil faktör önemli bir unsurdur ve deneysel kanıt güvenilir bir kaynaktır
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u6l18_layered_9
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu öbeğin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** Under the new guidelines
+* **Kelimeler:** altında, üzerinde, altından, koşul, yönergeler, Yeni
+* **Doğru Çeviri:** Yeni yönergeler altında
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u6l18_layered_10
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu cümlenin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** the main objective is a realistic goal
+* **Kelimeler:** ana, seçilen, hedef, sonraki, gerçekçi, bir, amaçtır, adım
+* **Doğru Çeviri:** ana hedef gerçekçi bir amaçtır
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u6l18_layered_11
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu cümlenin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** and the subsequent study is a logical step
+* **Kelimeler:** kaynak, ve, adımdır, çalışma, unsurdur, birincil, sonraki, mantıklı, bir
+* **Doğru Çeviri:** ve sonraki çalışma mantıklı bir adımdır
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u6l18_layered_12
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:
+* **İngilizce Cümle:** Under the new guidelines, the main objective is a realistic goal, and the subsequent study is a logical step.
+* **Kelimeler:** hedef, analizler, unsur, veri, ana, amaçtır, gerçekçi, kaynak, altında, çalışma, bir, yönergeler, bir, mantıklı, Yeni, adımdır, ve, sonraki
+* **Doğru Çeviri:** Yeni yönergeler altında ana hedef gerçekçi bir amaçtır ve sonraki çalışma mantıklı bir adımdır
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u6l18_layered_13
+* **Orijinal Alıştırma:** Alıştırma 1: Söz Dizimsel Refleks İnşası
+* **Yönerge:** Bu cümlenin Türkçe çevirisini oluşturun:
+* **İngilizce Cümle:** The previous attempt is an unsuccessful trial.
+* **Kelimeler:** bir, izotop, sonuç, denemedir, önceki, başarısız, girişim, hızlı
+* **Doğru Çeviri:** önceki girişim başarısız bir denemedir
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_1
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "This active specimen is a dangerous substance." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** This active specimen is a dangerous substance.
+* **Seçenekler:** Bu numuneyi aktif hale getirmek tehlikelidir. | Aktif numuneler tehlike yaratır. | Bu numune aktif ve tehlikelidir. | Bu aktif numune tehlikeli bir maddedir.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_2
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "The initial response is a negative result." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The initial response is a negative result.
+* **Seçenekler:** Sonuç ilk tepkiden daha olumsuzdur. | İlk tepki olumsuz bir sonuçtur. | Olumsuz sonuçlar ilk tepkiyi belirler. | İlk tepkinin olumsuz olması normaldir.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_3
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "The subsequent study is a logical step." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The subsequent study is a logical step.
+* **Seçenekler:** Sonraki çalışmalar mantık sınırlarını zorlar. | Sonraki çalışma mantıklı bir adımdır. | Çalışma mantıklı adımlarla takip edilir. | Çalışmanın mantığı adımlarla açıklanır.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 12 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_4
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "Although the test is a partial success, the general methodology is a slow process." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Although the test is a partial success, the general methodology is a slow process.
+* **Seçenekler:** Test kısmi bir başarı olmasına rağmen, genel metodoloji yavaş bir süreçtir. | Test başarılı olmasına rağmen, genel metodoloji süreci yavaşlatır. | Test başarılı olduğundan dolayı genel metodoloji süreci yavaş işler. | Test başarılı olsa da genel metodoloji yavaşlamaya neden olur.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_5
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "The selected methodology is a complex system." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The selected methodology is a complex system.
+* **Seçenekler:** Seçilen metodoloji karmaşık bir sistemdir. | Metodoloji seçimi sistemi karmaşıklaştırır. | Sistem karmaşık bir metodolojiye dayanır. | Seçilen sistem metodolojiyi zorlaştırır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 14 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_6
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "The initial phase is a critical period." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The initial phase is a critical period.
+* **Seçenekler:** İlk aşama kritik bir dönemdir. | Aşamanın kritik olması döneme bağlıdir. | Kritik dönem ilk aşamada başlar. | İlk aşamada dönemsel krizler yaşanır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u6l18_mc_7
+* **Orijinal Alıştırma:** Alıştırma 2: Akademik Yapı ve Çeviri Testi
+* **Yönerge:** "The previous attempt is an unsuccessful trial." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The previous attempt is an unsuccessful trial.
+* **Seçenekler:** Girişimler başarısız denemelere yol açar. | Önceki deneme başarısızlıkla sonuçlanmıştır. | Önceki denemelerin başarısız olması normaldir. | Önceki girişim başarısız bir denemedir.
+* **Doğru Seçenek İndeksi:** 3
+
+### Lesson 4 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u6l19_ex1_match1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tren <--> train
+  - ofis <--> office
+  - son <--> end
+  - fabrika <--> factory
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u6l19_ex1_match2
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - deney tüpü <--> test-tube
+  - kitap <--> book
+  - köşe <--> corner
+  - taraf <--> side
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u6l19_ex2_match1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ofis <--> office
+  - son <--> end
+  - fabrika <--> factory
+  - deney tüpü <--> test-tube
+
+#### Soru 4 (matching)
+* **Orijinal ID:** u6l19_ex2_match2
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kitap <--> book
+  - köşe <--> corner
+  - taraf <--> side
+  - masa <--> table
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u6l19_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The machine is in the factory
+* **Kelimeler:** Makine, Özet, fabrikadadır, Cevap, Öğrenci
+* **Doğru Çeviri:** Makine fabrikadadır
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u6l19_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The substance is in the test-tube
+* **Kelimeler:** Madde, deney, tüpündedir, trendedir, masamın, Deney
+* **Doğru Çeviri:** Madde deney tüpündedir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u6l19_ex1_tx_0
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** "The workers are in the factory" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The workers are in the factory
+* **Doğru Çeviri:** İşçiler fabrikadadır
+
+#### Soru 8 (translation-text)
+* **Orijinal ID:** u6l19_ex1_tx_1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** "The factories are outside the town" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The factories are outside the town
+* **Doğru Çeviri:** Fabrikalar kasabanın dışındadır
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u6l19_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The reports are from the employers
+* **Kelimeler:** işverenlerdendir, trendedir, Raporlar, tüpü, ofistedir
+* **Doğru Çeviri:** Raporlar işverenlerdendir
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u6l19_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Yapı Çalışması
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Cevap kitaptadır
+* **Kelimeler:** the, student, train, centre, is, The, answer, book, in
+* **Doğru Çeviri:** The answer is in the book
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u6l19_ex2_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The answer is in the book
+* **Kelimeler:** Cevap, kasabanın, kitaptadır, Raporlar, topraktadır
+* **Doğru Çeviri:** Cevap kitaptadır
+
+#### Soru 12 (translation-text)
+* **Orijinal ID:** u6l19_ex2_tx_0
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "The factories are outside the town" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The factories are outside the town
+* **Doğru Çeviri:** Fabrikalar kasabanın dışındadır
+
+#### Soru 13 (translation-text)
+* **Orijinal ID:** u6l19_ex2_tx_1
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** "The reports are from the employers" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The reports are from the employers
+* **Doğru Çeviri:** Raporlar işverenlerdendir
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u6l19_ex2_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Lime is in the soil
+* **Kelimeler:** Raporlar, sondadır, topraktadır, masamın, Kireç
+* **Doğru Çeviri:** Kireç topraktadır
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u6l19_ex2_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Yapı Çalışması
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Dükkan köşededir
+* **Kelimeler:** on, shop, corner, factories, The, the, is, student, Lime
+* **Doğru Çeviri:** The shop is on the corner
+
+### Lesson 5 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u6l20_match_1
+* **Orijinal Alıştırma:** Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - özet <--> summary
+  - sözleşme <--> contract
+  - garanti <--> guarantee
+  - avukat <--> lawyer
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u6l20_match_2
+* **Orijinal Alıştırma:** Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kaynak <--> source
+  - yanlış <--> wrong
+  - önemli <--> important
+  - pahalı <--> expensive
+
+#### Soru 3 (translation-text)
+* **Orijinal ID:** u6l20_tx_3
+* **Orijinal Alıştırma:** Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)
+* **Yönerge:** "The respondent is a lawyer." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The respondent is a lawyer.
+* **Doğru Çeviri:** Katılımcı bir avukattır.
+
+#### Soru 4 (translation-text)
+* **Orijinal ID:** u6l20_tx_4
+* **Orijinal Alıştırma:** Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)
+* **Yönerge:** "Dergi bir kaynaktır." ifadesini İngilizce'ye çevirin:
+* **İngilizce Cümle:** The journal is a source.
+* **Doğru Çeviri:** The journal is a source.
+
+#### Soru 5 (translation-text)
+* **Orijinal ID:** u6l20_tx_5
+* **Orijinal Alıştırma:** Alıştırma 1: Yapılar Bölüm Özeti (Karma Test)
+* **Yönerge:** "Açıklama yanlıştır." ifadesini İngilizce'ye çevirin:
+* **İngilizce Cümle:** The explanation is wrong.
+* **Doğru Çeviri:** The explanation is wrong.
+
+
+---
+
 # Silinen Sorular Arşivi (Bölüm 2: İsim ve Edat Yapıları)
 
 Bu dosya, Bölüm 2 altındaki egzersizlerin zorluk derecelerine göre 3 seviyeye (Temel, Orta, İleri) indirgenmesi ve sadeleştirilmesi sırasında çıkarılan soruları içermektedir.
 
 ---
+
+## Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Sorularının Kaldırılması ve 15 Soruya İndirgeme Revizyonu (2026-07-20)
+*Çıkarılan Soru Detayları:*
+
+### Lesson 1 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l1_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Veri analizi <--> Data analysis
+  - Gelir dağılımı <--> Income distribution
+  - Araştırma yöntemi <--> Research method
+  - Finans sektörü <--> Finance sector
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l1_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Sektör kaynak tahsisi süreci <--> Sector resource allocation process
+  - Metin analizi araştırma tasarımı <--> Text analysis research design
+  - Pazar araştırması veri analizi <--> Market research data analysis
+  - Bilgi teknolojisi sektörü politikası <--> Information technology sector policy
+
+#### Soru 3 (word-bank)
+* **Orijinal ID:** u1l1_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Quality control
+* **Kelimeler:** yöntemi, kontrol, Bilgisayar, Kalite, Yapı
+* **Doğru Çeviri:** Kalite kontrol
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l1_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Data analysis process
+* **Kelimeler:** Sözleşme, sektörü, yöntemi, süreci, analizi, Veri
+* **Doğru Çeviri:** Veri analizi süreci
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l1_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Computer network security
+* **Kelimeler:** Veri, güvenliği, ağı, analizi, tahsisi, Bilgisayar
+* **Doğru Çeviri:** Bilgisayar ağı güvenliği
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l1_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Research project design
+* **Kelimeler:** projesi, Araştırma, tasarımı, politikası, dağılımı, kontrol
+* **Doğru Çeviri:** Araştırma projesi tasarımı
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u1l1_ex1_tx_0
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "Structure analysis" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Structure analysis
+* **Doğru Çeviri:** Yapı analizi
+
+#### Soru 8 (translation-text)
+* **Orijinal ID:** u1l1_ex1_tx_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "Energy source" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Energy source
+* **Doğru Çeviri:** Enerji kaynağı
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l1_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Institutional policy resource distribution process
+* **Kelimeler:** politikası, politika, teknolojisi, Kurumsal, kaynak, reform, dağıtımı, süreci
+* **Doğru Çeviri:** Kurumsal politika kaynak dağıtımı süreci
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l1_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Individual task assessment criteria structure
+* **Kelimeler:** hukuku, ekibi, yapısı, kriterleri, tasarımı, değerlendirme, görev, Bireysel
+* **Doğru Çeviri:** Bireysel görev değerlendirme kriterleri yapısı
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l1_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** International trade law contract framework
+* **Kelimeler:** Medya, Uluslararası, teknolojisi, hukuku, sözleşme, çerçevesi, ticaret, politikası
+* **Doğru Çeviri:** Uluslararası ticaret hukuku sözleşme çerçevesi
+
+#### Soru 12 (translation-text)
+* **Orijinal ID:** u1l1_ex3_tx_0
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "Data analysis team research project" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Data analysis team research project
+* **Doğru Çeviri:** Veri analizi ekibi araştırma projesi
+
+#### Soru 13 (translation-text)
+* **Orijinal ID:** u1l1_ex3_tx_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "Global finance sector investment policy" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Global finance sector investment policy
+* **Doğru Çeviri:** Küresel finans sektörü yatırım politikası
+
+#### Soru 14 (fill-blank-dropdown)
+* **Orijinal ID:** c01_l01_e2_q6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Boşluğa gelecek en uygun edatı seçiniz:
+* **Cümle:** The character ___ the active variables had a distinct advantage.
+* **Seçenekler:** with | of | from | by
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 15 (structure-match)
+* **Orijinal ID:** c01_l01_e2_q7
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Aşağıdaki ifadenin dil bilgisi şablonunu belirleyiniz:
+* **Cümle:** The validation of parameters from variables
+* **Seçenekler:** Noun + Prep + Prep | Noun + Noun + Noun | Noun + of the + Noun | Noun + of + Noun
+* **Doğru Seçenek İndeksi:** 0
+
+### Lesson 2 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l2_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - hayvanın bacakları <--> the legs of the animal
+  - bacağın kasları <--> the muscles of the leg
+  - sonuçların önemi <--> the importance of the results
+  - resimlerin düzenlenmesi <--> the arrangement of the pictures
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l2_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - çalışmanın odağı <--> the focus of the study
+  - politikanın etkisi <--> the impact of the policy
+  - piyasanın dinamikleri <--> the dynamics of the market
+  - ekonominin istikrarı <--> the stability of the economy
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l2_ex4_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - maddelerin birçoğu <--> many of the substances
+  - hastalıkların biri <--> one of the diseases
+  - malların çoğu <--> most of the goods
+  - dağların hepsi <--> all of the mountains
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the difficulty of the problem
+* **Kelimeler:** hacmi, hayvanın, işin, problemin, zorluğu
+* **Doğru Çeviri:** problemin zorluğu
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the photograph of the student
+* **Kelimeler:** deneyin, düzenlenmesi, işin, fotoğrafı, öğrencinin
+* **Doğru Çeviri:** öğrencinin fotoğrafı
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the duration of the holiday
+* **Kelimeler:** süresi, önemi, hayvanın, tatilin, hareketi
+* **Doğru Çeviri:** tatilin süresi
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the distribution of the forests
+* **Kelimeler:** moleküllerin, öğrencinin, dağılımı, fotoğrafı, ormanların
+* **Doğru Çeviri:** ormanların dağılımı
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the difficulties of the experiment
+* **Kelimeler:** deneyin, zorlukları, fotoğrafı, işin, hayvanın
+* **Doğru Çeviri:** deneyin zorlukları
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l2_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the dimensions of the room
+* **Kelimeler:** odanın, boyutları, öğrencinin, önemi, bölünmesi
+* **Doğru Çeviri:** odanın boyutları
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the consequences of the action
+* **Kelimeler:** çalışmanın, istikrarı, adaptasyonu, sonuçları, eylemin
+* **Doğru Çeviri:** eylemin sonuçları
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the strategy of the company
+* **Kelimeler:** sonuçları, çalışmanın, odağı, stratejisi, şirketin
+* **Doğru Çeviri:** şirketin stratejisi
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the adaptation of the species
+* **Kelimeler:** adaptasyonu, türlerin, nüfusun, oranı, görevin
+* **Doğru Çeviri:** türlerin adaptasyonu
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the framework of the theory
+* **Kelimeler:** etkisi, çerçevesi, teorinin, türlerin, oranı
+* **Doğru Çeviri:** teorinin çerçevesi
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the context of the situation
+* **Kelimeler:** piyasanın, tasarımı, bağlamı, görevin, durumun
+* **Doğru Çeviri:** durumun bağlamı
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l2_ex3_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the proportion of the population
+* **Kelimeler:** problemin, nüfusun, oranı, çerçevesi, eylemin
+* **Doğru Çeviri:** nüfusun oranı
+
+#### Soru 16 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** a little of the gas
+* **Kelimeler:** biri, hastalıkların, miktarı, petrolün, bir, az, gazın
+* **Doğru Çeviri:** gazın az bir miktarı
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** none of the wood
+* **Kelimeler:** maddelerin, odunun, kazançların, hastalıkların, hiçbirisi
+* **Doğru Çeviri:** odunun hiçbirisi
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** another of the diseases
+* **Kelimeler:** hastalıkların, bir, az, başkası, hiçbirisi, kazançların
+* **Doğru Çeviri:** hastalıkların bir başkası
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** all of the ideas
+* **Kelimeler:** gazın, dağların, fikirlerin, hepsi, petrolün
+* **Doğru Çeviri:** fikirlerin hepsi
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** several of the metals
+* **Kelimeler:** maddelerin, malların, birçoğu, birkaçı, metallerin
+* **Doğru Çeviri:** metallerin birkaçı
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l2_ex4_wb_6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** most of the energy
+* **Kelimeler:** her, dağların, birkaçı, enerjinin, çoğu
+* **Doğru Çeviri:** enerjinin çoğu
+
+### Lesson 3 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l3_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - fiyatların bazıları <--> some of the prices
+  - maddelerin birçoğu <--> many of the substances
+  - hastalıkların biri <--> one of the diseases
+  - malların çoğu <--> most of the goods
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l3_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - problemlerin bir diğeri <--> another of the problems
+  - detayların birçoğu <--> many of the details
+  - kararların birkaçı <--> a few of the decisions
+  - yasaların birçoğu <--> many of the laws
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l3_ex4_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kategorilerin her biri <--> each of the categories
+  - enerjinin bir kısmı <--> some of the energy
+  - gelirin çoğu <--> most of the revenue
+  - kaynakların hiçbirisi <--> none of the resources
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** some of the heat
+* **Kelimeler:** çoğu, odunun, ısının, hepsi, kısmı, bir
+* **Doğru Çeviri:** ısının bir kısmı
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** part of the area
+* **Kelimeler:** bir, az, bazıları, bölgenin, kısmı, odunun
+* **Doğru Çeviri:** bölgenin bir kısmı
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** each of the countries
+* **Kelimeler:** biri, her, gazın, kısmı, bir, ülkelerin
+* **Doğru Çeviri:** ülkelerin her biri
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** most of the oil
+* **Kelimeler:** hepsi, çoğu, gazın, petrolün, birçoğu
+* **Doğru Çeviri:** petrolün çoğu
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** a little of the gas
+* **Kelimeler:** miktarı, gazın, hiçbirisi, maddelerin, dağların, az, bir
+* **Doğru Çeviri:** gazın az bir miktarı
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l3_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** a little of the liquid
+* **Kelimeler:** az, bir, sıvının, her, fiyatların, miktarı, hiçbirisi
+* **Doğru Çeviri:** sıvının az bir miktarı
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** several of the employers
+* **Kelimeler:** elementlerin, işverenlerin, birkaçı, maliyetin, kemiğin
+* **Doğru Çeviri:** işverenlerin birkaçı
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** some of the substances
+* **Kelimeler:** kemiğin, kararların, verilerin, bazıları, maddelerin
+* **Doğru Çeviri:** maddelerin bazıları
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** some of the data
+* **Kelimeler:** bazıları, verilerin, biri, maddelerin, kemiğin
+* **Doğru Çeviri:** verilerin bazıları
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** many of the substitutes
+* **Kelimeler:** birçoğu, alternatiflerin, detayların, hepsi, kömürün
+* **Doğru Çeviri:** alternatiflerin birçoğu
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** one of the factors
+* **Kelimeler:** faktörlerden, biri, bir, hiçbirisi, verilerin
+* **Doğru Çeviri:** faktörlerden biri
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l3_ex3_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** most of the variables
+* **Kelimeler:** değişkenlerin, çoğu, biri, problemlerin, maddelerin
+* **Doğru Çeviri:** değişkenlerin çoğu
+
+#### Soru 16 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** a lot of the labor
+* **Kelimeler:** birçoğu, emeğin, büyük, bir, kısmı, kavramların, her
+* **Doğru Çeviri:** emeğin büyük bir kısmı
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** some of the software updates
+* **Kelimeler:** gelirin, enerjinin, yazılım, güncellemelerinin, bazıları, kaynakların
+* **Doğru Çeviri:** yazılım güncellemelerinin bazıları
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** many of the configurations
+* **Kelimeler:** birçoğu, enerjinin, diğeri, bazıları, yapılandırmaların
+* **Doğru Çeviri:** yapılandırmaların birçoğu
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** one of the servers
+* **Kelimeler:** hiçbirisi, her, biri, değişkenlerin, sunucuların
+* **Doğru Çeviri:** sunucuların biri
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** most of the parameters
+* **Kelimeler:** gelirin, parametrelerin, çoğu, teorilerin, biri
+* **Doğru Çeviri:** parametrelerin çoğu
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l3_ex4_wb_6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** each of the variables
+* **Kelimeler:** değişkenlerin, her, biri, teorilerin, parametrelerin, çoğu
+* **Doğru Çeviri:** değişkenlerin her biri
+
+### Lesson 4 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l4_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - açlık korkusu <--> fear of hunger
+  - ateşin icadı <--> the invention of fire
+  - tarih çalışması <--> the study of history
+  - ışık hızı <--> the speed of light
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l4_ex2_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - elektrik kullanımı <--> the use of electricity
+  - radyumun keşfi <--> the discovery of radium
+  - finansın yaratılması <--> the creation of finance
+  - verinin analizi <--> the analysis of data
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l4_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yaşam beklentisi <--> the expectancy of life
+  - hammadde üretimi <--> the production of raw materials
+  - refah tahmini <--> the estimation of welfare
+  - teknolojinin entegrasyonu <--> the integration of technology
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** division of labour
+* **Kelimeler:** varlığı, bölümü, tarihi, iş, hızı
+* **Doğru Çeviri:** iş bölümü
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** form of government
+* **Kelimeler:** şekli, açlık, çalışması, iş, hükümet
+* **Doğru Çeviri:** hükümet şekli
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** form of policy
+* **Kelimeler:** şekli, politika, özgürlüğü, kanıtı, açlık
+* **Doğru Çeviri:** politika şekli
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the produce of Turkey
+* **Kelimeler:** Türkiye'nin, ürünleri, ateşin, korkusu, reddi
+* **Doğru Çeviri:** Türkiye'nin ürünleri
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** freedom of religion
+* **Kelimeler:** ateşin, hızı, tarihi, din, özgürlüğü
+* **Doğru Çeviri:** din özgürlüğü
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l4_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** rejection of authority
+* **Kelimeler:** kanıtı, korkusu, din, reddi, otoritenin
+* **Doğru Çeviri:** otoritenin reddi
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the choice of materials
+* **Kelimeler:** finansın, elektrik, kanıtı, seçimi, malzemelerin
+* **Doğru Çeviri:** malzemelerin seçimi
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the growth of population
+* **Kelimeler:** kaynağı, nüfusun, büyümesi, analizi, keşfi
+* **Doğru Çeviri:** nüfusun büyümesi
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the control of quality
+* **Kelimeler:** keşfi, kontrolü, analizi, kalite, hareket
+* **Doğru Çeviri:** kalite kontrolü
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the source of information
+* **Kelimeler:** kaynağı, kullanımı, bilgi, elektrik, radyumun
+* **Doğru Çeviri:** bilgi kaynağı
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the pattern of behavior
+* **Kelimeler:** verinin, çalışması, keşfi, kalıbı, davranış
+* **Doğru Çeviri:** davranış kalıbı
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l4_ex2_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the distribution of income
+* **Kelimeler:** ifade, bilgi, malzemelerin, dağılımı, gelir
+* **Doğru Çeviri:** gelir dağılımı
+
+#### Soru 16 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the existence of inconsistencies
+* **Kelimeler:** hammadde, tutarsızlıkların, beklentisi, eşitliği, varlığı
+* **Doğru Çeviri:** tutarsızlıkların varlığı
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the of resources
+* **Kelimeler:** ihracatı, üretimi, kuralları, tarihi, kaynakların
+* **Doğru Çeviri:** kaynakların ihracatı
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the code of conduct
+* **Kelimeler:** üretimi, ölçüm, felsefe, kuralları, davranış
+* **Doğru Çeviri:** davranış kuralları
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the standard of living
+* **Kelimeler:** merkezi, standardı, olağanüstü, yaşam, yerçekimi
+* **Doğru Çeviri:** yaşam standardı
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the method of measurement
+* **Kelimeler:** ölçüm, yöntemi, bileşenlerin, hammadde, standardı
+* **Doğru Çeviri:** ölçüm yöntemi
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l4_ex3_wb_6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the center of gravity
+* **Kelimeler:** varlığı, merkezi, bireylerin, yerçekimi, teknolojinin
+* **Doğru Çeviri:** yerçekimi merkezi
+
+### Lesson 5 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l5_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - İngiltere'den bir öğrenci <--> a student from England
+  - nehirden gelen kum <--> sand from the river
+  - kömürden elde edilen madde <--> a substance from coal
+  - kütüphaneden bir kitap <--> a book from the library
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l5_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - çalışmadan kaynaklanan yaralanma <--> injury from labor
+  - ihracattan elde edilen gelir <--> the revenue from the export
+  - bileşenden gelen enerji <--> the energy from the component
+  - bireyden alınan kan <--> the blood from the individual
+
+#### Soru 3 (word-bank)
+* **Orijinal ID:** u1l5_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the heat from the metal
+* **Kelimeler:** metalden, kan, gelen, ısı, elde, İngiltere'den
+* **Doğru Çeviri:** metalden gelen ısı
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l5_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the blood from the animal
+* **Kelimeler:** hayvandan, alınan, kan, metalden, elde, uzaydan
+* **Doğru Çeviri:** hayvandan alınan kan
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l5_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** diseases from viruses
+* **Kelimeler:** öğrenci, ihmalden, hastalıklar, kaynaklanan, alınan, virüslerden
+* **Doğru Çeviri:** virüslerden kaynaklanan hastalıklar
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l5_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** an article from this newspaper
+* **Kelimeler:** öğrenci, makale, bir, gazeteden, bu, uzaydan, elde
+* **Doğru Çeviri:** bu gazeteden bir makale
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u1l5_ex1_tx_0
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "radiation from space" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** radiation from space
+* **Doğru Çeviri:** uzaydan gelen radyasyon
+
+#### Soru 8 (translation-text)
+* **Orijinal ID:** u1l5_ex1_tx_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "a page from history" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** a page from history
+* **Doğru Çeviri:** tarihten bir sayfa
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l5_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** signals from the gateway
+* **Kelimeler:** geçiş, sistem, gelen, kapısından, sinyaller, alınan, yükünden
+* **Doğru Çeviri:** geçiş kapısından gelen sinyaller
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l5_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** latency from system load
+* **Kelimeler:** gecikme, sistem, yükünden, optimize, elde, ihracattan, kaynaklanan
+* **Doğru Çeviri:** sistem yükünden kaynaklanan gecikme
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l5_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** recovery from drive failure
+* **Kelimeler:** sürücü, arızasından, kurtulma, bildirim, çalışmadan, tutarsızlıklar
+* **Doğru Çeviri:** sürücü arızasından kurtulma
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l5_ex3_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** inconsistencies from variables
+* **Kelimeler:** değişkenlerden, edilmemiş, yaralanma, tutarsızlıklar, gelen, kaynaklanan
+* **Doğru Çeviri:** değişkenlerden kaynaklanan tutarsızlıklar
+
+#### Soru 13 (translation-text)
+* **Orijinal ID:** u1l5_ex3_tx_0
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "the concepts from this theory" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** the concepts from this theory
+* **Doğru Çeviri:** bu teoriden çıkan kavramlar
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u1l5_ex3_tx_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "feedback from the respondents" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** feedback from the respondents
+* **Doğru Çeviri:** katılımcılardan gelen geri bildirim
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l5_ex4_wb_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They have not yet solved the problem of radiation from space.
+* **Kelimeler:** radyasyon, henüz, problemini, kitaptan, temiz, gelen, çözmediler, Uzaydan, çıkan
+* **Doğru Çeviri:** Uzaydan gelen radyasyon problemini henüz çözmediler
+
+#### Soru 16 (word-bank)
+* **Orijinal ID:** u1l5_ex4_wb_6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Watching the film was like reading a page from history.
+* **Kelimeler:** öğrenciyle, kum, okumak, önlemenin, sayfa, Filmi, gibiydi, izlemek, tarihten, bir
+* **Doğru Çeviri:** Filmi izlemek tarihten bir sayfa okumak gibiydi
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l5_ex4_wb_7
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The child is suffering from damage from neglect.
+* **Kelimeler:** muzdarip, Çocuk, ihmalden, kaynaklanan, hasardan, basit, izlemek, İngiltere'den
+* **Doğru Çeviri:** Çocuk ihmalden kaynaklanan hasardan muzdarip
+
+#### Soru 18 (translation-text)
+* **Orijinal ID:** u1l5_ex4_tx_8
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** "The water from the river is not clean enough to drink." cümlesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The water from the river is not clean enough to drink.
+* **Doğru Çeviri:** Nehirden gelen su içmek için yeterince temiz değil.
+
+#### Soru 19 (translation-text)
+* **Orijinal ID:** u1l5_ex4_tx_9
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** "They found a simple way to measure the heat from the metal." cümlesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They found a simple way to measure the heat from the metal.
+* **Doğru Çeviri:** Metalden gelen ısıyı ölçmek için basit bir yol buldular.
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l5_ex4_wb_10
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The blood from the animal was on the road.
+* **Kelimeler:** Kütüphaneden, gazeteden, yoldaydı, bazı, kan, alınan, Hayvandan
+* **Doğru Çeviri:** Hayvandan alınan kan yoldaydı
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l5_ex4_wb_11
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Today they have found a way to prevent some of the diseases from viruses.
+* **Kelimeler:** bazı, Bugün, örnekleri, virüslerden, su, önlemenin, kitaptan, buldular, hastalıkları, kaynaklanan, bir, yolunu
+* **Doğru Çeviri:** Bugün virüslerden kaynaklanan bazı hastalıkları önlemenin bir yolunu buldular
+
+### Lesson 6 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l6_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - fabrikadaki işçiler <--> the workers in the factory
+  - gazetedeki ifade <--> the statement in the newspaper
+  - masamın üzerindeki kağıtlar <--> the papers on my table
+  - gazetedeki fotoğraf <--> the photograph in the newspaper
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l6_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Araştırma görevlilerinin faaliyetleri bu rapordadır. <--> The activities of the research workers are in this report.
+  - Araştırmalarının sonuçları rapordadır. <--> The results of their investigations are in the report.
+  - Bu deneylerin sonuçları bu raporda olacaktır. <--> The results of these experiments will be in this report.
+  - Komitenin kararı onların faaliyetlerinin lehineydi. <--> The decision of the committee was in favour of their activities.
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l6_ex5_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Hayvanın bacaklarının hareketini inceledi. <--> He studied the movement of the legs of the animal.
+  - Bacağın kaslarının hareketini inceledi. <--> He studied the movement of the muscles of the leg.
+  - Bu deneyin sonuçlarının önemini unutmamalıyız. <--> We must remember the importance of the results of this experiment.
+  - Resimlerin düzenlenmesi çok önemlidir. <--> The arrangement of the pictures is very important.
+
+#### Soru 4 (multiple-choice)
+* **Orijinal ID:** u1l6_ex1_mc_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "the policy of the government" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** the policy of the government
+* **Seçenekler:** hükümetin politikası | metaldeki ısı | sınava hazırlık | gazetedeki fotoğraf
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l6_ex1_wb_0
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** damage to the head
+* **Kelimeler:** gazdaki, ısı, muayenesi, hasar, kafadaki
+* **Doğru Çeviri:** kafadaki hasar
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l6_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the ideas in this chapter
+* **Kelimeler:** bu, fabrikalardaki, fabrikadaki, kemikler, bölümdeki, fikirler
+* **Doğru Çeviri:** bu bölümdeki fikirler
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l6_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the bones in the arm
+* **Kelimeler:** işçiler, halk, gazetedeki, kemikler, koldaki
+* **Doğru Çeviri:** koldaki kemikler
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l6_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the heat in the metal
+* **Kelimeler:** yer, bölümdeki, metaldeki, arasındaki, ısı
+* **Doğru Çeviri:** metaldeki ısı
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l6_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the cure for this disease
+* **Kelimeler:** bu, hastalığın, fabrikadaki, hazırlık, tedavisi, kağıtlar
+* **Doğru Çeviri:** bu hastalığın tedavisi
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u1l6_ex3_mc_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "The object of the research project will be at the beginning of the report." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The object of the research project will be at the beginning of the report.
+* **Seçenekler:** Yöneticinin açıklaması bugünkü gazetedeydi. | Araştırma projesinin amacı raporun başlangıcında olacaktır. | Bu deneylerin sonuçları bu raporda olacaktır. | Bir sonraki deney için malzemeler bu kutudadır.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l6_ex3_wb_0
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The bacteria of this disease are in the tissues of the lung.
+* **Kelimeler:** bu, Bu, hastalığın, bakterileri, akciğer, dokularındadır, cümleler, hastanenin
+* **Doğru Çeviri:** Bu hastalığın bakterileri akciğer dokularındadır
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l6_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The date of the next meeting is on the notice board.
+* **Kelimeler:** Bir, sonraki, toplantının, tarihi, ilan, tahtasındadır, hastanenin, raporun, rapordadır
+* **Doğru Çeviri:** Bir sonraki toplantının tarihi ilan tahtasındadır
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l6_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The report of the last meeting may be on the notice board.
+* **Kelimeler:** Komitenin, toplantının, faaliyetlerinin, ilan, Son, soruları, raporu, tahtasında, olabilir
+* **Doğru Çeviri:** Son toplantının raporu ilan tahtasında olabilir
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l6_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The equipment for the next experiment is not in the laboratory.
+* **Kelimeler:** Bir, için, laboratuvarda, alıştırmanın, amacı, sonraki, deney, ekipman, değildir, Tüm
+* **Doğru Çeviri:** Bir sonraki deney için ekipman laboratuvarda değildir
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l6_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The statement from the manager was in today's newspaper.
+* **Kelimeler:** gazetedeydi, bugünkü, Yöneticinin, sonraki, seviyesinin, açıklaması, laboratuvarda
+* **Doğru Çeviri:** Yöneticinin açıklaması bugünkü gazetedeydi
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u1l6_ex5_mc_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** "We are waiting for the result of the experiment." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** We are waiting for the result of the experiment.
+* **Seçenekler:** Deneyin sonucunu bekliyoruz. | Odunun kullanılmasını tavsiye etmeyecektir. | Sıvının hacmi arttı veya azaldı. | Bu harita Türkiye'deki ormanların dağılımını göstermektedir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l6_ex5_wb_0
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They closed the factory for the duration of the holiday.
+* **Kelimeler:** bekliyoruz, hasarın, moleküllerin, Tatil, fabrikayı, süresince, kapattılar
+* **Doğru Çeviri:** Tatil süresince fabrikayı kapattılar
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l6_ex5_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** This map shows the distribution of the forests in Turkey.
+* **Kelimeler:** Bu, önemlidir, harita, göstermektedir, ormanların, Türkiye'deki, Tatil, dağılımını, bacaklarının
+* **Doğru Çeviri:** Bu harita Türkiye'deki ormanların dağılımını göstermektedir
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l6_ex5_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They overcame the difficulties of the experiment.
+* **Kelimeler:** Bacağın, üstesinden, Deneyin, göremediler, geldiler, zorluklarının, deneyin
+* **Doğru Çeviri:** Deneyin zorluklarının üstesinden geldiler
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l6_ex5_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They did not know the dimensions of the room.
+* **Kelimeler:** işin, kapattılar, Resimlerin, bilmiyorlardı, boyutlarını, Odanın
+* **Doğru Çeviri:** Odanın boyutlarını bilmiyorlardı
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l6_ex5_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The manager will decide on the division of the work.
+* **Kelimeler:** Gazın, Müdür, karar, boyutlarını, bölünmesine, verecektir, deneyin, işin
+* **Doğru Çeviri:** Müdür işin bölünmesine karar verecektir
+
+### Lesson 7 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l7_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - deneylerin sonuçlarındaki fark <--> the difference in the results of the experiments
+  - kan hastalıklarının bir incelemesi <--> a study of the diseases of the blood
+  - bardaktaki sıvının molekülleri arasındaki boşluk <--> the space between the molecules in the liquid in the glass
+  - son birkaç yılda hükümetin politikası <--> the policy of the government during the last few years
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l7_ex2_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Amerika'daki işçilerin durumu <--> the situation of the workers in America
+  - toprağın yüzeyindeki kömür <--> the coal at the surface of the ground
+  - bu hastalığa sahip hastanın kanındaki madde <--> a substance in the blood of the patient with this disease
+  - katılımcıların yanıtlarındaki değişim <--> the variation in the responses of the participants
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l7_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kültürün unsurlarının entegrasyonu <--> the integration of the elements of the culture
+  - değerlendirmenin ölçütlerinin doğrulanması <--> the validation of the criteria of the evaluation
+  - kavramın parametrelerinin bir tanımı <--> a definition of the parameters of the concept
+  - refah kaynaklarının dağılımı <--> the distribution of the resources of the welfare
+
+#### Soru 4 (multiple-choice)
+* **Orijinal ID:** u1l7_ex1_mc_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** "the history of the civilisation of these people" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** the history of the civilisation of these people
+* **Seçenekler:** tanktaki sıvının yüzeyindeki ısı | hayvanın bacağının kasına yapılan enjeksiyon | bacak kemiklerindeki hastalık | bu insanların medeniyetinin tarihi
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l7_ex1_wb_0
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the disease in the bones of the leg
+* **Kelimeler:** deneylerin, bacak, kemiklerindeki, enjeksiyon, sonuçlarındaki, hastalık
+* **Doğru Çeviri:** bacak kemiklerindeki hastalık
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l7_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the heat in the metal round the top of the bottle
+* **Kelimeler:** tanktaki, şişenin, etrafındaki, metaldeki, üst, fikirler, kısmının, sonuçlarındaki, ısı
+* **Doğru Çeviri:** şişenin üst kısmının etrafındaki metaldeki ısı
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l7_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the heat at the surface of the liquid in the tank
+* **Kelimeler:** sıvının, sınavına, tanktaki, ön, yönetim, yüzeyindeki, ısı
+* **Doğru Çeviri:** tanktaki sıvının yüzeyindeki ısı
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l7_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the cure for this disease of the blood
+* **Kelimeler:** tedavisi, hastalığının, fabrikalardaki, kan, bardaktaki, İngilizce, bu
+* **Doğru Çeviri:** bu kan hastalığının tedavisi
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l7_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** an injection into the muscle of the leg of the animal
+* **Kelimeler:** enjeksiyon, hayvanın, bacağının, kasına, tarihi, yapılan, fabrikalardaki, yılda
+* **Doğru Çeviri:** hayvanın bacağının kasına yapılan enjeksiyon
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u1l7_ex2_mc_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** "the fluctuation in the estimates of the economists" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** the fluctuation in the estimates of the economists
+* **Seçenekler:** hükümetin politikalarındaki değişim | uygulayıcıların ahlak kurallarının araştırılması | sürecin aşamalarındaki ilerleme | ekonomistlerin tahminlerindeki dalgalanma
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l7_ex2_wb_0
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the progression in the phases of the process
+* **Kelimeler:** yapılarındaki, çerçevenin, ilerleme, sürecin, metninin, aşamalarındaki
+* **Doğru Çeviri:** sürecin aşamalarındaki ilerleme
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l7_ex2_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the distortion in the images of the media
+* **Kelimeler:** medyanın, yanıtlarındaki, görüntülerindeki, kurallarının, bozulma, katılık
+* **Doğru Çeviri:** medyanın görüntülerindeki bozulma
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l7_ex2_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** a study of the theories of the philosophy
+* **Kelimeler:** aşamalarındaki, uygulayıcıların, felsefenin, teorilerinin, bir, mevzuatın, incelemesi
+* **Doğru Çeviri:** felsefenin teorilerinin bir incelemesi
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l7_ex2_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** an assessment of the components of the framework
+* **Kelimeler:** düşüş, değerlendirmesi, bileşenlerinin, durumu, çerçevenin, değişim
+* **Doğru Çeviri:** çerçevenin bileşenlerinin değerlendirmesi
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l7_ex2_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** an interpretation of the text of the legislation
+* **Kelimeler:** düşüş, yorumu, toprağın, verilerindeki, metninin, mevzuatın
+* **Doğru Çeviri:** mevzuatın metninin yorumu
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u1l7_ex3_mc_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** "the linkage between the innovations in the industry" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** the linkage between the innovations in the industry
+* **Seçenekler:** sektördeki yenilikler arasındaki bağlantı | çevredeki faktörler arasındaki ilişki | değerlendirmenin ölçütlerinin doğrulanması | formüldeki değişkenler arasındaki etkileşim
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l7_ex3_wb_0
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the overlap between the categories in the database
+* **Kelimeler:** çakışma, veritabanındaki, kavramın, ölçütlerinin, göçmenlerin, kategoriler, arasındaki
+* **Doğru Çeviri:** veritabanındaki kategoriler arasındaki çakışma
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l7_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the tension between the minorities in the region
+* **Kelimeler:** şirket, tanımı, gerilim, arasındaki, azınlıklar, bölgedeki, kanıtların
+* **Doğru Çeviri:** bölgedeki azınlıklar arasındaki gerilim
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l7_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the cooperation between the colleagues in the department
+* **Kelimeler:** formüldeki, işbirliği, meslektaşlar, soruşturmadaki, arasındaki, analistler, departmandaki
+* **Doğru Çeviri:** departmandaki meslektaşlar arasındaki işbirliği
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l7_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the proportion of the immigrants in the population
+* **Kelimeler:** göçmenlerin, nüfustaki, işbirliği, oranı, komitedeki, tanımı
+* **Doğru Çeviri:** nüfustaki göçmenlerin oranı
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l7_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the accumulation of the evidence in the investigation
+* **Kelimeler:** birikmesi, bağlantı, ilişki, kanıtların, soruşturmadaki, birliği
+* **Doğru Çeviri:** soruşturmadaki kanıtların birikmesi
+
+### Lesson 8 - Çıkarılan Sorular
+#### Soru 1 (matching)
+* **Orijinal ID:** u1l8_ex1_match
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ingiltere'den bir öğrenci <--> a student from England
+  - nehirden gelen kum <--> sand from the river
+  - kömürden elde edilen madde <--> a substance from coal
+  - kütüphaneden bir kitap <--> a book from the library
+
+#### Soru 2 (matching)
+* **Orijinal ID:** u1l8_ex2_match
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - bu bölgeden çıkan kömür <--> coal from this area
+  - ateşin icadı <--> the invention of fire
+  - açlık korkusu <--> fear of hunger
+  - hastalık çalışması <--> the study of disease
+
+#### Soru 3 (matching)
+* **Orijinal ID:** u1l8_ex3_match
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - Yazarlar kavramın tanımı için ayrıntılı bir bölüm sağladı. <--> The authors provided a detailed chapter for the definition of the concept.
+  - Üniversite öğrencilerin değerlendirilmesinden çok memnun. <--> The university is very satisfied with the assessment of the students.
+  - Süreç boyunca hiç kimsenin laboratuvardan çıkmasına izin verilmez. <--> No one is allowed to leave the laboratory during the duration of the process.
+  - BT departmanı yeni ağın oluşturulmasıyla sistemi yükseltti. <--> The IT department upgraded the system by the creation of the new network.
+
+#### Soru 4 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_1
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the water from the river
+* **Kelimeler:** ısı, su, gelen, maddeden, radyasyon, nehirden
+* **Doğru Çeviri:** nehirden gelen su
+
+#### Soru 5 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_2
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the heat from the metal
+* **Kelimeler:** metalden, gelen, ısı, radyasyon, edilen, maddeden
+* **Doğru Çeviri:** metalden gelen ısı
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_3
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the blood from the animal
+* **Kelimeler:** hayvandan, alınan, yaprak, kan, edilen, nehirden
+* **Doğru Çeviri:** hayvandan alınan kan
+
+#### Soru 7 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_4
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** diseases from viruses
+* **Kelimeler:** kan, yaprak, kitap, hastalıklar, kaynaklanan, virüslerden
+* **Doğru Çeviri:** virüslerden kaynaklanan hastalıklar
+
+#### Soru 8 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_5
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the gas from this substance
+* **Kelimeler:** gaz, çıkan, maddeden, bu, ihmalden, radyasyon, kömürden
+* **Doğru Çeviri:** bu maddeden çıkan gaz
+
+#### Soru 9 (word-bank)
+* **Orijinal ID:** u1l8_ex1_wb_6
+* **Orijinal Alıştırma:** Alıştırma 1: Temel Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** the results from these experiments
+* **Kelimeler:** sonuçlar, alınan, kitap, deneylerden, bu, gazeteden, fikirler
+* **Doğru Çeviri:** bu deneylerden alınan sonuçlar
+
+#### Soru 10 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_1
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The new manager wants to improve the stability of the framework of the organization.
+* **Kelimeler:** müdür, çerçevesinin, istiyor, geliştirmek, çatışmasının, kanıtı, istikrarını, tamamladı, organizasyonun, Yeni
+* **Doğru Çeviri:** Yeni müdür organizasyonun çerçevesinin istikrarını geliştirmek istiyor
+
+#### Soru 11 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_2
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The mediator facilitated the resolution of the conflict of the parties.
+* **Kelimeler:** tarafların, korkusu, çözümünü, Arabulucu, çıkan, kolaylaştırdı, incelemesi, çatışmasının
+* **Doğru Çeviri:** Arabulucu tarafların çatışmasının çözümünü kolaylaştırdı
+
+#### Soru 12 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_3
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The statistics confirmed the significance of the results of the experiment.
+* **Kelimeler:** yakından, İstatistikler, deneyin, doğruladı, araştırmanın, önemini, sonuçlarının, çerçevesinin
+* **Doğru Çeviri:** İstatistikler deneyin sonuçlarının önemini doğruladı
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_4
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Engineers closely monitored the variation of the parameters of the system.
+* **Kelimeler:** araştırmanın, değişimini, hipotezlerinin, korkusu, parametrelerinin, izledi, Mühendisler, yakından, sistemin
+* **Doğru Çeviri:** Mühendisler sistemin parametrelerinin değişimini yakından izledi
+
+#### Soru 14 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_5
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The census revealed the proportion of the minorities of the population.
+* **Kelimeler:** Nüfus, sayımı, oranını, ortaya, analizini, nüfusun, verilerinin, azınlıklarının, çıkardı, araştırmanın
+* **Doğru Çeviri:** Nüfus sayımı nüfusun azınlıklarının oranını ortaya çıkardı
+
+#### Soru 15 (word-bank)
+* **Orijinal ID:** u1l8_ex2_wb_6
+* **Orijinal Alıştırma:** Alıştırma 2: Orta Seviye
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The scientists provided the validation of the hypotheses of the analysts.
+* **Kelimeler:** Bilim, insanları, doğrulamasını, analistlerin, hipotezlerinin, çatışmasının, sağladı, bu, parametrelerinin
+* **Doğru Çeviri:** Bilim insanları analistlerin hipotezlerinin doğrulamasını sağladı
+
+#### Soru 16 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_1
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The government intervened because of the intensity of the crisis.
+* **Kelimeler:** Hükümet, bölüm, krizin, için, müdahale, karmaşıklığını, etti, şiddeti, nedeniyle
+* **Doğru Çeviri:** Hükümet krizin şiddeti nedeniyle müdahale etti
+
+#### Soru 17 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_2
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The project operates strictly under the authority of the institution.
+* **Kelimeler:** Proje, müdahale, yürütülmektedir, kurumun, yetkisi, kesinlikle, kimsenin, altında, tanımı
+* **Doğru Çeviri:** Proje kesinlikle kurumun yetkisi altında yürütülmektedir
+
+#### Soru 18 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_3
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Economists are investigating the distribution of the income in Europe.
+* **Kelimeler:** Ekonomistler, araştırıyorlar, yetkisi, dağılımını, bakımından, Avrupa'daki, gelir, kesinlikle
+* **Doğru Çeviri:** Ekonomistler Avrupa'daki gelir dağılımını araştırıyorlar
+
+#### Soru 19 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_4
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The professor criticized the interpretation of the data in the journal.
+* **Kelimeler:** dergideki, yorumlanmasını, yetkisi, yayınladılar, katılımcıların, eleştirdi, Profesör, verilerin
+* **Doğru Çeviri:** Profesör dergideki verilerin yorumlanmasını eleştirdi
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_5
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The ministry aims to promote the integration of the technology in schools.
+* **Kelimeler:** teknolojinin, teşvik, etmeyi, okullarda, sonra, soruşturmanın, entegrasyonunu, Bakanlık, verilmez, amaçlamaktadır
+* **Doğru Çeviri:** Bakanlık okullarda teknolojinin entegrasyonunu teşvik etmeyi amaçlamaktadır
+
+#### Soru 21 (word-bank)
+* **Orijinal ID:** u1l8_ex3_wb_6
+* **Orijinal Alıştırma:** Alıştırma 3: İleri Seviye / Ustalaşma
+* **Yönerge:** İfadenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** We underestimated the complexity of the task in the project.
+* **Kelimeler:** Projedeki, görevin, müdahale, entegrasyonunu, aldık, hafife, karmaşıklığını, araştırıyorlar
+* **Doğru Çeviri:** Projedeki görevin karmaşıklığını hafife aldık
+
+
+---
+
 
 ## Grup 1 - Alıştırma 1: Temel İsim Tamlamaları + Alıştırma 2: Orta Seviye İsim Tamlamaları -> Alıştırma 1: Temel Seviye
 *Çıkarılan Soru Sayısı: 12*

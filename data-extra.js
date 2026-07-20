@@ -1793,4 +1793,382 @@
     });
   }
 
+  // ==========================================
+  // BÖLÜM 59: SENTAKTİK KRİPTOLOJİ: PAST PARTICIPLE (-ED) VE EDİLGEN SENTEZ
+  // ==========================================
+  if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof rawTopics !== 'undefined') {
+    const topic59 = {
+      "id": 59,
+      "startLessonId": 590,
+      "originalIndex": 59,
+      "title": "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
+      "desc": "-ed (Past Participle) formunun ileri düzey kullanımları, edilgen kısaltmalar, sıfat işlevleri ve ettirgen yapılar üzerine 30 soruluk teşhis testi.",
+      "icon": "⛓️",
+      "numLessons": 1,
+      "formulas": [
+        {
+          "formula": "Reduced Passive Relative Clause -> Noun + V3 (unearthed / implemented)",
+          "example": "artifacts unearthed (which were unearthed) / regulations implemented",
+          "description": "İlgi cümleciklerinin edilgen kısaltmalarında past participle kullanımı."
+        },
+        {
+          "formula": "Passive Participle Clause (Opener/Closer) -> V3..., S + V + O",
+          "example": "Alarmed by the collapse, the agency intervened. / Accompanied by nurses, the patient left.",
+          "description": "Zarf cümleciklerinin edilgen kısaltmalarında cümle başı ve sonu past participle kullanımı."
+        },
+        {
+          "formula": "Experiencing (-ed) vs. Causing (-ing) -> Adjectival Distinction",
+          "example": "agitated subjects (feeling) vs. worrying development (causing)",
+          "description": "Sıfatlaşmış ortaçlarda duygu deneyimleyen ile duyguya sebep olan ayrımı."
+        },
+        {
+          "formula": "Perfect Passive Participle -> Having been + V3",
+          "example": "Having been criticized by reviewers, the paper was rejected.",
+          "description": "Zarf cümleciklerinde geçmişteki edilgen eylemlerin öncelik-sonralık ilişkisiyle kısaltılması."
+        },
+        {
+          "formula": "Causative Passive -> Have/Get + Object + V3",
+          "example": "had the sequence analyzed / got the servers backed up",
+          "description": "Ettirgen yapılarda nesnenin edilgen durumu için past participle kullanımı."
+        },
+        {
+          "formula": "Past Participle after Stative Verbs -> remain / become + V3",
+          "example": "remained unconvinced / became alarmed",
+          "description": "Durum bildiren bağlama fiillerinden sonra adjectival past participle kullanımı."
+        }
+      ],
+      "subtitles": [
+        "1. İleri Düzey '-ed' Teşhis ve Sentaks Testi"
+      ],
+      "originalNumLessons": 1
+    };
+
+    rawTopics.push(topic59);
+
+    units.push({
+      id: topic59.id,
+      originalIndex: topic59.originalIndex,
+      title: topic59.title,
+      description: topic59.desc,
+      lessons: ["c60_l1"],
+      pages: "Ed-Synthesis"
+    });
+
+    const ex1_q = [
+      makeMC(
+        "c60_l1_ex1_q1",
+        "The archaeological artifacts _______ during the recent excavations of the Neolithic settlement are currently undergoing carbon-dating analysis to verify their chronological age.",
+        ["that unearthed", "unearthing", "unearthed", "were unearthed", "having unearthed"],
+        2,
+        "Doğru cevap C (unearthed). Bu boşluk bir Reduced Passive Relative Clause (kısaltılmış edilgen sıfat tümleciği) gerektirir; 'artifacts which were unearthed' yapısının kısaltılmış halidir. A şıkkı aktif bir ilgi cümleciğidir (artifacts that unearthed = kazıyı yapan eserler); B şıkkı aktif present participle yapısıdır; D şıkkı finite (çekimli) fiil olup 'are undergoing' ana yüklemiyle run-on cümle hatası oluşturur; E şıkkı ise aktif perfect participle yapısıdır."
+      ),
+      makeMC(
+        "c60_l1_ex1_q2",
+        "_______ by the sudden collapse of the major investment bank, the federal regulatory agency intervened immediately to stabilize the national financial market.",
+        ["Alarmed", "Alarming", "To alarm", "Having alarmed", "Alarm"],
+        0,
+        "Doğru cevap A (Alarmed). Cümle başında edilgen zarf cümleciği kısaltması (Passive Participle Clause) kullanılmıştır; 'Because they were alarmed by...' anlamını verir. B şıkkı (Alarming) aktif olup 'endişe verici' anlamıyla ajansı niteleyemez; C şıkkı amaç bildiren to-infinitive yapısıdır; D şıkkı aktif perfect participle yapısıdır; E şıkkı ise yalın fiildir ve bu pozisyonda kullanılamaz."
+      ),
+      makeMC(
+        "c60_l1_ex1_q3",
+        "_______ by multiple peer-reviewers for its methodological shortcomings, the manuscript was ultimately rejected by the editorial board of the medical journal.",
+        ["Having criticized", "Criticizing", "Having been criticized", "Criticizedly", "To be criticizing"],
+        2,
+        "Doğru cevap C (Having been criticized). Ana cümlenin yükleminden (was rejected) daha önce gerçekleşmiş edilgen bir eylemi nitelemek için Perfect Passive Participle (Having been + V3) kullanılmalıdır. A şıkkı aktif önceliklidir (makale eleştirmiş gibi olur); B şıkkı aktif present participle yapısıdır; D şıkkı zarftır; E şıkkı ise aktif ve sürekli mastar yapısıdır."
+      ),
+      makeMC(
+        "c60_l1_ex1_q4",
+        "The clinical researchers observed that the test subjects, when subjected to the high-frequency auditory stimulus, became increasingly _______ and showed elevated levels of cortisol.",
+        ["agitated", "agitating", "agitates", "to agitate", "having agitated"],
+        0,
+        "Doğru cevap A (agitated). 'became' bağlama fiilinden (linking verb) sonra öznenin (subjects) hissettiği durumu tanımlayan bir sıfat gelmelidir. -ed takılı participial sıfatlar hisleri tanımlar. B şıkkı (agitating) rahatsız edici/kışkırtıcı anlamına gelip duruma sebep olanı tanımlar; C şıkkı çekimli fiildir; D şıkkı to-infinitive yapısıdır; E şıkkı ise perfect participle yapısıdır."
+      ),
+      makeMC(
+        "c60_l1_ex1_q5",
+        "The lead research team decided to have the genetic sequence _______ by an external biotechnology laboratory to eliminate any potential bias in their findings.",
+        ["analyze", "analyzing", "analyzed", "to analyze", "has analyzed"],
+        2,
+        "Doğru cevap C (analyzed). 'Have + object + V3' ettirgen (causative) yapısı kullanılmıştır. Genetik dizilim analiz etme eylemini kendi yapmadığı, laboratuvar tarafından edilgen olarak yapıldığı için V3 (analyzed) gelmelidir. A şıkkı aktif ettirgen fiilidir; B şıkkı aktif present participle yapısıdır; D şıkkı get fiiliyle kullanılan aktif to-infinitive yapısıdır; E şıkkı ise çekimli fiildir."
+      ),
+      makeMC(
+        "c60_l1_ex1_q6",
+        "Despite numerous attempts by the public relations team to clarify the CEO's controversial statements, the public remained _______ about the company's ethical stance.",
+        ["unconvinced", "unconvincing", "unconvincedly", "to unconvinced", "unconvincedness"],
+        0,
+        "Doğru cevap A (unconvinced). 'remained' stative/linking fiilinden sonra öznenin (public) durumunu niteleyen bir sıfat gerekmektedir. Halk ikna olmadığı için edilgen anlam taşıyan 'unconvinced' sıfatı uygundur. B şıkkı (unconvincing) halkı inandırıcı olmayan/şüphe uyandıran (sebep olan) yapar; C şıkkı zarftır; D şıkkı edatlı yapıdır; E şıkkı ise isimdir."
+      ),
+      makeMC(
+        "c60_l1_ex1_q7",
+        "The stringent regulations _______ by the municipal council last month aim to curb carbon emissions by penalizing businesses that fail to meet environmental standards.",
+        ["implementing", "implemented", "were implemented", "to implement", "having implemented"],
+        1,
+        "Doğru cevap B (implemented). 'regulations' ismini arkasından pasif olarak niteleyen bir Reduced Passive Relative Clause (implemented = yürürlüğe koyulan) gereklidir. A şıkkı aktif ortaçtır; C şıkkı çekimli fiil olup 'aim' ana yüklemiyle cümle karmaşası (run-on) yaratır; D şıkkı gelecek zaman/amaç bildiren infinitive'dir; E şıkkı ise aktif öncelikli yapıdır."
+      ),
+      makeMC(
+        "c60_l1_ex1_q8",
+        "The patient was discharged from the hospital on Tuesday morning, _______ by a team of specialist home-care nurses who will monitor his recovery.",
+        ["accompanied", "accompanying", "to accompany", "having accompanied", "accompanies"],
+        0,
+        "Doğru cevap A (accompanied). Cümle sonundaki pasif ortaç kısaltması (Passive Participle Clause as Closer) 'accompanied by...' (hemşireler tarafından eşlik edilerek) yapısıdır. B şıkkı aktif olup hastanın hemşirelere eşlik ettiğini belirtir; C şıkkı amaç bildirir; D şıkkı aktif öncelikli ortaçtır; E şıkkı ise geniş zaman çekimli fiilidir."
+      ),
+      makeMC(
+        "c60_l1_ex1_q9",
+        "_______ in several prestigious art exhibitions across Europe, the painting's market value skyrocketed before it was finally auctioned in London.",
+        ["Having displayed", "Displaying", "Having been displayed", "Displayedly", "To display"],
+        2,
+        "Doğru cevap C (Having been displayed). Tablo sergilendiği için edilgen ve ana eylemden (skyrocketed) daha önce gerçekleştiği için öncelik bildiren Perfect Passive Participle (Having been + V3) kullanılmalıdır. A şıkkı aktiftir (tablo bir şeyi sergilemiş olur); B şıkkı aktif süreklidir; D şıkkı uydurma bir zarftır; E şıkkı ise aktif infinitive'dir."
+      ),
+      makeMC(
+        "c60_l1_ex1_q10",
+        "The macroeconomist argued that the persistent rise in commodity prices is a highly _______ development that could undermine consumer confidence.",
+        ["worried", "worrying", "worries", "worry", "to worry"],
+        1,
+        "Doğru cevap B (worrying). 'development' (gelişme) cansız bir varlık olup endişe duyma hissini yaşayamaz (worried olamaz), aksine endişeye sebep olur. Bu yüzden sebep bildiren sıfat 'worrying' (endişe verici) seçilmelidir. C şıkkı çekimli fiil veya çoğul isimdir; D şıkkı fiil/isimdir; E şıkkı ise infinitive yapısıdır."
+      )
+    ];
+
+    const ex2_q = [
+      makeMC(
+        "c60_l1_ex2_q1",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The clinical trial (A) <u>conducting</u> to test the efficacy of the new oncology drug was suspended (B) <u>due to</u> unforeseen side effects (C) <u>reported</u> by several (D) <u>participants</u>. (E) No error.\"",
+        ["(A) conducting", "(B) due to", "(C) reported", "(D) participants", "No error"],
+        0,
+        "Doğru cevap A. 'clinical trial' (klinik deney) kendi kendini yürütemez, araştırmacılar tarafından yürütülür. Bu nedenle aktif 'conducting' yerine edilgen sıfat-fiil kısaltması olan **conducted** kullanılmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q2",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"(A) <u>Convincing</u> that the experimental results were anomalous, the chief scientist (B) <u>ordered</u> the lab technicians (C) <u>to repeat</u> the entire (D) <u>procedure</u>. (E) No error.\"",
+        ["(A) Convincing", "(B) ordered", "(C) to repeat", "(D) procedure", "No error"],
+        0,
+        "Doğru cevap A. Bilim insanı başkalarını ikna etmek yerine kendisi ikna olduğu (edilgen durum) için cümle başı kısaltmada aktif 'Convincing' yerine edilgen anlam katan **Convinced** (ikna olmuş bir şekilde) kullanılmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q3",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"(A) <u>Having audited</u> twice by independent financial inspectors, the company's balance sheet (B) <u>was</u> declared free of (C) <u>material</u> (D) <u>misstatements</u>. (E) No error.\"",
+        ["(A) Having audited", "(B) was", "(C) material", "(D) misstatements", "No error"],
+        0,
+        "Doğru cevap A. 'balance sheet' (bilanço) denetleme işlemini kendi yapmaz, denetçiler tarafından denetlenir. Bu nedenle öncelik bildiren kısaltma aktif 'Having audited' değil, edilgen **Having been audited** olmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q4",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"After hours of debating (A) <u>confusing</u> financial policies, the board members felt extremely (B) <u>exhausting</u> and (C) <u>disappointed</u> with the lack (D) <u>of progress</u>. (E) No error.\"",
+        ["(A) confusing", "(B) exhausting", "(C) disappointed", "(D) of progress", "No error"],
+        1,
+        "Doğru cevap B. Yönetim kurulu üyeleri canlı varlıklar olarak yorgunluk hissini yaşamaktadırlar. Başkalarını yoran değil kendileri yorulmuş oldukları için 'exhausting' (yorucu) değil, **exhausted** (yorgun/tükenmiş) sıfatı getirilmelidir."
+      ),
+      makeMC(
+        "c60_l1_ex2_q5",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"In order to prevent data loss, the IT manager (A) <u>had</u> the entire database (B) <u>backup</u> onto (C) <u>secured</u> cloud servers (D) <u>overnight</u>. (E) No error.\"",
+        ["(A) had", "(B) backup", "(C) secured", "(D) overnight", "No error"],
+        1,
+        "Doğru cevap B. 'had + nesne + V3' passive causative (edilgen ettirgen) yapısında database yedekleme işini alan/edilgen ögedir. Bu yüzden bare infinitive olan 'backup' yerine past participle olan **backed up** kullanılmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q6",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The local population (A) <u>became</u> highly (B) <u>alarming</u> when the government (C) <u>refused</u> to disclose the source of the chemical leak in (D) <u>the river</u>. (E) No error.\"",
+        ["(A) became", "(B) alarming", "(C) refused", "(D) the river", "No error"],
+        1,
+        "Doğru cevap B. Yerel halk korku/endişe hissini deneyimleyen taraf olduğu için durum bildiren 'became' fiilinden sonra endişe veren anlamındaki 'alarming' değil, endişelenen anlamındaki **alarmed** sıfatı getirilmelidir."
+      ),
+      makeMC(
+        "c60_l1_ex2_q7",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The physical theories (A) <u>which proposed</u> by the late physicist in his final paper (B) <u>have</u> revolutionized (C) <u>our</u> understanding of quantum gravity (D) <u>mechanics</u>. (E) No error.\"",
+        ["(A) which proposed", "(B) have", "(C) our", "(D) mechanics", "No error"],
+        0,
+        "Doğru cevap A. Fizik teorileri kendilerini teklif edemez, fizikçi tarafından edilgen olarak sunulmuştur. Dolayısıyla 'which proposed' (aktif) yapısı yanlış olup yerine **proposed** ya da **which were proposed** (edilgen) getirilmelidir."
+      ),
+      makeMC(
+        "c60_l1_ex2_q8",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The diplomat delivered (A) <u>a speech</u> at the global summit, (B) <u>supporting</u> by a team of advisors (C) <u>who</u> had spent months (D) <u>preparing</u> the briefing materials. (E) No error.\"",
+        ["(A) a speech", "(B) supporting", "(C) who", "(D) preparing", "No error"],
+        1,
+        "Doğru cevap B. Diplomat danışmanlar tarafından desteklendiği için (arkasından 'by' edatı gelmiştir) aktif 'supporting' değil, edilgen ortaç olan **supported** kullanılmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q9",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"(A) <u>Having electing</u> as the new chairperson, the professor (B) <u>promised</u> to advocate for (C) <u>increased</u> funding (D) <u>for research</u>. (E) No error.\"",
+        ["(A) Having electing", "(B) promised", "(C) increased", "(D) for research", "No error"],
+        0,
+        "Doğru cevap A. Profesör yeni başkan olarak seçildiği (edilgen) ve bu eylem vaat etmesinden önce gerçekleştiği için aktif perfect participle olan 'Having electing' yerine edilgen olan **Having been elected** yapısı kullanılmalıdır."
+      ),
+      makeMC(
+        "c60_l1_ex2_q10",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The security policies (A) <u>implementing</u> by the administration last year (B) <u>failed</u> to yield the (C) <u>desired</u> results in mitigating cyber (D) <u>threats</u>. (E) No error.\"",
+        ["(A) implementing", "(B) failed", "(C) desired", "(D) threats", "No error"],
+        0,
+        "Doğru cevap A. Güvenlik politikaları yönetim tarafından yürürlüğe konduğu için edilgendir. Aktif 'implementing' yerine edilgen kısaltma olan **implemented** kullanılmalıdır."
+      )
+    ];
+
+    const ex3_q = [
+      makeMC(
+        "c60_l1_ex3_q1",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The guidelines approved by the advisory board were distributed to the staff.\"</strong>",
+        [
+          "The advisory board approved the guidelines that the staff distributed.",
+          "After the advisory board approved the guidelines, they were distributed to the staff.",
+          "The guidelines, which the advisory board was approving them, were distributed to the staff.",
+          "The guidelines that approved the advisory board were distributed to the staff.",
+          "Having approved the guidelines, the staff distributed them to the advisory board."
+        ],
+        1,
+        "Doğru cevap B. 'approved by...' edilgen sıfat-fiil yapısı, 'tavsiye kurulu onayladıktan sonra' şeklinde temporal bir aktif yan cümleye ('After the advisory board approved...') doğru bir biçimde dönüştürülmüştür."
+      ),
+      makeMC(
+        "c60_l1_ex3_q2",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Confronted with budget constraints, the department director cancelled the project.\"</strong>",
+        [
+          "Because the budget constraints confronted the director, the project was cancelled by the constraints.",
+          "As the department director was confronting with budget constraints, he cancelled the project.",
+          "Because he was confronted with budget constraints, the department director cancelled the project.",
+          "The project was cancelled by the department director who was confronting the budget constraints.",
+          "Although he confronted budget constraints, the department director cancelled the project."
+        ],
+        2,
+        "Doğru cevap C. Cümle başındaki sebep bildiren 'Confronted with...' edilgen zarf cümleciği kısaltması, 'Because he was confronted with...' şeklinde bir sebep cümlesine doğru olarak açılmıştır."
+      ),
+      makeMC(
+        "c60_l1_ex3_q3",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Having been dismissed by the board of trustees, the dean issued a public statement.\"</strong>",
+        [
+          "After the dean had dismissed the board of trustees, he issued a public statement.",
+          "Because he dismissed the board of trustees, the dean issued a public statement.",
+          "After he had been dismissed by the board of trustees, the dean issued a public statement.",
+          "The dean issued a public statement as he was dismissing the board of trustees.",
+          "Having dismissed him, the board of trustees issued a public statement."
+        ],
+        2,
+        "Doğru cevap C. 'Having been dismissed by...' (Mütevelli heyeti tarafından görevden alındıktan sonra) şeklindeki edilgen ve öncelikli kısaltma, past perfect passive bir yan cümle olan 'After he had been dismissed by...' ile doğru ifade edilmiştir."
+      ),
+      makeMC(
+        "c60_l1_ex3_q4",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The results of the archaeological study left the research team fascinated.\"</strong>",
+        [
+          "The research team found the results of the archaeological study fascinating.",
+          "The research team was fascinating by the results of the archaeological study.",
+          "Because they were fascinating, the research team left the archaeological study.",
+          "The archaeological study fascinated the results that left the research team.",
+          "The results left the research team to be fascinating."
+        ],
+        0,
+        "Doğru cevap A. 'left the research team fascinated' (araştırma ekibini büyülenmiş bıraktı) ifadesi, 'ekip sonuçları büyüleyici buldu' (found the results fascinating) olarak anlamsal açıdan tam olarak eşleşir. Nesne/sonuç büyüleyicidir (fascinating), ekip ise büyülenmiştir (fascinated)."
+      ),
+      makeMC(
+        "c60_l1_ex3_q5",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"We had the document translated by a certified translator to ensure accuracy.\"</strong>",
+        [
+          "We translated the document ourselves because we are certified translators.",
+          "A certified translator had us translate the document to ensure accuracy.",
+          "We got a certified translator to translate the document so that accuracy was ensured.",
+          "The document had translated us by a certified translator.",
+          "We translated a certified translator to ensure the accuracy of the document."
+        ],
+        2,
+        "Doğru cevap C. 'had the document translated' edilgen causative (ettirgen) yapısı, get ile kurulan aktif ettirgen yapı olan 'got a certified translator to translate...' (yeminli tercümana tercüme ettirdik) biçimiyle eş anlamlıdır."
+      ),
+      makeMC(
+        "c60_l1_ex3_q6",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The historical artifacts remained hidden in the vault for decades.\"</strong>",
+        [
+          "The historical artifacts kept hiding themselves in the vault for decades.",
+          "Because they remained in the vault, the historical artifacts were hiding.",
+          "The vault remained hidden by the historical artifacts for decades.",
+          "For decades, the historical artifacts continued to be hidden in the vault.",
+          "The historical artifacts remained to hide in the vault for decades."
+        ],
+        3,
+        "Doğru cevap D. 'remained hidden' (gizli kalmaya devam etti) durum ifadesi, past passive durumunu koruyan 'continued to be hidden' (gizli tutulmaya devam edildi) yapısı ile doğru bir şekilde restate edilmiştir."
+      ),
+      makeMC(
+        "c60_l1_ex3_q7",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The feedback received from the clients influenced our product design.\"</strong>",
+        [
+          "The clients received feedback that influenced our product design.",
+          "The feedback, which was received from the clients, influenced our product design.",
+          "Because we received feedback, the clients influenced our product design.",
+          "Our product design influenced the feedback that was received by the clients.",
+          "The feedback which receiving from the clients influenced our product design."
+        ],
+        1,
+        "Doğru cevap B. 'feedback received from...' (müşterilerden alınan geri bildirim) kısaltması, 'which was received from...' edilgen sıfat tümleciği biçiminde doğru ve tam olarak açılmıştır."
+      ),
+      makeMC(
+        "c60_l1_ex3_q8",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Disappointed by the performance metrics, the manager ordered an audit.\"</strong>",
+        [
+          "Because the performance metrics were disappointing, the manager ordered an audit.",
+          "The manager ordered an audit because he was disappointing to the metrics.",
+          "Disappointing the performance metrics, the manager ordered an audit.",
+          "Because the manager disappointed the performance metrics, he ordered an audit.",
+          "Although the metrics were disappointed, the manager ordered an audit."
+        ],
+        0,
+        "Doğru cevap A. Yönetici metriklerden hayal kırıklığına uğradığı için ('Disappointed by...'), metrikler hayal kırıklığı yaratıcıdır ('metrics were disappointing'). A seçeneği bu neden-sonuç ilişkisini doğru sıfatlarla kurmuştur."
+      ),
+      makeMC(
+        "c60_l1_ex3_q9",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Having been selected for the scholarship, she moved to Oxford.\"</strong>",
+        [
+          "Because she had selected the scholarship, she moved to Oxford.",
+          "After she had been selected for the scholarship, she moved to Oxford.",
+          "She moved to Oxford in order to be selecting for the scholarship.",
+          "Having selected her, the scholarship moved she to Oxford.",
+          "She was selected for the scholarship because she moved to Oxford."
+        ],
+        1,
+        "Doğru cevap B. 'Having been selected...' (Burs için seçildikten sonra) şeklindeki edilgen ve öncelikli kısaltma, past perfect passive yan cümle 'After she had been selected...' ile anlamını tam olarak korur."
+      ),
+      makeMC(
+        "c60_l1_ex3_q10",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The lecture on quantum physics was extremely boring, which made the students feel bored.\"</strong>",
+        [
+          "The bored lecture on quantum physics made the boring students.",
+          "Because the lecture was bored, the students felt boring.",
+          "Because the students were boring, they found the lecture bored.",
+          "The boring lecture on quantum physics left the bored students asleep.",
+          "The lecture, which was boring to the students, left them feeling bored."
+        ],
+        4,
+        "Doğru cevap E. Dersin sıkıcı olmasını 'boring' sıfatıyla, öğrencilerin hissettiği sıkılma durumunu ise 'feeling bored' ile doğru ve dengeli bir biçimde ifade eden seçenek E'dir."
+      )
+    ];
+
+    lessons.push({
+      id: "c60_l1",
+      unitId: 59,
+      title: "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
+      subtitle: "Diagnostic assessment of Past Participles, Reduced Passives, and Causative structures.",
+      exercises: [
+        {
+          id: "c60_l1_ex1",
+          createdAt: "2026-07-20T15:59:00+03:00",
+          title: "Part 1: Cümle Tamamlama (Sentence Completion)",
+          description: "Past participle formunun sıfat tümleçleri, zarf kısaltmaları ve ettirgen yapılardaki doğru konumlandırılması.",
+          questions: ex1_q
+        },
+        {
+          id: "c60_l1_ex2",
+          createdAt: "2026-07-20T15:59:00+03:00",
+          title: "Part 2: Hata Belirleme (Error Identification)",
+          description: "Çekimli fiil/ortaç karmaşası, etken/edilgen uyumsuzlukları ve participial sıfat hatalarının tespiti.",
+          questions: ex2_q
+        },
+        {
+          id: "c60_l1_ex3",
+          createdAt: "2026-07-20T15:59:00+03:00",
+          title: "Part 3: Zarf Cümlecikleri Dönüşümleri (Restatement)",
+          description: "Kısaltılmış edilgen yapıların mantıksal neden, zaman ve durum bağlaçlarıyla tam açılımları.",
+          questions: ex3_q
+        }
+      ],
+      konuAnlatimi: {
+        baslik: "Kriptik Sentaks: Past Participle (-ed) Kılavuzu",
+        teorikMantik: "Bu teşhis testi, '-ed' ekinin İngilizce sentaksındaki altı temel fonksiyonunu (Reduced Relative Clauses, Passive Participle Clauses, Participial Adjectives, Perfect Passive Participles, Causative Structures ve Linking Verbs sonrası V3) ayırt etmenizi hedefler.",
+        formul: "Noun + V3 (Relative) | V3..., S+V+O (Adverbial) | Experiencing (-ed) vs. Causing (-ing)",
+        altinKural: "Bir ortaç ekinin etken mi edilgen mi olduğunu tespit etmek için nitelediği veya kısaltıldığı ismin/öznenin eylemi gerçekleştiren mi maruz kalan mı olduğunu daima kontrol edin."
+      }
+    });
+  }
+
 })();
+
