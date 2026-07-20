@@ -9101,4 +9101,13 @@ Bu dosya, Bölüm 10: İsim Tamlaması altındaki Lesson 10 ve Lesson 11 dersler
   - mimarisi <--> architecture
 - Lesson 11 (Üçlü İsim Tamlamaları) kapsamında eski dinamik yapay egzersizlerden çıkarılan tüm alıştırmalar ve sorular (toplamda 30 soru) birleştirme ve sadeleştirme kapsamında arşivlenmiş ve kaldırılmıştır.
 
+# Silinen Sorular Arşivi (Bölüm 12: Participle Takımları - 2026-07-20)
+
+Bölüm 12 altındaki 3 dersin (Lesson 38, 39, 40) korunmasına karar verilmiş; ancak her dersteki alıştırma sayısı 3'ten 1'e düşürülmüştür. Yeni yapıda her dersin tek alıştırması 15 sorudan (seviye başına 5 soru) oluşmaktadır.
+
+## Yapılan Değişiklikler ve Arşivlenenler
+- Her dersteki alıştırma sayısı 3'ten 1'e düşürülerek her ders için 21'er soru (toplamda 63 soru) sadeleştirme kapsamında çıkarılmış ve arşivlenmiştir.
+- Yeni `buildUnit12RedesignedExercise` fonksiyonu her derste Basit, Orta ve İleri seviyedeki cümle listelerinden dinamik olarak 5'er soru (toplam 15 soru) üretecek şekilde güncellenmiştir.
+
+
 
