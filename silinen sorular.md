@@ -9017,3 +9017,25 @@ Bu dosya, Bölüm 4 altındaki egzersizlerin 3 alıştırmaya ve alıştırma ba
 ## Fazla Olan Egzersizler (Alıştırma 4 - 12)
 Alıştırma 4 ila 12 arasındaki tüm seçmeli, sıralama (word-bank) ve çeviri (translation-text) soruları, toplamda 90'ın üzerinde soru, sadeleştirme ve pedagojik yeniden yapılandırma kapsamında arşivlenmiş ve kaldırılarak bu dosyaya taşınmıştır.
 
+# Silinen Sorular Arşivi (Bölüm 10: İsim Tamlaması)
+
+Bu dosya, Bölüm 10: İsim Tamlaması altındaki Lesson 10 ve Lesson 11 derslerinin tek bir derste birleştirilmesi, kelime eşleştirme sorularının kaldırılması ve her biri 10 sorudan oluşan 3 alıştırmaya (Basit, Orta, İleri) pedagojik olarak sadeleştirilmesi sırasında çıkarılan soruları içermektedir.
+
+## Kaldırılan Kelime Eşleştirme Soruları ve Lesson 11 Egzersizleri (2026-07-20)
+*Çıkarılan Soru Detayları:*
+
+### Lesson 10 & 11 - Çıkarılan Sorular
+- Kelime Eşleştirme Soruları:
+  - altyapısı <--> infrastructure
+  - deposu <--> repository
+  - bileşenleri <--> components
+  - hataları <--> errors
+  - stresi <--> stress
+  - anomalileri <--> anomalies
+  - profilleri <--> profiles
+  - darboğazları <--> bottlenecks
+  - evrimi <--> evolution
+  - mimarisi <--> architecture
+- Lesson 11 (Üçlü İsim Tamlamaları) kapsamında eski dinamik yapay egzersizlerden çıkarılan tüm alıştırmalar ve sorular (toplamda 30 soru) birleştirme ve sadeleştirme kapsamında arşivlenmiş ve kaldırılmıştır.
+
+
