@@ -6767,3 +6767,281 @@ Bu dosya, Bölüm 20 altındaki egzersizlerin basitleştirilmesi, alıştırma s
 * **Doğru Çeviri:** Teknik uzmanlar dahili cihaz bileşenlerinin nasıl stabilize edileceğini gösterdiler.
 
 ---
+
+
+# Silinen Sorular Arşivi (Bölüm 15: Mastar (Infinitive))
+
+Bu dosya, Bölüm 15 (Mastar) altındaki egzersizlerin 3 alıştırmaya ve her alıştırmada 10 soruya düşürülmesi ve kelime eşleştirme sorularının kaldırılması sırasında çıkarılan soruları içermektedir.
+
+## Lesson 1 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u14l1_ex1_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tanımlamak <--> define
+  - vazgeçmek <--> abandon
+  - denetlemek <--> inspect
+  - belirtmek <--> specify
+
+---
+
+### Soru ID: u14l1_ex1_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - savunmak <--> advocate
+  - türetmek <--> derive
+  - öngörmek <--> anticipate
+  - tetiklemek <--> trigger
+
+---
+
+### Soru ID: u14l1_ex2_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - denetlemek <--> inspect
+  - savunmak <--> advocate
+  - tetiklemek <--> trigger
+  - açıklığa kavuşturmak <--> clarify
+
+---
+
+### Soru ID: u14l1_ex2_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - askıya almak <--> suspend
+  - türetmek <--> derive
+  - genişlemek <--> expand
+  - belirtmek <--> specify
+
+---
+
+### Soru ID: u14l1_ex3_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yürütmek <--> conduct
+  - sonlandırmak <--> terminate
+  - dengelemek <--> stabilize
+  - hesaplamak <--> calculate
+
+---
+
+### Soru ID: u14l1_ex3_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değişmek <--> shift
+  - genişlemek <--> expand
+  - işlemek <--> process
+  - doğrulamaya <--> validate
+
+---
+
+### Soru ID: u14l1_ex4_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - doğrulamaya <--> validate
+  - manipüle etmek <--> manipulate
+  - değiştirmek <--> alter
+  - birikmek <--> accumulate
+
+---
+
+### Soru ID: u14l1_ex4_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sınırlandırmak <--> restrict
+  - yol açmak <--> induce
+  - hesaplamak <--> calculate
+  - korumak <--> protect
+
+---
+
+### Soru ID: u14l45_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "Innovative corporate strategies should aim to allocate." cümlesinin Türkçe karşılığı hangisidir?
+* **Seçenekler:** Yenilikçi kurumsal stratejiler türetmeye hedeflemelidir. | Yenilikçi kurumsal stratejiler tahsis etmeyi hedeflemelidir. | Yenilikçi kurumsal stratejiler sonlandırmakla hedeflemelidir. | Yenilikçi stratejiler kurumsal tahsis etmeyi hedeflemelidir.
+* **Doğru Seçenek İndeksi:** 1
+* **İngilizce Cümle:** Innovative corporate strategies should aim to allocate.
+
+---
+
+### Soru ID: u14l45_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Otomatik arka plan betikleri maksimize etmekte zorlanacaktır." cümlesinin İngilizce karşılığı hangisidir?
+* **Seçenekler:** Automated background scripts will struggle to maximize. |  maximize automated background scripts will struggle to. | Automated background will scripts struggle to maximize . | Automated background scripts will struggle to validate.
+* **Doğru Seçenek İndeksi:** 0
+* **İngilizce Cümle:** Automated background scripts will struggle to maximize.
+
+---
+
+### Soru ID: u14l45_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Was the principal researcher forced to validate?
+
+---
+
+### Soru ID: u14l45_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Mainstream digital media can seek to manipulate.
+
+---
+
+### Soru ID: u14l45_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The sudden paradigm shift could threaten to alter.
+
+---
+
+### Soru ID: u14l45_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Continuous chemical processes are likely to induce.
+
+---
+
+### Soru ID: u14l45_ex4_tx_0 (translation-text)
+* **Yönerge:** "The centralized database would love to accumulate." ifadesini Türkçe'ye çevirin:
+* **Doğru Çeviri:** Merkezi veri tabanı biriktirmeyi çok ister.
+* **İngilizce Cümle:** The centralized database would love to accumulate.
+
+---
+
+### Soru ID: u14l45_ex4_tx_1 (translation-text)
+* **Yönerge:** "Strict institutional policy will serve to restrict." ifadesini Türkçe'ye çevirin:
+* **Doğru Çeviri:** Sıkı kurumsal politika sınırlandırmaya hizmet edecektir.
+* **İngilizce Cümle:** Strict institutional policy will serve to restrict.
+
+---
+
+## Lesson 2 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u14l2_ex1_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - açıklığa kavuşturmak <--> clarify
+  - yürütmek <--> conduct
+  - tanımlamak <--> define
+  - askıya almak <--> suspend
+
+---
+
+### Soru ID: u14l2_ex1_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - denetlemek <--> inspect
+  - tespit etmek <--> detect
+  - genişlemek <--> expand
+  - sınırlandırmak <--> restrict
+
+---
+
+### Soru ID: u14l2_ex2_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - doğrulamaya <--> validate
+  - savunmak <--> advocate
+  - sonlandırmak <--> terminate
+  - hesaplamak <--> calculate
+
+---
+
+### Soru ID: u14l2_ex2_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değiştirmek <--> modify
+  - manipüle etmek <--> manipulate
+  - entegre etmek <--> integrate
+  - tetiklemek <--> trigger
+
+---
+
+### Soru ID: u14l2_ex3_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tespit etmek <--> detect
+  - genişlemek <--> expand
+  - sınırlandırmak <--> restrict
+  - belirtmek <--> specify
+
+---
+
+### Soru ID: u14l2_ex3_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - işlemek <--> process
+  - doğrulamaya <--> validate
+  - savunmak <--> advocate
+  - sonlandırmak <--> terminate
+
+---
+
+### Soru ID: u14l2_ex4_match_0 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sonlandırmak <--> terminate
+  - hesaplamak <--> calculate
+  - değiştirmek <--> modify
+  - manipüle etmek <--> manipulate
+
+---
+
+### Soru ID: u14l2_ex4_match_1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - entegre etmek <--> integrate
+  - tetiklemek <--> trigger
+  - türetmek <--> derive
+  - vazgeçmek <--> abandon
+
+---
+
+### Soru ID: u14l46_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "Senior financial analysts did not hesitate to anticipate significant annual financial growth despite the sudden paradigm shift." cümlesinin Türkçe karşılığı hangisidir?
+* **Seçenekler:** Kıdemli finansal analistler ani paradigma değişimine rağmen önemli yıllık finansal büyümeyi öngörmekte tereddüt etmedi. | Yazılım geliştirme ekibi açık yetki olmadan önemli deneysel girdileri değiştirmeyi amaçlamamalıdır. | Değerli nitel anlayışlar doğrudan bu kapsamlı bölgesel eğitim anketlerinden türetilmeye çalışmadı. | Yazılım geliştirme ekibi yıllık denetim başlamadan önce ilk araştırma projesi kapsamından vazgeçmeyi kabul etti mi?
+* **Doğru Seçenek İndeksi:** 0
+* **İngilizce Cümle:** Senior financial analysts did not hesitate to anticipate significant annual financial growth despite the sudden paradigm shift.
+
+---
+
+### Soru ID: u14l46_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Bağımsız teknik uzmanlar yarından önce ilk araştırma projesinin kapsamını açıklığa kavuşturmaya çalışmalı mı?" cümlesinin İngilizce karşılığı hangisidir?
+* **Seçenekler:** The strict qualitative selection criteria did not manage to specify the broader socio-economic context accurately. | Ought individual functional software modules not to design to integrate smoothly into the continuous chemical process? | Will strict institutional policy serve to restrict unauthorized user network access to sensitive user information? | Must independent technical experts try to clarify the initial investigative project scope before tomorrow?
+* **Doğru Seçenek İndeksi:** 3
+* **İngilizce Cümle:** Must independent technical experts try to clarify the initial investigative project scope before tomorrow?
+
+---
+
+### Soru ID: u14l46_ex4_bs_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The executive internal board did not threaten to terminate formal bilateral commercial agreements during the crisis.
+
+---
+
+### Soru ID: u14l46_ex4_bs_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The automated background script does not continue to calculate complex mathematical data ratios during system updates.
+
+---
+
+### Soru ID: u14l46_ex4_bs_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The software development team should not intend to modify substantial empirical inputs without explicit authorization.
+
+---
+
+### Soru ID: u14l46_ex4_bs_3 (word-bank)
+* **Yönerge:** Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:
+* **İngilizce Cümle:** Did this unpredictable economic dynamic begin to trigger a chain of negative physical reactions in the dynamic sector?
+
+---
+
+### Soru ID: u14l46_ex4_tx_0 (translation-text)
+* **Yönerge:** "Mainstream digital media cannot seek to manipulate public political and cultural perspective under strict regulations." ifadesini Türkçe'ye çevirin:
+* **Doğru Çeviri:** Ana akım dijital medya sıkı düzenlemeler altında halkın siyasi ve kültürel bakış açısını manipüle etmeye çalışamaz.
+* **İngilizce Cümle:** Mainstream digital media cannot seek to manipulate public political and cultural perspective under strict regulations.
+
+---
+
+### Soru ID: u14l46_ex4_tx_1 (translation-text)
+* **Yönerge:** "Ought individual functional software modules not to design to integrate smoothly into the continuous chemical process?" ifadesini Türkçe'ye çevirin:
+* **Doğru Çeviri:** Bireysel fonksiyonel yazılım modüllerinin sürekli kimyasal sürece sorunsuzca entegre olmak üzere tasarlanması gerekmez mi?
+* **İngilizce Cümle:** Ought individual functional software modules not to design to integrate smoothly into the continuous chemical process?
+
+---
+

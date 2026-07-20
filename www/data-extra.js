@@ -1167,9 +1167,307 @@
     });
   }
 
+  // ==========================================
+  // BÖLÜM 58: GERUND, PRESENT PARTICIPLE VE INFINITIVE FARKLARI
+  // ==========================================
 
+  if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof rawTopics !== 'undefined') {
+    const topic58 = {
+      "id": 58,
+      "startLessonId": 580,
+      "originalIndex": 58,
+      "title": "Gerund, Present Participle ve Infinitive Farkları",
+      "desc": "Akademik çeldiricilerle donatılmış Gerund, Present Participle ve Infinitive farkları; anlamı değişen fiiller ve to edatı.",
+      "icon": "🎓",
+      "numLessons": 1,
+      "formulas": [
+        {
+          "formula": "Remember / Stop / Regret / Try / Go on / Mean -> Anlam Değişimi",
+          "example": "stopped investigating (bıraktı) vs. stopped to investigate (araştırmak için durdu)",
+          "description": "Fiillerin Gerund veya Infinitive almasına göre değişen anlam farkları."
+        },
+        {
+          "formula": "Prepositional 'to' -> look forward to / object to / be used to / with a view to + V-ing",
+          "example": "opposed to implementing / looking forward to releasing",
+          "description": "Edat olan 'to' sonrasında gerund gelme zorunluluğu."
+        },
+        {
+          "formula": "Sentence-Initial Reductions vs. Noun Adjuncts -> Examining... (Active) vs. Seen... (Passive)",
+          "example": "Examining the scroll (Archaeologist) vs. Seen from the peak (Valley)",
+          "description": "Cümle başı kısaltmalar ve amaç/sıfat niteleme farkları."
+        }
+      ],
+      "subtitles": [
+        "1. Gerund, Present Participle ve Infinitive Ayrımı"
+      ],
+      "originalNumLessons": 1
+    };
 
-  
+    rawTopics.push(topic58);
+
+    units.push({
+      id: topic58.id,
+      originalIndex: topic58.originalIndex,
+      title: topic58.title,
+      description: topic58.desc,
+      lessons: ["c58_l1"],
+      pages: "G-P-I"
+    });
+
+    const ex1_q = [
+      makeMC(
+        "c58_l1_ex1_q1",
+        "The archaeologist remembered _______ the artifact in the safe, but when she opened it, the safe was completely empty.",
+        ["to lock", "locking"],
+        1,
+        "'Remember' fiili geçmişte yapılmış bir eylemi hatırlamayı ifade ettiğinde Gerund (-ing) alır. Adaylar to-infinitive tuzağına düşebilir."
+      ),
+      makeMC(
+        "c58_l1_ex1_q2",
+        "After working for twelve hours straight, the lead programmer stopped _______ coffee with his colleagues to discuss the database failure.",
+        ["to drink", "drinking"],
+        0,
+        "'Stop to do', başka bir eylemi yapmak amacıyla mevcut eyleme ara vermeyi bildirir. 'Stop doing' ise bir alışkanlığı veya eylemi tamamen bırakmaktır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q3",
+        "I deeply regret _______ you that your proposal for the environmental grant has been declined by the review committee.",
+        ["to inform", "informing"],
+        0,
+        "Gelecekte yapılacak veya o an yapılan resmi/üzücü bir bildirimi sunarken 'regret to inform/say' kullanılır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q4",
+        "If you cannot resolve the network connection issue, try _______ the router and waiting for two minutes before turning it back on.",
+        ["to restart", "restarting"],
+        1,
+        "Bir problemi çözmek amacıyla deneme yapmak, alternatif bir yöntem denemek anlamında 'try doing' (restarting) kullanılır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q5",
+        "The professor went on _______ the history of the manuscript after he had finished explaining its physical characteristics.",
+        ["to discuss", "discussing"],
+        0,
+        "Bir eylemi bitirip yeni bir eyleme/konuya geçmek anlamında 'go on to do' (to discuss) kullanılır. Aynı eylemi sürdürmek 'go on doing'dir."
+      ),
+      makeMC(
+        "c58_l1_ex1_q6",
+        "Signing this agreement will inevitably mean _______ our intellectual property rights to the parent company.",
+        ["to surrender", "surrendering"],
+        1,
+        "'Mean' fiili 'anlamına gelmek, gerektirmek, sonuçlanmak' anlamındayken Gerund (-ing) alır. 'Niyet etmek' anlamındayken ise to-infinitive alır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q7",
+        "The patient forgot _______ the medication in the morning, so he took a double dose in the evening, which caused severe side effects.",
+        ["to take", "taking"],
+        0,
+        "Bir görevi veya yapılması planlanan eylemi yapmayı unutmak 'forget to do' (to take) ile ifade edilir. 'Forget doing' ise geçmişteki bir anıyı unutmaktır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q8",
+        "As the storm intensified, the captain tried _______ the harbor, but the high waves made steering the ship impossible.",
+        ["to reach", "reaching"],
+        0,
+        "Zor bir eylemi gerçekleştirmek için çaba sarf etmek, gayret göstermek anlamında 'try to do' (to reach) kullanılır."
+      ),
+      makeMC(
+        "c58_l1_ex1_q9",
+        "She clearly remembers _______ the director at the gala last year, though he claims they have never met before.",
+        ["to meet", "meeting"],
+        1,
+        "Geçmişte yaşanmış bir olayı/anıyı hatırlamak 'remember doing' (meeting) ile ifade edilir."
+      ),
+      makeMC(
+        "c58_l1_ex1_q10",
+        "Although they were exhausted, the research team went on _______ the samples until dawn to meet the submission deadline.",
+        ["to analyze", "analyzing"],
+        1,
+        "Aynı eylemi kesintisiz sürdürmek/devam ettirmek anlamında 'go on doing' (analyzing) yapısı kullanılır."
+      )
+    ];
+
+    const ex2_q = [
+      makeMC(
+        "c58_l1_ex2_q1",
+        "The local residents are strongly opposed to _______ a new highway through the protected wildlife reserve.",
+        ["build", "building"],
+        1,
+        "'Opposed to' yapısındaki 'to' edattır (preposition) ve kendisinden sonra Gerund (-ing) gerektirir."
+      ),
+      makeMC(
+        "c58_l1_ex2_q2",
+        "With a view to _______ their carbon footprint, the manufacturing firm invested in solar energy panels.",
+        ["reduce", "reducing"],
+        1,
+        "'With a view to' (amacıyla) yapısındaki 'to' edattır ve ardından Gerund (-ing) gelmelidir."
+      ),
+      makeMC(
+        "c58_l1_ex2_q3",
+        "Having lived in the Sahara for over a decade, the nomad was fully used to _______ in extreme temperatures.",
+        ["live", "living"],
+        1,
+        "'Be/get used to' (alışkın olmak) yapısındaki 'to' edattır ve Gerund (-ing) alır. Yalın fiil alan 'used to' alışkanlık kalıbıyla karıştırılmamalıdır."
+      ),
+      makeMC(
+        "c58_l1_ex2_q4",
+        "The government has committed itself to _______ the quality of public education in rural areas.",
+        ["improve", "improving"],
+        1,
+        "'Commit to' (kendini adamak/taahhüt etmek) yapısındaki 'to' edat olduğu için Gerund (-ing) gelmelidir."
+      ),
+      makeMC(
+        "c58_l1_ex2_q5",
+        "The development team is looking forward to _______ the beta version of the software to the public next week.",
+        ["release", "releasing"],
+        1,
+        "'Look forward to' (dört gözle beklemek) yapısındaki 'to' edat olduğundan Gerund (-ing) ile devam eder."
+      ),
+      makeMC(
+        "c58_l1_ex2_q6",
+        "Many employees object to _______ overtime without additional compensation from the management.",
+        ["work", "working"],
+        1,
+        "'Object to' (itiraz etmek) fiilindeki 'to' edattır ve arkasından Gerund (-ing) alır."
+      ),
+      makeMC(
+        "c58_l1_ex2_q7",
+        "In order to succeed in this international role, you must adapt to _______ in multicultural environments.",
+        ["work", "working"],
+        1,
+        "'Adapt to' (uyum sağlamak) yapısındaki 'to' edattır ve kendisinden sonra Gerund (-ing) gerektirir."
+      ),
+      makeMC(
+        "c58_l1_ex2_q8",
+        "The critical acclaim he received contributed to _______ his reputation as one of the finest authors of his generation.",
+        ["establish", "establishing"],
+        1,
+        "'Contribute to' (katkıda bulunmak) yapısındaki 'to' edattır ve isim/gerund almalıdır."
+      ),
+      makeMC(
+        "c58_l1_ex2_q9",
+        "She is dedicated to _______ the rights of marginalized communities through her legal practice.",
+        ["defend", "defending"],
+        1,
+        "'Dedicated to' (adanmış olmak) yapısındaki 'to' edat olduğu için Gerund (-ing) gerektirir."
+      ),
+      makeMC(
+        "c58_l1_ex2_q10",
+        "It took the young artist several months to get accustomed to _______ in a bustling metropolis.",
+        ["live", "living"],
+        1,
+        "'Get accustomed to' (alışmak) yapısındaki 'to' edattır ve ardından Gerund (-ing) gelir."
+      )
+    ];
+
+    const ex3_q = [
+      makeMC(
+        "c58_l1_ex3_q1",
+        "_______ the historical manuscripts carefully, the paleographer noticed several scribal errors that had escaped previous readings.",
+        ["Examining", "Examined"],
+        0,
+        "Cümle başındaki aktif kısaltmalarda Present Participle (-ing) kullanılır. İnceleme eylemini yapan paleografın kendisidir."
+      ),
+      makeMC(
+        "c58_l1_ex3_q2",
+        "_______ from the top of the empire state building, the pedestrians below look like tiny, crawling ants.",
+        ["Looking", "Seen"],
+        1,
+        "Kısaltma cümlelerinde gizli özne ana cümlenin öznesidir (pedestrians). Yayalar Empire State binasından kendilerine bakamazlar, 'görülürler' (Seen - Past Participle)."
+      ),
+      makeMC(
+        "c58_l1_ex3_q3",
+        "The facility manager ordered new _______ kits for all laboratories to ensure the staff's safety in case of chemical spills.",
+        ["cleaning", "cleaned"],
+        0,
+        "'Cleaning kits' (temizlik kitleri) bir Gerund kullanımıdır ve amacını belirtir. 'Cleaned kits' ise önceden temizlenmiş kitler anlamına gelir ancak burada amaç nitelemesi aranmaktadır."
+      ),
+      makeMC(
+        "c58_l1_ex3_q4",
+        "_______ the complex mathematical theorem requires not only a high level of abstract thinking but also years of study.",
+        ["Proving", "Proved"],
+        0,
+        "Cümlenin öznesi konumunda eylemi isimleştirmek için Gerund (Proving) tercih edilmelidir."
+      ),
+      makeMC(
+        "c58_l1_ex3_q5",
+        "_______ by the sudden noise outside, the baby woke up and began to cry uncontrollably.",
+        ["Startling", "Startled"],
+        1,
+        "Bebek dışarıdaki gürültü tarafından korkutulduğu (edilgen durum) için Past Participle (Startled) kısaltması doğrudur."
+      ),
+      makeMC(
+        "c58_l1_ex3_q6",
+        "The archeological museum features a display of ancient _______ stones used by prehistoric tribes to prepare flour.",
+        ["grinding", "ground"],
+        0,
+        "'Grinding stones' öğütme işine yarayan taşlar (Gerund amaç nitelemesi) demektir. 'Ground stones' ise ufalanmış/öğütülmüş taşlar demektir."
+      ),
+      makeMC(
+        "c58_l1_ex3_q7",
+        "_______ the experimental data multiple times, the chemist finally concluded that the hypothesis was incorrect.",
+        ["Analyzing", "Analyzed"],
+        0,
+        "Aktif eylem kısaltmasında Present Participle (Analyzing) kullanılır ve arkasından gelen nesneyi (experimental data) doğrudan niteler."
+      ),
+      makeMC(
+        "c58_l1_ex3_q8",
+        "The safety inspector insisted that the factory install new _______ exits to facilitate rapid evacuation.",
+        ["escaping", "escape"],
+        1,
+        "'Escape exits' (kaçış çıkışları) ifadesinde 'escape' bir isim/gerund-like amaç niteleyicisidir. 'Escaping exits' ise kaçan çıkışlar gibi anlamsız bir sıfat fiil olur."
+      ),
+      makeMC(
+        "c58_l1_ex3_q9",
+        "_______ in a remote mountain village, the child had very little access to modern educational facilities.",
+        ["Raising", "Raised"],
+        1,
+        "Çocuk başkası tarafından büyütüldüğü (edilgen) için kısaltma Past Participle (Raised) olmalıdır."
+      ),
+      makeMC(
+        "c58_l1_ex3_q10",
+        "The company purchased several _______ machines to replace the manual packaging line and increase efficiency.",
+        ["wrapping", "wrapped"],
+        0,
+        "'Wrapping machines' (paketleme makinesi) ifadesinde 'wrapping' makinenin işlevini/amacını belirten bir Gerund'dır. 'Wrapped' ise paketlenmiş makine demektir."
+      )
+    ];
+
+    lessons.push({
+      id: "c58_l1",
+      unitId: 58,
+      title: "Gerund, Present Participle ve Infinitive Ayrımı",
+      subtitle: "Akademik çeldiriciler, anlamı değişen fiiller ve to edatı.",
+      exercises: [
+        {
+          id: "c58_l1_ex1",
+          createdAt: "2026-07-20T15:00:00+03:00",
+          title: "Alıştırma 1: Anlamı Değişen Fiiller",
+          description: "Gerund ve Infinitive almasına göre anlamı tamamen değişen fiillerle ilgili akademik pratik.",
+          questions: ex1_q
+        },
+        {
+          id: "c58_l1_ex2",
+          createdAt: "2026-07-20T15:00:00+03:00",
+          title: "Alıştırma 2: Edat Olan 'To' Kalıpları",
+          description: "look forward to, object to gibi 'to' edatıyla biten yapılarda Gerund kullanımı.",
+          questions: ex2_q
+        },
+        {
+          id: "c58_l1_ex3",
+          createdAt: "2026-07-20T15:00:00+03:00",
+          title: "Alıştırma 3: Kısaltmalar ve İsim Niteleyiciler",
+          description: "Cümle başı kısaltmalar (özne vs. zarf) ve Gerund vs. Participle niteleme farkları.",
+          questions: ex3_q
+        }
+      ],
+      konuAnlatimi: {
+        baslik: "Gerund, Present Participle ve Infinitive Kılavuzu",
+        teorikMantik: "Bu derste Gerund, Present Participle ve Infinitive yapıları arasındaki ince çizgileri ve akademik sınavlarda adayları ters köşe yapan çeldiricileri inceleyeceğiz.",
+        formul: "Gerund (Eylem İsmi/Amaç) vs. Participle (Sıfat/Kısaltma) vs. Infinitive (Amaç/Gelecek)",
+        altinKural: "Edat olan 'to' kalıplarına ve cümle başındaki kısaltmalarda cümlenin öznesiyle olan aktif/pasif ilişkisine çok dikkat edin!"
+      }
+    });
+  }
 
 })();
-

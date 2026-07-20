@@ -10630,7 +10630,7 @@ function checkAnswer() {
   if (isCorrect) {
     autoAdvanceTimeout = setTimeout(() => {
       nextQuestion();
-    }, 1200);
+    }, 5000);
   }
 }
 
