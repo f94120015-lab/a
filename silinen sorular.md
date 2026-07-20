@@ -7045,3 +7045,96 @@ Bu dosya, Bölüm 15 (Mastar) altındaki egzersizlerin 3 alıştırmaya ve her a
 
 ---
 
+
+
+# Silinen Sorular Arşivi (Bölüm 16: Yapısal "It" Cümlesinin Öznesi)
+
+Bu dosya, Bölüm 16 altındaki egzersizlerin sadeleştirilmesi, soru tiplerinin zenginleştirilmesi ve pedagojik basitten zora (Öbek -> Cümle -> Eski Konu Tekrarlı İleri Cümle) 3 alıştırmaya (her alıştırmada 10 soru) indirgenmesi sırasında çıkarılan kelime eşleştirme sorularını ve fazla olan alıştırma sorularını içermektedir.
+
+---
+
+## Lesson 1: Alıştırma 1-6 arası çıkarılan kelime eşleştirme soruları
+
+### Soru 1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tanımlamak <--> define
+  - belirlemek <--> specify
+  - entegre etmek <--> integrate
+  - stabilize etmek <--> stabilize
+
+### Soru 2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - çıkarmak <--> extract
+  - uyum sağlamak <--> adapt
+  - tanımlamak <--> identify
+  - açıklığa kavuşturmak <--> clarify
+
+### Soru 3 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - açıklığa kavuşturmak <--> clarify
+  - izole etmek <--> isolate
+  - parametrelendirmek <--> parameterize
+  - doğrulamak <--> validate
+
+### Soru 4 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yedek <--> substitute
+  - takip etmek <--> trace
+  - değiştirmek <--> modify
+  - tanımlamak <--> define
+
+### Soru 5 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - denetlemek <--> inspect
+  - değiştirmek <--> modify
+  - yapı <--> structure
+  - protokol <--> protocol
+
+### Soru 6 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kısıtlamak <--> restrict
+  - değerlendirmek <--> evaluate
+  - birikmek <--> accumulate
+  - tanımlamak <--> define
+
+---
+
+## Lesson 2: Alıştırma 1-2 arası çıkarılan kelime eşleştirme soruları
+
+### Soru 1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - anlamak <--> understand
+  - ikna etmek <--> persuade
+  - güncellemek <--> update
+  - denetlemek <--> inspect
+
+### Soru 2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - korumak <--> protect
+  - tanımlamak <--> identify
+  - başarmak <--> achieve
+  - göz ardı etmek <--> ignore
+
+### Soru 3 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sürdürmek <--> maintain
+  - bilgilendirmek <--> notify
+  - teslim etmek <--> submit
+  - depolamak <--> store
+
+### Soru 4 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - bulmak <--> locate
+  - giymek <--> wear
+  - danışmak <--> consult
+  - anlamak <--> understand
