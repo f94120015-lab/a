@@ -5092,7 +5092,10 @@ function enterApp() {
 
   if (lastScreen === 'home-screen') {
     requestAnimationFrame(() => {
-      scrollToActiveUnit('instant');
+      const savedScroll = localStorage.getItem('amok_last_scroll_y');
+      if (savedScroll === null) {
+        scrollToActiveUnit('instant');
+      }
     });
   }
 }
@@ -5105,6 +5108,7 @@ function logout() {
     localStorage.setItem(`amok_state_${state.username}`, JSON.stringify(state));
   }
   localStorage.removeItem(STATE_KEY);
+  localStorage.removeItem('amok_last_scroll_y');
   
 
   // Temayı sıfırla
@@ -5860,6 +5864,17 @@ function ensureLessonRendered(lessonId) {
 
 function getUnitEdits(unit) {
   const rawEdits = [];
+  
+  if (unit.edits && Array.isArray(unit.edits)) {
+    unit.edits.forEach(e => {
+      rawEdits.push({
+        rawDate: e.date || e.rawDate,
+        type: e.type || 'custom',
+        desc: e.desc
+      });
+    });
+  }
+
   unit.lessons.forEach(lId => {
     const l = lessons.find(lesson => lesson.id === lId);
     if (!l) return;
@@ -5960,26 +5975,29 @@ function groupAndSimplifyEdits(rawEdits) {
     if (isNaN(d.getTime())) return;
     const dateKey = e.rawDate.substring(0, 10);
     const type = e.type;
-    const key = `${dateKey}_${type}`;
+    const key = e.desc ? `${dateKey}_${type}_${e.desc}` : `${dateKey}_${type}`;
     if (!grouped[key]) {
       grouped[key] = {
         date: d,
         rawDate: e.rawDate,
-        type: type
+        type: type,
+        desc: e.desc
       };
     }
   });
 
   const simplified = Object.values(grouped).map(g => {
-    let desc = '';
-    if (g.type === 'lesson') {
-      desc = 'Yeni Dersler Eklendi';
-    } else if (g.type === 'exercise') {
-      desc = 'Yeni Alıştırmalar Eklendi';
-    } else if (g.type === 'fix') {
-      desc = 'Hatalı Soru Düzeltildi';
-    } else {
-      desc = 'Yeni Soru Tipleri Eklendi';
+    let desc = g.desc || '';
+    if (!desc) {
+      if (g.type === 'lesson') {
+        desc = 'Yeni Dersler Eklendi';
+      } else if (g.type === 'exercise') {
+        desc = 'Yeni Alıştırmalar Eklendi';
+      } else if (g.type === 'fix') {
+        desc = 'Hatalı Soru Düzeltildi';
+      } else {
+        desc = 'Yeni Soru Tipleri Eklendi';
+      }
     }
     return {
       date: g.date,
@@ -6143,12 +6161,16 @@ function renderLessonTree() {
     }
 
     let localTypesBadgeHTML = '';
+    let localQuestionsBadgeHTML = '';
+    let localLessonsBadgeHTML = '';
     if (checkIsLocal()) {
       const qTypes = new Set();
+      let totalQuestions = 0;
       unit.lessons.forEach(lId => {
         const l = lessons.find(lesson => lesson.id === lId);
         if (l) {
           const qs = getLessonQuestions(l);
+          totalQuestions += qs.length;
           qs.forEach(q => {
             if (q && q.type) {
               qTypes.add(q.type);
@@ -6164,6 +6186,16 @@ function renderLessonTree() {
           </span>
         `;
       }
+      localLessonsBadgeHTML = `
+        <span class="unit-banner-lessons-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); margin-left: 10px; display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+          ${totalInUnit} Ders
+        </span>
+      `;
+      localQuestionsBadgeHTML = `
+        <span class="unit-banner-questions-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); margin-left: 10px; display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+          ${totalQuestions} Soru
+        </span>
+      `;
     }
 
     const unitSection = document.createElement('div');
@@ -6210,6 +6242,8 @@ function renderLessonTree() {
           ${originalBadgeHTML}
           ${extraBadgeHTML}
           ${localTypesBadgeHTML}
+          ${localLessonsBadgeHTML}
+          ${localQuestionsBadgeHTML}
         </h2>
         ${descHTML}
         ${localEditsHTML}
@@ -6847,8 +6881,276 @@ function renderAchievements() {
   //     </div>
   //   `;
   //   grid.appendChild(card);
-  // });
   return; // no-op — başarımlar devre dışı
+}
+
+// ════════════════════════════════════════════════════════
+// BÖLÜM 36 (UNIT 101) GÖRSEL EĞİTİM YARDIMCILARI
+// ════════════════════════════════════════════════════════
+
+function colorCodeUnit101Sentence(sentence) {
+  if (!sentence) return sentence;
+  
+  // Önce mevcut span etiketlerini ve stillerini temizleyelim
+  let cleaned = sentence.replace(/<span[^>]*>(.*?)<\/span>/gi, '$1');
+  
+  // Konnektörlerin renklendirilmesi
+  cleaned = cleaned.replace(/\b(since|by the time|it is high time|it is time)\b/gi, '<span class="color-code-connector">$1</span>');
+  
+  // Present Perfect (Green)
+  cleaned = cleaned.replace(/\b(has|have)\s+([\w'-]+ed|been|grown|expanded|seen|read|done|completed|arrived|updated)\b/gi, '<span class="color-code-perfect">$1 $2</span>');
+  
+  // Past Perfect (Purple)
+  cleaned = cleaned.replace(/\b(had)\s+([\w'-]+ed|been|left|finished|completed|gone|seen|read|done)\b/gi, '<span class="color-code-past-perfect">$1 $2</span>');
+  
+  // Future Perfect (Blue)
+  cleaned = cleaned.replace(/\b(will\s+have)\s+([\w'-]+ed|been|left|finished|completed|gone|seen|read|done)\b/gi, '<span class="color-code-future-perfect">$1 $2</span>');
+  
+  // Simple Past / V2 (Red)
+  const v2Verbs = ['was passed', 'were planted', 'arrived', 'left', 'updated', 'passed', 'failed', 'started', 'commenced', 'concluded'];
+  v2Verbs.forEach(verb => {
+    const regex = new RegExp(`\\b(${verb})\\b`, 'gi');
+    cleaned = cleaned.replace(regex, '<span class="color-code-v2">$1</span>');
+  });
+
+  // Simple Present / V1 (Orange)
+  const v1Verbs = ['arrives', 'leaves', 'updates', 'passes', 'fails', 'starts', 'commences', 'concluded'];
+  v1Verbs.forEach(verb => {
+    const regex = new RegExp(`\\b(${verb})\\b`, 'gi');
+    cleaned = cleaned.replace(regex, '<span class="color-code-v1">$1</span>');
+  });
+  
+  return cleaned;
+}
+
+function getUnit101TimelineSVG(type) {
+  if (type === 'since') {
+    return `
+      <div class="u101-timeline-wrapper" style="margin-top: 8px;">
+        <svg class="u101-timeline-svg" viewBox="0 0 400 60" width="100%" height="60">
+          <defs>
+            <linearGradient id="grad-since" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#51cf66" />
+            </linearGradient>
+          </defs>
+          <line x1="20" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+          <path d="M 120 30 L 340 30" stroke="url(#grad-since)" stroke-width="4" stroke-linecap="round" />
+          
+          <!-- Past Event (V2) -->
+          <circle cx="120" cy="30" r="6" fill="#ff6b6b" />
+          <text x="120" y="18" text-anchor="middle">Başlangıç Noktası (V2)</text>
+          
+          <!-- Since duration -->
+          <text x="230" y="45" text-anchor="middle" fill="#51cf66" style="font-size: 9px;">Süreç (have/has + V3)</text>
+          
+          <!-- Present (Now) -->
+          <circle cx="340" cy="30" r="6" fill="#51cf66" />
+          <text x="340" y="18" text-anchor="middle">ŞİMDİ (Now)</text>
+        </svg>
+      </div>
+    `;
+  }
+  if (type === 'by_the_time_past') {
+    return `
+      <div class="u101-timeline-wrapper" style="margin-top: 8px;">
+        <svg class="u101-timeline-svg" viewBox="0 0 400 60" width="100%" height="60">
+          <line x1="20" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+          
+          <!-- Had V3 (Older Past) -->
+          <circle cx="100" cy="30" r="6" fill="#da77f2" />
+          <text x="100" y="18" text-anchor="middle">Daha Önce Biten (had + V3)</text>
+          
+          <!-- V2 (Past Deadline) -->
+          <circle cx="240" cy="30" r="6" fill="#ff6b6b" />
+          <text x="240" y="18" text-anchor="middle">Geçmiş Sınır / Olay (V2)</text>
+          
+          <!-- Now -->
+          <circle cx="350" cy="30" r="4" fill="rgba(255,255,255,0.4)" />
+          <text x="350" y="18" text-anchor="middle">ŞİMDİ</text>
+          
+          <!-- Arrow -->
+          <path d="M 115 30 L 225 30" stroke="#da77f2" stroke-width="2" stroke-dasharray="4,4" />
+        </svg>
+      </div>
+    `;
+  }
+  if (type === 'by_the_time_present') {
+    return `
+      <div class="u101-timeline-wrapper" style="margin-top: 8px;">
+        <svg class="u101-timeline-svg" viewBox="0 0 400 60" width="100%" height="60">
+          <line x1="20" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+          
+          <!-- Now -->
+          <circle cx="60" cy="30" r="4" fill="rgba(255,255,255,0.4)" />
+          <text x="60" y="18" text-anchor="middle">ŞİMDİ</text>
+          
+          <!-- Will have V3 -->
+          <circle cx="180" cy="30" r="6" fill="#3b82f6" />
+          <text x="180" y="18" text-anchor="middle">Bitecek Olan (will have + V3)</text>
+          
+          <!-- V1 (Future Deadline) -->
+          <circle cx="320" cy="30" r="6" fill="#ff9233" />
+          <text x="320" y="18" text-anchor="middle">Gelecek Sınır (V1)</text>
+          
+          <!-- Arrow -->
+          <path d="M 195 30 L 305 30" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,4" />
+        </svg>
+      </div>
+    `;
+  }
+  if (type === 'high_time') {
+    return `
+      <div class="u101-timeline-wrapper" style="margin-top: 8px;">
+        <svg class="u101-timeline-svg" viewBox="0 0 400 60" width="100%" height="60">
+          <line x1="20" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+          
+          <!-- Missed action start -->
+          <circle cx="150" cy="30" r="4" fill="#ff6b6b" stroke="#ff6b6b" stroke-width="1" fill-opacity="0.3" />
+          <text x="150" y="18" text-anchor="middle" fill="#ff6b6b" style="opacity: 0.75;">Planlanan Başlangıç</text>
+          
+          <!-- Red arrow representing delay -->
+          <path d="M 160 30 L 270 30" stroke="#ff6b6b" stroke-width="3" />
+          <text x="215" y="45" text-anchor="middle" fill="#ff6b6b" style="font-size: 9px;">Gecikme Süresi (Gereklilik)</text>
+          
+          <!-- Now -->
+          <circle cx="280" cy="30" r="6" fill="#ff6b6b" />
+          <text x="280" y="18" text-anchor="middle">ŞİMDİ (V2 Kullanılır!)</text>
+        </svg>
+      </div>
+    `;
+  }
+  return '';
+}
+
+function showFormulaWarmup(lesson, callback) {
+  const oldModal = document.getElementById('warmup-modal-container');
+  if (oldModal) oldModal.remove();
+
+  const backdrop = document.createElement('div');
+  backdrop.id = 'warmup-modal-container';
+  backdrop.className = 'warmup-backdrop';
+  
+  const modal = document.createElement('div');
+  modal.className = 'warmup-modal';
+  
+  modal.innerHTML = `
+    <h3 class="warmup-title">🧪 Bölüm 36: Zaman Uyumu Isınması</h3>
+    <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0 0 10px 0; font-family: 'Inter', sans-serif;">
+      Alıştırmaya başlamadan önce zaman bağlaçlarını ve eşleşen zaman formüllerini doğru bir şekilde birleştirin!
+    </p>
+    
+    <div class="warmup-game-area">
+      <div class="warmup-column" id="warmup-left-col"></div>
+      <div class="warmup-column" id="warmup-right-col"></div>
+    </div>
+    
+    <div id="warmup-success-msg" style="display: none; background: rgba(81, 207, 102, 0.1); border: 1px solid #51cf66; padding: 12px; border-radius: 8px; color: #51cf66; font-weight: bold; font-family: 'Outfit', sans-serif; font-size: 1rem; margin-top: 10px;">
+      🎉 Harika! Tüm formül eşleşmeleri doğru!
+    </div>
+    
+    <button id="btn-warmup-start" disabled style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: var(--text-muted); padding: 12px 20px; font-size: 1rem; font-weight: bold; cursor: not-allowed; transition: all 0.2s; font-family: 'Outfit', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+      <span>ALIŞTIRMAYA BAŞLA</span>
+      <span>🚀</span>
+    </button>
+  `;
+  
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
+  
+  const leftCol = modal.querySelector('#warmup-left-col');
+  const rightCol = modal.querySelector('#warmup-right-col');
+  const successMsg = modal.querySelector('#warmup-success-msg');
+  const startBtn = modal.querySelector('#btn-warmup-start');
+  
+  const pairs = [
+    { id: 1, leftText: "Since + Past Simple (V2)", rightText: "Present Perfect (have/has + V3)" },
+    { id: 2, leftText: "By the time + Past Simple (V2)", rightText: "Past Perfect (had + V3)" },
+    { id: 3, leftText: "By the time + Present Simple (V1)", rightText: "Future Perfect (will have + V3)" },
+    { id: 4, leftText: "It is (high) time + Subject", rightText: "Past Simple (V2)" }
+  ];
+  
+  let selectedLeft = null;
+  let selectedRight = null;
+  let matchedCount = 0;
+  
+  const leftItems = [...pairs].sort(() => Math.random() - 0.5);
+  leftItems.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'warmup-item';
+    el.dataset.id = item.id;
+    el.textContent = item.leftText;
+    leftCol.appendChild(el);
+    
+    el.addEventListener('click', () => {
+      if (el.classList.contains('matched')) return;
+      leftCol.querySelectorAll('.warmup-item').forEach(x => x.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedLeft = item.id;
+      checkSelection();
+    });
+  });
+  
+  const rightItems = [...pairs].sort(() => Math.random() - 0.5);
+  rightItems.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'warmup-item';
+    el.dataset.id = item.id;
+    el.textContent = item.rightText;
+    rightCol.appendChild(el);
+    
+    el.addEventListener('click', () => {
+      if (el.classList.contains('matched')) return;
+      rightCol.querySelectorAll('.warmup-item').forEach(x => x.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedRight = item.id;
+      checkSelection();
+    });
+  });
+  
+  function checkSelection() {
+    if (selectedLeft !== null && selectedRight !== null) {
+      if (selectedLeft === selectedRight) {
+        const leftEl = leftCol.querySelector(`.warmup-item[data-id="${selectedLeft}"]`);
+        const rightEl = rightCol.querySelector(`.warmup-item[data-id="${selectedRight}"]`);
+        
+        leftEl.classList.remove('selected');
+        rightEl.classList.remove('selected');
+        leftEl.classList.add('matched');
+        rightEl.classList.add('matched');
+        
+        matchedCount++;
+        selectedLeft = null;
+        selectedRight = null;
+        
+        if (matchedCount === pairs.length) {
+          successMsg.style.display = 'block';
+          startBtn.disabled = false;
+          startBtn.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover))';
+          startBtn.style.borderColor = 'var(--accent-primary)';
+          startBtn.style.color = '#fff';
+          startBtn.style.cursor = 'pointer';
+        }
+      } else {
+        setTimeout(() => {
+          leftCol.querySelectorAll('.warmup-item').forEach(x => x.classList.remove('selected'));
+          rightCol.querySelectorAll('.warmup-item').forEach(x => x.classList.remove('selected'));
+          selectedLeft = null;
+          selectedRight = null;
+        }, 300);
+      }
+    }
+  }
+  
+  startBtn.addEventListener('click', () => {
+    if (startBtn.disabled) return;
+    backdrop.style.opacity = '0';
+    backdrop.style.transition = 'opacity 0.2s ease';
+    setTimeout(() => {
+      backdrop.remove();
+      if (callback) callback();
+    }, 200);
+  });
 }
 
 // ============================================================
@@ -6913,12 +7215,20 @@ function startLesson(lessonId, exerciseId = null) {
   updateQuizUI();
   showScreen('quiz-screen');
 
-  if (currentLesson.konuAnlatimi) {
-    showKonuAnlatimi(currentLesson.konuAnlatimi, () => {
+  const proceedToQuiz = () => {
+    if (currentLesson.unitId === 101) {
+      showFormulaWarmup(currentLesson, () => {
+        renderQuestion();
+      });
+    } else {
       renderQuestion();
-    });
+    }
+  };
+
+  if (currentLesson.konuAnlatimi) {
+    showKonuAnlatimi(currentLesson.konuAnlatimi, proceedToQuiz);
   } else {
-    renderQuestion();
+    proceedToQuiz();
   }
 }
 
@@ -7221,6 +7531,12 @@ function applyClozeHighlighting(question) {
 }
 
 function renderQuestion() {
+  // Dismiss any active collocation success popup when transitioning to a new question
+  const existingPopup = document.getElementById('collocation-popup');
+  if (existingPopup) {
+    existingPopup.remove();
+  }
+
   const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex]);
   if (!question) return;
 
@@ -7258,8 +7574,14 @@ function renderQuestion() {
     blitzKeyHandler = null;
   }
 
+  const originalSentence = question.sentence;
+
   if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown') {
     applyClozeHighlighting(question);
+  }
+
+  if (currentLesson && currentLesson.unitId === 101 && question.sentence) {
+    question.sentence = colorCodeUnit101Sentence(question.sentence);
   }
 
   // Dynamically assign render type for blank questions
@@ -7401,6 +7723,132 @@ function renderQuestion() {
 
     // Apply reading passage highlights after question rendering
     applyReadingPassageHighlights();
+
+    // Bölüm 38 (Unit 40) Görsel Bağlaç ve Noktalama Kılavuzu (Conjunction HUD)
+    if (currentLesson && currentLesson.unitId === 40) {
+      let sentenceStr = (originalSentence || "").toLowerCase();
+      let hudTitle = 'Bağlaç & Punctuation Matrisi';
+      let hudFormula = '';
+      let hudAlert = '';
+      let visualSvg = '';
+
+      if (question.type === 'matching') {
+        hudTitle = 'Bağlaç Kategorileri';
+        hudFormula = 'Edat (Noun) | Bağlaç (SVO) | Geçiş Kelimesi (SVO; transition, SVO)';
+        hudAlert = 'Bağlaçları eşleştirirken dil bilgisi rollerine (isim alan edat vs. cümle alan bağlaç) dikkat edin.';
+      } else {
+        const lIndex = currentLesson.displayId || 1;
+        if (lIndex === 1) {
+          hudTitle = 'Zıtlık Bağlaçları Geometrisi (Contrast)';
+          hudFormula = 'Although/Even though + SVO  |  Despite/In spite of + Noun Phrase';
+          hudAlert = 'Sınav Tuzağı: Boşluktan sonra SVO (tam cümle) varsa "Although", sadece Noun Phrase varsa "Despite" tercih edilir.';
+          visualSvg = `
+            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
+              <span style="color: #ff6b6b; font-weight: bold;">[Although / Even though]</span> + <span style="color: #a855f7; font-weight: bold;">Subject + Verb + Object</span> , SVO<br>
+              <span style="color: #3b82f6; font-weight: bold;">[Despite / In spite of]</span> + <span style="color: #ffd43b; font-weight: bold;">Noun Phrase (no verb)</span> , SVO
+            </div>
+          `;
+        } else if (lIndex === 2) {
+          hudTitle = 'Saf Kıyaslama vs. Sebep (While vs. Because)';
+          hudFormula = 'While/Whereas + S1+V1, S2+V2  |  Because/Since/As + SVO';
+          hudAlert = 'Anlam Tuzağı: "Since" ve "As" hem zaman hem sebep ("çünkü") bildirebilir. Perfect zaman yoksa genellikle "çünkü" anlamındadır.';
+          visualSvg = `
+            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
+              <span style="color: #ff6b6b; font-weight: bold;">[While / Whereas]</span> S1 + V1 , S2 + V2 <span style="color: #10b981;">(Direct contrast)</span><br>
+              <span style="color: #3b82f6; font-weight: bold;">[Because / Since / As]</span> + <span style="color: #a855f7; font-weight: bold;">Subject + Verb + Object</span> , SVO
+            </div>
+          `;
+        } else if (lIndex === 3) {
+          hudTitle = 'Noktalama & Geçiş Kuralları (Transitions)';
+          hudFormula = 'SVO; therefore/consequently, SVO  |  Due to/Because of + Noun';
+          hudAlert = 'Noktalama Tuzağı: "Therefore", "Furthermore" gibi geçiş kelimeleri iki cümle ortasında ";" ve "," arasında kullanılır.';
+          visualSvg = `
+            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
+              SVO <span style="color: #ffd43b; font-weight: bold;">;</span> <span style="color: #f59e0b; font-weight: bold;">[Therefore / Consequently / Furthermore]</span> <span style="color: #ffd43b; font-weight: bold;">,</span> SVO <span style="color: #10b981;">(Transition)</span><br>
+              <span style="color: #3b82f6; font-weight: bold;">[Due to / Because of]</span> + <span style="color: #ffd43b; font-weight: bold;">Noun Phrase</span> , SVO
+            </div>
+          `;
+        } else {
+          hudTitle = 'İkili & Amaç Yapıları (Correlatives & Purpose)';
+          hudFormula = 'Neither...nor  |  In order to + V1  |  So that + SVO';
+          hudAlert = 'Dönüşüm Kuralı: "In order to + V1" yapısı tam cümle ile kurulacaksa "So that + SVO (can/will)" kalıbına dönüşür.';
+          visualSvg = `
+            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
+              SVO <span style="color: #ff6b6b; font-weight: bold;">[in order to / so as to]</span> + <span style="color: #a855f7; font-weight: bold;">V1 (Verb root)</span><br>
+              SVO <span style="color: #3b82f6; font-weight: bold;">[so that / in order that]</span> + <span style="color: #ffd43b; font-weight: bold;">Subject + can/could + V1</span>
+            </div>
+          `;
+        }
+      }
+
+      const hudHtml = `
+        <div class="u101-hud-card" id="unit40-hud" style="border-left: 5px solid var(--accent-primary, #8b7ec8); margin-bottom: 20px; background: var(--bg-card); border-radius: var(--radius-lg); padding: 16px; box-shadow: var(--shadow-md); text-align: left;">
+          <div class="u101-hud-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
+            <h4 class="u101-hud-title" style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--accent-primary, #8b7ec8);">⚖️ Görsel Kılavuz: ${hudTitle}</h4>
+            <span class="u101-hud-badge" style="background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); font-size: 0.68rem; font-weight: 800; padding: 3px 8px; border-radius: 12px;">BÖLÜM 38</span>
+          </div>
+          <div class="u101-hud-formula" style="font-family: monospace; font-size: 0.82rem; color: var(--text-primary); margin-bottom: 8px; font-weight: 700;">${hudFormula}</div>
+          <div class="u101-trap-alert" style="display: flex; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.18); border-radius: 8px; padding: 10px; line-height: 1.4;">
+            <span style="font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">💡</span>
+            <div>${hudAlert}</div>
+          </div>
+          ${visualSvg}
+        </div>
+      `;
+      body.insertAdjacentHTML('afterbegin', hudHtml);
+    }
+
+    // Bölüm 36 (Unit 101) HUD ve Zaman Çizelgesi Entegrasyonu
+    if (currentLesson && currentLesson.unitId === 101) {
+      let sentenceStr = (originalSentence || "").toLowerCase();
+      let hudType = '';
+      let hudTitle = '';
+      let hudFormula = '';
+      let hudAlert = '';
+      
+      if (sentenceStr.includes("since")) {
+        hudType = 'since';
+        hudTitle = 'Since (Zaman Uyumu)';
+        hudFormula = 'Present Perfect + since + Past Simple (V2)';
+        hudAlert = 'Since\'li yan cümle geçmişin başlangıç noktasını (V2) bildirirken; süreç bildiren ana cümle Present Perfect (have/has + V3) yapısında olur.';
+      } else if (sentenceStr.includes("by the time")) {
+        const isPast = sentenceStr.includes("was") || sentenceStr.includes("were") || sentenceStr.includes("had") || sentenceStr.includes("arrived") || sentenceStr.includes("left") || sentenceStr.includes("occurred") || sentenceStr.includes("___ since") || (question.options && question.options.some(o => o.includes("had") || o.includes("arrived") || o.includes("left")));
+        if (isPast) {
+          hudType = 'by_the_time_past';
+          hudTitle = 'By the Time (Past)';
+          hudFormula = 'By the time + Past (V2), Past Perfect (had + V3)';
+          hudAlert = 'Geçmiş bağlamdaki By the time cümlelerinde yan cümle V2 (Past Simple), ana cümle ise daha önce biten eylemi vurgulamak için had + V3 (Past Perfect) alır.';
+        } else {
+          hudType = 'by_the_time_present';
+          hudTitle = 'By the Time (Present/Future)';
+          hudFormula = 'By the time + Present (V1), Future Perfect (will have + V3)';
+          hudAlert = 'Gelecek/Geniş zaman bağlamındaki By the time cümlelerinde yan cümle V1 (Present Simple), ana cümle ise will have + V3 (Future Perfect) alır.';
+        }
+      } else if (sentenceStr.includes("time")) {
+        hudType = 'high_time';
+        hudTitle = 'It is (High) Time Kalıbı';
+        hudFormula = 'It is (high) time + Subject + Past Simple (V2)';
+        hudAlert = 'Sınav Tuzağı: Bu kalıp şu ana yönelik bir gecikmişlik, şikayet veya zorunluluk bildirse de gramer gereği fiil mutlaka V2 (Past Simple) çekimindedir.';
+      }
+      
+      if (hudType) {
+        const hudHtml = `
+          <div class="u101-hud-card" id="unit101-hud">
+            <div class="u101-hud-header">
+              <h4 class="u101-hud-title">🧪 Formül Köprüsü: ${hudTitle}</h4>
+              <span class="u101-hud-badge">BÖLÜM 36</span>
+            </div>
+            <div class="u101-hud-formula">${hudFormula}</div>
+            <div class="u101-trap-alert">
+              <span style="font-size: 1.2rem;">⚠️</span>
+              <div>${hudAlert}</div>
+            </div>
+            ${getUnit101TimelineSVG(hudType)}
+          </div>
+        `;
+        body.insertAdjacentHTML('afterbegin', hudHtml);
+      }
+    }
   } catch (error) {
     console.error("Soru render edilirken hata oluştu:", error);
     body.innerHTML = `
@@ -7447,6 +7895,9 @@ function renderQuestion() {
 
   // Restore prompt text so data remains unmodified
   question.prompt = originalPrompt;
+  if (currentLesson && currentLesson.unitId === 101) {
+    question.sentence = originalSentence;
+  }
 }
 
 // ── Çoktan Seçmeli ──────────────────────────────────────────
@@ -9497,7 +9948,100 @@ const COLLOCATION_DICT = {
   "rich in protein": "Protein bakımından zengin",
   "needed for growth": "Büyüme için gereklidir",
   "provide heat for living": "Yaşamak için ısı sağlamak",
-  "in the form of a bush": "Bir çalı şeklinde"
+  "in the form of a bush": "Bir çalı şeklinde",
+  // u58 collocations
+  "depend on": "birine/bir şeye bağlı olmak, güvenmek",
+  "rely on": "birine/bir şeye bağlı olmak, güvenmek",
+  "count on": "birine/bir şeye bağlı olmak, güvenmek",
+  "focus on": "bir konuya odaklanmak, yoğunlaşmak",
+  "concentrate on": "bir konuya odaklanmak, yoğunlaşmak",
+  "insist on": "bir şeyde ısrar etmek",
+  "congratulate on": "birini bir başarıdan ötürü tebrik etmek",
+  "spend on": "bir şeye para veya zaman harcamak",
+  "decide on": "bir konuda karar kılmak, seçmek",
+  "complain about": "bir durumdan/şeyden şikayet etmek",
+  "worry about": "bir şey hakkında endişelenmek",
+  "anxious about": "bir şey hakkında endişelenmek",
+  "think about": "bir şey hakkında düşünmek (tartmak)",
+  "talk about": "bir konu hakkında konuşmak",
+  "speak about": "bir konu hakkında konuşmak",
+  "argue about": "bir konu hakkında konuşmak/tartışmak",
+  "care about": "bir şeyi önemsemek, değer vermek",
+  "forget about": "bir şeyi/durumu unutmak",
+  "apply for": "bir işe, bursa veya programa başvurmak",
+  "apologize for": "bir hatadan/durumdan ötürü özür dilemek",
+  "wait for": "birini veya bir şeyi beklemek",
+  "search for": "bir şeyi/birini aramak",
+  "look for": "bir şeyi/birini aramak",
+  "blame for": "birini bir şey için suçlamak",
+  "prepare for": "bir şeye hazırlanmak",
+  "admire for": "birine bir özelliğinden dolayı hayran olmak",
+  "belong to": "birine/bir şeye ait olmak",
+  "listen to": "birini/bir şeyi dinlemek",
+  "object to": "bir şeye itiraz etmek, karşı çıkmak",
+  "contribute to": "bir şeye katkıda bulunmak/sebep olmak",
+  "lead to": "bir sonuca yol açmak, sebep olmak",
+  "adapt to": "bir duruma uyum sağlamak",
+  "refer to": "bir şeye atıfta bulunmak, işaret etmek",
+  "apologize to": "bir kişiye özür beyan etmek",
+  "prevent from": "birinin bir şey yapmasını engellemek",
+  "protect from": "birini/bir şeyi tehlickeden korumak",
+  "suffer from": "bir hastalıktan veya sıkıntıdan muzdarip olmak",
+  "differ from": "bir şeyden farklılık göstermek",
+  "recover from": "bir hastalıktan kurtulmak, iyileşmek",
+  "derive from": "bir şeyden türemek, -den kaynaklanmak",
+  "stem from": "bir şeyden türemek, -den kaynaklanmak",
+  "agree with": "bir kişiyle aynı fikirde olmak",
+  "comply with": "kurallara, kanunlara uyum sağlamak",
+  "cope with": "bir sorunla başa çıkmak, mücadele etmek",
+  "deal with": "bir sorunla başa çıkmak, mücadele etmek",
+  "provide with": "birine bir imkan/malzeme sağlamak",
+  "associate with": "bir şeyi başka bir şeyle ilişkilendirmek",
+  "coincide with": "bir durumun diğeriyle denk gelmesi, çakışması",
+  "vulnerable to": "...e karşı savunmasız/hassas olmak",
+  "susceptible to": "...e karşı savunmasız/hassas olmak",
+  "prone to": "...e karşı savunmasız/meyilli olmak",
+  "responsible for": "...den sorumlu olmak",
+  "associated with": "...ile ilişkili/bağlantılı olmak",
+  "related to": "...ile ilişkili/bağlantılı olmak",
+  "aware of": "...in farkında/bilincinde olmak",
+  "conscious of": "...in farkında/bilincinde olmak",
+  "different from": "...den farklı olmak",
+  "similar to": "...e benzer olmak",
+  "consistent with": "...ile tutarlı/uyumlu olmak",
+  "dependent on": "...e bağımlı olmak",
+  "rich in": "...bakımından zengin olmak",
+  "deficient in": "...bakımından eksik olmak",
+  "effect on": "...üzerindeki etkisi",
+  "impact on": "...üzerindeki etkisi",
+  "influence on": "...üzerindeki etkisi",
+  "increase in": "...deki artış/yükseliş",
+  "decrease in": "...deki azalış/düşüş",
+  "rise in": "...deki yükseliş",
+  "fall in": "...deki düşüş",
+  "solution to": "...e çözüm",
+  "key to": "...ın anahtarı",
+  "answer to": "...a cevap",
+  "reason for": "...in sebebi/nedeni",
+  "cause of": "...in sebebi/nedeni",
+  "relationship between": "...arasındaki ilişki",
+  "link between": "...arasındaki bağ",
+  "demand for": "...e olan talep",
+  "attitude towards": "...e karşı tutum/yaklaşım",
+  "in terms of": "...bakımından, ...açısından",
+  "by means of": "...yoluyla, ...vasıtasıyla",
+  "by virtue of": "...yoluyla, ...sayesinde",
+  "in spite of": "...e rağmen",
+  "despite": "...e rağmen",
+  "on behalf of": "...adına, ...ın namına",
+  "in addition to": "...e ek olarak, ...ın yanı sıra",
+  "as well as": "...e ek olarak, ...ın yanı sıra",
+  "in contrast to": "...in aksine, ...e tezat olarak",
+  "contrary to": "...in aksine, ...e tezat olarak",
+  "regardless of": "...e bakılmaksızın, ...gözetmeksizin",
+  "with regard to": "...e ilişkin, ...hakkında",
+  "as to": "...e ilişkin, ...hakkında",
+  "in accordance with": "...e uygun/paralel olarak"
 };
 
 function showCollocationPopup(english, turkish) {
@@ -9523,14 +10067,6 @@ function showCollocationPopup(english, turkish) {
   setTimeout(() => {
     popup.classList.add('show');
   }, 10);
-
-  // Auto remove after 1.5 seconds
-  setTimeout(() => {
-    popup.classList.remove('show');
-    setTimeout(() => {
-      popup.remove();
-    }, 300);
-  }, 1500);
 }
 
 // ── Bağlantı Kilidi (Collocation Matcher) ──
@@ -9560,6 +10096,13 @@ function renderCollocationMatching(container, question) {
   matchCards.forEach(card => {
     card.addEventListener('click', () => {
       if (card.classList.contains('matched') || card.classList.contains('error') || isAnswerChecked) return;
+
+      // Hide the collocation popup as the user is starting a new match attempt
+      const existingPopup = document.getElementById('collocation-popup');
+      if (existingPopup) {
+        existingPopup.classList.remove('show');
+        setTimeout(() => existingPopup.remove(), 300);
+      }
 
       const type = card.dataset.type;
 
@@ -9599,6 +10142,7 @@ function renderCollocationMatching(container, question) {
           const turkishTranslation = COLLOCATION_DICT[normalized] || "";
           if (turkishTranslation) {
             showCollocationPopup(englishPhrase, turkishTranslation);
+            wEl.innerHTML = `<span class="match-card-en">${wEl.dataset.text}</span><span class="match-card-tr" style="display: block; font-size: 0.75rem; color: #10b981; margin-top: 4px; font-weight: 700;">(${turkishTranslation})</span>`;
           }
 
           if (matchesCount === question.pairs.length) {
@@ -9847,7 +10391,7 @@ function checkAnswer() {
   }
 
   // Intercept if translation exists, primary is correct, type is fill-blank, and translation gate hasn't been triggered yet
-  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;

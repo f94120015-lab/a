@@ -2,12 +2,15 @@ const fs = require('fs');
 const vm = require('vm');
 
 const dataCode = fs.readFileSync('data.js', 'utf8');
+const extraCode = fs.readFileSync('data-extra.js', 'utf8');
 
 // Create a sandbox to run data.js in Node environment safely
 const sandbox = {
   console: console,
   window: { location: { hostname: 'localhost', protocol: 'http:' } },
-  document: {}
+  document: {},
+  lessons: [],
+  units: []
 };
 
 // Run the script in the context and append an expression to return scoped const variables
@@ -19,14 +22,22 @@ try {
   const executableCode = dataCode.replace(/\bexport\s+/g, '');
   const wrapperCode = executableCode + '\n; ({ units, lessons });';
   dataResult = vm.runInContext(wrapperCode, sandbox);
+  
+  // Populate the sandbox variables so data-extra can read/write them
+  sandbox.lessons = dataResult.lessons;
+  sandbox.units = dataResult.units;
+  
+  // Run data-extra.js
+  const executableExtra = extraCode.replace(/\bexport\s+/g, '');
+  vm.runInContext(executableExtra, sandbox);
 } catch (err) {
-  console.error('data.js çalıştırılırken bir hata oluştu:', err);
+  console.error('Veri dosyaları çalıştırılırken bir hata oluştu:', err);
   process.exit(1);
 }
 
-// Access variables populated by data.js
-const lessons = dataResult ? dataResult.lessons : null;
-const units = dataResult ? dataResult.units : null;
+// Access variables populated by data.js and data-extra.js
+const lessons = sandbox.lessons;
+const units = sandbox.units;
 
 console.log('\x1b[36m%s\x1b[0m', '\n======================================================');
 console.log('\x1b[36m%s\x1b[0m', '   AMOK DERS VE SORU YÜKLEME RAPORU (DURUM KONTROLÜ)');
