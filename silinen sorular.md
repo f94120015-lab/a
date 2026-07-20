@@ -3999,3 +3999,2771 @@ Bu Bölüm, Bölüm 10 altındaki egzersizlerin sadeleştirilmesi ve her alışt
 
 ---
 
+# Silinen Sorular Arşivi (Bölüm 11: Present Participle Sıfatı -ing)
+
+Bu Bölüm, Bölüm 11 altındaki egzersizlerin zorluk derecelerine göre 3 seviyeye (Temel, Orta, İleri) indirgenmesi, sadeleştirilmesi ve kelime eşleştirme sorularının kaldırılması sırasında çıkarılan soruları içermektedir.
+
+## Lesson 12: Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Soruları
+
+### Soru ID: u4l12_ex1_match1 (matching)
+* **Eşleştirmeler:**
+  - azalan ihracat <--> decreasing exports
+  - gelişmekte olan ekonomiler <--> emerging economies
+  - genişleyen ağlar <--> expanding networks
+  - düşen gelirler <--> declining revenues
+
+### Soru ID: u4l12_ex1_match2 (matching)
+* **Eşleştirmeler:**
+  - artan maliyetler <--> increasing costs
+  - büyüyen tutarsızlıklar <--> growing inconsistencies
+  - değişen politikalar <--> shifting policies
+  - gelişen teoriler <--> evolving theories
+
+### Soru ID: u4l12_ex2_match1 (matching)
+* **Eşleştirmeler:**
+  - devam eden hareket <--> continuing movement
+  - etkileşen değişkenler <--> interacting variables
+  - çelişen öngörüler <--> conflicting insights
+  - kendini adayan sektörler <--> devoting sectors
+
+### Soru ID: u4l12_ex2_match2 (matching)
+* **Eşleştirmeler:**
+  - meydana gelen varyasyonlar <--> occurring variations
+  - gösterge niteliğindeki trendler <--> indicative trends
+  - yükselen fiyatlar <--> rising prices
+  - düşen talep <--> falling demand
+
+### Soru ID: u4l12_ex3_match1 (matching)
+* **Eşleştirmeler:**
+  - değişen sonuçlar <--> varying results
+  - baskın trendler <--> dominating trends
+  - mevcut sistemler <--> existing systems
+  - artan ilgi <--> growing interest
+
+### Soru ID: u4l12_ex3_match2 (matching)
+* **Eşleştirmeler:**
+  - artan sıcaklıklar <--> rising temperatures
+  - gelişmekte olan ülkeler <--> developing countries
+  - eşleşen cevaplar <--> matching answers
+  - zorlayıcı görevler <--> challenging tasks
+
+### Soru ID: u4l12_ex4_match1 (matching)
+* **Eşleştirmeler:**
+  - artan üretim <--> increasing production
+  - azalan ilgi <--> declining interest
+  - yükselen oranlar <--> rising rates
+  - değişen odak <--> shifting focus
+
+### Soru ID: u4l12_ex4_match2 (matching)
+* **Eşleştirmeler:**
+  - büyüyen nüfus <--> growing population
+  - değişen zamanlar <--> changing times
+  - mevcut kaynaklar <--> existing resources
+  - farklı görüşler <--> differing views
+
+### Soru ID: u4l12_ex5_match1 (matching)
+* **Eşleştirmeler:**
+  - ödenmemiş borçlar <--> outstanding debts
+  - eksik detaylar <--> missing details
+  - hayatta kalan hastalar <--> surviving patients
+  - çelişen ifadeler <--> conflicting statements
+
+### Soru ID: u4l12_ex5_match2 (matching)
+* **Eşleştirmeler:**
+  - temelde yatan nedenler <--> underlying causes
+  - karşılık gelen değerler <--> corresponding values
+  - meydana gelen olaylar <--> occurring events
+  - değişen fikirler <--> varying opinions
+
+### Soru ID: u4l12_ex6_match1 (matching)
+* **Eşleştirmeler:**
+  - çelişen beyanlar <--> contradicting statements
+  - dalgalı akımlar <--> alternating currents
+  - devam eden destek <--> continuing support
+  - etkileşen gruplar <--> interacting groups
+
+### Soru ID: u4l12_ex6_match2 (matching)
+* **Eşleştirmeler:**
+  - çelişen gereksinimler <--> conflicting requirements
+  - adanan çabalar <--> devoting efforts
+  - meydana gelen değişiklikler <--> occurring changes
+  - gösterge niteliğindeki sonuçlar <--> indicative results
+
+### Soru ID: u4l12_ex7_match1 (matching)
+* **Eşleştirmeler:**
+  - genişleyen sektörler <--> expanding sectors
+  - ortaya çıkan sorunlar <--> emerging issues
+  - artan talepler <--> increasing demands
+  - düşen standart <--> declining standard
+
+### Soru ID: u4l12_ex7_match2 (matching)
+* **Eşleştirmeler:**
+  - artan gerilim <--> growing tension
+  - değişen dinamikler <--> shifting dynamics
+  - gelişen standartlar <--> evolving standards
+  - dalgalanan talepler <--> fluctuating demands
+
+### Soru ID: u4l12_ex8_match1 (matching)
+* **Eşleştirmeler:**
+  - etkileşen süreçler <--> interacting processes
+  - çelişen perspektifler <--> conflicting perspectives
+  - tahsis edilen kaynaklar <--> devoting resources
+  - meydana gelen olaylar <--> occurring phenomena
+
+### Soru ID: u4l12_ex8_match2 (matching)
+* **Eşleştirmeler:**
+  - gösterge niteliğindeki kanıtlar <--> indicative evidence
+  - yükselen yıldızlar <--> rising stars
+  - düşen yapraklar <--> falling leaves
+  - önde gelen şahsiyetler <--> leading figures
+
+## Lesson 13: Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Soruları
+
+### Soru ID: u4l13_ex1_match1 (matching)
+* **Eşleştirmeler:**
+  - geliri maksimize eden strateji <--> income-maximizing strategy
+  - kaynağı sınırlandıran faktör <--> resource-limiting factor
+  - politikayı tanımlayan rol <--> policy-defining role
+  - veri işleyen yazılım <--> data-processing software
+
+### Soru ID: u4l13_ex1_match2 (matching)
+* **Eşleştirmeler:**
+  - pazarı büyüten proje <--> market-expanding project
+  - enerji tüketen cihaz <--> energy-consuming device
+  - mantığa meydan okuyan kavram <--> logic-defying concept
+  - çevreyi koruyan yasa <--> environment-protecting law
+
+### Soru ID: u4l13_ex2_match1 (matching)
+* **Eşleştirmeler:**
+  - maliyeti düşüren önlem <--> cost-reducing measure
+  - gelir getiren faaliyet <--> revenue-generating activity
+  - kârı maksimize eden fiyat <--> profit-maximizing price
+  - zaman kazandıran yöntem <--> time-saving method
+
+### Soru ID: u4l13_ex2_match2 (matching)
+* **Eşleştirmeler:**
+  - problem çözen beceri <--> problem-solving skill
+  - riski azaltan faktör <--> risk-mitigating factor
+  - değer katan hizmet <--> value-adding service
+  - gerçekleri araştırma görevi <--> fact-finding mission
+
+### Soru ID: u4l13_ex3_match1 (matching)
+* **Eşleştirmeler:**
+  - akıl almaz bulmaca <--> mind-boggling puzzle
+  - göz açıcı deneyim <--> eye-opening experience
+  - ağız sulandıran yemek <--> mouth-watering dish
+  - hayat kurtaran tedavi <--> life-saving treatment
+
+### Soru ID: u4l13_ex3_match2 (matching)
+* **Eşleştirmeler:**
+  - para kazandıran plan <--> money-making scheme
+  - istihdam yaratan yatırım <--> job-creating investment
+  - itibar kurtaran uzlaşma <--> face-saving compromise
+  - iklimi değiştiren emisyon <--> climate-changing emission
+
+### Soru ID: u4l13_ex4_match1 (matching)
+* **Eşleştirmeler:**
+  - vergi ödeyen mukim <--> tax-paying resident
+  - sorun çıkaran öğrenci <--> trouble-making student
+  - sırayı belirleyen öncelik <--> order-defining priority
+  - su emen bitki <--> water-absorbing plant
+
+### Soru ID: u4l13_ex4_match2 (matching)
+* **Eşleştirmeler:**
+  - ısı ileten metal <--> heat-conducting metal
+  - ışık emen yüzey <--> light-absorbing surface
+  - gerçeği ortaya çıkaran tanık <--> truth-revealing witness
+  - hata tespit eden kod <--> error-detecting code
+
+
+---
+
+# Silinen Sorular Arşivi (Bölüm 12: Past Participle Sıfatı -ed)
+
+Bu dosya, Bölüm 12 altındaki egzersizlerin basitten zora doğru aşamalı bir pedagojik yaklaşımla, her derste 2 alıştırma ve her alıştırmada 12 soru olacak şekilde yeniden düzenlenmesi sırasında çıkarılan kelime eşleştirme sorularını içermektedir.
+
+## Ders 14 (Past Participle Sıfatı -ed) - Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Soruları
+
+### Soru ID: u5l14_ex1_match1 (matching)
+* **Eşleştirmeler:**
+  - analiz edilmiş <--> analyzed
+  - insansız <--> uninhabited
+  - azaltılmış <--> reduced
+  - maruz kalmış <--> exposed
+
+### Soru ID: u5l14_ex2_match1 (matching)
+* **Eşleştirmeler:**
+  - seçilmiş <--> selected
+  - değerlendirilmiş <--> evaluated
+  - kesintisiz <--> sustained
+  - yayınlanmış <--> published
+
+### Soru ID: u5l14_ex3_match1 (matching)
+* **Eşleştirmeler:**
+  - değiştirilmiş <--> modified
+  - belirlenmiş <--> identified
+  - tahmin edilen <--> estimated
+  - yapılandırılmış <--> structured
+
+### Soru ID: u5l14_ex4_match1 (matching)
+* **Eşleştirmeler:**
+  - yeniden tahsis edilmiş <--> reallocated
+  - kısıtlanmış <--> restricted
+  - entegre <--> integrated
+  - seçilmiş <--> selected
+
+---
+
+## Ders 15 (Zarf + Past Participle + İsim) - Kelimeleri Türkçe Karşılıklarıyla Eşleştirin Soruları
+
+### Soru ID: u5l15_ex1_match1 (matching)
+* **Eşleştirmeler:**
+  - son derece <--> highly
+  - yoğun <--> densely
+  - aşırı tahmin edilmiş <--> over-estimated
+  - yetersiz tahmin edilmiş <--> under-estimated
+
+### Soru ID: u5l15_ex2_match1 (matching)
+* **Eşleştirmeler:**
+  - siyasi amaçlı <--> politically
+  - uygunsuz şekilde <--> inappropriately
+  - toplumsal olarak <--> socially
+  - teorik olarak <--> theoretically
+
+### Soru ID: u5l15_ex3_match1 (matching)
+* **Eşleştirmeler:**
+  - yetersiz kaynak aktarılmış <--> under-resourced
+  - yasal olarak <--> legally
+  - dikkatle <--> carefully
+  - titizlikle <--> rigorously
+
+### Soru ID: u5l15_ex4_match1 (matching)
+* **Eşleştirmeler:**
+  - deneysel olarak <--> empirically
+  - iyi koordine edilmiş <--> well-coordinated
+  - iyi gelişmiş <--> well-developed
+  - yoğun <--> densely
+
+
+
+# Silinen Sorular Arşivi (Bölüm 14: Participle Yapıları)
+
+Bu bölüm altındaki alıştırmalardan çıkarılan "Kelimeleri Türkçe karşılıklarıyla eşleştirin" (word-matching) sorularının listesidir.
+
+
+
+# Silinen Sorular Arşivi (Bölüm 14: Participle Yapıları)
+
+Bu bölüm altındaki alıştırmalardan çıkarılan "Kelimeleri Türkçe karşılıklarıyla eşleştirin" (word-matching) sorularının listesidir.
+
+## Lesson 1 - Exercise 1 - Soru 1 (matching)
+* **ID:** u12l30_ex1_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kalan <--> remaining
+  - hareket eden <--> moving
+  - yaşam <--> living
+  - büyüyen <--> growing
+
+---
+
+## Lesson 1 - Exercise 1 - Soru 2 (matching)
+* **ID:** u12l30_ex1_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - başlayan <--> beginning
+  - artan <--> increasing
+  - devam eden <--> continuing
+  - farklı <--> differing
+
+---
+
+## Lesson 1 - Exercise 2 - Soru 3 (matching)
+* **ID:** u12l30_ex2_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - mevcut <--> existing
+  - dönen <--> revolving
+  - iş <--> work
+  - oluşan <--> resulting
+
+---
+
+## Lesson 1 - Exercise 2 - Soru 4 (matching)
+* **ID:** u12l30_ex2_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yaşam <--> living
+  - başlayan <--> beginning
+  - katılmayan <--> disagreeing
+  - gelişen <--> developing
+
+---
+
+## Lesson 1 - Exercise 3 - Soru 5 (matching)
+* **ID:** u12l30_ex3_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - mevcut <--> existing
+  - ayıran <--> distinguishing
+  - katkıda bulunan <--> contributing
+  - oluşan <--> consisting
+
+---
+
+## Lesson 1 - Exercise 3 - Soru 6 (matching)
+* **ID:** u12l30_ex3_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gelişmekte olan <--> emerging
+  - yayınlama <--> publishing
+  - rekabet eden <--> competing
+  - değişmek <--> change
+
+---
+
+## Lesson 1 - Exercise 4 - Soru 7 (matching)
+* **ID:** u12l30_ex4_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gelişmekte olan <--> emerging
+  - yayınlama <--> publishing
+  - rekabet eden <--> competing
+  - değişmek <--> change
+
+---
+
+## Lesson 1 - Exercise 4 - Soru 8 (matching)
+* **ID:** u12l30_ex4_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - katılan <--> participating
+  - kalan <--> remaining
+  - temelde yatan <--> underlying
+  - iş <--> work
+
+---
+
+## Lesson 2 - Exercise 1 - Soru 9 (matching)
+* **ID:** u12l31_ex1_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gösteren <--> showing
+  - içeren <--> containing
+  - tanımlayan <--> describing
+  - bağlayan <--> connecting
+
+---
+
+## Lesson 2 - Exercise 1 - Soru 10 (matching)
+* **ID:** u12l31_ex1_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - koruyan <--> protecting
+  - belirleyen <--> determining
+  - belirleyici <--> defining
+  - kanıtlayan <--> proving
+
+---
+
+## Lesson 2 - Exercise 2 - Soru 11 (matching)
+* **ID:** u12l31_ex2_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kanıtlayan <--> proving
+  - işleyen <--> cultivating
+  - kuran <--> establishing
+  - veren <--> giving
+
+---
+
+## Lesson 2 - Exercise 2 - Soru 12 (matching)
+* **ID:** u12l31_ex2_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - içeren <--> containing
+  - işgal eden <--> occupying
+  - bağlayıcı <--> binding
+  - umut verici <--> promising
+
+---
+
+## Lesson 2 - Exercise 3 - Soru 13 (matching)
+* **ID:** u12l31_ex3_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - içeren <--> containing
+  - gösteren <--> showing
+  - hitap eden <--> addressing
+  - onaylayan <--> approving
+
+---
+
+## Lesson 2 - Exercise 3 - Soru 14 (matching)
+* **ID:** u12l31_ex3_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - bağlayan <--> connecting
+  - yaratan <--> creating
+  - gösteren <--> demonstrating
+  - tanımlayan <--> describing
+
+---
+
+## Lesson 2 - Exercise 4 - Soru 15 (matching)
+* **ID:** u12l31_ex4_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kuran <--> establishing
+  - sınırlayan <--> limiting
+  - belirleyici <--> defining
+  - içeren <--> containing
+
+---
+
+## Lesson 2 - Exercise 4 - Soru 16 (matching)
+* **ID:** u12l31_ex4_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kanıtlayan <--> proving
+  - koruyan <--> protecting
+  - garanti eden <--> guaranteeing
+  - tanıtan <--> introducing
+
+---
+
+## Lesson 2 - Exercise 5 - Soru 17 (matching)
+* **ID:** u12l31_ex5_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - etkileyen <--> affecting
+  - sağlayan <--> granting
+  - ayıran <--> distinguishing
+  - tehlikeye atan <--> endangering
+
+---
+
+## Lesson 2 - Exercise 5 - Soru 18 (matching)
+* **ID:** u12l31_ex5_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yöneten <--> governing
+  - yetki veren <--> authorizing
+  - içeren <--> containing
+  - gösteren <--> showing
+
+---
+
+## Lesson 2 - Exercise 6 - Soru 19 (matching)
+* **ID:** u12l31_ex6_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - onaylayan <--> approving
+  - bağlayan <--> connecting
+  - yaratan <--> creating
+  - gösteren <--> demonstrating
+
+---
+
+## Lesson 2 - Exercise 6 - Soru 20 (matching)
+* **ID:** u12l31_ex6_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tanımlayan <--> describing
+  - belirleyen <--> determining
+  - kuran <--> establishing
+  - sınırlayan <--> limiting
+
+---
+
+## Lesson 2 - Exercise 7 - Soru 21 (matching)
+* **ID:** u12l31_ex7_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - içeren <--> containing
+  - kanıtlayan <--> proving
+  - koruyan <--> protecting
+  - garanti eden <--> guaranteeing
+
+---
+
+## Lesson 2 - Exercise 7 - Soru 22 (matching)
+* **ID:** u12l31_ex7_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tanıtan <--> introducing
+  - gerektiren <--> necessitating
+  - etkileyen <--> affecting
+  - sağlayan <--> granting
+
+---
+
+## Lesson 2 - Exercise 8 - Soru 23 (matching)
+* **ID:** u12l31_ex8_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - koruyan <--> protecting
+  - garanti eden <--> guaranteeing
+  - tanıtan <--> introducing
+  - gerektiren <--> necessitating
+
+---
+
+## Lesson 2 - Exercise 8 - Soru 24 (matching)
+* **ID:** u12l31_ex8_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - etkileyen <--> affecting
+  - sağlayan <--> granting
+  - ayıran <--> distinguishing
+  - tehlikeye atan <--> endangering
+
+---
+
+## Lesson 3 - Exercise 1 - Soru 25 (matching)
+* **ID:** u12l32_ex1_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - birleşmiş <--> united
+  - iyi bilinen <--> well-known
+  - oluşan <--> composed
+  - basitleştirilmiş <--> simplified
+
+---
+
+## Lesson 3 - Exercise 1 - Soru 26 (matching)
+* **ID:** u12l32_ex1_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gerekli <--> needed
+  - maruz kalmış <--> exposed
+  - sınıflandırılmış <--> classified
+  - üretilen <--> produced
+
+---
+
+## Lesson 3 - Exercise 2 - Soru 27 (matching)
+* **ID:** u12l32_ex2_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - insan yaşayan <--> inhabited
+  - üretilen <--> produced
+  - maruz kalmış <--> exposed
+  - gerekli <--> needed
+
+---
+
+## Lesson 3 - Exercise 2 - Soru 28 (matching)
+* **ID:** u12l32_ex2_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kullanılan <--> used
+  - yayılan <--> emitted
+  - gönderilen <--> sent
+  - çevrili <--> surrounded
+
+---
+
+## Lesson 3 - Exercise 3 - Soru 29 (matching)
+* **ID:** u12l32_ex3_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - taslağı çizilen <--> outlined
+  - yapılan <--> made
+  - birleşmiş <--> united
+  - iyi bilinen <--> well-known
+
+---
+
+## Lesson 3 - Exercise 3 - Soru 30 (matching)
+* **ID:** u12l32_ex3_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - oluşan <--> composed
+  - basitleştirilmiş <--> simplified
+  - gerekli <--> needed
+  - maruz kalmış <--> exposed
+
+---
+
+## Lesson 3 - Exercise 4 - Soru 31 (matching)
+* **ID:** u12l32_ex4_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - üretilen <--> produced
+  - yayılan <--> emitted
+  - insan yaşayan <--> inhabited
+  - maruz kalmış <--> exposed
+
+---
+
+## Lesson 3 - Exercise 4 - Soru 32 (matching)
+* **ID:** u12l32_ex4_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gerekli <--> needed
+  - kullanılan <--> used
+  - gönderilen <--> sent
+  - çevrili <--> surrounded
+
+---
+
+## Lesson 3 - Exercise 5 - Soru 33 (matching)
+* **ID:** u12l32_ex5_match1
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - insan yaşayan <--> inhabited
+  - üretilen <--> produced
+  - maruz kalmış <--> exposed
+  - gerekli <--> needed
+
+---
+
+## Lesson 3 - Exercise 5 - Soru 34 (matching)
+* **ID:** u12l32_ex5_match2
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kullanılan <--> used
+  - yayılan <--> emitted
+  - gönderilen <--> sent
+  - çevrili <--> surrounded
+
+---
+
+
+
+# Silinen Sorular Arşivi (Bölüm 19: Edattan Sonra Gelen Fiil (+ Nesnesi))
+
+ Bu bölüm altındaki egzersizlerin sadeleştirilmesi, "Kelimeleri Türkçe karşılıklarıyla eşleştirin" (word-level matching) sorularının kaldırılması ve her derste 3 alıştırma ve her alıştırmada 12 soru olacak şekilde (toplam 36 soru) basitten zora pedagojik aşamalandırma ile yeniden tasarlanması sırasında çıkarılan sorular aşağıdadır.
+
+## Ders 1
+
+### Alıştırma: Alıştırma 1: Yapı Çalışması (ID: u19l48ex1)
+
+#### Soru ID: u19l48_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - analiz etme <--> analyzing
+  - kullanma <--> utilizing
+  - değiştirme <--> modifying
+  - yapılandırma <--> structuring
+
+---
+
+#### Soru ID: u19l48_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - entegre etme <--> integrating
+  - belirleyici <--> defining
+  - yayınlama <--> publishing
+  - izleme <--> monitoring
+
+---
+
+#### Soru ID: u19l48_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "Without generating the JSON structure" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Without generating the JSON structure
+* **Seçenekler:** JSON yapısını analiz ederek | JSON yapısını dağıtırken | JSON yapısını entegre ederek | JSON yapısını oluşturmadan
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l48_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "İstatistiksel analizi değiştirmeden" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Without altering the statistical analysis
+* **Seçenekler:** Without distributing the statistical analysis | Without altering the analysis statistical | Without altering the statistical analysis | The statistical analysis altering without
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+#### Soru ID: u19l48_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By analyzing the raw data
+* **Cümle:** By analyzing the raw data
+* **Kelimeler:** Ham | en | verileri | analiz | tutamaz | ederek | sekreter
+* **Doğru Sıralama:** Ham | verileri | analiz | ederek
+
+---
+
+#### Soru ID: u19l48_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By utilizing the mobile interface
+* **Cümle:** By utilizing the mobile interface
+* **Kelimeler:** miktarda | kullanarak | ayarlarken | arayüzü | Mobil | mühendis
+* **Doğru Sıralama:** Mobil | arayüzü | kullanarak
+
+---
+
+#### Soru ID: u19l48_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By modifying the legislative framework
+* **Cümle:** By modifying the legislative framework
+* **Kelimeler:** değiştirerek | çerçeveyi | yapısını | JSON | Yasal | Ham
+* **Doğru Sıralama:** Yasal | çerçeveyi | değiştirerek
+
+---
+
+#### Soru ID: u19l48_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Belirli kriterleri tanımlamadan
+* **Cümle:** Without defining the specific criteria
+* **Kelimeler:** Without | notice | defining | specific | the | battery | criteria | monitoring
+* **Doğru Sıralama:** Without | defining | the | specific | criteria
+
+---
+
+#### Soru ID: u19l48_ex1_tx_0 (translation-text)
+* **Yönerge:** "By structuring the financial resources" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** By structuring the financial resources
+* **Doğru Cevap:** Finansal kaynakları yapılandırarak
+
+---
+
+#### Soru ID: u19l48_ex1_tx_1 (translation-text)
+* **Yönerge:** "By integrating the individual applications" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** By integrating the individual applications
+* **Doğru Cevap:** Bireysel uygulamaları entegre ederek
+
+---
+
+### Alıştırma: Alıştırma 2: Yapı Çalışması (ID: u19l48ex2)
+
+#### Soru ID: u19l48_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - karşılaşma <--> encountering
+  - takip etme <--> tracking
+  - düzenleme <--> regulating
+  - dönüştürme <--> converting
+
+---
+
+#### Soru ID: u19l48_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirleme <--> identifying
+  - değerlendirme <--> evaluating
+  - işleme <--> processing
+  - ayarlama <--> adjusting
+
+---
+
+#### Soru ID: u19l48_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "In maintaining the structural framework" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** In maintaining the structural framework
+* **Seçenekler:** Yapısal çerçeveyi ayarlarken | Yapısal çerçeveyi işlerken | Yapısal çerçeveyi dönüştürünce | Yapısal çerçeveyi sürdürürken
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l48_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Aylık geliri dağıtırken" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** In distributing the monthly revenue
+* **Seçenekler:** In integrating the monthly revenue | In distributing the revenue monthly | The monthly revenue distributing in | In distributing the monthly revenue
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l48_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On encountering technical errors
+* **Cümle:** On encountering technical errors
+* **Kelimeler:** Teknik | hatalarla | program | Mobil | karşılaşınca | Dinamik
+* **Doğru Sıralama:** Teknik | hatalarla | karşılaşınca
+
+---
+
+#### Soru ID: u19l48_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On tracking the match schedules
+* **Cümle:** On tracking the match schedules
+* **Kelimeler:** Maç | programlarını | takip | edince | ilgisiz | çerçeveyi | istikrar
+* **Doğru Sıralama:** Maç | programlarını | takip | edince
+
+---
+
+#### Soru ID: u19l48_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On regulating the battery temperature
+* **Cümle:** On regulating the battery temperature
+* **Kelimeler:** Akademik | düzenleyince | çerçeveyi | sıcaklığını | Batarya | dönüştürünce
+* **Doğru Sıralama:** Batarya | sıcaklığını | düzenleyince
+
+---
+
+#### Soru ID: u19l48_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Akademik müfredatı değerlendirirken
+* **Cümle:** In evaluating the academic curriculum
+* **Kelimeler:** the | curriculum | secretary | academic | In | legislative | evaluating | scanned
+* **Doğru Sıralama:** In | evaluating | the | academic | curriculum
+
+---
+
+#### Soru ID: u19l48_ex2_tx_0 (translation-text)
+* **Yönerge:** "On converting the separate pages" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** On converting the separate pages
+* **Doğru Cevap:** Ayrı sayfaları dönüştürünce
+
+---
+
+#### Soru ID: u19l48_ex2_tx_1 (translation-text)
+* **Yönerge:** "On identifying the target goals" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** On identifying the target goals
+* **Doğru Cevap:** Hedef amaçları belirleyince
+
+---
+
+### Alıştırma: Alıştırma 3: Yapı Çalışması (ID: u19l48ex3)
+
+#### Soru ID: u19l48_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - analiz etme <--> analyzing
+  - kullanma <--> utilizing
+  - değiştirme <--> modifying
+  - yapılandırma <--> structuring
+
+---
+
+#### Soru ID: u19l48_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - entegre etme <--> integrating
+  - belirleyici <--> defining
+  - yayınlama <--> publishing
+  - izleme <--> monitoring
+
+---
+
+#### Soru ID: u19l48_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "Without generating the JSON structure, the database cannot track schedules." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Without generating the JSON structure, the database cannot track schedules.
+* **Seçenekler:** JSON yapısını takip edince veritabanı programları takip edemez. | JSON yapısını entegre ederek veritabanı programları takip edemez. | JSON yapısını değiştirerek veritabanı programları takip edemez. | JSON yapısını oluşturmadan veritabanı programları takip edemez.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l48_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "İstatistiksel analizi değiştirmeden uzman orijinal tezi kanıtladı." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Without altering the statistical analysis, the expert proved the original thesis.
+* **Seçenekler:** Without tracking the statistical analysis, the expert proved the original thesis. | Without altering the statistical analysis, the expert proved the original thesis. | The statistical analysis, the expert proved the original thesis altering without. | Without altering the statistical the analysis, expert proved the original thesis.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u19l48_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By analyzing the raw data, the analyst identified the primary error.
+* **Cümle:** By analyzing the raw data, the analyst identified the primary error.
+* **Kelimeler:** belirledi | analist | güncellenmiş | ederek | analiz | Resmi | istikrarı | temel | verileri | hatayı | Ham
+* **Doğru Sıralama:** Ham | verileri | analiz | ederek | analist | temel | hatayı | belirledi
+
+---
+
+#### Soru ID: u19l48_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By utilizing the mobile interface, the application improves user interaction.
+* **Cümle:** By utilizing the mobile interface, the application improves user interaction.
+* **Kelimeler:** Mobil | arayüzü | yönetim | etkileşimini | iyileştirir | Ham | tutamaz | uygulama | kullanıcı | kullanarak
+* **Doğru Sıralama:** Mobil | arayüzü | kullanarak | uygulama | kullanıcı | etkileşimini | iyileştirir
+
+---
+
+#### Soru ID: u19l48_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** By modifying the legislative framework, the progressive government established stability.
+* **Cümle:** By modifying the legislative framework, the progressive government established stability.
+* **Kelimeler:** Yasal | etkileşimini | programları | çerçeveyi | değiştirerek | ilerici | hükümet | istikrar | takip | sağladı
+* **Doğru Sıralama:** Yasal | çerçeveyi | değiştirerek | ilerici | hükümet | istikrar | sağladı
+
+---
+
+#### Soru ID: u19l48_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Belirli kriterleri tanımlamadan komite ilgisiz verileri hariç tutamaz.
+* **Cümle:** Without defining the specific criteria, the committee cannot exclude irrelevant data.
+* **Kelimeler:** comprehensive | Without | the | remains | the | cannot | committee | irrelevant | criteria | specific | exclude | defining | data | application
+* **Doğru Sıralama:** Without | defining | the | specific | criteria | the | committee | cannot | exclude | irrelevant | data
+
+---
+
+#### Soru ID: u19l48_ex3_tx_0 (translation-text)
+* **Yönerge:** "By structuring the financial resources, the department funded the project." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** By structuring the financial resources, the department funded the project.
+* **Doğru Cevap:** Finansal kaynakları yapılandırarak departman projeyi finanse etti.
+
+---
+
+#### Soru ID: u19l48_ex3_tx_1 (translation-text)
+* **Yönerge:** "By integrating the individual applications, the team minimized software errors." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** By integrating the individual applications, the team minimized software errors.
+* **Doğru Cevap:** Bireysel uygulamaları entegre ederek ekip yazılım hatalarını en aza indirdi.
+
+---
+
+### Alıştırma: Alıştırma 4: Yapı Çalışması (ID: u19l48ex4)
+
+#### Soru ID: u19l48_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - karşılaşma <--> encountering
+  - takip etme <--> tracking
+  - düzenleme <--> regulating
+  - dönüştürme <--> converting
+
+---
+
+#### Soru ID: u19l48_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirleme <--> identifying
+  - değerlendirme <--> evaluating
+  - işleme <--> processing
+  - ayarlama <--> adjusting
+
+---
+
+#### Soru ID: u19l48_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "In maintaining the structural framework, the administration spent substantial annual resources." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** In maintaining the structural framework, the administration spent substantial annual resources.
+* **Seçenekler:** Yapısal çerçeveyi sürdürürken yönetim önemli miktarda yıllık kaynak harcadı. | Yapısal çerçeveyi dağıtırken yönetim önemli miktarda yıllık kaynak harcadı. | Yapısal çerçeveyi analiz ederek yönetim önemli miktarda yıllık kaynak harcadı. | Yapısal çerçeveyi tanımlamadan yönetim önemli miktarda yıllık kaynak harcadı.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l48_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Aylık geliri dağıtırken merkez bankası dalgalanan ekonomik yüzdeleri takip etti." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** In distributing the monthly revenue, the central bank tracked fluctuating economic percentages.
+* **Seçenekler:** In distributing the monthly revenue, the central bank tracked fluctuating economic percentages. | The monthly revenue, the central bank tracked fluctuating economic percentages distributing in. | In distributing the monthly the revenue, central bank tracked fluctuating economic percentages. | In encountering the monthly revenue, the central bank tracked fluctuating economic percentages.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l48_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On encountering technical errors, the program automatically stops the processing.
+* **Cümle:** On encountering technical errors, the program automatically stops the processing.
+* **Kelimeler:** karşılaşınca | işlemi | tüm | en | görünürlükten | durdurur | Teknik | olarak | otomatik | program | hatalarla
+* **Doğru Sıralama:** Teknik | hatalarla | karşılaşınca | program | işlemi | otomatik | olarak | durdurur
+
+---
+
+#### Soru ID: u19l48_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On tracking the match schedules, users notice the dynamic calendar integration.
+* **Cümle:** On tracking the match schedules, users notice the dynamic calendar integration.
+* **Kelimeler:** Maç | programlarını | kullanıcılar | takvim | dinamik | takip | tüm | entegrasyonunu | edince | tezi | fark | kurumsal | eder
+* **Doğru Sıralama:** Maç | programlarını | takip | edince | kullanıcılar | dinamik | takvim | entegrasyonunu | fark | eder
+
+---
+
+#### Soru ID: u19l48_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** On regulating the battery temperature, the system protects the solar inverters.
+* **Cümle:** On regulating the battery temperature, the system protects the solar inverters.
+* **Kelimeler:** kurul | sıcaklığını | sistem | Batarya | güneş | program | profesyonel | düzenleyince | invertörlerini | enerjisi | korur
+* **Doğru Sıralama:** Batarya | sıcaklığını | düzenleyince | sistem | güneş | enerjisi | invertörlerini | korur
+
+---
+
+#### Soru ID: u19l48_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Akademik müfredatı değerlendirirken kurul tüm programı gözden geçirdi.
+* **Cümle:** In evaluating the academic curriculum, the board reviewed the entire program.
+* **Kelimeler:** evaluating | the | curriculum | the | the | department | program | academic | board | reviewed | system | updated | entire | In
+* **Doğru Sıralama:** In | evaluating | the | academic | curriculum | the | board | reviewed | the | entire | program
+
+---
+
+#### Soru ID: u19l48_ex4_tx_0 (translation-text)
+* **Yönerge:** "On converting the separate pages, the secretary created a comprehensive PDF." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** On converting the separate pages, the secretary created a comprehensive PDF.
+* **Doğru Cevap:** Ayrı sayfaları dönüştürünce sekreter kapsamlı bir PDF oluşturdu.
+
+---
+
+#### Soru ID: u19l48_ex4_tx_1 (translation-text)
+* **Yönerge:** "On identifying the target goals, the professional prepared the strategic defense." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** On identifying the target goals, the professional prepared the strategic defense.
+* **Doğru Cevap:** Hedef amaçları belirleyince profesyonel stratejik savunmayı hazırladı.
+
+---
+
+## Ders 2
+
+### Alıştırma: Alıştırma 1: Yapı Çalışması (ID: u19l49ex1)
+
+#### Soru ID: u19l49_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - analiz etme <--> analyzing
+  - değiştirme <--> modifying
+  - değerlendirme <--> evaluating
+  - yapılandırma <--> structuring
+
+---
+
+#### Soru ID: u19l49_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - entegre etme <--> integrating
+  - kısıtlama <--> restricting
+  - kuran <--> establishing
+  - çıkarma <--> extracting
+
+---
+
+#### Soru ID: u19l49_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "Before troubleshooting the Flutter interface" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Before troubleshooting the Flutter interface
+* **Seçenekler:** Flutter arayüzündeki sorunları gidermeden önce | Flutter arayüzündeki yapılandırırken | Flutter arayüzündeki işlediğinden beri | Flutter arayüzündeki kısıtlarken
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "Yasal sözleşmeyi doğrulamadan önce" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Before validating the legal contract
+* **Seçenekler:** Before validating the legal contract | The legal contract validating before | Before altering the legal contract | Before validating the contract legal
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When analyzing the raw data
+* **Cümle:** When analyzing the raw data
+* **Kelimeler:** verileri | ederken | Belirli | analiz | değişikliğini | Ham | nihai
+* **Doğru Sıralama:** Ham | verileri | analiz | ederken
+
+---
+
+#### Soru ID: u19l49_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When modifying the legislative framework
+* **Cümle:** When modifying the legislative framework
+* **Kelimeler:** istikrarsızlığa | Yasal | çerçeveyi | hariç | pozisyon | değiştirirken
+* **Doğru Sıralama:** Yasal | çerçeveyi | değiştirirken
+
+---
+
+#### Soru ID: u19l49_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When evaluating the academic curriculum
+* **Cümle:** When evaluating the academic curriculum
+* **Kelimeler:** yapılandırırken | analiz | değerlendirirken | sorunları | müfredatı | Akademik
+* **Doğru Sıralama:** Akademik | müfredatı | değerlendirirken
+
+---
+
+#### Soru ID: u19l49_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Kaynak dağıtımını kısıtlarken
+* **Cümle:** While restricting the resource distribution
+* **Kelimeler:** restricting | caused | resource | analyst | the | position | While | distribution
+* **Doğru Sıralama:** While | restricting | the | resource | distribution
+
+---
+
+#### Soru ID: u19l49_ex1_tx_0 (translation-text)
+* **Yönerge:** "When structuring the financial resources" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** When structuring the financial resources
+* **Doğru Cevap:** Finansal kaynakları yapılandırırken
+
+---
+
+#### Soru ID: u19l49_ex1_tx_1 (translation-text)
+* **Yönerge:** "While integrating the individual applications" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** While integrating the individual applications
+* **Doğru Cevap:** Bireysel uygulamaları entegre ederken
+
+---
+
+### Alıştırma: Alıştırma 2: Yapı Çalışması (ID: u19l49ex2)
+
+#### Soru ID: u19l49_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirleyici <--> defining
+  - yayınlama <--> publishing
+  - değerlendirme <--> assessing
+  - izleme <--> monitoring
+
+---
+
+#### Soru ID: u19l49_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - oluşturma <--> generating
+  - değiştirme <--> altering
+  - işleme <--> processing
+  - takip etme <--> tracking
+
+---
+
+#### Soru ID: u19l49_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "Since regulating the battery temperature" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Since regulating the battery temperature
+* **Seçenekler:** Batarya sıcaklığını düzenlediğinden beri | Batarya sıcaklığını entegre ederken | Batarya sıcaklığını değerlendirirken | Batarya sıcaklığını değiştirirken
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Profesyonel özgeçmişi yeniden tasarladığından beri" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Since redesigning the professional CV
+* **Seçenekler:** Since integrating the professional CV | Since redesigning the CV professional | The professional CV redesigning since | Since redesigning the professional CV
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l49_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Before defining the specific criteria
+* **Cümle:** Before defining the specific criteria
+* **Kelimeler:** tanımlamadan | kriterleri | yasal | elde | İstatistiksel | Belirli | önce
+* **Doğru Sıralama:** Belirli | kriterleri | tanımlamadan | önce
+
+---
+
+#### Soru ID: u19l49_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Before publishing the official summary
+* **Cümle:** Before publishing the official summary
+* **Kelimeler:** sıcaklığını | İstatistiksel | Resmi | özeti | önce | hariç | yayınlamadan
+* **Doğru Sıralama:** Resmi | özeti | yayınlamadan | önce
+
+---
+
+#### Soru ID: u19l49_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** After assessing the constitutional amendment
+* **Cümle:** After assessing the constitutional amendment
+* **Kelimeler:** sonra | değerlendirdikten | kriterleri | değişikliğini | beri | yayınlamadan | Anayasa
+* **Doğru Sıralama:** Anayasa | değişikliğini | değerlendirdikten | sonra
+
+---
+
+#### Soru ID: u19l49_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** İstatistiksel analizi değiştirdikten sonra
+* **Cümle:** After altering the statistical analysis
+* **Kelimeler:** analysis | the | caused | altering | After | integrating | statistical | monitoring
+* **Doğru Sıralama:** After | altering | the | statistical | analysis
+
+---
+
+#### Soru ID: u19l49_ex2_tx_0 (translation-text)
+* **Yönerge:** "After monitoring the local conditions" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** After monitoring the local conditions
+* **Doğru Cevap:** Yerel koşulları izledikten sonra
+
+---
+
+#### Soru ID: u19l49_ex2_tx_1 (translation-text)
+* **Yönerge:** "After generating the JSON structure" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** After generating the JSON structure
+* **Doğru Cevap:** JSON yapısını oluşturduktan sonra
+
+---
+
+### Alıştırma: Alıştırma 3: Yapı Çalışması (ID: u19l49ex3)
+
+#### Soru ID: u19l49_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - analiz etme <--> analyzing
+  - değiştirme <--> modifying
+  - değerlendirme <--> evaluating
+  - yapılandırma <--> structuring
+
+---
+
+#### Soru ID: u19l49_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - entegre etme <--> integrating
+  - kısıtlama <--> restricting
+  - kuran <--> establishing
+  - çıkarma <--> extracting
+
+---
+
+#### Soru ID: u19l49_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "Before troubleshooting the Flutter interface, you must update the database." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Before troubleshooting the Flutter interface, you must update the database.
+* **Seçenekler:** Flutter arayüzündeki sorunları gidermeden önce veritabanını güncellemelisiniz. | Flutter arayüzündeki doğrulamadan önce veritabanını güncellemelisiniz. | Flutter arayüzündeki değiştirirken veritabanını güncellemelisiniz. | Flutter arayüzündeki kurarken veritabanını güncellemelisiniz.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "Yasal sözleşmeyi doğrulamadan önce taraflar her maddeyi gözden geçirdi." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Before validating the legal contract, the parties reviewed every clause.
+* **Seçenekler:** Before validating the legal contract, the parties reviewed every clause. | The legal contract, the parties reviewed every clause validating before. | Before validating the legal the contract, parties reviewed every clause. | Before redesigning the legal contract, the parties reviewed every clause.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When analyzing the raw data, the expert identified an error.
+* **Cümle:** When analyzing the raw data, the expert identified an error.
+* **Kelimeler:** Ham | verileri | ederken | uzman | hata | belirledi | istikrarsızlığa | analiz | elde | uzun | bir
+* **Doğru Sıralama:** Ham | verileri | analiz | ederken | uzman | bir | hata | belirledi
+
+---
+
+#### Soru ID: u19l49_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When modifying the legislative framework, the government altered the code.
+* **Cümle:** When modifying the legislative framework, the government altered the code.
+* **Kelimeler:** Yasal | çerçeveyi | değiştirirken | hükümet | değerlendirirken | kanunu | İstikrarlı | değiştirdi | özetledi
+* **Doğru Sıralama:** Yasal | çerçeveyi | değiştirirken | hükümet | kanunu | değiştirdi
+
+---
+
+#### Soru ID: u19l49_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When evaluating the academic curriculum, the university requires empirical evidence.
+* **Cümle:** When evaluating the academic curriculum, the university requires empirical evidence.
+* **Kelimeler:** gerektirir | teknik | Akademik | müfredatı | belirledi | değerlendirirken | ampirik | üniversite | kanıt | Flutter
+* **Doğru Sıralama:** Akademik | müfredatı | değerlendirirken | üniversite | ampirik | kanıt | gerektirir
+
+---
+
+#### Soru ID: u19l49_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Kaynak dağıtımını kısıtlarken yönetim geçici istikrarsızlığa neden oldu.
+* **Cümle:** While restricting the resource distribution, the administration caused temporary instability.
+* **Kelimeler:** instability | caused | resource | restricting | the | amendment | While | temporary | error | distribution | technician | administration | the
+* **Doğru Sıralama:** While | restricting | the | resource | distribution | the | administration | caused | temporary | instability
+
+---
+
+#### Soru ID: u19l49_ex3_tx_0 (translation-text)
+* **Yönerge:** "When structuring the financial resources, the committee defined strict parameters." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** When structuring the financial resources, the committee defined strict parameters.
+* **Doğru Cevap:** Finansal kaynakları yapılandırarken komite katı parametreler belirledi.
+
+---
+
+#### Soru ID: u19l49_ex3_tx_1 (translation-text)
+* **Yönerge:** "While integrating the individual applications, the engineer encountered technical errors." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** While integrating the individual applications, the engineer encountered technical errors.
+* **Doğru Cevap:** Bireysel uygulamaları entegre ederken mühendis teknik hatalarla karşılaştı.
+
+---
+
+### Alıştırma: Alıştırma 4: Yapı Çalışması (ID: u19l49ex4)
+
+#### Soru ID: u19l49_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirleyici <--> defining
+  - yayınlama <--> publishing
+  - değerlendirme <--> assessing
+  - izleme <--> monitoring
+
+---
+
+#### Soru ID: u19l49_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - oluşturma <--> generating
+  - değiştirme <--> altering
+  - işleme <--> processing
+  - takip etme <--> tracking
+
+---
+
+#### Soru ID: u19l49_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "Since regulating the battery temperature, the facility has sustained perfect stability." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Since regulating the battery temperature, the facility has sustained perfect stability.
+* **Seçenekler:** Batarya sıcaklığını düzenlediğinden beri tesis mükemmel istikrarı sürdürdü. | Batarya sıcaklığını değiştirdikten sonra tesis mükemmel istikrarı sürdürdü. | Batarya sıcaklığını entegre ederken tesis mükemmel istikrarı sürdürdü. | Batarya sıcaklığını yapılandırırken tesis mükemmel istikrarı sürdürdü.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l49_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Profesyonel özgeçmişi yeniden tasarladığından beri aday kurumsal bir pozisyon elde etti." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Since redesigning the professional CV, the candidate has secured a corporate position.
+* **Seçenekler:** Since integrating the professional CV, the candidate has secured a corporate position. | Since redesigning the professional CV, the candidate has secured a corporate position. | Since redesigning the professional the CV, candidate has secured a corporate position. | The professional CV, the candidate has secured a corporate position redesigning since.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u19l49_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Before defining the specific criteria, the board excluded fluctuating data.
+* **Cümle:** Before defining the specific criteria, the board excluded fluctuating data.
+* **Kelimeler:** Belirli | önce | tanımlamadan | kriterleri | hariç | kurul | sözleşmeyi | verileri | işlediğinden | geçirdi | dalgalanan | tuttu
+* **Doğru Sıralama:** Belirli | kriterleri | tanımlamadan | önce | kurul | dalgalanan | verileri | hariç | tuttu
+
+---
+
+#### Soru ID: u19l49_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Before publishing the official summary, the committee summarized the defense.
+* **Cümle:** Before publishing the official summary, the committee summarized the defense.
+* **Kelimeler:** Resmi | özeti | taraflar | savunmayı | tanımlamadan | özetledi | yayınlamadan | önce | komite | işlediğinden
+* **Doğru Sıralama:** Resmi | özeti | yayınlamadan | önce | komite | savunmayı | özetledi
+
+---
+
+#### Soru ID: u19l49_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** After assessing the constitutional amendment, the legal authorities modified the legislation.
+* **Cümle:** After assessing the constitutional amendment, the legal authorities modified the legislation.
+* **Kelimeler:** değerlendirdikten | yasal | tahmin | otoriteler | değişikliğini | değiştirdi | Anayasa | mevzuatı | dalgalanan | verileri | sonra
+* **Doğru Sıralama:** Anayasa | değişikliğini | değerlendirdikten | sonra | yasal | otoriteler | mevzuatı | değiştirdi
+
+---
+
+#### Soru ID: u19l49_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** İstatistiksel analizi değiştirdikten sonra araştırmacı nihai metni sundu.
+* **Cümle:** After altering the statistical analysis, the researcher submitted the final text.
+* **Kelimeler:** the | After | submitted | modified | the | researcher | text | final | summary | board | the | statistical | analysis | altering
+* **Doğru Sıralama:** After | altering | the | statistical | analysis | the | researcher | submitted | the | final | text
+
+---
+
+#### Soru ID: u19l49_ex4_tx_0 (translation-text)
+* **Yönerge:** "After monitoring the local conditions, the team predicted the long-term percentages." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** After monitoring the local conditions, the team predicted the long-term percentages.
+* **Doğru Cevap:** Yerel koşulları izledikten sonra ekip uzun vadeli yüzdeleri tahmin etti.
+
+---
+
+#### Soru ID: u19l49_ex4_tx_1 (translation-text)
+* **Yönerge:** "After generating the JSON structure, the mobile application displayed accurate schedules." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** After generating the JSON structure, the mobile application displayed accurate schedules.
+* **Doğru Cevap:** JSON yapısını oluşturduktan sonra mobil uygulama doğru programları gösterdi.
+
+---
+
+## Ders 3
+
+### Alıştırma: Alıştırma 1: Yapı Çalışması (ID: u19l50ex1)
+
+#### Soru ID: u19l50_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - elde etti <--> obtained
+  - işlenmiş <--> processed
+  - değiştirilmiş <--> modified
+  - hariç tutmuş <--> excluded
+
+---
+
+#### Soru ID: u19l50_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değerlendirilmiş <--> evaluated
+  - doğrulanan <--> validated
+  - kurulmuş <--> established
+  - tanımlanmış <--> defined
+
+---
+
+#### Soru ID: u19l50_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "Until structured within the JSON format" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Until structured within the JSON format
+* **Seçenekler:** JSON formatında elde edildiğinde | JSON formatında hariç tutulursa | JSON formatında değiştirilirse | JSON formatında yapılandırılana kadar
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l50_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "Flutter uygulamasına entegre edilene kadar" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Until integrated into the Flutter application
+* **Seçenekler:** Until integrated into the application Flutter | Until prepared into the Flutter application | Into the Flutter application integrated until | Until integrated into the Flutter application
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l50_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When obtained from the comprehensive study
+* **Cümle:** When obtained from the comprehensive study
+* **Kelimeler:** elde | Kapsamlı | doğrulanmadıkça | görünür | edildiğinde | süreç | çalışmadan
+* **Doğru Sıralama:** Kapsamlı | çalışmadan | elde | edildiğinde
+
+---
+
+#### Soru ID: u19l50_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When processed by the updated software
+* **Cümle:** When processed by the updated software
+* **Kelimeler:** işlendiğinde | Güncellenmiş | yazılım | değiştirir | çalışır | ciddi | tarafından
+* **Doğru Sıralama:** Güncellenmiş | yazılım | tarafından | işlendiğinde
+
+---
+
+#### Soru ID: u19l50_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** If modified by the central administration
+* **Cümle:** If modified by the central administration
+* **Kelimeler:** kadar | tarafından | yönetim | değiştirilirse | doğrulanmadıkça | Merkezi | yapılandırılana
+* **Doğru Sıralama:** Merkezi | yönetim | tarafından | değiştirilirse
+
+---
+
+#### Soru ID: u19l50_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Düzenleyici süreç yoluyla doğrulanmadıkça
+* **Cümle:** Unless validated through the regulatory process
+* **Kelimeler:** When | validated | Unless | a | process | through | obtained | the | regulatory
+* **Doğru Sıralama:** Unless | validated | through | the | regulatory | process
+
+---
+
+#### Soru ID: u19l50_ex1_tx_0 (translation-text)
+* **Yönerge:** "If excluded from the final statistical analysis" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** If excluded from the final statistical analysis
+* **Doğru Cevap:** Nihai istatistiksel analizden hariç tutulursa
+
+---
+
+#### Soru ID: u19l50_ex1_tx_1 (translation-text)
+* **Yönerge:** "Unless evaluated by the academic committee" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Unless evaluated by the academic committee
+* **Doğru Cevap:** Akademik komite tarafından değerlendirilmedikçe
+
+---
+
+### Alıştırma: Alıştırma 2: Yapı Çalışması (ID: u19l50ex2)
+
+#### Soru ID: u19l50_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirlenmiş <--> identified
+  - doğruladı <--> confirmed
+  - hazırlanmış <--> prepared
+  - korunmuş <--> preserved
+
+---
+
+#### Soru ID: u19l50_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ihraç edilmiş <--> exported
+  - ayarlanmış <--> adjusted
+  - çıkarılmış <--> extracted
+  - sürdürülmüş <--> maintained
+
+---
+
+#### Soru ID: u19l50_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "Although derived from empirical evidence" cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Although derived from empirical evidence
+* **Seçenekler:** Ampirik kanıtlardan onaylandığı gibi | Ampirik kanıtlardan entegre edilene kadar | Ampirik kanıtlardan ihraç edildiği yerde | Ampirik kanıtlardan türetilmesine rağmen
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l50_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Kurumsal bir formata yeniden tasarlanana kadar" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Until redesigned into a corporate format
+* **Seçenekler:** Until redesigned into a corporate format | Into a corporate format redesigned until | Until redesigned into a format corporate | Until maintained into a corporate format
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l50_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As identified in the chemical compound
+* **Cümle:** As identified in the chemical compound
+* **Kelimeler:** Kimyasal | tanımlandığı | ilgi | bileşikte | zehirlidir | gibi | değişkenler
+* **Doğru Sıralama:** Kimyasal | bileşikte | tanımlandığı | gibi
+
+---
+
+#### Soru ID: u19l50_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As confirmed by the expert analyst
+* **Cümle:** As confirmed by the expert analyst
+* **Kelimeler:** hariç | onaylandığı | analist | gibi | bileşikte | belgede | Uzman | tarafından
+* **Doğru Sıralama:** Uzman | analist | tarafından | onaylandığı | gibi
+
+---
+
+#### Soru ID: u19l50_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As prepared by the professional team
+* **Cümle:** As prepared by the professional team
+* **Kelimeler:** tarafından | Profesyonel | yönetim | hazırlandığı | ekip | ayarlandığında | gibi | rağmen
+* **Doğru Sıralama:** Profesyonel | ekip | tarafından | hazırlandığı | gibi
+
+---
+
+#### Soru ID: u19l50_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Teknik ekip tarafından ayarlandığında
+* **Cümle:** When adjusted by the technical team
+* **Kelimeler:** When | adjusted | by | system | the | technical | financial | lacks | team
+* **Doğru Sıralama:** When | adjusted | by | the | technical | team
+
+---
+
+#### Soru ID: u19l50_ex2_tx_0 (translation-text)
+* **Yönerge:** "Where preserved by the local administration" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Where preserved by the local administration
+* **Doğru Cevap:** Yerel yönetim tarafından korunduğu yerde
+
+---
+
+#### Soru ID: u19l50_ex2_tx_1 (translation-text)
+* **Yönerge:** "Where exported to global markets" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Where exported to global markets
+* **Doğru Cevap:** Küresel pazarlara ihraç edildiği yerde
+
+---
+
+### Alıştırma: Alıştırma 3: Yapı Çalışması (ID: u19l50ex3)
+
+#### Soru ID: u19l50_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - elde etti <--> obtained
+  - işlenmiş <--> processed
+  - değiştirilmiş <--> modified
+  - hariç tutmuş <--> excluded
+
+---
+
+#### Soru ID: u19l50_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değerlendirilmiş <--> evaluated
+  - doğrulanan <--> validated
+  - kurulmuş <--> established
+  - tanımlanmış <--> defined
+
+---
+
+#### Soru ID: u19l50_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "Until structured within the JSON format, the data generates severe errors." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Until structured within the JSON format, the data generates severe errors.
+* **Seçenekler:** JSON formatında tanımlandığı gibi veriler ciddi hatalar üretir. | JSON formatında korunduğu yerde veriler ciddi hatalar üretir. | JSON formatında yapılandırılana kadar veriler ciddi hatalar üretir. | JSON formatında sürdürülmedikçe veriler ciddi hatalar üretir.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+#### Soru ID: u19l50_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "Flutter uygulamasına entegre edilene kadar mobil arayüz yavaş çalışır." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Until integrated into the Flutter application, the mobile interface functions slowly.
+* **Seçenekler:** Until integrated into the Flutter application, the mobile interface functions slowly. | Into the Flutter application, the mobile interface functions slowly integrated until. | Until integrated into the application, Flutter the mobile interface functions slowly. | Until redesigned into the Flutter application, the mobile interface functions slowly.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l50_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When obtained from the comprehensive study, the data proved valid.
+* **Cümle:** When obtained from the comprehensive study, the data proved valid.
+* **Kelimeler:** çalışmadan | Kapsamlı | elde | geçerli | yerde | kalmaya | kaynaklardan | edildiğinde | olduğunu | kanıtladı | veriler
+* **Doğru Sıralama:** Kapsamlı | çalışmadan | elde | edildiğinde | veriler | geçerli | olduğunu | kanıtladı
+
+---
+
+#### Soru ID: u19l50_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When processed by the updated software, the text appears clearly.
+* **Cümle:** When processed by the updated software, the text appears clearly.
+* **Kelimeler:** binalar | metin | yazılım | Güncellenmiş | net | görünür | işlendiğinde | elde | tarafından | şekilde | yoluyla | bir
+* **Doğru Sıralama:** Güncellenmiş | yazılım | tarafından | işlendiğinde | metin | net | bir | şekilde | görünür
+
+---
+
+#### Soru ID: u19l50_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** If modified by the central administration, the framework changes immediately.
+* **Cümle:** If modified by the central administration, the framework changes immediately.
+* **Kelimeler:** kanıtladı | yönetim | Merkezi | üretir | hemen | değiştirilirse | tarafından | değişir | görünür | çerçeve
+* **Doğru Sıralama:** Merkezi | yönetim | tarafından | değiştirilirse | çerçeve | hemen | değişir
+
+---
+
+#### Soru ID: u19l50_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Düzenleyici süreç yoluyla doğrulanmadıkça yasal sözleşme geçersizdir.
+* **Cümle:** Unless validated through the regulatory process, the legal contract is inactive.
+* **Kelimeler:** derived | contract | is | process | regulatory | the | proved | Flutter | inactive | through | validated | Unless | the | legal
+* **Doğru Sıralama:** Unless | validated | through | the | regulatory | process | the | legal | contract | is | inactive
+
+---
+
+#### Soru ID: u19l50_ex3_tx_0 (translation-text)
+* **Yönerge:** "If excluded from the final statistical analysis, the variables alter results." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** If excluded from the final statistical analysis, the variables alter results.
+* **Doğru Cevap:** Nihai istatistiksel analizden hariç tutulursa değişkenler sonuçları değiştirir.
+
+---
+
+#### Soru ID: u19l50_ex3_tx_1 (translation-text)
+* **Yönerge:** "Unless evaluated by the academic committee, the curriculum cannot change." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Unless evaluated by the academic committee, the curriculum cannot change.
+* **Doğru Cevap:** Akademik komite tarafından değerlendirilmedikçe müfredat değişemez.
+
+---
+
+### Alıştırma: Alıştırma 4: Yapı Çalışması (ID: u19l50ex4)
+
+#### Soru ID: u19l50_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - belirlenmiş <--> identified
+  - doğruladı <--> confirmed
+  - hazırlanmış <--> prepared
+  - korunmuş <--> preserved
+
+---
+
+#### Soru ID: u19l50_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ihraç edilmiş <--> exported
+  - ayarlanmış <--> adjusted
+  - çıkarılmış <--> extracted
+  - sürdürülmüş <--> maintained
+
+---
+
+#### Soru ID: u19l50_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "Although derived from empirical evidence, the theory challenges traditional methodology assumptions." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Although derived from empirical evidence, the theory challenges traditional methodology assumptions.
+* **Seçenekler:** Ampirik kanıtlardan türetilmesine rağmen teori geleneksel metodoloji varsayımlarına meydan okuyor. | Ampirik kanıtlardan hazırlandığı gibi teori geleneksel metodoloji varsayımlarına meydan okuyor. | Ampirik kanıtlardan işlendiğinde teori geleneksel metodoloji varsayımlarına meydan okuyor. | Ampirik kanıtlardan değiştirilirse teori geleneksel metodoloji varsayımlarına meydan okuyor.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u19l50_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Kurumsal bir formata yeniden tasarlanana kadar profesyonel özgeçmiş hedef etkililiğinden yoksundur." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Until redesigned into a corporate format, the professional CV lacks target efficiency.
+* **Seçenekler:** Until obtained into a corporate format, the professional CV lacks target efficiency. | Until redesigned into a format, corporate the professional CV lacks target efficiency. | Into a corporate format, the professional CV lacks target efficiency redesigned until. | Until redesigned into a corporate format, the professional CV lacks target efficiency.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u19l50_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As identified in the chemical compound, the primary components are toxic.
+* **Cümle:** As identified in the chemical compound, the primary components are toxic.
+* **Kelimeler:** tarihi | gibi | birincil | zehirlidir | elde | net | tanımlandığı | bileşikte | Kimyasal | bileşenler
+* **Doğru Sıralama:** Kimyasal | bileşikte | tanımlandığı | gibi | birincil | bileşenler | zehirlidir
+
+---
+
+#### Soru ID: u19l50_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As confirmed by the expert analyst, the financial revenue decreased significantly.
+* **Cümle:** As confirmed by the expert analyst, the financial revenue decreased significantly.
+* **Kelimeler:** onaylandığı | Dijital | ölçüde | Uzman | azaldı | gelir | gibi | analist | finansal | tarafından | başarılı | çerçeve | önemli
+* **Doğru Sıralama:** Uzman | analist | tarafından | onaylandığı | gibi | finansal | gelir | önemli | ölçüde | azaldı
+
+---
+
+#### Soru ID: u19l50_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** As prepared by the professional team, the administrative defense was successful.
+* **Cümle:** As prepared by the professional team, the administrative defense was successful.
+* **Kelimeler:** pazarlara | Ampirik | başarılı | hazırlandığı | Profesyonel | savunma | idari | Yerel | ekip | gibi | oldu | tarafından
+* **Doğru Sıralama:** Profesyonel | ekip | tarafından | hazırlandığı | gibi | idari | savunma | başarılı | oldu
+
+---
+
+#### Soru ID: u19l50_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Teknik ekip tarafından ayarlandığında parametreler sistemi dengeler.
+* **Cümle:** When adjusted by the technical team, the parameters stabilize the system.
+* **Kelimeler:** When | adjusted | the | by | cannot | the | If | technical | team | the | parameters | stabilize | system | traditional
+* **Doğru Sıralama:** When | adjusted | by | the | technical | team | the | parameters | stabilize | the | system
+
+---
+
+#### Soru ID: u19l50_ex4_tx_0 (translation-text)
+* **Yönerge:** "Where preserved by the local administration, historic buildings attract global attention." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Where preserved by the local administration, historic buildings attract global attention.
+* **Doğru Cevap:** Yerel yönetim tarafından korunduğu yerde tarihi binalar küresel ilgi görür.
+
+---
+
+#### Soru ID: u19l50_ex4_tx_1 (translation-text)
+* **Yönerge:** "Where exported to global markets, domestic production boosts the local economy." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Where exported to global markets, domestic production boosts the local economy.
+* **Doğru Cevap:** Küresel pazarlara ihraç edildiği yerde yerli üretim yerel ekonomiyi canlandırır.
+
+---
+
+
+
+# Silinen Sorular Arşivi (Bölüm 20: Soru Kelimesinden Sonra Gelen Mastar)
+
+Bu dosya, Bölüm 20 altındaki egzersizlerin basitleştirilmesi, alıştırma sayısının 3'e indirilmesi ve her alıştırmada 10 soru olacak şekilde yeniden düzenlenmesi sırasında çıkarılan soruları içermektedir.
+
+---
+
+## Lesson 1
+
+### Alıştırma 1: Yapı Çalışması
+
+#### Soru ID: u20l51_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yapmak <--> do
+  - gitmek <--> go
+  - değiştirmek <--> alter
+  - kaçınmak <--> avoid
+
+---
+
+#### Soru ID: u20l51_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değiştirmek <--> modify
+  - izin vermek <--> permit
+  - maruz kalmak <--> expose
+  - cezalandırmak <--> punish
+
+---
+
+#### Soru ID: u20l51_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "How to protect." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** How to protect.
+* **Seçenekler:** Nasıl sonlandırılıp sonlandırılmayacağı | Nasıl tetikleneceği | Nasıl söyleyeceğimize | Nasıl korunacağı
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l51_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "Ne zaman tetikleneceği" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** When to induce.
+* **Seçenekler:** When to validate. | When to read. | When to induce. |  induce when to.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+#### Soru ID: u20l51_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to do.
+* **Çeviri:** How to do.
+* **Kelimeler:** biriktirileceği, gösterecek, Hangisinin, yapılacağı, Nasıl
+* **Doğru Sıralama:** Nasıl, yapılacağı
+
+---
+
+#### Soru ID: u20l51_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Where to go.
+* **Çeviri:** Where to go.
+* **Kelimeler:** Nereye, söyleyeceğimize, gidileceği, Kimin, yüzeceğini
+* **Doğru Sıralama:** Nereye, gidileceği
+
+---
+
+#### Soru ID: u20l51_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to alter.
+* **Çeviri:** How to alter.
+* **Kelimeler:** değiştirileceği, yapılacağı, sakınılacağı, Nasıl, korunacağı
+* **Doğru Sıralama:** Nasıl, değiştirileceği
+
+---
+
+#### Soru ID: u20l51_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Who to permit.
+* **Çeviri:** Kime izin verileceği
+* **Kelimeler:** Who, to, inspect, asked, permit, Whom
+* **Doğru Sıralama:** Who, to, permit
+
+---
+
+#### Soru ID: u20l51_ex1_tx_0 (translation-text)
+* **Yönerge:** "How to avoid." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** How to avoid.
+* **Doğru Çeviri:** Nasıl sakınılacağı
+
+---
+
+#### Soru ID: u20l51_ex1_tx_1 (translation-text)
+* **Yönerge:** "How to modify." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** How to modify.
+* **Doğru Çeviri:** Nasıl değiştirileceği
+
+---
+
+### Alıştırma 2: Yapı Çalışması
+
+#### Soru ID: u20l51_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - işlemek <--> process
+  - denetlemek <--> inspect
+  - belirlemek <--> specify
+  - maksimize etmek <--> maximize
+
+---
+
+#### Soru ID: u20l51_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - doğrulamak <--> validate
+  - açıklığa kavuşturmak <--> clarify
+  - yürütmek <--> conduct
+  - askıya almak <--> suspend
+
+---
+
+#### Soru ID: u20l51_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "How to advocate." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** How to advocate.
+* **Seçenekler:** Nasıl doğrulanacağı | Nasıl yapılacağı | Nasıl askıya alınıp alınmayacağı | Nasıl savunulacağı
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l51_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Nasıl tahsis edileceği" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** How to allocate.
+* **Seçenekler:** How to go. |  allocate how to. | How to anticipate. | How to allocate.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l51_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to process.
+* **Çeviri:** How to process.
+* **Kelimeler:** Nasıl, işleneceği, verileceği, cezalandırılacağı, Nereye
+* **Doğru Sıralama:** Nasıl, işleneceği
+
+---
+
+#### Soru ID: u20l51_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** What to inspect.
+* **Çeviri:** What to inspect.
+* **Kelimeler:** işleneceği, inceleneceği, entegre, Neyin, Ne
+* **Doğru Sıralama:** Neyin, inceleneceği
+
+---
+
+#### Soru ID: u20l51_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** What to specify.
+* **Çeviri:** What to specify.
+* **Kelimeler:** işleneceği, inceleneceği, açıklığa, belirleneceği, Neyin
+* **Doğru Sıralama:** Neyin, belirleneceği
+
+---
+
+#### Soru ID: u20l51_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** What to clarify.
+* **Çeviri:** Neyin açıklığa kavuşturulacağı
+* **Kelimeler:** What, need, buy, learning, to, clarify
+* **Doğru Sıralama:** What, to, clarify
+
+---
+
+#### Soru ID: u20l51_ex2_tx_0 (translation-text)
+* **Yönerge:** "How to maximize." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** How to maximize.
+* **Doğru Çeviri:** Nasıl maksimize edileceği
+
+---
+
+#### Soru ID: u20l51_ex2_tx_1 (translation-text)
+* **Yönerge:** "How to validate." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** How to validate.
+* **Doğru Çeviri:** Nasıl doğrulanacağı
+
+---
+
+### Alıştırma 3: Yapı Çalışması
+
+#### Soru ID: u20l51_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - hesaplamak <--> calculate
+  - entegre etmek <--> integrate
+  - stabilize etmek <--> stabilize
+  - kullanmak <--> utilize
+
+---
+
+#### Soru ID: u20l51_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - uygulamak <--> apply
+  - manipüle etmek <--> manipulate
+  - tahsis etmek <--> allocate
+  - askıya almak <--> suspend
+
+---
+
+#### Soru ID: u20l51_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "Where to anticipate." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Where to anticipate.
+* **Seçenekler:** Nerede maksimize edileceği | Nerede öngörüleceği | Nerede askıya alınıp alınmayacağı | Nerede izin verileceği
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u20l51_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "Nerede biriktirileceği" cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Where to accumulate.
+* **Seçenekler:** Where to park. | Where to accumulate. |  accumulate where to. | Where to calculate.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u20l51_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to calculate.
+* **Çeviri:** How to calculate.
+* **Kelimeler:** unuttu, vermeliyiz, hesaplanacağı, Sonlandırılıp, Nasıl
+* **Doğru Sıralama:** Nasıl, hesaplanacağı
+
+---
+
+#### Soru ID: u20l51_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to integrate.
+* **Çeviri:** How to integrate.
+* **Kelimeler:** ne, stabilize, edileceği, entegre, Nasıl, korunacağı
+* **Doğru Sıralama:** Nasıl, entegre, edileceği
+
+---
+
+#### Soru ID: u20l51_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** How to stabilize.
+* **Çeviri:** How to stabilize.
+* **Kelimeler:** Nasıl, öngörüleceği, stabilize, manipüle, edileceği, kullanılacağı
+* **Doğru Sıralama:** Nasıl, stabilize, edileceği
+
+---
+
+#### Soru ID: u20l51_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** How to manipulate.
+* **Çeviri:** Nasıl manipüle edileceği
+* **Kelimeler:** manipulate, to, When, How, Where, validate
+* **Doğru Sıralama:** How, to, manipulate
+
+---
+
+#### Soru ID: u20l51_ex3_tx_0 (translation-text)
+* **Yönerge:** "Which to utilize." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Which to utilize.
+* **Doğru Çeviri:** Hangisinin kullanılacağı
+
+---
+
+#### Soru ID: u20l51_ex3_tx_1 (translation-text)
+* **Yönerge:** "Whom to apply to." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** Whom to apply to.
+* **Doğru Çeviri:** Kime başvurulacağı
+
+---
+
+### Alıştırma 4: Yapı Çalışması
+
+#### Soru ID: u20l51_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kısıtlamak <--> restrict
+  - sonlandırmak <--> terminate
+  - yüzmek <--> swim
+  - söylemek <--> say
+
+---
+
+#### Soru ID: u20l51_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - karşılamak <--> meet
+  - satın almak <--> buy
+  - park etmek <--> park
+  - aramak <--> call
+
+---
+
+#### Soru ID: u20l51_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "She will show us what to inspect." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** She will show us what to inspect.
+* **Seçenekler:** Bize neyi inceleyeceğimizi gösterecek. | Bize neyi yapılacağı gösterecek. | Bize neyi korunacağı gösterecek. | Bize neyi manipüle edileceği gösterecek.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l51_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Öğretmenine ne okuyacağını sordu." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** He asked his teacher what to read.
+* **Seçenekler:** He asked his teacher what to accumulate. | He asked his teacher what to read. | He asked teacher his what to read . |  read he asked his teacher what to.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u20l51_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Whether to restrict.
+* **Çeviri:** Whether to restrict.
+* **Kelimeler:** inceleyeceğimizi, vermeliyiz, askıya, kısıtlanmayacağı, Kısıtlanıp
+* **Doğru Sıralama:** Kısıtlanıp, kısıtlanmayacağı
+
+---
+
+#### Soru ID: u20l51_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Whether to terminate.
+* **Çeviri:** Whether to terminate.
+* **Kelimeler:** edeceğini, korunacağı, Sonlandırılıp, sonlandırılmayacağı, bilmiyorlar
+* **Doğru Sıralama:** Sonlandırılıp, sonlandırılmayacağı
+
+---
+
+#### Soru ID: u20l51_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** He is learning how to swim.
+* **Çeviri:** He is learning how to swim.
+* **Kelimeler:** Nasıl, açıkladı, bilmiyorlar, yüzeceğini, öğreniyor, kısıtlanmayacağı
+* **Doğru Sıralama:** Nasıl, yüzeceğini, öğreniyor
+
+---
+
+#### Soru ID: u20l51_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** He explained to us what to buy.
+* **Çeviri:** Bize ne alacağımızı açıkladı.
+* **Kelimeler:** He, explained, to, what, us, swim, apply, to, buy, go
+* **Doğru Sıralama:** He, explained, to, us, what, to, buy
+
+---
+
+#### Soru ID: u20l51_ex4_tx_0 (translation-text)
+* **Yönerge:** "We need to decide what to say." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** We need to decide what to say.
+* **Doğru Çeviri:** Ne söyleyeceğimize karar vermeliyiz.
+
+---
+
+#### Soru ID: u20l51_ex4_tx_1 (translation-text)
+* **Yönerge:** "They don't know where to meet." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They don't know where to meet.
+* **Doğru Çeviri:** Nerede buluşacaklarını bilmiyorlar.
+
+---
+
+## Lesson 2
+
+### Alıştırma 1: Yapı Çalışması
+
+#### Soru ID: u20l52_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - uyumak <--> sleep
+  - tamir etmek <--> fix
+  - kaçınmak <--> avoid
+  - durmak <--> stop
+
+---
+
+#### Soru ID: u20l52_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yapmak <--> do
+  - yüzmek <--> swim
+  - değiştirmek <--> alter
+  - pişirmek <--> cook
+
+---
+
+#### Soru ID: u20l52_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "He asked his mother how to cook the soup." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He asked his mother how to cook the soup.
+* **Seçenekler:** Annesine çorbayı nasıl pişireceğini sordu. | Annesine çorbayı nasıl korunacağını sordu. | Annesine nasıl çorbayı pişireceğini sordu. | Annesine çorbayı nasıl kısıtlanıp sordu.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l52_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "Anketi ne zaman yürüteceğimize karar vermeliyiz." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** We must decide when to conduct the survey.
+* **Seçenekler:** We must decide when to conduct the survey. | The survey conduct we must decide when to. | We must decide when to utilize the survey. | We must when decide to conduct the survey.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l52_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The doctor told him when to sleep.
+* **Çeviri:** The doctor told him when to sleep.
+* **Kelimeler:** ne, etmeyeceklerini, nerede, ona, ısıtacağını, söyledi, zaman, uyuyacağını, Doktor
+* **Doğru Sıralama:** Doktor, ona, ne, zaman, uyuyacağını, söyledi
+
+---
+
+#### Soru ID: u20l52_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** He asked his father how to fix it.
+* **Çeviri:** He asked his father how to fix it.
+* **Kelimeler:** insanları, nasıl, tamir, Kimyasalları, Babasına, onu, edeceğini, sordu, söyledi
+* **Doğru Sıralama:** Babasına, onu, nasıl, tamir, edeceğini, sordu
+
+---
+
+#### Soru ID: u20l52_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** We must learn how to avoid errors.
+* **Çeviri:** We must learn how to avoid errors.
+* **Kelimeler:** edeceğini, öğrenmeliyiz, musun, kaçınacağımızı, nasıl, Hatalardan, ona
+* **Doğru Sıralama:** Hatalardan, nasıl, kaçınacağımızı, öğrenmeliyiz
+
+---
+
+#### Soru ID: u20l52_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Do you know how to swim in deep water?
+* **Çeviri:** Derin suda nasıl yüzeceğini biliyor musun?
+* **Kelimeler:** to, manager, in, calculate, you, how, deep, store, Do, swim, know, water
+* **Doğru Sıralama:** Do, you, know, how, to, swim, in, deep, water
+
+---
+
+#### Soru ID: u20l52_ex1_tx_0 (translation-text)
+* **Yönerge:** "She asked the driver where to stop." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** She asked the driver where to stop.
+* **Doğru Çeviri:** Sürücüye nerede duracağını sordu.
+
+---
+
+#### Soru ID: u20l52_ex1_tx_1 (translation-text)
+* **Yönerge:** "He showed the new students what to do." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He showed the new students what to do.
+* **Doğru Çeviri:** Yeni öğrencilere ne yapacaklarını gösterdi.
+
+---
+
+### Alıştırma 2: Yapı Çalışması
+
+#### Soru ID: u20l52_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - izole etmek <--> isolate
+  - kullanmak <--> utilize
+  - açıklığa kavuşturmak <--> clarify
+  - savunmak <--> advocate
+
+---
+
+#### Soru ID: u20l52_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - park etmek <--> park
+  - korumak <--> preserve
+  - söylemek <--> say
+  - uygulamak <--> apply
+
+---
+
+#### Soru ID: u20l52_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "They are discussing whether to restrict access." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** They are discussing whether to restrict access.
+* **Seçenekler:** Erişimin kısıtlanıp kısıtlanmayacağını tartışıyorlar. | Erişimin söyleyeceğimize kısıtlanmayacağını tartışıyorlar. | Erişimin kaçınacağımızı kısıtlanmayacağını tartışıyorlar. | Erişimin stabilize edileceğini kısıtlanmayacağını tartışıyorlar.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l52_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Doktora ilacı ne zaman alacağını sordu." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** She asked the doctor when to take the medicine.
+* **Seçenekler:** She asked the doctor when to take the medicine. | The medicine take she asked the doctor when to. | She asked doctor the when to take the medicine. | She asked the doctor when to process the medicine.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l52_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The team learned how to isolate the virus.
+* **Çeviri:** The team learned how to isolate the virus.
+* **Kelimeler:** izole, tamir, açıkladılar, öğrendi, nasıl, virüsü, kavuşturulacağını, Ekip, edeceğini
+* **Doğru Sıralama:** Ekip, virüsü, nasıl, izole, edeceğini, öğrendi
+
+---
+
+#### Soru ID: u20l52_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The engineer showed which tools to utilize.
+* **Çeviri:** The engineer showed which tools to utilize.
+* **Kelimeler:** kullanılacağını, araçların, göndereceklerini, hangi, gösterdi, kime, Mühendis, Çerçevenin
+* **Doğru Sıralama:** Mühendis, hangi, araçların, kullanılacağını, gösterdi
+
+---
+
+#### Soru ID: u20l52_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** He explained what to clarify in the project.
+* **Çeviri:** He explained what to clarify in the project.
+* **Kelimeler:** açıkladı, kavuşturulacağını, Grup, açıklığa, neyin, Projede, kısıtlanıp, Erişimin
+* **Doğru Sıralama:** Projede, neyin, açıklığa, kavuşturulacağını, açıkladı
+
+---
+
+#### Soru ID: u20l52_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** Chemists know how to preserve food in winter.
+* **Çeviri:** Kimyagerler kışın gıdaların nasıl korunacağını bilirler.
+* **Kelimeler:** preserve, Chemists, winter, where, know, how, to, him, food, He, in
+* **Doğru Sıralama:** Chemists, know, how, to, preserve, food, in, winter
+
+---
+
+#### Soru ID: u20l52_ex2_tx_0 (translation-text)
+* **Yönerge:** "The group showed how to advocate for reform." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The group showed how to advocate for reform.
+* **Doğru Çeviri:** Grup reformun nasıl savunulacağını gösterdi.
+
+---
+
+#### Soru ID: u20l52_ex2_tx_1 (translation-text)
+* **Yönerge:** "The driver explained where to park the truck." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The driver explained where to park the truck.
+* **Doğru Çeviri:** Sürücü kamyonu nereye park edeceğini açıkladı.
+
+---
+
+### Alıştırma 3: Yapı Çalışması
+
+#### Soru ID: u20l52_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - depolamak <--> store
+  - ısıtmak <--> heat
+  - basmak <--> press
+  - hesaplamak <--> calculate
+
+---
+
+#### Soru ID: u20l52_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - korumak <--> protect
+  - işlemek <--> process
+  - belirlemek <--> specify
+  - maksimize etmek <--> maximize
+
+---
+
+#### Soru ID: u20l52_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "They demonstrated how to stabilize the framework." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** They demonstrated how to stabilize the framework.
+* **Seçenekler:** Çerçevenin nasıl stabilize edileceğini gösterdiler. | Çerçevenin nasıl doğrulayacaklarını gösterdiler. | Çerçevenin nasıl park edeceğini gösterdiler. | Çerçevenin nasıl değiştireceklerini gösterdiler.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l52_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "Yarın sabah nerede buluşacaklarını planlıyorlar." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** They are planning where to meet tomorrow morning.
+* **Seçenekler:** Tomorrow morning meet they are planning where to. | They are where planning to meet tomorrow morning. | They are planning where to meet tomorrow morning. | They are planning where to send tomorrow morning.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+#### Soru ID: u20l52_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They did not know where to store the chemicals.
+* **Çeviri:** They did not know where to store the chemicals.
+* **Kelimeler:** bir, Kimyasalları, nerede, çıktıyı, depolayacaklarını, Sürücüye, bilmiyorlardı
+* **Doğru Sıralama:** Kimyasalları, nerede, depolayacaklarını, bilmiyorlardı
+
+---
+
+#### Soru ID: u20l52_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** She told the assistant when to heat the liquid.
+* **Çeviri:** She told the assistant when to heat the liquid.
+* **Kelimeler:** Asistana, Erişimin, ne, büyümenin, ısıtacağını, söyledi, Doktor, zaman, sıvıyı
+* **Doğru Sıralama:** Asistana, sıvıyı, ne, zaman, ısıtacağını, söyledi
+
+---
+
+#### Soru ID: u20l52_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** He showed the technician which button to press.
+* **Çeviri:** He showed the technician which button to press.
+* **Kelimeler:** hangi, düğmeye, Veritabanı, Teknisyene, depolayacaklarını, işleneceğini, basacağını, gösterdi
+* **Doğru Sıralama:** Teknisyene, hangi, düğmeye, basacağını, gösterdi
+
+---
+
+#### Soru ID: u20l52_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The database specifies when to process the logs.
+* **Çeviri:** Veritabanı günlüklerin ne zaman işleneceğini belirtir.
+* **Kelimeler:** when, logs, modules, avoid, to, the, database, process, learned, The, specifies
+* **Doğru Sıralama:** The, database, specifies, when, to, process, the, logs
+
+---
+
+#### Soru ID: u20l52_ex3_tx_0 (translation-text)
+* **Yönerge:** "The manual explains how to calculate the ratios." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The manual explains how to calculate the ratios.
+* **Doğru Çeviri:** Kılavuz oranların nasıl hesaplanacağını açıklar.
+
+---
+
+#### Soru ID: u20l52_ex3_tx_1 (translation-text)
+* **Yönerge:** "The report shows how to protect the environment." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The report shows how to protect the environment.
+* **Doğru Çeviri:** Rapor çevrenin nasıl korunacağını gösterir.
+
+---
+
+### Alıştırma 4: Yapı Çalışması
+
+#### Soru ID: u20l52_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - uygulamak <--> apply
+  - entegre etmek <--> integrate
+  - doğrulamak <--> validate
+  - birikmek <--> accumulate
+
+---
+
+#### Soru ID: u20l52_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - kullanmak <--> use
+  - tahsis etmek <--> allocate
+  - göndermek <--> send
+  - kabul etmek <--> accept
+
+---
+
+#### Soru ID: u20l52_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "We must discover where to anticipate the annual growth." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** We must discover where to anticipate the annual growth.
+* **Seçenekler:** Yıllık büyümenin nerede uygulayacağımızı keşfetmeliyiz. | Yıllık büyümenin nerede stabilize edileceğini keşfetmeliyiz. | Yıllık büyümenin nerede öngörüleceğini keşfetmeliyiz. | Yıllık nerede büyümenin öngörüleceğini keşfetmeliyiz.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+#### Soru ID: u20l52_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Konsey düzenlemeleri askıya alıp almayacağına karar verdi." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** The council decided whether to suspend the regulations.
+* **Seçenekler:** The council decided whether to store the regulations. | The council whether decided to suspend the regulations. | The regulations suspend the council decided whether to. | The council decided whether to suspend the regulations.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l52_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** We must choose which method to apply in this case.
+* **Çeviri:** We must choose which method to apply in this case.
+* **Kelimeler:** durumda, hangi, uygulayacağımızı, yöntemi, Toplantı, Bu, seçmeliyiz, zaman, Sistemi
+* **Doğru Sıralama:** Bu, durumda, hangi, yöntemi, uygulayacağımızı, seçmeliyiz
+
+---
+
+#### Soru ID: u20l52_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** We need to figure out how to integrate the modules.
+* **Çeviri:** We need to figure out how to integrate the modules.
+* **Kelimeler:** nasıl, öğrenmeliyiz, edeceğimizi, bulmamız, yapacaklarını, entegre, Modülleri, öneriyi, gerekiyor
+* **Doğru Sıralama:** Modülleri, nasıl, entegre, edeceğimizi, bulmamız, gerekiyor
+
+---
+
+#### Soru ID: u20l52_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The scientists learned how to validate the results.
+* **Çeviri:** The scientists learned how to validate the results.
+* **Kelimeler:** nasıl, sonuçları, seçmeliyiz, doğrulayacaklarını, insanları, kaynakların, öğrendiler, Bilim, Bu
+* **Doğru Sıralama:** Bilim, insanları, sonuçları, nasıl, doğrulayacaklarını, öğrendiler
+
+---
+
+#### Soru ID: u20l52_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The manual explains where to allocate the resources.
+* **Çeviri:** Kılavuz kaynakların nereye tahsis edileceğini açıklar.
+* **Kelimeler:** where, The, resources, to, decide, say, allocate, the, manual, liquid, explains
+* **Doğru Sıralama:** The, manual, explains, where, to, allocate, the, resources
+
+---
+
+#### Soru ID: u20l52_ex4_tx_0 (translation-text)
+* **Yönerge:** "The code defines where to accumulate the data logs." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The code defines where to accumulate the data logs.
+* **Doğru Çeviri:** Kod veri günlüklerinin nerede biriktirileceğini tanımlar.
+
+---
+
+#### Soru ID: u20l52_ex4_tx_1 (translation-text)
+* **Yönerge:** "The worker explained how to use the machine safely." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The worker explained how to use the machine safely.
+* **Doğru Çeviri:** İşçi makinenin güvenli bir şekilde nasıl kullanılacağını açıkladı.
+
+---
+
+## Lesson 3
+
+### Alıştırma 1: Yapı Çalışması
+
+#### Soru ID: u20l53_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - tedavi etmek <--> cure
+  - sonlandırmak <--> terminate
+  - izin vermek <--> permit
+  - parçalanmak <--> split
+
+---
+
+#### Soru ID: u20l53_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değiştirmek <--> alter
+  - bulmak <--> find
+  - belirlemek <--> specify
+  - kaçınmak <--> avoid
+
+---
+
+#### Soru ID: u20l53_ex1_mc_0 (multiple-choice)
+* **Yönerge:** "The group wants to show how to advocate for legislative reform." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The group wants to show how to advocate for legislative reform.
+* **Seçenekler:** Grup yasal reformun nasıl savunulacağını göstermek istiyor. | Grup reformun yasal nasıl savunulacağını göstermek istiyor. | Grup yasal nasıl reformun savunulacağını göstermek istiyor. | Grup yasal reformun nasıl kaçınılacağını göstermek istiyor.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l53_ex1_mc_1 (multiple-choice)
+* **Yönerge:** "Yazılım geliştirme ekibi hatalardan nasıl kaçınacağına karar vermelidir." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** The software development team must decide how to avoid the bugs.
+* **Seçenekler:** The software development team must decide how to avoid the bugs. | The bugs avoid the software development team must decide how to. | The software development team must decide how to specify the bugs. | The software team development must decide how to avoid the bugs.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l53_ex1_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Doctors are trying to discover how to cure the disease.
+* **Çeviri:** Doctors are trying to discover how to cure the disease.
+* **Kelimeler:** edileceğini, tedavi, eder, çalışıyorlar, keşfetmeye, Doktorlar, Yönetim, hastalığın, Müdür, nasıl
+* **Doğru Sıralama:** Doktorlar, hastalığın, nasıl, tedavi, edileceğini, keşfetmeye, çalışıyorlar
+
+---
+
+#### Soru ID: u20l53_ex1_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The board is debating whether to terminate the contract.
+* **Çeviri:** The board is debating whether to terminate the contract.
+* **Kelimeler:** Yönetim, kurulu, sözleşmeyi, tartışıyor, dijital, sonlandırıp, sonlandırmayacağını, veri, anlaşmaları
+* **Doğru Sıralama:** Yönetim, kurulu, sözleşmeyi, sonlandırıp, sonlandırmayacağını, tartışıyor
+
+---
+
+#### Soru ID: u20l53_ex1_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The security policy defines who to permit to the network.
+* **Çeviri:** The security policy defines who to permit to the network.
+* **Kelimeler:** Güvenlik, tanımlar, kime, öğrenmek, politikası, verileceğini, ağa, tartışıyor, izin, reformun
+* **Doğru Sıralama:** Güvenlik, politikası, ağa, kime, izin, verileceğini, tanımlar
+
+---
+
+#### Soru ID: u20l53_ex1_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The guide explained where to find the archaeological remains.
+* **Çeviri:** Rehber arkeolojik kalıntıların nerede bulunacağını açıkladı.
+* **Kelimeler:** the, how, The, remains, where, user, to, find, guide, explained, archaeological, script
+* **Doğru Sıralama:** The, guide, explained, where, to, find, the, archaeological, remains
+
+---
+
+#### Soru ID: u20l53_ex1_tx_0 (translation-text)
+* **Yönerge:** "The expert showed how to split the atom in the laboratory." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The expert showed how to split the atom in the laboratory.
+* **Doğru Çeviri:** Uzman laboratuvarda atomun nasıl parçalanacağını gösterdi.
+
+---
+
+#### Soru ID: u20l53_ex1_tx_1 (translation-text)
+* **Yönerge:** "She wants to learn how to alter exact distribution formats." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** She wants to learn how to alter exact distribution formats.
+* **Doğru Çeviri:** Kesin dağıtım formatlarını nasıl değiştireceğini öğrenmek istiyor.
+
+---
+
+### Alıştırma 2: Yapı Çalışması
+
+#### Soru ID: u20l53_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değiştirmek <--> modify
+  - denetlemek <--> inspect
+  - tahsis etmek <--> allocate
+  - maruz kalmak <--> expose
+
+---
+
+#### Soru ID: u20l53_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - değiştirmek <--> alter
+  - belirlemek <--> specify
+  - maksimize etmek <--> maximize
+  - korumak <--> protect
+
+---
+
+#### Soru ID: u20l53_ex2_mc_0 (multiple-choice)
+* **Yönerge:** "The guidelines specify how to protect sensitive user information data." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The guidelines specify how to protect sensitive user information data.
+* **Seçenekler:** Kılavuz ilkeler hassas kullanıcı bilgilerinin nasıl öngörüleceğini belirtir. | Kılavuz ilkeler kullanıcı hassas bilgilerinin nasıl korunacağını belirtir. | Kılavuz hassas ilkeler kullanıcı bilgilerinin nasıl korunacağını belirtir. | Kılavuz ilkeler hassas kullanıcı bilgilerinin nasıl korunacağını belirtir.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l53_ex2_mc_1 (multiple-choice)
+* **Yönerge:** "Ana akım dijital medya kamuoyu bakış açısının nasıl korunacağını manipüle eder." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** Mainstream digital media manipulates how to protect public perspective.
+* **Seçenekler:** Mainstream digital manipulates media how to protect public perspective. | Mainstream digital media manipulates how to process public perspective. | Public perspective protect mainstream digital media manipulates how to. | Mainstream digital media manipulates how to protect public perspective.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l53_ex2_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The scientists must know how to modify the parameters of the test.
+* **Çeviri:** The scientists must know how to modify the parameters of the test.
+* **Kelimeler:** nasıl, parametrelerini, testin, insanları, Mühendis, Bilim, tartışıyor, bilmelidir, değiştireceklerini, tartıştı
+* **Doğru Sıralama:** Bilim, insanları, testin, parametrelerini, nasıl, değiştireceklerini, bilmelidir
+
+---
+
+#### Soru ID: u20l53_ex2_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** Independent experts show what to inspect during the facility visit.
+* **Çeviri:** Independent experts show what to inspect during the facility visit.
+* **Kelimeler:** sırasında, ziyareti, denetleneceğini, neyin, Bağımsız, geçirilmiş, uzmanlar, Nihai, Yazılım, tesis, gösteriyor
+* **Doğru Sıralama:** Bağımsız, uzmanlar, tesis, ziyareti, sırasında, neyin, denetleneceğini, gösteriyor
+
+---
+
+#### Soru ID: u20l53_ex2_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The manager must determine where to allocate the reallocated budget.
+* **Çeviri:** The manager must determine where to allocate the reallocated budget.
+* **Kelimeler:** Müdür, uzmanlar, yeniden, bütçenin, tahsis, hassas, tahsis, belirlemelidir, edilen, nereye, edileceğini, korunacağını
+* **Doğru Sıralama:** Müdür, yeniden, tahsis, edilen, bütçenin, nereye, tahsis, edileceğini, belirlemelidir
+
+---
+
+#### Soru ID: u20l53_ex2_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The revised security protocol defines what to specify in the database.
+* **Çeviri:** Gözden geçirilmiş güvenlik protokolü veritabanında neyin belirleneceğini tanımlar.
+* **Kelimeler:** protocol, database, security, revised, defines, what, in, to, The, are, specify, final, formal, the
+* **Doğru Sıralama:** The, revised, security, protocol, defines, what, to, specify, in, the, database
+
+---
+
+#### Soru ID: u20l53_ex2_tx_0 (translation-text)
+* **Yönerge:** "The audit validates how to expose hidden organizational system flaws." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The audit validates how to expose hidden organizational system flaws.
+* **Doğru Çeviri:** Denetim gizli örgütsel sistem kusurlarının nasıl ortaya çıkarılacağını doğrular.
+
+---
+
+#### Soru ID: u20l53_ex2_tx_1 (translation-text)
+* **Yönerge:** "The software development team must decide how to alter the parameters." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The software development team must decide how to alter the parameters.
+* **Doğru Çeviri:** Yazılım geliştirme ekibi parametreleri nasıl değiştireceğine karar vermelidir.
+
+---
+
+### Alıştırma 3: Yapı Çalışması
+
+#### Soru ID: u20l53_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sonlandırmak <--> terminate
+  - birikmek <--> accumulate
+  - hesaplamak <--> calculate
+  - kısıtlamak <--> restrict
+
+---
+
+#### Soru ID: u20l53_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - maksimize etmek <--> maximize
+  - değiştirmek <--> modify
+  - entegre etmek <--> integrate
+  - işlemek <--> process
+
+---
+
+#### Soru ID: u20l53_ex3_mc_0 (multiple-choice)
+* **Yönerge:** "The principal laboratory researcher showed what to inspect in the facility." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The principal laboratory researcher showed what to inspect in the facility.
+* **Seçenekler:** Baş araştırmacısı laboratuvar tesiste neyin inceleneceğini gösterdi. | Baş laboratuvar araştırmacısı tesiste neyin inceleneceğini gösterdi. | Baş laboratuvar araştırmacısı tesiste neyin yürütüleceğine gösterdi. | Baş laboratuvar tesiste araştırmacısı neyin inceleneceğini gösterdi.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+#### Soru ID: u20l53_ex3_mc_1 (multiple-choice)
+* **Yönerge:** "Nihai bilimsel bulgu alternatif hipotezlerin nasıl doğrulanacağını gösterdi." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** The final scientific finding showed how to validate alternative hypotheses.
+* **Seçenekler:** The final scientific finding showed how to validate alternative hypotheses. | Alternative hypotheses validate the final scientific finding showed how to. | The final finding scientific showed how to validate alternative hypotheses. | The final scientific finding showed how to modify alternative hypotheses.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l53_ex3_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The board must choose whether to terminate formal bilateral agreements.
+* **Çeviri:** The board must choose whether to terminate formal bilateral agreements.
+* **Kelimeler:** sonlandırmayacağını, ikili, sonlandırıp, kurulu, manipüle, anlaşmaları, sırasında, seçmelidir, Yönetim, resmi, yeniden
+* **Doğru Sıralama:** Yönetim, kurulu, resmi, ikili, anlaşmaları, sonlandırıp, sonlandırmayacağını, seçmelidir
+
+---
+
+#### Soru ID: u20l53_ex3_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The system manages where to accumulate detailed historical system logs.
+* **Çeviri:** The system manages where to accumulate detailed historical system logs.
+* **Kelimeler:** Sistem, detaylı, maksimize, geçmiş, sistem, günlüklerinin, nerede, değiştireceğini, tartışıyor, biriktirileceğini, yönetir
+* **Doğru Sıralama:** Sistem, detaylı, geçmiş, sistem, günlüklerinin, nerede, biriktirileceğini, yönetir
+
+---
+
+#### Soru ID: u20l53_ex3_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The analyst explains how to calculate complex mathematical data ratios.
+* **Çeviri:** The analyst explains how to calculate complex mathematical data ratios.
+* **Kelimeler:** açıklar, matematiksel, nasıl, tesiste, hesaplanacağını, veri, karmaşık, Analist, kriterlerinin, araştırmacısı, oranlarının
+* **Doğru Sıralama:** Analist, karmaşık, matematiksel, veri, oranlarının, nasıl, hesaplanacağını, açıklar
+
+---
+
+#### Soru ID: u20l53_ex3_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The committee explained how to modify the qualitative selection criteria.
+* **Çeviri:** Komite nitel seçim kriterlerinin nasıl değiştirileceğini açıkladı.
+* **Kelimeler:** the, The, expose, selection, committee, criteria, common, to, how, modify, qualitative, care, explained
+* **Doğru Sıralama:** The, committee, explained, how, to, modify, the, qualitative, selection, criteria
+
+---
+
+#### Soru ID: u20l53_ex3_tx_0 (translation-text)
+* **Yönerge:** "The security group decided whether to restrict unauthorized user access." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The security group decided whether to restrict unauthorized user access.
+* **Doğru Çeviri:** Güvenlik grubu yetkisiz kullanıcı erişiminin kısıtlanıp kısıtlanmayacağına karar verdi.
+
+---
+
+#### Soru ID: u20l53_ex3_tx_1 (translation-text)
+* **Yönerge:** "The corporate strategy defines how to maximize manufacturing efficiency." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The corporate strategy defines how to maximize manufacturing efficiency.
+* **Doğru Çeviri:** Kurumsal strateji üretim verimliliğinin nasıl maksimize edileceğini tanımlar.
+
+---
+
+### Alıştırma 4: Yapı Çalışması
+
+#### Soru ID: u20l53_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sonlandırmak <--> terminate
+  - kısıtlamak <--> restrict
+  - işlemek <--> process
+  - stabilize etmek <--> stabilize
+
+---
+
+#### Soru ID: u20l53_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - askıya almak <--> suspend
+  - yürütmek <--> conduct
+  - öngörmek <--> anticipate
+  - doğrulamak <--> validate
+
+---
+
+#### Soru ID: u20l53_ex4_mc_0 (multiple-choice)
+* **Yönerge:** "The principal researcher showed how to validate alternative scientific hypotheses." cümlesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The principal researcher showed how to validate alternative scientific hypotheses.
+* **Seçenekler:** Baş araştırmacı alternatif bilimsel hipotezlerin nasıl doğrulanacağını gösterdi. | Baş alternatif araştırmacı bilimsel hipotezlerin nasıl doğrulanacağını gösterdi. | Baş araştırmacı bilimsel alternatif hipotezlerin nasıl doğrulanacağını gösterdi. | Baş araştırmacı alternatif bilimsel hipotezlerin nasıl değiştireceğini gösterdi.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+#### Soru ID: u20l53_ex4_mc_1 (multiple-choice)
+* **Yönerge:** "Merkezi bulut veritabanı detaylı geçmiş günlüklerin nerede biriktirileceğini yönetir." cümlesinin İngilizce karşılığı hangisidir?
+* **İngilizce Cümle:** The centralized cloud database manages where to accumulate detailed historical logs.
+* **Seçenekler:** The centralized database cloud manages where to accumulate detailed historical logs. | Detailed historical logs accumulate the centralized cloud database manages where to. | The centralized cloud database manages where to accumulate detailed logs historical. | The centralized cloud database manages where to accumulate detailed historical logs.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+#### Soru ID: u20l53_ex4_wb_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The board of directors discussed whether to terminate bilateral agreements.
+* **Çeviri:** The board of directors discussed whether to terminate bilateral agreements.
+* **Kelimeler:** değiştireceğine, anlaşmaların, bakış, Yönetim, kurulu, tartıştı, formatlarını, sonlandırılıp, ikili, sonlandırılmayacağını
+* **Doğru Sıralama:** Yönetim, kurulu, ikili, anlaşmaların, sonlandırılıp, sonlandırılmayacağını, tartıştı
+
+---
+
+#### Soru ID: u20l53_ex4_wb_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The strict institutional policy defines whether to restrict network access.
+* **Çeviri:** The strict institutional policy defines whether to restrict network access.
+* **Kelimeler:** belirlemelidir, politika, kısıtlanıp, kurumsal, kısıtlanmayacağını, izin, tanımlar, erişiminin, politikası, Katı, ağ
+* **Doğru Sıralama:** Katı, kurumsal, politika, ağ, erişiminin, kısıtlanıp, kısıtlanmayacağını, tanımlar
+
+---
+
+#### Soru ID: u20l53_ex4_wb_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The software team integrated the modules to demonstrate how to process data.
+* **Çeviri:** The software team integrated the modules to demonstrate how to process data.
+* **Kelimeler:** ekibi, göstermek, Baş, entegre, işleneceğini, Yazılım, nasıl, için, Yönetim, ağ, verilerin, modülleri, etti
+* **Doğru Sıralama:** Yazılım, ekibi, verilerin, nasıl, işleneceğini, göstermek, için, modülleri, entegre, etti
+
+---
+
+#### Soru ID: u20l53_ex4_wb_3 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **İngilizce Cümle:** The regional administrative council debated whether to suspend the regulations.
+* **Çeviri:** Bölgesel idari konsey düzenlemeleri askıya alıp almayacağını tartıştı.
+* **Kelimeler:** debated, council, administrative, regional, the, whether, The, suspend, legislative, system, regulations, to, board
+* **Doğru Sıralama:** The, regional, administrative, council, debated, whether, to, suspend, the, regulations
+
+---
+
+#### Soru ID: u20l53_ex4_tx_0 (translation-text)
+* **Yönerge:** "The engineer demonstrated how to stabilize crucial internal device components." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The engineer demonstrated how to stabilize crucial internal device components.
+* **Doğru Çeviri:** Mühendis kritik dahili cihaz bileşenlerinin nasıl stabilize edileceğini gösterdi.
+
+---
+
+#### Soru ID: u20l53_ex4_tx_1 (translation-text)
+* **Yönerge:** "The technical experts demonstrated how to stabilize internal device components." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** The technical experts demonstrated how to stabilize internal device components.
+* **Doğru Çeviri:** Teknik uzmanlar dahili cihaz bileşenlerinin nasıl stabilize edileceğini gösterdiler.
+
+---
