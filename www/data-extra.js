@@ -939,7 +939,7 @@
           correctIndex: options.indexOf(localEnsurePunctuation(s.tr)),
           enSentence: s.en,
           isEngToTr: true,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 9) {
         // 2. Multiple choice (Turkish to English)
@@ -953,7 +953,7 @@
           correctIndex: options.indexOf(localEnsurePunctuation(s.en)),
           enSentence: s.en,
           isEngToTr: false,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 1) {
         // 3. Fill blank dropdown (participle)
@@ -967,7 +967,7 @@
           options: options,
           correctIndex: options.indexOf(s.word),
           enSentence: s.en,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 10) {
         // 4. Fill blank dropdown (auxiliary verb)
@@ -982,7 +982,7 @@
           options: options,
           correctIndex: options.indexOf(aux),
           enSentence: s.en,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 2) {
         // 5. Fill blank text
@@ -993,7 +993,7 @@
           sentence: s.blank || s.en.replace(s.word, "___"),
           correct: s.word,
           enSentence: s.en,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 3 || typeSelector === 11) {
         // 6. Word Bank (English to Turkish or Turkish to English)
@@ -1008,7 +1008,7 @@
           correctOrder: targetWords,
           enSentence: s.en,
           isEngToTr: false,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 4 || typeSelector === 13) {
         // 7. Error finder
@@ -1029,7 +1029,7 @@
           correctIndex: errIdx !== -1 ? errIdx : 0,
           suggestedCorrection: s.word,
           translation: s.tr,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 5) {
         // 8. Structure match
@@ -1043,7 +1043,7 @@
           options: ["Edilgen Ortaç (Past Participle - V3)", "Etken Ortaç (Present Participle - ing)", "Zarf (Adverb)", "İsim (Noun)"],
           correctIndex: 0,
           translation: s.tr,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 6) {
         // 9. Spotlight
@@ -1056,7 +1056,7 @@
           options: ["Edilgen Ortaç (Past Participle - V3)", "Yardımcı Fiil (Auxiliary Verb)", "Zarf (Adverb)", "İsim (Noun)"],
           correctIndex: 0,
           translation: s.tr,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 7 || typeSelector === 12) {
         // 10. True-False (grammar validity or translation explanation)
@@ -1079,7 +1079,7 @@
           englishPhrase: phrase,
           turkishTranslation: trText,
           correctAnswer: correctAns,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       } else if (typeSelector === 8) {
         // 11. Multiple fill blank
@@ -1094,7 +1094,7 @@
           sentence: sentenceWithGaps,
           corrects: [aux, s.word],
           translation: s.tr,
-          createdAt: "2026-07-20T03:17:00Z"
+          createdAt: "2026-07-20T03:20:00+03:00"
         });
       }
     }
@@ -1110,9 +1110,9 @@
         topic10.desc = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
         topic10.numLessons = 4;
         topic10.edits = topic10.edits || [];
-        if (!topic10.edits.some(e => e.date === "2026-07-20T03:17:00Z")) {
+        if (!topic10.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
           topic10.edits.push({
-            date: "2026-07-20T03:17:00Z",
+            date: "2026-07-20T03:20:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
           });
@@ -1126,9 +1126,9 @@
       if (unit10) {
         unit10.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
         unit10.edits = unit10.edits || [];
-        if (!unit10.edits.some(e => e.date === "2026-07-20T03:17:00Z")) {
+        if (!unit10.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
           unit10.edits.push({
-            date: "2026-07-20T03:17:00Z",
+            date: "2026-07-20T03:20:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
           });
@@ -1147,7 +1147,7 @@
         }
 
         if (sentences.length > 0) {
-          lesson.createdAt = "2026-07-20T03:17:00Z";
+          lesson.createdAt = "2026-07-20T03:20:00+03:00";
           
           // Generate 15 distinct questions
           const generatedQuestions = generateUnit10Questions(10, lesson.id, sentences, sentences);
@@ -1158,7 +1158,7 @@
               id: `u10l${lesson.id}ex1`,
               title: "Alıştırma 1: Edilgen Yapı Çalışması",
               description: "Pedagojik aşamalı edilgen çatı pekiştirme alıştırması (15 Soru)",
-              createdAt: "2026-07-20T03:17:00Z",
+              createdAt: "2026-07-20T03:20:00+03:00",
               questions: generatedQuestions
             }
           ];
