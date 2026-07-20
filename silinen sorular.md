@@ -9161,3 +9161,12 @@ Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru
 - Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
 - Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 576 yeni kaliteli ve tekrarlı soru yerleştirildi.
 - İleri seviye alıştırmalarda önceki ünitelerin gramer yapıları (edilgen, gerund, infinitive vb.) entegre edilerek bracketed tag'ler eklendi.
+
+
+# Silinen Sorular Arşivi (Bölüm 2: İsim ve Edat Yapıları - 2026-07-21)
+
+Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru, 3 derste toplam 108 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski yapıda yer alan 7 ders altındaki toplam 7 alıştırma (toplam 105 soru) kaldırılmıştır.
+- Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
+- Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 108 yeni kaliteli ve tekrarlı soru yerleştirildi.
+- İleri seviye alıştırmalarda Bölüm 1 konularından (to be isim/sıfat/edat cümleleri) faydalanılarak cümlenin asıl yüklemi ve öznesi bu yapılardan oluşturulmuş ve bracketed tag'ler eklenmiştir.
