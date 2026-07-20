@@ -1176,10 +1176,10 @@
       "id": 58,
       "startLessonId": 580,
       "originalIndex": 58,
-      "title": "Gerund, Present Participle ve Infinitive Farkları",
-      "desc": "Akademik çeldiricilerle donatılmış Gerund, Present Participle ve Infinitive farkları; anlamı değişen fiiller ve to edatı.",
-      "icon": "🎓",
-      "numLessons": 1,
+      "title": "Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi",
+      "desc": "Akademik çeldiricilerle donatılmış Gerund, Present Participle ve Infinitive farkları ile ileri düzey sentaktik teşhis testi.",
+      "icon": "🧠",
+      "numLessons": 2,
       "formulas": [
         {
           "formula": "Remember / Stop / Regret / Try / Go on / Mean -> Anlam Değişimi",
@@ -1195,12 +1195,18 @@
           "formula": "Sentence-Initial Reductions vs. Noun Adjuncts -> Examining... (Active) vs. Seen... (Passive)",
           "example": "Examining the scroll (Archaeologist) vs. Seen from the peak (Valley)",
           "description": "Cümle başı kısaltmalar ve amaç/sıfat niteleme farkları."
+        },
+        {
+          "formula": "Gerund vs. Participle -> Syntactic Role",
+          "example": "Subject / Complement vs. Adverbial / Reduced Relative",
+          "description": "-ing ekinin isim-fiil mi sıfat-fiil mi olduğunu ayırt etme."
         }
       ],
       "subtitles": [
-        "1. Gerund, Present Participle ve Infinitive Ayrımı"
+        "1. Gerund, Present Participle ve Infinitive Ayrımı",
+        "2. İleri Düzey '-ing' Formu Teşhis Sınavı"
       ],
-      "originalNumLessons": 1
+      "originalNumLessons": 2
     };
 
     rawTopics.push(topic58);
@@ -1210,8 +1216,8 @@
       originalIndex: topic58.originalIndex,
       title: topic58.title,
       description: topic58.desc,
-      lessons: ["c58_l1"],
-      pages: "G-P-I"
+      lessons: ["c58_l1", "c59_l1"],
+      pages: "Syntactic-Synthesis"
     });
 
     const ex1_q = [
@@ -1466,6 +1472,323 @@
         teorikMantik: "Bu derste Gerund, Present Participle ve Infinitive yapıları arasındaki ince çizgileri ve akademik sınavlarda adayları ters köşe yapan çeldiricileri inceleyeceğiz.",
         formul: "Gerund (Eylem İsmi/Amaç) vs. Participle (Sıfat/Kısaltma) vs. Infinitive (Amaç/Gelecek)",
         altinKural: "Edat olan 'to' kalıplarına ve cümle başındaki kısaltmalarda cümlenin öznesiyle olan aktif/pasif ilişkisine çok dikkat edin!"
+      }
+    });
+
+    // BÖLÜM 59 (Teşhis Testi) Bölüm 58 ile birleştirilmiştir.
+
+    const u59_ex1_q = [
+      makeMC(
+        "c59_l1_ex1_q1",
+        "_______ the metabolic processes of hydrothermal vent organisms has allowed biochemists to synthesize novel enzymes.",
+        ["For examining", "Having examined", "Examine", "Examining", "To be examined"],
+        3,
+        "Cümlenin öznesi (Subject) konumunda bir isim-fiil (Gerund) gerekmektedir. 'Examining' cümlenin ana fiili 'has allowed' için öznedir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q2",
+        "The primary difficulty encountered was _______ the volatile polymer chain without causing premature cellular lysis.",
+        ["to have stabilized", "stabilizing", "stabilize", "being stabilized", "stabilized"],
+        1,
+        "Cümlede özne tamamlayıcısı (Subject Complement) olarak Gerund kullanılmıştır. 'Was stabilizing' ifadesindeki stabilizing, eylemin kendisini isimleştirir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q3",
+        "While some advocate fiscal austerity, directors recommend _______ interest rates to stimulate infrastructure investments.",
+        ["to lower", "lowering", "lower", "to be lowering", "having lowered"],
+        1,
+        "'Recommend' fiili doğrudan nesne olarak bir Gerund (-ing) yapısı alır."
+      ),
+      makeMC(
+        "c59_l1_ex1_q4",
+        "To mitigate soil erosion, agricultural planners must not put off _______ sustainable irrigation schemes.",
+        ["to implement", "implementing", "implement", "being implemented", "having implemented"],
+        1,
+        "'Put off' phrasal verb'ü kendisinden sonra gelen eylemi nesne olarak Gerund (-ing) biçiminde alır."
+      ),
+      makeMC(
+        "c59_l1_ex1_q5",
+        "_______ by peer-reviewed journals remains the primary benchmark for assessing scientific validity.",
+        ["Being evaluated", "Evaluating", "To evaluate", "Evaluated", "Having evaluated"],
+        0,
+        "Cümlenin öznesi pasif bir Gerund olmalıdır. Makaleler değerlendirme işini kendisi yapmaz, değerlendirilirler (Being evaluated)."
+      ),
+      makeMC(
+        "c59_l1_ex1_q6",
+        "In his memoirs, the diplomat acknowledged _______ confidential state cables during the geopolitical crisis.",
+        ["to disclose", "having disclosed", "disclose", "to have disclosed", "being disclosed"],
+        1,
+        "'Acknowledge' fiili Gerund alır. Ayrıca eylemin geçmişte yapıldığını vurgulamak için Perfect Gerund (having disclosed) kullanımı en uygun seçenektir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q7",
+        "After the company collapsed, the CEO deeply regretted _______ the warnings highlighted by the auditors.",
+        ["to ignore", "ignoring", "ignore", "to be ignoring", "ignored"],
+        1,
+        "'Regret' fiili geçmişte yapılan bir pişmanlığı belirtirken Gerund (-ing), geleceğe yönelik üzüntü verici bir haber verirken ise Infinitive (to V1) alır. Burada geçmişteki bir hata söz konusudur."
+      ),
+      makeMC(
+        "c59_l1_ex1_q8",
+        "Having failed to resolve the query bottleneck, the administrator tried _______ the server's RAM capacity.",
+        ["to double", "doubling", "double", "having doubled", "to be doubling"],
+        1,
+        "'Try doing' bir çözüme ulaşmak için yeni bir yöntem denemek/deney yapmak anlamına gelirken 'Try to do' çabalamak anlamına gelir. SQL yazmak başarısız olunca RAM artırmayı denemiştir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q9",
+        "During the eclipse, the astronomers observed the moon _______ the sun's corona.",
+        ["to cover", "covering", "covered", "covers", "to covering"],
+        1,
+        "Algı fiillerinden (see, watch, observe, hear) sonra eylemin bir kısmının veya devam etmekte olan sürecinin izlendiğini belirtmek için Present Participle (-ing) kullanılır."
+      ),
+      makeMC(
+        "c59_l1_ex1_q10",
+        "As the security guard patrolled the compound, he heard someone _______ a metal drawer.",
+        ["to open", "opening", "opened", "opens", "to opening"],
+        1,
+        "Duyusal algı bildiren 'hear' fiilinden sonra devam eden eylemi belirtmek amacıyla Present Participle (-ing) kullanımı uygundur."
+      ),
+      makeMC(
+        "c59_l1_ex1_q11",
+        "Members of the medical board strongly object to _______ experimental gene therapies without verification.",
+        ["authorize", "authorizing", "be authorized", "to authorize", "authorized"],
+        1,
+        "'Object to' yapısındaki 'to' edattır (preposition). Bu nedenle kendisinden sonra yalın fiil değil, Gerund (authorizing) gelmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q12",
+        "Economists are looking forward to _______ the long-term impact of the newly ratified trade treaties.",
+        ["evaluate", "evaluating", "have evaluated", "be evaluating", "to evaluate"],
+        1,
+        "'Look forward to' kalıbındaki 'to' edat olduğu için arkasından Gerund (-ing) yapısı gelmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q13",
+        "Nomadic tribes, being accustomed to _______ in hyper-arid environments, display unique physiological traits.",
+        ["survive", "surviving", "having survived", "be survived", "to survive"],
+        1,
+        "'Be accustomed to' yapısında 'to' edat işlevindedir ve kendisinden sonra Gerund (surviving) gelir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q14",
+        "During the examination, the lead engineer confessed to _______ the safety protocols.",
+        ["bypass", "bypassing", "have bypassed", "to bypass", "be bypassing"],
+        1,
+        "'Confess to' kalıbındaki 'to' edat olduğu için ardından Gerund (bypassing) getirilmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex1_q15",
+        "The conglomerate restructured its division with a view to _______ novel aerospace materials.",
+        ["develop", "developing", "to develop", "developed", "having developed"],
+        1,
+        "'With a view to' (amacıyla) kalıbı edat olan 'to' içerdiğinden daima Gerund (developing) ile devam eder."
+      )
+    ];
+
+    const u59_ex2_q = [
+      makeMC(
+        "c59_l1_ex2_q1",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"<u>Having examining</u> (A) the data carefully, the research team <u>proactively</u> (B) terminated the clinical trial <u>to prevent</u> (C) further side <u>effects</u> (D).\"",
+        ["(A) Having examining", "(B) proactively", "(C) to prevent", "(D) effects", "No error"],
+        0,
+        "Perfect Participle Clause yapısında 'Having' sonrasında Past Participle (V3 - examined) gelmelidir. 'Having examining' dil bilgisi açısından hatalıdır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q2",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"Environmental groups are opposed to <u>construct</u> (A) the new landfill site, <u>arguing</u> (B) that it will inevitably <u>pollute</u> (C) the local ground water <u>reservoir</u> (D).\"",
+        ["(A) construct", "(B) arguing", "(C) pollute", "(D) reservoir", "No error"],
+        0,
+        "'Opposed to' kalıbında yer alan 'to' edat olduğu için arkasından bare infinitive (construct) değil, Gerund (constructing) gelmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex2_q3",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"<u>Examine</u> (A) under the electron microscope, the specimen <u>revealed</u> (B) a unique molecular structure <u>that</u> (C) was previously <u>unseen</u> (D).\"",
+        ["(A) Examine", "(B) revealed", "(C) that", "(D) unseen", "No error"],
+        0,
+        "Cümle başındaki edilgen kısaltma yapısında (Past Participle Clause) fiilin üçüncü hali kullanılmalıdır. 'Examine' yerine 'Examined' gelmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex2_q4",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The new software <u>contains</u> (A) a detailed algorithm <u>designed</u> (B) for <u>identify</u> (C) anomalies in <u>encrypted</u> (D) data packages.\"",
+        ["(A) contains", "(B) designed", "(C) identify", "(D) encrypted", "No error"],
+        2,
+        "'For' edatından (preposition) sonra fiilin yalın hali (identify) değil, Gerund (-ing) yapısı (identifying) kullanılmalıdır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q5",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"While <u>conducting</u> (A) field research, the zoologist watched the pack of wolves <u>to pursue</u> (B) the herd <u>across</u> (C) the frozen <u>tundra</u> (D).\"",
+        ["(A) conducting", "(B) to pursue", "(C) across", "(D) tundra", "No error"],
+        1,
+        "Algı fiillerinden (watch, see, hear) sonra to-infinitive (to pursue) kullanılmaz. Eylemin tamamı veya bir süreci için yalın fiil (pursue) ya da present participle (pursuing) kullanılmalıdır."
+      )
+    ];
+
+    const u59_ex3_q = [
+      makeMC(
+        "c59_l1_ex3_q1",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Since the chemist realized that the catalyst was unstable, he terminated the synthesis.\"</strong>",
+        [
+          "Realized that the catalyst was unstable, the chemist terminated the synthesis.",
+          "Realizing that the catalyst was unstable, the chemist terminated the synthesis.",
+          "To realize that the catalyst was unstable, the chemist terminated the synthesis.",
+          "Having been realized that the catalyst was unstable, the chemist terminated the synthesis.",
+          "Although realizing that the catalyst was unstable, the chemist terminated the synthesis."
+        ],
+        1,
+        "Neden bildiren aktif zarf cümlesi, özne ortaklığı bulunduğunda Present Participle (-ing) ile 'Realizing...' şeklinde kısaltılır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q2",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"After they analyzed the data for weeks, the team finally published their report.\"</strong>",
+        [
+          "Analyzing the data for weeks, the report was finally published by the team.",
+          "Having analyzed the data for weeks, the team finally published their report.",
+          "Having been analyzed the data for weeks, the team finally published their report.",
+          "To analyze the data for weeks, the team finally published their report.",
+          "Analyzed the data for weeks, the team finally published their report."
+        ],
+        1,
+        "Geçmişte daha önce yapılmış aktif bir eylemin zarf cümleciği kısaltmasında Perfect Participle (Having + V3) yapısı kullanılır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q3",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Although the sociologist's theory was rejected by critics, it eventually gained acceptance.\"</strong>",
+        [
+          "Although rejecting by critics, the sociologist's theory eventually gained acceptance.",
+          "Although rejected by critics, the sociologist's theory eventually gained acceptance.",
+          "Having rejected by critics, the sociologist's theory eventually gained acceptance.",
+          "Rejecting by critics, the sociologist's theory eventually gained acceptance.",
+          "Although to be rejected by critics, the sociologist's theory eventually gained acceptance."
+        ],
+        1,
+        "Karşıtlık bağlacından sonra pasif bir kısaltma yapmak için fiilin 3. hali (rejected) doğrudan bağlaç sonrasına getirilir."
+      ),
+      makeMC(
+        "c59_l1_ex3_q4",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"As soon as she entered the laboratory, the technician noticed a strange odor.\"</strong>",
+        [
+          "On entering the laboratory, the technician noticed a strange odor.",
+          "To enter the laboratory, the technician noticed a strange odor.",
+          "Entered the laboratory, the technician noticed a strange odor.",
+          "On having entered the laboratory, a strange odor was noticed.",
+          "On being entered the laboratory, the technician noticed a strange odor."
+        ],
+        0,
+        "'On/Upon + Gerund' kalıbı, bir eylemin hemen ardından gerçekleşen diğer eylemi bağlar ve 'as soon as' ile aynı anlamı taşır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q5",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Because they did not obtain the required permits, the firm suspended the project.\"</strong>",
+        [
+          "Not obtained the required permits, the firm suspended the project.",
+          "Not having obtained the required permits, the firm suspended the project.",
+          "Without to obtain the required permits, the firm suspended the project.",
+          "Not being obtained the required permits, the firm suspended the project.",
+          "Having not been obtained the required permits, the firm suspended the project."
+        ],
+        1,
+        "Öncelikli olumsuz ve aktif zarf cümleciği kısaltması 'Not having + V3' yapısıyla oluşturulur."
+      ),
+      makeMC(
+        "c59_l1_ex3_q6",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The database contains raw datasets which are currently being analyzed by researchers.\"</strong>",
+        [
+          "The database contains raw datasets currently analyzing by researchers.",
+          "The database contains raw datasets currently being analyzed by researchers.",
+          "The database contains raw datasets currently analyzed by researchers.",
+          "The database contains raw datasets currently to be analyzed by researchers.",
+          "The database contains raw datasets currently having analyzed by researchers."
+        ],
+        1,
+        "Şu an devam eden pasif sıfat-fiil cümlesi, 'being + V3' formatında 'currently being analyzed' şeklinde kısaltılır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q7",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"While the doctor was performing the surgery, he noticed a minor arterial blockage.\"</strong>",
+        [
+          "While performed the surgery, the doctor noticed a minor arterial blockage.",
+          "While performing the surgery, the doctor noticed a minor arterial blockage.",
+          "Performing the surgery, a minor arterial blockage was noticed by the doctor.",
+          "Having performed the surgery, the doctor noticed a minor arterial blockage.",
+          "Although performing the surgery, the doctor noticed a minor arterial blockage."
+        ],
+        1,
+        "Zaman zarfı bağlaçlarından (while, when) sonra aktif eylem kısaltmasında Present Participle (performing) kullanılır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q8",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"The algorithm which was developed by the team detects security breaches.\"</strong>",
+        [
+          "The algorithm developing by the team detects security breaches.",
+          "The algorithm developed by the team detects security breaches.",
+          "The algorithm having developed by the team detects security breaches.",
+          "The algorithm to develop by the team detects security breaches.",
+          "The algorithm currently developing by the team detects security breaches."
+        ],
+        1,
+        "Sıfat-fiil cümlelerindeki pasif kısaltmalarda doğrudan fiilin 3. hali (developed) kullanılır."
+      ),
+      makeMC(
+        "c59_l1_ex3_q9",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Before the researcher wrote the paper, she replicated the experiment three times.\"</strong>",
+        [
+          "Before writing the paper, the researcher replicated the experiment three times.",
+          "Before written the paper, the researcher replicated the experiment three times.",
+          "Replicating the experiment three times, the paper was written by the researcher.",
+          "Having been written the paper, the researcher replicated the experiment three times.",
+          "Before to write the paper, the researcher replicated the experiment three times."
+        ],
+        0,
+        "Zaman bağlaçlarından (before, after) sonra gelen aktif fiil, özne ortaklığıyla Gerund/Participle formatında kısaltılabilir."
+      ),
+      makeMC(
+        "c59_l1_ex3_q10",
+        "Choose the sentence that has the closest meaning to:<br><br><strong>\"Because the substance is extremely volatile, it evaporates quickly when exposed to heat.\"</strong>",
+        [
+          "Being extremely volatile, the substance evaporates quickly when exposed to heat.",
+          "Been extremely volatile, the substance evaporates quickly when exposed to heat.",
+          "Having been extremely volatile, the substance evaporates quickly when exposed to heat.",
+          "Extremely volatilely, the substance evaporates quickly when exposed to heat.",
+          "To be extremely volatile, the substance evaporates quickly when exposed to heat."
+        ],
+        0,
+        "Sebep bildiren 'be' durum fiili, özne ortaklığı durumunda Present Participle formunda 'Being...' ile kısaltılır."
+      )
+    ];
+
+    lessons.push({
+      id: "c59_l1",
+      unitId: 58,
+      title: "Sentaktik Labirent: İleri Düzey '-ing' Analiz Testi",
+      subtitle: "Diagnostic assessment of Gerunds, Present Participles, and Participle Clauses.",
+      exercises: [
+        {
+          id: "c59_l1_ex1",
+          createdAt: "2026-07-20T15:32:00+03:00",
+          title: "Alıştırma 1: Gramer Görevleri ve Anlam Kaymaları",
+          description: "Özne/tümleç konumları, algı fiilleri ve anlamı değişen fiiller.",
+          questions: u59_ex1_q
+        },
+        {
+          id: "c59_l1_ex2",
+          createdAt: "2026-07-20T15:32:00+03:00",
+          title: "Alıştırma 2: Prepozisyonel Nesneler ve Niteleyiciler",
+          description: "Edat olan 'to' arkasından gerund kullanımı ve sıfat-fiil kısaltmaları.",
+          questions: u59_ex2_q
+        },
+        {
+          id: "c59_l1_ex3",
+          createdAt: "2026-07-20T15:32:00+03:00",
+          title: "Alıştırma 3: Gelişmiş Zarf Kısaltmaları",
+          description: "Etken, edilgen, öncelikli ve olumsuz zarf cümleciği kısaltmaları.",
+          questions: u59_ex3_q
+        }
+      ],
+      konuAnlatimi: {
+        baslik: "İleri Düzey '-ing' Formları Teşhis Kılavuzu",
+        teorikMantik: "Bu teşhis testi, '-ing' ekinin İngilizce sentaksındaki dört temel fonksiyonunu (Gerund, Present Participle, Participle Clause, Continuous Aspect) akademik düzeyde ayırt etmenizi sağlar.",
+        formul: "Gerund (İsim-Fiil) vs. Participle (Zarf/Sıfat Kısaltması)",
+        altinKural: "Her zaman cümlenin ana yüklemini ve cümlenin gerçek öznesini bularak etken/edilgen ve öncelik/sonralık ilişkilerini kontrol edin."
       }
     });
   }
