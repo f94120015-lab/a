@@ -1107,7 +1107,7 @@
     if (typeof rawTopics !== 'undefined') {
       const topic10 = rawTopics.find(t => t.id === 10);
       if (topic10) {
-        topic10.desc = "1 alıştırmalık 15'er soruluk 4 ders (Toplam 60 soru). Kelime eşleştirme kaldırıldı. Basitten karmaşığa (öbekten cümleye) aşamalı pedagojik yapı. Soru tipleri: Çoktan Seçmeli, Boşluk Doldurma, Kelime Sıralama, Hata Dedektifi, Projektör, Yapı Eşleştirme, Doğru-Yanlış.";
+        topic10.desc = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
         topic10.numLessons = 4;
         topic10.edits = topic10.edits || [];
         if (!topic10.edits.some(e => e.date === "2026-07-20T03:17:00Z")) {
@@ -1124,7 +1124,7 @@
     if (typeof units !== 'undefined') {
       const unit10 = units.find(u => u.id === 10);
       if (unit10) {
-        unit10.description = "1 alıştırmalık 15'er soruluk 4 ders (Toplam 60 soru). Kelime eşleştirme kaldırıldı. Basitten karmaşığa (öbekten cümleye) aşamalı pedagojik yapı. Soru tipleri: Çoktan Seçmeli, Boşluk Doldurma, Kelime Sıralama, Hata Dedektifi, Projektör, Yapı Eşleştirme, Doğru-Yanlış.";
+        unit10.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
         unit10.edits = unit10.edits || [];
         if (!unit10.edits.some(e => e.date === "2026-07-20T03:17:00Z")) {
           unit10.edits.push({
@@ -1152,7 +1152,7 @@
           // Generate 15 distinct questions
           const generatedQuestions = generateUnit10Questions(10, lesson.id, sentences, sentences);
           
-          lesson.questions = generatedQuestions;
+          lesson.questions = [];
           lesson.exercises = [
             {
               id: `u10l${lesson.id}ex1`,
