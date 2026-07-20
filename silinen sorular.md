@@ -9170,3 +9170,5864 @@ Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru
 - Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
 - Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 108 yeni kaliteli ve tekrarlı soru yerleştirildi.
 - İleri seviye alıştırmalarda Bölüm 1 konularından (to be isim/sıfat/edat cümleleri) faydalanılarak cümlenin asıl yüklemi ve öznesi bu yapılardan oluşturulmuş ve bracketed tag'ler eklenmiştir.
+
+
+---
+
+# Silinen Sorular Arşivi (Bölüm 38: Öbeksel Kipler (Phrasal Modals) (Ekstra Pratik) - 2026-07-21)
+
+Bu dosya, Bölüm 38 altındaki egzersizlerin basitten zora doğru aşamalı bir pedagojik yaklaşımla, her derste 1 alıştırma ve her alıştırmada 15 soru olacak şekilde yeniden düzenlenmesi sırasında çıkarılan fazla alıştırma sorularını içermektedir.
+
+### Lesson 1 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l107_ex1_q3
+* **Yönerge:** "are used to saving files" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are used to saving files
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l107_ex1_q4
+* **Yönerge:** "is used to working slowly" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is used to working slowly
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l107_ex1_q5
+* **Yönerge:** "am used to managing databases" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am used to managing databases
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l107_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** dosyaları kaydetmeye alışkındırlar
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l107_ex1_q12
+* **Yönerge:** "am used to managing databases" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am used to managing databases
+* **Doğru Çeviri:** veritabanlarını yönetmeye alışkınım
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l107_ex2_q2
+* **Yönerge:** "The developer is used to writing database queries in stress environments." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The developer is used to writing database queries in stress environments.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l107_ex2_q4
+* **Yönerge:** "The technicians are used to verifying security logs daily." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The technicians are used to verifying security logs daily.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l107_ex2_q5
+* **Yönerge:** "She is used to resolving latency spikes on the production server." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** She is used to resolving latency spikes on the production server.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l107_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yazılım mimarisini her yıl yükseltmeye alışkınız.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l107_ex2_q12
+* **Yönerge:** "She is used to resolving latency spikes on the production server." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** She is used to resolving latency spikes on the production server.
+* **Doğru Çeviri:** Üretim sunucusundaki gecikme sıçramalarını çözmeye alışıktır.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l107_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The staff is used to being monitored by the security systems." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The staff is used to being monitored by the security systems.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l107_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing queries is easy because they are used to analyzing massive datasets." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing queries is easy because they are used to analyzing massive datasets.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l107_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The technician is used to verifying the modified code before deployment." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The technician is used to verifying the modified code before deployment.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The staff is used to being monitored by the security systems.
+* **Doğru Çeviri:** Personel, güvenlik sistemleri tarafından izlenmeye alışıktır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l107_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing queries is easy because they are used to analyzing massive datasets.
+* **Doğru Çeviri:** Büyük veri kümelerini analiz etmeye alışkın oldukları için sorguları yönetmek kolaydır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l107_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The staff is used to being monitored by the security systems.
+* **Doğru Çeviri:** Personel, güvenlik sistemleri tarafından izlenmeye alışıktır.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l107_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to hire developers who are used to working with cloud tools." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to hire developers who are used to working with cloud tools.
+* **Doğru Çeviri:** Bulut araçlarıyla çalışmaya alışkın geliştiriciler kiralamaya karar verdiler.
+
+### Lesson 2 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l108_ex1_q3
+* **Yönerge:** "are accustomed to saving files" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are accustomed to saving files
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l108_ex1_q4
+* **Yönerge:** "is accustomed to working slowly" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is accustomed to working slowly
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l108_ex1_q5
+* **Yönerge:** "am accustomed to managing databases" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am accustomed to managing databases
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l108_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** dosyaları kaydetmeye alışkındırlar
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l108_ex1_q12
+* **Yönerge:** "am accustomed to managing databases" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am accustomed to managing databases
+* **Doğru Çeviri:** veritabanlarını yönetmeye alışkınım
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l108_ex2_q2
+* **Yönerge:** "The administrator is accustomed to monitoring real-time network traffic." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The administrator is accustomed to monitoring real-time network traffic.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l108_ex2_q4
+* **Yönerge:** "The technicians are accustomed to verifying security logs daily." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The technicians are accustomed to verifying security logs daily.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l108_ex2_q5
+* **Yönerge:** "She is accustomed to resolving latency spikes on the production server." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** She is accustomed to resolving latency spikes on the production server.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l108_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yazılım mimarisini her yıl yükseltmeye alışkınız.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l108_ex2_q12
+* **Yönerge:** "She is accustomed to resolving latency spikes on the production server." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** She is accustomed to resolving latency spikes on the production server.
+* **Doğru Çeviri:** Üretim sunucusundaki gecikme sıçramalarını çözmeye alışıktır.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l108_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The staff is accustomed to being monitored by the security systems." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The staff is accustomed to being monitored by the security systems.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l108_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing queries is easy because they are accustomed to analyzing massive datasets." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing queries is easy because they are accustomed to analyzing massive datasets.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l108_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The technician is accustomed to verifying the modified code before deployment." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The technician is accustomed to verifying the modified code before deployment.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The staff is accustomed to being monitored by the security systems.
+* **Doğru Çeviri:** Personel, güvenlik sistemleri tarafından izlenmeye alışıktır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l108_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing queries is easy because they are accustomed to analyzing massive datasets.
+* **Doğru Çeviri:** Büyük veri kümelerini analiz etmeye alışkın oldukları için sorguları yönetmek kolaydır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l108_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The staff is accustomed to being monitored by the security systems.
+* **Doğru Çeviri:** Personel, güvenlik sistemleri tarafından izlenmeye alışıktır.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l108_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to hire developers who are accustomed to working with cloud tools." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to hire developers who are accustomed to working with cloud tools.
+* **Doğru Çeviri:** Bulut araçlarıyla çalışmaya alışkın geliştiriciler kiralamaya karar verdiler.
+
+### Lesson 3 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l109_ex1_q3
+* **Yönerge:** "are willing to verify keys" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are willing to verify keys
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l109_ex1_q4
+* **Yönerge:** "am willing to assist users" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am willing to assist users
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l109_ex1_q5
+* **Yönerge:** "is willing to reboot servers" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is willing to reboot servers
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l109_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** anahtarları doğrulamaya isteklidirler
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l109_ex1_q12
+* **Yönerge:** "is willing to reboot servers" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** is willing to reboot servers
+* **Doğru Çeviri:** sunucuları yeniden başlatmaya isteklidir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l109_ex2_q2
+* **Yönerge:** "The developers are willing to update the code to resolve errors." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The developers are willing to update the code to resolve errors.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l109_ex2_q4
+* **Yönerge:** "The team is willing to assist users during the system latency." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is willing to assist users during the system latency.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l109_ex2_q5
+* **Yönerge:** "He is willing to reboot the server to clean the memory logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is willing to reboot the server to clean the memory logs.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l109_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yeni kullanıcının güvenlik kimlik bilgilerini doğrulamaya istekliyiz.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l109_ex2_q12
+* **Yönerge:** "He is willing to reboot the server to clean the memory logs." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is willing to reboot the server to clean the memory logs.
+* **Doğru Çeviri:** Bellek günlüklerini temizlemek için sunucuyu yeniden başlatmaya isteklidir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l109_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "They are willing to be tested by the security board tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** They are willing to be tested by the security board tomorrow.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l109_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing databases is easy if they are willing to keep testing logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing databases is easy if they are willing to keep testing logs.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l109_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The team is willing to deploy the modified framework immediately." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is willing to deploy the modified framework immediately.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** They are willing to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye isteklidirler.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l109_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing databases is easy if they are willing to keep testing logs.
+* **Doğru Çeviri:** Günlükleri test etmeye devam etmeye istekliyseler veritabanlarını yönetmek kolaydır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l109_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They are willing to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye isteklidirler.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l109_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to support developers who are willing to write secure code." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to support developers who are willing to write secure code.
+* **Doğru Çeviri:** Güvenli kod yazmaya istekli geliştiricileri desteklemeye karar verdiler.
+
+### Lesson 4 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l110_ex1_q3
+* **Yönerge:** "are unwilling to verify keys" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are unwilling to verify keys
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l110_ex1_q4
+* **Yönerge:** "am unwilling to assist users" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am unwilling to assist users
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l110_ex1_q5
+* **Yönerge:** "is unwilling to reboot servers" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is unwilling to reboot servers
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l110_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** anahtarları doğrulamaya isteksizdirler
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l110_ex1_q12
+* **Yönerge:** "is unwilling to reboot servers" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** is unwilling to reboot servers
+* **Doğru Çeviri:** sunucuları yeniden başlatmaya isteksizdir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l110_ex2_q2
+* **Yönerge:** "The developers are unwilling to update the code to resolve errors." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The developers are unwilling to update the code to resolve errors.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l110_ex2_q4
+* **Yönerge:** "The team is unwilling to assist users during the system latency." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is unwilling to assist users during the system latency.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l110_ex2_q5
+* **Yönerge:** "He is unwilling to reboot the server to clean the memory logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is unwilling to reboot the server to clean the memory logs.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l110_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yeni kullanıcının güvenlik kimlik bilgilerini doğrulamaya isteksiziz.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l110_ex2_q12
+* **Yönerge:** "He is unwilling to reboot the server to clean the memory logs." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is unwilling to reboot the server to clean the memory logs.
+* **Doğru Çeviri:** Bellek günlüklerini temizlemek için sunucuyu yeniden başlatmaya isteksizdir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l110_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "They are unwilling to be tested by the security board tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** They are unwilling to be tested by the security board tomorrow.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l110_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing databases is hard if they are unwilling to keep testing logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing databases is hard if they are unwilling to keep testing logs.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l110_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The team is unwilling to deploy the modified framework immediately." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is unwilling to deploy the modified framework immediately.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** They are unwilling to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye isteksizdirler.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l110_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing databases is hard if they are unwilling to keep testing logs.
+* **Doğru Çeviri:** Günlükleri test etmeye devam etmeye isteksizlerse veritabanlarını yönetmek zordur.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l110_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They are unwilling to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye isteksizdirler.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l110_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to avoid developers who are unwilling to write secure code." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to avoid developers who are unwilling to write secure code.
+* **Doğru Çeviri:** Güvenli kod yazmaya isteksiz geliştiricilerden kaçınmaya karar verdiler.
+
+### Lesson 5 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l111_ex1_q3
+* **Yönerge:** "are reluctant to verify keys" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are reluctant to verify keys
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l111_ex1_q4
+* **Yönerge:** "am reluctant to assist users" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am reluctant to assist users
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l111_ex1_q5
+* **Yönerge:** "is reluctant to reboot servers" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is reluctant to reboot servers
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l111_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** anahtarları doğrulamaya gönülsüzdürler
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l111_ex1_q12
+* **Yönerge:** "is reluctant to reboot servers" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** is reluctant to reboot servers
+* **Doğru Çeviri:** sunucuları yeniden başlatmaya gönülsüzdür
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l111_ex2_q2
+* **Yönerge:** "The developers are reluctant to update the code to resolve errors." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The developers are reluctant to update the code to resolve errors.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l111_ex2_q4
+* **Yönerge:** "The team is reluctant to assist users during the system latency." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is reluctant to assist users during the system latency.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l111_ex2_q5
+* **Yönerge:** "He is reluctant to reboot the server to clean the memory logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is reluctant to reboot the server to clean the memory logs.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l111_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yeni kullanıcının güvenlik kimlik bilgilerini doğrulamaya gönülsüzüz.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l111_ex2_q12
+* **Yönerge:** "He is reluctant to reboot the server to clean the memory logs." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is reluctant to reboot the server to clean the memory logs.
+* **Doğru Çeviri:** Bellek günlüklerini temizlemek için sunucuyu yeniden başlatmaya gönülsüzdür.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l111_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "They are reluctant to be tested by the security board tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** They are reluctant to be tested by the security board tomorrow.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l111_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing databases is hard if they are reluctant to keep testing logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing databases is hard if they are reluctant to keep testing logs.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l111_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The team is reluctant to deploy the modified framework immediately." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The team is reluctant to deploy the modified framework immediately.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** They are reluctant to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye gönülsüzdürler.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l111_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing databases is hard if they are reluctant to keep testing logs.
+* **Doğru Çeviri:** Günlükleri test etmeye devam etmeye gönülsüzlerse veritabanlarını yönetmek zordur.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l111_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** They are reluctant to be tested by the security board tomorrow.
+* **Doğru Çeviri:** Yarın güvenlik kurulu tarafından test edilmeye gönülsüzdürler.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l111_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to avoid developers who are reluctant to write secure code." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to avoid developers who are reluctant to write secure code.
+* **Doğru Çeviri:** Güvenli kod yazmaya gönülsüz geliştiricilerden kaçınmaya karar verdiler.
+
+### Lesson 6 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l112_ex1_q3
+* **Yönerge:** "are likely to save time" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are likely to save time
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l112_ex1_q4
+* **Yönerge:** "is likely to remain stable" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is likely to remain stable
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l112_ex1_q5
+* **Yönerge:** "am likely to check records" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am likely to check records
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l112_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** zaman kazanmaları muhtemeldir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l112_ex1_q12
+* **Yönerge:** "am likely to check records" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am likely to check records
+* **Doğru Çeviri:** kayıtları kontrol etmem muhtemeldir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l112_ex2_q2
+* **Yönerge:** "The server is likely to fail soon under this intense load." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The server is likely to fail soon under this intense load.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l112_ex2_q4
+* **Yönerge:** "The database is likely to remain stable after the update." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is likely to remain stable after the update.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l112_ex2_q5
+* **Yönerge:** "He is likely to verify the security files before leaving today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is likely to verify the security files before leaving today.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l112_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Otomatik sorgu optimizasyonu kullanarak zaman kazanmamız muhtemeldir.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l112_ex2_q12
+* **Yönerge:** "He is likely to verify the security files before leaving today." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is likely to verify the security files before leaving today.
+* **Doğru Çeviri:** Bugün ayrılmadan önce güvenlik dosyalarını doğrulaması muhtemeldir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l112_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The files are likely to be deleted if we do not verify the credentials." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The files are likely to be deleted if we do not verify the credentials.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l112_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring warnings is dangerous since crashing the server is likely to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring warnings is dangerous since crashing the server is likely to happen.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l112_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is likely to resolve the latency issues today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is likely to resolve the latency issues today.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The files are likely to be deleted if we do not verify the credentials.
+* **Doğru Çeviri:** Kimlik bilgilerini doğrulamazsak dosyaların silinmesi muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l112_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring warnings is dangerous since crashing the server is likely to happen.
+* **Doğru Çeviri:** Sunucunun çökmesi muhtemel olduğu için uyarıları göz ardı etmek tehlikelidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l112_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The files are likely to be deleted if we do not verify the credentials.
+* **Doğru Çeviri:** Kimlik bilgilerini doğrulamazsak dosyaların silinmesi muhtemeldir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l112_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to verify the keys which are likely to secure the records." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to verify the keys which are likely to secure the records.
+* **Doğru Çeviri:** Kayıtları koruması muhtemel olan anahtarları doğrulamaya karar verdiler.
+
+### Lesson 7 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l113_ex1_q3
+* **Yönerge:** "are unlikely to save time" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are unlikely to save time
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l113_ex1_q4
+* **Yönerge:** "is unlikely to remain stable" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is unlikely to remain stable
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l113_ex1_q5
+* **Yönerge:** "am unlikely to check records" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am unlikely to check records
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l113_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** zaman kazanmaları muhtemel değildir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l113_ex1_q12
+* **Yönerge:** "am unlikely to check records" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am unlikely to check records
+* **Doğru Çeviri:** kayıtları kontrol etmem muhtemel değildir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l113_ex2_q2
+* **Yönerge:** "The server is unlikely to fail soon under this intense load." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The server is unlikely to fail soon under this intense load.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l113_ex2_q4
+* **Yönerge:** "The database is unlikely to remain stable after the update." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is unlikely to remain stable after the update.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l113_ex2_q5
+* **Yönerge:** "He is unlikely to verify the security files before leaving today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is unlikely to verify the security files before leaving today.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l113_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Otomatik sorgu optimizasyonu kullanarak zaman kazanmamız muhtemel değildir.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l113_ex2_q12
+* **Yönerge:** "He is unlikely to verify the security files before leaving today." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is unlikely to verify the security files before leaving today.
+* **Doğru Çeviri:** Bugün ayrılmadan önce güvenlik dosyalarını doğrulaması muhtemel değildir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l113_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The files are unlikely to be deleted if we verify the credentials." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The files are unlikely to be deleted if we verify the credentials.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l113_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring warnings is dangerous since crashing the server is unlikely to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring warnings is dangerous since crashing the server is unlikely to happen.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l113_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is unlikely to resolve the latency issues today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is unlikely to resolve the latency issues today.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The files are unlikely to be deleted if we verify the credentials.
+* **Doğru Çeviri:** Kimlik bilgilerini doğrularsak dosyaların silinmesi muhtemel değildir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l113_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring warnings is dangerous since crashing the server is unlikely to happen.
+* **Doğru Çeviri:** Sunucunun çökmesi muhtemel olmadığı için uyarıları göz ardı etmek tehlikelidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l113_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The files are unlikely to be deleted if we verify the credentials.
+* **Doğru Çeviri:** Kimlik bilgilerini doğrularsak dosyaların silinmesi muhtemel değildir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l113_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to verify the keys which are unlikely to fail soon." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to verify the keys which are unlikely to fail soon.
+* **Doğru Çeviri:** Yakında başarısız olması muhtemel olmayan anahtarları doğrulamaya karar verdiler.
+
+### Lesson 8 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l114_ex1_q3
+* **Yönerge:** "are bound to save logs" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are bound to save logs
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l114_ex1_q4
+* **Yönerge:** "is bound to remain active" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is bound to remain active
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l114_ex1_q5
+* **Yönerge:** "am bound to verify metrics" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am bound to verify metrics
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l114_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** günlükleri kaydetmeleri kaçınılmazdır
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l114_ex1_q12
+* **Yönerge:** "am bound to verify metrics" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am bound to verify metrics
+* **Doğru Çeviri:** metrikleri doğrulamam kaçınılmazdır
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l114_ex2_q2
+* **Yönerge:** "The system is bound to crash soon if we ignore parameters." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system is bound to crash soon if we ignore parameters.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l114_ex2_q4
+* **Yönerge:** "The database is bound to remain active during the network update." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is bound to remain active during the network update.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l114_ex2_q5
+* **Yönerge:** "He is bound to verify metrics before the board meets tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is bound to verify metrics before the board meets tomorrow.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l114_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Sunucu mimarisini korumak için günlükleri kaydetmemiz kaçınılmazdır.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l114_ex2_q12
+* **Yönerge:** "He is bound to verify metrics before the board meets tomorrow." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is bound to verify metrics before the board meets tomorrow.
+* **Doğru Çeviri:** Yarın kurul toplanmadan önce metrikleri doğrulaması kaçınılmazdır.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l114_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The credentials are bound to be verified before access is granted." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The credentials are bound to be verified before access is granted.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l114_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring alerts is risky because losing datasets is bound to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is bound to happen.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l114_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified code is bound to resolve the latency anomalies today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified code is bound to resolve the latency anomalies today.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The credentials are bound to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l114_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is bound to happen.
+* **Doğru Çeviri:** Veri kümelerini kaybetmek kaçınılmaz olduğu için uyarıları göz ardı etmek risklidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l114_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The credentials are bound to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kaçınılmazdır.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l114_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to verify the logs which are bound to show the error source." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to verify the logs which are bound to show the error source.
+* **Doğru Çeviri:** Hatanın kaynağını göstermesi kaçınılmaz olan günlükleri doğrulamak istiyorlar.
+
+### Lesson 9 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l115_ex1_q3
+* **Yönerge:** "are certain to save logs" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are certain to save logs
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l115_ex1_q4
+* **Yönerge:** "is certain to remain active" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is certain to remain active
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l115_ex1_q5
+* **Yönerge:** "am certain to verify metrics" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am certain to verify metrics
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l115_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** günlükleri kaydetmeleri kesindir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l115_ex1_q12
+* **Yönerge:** "am certain to verify metrics" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am certain to verify metrics
+* **Doğru Çeviri:** metrikleri doğrulamam kesindir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l115_ex2_q2
+* **Yönerge:** "The system is certain to crash soon if we ignore parameters." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system is certain to crash soon if we ignore parameters.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l115_ex2_q4
+* **Yönerge:** "The database is certain to remain active during the network update." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is certain to remain active during the network update.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l115_ex2_q5
+* **Yönerge:** "He is certain to verify metrics before the board meets tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is certain to verify metrics before the board meets tomorrow.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l115_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Sunucu mimarisini korumak için günlükleri kaydetmemiz kesindir.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l115_ex2_q12
+* **Yönerge:** "He is certain to verify metrics before the board meets tomorrow." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is certain to verify metrics before the board meets tomorrow.
+* **Doğru Çeviri:** Yarın kurul toplanmadan önce metrikleri doğrulaması kesindir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l115_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The credentials are certain to be verified before access is granted." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l115_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring alerts is risky because losing datasets is certain to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is certain to happen.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l115_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified code is certain to resolve the latency anomalies today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified code is certain to resolve the latency anomalies today.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l115_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is certain to happen.
+* **Doğru Çeviri:** Veri kümelerini kaybetmek kesin olduğu için uyarıları göz ardı etmek risklidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l115_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l115_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to verify the logs which are certain to show the error source." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to verify the logs which are certain to show the error source.
+* **Doğru Çeviri:** Hatanın kaynağını göstermesi kesin olan günlükleri doğrulamak istiyorlar.
+
+### Lesson 10 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l116_ex1_q3
+* **Yönerge:** "are doomed to crash today" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are doomed to crash today
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l116_ex1_q4
+* **Yönerge:** "is doomed to remain inactive" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is doomed to remain inactive
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l116_ex1_q5
+* **Yönerge:** "am doomed to repeat errors" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am doomed to repeat errors
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l116_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** bugün çökmeye mahkumdurlar
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l116_ex1_q12
+* **Yönerge:** "am doomed to repeat errors" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am doomed to repeat errors
+* **Doğru Çeviri:** hataları tekrarlamaya mahkumum
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l116_ex2_q2
+* **Yönerge:** "The project is doomed to fail soon without experienced developers." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The project is doomed to fail soon without experienced developers.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l116_ex2_q4
+* **Yönerge:** "The database is doomed to remain inactive until we fix logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is doomed to remain inactive until we fix logs.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l116_ex2_q5
+* **Yönerge:** "He is doomed to repeat errors if he ignores the guidelines." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is doomed to repeat errors if he ignores the guidelines.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l116_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Sunucular bu aşırı iş yükü altında bugün çökmeye mahkumdur.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l116_ex2_q12
+* **Yönerge:** "He is doomed to repeat errors if he ignores the guidelines." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is doomed to repeat errors if he ignores the guidelines.
+* **Doğru Çeviri:** Yönergeleri göz ardı ederse hataları tekrarlamaya mahkumdur.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l116_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The files are doomed to be deleted because the server was corrupted." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The files are doomed to be deleted because the server was corrupted.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l116_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring safety rules means crashing the pipeline is doomed to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring safety rules means crashing the pipeline is doomed to happen.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l116_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified framework is doomed to crash without index optimization." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified framework is doomed to crash without index optimization.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The files are doomed to be deleted because the server was corrupted.
+* **Doğru Çeviri:** Sunucu bozulduğu için dosyalar silinmeye mahkumdur.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l116_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring safety rules means crashing the pipeline is doomed to happen.
+* **Doğru Çeviri:** Güvenlik kurallarını göz ardı etmek, hattın çökmesinin kaçınılmaz olduğunu gösterir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l116_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The files are doomed to be deleted because the server was corrupted.
+* **Doğru Çeviri:** Sunucu bozulduğu için dosyalar silinmeye mahkumdur.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l116_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to avoid methods which are doomed to generate validation errors." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to avoid methods which are doomed to generate validation errors.
+* **Doğru Çeviri:** Doğrulama hataları üretmeye mahkum olan yöntemlerden kaçınmak istiyorlar.
+
+### Lesson 11 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l117_ex1_q3
+* **Yönerge:** "are to verify credentials" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are to verify credentials
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l117_ex1_q4
+* **Yönerge:** "is to remain offline" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is to remain offline
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l117_ex1_q5
+* **Yönerge:** "am to check files" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am to check files
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l117_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** kimlik bilgilerini doğrulamak zorundadırlar
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l117_ex1_q12
+* **Yönerge:** "am to check files" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am to check files
+* **Doğru Çeviri:** dosyaları kontrol etmem gerekmektedir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l117_ex2_q2
+* **Yönerge:** "The system upgrade is to start tomorrow morning at nine." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system upgrade is to start tomorrow morning at nine.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l117_ex2_q4
+* **Yönerge:** "The database is to remain offline during the server migration." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is to remain offline during the server migration.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l117_ex2_q5
+* **Yönerge:** "He is to check files regularly to identify memory leaks." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is to check files regularly to identify memory leaks.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l117_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Teknisyenler, erişim verilmeden önce kimlik bilgilerini doğrulamak zorundadırlar.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l117_ex2_q12
+* **Yönerge:** "He is to check files regularly to identify memory leaks." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is to check files regularly to identify memory leaks.
+* **Doğru Çeviri:** Bellek sızıntılarını belirlemek için dosyaları düzenli olarak kontrol etmelidir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l117_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The active files are to be deleted if the code fails." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The active files are to be deleted if the code fails.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l117_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing queries is crucial since they are to analyze large datasets." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing queries is crucial since they are to analyze large datasets.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l117_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is to resolve the database latency issues today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is to resolve the database latency issues today.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The active files are to be deleted if the code fails.
+* **Doğru Çeviri:** Kod başarısız olursa aktif dosyaların silinmesi planlanmaktadır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l117_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing queries is crucial since they are to analyze large datasets.
+* **Doğru Çeviri:** Büyük veri kümelerini analiz edecekleri için sorguları yönetmek çok önemlidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l117_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The active files are to be deleted if the code fails.
+* **Doğru Çeviri:** Kod başarısız olursa aktif dosyaların silinmesi planlanmaktadır.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l117_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to write guidelines which are to secure the application." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to write guidelines which are to secure the application.
+* **Doğru Çeviri:** Uygulamayı güvenli hale getirmesi planlanan yönergeler yazmaya karar verdiler.
+
+### Lesson 12 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l118_ex1_q3
+* **Yönerge:** "are supposed to save files" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are supposed to save files
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l118_ex1_q4
+* **Yönerge:** "is supposed to remain online" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is supposed to remain online
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l118_ex1_q5
+* **Yönerge:** "am supposed to verify logs" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am supposed to verify logs
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l118_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** dosyaları kaydetmeleri gerekir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l118_ex1_q12
+* **Yönerge:** "am supposed to verify logs" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am supposed to verify logs
+* **Doğru Çeviri:** günlükleri doğrulamam gerekir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l118_ex2_q2
+* **Yönerge:** "The system upgrade is supposed to start today at noon." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system upgrade is supposed to start today at noon.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l118_ex2_q4
+* **Yönerge:** "The database is supposed to remain online during the backup." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is supposed to remain online during the backup.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l118_ex2_q5
+* **Yönerge:** "He is supposed to verify logs to prevent database failures." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is supposed to verify logs to prevent database failures.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l118_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Geliştiricilerin oturumu kapatmadan önce dosyaları kaydetmesi gerekir.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l118_ex2_q12
+* **Yönerge:** "He is supposed to verify logs to prevent database failures." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is supposed to verify logs to prevent database failures.
+* **Doğru Çeviri:** Veritabanı hatalarını önlemek için günlükleri doğrulaması gerekir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l118_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The files are supposed to be verified by the security team." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The files are supposed to be verified by the security team.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l118_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring alerts is dangerous since testing code is supposed to continue." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring alerts is dangerous since testing code is supposed to continue.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l118_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is supposed to resolve the database latency today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is supposed to resolve the database latency today.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The files are supposed to be verified by the security team.
+* **Doğru Çeviri:** Dosyaların güvenlik ekibi tarafından doğrulanması bekleniyor.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l118_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring alerts is dangerous since testing code is supposed to continue.
+* **Doğru Çeviri:** Kod testinin devam etmesi gerektiği için uyarıları göz ardı etmek tehlikelidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l118_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The files are supposed to be verified by the security team.
+* **Doğru Çeviri:** Dosyaların güvenlik ekibi tarafından doğrulanması bekleniyor.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l118_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to verify the logs which are supposed to show source." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to verify the logs which are supposed to show source.
+* **Doğru Çeviri:** Kaynağı göstermesi gereken günlükleri doğrulamak istiyorlar.
+
+### Lesson 13 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l119_ex1_q3
+* **Yönerge:** "are unable to save metrics" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are unable to save metrics
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l119_ex1_q4
+* **Yönerge:** "is unable to remain active" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is unable to remain active
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l119_ex1_q5
+* **Yönerge:** "am unable to check keys" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am unable to check keys
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l119_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** metrikleri kaydedemiyorlar
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l119_ex1_q12
+* **Yönerge:** "am unable to check keys" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am unable to check keys
+* **Doğru Çeviri:** anahtarları kontrol edemiyorum
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l119_ex2_q2
+* **Yönerge:** "The program is unable to run queries due to database corruption." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The program is unable to run queries due to database corruption.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l119_ex2_q4
+* **Yönerge:** "The backup system is unable to remain active under stress." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The backup system is unable to remain active under stress.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l119_ex2_q5
+* **Yönerge:** "He is unable to check keys before the database reboot completes." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is unable to check keys before the database reboot completes.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l119_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Teknisyenler güncelleme sırasında metrikleri kaydedemiyorlar.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l119_ex2_q12
+* **Yönerge:** "He is unable to check keys before the database reboot completes." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is unable to check keys before the database reboot completes.
+* **Doğru Çeviri:** Veritabanı yeniden başlatılması tamamlanmadan önce anahtarları kontrol edemiyor.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l119_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The files are unable to be restored because backup failed." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The files are unable to be restored because backup failed.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l119_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring alerts is dangerous if protecting server is unable to continue." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring alerts is dangerous if protecting server is unable to continue.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l119_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is unable to resolve the latency issues today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is unable to resolve the latency issues today.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The files are unable to be restored because backup failed.
+* **Doğru Çeviri:** Yedekleme başarısız olduğu için dosyalar geri yüklenemiyor.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l119_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring alerts is dangerous if protecting server is unable to continue.
+* **Doğru Çeviri:** Sunucuyu korumak devam edemiyorsa uyarıları göz ardı etmek tehlikelidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l119_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The files are unable to be restored because backup failed.
+* **Doğru Çeviri:** Yedekleme başarısız olduğu için dosyalar geri yüklenemiyor.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l119_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They decided to write scripts which are unable to modify databases." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They decided to write scripts which are unable to modify databases.
+* **Doğru Çeviri:** Veritabanlarını değiştiremeyecek betikler yazmaya karar verdiler.
+
+### Lesson 14 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l120_ex1_q3
+* **Yönerge:** "are about to save files" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are about to save files
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l120_ex1_q4
+* **Yönerge:** "is about to remain offline" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is about to remain offline
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l120_ex1_q5
+* **Yönerge:** "am about to verify metrics" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am about to verify metrics
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l120_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** dosyaları kaydetmek üzeredirler
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l120_ex1_q12
+* **Yönerge:** "am about to verify metrics" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am about to verify metrics
+* **Doğru Çeviri:** metrikleri doğrulamak üzereyim
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l120_ex2_q2
+* **Yönerge:** "The system server is about to crash soon under this load." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system server is about to crash soon under this load.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l120_ex2_q4
+* **Yönerge:** "The database is about to remain offline for scheduled updates." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is about to remain offline for scheduled updates.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l120_ex2_q5
+* **Yönerge:** "He is about to verify metrics before the simulation starts today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is about to verify metrics before the simulation starts today.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l120_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Veri geçiş kaybını önlemek için dosyaları kaydetmek üzereyiz.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l120_ex2_q12
+* **Yönerge:** "He is about to verify metrics before the simulation starts today." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is about to verify metrics before the simulation starts today.
+* **Doğru Çeviri:** Bugün simülasyon başlamadan önce metrikleri doğrulamak üzeredir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l120_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The credentials are about to be verified by the admin team." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The credentials are about to be verified by the admin team.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l120_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring the warnings is risky since failing database is about to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring the warnings is risky since failing database is about to happen.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l120_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified algorithm is about to resolve the latency spikes now." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified algorithm is about to resolve the latency spikes now.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The credentials are about to be verified by the admin team.
+* **Doğru Çeviri:** Kimlik bilgileri yönetici ekibi tarafından doğrulanmak üzeredir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l120_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring the warnings is risky since failing database is about to happen.
+* **Doğru Çeviri:** Veritabanının çökmesi yakın olduğu için uyarıları göz ardı etmek risklidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l120_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The credentials are about to be verified by the admin team.
+* **Doğru Çeviri:** Kimlik bilgileri yönetici ekibi tarafından doğrulanmak üzeredir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l120_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to test tools which are about to deploy neural networks." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to test tools which are about to deploy neural networks.
+* **Doğru Çeviri:** Sinir ağlarını dağıtmak üzere olan araçları test etmek istiyorlar.
+
+### Lesson 15 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l121_ex1_q3
+* **Yönerge:** "are certain to save logs" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are certain to save logs
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l121_ex1_q4
+* **Yönerge:** "is certain to remain active" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is certain to remain active
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l121_ex1_q5
+* **Yönerge:** "am certain to verify metrics" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** am certain to verify metrics
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l121_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** günlükleri kaydetmeleri kesindir
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l121_ex1_q12
+* **Yönerge:** "am certain to verify metrics" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** am certain to verify metrics
+* **Doğru Çeviri:** metrikleri doğrulamam kesindir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l121_ex2_q2
+* **Yönerge:** "The system is certain to crash soon if we ignore parameters." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The system is certain to crash soon if we ignore parameters.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l121_ex2_q4
+* **Yönerge:** "The database is certain to remain active during the network update." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is certain to remain active during the network update.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l121_ex2_q5
+* **Yönerge:** "He is certain to verify metrics before the board meets tomorrow." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is certain to verify metrics before the board meets tomorrow.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l121_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Sunucu mimarisini korumak için günlükleri kaydetmemiz kesindir.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l121_ex2_q12
+* **Yönerge:** "He is certain to verify metrics before the board meets tomorrow." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is certain to verify metrics before the board meets tomorrow.
+* **Doğru Çeviri:** Yarın kurul toplanmadan önce metrikleri doğrulaması kesindir.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l121_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The credentials are certain to be verified before access is granted." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l121_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Ignoring alerts is risky because losing datasets is certain to happen." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is certain to happen.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l121_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified code is certain to resolve the latency anomalies today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified code is certain to resolve the latency anomalies today.
+* **Doğru Seçenek İndeksi:** 2
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l121_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Ignoring alerts is risky because losing datasets is certain to happen.
+* **Doğru Çeviri:** Veri kümelerini kaybetmek kesin olduğu için uyarıları göz ardı etmek risklidir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l121_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l121_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to verify the logs which are certain to show the error source." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to verify the logs which are certain to show the error source.
+* **Doğru Çeviri:** Hatanın kaynağını göstermesi kesin olan günlükleri doğrulamak istiyorlar.
+
+### Lesson 16 - Çıkarılan Sorular
+#### Soru 1 (multiple-choice)
+* **Orijinal ID:** u103l122_ex1_q3
+* **Yönerge:** "are willing to verify keys" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** are willing to verify keys
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 2 (multiple-choice)
+* **Orijinal ID:** u103l122_ex1_q4
+* **Yönerge:** "is unable to remain active" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is unable to remain active
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 3 (multiple-choice)
+* **Orijinal ID:** u103l122_ex1_q5
+* **Yönerge:** "is about to crash soon" ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** is about to crash soon
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 4 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex1_q7
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We ___ save the parameters before rebooting.
+* **Doğru Çeviri:** Yeniden başlatmadan önce parametreleri kaydetmemiz beklenir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 5 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex1_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The secondary database server ___ crash soon.
+* **Doğru Çeviri:** İkincil veritabanı sunucusunun yakında çökmesi kesin/kaçınılmazdır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 6 (word-bank)
+* **Orijinal ID:** u103l122_ex1_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** anahtarları doğrulamaya isteklidirler
+
+#### Soru 7 (translation-text)
+* **Orijinal ID:** u103l122_ex1_q12
+* **Yönerge:** "is about to crash soon" ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** is about to crash soon
+* **Doğru Çeviri:** yakında çökmek üzeredir
+
+#### Soru 8 (multiple-choice)
+* **Orijinal ID:** u103l122_ex2_q2
+* **Yönerge:** "The server is likely to fail soon under this intense workload." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The server is likely to fail soon under this intense workload.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 9 (multiple-choice)
+* **Orijinal ID:** u103l122_ex2_q4
+* **Yönerge:** "The database is supposed to remain online during the backup migration." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The database is supposed to remain online during the backup migration.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 10 (multiple-choice)
+* **Orijinal ID:** u103l122_ex2_q5
+* **Yönerge:** "He is unable to check keys before the database reboot completes." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** He is unable to check keys before the database reboot completes.
+* **Doğru Seçenek İndeksi:** 1
+
+#### Soru 11 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex2_q6
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The server ___ crash soon under this massive user workload.
+* **Doğru Çeviri:** Sunucunun bu yoğun kullanıcı yükü altında yakında başarısız olması muhtemeldir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 12 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex2_q8
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The developer ___ update the database parameters yesterday.
+* **Doğru Çeviri:** Geliştirici dün veritabanı parametrelerini güncellemeye istekliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 13 (word-bank)
+* **Orijinal ID:** u103l122_ex2_q10
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Doğru Çeviri:** Yeni kullanıcının güvenlik kimlik bilgilerini doğrulamaya istekliyiz.
+
+#### Soru 14 (translation-text)
+* **Orijinal ID:** u103l122_ex2_q12
+* **Yönerge:** "He is unable to check keys before the database reboot completes." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** He is unable to check keys before the database reboot completes.
+* **Doğru Çeviri:** Veritabanı yeniden başlatılması tamamlanmadan önce anahtarları kontrol edemiyor.
+
+#### Soru 15 (multiple-choice)
+* **Orijinal ID:** u103l122_ex3_q2
+* **Yönerge:** [Edilgen (Passive) Yapısı] "The credentials are certain to be verified before access is granted." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 16 (multiple-choice)
+* **Orijinal ID:** u103l122_ex3_q3
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] "Managing databases is easy if they are willing to keep testing logs." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** Managing databases is easy if they are willing to keep testing logs.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 17 (multiple-choice)
+* **Orijinal ID:** u103l122_ex3_q5
+* **Yönerge:** [Past Participle Sıfatı] "The modified query is likely to resolve the latency issues today." ifadesinin Türkçe karşılığı hangisidir?
+* **İngilizce Cümle:** The modified query is likely to resolve the latency issues today.
+* **Doğru Seçenek İndeksi:** 3
+
+#### Soru 18 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex3_q6
+* **Yönerge:** [Edilgen (Passive) Yapısı] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 19 (fill-blank-dropdown)
+* **Orijinal ID:** u103l122_ex3_q7
+* **Yönerge:** [Fiil İsmi (Gerund) + Nesnesi] Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Managing databases is easy if they are willing to keep testing logs.
+* **Doğru Çeviri:** Günlükleri test etmeye devam etmeye istekliyseler veritabanlarını yönetmek kolaydır.
+* **Doğru Seçenek İndeksi:** 0
+
+#### Soru 20 (word-bank)
+* **Orijinal ID:** u103l122_ex3_q9
+* **Yönerge:** [Edilgen (Passive) Yapısı] Cümlenin Türkçe karşılığını oluşturun:
+* **İngilizce Cümle:** The credentials are certain to be verified before access is granted.
+* **Doğru Çeviri:** Erişim verilmeden önce kimlik bilgilerinin doğrulanması kesindir.
+
+#### Soru 21 (translation-text)
+* **Orijinal ID:** u103l122_ex3_q11
+* **Yönerge:** [Mastar (Infinitive)] "They want to verify the logs which are certain to show the error source." ifadesini Türkçe'ye çevirin:
+* **İngilizce Cümle:** They want to verify the logs which are certain to show the error source.
+* **Doğru Çeviri:** Hatanın kaynağını göstermesi kesin olan günlükleri doğrulamak istiyorlar.
+
+
+
+# Silinen Sorular Arşivi (Bölüm 40: Bağlaçlar - 2026-07-21)
+
+Bu dosya, Bölüm 40 altındaki egzersizlerin sadeleştirilmesi, soru tiplerinin zenginleştirilmesi ve pedagojik basitten zora (Öbek -> Cümle -> İleri Cümle) 11 alıştırmaya (her alıştırmada 15 soru, toplam 165 soru) indirgenmesi sırasında çıkarılan kelime eşleştirme sorularını ve fazla olan alıştırma sorularını içermektedir.
+
+## Lesson 1 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u40l1_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> although
+  - ancak / yine de <--> however
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> even though
+  - -e rağmen <--> despite
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> even though
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> though
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> though
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (her ne kadar) <--> much as
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> though
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (her ne kadar) <--> much as
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex1_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Tired ___ he was after the long journey, he attended the meeting.
+* **Seçenekler:** although | though | Much as | even though
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.
+
+---
+
+### Soru ID: u40l1_ex1_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The strategy, ___ risky in the short term, proved to be highly lucrative.
+* **Seçenekler:** Much as | Although | Even though | though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The food was delicious, ___ the service was quite slow.
+* **Seçenekler:** though | despite | even though | in spite of
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Tired ___ he was after the long journey, he attended the meeting.
+* **Seçenekler:** even though | though | although | Much as
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The strategy, ___ risky in the short term, proved to be highly lucrative.
+* **Seçenekler:** Even though | although | in spite of | though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ I want to help you, I simply do not have the time right now.
+* **Seçenekler:** Much as | even though | although | in spite of
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ they admired his intellect, they could not support his radical methods.
+* **Seçenekler:** in spite of | Even though | though | Much as
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler.
+
+---
+
+### Soru ID: u40l1_ex2_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Identify the illegal structure: '___ his great desire to win, he refused to train.'
+* **Seçenekler:** in spite of | Despite | Much as | though
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ I want to help you, I simply do not have the time right now.
+* **Seçenekler:** in spite of | although | Much as | yet
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ they admired his intellect, they could not support his radical methods.
+* **Seçenekler:** though | In spite of | Despite | Much as
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Identify the illegal structure: '___ his great desire to win, he refused to train.'
+* **Seçenekler:** In spite of | but | although | Much as
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ his great effort, he lost the match.
+* **Seçenekler:** though | yet | Despite | Much as
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Büyük çabasına rağmen maçı kaybetti.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** They arrived on time ___ the heavy traffic on the highway.
+* **Seçenekler:** Despite | yet | but | in spite of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.
+
+---
+
+### Soru ID: u40l1_ex3_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the fact that she was injured, she completed the marathon.
+* **Seçenekler:** Much as | though | yet | In spite of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Sakatlanmış olmasına rağmen maratonu tamamladı.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ his great effort, he lost the match.
+* **Seçenekler:** but | though | Despite | yet
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Büyük çabasına rağmen maçı kaybetti.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** They arrived on time ___ the heavy traffic on the highway.
+* **Seçenekler:** but | in spite of | however | yet
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the fact that she was injured, she completed the marathon.
+* **Seçenekler:** In spite of | However | but | although
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Sakatlanmış olmasına rağmen maratonu tamamladı.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The tablet is affordable, ___ it lacks a high-resolution screen.
+* **Seçenekler:** but | though | Much as | Despite
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Kelly was a convicted criminal, ___ many people admired him.
+* **Seçenekler:** yet | In spite of | but | However
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Kelly hüküm giymiş bir suçluydu, yine de birçok insan ona hayran kaldı.
+
+---
+
+### Soru ID: u40l1_ex4_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The air conditioner is working; ___ , it is still hot inside.
+* **Seçenekler:** however | though | Much as | yet
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Klima çalışıyor; ancak içerisi hala sıcak.
+
+---
+
+### Soru ID: u40l1_ex2_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir. | Çok hasta hissetmesine rağmen işe gitti. | Onun tavrını sevmiyorum. Yine de iyi bir öğretmen. | Dışarıda yoğun kar yağdığı için evde kalmaya karar verdik.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex2_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar. | Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı. | Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar. | Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex2_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The food was delicious, though the service was quite slow. |  Even though he had formal no training, his performance was flawless. | He had no formal training, his performance was flawless Even though . | Even though he had no formal training, his performance was flawless.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex2_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** I don't his like attitude. He is a good teacher, though . |  though i don't like his attitude. He is a good teacher,. | Although the book was very long, I finished it in two days. | I don't like his attitude. He is a good teacher, though.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex3_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar. | Onun tavrını sevmiyorum. Yine de iyi bir öğretmen. | Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir. | Çok hasta hissetmesine rağmen işe gitti.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex3_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi. | Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar. | Çok hasta hissetmesine rağmen işe gitti. | Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex3_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Working from home offers great flexibility. On the other hand, it can lead to isolation. | Tired though he was the after long journey, he attended the meeting. | He was after the long journey, he attended the meeting though tired. | Tired though he was after the long journey, he attended the meeting.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex3_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The strategy, though risky in the short term, proved to be highly lucrative. | The strategy, though risky in short the term, proved to be highly lucrative. | Risky in the short term, proved to be highly lucrative though the strategy,. | The tablet is affordable, but it lacks a high-resolution screen.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex4_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir. | Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı. | Çok hasta hissetmesine rağmen işe gitti. | Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex4_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok. | Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi. | Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur. | Şirket, merkezi olmayan bir yapı yerine merkezi bir yapıyı seçti.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex4_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The air conditioner is working; however, it is still hot inside. |  Much as they admired intellect, his they could not support his radical methods. | They admired his intellect, they could not support his radical methods Much as . | Much as they admired his intellect, they could not support his radical methods.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex4_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:**  Much as his great to desire win, he refused to train. | His great desire to win, he refused to train Much as . | Much as  his great desire to win, he refused to train. | Much as they admired his intellect, they could not support his radical methods.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex1_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as I want to help you, I simply do not have the time right now.
+
+---
+
+### Soru ID: u40l1_ex1_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler.
+
+---
+
+### Soru ID: u40l1_ex2_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The strategy, though risky in the short term, proved to be highly lucrative.
+
+---
+
+### Soru ID: u40l1_ex2_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as I want to help you, I simply do not have the time right now.
+
+---
+
+### Soru ID: u40l1_ex2_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as they admired his intellect, they could not support his radical methods.
+
+---
+
+### Soru ID: u40l1_ex2_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as  his great desire to win, he refused to train.
+
+---
+
+### Soru ID: u40l1_ex2_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Despite his great effort, he lost the match.
+
+---
+
+### Soru ID: u40l1_ex2_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.
+
+---
+
+### Soru ID: u40l1_ex3_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as  his great desire to win, he refused to train.
+
+---
+
+### Soru ID: u40l1_ex3_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Despite his great effort, he lost the match.
+
+---
+
+### Soru ID: u40l1_ex3_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** They arrived on time in spite of the heavy traffic on the highway.
+
+---
+
+### Soru ID: u40l1_ex3_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In spite of the fact that she was injured, she completed the marathon.
+
+---
+
+### Soru ID: u40l1_ex3_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The tablet is affordable, but it lacks a high-resolution screen.
+
+---
+
+### Soru ID: u40l1_ex3_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Kelly hüküm giymiş bir suçluydu, yine de birçok insan ona hayran kaldı.
+
+---
+
+### Soru ID: u40l1_ex4_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In spite of the fact that she was injured, she completed the marathon.
+
+---
+
+### Soru ID: u40l1_ex4_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The tablet is affordable, but it lacks a high-resolution screen.
+
+---
+
+### Soru ID: u40l1_ex4_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Kelly was a convicted criminal, yet many people admired him.
+
+---
+
+### Soru ID: u40l1_ex4_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The air conditioner is working; however, it is still hot inside.
+
+---
+
+### Soru ID: u40l1_ex4_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The initial results were promising. However, further testing revealed several bugs.
+
+---
+
+### Soru ID: u40l1_ex4_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi.
+
+---
+
+### Soru ID: u40l1_ex2_tx_en (translation-text)
+* **Yönerge:** "Otoyoldaki yoğun trafiğe rağmen zamanında vardılar." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex3_tx_tr (translation-text)
+* **Yönerge:** "The tablet is affordable, but it lacks a high-resolution screen." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex3_tx_en (translation-text)
+* **Yönerge:** "Kelly hüküm giymiş bir suçluydu, yine de birçok insan ona hayran kaldı." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex4_tx_tr (translation-text)
+* **Yönerge:** "The initial results were promising. However, further testing revealed several bugs." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex4_tx_en (translation-text)
+* **Yönerge:** "Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex5_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (her ne kadar) <--> much as
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex5_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> in spite of
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex5_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The economic data was discouraging; ___ , the stock market reached an all-time high.
+* **Seçenekler:** yet | nevertheless | Despite | However
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Ekonomik veriler cesaret kırıcıydı; yine de borsada tüm zamanların en yüksek seviyesine ulaşıldı.
+
+---
+
+### Soru ID: u40l1_ex5_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** There were serious security concerns. Nonetheless, the festival organizers decided to proceed.
+
+---
+
+### Soru ID: u40l1_ex5_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir.
+
+---
+
+### Soru ID: u40l1_ex6_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> in spite of
+  - ama <--> but
+  - henüz <--> yet
+  - -irken <--> while
+
+---
+
+### Soru ID: u40l1_ex6_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ancak / yine de <--> however
+  - -e rağmen <--> although
+  - çünkü <--> because
+  - -den beri <--> since
+
+---
+
+### Soru ID: u40l1_ex7_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ancak / yine de <--> however
+  - -irken <--> while
+  - -e rağmen <--> although
+  - ama <--> but
+
+---
+
+### Soru ID: u40l1_ex7_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yine de / buna rağmen <--> nevertheless
+  - -e rağmen <--> despite
+  - henüz <--> yet
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex8_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yine de / buna rağmen <--> nevertheless
+  - -irken <--> while
+  - -e rağmen <--> despite
+  - ama <--> but
+
+---
+
+### Soru ID: u40l1_ex8_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yine de / buna rağmen <--> nonetheless
+  - -e rağmen <--> although
+  - henüz <--> yet
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex9_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - diğer yandan <--> on the other hand
+  - -irken <--> while
+  - -e rağmen <--> despite
+  - ama <--> but
+
+---
+
+### Soru ID: u40l1_ex9_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e karşın (oysa) <--> whereas
+  - -e rağmen <--> although
+  - henüz <--> yet
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex10_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -irken <--> while
+  - -in aksine <--> unlike
+  - -e rağmen <--> despite
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex10_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in aksine <--> contrary to
+  - -den beri <--> since
+  - -e rağmen <--> although
+  - ama <--> but
+
+---
+
+### Soru ID: u40l1_ex6_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Working from home offers great flexibility. ___ , it can lead to isolation.
+* **Seçenekler:** On the other hand | Nonetheless | However | yet
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir.
+
+---
+
+### Soru ID: u40l1_ex6_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Nuclear energy is highly efficient. ___ , the disposal of radioactive waste remains unsolved.
+* **Seçenekler:** On the other hand | nevertheless | whereas | However
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Nükleer enerji son derece verimlidir. Diğer yandan, radyoaktif atıkların bertaraf edilmesi çözülmemiş bir sorun olarak kalmaktadır.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** There were serious security concerns. ___ , the festival organizers decided to proceed.
+* **Seçenekler:** however | although | Nonetheless | While
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Working from home offers great flexibility. ___ , it can lead to isolation.
+* **Seçenekler:** On the other hand | Unlike | nevertheless | Nonetheless
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Nuclear energy is highly efficient. ___ , the disposal of radioactive waste remains unsolved.
+* **Seçenekler:** On the other hand | While | nevertheless | whereas
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Nükleer enerji son derece verimlidir. Diğer yandan, radyoaktif atıkların bertaraf edilmesi çözülmemiş bir sorun olarak kalmaktadır.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** In Turkey, the summer is usually hot, ___ in England it is often rainy.
+* **Seçenekler:** While | Nonetheless | whereas | Unlike
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Some people prefer saving their money, ___ others enjoy spending it immediately.
+* **Seçenekler:** Unlike | whereas | however | while
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar.
+
+---
+
+### Soru ID: u40l1_ex7_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Identify the correct position: '___ master's programs focus on coursework, doctoral programs require original research.'
+* **Seçenekler:** While | Unlike | whereas | Nonetheless
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** In Turkey, the summer is usually hot, ___ in England it is often rainy.
+* **Seçenekler:** while | whereas | although | Despite
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Some people prefer saving their money, ___ others enjoy spending it immediately.
+* **Seçenekler:** whereas | On the other hand | Nonetheless | while
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Identify the correct position: '___ master's programs focus on coursework, doctoral programs require original research.'
+* **Seçenekler:** On the other hand | nevertheless | Nonetheless | While
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ his brother, who loves sports, Tom prefers reading books.
+* **Seçenekler:** Unlike | while | On the other hand | nevertheless
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ traditional cars, electric vehicles produce zero direct emissions.
+* **Seçenekler:** Unlike | On the other hand | While | whereas
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Geleneksel arabaların aksine, elektrikli araçlar sıfır doğrudan emisyon üretir.
+
+---
+
+### Soru ID: u40l1_ex8_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the fact that she is usually introverted, she spoke confidently at the conference.
+* **Seçenekler:** whereas | Despite | While | although
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ his brother, who loves sports, Tom prefers reading books.
+* **Seçenekler:** On the other hand | Unlike | Conversely | whereas
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ traditional cars, electric vehicles produce zero direct emissions.
+* **Seçenekler:** Contrary to | On the other hand | Unlike | while
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Geleneksel arabaların aksine, elektrikli araçlar sıfır doğrudan emisyon üretir.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the fact that she is usually introverted, she spoke confidently at the conference.
+* **Seçenekler:** conversely | Unlike | Despite | Contrary to
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ gold, which is highly unreactive, iron rusts quickly when exposed to moisture.
+* **Seçenekler:** Unlike | Contrary to | While | On the other hand
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ popular belief, bats are not actually blind.
+* **Seçenekler:** as opposed to | Contrary to | conversely | While
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Popüler inanışın aksine, yarasalar aslında kör değildir.
+
+---
+
+### Soru ID: u40l1_ex9_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The company selected a centralized framework, ___ a decentralized one.
+* **Seçenekler:** as opposed to | On the other hand | Despite | Unlike
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Şirket, merkezi olmayan bir yapı yerine merkezi bir yapıyı seçti.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ gold, which is highly unreactive, iron rusts quickly when exposed to moisture.
+* **Seçenekler:** Contrary to | as opposed to | Despite | Unlike
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ popular belief, bats are not actually blind.
+* **Seçenekler:** Unlike | since | Contrary to | Despite
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Popüler inanışın aksine, yarasalar aslında kör değildir.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The company selected a centralized framework, ___ a decentralized one.
+* **Seçenekler:** as opposed to | Despite | Contrary to | Conversely
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Şirket, merkezi olmayan bir yapı yerine merkezi bir yapıyı seçti.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** High tariff walls protect domestic industries; ___ , they reduce international trade volumes.
+* **Seçenekler:** While | conversely | because | Contrary to
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Yüksek tarife duvarları yerli sanayiyi korur; aksine, uluslararası ticaret hacmini azaltırlar.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** An increase in price reduces demand. ___ , a sharp decrease in price usually stimulates it.
+* **Seçenekler:** Conversely | in that | because | as opposed to
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Fiyattaki bir artış talebi azaltır. Aksine, fiyattaki keskin bir düşüş genellikle onu canlandırır.
+
+---
+
+### Soru ID: u40l1_ex10_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The ozone hole is potentially dangerous ___ the ozone in the atmosphere prevents ultraviolet light.
+* **Seçenekler:** since | Contrary to | as opposed to | because
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Ozon deliği potansiyel olarak tehlikelidir çünkü atmosferdeki ozon ultraviyole ışığı engeller.
+
+---
+
+### Soru ID: u40l1_ex7_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz. | Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler. | Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık. | Klima çalışıyor; ancak içerisi hala sıcak.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex7_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler. | Ekonomik veriler cesaret kırıcıydı; yine de borsada tüm zamanların en yüksek seviyesine ulaşıldı. | İlk sonuçlar umut vericiydi. Ancak, daha ileri testler birkaç hata ortaya çıkardı. | Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex7_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Despite his great effort, he lost the match. | The director, however , decided reject to the proposal despite the board's approval. | , decided to reject the proposal despite the board's approval however the director,. | The director, however, decided to reject the proposal despite the board's approval.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex7_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** , the stock market reached an all-time high nevertheless the economic data was discouraging;. | The economic data was discouraging; nevertheless , the market stock reached an all-time high. | The economic data was discouraging; nevertheless, the stock market reached an all-time high. | The economic was data discouraging; nevertheless , the stock market reached an all-time high.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex8_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Ekonomik veriler cesaret kırıcıydı; yine de borsada tüm zamanların en yüksek seviyesine ulaşıldı. | Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok. | Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır. | Nükleer enerji son derece verimlidir. Diğer yandan, radyoaktif atıkların bertaraf edilmesi çözülmemiş bir sorun olarak kalmaktadır.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex8_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Popüler inanışın aksine, yarasalar aslında kör değildir. | Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi. | Otoyoldaki yoğun trafiğe rağmen zamanında vardılar. | Kitap çok uzun olmasına rağmen onu iki günde bitirdim.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex8_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Working from home offers great flexibility. On the other hand , it lead can to isolation. | Working from offers home great flexibility. On the other hand , it can lead to isolation. | Working from home offers great flexibility. On the other hand, it can lead to isolation. | , it can lead to isolation On the other hand working from home offers great flexibility..
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex8_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved. | , the disposal of radioactive waste remains unsolved On the other hand nuclear energy is highly efficient.. | Nuclear energy is highly efficient. On the other hand , the of disposal radioactive waste remains unsolved. | Nuclear energy highly is efficient. On the other hand , the disposal of radioactive waste remains unsolved.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex9_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Nükleer enerji son derece verimlidir. Diğer yandan, radyoaktif atıkların bertaraf edilmesi çözülmemiş bir sorun olarak kalmaktadır. | Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder. | Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı. | Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex9_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Tasarım ne kadar mükemmel olursa olsun, uygun pazarlama olmadan satılmayacaktır. | Dışarıda yoğun kar yağdığı için evde kalmaya karar verdik. | Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur. | Popüler inanışın aksine, yarasalar aslında kör değildir.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex9_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Others enjoy spending it immediately while some people prefer saving their money,. | Some people prefer saving their money, while others enjoy spending it immediately. | Some people saving prefer their money, while others enjoy spending it immediately. | Some people prefer saving their money, while others enjoy it spending immediately.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex9_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Identify the correct position: 'While master's programs focus on coursework, doctoral programs require original research.' | Identify the correct position: ' While master's programs on focus coursework, doctoral programs require original research.' | Master's programs focus on coursework, doctoral programs require original research.' While identify the correct position: ' | Identify the position: correct ' While master's programs focus on coursework, doctoral programs require original research.'
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex10_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Onun tavrını sevmiyorum. Yine de iyi bir öğretmen. | Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir. | Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı. | Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex10_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder. | Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar. | Sakatlanmış olmasına rağmen maratonu tamamladı. | Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex10_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture. | Unlike traditional cars, electric vehicles produce zero direct emissions. | Traditional cars, electric vehicles produce zero direct emissions Unlike . |  Unlike traditional cars, vehicles electric produce zero direct emissions.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex10_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Despite  the fact that she is usually introverted, she spoke confidently at the conference. | The fact that she is usually introverted, she spoke confidently at the conference Despite . |  Despite the fact she that is usually introverted, she spoke confidently at the conference. | Kelly was a convicted criminal, yet many people admired him.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex6_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In Turkey, the summer is usually hot, whereas in England it is often rainy.
+
+---
+
+### Soru ID: u40l1_ex6_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar.
+
+---
+
+### Soru ID: u40l1_ex7_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved.
+
+---
+
+### Soru ID: u40l1_ex7_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In Turkey, the summer is usually hot, whereas in England it is often rainy.
+
+---
+
+### Soru ID: u40l1_ex7_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Some people prefer saving their money, while others enjoy spending it immediately.
+
+---
+
+### Soru ID: u40l1_ex7_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Identify the correct position: 'While master's programs focus on coursework, doctoral programs require original research.'
+
+---
+
+### Soru ID: u40l1_ex7_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Unlike his brother, who loves sports, Tom prefers reading books.
+
+---
+
+### Soru ID: u40l1_ex7_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Geleneksel arabaların aksine, elektrikli araçlar sıfır doğrudan emisyon üretir.
+
+---
+
+### Soru ID: u40l1_ex8_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Identify the correct position: 'While master's programs focus on coursework, doctoral programs require original research.'
+
+---
+
+### Soru ID: u40l1_ex8_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Unlike his brother, who loves sports, Tom prefers reading books.
+
+---
+
+### Soru ID: u40l1_ex8_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Unlike traditional cars, electric vehicles produce zero direct emissions.
+
+---
+
+### Soru ID: u40l1_ex8_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Despite  the fact that she is usually introverted, she spoke confidently at the conference.
+
+---
+
+### Soru ID: u40l1_ex8_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture.
+
+---
+
+### Soru ID: u40l1_ex8_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Popüler inanışın aksine, yarasalar aslında kör değildir.
+
+---
+
+### Soru ID: u40l1_ex9_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Despite  the fact that she is usually introverted, she spoke confidently at the conference.
+
+---
+
+### Soru ID: u40l1_ex9_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture.
+
+---
+
+### Soru ID: u40l1_ex9_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Contrary to popular belief, bats are not actually blind.
+
+---
+
+### Soru ID: u40l1_ex9_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The company selected a centralized framework, as opposed to a decentralized one.
+
+---
+
+### Soru ID: u40l1_ex9_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** High tariff walls protect domestic industries; conversely, they reduce international trade volumes.
+
+---
+
+### Soru ID: u40l1_ex9_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Fiyattaki bir artış talebi azaltır. Aksine, fiyattaki keskin bir düşüş genellikle onu canlandırır.
+
+---
+
+### Soru ID: u40l1_ex10_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The company selected a centralized framework, as opposed to a decentralized one.
+
+---
+
+### Soru ID: u40l1_ex10_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** High tariff walls protect domestic industries; conversely, they reduce international trade volumes.
+
+---
+
+### Soru ID: u40l1_ex10_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** An increase in price reduces demand. Conversely, a sharp decrease in price usually stimulates it.
+
+---
+
+### Soru ID: u40l1_ex10_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The ozone hole is potentially dangerous because the ozone in the atmosphere prevents ultraviolet light.
+
+---
+
+### Soru ID: u40l1_ex10_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We decided to stay at home since it was snowing heavily outside.
+
+---
+
+### Soru ID: u40l1_ex10_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir.
+
+---
+
+### Soru ID: u40l1_ex7_tx_en (translation-text)
+* **Yönerge:** "Geleneksel arabaların aksine, elektrikli araçlar sıfır doğrudan emisyon üretir." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex8_tx_tr (translation-text)
+* **Yönerge:** "Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex8_tx_en (translation-text)
+* **Yönerge:** "Popüler inanışın aksine, yarasalar aslında kör değildir." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex9_tx_tr (translation-text)
+* **Yönerge:** "High tariff walls protect domestic industries; conversely, they reduce international trade volumes." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex9_tx_en (translation-text)
+* **Yönerge:** "Fiyattaki bir artış talebi azaltır. Aksine, fiyattaki keskin bir düşüş genellikle onu canlandırır." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex10_tx_tr (translation-text)
+* **Yönerge:** "We decided to stay at home since it was snowing heavily outside." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex10_tx_en (translation-text)
+* **Yönerge:** "Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir." ifadesini İngilizceye çevirin:
+
+---
+
+## Lesson 2 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u40l1_ex11_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> despite
+  - -in aksine <--> unlike
+  - çünkü <--> because
+  - -den beri <--> since
+
+---
+
+### Soru ID: u40l1_ex11_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in aksine <--> contrary to
+  - -e rağmen <--> although
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex12_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in aksine <--> as opposed to
+  - çünkü <--> because
+  - -den beri <--> since
+  - -e rağmen <--> although
+
+---
+
+### Soru ID: u40l1_ex12_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - aksine (tersine) <--> conversely
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex13_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - çünkü <--> because
+  - -den beri <--> since
+  - -mesi bakımından / çünkü <--> in that
+  - -e rağmen <--> although
+
+---
+
+### Soru ID: u40l1_ex13_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -dığı için / artık <--> now that
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex14_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -dığı için / artık <--> now that
+  - -e rağmen <--> although
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex14_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -dığı için / mademki <--> seeing that
+  - -e rağmen <--> despite
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex15_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> although
+  - ancak / yine de <--> however
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex15_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> even though
+  - -e rağmen <--> despite
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex11_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The new algorithm is revolutionary ___ it process data in parallel layers.
+* **Seçenekler:** as opposed to | in that | Although | because
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir.
+
+---
+
+### Soru ID: u40l1_ex11_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ you have completed the advanced training, you can now operate the system alone.
+* **Seçenekler:** Now that | Despite | because | in that
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We decided to stay at home ___ it was snowing heavily outside.
+* **Seçenekler:** since | However | Seeing that | as opposed to
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Dışarıda yoğun kar yağdığı için evde kalmaya karar verdik.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The new algorithm is revolutionary ___ it process data in parallel layers.
+* **Seçenekler:** conversely | even though | in that | Although
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ you have completed the advanced training, you can now operate the system alone.
+* **Seçenekler:** Now that | as opposed to | conversely | since
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the global economy is unstable, investors are moving towards gold.
+* **Seçenekler:** Seeing that | Conversely | since | although
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Küresel ekonominin istikrarsız olduğunu gören yatırımcılar altına yöneliyor.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the book was very long, I finished it in two days.
+* **Seçenekler:** conversely | as opposed to | since | Although
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Kitap çok uzun olmasına rağmen onu iki günde bitirdim.
+
+---
+
+### Soru ID: u40l1_ex12_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** We enjoyed our camping trip ___ it rained almost every night.
+* **Seçenekler:** in that | even though | although | as opposed to
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the global economy is unstable, investors are moving towards gold.
+* **Seçenekler:** Seeing that | in that | since | because
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Küresel ekonominin istikrarsız olduğunu gören yatırımcılar altına yöneliyor.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the book was very long, I finished it in two days.
+* **Seçenekler:** However | in that | Now that | Although
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Kitap çok uzun olmasına rağmen onu iki günde bitirdim.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We enjoyed our camping trip ___ it rained almost every night.
+* **Seçenekler:** although | because | Now that | Even though
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ excellent the design may be, it won't sell without proper marketing.
+* **Seçenekler:** Now that | since | However | though
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Tasarım ne kadar mükemmel olursa olsun, uygun pazarlama olmadan satılmayacaktır.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** She went to work ___ she was feeling very sick.
+* **Seçenekler:** even though | in that | Now that | Although
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Çok hasta hissetmesine rağmen işe gitti.
+
+---
+
+### Soru ID: u40l1_ex13_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** They bought the house ___ they knew it needed a lot of repairs.
+* **Seçenekler:** even though | though | Although | much as
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ excellent the design may be, it won't sell without proper marketing.
+* **Seçenekler:** Seeing that | even though | Now that | However
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Tasarım ne kadar mükemmel olursa olsun, uygun pazarlama olmadan satılmayacaktır.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** She went to work ___ she was feeling very sick.
+* **Seçenekler:** Although | Now that | though | even though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Çok hasta hissetmesine rağmen işe gitti.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** They bought the house ___ they knew it needed a lot of repairs.
+* **Seçenekler:** Although | Seeing that | Now that | even though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Choose the correct structure: '___ he had no formal training, his performance was flawless.'
+* **Seçenekler:** Seeing that | Even though | Although | Now that
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Hiç resmi eğitimi olmamasına rağmen performansı kusursuzdu.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** I don't like his attitude. He is a good teacher, ___.
+* **Seçenekler:** though | Even though | Although | much as
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Onun tavrını sevmiyorum. Yine de iyi bir öğretmen.
+
+---
+
+### Soru ID: u40l1_ex14_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The food was delicious, ___ the service was quite slow.
+* **Seçenekler:** though | Seeing that | Although | even though
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Choose the correct structure: '___ he had no formal training, his performance was flawless.'
+* **Seçenekler:** although | Much as | However | Even though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Hiç resmi eğitimi olmamasına rağmen performansı kusursuzdu.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** I don't like his attitude. He is a good teacher, ___.
+* **Seçenekler:** even though | though | although | However
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Onun tavrını sevmiyorum. Yine de iyi bir öğretmen.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The food was delicious, ___ the service was quite slow.
+* **Seçenekler:** However | though | Even though | although
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Tired ___ he was after the long journey, he attended the meeting.
+* **Seçenekler:** although | though | Even though | However
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The strategy, ___ risky in the short term, proved to be highly lucrative.
+* **Seçenekler:** Even though | although | Much as | though
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı.
+
+---
+
+### Soru ID: u40l1_ex15_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ I want to help you, I simply do not have the time right now.
+* **Seçenekler:** Even though | Much as | though | although
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.
+
+---
+
+### Soru ID: u40l1_ex12_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Şirket, merkezi olmayan bir yapı yerine merkezi bir yapıyı seçti. | Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun. | Kitap çok uzun olmasına rağmen onu iki günde bitirdim. | Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex12_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Çok hasta hissetmesine rağmen işe gitti. | Büyük çabasına rağmen maçı kaybetti. | Yüksek tarife duvarları yerli sanayiyi korur; aksine, uluslararası ticaret hacmini azaltırlar. | Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l1_ex12_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** An increase in price reduces demand. Conversely , a decrease sharp in price usually stimulates it. | An increase price in reduces demand. Conversely , a sharp decrease in price usually stimulates it. | , a sharp decrease in price usually stimulates it Conversely an increase in price reduces demand.. | An increase in price reduces demand. Conversely, a sharp decrease in price usually stimulates it.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex12_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The ozone hole is potentially dangerous because the ozone in the atmosphere prevents ultraviolet light. | The ozone in the atmosphere prevents ultraviolet light because the ozone hole is potentially dangerous. | The ozone is hole potentially dangerous because the ozone in the atmosphere prevents ultraviolet light. | The ozone hole is potentially dangerous because the ozone the in atmosphere prevents ultraviolet light.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex13_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Ozon deliği potansiyel olarak tehlikelidir çünkü atmosferdeki ozon ultraviyole ışığı engeller. | Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir. | Otoyoldaki yoğun trafiğe rağmen zamanında vardılar. | Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex13_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Dışarıda yoğun kar yağdığı için evde kalmaya karar verdik. | Kitap çok uzun olmasına rağmen onu iki günde bitirdim. | Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur. | Popüler inanışın aksine, yarasalar aslında kör değildir.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex13_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The new algorithm is revolutionary in that it process in data parallel layers. | The new algorithm is revolutionary in that it process data in parallel layers. | The new is algorithm revolutionary in that it process data in parallel layers. | It process data in parallel layers in that the new algorithm is revolutionary.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l1_ex13_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Now that you have completed the advanced training, you can now operate the system alone. | You have completed the advanced training, you can now operate the system alone Now that . | The company selected a centralized framework, as opposed to a decentralized one. |  Now that you have the completed advanced training, you can now operate the system alone.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex14_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz. | Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır. | Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi. | Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex14_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Küresel ekonominin istikrarsız olduğunu gören yatırımcılar altına yöneliyor. | Onun tavrını sevmiyorum. Yine de iyi bir öğretmen. | Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir. | Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex14_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:**  Although the book very was long, I finished it in two days. | Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved. | The book was very long, I finished it in two days Although . | Although the book was very long, I finished it in two days.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex14_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** We enjoyed camping our trip although it rained almost every night. | It rained almost every night although we enjoyed our camping trip. | We enjoyed our camping trip although it rained every almost night. | We enjoyed our camping trip although it rained almost every night.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex15_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık. | Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir. | Popüler inanışın aksine, yarasalar aslında kör değildir. | Sakatlanmış olmasına rağmen maratonu tamamladı.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex15_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık. | Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir. | Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar. | Tasarım ne kadar mükemmel olursa olsun, uygun pazarlama olmadan satılmayacaktır.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex15_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** She went to work even though she was feeling very sick. | She went to work even though she was very feeling sick. | She was feeling very sick even though she went to work. | She went work to even though she was feeling very sick.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex15_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** They bought house the even though they knew it needed a lot of repairs. | They bought the house even though they knew needed it a lot of repairs. | They knew it needed a lot of repairs even though they bought the house. | They bought the house even though they knew it needed a lot of repairs.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex11_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Seeing that the global economy is unstable, investors are moving towards gold.
+
+---
+
+### Soru ID: u40l1_ex11_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Kitap çok uzun olmasına rağmen onu iki günde bitirdim.
+
+---
+
+### Soru ID: u40l1_ex12_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Now that you have completed the advanced training, you can now operate the system alone.
+
+---
+
+### Soru ID: u40l1_ex12_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Seeing that the global economy is unstable, investors are moving towards gold.
+
+---
+
+### Soru ID: u40l1_ex12_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Although the book was very long, I finished it in two days.
+
+---
+
+### Soru ID: u40l1_ex12_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We enjoyed our camping trip although it rained almost every night.
+
+---
+
+### Soru ID: u40l1_ex12_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** However excellent the design may be, it won't sell without proper marketing.
+
+---
+
+### Soru ID: u40l1_ex12_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Çok hasta hissetmesine rağmen işe gitti.
+
+---
+
+### Soru ID: u40l1_ex13_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We enjoyed our camping trip although it rained almost every night.
+
+---
+
+### Soru ID: u40l1_ex13_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** However excellent the design may be, it won't sell without proper marketing.
+
+---
+
+### Soru ID: u40l1_ex13_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** She went to work even though she was feeling very sick.
+
+---
+
+### Soru ID: u40l1_ex13_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** They bought the house even though they knew it needed a lot of repairs.
+
+---
+
+### Soru ID: u40l1_ex13_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Even though he had no formal training, his performance was flawless.
+
+---
+
+### Soru ID: u40l1_ex13_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Onun tavrını sevmiyorum. Yine de iyi bir öğretmen.
+
+---
+
+### Soru ID: u40l1_ex14_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** They bought the house even though they knew it needed a lot of repairs.
+
+---
+
+### Soru ID: u40l1_ex14_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Even though he had no formal training, his performance was flawless.
+
+---
+
+### Soru ID: u40l1_ex14_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** I don't like his attitude. He is a good teacher, though.
+
+---
+
+### Soru ID: u40l1_ex14_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The food was delicious, though the service was quite slow.
+
+---
+
+### Soru ID: u40l1_ex14_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Tired though he was after the long journey, he attended the meeting.
+
+---
+
+### Soru ID: u40l1_ex14_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı.
+
+---
+
+### Soru ID: u40l1_ex15_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The food was delicious, though the service was quite slow.
+
+---
+
+### Soru ID: u40l1_ex15_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Tired though he was after the long journey, he attended the meeting.
+
+---
+
+### Soru ID: u40l1_ex15_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The strategy, though risky in the short term, proved to be highly lucrative.
+
+---
+
+### Soru ID: u40l1_ex15_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as I want to help you, I simply do not have the time right now.
+
+---
+
+### Soru ID: u40l1_ex15_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Much as they admired his intellect, they could not support his radical methods.
+
+---
+
+### Soru ID: u40l1_ex15_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.
+
+---
+
+### Soru ID: u40l1_ex12_tx_en (translation-text)
+* **Yönerge:** "Çok hasta hissetmesine rağmen işe gitti." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex13_tx_tr (translation-text)
+* **Yönerge:** "Even though he had no formal training, his performance was flawless." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex13_tx_en (translation-text)
+* **Yönerge:** "Onun tavrını sevmiyorum. Yine de iyi bir öğretmen." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex14_tx_tr (translation-text)
+* **Yönerge:** "Tired though he was after the long journey, he attended the meeting." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex14_tx_en (translation-text)
+* **Yönerge:** "Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex15_tx_tr (translation-text)
+* **Yönerge:** "Much as they admired his intellect, they could not support his radical methods." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l1_ex15_tx_en (translation-text)
+* **Yönerge:** "Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l1_ex16_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> even though
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex16_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> though
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex17_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> though
+  - -e rağmen <--> despite
+  - ama <--> but
+  - henüz <--> yet
+
+---
+
+### Soru ID: u40l1_ex17_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (her ne kadar) <--> much as
+  - -e rağmen <--> although
+  - -irken <--> while
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l1_ex16_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Identify the illegal structure: '___ his great desire to win, he refused to train.'
+* **Seçenekler:** Much as | in spite of | although | though
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.
+
+---
+
+### Soru ID: u40l1_ex16_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ his great effort, he lost the match.
+* **Seçenekler:** Despite | Much as | in spite of | even though
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Büyük çabasına rağmen maçı kaybetti.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ they admired his intellect, they could not support his radical methods.
+* **Seçenekler:** Much as | however | yet | in spite of
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Identify the illegal structure: '___ his great desire to win, he refused to train.'
+* **Seçenekler:** Much as | In spite of | but | though
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ his great effort, he lost the match.
+* **Seçenekler:** though | Despite | however | yet
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Büyük çabasına rağmen maçı kaybetti.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** They arrived on time ___ the heavy traffic on the highway.
+* **Seçenekler:** yet | however | in spite of | though
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the fact that she was injured, she completed the marathon.
+* **Seçenekler:** however | yet | In spite of | but
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Sakatlanmış olmasına rağmen maratonu tamamladı.
+
+---
+
+### Soru ID: u40l1_ex17_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The tablet is affordable, ___ it lacks a high-resolution screen.
+* **Seçenekler:** In spite of | although | but | yet
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun.
+
+---
+
+### Soru ID: u40l1_ex17_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi. | Sakatlanmış olmasına rağmen maratonu tamamladı. | Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir. | Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex17_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı. | Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun. | Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti. | Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l1_ex17_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The economic data was discouraging; nevertheless, the stock market reached an all-time high. | The strategy, though risky in short the term, proved to be highly lucrative. | Risky in the short term, proved to be highly lucrative though the strategy,. | The strategy, though risky in the short term, proved to be highly lucrative.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex17_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:**  Much as I want help to you, I simply do not have the time right now. | I want to help you, I simply do not have the time right now Much as . | Unlike traditional cars, electric vehicles produce zero direct emissions. | Much as I want to help you, I simply do not have the time right now.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l1_ex16_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** They arrived on time in spite of the heavy traffic on the highway.
+
+---
+
+### Soru ID: u40l1_ex16_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Sakatlanmış olmasına rağmen maratonu tamamladı.
+
+---
+
+### Soru ID: u40l1_ex17_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Despite his great effort, he lost the match.
+
+---
+
+### Soru ID: u40l1_ex17_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** They arrived on time in spite of the heavy traffic on the highway.
+
+---
+
+### Soru ID: u40l1_ex17_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In spite of the fact that she was injured, she completed the marathon.
+
+---
+
+### Soru ID: u40l1_ex17_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The tablet is affordable, but it lacks a high-resolution screen.
+
+---
+
+### Soru ID: u40l1_ex17_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Kelly was a convicted criminal, yet many people admired him.
+
+---
+
+### Soru ID: u40l1_ex17_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Klima çalışıyor; ancak içerisi hala sıcak.
+
+---
+
+### Soru ID: u40l1_ex17_tx_en (translation-text)
+* **Yönerge:** "Klima çalışıyor; ancak içerisi hala sıcak." ifadesini İngilizceye çevirin:
+
+---
+
+## Lesson 3 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u40l2_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> because of
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - -den dolayı / yüzünden <--> due to
+
+---
+
+### Soru ID: u40l2_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> on account of
+  - -den dolayı / yüzünden <--> because of
+  - -den dolayı / yüzünden <--> due to
+  - -den dolayı / göz önüne alındığında <--> in view of
+
+---
+
+### Soru ID: u40l2_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> on account of
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - -den dolayı / göz önüne alındığında <--> in view of
+
+---
+
+### Soru ID: u40l2_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> by reason of
+  - -den dolayı / yüzünden <--> on account of
+  - -den dolayı / göz önüne alındığında <--> in view of
+  - bu yüzden <--> so
+
+---
+
+### Soru ID: u40l2_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - bu yüzden / dolayısıyla <--> hence
+  - bu yüzden / böylece <--> thus
+
+---
+
+### Soru ID: u40l2_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in yanı sıra <--> as well as
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - bu yüzden / dolayısıyla <--> hence
+
+---
+
+### Soru ID: u40l2_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - bu yüzden / böylece <--> thus
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - -in yanı sıra <--> as well as
+
+---
+
+### Soru ID: u40l2_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in yanı sıra <--> in addition to
+  - bu yüzden / böylece <--> thus
+  - -in yanı sıra <--> as well as
+  - ayrıca / -in yanı sıra <--> besides
+
+---
+
+### Soru ID: u40l2_ex1_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The country lacks natural resources; ___ , it depends heavily on imports.
+* **Seçenekler:** so | hence | Due to | on account of
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.
+
+---
+
+### Soru ID: u40l2_ex1_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The experiment was conducted under strict vacuum; ___ , no contamination occurred.
+* **Seçenekler:** hence | By reason of | thus | therefore
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Deney sıkı vakum altında gerçekleştirildi; böylece hiçbir kirlenme meydana gelmedi.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** In a natural disaster, seconds of warning are really vital; ___ , scientists use the latest advances to predict them.
+* **Seçenekler:** In view of | Besides | on account of | therefore
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The country lacks natural resources; ___ , it depends heavily on imports.
+* **Seçenekler:** hence | so | on account of | In addition to
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The experiment was conducted under strict vacuum; ___ , no contamination occurred.
+* **Seçenekler:** thus | so | furthermore | hence
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Deney sıkı vakum altında gerçekleştirildi; böylece hiçbir kirlenme meydana gelmedi.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The resort has untouched forests ___ several valuable minerals.
+* **Seçenekler:** as well as | so | hence | In addition to
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ renting the venue, we also had to pay for the catering services.
+* **Seçenekler:** In view of | on account of | thus | In addition to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık.
+
+---
+
+### Soru ID: u40l2_ex2_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the heavy fines, the company faced a complete suspension of its license.
+* **Seçenekler:** furthermore | Besides | By reason of | so
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Ağır para cezalarının yanı sıra, şirket lisansının tamamen askıya alınmasıyla karşı karşıya kaldı.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The resort has untouched forests ___ several valuable minerals.
+* **Seçenekler:** therefore | so | thus | as well as
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ renting the venue, we also had to pay for the catering services.
+* **Seçenekler:** such as | therefore | so | In addition to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the heavy fines, the company faced a complete suspension of its license.
+* **Seçenekler:** so | hence | In addition to | Besides
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Ağır para cezalarının yanı sıra, şirket lisansının tamamen askıya alınmasıyla karşı karşıya kaldı.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The new laptop is lightweight; ___ , its battery lasts up to 15 hours.
+* **Seçenekler:** hence | furthermore | for instance | In addition to
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The marketing strategy boosted local sales. ___ , it attracted international buyers.
+* **Seçenekler:** so | hence | Besides | Moreover
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti.
+
+---
+
+### Soru ID: u40l2_ex3_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The first generation antihistamines may produce side effects, ___ drowsiness and dry mouth.
+* **Seçenekler:** In addition to | Besides | furthermore | such as
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** İlk nesil antihistaminikler, uyuşukluk ve ağız kuruluğu gibi yan etkilere neden olabilir.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The new laptop is lightweight; ___ , its battery lasts up to 15 hours.
+* **Seçenekler:** furthermore | in other words | In addition to | Moreover
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The marketing strategy boosted local sales. ___ , it attracted international buyers.
+* **Seçenekler:** that is | Besides | for instance | Moreover
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The first generation antihistamines may produce side effects, ___ drowsiness and dry mouth.
+* **Seçenekler:** In addition to | as well as | such as | Besides
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** İlk nesil antihistaminikler, uyuşukluk ve ağız kuruluğu gibi yan etkilere neden olabilir.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The Earth has a unique set of characteristics; ___ , it has an atmosphere that supports life.
+* **Seçenekler:** that is | such as | in other words | for instance
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Choose the correct format: 'Many clean energy sources exist, ___ solar and wind power.'
+* **Seçenekler:** such as | for instance | in other words | that is
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur.
+
+---
+
+### Soru ID: u40l2_ex4_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The patient is completely asymptomatic; ___ , she shows no signs of illness.
+* **Seçenekler:** thus | in other words | Moreover | namely
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Hasta tamamen semptomsuzdur; başka bir deyişle, hiçbir hastalık belirtisi göstermemektedir.
+
+---
+
+### Soru ID: u40l2_ex2_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi. | Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | İlk nesil antihistaminikler, uyuşukluk ve ağız kuruluğu gibi yan etkilere neden olabilir. | Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex2_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi. | Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur. | Son tıbbi raporların ışığında, tedavi derhal durduruldu. | Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l2_ex2_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The marketing strategy boosted local sales. Moreover, it attracted international buyers. |  By reason of the intense and heat lack of water, the expedition team turned back. | The intense heat and lack of water, the expedition team turned back By reason of . | By reason of the intense heat and lack of water, the expedition team turned back.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex2_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** We drove extremely slowly so the roads were icy and dangerous,. | The roads were icy and dangerous, so we drove slowly extremely. | The roads icy were and dangerous, so we drove extremely slowly. | The roads were icy and dangerous, so we drove extremely slowly.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex3_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir. | Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük. | Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur. | Sistem ikili bir mantıkla çalışır; yani, yalnızca doğru veya yanlış girdileri tanır.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l2_ex3_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar. | Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır. | Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex3_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The country lacks natural resources; hence, it depends heavily on imports. | The country natural lacks resources; hence , it depends heavily on imports. | , it depends heavily on imports hence the country lacks natural resources;. | The country lacks natural resources; hence , it heavily depends on imports.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex3_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The experiment conducted was under strict vacuum; thus , no contamination occurred. | , no contamination occurred thus the experiment was conducted under strict vacuum;. | The experiment was conducted under strict vacuum; thus , no occurred contamination. | The experiment was conducted under strict vacuum; thus, no contamination occurred.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex4_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Hasta tamamen semptomsuzdur; başka bir deyişle, hiçbir hastalık belirtisi göstermemektedir. | Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir. | Deney sıkı vakum altında gerçekleştirildi; böylece hiçbir kirlenme meydana gelmedi. | Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l2_ex4_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi. | Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir. | Birincil hedefimize odaklanmamız gerekiyor, yani kullanıcı etkileşimini artırmaya.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l2_ex4_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** In addition to renting the venue, we also had to pay for the catering services. | Renting the venue, we also had to pay for the catering services In addition to . |  In addition to renting the we venue, also had to pay for the catering services. | The country lacks natural resources; hence, it depends heavily on imports.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex4_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Besides the heavy fines, the company faced a complete suspension of its license. | The heavy fines, the company faced a complete suspension of its license Besides . | The country lacks natural resources; hence, it depends heavily on imports. |  Besides the heavy the fines, company faced a complete suspension of its license.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex1_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The resort has untouched forests as well as several valuable minerals.
+
+---
+
+### Soru ID: u40l2_ex1_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık.
+
+---
+
+### Soru ID: u40l2_ex2_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The experiment was conducted under strict vacuum; thus, no contamination occurred.
+
+---
+
+### Soru ID: u40l2_ex2_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The resort has untouched forests as well as several valuable minerals.
+
+---
+
+### Soru ID: u40l2_ex2_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In addition to renting the venue, we also had to pay for the catering services.
+
+---
+
+### Soru ID: u40l2_ex2_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Besides the heavy fines, the company faced a complete suspension of its license.
+
+---
+
+### Soru ID: u40l2_ex2_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The new laptop is lightweight; furthermore, its battery lasts up to 15 hours.
+
+---
+
+### Soru ID: u40l2_ex2_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti.
+
+---
+
+### Soru ID: u40l2_ex3_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Besides the heavy fines, the company faced a complete suspension of its license.
+
+---
+
+### Soru ID: u40l2_ex3_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The new laptop is lightweight; furthermore, its battery lasts up to 15 hours.
+
+---
+
+### Soru ID: u40l2_ex3_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The marketing strategy boosted local sales. Moreover, it attracted international buyers.
+
+---
+
+### Soru ID: u40l2_ex3_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The first generation antihistamines may produce side effects, such as drowsiness and dry mouth.
+
+---
+
+### Soru ID: u40l2_ex3_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The Earth has a unique set of characteristics; for instance, it has an atmosphere that supports life.
+
+---
+
+### Soru ID: u40l2_ex3_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur.
+
+---
+
+### Soru ID: u40l2_ex4_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The first generation antihistamines may produce side effects, such as drowsiness and dry mouth.
+
+---
+
+### Soru ID: u40l2_ex4_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The Earth has a unique set of characteristics; for instance, it has an atmosphere that supports life.
+
+---
+
+### Soru ID: u40l2_ex4_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Many clean energy sources exist, such as  solar and wind power.
+
+---
+
+### Soru ID: u40l2_ex4_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The patient is completely asymptomatic; in other words, she shows no signs of illness.
+
+---
+
+### Soru ID: u40l2_ex4_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We need to focus on our primary goal, namely, increasing user engagement.
+
+---
+
+### Soru ID: u40l2_ex4_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Sistem ikili bir mantıkla çalışır; yani, yalnızca doğru veya yanlış girdileri tanır.
+
+---
+
+### Soru ID: u40l2_ex2_tx_en (translation-text)
+* **Yönerge:** "Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l2_ex3_tx_tr (translation-text)
+* **Yönerge:** "The Earth has a unique set of characteristics; for instance, it has an atmosphere that supports life." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l2_ex3_tx_en (translation-text)
+* **Yönerge:** "Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l2_ex4_tx_tr (translation-text)
+* **Yönerge:** "We need to focus on our primary goal, namely, increasing user engagement." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l2_ex4_tx_en (translation-text)
+* **Yönerge:** "Sistem ikili bir mantıkla çalışır; yani, yalnızca doğru veya yanlış girdileri tanır." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l2_ex5_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - ayrıca / -in yanı sıra <--> besides
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - dahası / ayrıca <--> furthermore
+
+---
+
+### Soru ID: u40l2_ex5_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - dahası / ayrıca <--> moreover
+  - ayrıca / -in yanı sıra <--> besides
+  - dahası / ayrıca <--> furthermore
+  - gibi (örneğin) <--> such as
+
+---
+
+### Soru ID: u40l2_ex6_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - gibi (örneğin) <--> such as
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - örneğin <--> for instance
+
+---
+
+### Soru ID: u40l2_ex6_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - başka bir deyişle <--> in other words
+  - gibi (örneğin) <--> such as
+  - örneğin <--> for instance
+  - yani (yani adlandırmak gerekirse) <--> namely
+
+---
+
+### Soru ID: u40l2_ex5_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The system operates on a binary logic; ___ , it recognizes only true or false inputs.
+* **Seçenekler:** that is | Due to | because of | in other words
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Sistem ikili bir mantıkla çalışır; yani, yalnızca doğru veya yanlış girdileri tanır.
+
+---
+
+### Soru ID: u40l2_ex5_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The flight was severely delayed ___ the thick fog covering the runway.
+* **Seçenekler:** because of | Besides | Due to | such as
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We need to focus on our primary goal, ___ , increasing user engagement.
+* **Seçenekler:** In view of | namely | By reason of | such as
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Birincil hedefimize odaklanmamız gerekiyor, yani kullanıcı etkileşimini artırmaya.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The system operates on a binary logic; ___ , it recognizes only true or false inputs.
+* **Seçenekler:** that is | namely | In view of | in other words
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Sistem ikili bir mantıkla çalışır; yani, yalnızca doğru veya yanlış girdileri tanır.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The flight was severely delayed ___ the thick fog covering the runway.
+* **Seçenekler:** because of | such as | that is | in other words
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ his excellent communication skills, he was chosen as the group leader.
+* **Seçenekler:** Due to | such as | on account of | for instance
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the fact that the company lost its major investor, the project was cancelled.
+* **Seçenekler:** Due to | By reason of | in other words | for instance
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Şirketin büyük yatırımcısını kaybetmesi nedeniyle proje iptal edildi.
+
+---
+
+### Soru ID: u40l2_ex6_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The festival was cancelled ___ public safety concerns raised by the police.
+* **Seçenekler:** for instance | that is | such as | on account of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi.
+
+---
+
+### Soru ID: u40l2_ex6_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır. | Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır. | İlk nesil antihistaminikler, uyuşukluk ve ağız kuruluğu gibi yan etkilere neden olabilir.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex6_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık. | Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir. | Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l2_ex6_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Many clean energy sources exist, such as  solar and wind power. | Many clean sources energy exist, such as solar and wind power. | Many clean energy sources exist, such as solar and power wind. | Solar and wind power such as many clean energy sources exist,.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex6_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The patient is completely asymptomatic; in other words , she no shows signs of illness. | The patient completely is asymptomatic; in other words , she shows no signs of illness. | , she shows no signs of illness in other words the patient is completely asymptomatic;. | The patient is completely asymptomatic; in other words, she shows no signs of illness.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex5_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Due to his excellent communication skills, he was chosen as the group leader.
+
+---
+
+### Soru ID: u40l2_ex5_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Şirketin büyük yatırımcısını kaybetmesi nedeniyle proje iptal edildi.
+
+---
+
+### Soru ID: u40l2_ex6_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The flight was severely delayed because of the thick fog covering the runway.
+
+---
+
+### Soru ID: u40l2_ex6_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Due to his excellent communication skills, he was chosen as the group leader.
+
+---
+
+### Soru ID: u40l2_ex6_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Due to the fact that the company lost its major investor, the project was cancelled.
+
+---
+
+### Soru ID: u40l2_ex6_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The festival was cancelled on account of public safety concerns raised by the police.
+
+---
+
+### Soru ID: u40l2_ex6_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In view of the latest medical reports, the treatment was stopped immediately.
+
+---
+
+### Soru ID: u40l2_ex6_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü.
+
+---
+
+### Soru ID: u40l2_ex6_tx_en (translation-text)
+* **Yönerge:** "Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l2_ex7_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - başka bir deyişle <--> in other words
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - yani (yani adlandırmak gerekirse) <--> namely
+
+---
+
+### Soru ID: u40l2_ex7_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yani / başka bir deyişle <--> that is
+  - başka bir deyişle <--> in other words
+  - yani (yani adlandırmak gerekirse) <--> namely
+  - -den dolayı / yüzünden <--> because of
+
+---
+
+### Soru ID: u40l2_ex8_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> because of
+  - bu yüzden <--> so
+  - bu nedenle <--> therefore
+  - -den dolayı / yüzünden <--> due to
+
+---
+
+### Soru ID: u40l2_ex8_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den dolayı / yüzünden <--> on account of
+  - -den dolayı / yüzünden <--> because of
+  - -den dolayı / yüzünden <--> due to
+  - -den dolayı / göz önüne alındığında <--> in view of
+
+---
+
+### Soru ID: u40l2_ex7_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the intense heat and lack of water, the expedition team turned back.
+* **Seçenekler:** By reason of | because of | on account of | Due to
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü.
+
+---
+
+### Soru ID: u40l2_ex7_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The roads were icy and dangerous, ___ we drove extremely slowly.
+* **Seçenekler:** so | in other words | By reason of | namely
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ the latest medical reports, the treatment was stopped immediately.
+* **Seçenekler:** Due to | In view of | By reason of | because of
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Son tıbbi raporların ışığında, tedavi derhal durduruldu.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ the intense heat and lack of water, the expedition team turned back.
+* **Seçenekler:** therefore | on account of | By reason of | In view of
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The roads were icy and dangerous, ___ we drove extremely slowly.
+* **Seçenekler:** so | because of | By reason of | In view of
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** In a natural disaster, seconds of warning are really vital; ___ , scientists use the latest advances to predict them.
+* **Seçenekler:** therefore | so | In addition to | hence
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The country lacks natural resources; ___ , it depends heavily on imports.
+* **Seçenekler:** hence | because of | Due to | on account of
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.
+
+---
+
+### Soru ID: u40l2_ex8_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The experiment was conducted under strict vacuum; ___ , no contamination occurred.
+* **Seçenekler:** In view of | hence | because of | thus
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Deney sıkı vakum altında gerçekleştirildi; böylece hiçbir kirlenme meydana gelmedi.
+
+---
+
+### Soru ID: u40l2_ex8_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü. | Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir. | Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük. | Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex8_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti. | Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir. | Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi. | Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l2_ex8_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:**  Due to the fact the that company lost its major investor, the project was cancelled. | The fact that the company lost its major investor, the project was cancelled Due to . | The first generation antihistamines may produce side effects, such as drowsiness and dry mouth. | Due to the fact that the company lost its major investor, the project was cancelled.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l2_ex8_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The festival was cancelled on account of public safety concerns raised by the police. | Public safety concerns raised by the police on account of the festival was cancelled. | The festival cancelled was on account of public safety concerns raised by the police. | The festival was cancelled on account of public safety raised concerns by the police.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l2_ex7_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.
+
+---
+
+### Soru ID: u40l2_ex7_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.
+
+---
+
+### Soru ID: u40l2_ex8_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The roads were icy and dangerous, so we drove extremely slowly.
+
+---
+
+### Soru ID: u40l2_ex8_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.
+
+---
+
+### Soru ID: u40l2_ex8_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The country lacks natural resources; hence, it depends heavily on imports.
+
+---
+
+### Soru ID: u40l2_ex8_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The experiment was conducted under strict vacuum; thus, no contamination occurred.
+
+---
+
+### Soru ID: u40l2_ex8_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The resort has untouched forests as well as several valuable minerals.
+
+---
+
+### Soru ID: u40l2_ex8_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık.
+
+---
+
+### Soru ID: u40l2_ex8_tx_en (translation-text)
+* **Yönerge:** "Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık." ifadesini İngilizceye çevirin:
+
+---
+
+## Lesson 4 (Orijinal Alıştırmalardan Çıkarılanlar)
+
+### Soru ID: u40l3_ex1_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yine de / buna rağmen <--> nonetheless
+  - -irken / oysa <--> whereas
+  - ne olursa olsun <--> regardless
+  - öte yandan <--> on the other hand
+
+---
+
+### Soru ID: u40l3_ex1_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - aksine / tersine <--> on the contrary
+  - yine de / buna rağmen <--> nonetheless
+  - -e rağmen (çok ...sa da) <--> much as
+  - -irken / oysa <--> while
+
+---
+
+### Soru ID: u40l3_ex2_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (çok ...sa da) <--> much as
+  - aksine / tersine <--> on the contrary
+  - -diği gibi / -diği için <--> as
+  - -e rağmen <--> in spite of
+
+---
+
+### Soru ID: u40l3_ex2_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -den başka / hariç <--> aside from
+  - -sin diye / amacıyla <--> so that
+  - -sin diye / amacıyla <--> in order that
+  - -den başka / hariç <--> except for
+
+---
+
+### Soru ID: u40l3_ex3_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -irken / oysa <--> whereas
+  - hâlbuki / oysa ki <--> whilst
+  - ama <--> but
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l3_ex3_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - lehine / yararına <--> in favor of
+  - -den başka / hariç <--> aside from
+  - -e göre <--> according to
+  - açısından / bakımından <--> in terms of
+
+---
+
+### Soru ID: u40l3_ex4_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen (çok ...sa da) <--> much as
+  - -diği gibi / -diği için <--> as
+  - -irken / oysa <--> while
+  - her ne kadar...olsa da <--> no matter how
+
+---
+
+### Soru ID: u40l3_ex4_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - sanki / -miş gibi <--> as if
+  - lehine / yararına <--> in favor of
+  - -in yerine <--> instead of
+  - -den ziyade / yerine <--> rather than
+
+---
+
+### Soru ID: u40l3_ex1_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The project was a huge success ___ revenue, but not in terms of user satisfaction.
+* **Seçenekler:** in favor of | rather than | were | in terms of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.
+
+---
+
+### Soru ID: u40l3_ex1_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The committee voted ___ the new design, abandoning the old prototype completely.
+* **Seçenekler:** so that | in order to | so as to | in favor of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ recent studies, your biological clock can be confused by computer light.
+* **Seçenekler:** According to | in order that | so that | except for
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The project was a huge success ___ revenue, but not in terms of user satisfaction.
+* **Seçenekler:** Aside from | were | except for | in terms of
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The committee voted ___ the new design, abandoning the old prototype completely.
+* **Seçenekler:** rather than | in favor of | instead of | except for
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** We should use clean energy sources ___ burning fossil fuels.
+* **Seçenekler:** in terms of | According to | instead of | so that
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Investors prefer to see tangible results ___ theoretical promises.
+* **Seçenekler:** except for | in terms of | rather than | were
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.
+
+---
+
+### Soru ID: u40l3_ex2_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** He talked about the complex quantum theory ___ he were an expert in that field.
+* **Seçenekler:** rather than | as if | Aside from | According to
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We should use clean energy sources ___ burning fossil fuels.
+* **Seçenekler:** instead of | Aside from | According to | so that
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Investors prefer to see tangible results ___ theoretical promises.
+* **Seçenekler:** in favor of | Aside from | rather than | so that
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** He talked about the complex quantum theory ___ he were an expert in that field.
+* **Seçenekler:** According to | in terms of | as if | were
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ data security, the firm leaves nothing to chance.
+* **Seçenekler:** in favor of | When it comes to | rather than | in terms of
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** Neither the director nor the actors ___ present at the rehearsal yesterday.
+* **Seçenekler:** in terms of | in order to | rather than | were
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Dün provada ne yönetmen ne de oyuncular hazırdı.
+
+---
+
+### Soru ID: u40l3_ex3_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** He woke up early ___ catch the first train to Ankara.
+* **Seçenekler:** When it comes to | were | Aside from | in order to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ data security, the firm leaves nothing to chance.
+* **Seçenekler:** so as to | in favor of | When it comes to | except for
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Neither the director nor the actors ___ present at the rehearsal yesterday.
+* **Seçenekler:** were | so as to | rather than | as if
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Dün provada ne yönetmen ne de oyuncular hazırdı.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** He woke up early ___ catch the first train to Ankara.
+* **Seçenekler:** except for | as if | rather than | in order to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** We packed our bags quickly ___ not be late for the flight.
+* **Seçenekler:** so as to | rather than | instead of | as if
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** He left the door open ___ the dog could go out easily.
+* **Seçenekler:** as if | were | in favor of | so that
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı.
+
+---
+
+### Soru ID: u40l3_ex4_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Choose the correct purpose link: 'They locked the laboratory gates ___ no one could enter without permission.'
+* **Seçenekler:** When it comes to | rather than | in order to | in order that
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.
+
+---
+
+### Soru ID: u40l3_ex2_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı. | Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı. | Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler. | Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex2_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı. | Laboratuvar, Pazar günleri hariç her gün açıktır. | Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler. | Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l3_ex2_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The laboratory open is every day except for Sundays. | Sundays except for the laboratory is open every day. | Investors prefer to see tangible results rather than theoretical promises. | The laboratory is open every day except for Sundays.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex2_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** When it comes to data security, the firm leaves nothing to chance. | A few minor errors, the software architecture is absolutely flawless Aside from . |  Aside from a few errors, minor the software architecture is absolutely flawless. | Aside from a few minor errors, the software architecture is absolutely flawless.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex3_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı. | Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu. | Dün provada ne yönetmen ne de oyuncular hazırdı. | Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex3_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil. | Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı. | Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz. | Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex3_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.' | Investors prefer to see tangible results rather than theoretical promises. | The project was a huge success in terms of revenue, but not in terms of user satisfaction. | According to recent studies, your biological clock can be confused by computer light.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l3_ex3_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** The committee voted in favor of the new design, abandoning the old prototype completely. | The voted committee in favor of the new design, abandoning the old prototype completely. | The new design, abandoning the old prototype completely in favor of the committee voted. | The committee voted in favor of the new abandoning design, the old prototype completely.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex4_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı. | Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil. | Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz. | Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex4_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Dün provada ne yönetmen ne de oyuncular hazırdı. | Laboratuvar, Pazar günleri hariç her gün açıktır. | Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur. | Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex4_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Investors prefer see to tangible results rather than theoretical promises. | Theoretical promises rather than investors prefer to see tangible results. | Investors prefer to see tangible results rather than theoretical promises. | The committee voted in favor of the new design, abandoning the old prototype completely.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l3_ex4_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** He talked about the complex quantum theory as if he were an expert in that field. | He were an expert in that field as if he talked about the complex quantum theory. | He talked about the complex quantum theory as if he were expert an in that field. | He talked the about complex quantum theory as if he were an expert in that field.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex1_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We should use clean energy sources instead of burning fossil fuels.
+
+---
+
+### Soru ID: u40l3_ex1_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.
+
+---
+
+### Soru ID: u40l3_ex2_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The committee voted in favor of the new design, abandoning the old prototype completely.
+
+---
+
+### Soru ID: u40l3_ex2_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We should use clean energy sources instead of burning fossil fuels.
+
+---
+
+### Soru ID: u40l3_ex2_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Investors prefer to see tangible results rather than theoretical promises.
+
+---
+
+### Soru ID: u40l3_ex2_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He talked about the complex quantum theory as if he were an expert in that field.
+
+---
+
+### Soru ID: u40l3_ex2_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When it comes to data security, the firm leaves nothing to chance.
+
+---
+
+### Soru ID: u40l3_ex2_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Dün provada ne yönetmen ne de oyuncular hazırdı.
+
+---
+
+### Soru ID: u40l3_ex3_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He talked about the complex quantum theory as if he were an expert in that field.
+
+---
+
+### Soru ID: u40l3_ex3_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When it comes to data security, the firm leaves nothing to chance.
+
+---
+
+### Soru ID: u40l3_ex3_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Neither the director nor the actors were  present at the rehearsal yesterday.
+
+---
+
+### Soru ID: u40l3_ex3_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He woke up early in order to catch the first train to Ankara.
+
+---
+
+### Soru ID: u40l3_ex3_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We packed our bags quickly so as to not be late for the flight.
+
+---
+
+### Soru ID: u40l3_ex3_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı.
+
+---
+
+### Soru ID: u40l3_ex4_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He woke up early in order to catch the first train to Ankara.
+
+---
+
+### Soru ID: u40l3_ex4_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We packed our bags quickly so as to not be late for the flight.
+
+---
+
+### Soru ID: u40l3_ex4_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He left the door open so that the dog could go out easily.
+
+---
+
+### Soru ID: u40l3_ex4_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'
+
+---
+
+### Soru ID: u40l3_ex4_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The laboratory is open every day except for Sundays.
+
+---
+
+### Soru ID: u40l3_ex4_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur.
+
+---
+
+### Soru ID: u40l3_ex2_tx_en (translation-text)
+* **Yönerge:** "Dün provada ne yönetmen ne de oyuncular hazırdı." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l3_ex3_tx_tr (translation-text)
+* **Yönerge:** "We packed our bags quickly so as to not be late for the flight." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l3_ex3_tx_en (translation-text)
+* **Yönerge:** "Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l3_ex4_tx_tr (translation-text)
+* **Yönerge:** "The laboratory is open every day except for Sundays." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l3_ex4_tx_en (translation-text)
+* **Yönerge:** "Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l3_ex5_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -irken / oysa <--> whereas
+  - -e rağmen <--> even though
+  - -e rağmen <--> though
+  - çünkü <--> because
+
+---
+
+### Soru ID: u40l3_ex5_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e rağmen <--> even though
+  - buna karşın <--> conversely
+  - bununla birlikte <--> nevertheless
+  - ancak / yine de <--> however
+
+---
+
+### Soru ID: u40l3_ex6_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - hâlbuki / oysa ki <--> whilst
+  - yine de / henüz <--> yet
+  - öte yandan <--> on the other hand
+  - yine de / buna rağmen <--> nonetheless
+
+---
+
+### Soru ID: u40l3_ex6_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -sin diye / amacıyla <--> in order that
+  - -mek amacıyla <--> in order to
+  - -mek amacıyla <--> so as to
+  - -sin diye / amacıyla <--> so that
+
+---
+
+### Soru ID: u40l3_ex7_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -irken / oysa <--> whereas
+  - çünkü <--> because
+  - bunun yerine <--> instead
+  - ne olursa olsun <--> regardless
+
+---
+
+### Soru ID: u40l3_ex7_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -e göre <--> according to
+  - -sin diye / amacıyla <--> in order that
+  - -den başka / hariç <--> except for
+  - -den başka / hariç <--> aside from
+
+---
+
+### Soru ID: u40l3_ex5_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ a few minor errors, the software architecture is absolutely flawless.
+* **Seçenekler:** When it comes to | Aside from | as if | in order to
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur.
+
+---
+
+### Soru ID: u40l3_ex5_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ recent studies, your biological clock can be confused by computer light.
+* **Seçenekler:** When it comes to | in terms of | so that | According to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The laboratory is open every day ___ Sundays.
+* **Seçenekler:** so as to | in order to | in order that | except for
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Laboratuvar, Pazar günleri hariç her gün açıktır.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ a few minor errors, the software architecture is absolutely flawless.
+* **Seçenekler:** instead of | Aside from | so as to | as if
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** ___ recent studies, your biological clock can be confused by computer light.
+* **Seçenekler:** so as to | According to | instead of | except for
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The project was a huge success ___ revenue, but not in terms of user satisfaction.
+* **Seçenekler:** in terms of | in order that | except for | as if
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The committee voted ___ the new design, abandoning the old prototype completely.
+* **Seçenekler:** According to | rather than | in favor of | in order to
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.
+
+---
+
+### Soru ID: u40l3_ex6_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** We should use clean energy sources ___ burning fossil fuels.
+* **Seçenekler:** instead of | so that | in favor of | except for
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_0 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** The project was a huge success ___ revenue, but not in terms of user satisfaction.
+* **Seçenekler:** According to | in terms of | as if | instead of
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_1 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** The committee voted ___ the new design, abandoning the old prototype completely.
+* **Seçenekler:** Aside from | in terms of | in favor of | According to
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_2 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** We should use clean energy sources ___ burning fossil fuels.
+* **Seçenekler:** instead of | in order that | When it comes to | except for
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_3 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** Investors prefer to see tangible results ___ theoretical promises.
+* **Seçenekler:** rather than | as if | Aside from | in order that
+* **Doğru Seçenek İndeksi:** 0
+* **Çeviri:** Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_4 (fill-blank-dropdown)
+* **Yönerge:** Boşluğa gelecek en uygun kelimeyi seçin:
+* **İngilizce Cümle:** He talked about the complex quantum theory ___ he were an expert in that field.
+* **Seçenekler:** in order to | as if | in order that | in favor of
+* **Doğru Seçenek İndeksi:** 1
+* **Çeviri:** Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.
+
+---
+
+### Soru ID: u40l3_ex7_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** ___ data security, the firm leaves nothing to chance.
+* **Seçenekler:** According to | rather than | When it comes to | except for
+* **Doğru Seçenek İndeksi:** 2
+* **Çeviri:** Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.
+
+---
+
+### Soru ID: u40l3_ex6_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık. | Dün provada ne yönetmen ne de oyuncular hazırdı. | Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı. | Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir.
+* **Doğru Seçenek İndeksi:** 2
+
+---
+
+### Soru ID: u40l3_ex6_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir. | Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık. | Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil. | Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l3_ex6_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** He left the door open so that the dog go could out easily. | He left door the open so that the dog could go out easily. | The dog could go out easily so that he left the door open. | He left the door open so that the dog could go out easily.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex6_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.' | No one could enter without permission.' in order that choose the correct purpose link: 'They locked the laboratory gates | Choose the purpose correct link: 'They locked the laboratory gates in order that no one could enter without permission.' | Choose the correct purpose link: 'They locked the laboratory gates in order that no one enter could without permission.'
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex7_mc_tr_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık. | Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur. | Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir. | Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex7_mc_tr_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun Türkçe karşılığını seçin:
+* **Seçenekler:** Laboratuvar, Pazar günleri hariç her gün açıktır. | Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir. | Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur. | Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı.
+* **Doğru Seçenek İndeksi:** 0
+
+---
+
+### Soru ID: u40l3_ex7_mc_en_0 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** He left the door open so that the dog could go out easily. |  Aside from a few errors, minor the software architecture is absolutely flawless. | A few minor errors, the software architecture is absolutely flawless Aside from . | Aside from a few minor errors, the software architecture is absolutely flawless.
+* **Doğru Seçenek İndeksi:** 3
+
+---
+
+### Soru ID: u40l3_ex7_mc_en_1 (multiple-choice)
+* **Yönerge:** Cümlenin en uygun İngilizce karşılığını seçin:
+* **Seçenekler:** Recent studies, your biological clock can be confused by computer light According to . | According to recent studies, your biological clock can be confused by computer light. | We packed our bags quickly so as to not be late for the flight. |  According to recent studies, biological your clock can be confused by computer light.
+* **Doğru Seçenek İndeksi:** 1
+
+---
+
+### Soru ID: u40l3_ex5_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The project was a huge success in terms of revenue, but not in terms of user satisfaction.
+
+---
+
+### Soru ID: u40l3_ex5_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.
+
+---
+
+### Soru ID: u40l3_ex6_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** According to recent studies, your biological clock can be confused by computer light.
+
+---
+
+### Soru ID: u40l3_ex6_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The project was a huge success in terms of revenue, but not in terms of user satisfaction.
+
+---
+
+### Soru ID: u40l3_ex6_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** The committee voted in favor of the new design, abandoning the old prototype completely.
+
+---
+
+### Soru ID: u40l3_ex6_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We should use clean energy sources instead of burning fossil fuels.
+
+---
+
+### Soru ID: u40l3_ex6_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Investors prefer to see tangible results rather than theoretical promises.
+
+---
+
+### Soru ID: u40l3_ex6_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.
+
+---
+
+### Soru ID: u40l3_ex7_wb_tr_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** We should use clean energy sources instead of burning fossil fuels.
+
+---
+
+### Soru ID: u40l3_ex7_wb_tr_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Investors prefer to see tangible results rather than theoretical promises.
+
+---
+
+### Soru ID: u40l3_ex7_wb_tr_2 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He talked about the complex quantum theory as if he were an expert in that field.
+
+---
+
+### Soru ID: u40l3_ex7_wb_en_0 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** When it comes to data security, the firm leaves nothing to chance.
+
+---
+
+### Soru ID: u40l3_ex7_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** Neither the director nor the actors were  present at the rehearsal yesterday.
+
+---
+
+### Soru ID: u40l3_ex7_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı.
+
+---
+
+### Soru ID: u40l3_ex6_tx_en (translation-text)
+* **Yönerge:** "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l3_ex7_tx_tr (translation-text)
+* **Yönerge:** "Neither the director nor the actors were  present at the rehearsal yesterday." ifadesini Türkçe'ye çevirin:
+
+---
+
+### Soru ID: u40l3_ex7_tx_en (translation-text)
+* **Yönerge:** "Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı." ifadesini İngilizceye çevirin:
+
+---
+
+### Soru ID: u40l3_ex8_match1 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - yine de / buna rağmen <--> nonetheless
+  - -irken / oysa <--> while
+  - ne olursa olsun <--> regardless
+  - ama <--> but
+
+---
+
+### Soru ID: u40l3_ex8_match2 (matching)
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - -in yerine <--> instead of
+  - -e göre <--> according to
+  - açısından / bakımından <--> in terms of
+  - lehine / yararına <--> in favor of
+
+---
+
+### Soru ID: u40l3_ex8_cloze_5 (fill-blank)
+* **Yönerge:** Boşluğu doldur
+* **İngilizce Cümle:** We packed our bags quickly ___ not be late for the flight.
+* **Seçenekler:** rather than | in terms of | instead of | so as to
+* **Doğru Seçenek İndeksi:** 3
+* **Çeviri:** Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık.
+
+---
+
+### Soru ID: u40l3_ex8_wb_en_1 (word-bank)
+* **Yönerge:** Cümlenin Türkçe karşılığını oluşturun:
+* **Çeviri:** He left the door open so that the dog could go out easily.
+
+---
+
+### Soru ID: u40l3_ex8_wb_en_2 (word-bank)
+* **Yönerge:** Cümlenin İngilizce karşılığını oluşturun:
+* **Çeviri:** Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.
+
+---
+
