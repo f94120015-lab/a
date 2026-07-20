@@ -8979,3 +8979,41 @@ Bu dosya, Bölüm 16 altındaki egzersizlerin sadeleştirilmesi, soru tiplerinin
   - giymek <--> wear
   - danışmak <--> consult
   - anlamak <--> understand
+
+# Silinen Sorular Arşivi (Bölüm 4: Özne - Geçişli Fiil + Nesne)
+
+Bu dosya, Bölüm 4 altındaki egzersizlerin 3 alıştırmaya ve alıştırma başına 10 soruya düşürülmesi ve kelime eşleştirme sorularının kaldırılması sırasında çıkarılan soruları içermektedir.
+
+## Çıkarılan Kelime Eşleştirme Soruları (Alıştırma 1 - 12)
+
+### Alıştırma 1-12 Ortak Çıkarılan Kelime Eşleştirmeleri
+* **Yönerge:** Kelimeleri Türkçe karşılıklarıyla eşleştirin.
+* **Eşleştirmeler:**
+  - çelişir <--> contradicts
+  - belirler <--> specifies
+  - öngörür <--> anticipates
+  - savunmak <--> advocate
+  - tetikler <--> triggers
+  - açıklığa kavuşturmak <--> clarify
+  - yol açar <--> induces
+  - bozar <--> distorts
+  - tanımlar <--> defines
+  - bağlar <--> binds
+  - denetlemek <--> inspect
+  - etkiler <--> affects
+  - istikrarlı hale getirir <--> stabilizes
+  - gösterir <--> illustrates
+  - kısıtlar <--> restricts
+  - doğrular <--> validates
+  - izole eder <--> isolates
+  - maksimize etmek <--> maximize
+  - hesaplar <--> calculates
+  - ortaya çıkarır <--> exposes
+  - değiştirir <--> alters
+  - güvenceye alır <--> secures
+  - askıya aldı <--> suspended
+  - feshetti <--> terminated
+
+## Fazla Olan Egzersizler (Alıştırma 4 - 12)
+Alıştırma 4 ila 12 arasındaki tüm seçmeli, sıralama (word-bank) ve çeviri (translation-text) soruları, toplamda 90'ın üzerinde soru, sadeleştirme ve pedagojik yeniden yapılandırma kapsamında arşivlenmiş ve kaldırılarak bu dosyaya taşınmıştır.
+
