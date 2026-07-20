@@ -9111,3 +9111,53 @@ Bölüm 12 altındaki 3 dersin (Lesson 38, 39, 40) korunmasına karar verilmiş;
 
 
 
+
+
+# Silinen Sorular Arşivi (Bölüm 21: Geçmiş Zaman Modalları - Perfect Modals - 2026-07-21)
+
+Bu ünite, Bölüm 20: Fiil İsmi (Gerund) + Nesnesi (Özne Olarak) bölümünün hemen ardından eklenmiş yeni bir ünitedir.
+- Bölüm tek dersten ve her biri 10'ar sorudan oluşan 4 alıştırmadan (toplam 40 soru) oluşmaktadır.
+- Ekleme işlemi tamamen yeni sorulardan oluştuğu için, müfredat genelinde herhangi bir soru silinmemiş veya kaldırılmamıştır. Dolayısıyla bu ünite için çıkarılan soru bulunmamaktadır.
+
+
+# Silinen Sorular Arşivi (Bölüm 26: Nicelik Belirteçleri - Quantifiers - 2026-07-21)
+
+Bu ünite, her biri 10 sorudan oluşan 3 alıştırmalık (toplam 30 soru per ders, toplamda 120 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski dinamik soru üreticisinden kaynaklanan tüm kelime eşleştirme ("Kelimeleri Türkçe karşılıklarıyla eşleştirin") soruları (Lesson 1-3'ten toplam 30 kelime eşleştirme sorusu) kaldırıldı.
+- Lesson 4 altındaki 9 alıştırmalık (83 soru) eski karmaşık test grubu kaldırılarak yerine 3 alıştırmalık (30 soru) temiz ve aşamalı bir yapı getirildi.
+- Kaldırılan tüm eski soru yapıları (toplamda 203 soru çeşidi) arşivlenerek yerine pedagojik aşamalılığı yüksek ve önceki konuların (Pasif, Gerund, İnfinitive) entegre edildiği 120 yeni soru yerleştirildi.
+
+
+# Silinen Sorular Arşivi (Bölüm 27: Zaman Zarfıyla Başlayan Zarf Cümleciği, After, Before - 2026-07-21)
+
+Bu ünite, her biri 15 sorudan oluşan 3 alıştırmalık (ders başına 45 soru, toplamda 90 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski Lesson 1 altındaki 8 alıştırma (119 soru) ve Lesson 2 altındaki 12 alıştırma (156 soru) olmak üzere toplamda 275 soru çeşidi kaldırılmıştır.
+- Tüm kelime eşleştirme ("Kelimeleri Türkçe karşılıklarıyla eşleştirin") şablonları kaldırıldı ve yerine ifade/öbek düzeyinde eşleştirmeler getirildi.
+- Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 90 yeni kaliteli ve tekrarlı soru yerleştirildi.
+
+
+# Silinen Sorular Arşivi (Bölüm 28: Zarf Cümlecikleri - 2026-07-21)
+
+Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru, 10 derste toplam 360 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski yapıda yer alan 10 ders altındaki 5'er alıştırma (toplam 500 soru) kaldırılmıştır.
+- Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
+- Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 360 yeni kaliteli ve tekrarlı soru yerleştirildi.
+- İleri seviye alıştırmalarda önceki ünitelerin gramer yapıları (edilgen, gerund, infinitive vb.) entegre edilerek bracketed tag'ler eklendi.
+
+
+# Silinen Sorular Arşivi (Bölüm 29: Karşılaştırma ile Sıfat Cümleciği - 2026-07-21)
+
+Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru, 10 derste toplam 360 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski yapıda yer alan 10 ders altındaki toplam 76 alıştırma (toplam 760 soru) kaldırılmıştır.
+- Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
+- Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 360 yeni kaliteli ve tekrarlı soru yerleştirildi.
+- İleri seviye alıştırmalarda önceki ünitelerin gramer yapıları (edilgen, gerund, infinitive vb.) entegre edilerek bracketed tag'ler eklendi.
+
+
+# Silinen Sorular Arşivi (Bölüm 39: Öbeksel Kipler (Phrasal Modals) (Ekstra Pratik) - 2026-07-21)
+
+Bu ünite, her biri 12 sorudan oluşan 3 alıştırmalık (ders başına 36 soru, 16 derste toplam 576 soru) yeni statik yapısıyla baştan tasarlandı.
+- Eski yapıda yer alan 16 ders altındaki toplam 66 alıştırma (toplam 660 soru) kaldırılmıştır.
+- Tüm kelime eşleştirme şablonları kaldırıldı ve ifade/öbek düzeyinde eşleştirmeler korundu.
+- Aşamalı pedagojik yapı kurularak basit seviyeden akademik cümlelerin yer aldığı ileri seviyeye uzanan 576 yeni kaliteli ve tekrarlı soru yerleştirildi.
+- İleri seviye alıştırmalarda önceki ünitelerin gramer yapıları (edilgen, gerund, infinitive vb.) entegre edilerek bracketed tag'ler eklendi.
