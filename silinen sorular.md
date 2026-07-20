@@ -6017,7 +6017,70 @@ Bu Bölüm, Bölüm 11 altındaki egzersizlerin zorluk derecelerine göre 3 sevi
   - hata tespit eden kod <--> error-detecting code
 
 
+### Ders 12 ve Ders 13 Birleştirme Öncesi Cümleler / Sorular (Arşiv)
+
+#### Lesson 12 Eski Cümle Yapısı:
+- basit:
+  - growing population: büyüyen nüfus
+  - rising prices: yükselen fiyatlar
+  - developing countries: gelişmekte olan ülkeler
+  - existing resources: mevcut kaynaklar
+  - changing times: değişen zamanlar
+  - expanding networks: genişleyen ağlar
+  - emerging technologies: yeni ortaya çıkan teknolojiler
+  - lasting peace: kalıcı barış
+  - increasing costs: artan maliyetler
+  - misleading charts: yanıltıcı grafikler
+- orta:
+  - The growing population needs more food. (Büyüyen nüfus daha fazla gıdaya ihtiyaç duyar.)
+  - We must adapt to changing times. (Değişen zamanlara uyum sağlamalıyız.)
+  - Developing countries face many economic challenges. (Gelişmekte olan ülkeler birçok ekonomik zorlukla karşı karşıyadır.)
+  - The company announced rising prices today. (Şirket bugün yükselen fiyatları duyurdu.)
+  - They analyze the existing resources carefully. (Mevcut kaynakları dikkatle analiz ediyorlar.)
+  - The expanding networks improve our connection. (Genişleyen ağlar bağlantımızı geliştiriyor.)
+  - We are adopting emerging technologies. (Yeni ortaya çıkan teknolojileri benimsiyoruz.)
+  - Both sides want a lasting peace. (Her iki taraf da kalıcı bir bir barış istiyor.)
+  - Higher taxes lead to increasing costs. (Yüksek vergiler artan maliyetlere yol açar.)
+  - The presentation contained misleading charts. (Sunum yanıltıcı grafikler içeriyordu.)
+- ileri:
+  - To meet the demands of a growing population, the government must secure more clean water resources. (Büyüyen bir nüfusun taleplerini karşılamak için hükümet daha fazla temiz su kaynağı güvence altına almalıdır.)
+  - Developing countries require international support to build sustainable infrastructure and educational systems. (Gelişmekte olan ülkeler sürdürülebilir altyapı ve eğitim sistemleri inşa etmek için uluslararası desteğe ihtiyaç duyar.)
+  - Although we face rising prices in energy sectors, our overall production efficiency continues to improve. (Enerji sektörlerinde yükselen fiyatlarla karşı karşıya kalmamıza rağmen, genel üretim verimliliğimiz artmaya devam ediyor.)
+  - By utilizing existing resources efficiently, the research team completed the project without exceeding the budget. (Mevcut kaynakları verimli bir şekilde kullanarak, araştırma ekibi bütçeyi aşmadan projeyi tamamladı.)
+  - The sudden integration of emerging technologies created unexpected security risks in the computing network. (Yeni ortaya çıkan teknolojilerin ani entegrasyonu, bilgisayar ağında beklenmedik güvenlik riskleri oluşturdu.)
+
+#### Lesson 13 Eski Cümle Yapısı:
+- basit:
+  - income-maximizing strategy: geliri maksimize eden strateji
+  - resource-limiting factor: kaynağı sınırlandıran faktör
+  - policy-defining role: politikayı tanımlayan rol
+  - data-processing software: veri işleyen yazılım
+  - market-expanding project: pazarı büyüten proje
+  - energy-consuming device: enerji tüketen cihaz
+  - cost-reducing measure: maliyeti düşüren önlem
+  - revenue-generating activity: gelir getiren faaliyet
+  - problem-solving skill: problem çözen beceri
+  - risk-mitigating factor: riski azaltan faktör
+- orta:
+  - The firm adopted an income-maximizing strategy. (Firma geliri maksimize eden bir strateji benimsedi.)
+  - Water scarcity is a resource-limiting factor. (Su kıtlığı kaynağı sınırlandıran bir faktördür.)
+  - The president has a policy-defining role. (Başkanın politikayı tanımlayan bir rolü vardır.)
+  - We installed the new data-processing software. (Yeni veri işleyen yazılımı yükledik.)
+  - They funded a market-expanding project. (Pazarı büyüten bir projeyi finanse ettiler.)
+  - An old heater is an energy-consuming device. (Eski bir ısıtıcı enerji tüketen bir cihazdır.)
+  - We must implement a cost-reducing measure. (Maliyeti düşüren bir önlem uygulamalıyız.)
+  - Tourism is a revenue-generating activity. (Turizm gelir getiren bir faaliyettir.)
+  - She has excellent problem-solving skills. (Onun mükemmel problem çözen becerileri vardır.)
+  - Diversification is a risk-mitigating factor. (Çeşitlendirme riski azaltan bir faktördür.)
+- ileri:
+  - To achieve long-term growth, the company implements an income-maximizing strategy across all divisions. (Uzun vadeli büyümeyi sağlamak için şirket tüm bölümlerde geliri maksimize eden bir strateji uygular.)
+  - Soil quality remains a resource-limiting factor that directly affects agricultural productivity in the region. (Toprak kalitesi, bölgedeki tarımsal verimliliği doğrudan etkileyen, kaynağı sınırlandıran bir faktör olmaya devam etmektedir.)
+  - The newly elected committee plays a policy-defining role in shaping environmental regulations for the decade. (Yeni seçilen komite, on yılın çevre düzenlemelerini şekillendirmede politikayı tanımlayan bir rol oynamaktadır.)
+  - The technical team upgraded the data-processing software to manage high transaction volumes efficiently. (Teknik ekip, yüksek işlem hacimlerini verimli bir şekilde yönetmek için veri işleyen yazılımı yükseltti.)
+  - They launched a market-expanding project with the aim of attracting consumers from neighboring countries. (Komşu ülkelerden tüketicileri çekmek amacıyla pazarı büyüten bir proje başlattılar.)
+
 ---
+
 
 # Silinen Sorular Arşivi (Bölüm 12: Past Participle Sıfatı -ed)
 

@@ -4,6 +4,7 @@ node_modules/
 # Sitenin derlenmiş/çıktı klasörleri (Yapay zekanın okumasına gerek yok)
 dist/
 build/
+www/
 .next/
 .nuxt/
 
