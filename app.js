@@ -625,6 +625,144 @@ let blitzStreak = 0;
 const OBFUSCATED_EMAIL = "Zjk0MTIwMDE1QGdtYWlsLmNvbQ==";
 
 // ============================================================
+// SES EFEKTLERİ (WEB AUDIO API)
+// ============================================================
+let audioCtx = null;
+
+function getAudioContext() {
+  if (!audioCtx) {
+    const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+    if (AudioCtxClass) {
+      audioCtx = new AudioCtxClass();
+    }
+  }
+  if (audioCtx && audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  return audioCtx;
+}
+
+function playFeedbackSound(isCorrect) {
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+
+    if (isCorrect) {
+      // Bright victory chime sequence (C5 -> E5 -> G5 -> C6 arpeggio) - Higher Volume
+      const notes = [
+        { freq: 523.25, time: 0.00, dur: 0.14 }, // C5
+        { freq: 659.25, time: 0.07, dur: 0.14 }, // E5
+        { freq: 783.99, time: 0.14, dur: 0.16 }, // G5
+        { freq: 1046.50, time: 0.22, dur: 0.40 } // C6
+      ];
+
+      notes.forEach(n => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(n.freq, now + n.time);
+
+        gain.gain.setValueAtTime(0.001, now + n.time);
+        gain.gain.linearRampToValueAtTime(0.48, now + n.time + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + n.time + n.dur);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now + n.time);
+        osc.stop(now + n.time + n.dur);
+      });
+    } else {
+      // Rich, longer sustained minor harmonic sequence (~0.75s)
+      const notes = [
+        { freq: 392.00, subFreq: 196.00, time: 0.00, dur: 0.25 }, // G4 / G3
+        { freq: 349.23, subFreq: 174.61, time: 0.15, dur: 0.28 }, // F4 / F3
+        { freq: 293.66, subFreq: 146.83, time: 0.30, dur: 0.50 }  // D4 / D3
+      ];
+
+      notes.forEach(n => {
+        const osc1 = ctx.createOscillator();
+        const osc2 = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        // Fundamental tone + sub-octave warmth
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(n.freq, now + n.time);
+
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(n.subFreq, now + n.time);
+
+        gain.gain.setValueAtTime(0.001, now + n.time);
+        gain.gain.linearRampToValueAtTime(0.50, now + n.time + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + n.time + n.dur);
+
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc1.start(now + n.time);
+        osc2.start(now + n.time);
+        osc1.stop(now + n.time + n.dur);
+        osc2.stop(now + n.time + n.dur);
+      });
+    }
+  } catch (e) {
+    console.warn("Audio playback error:", e);
+  }
+}
+
+function playCompletionSound(isSuccess = true) {
+  try {
+    const ctx = getAudioContext();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+
+    if (isSuccess) {
+      // Grand celebratory fanfare chime sequence (C5 -> E5 -> G5 -> C6 -> E6 -> G6)
+      const notes = [
+        { freq: 523.25, time: 0.00, dur: 0.16 }, // C5
+        { freq: 659.25, time: 0.10, dur: 0.16 }, // E5
+        { freq: 783.99, time: 0.20, dur: 0.18 }, // G5
+        { freq: 1046.50, time: 0.32, dur: 0.25 }, // C6
+        { freq: 1318.51, time: 0.44, dur: 0.25 }, // E6
+        { freq: 1567.98, time: 0.56, dur: 0.70 }  // G6 (sustained victory tone)
+      ];
+
+      notes.forEach(n => {
+        const osc1 = ctx.createOscillator();
+        const osc2 = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(n.freq, now + n.time);
+
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(n.freq * 0.5, now + n.time);
+
+        gain.gain.setValueAtTime(0.001, now + n.time);
+        gain.gain.linearRampToValueAtTime(0.55, now + n.time + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + n.time + n.dur);
+
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc1.start(now + n.time);
+        osc2.start(now + n.time);
+        osc1.stop(now + n.time + n.dur);
+        osc2.stop(now + n.time + n.dur);
+      });
+    } else {
+      playFeedbackSound(false);
+    }
+  } catch (e) {
+    console.warn("Completion sound error:", e);
+  }
+}
+
+// ============================================================
 // KELİME SÖZLÜĞÜ VE HOVER ÇEVİRİ ALTYAPISI
 // ============================================================
 // wordDictionary was moved to data.js to support matching base translations
@@ -4684,6 +4822,84 @@ function getLessonIllustration(lessonId, unitId) {
     `;
   }
 
+  // Special vector animations for Section 1 (Unit 0 & Unit 1)
+  if (unitId === 0 || unitId === 1) {
+    if (lessonId % 3 === 0) {
+      return `
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon animated-lesson-icon">
+          <style>
+            @keyframes vectorCubeFloat {
+              0%, 100% { transform: translateY(0px) rotate(0deg); }
+              50% { transform: translateY(-4px) rotate(3deg); }
+            }
+            @keyframes vectorPulseRing {
+              0% { transform: scale(0.9); opacity: 0.3; }
+              50% { transform: scale(1.1); opacity: 0.8; }
+              100% { transform: scale(0.9); opacity: 0.3; }
+            }
+            .vector-cube-anim { animation: vectorCubeFloat 3s ease-in-out infinite; transform-origin: center; }
+            .vector-ring-anim { animation: vectorPulseRing 2.5s ease-in-out infinite; transform-origin: center; }
+          </style>
+          <circle cx="32" cy="32" r="24" fill="#3b82f6" opacity="0.2" class="vector-ring-anim" />
+          <g class="vector-cube-anim">
+            <path d="M32 12L50 22V42L32 52L14 42V22L32 12Z" fill="#3b82f6" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 12V32M32 32L50 22M32 32L14 22" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+            <path d="M32 32L50 42M32 32L14 42" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      `;
+    } else if (lessonId % 3 === 1) {
+      return `
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon animated-lesson-icon">
+          <style>
+            @keyframes vectorGearsRotate {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            @keyframes vectorGearRev {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(-360deg); }
+            }
+            .vector-gear-1 { animation: vectorGearsRotate 8s linear infinite; transform-origin: 24px 28px; }
+            .vector-gear-2 { animation: vectorGearRev 6s linear infinite; transform-origin: 40px 38px; }
+          </style>
+          <g class="vector-gear-1">
+            <circle cx="24" cy="28" r="12" fill="#8b5cf6" opacity="0.8" />
+            <path d="M24 12V16M24 40V44M8 28H12M36 28H40M13 17L16 20M32 36L35 39M13 39L16 36M32 20L35 17" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="28" r="4" fill="#ffffff" />
+          </g>
+          <g class="vector-gear-2">
+            <circle cx="40" cy="38" r="9" fill="#06b6d4" opacity="0.8" />
+            <path d="M40 26V29M40 47V50M28 38H31M49 38H52" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="38" r="3" fill="#ffffff" />
+          </g>
+        </svg>
+      `;
+    } else {
+      return `
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon animated-lesson-icon">
+          <style>
+            @keyframes vectorEnergyBridge {
+              0% { stroke-dashoffset: 40; }
+              100% { stroke-dashoffset: 0; }
+            }
+            @keyframes vectorNodePulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.15); filter: drop-shadow(0 0 6px #10b981); }
+            }
+            .vector-bridge-line { stroke-dasharray: 6 4; animation: vectorEnergyBridge 1.5s linear infinite; }
+            .vector-node-p { animation: vectorNodePulse 2.2s ease-in-out infinite; transform-origin: center; }
+          </style>
+          <path d="M16 32 Q 32 14, 48 32" stroke="#10b981" stroke-width="3.5" fill="none" class="vector-bridge-line" />
+          <circle cx="16" cy="32" r="8" fill="#10b981" class="vector-node-p" />
+          <circle cx="48" cy="32" r="8" fill="#10b981" class="vector-node-p" style="animation-delay: 1.1s;" />
+          <circle cx="16" cy="32" r="3" fill="#ffffff" />
+          <circle cx="48" cy="32" r="3" fill="#ffffff" />
+        </svg>
+      `;
+    }
+  }
+
   const lesson = lessons.find(l => l.id === lessonId);
   const unitLessons = units.find(u => u.id === unitId)?.lessons || [];
   const lessonIndex = unitLessons.indexOf(lessonId);
@@ -4705,7 +4921,7 @@ function getLessonIllustration(lessonId, unitId) {
     category = 'multilingual';
   } else if (unitId === 7) {
     category = 'greetings';
-  } else if (unitId === 8) {
+  } else if (unitId === 5) {
     category = 'family';
   } else if (unitId === 9) {
     category = 'blocks';
@@ -4756,7 +4972,7 @@ function getLessonIllustration(lessonId, unitId) {
   }
 
   // Inject variety
-  if (lessonIndex === 1 && (unitId === 2 || unitId === 7 || unitId === 8)) {
+  if (lessonIndex === 1 && (unitId === 2 || unitId === 7 || unitId === 5)) {
     category = 'calendar';
   }
   if (lessonIndex === 2 && (unitId === 1 || unitId === 6 || unitId === 9 || unitId === 20)) {
@@ -5373,26 +5589,25 @@ function renderLessonTree() {
 
   // Dynamic injection of Formasyon Turu as starter lesson
   const isCompleted = state.formationTourCompleted;
-  const buttonText = isCompleted ? "Turu Tekrarla (Keşfet)" : "Turu Başlat (Keşfet)";
-  const btnClass = isCompleted ? "btn-secondary" : "btn-primary";
-  const btnStyle = isCompleted 
-    ? "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s;" 
-    : "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; background: linear-gradient(135deg, #a855f7 0%, #db2777 100%); border: none; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4); cursor: pointer; transition: all 0.2s;";
+  const buttonText = isCompleted ? "🔄 Turu Tekrarla" : "🚀 Turu Başlat";
+  const btnClass = isCompleted ? "btn-formation-tour completed" : "btn-formation-tour";
 
   const tourBlock = document.createElement('div');
-  tourBlock.className = 'formation-tour-start-block heartbeat-card';
-  tourBlock.style.cssText = "margin-bottom: 32px; padding: 24px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.2) 100%); border: 2.2px solid rgba(168, 85, 247, 0.55); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: left; position: relative; overflow: hidden;";
+  tourBlock.className = 'formation-tour-hero-card compact minimal';
   tourBlock.innerHTML = `
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-      <div style="flex: 1; min-width: 250px;">
-        <span style="background: linear-gradient(135deg, #a855f7, #ec4899); color: white; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 8px;">🚀 BAŞLANGIÇ / ORYANTASYON</span>
-        <h3 style="margin: 0 0 6px 0; font-size: 1.4rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--accent-primary);">🎓 Formasyon Turu</h3>
-        <p style="margin: 0; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.4; font-weight: 500;">
+    <div class="formation-tour-glow-bg"></div>
+    <div class="formation-tour-content-wrap">
+      <div class="formation-tour-left">
+        <h3 class="formation-tour-title-compact">
+          <span>🎓 Formasyon Turu</span>
+          ${isCompleted ? '<span class="formation-tour-status-badge">Tamamlandı ✅</span>' : ''}
+        </h3>
+        <p class="formation-tour-desc-compact">
           amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>30 doğrusal soruda</strong> hızlıca keşfedin.
         </p>
       </div>
-      <div style="flex-shrink: 0; display: flex; justify-content: flex-end;">
-        <button class="btn ${btnClass}" id="btn-tree-start-formation" style="${btnStyle}">${buttonText}</button>
+      <div class="formation-tour-btn-wrap">
+        <button class="${btnClass}" id="btn-tree-start-formation">${buttonText}</button>
       </div>
     </div>
   `;
@@ -5518,7 +5733,7 @@ function renderLessonTree() {
     const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
     
-    const noDescUnitIds = [13, 17, 21, 22, 40, 101, 102, 103];
+    const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${unit.description}</p>`;
     
     let localEditsHTML = '';
@@ -6528,7 +6743,7 @@ function startLesson(lessonId, exerciseId = null) {
   showScreen('quiz-screen');
 
   const proceedToQuiz = () => {
-    if (currentLesson.unitId === 101) {
+    if (currentLesson.unitId === 36) {
       showFormulaWarmup(currentLesson, () => {
         renderQuestion();
       });
@@ -6862,7 +7077,7 @@ function renderQuestion() {
 
   const quizScreen = document.getElementById('quiz-screen');
   if (quizScreen) {
-    if (currentLesson && currentLesson.unitId === 10) {
+    if (currentLesson && currentLesson.unitId === 5) {
       quizScreen.setAttribute('data-unit-id', '10');
     } else {
       quizScreen.removeAttribute('data-unit-id');
@@ -6892,7 +7107,7 @@ function renderQuestion() {
     applyClozeHighlighting(question);
   }
 
-  if (currentLesson && currentLesson.unitId === 101 && question.sentence) {
+  if (currentLesson && currentLesson.unitId === 36 && question.sentence) {
     question.sentence = colorCodeUnit101Sentence(question.sentence);
   }
 
@@ -7040,7 +7255,7 @@ function renderQuestion() {
     applyReadingPassageHighlights();
 
     // Bölüm 38 (Unit 40) Görsel Bağlaç ve Noktalama Kılavuzu (Conjunction HUD)
-    if (currentLesson && currentLesson.unitId === 40) {
+    if (currentLesson && currentLesson.unitId === 38) {
       let sentenceStr = (originalSentence || "").toLowerCase();
       let hudTitle = 'Bağlaç & Punctuation Matrisi';
       let hudFormula = '';
@@ -7114,7 +7329,7 @@ function renderQuestion() {
     }
 
     // Bölüm 36 (Unit 101) HUD ve Zaman Çizelgesi Entegrasyonu
-    if (currentLesson && currentLesson.unitId === 101) {
+    if (currentLesson && currentLesson.unitId === 36) {
       let sentenceStr = (originalSentence || "").toLowerCase();
       let hudType = '';
       let hudTitle = '';
@@ -7210,7 +7425,7 @@ function renderQuestion() {
 
   // Restore prompt text so data remains unmodified
   question.prompt = originalPrompt;
-  if (currentLesson && currentLesson.unitId === 101) {
+  if (currentLesson && currentLesson.unitId === 36) {
     question.sentence = originalSentence;
   }
 }
@@ -7284,12 +7499,12 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (currentLesson && [8, 51, 52, 53, 54, 55, 56].includes(currentLesson.unitId)) {
+  if (currentLesson && [5, 54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
     let tipText = '';
     const unitId = currentLesson.unitId;
-    if (unitId === 8) {
+    if (unitId === 5) {
       tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-    } else if (unitId === 51) {
+    } else if (unitId === 54) {
       if (question.id.includes('_l01') || question.id.includes('_l1')) {
         tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
       } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
@@ -7297,7 +7512,7 @@ function renderMultipleChoice(container, question) {
       } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
         tipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
       }
-    } else if (unitId === 52) {
+    } else if (unitId === 55) {
       if (question.id.includes('_l01') || question.id.includes('_l1')) {
         tipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
       } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
@@ -7307,7 +7522,7 @@ function renderMultipleChoice(container, question) {
       } else if (question.id.includes('_l04') || question.id.includes('_l4')) {
         tipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
       }
-    } else if (unitId === 53 || unitId === 54) {
+    } else if (unitId === 56 || unitId === 57) {
       tipText = '<strong>Bağlaç Formülleri ve Örnekleri (Grup Kuralları):</strong><br>' +
                 '• <strong>Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
                 '  <em>Örnek:</em> Although it was raining, we went out.<br>' +
@@ -7315,7 +7530,7 @@ function renderMultipleChoice(container, question) {
                 '  <em>Örnek:</em> Despite the heavy rain, we went out.<br>' +
                 '• <strong>Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
                 '  <em>Örnek:</em> It was raining; however, we decided to go out.';
-    } else if (unitId === 55 || unitId === 56) {
+    } else if (unitId === 58) {
       if (question.id.includes('_l7_') || question.id.includes('_l7')) {
         tipText = '<strong>Keşke Yapıları (I wish / If only):</strong><br>' +
                   '• <strong>Şikayet / Gelecek:</strong> wish + would V1. <em>(Örn: I wish you would listen)</em><br>' +
@@ -9804,6 +10019,7 @@ function checkAnswer() {
   const feedbackText = document.getElementById('feedback-text');
 
   feedbackPanel.classList.add('show');
+  playFeedbackSound(isCorrect);
 
   if (isCorrect) {
     if (typeof window.completedReadingHighlights === 'undefined') {
@@ -10063,6 +10279,7 @@ function completeReviewSession() {
 
   updateDailyTaskProgress('review', 1);
   saveState();
+  playCompletionSound(true);
   showToast('Tekrar oturumu tamamlandı! Yanlışlarını pekiştirdin. 🎉', 'success');
   
   updateTopBar();
@@ -10086,7 +10303,8 @@ function completeFormationTour() {
     showToast('Tebrikler! Formasyon Turunu tekrar tamamladınız! 🎓', 'success');
   }
 
-  // Confetti explosion
+  // Confetti & Sound explosion
+  playCompletionSound(true);
   if (typeof confetti === 'function') {
     confetti({
       particleCount: 150,
@@ -10200,7 +10418,8 @@ function completeLesson() {
   const summaryAch = document.getElementById('summary-achievements');
   if (summaryAch) summaryAch.style.display = 'none';
 
-  // Konfeti
+  // Konfeti ve Ses Efekti
+  playCompletionSound(isSuccess);
   showScreen('summary-screen');
   if (typeof confetti === 'function') {
     setTimeout(() => {
@@ -11810,6 +12029,7 @@ async function renderLeaderboard() {
   competitors = finalCompetitors;
 
   competitors.sort((a, b) => b.xp - a.xp);
+  competitors = competitors.slice(0, 10);
 
   list.innerHTML = competitors.map((c, index) => {
     const rank = index + 1;
@@ -13167,6 +13387,7 @@ function checkPlacementAnswer() {
   const text = document.getElementById('placement-feedback-text');
 
   panel.classList.add('show');
+  playFeedbackSound(isCorrect);
   if (isCorrect) {
     panel.classList.add('correct');
     panel.classList.remove('wrong');
@@ -13262,6 +13483,7 @@ function completePlacementTest() {
   }
 
   saveState();
+  playCompletionSound(true);
   isPlacementMode = false;
 
   showToast('Seviyeniz başarıyla belirlendi!', 'success');
@@ -13717,40 +13939,8 @@ function init() {
   console.log("DEBUG: Total units initially:", typeof units !== 'undefined' ? units.length : 'undefined');
   console.log("DEBUG: Total lessons initially:", typeof lessons !== 'undefined' ? lessons.length : 'undefined');
 
-  // Empty lessons and units filter logic
-  if (typeof lessons !== 'undefined' && Array.isArray(lessons)) {
-    const validLessons = lessons.filter(lesson => {
-      const isNotUploaded = (!lesson.exercises || lesson.exercises.length === 0 || lesson.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!lesson.questions || lesson.questions.length === 0);
-      return !isNotUploaded;
-    });
-    console.log("DEBUG: Valid lessons count:", validLessons.length);
-    lessons.length = 0;
-    lessons.push(...validLessons);
-  }
-  
-  if (typeof units !== 'undefined' && Array.isArray(units)) {
-    const validUnits = units.filter(unit => {
-      const hasLessons = unit.lessons.some(lId => {
-        const found = lessons.some(l => l.id === lId);
-        return found;
-      });
-      if (unit.id === 31 || unit.id === 62 || unit.id === 23) {
-        console.log(`DEBUG: Unit ${unit.id} (${unit.title}) - hasLessons check:`, hasLessons);
-        console.log(`DEBUG: Unit ${unit.id} lesson IDs:`, unit.lessons);
-        unit.lessons.forEach(lId => {
-          const match = lessons.find(l => l.id === lId);
-          console.log(`  Lesson ${lId} match in lessons:`, match ? `Found (${match.title})` : 'Not Found ❌');
-        });
-      }
-      return hasLessons;
-    });
-    validUnits.forEach(unit => {
-      unit.lessons = unit.lessons.filter(lId => lessons.some(l => l.id === lId));
-    });
-    console.log("DEBUG: Valid units count:", validUnits.length);
-    units.length = 0;
-    units.push(...validUnits);
-  }
+  // Preserve all units in the curriculum tree (total 63 units)
+  console.log("DEBUG: Total units loaded:", typeof units !== 'undefined' ? units.length : 0);
 
   const isLocal = checkIsLocal();
   if (isLocal) {
@@ -16268,11 +16458,11 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       ruleText = preDefinedExplanation;
     } else {
       let lessonTipText = '';
-      if (currentLesson && [8, 51, 52, 53, 54, 55, 56].includes(currentLesson.unitId)) {
+      if (currentLesson && [5, 54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
         const unitId = currentLesson.unitId;
-        if (unitId === 8) {
+        if (unitId === 5) {
           lessonTipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-        } else if (unitId === 51) {
+        } else if (unitId === 54) {
           if (question.id.includes('_l01') || question.id.includes('_l1')) {
             lessonTipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
           } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
@@ -16280,7 +16470,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
           } else if (question.id.includes('_l03') || question.id.includes('_l3')) {
             lessonTipText = '<strong>Devrik (Inversion):</strong> Cümle başında kullanılan <em>Seldom, Nowhere, Not only, Hardly, Only then</em> gibi olumsuzluk/kısıtlama öbekleri cümleyi devrik yapar.';
           }
-        } else if (unitId === 52) {
+        } else if (unitId === 55) {
           if (question.id.includes('_l01') || question.id.includes('_l1')) {
             lessonTipText = '<strong>Kısaltma (Reduction):</strong> Aktif önceliklerde <em>Having + V3</em>; pasif önceliklerde <em>Having been + V3</em>; gelecek/amaç bildiren yapılarda <em>To be + V3</em> veya <em>To have been + V3</em> kullanılır.';
           } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
@@ -16290,7 +16480,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
           } else if (question.id.includes('_l04') || question.id.includes('_l4')) {
             lessonTipText = '<strong>Pasif Aktarım:</strong> <em>It is said that + SVO</em> veya <em>Subject + is said to + V0</em> kullanılır; eylemler arasında zaman farkı varsa (geçmişe dönük) <em>Subject + is said to + have V3</em> tercih edilir.';
           }
-        } else if (unitId === 53 || unitId === 54) {
+        } else if (unitId === 56 || unitId === 57) {
           lessonTipText = '<strong>Bağlaç Formülleri ve Örnekleri (Grup Kuralları):</strong><br>' +
                     '• <strong>Cümle Alanlar (+ Tam Cümle SVO):</strong> <em>Although</em> (rağmen), <em>Because</em> (çünkü), <em>Unless</em> (madıkça).<br>' +
                     '  <em>Örnek:</em> Although it was raining, we went out.<br>' +
@@ -16298,7 +16488,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
                     '  <em>Örnek:</em> Despite the heavy rain, we went out.<br>' +
                     '• <strong>Noktalamacılar / Transitions (; ... ,):</strong> <em>However</em> (ancak), <em>Therefore</em> (bu yüzden), <em>Moreover</em> (dahası).<br>' +
                     '  <em>Örnek:</em> It was raining; however, we decided to go out.';
-        } else if (unitId === 55 || unitId === 56) {
+        } else if (unitId === 58) {
           if (question.id.includes('_l7_') || question.id.includes('_l7')) {
             lessonTipText = '<strong>Keşke Yapıları (I wish / If only):</strong><br>' +
                       '• <strong>Şikayet / Gelecek:</strong> wish + would V1. <em>(Örn: I wish you would listen)</em><br>' +

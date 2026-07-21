@@ -319,7 +319,7 @@
     makeMC("u55_l4_ex1_q10", "Boşluğa gelecek uygun devrik yapıyı seçin:<br><br><strong>\"_______ it not for your support, we would be in trouble now.\"</strong>", ["Were", "Had", "Should", "If"], 0, "Were it not for... (sayende / desteğin olmasaydı) kalıbının devriğidir.")
   ];
 
-  const u55 = units.find(u => u.id === 55);
+  const u55 = units.find(u => u.id === 58);
   if (u55) {
     if (!u55.lessons.includes("c56_l4")) u55.lessons.push("c56_l4");
     if (!u55.lessons.includes("c56_l5")) u55.lessons.push("c56_l5");
@@ -329,7 +329,7 @@
 
   lessons.push({
     id: "c56_l4",
-    unitId: 55,
+    unitId: 62,
     title: "4. Devrik Koşul Yapıları (If Inversion)",
     subtitle: "",
     exercises: [{
@@ -340,7 +340,7 @@
       questions: u55_l4_ex1_q
     }],
     konuAnlatimi: {
-      baslik: "Bölüm 55 / Ders 4: Devrik Koşul Yapıları (If Inversion)",
+      baslik: "Bölüm 58 / Ders 4: Devrik Koşul Yapıları (If Inversion)",
       teorikMantik: "Cümleden 'if' bağlacı atıldığında, should, were veya had yardımcı fiillerinin öznenin önüne (başa) gelerek devriklik (inversion) oluşturması.",
       formul: "Should + S + V1 | Were + S + ... | Had + S + V3",
       altinKural: "Devrik koşul yapılarında anlam tamamen normal koşul cümleleriyle (Type 1, 2, 3) aynı kalır, sadece formal/akademik dizilim oluşur!"
@@ -364,7 +364,7 @@
 
   lessons.push({
     id: "c56_l5",
-    unitId: 55,
+    unitId: 62,
     title: "5. Alternatif Koşul Yapıları (Otherwise, Without, Then)",
     subtitle: "",
     exercises: [{
@@ -375,7 +375,7 @@
       questions: u55_l5_ex1_q
     }],
     konuAnlatimi: {
-      baslik: "Bölüm 55 / Ders 5: Alternatif Koşul Yapıları (Otherwise, Without, Then)",
+      baslik: "Bölüm 58 / Ders 5: Alternatif Koşul Yapıları (Otherwise, Without, Then)",
       teorikMantik: "Koşul anlamını 'if' kullanmadan 'Without' (edat), 'Otherwise/Or' (aksi takdirde/yoksa) bağlaçları ve 'If..., then...' kalıbıyla sağlama yöntemleri.",
       formul: "Without + Noun ➔ would/could | SVO. Otherwise, SVO | If SVO, then SVO",
       altinKural: "Without yapısı, cümledeki zaman bağlamına göre Type 2 (would V1) veya Type 3 (would have V3) sonuçları üretebilir!"
@@ -412,7 +412,7 @@
 
   lessons.push({
     id: "c56_l6",
-    unitId: 55,
+    unitId: 62,
     title: "6. Diğer Koşul Bağlaçları (Conditional Adverbs)",
     subtitle: "",
     exercises: [
@@ -432,7 +432,7 @@
       }
     ],
     konuAnlatimi: {
-      baslik: "Bölüm 55 / Ders 6: Diğer Koşul Bağlaçları (Conditional Adverbs)",
+      baslik: "Bölüm 58 / Ders 6: Diğer Koşul Bağlaçları (Conditional Adverbs)",
       teorikMantik: "As long as, provided that, in case, in the event of, unless ve only if gibi bağlaç ve edatların cümle ve isim alan varyasyonları ile devriklik kuralları.",
       formul: "Only if + SVO ➔ Devrik Cümle | In case of / In the event of + Noun | unless + SVO",
       altinKural: "Only if yapısı cümlenin en başındayken, if'li koşul kısmı düz kalır, ancak cümlenin ana yüklemi devrik (yardımcı fiil + özne) yapılır!"
@@ -482,7 +482,7 @@
 
   lessons.push({
     id: "c56_l7",
-    unitId: 55,
+    unitId: 62,
     title: "7. Keşke Yapıları (If only / I wish)",
     subtitle: "",
     exercises: [
@@ -509,7 +509,7 @@
       }
     ],
     konuAnlatimi: {
-      baslik: "Bölüm 55 / Ders 7: Keşke Yapıları (If only / I wish)",
+      baslik: "Bölüm 58 / Ders 7: Keşke Yapıları (If only / I wish)",
       teorikMantik: "Keşke (I wish / If only) yapılarının zaman çekimleri: Gelecek/Şikayet (would V1), Şimdiki Zaman (V2 / could V1) ve Geçmiş Zaman (had V3 / could have V3).",
       formul: "I wish you would V1 | I wish I knew/could V1 | If only we had V3/could have V3",
       altinKural: "Özne uyum kısıtı: 'I wish I...' ve 'He wishes he...' kalıplarında asla 'would' kullanılamaz; bunun yerine 'could' tercih edilir!"
@@ -1122,7 +1122,7 @@
 
     // Units array update for banner rendering
     if (typeof units !== 'undefined') {
-      const unit10 = units.find(u => u.id === 10);
+      const unit10 = units.find(u => u.id === 8);
       if (unit10) {
         unit10.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
         unit10.edits = unit10.edits || [];
@@ -1137,7 +1137,7 @@
     }
 
     lessons.forEach(lesson => {
-      if (lesson.unitId === 10) {
+      if (lesson.unitId === 8) {
         const lessonIdx = lesson.id - 28; // startLessonId is 28
         let sentences = unit10LessonSentences[lessonIdx + 1] || [];
         
@@ -1150,7 +1150,7 @@
           lesson.createdAt = "2026-07-20T03:20:00+03:00";
           
           // Generate 15 distinct questions
-          const generatedQuestions = generateUnit10Questions(10, lesson.id, sentences, sentences);
+          const generatedQuestions = generateUnit10Questions(8, lesson.id, sentences, sentences);
           
           lesson.questions = [];
           lesson.exercises = [
@@ -1173,7 +1173,7 @@
 
   if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof rawTopics !== 'undefined') {
     const topic58 = {
-      "id": 58,
+      "id": 62,
       "startLessonId": 580,
       "originalIndex": 58,
       "title": "Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi",
@@ -1212,7 +1212,7 @@
     rawTopics.push(topic58);
 
     units.push({
-      id: topic58.id,
+      id: 62,
       originalIndex: topic58.originalIndex,
       title: topic58.title,
       description: topic58.desc,
@@ -1441,7 +1441,7 @@
 
     lessons.push({
       id: "c58_l1",
-      unitId: 58,
+      unitId: 62,
       title: "Gerund, Present Participle ve Infinitive Ayrımı",
       subtitle: "Akademik çeldiriciler, anlamı değişen fiiller ve to edatı.",
       exercises: [
@@ -1758,7 +1758,7 @@
 
     lessons.push({
       id: "c59_l1",
-      unitId: 58,
+      unitId: 62,
       title: "Sentaktik Labirent: İleri Düzey '-ing' Analiz Testi",
       subtitle: "Diagnostic assessment of Gerunds, Present Participles, and Participle Clauses.",
       exercises: [
@@ -1798,7 +1798,7 @@
   // ==========================================
   if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof rawTopics !== 'undefined') {
     const topic59 = {
-      "id": 59,
+      "id": 63,
       "startLessonId": 590,
       "originalIndex": 59,
       "title": "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
@@ -1846,7 +1846,7 @@
     rawTopics.push(topic59);
 
     units.push({
-      id: topic59.id,
+      id: 63,
       originalIndex: topic59.originalIndex,
       title: topic59.title,
       description: topic59.desc,
@@ -2135,7 +2135,7 @@
 
     lessons.push({
       id: "c60_l1",
-      unitId: 59,
+      unitId: 63,
       title: "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
       subtitle: "Diagnostic assessment of Past Participles, Reduced Passives, and Causative structures.",
       exercises: [

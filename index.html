@@ -112,35 +112,85 @@
 
         <nav class="sidebar-menu">
           <button class="nav-tab active" data-tab="lessons">
-            <span class="nav-tab-icon">📚</span>
+            <span class="nav-tab-icon nav-anim-lessons">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M4 24C9 22 16 23 16 23C16 23 23 22 28 24V9C23 7 16 8 16 8C16 8 9 7 4 9V24Z" fill="#3b82f6" opacity="0.85" stroke="#60a5fa" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 8V23" stroke="#93c5fd" stroke-width="2"/>
+                <path d="M7 13H12M7 17H11" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Dersler</span>
           </button>
           <button class="nav-tab" data-tab="simulator">
-            <span class="nav-tab-icon">🚂</span>
+            <span class="nav-tab-icon nav-anim-simulator">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="12" width="20" height="12" rx="3" fill="#8b5cf6" opacity="0.85" stroke="#c084fc" stroke-width="2"/>
+                <rect x="20" y="7" width="5" height="5" fill="#f59e0b" rx="1"/>
+                <circle cx="10" cy="24" r="3" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" class="sidebar-anim-spin"/>
+                <circle cx="22" cy="24" r="3" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" class="sidebar-anim-spin"/>
+                <circle cx="8" cy="6" r="2" fill="#94a3b8" opacity="0.6" class="sidebar-anim-steam"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Simülatör</span>
           </button>
           <button class="nav-tab" data-tab="leaderboard">
-            <span class="nav-tab-icon">🏆</span>
-            <span class="nav-tab-label">Sıralama</span>
+            <span class="nav-tab-icon nav-anim-leaderboard">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M8 6H24V14C24 18.4 20.4 22 16 22C11.6 22 8 18.4 8 14V6Z" fill="#eab308" opacity="0.9" stroke="#fde047" stroke-width="2"/>
+                <path d="M16 22V27M11 27H21" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M5 8H8V12H5C3.9 12 3 11.1 3 10C3 8.9 3.9 8 5 8Z" fill="#eab308"/>
+                <path d="M27 8H24V12H27C28.1 12 29 11.1 29 10C29 8.9 28.1 8 27 8Z" fill="#eab308"/>
+                <circle cx="16" cy="13" r="2.5" fill="#ffffff"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Puan Tablosu</span>
           </button>
           <button class="nav-tab" data-tab="store">
-            <span class="nav-tab-icon">🛍️</span>
+            <span class="nav-tab-icon nav-anim-store">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M7 11H25L23 26H9L7 11Z" fill="#ec4899" opacity="0.85" stroke="#f472b6" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M11 11V8C11 5.2 13.2 3 16 3C18.8 3 21 5.2 21 8V11" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Mağaza</span>
           </button>
           <button class="nav-tab" data-tab="profile">
-            <span class="nav-tab-icon" id="profile-tab-icon">👤</span>
+            <span class="nav-tab-icon nav-anim-profile" id="profile-tab-icon">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <circle cx="16" cy="11" r="5" fill="#06b6d4" opacity="0.9" stroke="#67e8f9" stroke-width="2"/>
+                <path d="M7 26C7 21 11 19 16 19C21 19 25 21 25 26" fill="#06b6d4" opacity="0.6" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Profil</span>
           </button>
           <button class="nav-tab" data-tab="about">
-            <span class="nav-tab-icon">ℹ️</span>
+            <span class="nav-tab-icon nav-anim-about">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <circle cx="16" cy="16" r="11" fill="#3b82f6" opacity="0.85" stroke="#60a5fa" stroke-width="2"/>
+                <circle cx="16" cy="10.5" r="1.5" fill="#ffffff"/>
+                <path d="M16 15V22" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Hakkında</span>
           </button>
           <button class="nav-tab" data-tab="feedback">
-            <span class="nav-tab-icon">💬</span>
+            <span class="nav-tab-icon nav-anim-feedback">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M5 9C5 6.8 6.8 5 9 5H23C25.2 5 27 6.8 27 9V20C27 22.2 25.2 24 23 24H12L6 28V24C5 23 5 21.5 5 20V9Z" fill="#10b981" opacity="0.85" stroke="#34d399" stroke-width="2"/>
+                <circle cx="11" cy="14" r="1.5" fill="#ffffff" class="sidebar-anim-dot1"/>
+                <circle cx="16" cy="14" r="1.5" fill="#ffffff" class="sidebar-anim-dot2"/>
+                <circle cx="21" cy="14" r="1.5" fill="#ffffff" class="sidebar-anim-dot3"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Geri Bildirim</span>
           </button>
           <button class="nav-tab dev-only-tab" data-tab="admin" id="btn-admin" style="display: none; position: relative;">
-            <span class="nav-tab-icon">🔑</span>
+            <span class="nav-tab-icon nav-anim-admin">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <circle cx="11" cy="16" r="5" stroke="#ef4444" stroke-width="2.5"/>
+                <path d="M16 16H27M22 16V19M25 16V19" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
             <span class="nav-tab-label">Admin</span>
             <span class="nav-tab-badge" id="admin-nav-badge" style="display: none; position: absolute; top: 4px; right: 8px; background: #ff3b30; color: white; border-radius: 50%; min-width: 18px; height: 18px; font-size: 0.7rem; font-weight: bold; align-items: center; justify-content: center; padding: 2px; box-sizing: border-box; border: 1.5px solid var(--bg-body);">0</span>
           </button>

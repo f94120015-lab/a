@@ -8696,14 +8696,80 @@ input:checked + .slider:before {
   background: linear-gradient(135deg, rgba(30, 30, 47, 0.95), rgba(40, 40, 65, 0.95));
   border: 1.5px solid rgba(139, 126, 200, 0.4);
   border-radius: var(--radius-lg);
-  padding: 16px;
-  margin-bottom: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: left;
   animation: fadeInDown 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ════════════════════════════════════════════════════════
+   TÜM DERS SİMGELERİ İÇİN ANİMASYONLU VEKTÖR STİLLERİ
+   ════════════════════════════════════════════════════════ */
+
+@keyframes globalIconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+  }
+  50% {
+    transform: translateY(-3px) scale(1.06);
+    filter: drop-shadow(0 6px 12px rgba(139, 126, 200, 0.35));
+  }
+}
+
+@keyframes globalIconPulse {
+  0%, 100% { opacity: 0.85; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes globalIconRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.pin-svg-icon {
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+  animation: globalIconFloat 3.4s ease-in-out infinite;
+  transform-origin: center;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Alternate animation delay for odd nodes to create wave effect */
+.lesson-node-wrapper:nth-child(odd) .pin-svg-icon {
+  animation-delay: 0.8s;
+}
+
+.lesson-node-wrapper:nth-child(3n) .pin-svg-icon {
+  animation-delay: 1.6s;
+}
+
+/* Hover effects for all lesson nodes */
+.lesson-node:hover .pin-svg-icon {
+  transform: scale(1.22) translateY(-4px) rotate(-3deg);
+  filter: drop-shadow(0 8px 18px var(--accent-primary, #8b5cf6));
+}
+
+.pin-svg-icon path,
+.pin-svg-icon circle,
+.pin-svg-icon rect,
+.pin-svg-icon text {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lesson-node:hover .pin-svg-icon path {
+  stroke-width: 3.5px;
+}
+
+.lesson-node:hover .pin-svg-icon circle {
+  r: calc(100%);
+}
+nDown 0.3s ease;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -8923,6 +8989,396 @@ input:checked + .slider:before {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* ════════════════════════════════════════════════════════
+   TÜM DERS SİMGELERİ İÇİN ANİMASYONLU VEKTÖR STİLLERİ
+   ════════════════════════════════════════════════════════ */
+
+@keyframes globalIconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+  }
+  50% {
+    transform: translateY(-3px) scale(1.06);
+    filter: drop-shadow(0 6px 12px rgba(139, 126, 200, 0.35));
+  }
+}
+
+.pin-svg-icon {
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+  animation: globalIconFloat 3.4s ease-in-out infinite;
+  transform-origin: center;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lesson-node-wrapper:nth-child(odd) .pin-svg-icon {
+  animation-delay: 0.8s;
+}
+
+.lesson-node-wrapper:nth-child(3n) .pin-svg-icon {
+  animation-delay: 1.6s;
+}
+
+.lesson-node:hover .pin-svg-icon {
+  transform: scale(1.22) translateY(-4px) rotate(-3deg);
+  filter: drop-shadow(0 8px 18px var(--accent-primary, #8b5cf6));
+}
+
+.pin-svg-icon path,
+.pin-svg-icon circle,
+.pin-svg-icon rect,
+.pin-svg-icon text {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ════════════════════════════════════════════════════════
+   SOL MENÜ (SIDEBAR) SEKMELERİ ANİMASYONLU VEKTÖR STİLLERİ
+   ════════════════════════════════════════════════════════ */
+
+@keyframes navIconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  50% {
+    transform: translateY(-2.5px) scale(1.08);
+    filter: drop-shadow(0 4px 8px var(--accent-primary, #8b5cf6));
+  }
+}
+
+@keyframes navIconSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes navIconSteam {
+  0% { transform: translateY(0px) scale(0.8); opacity: 0.8; }
+  100% { transform: translateY(-5px) scale(1.4); opacity: 0; }
+}
+
+@keyframes navIconPulseDot {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.sidebar-menu .nav-tab .nav-tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sidebar-menu .nav-tab .nav-tab-icon svg {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  animation: navIconFloat 3.2s ease-in-out infinite;
+  transform-origin: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sidebar-menu .nav-tab:nth-child(even) .nav-tab-icon svg {
+  animation-delay: 0.6s;
+}
+
+.sidebar-menu .nav-tab:nth-child(3n) .nav-tab-icon svg {
+  animation-delay: 1.2s;
+}
+
+.sidebar-menu .nav-tab[data-tab="simulator"] .sidebar-anim-spin {
+  animation: navIconSpin 5s linear infinite;
+  transform-origin: center;
+}
+
+.sidebar-menu .nav-tab[data-tab="simulator"] .sidebar-anim-steam {
+  animation: navIconSteam 1.8s ease-out infinite;
+  transform-origin: center;
+}
+
+.sidebar-menu .nav-tab[data-tab="feedback"] .sidebar-anim-dot1 {
+  animation: navIconPulseDot 1.4s ease-in-out infinite;
+}
+.sidebar-menu .nav-tab[data-tab="feedback"] .sidebar-anim-dot2 {
+  animation: navIconPulseDot 1.4s ease-in-out infinite 0.2s;
+}
+.sidebar-menu .nav-tab[data-tab="feedback"] .sidebar-anim-dot3 {
+  animation: navIconPulseDot 1.4s ease-in-out infinite 0.4s;
+}
+
+.sidebar-menu .nav-tab:hover .nav-tab-icon svg {
+  transform: scale(1.28) translateY(-3px) rotate(-4deg);
+  filter: drop-shadow(0 6px 14px var(--accent-primary, #8b5cf6));
+}
+
+.sidebar-menu .nav-tab.active .nav-tab-icon svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 10px var(--accent-primary, #8b5cf6));
+}
+
+/* ════════════════════════════════════════════════════════
+   FORMASYON TURU PREMIUM HERO KARTI
+   ════════════════════════════════════════════════════════ */
+
+@keyframes tourGlowPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.96); }
+  50% { opacity: 0.85; transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6)); }
+}
+
+@keyframes tourBadgeShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.formation-tour-hero-card {
+  position: relative;
+  margin-bottom: 28px;
+  padding: 24px 26px;
+  background: linear-gradient(135deg, rgba(24, 18, 43, 0.94) 0%, rgba(38, 22, 59, 0.96) 50%, rgba(18, 24, 43, 0.94) 100%);
+  border: 1.8px solid rgba(168, 85, 247, 0.5);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.formation-tour-hero-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(236, 72, 153, 0.7);
+  box-shadow: 0 18px 48px rgba(168, 85, 247, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.formation-tour-glow-bg {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(236, 72, 153, 0.15) 50%, transparent 70%);
+  border-radius: 50%;
+  animation: tourGlowPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.formation-tour-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 2;
+}
+
+.formation-tour-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.formation-tour-tag {
+  background: linear-gradient(135deg, #a855f7, #ec4899, #3b82f6);
+  background-size: 200% 200%;
+  animation: tourBadgeShimmer 4s ease infinite;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4);
+}
+
+.formation-tour-title {
+  margin: 0 0 6px 0;
+  font-size: 1.45rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formation-tour-desc {
+  margin: 0 0 14px 0;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.formation-tour-features {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.formation-tour-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.formation-tour-btn-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.btn-formation-tour {
+  padding: 13px 26px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #a855f7 0%, #db2777 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.45);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-formation-tour:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 28px rgba(168, 85, 247, 0.6);
+  background: linear-gradient(135deg, #b565f8 0%, #e83888 100%);
+}
+
+.btn-formation-tour.completed {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-formation-tour.completed:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+/* Compact Horizontal Bar Overrides */
+.formation-tour-hero-card.compact {
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  border-radius: var(--radius-lg);
+  gap: 0;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.formation-tour-hero-card.compact .formation-tour-content-wrap {
+  gap: 12px;
+}
+
+.formation-tour-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 220px;
+}
+
+.formation-tour-tag-compact {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
+}
+
+.formation-tour-title-compact {
+  margin: 0;
+  font-size: 1.15rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.formation-tour-status-badge {
+  font-size: 0.7rem;
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  font-weight: 700;
+}
+
+.formation-tour-meta-compact {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  opacity: 0.9;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.formation-tour-hero-card.compact .btn-formation-tour {
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-md);
+}
+
+.formation-tour-hero-card.compact.minimal {
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  border-radius: var(--radius-lg);
+  gap: 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.formation-tour-hero-card.compact.minimal .btn-formation-tour {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+}
+
+.formation-tour-desc-compact {
+  margin: 3px 0 0 0;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+  font-weight: 400;
+}
 
 
 
