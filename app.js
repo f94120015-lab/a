@@ -2445,6 +2445,11 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function escapeAttr(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 // Güvenlik: Şifre hash'leme (SHA-256)
 async function hashPassword(password) {
   const encoder = new TextEncoder();
@@ -7549,7 +7554,12 @@ function renderMultipleChoice(container, question) {
   const renderedOptions = question.options.map((opt, i) => {
     let optHtml = opt;
     if (!isEngToTr && optHtml) {
-      optHtml = makeTextHoverable(optHtml, true);
+      const meaning = getOptionMeaning(question, opt);
+      if (meaning && !optHtml.includes('/')) {
+        optHtml = `<strong>${optHtml}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>`;
+      } else {
+        optHtml = makeTextHoverable(optHtml, true);
+      }
     }
     return `<button class="mc-option" data-index="${i}">${optHtml}</button>`;
   }).join('');
@@ -7933,6 +7943,69 @@ function renderVectorAssembly(container, question) {
 function segmentSentence(fullSentence, isEngToTr) {
   let segments = [fullSentence];
 
+  function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function applySplitBefore(segs, substring) {
+    const result = [];
+    const regex = new RegExp(`\\b${escapeRegex(substring)}\\b`, 'i');
+    for (let s of segs) {
+      const match = regex.exec(s);
+      if (match) {
+        const idx = match.index;
+        const part1 = s.substring(0, idx).trim();
+        const part2 = s.substring(idx).trim();
+        if (part1) result.push(part1);
+        if (part2) result.push(part2);
+      } else {
+        result.push(s);
+      }
+    }
+    return result;
+  }
+
+  function applySplitBeforeAndAfter(segs, substring) {
+    const result = [];
+    const regex = new RegExp(`\\b${escapeRegex(substring)}\\b`, 'i');
+    for (let s of segs) {
+      const match = regex.exec(s);
+      if (match) {
+        const idx = match.index;
+        const part1 = s.substring(0, idx).trim();
+        const matchText = match[0].trim();
+        const part2 = s.substring(idx + match[0].length).trim();
+        if (part1) result.push(part1);
+        if (matchText) result.push(matchText);
+        if (part2) result.push(part2);
+      } else {
+        result.push(s);
+      }
+    }
+    return result;
+  }
+
+  function applySplitAfter(segs, substring) {
+    const result = [];
+    const regex = new RegExp(`\\b${escapeRegex(substring)}\\b`, 'i');
+    for (let s of segs) {
+      const match = regex.exec(s);
+      if (match) {
+        let idx = match.index + match[0].length;
+        while (idx < s.length && [';', ',', '.', '?', '!'].includes(s[idx])) {
+          idx++;
+        }
+        const part1 = s.substring(0, idx).trim();
+        const part2 = s.substring(idx).trim();
+        if (part1) result.push(part1);
+        if (part2) result.push(part2);
+      } else {
+        result.push(s);
+      }
+    }
+    return result;
+  }
+
   if (isEngToTr) {
     // ─── TURKISH GRAMMATICAL SPLITTER ───
     const splitBeforeAndAfterTr = [
@@ -7964,44 +8037,6 @@ function segmentSentence(fullSentence, isEngToTr) {
       "altında", "aşamasında", "durumunda", "çerçevesinde", "yönünde", "genelinde",
       "üzerinde", "altından", "dışında", "yakınında", "öncesinde", "sonrasında"
     ];
-
-    function applySplitBeforeAndAfterTr(segs, substring) {
-      const result = [];
-      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-      for (let s of segs) {
-        const match = s.match(regex);
-        if (match) {
-          const parts = s.split(match[0]);
-          if (parts[0].trim()) result.push(parts[0].trim());
-          result.push(match[0].trim());
-          if (parts[1].trim()) result.push(parts[1].trim());
-        } else {
-          result.push(s);
-        }
-      }
-      return result;
-    }
-
-    function applySplitAfterTr(segs, substring) {
-      const result = [];
-      const regex = new RegExp(`\\b(${substring})`, 'i');
-      for (let s of segs) {
-        const match = s.match(regex);
-        if (match) {
-          let idx = s.indexOf(match[0]) + match[0].length;
-          while (idx < s.length && [';', ',', '.', '?', '!'].includes(s[idx])) {
-            idx++;
-          }
-          const part1 = s.substring(0, idx).trim();
-          const part2 = s.substring(idx).trim();
-          if (part1) result.push(part1);
-          if (part2) result.push(part2);
-        } else {
-          result.push(s);
-        }
-      }
-      return result;
-    }
 
     // 1. Semicolon split
     let temp = [];
@@ -8039,35 +8074,70 @@ function segmentSentence(fullSentence, isEngToTr) {
     // 2. Split before/after
     const sortedBeforeAndAfter = [...splitBeforeAndAfterTr].sort((a, b) => b.length - a.length);
     for (let marker of sortedBeforeAndAfter) {
-      segments = applySplitBeforeAndAfterTr(segments, marker);
+      segments = applySplitBeforeAndAfter(segments, marker);
     }
 
     // 3. Split after
     const sortedAfter = [...splitAfterTr].sort((a, b) => b.length - a.length);
     for (let marker of sortedAfter) {
-      segments = applySplitAfterTr(segments, marker);
+      segments = applySplitAfter(segments, marker);
     }
 
   } else {
-    // ─── ENGLISH GRAMMATICAL SPLITTER ───
+    // ─── ENGLISH GRAMMATICAL SYNTACTIC SPLITTER ───
+    const phrasalModals = [
+      "is accustomed to", "are accustomed to", "was accustomed to", "were accustomed to", "am accustomed to",
+      "is used to", "are used to", "was used to", "were used to", "am used to",
+      "get used to", "gets used to", "got used to", "getting used to",
+      "is willing to", "are willing to", "was willing to", "were willing to", "am willing to",
+      "is unwilling to", "are unwilling to", "was unwilling to", "were unwilling to", "am unwilling to",
+      "is reluctant to", "are reluctant to", "was reluctant to", "were reluctant to", "am reluctant to",
+      "is doomed to", "are doomed to", "was doomed to", "were doomed to", "am doomed to",
+      "is unable to", "are unable to", "was unable to", "were unable to", "am unable to",
+      "is able to", "are able to", "was able to", "were able to", "am able to",
+      "is bound to", "are bound to", "was bound to", "were bound to", "am bound to",
+      "is likely to", "are likely to", "was likely to", "were likely to", "am likely to",
+      "is unlikely to", "are unlikely to", "was unlikely to", "were unlikely to", "am unlikely to",
+      "is about to", "are about to", "was about to", "were about to", "am about to",
+      "is supposed to", "are supposed to", "was supposed to", "were supposed to", "am supposed to",
+      "is set to", "are set to", "was set to", "were set to", "am set to",
+      "is eager to", "are eager to", "was eager to", "were eager to", "am eager to"
+    ];
+
     const splitBeforeAndAfter = [
-      "give rise to", "gives rise to",
-      "result in", "results in", "has resulted in", "have resulted in",
-      "is responsible for", "are responsible for",
-      "lead to", "leads to",
-      "bring about", "brings about",
-      "contribute to", "contributes to",
-      "stem from", "stems from",
-      "trigger", "triggers",
-      "causes", "produce", "produces",
-      "therefore", "consequently", "as a result", "hence", "thus", "accordingly", "so",
-      "caused", "causes"
+      "give rise to", "gives rise to", "gave rise to",
+      "result in", "results in", "has resulted in", "have resulted in", "resulted in",
+      "is responsible for", "are responsible for", "was responsible for", "were responsible for",
+      "lead to", "leads to", "led to",
+      "bring about", "brings about", "brought about",
+      "contribute to", "contributes to", "contributed to",
+      "stem from", "stems from", "stemmed from",
+      "trigger", "triggers", "triggered",
+      "causes", "produce", "produces", "produced",
+      "therefore", "consequently", "as a result", "hence", "thus", "accordingly", "so"
     ];
 
     const splitBefore = [
+      "who", "which", "that", "whose", "whom", "where", "when", "while",
+      "publish", "publishes", "published",
+      "evaluate", "evaluates", "evaluated",
+      "examine", "examines", "examined",
+      "analyze", "analyzes", "analyzed",
+      "identify", "identifies", "identified",
+      "observe", "observes", "observed",
+      "conduct", "conducts", "conducted",
+      "investigate", "investigates", "investigated",
+      "discover", "discovers", "discovered",
+      "challenge", "challenges", "challenged",
+      "transform", "transforms", "transformed",
+      "reinterpreting", "evaluating", "examining", "analyzing", "identifying", "observing",
+      "conducting", "investigating", "discovering", "challenging", "transforming", "producing",
+      "developing", "creating", "establishing", "demonstrating", "determining", "highlighting",
+      "reflecting", "demanding", "influencing", "illustrating", "revealing", "focusing",
+      "addressing", "incorporating", "surrounding", "featuring", "containing", "involving",
+      "living", "reading", "excavating", "forcing", "reducing", "degrading", "altering",
       "due to", "because of", "owing to", "on account of", "thanks to",
       "because", "since", "inasmuch as", "although", "even though", "whereas",
-      "forcing", "reducing", "degrading", "altering",
       "to inspect", "to meet", "to request", "to isolate", "to maintain", "to validate",
       "to change", "to vary", "to collapse", "to contract", "to shift", "to minimize",
       "to induce", "to interact", "to mutate", "to decline", "to expand", "to decay",
@@ -8075,41 +8145,6 @@ function segmentSentence(fullSentence, isEngToTr) {
       "on grounds that", "with the result that", "as a consequence", "for this reason",
       "as an immediate result", "on that account", "inside", "during", "before", "after", "until"
     ];
-
-    function applySplitBeforeAndAfter(segs, substring) {
-      const result = [];
-      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-      for (let s of segs) {
-        const match = s.match(regex);
-        if (match) {
-          const parts = s.split(match[0]);
-          if (parts[0].trim()) result.push(parts[0].trim());
-          result.push(match[0].trim());
-          if (parts[1].trim()) result.push(parts[1].trim());
-        } else {
-          result.push(s);
-        }
-      }
-      return result;
-    }
-
-    function applySplitBefore(segs, substring) {
-      const result = [];
-      const regex = new RegExp(`\\b(${substring})\\b`, 'i');
-      for (let s of segs) {
-        const match = s.match(regex);
-        if (match) {
-          const idx = s.indexOf(match[0]);
-          const part1 = s.substring(0, idx).trim();
-          const part2 = s.substring(idx).trim();
-          if (part1) result.push(part1);
-          if (part2) result.push(part2);
-        } else {
-          result.push(s);
-        }
-      }
-      return result;
-    }
 
     // 1. Semicolon split
     let temp = [];
@@ -8124,13 +8159,33 @@ function segmentSentence(fullSentence, isEngToTr) {
     }
     segments = temp;
 
-    // 2. Split before/after
-    const sortedBeforeAndAfter = [...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
-    for (let marker of sortedBeforeAndAfter) {
+    // 1b. Comma split
+    let tempComma = [];
+    for (let s of segments) {
+      if (s.includes(',')) {
+        const parts = s.split(',');
+        for (let i = 0; i < parts.length; i++) {
+          let p = parts[i].trim();
+          if (!p) continue;
+          if (i < parts.length - 1) {
+            tempComma.push(p + ',');
+          } else {
+            tempComma.push(p);
+          }
+        }
+      } else {
+        tempComma.push(s);
+      }
+    }
+    segments = tempComma;
+
+    // 2. Split Phrasal Modals & Connectors (Split Before and After to preserve modals & isolate subject)
+    const allBeforeAndAfter = [...phrasalModals, ...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
+    for (let marker of allBeforeAndAfter) {
       segments = applySplitBeforeAndAfter(segments, marker);
     }
 
-    // 3. Split before
+    // 3. Split Before (Action Verbs, Participle Clauses, Relative Clause Connectors)
     const sortedBefore = [...splitBefore].sort((a, b) => b.length - a.length);
     for (let marker of sortedBefore) {
       segments = applySplitBefore(segments, marker);
@@ -8143,41 +8198,13 @@ function segmentSentence(fullSentence, isEngToTr) {
       const prepMarkersTr = ["ile", "veya", "ve", "olarak", "altında", "önce", "sonra", "karşın", "rağmen"];
       for (let prep of prepMarkersTr) {
         if (segments.length >= 3) break;
-        const result = [];
-        const regex = new RegExp(`\\b(${prep})\\b`, 'i');
-        for (let s of segments) {
-          const match = s.match(regex);
-          if (match) {
-            const idx = s.indexOf(match[0]);
-            const part1 = s.substring(0, idx).trim();
-            const part2 = s.substring(idx).trim();
-            if (part1) result.push(part1);
-            if (part2) result.push(part2);
-          } else {
-            result.push(s);
-          }
-        }
-        segments = result;
+        segments = applySplitBefore(segments, prep);
       }
     } else {
       const prepMarkers = ["in", "on", "at", "for", "with", "by", "from", "to", "about", "that", "which", "who", "when", "while"];
       for (let prep of prepMarkers) {
         if (segments.length >= 3) break;
-        const result = [];
-        const regex = new RegExp(`\\b(${prep})\\b`, 'i');
-        for (let s of segments) {
-          const match = s.match(regex);
-          if (match) {
-            const idx = s.indexOf(match[0]);
-            const part1 = s.substring(0, idx).trim();
-            const part2 = s.substring(idx).trim();
-            if (part1) result.push(part1);
-            if (part2) result.push(part2);
-          } else {
-            result.push(s);
-          }
-        }
-        segments = result;
+        segments = applySplitBefore(segments, prep);
       }
     }
   }
@@ -8232,8 +8259,8 @@ function renderWordBank(container, question) {
     }
   }
 
-  // If the word ordering sentence is long (8 or more elements) and not already grouped as blocks
-  if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 8 && !question.correctOrder.some(w => w.includes(' '))) {
+  // Apply grammatical chunking to all word ordering sentences with 3 or more elements
+  if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 3 && !question.correctOrder.some(w => w.includes(' '))) {
     const fullSentence = question.correctOrder.join(' ');
     const isEngToTr = question.isEngToTr || (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
     const segments = segmentSentence(fullSentence, isEngToTr);
@@ -8245,18 +8272,22 @@ function renderWordBank(container, question) {
 
   const shuffledWords = [...question.words].sort(() => Math.random() - 0.5);
 
-  let translationHtml = question.translation;
-  if (question.isEngToTr && question.enSentence) {
-    translationHtml = makeTextHoverable(translationHtml);
+  const isEngToTr = question.isEngToTr !== undefined
+    ? question.isEngToTr
+    : (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
+
+  let sourceText = isEngToTr ? (question.enSentence || question.sentence) : (question.translation || question.trSentence || question.sentence);
+  if (sourceText) {
+    sourceText = makeTextHoverable(sourceText);
   }
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    <p class="quiz-translation">${translationHtml}</p>
+    <p class="quiz-translation">${sourceText}</p>
     <div class="wb-sentence" id="wb-sentence"></div>
     <div class="wb-bank" id="wb-bank">
       ${shuffledWords.map((w, i) => `
-        <button class="wb-word" data-word="${w}" data-idx="${i}">${w}</button>
+        <button class="wb-word" data-word="${escapeAttr(w)}" data-idx="${i}">${w}</button>
       `).join('')}
     </div>
   `;
@@ -8359,8 +8390,8 @@ function renderMatching(container, question) {
       <span class="match-col-header">${question.leftHeader || "Türkçe"}</span>
       <span class="match-col-header">${question.rightHeader || "İngilizce"}</span>
       ${question.pairs.map((pair, i) => `
-        <button class="match-item match-left" data-left="${pair.left}" data-pair-index="${i}">${pair.left}</button>
-        <button class="match-item match-right" data-right="${shuffledRight[i].right}">${makeTextHoverable(shuffledRight[i].right, true)}</button>
+        <button class="match-item match-left" data-left="${escapeAttr(pair.left)}" data-pair-index="${i}">${pair.left}</button>
+        <button class="match-item match-right" data-right="${escapeAttr(shuffledRight[i].right)}">${makeTextHoverable(shuffledRight[i].right, true)}</button>
       `).join('')}
     </div>
   `;
@@ -8469,6 +8500,56 @@ function tryMatch(container, question) {
 }
 
 // ── Boşluk Doldurma - Açılır Menü (Dropdown) ──────────────────
+function getOptionMeaning(question, opt) {
+  if (!opt) return '';
+  opt = String(opt).trim();
+  if (question && question.optionMeanings && question.optionMeanings[opt]) {
+    return question.optionMeanings[opt];
+  }
+  if (question && question.explanations && question.explanations[opt]) {
+    const exp = String(question.explanations[opt]);
+    const match = exp.match(/["'“]([^"'”]+)["'”]/);
+    if (match && match[1]) {
+      return match[1].trim();
+    }
+  }
+
+  const cleanOpt = opt.toLowerCase().trim();
+
+  // Dictionary of phrasal modals & multi-word expressions
+  const phrasalMap = {
+    "certain to": "kesin",
+    "reluctant to": "gönülsüz / isteksiz",
+    "unable to": "yapamamak",
+    "doomed to": "mahkum (kötü sona)",
+    "bound to": "kaçınılmaz",
+    "likely to": "muhtemel",
+    "unlikely to": "beklenmeyen",
+    "supposed to": "bekleniyor / gerekli",
+    "obliged to": "zorunlu",
+    "unwilling to": "isteksiz / gönülsüz",
+    "willing to": "istekli",
+    "accustomed to": "alışkın",
+    "used to": "alışkın",
+    "about to": "üzere",
+    "be to": "planlanan"
+  };
+
+  const sortedKeys = Object.keys(phrasalMap).sort((a, b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    const reg = new RegExp(`(?:^|\\b)${key.replace(/ /g, '\\s+')}(?:\\b|$)`, 'i');
+    if (reg.test(cleanOpt)) {
+      return phrasalMap[key];
+    }
+  }
+
+  const wordMeaning = typeof getWordMeaning === 'function' ? getWordMeaning(cleanOpt) : '';
+  if (wordMeaning) return wordMeaning;
+
+  return '';
+}
+
+
 function renderFillBlankDropdown(container, question) {
   // Normalize arguments in case it is called as renderFillBlankDropdown(question)
   if (!question && container && !container.nodeType) {
@@ -8484,27 +8565,111 @@ function renderFillBlankDropdown(container, question) {
     return;
   }
 
-  const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
-    question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
-
   const part0Html = makeTextHoverable(parts[0]);
   const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
-
   const displayPrompt = question.prompt === 'Boşluğu doldur' ? 'Boşluğu doldur!' : question.prompt;
+
+  const menuItemsHtml = question.options.map((opt, i) => {
+    const meaning = getOptionMeaning(question, opt);
+    const displayText = meaning ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : `<strong>${opt}</strong>`;
+    return `
+      <div class="custom-dropdown-item" data-index="${i}" style="padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 1.05rem; color: var(--text-primary); transition: background 0.15s ease; border-bottom: 1px solid rgba(128,128,128,0.1);">
+        ${displayText}
+      </div>
+    `;
+  }).join('');
 
   container.innerHTML = `
     <div class="question-prompt-title quiz-prompt">${displayPrompt}</div>
-    <div class="question-sentence-body dropdown-sentence-layout" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.8; display: block; width: 100%;">
-      ${part0Html}<select class="amok-inline-select inline-dropdown" id="fb-dropdown-select">${selectOptions}</select>${part1Html}
+    <div class="question-sentence-body dropdown-sentence-layout" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 2.2; display: block; width: 100%;">
+      ${part0Html}
+      <span class="custom-dropdown-wrapper" style="position: relative; display: inline-block; vertical-align: middle; margin: 0 6px;">
+        <button class="custom-dropdown-trigger" id="fb-custom-trigger" style="min-width: 140px; padding: 6px 18px; border: 2px dashed var(--color-primary, #9c27b0); border-radius: 10px; background: rgba(156, 39, 176, 0.08); color: var(--color-primary, #9c27b0); font-weight: 600; font-size: 1.1rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s ease;">
+          <span class="trigger-label" id="fb-trigger-label">Seçin...</span>
+          <span class="trigger-arrow" id="fb-trigger-arrow" style="font-size: 0.75rem; transition: transform 0.2s ease;">▼</span>
+        </button>
+        <div class="custom-dropdown-menu" id="fb-custom-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: max-content; min-width: 260px; max-width: calc(100vw - 32px); background: var(--bg-card, #ffffff); border: 1px solid var(--border-color, rgba(156, 39, 176, 0.3)); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.22); z-index: 1000; overflow: hidden; padding: 6px; backdrop-filter: blur(12px);">
+          ${menuItemsHtml}
+        </div>
+      </span>
+      ${part1Html}
     </div>
   `;
 
-  const selectEl = document.getElementById('fb-dropdown-select');
-  if (selectEl) {
-    selectEl.addEventListener('change', () => {
+  const triggerBtn = container.querySelector('#fb-custom-trigger');
+  const menuEl = container.querySelector('#fb-custom-menu');
+  const labelEl = container.querySelector('#fb-trigger-label');
+  const arrowEl = container.querySelector('#fb-trigger-arrow');
+  const itemEls = container.querySelectorAll('.custom-dropdown-item');
+
+  function toggleMenu(show) {
+    const isVisible = show !== undefined ? show : menuEl.style.display === 'none';
+    menuEl.style.display = isVisible ? 'block' : 'none';
+    if (arrowEl) {
+      arrowEl.style.transform = isVisible ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+    if (isVisible) {
+      menuEl.style.left = '50%';
+      menuEl.style.right = 'auto';
+      menuEl.style.transform = 'translateX(-50%)';
+
+      requestAnimationFrame(() => {
+        const rect = menuEl.getBoundingClientRect();
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        const padding = 16;
+
+        if (rect.right > viewportWidth - padding) {
+          const overflowRight = rect.right - (viewportWidth - padding);
+          menuEl.style.transform = `translateX(calc(-50% - ${overflowRight}px))`;
+        } else if (rect.left < padding) {
+          const overflowLeft = padding - rect.left;
+          menuEl.style.transform = `translateX(calc(-50% + ${overflowLeft}px))`;
+        }
+      });
+    }
+  }
+
+  if (triggerBtn && menuEl) {
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (isAnswerChecked) return;
-      selectedAnswer = parseInt(selectEl.value);
-      document.getElementById('btn-check').disabled = isNaN(selectedAnswer);
+      toggleMenu();
+    });
+
+    itemEls.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.background = 'rgba(156, 39, 176, 0.12)';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.background = 'transparent';
+      });
+
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isAnswerChecked) return;
+
+        const idx = parseInt(item.dataset.index);
+        selectedAnswer = idx;
+
+        const optText = question.options[idx];
+        const englishOnly = optText.split(/\s*\/\s*/)[0].trim();
+        if (labelEl) labelEl.textContent = englishOnly;
+
+        triggerBtn.style.borderStyle = 'solid';
+        triggerBtn.style.background = 'var(--color-primary, #9c27b0)';
+        triggerBtn.style.color = '#ffffff';
+
+        toggleMenu(false);
+
+        const checkBtn = document.getElementById('btn-check');
+        if (checkBtn) checkBtn.disabled = isNaN(selectedAnswer);
+      });
+    });
+
+    document.addEventListener('click', function closeMenuOnOutside(e) {
+      if (!container.contains(e.target)) {
+        toggleMenu(false);
+      }
     });
   }
 }
@@ -8552,9 +8717,11 @@ function renderFillBlank(container, question) {
   });
 
   const optionsHtml = question.options.map((opt, i) => {
+    const meaning = getOptionMeaning(question, opt);
+    const displayText = (meaning && !opt.includes('/')) ? `${opt} <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : opt;
     return `<button class="fb-option" data-index="${i}">
       <span class="fb-number">${i + 1}</span>
-      <span class="fb-text">${opt}</span>
+      <span class="fb-text">${displayText}</span>
     </button>`;
   }).join('');
 
@@ -8640,7 +8807,7 @@ function startTranslationGate(container, question) {
   // Clean translation and split into words or grammatical blocks if > 12 words
   let correctWords;
   const rawWordCount = question.translation.split(/\s+/).filter(Boolean).length;
-  if (rawWordCount > 12) {
+  if (rawWordCount >= 3) {
     correctWords = segmentSentence(question.translation, true);
   } else {
     const rawWords = question.translation.split(/\s+/);
@@ -9134,8 +9301,10 @@ function renderSpotlight(container, question) {
   const shuffledOptions = [...indexedOptions].sort(() => Math.random() - 0.5);
 
   const optionsHtml = shuffledOptions.map((item) => {
+    const meaning = getOptionMeaning(question, item.opt);
+    const displayText = (meaning && !item.opt.includes('/')) ? `${item.opt} <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : item.opt;
     return `<button class="spotlight-option-card" data-index="${item.originalIndex}" style="padding: 16px; border-radius: 12px; color: var(--text-primary); font-size: 1.1rem; font-weight: 600; cursor: pointer; text-align: center; width: 100%;">
-      ${item.opt}
+      ${displayText}
     </button>`;
   }).join('');
 
@@ -10134,8 +10303,9 @@ function checkAnswer() {
 
     feedbackPanel.classList.add('correct');
     feedbackPanel.classList.remove('wrong');
-    feedbackIcon.textContent = '✓';
-    feedbackText.textContent = question.explanation || 'Harika! Doğru cevap! 🎉';
+    feedbackText.innerHTML = question.explanation 
+      ? `<div>Harika! Doğru cevap! 🎉</div><div class="explanation-box" style="font-size: 0.9rem; margin-top: 8px; text-align: left; background: rgba(255,255,255,0.15); padding: 10px 14px; border-radius: 8px; line-height: 1.5; color: inherit;">${question.explanation}</div>` 
+      : 'Harika! Doğru cevap! 🎉';
     correctCount++;
     state.xp += XP_PER_CORRECT;
     animateStat('stat-xp', 'xp-gain');
@@ -10216,7 +10386,8 @@ function checkAnswer() {
     } else if (isTargetUnit && question.translation && !wasTranslationCorrect) {
       feedbackText.innerHTML = `<strong>Yanlış çeviri!</strong> Doğrusu:<br><span style="color: var(--color-correct); font-weight: 600;">${question.translation}</span>`;
     } else {
-      feedbackText.textContent = `Doğru cevap: ${correctAnswerText}`;
+      feedbackText.innerHTML = `<div>Doğru cevap: <strong>${correctAnswerText}</strong></div>` + 
+        (question.explanation ? `<div class="explanation-box" style="font-size: 0.9rem; margin-top: 8px; text-align: left; background: rgba(0,0,0,0.06); padding: 10px 14px; border-radius: 8px; line-height: 1.5; color: inherit;">${question.explanation}</div>` : '');
     }
     wrongCount++;
     
@@ -10238,8 +10409,9 @@ function checkAnswer() {
       let analysisHtml = `<div style="font-weight: 800; margin-bottom: 4px; color: var(--text-primary); font-size: 0.8rem;">🔍 Hızlı Eleme Refleksi & Şık Analizi:</div>`;
       
       question.options.forEach((opt, idx) => {
+        const cleanOptText = (opt || "").split(/\s*\/\s*/)[0].trim();
         if (idx === question.correctIndex) {
-          analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 2px;">🟢 <strong>${opt}</strong> (DOĞRU): Cümle yapısıyla ve zaman/bağlaç kuralıyla tam uyumludur.</div>`;
+          analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 2px;">🟢 <strong>${cleanOptText}</strong> (DOĞRU): Cümle yapısıyla ve zaman/bağlaç kuralıyla tam uyumludur.</div>`;
         } else {
           let reason = "Zaman, bağlaç veya söz dizimi uyumsuzluğu sebebiyle elenir.";
           const optLower = (opt || "").toLowerCase();
@@ -10265,7 +10437,7 @@ function checkAnswer() {
             reason = "Edatlardan (preposition) hemen sonra doğrudan 'that' kullanılamaz!";
           }
           
-          analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 2px;">❌ <strong>${opt}</strong> (ELENDİ): ${reason}</div>`;
+          analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 2px;">❌ <strong>${cleanOptText}</strong> (ELENDİ): ${reason}</div>`;
         }
       });
       
@@ -13394,7 +13566,11 @@ function renderPlacementFillBlankDropdown(container, question) {
   const sentence = question.sentence || question.prompt || '';
   const parts = sentence.split(/_{3,}/);
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
-    question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
+    question.options.map((opt, i) => {
+      const meaning = getOptionMeaning(question, opt);
+      const label = meaning ? `${opt} / ${meaning}` : opt;
+      return `<option value="${i}">${label}</option>`;
+    }).join('');
 
   let displayPrompt = question.sentence ? question.prompt : 'Boşluğa gelecek en uygun kelimeyi seçin:';
   if (displayPrompt === 'Boşluğu doldur') {

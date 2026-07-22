@@ -330,7 +330,7 @@
   lessons.push({
     id: "c56_l4",
     unitId: 62,
-    title: "4. Devrik Koşul Yapıları (If Inversion)",
+    title: "4. Devrik Koşul Yapıları",
     subtitle: "",
     exercises: [{
       id: "c56_l4_ex1",
@@ -365,7 +365,7 @@
   lessons.push({
     id: "c56_l5",
     unitId: 62,
-    title: "5. Alternatif Koşul Yapıları (Otherwise, Without, Then)",
+    title: "5. Alternatif Koşul Yapıları",
     subtitle: "",
     exercises: [{
       id: "c56_l5_ex1",
@@ -413,7 +413,7 @@
   lessons.push({
     id: "c56_l6",
     unitId: 62,
-    title: "6. Diğer Koşul Bağlaçları (Conditional Adverbs)",
+    title: "6. Diğer Koşul Bağlaçları",
     subtitle: "",
     exercises: [
       {
@@ -483,7 +483,7 @@
   lessons.push({
     id: "c56_l7",
     unitId: 62,
-    title: "7. Keşke Yapıları (If only / I wish)",
+    title: "7. Keşke Yapıları",
     subtitle: "",
     exercises: [
       {
@@ -1801,7 +1801,7 @@
       "id": 63,
       "startLessonId": 590,
       "originalIndex": 59,
-      "title": "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
+      "title": "Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez",
       "desc": "-ed (Past Participle) formunun ileri düzey kullanımları, edilgen kısaltmalar, sıfat işlevleri ve ettirgen yapılar üzerine 30 soruluk teşhis testi.",
       "icon": "⛓️",
       "numLessons": 1,
@@ -2136,27 +2136,27 @@
     lessons.push({
       id: "c60_l1",
       unitId: 63,
-      title: "Sentaktik Kriptoloji: Past Participle (-ed) ve Edilgen Sentez",
+      title: "Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez",
       subtitle: "Diagnostic assessment of Past Participles, Reduced Passives, and Causative structures.",
       exercises: [
         {
           id: "c60_l1_ex1",
           createdAt: "2026-07-20T15:59:00+03:00",
-          title: "Part 1: Cümle Tamamlama (Sentence Completion)",
+          title: "Part 1: Cümle Tamamlama",
           description: "Past participle formunun sıfat tümleçleri, zarf kısaltmaları ve ettirgen yapılardaki doğru konumlandırılması.",
           questions: ex1_q
         },
         {
           id: "c60_l1_ex2",
           createdAt: "2026-07-20T15:59:00+03:00",
-          title: "Part 2: Hata Belirleme (Error Identification)",
+          title: "Part 2: Hata Belirleme",
           description: "Çekimli fiil/ortaç karmaşası, etken/edilgen uyumsuzlukları ve participial sıfat hatalarının tespiti.",
           questions: ex2_q
         },
         {
           id: "c60_l1_ex3",
           createdAt: "2026-07-20T15:59:00+03:00",
-          title: "Part 3: Zarf Cümlecikleri Dönüşümleri (Restatement)",
+          title: "Part 3: Zarf Cümlecikleri Dönüşümleri",
           description: "Kısaltılmış edilgen yapıların mantıksal neden, zaman ve durum bağlaçlarıyla tam açılımları.",
           questions: ex3_q
         }
@@ -2172,3 +2172,16 @@
 
 })();
 
+
+if (typeof units !== 'undefined') {
+  units.forEach(u => {
+    if (u.title) u.title = u.title.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+    if (u.subtitle) u.subtitle = u.subtitle.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+  });
+}
+if (typeof lessons !== 'undefined') {
+  lessons.forEach(l => {
+    if (l.title) l.title = l.title.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+    if (l.subtitle) l.subtitle = l.subtitle.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+  });
+}
