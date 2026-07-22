@@ -5395,169 +5395,7 @@ function ensureLessonRendered(lessonId) {
   }
 }
 
-function getUnitEdits(unit) {
-  const rawEdits = [];
-  
-  if (unit.edits && Array.isArray(unit.edits)) {
-    unit.edits.forEach(e => {
-      rawEdits.push({
-        rawDate: e.date || e.rawDate,
-        type: e.type || 'custom',
-        desc: e.desc
-      });
-    });
-  }
 
-  unit.lessons.forEach(lId => {
-    const l = lessons.find(lesson => lesson.id === lId);
-    if (!l) return;
-    
-    if (l.createdAt) {
-      rawEdits.push({
-        rawDate: l.createdAt,
-        type: 'lesson'
-      });
-    }
-    
-    if (l.exercises && Array.isArray(l.exercises)) {
-      l.exercises.forEach(ex => {
-        if (ex.createdAt) {
-          rawEdits.push({
-            rawDate: ex.createdAt,
-            type: 'exercise'
-          });
-        }
-        
-        if (ex.questions && Array.isArray(ex.questions)) {
-          ex.questions.forEach(q => {
-            if (q.createdAt) {
-              const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
-              rawEdits.push({
-                rawDate: q.createdAt,
-                type: isFix ? 'fix' : 'question'
-              });
-            }
-          });
-        }
-      });
-    }
-    
-    if (l.questions && Array.isArray(l.questions)) {
-      l.questions.forEach(q => {
-        if (q.createdAt) {
-          const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
-          rawEdits.push({
-            rawDate: q.createdAt,
-            type: isFix ? 'fix' : 'question'
-          });
-        }
-      });
-    }
-  });
-  
-  return groupAndSimplifyEdits(rawEdits);
-}
-
-function getLessonEdits(lesson) {
-  const rawEdits = [];
-  if (lesson.createdAt) {
-    rawEdits.push({
-      rawDate: lesson.createdAt,
-      type: 'lesson'
-    });
-  }
-  if (lesson.exercises && Array.isArray(lesson.exercises)) {
-    lesson.exercises.forEach(ex => {
-      if (ex.createdAt) {
-        rawEdits.push({
-          rawDate: ex.createdAt,
-          type: 'exercise'
-        });
-      }
-      if (ex.questions && Array.isArray(ex.questions)) {
-        ex.questions.forEach(q => {
-          if (q.createdAt) {
-            const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
-            rawEdits.push({
-              rawDate: q.createdAt,
-              type: isFix ? 'fix' : 'question'
-            });
-          }
-        });
-      }
-    });
-  }
-  if (lesson.questions && Array.isArray(lesson.questions)) {
-    lesson.questions.forEach(q => {
-      if (q.createdAt) {
-        const isFix = q.isFix || (q.prompt && (q.prompt.includes('düzelt') || q.prompt.includes('hata'))) || (q.sentence && (q.sentence.includes('düzelt') || q.sentence.includes('hata')));
-        rawEdits.push({
-          rawDate: q.createdAt,
-          type: isFix ? 'fix' : 'question'
-        });
-      }
-    });
-  }
-  return groupAndSimplifyEdits(rawEdits);
-}
-
-function groupAndSimplifyEdits(rawEdits) {
-  const grouped = {};
-  rawEdits.forEach(e => {
-    const d = new Date(e.rawDate);
-    if (isNaN(d.getTime())) return;
-    const dateKey = e.rawDate.substring(0, 10);
-    const type = e.type;
-    const key = e.desc ? `${dateKey}_${type}_${e.desc}` : `${dateKey}_${type}`;
-    if (!grouped[key]) {
-      grouped[key] = {
-        date: d,
-        rawDate: e.rawDate,
-        type: type,
-        desc: e.desc
-      };
-    }
-  });
-
-  const simplified = Object.values(grouped).map(g => {
-    let desc = g.desc || '';
-    if (!desc) {
-      if (g.type === 'lesson') {
-        desc = 'Yeni Dersler Eklendi';
-      } else if (g.type === 'exercise') {
-        desc = 'Yeni Alıştırmalar Eklendi';
-      } else if (g.type === 'fix') {
-        desc = 'Hatalı Soru Düzeltildi';
-      } else {
-        desc = 'Yeni Soru Tipleri Eklendi';
-      }
-    }
-    return {
-      date: g.date,
-      rawDate: g.rawDate,
-      desc: desc
-    };
-  });
-
-  simplified.sort((a, b) => b.date - a.date);
-  return simplified.slice(0, 5);
-}
-
-function formatUnitEditDate(dateStr) {
-  const d = new Date(dateStr);
-  if (isNaN(d.getTime())) return dateStr;
-  const pad = (n) => n.toString().padStart(2, '0');
-  
-  const now = new Date();
-  const isToday = d.getDate() === now.getDate() &&
-                  d.getMonth() === now.getMonth() &&
-                  d.getFullYear() === now.getFullYear();
-                  
-  if (isToday) {
-    return `Bugün ${pad(d.getHours())}:${pad(d.getMinutes())}`;
-  }
-  return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()}`;
-}
 
 function renderLessonTree() {
   const container = document.getElementById('tree-container');
@@ -5740,32 +5578,6 @@ function renderLessonTree() {
     
     const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${unit.description}</p>`;
-    
-    let localEditsHTML = '';
-    if (checkIsLocal()) {
-      const edits = getUnitEdits(unit);
-      if (edits.length > 0) {
-        const editsListHTML = edits.map(e => `
-          <div style="font-size: 0.78rem; opacity: 0.95; display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding: 4px 0;">
-            <span style="font-weight: 700; color: #ffe3e3; font-family: monospace;">🕒 ${formatUnitEditDate(e.rawDate)}</span>
-            <span style="text-align: right; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.desc.replace(/"/g, '&quot;')}">${e.desc}</span>
-          </div>
-        `).join('');
-        
-        localEditsHTML = `
-          <div class="unit-banner-edits-box" style="margin-top: 12px; padding: 10px 14px; background: rgba(0, 0, 0, 0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-sizing: border-box;">
-            <div style="font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" onclick="event.stopPropagation(); const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-icon').textContent = el.style.display === 'none' ? '▼' : '▲';">
-              <span style="display: flex; align-items: center; gap: 6px;">🛠️ <strong>Düzenleme Geçmişi</strong> <span style="font-size: 0.75rem; opacity: 0.8;">(${edits.length} düzenleme)</span></span>
-              <span class="toggle-icon" style="font-size: 0.75rem;">▲</span>
-            </div>
-            <div class="unit-edits-list" style="display: block; margin-top: 8px; max-height: 150px; overflow-y: auto; padding-right: 4px;">
-              ${editsListHTML}
-            </div>
-          </div>
-        `;
-      }
-    }
-
     banner.innerHTML = `
       <div class="unit-banner-info" style="width: 100%;">
         <h2 class="unit-banner-title-row">
@@ -5778,7 +5590,6 @@ function renderLessonTree() {
           ${localQuestionsBadgeHTML}
         </h2>
         ${descHTML}
-        ${localEditsHTML}
       </div>
       <div class="unit-progress-container">
         <span class="unit-progress-text">${completedInUnit}/${totalInUnit}</span>
@@ -5787,60 +5598,7 @@ function renderLessonTree() {
         </div>
       </div>
     `;
-    if (checkIsLocal()) {
-      const headerWrapper = document.createElement('div');
-      headerWrapper.className = 'unit-header-wrapper';
-      
-      const noteKey = `amok_unit_note_${unit.id}`;
-      const savedNote = localStorage.getItem(noteKey) || '';
-      
-      const noteBox = document.createElement('div');
-      noteBox.className = 'unit-note-box';
-      noteBox.innerHTML = `
-        <div class="unit-note-title-row">
-          <span>📝 Bölüm Notu</span>
-        </div>
-        <textarea class="unit-note-textarea" placeholder="Bölümle ilgili notlar alın...">${savedNote}</textarea>
-        <div class="unit-note-actions" style="${savedNote ? '' : 'display: none;'}">
-          <button class="unit-note-delete-btn" title="Notu Sil">
-            🗑️ Sil
-          </button>
-        </div>
-      `;
-      
-      const textarea = noteBox.querySelector('.unit-note-textarea');
-      const deleteBtn = noteBox.querySelector('.unit-note-delete-btn');
-      const actionsDiv = noteBox.querySelector('.unit-note-actions');
-      
-      textarea.addEventListener('input', () => {
-        const val = textarea.value.trim();
-        if (val) {
-          localStorage.setItem(noteKey, val);
-          actionsDiv.style.display = 'flex';
-        } else {
-          localStorage.removeItem(noteKey);
-          actionsDiv.style.display = 'none';
-        }
-      });
-      
-      deleteBtn.addEventListener('click', () => {
-        if (confirm('Bu bölüm notunu silmek istediğinize emin misiniz?')) {
-          textarea.value = '';
-          localStorage.removeItem(noteKey);
-          actionsDiv.style.display = 'none';
-        }
-      });
-      
-      noteBox.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-      
-      headerWrapper.appendChild(banner);
-      headerWrapper.appendChild(noteBox);
-      unitSection.appendChild(headerWrapper);
-    } else {
-      unitSection.appendChild(banner);
-    }
+    unitSection.appendChild(banner);
 
     banner.addEventListener('mouseenter', () => {
       setUnitTheme(unit.id);
@@ -6065,29 +5823,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   const isCompleted = state.completedLessons.includes(lessonId);
 
-  let localEditsHTML = '';
-  if (checkIsLocal()) {
-    const edits = getLessonEdits(lesson);
-    if (edits.length > 0) {
-      const editsListHTML = edits.map(e => `
-        <div style="font-size: 0.72rem; opacity: 0.95; display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed rgba(255,255,255,0.15); padding: 4px 0;">
-          <span style="font-weight: 700; color: #ffe3e3; font-family: monospace;">🕒 ${formatUnitEditDate(e.rawDate)}</span>
-          <span style="text-align: right; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${e.desc.replace(/"/g, '&quot;')}">${e.desc}</span>
-        </div>
-      `).join('');
-      localEditsHTML = `
-        <div class="lesson-popover-edits-box" style="margin-top: 12px; padding: 10px 14px; background: rgba(0, 0, 0, 0.25); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-sizing: border-box;">
-          <div style="font-size: 0.8rem; font-weight: bold; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" onclick="const el = this.nextElementSibling; el.style.display = el.style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-icon').textContent = el.style.display === 'none' ? '▼' : '▲';">
-            <span style="display: flex; align-items: center; gap: 6px;">🛠️ <strong>Düzenleme Geçmişi</strong> <span style="font-size: 0.75rem; opacity: 0.8;">(${edits.length} düzenleme)</span></span>
-            <span class="toggle-icon" style="font-size: 0.75rem;">▲</span>
-          </div>
-          <div class="lesson-edits-list" style="display: block; margin-top: 8px; max-height: 120px; overflow-y: auto; padding-right: 4px;">
-            ${editsListHTML}
-          </div>
-        </div>
-      `;
-    }
-  }
+
 
   // Create popover element
   const popover = document.createElement('div');
@@ -6216,7 +5952,6 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     </div>
     <div class="popover-body">
       ${previewHTML}
-      ${localEditsHTML}
     </div>
     ${popoverFooterHTML}
   `;
