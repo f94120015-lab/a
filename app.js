@@ -6760,8 +6760,13 @@ function startLesson(lessonId, exerciseId = null) {
 }
 
 function showKonuAnlatimi(konu, callback) {
-  const oldModal = document.getElementById('konu-anlatimi-modal');
-  if (oldModal) oldModal.remove();
+  if (!konu) {
+    if (callback) callback();
+    return;
+  }
+
+  const existingModal = document.getElementById('konu-anlatimi-modal');
+  if (existingModal) existingModal.remove();
 
   const modal = document.createElement('div');
   modal.id = 'konu-anlatimi-modal';
@@ -6771,9 +6776,9 @@ function showKonuAnlatimi(konu, callback) {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(10, 10, 18, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(10, 10, 18, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -6782,35 +6787,81 @@ function showKonuAnlatimi(konu, callback) {
     box-sizing: border-box;
   `;
 
+  // Format multiline or '|' separated formula text cleanly into distinct cards
+  const rawFormul = (konu.formul || '').trim();
+  const formulaLines = rawFormul.includes('|') 
+    ? rawFormul.split('|').map(s => s.trim()).filter(Boolean)
+    : rawFormul.split('\n').map(s => s.trim()).filter(Boolean);
+  
+  let formattedFormulHTML = '';
+  if (formulaLines.length > 0) {
+    formattedFormulHTML = formulaLines.map(line => {
+      const cleanLine = line.replace(/->/g, '➔');
+      return `
+        <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; line-height: 1.55; color: var(--text-primary); background: var(--color-correct-bg); padding: 10px 14px; border-radius: 12px; border: 1px solid var(--color-correct-border);">
+          <span style="color: var(--color-correct); font-weight: bold; flex-shrink: 0;">⚡</span>
+          <span style="font-family: var(--font-body); font-weight: 600;">${cleanLine}</span>
+        </div>
+      `;
+    }).join('');
+  } else {
+    formattedFormulHTML = `<div style="color: var(--text-primary); font-size: 0.88rem; font-family: var(--font-body);">${rawFormul}</div>`;
+  }
+
   modal.innerHTML = `
-    <div style="background: #1e1e2f; color: #fff; width: 100%; max-width: 550px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 30px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; border: 1px solid rgba(255,255,255,0.1); transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+    <div style="background: var(--bg-card); color: var(--text-primary); width: 100%; max-width: 540px; max-height: 90vh; overflow-y: auto; border-radius: 24px; box-shadow: var(--shadow-xl); padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--border-color); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transform: scale(0.96); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative;">
       
       <!-- Header -->
-      <div style="display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
-        <span style="font-size: 28px;">📖</span>
-        <h2 style="margin: 0; font-size: 1.4rem; font-weight: 700; color: #ff6b6b; font-family: 'Outfit', sans-serif;">${konu.baslik}</h2>
-      </div>
-      
-      <!-- Body -->
-      <div style="display: flex; flex-direction: column; gap: 15px; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.6;">
-        <div>
-          <strong style="color: #ffb86c; font-size: 1rem; display: block; margin-bottom: 5px;">💡 Teorik Mantık:</strong>
-          <p style="margin: 0; color: #e0e0e0;">${konu.teorikMantik}</p>
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--border-light); padding-bottom: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="background: var(--accent-primary-light); border: 1px solid var(--border-light); color: var(--accent-primary); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; width: fit-content;">
+            📖 Ders Özeti & Kurallar
+          </span>
+          <h2 style="margin: 4px 0 0 0; font-size: 1.15rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-heading); line-height: 1.35;">
+            ${konu.baslik}
+          </h2>
         </div>
         
-        <div style="background: rgba(255,255,255,0.05); padding: 12px 15px; border-radius: 8px; border-left: 4px solid #50fa7b;">
-          <strong style="color: #50fa7b; font-size: 0.9rem; display: block; margin-bottom: 5px;">🧪 Matematiksel Formül:</strong>
-          <code style="font-family: 'Courier New', Courier, monospace; font-size: 1rem; color: #fff; font-weight: bold; word-break: break-all;">${konu.formul}</code>
-        </div>
-        
-        <div style="background: rgba(255,107,107,0.1); padding: 12px 15px; border-radius: 8px; border-left: 4px solid #ff5555;">
-          <strong style="color: #ff5555; font-size: 0.9rem; display: block; margin-bottom: 5px;">⚠️ Altın Kural (Sınav Tuzağı):</strong>
-          <p style="margin: 0; color: #ffb8b8; font-size: 0.9rem;">${konu.altinKural}</p>
-        </div>
+        <button id="btn-konu-close" style="width: 32px; height: 32px; border-radius: 50%; background: var(--bg-secondary); border: 1px solid var(--border-light); color: var(--text-secondary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; flex-shrink: 0; transition: all 0.2s ease;">
+          ✕
+        </button>
       </div>
-      
-      <!-- Footer Button -->
-      <button id="btn-konu-anlatimi-tamam" style="background: linear-gradient(135deg, #ff6b6b, #ff8e53); border: none; border-radius: 8px; color: #fff; padding: 12px 20px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-family: 'Outfit', sans-serif; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+
+      <!-- Content Stack (Alt Alta) -->
+      <div style="display: flex; flex-direction: column; gap: 14px; font-family: var(--font-body);">
+        
+        <!-- 1. Teorik Mantık -->
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 16px; padding: 14px 16px;">
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px; color: var(--accent-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;">
+            <span>💡</span> <span>TEORİK MANTIK</span>
+          </div>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; font-weight: 500;">
+            ${konu.teorikMantik}
+          </p>
+        </div>
+
+        <!-- 2. Formüller -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 6px; margin-left: 2px; color: var(--color-correct); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;">
+            <span>🧪</span> <span>FORMÜL VE SÖZ DİZİMİ</span>
+          </div>
+          ${formattedFormulHTML}
+        </div>
+
+        <!-- 3. Altın Kural -->
+        <div style="background: var(--color-wrong-bg); border: 1px solid var(--color-wrong-border); border-radius: 16px; padding: 14px 16px;">
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px; color: var(--color-wrong); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase;">
+            <span>⚠️</span> <span>ALTIN KURAL (SINAV TUZAĞI)</span>
+          </div>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.55; font-weight: 500;">
+            ${konu.altinKural}
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Action Button -->
+      <button id="btn-konu-anlatimi-tamam" class="btn btn-primary btn-full" style="padding: 13px; font-size: 0.95rem; border-radius: 14px; margin-top: 4px;">
         <span>ANLADIM, BAŞLA</span>
         <span>🚀</span>
       </button>
@@ -7137,6 +7188,11 @@ function renderQuestion() {
   }
 
   feedbackPanel.classList.remove('show', 'correct', 'wrong');
+  const optionAnalysisEl = document.getElementById('feedback-option-analysis');
+  if (optionAnalysisEl) {
+    optionAnalysisEl.style.display = 'none';
+    optionAnalysisEl.innerHTML = '';
+  }
   btnCheck.disabled = true;
   btnCheck.textContent = 'KONTROL ET';
 
@@ -7732,11 +7788,13 @@ function renderStructureMatch(container, question) {
     return `<button class="mc-option" data-index="${i}">${opt}</button>`;
   }).join('');
 
+  const sentenceBlock = (question.sentence && question.sentence !== 'undefined')
+    ? `<div class="structure-context" style="font-size: 1.25rem; font-weight: 700; text-align: center; margin: 20px 0; color: var(--accent-primary); background: var(--bg-secondary); padding: 14px 20px; border-radius: 16px; border: 1px solid var(--border-light); line-height: 1.5;">${question.sentence}</div>`
+    : '';
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || "Cümlenin Gramer Yapısına Uygun Bağlacı Seçin"}</p>
-    <div class="structure-context" style="text-align: center; margin: 24px 0;">
-      ${question.sentence}
-    </div>
+    ${sentenceBlock}
     <div class="mc-options">
       ${optionsHtml}
     </div>
@@ -8419,6 +8477,13 @@ function renderFillBlankDropdown(container, question) {
   }
 
   const parts = question.sentence.split(/_{3,}/);
+
+  // If sentence has multiple blanks (2 or more), delegate to renderFillBlank for proper multi-blank button display
+  if (parts.length > 2) {
+    renderFillBlank(container, question);
+    return;
+  }
+
   const selectOptions = `<option value="" disabled selected>Seçin...</option>` +
     question.options.map((opt, i) => `<option value="${i}">${opt}</option>`).join('');
 
@@ -8435,11 +8500,13 @@ function renderFillBlankDropdown(container, question) {
   `;
 
   const selectEl = document.getElementById('fb-dropdown-select');
-  selectEl.addEventListener('change', () => {
-    if (isAnswerChecked) return;
-    selectedAnswer = parseInt(selectEl.value);
-    document.getElementById('btn-check').disabled = isNaN(selectedAnswer);
-  });
+  if (selectEl) {
+    selectEl.addEventListener('change', () => {
+      if (isAnswerChecked) return;
+      selectedAnswer = parseInt(selectEl.value);
+      document.getElementById('btn-check').disabled = isNaN(selectedAnswer);
+    });
+  }
 }
 
 // ── Boşluk Doldurma - Serbest Metin (Text) ────────────────────
@@ -8474,10 +8541,15 @@ function renderFillBlank(container, question) {
     container = document.getElementById("exercise-container") || document.querySelector(".quiz-card-body");
   }
 
-  // Cümle içindeki boşluğu (3 veya daha fazla alt çizgiyi) belirgin bir görsel çizgiye dönüştürüyoruz
+  // Support single or multiple blanks (3 or more underscores)
   const parts = question.sentence.split(/_{3,}/);
-  const part0Html = makeTextHoverable(parts[0]);
-  const part1Html = parts[1] ? makeTextHoverable(parts[1]) : '';
+  let sentenceInnerHtml = '';
+  parts.forEach((part, pIdx) => {
+    sentenceInnerHtml += makeTextHoverable(part);
+    if (pIdx < parts.length - 1) {
+      sentenceInnerHtml += `<span class="fb-blank" id="fb-blank-word-${pIdx}">______</span>`;
+    }
+  });
 
   const optionsHtml = question.options.map((opt, i) => {
     return `<button class="fb-option" data-index="${i}">
@@ -8491,15 +8563,13 @@ function renderFillBlank(container, question) {
   container.innerHTML = `
     <p class="quiz-prompt">${displayPrompt}</p>
     <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
-      ${part0Html}<span class="fb-blank" id="fb-blank-word">______</span>${part1Html}
+      ${sentenceInnerHtml}
     </div>
     <div class="fb-options">
       ${optionsHtml}
     </div>
   `;
 
-  const blankEl = document.getElementById('fb-blank-word');
-  
   container.querySelectorAll('.fb-option').forEach(btn => {
     btn.addEventListener('click', () => {
       if (isAnswerChecked) return;
@@ -8509,22 +8579,24 @@ function renderFillBlank(container, question) {
       const idx = parseInt(btn.dataset.index);
       selectedAnswer = idx;
       
-      blankEl.innerHTML = question.options[idx];
+      const selectedOptText = question.options[idx] || '';
+      const tokens = selectedOptText.split(/\s*\/\s*/);
+
+      for (let pIdx = 0; pIdx < parts.length - 1; pIdx++) {
+        const blank = document.getElementById(`fb-blank-word-${pIdx}`);
+        if (blank) {
+          blank.innerHTML = tokens[pIdx] || tokens[0] || '______';
+        }
+      }
       
       document.getElementById('btn-check').disabled = false;
 
       const isTargetUnit = question.translation ? true : false;
       const isCorrect = idx === question.correctIndex;
 
-      if (isTargetUnit && isCorrect && question.translation) {
-        setTimeout(() => {
-          startTranslationGate(container, question);
-        }, 300);
-      } else {
-        setTimeout(() => {
-          checkAnswer();
-        }, 250);
-      }
+      setTimeout(() => {
+        checkAnswer();
+      }, 250);
     });
   });
 }
@@ -8545,18 +8617,22 @@ function startTranslationGate(container, question) {
     btnSkip.style.display = 'none';
   }
 
-  // Make the sentence complete
-  let completedSentence = "";
-  if (question.type === 'multiple-fill-blank' || question.type === 'error-finder' || question.type === 'true-false') {
-    completedSentence = question.enSentence || question.en || "";
-  } else {
-    completedSentence = question.sentence || question.enSentence || question.en || "";
-    if (question.options && question.correctIndex !== undefined) {
-      const correctWord = question.options[question.correctIndex];
-      if (correctWord) {
-        const highlightedChoice = `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${correctWord}</span>`;
-        completedSentence = completedSentence.replace(/_{3,}/, highlightedChoice);
-      }
+  // Make the sentence complete with highlighted answer
+  let completedSentence = question.sentence || question.enSentence || question.en || "";
+  if (question.options && typeof question.correctIndex === 'number' && question.options[question.correctIndex]) {
+    const correctWord = question.options[question.correctIndex];
+    if (correctWord && completedSentence.includes("___")) {
+      const tokens = String(correctWord).split(/\s*\/\s*/);
+      const parts = completedSentence.split(/_{3,}/);
+      let filledSentence = '';
+      parts.forEach((part, pIdx) => {
+        filledSentence += part;
+        if (pIdx < parts.length - 1) {
+          const tokenVal = tokens[pIdx] || tokens[0] || '';
+          filledSentence += `<span class="fb-blank" style="color: var(--color-correct); border-bottom-color: var(--color-correct); font-weight: bold; background: var(--color-correct-bg); padding: 2px 8px; border-radius: 4px;">${tokenVal}</span>`;
+        }
+      });
+      completedSentence = filledSentence;
     }
   }
   completedSentence = makeTextHoverable(completedSentence);
@@ -9004,7 +9080,11 @@ function showTFFeedback(question) {
   const btnWrong = document.getElementById('blitz-btn-wrong');
   const btnCorrect = document.getElementById('blitz-btn-correct');
   
-  if (question.correctAnswer === true) {
+  const isTargetCorrect = (question.isTrue !== undefined)
+    ? Boolean(question.isTrue)
+    : (question.correctAnswer === true || String(question.correctAnswer).toLowerCase() === 'true');
+
+  if (isTargetCorrect) {
     if (btnCorrect) {
       btnCorrect.style.background = 'var(--color-correct-bg)';
       btnCorrect.style.color = 'var(--color-correct)';
@@ -9901,7 +9981,12 @@ function checkAnswer() {
       }
       break;
     case 'true-false':
-      isCorrect = selectedAnswer === question.correctAnswer;
+      {
+        const targetCorrect = (question.isTrue !== undefined)
+          ? Boolean(question.isTrue)
+          : (question.correctAnswer === true || String(question.correctAnswer).toLowerCase() === 'true');
+        isCorrect = Boolean(selectedAnswer) === targetCorrect;
+      }
       break;
     case 'spotlight':
       isCorrect = selectedAnswer === question.correctIndex;
@@ -9920,8 +10005,10 @@ function checkAnswer() {
       break;
   }
 
-  // Intercept if translation exists, primary is correct, type is fill-blank, and translation gate hasn't been triggered yet
-  if (question && question.translation && isCorrect && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'structure-match' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  // Intercept if translation exists, primary is correct, type is not formula matching, and translation gate hasn't been triggered yet
+  const isFormulaQuestion = question.type === 'structure-match' || (question.sentence && (question.sentence.includes('➔') || question.sentence.includes('[Ana Cümle]') || question.sentence.includes('[Yan Cümle]')));
+
+  if (question && question.translation && isCorrect && !isFormulaQuestion && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;
@@ -10114,7 +10201,10 @@ function checkAnswer() {
     } else if (question.type === 'multiple-fill-blank') {
       correctAnswerText = question.corrects.join(', ');
     } else if (question.type === 'true-false') {
-      correctAnswerText = question.correctAnswer ? 'DOĞRU' : 'YANLIŞ';
+      const targetCorrect = (question.isTrue !== undefined)
+        ? Boolean(question.isTrue)
+        : (question.correctAnswer === true || String(question.correctAnswer).toLowerCase() === 'true');
+      correctAnswerText = targetCorrect ? 'DOĞRU' : 'YANLIŞ';
     }
 
     if (question.type === 'true-false') {
@@ -10141,6 +10231,48 @@ function checkAnswer() {
       }
     }
 
+    // Render Hızlı Eleme Refleksi & Şık Analizi if options exist
+    const optionAnalysisEl = document.getElementById('feedback-option-analysis');
+    if (optionAnalysisEl && question && question.options && typeof question.correctIndex === 'number') {
+      const correctOpt = question.options[question.correctIndex];
+      let analysisHtml = `<div style="font-weight: 800; margin-bottom: 4px; color: var(--text-primary); font-size: 0.8rem;">🔍 Hızlı Eleme Refleksi & Şık Analizi:</div>`;
+      
+      question.options.forEach((opt, idx) => {
+        if (idx === question.correctIndex) {
+          analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 2px;">🟢 <strong>${opt}</strong> (DOĞRU): Cümle yapısıyla ve zaman/bağlaç kuralıyla tam uyumludur.</div>`;
+        } else {
+          let reason = "Zaman, bağlaç veya söz dizimi uyumsuzluğu sebebiyle elenir.";
+          const optLower = (opt || "").toLowerCase();
+          const sentenceLower = (question.sentence || "").toLowerCase();
+          
+          if (sentenceLower.includes("the first") || sentenceLower.includes("the last") || sentenceLower.includes("the only") || sentenceLower.includes("the second")) {
+            reason = "[KURAL 7: First/Last/Only] Sıralama ve üstünlük sıfatlarından sonra V-ing/V2 gelemez; kesinlikle 'TO + V1' (veya To be V3) seçilmelidir!";
+          } else if (sentenceLower.includes("recently") || sentenceLower.includes("lately")) {
+            reason = "[KURAL 8: Recently/Lately] 'Recently' ve 'Lately' belirteçleri Simple Tenses alamaz; doğrudan 'Present Perfect (Have/Has V3)' gerektirir!";
+          } else if (sentenceLower.includes("realized") || sentenceLower.includes("noticed") || sentenceLower.includes("discovered") || sentenceLower.includes("understood")) {
+            reason = "[KURAL 6: Realize Grubu] Past farkındalık fiillerinden sonra gerçekleşen eylem daha eski olduğu için 'Past Perfect (Had V3)' gerektirir!";
+          } else if (sentenceLower.includes("by ") || sentenceLower.includes("by the time")) {
+            reason = "[KURAL 4: BY Miladı] 'By' zaman sınırlayıcısı olan yerde Simple/Continuous zamanlar elenir; 'Past Perfect (Had V3)' veya 'Future Perfect (Will Have V3)' aranır!";
+          } else if (sentenceLower.includes("since")) {
+            reason = "[KURAL 5: Since Çapası] 'Since' yan cümlesine V2 alır, ana cümleye Have/Has V3 alır; yan cümleye 'Have V3' gelemez!";
+          } else if (optLower.includes("will have") || optLower.includes("had been v-ing")) {
+            reason = "Cümlede belirli bir gelecek/geçmiş zaman sınırlayıcısı (by 2030, by the time V2 vb.) olmadığı için elenir.";
+          } else if (optLower.includes("had ") || optLower.includes("was ") || optLower.includes("were ") || optLower.includes("ed")) {
+            reason = "Yan cümle Present (V1) yapısındayken Past (V2/Had V3) kullanımı zaman uyumsuzluğu (Tense Mismatch) yaşatır.";
+          } else if (optLower.includes("will ") || optLower.includes("would ")) {
+            reason = "Zaman veya şart bağlaçlarının (when, before, if, unless) yan cümle tarafına 'will' veya 'would' GELEMEZ!";
+          } else if (optLower.includes("that")) {
+            reason = "Edatlardan (preposition) hemen sonra doğrudan 'that' kullanılamaz!";
+          }
+          
+          analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 2px;">❌ <strong>${opt}</strong> (ELENDİ): ${reason}</div>`;
+        }
+      });
+      
+      optionAnalysisEl.innerHTML = analysisHtml;
+      optionAnalysisEl.style.display = 'block';
+    }
+
     // Hatalı cevaplarda gramatik açıklama pop-up'ını tetikle (Hız Tüneli hariç)
     if (question.type !== 'true-false' && question.type !== 'reflex-blitz') {
       showGrammarExplanationModal(question, selectedAnswer);
@@ -10152,6 +10284,9 @@ function checkAnswer() {
   const btnCheck = document.getElementById('btn-check');
   btnCheck.textContent = 'DEVAM ET';
   btnCheck.disabled = false;
+  try {
+    btnCheck.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } catch (e) {}
 
   const btnSkip = document.getElementById('btn-skip');
   if (btnSkip) {
