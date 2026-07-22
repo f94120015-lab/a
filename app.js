@@ -7317,70 +7317,135 @@ function renderQuestion() {
 
     // Bölüm 38 (Unit 40) Görsel Bağlaç ve Noktalama Kılavuzu (Conjunction HUD)
     if (currentLesson && currentLesson.unitId === 38) {
-      let sentenceStr = (originalSentence || "").toLowerCase();
+      let originalSent = originalSentence || "";
+      let options = question.options || [];
+
       let hudTitle = 'Bağlaç & Punctuation Matrisi';
       let hudFormula = '';
       let hudAlert = '';
       let visualSvg = '';
 
+      // Dynamic position & structure analysis
+      const isStartBlank = /^\s*_{3,}/.test(originalSent);
+      const hasSemicolon = originalSent.includes(';');
+      const hasCommaBeforeBlank = /,?\s*_{3,}/.test(originalSent) && !isStartBlank;
+
+      // Group active question's exact options into grammar categories
+      const causePrepOpts = options.filter(o => /in view of|by reason of|due to|because of|on account of|owing to/i.test(o));
+      const causeConjOpts = options.filter(o => /because|since|as|seeing that/i.test(o) && !/because of/i.test(o));
+      const additionOpts = options.filter(o => /as well as|in addition to|besides|furthermore|moreover/i.test(o));
+      const resultOpts = options.filter(o => /\bso\b|therefore|hence|consequently|thus|as a result/i.test(o));
+      const contrastPrepOpts = options.filter(o => /despite|in spite of|regardless of|notwithstanding/i.test(o));
+      const contrastConjOpts = options.filter(o => /although|even though|though|while|whereas|much as/i.test(o));
+      const transitionOpts = options.filter(o => /therefore|hence|consequently|however|nevertheless|furthermore|moreover/i.test(o));
+
       if (question.type === 'matching') {
         hudTitle = 'Bağlaç Kategorileri';
         hudFormula = 'Edat (Noun) | Bağlaç (SVO) | Geçiş Kelimesi (SVO; transition, SVO)';
         hudAlert = 'Bağlaçları eşleştirirken dil bilgisi rollerine (isim alan edat vs. cümle alan bağlaç) dikkat edin.';
+      } else if (isStartBlank) {
+        hudTitle = 'Cümle Başı Yapılar & Edat-Bağlaç Matrisi';
+        
+        let prepItems = [...causePrepOpts, ...contrastPrepOpts];
+        let prepStr = prepItems.length ? `[${prepItems.join(' / ')}]` : '[In view of / By reason of / Due to]';
+        let additionStr = additionOpts.length ? `[${additionOpts.join(' / ')}]` : '[As well as / In addition to]';
+        let resultStr = resultOpts.length ? `[${resultOpts.join(' / ')}]` : '[so]';
+
+        hudFormula = `${prepStr} + Noun Phrase  |  ${additionStr} + Noun Phrase  |  SVO, ${resultStr} SVO`;
+        hudAlert = 'Cümle Başı Kuralı: İsim öbeği (fiilsiz yapı) önünde edat ("In view of / By reason of / As well as") kullanılır. "so" gibi sonuç bağlaçları cümle başında kullanılamaz, iki cümle ortasında virgülden sonra gelir.';
+
+        visualSvg = `
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 14px 16px; border-radius: 12px; font-family: monospace; font-size: 0.88rem; line-height: 1.7; color: var(--text-primary); margin-top: 10px;">
+            <div style="font-weight: 600;">
+              <strong style="color: var(--accent-primary);">${prepStr}</strong> + Noun Phrase (İsim Öbeği) , SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Sebep / Nedeniyle</span>
+            </div>
+            ${additionOpts.length ? `
+            <div style="font-weight: 600; margin-top: 6px;">
+              <strong style="color: var(--accent-primary);">${additionStr}</strong> + Noun Phrase (İsim Öbeği) , SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Yanı sıra / Ek Olarak</span>
+            </div>` : ''}
+            ${resultOpts.length ? `
+            <div style="font-weight: 600; margin-top: 6px;">
+              SVO <strong>,</strong> <strong style="color: var(--accent-primary);">${resultStr}</strong> SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Sonuç Cümlesi (Cümle Başına Gelmez!)</span>
+            </div>` : ''}
+          </div>
+        `;
+      } else if (hasSemicolon) {
+        let transStr = transitionOpts.length ? `[${transitionOpts.join(' / ')}]` : '[Therefore / Consequently / Hence]';
+        let prepStr = causePrepOpts.length ? `[${causePrepOpts.join(' / ')}]` : '[Due to / Because of]';
+
+        hudTitle = 'Noktalama & Geçiş Zarfları (Transitions)';
+        hudFormula = `SVO ; ${transStr} , SVO  |  ${prepStr} + Noun Phrase`;
+        hudAlert = 'Noktalı Virgül (;) Kuralı: İki tam cümle arasında ";" ve "," geçiş kelimeleri (therefore, hence, furthermore) ile kullanılır.';
+
+        visualSvg = `
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 14px 16px; border-radius: 12px; font-family: monospace; font-size: 0.88rem; line-height: 1.7; color: var(--text-primary); margin-top: 10px;">
+            <div style="font-weight: 600;">
+              SVO <strong>;</strong> <strong style="color: var(--accent-primary);">${transStr}</strong> <strong>,</strong> SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Geçiş Kelimesi</span>
+            </div>
+            ${causePrepOpts.length ? `
+            <div style="font-weight: 600; margin-top: 6px;">
+              <strong style="color: var(--accent-primary);">${prepStr}</strong> + Noun Phrase , SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Sebep Edatı</span>
+            </div>` : ''}
+          </div>
+        `;
+      } else if (hasCommaBeforeBlank) {
+        let conjStr = resultOpts.length ? `[${resultOpts.join(' / ')}]` : '[so]';
+        let transStr = transitionOpts.length ? `[${transitionOpts.join(' / ')}]` : '[hence / therefore]';
+        let prepStr = causePrepOpts.length ? `[${causePrepOpts.join(' / ')}]` : '[In view of / Due to]';
+
+        hudTitle = 'Cümle Ortası Virgül & Bağlaç Uyumu';
+        hudFormula = `SVO , ${conjStr} SVO  |  SVO ; ${transStr} , SVO  |  ${prepStr} + Noun`;
+        hudAlert = 'Tek Virgül (,) Kuralı: Virgülden sonra doğrudan tam cümle geliyorsa "so" gibi bağlaçlar seçilir. "hence / therefore" gibi kelimeler noktalı virgül (;) gerektirir.';
+
+        visualSvg = `
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 14px 16px; border-radius: 12px; font-family: monospace; font-size: 0.88rem; line-height: 1.7; color: var(--text-primary); margin-top: 10px;">
+            <div style="font-weight: 600;">
+              SVO <strong>,</strong> <strong style="color: var(--accent-primary);">${conjStr}</strong> + SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Virgüllü Sonuç Bağlacı</span>
+            </div>
+            ${transitionOpts.length ? `
+            <div style="font-weight: 600; margin-top: 6px;">
+              SVO <strong>;</strong> <strong style="color: var(--accent-primary);">${transStr}</strong> <strong>,</strong> SVO &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ Noktalı Virgül İsteyen Geçiş</span>
+            </div>` : ''}
+            ${causePrepOpts.length ? `
+            <div style="font-weight: 600; margin-top: 6px;">
+              <strong style="color: var(--accent-primary);">${prepStr}</strong> + Noun Phrase (Fiil Yok) &nbsp;<span style="opacity: 0.75; font-weight: 400;">→ İsim Öbeği Alan Edat</span>
+            </div>` : ''}
+          </div>
+        `;
       } else {
-        const lIndex = currentLesson.displayId || 1;
-        if (lIndex === 1) {
-          hudTitle = 'Zıtlık Bağlaçları Geometrisi (Contrast)';
-          hudFormula = 'Although/Even though + SVO  |  Despite/In spite of + Noun Phrase';
-          hudAlert = 'Sınav Tuzağı: Boşluktan sonra SVO (tam cümle) varsa "Although", sadece Noun Phrase varsa "Despite" tercih edilir.';
-          visualSvg = `
-            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
-              <span style="color: #ff6b6b; font-weight: bold;">[Although / Even though]</span> + <span style="color: #a855f7; font-weight: bold;">Subject + Verb + Object</span> , SVO<br>
-              <span style="color: #3b82f6; font-weight: bold;">[Despite / In spite of]</span> + <span style="color: #ffd43b; font-weight: bold;">Noun Phrase (no verb)</span> , SVO
+        let contrastConj = contrastConjOpts.length ? `[${contrastConjOpts.join(' / ')}]` : '[Although / Even though]';
+        let contrastPrep = contrastPrepOpts.length ? `[${contrastPrepOpts.join(' / ')}]` : '[Despite / In spite of]';
+
+        hudTitle = 'Zıtlık & Yapı Geometrisi';
+        hudFormula = `${contrastConj} + SVO  |  ${contrastPrep} + Noun Phrase`;
+        hudAlert = 'Soru Tipi Kuralı: Cümle yapısında boşluktan sonra fiil (Verb) varsa cümle alan bağlaç, sadece isim varsa edat tercih edilir.';
+
+        visualSvg = `
+          <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 14px 16px; border-radius: 12px; font-family: monospace; font-size: 0.9rem; line-height: 1.7; color: var(--text-primary); margin-top: 10px;">
+            <div style="font-weight: 600;">
+              <strong style="color: var(--accent-primary);">${contrastConj}</strong> + Subject + Verb + Object , SVO
             </div>
-          `;
-        } else if (lIndex === 2) {
-          hudTitle = 'Saf Kıyaslama vs. Sebep (While vs. Because)';
-          hudFormula = 'While/Whereas + S1+V1, S2+V2  |  Because/Since/As + SVO';
-          hudAlert = 'Anlam Tuzağı: "Since" ve "As" hem zaman hem sebep ("çünkü") bildirebilir. Perfect zaman yoksa genellikle "çünkü" anlamındadır.';
-          visualSvg = `
-            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
-              <span style="color: #ff6b6b; font-weight: bold;">[While / Whereas]</span> S1 + V1 , S2 + V2 <span style="color: #10b981;">(Direct contrast)</span><br>
-              <span style="color: #3b82f6; font-weight: bold;">[Because / Since / As]</span> + <span style="color: #a855f7; font-weight: bold;">Subject + Verb + Object</span> , SVO
+            <div style="font-weight: 600; margin-top: 6px;">
+              <strong style="color: var(--accent-primary);">${contrastPrep}</strong> + Noun Phrase (Fiil Yok) , SVO
             </div>
-          `;
-        } else if (lIndex === 3) {
-          hudTitle = 'Noktalama & Geçiş Kuralları (Transitions)';
-          hudFormula = 'SVO; therefore/consequently, SVO  |  Due to/Because of + Noun';
-          hudAlert = 'Noktalama Tuzağı: "Therefore", "Furthermore" gibi geçiş kelimeleri iki cümle ortasında ";" ve "," arasında kullanılır.';
-          visualSvg = `
-            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
-              SVO <span style="color: #ffd43b; font-weight: bold;">;</span> <span style="color: #f59e0b; font-weight: bold;">[Therefore / Consequently / Furthermore]</span> <span style="color: #ffd43b; font-weight: bold;">,</span> SVO <span style="color: #10b981;">(Transition)</span><br>
-              <span style="color: #3b82f6; font-weight: bold;">[Due to / Because of]</span> + <span style="color: #ffd43b; font-weight: bold;">Noun Phrase</span> , SVO
-            </div>
-          `;
-        } else {
-          hudTitle = 'İkili & Amaç Yapıları (Correlatives & Purpose)';
-          hudFormula = 'Neither...nor  |  In order to + V1  |  So that + SVO';
-          hudAlert = 'Dönüşüm Kuralı: "In order to + V1" yapısı tam cümle ile kurulacaksa "So that + SVO (can/will)" kalıbına dönüşür.';
-          visualSvg = `
-            <div style="margin-top: 8px; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.8rem; line-height: 1.45; border: 1px solid rgba(255,255,255,0.1);">
-              SVO <span style="color: #ff6b6b; font-weight: bold;">[in order to / so as to]</span> + <span style="color: #a855f7; font-weight: bold;">V1 (Verb root)</span><br>
-              SVO <span style="color: #3b82f6; font-weight: bold;">[so that / in order that]</span> + <span style="color: #ffd43b; font-weight: bold;">Subject + can/could + V1</span>
-            </div>
-          `;
-        }
+          </div>
+        `;
       }
 
       const hudHtml = `
-        <div class="u101-hud-card" id="unit40-hud" style="border-left: 5px solid var(--accent-primary, #8b7ec8); margin-bottom: 20px; background: var(--bg-card); border-radius: var(--radius-lg); padding: 16px; box-shadow: var(--shadow-md); text-align: left;">
-          <div class="u101-hud-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 8px;">
-            <h4 class="u101-hud-title" style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--accent-primary, #8b7ec8);">⚖️ Görsel Kılavuz: ${hudTitle}</h4>
-            <span class="u101-hud-badge" style="background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); font-size: 0.68rem; font-weight: 800; padding: 3px 8px; border-radius: 12px;">BÖLÜM 38</span>
+        <div class="u101-hud-card" id="unit40-hud" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 18px 20px; text-align: left; margin-bottom: 20px; box-shadow: var(--shadow-sm);">
+          <div class="u101-hud-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 12px;">
+            <h4 class="u101-hud-title" style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-heading); display: flex; align-items: center; gap: 8px;">
+              <span>⚖️</span>
+              <span>Görsel Kılavuz: ${hudTitle}</span>
+            </h4>
+            <span class="u101-hud-badge" style="background: var(--bg-secondary); color: var(--text-secondary); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; border: 1px solid var(--border-color);">BÖLÜM 38</span>
           </div>
-          <div class="u101-hud-formula" style="font-family: monospace; font-size: 0.82rem; color: var(--text-primary); margin-bottom: 8px; font-weight: 700;">${hudFormula}</div>
-          <div class="u101-trap-alert" style="display: flex; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.18); border-radius: 8px; padding: 10px; line-height: 1.4;">
-            <span style="font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">💡</span>
+          <div class="u101-hud-formula" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 10px 14px; border-radius: 10px; font-family: monospace; font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
+            ${hudFormula}
+          </div>
+          <div class="u101-trap-alert" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 10px; padding: 10px 14px; line-height: 1.5; margin-bottom: 10px;">
+            <span style="font-size: 1.1rem; flex-shrink: 0;">💡</span>
             <div>${hudAlert}</div>
           </div>
           ${visualSvg}
@@ -7763,7 +7828,9 @@ function renderPunctuationCheck(container, question) {
   );
 
   const optionsHtml = question.options.map((opt, i) => {
-    return `<button class="mc-option" data-index="${i}">${opt}</button>`;
+    const meaning = getOptionMeaning(question, opt);
+    const displayText = (meaning && !opt.includes('/')) ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : opt;
+    return `<button class="mc-option" data-index="${i}">${displayText}</button>`;
   }).join('');
 
   container.innerHTML = `
@@ -7795,7 +7862,9 @@ function renderPunctuationCheck(container, question) {
 // ── Gramer Yapısı Eşleştirme (structure-match) ──────────
 function renderStructureMatch(container, question) {
   const optionsHtml = question.options.map((opt, i) => {
-    return `<button class="mc-option" data-index="${i}">${opt}</button>`;
+    const meaning = getOptionMeaning(question, opt);
+    const displayText = (meaning && !opt.includes('/')) ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : opt;
+    return `<button class="mc-option" data-index="${i}">${displayText}</button>`;
   }).join('');
 
   const sentenceBlock = (question.sentence && question.sentence !== 'undefined')
@@ -8514,10 +8583,102 @@ function getOptionMeaning(question, opt) {
     }
   }
 
-  const cleanOpt = opt.toLowerCase().trim();
+  const cleanOpt = opt.toLowerCase().trim().replace(/^[\s;,\.\:]+|[\s;,\.\:]+$/g, '');
 
-  // Dictionary of phrasal modals & multi-word expressions
+  // Comprehensive dictionary of conjunctions, linkers, prepositions, phrasal modals & multi-word expressions
   const phrasalMap = {
+    "even though": "-e rağmen",
+    "much as": "-e rağmen / her ne kadar",
+    "although": "-e rağmen / karşın",
+    "even if": "-se bile",
+    "though": "-e rağmen / yine de",
+    "despite": "-e rağmen",
+    "in spite of": "-e rağmen",
+    "whereas": "-e karşın (oysa)",
+    "while": "iken / -e rağmen",
+    "unlike": "-in aksine",
+    "contrary to": "-in aksine",
+    "as opposed to": "-in aksine",
+    "conversely": "aksine / tersine",
+    "on the other hand": "diğer yandan",
+    "however": "ancak / yine de",
+    "nevertheless": "yine de / buna rağmen",
+    "nonetheless": "yine de / buna rağmen",
+    "even so": "yine de / öyle olsa bile",
+    "inasmuch as": "-dığı için / -den dolayı",
+    "now that": "-dığı için / artık",
+    "seeing that": "-dığı için / mademki",
+    "given that": "-dığı göz önüne alınırsa",
+    "because of": "-den dolayı / yüzünden",
+    "due to": "-den dolayı / yüzünden",
+    "owing to": "-den dolayı / yüzünden",
+    "on account of": "-den dolayı / yüzünden",
+    "in view of": "-den dolayı / göz önüne alındığında",
+    "thanks to": "sayesinde",
+    "therefore": "bu yüzden / dolayısıyla",
+    "hence": "bu yüzden / dolayısıyla",
+    "thus": "bu yüzden / böylece",
+    "consequently": "sonuç olarak",
+    "as a result": "sonuç olarak",
+    "that's why": "bu yüzden",
+    "furthermore": "dahası / ayrıca",
+    "moreover": "dahası / ayrıca",
+    "besides": "ayrıca / -in yanı sıra",
+    "as well as": "-in yanı sıra",
+    "in addition to": "-in yanı sıra",
+    "along with": "-in yanı sıra",
+    "likewise": "aynı şekilde / benzer şekilde",
+    "similarly": "aynı şekilde / benzer şekilde",
+    "such as": "gibi (örneğin)",
+    "for example": "örneğin",
+    "for instance": "örneğin",
+    "in other words": "başka bir deyişle",
+    "namely": "yani (adlandırmak gerekirse)",
+    "that is to say": "yani / başka bir deyişle",
+    "in order to": "-mek amacıyla",
+    "so as to": "-mek amacıyla",
+    "so that": "-sin diye / amacıyla",
+    "in order that": "-sin diye / amacıyla",
+    "except for": "-den başka / hariç",
+    "aside from": "-den başka / hariç",
+    "apart from": "-den başka / hariç",
+    "according to": "-e göre",
+    "in terms of": "açısından / bakımından",
+    "in accordance with": "-e uygun olarak",
+    "in favor of": "lehine / yararına",
+    "instead of": "-in yerine",
+    "rather than": "-den ziyade / yerine",
+    "for the sake of": "uğruna / hatırına",
+    "as if": "sanki / -miş gibi",
+    "as though": "sanki / -miş gibi",
+    "when it comes to": "söz konusu olduğunda",
+    "by means of": "aracılığıyla / vasıtasıyla",
+    "by reason of": "-den dolayı / yüzünden",
+    "that is": "yani / başka bir deyişle",
+    "in that": "-mesi bakımından / çünkü",
+    "provided that": "şartıyla",
+    "providing that": "şartıyla",
+    "as long as": "sürece / şartıyla",
+    "so long as": "sürece / şartıyla",
+    "on condition that": "şartıyla",
+    "unless": "-madıkça / aksi takdirde",
+    "in case": "durumunda / ihtimaline karşı",
+    "for fear that": "korkusuyla",
+    "lest": "korkusuyla / -mesin diye",
+    "regardless of": "bakılmaksızın / ne olursa olsun",
+    "irrespective of": "bakılmaksızın",
+    "no matter": "ne olursa olsun",
+    "because": "çünkü / -dığı için",
+    "since": "-dığı için / beri",
+    "as": "-dığı için / olarak / gibi",
+    "but": "ama / fakat",
+    "yet": "yine de / fakat",
+    "still": "yine de / hala",
+    "so": "bu yüzden / öyle",
+    "or": "veya / ya da",
+    "and": "ve",
+    "nor": "ne de",
+    "also": "ayrıca / de",
     "certain to": "kesin",
     "reluctant to": "gönülsüz / isteksiz",
     "unable to": "yapamamak",
@@ -8532,8 +8693,22 @@ function getOptionMeaning(question, opt) {
     "accustomed to": "alışkın",
     "used to": "alışkın",
     "about to": "üzere",
-    "be to": "planlanan"
+    "be to": "planlanan",
+    "be able to": "yapabilmek",
+    "was able to": "yapabildi",
+    "were able to": "yapabildiler",
+    "have to": "zorunda olmak",
+    "has to": "zorunda olmak",
+    "had to": "zorunda kaldı",
+    "would rather": "tercih eder",
+    "would prefer": "tercih eder",
+    "had better": "iyi olur",
+    "ought to": "malı-meli"
   };
+
+  if (phrasalMap[cleanOpt]) {
+    return phrasalMap[cleanOpt];
+  }
 
   const sortedKeys = Object.keys(phrasalMap).sort((a, b) => b.length - a.length);
   for (const key of sortedKeys) {
