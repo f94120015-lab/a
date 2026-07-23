@@ -911,7 +911,7 @@
     return en.includes("was") ? "was" : (en.includes("were") ? "were" : (en.includes("will be") ? "will be" : (en.includes("have been") ? "have been" : (en.includes("has been") ? "has been" : "is"))));
   }
 
-  function generateUnit10Questions(unitId, lessonId, sentences, allLessonSentences) {
+    function generateUnit10Questions(unitId, lessonId, sentences, allLessonSentences) {
     const qList = [];
     const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
     const localEnsurePunctuation = (str) => {
@@ -921,14 +921,14 @@
       return trimmed + ".";
     };
 
-    // We will generate exactly 15 questions
     for (let i = 0; i < 15; i++) {
       const s = sentences[i % sentences.length];
       const qId = `u${unitId}l${lessonId}_q${i + 1}`;
-      const typeSelector = i; // Determine question type deterministically to ensure variety
+      const typeSelector = i;
+      const gTags = s.grammarTags || ["Edilgen Yapı", "Beşeri Bilimler"];
 
       if (typeSelector === 0 || typeSelector === 14) {
-        // 1. Multiple choice (English to Turkish)
+        // Multiple choice (Eng -> Tr)
         const wrongs = shuffle(allLessonSentences.filter(x => x.en !== s.en)).slice(0, 3);
         const options = shuffle([localEnsurePunctuation(s.tr), localEnsurePunctuation(wrongs[0].tr), localEnsurePunctuation(wrongs[1].tr), localEnsurePunctuation(wrongs[2].tr)]);
         qList.push({
@@ -939,10 +939,11 @@
           correctIndex: options.indexOf(localEnsurePunctuation(s.tr)),
           enSentence: s.en,
           isEngToTr: true,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 9) {
-        // 2. Multiple choice (Turkish to English)
+        // Multiple choice (Tr -> Eng)
         const wrongs = shuffle(allLessonSentences.filter(x => x.en !== s.en)).slice(0, 3);
         const options = shuffle([localEnsurePunctuation(s.en), localEnsurePunctuation(wrongs[0].en), localEnsurePunctuation(wrongs[1].en), localEnsurePunctuation(wrongs[2].en)]);
         qList.push({
@@ -953,10 +954,11 @@
           correctIndex: options.indexOf(localEnsurePunctuation(s.en)),
           enSentence: s.en,
           isEngToTr: false,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 1) {
-        // 3. Fill blank dropdown (participle)
+        // Fill blank dropdown (V3 verb)
         const wrongs = [s.word + "ing", s.word.replace(/ed$/, "es"), s.word.replace(/ed$/, "")];
         const options = shuffle([s.word, wrongs[0], wrongs[1], wrongs[2]]);
         qList.push({
@@ -967,25 +969,27 @@
           options: options,
           correctIndex: options.indexOf(s.word),
           enSentence: s.en,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 10) {
-        // 4. Fill blank dropdown (auxiliary verb)
+        // Fill blank dropdown (auxiliary verb / modal)
         const aux = getAuxiliary(s.en, s.word);
-        const distractors = ["is", "was", "will be", "have been", "has been", "are", "were"].filter(a => a !== aux).slice(0, 3);
+        const distractors = ["is", "was", "will be", "have been", "must be", "can be", "should be"].filter(a => a !== aux).slice(0, 3);
         const options = shuffle([aux, ...distractors]);
         qList.push({
           id: qId,
           type: "fill-blank-dropdown",
-          prompt: `Boşluğa uygun edilgen yardımcı fiili seçin: "${localEnsurePunctuation(s.tr)}"`,
-          sentence: s.en.replace(new RegExp(`\\b${aux}\\b`), "___"),
+          prompt: `Boşluğa uygun edilgen yardımcı fiil/modal yapısını seçin: "${localEnsurePunctuation(s.tr)}"`,
+          sentence: s.en.replace(new RegExp(`\b${aux}\b`), "___"),
           options: options,
           correctIndex: options.indexOf(aux),
           enSentence: s.en,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 2) {
-        // 5. Fill blank text
+        // Fill blank text
         qList.push({
           id: qId,
           type: "fill-blank-text",
@@ -993,10 +997,11 @@
           sentence: s.blank || s.en.replace(s.word, "___"),
           correct: s.word,
           enSentence: s.en,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 3 || typeSelector === 11) {
-        // 6. Word Bank (English to Turkish or Turkish to English)
+        // Word bank
         const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""));
         const distractors = ["the", "system", "data", "process"].filter(w => !targetWords.includes(w));
         qList.push({
@@ -1008,16 +1013,17 @@
           correctOrder: targetWords,
           enSentence: s.en,
           isEngToTr: false,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 4 || typeSelector === 13) {
-        // 7. Error finder
+        // Error finder
         const baseWord = s.word.toLowerCase();
         let errorWord = baseWord.endsWith('ed') ? baseWord.replace(/ed$/, 'ing') : baseWord + 'ing';
         if (errorWord === baseWord) errorWord = baseWord + 'ed';
         
         const originalSentence = localEnsurePunctuation(s.en);
-        const regex = new RegExp(`\\b${s.word}\\b`, 'i');
+        const regex = new RegExp(`\b${s.word}\b`, 'i');
         const incorrectSentence = originalSentence.replace(regex, errorWord);
         const tokens = incorrectSentence.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""));
         const errIdx = tokens.findIndex(t => t.toLowerCase() === errorWord.toLowerCase());
@@ -1029,64 +1035,68 @@
           correctIndex: errIdx !== -1 ? errIdx : 0,
           suggestedCorrection: s.word,
           translation: s.tr,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 5) {
-        // 8. Structure match
-        const regex = new RegExp(`\\b${s.word}\\b`, 'i');
+        // Structure match with explicit spiral review options
+        const regex = new RegExp(`\b${s.word}\b`, 'i');
         const bolded = s.en.replace(regex, `<strong>$&</strong>`);
         qList.push({
           id: qId,
           type: "structure-match",
-          prompt: "Aşağıdaki cümlede belirtilen ögenin dil bilgisi rolünü seçiniz:",
+          prompt: "Aşağıdaki cümlede koyu yazılan edilgen eylemin dil bilgisi yapısını seçiniz:",
           sentence: bolded,
-          options: ["Edilgen Ortaç (Past Participle - V3)", "Etken Ortaç (Present Participle - ing)", "Zarf (Adverb)", "İsim (Noun)"],
+          options: ["Edilgen Ortaç (Past Participle - V3)", "Etken Ortaç (Present Participle - ing)", "İsim Tamlaması Nesnesi", "Edat Takımı Yüklemi"],
           correctIndex: 0,
           translation: s.tr,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 6) {
-        // 9. Spotlight
+        // Spotlight
         qList.push({
           id: qId,
           type: "spotlight",
-          prompt: `Projektörle aydınlatılan '${s.word}' kelimesinin cümledeki rolü nedir?`,
+          prompt: `Projektörle aydınlatılan '${s.word}' eyleminin cümledeki edilgen işlevi nedir?`,
           paragraph: s.en,
           highlightChunk: s.word,
-          options: ["Edilgen Ortaç (Past Participle - V3)", "Yardımcı Fiil (Auxiliary Verb)", "Zarf (Adverb)", "İsim (Noun)"],
+          options: ["Edilgen Ortaç (Past Participle - V3)", "Saf Modal Yardımcısı", "İsim+Edat Bağlacı", "Etken Yüklem"],
           correctIndex: 0,
           translation: s.tr,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 7 || typeSelector === 12) {
-        // 10. True-False (grammar validity or translation explanation)
+        // True-false
         const makeBug = typeSelector === 7;
         let phrase = s.en;
         let trText = s.tr;
         let correctAns = "true";
         if (makeBug) {
           correctAns = "false";
-          const regex = new RegExp(`\\b${s.word}\\b`, 'i');
+          const regex = new RegExp(`\b${s.word}\b`, 'i');
           phrase = s.en.replace(regex, s.word + "ing");
-          trText = "Hata tespiti: Edilgen olması gereken bu yapıda aktif sıfat-fiil (-ing) kullanılmıştır.";
+          trText = "Hata tespiti: Edilgen (Passive) olması gereken bu yapıda aktif sıfat-fiil (-ing) kullanılmıştır.";
         } else {
-          trText = `Açıklama: '${s.en}' cümlesinin doğru Türkçe karşılığı '${s.tr}' şeklindedir.`;
+          trText = `Açıklama: '${s.en}' cümlesi edilgen çatı kuralına ve önceki ünitelerdeki edat/tamlama kalıplarına tamamen uygundur.`;
         }
         qList.push({
           id: qId,
           type: "true-false",
-          prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+          prompt: "Aşağıdaki cümlenin edilgen yapısı ve spiralleşen tamlamaları gramer açısından doğru mudur?",
           englishPhrase: phrase,
           turkishTranslation: trText,
           correctAnswer: correctAns,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       } else if (typeSelector === 8) {
-        // 11. Multiple fill blank
+        // Multiple fill blank
         const aux = getAuxiliary(s.en, s.word);
         let sentenceWithGaps = s.en;
-        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\\b${aux}\\b`), "___");
-        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\\b${s.word}\\b`), "___");
+        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\b${aux}\b`), "___");
+        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\b${s.word}\b`), "___");
         qList.push({
           id: qId,
           type: "multiple-fill-blank",
@@ -1094,7 +1104,8 @@
           sentence: sentenceWithGaps,
           corrects: [aux, s.word],
           translation: s.tr,
-          createdAt: "2026-07-20T03:20:00+03:00"
+          grammarTags: gTags,
+          createdAt: "2026-07-23T19:15:00+03:00"
         });
       }
     }
@@ -1105,13 +1116,13 @@
   if (typeof lessons !== 'undefined' && typeof unit10LessonSentences !== 'undefined') {
     // Topic update for edits history and descriptions
     if (typeof rawTopics !== 'undefined') {
-      const topic10 = rawTopics.find(t => t.id === 10);
-      if (topic10) {
-        topic10.desc = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
-        topic10.numLessons = 4;
-        topic10.edits = topic10.edits || [];
-        if (!topic10.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
-          topic10.edits.push({
+      const topic9 = rawTopics.find(t => t.id === 9);
+      if (topic9) {
+        topic9.desc = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
+        topic9.numLessons = 4;
+        topic9.edits = topic9.edits || [];
+        if (!topic9.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
+          topic9.edits.push({
             date: "2026-07-20T03:20:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
@@ -1122,12 +1133,12 @@
 
     // Units array update for banner rendering
     if (typeof units !== 'undefined') {
-      const unit10 = units.find(u => u.id === 8);
-      if (unit10) {
-        unit10.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
-        unit10.edits = unit10.edits || [];
-        if (!unit10.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
-          unit10.edits.push({
+      const unit9 = units.find(u => u.id === 9);
+      if (unit9) {
+        unit9.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
+        unit9.edits = unit9.edits || [];
+        if (!unit9.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
+          unit9.edits.push({
             date: "2026-07-20T03:20:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
@@ -1137,7 +1148,7 @@
     }
 
     lessons.forEach(lesson => {
-      if (lesson.unitId === 8) {
+      if (lesson.unitId === 9) {
         const lessonIdx = lesson.id - 28; // startLessonId is 28
         let sentences = unit10LessonSentences[lessonIdx + 1] || [];
         
@@ -1150,7 +1161,7 @@
           lesson.createdAt = "2026-07-20T03:20:00+03:00";
           
           // Generate 15 distinct questions
-          const generatedQuestions = generateUnit10Questions(8, lesson.id, sentences, sentences);
+          const generatedQuestions = generateUnit10Questions(9, lesson.id, sentences, sentences);
           
           lesson.questions = [];
           lesson.exercises = [

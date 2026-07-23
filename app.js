@@ -7283,16 +7283,23 @@ function renderQuestion() {
   }
   
   if (question.grammarTags && question.grammarTags.length > 0) {
-    const tagsHtml = `
-      <div class="quiz-grammar-tags-inside" style="display: flex; gap: 6px; flex-wrap: wrap; margin: 0 auto 16px auto; justify-content: center; width: 100%;">
-        ${question.grammarTags.map(tag => `
-          <span class="quiz-grammar-tag-badge" style="font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 9999px; background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); border: 1px solid rgba(139, 126, 200, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
-            ${tag}
-          </span>
-        `).join('')}
-      </div>
-    `;
-    body.insertAdjacentHTML('afterbegin', tagsHtml);
+    const cleanedTags = question.grammarTags
+      .filter(t => t && !t.toLowerCase().includes('beşeri bilimler'))
+      .map(t => t.replace(/^Önceki Konu:\s*/i, "").replace(/\s*\(.*?\)/g, "").trim())
+      .filter(t => t.length > 0);
+
+    if (cleanedTags.length > 0) {
+      const tagsHtml = `
+        <div class="quiz-grammar-tags-inside" style="display: flex; gap: 6px; flex-wrap: wrap; margin: 0 auto 16px auto; justify-content: center; width: 100%;">
+          ${cleanedTags.map(tag => `
+            <span class="quiz-grammar-tag-badge" style="font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 9999px; background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); border: 1px solid rgba(139, 126, 200, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
+              ${tag}
+            </span>
+          `).join('')}
+        </div>
+      `;
+      body.insertAdjacentHTML('afterbegin', tagsHtml);
+    }
   }
 
   if (question.topic) {
