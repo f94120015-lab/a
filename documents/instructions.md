@@ -46,8 +46,20 @@ Bu dosya, **amok** projesinde geliştirme yapacak yapay zeka asistanları (Antig
 *   Ders bütünlüğünü kontrol etmek için `check-lessons.js` betiği kullanılmalıdır.
 *   Yeni bir ünite veya ders eklendiğinde terminalde `npm run status` komutu çalıştırılarak ders ağacında boşluk veya hata olup olmadığı denetlenmelidir.
 
+### Kural 4: İçerik Oluşturma, Beşeri Bilimler Teması & Gramer Etiketleme Standartları
+*   **Tematik Bağlam (Beşeri Bilimler):** Tüm soru, alıştırma, kelime ve cümle içeriklerinde metinlerin, örneklerin ve kelime öbeklerinin **beşeri bilimler (tarih, felsefe, sosyoloji, edebiyat, psikoloji, sanat tarihi vb.)** alanından seçilmesi temel kuraldır.
+*   **Spiralleşme / Tekrar Prensibi:** Her yeni bölüm veya alıştırma setinde, öğrenmeyi pekiştirmek adına önceki bölümlerde öğrenilen kelime ve kalıpların bir kısmı mutlaka tekrar dahil edilmelidir.
+*   **Yeni Kelime Ekleme:** Geçmiş kelimeler pekiştirilirken, her yeni bölümde müfredata uygun yeni beşeri bilimler kelimeleri ve akademik yapılar da eklenmelidir.
+*   **Gramer Etiket Standartları (`grammarTags` Kesin Kuralı):**
+    *   `grammarTags` dizisine **KESİNLİKLE** soru türü veya arayüz mekaniği (*"Özgür Çeviri"*, *"Kelime Bankası"*, *"Eşleştirme"*, *"Akademik Cümle"*, *"Çeviri Dizilimi"*, *"Hızlı Çeviri"*) YAZILAMAZ.
+    *   Etiketler **SADECE VE SADECE** dil bilgisi konularını ve pekiştirilen gramer yapılarını içermelidir.
+    *   **Etiket Formatı:** `["[Mevcut Gramer Konusu]", "[Spiralleşen/Önceki Gramer Konusu]"]`
+    *   *Örnek Doğru Kullanım:* `["Fiil + Edat (Describe...in)", "Önceki Konu: To Be Yapısı"]`
+    *   *Örnek Yanlış Kullanım:* `["Kelime Bankası", "Özgür Çeviri"]` (YASAK)
+
 ---
 
-## 4. Yerel Doğrulama ve Çalıştırma
+## 5. Yerel Doğrulama ve Çalıştırma
 *   **Geliştirici Sunucusu:** Uygulamayı yerel tarayıcıda çalıştırmak için terminalde `npm start` komutu verilir. (Varsayılan port: `3000`).
 *   **Build İşlemi:** Capacitor platformlarına çıktı vermeden önce `npm run build` komutu ile dosyalar `www` klasörüne kopyalanır.
+
