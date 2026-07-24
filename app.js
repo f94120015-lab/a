@@ -43,7 +43,7 @@ function cleanAcademicUnitTitle(title) {
     'Zaman Uyumu: By the time, Since, It is time': 'Zaman Bağlaçları ve Tense Uyumu (By the time, Since, It\'s time)',
     'Öbeksel Kipler': 'Öbeksel Kipler (Phrasal Modals)',
     'Bağlaçlar': 'Bağlaç Yapıları ve Cümle İlişkileri (Conjunctions)',
-    'Akademik Sınav Kısayolları': 'Sınav Stratejileri ve Gramer İpuçları',
+    'Akademik Sınav Kısayolları': 'Akademik Sınav Kısayolları (Sınav Stratejileri ve Gramer İpuçları)',
     'Akademik Cümle Analizi ve Kısaltmalar': 'Cümle Analizi ve Kısaltma Yapıları (Reductions)',
     'Akademik Yumuşatma ve İhtimal Dili': 'İhtimal ve Yumuşatma İfadeleri (Hedging & Modality)',
     'Advanced Relative Clauses': 'İleri Düzey Sıfat Cümlecikleri (Advanced Relative Clauses)',
@@ -54,26 +54,27 @@ function cleanAcademicUnitTitle(title) {
     'Cümle Yapıları, Edatlar & Kısaltmalar': 'Cümle Yapıları, Edatlar ve Kısaltmalar',
     'Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
     'Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
-    'Phrasal Modal ve Subjunctive Matrisi': 'Phrasal Modals ve Dilek Kipleri (Subjunctive)',
+    'Phrasal Modal ve Subjunctive Matrisi': 'Öbeksel Kipler ve Dilek-Şart Yapıları (Phrasal Modals & Subjunctive)',
     '5 Öğeli Yapısal Altyapı': 'Cümle Ögeleri ve Yapı Analizi (5 Öğe)',
-    '6 Öğeli Mega Eylem Zincirleri': 'Karma Cümle Yapıları ve Eylem Dizilimleri (6 Öğe)',
-    '7 Öğeli Hiper Süreç Zincirleri': 'İleri Düzey Cümle Yapıları (7 Öğe)',
-    '8 Öğeli Titan Eylem Zincirleri': 'Uzun Cümle Çözümleme Yapıları (8 Öğe)',
-    'Zincir Genişleme ve Sentaks Matrisi': 'Cümle Genişletme ve Söz Dizimi (Syntax)',
-    'Zaman Kayma Kontrolü': 'Zaman Kaymaları (Tense Shift)',
+    '6 Öğeli Mega Eylem Zincirleri': 'Karma Akademik Cümle Analizi (6 Öğe)',
+    '7 Öğeli Hiper Süreç Zincirleri': 'İleri Düzey Cümle Çözümleme (7 Öğe)',
+    '8 Öğeli Titan Eylem Zincirleri': 'Uzun Cümle Bölme ve Çözümleme (8 Öğe)',
+    'Zincir Genişleme ve Sentaks Matrisi': 'Söz Dizimi ve Cümle Genişletme (Syntax)',
+    'Zaman Kayma Kontrolü': 'Cümlelerde Zaman Kaymaları ve Uyum Denetimi',
     'Ultimate Academic Exam Simulation': 'Akademik Sınav Simülasyonu',
     'Grand Master Final Challenge': 'Genel Sınav Değerlendirmesi',
-    'Akademik TIPS Master Serisi': 'Sınav İpuçları ve Çözüm Stratejileri',
-    'Akademik TIPS İhtisas Serisi': 'İleri Düzey Sınav İpuçları',
-    'Akademik Bağlaç Mühendisliği': 'İleri Düzey Bağlaçlar ve Cümle Bağlantıları',
-    'Görsel Kartlar ve Özel Bağlaç Kalıpları': 'Özel Bağlaç Kalıpları ve Kullanımları',
+    'Akademik TIPS Master Serisi': 'YDS/YÖKDİL Soru Çözüm Taktikleri',
+    'Akademik TIPS İhtisas Serisi': 'İleri Seviye Gramer İpuçları ve Detay Kurallar',
+    'Akademik Bağlaç Mühendisliği': 'İleri Düzey Bağlaçlar ve Cümle Geçişleri',
+    'Görsel Kartlar ve Özel Bağlaç Kalıpları': 'YDS/YÖKDİL Özel Bağlaç Kalıpları',
     'Koşul Cümleleri ve Mix Yapılar Mühendisliği': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
     'Koşul Cümleleri ve Mix Yapılar': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
     'Özel Okuma Parçası Analizi': 'Akademik Okuma Parçası Çözümlemesi',
     'Akademik Deyimsel Fiiller': 'Deyimsel Fiiller (Phrasal Verbs)',
     'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
-    'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Gerund, Participle ve Infinitive Yapıları',
-    'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'Past Participle ve Edilgen Yapılar (Passive Voice)'
+    'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Fiilimsiler ve Kısaltma Sentezi (Gerund & Participle)',
+    'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'İleri Düzey Kısaltma ve Edilgen Yapılar',
+    'Yarı-Modallar ve Modal Benzeri Yapılar': 'Yarı-Modallar ve Tavsiye/Alışkanlık Yapıları (Semi-Modals)'
   };
 
   let cleaned = t
@@ -114,8 +115,60 @@ function cleanAcademicUnitTitle(title) {
 
   return cleaned.trim();
 }
+
+function cleanAcademicLessonTitle(title) {
+  if (!title) return '';
+  let t = title.trim();
+
+  let cleaned = t
+    .replace(/^\d+\.\s*/, "")
+    .replace(/^Ders\s*\d+\s*:\s*/i, "")
+    .trim();
+
+  const lessonMap = {
+    'Zaman Bükücüler': 'Geçmiş ve Gelecek Zaman Çekimleri',
+    'Edilgenlik Matrisi': 'Edilgen Yapı Çekimleri',
+    'Zaman Kayması Matrisi': 'Zaman Kayması ve Perfect Modallar',
+    'Mega Zincirler': 'Karma Eylem Zincirleri',
+    'Varsayımsal Geçmiş Zaman Zincirleri': 'Varsayımsal Geçmiş Zaman Yapıları',
+    'Geçmiş Zaman Edilgen Bükümleri': 'Geçmiş Zaman Edilgen Yapıları',
+    'Kesinlik Bildiren Geçmiş Zaman Zincirleri': 'Kesinlik Bildiren Geçmiş Zaman Yapıları',
+    'Şimdiki Zaman Söylentili Edilgen Süreç Zincirleri': 'Şimdiki Zaman Edilgen Süreçler',
+    'Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri': 'Geçmiş Zaman Edilgen Süreçler',
+    'Çift Geçmiş Zaman Bükümlü Modal Matrisi': 'Çift Geçmiş Zaman ve Modallar',
+    'Vagon Kırılımları ve Anlamsal Diferansiyel': 'Söz Dizimi ve Anlamsal Analiz',
+    'Zaman Uyumu & Kronolojik Öncelik Matrisi': 'Zaman Uyumu ve Öncelik-Sonralık İlişkileri',
+    'Dilek, Varsayım & Şart Geometrisi': 'Dilek, Varsayım ve Şart Cümleleri',
+    'Subjunctive Aciliyet Kilitleri & Gramer Emirleri': 'Subjunctive ve İstek/Gereklilik Bildiren Fiiller',
+    'Sınav Çeldirici & Hata Avcısı Zirvesi': 'Sınav Çeldiricileri ve Sık Yapılan Hatalar',
+    'Devrik Cümle Mimarisi & Zaman Kilitleri': 'Devrik Cümle Yapısı ve Zaman Uyumları',
+    'Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi': 'Zıtlık ve Neden-Sonuç Bağlaçlarının Analizi',
+    'Geçmişe Yönelik Çıkarım & Pişmanlık Modalları': 'Geçmiş Zaman Modalları (Pişmanlık ve Çıkarım)',
+    'Zaman Bağlaçları & Tense Uyum Kilitleri': 'Zaman Bağlaçları ve Zaman Uyumu',
+    'Esnek Zaman Alanları: Zıtlık Bağlaçları & Relative Clauses': 'Zıtlık Bağlaçları ve Sıfat Cümleciklerinde Zaman Uyumu',
+    'Tarih Belirteçleri vs. Genel Betimleme Tuzağı': 'Tarih Belirteçleri ve Genel Zaman Çekimleri',
+    'Sınır Çizgisi "BY" & Çift Yönlü Perfect Matrisi': '"By" Edatı ve Perfect Tense Çekimleri',
+    'Çapa ve Süreç İkilisi: SINCE & FOR Dünyası': '"Since" ve "For" Edatlarının Kullanımı',
+    'Farkındalık Fiilleri & Zaman Kayması': 'Farkındalık Bildiren Fiiller ve Zaman Kayması',
+    'Sıralama Sıfatları & Infinitive Kısaltmaları': 'Sıralama Sıfatları ve Mastar (Infinitive) Kısaltmaları',
+    'Zaman İşaretçileri: Recently & Lately Refleksleri': '"Recently" ve "Lately" Zaman Zarfları',
+    'Tüm Kuralların Sınav Simülasyonu & Karma Refleks Zirvesi': 'Gramer Uyum Kuralları Sınav Simülasyonu',
+    'Sentaktik Labirent: İleri Düzey \'-ing\' Analiz Testi': 'İleri Düzey \'-ing\' (Fiilimsi) Analiz Testi',
+    'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'İleri Düzey Kısaltma ve Edilgen Cümle Testi'
+  };
+
+  const prefixMatch = t.match(/^(\d+\.\s*|Ders\s*\d+\s*:\s*)/i);
+  const prefix = prefixMatch ? prefixMatch[0] : "";
+
+  if (lessonMap[cleaned]) {
+    return prefix + lessonMap[cleaned];
+  }
+  return t;
+}
+
 if (typeof window !== 'undefined') {
   window.cleanAcademicUnitTitle = cleanAcademicUnitTitle;
+  window.cleanAcademicLessonTitle = cleanAcademicLessonTitle;
 }
 
 (function() {
@@ -152,6 +205,15 @@ if (typeof window !== 'undefined') {
     lessons.forEach(l => {
       if (l.unitId && oldToNewUnits[l.unitId]) {
         l.unitId = oldToNewUnits[l.unitId];
+      }
+      if (l.title) {
+        l.title = cleanAcademicLessonTitle(l.title);
+      }
+      if (l.konuAnlatimi && l.konuAnlatimi.baslik) {
+        l.konuAnlatimi.baslik = l.konuAnlatimi.baslik.split(':').map((part, index) => {
+          if (index === 0) return part;
+          return cleanAcademicLessonTitle(part);
+        }).join(':');
       }
     });
   }

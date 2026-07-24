@@ -1,4 +1,15 @@
 const wordDictionary = {
+  "needn't": "gerek yok",
+  "discharged": "taburcu edilmiş / terhis edilmiş",
+  "configure": "yapılandırmak",
+  "revoked": "iptal edilmiş / feshedilmiş",
+  "valves": "valfler / vanalar",
+  "manuscripts": "el yazmaları",
+  "simultaneously": "eşzamanlı olarak / aynı anda",
+  "recruits": "yeni üyeler / yeni katılanlar",
+  "chassis": "şasi / gövde",
+  "microscope": "mikroskop",
+  "relocate": "taşınmak / yerini değiştirmek",
   // Chapter 44 vocabulary updates
   "fiat": "itibari (para)",
   "macroeconomics": "makroekonomi",
@@ -19406,6 +19417,57 @@ const rawTopics = [
     "originalNumLessons": 3
   },
   {
+    "id": 103,
+    "startLessonId": 107,
+    "originalIndex": 33,
+    "title": "Öbeksel Kipler",
+    "desc": "Bölüm Yeniden Tasarımı: Öbeksel Kipler ünitesi, her derste 15 sorudan oluşan 1 alıştırmaya (ders başına 15 soru, toplamda 240 soru) sahip olacak şekilde yeniden tasarlandı. Kelime eşleştirmeler kaldırılarak ifade düzeyinde eşleştirmeler korundu, aşamalı pedagoji ve entegre dilbilgisi tekrarları eklendi.",
+    "icon": "🎯",
+    "numLessons": 5,
+    "edits": [
+      {
+        "date": "2026-07-21T01:52:00+03:00",
+        "desc": "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, 'İfadeleri Türkçe karşılıklarıyla eşleştirin' (öbek eşleştirme) soruları muhafaza edildi. Her derste alıştırma sayısı 1'e, soru sayısı 15'e düşürüldü. Farklı soru tipleriyle basitten zora pedagojik ilerleme kurgulandı. Önceki konulardan (Since, By the time, Would rather, Edilgen Çatı vb.) entegre tekrarlar eklendi.",
+        "type": "custom"
+      },
+      {
+        "date": "2026-07-21T01:27:00+03:00",
+        "desc": "Bölüm Yeniden Tasarımı: Öbeksel Kipler ünitesi, her derste 12 şer sorudan oluşan 3 alıştırmaya (ders başına 36 soru, toplamda 576 soru) sahip olacak şekilde yeniden tasarlandı. Kelime eşleştirmeler kaldırılarak ifade düzeyinde eşleştirmeler korundu, aşamalı pedagoji ve entegre dilbilgisi tekrarları eklendi.",
+        "type": "custom"
+      }
+    ],
+    "formulas": [
+      {
+        "formula": "Subject + (be used to / be accustomed to / get used to) + Verb-ing / Noun",
+        "example": "The system administrator <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> monitoring real-time network traffic: Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.",
+        "description": "1. Alışkanlık & Uyum Yapıları: <strong>be used to</strong>, <strong>be accustomed to</strong> ve <strong>get used to</strong> yapılarından sonra gelen fiil daima <strong>-ing</strong> takısı (Gerund) veya bir isim alır."
+      },
+      {
+        "formula": "Subject + (be willing to / be unwilling to / be reluctant to) + V1",
+        "example": "The developers <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> update the code to resolve errors: Geliştiriciler hataları çözmek için kodu güncellemeye isteklidirler.",
+        "description": "2. İsteklilik & Eğilim Yapıları: Niyet, gönüllülük veya tereddüt bildiren <strong>be willing to</strong>, <strong>be unwilling to</strong> ve <strong>be reluctant to</strong> kalıpları arkalarından fiilin yalın halini (V1) alırlar."
+      },
+      {
+        "formula": "Subject + (be likely to / be unlikely to / be bound to / be certain to) + V1",
+        "example": "System latency <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> increase during peak hours: Yoğun saatlerde sistem gecikmesinin artması muhtemeldir.",
+        "description": "3. İhtimal, Kaçınılmazlık & Kesinlik Yapıları: Olasılık, kesinlik veya kaçınılmaz sonuç bildiren <strong>be likely to</strong>, <strong>be unlikely to</strong>, <strong>be bound to</strong> ve <strong>be certain to</strong> öbekleri yalın fiille (V1) kullanılır."
+      },
+      {
+        "formula": "Subject + (be supposed to / be doomed to / be to / be unable to / be about to) + V1",
+        "example": "We <span style=\"color: #ff6b6b; font-weight: bold;\">are supposed to</span> upgrade the architecture before the next cycle starts: Bir sonraki döngü başlamadan önce mimariyi yükseltmemiz gerekir.",
+        "description": "4. Zorunluluk, Beklenti, Yetersizlik & Kader Yapıları: Gereklilik, kaçınılmaz kader, emredilen eylem veya eylemin gerçekleşmek üzere olması durumlarını bildiren <strong>be supposed to</strong>, <strong>be doomed to</strong>, <strong>be to</strong>, <strong>be unable to</strong> ve <strong>be about to</strong> yapıları yalın fiil (V1) alır."
+      }
+    ],
+    "subtitles": [
+      "1. Alışkanlık & Uyum Yapıları (be used to, be accustomed to, get used to)",
+      "2. İsteklilik & Eğilim Yapıları (be willing to, be unwilling to, be reluctant to)",
+      "3. İhtimal, Kaçınılmazlık & Kesinlik (be likely to, be unlikely to, be bound to, be certain to)",
+      "4. Zorunluluk, Beklenti & Kader Yapıları (be supposed to, be doomed to, be to, be unable to, be about to)",
+      "5. Karma Akademik Öbeksel Kipler Testi ve Metin Analizi"
+    ],
+    "originalNumLessons": 5
+  },
+  {
     "id": 3,
     "startLessonId": 10,
     "originalIndex": 3,
@@ -19592,9 +19654,6 @@ const rawTopics = [
   ],
   "originalNumLessons": 5
 },
-  
-  
-  
   {
     "id": 62,
     "startLessonId": 370,
@@ -19967,7 +20026,6 @@ const rawTopics = [
     ],
     "originalNumLessons": 2
   },
-  
   {
     "id": 102,
     "startLessonId": 100,
@@ -20039,57 +20097,6 @@ const rawTopics = [
     "originalNumLessons": 4
   },
   {
-    "id": 103,
-    "startLessonId": 107,
-    "originalIndex": 33,
-    "title": "Öbeksel Kipler",
-    "desc": "Bölüm Yeniden Tasarımı: Öbeksel Kipler ünitesi, her derste 15 sorudan oluşan 1 alıştırmaya (ders başına 15 soru, toplamda 240 soru) sahip olacak şekilde yeniden tasarlandı. Kelime eşleştirmeler kaldırılarak ifade düzeyinde eşleştirmeler korundu, aşamalı pedagoji ve entegre dilbilgisi tekrarları eklendi.",
-    "icon": "🎯",
-    "numLessons": 5,
-    "edits": [
-      {
-        "date": "2026-07-21T01:52:00+03:00",
-        "desc": "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, 'İfadeleri Türkçe karşılıklarıyla eşleştirin' (öbek eşleştirme) soruları muhafaza edildi. Her derste alıştırma sayısı 1'e, soru sayısı 15'e düşürüldü. Farklı soru tipleriyle basitten zora pedagojik ilerleme kurgulandı. Önceki konulardan (Since, By the time, Would rather, Edilgen Çatı vb.) entegre tekrarlar eklendi.",
-        "type": "custom"
-      },
-      {
-        "date": "2026-07-21T01:27:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı: Öbeksel Kipler ünitesi, her derste 12 şer sorudan oluşan 3 alıştırmaya (ders başına 36 soru, toplamda 576 soru) sahip olacak şekilde yeniden tasarlandı. Kelime eşleştirmeler kaldırılarak ifade düzeyinde eşleştirmeler korundu, aşamalı pedagoji ve entegre dilbilgisi tekrarları eklendi.",
-        "type": "custom"
-      }
-    ],
-    "formulas": [
-      {
-        "formula": "Subject + (be used to / be accustomed to / get used to) + Verb-ing / Noun",
-        "example": "The system administrator <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> monitoring real-time network traffic: Sistem yöneticisi gerçek zamanlı ağ trafiğini izlemeye alışıktır.",
-        "description": "1. Alışkanlık & Uyum Yapıları: <strong>be used to</strong>, <strong>be accustomed to</strong> ve <strong>get used to</strong> yapılarından sonra gelen fiil daima <strong>-ing</strong> takısı (Gerund) veya bir isim alır."
-      },
-      {
-        "formula": "Subject + (be willing to / be unwilling to / be reluctant to) + V1",
-        "example": "The developers <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> update the code to resolve errors: Geliştiriciler hataları çözmek için kodu güncellemeye isteklidirler.",
-        "description": "2. İsteklilik & Eğilim Yapıları: Niyet, gönüllülük veya tereddüt bildiren <strong>be willing to</strong>, <strong>be unwilling to</strong> ve <strong>be reluctant to</strong> kalıpları arkalarından fiilin yalın halini (V1) alırlar."
-      },
-      {
-        "formula": "Subject + (be likely to / be unlikely to / be bound to / be certain to) + V1",
-        "example": "System latency <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> increase during peak hours: Yoğun saatlerde sistem gecikmesinin artması muhtemeldir.",
-        "description": "3. İhtimal, Kaçınılmazlık & Kesinlik Yapıları: Olasılık, kesinlik veya kaçınılmaz sonuç bildiren <strong>be likely to</strong>, <strong>be unlikely to</strong>, <strong>be bound to</strong> ve <strong>be certain to</strong> öbekleri yalın fiille (V1) kullanılır."
-      },
-      {
-        "formula": "Subject + (be supposed to / be doomed to / be to / be unable to / be about to) + V1",
-        "example": "We <span style=\"color: #ff6b6b; font-weight: bold;\">are supposed to</span> upgrade the architecture before the next cycle starts: Bir sonraki döngü başlamadan önce mimariyi yükseltmemiz gerekir.",
-        "description": "4. Zorunluluk, Beklenti, Yetersizlik & Kader Yapıları: Gereklilik, kaçınılmaz kader, emredilen eylem veya eylemin gerçekleşmek üzere olması durumlarını bildiren <strong>be supposed to</strong>, <strong>be doomed to</strong>, <strong>be to</strong>, <strong>be unable to</strong> ve <strong>be about to</strong> yapıları yalın fiil (V1) alır."
-      }
-    ],
-    "subtitles": [
-      "1. Alışkanlık & Uyum Yapıları (be used to, be accustomed to, get used to)",
-      "2. İsteklilik & Eğilim Yapıları (be willing to, be unwilling to, be reluctant to)",
-      "3. İhtimal, Kaçınılmazlık & Kesinlik (be likely to, be unlikely to, be bound to, be certain to)",
-      "4. Zorunluluk, Beklenti & Kader Yapıları (be supposed to, be doomed to, be to, be unable to, be about to)",
-      "5. Karma Akademik Öbeksel Kipler Testi ve Metin Analizi"
-    ],
-    "originalNumLessons": 5
-  },
-  {
     "id": 40,
     "edits": [
       {
@@ -20133,38 +20140,6 @@ const rawTopics = [
       "4: İkili, Amaç-Sonuç, Hariç Tutma ve İleri Düzey Edatlı Bağlaç Kombinasyonları"
     ],
     "originalNumLessons": 4
-  },
-  {
-    "id": 41,
-    "startLessonId": 410,
-    "originalIndex": 40,
-    "title": "Akademik Sınav Kısayolları",
-    "desc": "Gerund, Infinitive, zaman uyumu ve diyalog yapıları için pratik sınav stratejileri",
-    "icon": "⚡",
-    "numLessons": 3,
-    "formulas": [
-      {
-        "formula": "Suggest / Insist on / It is no use / There is no point in / Have difficulty -> + V-ing Çekimi",
-        "example": "suggest analyzing / insist on validating",
-        "description": "Gerund ve Infinitive yapıları için hızlı refleks ve sınav taktikleri meydan okuması."
-      },
-      {
-        "formula": "Time Clause + Present Simple -> Main Clause + Future / By the time + V2 -> Had V3",
-        "example": "before they analyse / by the time we arrived",
-        "description": "Zaman ve kronoloji refleks testi"
-      },
-      {
-        "formula": "What-Question -> Well... + Explanation / Negative Statement -> Neither + Auxiliary + Subject",
-        "example": "Well, we must analyze / Neither did the principal researcher",
-        "description": "Akademik mülakat ve diyalog refleksleri"
-      }
-    ],
-    "subtitles": [
-      "A. Sınav Kısayolları ve Yapı Refleksleri",
-      "B. Kronolojik Zaman Uyumu",
-      "C. Akademik Diyalog ve Mülakat Matrisi"
-    ],
-    "originalNumLessons": 3
   }
 ];
 
@@ -98881,15 +98856,15 @@ const unitSentencesMap = {
                 "right": "geçmiş hataları tekrarlamaya mahkûmdur"
               },
               {
-                "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is to</span> govern the imperial provinces",
-                "right": "imparatorluk eyaletlerini yönetmekle görevlidir"
+                "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is obliged to</span> submit validation reports",
+                "right": "doğrulama raporlarını sunmakla yükümlüdür"
               },
               {
                 "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is unable to</span> decipher damaged inscriptions",
                 "right": "hasarlı yazıtları çözmeye muktedir değildir"
               }
             ],
-            "explanation": "<b>Görev & Kader Yapıları:</b><br/>• <i>is supposed to</i>: beklenmektedir.<br/>• <i>is doomed to</i>: mahkûmdur.<br/>• <i>is to</i>: görevlidir / yapacaktır.<br/>• <i>is unable to</i>: muktedir değildir."
+            "explanation": "<b>Görev, Zorunluluk & Kader Yapıları:</b><br/>• <i>is supposed to</i>: beklenmektedir.<br/>• <i>is doomed to</i>: mahkûmdur.<br/>• <i>is obliged to</i>: yükümlüdür.<br/>• <i>is unable to</i>: muktedir değildir."
           },
           {
             "id": "u103l110_ex1_q2",
@@ -99088,16 +99063,16 @@ const unitSentencesMap = {
             "id": "u103l110_ex1_q13",
             "type": "fill-blank-dropdown",
             "prompt": "[Akademik Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Blind to historical precedents, states that ignore structural socio-economic inequality ___ experience recurring political crises.",
+            "sentence": "Under the terms of the treaty, the neutral territories ___ accept the presence of the boundary inspectors.",
             "options": [
-              "are doomed to",
+              "are obliged to",
               "are willing to",
               "are accustomed to",
-              "are about to"
+              "are unable to"
             ],
             "correctIndex": 0,
-            "translation": "Tarihi emsallere gözlerini kapatan ve yapısal sosyo-ekonomik eşitsizliği görmezden gelen devletler, tekrarlayan siyasi krizler yaşamaya mahkûmdur.",
-            "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are doomed to (Doğru):</b> \"Kötü bir sonuca mahkûm olmak\" anlamına gelir ve kaçınılmaz olumsuz durumları ifade eder.<br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>• <b>are about to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>"
+            "translation": "Antlaşma şartları uyarınca, tarafsız bölgeler sınır müfettişlerinin varlığını kabul etmekle yükümlüdür.",
+            "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are obliged to (Doğru):</b> Yasal veya ahlaki yükümlülük gereği \"yapmakla yükümlü olmak / zorunda olmak\" anlamına gelir.<br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>• <b>are unable to:</b> Cümlenin yasal yükümlülük bağlamına uymaz.<br/>"
           },
           {
             "id": "u103l110_ex1_q14",
@@ -99141,11 +99116,11 @@ const unitSentencesMap = {
           {
             "id": "u103l110_ex1_q15",
             "type": "translation-text",
-            "prompt": "[Gerekçe Yan Cümlesi] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Because the papyrus fragments were carbonized in the volcanic eruption, epigraphers were unable to read the final lines.</span>\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Papirüs parçaları volkanik patlamada kömürleştiği için, epigrafçılar son satırları okumaya muktedir olamadılar.",
-            "enSentence": "Because the papyrus fragments were carbonized in the volcanic eruption, epigraphers <span style=\"color: #ff6b6b; font-weight: bold;\">were unable to</span> read the final lines.",
+            "prompt": "[Gerekçe Yan Cümlesi] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Because the library received municipal funding, the research unit was obliged to publish its findings for public access.</span>\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Kütüphane belediye fonu aldığı için, araştırma birimi bulgularını kamuya açık bir şekilde yayımlamakla yükümlüydü.",
+            "enSentence": "Because the library received municipal funding, the research unit <span style=\"color: #ff6b6b; font-weight: bold;\">was obliged to</span> publish its findings for public access.",
             "isEngToTr": true,
-            "explanation": "<b>Çeviri Notu:</b> <i>were unable to read</i> = okumaya muktedir olamadılar."
+            "explanation": "<b>Çeviri Notu:</b> <i>was obliged to publish</i> = yayımlamakla yükümlüydü / yayımlamak zorundaydı."
           }
         ]
       }
@@ -119220,287 +119195,325 @@ const chapter40Data = {
       {
         "id": "c40_l10_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "1-2: Çoktan Seçmeli Çeviri | 3-14: Yapısal Analiz ve Boşluk Doldurma | 15: Yazılı Çeviri Geçidi",
         "questions": [
           {
             "id": "c40_l10_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "[Psikoloji / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Psikoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+            "enSentence": "The virologist must have isolated the rare mutation variant last week, because the medical board immediately prepared the quarantine report.",
+            "isEngToTr": true,
             "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
+              "Virolog geçen hafta nadir mutasyon varyantını izole etmiş olmalı, çünkü tıp kurulu derhal karantina raporunu hazırladı.",
+              "Virolog geçen hafta nadir mutasyon varyantını izole etmeliydi, çünkü tıp kurulu karantina raporunu hazırlamıştı.",
+              "Virolog geçen hafta nadir mutasyon varyantını izole etmiş olamaz, bu yüzden tıp kurulu derhal karantina raporunu hazırladı.",
+              "Virolog tıp kurulunun karantina raporunu hazırlaması için geçen hafta nadir mutasyon varyantını izole etmek zorunda kaldı."
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Virolog geçen hafta nadir mutasyon varyantını izole etmiş olmalı, çünkü tıp kurulu derhal karantina raporunu hazırladı.",
+            "explanation": "Geçmişteki güçlü bir kanıta dayanarak yapılan çıkarım 'must have V3' (must have isolated) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Psikoloji dersi temel yapısı."
+              "formula": "Subject + [must have + V3] (Strong Past Deduction)",
+              "mirror": "Karantina raporunun hemen hazırlanmış olması (prepared) güçlü bir kanıttır.",
+              "academicNote": "Must have V3 geçmişe dönük yüksek olasılıkta çıkarım kurmak için tek yoldur."
             }
           },
           {
             "id": "c40_l10_q2",
-            "type": "true-false",
-            "prompt": "[Siyaset / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In siyaset studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In siyaset studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Siyaset çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+            "enSentence": "The curators needn't have printed the colored exhibition guides, as the museum administration had already distributed a digital PDF version to all attendees.",
+            "isEngToTr": true,
+            "options": [
+              "Müze yönetimi tüm katılımcılara dijital PDF versiyonunu zaten dağıttığı için, küratörlerin renkli sergi rehberlerini basmasına gerek yoktu.",
+              "Müze yönetimi tüm katılımcılara dijital PDF versiyonunu dağıtmış olmalıydı, çünkü küratörler renkli sergi rehberlerini bastı.",
+              "Küratörlerin renkli sergi rehberlerini basması gerekirdi, çünkü müze yönetimi tüm katılımcılara dijital PDF versiyonunu dağıtmadı.",
+              "Küratörler renkli sergi rehberlerini basmış olamaz, çünkü müze yönetimi dijital PDF versiyonunu katılımcılara çoktan dağıtmıştı."
+            ],
+            "correctIndex": 0,
+            "translation": "Müze yönetimi tüm katılımcılara dijital PDF versiyonunu zaten dağıttığı için, küratörlerin renkli sergi rehberlerini basmasına gerek yoktu.",
+            "explanation": "Geçmişte eylemin gereksiz yere yapıldığını belirten yapı 'needn't have + V3' (needn't have printed) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Siyaset alanı akademik kuralı."
+              "formula": "Subject + [needn't have + V3] (Action done but unnecessary)",
+              "mirror": "Dijital PDF versiyonunun zaten dağıtılmış olması (already distributed) rehber basımını gereksiz kılmıştır.",
+              "academicNote": "Needn't have V3 yapısında eylemin gerçekte yapıldığı fakat gereksiz olduğu vurgulanır."
             }
           },
           {
             "id": "c40_l10_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "[Antropoloji / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Antropoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "type": "inversion-transformer",
+            "prompt": "Verilen kesinlik bildiren cümleyi 'couldn't have' (geçmiş imkansız çıkarım) kullanarak dönüştürün:",
+            "mainSentence": "I am almost certain that Toprak did not ignore the telemetric tyre data during the test session.",
             "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
+              "Toprak couldn't have ignored the telemetric tyre data during the test session.",
+              "Toprak mustn't have ignored the telemetric tyre data during the test session.",
+              "Toprak shouldn't have ignored the telemetric tyre data during the test session."
             ],
             "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Toprak test seansı sırasında telemetrik lastik verilerini görmezden gelmiş olamaz.",
+            "explanation": "Geçmişteki güçlü olumsuz çıkarım (did not ignore - neredeyse kesinlikle) 'couldn't have + V3' (couldn't have ignored) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Antropoloji dersi temel yapısı."
+              "formula": "almost certain did not -> Subject + [couldn't have + V3]",
+              "mirror": "Verileri görmezden gelmiş olmasının (ignored) imkansızlığı.",
+              "academicNote": "Did not eylemine yönelik geçmiş çıkarım can't veya couldn't have ile kurulur."
             }
           },
           {
             "id": "c40_l10_q4",
             "type": "true-false",
-            "prompt": "[Kültür / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In kültür studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In kültür studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Kültür çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
+            "prompt": "Geçmiş modal çekiminin doğruluğunu hızlıca kontrol edin (DOĞRU / YANLIŞ):",
+            "sentence": "The flight control system must has encountered a secondary radar loop failure prior to the crash.",
+            "englishPhrase": "The flight control system must has encountered a secondary radar loop failure prior to the crash.",
+            "isTrue": false,
+            "correctAnswer": "false",
+            "translation": "Uçuş kontrol sistemi kazadan önce ikincil bir radar döngüsü arızasıyla karşılaşmış olmalı.",
+            "explanation": "Modal fiillerden (must) sonra 'has' kullanımı kesinlikle yanlıştır, her zaman yalın 'have' (must have encountered) gelmelidir. Cümle yanlıştır.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Kültür alanı akademik kuralı."
+              "formula": "must + [have] (Correct) / must + [has] (Incorrect)",
+              "mirror": "Hata: must has encountered. Yardımcı fiil yalın kalmamıştır.",
+              "academicNote": "Tüm modallardan sonra have V3 kalıbında have kelimesi has olarak çekimlenemez."
             }
           },
           {
             "id": "c40_l10_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "[Sinema / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Sinema scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
+            "type": "word-bank",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "sentence": "The broker couldn't have stabilized the market liquidity pools without the emergency fiscal subsidy.",
+            "words": [
+              "The",
+              "broker",
+              "couldn't",
+              "have",
+              "stabilized",
+              "the",
+              "market",
+              "liquidity",
+              "pools",
+              "without",
+              "the",
+              "emergency",
+              "fiscal",
+              "subsidy."
             ],
-            "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "correctOrder": [
+              "The",
+              "broker",
+              "couldn't",
+              "have",
+              "stabilized",
+              "the",
+              "market",
+              "liquidity",
+              "pools",
+              "without",
+              "the",
+              "emergency",
+              "fiscal",
+              "subsidy."
+            ],
+            "enSentence": "The broker couldn't have stabilized the market liquidity pools without the emergency fiscal subsidy.",
+            "isEngToTr": true,
+            "explanation": "Geçmişe yönelik kesin imkansızlık/olumsuz çıkarım 'couldn't have + V3' (couldn't have stabilized) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sinema dersi temel yapısı."
+              "formula": "Subject + [couldn't have + V3] (Past Impossibility)",
+              "mirror": "Acil mali destek (subsidy) olmadan bunun yapılması imkansızdı.",
+              "academicNote": "Geçmişteki güçlü olumsuz çıkarımda 'mustn't have V3' kullanımı kesinlikle yasaktır, yerine couldn't/can't have kullanılır."
             }
           },
           {
             "id": "c40_l10_q6",
-            "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
+            "type": "fill-blank-text",
+            "prompt": "Should ile kurulan geçmiş zaman pişmanlık yapısındaki eksik yardımcı fiili elle yazın:",
+            "sentence": "The multinational enterprise should ___ updated its financial risk analysis before the stock exchange market collapsed.",
+            "correctAnswer": "have",
+            "translation": "Çok uluslu şirket borsa çökmeden önce finansal risk analizini güncellemiş olmalıydı.",
+            "explanation": "Should have V3 pişmanlık/tavsiye kalıbı gereği boşluğa 'have' yazılmalıdır.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
+              "formula": "should + [______] + updated (V3)",
+              "mirror": "Borsanın çökmesi (collapsed) öncesindeki kaçırılmış risk güncellemesi.",
+              "academicNote": "Güncellememiş olmanın yarattığı kayıp should have ile eleştirilir."
             }
           },
           {
             "id": "c40_l10_q7",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "Boşluğa gelecek en uygun geçmiş zaman ihtimal modalını seçin:",
+            "sentence": "Toprak Razgatlıoğlu ___ the track lap record yesterday if his engineers had adjusted the rear suspension parameters earlier.",
             "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
+              "might have broken",
+              "must break",
+              "should break",
+              "mustn't have broken"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
+            "translation": "Mühendisleri arka süspansiyon parametrelerini daha önce ayarlasaydı, Toprak Razgatlıoğlu dün pist tur rekorunu kırabilirdi.",
+            "explanation": "Geçmişteki zayıf olasılık/gerçekleşmeyen durum Conditional Type 3 içinde 'might have V3' (might have broken) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)", "Koşul Cümlecikleri (If Clauses)"],
             "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "formula": "if engineers had adjusted (Type 3) -> Subject + [might have + V3] (Past possibility)",
+              "mirror": "Dünkü (yesterday) yarışta kırılabilmiş olması muhtemel olan rekor.",
+              "academicNote": "Koşullu unreal durumlarda geçmiş olasılık might/could have V3 ile verilir."
             }
           },
           {
             "id": "c40_l10_q8",
-            "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun şimdiki zaman/süreç modalını seçin:",
+            "sentence": "The research assistants ___ compiling the qualitative survey responses right now, but they are still drinking coffee in the lounge.",
             "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
+              "should be",
+              "must have been",
+              "would have",
+              "can't be"
             ],
             "correctIndex": 0,
-            "translation": "Tarih alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
+            "translation": "Araştırma görevlilerinin şu anda nitel anket yanıtlarını derliyor olması gerekirdi ama hala salonda kahve içiyorlar.",
+            "explanation": "Şu an devam etmesi gereken ancak edilmeyen eylemleri bildirmek için 'should be + V-ing' yapısı kullanılır.",
+            "grammarTags": ["Modallar (Modals)"],
             "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Tarih metin analizi."
+              "formula": "Subject + [should be + V-ing] (Present expectation/unrealized duty)",
+              "mirror": "Şu anda (right now) yapılması gereken derleme görevi ile kahve içme eylemi arasındaki tutarsızlığı bulun.",
+              "academicNote": "Eylem şu an gerçekleşiyor olmalıydı beklentisi 'should be compilation' olarak da yansır."
             }
           },
           {
             "id": "c40_l10_q9",
-            "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçmiş zaman sürekli sitem modalını seçin:",
+            "sentence": "The medical translation team ___ revising the clinical trials report all morning, as the regulatory agency demanded the final draft by noon.",
             "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
+              "ought to have been",
+              "must be",
+              "can have",
+              "will be able to"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
+            "translation": "Denetleyici kurum nihai taslağı öğlene kadar talep ettiği için, tıbbi çeviri ekibinin bütün sabah klinik araştırma raporunu gözden geçiriyor olması gerekirdi.",
+            "explanation": "Geçmişte belirli bir süreç boyunca yapılması gerekip de yapılmayan eylemler (süreç sitemi) 'ought to have been + V-ing' ile ifade edilir.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
             "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "formula": "Subject + [ought to have been + V-ing] (Past continuous regret/criticism)",
+              "mirror": "Bütün sabah (all morning) sürmesi gereken revizyon eyleminin sitemi.",
+              "academicNote": "Ought to have been doing, should have been doing ile tamamen eş anlamlıdır."
             }
           },
           {
             "id": "c40_l10_q10",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "Boşluğa gelecek en uygun yetenek/ihtimal modalını seçin:",
+            "sentence": "By the time the new telescope is calibrated next week, the astrophysics department ___ to analyze the light curves of the distant supernova.",
             "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
+              "will have been able",
+              "must have been",
+              "would have",
+              "can't have"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
+            "translation": "Gelecek hafta yeni teleskop kalibre edilene kadar, astrofizik bölümü uzak süpernovanın ışık eğrilerini analiz edebilecek duruma gelmiş olacaktır.",
+            "explanation": "Gelecekte belirli bir noktada tamamlanmış olacak yetenek/yeterlilik 'will have been able to' ile ifade edilir.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)", "Zaman Uyumu"],
             "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Siyaset metin analizi."
+              "formula": "By the time + Present Simple ➔ Subject + [will have been able + to V1]",
+              "mirror": "Gelecek haftaki (next week) kalibrasyon miladıyla birlikte kazanılacak yetenek.",
+              "academicNote": "Gelecekte bir eylemin tamamlanma sınırını belirten by the time ile future perfect veya future perfect ability kullanılır."
             }
           },
           {
             "id": "c40_l10_q11",
-            "type": "matching",
-            "prompt": "[Tarih / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
-              {
-                "left": "Although tarih theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
-              },
-              {
-                "left": "Provided that funding is secured for psikoloji,",
-                "right": "the research council will publish the annual report."
-              },
-              {
-                "left": "Unless policy makers consult siyaset experts,",
-                "right": "social reforms will encounter structural resistance."
-              }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
+            "type": "true-false",
+            "prompt": "Verilen cümlenin anlamı ve yapısı Kural 24'e göre doğru mu?",
+            "sentence": "The chief archivist should have been preserving the fragile papyrus manuscripts last night instead of leaving the humidity controls unchecked.",
+            "englishPhrase": "The chief archivist should have been preserving the fragile papyrus manuscripts last night instead of leaving the humidity controls unchecked.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Baş arşivcinin dün gece nem kontrollerini kontrolsüz bırakmak yerine kırılgan papirüs el yazmalarını koruyor olması gerekirdi.",
+            "explanation": "Geçmişte süreç bildiren kaçırılmış görevler ve sitemler 'should have been + V-ing' (should have been preserving) ile doğru şekilde kurulmuştur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
+            "hint": {
+              "formula": "Subject + [should have been + V-ing] + last night (Past process regret)",
+              "mirror": "Dün geceki (last night) ihmal ve yapılması gereken koruma süreci.",
+              "academicNote": "Instead of yapısı geçmişte tercih edilmeyen eylemi gösterir."
+            }
           },
           {
             "id": "c40_l10_q12",
-            "type": "matching",
-            "prompt": "[Antropoloji / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the antropoloji manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in kültür paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze sinema trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçmiş zaman koşul modalını seçin:",
+            "sentence": "The lead archaeologist ___ excavated the burial chamber last month, but the local government withheld the excavation permits due to safety concerns.",
+            "options": [
+              "would have",
+              "must",
+              "can't have",
+              "should be"
             ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
+            "correctIndex": 0,
+            "translation": "Baş arkeolog geçen ay mezar odasını kazacaktı/kazmış olurdu, ancak yerel hükümet güvenlik endişeleri nedeniyle kazı izinlerini askıya aldı.",
+            "explanation": "Geçmişte gerçekleşmesi planlanan ancak dış bir engelden ötürü gerçekleşmeyen varsayımsal durumlar 'would have + V3' (would have excavated) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
+            "hint": {
+              "formula": "Subject + [would have + V3] + last month + but + Past Simple (withheld)",
+              "mirror": "Geçen ayki kazma niyeti ile iznin verilmemesi (withheld permits) engeli.",
+              "academicNote": "Gerçekleşmemiş geçmiş eylemleri but/otherwise gibi yapılarla bağlarken would have V3 sıklıkla tercih edilir."
+            }
           },
           {
             "id": "c40_l10_q13",
-            "type": "multiple-choice",
-            "prompt": "[YÖKDİL Edebiyat / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in edebiyat has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in edebiyat, what condition is necessary for historical conclusions to be definitive?",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçmiş zaman pişmanlık/eleştiri modalını seçin:",
+            "sentence": "The ground team ___ calibrated the secondary telemetry radar shields yesterday, as the drone encountered a major structural crash during the high-altitude sprint.",
             "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
+              "should have",
+              "must have",
+              "might have",
+              "couldn't have"
             ],
             "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
+            "translation": "Dron yüksek irtifa sürati sırasında büyük bir yapısal kaza geçirdiği için, yer ekibinin dün ikincil telemetri radar kalkanlarını kalibre etmiş olması gerekirdi.",
+            "explanation": "Geçmişte yapılması gerekip de yapılmayan eylemler (pişmanlık/eleştiri) 'should have + V3' (should have calibrated) ile kurulur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)", "Zaman Uyumu"],
+            "hint": {
+              "formula": "Subject + [should have + V3] (Regret/Criticism)",
+              "mirror": "Dünün kazasından (crash yesterday) yer ekibinin kalibrasyon sorumluluğunu değerlendirin.",
+              "academicNote": "Should have V3 yapısında eylemin gerçekte yapılmadığı anlamı gizlidir."
+            }
           },
           {
             "id": "c40_l10_q14",
-            "type": "multiple-choice",
-            "prompt": "[TOEFL Sosyoloji / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of sosyoloji, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
+            "type": "true-false",
+            "prompt": "Verilen cümlenin anlamı ve yapısı Kural 24'e göre doğru mu?",
+            "sentence": "The ancient philosopher must have been writing his seminal treatise when the Roman legions invaded the province, as his notes contain direct references to the siege.",
+            "englishPhrase": "The ancient philosopher must have been writing his seminal treatise when the Roman legions invaded the province, as his notes contain direct references to the siege.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Romalı lejyonlar eyaleti işgal ettiğinde antik filozof ufuk açıcı incelemesini yazıyor olmuş olmalı, çünkü notları kuşatmaya doğrudan atıflar içeriyor.",
+            "explanation": "Geçmişteki bir eylem anında devam eden sürece yönelik güçlü tahmin 'must have been + V-ing' (must have been writing) ile doğru şekilde kurulmuştur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
+            "hint": {
+              "formula": "Subject + [must have been + V-ing] + when + Past Simple (invaded)",
+              "mirror": "Kuşatmaya yapılan doğrudan atıflar (direct references to siege) yazma eyleminin o esnada sürdüğüne kanıttır.",
+              "academicNote": "Past continuous eylemine yönelik geçmiş çıkarım bu şekilde kurulur."
+            }
           },
           {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "[Tarih / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although tarih scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, tarih scholars managed to publish seminal treatises.",
-              "Because tarih scholars faced censorship, they could not publish treatises.",
-              "Unless tarih scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
+            "id": "c40_l10_q15",
+            "type": "translation-text",
+            "prompt": "Verilen İngilizce cümlenin Türkçe akademik çevirisini yazın:",
+            "sentence": "The regional factory must have reduced carbon emissions prior to the federal inspection.",
+            "correctAnswer": "Bölgesel fabrika federal denetimden önce karbon emisyonlarını azaltmış olmalı.",
+            "translation": "Bölgesel fabrika federal denetimden önce karbon emisyonlarını azaltmış olmalı.",
+            "explanation": "Must have reduced (must have + V3) ve prior to... (geçmiş zaman kilit noktası) kullanımıyla cümle kurulmuştur.",
+            "grammarTags": ["Geçmiş Zaman Modalları (Perfect Modals)"],
+            "hint": {
+              "formula": "Subject + must have + V3 + prior to (past indicators)",
+              "mirror": "Federal denetimden önceki karbon emisyonunun azaltılmış olma olasılığı.",
+              "academicNote": "Eylemin yapılmış olmasının yüksek ihtimalini ifade eder."
+            }
           }
         ]
       }
@@ -125174,6 +125187,22 @@ const chapter40Data = {
       }
     ];
 
+    function cloneAndRekeyQuestions(questionsArray, newPrefix) {
+      if (!questionsArray) return [];
+      return questionsArray.map((q, idx) => ({
+        ...q,
+        id: `${newPrefix}_q${idx + 1}`
+      }));
+    }
+
+    function cloneAndRekeyQuestions(questionsArray, newPrefix) {
+      if (!questionsArray) return [];
+      return questionsArray.map((q, idx) => ({
+        ...q,
+        id: `${newPrefix}_q${idx + 1}`
+      }));
+    }
+
     topics45to50.forEach(t => {
       rawTopics.push(t);
       
@@ -125196,6 +125225,38 @@ const chapter40Data = {
         const isC45L2 = (t.id === 45 && i === 2);
         const isC46L1 = (t.id === 46 && i === 1);
         const isC47L1 = (t.id === 47 && i === 1);
+        const isC48L1 = (t.id === 48 && i === 1);
+
+        let ex1Questions = [];
+        let ex2Questions = [];
+
+        if (isC45L1) {
+          ex1Questions = questions45_1_1;
+          ex2Questions = questions45_1_2;
+        } else if (isC45L2) {
+          ex1Questions = questions45_2_1;
+          ex2Questions = questions45_2_2;
+        } else if (isC46L1) {
+          ex1Questions = questions46_1_1;
+          ex2Questions = questions46_1_2;
+        } else if (isC47L1) {
+          ex1Questions = questions47_1_1;
+          ex2Questions = questions47_1_2;
+        } else if (isC48L1) {
+          ex1Questions = questions48_1_1;
+          ex2Questions = cloneAndRekeyQuestions(questions48_1_1, `c${t.id}_l${i}_ex2`);
+        } else if (t.id === 49) {
+          const source1 = (i === 1) ? questions45_1_1 : ((i === 2) ? questions45_2_1 : ((i === 3) ? questions46_1_1 : questions47_1_1));
+          const source2 = (i === 1) ? questions45_1_2 : ((i === 2) ? questions45_2_2 : ((i === 3) ? questions46_1_2 : questions47_1_2));
+          ex1Questions = cloneAndRekeyQuestions(source1, `c${t.id}_l${i}_ex1`);
+          ex2Questions = cloneAndRekeyQuestions(source2, `c${t.id}_l${i}_ex2`);
+        } else if (t.id === 50) {
+          const source1 = (i === 1) ? questions47_1_1 : ((i === 2) ? questions46_1_1 : ((i === 3) ? questions45_2_1 : questions45_1_1));
+          const source2 = (i === 1) ? questions47_1_2 : ((i === 2) ? questions46_1_2 : ((i === 3) ? questions45_2_2 : questions45_1_2));
+          ex1Questions = cloneAndRekeyQuestions(source1, `c${t.id}_l${i}_ex1`);
+          ex2Questions = cloneAndRekeyQuestions(source2, `c${t.id}_l${i}_ex2`);
+        }
+
         lessons.push({
           id: `c${t.id}_l${i}`,
           unitId: t.id,
@@ -125207,14 +125268,14 @@ const chapter40Data = {
               createdAt: "2026-07-06T20:30:00Z",
               title: "Alıştırma 1: Gör-Tanı / Giriş",
               description: `${t.title} morfolojik refleks testi.`,
-              questions: isC45L1 ? questions45_1_1 : (isC45L2 ? questions45_2_1 : (isC46L1 ? questions46_1_1 : (isC47L1 ? questions47_1_1 : [])))
+              questions: ex1Questions
             },
             {
               id: `c${t.id}_l${i}_ex2`,
               createdAt: "2026-07-06T20:30:00Z",
               title: "Alıştırma 2: İleri Analiz / Defans",
               description: "Zaman kaymaları ve büküm hatalarının tespiti.",
-              questions: isC45L1 ? questions45_1_2 : (isC45L2 ? questions45_2_2 : (isC46L1 ? questions46_1_2 : (isC47L1 ? questions47_1_2 : [])))
+              questions: ex2Questions
             }
           ],
           konuAnlatimi: {
@@ -125226,7 +125287,7 @@ const chapter40Data = {
         });
       }
     });
-  }
+}
 
   // ============================================================
   // BÖLÜM 51: AKADEMİK TIPS MASTER SERİSİ INJECTION (30 QUESTIONS)
