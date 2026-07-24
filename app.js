@@ -7,6 +7,70 @@ const XP_PER_CORRECT = 10;
 const MAX_HEARTS = 5;
 
 // ============================================================
+// DYNAMIC UNIT & LESSON RE-KEYING / DEDUPLICATION
+// ============================================================
+(function() {
+  const oldToNewUnits = {};
+  if (typeof units !== 'undefined') {
+    // Deduplicate units by title
+    const uniqueUnits = [];
+    const seenTitles = new Set();
+    units.forEach(u => {
+      const normalizedTitle = (u.title || '').trim();
+      if (!seenTitles.has(normalizedTitle)) {
+        seenTitles.add(normalizedTitle);
+        uniqueUnits.push(u);
+      }
+    });
+    units.length = 0;
+    units.push(...uniqueUnits);
+
+    units.forEach((u, idx) => {
+      oldToNewUnits[u.id] = idx + 1;
+    });
+  }
+
+  if (typeof units !== 'undefined') {
+    units.forEach((u, idx) => {
+      u.id = idx + 1;
+      if (u.title) {
+        u.title = u.title
+          .replace(/\s*\(Sayfa\s*\d+(?:-\d+)?\)/gi, "")
+          .replace(/^[IVXLCDM]+\.\s*/, "")
+          .replace(/Takımları/g, "Yapıları")
+          .replace(/takımları/g, "yapıları")
+          .replace(/Takımı/g, "Yapısı")
+          .replace(/takımı/g, "yapısı")
+          .replace(/Strüktürleri/g, "Yapıları")
+          .replace(/strüktürleri/g, "yapıları")
+          .replace(/Strüktürü/g, "Yapısı")
+          .replace(/strüktürü/g, "yapısı")
+          .replace(/Strüktürel/g, "Yapısal")
+          .replace(/strüktürel/g, "yapısal")
+          .replace(/Strüktür/g, "Yapı")
+          .replace(/strüktür/g, "yapı");
+      }
+    });
+  }
+
+  if (typeof lessons !== 'undefined') {
+    lessons.forEach(l => {
+      if (l.unitId && oldToNewUnits[l.unitId]) {
+        l.unitId = oldToNewUnits[l.unitId];
+      }
+    });
+  }
+
+  if (typeof rawTopics !== 'undefined') {
+    rawTopics.forEach(t => {
+      if (t.id && oldToNewUnits[t.id]) {
+        t.id = oldToNewUnits[t.id];
+      }
+    });
+  }
+})();
+
+// ============================================================
 // LİSANS SİSTEMİ YAPILANDIRMASI
 // ============================================================
 // Güvenli dijital imza oluşturmak için gizli kelime (Bunu sadece siz bilmelisiniz)
