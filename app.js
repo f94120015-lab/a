@@ -5382,7 +5382,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
         ${progressBadgeContent}
       </button>
       <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'} ${isLocked ? 'label-blur-mask' : ''}">
-        <strong>${lesson.title}</strong>
+        <strong>${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</strong>
         <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
         ${lessonOriginalTagHTML}
         ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Ders eklenmemiştir</div>' : ''}
@@ -5964,10 +5964,11 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     `;
   }
 
-  popover.innerHTML = `
+    const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
+    popover.innerHTML = `
     <div class="popover-arrow"></div>
     <div class="popover-header">
-      <h4 class="popover-title">${lesson.title}</h4>
+      <h4 class="popover-title">${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</h4>
       <span class="popover-subtitle">${popoverSubtitleHTML}</span>
     </div>
     <div class="popover-body">

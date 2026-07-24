@@ -989,6 +989,17 @@ input {
 .unit-path-color-9 .path-progress { stroke: #6366f1 !important; }
 .unit-path-color-10 .path-progress { stroke: #ef4444 !important; }
 
+.unit-text-color-1 { color: #10b981; }
+.unit-text-color-2 { color: #8b5cf6; }
+.unit-text-color-3 { color: #ec4899; }
+.unit-text-color-4 { color: #3b82f6; }
+.unit-text-color-5 { color: #06b6d4; }
+.unit-text-color-6 { color: #f97316; }
+.unit-text-color-7 { color: #d946ef; }
+.unit-text-color-8 { color: #eab308; }
+.unit-text-color-9 { color: #6366f1; }
+.unit-text-color-10 { color: #ef4444; }
+
 .unit-banner-info {
   flex: 1;
 }
