@@ -7,8 +7,117 @@ const XP_PER_CORRECT = 10;
 const MAX_HEARTS = 5;
 
 // ============================================================
-// DYNAMIC UNIT & LESSON RE-KEYING / DEDUPLICATION
 // ============================================================
+// ACADEMIC GRAMMAR TITLE SANITIZATION & RE-KEYING
+// ============================================================
+function cleanAcademicUnitTitle(title) {
+  if (!title) return '';
+  let t = title.trim();
+
+  const map = {
+    'Temel Yapılar': 'Temel Cümle Yapıları (Basic Sentence Structures)',
+    'İsim ve Edat Yapıları': 'İsim ve Edat Yapıları (Nouns & Prepositions)',
+    'Fiil ve Edat Yapıları': 'Fiil ve Edat Yapıları (Verbs & Prepositions)',
+    'Özne - Geçişli Fiil + Nesne': 'Özne, Fiil ve Nesne Dizilimi (SVO Structure)',
+    '"There" Yapıları': 'Var/Yok İfadeleri (There is / There are)',
+    'Okuma Parçaları 1': 'Akademik Okuma Metinleri ve Metin Analizi',
+    'Soru Yapıları': 'Soru Cümleleri ve Kalıpları (Question Structures)',
+    'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar (Modals & Tenses)',
+    'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar (Passive Voice & Passive Infinitive)',
+    'İsim Tamlaması': 'İsim Tamlamaları (Noun Compounds)',
+    'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltmalar (Participles)',
+    'Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'Mastar Yapıları ve Kısaltmalar (Infinitives)',
+    'Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler': 'Cümle Bağlaçları ve Geçiş İfadeleri (Connectors & Transitions)',
+    'Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri': 'Nicelik, Zaman ve Derece Belirteçleri (Quantifiers & Adverbs)',
+    'Nicelik, Zaman ve Derece Belirteçleri': 'Nicelik, Zaman ve Derece Belirteçleri (Quantifiers & Adverbs)',
+    'Zarf Cümlecikleri': 'Zarf Cümlecikleri (Adverbial Clauses)',
+    'Karşılaştırma ile Sıfat Cümleciği': 'Sıfat Cümlecikleri ve Karşılaştırma (Relative Clauses & Comparison)',
+    'İsim Cümleciği': 'İsim Cümlecikleri (Noun Clauses)',
+    'It + to be + sıfat/past participle + that': 'Sahte Özne Yapıları (It is + Adjective + That)',
+    'Neden ve Etki Yapıları': 'Sebep ve Sonuç Yapıları (Cause & Effect)',
+    'Ara Bölüm 2: Tercih Bildiren Yapılar': 'Tercih Bildiren Yapılar (Would Rather & Prefer)',
+    'Tercih Bildiren Yapılar': 'Tercih Bildiren Yapılar (Would Rather & Prefer)',
+    'Ara Bölüm 3: Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları (Requests & Permission)',
+    'Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları (Requests & Permission)',
+    'Zaman Zarfları ve Zaman Uyumu': 'Zaman Zarfları ve Tense Uyumu (Time Adverbs & Sequence of Tenses)',
+    'Zaman Uyumu: By the time, Since, It is time': 'Zaman Bağlaçları ve Tense Uyumu (By the time, Since, It\'s time)',
+    'Öbeksel Kipler': 'Öbeksel Kipler (Phrasal Modals)',
+    'Bağlaçlar': 'Bağlaç Yapıları ve Cümle İlişkileri (Conjunctions)',
+    'Akademik Sınav Kısayolları': 'Sınav Stratejileri ve Gramer İpuçları',
+    'Akademik Cümle Analizi ve Kısaltmalar': 'Cümle Analizi ve Kısaltma Yapıları (Reductions)',
+    'Akademik Yumuşatma ve İhtimal Dili': 'İhtimal ve Yumuşatma İfadeleri (Hedging & Modality)',
+    'Advanced Relative Clauses': 'İleri Düzey Sıfat Cümlecikleri (Advanced Relative Clauses)',
+    'Advanced Inversion': 'Devrik Cümle Yapıları (Inversion & Emphatic Structures)',
+    'Bölüm 44 / Modül A: Zaman, Şart & Dilek Kalkanları': 'Zaman, Şart ve Dilek Cümleleri (Tenses, Conditionals & Subjunctive)',
+    'Zaman, Şart & Dilek Kalkanları': 'Zaman, Şart ve Dilek Cümleleri (Tenses, Conditionals & Subjunctive)',
+    'Bölüm 44 / Modül B: Cümle Yapıları, Edatlar & Kısaltmalar': 'Cümle Yapıları, Edatlar ve Kısaltmalar',
+    'Cümle Yapıları, Edatlar & Kısaltmalar': 'Cümle Yapıları, Edatlar ve Kısaltmalar',
+    'Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
+    'Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
+    'Phrasal Modal ve Subjunctive Matrisi': 'Phrasal Modals ve Dilek Kipleri (Subjunctive)',
+    '5 Öğeli Yapısal Altyapı': 'Cümle Ögeleri ve Yapı Analizi (5 Öğe)',
+    '6 Öğeli Mega Eylem Zincirleri': 'Karma Cümle Yapıları ve Eylem Dizilimleri (6 Öğe)',
+    '7 Öğeli Hiper Süreç Zincirleri': 'İleri Düzey Cümle Yapıları (7 Öğe)',
+    '8 Öğeli Titan Eylem Zincirleri': 'Uzun Cümle Çözümleme Yapıları (8 Öğe)',
+    'Zincir Genişleme ve Sentaks Matrisi': 'Cümle Genişletme ve Söz Dizimi (Syntax)',
+    'Zaman Kayma Kontrolü': 'Zaman Kaymaları (Tense Shift)',
+    'Ultimate Academic Exam Simulation': 'Akademik Sınav Simülasyonu',
+    'Grand Master Final Challenge': 'Genel Sınav Değerlendirmesi',
+    'Akademik TIPS Master Serisi': 'Sınav İpuçları ve Çözüm Stratejileri',
+    'Akademik TIPS İhtisas Serisi': 'İleri Düzey Sınav İpuçları',
+    'Akademik Bağlaç Mühendisliği': 'İleri Düzey Bağlaçlar ve Cümle Bağlantıları',
+    'Görsel Kartlar ve Özel Bağlaç Kalıpları': 'Özel Bağlaç Kalıpları ve Kullanımları',
+    'Koşul Cümleleri ve Mix Yapılar Mühendisliği': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
+    'Koşul Cümleleri ve Mix Yapılar': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
+    'Özel Okuma Parçası Analizi': 'Akademik Okuma Parçası Çözümlemesi',
+    'Akademik Deyimsel Fiiller': 'Deyimsel Fiiller (Phrasal Verbs)',
+    'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
+    'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Gerund, Participle ve Infinitive Yapıları',
+    'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'Past Participle ve Edilgen Yapılar (Passive Voice)'
+  };
+
+  let cleaned = t
+    .replace(/^Ara Bölüm\s*\d+\s*:\s*/i, "")
+    .replace(/^Bölüm\s*\d+(?:\s*[\/\-]\s*Modül\s*[A-Z])?\s*:\s*/i, "")
+    .replace(/^Ara Bölüm\s*\d+\s*/i, "")
+    .replace(/^Bölüm\s*\d+\s*/i, "")
+    .replace(/^[IVXLCDM]+\.\s*/, "");
+
+  if (map[cleaned]) return map[cleaned];
+  if (map[t]) return map[t];
+
+  cleaned = cleaned
+    .replace(/Mühendisliği/g, "Yapıları")
+    .replace(/mühendisliği/g, "yapıları")
+    .replace(/Kalkanları/g, "Yapıları")
+    .replace(/kalkanları/g, "yapıları")
+    .replace(/Zirvesi/g, "Soruları")
+    .replace(/zirvesi/g, "soruları")
+    .replace(/Matrisi/g, "Yapıları")
+    .replace(/matrisi/g, "yapıları")
+    .replace(/Kriptoloji/g, "Çözümleme")
+    .replace(/kriptoloji/g, "çözümleme")
+    .replace(/Titan/g, "İleri")
+    .replace(/titan/g, "ileri")
+    .replace(/Hiper/g, "İleri")
+    .replace(/hiper/g, "ileri")
+    .replace(/Mega/g, "Karma")
+    .replace(/mega/g, "karma")
+    .replace(/Strüktürleri/g, "Yapıları")
+    .replace(/strüktürleri/g, "yapıları")
+    .replace(/Strüktürü/g, "Yapısı")
+    .replace(/strüktürü/g, "yapısı")
+    .replace(/Strüktürel/g, "Yapısal")
+    .replace(/strüktürel/g, "yapısal")
+    .replace(/Strüktür/g, "Yapı")
+    .replace(/strüktür/g, "yapı");
+
+  return cleaned.trim();
+}
+if (typeof window !== 'undefined') {
+  window.cleanAcademicUnitTitle = cleanAcademicUnitTitle;
+}
+
 (function() {
   const oldToNewUnits = {};
   if (typeof units !== 'undefined') {
@@ -34,21 +143,7 @@ const MAX_HEARTS = 5;
     units.forEach((u, idx) => {
       u.id = idx + 1;
       if (u.title) {
-        u.title = u.title
-          .replace(/\s*\(Sayfa\s*\d+(?:-\d+)?\)/gi, "")
-          .replace(/^[IVXLCDM]+\.\s*/, "")
-          .replace(/Takımları/g, "Yapıları")
-          .replace(/takımları/g, "yapıları")
-          .replace(/Takımı/g, "Yapısı")
-          .replace(/takımı/g, "yapısı")
-          .replace(/Strüktürleri/g, "Yapıları")
-          .replace(/strüktürleri/g, "yapıları")
-          .replace(/Strüktürü/g, "Yapısı")
-          .replace(/strüktürü/g, "yapısı")
-          .replace(/Strüktürel/g, "Yapısal")
-          .replace(/strüktürel/g, "yapısal")
-          .replace(/Strüktür/g, "Yapı")
-          .replace(/strüktür/g, "yapı");
+        u.title = cleanAcademicUnitTitle(u.title);
       }
     });
   }
@@ -65,6 +160,9 @@ const MAX_HEARTS = 5;
     rawTopics.forEach(t => {
       if (t.id && oldToNewUnits[t.id]) {
         t.id = oldToNewUnits[t.id];
+      }
+      if (t.title) {
+        t.title = cleanAcademicUnitTitle(t.title);
       }
     });
   }
@@ -5552,11 +5650,7 @@ function renderLessonTree() {
 
   const unitDisplayNames = {};
   renderedUnits.forEach((u, index) => {
-    const cleanTitle = u.title
-      .replace(/^Ara Bölüm\s*\d+\s*:\s*/i, "")
-      .replace(/^Bölüm\s*\d+\s*:\s*/i, "")
-      .replace(/^Ara Bölüm\s*\d+\s*/i, "")
-      .replace(/^Bölüm\s*\d+\s*/i, "");
+    const cleanTitle = cleanAcademicUnitTitle(u.title);
     unitDisplayNames[u.id] = `Bölüm ${index + 1}: ${cleanTitle}`;
   });
 
