@@ -19361,8 +19361,8 @@ const rawTopics = [
       }
     ],
     "subtitles": [
-      "Saf Modallar (Pure Modals)",
-      "Saf Zamanlar (Tenses)"
+      "Saf Modallar (will, must, could...)",
+      "Saf Zamanlar (was/were -ing, V2...)"
     ],
     "originalNumLessons": 2
   },
