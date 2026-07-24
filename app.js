@@ -7281,12 +7281,14 @@ function renderQuestion() {
       });
     }
   }
-  
+
   if (question.grammarTags && question.grammarTags.length > 0) {
-    const cleanedTags = question.grammarTags
+    const rawCleaned = question.grammarTags
       .filter(t => t && !t.toLowerCase().includes('beşeri bilimler'))
       .map(t => t.replace(/^Önceki Konu:\s*/i, "").replace(/\s*\(.*?\)/g, "").trim())
       .filter(t => t.length > 0);
+
+    const cleanedTags = Array.from(new Set(rawCleaned));
 
     if (cleanedTags.length > 0) {
       const tagsHtml = `
@@ -14186,6 +14188,9 @@ function init() {
   console.log("DEBUG: Initializing app...");
   console.log("DEBUG: Total units initially:", typeof units !== 'undefined' ? units.length : 'undefined');
   console.log("DEBUG: Total lessons initially:", typeof lessons !== 'undefined' ? lessons.length : 'undefined');
+  if (typeof lessons !== 'undefined') {
+    console.log("DEBUG: Section 14 lessons details:", lessons.filter(l => l.unitId === 14).map(l => l.title));
+  }
 
   // Preserve all units in the curriculum tree (total 63 units)
   console.log("DEBUG: Total units loaded:", typeof units !== 'undefined' ? units.length : 0);

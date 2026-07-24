@@ -925,7 +925,7 @@
       const s = sentences[i % sentences.length];
       const qId = `u${unitId}l${lessonId}_q${i + 1}`;
       const typeSelector = i;
-      const gTags = s.grammarTags || ["Edilgen Yapı", "Beşeri Bilimler"];
+      const gTags = s.grammarTags || ["Edilgen Yapı (Passive)", "Edat Takımı (Prepositional Phrase)"];
 
       if (typeSelector === 0 || typeSelector === 14) {
         // Multiple choice (Eng -> Tr)

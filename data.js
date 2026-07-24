@@ -19506,7 +19506,7 @@ const rawTopics = [
   
   
     ],
-    "title": "XIII. Mastar, Maksat ve Soru Kelimeli Mastar Yapıları",
+    "title": "XIII. Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar",
     "desc": "Fiil tamlayıcısı mastarlar (Infinitive Compliments), özne ve durum bildiren mastarlar (It is + Adj + to V), amaç/maksat bildiren eylemsi yapıları (Infinitive of Purpose: to, in order to, so as to) ile soru kelimeli mastar kısaltmaları (Wh- + to V1)",
     "icon": "⛵",
     "numLessons": 4,
@@ -19533,10 +19533,10 @@ const rawTopics = [
       }
     ],
     "subtitles": [
-      "A. Fiil Tümleyici Mastarlar (Fiil + Mastar / Fiil + Nesne + Mastar) (Sayfa 98-102)",
-      "B. Strüktürel Öznesel ve Durumsal Mastarlar (It + Sıfat + Mastar) (Sayfa 103-106)",
-      "C. Maksat ve Amaç Bildiren Mastarlar (to / in order to / so as to + V1) (Sayfa 107-111)",
-      "D. Soru Kelimeli Mastar Yapıları (what/where/how + to V1) (Sayfa 124-126)"
+      "1. Fiil Tümleyici Mastarlar (agree to, refuse to)",
+      "2. Yapısal Özne Mastarları (It is essential to, It was hard to)",
+      "3. Amaç Mastarları (to, in order to, so as to)",
+      "4. Soru Kelimeli Kısaltmalar (how to, what to, where to)"
     ],
     "originalNumLessons": 4
   },
@@ -19547,7 +19547,7 @@ const rawTopics = [
   "edits": [
     
   ],
-  "title": "XXI. Konnektörler ve Faydalı Yaygın Cümle Yapıları",
+  "title": "XXI. Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler",
   "desc": "İsim ve cümle bağlaçları, noktalama refleksli cümle geçişleri ile mantıksal çıkarım, örneklendirme ve durumsal koşul kalıpları",
   "icon": "🔗",
   "numLessons": 5,
@@ -19584,11 +19584,11 @@ const rawTopics = [
     }
   ],
   "subtitles": [
-    "1. Söz Dizimsel İşlevlerine Göre Konnektörler (İsim vs. Cümle vs. Geçiş)",
-    "2. Anlamsal İşlevlerine Göre Konnektörler (Zaman, Sebep, Zıtlık, Amaç)",
-    "3. Mantıksal Çıkarım, Özet ve Netice Konnektörleri (as a result, in conclusion, so)",
-    "4. Referans, Örneklendirme ve Açıklama Kalıpları (such as, for example, that is)",
-    "5. Durumsal Koşul ve İhtimal Zarf Cümlecikleri (even if, otherwise, in many cases)"
+    "1. Söz Dizimsel Bağlaçlar (Due to, Although, However)",
+    "2. Anlamsal Bağlaçlar (Because, Whereas, So that)",
+    "3. Sonuç Bağlaçları (Therefore, As a result, So)",
+    "4. Örneklendirme & Açıklama (Such as, For example, That is)",
+    "5. Koşul Cümlecikleri (Even if, Otherwise, In case)"
   ],
   "originalNumLessons": 5
 },
@@ -19599,8 +19599,8 @@ const rawTopics = [
     "id": 62,
     "startLessonId": 370,
     "originalIndex": 22,
-    "title": "Ara Bölüm 5: Quantifiers",
-    "desc": "İngilizcede sıklıkla kullanılan zaman, derece ve miktar belirten ifadelerin yapısı.",
+    "title": "Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri",
+    "desc": "İngilizcede sıklıkla kullanılan nicelik (Quantifiers), zaman (Adverbs of Time) ve derece (Adverbs of Degree) belirteçlerinin akademik cümle yapısındaki kullanımı.",
     "icon": "📖",
     "numLessons": 4,
     "edits": [
@@ -19628,10 +19628,10 @@ const rawTopics = [
       }
     ],
     "subtitles": [
-      "A. Zaman Belirteçleri (Time Adverbs)",
-      "B. Derece Belirteçleri (Degree Adverbs)",
-      "C. Nicelik Belirteçleri (Quantifiers)",
-      "D. Zaman, Derece ve Nicelik Belirteçleri (Ekstra Pratik)"
+      "1. Zaman Zarfları (Recently, Currently, Nowadays)",
+      "2. Derece Zarfları (Extremely, Highly, Thoroughly)",
+      "3. Miktar Belirteçleri (Many, Few, Little, Several)",
+      "4. Karma Zarflar ve Miktar (Extremely, Few, Currently)"
     ],
     "originalNumLessons": 4
   },
@@ -37173,7 +37173,7 @@ const unitSentencesMap = {
                                     "enSentence": "Was Socrates' execution a catalyst for Athenian political discourse?",
                                     "isEngToTr": true,
                                     "grammarTags": [
-                                          "Sokrates (Tarih)",
+                                          "Geçmiş Zaman (Past Simple)",
                                           "Soru Yapıları (Was/Were)",
                                           "To Be Yapısı (was)"
                                     ]
@@ -56662,7 +56662,7 @@ const unitSentencesMap = {
   },
   "22": {
   "1": {
-    "title": "1. Söz Dizimsel İşlevlerine Göre Konnektörler",
+    "title": "1. Söz Dizimsel Yapılarına Göre Bağlaçlar (Edat Öbekleri, Yan Cümle Bağlaçları ve Geçiş Zarfları)",
     "subtitle": "İsim alan, cümle alan ve geçiş kelimelerinin noktalama refleksleri",
     "konuAnlatimi": {
       "baslik": "Bağlaç Söz Dizimi Kılavuzu (İsim vs. Cümle vs. Geçiş)",
@@ -56699,8 +56699,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -56708,8 +56708,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)"
             ],
             "type": "matching",
@@ -56736,8 +56736,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "multiple-choice",
@@ -56754,8 +56754,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -56773,8 +56773,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
@@ -56793,8 +56793,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -56812,8 +56812,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -56848,8 +56848,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -56884,8 +56884,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "word-bank",
@@ -56919,8 +56919,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex1_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -56984,8 +56984,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -56993,8 +56993,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57022,8 +57022,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "multiple-choice",
@@ -57040,8 +57040,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "multiple-choice",
@@ -57058,8 +57058,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57077,8 +57077,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57096,8 +57096,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57127,8 +57127,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)"
             ],
             "type": "word-bank",
@@ -57166,8 +57166,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57204,8 +57204,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex2_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57265,8 +57265,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -57274,8 +57274,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57303,8 +57303,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57322,8 +57322,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)"
             ],
             "type": "multiple-choice",
@@ -57340,8 +57340,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)"
             ],
             "type": "multiple-choice",
@@ -57358,8 +57358,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "multiple-choice",
@@ -57376,8 +57376,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)"
             ],
             "type": "word-bank",
@@ -57407,8 +57407,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)"
             ],
             "type": "word-bank",
@@ -57442,8 +57442,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57476,8 +57476,8 @@ const unitSentencesMap = {
           {
             "id": "u22l66_ex3_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Söz Dizimsel Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57514,7 +57514,7 @@ const unitSentencesMap = {
     ]
   },
   "2": {
-    "title": "2. Anlamsal İşlevlerine Göre Konnektörler",
+    "title": "2. Anlamsal İletimlerine Göre Bağlaçlar (Zaman, Sebep, Zıtlık ve Amaç Cümlecikleri)",
     "subtitle": "Zıtlık, Sebep, Sonuç, Amaç, Ekleme ve Koşul bağlaçlarının anlamsal pekiştirmesi",
     "konuAnlatimi": {
       "baslik": "Bağlaç Semantik Kılavuzu (Anlam Grupları)",
@@ -57551,8 +57551,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -57560,8 +57560,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)"
             ],
             "type": "matching",
@@ -57588,8 +57588,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Kipler (Modals)",
               "Mastar & Amaç Yapısı (Infinitive)",
@@ -57609,8 +57609,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
@@ -57629,8 +57629,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)"
             ],
             "type": "multiple-choice",
@@ -57647,8 +57647,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57666,8 +57666,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)"
             ],
             "type": "word-bank",
@@ -57703,8 +57703,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57741,8 +57741,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Kipler (Modals)"
             ],
@@ -57781,8 +57781,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex1_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Kipler (Modals)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57848,8 +57848,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -57857,8 +57857,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57886,8 +57886,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57905,8 +57905,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57924,8 +57924,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)"
             ],
             "type": "multiple-choice",
@@ -57942,8 +57942,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
@@ -57962,8 +57962,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -57998,8 +57998,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58034,8 +58034,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58068,8 +58068,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex2_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58129,16 +58129,16 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
           {
             "id": "u22l67_ex3_match2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58166,8 +58166,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_mc_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58185,8 +58185,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_mc_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edat Takımı (Prepositional Phrase)"
             ],
             "type": "multiple-choice",
@@ -58203,8 +58203,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_mc_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)"
             ],
@@ -58222,8 +58222,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_mc_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
@@ -58242,8 +58242,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_wb_0",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58274,8 +58274,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_wb_1",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
@@ -58309,8 +58309,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_wb_2",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58347,8 +58347,8 @@ const unitSentencesMap = {
           {
             "id": "u22l67_ex3_wb_3",
             "grammarTags": [
-              "Konnektörler",
-              "Anlamsal Bağlaçlar",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ],
@@ -58385,7 +58385,7 @@ const unitSentencesMap = {
     ]
   },
   "3": {
-    "title": "3. Mantıksal Çıkarım, Özet ve Netice Konnektörleri",
+    "title": "3. Sonuç, Mantıksal Geçiş ve Özet Bağlaçları",
     "subtitle": "as a result, in conclusion, so, on the whole, from this point of view kalıplarının kullanımı",
     "konuAnlatimi": {
       "baslik": "Özet, Netice ve Mantıksal Geçiş Kalıpları Kılavuzu",
@@ -58422,8 +58422,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58451,8 +58451,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58471,8 +58471,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "bu yüzden",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58491,8 +58491,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "elbette",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58511,8 +58511,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bir bütün olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58531,8 +58531,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "sonuç olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58551,8 +58551,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "genel olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58571,8 +58571,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "sonuç olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58591,8 +58591,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bir bütün olarak değerlendirildiğinde",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58611,8 +58611,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bu bakış açısından",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58638,8 +58638,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "gecikme zirvelerinin bir sonucu olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58658,8 +58658,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "bu yüzden parametreler değişmeden kalır",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58678,8 +58678,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "genel olarak kararlı altyapı",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58698,8 +58698,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "sonuç olarak sistem kararlı hale gelir",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58718,8 +58718,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "gecikme zirvelerinin bir sonucu olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           },
@@ -58737,8 +58737,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bu yüzden parametreler değişmeden kalır",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58757,8 +58757,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "genel olarak kararlı altyapı",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58777,8 +58777,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "sonuç olarak sistem kararlı hale gelir",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58797,8 +58797,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "böylece derleme hataları kendini gösterir",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -58817,8 +58817,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "depo bozulmasının bir sonucu olarak",
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           }
@@ -58880,8 +58880,8 @@ const unitSentencesMap = {
             "enSentence": "The parsing algorithm functions precisely, so even the smallest syntax formatting variations are flagged by the system automatically.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)"
             ]
           },
@@ -58936,8 +58936,8 @@ const unitSentencesMap = {
             "enSentence": "The unoptimized query script saturated the database layer, so the automated compiler automatically generated a critical processing flag.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Akademik Sıfat & İsim Tamlaması"
             ]
@@ -58993,8 +58993,8 @@ const unitSentencesMap = {
             "enSentence": "On the whole, the qualitative monographs published by university professors provide a robust theoretical framework for modern syntax research.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)"
             ]
           },
@@ -59047,8 +59047,8 @@ const unitSentencesMap = {
             "enSentence": "In conclusion, resolving existing structural constraints is the only viable method to minimize computational transaction failures permanently.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
@@ -59060,8 +59060,8 @@ const unitSentencesMap = {
             "enSentence": "The digital repository archive experienced a massive infusion of raw scanned document PDFs, and as a result, storage space diminished rapidly.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59074,8 +59074,8 @@ const unitSentencesMap = {
             "enSentence": "From this point of view, corporate entity investment packages must be redistributed evenly to ensure full regulatory alignment across sectors.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Kipler (Modals)",
               "Mastar & Amaç Yapısı (Infinitive)"
@@ -59089,8 +59089,8 @@ const unitSentencesMap = {
             "enSentence": "On the whole, the updated software application build operates efficiently despite experiencing minor navigation lag thresholds over the weekend.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59103,8 +59103,8 @@ const unitSentencesMap = {
             "enSentence": "The constitutional committee analyzed the administrative compliance guidelines as a whole before enforcing rigid resource caps across provinces.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59117,8 +59117,8 @@ const unitSentencesMap = {
             "enSentence": "In conclusion, cross-disciplinary engineering groups must finalize the baseline documentation to prevent catastrophic server deployment failures.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Kipler (Modals)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Akademik Sıfat & İsim Tamlaması"
@@ -59132,8 +59132,8 @@ const unitSentencesMap = {
             "enSentence": "From this point of view, persistent server degradation represents a structural vulnerability rather than a temporary runtime configuration glitch.",
             "isEngToTr": false,
             "grammarTags": [
-              "Konnektörler",
-              "Özet & Netice Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59143,7 +59143,7 @@ const unitSentencesMap = {
     ]
   },
   "4": {
-    "title": "4. Referans, Örneklendirme ve Açıklama Kalıpları",
+    "title": "4. Örneklendirme ve Açıklama/Yeniden İfade Bağlaçları",
     "subtitle": "such as, for example, for instance, that is (to say) kalıplarının kullanımı",
     "konuAnlatimi": {
       "baslik": "Örneklendirme ve Açıklama Kalıpları Kılavuzu",
@@ -59180,8 +59180,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59209,8 +59209,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59229,8 +59229,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "gibi",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59249,8 +59249,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "ilki / önceki",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59269,8 +59269,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "ikincisi / sonraki",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59289,8 +59289,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "örneğin",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59309,8 +59309,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "örneğin",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59329,8 +59329,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "kıyasla",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           },
@@ -59348,8 +59348,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "yani / diğer bir deyişle",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
@@ -59367,8 +59367,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "ilkini tanımlama",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Participle (Kısaltma)"
             ]
           }
@@ -59393,8 +59393,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "örneğin bellek sızıntısı",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59413,8 +59413,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "ikinci seçenekleri seçme",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Participle (Kısaltma)"
             ]
           },
@@ -59432,8 +59432,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "yani birincil çerçevedir",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Akademik Sıfat & İsim Tamlaması"
             ]
           },
@@ -59451,8 +59451,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "kıyasla son derece kararsız",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           },
@@ -59470,8 +59470,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "örneğin bellek sızıntısı",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59490,8 +59490,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "ikinci seçenekleri seçme",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)",
               "Participle (Kısaltma)"
             ]
@@ -59510,8 +59510,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "yani birincil çerçevedir",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)",
               "Akademik Sıfat & İsim Tamlaması"
             ]
@@ -59530,8 +59530,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "kıyasla son derece kararsız",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           },
@@ -59549,8 +59549,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "örneğin derleme hataları",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59569,8 +59569,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "kıyasla güvenli bölümler",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           }
@@ -59626,8 +59626,8 @@ const unitSentencesMap = {
             "enSentence": "The legacy network layout suffered from constant navigation lag, but by comparison, the newly refactored build operates seamlessly.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)",
               "Akademik Sıfat & İsim Tamlaması",
               "Participle (Kısaltma)"
@@ -59680,8 +59680,8 @@ const unitSentencesMap = {
             "enSentence": "The parsing algorithm modifies raw binary files directly; that is to say, it refactors metadata parameters without human supervision.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
@@ -59732,8 +59732,8 @@ const unitSentencesMap = {
             "enSentence": "For example, regional municipalities often struggle to implement uniform policy codes when resource parameters grow increasingly finite.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
@@ -59786,8 +59786,8 @@ const unitSentencesMap = {
             "enSentence": "The initial stress simulation produced extensive calculation overrides, but by comparison, the second testing phase was perfectly aligned.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           },
@@ -59834,8 +59834,8 @@ const unitSentencesMap = {
             "enSentence": "The automated compiler rejected the unverified dataset; that is to say, the source code lacked the required cryptographic token validation.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
@@ -59889,8 +59889,8 @@ const unitSentencesMap = {
             "enSentence": "For instance, a single unauthenticated connection profile can trigger an immediate firewall block across all decentralized computing nodes.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Kipler (Modals)"
             ]
           },
@@ -59908,8 +59908,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "Eski ağ düzeni sürekli gezinme gecikmesinden muzdaripti, ancak kıyasla, yeni yeniden yapılandırılan sürüm sorunsuz çalışıyor.",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)",
               "Akademik Sıfat & İsim Tamlaması",
               "Participle (Kısaltma)"
@@ -59929,8 +59929,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "Ayrıştırma algoritması ham ikili dosyaları doğrudan değiştirir; yani insan denetimi olmadan meta veri parametrelerini yeniden yapılandırır.",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59949,8 +59949,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "Örneğin, kaynak parametreleri giderek sınırlı hale geldiğinde, bölgesel belediyeler genellikle tek tip politika kurallarını uygulamakta zorlanırlar.",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -59969,8 +59969,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "İlk stres simülasyonu geniş kapsamlı hesaplama geçersiz kılmaları üretti, ancak kıyasla, ikinci test aşaması mükemmel şekilde hizalandı.",
             "grammarTags": [
-              "Konnektörler",
-              "Örneklendirme & Açıklama Kalıpları",
+              "Cümle Bağlaçları",
+              "Cümle Bağlaçları", "Geçiş Kelimeleri",
               "Edat Takımı (Prepositional Phrase)"
             ]
           }
@@ -59979,7 +59979,7 @@ const unitSentencesMap = {
     ]
   },
   "5": {
-    "title": "5. Durumsal Koşul ve İhtimal Zarf Cümlecikleri",
+    "title": "5. Koşul Cümlecikleri ve Varsayım Bağlaçları",
     "subtitle": "even if, otherwise, in many cases, in some cases kalıplarının kullanımı",
     "konuAnlatimi": {
       "baslik": "Durumsal Koşul ve İhtimal Kalıpları Kılavuzu",
@@ -60016,8 +60016,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60045,8 +60045,8 @@ const unitSentencesMap = {
               }
             ],
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)"
             ]
           },
@@ -60064,8 +60064,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bile olsa",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60084,8 +60084,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "aksi takdirde",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60104,8 +60104,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "çoğu durumda",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60124,8 +60124,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "bazı durumlarda",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60144,8 +60144,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "çoğu durumda kararlı",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60164,8 +60164,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bazı durumlarda bozulmuş",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60184,8 +60184,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "parametreler değişse bile",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60204,8 +60204,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "aksi takdirde derleme başarısız olur",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60231,8 +60231,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "aksi takdirde çekirdek konteynerleri izole edin",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60251,8 +60251,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "belgeler nihai hale getirilse bile",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)"
             ]
           },
@@ -60270,8 +60270,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "çoğu durumda verimli operasyonlar",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60290,8 +60290,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "bazı durumlarda gezinme gecikmesi meydana gelir",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60310,8 +60310,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "aksi takdirde çekirdek konteynerleri izole edin",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60330,8 +60330,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "belgeler nihai hale getirilse bile",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)"
             ]
           },
@@ -60349,8 +60349,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "çoğu durumda verimli operasyonlar",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60369,8 +60369,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "bazı durumlarda gezinme gecikmesi meydana gelir",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60389,8 +60389,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "aksi takdirde temel yapıları değiştirin",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Akademik Sıfat & İsim Tamlaması"
             ]
           },
@@ -60408,8 +60408,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "aksi takdirde sistem beklenmedik şekilde çöker",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60468,8 +60468,8 @@ const unitSentencesMap = {
             "enSentence": "In some cases, raw binary tracking logs reveal that anonymous client profiles attempted to modify the baseline reference documentation.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Akademik Sıfat & İsim Tamlaması"
@@ -60524,8 +60524,8 @@ const unitSentencesMap = {
             "enSentence": "In some cases, intense moisture exposure beneath the structural layer causes rapid file degradation across historical digital archives.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60577,8 +60577,8 @@ const unitSentencesMap = {
             "enSentence": "In many cases, systematic validation anomalies stem directly from loose query loops that lack adaptive multi-layer token configurations.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60634,8 +60634,8 @@ const unitSentencesMap = {
             "enSentence": "In some cases, unauthenticated external entry traces manage to bypass the primary security firewall layer during weekend traffic rushes.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Akademik Sıfat & İsim Tamlaması"
             ]
@@ -60693,8 +60693,8 @@ const unitSentencesMap = {
             "enSentence": "In some cases, regional legislative assemblies choose to postpone further voting rounds due to persistent public unrest across provinces.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60752,8 +60752,8 @@ const unitSentencesMap = {
             "enSentence": "Even if corporate production targets decline sharply next quarter, the technology startup possesses enough capital expenditure to survive.",
             "isEngToTr": true,
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Mastar & Amaç Yapısı (Infinitive)"
             ]
           },
@@ -60771,8 +60771,8 @@ const unitSentencesMap = {
             "correctIndex": 2,
             "translation": "Bazı durumlarda, ham ikili izleme günlükleri, anonim istemci profillerinin temel referans belgelerini değiştirmeye çalıştığını ortaya koymaktadır.",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Akademik Sıfat & İsim Tamlaması"
@@ -60792,8 +60792,8 @@ const unitSentencesMap = {
             "correctIndex": 3,
             "translation": "Bazı durumlarda, yapısal katmanın altındaki yoğun neme maruz kalma, tarihi dijital arşivlerde hızlı dosya bozulmasına neden olur.",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60812,8 +60812,8 @@ const unitSentencesMap = {
             "correctIndex": 1,
             "translation": "Çoğu durumda, sistemik doğrulama anomalileri, uyarlanabilir çok katmanlı belirteç yapılandırmalarından yoksun gevşek sorgu döngülerinden doğrudan kaynaklanır.",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Edilgen Yapı (Passive)",
               "Edat Takımı (Prepositional Phrase)"
             ]
@@ -60832,8 +60832,8 @@ const unitSentencesMap = {
             "correctIndex": 0,
             "translation": "Bazı durumlarda, kimliği doğrulanmamış harici giriş izleri hafta sonu trafik yoğunlukları sırasında birincil güvenlik duvarı katmanını atlatmayı başarır.",
             "grammarTags": [
-              "Konnektörler",
-              "Durumsal Koşul Kalıpları",
+              "Cümle Bağlaçları",
+              "Koşul Cümlecikleri (If Clauses)",
               "Mastar & Amaç Yapısı (Infinitive)",
               "Akademik Sıfat & İsim Tamlaması"
             ]
@@ -133102,13 +133102,11 @@ const chapter66Data = {
           .replace(/^Bölüm\s*\d+\s*:\s*/i, '')
           .replace(/^Ara Bölüm\s*\d+\s*/i, '')
           .replace(/^Bölüm\s*\d+\s*/i, '')
-          .replace(/\s*\([^)]*\)/g, '')
           .replace(/\s+/g, ' ')
           .trim();
       }
       if (u.subtitle) {
         u.subtitle = u.subtitle
-          .replace(/\s*\([^)]*\)/g, '')
           .replace(/\s+/g, ' ')
           .trim();
       }
@@ -133122,13 +133120,11 @@ const chapter66Data = {
       }
       if (l.title) {
         l.title = l.title
-          .replace(/\s*\([^)]*\)/g, '')
           .replace(/\s+/g, ' ')
           .trim();
       }
       if (l.subtitle) {
         l.subtitle = l.subtitle
-          .replace(/\s*\([^)]*\)/g, '')
           .replace(/\s+/g, ' ')
           .trim();
       }

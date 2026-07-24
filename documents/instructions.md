@@ -50,12 +50,17 @@ Bu dosya, **amok** projesinde geliştirme yapacak yapay zeka asistanları (Antig
 *   **Tematik Bağlam (Beşeri Bilimler):** Tüm soru, alıştırma, kelime ve cümle içeriklerinde metinlerin, örneklerin ve kelime öbeklerinin **beşeri bilimler (tarih, felsefe, sosyoloji, edebiyat, psikoloji, sanat tarihi vb.)** alanından seçilmesi temel kuraldır.
 *   **Spiralleşme / Tekrar Prensibi:** Her yeni bölüm veya alıştırma setinde, öğrenmeyi pekiştirmek adına önceki bölümlerde öğrenilen kelime ve kalıpların bir kısmı mutlaka tekrar dahil edilmelidir.
 *   **Yeni Kelime Ekleme:** Geçmiş kelimeler pekiştirilirken, her yeni bölümde müfredata uygun yeni beşeri bilimler kelimeleri ve akademik yapılar da eklenmelidir.
-*   **Gramer Etiket Standartları (`grammarTags` Kesin Kuralı):**
-    *   `grammarTags` dizisine **KESİNLİKLE** soru türü veya arayüz mekaniği (*"Özgür Çeviri"*, *"Kelime Bankası"*, *"Eşleştirme"*, *"Akademik Cümle"*, *"Çeviri Dizilimi"*, *"Hızlı Çeviri"*) YAZILAMAZ.
-    *   Etiketler **SADECE VE SADECE** dil bilgisi konularını ve pekiştirilen gramer yapılarını içermelidir.
-    *   **Etiket Formatı:** `["[Mevcut Gramer Konusu]", "[Spiralleşen/Önceki Gramer Konusu]"]`
-    *   *Örnek Doğru Kullanım:* `["Fiil + Edat (Describe...in)", "Önceki Konu: To Be Yapısı"]`
-    *   *Örnek Yanlış Kullanım:* `["Kelime Bankası", "Özgür Çeviri"]` (YASAK)
+*   **Uygulama Genelinde Gramer Etiket Standartları (`grammarTags` Kesin Kuralı):**
+    *   **Tüm uygulamada (`data.js`, `data-extra.js`, tüm üniteler ve alıştırmalar)** soruların üzerindeki etiketler **SADECE VE SADECE resmî dil bilgisi terimleri** kullanılarak eklenecektir.
+    *   `grammarTags` dizisine **KESİNLİKLE** soru türü veya arayüz mekaniği (*"Özgür Çeviri"*, *"Kelime Bankası"*, *"Eşleştirme"*, *"Akademik Cümle"*, *"Hızlı Çeviri"*) veya alan/konu açıklamaları (*"Beşeri Bilimler"*) YAZILAMAZ.
+    *   `grammarTags` dizisine ünite başlığı/ders içi serbest açıklama etiketi (*"Örneklendirme & Açıklama Kalıpları"*, *"Özet & Netice Kalıpları"*, *"Durumsal Koşul Kalıpları"*, *"Konnektörler"*) YAZILAMAZ. Bunların yerine doğrudan resmî akademik dil bilgisi terimleri yazılmalıdır:
+        *   Cümleleri bağlayan yapılar için: **"Cümle Bağlaçları"**
+        *   Geçiş zarfları / kelimeleri için: **"Geçiş Kelimeleri"**
+        *   Koşul cümleleri için: **"Koşul Cümlecikleri (If Clauses)"**
+        *   İsim öbeği alan yapılar için: **"Edat Takımı (Prepositional Phrase)"**
+    *   **Etiket Formatı:** `["[Mevcut Resmî Gramer Konusu]", "[Spiralleşen/Önceki Resmî Gramer Konusu]"]`
+    *   *Örnek Doğru Kullanım:* `["Cümle Bağlaçları", "Geçiş Kelimeleri", "Edilgen Yapı (Passive)"]`
+    *   *Örnek Yanlış Kullanım:* `["Örneklendirme & Açıklama Kalıpları"]`, `["Konnektörler"]`, `["Beşeri Bilimler"]`, `["Kelime Bankası"]` (YASAK)
 
 ---
 
