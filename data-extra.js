@@ -2186,13 +2186,13 @@
 
 if (typeof units !== 'undefined') {
   units.forEach(u => {
-    if (u.title) u.title = u.title.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
-    if (u.subtitle) u.subtitle = u.subtitle.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+    if (u.title) u.title = u.title.replace(/\s+/g, ' ').trim();
+    if (u.subtitle) u.subtitle = u.subtitle.replace(/\s+/g, ' ').trim();
   });
 }
 if (typeof lessons !== 'undefined') {
   lessons.forEach(l => {
-    if (l.title) l.title = l.title.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
-    if (l.subtitle) l.subtitle = l.subtitle.replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+    if (l.title) l.title = l.title.replace(/\s+/g, ' ').trim();
+    if (l.subtitle) l.subtitle = l.subtitle.replace(/\s+/g, ' ').trim();
   });
 }
