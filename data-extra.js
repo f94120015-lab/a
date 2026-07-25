@@ -2952,67 +2952,67 @@ const chapter105Data = {
             {
               id: "c105_l3_ex2_q4",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (ancient times)]</code> denkleminde fiilin yapısı ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (old / ancient / formerly / originally / initially / earlier / previously / in the past)]</code> denkleminde cümlenin zamanı (tense) ne olmalıdır?",
               options: [
-                "V2 (Past Simple)",
-                "V1 (Present Simple)",
-                "have/has + V3 (Present Perfect)",
-                "will + V1 (Future Simple)"
+                "Past (V2 - Past Simple)",
+                "Present (V1 - Present Simple)",
+                "Future (will + V1 - Future Simple)",
+                "Present Perfect (have/has + V3)"
               ],
               correctIndex: 0,
-              explanation: "ancient times (antik çağlar) kesin geçmiş zamanı temsil ettiğinden fiil V2 olur."
+              explanation: "Cümlede old, ancient, formerly, originally, initially, earlier, previously, in the past gibi kelimeler geçiyorsa o cümle Past (V2) olur."
             },
             {
               id: "c105_l3_ex2_q5",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (formerly)]</code> denkleminde fiil yapısı ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (currently / presently / at present / now)]</code> denkleminde fiil yapısı ne olmalıdır?",
               options: [
-                "V2 (Past Simple)",
-                "V1 (Present Simple / am-is-are)",
-                "will + V1 (Future Simple)",
-                "have/has + V3 (Present Perfect)"
+                "Simple Present (V1) veya Present Continuous (am/is/are + V-ing)",
+                "Past Simple (V2) veya Past Continuous (was/were + V-ing)",
+                "Past Perfect (had + V3)",
+                "Future Perfect (will have + V3)"
               ],
               correctIndex: 0,
-              explanation: "formerly (eskiden) geçmiş zamanı simgelediği için fiil V2 olmalıdır."
+              explanation: "Currently, presently, at present, now kelimeleri doğrudan Simple Present veya Present Continuous Tense kullanımına işaret eder."
             },
             {
               id: "c105_l3_ex2_q6",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (lately)] ➔ but in those days [Subject + V_?]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (Zaman Göstergesi / İpucu Yok)]</code> denkleminde öncelikli olarak hangi yapılara yönelinmelidir?",
               options: [
-                "[have/has + V3 (Present Perfect)] ➔ but in those days [V2 (Past Simple)]",
-                "[V1 (Present Simple)] ➔ but in those days [will + V1]",
-                "[V2 (Past Simple)] ➔ but in those days [have/has + V3]",
-                "[had + V3 (Past Perfect)] ➔ but in those days [V1 (Present Simple)]"
+                "Öncelikle Present yapılar (V1 / am-is-are / have-has V3)",
+                "Öncelikle Past yapılar (V2 / had + V3)",
+                "Öncelikle Future yapılar (will + V1 / will have + V3)",
+                "Öncelikle Past Continuous yapılar (was/were + V-ing)"
               ],
               correctIndex: 0,
-              explanation: "lately kelimesi Present Perfect gerektirirken, in those days (o günlerde) ifadesi geçmişi (V2) temsil eder."
+              explanation: "Zaman Göstergesi Yoksa: Soru kökünde hiçbir zaman göstergesi/ipucu yoksa, genel kural olarak öncelikle Present yapılara yönelinmelidir."
             },
             {
               id: "c105_l3_ex2_q7",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (initially)] ➔ but [Subject + V_? (recently)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (Film/Kitap özeti veya hikaye anlatımı)]</code> denkleminde olaylar hangi tense ile anlatılmalıdır?",
               options: [
-                "[V2 (Past Simple)] ➔ [have/has + V3 (Present Perfect)]",
-                "[V1 (Present Simple)] ➔ [V2 (Past Simple)]",
-                "[will + V1] ➔ [would + V1]",
-                "[have/has + V3] ➔ [had + V3]"
+                "Present Tense (Geniş Zaman / V1 veya Present Continuous)",
+                "Past Tense (V2 / Past Simple)",
+                "Past Perfect Tense (had + V3)",
+                "Future in the Past (would + V1)"
               ],
               correctIndex: 0,
-              explanation: "initially (başlangıçta ➔ V2), recently (son zamanlarda ➔ have/has V3) zaman çizgisi geçişini ve kurallarını birleştirir."
+              explanation: "Hikaye Anlatımları: Soruda bir film, kitap özeti veya hikaye anlatımı varsa gerçekleşen olaylar Present Tense (Geniş Zaman) olarak düşünülmelidir."
             },
             {
               id: "c105_l3_ex2_q8",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (in the past)] ➔ but since then [Subject + V_? (up to now)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (initially)] ➔ but currently [Subject + V_?]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "[V2 (Past Simple)] ➔ [have/has + V3 (Present Perfect)]",
-                "[had + V3 (Past Perfect)] ➔ [V1 (Present Simple)]",
-                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
-                "[V2 (Past Simple)] ➔ [V2 (Past Simple)]"
+                "[V2 (initially past)] ➔ [is/are + V-ing (currently present)]",
+                "[V1 (Present)] ➔ [had + V3 (Past Perfect)]",
+                "[have/has + V3] ➔ [V2 (Past Simple)]",
+                "[will + V1] ➔ [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "in the past geçmişi (V2) işaret eder, since then (o zamandan beri) ise günümüze kadar gelen süreci (have/has V3) işaret eder."
+              explanation: "initially kelimesi geçmişi (V2) işaret ederken, currently kelimesi güncel şimdiki zamanı (Present Continuous) işaret eder."
             }
           ]
         },
