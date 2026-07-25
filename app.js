@@ -293,8 +293,8 @@ function formatGrammarFormula(formulaHtml) {
     if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
       // It's a block segment! Strip the outer brackets for styling inside
       let innerText = trimmed.substring(1, trimmed.length - 1);
-      // Highlight question mark (?) inside blocks
-      innerText = innerText.replace(/\?/g, '<span class="formula-inner-var">?</span>');
+      // Highlight question mark (?) inside blocks as dotted lines
+      innerText = innerText.replace(/\?/g, '<span class="formula-inner-var">.......</span>');
       // Highlight V1, V2, V3 etc.
       innerText = innerText.replace(/\b(V\d|V_)\b/g, '<span style="color: var(--accent-primary, #6366f1); font-weight: 800;">$1</span>');
       return `<div class="formula-block">${innerText}</div>`;
