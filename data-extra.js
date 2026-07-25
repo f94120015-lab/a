@@ -2777,118 +2777,6 @@ const chapter105Data = {
               explanation: "If yan cümlesinde 'had V3' varken ana cümlede Future ('will prevent') bulunması zaman uyumsuzluğu yaratır ve elenir."
             }
           ]
-        },
-        {
-          id: "c105_l2_ex3",
-          createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Cümle Tamamlamada Uzak Durulması Gerekenler",
-          description: "Cümle tamamlama sorularında yapısal analizle anlama girmeden önce ön eleme yapmanızı sağlayan hatalı eşleşmeler.",
-          questions: [
-            {
-              id: "c105_l2_ex3_q1",
-              type: "multiple-choice",
-              prompt: "Cümle tamamlamada ilk taraf **had V3** iken ikinci tarafta aşağıdakilerden hangisinin kullanılması **yapısal olarak elenmelidir**?",
-              options: [
-                "had V3, V0/V1, have/has V3, am-is-are (Ving), Future yapılar veya was/were Ving",
-                "Past Simple (V2)",
-                "would have V3 (Şart cümlelerinde)",
-                "would V0 (Mixed Conditionals)"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf had V3 iken ikinci tarafta had V3, V0/V1, have/has V3, am-is-are (Ving), Future yapılar veya was/were Ving gelmesi kesinlikle yanlıştır."
-            },
-            {
-              id: "c105_l2_ex3_q2",
-              type: "multiple-choice",
-              prompt: "Cümle tamamlamada ilk taraf **have/has V3** ise ikinci tarafta hangi yapının gelmesi durumunda seçenek elenir?",
-              options: [
-                "was/were V-ing",
-                "Present Simple (V1)",
-                "Future Simple (will + V1)",
-                "am-is-are"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf present perfect (have/has V3) ise ikinci tarafta past progressive (was/were Ving) gelmesi zaman uyumsuzluğu nedeniyle elenir."
-            },
-            {
-              id: "c105_l2_ex3_q3",
-              type: "multiple-choice",
-              prompt: "Cümle tamamlamada ilk taraf **am-is-are** ise ikinci tarafta hangi modal yapısı elenmelidir?",
-              options: [
-                "would",
-                "will",
-                "can",
-                "may"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf present (am-is-are) ise ikinci tarafta past conditional (would V0) yapısı elenir (Genel present-past uyumsuzluğu)."
-            },
-            {
-              id: "c105_l2_ex3_q4",
-              type: "multiple-choice",
-              prompt: "Cümle tamamlamada ilk taraf **would** ise ikinci tarafta hangi yapının gelmesi elenme sebebidir?",
-              options: [
-                "would",
-                "will",
-                "V2",
-                "had V3"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf would ise ikinci tarafta yine 'would' kullanımı elenir (İki tarafta birden would modalı yan yana gelmez)."
-            },
-            {
-              id: "c105_l2_ex3_q5",
-              type: "multiple-choice",
-              prompt: "<code>Since they have upgraded the database, the speed was increasing...</code> cümlesinin elenme nedeni nedir?",
-              options: [
-                "İlk taraf have/has V3 iken ikinci tarafta was/were Ving gelmesidir",
-                "Since kelimesinin cümlenin başında olmasıdır",
-                "Database kelimesinin çoğul olmasıdır",
-                "Ana cümlenin present perfect olması gerekirdi"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf have/has V3 iken ikinci tarafta was/were Ving elenir kuralına göre bu seçenek elenmelidir."
-            },
-            {
-              id: "c105_l2_ex3_q6",
-              type: "multiple-choice",
-              prompt: "<code>As the parameters are set correctly, the system would verify...</code> cümlesinin elenme nedeni nedir?",
-              options: [
-                "İlk taraf am-is-are iken ikinci tarafta would gelmesidir",
-                "As bağlacının zaman uyumu istemesidir",
-                "Sistem kelimesinin tekil olmasıdır",
-                "verifying kelimesinin V-ing almamasıdır"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf am-is-are ise ikinci tarafta would elenir kuralına göre bu eşleşme hatalıdır."
-            },
-            {
-              id: "c105_l2_ex3_q7",
-              type: "multiple-choice",
-              prompt: "<code>If I had known the answer, I will have told you.</code> cümlesinin elenme nedeni nedir?",
-              options: [
-                "İlk taraf had V3 iken ikinci tarafta Future/will yapısı gelmesidir",
-                "If tarafında had known yerine knew gelmesidir",
-                "told fiilinin V1 olmamasıdır",
-                "know fiilinin present perfect almasıdır"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf had V3 iken ikinci tarafta Future (will) yapısı gelmez kuralına göre elenmesi gerekir."
-            },
-            {
-              id: "c105_l2_ex3_q8",
-              type: "multiple-choice",
-              prompt: "Cümle tamamlamada <code>would buy / would move</code> seçeneğinin doğrudan elenme nedeni nedir?",
-              options: [
-                "İlk taraf would ise ikinci tarafta yine Would kullanımı elenir kuralıdır",
-                "Şart cümlelerinde buy fiilinin V3 olmamasıdır",
-                "İki tarafın da present olması zorunluluğudur",
-                "would modalının yanına fiilin yalın gelmemesidir"
-              ],
-              correctIndex: 0,
-              explanation: "İlk taraf would ise ikinci tarafta da would kullanılması yapısal bir hatadır ve doğrudan elenir."
-            }
-          ]
         }
       ]
     },
@@ -2899,344 +2787,344 @@ const chapter105Data = {
       subtitle: "Formül Denklemleri ve Mantıksal Seçimler",
       konuAnlatimi: {
         baslik: "Zaman Uyumu Denklem Çözücü",
-        teorikMantik: "Formül yapılarını birer matematiksel denklem gibi düşünerek, boş bırakılan tarafı diğer tarafın zaman çekimine göre bulma çalışmasıdır.",
-        formul: "[Yan Cümle: (Conjunction + X)] + [Ana Cümle: Y] ➔ X ve Y uyumlu olmalıdır.",
-        altinKural: "Zıtlık bağlaçlarında veya relative clause'larda bu kuralların geçerli olmadığını unutmayın."
+        teorikMantik: "Formül yapılarını birer matematiksel denklem gibi düşünerek, boş bırakılan tarafı zaman zarfları ve bağlaçların uyum kurallarına göre çözme çalışmasıdır.",
+        formul: "Zaman Bağlaçları: [When / After / Before + Past (V2)] ➔ Ana Cümle: Past (Past-Past Uyum) | Zıtlık/Neden-Sonuç: Zaman uyumu aranmaz.",
+        altinKural: "cümlede 'originally, formerly, previously, in the past, ancient, initially' varsa o kısım Past (V2) olur."
       },
       exercises: [
         {
           id: "c105_l3_ex1",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 1: Birinci Dereceden Denklemler",
-          description: "Tek değişkenli temel formül denklemleri.",
+          title: "Alıştırma 1: Zaman Bağlaçlarında Uyum Denklemleri",
+          description: "Zaman bağlaçları (when, after, before, as soon as, during, by the time) altındaki mutlak zaman uyumunu test eden formül dizilimleri.",
           questions: [
             {
               id: "c105_l3_ex1_q1",
               type: "multiple-choice",
-              prompt: "<code>[Since + X] ➔ [have/has + V3]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              prompt: "<code>[When + Subject + V_? (yesterday)] ➔ [Subject + V_? (yesterday)]</code> denkleminde zaman uyumu gereği boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Present Simple (V1)",
-                "Future Perfect (will have + V3)",
-                "Past Perfect (had + V3)"
+                "[V2 (Past Simple)] ➔ [V2 (Past Simple)]",
+                "[V1 (Present Simple)] ➔ [V2 (Past Simple)]",
+                "[V2 (Past Simple)] ➔ [will + V1 (Future Simple)]",
+                "[had + V3 (Past Perfect)] ➔ [am-is-are]"
               ],
               correctIndex: 0,
-              explanation: "Since bağlacının yanındaki eylem (X) geçmişteki başlangıç noktasını belirtmek için Past Simple (V2) olmalıdır."
+              explanation: "When zaman bağlacı olduğu için yan ve ana cümle arasında past-past uyumu (yesterday referansıyla V2 ➔ V2) aranmalıdır."
             },
             {
               id: "c105_l3_ex1_q2",
               type: "multiple-choice",
-              prompt: "<code>[By the time + V1] ➔ [ Y ]</code> denkleminde <strong>Y</strong> ne olmalıdır?",
+              prompt: "<code>[By the time + Subject + V_? (today)] ➔ [Subject + V_? (by next year)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Future Perfect (will have + V3)",
-                "Past Perfect (had + V3)",
-                "Present Perfect (have/has + V3)",
-                "Simple Past (V2)"
+                "[V1 (Present Simple)] ➔ [will have + V3 (Future Perfect)]",
+                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] ➔ [had + V3 (Past Perfect)]",
+                "[V2 (Past Simple)] ➔ [will have + V3 (Future Perfect)]"
               ],
               correctIndex: 0,
-              explanation: "By the time present simple (V1) aldığında, ana cümle gelecek sınıra kadar tamamlanacak durumu göstermek üzere Future Perfect (will have + V3) olur."
+              explanation: "By the time gelecek sınırını (by next year) işaret ettiğinde yan cümle Present (V1), ana cümle Future Perfect (will have V3) olur."
             },
             {
               id: "c105_l3_ex1_q3",
               type: "multiple-choice",
-              prompt: "<code>[Since + V2] ➔ [ Y ]</code> denkleminde <strong>Y</strong> eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              prompt: "<code>[As soon as + Subject + V_? (originally / in the past)] ➔ [Subject + V_? (previously)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Geçmişteki başlangıç noktasından günümüze uzanan süreci (Present Perfect)",
-                "Gelecekte tamamlanacak olan sınır eylemi",
-                "Geçmişten daha önce bitmiş olan eski eylemi",
-                "Şu an anlık olarak gerçekleşen eylemi"
+                "[V2] ➔ [V2]",
+                "[V1] ➔ [will + V1]",
+                "[have/has + V3] ➔ [was/were + V-ing]",
+                "[had + V3] ➔ [am-is-are]"
               ],
               correctIndex: 0,
-              explanation: "Since + V2 (Geçmiş Başlangıç Noktası) denklemini tamamlayan Y değişkeni, o andan bugüne gelen süreci (have/has V3) temsil eder."
+              explanation: "As soon as bağlacı geçmiş eylemlerde mutlak past-past uyumu ister (in the past/previously referansıyla V2 ➔ V2)."
             },
             {
               id: "c105_l3_ex1_q4",
               type: "multiple-choice",
-              prompt: "<code>[By the time + X] ➔ [had + V3]</code> denkleminde geçmiş zaman çizgisi uyumu için **X** ne olmalıdır?",
+              prompt: "<code>[Before + Subject + V_? (5 years ago)] ➔ [Subject + V_? (10 years ago)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Present Simple (V1)",
-                "Present Perfect (have/has + V3)",
-                "Future Simple (will + V1)"
+                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] ➔ [will have + V3 (Future Perfect)]",
+                "[had + V3 (Past Perfect)] ➔ [V2 (Past Simple)]",
+                "[V1 (Present Simple)] ➔ [have/has + V3 (Present Perfect)]"
               ],
               correctIndex: 0,
-              explanation: "Ana cümle geçmişte bir öncelik (had V3) belirttiğine göre, By the time yan cümlesindeki sınır eylem (X) Past Simple (V2) olmak zorundadır."
+              explanation: "Before + V2 (5 years ago) geçmişteki sınır eylemi (daha yeni olan) işaret ederken, ondan da önce tamamlanmış olan eylem (10 years ago) ana cümlede Past Perfect (had V3) olur."
             },
             {
               id: "c105_l3_ex1_q5",
               type: "multiple-choice",
-              prompt: "<code>[By the time + V2] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde nereyi işaret eder?",
+              prompt: "<code>[After + Subject + V_? (initially / past)] ➔ [Subject + V_? (later in the past)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Geçmişteki o sınır eylemden de önce tamamlanmış olanı (Past Perfect / had V3)",
-                "Gelecekte gerçekleşecek olan süreci",
-                "Şu anki eylemin tamamlandığı anı",
-                "Geçmişten bugüne gelen süreci"
+                "[had + V3 (Past Perfect)] ➔ [V2 (Past Simple)]",
+                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
+                "[have/has + V3 (Present Perfect)] ➔ [was/were + V-ing]"
               ],
               correctIndex: 0,
-              explanation: "By the time + V2 geçmiş bir sınırı simgeler. Dolayısıyla Y eylemi bu sınırdan önce biten daha eski bir geçmişi (had V3) işaret etmelidir."
+              explanation: "After geçmişteki iki eylemden önce olanını (initially ➔ had V3) alırken, sonrakini (later ➔ V2) ana cümleye yerleştirir."
             },
             {
               id: "c105_l3_ex1_q6",
               type: "multiple-choice",
-              prompt: "<code>[By the time + V1] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              prompt: "<code>[During + Noun (in the 19th century)] ➔ [Subject + V_? (formerly)]</code> denkleminde boşluğa hangisi gelmelidir?",
               options: [
-                "Gelecekteki o sınır zamana kadar çoktan bitmiş olacak durumu (Future Perfect)",
-                "Geçmişte başlayıp bitmiş olan durumu",
-                "Şu an tam olarak yapılmakta olan süreci",
-                "Gelecekteki o sınırdan sonra başlayacak olan eylemi"
+                "V2 (Past Simple)",
+                "V1 (Present Simple)",
+                "will + V1 (Future Simple)",
+                "have/has + V3 (Present Perfect)"
               ],
               correctIndex: 0,
-              explanation: "By the time + V1 gelecekteki sınır zamanı (Future Deadline) işaret eder. Y eylemi ise bu gelecekteki sınırdan önce bitmiş olacak durumu (will have V3) gösterir."
+              explanation: "19. yüzyıl ve formerly (eskiden) ifadeleri geçmişi net simgelediğinden fiil V2 (Past Simple) olmalıdır."
             },
             {
               id: "c105_l3_ex1_q7",
               type: "multiple-choice",
-              prompt: "<code>[It is time + Subject + X] ➔ [Now]</code> denkleminde **X** ne olmalıdır?",
+              prompt: "<code>[When + Subject + V_? (today / always)] ➔ [Subject + V_? (today / always)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Present Simple (V1)",
-                "Future Simple (will + V1)",
-                "Present Perfect (have/has + V3)"
+                "[V1] ➔ [V1]",
+                "[V2] ➔ [V1]",
+                "[V1] ➔ [will have + V3]",
+                "[V2] ➔ [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "It is time + Subject yapısı şu anı (now) işaret etmesine rağmen gramer kuralı olarak Past Simple (V2) alır."
+              explanation: "Genel veya her zaman tekrarlanan durumlar (always/today) present-present uyumu gerektirir (V1 ➔ V1)."
             },
             {
               id: "c105_l3_ex1_q8",
               type: "multiple-choice",
-              prompt: "<code>[Since + X] ➔ [had + V3]</code> denklemi hangi **özel durumda** kurulabilir?",
+              prompt: "<code>[By the time + Subject + V_? (2 hours ago)] ➔ [Subject + V_? (3 hours ago)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Tüm olayların geçmişte yaşanıp bittiği ve referans noktasının da past olduğu hikayeleştirmelerde",
-                "Gelecekteki varsayımsal durumlarda",
-                "Bilimsel gerçeklerin anlatımında",
-                "Şu anki güncel durumların anlatımında"
+                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] ➔ [will have + V3 (Future Perfect)]",
+                "[V2 (Past Simple)] ➔ [would + V1]",
+                "[had + V3 (Past Perfect)] ➔ [V2 (Past Simple)]"
               ],
               correctIndex: 0,
-              explanation: "Normalde Since + V2 ➔ have/has V3 kurulur. Ancak tüm anlatım geçmişte başlayıp bitmiş bir hikaye ise (Past Narrative), Present Perfect bir derece geriye giderek Past Perfect (had V3) olabilir."
+              explanation: "Geçmişteki sınır (2 hours ago ➔ V2) By the time ile verildiğinde, ondan önce biten eylem (3 hours ago) had V3 olur."
             }
           ]
         },
         {
           id: "c105_l3_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: İkinci Dereceden Denklemler",
-          description: "Çift zaman uyumu denklemleri.",
+          title: "Alıştırma 2: Geçmişi Simgeleyen Kelimeler",
+          description: "originally, ancient, old, formerly, initially, earlier, previously, in the past gibi kelimelerin Past (V2) tetikleme kuralları.",
           questions: [
             {
               id: "c105_l3_ex2_q1",
               type: "multiple-choice",
-              prompt: "<code>[By + Future Time] ➔ [ X ]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (originally)]</code> denkleminde fiilin yapısı ne olmalıdır?",
               options: [
-                "Future Perfect (will have + V3)",
-                "Future Continuous (will be + Ving)",
-                "Future Simple (will + V1)",
-                "Present Perfect (have/has + V3)"
+                "V2 (Past Simple)",
+                "V1 (Present Simple)",
+                "will + V1 (Future Simple)",
+                "have/has + V3 (Present Perfect)"
               ],
               correctIndex: 0,
-              explanation: "'By' edatı gelecek zaman ifadesi ile kullanıldığında eylemin o tarihe kadar bitmiş olacağını göstermek için Future Perfect gerektirir."
+              explanation: "originally (aslen/başlangıçta) kelimesi geçmişi simgelediği için doğrudan Past Simple (V2) gerektirir."
             },
             {
               id: "c105_l3_ex2_q2",
               type: "multiple-choice",
-              prompt: "<code>[Before + X] ➔ [had + V3]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (in the past)] ➔ [Subject + V_? (today)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Present Simple (V1)",
-                "Future Perfect (will have + V3)",
-                "Past Perfect (had + V3)"
+                "[V2 (Past Simple)] ➔ [V1 (Present Simple) / am-is-are]",
+                "[had + V3 (Past Perfect)] ➔ [would + V1]",
+                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
+                "[would + V1] ➔ [V2 (Past Simple)]"
               ],
               correctIndex: 0,
-              explanation: "Ana cümledeki Past Perfect (had V3) eyleminden sonra gelen sınır eylemi ifade etmek için Before'lu cümle Past Simple (V2) alır."
+              explanation: "in the past geçmişi (V2), today ise şimdiki zamanı (V1) işaret eder."
             },
             {
               id: "c105_l3_ex2_q3",
               type: "multiple-choice",
-              prompt: "<code>[Before + V2] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi temsil eder?",
+              prompt: "<code>[Subject + V_? (previously)]</code> denkleminde fiil yapısı ne olmalıdır?",
               options: [
-                "Geçmiş sınır eyleminden (V2) daha önce tamamlanmış olan eylemi (had + V3)",
-                "Gelecekte o sınırdan sonra yapılacak eylemi",
-                "Şu an yaşanmakta olan süreci",
-                "Geçmişten günümüze gelen etkiyi"
+                "V2 (Past Simple) veya had + V3",
+                "V1 (Present Simple)",
+                "will + V1 (Future Simple)",
+                "have/has + V3 (Present Perfect)"
               ],
               correctIndex: 0,
-              explanation: "Before + V2 geçmişteki sınır eylemdir. Y ise bu sınırdan da önce tamamlanmış olan Past Perfect (had V3) eylemidir."
+              explanation: "previously (önceden) geçmişi simgelediğinden fiil V2 veya had V3 olmalıdır."
             },
             {
               id: "c105_l3_ex2_q4",
               type: "multiple-choice",
-              prompt: "<code>[After + X] ➔ [Past Simple (V2)]</code> denkleminde zaman çizgisine göre **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (ancient times)]</code> denkleminde fiilin yapısı ne olmalıdır?",
               options: [
-                "Past Perfect (had + V3)",
-                "Present Simple (V1)",
-                "Future Perfect (will have + V3)",
-                "Present Perfect (have/has + V3)"
+                "V2 (Past Simple)",
+                "V1 (Present Simple)",
+                "have/has + V3 (Present Perfect)",
+                "will + V1 (Future Simple)"
               ],
               correctIndex: 0,
-              explanation: "After'lı yan cümle geçmişte ilk tamamlanan eylemi temsil ettiğinden, X değişkeni Past Perfect (had V3) olmalıdır."
+              explanation: "ancient times (antik çağlar) kesin geçmiş zamanı temsil ettiğinden fiil V2 olur."
             },
             {
               id: "c105_l3_ex2_q5",
               type: "multiple-choice",
-              prompt: "<code>[After + had + V3] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi temsil eder?",
+              prompt: "<code>[Subject + V_? (formerly)]</code> denkleminde fiil yapısı ne olmalıdır?",
               options: [
-                "Geçmişteki ilk eylemden (had V3) sonra gerçekleşen eylemi (Past Simple / V2)",
-                "İlk eylemle tam aynı anda devam eden süreci",
-                "Gelecekte tamamlanacak olan durumu",
-                "Şu an sürmekte olan etkiyi"
+                "V2 (Past Simple)",
+                "V1 (Present Simple / am-is-are)",
+                "will + V1 (Future Simple)",
+                "have/has + V3 (Present Perfect)"
               ],
               correctIndex: 0,
-              explanation: "After + had V3 geçmişte ilk biten olaydır. Y eylemi ise kronolojik olarak onun peşinden gelen Past Simple (V2) eylemidir."
+              explanation: "formerly (eskiden) geçmiş zamanı simgelediği için fiil V2 olmalıdır."
             },
             {
               id: "c105_l3_ex2_q6",
               type: "multiple-choice",
-              prompt: "<code>[While + X] ➔ [Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (initially)] ➔ but [Subject + V_? (now)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Continuous (was/were + V-ing)",
-                "Present Simple (V1)",
-                "Past Perfect (had + V3)",
-                "Future Simple (will + V1)"
+                "[V2 (Past Simple)] ➔ [V1 (Present Simple)]",
+                "[V1 (Present Simple)] ➔ [V2 (Past Simple)]",
+                "[will + V1] ➔ [would + V1]",
+                "[have/has + V3] ➔ [had + V3]"
               ],
               correctIndex: 0,
-              explanation: "While geçmişte devam eden bir süreci (was/were + Ving) işaret eder. Ana cümledeki V2 ise bu süreci aniden kesen eylemdir."
+              explanation: "initially (başlangıçta ➔ V2), now (şimdi ➔ V1) zaman çizgisi geçişini gösterir."
             },
             {
               id: "c105_l3_ex2_q7",
               type: "multiple-choice",
-              prompt: "<code>[While + was/were + V-ing] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              prompt: "<code>[Subject + V_? (old / earlier years)]</code> denkleminde fiilin yapısı ne olmalıdır?",
               options: [
-                "Süreç devam ederken onu bölen/kesen anlık eylemi (Past Simple / V2)",
-                "Sürecin kendisinden önce başlayıp bitmiş olan durumu",
-                "Gelecekte yapılacak planlı durumu",
-                "Şu anki genel durumu"
+                "V2 (Past Simple)",
+                "V1 (Present Simple)",
+                "will + V1",
+                "have/has + V3"
               ],
               correctIndex: 0,
-              explanation: "While ile ifade edilen geçmişteki süreç devam ederken gerçekleşen anlık kesinti eylemi (Y) Past Simple (V2) olur."
+              explanation: "old / earlier years geçmişi simgelediği için V2 tercih edilmelidir."
             },
             {
               id: "c105_l3_ex2_q8",
               type: "multiple-choice",
-              prompt: "<code>[By + Past Time (e.g. By 1990)] ➔ [ X ]</code> denkleminde **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (in the past)] ➔ but since then [Subject + V_? (up to now)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Perfect (had + V3)",
-                "Simple Past (V2)",
-                "Present Perfect (have/has + V3)",
-                "Future Perfect (will have + V3)"
+                "[V2 (Past Simple)] ➔ [have/has + V3 (Present Perfect)]",
+                "[had + V3 (Past Perfect)] ➔ [V1 (Present Simple)]",
+                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
+                "[V2 (Past Simple)] ➔ [V2 (Past Simple)]"
               ],
               correctIndex: 0,
-              explanation: "By + geçmiş zaman ifadesi, geçmişteki o sınıra kadar bitmiş olan eylemleri anlatmak için Past Perfect (had V3) formülünü gerektirir."
+              explanation: "in the past geçmişi (V2) işaret eder, since then (o zamandan beri) ise günümüze kadar gelen süreci (have/has V3) işaret eder."
             }
           ]
         },
         {
           id: "c105_l3_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Denklem Final Sınavı",
-          description: "İleri düzey zaman denklem eşleşmeleri.",
+          title: "Alıştırma 3: Zaman Uyumu Aranmayan Yapılar",
+          description: "Because, although, however, and bağlaçları ile Relative Clause yapılarında zaman uyumu zorunluluğunun olmaması.",
           questions: [
             {
               id: "c105_l3_ex3_q1",
               type: "multiple-choice",
-              prompt: "<code>[Until + X] ➔ [didn't + V1]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (ancient times)] + [because] + [Subject + V_? (today)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2) veya Past Perfect (had + V3)",
-                "Present Simple (V1) veya Future Simple (will + V1)",
-                "Present Perfect (have/has + V3) veya Future Perfect",
-                "Past Continuous (was/were + Ving) veya Past Perfect"
+                "[V2 (Past Simple)] + because + [V1 (Present Simple) / have-has + V3]",
+                "[V2 (Past Simple)] + because + [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] + because + [V2 (Past Simple)]",
+                "[will + V1 (Future)] + because + [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "Ana cümle geçmişte olumsuz bir durum (didn't V1) olduğunda, 'Until'li yan cümle Past Simple (V2) veya önceliği vurgulamak için Past Perfect (had V3) alabilir."
+              explanation: "because sebep-sonuç bağlacı olduğu için iki taraf arasında zaman uyumu zorunluluğu yoktur (ancient times ➔ V2, today ➔ V1)."
             },
             {
               id: "c105_l3_ex3_q2",
               type: "multiple-choice",
-              prompt: "<code>[As soon as + V2] ➔ [ Y ]</code> denkleminde ardışık ani eylemi belirtmek için **Y** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (originally)] + [although] + [Subject + V_? (now)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Past Perfect (had + V3)",
-                "Present Simple (V1)",
-                "Future Simple (will + V1)"
+                "[V2 (Past Simple)] + although + [V1 (Present Simple) / am-is-are]",
+                "[V2 (Past Simple)] + although + [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] + although + [will have + V3]",
+                "[would + V1] + although + [V2 (Past Simple)]"
               ],
               correctIndex: 0,
-              explanation: "As soon as ile arka arkaya hemen gerçekleşen geçmişteki iki eylem için hem yan hem ana cümle Past Simple (V2) alabilir."
+              explanation: "although zıtlık bağlacı olduğundan zaman uyumu zorunlu değildir (originally ➔ V2, now ➔ V1)."
             },
             {
               id: "c105_l3_ex3_q3",
               type: "multiple-choice",
-              prompt: "<code>[No sooner + X] ➔ [than + Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (today)] + [however] + [Subject + V_? (previously)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "had + Subject + V3 (Devrik Past Perfect)",
-                "Subject + had + V3 (Düz Past Perfect)",
-                "Subject + V2 (Past Simple)",
-                "Subject + V1 (Present Simple)"
+                "[V1 / am-is-are] + however + [V2 (Past Simple)]",
+                "[V2 (Past Simple)] + however + [V1 (Present Simple)]",
+                "[will + V1] + however + [would + V1]",
+                "[had + V3 (Past Perfect)] + however + [am-is-are]"
               ],
               correctIndex: 0,
-              explanation: "No sooner cümleye devriklik katar. Bu nedenle X yapısı 'had + Subject + V3' (Devrik Past Perfect) olmalıdır."
+              explanation: "however ile bağlanan cümlelerde zaman uyumu aranmaz (today ➔ V1, previously ➔ V2)."
             },
             {
               id: "c105_l3_ex3_q4",
               type: "multiple-choice",
-              prompt: "<code>[No sooner + had + S + V3] ➔ [ Y ]</code> denkleminde **Y** yapısı hangisiyle başlamalıdır?",
+              prompt: "<code>[Subject + V_? (5 years ago)] + [and] + [Subject + V_? (today)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "than + Subject + Past Simple (V2)",
-                "when + Subject + Past Simple (V2)",
-                "before + Subject + Past Simple (V2)",
-                "that + Subject + Past Simple (V2)"
+                "[V2 (Past Simple)] + and + [V1 (Present Simple) / am-is-are]",
+                "[V2 (Past Simple)] + and + [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] + and + [will + V1]",
+                "[had + V3 (Past Perfect)] + and + [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "No sooner yapısı 'than' bağlacıyla eşleşerek ana cümleyi (Past Simple - V2) bağlar."
+              explanation: "and bağlacı farklı zaman dilimlerini (5 years ago ve today) bağlıyorsa zaman uyumu aranmaz."
             },
             {
               id: "c105_l3_ex3_q5",
               type: "multiple-choice",
-              prompt: "<code>[Hardly + X] ➔ [when + Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (today)] + [who / which / that (Relative Clause)] + [Subject + V_? (in the past)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "had + Subject + V3 (Devrik Past Perfect)",
-                "Subject + had + V3 (Düz Past Perfect)",
-                "Subject + V2 (Past Simple)",
-                "Subject + V1 (Present Simple)"
+                "[V1 (Present Simple) / am-is-are] + [Relative Clause] + [V2 (Past Simple)]",
+                "[V2 (Past Simple)] + [Relative Clause] + [will + V1]",
+                "[had + V3 (Past Perfect)] + [Relative Clause] + [am-is-are]",
+                "[V1 (Present Simple)] + [Relative Clause] + [will have + V3]"
               ],
               correctIndex: 0,
-              explanation: "Hardly devrik yapı kurduğu için X kısmı 'had + Subject + V3' olmalıdır."
+              explanation: "Relative Clause (sıfat cümlecikleri) niteledikleri isme bağlı olarak bağımsız zaman alabilir, zaman uyumu aranmaz."
             },
             {
               id: "c105_l3_ex3_q6",
               type: "multiple-choice",
-              prompt: "<code>[As soon as + X] ➔ [Past Simple (V2)]</code> denkleminde ardışık olay için **X** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (in the past)] + [although] + [Subject + V_? (now / today)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Future Simple (will + V1)",
-                "Present Perfect (have/has + V3)",
-                "Present Simple (V1)"
+                "[V2 (Past Simple)] + although + [V1 (Present Simple)]",
+                "[V2 (Past Simple)] + although + [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] + although + [would + V1]",
+                "[had + V3 (Past Perfect)] + although + [will + V1]"
               ],
               correctIndex: 0,
-              explanation: "As soon as geçmişteki iki hızlı ardışık olayı bağlarken her iki taraf da Past Simple (V2) şeklinde kurulabilir."
+              explanation: "Zıtlık bağlaçlarında (although vb.) zaman uyumu zorunluluğu yoktur."
             },
             {
               id: "c105_l3_ex3_q7",
               type: "multiple-choice",
-              prompt: "<code>[Just as + was/were + V-ing] ➔ [ Y ]</code> denkleminde süreci bölen ani eylemi göstermek için **Y** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (originally)] + [because] + [Subject + V_? (always / generic)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Past Simple (V2)",
-                "Present Simple (V1)",
-                "Future Simple (will + V1)",
-                "Present Perfect (have/has + V3)"
+                "[V2 (Past Simple)] + because + [V1 (Present Simple)]",
+                "[V2 (Past Simple)] + because + [had + V3 (Past Perfect)]",
+                "[V1 (Present Simple)] + because + [will have + V3]",
+                "[had + V3 (Past Perfect)] + because + [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "Just as yan cümlesindeki süreci tam o esnada bölen ani durum (Y) Past Simple (V2) ile ifade edilir."
+              explanation: "because bağlacında zaman uyumu aranmadığından geçmiş referansı (originally ➔ V2) ile genel referans (generic ➔ V1) yan yana gelebilir."
             },
             {
               id: "c105_l3_ex3_q8",
               type: "multiple-choice",
-              prompt: "<code>[Once + Present Simple (V1)] ➔ [ Y ]</code> denkleminde zaman uyumu açısından **Y** ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (today)] + [who / which / that (Relative Clause)] + [Subject + V_? (originally / early years)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "Future Simple (will + V1) veya Present Simple (V1)",
-                "Past Simple (V2) veya Past Perfect (had + V3)",
-                "Present Perfect (have/has + V3) veya Past Perfect",
-                "Past Continuous (was/were + Ving)"
+                "[V1 (Present Simple) / am-is-are] + [Relative Clause] + [V2 (Past Simple)]",
+                "[V2 (Past Simple)] + [Relative Clause] + [V1 (Present Simple)]",
+                "[had + V3 (Past Perfect)] + [Relative Clause] + [will + V1]",
+                "[will + V1] + [Relative Clause] + [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "Once zaman bağlacı olarak yan cümlesinde Present Simple (V1) aldığında, ana cümle gelecek (will + V1) ya da genel bir durum (V1) alarak zaman uyumunu sağlar."
+              explanation: "Relative Clause içerisinde geçmiş (originally ➔ V2) kullanımı, ana cümledeki present (today ➔ V1) ile uyum zorunluluğuna tabi değildir."
             }
           ]
         }
