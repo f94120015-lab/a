@@ -2235,6 +2235,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Since + Past Simple (V2) yapısı, ana cümlede daima Present Perfect (have/has + V3) yapısını gerektirir."
+            },
+            {
+              id: "c105_l1_ex1_q3",
+              type: "multiple-choice",
+              prompt: "<code>Since</code> bağlacının yanındaki yan cümle, zaman çizgisi üzerinde aşağıdakilerden hangisini işaret eder?",
+              options: [
+                "Geçmişteki spesifik bir başlangıç noktasını (Past Point / V2)",
+                "Gelecekteki tahmini bir zaman sınırını (Future Deadline)",
+                "Şu anda devam etmekte olan bir süreci (Ongoing Process)",
+                "Geçmişteki eylemin öncesindeki başka bir geçmişi (Older Past)"
+              ],
+              correctIndex: 0,
+              explanation: "Since bağlacından sonra gelen yan cümle (Since + V2), eylemin geçmişte başladığı kesin başlangıç noktasını temsil eder."
+            },
+            {
+              id: "c105_l1_ex1_q4",
+              type: "multiple-choice",
+              prompt: "<code>Since</code> yan cümlesi geçmişteki başlangıç noktasını işaret ederken, **ana cümle** zaman çizgisi üzerinde hangi periyodu kapsar?",
+              options: [
+                "Geçmişteki o başlangıç noktasından günümüze (ŞİMDİ) kadar olan süreci",
+                "Gelecekte eylemin biteceği son sınıra kadar olan süreci",
+                "Sadece geçmişte başlayıp biten anlık eylemleri",
+                "Gelecekteki tekrarlanacak alışkanlıkları"
+              ],
+              correctIndex: 0,
+              explanation: "Since'li cümle geçmişteki başlangıç noktasını (V2) işaret ederken, ana cümle bu noktadan günümüze kadar uzanan süreci (Present Perfect) temsil eder."
+            },
+            {
+              id: "c105_l1_ex1_q5",
+              type: "multiple-choice",
+              prompt: "<code>By the time</code> bağlacı temel işlev olarak zaman ilişkilerinde neyi işaret eder?",
+              options: [
+                "Bir eylemin diğerinden önce tamamlandığı son sınırı (Deadline / Limit)",
+                "İki eylemin aynı anda paralel olarak devam ettiğini",
+                "Eylemin geçmişte başlayıp günümüzde hala sürdüğünü",
+                "Gelecekte yapılma ihtimali olan varsayımsal bir eylemi"
+              ],
+              correctIndex: 0,
+              explanation: "By the time, '-e kadar / -diğinde' anlamıyla bir eylemin tamamlanması gereken son zaman sınırını (deadline) temsil eder."
+            },
+            {
+              id: "c105_l1_ex1_q6",
+              type: "multiple-choice",
+              prompt: "<code>By the time + Past Simple (V2)</code> yan cümlesi geçmişteki sınır eylemi işaret ettiğine göre, ana cümle zaman çizgisinde **nereyi** işaret eder?",
+              options: [
+                "Bu geçmiş sınırdan da önce tamamlanmış olan eylemi (Older Past)",
+                "Gelecekte bu sınırdan sonra başlayacak olan eylemi",
+                "Şu anda devam etmekte olan güncel durumu",
+                "Geçmişte başlayıp hala devam eden süreci"
+              ],
+              correctIndex: 0,
+              explanation: "Geçmişteki bir zaman sınırına (V2) kadar tamamlanmış olan daha eski bir geçmiş eylemi anlatmak için Past Perfect (had + V3) kullanılır."
+            },
+            {
+              id: "c105_l1_ex1_q7",
+              type: "multiple-choice",
+              prompt: "<code>By the time + Present Simple (V1)</code> yan cümlesi **gelecekteki** bir zaman sınırını işaret ettiğinde, ana cümle neyi işaret eder?",
+              options: [
+                "Gelecekteki o sınırdan önce tamamlanmış olacak süreci (will have + V3)",
+                "Geçmişte çoktan tamamlanmış olan süreci",
+                "Şu an tam gerçekleşmekte olan eylemi",
+                "Gelecekteki o sınırdan sonra başlayacak olan ani durumu"
+              ],
+              correctIndex: 0,
+              explanation: "Gelecekteki bir zaman sınırına (V1) ulaşıldığında çoktan tamamlanmış olacak eylemleri ifade etmek için Future Perfect (will have + V3) formülü kullanılır."
+            },
+            {
+              id: "c105_l1_ex1_q8",
+              type: "multiple-choice",
+              prompt: "<code>It is (high) time + Subject + Past Simple (V2)</code> kalıbının zaman çizgisi üzerindeki işlevi nedir?",
+              options: [
+                "Şimdiki zamanda yapılması gereken ama gecikmiş olan durumları belirtmek",
+                "Geçmişte yapılmış ve bitmiş gerçek eylemleri listelemek",
+                "Gelecekte yapılması planlanan resmi eylemleri göstermek",
+                "Geçmişte başlayıp geleceğe kadar sürecek alışkanlıkları tanımlamak"
+              ],
+              correctIndex: 0,
+              explanation: "It is (high) time yapısı anlamca şimdiki zamanı (now) işaret etmesine rağmen, gecikmişlik/serzeniş bildirdiği için gramer olarak Past Simple (V2) yapısıyla kurulur (Unreal Present)."
             }
           ]
         },
@@ -2269,6 +2347,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Hardly / Scarcely yapısı 'when' (bazen 'before') ile tamamlanır ve ardından Past Simple (V2) gelir."
+            },
+            {
+              id: "c105_l1_ex2_q3",
+              type: "multiple-choice",
+              prompt: "<code>No sooner ... than</code> ve <code>Hardly ... when</code> kalıpları zaman çizgisi üzerinde hangi ilişkiyi işaret eder?",
+              options: [
+                "Geçmişte bir eylemin hemen ardından (neredeyse eş zamanlı) diğerinin gerçekleştiğini",
+                "İki eylemin arasında uzun bir zaman boşluğu bulunduğunu",
+                "İlk eylemin ikinci eylemi tamamen engellediğini",
+                "İkinci eylemin gelecekte bir gün olacağını"
+              ],
+              correctIndex: 0,
+              explanation: "Bu kalıplar, geçmişteki iki eylemin birbirinin hemen peşisıra, aralarında zaman boşluğu olmadan gerçekleştiğini belirtir."
+            },
+            {
+              id: "c105_l1_ex2_q4",
+              type: "multiple-choice",
+              prompt: "<code>Before + Past Simple (V2)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
+              options: [
+                "Geçmişte gerçekleşen daha yeni olan eylemi (Past Deadline / Sınır Eylem)",
+                "Geçmişte her şeyden önce gerçekleşen ilk eylemi",
+                "Gelecekte gerçekleşecek ilk eylemi",
+                "Şu an sürmekte olan eylemin başlangıcını"
+              ],
+              correctIndex: 0,
+              explanation: "Before'lu cümle geçmişteki iki olaydan daha sonra olanı (V2) işaret eder. Ana cümle ise ondan da önce tamamlanmış olanı (had + V3) gösterir."
+            },
+            {
+              id: "c105_l1_ex2_q5",
+              type: "multiple-choice",
+              prompt: "<code>After + Past Perfect (had + V3)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
+              options: [
+                "Geçmişteki iki olaydan önce gerçekleşmiş olanını (Older Past)",
+                "Geçmişteki olaylardan sonra olanını",
+                "Gelecekte gerçekleşecek süreci",
+                "Şu anki sonuç durumunu"
+              ],
+              correctIndex: 0,
+              explanation: "After'lı yan cümle geçmişte ilk tamamlanan eylemi (had V3) işaret ederken, ana cümle ondan sonra olan eylemi (V2) gösterir."
+            },
+            {
+              id: "c105_l1_ex2_q6",
+              type: "multiple-choice",
+              prompt: "Zaman uyumunda <code>After + had + V3</code> ile <code>Before + V2</code> kalıplarının zaman çizgisi üzerindeki kronolojik ilişkisi nasıldır?",
+              options: [
+                "İkisi de kronolojik olarak geçmişteki aynı olay sırasını (1. eylem ➔ 2. eylem) temsil eder",
+                "After eylemin gelecekteki sınırını, Before geçmişteki başlangıcını temsil eder",
+                "Before eylemin şu anki durumunu, After gelecekteki durumunu gösterir",
+                "İkisi arasında hiçbir kronolojik benzerlik yoktur"
+              ],
+              correctIndex: 0,
+              explanation: "After + had V3 (1. eylem) ➔ V2 (2. eylem) ile Before + V2 (2. eylem) ➔ had V3 (1. eylem) kronolojik olarak tamamen aynı olay dizilimini ifade eder."
+            },
+            {
+              id: "c105_l1_ex2_q7",
+              type: "multiple-choice",
+              prompt: "<code>As of + Future Time (e.g. As of 2030)</code> ifadesinin yanındaki cümlede neden **Future Perfect** tercih edilir?",
+              options: [
+                "Belirtilen gelecek tarihi itibarıyla eylemin çoktan tamamlanmış olacağını işaret ettiği için",
+                "Eylemin o tarihte başlayacağını bildirdiği için",
+                "Eylemin geçmişte kalacağını kesinleştirdiği için",
+                "Şimdiki zamanda devam ettiğini gösterdiği için"
+              ],
+              correctIndex: 0,
+              explanation: "As of / By + gelecek zaman ifadeleri, o tarih geldiğinde eylemin bitmiş/tamamlanmış olacağını (Future Perfect) işaret eder."
+            },
+            {
+              id: "c105_l1_ex2_q8",
+              type: "multiple-choice",
+              prompt: "<code>Until + Past Simple (V2)</code> yan cümlesi zaman çizgisi üzerinde neyi simgeler?",
+              options: [
+                "Geçmişteki eylemin sürdüğü son noktayı / zaman sınırını",
+                "Eylemin gelecekteki başlangıç noktasını",
+                "Şu an devam eden bir eylemin kesintiye uğradığı anı",
+                "Geçmişteki eylemin hiçbir zaman gerçekleşmediğini"
+              ],
+              correctIndex: 0,
+              explanation: "Until + V2, geçmişte bir durum veya eylemin devam ettiği en son sınırı (o ana kadar) temsil etmek için kullanılır."
             }
           ]
         },
@@ -2303,6 +2459,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Before'lu cümle geçmişteki sınır eylemi (V2) belirttiğinde, ondan önce tamamlanmış olan eylemi belirtmek için ana cümlede Past Perfect (had V3) tercih edilir."
+            },
+            {
+              id: "c105_l1_ex3_q3",
+              type: "multiple-choice",
+              prompt: "<code>While + Past Continuous (was/were + Ving)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
+              options: [
+                "Geçmişte belirli bir süre boyunca devam eden arka plan eylemini (Process)",
+                "Geçmişte anlık olarak olup biten tekil bir eylemi",
+                "Gelecekte kesinlikle yapılacak olan bir planı",
+                "Şu anda her gün tekrarlanan genel bir alışkanlığı"
+              ],
+              correctIndex: 0,
+              explanation: "While + Past Continuous, geçmişte belli bir zaman aralığında sürmekte olan bir eylemi veya süreci (process) işaret eder."
+            },
+            {
+              id: "c105_l1_ex3_q4",
+              type: "multiple-choice",
+              prompt: "<code>While + Past Continuous</code> yapısı kullanılırken, **ana cümlenin** Past Simple (V2) olması neyi işaret eder?",
+              options: [
+                "Devam eden o süreci aniden bölen/kesen kısa bir eylemi",
+                "Sürecin daha da uzun sürdüğünü",
+                "Eylemin geleceğe sarktığını",
+                "Eylemin geçmişten de önce bittiğini"
+              ],
+              correctIndex: 0,
+              explanation: "While'lı cümlenin (was/were Ving) devam ettiği sırada gerçekleşen anlık kesinti eylemleri Past Simple (V2) ile ifade edilir."
+            },
+            {
+              id: "c105_l1_ex3_q5",
+              type: "multiple-choice",
+              prompt: "<code>Just as + Past Continuous</code> yan cümlesi kullanıldığında, zaman çizgisi üzerinde nasıl bir ilişki oluşur?",
+              options: [
+                "Tam bir eylem gerçekleştiği anda başka bir eylemin onunla çakıştığını",
+                "İki eylem arasında çok uzun yıllar olduğunu",
+                "Eylemlerin hiçbir şekilde birbiriyle karşılaşmadığını",
+                "İlk eylemin gelecekte, ikincisinin geçmişte olduğunu"
+              ],
+              correctIndex: 0,
+              explanation: "Just as, 'tam o esnada' anlamına gelerek, devam eden bir eylemle tam o anda çakışan ani bir başka eylemin zaman çizgisi üzerindeki anlık kesişimini işaret eder."
+            },
+            {
+              id: "c105_l1_ex3_q6",
+              type: "multiple-choice",
+              prompt: "<code>As soon as + Past Simple (V2) ➔ Past Simple (V2)</code> formülü ne tür bir zaman ilişkisini temsil eder?",
+              options: [
+                "Geçmişte biri biter bitmez diğeri başlayan ardışık eylemleri",
+                "Şu anda alışkanlık olarak yapılan işleri",
+                "Gelecekte uzun sürecek olan paralel planları",
+                "Geçmişte birbirini hiçbir şekilde etkilemeyen bağımsız olayları"
+              ],
+              correctIndex: 0,
+              explanation: "As soon as + V2 ➔ V2 yapısı, geçmişte bir olay bittiği anda (hemen peşinden) diğer olayın başladığını gösterir."
+            },
+            {
+              id: "c105_l1_ex3_q7",
+              type: "multiple-choice",
+              prompt: "Zaman uyumunda <code>When + Past Simple (V2) ➔ Past Simple (V2)</code> formülü neyi işaret edebilir?",
+              options: [
+                "Geçmişte bir eylemin diğerini tetiklediği ardışık durumları",
+                "Genel bilimsel doğruları",
+                "Gelecekte eş zamanlı yürüyecek süreçleri",
+                "Şu an yaşanmakta olan bir anı"
+              ],
+              correctIndex: 0,
+              explanation: "When + V2 ➔ V2 yapısı, geçmişte bir eylem olduğunda (veya olduğunun hemen ardından) gerçekleşen diğer eylemi anlatır."
+            },
+            {
+              id: "c105_l1_ex3_q8",
+              type: "multiple-choice",
+              prompt: "<code>By the time + Present Simple (V1)</code> denkleminin ana cümlesinde neden <strong>Present Perfect (have/has + V3)</strong> kullanılmaz?",
+              options: [
+                "Çünkü By the time geleceğe yönelik bir sınırı işaret eder, Present Perfect ise geçmişten bugüne gelen süreci anlatır",
+                "Çünkü By the time sadece geçmişte kullanılabilir",
+                "Çünkü Present Perfect sadece zıtlık bağlaçlarında kullanılır",
+                "Çünkü Present Perfect'ten sonra sadece V2 gelmelidir"
+              ],
+              correctIndex: 0,
+              explanation: "By the time + V1 gelecekteki bir zaman sınırını (deadline) temsil eder. Present Perfect geçmişe/bugüne baktığı için bu gelecekteki sınırla uyum sağlayamaz; yerine Future Perfect gerekir."
             }
           ]
         }
@@ -2351,6 +2585,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Zaman bağlacı alan yan cümlelerin içinde (when, as soon as, after, by the time vb.) gelecek zaman belirten 'will' yapısı kullanılamaz."
+            },
+            {
+              id: "c105_l2_ex1_q3",
+              type: "multiple-choice",
+              prompt: "<code>Since + Present Perfect (have/has + V3) ➔ Past Simple (V2)</code> formülündeki hata nedir?",
+              options: [
+                "Formülün iki tarafı yer değiştirmelidir: Since'ten sonra V2 gelmeli, ana cümle Present Perfect olmalıdır",
+                "Since'ten sonra Past Perfect gelmelidir",
+                "İki taraf da Past Simple (V2) olmalıdır",
+                "Since bağlacı Present Perfect ile hiç kullanılmaz"
+              ],
+              correctIndex: 0,
+              explanation: "Since kuralında 'başlangıç noktası' olan yan cümle V2 (Past Simple) olmalıdır. Süreç bildiren ana cümle ise Present Perfect olmalıdır."
+            },
+            {
+              id: "c105_l2_ex1_q4",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki <code>Since</code> kurgularından hangisi **zaman çizgisi mantığına** aykırıdır ve hatalıdır?",
+              options: [
+                "Since + Present Simple (V1) ➔ Present Simple (V1)",
+                "Since + Past Simple (V2) ➔ Present Perfect (have/has + V3)",
+                "Since + Past Simple (V2) ➔ Present Perfect Continuous",
+                "Since + Past Simple (V2) ➔ Past Perfect (had + V3) [Zaman Kayması Olmadan]"
+              ],
+              correctIndex: 0,
+              explanation: "Since, zaman bağlacı olarak geçmişteki bir başlangıç noktasını işaret eder. Bu nedenle yan cümlede V1 (Present Simple) kullanılması zaman çizgisi mantığına aykırıdır."
+            },
+            {
+              id: "c105_l2_ex1_q5",
+              type: "multiple-choice",
+              prompt: "<code>By the time + Past Simple (V2) ➔ will have + V3</code> dizilimindeki hata nedir?",
+              options: [
+                "Geçmiş sınır (V2) ile gelecek süreç (will have V3) bir arada kullanılarak zaman uyumu bozulmuştur",
+                "By the time'dan sonra Past Simple gelemez",
+                "will have V3 yerine had V3 gelmelidir ve bu doğrudur",
+                "Geçmiş sınır yerine Present Simple gelmelidir"
+              ],
+              correctIndex: 0,
+              explanation: "By the time geçmiş bir sınırı (V2) işaret ediyorsa, ana cümle o sınırdan daha önce tamamlanmış olan Past Perfect (had + V3) olmalıdır. Future Perfect (will have V3) geleceği işaret ettiği için uyum bozulur."
+            },
+            {
+              id: "c105_l2_ex1_q6",
+              type: "multiple-choice",
+              prompt: "<code>By the time + Subject + will + V1 ➔ will have + V3</code> formülündeki yapısal hata nedir?",
+              options: [
+                "By the time yan cümlesinin içine gelecek zaman (will) getirilmiştir",
+                "Ana cümlede Future Perfect kullanılması yanlıştır",
+                "Yan cümlede V1 kullanılması gerekirdi",
+                "By the time zıtlık bağlacı gibi davranmalıdır"
+              ],
+              correctIndex: 0,
+              explanation: "Zaman bağlaçlarının (By the time dahil) yan cümle bloğu içerisine gelecek zaman yardımcı fiili (will, shall, be going to) yazılamaz."
+            },
+            {
+              id: "c105_l2_ex1_q7",
+              type: "multiple-choice",
+              prompt: "<code>After + Past Simple (V2) ➔ will have + V3</code> diziliminin elenme sebebi nedir?",
+              options: [
+                "Geçmişteki eylemden sonrasını anlatırken gelecek zaman uyumu kurulamayacağı için",
+                "After'dan sonra sadece had V3 gelebildiği için",
+                "Ana cümle sadece Past Simple olabildiği için",
+                "After bağlacı zaman uyumu istemediği için"
+              ],
+              correctIndex: 0,
+              explanation: "Geçmişe ait bir bağlaç (After + V2) ile başlayan cümlede, ana cümle gelecek zamanı işaret eden 'will have + V3' olamaz."
+            },
+            {
+              id: "c105_l2_ex1_q8",
+              type: "multiple-choice",
+              prompt: "<code>Before + Past Perfect (had + V3) ➔ Past Simple (V2)</code> formülündeki mantıksal hata nedir?",
+              options: [
+                "Before yan cümlesi daha yeni eylemi (V2) işaret etmelidir, öncelik ana cümlede (had V3) olmalıdır",
+                "Before'dan sonra V1 gelmelidir",
+                "Ana cümle Present Perfect olmalıdır",
+                "İki taraf da Past Perfect olmalıdır"
+              ],
+              correctIndex: 0,
+              explanation: "Before, '-den önce' demektir. Dolayısıyla Before yan cümlesi geçmişteki sınır eylemi (daha yeni olan - V2) temsil etmelidir. Daha önce olan (öncelikli) eylem ise ana cümlede (had V3) yer almalıdır."
             }
           ]
         },
@@ -2385,6 +2697,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Zıtlık bağlaçları (Although, Even though, But vb.) farklı zaman dilimlerini birbirine bağlayabildiği için zaman uyumu zorunlu değildir."
+            },
+            {
+              id: "c105_l2_ex2_q3",
+              type: "multiple-choice",
+              prompt: "<code>It is high time + Subject + Present Simple (V1)</code> yapısı neden bir dil bilgisi hatasıdır?",
+              options: [
+                "Çünkü bu kalıp gerçek dışı durum (subjunctive) mantığıyla geçmiş zaman (V2) gerektirir",
+                "Çünkü bu kalıptan sonra sadece Future Simple gelebilir",
+                "Çünkü özne varsa sadece Past Perfect kullanılabilir",
+                "Çünkü 'It is high time' kalıbı asla özne almaz"
+              ],
+              correctIndex: 0,
+              explanation: "It is (high) time + Subject yapısı, şimdiki zamanda yapılması gereken ama gecikmiş olan eylemleri sitemkar/vurgulu anlatmak için Past Simple (V2) formülüyle kurulur."
+            },
+            {
+              id: "c105_l2_ex2_q4",
+              type: "multiple-choice",
+              prompt: "<code>As soon as + will + V1 ➔ will + V1</code> yapısı sınavlarda neden elenmelidir?",
+              options: [
+                "Çünkü zaman bağlacı olan yan cümlede 'will' kullanılamaz",
+                "Çünkü as soon as zıtlık bildirir",
+                "Çünkü ana cümlede will yerine had V3 gelmelidir",
+                "Çünkü iki tarafın da past continuous olması gerekir"
+              ],
+              correctIndex: 0,
+              explanation: "Zaman bağlacının içinde (yan cümlede) gelecek zaman belirteçleri (will/would) yer alamaz. Uyumlu olması için yan cümle V1 veya V2 olmalıdır."
+            },
+            {
+              id: "c105_l2_ex2_q5",
+              type: "multiple-choice",
+              prompt: "<code>No sooner + had + Subject + V3 ➔ when + Subject + V2</code> formülündeki hata nedir?",
+              options: [
+                "No sooner yapısı 'when' ile değil, 'than' bağlacı ile tamamlanmalıdır",
+                "Yan cümlede had V3 yerine have V3 kullanılmalıdır",
+                "Ana cümlede V2 yerine V1 gelmelidir",
+                "No sooner yapısı devrik olamaz"
+              ],
+              correctIndex: 0,
+              explanation: "No sooner... than yapısı bir bütündür. 'When' kelimesi 'Hardly/Scarcely' yapılarında kullanılır."
+            },
+            {
+              id: "c105_l2_ex2_q6",
+              type: "multiple-choice",
+              prompt: "<code>Hardly + had + Subject + V3 ➔ than + Subject + V2</code> yapısındaki hata nedir?",
+              options: [
+                "Hardly yapısı 'than' ile değil, 'when' veya 'before' ile tamamlanmalıdır",
+                "Hardly'den sonra had V3 gelemez",
+                "Hardly yapısı devrik kurulamaz",
+                "Ana cümle V1 olmalıdır"
+              ],
+              correctIndex: 0,
+              explanation: "Hardly / Scarcely yapısı 'when' (veya 'before') ile eşleşir. 'Than' ise 'No sooner' ile kullanılır."
+            },
+            {
+              id: "c105_l2_ex2_q7",
+              type: "multiple-choice",
+              prompt: "<code>While + had + V3 ➔ Past Simple (V2)</code> formülü neden hatalı kabul edilir?",
+              options: [
+                "While bir süreç (-ing) veya eş zamanlı durum bildirmelidir; tamamlanmışlık bildiren had V3 While ile uyumsuzdur",
+                "While'dan sonra sadece V1 gelmelidir",
+                "While yan cümlesi gelecek zaman olmalıdır",
+                "Ana cümle Present Perfect olmalıdır"
+              ],
+              correctIndex: 0,
+              explanation: "While, eş zamanlı devam eden süreçleri (Past Continuous: was/were Ving) işaret eder. Öncelik-sonralık bildiren Past Perfect (had V3) While ile anlamsal olarak uyuşmaz."
+            },
+            {
+              id: "c105_l2_ex2_q8",
+              type: "multiple-choice",
+              prompt: "Zaman uyumuna tabi olan bağlaçlar listesinde hangisinin bulunması **hatalıdır**?",
+              options: [
+                "Because (Neden-Sonuç Bağlacı)",
+                "As soon as (Zaman Bağlacı)",
+                "When (Zaman Bağlacı)",
+                "By the time (Zaman Bağlacı)"
+              ],
+              correctIndex: 0,
+              explanation: "Zaman bağlaçlarında (when, as soon as, by the time vb.) katı zaman uyumu aranırken, sebep-sonuç bağlaçlarında (because, since-çünkü, as-çünkü) zaman uyumu aranmaz."
             }
           ]
         },
@@ -2419,6 +2809,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "It is (high) time kalıbında, özne geldiğinde fiil daima Past Simple (V2) şeklinde çekimlenir."
+            },
+            {
+              id: "c105_l2_ex3_q3",
+              type: "multiple-choice",
+              prompt: "<code>By + Past Time (e.g. By 2015) ➔ will have + V3</code> dizilimindeki hata nedir?",
+              options: [
+                "Geçmiş sınır (2015) belirtildiği için Future Perfect yerine Past Perfect (had + V3) kullanılmalıydı",
+                "By yerine Since yazılmalıydı",
+                "will have V3 yerine have/has V3 yazılmalıydı",
+                "By + Past Time ifadesi sadece Past Simple (V2) alabilir"
+              ],
+              correctIndex: 0,
+              explanation: "By + Geçmiş zaman ifadesi, geçmişteki bir sınıra kadar tamamlanmış olan eylemleri anlatır ve Past Perfect (had + V3) gerektirir. Future Perfect (will have V3) ise gelecek için geçerlidir."
+            },
+            {
+              id: "c105_l2_ex3_q4",
+              type: "multiple-choice",
+              prompt: "<code>As of + Past Time (e.g. As of last week) ➔ will + V1</code> formülündeki hata nedir?",
+              options: [
+                "Geçmiş referansı (last week) nedeniyle gelecek zaman (will) kullanımı yanlıştır",
+                "As of yerine Until yazılmalıdır",
+                "will + V1 yerine have/has + V3 yazılmalıdır",
+                "As of yapısı sadece gelecek zamanla kullanılabilir"
+              ],
+              correctIndex: 0,
+              explanation: "Geçmiş bir zaman referansıyla (last week) gelecek zaman modalı (will) zaman uyumunu tamamen bozar."
+            },
+            {
+              id: "c105_l2_ex3_q5",
+              type: "multiple-choice",
+              prompt: "<code>Once + will + V1 ➔ Present Simple (V1)</code> dizilimindeki yapısal hata nedir?",
+              options: [
+                "Once bir zaman bağlacı olduğu için yan cümlede gelecek zaman (will) alamaz",
+                "Ana cümlede will V1 olmalıdır",
+                "Once bağlacından sonra sadece past perfect gelir",
+                "Once zıtlık bağlacı olduğu için zaman uyumu gerekmez"
+              ],
+              correctIndex: 0,
+              explanation: "Once (-ince / yapar yapmaz) bir zaman bağlacıdır ve yan cümlesinin içine gelecek zaman yardımcı fiili (will/would) alamaz."
+            },
+            {
+              id: "c105_l2_ex3_q6",
+              type: "multiple-choice",
+              prompt: "<code>Just as + Past Simple (V2) ➔ Past Continuous (was/were + Ving)</code> yapısı neden tercih edilmez?",
+              options: [
+                "Çünkü Just as'in hemen yanındaki cümle (yan cümle) süreç bildiren Past Continuous almalıdır",
+                "Çünkü Just as'den sonra sadece Present Simple gelir",
+                "Çünkü iki taraf da Past Simple olmalıdır",
+                "Just as bağlacı zaman uyumuna tabi değildir"
+              ],
+              correctIndex: 0,
+              explanation: "Just as (-iken / tam o anda) devam eden bir süreci vurgulamak için yan cümlesinde Past Continuous (was/were + Ving) tercih eder. Eş zamanlı olarak gerçekleşen ani eylem ise ana cümlede (V2) olur."
+            },
+            {
+              id: "c105_l2_ex3_q7",
+              type: "multiple-choice",
+              prompt: "İki cümle <code>and</code> bağlacıyla bağlanmış ve ortak bir özneye sahipse, fiillerin tenseleriyle ilgili **altın kural** nedir?",
+              options: [
+                "Fiillerin zamanları (tenseleri) birbirine paralel/ortak olmak zorundadır",
+                "İlk fiil past ise ikincisi kesinlikle future olmalıdır",
+                "Zaman uyumu aranmaz",
+                "İlk fiil aktif, ikincisi edilgen olmalıdır"
+              ],
+              correctIndex: 0,
+              explanation: "Ortak özneli ardışık cümleler 'and' ile bağlandığında, eylemler aynı zaman çizgisi üzerinde paralel olmalıdır (Tense Paralelliği)."
+            },
+            {
+              id: "c105_l2_ex3_q8",
+              type: "multiple-choice",
+              prompt: "Sıfat cümlelerinde (<code>Relative Clauses</code>) zaman uyumuyla ilgili hangi kural geçerlidir?",
+              options: [
+                "Ana cümle ile sıfat cümleciği arasında zaman uyumu zorunluluğu yoktur",
+                "İki tarafın da kesinlikle aynı tense olması gerekir",
+                "Sıfat cümleciğinin içinde asla past tense kullanılamaz",
+                "Sıfat cümleciği sadece gelecek zaman olabilir"
+              ],
+              correctIndex: 0,
+              explanation: "Relative Clause (Sıfat Cümlecikleri) niteledikleri isme göre bağımsız zaman dilimlerini ifade edebileceğinden, ana cümleyle aralarında zaman uyumu zorunluluğu yoktur."
             }
           ]
         }
@@ -2467,6 +2935,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "By the time present simple (V1) aldığında, ana cümle gelecek sınıra kadar tamamlanacak durumu göstermek üzere Future Perfect (will have + V3) olur."
+            },
+            {
+              id: "c105_l3_ex1_q3",
+              type: "multiple-choice",
+              prompt: "<code>[Since + V2] ➔ [ Y ]</code> denkleminde <strong>Y</strong> eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              options: [
+                "Geçmişteki başlangıç noktasından günümüze uzanan süreci (Present Perfect)",
+                "Gelecekte tamamlanacak olan sınır eylemi",
+                "Geçmişten daha önce bitmiş olan eski eylemi",
+                "Şu an anlık olarak gerçekleşen eylemi"
+              ],
+              correctIndex: 0,
+              explanation: "Since + V2 (Geçmiş Başlangıç Noktası) denklemini tamamlayan Y değişkeni, o andan bugüne gelen süreci (have/has V3) temsil eder."
+            },
+            {
+              id: "c105_l3_ex1_q4",
+              type: "multiple-choice",
+              prompt: "<code>[By the time + X] ➔ [had + V3]</code> denkleminde geçmiş zaman çizgisi uyumu için **X** ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Present Simple (V1)",
+                "Present Perfect (have/has + V3)",
+                "Future Simple (will + V1)"
+              ],
+              correctIndex: 0,
+              explanation: "Ana cümle geçmişte bir öncelik (had V3) belirttiğine göre, By the time yan cümlesindeki sınır eylem (X) Past Simple (V2) olmak zorundadır."
+            },
+            {
+              id: "c105_l3_ex1_q5",
+              type: "multiple-choice",
+              prompt: "<code>[By the time + V2] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde nereyi işaret eder?",
+              options: [
+                "Geçmişteki o sınır eylemden de önce tamamlanmış olanı (Past Perfect / had V3)",
+                "Gelecekte gerçekleşecek olan süreci",
+                "Şu anki eylemin tamamlandığı anı",
+                "Geçmişten bugüne gelen süreci"
+              ],
+              correctIndex: 0,
+              explanation: "By the time + V2 geçmiş bir sınırı simgeler. Dolayısıyla Y eylemi bu sınırdan önce biten daha eski bir geçmişi (had V3) işaret etmelidir."
+            },
+            {
+              id: "c105_l3_ex1_q6",
+              type: "multiple-choice",
+              prompt: "<code>[By the time + V1] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              options: [
+                "Gelecekteki o sınır zamana kadar çoktan bitmiş olacak durumu (Future Perfect)",
+                "Geçmişte başlayıp bitmiş olan durumu",
+                "Şu an tam olarak yapılmakta olan süreci",
+                "Gelecekteki o sınırdan sonra başlayacak olan eylemi"
+              ],
+              correctIndex: 0,
+              explanation: "By the time + V1 gelecekteki sınır zamanı (Future Deadline) işaret eder. Y eylemi ise bu gelecekteki sınırdan önce bitmiş olacak durumu (will have V3) gösterir."
+            },
+            {
+              id: "c105_l3_ex1_q7",
+              type: "multiple-choice",
+              prompt: "<code>[It is time + Subject + X] ➔ [Now]</code> denkleminde **X** ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Present Simple (V1)",
+                "Future Simple (will + V1)",
+                "Present Perfect (have/has + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "It is time + Subject yapısı şu anı (now) işaret etmesine rağmen gramer kuralı olarak Past Simple (V2) alır."
+            },
+            {
+              id: "c105_l3_ex1_q8",
+              type: "multiple-choice",
+              prompt: "<code>[Since + X] ➔ [had + V3]</code> denklemi hangi **özel durumda** kurulabilir?",
+              options: [
+                "Tüm olayların geçmişte yaşanıp bittiği ve referans noktasının da past olduğu hikayeleştirmelerde",
+                "Gelecekteki varsayımsal durumlarda",
+                "Bilimsel gerçeklerin anlatımında",
+                "Şu anki güncel durumların anlatımında"
+              ],
+              correctIndex: 0,
+              explanation: "Normalde Since + V2 ➔ have/has V3 kurulur. Ancak tüm anlatım geçmişte başlayıp bitmiş bir hikaye ise (Past Narrative), Present Perfect bir derece geriye giderek Past Perfect (had V3) olabilir."
             }
           ]
         },
@@ -2501,6 +3047,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Ana cümledeki Past Perfect (had V3) eyleminden sonra gelen sınır eylemi ifade etmek için Before'lu cümle Past Simple (V2) alır."
+            },
+            {
+              id: "c105_l3_ex2_q3",
+              type: "multiple-choice",
+              prompt: "<code>[Before + V2] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi temsil eder?",
+              options: [
+                "Geçmiş sınır eyleminden (V2) daha önce tamamlanmış olan eylemi (had + V3)",
+                "Gelecekte o sınırdan sonra yapılacak eylemi",
+                "Şu an yaşanmakta olan süreci",
+                "Geçmişten günümüze gelen etkiyi"
+              ],
+              correctIndex: 0,
+              explanation: "Before + V2 geçmişteki sınır eylemdir. Y ise bu sınırdan da önce tamamlanmış olan Past Perfect (had V3) eylemidir."
+            },
+            {
+              id: "c105_l3_ex2_q4",
+              type: "multiple-choice",
+              prompt: "<code>[After + X] ➔ [Past Simple (V2)]</code> denkleminde zaman çizgisine göre **X** ne olmalıdır?",
+              options: [
+                "Past Perfect (had + V3)",
+                "Present Simple (V1)",
+                "Future Perfect (will have + V3)",
+                "Present Perfect (have/has + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "After'lı yan cümle geçmişte ilk tamamlanan eylemi temsil ettiğinden, X değişkeni Past Perfect (had V3) olmalıdır."
+            },
+            {
+              id: "c105_l3_ex2_q5",
+              type: "multiple-choice",
+              prompt: "<code>[After + had + V3] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi temsil eder?",
+              options: [
+                "Geçmişteki ilk eylemden (had V3) sonra gerçekleşen eylemi (Past Simple / V2)",
+                "İlk eylemle tam aynı anda devam eden süreci",
+                "Gelecekte tamamlanacak olan durumu",
+                "Şu an sürmekte olan etkiyi"
+              ],
+              correctIndex: 0,
+              explanation: "After + had V3 geçmişte ilk biten olaydır. Y eylemi ise kronolojik olarak onun peşinden gelen Past Simple (V2) eylemidir."
+            },
+            {
+              id: "c105_l3_ex2_q6",
+              type: "multiple-choice",
+              prompt: "<code>[While + X] ➔ [Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              options: [
+                "Past Continuous (was/were + V-ing)",
+                "Present Simple (V1)",
+                "Past Perfect (had + V3)",
+                "Future Simple (will + V1)"
+              ],
+              correctIndex: 0,
+              explanation: "While geçmişte devam eden bir süreci (was/were + Ving) işaret eder. Ana cümledeki V2 ise bu süreci aniden kesen eylemdir."
+            },
+            {
+              id: "c105_l3_ex2_q7",
+              type: "multiple-choice",
+              prompt: "<code>[While + was/were + V-ing] ➔ [ Y ]</code> denklemindeki **Y** eylemi zaman çizgisi üzerinde neyi işaret eder?",
+              options: [
+                "Süreç devam ederken onu bölen/kesen anlık eylemi (Past Simple / V2)",
+                "Sürecin kendisinden önce başlayıp bitmiş olan durumu",
+                "Gelecekte yapılacak planlı durumu",
+                "Şu anki genel durumu"
+              ],
+              correctIndex: 0,
+              explanation: "While ile ifade edilen geçmişteki süreç devam ederken gerçekleşen anlık kesinti eylemi (Y) Past Simple (V2) olur."
+            },
+            {
+              id: "c105_l3_ex2_q8",
+              type: "multiple-choice",
+              prompt: "<code>[By + Past Time (e.g. By 1990)] ➔ [ X ]</code> denkleminde **X** ne olmalıdır?",
+              options: [
+                "Past Perfect (had + V3)",
+                "Simple Past (V2)",
+                "Present Perfect (have/has + V3)",
+                "Future Perfect (will have + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "By + geçmiş zaman ifadesi, geçmişteki o sınıra kadar bitmiş olan eylemleri anlatmak için Past Perfect (had V3) formülünü gerektirir."
             }
           ]
         },
@@ -2535,6 +3159,84 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "As soon as ile arka arkaya hemen gerçekleşen geçmişteki iki eylem için hem yan hem ana cümle Past Simple (V2) alabilir."
+            },
+            {
+              id: "c105_l3_ex3_q3",
+              type: "multiple-choice",
+              prompt: "<code>[No sooner + X] ➔ [than + Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              options: [
+                "had + Subject + V3 (Devrik Past Perfect)",
+                "Subject + had + V3 (Düz Past Perfect)",
+                "Subject + V2 (Past Simple)",
+                "Subject + V1 (Present Simple)"
+              ],
+              correctIndex: 0,
+              explanation: "No sooner cümleye devriklik katar. Bu nedenle X yapısı 'had + Subject + V3' (Devrik Past Perfect) olmalıdır."
+            },
+            {
+              id: "c105_l3_ex3_q4",
+              type: "multiple-choice",
+              prompt: "<code>[No sooner + had + S + V3] ➔ [ Y ]</code> denkleminde **Y** yapısı hangisiyle başlamalıdır?",
+              options: [
+                "than + Subject + Past Simple (V2)",
+                "when + Subject + Past Simple (V2)",
+                "before + Subject + Past Simple (V2)",
+                "that + Subject + Past Simple (V2)"
+              ],
+              correctIndex: 0,
+              explanation: "No sooner yapısı 'than' bağlacıyla eşleşerek ana cümleyi (Past Simple - V2) bağlar."
+            },
+            {
+              id: "c105_l3_ex3_q5",
+              type: "multiple-choice",
+              prompt: "<code>[Hardly + X] ➔ [when + Past Simple (V2)]</code> denkleminde **X** ne olmalıdır?",
+              options: [
+                "had + Subject + V3 (Devrik Past Perfect)",
+                "Subject + had + V3 (Düz Past Perfect)",
+                "Subject + V2 (Past Simple)",
+                "Subject + V1 (Present Simple)"
+              ],
+              correctIndex: 0,
+              explanation: "Hardly devrik yapı kurduğu için X kısmı 'had + Subject + V3' olmalıdır."
+            },
+            {
+              id: "c105_l3_ex3_q6",
+              type: "multiple-choice",
+              prompt: "<code>[As soon as + X] ➔ [Past Simple (V2)]</code> denkleminde ardışık olay için **X** ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Future Simple (will + V1)",
+                "Present Perfect (have/has + V3)",
+                "Present Simple (V1)"
+              ],
+              correctIndex: 0,
+              explanation: "As soon as geçmişteki iki hızlı ardışık olayı bağlarken her iki taraf da Past Simple (V2) şeklinde kurulabilir."
+            },
+            {
+              id: "c105_l3_ex3_q7",
+              type: "multiple-choice",
+              prompt: "<code>[Just as + was/were + V-ing] ➔ [ Y ]</code> denkleminde süreci bölen ani eylemi göstermek için **Y** ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Present Simple (V1)",
+                "Future Simple (will + V1)",
+                "Present Perfect (have/has + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "Just as yan cümlesindeki süreci tam o esnada bölen ani durum (Y) Past Simple (V2) ile ifade edilir."
+            },
+            {
+              id: "c105_l3_ex3_q8",
+              type: "multiple-choice",
+              prompt: "<code>[Once + Present Simple (V1)] ➔ [ Y ]</code> denkleminde zaman uyumu açısından **Y** ne olmalıdır?",
+              options: [
+                "Future Simple (will + V1) veya Present Simple (V1)",
+                "Past Simple (V2) veya Past Perfect (had + V3)",
+                "Present Perfect (have/has + V3) veya Past Perfect",
+                "Past Continuous (was/were + Ving)"
+              ],
+              correctIndex: 0,
+              explanation: "Once zaman bağlacı olarak yan cümlesinde Present Simple (V1) aldığında, ana cümle gelecek (will + V1) ya da genel bir durum (V1) alarak zaman uyumunu sağlar."
             }
           ]
         }
