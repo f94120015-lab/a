@@ -19259,32 +19259,7 @@ const rawTopics = [
     ],
     "originalNumLessons": 3
   },
-  {
-    "id": 33,
-    "startLessonId": 200,
-    "originalIndex": 6,
-    "title": "Okuma Parçaları 1",
-    "desc": "",
-    "icon": "📖",
-    "numLessons": 2,
-    "formulas": [
-      {
-        "formula": "Systematic Academic Reading",
-        "example": "The modern platform migration is a complex endeavor...",
-        "description": "<strong>Metin:</strong><br><br>The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress.<br><br>Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies.<br><br>A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation.<br><br>During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues."
-      },
-      {
-        "formula": "Advanced Systematic Reading",
-        "example": "During the initial phase of the research, the leader of the team organized a crucial meeting...",
-        "description": "<strong>Metin:</strong><br><br>During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative.<br><br>There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity.<br><br>Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute.<br><br>At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity."
-      }
-    ],
-    "subtitles": [
-      "Genel Okuma Metinleri 1",
-      "Genel Okuma Metinleri 2"
-    ],
-    "originalNumLessons": 2
-  },
+
   {
     "id": 9,
     "startLessonId": 23,
@@ -82255,3576 +82230,7 @@ const unitSentencesMap = {
       ]
     }
   },
-  "33": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u33l135ex1",
-          "title": "Alıştırma 1: Metin İçi Öbek Eşleştirme",
-          "description": "Paragraftaki kritik yapıları Türkçe anlamlarıyla eşleştirin.",
-          "questions": [
-            {
-              "id": "u33l135_ex1_q1",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>modern platform migration</strong> is a <strong>complex endeavor</strong>. The <strong>primary cloud database</strong> <strong>remains highly unstable</strong>.\"",
-              "pairs": [
-                {
-                  "left": "modern platform migration",
-                  "right": "modern platform geçişi"
-                },
-                {
-                  "left": "complex endeavor",
-                  "right": "karmaşık bir girişim"
-                },
-                {
-                  "left": "primary cloud database",
-                  "right": "birincil bulut veritabanı"
-                },
-                {
-                  "left": "remains highly unstable",
-                  "right": "son derece kararsız durumda kalmaya devam ediyor"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q2",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"This <strong>persistent server degradation</strong> is an <strong>unexpected system latency</strong>. <strong>Critical configuration components</strong> are currently <strong>under severe simulation stress</strong>.\"",
-              "pairs": [
-                {
-                  "left": "persistent server degradation",
-                  "right": "sürekli sunucu bozulması"
-                },
-                {
-                  "left": "unexpected system latency",
-                  "right": "beklenmedik sistem gecikmesi"
-                },
-                {
-                  "left": "critical configuration components",
-                  "right": "kritik konfigürasyon bileşenleri"
-                },
-                {
-                  "left": "under severe simulation stress",
-                  "right": "ciddi simülasyon stresi altında"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q3",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>Data formatting discrepancies</strong> <strong>inside the repository</strong> <strong>trigger extensive compilation errors</strong>.\"",
-              "pairs": [
-                {
-                  "left": "data formatting discrepancies",
-                  "right": "veri biçimlendirme tutarsızlıkları"
-                },
-                {
-                  "left": "inside the repository",
-                  "right": "deponun içerisinde"
-                },
-                {
-                  "left": "trigger extensive compilation errors",
-                  "right": "kapsamlı derleme hatalarını tetikler"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q4",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>sudden collapse</strong> of the <strong>central infrastructure</strong> <strong>requires immediate technical modifications</strong>.\"",
-              "pairs": [
-                {
-                  "left": "sudden collapse",
-                  "right": "ani çöküş"
-                },
-                {
-                  "left": "central infrastructure",
-                  "right": "merkezi altyapı"
-                },
-                {
-                  "left": "requires immediate technical modifications",
-                  "right": "acil teknik değişiklikler gerektirir"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q5",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"Many of the <strong>unverified datasets</strong> <strong>produce serious validation anomalies</strong>.\"",
-              "pairs": [
-                {
-                  "left": "unverified datasets",
-                  "right": "doğrulanmamış veri kümeleri"
-                },
-                {
-                  "left": "produce serious validation anomalies",
-                  "right": "ciddi doğrulama anomalileri üretir"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q6",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"A <strong>complete lack</strong> of <strong>regulatory compliance</strong> <strong>leads to catastrophic database corruption</strong>.\"",
-              "pairs": [
-                {
-                  "left": "complete lack",
-                  "right": "tamamen eksik olması"
-                },
-                {
-                  "left": "regulatory compliance",
-                  "right": "yasal uyumluluk"
-                },
-                {
-                  "left": "leads to catastrophic database corruption",
-                  "right": "yıkıcı veritabanı bozulmasına yol açar"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q7",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>Severe runtime bottlenecks</strong> from <strong>loose query loops</strong> <strong>contribute directly</strong> to <strong>transaction failures</strong>.\"",
-              "pairs": [
-                {
-                  "left": "severe runtime bottlenecks",
-                  "right": "ciddi çalışma zamanı darboğazları"
-                },
-                {
-                  "left": "loose query loops",
-                  "right": "gevşek sorgu döngüleri"
-                },
-                {
-                  "left": "contribute directly",
-                  "right": "doğrudan katkıda bulunur"
-                },
-                {
-                  "left": "transaction failures",
-                  "right": "işlem başarısızlıkları"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q8",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>Vulnerable digital profiles</strong> in <strong>restricted partitions</strong> under <strong>anonymous external entries</strong> <strong>display rapid file degradation</strong>.\"",
-              "pairs": [
-                {
-                  "left": "vulnerable digital profiles",
-                  "right": "savunmasız dijital profiller"
-                },
-                {
-                  "left": "restricted partitions",
-                  "right": "sınırlandırılmış bölümler"
-                },
-                {
-                  "left": "anonymous external entries",
-                  "right": "anonim harici girişler"
-                },
-                {
-                  "left": "display rapid file degradation",
-                  "right": "hızlı dosya bozulması gösterir"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q9",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>During the stress diagnostic phase</strong> <strong>before the network synchronization</strong>, technicians isolated the <strong>unsealed core container</strong>.\"",
-              "pairs": [
-                {
-                  "left": "during the stress diagnostic phase",
-                  "right": "stres teşhis aşaması sırasında"
-                },
-                {
-                  "left": "before the network synchronization",
-                  "right": "ağ senkronizasyonundan önce"
-                },
-                {
-                  "left": "unsealed core container",
-                  "right": "mühürlenmemiş çekirdek konteyner"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q10",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"There are <strong>several architecture constraints</strong> <strong>complicating the restoration cycle</strong>. There is <strong>significant memory leakage</strong>...\"",
-              "pairs": [
-                {
-                  "left": "several architecture constraints",
-                  "right": "çeşitli mimari kısıtlamalar"
-                },
-                {
-                  "left": "complicating the restoration cycle",
-                  "right": "kurtarma döngüsünü karmaşıklaştıran"
-                },
-                {
-                  "left": "significant memory leakage",
-                  "right": "önemli bellek sızıntısı"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q11",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"...<strong>occurring across decentralised computing nodes</strong>. <strong>Cross-disciplinary engineering groups</strong> must finalize the baseline documentation to <strong>resolve these structural issues</strong>.\"",
-              "pairs": [
-                {
-                  "left": "occurring across decentralised computing nodes",
-                  "right": "merkezi olmayan hesaplama düğümleri genelinde meydana gelen"
-                },
-                {
-                  "left": "cross-disciplinary engineering groups",
-                  "right": "disiplinler arası mühendislik grupları"
-                },
-                {
-                  "left": "resolve these structural issues",
-                  "right": "bu yapısal sorunları çözmek"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q12",
-              "type": "matching",
-              "prompt": "Aşağıdaki akademik kelime öbeklerini Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "comprehensive migration strategy",
-                  "right": "kapsamlı geçiş stratejisi"
-                },
-                {
-                  "left": "mitigating system failure",
-                  "right": "sistem hatasını hafifletme"
-                },
-                {
-                  "left": "optimizing computing resources",
-                  "right": "hesaplama kaynaklarını optimize etme"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q13",
-              "type": "matching",
-              "prompt": "Aşağıdaki akademik kelime öbeklerini Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "unauthorized access attempts",
-                  "right": "yetkisiz erişim girişimleri"
-                },
-                {
-                  "left": "maintaining data integrity",
-                  "right": "veri bütünlüğünü koruma"
-                },
-                {
-                  "left": "resolving hardware anomalies",
-                  "right": "donanım anomalilerini çözme"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q14",
-              "type": "matching",
-              "prompt": "Aşağıdaki akademik kelime öbeklerini Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "highly scalable network",
-                  "right": "son derece ölçeklenebilir ağ"
-                },
-                {
-                  "left": "facilitating real-time communication",
-                  "right": "gerçek zamanlı iletişimi kolaylaştıran"
-                },
-                {
-                  "left": "undergoing rigorous stress testing",
-                  "right": "titiz stres testinden geçen"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex1_q15",
-              "type": "matching",
-              "prompt": "Aşağıdaki akademik kelime öbeklerini Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "deploying updated software modules",
-                  "right": "güncellenmiş yazılım modüllerini dağıtma"
-                },
-                {
-                  "left": "exhibiting significant performance lag",
-                  "right": "belirgin performans gecikmesi sergileyen"
-                },
-                {
-                  "left": "formulating alternative recovery plans",
-                  "right": "alternatif kurtarma planları formüle eden"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex2",
-          "title": "Alıştırma 2: Katmanlı Çeviri İnşası",
-          "description": "Karmaşık cümleleri aşama aşama çevirerek birleştirin.",
-          "questions": [
-            {
-              "id": "u33l135_ex2_q1",
-              "type": "word-bank",
-              "prompt": "Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
-              "translation": "Cross-disciplinary engineering groups must finalize the baseline documentation...",
-              "words": [
-                "Disiplinler",
-                "arası",
-                "mühendislik",
-                "grupları",
-                "temel",
-                "dokümantasyonu",
-                "tamamlamalıdır",
-                "hızlıca",
-                "çözmek",
-                "için"
-              ],
-              "correctOrder": [
-                "Disiplinler",
-                "arası",
-                "mühendislik",
-                "grupları",
-                "temel",
-                "dokümantasyonu",
-                "tamamlamalıdır"
-              ],
-              "enSentence": "Cross-disciplinary engineering groups must finalize the baseline documentation...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q2",
-              "type": "word-bank",
-              "prompt": "Cümlenin amaç bildiren kısmını Türkçe karşılığına çevirin:",
-              "translation": "...to resolve these structural issues.",
-              "words": [
-                "bu",
-                "yapısal",
-                "sorunları",
-                "çözmek",
-                "için",
-                "tamamlayarak",
-                "belgelemek"
-              ],
-              "correctOrder": [
-                "bu",
-                "yapısal",
-                "sorunları",
-                "çözmek",
-                "için"
-              ],
-              "enSentence": "...to resolve these structural issues.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q3",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "words": [
-                "Disiplinler",
-                "arası",
-                "mühendislik",
-                "grupları,",
-                "bu",
-                "yapısal",
-                "sorunları",
-                "çözmek",
-                "için",
-                "temel",
-                "dokümantasyonu",
-                "tamamlamalıdır.",
-                "hızlıca",
-                "çözerek"
-              ],
-              "correctOrder": [
-                "Disiplinler",
-                "arası",
-                "mühendislik",
-                "grupları,",
-                "bu",
-                "yapısal",
-                "sorunları",
-                "çözmek",
-                "için",
-                "temel",
-                "dokümantasyonu",
-                "tamamlamalıdır."
-              ],
-              "enSentence": "Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q4",
-              "type": "word-bank",
-              "prompt": "Cümlenin çekirdek kısmını Türkçe karşılığına çevirin:",
-              "translation": "The sudden collapse of the central infrastructure...",
-              "words": [
-                "Merkezi",
-                "altyapının",
-                "ani",
-                "çöküşü",
-                "gerektirir",
-                "değişiklikler",
-                "sistemin"
-              ],
-              "correctOrder": [
-                "Merkezi",
-                "altyapının",
-                "ani",
-                "çöküşü"
-              ],
-              "enSentence": "The sudden collapse of the central infrastructure...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q5",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
-              "translation": "...requires immediate technical modifications.",
-              "words": [
-                "acil",
-                "teknik",
-                "değişiklikler",
-                "gerektirir",
-                "çöküşü",
-                "önemli",
-                "adımlar"
-              ],
-              "correctOrder": [
-                "acil",
-                "teknik",
-                "değişiklikler",
-                "gerektirir"
-              ],
-              "enSentence": "...requires immediate technical modifications.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q6",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "The sudden collapse of the central infrastructure requires immediate technical modifications.",
-              "words": [
-                "Merkezi",
-                "altyapının",
-                "ani",
-                "çöküşü,",
-                "acil",
-                "teknik",
-                "değişiklikler",
-                "gerektirir.",
-                "sistemin",
-                "hızlıca"
-              ],
-              "correctOrder": [
-                "Merkezi",
-                "altyapının",
-                "ani",
-                "çöküşü,",
-                "acil",
-                "teknik",
-                "değişiklikler",
-                "gerektirir."
-              ],
-              "enSentence": "The sudden collapse of the central infrastructure requires immediate technical modifications.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q7",
-              "type": "word-bank",
-              "prompt": "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
-              "translation": "Data formatting discrepancies inside the repository...",
-              "words": [
-                "Deponun",
-                "içerisindeki",
-                "veri",
-                "biçimlendirme",
-                "tutarsızlıkları",
-                "tetikler",
-                "hataları",
-                "sistem"
-              ],
-              "correctOrder": [
-                "Deponun",
-                "içerisindeki",
-                "veri",
-                "biçimlendirme",
-                "tutarsızlıkları"
-              ],
-              "enSentence": "Data formatting discrepancies inside the repository...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q8",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem ve nesne kısmını Türkçe karşılığına çevirin:",
-              "translation": "...trigger extensive compilation errors.",
-              "words": [
-                "kapsamlı",
-                "derleme",
-                "hatalarını",
-                "tetikler",
-                "tutarsızlıklar",
-                "büyük",
-                "dosya"
-              ],
-              "correctOrder": [
-                "kapsamlı",
-                "derleme",
-                "hatalarını",
-                "tetikler"
-              ],
-              "enSentence": "...trigger extensive compilation errors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q9",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "Data formatting discrepancies inside the repository trigger extensive compilation errors.",
-              "words": [
-                "Deponun",
-                "içerisindeki",
-                "veri",
-                "biçimlendirme",
-                "tutarsızlıkları,",
-                "kapsamlı",
-                "derleme",
-                "hatalarını",
-                "tetikler.",
-                "dosyaların",
-                "büyük"
-              ],
-              "correctOrder": [
-                "Deponun",
-                "içerisindeki",
-                "veri",
-                "biçimlendirme",
-                "tutarsızlıkları,",
-                "kapsamlı",
-                "derleme",
-                "hatalarını",
-                "tetikler."
-              ],
-              "enSentence": "Data formatting discrepancies inside the repository trigger extensive compilation errors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q10",
-              "type": "word-bank",
-              "prompt": "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
-              "translation": "Severe runtime bottlenecks from loose query loops...",
-              "words": [
-                "Gevşek",
-                "sorgu",
-                "döngülerinden",
-                "kaynaklanan",
-                "ciddi",
-                "çalışma",
-                "zamanı",
-                "darboğazları",
-                "doğrudan",
-                "başarısızlığa"
-              ],
-              "correctOrder": [
-                "Gevşek",
-                "sorgu",
-                "döngülerinden",
-                "kaynaklanan",
-                "ciddi",
-                "çalışma",
-                "zamanı",
-                "darboğazları"
-              ],
-              "enSentence": "Severe runtime bottlenecks from loose query loops...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q11",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
-              "translation": "...contribute directly to transaction failures.",
-              "words": [
-                "doğrudan",
-                "işlem",
-                "başarısızlıklarına",
-                "katkıda",
-                "bulunur",
-                "ciddi",
-                "darboğaz",
-                "oluşturur"
-              ],
-              "correctOrder": [
-                "doğrudan",
-                "işlem",
-                "başarısızlıklarına",
-                "katkıda",
-                "bulunur"
-              ],
-              "enSentence": "...contribute directly to transaction failures.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q12",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "Severe runtime bottlenecks from loose query loops contribute directly to transaction failures.",
-              "words": [
-                "Gevşek",
-                "sorgu",
-                "döngülerinden",
-                "kaynaklanan",
-                "ciddi",
-                "çalışma",
-                "zamanı",
-                "darboğazları,",
-                "doğrudan",
-                "işlem",
-                "başarısızlıklarına",
-                "katkıda",
-                "bulunur.",
-                "sistemin"
-              ],
-              "correctOrder": [
-                "Gevşek",
-                "sorgu",
-                "döngülerinden",
-                "kaynaklanan",
-                "ciddi",
-                "çalışma",
-                "zamanı",
-                "darboğazları,",
-                "doğrudan",
-                "işlem",
-                "başarısızlıklarına",
-                "katkıda",
-                "bulunur."
-              ],
-              "enSentence": "Severe runtime bottlenecks from loose query loops contribute directly to transaction failures.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q13",
-              "type": "word-bank",
-              "prompt": "Cümlenin varlık bildiren kısmını Türkçe karşılığına çevirin:",
-              "translation": "There are several architecture constraints...",
-              "words": [
-                "Çeşitli",
-                "mimari",
-                "kısıtlamalar",
-                "vardır",
-                "restorasyon",
-                "karmaşıklaştıran"
-              ],
-              "correctOrder": [
-                "Çeşitli",
-                "mimari",
-                "kısıtlamalar",
-                "vardır"
-              ],
-              "enSentence": "There are several architecture constraints...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q14",
-              "type": "word-bank",
-              "prompt": "Cümlenin niteleyici kısmını Türkçe karşılığına çevirin:",
-              "translation": "...complicating the restoration cycle.",
-              "words": [
-                "kurtarma",
-                "döngüsünü",
-                "karmaşıklaştıran",
-                "mimari",
-                "yapılar",
-                "kısıtlamalar"
-              ],
-              "correctOrder": [
-                "kurtarma",
-                "döngüsünü",
-                "karmaşıklaştıran"
-              ],
-              "enSentence": "...complicating the restoration cycle.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex2_q15",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "There are several architecture constraints complicating the restoration cycle.",
-              "words": [
-                "Kurtarma",
-                "döngüsünü",
-                "karmaşıklaştıran",
-                "çeşitli",
-                "mimari",
-                "kısıtlamalar",
-                "vardır.",
-                "süreçte",
-                "büyük"
-              ],
-              "correctOrder": [
-                "Kurtarma",
-                "döngüsünü",
-                "karmaşıklaştıran",
-                "çeşitli",
-                "mimari",
-                "kısıtlamalar",
-                "vardır."
-              ],
-              "enSentence": "There are several architecture constraints complicating the restoration cycle.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex3",
-          "title": "Alıştırma 3: Yanlış Çeviri Avcısı",
-          "description": "Yapısal tuzaklara düşmeden cümlenin en doğru Türkçe çevirisini bulun.",
-          "questions": [
-            {
-              "id": "u33l135_ex3_q1",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The primary cloud database remains highly unstable.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Birincil bulut veritabanı son derece kararsız kalmaya devam ediyor.",
-                "Birincil bulut veritabanı kararsızlığı son derece koruyor. (Tuzak: remains kelimesini aktif bir koruma eylemi sanma hatası)",
-                "Birincil bulut veritabanı yüksek kararsızlıkları hatırlatıyor. (Tuzak: remains kelimesini reminds ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The primary cloud database remains highly unstable.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q2",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"This persistent server degradation is an unexpected system latency.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Bu sürekli sunucu bozulması, beklenmedik bir sistem gecikmesidir.",
-                "Bu sürekli sunucu bozulması, beklenmeyen sistem genişliğidir. (Tuzak: latency kelimesini latitude/width ile karıştırma hatası)",
-                "Bu sürekli sunucu bozulmasının sistemi beklenmedik bir şekilde geciktirmesi amaçlanır. (Tuzak: is an unexpected yapısını amaç bildiren sıfat yapısı sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "This persistent server degradation is an unexpected system latency.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q3",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Critical configuration components are currently under severe simulation stress.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Kritik konfigürasyon bileşenleri şu anda ciddi simülasyon stresi altındadır.",
-                "Kritik konfigürasyon bileşenleri simülasyon stresini şu anda ciddi şekilde yönetir. (Tuzak: under stress yapısını aktif eylem sanma hatası)",
-                "Kritik konfigürasyon bileşenleri şu anda ciddi simülasyon stresini birleştirir. (Tuzak: configuration kelimesini integration/combination sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Critical configuration components are currently under severe simulation stress.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q4",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Data formatting discrepancies inside the repository trigger extensive compilation errors.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Deponun içerisindeki veri biçimlendirme tutarsızlıkları, kapsamlı derleme hatalarını tetikler.",
-                "Deponun içerisindeki veri biçimlendirme tutarsızlıkları, derleme hatalarını tetiklemek amacıyla kapsamlıdır. (Tuzak: trigger kelimesini amaç bildiren sıfat yapısı sanma hatası)",
-                "Veri biçimlendirme tutarsızlıklarının deponun içinde tetiklediği hatalar kapsamlı bir şekilde derlenir. (Tuzak: trigger kelimesini sıfat cümlesi yüklemi sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Data formatting discrepancies inside the repository trigger extensive compilation errors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q5",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Many of the unverified datasets produce serious validation anomalies.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Doğrulanmamış veri kümelerinin birçoğu ciddi doğrulama anomalileri üretir.",
-                "Doğrulanmamış veri kümelerinin birçoğu doğrulama anomalilerini ciddi şekilde doğrular. (Tuzak: validation kelimesini eylem/fiil sanma hatası)",
-                "Doğrulanmamış veri kümelerinin birçoğu ciddi doğrulama anomalilerine yol açmak için üretilir. (Tuzak: produce kelimesini edilgen amaç yapısı sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Many of the unverified datasets produce serious validation anomalies.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q6",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"A complete lack of regulatory compliance leads to catastrophic database corruption.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Yasal uyumluluğun tamamen eksik olması, yıkıcı veritabanı bozulmasına yol açar.",
-                "Yasal uyumluluğun tamamen eksik olması, veritabanını yıkıcı bir şekilde bozmak için yönlendirir. (Tuzak: leads to yapısını aktif amaç yönlendirmesi sanma hatası)",
-                "Yasal uyumluluk tamamen eksildiğinde veritabanı yıkıcı bir şekilde bozulmayı sürdürür. (Tuzak: complete lack yapısını zarf cümleciği sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "A complete lack of regulatory compliance leads to catastrophic database corruption.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q7",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Severe runtime bottlenecks from loose query loops contribute directly to transaction failures.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Gevşek sorgu döngülerinden kaynaklanan ciddi çalışma zamanı darboğazları, doğrudan işlem başarısızlıklarına katkıda bulunur.",
-                "Gevşek sorgu döngülerinden kaynaklanan ciddi çalışma zamanı darboğazları, doğrudan işlem başarısızlıklarını dağıtır. (Tuzak: contribute kelimesini distribute ile karıştırma hatası)",
-                "Gevşek sorgu döngülerinin ciddi çalışma zamanı darboğazlarına doğrudan katkıda bulunması başarısızlıkla sonuçlanır. (Tuzak: contribute ve failures ilişkisini ters kurma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Severe runtime bottlenecks from loose query loops contribute directly to transaction failures.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q8",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Sınırlandırılmış bölümlerdeki savunmasız dijital profiller, anonim harici girişler altında hızlı dosya bozulması gösterir.",
-                "Sınırlandırılmış bölümlerdeki savunmasız dijital profiller, anonim harici girişler altında dosyayı hızlıca bozmak için görüntülenir. (Tuzak: display kelimesini eylem/aktif amaç bildiren yapı sanma hatası)",
-                "Sınırlandırılmış bölümlerdeki savunmasız dijital profiller, anonim harici girişlerin altında hızlı dosya derecesini sergiler. (Tuzak: degradation kelimesini degree/grade ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q9",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Ağ senkronizasyonundan önceki stres teşhis aşaması sırasında, teknisyenler mühürlenmemiş çekirdek konteyneri izole etti.",
-                "Ağ senkronizasyonundan önceki stres teşhis aşaması sırasında, teknisyenler mühürlenmemiş çekirdek konteyneri izole etmek için çalıştılar. (Tuzak: isolated kelimesini amaç bildiren yan fiil sanma hatası)",
-                "Ağ senkronizasyonundan önceki stres teşhis aşaması sırasında, mühürlenmemiş çekirdek konteyner teknisyenleri izole etti. (Tuzak: özne ve nesneyi karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q10",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There are several architecture constraints complicating the restoration cycle.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Restorasyon döngüsünü karmaşıklaştıran çeşitli mimari kısıtlamalar vardır.",
-                "Çeşitli mimari kısıtlamalar restorasyon döngüsünü karmaşıklaştırmak için mevcuttur. (Tuzak: complicating yapısını amaç bildiren zarf sanma hatası)",
-                "Çeşitli mimari kısıtlamalar restorasyon döngüsünün karmaşıklaştığını açıklar. (Tuzak: complicating kelimesini explain sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There are several architecture constraints complicating the restoration cycle.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q11",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There is significant memory leakage occurring across decentralised computing nodes.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Merkezi olmayan hesaplama düğümleri genelinde meydana gelen önemli miktarda bellek sızıntısı vardır.",
-                "Önemli bellek sızıntıları merkezi olmayan hesaplama düğümlerini geçmek için meydana gelir. (Tuzak: occurring across yapısını amaç bildiren eylem sanma hatası)",
-                "Merkezi olmayan hesaplama düğümlerinde meydana gelen sızıntı belleği önemli ölçüde azaltır. (Tuzak: memory leakage yapısını yanlış bölme hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There is significant memory leakage occurring across decentralised computing nodes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q12",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Cross-disciplinary engineering groups must finalize the baseline documentation.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Disiplinler arası mühendislik grupları temel dokümantasyonu tamamlamalıdır.",
-                "Disiplinler arası mühendislik grupları temel dokümantasyonu tamamlamak için zorunludur. (Tuzak: must fiilini sıfat/zorunluluk ismi sanma hatası)",
-                "Disiplinler arası mühendislik grupları temel dokümantasyona son halini vermeyi amaçlar. (Tuzak: finalize kelimesini aim/plan ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Cross-disciplinary engineering groups must finalize the baseline documentation.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q13",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The modern platform migration is a complex endeavor.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Modern platform geçişi karmaşık bir girişimdir.",
-                "Modern platform geçişi karmaşık bir teslimattır. (Tuzak: endeavor kelimesini deliver/delivery ile karıştırma hatası)",
-                "Modern platform geçişinin karmaşık bir girişim olduğu varsayılır. (Tuzak: is a complex yapısını varsayım/modals sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The modern platform migration is a complex endeavor.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q14",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Many of the unverified datasets produce serious anomalies.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Doğrulanmamış veri kümelerinin birçoğu ciddi anomaliler üretir.",
-                "Doğrulanmamış veri kümeleri anomalileri doğrulamak için ciddi şekilde üretilir. (Tuzak: datasets produce yapısını edilgen amaç yapısı sanma hatası)",
-                "Doğrulanmamış veri kümeleri anomalileri ciddi bir şekilde analiz eder. (Tuzak: produce kelimesini analyze ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Many of the unverified datasets produce serious anomalies.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex3_q15",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Vulnerable digital profiles display rapid file degradation.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Savunmasız dijital profiller hızlı dosya bozulması gösterir.",
-                "Savunmasız dijital profiller dosyayı hızlıca bozmak için görüntülenir. (Tuzak: display yapısını edilgen amaç eylemi sanma hatası)",
-                "Savunmasız dijital profiller hızlı dosya derecesini sergiler. (Tuzak: degradation kelimesini derece/grade sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Vulnerable digital profiles display rapid file degradation.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex4",
-          "title": "Alıştırma 4: \"X gibi\" Yapı Klonlama",
-          "description": "Metindeki yapıların benzerlerini yeni akademik kelimelerle inşa edin.",
-          "questions": [
-            {
-              "id": "u33l135_ex4_q1",
-              "type": "matching",
-              "prompt": "Öncelikle metinden alınan yapıları doğru anlamlarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "unsealed core container",
-                  "right": "mühürlenmemiş çekirdek konteyner"
-                },
-                {
-                  "left": "persistent server degradation",
-                  "right": "sürekli sunucu bozulması"
-                },
-                {
-                  "left": "complex endeavor",
-                  "right": "karmaşık girişim"
-                },
-                {
-                  "left": "unexpected system latency",
-                  "right": "beklenmedik sistem gecikmesi"
-                }
-              ]
-            },
-            {
-              "id": "u33l135_ex4_q2",
-              "type": "word-bank",
-              "prompt": "Şimdi aynı yapıyı kullanarak öbeği Türkçe karşılığına çevirin:",
-              "translation": "unverified server databases",
-              "words": [
-                "doğrulanmamış",
-                "sunucu",
-                "veritabanları",
-                "bozulması",
-                "çekirdek"
-              ],
-              "correctOrder": [
-                "doğrulanmamış",
-                "sunucu",
-                "veritabanları"
-              ],
-              "enSentence": "unverified server databases",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q3",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "consistent network performance",
-              "words": [
-                "tutarlı",
-                "ağ",
-                "performansı",
-                "sistem",
-                "mühürlenmemiş"
-              ],
-              "correctOrder": [
-                "tutarlı",
-                "ağ",
-                "performansı"
-              ],
-              "enSentence": "consistent network performance",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q4",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "difficult undertaking",
-              "words": [
-                "zorlu",
-                "girişim",
-                "sistem",
-                "bozulma",
-                "doğrulanmış"
-              ],
-              "correctOrder": [
-                "zorlu",
-                "girişim"
-              ],
-              "enSentence": "difficult undertaking",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q5",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "unanticipated software delay",
-              "words": [
-                "öngörülemeyen",
-                "yazılım",
-                "gecikmesi",
-                "hızlı",
-                "sunucu"
-              ],
-              "correctOrder": [
-                "öngörülemeyen",
-                "yazılım",
-                "gecikmesi"
-              ],
-              "enSentence": "unanticipated software delay",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q6",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "essential system settings",
-              "words": [
-                "temel",
-                "sistem",
-                "ayarları",
-                "güvenlik",
-                "geçişi"
-              ],
-              "correctOrder": [
-                "temel",
-                "sistem",
-                "ayarları"
-              ],
-              "enSentence": "essential system settings",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q7",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "extreme testing pressure",
-              "words": [
-                "aşırı",
-                "test",
-                "baskısı",
-                "ciddi",
-                "stres"
-              ],
-              "correctOrder": [
-                "aşırı",
-                "test",
-                "baskısı"
-              ],
-              "enSentence": "extreme testing pressure",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q8",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "abrupt failure",
-              "words": [
-                "ani",
-                "arıza",
-                "çöküş",
-                "beklenmedik",
-                "yavaşlama"
-              ],
-              "correctOrder": [
-                "ani",
-                "arıza"
-              ],
-              "enSentence": "abrupt failure",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q9",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "core architecture",
-              "words": [
-                "çekirdek",
-                "mimari",
-                "merkezi",
-                "altyapı",
-                "veri"
-              ],
-              "correctOrder": [
-                "çekirdek",
-                "mimari"
-              ],
-              "enSentence": "core architecture",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q10",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "urgent system updates",
-              "words": [
-                "acil",
-                "sistem",
-                "güncellemeleri",
-                "teknik",
-                "değişiklikler"
-              ],
-              "correctOrder": [
-                "acil",
-                "sistem",
-                "güncellemeleri"
-              ],
-              "enSentence": "urgent system updates",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q11",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "severe verification issues",
-              "words": [
-                "ciddi",
-                "doğrulama",
-                "sorunları",
-                "anomali",
-                "veri"
-              ],
-              "correctOrder": [
-                "ciddi",
-                "doğrulama",
-                "sorunları"
-              ],
-              "enSentence": "severe verification issues",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q12",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "total absence",
-              "words": [
-                "tamamen",
-                "yokluk",
-                "eksiklik",
-                "yasal",
-                "uyum"
-              ],
-              "correctOrder": [
-                "tamamen",
-                "yokluk"
-              ],
-              "enSentence": "total absence",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q13",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "statutory adherence",
-              "words": [
-                "yasal",
-                "bağlılık",
-                "uyumluluk",
-                "mevzuat",
-                "kurallar"
-              ],
-              "correctOrder": [
-                "yasal",
-                "bağlılık"
-              ],
-              "enSentence": "statutory adherence",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q14",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "disastrous file damage",
-              "words": [
-                "yıkıcı",
-                "dosya",
-                "hasarı",
-                "bozulması",
-                "hızlı"
-              ],
-              "correctOrder": [
-                "yıkıcı",
-                "dosya",
-                "hasarı"
-              ],
-              "enSentence": "disastrous file damage",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l135_ex4_q15",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "distributed processing units",
-              "words": [
-                "dağıtılmış",
-                "işlem",
-                "birimleri",
-                "düğümleri",
-                "hesaplama"
-              ],
-              "correctOrder": [
-                "dağıtılmış",
-                "işlem",
-                "birimleri"
-              ],
-              "enSentence": "distributed processing units",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex5",
-          "title": "Alıştırma 5: Hız Tüneli",
-          "description": "3 saniye içinde doğru veya yanlış seçeneğini belirterek öbekleri refleks haline getirin.",
-          "questions": [
-            {
-              "id": "u33l135_ex5_q1",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "under severe simulation stress",
-              "turkishTranslation": "ciddi simülasyon stresi altında",
-              "correctAnswer": true,
-              "explanation": "under severe simulation stress tam olarak 'ciddi simülasyon stresi altında' demektir."
-            },
-            {
-              "id": "u33l135_ex5_q2",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "modern platform migration",
-              "turkishTranslation": "modern platform entegrasyonu",
-              "correctAnswer": false,
-              "explanation": "migration kelimesi 'geçiş/göç' demektir, 'entegrasyon' (integration) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q3",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "primary cloud database",
-              "turkishTranslation": "birincil bulut veritabanı",
-              "correctAnswer": true,
-              "explanation": "primary cloud database 'birincil bulut veritabanı' anlamına gelir."
-            },
-            {
-              "id": "u33l135_ex5_q4",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "remains highly unstable",
-              "turkishTranslation": "yüksek kararsızlıkları hatırlatır",
-              "correctAnswer": false,
-              "explanation": "remains kalmaya devam etmek anlamındadır, 'reminds' (hatırlatmak) ile karıştırılmamalıdır."
-            },
-            {
-              "id": "u33l135_ex5_q5",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "unexpected system latency",
-              "turkishTranslation": "beklenmedik sistem gecikmesi",
-              "correctAnswer": true,
-              "explanation": "unexpected system latency 'beklenmedik sistem gecikmesi' demektir."
-            },
-            {
-              "id": "u33l135_ex5_q6",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "inside the repository",
-              "turkishTranslation": "deponun dışında",
-              "correctAnswer": false,
-              "explanation": "inside 'içinde' demektir; 'dışında' (outside) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q7",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "requires immediate technical modifications",
-              "turkishTranslation": "acil teknik değişiklikler gerektirir",
-              "correctAnswer": true,
-              "explanation": "requires immediate technical modifications 'acil teknik değişiklikler gerektirir' anlamına gelir."
-            },
-            {
-              "id": "u33l135_ex5_q8",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "unverified datasets",
-              "turkishTranslation": "doğrulanmış veri kümeleri",
-              "correctAnswer": false,
-              "explanation": "unverified 'doğrulanmamış' demektir; 'doğrulanmış' (verified) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q9",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "complete lack of regulatory compliance",
-              "turkishTranslation": "yasal uyumluluğun tamamen eksik olması",
-              "correctAnswer": true,
-              "explanation": "complete lack of regulatory compliance 'yasal uyumluluğun tamamen eksik olması' demektir."
-            },
-            {
-              "id": "u33l135_ex5_q10",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "database corruption",
-              "turkishTranslation": "veritabanı birleştirilmesi",
-              "correctAnswer": false,
-              "explanation": "corruption 'bozulma' demektir; 'birleşme' (integration/merger) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q11",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "severe runtime bottlenecks",
-              "turkishTranslation": "ciddi çalışma zamanı darboğazları",
-              "correctAnswer": true,
-              "explanation": "severe runtime bottlenecks 'ciddi çalışma zamanı darboğazları' demektir."
-            },
-            {
-              "id": "u33l135_ex5_q12",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "contribute directly to transaction failures",
-              "turkishTranslation": "işlem başarısızlıklarını doğrudan dağıtır",
-              "correctAnswer": false,
-              "explanation": "contribute 'katkıda bulunmak' demektir; 'distribute' (dağıtmak) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q13",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "vulnerable digital profiles",
-              "turkishTranslation": "savunmasız dijital profiller",
-              "correctAnswer": true,
-              "explanation": "vulnerable digital profiles 'savunmasız dijital profiller' anlamına gelir."
-            },
-            {
-              "id": "u33l135_ex5_q14",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "unsealed core container",
-              "turkishTranslation": "mühürlenmiş çekirdek konteyner",
-              "correctAnswer": false,
-              "explanation": "unsealed 'mühürlenmemiş' demektir; 'sealed' (mühürlü) değildir."
-            },
-            {
-              "id": "u33l135_ex5_q15",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "resolve these structural issues",
-              "turkishTranslation": "bu yapısal sorunları çözmek",
-              "correctAnswer": true,
-              "explanation": "resolve these structural issues 'bu yapısal sorunları çözmek' demektir."
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex6",
-          "title": "Alıştırma 6: Ek Köprüsü",
-          "description": "İngilizce cümlenin vurgulanmış kısmını Türkçe karşılığına bağlayan en uygun eki/edatı seçin.",
-          "questions": [
-            {
-              "id": "u33l135_ex6_q1",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...bottlenecks <strong>from</strong> loose query loops...\"<br><br><strong>Türkçe:</strong> \"Gevşek sorgu döngülerinden <strong>_______</strong> ciddi çalışma zamanı darboğazları...\"",
-              "options": [
-                "kaynaklanan",
-                "dolayı",
-                "rağmen"
-              ],
-              "correctIndex": 0,
-              "explanation": "from edatı, buradaki bağlamda 'gevşek sorgu döngülerinden kaynaklanan darboğazlar' köprüsünü kurmaktadır."
-            },
-            {
-              "id": "u33l135_ex6_q2",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...migration <strong>is</strong> a complex endeavor...\"<br><br><strong>Türkçe:</strong> \"Modern platform geçişi karmaşık bir girişim<strong>_______</strong>...\"",
-              "options": [
-                "-dir",
-                "-e doğru",
-                "-den beri"
-              ],
-              "correctIndex": 0,
-              "explanation": "is yardımcı fiili, ek-fiil olan '-dir' bildirme ekini sağlar."
-            },
-            {
-              "id": "u33l135_ex6_q3",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...database <strong>remains</strong> highly unstable...\"<br><br><strong>Türkçe:</strong> \"Bulut veritabanı oldukça kararsız kal<strong>_______</strong>...\"",
-              "options": [
-                "-maya devam etmektedir",
-                "-acaktır",
-                "-malıydı"
-              ],
-              "correctIndex": 0,
-              "explanation": "remains eylemi durumun sürmesini bildirir ve '-maya devam etmektedir / kalmaktadır' anlamı verir."
-            },
-            {
-              "id": "u33l135_ex6_q4",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...discrepancies <strong>inside</strong> the repository...\"<br><br><strong>Türkçe:</strong> \"Deponun <strong>_______</strong> veri formatlama tutarsızlıkları...\"",
-              "options": [
-                "içindeki",
-                "üstündeki",
-                "sayesinde"
-              ],
-              "correctIndex": 0,
-              "explanation": "inside edatı, Türkçe isim tamlamasına '-in içindeki' sıfat yapan ek köprüsünü kurar."
-            },
-            {
-              "id": "u33l135_ex6_q5",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>under</strong> severe simulation stress...\"<br><br><strong>Türkçe:</strong> \"Ciddi simülasyon stresi <strong>_______</strong>...\"",
-              "options": [
-                "altında",
-                "yüzünden",
-                "boyunca"
-              ],
-              "correctIndex": 0,
-              "explanation": "under edatı burada mecazi bir durum bildirerek '-in altında' köprüsünü oluşturur."
-            },
-            {
-              "id": "u33l135_ex6_q6",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>trigger</strong> extensive compilation errors...\"<br><br><strong>Türkçe:</strong> \"Kapsamlı derleme hatalarını <strong>_______</strong>...\"",
-              "options": [
-                "tetikler",
-                "tetikleyerek",
-                "tetikledikten sonra"
-              ],
-              "correctIndex": 0,
-              "explanation": "trigger cümlenin ana fiili olduğu için Türkçe yüklem ekini (-ler) alır."
-            },
-            {
-              "id": "u33l135_ex6_q7",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...collapse <strong>of</strong> the central infrastructure...\"<br><br><strong>Türkçe:</strong> \"Merkezi altyapı<strong>_______</strong> ani çöküşü...\"",
-              "options": [
-                "-nın",
-                "-ya",
-                "-dan"
-              ],
-              "correctIndex": 0,
-              "explanation": "of edatı, belirtili isim tamlamasındaki '-nın' ilgi (iyelik) ekini sağlar."
-            },
-            {
-              "id": "u33l135_ex6_q8",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>leads to</strong> catastrophic database corruption...\"<br><br><strong>Türkçe:</strong> \"Yıkıcı veritabanı bozulmasına yol <strong>_______</strong>...\"",
-              "options": [
-                "açar",
-                "açtıktan sonra",
-                "açmak üzere"
-              ],
-              "correctIndex": 0,
-              "explanation": "leads to (yol açar) geniş zamanlı ana yüklemdir."
-            },
-            {
-              "id": "u33l135_ex6_q9",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>contribute</strong> directly <strong>to</strong> transaction failures...\"<br><br><strong>Türkçe:</strong> \"İşlem başarısızlıklarına doğrudan katkıda <strong>_______</strong>...\"",
-              "options": [
-                "bulunur",
-                "bulunarak",
-                "bulunmak zorundadır"
-              ],
-              "correctIndex": 0,
-              "explanation": "contribute to (katkıda bulunur) geniş zamanlı ana yüklemdir."
-            },
-            {
-              "id": "u33l135_ex6_q10",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...profiles <strong>in</strong> restricted partitions...\"<br><br><strong>Türkçe:</strong> \"Kısıtlanmış bölümler<strong>_______</strong> dijital profiller...\"",
-              "options": [
-                "-deki",
-                "-den ötürü",
-                "-e rağmen"
-              ],
-              "correctIndex": 0,
-              "explanation": "in edatı, ismi niteleyen bir sıfat öbeği kurduğu için Türkçe çeviride '-deki' sıfat köprüsüne dönüşür."
-            },
-            {
-              "id": "u33l135_ex6_q11",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>under</strong> anonymous external entries...\"<br><br><strong>Türkçe:</strong> \"Anonim dış girişler <strong>_______</strong>...\"",
-              "options": [
-                "altında",
-                "öncesinde",
-                "sayesinde"
-              ],
-              "correctIndex": 0,
-              "explanation": "under edatı '-in altında' durumunu belirtir."
-            },
-            {
-              "id": "u33l135_ex6_q12",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...phase <strong>before</strong> the network synchronization...\"<br><br><strong>Türkçe:</strong> \"Ağ senkronizasyonundan <strong>_______</strong>...\"",
-              "options": [
-                "önceki",
-                "sonraki",
-                "boyunca"
-              ],
-              "correctIndex": 0,
-              "explanation": "before edatı burada ismi niteleyen bir sıfat öbeği kurduğu için '-den önceki' anlamı verir."
-            },
-            {
-              "id": "u33l135_ex6_q13",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...constraints <strong>complicating</strong> the restoration cycle...\"<br><br><strong>Türkçe:</strong> \"Geri yükleme döngüsünü karmaşıklaştır<strong>_______</strong> mimari kısıtlamalar...\"",
-              "options": [
-                "-an",
-                "-an olan",
-                "-dığı için"
-              ],
-              "correctIndex": 0,
-              "explanation": "-ing takısı ile yapılan relative clause kısaltması sıfat-fiil (-an / -en) ekini kurar."
-            },
-            {
-              "id": "u33l135_ex6_q14",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...memory leakage <strong>occurring</strong> across decentralised nodes...\"<br><br><strong>Türkçe:</strong> \"Merkeziyetsiz düğümler genelinde meydana gel<strong>_______</strong> bellek sızıntısı...\"",
-              "options": [
-                "-en",
-                "-mesi planlanan",
-                "-dikten sonra"
-              ],
-              "correctIndex": 0,
-              "explanation": "occurring relative clause kısaltması olup sıfat-fiil (-en) eki sağlar."
-            },
-            {
-              "id": "u33l135_ex6_q15",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...<strong>must</strong> finalize the baseline documentation...\"<br><br><strong>Türkçe:</strong> \"Referans dökümantasyonu tamamla<strong>_______</strong>...\"",
-              "options": [
-                "-malıdır",
-                "-mak üzereydi",
-                "-sa iyi olurdu"
-              ],
-              "correctIndex": 0,
-              "explanation": "must kipi Türkçe yüklemde zorunluluk ekini (-malıdır) kurar."
-            }
-          ]
-        },
-        {
-          "id": "u33l135ex7",
-          "title": "Alıştırma 7: Projektör Modu",
-          "description": "Projektörle aydınlatılan İngilizce öbeğin Türkçe anlamını hızlıca seçin.",
-          "questions": [
-            {
-              "id": "u33l135_ex7_q1",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "modern platform migration",
-              "options": [
-                "modern platform entegrasyonu",
-                "modern platform geçişi",
-                "modern platform testi"
-              ],
-              "correctIndex": 1,
-              "explanation": "migration kelimesi geçiş/göç demektir."
-            },
-            {
-              "id": "u33l135_ex7_q2",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "complex endeavor",
-              "options": [
-                "karmaşık bir girişim",
-                "basit bir çalışma",
-                "düzenli bir plan"
-              ],
-              "correctIndex": 0,
-              "explanation": "complex endeavor karmaşık bir girişim anlamına gelir."
-            },
-            {
-              "id": "u33l135_ex7_q3",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "primary cloud database",
-              "options": [
-                "ikincil veri sunucusu",
-                "birincil bulut veritabanı",
-                "yedek bulut sistemi"
-              ],
-              "correctIndex": 1,
-              "explanation": "primary cloud database birincil bulut veritabanı demektir."
-            },
-            {
-              "id": "u33l135_ex7_q4",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "remains highly unstable",
-              "options": [
-                "oldukça kararsız kalmaya devam ediyor",
-                "hızlıca güncellendi",
-                "tamamen güvenlidir"
-              ],
-              "correctIndex": 0,
-              "explanation": "remains highly unstable oldukça kararsız kalmaya devam ediyor demektir."
-            },
-            {
-              "id": "u33l135_ex7_q5",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "unexpected system latency",
-              "options": [
-                "beklenen sistem kararlılığı",
-                "beklenmedik sistem gecikmesi",
-                "öngörülemeyen sistem kesintisi"
-              ],
-              "correctIndex": 1,
-              "explanation": "unexpected system latency beklenmedik sistem gecikmesi demektir."
-            },
-            {
-              "id": "u33l135_ex7_q6",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "under severe simulation stress",
-              "options": [
-                "hafif simülasyon testi altında",
-                "ciddi simülasyon stresi altında",
-                "simülasyon aşaması öncesinde"
-              ],
-              "correctIndex": 1,
-              "explanation": "under severe simulation stress ciddi simülasyon stresi altında demektir."
-            },
-            {
-              "id": "u33l135_ex7_q7",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "inside the repository",
-              "options": [
-                "deponun dışında",
-                "deponun içerisinde",
-                "depoya paralel olarak"
-              ],
-              "correctIndex": 1,
-              "explanation": "inside the repository deponun içerisinde anlamına gelir."
-            },
-            {
-              "id": "u33l135_ex7_q8",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "requires immediate technical modifications",
-              "options": [
-                "basit teknik değişiklikler gerektirir",
-                "acil teknik değişiklikler gerektirir",
-                "gelecekte teknik güncellemeler isteyecektir"
-              ],
-              "correctIndex": 1,
-              "explanation": "requires immediate technical modifications acil teknik değişiklikler gerektirir demektir."
-            },
-            {
-              "id": "u33l135_ex7_q9",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "unverified datasets",
-              "options": [
-                "doğrulanmamış veri kümeleri",
-                "doğrulanmış veri dosyaları",
-                "eksik veri tabanları"
-              ],
-              "correctIndex": 0,
-              "explanation": "unverified datasets doğrulanmamış veri kümeleri demektir."
-            },
-            {
-              "id": "u33l135_ex7_q10",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "complete lack of regulatory compliance",
-              "options": [
-                "yasal uyumluluğun kısmen sağlanması",
-                "mevzuat kurallarına uyulmaması",
-                "yasal uyumluluğun tamamen eksik olması"
-              ],
-              "correctIndex": 2,
-              "explanation": "complete lack of regulatory compliance yasal uyumluluğun tamamen eksik olması demektir."
-            },
-            {
-              "id": "u33l135_ex7_q11",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "severe runtime bottlenecks",
-              "options": [
-                "ciddi çalışma zamanı darboğazları",
-                "basit bellek sızıntıları",
-                "hızlı çalışma zamanı iyileştirmeleri"
-              ],
-              "correctIndex": 0,
-              "explanation": "severe runtime bottlenecks ciddi çalışma zamanı darboğazları demektir."
-            },
-            {
-              "id": "u33l135_ex7_q12",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "contribute directly to transaction failures",
-              "options": [
-                "işlem hatalarını doğrudan önler",
-                "işlem başarısızlıklarına doğrudan yol açar/katkıda bulunur",
-                "işlemlerin hızlanmasına katkı sağlar"
-              ],
-              "correctIndex": 1,
-              "explanation": "contribute directly to transaction failures işlem başarısızlıklarına doğrudan katkıda bulunur veya yol açar."
-            },
-            {
-              "id": "u33l135_ex7_q13",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "vulnerable digital profiles",
-              "options": [
-                "savunmasız dijital profiller",
-                "güvenli kullanıcı profilleri",
-                "anonim dijital girişler"
-              ],
-              "correctIndex": 0,
-              "explanation": "vulnerable digital profiles savunmasız dijital profiller demektir."
-            },
-            {
-              "id": "u33l135_ex7_q14",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "unsealed core container",
-              "options": [
-                "mühürlü çekirdek konteyner",
-                "kapalı çekirdek sistemi",
-                "mühürlenmemiş çekirdek konteyner"
-              ],
-              "correctIndex": 2,
-              "explanation": "unsealed core container mühürlenmemiş çekirdek konteyner demektir."
-            },
-            {
-              "id": "u33l135_ex7_q15",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "The modern platform migration is a complex endeavor. The primary cloud database remains highly unstable. This persistent server degradation is an unexpected system latency. Critical configuration components are currently under severe simulation stress. Data formatting discrepancies inside the repository trigger extensive compilation errors. The sudden collapse of the central infrastructure requires immediate technical modifications. Many of the unverified datasets produce serious validation anomalies. A complete lack of regulatory compliance leads to catastrophic database corruption. Severe runtime bottlenecks from loose query loops contribute directly to transaction failures. Vulnerable digital profiles in restricted partitions under anonymous external entries display rapid file degradation. During the stress diagnostic phase before the network synchronization, technicians isolated the unsealed core container. There are several architecture constraints complicating the restoration cycle. There is significant memory leakage occurring across decentralised computing nodes. Cross-disciplinary engineering groups must finalize the baseline documentation to resolve these structural issues.",
-              "highlightChunk": "resolve these structural issues",
-              "options": [
-                "bu yapısal sorunları çözmek",
-                "yapısal sorunları raporlamak",
-                "yeni sistem yapıları eklemek"
-              ],
-              "correctIndex": 0,
-              "explanation": "resolve these structural issues bu yapısal sorunları çözmek anlamına gelir."
-            }
-          ]
-        }
-      ]
-    },
-    "2": {
-      "exercises": [
-        {
-          "id": "u33l201ex1",
-          "title": "Alıştırma 1: Metin İçi Öbek Eşleştirme",
-          "description": "Paragraftaki kritik yapıları Türkçe anlamlarıyla eşleştirin.",
-          "questions": [
-            {
-              "id": "u33l201_ex1_q1",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"During the <strong>initial phase of the research</strong>, the <strong>leader of the team</strong> organized a <strong>crucial meeting</strong>.\"",
-              "pairs": [
-                {
-                  "left": "initial phase of the research",
-                  "right": "araştırmanın ilk aşaması"
-                },
-                {
-                  "left": "leader of the team",
-                  "right": "ekibin lideri"
-                },
-                {
-                  "left": "crucial meeting",
-                  "right": "kritik toplantı"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q2",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>main goal of the project</strong> remains the <strong>creation of a clean energy system</strong> using <strong>clean energy</strong>.\"",
-              "pairs": [
-                {
-                  "left": "main goal of the project",
-                  "right": "projenin ana hedefi"
-                },
-                {
-                  "left": "creation of a clean energy system",
-                  "right": "temiz bir enerji sisteminin yaratılması"
-                },
-                {
-                  "left": "clean energy",
-                  "right": "temiz enerji"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q3",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"Many of the <strong>scientists from the institute</strong> decide to <strong>collaborate on the global initiative</strong> at the <strong>international institute</strong>.\"",
-              "pairs": [
-                {
-                  "left": "scientists from the institute",
-                  "right": "enstitüden bilim insanları"
-                },
-                {
-                  "left": "collaborate on the global initiative",
-                  "right": "küresel girişim üzerinde işbirliği yapmak"
-                },
-                {
-                  "left": "international institute",
-                  "right": "uluslararası enstitü"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q4",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"There is <strong>significant concern</strong> about the <strong>degradation of natural habitats</strong> in <strong>urban areas</strong>.\"",
-              "pairs": [
-                {
-                  "left": "significant concern",
-                  "right": "önemli endişe"
-                },
-                {
-                  "left": "degradation of natural habitats",
-                  "right": "doğal yaşam alanlarının bozulması"
-                },
-                {
-                  "left": "urban areas",
-                  "right": "kentsel alanlar"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q5",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>sudden rise of global temperatures</strong> causes <strong>serious problems for the ecosystem</strong> by increasing <strong>global temperatures</strong>.\"",
-              "pairs": [
-                {
-                  "left": "sudden rise of global temperatures",
-                  "right": "küresel sıcaklıkların ani yükselişi"
-                },
-                {
-                  "left": "serious problems for the ecosystem",
-                  "right": "ekosistem için ciddi sorunlar"
-                },
-                {
-                  "left": "global temperatures",
-                  "right": "küresel sıcaklıklar"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q6",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"A <strong>sudden collapse of the forest</strong> within the <strong>regional forest structure</strong> is a major <strong>threat to biodiversity</strong>.\"",
-              "pairs": [
-                {
-                  "left": "sudden collapse of the forest",
-                  "right": "orman yapısının ani çöküşü"
-                },
-                {
-                  "left": "regional forest structure",
-                  "right": "bölgesel orman yapısı"
-                },
-                {
-                  "left": "threat to biodiversity",
-                  "right": "biyoçeşitlilik için tehdit"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q7",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"Fortunately, <strong>some of the solutions</strong> coming as <strong>solutions from local communities</strong> help the <strong>local communities</strong>.\"",
-              "pairs": [
-                {
-                  "left": "some of the solutions",
-                  "right": "çözümlerin bazıları"
-                },
-                {
-                  "left": "solutions from local communities",
-                  "right": "yerel topluluklardan gelen çözümler"
-                },
-                {
-                  "left": "local communities",
-                  "right": "yerel topluluklar"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q8",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>Activists in various countries</strong> want to <strong>participate in campaigns</strong>, specifically <strong>environmental campaigns</strong>.\"",
-              "pairs": [
-                {
-                  "left": "activists in various countries",
-                  "right": "çeşitli ülkelerdeki aktivistler"
-                },
-                {
-                  "left": "participate in campaigns",
-                  "right": "kampanyalara katılmak"
-                },
-                {
-                  "left": "environmental campaigns",
-                  "right": "çevre kampanyaları"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q9",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"There are <strong>many benefits from the preservation</strong> related to the <strong>preservation of native plants</strong> under <strong>controlled conditions</strong>.\"",
-              "pairs": [
-                {
-                  "left": "many benefits from the preservation",
-                  "right": "korumadan elde edilen birçok fayda"
-                },
-                {
-                  "left": "preservation of native plants",
-                  "right": "yerli bitkilerin korunması"
-                },
-                {
-                  "left": "controlled conditions",
-                  "right": "kontrollü koşullar"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q10",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>official reports from the researchers</strong> are kept in the <strong>public archive of the institute</strong> as a <strong>public archive</strong>.\"",
-              "pairs": [
-                {
-                  "left": "official reports from the researchers",
-                  "right": "araştırmacılardan gelen resmi raporlar"
-                },
-                {
-                  "left": "public archive of the institute",
-                  "right": "enstitünün halka açık arşivi"
-                },
-                {
-                  "left": "public archive",
-                  "right": "halka açık arşiv"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q11",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"<strong>At the end of the year</strong>, specifically <strong>during the global summit</strong>, <strong>leaders from different nations</strong> will meet.\"",
-              "pairs": [
-                {
-                  "left": "at the end of the year",
-                  "right": "yılın sonunda"
-                },
-                {
-                  "left": "during the global summit",
-                  "right": "küresel zirve boyunca"
-                },
-                {
-                  "left": "leaders from different nations",
-                  "right": "farklı milletlerden liderler"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q12",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>treaty signed by leaders</strong> will motivate them to <strong>sign a treaty</strong> representing <strong>different nations</strong>.\"",
-              "pairs": [
-                {
-                  "left": "treaty signed by leaders",
-                  "right": "liderlerin imzalayacağı anlaşma"
-                },
-                {
-                  "left": "sign a treaty",
-                  "right": "anlaşma imzalamak"
-                },
-                {
-                  "left": "different nations",
-                  "right": "farklı milletler"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q13",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>execution of these policies</strong> is <strong>extremely vital for recovery</strong> of the <strong>recovery of the planet</strong>.\"",
-              "pairs": [
-                {
-                  "left": "execution of these policies",
-                  "right": "bu politikaların uygulanması"
-                },
-                {
-                  "left": "extremely vital for recovery",
-                  "right": "kurtarılma için son derece hayati"
-                },
-                {
-                  "left": "recovery of the planet",
-                  "right": "gezegenin kurtarılması"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q14",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"The <strong>survival of the species</strong> heavily <strong>depends on the immediate action</strong> of the <strong>immediate action of humanity</strong>.\"",
-              "pairs": [
-                {
-                  "left": "survival of the species",
-                  "right": "türlerin hayatta kalması"
-                },
-                {
-                  "left": "depends on the immediate action",
-                  "right": "acil eyleme bağlı olmak"
-                },
-                {
-                  "left": "immediate action of humanity",
-                  "right": "insanlığın acil eylemi"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex1_q15",
-              "type": "matching",
-              "prompt": "Aşağıdaki renkli öbekleri metindeki anlamlarına göre Türkçe karşılıklarıyla eşleştirin:<br><br>\"Addressing the <strong>global temperature rise</strong> resolves the <strong>biodiversity threat</strong> to meet the <strong>clean energy goal</strong>.\"",
-              "pairs": [
-                {
-                  "left": "global temperature rise",
-                  "right": "küresel sıcaklık artışı"
-                },
-                {
-                  "left": "biodiversity threat",
-                  "right": "biyoçeşitlilik tehdidi"
-                },
-                {
-                  "left": "clean energy goal",
-                  "right": "temiz enerji hedefi"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex2",
-          "title": "Alıştırma 2: Katmanlı Çeviri İnşası",
-          "description": "Karmaşık cümleleri aşama aşama çevirerek birleştirin.",
-          "questions": [
-            {
-              "id": "u33l201_ex2_q1",
-              "type": "word-bank",
-              "prompt": "Cümlenin zaman/koşul belirten kısmını Türkçe karşılığına çevirin:",
-              "translation": "At the end of the year during the global summit...",
-              "words": [
-                "Yılın",
-                "sonunda",
-                "küresel",
-                "zirve",
-                "boyunca",
-                "önemli",
-                "anlaşma",
-                "düzenlendiğinde"
-              ],
-              "correctOrder": [
-                "Yılın",
-                "sonunda",
-                "küresel",
-                "zirve",
-                "boyunca"
-              ],
-              "enSentence": "At the end of the year during the global summit...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q2",
-              "type": "word-bank",
-              "prompt": "Cümlenin ana kısmını Türkçe karşılığına çevirin:",
-              "translation": "...leaders from different nations will sign a treaty.",
-              "words": [
-                "farklı",
-                "uluslardan",
-                "liderler",
-                "bir",
-                "anlaşma",
-                "imzalayacak",
-                "temsilciler",
-                "hazırlayacak"
-              ],
-              "correctOrder": [
-                "farklı",
-                "uluslardan",
-                "liderler",
-                "bir",
-                "anlaşma",
-                "imzalayacak"
-              ],
-              "enSentence": "...leaders from different nations will sign a treaty.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q3",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "At the end of the year during the global summit, leaders from different nations will sign a treaty.",
-              "words": [
-                "Yılın",
-                "sonunda",
-                "küresel",
-                "zirve",
-                "boyunca,",
-                "farklı",
-                "uluslardan",
-                "liderler",
-                "bir",
-                "anlaşma",
-                "imzalayacak.",
-                "temsilciler",
-                "tartışacak"
-              ],
-              "correctOrder": [
-                "Yılın",
-                "sonunda",
-                "küresel",
-                "zirve",
-                "boyunca,",
-                "farklı",
-                "uluslardan",
-                "liderler",
-                "bir",
-                "anlaşma",
-                "imzalayacak."
-              ],
-              "enSentence": "At the end of the year during the global summit, leaders from different nations will sign a treaty.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q4",
-              "type": "word-bank",
-              "prompt": "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
-              "translation": "Ultimately, the survival of the species...",
-              "words": [
-                "Sonuç",
-                "olarak,",
-                "türlerin",
-                "hayatta",
-                "kalması",
-                "insanlığın",
-                "tehlikesi"
-              ],
-              "correctOrder": [
-                "Sonuç",
-                "olarak,",
-                "türlerin",
-                "hayatta",
-                "kalması"
-              ],
-              "enSentence": "Ultimately, the survival of the species...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q5",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
-              "translation": "...depends on the immediate action of humanity.",
-              "words": [
-                "insanlığın",
-                "acil",
-                "eylemine",
-                "bağlıdır",
-                "hayatta",
-                "kalmasına",
-                "gereklidir"
-              ],
-              "correctOrder": [
-                "insanlığın",
-                "acil",
-                "eylemine",
-                "bağlıdır"
-              ],
-              "enSentence": "...depends on the immediate action of humanity.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q6",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "words": [
-                "Sonuç",
-                "olarak,",
-                "türlerin",
-                "hayatta",
-                "kalması",
-                "insanlığın",
-                "acil",
-                "eylemine",
-                "bağlıdır.",
-                "gelişmesine",
-                "gereklidir"
-              ],
-              "correctOrder": [
-                "Sonuç",
-                "olarak,",
-                "türlerin",
-                "hayatta",
-                "kalması",
-                "insanlığın",
-                "acil",
-                "eylemine",
-                "bağlıdır."
-              ],
-              "enSentence": "Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q7",
-              "type": "word-bank",
-              "prompt": "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
-              "translation": "The official reports from the researchers...",
-              "words": [
-                "Araştırmacılardan",
-                "gelen",
-                "resmi",
-                "raporlar",
-                "enstitünün",
-                "halka",
-                "açık"
-              ],
-              "correctOrder": [
-                "Araştırmacılardan",
-                "gelen",
-                "resmi",
-                "raporlar"
-              ],
-              "enSentence": "The official reports from the researchers...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q8",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
-              "translation": "...are in the public archive of the institute.",
-              "words": [
-                "enstitünün",
-                "halka",
-                "açık",
-                "arşivindedir",
-                "resmi",
-                "raporlarıdır",
-                "kütüphanesindedir"
-              ],
-              "correctOrder": [
-                "enstitünün",
-                "halka",
-                "açık",
-                "arşivindedir"
-              ],
-              "enSentence": "...are in the public archive of the institute.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q9",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "The official reports from the researchers are in the public archive of the institute.",
-              "words": [
-                "Araştırmacılardan",
-                "gelen",
-                "resmi",
-                "raporlar",
-                "enstitünün",
-                "halka",
-                "açık",
-                "arşivindedir.",
-                "kütüphanesindedir",
-                "yazılmıştır"
-              ],
-              "correctOrder": [
-                "Araştırmacılardan",
-                "gelen",
-                "resmi",
-                "raporlar",
-                "enstitünün",
-                "halka",
-                "açık",
-                "arşivindedir."
-              ],
-              "enSentence": "The official reports from the researchers are in the public archive of the institute.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q10",
-              "type": "word-bank",
-              "prompt": "Cümlenin zaman/koşul belirten kısmını Türkçe karşılığına çevirin:",
-              "translation": "During the initial phase of the research...",
-              "words": [
-                "Araştırmanın",
-                "ilk",
-                "aşaması",
-                "boyunca",
-                "ekibin",
-                "lideri",
-                "toplantı",
-                "yaptığında"
-              ],
-              "correctOrder": [
-                "Araştırmanın",
-                "ilk",
-                "aşaması",
-                "boyunca"
-              ],
-              "enSentence": "During the initial phase of the research...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q11",
-              "type": "word-bank",
-              "prompt": "Cümlenin ana kısmını Türkçe karşılığına çevirin:",
-              "translation": "...the leader of the team organized a crucial meeting.",
-              "words": [
-                "ekibin",
-                "lideri",
-                "kritik",
-                "bir",
-                "toplantı",
-                "düzenledi",
-                "yöneticisi",
-                "çağırdı"
-              ],
-              "correctOrder": [
-                "ekibin",
-                "lideri",
-                "kritik",
-                "bir",
-                "toplantı",
-                "düzenledi"
-              ],
-              "enSentence": "...the leader of the team organized a crucial meeting.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q12",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "During the initial phase of the research, the leader of the team organized a crucial meeting.",
-              "words": [
-                "Araştırmanın",
-                "ilk",
-                "aşaması",
-                "boyunca,",
-                "ekibin",
-                "lideri",
-                "kritik",
-                "bir",
-                "toplantı",
-                "düzenledi.",
-                "yöneticisi",
-                "çağırdı"
-              ],
-              "correctOrder": [
-                "Araştırmanın",
-                "ilk",
-                "aşaması",
-                "boyunca,",
-                "ekibin",
-                "lideri",
-                "kritik",
-                "bir",
-                "toplantı",
-                "düzenledi."
-              ],
-              "enSentence": "During the initial phase of the research, the leader of the team organized a crucial meeting.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q13",
-              "type": "word-bank",
-              "prompt": "Cümlenin özne kısmını Türkçe karşılığına çevirin:",
-              "translation": "The main goal of the project...",
-              "words": [
-                "Projenin",
-                "ana",
-                "hedefi",
-                "temiz",
-                "enerji",
-                "sistemi",
-                "çalışması"
-              ],
-              "correctOrder": [
-                "Projenin",
-                "ana",
-                "hedefi"
-              ],
-              "enSentence": "The main goal of the project...",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q14",
-              "type": "word-bank",
-              "prompt": "Cümlenin yüklem kısmını Türkçe karşılığına çevirin:",
-              "translation": "...remains the creation of a clean energy system.",
-              "words": [
-                "temiz",
-                "bir",
-                "enerji",
-                "sisteminin",
-                "yaratılması",
-                "olmaya",
-                "devam",
-                "etmektedir",
-                "korunmasıdır"
-              ],
-              "correctOrder": [
-                "temiz",
-                "bir",
-                "enerji",
-                "sisteminin",
-                "yaratılması",
-                "olmaya",
-                "devam",
-                "etmektedir"
-              ],
-              "enSentence": "...remains the creation of a clean energy system.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex2_q15",
-              "type": "word-bank",
-              "prompt": "İki parçayı birleştirerek tam cümlenin çevirisini oluşturun:",
-              "translation": "The main goal of the project remains the creation of a clean energy system.",
-              "words": [
-                "Projenin",
-                "ana",
-                "hedefi,",
-                "temiz",
-                "bir",
-                "enerji",
-                "sisteminin",
-                "yaratılması",
-                "olmaya",
-                "devam",
-                "etmektedir.",
-                "korunmasıdır",
-                "çalışmasıdır"
-              ],
-              "correctOrder": [
-                "Projenin",
-                "ana",
-                "hedefi,",
-                "temiz",
-                "bir",
-                "enerji",
-                "sisteminin",
-                "yaratılması",
-                "olmaya",
-                "devam",
-                "etmektedir."
-              ],
-              "enSentence": "The main goal of the project remains the creation of a clean energy system.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex3",
-          "title": "Alıştırma 3: Yanlış Çeviri Avcısı",
-          "description": "Yapısal tuzaklara düşmeden cümlenin en doğru Türkçe çevirisini bulun.",
-          "questions": [
-            {
-              "id": "u33l201_ex3_q1",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The main goal of the project remains the creation of a clean energy system.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Projenin ana hedefi, temiz bir enerji sisteminin yaratılması olmaya devam etmektedir.",
-                "Projenin ana hedefinin yaratılması temiz enerji sistemini hatırlatır. (Tuzak: remains kelimesini reminds ile karıştırma ve nesneyi özne yapma hatası)",
-                "Projenin ana hedefi temiz enerji sistemini yaratmaktır. (Tuzak: creation ismini yaratmak fiili sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The main goal of the project remains the creation of a clean energy system.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q2",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Many of the scientists from the international institute collaborate on the global initiative.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Uluslararası enstitüden bilim insanlarının birçoğu küresel girişim üzerinde işbirliği yapmaktadır.",
-                "Birçok bilim insanı uluslararası enstitüde küresel girişimi yönetiyor. (Tuzak: collaborate on yapısını yönetmek sanma hatası)",
-                "Uluslararası enstitüdeki bazı bilim insanları küresel girişimi zorlaştırıyor. (Tuzak: collaborate kelimesini complicate ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Many of the scientists from the international institute collaborate on the global initiative.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q3",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There are many benefits from the preservation of native plants under controlled conditions.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Yerli bitkilerin kontrollü koşullar altında korunmasından birçok fayda vardır.",
-                "Yerli bitkilerin kontrollü koşulları korunma için birçok fayda sunar. (Tuzak: there are yapısını göz ardı edip sunar deme hatası)",
-                "Kontrollü koşullar altında yerli bitkileri korumak faydalıdır. (Tuzak: preservation ismini korumak fiili yapma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There are many benefits from the preservation of native plants under controlled conditions.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q4",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The official reports from the researchers are in the public archive of the institute.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Araştırmacılardan gelen resmi raporlar enstitünün halka açık arşivindedir.",
-                "Araştırmacıların resmi raporları enstitü arşivini halka açar. (Tuzak: are in yapısını aktif fiil sanma hatası)",
-                "Enstitüdeki resmi araştırmacılar halka açık arşiv raporları yazar. (Tuzak: kelimelerin yerini değiştirme ve tüm yapıyı bozma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The official reports from the researchers are in the public archive of the institute.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q5",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The execution of these policies is extremely vital for the recovery of the planet.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Bu politikaların uygulanması gezegenin kurtarılması için son derece hayati önem taşır/hayati düzeydedir.",
-                "Gezegenin kurtarılması bu politikaları hayati olarak yürütür. (Tuzak: execution ismini özne yapma hatası)",
-                "Politikaların uygulanması gezegenin iyileşmesini son derece geciktirir. (Tuzak: recovery kelimesini gecikme sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The execution of these policies is extremely vital for the recovery of the planet.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q6",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There is significant concern about the degradation of natural habitats in urban areas.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Kentsel alanlardaki doğal yaşam alanlarının bozulması hakkında önemli bir endişe vardır.",
-                "Kentsel alanların doğal yaşamı koruması hakkında endişeli olunmalıdır. (Tuzak: degradation kelimesini preservation sanma hatası)",
-                "Doğal yaşam alanlarındaki kentsel bozulmalar önemli faydalar sunar. (Tuzak: concern kelimesini benefits ile karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There is significant concern about the degradation of natural habitats in urban areas.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q7",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"The sudden rise of global temperatures causes serious problems for the ecosystem.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Küresel sıcaklıkların ani yükselişi ekosistem için ciddi sorunlara neden olmaktadır.",
-                "Küresel sıcaklıkların yavaşça artması ekosistemi canlandırır. (Tuzak: sudden kelimesini slow, rise kelimesini decrease sanma hatası)",
-                "Ekosistemdeki ani sorunlar küresel sıcaklıkları durdurur. (Tuzak: özne ve nesneyi karıştırma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The sudden rise of global temperatures causes serious problems for the ecosystem.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q8",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"A sudden collapse of the regional forest structure is a major threat to biodiversity.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Bölgesel orman yapısının ani bir çöküşü biyoçeşitlilik için büyük bir tehdittir.",
-                "Bölgesel ormanları kurtarma çalışması biyoçeşitlilik için faydalıdır. (Tuzak: collapse kelimesini recovery sanma hatası)",
-                "Biyoçeşitlilikteki ani değişimler orman yapısını zenginleştirir. (Tuzak: threat kelimesini benefit sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "A sudden collapse of the regional forest structure is a major threat to biodiversity.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q9",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Fortunately, some of the solutions from local communities offer hope for the future.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Neyse ki yerel topluluklardan gelen çözümlerin bazıları gelecek için umut sunmaktadır.",
-                "Gelecekteki çözümler yerel toplulukların umutlarını yok eder. (Tuzak: offer hope yapısını destroy hope sanma hatası)",
-                "Yerel toplulukların gelecek umutları çözüme kavuşturulmuştur. (Tuzak: some of the solutions yapısını göz ardı etme hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Fortunately, some of the solutions from local communities offer hope for the future.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q10",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Activists in various countries participate in environmental campaigns.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Çeşitli ülkelerdeki aktivistler çevre kampanyalarına katılmaktadır.",
-                "Çevre kampanyaları çeşitli ülkelerin aktivizmini engeller. (Tuzak: participate in kelimesini prevent sanma hatası)",
-                "Çeşitli ülkeler çevre kampanyaları düzenlemektedir. (Tuzak: participate in kelimesini organize sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Activists in various countries participate in environmental campaigns.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q11",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"During the initial phase of the research, the leader of the team organized a crucial meeting.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Araştırmanın ilk aşaması boyunca, ekibin lideri kritik bir toplantı düzenledi.",
-                "Araştırma bittikten sonra ekip lideri bir toplantı düzenleyecek. (Tuzak: initial phase kelimesini final phase sanma ve zaman hatası)",
-                "Araştırmacı ekibin lideri her zaman kritik toplantılar yapar. (Tuzak: during ve organized yapılarını sıfırlama hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "During the initial phase of the research, the leader of the team organized a crucial meeting.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q12",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"At the end of the year during the global summit, leaders from different nations will sign a treaty.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Yılın sonunda küresel zirve boyunca, farklı milletlerden liderler bir anlaşma imzalayacaklar.",
-                "Yıl boyunca liderlerin zirvede imzaladığı anlaşma tartışılacak. (Tuzak: will sign yapısını pasif yapmak ve zaman hatası)",
-                "Farklı ülkelerin liderleri yıl sonundaki zirveye katılmayı reddetti. (Tuzak: sign a treaty yapısını reject to attend sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "At the end of the year during the global summit, leaders from different nations will sign a treaty.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q13",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"Ultimately, the survival of the species depends on the immediate action of humanity.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Sonuç olarak, türlerin hayatta kalması insanlığın acil eylemine bağlıdır.",
-                "İnsanlığın hayatta kalması türlerin acil eylemine bağlıdır. (Tuzak: özne ve nesneyi tamamen tersine çevirme hatası)",
-                "Türlerin hayatta kalması insanlığın geleceğini belirler. (Tuzak: depends on yapısını determine sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q14",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There are several architecture constraints complicating the restoration cycle.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Restorasyon döngüsünü karmaşıklaştıran birkaç mimari kısıtlama vardır.",
-                "Mimarinin kısıtlanması restorasyon döngüsünü kolaylaştırır. (Tuzak: complicating kelimesini facilitating sanma hatası)",
-                "Mimari kısıtlamalar restorasyon döngüsünü tamamen durdurdu. (Tuzak: complicating kelimesini stopped sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There are several architecture constraints complicating the restoration cycle.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex3_q15",
-              "type": "multiple-choice",
-              "prompt": "<span style='font-size: 1.05rem; color: var(--accent-color);'>\"There is significant memory leakage occurring across decentralised computing nodes.\"</span> cümlesinin doğru çevirisi hangisidir?",
-              "options": [
-                "Merkezi olmayan bilgi işlem düğümleri arasında meydana gelen önemli bellek sızıntısı vardır.",
-                "Merkezi bilgi işlem düğümlerinde bellek sızıntısı önlenmiştir. (Tuzak: leakage kelimesini prevention sanma ve decentralised kelimesini centralised sanma hatası)",
-                "Bellek sızıntısı merkezi olmayan bilgi işlemi tamamen yavaşlatır. (Tuzak: occurring across yapısını slows down sanma hatası)"
-              ],
-              "correctIndex": 0,
-              "enSentence": "There is significant memory leakage occurring across decentralised computing nodes.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex4",
-          "title": "Alıştırma 4: \"X gibi\" Yapı Klonlama",
-          "description": "Metindeki yapıların benzerlerini yeni akademik kelimelerle inşa edin.",
-          "questions": [
-            {
-              "id": "u33l201_ex4_q1",
-              "type": "matching",
-              "prompt": "Öncelikle metinden alınan yapıları doğru anlamlarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "during the initial phase",
-                  "right": "ilk aşama boyunca"
-                },
-                {
-                  "left": "preservation of native plants",
-                  "right": "yerli bitkilerin korunması"
-                },
-                {
-                  "left": "reports from the researchers",
-                  "right": "araştırmacılardan gelen raporlar"
-                },
-                {
-                  "left": "vital for the recovery",
-                  "right": "kurtarılma için hayati"
-                }
-              ]
-            },
-            {
-              "id": "u33l201_ex4_q2",
-              "type": "word-bank",
-              "prompt": "Şimdi aynı yapıyı kullanarak öbeği Türkçe karşılığına çevirin:",
-              "translation": "unverified results from the laboratory",
-              "words": [
-                "laboratuvardan",
-                "gelen",
-                "doğrulanmamış",
-                "sonuçlar",
-                "veriler",
-                "bozuk"
-              ],
-              "correctOrder": [
-                "laboratuvardan",
-                "gelen",
-                "doğrulanmamış",
-                "sonuçlar"
-              ],
-              "enSentence": "unverified results from the laboratory",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q3",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "consistent development of the software",
-              "words": [
-                "yazılımın",
-                "tutarlı",
-                "gelişimi",
-                "sunucusu",
-                "gecikmesi"
-              ],
-              "correctOrder": [
-                "yazılımın",
-                "tutarlı",
-                "gelişimi"
-              ],
-              "enSentence": "consistent development of the software",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q4",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "some of the employees of the corporation",
-              "words": [
-                "şirketin",
-                "çalışanlarının",
-                "bazıları",
-                "müdürleri",
-                "toplantısı"
-              ],
-              "correctOrder": [
-                "şirketin",
-                "çalışanlarının",
-                "bazıları"
-              ],
-              "enSentence": "some of the employees of the corporation",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q5",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "protection from dangerous radiation under water",
-              "words": [
-                "su",
-                "altında",
-                "tehlikeli",
-                "radyasyondan",
-                "korunma",
-                "etkisi"
-              ],
-              "correctOrder": [
-                "su",
-                "altında",
-                "tehlikeli",
-                "radyasyondan",
-                "korunma"
-              ],
-              "enSentence": "protection from dangerous radiation under water",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q6",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "participate in the final investigation",
-              "words": [
-                "nihai",
-                "soruşturmaya",
-                "katılmak",
-                "yönetmek",
-                "düzenlemek"
-              ],
-              "correctOrder": [
-                "nihai",
-                "soruşturmaya",
-                "katılmak"
-              ],
-              "enSentence": "participate in the final investigation",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q7",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "secondary effect of the pandemic",
-              "words": [
-                "pandeminin",
-                "ikincil",
-                "etkisi",
-                "sonucu",
-                "yayılması"
-              ],
-              "correctOrder": [
-                "pandeminin",
-                "ikincil",
-                "etkisi"
-              ],
-              "enSentence": "secondary effect of the pandemic",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q8",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "significant progress in the field of medicine",
-              "words": [
-                "tıp",
-                "alanında",
-                "önemli",
-                "ilerleme",
-                "çalışması",
-                "raporu"
-              ],
-              "correctOrder": [
-                "tıp",
-                "alanında",
-                "önemli",
-                "ilerleme"
-              ],
-              "enSentence": "significant progress in the field of medicine",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q9",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "sudden decrease in the stock market",
-              "words": [
-                "borsada",
-                "ani",
-                "düşüş",
-                "yükseliş",
-                "hareket"
-              ],
-              "correctOrder": [
-                "borsada",
-                "ani",
-                "düşüş"
-              ],
-              "enSentence": "sudden decrease in the stock market",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q10",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "many of the residents of the city",
-              "words": [
-                "şehrin",
-                "sakinlerinin",
-                "birçoğu",
-                "insanları",
-                "yöneticileri"
-              ],
-              "correctOrder": [
-                "şehrin",
-                "sakinlerinin",
-                "birçoğu"
-              ],
-              "enSentence": "many of the residents of the city",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q11",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "depend on the financial support of the government",
-              "words": [
-                "hükümetin",
-                "finansal",
-                "desteğine",
-                "bağlı",
-                "olmak",
-                "gelişmesine",
-                "yardımıyla"
-              ],
-              "correctOrder": [
-                "hükümetin",
-                "finansal",
-                "desteğine",
-                "bağlı",
-                "olmak"
-              ],
-              "enSentence": "depend on the financial support of the government",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q12",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "critical elements of the system",
-              "words": [
-                "sistemin",
-                "kritik",
-                "unsurları",
-                "parçaları",
-                "yapıları"
-              ],
-              "correctOrder": [
-                "sistemin",
-                "kritik",
-                "unsurları"
-              ],
-              "enSentence": "critical elements of the system",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q13",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "prevention of the spread of the virus",
-              "words": [
-                "virüsün",
-                "yayılmasının",
-                "önlenmesi",
-                "gelişmesi",
-                "etkisi"
-              ],
-              "correctOrder": [
-                "virüsün",
-                "yayılmasının",
-                "önlenmesi"
-              ],
-              "enSentence": "prevention of the spread of the virus",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q14",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "active participation in the meeting",
-              "words": [
-                "toplantıya",
-                "aktif",
-                "katılım",
-                "düzenleme",
-                "kararı"
-              ],
-              "correctOrder": [
-                "toplantıya",
-                "aktif",
-                "katılım"
-              ],
-              "enSentence": "active participation in the meeting",
-              "isEngToTr": true
-            },
-            {
-              "id": "u33l201_ex4_q15",
-              "type": "word-bank",
-              "prompt": "Aynı şekilde öbeği Türkçe karşılığına çevirin:",
-              "translation": "under normal conditions in the country",
-              "words": [
-                "ülkedeki",
-                "normal",
-                "koşullar",
-                "altında",
-                "çevrede",
-                "durumda"
-              ],
-              "correctOrder": [
-                "ülkedeki",
-                "normal",
-                "koşullar",
-                "altında"
-              ],
-              "enSentence": "under normal conditions in the country",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex5",
-          "title": "Alıştırma 5: Hız Tüneli",
-          "description": "3 saniye içinde doğru veya yanlış seçeneğini belirterek öbekleri refleks haline getirin.",
-          "questions": [
-            {
-              "id": "u33l201_ex5_q1",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "during the initial phase of the research",
-              "turkishTranslation": "araştırmanın ilk aşaması boyunca",
-              "correctAnswer": true,
-              "explanation": "during the initial phase of the research tam olarak 'araştırmanın ilk aşaması boyunca' demektir."
-            },
-            {
-              "id": "u33l201_ex5_q2",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "creation of a clean energy system",
-              "turkishTranslation": "temiz enerji sisteminin korunması",
-              "correctAnswer": false,
-              "explanation": "creation kelimesi 'yaratılması' demektir, 'korunması' (preservation) değildir."
-            },
-            {
-              "id": "u33l201_ex5_q3",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "collaborate on the global initiative",
-              "turkishTranslation": "küresel girişim üzerinde işbirliği yapmak",
-              "correctAnswer": true,
-              "explanation": "collaborate on the global initiative 'küresel girişim üzerinde işbirliği yapmak' anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex5_q4",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "degradation of natural habitats",
-              "turkishTranslation": "doğal yaşam alanlarının bozulması",
-              "correctAnswer": true,
-              "explanation": "degradation bozulma, habitats yaşam alanları demektir."
-            },
-            {
-              "id": "u33l201_ex5_q5",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "A sudden collapse of the regional forest structure",
-              "turkishTranslation": "bölgesel orman yapısının ani çöküşü",
-              "correctAnswer": true,
-              "explanation": "collapse çöküş, forest structure orman yapısı demektir."
-            },
-            {
-              "id": "u33l201_ex5_q6",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "some of the solutions from local communities",
-              "turkishTranslation": "yerel toplulukların bazı çözümleri",
-              "correctAnswer": false,
-              "explanation": "from local communities 'yerel topluluklardan gelen' demektir."
-            },
-            {
-              "id": "u33l201_ex5_q7",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "preservation of native plants under controlled conditions",
-              "turkishTranslation": "yerli bitkilerin kontrollü koşullar altında korunması",
-              "correctAnswer": true,
-              "explanation": "preservation korunma/koruma, controlled conditions kontrollü koşullar demektir."
-            },
-            {
-              "id": "u33l201_ex5_q8",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "reports from the researchers",
-              "turkishTranslation": "araştırmacılara gönderilen resmi raporlar",
-              "correctAnswer": false,
-              "explanation": "from edatı 'tarafından gönderilen / -dan gelen' anlamı taşır, '-e gönderilen' değildir."
-            },
-            {
-              "id": "u33l201_ex5_q9",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "execution of these policies",
-              "turkishTranslation": "bu politikaların uygulanması",
-              "correctAnswer": true,
-              "explanation": "execution uygulama, policies politikalar demektir."
-            },
-            {
-              "id": "u33l201_ex5_q10",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "depends on the immediate action of humanity",
-              "turkishTranslation": "insanlığın acil eylemine bağlıdır",
-              "correctAnswer": true,
-              "explanation": "depends on -e bağlıdır, immediate acil demektir."
-            },
-            {
-              "id": "u33l201_ex5_q11",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "offer hope for the future",
-              "turkishTranslation": "gelecek için umut sunmak",
-              "correctAnswer": true,
-              "explanation": "offer hope for the future tam olarak 'gelecek için umut sunmak' anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex5_q12",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "leaders from different nations",
-              "turkishTranslation": "farklı milletlerden liderler",
-              "correctAnswer": true,
-              "explanation": "leaders from different nations 'farklı milletlerden liderler' demektir."
-            },
-            {
-              "id": "u33l201_ex5_q13",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "participate in environmental campaigns",
-              "turkishTranslation": "çevre kampanyalarına katılmak",
-              "correctAnswer": true,
-              "explanation": "participate in environmental campaigns 'çevre kampanyalarına katılmak' anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex5_q14",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "recovery of the planet",
-              "turkishTranslation": "gezegenin yok edilmesi",
-              "correctAnswer": false,
-              "explanation": "recovery 'kurtarılması' demektir, 'yok edilmesi' (destruction) değildir."
-            },
-            {
-              "id": "u33l201_ex5_q15",
-              "type": "true-false",
-              "prompt": "Mekanik: Doğruysa sağa kaydır (veya SAĞ tuş), yanlışsa sola kaydır (veya SOL tuş)!",
-              "englishPhrase": "ultimate goal of the project",
-              "turkishTranslation": "projenin nihai hedefi",
-              "correctAnswer": true,
-              "explanation": "ultimate goal nihai hedef demektir."
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex6",
-          "title": "Alıştırma 6: Dilbilgisi Köprüsü",
-          "description": "İngilizce cümledeki yapısal öğelerin Türkçe karşılıklarıyla olan dilbilgisel bağlarını kurun.",
-          "questions": [
-            {
-              "id": "u33l201_ex6_q1",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...remains the creation...\"<br><br><strong>Türkçe:</strong> \"...yaratılması olmaya devam etmektedir...\"<br><br>Bu cümlede \"remains\" fiilinin işlevi nedir?",
-              "options": [
-                "Durum bildiren bağ fiil (linking verb)",
-                "Geçişli nesne alan fiil (transitive verb)",
-                "Zaman uyumsuz edilgen fiil (passive verb)"
-              ],
-              "correctIndex": 0,
-              "explanation": "remains eylemi durum bildiren bağ fiildir (linking verb)."
-            },
-            {
-              "id": "u33l201_ex6_q2",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...of the project...\"<br><br><strong>Türkçe:</strong> \"...projenin...\"<br><br>Bu tamlamada \"of\" edatının kurduğu dilbilgisel yapı nedir?",
-              "options": [
-                "Belirtili isim tamlaması ilgi eki (-nın)",
-                "Yönelme eki (-e)",
-                "Çıkma durumu eki (-den)"
-              ],
-              "correctIndex": 0,
-              "explanation": "of edatı isimleri birbirine bağlayarak belirtili isim tamlaması ilgi ekini (-nın) oluşturur."
-            },
-            {
-              "id": "u33l201_ex6_q3",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...scientists from the institute...\"<br><br><strong>Türkçe:</strong> \"...enstitüden bilim insanları...\"<br><br>Bu öbekte \"from\" edatının işlevi nedir?",
-              "options": [
-                "Çıkma durumu belirten niteleyici",
-                "Bulunma durumu belirten zarf",
-                "Yönelme durumu bildiren edat"
-              ],
-              "correctIndex": 0,
-              "explanation": "from edatı enstitüden köken/çıkma durumunu belirten bir niteleyici öbek kurar."
-            },
-            {
-              "id": "u33l201_ex6_q4",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...collaborate on...\"<br><br><strong>Türkçe:</strong> \"...üzerinde işbirliği yapmak...\"<br><br>Bu fiil-edat birleşimi için hangisi doğrudur?",
-              "options": [
-                "Edat alan geçişsiz fiil yapısı (prepositional verb)",
-                "Yalın geçişli fiil yapısı (transitive verb)",
-                "Modal tabanlı bağ eylemi (modal linking)"
-              ],
-              "correctIndex": 0,
-              "explanation": "collaborate fiili, yöneldiği konuyu 'on' edatı ile belirtir, dolayısıyla prepositional verb yapısındadır."
-            },
-            {
-              "id": "u33l201_ex6_q5",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...There are many benefits...\"<br><br><strong>Türkçe:</strong> \"...birçok fayda vardır...\"<br><br>Bu cümlede \"There are\" yapısının işlevi nedir?",
-              "options": [
-                "Varlık/mevcudiyet bildirme (existential structure)",
-                "Gereklilik bildirme (obligation)",
-                "Edilgen çatı kurma (passive voice)"
-              ],
-              "correctIndex": 0,
-              "explanation": "There is/are yapısı bir şeyin varlığını/mevcudiyetini belirtmek için kullanılır."
-            },
-            {
-              "id": "u33l201_ex6_q6",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...under controlled conditions...\"<br><br><strong>Türkçe:</strong> \"...kontrollü koşullar altında...\"<br><br>Bu öbekte \"under\" edatının rolü nedir?",
-              "options": [
-                "Durum veya konum niteleyen edat yapısı",
-                "Zaman belirten bağlaç yapısı",
-                "Sebep bildiren zarf eylemi"
-              ],
-              "correctIndex": 0,
-              "explanation": "under edatı, koşulların sınırlarını ve durumunu belirten bir niteleyici öbek kurar."
-            },
-            {
-              "id": "u33l201_ex6_q7",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...the execution of these policies...\"<br><br><strong>Türkçe:</strong> \"...bu politikaların uygulanması...\"<br><br>Bu yapıda \"these\" kelimesinin işlevi nedir?",
-              "options": [
-                "Çoğul isimleri işaret etme (deictic function)",
-                "Tekil ismi niteleyen belgisiz sıfat",
-                "Soru anlamı katan zamir yapısı"
-              ],
-              "correctIndex": 0,
-              "explanation": "these kelimesi çoğul isimleri işaret eden bir işaret sıfatıdır."
-            },
-            {
-              "id": "u33l201_ex6_q8",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...extremely vital...\"<br><br><strong>Türkçe:</strong> \"...son derece hayati...\"<br><br>Bu öbekte \"extremely\" zarfının rolü nedir?",
-              "options": [
-                "Sıfatı derece yönünden niteleme (intensifier)",
-                "Zamanı vurgulayan belirteç",
-                "Özneyi niteleyen durum sıfatı"
-              ],
-              "correctIndex": 0,
-              "explanation": "extremely kelimesi peşinden gelen sıfatın derecesini artıran bir intensifier zarftır."
-            },
-            {
-              "id": "u33l201_ex6_q9",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...depends on...\"<br><br><strong>Türkçe:</strong> \"...bağlıdır...\"<br><br>Bu birleşimde \"on\" edatının rolü nedir?",
-              "options": [
-                "depend fiili ile birlikte edat grubu oluşturma",
-                "Konum bildiren yer edatı olma",
-                "Gelecek zamanı niteleyen bağlaç olma"
-              ],
-              "correctIndex": 0,
-              "explanation": "depend fiili her zaman 'on' edatı ile birlikte kullanılır ve prepositional verb yapısındadır."
-            },
-            {
-              "id": "u33l201_ex6_q10",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...survival of the species...\"<br><br><strong>Türkçe:</strong> \"...türlerin hayatta kalması...\"<br><br>Bu yapıda \"survival\" kelimesinin dilbilgisel türü nedir?",
-              "options": [
-                "Survive fiilinden türetilmiş isim (noun)",
-                "Durum belirten sıfat (adjective)",
-                "Zaman uyumlu eylem (verb)"
-              ],
-              "correctIndex": 0,
-              "explanation": "survival, survive fiilinden türetilmiş bir isimdir."
-            },
-            {
-              "id": "u33l201_ex6_q11",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...organized a crucial meeting...\"<br><br><strong>Türkçe:</strong> \"...kritik bir toplantı düzenledi...\"<br><br>Bu yapıda \"organized\" eyleminin zamanı nedir?",
-              "options": [
-                "Geçmiş zaman (Simple Past Tense)",
-                "Geniş zaman (Simple Present Tense)",
-                "Gelecek zaman (Future Tense)"
-              ],
-              "correctIndex": 0,
-              "explanation": "organized, -ed takısı alarak Simple Past Tense (Geçmiş Zaman) yapısındadır."
-            },
-            {
-              "id": "u33l201_ex6_q12",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...will sign a treaty...\"<br><br><strong>Türkçe:</strong> \"...bir anlaşma imzalayacaklar...\"<br><br>Bu yapıda \"will\" kelimesinin dilbilgisel işlevi nedir?",
-              "options": [
-                "Gelecek zaman bildirme (Future tense / modal)",
-                "Yetenek bildiren modal yapısı",
-                "Geçmişe ait alışkanlık eylemi"
-              ],
-              "correctIndex": 0,
-              "explanation": "will modalı, cümleye gelecek zaman (will do) anlamı katar."
-            },
-            {
-              "id": "u33l201_ex6_q13",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...some of the solutions...\"<br><br><strong>Türkçe:</strong> \"...çözümlerin bazıları...\"<br><br>Bu yapıda \"some\" kelimesinin rolü nedir?",
-              "options": [
-                "Belgisiz zamir / belirteç (quantifier)",
-                "Niteleme sıfatı",
-                "Zaman bağlacı"
-              ],
-              "correctIndex": 0,
-              "explanation": "some kelimesi çözümlerin miktarını belirsiz olarak belirten bir quantifier'dır."
-            },
-            {
-              "id": "u33l201_ex6_q14",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"...for the recovery...\"<br><br><strong>Türkçe:</strong> \"...kurtarılması için...\"<br><br>Bu öbekte \"for\" edatının anlamı nedir?",
-              "options": [
-                "Amaç/hedef bildirme (for the benefit of / -için)",
-                "Süreç bildirme (-boyunca)",
-                "Karşıtlık bildirme (-rağmen)"
-              ],
-              "correctIndex": 0,
-              "explanation": "for edatı burada gezegenin kurtarılması amacını/hedefini (-için) belirtmektedir."
-            },
-            {
-              "id": "u33l201_ex6_q15",
-              "type": "multiple-choice",
-              "prompt": "<strong>İngilizce:</strong> \"Ultimately...\"<br><br><strong>Türkçe:</strong> \"Sonuç olarak...\"<br><br>Bu kelimenin işlevi nedir?",
-              "options": [
-                "Cümle zarfı (sentence adverb / sonuç bildiren bağlayıcı)",
-                "Özne niteleyici sıfat",
-                "Geçişli fiil"
-              ],
-              "correctIndex": 0,
-              "explanation": "Ultimately tüm cümleyi niteleyen ve sonuca bağlayan bir cümle zarfıdır."
-            }
-          ]
-        },
-        {
-          "id": "u33l201ex7",
-          "title": "Alıştırma 7: Projektör Modu",
-          "description": "Projektörle aydınlatılan İngilizce öbeğin Türkçe anlamını hızlıca seçin.",
-          "questions": [
-            {
-              "id": "u33l201_ex7_q1",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "initial phase of the research",
-              "options": [
-                "araştırmanın ilk aşaması",
-                "araştırma sonuçlarının özeti",
-                "araştırmanın son raporu"
-              ],
-              "correctIndex": 0,
-              "explanation": "initial phase of the research araştırmanın ilk aşaması demektir."
-            },
-            {
-              "id": "u33l201_ex7_q2",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "leader of the team",
-              "options": [
-                "ekibin lideri",
-                "ekip üyeleri",
-                "toplantı başkanı"
-              ],
-              "correctIndex": 0,
-              "explanation": "leader of the team ekibin lideri demektir."
-            },
-            {
-              "id": "u33l201_ex7_q3",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "creation of a clean energy system",
-              "options": [
-                "temiz enerji sisteminin yaratılması",
-                "temiz enerjinin yok edilmesi",
-                "enerji sisteminin kontrolü"
-              ],
-              "correctIndex": 0,
-              "explanation": "creation of a clean energy system temiz bir enerji sisteminin yaratılması anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q4",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "collaborate on the global initiative",
-              "options": [
-                "küresel girişim üzerinde işbirliği yapmak",
-                "küresel girişime karşı çıkmak",
-                "küresel girişimi yönetmek"
-              ],
-              "correctIndex": 0,
-              "explanation": "collaborate on the global initiative küresel girişim üzerinde işbirliği yapmak anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q5",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "degradation of natural habitats",
-              "options": [
-                "doğal yaşam alanlarının bozulması",
-                "doğal yaşam alanlarının korunması",
-                "kentsel alanların inşası"
-              ],
-              "correctIndex": 0,
-              "explanation": "degradation of natural habitats doğal yaşam alanlarının bozulması anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q6",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "threat to biodiversity",
-              "options": [
-                "biyoçeşitlilik için tehdit",
-                "biyoçeşitliliğin korunması",
-                "orman yapısının faydası"
-              ],
-              "correctIndex": 0,
-              "explanation": "threat to biodiversity biyoçeşitlilik için tehdit demektir."
-            },
-            {
-              "id": "u33l201_ex7_q7",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "preservation of native plants",
-              "options": [
-                "yerli bitkilerin korunması",
-                "zararlı bitkilerin yayılması",
-                "bitki türlerinin tespiti"
-              ],
-              "correctIndex": 0,
-              "explanation": "preservation of native plants yerli bitkilerin korunması anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q8",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "official reports from the researchers",
-              "options": [
-                "araştırmacılardan gelen resmi raporlar",
-                "araştırmacılara yazılan resmi mektuplar",
-                "halka açık arşiv belgeleri"
-              ],
-              "correctIndex": 0,
-              "explanation": "official reports from the researchers araştırmacılardan gelen resmi raporlar demektir."
-            },
-            {
-              "id": "u33l201_ex7_q9",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "execution of these policies",
-              "options": [
-                "bu politikaların uygulanması",
-                "bu politikaların ertelenmesi",
-                "yeni kuralların iptali"
-              ],
-              "correctIndex": 0,
-              "explanation": "execution of these policies bu politikaların uygulanması anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q10",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "depends on the immediate action",
-              "options": [
-                "acil eyleme bağlı olmak",
-                "gelecekteki eylemi engellemek",
-                "insanlığın eylemini beklemek"
-              ],
-              "correctIndex": 0,
-              "explanation": "depends on the immediate action acil eyleme bağlı olmak demektir."
-            },
-            {
-              "id": "u33l201_ex7_q11",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "crucial meeting",
-              "options": [
-                "kritik toplantı",
-                "basit görüşme",
-                "yıl sonu yemeği"
-              ],
-              "correctIndex": 0,
-              "explanation": "crucial meeting kritik toplantı anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q12",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "serious problems for the ecosystem",
-              "options": [
-                "ekosistem için ciddi sorunlar",
-                "çevre için basit çözümler",
-                "doğal yaşamın güzellikleri"
-              ],
-              "correctIndex": 0,
-              "explanation": "serious problems for the ecosystem ekosistem için ciddi sorunlar demektir."
-            },
-            {
-              "id": "u33l201_ex7_q13",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "solutions from local communities",
-              "options": [
-                "yerel topluluklardan gelen çözümler",
-                "küresel şirketlerin planları",
-                "hükümetin resmi kararları"
-              ],
-              "correctIndex": 0,
-              "explanation": "solutions from local communities yerel topluluklardan gelen çözümler anlamına gelir."
-            },
-            {
-              "id": "u33l201_ex7_q14",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "participate in environmental campaigns",
-              "options": [
-                "çevre kampanyalarına katılmak",
-                "çevre kirliliğine yol açmak",
-                "kampanyaları iptal etmek"
-              ],
-              "correctIndex": 0,
-              "explanation": "participate in environmental campaigns çevre kampanyalarına katılmak demektir."
-            },
-            {
-              "id": "u33l201_ex7_q15",
-              "type": "spotlight",
-              "prompt": "Projektör Modu: Parlayan İngilizce öbeğin en uygun Türkçe karşılığını seçin:",
-              "paragraph": "During the initial phase of the research, the leader of the team organized a crucial meeting. The main goal of the project remains the creation of a clean energy system. Many of the scientists from the international institute collaborate on the global initiative. There is significant concern about the degradation of natural habitats in urban areas. The sudden rise of global temperatures causes serious problems for the ecosystem. A sudden collapse of the regional forest structure is a major threat to biodiversity. Fortunately, some of the solutions from local communities offer hope for the future. Activists in various countries participate in environmental campaigns. There are many benefits from the preservation of native plants under controlled conditions. The official reports from the researchers are in the public archive of the institute. At the end of the year during the global summit, leaders from different nations will sign a treaty. The execution of these policies is extremely vital for the recovery of the planet. Ultimately, the survival of the species depends on the immediate action of humanity.",
-              "highlightChunk": "will sign a treaty",
-              "options": [
-                "bir anlaşma imzalayacaklar",
-                "anlaşmayı reddedecekler",
-                "yeni yasayı tartışacaklar"
-              ],
-              "correctIndex": 0,
-              "explanation": "will sign a treaty bir anlaşma imzalayacaklar anlamına gelir."
-            }
-          ]
-        }
-      ]
-    }
-  },
-  "34": {
+    "34": {
     "1": {
       "exercises": [
         {
@@ -100610,8 +97016,17 @@ const unit35 = {
 
 // Integrate Unit 35 into global units and lessons arrays
 (function () {
-  if (typeof units !== 'undefined' && typeof lessons !== 'undefined') {
+  if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit35 !== 'undefined') {
     const unitLessonIds = unit35.lessons.map(l => l.lessonId);
+
+    const titlesMap = {
+      "u35_l1": "1: Projektör Modu ile Akademik Kısaltma Analizi (developed by, having completed, referred to as)",
+      "u35_l2": "2: Hata Avcısı ile Yanlış Kısaltmaları Ayıklayın (having completed vs completed, active vs passive)",
+      "u35_l3": "3: Yapısal Analize Göre Doğru Kısıltmayı Belirleyin (having studied, known as, observed under)",
+      "u35_l4": "4: Açılır Menü ile Akademik Kısaltma Seçimi (given the circumstances, driven by, exposed to)",
+      "u35_l5": "5: Buton Modu ile Kısaltma ve Cümle Çözümleme (having been recognized, although defeated, if implemented)",
+      "u35_l6": "6: Kısaltmalı Akademik Cümlelerin Doğru Çevirisini Bulun (having published, accused of, supported by)"
+    };
 
     // Push Unit 35
     units.push({
@@ -100624,12 +97039,13 @@ const unit35 = {
 
     // Push Unit 35 Lessons
     unit35.lessons.forEach(l => {
+      const displayTitle = titlesMap[l.lessonId] || l.lessonTitle;
       // Wrap questions inside a standard single exercise object
       const structuredExercises = [
         {
           id: l.lessonId + "_ex1",
           title: "Alıştırma 1: Yapı Çalışması",
-          description: l.lessonTitle,
+          description: displayTitle,
           questions: l.exercises
         }
       ];
@@ -100637,7 +97053,7 @@ const unit35 = {
       lessons.push({
         id: l.lessonId,
         unitId: 35,
-        title: l.lessonTitle,
+        title: displayTitle,
         subtitle: "",
         exercises: structuredExercises
       });
@@ -101175,6 +97591,13 @@ const unit36 = {
   if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit36 !== 'undefined') {
     const unitLessonIds = unit36.lessons.map(l => l.lessonId);
 
+    const titlesMap = {
+      "u36_l1": "1: Yumuşatma Sıfatları & Zarfları (likely, presumably, arguably, possibly)",
+      "u36_l2": "2: Yumuşatma Fiilleri & Modallar (tend to, appear to, suggest, could, may, might)",
+      "u36_l3": "3: İhtimal İsim Öbekleri & Yapısal İfadeler (likelihood, possibility, assumption, it is widely accepted)",
+      "u36_l4": "4: Akademik Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)"
+    };
+
     // Push Unit 36
     units.push({
       id: 36,
@@ -101186,12 +97609,13 @@ const unit36 = {
 
     // Push Unit 36 Lessons
     unit36.lessons.forEach(l => {
+      const displayTitle = titlesMap[l.lessonId] || l.lessonTitle;
       // Wrap questions inside a standard single exercise object
       const structuredExercises = [
         {
           id: l.lessonId + "_ex1",
           title: "1",
-          description: l.lessonTitle,
+          description: displayTitle,
           questions: l.exercises
         }
       ];
@@ -101199,7 +97623,7 @@ const unit36 = {
       lessons.push({
         id: l.lessonId,
         unitId: 36,
-        title: l.lessonTitle,
+        title: displayTitle,
         subtitle: "",
         exercises: structuredExercises
       });
@@ -105851,41 +102275,222 @@ const unit37_advanced_relative = {
 // Register Unit 37 (Advanced Relative Clauses)
 (function () {
   if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit37_advanced_relative !== 'undefined') {
-    const unitLessonIds = unit37_advanced_relative.lessons.map(l => l.lessonId || l.id);
+    const allExercises = [];
+    unit37_advanced_relative.lessons.forEach(l => {
+      if (l.exercises) {
+        allExercises.push(...l.exercises);
+      }
+    });
+
+    const masterLessonsDefs = [
+      {
+        id: "c37_ml1",
+        displayId: 1,
+        title: "1: Miktar ve Oran Cümlecikleri (most of which, some of which, none of which)",
+        subtitle: "Of Which / Of Whom ile Nicelik Bildiren Sıfat Cümlecikleri",
+        icon: "📊",
+        formula: "Noun + , + [Quantifier] + of which/whom + Clause",
+        example: "The historian examined twenty medieval manuscripts, most of which detailed the Silk Road.",
+        description: "most of which/whom, some of which/whom, none of which/whom, half of which, a fraction of which gibi oran ve miktar belirteçlerinin kullanımı.",
+        teorikMantik: "Cümlede nitelenen isimden sonra virgül kullanarak 'most of which' (büyük kısmı ... olan) veya 'some of which' (bazıları ... olan) gibi nicelik belirteçleriyle ek bilgi verilir. Bu yapı iki bağımsız cümleyi birbirine bağlar.",
+        altinKural: "Boşluktan sonra bağımsız bir cümle yapısı varsa ve iki cümle virgülle ayrılmışsa, 'them' veya 'it' yerine 'which' (cansızlar için) veya 'whom' (insanlar için) kullanılması zorunludur.",
+        exerciseIds: ["c37_l1_ex1", "c37_l2_ex13"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Miktar Belirteçleri (Quantifiers)"]
+      },
+      {
+        id: "c37_ml2",
+        displayId: 2,
+        title: "2: İnsan Odaklı Miktar Yapıları (many of whom, each of whom, neither of whom)",
+        subtitle: "Kişi Nitelerken Of Whom ile Miktar Belirtme",
+        icon: "👥",
+        formula: "Plural Noun (People) + , + [Quantifier] + of whom + Clause",
+        example: "The empire exiled ten political dissidents, many of whom established networks.",
+        description: "many of whom, each of whom, neither of whom, the majority of whom gibi sadece kişileri niteleyen oran ve miktar belirteçleri.",
+        teorikMantik: "Sadece insanları nitelemek amacıyla kullanılan miktar yapılarında 'of whom' kalıbı tercih edilir. 'many of whom' (birçoğu ... olan) veya 'each of whom' (her biri ... olan) gibi öbekler insan topluluklarına atıfta bulunur.",
+        altinKural: "İnsan nitelerken kesinlikle 'which' veya 'that' kullanılamaz; sadece 'whom' veya aitlik durumunda 'whose' tercih edilmelidir.",
+        exerciseIds: ["c37_l1_ex2", "c37_l2_ex14"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Miktar Belirteçleri (Quantifiers)"]
+      },
+      {
+        id: "c37_ml3",
+        displayId: 3,
+        title: "3: Derecelendirme ve Sıralama Kalıpları (the largest of which, the first of which, the last of which)",
+        subtitle: "Sıralama Sıfatları ve En Üstünlük Dereceleri",
+        icon: "🥇",
+        formula: "Noun + , + [the Superlative/Ordinal] + of which/whom + Clause",
+        example: "The civilization built three grand libraries, the first of which was destroyed.",
+        description: "the largest of which, the first of which, the oldest of whom, the last of which gibi sıralama ve derece bildiren yapılar.",
+        teorikMantik: "Bir grup nesne veya insan arasından en üstün olanı (the largest) veya belirli bir sıradakini (the first/the last) belirtmek için üstünlük ve sıralama sıfatları 'of which' veya 'of whom' ile birleştirilir.",
+        altinKural: "Sıralama sıfatlarından önce mutlaka 'the' belirteci kullanılmalıdır: 'the first of which', 'the oldest of whom' gibi.",
+        exerciseIds: ["c37_l1_ex3", "c37_l2_ex15"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Derecelendirme (Comparison)"]
+      },
+      {
+        id: "c37_ml4",
+        displayId: 4,
+        title: "4: Sahiplik ve Aitlik Yapıları (most of whose, each of whose, all of whose)",
+        subtitle: "Of Whose Yapısı ile Sahiplik ve Aitlik İlişkisi",
+        icon: "🗝️",
+        formula: "Noun + , + [Quantifier] + of whose + Noun + Clause",
+        example: "The philosopher wrote a thick book, each of whose chapters redefines democracy.",
+        description: "most of whose, all of whose, some of whose, each of whose gibi sahiplik bildiren miktar belirteçli sıfat cümlecikleri.",
+        teorikMantik: "Miktar belirteci ile sahiplik bildiren 'whose' yapısı bir araya gelerek 'üyelerinin tamamı... olan' veya 'bölümlerinin her biri... olan' gibi karmaşık aitlik ilişkileri kurar.",
+        altinKural: "'whose' yapısından hemen sonra mutlaka nitelediği yalın isim gelmelidir: 'each of whose chapters', 'all of whose members' gibi.",
+        exerciseIds: ["c37_l1_ex4", "c37_l2_ex16"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Sahiplik Belirteçleri (Possessives)"]
+      },
+      {
+        id: "c37_ml5",
+        displayId: 5,
+        title: "5: Edat Kombinasyonlu Miktar Yapıları (in some of which, by many of whom, with most of whom)",
+        subtitle: "Edat + Miktar + Of Which/Whom Geometrisi",
+        icon: "🔗",
+        formula: "Noun + , + [Preposition] + [Quantifier] + of which/whom + Clause",
+        example: "The delegation proposed two amendments, to neither of which the parliament agreed.",
+        description: "in some of which, by many of whom, with most of whom, to neither of which gibi edatlı miktar ve ilgi yapılarının sentezi.",
+        teorikMantik: "Fiilin veya sıfatın gerektirdiği edat (preposition), miktar belirtecinin ve 'which/whom' zamirinin en önüne gelerek 'to neither of which' (ikisinden hiçbirine de) veya 'with most of whom' (çoğu ile birlikte) yapılarını oluşturur.",
+        altinKural: "Edat seçimi, nitelenen isme değil, yan cümledeki fiilin veya sıfatın aldığı edata göre belirlenir (Örn: 'agree to' -> 'to which').",
+        exerciseIds: ["c37_l1_ex5", "c37_l2_ex17"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
+      },
+      {
+        id: "c37_ml6",
+        displayId: 6,
+        title: "6: Kurumsal Gözetim ve Hiyerarşi Yapıları (under the supervision of whom, through the analysis of which)",
+        subtitle: "Akademik ve Yönetsel Niteleme Öbekleri",
+        icon: "🎓",
+        formula: "Noun + , + [Preposition] + the + [Noun] + of which/whom + Clause",
+        example: "The foundation employs five junior researchers, under the supervision of whom the field study is conducted.",
+        description: "under the supervision of whom, through the analysis of which, under the leadership of whom gibi gelişmiş yönetsel ve akademik niteleme öbekleri.",
+        teorikMantik: "Akademik ve kurumsal dilde, yönetsel hiyerarşi veya bilimsel süreç nitelemek için 'under the supervision of whom' (kimin gözetimi altında) veya 'through the analysis of which' (analizi vasıtasıyla) gibi uzun edat öbekleri kullanılır.",
+        altinKural: "Bu yapılar birer isim tamlaması gibi sondan başa doğru çevrilir ve akademik yazımda en prestijli cümle kurma biçimlerindendir.",
+        exerciseIds: ["c37_l1_ex6", "c37_l2_ex18"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
+      },
+      {
+        id: "c37_ml7",
+        displayId: 7,
+        title: "7: Soyut Zaman Geçişleri (by which time, at which point, during which period)",
+        subtitle: "Relative Adverbs ile Zaman ve Süreç Bağlama",
+        icon: "⏳",
+        formula: "Time/Event Noun + , + [Preposition] + which + [time noun] + Clause",
+        example: "The peace negotiations lasted for two years, by which time the economy had collapsed.",
+        description: "by which time, at which point, during which period, since which year gibi zaman ve süreç bildiren bağlama yapıları.",
+        teorikMantik: "Zaman veya süreç bildiren isimlerden sonra gelen 'by which time' (o zamana kadar) veya 'at which point' (bu noktada) gibi yapılar, olaylar arasındaki kronolojik ve sebetsel akışı kurar.",
+        altinKural: "'by which time' yapısıyla kurulan yan cümlelerde genellikle bir eylem önceliği (past perfect: had V3) kullanımı yaygındır.",
+        exerciseIds: ["c37_l1_ex7", "c37_l2_ex19"],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Zaman Bağlaçları (Time Conjunctions)"]
+      },
+      {
+        id: "c37_ml8",
+        displayId: 8,
+        title: "8: Akademik Sentaks ve Sınav Zirvesi (Karma Advanced Relative Clauses)",
+        subtitle: "Genel Değerlendirme, Hata Avcısı ve Çeviri Matrisi",
+        icon: "🏆",
+        formula: "Mixed Advanced Relative Clause Patterns",
+        example: "The king appointed two envoys, through the diplomatic efforts of whom the war was avoided.",
+        description: "Tüm ileri düzey sıfat cümleciği yapılarının karışık test, hata avcısı, çeviri ve sentaks egzersizleriyle sınandığı bitirme zirvesi.",
+        teorikMantik: "İleri düzey sıfat cümleciği yapılarının tamamının akademik bağlamda, çeldirici tuzaklar ve sentaks kuralları eşliğinde test edildiği genel tekrar zirvesidir.",
+        altinKural: "Sınavlarda en sık yapılan hata, iki cümleyi bağlaçsız bağlarken 'which/whom' yerine 'them/it' kullanılmasıdır. Virgüle ve fiil sayılarına dikkat edin.",
+        exerciseIds: [
+          "c37_l1_ex8", "c37_l1_ex9", "c37_l1_ex10", "c37_l1_ex11", "c37_l1_ex12",
+          "c37_l2_ex20", "c37_l2_ex21", "c37_l2_ex22", "c37_l2_ex23", "c37_l2_ex24"
+        ],
+        tags: ["Sıfat Cümlecikleri (Relative Clauses)"]
+      }
+    ];
+
+    function getTagsForQuestion(q, baseTags) {
+      const tags = [...baseTags];
+      const textToCheck = ((q.sentence || "") + " " + (q.correctSentence || "") + " " + (q.enSentence || "") + " " + (q.translation || "")).toLowerCase();
+      
+      // Dynamic passive detection
+      if (textToCheck.includes("was ") || textToCheck.includes("were ") || textToCheck.includes("been ") || textToCheck.includes("by the ") || textToCheck.includes("is written") || textToCheck.includes("was built") || textToCheck.includes("be avoided") || textToCheck.includes("was isolated")) {
+        if (!tags.includes("Edilgen Yapı (Passive)")) {
+          tags.push("Edilgen Yapı (Passive)");
+        }
+      }
+      
+      // Dynamic modal detection
+      if (textToCheck.includes("should ") || textToCheck.includes("must ") || textToCheck.includes("could ") || textToCheck.includes("would ") || textToCheck.includes("might ") || textToCheck.includes("may ")) {
+        if (!tags.includes("Kip Ekleri (Modals)")) {
+          tags.push("Kip Ekleri (Modals)");
+        }
+      }
+      return tags;
+    }
+
+    function processAndSortQuestions(exs, baseTags) {
+      let rawQs = [];
+      exs.forEach(ex => {
+        if (ex && ex.questions) {
+          ex.questions.forEach(q => {
+            q.grammarTags = getTagsForQuestion(q, baseTags);
+            rawQs.push(q);
+          });
+        }
+      });
+
+      const phraseLevel = [];
+      const sentenceLevel = [];
+      const academicLevel = [];
+
+      rawQs.forEach(q => {
+        if (q.type === 'matching' || q.type === 'collocation-matching') {
+          phraseLevel.push(q);
+        } else if (q.type === 'sentence-connector' || q.type === 'translation-text' || q.type === 'inversion-transformer') {
+          academicLevel.push(q);
+        } else {
+          sentenceLevel.push(q);
+        }
+      });
+
+      return [...phraseLevel, ...sentenceLevel, ...academicLevel];
+    }
 
     // Push Unit 37
     units.push({
       id: 37,
       title: unit37_advanced_relative.chapterName,
       description: "Tarih, hukuk, felsefe, sosyoloji, fen ve sağlık metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
-      lessons: unitLessonIds,
+      lessons: masterLessonsDefs.map(ml => ml.id),
       pages: "261-285"
     });
 
-    // Push Unit 37 Lessons
-    unit37_advanced_relative.lessons.forEach(l => {
-      const structuredExercises = l.exercises.map(ex => ({
-        id: ex.id,
-        title: ex.title,
-        description: ex.description || "",
-        questions: ex.questions || []
-      }));
+    // Push Consolidated Lessons
+    masterLessonsDefs.forEach(ml => {
+      const matchedExs = allExercises.filter(ex => ml.exerciseIds.includes(ex.id));
+      const sortedQs = processAndSortQuestions(matchedExs, ml.tags);
+
+      const structuredExercises = [
+        {
+          id: ml.id + "_ex",
+          title: ml.title.split(":")[1].trim() + " Pratiği",
+          description: ml.subtitle,
+          questions: sortedQs
+        }
+      ];
 
       lessons.push({
-        id: l.lessonId || l.id,
+        id: ml.id,
         unitId: 37,
-        title: l.lessonTitle,
+        title: ml.title,
         subtitle: "Advanced Relative Clauses",
+        icon: ml.icon,
+        formula: ml.formula,
+        example: ml.example,
+        description: ml.description,
         exercises: structuredExercises,
-        konuAnlatimi: l.konuAnlatimi || null
+        konuAnlatimi: {
+          baslik: ml.title,
+          teorikMantik: ml.teorikMantik,
+          formul: ml.formula,
+          altinKural: ml.altinKural
+        }
       });
     });
   }
-
-  })();
-
-
-const curriculumData = [
+})();const curriculumData = [
   {
     "chapterId": "chapter38",
     "chapterName": "Advanced Inversion",
@@ -133080,3 +129685,126 @@ const chapter66Data = {
 
 // AUTO RENUMBERING ALL UNITS 1 TO 61 IN DATA.JS
 // re-keying logic removed
+
+// Dynamic lesson title updates for Units 38 and above (providing example parentheticals)
+(function () {
+  if (typeof lessons !== 'undefined') {
+    const titleUpdates = {
+      // Unit 38 (Advanced Inversion)
+      "c38_l1": "1: Sıklık Zarfları ve Korelasyonlu Zaman Kırılmaları (seldom, rarely, no sooner ... than, hardly ... when)",
+      "c38_l2": "2: Kısıtlayıcı Yapılar ve Ana Cümle Tuzakları (only after, only when, under no circumstances)",
+      "c38_l3": "3: Şartlı ve Edebi Modals Devriklikleri (should you need, had we known, were I you)",
+      "c38_l4": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
+      "c38_l5": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi (Karma Inversion & Emphatic)",
+
+      // Unit 39
+      "c40_l1_merged": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
+      "c40_l2_merged": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+      "c40_l3_merged": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+
+      // Unit 39_2
+      "c40_l4_merged": "1. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+      "c40_l5_merged": "2. İsim & Sıfat Cümleciklerinin Kısaltma Geometrisi (V-ing, V3, to V1)",
+      "c40_l6_merged": "3. Zarf Cümleciklerinde Kısaltma & Anlamsal Büzülme (while studying, once approved)",
+      "c40_l7_merged": "4. Karmaşık Kısaltmalar & Geçmiş Zaman Kilitleri (having V3, having been V3)",
+
+      // Unit 39_3
+      "c40_l8_merged": "1. Devrik Cümle Mimarisi & Zaman Kilitleri (not only ... but also, no sooner ... than)",
+      "c40_l9_merged": "2. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+      "c40_l10_merged": "3. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+      "c40_l11_merged": "4. Sınav Çeldirici & Hata Avcısı Zirvesi (Karma Hatasızlaştırma)",
+
+      // Unit 41
+      "c41_l1": "1. Sınav Kısayolları ve Yapı Refleksleri (suggest doing, insist on, it is no use)",
+      "c41_l2": "2. Kronolojik Zaman Uyumu (since/for, by the time, before/after)",
+      "c41_l3": "3. Akademik Diyalog ve Mülakat Matrisi (neither did I, so do I, question flow)",
+
+      // Unit 42
+      "c42_l1": "1. Temel Modallar (is likely to, is bound to, is supposed to)",
+      "c42_l2": "2. Zaman Bükücüler (was likely to, used to vs was used to)",
+      "c42_l3": "3. Edilgenlik Matrisi (bound to be V3, supposed to be V3)",
+      "c42_l4": "4. Zaman Kayması Matrisi (likely to have V3, was to have V3)",
+      "c42_l5": "5. Mega Zincirler (bound to have been V3, supposed to have been V3)",
+
+      // Unit 43
+      "c43_l1": "1. Şimdiki Zaman & Edilgen Süreç Kökleri (is being V3)",
+      "c43_l2": "2. Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
+      "c43_l3": "3. Aktif Geçmiş Zaman Kaymaları (had V3, was V-ing)",
+      "c43_l4": "4. Saf Modalların 5'li Yapı Sentezi (modal + be + V-ing/V3)",
+
+      // Unit 44
+      "c44_l1": "1. Varsayımsal Geçmiş Zaman Zincirleri (would have been V3)",
+      "c44_l2": "2. Geçmiş Zaman Edilgen Bükümleri (had been being V3)",
+      "c44_l3": "3. Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
+
+      // Unit 45
+      "c45_l1": "Ders 1: Şimdiki Zaman Söylentili Edilgen Süreç Zincirleri (is said to be V-ing/V3)",
+      "c45_l2": "Ders 2: Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri (was believed to have been V3)",
+
+      // Unit 46
+      "c46_l1": "Ders 1: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
+
+      // Unit 47
+      "c47_l1": "Ders 1: Vagon Kırılımları ve Anlamsal Diferansiyel (syntax trees & modifiers)",
+
+      // Unit 48
+      "c48_l1": "Ders 1: Zaman Kayma Kontrolü (tense consistency checking)",
+
+      // Unit 51
+      "c51_l1": "1. As Türevleri ve Karıştırılan Bağlaçlar (as, like, as if, as though)",
+      "c51_l2": "2. Causative (Ettirgen Yapı) Mühendisliği (have someone do, get someone to do)",
+      "c51_l3": "3. Inversion (Devrik Cümle) Dedektifi (hardly had I, only then)",
+
+      // Unit 52
+      "c52_l1": "1. Participle Reduction (Kısaltma) Geometrisi (V-ing, V3, having V3)",
+      "c52_l2": "2. Eşikte Olma (\"-e Üzere Olmak\") Grubu (be about to, be on the verge of)",
+      "c52_l3": "3. Subjunctive & Gizli Şart (\"Otherwise\" / \"But\") Kuralları (lest, otherwise, but for)",
+      "c52_l4": "4. \"It\"li Pasif Aktarım & \"To\"lu Dönüşümler (it is thought that, he is thought to be)",
+
+      // Unit 53
+      "c54_l1": "1. Bağlaçların Yapısal Kimliği (Eşleştirme) (although, because, therefore)",
+      "c54_l2": "2. İkiz Bağlaç Sentaks Seçici (both ... and, either ... or, neither ... nor, not only ... but also)",
+      "c54_l3": "3. Noktalama ve Geçiş Dedektifi (however, moreover, thus, on the other hand)",
+
+      // Unit 54
+      "c55_l1": "1. Özel Kalıplar ve Sınav İpuçları (Visual Conjunction Masters) (no sooner ... than, so ... that)",
+
+      // Unit 55
+      "c56_l1": "1. Temel Koşul Yapıları (Type 0, 1, 2, 3) (if, unless)",
+      "c56_l2": "2. İleri Seviye Karışık Koşul Yapıları (Mix 1 & Mix 2) (if + had V3 ... would V1)",
+      "c56_l3": "3. Koşul Cümlelerinde Çeviri ve Sentaks (translating conditionals)",
+      "c56_l4": "4. Devrik Koşul Yapıları (should it happen, were it to, had it been)",
+      "c56_l5": "5. Alternatif Koşul Yapıları (provided that, as long as, in case)",
+      "c56_l6": "6. Diğer Koşul Bağlaçları (supposing, assuming, on condition that)",
+      "c56_l7": "7. Keşke Yapıları (wish, if only)",
+
+      // Unit 57
+      "c60_l1": "1. Başlangıç ve Destek Fiilleri (A-B) (back up, carry out, bring about)",
+      "c60_l2": "2. Karşılaşma ve Değişim Fiilleri (C) (come across, cut down, call off)",
+      "c60_l3": "3. Çözüm ve Sonlanma Fiilleri (D-Z) (deal with, end up, figure out)",
+
+      // Unit 66
+      "c66_l1": "1. Zaman Bağlaçları & Tense Uyum Kilitleri (when, before, after, as soon as)",
+      "c66_l2": "2. Esnek Zaman Alanları: Zıtlık Bağlaçları & Relative Clauses (although, but, whereas)",
+      "c66_l3": "3. Tarih Belirteçleri vs. Genel Betimleme Tuzağı (in 1990 vs present simple)",
+      "c66_l4": "4. Sınır Çizgisi \"BY\" & Çift Yönlü Perfect Matrisi (by + past ➔ had V3, by + future ➔ will have V3)",
+      "c66_l5": "5. Çapa ve Süreç İkilisi: SINCE & FOR Dünyası (since + V2, for + duration)",
+      "c66_l6": "6. Farkındalık Fiilleri & Zaman Kayması (realize, notice, discover)",
+      "c66_l7": "7. Sıralama Sıfatları & Infinitive Kısaltmaları (the first, the only ➔ to + V1)",
+      "c66_l8": "8. Zaman İşaretçileri: Recently & Lately Refleksleri (recently, lately ➔ present perfect)",
+      "c66_l9": "9. Tüm Kuralların Sınav Simülasyonu & Karma Refleks Zirvesi (10 Altın Kural Karma Testi)"
+    };
+
+    lessons.forEach(l => {
+      if (titleUpdates[l.id]) {
+        l.title = titleUpdates[l.id];
+        // Also update any internal descriptions/titles in nested exercises if they exist
+        if (l.exercises) {
+          l.exercises.forEach(ex => {
+            ex.description = titleUpdates[l.id];
+          });
+        }
+      }
+    });
+  }
+})();

@@ -3386,31 +3386,30 @@ if (typeof lessons !== 'undefined') {
   // 2. Approved curriculum ordering of unit IDs
   const targetOrder = [
     6,   // Temel Yapılar
-    8,   // "There" Yapıları
     1,   // İsim ve Edat Yapıları
     3,   // İsim Tamlaması
     2,   // Fiil ve Edat Yapıları
     7,   // Özne - Geçişli Fiil + Nesne
     9,   // Soru Yapıları
+    12,  // Participle Yapıları
     70,  // Saf Modallar ve Saf Zamanlar
+    8,   // "There" Yapıları
     102, // Zaman Zarfları ve Zaman Uyumu
     101, // Zaman Uyumu: By the time, Since, It is time
+    13,  // Ara Bölüm 2: Tercih Bildiren Yapılar
+    17,  // Ara Bölüm 3: Rica ve İzin İsteme Yapıları
     104, // Yarı-Modallar ve Modal Benzeri Yapılar
     103, // Öbeksel Kipler
     10,  // Edilgen Yapılar ve Edilgen Mastarı
-    33,  // Okuma Parçaları 1
     62,  // Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri
     22,  // Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler
+    40,  // Bağlaçlar
     32,  // Zarf Cümlecikleri
     26,  // Karşılaştırma ile Sıfat Cümleciği
     28,  // İsim Cümleciği
-    12,  // Participle Yapıları
     14,  // Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar
     29,  // It + to be + sıfat/past participle + that
     30,  // Neden ve Etki Yapıları
-    13,  // Ara Bölüm 2: Tercih Bildiren Yapılar
-    17,  // Ara Bölüm 3: Rica ve İzin İsteme Yapıları
-    40,  // Bağlaçlar
     35,  // Akademik Cümle Analizi ve Kısaltmalar
     36,  // Akademik Yumuşatma ve İhtimal Dili
     37,  // Advanced Relative Clauses

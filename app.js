@@ -20,7 +20,6 @@ function cleanAcademicUnitTitle(title) {
     'Fiil ve Edat Yapıları': 'Fiil ve Edat Yapıları (Verbs & Prepositions)',
     'Özne - Geçişli Fiil + Nesne': 'Özne, Fiil ve Nesne Dizilimi (SVO Structure)',
     '"There" Yapıları': 'Var/Yok İfadeleri (There is / There are)',
-    'Okuma Parçaları 1': 'Akademik Okuma Metinleri ve Metin Analizi',
     'Soru Yapıları': 'Soru Cümleleri ve Kalıpları (Question Structures)',
     'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar (Modals & Tenses)',
     'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar (Passive Voice & Passive Infinitive)',
