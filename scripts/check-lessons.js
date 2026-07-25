@@ -3,6 +3,7 @@ const vm = require('vm');
 
 const dataCode = fs.readFileSync('data.js', 'utf8');
 const extraCode = fs.readFileSync('data-extra.js', 'utf8');
+const rulesCode = fs.readFileSync('rules-db.js', 'utf8');
 
 // Create a sandbox to run data.js in Node environment safely
 const sandbox = {
@@ -20,16 +21,21 @@ try {
   // Appending an object expression at the end of the script to return the const arrays
   // Strip export statements to prevent VM syntax errors in script mode
   const executableCode = dataCode.replace(/\bexport\s+/g, '');
-  const wrapperCode = executableCode + '\n; ({ units, lessons });';
+  const wrapperCode = executableCode + '\n; ({ units, lessons, unitSentencesMap });';
   dataResult = vm.runInContext(wrapperCode, sandbox);
   
-  // Populate the sandbox variables so data-extra can read/write them
+  // Populate the sandbox variables so data-extra and rules can read/write them
   sandbox.lessons = dataResult.lessons;
   sandbox.units = dataResult.units;
+  sandbox.unitSentencesMap = dataResult.unitSentencesMap;
   
   // Run data-extra.js
   const executableExtra = extraCode.replace(/\bexport\s+/g, '');
   vm.runInContext(executableExtra, sandbox);
+
+  // Run rules-db.js
+  const executableRules = rulesCode.replace(/\bexport\s+/g, '');
+  vm.runInContext(executableRules, sandbox);
 } catch (err) {
   console.error('Veri dosyaları çalıştırılırken bir hata oluştu:', err);
   process.exit(1);

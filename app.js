@@ -875,6 +875,161 @@ const FORMATION_QUESTIONS = [
     correctIndex: 1,
     translation: "Orwell tarafından yazılan roman distopik bir geleceği tasvir eder.",
     mechanicNote: "<strong>30. Adım: Ana Yüklemi Bulma</strong><br>Araya niteleyiciler girmiş uzun cümlelerde ana eylemi bulmayı çözersiniz."
+  },
+  {
+    id: "fq31",
+    type: "error-spotting",
+    grammarTags: ["Hata Tespiti", "Error Spotting"],
+    prompt: "Aşağıdaki cümledeki gramer hatasını bulunuz:",
+    sentence: "She don't like apples.",
+    options: ["She", "don't", "like", "apples"],
+    correctIndex: 1,
+    translation: "O elma sevmez.",
+    mechanicNote: "<strong>31. Adım: Hata Saptama (Error Spotting)</strong><br>Cümledeki gramer/sentaks hatasını içeren seçeneği belirlersiniz."
+  },
+  {
+    id: "fq32",
+    type: "context-clue",
+    grammarTags: ["Bağlamsal İpucu", "Context Clue"],
+    prompt: "Cümlenin bağlamına göre boşluğa gelecek en uygun kelimeyi seçiniz: 'The scientist's theory was so ___ that everyone believed it.'",
+    options: ["credible", "implausible", "weak", "wrong"],
+    correctIndex: 0,
+    translation: "Bilim insanının teorisi o kadar inandırıcıydı ki herkes ona inandı.",
+    mechanicNote: "<strong>32. Adım: Bağlamsal İpucu (Context Clue)</strong><br>Cümledeki diğer ögelerden ipuçları yakalayarak doğru kelimeyi seçersiniz."
+  },
+  {
+    id: "fq33",
+    type: "chain-expansion-differential",
+    grammarTags: ["Zincirleme Genişleme", "Chain Expansion"],
+    prompt: "Aşağıdaki cümledeki boşluğu en uygun şekilde tamamlayan yapıyı bulunuz: 'The project, ___ was funded by the government, failed.'",
+    options: ["which", "who", "where", "whom"],
+    correctIndex: 0,
+    translation: "Hükümet tarafından finanse edilen proje başarısız oldu.",
+    mechanicNote: "<strong>33. Adım: Zincirleme Genişleme (Chain Expansion Differential)</strong><br>Gelişmiş sıfat tümlecikleriyle cümleleri uzatma kurallarını çözersiniz."
+  },
+  {
+    id: "fq34",
+    type: "structural-deconstruction",
+    grammarTags: ["Yapısal Çözümleme", "Structural Deconstruction"],
+    prompt: "Aşağıdaki cümlenin yapısal analizine göre en doğru seçeneği bulunuz: 'Having finished his work, he left.'",
+    options: ["After he had finished his work, he left.", "Before he finished his work, he left.", "While he was finishing his work, he left.", "As soon as he leaves, he finishes his work."],
+    correctIndex: 0,
+    translation: "İşini bitirdikten sonra ayrıldı.",
+    mechanicNote: "<strong>34. Adım: Yapısal Çözümleme (Structural Deconstruction)</strong><br>Kısaltılmış yapıları tam cümle formuna dönüştürerek analiz edersiniz."
+  },
+  {
+    id: "fq35",
+    type: "vector-velocity-shift",
+    grammarTags: ["Zaman Kayması", "Vector Velocity Shift"],
+    prompt: "Aşağıdaki cümlede zaman uyumuna göre doğru seçeneği bulunuz: 'By the time the police arrived, the thief ___.'",
+    options: ["had escaped", "escapes", "will escape", "is escaping"],
+    correctIndex: 0,
+    translation: "Polis vardığında hırsız kaçmıştı.",
+    mechanicNote: "<strong>35. Adım: Hız ve Zaman Kayması (Vector Velocity Shift)</strong><br>Eylemlerin oluş sırasına göre past perfect ve past simple uyumunu incelersiniz."
+  },
+  {
+    id: "fq36",
+    type: "titan-boundary-defense",
+    grammarTags: ["Sınır Savunması", "Titan Boundary Defense"],
+    prompt: "Aşağıdaki akademik cümledeki sınırı aşan (hatalı) bağlacı bulunuz: 'Although it was raining, therefore we stayed home.'",
+    options: ["Although", "was", "therefore", "home"],
+    correctIndex: 2,
+    translation: "Yağmur yağmasına rağmen, bu yüzden evde kaldık.",
+    mechanicNote: "<strong>36. Adım: Cümle Sınır Savunması (Titan Boundary Defense)</strong><br>İngilizce'de iki bağlacın aynı anda aynı cümlede kullanılamaması (double conjunction) hatasını denetlersiniz."
+  },
+  {
+    id: "fq37",
+    type: "vagon-to-suffix-match",
+    grammarTags: ["Vagon-Ek Eşleşmesi", "Suffix Match"],
+    prompt: "İsim ile onun sıfat yapıcı son ekini (suffix) eşleştiren doğru seçeneği bulunuz: 'Beauty' -> ?",
+    options: ["Beautiful", "Beautify", "Beautifully", "Beauties"],
+    correctIndex: 0,
+    translation: "Güzel",
+    mechanicNote: "<strong>37. Adım: Vagon ve Ek Eşleştirmesi (Vagon-to-Suffix Match)</strong><br>Kelimelerin türlerini değiştiren son ekleri (isimden sıfat yapma vb.) çözersiniz."
+  },
+  {
+    id: "fq38",
+    type: "reverse-engineering-translation",
+    grammarTags: ["Tersine Mühendislik", "Reverse Translation"],
+    prompt: "Türkçe karşılığı verilen cümlenin İngilizce orijinalini bulunuz: 'Odamı temizlettim.'",
+    options: ["I had my room cleaned.", "I cleaned my room.", "My room was clean.", "I should clean my room."],
+    correctIndex: 0,
+    translation: "Odamı temizlettim.",
+    mechanicNote: "<strong>38. Adım: Çeviri Tersine Mühendisliği (Reverse-Engineering Translation)</strong><br>Türkçe ettirgen ifadeleri doğru İngilizce gramer kalıbıyla eşleştirirsiniz."
+  },
+  {
+    id: "fq39",
+    type: "suffix-decapitation",
+    grammarTags: ["Ek Eksiltme", "Suffix Decapitation"],
+    prompt: "Aşağıdaki kelimeden yapım ekini çıkartarak kök halini bulunuz: 'Ineffectively'",
+    options: ["Effect", "Effective", "Effectively", "Ineffective"],
+    correctIndex: 0,
+    translation: "Etki",
+    mechanicNote: "<strong>39. Adım: Ek Koparma (Suffix Decapitation)</strong><br>Karmaşık akademik kelimelerin ön ek ve son eklerini soyarak kök kelimeyi bulursunuz."
+  },
+  {
+    id: "fq40",
+    type: "sentence-connector",
+    grammarTags: ["Cümle Bağlayıcı", "Sentence Connector"],
+    prompt: "İki cümleyi mantıksal olarak bağlayan en uygun geçiş kelimesini seçiniz: 'The test was difficult. ___, many students passed.'",
+    options: ["However", "Therefore", "Moreover", "Because"],
+    correctIndex: 0,
+    translation: "Sınav zordu. Ancak birçok öğrenci geçti.",
+    mechanicNote: "<strong>40. Adım: Cümle Bağlayıcıları (Sentence Connector)</strong><br>Noktalama işaretlerine göre cümleleri bağlayan geçiş zarflarını öğrenirsiniz."
+  },
+  {
+    id: "fq41",
+    type: "error-finder",
+    grammarTags: ["Hata Avcısı", "Error Finder"],
+    prompt: "Aşağıdaki cümledeki gramer hatasını içeren kelimeye dokunun:",
+    sentenceTokens: ["The", "data", "is", "fully", "processed", "yesterday."],
+    correctIndex: 2,
+    translation: "Veriler dün tamamen işlendi.",
+    mechanicNote: "<strong>41. Adım: Tıklamalı Hata Avcısı (Error-Finder)</strong><br>Cümle içerisinde gramer hatasına neden olan kelimeye doğrudan tıklayarak onu elersiniz."
+  },
+  {
+    id: "fq42",
+    type: "vector-assembly",
+    grammarTags: ["Vektör İnşası", "Vector Assembly"],
+    prompt: "Öğeleri doğru sırayla seçerek akademik deyimi ('shed light on') inşa edin:",
+    sentence: "The research will ___ the dark areas of physics.",
+    scrambled_elements: ["light", "on", "shed"],
+    correct_sequence: ["shed", "light", "on"],
+    translation: "Araştırma, fiziğin karanlık alanlarına ışık tutacak.",
+    mechanicNote: "<strong>42. Adım: Vektör İnşası (Vector-Assembly)</strong><br>Karmakarışık öğeleri sırayla seçerek anlamlı bir akademik kalıp oluşturursunuz."
+  },
+  {
+    id: "fq43",
+    type: "context-distractor",
+    grammarTags: ["Bağlam Çeldirici", "Context Distractor"],
+    prompt: "Açılır menüden bağlama en uygun seçeneği seçin:",
+    sentence: "Due to the storm, the flight was [cancelled] immediately.",
+    options: ["cancelled", "promoted", "enhanced", "enjoyed"],
+    correctIndex: 0,
+    translation: "Fırtına nedeniyle uçuş hemen iptal edildi.",
+    mechanicNote: "<strong>43. Adım: Bağlam Çeldiricisi (Context Distractor)</strong><br>Cümledeki ipuçlarına göre en kuvvetli çeldiricileri eleyerek doğru kelimeyi yerleştirirsiniz."
+  },
+  {
+    id: "fq44",
+    type: "preposition-magnet",
+    grammarTags: ["Edat Mıknatısı", "Preposition Magnet"],
+    prompt: "Edat kartını tutup doğru boşluğa sürükleyin:",
+    sentence: "We must focus _______ our core goals.",
+    options: ["on", "at", "in", "by"],
+    correctIndex: 0,
+    translation: "Ana hedeflerimize odaklanmalıyız.",
+    mechanicNote: "<strong>44. Adım: Edat Mıknatısı (Preposition-Magnet)</strong><br>Doğru edatı basılı tutup cümledeki boşluğa sürükleyerek eşleştirme sağlarsınız."
+  },
+  {
+    id: "fq45",
+    type: "double-preposition-magnet",
+    grammarTags: ["Zaman Uyumu", "Double Magnet"],
+    prompt: "Sözcük kartlarını tutup doğru boşluklara sürükleyin:",
+    sentence: "While the professor _______ the lecture, the electricity _______ off.",
+    options: ["was delivering", "went", "delivers", "goes", "delivered", "was going"],
+    correctIndices: [0, 1],
+    translation: "Profesör dersi anlatırken elektrikler kesildi.",
+    mechanicNote: "<strong>45. Adım: Çift Boşluklu Mıknatıs (Double Magnet - Zaman Uyumu)</strong><br>Zaman uyumu gerektiren cümlelerde eylemlerin süreç/anlık durumlarına göre doğru iki fiil çekimini boşluklara yerleştirirsiniz."
   }
 ];
 
@@ -6979,7 +7134,42 @@ function updateQuizMetadata() {
 
   if (isFormationMode) {
     const total = FORMATION_QUESTIONS.length;
-    metadataEl.innerHTML = `amok Haritası • Formasyon Turu • Soru ${currentQuestionIndex + 1}/${total}`;
+    const questionTypeNames = {
+      'multiple-choice': 'Çoktan Seçmeli (Multiple Choice)',
+      'error-spotting': 'Hata Tespiti (Error Spotting)',
+      'context-clue': 'Bağlamsal İpucu (Context Clue)',
+      'chain-expansion-differential': 'Zincirleme Genişleme (Chain Expansion)',
+      'structural-deconstruction': 'Yapısal Çözümleme (Structural Deconstruction)',
+      'vector-velocity-shift': 'Zaman Kayması (Vector Velocity Shift)',
+      'titan-boundary-defense': 'Sınır Savunması (Titan Boundary Defense)',
+      'vagon-to-suffix-match': 'Vagon-Ek Eşleşmesi (Suffix Match)',
+      'reverse-engineering-translation': 'Tersine Mühendislik (Reverse Translation)',
+      'suffix-decapitation': 'Ek Eksiltme (Suffix Decapitation)',
+      'sentence-connector': 'Cümle Bağlayıcı (Sentence Connector)',
+      'error-finder': 'Tıklamalı Hata Avcısı (Error Finder)',
+      'inversion-transformer': 'Devrik Cümle Dönüştürücü (Inversion)',
+      'punctuation-check': 'Noktalama & Bağlaç Kontrolü (Punctuation)',
+      'structure-match': 'Gramer Yapısı Eşleştirme (Structure Match)',
+      'idiom-builder': 'Deyim İnşa Etme (Idiom Builder)',
+      'vector-assembly': 'Vektör İnşası (Vector Assembly)',
+      'word-bank': 'Kelime Sıralama / Vagon (Word Bank)',
+      'matching': 'Kelime Eşleştirme (Matching)',
+      'context-distractor': 'Bağlam Çeldiricisi (Context Distractor)',
+      'fill-blank-dropdown': 'Açılır Kutudan Boşluk Doldurma (Fill Blank Dropdown)',
+      'fill-blank': 'Boşluk Doldurma (Fill Blank)',
+      'fill-blank-text': 'Yazarak Boşluk Doldurma (Fill Blank Text)',
+      'translation-text': 'Yazarak Türkçe Çeviri (Translation Text)',
+      'multiple-fill-blank': 'Çoklu Boşluk Doldurma (Multiple Fill Blank)',
+      'true-false': 'Doğru / Yanlış (True / False)',
+      'spotlight': 'Projektör Modu / Cümle Ögesi Analizi (Spotlight)',
+      'swipe': 'Hızlı Kaydırma Kartları (Swipe)',
+      'preposition-magnet': 'Edat Mıknatısı (Preposition Magnet)',
+      'double-preposition-magnet': 'Çift Boşluklu Mıknatıs (Double Magnet)',
+      'collocation-matching': 'Bağlantı Kilidi (Collocation Matching)',
+      'reflex-blitz': 'Hız Tüneli / Süreli Test (Reflex Blitz)'
+    };
+    const typeName = questionTypeNames[question.type] || question.type;
+    metadataEl.innerHTML = `amok Haritası • Formasyon Turu • Soru ${currentQuestionIndex + 1}/${total} <span style="margin-left: 8px; font-weight: 700; color: var(--accent-primary);">[Soru Tipi: ${typeName}]</span>`;
     return;
   }
 
@@ -7339,6 +7529,9 @@ function renderQuestion() {
         break;
       case 'preposition-magnet':
         renderPrepositionMagnet(body, question);
+        break;
+      case 'double-preposition-magnet':
+        renderDoublePrepositionMagnet(body, question);
         break;
       case 'collocation-matching':
         renderCollocationMatching(body, question);
@@ -9916,6 +10109,191 @@ function renderPrepositionMagnet(container, question) {
   });
 }
 
+// ── Çift Boşluklu Mıknatıs (Double Preposition Magnet) ──
+function renderDoublePrepositionMagnet(container, question) {
+  const parts = question.sentence.split(/_{3,}/);
+  let sentenceHtml = "";
+  if (parts.length >= 3) {
+    sentenceHtml = `${parts[0]} <span class="magnet-blank-slot" id="magnet-drop-target-1" data-slot="0" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span> ${parts[1]} <span class="magnet-blank-slot" id="magnet-drop-target-2" data-slot="1" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span> ${parts[2]}`;
+  } else if (parts.length === 2) {
+    sentenceHtml = `${parts[0]} <span class="magnet-blank-slot" id="magnet-drop-target-1" data-slot="0" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span> <span class="magnet-blank-slot" id="magnet-drop-target-2" data-slot="1" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span> ${parts[1]}`;
+  } else {
+    sentenceHtml = `${question.sentence} <span class="magnet-blank-slot" id="magnet-drop-target-1" data-slot="0" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span> <span class="magnet-blank-slot" id="magnet-drop-target-2" data-slot="1" style="cursor:pointer; border: 2px dashed var(--border-color); padding: 2px 10px; border-radius: 8px; font-weight: 700; color: var(--accent-primary);">_____</span>`;
+  }
+
+  const optionsHtml = question.options.map((opt, i) => {
+    return `<div class="magnet-draggable" data-index="${i}" id="magnet-double-opt-${i}">${opt}</div>`;
+  }).join('');
+
+  container.innerHTML = `
+    <p class="quiz-prompt">${question.prompt}</p>
+    <p class="quiz-translation" style="margin-bottom: 20px;">${question.translation || ''}</p>
+    
+    <div class="magnet-sentence-container" style="line-height: 2.5; font-size: 1.25rem;">
+      ${sentenceHtml}
+    </div>
+    
+    <div class="magnet-bank-container" id="magnet-double-bank" style="margin-top: 30px;">
+      ${optionsHtml}
+    </div>
+    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 15px; text-align: center; opacity: 0.8;">* Sürüklediğiniz kelimeyi geri almak veya değiştirmek için boşluğun üzerine tıklayabilirsiniz.</div>
+  `;
+
+  const draggables = container.querySelectorAll('.magnet-draggable');
+  const target1 = document.getElementById('magnet-drop-target-1');
+  const target2 = document.getElementById('magnet-drop-target-2');
+
+  let localSelection = [null, null];
+  let elementMappedToSlot = [null, null];
+
+  // Click on slot to reset it
+  [target1, target2].forEach((target, slotIdx) => {
+    target.addEventListener('click', () => {
+      if (isAnswerChecked) return;
+      if (localSelection[slotIdx] !== null) {
+        const el = elementMappedToSlot[slotIdx];
+        if (el) {
+          el.style.display = 'inline-block';
+          el.style.transition = 'none';
+          el.style.transform = 'translate3d(0, 0, 0)';
+          el.style.zIndex = '';
+        }
+        target.textContent = '_____';
+        target.classList.remove('correct-snapped');
+        localSelection[slotIdx] = null;
+        elementMappedToSlot[slotIdx] = null;
+        selectedAnswer = [...localSelection];
+        document.getElementById('btn-check').disabled = true;
+      }
+    });
+  });
+
+  draggables.forEach(el => {
+    let startX = 0, startY = 0;
+    let currentX = 0, currentY = 0;
+    let isDragging = false;
+
+    const onStart = (e) => {
+      if (isAnswerChecked) return;
+      isDragging = true;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      startX = clientX;
+      startY = clientY;
+      el.style.transition = 'none';
+      el.style.zIndex = '1000';
+      el.classList.add('dragging');
+
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onEnd);
+      window.addEventListener('touchmove', onMove, { passive: false });
+      window.addEventListener('touchend', onEnd);
+    };
+
+    const onMove = (e) => {
+      if (!isDragging) return;
+      if (e.cancelable) e.preventDefault();
+      
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      currentX = clientX - startX;
+      currentY = clientY - startY;
+
+      el.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(1.05)`;
+
+      const rectEl = el.getBoundingClientRect();
+      const rectT1 = target1.getBoundingClientRect();
+      const rectT2 = target2.getBoundingClientRect();
+
+      const overlap1 = !(rectEl.right < rectT1.left || rectEl.left > rectT1.right || rectEl.bottom < rectT1.top || rectEl.top > rectT1.bottom);
+      const overlap2 = !(rectEl.right < rectT2.left || rectEl.left > rectT2.right || rectEl.bottom < rectT2.top || rectEl.top > rectT2.bottom);
+
+      if (overlap1) {
+        target1.classList.add('magnet-slot-hover');
+      } else {
+        target1.classList.remove('magnet-slot-hover');
+      }
+
+      if (overlap2) {
+        target2.classList.add('magnet-slot-hover');
+      } else {
+        target2.classList.remove('magnet-slot-hover');
+      }
+    };
+
+    const onEnd = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      el.classList.remove('dragging');
+
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onEnd);
+      window.removeEventListener('touchmove', onMove);
+      window.removeEventListener('touchend', onEnd);
+
+      const rectEl = el.getBoundingClientRect();
+      const rectT1 = target1.getBoundingClientRect();
+      const rectT2 = target2.getBoundingClientRect();
+
+      const overlap1 = !(rectEl.right < rectT1.left || rectEl.left > rectT1.right || rectEl.bottom < rectT1.top || rectEl.top > rectT1.bottom);
+      const overlap2 = !(rectEl.right < rectT2.left || rectEl.left > rectT2.right || rectEl.bottom < rectT2.top || rectEl.top > rectT2.bottom);
+
+      target1.classList.remove('magnet-slot-hover');
+      target2.classList.remove('magnet-slot-hover');
+
+      const optionIdx = parseInt(el.dataset.index);
+
+      if (overlap1) {
+        if (localSelection[0] !== null) {
+          const oldEl = elementMappedToSlot[0];
+          if (oldEl) {
+            oldEl.style.display = 'inline-block';
+            oldEl.style.transition = 'none';
+            oldEl.style.transform = 'translate3d(0, 0, 0)';
+            oldEl.style.zIndex = '';
+          }
+        }
+        el.style.display = 'none';
+        target1.textContent = el.textContent;
+        target1.classList.add('correct-snapped');
+        localSelection[0] = optionIdx;
+        elementMappedToSlot[0] = el;
+      } else if (overlap2) {
+        if (localSelection[1] !== null) {
+          const oldEl = elementMappedToSlot[1];
+          if (oldEl) {
+            oldEl.style.display = 'inline-block';
+            oldEl.style.transition = 'none';
+            oldEl.style.transform = 'translate3d(0, 0, 0)';
+            oldEl.style.zIndex = '';
+          }
+        }
+        el.style.display = 'none';
+        target2.textContent = el.textContent;
+        target2.classList.add('correct-snapped');
+        localSelection[1] = optionIdx;
+        elementMappedToSlot[1] = el;
+      } else {
+        el.style.transition = 'transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        el.style.transform = 'translate3d(0, 0, 0)';
+        setTimeout(() => {
+          el.style.zIndex = '';
+        }, 300);
+      }
+
+      if (localSelection[0] !== null && localSelection[1] !== null) {
+        selectedAnswer = [...localSelection];
+        document.getElementById('btn-check').disabled = false;
+      } else {
+        document.getElementById('btn-check').disabled = true;
+      }
+    };
+
+    el.addEventListener('mousedown', onStart);
+    el.addEventListener('touchstart', onStart, { passive: true });
+  });
+}
+
 const COLLOCATION_DICT = {
   // u36_l14_q1
   "to a certain extent": "Belirli bir dereceye kadar",
@@ -10407,6 +10785,12 @@ function checkAnswer() {
     case 'preposition-magnet':
       isCorrect = selectedAnswer === question.correctIndex;
       break;
+    case 'double-preposition-magnet':
+      isCorrect = Array.isArray(selectedAnswer) &&
+        selectedAnswer.length === 2 &&
+        selectedAnswer[0] === question.correctIndices[0] &&
+        selectedAnswer[1] === question.correctIndices[1];
+      break;
     case 'collocation-matching':
       isCorrect = selectedAnswer === 'perfect';
       break;
@@ -10418,7 +10802,7 @@ function checkAnswer() {
   // Intercept if translation exists, primary is correct, type is not formula matching, and translation gate hasn't been triggered yet
   const isFormulaQuestion = question.type === 'structure-match' || (question.sentence && (question.sentence.includes('➔') || question.sentence.includes('[Ana Cümle]') || question.sentence.includes('[Yan Cümle]')));
 
-  if (question && question.translation && isCorrect && !isFormulaQuestion && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  if (question && question.translation && isCorrect && !isFormulaQuestion && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet' || activeType === 'double-preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;
@@ -10502,6 +10886,23 @@ function checkAnswer() {
       break;
     case 'reflex-blitz':
       showBlitzFeedback(question);
+      break;
+    case 'double-preposition-magnet':
+      {
+        const t1 = document.getElementById('magnet-drop-target-1');
+        const t2 = document.getElementById('magnet-drop-target-2');
+        if (t1 && t2) {
+          const isT1Correct = selectedAnswer[0] === question.correctIndices[0];
+          const isT2Correct = selectedAnswer[1] === question.correctIndices[1];
+          t1.style.borderColor = isT1Correct ? 'var(--color-correct)' : 'var(--color-wrong)';
+          t1.style.backgroundColor = isT1Correct ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+          t1.style.color = isT1Correct ? 'var(--color-correct)' : 'var(--color-wrong)';
+
+          t2.style.borderColor = isT2Correct ? 'var(--color-correct)' : 'var(--color-wrong)';
+          t2.style.backgroundColor = isT2Correct ? 'var(--color-correct-bg)' : 'var(--color-wrong-bg)';
+          t2.style.color = isT2Correct ? 'var(--color-correct)' : 'var(--color-wrong)';
+        }
+      }
       break;
   }
 
@@ -17166,11 +17567,19 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       wrongExample = '';
       correctExample = '';
     } else {
-      const match = question.id ? question.id.match(/l(\d+)_/) : null;
-      const lessonNum = match ? parseInt(match[1]) : 0;
-      
-      if (lessonNum === 75) {
-        title = 'Since Zaman Uyumu Kuralı';
+      if (question.ruleId && window.ACADEMIC_RULES && window.ACADEMIC_RULES[`rule_${question.ruleId}`]) {
+        const r = window.ACADEMIC_RULES[`rule_${question.ruleId}`];
+        title = r.title;
+        ruleTitle = `💡 ${r.title}`;
+        ruleText = r.text;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" kuralı ihlal etmektedir ❌`;
+        correctExample = `Doğru Cevap: "${correctWord}" ✔️`;
+      } else {
+        const match = question.id ? question.id.match(/l(\d+)_/) : null;
+        const lessonNum = match ? parseInt(match[1]) : 0;
+        
+        if (lessonNum === 75) {
+          title = 'Since Zaman Uyumu Kuralı';
         ruleTitle = '💡 Since Bağlacı ve Süreç Çekimi';
         ruleText = `<strong>Since</strong> ile başlayan yan cümle eylemin başlangıç noktasını bildirdiği için her zaman <strong>Geçmiş Zaman (Past Simple / V2)</strong> olurken, ana cümle günümüze uzanan süreci anlatmak adına <strong>Yakın Geçmiş Zaman (Present Perfect / Have-Has V3)</strong> yapısında kurulur.`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" bu uyuma uymaz ❌`;
@@ -17259,6 +17668,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
         ruleText = `<strong>be used to</strong> veya <strong>get used to</strong> kalıpları bir şeye <strong>"alışkın olmak"</strong> veya <strong>"alışmak"</strong> anlamı taşır. Bu kalıplar arkasından gelen fiili yalın değil, mutlaka isim-fiil (Gerund / <strong>V-ing</strong>) veya doğrudan isim olarak alır. (Formül: <strong>be/get used to + Noun / V-ing</strong>)`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" gerund (V-ing) veya be used to kuralına uygun değildir ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" (V-ing çekimi) ✔️`;
+      }
       }
 
       if (!ruleText) {
