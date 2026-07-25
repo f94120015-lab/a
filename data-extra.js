@@ -2186,6 +2186,364 @@
 
 
 // ============================================================
+// BÖLÜM 105: Zaman Uyumu Formül Mühendisliği
+// ============================================================
+const chapter105Data = {
+  chapterId: 105,
+  chapterName: "Zaman Uyumu Formül Mühendisliği",
+  chapterDescription: "Zaman bağlaçları ve zaman uyumu kurallarını örnek cümleler yerine doğrudan formül denklemleri ve yapısal mantıkla çözme yeteneği.",
+  lessons: [
+    {
+      id: "c105_l1",
+      unitId: 105,
+      title: "1. Formül Eşleştirme Kılavuzu",
+      subtitle: "Zaman Bağlaçları Formül Eşleşmeleri",
+      konuAnlatimi: {
+        baslik: "Formül Eşleştirme Kılavuzu",
+        teorikMantik: "Zaman uyumu kuralları, bağlaçların (yan cümlelerin) ve ana cümlelerin aldığı zaman yapılarını belirler. Bu kuralları ezberlemek yerine birbirleriyle olan eşleşme mantığını (past-past, present-present) kavramak önemlidir.",
+        formul: "Since + V2 ➔ have/has + V3 | By the time + V2 ➔ had + V3 | By the time + V1 ➔ will have + V3",
+        altinKural: "Zaman bağlacı olan taraf (When, Since, As soon as vb.) asla WILL/WOULD/SHALL almaz!"
+      },
+      exercises: [
+        {
+          id: "c105_l1_ex1",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 1: Giriş ve Formül Eşleştirme",
+          description: "Zaman bağlacı formüllerinin ana cümle formülleriyle eşleştirilmesi.",
+          questions: [
+            {
+              id: "c105_l1_ex1_q1",
+              type: "matching",
+              prompt: "Zaman bağlacı formüllerini uygun ana cümle formülleriyle eşleştirin:",
+              grammarTags: ["Zaman Uyumu", "Formül Mühendisliği"],
+              pairs: [
+                { left: "Since + Past Simple (V2)", right: "Present Perfect (have/has + V3)" },
+                { left: "By the time + Past Simple (V2)", right: "Past Perfect (had + V3)" },
+                { left: "By the time + Present Simple (V1)", right: "Future Perfect (will have + V3)" },
+                { left: "It is (high) time + Subject", right: "Past Simple (V2)" }
+              ]
+            },
+            {
+              id: "c105_l1_ex1_q2",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki formül eşleşmelerinden hangisi <strong>doğrudur</strong>?",
+              options: [
+                "Since + V2 ➔ have/has + V3",
+                "Since + had + V3 ➔ V2",
+                "Since + V1 ➔ will have + V3",
+                "Since + V2 ➔ had + V3"
+              ],
+              correctIndex: 0,
+              explanation: "Since + Past Simple (V2) yapısı, ana cümlede daima Present Perfect (have/has + V3) yapısını gerektirir."
+            }
+          ]
+        },
+        {
+          id: "c105_l1_ex2",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 2: İleri Düzey Formüller",
+          description: "Daha seyrek kullanılan ama kritik zaman uyumu kuralları.",
+          questions: [
+            {
+              id: "c105_l1_ex2_q1",
+              type: "multiple-choice",
+              prompt: "<strong>No sooner + had + Subject + V3</strong> formülünün devamında ana cümle hangi yapı ile başlamalıdır?",
+              options: [
+                "than + Subject + Past Simple (V2)",
+                "when + Subject + Past Simple (V2)",
+                "before + Subject + Past Simple (V2)",
+                "then + Subject + Present Simple (V1)"
+              ],
+              correctIndex: 0,
+              explanation: "No sooner yapısı 'than' ile tamamlanır ve ardından Past Simple (V2) gelir. (-er -emez)"
+            },
+            {
+              id: "c105_l1_ex2_q2",
+              type: "multiple-choice",
+              prompt: "<strong>Hardly / Scarcely + had + Subject + V3</strong> formülü aşağıdakilerden hangisiyle tamamlanmalıdır?",
+              options: [
+                "when + Subject + Past Simple (V2)",
+                "than + Subject + Past Simple (V2)",
+                "before + Subject + Present Simple (V1)",
+                "after + Subject + Past Perfect (had + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "Hardly / Scarcely yapısı 'when' (bazen 'before') ile tamamlanır ve ardından Past Simple (V2) gelir."
+            }
+          ]
+        },
+        {
+          id: "c105_l1_ex3",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 3: Ustalaşma Egzersizleri",
+          description: "Tüm temel formül eşleşmelerinin karma testi.",
+          questions: [
+            {
+              id: "c105_l1_ex3_q1",
+              type: "multiple-choice",
+              prompt: "<code>[After + had + V3] ➔ [ ? ]</code> denkleminde boşluğa hangisi gelmelidir?",
+              options: [
+                "Past Simple (V2)",
+                "Present Perfect (have/has + V3)",
+                "Future Perfect (will have + V3)",
+                "Past Perfect (had + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "After'lı cümlede geçmişteki iki eylemden önce olanı (had V3) verildiğinde, sonra olanı belirtmek için Past Simple (V2) kullanılır."
+            },
+            {
+              id: "c105_l1_ex3_q2",
+              type: "multiple-choice",
+              prompt: "<code>[Before + V2] ➔ [ ? ]</code> denkleminde ana cümle formülü ne olmalıdır?",
+              options: [
+                "Past Perfect (had + V3)",
+                "Present Perfect (have/has + V3)",
+                "Future Perfect (will have + V3)",
+                "Simple Present (V1)"
+              ],
+              correctIndex: 0,
+              explanation: "Before'lu cümle geçmişteki sınır eylemi (V2) belirttiğinde, ondan önce tamamlanmış olan eylemi belirtmek için ana cümlede Past Perfect (had V3) tercih edilir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "c105_l2",
+      unitId: 105,
+      title: "2. Hata Avcısı: Zaman Uyumları",
+      subtitle: "Hatalı Formül Dizilimlerini Ayıklama",
+      konuAnlatimi: {
+        baslik: "Hata Avcısı: Zaman Uyumları",
+        teorikMantik: "Sınavlarda en sık yapılan hatalar zaman uyumu ihlalleridir. Yan cümlesinde 'will' olan veya 'past' ile 'future' yapılarını doğrudan bağlayan kombinasyonlar elenmelidir.",
+        formul: "Hatalı: *By the time + V2 ➔ will have V3* | Doğru: *By the time + V2 ➔ had V3*",
+        altinKural: "Zaman bağlaçlarında 'Past' bir eylem ile 'Future' veya 'Present' bir eylem (istisnalar hariç) yan yana gelemez."
+      },
+      exercises: [
+        {
+          id: "c105_l2_ex1",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 1: Hatalı Bağlantıları Bulma",
+          description: "Mantıksal olarak zaman uyumu kuralına uymayan formül çiftlerini yakalama.",
+          questions: [
+            {
+              id: "c105_l2_ex1_q1",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki formüllerden hangisinde <strong>zaman uyumu ihlali</strong> vardır?",
+              options: [
+                "When + Past Simple (V2) ➔ Present Simple (V1)",
+                "When + Past Simple (V2) ➔ Past Simple (V2)",
+                "When + Present Simple (V1) ➔ Future Simple (will + V1)",
+                "When + Present Simple (V1) ➔ Present Simple (V1)"
+              ],
+              correctIndex: 0,
+              explanation: "When + Past Simple (V2) ile başlayan bir zaman cümlesi, istisnai durumlar hariç ana cümlede Present Simple (V1) ile bağlanamaz (Past-Present uyumsuzluğu)."
+            },
+            {
+              id: "c105_l2_ex1_q2",
+              type: "multiple-choice",
+              prompt: "Aşağıdakilerden hangisi dil bilgisi açısından <strong>kesinlikle hatalı</strong> bir formüldür?",
+              options: [
+                "As soon as + Subject + will + V1",
+                "As soon as + Subject + V1",
+                "As soon as + Subject + V2",
+                "As soon as + Subject + had + V3"
+              ],
+              correctIndex: 0,
+              explanation: "Zaman bağlacı alan yan cümlelerin içinde (when, as soon as, after, by the time vb.) gelecek zaman belirten 'will' yapısı kullanılamaz."
+            }
+          ]
+        },
+        {
+          id: "c105_l2_ex2",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 2: Yapısal Çeldiricileri Ayıklama",
+          description: "Çeldirici olarak sunulan yanlış formülleri eleme pratikleri.",
+          questions: [
+            {
+              id: "c105_l2_ex2_q1",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki formüllerden hangisi <code>By the time</code> kuralına göre **yanlıştır**?",
+              options: [
+                "By the time + V2 ➔ will have + V3",
+                "By the time + V2 ➔ had + V3",
+                "By the time + V1 ➔ will have + V3",
+                "By the time + V1 ➔ will be + V-ing"
+              ],
+              correctIndex: 0,
+              explanation: "By the time + V2 (Past) yapısı ana cümlede 'will have + V3' (Future) alamaz. Past-Future uyumu bozulur."
+            },
+            {
+              id: "c105_l2_ex2_q2",
+              type: "multiple-choice",
+              prompt: "Hangi bağlaçta ana cümle ile yan cümle arasında **zaman uyumu arama zorunluluğu yoktur**?",
+              options: [
+                "Although (Zıtlık Bağlacı)",
+                "As soon as (Zaman Bağlacı)",
+                "By the time (Zaman Sınır Bağlacı)",
+                "While (Zaman Bağlacı)"
+              ],
+              correctIndex: 0,
+              explanation: "Zıtlık bağlaçları (Although, Even though, But vb.) farklı zaman dilimlerini birbirine bağlayabildiği için zaman uyumu zorunlu değildir."
+            }
+          ]
+        },
+        {
+          id: "c105_l2_ex3",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 3: Doğru/Yanlış Karışık Havuz",
+          description: "Doğru ve yanlış kuralları ayırt etme düzeyi testi.",
+          questions: [
+            {
+              id: "c105_l2_ex3_q1",
+              type: "multiple-choice",
+              prompt: "<code>While + had + V3 ➔ V2</code> formülü için ne söylenebilir?",
+              options: [
+                "Hatalıdır, çünkü While genellikle süreç (-ing) bildiren eylemlerle (was/were + Ving) kullanılır.",
+                "Doğrudur, çünkü While past perfect gerektirir.",
+                "Doğrudur, because-since ile aynı anlamdadır.",
+                "Hatalıdır, çünkü While'dan sonra sadece V1 gelir."
+              ],
+              correctIndex: 0,
+              explanation: "While bağlacı süreç/eş zamanlılık bildirdiği için arkasından Past Perfect (had V3) yerine genellikle Past Continuous (was/were Ving) alır."
+            },
+            {
+              id: "c105_l2_ex3_q2",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki formüllerden hangisi <strong>hatasızdır</strong>?",
+              options: [
+                "It is high time + Subject + Past Simple (V2)",
+                "It is high time + Subject + Present Simple (V1)",
+                "It is high time + Subject + Future Simple (will V1)",
+                "It is high time + Subject + Present Perfect (have V3)"
+              ],
+              correctIndex: 0,
+              explanation: "It is (high) time kalıbında, özne geldiğinde fiil daima Past Simple (V2) şeklinde çekimlenir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "c105_l3",
+      unitId: 105,
+      title: "3. Zaman Uyumu Denklem Çözücü",
+      subtitle: "Formül Denklemleri ve Mantıksal Seçimler",
+      konuAnlatimi: {
+        baslik: "Zaman Uyumu Denklem Çözücü",
+        teorikMantik: "Formül yapılarını birer matematiksel denklem gibi düşünerek, boş bırakılan tarafı diğer tarafın zaman çekimine göre bulma çalışmasıdır.",
+        formul: "[Yan Cümle: (Conjunction + X)] + [Ana Cümle: Y] ➔ X ve Y uyumlu olmalıdır.",
+        altinKural: "Zıtlık bağlaçlarında veya relative clause'larda bu kuralların geçerli olmadığını unutmayın."
+      },
+      exercises: [
+        {
+          id: "c105_l3_ex1",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 1: Birinci Dereceden Denklemler",
+          description: "Tek değişkenli temel formül denklemleri.",
+          questions: [
+            {
+              id: "c105_l3_ex1_q1",
+              type: "multiple-choice",
+              prompt: "<code>[Since + X] ➔ [have/has + V3]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Present Simple (V1)",
+                "Future Perfect (will have + V3)",
+                "Past Perfect (had + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "Since bağlacının yanındaki eylem (X) geçmişteki başlangıç noktasını belirtmek için Past Simple (V2) olmalıdır."
+            },
+            {
+              id: "c105_l3_ex1_q2",
+              type: "multiple-choice",
+              prompt: "<code>[By the time + V1] ➔ [ Y ]</code> denkleminde <strong>Y</strong> ne olmalıdır?",
+              options: [
+                "Future Perfect (will have + V3)",
+                "Past Perfect (had + V3)",
+                "Present Perfect (have/has + V3)",
+                "Simple Past (V2)"
+              ],
+              correctIndex: 0,
+              explanation: "By the time present simple (V1) aldığında, ana cümle gelecek sınıra kadar tamamlanacak durumu göstermek üzere Future Perfect (will have + V3) olur."
+            }
+          ]
+        },
+        {
+          id: "c105_l3_ex2",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 2: İkinci Dereceden Denklemler",
+          description: "Çift zaman uyumu denklemleri.",
+          questions: [
+            {
+              id: "c105_l3_ex2_q1",
+              type: "multiple-choice",
+              prompt: "<code>[By + Future Time] ➔ [ X ]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              options: [
+                "Future Perfect (will have + V3)",
+                "Future Continuous (will be + Ving)",
+                "Future Simple (will + V1)",
+                "Present Perfect (have/has + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "'By' edatı gelecek zaman ifadesi ile kullanıldığında eylemin o tarihe kadar bitmiş olacağını göstermek için Future Perfect gerektirir."
+            },
+            {
+              id: "c105_l3_ex2_q2",
+              type: "multiple-choice",
+              prompt: "<code>[Before + X] ➔ [had + V3]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Present Simple (V1)",
+                "Future Perfect (will have + V3)",
+                "Past Perfect (had + V3)"
+              ],
+              correctIndex: 0,
+              explanation: "Ana cümledeki Past Perfect (had V3) eyleminden sonra gelen sınır eylemi ifade etmek için Before'lu cümle Past Simple (V2) alır."
+            }
+          ]
+        },
+        {
+          id: "c105_l3_ex3",
+          createdAt: "2026-07-25T02:00:00Z",
+          title: "Alıştırma 3: Denklem Final Sınavı",
+          description: "İleri düzey zaman denklem eşleşmeleri.",
+          questions: [
+            {
+              id: "c105_l3_ex3_q1",
+              type: "multiple-choice",
+              prompt: "<code>[Until + X] ➔ [didn't + V1]</code> denkleminde <strong>X</strong> ne olmalıdır?",
+              options: [
+                "Past Simple (V2) veya Past Perfect (had + V3)",
+                "Present Simple (V1) veya Future Simple (will + V1)",
+                "Present Perfect (have/has + V3) veya Future Perfect",
+                "Past Continuous (was/were + Ving) veya Past Perfect"
+              ],
+              correctIndex: 0,
+              explanation: "Ana cümle geçmişte olumsuz bir durum (didn't V1) olduğunda, 'Until'li yan cümle Past Simple (V2) veya önceliği vurgulamak için Past Perfect (had V3) alabilir."
+            },
+            {
+              id: "c105_l3_ex3_q2",
+              type: "multiple-choice",
+              prompt: "<code>[As soon as + V2] ➔ [ Y ]</code> denkleminde ardışık ani eylemi belirtmek için **Y** ne olmalıdır?",
+              options: [
+                "Past Simple (V2)",
+                "Past Perfect (had + V3)",
+                "Present Simple (V1)",
+                "Future Simple (will + V1)"
+              ],
+              correctIndex: 0,
+              explanation: "As soon as ile arka arkaya hemen gerçekleşen geçmişteki iki eylem için hem yan hem ana cümle Past Simple (V2) alabilir."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ============================================================
 // BÖLÜM 104: Yarı-Modallar ve Modal Benzeri Yapılar (Semi-Modals)
 // ============================================================
 const chapter104Data = {
@@ -3348,6 +3706,26 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined') {
       exercises: l.exercises || []
     });
   });
+
+  // Unit 105 registration
+  units.push({
+    id: 105,
+    title: chapter105Data.chapterName,
+    description: chapter105Data.chapterDescription,
+    lessons: chapter105Data.lessons.map(l => l.id),
+    pages: "240-259"
+  });
+
+  chapter105Data.lessons.forEach(l => {
+    lessons.push({
+      id: l.id,
+      unitId: 105,
+      title: l.title,
+      subtitle: l.subtitle,
+      konuAnlatimi: l.konuAnlatimi || null,
+      exercises: l.exercises || []
+    });
+  });
 }
 
 
@@ -3417,12 +3795,10 @@ if (typeof lessons !== 'undefined') {
     39,  // Bölüm 44 / Modül A: Zaman, Şart & Dilek Kalkanları
     "39_2", // Bölüm 44 / Modül B: Cümle Yapıları, Edatlar & Kısaltmalar
     "39_3", // Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi
-    43,  // 5 Öğeli Yapısal Altyapı
-    44,  // 6 Öğeli Mega Eylem Zincirleri
-    45,  // 7 Öğeli Hiper Süreç Zincirleri
-    46,  // 8 Öğeli Titan Eylem Zincirleri
+    43,  // Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)
     47,  // Zincir Genişleme ve Sentaks Matrisi
     48,  // Zaman Kayma Kontrolü
+    105, // Zaman Uyumu Formül Mühendisliği
     53,  // Akademik Bağlaç Mühendisliği
     54,  // Görsel Kartlar ve Özel Bağlaç Kalıpları
     55,  // Koşul Cümleleri ve Mix Yapılar Mühendisliği

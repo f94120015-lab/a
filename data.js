@@ -121638,33 +121638,643 @@ const chapter40Data = {
     const questions48_1_1 = [
       {
         "id": "c48_q1",
-        "domain": "Ekonomi",
-        "type": "time-shift-detection",
-        "prompt": "Aşağıdaki cümlede lokomotif 'is/are rumored' yerine 'was/were rumored' formuna çekildiğinde, Türkçe ek fabrikasındaki söylenti tuğlası nasıl bir mutasyona uğrar?",
-        "question": "Aşağıdaki cümlede lokomotif 'is/are rumored' yerine 'was/were rumored' formuna çekildiğinde, Türkçe ek fabrikasındaki söylenti tuğlası nasıl bir mutasyona uğrar?",
-        "sentence_before": "Market liquidity indexes is/are rumored to have been manipulated.",
-        "sentence_after": "Market liquidity indexes was/were rumored to have been manipulated.",
+        "domain": "Tarih",
+        "type": "suffix-decapitation",
+        "prompt": "Aşağıdaki tarih metninde 'is rumored' yerine 'was rumored' kullanıldığında, Türkçe karşılığındaki zaman algısı nasıl değişir?",
+        "question": "Aşağıdaki tarih metninde 'is rumored' yerine 'was rumored' kullanıldığında, Türkçe karşılığındaki zaman algısı nasıl değişir?",
+        "sentence_before": "The library of Alexandria is rumored to have been burned by ancient conquerors.",
+        "sentence_after": "The library of Alexandria was rumored to have been burned by ancient conquerors.",
         "options": [
-          "Söylenti günümüzden çıkıp geçmişe gömülür ve '...manipüle edilmiş olduğu söyleniyordu' refleksine dönüşür.",
-          "Cümle tüm edilgenliğini kaybeder ve aktif bir piyasa raporuna dönüşür.",
-          "Geçmiş zaman anlamı tamamen silinir ve gelecek odaklı bir ihtimal doğar."
+          "Söylenti günümüzden geçmişe kayar; 'kütüphanenin yakıldığı söyleniyordu' anlamına gelir.",
+          "Eylemin edilgenliği kaybolur ve aktif bir eyleme dönüşür.",
+          "Kütüphanenin gelecekte yakılacağı iddialarını doğrular."
         ],
         "correctIndex": 0,
-        "explanationKey": "temporal_shift_matrix"
+        "translation": "İskenderiye Kütüphanesi'nin antik fatihler tarafından yakılmış olduğu söyleniyordu.",
+        "explanation": "Lokomotif fiil 'is rumored' (söyleniyor - şimdiki zaman) yerine 'was rumored' (söyleniyordu - geçmiş zaman) olarak çekimlendiğinde söylentinin kendisi geçmişe kayar.",
+        "hint": {
+          "formula": "was rumored to have been V3 -> Geçmiş söylenti",
+          "mirror": "Söylenti geçmişe, eylem daha da geçmişe aittir.",
+          "academicNote": "Tarih metinlerinde kaynak belirsizliğini aktarmak için kullanılır."
+        }
       },
       {
         "id": "c48_q2",
-        "domain": "Sinema",
-        "type": "future-projection-assembly",
-        "prompt": "Bir sinema arşiv belgesinde geçen 'Avangart şaheserlerin sansürlenmiş olacağı gelecekte iddia edilecek' ifadesindeki o gelecek odaklı söylenti kalkanını kurmak için trenin en başına hangi lokomotif bloğu yerleştirilmelidir?",
-        "question": "Bir sinema arşiv belgesinde geçen 'Avangart şaheserlerin sansürlenmiş olacağı gelecekte iddia edilecek' ifadesindeki o gelecek odaklı söylenti kalkanını kurmak için trenin en başına hangi lokomotif bloğu yerleştirilmelidir?",
+        "domain": "Edebiyat",
+        "type": "multiple-choice",
+        "prompt": "Bir edebiyat arşivi çalışmasında 'Bu el yazmalarının gelecekte antik dönemde yazılmış olduğu iddia edilecek' anlamını vermek için hangi söylenti kalkanı başa getirilmelidir?",
+        "question": "Bir edebiyat arşivi çalışmasında 'Bu el yazmalarının gelecekte antik dönemde yazılmış olduğu iddia edilecek' anlamını vermek için hangi söylenti kalkanı başa getirilmelidir?",
         "options": [
           "will be rumored",
-          "could have been rumored",
-          "was rumored"
+          "was rumored",
+          "could have been rumored"
         ],
         "correctIndex": 0,
-        "explanationKey": "temporal_shift_matrix"
+        "translation": "Bu el yazmalarının antik dönemde yazılmış olduğu gelecekte söylenecek/iddia edilecek.",
+        "explanation": "Gelecek odaklı bir iddia veya söylentiyi ifade etmek için 'will be + V3' (will be rumored) yapısı kullanılır.",
+        "hint": {
+          "formula": "will be rumored to have been V3 -> Gelecekte iddia edilecek",
+          "mirror": "Gelecek zaman kalkanı.",
+          "academicNote": "Edebiyat araştırmalarında gelecek projeksiyonu."
+        }
+      },
+      {
+        "id": "c48_q3",
+        "domain": "Felsefe",
+        "type": "suffix-decapitation",
+        "prompt": "Cümledeki lokomotif 'is believed' yerine 'was believed' yapıldığında, Sokrates'in fikirlerine dair inancın zamanı nasıl değişir?",
+        "question": "Cümledeki lokomotif 'is believed' yerine 'was believed' yapıldığında, Sokrates'in fikirlerine dair inancın zamanı nasıl değişir?",
+        "sentence_before": "Socrates is believed to have influenced Plato's early dialogues.",
+        "sentence_after": "Socrates was believed to have influenced Plato's early dialogues.",
+        "options": [
+          "İnanç geçmişe kayar; 'etkilemiş olduğuna inanılıyordu' anlamına gelir.",
+          "İnancın gelecekte doğrulanacağı anlamına gelir.",
+          "Sokrates'in Platon'u şu anda etkilediğini gösterir."
+        ],
+        "correctIndex": 0,
+        "translation": "Sokrates'in Platon'un erken dönem diyaloglarını etkilemiş olduğuna inanılıyordu.",
+        "explanation": "Present ('is believed') durumundan Past ('was believed') durumuna geçildiğinde inanma eylemi geçmiş zamana aktarılır.",
+        "hint": {
+          "formula": "was believed to have V3 -> inanılıyordu",
+          "mirror": "Geçmiş inanç.",
+          "academicNote": "Felsefe tarihi literatürü."
+        }
+      },
+      {
+        "id": "c48_q4",
+        "domain": "Arkeoloji",
+        "type": "structure-match",
+        "prompt": "Arkeolojik kazı raporuna göre, geçmişteki kazı anını belirtmek için boşluğa hangi yardımcı fiil gelmelidir?",
+        "question": "Arkeolojik kazı raporuna göre, geçmişteki kazı anını belirtmek için boşluğa hangi yardımcı fiil gelmelidir?",
+        "sentence": "By the time the site was registered, the ancient tomb ___ rumored to have been looted.",
+        "options": [
+          "was",
+          "is",
+          "will be"
+        ],
+        "correctIndex": 0,
+        "translation": "Sit alanı tescil edilene kadar, antik mezarın yağmalanmış olduğu söyleniyordu.",
+        "explanation": "'By the time' yan cümlesindeki 'was registered' geçmiş zaman olduğundan, ana cümledeki söylenti de geçmiş zaman ('was rumored') olmalıdır.",
+        "hint": {
+          "formula": "By the time + V2 -> was/were V3",
+          "mirror": "Zaman uyumu kuralı.",
+          "academicNote": "Arkeolojik raporlama dili."
+        }
+      },
+      {
+        "id": "c48_q5",
+        "domain": "Dilbilim",
+        "type": "suffix-decapitation",
+        "prompt": "'is alleged' yerine gelecek zamanlı 'will be alleged' kullanıldığında anlam nasıl mutasyona uğrar?",
+        "question": "'is alleged' yerine gelecek zamanlı 'will be alleged' kullanıldığında anlam nasıl mutasyona uğrar?",
+        "sentence_before": "The dialect is alleged to have originated from Central Asia.",
+        "sentence_after": "The dialect will be alleged to have originated from Central Asia.",
+        "options": [
+          "Lehçenin Orta Asya'dan türediğinin gelecekte iddia edileceği anlamına gelir.",
+          "Lehçenin şu anda türemekte olduğu iddia edilir.",
+          "Lehçenin geçmişte tamamen kaybolduğu iddia edilir."
+        ],
+        "correctIndex": 0,
+        "translation": "Lehçenin Orta Asya kökenli olduğu gelecekte iddia edilecek.",
+        "explanation": "'will be alleged' yapısı gelecekte yapılacak olan iddiaları veya tezleri niteler.",
+        "hint": {
+          "formula": "will be alleged to have V3 -> iddia edilecek",
+          "mirror": "Gelecek aktarım.",
+          "academicNote": "Dilbilimsel teoriler."
+        }
+      },
+      {
+        "id": "c48_q6",
+        "domain": "Antropoloji",
+        "type": "structure-match",
+        "prompt": "Günümüz antropoloji çalışmalarındaki güncel söylentiyi belirtmek amacıyla boşluğa gelecek en uygun yardımcı fiili seçin:",
+        "question": "Günümüz antropoloji çalışmalarındaki güncel söylentiyi belirtmek amacıyla boşluğa gelecek en uygun yardımcı fiili seçin:",
+        "sentence": "Currently, the remote tribe ___ rumored to have developed unique linguistic markers.",
+        "options": [
+          "is",
+          "was",
+          "had been"
+        ],
+        "correctIndex": 0,
+        "translation": "Şu anda, ücra kabilenin benzersiz dilsel işaretler geliştirmiş olduğu söyleniyor.",
+        "explanation": "'Currently' (şu anda) zarfı, söylentinin present zamanlı ('is rumored') olmasını gerektirir.",
+        "hint": {
+          "formula": "Currently + is/are rumored",
+          "mirror": "Şimdiki zaman zaman uyumu.",
+          "academicNote": "Antropolojik gözlemler."
+        }
+      },
+      {
+        "id": "c48_q7",
+        "domain": "Sanat Tarihi",
+        "type": "suffix-decapitation",
+        "prompt": "'is depicted' yerine 'was depicted' yapıldığında tablonun analizindeki zaman algısı nasıl değişir?",
+        "question": "'is depicted' yerine 'was depicted' yapıldığında tablonun analizindeki zaman algısı nasıl değişir?",
+        "sentence_before": "The monarch is depicted to have won the decisive battle.",
+        "sentence_after": "The monarch was depicted to have won the decisive battle.",
+        "options": [
+          "Hükümdarın savaşı kazanmış olarak tasvir edilmiş olduğu geçmişte kaldı (tasvir geçmişte yapıldı).",
+          "Tasvirin gelecekte değiştirileceği anlamı taşır.",
+          "Hükümdarın savaşı kaybetmiş olduğu tasvir edilir."
+        ],
+        "correctIndex": 0,
+        "translation": "Hükümdar, belirleyici savaşı kazanmış olarak tasvir edilmişti.",
+        "explanation": "'was depicted' eylemin geçmişte tasvir edildiğini gösterir; 'to have won' ise savaşı daha da önce kazandığını belirtir.",
+        "hint": {
+          "formula": "was depicted to have V3",
+          "mirror": "Geçmiş tasvir.",
+          "academicNote": "Rönesans tabloları analizi."
+        }
+      },
+      {
+        "id": "c48_q8",
+        "domain": "Felsefe",
+        "type": "structure-match",
+        "prompt": "Boşluğa gelmesi gereken ve felsefe okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
+        "question": "Boşluğa gelmesi gereken ve felsefe okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
+        "sentence": "In the Middle Ages, the scholastic thinkers ___ believed to have resolved the conflict between faith and reason.",
+        "options": [
+          "were",
+          "are",
+          "will be"
+        ],
+        "correctIndex": 0,
+        "translation": "Orta Çağ'da, skolastik düşünürlerin inanç ve akıl arasındaki çatışmayı çözmüş olduğuna inanılıyordu.",
+        "explanation": "'In the Middle Ages' zaman belirteci geçmiş zamanı işaret ettiğinden çoğul özneyle 'were' kullanılmalıdır.",
+        "hint": {
+          "formula": "In the Middle Ages + were believed",
+          "mirror": "Geçmiş zaman çoğul uyumu.",
+          "academicNote": "Ortaçağ felsefesi."
+        }
+      },
+      {
+        "id": "c48_q9",
+        "domain": "Tarih",
+        "type": "suffix-decapitation",
+        "prompt": "'are thought' yerine 'were thought' kullanıldığında göçebe toplulukların hareketine dair düşünce nasıl zaman değiştirir?",
+        "question": "'are thought' yerine 'were thought' kullanıldığında göçebe toplulukların hareketine dair düşünce nasıl zaman değiştirir?",
+        "sentence_before": "The nomadic tribes are thought to have migrated due to drought.",
+        "sentence_after": "The nomadic tribes were thought to have migrated due to drought.",
+        "options": [
+          "Göçebe kabilelerin kuraklık yüzünden göç etmiş olduğu düşünülüyordu (geçmişteki kanı).",
+          "Kabilelerin gelecekte göç edeceği düşünülmektedir.",
+          "Kabilelerin göç etmediği düşüncesini doğrular."
+        ],
+        "correctIndex": 0,
+        "translation": "Göçebe kabilelerin kuraklık nedeniyle göç etmiş olduğu düşünülüyordu.",
+        "explanation": "'were thought' geçmişteki bir düşünceyi ifade eder, göç eylemi ise bu düşünceden daha önce gerçekleşmiştir.",
+        "hint": {
+          "formula": "were thought to have V3",
+          "mirror": "Geçmiş düşünce uyumu.",
+          "academicNote": "Göç yolları analizi."
+        }
+      },
+      {
+        "id": "c48_q10",
+        "domain": "Edebiyat",
+        "type": "structure-match",
+        "prompt": "Geleceğe yönelik edebiyat eleştirisi bağlamında boşluğa gelmesi gereken en uygun yapıyı bulun:",
+        "question": "Geleceğe yönelik edebiyat eleştirisi bağlamında boşluğa gelmesi gereken en uygun yapıyı bulun:",
+        "sentence": "In the next century, this author ___ rumored to have predicted the digital age.",
+        "options": [
+          "will be",
+          "was",
+          "is"
+        ],
+        "correctIndex": 0,
+        "translation": "Gelecek yüzyılda, bu yazarın dijital çağı öngörmüş olduğu söylenecek.",
+        "explanation": "'In the next century' ifadesi gelecek zamanı gösterdiği için 'will be rumored' yapısının yardımcı eylemi 'will be' olmalıdır.",
+        "hint": {
+          "formula": "In the next century + will be rumored",
+          "mirror": "Gelecek zaman belirteci.",
+          "academicNote": "Bilimkurgu edebiyatı eleştirisi."
+        }
+      },
+      {
+        "id": "c48_q11",
+        "domain": "Arkeoloji",
+        "type": "suffix-decapitation",
+        "prompt": "'is reported' yerine 'was reported' formuna çekildiğinde tapınağın keşfine dair raporun zamanı nasıl değişir?",
+        "question": "'is reported' yerine 'was reported' formuna çekildiğinde tapınağın keşfine dair raporun zamanı nasıl değişir?",
+        "sentence_before": "The lost temple is reported to have been discovered in the jungle.",
+        "sentence_after": "The lost temple was reported to have been discovered in the jungle.",
+        "options": [
+          "Kayıp tapınağın ormanda keşfedilmiş olduğu rapor edilmişti (geçmişte raporlandı).",
+          "Tapınağın gelecekte keşfedileceği rapor edilmektedir.",
+          "Keşif raporunun tamamen uydurma olduğu belirtilir."
+        ],
+        "correctIndex": 0,
+        "translation": "Kayıp tapınağın ormanda keşfedilmiş olduğu rapor edilmişti.",
+        "explanation": "'was reported' geçmişteki raporlama eylemini, 'to have been discovered' ise keşfin raporlama anından daha eski olduğunu gösterir.",
+        "hint": {
+          "formula": "was reported to have been V3",
+          "mirror": "Geçmiş raporlama.",
+          "academicNote": "Keşif günlükleri."
+        }
+      },
+      {
+        "id": "c48_q12",
+        "domain": "Sosyoloji",
+        "type": "structure-match",
+        "prompt": "Sosyal hareketlerin tarihsel incelemesinde geçmişteki genel kabulü belirtmek için boşluğu doldurun:",
+        "question": "Sosyal hareketlerin tarihsel incelemesinde geçmişteki genel kabulü belirtmek için boşluğu doldurun:",
+        "sentence": "Historically, these movements ___ assumed to have altered the legislative structures.",
+        "options": [
+          "were",
+          "are",
+          "will be"
+        ],
+        "correctIndex": 0,
+        "translation": "Tarihsel olarak, bu hareketlerin yasal yapıları değiştirmiş olduğu varsayılıyordu.",
+        "explanation": "'Historically' (tarihsel olarak) zarfı geçmiş zamandaki genel kanıları belirtir, çoğul özne için 'were' uygundur.",
+        "hint": {
+          "formula": "Historically + were assumed",
+          "mirror": "Geçmiş zaman varsayımı.",
+          "academicNote": "Siyasi sosyoloji."
+        }
+      },
+      {
+        "id": "c48_q13",
+        "domain": "Dilbilim",
+        "type": "suffix-decapitation",
+        "prompt": "'is documented' yerine 'was documented' yapıldığında dilin gelişim belgelemesi nasıl bir zaman değişimi yaşar?",
+        "question": "'is documented' yerine 'was documented' yapıldığında dilin gelişim belgelemesi nasıl bir zaman değişimi yaşar?",
+        "sentence_before": "The language is documented to have shifted its grammatical cases.",
+        "sentence_after": "The language was documented to have shifted its grammatical cases.",
+        "options": [
+          "Dilin dil bilgisel durumlarını değiştirdiği belgelenmişti (belgeleme geçmişte yapıldı).",
+          "Dilin durum değiştireceği gelecekte belgelenecektir.",
+          "Dilin hiçbir zaman değişmediği belgelenmiştir."
+        ],
+        "correctIndex": 0,
+        "translation": "Dilin dil bilgisel durumlarını değiştirmiş olduğu belgelenmişti.",
+        "explanation": "'was documented' belgeleme eyleminin geçmişte yapıldığını ifade eder.",
+        "hint": {
+          "formula": "was documented to have V3",
+          "mirror": "Geçmiş belgeleme zamanı.",
+          "academicNote": "Tarihsel dilbilim."
+        }
+      },
+      {
+        "id": "c48_q14",
+        "domain": "Antropoloji",
+        "type": "structure-match",
+        "prompt": "Antik ritüellerin analizi için boşluğa gelmesi gereken ve geçmişi bildiren en uygun yardımcı fiili seçin:",
+        "question": "Antik ritüellerin analizi için boşluğa gelmesi gereken ve geçmişi bildiren en uygun yardımcı fiili seçin:",
+        "sentence": "Years ago, the ritual ___ observed to have brought different tribes together.",
+        "options": [
+          "was",
+          "is",
+          "will be"
+        ],
+        "correctIndex": 0,
+        "translation": "Yıllar önce, ritüelin farklı kabileleri bir araya getirdiği gözlemlenmişti.",
+        "explanation": "'Years ago' (yıllar önce) ifadesi geçmiş zamanı nitelediği için tekil ritüel öznesiyle 'was' kullanılmalıdır.",
+        "hint": {
+          "formula": "Years ago + was observed",
+          "mirror": "Geçmiş zaman gözlem uyumu.",
+          "academicNote": "Ritüel çalışmaları."
+        }
+      },
+      {
+        "id": "c48_q15",
+        "domain": "Sanat Tarihi",
+        "type": "suffix-decapitation",
+        "prompt": "'are known' yerine 'were known' yapıldığında sanatçıların eserlerine dair bilginin zamanı nasıl değişir?",
+        "question": "are known' yerine 'were known' yapıldığında sanatçıların eserlerine dair bilginin zamanı nasıl değişir?",
+        "sentence_before": "The renaissance artists are known to have integrated geometrical grids.",
+        "sentence_after": "The renaissance artists were known to have integrated geometrical grids.",
+        "options": [
+          "Rönesans sanatçılarının geometrik ızgaraları entegre ettiği biliniyordu (geçmişte biliniyordu).",
+          "Sanatçıların gelecekte geometrik ızgara kullanacağı bilinmektedir.",
+          "Sanatçıların bu yöntemi hiç kullanmadığı bilinmektedir."
+        ],
+        "correctIndex": 0,
+        "translation": "Rönesans sanatçılarının geometrik ızgaraları entegre etmiş oldukları biliniyordu.",
+        "explanation": "'were known' geçmişteki bilinirlik durumunu, 'to have integrated' ise geometrik yapıların daha önceden kullanıldığını ifade eder.",
+        "hint": {
+          "formula": "were known to have V3",
+          "mirror": "Geçmiş bilgi uyumu.",
+          "academicNote": "Rönesans sanatı perspektif analizi."
+        }
+      }
+    ];
+
+    const questions48_1_2 = [
+      {
+        "id": "c48_ex2_q1",
+        "domain": "Tarih",
+        "type": "error-spotting",
+        "prompt": "Aşağıdaki tarih cümlesindeki dil bilgisi (syntax) hatasını içeren seçeneği bulun.",
+        "question": "Aşağıdaki tarih cümlesindeki dil bilgisi (syntax) hatasını içeren seçeneği bulun.",
+        "sentence": "The ancient dynasty was rumored to has been collapsed due to continuous peasant rebellions.",
+        "options": [
+          "was rumored to has been collapsed",
+          "ancient dynasty",
+          "peasant rebellions"
+        ],
+        "correctIndex": 0,
+        "translation": "Antik hanedanın sürekli köylü isyanları nedeniyle çökmüş olduğu söyleniyordu.",
+        "explanation": "'to' mastarından sonra infinitiv perfect formunda 'has' kullanılamaz; daima 'have' (to have been collapsed) kullanılmalıdır.",
+        "hint": {
+          "formula": "to + have + V3 / to + have + been + V3 -> has kullanılamaz",
+          "mirror": "Mastar kilit kuralı.",
+          "academicNote": "Tarihsel çöküş teorileri analizi."
+        }
+      },
+      {
+        "id": "c48_ex2_q2",
+        "domain": "Edebiyat",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'is claimed to have written' yapısına göre, iddia ile şiirin yazılması arasındaki kronolojik ilişki nasıldır?",
+        "question": "Cümledeki 'is claimed to have written' yapısına göre, iddia ile şiirin yazılması arasındaki kronolojik ilişki nasıldır?",
+        "sentence": "The romantic poet is claimed to have written the epic poem in a single night.",
+        "options": [
+          "İddia şu anda mevcuttur; şiirin yazılması ise geçmişte tamamlanmıştır.",
+          "Hem iddia hem de şiirin yazılması gelecekte olacaktır.",
+          "İddia geçmişte kalmıştır; şiir ise şu an yazılmaktadır."
+        ],
+        "correctIndex": 0,
+        "translation": "Romantik şairin epik şiiri tek bir gecede yazmış olduğu iddia ediliyor.",
+        "explanation": "Lokomotif 'is claimed' şimdiki zamanı, 'to have written' ise yazma eyleminin geçmişte yapıldığını gösterir.",
+        "hint": {
+          "formula": "is V3 + to have V3 -> İddia (Present), Eylem (Past)",
+          "mirror": "Zaman önceliği uyumu.",
+          "academicNote": "Edebi biyografiler."
+        }
+      },
+      {
+        "id": "c48_ex2_q3",
+        "domain": "Felsefe",
+        "type": "error-spotting",
+        "prompt": "Cümledeki perfect continuous yapıdaki dil bilgisi hatasını barındıran seçeneği bulun.",
+        "question": "Cümledeki perfect continuous yapıdaki dil bilgisi hatasını barındıran seçeneği bulun.",
+        "sentence": "The existentialists are believed to have studying consciousness without dogmatic assumptions for decades.",
+        "options": [
+          "to have studying",
+          "are believed to",
+          "dogmatic assumptions"
+        ],
+        "correctIndex": 0,
+        "translation": "Varoluşçuların onlarca yıldır dogmatik varsayımlar olmaksızın bilinci incelemekte olduğuna inanılıyor.",
+        "explanation": "'to have' yardımcı fiilinden sonra fiilin continuous çekimi geliyorsa 'been' unutulmamalıdır; 'to have been studying' şeklinde olmalıdır.",
+        "hint": {
+          "formula": "to have been + V-ing -> Perfect Continuous Infinitive",
+          "mirror": "Süreç kısaltması hatası.",
+          "academicNote": "Fenomenoloji çalışmaları."
+        }
+      },
+      {
+        "id": "c48_ex2_q4",
+        "domain": "Arkeoloji",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'was rumored to have been constructed' yapısının kronolojik analizi hangisinde doğru verilmiştir?",
+        "question": "Cümledeki 'was rumored to have been constructed' yapısının kronolojik analizi hangisinde doğru verilmiştir?",
+        "sentence": "The monolithic stone circle was rumored to have been constructed by a forgotten civilization.",
+        "options": [
+          "Söylenti geçmiştedir; tapınağın inşası ise söylentiden de eski bir geçmişe dayanır.",
+          "Söylenti şu andadır; tapınağın inşası gelecekte olacaktır.",
+          "Tapınak şu an inşa edilmektedir; söylenti ise geçmiştedir."
+        ],
+        "correctIndex": 0,
+        "translation": "Monolitik taş çemberin unutulmuş bir uygarlık tarafından inşa edilmiş olduğu söyleniyordu.",
+        "explanation": "'was rumored' söylentinin geçmişte olduğunu, 'to have been constructed' ise inşanın bu söylentiden de eski olduğunu gösterir.",
+        "hint": {
+          "formula": "was rumored (Past) + to have been constructed (Prior Past)",
+          "mirror": "Çift geçmiş zaman bükümü.",
+          "academicNote": "Tarih öncesi anıtlar."
+        }
+      },
+      {
+        "id": "c48_ex2_q5",
+        "domain": "Dilbilim",
+        "type": "error-spotting",
+        "prompt": "Cümledeki 'by the time' geçmiş zaman bağlamıyla uyumsuz olan gelecek zaman belirteç hatasını bulun.",
+        "question": "Cümledeki 'by the time' geçmiş zaman bağlamıyla uyumsuz olan gelecek zaman belirteç hatasını bulun.",
+        "sentence": "By the time the dictionary was printed in 1850, the grammar rules will be rumored to have been standardized.",
+        "options": [
+          "will be rumored",
+          "was printed in 1850",
+          "to have been standardized"
+        ],
+        "correctIndex": 0,
+        "translation": "Sözlük 1850'de basılana kadar, dil bilgisi kurallarının standartlaştırılmış olduğu söyleniyordu.",
+        "explanation": "Giriş cümlesindeki 'was printed' geçmiş zaman olduğu için, ana cümledeki 'will be rumored' gelecek zaman olamaz; 'were rumored' olmalıdır.",
+        "hint": {
+          "formula": "By the time + V2 -> was/were rumored (Tense uyumu)",
+          "mirror": "Gelecek-geçmiş uyumsuzluğu.",
+          "academicNote": "Sözlükbilim tarihi."
+        }
+      },
+      {
+        "id": "c48_ex2_q6",
+        "domain": "Antropoloji",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'is reported to be analyzing' yapısına göre araştırmacının çalışması hakkında ne söylenebilir?",
+        "question": "Cümledeki 'is reported to be analyzing' yapısına göre araştırmacının çalışması hakkında ne söylenebilir?",
+        "sentence": "The anthropologist is reported to be analyzing the tribal kinship charts currently.",
+        "options": [
+          "Hem raporlama hem de analiz eylemi şu anda eş zamanlı olarak devam etmektedir.",
+          "Analiz geçmişte bitmiştir; raporlama şu an yapılmaktadır.",
+          "Analiz gelecekte planlanmıştır; raporlama geçmiştedir."
+        ],
+        "correctIndex": 0,
+        "translation": "Antropoloğun şu anda kabile akrabalık şemalarını analiz etmekte olduğu bildiriliyor.",
+        "explanation": "'is reported' (present) ve 'to be analyzing' (present continuous infinitive) eylemlerin şu an eş zamanlı sürdüğünü gösterir.",
+        "hint": {
+          "formula": "is reported + to be V-ing -> Eşzamanlı şimdiki süreç",
+          "mirror": "Süreç eş zamanlılığı.",
+          "academicNote": "Saha araştırmaları raporlaması."
+        }
+      },
+      {
+        "id": "c48_ex2_q7",
+        "domain": "Sanat Tarihi",
+        "type": "error-spotting",
+        "prompt": "Sanat tarihi analizindeki zaman uyumsuzluğu hatasını barındıran seçeneği bulun.",
+        "question": "Sanat tarihi analizindeki zaman uyumsuzluğu hatasını barındıran seçeneği bulun.",
+        "sentence": "The painting is believed to have painted by Michelangelo, but modern analysis proves it was a copy.",
+        "options": [
+          "to have painted",
+          "proves it was",
+          "is believed to"
+        ],
+        "correctIndex": 0,
+        "translation": "Tablonun Michelangelo tarafından boyanmış olduğuna inanılıyor, ancak modern analiz bunun bir kopya olduğunu kanıtlıyor.",
+        "explanation": "Tablo boyama eylemini kendi yapamaz; edilgen yapı gereği 'to have been painted' (boyanmış olması) kullanılmalıdır.",
+        "hint": {
+          "formula": "to have been + V3 -> Edilgen Geçmiş Mastar",
+          "mirror": "Etken-edilgen çatışması.",
+          "academicNote": "Sanat eserleri doğrulama süreci."
+        }
+      },
+      {
+        "id": "c48_ex2_q8",
+        "domain": "Felsefe",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'was thought to be writing' yapısına göre, geçmişteki düşünce anında yazarın eylemi ne durumdaydı?",
+        "question": "Cümledeki 'was thought to be writing' yapısına göre, geçmişteki düşünce anında yazarın eylemi ne durumdaydı?",
+        "sentence": "The philosopher was thought to be writing a new critique before he passed away.",
+        "options": [
+          "Düşüncenin olduğu geçmiş anda, yazarın yazma eylemi devam etmekteydi.",
+          "Yazar eleştiriyi çoktan bitirmişti.",
+          "Yazar eleştiriyi gelecekte yazacaktı."
+        ],
+        "correctIndex": 0,
+        "translation": "Filozofun vefat etmeden önce yeni bir eleştiri yazmakta olduğu düşünülüyordu.",
+        "explanation": "Past lokomotif 'was thought' ile 'to be writing' (continuous infinitive) kullanımı, geçmişteki eylemin o esnada sürmekte olduğunu belirtir.",
+        "hint": {
+          "formula": "was thought + to be V-ing -> Geçmişte süren eylem",
+          "mirror": "Geçmiş zaman continuous uyumu.",
+          "academicNote": "Felsefi metin kronolojileri."
+        }
+      },
+      {
+        "id": "c48_ex2_q9",
+        "domain": "Tarih",
+        "type": "error-spotting",
+        "prompt": "Cümledeki zaman uyumu ve mastar çekim hatasını bulun.",
+        "question": "Cümledeki zaman uyumu ve mastar çekim hatasını bulun.",
+        "sentence": "Historically, the treaty was documented to having altered the European border structures.",
+        "options": [
+          "to having altered",
+          "was documented",
+          "border structures"
+        ],
+        "correctIndex": 0,
+        "translation": "Tarihsel olarak, antlaşmanın Avrupa sınır yapılarını değiştirmiş olduğu belgelenmişti.",
+        "explanation": "'to' mastarından sonra doğrudan gerund 'having' gelemez; fiilin yalın haliyle 'to have altered' olmalıdır.",
+        "hint": {
+          "formula": "to + have + V3 (to having kullanılamaz)",
+          "mirror": "Mastar kuralı ihlali.",
+          "academicNote": "Diplomasi tarihi belgeleri."
+        }
+      },
+      {
+        "id": "c48_ex2_q10",
+        "domain": "Edebiyat",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'will be rumors to have been influenced' yapısının gelecek projeksiyonu için hangisi doğrudur?",
+        "question": "Cümledeki 'will be rumors to have been influenced' yapısının gelecek projeksiyonu için hangisi doğrudur?",
+        "sentence": "In future research, there will be rumors to have been influenced by medieval myths in this play.",
+        "options": [
+          "Gelecekte oyunun Orta Çağ mitlerinden etkilenmiş olduğuna dair söylentiler çıkacaktır.",
+          "Söylentiler geçmişte kalmıştır, oyun şu an etkilenmektedir.",
+          "Gelişmeler geçmiştedir; söylentiler ise şu an günceldir."
+        ],
+        "correctIndex": 0,
+        "translation": "Gelecekteki araştırmalarda, bu oyunda Orta Çağ mitlerinden etkilenilmiş olduğuna dair söylentiler olacaktır.",
+        "explanation": "'there will be rumors' yapısı söylentilerin gelecekte olacağını, 'to have been influenced' ise etkilenme eyleminin daha önce olduğunu belirtir.",
+        "hint": {
+          "formula": "will be + to have been V3 -> Gelecek söylenti, geçmiş etki",
+          "mirror": "Gelecek-geçmiş zaman köprüsü.",
+          "academicNote": "Karşılaştırmalı edebiyat."
+        }
+      },
+      {
+        "id": "c48_ex2_q11",
+        "domain": "Arkeoloji",
+        "type": "error-spotting",
+        "prompt": "Arkeolojik edilgen yapı çekim hatasını bulun.",
+        "question": "Arkeolojik edilgen yapı çekim hatasını bulun.",
+        "sentence": "The clay tablets were claimed to have deciphering by the young researcher, but it was false.",
+        "options": [
+          "to have deciphering",
+          "were claimed to",
+          "was false"
+        ],
+        "correctIndex": 0,
+        "translation": "Kil tabletlerin genç araştırmacı tarafından deşifre edilmiş olduğu iddia edilmişti, fakat bu yanlıştı.",
+        "explanation": "Tabletler deşifre etme eylemini yapamaz; edilgen yapı gereği 'to have been deciphered' (deşifre edilmiş olması) kullanılmalıdır.",
+        "hint": {
+          "formula": "to have been + V3 -> Edilgen geçmiş mastar",
+          "mirror": "Edilgen çatı eksikliği.",
+          "academicNote": "Epigrafi ve tablet analizi."
+        }
+      },
+      {
+        "id": "c48_ex2_q12",
+        "domain": "Sosyoloji",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'are estimated to have decreased' yapısına göre, tahmin anı ile suç oranlarının düşmesi arasındaki zaman ilişkisi nasıldır?",
+        "question": "Cümledeki 'are estimated to have decreased' yapısına göre, tahmin anı ile suç oranlarının düşmesi arasındaki zaman ilişkisi nasıldır?",
+        "sentence": "The industrial city's crime rates are estimated to have decreased after the social reform.",
+        "options": [
+          "Tahmin şu an yapılmaktadır; suç oranlarının düşüşü ise geçmiştedir.",
+          "Tahmin geçmişte yapılmıştır; düşüş ise gelecekte olacaktır.",
+          "Hem tahmin hem de düşüş gelecekte gerçekleşecektir."
+        ],
+        "correctIndex": 0,
+        "translation": "Sanayi kentinin suç oranlarının sosyal reformdan sonra düşmüş olduğu tahmin ediliyor.",
+        "explanation": "'are estimated' (present) tahminin şu an olduğunu, 'to have decreased' (perfect infinitive) ise düşüşün geçmişte kaldığını gösterir.",
+        "hint": {
+          "formula": "are estimated (Present) + to have V3 (Past)",
+          "mirror": "Öncelik-sonralık ilişkisi.",
+          "academicNote": "Kentsel sosyoloji verileri."
+        }
+      },
+      {
+        "id": "c48_ex2_q13",
+        "domain": "Dilbilim",
+        "type": "error-spotting",
+        "prompt": "Cümledeki fiil çekim hatasını içeren seçeneği bulun.",
+        "question": "Cümledeki fiil çekim hatasını içeren seçeneği bulun.",
+        "sentence": "The dead language is documented to have had lose its native speakers by the 5th century.",
+        "options": [
+          "to have had lose",
+          "is documented",
+          "native speakers"
+        ],
+        "correctIndex": 0,
+        "translation": "Ölü dilin 5. yüzyıla kadar yerli konuşurlarını kaybetmiş olduğu belgelenmiştir.",
+        "explanation": "'to have' perfect yapısından sonra fiilin üçüncü hali gelmelidir; 'had lose' gibi hatalı bir birleşim olamaz, 'to have lost' olmalıdır.",
+        "hint": {
+          "formula": "to have + V3 -> to have lost",
+          "mirror": "Perfect fiil çekimi hatası.",
+          "academicNote": "Dil ölümü araştırmaları."
+        }
+      },
+      {
+        "id": "c48_ex2_q14",
+        "domain": "Antropoloji",
+        "type": "context-clue",
+        "prompt": "Cümledeki 'was rumored to be studying' yapısının zaman analizi hangisinde doğru verilmiştir?",
+        "question": "Cümledeki 'was rumored to be studying' yapısının zaman analizi hangisinde doğru verilmiştir?",
+        "sentence": "The professor was rumored to be studying human evolution in the African valley during the 90s.",
+        "options": [
+          "Söylentinin yaygın olduğu geçmiş dönemde, profesörün çalışması o esnada devam etmekteydi.",
+          "Profesör çalışmasını söylentiden önce bitirmişti.",
+          "Profesör çalışmaya gelecekte başlayacaktı."
+        ],
+        "correctIndex": 0,
+        "translation": "Profesörün 90'larda Afrika vadisinde insan evrimini incelemekte olduğu söyleniyordu.",
+        "explanation": "'was rumored' (geçmişte söyleniyordu) ile 'to be studying' ( continuous infinitive) geçmişteki söylenti anında eylemin sürdüğünü belirtir.",
+        "hint": {
+          "formula": "was rumored + to be V-ing -> Geçmişte süren eylem söylentisi",
+          "mirror": "Geçmiş zaman continuous uyumu.",
+          "academicNote": "Paleoantropoloji tarihi."
+        }
+      },
+      {
+        "id": "c48_ex2_q15",
+        "domain": "Sanat Tarihi",
+        "type": "error-spotting",
+        "prompt": "Cümledeki 'by the time' geçmiş bağlamıyla uyumsuz gelecek zaman hatasını bulun.",
+        "question": "Cümledeki 'by the time' geçmiş zaman bağlamıyla uyumsuz gelecek zaman hatasını bulun.",
+        "sentence": "By the time the sculpture was exhibited in Paris, it will be rumored to have been damaged.",
+        "options": [
+          "will be rumored",
+          "sculpture was exhibited",
+          "to have been damaged"
+        ],
+        "correctIndex": 0,
+        "translation": "Heykel Paris'te sergilenene kadar, hasar görmüş olduğu söyleniyordu.",
+        "explanation": "'was exhibited' geçmiş zaman olduğu için, ana cümledeki 'will be rumored' yapısı zaman uyumunu bozar; 'was rumored' olmalıdır.",
+        "hint": {
+          "formula": "By the time + V2 -> was/were rumored",
+          "mirror": "Geçmiş zaman uyumu.",
+          "academicNote": "Heykel sergileme ve restorasyon raporları."
+        }
       }
     ];
 
@@ -121849,7 +122459,7 @@ const chapter40Data = {
           ex2Questions = questions47_1_2;
         } else if (isC48L1) {
           ex1Questions = questions48_1_1;
-          ex2Questions = cloneAndRekeyQuestions(questions48_1_1, `c${t.id}_l${i}_ex2`);
+          ex2Questions = questions48_1_2;
         } else if (t.id === 49) {
           const source1 = (i === 1) ? questions45_1_1 : ((i === 2) ? questions45_2_1 : ((i === 3) ? questions46_1_1 : questions47_1_1));
           const source2 = (i === 1) ? questions45_1_2 : ((i === 2) ? questions45_2_2 : ((i === 3) ? questions46_1_2 : questions47_1_2));

@@ -54,10 +54,10 @@ function cleanAcademicUnitTitle(title) {
     'Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
     'Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
     'Phrasal Modal ve Subjunctive Matrisi': 'Öbeksel Kipler ve Dilek-Şart Yapıları (Phrasal Modals & Subjunctive)',
-    '5 Öğeli Yapısal Altyapı': 'Cümle Ögeleri ve Yapı Analizi (5 Öğe)',
-    '6 Öğeli Mega Eylem Zincirleri': 'Karma Akademik Cümle Analizi (6 Öğe)',
-    '7 Öğeli Hiper Süreç Zincirleri': 'İleri Düzey Cümle Çözümleme (7 Öğe)',
-    '8 Öğeli Titan Eylem Zincirleri': 'Uzun Cümle Bölme ve Çözümleme (8 Öğe)',
+    '5 Öğeli Yapısal Altyapı': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
+    '6 Öğeli Mega Eylem Zincirleri': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
+    '7 Öğeli Hiper Süreç Zincirleri': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
+    '8 Öğeli Titan Eylem Zincirleri': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
     'Zincir Genişleme ve Sentaks Matrisi': 'Söz Dizimi ve Cümle Genişletme (Syntax)',
     'Zaman Kayma Kontrolü': 'Cümlelerde Zaman Kaymaları ve Uyum Denetimi',
     'Ultimate Academic Exam Simulation': 'Akademik Sınav Simülasyonu',
@@ -187,6 +187,7 @@ if (typeof window !== 'undefined') {
     units.push(...uniqueUnits);
 
     units.forEach((u, idx) => {
+      u.originalId = u.id;
       oldToNewUnits[u.id] = idx + 1;
     });
   }
@@ -202,6 +203,7 @@ if (typeof window !== 'undefined') {
 
   if (typeof lessons !== 'undefined') {
     lessons.forEach(l => {
+      l.originalUnitId = l.unitId;
       if (l.unitId && oldToNewUnits[l.unitId]) {
         l.unitId = oldToNewUnits[l.unitId];
       }
@@ -6541,8 +6543,9 @@ function showFormulaWarmup(lesson, callback) {
   const modal = document.createElement('div');
   modal.className = 'warmup-modal';
   
+  const unitTitle = getUnitDisplayTitle(lesson.unitId);
   modal.innerHTML = `
-    <h3 class="warmup-title">🧪 Bölüm 36: Zaman Uyumu Isınması</h3>
+    <h3 class="warmup-title">🧪 ${unitTitle} Isınması</h3>
     <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0 0 10px 0; font-family: 'Inter', sans-serif;">
       Alıştırmaya başlamadan önce zaman bağlaçlarını ve eşleşen zaman formüllerini doğru bir şekilde birleştirin!
     </p>
@@ -6574,7 +6577,12 @@ function showFormulaWarmup(lesson, callback) {
     { id: 1, leftText: "Since + Past Simple (V2)", rightText: "Present Perfect (have/has + V3)" },
     { id: 2, leftText: "By the time + Past Simple (V2)", rightText: "Past Perfect (had + V3)" },
     { id: 3, leftText: "By the time + Present Simple (V1)", rightText: "Future Perfect (will have + V3)" },
-    { id: 4, leftText: "It is (high) time + Subject", rightText: "Past Simple (V2)" }
+    { id: 4, leftText: "It is (high) time + Subject", rightText: "Past Simple (V2)" },
+    { id: 5, leftText: "After + Past Perfect (had + V3)", rightText: "Past Simple (V2)" },
+    { id: 6, leftText: "Before + Past Simple (V2)", rightText: "Past Perfect (had + V3)" },
+    { id: 7, leftText: "While + Past Continuous (was/were + Ving)", rightText: "Past Simple (V2)" },
+    { id: 8, leftText: "No sooner + had + Subject + V3", rightText: "than + Subject + Past Simple (V2)" },
+    { id: 9, leftText: "By / As of + Future Time Expression", rightText: "Future Perfect (will have + V3)" }
   ];
   
   let selectedLeft = null;
@@ -6723,7 +6731,7 @@ function startLesson(lessonId, exerciseId = null) {
   showScreen('quiz-screen');
 
   const proceedToQuiz = () => {
-    if (currentLesson.unitId === 36) {
+    if (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) {
       showFormulaWarmup(currentLesson, () => {
         renderQuestion();
       });
@@ -7138,7 +7146,7 @@ function renderQuestion() {
     applyClozeHighlighting(question);
   }
 
-  if (currentLesson && currentLesson.unitId === 36 && question.sentence) {
+  if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) && question.sentence) {
     question.sentence = colorCodeUnit101Sentence(question.sentence);
   }
 
@@ -7430,7 +7438,7 @@ function renderQuestion() {
     }
 
     // Bölüm 36 (Unit 101) HUD ve Zaman Çizelgesi Entegrasyonu
-    if (currentLesson && currentLesson.unitId === 36) {
+    if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101)) {
       let sentenceStr = (originalSentence || "").toLowerCase();
       let hudType = '';
       let hudTitle = '';
@@ -7460,6 +7468,16 @@ function renderQuestion() {
         hudTitle = 'It is (High) Time Kalıbı';
         hudFormula = 'It is (high) time + Subject + Past Simple (V2)';
         hudAlert = 'Sınav Tuzağı: Bu kalıp şu ana yönelik bir gecikmişlik, şikayet veya zorunluluk bildirse de gramer gereği fiil mutlaka V2 (Past Simple) çekimindedir.';
+      } else if (sentenceStr.includes("after")) {
+        hudType = 'after_past';
+        hudTitle = 'After Zaman Uyumu';
+        hudFormula = 'After + Past Perfect (had + V3), Past Simple (V2)';
+        hudAlert = 'After yan cümlesinde had + V3 (öncelik), ana cümlede ise V2 (sonralık) kullanılır.';
+      } else if (sentenceStr.includes("before")) {
+        hudType = 'before_past';
+        hudTitle = 'Before Zaman Uyumu';
+        hudFormula = 'Before + Past Simple (V2), Past Perfect (had + V3)';
+        hudAlert = 'Before yan cümlesinde V2, ana cümlede ise daha önce gerçekleşen eylem için had + V3 kullanılır.';
       }
       
       if (hudType) {
@@ -7467,7 +7485,7 @@ function renderQuestion() {
           <div class="u101-hud-card" id="unit101-hud">
             <div class="u101-hud-header">
               <h4 class="u101-hud-title">🧪 Formül Köprüsü: ${hudTitle}</h4>
-              <span class="u101-hud-badge">BÖLÜM 36</span>
+              <span class="u101-hud-badge">${getUnitDisplayTitle(currentLesson.unitId).toUpperCase()}</span>
             </div>
             <div class="u101-hud-formula">${hudFormula}</div>
             <div class="u101-trap-alert">
@@ -7535,7 +7553,7 @@ function renderQuestion() {
 
   // Restore prompt text so data remains unmodified
   question.prompt = originalPrompt;
-  if (currentLesson && currentLesson.unitId === 36) {
+  if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101)) {
     question.sentence = originalSentence;
   }
 }
