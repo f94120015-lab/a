@@ -2866,19 +2866,6 @@ const chapter105Data = {
             {
               id: "c105_l3_ex1_q6",
               type: "multiple-choice",
-              prompt: "<code>[During + Noun (in the 19th century)] ➔ [Subject + V_? (formerly)]</code> denkleminde boşluğa hangisi gelmelidir?",
-              options: [
-                "V2 (Past Simple)",
-                "V1 (Present Simple)",
-                "will + V1 (Future Simple)",
-                "have/has + V3 (Present Perfect)"
-              ],
-              correctIndex: 0,
-              explanation: "19. yüzyıl ve formerly (eskiden) ifadeleri geçmişi net simgelediğinden fiil V2 (Past Simple) olmalıdır."
-            },
-            {
-              id: "c105_l3_ex1_q7",
-              type: "multiple-choice",
               prompt: "<code>[When + Subject + would + V1 (past preferences)] ➔ [Subject + V_?]</code> denklemi için hangisi söylenebilir?",
               options: [
                 "Hatalı Yapı: When zaman bağlacının bağlı olduğu yan cümlede would kullanılması kesinlikle yanlıştır.",
@@ -2890,7 +2877,7 @@ const chapter105Data = {
               explanation: "Zaman bağlaçlarının (when vb.) doğrudan bağlı olduğu yan cümlede will/would/be going to kullanılması kesinlikle yasaktır."
             },
             {
-              id: "c105_l3_ex1_q8",
+              id: "c105_l3_ex1_q7",
               type: "multiple-choice",
               prompt: "<code>[By the time + Subject + V_? (2 hours ago)] ➔ [Subject + V_? (3 hours ago)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
@@ -2901,6 +2888,19 @@ const chapter105Data = {
               ],
               correctIndex: 0,
               explanation: "Geçmişteki sınır (2 hours ago ➔ V2) By the time ile verildiğinde, ondan önce biten eylem (3 hours ago) had V3 olur."
+            },
+            {
+              id: "c105_l3_ex1_q8",
+              type: "multiple-choice",
+              prompt: "<code>[Subject + V_? (Film / Kitap özeti veya hikaye anlatımı)]</code> denkleminde gerçekleşen olaylar hangi zamanla düşünülmelidir?",
+              options: [
+                "Present Tense (Geniş Zaman / V1 veya Present Continuous)",
+                "Past Tense (V2 / Past Simple)",
+                "Past Perfect Tense (had + V3)",
+                "Future in the Past (would + V1)"
+              ],
+              correctIndex: 0,
+              explanation: "Hikaye Anlatımları: Soruda bir film, kitap özeti veya hikaye anlatımı varsa gerçekleşen olaylar Present Tense (Geniş Zaman) olarak düşünülmelidir."
             }
           ]
         },
@@ -2978,41 +2978,41 @@ const chapter105Data = {
             {
               id: "c105_l3_ex2_q6",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (Zaman Göstergesi / İpucu Yok)]</code> denkleminde öncelikli olarak hangi yapılara yönelinmelidir?",
+              prompt: "<code>[Subject + V_? (At that time / At that moment)]</code> denkleminde boşluğa hangisi gelmelidir?",
               options: [
-                "Öncelikle Present yapılar (V1 / am-is-are / have-has V3)",
-                "Öncelikle Past yapılar (V2 / had + V3)",
-                "Öncelikle Future yapılar (will + V1 / will have + V3)",
-                "Öncelikle Past Continuous yapılar (was/were + V-ing)"
+                "V2 (Past Simple) veya Was/Were + V-ing (Past Continuous)",
+                "V1 (Present Simple) veya Am/Is/Are + V-ing",
+                "have/has + V3 veya have/has been + V-ing",
+                "will + V1 veya would + V1"
               ],
               correctIndex: 0,
-              explanation: "Zaman Göstergesi Yoksa: Soru kökünde hiçbir zaman göstergesi/ipucu yoksa, genel kural olarak öncelikle Present yapılara yönelinmelidir."
+              explanation: "At that time / At that moment ifadeleri geçmişte belirli bir anı işaret ettiği için V2 veya Was-Were Ving kullanımını gerektirir."
             },
             {
               id: "c105_l3_ex2_q7",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (Film/Kitap özeti veya hikaye anlatımı)]</code> denkleminde olaylar hangi tense ile anlatılmalıdır?",
+              prompt: "<code>[Subject + V_? (At the moment / gradually / day by day)]</code> denkleminde boşluğa hangisi gelmelidir?",
               options: [
-                "Present Tense (Geniş Zaman / V1 veya Present Continuous)",
-                "Past Tense (V2 / Past Simple)",
-                "Past Perfect Tense (had + V3)",
-                "Future in the Past (would + V1)"
+                "Am/Is/Are + V-ing (Present Continuous)",
+                "V2 (Past Simple)",
+                "Was/Were + V-ing",
+                "have/has + V3 (Present Perfect)"
               ],
               correctIndex: 0,
-              explanation: "Hikaye Anlatımları: Soruda bir film, kitap özeti veya hikaye anlatımı varsa gerçekleşen olaylar Present Tense (Geniş Zaman) olarak düşünülmelidir."
+              explanation: "At the moment, gradually (kademeli olarak), day by day (günden güne) ifadeleri süregelen bir değişimi veya şimdiki zamanı temsil ettiğinden Am-Is-Are Ving ile kullanılır."
             },
             {
               id: "c105_l3_ex2_q8",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (initially)] ➔ but currently [Subject + V_?]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (Up to now / up till / until now)]</code> denkleminde boşluğa hangisi gelmelidir?",
               options: [
-                "[V2 (initially past)] ➔ [is/are + V-ing (currently present)]",
-                "[V1 (Present)] ➔ [had + V3 (Past Perfect)]",
-                "[have/has + V3] ➔ [V2 (Past Simple)]",
-                "[will + V1] ➔ [would + V1]"
+                "Have/Has + V3 veya Have/Has been + V-ing",
+                "V2 veya Was/Were + V-ing",
+                "V1 veya Am/Is/Are + V-ing",
+                "had + V3 veya had been + V-ing"
               ],
               correctIndex: 0,
-              explanation: "initially kelimesi geçmişi (V2) işaret ederken, currently kelimesi güncel şimdiki zamanı (Present Continuous) işaret eder."
+              explanation: "Up to now, up till, until now (şu ana kadar) ifadeleri geçmişten günümüze gelen süreci işaret ettiğinden Present Perfect (Have-Has V3) veya Present Perfect Continuous (Have-Has been Ving) gerektirir."
             }
           ]
         },
@@ -3116,15 +3116,15 @@ const chapter105Data = {
             {
               id: "c105_l3_ex3_q8",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (today)] + [who / which / that (Relative Clause)] + [Subject + V_? (originally / early years)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (Zaman Göstergesi / İpucu Yok)]</code> denkleminde öncelikli olarak hangi yapılara yönelinmelidir?",
               options: [
-                "[V1 (Present Simple) / am-is-are] + [Relative Clause] + [V2 (Past Simple)]",
-                "[V2 (Past Simple)] + [Relative Clause] + [V1 (Present Simple)]",
-                "[had + V3 (Past Perfect)] + [Relative Clause] + [will + V1]",
-                "[will + V1] + [Relative Clause] + [would + V1]"
+                "Öncelikle Present yapılar (V1 / am-is-are / have-has V3)",
+                "Öncelikle Past yapılar (V2 / had + V3)",
+                "Öncelikle Future yapılar (will + V1 / will have + V3)",
+                "Öncelikle Past Continuous yapılar (was/were + V-ing)"
               ],
               correctIndex: 0,
-              explanation: "Relative Clause içerisinde geçmiş (originally ➔ V2) kullanımı, ana cümledeki present (today ➔ V1) ile uyum zorunluluğuna tabi değildir."
+              explanation: "Zaman Göstergesi Yoksa: Soru kökünde hiçbir zaman göstergesi/ipucu yoksa, genel kural olarak öncelikle Present yapılara yönelinmelidir."
             }
           ]
         }
