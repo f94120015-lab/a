@@ -281,15 +281,34 @@ const isUserWhitelisted = (phone, email) => {
 };
 
 function formatGrammarFormula(formulaHtml) {
-  // Wrap tags / blocks inside formula-bracket class
-  let formatted = formulaHtml.replace(/\[([^\]]+)\]/g, '<span class="formula-bracket">[$1]</span>');
-  // Wrap + operator (excluding plus inside tags if any)
-  formatted = formatted.replace(/\+/g, '<span class="formula-operator">+</span>');
-  // Wrap arrow operator
-  formatted = formatted.replace(/➔/g, '<span class="formula-arrow">➔</span>');
-  // Wrap question marks
-  formatted = formatted.replace(/\?/g, '<span class="formula-variable">?</span>');
-  return formatted;
+  // Tokenize the formula by matching either bracketed expressions, the arrow operator, or the plus sign
+  const regex = /(\[[^\]]+\]|➔|\+)/g;
+  const tokens = formulaHtml.split(regex);
+  
+  const formattedTokens = tokens.map(token => {
+    if (!token) return "";
+    const trimmed = token.trim();
+    if (!trimmed) return "";
+    
+    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+      // It's a block segment! Strip the outer brackets for styling inside
+      let innerText = trimmed.substring(1, trimmed.length - 1);
+      // Highlight question mark (?) inside blocks
+      innerText = innerText.replace(/\?/g, '<span class="formula-inner-var">?</span>');
+      // Highlight V1, V2, V3 etc.
+      innerText = innerText.replace(/\b(V\d|V_)\b/g, '<span style="color: var(--accent-primary, #6366f1); font-weight: 800;">$1</span>');
+      return `<div class="formula-block">${innerText}</div>`;
+    } else if (trimmed === '+') {
+      return `<div class="formula-connector">+</div>`;
+    } else if (trimmed === '➔') {
+      return `<div class="formula-arrow-connector">➔</div>`;
+    } else {
+      // Any text block outside the bracket expressions
+      return `<div class="formula-text-node">${trimmed}</div>`;
+    }
+  });
+  
+  return `<div class="formula-container">${formattedTokens.join('')}</div>`;
 }
 
 function formatPromptWithTags(promptText) {
