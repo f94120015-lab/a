@@ -2827,15 +2827,15 @@ const chapter105Data = {
             {
               id: "c105_l3_ex1_q3",
               type: "multiple-choice",
-              prompt: "<code>[Before + Subject + will / would / be going to + V1] ➔ [Subject + V_?]</code> denklemiyle ilgili hangisi doğrudur?",
+              prompt: "Zaman bağlacı içeren sorularda, bağlacın doğrudan bağlı olduğu <strong>yan cümleye</strong> ve <strong>ana cümleye</strong> getirilmesi yasak olan yapılar sırasıyla hangileridir?",
               options: [
-                "Zaman bağlacının doğrudan bağlı olduğu yan cümlede will, would veya be going to kesinlikle kullanılamaz (Hatalı Yapı).",
-                "Gelecek zamanı vurgulamak amacıyla before yan cümlesine will gelmesi doğrudur.",
-                "Şart cümleleriyle karıştırılmaması için before yan cümlesine would gelmesi zorunludur.",
-                "Sadece be going to yapısının before yan cümlesinde kullanılması serbesttir."
+                "Yan cümleye [will, would, shall, be going to] gelmez; ana cümleye ise [have-has V3 / have-has been Ving] getirilemez.",
+                "Yan cümleye [have-has V3]; ana cümleye ise [will, would, shall] getirilemez.",
+                "Yan cümleye [V1 (Present Simple)]; ana cümleye ise [will + V1] getirilemez.",
+                "Yan cümleye [V2 (Past Simple)]; ana cümleye ise [had + V3] getirilemez."
               ],
               correctIndex: 0,
-              explanation: "Zaman Bağlacında Will/Would Yasası: Zaman bağlacının doğrudan bağlı olduğu tarafta (yan cümlede) will, would, be going to kesinlikle kullanılamaz."
+              explanation: "Zaman Bağlacı Yan Cümle Yasakları: Zaman bağlaçlarının doğrudan bağlı olduğu yan cümleye will, would, shall, be going to gelmez; ana cümleye ise have-has V3 / have-has been Ving yapıları getirilemez."
             },
             {
               id: "c105_l3_ex1_q4",
@@ -2926,15 +2926,15 @@ const chapter105Data = {
             {
               id: "c105_l3_ex2_q2",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (in the past)] ➔ [Subject + V_? (today)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (for two days / throughout the year gibi süreç belirten ifadeler)]</code> denkleminde eylemin anlık/süreklilik durumunu tam karşılayamadığı için elenen tenseler hangileridir?",
               options: [
-                "[V2 (Past Simple)] ➔ [V1 (Present Simple) / am-is-are]",
-                "[had + V3 (Past Perfect)] ➔ [would + V1]",
-                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
-                "[would + V1] ➔ [V2 (Past Simple)]"
+                "am-is-are Ving, was/were Ving ve will be Ving",
+                "have/has V3, had V3 ve will have V3",
+                "have/has been Ving, had been Ving ve will have been Ving",
+                "Present Simple (V1) ve Past Simple (V2)"
               ],
               correctIndex: 0,
-              explanation: "in the past geçmişi (V2), today ise şimdiki zamanı (V1) işaret eder."
+              explanation: "Süreç İfadelerinde Elenen Tenseler: Tense sorularında for two days, throughout the year gibi süreç bildiren zaman ifadeleri yer alıyorsa, eylemin anlık/süreklilik durumunu tam karşılayamadığı için am-is-are Ving, was/were Ving ve will be Ving yapıları elenir."
             },
             {
               id: "c105_l3_ex2_q3",
