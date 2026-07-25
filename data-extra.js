@@ -2548,345 +2548,345 @@ const chapter105Data = {
       title: "2. Hata Avcısı: Zaman Uyumları",
       subtitle: "Hatalı Formül Dizilimlerini Ayıklama",
       konuAnlatimi: {
-        baslik: "Hata Avcısı: Zaman Uyumları",
-        teorikMantik: "Sınavlarda en sık yapılan hatalar zaman uyumu ihlalleridir. Yan cümlesinde 'will' olan veya 'past' ile 'future' yapılarını doğrudan bağlayan kombinasyonlar elenmelidir.",
-        formul: "Hatalı: *By the time + V2 ➔ will have V3* | Doğru: *By the time + V2 ➔ had V3*",
-        altinKural: "Zaman bağlaçlarında 'Past' bir eylem ile 'Future' veya 'Present' bir eylem (istisnalar hariç) yan yana gelemez."
+        baslik: "Hata Avcısı: Seçenek Eleme ve Uyumsuzluk Tabloları",
+        teorikMantik: "Sınavda tense sorularında anlama girmeden önce seçeneklerde yan yana elenmesi gereken ve yapısal olarak asla seçilmemesi gereken uyumsuz kombinasyonlar vardır. Bu kalıpları ezbere bilmek hız kazandırır.",
+        formul: "Uzak Durulması Gereken Tense Çiftleri: *Am-is-are / Would V0* | *Would V0 / Would V0* | *Had V3 / am-is-are*",
+        altinKural: "Bir If şart cümlesinde yan cümleye (If tarafına) asla will, would, shall, be going to, may/might/could (olasılık) gelmez!"
       },
       exercises: [
         {
           id: "c105_l2_ex1",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 1: Hatalı Bağlantıları Bulma",
-          description: "Mantıksal olarak zaman uyumu kuralına uymayan formül çiftlerini yakalama.",
+          title: "Alıştırma 1: Seçeneklerde Yan Yana Elenen Kombinasyonlar",
+          description: "Tense sorularında şıklarda yan yana verildiğinde doğrudan elenmesi gereken hatalı dizilimler.",
           questions: [
             {
               id: "c105_l2_ex1_q1",
               type: "multiple-choice",
-              prompt: "Aşağıdaki formüllerden hangisinde <strong>zaman uyumu ihlali</strong> vardır?",
+              prompt: "Aşağıdaki seçenek kombinasyonlarından hangisi tense sorularında yan yana verildiğinde <strong>doğrudan elenmelidir</strong>?",
               options: [
-                "When + Past Simple (V2) ➔ Present Simple (V1)",
-                "When + Past Simple (V2) ➔ Past Simple (V2)",
-                "When + Present Simple (V1) ➔ Future Simple (will + V1)",
-                "When + Present Simple (V1) ➔ Present Simple (V1)"
+                "am-is-are / would V0",
+                "Present Simple / Future Simple (will)",
+                "Past Simple (V2) / Past Perfect (had + V3)",
+                "Present Perfect / Present Simple"
               ],
               correctIndex: 0,
-              explanation: "When + Past Simple (V2) ile başlayan bir zaman cümlesi, istisnai durumlar hariç ana cümlede Present Simple (V1) ile bağlanamaz (Past-Present uyumsuzluğu)."
+              explanation: "Present (am-is-are) ile Past/Future Conditional (would V0) yapıları genel zaman uyumu kurallarına göre yan yana gelmez ve doğrudan elenir."
             },
             {
               id: "c105_l2_ex1_q2",
               type: "multiple-choice",
-              prompt: "Aşağıdakilerden hangisi dil bilgisi açısından <strong>kesinlikle hatalı</strong> bir formüldür?",
+              prompt: "Tense sorularında seçeneklerde <strong>would V0 / would V0</strong> dizilimi görüldüğünde ne yapılmalıdır?",
               options: [
-                "As soon as + Subject + will + V1",
-                "As soon as + Subject + V1",
-                "As soon as + Subject + V2",
-                "As soon as + Subject + had + V3"
+                "Doğrudan elenmelidir (Özel şart cümleleri hariç iki taraf da would V0 alamaz)",
+                "İlk tarafı koşul olduğu için hemen doğru kabul edilmelidir",
+                "Cümlenin present anlamı taşıdığı varsayılmalıdır",
+                "Zaman uyumu aranmadığı için doğru seçenek olarak işaretlenmelidir"
               ],
               correctIndex: 0,
-              explanation: "Zaman bağlacı alan yan cümlelerin içinde (when, as soon as, after, by the time vb.) gelecek zaman belirten 'will' yapısı kullanılamaz."
+              explanation: "İki tarafın da would V0 / would V0 olması yapısal bir hatadır ve tense/cümle tamamlama sorularında doğrudan elenmesi gerekir."
             },
             {
               id: "c105_l2_ex1_q3",
               type: "multiple-choice",
-              prompt: "<code>Since + Present Perfect (have/has + V3) ➔ Past Simple (V2)</code> formülündeki hata nedir?",
+              prompt: "Aşağıdaki ikililerden hangisi <strong>Had V3 / am-is-are</strong> diziliminin doğrudan elenme sebebidir?",
               options: [
-                "Formülün iki tarafı yer değiştirmelidir: Since'ten sonra V2 gelmeli, ana cümle Present Perfect olmalıdır",
-                "Since'ten sonra Past Perfect gelmelidir",
-                "İki taraf da Past Simple (V2) olmalıdır",
-                "Since bağlacı Present Perfect ile hiç kullanılmaz"
+                "Past Perfect (had V3) ile Present (am-is-are) yapılarının zaman uyumsuzluğu taşıması",
+                "İki tarafın da edilgen olması",
+                "Had V3 yapısının sadece gelecek zamanla kullanılabilmesi",
+                "am-is-are yapısının sadece geçmiş zamanla kullanılabilmesi"
               ],
               correctIndex: 0,
-              explanation: "Since kuralında 'başlangıç noktası' olan yan cümle V2 (Past Simple) olmalıdır. Süreç bildiren ana cümle ise Present Perfect olmalıdır."
+              explanation: "Past Perfect (had V3) geçmişin de geçmişini anlatırken, am-is-are şimdiki/genel zamanı anlatır. Bu iki uç yapının bir arada bulunması uyumsuzluk yaratır ve şık doğrudan elenir."
             },
             {
               id: "c105_l2_ex1_q4",
               type: "multiple-choice",
-              prompt: "Aşağıdaki <code>Since</code> kurgularından hangisi **zaman çizgisi mantığına** aykırıdır ve hatalıdır?",
+              prompt: "Tense sorularında şık eleme yaparken elenmesi gereken 3 ana kombinasyon hangileridir?",
               options: [
-                "Since + Present Simple (V1) ➔ Present Simple (V1)",
-                "Since + Past Simple (V2) ➔ Present Perfect (have/has + V3)",
-                "Since + Past Simple (V2) ➔ Present Perfect Continuous",
-                "Since + Past Simple (V2) ➔ Past Perfect (had + V3) [Zaman Kayması Olmadan]"
+                "am-is-are/would V0 — would V0/would V0 — had V3/am-is-are",
+                "V2/had V3 — V1/will V1 — have V3/V1",
+                "was Ving/V2 — had V3/V2 — V1/V1",
+                "would V0/V2 — had V3/would V0 — V2/V2"
               ],
               correctIndex: 0,
-              explanation: "Since, zaman bağlacı olarak geçmişteki bir başlangıç noktasını işaret eder. Bu nedenle yan cümlede V1 (Present Simple) kullanılması zaman çizgisi mantığına aykırıdır."
+              explanation: "YDS/YÖKDİL taktiklerinde seçeneklerde görüldüğünde öncelikle elenmesi gereken 3 büyük uyumsuz ikili: am-is-are/would V0, would V0/would V0 ve had V3/am-is-are yapılarıdır."
             },
             {
               id: "c105_l2_ex1_q5",
               type: "multiple-choice",
-              prompt: "<code>By the time + Past Simple (V2) ➔ will have + V3</code> dizilimindeki hata nedir?",
+              prompt: "Seçeneklerde <code>is / would support</code> şeklinde bir fiil dizilimi verilmişse bu seçenek için ne söylenebilir?",
               options: [
-                "Geçmiş sınır (V2) ile gelecek süreç (will have V3) bir arada kullanılarak zaman uyumu bozulmuştur",
-                "By the time'dan sonra Past Simple gelemez",
-                "will have V3 yerine had V3 gelmelidir ve bu doğrudur",
-                "Geçmiş sınır yerine Present Simple gelmelidir"
+                "Hatalı bir kombinasyondur (am-is-are / would V0) ve elenmelidir",
+                "Şart cümlesi Type 1 formülüdür ve doğrudur",
+                "Zaman uyumuna tamamen uymaktadır",
+                "Sadece edilgen cümlelerde doğrudur"
               ],
               correctIndex: 0,
-              explanation: "By the time geçmiş bir sınırı (V2) işaret ediyorsa, ana cümle o sınırdan daha önce tamamlanmış olan Past Perfect (had + V3) olmalıdır. Future Perfect (will have V3) geleceği işaret ettiği için uyum bozulur."
+              explanation: "is (am-is-are) ve would support (would V0) uyumsuz bir kombinasyondur ve doğrudan elenmelidir."
             },
             {
               id: "c105_l2_ex1_q6",
               type: "multiple-choice",
-              prompt: "<code>By the time + Subject + will + V1 ➔ will have + V3</code> formülündeki yapısal hata nedir?",
+              prompt: "Seçeneklerde <code>would like / would prefer</code> diziliminin elenme sebebi nedir?",
               options: [
-                "By the time yan cümlesinin içine gelecek zaman (will) getirilmiştir",
-                "Ana cümlede Future Perfect kullanılması yanlıştır",
-                "Yan cümlede V1 kullanılması gerekirdi",
-                "By the time zıtlık bağlacı gibi davranmalıdır"
+                "Would V0 / Would V0 yan yana kullanımının hatalı olması",
+                "Cümlenin past perfect anlamı taşıması",
+                "İki fiilin de durum fiili olması",
+                "Present simple kurallarına uymaması"
               ],
               correctIndex: 0,
-              explanation: "Zaman bağlaçlarının (By the time dahil) yan cümle bloğu içerisine gelecek zaman yardımcı fiili (will, shall, be going to) yazılamaz."
+              explanation: "Tense sorularında iki tarafın da would V0 / would V0 olması yapısal bir hatadır ve elenmelidir."
             },
             {
               id: "c105_l2_ex1_q7",
               type: "multiple-choice",
-              prompt: "<code>After + Past Simple (V2) ➔ will have + V3</code> diziliminin elenme sebebi nedir?",
+              prompt: "Seçeneklerde <code>had completed / are</code> dizilimi varsa bu seçeneğin durumu nedir?",
               options: [
-                "Geçmişteki eylemden sonrasını anlatırken gelecek zaman uyumu kurulamayacağı için",
-                "After'dan sonra sadece had V3 gelebildiği için",
-                "Ana cümle sadece Past Simple olabildiği için",
-                "After bağlacı zaman uyumu istemediği için"
+                "Had V3 / am-is-are kombinasyonu olduğu için elenmelidir",
+                "Geçmişten günümüze gelen etkiyi gösterdiği için doğrudur",
+                "Zaman uyumunu sağlayan en güçlü seçenektir",
+                "Type 3 şart cümlesi olduğu için doğrudur"
               ],
               correctIndex: 0,
-              explanation: "Geçmişe ait bir bağlaç (After + V2) ile başlayan cümlede, ana cümle gelecek zamanı işaret eden 'will have + V3' olamaz."
+              explanation: "Had V3 (had completed) ile are (am-is-are) yapısal olarak elenmesi gereken uyumsuz ikililerdendir."
             },
             {
               id: "c105_l2_ex1_q8",
               type: "multiple-choice",
-              prompt: "<code>Before + Past Perfect (had + V3) ➔ Past Simple (V2)</code> formülündeki mantıksal hata nedir?",
+              prompt: "Şıklarda yan yana elenmesi gereken uyumsuz dizilimler elendikten sonra kalan seçeneklerde öncelikle hangi uyuma bakılmalıdır?",
               options: [
-                "Before yan cümlesi daha yeni eylemi (V2) işaret etmelidir, öncelik ana cümlede (had V3) olmalıdır",
-                "Before'dan sonra V1 gelmelidir",
-                "Ana cümle Present Perfect olmalıdır",
-                "İki taraf da Past Perfect olmalıdır"
+                "Temel Zaman Uyumu (Past-Past veya Present-Present paralelliği)",
+                "Edilgen (Passive) uyumu",
+                "Sadece kelime anlamı uyumu",
+                "Özne-Yüklem tekil/çoğul uyumu"
               ],
               correctIndex: 0,
-              explanation: "Before, '-den önce' demektir. Dolayısıyla Before yan cümlesi geçmişteki sınır eylemi (daha yeni olan - V2) temsil etmelidir. Daha önce olan (öncelikli) eylem ise ana cümlede (had V3) yer almalıdır."
+              explanation: "Hatalı şıklar elendikten sonra geriye kalan seçeneklerde öncelikle cümle genelindeki zaman zarflarına göre Past-Past veya Present-Present zaman uyumu kontrol edilmelidir."
             }
           ]
         },
         {
           id: "c105_l2_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: Yapısal Çeldiricileri Ayıklama",
-          description: "Çeldirici olarak sunulan yanlış formülleri eleme pratikleri.",
+          title: "Alıştırma 2: If Yapısında Zaman Uyumsuzlukları",
+          description: "Bir If şart cümlesinde, yan cümlecik ve ana cümlecik arasında asla seçilmemesi gereken kombinasyonlar.",
           questions: [
             {
               id: "c105_l2_ex2_q1",
               type: "multiple-choice",
-              prompt: "Aşağıdaki formüllerden hangisi <code>By the time</code> kuralına göre **yanlıştır**?",
+              prompt: "Bir If şart cümlesinde, <strong>If yan cümlesinin (If tarafı)</strong> içine aşağıdakilerden hangisi **asla gelemez**?",
               options: [
-                "By the time + V2 ➔ will have + V3",
-                "By the time + V2 ➔ had + V3",
-                "By the time + V1 ➔ will have + V3",
-                "By the time + V1 ➔ will be + V-ing"
+                "will, would, shall, be going to, may/might/could (olasılık)",
+                "Present Simple (V1)",
+                "Past Simple (V2)",
+                "Past Perfect (had + V3)"
               ],
               correctIndex: 0,
-              explanation: "By the time + V2 (Past) yapısı ana cümlede 'will have + V3' (Future) alamaz. Past-Future uyumu bozulur."
+              explanation: "If'li yan cümleciğin içerisine gelecek zaman yardımcı fiilleri veya olasılık bildiren modallar (will, would, shall, be going to, may, might, could) kesinlikle getirilemez."
             },
             {
               id: "c105_l2_ex2_q2",
               type: "multiple-choice",
-              prompt: "Hangi bağlaçta ana cümle ile yan cümle arasında **zaman uyumu arama zorunluluğu yoktur**?",
+              prompt: "Aşağıdaki If şart cümlesi eşleşmelerinden hangisi <strong>asla seçilmemesi gereken uyumsuz</strong> bir kombinasyondur?",
               options: [
-                "Although (Zıtlık Bağlacı)",
-                "As soon as (Zaman Bağlacı)",
-                "By the time (Zaman Sınır Bağlacı)",
-                "While (Zaman Bağlacı)"
+                "Had V3 / have-has V3 (veya Had V3 / V1 veya Had V3 / Future)",
+                "Had V3 / would have V3 (Type 3)",
+                "V2 / would V1 (Type 2)",
+                "V1 / will V1 (Type 1)"
               ],
               correctIndex: 0,
-              explanation: "Zıtlık bağlaçları (Although, Even though, But vb.) farklı zaman dilimlerini birbirine bağlayabildiği için zaman uyumu zorunlu değildir."
+              explanation: "If cümlelerinde 'Had V3' yan cümlesi varken ana cümlede 'have-has V3', 'V1' veya 'Future' yapılarının yer alması tamamen uyum kurallarına aykırıdır ve bu şıklar elenir."
             },
             {
               id: "c105_l2_ex2_q3",
               type: "multiple-choice",
-              prompt: "<code>It is high time + Subject + Present Simple (V1)</code> yapısı neden bir dil bilgisi hatasıdır?",
+              prompt: "If cümlelerinde <strong>was-were Ving / have-has V3</strong> veya <strong>was-were Ving / had V3</strong> eşleşmeleri için hangisi söylenir?",
               options: [
-                "Çünkü bu kalıp gerçek dışı durum (subjunctive) mantığıyla geçmiş zaman (V2) gerektirir",
-                "Çünkü bu kalıptan sonra sadece Future Simple gelebilir",
-                "Çünkü özne varsa sadece Past Perfect kullanılabilir",
-                "Çünkü 'It is high time' kalıbı asla özne almaz"
+                "Tamamen uyum dışıdır ve şıklarda elenmelidir",
+                "Mixed Type olarak doğru kabul edilebilir",
+                "Type 2'nin pasif formülüdür ve doğrudur",
+                "Tense uyumu arama kuralını ihlal etmez"
               ],
               correctIndex: 0,
-              explanation: "It is (high) time + Subject yapısı, şimdiki zamanda yapılması gereken ama gecikmiş olan eylemleri sitemkar/vurgulu anlatmak için Past Simple (V2) formülüyle kurulur."
+              explanation: "was-were Ving ile have-has V3 ya da had V3 eşleşmeleri If şart cümlelerinde dil bilgisi kurallarına göre elenmesi gereken hatalı kombinasyonlardır."
             },
             {
               id: "c105_l2_ex2_q4",
               type: "multiple-choice",
-              prompt: "<code>As soon as + will + V1 ➔ will + V1</code> yapısı sınavlarda neden elenmelidir?",
+              prompt: "If cümlesinin <strong>ana cümlesinde (Main Clause)</strong>; <code>have/has V3, V2, was/were Ving veya had V3</code> bulunduğunda diğer tarafa hangisinin gelmesi **%90 oranında engellenir**?",
               options: [
-                "Çünkü zaman bağlacı olan yan cümlede 'will' kullanılamaz",
-                "Çünkü as soon as zıtlık bildirir",
-                "Çünkü ana cümlede will yerine had V3 gelmelidir",
-                "Çünkü iki tarafın da past continuous olması gerekir"
+                "am-is-are veya am-is-are V-ing",
+                "will V1",
+                "would V1",
+                "had V3"
               ],
               correctIndex: 0,
-              explanation: "Zaman bağlacının içinde (yan cümlede) gelecek zaman belirteçleri (will/would) yer alamaz. Uyumlu olması için yan cümle V1 veya V2 olmalıdır."
+              explanation: "If şart yapısının ana cümlesinde have/has V3, V2, was/were Ving ya da had V3 yer alıyorsa, yan cümleye present durum bildiren 'am-is-are' veya 'am-is-are Ving' gelmez."
             },
             {
               id: "c105_l2_ex2_q5",
               type: "multiple-choice",
-              prompt: "<code>No sooner + had + Subject + V3 ➔ when + Subject + V2</code> formülündeki hata nedir?",
+              prompt: "<code>If I will see him, I will tell him.</code> cümlesindeki **yapısal kural hatası** nedir?",
               options: [
-                "No sooner yapısı 'when' ile değil, 'than' bağlacı ile tamamlanmalıdır",
-                "Yan cümlede had V3 yerine have V3 kullanılmalıdır",
-                "Ana cümlede V2 yerine V1 gelmelidir",
-                "No sooner yapısı devrik olamaz"
+                "If yan cümlesinin içine gelecek zaman belirten 'will' yazılmıştır",
+                "Ana cümlede will kullanılması yanlıştır",
+                "Cümlenin iki tarafının da past olması gerekirdi",
+                "If kelimesi yerine unless kullanılmalıydı"
               ],
               correctIndex: 0,
-              explanation: "No sooner... than yapısı bir bütündür. 'When' kelimesi 'Hardly/Scarcely' yapılarında kullanılır."
+              explanation: "If'li yan cümlenin içerisine 'will' gelemez. Doğrusu: 'If I see him, I will tell him.' (Type 1) olmalıdır."
             },
             {
               id: "c105_l2_ex2_q6",
               type: "multiple-choice",
-              prompt: "<code>Hardly + had + Subject + V3 ➔ than + Subject + V2</code> yapısındaki hata nedir?",
+              prompt: "Aşağıdaki If kombinasyonlarından hangisinde **yapısal uyumsuzluk** vardır?",
               options: [
-                "Hardly yapısı 'than' ile değil, 'when' veya 'before' ile tamamlanmalıdır",
-                "Hardly'den sonra had V3 gelemez",
-                "Hardly yapısı devrik kurulamaz",
-                "Ana cümle V1 olmalıdır"
+                "If had researched / has improved",
+                "If had researched / would have improved",
+                "If researched / would improve",
+                "If research / will improve"
               ],
               correctIndex: 0,
-              explanation: "Hardly / Scarcely yapısı 'when' (veya 'before') ile eşleşir. 'Than' ise 'No sooner' ile kullanılır."
+              explanation: "If tarafında 'had researched' (had V3) varken ana cümlede 'has improved' (have/has V3) kullanımı uyum kuralları dışındadır ve elenir."
             },
             {
               id: "c105_l2_ex2_q7",
               type: "multiple-choice",
-              prompt: "<code>While + had + V3 ➔ Past Simple (V2)</code> formülü neden hatalı kabul edilir?",
+              prompt: "Bir If sorusunda If tarafında <code>was working</code> varken ana cümlede <code>has achieved</code> verilmişse bu seçenek neden elenir?",
               options: [
-                "While bir süreç (-ing) veya eş zamanlı durum bildirmelidir; tamamlanmışlık bildiren had V3 While ile uyumsuzdur",
-                "While'dan sonra sadece V1 gelmelidir",
-                "While yan cümlesi gelecek zaman olmalıdır",
-                "Ana cümle Present Perfect olmalıdır"
+                "was-were Ving / have-has V3 eşleşmesi If yapısında uyumsuzdur",
+                "If tarafı her zaman simple present olmak zorundadır",
+                "Ana cümle sadece would alabilir",
+                "Tense uyumu aranmadığı için elenir"
               ],
               correctIndex: 0,
-              explanation: "While, eş zamanlı devam eden süreçleri (Past Continuous: was/were Ving) işaret eder. Öncelik-sonralık bildiren Past Perfect (had V3) While ile anlamsal olarak uyuşmaz."
+              explanation: "If şart cümlelerinde was-were Ving ile have-has V3 kombinasyonu yapısal uyumsuzluk tablosuna göre yanlıştır."
             },
             {
               id: "c105_l2_ex2_q8",
               type: "multiple-choice",
-              prompt: "Zaman uyumuna tabi olan bağlaçlar listesinde hangisinin bulunması **hatalıdır**?",
+              prompt: "<code>If he had checked the logs, he will prevent the crash.</code> cümlesinin elenme nedeni nedir?",
               options: [
-                "Because (Neden-Sonuç Bağlacı)",
-                "As soon as (Zaman Bağlacı)",
-                "When (Zaman Bağlacı)",
-                "By the time (Zaman Bağlacı)"
+                "Had V3 / Future (will prevent) uyumsuz eşleşmesidir",
+                "Crash kelimesinin edilgen olması gerekirdi",
+                "If'li cümlenin içine had gelmez",
+                "prevent fiili V2 olmalıdır"
               ],
               correctIndex: 0,
-              explanation: "Zaman bağlaçlarında (when, as soon as, by the time vb.) katı zaman uyumu aranırken, sebep-sonuç bağlaçlarında (because, since-çünkü, as-çünkü) zaman uyumu aranmaz."
+              explanation: "If yan cümlesinde 'had V3' varken ana cümlede Future ('will prevent') bulunması zaman uyumsuzluğu yaratır ve elenir."
             }
           ]
         },
         {
           id: "c105_l2_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Doğru/Yanlış Karışık Havuz",
-          description: "Doğru ve yanlış kuralları ayırt etme düzeyi testi.",
+          title: "Alıştırma 3: Cümle Tamamlamada Uzak Durulması Gerekenler",
+          description: "Cümle tamamlama sorularında yapısal analizle anlama girmeden önce ön eleme yapmanızı sağlayan hatalı eşleşmeler.",
           questions: [
             {
               id: "c105_l2_ex3_q1",
               type: "multiple-choice",
-              prompt: "<code>While + had + V3 ➔ V2</code> formülü için ne söylenebilir?",
+              prompt: "Cümle tamamlamada ilk taraf **had V3** iken ikinci tarafta aşağıdakilerden hangisinin kullanılması **yapısal olarak elenmelidir**?",
               options: [
-                "Hatalıdır, çünkü While genellikle süreç (-ing) bildiren eylemlerle (was/were + Ving) kullanılır.",
-                "Doğrudur, çünkü While past perfect gerektirir.",
-                "Doğrudur, because-since ile aynı anlamdadır.",
-                "Hatalıdır, çünkü While'dan sonra sadece V1 gelir."
+                "had V3, V0/V1, have/has V3, am-is-are (Ving), Future yapılar veya was/were Ving",
+                "Past Simple (V2)",
+                "would have V3 (Şart cümlelerinde)",
+                "would V0 (Mixed Conditionals)"
               ],
               correctIndex: 0,
-              explanation: "While bağlacı süreç/eş zamanlılık bildirdiği için arkasından Past Perfect (had V3) yerine genellikle Past Continuous (was/were Ving) alır."
+              explanation: "İlk taraf had V3 iken ikinci tarafta had V3, V0/V1, have/has V3, am-is-are (Ving), Future yapılar veya was/were Ving gelmesi kesinlikle yanlıştır."
             },
             {
               id: "c105_l2_ex3_q2",
               type: "multiple-choice",
-              prompt: "Aşağıdaki formüllerden hangisi <strong>hatasızdır</strong>?",
+              prompt: "Cümle tamamlamada ilk taraf **have/has V3** ise ikinci tarafta hangi yapının gelmesi durumunda seçenek elenir?",
               options: [
-                "It is high time + Subject + Past Simple (V2)",
-                "It is high time + Subject + Present Simple (V1)",
-                "It is high time + Subject + Future Simple (will V1)",
-                "It is high time + Subject + Present Perfect (have V3)"
+                "was/were V-ing",
+                "Present Simple (V1)",
+                "Future Simple (will + V1)",
+                "am-is-are"
               ],
               correctIndex: 0,
-              explanation: "It is (high) time kalıbında, özne geldiğinde fiil daima Past Simple (V2) şeklinde çekimlenir."
+              explanation: "İlk taraf present perfect (have/has V3) ise ikinci tarafta past progressive (was/were Ving) gelmesi zaman uyumsuzluğu nedeniyle elenir."
             },
             {
               id: "c105_l2_ex3_q3",
               type: "multiple-choice",
-              prompt: "<code>By + Past Time (e.g. By 2015) ➔ will have + V3</code> dizilimindeki hata nedir?",
+              prompt: "Cümle tamamlamada ilk taraf **am-is-are** ise ikinci tarafta hangi modal yapısı elenmelidir?",
               options: [
-                "Geçmiş sınır (2015) belirtildiği için Future Perfect yerine Past Perfect (had + V3) kullanılmalıydı",
-                "By yerine Since yazılmalıydı",
-                "will have V3 yerine have/has V3 yazılmalıydı",
-                "By + Past Time ifadesi sadece Past Simple (V2) alabilir"
+                "would",
+                "will",
+                "can",
+                "may"
               ],
               correctIndex: 0,
-              explanation: "By + Geçmiş zaman ifadesi, geçmişteki bir sınıra kadar tamamlanmış olan eylemleri anlatır ve Past Perfect (had + V3) gerektirir. Future Perfect (will have V3) ise gelecek için geçerlidir."
+              explanation: "İlk taraf present (am-is-are) ise ikinci tarafta past conditional (would V0) yapısı elenir (Genel present-past uyumsuzluğu)."
             },
             {
               id: "c105_l2_ex3_q4",
               type: "multiple-choice",
-              prompt: "<code>As of + Past Time (e.g. As of last week) ➔ will + V1</code> formülündeki hata nedir?",
+              prompt: "Cümle tamamlamada ilk taraf **would** ise ikinci tarafta hangi yapının gelmesi elenme sebebidir?",
               options: [
-                "Geçmiş referansı (last week) nedeniyle gelecek zaman (will) kullanımı yanlıştır",
-                "As of yerine Until yazılmalıdır",
-                "will + V1 yerine have/has + V3 yazılmalıdır",
-                "As of yapısı sadece gelecek zamanla kullanılabilir"
+                "would",
+                "will",
+                "V2",
+                "had V3"
               ],
               correctIndex: 0,
-              explanation: "Geçmiş bir zaman referansıyla (last week) gelecek zaman modalı (will) zaman uyumunu tamamen bozar."
+              explanation: "İlk taraf would ise ikinci tarafta yine 'would' kullanımı elenir (İki tarafta birden would modalı yan yana gelmez)."
             },
             {
               id: "c105_l2_ex3_q5",
               type: "multiple-choice",
-              prompt: "<code>Once + will + V1 ➔ Present Simple (V1)</code> dizilimindeki yapısal hata nedir?",
+              prompt: "<code>Since they have upgraded the database, the speed was increasing...</code> cümlesinin elenme nedeni nedir?",
               options: [
-                "Once bir zaman bağlacı olduğu için yan cümlede gelecek zaman (will) alamaz",
-                "Ana cümlede will V1 olmalıdır",
-                "Once bağlacından sonra sadece past perfect gelir",
-                "Once zıtlık bağlacı olduğu için zaman uyumu gerekmez"
+                "İlk taraf have/has V3 iken ikinci tarafta was/were Ving gelmesidir",
+                "Since kelimesinin cümlenin başında olmasıdır",
+                "Database kelimesinin çoğul olmasıdır",
+                "Ana cümlenin present perfect olması gerekirdi"
               ],
               correctIndex: 0,
-              explanation: "Once (-ince / yapar yapmaz) bir zaman bağlacıdır ve yan cümlesinin içine gelecek zaman yardımcı fiili (will/would) alamaz."
+              explanation: "İlk taraf have/has V3 iken ikinci tarafta was/were Ving elenir kuralına göre bu seçenek elenmelidir."
             },
             {
               id: "c105_l2_ex3_q6",
               type: "multiple-choice",
-              prompt: "<code>Just as + Past Simple (V2) ➔ Past Continuous (was/were + Ving)</code> yapısı neden tercih edilmez?",
+              prompt: "<code>As the parameters are set correctly, the system would verify...</code> cümlesinin elenme nedeni nedir?",
               options: [
-                "Çünkü Just as'in hemen yanındaki cümle (yan cümle) süreç bildiren Past Continuous almalıdır",
-                "Çünkü Just as'den sonra sadece Present Simple gelir",
-                "Çünkü iki taraf da Past Simple olmalıdır",
-                "Just as bağlacı zaman uyumuna tabi değildir"
+                "İlk taraf am-is-are iken ikinci tarafta would gelmesidir",
+                "As bağlacının zaman uyumu istemesidir",
+                "Sistem kelimesinin tekil olmasıdır",
+                "verifying kelimesinin V-ing almamasıdır"
               ],
               correctIndex: 0,
-              explanation: "Just as (-iken / tam o anda) devam eden bir süreci vurgulamak için yan cümlesinde Past Continuous (was/were + Ving) tercih eder. Eş zamanlı olarak gerçekleşen ani eylem ise ana cümlede (V2) olur."
+              explanation: "İlk taraf am-is-are ise ikinci tarafta would elenir kuralına göre bu eşleşme hatalıdır."
             },
             {
               id: "c105_l2_ex3_q7",
               type: "multiple-choice",
-              prompt: "İki cümle <code>and</code> bağlacıyla bağlanmış ve ortak bir özneye sahipse, fiillerin tenseleriyle ilgili **altın kural** nedir?",
+              prompt: "<code>If I had known the answer, I will have told you.</code> cümlesinin elenme nedeni nedir?",
               options: [
-                "Fiillerin zamanları (tenseleri) birbirine paralel/ortak olmak zorundadır",
-                "İlk fiil past ise ikincisi kesinlikle future olmalıdır",
-                "Zaman uyumu aranmaz",
-                "İlk fiil aktif, ikincisi edilgen olmalıdır"
+                "İlk taraf had V3 iken ikinci tarafta Future/will yapısı gelmesidir",
+                "If tarafında had known yerine knew gelmesidir",
+                "told fiilinin V1 olmamasıdır",
+                "know fiilinin present perfect almasıdır"
               ],
               correctIndex: 0,
-              explanation: "Ortak özneli ardışık cümleler 'and' ile bağlandığında, eylemler aynı zaman çizgisi üzerinde paralel olmalıdır (Tense Paralelliği)."
+              explanation: "İlk taraf had V3 iken ikinci tarafta Future (will) yapısı gelmez kuralına göre elenmesi gerekir."
             },
             {
               id: "c105_l2_ex3_q8",
               type: "multiple-choice",
-              prompt: "Sıfat cümlelerinde (<code>Relative Clauses</code>) zaman uyumuyla ilgili hangi kural geçerlidir?",
+              prompt: "Cümle tamamlamada <code>would buy / would move</code> seçeneğinin doğrudan elenme nedeni nedir?",
               options: [
-                "Ana cümle ile sıfat cümleciği arasında zaman uyumu zorunluluğu yoktur",
-                "İki tarafın da kesinlikle aynı tense olması gerekir",
-                "Sıfat cümleciğinin içinde asla past tense kullanılamaz",
-                "Sıfat cümleciği sadece gelecek zaman olabilir"
+                "İlk taraf would ise ikinci tarafta yine Would kullanımı elenir kuralıdır",
+                "Şart cümlelerinde buy fiilinin V3 olmamasıdır",
+                "İki tarafın da present olması zorunluluğudur",
+                "would modalının yanına fiilin yalın gelmemesidir"
               ],
               correctIndex: 0,
-              explanation: "Relative Clause (Sıfat Cümlecikleri) niteledikleri isme göre bağımsız zaman dilimlerini ifade edebileceğinden, ana cümleyle aralarında zaman uyumu zorunluluğu yoktur."
+              explanation: "İlk taraf would ise ikinci tarafta da would kullanılması yapısal bir hatadır ve doğrudan elenir."
             }
           ]
         }
