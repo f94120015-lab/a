@@ -2788,15 +2788,15 @@ const chapter105Data = {
       konuAnlatimi: {
         baslik: "Zaman Uyumu Denklem Çözücü",
         teorikMantik: "Formül yapılarını birer matematiksel denklem gibi düşünerek, boş bırakılan tarafı zaman zarfları ve bağlaçların uyum kurallarına göre çözme çalışmasıdır.",
-        formul: "Zaman Bağlaçları: [When / After / Before + Past (V2)] ➔ Ana Cümle: Past (Past-Past Uyum) | Zıtlık/Neden-Sonuç: Zaman uyumu aranmaz.",
-        altinKural: "cümlede 'originally, formerly, previously, in the past, ancient, initially' varsa o kısım Past (V2) olur."
+        formul: "Ortak Özne: [S + V_A + and + V_B] ➔ A & B paralel / Yan Cümlede Will/Would Yasası / Recently-Lately ➔ Present Perfect / İki Perfect Yan Yana Gelmez",
+        altinKural: "Zaman bağlaçlarının iki tarafında da aynı anda iki tane Perfect (have V3 / had V3) kesinlikle kullanılamaz."
       },
       exercises: [
         {
           id: "c105_l3_ex1",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 1: Zaman Bağlaçlarında Uyum Denklemleri",
-          description: "Zaman bağlaçları (when, after, before, as soon as, during, by the time) altındaki mutlak zaman uyumunu test eden formül dizilimleri.",
+          title: "Alıştırma 1: Zaman Bağlaçlarında Uyum & Will/Would Yasası",
+          description: "Zaman bağlaçları altındaki mutlak zaman uyumunu ve yan cümlede will/would/be going to kullanılmama kurallarını test eden formül dizilimleri.",
           questions: [
             {
               id: "c105_l3_ex1_q1",
@@ -2827,6 +2827,19 @@ const chapter105Data = {
             {
               id: "c105_l3_ex1_q3",
               type: "multiple-choice",
+              prompt: "<code>[Before + Subject + will / would / be going to + V1] ➔ [Subject + V_?]</code> denklemiyle ilgili hangisi doğrudur?",
+              options: [
+                "Zaman bağlacının doğrudan bağlı olduğu yan cümlede will, would veya be going to kesinlikle kullanılamaz (Hatalı Yapı).",
+                "Gelecek zamanı vurgulamak amacıyla before yan cümlesine will gelmesi doğrudur.",
+                "Şart cümleleriyle karıştırılmaması için before yan cümlesine would gelmesi zorunludur.",
+                "Sadece be going to yapısının before yan cümlesinde kullanılması serbesttir."
+              ],
+              correctIndex: 0,
+              explanation: "Zaman Bağlacında Will/Would Yasası: Zaman bağlacının doğrudan bağlı olduğu tarafta (yan cümlede) will, would, be going to kesinlikle kullanılamaz."
+            },
+            {
+              id: "c105_l3_ex1_q4",
+              type: "multiple-choice",
               prompt: "<code>[As soon as + Subject + V_? (originally / in the past)] ➔ [Subject + V_? (previously)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
                 "[V2] ➔ [V2]",
@@ -2838,30 +2851,17 @@ const chapter105Data = {
               explanation: "As soon as bağlacı geçmiş eylemlerde mutlak past-past uyumu ister (in the past/previously referansıyla V2 ➔ V2)."
             },
             {
-              id: "c105_l3_ex1_q4",
-              type: "multiple-choice",
-              prompt: "<code>[Before + Subject + V_? (5 years ago)] ➔ [Subject + V_? (10 years ago)]</code> denkleminde boşluklar ne olmalıdır?",
-              options: [
-                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
-                "[V1 (Present Simple)] ➔ [will have + V3 (Future Perfect)]",
-                "[had + V3 (Past Perfect)] ➔ [V2 (Past Simple)]",
-                "[V1 (Present Simple)] ➔ [have/has + V3 (Present Perfect)]"
-              ],
-              correctIndex: 0,
-              explanation: "Before + V2 (5 years ago) geçmişteki sınır eylemi (daha yeni olan) işaret ederken, ondan da önce tamamlanmış olan eylem (10 years ago) ana cümlede Past Perfect (had V3) olur."
-            },
-            {
               id: "c105_l3_ex1_q5",
               type: "multiple-choice",
-              prompt: "<code>[After + Subject + V_? (initially / past)] ➔ [Subject + V_? (later in the past)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[After + Subject + will + V1 (tomorrow)] ➔ [Subject + V_? (tomorrow)]</code> denklemi için hangisi elenmelidir?",
               options: [
-                "[had + V3 (Past Perfect)] ➔ [V2 (Past Simple)]",
-                "[V2 (Past Simple)] ➔ [had + V3 (Past Perfect)]",
-                "[V1 (Present Simple)] ➔ [will + V1 (Future Simple)]",
-                "[have/has + V3 (Present Perfect)] ➔ [was/were + V-ing]"
+                "Hatalı Yapı: After bir zaman bağlacıdır ve yan cümlesinde (will + V1) gelemez.",
+                "Doğru Yapı: Yan cümle de ana cümle de (will + V1) alabilir.",
+                "Doğru Yapı: Yan cümle will alırken, ana cümle present simple (V1) almalıdır.",
+                "Doğru Yapı: Yan cümle would almalı, ana cümle will almalıdır."
               ],
               correctIndex: 0,
-              explanation: "After geçmişteki iki eylemden önce olanını (initially ➔ had V3) alırken, sonrakini (later ➔ V2) ana cümleye yerleştirir."
+              explanation: "Yan Cümlede Will/Would Yasası gereğince, zaman bağlacı olan after'ın hemen arkasından gelen yan cümleye will/would gelmesi kesinlikle yanlıştır ve doğrudan elenir."
             },
             {
               id: "c105_l3_ex1_q6",
@@ -2879,15 +2879,15 @@ const chapter105Data = {
             {
               id: "c105_l3_ex1_q7",
               type: "multiple-choice",
-              prompt: "<code>[When + Subject + V_? (today / always)] ➔ [Subject + V_? (today / always)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[When + Subject + would + V1 (past preferences)] ➔ [Subject + V_?]</code> denklemi için hangisi söylenebilir?",
               options: [
-                "[V1] ➔ [V1]",
-                "[V2] ➔ [V1]",
-                "[V1] ➔ [will have + V3]",
-                "[V2] ➔ [would + V1]"
+                "Hatalı Yapı: When zaman bağlacının bağlı olduğu yan cümlede would kullanılması kesinlikle yanlıştır.",
+                "Doğru Yapı: Geçmişteki alışkanlıkları belirtmek için when'li kısma would gelmelidir.",
+                "Doğru Yapı: When yan cümlesinde will ve would kullanımı serbesttir.",
+                "Doğru Yapı: Sadece mixed conditional yapılarında would gelebilir."
               ],
               correctIndex: 0,
-              explanation: "Genel veya her zaman tekrarlanan durumlar (always/today) present-present uyumu gerektirir (V1 ➔ V1)."
+              explanation: "Zaman bağlaçlarının (when vb.) doğrudan bağlı olduğu yan cümlede will/would/be going to kullanılması kesinlikle yasaktır."
             },
             {
               id: "c105_l3_ex1_q8",
@@ -2907,8 +2907,8 @@ const chapter105Data = {
         {
           id: "c105_l3_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: Geçmişi Simgeleyen Kelimeler",
-          description: "originally, ancient, old, formerly, initially, earlier, previously, in the past gibi kelimelerin Past (V2) tetikleme kuralları.",
+          title: "Alıştırma 2: Geçmişi Simgeleyen Kelimeler & Recently / Lately",
+          description: "originally, ancient, old vb. past belirteçleri ile son zamanlarda anlamına gelen recently/lately perfect tense kuralları.",
           questions: [
             {
               id: "c105_l3_ex2_q1",
@@ -2939,15 +2939,15 @@ const chapter105Data = {
             {
               id: "c105_l3_ex2_q3",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (previously)]</code> denkleminde fiil yapısı ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (recently / lately)]</code> denkleminde fiil yapısı ne olmalıdır?",
               options: [
-                "V2 (Past Simple) veya had + V3",
+                "have/has + V3 (Present Perfect)",
+                "V2 (Past Simple)",
                 "V1 (Present Simple)",
-                "will + V1 (Future Simple)",
-                "have/has + V3 (Present Perfect)"
+                "will + V1 (Future Simple)"
               ],
               correctIndex: 0,
-              explanation: "previously (önceden) geçmişi simgelediğinden fiil V2 veya had V3 olmalıdır."
+              explanation: "'Son zamanlarda' anlamına gelen recently ve lately kelimeleri doğrudan Present Perfect Tense (have/has V3) ile kombine edilir."
             },
             {
               id: "c105_l3_ex2_q4",
@@ -2978,28 +2978,28 @@ const chapter105Data = {
             {
               id: "c105_l3_ex2_q6",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (initially)] ➔ but [Subject + V_? (now)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject + V_? (lately)] ➔ but in those days [Subject + V_?]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "[V2 (Past Simple)] ➔ [V1 (Present Simple)]",
+                "[have/has + V3 (Present Perfect)] ➔ but in those days [V2 (Past Simple)]",
+                "[V1 (Present Simple)] ➔ but in those days [will + V1]",
+                "[V2 (Past Simple)] ➔ but in those days [have/has + V3]",
+                "[had + V3 (Past Perfect)] ➔ but in those days [V1 (Present Simple)]"
+              ],
+              correctIndex: 0,
+              explanation: "lately kelimesi Present Perfect gerektirirken, in those days (o günlerde) ifadesi geçmişi (V2) temsil eder."
+            },
+            {
+              id: "c105_l3_ex2_q7",
+              type: "multiple-choice",
+              prompt: "<code>[Subject + V_? (initially)] ➔ but [Subject + V_? (recently)]</code> denkleminde boşluklar ne olmalıdır?",
+              options: [
+                "[V2 (Past Simple)] ➔ [have/has + V3 (Present Perfect)]",
                 "[V1 (Present Simple)] ➔ [V2 (Past Simple)]",
                 "[will + V1] ➔ [would + V1]",
                 "[have/has + V3] ➔ [had + V3]"
               ],
               correctIndex: 0,
-              explanation: "initially (başlangıçta ➔ V2), now (şimdi ➔ V1) zaman çizgisi geçişini gösterir."
-            },
-            {
-              id: "c105_l3_ex2_q7",
-              type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (old / earlier years)]</code> denkleminde fiilin yapısı ne olmalıdır?",
-              options: [
-                "V2 (Past Simple)",
-                "V1 (Present Simple)",
-                "will + V1",
-                "have/has + V3"
-              ],
-              correctIndex: 0,
-              explanation: "old / earlier years geçmişi simgelediği için V2 tercih edilmelidir."
+              explanation: "initially (başlangıçta ➔ V2), recently (son zamanlarda ➔ have/has V3) zaman çizgisi geçişini ve kurallarını birleştirir."
             },
             {
               id: "c105_l3_ex2_q8",
@@ -3019,8 +3019,8 @@ const chapter105Data = {
         {
           id: "c105_l3_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Zaman Uyumu Aranmayan Yapılar",
-          description: "Because, although, however, and bağlaçları ile Relative Clause yapılarında zaman uyumu zorunluluğunun olmaması.",
+          title: "Alıştırma 3: Ortak Özne, İki Perfect Yasası & Zaman Uyumu Aranmayan Yapılar",
+          description: "Ortak öznede tenselerin paralelliği, zaman bağlacı iki tarafında iki perfect gelememe yasası ve uyumsuz bağlaçların analizi.",
           questions: [
             {
               id: "c105_l3_ex3_q1",
@@ -3046,20 +3046,20 @@ const chapter105Data = {
                 "[would + V1] + although + [V2 (Past Simple)]"
               ],
               correctIndex: 0,
-              explanation: "although zıtlık bağlacı olduğundan zaman uyumu zorunlu değildir (originally ➔ V2, now ➔ V1)."
+              explanation: "although zıtlık bağlacından dolayı zaman uyumu aranmaz (originally ➔ V2, now ➔ V1)."
             },
             {
               id: "c105_l3_ex3_q3",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (today)] + [however] + [Subject + V_? (previously)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Before + Subject + have / has + V3] ➔ [Subject + have / has + V3 / had + V3]</code> denklemi için hangisi doğrudur?",
               options: [
-                "[V1 / am-is-are] + however + [V2 (Past Simple)]",
-                "[V2 (Past Simple)] + however + [V1 (Present Simple)]",
-                "[will + V1] + however + [would + V1]",
-                "[had + V3 (Past Perfect)] + however + [am-is-are]"
+                "Hatalı Yapı: Zaman bağlaçlarının iki tarafında da aynı anda iki adet Perfect Tense (have V3 / had V3) kullanılamaz.",
+                "Doğru Yapı: Zaman uyumu sağlandığı sürece iki taraf da perfect olabilir.",
+                "Doğru Yapı: Before ile sadece had V3 ve have V3 yan yana kullanılabilir.",
+                "Doğru Yapı: Eylemlerin bitiş sırasını göstermek için bu yapı kurulmalıdır."
               ],
               correctIndex: 0,
-              explanation: "however ile bağlanan cümlelerde zaman uyumu aranmaz (today ➔ V1, previously ➔ V2)."
+              explanation: "İki Perfect Yan Yana Gelmez Yasası: Zaman bağlaçlarının iki tarafında da aynı anda iki tane Perfect Tense (have V3 / had V3) kullanılması kesinlikle yanlıştır."
             },
             {
               id: "c105_l3_ex3_q4",
@@ -3072,46 +3072,46 @@ const chapter105Data = {
                 "[had + V3 (Past Perfect)] + and + [would + V1]"
               ],
               correctIndex: 0,
-              explanation: "and bağlacı farklı zaman dilimlerini (5 years ago ve today) bağlıyorsa zaman uyumu aranmaz."
+              explanation: "and bağlacı farklı zaman dilimlerini (5 years ago ve today) bağlıyorsa ve özneler farklıysa zaman uyumu aranmaz."
             },
             {
               id: "c105_l3_ex3_q5",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (today)] + [who / which / that (Relative Clause)] + [Subject + V_? (in the past)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject_A + V_? (yesterday)] + [and (Ortak Özne: Subject_A)] + [V_? (yesterday)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "[V1 (Present Simple) / am-is-are] + [Relative Clause] + [V2 (Past Simple)]",
-                "[V2 (Past Simple)] + [Relative Clause] + [will + V1]",
-                "[had + V3 (Past Perfect)] + [Relative Clause] + [am-is-are]",
-                "[V1 (Present Simple)] + [Relative Clause] + [will have + V3]"
+                "[V2 (Past Simple)] + and + [V2 (Past Simple)] (Ortak öznede tenseler paralel olmak zorundadır)",
+                "[V2 (Past Simple)] + and + [V1 (Present Simple)]",
+                "[had + V3 (Past Perfect)] + and + [will + V1]",
+                "[V2 (Past Simple)] + and + [have/has + V3]"
               ],
               correctIndex: 0,
-              explanation: "Relative Clause (sıfat cümlecikleri) niteledikleri isme bağlı olarak bağımsız zaman alabilir, zaman uyumu aranmaz."
+              explanation: "Ortak Öznede Zaman Uyumu Yasası: İki cümlenin arasında and bağlacı varsa ve bu cümlelerin özneleri ortaksa, fiillerin tenseleri her zaman paralel olmak zorundadır."
             },
             {
               id: "c105_l3_ex3_q6",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (in the past)] + [although] + [Subject + V_? (now / today)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[After + Subject + had + V3] ➔ [Subject + had + V3]</code> denklemi için hangisi elenmelidir?",
               options: [
-                "[V2 (Past Simple)] + although + [V1 (Present Simple)]",
-                "[V2 (Past Simple)] + although + [had + V3 (Past Perfect)]",
-                "[V1 (Present Simple)] + although + [would + V1]",
-                "[had + V3 (Past Perfect)] + although + [will + V1]"
+                "Hatalı Yapı: Zaman bağlacının iki tarafında da aynı anda iki tane Perfect Tense (had V3 / had V3) gelemez.",
+                "Doğru Yapı: Geçmişteki iki olay da çok eski olduğu için doğrudur.",
+                "Doğru Yapı: Sadece after bağlacıyla iki tarafın da perfect olması kuraldır.",
+                "Doğru Yapı: Hikayeleştirme (narrative) yapıldığında serbesttir."
               ],
               correctIndex: 0,
-              explanation: "Zıtlık bağlaçlarında (although vb.) zaman uyumu zorunluluğu yoktur."
+              explanation: "İki Perfect Yan Yana Gelmez Yasası: Zaman bağlaçlarının iki tarafında da aynı anda iki tane Perfect Tense kullanılamaz, bu nedenle bu yapı doğrudan elenir."
             },
             {
               id: "c105_l3_ex3_q7",
               type: "multiple-choice",
-              prompt: "<code>[Subject + V_? (originally)] + [because] + [Subject + V_? (always / generic)]</code> denkleminde boşluklar ne olmalıdır?",
+              prompt: "<code>[Subject_A + V_? (recently)] + [and (Ortak Özne: Subject_A)] + [V_? (recently)]</code> denkleminde boşluklar ne olmalıdır?",
               options: [
-                "[V2 (Past Simple)] + because + [V1 (Present Simple)]",
-                "[V2 (Past Simple)] + because + [had + V3 (Past Perfect)]",
-                "[V1 (Present Simple)] + because + [will have + V3]",
-                "[had + V3 (Past Perfect)] + because + [would + V1]"
+                "[have/has + V3] + and + [have/has + V3] (Ortak öznede paralel zaman)",
+                "[have/has + V3] + and + [V2 (Past Simple)]",
+                "[have/has + V3] + and + [V1 (Present Simple)]",
+                "[V1 (Present Simple)] + and + [have/has + V3]"
               ],
               correctIndex: 0,
-              explanation: "because bağlacında zaman uyumu aranmadığından geçmiş referansı (originally ➔ V2) ile genel referans (generic ➔ V1) yan yana gelebilir."
+              explanation: "Ortak Öznede Zaman Uyumu ve Recently kuralının birleşimi: and bağlacı ortak özneyi (Subject_A) bağladığından ve recently kelimesinden ötürü her iki fiil de paralel olarak Present Perfect (have/has V3) olmalıdır."
             },
             {
               id: "c105_l3_ex3_q8",
