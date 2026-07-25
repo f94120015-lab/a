@@ -280,12 +280,39 @@ const isUserWhitelisted = (phone, email) => {
   return false;
 };
 
+function formatGrammarFormula(formulaHtml) {
+  // Wrap tags / blocks inside formula-bracket class
+  let formatted = formulaHtml.replace(/\[([^\]]+)\]/g, '<span class="formula-bracket">[$1]</span>');
+  // Wrap + operator (excluding plus inside tags if any)
+  formatted = formatted.replace(/\+/g, '<span class="formula-operator">+</span>');
+  // Wrap arrow operator
+  formatted = formatted.replace(/➔/g, '<span class="formula-arrow">➔</span>');
+  // Wrap question marks
+  formatted = formatted.replace(/\?/g, '<span class="formula-variable">?</span>');
+  return formatted;
+}
+
 function formatPromptWithTags(promptText) {
   if (!promptText) return "";
+  
+  // Find all code block ranges to ignore tags inside them
+  const codeRanges = [];
+  const codeRegex = /<code>([\s\S]*?)<\/code>/gi;
+  let codeMatch;
+  while ((codeMatch = codeRegex.exec(promptText)) !== null) {
+    codeRanges.push([codeMatch.index, codeMatch.index + codeMatch[0].length]);
+  }
+  
   const regex = /\[([^\]]+)\]/g;
   
-  // Filter out matches that are actually grammar formulas (containing +, ➔, ?, V_, V1/2/3, or Subject)
+  // Filter out matches that are actually grammar formulas (containing +, ➔, ?, V_, V1/2/3, or Subject) or inside <code> blocks
   const matches = [...promptText.matchAll(regex)].filter(match => {
+    const startIdx = match.index;
+    const isInsideCode = codeRanges.some(range => startIdx >= range[0] && startIdx <= range[1]);
+    if (isInsideCode) {
+      return false;
+    }
+    
     const text = match[1];
     if (text.includes('+') || text.includes('➔') || text.includes('?') || /\bV\d\b/.test(text) || text.includes('V_') || text.toLowerCase().includes('subject')) {
       return false;
@@ -293,13 +320,17 @@ function formatPromptWithTags(promptText) {
     return true;
   });
   
-  if (matches.length === 0) return promptText;
+  // Replace <code> formula text inside cleanPrompt with beautifully formatted HTML
+  let cleanPrompt = promptText.replace(/<code>([\s\S]*?)<\/code>/gi, (match, p1) => {
+    return `<code>${formatGrammarFormula(p1)}</code>`;
+  });
+  
+  if (matches.length === 0) return cleanPrompt;
   
   const badgesHtml = matches.map(match => {
     return `<span class="prompt-tag-badge" style="display: inline-block; background: linear-gradient(135deg, var(--accent-primary, #6366f1) 0%, var(--accent-primary-hover, #4f46e5) 100%); color: #ffffff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin: 2px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 2px 6px rgba(99, 102, 241, 0.2); vertical-align: middle;">🏷️ ${match[1]}</span>`;
   }).join('');
   
-  let cleanPrompt = promptText;
   matches.forEach(match => {
     cleanPrompt = cleanPrompt.replace(match[0], '');
   });
