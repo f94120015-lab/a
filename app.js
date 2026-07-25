@@ -283,14 +283,28 @@ const isUserWhitelisted = (phone, email) => {
 function formatPromptWithTags(promptText) {
   if (!promptText) return "";
   const regex = /\[([^\]]+)\]/g;
-  const matches = [...promptText.matchAll(regex)];
+  
+  // Filter out matches that are actually grammar formulas (containing +, ➔, ?, V_, V1/2/3, or Subject)
+  const matches = [...promptText.matchAll(regex)].filter(match => {
+    const text = match[1];
+    if (text.includes('+') || text.includes('➔') || text.includes('?') || /\bV\d\b/.test(text) || text.includes('V_') || text.toLowerCase().includes('subject')) {
+      return false;
+    }
+    return true;
+  });
+  
   if (matches.length === 0) return promptText;
   
   const badgesHtml = matches.map(match => {
     return `<span class="prompt-tag-badge" style="display: inline-block; background: linear-gradient(135deg, var(--accent-primary, #6366f1) 0%, var(--accent-primary-hover, #4f46e5) 100%); color: #ffffff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin: 2px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 2px 6px rgba(99, 102, 241, 0.2); vertical-align: middle;">🏷️ ${match[1]}</span>`;
   }).join('');
   
-  const cleanPrompt = promptText.replace(regex, '').trim();
+  let cleanPrompt = promptText;
+  matches.forEach(match => {
+    cleanPrompt = cleanPrompt.replace(match[0], '');
+  });
+  cleanPrompt = cleanPrompt.trim();
+  
   return `<div class="prompt-tags-wrapper" style="margin-bottom: 12px; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; width: 100%;">${badgesHtml}</div><div class="prompt-clean-text" style="font-weight: 700;">${cleanPrompt}</div>`;
 }
 
