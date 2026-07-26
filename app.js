@@ -6340,7 +6340,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         }
       }
       
-      const statusText = isExCompleted ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
+      const statusText = (isExCompleted && !isLocalEnvironment()) ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
       const rowClass = isExUnlocked ? '' : 'locked';
       const badgeClass = isExCompleted ? 'completed' : '';
       

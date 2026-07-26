@@ -116,6 +116,86 @@ window.ACADEMIC_RULES = {
     id: 23,
     title: "Ön Eleme Prensibi",
     text: "Cümle tamamlama ve tense sorularında yapısal eleme kuralları, anlama girmeden önce zaman kazanmak için öncelikle uygulanmalıdır."
+  },
+  rule_24: {
+    id: 24,
+    title: "So that / In order that Modalları",
+    text: "—sın diye, amacıyla anlamına gelen so that ve in order that yapılarından sonra gelen tam cümlede, çok yüksek ihtimalle can, could, may, might, will, would modal yapılarından biri yer alır."
+  },
+  rule_25: {
+    id: 25,
+    title: "Past Perfect'in Eşi",
+    text: "Soru kökünün bir tarafında Past Perfect Tense (had V3) varsa, diğer tarafta mutlaka öncelikle Simple Past Tense (V2) aranmalıdır."
+  },
+  rule_26: {
+    id: 26,
+    title: "Koşul Cümlelerinde Çift Perfect Yasası",
+    text: "Koşul cümlelerinde (If clauses) iki tane perfect tense (had V3 / have-has V3) art arda gelerek cümleleri oluşturamaz."
+  },
+  rule_27: {
+    id: 27,
+    title: "After/Before ve Çift -ing Yasası",
+    text: "After ve Before bağlaçlarının kullanıldığı cümlelerin iki bölümünde birden aynı anda Vingli yapı tercih edilmez."
+  },
+  rule_28: {
+    id: 28,
+    title: "Before long vs Long before",
+    text: "Before long 'yakında' anlamına gelir ve Future yapılara gider; Long before ise 'çok önce' anlamına gelir ve Past yapılara gider."
+  },
+  rule_29: {
+    id: 29,
+    title: "Tahmin/Endişe + Future",
+    text: "Cümlenin girişinde present yapıda bir tahmin veya endişe fiili (I expect, I fear, We hope, They predict, I am afraid) varsa, devamındaki cümle yüksek ihtimalle Future Tense (will) ile kurulur."
+  },
+  rule_30: {
+    id: 30,
+    title: "Geçmişi Simgeleyen Kelimeler",
+    text: "Cümlede old, ancient, formerly, originally, initially, earlier, previously, in the past gibi kelimeler geçiyorsa o cümle Past (V2) olur."
+  },
+  rule_31: {
+    id: 31,
+    title: "So far",
+    text: "'Şimdiye kadar' anlamına gelir ve yanına doğrudan Present Perfect Tense (has/have V3) alır."
+  },
+  rule_32: {
+    id: 32,
+    title: "Until Recently",
+    text: "'Eskiden / son zamanlara kadar' anlamına gelir ve yanına daima Simple Past Tense (V2) alır; standart until yapısıyla karıştırılmamalıdır."
+  },
+  rule_33: {
+    id: 33,
+    title: "Have/has V3 vs Have/has been Ving",
+    text: "Eylem bitmiştir, sonuç kalmıştır veya tekrar vardır (have/has V3) vs Eylem kesintisiz devam etmektedir (have/has been Ving)."
+  },
+  rule_34: {
+    id: 34,
+    title: "Miktar/Sayısal Değer ve Continuous",
+    text: "Bir eylemde rakamsal değer/miktar varsa continuous kullanılmaz (I have smoked ten cigarettes doğrudur, I have been smoking ten... yanlıştır)."
+  },
+  rule_35: {
+    id: 35,
+    title: "Zaman Uyumu İstisnası (Still)",
+    text: "Tense sorularında ayrı bir zaman belirtilmemişse genel zaman uyumu aranır. Ancak ana cümledeki still (hâlâ) vurgusu, yan taraftaki past etkiyi present bir duruma bağlayabilir."
+  },
+  rule_36: {
+    id: 36,
+    title: "Zaman Göstergesi Yoksa",
+    text: "Soru kökünde hiçbir zaman göstergesi/ipucu yoksa, genel kural olarak öncelikle Present yapılara yönelinmelidir."
+  },
+  rule_37: {
+    id: 37,
+    title: "For / Since İpuçları",
+    text: "Ardından bir tarih, zaman veya cümle alıyorsa bizi doğrudan Present Perfect / Present Perfect Continuous yapılarına götürür."
+  },
+  rule_38: {
+    id: 38,
+    title: "Güncel Zaman Zarfları",
+    text: "Currently, presently, at present, now kelimeleri doğrudan Simple Present veya Present Continuous Tense kullanımına işaret eder."
+  },
+  rule_39: {
+    id: 39,
+    title: "Zaman Bağlaçlarında Uyum",
+    text: "When, after, before, as soon as, during, by the time bağlaçlarında yan cümle ile ana cümle arasında mutlak bir zaman uyumu (Present-Present veya Past-Past) aranmalıdır."
   }
 };
 
@@ -882,73 +962,671 @@ window.ACADEMIC_RULES = {
   // ============================================================
   // RUNTIME INJECTION LOGIC INTO UNIT 105 (BÖLÜM 36) EXERCISES
   // ============================================================
-  if (typeof unitSentencesMap !== 'undefined') {
-    if (!unitSentencesMap["105"]) {
-      unitSentencesMap["105"] = {
-        "c105_l1": { exercises: [] },
-        "c105_l2": { exercises: [] },
-        "c105_l3": { exercises: [] }
-      };
+  // --- RULE 24: So that / In order that Modalları ---
+  addQ(24, "fill-blank-dropdown", "Boşluğa gelecek en uygun modal yapısını seçin:",
+    "The researchers isolated the virus so that they ___ analyze its genetic sequence safely.",
+    ["could", "had", "will have", "should have"], 0,
+    "Araştırmacılar virüsü izole etti ki böylece onun genetik dizilimini güvenle analiz edebilsinler.",
+    "Amaç bildiren 'so that' yapısından sonra modal (could) kullanımı kurala uygundur.");
+  addQ(24, "fill-blank", "Boşluğu doldurunuz (so that modal kuralı):",
+    "We encrypted the backup files in order that unauthorized users ___ not access them.",
+    ["might", "have", "had", "did"], 0,
+    "Yedek dosyaları şifreledik ki yetkisiz kullanıcılar onlara erişemesinler.",
+    "Past bağlamda 'in order that' yapısından sonra modal olarak 'might' tercih edilir.");
+  addQ(24, "multiple-choice", "Doğru zaman/modal uyumunu gösteren cümleyi bulun:",
+    "The compiler optimizes the code so that the application can run faster.",
+    [
+      "The compiler optimizes the code so that the application can run faster.",
+      "The compiler optimizes the code so that the application had run faster.",
+      "The compiler optimizes the code so that the application will have run faster.",
+      "The compiler optimizes the code so that the application ran faster."
+    ], 0,
+    "Derleyici kodu optimize ediyor ki böylece uygulama daha hızlı çalışabilsin.",
+    "Present bağlamda 'so that' sonrası 'can + V0' kullanımı doğrudur.");
+  addDoubleMagnet(24, "Kelimeleri doğru boşluklara sürükleyin:",
+    "The team updated the firewall so that they _______ block incoming attacks, whereas previously they _______ only log them.",
+    ["could", "were able to", "can", "logs", "had", "would"], [0, 1],
+    "Ekip güvenlik duvarını güncelledi ki böylece gelen saldırıları engelleyebilsinler, oysa daha önce sadece günlük kaydedebiliyorlardı.",
+    "Geçmiş amaç ifadesi 'could' ile devam ederken, geçmiş durum 'were able to' ile nitelenir.");
+  addQ(24, "fill-blank-dropdown", "Boşluğa gelecek en uygun kelimeyi seçin:",
+    "We adjust the parameters in order that the system ___ perform under load.",
+    ["can", "has", "had performed", "is performing"], 0,
+    "Parametreleri ayarlıyoruz ki böylece sistem yük altında performans gösterebilsin.",
+    "Amaç cümlelerinde present modal olan 'can' kullanımı tercih edilir.");
+
+  // --- RULE 25: Past Perfect'in Eşi ---
+  addQ(25, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin (Past Perfect'in Eşi):",
+    "By the time the search party located the plane, it ___ in the forest for days.",
+    ["had sat", "sits", "will sit", "has sat"], 0,
+    "Arama kurtarma ekibi uçağın yerini bulduğunda, uçak günlerdir ormanda kalmıştı.",
+    "By the time + V2 (located) yapısına bağlı olarak ana cümle Past Perfect (had sat) alır.");
+  addQ(25, "fill-blank", "Boşluğu doldurunuz (Past Perfect'in Eşi):",
+    "The server crashed because hackers ___ the authentication nodes earlier.",
+    ["had breached", "breached", "have breached", "breach"], 0,
+    "Sunucu çöktü çünkü korsanlar daha önce kimlik doğrulama düğümlerini ihlal etmişti.",
+    "Geçmişteki çökmekten (crashed - V2) daha önce gerçekleşen olay Past Perfect (had breached) ile verilir.");
+  addQ(25, "multiple-choice", "Doğru zaman ilişkisini kuran cümleyi seçin:",
+    "After the database administrator had restored the files, the developers checked the system.",
+    [
+      "After the database administrator had restored the files, the developers checked the system.",
+      "After the database administrator restored the files, the developers have checked the system.",
+      "After the database administrator has restored the files, the developers check the system.",
+      "After the database administrator had restored the files, the developers will check the system."
+    ], 0,
+    "Veritabanı yöneticisi dosyaları geri yükledikten sonra geliştiriciler sistemi kontrol etti.",
+    "Past Perfect (had restored) eyleminin eşi olarak diğer cümlede Simple Past (checked - V2) aranır.");
+  addDoubleMagnet(25, "Tense eşleşmesine göre kelimeleri doğru yerleştirin:",
+    "The report _______ that the temperature _______ dangerous limits before the sensor failed.",
+    ["stated", "had exceeded", "states", "exceeds", "will state", "is exceeding"], [0, 1],
+    "Rapor, sensör arızalanmadan önce sıcaklığın tehlikeli sınırları aştığını belirtti.",
+    "Geçmiş zaman çerçevesinde V2 (stated) ve öncesini bildirmek için had V3 (had exceeded) uyumludur.");
+  addQ(25, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "Before the security patch was installed, the malware ___ some files.",
+    ["had corrupted", "corrupts", "has corrupted", "will corrupt"], 0,
+    "Güvenlik yaması yüklenmeden önce, kötü amaçlı yazılım bazı dosyaları bozmuştu.",
+    "Geçmişte yüklenmekten (was installed) önce gerçekleşen eylem had V3 (had corrupted) gerektirir.");
+
+  // --- RULE 26: Koşul Cümlelerinde Çift Perfect Yasası ---
+  addQ(26, "fill-blank-dropdown", "Çift perfect yasağını gözeterek boşluğu doldurun:",
+    "If the compiler had found the error, it ___ compiling.",
+    ["would have stopped", "had stopped", "has stopped", "stops"], 0,
+    "Derleyici hatayı bulmuş olsaydı derlemeyi durdurmuş olurdu.",
+    "If yan cümlesi had V3 ise ana cümlede ikinci bir perfect (had V3 veya has V3) olamaz, would have V3 gelir.");
+  addQ(26, "fill-blank", "Boşluğu doldurunuz (Çift perfect yasağı):",
+    "If we had upgraded the server, the crash ___ prevented.",
+    ["would have been", "had been", "has been", "is"], 0,
+    "Sunucuyu yükseltmiş olsaydık çökme önlenmiş olurdu.",
+    "Zaman bağlaçlı ve koşullu cümlelerde iki tarafın da perfect olması yasaktır; conditional yapı (would have been) gelir.");
+  addQ(26, "multiple-choice", "Çift perfect hatası barındırmayan doğru seçeneği bulun:",
+    "Unless the security team had checked the logs, the breach would have continued.",
+    [
+      "Unless the security team had checked the logs, the breach would have continued.",
+      "Unless the security team had checked the logs, the breach had continued.",
+      "Unless the security team has checked the logs, the breach had continued.",
+      "Unless the security team checks the logs, the breach had continued."
+    ], 0,
+    "Güvenlik ekibi günlükleri kontrol etmemiş olsaydı ihlal devam etmiş olurdu.",
+    "Had checked (perfect) ile had continued (perfect) yan yana gelemez, conditional (would have continued) doğrudur.");
+  addDoubleMagnet(26, "Yasaklı kombinasyonları eleyerek kelimeleri yerleştirin:",
+    "If the administrator _______ the settings yesterday, the anomaly _______ detected.",
+    ["had modified", "would have been", "had modified", "had been", "modifies", "has been"], [0, 1],
+    "Yönetici dün ayarları değiştirmiş olsaydı anomali tespit edilmiş olurdu.",
+    "Geçmiş koşul (had modified) sonrasında double perfect yasağı gereği conditional (would have been) gelir.");
+  addQ(26, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "If you had saved the data, the system ___ a backup.",
+    ["would have generated", "had generated", "has generated", "generates"], 0,
+    "Verileri kaydetmiş olsaydınız sistem yedek oluşturmuş olurdu.",
+    "Çift perfect yasaktır; had V3 koşuluna 'would have generated' eşlik eder.");
+
+  // --- RULE 27: After/Before ve Çift -ing Yasası ---
+  addQ(27, "fill-blank-dropdown", "Çift -ing yasağını gözeterek boşluğu doldurun:",
+    "After configuring the network, the admin ___ the servers.",
+    ["restarted", "restarting", "was restarting", "restarts"], 0,
+    "Ağı yapılandırdıktan sonra yönetici sunucuları yeniden başlattı.",
+    "After/Before kurgularında iki tarafta birden -ingli yapı (configuring / restarting) kullanılmaz.");
+  addQ(27, "fill-blank", "Boşluğu doldurunuz (Çift -ing yasağı):",
+    "Before launching the software, the developer ___ the parameters.",
+    ["verified", "verifying", "was verifying", "verifies"], 0,
+    "Yazılımı başlatmadan önce geliştirici parametreleri doğruladı.",
+    "Giriş kısmı -ing (launching) kısaltma aldığından ana cümlede -ing'den kaçınılarak V2 (verified) tercih edilir.");
+  addQ(27, "multiple-choice", "Çift -ing hatası içermeyen doğru cümleyi seçin:",
+    "After analyzing the logs, the security expert found the loophole.",
+    [
+      "After analyzing the logs, the security expert found the loophole.",
+      "After analyzing the logs, the security expert was finding the loophole.",
+      "After analyzing the logs, the security expert finding the loophole.",
+      "After the security expert analyzing the logs, he was finding the loophole."
+    ], 0,
+    "Günlükleri analiz ettikten sonra güvenlik uzmanı açığı buldu.",
+    "İki tarafta birden -ing'li yapı tercih edilmeyeceği için 'found' seçimi doğrudur.");
+  addDoubleMagnet(27, "Kurala uygun kelimeleri doğru yerlere sürükleyin:",
+    "Before _______ the project, the leader _______ the contract parameters.",
+    ["submitting", "checked", "submitting", "checking", "submitted", "checking"], [0, 1],
+    "Projeyi teslim etmeden önce lider sözleşme parametrelerini kontrol etti.",
+    "Kısaltılmış 'before submitting' (-ing) sonrasında ana fiil V2 (checked) olmalıdır.");
+  addQ(27, "fill-blank-dropdown", "Boşluğa gelecek en uygun yapıyı bulun:",
+    "After updating the database, the team ___ a security audit.",
+    ["conducted", "conducting", "was conducting", "conducts"], 0,
+    "Veritabanını güncelledikten sonra ekip bir güvenlik denetimi yürüttü.",
+    "İki taraflı -ing kullanımı elenir, bu nedenle V2 (conducted) seçilir.");
+
+  // --- RULE 28: Before long vs Long before ---
+  addQ(28, "fill-blank-dropdown", "Zaman uyumuna ve anlama göre boşluğu doldurun:",
+    "The prototype was completed long before the competitor ___ their design.",
+    ["patented", "will patent", "patents", "has patented"], 0,
+    "Prototip, rakip kendi tasarımının patentini almadan çok önce tamamlanmıştı.",
+    "Long before geçmişe (past) yönlendirir, bu yüzden Simple Past (patented) kullanılır.");
+  addQ(28, "fill-blank", "Boşluğu doldurunuz (Before long kuralı):",
+    "Before long, the system administrator ___ deploy the security updates.",
+    ["will", "would", "had", "has"], 0,
+    "Çok geçmeden (yakında), sistem yöneticisi güvenlik güncellemelerini dağıtacak.",
+    "Before long (yakında/çok geçmeden) gelecek zamanı (will) işaret eder.");
+  addQ(28, "multiple-choice", "Doğru zaman ve anlam ilişkisini gösteren seçeneği bulun:",
+    "Before long, we will see significant changes in quantum computing.",
+    [
+      "Before long, we will see significant changes in quantum computing.",
+      "Before long, we saw significant changes in quantum computing.",
+      "Long before, we will see significant changes in quantum computing.",
+      "Before long, we had seen significant changes in quantum computing."
+    ], 0,
+    "Çok geçmeden, kuantum hesaplamada önemli değişiklikler göreceğiz.",
+    "Before long 'yakında' anlamıyla future (will see) yapı gerektirir.");
+  addDoubleMagnet(28, "Anlam ve zaman uyumuna göre kelimeleri sürükleyin:",
+    "The team _______ the project long before the deadline _______.",
+    ["finished", "arrived", "will finish", "arrives", "finish", "arrived"], [0, 1],
+    "Ekip, son teslim tarihi gelmeden çok önce projeyi bitirdi.",
+    "Long before geçmiş bağlamı (finished - arrived) kurar.");
+  addQ(28, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "Long before the server crashed, the administrator ___ anomalies.",
+    ["had noticed", "will notice", "notices", "currently notices"], 0,
+    "Sunucu çökmeden çok önce yönetici anomalileri fark etmişti.",
+    "Long before (çok önce) geçmişe (had noticed) yönlendirir.");
+
+  // --- RULE 29: Tahmin/Endişe + Future ---
+  addQ(29, "fill-blank-dropdown", "Boşluğu kurallara göre doldurun (Tahmin + Future):",
+    "The experts predict that quantum computing ___ cybersecurity protocols.",
+    ["will break", "would break", "had broken", "broke"], 0,
+    "Uzmanlar, kuantum hesaplamanın siber güvenlik protokollerini kıracağını tahmin ediyor.",
+    "Present tahmin fiili (predict) sonrası geleceğe yönelik olarak will (will break) tercih edilir.");
+  addQ(29, "fill-blank", "Boşluğu doldurunuz (Endişe + Future):",
+    "The network engineers fear that the virus ___ mutate next week.",
+    ["will", "would", "had", "did"], 0,
+    "Ağ mühendisleri virüsün gelecek hafta mutasyona uğramasından korkuyor.",
+    "Endişe/korku (fear) bildiren present yapı devamında future (will) modalını çeker.");
+  addQ(29, "multiple-choice", "Doğru tahmin/gelecek zaman uyumunu bulun:",
+    "We hope that the developer will resolve the latency issues today.",
+    [
+      "We hope that the developer will resolve the latency issues today.",
+      "We hope that the developer would resolve the latency issues today.",
+      "We hope that the developer had resolved the latency issues today.",
+      "We hope that the developer resolved the latency issues today."
+    ], 0,
+    "Geliştiricinin gecikme sorunlarını bugün çözeceğini umuyoruz.",
+    "Hope (present) fiili ile geleceğe yönelik 'will resolve' uyumludur.");
+  addDoubleMagnet(29, "Tahmin/Uyum kurallarına göre kelimeleri yerleştirin:",
+    "They _______ that the software _______ successfully tomorrow.",
+    ["expect", "will run", "expected", "would run", "expecting", "run"], [0, 1],
+    "Yazılımın yarın başarıyla çalışacağını bekliyorlar.",
+    "Present beklenti (expect) ile future (will run) uyum içindedir.");
+  addQ(29, "fill-blank-dropdown", "Boşluğa gelecek en uygun kelimeyi seçin:",
+    "I am afraid that the server ___ go offline during the transfer.",
+    ["will", "would", "had", "was"], 0,
+    "Korkarım ki aktarım sırasında sunucu çevrimdışı olacak.",
+    "Present endişe (am afraid) sonrasında gelecek anlamı için 'will' kullanılır.");
+
+  // --- RULE 30: Geçmişi Simgeleyen Kelimeler ---
+  addQ(30, "fill-blank-dropdown", "Geçmiş zaman ipucuna göre boşluğu doldurun:",
+    "The protocol was originally ___ to prevent unauthorized loops.",
+    ["designed", "designing", "designs", "will design"], 0,
+    "Protokol başlangıçta yetkisiz döngüleri engellemek için tasarlanmıştı.",
+    "Geçmişi simgeleyen 'originally' zarfı bizi doğrudan V2 (designed) yapısına götürür.");
+  addQ(30, "fill-blank", "Boşluğu doldurunuz (Geçmiş kelimesi kuralı):",
+    "In the past, database administrators ___ tape backups manually.",
+    ["performed", "performs", "will perform", "performing"], 0,
+    "Eskiden, veritabanı yöneticileri bant yedeklemelerini manuel olarak yaparlardı.",
+    "'In the past' ifadesi geçmişteki bir alışkanlık/duruma (performed - V2) işaret eder.");
+  addQ(30, "multiple-choice", "Geçmiş belirtecine sadık kalan doğru cümleyi seçin:",
+    "The building was formerly used as a research lab.",
+    [
+      "The building was formerly used as a research lab.",
+      "The building is formerly used as a research lab.",
+      "The building will be formerly used as a research lab.",
+      "The building has been formerly used as a research lab."
+    ], 0,
+    "Bina eskiden bir araştırma laboratuvarı olarak kullanılıyordu.",
+    "'formerly' (eskiden) zarfı geçmiş zamana (was used) işaret eder.");
+  addDoubleMagnet(30, "Geçmiş zaman belirteçlerine uyarak kelimeleri sürükleyin:",
+    "Initially, the developer _______ that the bug _______ fixed.",
+    ["believed", "was", "believes", "is", "will believe", "had been"], [0, 1],
+    "Başlangıçta geliştirici hatanın düzeltildiğine inandı.",
+    "Initially geçmiş bağlamı (believed - was) V2/V2 olarak kurar.");
+  addQ(30, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "The method was previously ___ in several academic studies.",
+    ["employed", "employs", "will employ", "has employed"], 0,
+    "Yöntem daha önce birkaç akademik çalışmada kullanılmıştı.",
+    "'previously' (önceden) zarfı past simple pasif (was employed) kullanımını gerektirir.");
+
+  // --- RULE 31: So far ---
+  addQ(31, "fill-blank-dropdown", "Süreç zarfına uygun en doğru zamanı bulun:",
+    "So far, our development team ___ three structural anomalies in the script.",
+    ["has detected", "detected", "detects", "will detect"], 0,
+    "Şimdiye kadar, geliştirme ekibimiz betikte üç yapısal anomali tespit etti.",
+    "'So far' (şimdiye kadar) süreç bildirir ve doğrudan Present Perfect (has detected) ister.");
+  addQ(31, "fill-blank", "Boşluğu doldurunuz (So far kuralı):",
+    "The network engineers ___ updated five servers so far this week.",
+    ["have", "had", "will", "did"], 0,
+    "Ağ mühendisleri bu hafta şimdiye kadar beş sunucuyu güncelledi.",
+    "Süreç zarfı 'so far' ile present perfect yardımcı fiili 'have' gelir.");
+  addQ(31, "multiple-choice", "So far belirteci ile kurulan doğru cümleyi seçin:",
+    "We have analyzed only half of the files so far.",
+    [
+      "We have analyzed only half of the files so far.",
+      "We analyzed only half of the files so far.",
+      "We will analyze only half of the files so far.",
+      "We analyze only half of the files so far."
+    ], 0,
+    "Şimdiye kadar dosyaların sadece yarısını analiz ettik.",
+    "'so far' doğrudan Present Perfect (have analyzed) ile çekimlenir.");
+  addDoubleMagnet(31, "Süreç kurallarına göre kelimeleri yerleştirin:",
+    "So far, the program _______ several warnings but it _______ crashed.",
+    ["has generated", "has not", "generated", "did not", "generates", "will not"], [0, 1],
+    "Şimdiye kadar program birkaç uyarı oluşturdu fakat çökmedi.",
+    "So far süreci nedeniyle her iki taraf da Present Perfect (has generated - has not) olmalıdır.");
+  addQ(31, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "No critical failures have ___ been reported so far.",
+    ["yet", "already", "ever", "just"], 0,
+    "Şimdiye kadar hiçbir kritik hata bildirilmedi.",
+    "Present perfect edilgen yapıda 'so far' ile birlikte 'yet' (olumsuz anlamlı) uyumludur.");
+
+  // --- RULE 32: Until Recently ---
+  addQ(32, "fill-blank-dropdown", "Zaman zarfı kuralına göre boşluğu doldurun:",
+    "Until recently, the researchers ___ the compound under extreme pressure.",
+    ["tested", "have tested", "test", "currently test"], 0,
+    "Son zamanlara kadar araştırmacılar bileşiği aşırı basınç altında test ettiler.",
+    "'Until recently' geçmişte bitmiş bir sürece atıfta bulunur ve Simple Past (tested) alır.");
+  addQ(32, "fill-blank", "Boşluğu doldurunuz (Until recently kuralı):",
+    "Until recently, the firewall ___ not block these port signals.",
+    ["did", "does", "has", "will"], 0,
+    "Son zamanlara kadar, güvenlik duvarı bu port sinyallerini engellemedi.",
+    "Until recently geçmiş eylem (did not block - V2) bildirir.");
+  addQ(32, "multiple-choice", "Until recently zaman kuralına uyan doğru cümleyi seçin:",
+    "Until recently, we stored all data on local servers.",
+    [
+      "Until recently, we stored all data on local servers.",
+      "Until recently, we have stored all data on local servers.",
+      "Until recently, we store all data on local servers.",
+      "Until recently, we will store all data on local servers."
+    ], 0,
+    "Yakın zamana kadar tüm verileri yerel sunucularda sakladık.",
+    "'Until recently' yapısı present perfect değil, doğrudan V2 (stored) gerektirir.");
+  addDoubleMagnet(32, "Tense kurallarına göre kelimeleri sürükleyin:",
+    "Until recently, the developers _______ the code manually, but now they _______ automation.",
+    ["compiled", "use", "compile", "used", "will compile", "uses"], [0, 1],
+    "Yakın zamana kadar geliştiriciler kodu manuel olarak derlerdi, ancak şimdi otomasyon kullanıyorlar.",
+    "İlk kısım 'until recently' ile V2 (compiled) olurken, zıt taraf 'now' ile V1 (use) olur.");
+  addQ(32, "fill-blank-dropdown", "Boşluğa gelecek en uygun kelimeyi bulun:",
+    "Until recently, query optimization ___ not considered a priority.",
+    ["was", "is", "has been", "will be"], 0,
+    "Son zamanlara kadar, sorgu optimizasyonu bir öncelik olarak kabul edilmiyordu.",
+    "Until recently geçmiş zaman (was not - V2) kullanımı gerektirir.");
+
+  // --- RULE 33: Have/has V3 vs Have/has been Ving ---
+  addQ(33, "fill-blank-dropdown", "Süreç/sonuç ayrımına göre boşluğu doldurun:",
+    "The team ___ this algorithm for six hours without any breaks.",
+    ["has been testing", "has tested", "tested", "tests"], 0,
+    "Ekip bu algoritmayı mola vermeden altı saattir kesintisiz test ediyor.",
+    "Kesintisiz süregiden eylemler için Present Perfect Continuous (has been testing) tercih edilir.");
+  addQ(33, "fill-blank", "Boşluğu doldurunuz (Eylem bitmiş, sonuç present):",
+    "The developer ___ resolved the issue, and the system is stable now.",
+    ["has", "was", "is", "did"], 0,
+    "Geliştirici sorunu çözdü ve sistem şimdi kararlı.",
+    "Eylem tamamlanmış ve etkisi günümüzde sürüyorsa Present Perfect (has resolved) kullanılır.");
+  addQ(33, "multiple-choice", "Süreç ve bitmişlik ayrımına uyan doğru seçeneği bulun:",
+    "She has written three reports today, and she has been writing since morning.",
+    [
+      "She has written three reports today, and she has been writing since morning.",
+      "She has been writing three reports today, and she has written since morning.",
+      "She wrote three reports today, and she was writing since morning.",
+      "She writes three reports today, and she is writing since morning."
+    ], 0,
+    "Bugün üç rapor yazdı (tamamlandı) ve sabahtan beri yazıyor (süreç).",
+    "Bitmişlik/miktar (has written) ile süreç vurgusu (has been writing) bir arada doğru verilmiştir.");
+  addDoubleMagnet(33, "Süreç ve sonuç ayrımına göre kelimeleri sürükleyin:",
+    "The researcher _______ the cells since morning and _______ several patterns.",
+    ["has been observing", "has discovered", "observed", "discovered", "observes", "discovers"], [0, 1],
+    "Araştırmacı sabahtan beri hücreleri gözlemliyor ve birkaç kalıp keşfetti.",
+    "Süreç (has been observing) ile tamamlanmış sonuç (has discovered) uyumludur.");
+  addQ(33, "fill-blank-dropdown", "Boşluğa gelecek en uygun yapıyı bulun:",
+    "He ___ study papers all day and has finished two of them.",
+    ["has been reading", "has read", "reads", "read"], 0,
+    "Tüm gün makale okuyor ve ikisini bitirdi.",
+    "Gün boyu süren kesintisiz eylem 'has been reading' ile ifade edilir.");
+
+  // --- RULE 34: Miktar/Sayısal Değer ve Continuous ---
+  addQ(34, "fill-blank-dropdown", "Miktar kuralına göre doğru seçeneği bulun:",
+    "The security department ___ ten security violations today.",
+    ["has detected", "has been detecting", "detects", "is detecting"], 0,
+    "Güvenlik departmanı bugün on güvenlik ihlali tespit etti.",
+    "Rakamsal miktar (ten violations) belirtildiğinde continuous yapı kullanılamaz, present perfect seçilir.");
+  addQ(34, "fill-blank", "Boşluğu doldurunuz (Miktar-continuous yasağı):",
+    "Our team has ___ five servers so far this week.",
+    ["updated", "been updating", "update", "updates"], 0,
+    "Ekibimiz bu hafta şimdiye kadar beş sunucuyu güncelledi.",
+    "Beş sunucu (five servers) miktar bildirdiğinden continuous (been updating) elenir, V3 (updated) gelir.");
+  addQ(34, "multiple-choice", "Miktar/Continuous kuralına uygun doğru seçeneği bulun:",
+    "The author has published three papers this year.",
+    [
+      "The author has published three papers this year.",
+      "The author has been publishing three papers this year.",
+      "The author is publishing three papers this year.",
+      "The author was publishing three papers this year."
+    ], 0,
+    "Yazar bu yıl üç makale yayımladı.",
+    "Miktar (three papers) bildirildiği için continuous elenir ve present perfect (has published) doğru olur.");
+  addDoubleMagnet(34, "Miktar yasağına uyarak kelimeleri sürükleyin:",
+    "The developer _______ three bug reports and _______ coding.",
+    ["has submitted", "has stopped", "has been submitting", "has been stopping", "submits", "stops"], [0, 1],
+    "Geliştirici üç hata raporu sundu ve kodlamayı durdurdu.",
+    "Sayısal miktar (three reports) ve tamamlanmış eylemler perfect simple (has submitted - has stopped) gerektirir.");
+  addQ(34, "fill-blank-dropdown", "Boşluğa gelecek en uygun yapıyı bulun:",
+    "We ___ hundreds of samples, confirming the initial hypothesis.",
+    ["have analyzed", "have been analyzing", "analyze", "are analyzing"], 0,
+    "İlk hipotezi doğrulayarak yüzlerce örneği analiz ettik.",
+    "Miktar (hundreds of samples) continuous kullanımını eler, 'have analyzed' seçilir.");
+
+  // --- RULE 35: Zaman Uyumu İstisnası (Still) ---
+  addQ(35, "fill-blank-dropdown", "Still istisnasına göre boşluğu doldurun:",
+    "Although the network crashed yesterday, the administrators still ___ the main causes.",
+    ["do not know", "did not know", "had not known", "are not knowing"], 0,
+    "Ağ dün çökmüş olmasına rağmen, yöneticiler ana nedenleri hâlâ bilmiyor.",
+    "Dün (yesterday) past etki getirse de 'still' (hâlâ) vurgusu günümüzdeki duruma (do not know) bağlar.");
+  addQ(35, "fill-blank", "Boşluğu doldurunuz (Still istisnası):",
+    "The server failed two days ago, but the database ___ still locked today.",
+    ["is", "was", "had been", "will be"], 0,
+    "Sunucu iki gün önce arızalandı, ancak veritabanı bugün hâlâ kilitli.",
+    "Geçmişteki olaya rağmen 'still today' vurgusu şimdiki zamanı (is) tetikler.");
+  addQ(35, "multiple-choice", "Still çelişkisini doğru kuran seçeneği bulun:",
+    "Though she lost the access key last week, she still accesses the server.",
+    [
+      "Though she lost the access key last week, she still accesses the server.",
+      "Though she lost the access key last week, she still accessed the server.",
+      "Though she has lost the access key last week, she still accesses the server.",
+      "Though she lost the access key last week, she had still accessed the server."
+    ], 0,
+    "Geçen hafta erişim anahtarını kaybetmesine rağmen sunucuya hâlâ erişiyor.",
+    "Geçmişteki olaya (lost) rağmen 'still' kullanımı present (accesses) ile uyum sağlar.");
+  addDoubleMagnet(35, "Zaman geçişi ve still kuralına göre kelimeleri yerleştirin:",
+    "Although the code _______ compiled yesterday, the team _______ faces warnings.",
+    ["was", "still", "had been", "currently", "will be", "yesterday"], [0, 1],
+    "Kod dün derlenmesine rağmen ekip hâlâ uyarılarla karşılaşıyor.",
+    "Dün derlenen kod 'was compiled' (V2) olurken, günümüz zıtlığı 'still' ile desteklenir.");
+  addQ(35, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "The system was hacked in 2024, but some users ___ still using old passwords.",
+    ["are", "were", "had been", "will be"], 0,
+    "Sistem 2024'te hacklendi ancak bazı kullanıcılar hâlâ eski şifreleri kullanıyor.",
+    "Geçmiş eyleme zıtlık 'but' ve 'still' ile present continuous (are using) ile bağlanır.");
+
+  // --- RULE 36: Zaman Göstergesi Yoksa ---
+  addQ(36, "fill-blank-dropdown", "Boşluğu kurallara göre doldurun (İpucu yoksa):",
+    "Quantum cryptology ___ advanced encryption mechanisms to secure data channels.",
+    ["requires", "required", "had required", "will have required"], 0,
+    "Kuantum kriptoloji veri kanallarını güvenceye almak için gelişmiş şifreleme mekanizmaları gerektirir.",
+    "Cümlede geçmiş/gelecek ipucu olmadığında genel doğrular için öncelikle Simple Present (requires) seçilir.");
+  addQ(36, "fill-blank", "Boşluğu doldurunuz (Genel kural):",
+    "Many academic papers ___ peer-reviewed before publication.",
+    ["are", "were", "will be", "had been"], 0,
+    "Birçok akademik makale yayınlanmadan önce akran denetiminden geçer.",
+    "Genel bilimsel/akademik süreçlerde (ipucu yoksa) present (are) tercih edilir.");
+  addQ(36, "multiple-choice", "İpucu bulunmayan cümlede en uygun zaman çekimini seçin:",
+    "Light travels faster than sound in all media.",
+    [
+      "Light travels faster than sound in all media.",
+      "Light traveled faster than sound in all media.",
+      "Light had traveled faster than sound in all media.",
+      "Light will have traveled faster than sound in all media."
+    ], 0,
+    "Işık tüm ortamlarda sesten daha hızlı yayılır.",
+    "Doğa yasaları ve genel gerçekler Simple Present (travels) ile çekimlenir.");
+  addDoubleMagnet(36, "Zaman göstergesi olmayan genel kurala göre kelimeleri sürükleyin:",
+    "A compiler _______ source code and _______ machine commands.",
+    ["analyzes", "generates", "analyzed", "generated", "will analyze", "generate"], [0, 1],
+    "Bir derleyici kaynak kodunu analiz eder ve makine komutları üretir.",
+    "Genel tanım ve işlev bildiren cümleler present (analyzes - generates) olmalıdır.");
+  addQ(36, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı bulun:",
+    "Software updates usually ___ system stability.",
+    ["enhance", "enhanced", "had enhanced", "will have enhanced"], 0,
+    "Yazılım güncellemeleri genellikle sistem kararlılığını artırır.",
+    "Sıklık zarfı 'usually' ve genel durum present (enhance) gerektirir.");
+
+  // --- RULE 37: For / Since İpuçları ---
+  addQ(37, "fill-blank-dropdown", "Süreç zarfına uygun en doğru zamanı bulun:",
+    "Since the migration began, the administrators ___ data logs continuously.",
+    ["have monitored", "monitored", "monitor", "will monitor"], 0,
+    "Göç başladığından beri, yöneticiler veri günlüklerini sürekli olarak izledi.",
+    "Since + V2 (began) yapısına bağlı olarak ana cümlede Present Perfect (have monitored) tercih edilir.");
+  addQ(37, "fill-blank", "Boşluğu doldurunuz (Since kuralı):",
+    "The software system has run smoothly since the parameters ___ modified.",
+    ["were", "are", "have been", "had been"], 0,
+    "Parametreler değiştirildiğinden beri yazılım sistemi sorunsuz çalıştı.",
+    "Since bağlacına bağlı yan cümlede Simple Past (were) kullanılır.");
+  addQ(37, "multiple-choice", "Since zaman kuralına uygun doğru seçeneği bulun:",
+    "We have tested the network since the new router was installed.",
+    [
+      "We have tested the network since the new router was installed.",
+      "We tested the network since the new router has been installed.",
+      "We have tested the network since the new router has been installed.",
+      "We will test the network since the new router was installed."
+    ], 0,
+    "Yeni yönlendirici kurulduğundan beri ağı test ettik.",
+    "Since + V2 (was installed) yan cümlesi ile ana cümlede Present Perfect (have tested) uyumu doğrudur.");
+  addDoubleMagnet(37, "Süreç belirteçlerine uyarak kartları yerleştirin:",
+    "The database _______ online since the security update _______ yesterday.",
+    ["has remained", "was deployed", "remained", "has deployed", "remains", "deployed"], [0, 1],
+    "Dün güvenlik güncellemesi dağıtıldığından beri veritabanı çevrimdışı kaldı.",
+    "Ana cümle Present Perfect (has remained) ve since yan cümlesi V2 (was deployed) olmalıdır.");
+  addQ(37, "fill-blank-dropdown", "Boşluğa gelecek en uygun yapıyı bulun:",
+    "Since we enabled the new firewall, no breaches ___ detected.",
+    ["have been", "were", "are", "had been"], 0,
+    "Yeni güvenlik duvarını etkinleştirdiğimizden beri hiçbir ihlal tespit edilmedi.",
+    "Since + V2 yan cümlesi sonrasındaki ana cümlede Present Perfect (have been) kuralı geçerlidir.");
+
+  // --- RULE 38: Güncel Zaman Zarfları ---
+  addQ(38, "fill-blank-dropdown", "Zaman zarfı kuralına göre boşluğu doldurun:",
+    "Currently, the system engineers ___ the cloud security infrastructure.",
+    ["are upgrading", "upgraded", "had upgraded", "will have upgraded"], 0,
+    "Şşu anda sistem mühendisleri bulut güvenliği altyapısını yükseltiyor.",
+    "'Currently' zarfı konuşma anını/güncel süreci niteleyerek Present Continuous (are upgrading) ister.");
+  addQ(38, "fill-blank", "Boşluğu doldurunuz (Güncel zaman kuralı):",
+    "At present, the application ___ not support legacy file versions.",
+    ["does", "did", "has", "will"], 0,
+    "Şu anda uygulama eski dosya sürümlerini desteklememektedir.",
+    "'At present' şimdiki zamanı (does not) gerektirir.");
+  addQ(38, "multiple-choice", "Güncel zaman zarfına uygun doğru seçeneği bulun:",
+    "Presently, we are conducting a sequence of tests on the database.",
+    [
+      "Presently, we are conducting a sequence of tests on the database.",
+      "Presently, we conducted a sequence of tests on the database.",
+      "Presently, we will conduct a sequence of tests on the database.",
+      "Presently, we had conducted a sequence of tests on the database."
+    ], 0,
+    "Şu sıralar veritabanı üzerinde bir dizi test yürütüyoruz.",
+    "'Presently' zarfı present continuous (are conducting) ile uyumludur.");
+  addDoubleMagnet(38, "Güncel zaman zarfı kurallarına göre kelimeleri sürükleyin:",
+    "At present, the developer _______ the scripts, while the tester _______ the logs.",
+    ["is reviewing", "is checking", "reviewed", "checked", "will review", "check"], [0, 1],
+    "Şu anda geliştirici betikleri gözden geçiriyor, test uzmanı ise günlükleri kontrol ediyor.",
+    "At present ile her iki eylem de eş zamanlı şimdiki zamanda (is reviewing - is checking) çekimlenir.");
+  addQ(38, "fill-blank-dropdown", "Boşluğa gelecek en uygun kelimeyi seçin:",
+    "The security wall is ___ blocking all incoming query requests.",
+    ["currently", "originally", "formerly", "previously"], 0,
+    "Güvenlik duvarı şu anda gelen tüm sorgu isteklerini engelliyor.",
+    "Present continuous (is blocking) ile uyumlu olan şimdiki zaman zarfı 'currently'dir.");
+
+  // --- RULE 39: Zaman Bağlaçlarında Uyum ---
+  addQ(39, "fill-blank-dropdown", "Zaman bağlacı uyumuna göre boşluğu doldurun:",
+    "When the server crashed yesterday, we ___ all active logs immediately.",
+    ["checked", "are checking", "will check", "have checked"], 0,
+    "Dün sunucu çöktüğünde tüm aktif günlükleri hemen kontrol ettik.",
+    "When + past (crashed) yapısı zaman uyumu gereği diğer tarafta da past (checked) gerektirir.");
+  addQ(39, "fill-blank", "Boşluğu doldurunuz (Zaman uyumu kuralı):",
+    "As soon as the test finishes tomorrow, the system ___ display the scores.",
+    ["will", "would", "did", "had"], 0,
+    "Yarın test biter bitmez sistem puanları gösterecek.",
+    "As soon as + present (finishes) yapısının ana cümlesi future (will) olur.");
+  addQ(39, "multiple-choice", "Zaman bağlacı kuralına uygun doğru seçeneği bulun:",
+    "Before the administrator launched the script, he validated the parameters.",
+    [
+      "Before the administrator launched the script, he validated the parameters.",
+      "Before the administrator launched the script, he validates the parameters.",
+      "Before the administrator launches the script, he validated the parameters.",
+      "Before the administrator will launch the script, he validated the parameters."
+    ], 0,
+    "Yönetici betiği başlatmadan önce parametreleri doğruladı.",
+    "Zaman bağlacında Past-Past (launched - validated) uyumu tam sağlanmıştır.");
+  addDoubleMagnet(39, "Zaman uyumu kurallarına göre kelimeleri sürükleyin:",
+    "After they _______ the code tomorrow, they _______ it on the server.",
+    ["compile", "will deploy", "compiled", "deployed", "compiling", "deploy"], [0, 1],
+    "Yarın kodu derledikten sonra sunucuya dağıtacaklar.",
+    "Gelecek zaman bağlacında yan cümle present (compile) ana cümle future (will deploy) olur.");
+  addQ(39, "fill-blank-dropdown", "Boşluğa gelecek en uygun zamanı seçin:",
+    "By the time the database administrator arrived, the server ___ recovered.",
+    ["had", "has", "will", "does"], 0,
+    "Veritabanı yöneticisi geldiğinde sunucu çoktan kurtarılmıştı.",
+    "By the time + past (arrived) yapısı ana cümlede Past Perfect (had) gerektirir.");
+
+  // ============================================================
+  // RUNTIME INJECTION LOGIC INTO UNIT 105 (BÖLÜM 36) EXERCISES
+  // ============================================================
+  const titlesAndDescs = {
+    "c105_l1": {
+      titles: [
+        "Alıştırma 1: Temel Formül Yapıları",
+        "Alıştırma 2: İleri Düzey Formül Kuralları",
+        "Alıştırma 3: Akademik Zaman Uyumu",
+        "Alıştırma 4: Ön Eleme ve Pratikler",
+        "Alıştırma 5: Ustalaşma Egzersizleri",
+        "Alıştırma 6: İleri Seviye Taktikler",
+        "Alıştırma 7: Zaman Bağlaçları Ustalaşma"
+      ],
+      descs: [
+        "Zaman bağlacı formüllerinin temel eşleşmeleri ve giriş seviyesi pratikler.",
+        "Zaman uyumu kurallarının ileri düzey formül uygulamaları.",
+        "Akademik metinlerde zaman uyumu ve yapısal mantık pratikleri.",
+        "Seçenek eleme teknikleri ve akademik zaman pratikleri.",
+        "Zaman uyumu ve ön eleme kurallarının karma üst düzey testleri.",
+        "Ekstra kurallarla zenginleştirilmiş ileri düzey formül analizleri.",
+        "Zaman bağlaçları ve kip modalları üzerine kapsamlı pekiştirme soruları."
+      ]
+    },
+    "c105_l2": {
+      titles: [
+        "Alıştırma 1: Seçenek Eleme Prensipleri",
+        "Alıştırma 2: Hatalı Tense Kombinasyonları",
+        "Alıştırma 3: If Yapıları ve Eleme Kuralları",
+        "Alıştırma 4: Karma Hata Avcılığı",
+        "Alıştırma 5: Süreç ve Miktar Dengesi",
+        "Alıştırma 6: Gelişmiş Eleme Pratikleri"
+      ],
+      descs: [
+        "Tense sorularında seçeneklerde bir arada verildiğinde doğrudan elenen kombinasyonlar.",
+        "Present & Would ve Double-Would gibi hatalı zaman dizilimlerinin analizi.",
+        "Şart cümlelerinde (If Clauses) zaman uyumsuzlukları ve yasaklı zamanlar.",
+        "Tüm seçenek eleme ve hata avlama kurallarını içeren karma pratikler.",
+        "Zaman zarfları, miktar-continuous yasakları ve son zamanlar pratikleri.",
+        "Akademik filtreleme ve seçenek eleme teknikleri."
+      ]
+    },
+    "c105_l3": {
+      titles: [
+        "Alıştırma 1: Gelişmiş Tense Analizleri",
+        "Alıştırma 2: Zaman Uyumu Çelişkileri",
+        "Alıştırma 3: Şart Cümleleri ve İstisnalar",
+        "Alıştırma 4: Akademik Sentaks Pratikleri",
+        "Alıştırma 5: İleri Düzey Soru Eleme",
+        "Alıştırma 6: Still ve Bağlaç Uyumu İstisnaları",
+        "Alıştırma 7: Genel Zaman Uyumu Değerlendirmesi"
+      ],
+      descs: [
+        "İleri düzey akademik cümlelerde zaman uyumu ve yapısal analiz.",
+        "Zaman uyumsuzluğu olan karmaşık seçeneklerin elenmesi.",
+        "Koşul cümlelerindeki planlı gelecek istisnası ve özel durumlar.",
+        "Akademik metin analizi ve cümle tamamlama egzersizleri.",
+        "Zaman uyumu mühendisliğinin en zorlu pratikleri.",
+        "Still zarfı istisnası, güncel zaman zarfları ve bağlaç uyumu soruları.",
+        "Bölümün tüm kurallarını kapsayan geniş değerlendirme testi."
+      ]
     }
-    
-    const distribution = {
-      "c105_l1": [1, 2, 3, 4, 5, 6, 7, 8],
-      "c105_l2": [9, 10, 11, 12, 13, 14, 15, 16],
-      "c105_l3": [17, 18, 19, 20, 21, 22, 23]
+  };
+
+  const distribution = {
+    "c105_l1": [1, 2, 3, 4, 5, 6, 7, 8, 24, 25, 26, 27, 28, 29],
+    "c105_l2": [9, 10, 11, 12, 13, 14, 15, 16, 30, 31, 32, 33, 34],
+    "c105_l3": [17, 18, 19, 20, 21, 22, 23, 35, 36, 37, 38, 39]
+  };
+
+  const u105Lessons = (typeof lessons !== 'undefined') ? lessons.filter(l => l.unitId === 105) : [];
+
+  if (typeof unitSentencesMap !== 'undefined' && !unitSentencesMap["105"]) {
+    unitSentencesMap["105"] = {
+      "c105_l1": { exercises: [] },
+      "c105_l2": { exercises: [] },
+      "c105_l3": { exercises: [] }
     };
-
-    for (let lessonId in distribution) {
-      const allowedRules = distribution[lessonId];
-      const lessonQuestions = generatedQuestions.filter(q => allowedRules.includes(q.ruleId));
-
-      if (!unitSentencesMap["105"][lessonId]) {
-        unitSentencesMap["105"][lessonId] = { exercises: [] };
-      }
-
-      if (unitSentencesMap["105"][lessonId].exercises.length === 0) {
-        unitSentencesMap["105"][lessonId].exercises = [
-          {
-            id: `${lessonId}_rules_ex1`,
-            title: `Akademik Zaman Uyumu ve Ön Eleme Kuralları`,
-            description: `Zaman uyumu ve 23 eleme kuralının entegre pratikleri.`,
-            questions: []
-          }
-        ];
-      }
-
-      const exercise = unitSentencesMap["105"][lessonId].exercises[0];
-      exercise.questions = exercise.questions.concat(lessonQuestions);
-    }
   }
 
-  // Also directly update the global lessons array if it is already populated
-  if (typeof lessons !== 'undefined') {
-    const u105Lessons = lessons.filter(l => l.unitId === 105);
-    const distribution = {
-      "c105_l1": [1, 2, 3, 4, 5, 6, 7, 8],
-      "c105_l2": [9, 10, 11, 12, 13, 14, 15, 16],
-      "c105_l3": [17, 18, 19, 20, 21, 22, 23]
-    };
+  for (let lessonId in distribution) {
+    const allowedRules = distribution[lessonId];
+    const lessonQuestions = generatedQuestions.filter(q => allowedRules.includes(q.ruleId));
 
-    for (let targetId in distribution) {
-      const allowedRules = distribution[targetId];
-      const lessonQuestions = generatedQuestions.filter(q => allowedRules.includes(q.ruleId));
-      const lObj = u105Lessons.find(l => l.id === targetId);
-
-      if (lObj) {
-        if (!lObj.exercises || lObj.exercises.length === 0) {
-          lObj.exercises = [
-            {
-              id: `${targetId}_rules_ex1`,
-              title: `Akademik Zaman Uyumu ve Ön Eleme Kuralları`,
-              description: `Zaman uyumu ve 23 eleme kuralının entegre pratikleri.`,
-              questions: []
-            }
-          ];
+    // Gather base questions
+    let baseQuestions = [];
+    const lObj = u105Lessons.find(l => l.id === lessonId);
+    
+    if (lObj && lObj.exercises && lObj.exercises.length > 0) {
+      // Extract from lessons array
+      lObj.exercises.forEach(ex => {
+        if (ex.questions && ex.questions.length > 0) {
+          const filtered = ex.questions.filter(q => !q.id.startsWith("u101_rule_"));
+          baseQuestions = baseQuestions.concat(filtered);
         }
-        const exercise = lObj.exercises[0];
-        exercise.questions = exercise.questions.concat(lessonQuestions);
+      });
+    } else if (typeof unitSentencesMap !== 'undefined' && unitSentencesMap["105"] && unitSentencesMap["105"][lessonId] && unitSentencesMap["105"][lessonId].exercises) {
+      // Extract from unitSentencesMap
+      unitSentencesMap["105"][lessonId].exercises.forEach(ex => {
+        if (ex.questions && ex.questions.length > 0) {
+          const filtered = ex.questions.filter(q => !q.id.startsWith("u101_rule_"));
+          baseQuestions = baseQuestions.concat(filtered);
+        }
+      });
+    }
+
+    const allQuestions = baseQuestions.concat(lessonQuestions);
+
+    // Chunk questions (max 15 per exercise)
+    const chunkedExercises = [];
+    const chunkSize = 15;
+    const info = titlesAndDescs[lessonId] || { titles: [], descs: [] };
+
+    for (let i = 0; i < allQuestions.length; i += chunkSize) {
+      const chunk = allQuestions.slice(i, i + chunkSize);
+      const exIndex = Math.floor(i / chunkSize) + 1;
+      chunkedExercises.push({
+        id: `${lessonId}_ex${exIndex}`,
+        title: info.titles[exIndex - 1] || `${lessonId.toUpperCase()} Alıştırma ${exIndex}`,
+        description: info.descs[exIndex - 1] || `Akademik Zaman Uyumu ve Ön Eleme Kuralları pratikleri.`,
+        questions: chunk
+      });
+    }
+
+    // Apply to lessons array
+    if (lObj) {
+      lObj.exercises = chunkedExercises;
+      const lessonMeta = {
+        "c105_l1": {
+          title: "1. Zaman Bağlaçları ve Akademik Zaman Uyumu",
+          subtitle: "Temel zaman bağlacı kuralları ve zaman uyumu formülleri"
+        },
+        "c105_l2": {
+          title: "2. Zaman Uyumsuzlukları ve Seçenek Eleme Kuralları",
+          subtitle: "Tense sorularında şıklarda elenmesi gereken hatalı dizilimler"
+        },
+        "c105_l3": {
+          title: "3. Koşul Cümleleri (If & Unless) ve Özel Yapılar",
+          subtitle: "Şart yapılarında zaman uyumu, yasaklı tenseler ve planlı gelecek istisnası"
+        }
+      };
+      if (lessonMeta[lessonId]) {
+        lObj.title = lessonMeta[lessonId].title;
+        lObj.subtitle = lessonMeta[lessonId].subtitle;
       }
+    }
+
+    // Apply to unitSentencesMap
+    if (typeof unitSentencesMap !== 'undefined' && unitSentencesMap["105"]) {
+      if (!unitSentencesMap["105"][lessonId]) {
+        unitSentencesMap["105"][lessonId] = {};
+      }
+      unitSentencesMap["105"][lessonId].exercises = chunkedExercises;
     }
   }
 })();
