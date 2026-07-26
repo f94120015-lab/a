@@ -2241,10 +2241,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>Since</code> bağlacının yanındaki yan cümle, zaman çizgisi üzerinde aşağıdakilerden hangisini işaret eder?",
               options: [
-                "Geçmişteki spesifik bir başlangıç noktasını (Past Point) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>V2</span>",
-                "Gelecekteki tahmini bir zaman sınırını (Future Deadline) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>V1 veya V2</span>",
-                "Şu anda devam etmekte olan bir süreci (Ongoing Process) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>am/is/are + Ving</span>",
-                "Geçmişteki eylemin öncesindeki başka bir geçmişi (Older Past) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>had + V3</span>"
+                "Geçmişteki spesifik bir başlangıç noktasını (Past Point) / <span style='color: #339af0;'>V2</span>",
+                "Gelecekteki tahmini bir zaman sınırını (Future Deadline) / <span style='color: #339af0;'>V1 veya V2</span>",
+                "Şu anda devam etmekte olan bir süreci (Ongoing Process) / <span style='color: #339af0;'>am/is/are + Ving</span>",
+                "Geçmişteki eylemin öncesindeki başka bir geçmişi (Older Past) / <span style='color: #339af0;'>had + V3</span>"
               ],
               correctIndex: 0,
               explanation: "Since bağlacından sonra gelen yan cümle (Since + V2), eylemin geçmişte başladığı kesin başlangıç noktasını temsil eder."
@@ -2254,10 +2254,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>Since</code> yan cümlesi geçmişteki başlangıç noktasını işaret ederken, **ana cümle** zaman çizgisi üzerinde hangi periyodu kapsar?",
               options: [
-                "Geçmişteki o başlangıç noktasından günümüze (ŞİMDİ) kadar olan süreci / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>have/has + V3</span>",
-                "Gelecekte eylemin biteceği son sınıra kadar olan süreci / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>will have + V3</span>",
-                "Sadece geçmişte başlayıp biten anlık eylemleri / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>V2</span>",
-                "Gelecekteki tekrarlanacak alışkanlıkları / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>will + V1</span>"
+                "Geçmişteki o başlangıç noktasından günümüze (ŞİMDİ) kadar olan süreci / <span style='color: #339af0;'>have/has + V3</span>",
+                "Gelecekte eylemin biteceği son sınıra kadar olan süreci / <span style='color: #339af0;'>will have + V3</span>",
+                "Sadece geçmişte başlayıp biten anlık eylemleri / <span style='color: #339af0;'>V2</span>",
+                "Gelecekteki tekrarlanacak alışkanlıkları / <span style='color: #339af0;'>will + V1</span>"
               ],
               correctIndex: 0,
               explanation: "Since'li cümle geçmişteki başlangıç noktasını (V2) işaret ederken, ana cümle bu noktadan günümüze kadar uzanan süreci (Present Perfect) temsil eder."
@@ -2267,10 +2267,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>By the time</code> bağlacı temel işlev olarak zaman ilişkilerinde neyi işaret eder?",
               options: [
-                "Bir eylemin diğerinden önce tamamlandığı son sınırı (Deadline / Limit) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>By the time + V1 veya V2</span>",
-                "İki eylemin aynı anda paralel olarak devam ettiğini / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>While + was/were Ving</span>",
-                "Eylemin geçmişte başlayıp günümüzde hala sürdüğünü / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>Since + V2 ... have/has V3</span>",
-                "Gelecekte yapılma ihtimali olan varsayımsal bir eylemi / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>If + V1 ... will + V1</span>"
+                "Bir eylemin diğerinden önce tamamlandığı son sınırı (Deadline / Limit) / <span style='color: #339af0;'>By the time + V1 veya V2</span>",
+                "İki eylemin aynı anda paralel olarak devam ettiğini / <span style='color: #339af0;'>While + was/were Ving</span>",
+                "Eylemin geçmişte başlayıp günümüzde hala sürdüğünü / <span style='color: #339af0;'>Since + V2 ... have/has V3</span>",
+                "Gelecekte yapılma ihtimali olan varsayımsal bir eylemi / <span style='color: #339af0;'>If + V1 ... will + V1</span>"
               ],
               correctIndex: 0,
               explanation: "By the time, '-e kadar / -diğinde' anlamıyla bir eylemin tamamlanması gereken son zaman sınırını (deadline) temsil eder."
@@ -2280,10 +2280,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>By the time + Past Simple (V2)</code> yan cümlesi geçmişteki sınır eylemi işaret ettiğine göre, ana cümle zaman çizgisinde **nereyi** işaret eder?",
               options: [
-                "Bu geçmiş sınırdan da önce tamamlanmış olan eylemi (Older Past) / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>had + V3</span>",
-                "Gelecekte bu sınırdan sonra başlayacak olan eylemi / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>will + V1</span>",
-                "Şu anda devam etmekte olan güncel durumu / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>am/is/are + Ving</span>",
-                "Geçmişte başlayıp hala devam eden süreci / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>have/has + been + Ving</span>"
+                "Bu geçmiş sınırdan da önce tamamlanmış olan eylemi (Older Past) / <span style='color: #339af0;'>had + V3</span>",
+                "Gelecekte bu sınırdan sonra başlayacak olan eylemi / <span style='color: #339af0;'>will + V1</span>",
+                "Şu anda devam etmekte olan güncel durumu / <span style='color: #339af0;'>am/is/are + Ving</span>",
+                "Geçmişte başlayıp hala devam eden süreci / <span style='color: #339af0;'>have/has + been + Ving</span>"
               ],
               correctIndex: 0,
               explanation: "Geçmişteki bir zaman sınırına (V2) kadar tamamlanmış olan daha eski bir geçmiş eylemi anlatmak için Past Perfect (had + V3) kullanılır."
@@ -2293,10 +2293,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>By the time + Present Simple (V1)</code> yan cümlesi **gelecekteki** bir zaman sınırını işaret ettiğinde, ana cümle neyi işaret eder?",
               options: [
-                "Gelecekteki o sınırdan önce tamamlanmış olacak süreci / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>will have + V3</span>",
-                "Geçmişte çoktan tamamlanmış olan süreci / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>had + V3</span>",
-                "Şu an tam gerçekleşmekte olan eylemi / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>am/is/are + Ving</span>",
-                "Gelecekteki o sınırdan sonra başlayacak olan ani durumu / <span style='color: var(--color-info, #3b82f6); font-weight: 600;'>will + V1</span>"
+                "Gelecekteki o sınırdan önce tamamlanmış olacak süreci / <span style='color: #339af0;'>will have + V3</span>",
+                "Geçmişte çoktan tamamlanmış olan süreci / <span style='color: #339af0;'>had + V3</span>",
+                "Şu an tam gerçekleşmekte olan eylemi / <span style='color: #339af0;'>am/is/are + Ving</span>",
+                "Gelecekteki o sınırdan sonra başlayacak olan ani durumu / <span style='color: #339af0;'>will + V1</span>"
               ],
               correctIndex: 0,
               explanation: "Gelecekteki bir zaman sınırına (V1) ulaşıldığında çoktan tamamlanmış olacak eylemleri ifade etmek için Future Perfect (will have + V3) formülü kullanılır."
