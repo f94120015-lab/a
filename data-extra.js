@@ -4578,18 +4578,16 @@ if (typeof lessons !== 'undefined') {
     37,  // Advanced Relative Clauses
     38,  // Advanced Inversion
     39,  // Bölüm 44 / Modül A: Zaman, Şart & Dilek Kalkanları
-    "39_2", // Bölüm 44 / Modül B: Cümle Yapıları, Edatlar & Kısaltmalar
+    "39_2", // İleri Düzey Cümle Yapıları, Edatlar & Kısaltma Geometrisi
     "39_3", // Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi
     43,  // Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)
     47,  // Zincir Genişleme ve Sentaks Matrisi
     48,  // Zaman Kayma Kontrolü
     105, // Zaman Uyumu Formül Mühendisliği
     53,  // Akademik Bağlaç Mühendisliği
-    54,  // Görsel Kartlar ve Özel Bağlaç Kalıpları
     55,  // Koşul Cümleleri ve Mix Yapılar Mühendisliği
     200, // Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi
     201, // Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez
-    99,  // Özel Okuma Parçası Analizi
     57,  // Akademik Deyimsel Fiiller
     41,  // Akademik Sınav Kısayolları (Sınav Stratejileri ve Gramer İpuçları)
     42,  // Phrasal Modal ve Subjunctive Matrisi (Phrasal Modals ve Dilek Kipleri)

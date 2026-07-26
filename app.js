@@ -49,10 +49,13 @@ function cleanAcademicUnitTitle(title) {
     'Advanced Inversion': 'Devrik Cümle Yapıları (Inversion & Emphatic Structures)',
     'Bölüm 44 / Modül A: Zaman, Şart & Dilek Kalkanları': 'Zaman, Şart ve Dilek Cümleleri (Tenses, Conditionals & Subjunctive)',
     'Zaman, Şart & Dilek Kalkanları': 'Zaman, Şart ve Dilek Cümleleri (Tenses, Conditionals & Subjunctive)',
-    'Bölüm 44 / Modül B: Cümle Yapıları, Edatlar & Kısaltmalar': 'Cümle Yapıları, Edatlar ve Kısaltmalar',
+    'Bölüm 44 / Modül B: Cümle Yapıları, Edatlar & Kısaltmalar': 'İleri Düzey Cümle Yapıları, Edatlar & Kısaltma Geometrisi',
+    'Cümle Yapıları, Edatlar & Kısaltmalar': 'İleri Düzey Cümle Yapıları, Edatlar & Kısaltma Geometrisi',
     'Cümle Yapıları, Edatlar & Kısaltmalar': 'Cümle Yapıları, Edatlar ve Kısaltmalar',
     'Bölüm 44 / Modül C: Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
     'Devriklik, Bağlaçlar & Hata Avcısı Zirvesi': 'Devrik Cümleler, Bağlaçlar ve Sınav Soruları',
+    'Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)',
+    'XIII. Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)',
     'Phrasal Modal ve Subjunctive Matrisi': 'Öbeksel Kipler ve Dilek-Şart Yapıları (Phrasal Modals & Subjunctive)',
     '5 Öğeli Yapısal Altyapı': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
     '6 Öğeli Mega Eylem Zincirleri': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
@@ -68,7 +71,6 @@ function cleanAcademicUnitTitle(title) {
     'Görsel Kartlar ve Özel Bağlaç Kalıpları': 'YDS/YÖKDİL Özel Bağlaç Kalıpları',
     'Koşul Cümleleri ve Mix Yapılar Mühendisliği': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
     'Koşul Cümleleri ve Mix Yapılar': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
-    'Özel Okuma Parçası Analizi': 'Akademik Okuma Parçası Çözümlemesi',
     'Akademik Deyimsel Fiiller': 'Deyimsel Fiiller (Phrasal Verbs)',
     'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
     'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Fiilimsiler ve Kısaltma Sentezi (Gerund & Participle)',
@@ -6927,6 +6929,29 @@ function startLesson(lessonId, exerciseId = null) {
           explanationKey: q.explanationKey || 'academic_tips_master'
         };
         expandedQuestions.push(bridgeQ);
+      } else if (q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
+        let targetSentence = q.sentence || q.enSentence || q.mainSentence || '';
+        let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
+        if (targetTr && targetTr.length > 0) {
+          const trWords = targetTr.split(' ');
+          let chunks = [];
+          for (let i = 0; i < trWords.length; i += 3) {
+            chunks.push(trWords.slice(i, i + 3).join(' '));
+          }
+          if (chunks.length > 1) {
+            const bridgeQ = {
+              id: `${q.id}_bridge`,
+              type: 'word-bank',
+              prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
+              translation: targetSentence,
+              sentence: targetSentence,
+              correctOrder: chunks,
+              words: [...chunks, 'rağmen', 'çünkü', 'önce', 'sonra'],
+              explanationKey: q.explanationKey || 'academic_tips_master'
+            };
+            expandedQuestions.push(bridgeQ);
+          }
+        }
       }
     });
     currentQuizQuestions = expandedQuestions;
@@ -9007,7 +9032,7 @@ function renderFillBlankDropdown(container, question) {
     const meaning = getOptionMeaning(question, opt);
     const displayText = meaning ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : `<strong>${opt}</strong>`;
     return `
-      <div class="custom-dropdown-item" data-index="${i}" style="padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 1.05rem; color: var(--text-primary); transition: background 0.15s ease; border-bottom: 1px solid rgba(128,128,128,0.1);">
+      <div class="custom-dropdown-item" data-index="" style="padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 1.05rem; color: var(--text-primary); transition: background 0.15s ease; border-bottom: 1px solid rgba(128,128,128,0.1); text-align: left; white-space: normal; word-break: break-word;">
         ${displayText}
       </div>
     `;
@@ -9022,7 +9047,7 @@ function renderFillBlankDropdown(container, question) {
           <span class="trigger-label" id="fb-trigger-label">Seçin...</span>
           <span class="trigger-arrow" id="fb-trigger-arrow" style="font-size: 0.75rem; transition: transform 0.2s ease;">▼</span>
         </button>
-        <div class="custom-dropdown-menu" id="fb-custom-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: max-content; min-width: 260px; max-width: calc(100vw - 32px); background: var(--bg-card, #ffffff); border: 1px solid var(--border-color, rgba(156, 39, 176, 0.3)); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.22); z-index: 1000; overflow: hidden; padding: 6px; backdrop-filter: blur(12px);">
+        <div class="custom-dropdown-menu" id="fb-custom-menu" style="display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: 340px; max-width: calc(100vw - 32px); box-sizing: border-box; white-space: normal; word-break: break-word; background: var(--bg-card, #ffffff); border: 1px solid var(--border-color, rgba(156, 39, 176, 0.3)); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.22); z-index: 1000; overflow: hidden; padding: 6px; backdrop-filter: blur(12px);">
           ${menuItemsHtml}
         </div>
       </span>
@@ -9048,21 +9073,24 @@ function renderFillBlankDropdown(container, question) {
       menuEl.style.transform = 'translateX(-50%)';
 
       requestAnimationFrame(() => {
-        const rect = menuEl.getBoundingClientRect();
-        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        const padding = 16;
+        const menuRect = menuEl.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const padding = 12;
 
-        if (rect.right > viewportWidth - padding) {
-          const overflowRight = rect.right - (viewportWidth - padding);
-          menuEl.style.transform = `translateX(calc(-50% - ${overflowRight}px))`;
-        } else if (rect.left < padding) {
-          const overflowLeft = padding - rect.left;
-          menuEl.style.transform = `translateX(calc(-50% + ${overflowLeft}px))`;
+        const leftEdge = containerRect.left + padding;
+        const rightEdge = containerRect.right - padding;
+
+        if (menuRect.left < leftEdge) {
+          const shift = Math.round(leftEdge - menuRect.left);
+          menuEl.style.transform = 'translateX(calc(-50% + ' + shift + 'px))';
+        } else if (menuRect.right > rightEdge) {
+          const shift = Math.round(menuRect.right - rightEdge);
+          menuEl.style.transform = 'translateX(calc(-50% - ' + shift + 'px))';
         }
       });
     }
-  }
 
+  }
   if (triggerBtn && menuEl) {
     triggerBtn.addEventListener('click', (e) => {
       e.stopPropagation();
