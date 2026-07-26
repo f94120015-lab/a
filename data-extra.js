@@ -2366,10 +2366,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>Before + Past Simple (V2)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
               options: [
-                "Geçmişte gerçekleşen daha yeni olan eylemi (Past Deadline / Sınır Eylem)",
-                "Geçmişte her şeyden önce gerçekleşen ilk eylemi",
-                "Gelecekte gerçekleşecek ilk eylemi",
-                "Şu an sürmekte olan eylemin başlangıcını"
+                "Geçmişte gerçekleşen daha yeni olan eylemi (Past Deadline / Sınır Eylem) / <span style='color: #339af0;'>V2</span>",
+                "Geçmişte her şeyden önce gerçekleşen ilk eylemi / <span style='color: #339af0;'>had + V3</span>",
+                "Gelecekte gerçekleşecek ilk eylemi / <span style='color: #339af0;'>will + V1</span>",
+                "Şu an sürmekte olan eylemin başlangıcını / <span style='color: #339af0;'>am/is/are + Ving</span>"
               ],
               correctIndex: 0,
               explanation: "Before'lu cümle geçmişteki iki olaydan daha sonra olanı (V2) işaret eder. Ana cümle ise ondan da önce tamamlanmış olanı (had + V3) gösterir."
@@ -2379,10 +2379,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>After + Past Perfect (had + V3)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
               options: [
-                "Geçmişteki iki olaydan önce gerçekleşmiş olanını (Older Past)",
-                "Geçmişteki olaylardan sonra olanını",
-                "Gelecekte gerçekleşecek süreci",
-                "Şu anki sonuç durumunu"
+                "Geçmişteki iki olaydan önce gerçekleşmiş olanını (Older Past) / <span style='color: #339af0;'>had + V3</span>",
+                "Geçmişteki olaylardan sonra olanını / <span style='color: #339af0;'>V2</span>",
+                "Gelecekte gerçekleşecek süreci / <span style='color: #339af0;'>will + V1</span>",
+                "Şu anki sonuç durumunu / <span style='color: #339af0;'>have/has + V3</span>"
               ],
               correctIndex: 0,
               explanation: "After'lı yan cümle geçmişte ilk tamamlanan eylemi (had V3) işaret ederken, ana cümle ondan sonra olan eylemi (V2) gösterir."
@@ -2418,10 +2418,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>Until + Past Simple (V2)</code> yan cümlesi zaman çizgisi üzerinde neyi simgeler?",
               options: [
-                "Geçmişteki eylemin sürdüğü son noktayı / zaman sınırını",
-                "Eylemin gelecekteki başlangıç noktasını",
-                "Şu an devam eden bir eylemin kesintiye uğradığı anı",
-                "Geçmişteki eylemin hiçbir zaman gerçekleşmediğini"
+                "Geçmişteki eylemin sürdüğü son noktayı / zaman sınırını / <span style='color: #339af0;'>until + V2</span>",
+                "Eylemin gelecekteki başlangıç noktasını / <span style='color: #339af0;'>will + V1</span>",
+                "Şu an devam eden bir eylemin kesintiye uğradığı anı / <span style='color: #339af0;'>when + V2</span>",
+                "Geçmişteki eylemin hiçbir zaman gerçekleşmediğini / <span style='color: #339af0;'>never + V2</span>"
               ],
               correctIndex: 0,
               explanation: "Until + V2, geçmişte bir durum veya eylemin devam ettiği en son sınırı (o ana kadar) temsil etmek için kullanılır."
