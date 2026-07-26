@@ -2465,10 +2465,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>While + Past Continuous (was/were + Ving)</code> yan cümlesi zaman çizgisi üzerinde neyi temsil eder?",
               options: [
-                "Geçmişte belirli bir süre boyunca devam eden arka plan eylemini (Process)",
-                "Geçmişte anlık olarak olup biten tekil bir eylemi",
-                "Gelecekte kesinlikle yapılacak olan bir planı",
-                "Şu anda her gün tekrarlanan genel bir alışkanlığı"
+                "Geçmişte belirli bir süre boyunca devam eden arka plan eylemini (Process) / <span style='color: #339af0;'>was/were + Ving</span>",
+                "Geçmişte anlık olarak olup biten tekil bir eylemi / <span style='color: #339af0;'>V2</span>",
+                "Gelecekte kesinlikle yapılacak olan bir planı / <span style='color: #339af0;'>am/is/are + Ving</span>",
+                "Şu anda her gün tekrarlanan genel bir alışkanlığı / <span style='color: #339af0;'>V1 / V-s</span>"
               ],
               correctIndex: 0,
               explanation: "While + Past Continuous, geçmişte belli bir zaman aralığında sürmekte olan bir eylemi veya süreci (process) işaret eder."
@@ -2478,10 +2478,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>While + Past Continuous</code> yapısı kullanılırken, **ana cümlenin** Past Simple (V2) olması neyi işaret eder?",
               options: [
-                "Devam eden o süreci aniden bölen/kesen kısa bir eylemi",
-                "Sürecin daha da uzun sürdüğünü",
-                "Eylemin geleceğe sarktığını",
-                "Eylemin geçmişten de önce bittiğini"
+                "Devam eden o süreci aniden bölen/kesen kısa bir eylemi / <span style='color: #339af0;'>V2</span>",
+                "Sürecin daha da uzun sürdüğünü / <span style='color: #339af0;'>was/were + Ving</span>",
+                "Eylemin geleceğe sarktığını / <span style='color: #339af0;'>will + V1</span>",
+                "Eylemin geçmişten de önce bittiğini / <span style='color: #339af0;'>had + V3</span>"
               ],
               correctIndex: 0,
               explanation: "While'lı cümlenin (was/were Ving) devam ettiği sırada gerçekleşen anlık kesinti eylemleri Past Simple (V2) ile ifade edilir."
@@ -2491,10 +2491,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>Just as + Past Continuous</code> yan cümlesi kullanıldığında, zaman çizgisi üzerinde nasıl bir ilişki oluşur?",
               options: [
-                "Tam bir eylem gerçekleştiği anda başka bir eylemin onunla çakıştığını",
-                "İki eylem arasında çok uzun yıllar olduğunu",
-                "Eylemlerin hiçbir şekilde birbiriyle karşılaşmadığını",
-                "İlk eylemin gelecekte, ikincisinin geçmişte olduğunu"
+                "Tam bir eylem gerçekleştiği anda başka bir eylemin onunla çakıştığını / <span style='color: #339af0;'>Just as + was/were Ving, V2</span>",
+                "İki eylem arasında çok uzun yıllar olduğunu / <span style='color: #339af0;'>years later</span>",
+                "Eylemlerin hiçbir şekilde birbiriyle karşılaşmadığını / <span style='color: #339af0;'>independent actions</span>",
+                "İlk eylemin gelecekte, ikincisinin geçmişte olduğunu / <span style='color: #339af0;'>impossible sequence</span>"
               ],
               correctIndex: 0,
               explanation: "Just as, 'tam o esnada' anlamına gelerek, devam eden bir eylemle tam o anda çakışan ani bir başka eylemin zaman çizgisi üzerindeki anlık kesişimini işaret eder."
@@ -2504,10 +2504,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>As soon as + Past Simple (V2) ➔ Past Simple (V2)</code> formülü ne tür bir zaman ilişkisini temsil eder?",
               options: [
-                "Geçmişte biri biter bitmez diğeri başlayan ardışık eylemleri",
-                "Şu anda alışkanlık olarak yapılan işleri",
-                "Gelecekte uzun sürecek olan paralel planları",
-                "Geçmişte birbirini hiçbir şekilde etkilemeyen bağımsız olayları"
+                "Geçmişte biri biter bitmez diğeri başlayan ardışık eylemleri / <span style='color: #339af0;'>As soon as + V2, V2</span>",
+                "Şu anda alışkanlık olarak yapılan işleri / <span style='color: #339af0;'>As soon as + V1, V1</span>",
+                "Gelecekte uzun sürecek olan paralel planları / <span style='color: #339af0;'>As soon as + V1, will + V1</span>",
+                "Geçmişte birbirini hiçbir şekilde etkilemeyen bağımsız olayları / <span style='color: #339af0;'>independent V2s</span>"
               ],
               correctIndex: 0,
               explanation: "As soon as + V2 ➔ V2 yapısı, geçmişte bir olay bittiği anda (hemen peşinden) diğer olayın başladığını gösterir."
@@ -2517,10 +2517,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "Zaman uyumunda <code>When + Past Simple (V2) ➔ Past Simple (V2)</code> formülü neyi işaret edebilir?",
               options: [
-                "Geçmişte bir eylemin diğerini tetiklediği ardışık durumları",
-                "Genel bilimsel doğruları",
-                "Gelecekte eş zamanlı yürüyecek süreçleri",
-                "Şu an yaşanmakta olan bir anı"
+                "Geçmişte bir eylemin diğerini tetiklediği ardışık durumları / <span style='color: #339af0;'>When + V2, V2</span>",
+                "Genel bilimsel doğruları / <span style='color: #339af0;'>When + V1, V1</span>",
+                "Gelecekte eş zamanlı yürüyecek süreçleri / <span style='color: #339af0;'>When + V1, will + V1</span>",
+                "Şu an yaşanmakta olan bir anı / <span style='color: #339af0;'>now</span>"
               ],
               correctIndex: 0,
               explanation: "When + V2 ➔ V2 yapısı, geçmişte bir eylem olduğunda (veya olduğunun hemen ardından) gerçekleşen diğer eylemi anlatır."
