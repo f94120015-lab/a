@@ -2280,10 +2280,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>By the time + Past Simple (V2)</code> yan cümlesi geçmişteki sınır eylemi işaret ettiğine göre, ana cümle zaman çizgisinde **nereyi** işaret eder?",
               options: [
-                "Bu geçmiş sınırdan da önce tamamlanmış olan eylemi (Older Past)",
-                "Gelecekte bu sınırdan sonra başlayacak olan eylemi",
-                "Şu anda devam etmekte olan güncel durumu",
-                "Geçmişte başlayıp hala devam eden süreci"
+                "Bu geçmiş sınırdan da önce tamamlanmış olan eylemi (Older Past) / had + V3",
+                "Gelecekte bu sınırdan sonra başlayacak olan eylemi / will + V1",
+                "Şu anda devam etmekte olan güncel durumu / am/is/are + Ving",
+                "Geçmişte başlayıp hala devam eden süreci / have/has + been + Ving"
               ],
               correctIndex: 0,
               explanation: "Geçmişteki bir zaman sınırına (V2) kadar tamamlanmış olan daha eski bir geçmiş eylemi anlatmak için Past Perfect (had + V3) kullanılır."
@@ -2293,10 +2293,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>By the time + Present Simple (V1)</code> yan cümlesi **gelecekteki** bir zaman sınırını işaret ettiğinde, ana cümle neyi işaret eder?",
               options: [
-                "Gelecekteki o sınırdan önce tamamlanmış olacak süreci (will have + V3)",
-                "Geçmişte çoktan tamamlanmış olan süreci",
-                "Şu an tam gerçekleşmekte olan eylemi",
-                "Gelecekteki o sınırdan sonra başlayacak olan ani durumu"
+                "Gelecekteki o sınırdan önce tamamlanmış olacak süreci / will have + V3",
+                "Geçmişte çoktan tamamlanmış olan süreci / had + V3",
+                "Şu an tam gerçekleşmekte olan eylemi / am/is/are + Ving",
+                "Gelecekteki o sınırdan sonra başlayacak olan ani durumu / will + V1"
               ],
               correctIndex: 0,
               explanation: "Gelecekteki bir zaman sınırına (V1) ulaşıldığında çoktan tamamlanmış olacak eylemleri ifade etmek için Future Perfect (will have + V3) formülü kullanılır."
