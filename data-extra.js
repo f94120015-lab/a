@@ -2392,10 +2392,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "Zaman uyumunda <code>After + had + V3</code> ile <code>Before + V2</code> kalıplarının zaman çizgisi üzerindeki kronolojik ilişkisi nasıldır?",
               options: [
-                "İkisi de kronolojik olarak geçmişteki aynı olay sırasını (1. eylem ➔ 2. eylem) temsil eder",
-                "After eylemin gelecekteki sınırını, Before geçmişteki başlangıcını temsil eder",
-                "Before eylemin şu anki durumunu, After gelecekteki durumunu gösterir",
-                "İkisi arasında hiçbir kronolojik benzerlik yoktur"
+                "İkisi de kronolojik olarak geçmişteki aynı olay sırasını (1. eylem ➔ 2. eylem) temsil eder / <span style='color: #339af0;'>1st: had+V3 ➔ 2nd: V2</span>",
+                "After eylemin gelecekteki sınırını, Before geçmişteki başlangıcını temsil eder / <span style='color: #339af0;'>After + V1 vs Before + V2</span>",
+                "Before eylemin şu anki durumunu, After gelecekteki durumunu gösterir / <span style='color: #339af0;'>Before + V1 vs After + will+V1</span>",
+                "İkisi arasında hiçbir kronolojik benzerlik yoktur / <span style='color: #339af0;'>no match</span>"
               ],
               correctIndex: 0,
               explanation: "After + had V3 (1. eylem) ➔ V2 (2. eylem) ile Before + V2 (2. eylem) ➔ had V3 (1. eylem) kronolojik olarak tamamen aynı olay dizilimini ifade eder."
@@ -2405,10 +2405,10 @@ const chapter105Data = {
               type: "multiple-choice",
               prompt: "<code>As of + Future Time (e.g. As of 2030)</code> ifadesinin yanındaki cümlede neden **Future Perfect** tercih edilir?",
               options: [
-                "Belirtilen gelecek tarihi itibarıyla eylemin çoktan tamamlanmış olacağını işaret ettiği için",
-                "Eylemin o tarihte başlayacağını bildirdiği için",
-                "Eylemin geçmişte kalacağını kesinleştirdiği için",
-                "Şimdiki zamanda devam ettiğini gösterdiği için"
+                "Belirtilen gelecek tarihi itibarıyla eylemin çoktan tamamlanmış olacağını işaret ettiği için / <span style='color: #339af0;'>will have + V3</span>",
+                "Eylemin o tarihte başlayacağını bildirdiği için / <span style='color: #339af0;'>will + V1</span>",
+                "Eylemin geçmişte kalacağını kesinleştirdiği için / <span style='color: #339af0;'>V2</span>",
+                "Şimdiki zamanda devam ettiğini gösterdiği için / <span style='color: #339af0;'>am/is/are + Ving</span>"
               ],
               correctIndex: 0,
               explanation: "As of / By + gelecek zaman ifadeleri, o tarih geldiğinde eylemin bitmiş/tamamlanmış olacağını (Future Perfect) işaret eder."
