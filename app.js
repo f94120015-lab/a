@@ -8651,14 +8651,14 @@ function renderWordBank(container, question) {
     ? question.isEngToTr
     : (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
 
-  let sourceText = isEngToTr ? (question.enSentence || question.sentence) : (question.translation || question.trSentence || question.sentence);
+  let sourceText = isEngToTr ? (question.enSentence || question.sentence || "") : (question.translation || question.trSentence || question.sentence || "");
   if (sourceText) {
     sourceText = makeTextHoverable(sourceText);
   }
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    <p class="quiz-translation">${sourceText}</p>
+    ${sourceText ? `<p class="quiz-translation">${sourceText}</p>` : ''}
     <div class="wb-sentence" id="wb-sentence"></div>
     <div class="wb-bank" id="wb-bank">
       ${shuffledWords.map((w, i) => `

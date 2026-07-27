@@ -41885,16 +41885,12 @@ const unitSentencesMap = {
                             "SVO Yapısı"
                         ],
                         "words": [
-                            "Sembolik anlamı",
-                            "değerlendiren",
-                            "sinema eleştirmenleri",
+                            "Sembolik anlamı değerlendiren sinema eleştirmenleri",
                             "detaylı makaleler",
                             "yazdı."
                         ],
                         "correctOrder": [
-                            "Sembolik anlamı",
-                            "değerlendiren",
-                            "sinema eleştirmenleri",
+                            "Sembolik anlamı değerlendiren sinema eleştirmenleri",
                             "detaylı makaleler",
                             "yazdı."
                         ],
@@ -41967,16 +41963,12 @@ const unitSentencesMap = {
                             "Edilgen Çatı"
                         ],
                         "words": [
-                            "Tapınaktan",
-                            "çıkarılan",
-                            "eserler",
+                            "Tapınaktan çıkarılan eserler",
                             "müzede",
                             "sergilenmektedir."
                         ],
                         "correctOrder": [
-                            "Tapınaktan",
-                            "çıkarılan",
-                            "eserler",
+                            "Tapınaktan çıkarılan eserler",
                             "müzede",
                             "sergilenmektedir."
                         ],
@@ -42112,16 +42104,12 @@ const unitSentencesMap = {
                             "Edilgen Çatı"
                         ],
                         "words": [
-                            "Parlamento tarafından",
-                            "kabul edilen",
-                            "anayasal reformlar",
+                            "Parlamento tarafından kabul edilen anayasal reformlar",
                             "vatandaşların haklarını",
                             "korumalıdır."
                         ],
                         "correctOrder": [
-                            "Parlamento tarafından",
-                            "kabul edilen",
-                            "anayasal reformlar",
+                            "Parlamento tarafından kabul edilen anayasal reformlar",
                             "vatandaşların haklarını",
                             "korumalıdır."
                         ],
@@ -42178,16 +42166,12 @@ const unitSentencesMap = {
                             "İsim ve Edat Yapıları"
                         ],
                         "words": [
-                            "Kentsel büyümeyi",
-                            "araştıran",
-                            "sosyolojik çalışmalar",
+                            "Kentsel büyümeyi araştıran sosyolojik çalışmalar",
                             "araştırmacılar tarafından",
                             "yayımlandı."
                         ],
                         "correctOrder": [
-                            "Kentsel büyümeyi",
-                            "araştıran",
-                            "sosyolojik çalışmalar",
+                            "Kentsel büyümeyi araştıran sosyolojik çalışmalar",
                             "araştırmacılar tarafından",
                             "yayımlandı."
                         ],
@@ -42238,16 +42222,12 @@ const unitSentencesMap = {
                             "İsim Tamlamaları"
                         ],
                         "words": [
-                            "Arkeologlar tarafından",
-                            "kazılan",
-                            "antik harabeler",
+                            "Arkeologlar tarafından kazılan antik harabeler",
                             "şehrin kültürel mirasını",
                             "içermektedir."
                         ],
                         "correctOrder": [
-                            "Arkeologlar tarafından",
-                            "kazılan",
-                            "antik harabeler",
+                            "Arkeologlar tarafından kazılan antik harabeler",
                             "şehrin kültürel mirasını",
                             "içermektedir."
                         ],

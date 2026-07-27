@@ -231,8 +231,8 @@ new_unit_12 = {
                         "type": "word-bank",
                         "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Film critics evaluating symbolic meaning wrote detailed articles.\"",
                         "grammarTags": ["Participle Yapıları", "Cümlecik Kısaltması", "SVO Yapısı"],
-                        "words": ["Sembolik anlamı", "değerlendiren", "sinema eleştirmenleri", "detaylı makaleler", "yazdı."],
-                        "correctOrder": ["Sembolik anlamı", "değerlendiren", "sinema eleştirmenleri", "detaylı makaleler", "yazdı."],
+                        "words": ["Sembolik anlamı değerlendiren sinema eleştirmenleri", "detaylı makaleler", "yazdı."],
+                        "correctOrder": ["Sembolik anlamı değerlendiren sinema eleştirmenleri", "detaylı makaleler", "yazdı."],
                         "translation": "Sembolik anlamı değerlendiren sinema eleştirmenleri detaylı makaleler yazdı."
                     },
                     {
@@ -275,8 +275,8 @@ new_unit_12 = {
                         "type": "word-bank",
                         "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Artifacts recovered from the temple are displayed in the museum.\"",
                         "grammarTags": ["Participle Yapıları", "Past Participle Sıfatı", "Edilgen Çatı"],
-                        "words": ["Tapınaktan", "çıkarılan", "eserler", "müzede", "sergilenmektedir."],
-                        "correctOrder": ["Tapınaktan", "çıkarılan", "eserler", "müzede", "sergilenmektedir."],
+                        "words": ["Tapınaktan çıkarılan eserler", "müzede", "sergilenmektedir."],
+                        "correctOrder": ["Tapınaktan çıkarılan eserler", "müzede", "sergilenmektedir."],
                         "translation": "Tapınaktan çıkarılan eserler müzede sergilenmektedir."
                     },
                     {
@@ -370,8 +370,8 @@ new_unit_12 = {
                         "type": "word-bank",
                         "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Constitutional reforms passed by parliament must protect the rights of citizens.\"",
                         "grammarTags": ["Participle Yapıları", "Past Participle Sıfatı", "Saf Modallar", "Edilgen Çatı"],
-                        "words": ["Parlamento tarafından", "kabul edilen", "anayasal reformlar", "vatandaşların haklarını", "korumalıdır."],
-                        "correctOrder": ["Parlamento tarafından", "kabul edilen", "anayasal reformlar", "vatandaşların haklarını", "korumalıdır."],
+                        "words": ["Parlamento tarafından kabul edilen anayasal reformlar", "vatandaşların haklarını", "korumalıdır."],
+                        "correctOrder": ["Parlamento tarafından kabul edilen anayasal reformlar", "vatandaşların haklarını", "korumalıdır."],
                         "translation": "Parlamento tarafından kabul edilen anayasal reformlar vatandaşların haklarını korumalıdır."
                     },
                     {
@@ -404,8 +404,8 @@ new_unit_12 = {
                         "type": "word-bank",
                         "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Sociological studies investigating urban growth were published by researchers.\"",
                         "grammarTags": ["Participle Yapıları", "Present Participle Sıfatı", "Edilgen Çatı", "İsim ve Edat Yapıları"],
-                        "words": ["Kentsel büyümeyi", "araştıran", "sosyolojik çalışmalar", "araştırmacılar tarafından", "yayımlandı."],
-                        "correctOrder": ["Kentsel büyümeyi", "araştıran", "sosyolojik çalışmalar", "araştırmacılar tarafından", "yayımlandı."],
+                        "words": ["Kentsel büyümeyi araştıran sosyolojik çalışmalar", "araştırmacılar tarafından", "yayımlandı."],
+                        "correctOrder": ["Kentsel büyümeyi araştıran sosyolojik çalışmalar", "araştırmacılar tarafından", "yayımlandı."],
                         "translation": "Kentsel büyümeyi araştıran sosyolojik çalışmalar araştırmacılar tarafından yayımlandı."
                     },
                     {
@@ -437,8 +437,8 @@ new_unit_12 = {
                         "type": "word-bank",
                         "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Ancient ruins excavated by archaeologists contain cultural heritage of the city.\"",
                         "grammarTags": ["Participle Yapıları", "Past Participle Sıfatı", "İsim ve Edat Yapıları", "İsim Tamlamaları"],
-                        "words": ["Arkeologlar tarafından", "kazılan", "antik harabeler", "şehrin kültürel mirasını", "içermektedir."],
-                        "correctOrder": ["Arkeologlar tarafından", "kazılan", "antik harabeler", "şehrin kültürel mirasını", "içermektedir."],
+                        "words": ["Arkeologlar tarafından kazılan antik harabeler", "şehrin kültürel mirasını", "içermektedir."],
+                        "correctOrder": ["Arkeologlar tarafından kazılan antik harabeler", "şehrin kültürel mirasını", "içermektedir."],
                         "translation": "Arkeologlar tarafından kazılan antik harabeler şehrin kültürel mirasını içermektedir."
                     },
                     {
@@ -475,16 +475,6 @@ if match:
     print("Successfully replaced Unit 12 in unitSentencesMap of data.js!")
 else:
     print("Error: Could not find unit 12 pattern in data.js")
-
-# Now update rawTopics entry for id: 12 in data.js
-raw_topics_pattern = r'(\{\s*"id"\s*:\s*12,[\s\S]*?"numLessons"\s*:\s*)\d+([\s\S]*?"subtitles"\s*:\s*\[)[\s\S]*?(\])'
-raw_match = re.search(raw_topics_pattern, content)
-if raw_match:
-    new_raw_entry = raw_match.group(1) + "1" + raw_match.group(2) + '\n      "Sıfat-Fiiller ve Kısaltmalar (Participles) (Sayfa 81-97)"\n    ' + raw_match.group(3)
-    content = content[:raw_match.start()] + new_raw_entry + content[raw_match.end():]
-    print("Successfully updated rawTopics for Unit 12 in data.js!")
-else:
-    print("Warning: Could not match rawTopics pattern for Unit 12")
 
 with open("data.js", "w", encoding="utf-8") as f:
     f.write(content)
