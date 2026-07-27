@@ -4553,9 +4553,9 @@ if (typeof lessons !== 'undefined') {
     3,   // İsim Tamlaması
     2,   // Fiil ve Edat Yapıları
     7,   // Özne - Geçişli Fiil + Nesne
+    70,  // Saf Modallar ve Saf Zamanlar
     9,   // Soru Yapıları
     12,  // Participle Yapıları
-    70,  // Saf Modallar ve Saf Zamanlar
     8,   // "There" Yapıları
     102, // Zaman Zarfları ve Zaman Uyumu
     101, // Zaman Uyumu: By the time, Since, It is time

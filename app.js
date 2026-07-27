@@ -19,9 +19,9 @@ function cleanAcademicUnitTitle(title) {
     'İsim ve Edat Yapıları': 'İsim ve Edat Yapıları (Nouns & Prepositions)',
     'Fiil ve Edat Yapıları': 'Fiil ve Edat Yapıları (Verbs & Prepositions)',
     'Özne - Geçişli Fiil + Nesne': 'Özne, Fiil ve Nesne Dizilimi (SVO Structure)',
+    'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar (Modals & Tenses)',
     '"There" Yapıları': 'Var/Yok İfadeleri (There is / There are)',
     'Soru Yapıları': 'Soru Cümleleri ve Kalıpları (Question Structures)',
-    'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar (Modals & Tenses)',
     'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar (Passive Voice & Passive Infinitive)',
     'İsim Tamlaması': 'İsim Tamlamaları (Noun Compounds)',
     'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltmalar (Participles)',
@@ -7914,12 +7914,10 @@ function renderMultipleChoice(container, question) {
   }).join('');
 
   let tipsHtml = '';
-  if (currentLesson && [5, 54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
+  if (currentLesson && [54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
     let tipText = '';
     const unitId = currentLesson.unitId;
-    if (unitId === 5) {
-      tipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-    } else if (unitId === 54) {
+    if (unitId === 54) {
       if (question.id.includes('_l01') || question.id.includes('_l1')) {
         tipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
       } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
@@ -17442,11 +17440,9 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       ruleText = preDefinedExplanation;
     } else {
       let lessonTipText = '';
-      if (currentLesson && [5, 54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
+      if (currentLesson && [54, 55, 56, 57, 58].includes(currentLesson.unitId)) {
         const unitId = currentLesson.unitId;
-        if (unitId === 5) {
-          lessonTipText = '<strong>Existential "There" Hiyerarşisi:</strong> 1. <em>There exists/is</em> (Basit), 2. <em>There must be</em> (Orta), 3. <em>There could have been</em> (İleri), 4. <em>There might have been V-ing</em> (Üst Düzey), 5. <em>There should have been being V3</em> (En Karmaşık).';
-        } else if (unitId === 54) {
+        if (unitId === 54) {
           if (question.id.includes('_l01') || question.id.includes('_l1')) {
             lessonTipText = '<strong>As Türevleri:</strong> <em>As for / As to</em> (-e gelince, ile ilgili), <em>As of</em> (-den itibaren), <em>As if / As though</em> (-mış gibi), <em>As in</em> (-de olduğu gibi).';
           } else if (question.id.includes('_l02') || question.id.includes('_l2')) {
