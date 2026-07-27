@@ -7385,6 +7385,30 @@ function renderQuestion() {
   const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex]);
   if (!question) return;
 
+  // Automatic Question Schema Normalization Guard
+  if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown') {
+    if (!question.sentence && question.prompt && question.prompt.includes('___')) {
+      question.sentence = question.prompt;
+      question.prompt = "Boşluğu doldur";
+    }
+    if (!question.options && question.correctAnswer) {
+      question.type = 'fill-blank-text';
+    }
+  }
+  if (question.type === 'word-bank') {
+    if (question.tokens && !question.words && question.correctAnswer && typeof question.correctAnswer === 'string') {
+      question.type = 'fill-blank-dropdown';
+      question.options = question.tokens;
+      question.correctIndex = question.tokens.indexOf(question.correctAnswer);
+      if (!question.sentence && question.question) {
+        question.sentence = question.question;
+      }
+    } else {
+      if (!question.words && question.tokens) question.words = question.tokens;
+      if (!question.correctOrder && question.correctSequence) question.correctOrder = question.correctSequence;
+    }
+  }
+
   // Convert bracketed answers [word] to gap underscores ___ for fill-blank question types
   if (question.type && question.type.startsWith('fill-blank') && question.sentence && question.sentence.includes('[') && question.sentence.includes(']')) {
     if (!question._originalSentence) {

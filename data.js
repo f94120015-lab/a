@@ -41858,15 +41858,21 @@ const unitSentencesMap = {
                     },
                     {
                         "id": "u12l1_ex2_q5",
-                        "type": "fill-blank",
-                        "prompt": "Boşluğa uygun olan eylemsi (-ing) ekini klavyeden yazarak tamamlayın: \"Archaeologists excavat___ ancient ruins discovered a forgotten temple.\"",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
                         "grammarTags": [
                             "Participle Yapıları",
                             "Present Participle Sıfatı",
                             "Geçmiş Zaman"
                         ],
-                        "sentence": "Archaeologists excavat[ing] ancient ruins discovered a forgotten temple.",
-                        "correctAnswer": "ing",
+                        "sentence": "Archaeologists [excavating] ancient ruins discovered a forgotten temple.",
+                        "options": [
+                            "excavating",
+                            "excavated",
+                            "excavate",
+                            "to excavate"
+                        ],
+                        "correctIndex": 0,
                         "translation": "Antik harabeleri kazan arkeologlar unutulmuş bir tapınak keşfetti."
                     },
                     {
@@ -41934,15 +41940,21 @@ const unitSentencesMap = {
                     },
                     {
                         "id": "u12l1_ex2_q9",
-                        "type": "fill-blank",
-                        "prompt": "Boşluğa uygun olan eylemsi (-ed) ekini klavyeden yazarak tamamlayın: \"Evidence present___ in court convinced the judge.\"",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
                         "grammarTags": [
                             "Participle Yapıları",
                             "Past Participle Sıfatı",
                             "Geçmiş Zaman"
                         ],
-                        "sentence": "Evidence present[ed] in court convinced the judge.",
-                        "correctAnswer": "ed",
+                        "sentence": "Evidence [presented] in court convinced the judge.",
+                        "options": [
+                            "presented",
+                            "presenting",
+                            "present",
+                            "to present"
+                        ],
+                        "correctIndex": 0,
                         "translation": "Mahkemede sunulan deliller hakimi ikna etti."
                     },
                     {

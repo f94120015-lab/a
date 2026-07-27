@@ -218,11 +218,12 @@ new_unit_12 = {
                     },
                     {
                         "id": "u12l1_ex2_q5",
-                        "type": "fill-blank",
-                        "prompt": "Boşluğa uygun olan eylemsi (-ing) ekini klavyeden yazarak tamamlayın: \"Archaeologists excavat___ ancient ruins discovered a forgotten temple.\"",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
                         "grammarTags": ["Participle Yapıları", "Present Participle Sıfatı", "Geçmiş Zaman"],
-                        "sentence": "Archaeologists excavat[ing] ancient ruins discovered a forgotten temple.",
-                        "correctAnswer": "ing",
+                        "sentence": "Archaeologists [excavating] ancient ruins discovered a forgotten temple.",
+                        "options": ["excavating", "excavated", "excavate", "to excavate"],
+                        "correctIndex": 0,
                         "translation": "Antik harabeleri kazan arkeologlar unutulmuş bir tapınak keşfetti."
                     },
                     {
@@ -261,11 +262,12 @@ new_unit_12 = {
                     },
                     {
                         "id": "u12l1_ex2_q9",
-                        "type": "fill-blank",
-                        "prompt": "Boşluğa uygun olan eylemsi (-ed) ekini klavyeden yazarak tamamlayın: \"Evidence present___ in court convinced the judge.\"",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
                         "grammarTags": ["Participle Yapıları", "Past Participle Sıfatı", "Geçmiş Zaman"],
-                        "sentence": "Evidence present[ed] in court convinced the judge.",
-                        "correctAnswer": "ed",
+                        "sentence": "Evidence [presented] in court convinced the judge.",
+                        "options": ["presented", "presenting", "present", "to present"],
+                        "correctIndex": 0,
                         "translation": "Mahkemede sunulan deliller hakimi ikna etti."
                     },
                     {
@@ -460,7 +462,6 @@ with open("data.js", "r", encoding="utf-8") as f:
     content = f.read()
 
 # Replace unit 12 in unitSentencesMap
-# Find `"12": { ... }` in data.js
 pattern = r'(\s*"12"\s*:\s*\{)[\s\S]*?(\n\s*\},?\n\s*"14")'
 match = re.search(pattern, content)
 
@@ -468,7 +469,6 @@ if match:
     start_str = match.group(1)
     end_str = match.group(2)
     formatted_json = json.dumps(new_unit_12, ensure_ascii=False, indent=4)
-    # Remove leading object wrapper bracket `{` and trailing `}`
     inner_json = formatted_json[formatted_json.find('{')+1:formatted_json.rfind('}')].strip()
     replacement = start_str + "\n" + inner_json + end_str
     content = content[:match.start()] + replacement + content[match.end():]
@@ -477,7 +477,6 @@ else:
     print("Error: Could not find unit 12 pattern in data.js")
 
 # Now update rawTopics entry for id: 12 in data.js
-# Update numLessons: 1 and subtitles: ["Sıfat-Fiiller ve Kısaltmalar (Participles) (Sayfa 81-97)"]
 raw_topics_pattern = r'(\{\s*"id"\s*:\s*12,[\s\S]*?"numLessons"\s*:\s*)\d+([\s\S]*?"subtitles"\s*:\s*\[)[\s\S]*?(\])'
 raw_match = re.search(raw_topics_pattern, content)
 if raw_match:
