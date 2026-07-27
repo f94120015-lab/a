@@ -36238,753 +36238,730 @@ const unitSentencesMap = {
       ]
     }
   },  "8": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u8l1ex1",
-        "title": "Alıştırma 1: Temel \"There\" Yapıları (İfade Düzeyi ve Giriş)",
-        "description": "Beşeri bilimler temalı ifade eşleştirme, çoktan seçmeli ve kelime bankası (12 Soru)",
-        "createdAt": "2026-07-23T18:35:00Z",
-        "questions": [
-          {
-            "id": "u8l21_ex1_match1",
-            "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "There is a distinction in philosophy",
-                "right": "Felsefede bir ayrım vardır"
-              },
-              {
-                "left": "There was no consensus among historians",
-                "right": "Tarihçiler arasında bir uzlaşı yoktu"
-              },
-              {
-                "left": "There is a tendency in human nature",
-                "right": "İnsan doğasında bir eğilim vardır"
-              },
-              {
-                "left": "There will be a conflict between social classes",
-                "right": "Toplumsal sınıflar arasında bir çatışma olacaktır"
-              }
-            ],
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Gelecek Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_mc_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There was a major transformation in ancient societies.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Antik toplumlarda büyük bir dönüşüm vardı.",
-              "Antik toplumlar büyük bir dönüşüm geçirdi.",
-              "Geleneksel toplumlarda dönüşüm yoktu.",
-              "Toplumsal dönüşüm antik dönemde başladı."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There was a major transformation in ancient societies.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Simple Past","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_wb_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There is no simple solution in ethics.",
-            "words": [
-              "Etikte",
-              "basit",
-              "bir",
-              "çözüm",
-              "yoktur",
-              "vardır",
-              "kavram",
-              "teori"
-            ],
-            "correctOrder": [
-              "Etikte",
-              "basit",
-              "bir",
-              "çözüm",
-              "yoktur"
-            ],
-            "enSentence": "There is no simple solution in ethics.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There has been a shift in literary paradigms.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Edebi paradigmalarda bir kayma olmuştur.",
-              "Edebi paradigmalarda hiçbir değişim yoktur.",
-              "Edebiyat paradigması tamamen yıkılmıştır.",
-              "Yeni bir edebi akım ortaya çıkacaktır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There has been a shift in literary paradigms.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Present Perfect","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_wb_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There were several arguments against the hypothesis.",
-            "words": [
-              "Hipoteze",
-              "karşı",
-              "birkaç",
-              "argüman",
-              "vardı",
-              "yoktu",
-              "teori",
-              "kanıt"
-            ],
-            "correctOrder": [
-              "Hipoteze",
-              "karşı",
-              "birkaç",
-              "argüman",
-              "vardı"
-            ],
-            "enSentence": "There were several arguments against the hypothesis.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Simple Past"]
-          },
-          {
-            "id": "u8l21_ex1_mc_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There is a fundamental difference between these two theories.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Bu iki kuram arasında temel bir fark vardır.",
-              "İki teori birbirinin tamamen aynısıdır.",
-              "Kuramlar arasında hiçbir ilişki yoktur.",
-              "Teorik açıdan bir fark yaratılamadı."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There is a fundamental difference between these two theories.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_wb_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There will be new interpretations of historical texts.",
-            "words": [
-              "Tarihsel",
-              "metinlerin",
-              "yeni",
-              "yorumları",
-              "olacaktır",
-              "vardı",
-              "yoktur",
-              "analizi"
-            ],
-            "correctOrder": [
-              "Tarihsel",
-              "metinlerin",
-              "yeni",
-              "yorumları",
-              "olacaktır"
-            ],
-            "enSentence": "There will be new interpretations of historical texts.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Gelecek Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_mc_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There was no agreement on the definition of justice.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Adalet tanımı üzerinde bir uzlaşma yoktu.",
-              "Adaletin tanımı herkesçe kabul edildi.",
-              "Adalet kavramı üzerinde anlaşma sağlandı.",
-              "Tarihsel süreçte adalet tanımı değişmedi."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There was no agreement on the definition of justice.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Simple Past","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_wb_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There is a growing interest in cultural anthropology.",
-            "words": [
-              "Kültürel",
-              "antropolojiye",
-              "artan",
-              "bir",
-              "ilgi",
-              "vardır",
-              "yoktur",
-              "bilim"
-            ],
-            "correctOrder": [
-              "Kültürel",
-              "antropolojiye",
-              "artan",
-              "bir",
-              "ilgi",
-              "vardır"
-            ],
-            "enSentence": "There is a growing interest in cultural anthropology.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_mc_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There have been many debates regarding cognitive development.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Bilişsel gelişimle ilgili pek çok tartışma olmuştur.",
-              "Bilişsel gelişim konusunda tartışma yapılmamıştır.",
-              "Zihinsel gelişim teorileri tamamen kanıtlandı.",
-              "Gelişim psikolojisi yeni tartışmalar başlattı."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There have been many debates regarding cognitive development.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Present Perfect"]
-          },
-          {
-            "id": "u8l21_ex1_wb_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There is a strong correlation between education and social mobility.",
-            "words": [
-              "Eğitim",
-              "ile",
-              "toplumsal",
-              "hareketlilik",
-              "arasında",
-              "güçlü",
-              "bir",
-              "ilişki",
-              "vardır"
-            ],
-            "correctOrder": [
-              "Eğitim",
-              "ile",
-              "toplumsal",
-              "hareketlilik",
-              "arasında",
-              "güçlü",
-              "bir",
-              "ilişki",
-              "vardır"
-            ],
-            "enSentence": "There is a strong correlation between education and social mobility.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex1_tx_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "translation-text",
-            "prompt": "\"There was an intense debate over moral values in classical philosophy.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Klasik felsefede ahlaki değerler üzerine yoğun bir tartışma vardı.",
-            "enSentence": "There was an intense debate over moral values in classical philosophy.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Simple Past","İsim + Edat Takımı"]
-          }
-        ]
-      },
-      {
-        "id": "u8l1ex2",
-        "title": "Alıştırma 2: Modallı \"There\" Yapıları ve Cümle Çözümleme",
-        "description": "Beşeri bilimler bağlamında modal ve zaman varyasyonlu \"There\" cümleleri (12 Soru)",
-        "createdAt": "2026-07-23T18:35:00Z",
-        "questions": [
-          {
-            "id": "u8l21_ex2_mc_0",
-            "type": "multiple-choice",
-            "prompt": "\"There must be a logical explanation for human behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "İnsan davranışı için mantıklı bir açıklama olmalıdır.",
-              "İnsan davranışları mantıklı olarak açıklanamaz.",
-              "İnsan davranışı mantık çerçevesinde gelişir.",
-              "Toplumsal davranışların açıklaması bulunmalıdır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There must be a logical explanation for human behavior.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı","Sıfat & Participle Nitelemeleri"]
-          },
-          {
-            "id": "u8l21_ex2_wb_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There should be more emphasis on qualitative research methods.",
-            "words": [
-              "Nitel",
-              "araştırma",
-              "yöntemlerine",
-              "daha",
-              "fazla",
-              "vurgu",
-              "olmalıdır",
-              "yapılmalıdır",
-              "bilim"
-            ],
-            "correctOrder": [
-              "Nitel",
-              "araştırma",
-              "yöntemlerine",
-              "daha",
-              "fazla",
-              "vurgu",
-              "olmalıdır"
-            ],
-            "enSentence": "There should be more emphasis on qualitative research methods.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There can be no doubts about the authenticity of the ancient document.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Antik belgenin özgünlüğü hakkında hiçbir şüphe olamaz.",
-              "Tarihsel belgenin doğruluğu şüphelidir.",
-              "Antik metinlerin orijinalliği kanıtlanamamıştır.",
-              "Belgenin sahte olduğuna dair şüpheler vardır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There can be no doubts about the authenticity of the ancient document.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_wb_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There might be a hidden bias in the historical sources.",
-            "words": [
-              "Tarihsel",
-              "kaynaklarda",
-              "gizli",
-              "bir",
-              "taraflılık",
-              "olabilir",
-              "vardır",
-              "yoktur"
-            ],
-            "correctOrder": [
-              "Tarihsel",
-              "kaynaklarda",
-              "gizli",
-              "bir",
-              "taraflılık",
-              "olabilir"
-            ],
-            "enSentence": "There might be a hidden bias in the historical sources.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_mc_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There must have been a misunderstanding between the negotiators.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Müzakereciler arasında bir yanlış anlaşılma olmuş olmalı.",
-              "Müzakere sürecinde hiçbir sorun yaşanmadı.",
-              "Taraf temsilcileri anlaşmayı onaylamak zorundaydı.",
-              "Diplomatik görüşmeler yanlış anlaşılmayla sona erdi."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There must have been a misunderstanding between the negotiators.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","Present Perfect","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_wb_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There could have been a peaceful resolution to the dispute.",
-            "words": [
-              "Anlaşmazlığa",
-              "barışçıl",
-              "bir",
-              "çözüm",
-              "olabilirdi",
-              "olmalıydı",
-              "bulundu",
-              "tarih"
-            ],
-            "correctOrder": [
-              "Anlaşmazlığa",
-              "barışçıl",
-              "bir",
-              "çözüm",
-              "olabilirdi"
-            ],
-            "enSentence": "There could have been a peaceful resolution to the dispute.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","Present Perfect"]
-          },
-          {
-            "id": "u8l21_ex2_mc_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There should have been a clearer definition of civil rights.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Yurttaşlık haklarının daha açık bir tanımı olmalıydı.",
-              "Sivil haklar kanunda net şekilde tanımlanmıştır.",
-              "Vatandaşlık hakları üzerine yeni bir tanım yapıldı.",
-              "Haklar ve özgürlükler açıkça belirtilmek zorundadır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There should have been a clearer definition of civil rights.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","Present Perfect","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_wb_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There might have been an external influence on the artist.",
-            "words": [
-              "Sanatçı",
-              "üzerinde",
-              "dışsal",
-              "bir",
-              "etki",
-              "olmuş",
-              "olabilir",
-              "vardır"
-            ],
-            "correctOrder": [
-              "Sanatçı",
-              "üzerinde",
-              "dışsal",
-              "bir",
-              "etki",
-              "olmuş",
-              "olabilir"
-            ],
-            "enSentence": "There might have been an external influence on the artist.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","Present Perfect","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_mc_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There ought to be an institutional reform in education.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Eğitimde kurumsal bir reform olmalıdır.",
-              "Eğitim kurumları tamamen yeniden yapılandırıldı.",
-              "Eğitim sisteminde reform yapılması imkansızdır.",
-              "Kurumsal reformlar eğitimi doğrudan etkiler."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There ought to be an institutional reform in education.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_wb_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Felsefi tartışmalarda temel bir çelişki olamaz.",
-            "words": [
-              "There",
-              "can",
-              "be",
-              "no",
-              "fundamental",
-              "contradiction",
-              "in",
-              "philosophical",
-              "debates"
-            ],
-            "correctOrder": [
-              "There",
-              "can",
-              "be",
-              "no",
-              "fundamental",
-              "contradiction",
-              "in",
-              "philosophical",
-              "debates"
-            ],
-            "enSentence": "There can be no fundamental contradiction in philosophical debates.",
-            "isEngToTr": false,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_tx_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "translation-text",
-            "prompt": "\"There must be a systematic approach to analyzing historical archives.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Tarihsel arşivleri analiz etmek için sistemli bir yaklaşım olmalıdır.",
-            "enSentence": "There must be a systematic approach to analyzing historical archives.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex2_tx_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "translation-text",
-            "prompt": "\"There could not have been a complete breakdown of communication between the social groups.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Sosyal gruplar arasında iletişimin tam bir kopuşu olamazdı.",
-            "enSentence": "There could not have been a complete breakdown of communication between the social groups.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Saf Modallar","Present Perfect","İsim + Edat Takımı"]
-          }
-        ]
-      },
-      {
-        "id": "u8l1ex3",
-        "title": "Alıştırma 3: İleri Düzey Existential \"There\" Yapıları ve Entegre Tekrar",
-        "description": "Akademik varlık eylemleri (exist, seem, appear, turn out) ve spiralleşen cümle yapıları (12 Soru)",
-        "createdAt": "2026-07-23T18:35:00Z",
-        "questions": [
-          {
-            "id": "u8l21_ex3_mc_0",
-            "type": "multiple-choice",
-            "prompt": "\"There exist structural inequalities in modern economic systems.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Modern ekonomik sistemlerde yapısal eşitsizlikler mevcuttur.",
-              "Ekonomik sistemler yapısal eşitsizlikleri ortadan kaldırır.",
-              "Modern ekonomide eşitsizliklerin nedeni araştırılmalıdır.",
-              "Yapısal reformlar ekonomik sistemleri güçlendirir."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There exist structural inequalities in modern economic systems.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_wb_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There seem to be conflicting accounts of the revolution.",
-            "words": [
-              "Devrim hakkında",
-              "çelişkili",
-              "anlatılar",
-              "var",
-              "gibi",
-              "görünüyor",
-              "tarih",
-              "sosyoloji"
-            ],
-            "correctOrder": [
-              "Devrim hakkında",
-              "çelişkili",
-              "anlatılar",
-              "var",
-              "gibi",
-              "görünüyor"
-            ],
-            "enSentence": "There seem to be conflicting accounts of the revolution.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There appear to be several flaws in the psychological experiment.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Psikolojik deneyde birkaç kusur var gibi görünmektedir.",
-              "Psikoloji deneyi kusursuz bir şekilde tamamlanmıştır.",
-              "Deneydeki hatalar araştırmacılar tarafından düzeltildi.",
-              "Psikolojik araştırmalar yeni sonuçlar ortaya koymaktadır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There appear to be several flaws in the psychological experiment.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_wb_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There turned out to be no evidence supporting the claim.",
-            "words": [
-              "İddiayı",
-              "destekleyen",
-              "hiçbir",
-              "kanıtın",
-              "olmadığı",
-              "ortaya",
-              "çıktı",
-              "felsefe"
-            ],
-            "correctOrder": [
-              "İddiayı",
-              "destekleyen",
-              "hiçbir",
-              "kanıtın",
-              "olmadığı",
-              "ortaya",
-              "çıktı"
-            ],
-            "enSentence": "There turned out to be no evidence supporting the claim.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"]
-          },
-          {
-            "id": "u8l21_ex3_mc_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There remains a significant gap in the literature on medieval art.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Ortaçağ sanatı üzerine literatürde önemli bir boşluk kalmaktadır.",
-              "Ortaçağ sanatı literatürü tüm sorulara yanıt vermektedir.",
-              "Sanat tarihi alanındaki boşluklar tamamen kapatılmıştır.",
-              "Ortaçağ üzerine yazılan eserler sanat tarihini etkiler."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There remains a significant gap in the literature on medieval art.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_wb_2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There are reported to be ancient ruins under the modern city.",
-            "words": [
-              "Modern",
-              "şehrin",
-              "altında",
-              "antik",
-              "kalıntıların",
-              "olduğu",
-              "bildirilmektedir",
-              "tarih"
-            ],
-            "correctOrder": [
-              "Modern",
-              "şehrin",
-              "altında",
-              "antik",
-              "kalıntıların",
-              "olduğu",
-              "bildirilmektedir"
-            ],
-            "enSentence": "There are reported to be ancient ruins under the modern city.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_mc_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There proved to be substantial agreement among sociological scholars.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Sosyoloji bilginleri arasında kayda değer bir uzlaşmanın olduğu kanıtlandı.",
-              "Sosyologlar toplumsal konular üzerinde uzlaşmaya varamadı.",
-              "Sosyolojik araştırmalar akademisyenler tarafından kanıtlandı.",
-              "Toplumsal bilimlerde uzlaşı sağlamak son derece güçtür."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There proved to be substantial agreement among sociological scholars.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"]
-          },
-          {
-            "id": "u8l21_ex3_wb_3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Sosyolojide toplumsal sınıfların kökenleri hakkında farklı görüşler mevcuttur.",
-            "words": [
-              "There",
-              "exist",
-              "different",
-              "perspectives",
-              "on",
-              "the",
-              "origins",
-              "of",
-              "social",
-              "classes",
-              "in",
-              "sociology"
-            ],
-            "correctOrder": [
-              "There",
-              "exist",
-              "different",
-              "perspectives",
-              "on",
-              "the",
-              "origins",
-              "of",
-              "social",
-              "classes",
-              "in",
-              "sociology"
-            ],
-            "enSentence": "There exist different perspectives on the origins of social classes in sociology.",
-            "isEngToTr": false,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_mc_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "multiple-choice",
-            "prompt": "\"There happens to be a close connection between language and thought.\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Dil ile düşünce arasında tesadüfen yakın bir bağlantı bulunmaktadır.",
-              "Dil ve düşünce arasındaki ilişki zorunlu bir bağlantıdır.",
-              "Düşünce biçimleri dili doğrudan şekillendirir.",
-              "Dilbilim araştırmaları zihinsel süreçleri inceler."
-            ],
-            "correctIndex": 0,
-            "enSentence": "There happens to be a close connection between language and thought.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_wb_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "There are likely to be ethical dilemmas in biometric research.",
-            "words": [
-              "Biyometrik",
-              "araştırmalarda",
-              "etik",
-              "ikilemlerin",
-              "olması",
-              "muhtemeldir",
-              "felsefe",
-              "bilim"
-            ],
-            "correctOrder": [
-              "Biyometrik",
-              "araştırmalarda",
-              "etik",
-              "ikilemlerin",
-              "olması",
-              "muhtemeldir"
-            ],
-            "enSentence": "There are likely to be ethical dilemmas in biometric research.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Geniş Zaman","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_tx_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "translation-text",
-            "prompt": "\"There seems to have been a gradual transformation in the political ideology of the state.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Devletin siyasi ideolojisinde kademeli bir dönüşüm gerçekleşmiş gibi görünmektedir.",
-            "enSentence": "There seems to have been a gradual transformation in the political ideology of the state.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","Present Perfect","İsim + Edat Takımı"]
-          },
-          {
-            "id": "u8l21_ex3_tx_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "type": "translation-text",
-            "prompt": "\"There turn out to be profound psychological implications of social isolation.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Sosyal izolasyonun derin psikolojik sonuçlarının olduğu ortaya çıkmaktadır.",
-            "enSentence": "There turn out to be profound psychological implications of social isolation.",
-            "isEngToTr": true,
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"]
-          }
-        ]
-      }
-    ]
-  }
-},
+    "1": {
+      "exercises": [
+        {
+          "id": "u8l1ex1",
+          "title": "Alıştırma 1: Yapısal Kalıplar (Öbek Düzeyi)",
+          "description": "Temel var/yok yapıları (there is / are / was / were / will be / has been) ve basit öbek seviyesi eşleştirmeleri (10 Soru)",
+          "createdAt": "2026-07-27T00:00:00Z",
+          "questions": [
+            {
+              "id": "u8l21_ex1_q1",
+              "type": "matching",
+              "prompt": "Temel var/yok kalıplarını Türkçe karşılıklarıyla eşleştirin.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ],
+              "pairs": [
+                {
+                  "left": "there is a theory",
+                  "right": "bir teori vardır"
+                },
+                {
+                  "left": "there was no consensus",
+                  "right": "bir uzlaşı yoktu"
+                },
+                {
+                  "left": "there will be a shift",
+                  "right": "bir kayma olacaktır"
+                },
+                {
+                  "left": "there must be factors",
+                  "right": "faktörler olmalıdır"
+                }
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q2",
+              "type": "matching",
+              "prompt": "Tarih ve sosyoloji alanındaki var/yok ifadelerini eşleştirin.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ],
+              "pairs": [
+                {
+                  "left": "there are ancient ruins",
+                  "right": "antik harabeler vardır"
+                },
+                {
+                  "left": "there should be civil liberties",
+                  "right": "sivil özgürlükler olmalıdır"
+                },
+                {
+                  "left": "there can be no doubt",
+                  "right": "hiçbir şüphe olamaz"
+                },
+                {
+                  "left": "there has been a trend",
+                  "right": "bir eğilim olmuştur"
+                }
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q3",
+              "type": "multiple-choice",
+              "prompt": "\"There is an economic policy in the archives.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Arşivlerde ekonomik bir politika vardır.",
+                "Ekonomik politika arşivlerden silinmiştir.",
+                "Arşivlerin politikası ekonomik olmalıdır.",
+                "Politik ve ekonomik belgeler arşivdedir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There is an economic policy in the archives.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q4",
+              "type": "multiple-choice",
+              "prompt": "\"There was a major shift in public opinion.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Kamuoyunda büyük bir kayma vardı.",
+                "Genel görüşteki değişim yavaş gerçekleşti.",
+                "Kamuoyunun görüşü hiçbir zaman değişmedi.",
+                "Büyük bir kayma kamuoyunu etkilemiştir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There was a major shift in public opinion.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q5",
+              "type": "word-bank",
+              "prompt": "İfadenin Türkçe karşılığını oluşturun:",
+              "translation": "There must be historical documents in the museum.",
+              "words": [
+                "Müzede",
+                "tarihi",
+                "belgeler",
+                "olmalıdır",
+                "yoktur",
+                "yasa",
+                "antik"
+              ],
+              "correctOrder": [
+                "Müzede",
+                "tarihi",
+                "belgeler",
+                "olmalıdır"
+              ],
+              "enSentence": "There must be historical documents in the museum.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q6",
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Tarihçiler arasında hiçbir uzlaşı olamaz.",
+              "words": [
+                "There",
+                "can",
+                "be",
+                "no",
+                "consensus",
+                "among",
+                "historians",
+                "is",
+                "not",
+                "should"
+              ],
+              "correctOrder": [
+                "There",
+                "can",
+                "be",
+                "no",
+                "consensus",
+                "among",
+                "historians"
+              ],
+              "enSentence": "There can be no consensus among historians.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q7",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa uygun olan fiil çekimini seçin:",
+              "sentence": "There [is] a symbolic meaning in this film.",
+              "options": [
+                "is",
+                "are",
+                "be",
+                "been"
+              ],
+              "correctIndex": 0,
+              "enSentence": "There is a symbolic meaning in this film.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q8",
+              "type": "fill-blank",
+              "prompt": "Boşluğa uygun modal yapısını seçin:",
+              "sentence": "There [should] be legal protections for civil opinion.",
+              "options": [
+                "should",
+                "is",
+                "are",
+                "does"
+              ],
+              "correctIndex": 0,
+              "enSentence": "There should be legal protections for civil opinion.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q9",
+              "type": "multiple-choice",
+              "prompt": "\"There were several factors in voting trends.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Oy verme eğilimlerinde birkaç faktör vardı.",
+                "Oy kullanma süreçlerinde hiçbir etken yoktu.",
+                "Farklı faktörler seçim eğilimlerini etkiler.",
+                "Seçimlerde oy kullanma eğilimi azdı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There were several factors in voting trends.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex1_q10",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa uygun fiil çekimini seçin:",
+              "sentence": "There [have] been economic policies on market shift.",
+              "options": [
+                "have",
+                "has",
+                "is",
+                "was"
+              ],
+              "correctIndex": 0,
+              "enSentence": "There have been economic policies on market shift.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u8l1ex2",
+          "title": "Alıştırma 2: Cümle Düzeyi (Var/Yok Yapıları ve Modallar)",
+          "description": "Zamanlar, modallar ve basit olumsuzlama/soru yapıları ile cümle düzeyinde alıştırmalar (10 Soru)",
+          "createdAt": "2026-07-27T00:00:00Z",
+          "questions": [
+            {
+              "id": "u8l21_ex2_q1",
+              "type": "multiple-choice",
+              "prompt": "\"There was a sudden shift in the voting trends during the elections.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Seçimler sırasında oy verme eğilimlerinde ani bir kayma vardı.",
+                "Seçim döneminde oy kullanma eğilimi sabit kalmıştır.",
+                "Oy verme trendleri seçimlerden hemen önce değişti.",
+                "Seçimlerden sonra oyların dağılımında kayma olmuştur."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There was a sudden shift in the voting trends during the elections.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q2",
+              "type": "multiple-choice",
+              "prompt": "\"There must be cognitive factors influencing human behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "İnsan davranışını etkileyen bilişsel faktörler olmalıdır.",
+                "İnsan davranışının temelinde bilişsel süreçler yatmaktadır.",
+                "Bilişsel faktörler insan davranışlarını doğrudan şekillendirir.",
+                "Bilişsel etkenler olmadan insan davranışı açıklanamaz."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There must be cognitive factors influencing human behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q3",
+              "type": "word-bank",
+              "prompt": "İfadenin Türkçe karşılığını oluşturun:",
+              "translation": "There is a new theory protecting these civil liberties.",
+              "words": [
+                "Bu",
+                "sivil",
+                "özgürlükleri",
+                "koruyan",
+                "yeni",
+                "bir",
+                "teori",
+                "vardır",
+                "yoktur",
+                "eski"
+              ],
+              "correctOrder": [
+                "Bu",
+                "sivil",
+                "özgürlükleri",
+                "koruyan",
+                "yeni",
+                "bir",
+                "teori",
+                "vardır"
+              ],
+              "enSentence": "There is a new theory protecting these civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q4",
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Müzede antik harabelerden çıkarılan tarihi eserler vardır.",
+              "words": [
+                "There",
+                "are",
+                "historical",
+                "artifacts",
+                "recovered",
+                "from",
+                "ancient",
+                "ruins",
+                "in",
+                "the",
+                "museum",
+                "is",
+                "was",
+                "be"
+              ],
+              "correctOrder": [
+                "There",
+                "are",
+                "historical",
+                "artifacts",
+                "recovered",
+                "from",
+                "ancient",
+                "ruins",
+                "in",
+                "the",
+                "museum"
+              ],
+              "enSentence": "There are historical artifacts recovered from ancient ruins in the museum.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa uygun fiil biçimini seçin:",
+              "sentence": "There [were] many scholars in the national archives yesterday.",
+              "options": [
+                "were",
+                "was",
+                "be",
+                "been"
+              ],
+              "correctIndex": 0,
+              "enSentence": "There were many scholars in the national archives yesterday.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q6",
+              "type": "fill-blank",
+              "prompt": "Boşluğa uygun fiil çekimini seçin:",
+              "sentence": "There [has] been an influential shift in public opinion.",
+              "options": [
+                "has",
+                "have",
+                "is",
+                "was"
+              ],
+              "correctIndex": 0,
+              "enSentence": "There has been an influential shift in public opinion.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q7",
+              "type": "true-false",
+              "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+              "englishPhrase": "There must are many researchers in the lab.",
+              "turkishTranslation": "Laboratuvarda birçok araştırmacı olmalıdır. (Hata tespiti: 'must' kip yardımcısından sonra yalın fiil 'be' kullanılmalıdır, 'are' değil).",
+              "correctAnswer": "false",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q8",
+              "type": "spotlight",
+              "prompt": "Cümledeki modal yardımcı fiilini (modal auxiliary) bulunuz:",
+              "paragraph": "There could be a logical explanation for this social trend.",
+              "highlightChunk": "could",
+              "options": [
+                "could",
+                "be",
+                "logical",
+                "explanation"
+              ],
+              "correctIndex": 0,
+              "translation": "Bu toplumsal eğilim için mantıklı bir açıklama olabilir.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q9",
+              "type": "error-finder",
+              "prompt": "Cümledeki özne-fiil uyumsuzluğu (subject-verb agreement) barındıran hatalı yardımcı fiili seçiniz:",
+              "sentenceTokens": [
+                "There",
+                "are",
+                "no",
+                "consensus",
+                "among",
+                "the",
+                "committee",
+                "members"
+              ],
+              "correctIndex": 1,
+              "suggestedCorrection": "is",
+              "translation": "Komite üyeleri arasında hiçbir uzlaşı yoktur.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex2_q10",
+              "type": "translation-text",
+              "prompt": "\"There will be a sociological study on voting behavior next year.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Gelecek yıl oy verme davranışı üzerine sosyolojik bir çalışma olacaktır.",
+              "enSentence": "There will be a sociological study on voting behavior next year.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u8l1ex3",
+          "title": "Alıştırma 3: Akademik Düzey & Spiralleşme",
+          "description": "Participles, soru kelimeleri ve gelişmiş isim/edat tamlamaları ile spiralleşen ileri seviye yapılar (10 Soru)",
+          "createdAt": "2026-07-27T00:00:00Z",
+          "questions": [
+            {
+              "id": "u8l21_ex3_q1",
+              "type": "multiple-choice",
+              "prompt": "\"Why is there no consensus among film critics regarding the symbolic meaning of the movie?\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Film eleştirmenleri arasında filmin sembolik anlamı hakkında neden hiçbir uzlaşı yoktur?",
+                "Film eleştirmenleri filmin sembolik anlamını neden tartışıyor?",
+                "Neden sinema eleştirmenleri arasında filmin anlamı konusunda bir fikir birliği bulunmuyor?",
+                "Filmin sembolik boyutu hakkında neden hiçbir eleştiri yazılmamıştır?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Why is there no consensus among film critics regarding the symbolic meaning of the movie?",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "\"There has been a sudden shift in the economic policies protecting the cultural heritage of the nation.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Ulusun kültürel mirasını koruyan ekonomik politikalarda ani bir kayma olmuştur.",
+                "Ekonomik politikaların kültürel mirası korumadaki rolünde değişimler yaşanmıştır.",
+                "Ulusun mirasını korumak amacıyla yeni ekonomik tedbirler alınmıştır.",
+                "Kültürel mirası koruyan ekonomik politikalardaki değişimler yavaş gerçekleşir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "There has been a sudden shift in the economic policies protecting the cultural heritage of the nation.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q3",
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Antik arşivlerde bilişsel süreçleri araştıran akademisyenler için belgeler vardır.",
+              "words": [
+                "There",
+                "are",
+                "documents",
+                "in",
+                "ancient",
+                "archives",
+                "for",
+                "scholars",
+                "investigating",
+                "cognitive",
+                "processes",
+                "is",
+                "was",
+                "which"
+              ],
+              "correctOrder": [
+                "There",
+                "are",
+                "documents",
+                "in",
+                "ancient",
+                "archives",
+                "for",
+                "scholars",
+                "investigating",
+                "cognitive",
+                "processes"
+              ],
+              "enSentence": "There are documents in ancient archives for scholars investigating cognitive processes.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q4",
+              "type": "word-bank",
+              "prompt": "İfadenin Türkçe karşılığını oluşturun:",
+              "translation": "How can there be a legal system protecting civil liberties without public support?",
+              "words": [
+                "Kamu",
+                "desteği",
+                "olmadan",
+                "sivil",
+                "özgürlükleri",
+                "koruyan",
+                "yasal",
+                "bir",
+                "sistem",
+                "nasıl",
+                "var",
+                "olabilir",
+                "yoktur",
+                "mi"
+              ],
+              "correctOrder": [
+                "Kamu",
+                "desteği",
+                "olmadan",
+                "sivil",
+                "özgürlükleri",
+                "koruyan",
+                "yasal",
+                "bir",
+                "sistem",
+                "nasıl",
+                "var",
+                "olabilir"
+              ],
+              "enSentence": "How can there be a legal system protecting civil liberties without public support?",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa uygun olan yardımcı fiil / modal yapısını seçiniz:",
+              "sentence": "Why [should] there be restrictions on researchers investigating historical documents in the archives?",
+              "options": [
+                "should",
+                "is",
+                "are",
+                "does"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Why should there be restrictions on researchers investigating historical documents in the archives?",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q6",
+              "type": "fill-blank-text",
+              "prompt": "Boşluğa uygun fiil çekimini yazın (have veya has):",
+              "sentence": "There [have] been many attempts by archaeologists to excavate the ancient ruins of the city.",
+              "correctAnswer": "have",
+              "enSentence": "There have been many attempts by archaeologists to excavate the ancient ruins of the city.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q7",
+              "type": "true-false",
+              "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+              "englishPhrase": "There is no factors influencing the public behavior during elections.",
+              "turkishTranslation": "Seçimler sırasında kamuoyu davranışını etkileyen hiçbir faktör yoktur. (Hata tespiti: 'factors' çoğul olduğu için 'There are no...' kullanılmalıdır).",
+              "correctAnswer": "false",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q8",
+              "type": "spotlight",
+              "prompt": "Cümledeki sıfat-fiil kısaltmasını (participle modifier) bulunuz:",
+              "paragraph": "There were several scholars examining historical artifacts in the national museum.",
+              "highlightChunk": "examining",
+              "options": [
+                "scholars",
+                "examining",
+                "historical",
+                "artifacts"
+              ],
+              "correctIndex": 1,
+              "translation": "Ulusal müzede tarihi eserleri inceleyen birkaç bilgin vardı.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q9",
+              "type": "error-finder",
+              "prompt": "Cümledeki hatalı fiilimsi / yardımcı fiil yapısını bulunuz:",
+              "sentenceTokens": [
+                "There",
+                "should",
+                "being",
+                "a",
+                "study",
+                "investigating",
+                "the",
+                "cognitive",
+                "behavior",
+                "of",
+                "citizens"
+              ],
+              "correctIndex": 2,
+              "suggestedCorrection": "be",
+              "translation": "Vatandaşların bilişsel davranışlarını inceleyen bir çalışma olmalıdır.",
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "İsim Tamlamaları"
+              ]
+            },
+            {
+              "id": "u8l21_ex3_q10",
+              "type": "translation-text",
+              "prompt": "\"There could be a profound sociological shift in public opinion after the elections.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Seçimlerden sonra kamuoyunda derin bir sosyolojik kayma olabilir.",
+              "enSentence": "There could be a profound sociological shift in public opinion after the elections.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "There Yapıları (Existential)",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
   9: {
   "1": {
     "exercises": [
@@ -89620,558 +89597,868 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u102l95ex1",
-          "title": "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+          "title": "Alıştırma 1: Şimdiki Zaman & Süreç Zarfları I (Öbek Düzeyi)",
+          "description": "Şimdiki zaman ve güncel süreç zarflarının öbek düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l95_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, heavy rain is ___ the simulation site.",
-              "options": [
-                "affecting",
-                "affected",
-                "affect",
-                "affects"
+              "type": "matching",
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> analyzing ancient artifacts",
+                  "right": "şu anda antik eserleri analiz ediyor"
+                },
+                {
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">presently</span> examining the legal system",
+                  "right": "şu sıralar hukuk sistemini inceliyor"
+                },
+                {
+                  "left": "at the moment studying cognitive factors",
+                  "right": "şu anda bilişsel faktörleri çalışıyor"
+                },
+                {
+                  "left": "nowadays evaluating cinema history",
+                  "right": "bugünlerde sinema tarihini değerlendiriyor"
+                }
               ],
-              "correctIndex": 0,
-              "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">is affecting</span> the simulation site.",
+              "type": "multiple-choice",
+              "prompt": "\"currently analyzing ancient artifacts\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "In 2012",
-                "Yesterday",
-                "At the moment",
-                "Since 2020"
+                "şu sıralar hukuk sistemini inceliyor",
+                "şu anda antik eserleri analiz ediyor",
+                "şu anda bilişsel faktörleri çalışıyor",
+                "bugünlerde sinema tarihini değerlendiriyor"
               ],
-              "correctIndex": 2,
-              "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
+              "correctIndex": 1,
+              "enSentence": "currently analyzing ancient artifacts",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Right now</span>, the central server is ___ user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"presently examining the legal system\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "validates",
-                "validate",
-                "validated",
-                "validating"
+                "şu sıralar hukuk sistemini inceliyor",
+                "şu anda antik eserleri analiz ediyor",
+                "şu anda bilişsel faktörleri çalışıyor",
+                "bugünlerde sinema tarihini değerlendiriyor"
               ],
-              "correctIndex": 3,
-              "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
+              "correctIndex": 0,
+              "enSentence": "presently examining the legal system",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">is validating</span> user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"at the moment studying cognitive factors\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Last week",
-                "Right now",
-                "Yesterday",
-                "Since 2020"
+                "şu sıralar hukuk sistemini inceliyor",
+                "şu anda antik eserleri analiz ediyor",
+                "şu anda bilişsel faktörleri çalışıyor",
+                "bugünlerde sinema tarihini değerlendiriyor"
               ],
-              "correctIndex": 1,
-              "translation": "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor."
+              "correctIndex": 2,
+              "enSentence": "at the moment studying cognitive factors",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The academic team is <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ the new device.",
+              "type": "multiple-choice",
+              "prompt": "\"nowadays evaluating cinema history\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "testing",
-                "tests",
-                "test",
-                "tested"
+                "şu sıralar hukuk sistemini inceliyor",
+                "şu anda antik eserleri analiz ediyor",
+                "şu anda bilişsel faktörleri çalışıyor",
+                "bugünlerde sinema tarihini değerlendiriyor"
               ],
-              "correctIndex": 0,
-              "translation": "Şu anda derleyici veri bloklarını işliyor."
+              "correctIndex": 3,
+              "enSentence": "nowadays evaluating cinema history",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The academic team is ___ <span style=\"color: #ff6b6b; font-weight: bold;\">testing</span> the new device.",
+              "sentence": "___, the researchers are examining child behavior.",
               "options": [
-                "currently",
-                "yesterday",
-                "yet",
-                "since 2020"
+                "Yesterday",
+                "In 2020",
+                "At present",
+                "Since 2015"
               ],
-              "correctIndex": 0,
-              "translation": "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor."
+              "correctIndex": 2,
+              "translation": "Şu anda, araştırmacılar çocuk davranışını inceliyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The research facility <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ additional financial resources.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Right now, the scholars are ___ historical documents in the library.",
               "options": [
-                "required",
-                "will require",
-                "requires",
-                "requiring"
+                "analyzed",
+                "analyze",
+                "analyzing",
+                "analyzes"
               ],
               "correctIndex": 2,
-              "translation": "Şu anda otomatik sistem basınç parametrelerini izliyor."
+              "translation": "Şu anda, bilim insanları kütüphanedeki tarihi belgeleri analiz ediyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The research facility ___ <span style=\"color: #ff6b6b; font-weight: bold;\">requires</span> additional financial resources.",
-              "options": [
-                "since",
-                "currently",
-                "yet",
-                "yesterday"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "şu anda antik eserleri analiz ediyor",
+              "enSentence": "currently analyzing ancient artifacts",
+              "words": [
+                "şu",
+                "anda",
+                "antik",
+                "eserleri",
+                "analiz",
+                "ediyor",
+                "hata"
               ],
-              "correctIndex": 1,
-              "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
+              "correctOrder": [
+                "şu",
+                "anda",
+                "antik",
+                "eserleri",
+                "analiz",
+                "ediyor"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the compiler is ___ the data blocks.",
-              "options": [
-                "processing",
-                "processes",
-                "process",
-                "processed"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "şu sıralar hukuk sistemini inceliyor",
+              "enSentence": "presently examining the legal system",
+              "words": [
+                "şu",
+                "sıralar",
+                "hukuk",
+                "sistemini",
+                "inceliyor",
+                "karar"
               ],
-              "correctIndex": 0,
-              "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
+              "correctOrder": [
+                "şu",
+                "sıralar",
+                "hukuk",
+                "sistemini",
+                "inceliyor"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the ___ is processing the data blocks.",
-              "options": [
-                "compiler",
-                "compilation",
-                "compile",
-                "compiled"
-              ],
-              "correctIndex": 0,
-              "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
+              "type": "translation-text",
+              "prompt": "\"nowadays evaluating cinema history\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "bugünlerde sinema tarihini değerlendiriyor",
+              "enSentence": "nowadays evaluating cinema history",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l95ex2",
-          "title": "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "title": "Alıştırma 2: Şimdiki Zaman & Süreç Zarfları II (Cümle Düzeyi)",
+          "description": "Şimdiki zaman ve güncel süreç zarflarının basit cümle düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l95_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The system is <span style=\"color: #ff6b6b; font-weight: bold;\">presently</span> ___ a unique cryptographic key.",
+              "type": "multiple-choice",
+              "prompt": "\"At the moment, film critics are discussing the symbolic meaning of the movie.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "generate",
-                "generated",
-                "generates",
-                "generating"
+                "Şu anda film eleştirmenleri filmin sembolik anlamını tartışıyor.",
+                "Dün film eleştirmenleri filmin sembolik anlamını tartıştı.",
+                "Son zamanlarda film eleştirmenleri filmin sembolik anlamını tartıştı.",
+                "Gelecekte film eleştirmenleri filmin sembolik anlamını tartışacak."
               ],
-              "correctIndex": 3,
-              "translation": "Sistem şu anda benzersiz bir kriptografik anahtar üretiyor."
+              "correctIndex": 0,
+              "enSentence": "At the moment, film critics are discussing the symbolic meaning of the movie.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system <span style=\"color: #ff6b6b; font-weight: bold;\">is</span> ___ <span style=\"color: #ff6b6b; font-weight: bold;\">generating</span> a unique cryptographic key.",
+              "type": "multiple-choice",
+              "prompt": "\"Currently, the legal experts are preparing a new assessment of public behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "ago",
-                "presently",
-                "since",
-                "last week"
+                "Dün hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırladı.",
+                "Hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini her zaman hazırlar.",
+                "Şu anda, hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırlıyor.",
+                "Son zamanlarda, hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırladı."
               ],
-              "correctIndex": 1,
-              "translation": "Şu anda otomatik sistem basınç parametrelerini izliyor."
+              "correctIndex": 2,
+              "enSentence": "Currently, the legal experts are preparing a new assessment of public behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At present</span>, the automatic system is ___ pressure parameters.",
+              "type": "multiple-choice",
+              "prompt": "\"Nowadays, sociological researchers employ advanced methodologies for the study of social structures.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "monitor",
-                "monitors",
-                "monitored",
-                "monitoring"
+                "Günümüzde, sosyolojik araştırmacılar toplumsal yapıların incelenmesi için ileri metodolojiler kullanmaktadır.",
+                "Geçen yıl, sosyolojik araştırmacılar toplumsal yapıların incelenmesi için ileri metodolojiler kullandı.",
+                "Sosyolojik araştırmacılar toplumsal yapıların incelenmesi için ileri metodolojiler kullanabilir.",
+                "Son zamanlarda, sosyolojik araştırmacılar toplumsal yapıların incelenmesi için ileri metodolojiler kullandı."
               ],
-              "correctIndex": 3,
-              "translation": "Bugünlerde kamu laboratuvarları güvenlik protokollerini ayarlıyor."
+              "correctIndex": 0,
+              "enSentence": "Nowadays, sociological researchers employ advanced methodologies for the study of social structures.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, the automatic system <span style=\"color: #ff6b6b; font-weight: bold;\">is monitoring</span> pressure parameters.",
+              "sentence": "These days, the country ___ a major shift in its economic policies.",
               "options": [
-                "Since 2020",
-                "In 2012",
-                "At present",
-                "Yesterday"
+                "experiences",
+                "is experiencing",
+                "experienced",
+                "has experienced"
               ],
-              "correctIndex": 2,
-              "translation": "Bugünlerde yerel kurumlar kendi iç yasalarını değiştiriyor."
+              "correctIndex": 1,
+              "translation": "Bugünlerde, ülke ekonomik politikalarında büyük bir değişim yaşıyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, public laboratories are ___ their security protocols.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Right now, historians ___ the ancient manuscripts regarding the economic recession.",
               "options": [
-                "adjusted",
-                "adjusts",
-                "adjust",
-                "adjusting"
+                "examine",
+                "are examining",
+                "examined",
+                "have examined"
               ],
-              "correctIndex": 3,
-              "translation": "Günümüzde yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
+              "correctIndex": 1,
+              "translation": "Şu anda tarihçiler ekonomik durgunlukla ilgili antik el yazmalarını inceliyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, public laboratories <span style=\"color: #ff6b6b; font-weight: bold;\">are adjusting</span> their security protocols.",
+              "sentence": "___, psychologists are investigating the influence of social media on youth behavior.",
               "options": [
-                "These days",
-                "Next year",
-                "Yesterday",
-                "Since 2020"
+                "Last century",
+                "At present",
+                "In the past",
+                "Since last year"
               ],
-              "correctIndex": 0,
-              "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor."
+              "correctIndex": 1,
+              "translation": "Şu anda, psikologlar sosyal medyanın gençlik davranışı üzerindeki etkisini araştırıyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions are ___ their internal laws.",
-              "options": [
-                "alter",
-                "altered",
-                "alters",
-                "altering"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Şu anda film eleştirmenleri filmin sembolik anlamını tartışıyor.",
+              "enSentence": "At the moment, film critics are discussing the symbolic meaning of the movie.",
+              "words": [
+                "Şu",
+                "film",
+                "sembolik",
+                "anlamını",
+                "tartışıyor.",
+                "anda",
+                "eleştirmenleri",
+                "filmin",
+                "hata"
               ],
-              "correctIndex": 3,
-              "translation": "Şu anda merkez sunucu kullanıcı kimlik bilgilerini doğruluyor."
+              "correctOrder": [
+                "Şu",
+                "anda",
+                "film",
+                "eleştirmenleri",
+                "filmin",
+                "sembolik",
+                "anlamını",
+                "tartışıyor."
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions ___ altering their internal laws.",
-              "options": [
-                "will be",
-                "have been",
-                "were",
-                "are"
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Şu anda, hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırlıyor.",
+              "trSentence": "Şu anda, hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırlıyor.",
+              "words": [
+                "legal",
+                "Currently,",
+                "preparing",
+                "assessment",
+                "public",
+                "behavior.",
+                "the",
+                "experts",
+                "are",
+                "a",
+                "new",
+                "of",
+                "before"
               ],
-              "correctIndex": 3,
-              "translation": "Akademik ekip şu anda yeni cihazı test ediyor."
+              "correctOrder": [
+                "Currently,",
+                "the",
+                "legal",
+                "experts",
+                "are",
+                "preparing",
+                "a",
+                "new",
+                "assessment",
+                "of",
+                "public",
+                "behavior."
+              ],
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Nowadays</span>, software developers ___ gamified mobile design patterns.",
-              "options": [
-                "prefer",
-                "prefers",
-                "preferred",
-                "preferring"
-              ],
-              "correctIndex": 0,
-              "translation": "Araştırma tesisi şu anda ek finansal kaynaklar gerektiriyor."
+              "type": "translation-text",
+              "prompt": "\"Nowadays, sociological researchers employ advanced methodologies.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Günümüzde, sosyolojik araştırmacılar ileri metodolojiler kullanmaktadır.",
+              "enSentence": "Nowadays, sociological researchers employ advanced methodologies.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l95_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">prefer</span> gamified mobile design patterns.",
-              "options": [
-                "Last year",
-                "Since 2020",
-                "Yesterday",
-                "Nowadays"
-              ],
-              "correctIndex": 3,
-              "translation": "Şu anda derleyici veri bloklarını işliyor."
+              "type": "translation-text",
+              "prompt": "\"Şu anda tarihçiler ekonomik durgunlukla ilgili antik el yazmalarını inceliyor.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Right now, historians are examining the ancient manuscripts regarding the economic recession.",
+              "enSentence": "Right now, historians are examining the ancient manuscripts regarding the economic recession.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l95ex3",
-          "title": "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "title": "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III (Akademik Düzey)",
+          "description": "Şimdiki zaman ve güncel süreç zarflarının akademik düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l95_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The international research facility <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ additional financial resources to optimize its secondary structural frameworks.",
+              "type": "multiple-choice",
+              "prompt": "\"The research team currently investigating cognitive factors is testing a new psychological theory.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "will require",
-                "requiring",
-                "required",
-                "requires"
+                "Şu anda bilişsel faktörleri araştıran araştırma ekibi, yeni bir psikolojik kuramı test ediyor.",
+                "Bilişsel faktörleri araştıran araştırma ekibi, yeni bir psikolojik kuramı dün test etti.",
+                "Bilişsel faktörleri araştıran araştırma ekibi, yeni bir psikolojik kuramı son zamanlarda test etti.",
+                "Bilişsel faktörleri araştıran araştırma ekibi, yeni bir psikolojik kuramı her zaman test etmelidir."
               ],
-              "correctIndex": 3,
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor."
+              "correctIndex": 0,
+              "enSentence": "The research team currently investigating cognitive factors is testing a new psychological theory.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, the compiler is ___ the data blocks while the network firewall blocks external traffic.",
+              "type": "multiple-choice",
+              "prompt": "\"At present, there is a strong consensus among scholars working in the national archives.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "processing",
-                "processed",
-                "process",
-                "processes"
+                "Ulusal arşivlerde çalışan akademisyenler arasında güçlü bir uzlaşı dün vardı.",
+                "Şu anda, ulusal arşivlerde çalışan akademisyenler arasında güçlü bir uzlaşı vardır.",
+                "Ulusal arşivlerde çalışan akademisyenler arasında güçlü bir uzlaşı her zaman olmalıdır.",
+                "Ulusal arşivlerde çalışan akademisyenler arasında son zamanlarda güçlü bir uzlaşı olmuştur."
               ],
-              "correctIndex": 0,
-              "translation": "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işliyor."
+              "correctIndex": 1,
+              "enSentence": "At present, there is a strong consensus among scholars working in the national archives.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l95_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, public laboratories are ___ their security protocols because malicious malware attacks threaten sensitive files.",
+              "type": "multiple-choice",
+              "prompt": "\"Right now, lawyers studying historical cases are examining the original documents of the constitution.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "adjusted",
-                "adjusts",
-                "adjust",
-                "adjusting"
+                "Tarihi davaları inceleyen avukatlar anayasanın orijinal belgelerini dün inceledi.",
+                "Tarihi davaları inceleyen avukatlar anayasanın orijinal belgelerini incelemek zorundadır.",
+                "Şu anda, tarihi davaları inceleyen avukatlar anayasanın orijinal belgelerini inceliyor.",
+                "Tarihi davaları inceleyen avukatlar anayasanın orijinal belgelerini son zamanlarda inceledi."
               ],
-              "correctIndex": 3,
-              "translation": "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor."
+              "correctIndex": 2,
+              "enSentence": "Right now, lawyers studying historical cases are examining the original documents of the constitution.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex3_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system is <span style=\"color: #ff6b6b; font-weight: bold;\">presently</span> ___ a unique cryptographic key as soon as the administrator grants verification clearance.",
+              "sentence": "At the moment, the archaeologist excavating the site ___ a shift in soil conditions.",
               "options": [
-                "generating",
-                "generated",
-                "generate",
-                "generates"
+                "experiences",
+                "noticed",
+                "is noticing",
+                "has noticed"
               ],
-              "correctIndex": 0,
-              "translation": "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretiyor."
+              "correctIndex": 2,
+              "translation": "Şu anda, alanı kazan arkeolog toprak koşullarında bir değişim fark ediyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Nowadays</span>, software developers ___ gamified mobile design patterns in order that students might learn complex grammar easily.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Currently, the economist analyzing market trends ___ a serious recession in the domestic economy.",
               "options": [
-                "preferring",
-                "preferred",
-                "prefer",
-                "prefers"
+                "is predicting",
+                "predicted",
+                "predicts",
+                "has predicted"
               ],
-              "correctIndex": 2,
-              "translation": "Günümüzde yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih ediyor."
+              "correctIndex": 0,
+              "translation": "Şu anda, piyasa eğilimlerini analiz eden iktisatçı, iç ekonomide ciddi bir durgunluk öngörüyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The international research facility ___ requires additional financial resources to optimize its ___ structural frameworks.",
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için şu anda ek finansal kaynaklar gerektiriyor.",
-              "corrects": [
-                "currently",
-                "secondary"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Nowadays, cinema historians ___ the cultural heritage of early silent films.",
+              "options": [
+                "are documenting",
+                "documented",
+                "documenting",
+                "have documented"
+              ],
+              "correctIndex": 0,
+              "translation": "Günümüzde, sinema tarihçileri erken dönem sessiz filmlerin kültürel mirasını belgeliyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
               ]
             },
             {
               "id": "u102l95_ex3_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "At the moment, the compiler ___ the data blocks ___ the network firewall blocks external traffic.",
-              "translation": "Şu anda, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+              "sentence": "At the moment, the research team ___ investigating cognitive factors ___ testing a new psychological theory.",
+              "translation": "Şu anda bilişsel faktörleri araştıran araştırma ekibi, yeni bir psikolojik kuramı test ediyor.",
               "corrects": [
-                "is processing",
-                "while"
+                "is",
+                "is"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l95_ex3_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "These days, public laboratories ___ adjusting their security protocols because malicious malware attacks ___ sensitive files.",
-              "translation": "Bugünlerde, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarlıyor.",
+              "sentence": "At present, there ___ a strong consensus among scholars ___ in the national archives.",
+              "translation": "Şu anda, ulusal arşivlerde çalışan akademisyenler arasında güçlü bir uzlaşı vardır.",
               "corrects": [
-                "are",
-                "threaten"
+                "is",
+                "working"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l95_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The system ___ presently generating a unique cryptographic key as soon as the administrator ___ verification clearance.",
-              "translation": "Sistem, yönetici doğrulama izni verir vermez şu anda benzersiz bir kriptografik anahtar üretti.",
-              "corrects": [
-                "is",
-                "grants"
+              "type": "translation-text",
+              "prompt": "\"Right now, lawyers studying historical cases are examining the original documents of the constitution.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Şu anda, tarihi davaları inceleyen avukatlar anayasanın orijinal belgelerini inceliyor.",
+              "enSentence": "Right now, lawyers studying historical cases are examining the original documents of the constitution.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l95_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Nowadays, software developers ___ gamified mobile design patterns in order that students ___ learn complex grammar easily.",
-              "translation": "Günümüzde yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih ediyor.",
-              "corrects": [
-                "prefer",
-                "might"
+              "type": "translation-text",
+              "prompt": "\"Şu anda, ulusal arşivlerde çalışan akademisyenler arasında güçlü bir uzlaşı vardır.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "At present, there is a strong consensus among scholars working in the national archives.",
+              "enSentence": "At present, there is a strong consensus among scholars working in the national archives.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             }
           ]
         },
         {
           "id": "u102l95ex4",
-          "title": "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "title": "Alıştırma 4: Şimdiki Zaman & Süreç Zarfları IV (Spiralleşme & Çeviri)",
+          "description": "Şimdiki zaman ve güncel süreç zarflarının karma ve spiralleşmiş alıştırmaları.",
           "questions": [
             {
               "id": "u102l95_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Right now</span>, the central server is ___ user credentials on grounds that previous login requests were corrupted.",
+              "type": "multiple-choice",
+              "prompt": "\"Is the research team currently investigating cognitive factors testing a new psychological theory?\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "validate",
-                "validates",
-                "validated",
-                "validating"
+                "Şu anda bilişsel faktörleri araştıran araştırma ekibi yeni bir psikolojik kuramı mı test ediyor?",
+                "Bilişsel faktörleri araştıran araştırma ekibi yeni bir psikolojik kuramı mı test etti?",
+                "Bilişsel faktörleri araştıran araştırma ekibi yeni bir psikolojik kuramı test etmeli miydi?",
+                "Bilişsel faktörleri araştıran araştırma ekibi yeni bir psikolojik kuramı test edecek mi?"
               ],
-              "correctIndex": 3,
-              "translation": "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor."
+              "correctIndex": 0,
+              "enSentence": "Is the research team currently investigating cognitive factors testing a new psychological theory?",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l95_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At present</span>, the automatic system is ___ pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
+              "type": "multiple-choice",
+              "prompt": "\"There must be some researchers currently examining the legal protection of civil liberties.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "monitoring",
-                "monitored",
-                "monitor",
-                "monitors"
+                "Şu anda sivil özgürlüklerin yasal korumasını inceleyen bazı araştırmacılar vardı.",
+                "Son zamanlarda sivil özgürlüklerin yasal korumasını inceleyen bazı araştırmacılar oldu.",
+                "Şu anda sivil özgürlüklerin yasal korumasını inceleyen bazı araştırmacılar olmalı.",
+                "Şu anda sivil özgürlüklerin yasal korumasını inceleyen bazı araştırmacılar olacak."
               ],
-              "correctIndex": 0,
-              "translation": "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor."
+              "correctIndex": 2,
+              "enSentence": "There must be some researchers currently examining the legal protection of civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l95_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">These days</span>, local institutions are ___ their internal laws inasmuch as regional environmental regulations have become stricter.",
+              "type": "multiple-choice",
+              "prompt": "\"These days, the museum curator is displaying ancient artifacts illustrating the cultural evolution of the region.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "altered",
-                "alter",
-                "altering",
-                "alters"
+                "Bugünlerde, müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergiliyor.",
+                "Geçen yıl, müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergiledi.",
+                "Müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergilemek zorundadır.",
+                "Müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergilemiş olabilir."
               ],
-              "correctIndex": 2,
-              "translation": "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor."
+              "correctIndex": 0,
+              "enSentence": "These days, the museum curator is displaying ancient artifacts illustrating the cultural evolution of the region.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex4_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The academic team is <span style=\"color: #ff6b6b; font-weight: bold;\">currently</span> ___ the new device just as the original mathematical physics formulas predicted.",
+              "sentence": "___, is there a consensus among historians studying the economic recession?",
               "options": [
-                "testing",
-                "tested",
-                "test",
-                "tests"
+                "Currently",
+                "Yesterday",
+                "In 2020",
+                "Since last month"
               ],
               "correctIndex": 0,
-              "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi şu anda yeni cihazı test ediyor."
+              "translation": "Şu anda, ekonomik durgunluğu inceleyen tarihçiler arasında bir uzlaşı var mı?",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l95_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">At the moment</span>, heavy rain is ___ the simulation site; therefore, field operations are temporarily suspended.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Right now, the film critics ___ the symbolic meaning of the movies shown at the festival.",
               "options": [
-                "affects",
-                "affected",
-                "affect",
-                "affecting"
+                "analyze",
+                "are analyzing",
+                "analyzed",
+                "have analyzed"
               ],
-              "correctIndex": 3,
-              "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor; bu nedenle, saha operasyonları geçici olarak durduruldu."
+              "correctIndex": 1,
+              "translation": "Şu anda, film eleştirmenleri festivalde gösterilen filmlerin sembolik anlamını analiz ediyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l95_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Right now, the central server ___ validating user credentials on grounds that previous login requests ___ corrupted.",
-              "translation": "Şu anda merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini doğruluyor.",
-              "corrects": [
-                "is",
-                "were"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "These days, the legal experts ___ a new assessment of public behavior.",
+              "options": [
+                "are preparing",
+                "prepare",
+                "prepared",
+                "have prepared"
+              ],
+              "correctIndex": 0,
+              "translation": "Bugünlerde, hukuk uzmanları toplumsal davranışın yeni bir değerlendirmesini hazırlıyor.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
               ]
             },
             {
               "id": "u102l95_ex4_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "At present, the automatic system is monitoring pressure parameters ___ the industrial mechanical piston ___ fail unexpectedly.",
-              "translation": "Şu anda otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izliyor.",
+              "sentence": "These days, the museum curator ___ displaying ancient artifacts ___ the cultural evolution of the region.",
+              "translation": "Bugünlerde, müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergiliyor.",
               "corrects": [
-                "lest",
-                "should"
+                "is",
+                "illustrating"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l95_ex4_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "These days, local institutions ___ altering their internal laws inasmuch as regional environmental regulations ___ become stricter.",
-              "translation": "Bugünlerde, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar kendi iç yasalarını değiştiriyor.",
+              "sentence": "Currently, ___ there a consensus among historians ___ the economic recession?",
+              "translation": "Şu anda, ekonomik durgunluğu inceleyen tarihçiler arasında bir uzlaşı var mı?",
               "corrects": [
-                "are",
-                "have"
+                "is",
+                "studying"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l95_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The academic team ___ currently testing the new device just as the original mathematical physics formulas ___ .",
-              "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi şu anda yeni cihazı test ediyor.",
-              "corrects": [
-                "is",
-                "predicted"
+              "type": "translation-text",
+              "prompt": "\"There must be some researchers currently examining the legal protection of civil liberties.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Şu anda sivil özgürlüklerin yasal korumasını inceleyen bazı araştırmacılar olmalı.",
+              "enSentence": "There must be some researchers currently examining the legal protection of civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l95_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "At the moment, heavy rain ___ affecting the simulation site; therefore, field operations ___ temporarily suspended.",
-              "translation": "Şu anda şiddetli yağmur simülasyon alanını etkiliyor; bu nedenle, saha operasyonları geçici olarak durduruldu.",
-              "corrects": [
-                "is",
-                "are"
+              "type": "translation-text",
+              "prompt": "\"Bugünlerde, müze küratörü bölgenin kültürel gelişimini örnekleyen antik eserleri sergiliyor.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "These days, the museum curator is displaying ancient artifacts illustrating the cultural evolution of the region.",
+              "enSentence": "These days, the museum curator is displaying ancient artifacts illustrating the cultural evolution of the region.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             }
           ]
@@ -90182,558 +90469,863 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u102l96ex1",
-          "title": "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+          "title": "Alıştırma 1: Di'li Geçmiş Zaman & Tarihsel Zarflar I (Öbek Düzeyi)",
+          "description": "Geçmiş zaman ve tarihsel süreç zarflarının öbek düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l96_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "A heavy rain ___ the simulation site <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
-              "options": [
-                "affects",
-                "affecting",
-                "affected",
-                "affect"
+              "type": "matching",
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "yesterday analyzed the historical shift",
+                  "right": "dün tarihi değişimi analiz etti"
+                },
+                {
+                  "left": "last year examined the economic recession",
+                  "right": "geçen yıl ekonomik durgunluğu inceledi"
+                },
+                {
+                  "left": "two years ago studied cognitive behavior",
+                  "right": "iki yıl önce bilişsel davranışı çalıştı"
+                },
+                {
+                  "left": "in 2020 evaluated the cinema archives",
+                  "right": "2020'de sinema arşivlerini değerlendirdi"
+                }
               ],
-              "correctIndex": 2,
-              "translation": "Dün şiddetli bir yağmur simülasyon alanını etkiledi."
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "A heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">affected</span> the simulation site ___ .",
+              "type": "multiple-choice",
+              "prompt": "\"yesterday analyzed the historical shift\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "yesterday",
-                "currently",
-                "yet",
-                "since"
+                "geçen yıl ekonomik durgunluğu inceledi",
+                "dün tarihi değişimi analiz etti",
+                "iki yıl önce bilişsel davranışı çalıştı",
+                "2020'de sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 0,
-              "translation": "Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı."
+              "correctIndex": 1,
+              "enSentence": "yesterday analyzed the historical shift",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, the central server ___ all user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"last year examined the economic recession\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "validated",
-                "validating",
-                "validate",
-                "validates"
+                "geçen yıl ekonomik durgunluğu inceledi",
+                "dün tarihi değişimi analiz etti",
+                "iki yıl önce bilişsel davranışı çalıştı",
+                "2020'de sinema arşivlerini değerlendirdi"
               ],
               "correctIndex": 0,
-              "translation": "Akademik ekip yeni cihaz testini 2020'de tamamladı."
+              "enSentence": "last year examined the economic recession",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___, the central server <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> all user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"two years ago studied cognitive behavior\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Lately",
-                "Right now",
-                "Since 2020",
-                "Yesterday"
+                "geçen yıl ekonomik durgunluğu inceledi",
+                "dün tarihi değişimi analiz etti",
+                "iki yıl önce bilişsel davranışı çalıştı",
+                "2020'de sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 3,
-              "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
+              "correctIndex": 2,
+              "enSentence": "two years ago studied cognitive behavior",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span>.",
+              "type": "multiple-choice",
+              "prompt": "\"in 2020 evaluated the cinema archives\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "completes",
-                "complete",
-                "completing",
-                "completed"
+                "geçen yıl ekonomik durgunluğu inceledi",
+                "dün tarihi değişimi analiz etti",
+                "iki yıl önce bilişsel davranışı çalıştı",
+                "2020'de sinema arşivlerini değerlendirdi"
               ],
               "correctIndex": 3,
-              "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
+              "enSentence": "in 2020 evaluated the cinema archives",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The academic team <span style=\"color: #ff6b6b; font-weight: bold;\">completed</span> the new device test ___ 2020.",
+              "sentence": "___, the legal experts completed the assessment of public behavior.",
               "options": [
-                "in",
-                "at",
-                "on",
-                "since"
+                "Currently",
+                "Right now",
+                "Yesterday",
+                "Since last year"
               ],
-              "correctIndex": 0,
-              "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 2,
+              "translation": "Dün, hukuk uzmanları toplumsal davranışın değerlendirmesini tamamladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span>.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Last week, the historians ___ the contradictions in the original documents.",
               "options": [
-                "will upgrade",
-                "upgrading",
-                "upgrades",
-                "upgraded"
+                "identify",
+                "identifying",
+                "identified",
+                "have identified"
               ],
-              "correctIndex": 3,
-              "translation": "Otomatik sistem üç saat önce basınç parametrelerini izledi."
+              "correctIndex": 2,
+              "translation": "Geçen hafta, tarihçiler orijinal belgelerdeki çelişkileri tespit etti.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The research facility successfully <span style=\"color: #ff6b6b; font-weight: bold;\">upgraded</span> the database ___ .",
-              "options": [
-                "now",
-                "yesterday",
-                "since then",
-                "yet"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "dün tarihi değişimi analiz etti",
+              "enSentence": "yesterday analyzed the historical shift",
+              "words": [
+                "dün",
+                "tarihi",
+                "değişimi",
+                "analiz",
+                "etti",
+                "hata"
               ],
-              "correctIndex": 1,
-              "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "correctOrder": [
+                "dün",
+                "tarihi",
+                "değişimi",
+                "analiz",
+                "etti"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Two years ago</span>, the compiler ___ the data blocks without errors.",
-              "options": [
-                "processing",
-                "processes",
-                "process",
-                "processed"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "geçen yıl ekonomik durgunluğu inceledi",
+              "enSentence": "last year examined the economic recession",
+              "words": [
+                "geçen",
+                "yıl",
+                "ekonomik",
+                "durgunluğu",
+                "inceledi",
+                "karar"
               ],
-              "correctIndex": 3,
-              "translation": "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi."
+              "correctOrder": [
+                "geçen",
+                "yıl",
+                "ekonomik",
+                "durgunluğu",
+                "inceledi"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Two years ___, the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">processed</span> the data blocks without errors.",
-              "options": [
-                "now",
-                "since",
-                "lately",
-                "ago"
-              ],
-              "correctIndex": 3,
-              "translation": "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti."
+              "type": "translation-text",
+              "prompt": "\"in 2020 evaluated the cinema archives\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "2020'de sinema arşivlerini değerlendirdi",
+              "enSentence": "in 2020 evaluated the cinema archives",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l96ex2",
-          "title": "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "title": "Alıştırma 2: Di'li Geçmiş Zaman & Tarihsel Zarflar II (Cümle Düzeyi)",
+          "description": "Geçmiş zaman ve tarihsel süreç zarflarının basit cümle düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l96_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The system ___ a unique cryptographic key <span style=\"color: #ff6b6b; font-weight: bold;\">last week</span>.",
+              "type": "multiple-choice",
+              "prompt": "\"Yesterday, the film critics analyzed the symbolic meaning of the movies.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "generates",
-                "generate",
-                "generating",
-                "generated"
+                "Dün, film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+                "Şu anda film eleştirmenleri filmlerin sembolik anlamını analiz ediyor.",
+                "Son zamanlarda film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+                "Film eleştirmenleri filmlerin sembolik anlamını her zaman analiz etmelidir."
               ],
-              "correctIndex": 3,
-              "translation": "Sistem geçen hafta benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 0,
+              "enSentence": "Yesterday, the film critics analyzed the symbolic meaning of the movies.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system <span style=\"color: #ff6b6b; font-weight: bold;\">generated</span> a unique cryptographic key ___ week.",
+              "type": "multiple-choice",
+              "prompt": "\"Last year, the sociologist conducted a detailed study of family behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "this",
-                "last",
-                "next",
-                "ago"
+                "Şu anda sosyolog aile davranışı üzerine detaylı bir çalışma yürütüyor.",
+                "Son zamanlarda sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+                "Geçen yıl, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+                "Sosyolog aile davranışı üzerine detaylı bir çalışma yürütür."
               ],
-              "correctIndex": 1,
-              "translation": "Otomatik sistem üç saat önce basınç parametrelerini izledi."
+              "correctIndex": 2,
+              "enSentence": "Last year, the sociologist conducted a detailed study of family behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The automatic system ___ pressure parameters <span style=\"color: #ff6b6b; font-weight: bold;\">three hours ago</span>.",
+              "type": "multiple-choice",
+              "prompt": "\"The research team completed the test of cognitive factors three hours ago.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "monitored",
-                "monitor",
-                "monitors",
-                "monitoring"
+                "Araştırma ekibi bilişsel faktörlerin testini üç saat önce tamamladı.",
+                "Araştırma ekibi bilişsel faktörlerin testini şu anda tamamlıyor.",
+                "Araştırma ekibi bilişsel faktörlerin testini son zamanlarda tamamladı.",
+                "Araştırma ekibi bilişsel faktörlerin testini üç saat içinde tamamlayacak."
               ],
               "correctIndex": 0,
-              "translation": "Geçen ay kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "enSentence": "The research team completed the test of cognitive factors three hours ago.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The automatic system <span style=\"color: #ff6b6b; font-weight: bold;\">monitored</span> pressure parameters three hours ___ .",
+              "sentence": "In 2020, the government ___ a major shift in its economic policies.",
               "options": [
-                "before",
-                "lately",
-                "since",
-                "ago"
+                "introduces",
+                "is introducing",
+                "introduced",
+                "has introduced"
               ],
-              "correctIndex": 3,
-              "translation": "Geçen yıl yerel kurumlar kendi iç yasalarını değiştirdi."
+              "correctIndex": 2,
+              "translation": "2020'de, hükümet ekonomik politikalarında büyük bir değişim başlattı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last month</span>, public laboratories ___ their security protocols.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Last month, archaeologists ___ several ancient artifacts near the temple.",
               "options": [
-                "adjusts",
-                "adjusted",
-                "adjusting",
-                "adjust"
+                "excavate",
+                "excavated",
+                "are excavating",
+                "have excavated"
               ],
               "correctIndex": 1,
-              "translation": "2012'de yazılım geliştiriciler geleneksel mobil tasarım desenlerini tercih etti."
+              "translation": "Geçen ay, arkeologlar tapınağın yakınında birkaç antik eser çıkardı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ month, public laboratories <span style=\"color: #ff6b6b; font-weight: bold;\">adjusted</span> their security protocols.",
+              "sentence": "___, the legal experts prepared a new report on public behavior.",
               "options": [
-                "Last",
-                "Since",
-                "Next",
-                "This"
+                "Right now",
+                "Currently",
+                "Last week",
+                "Since 2018"
               ],
-              "correctIndex": 0,
-              "translation": "Dün şiddetli bir yağmur simülasyon alanını etkiledi."
+              "correctIndex": 2,
+              "translation": "Geçen hafta, yasa uzmanları toplumsal davranış üzerine yeni bir rapor hazırladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ their internal laws.",
-              "options": [
-                "alters",
-                "altered",
-                "altering",
-                "alter"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Dün, film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+              "enSentence": "Yesterday, the film critics analyzed the symbolic meaning of the movies.",
+              "words": [
+                "Dün,",
+                "eleştirmenleri",
+                "filmlerin",
+                "sembolik",
+                "anlamını",
+                "analiz",
+                "etti.",
+                "film",
+                "hata"
               ],
-              "correctIndex": 1,
-              "translation": "Dün merkez sunucu tüm kullanıcı kimlik bilgilerini doğruladı."
+              "correctOrder": [
+                "Dün,",
+                "film",
+                "eleştirmenleri",
+                "filmlerin",
+                "sembolik",
+                "anlamını",
+                "analiz",
+                "etti."
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ altering their internal laws.",
-              "options": [
-                "have been",
-                "were",
-                "are",
-                "completed"
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Geçen yıl, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+              "trSentence": "Geçen yıl, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+              "words": [
+                "sociologist",
+                "Last",
+                "year,",
+                "the",
+                "conducted",
+                "a",
+                "detailed",
+                "study",
+                "of",
+                "family",
+                "behavior.",
+                "currently",
+                "before"
               ],
-              "correctIndex": 3,
-              "translation": "Akademik ekip yeni cihaz testini 2020'de tamamladı."
+              "correctOrder": [
+                "Last",
+                "year,",
+                "the",
+                "sociologist",
+                "conducted",
+                "a",
+                "detailed",
+                "study",
+                "of",
+                "family",
+                "behavior."
+              ],
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">In 2012</span>, software developers ___ traditional mobile design patterns.",
-              "options": [
-                "prefers",
-                "preferring",
-                "preferred",
-                "prefer"
-              ],
-              "correctIndex": 2,
-              "translation": "Araştırma tesisi dün veri tabanını başarıyla yükseltti."
+              "type": "translation-text",
+              "prompt": "\"The research team completed the test of cognitive factors three hours ago.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Araştırma ekibi bilişsel faktörlerin testini üç saat önce tamamladı.",
+              "enSentence": "The research team completed the test of cognitive factors three hours ago.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ 2012, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">preferred</span> traditional mobile design patterns.",
-              "options": [
-                "Since",
-                "In",
-                "At",
-                "On"
-              ],
-              "correctIndex": 1,
-              "translation": "İki yıl önce derleyici veri bloklarını hatasız bir şekilde işledi."
+              "type": "translation-text",
+              "prompt": "\"Geçen ay, arkeologlar tapınağın yakınında birkaç antik eser çıkardı.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Last month, archaeologists excavated several ancient artifacts near the temple.",
+              "enSentence": "Last month, archaeologists excavated several ancient artifacts near the temple.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l96ex3",
-          "title": "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "title": "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III (Akademik Düzey)",
+          "description": "Geçmiş zaman ve tarihsel süreç zarflarının akademik düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l96_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The international research facility successfully ___ the database <span style=\"color: #ff6b6b; font-weight: bold;\">yesterday</span> to optimize its secondary structural frameworks.",
+              "type": "multiple-choice",
+              "prompt": "\"Scholars examining the ancient manuscripts discovered a major contradiction in the historical record last year.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "upgrade",
-                "upgrades",
-                "upgrading",
-                "upgraded"
+                "Geçen yıl, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfetti.",
+                "Şu anda, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfediyor.",
+                "Antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfetmiş olabilir.",
+                "Son zamanlarda, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfetti."
               ],
-              "correctIndex": 3,
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için dün veri tabanını başarıyla yükseltti."
+              "correctIndex": 0,
+              "enSentence": "Scholars examining the ancient manuscripts discovered a major contradiction in the historical record last year.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l96_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Two years ago</span>, the compiler ___ the data blocks while the network firewall blocked external traffic.",
+              "type": "multiple-choice",
+              "prompt": "\"Yesterday, the economist analyzing recession factors proposed a theoretical consensus on policy shift.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "processes",
-                "process",
-                "processing",
-                "processed"
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşıyı şu anda öneriyor.",
+                "Dün, durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önerdi.",
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşıyı son zamanlarda önerdi.",
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önermek zorundadır."
               ],
-              "correctIndex": 3,
-              "translation": "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
+              "correctIndex": 1,
+              "enSentence": "Yesterday, the economist analyzing recession factors proposed a theoretical consensus on policy shift.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l96_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last month</span>, public laboratories ___ their security protocols because malicious malware attacks threatened sensitive files.",
+              "type": "multiple-choice",
+              "prompt": "\"In 2020, there was a significant alteration in the legal system protecting civil liberties.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "adjust",
-                "adjusts",
-                "adjusting",
-                "adjusted"
+                "2020'de, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik olacak.",
+                "Son zamanlarda, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik oldu.",
+                "2020'de, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik vardı.",
+                "Şu anda, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik var."
               ],
-              "correctIndex": 3,
-              "translation": "Geçen ay, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "correctIndex": 2,
+              "enSentence": "In 2020, there was a significant alteration in the legal system protecting civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l96_ex3_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system ___ a unique cryptographic key as soon as the administrator granted verification clearance <span style=\"color: #ff6b6b; font-weight: bold;\">last week</span>.",
+              "sentence": "Yesterday, the research team ___ the behavior of patients experiencing memory loss.",
               "options": [
-                "generated",
-                "generates",
-                "generating",
-                "generate"
+                "observe",
+                "observes",
+                "observed",
+                "is observing"
               ],
-              "correctIndex": 0,
-              "translation": "Sistem, yönetici geçen hafta doğrulama izni verir vermez benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 2,
+              "translation": "Dün, araştırma ekibi hafıza kaybı yaşayan hastaların davranışını gözlemledi.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l96_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">In 2012</span>, software developers ___ traditional mobile design patterns in order that students might learn basic grammar easily.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Last week, film critics studying French cinema ___ the symbolic meaning of early movies.",
               "options": [
-                "preferred",
-                "preferring",
-                "prefers",
-                "prefer"
+                "discuss",
+                "discussed",
+                "discussing",
+                "are discussing"
               ],
-              "correctIndex": 0,
-              "translation": "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti."
+              "correctIndex": 1,
+              "translation": "Geçen hafta, Fransız sinemasını çalışan film eleştirmenleri erken dönem filmlerin sembolik anlamını tartıştı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l96_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The international research facility successfully ___ the database yesterday to optimize its ___ structural frameworks.",
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için dün veri tabanını başarıyla yükseltti.",
-              "corrects": [
-                "upgraded",
-                "secondary"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Two years ago, the archaeologists ___ delicate artifacts recovered from the ruins.",
+              "options": [
+                "examine",
+                "examined",
+                "examining",
+                "are examining"
+              ],
+              "correctIndex": 1,
+              "translation": "İki yıl önce, arkeologlar kalıntılardan çıkarılan hassas eserleri inceledi.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l96_ex3_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Two years ago, the compiler ___ the data blocks while the network firewall ___ external traffic.",
-              "translation": "İki yıl önce, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+              "sentence": "Scholars ___ the ancient manuscripts discovered a major contradiction in the historical record last ___ .",
+              "translation": "Geçen yıl, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfetti.",
               "corrects": [
-                "processed",
-                "blocked"
+                "examining",
+                "year"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l96_ex3_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Last month, public laboratories ___ adjusting their security protocols because malicious malware attacks ___ sensitive files.",
-              "translation": "Geçen ay, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+              "sentence": "Yesterday, the economist ___ recession factors ___ a theoretical consensus on policy shift.",
+              "translation": "Dün, durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önerdi.",
               "corrects": [
-                "adjusted",
-                "threatened"
+                "analyzing",
+                "proposed"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l96_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The system ___ a unique cryptographic key as soon as the administrator ___ verification clearance last week.",
-              "translation": "Sistem, yönetici geçen hafta doğrulama izni verir vermez benzersiz bir kriptografik anahtar üretti.",
-              "corrects": [
-                "generated",
-                "granted"
+              "type": "translation-text",
+              "prompt": "\"In 2020, there was a significant alteration in the legal system protecting civil liberties.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "2020'de, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik vardı.",
+              "enSentence": "In 2020, there was a significant alteration in the legal system protecting civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l96_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "In 2012, software developers ___ traditional mobile design patterns in order that students ___ learn basic grammar easily.",
-              "translation": "2012'de yazılım geliştiriciler, öğrencilerin temel dilbilgisini kolayca öğrenebilmesi için geleneksel mobil tasarım desenlerini tercih etti.",
-              "corrects": [
-                "preferred",
-                "might"
+              "type": "translation-text",
+              "prompt": "\"Geçen yıl, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfetti.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Scholars examining the ancient manuscripts discovered a major contradiction in the historical record last year.",
+              "enSentence": "Scholars examining the ancient manuscripts discovered a major contradiction in the historical record last year.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             }
           ]
         },
         {
           "id": "u102l96ex4",
-          "title": "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "title": "Alıştırma 4: Di'li Geçmiş Zaman & Tarihsel Zarflar IV (Spiralleşme & Çeviri)",
+          "description": "Geçmiş zaman ve tarihsel süreç zarflarının karma ve spiralleşmiş alıştırmaları.",
           "questions": [
             {
               "id": "u102l96_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, the central server ___ all user credentials on grounds that previous login requests were corrupted.",
+              "type": "multiple-choice",
+              "prompt": "\"Did the economist analyzing recession factors propose a theoretical consensus yesterday?\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "validates",
-                "validated",
-                "validating",
-                "validate"
+                "Durgunluk faktörlerini analiz eden iktisatçı dün kuramsal bir uzlaşı önerdi mi?",
+                "Durgunluk faktörlerini analiz eden iktisatçı şu anda kuramsal bir uzlaşı mı öneriyor?",
+                "Durgunluk faktörlerini analiz eden iktisatçı dün kuramsal bir uzlaşı önermek zorunda mıydı?",
+                "Durgunluk faktörlerini analiz eden iktisatçı son zamanlarda kuramsal bir uzlaşı önerdi mi?"
               ],
-              "correctIndex": 1,
-              "translation": "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı."
+              "correctIndex": 0,
+              "enSentence": "Did the economist analyzing recession factors propose a theoretical consensus yesterday?",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l96_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The automatic system ___ pressure parameters <span style=\"color: #ff6b6b; font-weight: bold;\">three hours ago</span> lest the industrial mechanical piston should fail unexpectedly.",
+              "type": "multiple-choice",
+              "prompt": "\"There could be no resemblance between the two historical cases analyzed last year.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "monitors",
-                "monitor",
-                "monitoring",
-                "monitored"
+                "Geçen yıl analiz edilen iki tarihi vaka arasında hiçbir benzerlik olamaz.",
+                "Son zamanlarda analiz edilen iki tarihi vaka arasında hiçbir benzerlik olmamıştır.",
+                "Geçen yıl analiz edilen iki tarihi vaka arasında hiçbir benzerlik olamazdı.",
+                "Geçen yıl analiz edilen iki tarihi vaka arasında hiçbir benzerlik olmamalıdır."
               ],
-              "correctIndex": 3,
-              "translation": "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi."
+              "correctIndex": 2,
+              "enSentence": "There could be no resemblance between the two historical cases analyzed last year.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l96_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Last year</span>, local institutions ___ their internal laws inasmuch as regional environmental regulations became stricter.",
+              "type": "multiple-choice",
+              "prompt": "\"Last week, scholars studying cognitive development conducted a detailed study on child behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "alters",
-                "altered",
-                "altering",
-                "alter"
+                "Geçen hafta, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışma yürüttü.",
+                "Bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışmayı şu anda yürütüyor.",
+                "Geçen hafta, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışma yürütmek zorundaydı.",
+                "Bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışmayı son zamanlarda yürüttü."
               ],
-              "correctIndex": 1,
-              "translation": "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
+              "correctIndex": 0,
+              "enSentence": "Last week, scholars studying cognitive development conducted a detailed study on child behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l96_ex4_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The academic team ___ the new device test <span style=\"color: #ff6b6b; font-weight: bold;\">in 2020</span> just as the original mathematical physics formulas predicted.",
+              "sentence": "___, the legal experts prepared a new report on public behavior.",
               "options": [
-                "complete",
-                "completing",
-                "completes",
-                "completed"
+                "Currently",
+                "Right now",
+                "Last week",
+                "Since 2018"
               ],
-              "correctIndex": 3,
-              "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı."
+              "correctIndex": 2,
+              "translation": "Geçen hafta, yasa uzmanları toplumsal davranış üzerine yeni bir rapor hazırladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l96_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Yesterday</span>, a heavy rain ___ the simulation site; therefore, field operations were temporarily suspended.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Yesterday, did the film critics ___ the symbolic meaning of early movies?",
               "options": [
-                "affected",
-                "affecting",
-                "affected",
-                "affects"
+                "discuss",
+                "discussed",
+                "discussing",
+                "are discussing"
               ],
               "correctIndex": 0,
-              "translation": "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
+              "translation": "Dün, film eleştirmenleri erken dönem filmlerinin sembolik anlamını tartıştı mı?",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l96_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Yesterday, the central server ___ all user credentials on grounds that previous login requests ___ corrupted.",
-              "translation": "Dün merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle tüm kullanıcı kimlik bilgilerini doğruladı.",
-              "corrects": [
-                "validated",
-                "were"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "There ___ several contradictions in the historical record examined last year.",
+              "options": [
+                "are",
+                "were",
+                "have been",
+                "will be"
+              ],
+              "correctIndex": 1,
+              "translation": "Geçen yıl incelenen tarihi kayıtta birkaç çelişki vardı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l96_ex4_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The automatic system monitored pressure parameters three hours ___ lest the industrial mechanical piston ___ fail unexpectedly.",
-              "translation": "Otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için üç saat önce basınç parametrelerini izledi.",
+              "sentence": "Last week, scholars ___ cognitive development conducted a ___ study on child behavior.",
+              "translation": "Geçen hafta, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışma yürüttü.",
               "corrects": [
-                "ago",
-                "should"
+                "studying",
+                "detailed"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l96_ex4_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Last year, local institutions ___ their internal laws inasmuch as regional environmental regulations ___ stricter.",
-              "translation": "Geçen yıl, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+              "sentence": "Yesterday, ___ the film critics ___ the symbolic meaning of early movies?",
+              "translation": "Dün, film eleştirmenleri erken dönem filmlerinin sembolik anlamını tartıştı mı?",
               "corrects": [
-                "altered",
-                "became"
+                "did",
+                "discuss"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
               ]
             },
             {
               "id": "u102l96_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The academic team ___ the new device test in 2020 just as the original mathematical physics formulas ___ .",
-              "translation": "Akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihaz testini 2020'de tamamladı.",
-              "corrects": [
-                "completed",
-                "predicted"
+              "type": "translation-text",
+              "prompt": "\"There could be no resemblance between the two historical cases analyzed last year.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Geçen yıl analiz edilen iki tarihi vaka arasında hiçbir benzerlik olamazdı.",
+              "enSentence": "There could be no resemblance between the two historical cases analyzed last year.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l96_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Yesterday, a heavy rain ___ the simulation site; therefore, field operations ___ temporarily suspended.",
-              "translation": "Dün, şiddetli bir yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu.",
-              "corrects": [
-                "affected",
-                "were"
+              "type": "translation-text",
+              "prompt": "\"Geçen hafta, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı bir çalışma yürüttü.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Last week, scholars studying cognitive development conducted a detailed study on child behavior.",
+              "enSentence": "Last week, scholars studying cognitive development conducted a detailed study on child behavior.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             }
           ]
@@ -90744,558 +91336,870 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u102l97ex1",
-          "title": "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
+          "title": "Alıştırma 1: Yakın Geçmiş Zaman & Süreç Bağlaçları I (Öbek Düzeyi)",
+          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin öbek düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l97_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, heavy rain ___ the simulation site.",
-              "options": [
-                "has affected",
-                "affected",
-                "affecting",
-                "affects"
+              "type": "matching",
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">recently</span> analyzed the historical shift",
+                  "right": "son zamanlarda tarihi değişimi analiz etti"
+                },
+                {
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">lately</span> examined the economic recession",
+                  "right": "son günlerde ekonomik durgunluğu inceledi"
+                },
+                {
+                  "left": "already studied cognitive behavior",
+                  "right": "bilişsel davranışı çoktan çalıştı"
+                },
+                {
+                  "left": "up to now evaluated the cinema archives",
+                  "right": "şu ana kadar sinema arşivlerini değerlendirdi"
+                }
               ],
-              "correctIndex": 0,
-              "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ now, heavy rain <span style=\"color: #ff6b6b; font-weight: bold;\">has affected</span> the simulation site.",
+              "type": "multiple-choice",
+              "prompt": "\"recently analyzed the historical shift\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Up to",
-                "Since",
-                "By",
-                "At"
+                "son günlerde ekonomik durgunluğu inceledi",
+                "son zamanlarda tarihi değişimi analiz etti",
+                "bilişsel davranışı çoktan çalıştı",
+                "şu ana kadar sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 0,
-              "translation": "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı."
+              "correctIndex": 1,
+              "enSentence": "recently analyzed the historical shift",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The central server ___ user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"lately examined the economic recession\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "validates",
-                "validating",
-                "just validated",
-                "has just validated"
+                "son günlerde ekonomik durgunluğu inceledi",
+                "son zamanlarda tarihi değişimi analiz etti",
+                "bilişsel davranışı çoktan çalıştı",
+                "şu ana kadar sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 3,
-              "translation": "2020'den beri akademik ekip yeni cihazı test etti."
+              "correctIndex": 0,
+              "enSentence": "lately examined the economic recession",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The central server <span style=\"color: #ff6b6b; font-weight: bold;\">has</span> ___ <span style=\"color: #ff6b6b; font-weight: bold;\">validated</span> the user credentials.",
+              "type": "multiple-choice",
+              "prompt": "\"already studied cognitive behavior\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "ago",
-                "currently",
-                "yet",
-                "just"
+                "son günlerde ekonomik durgunluğu inceledi",
+                "son zamanlarda tarihi değişimi analiz etti",
+                "bilişsel davranışı çoktan çalıştı",
+                "şu ana kadar sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 3,
-              "translation": "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
+              "correctIndex": 2,
+              "enSentence": "already studied cognitive behavior",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> 2020, the academic team ___ the new device.",
+              "type": "multiple-choice",
+              "prompt": "\"up to now evaluated the cinema archives\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "has tested",
-                "tested",
-                "testing",
-                "tests"
+                "son günlerde ekonomik durgunluğu inceledi",
+                "son zamanlarda tarihi değişimi analiz etti",
+                "bilişsel davranışı çoktan çalıştı",
+                "şu ana kadar sinema arşivlerini değerlendirdi"
               ],
-              "correctIndex": 0,
-              "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
+              "correctIndex": 3,
+              "enSentence": "up to now evaluated the cinema archives",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ 2020, the academic team <span style=\"color: #ff6b6b; font-weight: bold;\">has tested</span> the new device.",
+              "sentence": "Up to now, the legal experts ___ the assessment of public behavior.",
               "options": [
-                "Since",
-                "For",
-                "Lately",
-                "In"
+                "completed",
+                "completing",
+                "have completed",
+                "will complete"
               ],
-              "correctIndex": 0,
-              "translation": "Sistem zaten benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 2,
+              "translation": "Şu ana kadar, hukuk uzmanları toplumsal davranışın değerlendirmesini tamamladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The research facility ___ required additional financial resources.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Recently, the historians ___ the contradictions in the original documents.",
               "options": [
-                "currently",
-                "yesterday",
-                "recently",
-                "has recently"
+                "identify",
+                "have identified",
+                "are identifying",
+                "identifies"
               ],
-              "correctIndex": 3,
-              "translation": "Ekip projeye başladığından beri otomatik sistem basınç parametrelerini izledi."
+              "correctIndex": 1,
+              "translation": "Son zamanlarda, tarihçiler orijinal belgelerdeki çelişkileri tespit etti.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The research facility has <span style=\"color: #ff6b6b; font-weight: bold;\">recently</span> ___ additional financial resources.",
-              "options": [
-                "will require",
-                "required",
-                "requiring",
-                "requires"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "son zamanlarda tarihi değişimi analiz etti",
+              "enSentence": "recently analyzed the historical shift",
+              "words": [
+                "son",
+                "zamanlarda",
+                "tarihi",
+                "değişimi",
+                "analiz",
+                "etti",
+                "hata"
               ],
-              "correctIndex": 1,
-              "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "correctOrder": [
+                "son",
+                "zamanlarda",
+                "tarihi",
+                "değişimi",
+                "analiz",
+                "etti"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler ___ all the data blocks.",
-              "options": [
-                "has processed",
-                "processing",
-                "processes",
-                "processed"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "son günlerde ekonomik durgunluğu inceledi",
+              "enSentence": "lately examined the economic recession",
+              "words": [
+                "son",
+                "günlerde",
+                "ekonomik",
+                "durgunluğu",
+                "inceledi",
+                "karar"
               ],
-              "correctIndex": 0,
-              "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
+              "correctOrder": [
+                "son",
+                "günlerde",
+                "ekonomik",
+                "durgunluğu",
+                "inceledi"
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler has ___ all the data blocks.",
-              "options": [
-                "process",
-                "processed",
-                "processing",
-                "processes"
-              ],
-              "correctIndex": 1,
-              "translation": "Şu ana kadar yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih etti."
+              "type": "translation-text",
+              "prompt": "\"up to now evaluated the cinema archives\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "şu ana kadar sinema arşivlerini değerlendirdi",
+              "enSentence": "up to now evaluated the cinema archives",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l97ex2",
-          "title": "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "title": "Alıştırma 2: Yakın Geçmiş Zaman & Süreç Bağlaçları II (Cümle Düzeyi)",
+          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin basit cümle düzeyinde alıştırmaları.",
           "questions": [
             {
               "id": "u102l97_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The system ___ <span style=\"color: #ff6b6b; font-weight: bold;\">already</span> generated a unique cryptographic key.",
+              "type": "multiple-choice",
+              "prompt": "\"Recently, the film critics have analyzed the symbolic meaning of the movies.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "had",
-                "have",
-                "is",
-                "has"
+                "Son zamanlarda, film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+                "Dün, film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+                "Şu anda film eleştirmenleri filmlerin sembolik anlamını analiz ediyor.",
+                "Film eleştirmenleri filmlerin sembolik anlamını her zaman analiz etmelidir."
               ],
-              "correctIndex": 3,
-              "translation": "Sistem zaten benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 0,
+              "enSentence": "Recently, the film critics have analyzed the symbolic meaning of the movies.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system <span style=\"color: #ff6b6b; font-weight: bold;\">has</span> ___ <span style=\"color: #ff6b6b; font-weight: bold;\">generated</span> a unique cryptographic key.",
+              "type": "multiple-choice",
+              "prompt": "\"So far, the sociologist has conducted a detailed study of family behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "currently",
-                "ago",
-                "yet",
-                "already"
+                "Geçen yıl, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+                "Şu anda sosyolog aile davranışı üzerine detaylı bir çalışma yürütüyor.",
+                "Şu ana kadar, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+                "Sosyolog aile davranışı üzerine detaylı bir çalışma yürütür."
               ],
-              "correctIndex": 3,
-              "translation": "Ekip projeye başladığından beri otomatik sistem basınç parametrelerini izledi."
+              "correctIndex": 2,
+              "enSentence": "So far, the sociologist has conducted a detailed study of family behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the team started the project, the automatic system ___ pressure parameters.",
+              "type": "multiple-choice",
+              "prompt": "\"The research team has already completed the test of cognitive factors.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "has monitored",
-                "monitored",
-                "monitoring",
-                "monitors"
+                "Araştırma ekibi bilişsel faktörlerin testini çoktan tamamladı.",
+                "Araştırma ekibi bilişsel faktörlerin testini şu anda tamamlıyor.",
+                "Araştırma ekibi bilişsel faktörlerin testini dün tamamladı.",
+                "Araştırma ekibi bilişsel faktörlerin testini üç saat sonra tamamlayacak."
               ],
               "correctIndex": 0,
-              "translation": "Son zamanlarda kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "enSentence": "The research team has already completed the test of cognitive factors.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the team ___ the project, the automatic system has monitored pressure parameters.",
+              "sentence": "Since 2020, the country ___ a major shift in its economic policies.",
               "options": [
-                "has started",
-                "starts",
-                "started",
-                "starting"
+                "experiences",
+                "is experiencing",
+                "experienced",
+                "has experienced"
               ],
-              "correctIndex": 2,
-              "translation": "Son zamanlarda yerel kurumlar kendi iç yasalarını değiştirdi."
+              "correctIndex": 3,
+              "translation": "2020'den beri, ülke ekonomik politikalarında büyük bir değişim yaşadı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories ___ adjusted their security protocols.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Lately, archaeologists ___ several ancient artifacts near the temple.",
               "options": [
-                "are",
-                "has",
-                "had",
-                "have"
+                "excavate",
+                "excavated",
+                "are excavating",
+                "have excelled",
+                "have excavated"
               ],
-              "correctIndex": 3,
-              "translation": "Şu ana kadar yazılım geliştiriciler oyunlaştırılmış mobil tasarım desenlerini tercih etti."
+              "correctIndex": 4,
+              "translation": "Son zamanlarda, arkeologlar tapınağın yakınında birkaç antik eser çıkardı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories ___ their security protocols.",
+              "sentence": "Up to now, the legal experts ___ a new report on public behavior.",
               "options": [
-                "have adjusted",
-                "adjusts",
-                "adjusted",
-                "adjusting"
+                "are preparing",
+                "prepare",
+                "prepared",
+                "have prepared"
               ],
-              "correctIndex": 0,
-              "translation": "Şu ana kadar şiddetli yağmur simülasyon alanını etkiledi."
+              "correctIndex": 3,
+              "translation": "Şu ana kadar, yasa uzmanları toplumsal davranış üzerine yeni bir rapor hazırladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions ___ altered their internal laws.",
-              "options": [
-                "have",
-                "has",
-                "had",
-                "are"
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Son zamanlarda, film eleştirmenleri filmlerin sembolik anlamını analiz etti.",
+              "enSentence": "Recently, the film critics have analyzed the symbolic meaning of the movies.",
+              "words": [
+                "Son",
+                "eleştirmenleri",
+                "filmlerin",
+                "sembolik",
+                "anlamını",
+                "analiz",
+                "etti.",
+                "film",
+                "zamanlarda,",
+                "hata"
               ],
-              "correctIndex": 0,
-              "translation": "Merkez sunucu kullanıcı kimlik bilgilerini henüz doğruladı."
+              "correctOrder": [
+                "Son",
+                "zamanlarda,",
+                "film",
+                "eleştirmenleri",
+                "filmlerin",
+                "sembolik",
+                "anlamını",
+                "analiz",
+                "etti."
+              ],
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions ___ their internal laws.",
-              "options": [
-                "altered",
-                "alters",
-                "altering",
-                "have altered"
+              "type": "word-bank",
+              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+              "translation": "Şu ana kadar, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+              "trSentence": "Şu ana kadar, sosyolog aile davranışı üzerine detaylı bir çalışma yürüttü.",
+              "words": [
+                "sociologist",
+                "So",
+                "far,",
+                "the",
+                "has",
+                "conducted",
+                "a",
+                "detailed",
+                "study",
+                "of",
+                "family",
+                "behavior.",
+                "currently",
+                "before"
               ],
-              "correctIndex": 3,
-              "translation": "2020'den beri akademik ekip yeni cihazı test etti."
+              "correctOrder": [
+                "So",
+                "far,",
+                "the",
+                "sociologist",
+                "has",
+                "conducted",
+                "a",
+                "detailed",
+                "study",
+                "of",
+                "family",
+                "behavior."
+              ],
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">So far</span>, software developers ___ gamified mobile design patterns.",
-              "options": [
-                "have preferred",
-                "preferred",
-                "prefers",
-                "preferring"
-              ],
-              "correctIndex": 0,
-              "translation": "Araştırma tesisi son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
+              "type": "translation-text",
+              "prompt": "\"The research team has already completed the test of cognitive factors.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Araştırma ekibi bilişsel faktörlerin testini çoktan tamamladı.",
+              "enSentence": "The research team has already completed the test of cognitive factors.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ far, software developers <span style=\"color: #ff6b6b; font-weight: bold;\">have preferred</span> gamified mobile design patterns.",
-              "options": [
-                "So",
-                "As",
-                "Too",
-                "By"
-              ],
-              "correctIndex": 0,
-              "translation": "Şu ana kadar derleyici tüm veri bloklarını işledi."
+              "type": "translation-text",
+              "prompt": "\"Son zamanlarda, arkeologlar tapınağın yakınında birkaç antik eser çıkardı.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Recently, archaeologists have excavated several ancient artifacts near the temple.",
+              "enSentence": "Recently, archaeologists have excavated several ancient artifacts near the temple.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             }
           ]
         },
         {
           "id": "u102l97ex3",
-          "title": "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "title": "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III (Akademik Düzey)",
+          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin akademik düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l97_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The international research facility ___ additional financial resources to optimize its secondary structural frameworks.",
+              "type": "multiple-choice",
+              "prompt": "\"Scholars examining the ancient manuscripts have recently discovered a major contradiction in the historical record.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "requires",
-                "required",
-                "has recently required",
-                "requiring"
+                "Antik el yazmalarını inceleyen akademisyenler son zamanlarda tarihi kayıtta büyük bir çelişki keşfetti.",
+                "Şu anda, antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişki keşfediyor.",
+                "Antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişkiyi geçen yıl keşfetti.",
+                "Antik el yazmalarını inceleyen akademisyenler tarihi kayıtta büyük bir çelişkiyi her zaman keşfeder."
               ],
-              "correctIndex": 2,
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu."
+              "correctIndex": 0,
+              "enSentence": "Scholars examining the ancient manuscripts have recently discovered a major contradiction in the historical record.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l97_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, the compiler has processed the data blocks while the network firewall ___ external traffic.",
+              "type": "multiple-choice",
+              "prompt": "\"Lately, the economist analyzing recession factors has proposed a theoretical consensus on policy shift.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "has blocked",
-                "blocks",
-                "blocking",
-                "will block"
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşıyı dün önerdi.",
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşıyı şu anda öneriyor.",
+                "Son zamanlarda, durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önerdi.",
+                "Durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önermek zorundadır."
               ],
-              "correctIndex": 0,
-              "translation": "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi."
+              "correctIndex": 2,
+              "enSentence": "Lately, the economist analyzing recession factors has proposed a theoretical consensus on policy shift.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l97_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, public laboratories have adjusted their security protocols because malicious malware attacks ___ sensitive files.",
+              "type": "multiple-choice",
+              "prompt": "\"Since last decade, there has been a significant alteration in the legal system protecting civil liberties.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "threatening",
-                "threaten",
-                "have threatened",
-                "threatens"
+                "Geçen on yıldan beri, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik olmuştur.",
+                "Geçen on yıldan beri, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik vardı.",
+                "Şu anda, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik var.",
+                "Geçen on yıldan beri, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik olacak."
               ],
-              "correctIndex": 2,
-              "translation": "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı."
+              "correctIndex": 0,
+              "enSentence": "Since last decade, there has been a significant alteration in the legal system protecting civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l97_ex3_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The system has already generated a unique cryptographic key <span style=\"color: #ff6b6b; font-weight: bold;\">since</span> the administrator ___ verification clearance.",
+              "sentence": "Lately, the research team ___ the behavior of patients experiencing memory loss.",
               "options": [
-                "granting",
-                "will grant",
-                "granted",
-                "grants"
+                "observe",
+                "observes",
+                "observed",
+                "has observed"
               ],
-              "correctIndex": 2,
-              "translation": "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti."
+              "correctIndex": 3,
+              "translation": "Son zamanlarda, araştırma ekibi hafıza kaybı yaşayan hastaların davranışını gözlemledi.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l97_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">So far</span>, software developers have preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Recently, film critics studying French cinema ___ the symbolic meaning of early movies.",
               "options": [
-                "may",
-                "might",
-                "will",
-                "can"
+                "discuss",
+                "have discussed",
+                "discussing",
+                "are discussing"
               ],
               "correctIndex": 1,
-              "translation": "Şu ana kadar yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih etti."
+              "translation": "Son zamanlarda, Fransız sinemasını çalışan film eleştirmenleri erken dönem filmlerin sembolik anlamını tartıştı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l97_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The international research facility ___ recently ___ additional financial resources to optimize its secondary structural frameworks.",
-              "translation": "Uluslararası araştırma tesisi, ikincil yapısal çerçevelerini optimize etmek için son zamanlarda ek finansal kaynaklara ihtiyaç duydu.",
-              "corrects": [
-                "has",
-                "required"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Up to now, the archaeologists ___ delicate artifacts recovered from the ruins.",
+              "options": [
+                "examine",
+                "examined",
+                "examining",
+                "have examined"
+              ],
+              "correctIndex": 3,
+              "translation": "Şu ana kadar, arkeologlar kalıntılardan çıkarılan hassas eserleri inceledi.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l97_ex3_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Up to now, the compiler ___ processed the data blocks while the network firewall ___ blocked external traffic.",
-              "translation": "Şu ana kadar, ağ güvenlik duvarı harici trafiği engellerken derleyici veri bloklarını işledi.",
+              "sentence": "Scholars ___ the ancient manuscripts ___ recently discovered a major contradiction in the historical record.",
+              "translation": "Antik el yazmalarını inceleyen akademisyenler son zamanlarda tarihi kayıtta büyük bir çelişki keşfetti.",
               "corrects": [
-                "has",
-                "has"
+                "examining",
+                "have"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l97_ex3_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Lately, public laboratories ___ adjusted their security protocols because malicious malware attacks ___ threatened sensitive files.",
-              "translation": "Son zamanlarda, kötü amaçlı yazılım saldırıları hassas dosyaları tehdit ettiği için kamu laboratuvarları güvenlik protokollerini ayarladı.",
+              "sentence": "Lately, the economist ___ recession factors ___ proposed a theoretical consensus on policy shift.",
+              "translation": "Son zamanlarda, durgunluk faktörlerini analiz eden iktisatçı, politika değişimi üzerine kuramsal bir uzlaşı önerdi.",
               "corrects": [
-                "have",
-                "have"
+                "analyzing",
+                "has"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l97_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The system ___ already generated a unique cryptographic key since the administrator ___ verification clearance.",
-              "translation": "Sistem, yönetici doğrulama izni verdiğinden beri benzersiz bir kriptografik anahtar üretti.",
-              "corrects": [
-                "has",
-                "granted"
+              "type": "translation-text",
+              "prompt": "\"Since last decade, there has been a significant alteration in the legal system protecting civil liberties.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Geçen on yıldan beri, sivil özgürlükleri koruyan yasal sistemde önemli bir değişiklik olmuştur.",
+              "enSentence": "Since last decade, there has been a significant alteration in the legal system protecting civil liberties.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l97_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "So far, software developers ___ preferred gamified mobile design patterns in order that students ___ learn complex grammar easily.",
-              "translation": "Şu ana kadar yazılım geliştiriciler, öğrencilerin karmaşık dilbilgisini kolayca öğrenebilmesi için oyunlaştırılmış mobil tasarım desenlerini tercih etti.",
-              "corrects": [
-                "have",
-                "might"
+              "type": "translation-text",
+              "prompt": "\"Antik el yazmalarını inceleyen akademisyenler son zamanlarda tarihi kayıtta büyük bir çelişki keşfetti.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "Scholars examining the ancient manuscripts have recently discovered a major contradiction in the historical record.",
+              "enSentence": "Scholars examining the ancient manuscripts have recently discovered a major contradiction in the historical record.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             }
           ]
         },
         {
           "id": "u102l97ex4",
-          "title": "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "title": "Alıştırma 4: Yakın Geçmiş Zaman & Süreç Bağlaçları IV (Spiralleşme & Çeviri)",
+          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin karma ve spiralleşmiş alıştırmaları.",
           "questions": [
             {
               "id": "u102l97_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The central server has just validated user credentials on grounds that previous login requests ___ corrupted.",
+              "type": "multiple-choice",
+              "prompt": "\"Have the economists analyzing recession factors proposed a theoretical consensus recently?\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "have been",
-                "will be",
-                "are",
-                "were"
+                "Durgunluk faktörlerini analiz eden iktisatçılar son zamanlarda kuramsal bir uzlaşı önerdi mi?",
+                "Durgunluk faktörlerini analiz eden iktisatçılar şu anda kuramsal bir uzlaşı mı öneriyor?",
+                "Durgunluk faktörlerini analiz eden iktisatçılar dün kuramsal bir uzlaşı önerdi mi?",
+                "Durgunluk faktörlerini analiz eden iktisatçılar kuramsal bir uzlaşı önermek zorunda mı?"
               ],
               "correctIndex": 0,
-              "translation": "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı."
+              "enSentence": "Have the economists analyzing recession factors proposed a theoretical consensus recently?",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l97_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> the experiment began, the automatic system has monitored pressure parameters lest the industrial mechanical piston ___ fail unexpectedly.",
+              "type": "multiple-choice",
+              "prompt": "\"There has been no resemblance between the two historical cases analyzed recently.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "shall",
-                "will",
-                "would",
-                "should"
+                "Son zamanlarda analiz edilen iki tarihi vaka arasında hiçbir benzerlik olamazdı.",
+                "Dün analiz edilen iki tarihi vaka arasında hiçbir benzerlik yoktu.",
+                "Son zamanlarda analiz edilen iki tarihi vaka arasında hiçbir benzerlik olmamıştır.",
+                "Son zamanlarda analiz edilen iki tarihi vaka arasında hiçbir benzerlik olmamalıdır."
               ],
-              "correctIndex": 3,
-              "translation": "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi."
+              "correctIndex": 2,
+              "enSentence": "There has been no resemblance between the two historical cases analyzed recently.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
+              ]
             },
             {
               "id": "u102l97_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Lately</span>, local institutions have altered their internal laws inasmuch as regional environmental regulations ___ become stricter.",
+              "type": "multiple-choice",
+              "prompt": "\"For decades, scholars studying cognitive development have conducted detailed studies on child behavior.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "has",
-                "have",
-                "had",
-                "are"
+                "Onlarca yıldır, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmalar yürüttü.",
+                "Bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmaları şu anda yürütüyor.",
+                "Onlarca yıldır, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmalar yürütmek zorundadır.",
+                "Onlarca yıldır, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmaları dün yürüttü."
               ],
-              "correctIndex": 1,
-              "translation": "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi."
+              "correctIndex": 0,
+              "enSentence": "For decades, scholars studying cognitive development have conducted detailed studies on child behavior.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
+              ]
             },
             {
               "id": "u102l97_ex4_q4",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Since</span> 2020, the academic team has tested the new device just as the original mathematical physics formulas ___ .",
+              "sentence": "___, the legal experts have prepared a new report on public behavior.",
               "options": [
-                "will predict",
-                "predicted",
-                "predicting",
-                "predicts"
+                "Yesterday",
+                "Last week",
+                "Recently",
+                "Since 2018"
               ],
-              "correctIndex": 1,
-              "translation": "2020'den beri akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihazı test etti."
+              "correctIndex": 2,
+              "translation": "Son zamanlarda, yasa uzmanları toplumsal davranış üzerine yeni bir rapor hazırladı.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları"
+              ]
             },
             {
               "id": "u102l97_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">Up to now</span>, heavy rain has affected the simulation site; therefore, field operations ___ temporarily suspended.",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Have the film critics already ___ the symbolic meaning of early movies?",
               "options": [
-                "are",
-                "will be",
-                "were",
-                "have been"
+                "discuss",
+                "discussed",
+                "discussing",
+                "been discussing"
               ],
-              "correctIndex": 3,
-              "translation": "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu."
+              "correctIndex": 1,
+              "translation": "Film eleştirmenleri erken dönem filmlerinin sembolik anlamını çoktan tartıştı mı?",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
+              ]
             },
             {
               "id": "u102l97_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The central server ___ just validated user credentials on grounds that previous login requests ___ corrupted.",
-              "translation": "Merkez sunucu, önceki giriş isteklerinin bozuk olması gerekçesiyle kullanıcı kimlik bilgilerini henüz doğruladı.",
-              "corrects": [
-                "has",
-                "have been"
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "There ___ several contradictions in the historical record examined recently.",
+              "options": [
+                "are",
+                "were",
+                "have been",
+                "will be"
+              ],
+              "correctIndex": 2,
+              "translation": "Son zamanlarda incelenen tarihi kayıtta birkaç çelişki olmuştur.",
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l97_ex4_q7",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Since the experiment ___ , the automatic system ___ monitored pressure parameters lest the industrial mechanical piston should fail unexpectedly.",
-              "translation": "Deney başladığından beri otomatik sistem, endüstriyel mekanik pistonun beklenmedik şekilde arızalanmaması için basınç parametrelerini izledi.",
+              "sentence": "For decades, scholars ___ cognitive development ___ conducted detailed studies on child behavior.",
+              "translation": "Onlarca yıldır, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmalar yürüttü.",
               "corrects": [
-                "began",
-                "has"
+                "studying",
+                "have"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             },
             {
               "id": "u102l97_ex4_q8",
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Lately, local institutions ___ altered their internal laws inasmuch as regional environmental regulations ___ become stricter.",
-              "translation": "Son zamanlarda, bölgesel çevre düzenlemelerinin daha katı hale gelmesi nedeniyle yerel kurumlar iç yasalarını değiştirdi.",
+              "sentence": "Recently, ___ the film critics ___ the symbolic meaning of early movies?",
+              "translation": "Son zamanlarda, film eleştirmenleri erken dönem filmlerinin sembolik anlamını tartıştı mı?",
               "corrects": [
                 "have",
-                "have"
+                "discussed"
+              ],
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Soru Cümleleri ve Kalıpları (Question Structures)"
               ]
             },
             {
               "id": "u102l97_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Since 2020, the academic team ___ tested the new device just as the original mathematical physics formulas ___ .",
-              "translation": "2020'den beri akademik ekip, tam da orijinal matematiksel fizik formüllerinin öngördüğü gibi yeni cihazı test etti.",
-              "corrects": [
-                "has",
-                "predicted"
+              "type": "translation-text",
+              "prompt": "\"There has been no resemblance between the two historical cases analyzed recently.\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Son zamanlarda analiz edilen iki tarihi vaka arasında hiçbir benzerlik olmamıştır.",
+              "enSentence": "There has been no resemblance between the two historical cases analyzed recently.",
+              "isEngToTr": true,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)",
+                "There Yapıları (Existential)"
               ]
             },
             {
               "id": "u102l97_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Up to now, heavy rain ___ affected the simulation site; therefore, field operations ___ temporarily suspended.",
-              "translation": "Şu ana kadar, şiddetli yağmur simülasyon alanını etkiledi; bu nedenle, saha operasyonları geçici olarak durduruldu.",
-              "corrects": [
-                "has",
-                "have been"
+              "type": "translation-text",
+              "prompt": "\"Onlarca yıldır, bilişsel gelişimi inceleyen akademisyenler çocuk davranışı üzerine detaylı çalışmalar yürüttü.\" ifadesini İngilizce'ye çevirin:",
+              "correctSentence": "For decades, scholars studying cognitive development have conducted detailed studies on child behavior.",
+              "enSentence": "For decades, scholars studying cognitive development have conducted detailed studies on child behavior.",
+              "isEngToTr": false,
+              "grammarTags": [
+                "Zaman Zarfları ve Tense Uyumu",
+                "Kip Ekleri ve Zamanlar",
+                "İsim ve Edat Yapıları",
+                "İsim Tamlamaları",
+                "Sıfat-Fiiller ve Kısaltmalar (Participles)"
               ]
             }
           ]
