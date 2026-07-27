@@ -1,6 +1,7 @@
 const fs = require('fs');
 const vm = require('vm');
 
+const stableCode = fs.readFileSync('data-stable.js', 'utf8');
 const dataCode = fs.readFileSync('data.js', 'utf8');
 const extraCode = fs.readFileSync('data-extra.js', 'utf8');
 
@@ -10,10 +11,13 @@ const sandbox = {
   document: {},
   lessons: [],
   units: [],
-  unitSentencesMap: {}
+  unitSentencesMap: {},
+  rawTopics: [],
+  lessonIcons: []
 };
 
 vm.createContext(sandbox);
+vm.runInContext(stableCode.replace(/\bexport\s+/g, ''), sandbox);
 const executableCode = dataCode.replace(/\bexport\s+/g, '');
 const wrapperCode = executableCode + '\n; ({ units, lessons, unitSentencesMap });';
 const dataResult = vm.runInContext(wrapperCode, sandbox);

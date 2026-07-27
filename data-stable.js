@@ -57957,490 +57957,373 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u32l1ex1",
-          "title": "Alıştırma 1: Zaman Zarf Cümlecikleri (When, After, Before)",
-          "description": "Zaman bağlaçları ile kurulan temel yan cümle parçacıkları (10 Soru)",
+          "title": "Alıştırma 1: Zaman Zarf Cümlecikleri — Öbek Düzeyi",
+          "description": "Zaman bağlaçlı temel yan cümle parçacıkları ve öbek düzeyinde eşleştirme/çeviri (10 Soru)",
           "questions": [
             {
               "id": "u32l1_ex1_q1",
               "type": "matching",
               "prompt": "Zaman bağlaçlı ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "when the reaction starts",
-                  "right": "tepkime başladığında"
-                },
-                {
-                  "left": "after the sun sets",
-                  "right": "güneş battıktan sonra"
-                },
-                {
-                  "left": "before they deploy the code",
-                  "right": "onlar kodu dağıtmadan önce"
-                },
-                {
-                  "left": "when the system reboots",
-                  "right": "sistem yeniden başladığında"
-                }
-              ]
+                { "left": "when the legal dispute starts", "right": "yasal anlaşmazlık başladığında" },
+                { "left": "after analyzing the anonymous data", "right": "isimsiz verileri analiz ettikten sonra" },
+                { "left": "before restricting access to archives", "right": "arşivlere erişimi kısıtlamadan önce" },
+                { "left": "since securing reliable funding", "right": "güvenilir fon sağladığından beri" }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"when the temperature drops\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"when economists evaluate the financial agreement\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "sıcaklık düştüğünde",
-                "sıcaklık düşmeden önce",
-                "sıcaklık düştükten sonra",
-                "sıcaklık düşer düşmez"
+                "iktisatçılar finansal anlaşmayı değerlendirdiğinde",
+                "iktisatçılar finansal anlaşmayı değerlendirdikten sonra",
+                "iktisatçılar finansal anlaşmayı değerlendirmeden önce",
+                "iktisatçılar finansal anlaşmayı değerlendirdiği için"
               ],
               "correctIndex": 0,
-              "enSentence": "when the temperature drops",
-              "isEngToTr": true
+              "enSentence": "when economists evaluate the financial agreement",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q3",
               "type": "multiple-choice",
-              "prompt": "\"after the user logs in\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"before psychologists study human behavior patterns\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "kullanıcı giriş yaptıktan sonra",
-                "kullanıcı giriş yapmadan önce",
-                "kullanıcı giriş yaptığında",
-                "kullanıcı giriş yaparken"
+                "psikologlar insan davranışı örüntülerini incelemeden önce",
+                "psikologlar insan davranışı örüntülerini inceledikten sonra",
+                "psikologlar insan davranışı örüntülerini incelediğinde",
+                "psikologlar insan davranışı örüntülerini incelediği için"
               ],
               "correctIndex": 0,
-              "enSentence": "after the user logs in",
-              "isEngToTr": true
+              "enSentence": "before psychologists study human behavior patterns",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex1_q4",
               "type": "multiple-choice",
-              "prompt": "\"before the experiment begins\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"after the commission delays the final decision\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "deney başlamadan önce",
-                "deney başladıktan sonra",
-                "deney başladığında",
-                "deney başladığı için"
+                "komisyon nihai kararı geciktirdikten sonra",
+                "komisyon nihai kararı geciktirmeden önce",
+                "komisyon nihai kararı geciktirdiğinde",
+                "komisyon nihai kararı geciktirdiği için"
               ],
               "correctIndex": 0,
-              "enSentence": "before the experiment begins",
-              "isEngToTr": true
+              "enSentence": "after the commission delays the final decision",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "Zaman cümleciğinde 'will' kullanılmaz kuralına göre boşluğu doldurun:",
-              "sentence": "The program will execute ___ the server restarts.",
-              "options": [
-                "when",
-                "before",
-                "after",
-                "since"
-              ],
+              "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
+              "sentence": "The legal dispute escalated immediately ___ the commission delayed the agreement.",
+              "options": ["after", "before", "since", "until"],
               "correctIndex": 0,
-              "translation": "Sunucu yeniden başladığında program çalışacaktır."
+              "translation": "Komisyon anlaşmayı geciktirdikten sonra yasal anlaşmazlık hemen tırmandı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q6",
               "type": "fill-blank-dropdown",
               "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
-              "sentence": "Check the parameters ___ you start the engine.",
-              "options": [
-                "before",
-                "after",
-                "when",
-                "while"
-              ],
+              "sentence": "Historians should double-check their sources ___ they publish an empirical study.",
+              "options": ["before", "after", "since", "while"],
               "correctIndex": 0,
-              "translation": "Motoru başlatmadan önce parametreleri kontrol edin."
+              "translation": "Tarihçiler ampirik bir çalışma yayınlamadan önce kaynaklarını iki kez kontrol etmelidir.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex1_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Tepkime başladığında.",
-              "enSentence": "when the reaction starts",
-              "words": [
-                "Tepkime",
-                "başladığında",
-                "bittikten",
-                "sonra",
-                "önce"
-              ],
-              "correctOrder": [
-                "Tepkime",
-                "başladığında"
-              ],
-              "isEngToTr": true
+              "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlık başladığında.",
+              "enSentence": "when the legal dispute starts",
+              "words": ["Yasal", "anlaşmazlık", "başladığında", "sonra", "önce"],
+              "correctOrder": ["Yasal", "anlaşmazlık", "başladığında"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q8",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Kodu yayınlamadan önce.",
-              "trSentence": "Kodu yayınlamadan önce.",
-              "words": [
-                "before",
-                "publishing",
-                "the",
-                "code",
-                "after",
-                "when"
-              ],
-              "correctOrder": [
-                "before",
-                "publishing",
-                "the",
-                "code"
-              ],
-              "isEngToTr": false
+              "prompt": "İngilizce ifadeyi oluşturun:",
+              "translation": "Erişimi kısıtlamadan önce.",
+              "trSentence": "Erişimi kısıtlamadan önce.",
+              "words": ["before", "restricting", "access", "after", "when"],
+              "correctOrder": ["before", "restricting", "access"],
+              "isEngToTr": false,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q9",
               "type": "translation-text",
-              "prompt": "\"after the database is updated\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Veritabanı güncellendikten sonra.",
-              "enSentence": "after the database is updated",
-              "isEngToTr": true
+              "prompt": "\"after analyzing the anonymous data\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "İsimsiz verileri analiz ettikten sonra.",
+              "enSentence": "after analyzing the anonymous data",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"when the bell rings\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Zil çaldığında.",
-              "enSentence": "when the bell rings",
-              "isEngToTr": true
+              "prompt": "\"since securing reliable funding\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Güvenilir fon sağladığından beri.",
+              "enSentence": "since securing reliable funding",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           "id": "u32l1ex2",
           "title": "Alıştırma 2: Zaman Zarf Cümlecikleri — Cümle Düzeyi",
-          "description": "Tam cümle yapılarında zaman uyumu ve kullanım (10 Soru)",
+          "description": "Zaman bağlaçlı tam cümle yapıları ve temel sentaks çalışmaları (10 Soru)",
           "questions": [
             {
               "id": "u32l1_ex2_q1",
               "type": "matching",
               "prompt": "Cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "when the process completed",
-                  "right": "süreç tamamlandığında"
-                },
-                {
-                  "left": "after we received the alert",
-                  "right": "uyarıyı aldıktan sonra"
-                },
-                {
-                  "left": "before the server crashed",
-                  "right": "sunucu çökmeden önce"
-                },
-                {
-                  "left": "since they launched the app",
-                  "right": "uygulamayı başlattıklarından beri"
-                }
-              ]
+                { "left": "When the government restricted access, journalists protested.", "right": "Hükümet erişimi kısıtladığında gazeteciler protesto etti." },
+                { "left": "After the commission delayed the funding, the project stopped.", "right": "Komisyon fonlamayı geciktirdikten sonra proje durdu." },
+                { "left": "Before the historians resolved the dispute, they met.", "right": "Tarihçiler anlaşmazlığı çözmeden önce buluştu." },
+                { "left": "Since the psychologist published the survey, opinions shifted.", "right": "Psikolog anketi yayınladığından beri görüşler değişti." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex2_q2",
               "type": "multiple-choice",
-              "prompt": "\"The system will automatically send a notification when the analysis finishes.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"The economists will review the financial agreement when the commission publishes the empirical data.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Analiz bittiğinde sistem otomatik olarak bir bildirim gönderecektir.",
-                "Analiz bitmeden önce sistem otomatik olarak bildirim göndermelidir.",
-                "Analiz bittiği için sistem otomatik bildirim gönderdi.",
-                "Analiz biter bitmez bildirim gönderilmişti."
+                "Komisyon ampirik verileri yayınladığında iktisatçılar finansal anlaşmayı gözden geçirecektir.",
+                "Komisyon ampirik verileri yayınladıktan sonra iktisatçılar finansal anlaşmayı imzaladı.",
+                "Komisyon ampirik verileri yayınlamadan önce iktisatçılar finansal anlaşmayı hazırladı.",
+                "İktisatçılar finansal anlaşmayı gözden geçirdiği zaman komisyon ampirik verileri topluyordu."
               ],
               "correctIndex": 0,
-              "enSentence": "The system will automatically send a notification when the analysis finishes.",
-              "isEngToTr": true
+              "enSentence": "The economists will review the financial agreement when the commission publishes the empirical data.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q3",
               "type": "multiple-choice",
-              "prompt": "\"We backed up all files before the system rebooted.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"Historians analyzed the context of the legal dispute before the government delayed the commission.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Sistem yeniden başlamadan önce tüm dosyaları yedekledik.",
-                "Sistem yeniden başladıktan sonra tüm dosyaları yedekleyeceğiz.",
-                "Sistem yeniden başladığında dosyalar yedeklenmişti.",
-                "Sistem yeniden başladığı için dosyaları yedekledik."
+                "Hükümet komisyonu geciktirmeden önce tarihçiler yasal anlaşmazlığın bağlamını analiz ettiler.",
+                "Hükümet komisyonu geciktirdiği için tarihçiler yasal anlaşmazlığın bağlamını analiz ettiler.",
+                "Tarihçiler yasal anlaşmazlığın bağlamını analiz ettikten sonra hükümet komisyonu geciktirdi.",
+                "Hükümet komisyonu geciktirse de tarihçiler yasal anlaşmazlığın bağlamını analiz etmediler."
               ],
               "correctIndex": 0,
-              "enSentence": "We backed up all files before the system rebooted.",
-              "isEngToTr": true
+              "enSentence": "Historians analyzed the context of the legal dispute before the government delayed the commission.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q4",
               "type": "multiple-choice",
-              "prompt": "\"After the results were verified, the report was submitted.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"Since the institute started the empirical research, they have observed human behavior patterns.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Sonuçlar doğrulandıktan sonra rapor sunuldu.",
-                "Sonuçlar doğrulanmadan önce rapor sunulmalıydı.",
-                "Sonuçlar doğrulandığı zaman rapor sunulacaktı.",
-                "Sonuçlar doğrulandığı halde rapor sunulmadı."
+                "Enstitü ampirik araştırmaya başladığından beri insan davranışı örüntülerini gözlemlemektedir.",
+                "Enstitü ampirik araştırmaya başlamadan önce insan davranışı örüntülerini gözlemledi.",
+                "Enstitü ampirik araştırmaya başladığı için insan davranışı örüntülerini gözlemleyebildi.",
+                "Enstitü ampirik araştırmaya başlamasına rağmen insan davranışı örüntülerini gözlemlemedi."
               ],
               "correctIndex": 0,
-              "enSentence": "After the results were verified, the report was submitted.",
-              "isEngToTr": true
+              "enSentence": "Since the institute started the empirical research, they have observed human behavior patterns.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex2_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek uygun zaman bağlacını seçin:",
-              "sentence": "The security patch was applied ___ the vulnerability was discovered.",
-              "options": [
-                "after",
-                "before",
-                "until",
-                "while"
-              ],
+              "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
+              "sentence": "The researchers have gathered anonymous data ___ the survey started last year.",
+              "options": ["since", "when", "before", "after"],
               "correctIndex": 0,
-              "translation": "Güvenlik açığı keşfedildikten sonra güvenlik yaması uygulandı."
+              "translation": "Anket geçen yıl başladığından beri araştırmacılar isimsiz veriler toplamaktadır.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q6",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek uygun zaman bağlacını seçin:",
-              "sentence": "Always disconnect the power ___ opening the main unit.",
-              "options": [
-                "before",
-                "after",
-                "since",
-                "until"
-              ],
+              "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
+              "sentence": "The court will evaluate the legal context ___ they finalize the agreement.",
+              "options": ["before", "after", "since", "while"],
               "correctIndex": 0,
-              "translation": "Ana üniteyi açmadan önce daima gücü kesin."
+              "translation": "Mahkeme anlaşmayı kesinleştirmeden önce yasal bağlamı değerlendirecektir.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q7",
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "İşlem tamamlandıktan sonra bildirim gönderildi.",
-              "enSentence": "The notification was sent after the transaction completed.",
-              "words": [
-                "İşlem",
-                "tamamlandıktan",
-                "sonra",
-                "bildirim",
-                "gönderildi.",
-                "önce"
-              ],
-              "correctOrder": [
-                "İşlem",
-                "tamamlandıktan",
-                "sonra",
-                "bildirim",
-                "gönderildi."
-              ],
-              "isEngToTr": true
+              "translation": "Komisyon fonlamayı geciktirdikten sonra proje durdu.",
+              "enSentence": "The project stopped after the commission delayed the funding.",
+              "words": ["Komisyon", "fonlamayı", "geciktirdikten", "sonra", "proje", "durdu.", "önce", "duracaktır."],
+              "correctOrder": ["Komisyon", "fonlamayı", "geciktirdikten", "sonra", "proje", "durdu."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q8",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Sıcaklık düştüğünde parametreler değişir.",
-              "trSentence": "Sıcaklık düştüğünde parametreler değişir.",
-              "words": [
-                "Parameters",
-                "change",
-                "when",
-                "the",
-                "temperature",
-                "drops.",
-                "after"
-              ],
-              "correctOrder": [
-                "Parameters",
-                "change",
-                "when",
-                "the",
-                "temperature",
-                "drops."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Hükümet bilgiye erişimi kısıtladığında gazeteciler protesto etti.",
+              "enSentence": "Journalists protested when the government restricted access to information.",
+              "words": ["Hükümet", "bilgiye", "erişimi", "kısıtladığında", "gazeteciler", "protesto", "etti.", "önce", "sonra"],
+              "correctOrder": ["Hükümet", "bilgiye", "erişimi", "kısıtladığında", "gazeteciler", "protesto", "etti."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex2_q9",
               "type": "translation-text",
-              "prompt": "\"The team checked all logs before deploying the patch.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Ekip yamayı dağıtmadan önce tüm günlükleri kontrol etti.",
-              "enSentence": "The team checked all logs before deploying the patch.",
-              "isEngToTr": true
+              "prompt": "\"Before the historians resolved the dispute, they reviewed the documents.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Tarihçiler anlaşmazlığı çözmeden önce belgeleri incelediler.",
+              "enSentence": "Before the historians resolved the dispute, they reviewed the documents.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex2_q10",
               "type": "translation-text",
-              "prompt": "\"When the query executed, the system latency dropped.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sorgu çalıştığında sistem gecikmesi düştü.",
-              "enSentence": "When the query executed, the system latency dropped.",
-              "isEngToTr": true
+              "prompt": "\"Since the psychologist published the survey, opinions have shifted.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Psikolog anketi yayınladığından beri görüşler değişti.",
+              "enSentence": "Since the psychologist published the survey, opinions have shifted.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             }
           ]
         },
         {
           "id": "u32l1ex3",
-          "title": "Alıştırma 3: Zaman Zarf Cümlecikleri — İleri Seviye",
-          "description": "Edilgen ve akademik zaman zarfı yapıları (10 Soru)",
+          "title": "Alıştırma 3: Zaman Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "description": "Zaman bağlaçlarının edilgen, modallı ve ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u32l1_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik zaman cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "when the substance is heated",
-                  "right": "madde ısıtıldığında"
-                },
-                {
-                  "left": "after the data was compiled",
-                  "right": "veri derlendikten sonra"
-                },
-                {
-                  "left": "before the reaction is catalyzed",
-                  "right": "reaksiyon katalizlenmeden önce"
-                },
-                {
-                  "left": "when cells divide rapidly",
-                  "right": "hücreler hızla bölündüğünde"
-                }
-              ]
+                { "left": "Reliable funding must be secured before the commission initiates the survey.", "right": "Komisyon anketi başlatmadan önce güvenilir fon sağlanmalıdır." },
+                { "left": "When the anonymous data was analyzed, the behavior pattern was identified.", "right": "İsimsiz veriler analiz edildiğinde davranış örüntüsü tanımlandı." },
+                { "left": "After the legal dispute was resolved, access to the archive was granted.", "right": "Yasal anlaşmazlık çözüldükten sonra arşive erişim izni verildi." },
+                { "left": "Since the empirical study was published, researchers have changed their methods.", "right": "Ampirik çalışma yayınlandığından beri araştırmacılar yöntemlerini değiştirdiler." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex3_q2",
               "type": "multiple-choice",
-              "prompt": "\"When the neural network model was trained with larger datasets, its accuracy improved significantly.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"The committee should evaluate the legal context of the agreement before they sign the document.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Nöral ağ modeli daha büyük veri setleriyle eğitildiğinde doğruluk oranı önemli ölçüde arttı.",
-                "Nöral ağ modeli daha büyük veri setleriyle eğitilmeden önce doğruluğu artmıştı.",
-                "Nöral ağ modeli eğitildiği için doğruluk oranı artmak zorundaydı.",
-                "Daha büyük veri setiyle eğitilen modelin doğruluğu zamanla azaldı."
+                "Komite, belgeyi imzalamadan önce anlaşmanın yasal bağlamını değerlendirmelidir.",
+                "Komite, yasal anlaşmayı imzalamadan önce belgenin içeriğini değiştirmelidir.",
+                "Yasal anlaşma imzalandıktan sonra komite belgeyi değerlendirmek zorunda kaldı.",
+                "Komite belgeyi imzaladığı zaman anlaşmanın yasal bağlamı zaten değerlendirilmişti."
               ],
               "correctIndex": 0,
-              "enSentence": "When the neural network model was trained with larger datasets, its accuracy improved significantly.",
-              "isEngToTr": true
+              "enSentence": "The committee should evaluate the legal context of the agreement before they sign the document.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex3_q3",
               "type": "multiple-choice",
-              "prompt": "\"The modified algorithm was deployed only after all security protocols had been thoroughly tested.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"When the government restricted access to the historical archives, scholars protested the decision.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Değiştirilen algoritma, yalnızca tüm güvenlik protokolleri etraflıca test edildikten sonra dağıtıldı.",
-                "Değiştirilen algoritma tüm güvenlik protokolleri test edilmeden önce kurulmuştu.",
-                "Güvenlik protokolleri test edildikten sonra algoritma değiştirilmek zorundaydı.",
-                "Algoritma değiştirildiği zaman güvenlik testleri yapılamadı."
+                "Hükümet tarihi arşivlere erişimi kısıtladığında akademisyenler kararı protesto etti.",
+                "Hükümet tarihi arşivlere erişimi kısıtlamadan önce akademisyenler kararı protesto etmişti.",
+                "Akademisyenler kararı protesto ettikten sonra hükümet tarihi arşivlere erişimi kısıtladı.",
+                "Hükümet tarihi arşivleri kısıtladığı için akademisyenler bu kararı protesto etmek zorunda kaldı."
               ],
               "correctIndex": 0,
-              "enSentence": "The modified algorithm was deployed only after all security protocols had been thoroughly tested.",
-              "isEngToTr": true
+              "enSentence": "When the government restricted access to the historical archives, scholars protested the decision.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex3_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek akademik zaman bağlacını seçin:",
-              "sentence": "The compound releases energy ___ it is exposed to ultraviolet light.",
+              "type": "multiple-choice",
+              "prompt": "\"Since the commission delayed the funding, the research team has searched for alternative resources.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "when",
-                "before",
-                "until",
-                "unless"
+                "Komisyon fonlamayı geciktirdiğinden beri araştırma ekibi alternatif kaynaklar aramaktadır.",
+                "Komisyon fonlamayı geciktirdiği için araştırma ekibi alternatif kaynaklar bulabildi.",
+                "Araştırma ekibi alternatif kaynaklar bulduktan sonra komisyon fonlamayı geciktirdi.",
+                "Komisyon fonlamayı geciktirse de araştırma ekibi alternatif kaynakları aramaya devam etti."
               ],
               "correctIndex": 0,
-              "translation": "Bileşik morötesi ışığa maruz kaldığında enerji açığa çıkarır."
+              "enSentence": "Since the commission delayed the funding, the research team has searched for alternative resources.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex3_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek uygun zaman bağlacını seçin:",
-              "sentence": "All measurements must be calibrated ___ the clinical trial proceeds.",
-              "options": [
-                "before",
-                "after",
-                "since",
-                "while"
-              ],
+              "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
+              "sentence": "The survey on human behavior patterns was launched immediately ___ the committee secured the funding.",
+              "options": ["after", "before", "since", "until"],
               "correctIndex": 0,
-              "translation": "Klinik deney ilerlemeden önce tüm ölçümler kalibre edilmelidir."
+              "translation": "Komite fonu sağladıktan hemen sonra insan davranışı örüntüleri anketi başlatıldı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex3_q6",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Buz eridikten sonra su seviyesi kademeli olarak yükselir.",
-              "enSentence": "After the ice melts, the water level rises gradually.",
-              "words": [
-                "Buz",
-                "eridikten",
-                "sonra",
-                "su",
-                "seviyesi",
-                "kademeli",
-                "olarak",
-                "yükselir."
-              ],
-              "correctOrder": [
-                "Buz",
-                "eridikten",
-                "sonra",
-                "su",
-                "seviyesi",
-                "kademeli",
-                "olarak",
-                "yükselir."
-              ],
-              "isEngToTr": true
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zaman bağlacını seçin:",
+              "sentence": "Scholars must obtain permission ___ they can access the restricted legal documents.",
+              "options": ["before", "after", "since", "until"],
+              "correctIndex": 0,
+              "translation": "Akademisyenler kısıtlanmış yasal belgelere erişebilmeden önce izin almalıdır.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex3_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Deney tamamlandığında tüm veriler arşivlendi.",
-              "trSentence": "Deney tamamlandığında tüm veriler arşivlendi.",
-              "words": [
-                "When",
-                "the",
-                "experiment",
-                "was",
-                "completed,",
-                "all",
-                "data",
-                "was",
-                "archived."
-              ],
-              "correctOrder": [
-                "When",
-                "the",
-                "experiment",
-                "was",
-                "completed,",
-                "all",
-                "data",
-                "was",
-                "archived."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Komisyon anketi başlatmadan önce güvenilir fon sağlanmalıdır.",
+              "enSentence": "Reliable funding must be secured before the commission initiates the survey.",
+              "words": ["Komisyon", "anketi", "başlatmadan", "önce", "güvenilir", "fon", "sağlanmalıdır.", "sonra", "sağlandı."],
+              "correctOrder": ["Komisyon", "anketi", "başlatmadan", "önce", "güvenilir", "fon", "sağlanmalıdır."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex3_q8",
-              "type": "translation-text",
-              "prompt": "\"It is crucial to verify all parameters after the configuration changes.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yapılandırma değiştikten sonra tüm parametreleri doğrulamak çok önemlidir.",
-              "enSentence": "It is crucial to verify all parameters after the configuration changes.",
-              "isEngToTr": true
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlık çözüldükten sonra arşive erişim izni verildi.",
+              "enSentence": "After the legal dispute was resolved, access to the archive was granted.",
+              "words": ["Yasal", "anlaşmazlık", "çözüldükten", "sonra", "arşive", "erişim", "izni", "verildi.", "önce", "verilecektir."],
+              "correctOrder": ["Yasal", "anlaşmazlık", "çözüldükten", "sonra", "arşive", "erişim", "izni", "verildi."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l1_ex3_q9",
               "type": "translation-text",
-              "prompt": "\"Before initiating the launch sequence, engineers conducted final diagnostics.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Fırlatma dizisini başlatmadan önce mühendisler son teşhisleri gerçekleştirdi.",
-              "enSentence": "Before initiating the launch sequence, engineers conducted final diagnostics.",
-              "isEngToTr": true
+              "prompt": "\"When the anonymous data was analyzed, the behavior pattern was identified.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "İsimsiz veriler analiz edildiğinde davranış örüntüsü tanımlandı.",
+              "enSentence": "When the anonymous data was analyzed, the behavior pattern was identified.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             },
             {
               "id": "u32l1_ex3_q10",
               "type": "translation-text",
-              "prompt": "\"When the system detects an anomaly, it shuts down automatically.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sistem bir anomali tespit ettiğinde otomatik olarak kapanır.",
-              "enSentence": "When the system detects an anomaly, it shuts down automatically.",
-              "isEngToTr": true
+              "prompt": "\"Since the empirical study was published, researchers have changed their methods.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Ampirik çalışma yayınlandığından beri araştırmacılar yöntemlerini değiştirdiler.",
+              "enSentence": "Since the empirical study was published, researchers have changed their methods.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zaman", "İsim Tamlamaları"]
             }
           ]
         }
@@ -58450,167 +58333,373 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u32l2ex1",
-          "title": "Alıştırma 1: Sebep Zarf Cümlecikleri (Because, Since, As & Due to)",
-          "description": "Neden ve gerekçe bildiren bağlaçlar ve edat yapıları (10 Soru)",
+          "title": "Alıştırma 1: Sebep Zarf Cümlecikleri — Öbek Düzeyi",
+          "description": "Nedensellik ve gerekçe bildiren yapılar ile öbek düzeyinde alıştırmalar (10 Soru)",
           "questions": [
             {
               "id": "u32l2_ex1_q1",
               "type": "matching",
-              "prompt": "Sebep yapısı içeren ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Sebep bildiren ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "because costs increased",
-                  "right": "maliyetler arttığı için"
-                },
-                {
-                  "left": "since the data was missing",
-                  "right": "veri eksik olduğundan dolayı"
-                },
-                {
-                  "left": "due to heavy traffic",
-                  "right": "yoğun trafik nedeniyle (edat)"
-                },
-                {
-                  "left": "as the server overloaded",
-                  "right": "sunucu aşırı yüklendiği için"
-                }
-              ]
+                { "left": "due to restricted access to the archives", "right": "arşivlere kısıtlı erişim nedeniyle" },
+                { "left": "because the commission delayed the funding", "right": "komisyon fonlamayı geciktirdiği için" },
+                { "left": "since the survey was completely anonymous", "right": "anket tamamen isimsiz olduğu için" },
+                { "left": "because of the historical dispute", "right": "tarihi anlaşmazlık yüzünden" }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l2_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"The project was delayed because the budget was reduced.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"seeing that the empirical data was reliable\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Bütçe düşürüldüğü için proje ertelendi.",
-                "Proje ertelendiği için bütçe düşürüldü.",
-                "Bütçe düşürülmesine rağmen proje zamanında bitti.",
-                "Bütçe düşürülünce proje hemen tamamlandı."
+                "ampirik veriler güvenilir olduğu için",
+                "ampirik veriler güvenilir olmasına rağmen",
+                "ampirik veriler güvenilir olduğu zaman",
+                "ampirik veriler güvenilir olmadıkça"
               ],
               "correctIndex": 0,
-              "enSentence": "The project was delayed because the budget was reduced.",
-              "isEngToTr": true
+              "enSentence": "seeing that the empirical data was reliable",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             },
             {
               "id": "u32l2_ex1_q3",
               "type": "multiple-choice",
-              "prompt": "\"Because vs. Due to\" kuralına göre hangi cümle doğrudur?",
+              "prompt": "\"as the psychologists analyzed human behavior\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Due to high costs, we changed the supplier.",
-                "Because high costs, we changed the supplier.",
-                "Due to the server crashed, we logged out.",
-                "Because of the code compiled, we deployed."
+                "psikologlar insan davranışını analiz ettiği için",
+                "psikologlar insan davranışını analiz etmeden önce",
+                "psikologlar insan davranışını analiz etmesine rağmen",
+                "psikologlar insan davranışını analiz ettiğinde"
               ],
               "correctIndex": 0,
-              "enSentence": "Due to high costs, we changed the supplier.",
-              "isEngToTr": true
+              "enSentence": "as the psychologists analyzed human behavior",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l2_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Tam cümle gelen boşluğa uygun sebep bağlacını seçin:",
-              "sentence": "The experiment failed ___ the temperature was not controlled properly.",
+              "type": "multiple-choice",
+              "prompt": "\"due to the lack of legal agreement\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "because",
-                "due to",
-                "because of",
-                "despite"
+                "yasal anlaşma eksikliği nedeniyle",
+                "yasal anlaşma yapılsa bile",
+                "yasal anlaşma eksikliği olmasına rağmen",
+                "yasal anlaşma yapıldıktan sonra"
               ],
               "correctIndex": 0,
-              "translation": "Sıcaklık düzgün kontrol edilmediği için deney başarısız oldu."
+              "enSentence": "due to the lack of legal agreement",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l2_ex1_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "İsim öbeği gelen boşluğa uygun edatı seçin:",
-              "sentence": "The match was canceled ___ heavy rainfall.",
-              "options": [
-                "due to",
-                "because",
-                "since",
-                "as"
-              ],
+              "prompt": "Boşluğa gelecek en uygun sebep bağlacını seçin:",
+              "sentence": "The project was postponed ___ the commission delayed the funding.",
+              "options": ["because", "due to", "because of", "despite"],
               "correctIndex": 0,
-              "translation": "Şiddetli yağmur nedeniyle maç iptal edildi."
+              "translation": "Komisyon fonlamayı geciktirdiği için proje ertelendi.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             },
             {
               "id": "u32l2_ex1_q6",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Maliyetler çok yüksek olduğundan kâr düşük kaldı.",
-              "enSentence": "As the cost was too high, profit remained low.",
-              "words": [
-                "Maliyetler",
-                "çok",
-                "yüksek",
-                "olduğundan",
-                "kâr",
-                "düşük",
-                "kaldı."
-              ],
-              "correctOrder": [
-                "Maliyetler",
-                "çok",
-                "yüksek",
-                "olduğundan",
-                "kâr",
-                "düşük",
-                "kaldı."
-              ],
-              "isEngToTr": true
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun sebep edatını seçin:",
+              "sentence": "The research stopped ___ restricted access to the data.",
+              "options": ["due to", "because", "since", "as"],
+              "correctIndex": 0,
+              "translation": "Verilere kısıtlı erişim nedeniyle araştırma durdu.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             },
             {
               "id": "u32l2_ex1_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Veri eksik olduğu için analizi durdurduk.",
-              "trSentence": "Veri eksik olduğu için analizi durdurduk.",
-              "words": [
-                "We",
-                "stopped",
-                "the",
-                "analysis",
-                "because",
-                "the",
-                "data",
-                "was",
-                "missing."
-              ],
-              "correctOrder": [
-                "We",
-                "stopped",
-                "the",
-                "analysis",
-                "because",
-                "the",
-                "data",
-                "was",
-                "missing."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Arşivlere kısıtlı erişim nedeniyle.",
+              "enSentence": "due to restricted access to the archives",
+              "words": ["Arşivlere", "kısıtlı", "erişim", "nedeniyle", "rağmen", "için"],
+              "correctOrder": ["Arşivlere", "kısıtlı", "erişim", "nedeniyle"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l2_ex1_q8",
-              "type": "translation-text",
-              "prompt": "\"Since all conditions were met, the approval was granted.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Tüm koşullar karşılandığı için onay verildi.",
-              "enSentence": "Since all conditions were met, the approval was granted.",
-              "isEngToTr": true
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Komisyon fonlamayı geciktirdiği için.",
+              "enSentence": "because the commission delayed the funding",
+              "words": ["Komisyon", "fonlamayı", "geciktirdiği", "için", "rağmen", "önce"],
+              "correctOrder": ["Komisyon", "fonlamayı", "geciktirdiği", "için"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             },
             {
               "id": "u32l2_ex1_q9",
               "type": "translation-text",
-              "prompt": "\"The system crashed because of a severe memory leak.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sistem ciddi bir bellek sızıntısı nedeniyle çöktü.",
-              "enSentence": "The system crashed because of a severe memory leak.",
-              "isEngToTr": true
+              "prompt": "\"since the survey was completely anonymous\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Anket tamamen isimsiz olduğu için.",
+              "enSentence": "since the survey was completely anonymous",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             },
             {
               "id": "u32l2_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"As the demand increased rapidly, production capacity was expanded.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Talep hızla arttığı için üretim kapasitesi genişletildi.",
-              "enSentence": "As the demand increased rapidly, production capacity was expanded.",
-              "isEngToTr": true
+              "prompt": "\"because of the historical dispute\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Tarihi anlaşmazlık yüzünden.",
+              "enSentence": "because of the historical dispute",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l2ex2",
+          "title": "Alıştırma 2: Sebep Zarf Cümlecikleri — Cümle Düzeyi",
+          "description": "Cümle düzeyinde bağlaç (SVO) ve edat (Noun Phrase) yapısal farkındalık çalışması (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l2_ex2_q1",
+              "type": "matching",
+              "prompt": "Cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "Because the survey was anonymous, participants shared honest opinions.", "right": "Anket isimsiz olduğu için katılımcılar dürüst görüşlerini paylaştı." },
+                { "left": "Due to the historical dispute, the historians worked separately.", "right": "Tarihi anlaşmazlık nedeniyle tarihçiler ayrı çalıştı." },
+                { "left": "Since the empirical data was reliable, the economists made a projection.", "right": "Ampirik veriler güvenilir olduğu için iktisatçılar bir tahmin yaptı." },
+                { "left": "Because of restricted access, researchers could not study the documents.", "right": "Kısıtlı erişim yüzünden araştırmacılar belgeleri inceleyemedi." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex2_q2",
+              "type": "multiple-choice",
+              "prompt": "\"The commission delayed the agreement because they needed more empirical data.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Komisyon daha fazla ampirik veriye ihtiyaç duyduğu için anlaşmayı geciktirdi.",
+                "Komisyon daha fazla ampirik veri elde ettikten sonra anlaşmayı imzaladı.",
+                "Komisyon ampirik verilere ihtiyaç duymasına rağmen anlaşmayı geciktirdi.",
+                "Komisyon ampirik verileri incelemeden önce anlaşmayı geciktirmek zorunda kaldı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The commission delayed the agreement because they needed more empirical data.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "\"We must modify the methodology as human behavior patterns change over time.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "İnsan davranışı örüntüleri zamanla değiştiği için metodolojiyi değiştirmeliyiz.",
+                "İnsan davranışı örüntüleri zamanla değişmeden önce metodolojiyi değiştirdik.",
+                "İnsan davranışı örüntüleri zamanla değişse bile metodolojiyi korumalıyız.",
+                "İnsan davranışı örüntülerini incelemek amacıyla metodolojiyi değiştirmek zorunda kaldık."
+              ],
+              "correctIndex": 0,
+              "enSentence": "We must modify the methodology as human behavior patterns change over time.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex2_q4",
+              "type": "multiple-choice",
+              "prompt": "\"The legal dispute escalated because of the lack of a reliable agreement.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşmazlık, güvenilir bir anlaşmanın bulunmaması yüzünden tırmandı.",
+                "Yasal anlaşmazlık tırmandı çünkü komisyon anlaşmayı onayladı.",
+                "Güvenilir bir anlaşma olsaydı yasal anlaşmazlık tırmanmayacaktı.",
+                "Yasal anlaşmazlığa rağmen güvenilir bir anlaşma imzalandı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The legal dispute escalated because of the lack of a reliable agreement.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex2_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun gerekçe bağlacını seçin:",
+              "sentence": "The economists modified the model ___ the financial funding was restricted.",
+              "options": ["because", "due to", "because of", "despite"],
+              "correctIndex": 0,
+              "translation": "Finansal fonlama kısıtlandığı için iktisatçılar modeli değiştirdi.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun gerekçe edatını seçin:",
+              "sentence": "The study on human behavior was delayed ___ the historical dispute.",
+              "options": ["due to", "since", "because", "as"],
+              "correctIndex": 0,
+              "translation": "Tarihi anlaşmazlık nedeniyle insan davranışı üzerindeki çalışma gecikti.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Anket isimsiz olduğu için katılımcılar dürüst görüşlerini paylaştı.",
+              "enSentence": "Because the survey was anonymous, participants shared honest opinions.",
+              "words": ["Anket", "isimsiz", "olduğu", "için", "katılımcılar", "dürüst", "görüşlerini", "paylaştı.", "rağmen", "paylaşacaktır."],
+              "correctOrder": ["Anket", "isimsiz", "olduğu", "için", "katılımcılar", "dürüst", "görüşlerini", "paylaştı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Tarihi anlaşmazlık nedeniyle tarihçiler ayrı çalıştı.",
+              "enSentence": "Due to the historical dispute, the historians worked separately.",
+              "words": ["Tarihi", "anlaşmazlık", "nedeniyle", "tarihçiler", "ayrı", "çalıştı.", "için", "çalışacaktır."],
+              "correctOrder": ["Tarihi", "anlaşmazlık", "nedeniyle", "tarihçiler", "ayrı", "çalıştı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q9",
+              "type": "translation-text",
+              "prompt": "\"Since the empirical data was reliable, the economists made a projection.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Ampirik veriler güvenilir olduğu için iktisatçılar bir tahmin yaptı.",
+              "enSentence": "Since the empirical data was reliable, the economists made a projection.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex2_q10",
+              "type": "translation-text",
+              "prompt": "\"Because of restricted access, researchers could not study the documents.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Kısıtlı erişim yüzünden araştırmacılar belgeleri inceleyemedi.",
+              "enSentence": "Because of restricted access, researchers could not study the documents.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l2ex3",
+          "title": "Alıştırma 3: Sebep Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "description": "Edilgen çatı, kipler ve isim/edat öbekleriyle kurulan karmaşık akademik nedensellik yapıları (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l2_ex3_q1",
+              "type": "matching",
+              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "Seeing that the data was anonymous, the privacy of the participants was protected.", "right": "Veriler isimsiz olduğu için katılımcıların gizliliği korundu." },
+                { "left": "The historical dispute intensified because the commission delayed the report.", "right": "Komisyon raporu geciktirdiği için tarihi anlaşmazlık şiddetlendi." },
+                { "left": "Due to restricted access, the analysis of the legal documents could not be completed.", "right": "Kısıtlı erişim nedeniyle yasal belgelerin analizi tamamlanamadı." },
+                { "left": "The research was funded since the empirical results were highly reliable.", "right": "Ampirik sonuçlar son derece güvenilir olduğu için araştırma fonlandı." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "\"The court had to delay the case because the legal dispute remained unresolved.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşmazlık çözülmeden kaldığı için mahkeme davayı ertelemek zorunda kaldı.",
+                "Yasal anlaşmazlığı çözmek amacıyla mahkeme davayı derhal erteledi.",
+                "Mahkeme davayı ertelemek zorunda kaldı çünkü yasal anlaşmada eksiklikler vardı.",
+                "Yasal anlaşmazlık çözülmesine rağmen mahkeme davayı ertelemeyi tercih etti."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The court had to delay the case because the legal dispute remained unresolved.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex3_q3",
+              "type": "multiple-choice",
+              "prompt": "\"Due to the lack of reliable funding, the historical survey must be suspended.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Güvenilir fon eksikliği nedeniyle tarihi anket askıya alınmalıdır.",
+                "Güvenilir fon eksik olmasına rağmen tarihi anket tamamlanmalıdır.",
+                "Komisyon tarihi anketi askıya aldı çünkü fonlama güvenilir değildi.",
+                "Güvenilir fon sağlandığı zaman tarihi anket yeniden başlatılabilir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Due to the lack of reliable funding, the historical survey must be suspended.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex3_q4",
+              "type": "multiple-choice",
+              "prompt": "\"The scientists had to modify their methodology because human behavior was extremely volatile.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "İnsan davranışı aşırı değişken olduğu için bilim insanları metodolojilerini değiştirmek zorunda kaldılar.",
+                "İnsan davranışı aşırı değişken olmasına rağmen bilim insanları metodolojilerini korudu.",
+                "Bilim insanları metodolojilerini değiştirdi çünkü insan davranışı hakkında ampirik veri yoktular.",
+                "İnsan davranışı zamanla değiştiği için bilim insanları yeni bir anket başlattı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The scientists had to modify their methodology because human behavior was extremely volatile.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex3_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun gerekçe bağlacını seçin:",
+              "sentence": "The commission's decisions were delayed ___ the legal context of the agreement was not clear.",
+              "options": ["because", "due to", "because of", "in spite of"],
+              "correctIndex": 0,
+              "translation": "Anlaşmanın yasal bağlamı net olmadığı için komisyonun kararları gecikti.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex3_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun gerekçe edatını seçin:",
+              "sentence": "We could not access the database ___ restricted access protocols.",
+              "options": ["because of", "because", "since", "as"],
+              "correctIndex": 0,
+              "translation": "Kısıtlı erişim protokolleri nedeniyle veritabanına erişemedik.",
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex3_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Kısıtlı erişim nedeniyle yasal belgelerin analizi tamamlanamadı.",
+              "enSentence": "Due to restricted access, the analysis of the legal documents could not be completed.",
+              "words": ["Kısıtlı", "erişim", "nedeniyle", "yasal", "belgelerin", "analizi", "tamamlanamadı.", "tamamlandı.", "rağmen"],
+              "correctOrder": ["Kısıtlı", "erişim", "nedeniyle", "yasal", "belgelerin", "analizi", "tamamlanamadı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l2_ex3_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Komisyon raporu geciktirdiği için tarihi anlaşmazlık şiddetlendi.",
+              "enSentence": "The historical dispute intensified because the commission delayed the report.",
+              "words": ["Komisyon", "raporu", "geciktirdiği", "için", "tarihi", "anlaşmazlık", "şiddetlendi.", "rağmen", "önce"],
+              "correctOrder": ["Komisyon", "raporu", "geciktirdiği", "için", "tarihi", "anlaşmazlık", "şiddetlendi."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex3_q9",
+              "type": "translation-text",
+              "prompt": "\"Seeing that the data was anonymous, the privacy of the participants was protected.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Veriler isimsiz olduğu için katılımcıların gizliliği korundu.",
+              "enSentence": "Seeing that the data was anonymous, the privacy of the participants was protected.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l2_ex3_q10",
+              "type": "translation-text",
+              "prompt": "\"The research was funded since the empirical results were highly reliable.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Ampirik sonuçlar son derece güvenilir olduğu için araştırma fonlandı.",
+              "enSentence": "The research was funded since the empirical results were highly reliable.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Sebep", "İsim Tamlamaları"]
             }
           ]
         }
@@ -58620,165 +58709,373 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u32l3ex1",
-          "title": "Alıştırma 1: Zıtlık ve Beklenmedik Sonuç Cümlecikleri (Although, Even Though & Despite)",
-          "description": "Zıtlık bildiren bağlaçlar ve edat yapıları (10 Soru)",
+          "title": "Alıştırma 1: Zıtlık Zıtlık Zarf Cümlecikleri — Öbek Düzeyi",
+          "description": "Zıtlık ve beklenti dışı durum bildiren yapılar ile öbek düzeyinde alıştırmalar (10 Soru)",
           "questions": [
             {
               "id": "u32l3_ex1_q1",
               "type": "matching",
-              "prompt": "Zıtlık ifadelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Zıtlık bildiren ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "although he was tired",
-                  "right": "yorgun olmasına rağmen"
-                },
-                {
-                  "left": "despite high inflation",
-                  "right": "yüksek enflasyona rağmen (edat)"
-                },
-                {
-                  "left": "even though tests failed",
-                  "right": "testler başarısız olsa da"
-                },
-                {
-                  "left": "while sales increased",
-                  "right": "satışlar artarken (zıtlık)"
-                }
-              ]
+                { "left": "although the funding was restricted", "right": "fonlama kısıtlı olmasına rağmen" },
+                { "left": "despite the legal dispute", "right": "yasal anlaşmazlığa rağmen" },
+                { "left": "even though the data was anonymous", "right": "veri isimsiz olsa da" },
+                { "left": "while the commission delayed the agreement", "right": "komisyon anlaşmayı geciktirirken" }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l3_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"Although the code passed all unit tests, it crashed in production.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"despite the lack of empirical evidence\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Kod tüm birim testlerini geçmesine rağmen, canlı ortamda çöktü.",
-                "Kod tüm birim testlerini geçtiği için canlı ortamda çalıştı.",
-                "Kod testleri geçmediği halde canlıya alındı.",
-                "Kod testleri geçince canlı ortamda çökmek zorundaydı."
+                "ampirik kanıt eksikliğine rağmen",
+                "ampirik kanıt eksikliği nedeniyle",
+                "ampirik kanıtlar elde edildikten sonra",
+                "ampirik kanıt eksikliği sayesinde"
               ],
               "correctIndex": 0,
-              "enSentence": "Although the code passed all unit tests, it crashed in production.",
-              "isEngToTr": true
+              "enSentence": "despite the lack of empirical evidence",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l3_ex1_q3",
               "type": "multiple-choice",
-              "prompt": "\"Although vs. Despite\" kuralına göre isim alan boşluğa hangisi gelmelidir?\nSentence: \"___ the rain, they played the game.\"",
+              "prompt": "\"although historians analyzed the context\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Despite",
-                "Although",
-                "Even though",
-                "Whereas"
+                "tarihçiler bağlamı analiz etmesine rağmen",
+                "tarihçiler bağlamı analiz etmeden önce",
+                "tarihçiler bağlamı analiz ettiği için",
+                "tarihçiler bağlamı analiz ettiğinde"
               ],
               "correctIndex": 0,
-              "enSentence": "Despite the rain, they played the game.",
-              "isEngToTr": true
+              "enSentence": "although historians analyzed the context",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Tam cümle gelen boşluğa uygun zıtlık bağlacını seçin:",
-              "sentence": "___ the system was old, it performed remarkably well.",
+              "type": "multiple-choice",
+              "prompt": "\"in spite of restricted access to resources\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Although",
-                "Despite",
-                "In spite of",
-                "Because of"
+                "kaynaklara kısıtlı erişime rağmen",
+                "kaynaklara kısıtlı erişim nedeniyle",
+                "kaynaklara erişimi kısıtladıktan sonra",
+                "kaynaklara kısıtlı erişim şartıyla"
               ],
               "correctIndex": 0,
-              "translation": "Sistem eski olmasına rağmen son derece iyi performans gösterdi."
+              "enSentence": "in spite of restricted access to resources",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l3_ex1_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "İsim gelen boşluğa uygun edatı seçin:",
-              "sentence": "They completed the project on time ___ technical difficulties.",
-              "options": [
-                "in spite of",
-                "although",
-                "even though",
-                "whereas"
-              ],
+              "prompt": "Boşluğa gelecek en uygun zıtlık bağlacını seçin:",
+              "sentence": "___ the data was anonymous, we could identify some patterns.",
+              "options": ["Although", "Despite", "In spite of", "Because of"],
               "correctIndex": 0,
-              "translation": "Teknik zorluklara rağmen projeyi zamanında tamamladılar."
+              "translation": "Veri isimsiz olmasına rağmen bazı örüntüler tanımlayabildik.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q6",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Hasta olmasına rağmen raporu teslim etti.",
-              "enSentence": "Although he was ill, he submitted the report.",
-              "words": [
-                "Hasta",
-                "olmasına",
-                "rağmen",
-                "raporu",
-                "teslim",
-                "etti."
-              ],
-              "correctOrder": [
-                "Hasta",
-                "olmasına",
-                "rağmen",
-                "raporu",
-                "teslim",
-                "etti."
-              ],
-              "isEngToTr": true
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zıtlık edatını seçin:",
+              "sentence": "___ the historical dispute, the legal agreement was signed.",
+              "options": ["Despite", "Although", "Even though", "While"],
+              "correctIndex": 0,
+              "translation": "Tarihi anlaşmazlığa rağmen yasal anlaşma imzalandı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Yüksek maliyete rağmen yeni ekipmanı aldılar.",
-              "trSentence": "Yüksek maliyete rağmen yeni ekipmanı aldılar.",
-              "words": [
-                "Despite",
-                "the",
-                "high",
-                "cost,",
-                "they",
-                "bought",
-                "the",
-                "new",
-                "equipment."
-              ],
-              "correctOrder": [
-                "Despite",
-                "the",
-                "high",
-                "cost,",
-                "they",
-                "bought",
-                "the",
-                "new",
-                "equipment."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Fonlama kısıtlı olmasına rağmen.",
+              "enSentence": "although the funding was restricted",
+              "words": ["Fonlama", "kısıtlı", "olmasına", "rağmen", "için", "önce"],
+              "correctOrder": ["Fonlama", "kısıtlı", "olmasına", "rağmen"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q8",
-              "type": "translation-text",
-              "prompt": "\"Even though inflation remained high, consumer spending increased.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Enflasyon yüksek kalmasına rağmen tüketici harcamaları arttı.",
-              "enSentence": "Even though inflation remained high, consumer spending increased.",
-              "isEngToTr": true
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlığa rağmen.",
+              "enSentence": "despite the legal dispute",
+              "words": ["Yasal", "anlaşmazlığa", "rağmen", "yüzünden", "sonra"],
+              "correctOrder": ["Yasal", "anlaşmazlığa", "rağmen"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q9",
               "type": "translation-text",
-              "prompt": "\"While the frontend was updated quickly, backend migration took months.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Ön yüz hızla güncellenirken, arka yüz taşıması aylar sürdü.",
-              "enSentence": "While the frontend was updated quickly, backend migration took months.",
-              "isEngToTr": true
+              "prompt": "\"even though the data was anonymous\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Veri isimsiz olsa da.",
+              "enSentence": "even though the data was anonymous",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             },
             {
               "id": "u32l3_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"Despite initial setback, the research team achieved breakthrough results.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Başlangıçtaki aksiliğe rağmen araştırma ekibi çığır açan sonuçlar elde etti.",
-              "enSentence": "Despite initial setback, the research team achieved breakthrough results.",
-              "isEngToTr": true
+              "prompt": "\"in spite of restricted access\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Kısıtlı erişime rağmen.",
+              "enSentence": "in spite of restricted access",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l3ex2",
+          "title": "Alıştırma 2: Zıtlık Zarf Cümlecikleri — Cümle Düzeyi",
+          "description": "Cümle düzeyinde zıtlık bağlaçları ve beklenmedik sonuç sentaksı (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l3_ex2_q1",
+              "type": "matching",
+              "prompt": "Cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "Although the survey was anonymous, we tracked the response rate.", "right": "Anket isimsiz olmasına rağmen yanıt oranını takip ettik." },
+                { "left": "Despite the legal dispute, the commission approved the budget.", "right": "Yasal anlaşmazlığa rağmen komisyon bütçeyi onayladı." },
+                { "left": "Even though access was restricted, the scholars studied the files.", "right": "Erişim kısıtlı olmasına rağmen akademisyenler dosyaları inceledi." },
+                { "left": "While the economists analyzed the data, they ignored the context.", "right": "İktisatçılar verileri analiz ederken bağlamı göz ardı ettiler." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex2_q2",
+              "type": "multiple-choice",
+              "prompt": "\"Despite the lack of reliable funding, the historical survey was completed successfully.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Güvenilir fon eksikliğine rağmen tarihi anket başarıyla tamamlandı.",
+                "Güvenilir fon eksik olduğu için tarihi anket askıya alındı.",
+                "Tarihi anket başarıyla tamamlandı çünkü güvenilir fon sağlandı.",
+                "Tarihi anket tamamlanmadan önce güvenilir fonlama yapıldı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Despite the lack of reliable funding, the historical survey was completed successfully.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "\"Even though the legal agreement was restricted, they accessed the documents.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşma kısıtlı olmasına rağmen belgelere eriştiler.",
+                "Yasal anlaşma kısıtlandığı için belgelere erişemediler.",
+                "Belgelere eriştikten sonra yasal anlaşmayı kısıtladılar.",
+                "Yasal anlaşma kısıtlanmadan önce belgelere erişmek zorundaydılar."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Even though the legal agreement was restricted, they accessed the documents.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q4",
+              "type": "multiple-choice",
+              "prompt": "\"The psychologists observed human behavior while the participants completed the tasks.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Katılımcılar görevleri tamamlarken psikologlar insan davranışını gözlemlediler.",
+                "Katılımcılar görevleri tamamladıktan sonra psikologlar insan davranışını gözlemledi.",
+                "Katılımcılar görevleri tamamlamadan önce psikologlar insan davranışını gözlemlemeliydi.",
+                "Katılımcılar görevleri tamamladığı için psikologlar insan davranışını gözlemleyebildi."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The psychologists observed human behavior while the participants completed the tasks.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex2_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zıtlık bağlacını seçin:",
+              "sentence": "___ the commission delayed the funding, the research team continued the study.",
+              "options": ["Although", "Despite", "In spite of", "Because of"],
+              "correctIndex": 0,
+              "translation": "Komisyon fonlamayı geciktirmesine rağmen araştırma ekibi çalışmaya devam etti.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zıtlık edatını seçin:",
+              "sentence": "The economists finalized the report ___ the historical dispute.",
+              "options": ["despite", "although", "even though", "while"],
+              "correctIndex": 0,
+              "translation": "İktisatçılar tarihi anlaşmazlığa rağmen raporu kesinleştirdi.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Anket isimsiz olmasına rağmen yanıt oranını takip ettik.",
+              "enSentence": "Although the survey was anonymous, we tracked the response rate.",
+              "words": ["Anket", "isimsiz", "olmasına", "rağmen", "yanıt", "oranını", "takip", "ettik.", "için", "edeceğiz."],
+              "correctOrder": ["Anket", "isimsiz", "olmasına", "rağmen", "yanıt", "oranını", "takip", "ettik."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlığa rağmen komisyon bütçeyi onayladı.",
+              "enSentence": "Despite the legal dispute, the commission approved the budget.",
+              "words": ["Yasal", "anlaşmazlığa", "rağmen", "komisyon", "bütçeyi", "onayladı.", "için", "geciktirdi."],
+              "correctOrder": ["Yasal", "anlaşmazlığa", "rağmen", "komisyon", "bütçeyi", "onayladı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q9",
+              "type": "translation-text",
+              "prompt": "\"Even though access was restricted, the scholars studied the files.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Erişim kısıtlı olmasına rağmen akademisyenler dosyaları inceledi.",
+              "enSentence": "Even though access was restricted, the scholars studied the files.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex2_q10",
+              "type": "translation-text",
+              "prompt": "\"While the economists analyzed the data, they ignored the context.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "İktisatçılar verileri analiz ederken bağlamı göz ardı ettiler.",
+              "enSentence": "While the economists analyzed the data, they ignored the context.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l3ex3",
+          "title": "Alıştırma 3: Zıtlık Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "description": "Akademik yazında zıtlık bildiren yapıların edilgen, modallı ve karmaşık edat öbekleriyle kullanımı (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l3_ex3_q1",
+              "type": "matching",
+              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "Although empirical studies were restricted, they provided highly reliable context.", "right": "Ampirik çalışmalar kısıtlı olmasına rağmen son derece güvenilir bağlam sağladı." },
+                { "left": "Despite the historical dispute, cooperation between the institutes must continue.", "right": "Tarihi anlaşmazlığa rağmen enstitüler arasındaki iş birliği devam etmelidir." },
+                { "left": "Even though the survey was anonymous, some human behaviors were monitored.", "right": "Anket isimsiz olmasına rağmen bazı insan davranışları izlendi." },
+                { "left": "While the commission delayed the legal agreement, they approved the funding.", "right": "Komisyon yasal anlaşmayı geciktirirken, fonlamayı onayladı." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "\"The scholars had to modify their methodology although the empirical data was reliable.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Ampirik veriler güvenilir olmasına rağmen akademisyenler metodolojilerini değiştirmek zorunda kaldılar.",
+                "Ampirik veriler güvenilir olduğu için akademisyenler metodolojilerini değiştirmek zorunda kaldılar.",
+                "Ampirik veriler güvenilir olmadığından akademisyenler metodolojilerini değiştirmeyi reddettiler.",
+                "Akademisyenler metodolojilerini değiştirdikten sonra ampirik veriler güvenilir hale geldi."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The scholars had to modify their methodology although the empirical data was reliable.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex3_q3",
+              "type": "multiple-choice",
+              "prompt": "\"Despite restricted access to the historical archives, the researchers analyzed the documents carefully.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Tarihi arşivlere kısıtlı erişime rağmen araştırmacılar belgeleri dikkatle analiz ettiler.",
+                "Tarihi arşivlere erişim kısıtlandığı için araştırmacılar belgeleri analiz edemediler.",
+                "Araştırmacılar belgeleri dikkatle analiz ettikten sonra tarihi arşivlere erişim kısıtlandı.",
+                "Tarihi arşivlere erişim kısıtlanmadan önce araştırmacılar belgeleri analiz etmek istedi."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Despite restricted access to the historical archives, the researchers analyzed the documents carefully.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q4",
+              "type": "multiple-choice",
+              "prompt": "\"Even though the legal dispute remains unresolved, the commission must delay any final action.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşmazlık çözülmeden kalmasına rağmen komisyon her türlü nihai eylemi geciktirmelidir.",
+                "Yasal anlaşmazlık çözüldüğü için komisyon nihai eylemi geciktirmek zorunda kalmadı.",
+                "Komisyon nihai eylemi geciktirdi çünkü yasal anlaşmazlık hâlâ çözülememişti.",
+                "Yasal anlaşmazlık çözülene kadar komisyonun nihai eylemi geciktirmesi gerekmez."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Even though the legal dispute remains unresolved, the commission must delay any final action.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zıtlık bağlacını seçin:",
+              "sentence": "The economists predicted growth ___ the financial funding was restricted.",
+              "options": ["although", "despite", "because of", "in spite of"],
+              "correctIndex": 0,
+              "translation": "Finansal fonlama kısıtlanmasına rağmen iktisatçılar büyüme tahmininde bulundu.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun zıtlık edatını seçin:",
+              "sentence": "The court approved the agreement ___ the ongoing historical dispute.",
+              "options": ["despite", "although", "even though", "while"],
+              "correctIndex": 0,
+              "translation": "Mahkeme devam eden tarihi anlaşmazlığa rağmen anlaşmayı onayladı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Tarihi anlaşmazlığa rağmen enstitüler arasındaki iş birliği devam etmelidir.",
+              "enSentence": "Despite the historical dispute, cooperation between the institutes must continue.",
+              "words": ["Tarihi", "anlaşmazlığa", "rağmen", "enstitüler", "arasındaki", "iş", "birliği", "devam", "etmelidir.", "için", "edecektir."],
+              "correctOrder": ["Tarihi", "anlaşmazlığa", "rağmen", "enstitüler", "arasındaki", "iş", "birliği", "devam", "etmelidir."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Ampirik çalışmalar kısıtlı olmasına rağmen son derece güvenilir bağlam sağladı.",
+              "enSentence": "Although empirical studies were restricted, they provided highly reliable context.",
+              "words": ["Ampirik", "çalışmalar", "kısıtlı", "olmasına", "rağmen", "son", "derece", "güvenilir", "bağlam", "sağladı.", "için", "sağlayacaktır."],
+              "correctOrder": ["Ampirik", "çalışmalar", "kısıtlı", "olmasına", "rağmen", "son", "derece", "güvenilir", "bağlam", "sağladı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l3_ex3_q9",
+              "type": "translation-text",
+              "prompt": "\"Even though the survey was anonymous, some human behaviors were monitored.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Anket isimsiz olmasına rağmen bazı insan davranışları izlendi.",
+              "enSentence": "Even though the survey was anonymous, some human behaviors were monitored.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l3_ex3_q10",
+              "type": "translation-text",
+              "prompt": "\"While the commission delayed the legal agreement, they approved the funding.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Komisyon yasal anlaşmayı geciktirirken, fonlamayı onayladı.",
+              "enSentence": "While the commission delayed the legal agreement, they approved the funding.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Zıtlık", "İsim Tamlamaları"]
             }
           ]
         }
@@ -58788,169 +59085,373 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u32l4ex1",
-          "title": "Alıştırma 1: Amaç, Derece ve Tarz Cümlecikleri (So that, So...that, As if)",
-          "description": "Niyet, aşırı derece-sonuç ve tarz bildiren yapılar (10 Soru)",
+          "title": "Alıştırma 1: Amaç, Derece ve Tarz Cümlecikleri — Öbek Düzeyi",
+          "description": "Niyet, aşırılık-sonuç ilişkileri ve tarz bildiren yapılar ile öbek düzeyinde alıştırmalar (10 Soru)",
           "questions": [
             {
               "id": "u32l4_ex1_q1",
               "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Amaç, derece ve tarz bildiren ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "so that we could test it",
-                  "right": "onu test edebilmemiz amacıyla"
-                },
-                {
-                  "left": "so small that it is invisible",
-                  "right": "görünmeyecek kadar küçük (o kadar küçük ki)"
-                },
-                {
-                  "left": "as if nothing happened",
-                  "right": "sanki hiçbir şey olmamış gibi"
-                },
-                {
-                  "left": "such a fast system that",
-                  "right": "o kadar hızlı bir sistem ki"
-                }
-              ]
+                { "left": "so that we can analyze the behavior", "right": "davranışı slumsuz bir şekilde analiz edebilmemiz amacıyla" },
+                { "left": "so restricted that we cannot access it", "right": "erişemeyeceğimiz kadar kısıtlı" },
+                { "left": "as if they resolved the historical dispute", "right": "sanki tarihi anlaşmazlığı çözmüşler gibi" },
+                { "left": "so that the survey remains anonymous", "right": "anket isimsiz kalsın diye" }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l4_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"Cells are so small that they cannot be seen with the naked eye.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"so reliable that economists accepted the data\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Hücreler o kadar küçüktür ki çıplak gözle görülemezler.",
-                "Hücreler küçük olduğu için görülebilirler.",
-                "Hücrelerin görülmesi amacıyla küçültülmeleri gerekir.",
-                "Hücreler çıplak gözle görülse de küçüktür."
+                "iktisatçıların veriyi kabul edeceği kadar güvenilir",
+                "iktisatçılar veriyi kabul ettiği için güvenilir",
+                "iktisatçılar veriyi kabul etse de güvenilir",
+                "iktisatçıların veriyi kabul etmeden önceki güvenilirliği"
               ],
               "correctIndex": 0,
-              "enSentence": "Cells are so small that they cannot be seen with the naked eye.",
-              "isEngToTr": true
+              "enSentence": "so reliable that economists accepted the data",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q3",
               "type": "multiple-choice",
-              "prompt": "\"The data was encrypted so that unauthorized users could not access it.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"as if the commission delayed the agreement\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Yetkisiz kullanıcılar erişemesin diye veri şifrelendi.",
-                "Veri şifrelendiği için yetkisiz kullanıcılar erişti.",
-                "Yetkisiz kullanıcılar erişmesine rağmen veri şifreliydi.",
-                "Veri şifrelendiği zaman yetkisiz erişim sağlandı."
+                "sanki komisyon anlaşmayı geciktirmiş gibi",
+                "komisyon anlaşmayı geciktirdiği için",
+                "komisyon anlaşmayı geciktirdiği zaman",
+                "komisyon anlaşmayı geciktirmedikçe"
               ],
               "correctIndex": 0,
-              "enSentence": "The data was encrypted so that unauthorized users could not access it.",
-              "isEngToTr": true
+              "enSentence": "as if the commission delayed the agreement",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Amaç bildiren bağlacı seçin:",
-              "sentence": "Water was purified ___ it could be safely consumed.",
+              "type": "multiple-choice",
+              "prompt": "\"so that they avoid legal disputes\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "so that",
-                "because",
-                "although",
-                "unless"
+                "yasal anlaşmazlıklardan kaçınsınlar diye",
+                "yasal anlaşmazlıklardan kaçındıkları için",
+                "yasal anlaşmazlıklardan kaçındıklarında",
+                "yasal anlaşmazlıklardan kaçınmadıkça"
               ],
               "correctIndex": 0,
-              "translation": "Güvenle tüketilebilsin diye su arıtıldı."
+              "enSentence": "so that they avoid legal disputes",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "Derece vurgusu (so + Adj + that) için boşluğu doldurun:",
-              "sentence": "The latency was ___ high that the application crashed.",
-              "options": [
-                "so",
-                "such",
-                "too",
-                "very"
-              ],
+              "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
+              "sentence": "The database was encrypted ___ the anonymous data remained secure.",
+              "options": ["so that", "so", "such", "as if"],
               "correctIndex": 0,
-              "translation": "Gecikme o kadar yüksekti ki uygulama çöktü."
+              "translation": "İsimsiz veriler güvende kalsın diye veritabanı şifrelendi.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q6",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Sanki her şeyi biliyormuş gibi konuşuyor.",
-              "enSentence": "He speaks as if he knew everything.",
-              "words": [
-                "Sanki",
-                "her",
-                "şeyi",
-                "biliyormuş",
-                "gibi",
-                "konuşuyor."
-              ],
-              "correctOrder": [
-                "Sanki",
-                "her",
-                "şeyi",
-                "biliyormuş",
-                "gibi",
-                "konuşuyor."
-              ],
-              "isEngToTr": true
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun belirteci seçin:",
+              "sentence": "The historical dispute was ___ intense that cooperation stopped.",
+              "options": ["so", "such", "too", "as if"],
+              "correctIndex": 0,
+              "translation": "Tarihi anlaşmazlık o kadar şiddetliydi ki iş birliği durdu.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Sistem o kadar karmaşıktı ki çözülemedi.",
-              "trSentence": "Sistem o kadar karmaşıktı ki çözülemedi.",
-              "words": [
-                "The",
-                "system",
-                "was",
-                "so",
-                "complex",
-                "that",
-                "it",
-                "could",
-                "not",
-                "be",
-                "solved."
-              ],
-              "correctOrder": [
-                "The",
-                "system",
-                "was",
-                "so",
-                "complex",
-                "that",
-                "it",
-                "could",
-                "not",
-                "be",
-                "solved."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Anket isimsiz kalsın diye.",
+              "enSentence": "so that the survey remains anonymous",
+              "words": ["Anket", "isimsiz", "kalsın", "diye", "için", "rağmen"],
+              "correctOrder": ["Anket", "isimsiz", "kalsın", "diye"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q8",
-              "type": "translation-text",
-              "prompt": "\"We modified the code so that performance would improve.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Performans gelişsin diye kodu değiştirdik.",
-              "enSentence": "We modified the code so that performance would improve.",
-              "isEngToTr": true
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Sanki tarihi anlaşmazlığı çözmüşler gibi.",
+              "enSentence": "as if they resolved the historical dispute",
+              "words": ["Sanki", "tarihi", "anlaşmazlığı", "çözmüşler", "gibi", "için", "diye"],
+              "correctOrder": ["Sanki", "tarihi", "anlaşmazlığı", "çözmüşler", "gibi"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q9",
               "type": "translation-text",
-              "prompt": "\"It was such a severe error that the database was corrupted.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "O kadar ciddi bir hataydı ki veritabanı bozuldu.",
-              "enSentence": "It was such a severe error that the database was corrupted.",
-              "isEngToTr": true
+              "prompt": "\"so restricted that we cannot access it\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Erişemeyeceğimiz kadar kısıtlı.",
+              "enSentence": "so restricted that we cannot access it",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             },
             {
               "id": "u32l4_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"The engine reacted as though it was completely brand new.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Motor sanki yepyeniymiş gibi tepki verdi.",
-              "enSentence": "The engine reacted as though it was completely brand new.",
-              "isEngToTr": true
+              "prompt": "\"so that we can analyze the behavior\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Davranışı analiz edebilmemiz amacıyla.",
+              "enSentence": "so that we can analyze the behavior",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l4ex2",
+          "title": "Alıştırma 2: Amaç, Derece ve Tarz Cümlecikleri — Cümle Düzeyi",
+          "description": "Cümle düzeyinde niyet (so that), sonuç (so...that) ve benzetim (as if) yapıları (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l4_ex2_q1",
+              "type": "matching",
+              "prompt": "Cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "They restricted access so that the survey remained anonymous.", "right": "Anket isimsiz kalsın diye erişimi kısıtladılar." },
+                { "left": "The historical dispute was so intense that they avoided discussions.", "right": "Tarihi anlaşmazlık o kadar şiddetliydi ki tartışmalardan kaçındılar." },
+                { "left": "The psychologist spoke as if she understood human behavior completely.", "right": "Psikolog insan davranışını tamamen anlıyormuş gibi konuştu." },
+                { "left": "They secured funding so that they could analyze the empirical data.", "right": "Ampirik verileri analiz edebilsinler diye fon sağladılar." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex2_q2",
+              "type": "multiple-choice",
+              "prompt": "\"The commission delayed the agreement so that the legal experts could review the context.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Hukuk uzmanları bağlamı gözden geçirebilsin diye komisyon anlaşmayı geciktirdi.",
+                "Hukuk uzmanları bağlamı gözden geçirdikten sonra komisyon anlaşmayı geciktirmek zorunda kaldı.",
+                "Komisyon anlaşmayı geciktirdi çünkü hukuk uzmanları bağlamı gözden geçirmek istedi.",
+                "Hukuk uzmanları bağlamı gözden geçirmeden önce komisyon anlaşmayı imzalamıştı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The commission delayed the agreement so that the legal experts could review the context.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "\"The funding was so restricted that they had to stop the historical survey.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Fonlama o kadar kısıtlıydı ki tarihi anketi durdurmak zorunda kaldılar.",
+                "Fonlama kısıtlı olduğu için tarihi ankete devam etmeyi tercih ettiler.",
+                "Tarihi anketi durdurmak zorunda kaldılar çünkü fonlama kısıtlı değildi.",
+                "Fonlama kısıtlanınca tarihi anketi durdurmadan önce kaynak aradılar."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The funding was so restricted that they had to stop the historical survey.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q4",
+              "type": "multiple-choice",
+              "prompt": "\"The economists behaved as if the empirical data was not reliable.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "İktisatçılar ampirik veriler güvenilir değilmiş gibi davrandılar.",
+                "İktisatçılar ampirik veriler güvenilir olduğu için öyle davrandılar.",
+                "İktisatçılar ampirik veriler güvenilir olana kadar beklemeyi tercih ettiler.",
+                "Ampirik veriler güvenilir olmasa da iktisatçılar çalışmaya devam etti."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The economists behaved as if the empirical data was not reliable.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
+              "sentence": "We modified the legal agreement ___ the commission could approve the budget.",
+              "options": ["so that", "so ... that", "as if", "because of"],
+              "correctIndex": 0,
+              "translation": "Komisyon bütçeyi onaylayabilsin diye yasal anlaşmayı değiştirdik.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun derece zarfını seçin:",
+              "sentence": "The legal dispute was ___ complex that the court delayed the decision.",
+              "options": ["so", "such", "too", "as if"],
+              "correctIndex": 0,
+              "translation": "Yasal anlaşmazlık o kadar karmaşıktır ki mahkeme kararı erteledi.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Anket isimsiz kalsın diye erişimi kısıtladılar.",
+              "enSentence": "They restricted access so that the survey remained anonymous.",
+              "words": ["Anket", "isimsiz", "kalsın", "diye", "erişimi", "kısıtladılar.", "için", "kısıtlayacaklar."],
+              "correctOrder": ["Anket", "isimsiz", "kalsın", "diye", "erişimi", "kısıtladılar."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Tarihi anlaşmazlık o kadar şiddetliydi ki tartışmalardan kaçındılar.",
+              "enSentence": "The historical dispute was so intense that they avoided discussions.",
+              "words": ["Tarihi", "anlaşmazlık", "o", "kadar", "şiddetliydi", "ki", "tartışmalardan", "kaçındılar.", "için", "kaçınacaklar."],
+              "correctOrder": ["Tarihi", "anlaşmazlık", "o", "kadar", "şiddetliydi", "ki", "tartışmalardan", "kaçındılar."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex2_q9",
+              "type": "translation-text",
+              "prompt": "\"The psychologist spoke as if she understood human behavior completely.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Psikolog insan davranışını tamamen anlıyormuş gibi konuştu.",
+              "enSentence": "The psychologist spoke as if she understood human behavior completely.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex2_q10",
+              "type": "translation-text",
+              "prompt": "\"They secured funding so that they could analyze the empirical data.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Ampirik verileri analiz edebilsinler diye fon sağladılar.",
+              "enSentence": "They secured funding so that they could analyze the empirical data.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l4ex3",
+          "title": "Alıştırma 3: Amaç, Derece ve Tarz Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "description": "Edilgen yapılar, gereklilik kipleri ve karmaşık sentaks modellerinde amaç ve derece kullanımı (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l4_ex3_q1",
+              "type": "matching",
+              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "The data was stored anonymously so that the privacy of participants would be protected.", "right": "Katılımcıların gizliliği korunsun diye veriler isimsiz olarak saklandı." },
+                { "left": "The legal agreement was so restricted that the funding had to be delayed.", "right": "Yasal anlaşma o kadar kısıtlıydı ki fonlamanın geciktirilmesi gerekti." },
+                { "left": "The commission acted as though the empirical survey had been completed.", "right": "Komisyon sanki ampirik anket tamamlanmış gibi davrandı." },
+                { "left": "Scholars must analyze the context so that historical disputes can be avoided.", "right": "Tarihi anlaşmazlıklardan kaçınılabilsin diye akademisyenler bağlamı analiz etmelidir." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "\"We must secure reliable funding so that the research on human behavior can continue.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "İnsan davranışı üzerindeki araştırma devam edebilsin diye güvenilir fon sağlamalıyız.",
+                "İnsan davranışı üzerindeki araştırma devam ettiği sürece güvenilir fon sağlamak zorundayız.",
+                "Güvenilir fon sağlandığı için insan davranışı üzerindeki araştırma devam edebildi.",
+                "İnsan davranışı araştırmasını başlatmadan önce güvenilir fonlama yapmalıydık."
+              ],
+              "correctIndex": 0,
+              "enSentence": "We must secure reliable funding so that the research on human behavior can continue.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex3_q3",
+              "type": "multiple-choice",
+              "prompt": "\"The legal dispute is so complex that the commission cannot resolve the agreement immediately.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşmazlık o kadar karmaşıktır ki komisyon anlaşmayı hemen çözemez.",
+                "Yasal anlaşmazlık karmaşık olduğu halde komisyon anlaşmayı çözmeye karar verdi.",
+                "Komisyon anlaşmayı hemen çözemedi çünkü yasal anlaşmazlık son derece karmaşıktı.",
+                "Yasal anlaşmazlık çözüldüğü zaman komisyon anlaşmayı onaylayabilecektir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The legal dispute is so complex that the commission cannot resolve the agreement immediately.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex3_q4",
+              "type": "multiple-choice",
+              "prompt": "\"The historian described the events as if he had observed the historical context himself.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Tarihçi olayları sanki tarihi bağlamı kendisi gözlemlemiş gibi betimledi.",
+                "Tarihçi olayları betimledi çünkü tarihi bağlamı kendisi gözlemlemek istedi.",
+                "Tarihçi tarihi bağlamı kendisi gözlemledikten sonra olayları betimledi.",
+                "Tarihçi tarihi bağlamı gözlemlemesine rağmen olayları betimlemeyi reddetti."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The historian described the events as if he had observed the historical context himself.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex3_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
+              "sentence": "The survey was designed ___ all empirical data would remain anonymous.",
+              "options": ["so that", "so", "such", "as if"],
+              "correctIndex": 0,
+              "translation": "Tüm ampirik veriler isimsiz kalsın diye anket tasarlandı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex3_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun derece zarfını seçin:",
+              "sentence": "The restricted funding was ___ low that the team had to modify their methodology.",
+              "options": ["so", "such", "too", "as if"],
+              "correctIndex": 0,
+              "translation": "Kısıtlı fonlama o kadar düşüktü ki ekip metodolojilerini değiştirmek zorunda kaldı.",
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex3_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Katılımcıların gizliliği korunsun diye veriler isimsiz olarak saklandı.",
+              "enSentence": "The data was stored anonymously so that the privacy of participants would be protected.",
+              "words": ["Katılımcıların", "gizliliği", "korunsun", "diye", "veriler", "isimsiz", "olarak", "saklandı.", "için", "saklanmalıdır."],
+              "correctOrder": ["Katılımcıların", "gizliliği", "korunsun", "diye", "veriler", "isimsiz", "olarak", "saklandı."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l4_ex3_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşma o kadar kısıtlıydı ki fonlamanın geciktirilmesi gerekti.",
+              "enSentence": "The legal agreement was so restricted that the funding had to be delayed.",
+              "words": ["Yasal", "anlaşma", "o", "kadar", "kısıtlıydı", "ki", "fonlamanın", "geciktirilmesi", "gerekti.", "için", "geciktirilecektir."],
+              "correctOrder": ["Yasal", "anlaşma", "o", "kadar", "kısıtlıydı", "ki", "fonlamanın", "geciktirilmesi", "gerekti."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex3_q9",
+              "type": "translation-text",
+              "prompt": "\"The commission acted as though the empirical survey had been completed.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Komisyon sanki ampirik anket tamamlanmış gibi davrandı.",
+              "enSentence": "The commission acted as though the empirical survey had been completed.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l4_ex3_q10",
+              "type": "translation-text",
+              "prompt": "\"Scholars must analyze the context so that historical disputes can be avoided.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Tarihi anlaşmazlıklardan kaçınılabilsin diye akademisyenler bağlamı analiz etmelidir.",
+              "enSentence": "Scholars must analyze the context so that historical disputes can be avoided.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Amaç", "İsim Tamlamaları"]
             }
           ]
         }
@@ -58960,165 +59461,373 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u32l5ex1",
-          "title": "Alıştırma 1: Koşul (Şart) Cümlecikleri ve Karma Akademik Metin Okuma",
-          "description": "If, unless, provided that koşul yapıları ve karma akademik değerlendirme (10 Soru)",
+          "title": "Alıştırma 1: Koşul Cümlecikleri — Öbek Düzeyi",
+          "description": "Şart bildiren bağlaçlar (if, unless, provided that) ile öbek düzeyinde alıştırmalar (10 Soru)",
           "questions": [
             {
               "id": "u32l5_ex1_q1",
               "type": "matching",
-              "prompt": "Koşul ve akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Koşul bildiren ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
-                {
-                  "left": "if compilation succeeds",
-                  "right": "derleme başarılı olursa"
-                },
-                {
-                  "left": "unless parameters shift",
-                  "right": "parametreler değişmedikçe"
-                },
-                {
-                  "left": "provided that funds are available",
-                  "right": "fonlar mevcut olması koşuluyla"
-                },
-                {
-                  "left": "on condition that you verify",
-                  "right": "doğrulamanız şartıyla"
-                }
-              ]
+                { "left": "if the survey remains anonymous", "right": "anket isimsiz kalırsa" },
+                { "left": "unless they resolve the legal dispute", "right": "yasal anlaşmazlığı çözmedikçe" },
+                { "left": "provided that we secure reliable funding", "right": "güvenilir fon sağlamamız koşuluyla" },
+                { "left": "if they restrict access to information", "right": "bilgiye erişimi kısıtlarlarsa" }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l5_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"Unless parameters shift, compilation succeeds without warnings.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"unless the commission delays the agreement\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Parametreler değişmedikçe derleme uyarı vermeden başarılı olur.",
-                "Parametreler değiştiği için derleme başarılı oldu.",
-                "Parametreler değişirse derleme başarısız olur.",
-                "Parametreler değişmesine rağmen derleme başarılı oldu."
+                "komisyon anlaşmayı geciktirmedikçe",
+                "komisyon anlaşmayı geciktirdiği için",
+                "komisyon anlaşmayı geciktirirse",
+                "komisyon anlaşmayı geciktirdiğinde"
               ],
               "correctIndex": 0,
-              "enSentence": "Unless parameters shift, compilation succeeds without warnings.",
-              "isEngToTr": true
+              "enSentence": "unless the commission delays the agreement",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q3",
               "type": "multiple-choice",
-              "prompt": "\"The team will proceed with deployment provided that all tests pass.\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"provided that the empirical data is reliable\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Tüm testlerin geçmesi koşuluyla ekip canlıya alma işlemine devam edecektir.",
-                "Tüm testler geçmediği halde ekip canlıya alma işlemine devam etti.",
-                "Tüm testler bittiği için canlıya alma iptal edildi.",
-                "Ekip testleri tamamlamadan canlıya alamayacağını bildirdi."
+                "ampirik verilerin güvenilir olması koşuluyla",
+                "ampirik veriler güvenilir olduğu için",
+                "ampirik veriler güvenilir olmasına rağmen",
+                "ampirik veriler güvenilir olmadıkça"
               ],
               "correctIndex": 0,
-              "enSentence": "The team will proceed with deployment provided that all tests pass.",
-              "isEngToTr": true
+              "enSentence": "provided that the empirical data is reliable",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Olumsuz koşul anlamı katan bağlacı seçin:",
-              "sentence": "The server will shut down automatically ___ memory usage is optimized.",
+              "type": "multiple-choice",
+              "prompt": "\"on condition that they analyze human behavior\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "unless",
-                "if",
-                "provided that",
-                "because"
+                "insan davranışını analiz etmeleri şartıyla",
+                "insan davranışını analiz ettikleri için",
+                "insan davranışını analiz etmedikçe",
+                "insan davranışını analiz ettiklerinde"
               ],
               "correctIndex": 0,
-              "translation": "Bellek kullanımı optimize edilmedikçe sunucu otomatik olarak kapanacaktır."
+              "enSentence": "on condition that they analyze human behavior",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l5_ex1_q5",
               "type": "fill-blank-dropdown",
-              "prompt": "Ön şart bildiren akademik yapıyı seçin:",
-              "sentence": "The grant will be approved ___ the research panel validates the methodology.",
-              "options": [
-                "on condition that",
-                "although",
-                "because of",
-                "so that"
-              ],
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "The project will succeed ___ they secure reliable funding.",
+              "options": ["provided that", "unless", "although", "because of"],
               "correctIndex": 0,
-              "translation": "Araştırma paneli metodolojiyi doğrulaması şartıyla hibe onaylanacaktır."
+              "translation": "Güvenilir fon sağlamaları koşuluyla proje başarılı olacaktır.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q6",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Eğer derleme başarısız olursa günlükleri inceleyin.",
-              "enSentence": "If compilation fails, investigate the logs.",
-              "words": [
-                "Eğer",
-                "derleme",
-                "başarısız",
-                "olursa",
-                "günlükleri",
-                "inceleyin."
-              ],
-              "correctOrder": [
-                "Eğer",
-                "derleme",
-                "başarısız",
-                "olursa",
-                "günlükleri",
-                "inceleyin."
-              ],
-              "isEngToTr": true
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "We cannot access the historical data ___ they grant permission.",
+              "options": ["unless", "if", "provided that", "on condition that"],
+              "correctIndex": 0,
+              "translation": "Onlar izin vermedikçe tarihi verilere erişemeyiz.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q7",
               "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Güvenlik sağlandığı sürece sistem çalışır.",
-              "trSentence": "Güvenlik sağlandığı sürece sistem çalışır.",
-              "words": [
-                "As",
-                "long",
-                "as",
-                "security",
-                "is",
-                "provided,",
-                "the",
-                "system",
-                "operates."
-              ],
-              "correctOrder": [
-                "As",
-                "long",
-                "as",
-                "security",
-                "is",
-                "provided,",
-                "the",
-                "system",
-                "operates."
-              ],
-              "isEngToTr": false
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Anket isimsiz kalırsa.",
+              "enSentence": "if the survey remains anonymous",
+              "words": ["Anket", "isimsiz", "kalırsa", "olduğu", "için", "rağmen"],
+              "correctOrder": ["Anket", "isimsiz", "kalırsa"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q8",
-              "type": "translation-text",
-              "prompt": "\"If the system detects a breach, it locks all accounts immediately.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sistem bir ihlal tespit ederse tüm hesapları derhal kilitler.",
-              "enSentence": "If the system detects a breach, it locks all accounts immediately.",
-              "isEngToTr": true
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlığı çözmedikçe.",
+              "enSentence": "unless they resolve the legal dispute",
+              "words": ["Yasal", "anlaşmazlığı", "çözmedikçe", "çözdüklerinde", "için"],
+              "correctOrder": ["Yasal", "anlaşmazlığı", "çözmedikçe"],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
             },
             {
               "id": "u32l5_ex1_q9",
               "type": "translation-text",
-              "prompt": "\"The experiment will produce accurate results provided that temperature is constant.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sıcaklığın sabit olması koşuluyla deney doğru sonuçlar üretecektir.",
-              "enSentence": "The experiment will produce accurate results provided that temperature is constant.",
-              "isEngToTr": true
+              "prompt": "\"provided that we secure reliable funding\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Güvenilir fon sağlamamız koşuluyla.",
+              "enSentence": "provided that we secure reliable funding",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               "id": "u32l5_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"Unless parameters are recalibrated, validation errors will persist.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Parametreler yeniden kalibre edilmedikçe doğrulama hataları devam edecektir.",
-              "enSentence": "Unless parameters are recalibrated, validation errors will persist.",
-              "isEngToTr": true
+              "prompt": "\"if they restrict access\" ifadesini Türkçe'ye çevirin:",
+              "correctSentence": "Erişimi kısıtlarlarsa.",
+              "enSentence": "if they restrict access",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l5ex2",
+          "title": "Alıştırma 2: Koşul Cümlecikleri — Cümle Düzeyi",
+          "description": "Cümle düzeyinde koşul yapıları (if/unless) ve modal/zaman uyumu testleri (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l5_ex2_q1",
+              "type": "matching",
+              "prompt": "Cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "If the survey is anonymous, participants will share honest behavior.", "right": "Eğer anket isimsiz olursa katılımcılar dürüst davranışlar paylaşacaktır." },
+                { "left": "Unless they resolve the legal dispute, the commission will delay the agreement.", "right": "Yasal anlaşmazlığı çözmedikçe komisyon anlaşmayı geciktirecektir." },
+                { "left": "Provided that the data is reliable, the economists will analyze the trends.", "right": "Verilerin güvenilir olması koşuluyla iktisatçılar eğilimleri analiz edecektir." },
+                { "left": "If they restrict access, the historians will protest the decision.", "right": "Erişimi kısıtlarlarsa tarihçiler kararı protesto edecektir." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex2_q2",
+              "type": "multiple-choice",
+              "prompt": "\"The commission will approve the funding provided that the legal agreement is signed.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Yasal anlaşmanın imzalanması koşuluyla komisyon fonlamayı onaylayacaktır.",
+                "Yasal anlaşma imzalandığı için komisyon fonlamayı onayladı.",
+                "Yasal anlaşma imzalanmadıkça komisyon fonlamayı onaylamayacaktır.",
+                "Komisyon fonlamayı onayladıktan sonra yasal anlaşma imzalandı."
+              ],
+              "correctIndex": 0,
+              "enSentence": "The commission will approve the funding provided that the legal agreement is signed.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "\"We will fail to understand human behavior unless we conduct empirical surveys.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Ampirik anketler düzenlemedikçe insan davranışını anlamakta başarısız oluruz.",
+                "Ampirik anketler düzenlediğimiz zaman insan davranışını kolayca anlayabiliriz.",
+                "Ampirik anketler düzenlediğimiz için insan davranışını anlamayı başardık.",
+                "Ampirik anketler düzenlesek bile insan davranışını anlamakta başarısız olabiliriz."
+              ],
+              "correctIndex": 0,
+              "enSentence": "We will fail to understand human behavior unless we conduct empirical surveys.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex2_q4",
+              "type": "multiple-choice",
+              "prompt": "\"If the government delays the commission, the historical dispute will escalate.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Eğer hükümet komisyonu geciktirirse tarihi anlaşmazlık tırmanacaktır.",
+                "Hükümet komisyonu geciktirdiği için tarihi anlaşmazlık tırmandı.",
+                "Hükümet komisyonu geciktirmediği sürece tarihi anlaşmazlık tırmanmaz.",
+                "Tarihi anlaşmazlık tırmandıktan sonra hükümet komisyonu geciktirdi."
+              ],
+              "correctIndex": 0,
+              "enSentence": "If the government delays the commission, the historical dispute will escalate.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "The economists will finalize the financial report ___ they access the restricted data.",
+              "options": ["if", "unless", "because of", "despite"],
+              "correctIndex": 0,
+              "translation": "Kısıtlı verilere erişirlerse iktisatçılar finansal raporu kesinleştirecektir.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "The legal dispute will continue ___ the parties sign a reliable agreement.",
+              "options": ["unless", "if", "provided that", "on condition that"],
+              "correctIndex": 0,
+              "translation": "Taraflar güvenilir bir anlaşma imzalamadıkça yasal anlaşmazlık devam edecektir.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex2_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal anlaşmazlığı çözmedikçe komisyon anlaşmayı geciktirecektir.",
+              "enSentence": "Unless they resolve the legal dispute, the commission will delay the agreement.",
+              "words": ["Yasal", "anlaşmazlığı", "çözmedikçe", "komisyon", "anlaşmayı", "geciktirecektir.", "çözdüklerinde", "onaylayacaktır."],
+              "correctOrder": ["Yasal", "anlaşmazlığı", "çözmedikçe", "komisyon", "anlaşmayı", "geciktirecektir."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Erişimi kısıtarlarsa tarihçiler kararı protesto edecektir.",
+              "enSentence": "If they restrict access, the historians will protest the decision.",
+              "words": ["Erişimi", "kısıtarlarsa", "tarihçiler", "kararı", "protesto", "edecektir.", "kısıtladıklarında", "destekleyecektir."],
+              "correctOrder": ["Erişimi", "kısıtarlarsa", "tarihçiler", "kararı", "protesto", "edecektir."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q9",
+              "type": "translation-text",
+              "prompt": "\"Provided that the data is reliable, the economists will analyze the trends.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Verilerin güvenilir olması koşuluyla iktisatçılar eğilimleri analiz edecektir.",
+              "enSentence": "Provided that the data is reliable, the economists will analyze the trends.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex2_q10",
+              "type": "translation-text",
+              "prompt": "\"If the survey is anonymous, participants will share honest behavior.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Eğer anket isimsiz olursa katılımcılar dürüst davranışlar paylaşacaktır.",
+              "enSentence": "If the survey is anonymous, participants will share honest behavior.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            }
+          ]
+        },
+        {
+          "id": "u32l5ex3",
+          "title": "Alıştırma 3: Koşul Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "description": "Edilgen koşul cümleleri, zorunluluk/ihtimal kipleri ve ileri seviye sentaks kombinasyonları (10 Soru)",
+          "questions": [
+            {
+              "id": "u32l5_ex3_q1",
+              "type": "matching",
+              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "If the survey is conducted anonymously, the privacy of the participants will be protected.", "right": "Eğer anket isimsiz olarak düzenlenirse katılımcıların gizliliği korunacaktır." },
+                { "left": "Reliable funding must be provided if the commission is to continue the research.", "right": "Komisyonun araştırmaya devam etmesi için güvenilir fon sağlanmalıdır." },
+                { "left": "Unless restricted access is lifted, the historical dispute cannot be analyzed.", "right": "Kısıtlı erişim kaldırılmadıkça tarihi anlaşmazlık analiz edilemez." },
+                { "left": "The agreement will be signed provided that the legal context is verified.", "right": "Yasal bağlamın doğrulanması koşuluyla anlaşma imzalanacaktır." }
+              ],
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "\"Scholars will not be able to analyze the legal dispute unless they can access the historical archives.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Tarihi arşivlere erişemedikçe akademisyenler yasal anlaşmazlığı analiz edemeyecektir.",
+                "Akademisyenler yasal anlaşmazlığı analiz edebilirler çünkü tarihi arşivlere erişimleri vardır.",
+                "Tarihi arşivlere eriştikten sonra akademisyenler yasal anlaşmazlığı analiz etmeye başladılar.",
+                "Tarihi arşivlere erişim kısıtlansa da akademisyenler yasal anlaşmazlığı analiz edebildi."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Scholars will not be able to analyze the legal dispute unless they can access the historical archives.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex3_q3",
+              "type": "multiple-choice",
+              "prompt": "\"If the commission delays the funding again, the research on human behavior must be suspended.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Eğer komisyon fonlamayı tekrar geciktirirse insan davranışı üzerindeki araştırma askıya alınmalıdır.",
+                "Komisyon fonlamayı tekrar geciktirdiği için insan davranışı üzerindeki araştırma askıya alındı.",
+                "İnsan davranışı üzerindeki araştırma askıya alınmadı çünkü komisyon fonlamayı onayladı.",
+                "Komisyon fonlamayı geciktirse bile insan davranışı araştırması devam etmelidir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "If the commission delays the funding again, the research on human behavior must be suspended.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex3_q4",
+              "type": "multiple-choice",
+              "prompt": "\"Provided that the empirical survey is anonymous, participants might share sensitive behavior patterns.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "options": [
+                "Ampirik anketin isimsiz olması koşuluyla katılımcılar hassas davranış örüntüleri paylaşabilir.",
+                "Katılımcılar hassas davranış örüntüleri paylaştı çünkü ampirik anket isimsizdi.",
+                "Ampirik anket isimsiz olmadığı sürece katılımcılar hassas davranışları paylaşmaz.",
+                "Anket isimsiz olsa bile katılımcılar hassas davranış örüntüleri paylaşmayı reddedebilir."
+              ],
+              "correctIndex": 0,
+              "enSentence": "Provided that the empirical survey is anonymous, participants might share sensitive behavior patterns.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex3_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "The economists will not modify the financial model ___ the commission delays the funding.",
+              "options": ["unless", "if", "provided that", "on condition that"],
+              "correctIndex": 0,
+              "translation": "Komisyon fonlamayı geciktirmedikçe iktisatçılar finansal modeli değiştirmeyecektir.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex3_q6",
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun koşul bağlacını seçin:",
+              "sentence": "The legal agreement will be signed ___ the dispute is resolved by the commission.",
+              "options": ["provided that", "unless", "although", "because of"],
+              "correctIndex": 0,
+              "translation": "Anlaşmazlığın komisyon tarafından çözülmesi koşuluyla yasal anlaşma imzalanacaktır.",
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex3_q7",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Kısıtlı erişim kaldırılmadıkça tarihi anlaşmazlık analiz edilemez.",
+              "enSentence": "Unless restricted access is lifted, the historical dispute cannot be analyzed.",
+              "words": ["Kısıtlı", "erişim", "kaldırılmadıkça", "tarihi", "anlaşmazlık", "analiz", "edilemez.", "edilecektir.", "rağmen"],
+              "correctOrder": ["Kısıtlı", "erişim", "kaldırılmadıkça", "tarihi", "anlaşmazlık", "analiz", "edilemez."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex3_q8",
+              "type": "word-bank",
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "translation": "Yasal bağlamın doğrulanması koşuluyla anlaşma imzalanacaktır.",
+              "enSentence": "The agreement will be signed provided that the legal context is verified.",
+              "words": ["Yasal", "bağlamın", "doğrulanması", "koşuluyla", "anlaşma", "imzalanacaktır.", "için", "imzalanmalıydı."],
+              "correctOrder": ["Yasal", "bağlamın", "doğrulanması", "koşuluyla", "anlaşma", "imzalanacaktır."],
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları"]
+            },
+            {
+              "id": "u32l5_ex3_q9",
+              "type": "translation-text",
+              "prompt": "\"If the survey is conducted anonymously, the privacy of the participants will be protected.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Eğer anket isimsiz olarak düzenlenirse katılımcıların gizliliği korunacaktır.",
+              "enSentence": "If the survey is conducted anonymously, the privacy of the participants will be protected.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+            },
+            {
+              "id": "u32l5_ex3_q10",
+              "type": "translation-text",
+              "prompt": "\"Reliable funding must be provided if the commission is to continue the research.\" cümlesini Türkçe'ye çevirin:",
+              "correctSentence": "Komisyonun araştırmaya devam etmesi için güvenilir fon sağlanmalıdır.",
+              "enSentence": "Reliable funding must be provided if the commission is to continue the research.",
+              "isEngToTr": true,
+              "grammarTags": ["Zarf Cümlecikleri", "Koşul", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         }

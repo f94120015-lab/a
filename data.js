@@ -42267,6 +42267,3934 @@ if (typeof unitSentencesMap !== 'undefined') {
 }
 
 
+
+
+// RESTORED AND REORGANIZED UNIT 26 (RELATIVE CLAUSES & COMPARISON) SENTENCES MAP BY MODEL
+if (typeof unitSentencesMap !== 'undefined') {
+  unitSentencesMap["26"] = {
+  "1": {
+    "exercises": [
+      {
+        "id": "u26l78ex1",
+        "title": "Alıştırma 1: Kıyaslama ve Eşitlik Yapıları — Öbek Düzeyi",
+        "description": "Temel kıyaslama ve eşitlik yapılarını öbek düzeyinde tanıma ve anlam eşleştirme",
+        "questions": [
+          {
+            "id": "u26l78_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "to evaluate behavior more objectively",
+                "right": "davranışı daha tarafsız değerlendirmek için"
+              },
+              {
+                "left": "a more severe financial crisis",
+                "right": "daha şiddetli bir finansal kriz"
+              },
+              {
+                "left": "the unresolved academic dispute",
+                "right": "çözülmemiş akademik anlaşmazlık"
+              },
+              {
+                "left": "more reliable research funding",
+                "right": "daha güvenilir araştırma fonu"
+              }
+            ],
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "\"to evaluate behavior more objectively\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "davranışı daha tarafsız değerlendirmek için",
+              "davranış kalıplarını kısıtlamak amacıyla",
+              "görüşleri taraflı olarak yayınlamak için",
+              "finansal anlaşmazlığı çözmek amacıyla"
+            ],
+            "correctIndex": 0,
+            "enSentence": "to evaluate behavior more objectively",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"a more severe financial crisis\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "daha şiddetli bir finansal kriz",
+              "güvenilir bir finansal anlaşma",
+              "kısıtlanmış bir bütçe açığı",
+              "çözülmüş bir ekonomik anlaşmazlık"
+            ],
+            "correctIndex": 0,
+            "enSentence": "a more severe financial crisis",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"the unresolved academic dispute\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "çözülmemiş akademik anlaşmazlık",
+              "kesinleşmiş bilimsel araştırma",
+              "kabul edilmiş yasal savunma",
+              "tartışmalı tarihi anlatı"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the unresolved academic dispute",
+            "isEngToTr": true,
+            "grammarTags": [
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q5",
+            "type": "multiple-choice",
+            "prompt": "\"more reliable research funding\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "daha güvenilir araştırma fonu",
+              "isimsiz araştırma verisi",
+              "kısıtlı bilimsel kaynak",
+              "bağımsız araştırma enstitüsü"
+            ],
+            "correctIndex": 0,
+            "enSentence": "more reliable research funding",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic dispute became ___ intense after the publication of the sociological survey.",
+            "options": [
+              "more",
+              "most",
+              "as",
+              "than"
+            ],
+            "correctIndex": 0,
+            "translation": "Sosyolojik anketin yayınlanmasından sonra akademik tartışma daha yoğun hale geldi.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Zaman Zarfları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Classical economists argued more coherently ___ contemporary scholars during the crisis.",
+            "options": [
+              "than",
+              "as",
+              "that",
+              "from"
+            ],
+            "correctIndex": 0,
+            "translation": "Klasik iktisatçılar kriz sırasında çağdaş akademisyenlerden daha uyumlu bir şekilde tartıştılar.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The financial crisis was as severe ___ the previous recession.",
+            "options": [
+              "as",
+              "than",
+              "so",
+              "like"
+            ],
+            "correctIndex": 0,
+            "translation": "Finansal kriz önceki durgunluk kadar şiddetliydi.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q9",
+            "type": "word-bank",
+            "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+            "translation": "daha güvenilir araştırma fonu",
+            "enSentence": "more reliable research funding",
+            "words": [
+              "daha",
+              "güvenilir",
+              "araştırma",
+              "fonu",
+              "kısıtlı",
+              "yeni"
+            ],
+            "correctOrder": [
+              "daha",
+              "güvenilir",
+              "araştırma",
+              "fonu"
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Klasik iktisatçılar kriz sırasında çağdaş akademisyenlerden daha uyumlu bir şekilde tartıştılar.",
+            "trSentence": "Klasik iktisatçılar kriz sırasında çağdaş akademisyenlerden daha uyumlu bir şekilde tartıştılar.",
+            "words": [
+              "Classical",
+              "economists",
+              "argued",
+              "more",
+              "coherently",
+              "than",
+              "contemporary",
+              "scholars",
+              "during",
+              "the",
+              "crisis."
+            ],
+            "correctOrder": [
+              "Classical",
+              "economists",
+              "argued",
+              "more",
+              "coherently",
+              "than",
+              "contemporary",
+              "scholars",
+              "during",
+              "the",
+              "crisis."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q11",
+            "type": "translation-text",
+            "prompt": "\"Social psychologists evaluate behavioral patterns much faster under experimental conditions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sosyal psikologlar deneysel koşullar altında davranış kalıplarını çok daha hızlı değerlendirir.",
+            "enSentence": "Social psychologists evaluate behavioral patterns much faster under experimental conditions.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"The judicial commission resolved the conflict more easily once reliable funding was secured.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Güvenilir fon sağlandıktan sonra yargı komisyonu çatışmayı daha kolay çözdü.",
+            "enSentence": "The judicial commission resolved the conflict more easily once reliable funding was secured.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l78ex2",
+        "title": "Alıştırma 2: Kıyaslama ve Eşitlik Yapıları — Cümle Düzeyi",
+        "description": "Karşılaştırma ve eşitlik yapılarını cümle düzeyinde kavrama ve yapısal analiz çalışmaları",
+        "questions": [
+          {
+            "id": "u26l78_ex2_q1",
+            "type": "matching",
+            "prompt": "Cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "Modern historians analyze historical narratives as carefully as art history experts.",
+                "right": "Modern tarihçiler tarihsel anlatıları sanat tarihi uzmanları kadar dikkatli analiz ederler."
+              },
+              {
+                "left": "The sociological survey which evaluated public opinions is as important as the empirical research.",
+                "right": "Kamuoyu görüşlerini değerlendiren sosyolojik anket ampirik araştırma kadar önemlidir."
+              },
+              {
+                "left": "The investigative journalists want to build a more secure communication channel.",
+                "right": "Araştırmacı gazeteciler daha güvenli bir iletişim kanalı inşa etmek istiyorlar."
+              },
+              {
+                "left": "Independent journalists protested the restricted access to primary sources.",
+                "right": "Bağımsız gazeteciler birincil kaynaklara yönelik kısıtlanmış erişimi protesto ettiler."
+              }
+            ],
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q2",
+            "type": "multiple-choice",
+            "prompt": "\"Modern historians analyze historical narratives as carefully as art history experts.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Modern tarihçiler tarihsel anlatıları sanat tarihi uzmanları kadar dikkatli analiz ederler.",
+              "Modern tarihçiler sanat tarihi uzmanlarının tarihsel anlatılarını analiz ettiler.",
+              "Art tarihi uzmanları modern tarihçilerin tarihsel anlatılarını dikkatle analiz ederler.",
+              "Tarihçiler sanat tarihi üzerine olan anlatıları modern uzmanlar kadar dikkatli incelediler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Modern historians analyze historical narratives as carefully as art history experts.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"The sociological survey which evaluated public opinions is as important as the empirical research.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Kamuoyu görüşlerini değerlendiren sosyolojik anket ampirik araştırma kadar önemlidir.",
+              "Ampirik araştırma kamuoyu görüşlerini değerlendiren sosyolojik anketten daha önemlidir.",
+              "Sosyolojik anket kamuoyu görüşlerini değerlendirmek için ampirik araştırmayı kullanır.",
+              "Kamuoyu görüşlerinin değerlendirilmesi sosyolojik anket ve ampirik araştırma için önemlidir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The sociological survey which evaluated public opinions is as important as the empirical research.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "\"The investigative journalists want to build a more secure communication channel.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Araştırmacı gazeteciler daha güvenli bir iletişim kanalı inşa etmek istiyorlar.",
+              "Gazeteciler daha güvenli bir iletişim kanalı üzerine araştırma yapmak istiyorlar.",
+              "Araştırmacı gazeteciler iletişim kanalını daha güvenli hale getirdiler.",
+              "İletişim kanallarının daha güvenli olması araştırmacı gazetecilerin isteğidir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The investigative journalists want to build a more secure communication channel.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Independent journalists protested the restricted access to primary sources.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Bağımsız gazeteciler birincil kaynaklara yönelik kısıtlanmış erişimi protesto ettiler.",
+              "Gazeteciler birincil kaynakların bağımsız olarak kısıtlanmasını protesto ettiler.",
+              "Birincil kaynaklara bağımsız erişim gazeteciler tarafından protesto edildi.",
+              "Bağımsız gazeteciler kısıtlanmış kaynaklara erişmek için protesto düzenlediler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Independent journalists protested the restricted access to primary sources.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The archaeological institute developed the same methodologies ___ the historical commission did.",
+            "options": [
+              "as",
+              "than",
+              "like",
+              "with"
+            ],
+            "correctIndex": 0,
+            "translation": "Arkeoloji enstitüsü, tarih komisyonunun geliştirdiği metodolojilerin aynısını geliştirdi.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Modern historians analyze primary sources ___ carefully than researchers in the previous era.",
+            "options": [
+              "more",
+              "as",
+              "most",
+              "so"
+            ],
+            "correctIndex": 0,
+            "translation": "Modern tarihçiler birincil kaynakları önceki dönemdeki araştırmacılardan daha dikkatli analiz ederler.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Social behavior patterns are not as stable ___ cognitive functions under stress.",
+            "options": [
+              "as",
+              "than",
+              "like",
+              "with"
+            ],
+            "correctIndex": 0,
+            "translation": "Sosyal davranış kalıpları stres altında bilişsel işlevler kadar istikrarlı değildir.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Modern tarihçiler tarihsel anlatıları sanat tarihi uzmanları kadar dikkatli analiz ederler.",
+            "enSentence": "Modern historians analyze historical narratives as carefully as art history experts.",
+            "words": [
+              "Modern",
+              "tarihçiler",
+              "tarihsel",
+              "anlatıları",
+              "sanat",
+              "tarihi",
+              "uzmanları",
+              "kadar",
+              "dikkatli",
+              "analiz",
+              "ederler.",
+              "daha",
+              "sonra"
+            ],
+            "correctOrder": [
+              "Modern",
+              "tarihçiler",
+              "tarihsel",
+              "anlatıları",
+              "sanat",
+              "tarihi",
+              "uzmanları",
+              "kadar",
+              "dikkatli",
+              "analiz",
+              "ederler."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Bağımsız gazeteciler birincil kaynaklara yönelik kısıtlanmış erişimi protesto ettiler.",
+            "trSentence": "Bağımsız gazeteciler birincil kaynaklara yönelik kısıtlanmış erişimi protesto ettiler.",
+            "words": [
+              "Independent",
+              "journalists",
+              "protested",
+              "the",
+              "restricted",
+              "access",
+              "to",
+              "primary",
+              "sources."
+            ],
+            "correctOrder": [
+              "Independent",
+              "journalists",
+              "protested",
+              "the",
+              "restricted",
+              "access",
+              "to",
+              "primary",
+              "sources."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q11",
+            "type": "translation-text",
+            "prompt": "\"The sociological survey which evaluated public opinions is as important as the empirical research.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Kamuoyu görüşlerini değerlendiren sosyolojik anket ampirik araştırma kadar önemlidir.",
+            "enSentence": "The sociological survey which evaluated public opinions is as important as the empirical research.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"The investigative journalists want to build a more secure communication channel.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacı gazeteciler daha güvenli bir iletişim kanalı inşa etmek istiyorlar.",
+            "enSentence": "The investigative journalists want to build a more secure communication channel.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l78ex3",
+        "title": "Alıştırma 3: Kıyaslama ve Eşitlik Yapıları — Akademik Sentez",
+        "description": "Önceki dilbilgisi yapılarını içeren gelişmiş akademik kıyaslama analizleri",
+        "questions": [
+          {
+            "id": "u26l78_ex3_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Although the commission evaluated the empirical data, the final decision was ___ controversial than expected.",
+            "options": [
+              "less",
+              "least",
+              "as",
+              "so"
+            ],
+            "correctIndex": 0,
+            "translation": "Komisyon ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The sociological survey was ___ extensive as the research that classical economists finalized last term.",
+            "options": [
+              "as",
+              "than",
+              "more",
+              "like"
+            ],
+            "correctIndex": 0,
+            "translation": "Sosyolojik anket, klasik iktisatçıların geçen dönem kesinleştirdiği araştırma kadar kapsamlıydı.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Zaman Zarfları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q3",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Modern historians published a monograph that was far ___ detailed than previous studies.",
+            "options": [
+              "more",
+              "most",
+              "as",
+              "so"
+            ],
+            "correctIndex": 0,
+            "translation": "Modern tarihçiler, önceki çalışmalardan çok daha ayrıntılı bir monografi yayımladılar.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The reliable funding was distributed more efficiently ___ the new economic guidelines specified.",
+            "options": [
+              "than",
+              "as",
+              "like",
+              "with"
+            ],
+            "correctIndex": 0,
+            "translation": "Güvenilir fon, yeni ekonomik yönergelerin belirttiğinden daha verimli bir şekilde dağıtıldı.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Cognitive psychologists must evaluate human behavior as objectively ___ their resources allow.",
+            "options": [
+              "as",
+              "than",
+              "so",
+              "like"
+            ],
+            "correctIndex": 0,
+            "translation": "Bilişsel psikologlar, insan davranışını kaynaklarının izin verdiği kadar nesnel bir şekilde değerlendirmelidir.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Tarz Modalları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic dispute was resolved much ___ rapidly once the institute intervened.",
+            "options": [
+              "more",
+              "as",
+              "most",
+              "so"
+            ],
+            "correctIndex": 0,
+            "translation": "Enstitü müdahale ettiğinde akademik anlaşmazlık çok daha hızlı çözüldü.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "Although the commission evaluated the empirical data, the final decision was less controversial than expected.",
+            "translation": "Komisyon ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu.",
+            "words": [
+              "Komisyon",
+              "ampirik",
+              "verileri",
+              "değerlendirmesine",
+              "rağmen,",
+              "nihai",
+              "karar",
+              "beklenenden",
+              "daha",
+              "az",
+              "tartışmalı",
+              "oldu.",
+              "çözdü",
+              "hızlı"
+            ],
+            "correctOrder": [
+              "Komisyon",
+              "ampirik",
+              "verileri",
+              "değerlendirmesine",
+              "rağmen,",
+              "nihai",
+              "karar",
+              "beklenenden",
+              "daha",
+              "az",
+              "tartışmalı",
+              "oldu."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Modern tarihçiler, önceki çalışmalardan çok daha ayrıntılı bir monografi yayımladılar.",
+            "trSentence": "Modern tarihçiler, önceki çalışmalardan çok daha ayrıntılı bir monografi yayımladılar.",
+            "words": [
+              "Modern",
+              "historians",
+              "published",
+              "a",
+              "monograph",
+              "that",
+              "was",
+              "far",
+              "more",
+              "detailed",
+              "than",
+              "previous",
+              "studies."
+            ],
+            "correctOrder": [
+              "Modern",
+              "historians",
+              "published",
+              "a",
+              "monograph",
+              "that",
+              "was",
+              "far",
+              "more",
+              "detailed",
+              "than",
+              "previous",
+              "studies."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The sociological survey was as extensive as the research that classical economists finalized last term.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Sosyolojik anket, klasik iktisatçıların geçen dönem kesinleştirdiği araştırma kadar kapsamlıydı.",
+            "enSentence": "The sociological survey was as extensive as the research that classical economists finalized last term.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The reliable funding was distributed more efficiently than the new economic guidelines specified.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Güvenilir fon, yeni ekonomik yönergelerin belirttiğinden daha verimli bir şekilde dağıtıldı.",
+            "enSentence": "The reliable funding was distributed more efficiently than the new economic guidelines specified.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q11",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "Although the commission evaluated the empirical data, the final decision was least controversial than expected.",
+            "turkishTranslation": "Hata tespiti: 'than' kelimesinden önce comparative ('less') kullanılmalıdır, superlative ('least') kullanılamaz.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri"
+            ]
+          },
+          {
+            "id": "u26l78_ex3_q12",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "The sociological survey was as extensive as the research classical economists finalized last term.",
+            "turkishTranslation": "Doğru. 'as ... as' eşitlik yapısı ile relative pronoun düşümü ('research [that] classical economists finalized') hatasızdır.",
+            "correctAnswer": "true",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "exercises": [
+      {
+        "id": "u26l79ex1",
+        "title": "Alıştırma 1: Özne ve Nesne İlgi Cümlecikleri — Öbek Düzeyi",
+        "description": "Özne ve nesne konumundaki relative clause yapılarını (who, which, that) öbek düzeyinde tanıma çalışmaları",
+        "questions": [
+          {
+            "id": "u26l79_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "psychologists who study behavior",
+                "right": "davranışı inceleyen psikologlar"
+              },
+              {
+                "left": "the survey which evaluates opinions",
+                "right": "görüşleri değerlendiren anket"
+              },
+              {
+                "left": "the commission that resolved the dispute",
+                "right": "anlaşmazlığı çözen komisyon"
+              },
+              {
+                "left": "primary sources that require access",
+                "right": "erişim gerektiren birincil kaynaklar"
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "\"psychologists who study behavior\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "davranışı inceleyen psikologlar",
+              "psikologların incelediği davranışlar",
+              "davranışları kısıtlayan psikologlar",
+              "psikologların gözlemlediği anketler"
+            ],
+            "correctIndex": 0,
+            "enSentence": "psychologists who study behavior",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"the survey which evaluates opinions\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "görüşleri değerlendiren anket",
+              "görüşlerin kısıtladığı anket",
+              "anketi değerlendiren kamuoyu",
+              "ankette yayınlanan görüşler"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the survey which evaluates opinions",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"the commission that resolved the dispute\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "anlaşmazlığı çözen komisyon",
+              "komisyonun çözdüğü anlaşmazlık",
+              "anlaşmazlığı erteleyen komisyon",
+              "komisyonun kurduğu ortaklık"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the commission that resolved the dispute",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q5",
+            "type": "multiple-choice",
+            "prompt": "\"primary sources that require access\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "erişim gerektiren birincil kaynaklar",
+              "kaynaklara erişimi kısıtlayan kurallar",
+              "birincil kaynakların kısıtladığı erişim",
+              "güvenilir kaynaklardan elde edilen erişim"
+            ],
+            "correctIndex": 0,
+            "enSentence": "primary sources that require access",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Psychologists ___ study collective behavior published a new monograph last month.",
+            "options": [
+              "who",
+              "which",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Kolektif davranışı inceleyen psikologlar geçen ay yeni bir monografi yayımladılar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The sociological survey ___ evaluates public opinions is completely anonymous.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Kamuoyu görüşlerini değerlendiren sosyolojik anket tamamen isimsizdir.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The historical commission ___ finalized the report resolved the academic dispute.",
+            "options": [
+              "that",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Raporu kesinleştiren tarih komisyonu akademik anlaşmazlığı çözdü.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q9",
+            "type": "word-bank",
+            "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+            "translation": "görüşleri değerlendiren anket",
+            "enSentence": "the survey which evaluates opinions",
+            "words": [
+              "görüşleri",
+              "değerlendiren",
+              "anket",
+              "kısıtlayan",
+              "tarihçi"
+            ],
+            "correctOrder": [
+              "görüşleri",
+              "değerlendiren",
+              "anket"
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Sansürü protesto eden bağımsız gazeteciler kamuoyu desteği aldı.",
+            "trSentence": "Sansürü protesto eden bağımsız gazeteciler kamuoyu desteği aldı.",
+            "words": [
+              "Independent",
+              "journalists",
+              "who",
+              "protested",
+              "the",
+              "censorship",
+              "received",
+              "public",
+              "support."
+            ],
+            "correctOrder": [
+              "Independent",
+              "journalists",
+              "who",
+              "protested",
+              "the",
+              "censorship",
+              "received",
+              "public",
+              "support."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q11",
+            "type": "translation-text",
+            "prompt": "\"Modern historians who analyze primary sources require restricted access.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Birincil kaynakları analiz eden modern tarihçiler kısıtlı erişime ihtiyaç duyarlar.",
+            "enSentence": "Modern historians who analyze primary sources require restricted access.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l79_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"The anthropological institute which receives external funding finalized the study.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Dış fon alan antropoloji enstitüsü çalışmayı kesinleştirdi.",
+            "enSentence": "The anthropological institute which receives external funding finalized the study.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l79ex2",
+        "title": "Alıştırma 2: Özne ve Nesne İlgi Cümlecikleri — Cümle Düzeyi",
+        "description": "Who, which, that yapılarını cümle düzeyinde analiz etme ve anlamlandırma çalışmaları",
+        "questions": [
+          {
+            "id": "u26l79_ex2_q1",
+            "type": "matching",
+            "prompt": "Cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "The economists who evaluate financial agreements published their research yesterday.",
+                "right": "Finansal anlaşmaları değerlendiren iktisatçılar araştırmalarını dün yayınladılar."
+              },
+              {
+                "left": "The sociological survey that evaluated public opinions was conducted by the institute.",
+                "right": "Kamuoyu görüşlerini değerlendiren sosyolojik anket enstitü tarafından gerçekleştirildi."
+              },
+              {
+                "left": "Historians require primary sources which are preserved in restricted archives.",
+                "right": "Tarihçiler, kısıtlı arşivlerde korunan birincil kaynaklara ihtiyaç duyarlar."
+              },
+              {
+                "left": "The judicial commission which resolved the dispute announced the final decision.",
+                "right": "Anlaşmazlığı çözen yargı komisyonu nihai kararı açıkladı."
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q2",
+            "type": "multiple-choice",
+            "prompt": "\"The economists who evaluate financial agreements published their research yesterday.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Finansal anlaşmaları değerlendiren iktisatçılar araştırmalarını dün yayınladılar.",
+              "İktisatçılar finansal anlaşmaları değerlendirmek için dün araştırma yaptılar.",
+              "Dün yayınlanan araştırma finansal anlaşmaları değerlendiren iktisatçılara aittir.",
+              "İktisatçılar dün yayınladıkları araştırmada finansal anlaşmaları eleştirdiler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The economists who evaluate financial agreements published their research yesterday.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"The sociological survey that evaluated public opinions was conducted by the institute.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Kamuoyu görüşlerini değerlendiren sosyolojik anket enstitü tarafından gerçekleştirildi.",
+              "Enstitü kamuoyu görüşlerini değerlendirmek için sosyolojik bir anket düzenledi.",
+              "Sosyolojik anket kamuoyu görüşlerini değerlendirdikten sonra enstitüye sunuldu.",
+              "Enstitünün gerçekleştirdiği sosyolojik anket kamuoyu görüşlerini kısıtladı."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The sociological survey that evaluated public opinions was conducted by the institute.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "\"Historians require primary sources which are preserved in restricted archives.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihçiler, kısıtlı arşivlerde korunan birincil kaynaklara ihtiyaç duyarlar.",
+              "Tarihçilerin koruduğu birincil kaynaklar kısıtlı arşivlerde saklanmaktadır.",
+              "Birincil kaynaklara ihtiyaç duyan tarihçiler kısıtlı arşivleri ziyaret ettiler.",
+              "Kısıtlı arşivlerde korunan tarihçiler birincil kaynaklara ulaştılar."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Historians require primary sources which are preserved in restricted archives.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"The judicial commission which resolved the dispute announced the final decision.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Anlaşmazlığı çözen yargı komisyonu nihai kararı açıkladı.",
+              "Yargı komisyonu anlaşmazlığı çözdükten sonra nihai kararı protesto etti.",
+              "Nihai kararı açıklayan yargı komisyonu anlaşmazlığı çözmek zorundadır.",
+              "Anlaşmazlık çözüldüğünde yargı komisyonu nihai kararı gözden geçirecektir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The judicial commission which resolved the dispute announced the final decision.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The social psychologists ___ evaluate behavior under stress received a research grant.",
+            "options": [
+              "who",
+              "which",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Stres altında davranışı değerlendiren sosyal psikologlar bir araştırma hibesi aldı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The anthropological monographs ___ describe cultural kinship are highly valued.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Kültürel akrabalığı tanımlayan antropolojik monografiler son derece değerlidir.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The independent journalists ___ protested the censorship were supported by the public.",
+            "options": [
+              "that",
+              "which",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Sansürü protesto eden bağımsız gazeteciler halk tarafından desteklendi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Finansal anlaşmaları değerlendiren iktisatçılar araştırmalarını dün yayınladılar.",
+            "enSentence": "The economists who evaluate financial agreements published their research yesterday.",
+            "words": [
+              "Finansal",
+              "anlaşmaları",
+              "değerlendiren",
+              "iktisatçılar",
+              "araştırmalarını",
+              "dün",
+              "yayınladılar.",
+              "önce",
+              "yarın"
+            ],
+            "correctOrder": [
+              "Finansal",
+              "anlaşmaları",
+              "değerlendiren",
+              "iktisatçılar",
+              "araştırmalarını",
+              "dün",
+              "yayınladılar."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Kamuoyu görüşlerini değerlendiren sosyolojik anket enstitü tarafından gerçekleştirildi.",
+            "trSentence": "Kamuoyu görüşlerini değerlendiren sosyolojik anket enstitü tarafından gerçekleştirildi.",
+            "words": [
+              "The",
+              "sociological",
+              "survey",
+              "that",
+              "evaluated",
+              "public",
+              "opinions",
+              "was",
+              "conducted",
+              "by",
+              "the",
+              "institute."
+            ],
+            "correctOrder": [
+              "The",
+              "sociological",
+              "survey",
+              "that",
+              "evaluated",
+              "public",
+              "opinions",
+              "was",
+              "conducted",
+              "by",
+              "the",
+              "institute."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q11",
+            "type": "translation-text",
+            "prompt": "\"Historians require primary sources which are preserved in restricted archives.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Tarihçiler, kısıtlı arşivlerde korunan birincil kaynaklara ihtiyaç duyarlar.",
+            "enSentence": "Historians require primary sources which are preserved in restricted archives.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"The judicial commission which resolved the dispute announced the final decision.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Anlaşmazlığı çözen yargı komisyonu nihai kararı açıkladı.",
+            "enSentence": "The judicial commission which resolved the dispute announced the final decision.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l79ex3",
+        "title": "Alıştırma 3: Özne ve Nesne İlgi Cümlecikleri — Akademik Sentez",
+        "description": "İlgi cümleciklerini zıtlık bağlaçları, edilgenler ve modallarla birleştiren akademik sentez alıştırmaları",
+        "questions": [
+          {
+            "id": "u26l79_ex3_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "Although the journalists ___ protested the laws were arrested, their colleagues continued the campaign.",
+            "options": [
+              "who",
+              "which",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Yasaları protesto eden gazeteciler tutuklanmasına rağmen, meslektaşları kampanyaya devam etti.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zarf Cümlecikleri",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The empirical research ___ the commission finalized last week was evaluated by independent economists.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Komisyonun geçen hafta kesinleştirdiği ampirik araştırma, bağımsız iktisatçılar tarafından değerlendirildi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q3",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "Psychologists study the cognitive patterns ___ are modified during therapeutic treatments.",
+            "options": [
+              "that",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Psikologlar, terapötik tedaviler sırasında değiştirilen bilişsel kalıpları incelerler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The research institute ___ evaluates cultural kinship must receive reliable funding to survive.",
+            "options": [
+              "which",
+              "who",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Kültürel akrabalığı değerlendiren araştırma enstitüsü, ayakta kalabilmek için güvenilir fon almalıdır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Gereklilik Modalları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Modern historians ___ require access to primary sources resolved the academic dispute.",
+            "options": [
+              "who",
+              "which",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Birincil kaynaklara erişim gerektiren modern tarihçiler akademik anlaşmazlığı çözdü.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The sociological survey ___ evaluates public opinions was published after long delays.",
+            "options": [
+              "that",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Kamuoyu görüşlerini değerlendiren sosyolojik anket uzun gecikmelerden sonra yayınlandı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "Although the journalists who protested the laws were arrested, their colleagues continued the campaign.",
+            "translation": "Yasaları protesto eden gazeteciler tutuklanmasına rağmen, meslektaşları kampanyaya devam etti.",
+            "words": [
+              "Yasaları",
+              "protesto",
+              "eden",
+              "gazeteciler",
+              "tutuklanmasına",
+              "rağmen,",
+              "meslektaşları",
+              "kampanyaya",
+              "devam",
+              "etti.",
+              "tarihçiler",
+              "çözdü"
+            ],
+            "correctOrder": [
+              "Yasaları",
+              "protesto",
+              "eden",
+              "gazeteciler",
+              "tutuklanmasına",
+              "rağmen,",
+              "meslektaşları",
+              "kampanyaya",
+              "devam",
+              "etti."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zarf Cümlecikleri",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Komisyonun geçen hafta kesinleştirdiği ampirik araştırma, bağımsız iktisatçılar tarafından değerlendirildi.",
+            "trSentence": "Komisyonun geçen hafta kesinleştirdiği ampirik araştırma, bağımsız iktisatçılar tarafından değerlendirildi.",
+            "words": [
+              "The",
+              "empirical",
+              "research",
+              "which",
+              "the",
+              "commission",
+              "finalized",
+              "last",
+              "week",
+              "was",
+              "evaluated",
+              "by",
+              "independent",
+              "economists."
+            ],
+            "correctOrder": [
+              "The",
+              "empirical",
+              "research",
+              "which",
+              "the",
+              "commission",
+              "finalized",
+              "last",
+              "week",
+              "was",
+              "evaluated",
+              "by",
+              "independent",
+              "economists."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"Psychologists study the cognitive patterns that are modified during therapeutic treatments.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Psikologlar, terapötik tedaviler sırasında değiştirilen bilişsel kalıpları incelerler.",
+            "enSentence": "Psychologists study the cognitive patterns that are modified during therapeutic treatments.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The research institute which evaluates cultural kinship must receive reliable funding to survive.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Kültürel akrabalığı değerlendiren araştırma enstitüsü, ayakta kalabilmek için güvenilir fon almalıdır.",
+            "enSentence": "The research institute which evaluates cultural kinship must receive reliable funding to survive.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Gereklilik Modalları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q11",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "Modern historians who analyze primary sources require restricted access.",
+            "turkishTranslation": "Doğru. 'Modern historians (özne) + who (relative pronoun) + analyze (fiil)' dizilimi kurallara uygundur.",
+            "correctAnswer": "true",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l79_ex3_q12",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "The sociological survey who evaluates public opinions is anonymous.",
+            "turkishTranslation": "Hata tespiti: İnsan dışı kavram olan 'sociological survey' kelimesini nitelemek için 'who' ilgi zamiri kullanılamaz, 'which' veya 'that' kullanılmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "exercises": [
+      {
+        "id": "u26l80ex1",
+        "title": "Alıştırma 1: İleri Niteleyiciler (Where, When, Whose, Whom) — Öbek Düzeyi",
+        "description": "Yer, zaman, iyelik ve nesne ilgi zamirlerini öbek düzeyinde tanıma çalışmaları",
+        "questions": [
+          {
+            "id": "u26l80_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "the geographical region where the ancient tribe settled",
+                "right": "antik kabilenin yerleştiği coğrafi bölge"
+              },
+              {
+                "left": "the era when independent journalists protested",
+                "right": "bağımsız gazetecilerin protesto ettiği dönem"
+              },
+              {
+                "left": "the social historian whose empirical research resolved the dispute",
+                "right": "ampirik araştırması anlaşmazlığı çözen sosyal tarihçi"
+              },
+              {
+                "left": "the economists whom the commission invited",
+                "right": "komisyonun davet ettiği iktisatçılar"
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "\"the geographical region where the ancient tribe settled\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "antik kabilenin yerleştiği coğrafi bölge",
+              "kabilenin bölgedeki kısıtlı yerleşimi",
+              "coğrafi bölgenin kabile tarafından araştırılması",
+              "antik kabilelerin yerleşim planını kısıtlayan kurallar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the geographical region where the ancient tribe settled",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"the era when independent journalists protested\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "bağımsız gazetecilerin protesto ettiği dönem",
+              "gazetecilerin bağımsız olarak protesto ettiği yasalar",
+              "yasaları protesto etmek için gazetecilerin kurduğu dönem",
+              "bağımsız gazetecilerin dönemini kısıtlayan kurallar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the era when independent journalists protested",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"the social historian whose empirical research resolved the dispute\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "ampirik araştırması anlaşmazlığı çözen sosyal tarihçi",
+              "sosyal tarihçinin ampirik araştırmasını çözen anlaşmazlık",
+              "anlaşmazlığı çözmek amacıyla ampirik araştırma yapan tarihçi",
+              "tarihçinin çözdüğü anlaşmazlık üzerine yapılan araştırma"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the social historian whose empirical research resolved the dispute",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q5",
+            "type": "multiple-choice",
+            "prompt": "\"the economists whom the commission invited\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "komisyonun davet ettiği iktisatçılar",
+              "iktisatçıların davet ettiği komisyon",
+              "iktisatçıları davet etmek için kurulan komisyon",
+              "komisyonu davet eden bağımsız iktisatçılar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the economists whom the commission invited",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The geographical region ___ the ancient tribe settled is more rugged than the neighboring plains.",
+            "options": [
+              "where",
+              "when",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Antik kabilenin yerleştiği coğrafi bölge komşu ovalardan daha engebelidir.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The era ___ independent journalists protested the laws was filled with tension.",
+            "options": [
+              "when",
+              "where",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız gazetecilerin yasaları protesto ettiği dönem gerilimle doluydu.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "We met the social historian ___ empirical research resolved the academic dispute.",
+            "options": [
+              "whose",
+              "where",
+              "when",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q9",
+            "type": "word-bank",
+            "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+            "translation": "komisyonun davet ettiği iktisatçılar",
+            "enSentence": "the economists whom the commission invited",
+            "words": [
+              "komisyonun",
+              "davet",
+              "ettiği",
+              "iktisatçılar",
+              "protesto",
+              "kaynaklar"
+            ],
+            "correctOrder": [
+              "komisyonun",
+              "davet",
+              "ettiği",
+              "iktisatçılar"
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Yasal anlaşmazlığın çözüldüğü mahkeme dün kararı kesinleştirdi.",
+            "trSentence": "Yasal anlaşmazlığın çözüldüğü mahkeme dün kararı kesinleştirdi.",
+            "words": [
+              "The",
+              "court",
+              "where",
+              "the",
+              "legal",
+              "dispute",
+              "was",
+              "resolved",
+              "finalized",
+              "the",
+              "decision",
+              "yesterday."
+            ],
+            "correctOrder": [
+              "The",
+              "court",
+              "where",
+              "the",
+              "legal",
+              "dispute",
+              "was",
+              "resolved",
+              "finalized",
+              "the",
+              "decision",
+              "yesterday."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q11",
+            "type": "translation-text",
+            "prompt": "\"The economists whom the commission invited finalized the financial agreement.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Komisyonun davet ettiği iktisatçılar finansal anlaşmayı kesinleştirdi.",
+            "enSentence": "The economists whom the commission invited finalized the financial agreement.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"The university where cognitive psychologists conduct surveys has restricted access.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bilişsel psikologların anketler yaptığı üniversite kısıtlı erişime sahiptir.",
+            "enSentence": "The university where cognitive psychologists conduct surveys has restricted access.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l80ex2",
+        "title": "Alıştırma 2: İleri Niteleyiciler — Cümle Düzeyi",
+        "description": "Where, when, whose, whom yapılarının cümle düzeyindeki kullanımları ve çeviri çalışmaları",
+        "questions": [
+          {
+            "id": "u26l80_ex2_q1",
+            "type": "matching",
+            "prompt": "Cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "The university where cognitive psychologists conduct surveys has restricted access.",
+                "right": "Bilişsel psikologların anketler yaptığı üniversite kısıtlı erişime sahiptir."
+              },
+              {
+                "left": "The court where the legal dispute was resolved finalized the decision yesterday.",
+                "right": "Yasal anlaşmazlığın çözüldüğü mahkeme dün kararı kesinleştirdi."
+              },
+              {
+                "left": "We met the social historian whose empirical research resolved the academic dispute.",
+                "right": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık."
+              },
+              {
+                "left": "The economists whom the commission invited finalized the financial agreement.",
+                "right": "Komisyonun davet ettiği iktisatçılar finansal anlaşmayı kesinleştirdi."
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q2",
+            "type": "multiple-choice",
+            "prompt": "\"The university where cognitive psychologists conduct surveys has restricted access.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Bilişsel psikologların anketler yaptığı üniversite kısıtlı erişime sahiptir.",
+              "Üniversite kısıtlı erişime sahiptir çünkü bilişsel psikologlar anketler düzenlemektedir.",
+              "Psikologlar anketler yaptıkları üniversitede kısıtlı erişim kurallarını değerlendirdiler.",
+              "Bilişsel psikologların araştırma yaptığı üniversite güvenilir fonlara sahiptir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The university where cognitive psychologists conduct surveys has restricted access.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"The court where the legal dispute was resolved finalized the decision yesterday.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Yasal anlaşmazlığın çözüldüğü mahkeme dün kararı kesinleştirdi.",
+              "Mahkeme dün yasal anlaşmazlığı çözdü ve kararı kesinleştireceğini duyurdu.",
+              "Dün kesinleşen karar yasal anlaşmazlığın mahkemede çözüldüğünü gösterir.",
+              "Yasal anlaşmazlık çözüldükten sonra mahkeme dün kararını kesinleştirdi."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The court where the legal dispute was resolved finalized the decision yesterday.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "\"We met the social historian whose empirical research resolved the academic dispute.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+              "Sosyal tarihçinin ampirik araştırmasını çözmek için onunla tanıştık.",
+              "Tarihçi akademik anlaşmazlığı çözen ampirik bir araştırma yayınladı.",
+              "Sosyal tarihçi ampirik araştırma yaptıkça akademik anlaşmazlığı çözdü."
+            ],
+            "correctIndex": 0,
+            "enSentence": "We met the social historian whose empirical research resolved the academic dispute.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"The economists whom the commission invited finalized the financial agreement.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Komisyonun davet ettiği iktisatçılar finansal anlaşmayı kesinleştirdi.",
+              "İktisatçıların davet ettiği komisyon finansal anlaşmayı kesinleştirdi.",
+              "Komisyon, finansal anlaşmayı kesinleştiren iktisatçıları davet etti.",
+              "İktisatçılar komisyonun davetine rağmen finansal anlaşmayı imzalamadılar."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The economists whom the commission invited finalized the financial agreement.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The sociological institute ___ scholars publish anonymous surveys received funding.",
+            "options": [
+              "whose",
+              "where",
+              "when",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Akademisyenleri isimsiz anketler yayınlayan sosyoloji enstitüsü fon aldı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "We remember the exact year ___ independent journalists protested the restrictive laws.",
+            "options": [
+              "when",
+              "where",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız gazetecilerin kısıtlayıcı yasaları protesto ettiği tam yılı hatırlıyoruz.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "The anthropological fieldworkers ___ the director evaluated finalized their reports.",
+            "options": [
+              "whom",
+              "whose",
+              "where",
+              "when"
+            ],
+            "correctIndex": 0,
+            "translation": "Direktörün değerlendirdiği antropolojik saha çalışanları raporlarını kesinleştirdiler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Komisyonun davet ettiği iktisatçılar finansal anlaşmayı kesinleştirdi.",
+            "enSentence": "The economists whom the commission invited finalized the financial agreement.",
+            "words": [
+              "Komisyonun",
+              "davet",
+              "ettiği",
+              "iktisatçılar",
+              "finansal",
+              "anlaşmayı",
+              "kesinleştirdi.",
+              "tarihçiler",
+              "sundu"
+            ],
+            "correctOrder": [
+              "Komisyonun",
+              "davet",
+              "ettiği",
+              "iktisatçılar",
+              "finansal",
+              "anlaşmayı",
+              "kesinleştirdi."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Bilişsel psikologların anketler yaptığı üniversite kısıtlı erişime sahiptir.",
+            "trSentence": "Bilişsel psikologların anketler yaptığı üniversite kısıtlı erişime sahiptir.",
+            "words": [
+              "The",
+              "university",
+              "where",
+              "cognitive",
+              "psychologists",
+              "conduct",
+              "surveys",
+              "has",
+              "restricted",
+              "access."
+            ],
+            "correctOrder": [
+              "The",
+              "university",
+              "where",
+              "cognitive",
+              "psychologists",
+              "conduct",
+              "surveys",
+              "has",
+              "restricted",
+              "access."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q11",
+            "type": "translation-text",
+            "prompt": "\"We met the social historian whose empirical research resolved the academic dispute.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+            "enSentence": "We met the social historian whose empirical research resolved the academic dispute.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"The court where the legal dispute was resolved finalized the decision yesterday.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Yasal anlaşmazlığın çözüldüğü mahkeme dün kararı kesinleştirdi.",
+            "enSentence": "The court where the legal dispute was resolved finalized the decision yesterday.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l80ex3",
+        "title": "Alıştırma 3: İleri Niteleyiciler — Akademik Sentez",
+        "description": "Zaman uyumu, edilgenlik ve koşul bağlaçlarını içeren gelişmiş iyelik ve mekan ilgi cümlecikleri",
+        "questions": [
+          {
+            "id": "u26l80_ex3_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The geographical region where the ancient tribe settled ___ before the valley flooded.",
+            "options": [
+              "was mapped",
+              "will map",
+              "is map",
+              "had mapped"
+            ],
+            "correctIndex": 0,
+            "translation": "Antik kabilenin yerleştiği coğrafi bölge, vadiyi su basmadan önce haritalandırılmıştı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Edilgen Yapı (Passive)",
+              "Zaman Zarfları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The independent journalists whose public support ___ during the protests finalized their statements yesterday.",
+            "options": [
+              "had peaked",
+              "will peak",
+              "peaks",
+              "is peaking"
+            ],
+            "correctIndex": 0,
+            "translation": "Protestolar sırasında kamuoyu desteği zirveye ulaşmış olan bağımsız gazeteciler dün açıklamalarını kesinleştirdiler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q3",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The commission will invite the social historians ___ empirical research evaluated public opinions.",
+            "options": [
+              "whose",
+              "whom",
+              "where",
+              "when"
+            ],
+            "correctIndex": 0,
+            "translation": "Komisyon, ampirik araştırmaları kamuoyu görüşlerini değerlendiren sosyal tarihçileri davet edecektir.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Gelecek Zaman (Future)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "By the time the recession started, the economists ___ the commission hired had finalized the report.",
+            "options": [
+              "whom",
+              "whose",
+              "where",
+              "when"
+            ],
+            "correctIndex": 0,
+            "translation": "Durgunluk başladığında, komisyonun işe aldığı iktisatçılar raporu kesinleştirmişlerdi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The library where primary sources are preserved ___ access to unauthorized visitors.",
+            "options": [
+              "restricts",
+              "restrict",
+              "restricted",
+              "restricting"
+            ],
+            "correctIndex": 0,
+            "translation": "Birincil kaynakların korunduğu kütüphane, yetkisiz ziyaretçilerin erişimini kısıtlar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The sociological survey whose results ___ disputed by classical economists is anonymous.",
+            "options": [
+              "were",
+              "will",
+              "did",
+              "have"
+            ],
+            "correctIndex": 0,
+            "translation": "Sonuçları klasik iktisatçılar tarafından tartışılan sosyolojik anket isimsizdir.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "The geographical region where the ancient tribe settled has more restricted access than the plains.",
+            "translation": "Antik kabilenin yerleştiği coğrafi bölge, ovalardan daha kısıtlı erişime sahiptir.",
+            "words": [
+              "Antik",
+              "kabilenin",
+              "yerleştiği",
+              "coğrafi",
+              "bölge,",
+              "ovalardan",
+              "daha",
+              "kısıtlı",
+              "erişime",
+              "sahiptir.",
+              "tarihçiler",
+              "çözdü"
+            ],
+            "correctOrder": [
+              "Antik",
+              "kabilenin",
+              "yerleştiği",
+              "coğrafi",
+              "bölge,",
+              "ovalardan",
+              "daha",
+              "kısıtlı",
+              "erişime",
+              "sahiptir."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Durgunluk başladığında, komisyonun işe aldığı iktisatçılar raporu kesinleştirmişlerdi.",
+            "trSentence": "Durgunluk başladığında, komisyonun işe aldığı iktisatçılar raporu kesinleştirmişlerdi.",
+            "words": [
+              "By",
+              "the",
+              "time",
+              "the",
+              "recession",
+              "started,",
+              "the",
+              "economists",
+              "whom",
+              "the",
+              "commission",
+              "hired",
+              "had",
+              "finalized",
+              "the",
+              "report."
+            ],
+            "correctOrder": [
+              "By",
+              "the",
+              "time",
+              "the",
+              "recession",
+              "started,",
+              "the",
+              "economists",
+              "whom",
+              "the",
+              "commission",
+              "hired",
+              "had",
+              "finalized",
+              "the",
+              "report."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The independent journalists whose public support had peaked during the protests finalized their statements yesterday.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Protestolar sırasında kamuoyu desteği zirveye ulaşmış olan bağımsız gazeteciler dün açıklamalarını kesinleştirdiler.",
+            "enSentence": "The independent journalists whose public support had peaked during the protests finalized their statements yesterday.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The library where primary sources are preserved restricts access to unauthorized visitors.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Birincil kaynakların korunduğu kütüphane, yetkisiz ziyaretçilerin erişimini kısıtlar.",
+            "enSentence": "The library where primary sources are preserved restricts access to unauthorized visitors.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q11",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "We met the social historian whose empirical research resolved the academic dispute.",
+            "turkishTranslation": "Doğru. 'Historian whose empirical research (iyelik nitelemesi)' yapısı gramer sınırlarına tamamen uygundur.",
+            "correctAnswer": "true",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l80_ex3_q12",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "The economists where the commission invited finalized the financial agreement.",
+            "turkishTranslation": "Hata tespiti: İnsanları niteleyen ve eylemin nesnesi konumunda olan 'economists' kelimesinden sonra 'where' (yer zarfı) kullanılamaz, 'whom' veya 'who' ilgi zamiri kullanılmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "exercises": [
+      {
+        "id": "u26l81ex1",
+        "title": "Alıştırma 1: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Öbek Düzeyi",
+        "description": "Edat takımlı ve ilgi zamiri düşürülmüş (omitted pronoun) relative clause yapılarını öbek düzeyinde tanıma çalışmaları",
+        "questions": [
+          {
+            "id": "u26l81_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "the primary sources with which historians resolved the dispute",
+                "right": "tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar"
+              },
+              {
+                "left": "the independent journalists by whom the laws were protested",
+                "right": "yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler"
+              },
+              {
+                "left": "the empirical evidence psychologists gathered",
+                "right": "psikologların topladığı ampirik kanıtlar"
+              },
+              {
+                "left": "the financial agreements economists finalized",
+                "right": "iktisatçıların kesinleştirdiği finansal anlaşmalar"
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "\"the primary sources with which historians resolved the dispute\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar",
+              "tarihçilerin birincil kaynaklarla çözmek istediği anlaşmazlık",
+              "anlaşmazlığı çözmek amacıyla kaynakları arayan tarihçiler",
+              "birincil kaynakların kısıtlanmasıyla ortaya çıkan yasal anlaşmazlık"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the primary sources with which historians resolved the dispute",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"the independent journalists by whom the laws were protested\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler",
+              "yasaları bağımsız gazetecilerin önünde protesto eden halk",
+              "bağımsız gazetecilerin yasaları kısıtlamak amacıyla yaptığı protesto",
+              "gazetecilerin yasaları bağımsız olarak protesto ettiği enstitü"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the independent journalists by whom the laws were protested",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"the empirical evidence psychologists gathered\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "psikologların topladığı ampirik kanıtlar",
+              "ampirik kanıtları toplayan psikologlar",
+              "psikologların kanıtlardan bağımsız olarak topladığı veriler",
+              "kanıtları ampirik olarak değerlendiren psikologlar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the empirical evidence psychologists gathered",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q5",
+            "type": "multiple-choice",
+            "prompt": "\"the financial agreements economists finalized\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "iktisatçıların kesinleştirdiği finansal anlaşmalar",
+              "iktisatçılarla kesinleşen finansal anlaşmazlıklar",
+              "finansal anlaşmaları kesinleştiren iktisatçılar",
+              "iktisatçıların finansal olarak kesinleştirdiği araştırmalar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the financial agreements economists finalized",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The primary sources with ___ historians resolved the dispute are preserved in restricted archives.",
+            "options": [
+              "which",
+              "whom",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar kısıtlı arşivlerde korunmaktadır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The independent journalists by ___ the laws were protested received public support.",
+            "options": [
+              "whom",
+              "which",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler kamuoyu desteği aldı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The empirical evidence ___ psychologists gathered was evaluated by the research institute.",
+            "options": [
+              "that",
+              "who",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Psikologların topladığı ampirik kanıtlar araştırma enstitüsü tarafından değerlendirildi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q9",
+            "type": "word-bank",
+            "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+            "translation": "iktisatçıların kesinleştirdiği finansal anlaşmalar",
+            "enSentence": "the financial agreements economists finalized",
+            "words": [
+              "iktisatçıların",
+              "kesinleştirdiği",
+              "finansal",
+              "anlaşmalar",
+              "protestolar",
+              "hükümet"
+            ],
+            "correctOrder": [
+              "iktisatçıların",
+              "kesinleştirdiği",
+              "finansal",
+              "anlaşmalar"
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Araştırmacıların akrabalığı değerlendirdiği antropoloji enstitüsü güvenilir fon almaktadır.",
+            "trSentence": "Araştırmacıların akrabalığı değerlendirdiği antropoloji enstitüsü güvenilir fon almaktadır.",
+            "words": [
+              "The",
+              "anthropological",
+              "institute",
+              "in",
+              "which",
+              "researchers",
+              "evaluate",
+              "kinship",
+              "receives",
+              "reliable",
+              "funding."
+            ],
+            "correctOrder": [
+              "The",
+              "anthropological",
+              "institute",
+              "in",
+              "which",
+              "researchers",
+              "evaluate",
+              "kinship",
+              "receives",
+              "reliable",
+              "funding."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q11",
+            "type": "translation-text",
+            "prompt": "\"The sociological survey independent journalists conducted evaluated public opinions.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Bağımsız gazetecilerin gerçekleştirdiği sosyolojik anket kamuoyu görüşlerini değerlendirdi.",
+            "enSentence": "The sociological survey independent journalists conducted evaluated public opinions.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"The financial agreements economists finalized resolved the economic crisis.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İktisatçıların kesinleştirdiği finansal anlaşmalar ekonomik krizi çözdü.",
+            "enSentence": "The financial agreements economists finalized resolved the economic crisis.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l81ex2",
+        "title": "Alıştırma 2: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Cümle Düzeyi",
+        "description": "Preposition + relative yapısı ile düşürülmüş ilgi zamirlerinin cümle içerisindeki işlevleri",
+        "questions": [
+          {
+            "id": "u26l81_ex2_q1",
+            "type": "matching",
+            "prompt": "Cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "The primary sources with which historians resolved the dispute are in restricted archives.",
+                "right": "Tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar kısıtlı arşivlerdedir."
+              },
+              {
+                "left": "The independent journalists by whom the laws were protested received public support.",
+                "right": "Yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler kamuoyu desteği aldı."
+              },
+              {
+                "left": "The empirical evidence psychologists gathered was evaluated by the research institute.",
+                "right": "Psikologların topladığı ampirik kanıtlar araştırma enstitüsü tarafından değerlendirildi."
+              },
+              {
+                "left": "The financial agreements economists finalized resolved the economic crisis.",
+                "right": "İktisatçıların kesinleştirdiği finansal anlaşmalar ekonomik krizi çözdü."
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q2",
+            "type": "multiple-choice",
+            "prompt": "\"The primary sources with which historians resolved the dispute are in restricted archives.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar kısıtlı arşivlerdedir.",
+              "Tarihçiler birincil kaynakları inceleyerek arşivdeki kısıtlı anlaşmazlığı çözdüler.",
+              "Kısıtlı arşivlerdeki birincil kaynakları inceleyen tarihçiler anlaşmazlığı çözdüler.",
+              "Tarihçilerin anlaşmazlığı çözmek amacıyla kullandığı birincil kaynaklar arşivdedir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The primary sources with which historians resolved the dispute are in restricted archives.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"The independent journalists by whom the laws were protested received public support.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler kamuoyu desteği aldı.",
+              "Bağımsız gazetecilerin yasaları protesto etmesiyle kamuoyu büyük destek verdi.",
+              "Kamuoyunun desteklediği bağımsız gazeteciler kısıtlayıcı yasaları protesto ettiler.",
+              "Gazeteciler yasaları protesto ettikleri için bağımsız kamuoyu tarafından desteklendiler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The independent journalists by whom the laws were protested received public support.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "\"The empirical evidence psychologists gathered was evaluated by the research institute.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Psikologların topladığı ampirik kanıtlar araştırma enstitüsü tarafından değerlendirildi.",
+              "Araştırma enstitüsü, psikologların ampirik kanıtlar toplamasını değerlendirdi.",
+              "Ampirik kanıt toplayan psikologlar araştırma enstitüsünü değerlendirdiler.",
+              "Psikologların değerlendirdiği ampirik kanıtlar araştırma enstitüsünde toplandı."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The empirical evidence psychologists gathered was evaluated by the research institute.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"The financial agreements economists finalized resolved the economic crisis.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "İktisatçıların kesinleştirdiği finansal anlaşmalar ekonomik krizi çözdü.",
+              "Finansal anlaşmalar kesinleştiğinde iktisatçılar ekonomik krizi çözdüler.",
+              "İktisatçılar, ekonomik krizi çözen finansal anlaşmaları kesinleştirdiler.",
+              "Ekonomik krizi çözmek amacıyla iktisatçılar finansal anlaşmayı kesinleştirdiler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The financial agreements economists finalized resolved the economic crisis.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The historical narratives to ___ the modern historians referred are preserved.",
+            "options": [
+              "which",
+              "whom",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Modern tarihçilerin atıfta bulunduğu tarihsel anlatılar korunmaktadır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The cognitive psychologist with ___ the institute collaborated published the survey.",
+            "options": [
+              "whom",
+              "which",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Enstitünün iş birliği yaptığı bilişsel psikolog anketi yayınladı.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin (zamir düşürülmüşse boşluğu simgeleyen seçeneği bulun):",
+            "sentence": "The sociological survey ___ independent journalists conducted evaluated public opinions.",
+            "options": [
+              "that",
+              "who",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız gazetecilerin gerçekleştirdiği sosyolojik anket kamuoyu görüşlerini değerlendirdi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "İktisatçıların kesinleştirdiği finansal anlaşmalar ekonomik krizi çözdü.",
+            "enSentence": "The financial agreements economists finalized resolved the economic crisis.",
+            "words": [
+              "İktisatçıların",
+              "kesinleştirdiği",
+              "finansal",
+              "anlaşmalar",
+              "ekonomik",
+              "krizi",
+              "çözdü.",
+              "anlaşmazlığı",
+              "geciktirdi"
+            ],
+            "correctOrder": [
+              "İktisatçıların",
+              "kesinleştirdiği",
+              "finansal",
+              "anlaşmalar",
+              "ekonomik",
+              "krizi",
+              "çözdü."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler kamuoyu desteği aldı.",
+            "trSentence": "Yasaların kendileri tarafından protesto edildiği bağımsız gazeteciler kamuoyu desteği aldı.",
+            "words": [
+              "The",
+              "independent",
+              "journalists",
+              "by",
+              "whom",
+              "the",
+              "laws",
+              "were",
+              "protested",
+              "received",
+              "public",
+              "support."
+            ],
+            "correctOrder": [
+              "The",
+              "independent",
+              "journalists",
+              "by",
+              "whom",
+              "the",
+              "laws",
+              "were",
+              "protested",
+              "received",
+              "public",
+              "support."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q11",
+            "type": "translation-text",
+            "prompt": "\"The empirical evidence psychologists gathered was evaluated by the research institute.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Psikologların topladığı ampirik kanıtlar araştırma enstitüsü tarafından değerlendirildi.",
+            "enSentence": "The empirical evidence psychologists gathered was evaluated by the research institute.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l81_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"The primary sources with which historians resolved the dispute are in restricted archives.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Tarihçilerin anlaşmazlığı çözdüğü birincil kaynaklar kısıtlı arşivlerdedir.",
+            "enSentence": "The primary sources with which historians resolved the dispute are in restricted archives.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l81ex3",
+        "title": "Alıştırma 3: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Akademik Sentez",
+        "description": "Zaman uyumu kilitleri, edilgen modallar ve bölüntülü yapılarla zenginleştirilmiş ileri düzey akademik cümle sentezleri",
+        "questions": [
+          {
+            "id": "u26l81_ex3_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The anthropological institute in which researchers evaluate kinship ___ reliable funding since the new policy was implemented.",
+            "options": [
+              "has received",
+              "received",
+              "had received",
+              "receives"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırmacıların akrabalığı değerlendirdiği antropoloji enstitüsü, yeni politika uygulandığından beri güvenilir fon almaktadır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The primary sources ___ historians discovered in restricted archives must be cataloged carefully.",
+            "options": [
+              "that",
+              "who",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Tarihçilerin kısıtlı arşivlerde keşfettiği birincil kaynaklar dikkatle kataloglanmalıdır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Gereklilik Modalları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q3",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The financial agreements ___ economists finalized solved the crisis, so they were highly praised.",
+            "options": [
+              "that",
+              "who",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "İktisatçıların kesinleştirdiği finansal anlaşmalar krizi çözdü, bu yüzden büyük övgü aldılar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The sociological survey ___ independent journalists conducted evaluated public opinions on censored media.",
+            "options": [
+              "which",
+              "who",
+              "whose",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "Bağımsız gazetecilerin gerçekleştirdiği sosyolojik anket, sansürlenen medya hakkındaki kamuoyu görüşlerini değerlendirdi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The court in ___ the legal dispute was resolved yesterday finalized the decision.",
+            "options": [
+              "which",
+              "whom",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Yasal anlaşmazlığın dün çözüldüğü mahkeme kararı kesinleştirdi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The psychologists by ___ the empirical research was conducted were awarded a science prize.",
+            "options": [
+              "whom",
+              "which",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Ampirik araştırmayı yürüten psikologlar bir bilim ödülüne layık görüldüler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "The anthropological institute in which researchers evaluate kinship has received reliable funding since the new policy was implemented.",
+            "translation": "Araştırmacıların akrabalığı değerlendirdiği antropoloji enstitüsü, yeni politika uygulandığından beri güvenilir fon almaktadır.",
+            "words": [
+              "Araştırmacıların",
+              "akrabalığı",
+              "değerlendirdiği",
+              "antropoloji",
+              "enstitüsü,",
+              "yeni",
+              "politika",
+              "uygulandığından",
+              "beri",
+              "güvenilir",
+              "fon",
+              "almaktadır.",
+              "kaynaklar",
+              "çözdü"
+            ],
+            "correctOrder": [
+              "Araştırmacıların",
+              "akrabalığı",
+              "değerlendirdiği",
+              "antropoloji",
+              "enstitüsü,",
+              "yeni",
+              "politika",
+              "uygulandığından",
+              "beri",
+              "güvenilir",
+              "fon",
+              "almaktadır."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Tarihçilerin kısıtlı arşivlerde keşfettiği birincil kaynaklar dikkatle kataloglanmalıdır.",
+            "trSentence": "Tarihçilerin kısıtlı arşivlerde keşfettiği birincil kaynaklar dikkatle kataloglanmalıdır.",
+            "words": [
+              "The",
+              "primary",
+              "sources",
+              "that",
+              "historians",
+              "discovered",
+              "in",
+              "restricted",
+              "archives",
+              "must",
+              "be",
+              "cataloged",
+              "carefully."
+            ],
+            "correctOrder": [
+              "The",
+              "primary",
+              "sources",
+              "that",
+              "historians",
+              "discovered",
+              "in",
+              "restricted",
+              "archives",
+              "must",
+              "be",
+              "cataloged",
+              "carefully."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Gereklilik Modalları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The financial agreements economists finalized resolved the crisis, so they were highly praised.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "İktisatçıların kesinleştirdiği finansal anlaşmalar krizi çözdü, bu yüzden büyük övgü aldılar.",
+            "enSentence": "The financial agreements economists finalized resolved the crisis, so they were highly praised.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The court in which the legal dispute was resolved yesterday finalized the decision.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Yasal anlaşmazlığın dün çözüldüğü mahkeme kararı kesinleştirdi.",
+            "enSentence": "The court in which the legal dispute was resolved yesterday finalized the decision.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q11",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "The primary sources with whom historians resolved the dispute are in restricted archives.",
+            "turkishTranslation": "Hata tespiti: Cansız ve soyut kavram olan 'primary sources' kelimesini nitelemek için 'whom' edatlı ilgi zamiri kullanılamaz, 'which' kullanılmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l81_ex3_q12",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "The sociological survey independent journalists conducted evaluated public opinions.",
+            "turkishTranslation": "Doğru. İlgi zamiri (which/that) nesne konumunda olduğundan düşürülmüştür ve yapı tamamen doğrudur.",
+            "correctAnswer": "true",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "exercises": [
+      {
+        "id": "u26l82ex1",
+        "title": "Alıştırma 1: Karma Yapılar ve Akademik Sentez — Öbek Düzeyi",
+        "description": "Relative clauses ve kıyaslama kalıplarını bir arada içeren gelişmiş niteleme öbeklerinin anlam analizi",
+        "questions": [
+          {
+            "id": "u26l82_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "although the commission evaluated the empirical data",
+                "right": "komisyon ampirik verileri değerlendirmesine rağmen"
+              },
+              {
+                "left": "historians who have access to restricted archives",
+                "right": "kısıtlı arşivlere erişimi olan tarihçiler"
+              },
+              {
+                "left": "the sociological survey which evaluated public opinions",
+                "right": "kamuoyu görüşlerini değerlendiren sosyolojik anket"
+              },
+              {
+                "left": "the reliable funding economists secured",
+                "right": "iktisatçıların sağladığı güvenilir fon"
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "\"although the commission evaluated the empirical data\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "komisyon ampirik verileri değerlendirmesine rağmen",
+              "komisyon ampirik verileri değerlendirdikten sonra",
+              "ampirik verileri değerlendiren komisyonun kararı",
+              "komisyonun ampirik verileri kısıtlamasına rağmen"
+            ],
+            "correctIndex": 0,
+            "enSentence": "although the commission evaluated the empirical data",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"historians who have access to restricted archives\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "kısıtlı arşivlere erişimi olan tarihçiler",
+              "arşivlere erişimi kısıtlayan tarihçiler",
+              "tarihçilerin kısıtlı arşivlere erişmesi",
+              "arşivleri kısıtlayan bağımsız tarihçiler"
+            ],
+            "correctIndex": 0,
+            "enSentence": "historians who have access to restricted archives",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"the sociological survey which evaluated public opinions\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "kamuoyu görüşlerini değerlendiren sosyolojik anket",
+              "anketteki kamuoyu görüşlerini değerlendiren sosyologlar",
+              "sosyolojik anketlerin kamuoyu üzerindeki etkisi",
+              "kamuoyu anketlerini değerlendiren sosyolojik araştırmalar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the sociological survey which evaluated public opinions",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q5",
+            "type": "multiple-choice",
+            "prompt": "\"the reliable funding economists secured\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "iktisatçıların sağladığı güvenilir fon",
+              "iktisatçıların güvenilir fon sağlamak amacıyla çalışması",
+              "güvenilir fonları iktisatçılara sağlayan enstitü",
+              "fon sağlayan güvenilir iktisatçılar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "the reliable funding economists secured",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Although the commission evaluated the empirical data that psychologists gathered, the final decision was ___ controversial than expected.",
+            "options": [
+              "less",
+              "least",
+              "as",
+              "so"
+            ],
+            "correctIndex": 0,
+            "translation": "Komisyon, psikologların topladığı ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun ilgi zamirini seçin:",
+            "sentence": "Historians who have access to restricted archives published a monograph ___ is more detailed than previous studies.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Kısıtlı arşivlere erişimi olan tarihçiler, önceki çalışmalardan daha ayrıntılı bir monografi yayımladılar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Independent journalists whom the institute supported protested the laws which ___ freedom of communication.",
+            "options": [
+              "restricted",
+              "restricts",
+              "restricting",
+              "restriction"
+            ],
+            "correctIndex": 0,
+            "translation": "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q9",
+            "type": "word-bank",
+            "prompt": "İngilizce ifadenin Türkçe karşılığını oluşturun:",
+            "translation": "kısıtlı arşivlere erişimi olan tarihçiler",
+            "enSentence": "historians who have access to restricted archives",
+            "words": [
+              "kısıtlı",
+              "arşivlere",
+              "erişimi",
+              "olan",
+              "tarihçiler",
+              "yeni",
+              "kaynaklar"
+            ],
+            "correctOrder": [
+              "kısıtlı",
+              "arşivlere",
+              "erişimi",
+              "olan",
+              "tarihçiler"
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler.",
+            "trSentence": "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler.",
+            "words": [
+              "Independent",
+              "journalists",
+              "whom",
+              "the",
+              "institute",
+              "supported",
+              "protested",
+              "the",
+              "laws",
+              "which",
+              "restricted",
+              "freedom",
+              "of",
+              "communication."
+            ],
+            "correctOrder": [
+              "Independent",
+              "journalists",
+              "whom",
+              "the",
+              "institute",
+              "supported",
+              "protested",
+              "the",
+              "laws",
+              "which",
+              "restricted",
+              "freedom",
+              "of",
+              "communication."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q11",
+            "type": "translation-text",
+            "prompt": "\"The academic dispute with which social psychologists are concerned is more complex than the previous conflict.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "enSentence": "The academic dispute with which social psychologists are concerned is more complex than the previous conflict.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l82_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"The reliable funding economists secured allowed the research institute to purchase primary sources.\" ifadesini Türkçe'ye çevirin:",
+            "correctSentence": "İktisatçıların sağladığı güvenilir fon, araştırma enstitüsünün birincil kaynakları satın almasına izin verdi.",
+            "enSentence": "The reliable funding economists secured allowed the research institute to purchase primary sources.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l82ex2",
+        "title": "Alıştırma 2: Karma Yapılar ve Akademik Sentez — Cümle Düzeyi",
+        "description": "Kıyaslama ve relative clause yapılarını içeren tam akademik cümlelerin analizi",
+        "questions": [
+          {
+            "id": "u26l82_ex2_q1",
+            "type": "matching",
+            "prompt": "Cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "Although the commission evaluated the empirical data that psychologists gathered, the final decision was less controversial than expected.",
+                "right": "Komisyon, psikologların topladığı ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu."
+              },
+              {
+                "left": "Historians who have access to restricted archives published a monograph that is more detailed than previous studies.",
+                "right": "Kısıtlı arşivlere erişimi olan tarihçiler, önceki çalışmalardan daha ayrıntılı olan bir monografi yayımladılar."
+              },
+              {
+                "left": "The sociological survey which evaluated public opinions was as extensive as the research economists finalized.",
+                "right": "Kamuoyu görüşlerini değerlendiren sosyolojik anket, iktisatçıların kesinleştirdiği araştırma kadar kapsamlıydı."
+              },
+              {
+                "left": "Independent journalists whom the institute supported protested the laws which restricted freedom of communication.",
+                "right": "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler."
+              }
+            ],
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Zarf Cümlecikleri"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q2",
+            "type": "multiple-choice",
+            "prompt": "\"Although the commission evaluated the empirical data that psychologists gathered, the final decision was less controversial than expected.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Komisyon, psikologların topladığı ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu.",
+              "Komisyon psikologların ampirik verilerini değerlendirdikten sonra, nihai karar beklenenden daha fazla tartışmalı oldu.",
+              "Psikologlar ampirik verileri değerlendiren komisyona rağmen, nihai kararın daha az tartışmalı olacağını bekliyorlardı.",
+              "Komisyon ampirik verileri topladığında, psikologlar nihai kararın beklenenden daha az tartışmalı olacağını değerlendirdiler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Although the commission evaluated the empirical data that psychologists gathered, the final decision was less controversial than expected.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"Historians who have access to restricted archives published a monograph that is more detailed than previous studies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Kısıtlı arşivlere erişimi olan tarihçiler, önceki çalışmalardan daha ayrıntılı olan bir monografi yayımladılar.",
+              "Tarihçiler kısıtlı arşivlere erişmek için önceki çalışmalardan daha ayrıntılı bir monografi yayınlamak zorundaydılar.",
+              "Monografinin önceki çalışmalardan daha ayrıntılı olması, kısıtlı arşivlere erişimi olan tarihçiler sayesindedir.",
+              "Tarihçiler, kısıtlı arşivlerdeki önceki çalışmaları inceledikten sonra daha ayrıntılı bir monografi yayınladılar."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Historians who have access to restricted archives published a monograph that is more detailed than previous studies.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "\"The sociological survey which evaluated public opinions was as extensive as the research economists finalized.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Kamuoyu görüşlerini değerlendiren sosyolojik anket, iktisatçıların kesinleştirdiği araştırma kadar kapsamlıydı.",
+              "Sosyolojik anket kamuoyu görüşlerini değerlendirmek için iktisatçıların araştırmasından daha kapsamlı olmalıydı.",
+              "İktisatçıların kesinleştirdiği araştırma, kamuoyu görüşlerini değerlendiren sosyolojik anketten daha kapsamlıydı.",
+              "Kamuoyu görüşlerinin değerlendirilmesi, sosyolojik anket ve iktisatçıların araştırması kadar kapsamlı değildi."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The sociological survey which evaluated public opinions was as extensive as the research economists finalized.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Independent journalists whom the institute supported protested the laws which restricted freedom of communication.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler.",
+              "Gazeteciler, enstitünün desteğine rağmen iletişim özgürlüğünü kısıtlayan yasaları protesto etmediler.",
+              "İletişim özgürlüğünü kısıtlayan yasaları protesto eden gazeteciler enstitü tarafından desteklendi.",
+              "Enstitü, iletişim özgürlüğünü kısıtlayan yasaları protesto eden bağımsız gazetecileri destekledi."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Independent journalists whom the institute supported protested the laws which restricted freedom of communication.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic dispute with ___ social psychologists are concerned is more complex than the previous conflict.",
+            "options": [
+              "which",
+              "whom",
+              "whose",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The reliable funding economists secured allowed the research institute ___ primary sources.",
+            "options": [
+              "to purchase",
+              "purchasing",
+              "purchase",
+              "purchased"
+            ],
+            "correctIndex": 0,
+            "translation": "İktisatçıların sağladığı güvenilir fon, araştırma enstitüsünün birincil kaynakları satın almasına izin verdi.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Modern historians whose research was funded by the institute published monographs ___ were very detailed.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırmaları enstitü tarafından finanse edilen modern tarihçiler çok detaylı monografiler yayımladılar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Enstitünün desteklediği bağımsız gazeteciler, iletişim özgürlüğünü kısıtlayan yasaları protesto ettiler.",
+            "enSentence": "Independent journalists whom the institute supported protested the laws which restricted freedom of communication.",
+            "words": [
+              "Enstitünün",
+              "desteklediği",
+              "bağımsız",
+              "gazeteciler,",
+              "iletişim",
+              "özgürlüğünü",
+              "kısıtlayan",
+              "yasaları",
+              "protesto",
+              "ettiler.",
+              "tarihçiler",
+              "hızla"
+            ],
+            "correctOrder": [
+              "Enstitünün",
+              "desteklediği",
+              "bağımsız",
+              "gazeteciler,",
+              "iletişim",
+              "özgürlüğünü",
+              "kısıtlayan",
+              "yasaları",
+              "protesto",
+              "ettiler."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "trSentence": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "words": [
+              "The",
+              "academic",
+              "dispute",
+              "with",
+              "which",
+              "social",
+              "psychologists",
+              "are",
+              "concerned",
+              "is",
+              "more",
+              "complex",
+              "than",
+              "the",
+              "previous",
+              "conflict."
+            ],
+            "correctOrder": [
+              "The",
+              "academic",
+              "dispute",
+              "with",
+              "which",
+              "social",
+              "psychologists",
+              "are",
+              "concerned",
+              "is",
+              "more",
+              "complex",
+              "than",
+              "the",
+              "previous",
+              "conflict."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "Edat Takımı (Prepositional Phrase)"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q11",
+            "type": "translation-text",
+            "prompt": "\"Although the commission evaluated the empirical data that psychologists gathered, the final decision was less controversial than expected.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Komisyon, psikologların topladığı ampirik verileri değerlendirmesine rağmen, nihai karar beklenenden daha az tartışmalı oldu.",
+            "enSentence": "Although the commission evaluated the empirical data that psychologists gathered, the final decision was less controversial than expected.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"The reliable funding economists secured allowed the research institute to purchase primary sources.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "İktisatçıların sağladığı güvenilir fon, araştırma enstitüsünün birincil kaynakları satın almasına izin verdi.",
+            "enSentence": "The reliable funding economists secured allowed the research institute to purchase primary sources.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u26l82ex3",
+        "title": "Alıştırma 3: Karma Yapılar ve Akademik Sentez — Akademik Sentez",
+        "description": "Farklı zaman dilimleri, bağlaçlar ve niteleyici öbeklerle karmaşıklaşmış üst düzey sınav tipi cümle yapıları",
+        "questions": [
+          {
+            "id": "u26l82_ex3_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "While studying the history of cinema, the researchers whom the commission funded discovered documents ___ were more detailed than expected.",
+            "options": [
+              "that",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Sinema tarihini incelerken, komisyonun finanse ettiği araştırmacılar beklenenden daha ayrıntılı olan belgeler keşfettiler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "Zaman Zarfları",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The academic dispute which modern historians resolved was as complex ___ the controversy over primary sources.",
+            "options": [
+              "as",
+              "than",
+              "so",
+              "like"
+            ],
+            "correctIndex": 0,
+            "translation": "Modern tarihçilerin çözdüğü akademik anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q3",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The social psychologists whose survey evaluated public opinions ___ that behavioral patterns are heavily influenced by environment.",
+            "options": [
+              "concluded",
+              "conclude",
+              "concluding",
+              "conclusion"
+            ],
+            "correctIndex": 0,
+            "translation": "Anketleri kamuoyu görüşlerini değerlendiren sosyal psikologlar, davranış kalıplarının çevreden büyük ölçüde etkilendiği sonucuna vardılar.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Unless the research institute receives reliable funding, the empirical research ___ economists finalized will be suspended.",
+            "options": [
+              "which",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma enstitüsü güvenilir fon almadıkça, iktisatçıların kesinleştirdiği ampirik araştırma askıya alınacaktır.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zarf Cümlecikleri (If Clauses)",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The court where the legal dispute was resolved yesterday was more crowded ___ usual.",
+            "options": [
+              "than",
+              "as",
+              "so",
+              "like"
+            ],
+            "correctIndex": 0,
+            "translation": "Yasal anlaşmazlığın dün çözüldüğü mahkeme her zamankinden daha kalabalıktı.",
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Anthropologists who evaluate cultural kinship discovered primary sources ___ are preserved in restricted archives.",
+            "options": [
+              "that",
+              "who",
+              "whom",
+              "whose"
+            ],
+            "correctIndex": 0,
+            "translation": "Kültürel akrabalığı değerlendiren antropologlar, kısıtlı arşivlerde korunan birincil kaynakları keşfettiler.",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "While studying the history of cinema, the researchers whom the commission funded discovered documents that were more detailed than expected.",
+            "translation": "Sinema tarihini incelerken, komisyonun finanse ettiği araştırmacılar beklenenden daha ayrıntılı olan belgeler keşfettiler.",
+            "words": [
+              "Sinema",
+              "tarihini",
+              "incelerken,",
+              "komisyonun",
+              "finanse",
+              "ettiği",
+              "araştırmacılar",
+              "beklenenden",
+              "daha",
+              "ayrıntılı",
+              "olan",
+              "belgeler",
+              "keşfettiler.",
+              "eski",
+              "fonlar"
+            ],
+            "correctOrder": [
+              "Sinema",
+              "tarihini",
+              "incelerken,",
+              "komisyonun",
+              "finanse",
+              "ettiği",
+              "araştırmacılar",
+              "beklenenden",
+              "daha",
+              "ayrıntılı",
+              "olan",
+              "belgeler",
+              "keşfettiler."
+            ],
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Derecelendirme (Comparison)",
+              "Zarf Cümlecikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Araştırma enstitüsü güvenilir fon almadıkça, iktisatçıların kesinleştirdiği ampirik araştırma askıya alınacaktır.",
+            "trSentence": "Araştırma enstitüsü güvenilir fon almadıkça, iktisatçıların kesinleştirdiği ampirik araştırma askıya alınacaktır.",
+            "words": [
+              "Unless",
+              "the",
+              "research",
+              "institute",
+              "receives",
+              "reliable",
+              "funding,",
+              "the",
+              "empirical",
+              "research",
+              "which",
+              "economists",
+              "finalized",
+              "will",
+              "be",
+              "suspended."
+            ],
+            "correctOrder": [
+              "Unless",
+              "the",
+              "research",
+              "institute",
+              "receives",
+              "reliable",
+              "funding,",
+              "the",
+              "empirical",
+              "research",
+              "which",
+              "economists",
+              "finalized",
+              "will",
+              "be",
+              "suspended."
+            ],
+            "isEngToTr": false,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "Zarf Cümlecikleri (If Clauses)",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q9",
+            "type": "translation-text",
+            "prompt": "\"The academic dispute which modern historians resolved was as complex as the controversy over primary sources.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Modern tarihçilerin çözdüğü akademik anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
+            "enSentence": "The academic dispute which modern historians resolved was as complex as the controversy over primary sources.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Derecelendirme (Comparison)",
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"The social psychologists whose survey evaluated public opinions concluded that behavioral patterns are heavily influenced by environment.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Anketleri kamuoyu görüşlerini değerlendiren sosyal psikologlar, davranış kalıplarının çevreden büyük ölçüde etkilendiği sonucuna vardılar.",
+            "enSentence": "The social psychologists whose survey evaluated public opinions concluded that behavioral patterns are heavily influenced by environment.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q11",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "Anthropologists who evaluate cultural kinship discovered primary sources that are preserved in restricted archives.",
+            "turkishTranslation": "Doğru. 'Anthropologists (özne) + who (ilgi zamiri)' ve 'sources + that (ilgi zamiri) + are preserved (edilgen)' yapıları doğrudur.",
+            "correctAnswer": "true",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "Edilgen Yapı (Passive)"
+            ]
+          },
+          {
+            "id": "u26l82_ex3_q12",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?",
+            "englishPhrase": "Unless the research institute receives reliable funding, the empirical research who economists finalized will be suspended.",
+            "turkishTranslation": "Hata tespiti: Cansız ve soyut kavram olan 'empirical research' kelimesini nitelemek için 'who' ilgi zamiri kullanılamaz, 'which' veya 'that' kullanılmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+};
+}
+
+if (typeof rawTopics !== 'undefined') {
+  const t26 = rawTopics.find(t => t.id === 26);
+  if (t26) {
+    if (!t26.edits) t26.edits = [];
+    t26.edits.push({
+      date: "2026-07-28T02:15:00+03:00",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      type: "custom"
+    });
+  }
+}
+
+
 let displayLessonCounter = 1;
 rawTopics.forEach((topic, uIdx) => {
   let unitTitle = topic.title || "";
