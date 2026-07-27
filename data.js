@@ -283,36 +283,36 @@ rawTopics.push(
   "edits": [
     {
       "date": "2026-07-21T01:59:00+03:00",
-      "desc": "Bölüm Yeniden Tasarımı: Bağlaçlar ünitesindeki 660 soru, alıştırma başına 15 soru olacak şekilde 11 tematik alıştırmada (toplamda 165 soru) birleştirildi. Kelime eşleştirmeler kaldırılarak pedagojik akış (Çoktan Seçmeli -> Dropdown -> Cümle Kurma -> Çeviri -> Entegre) ve entegre tekrarlar eklendi.",
+      "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının akademik cümlelerdeki kullanımları.",
       "type": "custom"
     }
   ],
   "startLessonId": 400,
   "originalIndex": 34,
   "title": "Bağlaçlar",
-  "desc": "Zıtlık bağlaçlarının (although, even though, though, much as, despite, in spite of) akademik cümlelerdeki kullanımları.",
+  "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının akademik cümlelerdeki kullanımları.",
   "icon": "⚖️",
   "numLessons": 4,
   "formulas": [
     {
-      "formula": "Although / Even though / Despite / However / Nevertheless",
-      "example": "Although the book was very long, I finished it; however, it was quite expensive.",
-      "description": "Temel ve ileri seviye zıtlık bağlaçları cümle yapıları."
+      "formula": "Although / Even though + SVO VEYA Despite / In spite of + Noun VEYA SVO; however / nevertheless, SVO",
+      "example": "Although the commission authorized the research, the funding was delayed; however, the historians continued.",
+      "description": "Temel ve ileri seviye zıtlık bağlaçları, edatları ve geçiş kelimeleri."
     },
     {
-      "formula": "While / Whereas / Unlike / Because / Since / As",
-      "example": "While some sectors experienced growth, others declined because query loops failed.",
-      "description": "Saf kıyaslama bağlaçları ve cümle alan sebep bağlaçları."
+      "formula": "While / Whereas + SVO VEYA Unlike / Contrary to + Noun VEYA because / since / as + SVO",
+      "example": "Whereas documentary films analyze historical events, fiction movies create imaginary worlds because they prioritize entertainment.",
+      "description": "Saf kıyaslama bağlaçları, karşıtlık edatları ve cümle alan sebep bağlaçları."
     },
     {
-      "formula": "Due to / Because of + Noun VEYA SVO; therefore / furthermore, SVO",
-      "example": "Due to the unexpected rain, the match was delayed; consequently, we stayed indoors.",
-      "description": "Sebep-sonuç edatları (due to, because of), sonuç transitionları (therefore, consequently), ekleme bağlaçları (furthermore) ve örneklendirme."
+      "formula": "Due to / Because of + Noun; therefore / consequently, SVO VEYA In addition to + Noun VEYA SVO; furthermore, SVO",
+      "example": "Due to legal disputes, the economists preferred to modify the trade agreement; consequently, they held a commission meeting.",
+      "description": "Sebep-sonuç edatları, sonuç geçişleri, ekleme bağlaçları ve örneklendirme/açıklama."
     },
     {
-      "formula": "Neither...nor VEYA In order to + V1 VEYA Except for + Noun VEYA In terms of + Noun",
-      "example": "Neither the storm nor the cold prevented us from going out in order to complete our tasks except for some minor ones.",
-      "description": "İkili bağlaçlar, amaç-sonuç (in order to, so that), hariç tutma (except for) ve ileri düzey edat kombinasyonları (in terms of, rather than)."
+      "formula": "Neither...nor / Either...or VEYA so that + SVO VEYA in order to / so as to + V1 VEYA rather than / in terms of + Noun",
+      "example": "Neither the art historians nor the commission was willing to authorize the funding so that they could preserve the cultural heritage rather than depending on foreign aid.",
+      "description": "İkili bağlaçlar, amaç-sonuç bağlaçları, hariç tutma ve ileri düzey edat kombinasyonları."
     }
   ],
   "subtitles": [
@@ -30484,3124 +30484,1403 @@ Object.assign(unitSentencesMap, {
     }
   },
   "40": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 1: Cümle Alan Zıtlık Bağlaçları",
-          "description": "Although, Even though, Though ve Much as gibi cümle alan zıtlık bağlaçlarının akademik cümlelerdeki kullanımları.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "They bought the house ___ they knew it needed a lot of repairs.",
-              "options": [
-                "However",
-                "even though",
-                "although",
-                "Much as"
-              ],
-              "correctIndex": 1,
-              "translation": "Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I don't like his attitude. He is a good teacher, ___.",
-              "options": [
-                "even though",
-                "although",
-                "though",
-                "Much as"
-              ],
-              "correctIndex": 2,
-              "translation": "Onun tavrını sevmiyorum. Yine de iyi bir öğretmen."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Choose the correct structure: '___ he had no formal training, his performance was flawless.'",
-              "options": [
-                "However",
-                "Much as",
-                "Even though",
-                "though"
-              ],
-              "correctIndex": 2,
-              "translation": "Hiç resmi eğitimi olmamasına rağmen performansı kusursuzdu."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The food was delicious, ___ the service was quite slow.",
-              "options": [
-                "though",
-                "However",
-                "Much as",
-                "Although"
-              ],
-              "correctIndex": 0,
-              "translation": "Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Ozon deliği potansiyel olarak tehlikelidir çünkü atmosferdeki ozon ultraviyole ışığı engeller.",
-                "Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.",
-                "Klima çalışıyor; ancak içerisi hala sıcak.",
-                "Kitap çok uzun olmasına rağmen onu iki günde bitirdim."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Although the book was very long, I finished it in two days.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Neredeyse her gece yağmur yağmasına rağmen kamp gezimizden keyif aldık.",
-                "Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.",
-                "Şirket, merkezi olmayan bir yapı yerine merkezi bir yapıyı seçti.",
-                "Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We enjoyed our camping trip although it rained almost every night.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "Excellent the design may be, it won't sell without proper marketing However .",
-                " However excellent the may design be, it won't sell without proper marketing.",
-                "Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved.",
-                "However excellent the design may be, it won't sell without proper marketing."
-              ],
-              "correctIndex": 3,
-              "enSentence": "However excellent the design may be, it won't sell without proper marketing.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "She went to work even though she was feeling very sick.",
-                "She went to work even though she was very feeling sick.",
-                "She was feeling very sick even though she went to work.",
-                "She went work to even though she was feeling very sick."
-              ],
-              "correctIndex": 0,
-              "enSentence": "She went to work even though she was feeling very sick.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I don't like his attitude. He is a good teacher, though.",
-              "words": [
-                "de",
-                "Onun",
-                "iyi",
-                "tavrını",
-                "hala",
-                "Servis",
-                "bir",
-                "sevmiyorum",
-                "öğretmen",
-                "emin",
-                "Yine"
-              ],
-              "correctOrder": [
-                "Onun",
-                "tavrını",
-                "sevmiyorum",
-                "Yine",
-                "de",
-                "iyi",
-                "bir",
-                "öğretmen"
-              ],
-              "enSentence": "I don't like his attitude. He is a good teacher, though.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The food was delicious, though the service was quite slow.",
-              "words": [
-                "kanıtladı",
-                "oldukça",
-                "yavaş",
-                "Servis",
-                "yemekler",
-                "olmasına",
-                "rağmen",
-                "lezzetliydi",
-                "içe",
-                "yerine"
-              ],
-              "correctOrder": [
-                "Servis",
-                "oldukça",
-                "yavaş",
-                "olmasına",
-                "rağmen",
-                "yemekler",
-                "lezzetliydi"
-              ],
-              "enSentence": "The food was delicious, though the service was quite slow.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Tired though he was after the long journey, he attended the meeting.",
-              "words": [
-                "maçı",
-                "radyoaktif",
-                "katıldı",
-                "Uzun",
-                "yorgun",
-                "yolculuktan",
-                "sonra",
-                "olmasına",
-                "iki",
-                "rağmen",
-                "toplantıya"
-              ],
-              "correctOrder": [
-                "Uzun",
-                "yolculuktan",
-                "sonra",
-                "yorgun",
-                "olmasına",
-                "rağmen",
-                "toplantıya",
-                "katıldı"
-              ],
-              "enSentence": "Tired though he was after the long journey, he attended the meeting.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The strategy, though risky in the short term, proved to be highly lucrative.",
-              "words": [
-                "Strateji",
-                "kısa",
-                "kazançlı",
-                "vadede",
-                "derece",
-                "kanıtladı",
-                "riskli",
-                "hiç",
-                "olsa",
-                "rağmen",
-                "Onun",
-                "olduğunu",
-                "son",
-                "da"
-              ],
-              "correctOrder": [
-                "Strateji",
-                "kısa",
-                "vadede",
-                "riskli",
-                "olsa",
-                "da",
-                "son",
-                "derece",
-                "kazançlı",
-                "olduğunu",
-                "kanıtladı"
-              ],
-              "enSentence": "The strategy, though risky in the short term, proved to be highly lucrative.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Much as I want to help you, I simply do not have the time right now.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.",
-              "enSentence": "Much as I want to help you, I simply do not have the time right now.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Much as they admired his intellect, they could not support his radical methods.",
-              "enSentence": "Much as they admired his intellect, they could not support his radical methods.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Despite his great effort, he lost the match.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Büyük çabasına rağmen maçı kaybetti.",
-              "enSentence": "Despite his great effort, he lost the match.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 2: İsim Alan Zıtlık Bağlaçları",
-          "description": "Despite ve In spite of gibi kendisinden sonra isim, isim öbeği veya fiil-isim (V-ing) alan zıtlık yapılarının pratikleri.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The tablet is affordable, ___ it lacks a high-resolution screen.",
-              "options": [
-                "On the other hand",
-                "but",
-                "Much as",
-                "In spite of"
-              ],
-              "correctIndex": 1,
-              "translation": "Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The air conditioner is working; ___ , it is still hot inside.",
-              "options": [
-                "however",
-                "Much as",
-                "in spite of",
-                "Despite"
-              ],
-              "correctIndex": 0,
-              "translation": "Klima çalışıyor; ancak içerisi hala sıcak."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The director, ___ , decided to reject the proposal despite the board's approval.",
-              "options": [
-                "however",
-                "yet",
-                "In spite of",
-                "On the other hand"
-              ],
-              "correctIndex": 0,
-              "translation": "Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Kelly was a convicted criminal, ___ many people admired him.",
-              "options": [
-                "yet",
-                "Much as",
-                "Despite",
-                "however"
-              ],
-              "correctIndex": 0,
-              "translation": "Kelly hüküm giymiş bir suçluydu, yine de birçok insan ona hayran kaldı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The initial results were promising. ___ , further testing revealed several bugs.",
-              "options": [
-                "However",
-                "nevertheless",
-                "Nonetheless",
-                "Much as"
-              ],
-              "correctIndex": 0,
-              "translation": "İlk sonuçlar umut vericiydi. Ancak, daha ileri testler birkaç hata ortaya çıkardı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Kazanmayı çok istemesine rağmen antrenman yapmayı reddetti.",
-                "Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır.",
-                "Geleneksel arabaların aksine, elektrikli araçlar sıfır doğrudan emisyon üretir.",
-                "İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Much as  his great desire to win, he refused to train.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi.",
-                "Büyük çabasına rağmen maçı kaybetti.",
-                "Yüksek lisans programları ders yüküne odaklanırken, doktora programları özgün araştırma gerektirir.",
-                "Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir."
-              ],
-              "correctIndex": 1,
-              "enSentence": "Despite his great effort, he lost the match.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "They arrived on time in spite of the heavy on traffic the highway.",
-                "They arrived time on in spite of the heavy traffic on the highway.",
-                "The heavy traffic on the highway in spite of they arrived on time.",
-                "They arrived on time in spite of the heavy traffic on the highway."
-              ],
-              "correctIndex": 3,
-              "enSentence": "They arrived on time in spite of the heavy traffic on the highway.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "In spite of the fact that she was injured, she completed the marathon.",
-                "The fact that she was injured, she completed the marathon In spite of .",
-                "They arrived on time in spite of the heavy traffic on the highway.",
-                " In spite of the fact she that was injured, she completed the marathon."
-              ],
-              "correctIndex": 0,
-              "enSentence": "In spite of the fact that she was injured, she completed the marathon.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The air conditioner is working; however, it is still hot inside.",
-              "words": [
-                "ancak",
-                "çalışıyor",
-                "içerisi",
-                "Klima",
-                "hala",
-                "sıcak",
-                "doktora",
-                "her",
-                "İngiltere'de"
-              ],
-              "correctOrder": [
-                "Klima",
-                "çalışıyor",
-                "ancak",
-                "içerisi",
-                "hala",
-                "sıcak"
-              ],
-              "enSentence": "The air conditioner is working; however, it is still hot inside.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The initial results were promising. However, further testing revealed several bugs.",
-              "words": [
-                "yağdığı",
-                "hata",
-                "birkaç",
-                "ileri",
-                "vericiydi",
-                "umut",
-                "Ancak",
-                "kadar",
-                "sonuçlar",
-                "testler",
-                "çıkardı",
-                "ortaya",
-                "daha",
-                "İlk",
-                "gezimizden"
-              ],
-              "correctOrder": [
-                "İlk",
-                "sonuçlar",
-                "umut",
-                "vericiydi",
-                "Ancak",
-                "daha",
-                "ileri",
-                "testler",
-                "birkaç",
-                "hata",
-                "ortaya",
-                "çıkardı"
-              ],
-              "enSentence": "The initial results were promising. However, further testing revealed several bugs.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The director, however, decided to reject the proposal despite the board's approval.",
-              "words": [
-                "Yönetmen",
-                "tamamladığınıza",
-                "karar",
-                "Genellikle",
-                "kurulunun",
-                "ise",
-                "rağmen",
-                "yönetim",
-                "teklifi",
-                "verdi",
-                "reddetmeye",
-                "onayına",
-                "Büyük"
-              ],
-              "correctOrder": [
-                "Yönetmen",
-                "ise",
-                "yönetim",
-                "kurulunun",
-                "onayına",
-                "rağmen",
-                "teklifi",
-                "reddetmeye",
-                "karar",
-                "verdi"
-              ],
-              "enSentence": "The director, however, decided to reject the proposal despite the board's approval.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The economic data was discouraging; nevertheless, the stock market reached an all-time high.",
-              "words": [
-                "ortaya",
-                "yüksek",
-                "kırıcıydı",
-                "Ekonomik",
-                "tüm",
-                "yandan",
-                "veriler",
-                "zamanların",
-                "yine",
-                "ulaşıldı",
-                "kaybetti",
-                "cesaret",
-                "borsada",
-                "de",
-                "seviyesine",
-                "en"
-              ],
-              "correctOrder": [
-                "Ekonomik",
-                "veriler",
-                "cesaret",
-                "kırıcıydı",
-                "yine",
-                "de",
-                "borsada",
-                "tüm",
-                "zamanların",
-                "en",
-                "yüksek",
-                "seviyesine",
-                "ulaşıldı"
-              ],
-              "enSentence": "The economic data was discouraging; nevertheless, the stock market reached an all-time high.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"There were serious security concerns. Nonetheless, the festival organizers decided to proceed.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi.",
-              "enSentence": "There were serious security concerns. Nonetheless, the festival organizers decided to proceed.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Evden çalışmak büyük esneklik sunar. Diğer yandan, izolasyona yol açabilir.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Working from home offers great flexibility. On the other hand, it can lead to isolation.",
-              "enSentence": "Working from home offers great flexibility. On the other hand, it can lead to isolation.",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 3: Cümle Geçişleri ve Zıtlık Zarfları",
-          "description": "However, Nevertheless, Nonetheless, But, Yet ve Still gibi cümleler arası geçiş sağlayan zıtlık yapılarının noktalama ve kullanımı.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The initial results were promising. ___ , further testing revealed several bugs.",
-              "options": [
-                "However",
-                "Nonetheless",
-                "while",
-                "whereas"
-              ],
-              "correctIndex": 0,
-              "translation": "İlk sonuçlar umut vericiydi. Ancak, daha ileri testler birkaç hata ortaya çıkardı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The economic data was discouraging; ___ , the stock market reached an all-time high.",
-              "options": [
-                "nevertheless",
-                "yet",
-                "however",
-                "although"
-              ],
-              "correctIndex": 0,
-              "translation": "Ekonomik veriler cesaret kırıcıydı; yine de borsada tüm zamanların en yüksek seviyesine ulaşıldı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The director, ___ , decided to reject the proposal despite the board's approval.",
-              "options": [
-                "but",
-                "In spite of",
-                "however",
-                "On the other hand"
-              ],
-              "correctIndex": 2,
-              "translation": "Yönetmen ise, yönetim kurulunun onayına rağmen teklifi reddetmeye karar verdi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "There were serious security concerns. ___ , the festival organizers decided to proceed.",
-              "options": [
-                "Nonetheless",
-                "whereas",
-                "However",
-                "nevertheless"
-              ],
-              "correctIndex": 0,
-              "translation": "Ciddi güvenlik endişeleri vardı. Yine de, festival organizatörleri devam etmeye karar verdi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok.",
-                "Sakatlanmış olmasına rağmen maratonu tamamladı.",
-                "Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.",
-                "Yeni algoritma, verileri paralel katmanlar halinde işlemesi bakımından devrim niteliğindedir."
-              ],
-              "correctIndex": 1,
-              "enSentence": "In spite of the fact that she was injured, she completed the marathon.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "İleri düzey eğitimi tamamladığınıza göre, artık sistemi tek başınıza çalıştırabilirsiniz.",
-                "Popüler inanışın aksine, yarasalar aslında kör değildir.",
-                "Onun tavrını sevmiyorum. Yine de iyi bir öğretmen.",
-                "Tablet uygun fiyatlı ama yüksek çözünürlüklü bir ekrandan yoksun."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The tablet is affordable, but it lacks a high-resolution screen.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "Kelly was a convicted criminal, yet many people him admired.",
-                "Kelly was a convicted criminal, yet many people admired him.",
-                "Many people admired him yet kelly was a convicted criminal,.",
-                "Kelly was convicted a criminal, yet many people admired him."
-              ],
-              "correctIndex": 1,
-              "enSentence": "Kelly was a convicted criminal, yet many people admired him.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The air conditioner is working; however, it is still hot inside.",
-                ", it is still hot inside however the air conditioner is working;.",
-                "The air is conditioner working; however , it is still hot inside.",
-                "The air conditioner is working; however , it still is hot inside."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The air conditioner is working; however, it is still hot inside.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The economic data was discouraging; nevertheless, the stock market reached an all-time high.",
-              "words": [
-                "de",
-                "verdi",
-                "Ekonomik",
-                "en",
-                "birkaç",
-                "kırıcıydı",
-                "yine",
-                "zamanların",
-                "tüm",
-                "yüksek",
-                "seviyesine",
-                "ulaşıldı",
-                "onu",
-                "borsada",
-                "veriler",
-                "cesaret"
-              ],
-              "correctOrder": [
-                "Ekonomik",
-                "veriler",
-                "cesaret",
-                "kırıcıydı",
-                "yine",
-                "de",
-                "borsada",
-                "tüm",
-                "zamanların",
-                "en",
-                "yüksek",
-                "seviyesine",
-                "ulaşıldı"
-              ],
-              "enSentence": "The economic data was discouraging; nevertheless, the stock market reached an all-time high.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "There were serious security concerns. Nonetheless, the festival organizers decided to proceed.",
-              "words": [
-                "organizatörleri",
-                "de",
-                "festival",
-                "ona",
-                "etmeye",
-                "endişeleri",
-                "verdi",
-                "karar",
-                "hissetmesine",
-                "güvenlik",
-                "Ciddi",
-                "vardı",
-                "rağmen",
-                "devam",
-                "Yine"
-              ],
-              "correctOrder": [
-                "Ciddi",
-                "güvenlik",
-                "endişeleri",
-                "vardı",
-                "Yine",
-                "de",
-                "festival",
-                "organizatörleri",
-                "devam",
-                "etmeye",
-                "karar",
-                "verdi"
-              ],
-              "enSentence": "There were serious security concerns. Nonetheless, the festival organizers decided to proceed.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Working from home offers great flexibility. On the other hand, it can lead to isolation.",
-              "words": [
-                "büyük",
-                "ultraviyole",
-                "esneklik",
-                "yandan",
-                "çalışmak",
-                "açabilir",
-                "yol",
-                "merkezi",
-                "izolasyona",
-                "Evden",
-                "sunar",
-                "Diğer",
-                "Şirket"
-              ],
-              "correctOrder": [
-                "Evden",
-                "çalışmak",
-                "büyük",
-                "esneklik",
-                "sunar",
-                "Diğer",
-                "yandan",
-                "izolasyona",
-                "yol",
-                "açabilir"
-              ],
-              "enSentence": "Working from home offers great flexibility. On the other hand, it can lead to isolation.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved.",
-              "words": [
-                "yandan",
-                "sorun",
-                "verimlidir",
-                "derece",
-                "Nükleer",
-                "çözülmemiş",
-                "olarak",
-                "harcamaktan",
-                "enerji",
-                "bertaraf",
-                "atıkların",
-                "bir",
-                "sıcak",
-                "radyoaktif",
-                "edilmesi",
-                "Diğer",
-                "son",
-                "açabilir",
-                "kalmaktadır"
-              ],
-              "correctOrder": [
-                "Nükleer",
-                "enerji",
-                "son",
-                "derece",
-                "verimlidir",
-                "Diğer",
-                "yandan",
-                "radyoaktif",
-                "atıkların",
-                "bertaraf",
-                "edilmesi",
-                "çözülmemiş",
-                "bir",
-                "sorun",
-                "olarak",
-                "kalmaktadır"
-              ],
-              "enSentence": "Nuclear energy is highly efficient. On the other hand, the disposal of radioactive waste remains unsolved.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"In Turkey, the summer is usually hot, whereas in England it is often rainy.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Türkiye'de yaz genellikle sıcak geçer, oysa İngiltere'de genellikle yağmurludur.",
-              "enSentence": "In Turkey, the summer is usually hot, whereas in England it is often rainy.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Bazı insanlar paralarını biriktirmeyi tercih ederken, diğerleri onu hemen harcamaktan keyif alırlar.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Some people prefer saving their money, while others enjoy spending it immediately.",
-              "enSentence": "Some people prefer saving their money, while others enjoy spending it immediately.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Unlike his brother, who loves sports, Tom prefers reading books.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sporu seven erkek kardeşinin aksine, Tom kitap okumayı tercih eder.",
-              "enSentence": "Unlike his brother, who loves sports, Tom prefers reading books.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "2": {
-      "exercises": [
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 1: Saf Kıyaslama ve Karşıtlık",
-          "description": "While, Whereas, Unlike, Contrary to, As opposed to ve Conversely gibi kıyaslama ve karşıtlık bildiren yapıların akademik kullanımı.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "High tariff walls protect domestic industries; ___ , they reduce international trade volumes.",
-              "options": [
-                "Although",
-                "Unlike",
-                "as opposed to",
-                "conversely"
-              ],
-              "correctIndex": 3,
-              "translation": "Yüksek tarife duvarları yerli sanayiyi korur; aksine, uluslararası ticaret hacmini azaltırlar."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The ozone hole is potentially dangerous ___ the ozone in the atmosphere prevents ultraviolet light.",
-              "options": [
-                "Unlike",
-                "because",
-                "since",
-                "Although"
-              ],
-              "correctIndex": 1,
-              "translation": "Ozon deliği potansiyel olarak tehlikelidir çünkü atmosferdeki ozon ultraviyole ışığı engeller."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "An increase in price reduces demand. ___ , a sharp decrease in price usually stimulates it.",
-              "options": [
-                "because",
-                "Now that",
-                "in that",
-                "Conversely"
-              ],
-              "correctIndex": 3,
-              "translation": "Fiyattaki bir artış talebi azaltır. Aksine, fiyattaki keskin bir düşüş genellikle onu canlandırır."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We decided to stay at home ___ it was snowing heavily outside.",
-              "options": [
-                "since",
-                "Now that",
-                "Despite",
-                "in that"
-              ],
-              "correctIndex": 0,
-              "translation": "Dışarıda yoğun kar yağdığı için evde kalmaya karar verdik."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Kitap çok uzun olmasına rağmen onu iki günde bitirdim.",
-                "Ekonomik veriler cesaret kırıcıydı; yine de borsada tüm zamanların en yüksek seviyesine ulaşıldı.",
-                "Genellikle içe dönük olmasına rağmen, konferansta kendinden emin bir şekilde konuştu.",
-                "Büyük çabasına rağmen maçı kaybetti."
-              ],
-              "correctIndex": 2,
-              "enSentence": "Despite  the fact that she is usually introverted, she spoke confidently at the conference.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Servis oldukça yavaş olmasına rağmen yemekler lezzetliydi.",
-                "Çok hasta hissetmesine rağmen işe gitti.",
-                "Sakatlanmış olmasına rağmen maratonu tamamladı.",
-                "Oldukça tepkisiz olan altının aksine, demir neme maruz kaldığında hızla paslanır."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Unlike gold, which is highly unreactive, iron rusts quickly when exposed to moisture.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "Contrary to popular belief, bats are not actually blind.",
-                "Popular belief, bats are not actually blind Contrary to .",
-                " Contrary to popular belief, are bats not actually blind.",
-                "Despite his great effort, he lost the match."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Contrary to popular belief, bats are not actually blind.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The company selected a centralized framework, as opposed to a decentralized one.",
-                "A decentralized one as opposed to the company selected a centralized framework,.",
-                "The company a selected centralized framework, as opposed to a decentralized one.",
-                "The company selected a centralized framework, as opposed to a one decentralized."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The company selected a centralized framework, as opposed to a decentralized one.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The ozone hole is potentially dangerous because the ozone in the atmosphere prevents ultraviolet light.",
-              "words": [
-                "atmosferdeki",
-                "derece",
-                "ozon",
-                "ultraviyole",
-                "sevmiyorum",
-                "tehlikelidir",
-                "deliği",
-                "olarak",
-                "ışığı",
-                "çünkü",
-                "engeller",
-                "gezimizden",
-                "potansiyel",
-                "Ozon"
-              ],
-              "correctOrder": [
-                "Ozon",
-                "deliği",
-                "potansiyel",
-                "olarak",
-                "tehlikelidir",
-                "çünkü",
-                "atmosferdeki",
-                "ozon",
-                "ultraviyole",
-                "ışığı",
-                "engeller"
-              ],
-              "enSentence": "The ozone hole is potentially dangerous because the ozone in the atmosphere prevents ultraviolet light.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "We decided to stay at home since it was snowing heavily outside.",
-              "words": [
-                "Ancak",
-                "kalmaya",
-                "verdik",
-                "yağdığı",
-                "için",
-                "vaktim",
-                "evde",
-                "kar",
-                "zamanların",
-                "yoğun",
-                "Dışarıda",
-                "karar"
-              ],
-              "correctOrder": [
-                "Dışarıda",
-                "yoğun",
-                "kar",
-                "yağdığı",
-                "için",
-                "evde",
-                "kalmaya",
-                "karar",
-                "verdik"
-              ],
-              "enSentence": "We decided to stay at home since it was snowing heavily outside.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The new algorithm is revolutionary in that it process data in parallel layers.",
-              "words": [
-                "halinde",
-                "katmanlar",
-                "paralel",
-                "ulaşıldı",
-                "bakımından",
-                "verileri",
-                "algoritma",
-                "Yeni",
-                "işlemesi",
-                "devrim",
-                "yarasalar",
-                "niteliğindedir",
-                "hemen"
-              ],
-              "correctOrder": [
-                "Yeni",
-                "algoritma",
-                "verileri",
-                "paralel",
-                "katmanlar",
-                "halinde",
-                "işlemesi",
-                "bakımından",
-                "devrim",
-                "niteliğindedir"
-              ],
-              "enSentence": "The new algorithm is revolutionary in that it process data in parallel layers.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Now that you have completed the advanced training, you can now operate the system alone.",
-              "words": [
-                "artık",
-                "bakımından",
-                "tamamladığınıza",
-                "yöneliyor",
-                "aksine",
-                "eğitimi",
-                "göre",
-                "çalıştırabilirsiniz",
-                "düzey",
-                "tek",
-                "sistemi",
-                "başınıza",
-                "İleri"
-              ],
-              "correctOrder": [
-                "İleri",
-                "düzey",
-                "eğitimi",
-                "tamamladığınıza",
-                "göre",
-                "artık",
-                "sistemi",
-                "tek",
-                "başınıza",
-                "çalıştırabilirsiniz"
-              ],
-              "enSentence": "Now that you have completed the advanced training, you can now operate the system alone.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Seeing that the global economy is unstable, investors are moving towards gold.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Küresel ekonominin istikrarsız olduğunu gören yatırımcılar altına yöneliyor.",
-              "enSentence": "Seeing that the global economy is unstable, investors are moving towards gold.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Kitap çok uzun olmasına rağmen onu iki günde bitirdim.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Although the book was very long, I finished it in two days.",
-              "enSentence": "Although the book was very long, I finished it in two days.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"However excellent the design may be, it won't sell without proper marketing.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Tasarım ne kadar mükemmel olursa olsun, uygun pazarlama olmadan satılmayacaktır.",
-              "enSentence": "However excellent the design may be, it won't sell without proper marketing.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 2: Cümle Alan Sebep Bağlaçları",
-          "description": "Because, Since, As, Now that, Seeing that, Given that gibi iki tam cümleyi bağlayan neden-sonuç yapılarının pekiştirilmesi.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Tired ___ he was after the long journey, he attended the meeting.",
-              "options": [
-                "Despite",
-                "though",
-                "In spite of",
-                "Even though"
-              ],
-              "correctIndex": 1,
-              "translation": "Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ I want to help you, I simply do not have the time right now.",
-              "options": [
-                "Even though",
-                "in spite of",
-                "although",
-                "Much as"
-              ],
-              "correctIndex": 3,
-              "translation": "Sana yardım etmeyi çok istememe rağmen, şu anda hiç vaktim yok."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The strategy, ___ risky in the short term, proved to be highly lucrative.",
-              "options": [
-                "Much as",
-                "though",
-                "Despite",
-                "Even though"
-              ],
-              "correctIndex": 1,
-              "translation": "Strateji, kısa vadede riskli olsa da, son derece kazançlı olduğunu kanıtladı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ they admired his intellect, they could not support his radical methods.",
-              "options": [
-                "even though",
-                "Much as",
-                "although",
-                "though"
-              ],
-              "correctIndex": 1,
-              "translation": "Onun zekasına çok hayran olmalarına rağmen, radikal yöntemlerini destekleyemediler."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Çok fazla onarıma ihtiyacı olduğunu bilmelerine rağmen evi satın aldılar.",
-                "Kitap çok uzun olmasına rağmen onu iki günde bitirdim.",
-                "Sakatlanmış olmasına rağmen maratonu tamamladı.",
-                "Çok hasta hissetmesine rağmen işe gitti."
-              ],
-              "correctIndex": 0,
-              "enSentence": "They bought the house even though they knew it needed a lot of repairs.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Uzun yolculuktan sonra yorgun olmasına rağmen toplantıya katıldı.",
-                "Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.",
-                "Hiç resmi eğitimi olmamasına rağmen performansı kusursuzdu.",
-                "İlk sonuçlar umut vericiydi. Ancak, daha ileri testler birkaç hata ortaya çıkardı."
-              ],
-              "correctIndex": 2,
-              "enSentence": "Even though he had no formal training, his performance was flawless.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "I don't like his attitude. He is a good teacher, though.",
-                "The initial results were promising. However, further testing revealed several bugs.",
-                " though i don't like his attitude. He is a good teacher,.",
-                "I don't his like attitude. He is a good teacher, though ."
-              ],
-              "correctIndex": 0,
-              "enSentence": "I don't like his attitude. He is a good teacher, though.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The food was delicious, though the service quite was slow.",
-                "The service was quite slow though the food was delicious,.",
-                "The food delicious, was though the service was quite slow.",
-                "The food was delicious, though the service was quite slow."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The food was delicious, though the service was quite slow.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Much as I want to help you, I simply do not have the time right now.",
-              "words": [
-                "istememe",
-                "Sana",
-                "şu",
-                "anda",
-                "rağmen",
-                "çok",
-                "Sakatlanmış",
-                "hiç",
-                "yok",
-                "yardım",
-                "etmeyi",
-                "vaktim",
-                "kar",
-                "resmi"
-              ],
-              "correctOrder": [
-                "Sana",
-                "yardım",
-                "etmeyi",
-                "çok",
-                "istememe",
-                "rağmen",
-                "şu",
-                "anda",
-                "hiç",
-                "vaktim",
-                "yok"
-              ],
-              "enSentence": "Much as I want to help you, I simply do not have the time right now.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Much as they admired his intellect, they could not support his radical methods.",
-              "words": [
-                "radikal",
-                "çok",
-                "hayran",
-                "zekasına",
-                "hissetmesine",
-                "Strateji",
-                "rağmen",
-                "destekleyemediler",
-                "Onun",
-                "yöntemlerini",
-                "olmalarına",
-                "istikrarsız"
-              ],
-              "correctOrder": [
-                "Onun",
-                "zekasına",
-                "çok",
-                "hayran",
-                "olmalarına",
-                "rağmen",
-                "radikal",
-                "yöntemlerini",
-                "destekleyemediler"
-              ],
-              "enSentence": "Much as they admired his intellect, they could not support his radical methods.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Much as  his great desire to win, he refused to train.",
-              "words": [
-                "antrenman",
-                "çok",
-                "rağmen",
-                "sorun",
-                "dönük",
-                "yapmayı",
-                "Kazanmayı",
-                "istemesine",
-                "hacmini",
-                "reddetti"
-              ],
-              "correctOrder": [
-                "Kazanmayı",
-                "çok",
-                "istemesine",
-                "rağmen",
-                "antrenman",
-                "yapmayı",
-                "reddetti"
-              ],
-              "enSentence": "Much as  his great desire to win, he refused to train.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Despite his great effort, he lost the match.",
-              "words": [
-                "maçı",
-                "kaybetti",
-                "Büyük",
-                "maratonu",
-                "çabasına",
-                "istememe",
-                "rağmen",
-                "etmeyi"
-              ],
-              "correctOrder": [
-                "Büyük",
-                "çabasına",
-                "rağmen",
-                "maçı",
-                "kaybetti"
-              ],
-              "enSentence": "Despite his great effort, he lost the match.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"They arrived on time in spite of the heavy traffic on the highway.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Otoyoldaki yoğun trafiğe rağmen zamanında vardılar.",
-              "enSentence": "They arrived on time in spite of the heavy traffic on the highway.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Sakatlanmış olmasına rağmen maratonu tamamladı.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "In spite of the fact that she was injured, she completed the marathon.",
-              "enSentence": "In spite of the fact that she was injured, she completed the marathon.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Kelly was a convicted criminal, yet many people admired him.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kelly hüküm giymiş bir suçluydu, yine de birçok insan ona hayran kaldı.",
-              "enSentence": "Kelly was a convicted criminal, yet many people admired him.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "3": {
-      "exercises": [
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 1: Sebep-Sonuç Edatları ve Sonuç Zarfları",
-          "description": "Due to, Because of, On account of, In view of ile Therefore, Thus, Hence, Consequently, As a result gibi geçiş zarflarının kullanımı.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ the latest medical reports, the treatment was stopped immediately.",
-              "options": [
-                "By reason of",
-                "as well as",
-                "In view of",
-                "so"
-              ],
-              "correctIndex": 2,
-              "translation": "Son tıbbi raporların ışığında, tedavi derhal durduruldu."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The roads were icy and dangerous, ___ we drove extremely slowly.",
-              "options": [
-                "so",
-                "as well as",
-                "hence",
-                "In view of"
-              ],
-              "correctIndex": 0,
-              "translation": "Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ the intense heat and lack of water, the expedition team turned back.",
-              "options": [
-                "Due to",
-                "because of",
-                "By reason of",
-                "In addition to"
-              ],
-              "correctIndex": 2,
-              "translation": "Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "In a natural disaster, seconds of warning are really vital; ___ , scientists use the latest advances to predict them.",
-              "options": [
-                "therefore",
-                "because of",
-                "Due to",
-                "In addition to"
-              ],
-              "correctIndex": 0,
-              "translation": "Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.",
-                "Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir.",
-                "Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi.",
-                "Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The flight was severely delayed because of the thick fog covering the runway.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi.",
-                "Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.",
-                "Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır.",
-                "Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Due to his excellent communication skills, he was chosen as the group leader.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The fact that the company lost its major investor, the project was cancelled Due to .",
-                "The flight was severely delayed because of the thick fog covering the runway.",
-                " Due to the fact the that company lost its major investor, the project was cancelled.",
-                "Due to the fact that the company lost its major investor, the project was cancelled."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Due to the fact that the company lost its major investor, the project was cancelled.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The festival cancelled was on account of public safety concerns raised by the police.",
-                "Public safety concerns raised by the police on account of the festival was cancelled.",
-                "The festival was cancelled on account of public safety raised concerns by the police.",
-                "The festival was cancelled on account of public safety concerns raised by the police."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The festival was cancelled on account of public safety concerns raised by the police.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The roads were icy and dangerous, so we drove extremely slowly.",
-              "words": [
-                "tehlikeliydi",
-                "sayesinde",
-                "buzlu",
-                "yavaş",
-                "yüzden",
-                "Yollar",
-                "bu",
-                "ve",
-                "son",
-                "satışları",
-                "derece",
-                "sürdük",
-                "ithalata"
-              ],
-              "correctOrder": [
-                "Yollar",
-                "buzlu",
-                "ve",
-                "tehlikeliydi",
-                "bu",
-                "yüzden",
-                "son",
-                "derece",
-                "yavaş",
-                "sürdük"
-              ],
-              "enSentence": "The roads were icy and dangerous, so we drove extremely slowly.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.",
-              "words": [
-                "uyarı",
-                "süren",
-                "bilim",
-                "etmek",
-                "afette",
-                "insanları",
-                "hayati",
-                "gerçekten",
-                "bu",
-                "gelişmeleri",
-                "bunları",
-                "önem",
-                "taşır",
-                "bilgisayar",
-                "bir",
-                "için",
-                "son",
-                "Doğal",
-                "hastalık",
-                "saniyeler",
-                "kullanırlar",
-                "tahmin",
-                "nedenle",
-                "hizmetleri"
-              ],
-              "correctOrder": [
-                "Doğal",
-                "bir",
-                "afette",
-                "saniyeler",
-                "süren",
-                "uyarı",
-                "gerçekten",
-                "hayati",
-                "önem",
-                "taşır",
-                "bu",
-                "nedenle",
-                "bilim",
-                "insanları",
-                "bunları",
-                "tahmin",
-                "etmek",
-                "için",
-                "son",
-                "gelişmeleri",
-                "kullanırlar"
-              ],
-              "enSentence": "In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The country lacks natural resources; hence, it depends heavily on imports.",
-              "words": [
-                "kaynaklardan",
-                "doğal",
-                "dolayısıyla",
-                "özelliklere",
-                "Ülke",
-                "ölçüde",
-                "ithalata",
-                "yoksundur",
-                "büyük",
-                "15",
-                "bağımlıdır",
-                "ödeme"
-              ],
-              "correctOrder": [
-                "Ülke",
-                "doğal",
-                "kaynaklardan",
-                "yoksundur",
-                "dolayısıyla",
-                "büyük",
-                "ölçüde",
-                "ithalata",
-                "bağımlıdır"
-              ],
-              "enSentence": "The country lacks natural resources; hence, it depends heavily on imports.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The experiment was conducted under strict vacuum; thus, no contamination occurred.",
-              "words": [
-                "kirlenme",
-                "meydana",
-                "Deney",
-                "sıkı",
-                "vakum",
-                "kaynaklardan",
-                "altında",
-                "gerçekleştirildi",
-                "böylece",
-                "sıra",
-                "gelmedi",
-                "hiçbir",
-                "el"
-              ],
-              "correctOrder": [
-                "Deney",
-                "sıkı",
-                "vakum",
-                "altında",
-                "gerçekleştirildi",
-                "böylece",
-                "hiçbir",
-                "kirlenme",
-                "meydana",
-                "gelmedi"
-              ],
-              "enSentence": "The experiment was conducted under strict vacuum; thus, no contamination occurred.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"The resort has untouched forests as well as several valuable minerals.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir.",
-              "enSentence": "The resort has untouched forests as well as several valuable minerals.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Mekanı kiralamanın yanı sıra, yemek hizmetleri için de ödeme yapmak zorunda kaldık.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "In addition to renting the venue, we also had to pay for the catering services.",
-              "enSentence": "In addition to renting the venue, we also had to pay for the catering services.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"The new laptop is lightweight; furthermore, its battery lasts up to 15 hours.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır.",
-              "enSentence": "The new laptop is lightweight; furthermore, its battery lasts up to 15 hours.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 2: Ekleme ve Paralellik Bağlaçları",
-          "description": "As well as, In addition to, Along with, Furthermore, Moreover, Likewise ve Similarly gibi ek bilgi ve paralellik bildiren yapılar.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The Earth has a unique set of characteristics; ___ , it has an atmosphere that supports life.",
-              "options": [
-                "such as",
-                "namely",
-                "Moreover",
-                "for instance"
-              ],
-              "correctIndex": 3,
-              "translation": "Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The patient is completely asymptomatic; ___ , she shows no signs of illness.",
-              "options": [
-                "Besides",
-                "namely",
-                "for instance",
-                "in other words"
-              ],
-              "correctIndex": 3,
-              "translation": "Hasta tamamen semptomsuzdur; başka bir deyişle, hiçbir hastalık belirtisi göstermemektedir."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Choose the correct format: 'Many clean energy sources exist, ___ solar and wind power.'",
-              "options": [
-                "because of",
-                "for instance",
-                "in other words",
-                "such as"
-              ],
-              "correctIndex": 3,
-              "translation": "Güneş ve rüzgar enerjisi gibi many temiz enerji kaynağı mevcuttur."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We need to focus on our primary goal, ___ , increasing user engagement.",
-              "options": [
-                "namely",
-                "such as",
-                "Moreover",
-                "because of"
-              ],
-              "correctIndex": 0,
-              "translation": "Birincil hedefimize odaklanmamız gerekiyor, yani kullanıcı etkileşimini artırmaya."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Ağır para cezalarının yanı sıra, şirket lisansının tamamen askıya alınmasıyla karşı karşıya kaldı.",
-                "Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.",
-                "Aşırı sıcaklık ve su eksikliği nedeniyle keşif ekibi geri döndü.",
-                "Hasta tamamen semptomsuzdur; başka bir deyişle, hiçbir hastalık belirtisi göstermemektedir."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Besides the heavy fines, the company faced a complete suspension of its license.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Yeni dizüstü bilgisayar hafiftir; dahası, pili 15 saate kadar dayanır.",
-                "Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.",
-                "Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir.",
-                "Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The new laptop is lightweight; furthermore, its battery lasts up to 15 hours.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The marketing strategy boosted local sales. Moreover , it international attracted buyers.",
-                "The marketing boosted strategy local sales. Moreover , it attracted international buyers.",
-                ", it attracted international buyers Moreover the marketing strategy boosted local sales..",
-                "The marketing strategy boosted local sales. Moreover, it attracted international buyers."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The marketing strategy boosted local sales. Moreover, it attracted international buyers.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The first antihistamines generation may produce side effects, such as drowsiness and dry mouth.",
-                "Drowsiness and dry mouth such as the first generation antihistamines may produce side effects,.",
-                "The first generation antihistamines may produce side effects, such as drowsiness and dry mouth.",
-                "The first generation antihistamines may produce side effects, such as drowsiness and mouth dry."
-              ],
-              "correctIndex": 2,
-              "enSentence": "The first generation antihistamines may produce side effects, such as drowsiness and dry mouth.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The patient is completely asymptomatic; in other words, she shows no signs of illness.",
-              "words": [
-                "rüzgar",
-                "başka",
-                "Hasta",
-                "hiçbir",
-                "bir",
-                "polisin",
-                "el",
-                "tamamen",
-                "belirtisi",
-                "hastalık",
-                "semptomsuzdur",
-                "deyişle",
-                "göstermemektedir"
-              ],
-              "correctOrder": [
-                "Hasta",
-                "tamamen",
-                "semptomsuzdur",
-                "başka",
-                "bir",
-                "deyişle",
-                "hiçbir",
-                "hastalık",
-                "belirtisi",
-                "göstermemektedir"
-              ],
-              "enSentence": "The patient is completely asymptomatic; in other words, she shows no signs of illness.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "We need to focus on our primary goal, namely, increasing user engagement.",
-              "words": [
-                "kullanıcı",
-                "odaklanmamız",
-                "etkileşimini",
-                "gerekiyor",
-                "güvenliği",
-                "artırmaya",
-                "önem",
-                "hedefimize",
-                "yani",
-                "Birincil",
-                "rüzgar"
-              ],
-              "correctOrder": [
-                "Birincil",
-                "hedefimize",
-                "odaklanmamız",
-                "gerekiyor",
-                "yani",
-                "kullanıcı",
-                "etkileşimini",
-                "artırmaya"
-              ],
-              "enSentence": "We need to focus on our primary goal, namely, increasing user engagement.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The system operates on a binary logic; that is, it recognizes only true or false inputs.",
-              "words": [
-                "mantıkla",
-                "yalnızca",
-                "bir",
-                "tanır",
-                "yani",
-                "ikili",
-                "gerçekten",
-                "İlk",
-                "çalışır",
-                "veya",
-                "yanlış",
-                "Sistem",
-                "saniyeler",
-                "doğru",
-                "girdileri"
-              ],
-              "correctOrder": [
-                "Sistem",
-                "ikili",
-                "bir",
-                "mantıkla",
-                "çalışır",
-                "yani",
-                "yalnızca",
-                "doğru",
-                "veya",
-                "yanlış",
-                "girdileri",
-                "tanır"
-              ],
-              "enSentence": "The system operates on a binary logic; that is, it recognizes only true or false inputs.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The flight was severely delayed because of the thick fog covering the runway.",
-              "words": [
-                "yoğun",
-                "kaplayan",
-                "kullanıcı",
-                "ciddi",
-                "nedeniyle",
-                "Pist",
-                "sis",
-                "olarak",
-                "edildi",
-                "gecikti",
-                "şekilde",
-                "uçuş"
-              ],
-              "correctOrder": [
-                "Pist",
-                "kaplayan",
-                "yoğun",
-                "sis",
-                "nedeniyle",
-                "uçuş",
-                "ciddi",
-                "şekilde",
-                "gecikti"
-              ],
-              "enSentence": "The flight was severely delayed because of the thick fog covering the runway.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Due to his excellent communication skills, he was chosen as the group leader.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi.",
-              "enSentence": "Due to his excellent communication skills, he was chosen as the group leader.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Şirketin büyük yatırımcısını kaybetmesi nedeniyle proje iptal edildi.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Due to the fact that the company lost its major investor, the project was cancelled.",
-              "enSentence": "Due to the fact that the company lost its major investor, the project was cancelled.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"In view of the latest medical reports, the treatment was stopped immediately.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Son tıbbi raporların ışığında, tedavi derhal durduruldu.",
-              "enSentence": "In view of the latest medical reports, the treatment was stopped immediately.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 3: Örneklendirme ve Açıklama Yapıları",
-          "description": "For example, For instance, Such as ve In other words, Namely, That is to say gibi örneklendirme ve açıklama bağlaçlarının pratikleri.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ his excellent communication skills, he was chosen as the group leader.",
-              "options": [
-                "Due to",
-                "so",
-                "In view of",
-                "on account of"
-              ],
-              "correctIndex": 0,
-              "translation": "Mükemmel iletişim becerileri sayesinde grup lideri olarak seçildi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The festival was cancelled ___ public safety concerns raised by the police.",
-              "options": [
-                "on account of",
-                "By reason of",
-                "hence",
-                "because of"
-              ],
-              "correctIndex": 0,
-              "translation": "Festival, polisin dile getirdiği kamu güvenliği endişeleri nedeniyle iptal edildi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ the fact that the company lost its major investor, the project was cancelled.",
-              "options": [
-                "Due to",
-                "In view of",
-                "on account of",
-                "therefore"
-              ],
-              "correctIndex": 0,
-              "translation": "Şirketin büyük yatırımcısını kaybetmesi nedeniyle proje iptal edildi."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ the latest medical reports, the treatment was stopped immediately.",
-              "options": [
-                "In view of",
-                "in other words",
-                "namely",
-                "therefore"
-              ],
-              "correctIndex": 0,
-              "translation": "Son tıbbi raporların ışığında, tedavi derhal durduruldu."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Ağır para cezalarının yanı sıra, şirket lisansının tamamen askıya alınmasıyla karşı karşıya kaldı.",
-                "Hasta tamamen semptomsuzdur; başka bir deyişle, hiçbir hastalık belirtisi göstermemektedir.",
-                "Pazarlama stratejisi yerel satışları artırdı. Dahası, uluslararası alıcıları cezbetti.",
-                "Dünya benzersiz özelliklere sahiptir; örneğin, yaşamı destekleyen bir atmosfere sahiptir."
-              ],
-              "correctIndex": 1,
-              "enSentence": "The patient is completely asymptomatic; in other words, she shows no signs of illness.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Şirketin büyük yatırımcısını kaybetmesi nedeniyle proje iptal edildi.",
-                "Yollar buzlu ve tehlikeliydi, bu yüzden son derece yavaş sürdük.",
-                "Pist kaplayan yoğun sis nedeniyle uçuş ciddi şekilde gecikti.",
-                "Birincil hedefimize odaklanmamız gerekiyor, yani kullanıcı etkileşimini artırmaya."
-              ],
-              "correctIndex": 3,
-              "enSentence": "We need to focus on our primary goal, namely, increasing user engagement.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The system operates on a binary logic; that is, it recognizes only true or false inputs.",
-                ", it recognizes only true or false inputs that is the system operates on a binary logic;.",
-                "The system on operates a binary logic; that is , it recognizes only true or false inputs.",
-                "The system operates on a binary logic; that is , it only recognizes true or false inputs."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The system operates on a binary logic; that is, it recognizes only true or false inputs.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The flight was severely delayed because of the thick covering fog the runway.",
-                "The flight was severely delayed because of the thick fog covering the runway.",
-                "The flight severely was delayed because of the thick fog covering the runway.",
-                "The thick fog covering the runway because of the flight was severely delayed."
-              ],
-              "correctIndex": 1,
-              "enSentence": "The flight was severely delayed because of the thick fog covering the runway.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The festival was cancelled on account of public safety concerns raised by the police.",
-              "words": [
-                "büyük",
-                "rüzgar",
-                "dile",
-                "Festival",
-                "kamu",
-                "polisin",
-                "nedeniyle",
-                "su",
-                "iptal",
-                "güvenliği",
-                "endişeleri",
-                "getirdiği",
-                "edildi"
-              ],
-              "correctOrder": [
-                "Festival",
-                "polisin",
-                "dile",
-                "getirdiği",
-                "kamu",
-                "güvenliği",
-                "endişeleri",
-                "nedeniyle",
-                "iptal",
-                "edildi"
-              ],
-              "enSentence": "The festival was cancelled on account of public safety concerns raised by the police.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "In view of the latest medical reports, the treatment was stopped immediately.",
-              "words": [
-                "Son",
-                "raporların",
-                "para",
-                "yavaş",
-                "derhal",
-                "tıbbi",
-                "tedavi",
-                "büyük",
-                "durduruldu",
-                "ışığında"
-              ],
-              "correctOrder": [
-                "Son",
-                "tıbbi",
-                "raporların",
-                "ışığında",
-                "tedavi",
-                "derhal",
-                "durduruldu"
-              ],
-              "enSentence": "In view of the latest medical reports, the treatment was stopped immediately.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "By reason of the intense heat and lack of water, the expedition team turned back.",
-              "words": [
-                "artırmaya",
-                "geri",
-                "ve",
-                "Son",
-                "birkaç",
-                "nedeniyle",
-                "ekibi",
-                "döndü",
-                "su",
-                "eksikliği",
-                "keşif",
-                "sıcaklık",
-                "Aşırı"
-              ],
-              "correctOrder": [
-                "Aşırı",
-                "sıcaklık",
-                "ve",
-                "su",
-                "eksikliği",
-                "nedeniyle",
-                "keşif",
-                "ekibi",
-                "geri",
-                "döndü"
-              ],
-              "enSentence": "By reason of the intense heat and lack of water, the expedition team turned back.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The roads were icy and dangerous, so we drove extremely slowly.",
-              "words": [
-                "ve",
-                "sürdük",
-                "yüzden",
-                "yavaş",
-                "derece",
-                "tehlikeliydi",
-                "Yollar",
-                "deyişle",
-                "için",
-                "bu",
-                "son",
-                "getirdiği",
-                "buzlu"
-              ],
-              "correctOrder": [
-                "Yollar",
-                "buzlu",
-                "ve",
-                "tehlikeliydi",
-                "bu",
-                "yüzden",
-                "son",
-                "derece",
-                "yavaş",
-                "sürdük"
-              ],
-              "enSentence": "The roads were icy and dangerous, so we drove extremely slowly.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Doğal bir afette, saniyeler süren uyarı gerçekten hayati önem taşır; bu nedenle, bilim insanları bunları tahmin etmek için son gelişmeleri kullanırlar.",
-              "enSentence": "In a natural disaster, seconds of warning are really vital; therefore, scientists use the latest advances to predict them.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Ülke doğal kaynaklardan yoksundur; dolayısıyla, büyük ölçüde ithalata bağımlıdır.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "The country lacks natural resources; hence, it depends heavily on imports.",
-              "enSentence": "The country lacks natural resources; hence, it depends heavily on imports.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"The resort has untouched forests as well as several valuable minerals.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Tesis, el değmemiş ormanların yanı sıra birkaç değerli minerale de sahiptir.",
-              "enSentence": "The resort has untouched forests as well as several valuable minerals.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "4": {
-      "exercises": [
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 1: İkili ve Amaç Bağlaçları",
-          "description": "Neither...nor, Either...or, Both...and, Not only...but also ile In order to, So as to, So that, In order that gibi amaç-sonuç yapıları.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Choose the correct purpose link: 'They locked the laboratory gates ___ no one could enter without permission.'",
-              "options": [
-                "in order to",
-                "in order that",
-                "in favor of",
-                "so that"
-              ],
-              "correctIndex": 1,
-              "translation": "Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ a few minor errors, the software architecture is absolutely flawless.",
-              "options": [
-                "so as to",
-                "instead of",
-                "According to",
-                "Aside from"
-              ],
-              "correctIndex": 3,
-              "translation": "Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The laboratory is open every day ___ Sundays.",
-              "options": [
-                "were",
-                "instead of",
-                "in order that",
-                "except for"
-              ],
-              "correctIndex": 3,
-              "translation": "Laboratuvar, Pazar günleri hariç her gün açıktır."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ recent studies, your biological clock can be confused by computer light.",
-              "options": [
-                "so as to",
-                "According to",
-                "so that",
-                "instead of"
-              ],
-              "correctIndex": 1,
-              "translation": "Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Dün provada ne yönetmen ne de oyuncular hazırdı.",
-                "Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.",
-                "Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.",
-                "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Neither the director nor the actors were  present at the rehearsal yesterday.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Laboratuvar, Pazar günleri hariç her gün açıktır.",
-                "Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı.",
-                "Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.",
-                "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu."
-              ],
-              "correctIndex": 1,
-              "enSentence": "He woke up early in order to catch the first train to Ankara.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "We packed our bags quickly so as to not be for late the flight.",
-                "We packed bags our quickly so as to not be late for the flight.",
-                "Not be late for the flight so as to we packed our bags quickly.",
-                "We packed our bags quickly so as to not be late for the flight."
-              ],
-              "correctIndex": 3,
-              "enSentence": "We packed our bags quickly so as to not be late for the flight.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The dog could go out easily so that he left the door open.",
-                "He left door the open so that the dog could go out easily.",
-                "He left the door open so that the dog go could out easily.",
-                "He left the door open so that the dog could go out easily."
-              ],
-              "correctIndex": 3,
-              "enSentence": "He left the door open so that the dog could go out easily.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Aside from a few minor errors, the software architecture is absolutely flawless.",
-              "words": [
-                "dışında",
-                "kesinlikle",
-                "hata",
-                "kusursuzdur",
-                "küçük",
-                "mimarisi",
-                "Komite",
-                "yazılım",
-                "temiz",
-                "Birkaç",
-                "teorisi"
-              ],
-              "correctOrder": [
-                "Birkaç",
-                "küçük",
-                "hata",
-                "dışında",
-                "yazılım",
-                "mimarisi",
-                "kesinlikle",
-                "kusursuzdur"
-              ],
-              "enSentence": "Aside from a few minor errors, the software architecture is absolutely flawless.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "According to recent studies, your biological clock can be confused by computer light.",
-              "words": [
-                "Son",
-                "nedeniyle",
-                "araştırmalara",
-                "temiz",
-                "göre",
-                "biyolojik",
-                "şaşabilir",
-                "saatiniz",
-                "bilgisayar",
-                "ışığı",
-                "oyuncular",
-                "o"
-              ],
-              "correctOrder": [
-                "Son",
-                "araştırmalara",
-                "göre",
-                "biyolojik",
-                "saatiniz",
-                "bilgisayar",
-                "ışığı",
-                "nedeniyle",
-                "şaşabilir"
-              ],
-              "enSentence": "According to recent studies, your biological clock can be confused by computer light.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The project was a huge success in terms of revenue, but not in terms of user satisfaction.",
-              "words": [
-                "gelir",
-                "Proje",
-                "kullanıcı",
-                "açısından",
-                "şaşabilir",
-                "başarıydı",
-                "açısından",
-                "Komite",
-                "büyük",
-                "bir",
-                "Karmaşık",
-                "memnuniyeti",
-                "ancak",
-                "değil"
-              ],
-              "correctOrder": [
-                "Proje",
-                "gelir",
-                "açısından",
-                "büyük",
-                "bir",
-                "başarıydı",
-                "ancak",
-                "kullanıcı",
-                "memnuniyeti",
-                "açısından",
-                "değil"
-              ],
-              "enSentence": "The project was a huge success in terms of revenue, but not in terms of user satisfaction.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The committee voted in favor of the new design, abandoning the old prototype completely.",
-              "words": [
-                "terk",
-                "enerji",
-                "erken",
-                "tamamen",
-                "ederler",
-                "oy",
-                "kullandı",
-                "yeni",
-                "tasarım",
-                "prototipi",
-                "lehine",
-                "eski",
-                "Komite",
-                "ederek"
-              ],
-              "correctOrder": [
-                "Komite",
-                "eski",
-                "prototipi",
-                "tamamen",
-                "terk",
-                "ederek",
-                "yeni",
-                "tasarım",
-                "lehine",
-                "oy",
-                "kullandı"
-              ],
-              "enSentence": "The committee voted in favor of the new design, abandoning the old prototype completely.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"We should use clean energy sources instead of burning fossil fuels.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.",
-              "enSentence": "We should use clean energy sources instead of burning fossil fuels.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Investors prefer to see tangible results rather than theoretical promises.",
-              "enSentence": "Investors prefer to see tangible results rather than theoretical promises.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"When it comes to data security, the firm leaves nothing to chance.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.",
-              "enSentence": "When it comes to data security, the firm leaves nothing to chance.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 2: Hariç Tutma ve İleri Düzey Edatlar",
-          "description": "Except for, Aside from, In terms of, In accordance with, Instead of, Rather than ve For the sake of gibi edatlı bağlaç kombinasyonları.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "We packed our bags quickly ___ not be late for the flight.",
-              "options": [
-                "so as to",
-                "as if",
-                "so that",
-                "in favor of"
-              ],
-              "correctIndex": 0,
-              "translation": "Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Choose the correct purpose link: 'They locked the laboratory gates ___ no one could enter without permission.'",
-              "options": [
-                "in order to",
-                "so as to",
-                "in order that",
-                "except for"
-              ],
-              "correctIndex": 2,
-              "translation": "Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He left the door open ___ the dog could go out easily.",
-              "options": [
-                "in favor of",
-                "as if",
-                "in terms of",
-                "so that"
-              ],
-              "correctIndex": 3,
-              "translation": "Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The laboratory is open every day ___ Sundays.",
-              "options": [
-                "in favor of",
-                "in order that",
-                "except for",
-                "as if"
-              ],
-              "correctIndex": 2,
-              "translation": "Laboratuvar, Pazar günleri hariç her gün açıktır."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Birkaç küçük hata dışında, yazılım mimarisi kesinlikle kusursuzdur.",
-                "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.",
-                "Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.",
-                "Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler."
-              ],
-              "correctIndex": 1,
-              "enSentence": "He talked about the complex quantum theory as if he were an expert in that field.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı.",
-                "Dün provada ne yönetmen ne de oyuncular hazırdı.",
-                "Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz.",
-                "Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı."
-              ],
-              "correctIndex": 2,
-              "enSentence": "When it comes to data security, the firm leaves nothing to chance.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "Neither the director nor the actors were  present at the rehearsal yesterday.",
-                "Neither the nor director the actors were present at the rehearsal yesterday.",
-                "Present at the rehearsal yesterday were neither the director nor the actors.",
-                "Neither the director nor the actors were present at rehearsal the yesterday."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Neither the director nor the actors were  present at the rehearsal yesterday.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "He woke up early in order to catch the train first to Ankara.",
-                "He woke up early in order to catch the first train to Ankara.",
-                "He woke early up in order to catch the first train to Ankara.",
-                "Catch the first train to Ankara in order to he woke up early."
-              ],
-              "correctIndex": 1,
-              "enSentence": "He woke up early in order to catch the first train to Ankara.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'",
-              "words": [
-                "Laboratuvar",
-                "kapılarını",
-                "hiç",
-                "kilitlediler",
-                "kimsenin",
-                "konusu",
-                "izinsiz",
-                "gelir",
-                "tasarım",
-                "girememesi",
-                "amacıyla"
-              ],
-              "correctOrder": [
-                "Laboratuvar",
-                "kapılarını",
-                "hiç",
-                "kimsenin",
-                "izinsiz",
-                "girememesi",
-                "amacıyla",
-                "kilitlediler"
-              ],
-              "enSentence": "Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The laboratory is open every day except for Sundays.",
-              "words": [
-                "günleri",
-                "hariç",
-                "büyük",
-                "Pazar",
-                "her",
-                "açıktır",
-                "gün",
-                "Laboratuvar",
-                "kimsenin",
-                "Proje"
-              ],
-              "correctOrder": [
-                "Laboratuvar",
-                "Pazar",
-                "günleri",
-                "hariç",
-                "her",
-                "gün",
-                "açıktır"
-              ],
-              "enSentence": "The laboratory is open every day except for Sundays.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Aside from a few minor errors, the software architecture is absolutely flawless.",
-              "words": [
-                "vaatler",
-                "dışında",
-                "Son",
-                "hata",
-                "küçük",
-                "yazılım",
-                "Birkaç",
-                "mimarisi",
-                "kesinlikle",
-                "kusursuzdur",
-                "şaşabilir"
-              ],
-              "correctOrder": [
-                "Birkaç",
-                "küçük",
-                "hata",
-                "dışında",
-                "yazılım",
-                "mimarisi",
-                "kesinlikle",
-                "kusursuzdur"
-              ],
-              "enSentence": "Aside from a few minor errors, the software architecture is absolutely flawless.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "According to recent studies, your biological clock can be confused by computer light.",
-              "words": [
-                "göre",
-                "oy",
-                "Son",
-                "bir",
-                "ışığı",
-                "bilgisayar",
-                "biyolojik",
-                "araştırmalara",
-                "şaşabilir",
-                "saatiniz",
-                "memnuniyeti",
-                "nedeniyle"
-              ],
-              "correctOrder": [
-                "Son",
-                "araştırmalara",
-                "göre",
-                "biyolojik",
-                "saatiniz",
-                "bilgisayar",
-                "ışığı",
-                "nedeniyle",
-                "şaşabilir"
-              ],
-              "enSentence": "According to recent studies, your biological clock can be confused by computer light.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"The project was a huge success in terms of revenue, but not in terms of user satisfaction.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.",
-              "enSentence": "The project was a huge success in terms of revenue, but not in terms of user satisfaction.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "The committee voted in favor of the new design, abandoning the old prototype completely.",
-              "enSentence": "The committee voted in favor of the new design, abandoning the old prototype completely.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Investors prefer to see tangible results rather than theoretical promises.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.",
-              "enSentence": "Investors prefer to see tangible results rather than theoretical promises.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u40l${lessonId}ex${plan.newIndex}",
-          "title": "Alıştırma 3: Durum ve Vasıta Bağlaçları",
-          "description": "As if, As though, When it comes to ve By means of gibi durum, tarz ve vasıta bildiren ileri düzey bağlaçların kullanımı.",
-          "questions": [
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Investors prefer to see tangible results ___ theoretical promises.",
-              "options": [
-                "in order that",
-                "in order to",
-                "rather than",
-                "According to"
-              ],
-              "correctIndex": 2,
-              "translation": "Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ data security, the firm leaves nothing to chance.",
-              "options": [
-                "were",
-                "in order to",
-                "so as to",
-                "When it comes to"
-              ],
-              "correctIndex": 3,
-              "translation": "Veri güvenliği söz konusu olduğunda, firma hiçbir şeyi şansa bırakmaz."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "He woke up early ___ catch the first train to Ankara.",
-              "options": [
-                "in order that",
-                "as if",
-                "in order to",
-                "so that"
-              ],
-              "correctIndex": 2,
-              "translation": "Ankara'ya giden ilk treni yakalamak amacıyla erken uyandı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He talked about the complex quantum theory ___ he were an expert in that field.",
-              "options": [
-                "so that",
-                "as if",
-                "in terms of",
-                "were"
-              ],
-              "correctIndex": 1,
-              "translation": "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Neither the director nor the actors ___ present at the rehearsal yesterday.",
-              "options": [
-                "When it comes to",
-                "in order that",
-                "so that",
-                "were"
-              ],
-              "correctIndex": 3,
-              "translation": "Dün provada ne yönetmen ne de oyuncular hazırdı."
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Uçuşa geç kalmamak amacıyla çantalarimizi hızlıca topladık.",
-                "Komite, eski prototipi tamamen terk ederek yeni tasarım lehine oy kullandı.",
-                "Karmaşık kuantum teorisi hakkında sanki o alanda bir uzmanmış gibi konuştu.",
-                "Son araştırmalara göre, biyolojik saatiniz bilgisayar ışığı nedeniyle şaşabilir."
-              ],
-              "correctIndex": 3,
-              "enSentence": "According to recent studies, your biological clock can be confused by computer light.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Proje, gelir açısından büyük bir başarıydı, ancak kullanıcı memnuniyeti açısından değil.",
-                "Yatırımcılar, teorik vaatler yerine somut sonuçlar görmeyi tercih ederler.",
-                "Fosil yakıtları yakmak yerine temiz enerji kaynaklarını kullanmalıyız.",
-                "Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The project was a huge success in terms of revenue, but not in terms of user satisfaction.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "The voted committee in favor of the new design, abandoning the old prototype completely.",
-                "The committee voted in favor of the new abandoning design, the old prototype completely.",
-                "The new design, abandoning the old prototype completely in favor of the committee voted.",
-                "The committee voted in favor of the new design, abandoning the old prototype completely."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The committee voted in favor of the new design, abandoning the old prototype completely.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
-              "options": [
-                "We should use clean energy sources instead of burning fossil fuels.",
-                "Burning fossil fuels instead of we should use clean energy sources.",
-                "We should clean use energy sources instead of burning fossil fuels.",
-                "We should use clean energy sources instead of burning fuels fossil."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We should use clean energy sources instead of burning fossil fuels.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "When it comes to data security, the firm leaves nothing to chance.",
-              "words": [
-                "söz",
-                "konusu",
-                "Veri",
-                "olduğunda",
-                "firma",
-                "her",
-                "şeyi",
-                "bırakmaz",
-                "şansa",
-                "giden",
-                "hiçbir",
-                "güvenliği",
-                "temiz"
-              ],
-              "correctOrder": [
-                "Veri",
-                "güvenliği",
-                "söz",
-                "konusu",
-                "olduğunda",
-                "firma",
-                "hiçbir",
-                "şeyi",
-                "şansa",
-                "bırakmaz"
-              ],
-              "enSentence": "When it comes to data security, the firm leaves nothing to chance.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Neither the director nor the actors were  present at the rehearsal yesterday.",
-              "words": [
-                "hazırdı",
-                "oyuncular",
-                "ne",
-                "provada",
-                "kullanmalıyız",
-                "yönetmen",
-                "ederek",
-                "de",
-                "ne",
-                "Pazar",
-                "Dün"
-              ],
-              "correctOrder": [
-                "Dün",
-                "provada",
-                "ne",
-                "yönetmen",
-                "ne",
-                "de",
-                "oyuncular",
-                "hazırdı"
-              ],
-              "enSentence": "Neither the director nor the actors were  present at the rehearsal yesterday.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "He woke up early in order to catch the first train to Ankara.",
-              "words": [
-                "giden",
-                "yakalamak",
-                "amacıyla",
-                "şaşabilir",
-                "uyandı",
-                "ilk",
-                "treni",
-                "erken",
-                "kullanmalıyız",
-                "hata",
-                "Ankara'ya"
-              ],
-              "correctOrder": [
-                "Ankara'ya",
-                "giden",
-                "ilk",
-                "treni",
-                "yakalamak",
-                "amacıyla",
-                "erken",
-                "uyandı"
-              ],
-              "enSentence": "He woke up early in order to catch the first train to Ankara.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "We packed our bags quickly so as to not be late for the flight.",
-              "words": [
-                "hızlıca",
-                "geç",
-                "bir",
-                "Uçuşa",
-                "firma",
-                "memnuniyeti",
-                "amacıyla",
-                "kalmamak",
-                "topladık",
-                "çantalarimizi"
-              ],
-              "correctOrder": [
-                "Uçuşa",
-                "geç",
-                "kalmamak",
-                "amacıyla",
-                "çantalarimizi",
-                "hızlıca",
-                "topladık"
-              ],
-              "enSentence": "We packed our bags quickly so as to not be late for the flight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"He left the door open so that the dog could go out easily.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Köpeğin kolayca dışarı çıkabilmesi amacıyla kapıyı açık bıraktı.",
-              "enSentence": "He left the door open so that the dog could go out easily.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u40l${lessonId}_ex${plan.newIndex}_q${idx + 1}",
-              "type": "translation-text",
-              "prompt": "\"Laboratuvar kapılarını hiç kimsenin izinsiz girememesi amacıyla kilitlediler.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'",
-              "enSentence": "Choose the correct purpose link: 'They locked the laboratory gates in order that no one could enter without permission.'",
-              "isEngToTr": false
-            }
-          ]
-        }
-      ]
-    }
+  "1": {
+    "exercises": [
+      {
+        "id": "u40l1ex1",
+        "title": "Alıştırma 1: Zıtlık Öbekleri (Phrase Level)",
+        "description": "Zıtlık bağlaçlarını ve edatlarını ifade düzeyinde Türkçe karşılıklarıyla eşleştirme ve hızlı çeviri çalışması.",
+        "questions": [
+          {
+            "id": "u40l1_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "although the survey was anonymous", "right": "anket isimsiz olmasına rağmen" },
+              { "left": "despite restricted access", "right": "kısıtlanmış erişime rağmen" },
+              { "left": "regardless of financial agreements", "right": "finansal anlaşmalara bakılmaksızın" },
+              { "left": "in spite of historical disputes", "right": "tarihsel anlaşmazlıklara rağmen" }
+            ],
+            "grammarTags": ["Cümle Bağlaçları", "Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex1_q2",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "however, the historians continued", "right": "ancak, tarihçiler devam etti" },
+              { "left": "much as they analyzed the data", "right": "veriyi çok analiz etmelerine rağmen" },
+              { "left": "nevertheless, the funding was delayed", "right": "yine de, fonlama gecikti" },
+              { "left": "regardless of human behavior", "right": "insan davranışına bakılmaksızın" }
+            ],
+            "grammarTags": ["Cümle Bağlaçları", "Geçiş Kelimeleri", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"despite the lack of reliable empirical data\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Güvenilir ampirik veri eksikliğine rağmen",
+              "Güvenilir ampirik veri eksikliği nedeniyle",
+              "Güvenilir ampirik veriler elde edildikten sonra",
+              "Güvenilir ampirik veri eksikliğinin aksine"
+            ],
+            "correctIndex": 0,
+            "enSentence": "despite the lack of reliable empirical data",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"although the commission signed the legal agreement\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Komisyon yasal anlaşmayı imzalamasına rağmen",
+              "Komisyon yasal anlaşmayı imzaladığı için",
+              "Komisyon yasal anlaşmayı imzalamadan önce",
+              "Komisyon yasal anlaşmayı imzalarsa"
+            ],
+            "correctIndex": 0,
+            "enSentence": "although the commission signed the legal agreement",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex1_q5",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Although the restricted access, the research continues.",
+            "isCorrect": false,
+            "translationHint": "Although zıtlık bağlacından sonra isim öbeği (restricted access) değil, tam cümle gelmelidir.",
+            "grammarTags": ["Cümle Bağlaçları", "Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l1_ex1_q6",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Despite the survey was anonymous, the data was leaked.",
+            "isCorrect": false,
+            "translationHint": "Despite edatından sonra tam cümle değil, bir isim öbeği gelmelidir.",
+            "grammarTags": ["Cümle Bağlaçları", "Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l1_ex1_q7",
+            "type": "true-false",
+            "prompt": "In spite of edatı, arkasından tam bir cümle (SVO) alarak 'rağmen' anlamını sağlar.",
+            "correctAnswer": "false",
+            "translation": "Yanlış.",
+            "explanation": "In spite of bir edattır ve arkasından tam cümle değil, bir isim veya isim öbeği alır.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l1_ex1_q8",
+            "type": "true-false",
+            "prompt": "Although bağlacı, kendisinden sonra bir isim veya isim öbeği alarak 'rağmen' zıtlık ilişkisi kurar.",
+            "correctAnswer": "false",
+            "translation": "Yanlış.",
+            "explanation": "Although cümle alan bir bağlaçtır ve kendisinden sonra tam bir cümle (SVO) ister.",
+            "grammarTags": ["Cümle Bağlaçları"]
+          },
+          {
+            "id": "u40l1_ex1_q9",
+            "type": "multiple-choice",
+            "prompt": "\"regardless of the historical context\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihsel bağlama bakılmaksızın",
+              "Tarihsel bağlamdan dolayı",
+              "Tarihsel bağlama rağmen",
+              "Tarihsel bağlamın aksine"
+            ],
+            "correctIndex": 0,
+            "enSentence": "regardless of the historical context",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex1_q10",
+            "type": "multiple-choice",
+            "prompt": "\"much as the sociologist analyzed the behavior\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Sosyolog davranışı çok analiz etmesine rağmen",
+              "Sosyolog davranışı çok analiz ettiği için",
+              "Sosyolog davranışı çok analiz ettikten sonra",
+              "Sosyolog davranışı çok analiz ederse"
+            ],
+            "correctIndex": 0,
+            "enSentence": "much as the sociologist analyzed the behavior",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l1ex2",
+        "title": "Alıştırma 2: Zıtlık Yapıları (Sentence Level)",
+        "description": "Cümle içi boşlukları doğru zıtlık bağlaçları, edatları veya geçiş kelimeleriyle tamamlama egzersizleri.",
+        "questions": [
+          {
+            "id": "u40l1_ex2_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ the commission authorized the research project, the funding remained delayed.",
+            "options": ["Although", "Despite", "However", "In spite of"],
+            "correctIndex": 0,
+            "translation": "Komisyon araştırma projesini onaylamasına rağmen, fonlama gecikmeye devam etti.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The sociological study was finished; ___ , the results were not published immediately.",
+            "options": ["however", "although", "despite", "much as"],
+            "correctIndex": 0,
+            "translation": "Sosyolojik çalışma tamamlandı; ancak, sonuçlar hemen yayınlanmadı.",
+            "grammarTags": ["Geçiş Kelimeleri", "Edilgen Yapı (Passive)"]
+          },
+          {
+            "id": "u40l1_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "___ their strict financial agreements, the archaeological team received no anonymous funding.",
+            "options": ["Despite", "Although", "However", "Much as"],
+            "correctIndex": 0,
+            "translation": "Katı finansal anlaşmalarına rağmen, arkeolojik ekip isimsiz fon alamadı.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Demographers analyzed the population changes; ___ , they did not suggest any policy reforms.",
+            "options": ["nevertheless", "even though", "regardless of", "in spite of"],
+            "correctIndex": 0,
+            "translation": "Nüfus bilimciler nüfus değişimlerini analiz ettiler; yine de hiçbir politika reformu önermediler.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Much as the historians wanted to visit the cinema archive, it was closed due to the dispute.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihçiler sinema arşivini ziyaret etmeyi çok istemelerine rağmen, arşiv anlaşmazlık nedeniyle kapalıydı.",
+              "Tarihçiler sinema arşivini ziyaret etmek zorunda kaldılar çünkü anlaşmazlık çözülmüştü.",
+              "Tarihçiler sinema arşivini ziyaret etmeyi tercih ettiler fakat anlaşmazlık devam ediyordu.",
+              "Tarihçiler sinema arşivini ziyaret edemediler çünkü fonlama henüz yasal değildi."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Much as the historians wanted to visit the cinema archive, it was closed due to the dispute.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The survey on child behavior was anonymous, ___ the parents felt uneasy about the clauses.",
+            "options": ["yet", "despite", "although", "nevertheless"],
+            "correctIndex": 0,
+            "translation": "Çocuk davranışı üzerine yapılan anket isimsizdi, yine de ebeveynler maddeler konusunda kendilerini huzursuz hissettiler.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The economists finalized the trade agreements, ___ they were reluctant to authorize the budget.",
+            "options": ["still", "in spite of", "regardless of", "however"],
+            "correctIndex": 0,
+            "translation": "Ekonomistler ticaret anlaşmalarını tamamladılar, yine de bütçeyi onaylamakta isteksizdiler.",
+            "grammarTags": ["Cümle Bağlaçları", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex2_q8",
+            "type": "multiple-choice",
+            "prompt": "Cümledeki noktalama işaretine dikkat ederek boşluğa en uygun kelimeyi seçin: \"Historians examined the ancient manuscripts; _______, they could not verify the claims.\"",
+            "options": ["nonetheless", "although", "despite", "but"],
+            "correctIndex": 0,
+            "translation": "Tarihçiler antik el yazmalarını inceledi; yine de iddiaları doğrulayamadı.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex2_q9",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ the psychological survey was short, it yielded highly reliable empirical data.",
+            "options": ["Although", "Despite", "However", "In spite of"],
+            "correctIndex": 0,
+            "translation": "Psikolojik anket kısa olmasına rağmen, son derece güvenilir deneysel veriler sağladı.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex2_q10",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "___ the restricted access to the library, the research was conducted successfully.",
+            "options": ["In spite of", "Even though", "Much as", "But"],
+            "correctIndex": 0,
+            "translation": "Kütüphaneye kısıtlanmış erişime rağmen, araştırma başarıyla yürütüldü.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Edilgen Yapı (Passive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l1ex3",
+        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "description": "Zıtlık bağlaçlarını, edilgen yapı, modallar ve mastarlar gibi geçmiş gramer konularıyla harmanlayarak çeviri ve cümle kurma çalışmaları.",
+        "questions": [
+          {
+            "id": "u40l1_ex3_q1",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Tarihsel eserler arkeolojik ekip tarafından toplanmasına rağmen, analiz edilemedi.",
+            "words": ["Tarihsel", "eserler", "arkeolojik", "ekip", "tarafından", "toplanmasına", "rağmen,", "analiz", "edilemedi.", "seçildi,", "arşivlendi."],
+            "correctOrder": ["Tarihsel", "eserler", "arkeolojik", "ekip", "tarafından", "toplanmasına", "rağmen,", "analiz", "edilemedi."],
+            "enSentence": "Although the historical artifacts were collected by the archaeological team, they could not be analyzed.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex3_q2",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Sinema arşivine kısıtlanmış erişimlerine rağmen, araştırmacılar belgesel filmi analiz ettiler.",
+            "words": ["Despite", "their", "restricted", "access", "to", "the", "cinema", "archive,", "the", "researchers", "analyzed", "the", "documentary", "film.", "although", "however"],
+            "correctOrder": ["Despite", "their", "restricted", "access", "to", "the", "cinema", "archive,", "the", "researchers", "analyzed", "the", "documentary", "film."],
+            "enSentence": "Despite their restricted access to the cinema archive, the researchers analyzed the documentary film.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"The commission signed the legal agreement; however, the funding was delayed by the board.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Komisyon yasal anlaşmayı imzaladı; ancak, fonlama yönetim kurulu tarafından geciktirildi.",
+            "enSentence": "The commission signed the legal agreement; however, the funding was delayed by the board.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l1_ex3_q4",
+            "type": "translation-text",
+            "prompt": "\"Güvenilir ampirik veri eksikliğine rağmen, sosyologlar araştırmalarını yayınlamak zorunda kaldılar.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Despite the lack of reliable empirical data, the sociologists had to publish their research.",
+            "enSentence": "Despite the lack of reliable empirical data, the sociologists had to publish their research.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q5",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Sanat tarihçileri sözleşme maddelerini çok analiz etmelerine rağmen, yasal hatayı bulamadılar.",
+            "words": ["Sanat", "tarihçileri", "sözleşme", "maddelerini", "çok", "analiz", "etmelerine", "rağmen,", "yasal", "hatayı", "bulamadılar.", "topladılar.", "anlaşma"],
+            "correctOrder": ["Sanat", "tarihçileri", "sözleşme", "maddelerini", "çok", "analiz", "etmelerine", "rağmen,", "yasal", "hatayı", "bulamadılar."],
+            "enSentence": "Much as the art historians analyzed the contract clauses, they did not find the legal error.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q6",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "İnsan davranışı üzerine yapılan anket isimsiz olmasına rağmen, birçok ebeveyn belgeyi imzalamayı reddetti.",
+            "words": ["Although", "the", "survey", "on", "human", "behavior", "was", "anonymous,", "many", "parents", "refused", "to", "sign", "the", "document.", "despite", "however"],
+            "correctOrder": ["Although", "the", "survey", "on", "human", "behavior", "was", "anonymous,", "many", "parents", "refused", "to", "sign", "the", "document."],
+            "enSentence": "Although the survey on human behavior was anonymous, many parents refused to sign the document.",
+            "isEngToTr": false,
+            "grammarTags": ["Cümle Bağlaçları", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q7",
+            "type": "translation-text",
+            "prompt": "\"The land disputes in human geography are complex; nevertheless, the researchers are bound to solve them.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Beşeri coğrafyadaki arazi anlaşmazlıkları karmaşıktır; yine de, araştırmacıların bunları çözmesi kaçınılmazdır.",
+            "enSentence": "The land disputes in human geography are complex; nevertheless, the researchers are bound to solve them.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "Öbeksel Kipler", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q8",
+            "type": "translation-text",
+            "prompt": "\"Bölgesel anlaşmazlıklara bakılmaksızın, iki ülke yasal anlaşmayı imzalamak zorundadır.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Regardless of regional disputes, the two countries have to sign the legal agreement.",
+            "enSentence": "Regardless of regional disputes, the two countries have to sign the legal agreement.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Psikolojik hipotez doğrulanmadı; buna rağmen, klinik ampirik veri toplamaya devam ediyor.",
+            "words": ["Psikolojik", "hipotez", "doğrulanmadı;", "buna", "rağmen,", "klinik", "ampirik", "veri", "toplamaya", "devam", "ediyor.", "seçti.", "belgeleri"],
+            "correctOrder": ["Psikolojik", "hipotez", "doğrulanmadı;", "buna", "rağmen,", "klinik", "ampirik", "veri", "toplamaya", "devam", "ediyor."],
+            "enSentence": "The psychological hypothesis was not verified; even so, the clinic continues to collect empirical data.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "Edilgen Yapı (Passive)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l1_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Tarihçiler veri güvenliğini artırmak için isimsiz fonları kullanmayı tercih ettiler.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Historians preferred to use anonymous funding in order to increase data security.",
+            "enSentence": "Historians preferred to use anonymous funding in order to increase data security.",
+            "isEngToTr": false,
+            "grammarTags": ["İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Tercihler (Preferences)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      }
+    ]
   },
+  "2": {
+    "exercises": [
+      {
+        "id": "u40l2ex1",
+        "title": "Alıştırma 1: Kıyaslama ve Sebep Öbekleri (Phrase Level)",
+        "description": "İki durumu doğrudan karşılaştıran ve gerekçe bildiren bağlaç ve edat öbeklerini analiz etme.",
+        "questions": [
+          {
+            "id": "u40l2_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "whereas early cinema was silent", "right": "erken dönem sineması sessiz iken" },
+              { "left": "unlike documentary films", "right": "belgesel filmlerin aksine" },
+              { "left": "contrary to cultural expectations", "right": "kültürel beklentilerin aksine" },
+              { "left": "since the funding was approved", "right": "fonlama onaylandığı için" }
+            ],
+            "grammarTags": ["Cümle Bağlaçları", "Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex1_q2",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "as opposed to empirical research", "right": "ampirik araştırmanın aksine" },
+              { "left": "on the other hand, the historians agreed", "right": "diğer yandan, tarihçiler anlaştı" },
+              { "left": "inasmuch as the data is secure", "right": "veri güvenli olduğu için" },
+              { "left": "seeing that the survey was anonymous", "right": "anket isimsiz olduğu için" }
+            ],
+            "grammarTags": ["Cümle Bağlaçları", "Geçiş Kelimeleri", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"contrary to legal clauses in the agreement\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Anlaşmadaki yasal maddelerin aksine",
+              "Anlaşmadaki yasal maddeler nedeniyle",
+              "Anlaşmadaki yasal maddelere rağmen",
+              "Anlaşmadaki yasal maddeler sayesinde"
+            ],
+            "correctIndex": 0,
+            "enSentence": "contrary to legal clauses in the agreement",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"while the sociological survey was published\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Sosyolojik anket yayınlanırken / yayınlanmasına rağmen",
+              "Sosyolojik anket yayınlandıktan sonra",
+              "Sosyolojik anket yayınlandığı için",
+              "Sosyolojik anket yayınlandığında"
+            ],
+            "correctIndex": 0,
+            "enSentence": "while the sociological survey was published",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "Edilgen Yapı (Passive)"]
+          },
+          {
+            "id": "u40l2_ex1_q5",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Unlike the cinema archive was open, the research team worked.",
+            "isCorrect": false,
+            "translationHint": "Unlike edatından sonra tam cümle değil, bir isim öbeği gelmelidir.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex1_q6",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Whereas the documentary film had high funding, the director was happy.",
+            "isCorrect": true,
+            "translationHint": "Whereas zıtlık bağlacı iki bağımsız cümle arasındaki doğrudan kıyaslamayı sağlar.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex1_q7",
+            "type": "true-false",
+            "prompt": "Unlike ve Contrary to yapıları edattır ve kendilerinden sonra tam bir cümle alırlar.",
+            "correctAnswer": "false",
+            "translation": "Yanlış.",
+            "explanation": "Unlike ve Contrary to birer edattır ve arkalarından tam cümle değil, isim veya isim öbeği alırlar.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l2_ex1_q8",
+            "type": "true-false",
+            "prompt": "Inasmuch as ve Seeing that bağlaçları, cümle alarak gerekçe/neden belirtir.",
+            "correctAnswer": "true",
+            "translation": "Doğru.",
+            "explanation": "Bu iki bağlaç 'çünkü/mademki/-dığı için' anlamına gelir ve tam cümle alarak gerekçe bildirir.",
+            "grammarTags": ["Cümle Bağlaçları"]
+          },
+          {
+            "id": "u40l2_ex1_q9",
+            "type": "multiple-choice",
+            "prompt": "\"as opposed to the historical disputes\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihsel anlaşmazlıkların aksine",
+              "Tarihsel anlaşmazlıklardan dolayı",
+              "Tarihsel anlaşmazlıklarla birlikte",
+              "Tarihsel anlaşmazlıklar hariç"
+            ],
+            "correctIndex": 0,
+            "enSentence": "as opposed to the historical disputes",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex1_q10",
+            "type": "multiple-choice",
+            "prompt": "\"conversely, the child behavior changed\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Aksine, çocuk davranışı değişti",
+              "Bu nedenle, çocuk davranışı değişti",
+              "Benzer şekilde, çocuk davranışı değişti",
+              "Öncelikle, çocuk davranışı değişti"
+            ],
+            "correctIndex": 0,
+            "enSentence": "conversely, the child behavior changed",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l2ex2",
+        "title": "Alıştırma 2: Kıyaslama ve Sebep Yapıları (Sentence Level)",
+        "description": "Boşlukları doğru saf kıyaslama, sebep bağlaçları ve karşıtlık edatlarıyla doldurma pratikleri.",
+        "questions": [
+          {
+            "id": "u40l2_ex2_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ documentary films analyze real historical events, fiction movies create imaginary worlds.",
+            "options": ["Whereas", "Unlike", "Contrary to", "In contrast to"],
+            "correctIndex": 0,
+            "translation": "Belgesel filmler gerçek tarihsel olayları analiz ederken, kurgu filmleri hayali dünyalar yaratır.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ the previous archaeological agreements, the new contract allowed unrestricted access.",
+            "options": ["Unlike", "While", "Whereas", "Inasmuch as"],
+            "correctIndex": 0,
+            "translation": "Önceki arkeolojik anlaşmaların aksine, yeni sözleşme kısıtlanmamış erişime izin verdi.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The historians visited the cinema archive ___ they wanted to study early documentary films.",
+            "options": ["because", "unlike", "contrary to", "conversely"],
+            "correctIndex": 0,
+            "translation": "Tarihçiler, erken dönem belgesel filmlerini incelemek istedikleri için sinema arşivini ziyaret ettiler.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Some sociologists publish their research in open-access journals; ___ , others prefer traditional books.",
+            "options": ["on the other hand", "because", "since", "whereas"],
+            "correctIndex": 0,
+            "translation": "Bazı sosyologlar araştırmalarını açık erişimli dergilerde yayınlarlar; diğer yandan, bazıları geleneksel kitapları tercih ederler.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Contrary to the psychological hypothesis, the empirical data showed no change in human behavior.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Psikolojik hipotezin aksine, ampirik veriler insan davranışında hiçbir değişiklik göstermedi.",
+              "Psikolojik hipotezden dolayı, ampirik veriler insan davranışında büyük bir değişiklik gösterdi.",
+              "Psikolojik hipoteze rağmen, ampirik veriler insan davranışındaki değişiklikleri doğruladı.",
+              "Psikolojik hipotezin yanında, ampirik veriler insan davranışını da analiz etti."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Contrary to the psychological hypothesis, the empirical data showed no change in human behavior.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "___ the commission signed the legal agreement, the funding for the study was guaranteed.",
+            "options": ["Since", "Unlike", "As opposed to", "Conversely"],
+            "correctIndex": 0,
+            "translation": "Komisyon yasal anlaşmayı imzaladığı için, çalışma için fonlama garanti altına alındı.",
+            "grammarTags": ["Cümle Bağlaçları", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Art historians collected the files ___ they were supposed to analyze the paintings before the exhibition.",
+            "options": ["as", "contrary to", "unlike", "by contrast"],
+            "correctIndex": 0,
+            "translation": "Sanat tarihçileri, sergiden önce tabloları analiz etmeleri gerektiği için dosyaları topladılar.",
+            "grammarTags": ["Cümle Bağlaçları", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex2_q8",
+            "type": "multiple-choice",
+            "prompt": "Boşluğa gelebilecek en uygun geçiş kelimesini seçin: \"Archaeologists did not excavate the site; _______, they focused on preserving the existing artifacts.\"",
+            "options": ["instead", "because", "although", "unlike"],
+            "correctIndex": 0,
+            "translation": "Arkeologlar alanı kazmadılar; bunun yerine, mevcut eserleri korumaya odaklandılar.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q9",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "___ the survey was anonymous, many participants shared their personal data.",
+            "options": ["Seeing that", "Contrary to", "As opposed to", "On the other hand"],
+            "correctIndex": 0,
+            "translation": "Anket isimsiz olduğu için, birçok katılımcı kişisel verilerini paylaştı.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex2_q10",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The legal clause is clear; ___ , the interpretation remains under dispute.",
+            "options": ["however", "because", "since", "unlike"],
+            "correctIndex": 0,
+            "translation": "Yasal madde açıktır; ancak, yorumu anlaşmazlık konusu olmaya devam ediyor.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l2ex3",
+        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "description": "Kıyaslama ve sebep yapılarını, edilgen çatı, phrasal modallar, used to gibi geçmiş gramer yapılarıyla sentezleyen çalışmalar.",
+        "questions": [
+          {
+            "id": "u40l2_ex3_q1",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Psikolojik hipotezin aksine, çocuk davranışı üzerine ampirik veriler doğrulanmadı.",
+            "words": ["Psikolojik", "hipotezin", "aksine,", "çocuk", "davranışı", "üzerine", "ampirik", "veriler", "doğrulanmadı.", "arşivlendi.", "anlaşma"],
+            "correctOrder": ["Psikolojik", "hipotezin", "aksine,", "çocuk", "davranışı", "üzerine", "ampirik", "veriler", "doğrulanmadı."],
+            "enSentence": "Contrary to the psychological hypothesis, the empirical data on child behavior was not verified.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Edilgen Yapı (Passive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex3_q2",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Geleneksel sanat tarihçilerinin aksine, o belgesel filmleri analiz etmeyi tercih etti.",
+            "words": ["Unlike", "traditional", "art", "historians,", "she", "preferred", "to", "analyze", "documentary", "films.", "although", "whereas"],
+            "correctOrder": ["Unlike", "traditional", "art", "historians,", "she", "preferred", "to", "analyze", "documentary", "films."],
+            "enSentence": "Unlike traditional art historians, she preferred to analyze documentary films.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Tercihler (Preferences)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"Since the commission refused to sign the contract, the funding was cancelled.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Komisyon sözleşmeyi imzalamayı reddettiği için fonlama iptal edildi.",
+            "enSentence": "Since the commission refused to sign the contract, the funding was cancelled.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "Edilgen Yapı (Passive)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex3_q4",
+            "type": "translation-text",
+            "prompt": "\"Belgesel filmler kültürel gerçekleri gösterirken, kurgu filmleri sadece eğlence sağlar.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Whereas documentary films show cultural realities, fiction movies only provide entertainment.",
+            "enSentence": "Whereas documentary films show cultural realities, fiction movies only provide entertainment.",
+            "isEngToTr": false,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex3_q5",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Arkeolojik anket isimsiz olduğu için, birçok yerel vatandaş işbirliği yapmayı kabul etti.",
+            "words": ["Arkeolojik", "anket", "isimsiz", "olduğu", "için,", "birçok", "yerel", "vatandaş", "işbirliği", "yapmayı", "kabul", "etti.", "reddetti.", "anlaşma"],
+            "correctOrder": ["Arkeolojik", "anket", "isimsiz", "olduğu", "için,", "birçok", "yerel", "vatandaş", "işbirliği", "yapmayı", "kabul", "etti."],
+            "enSentence": "Seeing that the archaeological survey was anonymous, many local citizens agreed to cooperate.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex3_q6",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Önceki komisyonun aksine, yeni yönetim kurulunun fonlamayı onaylaması muhtemeldir.",
+            "words": ["Unlike", "the", "previous", "commission,", "the", "new", "board", "is", "likely", "to", "approve", "the", "funding.", "although", "contrary"],
+            "correctOrder": ["Unlike", "the", "previous", "commission,", "the", "new", "board", "is", "likely", "to", "approve", "the", "funding."],
+            "enSentence": "Unlike the previous commission, the new board is likely to approve the funding.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Öbeksel Kipler", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex3_q7",
+            "type": "translation-text",
+            "prompt": "\"The researchers collected the empirical data; conversely, they did not write the final report.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacılar ampirik verileri topladı; aksine, nihai raporu yazmadılar.",
+            "enSentence": "The researchers collected the empirical data; conversely, they did not write the final report.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l2_ex3_q8",
+            "type": "translation-text",
+            "prompt": "\"Kısıtlanmış erişime rağmen, arkeologlar antik mezarı incelemeye alışkındırlar.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Despite restricted access, the archaeologists are accustomed to examining the ancient tomb.",
+            "enSentence": "Despite restricted access, the archaeologists are accustomed to examining the ancient tomb.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex3_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Yasal anlaşmazlık devam ettiği için, tarihçiler anlaşmadaki maddeleri doğrulasalar iyi olur.",
+            "words": ["Yasal", "anlaşmazlık", "devam", "ettiği", "için,", "tarihçiler", "anlaşmadaki", "maddeleri", "doğrulasalar", "iyi", "olur.", "kabul", "ederler."],
+            "correctOrder": ["Yasal", "anlaşmazlık", "devam", "ettiği", "için,", "tarihçiler", "anlaşmadaki", "maddeleri", "doğrulasalar", "iyi", "olur."],
+            "enSentence": "The historians had better verify the clauses in the agreement because the legal dispute continues.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l2_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Sinema arşivi yandığı için, araştırmacılar eski film makaralarını analiz edemediler.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Because the cinema archive was burned, the researchers were unable to analyze the old film reels.",
+            "enSentence": "Because the cinema archive was burned, the researchers were unable to analyze the old film reels.",
+            "isEngToTr": false,
+            "grammarTags": ["Cümle Bağlaçları", "Edilgen Yapı (Passive)", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "exercises": [
+      {
+        "id": "u40l3ex1",
+        "title": "Alıştırma 1: Sebep, Sonuç ve Ekleme Öbekleri (Phrase Level)",
+        "description": "Sebep edatlarını, sonuç transitionlarını, ekleme ve örneklendirme yapılarını ifade düzeyinde eşleştirme.",
+        "questions": [
+          {
+            "id": "u40l3_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "due to the legal dispute", "right": "yasal anlaşmazlıktan dolayı" },
+              { "left": "consequently, the funding stopped", "right": "sonuç olarak, fonlama durdu" },
+              { "left": "in addition to historical artifacts", "right": "tarihsel eserlere ek olarak" },
+              { "left": "such as early documentary films", "right": "erken dönem belgesel filmleri gibi" }
+            ],
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Geçiş Kelimeleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q2",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "owing to the lack of funding", "right": "fonlama eksikliğinden dolayı" },
+              { "left": "furthermore, the survey was anonymous", "right": "dahası, anket isimsizdi" },
+              { "left": "along with contract clauses", "right": "sözleşme maddeleriyle birlikte" },
+              { "left": "in other words, the research failed", "right": "başka bir deyişle, araştırma başarısız oldu" }
+            ],
+            "grammarTags": ["Cümle Bağlaçları", "Geçiş Kelimeleri", "Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"besides the sociological hypotheses\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Sosyolojik hipotezlerin yanı sıra",
+              "Sosyolojik hipotezlerden dolayı",
+              "Sosyolojik hipotezlerin aksine",
+              "Sosyolojik hipotezler hariç"
+            ],
+            "correctIndex": 0,
+            "enSentence": "besides the sociological hypotheses",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"as a result of the bilateral trade agreement\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "İkili ticaret anlaşmasının bir sonucu olarak",
+              "İkili ticaret anlaşmasına rağmen",
+              "İkili ticaret anlaşmasının aksine",
+              "İkili ticaret anlaşmasından önce"
+            ],
+            "correctIndex": 0,
+            "enSentence": "as a result of the bilateral trade agreement",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q5",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Because of the commission refused the plan, the research stopped.",
+            "isCorrect": false,
+            "translationHint": "Because of edatından sonra tam cümle değil, bir isim veya isim öbeği gelmelidir.",
+            "grammarTags": ["Cümle Bağlaçları", "Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l3_ex1_q6",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Due to the restricted access to historical sources, the study failed.",
+            "isCorrect": true,
+            "translationHint": "Due to edatı isim öbekleriyle birlikte kullanılarak 'nedeniyle/dolayı' anlamı katar.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q7",
+            "type": "true-false",
+            "prompt": "Therefore ve Thus kelimeleri cümle başında arkalarından doğrudan bir isim alarak 'bu yüzden' anlamını sağlarlar.",
+            "correctAnswer": "false",
+            "translation": "Yanlış.",
+            "explanation": "Therefore ve Thus geçiş zarflarıdır; arkalarından isim değil, tam cümle alırlar.",
+            "grammarTags": ["Geçiş Kelimeleri"]
+          },
+          {
+            "id": "u40l3_ex1_q8",
+            "type": "true-false",
+            "prompt": "In addition to ve Besides kelimeleri, isim veya isim öbekleriyle kullanılarak ekleme anlamı taşırlar.",
+            "correctAnswer": "true",
+            "translation": "Doğru.",
+            "explanation": "Bu iki edat yapısı 'buna ek olarak / yanı sıra' anlamına gelir ve arkasından isim öbeği alır.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l3_ex1_q9",
+            "type": "multiple-choice",
+            "prompt": "\"on account of the land disputes\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Arazi anlaşmazlıklarından dolayı",
+              "Arazi anlaşmazlıklarına rağmen",
+              "Arazi anlaşmazlıklarının aksine",
+              "Arazi anlaşmazlıklarından önce"
+            ],
+            "correctIndex": 0,
+            "enSentence": "on account of the land disputes",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex1_q10",
+            "type": "multiple-choice",
+            "prompt": "\"such as human behavior in society\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Toplumdaki insan davranışı gibi",
+              "Toplumdaki insan davranışına rağmen",
+              "Toplumdaki insan davranışının aksine",
+              "Toplumdaki insan davranışından dolayı"
+            ],
+            "correctIndex": 0,
+            "enSentence": "such as human behavior in society",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l3ex2",
+        "title": "Alıştırma 2: Sebep, Sonuç ve Ekleme Yapıları (Sentence Level)",
+        "description": "Boşlukları en uygun sebep edatları, sonuç geçişleri, ekleme ve örneklendirme kalıplarıyla tamamlama.",
+        "questions": [
+          {
+            "id": "u40l3_ex2_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The historical commission was dissolved ___ the sudden lack of anonymous funding.",
+            "options": ["because of", "therefore", "although", "besides"],
+            "correctIndex": 0,
+            "translation": "Tarih komisyonu, isimsiz fonlamanın ani eksikliği nedeniyle kapatıldı.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The researchers could not verify their hypothesis; ___ , they postponed the publication.",
+            "options": ["consequently", "owing to", "because of", "such as"],
+            "correctIndex": 0,
+            "translation": "Araştırmacılar hipotezlerini doğrulayamadılar; sonuç olarak, yayını ertelediler.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "___ their regular research, the sociologists conducted an anonymous survey.",
+            "options": ["In addition to", "Therefore", "Moreover", "Because"],
+            "correctIndex": 0,
+            "translation": "Düzenli araştırmalarına ek olarak, sosyologlar isimsiz bir anket yürüttüler.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Ancient societies used simple tools; ___ , they were able to create complex agricultural systems.",
+            "options": ["nevertheless", "due to", "in addition to", "for example"],
+            "correctIndex": 0,
+            "translation": "Antik toplumlar basit aletler kullandılar; yine de karmaşık tarım sistemleri yaratabildiler.",
+            "grammarTags": ["Geçiş Kelimeleri", "Yarı-Modallar", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"The legal clauses in the agreement were unclear; therefore, the judge suspended the trial.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Anlaşmadaki yasal maddeler belirsizdi; bu nedenle, hakim davayı erteledi.",
+              "Anlaşmadaki yasal maddeler belirsiz olmasına rağmen, hakim davayı onayladı.",
+              "Anlaşmadaki yasal maddeler belirsiz olduğu için, komisyon yeni fonlama istedi.",
+              "Anlaşmadaki yasal maddelerin yanı sıra, hakim davayı da iptal etti."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The legal clauses in the agreement were unclear; therefore, the judge suspended the trial.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "Edilgen Yapı (Passive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The archaeological team collected various artifacts, ___ ancient coins and clay pots.",
+            "options": ["such as", "therefore", "besides", "owing to"],
+            "correctIndex": 0,
+            "translation": "Arkeoloji ekibi, antik sikkeler ve kil çömlekler gibi çeşitli eserler topladı.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The bilateral trade agreement failed ___ the ongoing disputes between the two countries.",
+            "options": ["on account of", "hence", "furthermore", "like"],
+            "correctIndex": 0,
+            "translation": "İkili ticaret anlaşması, iki ülke arasındaki devam eden anlaşmazlıklar nedeniyle başarısız oldu.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex2_q8",
+            "type": "multiple-choice",
+            "prompt": "Boşluğa gelebilecek en uygun geçiş ifadesini seçin: \"Demographers study population shifts; _______, they analyze birth and death rates.\"",
+            "options": ["for instance", "because of", "due to", "unlike"],
+            "correctIndex": 0,
+            "translation": "Nüfus bilimciler nüfus değişimlerini inceler; örneğin, doğum ve ölüm oranlarını analiz ederler.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q9",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The clinic upgraded the security measures; ___ , the patient data remained strictly secure.",
+            "options": ["thus", "due to", "in spite of", "contrary to"],
+            "correctIndex": 0,
+            "translation": "Klinik güvenlik önlemlerini yükseltti; böylece, hasta verileri kesinlikle güvende kaldı.",
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex2_q10",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "___ the bad weather, the geographers had to postpone the field research.",
+            "options": ["Due to", "Although", "In contrast", "Besides"],
+            "correctIndex": 0,
+            "translation": "Kötü hava koşulları nedeniyle, coğrafyacılar alan araştırmasını ertelemek zorunda kaldılar.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Yarı-Modallar", "İsim Tamlamaları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l3ex3",
+        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "description": "Sebep, sonuç ve ekleme yapılarını; edilgen çatı, there is/are ve should/must modallarıyla sentezleyen cümle çevirileri.",
+        "questions": [
+          {
+            "id": "u40l3_ex3_q1",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Kütüphaneye kısıtlanmış erişim nedeniyle, tarihçiler belgeleri analiz edemediler.",
+            "words": ["Kütüphaneye", "kısıtlanmış", "erişim", "nedeniyle,", "tarihçiler", "belgeleri", "analiz", "edemediler.", "seçtiler.", "anlaşma"],
+            "correctOrder": ["Kütüphaneye", "kısıtlanmış", "erişim", "nedeniyle,", "tarihçiler", "belgeleri", "analiz", "edemediler."],
+            "enSentence": "Due to the restricted access to the library, the historians were unable to analyze the documents.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q2",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Arkeolojik ekiple birlikte, birçok yerel vatandaş antik eserleri topladı.",
+            "words": ["Along", "with", "the", "archaeological", "team,", "many", "local", "citizens", "collected", "the", "ancient", "artifacts.", "although", "because"],
+            "correctOrder": ["Along", "with", "the", "archaeological", "team,", "many", "local", "citizens", "collected", "the", "ancient", "artifacts."],
+            "enSentence": "Along with the archaeological team, many local citizens collected the ancient artifacts.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"The researchers failed to verify the psychological hypothesis; consequently, the project received no funding.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacılar psikolojik hipotezi doğrulamayı başaramadılar; sonuç olarak, proje hiç fon alamadı.",
+            "enSentence": "The researchers failed to verify the psychological hypothesis; consequently, the project received no funding.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex3_q4",
+            "type": "translation-text",
+            "prompt": "\"Komisyon yasal anlaşmayı onayladı; bu nedenle, tarihçiler sinema arşivine girmekte özgürdür.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "The commission approved the legal agreement; therefore, the historians are free to enter the cinema archive.",
+            "enSentence": "The commission approved the legal agreement; therefore, the historians are free to enter the cinema archive.",
+            "isEngToTr": false,
+            "grammarTags": ["Geçiş Kelimeleri", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q5",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Sosyolojik anketi yayınlamanın yanı sıra, insan davranışı hakkında bir kitap yazdı.",
+            "words": ["Sosyolojik", "anketi", "yayınlamanın", "yanı", "sıra,", "insan", "davranışı", "hakkında", "bir", "kitap", "yazdı.", "okudu.", "anlaşma"],
+            "correctOrder": ["Sosyolojik", "anketi", "yayınlamanın", "yanı", "sıra,", "insan", "davranışı", "hakkında", "bir", "kitap", "yazdı."],
+            "enSentence": "In addition to publishing the sociological survey, she wrote a book about human behavior.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q6",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Yasal anlaşmazlıklardan dolayı, ekonomistler ticaret anlaşmasını değiştirmeyi tercih ettiler.",
+            "words": ["Owing", "to", "the", "legal", "disputes,", "the", "economists", "preferred", "to", "modify", "the", "trade", "agreement.", "because", "due"],
+            "correctOrder": ["Owing", "to", "the", "legal", "disputes,", "the", "economists", "preferred", "to", "modify", "the", "trade", "agreement."],
+            "enSentence": "Owing to the legal disputes, the economists preferred to modify the trade agreement.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Tercihler (Preferences)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q7",
+            "type": "translation-text",
+            "prompt": "\"The documents contain highly reliable empirical data; thus, they must be preserved carefully.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Belgeler son derece güvenilir ampirik veriler içeriyor; bu nedenle, dikkatle korunmalıdırlar.",
+            "enSentence": "The documents contain highly reliable empirical data; thus, they must be preserved carefully.",
+            "isEngToTr": true,
+            "grammarTags": ["Geçiş Kelimeleri", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l3_ex3_q8",
+            "type": "translation-text",
+            "prompt": "\"Hukuk uzmanları yasal maddeleri incelediler; dahası, yeni bir yasa tasarısı hazırladılar.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "The legal experts examined the contract clauses; furthermore, they prepared a new bill.",
+            "enSentence": "The legal experts examined the contract clauses; furthermore, they prepared a new bill.",
+            "isEngToTr": false,
+            "grammarTags": ["Geçiş Kelimeleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Coğrafyacılar, toprak kalitesi ve su kaynakları gibi, arazi kullanımı üzerine veri topladı.",
+            "words": ["Coğrafyacılar,", "toprak", "kalitesi", "ve", "su", "kaynakları", "gibi,", "arazi", "kullanımı", "üzerine", "veri", "topladılar.", "anlaşma.", "yazdılar."],
+            "correctOrder": ["Coğrafyacılar,", "toprak", "kalitesi", "ve", "su", "kaynakları", "gibi,", "arazi", "kullanımı", "üzerine", "veri", "topladılar."],
+            "enSentence": "The geographers collected data on land use, such as soil quality and water resources.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l3_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Anket isimsiz olduğu için, veri güvenliği konusunda hiçbir endişe yoktur.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "On account of the survey being anonymous, there are no concerns about data security.",
+            "enSentence": "On account of the survey being anonymous, there are no concerns about data security.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "There Yapıları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "exercises": [
+      {
+        "id": "u40l4ex1",
+        "title": "Alıştırma 1: İkili ve Amaç Öbekleri (Phrase Level)",
+        "description": "Hem... hem de, ya... ya da gibi ikili bağlaçları, amaç yapılarını, hariç tutma ve edat kombinasyonlarını ifade düzeyinde çalışma.",
+        "questions": [
+          {
+            "id": "u40l4_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "neither the commission nor the board", "right": "ne komisyon ne de yönetim kurulu" },
+              { "left": "in order to collect empirical data", "right": "ampirik veri toplamak amacıyla" },
+              { "left": "except for historical artifacts", "right": "tarihsel eserler hariç" },
+              { "left": "in terms of economic productivity", "right": "ekonomik üretkenlik açısından" }
+            ],
+            "grammarTags": ["İkili Bağlaçlar", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex1_q2",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              { "left": "either the contract or the agreement", "right": "ya sözleşme ya da anlaşma" },
+              { "left": "so as to verify the hypothesis", "right": "hipotezi doğrulamak amacıyla" },
+              { "left": "apart from sociological surveys", "right": "sosyolojik anketler dışında" },
+              { "left": "rather than regional land disputes", "right": "bölgesel arazi anlaşmazlıkları yerine" }
+            ],
+            "grammarTags": ["İkili Bağlaçlar", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Edat Takımı (Prepositional Phrase)", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"both anonymous surveys and historical documents\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Hem isimsiz anketler hem de tarihsel belgeler",
+              "Ne isimsiz anketler ne de tarihsel belgeler",
+              "Ya isimsiz anketler ya da tarihsel belgeler",
+              "İsimsiz anketlerin aksine tarihsel belgeler"
+            ],
+            "correctIndex": 0,
+            "enSentence": "both anonymous surveys and historical documents",
+            "isEngToTr": true,
+            "grammarTags": ["İkili Bağlaçlar", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "\"so that the clinic could analyze the behavior\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Klinik davranışı analiz edebilsin diye",
+              "Klinik davranışı analiz ettiği için",
+              "Klinik davranışı analiz ettikten sonra",
+              "Klinik davranışı analiz etse bile"
+            ],
+            "correctIndex": 0,
+            "enSentence": "so that the clinic could analyze the behavior",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex1_q5",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "In order to the archaeological team excavates the tomb, they obtained funding.",
+            "isCorrect": false,
+            "translationHint": "In order to yapısından sonra tam cümle değil, doğrudan yalın fiil (V1) gelmelidir.",
+            "grammarTags": ["İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex1_q6",
+            "type": "swipe",
+            "prompt": "Aşağıdaki ifadenin dil bilgisi yapısı doğru ise VALID (Sağ), yanlış ise BUG (Sol) yönüne kaydırın:",
+            "phrase": "Neither the contract clauses nor the legal agreement was verified.",
+            "isCorrect": true,
+            "translationHint": "Neither...nor yapısı iki özneyi paralel bağlar ve fiil en yakın özneye göre tekil çekimlenir.",
+            "grammarTags": ["İkili Bağlaçlar", "Edilgen Yapı (Passive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex1_q7",
+            "type": "true-false",
+            "prompt": "So that yapısı amaç bildirir ve kendisinden sonra genellikle modal (can/could/would) içeren tam cümle alır.",
+            "correctAnswer": "true",
+            "translation": "Doğru.",
+            "explanation": "So that bir amaç bağlacıdır, 'olsun diye/olabilmesi için' anlamı katar ve genellikle modal alan bir yan cümle oluşturur.",
+            "grammarTags": ["Cümle Bağlaçları"]
+          },
+          {
+            "id": "u40l4_ex1_q8",
+            "type": "true-false",
+            "prompt": "Rather than yapısı, bir şeyin tercih edilmediğini belirterek 'yerine' anlamını katar ve isim ya da V-ing ile kullanılabilir.",
+            "correctAnswer": "true",
+            "translation": "Doğru.",
+            "explanation": "Rather than bir edat yapısıdır ve bir alternatif yerine diğerinin tercih edildiğini fısıldar.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)"]
+          },
+          {
+            "id": "u40l4_ex1_q9",
+            "type": "multiple-choice",
+            "prompt": "\"whether the empirical data is reliable or not\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Ampirik verilerin güvenilir olup olmadığı",
+              "Ampirik veriler güvenilir olduğu için",
+              "Ampirik veriler güvenilir olmasına rağmen",
+              "Ampirik verilerin güvenilir olmasının aksine"
+            ],
+            "correctIndex": 0,
+            "enSentence": "whether the empirical data is reliable or not",
+            "isEngToTr": true,
+            "grammarTags": ["İkili Bağlaçlar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex1_q10",
+            "type": "multiple-choice",
+            "prompt": "\"in terms of data security and access\" ifadesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Veri güvenliği ve erişim açısından",
+              "Veri güvenliği ve erişime ek olarak",
+              "Veri güvenliği ve erişim hariç",
+              "Veri güvenliği ve erişim yerine"
+            ],
+            "correctIndex": 0,
+            "enSentence": "in terms of data security and access",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l4ex2",
+        "title": "Alıştırma 2: İkili ve Amaç Yapıları (Sentence Level)",
+        "description": "Cümlelerdeki boşlukları ikili bağlaçlar, amaç ve hariç tutma edatlarıyla tamamlama.",
+        "questions": [
+          {
+            "id": "u40l4_ex2_q1",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeleri seçin:",
+            "sentence": "The commission signed ___ the trade agreement ___ the legal contract.",
+            "options": ["both / and", "either / nor", "neither / or", "whether / nor"],
+            "correctIndex": 0,
+            "translation": "Komisyon hem ticaret anlaşmasını hem de yasal sözleşmeyi imzaladı.",
+            "grammarTags": ["İkili Bağlaçlar", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Historians visited the cinema archive ___ study early documentary films.",
+            "options": ["in order to", "so that", "whether", "rather than"],
+            "correctIndex": 0,
+            "translation": "Tarihçiler, erken dönem belgesel filmlerini incelemek amacıyla sinema arşivini ziyaret etti.",
+            "grammarTags": ["İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q3",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The library remains closed to all visitors ___ the researchers with restricted access.",
+            "options": ["except for", "either", "so as to", "rather than"],
+            "correctIndex": 0,
+            "translation": "Kütüphane, kısıtlanmış erişimi olan araştırmacılar hariç tüm ziyaretçilere kapalı kalmaya devam ediyor.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex2_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "Sociological studies are important ___ understanding group behavior in modern societies.",
+            "options": ["in terms of", "rather than", "so that", "neither"],
+            "correctIndex": 0,
+            "translation": "Sosyolojik çalışmalar, modern toplumlardaki grup davranışını anlamak açısından önemlidir.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"The historians preferred to read original manuscripts rather than depending on translated books.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "options": [
+              "Tarihçiler çevrilmiş kitaplara güvenmek yerine orijinal el yazmalarını okumayı tercih ettiler.",
+              "Tarihçiler orijinal el yazmalarını okumak yerine çevrilmiş kitapları tercih ettiler.",
+              "Tarihçiler hem orijinal el yazmalarını hem de çevrilmiş kitapları okumak zorundaydılar.",
+              "Tarihçiler orijinal el yazmalarını çevrilmiş kitapların yardımıyla okumak istediler."
+            ],
+            "correctIndex": 0,
+            "enSentence": "The historians preferred to read original manuscripts rather than depending on translated books.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Tercihler (Preferences)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Boşlukları sırasıyla klavyeden doldurunuz (örn: neither ... nor):",
+            "sentence": "___ the sociologist ___ the psychologist was able to verify the empirical hypothesis.",
+            "options": ["Neither / nor", "Either / nor", "Both / nor", "Whether / nor"],
+            "correctIndex": 0,
+            "translation": "Ne sosyolog ne de psikolog ampirik hipotezi doğrulayabildi.",
+            "grammarTags": ["İkili Bağlaçlar", "Yarı-Modallar", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "The board members met ___ they could discuss the anonymous funding options.",
+            "options": ["so that", "in order to", "so as to", "rather than"],
+            "correctIndex": 0,
+            "translation": "Yönetim kurulu üyeleri, isimsiz fonlama seçeneklerini tartışabilmek amacıyla bir araya geldi.",
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q8",
+            "type": "multiple-choice",
+            "prompt": "Boşluğa gelebilecek en uygun bağlacı seçin: \"The government must choose between modifying the tax rates _______ increasing public spending.\"",
+            "options": ["or", "nor", "but", "yet"],
+            "correctIndex": 0,
+            "translation": "Hükümet, vergi oranlarını değiştirmek ya da kamu harcamalarını artırmak arasında seçim yapmak zorundadır.",
+            "grammarTags": ["İkili Bağlaçlar", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q9",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+            "sentence": "We must analyze the child behavior ___ using general assumptions.",
+            "options": ["rather than", "in terms of", "both", "neither"],
+            "correctIndex": 0,
+            "translation": "Genel varsayımları kullanmak yerine çocuk davranışını analiz etmeliyiz.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex2_q10",
+            "type": "fill-blank",
+            "prompt": "Boşluğu doldurunuz:",
+            "sentence": "The archaeological commission preserved all collected artifacts ___ the broken clay pots.",
+            "options": ["apart from", "so that", "whether", "both"],
+            "correctIndex": 0,
+            "translation": "Arkeoloji komisyonu, kırık kil çömlekler dışında toplanan tüm eserleri korudu.",
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim Tamlamaları"]
+          }
+        ]
+      },
+      {
+        "id": "u40l4ex3",
+        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "description": "İkili, amaç ve edat kombinasyonlarını; participle kısaltmaları, öbeksel modallar ve etken/edilgen cümle refleksleriyle pekiştiren çalışmalar.",
+        "questions": [
+          {
+            "id": "u40l4_ex3_q1",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Ne sanat tarihçileri ne de komisyon fonlamayı onaylamaya istekliydi.",
+            "words": ["Ne", "sanat", "tarihçileri", "ne", "de", "komisyon", "fonlamayı", "onaylamaya", "istekliydi.", "zorundaydı.", "reddetti."],
+            "correctOrder": ["Ne", "sanat", "tarihçileri", "ne", "de", "komisyon", "fonlamayı", "onaylamaya", "istekliydi."],
+            "enSentence": "Neither the art historians nor the commission was willing to authorize the funding.",
+            "isEngToTr": true,
+            "grammarTags": ["İkili Bağlaçlar", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex3_q2",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Arkeologlar, kültürel mirası korumak amacıyla eserleri dikkatle topladılar.",
+            "words": ["The", "archaeologists", "collected", "the", "artifacts", "carefully", "so", "as", "to", "preserve", "the", "cultural", "heritage.", "although", "but"],
+            "correctOrder": ["The", "archaeologists", "collected", "the", "artifacts", "carefully", "so", "as", "to", "preserve", "the", "cultural", "heritage."],
+            "enSentence": "The archaeologists collected the artifacts carefully so as to preserve the cultural heritage.",
+            "isEngToTr": false,
+            "grammarTags": ["İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"The researchers conducted the survey anonymous so that the participants would share reliable empirical data.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Katılımcılar güvenilir ampirik veriler paylaşsın diye araştırmacılar anketi isimsiz yürüttüler.",
+            "enSentence": "The researchers conducted the survey anonymous so that the participants would share reliable empirical data.",
+            "isEngToTr": true,
+            "grammarTags": ["Cümle Bağlaçları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q4",
+            "type": "translation-text",
+            "prompt": "\"Arazi anlaşmazlıkları hariç, yasal anlaşmadaki tüm maddeler komisyon tarafından kabul edildi.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "Except for land disputes, all clauses in the legal agreement were accepted by the commission.",
+            "enSentence": "Except for land disputes, all clauses in the legal agreement were accepted by the commission.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Edilgen Yapı (Passive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q5",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Ekonomistler ticaret anlaşmasını, gelişmekte olan piyasalar üzerindeki uzun vadeli etkisi açısından değerlendirdi.",
+            "words": ["Ekonomistler", "ticaret", "anlaşmasını,", "gelişmekte", "olan", "piyasalar", "üzerindeki", "uzun", "vadeli", "etkisi", "açısından", "değerlendirdi.", "reddetti.", "anlaşma"],
+            "correctOrder": ["Ekonomistler", "ticaret", "anlaşmasını,", "gelişmekte", "olan", "piyasalar", "üzerindeki", "uzun", "vadeli", "etkisi", "açısından", "değerlendirdi."],
+            "enSentence": "The economists evaluated the trade agreement in terms of its long-term impact on emerging markets.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Participle Yapıları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q6",
+            "type": "word-bank",
+            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
+            "translation": "Doğrulanmamış psikolojik hipotezlere güvenmek yerine çocuk davranışını analiz etmeliyiz.",
+            "words": ["We", "must", "analyze", "child", "behavior", "rather", "than", "relying", "on", "unverified", "psychological", "hypotheses.", "instead", "because"],
+            "correctOrder": ["We", "must", "analyze", "child", "behavior", "rather", "than", "relying", "on", "unverified", "psychological", "hypotheses."],
+            "enSentence": "We must analyze child behavior rather than relying on unverified psychological hypotheses.",
+            "isEngToTr": false,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Participle Yapıları", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q7",
+            "type": "translation-text",
+            "prompt": "\"The researchers were accustomed to collecting empirical data apart from historical sources.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacılar, tarihsel kaynaklar dışında ampirik veri toplamaya alışkındılar.",
+            "enSentence": "The researchers were accustomed to collecting empirical data apart from historical sources.",
+            "isEngToTr": true,
+            "grammarTags": ["Edat Takımı (Prepositional Phrase)", "Öbeksel Kipler", "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q8",
+            "type": "translation-text",
+            "prompt": "\"Yasal maddeler hem ikili ticaret anlaşmalarını hem de veri güvenliği kurallarını düzenler.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "The legal clauses regulate both bilateral trade agreements and data security rules.",
+            "enSentence": "The legal clauses regulate both bilateral trade agreements and data security rules.",
+            "isEngToTr": false,
+            "grammarTags": ["İkili Bağlaçlar", "İsim Tamlamaları"]
+          },
+          {
+            "id": "u40l4_ex3_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "translation": "Komisyon izin verse de vermese de, tarihçiler belgeleri dikkatle inceleseler iyi olur.",
+            "words": ["Komisyon", "izin", "verse", "de", "vermese", "de,", "tarihçiler", "belgeleri", "dikkatle", "inceleseler", "iyi", "olur.", "zorundadır.", "anlaşma"],
+            "correctOrder": ["Komisyon", "izin", "verse", "de", "vermese", "de,", "tarihçiler", "belgeleri", "dikkatle", "inceleseler", "iyi", "olur."],
+            "enSentence": "Historians had better examine the documents carefully whether the commission permits it or not.",
+            "isEngToTr": true,
+            "grammarTags": ["İkili Bağlaçlar", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          },
+          {
+            "id": "u40l4_ex3_q10",
+            "type": "translation-text",
+            "prompt": "\"Ekip, veritabanına kısıtlanmamış erişim elde etmek için kimlik bilgilerini doğrulamak zorundadır.\" cümlesini İngilizce'ye çevirin:",
+            "correctSentence": "The team has to verify the credentials in order to obtain unrestricted access to the database.",
+            "enSentence": "The team has to verify the credentials in order to obtain unrestricted access to the database.",
+            "isEngToTr": false,
+            "grammarTags": ["İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
+          }
+        ]
+      }
+    ]
+  }
+},
   "41": {
     "1": {
       "konuAnlatimi": {
