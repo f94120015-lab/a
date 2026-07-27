@@ -892,26 +892,86 @@
   });
 
   // ============================================================
-  // BÖLÜM 8 EDİLGEN (PASSIVE) YAPISI GELİŞTİRME (NEW QUESTION TYPES)
+  // BÖLÜM 16 EDİLGEN YAPILAR YENİDEN YAPILANDIRMA
   // ============================================================
-  const extraLesson29Sentences = [
-    { en: "Rules will be suspended.", tr: "Kurallar askıya alınacak.", word: "suspended", trWord: "askıya alınacak", blank: "Rules will be ___." },
-    { en: "Data will be processed.", tr: "Veriler işlenecek.", word: "processed", trWord: "işlenecek", blank: "Data will be ___." },
-    { en: "Media will be manipulated.", tr: "Medya manipüle edilecek.", word: "manipulated", trWord: "manipüle edilecek", blank: "Media will be ___." },
-    { en: "Agreements have been terminated.", tr: "Anlaşmalar feshedildi.", word: "terminated", trWord: "feshedildi", blank: "Agreements have been ___." },
-    { en: "The dynamic has been triggered.", tr: "Dinamik tetiklendi.", word: "triggered", trWord: "tetiklendi", blank: "The dynamic has been ___." }
-  ];
 
-  function getAuxiliary(en, word) {
-    const regex = new RegExp(`\\b(\\w+(?:\\s+\\w+)?)\\s+${word}\\b`, 'i');
-    const match = en.match(regex);
-    if (match && match[1]) {
-      return match[1];
-    }
-    return en.includes("was") ? "was" : (en.includes("were") ? "were" : (en.includes("will be") ? "will be" : (en.includes("have been") ? "have been" : (en.includes("has been") ? "has been" : "is"))));
+  // Sözlük kelimelerini genişletiyoruz
+  if (typeof wordDictionary !== 'undefined') {
+    Object.assign(wordDictionary, {
+      "scholar": "akademisyen / bilgin",
+      "observed": "gözlemlendi / gözlemlenen",
+      "treaty": "antlaşma",
+      "delegation": "heyet / kurul",
+      "weakened": "zayıflatıldı / zayıflamış",
+      "challenged": "sorgulandı / sorgulanan",
+      "hostilities": "düşmanlıklar",
+      "escalated": "tırmandı / tırmanan",
+      "cinema": "sinema",
+      "documented": "belgelendi / belgelenen",
+      "ignored": "göz ardı edildi / göz ardı edilen",
+      "dictated": "dikte edildi / dikte edilen",
+      "digitalized": "dijitalleştirildi / dijitalleştirilen",
+      "enforced": "uygulandı / uygulanan",
+      "beautifully": "güzelce / sanatsal bir şekilde",
+      "universally": "evrensel olarak"
+    });
   }
 
-    function generateUnit10Questions(unitId, lessonId, sentences, allLessonSentences) {
+  const myUnit10LessonSentences = {
+    1: [
+      { en: "The legal document is translated by the scholar.", tr: "Yasal belge akademisyen tarafından çevrilir.", word: "translated", trWord: "çevrilir", blank: "The legal document is ___ by the scholar.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The legal document", "is translated", "by the scholar."], trBlocks: ["Yasal belge", "akademisyen tarafından", "çevrilir."] },
+      { en: "Historical records are preserved in the archive.", tr: "Tarihsel kayıtlar arşivde korunur.", word: "preserved", trWord: "korunur", blank: "Historical records are ___ in the archive.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Historical records", "are preserved", "in the archive."], trBlocks: ["Tarihsel kayıtlar", "arşivde", "korunur."] },
+      { en: "The economic policies were changed by the government.", tr: "Ekonomik politikalar hükümet tarafından değiştirildi.", word: "changed", trWord: "değiştirildi", blank: "The economic policies were ___ by the government.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The economic policies", "were changed", "by the government."], trBlocks: ["Ekonomik politikalar", "hükümet tarafından", "değiştirildi."] },
+      { en: "Cognitive behavior was observed in patients.", tr: "Bilişsel davranış hastalarda gözlemlendi.", word: "observed", trWord: "gözlemlendi", blank: "Cognitive behavior was ___ in patients.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Cognitive behavior", "was observed", "in patients."], trBlocks: ["Bilişsel davranış", "hastalarda", "gözlemlendi."] },
+      { en: "The peace treaty will be signed by the political delegation.", tr: "Barış antlaşması siyasi heyet tarafından imzalanacak.", word: "signed", trWord: "imzalanacak", blank: "The peace treaty will be ___ by the political delegation.", grammarTags: ["Edilgen Yapı (Passive)", "Gelecek Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The peace treaty", "will be signed", "by the political delegation."], trBlocks: ["Barış antlaşması", "siyasi heyet tarafından", "imzalanacak."] },
+      { en: "The monetary system will not be weakened by the reform.", tr: "Parasal sistem reform tarafından zayıflatılmayacak.", word: "weakened", trWord: "zayıflatılmayacak", blank: "The monetary system will not be ___ by the reform.", grammarTags: ["Edilgen Yapı (Passive)", "Gelecek Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The monetary system", "will not be weakened", "by the reform."], trBlocks: ["Parasal sistem", "reform tarafından", "zayıflatılmayacak."] },
+      { en: "Political authority has been challenged by the citizens.", tr: "Siyasi otorite vatandaşlar tarafından sorgulanmıştır.", word: "challenged", trWord: "sorgulanmıştır", blank: "Political authority has been ___ by the citizens.", grammarTags: ["Edilgen Yapı (Passive)", "Yakın Geçmiş Zaman (Present Perfect)", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Political authority", "has been challenged", "by the citizens."], trBlocks: ["Siyasi otorite", "vatandaşlar tarafından", "sorgulanmıştır."] },
+      { en: "Cognitive conflict has not been resolved by the psychologist.", tr: "Bilişsel çatışma psikolog tarafından çözülmemiştir.", word: "resolved", trWord: "çözülmemiştir", blank: "Cognitive conflict has not been ___ by the psychologist.", grammarTags: ["Edilgen Yapı (Passive)", "Yakın Geçmiş Zaman (Present Perfect)", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Cognitive conflict", "has not been resolved", "by the psychologist."], trBlocks: ["Bilişsel çatışma", "psikolog tarafından", "çözülmemiştir."] },
+      { en: "The peace treaty had been approved before hostilities escalated.", tr: "Düşmanlıklar tırmanmadan önce barış antlaşması onaylanmıştı.", word: "approved", trWord: "onaylanmıştı", blank: "The peace treaty had been ___ before hostilities escalated.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zamanın Hikayesi (Past Perfect)", "İsim Tamlaması", "Zaman Cümleciği (Time Clause)"], enBlocks: ["The peace treaty", "had been approved", "before hostilities escalated."], trBlocks: ["Düşmanlıklar tırmanmadan önce", "barış antlaşması", "onaylanmıştı."] },
+      { en: "The state archives had not been examined before the political crisis.", tr: "Siyasi krizden önce devlet arşivleri incelenmemişti.", word: "examined", trWord: "incelenmemişti", blank: "The state archives had not been ___ before the political crisis.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zamanın Hikayesi (Past Perfect)", "İsim Tamlaması", "Zaman Cümleciği (Time Clause)"], enBlocks: ["The state archives", "had not been examined", "before the political crisis."], trBlocks: ["Siyasi krizden önce", "devlet arşivleri", "incelenmemişti."] },
+      { en: "The director's classic film is loved by cinema scholars.", tr: "Yönetmenin klasik filmi sinema akademisyenleri tarafından sevilir.", word: "loved", trWord: "sevilir", blank: "The director's classic film is ___ by cinema scholars.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The director's classic film", "is loved", "by cinema scholars."], trBlocks: ["Yönetmenin klasik filmi", "sinema akademisyenleri tarafından", "sevilir."] },
+      { en: "Linguistic variations were not documented in the legal report.", tr: "Yasal raporda dilbilimsel varyasyonlar belgelenmedi.", word: "documented", trWord: "belgelenmedi", blank: "Linguistic variations were not ___ in the legal report.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Linguistic variations", "were not documented", "in the legal report."], trBlocks: ["Yasal raporda", "dilbilimsel varyasyonlar", "belgelenmedi."] },
+      { en: "Economic growth has been predicted by the economist.", tr: "Ekonomik büyüme iktisatçı tarafından öngörülmüştür.", word: "predicted", trWord: "öngörülmüştür", blank: "Economic growth has been ___ by the economist.", grammarTags: ["Edilgen Yapı (Passive)", "Yakın Geçmiş Zaman (Present Perfect)", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Economic growth", "has been predicted", "by the economist."], trBlocks: ["Ekonomik büyüme", "iktisatçı tarafından", "öngörülmüştür."] },
+      { en: "Social behavior is not determined by political authority alone.", tr: "Toplumsal davranış tek başına siyasi otorite tarafından belirlenmez.", word: "determined", trWord: "belirlenmez", blank: "Social behavior is not ___ by political authority alone.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Social behavior", "is not determined", "by political authority alone."], trBlocks: ["Toplumsal davranış", "tek başına", "siyasi otorite tarafından belirlenmez."] },
+      { en: "Unpublished documents had been discovered in the archive by historians.", tr: "Yayınlanmamış belgeler tarihçiler tarafından arşivde keşfedilmişti.", word: "discovered", trWord: "keşfedilmişti", blank: "Unpublished documents had been ___ in the archive by historians.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zamanın Hikayesi (Past Perfect)", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Unpublished documents", "had been discovered", "in the archive", "by historians."], trBlocks: ["Yayınlanmamış belgeler", "tarihçiler tarafından", "arşivde keşfedilmişti."] }
+    ],
+    2: [
+      { en: "Historical manuscripts must be preserved by the scholar.", tr: "Tarihsel el yazmaları akademisyen tarafından korunmalıdır.", word: "preserved", trWord: "korunmalıdır", blank: "Historical manuscripts must be ___ by the scholar.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Historical manuscripts", "must be preserved", "by the scholar."], trBlocks: ["Tarihsel el yazmaları", "akademisyen tarafından", "korunmalıdır."] },
+      { en: "The economic policies can be changed by the government.", tr: "Ekonomik politikalar hükümet tarafından değiştirilebilir.", word: "changed", trWord: "değiştirilebilir", blank: "The economic policies can be ___ by the government.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The economic policies", "can be changed", "by the government."], trBlocks: ["Ekonomik politikalar", "hükümet tarafından", "değiştirilebilir."] },
+      { en: "Cognitive conflict cannot be ignored by the psychologist.", tr: "Bilişsel çatışma psikolog tarafından göz ardı edilemez.", word: "ignored", trWord: "göz ardı edilemez", blank: "Cognitive conflict cannot be ___ by the psychologist.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Cognitive conflict", "cannot be ignored", "by the psychologist."], trBlocks: ["Bilişsel çatışma", "psikolog tarafından", "göz ardı edilemez."] },
+      { en: "Monetary behavior should be analyzed by the economist.", tr: "Parasal davranış iktisatçı tarafından analiz edilmelidir.", word: "analyzed", trWord: "analiz edilmelidir", blank: "Monetary behavior should be ___ by the economist.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Monetary behavior", "should be analyzed", "by the economist."], trBlocks: ["Parasal davranış", "iktisatçı tarafından", "analiz edilmelidir."] },
+      { en: "The legal system could be challenged by the citizens.", tr: "Hukuk sistemi vatandaşlar tarafından sorgulanabilir.", word: "challenged", trWord: "sorgulanabilir", blank: "The legal system could be ___ by the citizens.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The legal system", "could be challenged", "by the citizens."], trBlocks: ["Hukuk sistemi", "vatandaşlar tarafından", "sorgulanabilir."] },
+      { en: "The peace treaty might be signed by the diplomatic delegation.", tr: "Barış antlaşması diplomatik heyet tarafından imzalanabilir.", word: "signed", trWord: "imzalanabilir", blank: "The peace treaty might be ___ by the diplomatic delegation.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The peace treaty", "might be signed", "by the diplomatic delegation."], trBlocks: ["Barış antlaşması", "diplomatik heyet tarafından", "imzalanabilir."] },
+      { en: "Political authority should not be weakened by the crisis.", tr: "Siyasi otorite kriz tarafından zayıflatılmamalıdır.", word: "weakened", trWord: "zayıflatılmamalıdır", blank: "Political authority should not be ___ by the crisis.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Political authority", "should not be weakened", "by the crisis."], trBlocks: ["Siyasi otorite", "kriz tarafından", "zayıflatılmamalıdır."] },
+      { en: "State policies must not be dictated by religious doctrine.", tr: "Devlet politikaları dini doktrin tarafından dikte edilmemelidir.", word: "dictated", trWord: "dikte edilmemelidir", blank: "State policies must not be ___ by religious doctrine.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["State policies", "must not be dictated", "by religious doctrine."], trBlocks: ["Devlet politikaları", "dini doktrin tarafından", "dikte edilmemelidir."] },
+      { en: "Classic cinema can be studied by humanities scholars.", tr: "Klasik sinemaamp; beşeri bilimler akademisyenleri tarafından incelenebilir.", word: "studied", trWord: "incelenebilir", blank: "Classic cinema can be ___ by humanities scholars.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Classic cinema", "can be studied", "by humanities scholars."], trBlocks: ["Klasik sinema", "beşeri bilimler akademisyenleri tarafından", "incelenebilir."] },
+      { en: "Hostilities could be ended by the diplomatic treaty.", tr: "Düşmanlıklar diplomatik antlaşma tarafından sonlandırılabilir.", word: "ended", trWord: "sonlandırılabilir", blank: "Hostilities could be ___ by the diplomatic treaty.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Hostilities", "could be ended", "by the diplomatic treaty."], trBlocks: ["Düşmanlıklar", "diplomatik antlaşma tarafından", "sonlandırılabilir."] },
+      { en: "Linguistic data cannot be verified without legal documents.", tr: "Dilbilimsel veriler yasal belgeler olmadan doğrulanamaz.", word: "verified", trWord: "doğrulanamaz", blank: "Linguistic data cannot be ___ without legal documents.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Linguistic data", "cannot be verified", "without legal documents."], trBlocks: ["Dilbilimsel veriler", "yasal belgeler olmadan", "doğrulanamaz."] },
+      { en: "Ancient documents should be digitalized by archives.", tr: "Antik belgeler arşivler tarafından dijitalleştirilmelidir.", word: "digitalized", trWord: "dijitalleştirilmelidir", blank: "Ancient documents should be ___ by archives.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Ancient documents", "should be digitalized", "by archives."], trBlocks: ["Antik belgeler", "arşivler tarafından", "dijitalleştirilmelidir."] },
+      { en: "Should the peace treaty be approved by the delegation?", tr: "Barış antlaşması heyet tarafından onaylanmalı mıdır?", word: "approved", trWord: "onaylanmalı mıdır", blank: "Should the peace treaty be ___ by the delegation?", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Soru Yapıları"], enBlocks: ["Should the peace treaty", "be approved", "by the delegation?"], trBlocks: ["Barış antlaşması", "heyet tarafından", "onaylanmalı mıdır?"] },
+      { en: "Can cognitive behavior be predicted by a psychologist?", tr: "Bilişsel davranış bir psikolog tarafından öngörülebilir mi?", word: "predicted", trWord: "öngörülebilir mi", blank: "Can cognitive behavior be ___ by a psychologist?", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Soru Yapıları"], enBlocks: ["Can cognitive behavior", "be predicted", "by a psychologist?"], trBlocks: ["Bilişsel davranış", "bir psikolog tarafından", "öngörülebilir mi?"] },
+      { en: "Religious doctrines must not be enforced by political authorities.", tr: "Dini doktrinler siyasi otoriteler tarafından uygulanmamalıdır.", word: "enforced", trWord: "uygulanmamalıdır", blank: "Religious doctrines must not be ___ by political authorities.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Religious doctrines", "must not be enforced", "by political authorities."], trBlocks: ["Dini doktrinler", "siyasi otoriteler tarafından", "uygulanmamalıdır."] }
+    ],
+    3: [
+      { en: "Historical documents are carefully preserved in state archives.", tr: "Tarihsel belgeler devlet arşivlerinde özenle korunur.", word: "preserved", trWord: "korunur", blank: "Historical documents are carefully ___ in state archives.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Historical documents", "are carefully preserved", "in state archives."], trBlocks: ["Tarihsel belgeler", "devlet arşivlerinde", "özenle korunur."] },
+      { en: "The peace treaty was newly signed by the diplomatic delegation.", tr: "Barış antlaşması diplomatik heyet tarafından yeni imzalandı.", word: "signed", trWord: "imzalandı", blank: "The peace treaty was newly ___ by the diplomatic delegation.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The peace treaty", "was newly signed", "by the diplomatic delegation."], trBlocks: ["Barış antlaşması", "diplomatik heyet tarafından", "yeni imzalandı."] },
+      { en: "The economic policies were significantly changed by the government.", tr: "Ekonomik politikalar hükümet tarafından önemli ölçüde değiştirildi.", word: "changed", trWord: "değiştirildi", blank: "The economic policies were significantly ___ by the government.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The economic policies", "were significantly changed", "by the government."], trBlocks: ["Ekonomik politikalar", "hükümet tarafından", "önemli ölçüde değiştirildi."] },
+      { en: "Cognitive behavior was closely observed by psychologists.", tr: "Bilişsel davranış psikologlar tarafından yakından gözlemlendi.", word: "observed", trWord: "gözlemlendi", blank: "Cognitive behavior was closely ___ by psychologists.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Cognitive behavior", "was closely observed", "by psychologists."], trBlocks: ["Bilişsel davranış", "psikologlar tarafından", "yakından gözlemlendi."] },
+      { en: "Political authority was gradually weakened by social crisis.", tr: "Siyasi otorite toplumsal kriz tarafından kademeli olarak zayıflatıldı.", word: "weakened", trWord: "zayıflatıldı", blank: "Political authority was gradually ___ by social crisis.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Political authority", "was gradually weakened", "by social crisis."], trBlocks: ["Siyasi otorite", "toplumsal kriz tarafından", "kademeli olarak zayıflatıldı."] },
+      { en: "The monetary behavior of citizens is highly influenced by interest rates.", tr: "Vatandaşların parasal davranışı faiz oranlarından yüksek derecede etkilenir.", word: "influenced", trWord: "etkilenir", blank: "The monetary behavior of citizens is highly ___ by interest rates.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The monetary behavior of citizens", "is highly influenced", "by interest rates."], trBlocks: ["Vatandaşların parasal davranışı", "faiz oranlarından", "yüksek derecede etkilenir."] },
+      { en: "The legal system was thoroughly examined by scholars of law.", tr: "Hukuk sistemi hukuk akademisyenleri tarafından etraflıca incelendi.", word: "examined", trWord: "incelendi", blank: "The legal system was thoroughly ___ by scholars of law.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["The legal system", "was thoroughly examined", "by scholars of law."], trBlocks: ["Hukuk sistemi", "hukuk akademisyenleri tarafından", "etraflıca incelendi."] },
+      { en: "Cinema history is frequently studied in humanities departments.", tr: "Sinema tarihi beşeri bilimler bölümlerinde sıklıkla araştırılır.", word: "studied", trWord: "araştırılır", blank: "Cinema history is frequently ___ in humanities departments.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Cinema history", "is frequently studied", "in humanities departments."], trBlocks: ["Sinema tarihi", "beşeri bilimler bölümlerinde", "sıklıkla araştırılır."] },
+      { en: "Hostilities were temporarily stopped along the border.", tr: "Sınır boyunca düşmanlıklar geçici olarak durduruldu.", word: "stopped", trWord: "durduruldu", blank: "Hostilities were temporarily ___ along the border.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Hostilities", "were temporarily stopped", "along the border."], trBlocks: ["Sınır boyunca", "düşmanlıklar", "geçici olarak durduruldu."] },
+      { en: "Linguistic variations are easily documented in modern reports.", tr: "Modern raporlarda dilbilimsel varyasyonlar kolayca belgelenir.", word: "documented", trWord: "belgelenir", blank: "Linguistic variations are easily ___ in modern reports.", grammarTags: ["Edilgen Yapı (Passive)", "Geniş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Linguistic variations", "are easily documented", "in modern reports."], trBlocks: ["Modern raporlarda", "dilbilimsel varyasyonlar", "kolayca belgelenir."] },
+      { en: "Can cognitive conflict be successfully resolved through therapy?", tr: "Bilişsel çatışma terapi yoluyla başarıyla çözülebilir mi?", word: "resolved", trWord: "çözülebilir mi", blank: "Can cognitive conflict be successfully ___ through therapy?", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Soru Yapıları"], enBlocks: ["Can cognitive conflict", "be successfully resolved", "through therapy?"], trBlocks: ["Bilişsel çatışma", "terapi yoluyla", "başarıyla çözülebilir mi?"] },
+      { en: "State policies must be rigorously evaluated by independent experts.", tr: "Devlet politikaları bağımsız uzmanlar tarafından titizlikle değerlendirilmelidir.", word: "evaluated", trWord: "değerlendirilmelidir", blank: "State policies must be rigorously ___ by independent experts.", grammarTags: ["Edilgen Yapı (Passive)", "Modallar", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["State policies", "must be rigorously evaluated", "by independent experts."], trBlocks: ["Devlet politikaları", "bağımsız uzmanlar tarafından", "titizlikle değerlendirilmelidir."] },
+      { en: "Ancient manuscripts were beautifully translated by the scholar.", tr: "Antik el yazmaları akademisyen tarafından güzelce çevrildi.", word: "translated", trWord: "çevrildi", blank: "Ancient manuscripts were beautifully ___ by the scholar.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Ancient manuscripts", "were beautifully translated", "by the scholar."], trBlocks: ["Antik el yazmaları", "akademisyen tarafından", "güzelce çevrildi."] },
+      { en: "Religious doctrines were universally accepted throughout the empire.", tr: "Dini doktrinler imparatorluk genelinde evrensel olarak kabul edildi.", word: "accepted", trWord: "kabul edildi", blank: "Religious doctrines were universally ___ throughout the empire.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zaman", "İsim Tamlaması", "Edat Takımı (Prepositional Phrase)"], enBlocks: ["Religious doctrines", "were universally accepted", "throughout the empire."], trBlocks: ["Dini doktrinler", "imparatorluk genelinde", "evrensel olarak kabul edildi."] },
+      { en: "Economic theories had been deeply criticized before the crisis.", tr: "Krizden önce ekonomik teoriler derinlemesine eleştirilmişti.", word: "criticized", trWord: "eleştirilmişti", blank: "Economic theories had been deeply ___ before the crisis.", grammarTags: ["Edilgen Yapı (Passive)", "Geçmiş Zamanın Hikayesi (Past Perfect)", "İsim Tamlaması", "Zaman Cümleciği (Time Clause)"], enBlocks: ["Economic theories", "had been deeply criticized", "before the crisis."], trBlocks: ["Krizden önce", "ekonomik teoriler", "derinlemesine eleştirilmişti."] }
+    ]
+  };
+
+  function generateUnit10Questions(unitId, lessonId, sentences) {
     const qList = [];
     const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
     const localEnsurePunctuation = (str) => {
@@ -921,191 +981,287 @@
       return trimmed + ".";
     };
 
-    for (let i = 0; i < 15; i++) {
-      const s = sentences[i % sentences.length];
-      const qId = `u${unitId}l${lessonId}_q${i + 1}`;
-      const typeSelector = i;
-      const gTags = s.grammarTags || ["Edilgen Yapı (Passive)", "Edat Takımı (Prepositional Phrase)"];
+    function getAuxiliary(en, word) {
+      const auxList = [
+        "has been", "had been", "will be", "would be", "should be", "must be",
+        "can be", "could be", "might be", "will not be", "should not be",
+        "must not be", "cannot be", "could not be", "might not be",
+        "are carefully", "was newly", "were significantly", "was closely",
+        "was gradually", "is highly", "was thoroughly", "is frequently",
+        "were temporarily", "are easily", "be successfully", "must be rigorously",
+        "were beautifully", "were universally", "had been deeply",
+        "is", "are", "was", "were", "be", "been"
+      ];
+      for (const aux of auxList) {
+        if (en.toLowerCase().includes(aux + " " + word.toLowerCase())) {
+          const startIdx = en.toLowerCase().indexOf(aux + " " + word.toLowerCase());
+          return en.substring(startIdx, startIdx + aux.length);
+        }
+      }
+      const regex = new RegExp(`\\b([\\w']+(?:\\s+[\\w']+)?)\\s+${word}\\b`, 'i');
+      const match = en.match(regex);
+      return match ? match[1] : "is";
+    }
 
-      if (typeSelector === 0 || typeSelector === 14) {
-        // Multiple choice (Eng -> Tr)
-        const wrongs = shuffle(allLessonSentences.filter(x => x.en !== s.en)).slice(0, 3);
-        const options = shuffle([localEnsurePunctuation(s.tr), localEnsurePunctuation(wrongs[0].tr), localEnsurePunctuation(wrongs[1].tr), localEnsurePunctuation(wrongs[2].tr)]);
+    for (let i = 0; i < 15; i++) {
+      const qId = `u${unitId}l${lessonId}_q${i + 1}`;
+      const s = sentences[i % sentences.length];
+      const gTags = s.grammarTags || ["Edilgen Yapı (Passive)"];
+
+      if (i === 0) {
+        const pairs = [];
+        for (let j = 0; j < 4; j++) {
+          const sj = sentences[j];
+          const enPhrase = sj.en.replace(sj.en.split(/\s+/).slice(0, 2).join(" ") + " ", "");
+          const trPhrase = sj.tr.replace(sj.tr.split(/\s+/).slice(0, 1).join(" ") + " ", "");
+          pairs.push({ left: enPhrase, right: trPhrase });
+        }
+        qList.push({
+          id: qId,
+          type: "matching",
+          prompt: "Akademik edilgen ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+          grammarTags: gTags,
+          pairs: shuffle(pairs),
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 1) {
+        const pairs = [];
+        for (let j = 4; j < 8; j++) {
+          const sj = sentences[j];
+          const enPhrase = sj.en.replace(sj.en.split(/\s+/).slice(0, 2).join(" ") + " ", "");
+          const trPhrase = sj.tr.replace(sj.tr.split(/\s+/).slice(0, 1).join(" ") + " ", "");
+          pairs.push({ left: enPhrase, right: trPhrase });
+        }
+        qList.push({
+          id: qId,
+          type: "matching",
+          prompt: "Akademik edilgen ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+          grammarTags: gTags,
+          pairs: shuffle(pairs),
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 2) {
+        const s2 = sentences[2];
+        const base = s2.word;
+        const wrongs = [base + "ing", base.replace(/ed$/, "es"), base.replace(/ed$/, "")].filter(w => w !== base);
+        const options = shuffle([base, ...wrongs].slice(0, 4));
+        qList.push({
+          id: qId,
+          type: "fill-blank-dropdown",
+          prompt: `Boşluğa gelecek en uygun kelimeyi seçin: "${localEnsurePunctuation(s2.tr)}"`,
+          sentence: s2.blank || s2.en.replace(s2.word, "___"),
+          options: options,
+          correctIndex: options.indexOf(base),
+          enSentence: s2.en,
+          grammarTags: gTags,
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 3) {
+        const s3 = sentences[3];
+        const base = s3.word;
+        const wrongs = [base + "ing", base.replace(/ed$/, "es"), base.replace(/ed$/, "")].filter(w => w !== base);
+        const options = shuffle([base, ...wrongs].slice(0, 4));
+        qList.push({
+          id: qId,
+          type: "fill-blank",
+          prompt: "Boşluğu doldurun",
+          sentence: s3.blank || s3.en.replace(s3.word, "___"),
+          options: options,
+          correctIndex: options.indexOf(base),
+          enSentence: s3.en,
+          translation: localEnsurePunctuation(s3.tr),
+          grammarTags: gTags,
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 4) {
+        const s0 = sentences[0];
+        const wrongs = shuffle(sentences.filter(x => x.en !== s0.en)).slice(0, 3);
+        const options = shuffle([localEnsurePunctuation(s0.tr), localEnsurePunctuation(wrongs[0].tr), localEnsurePunctuation(wrongs[1].tr), localEnsurePunctuation(wrongs[2].tr)]);
         qList.push({
           id: qId,
           type: "multiple-choice",
-          prompt: `"${localEnsurePunctuation(s.en)}" cümlesinin Türkçe karşılığı hangisidir?`,
+          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
           options: options,
-          correctIndex: options.indexOf(localEnsurePunctuation(s.tr)),
-          enSentence: s.en,
+          correctIndex: options.indexOf(localEnsurePunctuation(s0.tr)),
+          enSentence: s0.en,
           isEngToTr: true,
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 9) {
-        // Multiple choice (Tr -> Eng)
-        const wrongs = shuffle(allLessonSentences.filter(x => x.en !== s.en)).slice(0, 3);
-        const options = shuffle([localEnsurePunctuation(s.en), localEnsurePunctuation(wrongs[0].en), localEnsurePunctuation(wrongs[1].en), localEnsurePunctuation(wrongs[2].en)]);
+      } else if (i === 5) {
+        const s1 = sentences[1];
+        const wrongs = shuffle(sentences.filter(x => x.en !== s1.en)).slice(0, 3);
+        const options = shuffle([localEnsurePunctuation(s1.en), localEnsurePunctuation(wrongs[0].en), localEnsurePunctuation(wrongs[1].en), localEnsurePunctuation(wrongs[2].en)]);
         qList.push({
           id: qId,
           type: "multiple-choice",
-          prompt: `"${localEnsurePunctuation(s.tr)}" cümlesinin İngilizce karşılığı hangisidir?`,
+          prompt: "Cümlenin en uygun İngilizce karşılığını seçin:",
           options: options,
-          correctIndex: options.indexOf(localEnsurePunctuation(s.en)),
-          enSentence: s.en,
+          correctIndex: options.indexOf(localEnsurePunctuation(s1.en)),
+          enSentence: s1.en,
           isEngToTr: false,
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 1) {
-        // Fill blank dropdown (V3 verb)
-        const wrongs = [s.word + "ing", s.word.replace(/ed$/, "es"), s.word.replace(/ed$/, "")];
-        const options = shuffle([s.word, wrongs[0], wrongs[1], wrongs[2]]);
+      } else if (i === 6) {
+        const s4 = sentences[4];
+        const targetBlocks = s4.trBlocks || [s4.tr];
+        const dists = ["belirtilmiştir.", "tetiklendi.", "sorgulanmalıdır."].filter(w => !targetBlocks.includes(w));
         qList.push({
           id: qId,
-          type: "fill-blank-dropdown",
-          prompt: `Cümleyi tamamlayın: "${localEnsurePunctuation(s.tr)}"`,
-          sentence: s.blank || s.en.replace(s.word, "___"),
-          options: options,
-          correctIndex: options.indexOf(s.word),
-          enSentence: s.en,
+          type: "word-bank",
+          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+          translation: localEnsurePunctuation(s4.tr),
+          words: shuffle([...targetBlocks, ...dists]),
+          correctOrder: targetBlocks,
+          enSentence: s4.en,
+          isEngToTr: true,
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 10) {
-        // Fill blank dropdown (auxiliary verb / modal)
-        const aux = getAuxiliary(s.en, s.word);
-        const distractors = ["is", "was", "will be", "have been", "must be", "can be", "should be"].filter(a => a !== aux).slice(0, 3);
-        const options = shuffle([aux, ...distractors]);
-        qList.push({
-          id: qId,
-          type: "fill-blank-dropdown",
-          prompt: `Boşluğa uygun edilgen yardımcı fiil/modal yapısını seçin: "${localEnsurePunctuation(s.tr)}"`,
-          sentence: s.en.replace(new RegExp(`\b${aux}\b`), "___"),
-          options: options,
-          correctIndex: options.indexOf(aux),
-          enSentence: s.en,
-          grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
-        });
-      } else if (typeSelector === 2) {
-        // Fill blank text
-        qList.push({
-          id: qId,
-          type: "fill-blank-text",
-          prompt: `Boşluğu uygun edilgen fiil haliyle doldurun (İngilizce): "${localEnsurePunctuation(s.tr)}"`,
-          sentence: s.blank || s.en.replace(s.word, "___"),
-          correct: s.word,
-          enSentence: s.en,
-          grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
-        });
-      } else if (typeSelector === 3 || typeSelector === 11) {
-        // Word bank
-        const targetWords = s.en.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""));
-        const distractors = ["the", "system", "data", "process"].filter(w => !targetWords.includes(w));
+      } else if (i === 7) {
+        const s5 = sentences[5];
+        const targetBlocks = s5.enBlocks || s5.en.split(/\s+/);
+        const dists = ["will be", "reform", "the system"].filter(w => !targetBlocks.includes(w));
         qList.push({
           id: qId,
           type: "word-bank",
           prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: localEnsurePunctuation(s.tr),
-          words: shuffle([...targetWords, ...distractors]),
-          correctOrder: targetWords,
-          enSentence: s.en,
+          translation: localEnsurePunctuation(s5.tr),
+          words: shuffle([...targetBlocks, ...dists]),
+          correctOrder: targetBlocks,
+          enSentence: s5.en,
           isEngToTr: false,
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 4 || typeSelector === 13) {
-        // Error finder
-        const baseWord = s.word.toLowerCase();
-        let errorWord = baseWord.endsWith('ed') ? baseWord.replace(/ed$/, 'ing') : baseWord + 'ing';
-        if (errorWord === baseWord) errorWord = baseWord + 'ed';
-        
-        const originalSentence = localEnsurePunctuation(s.en);
-        const regex = new RegExp(`\b${s.word}\b`, 'i');
-        const incorrectSentence = originalSentence.replace(regex, errorWord);
-        const tokens = incorrectSentence.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""));
-        const errIdx = tokens.findIndex(t => t.toLowerCase() === errorWord.toLowerCase());
+      } else if (i === 8) {
+        const s11 = sentences[11];
+        qList.push({
+          id: qId,
+          type: "translation-text",
+          prompt: `"${localEnsurePunctuation(s11.en)}" ifadesini Türkçe'ye çevirin:`,
+          correctSentence: localEnsurePunctuation(s11.tr),
+          enSentence: s11.en,
+          isEngToTr: true,
+          grammarTags: gTags,
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 9) {
+        const s6 = sentences[6];
+        const base = s6.word;
+        const errWord = base + "ing";
+        const tokens = s6.en.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").split(/\s+/);
+        const errIdx = tokens.findIndex(t => t.toLowerCase() === base.toLowerCase());
+        if (errIdx !== -1) {
+          tokens[errIdx] = errWord;
+        }
         qList.push({
           id: qId,
           type: "error-finder",
           prompt: "Cümledeki dilbilgisel hatayı (yanlış fiil çekimini) bulun:",
-          sentenceTokens: tokens.length > 0 ? tokens : [errorWord],
+          sentenceTokens: tokens,
           correctIndex: errIdx !== -1 ? errIdx : 0,
-          suggestedCorrection: s.word,
-          translation: s.tr,
+          suggestedCorrection: base,
+          translation: localEnsurePunctuation(s6.tr),
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 5) {
-        // Structure match with explicit spiral review options
-        const regex = new RegExp(`\b${s.word}\b`, 'i');
-        const bolded = s.en.replace(regex, `<strong>$&</strong>`);
+      } else if (i === 10) {
+        const s7 = sentences[7];
+        qList.push({
+          id: qId,
+          type: "spotlight",
+          prompt: `Projektörle aydınlatılan '${s7.word}' eyleminin cümledeki edilgen işlevi nedir?`,
+          paragraph: s7.en,
+          highlightChunk: s7.word,
+          options: ["Edilgen Ortaç (Past Participle - V3)", "Etken Ortaç (Present Participle - ing)", "Mastar Eki (Infinitive)", "Bağlaç (Conjunction)"],
+          correctIndex: 0,
+          translation: localEnsurePunctuation(s7.tr),
+          grammarTags: gTags,
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 11) {
+        const s8 = sentences[8];
+        const aux = getAuxiliary(s8.en, s8.word);
+        const bolded = s8.en.replace(new RegExp(`\\b${aux}\\s+${s8.word}\\b`), "<strong>$&</strong>");
+        
+        let correctOption = "";
+        let options = [];
+        if (lessonId === 28) {
+          correctOption = "Zaman Tabanlı Edilgen Yapı (Passive Voice)";
+          options = ["Zaman Tabanlı Edilgen Yapı (Passive Voice)", "Etken Çatı (Active Voice)", "Mastar Köprüsü (Infinitive Linker)", "Zarf Tümleci (Adverbial)"];
+        } else if (lessonId === 29) {
+          correctOption = "Modal Tabanlı Edilgen Yapı (Modal Passive)";
+          options = ["Modal Tabanlı Edilgen Yapı (Modal Passive)", "Zaman Tabanlı Edilgen Yapı (Passive Voice)", "Etken Modal Yapısı (Active Modal)", "Edat Takımı (Prepositional Phrase)"];
+        } else {
+          correctOption = "Bölünmüş Edilgen Yapı (Split Passive)";
+          options = ["Bölünmüş Edilgen Yapı (Split Passive)", "Saf Zaman Çekimi (Simple Tense)", "Kişisiz Edilgen (Impersonal Passive)", "Etken Yüklem"];
+        }
+
         qList.push({
           id: qId,
           type: "structure-match",
           prompt: "Aşağıdaki cümlede koyu yazılan edilgen eylemin dil bilgisi yapısını seçiniz:",
           sentence: bolded,
-          options: ["Edilgen Ortaç (Past Participle - V3)", "Etken Ortaç (Present Participle - ing)", "İsim Tamlaması Nesnesi", "Edat Takımı Yüklemi"],
-          correctIndex: 0,
-          translation: s.tr,
+          options: options,
+          correctIndex: options.indexOf(correctOption),
+          translation: localEnsurePunctuation(s8.tr),
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 6) {
-        // Spotlight
-        qList.push({
-          id: qId,
-          type: "spotlight",
-          prompt: `Projektörle aydınlatılan '${s.word}' eyleminin cümledeki edilgen işlevi nedir?`,
-          paragraph: s.en,
-          highlightChunk: s.word,
-          options: ["Edilgen Ortaç (Past Participle - V3)", "Saf Modal Yardımcısı", "İsim+Edat Bağlacı", "Etken Yüklem"],
-          correctIndex: 0,
-          translation: s.tr,
-          grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
-        });
-      } else if (typeSelector === 7 || typeSelector === 12) {
-        // True-false
-        const makeBug = typeSelector === 7;
-        let phrase = s.en;
-        let trText = s.tr;
+      } else if (i === 12) {
+        const s9 = sentences[9];
+        const makeBug = true;
+        let phrase = s9.en;
+        let trExplanation = "";
         let correctAns = "true";
         if (makeBug) {
           correctAns = "false";
-          const regex = new RegExp(`\b${s.word}\b`, 'i');
-          phrase = s.en.replace(regex, s.word + "ing");
-          trText = "Hata tespiti: Edilgen (Passive) olması gereken bu yapıda aktif sıfat-fiil (-ing) kullanılmıştır.";
-        } else {
-          trText = `Açıklama: '${s.en}' cümlesi edilgen çatı kuralına ve önceki ünitelerdeki edat/tamlama kalıplarına tamamen uygundur.`;
+          phrase = phrase.replace(new RegExp(`\\b${s9.word}\\b`), s9.word.replace(/ed$/, ""));
+          trExplanation = "Hata tespiti: Edilgen (Passive) çatı kuralına göre yardımcı fiilden sonra fiilin 3. hali (V3) kullanılmalıdır.";
         }
         qList.push({
           id: qId,
           type: "true-false",
-          prompt: "Aşağıdaki cümlenin edilgen yapısı ve spiralleşen tamlamaları gramer açısından doğru mudur?",
+          prompt: "Aşağıdaki cümlenin edilgen yapısı gramer açısından doğru mudur?",
           englishPhrase: phrase,
-          turkishTranslation: trText,
+          turkishTranslation: trExplanation,
           correctAnswer: correctAns,
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
-      } else if (typeSelector === 8) {
-        // Multiple fill blank
-        const aux = getAuxiliary(s.en, s.word);
-        let sentenceWithGaps = s.en;
-        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\b${aux}\b`), "___");
-        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\b${s.word}\b`), "___");
+      } else if (i === 13) {
+        const s14 = sentences[14];
+        qList.push({
+          id: qId,
+          type: "translation-text",
+          prompt: `"${localEnsurePunctuation(s14.en)}" ifadesini Türkçe'ye çevirin:`,
+          correctSentence: localEnsurePunctuation(s14.tr),
+          enSentence: s14.en,
+          isEngToTr: true,
+          grammarTags: gTags,
+          createdAt: "2026-07-27T19:00:00+03:00"
+        });
+      } else if (i === 14) {
+        const s10 = sentences[10];
+        const aux = getAuxiliary(s10.en, s10.word);
+        let sentenceWithGaps = s10.en;
+        const escapedAux = aux.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const escapedWord = s10.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        
+        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\\b${escapedAux}\\b`), "___");
+        sentenceWithGaps = sentenceWithGaps.replace(new RegExp(`\\b${escapedWord}\\b`), "___");
+        
         qList.push({
           id: qId,
           type: "multiple-fill-blank",
           prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
           sentence: sentenceWithGaps,
-          corrects: [aux, s.word],
-          translation: s.tr,
+          corrects: [aux, s10.word],
+          translation: localEnsurePunctuation(s10.tr),
           grammarTags: gTags,
-          createdAt: "2026-07-23T19:15:00+03:00"
+          createdAt: "2026-07-27T19:00:00+03:00"
         });
       }
     }
@@ -1113,17 +1269,17 @@
   }
 
   // Mutate Unit 10 lessons dynamically with a single 15-question exercise
-  if (typeof lessons !== 'undefined' && typeof unit10LessonSentences !== 'undefined') {
+  if (typeof lessons !== 'undefined') {
     // Topic update for edits history and descriptions
     if (typeof rawTopics !== 'undefined') {
-      const topic9 = rawTopics.find(t => t.id === 9);
-      if (topic9) {
-        topic9.desc = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
-        topic9.numLessons = 4;
-        topic9.edits = topic9.edits || [];
-        if (!topic9.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
-          topic9.edits.push({
-            date: "2026-07-20T03:20:00+03:00",
+      const topic10 = rawTopics.find(t => t.id === 10);
+      if (topic10) {
+        topic10.desc = "Zaman tabanlı, modal tabanlı ve bölünmüş/gelişmiş akademik edilgen yapılar";
+        topic10.numLessons = 3;
+        topic10.edits = topic10.edits || [];
+        if (!topic10.edits.some(e => e.date === "2026-07-27T19:00:00+03:00")) {
+          topic10.edits.push({
+            date: "2026-07-27T19:00:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
           });
@@ -1133,13 +1289,13 @@
 
     // Units array update for banner rendering
     if (typeof units !== 'undefined') {
-      const unit9 = units.find(u => u.id === 9);
-      if (unit9) {
-        unit9.description = "Edilgen çatıdaki cümle yapıları ve zamanlarla çekimleri";
-        unit9.edits = unit9.edits || [];
-        if (!unit9.edits.some(e => e.date === "2026-07-20T03:20:00+03:00")) {
-          unit9.edits.push({
-            date: "2026-07-20T03:20:00+03:00",
+      const unit10 = units.find(u => u.id === 10);
+      if (unit10) {
+        unit10.description = "Zaman tabanlı, modal tabanlı ve bölünmüş/gelişmiş akademik edilgen yapılar";
+        unit10.edits = unit10.edits || [];
+        if (!unit10.edits.some(e => e.date === "2026-07-27T19:00:00+03:00")) {
+          unit10.edits.push({
+            date: "2026-07-27T19:00:00+03:00",
             desc: "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, her ders için 15 soruluk tek alıştırma yapıldı, basitten zora pedagojik aşamalandırma ve farklı soru tipleri eklendi.",
             type: "custom"
           });
@@ -1148,20 +1304,15 @@
     }
 
     lessons.forEach(lesson => {
-      if (lesson.unitId === 9) {
+      if (lesson.unitId === 10) {
         const lessonIdx = lesson.id - 28; // startLessonId is 28
-        let sentences = unit10LessonSentences[lessonIdx + 1] || [];
-        
-        // Ensure Lesson 29 has 15 sentences by adding the extras
-        if (lesson.id === 29) {
-          sentences = [...sentences, ...extraLesson29Sentences];
-        }
+        let sentences = myUnit10LessonSentences[lessonIdx + 1] || [];
 
         if (sentences.length > 0) {
-          lesson.createdAt = "2026-07-20T03:20:00+03:00";
+          lesson.createdAt = "2026-07-27T19:00:00+03:00";
           
           // Generate 15 distinct questions
-          const generatedQuestions = generateUnit10Questions(9, lesson.id, sentences, sentences);
+          const generatedQuestions = generateUnit10Questions(10, lesson.id, sentences);
           
           lesson.questions = [];
           lesson.exercises = [
@@ -1169,7 +1320,7 @@
               id: `u10l${lesson.id}ex1`,
               title: "Alıştırma 1: Edilgen Yapı Çalışması",
               description: "Pedagojik aşamalı edilgen çatı pekiştirme alıştırması (15 Soru)",
-              createdAt: "2026-07-20T03:20:00+03:00",
+              createdAt: "2026-07-27T19:00:00+03:00",
               questions: generatedQuestions
             }
           ];
@@ -3351,359 +3502,369 @@ const chapter104Data = {
         {
           id: "c104_l1_ex1",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 1: Giriş ve Yapısal Eşleştirme",
-          description: "Yarı-modalların temel biçimlerini ve Türkçe karşılıklarını tanıma.",
+          title: "Alıştırma 1: Öbek Düzeyi (Yetenek ve Zorunluluk)",
+          description: "Yarı-modalların yetenek ve zorunluluk biçimlerinin (be able to, have to, needn't, had to) öbek düzeyinde Türkçe karşılıklarıyla tespiti.",
           questions: [
             {
               id: "c104_l1_ex1_q1",
               type: "matching",
-              prompt: "Yarı-modal yapılarını Türkçe karşılıklarıyla eşleştirin:",
-              grammarTags: ["Yarı-Modallar", "Yetenek", "Zorunluluk"],
+              prompt: "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               pairs: [
-                { left: "be able to", right: "yapabilmek / -ebilmek" },
-                { left: "have to", right: "yapmak zorunda olmak" },
-                { left: "had to", right: "yapmak zorunda kaldı" },
-                { left: "needn't", right: "yapmasına gerek yok" }
+                { left: "have to examine the legal documents", right: "yasal belgeleri incelemek zorundadır" },
+                { left: "was able to reform the monetary system", right: "parasal sistemi reforme etmeyi başardı" },
+                { left: "needn't explain the symbolic meaning", right: "sembolik anlamı açıklamasına gerek yoktur" },
+                { left: "had to preserve the historical archives", right: "tarihi arşivleri korumak zorunda kaldı" }
               ]
             },
             {
               id: "c104_l1_ex1_q2",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
+              prompt: "\"Scholars of sociology have to examine the legal documents before the government changes the policy.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Bilim insanları yeni veri topladıktan sonra hipotezlerini güncellemek zorundadır.",
-                "Bilim insanları yeni veri toplamadan önce hipotezlerini güncelleyebilir.",
-                "Bilim insanları yeni veri toplasa bile hipotezlerini güncellemek zorunda değildir.",
-                "Bilim insanları yeni veri topladıklarında hipotezlerini güncelleyeceklerdir."
+                "Hükümet politikayı değiştirmeden önce sosyoloji akademisyenleri yasal belgeleri incelemek zorundadır.",
+                "Hükümet politikayı değiştirdiğinde sosyoloji akademisyenleri yasal belgeleri inceleyebilirdi.",
+                "Hükümet politikayı değiştirmese bile sosyoloji akademisyenleri yasal belgeleri incelemek zorunda değildir.",
+                "Sosyoloji akademisyenleri yasal belgeleri incelediğinde hükümet politikayı zaten değiştirmişti."
               ],
               correctIndex: 0,
-              enSentence: "Scientists have to update their hypothesis after collecting new data.",
+              enSentence: "Scholars of sociology have to examine the legal documents before the government changes the policy.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q3",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Yetenek"],
+              prompt: "\"The committee was able to reform the monetary system despite the intense criticism from citizens.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Yeni mikroskopla araştırmacılar tek molekülleri gözlemleyebilmektedir.",
-                "Yeni mikroskop sayesinde araştırmacılar tek molekülleri gözlemlemek zorundadır.",
-                "Araştırmacılar yeni mikroskop olmadan tek molekülleri gözlemleyemezler.",
-                "Yeni mikroskop araştırmacıların tek molekülleri gözlemlemesine izin vermeyebilir."
+                "Komite, vatandaşların yoğun eleştirilerine rağmen parasal sistemi reforme etmeyi başardı.",
+                "Komite, vatandaşların yoğun eleştirilerinden dolayı parasal sistemi reforme etmek zorunda kaldı.",
+                "Vatandaşların yoğun eleştirileri, komitenin parasal sistemi reforme etmesini engelledi.",
+                "Komite parasal sistemi reforme edebildi çünkü vatandaşlardan hiçbir eleştiri gelmedi."
               ],
               correctIndex: 0,
-              enSentence: "With the new microscope, researchers are able to observe single molecules.",
+              enSentence: "The committee was able to reform the monetary system despite the intense criticism from citizens.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q4",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Yetenek"],
+              prompt: "\"Film critics needn't explain the symbolic meaning of the ancient ruins in the documentary.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Güç kesintisine rağmen ekip deney verilerini kaydetmeyi başardı.",
-                "Güç kesintisinden dolayı ekip deney verilerini kaydetmek zorunda kaldı.",
-                "Güç kesinti olsa bile ekip deney verilerini kaydedebilecektir.",
-                "Ekip güç kesintisine rağmen deney verilerini kaydetmek istemedi."
+                "Film eleştirmenlerinin belgeseldeki antik kalıntıların sembolik anlamını açıklamasına gerek yoktur.",
+                "Film eleştirmenleri belgeseldeki antik kalıntıların sembolik anlamını açıklamak zorundadır.",
+                "Belgeseldeki antik kalıntıların sembolik anlamı film eleştirmenleri tarafından açıklanamaz.",
+                "Film eleştirmenleri antik kalıntıların sembolik anlamını belgeselde açıklamayabilirler."
               ],
               correctIndex: 0,
-              enSentence: "Despite the power failure, the team was able to save the experimental data.",
+              enSentence: "Film critics needn't explain the symbolic meaning of the ancient ruins in the documentary.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q5",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
+              prompt: "\"During the war, the parliament had to preserve all historical archives of the nation in a safe location.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Mühendisler yapısal çökmeyi önlemek için şasiyi modifiye etmek zorunda kaldı.",
-                "Mühendisler yapısal çökmeyi önlemek amacıyla şasiyi modifiye etmek isteyebilir.",
-                "Şasideki yapısal çökme mühendisleri modifikasyon yapmaktan alıkoydu.",
-                "Mühendisler şasiyi modifiye ettiklerinde yapısal çökmeyi önlediler."
+                "Savaş sırasında parlamento, ulusun tüm tarihi arşivlerini güvenli bir yerde korumak zorunda kaldı.",
+                "Savaş sırasında parlamentonun ulusun tarihi arşivlerini korumasına gerek kalmadı.",
+                "Parlamento savaş sırasında ulusun tarihi arşivlerini güvenli bir yerde korumayı başardı.",
+                "Savaş bittiğinde parlamento ulusun tarihi arşivlerini korumak zorunda kalacaktı."
               ],
               correctIndex: 0,
-              enSentence: "The engineers had to modify the chassis to prevent structural failure.",
+              enSentence: "During the war, the parliament had to preserve all historical archives of the nation in a safe location.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q6",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
+              prompt: "\"Researchers are able to analyze the demographic survey when the institute publishes the official results.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Gösterge kırmızıya dönmedikçe sensörü kalibre etmek zorunda değilsiniz.",
-                "Gösterge kırmızıya döner dönmez sensörü kalibre etmelisiniz.",
-                "Gösterge kırmızıya dönmese bile sensörü kalibre etmeniz gerekir.",
-                "Sensör gösterge kırmızıya döndüğü için kalibre edilmek zorundadır."
+                "Enstitü resmi sonuçları yayınladığında, araştırmacılar demografik anketi analiz edebilirler.",
+                "Araştırmacılar demografik anketi analiz etmek zorundadır çünkü enstitü resmi sonuçları yayınlayacaktır.",
+                "Enstitü resmi sonuçları yayınlamadan önce araştırmacılar demografik anketi analiz edemezler.",
+                "Araştırmacılar demografik anketi analiz etmeyi başardılar çünkü enstitü resmi sonuçları yayınladı."
               ],
               correctIndex: 0,
-              enSentence: "You don't have to calibrate the sensor unless the indicator turns red.",
+              enSentence: "Researchers are able to analyze the demographic survey when the institute publishes the official results.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q7",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Gereklilik"],
+              prompt: "\"The clinic doesn't have to evaluate the cognitive behavior of the patients unless the court requests a report.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Açık kaynaklı olduğu için araştırmacıların lisansı satın almasına gerek yoktur.",
-                "Açık kaynaklı olması araştırmacıların lisansı satın almasını zorunlu kılar.",
-                "Araştırmacılar lisansı satın almak zorundadır çünkü sistem açık kaynaklı değildir.",
-                "Lisans açık kaynaklı olduğunda araştırmacılar onu satın alabilirler."
+                "Mahkeme bir rapor talep etmedikçe klinik, hastaların bilişsel davranışlarını değerlendirmek zorunda değildir.",
+                "Klinik hastaların bilişsel davranışlarını değerlendirmek zorundadır çünkü mahkeme bir rapor talep etmiştir.",
+                "Mahkeme bir rapor talep etse bile klinik hastaların bilişsel davranışlarını değerlendiremeyebilir.",
+                "Klinik hastaların bilişsel davranışlarını değerlendirebildi çünkü mahkeme bir rapor talep etmedi."
               ],
               correctIndex: 0,
-              enSentence: "Researchers don't need to purchase the license because it is open source.",
+              enSentence: "The clinic doesn't have to evaluate the cognitive behavior of the patients unless the court requests a report.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q8",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Gereklilik"],
+              prompt: "\"Scholars had to modify their research methodology after they discovered the new historical evidence.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Her saat otomatik çalıştığı için sistem yedeklemesi konusunda endişelenmenize gerek yoktur.",
-                "Sistem yedeklemesi her saat otomatik olarak çalışmak zorundadır.",
-                "Sistem yedeklemesi otomatik çalışmadığı sürece endişelenmeniz gerekir.",
-                "Endişelenmenize gerek yok çünkü sistem yedeklemesi günde bir kez çalışır."
+                "Yeni tarihi kanıtları keşfettikten sonra akademisyenler araştırma metodolojilerini değiştirmek zorunda kaldılar.",
+                "Akademisyenler yeni tarihi kanıtları keşfettiklerinde araştırma metodolojilerini değiştirebilirlerdi.",
+                "Yeni tarihi kanıtların keşfi, akademisyenlerin araştırma metodolojilerini değiştirmelerini gerektirmedi.",
+                "Akademisyenler araştırma metodolojilerini değiştirmek zorunda kaldılar çünkü hiçbir tarihi kanıt keşfedemediler."
               ],
               correctIndex: 0,
-              enSentence: "You needn't worry about the system backup as it runs automatically every hour.",
+              enSentence: "Scholars had to modify their research methodology after they discovered the new historical evidence.",
               isEngToTr: true
             },
             {
               id: "c104_l1_ex1_q9",
               type: "translation-text",
-              prompt: "“We didn't have to write the script since the software was automated.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Yazılım otomatikleştirildiği için kodu yazmak zorunda kalmadık.",
-              enSentence: "We didn't have to write the script since the software was automated.",
+              prompt: "“Under the new guidelines, therapists don't need to obtain written permission from the children's parents.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Yeni yönergeler uyarınca, terapistlerin çocukların ebeveynlerinden yazılı izin almasına gerek yoktur.",
+              enSentence: "Under the new guidelines, therapists don't need to obtain written permission from the children's parents.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"]
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex1_q10",
               type: "translation-text",
-              prompt: "“The team didn't need to hire a consultant because they solved the bug themselves.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Hatayı kendileri çözdükleri için ekibin bir danışman kiralamasına gerek kalmadı.",
-              enSentence: "The team didn't need to hire a consultant because they solved the bug themselves.",
+              prompt: "“Members of parliament don't have to approve the government's budget proposal unless they reach a consensus.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Parlamento üyeleri, bir uzlaşıya varmadıkça hükümetin bütçe teklifini onaylamak zorunda değildir.",
+              enSentence: "Members of parliament don't have to approve the government's budget proposal unless they reach a consensus.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Gereklilik"]
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l1_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: Boşluk Doldurma Refleksleri",
-          description: "Yarı-modal ve modal benzeri yapıları doğru biçimleriyle boşluklara yerleştirin.",
+          title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
+          description: "Yetenek ve zorunluluk yapılarını doğru dilbilgisi kurallarına göre boşluklara yerleştirin.",
           questions: [
             {
               id: "c104_l1_ex2_q1",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "With the new microscope, researchers ___ able to observe single molecules.",
-              options: ["are", "is", "was", "will"],
+              sentence: "Scholars of sociology ___ to examine the legal documents before the government changes the policy.",
+              options: ["have", "has", "must", "should"],
               correctIndex: 0,
-              translation: "Yeni mikroskopla araştırmacılar tek molekülleri gözlemleyebilmektedir.",
-              explanation: "Çoğul özne 'researcher' ile present yetenek kalıbı 'are able to' uyuşur.",
-              hint: { formula: "Plural Subject + are able to + V1" }
+              translation: "Hükümet politikayı değiştirmeden önce sosyoloji akademisyenleri yasal belgeleri incelemek zorundadır.",
+              explanation: "Çoğul özne (Scholars) ile present zorunluluk bildiren 'have to' yapısı kullanılır.",
+              hint: { formula: "Plural Subject + have to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q2",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Despite the power failure, the team was ___ to save the experimental data.",
+              sentence: "The committee was ___ to reform the monetary system despite the intense criticism from citizens.",
               options: ["able", "capable", "must", "have"],
               correctIndex: 0,
-              translation: "Güç kesintisine rağmen ekip deney verilerini kaydetmeyi başardı.",
-              explanation: "'was able to' geçmişteki belirli bir yeteneği/başarıyı belirtir.",
-              hint: { formula: "was/were able to + V1" }
+              translation: "Komite, vatandaşların yoğun eleştirilerine rağmen parasal sistemi reforme etmeyi başardı.",
+              explanation: "Geçmişte bir eylemi başarma/yapabilme anlamı 'was able to' ile verilir.",
+              hint: { formula: "was/were able to + V1" },
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q3",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The engineers ___ to modify the chassis to prevent structural failure.",
-              options: ["had", "must", "should", "ought"],
+              sentence: "Film critics ___ explain the symbolic meaning of the ancient ruins in the documentary.",
+              options: ["needn't", "don't need", "mustn't", "haven't"],
               correctIndex: 0,
-              translation: "Mühendisler yapısal çökmeyi önlemek için şasiyi modifiye etmek zorunda kaldı.",
-              explanation: "Geçmişte yapılmış zorunluluklar 'had to' ile anlatılır.",
-              hint: { formula: "Subject + had to + V1" }
+              translation: "Film eleştirmenlerinin belgeseldeki antik kalıntıların sembolik anlamını açıklamasına gerek yoktur.",
+              explanation: "Gereksizlik/muafiyet bildiren ve kendisinden sonra doğrudan yalın fiil (explain) alan yarı-modal 'needn't' yapısıdır.",
+              hint: { formula: "needn't + V1" },
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q4",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The institute ___ have to relocate if the state budget is reduced next year.",
-              options: ["will", "would", "did", "had"],
+              sentence: "Under the new guidelines, therapists don't ___ to obtain written permission from the children's parents.",
+              options: ["need", "must", "should", "ought"],
               correctIndex: 0,
-              translation: "Eğer gelecek yıl devlet bütçesi düşürülürse enstitü taşınmak zorunda kalacak.",
-              explanation: "Gelecekteki zorunluluklar 'will have to' ile kurulur.",
-              hint: { formula: "will have to + V1" }
+              translation: "Yeni yönergeler uyarınca, terapistlerin çocukların ebeveynlerinden yazılı izin almasına gerek yoktur.",
+              explanation: "'don't need to' yapısı gereksizlik bildirir ve 'to' ile kullanılır.",
+              hint: { formula: "don't/doesn't need to + V1" },
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q5",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "You ___ have to calibrate the sensor unless the indicator turns red.",
-              options: ["don't", "mustn't", "needn't", "haven't"],
+              sentence: "During the war, the parliament ___ to preserve all historical archives of the nation in a safe location.",
+              options: ["had", "must", "should", "ought"],
               correctIndex: 0,
-              translation: "Gösterge kırmızıya dönmedikçe sensörü kalibre etmek zorunda değilsiniz.",
-              explanation: "Zorunluluğun olmadığını bildirmek için 'don't have to' kullanılır.",
-              hint: { formula: "don't/doesn't have to + V1" }
+              translation: "Savaş sırasında parlamento, ulusun tüm tarihi arşivlerini güvenli bir yerde korumak zorunda kaldı.",
+              explanation: "Geçmişte yapılmış zorunluluklar 'had to' ile ifade edilir.",
+              hint: { formula: "had to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q6",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Researchers don't ___ to purchase the license because it is open source.",
-              options: ["need", "have", "must", "should"],
+              sentence: "Researchers ___ able to analyze the demographic survey when the institute publishes the official results.",
+              options: ["are", "is", "was", "will"],
               correctIndex: 0,
-              translation: "Açık kaynaklı olduğu için araştırmacıların lisansı satın almasına gerek yoktur.",
-              explanation: "'don't need to' kalıbı gereksizlik bildirir.",
-              hint: { formula: "don't need to + V1" }
+              translation: "Enstitü resmi sonuçları yayınladığında, araştırmacılar demografik anketi analiz edebilirler.",
+              explanation: "Çoğul özne (Researchers) ile present yetenek/olasılık bildiren 'are able to' yapısı uyuşur.",
+              hint: { formula: "are able to + V1" },
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q7",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "We didn't ___ to write the script since the software was automated.",
-              options: ["have", "need", "must", "should"],
+              sentence: "The clinic doesn't ___ to evaluate the cognitive behavior of the patients unless the court requests a report.",
+              options: ["have", "must", "should", "ought"],
               correctIndex: 0,
-              translation: "Yazılım otomatikleştirildiği için kodu yazmak zorunda kalmadık.",
-              explanation: "'didn't have to' geçmişte zorunluluk olmadığını bildirir.",
-              hint: { formula: "didn't have to + V1" }
+              translation: "Mahkeme bir rapor talep etmedikçe klinik, hastaların bilişsel davranışlarını değerlendirmek zorunda değildir.",
+              explanation: "Zorunluluk olmama durumunu bildirmek için 'doesn't have to' kullanılır.",
+              hint: { formula: "doesn't/don't have to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q8",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The team didn't need ___ hire a consultant because they solved the bug themselves.",
-              options: ["to", "for", "of", "with"],
+              sentence: "Scholars had ___ modify their research methodology after they discovered the new historical evidence.",
+              options: ["to", "for", "with", "of"],
               correctIndex: 0,
-              translation: "Hatayı kendileri çözdükleri için ekibin bir danışman kiralamasına gerek kalmadı.",
-              explanation: "'need' fiili olumsuzlarda/geçmişte 'to' ile devam eder.",
-              hint: { formula: "didn't need to + V1" }
+              translation: "Yeni tarihi kanıtları keşfettikten sonra akademisyenler araştırma metodolojilerini değiştirmek zorunda kaldılar.",
+              explanation: "'had to' yapısı fiilden önce 'to' edatını gerektirir.",
+              hint: { formula: "had to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q9",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "You ___ worry about the system backup as it runs automatically every hour.",
-              options: ["needn't", "don't need", "mustn't", "haven't"],
+              sentence: "The director ___ alter the main character's actions because the audience understands the emotional conflict.",
+              options: ["needn't", "doesn't need", "mustn't", "haven't"],
               correctIndex: 0,
-              translation: "Her saat otomatik çalıştığı için sistem yedeklemesi konusunda endişelenmenize gerek yoktur.",
-              explanation: "'needn't' yarı-modalı arkasından 'to' almaz ve gereksizlik bildirir.",
-              hint: { formula: "needn't + V1 (bare infinitive)" }
+              translation: "Yönetmenin ana karakterin eylemlerini değiştirmesine gerek yoktur çünkü izleyici duygusal çatışmayı anlamaktadır.",
+              explanation: "'needn't' yarı-modalı kendisinden sonra yalın fiil alır (alter) ve 'to' almaz.",
+              hint: { formula: "needn't + V1" },
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l1_ex2_q10",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Scientists ___ to update their hypothesis after collecting new data.",
-              options: ["have", "has", "must", "should"],
+              sentence: "Members of parliament don't have ___ approve the government's budget proposal unless they reach a consensus.",
+              options: ["to", "for", "of", "with"],
               correctIndex: 0,
-              translation: "Bilim insanları yeni veri topladıktan sonra hipotezlerini güncellemek zorundadır.",
-              explanation: "Çoğul özne 'Scientists' ile 'have to' yapısı kullanılır.",
-              hint: { formula: "Plural Subject + have to + V1" }
+              translation: "Parlamento üyeleri, bir uzlaşıya varmadıkça hükümetin bütçe teklifini onaylamak zorunda değildir.",
+              explanation: "'don't have to' yapısı zorunluluk olmama durumu bildirir ve 'to' gerektirir.",
+              hint: { formula: "don't have to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l1_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Katmanlı Cümle İnşası (Word Bank)",
-          description: "Karışık kelime ve öbek bloklarını bir araya getirerek anlamlı cümleler oluşturun.",
+          title: "Alıştırma 3: Akademik Sentez (Word Bank)",
+          description: "Karışık Türkçe öbekleri doğru sıraya dizerek İngilizce cümlelerin karşılıklarını oluşturun.",
           questions: [
             {
               id: "c104_l1_ex3_q1",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Scientists have to update their hypothesis after collecting new data.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
-              words: ["Bilim insanları", "yeni veri topladıktan sonra", "hipotezlerini", "güncellemek zorundadır.", "güncelleyebilirler.", "eski verileri"],
-              correctOrder: ["Bilim insanları", "yeni veri topladıktan sonra", "hipotezlerini", "güncellemek zorundadır."]
+              translation: "Scholars of sociology have to examine the legal documents before the government changes the policy.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Sosyoloji akademisyenleri,", "hükümet politikayı değiştirmeden önce", "yasal belgeleri", "incelemek zorundadır.", "inceleyebilirler.", "eski yasaları"],
+              correctOrder: ["Sosyoloji akademisyenleri,", "hükümet politikayı değiştirmeden önce", "yasal belgeleri", "incelemek zorundadır."]
             },
             {
               id: "c104_l1_ex3_q2",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "With the new microscope, researchers are able to observe single molecules.",
-              grammarTags: ["Yarı-Modallar", "Yetenek"],
-              words: ["Yeni mikroskopla", "araştırmacılar", "tek molekülleri", "gözlemleyebilmektedir.", "gözlemlemek zorundadır.", "hücreleri"],
-              correctOrder: ["Yeni mikroskopla", "araştırmacılar", "tek molekülleri", "gözlemleyebilmektedir."]
+              translation: "The committee was able to reform the monetary system despite the intense criticism from citizens.",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Komite,", "vatandaşların yoğun eleştirilerine rağmen", "parasal sistemi", "reforme etmeyi başardı.", "değiştirmek zorunda kaldı.", "vergi sistemini"],
+              correctOrder: ["Komite,", "vatandaşların yoğun eleştirilerine rağmen", "parasal sistemi", "reforme etmeyi başardı."]
             },
             {
               id: "c104_l1_ex3_q3",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Despite the power failure, the team was able to save the experimental data.",
-              grammarTags: ["Yarı-Modallar", "Yetenek"],
-              words: ["Güç kesintisine rağmen", "ekip", "deney verilerini", "kaydetmeyi başardı.", "kaydetmek zorunda kaldı.", "bütün cihazları"],
-              correctOrder: ["Güç kesintisine rağmen", "ekip", "deney verilerini", "kaydetmeyi başardı."]
+              translation: "Film critics needn't explain the symbolic meaning of the ancient ruins in the documentary.",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Film eleştirmenlerinin", "belgeseldeki antik kalıntıların", "sembolik anlamını", "açıklamasına gerek yoktur.", "açıklaması gerekir.", "tarihsel olayları"],
+              correctOrder: ["Film eleştirmenlerinin", "belgeseldeki antik kalıntıların", "sembolik anlamını", "açıklamasına gerek yoktur."]
             },
             {
               id: "c104_l1_ex3_q4",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The engineers had to modify the chassis to prevent structural failure.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
-              words: ["Mühendisler", "yapısal çökmeyi önlemek için", "şasiyi", "modifiye etmek zorunda kaldı.", "modifiye edebildi.", "motoru"],
-              correctOrder: ["Mühendisler", "yapısal çökmeyi önlemek için", "şasiyi", "modifiye etmek zorunda kaldı."]
+              translation: "Under the new guidelines, therapists don't need to obtain written permission from the children's parents.",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Yeni yönergeler uyarınca,", "terapistlerin", "çocukların ebeveynlerinden", "yazılı izin almasına gerek yoktur.", "izin alması zorunludur.", "tavsiye almalıdır."],
+              correctOrder: ["Yeni yönergeler uyarınca,", "terapistlerin", "çocukların ebeveynlerinden", "yazılı izin almasına gerek yoktur."]
             },
             {
               id: "c104_l1_ex3_q5",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "You don't have to calibrate the sensor unless the indicator turns red.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
-              words: ["Gösterge kırmızıya dönmedikçe", "sensörü", "kalibre etmek zorundasınız.", "kalibre etmek zorunda değilsiniz.", "çalıştırmamalısınız."],
-              correctOrder: ["Gösterge kırmızıya dönmedikçe", "sensörü", "kalibre etmek zorunda değilsiniz."]
+              translation: "During the war, the parliament had to preserve all historical archives of the nation in a safe location.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Savaş sırasında parlamento,", "ulusun tüm tarihi arşivlerini", "güvenli bir yerde", "korumak zorunda kaldı.", "korumayı başardı.", "yok etmek istedi."],
+              correctOrder: ["Savaş sırasında parlamento,", "ulusun tüm tarihi arşivlerini", "güvenli bir yerde", "korumak zorunda kaldı."]
             },
             {
               id: "c104_l1_ex3_q6",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Researchers don't need to purchase the license because it is open source.",
-              grammarTags: ["Yarı-Modallar", "Gereklilik"],
-              words: ["Açık kaynaklı olduğu için", "araştırmacıların", "lisansı", "satın almasına gerek yoktur.", "satın alması gerekir.", "kodları"],
-              correctOrder: ["Açık kaynaklı olduğu için", "araştırmacıların", "lisansı", "satın almasına gerek yoktur."]
+              translation: "Researchers are able to analyze the demographic survey when the institute publishes the official results.",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Enstitü resmi sonuçları yayınladığında,", "araştırmacılar", "demografik anketi", "analiz edebilirler.", "analiz etmek zorundadırlar.", "hazırlayacaklar."],
+              correctOrder: ["Enstitü resmi sonuçları yayınladığında,", "araştırmacılar", "demografik anketi", "analiz edebilirler."]
             },
             {
               id: "c104_l1_ex3_q7",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "We didn't have to write the script since the software was automated.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
-              words: ["Yazılım otomatikleştirildiği için", "kodu", "yazmak zorunda kalmadık.", "yazabildik.", "sunucuyu", "güncellemedik."],
-              correctOrder: ["Yazılım otomatikleştirildiği için", "kodu", "yazmak zorunda kalmadık."]
+              translation: "The clinic doesn't have to evaluate the cognitive behavior of the patients unless the court requests a report.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Mahkeme bir rapor talep etmedikçe", "klinik,", "hastaların bilişsel davranışlarını", "değerlendirmek zorunda değildir.", "değerlendirebilir.", "tedavi etmelidir."],
+              correctOrder: ["Mahkeme bir rapor talep etmedikçe", "klinik,", "hastaların bilişsel davranışlarını", "değerlendirmek zorunda değildir."]
             },
             {
               id: "c104_l1_ex3_q8",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The team didn't need to hire a consultant because they solved the bug themselves.",
-              grammarTags: ["Yarı-Modallar", "Gereklilik"],
-              words: ["Hatayı kendileri çözdükleri için", "ekibin", "bir danışman", "kiralamasına gerek kalmadı.", "kiralamak zorunda kaldı.", "yeni eleman"],
-              correctOrder: ["Hatayı kendileri çözdükleri için", "ekibin", "bir danışman", "kiralamasına gerek kalmadı."]
+              translation: "Scholars had to modify their research methodology after they discovered the new historical evidence.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Yeni tarihi kanıtları keşfettikten sonra", "akademisyenler", "araştırma metodolojilerini", "değiştirmek zorunda kaldılar.", "değiştirmeyi başardılar.", "yayınladılar."],
+              correctOrder: ["Yeni tarihi kanıtları keşfettikten sonra", "akademisyenler", "araştırma metodolojilerini", "değiştirmek zorunda kaldılar."]
             },
             {
               id: "c104_l1_ex3_q9",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "You needn't worry about the system backup as it runs automatically every hour.",
-              grammarTags: ["Yarı-Modallar", "Gereklilik"],
-              words: ["Her saat otomatik çalıştığı için", "sistem yedeklemesi konusunda", "endişelenmenize gerek yoktur.", "endişelenmek zorundasınız.", "hata vermez."],
-              correctOrder: ["Her saat otomatik çalıştığı için", "sistem yedeklemesi konusunda", "endişelenmenize gerek yoktur."]
+              translation: "The director needn't alter the main character's actions because the audience understands the emotional conflict.",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Yönetmenin", "ana karakterin eylemlerini", "değiştirmesine gerek yoktur", "çünkü izleyici duygusal çatışmayı anlamaktadır.", "çünkü film çok popülerdir.", "değiştirmek zorundadır"],
+              correctOrder: ["Yönetmenin", "ana karakterin eylemlerini", "değiştirmesine gerek yoktur", "çünkü izleyici duygusal çatışmayı anlamaktadır."]
             },
             {
               id: "c104_l1_ex3_q10",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The institute will have to relocate if the state budget is reduced next year.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk"],
-              words: ["Eğer gelecek yıl devlet bütçesi düşürülürse", "enstitü", "taşınmak zorunda kalacak.", "kapatılacaktır.", "büyümek isteyecektir."],
-              correctOrder: ["Eğer gelecek yıl devlet bütçesi düşürülürse", "enstitü", "taşınmak zorunda kalacak."]
+              translation: "Members of parliament don't have to approve the government's budget proposal unless they reach a consensus.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Parlamento üyeleri,", "bir uzlaşıya varmadıkça", "hükümetin bütçe teklifini", "onaylamak zorunda değildir.", "onaylayabilirler.", "reddetmek zorundadır."],
+              correctOrder: ["Parlamento üyeleri,", "bir uzlaşıya varmadıkça", "hükümetin bütçe teklifini", "onaylamak zorunda değildir."]
             }
           ]
         }
@@ -3724,359 +3885,369 @@ const chapter104Data = {
         {
           id: "c104_l2_ex1",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 1: Yapısal Eşleştirme ve Çeviri",
-          description: "Tavsiye, geçmiş alışkanlıklar ve alışkınlık durumlarının tespiti.",
+          title: "Alıştırma 1: Öbek Düzeyi (Tavsiye ve Alışkanlık)",
+          description: "Kibar tavsiye, geçmiş alışkanlıklar ve alışkınlık yapılarının (had better, ought to, used to, be used to) tespiti.",
           questions: [
             {
               id: "c104_l2_ex1_q1",
               type: "matching",
-              prompt: "Tavsiye ve alışkanlık yapılarını Türkçe karşılıklarıyla eşleştirin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye", "Alışkanlık"],
+              prompt: "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               pairs: [
-                { left: "had better", right: "yapsa iyi olur (tavsiye)" },
-                { left: "ought to", right: "yapmalı / etmeli" },
-                { left: "used to", right: "eskiden yapardı" },
-                { left: "be used to -ing", right: "yapmaya alışkın olmak" }
+                { left: "had better implement the constitutional reform", right: "anayasal reformu uygulasa iyi olur" },
+                { left: "ought to analyze the behavior of individuals", right: "bireylerin davranışlarını analiz etmelidir" },
+                { left: "used to shoot films in the parliament", right: "parlamentoda filmler çekerdi" },
+                { left: "are used to evaluating the emotional development", right: "duygusal gelişimi değerlendirmeye alışıktır" }
               ]
             },
             {
               id: "c104_l2_ex1_q2",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
+              prompt: "\"The government had better implement the constitutional reform before the economic crisis deepens.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Yönetim, kullanıcı gizliliğini korumak için daha sıkı protokoller belirlemelidir.",
-                "Yönetim kullanıcı gizliliğini korumak amacıyla bazı protokolleri kaldırmak zorundadır.",
-                "Kullanıcı gizliliğini korumak amacıyla yönetimin protokolleri belirlemesi gerekmez.",
-                "Yönetim daha sıkı protokoller belirlerse kullanıcı gizliliğini koruyabilecektir."
+                "Ekonomik kriz derinleşmeden önce hükümet anayasal reformu uygulasa iyi olur.",
+                "Ekonomik kriz derinleştikten sonra hükümet anayasal reformu uygulamak zorunda kaldı.",
+                "Hükümet anayasal reformu uygulamalıdır çünkü ekonomik kriz derinleşmektedir.",
+                "Hükümet anayasal reformu uygulayabildi çünkü ekonomik kriz derinleşmedi."
               ],
               correctIndex: 0,
-              enSentence: "The administration ought to establish stricter protocols to protect user privacy.",
+              enSentence: "The government had better implement the constitutional reform before the economic crisis deepens.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q3",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
+              prompt: "\"History scholars ought to analyze the behavior of individuals under extreme social pressure.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Geliştiriciler, önce birim testleri çalıştırmadan kod yayına almamalıdır.",
-                "Geliştiriciler birim testleri çalıştırdıktan sonra bile kod yayına alamazlar.",
-                "Birim testleri çalıştırmadan kod yayına almak geliştiriciler için zorunludur.",
-                "Geliştiricilerin önce birim testleri çalıştırması tavsiye edilmez."
+                "Tarih akademisyenleri, aşırı toplumsal baskı altındaki bireylerin davranışlarını analiz etmelidir.",
+                "Tarih akademisyenleri, aşırı toplumsal baskı altında bireylerin davranışlarını analiz etmek zorunda kaldı.",
+                "Bireylerin aşırı toplumsal baskı altındaki davranışları tarih akademisyenleri tarafından analiz edilmez.",
+                "Tarih akademisyenleri, bireylerin toplumsal davranışlarını analiz etmeye alışıktır."
               ],
               correctIndex: 0,
-              enSentence: "Developers ought not to deploy code without running unit tests first.",
+              enSentence: "History scholars ought to analyze the behavior of individuals under extreme social pressure.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q4",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
+              prompt: "\"In the past, the famous director used to shoot his films in the ancient parliament building.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Fırtına başlamadan önce laboratuvarı güvenli hale getirsek iyi olur.",
-                "Laboratuvarı fırtınadan önce güvenli hale getirmek zorunda kaldık.",
-                "Fırtına başlar başlamaz laboratuvarı güvenli hale getirmemiz gerekir.",
-                "Laboratuvar fırtınaya rağmen güvenli bir şekilde kapatılabildi."
+                "Geçmişte, ünlü yönetmen filmlerini antik parlamento binasında çekerdi.",
+                "Geçmişte, ünlü yönetmen filmlerini antik parlamento binasında çekmek zorundaydı.",
+                "Ünlü yönetmen filmlerini antik parlamento binasında çekmeye alışıktır.",
+                "Geçmişte, ünlü yönetmen filmlerini antik parlamento binasında çekmek istedi."
               ],
               correctIndex: 0,
-              enSentence: "We had better secure the laboratory before the storm begins.",
+              enSentence: "In the past, the famous director used to shoot his films in the ancient parliament building.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q5",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
+              prompt: "\"Clinical therapists are used to evaluating the emotional development of children during the session.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Şifreleri yetkisiz personel ile paylaşmasanız iyi olur.",
-                "Şifrelerin yetkisiz personel ile paylaşılması kesinlikle yasaktır.",
-                "Şifreleri yetkisiz personel ile paylaşmak zorunda değilsiniz.",
-                "Şifreler yetkisiz personelle paylaşıldığında sistem tehlikeye girebilir."
+                "Klinik terapistleri, seans sırasında çocukların duygusal gelişimini değerlendirmeye alışıktır.",
+                "Klinik terapistleri seans sırasında çocukların duygusal gelişimini değerlendirmek zorundadır.",
+                "Çocukların duygusal gelişimi seans sırasında klinik terapistleri tarafından değerlendirilmelidir.",
+                "Klinik terapistleri seans sırasında çocukların duygusal gelişimini değerlendirmeye alışmalıdır."
               ],
               correctIndex: 0,
-              enSentence: "You had better not share the passwords with unauthorized personnel.",
+              enSentence: "Clinical therapists are used to evaluating the emotional development of children during the session.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q6",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
+              prompt: "\"Sociological researchers had better not publish the survey results without checking the statistical variables.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Üniversite tüm tarihi kayıtları fiziksel arşivlerde saklardı.",
-                "Üniversite tüm tarihi kayıtları fiziksel arşivlerde saklamak zorundadır.",
-                "Üniversitenin tarihi kayıtları fiziksel arşivlerde saklamasına gerek yoktur.",
-                "Üniversite tüm tarihi kayıtları fiziksel arşivlere aktarmayı başardı."
+                "Sosyolojik araştırmacılar, istatistiksel değişkenleri kontrol etmeden anket sonuçlarını yayınlamasalar iyi olur.",
+                "Sosyolojik araştırmacılar, istatistiksel değişkenleri kontrol etmeden anket sonuçlarını yayınlayamazlar.",
+                "Anket sonuçlarını yayınlamak için sosyolojik araştırmacılar istatistiksel değişkenleri kontrol etmelidir.",
+                "Sosyolojik araştırmacılar anket sonuçlarını yayınlamamak zorundadır çünkü değişkenleri kontrol etmediler."
               ],
               correctIndex: 0,
-              enSentence: "The university used to store all historical records in physical archives.",
+              enSentence: "Sociological researchers had better not publish the survey results without checking the statistical variables.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q7",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
+              prompt: "\"We ought to preserve the historical documents that describe the legal rights of citizens.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Akademik dergiler yirminci yüzyılda makaleleri çevrimiçi yayınlamazlardı.",
-                "Akademik dergiler yirminci yüzyılda makaleleri çevrimiçi yayınlamak zorundaydılar.",
-                "Akademik dergilerin yirminci yüzyılda makaleleri çevrimiçi yayınlamasına gerek yoktu.",
-                "Yirminci yüzyılda akademik dergiler makaleleri sadece çevrimiçi yayınlayabildiler."
+                "Vatandaşların yasal haklarını tanımlayan tarihi belgeleri korumalıyız.",
+                "Vatandaşların yasal haklarını tanımlamak için tarihi belgeleri korumak zorundayız.",
+                "Tarihi belgeleri koruyabiliriz çünkü vatandaşların yasal haklarını tanımlarlar.",
+                "Vatandaşların yasal hakları tarihi belgelerde tanımlandığı için onları korumalıyız."
               ],
               correctIndex: 0,
-              enSentence: "Academic journals didn't use to publish articles online in the twentieth century.",
+              enSentence: "We ought to preserve the historical documents that describe the legal rights of citizens.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q8",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
+              prompt: "\"Film critics didn't use to write detailed reviews before the cinema industry became popular.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Ekip, fırlatma haftalarında yoğun baskı altında çalışmaya alışıktır.",
-                "Ekip fırlatma haftalarında yoğun baskı altında çalışmak zorundadır.",
-                "Ekip fırlatma haftalarında yoğun baskı altında çalışmaya alışmalıdır.",
-                "Fırlatma haftalarında yoğun baskı altında çalışmak ekibin alışkanlığı değildir."
+                "Sinema endüstrisi popüler hale gelmeden önce film eleştirmenleri detaylı incelemeler yazmazlardı.",
+                "Sinema endüstrisi popüler olduğundan beri film eleştirmenleri detaylı incelemeler yazmaktadırlar.",
+                "Film eleştirmenleri detaylı incelemeler yazmak zorundaydı çünkü sinema endüstrisi popüler oldu.",
+                "Sinema endüstrisi popüler hale gelmeden önce film eleştirmenleri detaylı incelemeler yazamadı."
               ],
               correctIndex: 0,
-              enSentence: "The team is used to working under intense pressure during launch weeks.",
+              enSentence: "Film critics didn't use to write detailed reviews before the cinema industry became popular.",
               isEngToTr: true
             },
             {
               id: "c104_l2_ex1_q9",
               type: "translation-text",
-              prompt: "“The operator was used to monitoring multiple screens simultaneously.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Operatör aynı anda birden fazla ekranı izlemeye alışıktı.",
-              enSentence: "The operator was used to monitoring multiple screens simultaneously.",
+              prompt: "“Under the new monetary system, citizens are gradually getting used to paying higher taxes.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Yeni parasal sistem altında, vatandaşlar yavaş yavaş daha yüksek vergiler ödemeye alışıyorlar.",
+              enSentence: "Under the new monetary system, citizens are gradually getting used to paying higher taxes.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"]
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex1_q10",
               type: "translation-text",
-              prompt: "“New recruits must get used to following the security guidelines strictly.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Yeni katılanlar güvenlik kurallarını sıkı bir şekilde takip etmeye alışmalıdır.",
-              enSentence: "New recruits must get used to following the security guidelines strictly.",
+              prompt: "“Psychologists had better investigate the cognitive processes of children who suffer from trauma.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Psikologlar, travma yaşayan çocukların bilişsel süreçlerini araştırsalar iyi olur.",
+              enSentence: "Psychologists had better investigate the cognitive processes of children who suffer from trauma.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"]
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l2_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: Boşluk Doldurma (Cloze & Buttons)",
-          description: "Cümlelerdeki boşlukları uygun tavsiye ve alışkanlık kalıplarıyla doldurun.",
+          title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
+          description: "Tavsiye ve alışkanlık kalıplarını uygun çekimleriyle cümlelerdeki boşluklara yerleştirin.",
           questions: [
             {
               id: "c104_l2_ex2_q1",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The administration ___ to establish stricter protocols to protect user privacy.",
-              options: ["ought", "should", "must", "had better"],
+              sentence: "The government had ___ implement the constitutional reform before the economic crisis deepens.",
+              options: ["better", "rather", "to", "should"],
               correctIndex: 0,
-              translation: "Yönetim, kullanıcı gizliliğini korumak için daha sıkı protokoller belirlemelidir.",
-              explanation: "'to' ile devam eden ve gereklilik/öneri bildiren tek modal 'ought' ifadesidir.",
-              hint: { formula: "ought + to + V1" }
+              translation: "Ekonomik kriz derinleşmeden önce hükümet anayasal reformu uygulasa iyi olur.",
+              explanation: "Güçlü/acil tavsiye bildiren kalıp 'had better' şeklindedir.",
+              hint: { formula: "had better + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q2",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Developers ought ___ to deploy code without running unit tests first.",
-              options: ["not", "never", "to", "should"],
+              sentence: "History scholars ought ___ analyze the behavior of individuals under extreme social pressure.",
+              options: ["to", "not", "should", "must"],
               correctIndex: 0,
-              translation: "Geliştiriciler, önce birim testleri çalıştırmadan kod yayına almamalıdır.",
-              explanation: "Ought to yapısının olumsuzu 'ought not to' şeklindedir.",
-              hint: { formula: "ought + not + to + V1" }
+              translation: "Tarih akademisyenleri, aşırı toplumsal baskı altındaki bireylerin davranışlarını analiz etmelidir.",
+              explanation: "'ought' yapısı tavsiye/gereklilik bildirirken daima 'to' ile devam eder.",
+              hint: { formula: "ought + to + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q3",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "We had ___ secure the laboratory before the storm begins.",
-              options: ["better", "rather", "to", "should"],
+              sentence: "In the past, the famous director ___ to shoot his films in the ancient parliament building.",
+              options: ["used", "was used", "got used", "uses"],
               correctIndex: 0,
-              translation: "Fırtına başlamadan önce laboratuvarı güvenli hale getirsek iyi olur.",
-              explanation: "Güçlü/acil tavsiye bildiren kalıp 'had better' şeklindedir.",
-              hint: { formula: "had better + V1 (bare infinitive)" }
+              translation: "Geçmişte, ünlü yönetmen filmlerini antik parlamento binasında çekerdi.",
+              explanation: "Geçmişteki alışkanlıklar 'used to' yapısı ile anlatılır.",
+              hint: { formula: "used to + V1" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q4",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "You had better ___ share the passwords with unauthorized personnel.",
-              options: ["not", "no", "never", "don't"],
+              sentence: "Clinical therapists are used to ___ the emotional development of children during the session.",
+              options: ["evaluating", "evaluate", "evaluated", "be evaluating"],
               correctIndex: 0,
-              translation: "Şifreleri yetkisiz personel ile paylaşmasanız iyi olur.",
-              explanation: "'had better' yapısının olumsuz biçimi 'had better not' olarak kurulur.",
-              hint: { formula: "had better not + V1" }
+              translation: "Klinik terapistleri, seans sırasında çocukların duygusal gelişimini değerlendirmeye alışıktır.",
+              explanation: "'be used to' (alışkın olmak) kalıbından sonra fiil -ing (gerund) takısı alır.",
+              hint: { formula: "be used to + V-ing" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q5",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The university ___ to store all historical records in physical archives.",
-              options: ["used", "was used", "got used", "uses"],
+              sentence: "Sociological researchers had better ___ publish the survey results without checking the statistical variables.",
+              options: ["not", "no", "never", "don't"],
               correctIndex: 0,
-              translation: "Üniversite tüm tarihi kayıtları fiziksel arşivlerde saklardı.",
-              explanation: "Geçmişteki alışkanlıklar/durumlar 'used to' ile ifade edilir.",
-              hint: { formula: "used to + V1" }
+              translation: "Sosyolojik araştırmacılar, istatistiksel değişkenleri kontrol etmeden anket sonuçlarını yayınlamasalar iyi olur.",
+              explanation: "'had better' yapısının olumsuzu 'had better not' olarak kurulur.",
+              hint: { formula: "had better not + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q6",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Academic journals didn't ___ to publish articles online in the twentieth century.",
-              options: ["use", "used", "using", "be used"],
+              sentence: "We ___ to preserve the historical documents that describe the legal rights of citizens.",
+              options: ["ought", "should", "must", "had better"],
               correctIndex: 0,
-              translation: "Akademik dergiler yirminci yüzyılda makaleleri çevrimiçi yayınlamazlardı.",
-              explanation: "Didn't olumsuzlayıcısından sonra used to yapısı yalın 'use to' haline gelir.",
-              hint: { formula: "didn't use to + V1" }
+              translation: "Vatandaşların yasal haklarını tanımlayan tarihi belgeleri korumalıyız.",
+              explanation: "'to' ile kullanılan ve gereklilik bildiren modal 'ought' yapısıdır.",
+              hint: { formula: "ought to + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q7",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The team is used to ___ under intense pressure during launch weeks.",
-              options: ["working", "work", "worked", "be working"],
+              sentence: "Film critics didn't ___ to write detailed reviews before the cinema industry became popular.",
+              options: ["use", "used", "using", "be used"],
               correctIndex: 0,
-              translation: "Ekip, fırlatma haftalarında yoğun baskı altında çalışmaya alışıktır.",
-              explanation: "'be used to' (alışkın olmak) kalıbından sonra fiil -ing (gerund) alır.",
-              hint: { formula: "be used to + V-ing" }
+              translation: "Sinema endüstrisi popüler hale gelmeden önce film eleştirmenleri detaylı incelemeler yazmazlardı.",
+              explanation: "Olumsuzlayıcı 'didn't' sonrasında 'used to' kalıbı yalın 'use to' haline gelir.",
+              hint: { formula: "didn't use to + V1" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q8",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The operator was ___ to monitoring multiple screens simultaneously.",
-              options: ["used", "accustomed", "use", "getting"],
+              sentence: "Under the new monetary system, citizens are gradually getting used to ___ higher taxes.",
+              options: ["paying", "pay", "paid", "be paying"],
               correctIndex: 0,
-              translation: "Operatör aynı anda birden fazla ekranı izlemeye alışıktı.",
-              explanation: "'was used to' geçmişteki alışkınlık durumunu bildirir.",
-              hint: { formula: "was/were used to + V-ing" }
+              translation: "Yeni parasal sistem altında, vatandaşlar yavaş yavaş daha yüksek vergiler ödemeye alışıyorlar.",
+              explanation: "'get used to' (alışmak) yapısından sonra fiil -ing (gerund) takısı alır.",
+              hint: { formula: "get used to + V-ing" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q9",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "New recruits must ___ used to following the security guidelines strictly.",
-              options: ["get", "be", "make", "take"],
+              sentence: "Psychologists had ___ investigate the cognitive processes of children who suffer from trauma.",
+              options: ["better", "rather", "to", "should"],
               correctIndex: 0,
-              translation: "Yeni katılanlar güvenlik kurallarını sıkı bir şekilde takip etmeye alışmalıdır.",
-              explanation: "Alışma sürecini/eylemini anlatmak için 'get used to' yapısı kullanılır.",
-              hint: { formula: "get used to + V-ing" }
+              translation: "Psikologlar, travma yaşayan çocukların bilişsel süreçlerini araştırsalar iyi olur.",
+              explanation: "'had better' acil/güçlü tavsiye bildirir ve arkasından yalın fiil alır.",
+              hint: { formula: "had better + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l2_ex2_q10",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The operator ___ used to monitoring multiple screens simultaneously.",
-              options: ["was", "is", "were", "did"],
+              sentence: "Legal experts ought not ___ ignore the constitutional changes that the government is proposing.",
+              options: ["to", "for", "of", "with"],
               correctIndex: 0,
-              translation: "Operatör aynı anda birden fazla ekranı izlemeye alışıktı.",
-              explanation: "Tekil özne 'The operator' ile 'was used to' çekimi uyuşur.",
-              hint: { formula: "Singular Subject + was used to + V-ing" }
+              translation: "Hukuk uzmanları, hükümetin önerdiği anayasal değişiklikleri göz ardı etmemelidir.",
+              explanation: "'ought to' olumsuz biçiminde 'ought not to' şeklinde kurulur.",
+              hint: { formula: "ought not to + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l2_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Katmanlı Kelime Vagonu (Word Bank)",
-          description: "Kelime bloklarını sürükleyip sıralayarak cümleleri doğru inşa edin.",
+          title: "Alıştırma 3: Akademik Sentez (Word Bank)",
+          description: "Karışık kelime öbeklerini sıralayarak tavsiye ve alışkanlık cümlelerini Türkçe karşılıklarıyla kurun.",
           questions: [
             {
               id: "c104_l2_ex3_q1",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The administration ought to establish stricter protocols to protect user privacy.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Yönetim,", "kullanıcı gizliliğini korumak için", "daha sıkı protokoller", "belirlemelidir.", "belirlemek zorundadır.", "kaldırmalıdır."],
-              correctOrder: ["Yönetim,", "kullanıcı gizliliğini korumak için", "daha sıkı protokoller", "belirlemelidir."]
+              translation: "The government had better implement the constitutional reform before the economic crisis deepens.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Ekonomik kriz derinleşmeden önce", "hükümet", "anayasal reformu", "uygulasa iyi olur.", "uygulamak zorunda kaldı.", "yok saymalıdır."],
+              correctOrder: ["Ekonomik kriz derinleşmeden önce", "hükümet", "anayasal reformu", "uygulasa iyi olur."]
             },
             {
               id: "c104_l2_ex3_q2",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Developers ought not to deploy code without running unit tests first.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Geliştiriciler,", "önce birim testleri çalıştırmadan", "kod", "yayına almamalıdır.", "yayına almalıdır.", "hazırlamamalıdır."],
-              correctOrder: ["Geliştiriciler,", "önce birim testleri çalıştırmadan", "kod", "yayına almamalıdır."]
+              translation: "History scholars ought to analyze the behavior of individuals under extreme social pressure.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Tarih akademisyenleri,", "aşırı toplumsal baskı altındaki", "bireylerin davranışlarını", "analiz etmelidir.", "analiz etmek zorundadır.", "incelememelidir."],
+              correctOrder: ["Tarih akademisyenleri,", "aşırı toplumsal baskı altındaki", "bireylerin davranışlarını", "analiz etmelidir."]
             },
             {
               id: "c104_l2_ex3_q3",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "We had better secure the laboratory before the storm begins.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Fırtına başlamadan önce", "laboratuvarı", "güvenli hale getirsek iyi olur.", "kapatmak zorunda kaldık.", "yenilesek iyi olur."],
-              correctOrder: ["Fırtına başlamadan önce", "laboratuvarı", "güvenli hale getirsek iyi olur."]
+              translation: "In the past, the famous director used to shoot his films in the ancient parliament building.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Geçmişte,", "ünlü yönetmen", "filmlerini", "antik parlamento binasında", "çekerdi.", "çekmek zorundaydı.", "sergilerdi."],
+              correctOrder: ["Geçmişte,", "ünlü yönetmen", "filmlerini", "antik parlamento binasında", "çekerdi."]
             },
             {
               id: "c104_l2_ex3_q4",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "You had better not share the passwords with unauthorized personnel.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Şifreleri", "yetkisiz personel ile", "paylaşmasanız iyi olur.", "paylaşmak zorundasınız.", "değiştirseniz iyi olur."],
-              correctOrder: ["Şifreleri", "yetkisiz personel ile", "paylaşmasanız iyi olur."]
+              translation: "Clinical therapists are used to evaluating the emotional development of children during the session.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Klinik terapistleri,", "seans sırasında", "çocukların duygusal gelişimini", "değerlendirmeye alışıktır.", "değerlendirmek zorundadır.", "engellemektedir."],
+              correctOrder: ["Klinik terapistleri,", "seans sırasında", "çocukların duygusal gelişimini", "değerlendirmeye alışıktır."]
             },
             {
               id: "c104_l2_ex3_q5",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The university used to store all historical records in physical archives.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Üniversite", "tüm tarihi kayıtları", "fiziksel arşivlerde", "saklardı.", "saklamak zorundadır.", "dijital arşivde"],
-              correctOrder: ["Üniversite", "tüm tarihi kayıtları", "fiziksel arşivlerde", "saklardı."]
+              translation: "Sociological researchers had better not publish the survey results without checking the statistical variables.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Sosyolojik araştırmacılar,", "istatistiksel değişkenleri kontrol etmeden", "anket sonuçlarını", "yayınlamasalar iyi olur.", "yayınlamak zorundadırlar.", "değiştirmelidirler."],
+              correctOrder: ["Sosyolojik araştırmacılar,", "istatistiksel değişkenleri kontrol etmeden", "anket sonuçlarını", "yayınlamasalar iyi olur."]
             },
             {
               id: "c104_l2_ex3_q6",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Academic journals didn't use to publish articles online in the twentieth century.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Akademik dergiler", "yirminci yüzyılda", "makaleleri", "çevrimiçi yayınlamazlardı.", "yayınlamak isterlerdi.", "kitap olarak"],
-              correctOrder: ["Akademik dergiler", "yirminci yüzyılda", "makaleleri", "çevrimiçi yayınlamazlardı."]
+              translation: "We ought to preserve the historical documents that describe the legal rights of citizens.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Vatandaşların yasal haklarını tanımlayan", "tarihi belgeleri", "korumalıyız.", "korumak zorundayız.", "paylaşmalıyız.", "yok etmeliyiz."],
+              correctOrder: ["Vatandaşların yasal haklarını tanımlayan", "tarihi belgeleri", "korumalıyız."]
             },
             {
               id: "c104_l2_ex3_q7",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The team is used to working under intense pressure during launch weeks.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Ekip,", "fırlatma haftalarında", "yoğun baskı altında", "çalışmaya alışıktır.", "çalışmak zorundadır.", "vazgeçti."],
-              correctOrder: ["Ekip,", "fırlatma haftalarında", "yoğun baskı altında", "çalışmaya alışıktır."]
+              translation: "Film critics didn't use to write detailed reviews before the cinema industry became popular.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Sinema endüstrisi popüler hale gelmeden önce", "film eleştirmenleri", "detaylı incelemeler", "yazmazlardı.", "yazmak zorundaydılar.", "yayınlarlardı."],
+              correctOrder: ["Sinema endüstrisi popüler hale gelmeden önce", "film eleştirmenleri", "detaylı incelemeler", "yazmazlardı."]
             },
             {
               id: "c104_l2_ex3_q8",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The operator was used to monitoring multiple screens simultaneously.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Operatör", "aynı anda", "birden fazla ekranı", "izlemeye alışıktı.", "izlemek zorundaydı.", "kapatmıştı."],
-              correctOrder: ["Operatör", "aynı anda", "birden fazla ekranı", "izlemeye alışıktı."]
+              translation: "Under the new monetary system, citizens are gradually getting used to paying higher taxes.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Yeni parasal sistem altında,", "vatandaşlar", "yavaş yavaş daha yüksek vergiler", "ödemeye alışıyorlar.", "ödemek zorunda kalıyorlar.", "karşı çıkıyorlar."],
+              correctOrder: ["Yeni parasal sistem altında,", "vatandaşlar", "yavaş yavaş daha yüksek vergiler", "ödemeye alışıyorlar."]
             },
             {
               id: "c104_l2_ex3_q9",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "New recruits must get used to following the security guidelines strictly.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Yeni katılanlar", "güvenlik kurallarını", "sıkı bir şekilde", "takip etmeye alışmalıdır.", "değiştirmeye alışmalıdır.", "okumalıdır."],
-              correctOrder: ["Yeni katılanlar", "güvenlik kurallarını", "sıkı bir şekilde", "takip etmeye alışmalıdır."]
+              translation: "Psychologists had better investigate the cognitive processes of children who suffer from trauma.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Psikologlar,", "travma yaşayan çocukların", "bilişsel süreçlerini", "araştırsalar iyi olur.", "araştırmak zorundadır.", "sınıflandırmalıdır."],
+              correctOrder: ["Psikologlar,", "travma yaşayan çocukların", "bilişsel süreçlerini", "araştırsalar iyi olur."]
             },
             {
               id: "c104_l2_ex3_q10",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "We ought to protect native plants under controlled conditions.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Kontrollü koşullar altında", "yerel bitkileri", "korumalıyız.", "korumak zorundayız.", "yetiştirmemeliyiz."],
-              correctOrder: ["Kontrollü koşullar altında", "yerel bitkileri", "korumalıyız."]
+              translation: "Legal experts ought not to ignore the constitutional changes that the government is proposing.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Hukuk uzmanları,", "hükümetin önerdiği", "anayasal değişiklikleri", "göz ardı etmemelidir.", "göz ardı etmelidir.", "incelemek zorundadır."],
+              correctOrder: ["Hukuk uzmanları,", "hükümetin önerdiği", "anayasal değişiklikleri", "göz ardı etmemelidir."]
             }
           ]
         }
@@ -4089,9 +4260,9 @@ const chapter104Data = {
       subtitle: "Gelişmiş akademik cümle yapıları ve genel tekrar",
       konuAnlatimi: {
         baslik: "Akademik Sentez ve Spiralleşme (Yarı-Modallar)",
-        teorikMantik: "Bu ders, yarı-modalların akademik metinlerdeki edilgen çatı, zarf kısaltmaları ve bağlaçlarla birleşmiş karmaşık ve ileri düzey versiyonlarını içerir.",
-        formul: "S + (be able to / have to / used to / had better) + Passive / Reduced structures + Conjunctions",
-        altinKural: "Karmaşık cümlelerde ana eylem ile yarı-modalın özneyle uyumunu ve eylemin etken/edilgen yönünü mutlaka sentezleyin."
+        teorikMantik: "Bu ders, yarı-modalların akademik metinlerdeki zarf kısaltmaları ve bağlaçlarla birleşmiş karmaşık ve ileri düzey versiyonlarını içerir.",
+        formul: "S + (be able to / have to / used to / had better) + Active reduced structures + Conjunctions",
+        altinKural: "Karmaşık cümlelerde ana eylem ile yarı-modalın özneyle uyumunu ve eylemin etken (aktif) yapısını mutlaka sentezleyin."
       },
       exercises: [
         {
@@ -4103,356 +4274,366 @@ const chapter104Data = {
             {
               id: "c104_l3_ex1_q1",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Edilgen Çatı"],
+              prompt: "\"Although the government had to modify the legal framework, members of parliament still oppose the changes.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Tıbbi kayıtlar, hasta taburcu edilmeden önce yetkili personel tarafından incelenmek zorundadır.",
-                "Hasta taburcu edildikten sonra yetkili personel tıbbi kayıtları inceleyebilir.",
-                "Yetkili personel hasta taburcu edilene kadar tıbbi kayıtları incelemek zorunda değildir.",
-                "Tıbbi kayıtların yetkili personel tarafından incelenmesi hasta taburcu edilmeden önce mümkün olmamıştır."
+                "Hükümet yasal çerçeveyi değiştirmek zorunda kalmasına rağmen, parlamento üyeleri değişikliklere hâlâ karşı çıkıyor.",
+                "Hükümet yasal çerçeveyi değiştirebildi çünkü parlamento üyeleri değişikliklere karşı çıkmadı.",
+                "Hükümet yasal çerçeveyi değiştirmek zorunda kaldı çünkü parlamento üyeleri değişiklikleri onayladı.",
+                "Hükümet yasal çerçeveyi değiştirmeden önce parlamento üyeleri değişikliklere karşı çıkıyordu."
               ],
               correctIndex: 0,
-              enSentence: "Medical records have to be reviewed by authorized personnel before the patient is discharged.",
+              enSentence: "Although the government had to modify the legal framework, members of parliament still oppose the changes.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q2",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Yetenek", "Zarf Cümlecikleri"],
+              prompt: "\"If the central bank is able to control the inflation rate, citizens will not protest the monetary policy.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Gelişmiş yazılımlar sayesinde ekipler veritabanı anomalilerini saniyeler içinde tespit edebilmektedir.",
-                "Ekipler gelişmiş yazılımlar kullanmak zorundadır çünkü veritabanı anomalileri saniyeler içinde tespit edilmelidir.",
-                "Veritabanı anomalileri saniyeler içinde tespit edilmediği sürece ekipler gelişmiş yazılımları kullanamayacaktır.",
-                "Ekiplerin veritabanı anomalilerini saniyeler içinde tespit edebilmesi gelişmiş yazılımlarla bile zor olmuştur."
+                "Eğer merkez bankası enflasyon oranını kontrol edebilirse, vatandaşlar para politikasını protesto etmeyecektir.",
+                "Eğer merkez bankası enflasyon oranını kontrol etmek zorunda kalırsa, vatandaşlar para politikasını protesto edecektir.",
+                "Merkez bankası enflasyon oranını kontrol edebildiğinde vatandaşlar para politikasını protesto etmedi.",
+                "Vatandaşlar para politikasını protesto etmedikçe merkez bankası enflasyon oranını kontrol edemez."
               ],
               correctIndex: 0,
-              enSentence: "Through advanced software, teams are able to detect database anomalies within seconds.",
+              enSentence: "If the central bank is able to control the inflation rate, citizens will not protest the monetary policy.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q3",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Zaman Bağlaçları"],
+              prompt: "\"Film critics ought to evaluate the historical representation in the movie before they write their final columns.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Sistem yöneticisi ağ trafiğini izlemeye alıştığında, yeni sunucuyu kurmak zorunda kalmadı.",
-                "Sistem yöneticisi yeni sunucuyu devreye almadan önce ağı yapılandırmak zorunda kaldı.",
-                "Yeni sunucu devreye alındığı için sistem yöneticisi ağı yapılandırmak zorunda kalacaktır.",
-                "Ağ yapılandırılmadığı sürece sistem yöneticisi yeni sunucuyu devreye almamalıdır."
+                "Film eleştirmenleri nihai sütunlarını yazmadan önce filmdeki tarihi temsili değerlendirmelidir.",
+                "Film eleştirmenleri nihai sütunlarını yazdıktan sonra filmdeki tarihi temsili değerlendirmek zorunda kaldılar.",
+                "Filmdeki tarihi temsili değerlendirmek için film eleştirmenleri nihai sütunlarını yazmalıdır.",
+                "Film eleştirmenleri filmdeki tarihi temsili değerlendirebilirler çünkü nihai sütunlarını yazacaklardır."
               ],
               correctIndex: 0,
-              enSentence: "The system administrator had to configure the network before the new server was deployed.",
+              enSentence: "Film critics ought to evaluate the historical representation in the movie before they write their final columns.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q4",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye", "Gizli Şart"],
+              prompt: "\"Since the clinic started the new program, therapists have got used to treating children with cognitive disorders.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Zaman Uyumu", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Araştırmacılar laboratuvar kurallarını sıkı bir şekilde takip etmelidir; aksi takdirde lisansları iptal edilebilir.",
-                "Laboratuvar kurallarını takip etmek araştırmacıların lisanslarının iptal edilmesini önlemez.",
-                "Araştırmacılar lisansları iptal edilse bile laboratuvar kurallarını takip etmek zorundadırlar.",
-                "Lisansların iptal edilmesini önlemek amacıyla laboratuvar kurallarını takip etmeye gerek yoktur."
+                "Klinik yeni programa başladığından beri, terapistler bilişsel bozukluğu olan çocukları tedavi etmeye alıştılar.",
+                "Klinik yeni programa başlamadan önce terapistler bilişsel bozukluğu olan çocukları tedavi etmek zorundaydı.",
+                "Terapistler bilişsel bozukluğu olan çocukları tedavi etmeye alışmalıdır çünkü klinik yeni programa başladı.",
+                "Klinik yeni programa başladığında terapistler bilişsel bozukluğu olan çocukları tedavi edebildi."
               ],
               correctIndex: 0,
-              enSentence: "Researchers ought to follow the laboratory guidelines strictly; otherwise, their license might be revoked.",
+              enSentence: "Since the clinic started the new program, therapists have got used to treating children with cognitive disorders.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q5",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Tavsiye", "Zaman Bağlaçları"],
+              prompt: "\"Sociological scholars used to conduct their research through face-to-face interviews before the internet changed communication.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Deney başlamadan önce tüm güvenlik valflerini çift kontrol etseniz iyi olur.",
-                "Deney başladığında tüm güvenlik valflerini kontrol etmek zorunda kaldık.",
-                "Güvenlik valfleri kontrol edilmediği sürece deneye başlamamak iyi olur.",
-                "Deneyin güvenli bir şekilde başlaması için valfleri modifiye etsek iyi olur."
+                "İnternet iletişimi değiştirmeden önce, sosyoloji akademisyenleri araştırmalarını yüz yüze görüşmeler yoluyla yürütürlerdi.",
+                "İnternet iletişimi değiştirdiği için sosyoloji akademisyenleri araştırmalarını yüz yüze görüşmeler yoluyla yürütmek zorundadır.",
+                "Sosyoloji akademisyenleri araştırmalarını yüz yüze görüşmeler yoluyla yürütebildiler çünkü internet iletişimi değiştirdi.",
+                "İnternet iletişimi değiştirdiğinde sosyoloji akademisyenleri araştırmalarını yüz yüze görüşmelerle yürütmeye alıştı."
               ],
               correctIndex: 0,
-              enSentence: "You had better double-check all safety valves before the experiment begins.",
+              enSentence: "Sociological scholars used to conduct their research through face-to-face interviews before the internet changed communication.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q6",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Edilgen Çatı"],
+              prompt: "\"The legal experts had better examine the ancient documents carefully; otherwise, the judge might reject the evidence.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Bölgesel kütüphane, tüm kadim el yazmalarını sıcaklık kontrollü odalarda saklardı.",
-                "Tüm kadim el yazmaları bölgesel kütüphanedeki sıcaklık kontrollü odalarda saklanmak zorundaydı.",
-                "Bölgesel kütüphane tüm kadim el yazmalarını korumak için odaları sıcaklık kontrollü hale getirdi.",
-                "Sıcaklık kontrollü odalar bölgesel kütüphanedeki kadim el yazmalarını korumak için kullanılmazdı."
+                "Hukuk uzmanları antik belgeleri dikkatle inceleseler iyi olur; aksi takdirde hakim delilleri reddedebilir.",
+                "Hukuk uzmanları antik belgeleri dikkatle incelemek zorunda kaldılar; aksi takdirde hakim delilleri reddedebilir.",
+                "Hakim delilleri reddetti çünkü hukuk uzmanları antik belgeleri dikkatle incelemek zorunda değildi.",
+                "Hukuk uzmanları antik belgeleri incelediler çünkü hakim delilleri reddetmek istemedi."
               ],
               correctIndex: 0,
-              enSentence: "The regional library used to store all ancient manuscripts in temperature-controlled rooms.",
+              enSentence: "The legal experts had better examine the ancient documents carefully; otherwise, the judge might reject the evidence.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q7",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Gerund"],
+              prompt: "\"While studying the history of cinema, researchers have to analyze the symbolic meaning of early documentaries.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Klinik koordinatörü her gün yüzlerce acil vakayla ilgilenmeye alışıktır.",
-                "Klinik koordinatörü her gün yüzlerce acil vakayla ilgilenmek zorundadır.",
-                "Her gün yüzlerce acil vakayla ilgilenmek klinik koordinatörünün alışması gereken bir durumdur.",
-                "Klinik koordinatörü yüzlerce acil vakayla ilgilenmeye henüz alışamamıştır."
+                "Sinema tarihini incelerken, araştırmacılar erken dönem belgesellerin sembolik anlamını analiz etmek zorundadır.",
+                "Sinema tarihini incelemeden önce araştırmacılar erken dönem belgesellerin sembolik anlamını analiz edebildiler.",
+                "Araştırmacılar sinema tarihini incelemek zorundadır çünkü erken dönem belgesellerin sembolik anlamını analiz edeceklerdir.",
+                "Araştırmacılar sinema tarihini incelediler çünkü erken dönem belgesellerin sembolik anlamını analiz etmek zorunda kalmadılar."
               ],
               correctIndex: 0,
-              enSentence: "The clinic coordinator is used to dealing with hundreds of emergency cases every day.",
+              enSentence: "While studying the history of cinema, researchers have to analyze the symbolic meaning of early documentaries.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q8",
               type: "multiple-choice",
-              prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Zarf Cümlecikleri"],
+              prompt: "\"We needn't modify the monetary policy unless the international trade market experiences severe instability.\" cümlesinin Türkçe karşılığı hangisidir?",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               options: [
-                "Mühendisler yeni prototipin test parametrelerini analiz etmeye yavaş yavaş alışıyorlar.",
-                "Mühendisler yeni prototipin test parametrelerini analiz etmek zorunda kalacaklar.",
-                "Yeni prototipin test parametrelerini analiz etmek mühendisler için alışılmadık bir durum değildir.",
-                "Mühendislerin test parametrelerini analiz etmeye alışması uzun zaman alacaktır."
+                "Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadıkça para politikasını değiştirmemize gerek yoktur.",
+                "Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşarsa para politikasını değiştirmek zorunda kalacağız.",
+                "Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadığı için para politikasını değiştirmek zorunda değildik.",
+                "Para politikasını değiştirmeliyiz çünkü uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşıyor."
               ],
               correctIndex: 0,
-              enSentence: "The engineers are gradually getting used to analyzing the test parameters of the new prototype.",
+              enSentence: "We needn't modify the monetary policy unless the international trade market experiences severe instability.",
               isEngToTr: true
             },
             {
               id: "c104_l3_ex1_q9",
               type: "translation-text",
-              prompt: "“The administration will have to allocate extra resources if the software licensing cost rises.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Eğer yazılım lisanslama maliyeti artarsa yönetim ek kaynak tahsis etmek zorunda kalacak.",
-              enSentence: "The administration will have to allocate extra resources if the software licensing cost rises.",
+              prompt: "“Because the library preserves the historical archives of the parliament, scholars are able to verify the claims.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Kütüphane parlamentonun tarihi arşivlerini koruduğu için, akademisyenler iddiaları doğrulayabilmektedir.",
+              enSentence: "Because the library preserves the historical archives of the parliament, scholars are able to verify the claims.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Koşul Cümleleri"]
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex1_q10",
               type: "translation-text",
-              prompt: "“We needn't modify the configuration settings unless the network speed drops significantly.” cümlesini Türkçe'ye çevirin:",
-              correctSentence: "Ağ hızı önemli ölçüde düşmedikçe yapılandırma ayarlarını değiştirmemize gerek yoktur.",
-              enSentence: "We needn't modify the configuration settings unless the network speed drops significantly.",
+              prompt: "“If therapists get used to observing the behavior of patients, they will easily identify the cognitive issues.” cümlesini Türkçe'ye çevirin:",
+              correctSentence: "Eğer terapistler hastaların davranışlarını gözlemlemeye alışırlarsa, bilişsel sorunları kolayca belirleyeceklerdir.",
+              enSentence: "If therapists get used to observing the behavior of patients, they will easily identify the cognitive issues.",
               isEngToTr: true,
-              grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri"]
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l3_ex2",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 2: Boşluk Doldurma (Cloze & Buttons)",
-          description: "Gelişmiş akademik cümlelerdeki boşlukları en uygun yarı-modal formülleriyle doldurun.",
+          title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
+          description: "İleri düzey akademik cümlelerdeki boşlukları en uygun yarı-modal çekimleriyle doldurun.",
           questions: [
             {
               id: "c104_l3_ex2_q1",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "Medical records ___ to be reviewed by authorized personnel before the patient is discharged.",
-              options: ["have", "has", "must", "should"],
+              sentence: "Although the government had ___ modify the legal framework, members of parliament still oppose the changes.",
+              options: ["to", "for", "with", "of"],
               correctIndex: 0,
-              translation: "Tıbbi kayıtlar, hasta taburcu edilmeden önce yetkili personel tarafından incelenmek zorundadır.",
-              explanation: "Çoğul özne 'Medical records' ile present 'have to' edilgen çatı (have to be V3) uyuşur.",
-              hint: { formula: "Plural Noun + have to be + V3" }
+              translation: "Hükümet yasal çerçeveyi değiştirmek zorunda kalmasına rağmen, parlamento üyeleri değişikliklere hâlâ karşı çıkıyor.",
+              explanation: "'had to' yapısı fiilden önce 'to' gerektirir.",
+              hint: { formula: "had to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q2",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Through advanced software, teams are ___ to detect database anomalies within seconds.",
+              sentence: "If the central bank is ___ to control the inflation rate, citizens will not protest the monetary policy.",
               options: ["able", "capable", "must", "have"],
               correctIndex: 0,
-              translation: "Gelişmiş yazılımlar sayesinde ekipler veritabanı anomalilerini saniyeler içinde tespit edebilmektedir.",
-              explanation: "Yetenek/beceri bildiren 'are able to' yapısı cümleyi tamamlar.",
-              hint: { formula: "are + able + to + V1" }
+              translation: "Eğer merkez bankası enflasyon oranını kontrol edebilirse, vatandaşlar para politikasını protesto etmeyecektir.",
+              explanation: "Yetenek/beceri bildiren present 'is able to' yapısı cümleyi tamamlar.",
+              hint: { formula: "is/are able to + V1" },
+              grammarTags: ["Yarı-Modallar", "Yetenek", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q3",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The system administrator ___ to configure the network before the new server was deployed.",
-              options: ["had", "must", "should", "has"],
+              sentence: "Film critics ___ to evaluate the historical representation in the movie before they write their final columns.",
+              options: ["ought", "should", "must", "had better"],
               correctIndex: 0,
-              translation: "Sistem yöneticisi yeni sunucuyu devreye almadan önce ağı yapılandırmak zorunda kaldı.",
-              explanation: "Geçmiş zaman bağlamı 'was deployed' olduğu için 'had to' geçmiş zorunluluğu kullanılır.",
-              hint: { formula: "had to + V1 (Past Context)" }
+              translation: "Film eleştirmenleri nihai sütunlarını yazmadan önce filmdeki tarihi temsili değerlendirmelidir.",
+              explanation: "'to' ile devam eden ve gereklilik/tavsiye bildiren tek modal 'ought' yapısıdır.",
+              hint: { formula: "ought + to + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q4",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "Researchers ought ___ follow the laboratory guidelines strictly; otherwise, their license might be revoked.",
-              options: ["to", "not", "should", "must"],
+              sentence: "Since the clinic started the new program, therapists have ___ used to treating children with cognitive disorders.",
+              options: ["got", "been", "getting", "become"],
               correctIndex: 0,
-              translation: "Araştırmacılar laboratuvar kurallarını sıkı bir şekilde takip etmelidir; aksi takdirde lisansları iptal edilebilir.",
-              explanation: "'ought' daima 'to' edatıyla birlikte bir tavsiye bildirir.",
-              hint: { formula: "ought + to + V1" }
+              translation: "Klinik yeni programa başladığından beri, terapistler bilişsel bozukluğu olan çocukları tedavi etmeye alıştılar.",
+              explanation: "Alışma sürecini present perfect ile vurgulamak için 'have got used to' yapısı kullanılır.",
+              hint: { formula: "have/has got used to + V-ing" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Zaman Uyumu", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q5",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "You had ___ double-check all safety valves before the experiment begins.",
-              options: ["better", "rather", "to", "should"],
+              sentence: "Sociological scholars ___ to conduct their research through face-to-face interviews before the internet changed communication.",
+              options: ["used", "was used", "got used", "uses"],
               correctIndex: 0,
-              translation: "Deney başlamadan önce tüm güvenlik valflerini çift kontrol etseniz iyi olur.",
-              explanation: "'had better' güçlü tavsiye anlamı katar.",
-              hint: { formula: "had better + V1" }
+              translation: "İnternet iletişimi değiştirmeden önce, sosyoloji akademisyenleri araştırmalarını yüz yüze görüşmeler yoluyla yürütürlerdi.",
+              explanation: "Geçmişteki alışkanlıklar/durumlar 'used to' yapısı ile anlatılır.",
+              hint: { formula: "used to + V1" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q6",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The regional library ___ to store all ancient manuscripts in temperature-controlled rooms.",
-              options: ["used", "was", "uses", "got"],
+              sentence: "The legal experts had ___ examine the ancient documents carefully; otherwise, the judge might reject the evidence.",
+              options: ["better", "rather", "to", "should"],
               correctIndex: 0,
-              translation: "Bölgesel kütüphane, tüm kadim el yazmalarını sıcaklık kontrollü odalarda saklardı.",
-              explanation: "Geçmiş alışkanlık/durum bildiren 'used to' yapısı uygundur.",
-              hint: { formula: "used to + V1" }
+              translation: "Hukuk uzmanları antik belgeleri dikkatle inceleseler iyi olur; aksi takdirde hakim delilleri reddedebilir.",
+              explanation: "Güçlü/acil tavsiye bildiren 'had better' kalıbı cümleyi tamamlar.",
+              hint: { formula: "had better + V1" },
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q7",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The clinic coordinator is used to ___ with hundreds of emergency cases every day.",
-              options: ["dealing", "deal", "dealt", "be dealing"],
+              sentence: "While studying the history of cinema, researchers ___ to analyze the symbolic meaning of early documentaries.",
+              options: ["have", "has", "must", "should"],
               correctIndex: 0,
-              translation: "Klinik koordinatörü her gün yüzlerce acil vakayla ilgilenmeye alışıktır.",
-              explanation: "'is used to' (alışkın olmak) yapısından sonra fiil -ing (gerund) alır.",
-              hint: { formula: "be used to + V-ing" }
+              translation: "Sinema tarihini incelerken, araştırmacılar erken dönem belgesellerin sembolik anlamını analiz etmek zorundadır.",
+              explanation: "Çoğul özne (researchers) ile present zorunluluk bildiren 'have to' yapısı uyuşur.",
+              hint: { formula: "Plural Subject + have to + V1" },
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q8",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "The engineers are gradually getting used ___ analyzing the test parameters of the new prototype.",
-              options: ["to", "for", "with", "of"],
+              sentence: "We needn't ___ the monetary policy unless the international trade market experiences severe instability.",
+              options: ["modify", "modifying", "to modify", "modified"],
               correctIndex: 0,
-              translation: "Mühendisler yeni prototipin test parametrelerini analiz etmeye yavaş yavaş alışıyorlar.",
-              explanation: "'get used to' yapısı 'to' edatıyla kurulur.",
-              hint: { formula: "get used to + V-ing" }
+              translation: "Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadıkça para politikasını değiştirmemize gerek yoktur.",
+              explanation: "'needn't' yarı-modalından sonra fiil yalın halde (V1) gelir, 'to' kullanılmaz.",
+              hint: { formula: "needn't + V1" },
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q9",
               type: "fill-blank-dropdown",
               prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-              sentence: "The administration will ___ to allocate extra resources if the software licensing cost rises.",
-              options: ["have", "has", "had", "must"],
+              sentence: "Because the library preserves the historical archives of the parliament, scholars ___ able to verify the claims.",
+              options: ["are", "is", "was", "will"],
               correctIndex: 0,
-              translation: "Eğer yazılım lisanslama maliyeti artarsa yönetim ek kaynak tahsis etmek zorunda kalacak.",
-              explanation: "Gelececek zaman kipi 'will' ile 'have to' birleşerek zorunluluk bildirir.",
-              hint: { formula: "will have to + V1" }
+              translation: "Kütüphane parlamentonun tarihi arşivlerini koruduğu için, akademisyenler iddiaları doğrulayabilmektedir.",
+              explanation: "Çoğul özne (scholars) ile present yetenek/beceri bildiren 'are able to' yapısı kullanılır.",
+              hint: { formula: "are able to + V1" },
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
               id: "c104_l3_ex2_q10",
               type: "fill-blank",
               prompt: "Boşluğu doldur",
-              sentence: "We needn't ___ the configuration settings unless the network speed drops significantly.",
-              options: ["modify", "modifying", "to modify", "modified"],
+              sentence: "If therapists get used to ___ the behavior of patients, they will easily identify the cognitive issues.",
+              options: ["observing", "observe", "observed", "be observing"],
               correctIndex: 0,
-              translation: "Ağ hızı önemli ölçüde düşmedikçe yapılandırma ayarlarını değiştirmemize gerek yoktur.",
-              explanation: "'needn't' yarı-modalından sonra yalın fiil (V1) gelir, 'to' kullanılmaz.",
-              hint: { formula: "needn't + V1 (bare infinitive)" }
+              translation: "Eğer terapistler hastaların davranışlarını gözlemlemeye alışırlarsa, bilişsel sorunları kolayca belirleyeceklerdir.",
+              explanation: "'get used to' yapısından sonra fiil -ing (gerund) takısı alır.",
+              hint: { formula: "get used to + V-ing" },
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
         },
         {
           id: "c104_l3_ex3",
           createdAt: "2026-07-25T02:00:00Z",
-          title: "Alıştırma 3: Katmanlı Cümle Sentezi (Word Bank)",
+          title: "Alıştırma 3: Akademik Sentez (Word Bank)",
           description: "İleri düzey akademik cümle bloklarını sıralayarak tam çevirileri oluşturun.",
           questions: [
             {
               id: "c104_l3_ex3_q1",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Medical records have to be reviewed by authorized personnel before the patient is discharged.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Edilgen Çatı"],
-              words: ["Tıbbi kayıtlar,", "hasta taburcu edilmeden önce", "yetkili personel tarafından", "incelenmek zorundadır.", "incelenmelidir.", "doktor tarafından"],
-              correctOrder: ["Tıbbi kayıtlar,", "hasta taburcu edilmeden önce", "yetkili personel tarafından", "incelenmek zorundadır."]
+              translation: "Although the government had to modify the legal framework, members of parliament still oppose the changes.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Hükümet yasal çerçeveyi değiştirmek zorunda kalmasına rağmen,", "parlamento üyeleri", "değişikliklere", "hâlâ karşı çıkıyor.", "karşı çıkacaktır.", "onay verdiler."],
+              correctOrder: ["Hükümet yasal çerçeveyi değiştirmek zorunda kalmasına rağmen,", "parlamento üyeleri", "değişikliklere", "hâlâ karşı çıkıyor."]
             },
             {
               id: "c104_l3_ex3_q2",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Through advanced software, teams are able to detect database anomalies within seconds.",
-              grammarTags: ["Yarı-Modallar", "Yetenek"],
-              words: ["Gelişmiş yazılımlar sayesinde", "ekipler", "veritabanı anomalilerini", "saniyeler içinde", "tespit edebilmektedir.", "düzeltmek zorundadır.", "dosyaları"],
-              correctOrder: ["Gelişmiş yazılımlar sayesinde", "ekipler", "veritabanı anomalilerini", "saniyeler içinde", "tespit edebilmektedir."]
+              translation: "If the central bank is able to control the inflation rate, citizens will not protest the monetary policy.",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Eğer merkez bankası enflasyon oranını kontrol edebilirse,", "vatandaşlar", "para politikasını", "protesto etmeyecektir.", "protesto edeceklerdir.", "değiştirecektir."],
+              correctOrder: ["Eğer merkez bankası enflasyon oranını kontrol edebilirse,", "vatandaşlar", "para politikasını", "protesto etmeyecektir."]
             },
             {
               id: "c104_l3_ex3_q3",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The system administrator had to configure the network before the new server was deployed.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Zaman Bağlaçları"],
-              words: ["Sistem yöneticisi", "yeni sunucu devreye alınmadan önce", "ağı", "yapılandırmak zorunda kaldı.", "temizlemek zorunda kaldı.", "veritabanını"],
-              correctOrder: ["Sistem yöneticisi", "yeni sunucu devreye alınmadan önce", "ağı", "yapılandırmak zorunda kaldı."]
+              translation: "Film critics ought to evaluate the historical representation in the movie before they write their final columns.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Film eleştirmenleri", "nihai sütunlarını yazmadan önce", "filmdeki tarihi temsili", "değerlendirmelidir.", "değerlendirmek zorundadır.", "eleştirmelidir."],
+              correctOrder: ["Film eleştirmenleri", "nihai sütunlarını yazmadan önce", "filmdeki tarihi temsili", "değerlendirmelidir."]
             },
             {
               id: "c104_l3_ex3_q4",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "Researchers ought to follow the laboratory guidelines strictly; otherwise, their license might be revoked.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye", "Gizli Şart"],
-              words: ["Araştırmacılar", "laboratuvar kurallarını", "sıkı bir şekilde takip etmelidir;", "aksi takdirde", "lisansları iptal edilebilir.", "lisansları yenilenmez."],
-              correctOrder: ["Araştırmacılar", "laboratuvar kurallarını", "sıkı bir şekilde takip etmelidir;", "aksi takdirde", "lisansları iptal edilebilir."]
+              translation: "Since the clinic started the new program, therapists have got used to treating children with cognitive disorders.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Zaman Uyumu", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Klinik yeni programa başladığından beri,", "terapistler", "bilişsel bozukluğu olan çocukları", "tedavi etmeye alıştılar.", "tedavi etmek zorunda kaldılar.", "incelemeye başladılar."],
+              correctOrder: ["Klinik yeni programa başladığından beri,", "terapistler", "bilişsel bozukluğu olan çocukları", "tedavi etmeye alıştılar."]
             },
             {
               id: "c104_l3_ex3_q5",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "You had better double-check all safety valves before the experiment begins.",
-              grammarTags: ["Yarı-Modallar", "Tavsiye"],
-              words: ["Deney başlamadan önce", "tüm güvenlik valflerini", "çift kontrol etseniz iyi olur.", "kapatmak zorunda kalacaksınız.", "yenisiyle değiştirin."],
-              correctOrder: ["Deney başlamadan önce", "tüm güvenlik valflerini", "çift kontrol etseniz iyi olur."]
+              translation: "Sociological scholars used to conduct their research through face-to-face interviews before the internet changed communication.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["İnternet iletişimi değiştirmeden önce,", "sosyoloji akademisyenleri", "araştırmalarını", "yüz yüze görüşmeler yoluyla yürütürlerdi.", "yürütmek zorundaydılar.", "yayınlarlardı."],
+              correctOrder: ["İnternet iletişimi değiştirmeden önce,", "sosyoloji akademisyenleri", "araştırmalarını", "yüz yüze görüşmeler yoluyla yürütürlerdi."]
             },
             {
               id: "c104_l3_ex3_q6",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The regional library used to store all ancient manuscripts in temperature-controlled rooms.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Bölgesel kütüphane,", "tüm kadim el yazmalarını", "sıcaklık kontrollü odalarda", "saklardı.", "satın alırdı.", "arşivlerdi."],
-              correctOrder: ["Bölgesel kütüphane,", "tüm kadim el yazmalarını", "sıcaklık kontrollü odalarda", "saklardı."]
+              translation: "The legal experts had better examine the ancient documents carefully; otherwise, the judge might reject the evidence.",
+              grammarTags: ["Yarı-Modallar", "Tavsiye", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Hukuk uzmanları", "antik belgeleri dikkatle inceleseler iyi olur;", "aksi takdirde", "hakim delilleri reddedebilir.", "hakim davayı erteleyebilir.", "kabul etmek zorundadır."],
+              correctOrder: ["Hukuk uzmanları", "antik belgeleri dikkatle inceleseler iyi olur;", "aksi takdirde", "hakim delilleri reddedebilir."]
             },
             {
               id: "c104_l3_ex3_q7",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The clinic coordinator is used to dealing with hundreds of emergency cases every day.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Klinik koordinatörü", "her gün", "yüzlerce acil vakayla", "ilgilenmeye alışıktır.", "ilgilenmek zorundadır.", "vazgeçecektir."],
-              correctOrder: ["Klinik koordinatörü", "her gün", "yüzlerce acil vakayla", "ilgilenmeye alışıktır."]
+              translation: "While studying the history of cinema, researchers have to analyze the symbolic meaning of early documentaries.",
+              grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Sinema tarihini incelerken,", "araştırmacılar", "erken dönem belgesellerin", "sembolik anlamını", "analiz etmek zorundadır.", "analiz edebilirler.", "belirleyeceklerdir."],
+              correctOrder: ["Sinema tarihini incelerken,", "araştırmacılar", "erken dönem belgesellerin", "sembolik anlamını", "analiz etmek zorundadır."]
             },
             {
               id: "c104_l3_ex3_q8",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The engineers are gradually getting used to analyzing the test parameters of the new prototype.",
-              grammarTags: ["Yarı-Modallar", "Alışkanlık"],
-              words: ["Mühendisler", "yeni prototipin test parametrelerini", "analiz etmeye", "yavaş yavaş alışıyorlar.", "yeniden tasarlıyorlar.", "hazırlıyorlar."],
-              correctOrder: ["Mühendisler", "yeni prototipin test parametrelerini", "analiz etmeye", "yavaş yavaş alışıyorlar."]
+              translation: "We needn't modify the monetary policy unless the international trade market experiences severe instability.",
+              grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadıkça", "para politikasını", "değiştirmemize gerek yoktur.", "değiştirmek zorundayız.", "desteklemeliyiz."],
+              correctOrder: ["Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadıkça", "para politikasını", "değiştirmemize gerek yoktur."]
             },
             {
               id: "c104_l3_ex3_q9",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "The administration will have to allocate extra resources if the software licensing cost rises.",
-              grammarTags: ["Yarı-Modallar", "Zorunluluk", "Koşul Cümleleri"],
-              words: ["Eğer yazılım lisanslama maliyeti artarsa", "yönetim", "ek kaynak", "tahsis etmek zorunda kalacak.", "kesinti yapacaktır.", "satın alacaktır."],
-              correctOrder: ["Eğer yazılım lisanslama maliyeti artarsa", "yönetim", "ek kaynak", "tahsis etmek zorunda kalacak."]
+              translation: "Because the library preserves the historical archives of the parliament, scholars are able to verify the claims.",
+              grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Kütüphane parlamentonun tarihi arşivlerini koruduğu için,", "akademisyenler", "iddiaları", "doğrulayabilmektedir.", "doğrulamak zorundadır.", "reddederler."],
+              correctOrder: ["Kütüphane parlamentonun tarihi arşivlerini koruduğu için,", "akademisyenler", "iddiaları", "doğrulayabilmektedir."]
             },
             {
               id: "c104_l3_ex3_q10",
               type: "word-bank",
               prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-              translation: "We needn't modify the configuration settings unless the network speed drops significantly.",
-              grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri"],
-              words: ["Ağ hızı önemli ölçüde düşmedikçe", "yapılandırma ayarlarını", "değiştirmemize gerek yoktur.", "değiştirmek zorundayız.", "silmeliyiz."],
-              correctOrder: ["Ağ hızı önemli ölçüde düşmedikçe", "yapılandırma ayarlarını", "değiştirmemize gerek yoktur."]
+              translation: "If therapists get used to observing the behavior of patients, they will easily identify the cognitive issues.",
+              grammarTags: ["Yarı-Modallar", "Alışkanlık", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
+              words: ["Eğer terapistler", "hastaların davranışlarını", "gözlemlemeye alışırlarsa,", "bilişsel sorunları kolayca belirleyeceklerdir.", "belirlemek zorunda kalacaklardır.", "çözeceklerdir."],
+              correctOrder: ["Eğer terapistler", "hastaların davranışlarını", "gözlemlemeye alışırlarsa,", "bilişsel sorunları kolayca belirleyeceklerdir."]
             }
           ]
         }
@@ -4651,6 +4832,418 @@ if (typeof lessons !== 'undefined') {
 
     rawTopics.length = 0;
     rawTopics.push(...orderedTopics);
+  }
+
+  // ==========================================
+  // BÖLÜM 13: TERCİH BİLDİREN YAPILAR INJECTION
+  // ==========================================
+  const u13l41Questions = [
+    {
+      id: "u13l41_q1",
+      type: "matching",
+      prompt: "Tercih ifadelerini Türkçe karşılıklarıyla eşleştirin.",
+      pairs: [
+        { left: "would rather study", right: "çalışmayı tercih ederim" },
+        { left: "would rather have stayed", right: "kalmış olmayı tercih ederdim" },
+        { left: "would rather not go", right: "gitmemeyi tercih ederim" },
+        { left: "would rather have checked", right: "kontrol etmiş olmayı tercih ederdim" }
+      ],
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q2",
+      type: "multiple-choice",
+      prompt: "\"The researchers would rather publish their findings in an open-access journal.\" cümlesinin Türkçe karşılığı hangisidir?",
+      options: [
+        "Araştırmacılar bulgularını açık erişimli bir dergide yayınlamayı tercih ederler.",
+        "Araştırmacılar bulgularını açık erişimli bir dergide yayınlamış olmayı tercih ederlerdi.",
+        "Araştırmacılar açık erişimli dergileri diğerlerine tercih etmektedirler.",
+        "Araştırmacılar bulgularını açık erişimli dergiler yerine kitaplarda yayınlarlar."
+      ],
+      correctIndex: 0,
+      enSentence: "The researchers would rather publish their findings in an open-access journal.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q3",
+      type: "multiple-choice",
+      prompt: "\"I would rather have spent the budget on experimental equipment last term.\" cümlesinin Türkçe karşılığı hangisidir?",
+      options: [
+        "Geçen dönem bütçeyi deneysel ekipmanlara harcamış olmayı tercih ederdim.",
+        "Gelecek dönem bütçeyi deneysel ekipmanlara harcamayı tercih ederim.",
+        "Deneysel ekipmanlara bütçe ayırmayı her zaman tercih ederim.",
+        "Bütçeyi deneysel ekipmanlara harcamış olmalarını tercih ederlerdi."
+      ],
+      correctIndex: 0,
+      enSentence: "I would rather have spent the budget on experimental equipment last term.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q4",
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun eylem çekimini seçin:",
+      sentence: "The archaeologist would rather ___ the tomb himself than delegate it to others.",
+      options: ["excavate", "excavated", "have excavated", "excavating"],
+      correctIndex: 0,
+      translation: "Arkeolog, mezarı başkalarına devretmektense kendisi kazmayı tercih eder.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q5",
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun eylem çekimini seçin:",
+      sentence: "The coordinator would rather ___ the database security measures last week.",
+      options: ["have upgraded", "upgrade", "upgraded", "upgrading"],
+      correctIndex: 0,
+      translation: "Koordinatör veritabanı güvenlik önlemlerini geçen hafta yükseltmiş olmayı tercih ederdi.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q6",
+      type: "fill-blank",
+      prompt: "Boşluğu doldurunuz:",
+      sentence: "The professor would rather ___ the seminar than cancel it.",
+      options: ["postpone", "postponed", "have postponed", "postponing"],
+      correctIndex: 0,
+      translation: "Profesör semineri iptal etmektense ertelemeyi tercih eder.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q7",
+      type: "fill-blank",
+      prompt: "Boşluğu doldurunuz:",
+      sentence: "We would rather ___ the control variables during yesterday's experiment.",
+      options: ["have monitored", "monitor", "monitored", "monitoring"],
+      correctIndex: 0,
+      translation: "Dünkü deney sırasında kontrol değişkenlerini gözlemlemiş olmayı tercih ederdik.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q8",
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: "Laboratuvarda çalışmayı tercih ederim.",
+      enSentence: "I would rather work in the laboratory.",
+      words: ["Laboratuvarda", "çalışmayı", "tercih", "ederim", "dışarıda", "yapmak"],
+      correctOrder: ["Laboratuvarda", "çalışmayı", "tercih", "ederim"],
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q9",
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: "Sıvıyı ısıtmayı tercih ederdim.",
+      trSentence: "Sıvıyı ısıtmayı tercih ederdim.",
+      words: ["I", "would", "rather", "have", "heated", "the", "liquid", "heat"],
+      correctOrder: ["I", "would", "rather", "have", "heated", "the", "liquid"],
+      isEngToTr: false,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q10",
+      type: "translation-text",
+      prompt: "\"The team would rather analyze the sample now.\" cümlesini Türkçe'ye çevirin:",
+      correctSentence: "Ekip numuneyi şimdi analiz etmeyi tercih eder.",
+      enSentence: "The team would rather analyze the sample now.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q11",
+      type: "translation-text",
+      prompt: "\"I would rather have verified the credentials before the migration.\" cümlesini Türkçe'ye çevirin:",
+      correctSentence: "Geçişten önce kimlik bilgilerini doğrulamış olmayı tercih ederdim.",
+      enSentence: "I would rather have verified the credentials before the migration.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q12",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+      englishPhrase: "She would rather has studied grammar.",
+      turkishTranslation: "Hata tespiti: 'would rather' yapısından sonra yalın fiil (V1 - study) gelmelidir, 'has studied' gelemez.",
+      correctAnswer: "false",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q13",
+      type: "multiple-choice",
+      prompt: "\"Dün toplantıya katılmış olmayı tercih ederdim.\" cümlesinin İngilizce karşılığı hangisidir?",
+      options: [
+        "I would rather have attended the meeting yesterday.",
+        "I would rather attend the meeting yesterday.",
+        "I would rather attended the meeting yesterday.",
+        "I would rather having attended the meeting yesterday."
+      ],
+      correctIndex: 0,
+      enSentence: "I would rather have attended the meeting yesterday.",
+      isEngToTr: false,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q14",
+      type: "spotlight",
+      prompt: "Altı çizili olan 'rewrite' eyleminin cümledeki dil bilgisi işlevi nedir?",
+      paragraph: "The programmers would rather rewrite the legacy code.",
+      highlightChunk: "rewrite",
+      options: ["Yalın Eylem (Bare Infinitive)", "Çekimli Yüklem (Finite Verb)", "Ortaç (Participle)", "İsim-Fiil (Gerund)"],
+      correctIndex: 0,
+      translation: "Programcılar eski kodu yeniden yazmayı tercih eder.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l41_q15",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "I would rather ___ stayed at home last night than ___ to the conference.",
+      corrects: ["have", "gone"],
+      translation: "Dün gece konferansa gitmektense evde kalmış olmayı tercih ederdim.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    }
+  ];
+
+  const u13l42Questions = [
+    {
+      id: "u13l42_q1",
+      type: "matching",
+      prompt: "Tercih ifadelerini Türkçe karşılıklarıyla eşleştirin.",
+      pairs: [
+        { left: "would rather you stayed", right: "senin kalmanı tercih ederim" },
+        { left: "would rather they had helped", right: "onların yardım etmiş olmasını tercih ederdim" },
+        { left: "would rather she didn't speak", right: "onun konuşmamasını tercih ederim" },
+        { left: "would rather he had called", right: "onun aramış olmasını tercih ederdim" }
+      ],
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q2",
+      type: "multiple-choice",
+      prompt: "\"The board would rather the CEO resigned from his position immediately.\" cümlesinin Türkçe karşılığı hangisidir?",
+      options: [
+        "Yönetim kurulu, CEO'nun derhal görevinden istifa etmesini tercih eder.",
+        "Yönetim kurulu, CEO'nun derhal istifa etmiş olmasını tercih ederdi.",
+        "Yönetim kurulu, CEO istifa ederse yeni bir atama yapmayı tercih edecektir.",
+        "Yönetim kurulu, CEO'nun görevinde kalmasını istifa etmesine tercih eder."
+      ],
+      correctIndex: 0,
+      enSentence: "The board would rather the CEO resigned from his position immediately.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q3",
+      type: "multiple-choice",
+      prompt: "\"We would rather the technician had replaced the backup drives last month.\" cümlesinin Türkçe karşılığı hangisidir?",
+      options: [
+        "Teknisyenin geçen ay yedek sürücülerini değiştirmiş olmasını tercih ederdik.",
+        "Teknisyenin gelecek ay yedek sürücülerini değiştirmesini tercih ederiz.",
+        "Teknisyenin yedek sürücülerini her ay değiştirmesini tercih ediyoruz.",
+        "Geçen ay yedek sürücülerinin teknisyen tarafından değiştirilmesini tercih ederler."
+      ],
+      correctIndex: 0,
+      enSentence: "We would rather the technician had replaced the backup drives last month.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q4",
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun eylem çekimini seçin:",
+      sentence: "The director would rather that the committee ___ the proposal right now.",
+      options: ["approved", "approve", "approves", "had approved"],
+      correctIndex: 0,
+      translation: "Direktör, komitenin teklifi hemen şimdi onaylamasını tercih eder.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q5",
+      type: "fill-blank-dropdown",
+      prompt: "Boşluğa gelecek en uygun eylem çekimini seçin:",
+      sentence: "The supervisor would rather the assistant ___ the records before the inspection.",
+      options: ["had checked", "checks", "checked", "has checked"],
+      correctIndex: 0,
+      translation: "Sorumlu, asistanın denetimden önce kayıtları kontrol etmiş olmasını tercih ederdi.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q6",
+      type: "fill-blank",
+      prompt: "Boşluğu doldurunuz:",
+      sentence: "I would rather you ___ touch the experimental apparatus.",
+      options: ["didn't", "don't", "not", "hadn't"],
+      correctIndex: 0,
+      translation: "Deneysel cihazlara dokunmamanızı tercih ederim.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q7",
+      type: "fill-blank",
+      prompt: "Boşluğu doldurunuz:",
+      sentence: "They would rather the server administrator ___ the security patch last week.",
+      options: ["had installed", "installed", "installs", "would install"],
+      correctIndex: 0,
+      translation: "Sistem yöneticisinin geçen hafta güvenlik yamasını yüklemiş olmasını tercih ederlerdi.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q8",
+      type: "word-bank",
+      prompt: "Cümlenin Türkçe karşılığını oluşturun:",
+      translation: "Tarih çalışmanı tercih ederim.",
+      enSentence: "I would rather you studied history.",
+      words: ["Tarih", "çalışmanı", "tercih", "ederim", "fizik", "okumanı"],
+      correctOrder: ["Tarih", "çalışmanı", "tercih", "ederim"],
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q9",
+      type: "word-bank",
+      prompt: "Cümlenin İngilizce karşılığını oluşturun:",
+      translation: "Onun raporu dün sunmuş olmasını tercih ederdim.",
+      trSentence: "Onun raporu dün sunmuş olmasını tercih ederdim.",
+      words: ["I", "would", "rather", "he", "had", "submitted", "the", "report", "yesterday", "submits"],
+      correctOrder: ["I", "would", "rather", "he", "had", "submitted", "the", "report", "yesterday"],
+      isEngToTr: false,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q10",
+      type: "translation-text",
+      prompt: "\"The manager would rather the developers modified the script now.\" cümlesini Türkçe'ye çevirin:",
+      correctSentence: "Müdür, yazılımcıların betiği şimdi değiştirmesini tercih eder.",
+      enSentence: "The manager would rather the developers modified the script now.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q11",
+      type: "translation-text",
+      prompt: "\"I would rather they had not shared the logs yesterday.\" cümlesini Türkçe'ye çevirin:",
+      correctSentence: "Dün günlükleri paylaşmamış olmalarını tercih ederdim.",
+      enSentence: "I would rather they had not shared the logs yesterday.",
+      isEngToTr: true,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q12",
+      type: "true-false",
+      prompt: "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?",
+      englishPhrase: "I would rather you don't go to the seminar tomorrow.",
+      turkishTranslation: "Hata tespiti: Farklı özne ile kurulan present/future tercih yapılarında Simple Past (didn't go) kullanılmalıdır, don't kullanılamaz.",
+      correctAnswer: "false",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q13",
+      type: "multiple-choice",
+      prompt: "\"Yazarın yeni bir makale yayınlamasını tercih ederiz.\" cümlesinin İngilizce karşılığı hangisidir?",
+      options: [
+        "We would rather the author published a new article.",
+        "We would rather the author publishes a new article.",
+        "We would rather the author publish a new article.",
+        "We would rather the author has published a new article."
+      ],
+      correctIndex: 0,
+      enSentence: "We would rather the author published a new article.",
+      isEngToTr: false,
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q14",
+      type: "spotlight",
+      prompt: "Altı çizili olan 'had attended' eyleminin cümledeki dil bilgisi işlevi nedir?",
+      paragraph: "The dean would rather that the professors had attended the ceremony last year.",
+      highlightChunk: "had attended",
+      options: ["Past Perfect Tense (Geçmiş Zaman Tercihi)", "Present Perfect Tense", "Simple Past Tense", "Modal Perfect"],
+      correctIndex: 0,
+      translation: "Dekan, profesörlerin geçen yıl törene katılmış olmasını tercih ederdi.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    },
+    {
+      id: "u13l42_q15",
+      type: "multiple-fill-blank",
+      prompt: "Boşlukları sırasıyla klavyeden doldurunuz:",
+      sentence: "I would rather you ___ not tell the client about the error until we ___ fixed it.",
+      corrects: ["did", "have"],
+      translation: "Biz hatayı düzeltene kadar müşteriye hata hakkında bilgi vermemeni tercih ederim.",
+      grammarTags: ["Tercihler (Preferences)", "would rather"],
+      createdAt: "2026-07-27T22:00:00+03:00"
+    }
+  ];
+
+  if (typeof unitSentencesMap !== 'undefined') {
+    unitSentencesMap["13"] = {
+      "1": {
+        exercises: [
+          {
+            id: "u13l41ex1",
+            title: "Alıştırma 1: Kişisel Tercihler (Present & Past)",
+            description: "would rather + V1 / have V3 tercih yapıları pekiştirme alıştırması (15 Soru)",
+            createdAt: "2026-07-27T22:00:00+03:00",
+            questions: u13l41Questions
+          }
+        ]
+      },
+      "2": {
+        exercises: [
+          {
+            id: "u13l42ex1",
+            title: "Alıştırma 1: Diğer Kişilerin Tercihleri (Present & Past)",
+            description: "would rather + Subject + V2 / had V3 tercih yapıları pekiştirme alıştırması (15 Soru)",
+            createdAt: "2026-07-27T22:00:00+03:00",
+            questions: u13l42Questions
+          }
+        ]
+      }
+    };
+  }
+
+  if (typeof lessons !== 'undefined') {
+    lessons.forEach(l => {
+      if (l.unitId === 13) {
+        if (l.id === 41 || l.id === "41") {
+          l.exercises = unitSentencesMap["13"]["1"].exercises;
+          l.questions = u13l41Questions;
+        } else if (l.id === 42 || l.id === "42") {
+          l.exercises = unitSentencesMap["13"]["2"].exercises;
+          l.questions = u13l42Questions;
+        }
+      }
+    });
   }
 })();
 

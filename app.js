@@ -15,15 +15,15 @@ function cleanAcademicUnitTitle(title) {
   let t = title.trim();
 
   const map = {
-    'Temel Yapılar': 'Temel Cümle Yapıları (Basic Sentence Structures)',
-    'İsim ve Edat Yapıları': 'İsim ve Edat Yapıları (Nouns & Prepositions)',
-    'Fiil ve Edat Yapıları': 'Fiil ve Edat Yapıları (Verbs & Prepositions)',
+    'Temel Yapılar': 'Temel Cümle Yapıları',
+    'İsim ve Edat Yapıları': 'İsim ve Edat Yapıları',
+    'Fiil ve Edat Yapıları': 'Fiil ve Edat Yapıları',
     'Özne - Geçişli Fiil + Nesne': 'Özne, Fiil ve Nesne Dizilimi (SVO Structure)',
-    'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar (Modals & Tenses)',
+    'Saf Modallar ve Saf Zamanlar': 'Kip Ekleri ve Zamanlar',
     '"There" Yapıları': 'Var/Yok İfadeleri (There is / There are)',
-    'Soru Yapıları': 'Soru Cümleleri ve Kalıpları (Question Structures)',
-    'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar (Passive Voice & Passive Infinitive)',
-    'İsim Tamlaması': 'İsim Tamlamaları (Noun Compounds)',
+    'Soru Yapıları': 'Soru Cümleleri ve Kalıpları',
+    'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar',
+    'İsim Tamlaması': 'İsim Tamlamaları',
     'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltmalar (Participles)',
     'Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'Mastar Yapıları ve Kısaltmalar (Infinitives)',
     'Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler': 'Cümle Bağlaçları ve Geçiş İfadeleri (Connectors & Transitions)',
@@ -36,9 +36,9 @@ function cleanAcademicUnitTitle(title) {
     'Neden ve Etki Yapıları': 'Sebep ve Sonuç Yapıları (Cause & Effect)',
     'Ara Bölüm 2: Tercih Bildiren Yapılar': 'Tercih Bildiren Yapılar (Would Rather & Prefer)',
     'Tercih Bildiren Yapılar': 'Tercih Bildiren Yapılar (Would Rather & Prefer)',
-    'Ara Bölüm 3: Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları (Requests & Permission)',
-    'Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları (Requests & Permission)',
-    'Zaman Zarfları ve Zaman Uyumu': 'Zaman Zarfları ve Tense Uyumu (Time Adverbs & Sequence of Tenses)',
+    'Ara Bölüm 3: Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları',
+    'Rica ve İzin İsteme Yapıları': 'Rica ve İzin İsteme Yapıları',
+    'Zaman Zarfları ve Zaman Uyumu': 'Zaman Zarfları ve Tense Uyumu',
     'Zaman Uyumu: By the time, Since, It is time': 'Zaman Bağlaçları ve Tense Uyumu (By the time, Since, It\'s time)',
     'Öbeksel Kipler': 'Öbeksel Kipler (Phrasal Modals)',
     'Bağlaçlar': 'Bağlaç Yapıları ve Cümle İlişkileri (Conjunctions)',
@@ -75,7 +75,7 @@ function cleanAcademicUnitTitle(title) {
     'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
     'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Fiilimsiler ve Kısaltma Sentezi (Gerund & Participle)',
     'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'İleri Düzey Kısaltma ve Edilgen Yapılar',
-    'Yarı-Modallar ve Modal Benzeri Yapılar': 'Yarı-Modallar ve Tavsiye/Alışkanlık Yapıları (Semi-Modals)'
+    'Yarı-Modallar ve Modal Benzeri Yapılar': 'Yarı-Modallar ve Tavsiye/Alışkanlık Yapıları'
   };
 
   let cleaned = t
@@ -6784,6 +6784,12 @@ function showFormulaWarmup(lesson, callback) {
       <span>ALIŞTIRMAYA BAŞLA</span>
       <span>🚀</span>
     </button>
+    
+    ${isLocalEnvironment() ? `
+      <button id="btn-warmup-skip" style="background: rgba(255, 107, 107, 0.1); border: 1px solid #ff6b6b; border-radius: 8px; color: #ff6b6b; padding: 12px 20px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.2s; font-family: 'Outfit', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 10px;">
+        <span>ISINMAYI GEÇ ⏭️</span>
+      </button>
+    ` : ''}
   `;
   
   backdrop.appendChild(modal);
@@ -6887,6 +6893,21 @@ function showFormulaWarmup(lesson, callback) {
       if (callback) callback();
     }, 200);
   });
+  
+  if (isLocalEnvironment()) {
+    const skipBtn = modal.querySelector('#btn-warmup-skip');
+    if (skipBtn) {
+      skipBtn.addEventListener('click', () => {
+        backdrop.style.opacity = '0';
+        backdrop.style.transition = 'opacity 0.2s ease';
+        setTimeout(() => {
+          backdrop.remove();
+          updateBodyScrollLock();
+          if (callback) callback();
+        }, 200);
+      });
+    }
+  }
 }
 
 // ============================================================

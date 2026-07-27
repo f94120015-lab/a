@@ -1,6 +1,7 @@
 const fs = require('fs');
 const vm = require('vm');
 
+const stableCode = fs.readFileSync('data-stable.js', 'utf8');
 const dataCode = fs.readFileSync('data.js', 'utf8');
 const extraCode = fs.readFileSync('data-extra.js', 'utf8');
 const rulesCode = fs.readFileSync('rules-db.js', 'utf8');
@@ -18,6 +19,15 @@ const sandbox = {
 vm.createContext(sandbox);
 let dataResult;
 try {
+  // Run data-stable.js first
+  const executableStable = stableCode.replace(/\bexport\s+/g, '');
+  const stableResult = vm.runInContext(executableStable + '\n; ({ rawTopics, unitSentencesMap, units, lessons, globalLessonCounter });', sandbox);
+  sandbox.rawTopics = stableResult.rawTopics;
+  sandbox.unitSentencesMap = stableResult.unitSentencesMap;
+  sandbox.units = stableResult.units;
+  sandbox.lessons = stableResult.lessons;
+  sandbox.globalLessonCounter = stableResult.globalLessonCounter;
+
   // Appending an object expression at the end of the script to return the const arrays
   // Strip export statements to prevent VM syntax errors in script mode
   const executableCode = dataCode.replace(/\bexport\s+/g, '');
