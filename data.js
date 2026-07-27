@@ -19503,7 +19503,7 @@ const rawTopics = [
     "title": "XII. Participle Yapıları",
     "desc": "Present ve past participle sıfatları, zarf kombinasyonları, niteleme öbekleri ve sıfat cümlesi kısaltmaları (Adjective Clause Reductions)",
     "icon": "🌈",
-    "numLessons": 3,
+    "numLessons": 1,
     "formulas": [
       {
         "formula": "Present Participle (...ing) + Noun",
@@ -19522,9 +19522,7 @@ const rawTopics = [
       }
     ],
     "subtitles": [
-      "A. Present Participle Sıfatı (...ing + İsim) (Sayfa 81-84)",
-      "B. Past Participle ve Zarflı Sıfatlar (...ed / Adverb + V3 + İsim) (Sayfa 85-88)",
-      "C. Participle Takımları ve Akademik Cümle Kısaltmaları (Sayfa 88-97)"
+      "Sıfat-Fiiller ve Kısaltmalar (Participles) (Sayfa 81-97)"
     ],
     "originalNumLessons": 3
   },
@@ -41520,4032 +41518,752 @@ const unitSentencesMap = {
     }
   },
   "12": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u12l1ex1",
-        "title": "Alıştırma 1: Present Participle Sıfatları (Etken Yapılar)",
-        "description": "Öbek ve cümle düzeyinde present participle (-ing) sıfat ve niteleme yapıları pratikleri.",
-        "questions": [
-          {
-            "id": "u4l12ex1_q1",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "yükselen sıcaklıklar",
-                "right": "rising temperatures"
-              },
-              {
-                "left": "gelişmekte olan ekonomiler",
-                "right": "developing economies"
-              },
-              {
-                "left": "büyüyen endişeler",
-                "right": "growing concerns"
-              },
-              {
-                "left": "genişleyen pazarlar",
-                "right": "expanding markets"
-              }
-            ]
-          },
-          {
-            "id": "u4l12ex1_q2",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"increasing production\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Artan üretim",
-              "Azalan üretim",
-              "Mevcut üretim",
-              "Hızlı üretim"
-            ],
-            "correctIndex": 0,
-            "enSentence": "increasing production",
-            "isEngToTr": true
-          },
-          {
-            "id": "u4l12ex1_q3",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"misleading charts\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Yanıltıcı grafikler",
-              "Doğru tablolar",
-              "Karmaşık şemalar",
-              "Eksik veriler"
-            ],
-            "correctIndex": 0,
-            "enSentence": "misleading charts",
-            "isEngToTr": true
-          },
-          {
-            "id": "u4l12ex1_q4",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","İsim + Edat Takımı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The spacecraft detected a ___ star in the distant galaxy.",
-            "options": [
-              "shining",
-              "shined",
-              "shine",
-              "shines"
-            ],
-            "correctIndex": 0,
-            "translation": "Uzay aracı uzak galakside parlayan bir yıldız tespit etti."
-          },
-          {
-            "id": "u4l12ex1_q5",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Saf Modallar"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "We must analyze the ___ data before making a decision.",
-            "options": [
-              "existing",
-              "existed",
-              "exist",
-              "exists"
-            ],
-            "correctIndex": 0,
-            "translation": "Karar vermeden önce mevcut verileri analiz etmeliyiz."
-          },
-          {
-            "id": "u4l12ex2_q1",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Saf Modallar"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "Büyüyen nüfus daha fazla gıdaya ihtiyaç duyar.",
-                "right": "The growing population needs more food."
-              },
-              {
-                "left": "Değişen koşullara uyum sağlamalıyız.",
-                "right": "We must adapt to changing conditions."
-              },
-              {
-                "left": "Şirket yükselen fiyatları duyurdu.",
-                "right": "The company announced rising prices."
-              },
-              {
-                "left": "Her iki taraf da kalıcı bir barış istiyor.",
-                "right": "Both sides want a lasting peace."
-              }
-            ]
-          },
-          {
-            "id": "u4l12ex2_q2",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"Developing countries face many economic challenges.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Gelişmekte olan ülkeler birçok ekonomik zorlukla karşı karşıyadır.",
-              "Gelişmiş ülkeler ekonomik sorunları kolayca çözer.",
-              "Gelişmekte olan ülkeler yeni pazarlar bulmalıdır.",
-              "Ekonomik zorluklar gelişen ülkeleri etkiler."
-            ],
-            "correctIndex": 0,
-            "enSentence": "Developing countries face many economic challenges.",
-            "isEngToTr": true
-          },
-]
-      },
-      {
-        "id": "u12l1ex2",
-        "title": "Alıştırma 2: Cümle İçi Present Participle Nitelemeleri",
-        "description": "Hızlı refleks seçimi ve akademik cümle nitelemeleri pekiştirme testi.",
-        "questions": [
-          {
-            "id": "u4l12ex2_q3",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"The presentation contained misleading charts.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Sunum yanıltıcı grafikler içeriyordu.",
-              "Rapor doğru tablolar sunuyordu.",
-              "Sunumda karmaşık şemalar vardı.",
-              "Grafikler eksik verilerle doluydu."
-            ],
-            "correctIndex": 0,
-            "enSentence": "The presentation contained misleading charts.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u4l12ex2_q4",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Geniş Zaman","İsim + Edat Takımı","Sıfat & Participle Nitelemeleri"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The team is studying the ___ patterns of local birds.",
-            "options": [
-              "migrating",
-              "migrated",
-              "migrate",
-              "migrates"
-            ],
-            "correctIndex": 0,
-            "translation": "Ekip, yerel kuşların göç eden kalıplarını inceliyor."
-          },
-          {
-            "id": "u4l12ex2_q5",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","İsim + Edat Takımı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "Higher taxes lead to ___ costs for consumers.",
-            "options": [
-              "increasing",
-              "increased",
-              "increase",
-              "increases"
-            ],
-            "correctIndex": 0,
-            "translation": "Yüksek vergiler tüketiciler için artan maliyetlere yol açar."
-          },
-          {
-            "id": "u4l12ex3_q1",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Saf Modallar","Simple Past","İsim + Edat Takımı","Sıfat & Participle Nitelemeleri","Edilgen Çatı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","İsim + Edat Takımı"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "Doğal kaynakların tükenmesi hakkında büyüyen bir endişe vardır.",
-                "right": "There is growing concern about the depletion of natural resources."
-              },
-              {
-                "left": "Sıvının yükselen sıcaklığı bilim insanları tarafından dikkatle izlendi.",
-                "right": "The rising temperature of the liquid was carefully monitored by the scientists."
-              },
-              {
-                "left": "Yeni ortaya çıkan teknolojiler mevcut güvenlik çerçevesine entegre edilmelidir.",
-                "right": "Emerging technologies must be integrated into the existing security framework."
-              },
-              {
-                "left": "Araştırma ekibi küresel pazarın değişen dinamiklerini neden göz ardı etti?",
-                "right": "Why did the research team ignore the shifting dynamics of the global market?"
-              }
-            ]
-          },
-          {
-            "id": "u4l12ex3_q2",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Geniş Zaman","İsim + Edat Takımı","Edilgen Çatı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri","İsim + Edat Takımı"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","İsim + Edat Takımı"], "type": "multiple-choice",
-            "prompt": "\"To meet the demands of a growing population, the distribution of resources is regulated by the government.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Büyüyen bir nüfusun taleplerini karşılamak için kaynakların dağıtımı hükümet tarafından düzenlenir.",
-              "Nüfus arttıkça kaynaklar hükümet tarafından dağıtılacaktır.",
-              "Hükümet, büyüyen nüfusun taleplerini karşılamak için yeni kaynaklar arar.",
-              "Kaynakların dağıtımı büyüyen nüfusun ihtiyaçlarını karşılayamaz."
-            ],
-            "correctIndex": 0,
-            "enSentence": "To meet the demands of a growing population, the distribution of resources is regulated by the government.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u4l12ex3_q3",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Geniş Zaman","İsim + Edat Takımı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"Fluctuating prices in energy sectors are considered a significant threat to developing economies.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Enerji sektörlerindeki dalgalanan fiyatlar, gelişmekte olan ekonomiler için önemli bir tehdit olarak kabul edilir.",
-              "Gelişmekte olan ekonomiler enerji sektöründeki yüksek fiyatlardan etkilenir.",
-              "Enerji fiyatlarının dalgalanması gelişen ekonomileri tehdit edebilir.",
-              "Fiyat dalgalanmaları enerji sektörünü önemli ölçüde etkiler."
-            ],
-            "correctIndex": 0,
-            "enSentence": "Fluctuating prices in energy sectors are considered a significant threat to developing economies.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u4l12ex3_q4",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Saf Modallar","İsim + Edat Takımı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "There must be a ___ factor limiting the expansion of the network.",
-            "options": [
-              "dominating",
-              "dominated",
-              "dominate",
-              "dominates"
-            ],
-            "correctIndex": 0,
-            "translation": "Ağın genişlemesini sınırlayan baskın bir faktör olmalıdır."
-          },
-          {
-            "id": "u4l12ex3_q5",
-            "grammarTags": ["Participle Yapıları","Participle Nitelemeleri","Geniş Zaman","İsim + Edat Takımı"], "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The results of the experiment are affected by ___ temperatures in the chamber.",
-            "options": [
-              "varying",
-              "varied",
-              "vary",
-              "varies"
-            ],
-            "correctIndex": 0,
-            "translation": "Deneyin sonuçları haznedeki değişen sıcaklıklardan etkilenir."
-          }
+"1": {
+        "exercises": [
+            {
+                "id": "u12l1ex1",
+                "title": "Alıştırma 1: Öbek Düzeyi (Participle Nitelemeleri ve Sıfat Öbekleri)",
+                "description": "Etken (-ing) ve edilgen (-ed/V3) participle sıfatları ile isim niteleme öbeklerinin analizi.",
+                "questions": [
+                    {
+                        "id": "u12l1_ex1_q1",
+                        "type": "matching",
+                        "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "pairs": [
+                            {
+                                "left": "scholars challenging the classical theory",
+                                "right": "klasik teoriye meydan okuyan bilginler"
+                            },
+                            {
+                                "left": "laws protecting civil liberties",
+                                "right": "sivil özgürlükleri koruyan yasalar"
+                            },
+                            {
+                                "left": "factors influencing voting behavior",
+                                "right": "oy verme davranışını etkileyen faktörler"
+                            },
+                            {
+                                "left": "archaeologists excavating ancient ruins",
+                                "right": "antik harabeleri kazan arkeologlar"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "u12l1_ex1_q2",
+                        "type": "multiple-choice",
+                        "prompt": "\"scholars challenging the classical theory\" ifadesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "options": [
+                            "Klasik teoriye meydan okuyan bilginler",
+                            "Klasik teoriyi savunan bilginler",
+                            "Klasik teoriyi eleştiren öğrenciler",
+                            "Klasik teori üzerine yazan araştırmacılar"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "scholars challenging the classical theory",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex1_q3",
+                        "type": "multiple-choice",
+                        "prompt": "\"laws protecting civil liberties\" ifadesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "options": [
+                            "Sivil özgürlükleri koruyan yasalar",
+                            "Sivil özgürlükleri kısıtlayan yasalar",
+                            "Sivil hakları değiştiren mahkemeler",
+                            "Sivil anayasayı hazırlayan parlamentolar"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "laws protecting civil liberties",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex1_q4",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle sıfatını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "factors [influencing] the voting behavior of citizens",
+                        "options": [
+                            "influencing",
+                            "influenced",
+                            "influence",
+                            "to influence"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "vatandaşların oy verme davranışını etkileyen faktörler"
+                    },
+                    {
+                        "id": "u12l1_ex1_q5",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle sıfatını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "historical documents [preserved] in national archives",
+                        "options": [
+                            "preserved",
+                            "preserving",
+                            "preserve",
+                            "to preserve"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "ulusal arşivlerde korunan tarihsel belgeler"
+                    },
+                    {
+                        "id": "u12l1_ex1_q6",
+                        "type": "matching",
+                        "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "pairs": [
+                            {
+                                "left": "film critics evaluating symbolic meaning",
+                                "right": "sembolik anlamı değerlendiren sinema eleştirmenleri"
+                            },
+                            {
+                                "left": "economic policies driving market trends",
+                                "right": "piyasa eğilimlerini yönlendiren ekonomi politikaları"
+                            },
+                            {
+                                "left": "historical documents preserved in archives",
+                                "right": "arşivlerde korunan tarihsel belgeler"
+                            },
+                            {
+                                "left": "reforms passed by parliament",
+                                "right": "parlamento tarafından kabul edilen reformlar"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "u12l1_ex1_q7",
+                        "type": "multiple-choice",
+                        "prompt": "\"film critics evaluating symbolic meaning\" ifadesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "options": [
+                            "Sembolik anlamı değerlendiren sinema eleştirmenleri",
+                            "Sembolik anlamı eleştiren senaristler",
+                            "Sinema tarihini inceleyen eleştirmenler",
+                            "Filmin konusunu açıklayan yönetmenler"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "film critics evaluating symbolic meaning",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex1_q8",
+                        "type": "multiple-choice",
+                        "prompt": "\"economic policies driving market trends\" ifadesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "options": [
+                            "Piyasa eğilimlerini yönlendiren ekonomi politikaları",
+                            "Piyasa koşullarını değiştiren iktisatçılar",
+                            "Ekonomik krizi önleyen politikalar",
+                            "Piyasayı denetleyen iktisat kurumları"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "economic policies driving market trends",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex1_q9",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle sıfatını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "psychologists [analyzing] emotional development during therapy",
+                        "options": [
+                            "analyzing",
+                            "analyzed",
+                            "analyze",
+                            "to analyze"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "terapi sırasında duygusal gelişimi analiz eden psikologlar"
+                    },
+                    {
+                        "id": "u12l1_ex1_q10",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle sıfatını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "artifacts [recovered] from ancient ruins",
+                        "options": [
+                            "recovered",
+                            "recovering",
+                            "recover",
+                            "to recover"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "antik harabelerden çıkarılan eserler"
+                    },
+                    {
+                        "id": "u12l1_ex1_q11",
+                        "type": "multiple-choice",
+                        "prompt": "\"reforms passed by parliament\" ifadesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Edilgen Çatı"
+                        ],
+                        "options": [
+                            "Parlamento tarafından kabul edilen reformlar",
+                            "Parlamento tarafından reddedilen yasalar",
+                            "Parlamentoya sunulan anayasal taslaklar",
+                            "Parlamentoda tartışılan düzenlemeler"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "reforms passed by parliament",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex1_q12",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle sıfatını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "sentence": "researchers [investigating] cognitive processes",
+                        "options": [
+                            "investigating",
+                            "investigated",
+                            "investigate",
+                            "to investigate"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "bilişsel süreçleri araştıran araştırmacılar"
+                    }
+                ]
+            },
+            {
+                "id": "u12l1ex2",
+                "title": "Alıştırma 2: Cümle Düzeyi (Cümle İçinde Participle ve Kısaltma Yapıları)",
+                "description": "Etken ve edilgen eylemsilerin cümle içi nitelemeleri ve sıfat cümlesi kısaltmaları.",
+                "questions": [
+                    {
+                        "id": "u12l1_ex2_q1",
+                        "type": "multiple-choice",
+                        "prompt": "\"Researchers investigating cognitive processes published a sociological study.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Cümlecik Kısaltması",
+                            "SVO Yapısı",
+                            "Geçmiş Zaman"
+                        ],
+                        "options": [
+                            "Bilişsel süreçleri araştıran araştırmacılar sosyolojik bir çalışma yayımladı.",
+                            "Bilişsel süreçleri inceleyen psikologlar yeni bir makale yayımladı.",
+                            "Araştırmacılar sosyolojik çalışmayı tamamladıktan sonra bilişsel süreçleri araştırdı.",
+                            "Sosyolojik çalışma yayımlayan araştırmacılar bilişsel süreçleri gözlemledi."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Researchers investigating cognitive processes published a sociological study.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex2_q2",
+                        "type": "multiple-choice",
+                        "prompt": "\"Historical documents preserved in archives belong to the cultural heritage of the nation.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Cümlecik Kısaltması",
+                            "İsim ve Edat Yapıları",
+                            "Geniş Zaman"
+                        ],
+                        "options": [
+                            "Arşivlerde korunan tarihsel belgeler ulusun kültürel mirasına aittir.",
+                            "Ulusal arşivlerdeki tarihsel belgeler kültürel mirası korumaktadır.",
+                            "Kültürel mirasa ait belgeler tarihçiler tarafından arşivde saklanmıştır.",
+                            "Tarihsel belgeleri inceleyen araştırmacılar ulusal arşive katılmıştır."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Historical documents preserved in archives belong to the cultural heritage of the nation.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex2_q3",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "SVO Yapısı"
+                        ],
+                        "sentence": "The legal system [protecting] civil liberties ensures justice in court.",
+                        "options": [
+                            "protecting",
+                            "protected",
+                            "protect",
+                            "to protect"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Sivil özgürlükleri koruyan hukuk sistemi mahkemede adaleti sağlar."
+                    },
+                    {
+                        "id": "u12l1_ex2_q4",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Edilgen Çatı"
+                        ],
+                        "sentence": "Constitutional reforms [passed] by parliament altered the voting behavior of citizens.",
+                        "options": [
+                            "passed",
+                            "passing",
+                            "pass",
+                            "to pass"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Parlamento tarafından kabul edilen anayasal reformlar vatandaşların oy verme davranışını değiştirdi."
+                    },
+                    {
+                        "id": "u12l1_ex2_q5",
+                        "type": "fill-blank",
+                        "prompt": "Boşluğa uygun olan eylemsi (-ing) ekini klavyeden yazarak tamamlayın: \"Archaeologists excavat___ ancient ruins discovered a forgotten temple.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "Geçmiş Zaman"
+                        ],
+                        "sentence": "Archaeologists excavat[ing] ancient ruins discovered a forgotten temple.",
+                        "correctAnswer": "ing",
+                        "translation": "Antik harabeleri kazan arkeologlar unutulmuş bir tapınak keşfetti."
+                    },
+                    {
+                        "id": "u12l1_ex2_q6",
+                        "type": "word-bank",
+                        "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Film critics evaluating symbolic meaning wrote detailed articles.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Cümlecik Kısaltması",
+                            "SVO Yapısı"
+                        ],
+                        "words": [
+                            "Sembolik anlamı",
+                            "değerlendiren",
+                            "sinema eleştirmenleri",
+                            "detaylı makaleler",
+                            "yazdı."
+                        ],
+                        "correctOrder": [
+                            "Sembolik anlamı",
+                            "değerlendiren",
+                            "sinema eleştirmenleri",
+                            "detaylı makaleler",
+                            "yazdı."
+                        ],
+                        "translation": "Sembolik anlamı değerlendiren sinema eleştirmenleri detaylı makaleler yazdı."
+                    },
+                    {
+                        "id": "u12l1_ex2_q7",
+                        "type": "multiple-choice",
+                        "prompt": "\"Economic policies driving market trends caused a sudden shift in urban growth.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim Tamlamaları"
+                        ],
+                        "options": [
+                            "Piyasa eğilimlerini yönlendiren ekonomi politikaları kentsel büyümede ani bir kaymaya neden oldu.",
+                            "Kentsel büyümeyi etkileyen ekonomi politikaları piyasa eğilimlerini değiştirdi.",
+                            "Ekonomik kriz nedeniyle kentsel büyümede ani bir değişim yaşandı.",
+                            "Piyasa eğilimlerini inceleyen iktisatçılar kentsel büyümeyi analiz etti."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Economic policies driving market trends caused a sudden shift in urban growth.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex2_q8",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "Psychologists [analyzing] emotional development of individuals recommended regular therapy.",
+                        "options": [
+                            "analyzing",
+                            "analyzed",
+                            "analyze",
+                            "to analyze"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Bireylerin duygusal gelişimini analiz eden psikologlar düzenli terapi önerdi."
+                    },
+                    {
+                        "id": "u12l1_ex2_q9",
+                        "type": "fill-blank",
+                        "prompt": "Boşluğa uygun olan eylemsi (-ed) ekini klavyeden yazarak tamamlayın: \"Evidence present___ in court convinced the judge.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Geçmiş Zaman"
+                        ],
+                        "sentence": "Evidence present[ed] in court convinced the judge.",
+                        "correctAnswer": "ed",
+                        "translation": "Mahkemede sunulan deliller hakimi ikna etti."
+                    },
+                    {
+                        "id": "u12l1_ex2_q10",
+                        "type": "word-bank",
+                        "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Artifacts recovered from the temple are displayed in the museum.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Edilgen Çatı"
+                        ],
+                        "words": [
+                            "Tapınaktan",
+                            "çıkarılan",
+                            "eserler",
+                            "müzede",
+                            "sergilenmektedir."
+                        ],
+                        "correctOrder": [
+                            "Tapınaktan",
+                            "çıkarılan",
+                            "eserler",
+                            "müzede",
+                            "sergilenmektedir."
+                        ],
+                        "translation": "Tapınaktan çıkarılan eserler müzede sergilenmektedir."
+                    },
+                    {
+                        "id": "u12l1_ex2_q11",
+                        "type": "multiple-choice",
+                        "prompt": "\"Citizens participating in elections determine the future of the nation.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "Geniş Zaman"
+                        ],
+                        "options": [
+                            "Seçimlere katılan vatandaşlar ulusun geleceğini belirler.",
+                            "Vatandaşlar seçimlere katılarak yeni parlamentoyu seçer.",
+                            "Ulusun geleceğini düşünen vatandaşlar sandığa gider.",
+                            "Seçimleri kazanan adaylar ulusun geleceğini şekillendirir."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Citizens participating in elections determine the future of the nation.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex2_q12",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun participle yapısını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Edilgen Çatı"
+                        ],
+                        "sentence": "The classical theory [challenged] by scholars was revised in recent studies.",
+                        "options": [
+                            "challenged",
+                            "challenging",
+                            "challenge",
+                            "to challenge"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Bilginler tarafından meydan okunan klasik teori son çalışmalarda revize edildi."
+                    }
+                ]
+            },
+            {
+                "id": "u12l1ex3",
+                "title": "Alıştırma 3: İleri Seviye Akademik & Spiralleşme (Akademik Cümle Sentezi)",
+                "description": "Participle kısaltmalarının önceki dilbilgisi yapılarıyla (SVO, Soru Cümleleri, Var/Yok, İsim+Edat, Edilgen Çatı, Modallar) harmanlandığı ileri seviye cümle analizi.",
+                "questions": [
+                    {
+                        "id": "u12l1_ex3_q1",
+                        "type": "multiple-choice",
+                        "prompt": "\"Why did scholars study historical documents preserved in national archives?\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Soru Yapıları (Wh-)",
+                            "Past Participle Sıfatı",
+                            "Geçmiş Zaman"
+                        ],
+                        "options": [
+                            "Bilginler ulusal arşivlerde korunan tarihsel belgeleri neden inceledi?",
+                            "Bilginler ulusal arşivlerdeki tarihsel belgeleri nasıl düzenledi?",
+                            "Tarihsel belgeleri inceleyen bilginler ulusal arşive ne zaman gitti?",
+                            "Bilginler ulusal arşivlerde korunan tarihsel belgeleri nereden buldu?"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Why did scholars study historical documents preserved in national archives?",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q2",
+                        "type": "multiple-choice",
+                        "prompt": "\"There are economic policies driving market trends in developing nations.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Var / Yok İfadeleri",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "options": [
+                            "Gelişmekte olan uluslarda piyasa eğilimlerini yönlendiren ekonomi politikaları vardır.",
+                            "Gelişmekte olan uluslar piyasa eğilimlerini etkileyen ekonomi politikalarını uygular.",
+                            "Piyasa eğilimleri gelişmekte olan ulusların ekonomi politikalarını değiştirir.",
+                            "Gelişmekte olan uluslarda ekonomi politikalarını belirleyen uzmanlar bulunur."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "There are economic policies driving market trends in developing nations.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q3",
+                        "type": "multiple-choice",
+                        "prompt": "\"How do legal systems protecting civil liberties maintain order in court?\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Soru Yapıları (Wh-)",
+                            "Present Participle Sıfatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "options": [
+                            "Sivil özgürlükleri koruyan hukuk sistemleri mahkemede düzeni nasıl sağlar?",
+                            "Hukuk sistemleri mahkemede sivil özgürlükleri ve düzeni nasıl korur?",
+                            "Sivil özgürlükleri kısıtlayan hukuk sistemleri mahkemede düzen kurabilir mi?",
+                            "Mahkemede düzen sağlayan hukuk sistemleri sivil özgürlükleri ne zaman korur?"
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "How do legal systems protecting civil liberties maintain order in court?",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q4",
+                        "type": "translation-text",
+                        "prompt": "“Archaeologists excavating ancient ruins found artifacts displayed in the museum.” cümlesini Türkçe'ye çevirin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present & Past Participle",
+                            "Geçmiş Zaman",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "correctSentence": "Antik harabeleri kazan arkeologlar müzede sergilenen eserler buldu.",
+                        "enSentence": "Archaeologists excavating ancient ruins found artifacts displayed in the museum.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q5",
+                        "type": "word-bank",
+                        "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Constitutional reforms passed by parliament must protect the rights of citizens.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Saf Modallar",
+                            "Edilgen Çatı"
+                        ],
+                        "words": [
+                            "Parlamento tarafından",
+                            "kabul edilen",
+                            "anayasal reformlar",
+                            "vatandaşların haklarını",
+                            "korumalıdır."
+                        ],
+                        "correctOrder": [
+                            "Parlamento tarafından",
+                            "kabul edilen",
+                            "anayasal reformlar",
+                            "vatandaşların haklarını",
+                            "korumalıdır."
+                        ],
+                        "translation": "Parlamento tarafından kabul edilen anayasal reformlar vatandaşların haklarını korumalıdır."
+                    },
+                    {
+                        "id": "u12l1_ex3_q6",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluklara gelebilecek en uygun eylemsi sıfat formlarını sırasıyla seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present & Past Participle",
+                            "Saf Modallar",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "Psychologists [analyzing] emotional development must understand ideas [discussed] during therapy.",
+                        "options": [
+                            "analyzing / discussed",
+                            "analyzed / discussing",
+                            "analyze / discuss",
+                            "to analyze / to discuss"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Duygusal gelişimi analiz eden psikologlar terapi sırasında tartışılan fikirleri anlamalıdır."
+                    },
+                    {
+                        "id": "u12l1_ex3_q7",
+                        "type": "multiple-choice",
+                        "prompt": "\"Film critics evaluating symbolic meaning in movies can influence public opinion.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "Saf Modallar",
+                            "İsim Tamlamaları"
+                        ],
+                        "options": [
+                            "Filmlerdeki sembolik anlamı değerlendiren sinema eleştirmenleri kamuoyunu etkileyebilir.",
+                            "Sinema eleştirmenleri filmlerdeki sembolik anlamı değerlendirerek kamuoyunu yönlendirir.",
+                            "Kamuoyunu etkileyen sinema eleştirmenleri filmlerin sembolik anlamını inceler.",
+                            "Filmlerdeki sembolik anlam kamuoyunu etkileyen sinema eleştirmenleri tarafından tartışılır."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Film critics evaluating symbolic meaning in movies can influence public opinion.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q8",
+                        "type": "word-bank",
+                        "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Sociological studies investigating urban growth were published by researchers.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Present Participle Sıfatı",
+                            "Edilgen Çatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "words": [
+                            "Kentsel büyümeyi",
+                            "araştıran",
+                            "sosyolojik çalışmalar",
+                            "araştırmacılar tarafından",
+                            "yayımlandı."
+                        ],
+                        "correctOrder": [
+                            "Kentsel büyümeyi",
+                            "araştıran",
+                            "sosyolojik çalışmalar",
+                            "araştırmacılar tarafından",
+                            "yayımlandı."
+                        ],
+                        "translation": "Kentsel büyümeyi araştıran sosyolojik çalışmalar araştırmacılar tarafından yayımlandı."
+                    },
+                    {
+                        "id": "u12l1_ex3_q9",
+                        "type": "translation-text",
+                        "prompt": "“Which factor influencing voting behavior was identified during the election?” cümlesini Türkçe'ye çevirin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Soru Yapıları (Wh-)",
+                            "Present Participle Sıfatı",
+                            "Edilgen Çatı"
+                        ],
+                        "correctSentence": "Seçim sırasında oy verme davranışını etkileyen hangi faktör tespit edildi?",
+                        "enSentence": "Which factor influencing voting behavior was identified during the election?",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q10",
+                        "type": "multiple-choice",
+                        "prompt": "\"Evidence presented in court was examined by legal experts before the trial.\" cümlesinin Türkçe karşılığı hangisidir?",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Edilgen Çatı",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "options": [
+                            "Mahkemede sunulan deliller duruşmadan önce hukuk uzmanları tarafından incelendi.",
+                            "Hukuk uzmanları mahkemeye sunulan delilleri duruşma sırasında inceledi.",
+                            "Duruşmadan önce mahkemede sunulan deliller hukuk uzmanlarını ikna etti.",
+                            "Hukuk uzmanları tarafından incelenen deliller mahkemeye sunuldu."
+                        ],
+                        "correctIndex": 0,
+                        "enSentence": "Evidence presented in court was examined by legal experts before the trial.",
+                        "isEngToTr": true
+                    },
+                    {
+                        "id": "u12l1_ex3_q11",
+                        "type": "word-bank",
+                        "prompt": "Kelimeleri doğru sıraya dizerek Türkçe çeviriyi oluşturun: \"Ancient ruins excavated by archaeologists contain cultural heritage of the city.\"",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "İsim ve Edat Yapıları",
+                            "İsim Tamlamaları"
+                        ],
+                        "words": [
+                            "Arkeologlar tarafından",
+                            "kazılan",
+                            "antik harabeler",
+                            "şehrin kültürel mirasını",
+                            "içermektedir."
+                        ],
+                        "correctOrder": [
+                            "Arkeologlar tarafından",
+                            "kazılan",
+                            "antik harabeler",
+                            "şehrin kültürel mirasını",
+                            "içermektedir."
+                        ],
+                        "translation": "Arkeologlar tarafından kazılan antik harabeler şehrin kültürel mirasını içermektedir."
+                    },
+                    {
+                        "id": "u12l1_ex3_q12",
+                        "type": "fill-blank-dropdown",
+                        "prompt": "Boşluğa gelebilecek en uygun eylemsi sıfat yapısını seçin:",
+                        "grammarTags": [
+                            "Participle Yapıları",
+                            "Past Participle Sıfatı",
+                            "Geniş Zaman",
+                            "İsim ve Edat Yapıları"
+                        ],
+                        "sentence": "The classical theory [challenged] by scholars remains an important topic in philosophy.",
+                        "options": [
+                            "challenged",
+                            "challenging",
+                            "challenge",
+                            "to challenge"
+                        ],
+                        "correctIndex": 0,
+                        "translation": "Bilginler tarafından meydan okunan klasik teori felsefede önemli bir konu olmaya devam ediyor."
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  "2": {
-    "exercises": [
-      {
-        "id": "u12l2ex1",
-        "title": "Alıştırma 1: Past Participle Sıfatları (Edilgen Yapılar)",
-        "description": "Öbek ve cümle düzeyinde past participle (-ed) sıfat ve niteleme yapıları pratikleri.",
-        "questions": [
-          {
-            "id": "u5l14_ex1_match_phrase",
-            "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "analiz edilmiş veri",
-                "right": "analyzed data"
-              },
-              {
-                "left": "insansız bölgeler",
-                "right": "uninhabited regions"
-              },
-              {
-                "left": "azaltılmış hacim",
-                "right": "reduced volume"
-              },
-              {
-                "left": "maruz kalmış toprak",
-                "right": "exposed land"
-              }
-            ]
-          },
-          {
-            "id": "u5l14_ex1_mc_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"defined concepts\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Tanımlanmış kavramlar",
-              "Değiştirilmiş kriterler",
-              "Sınırlı faktörler",
-              "Beklenen roller"
-            ],
-            "correctIndex": 0,
-            "enSentence": "defined concepts",
-            "isEngToTr": true
-          },
-          {
-            "id": "u5l14_ex1_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"restricted areas\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Kısıtlanmış alanlar",
-              "Seçilmiş bireyler",
-              "Tahsis edilmiş kaynaklar",
-              "Entegre teknolojiler"
-            ],
-            "correctIndex": 0,
-            "enSentence": "restricted areas",
-            "isEngToTr": true
-          },
-          {
-            "id": "u5l14_ex1_fb_dropdown_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The laboratory recorded a ___ volume of the liquid.",
-            "options": [
-              "reduced",
-              "reducing",
-              "reduces",
-              "reduce"
-            ],
-            "correctIndex": 0,
-            "translation": "Laboratuvar sıvının azaltılmış hacmini kaydetti."
-          },
-          {
-            "id": "u5l14_ex1_fb_dropdown_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The manager wants to distribute the ___ resources.",
-            "options": [
-              "reallocated",
-              "reallocating",
-              "reallocates",
-              "reallocate"
-            ],
-            "correctIndex": 0,
-            "translation": "Yönetici yeniden tahsis edilmiş kaynakları dağıtmak istiyor."
-          },
-]
-      },
-      {
-        "id": "u12l2ex2",
-        "title": "Alıştırma 2: Zarflı Sıfatlar ve Past Participle Nitelemeleri",
-        "description": "Adverb + V3 + Noun yapıları ve akademik metin uygulamaları.",
-        "questions": [
-          {
-            "id": "u5l14_ex2_match_phrase",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "Komite analiz edilmiş veriyi inceledi.",
-                "right": "The committee reviewed the analyzed data."
-              },
-              {
-                "left": "Araştırmacılar insansız bölgeleri keşfetti.",
-                "right": "Researchers explored the uninhabited regions."
-              },
-              {
-                "left": "Öğrenciler gerekli malzemeyi teslim etmelidir.",
-                "right": "Students must submit the required material."
-              },
-              {
-                "left": "Kütüphanede yorumlanmış metinler vardır.",
-                "right": "There are interpreted texts in the library."
-              }
-            ]
-          },
-          {
-            "id": "u5l14_ex2_mc_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"The scientists followed the modified criteria.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Bilim insanları değiştirilmiş kriterleri takip etti.",
-              "Bilim insanları yeni bir yöntem geliştirdi.",
-              "Bilim insanları kısıtlanmış alanları inceledi.",
-              "Bilim insanları tahmin edilen geliri hesapladı."
-            ],
-            "correctIndex": 0,
-            "enSentence": "The scientists followed the modified criteria.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u5l14_ex2_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"The institution relies on established policies.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Kurum kurulmuş politikalara güveniyor.",
-              "Kurum yeni düzenlemeler öneriyor.",
-              "Kurum kaynakları yeniden tahsis ediyor.",
-              "Kurum değiştirilmiş çerçeveyi kullanıyor."
-            ],
-            "correctIndex": 0,
-            "enSentence": "The institution relies on established policies.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u5l14_ex2_fb_dropdown_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The accountant calculated the ___ revenue for this year.",
-            "options": [
-              "estimated",
-              "estimating",
-              "estimates",
-              "estimate"
-            ],
-            "correctIndex": 0,
-            "translation": "Muhasebeci bu yıl için tahmin edilen geliri hesapladı."
-          },
-          {
-            "id": "u5l14_ex2_fb_dropdown_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The ___ documents can be analyzed later.",
-            "options": [
-              "published",
-              "publishing",
-              "publishes",
-              "publish"
-            ],
-            "correctIndex": 0,
-            "translation": "Yayınlanmış belgeler daha sonra analiz edilebilir."
-          },
-          {
-            "id": "u5l14_ex3_match_phrase",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "son derece analiz edilmiş veri",
-                "right": "highly analyzed data"
-              },
-              {
-                "left": "yoğun nüfuslu bir bölge",
-                "right": "densely populated area"
-              },
-              {
-                "left": "sağlam bir şekilde kurulmuş bir ilke",
-                "right": "firmly established principle"
-              },
-              {
-                "left": "genetiği değiştirilmiş bir organizma",
-                "right": "genetically modified organism"
-              }
-            ]
-          },
-          {
-            "id": "u5l14_ex3_mc_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"Seçilmiş bireyler değerlendirilmiş yöntemlere göre seçilir.\" cümlesinin İngilizce karşılığı hangisidir?",
-            "options": [
-              "Selected individuals are chosen based on evaluated methods.",
-              "The committee decided to hire the selected individuals.",
-              "We must evaluate the methods before choosing individuals.",
-              "The selected team implemented the evaluated methods."
-            ],
-            "correctIndex": 0,
-            "enSentence": "Selected individuals are chosen based on evaluated methods.",
-            "isEngToTr": false
-          },
-          {
-            "id": "u5l14_ex3_mc_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"The professor published a highly analyzed dataset.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Profesör son derece analiz edilmiş bir veri seti yayınladı.",
-              "Profesör iyi yapılandırılmış bir yaklaşım sundu.",
-              "Profesör genetiği değiştirilmiş bir organizma hakkında makale yazdı.",
-              "Profesör yasal olarak bağlayıcı bir sözleşme hazırladı."
-            ],
-            "correctIndex": 0,
-            "enSentence": "The professor published a highly analyzed dataset.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u5l14_ex3_fb_dropdown_0",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "We must follow a ___ established principle of physics.",
-            "options": [
-              "firmly",
-              "firm",
-              "firmness",
-              "firming"
-            ],
-            "correctIndex": 0,
-            "translation": "Fiziğin sağlam bir şekilde kurulmuş bir ilkesini takip etmeliyiz."
-          },
-          {
-            "id": "u5l14_ex3_fb_dropdown_1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçiniz:",
-            "sentence": "The research supports an ___ validated hypothesis.",
-            "options": [
-              "empirically",
-              "empirical",
-              "empiricism",
-              "empiric"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma deneysel olarak doğrulanmış bir hipotezi destekliyor."
-          }
-        ]
-      }
-    ]
-  },
-  "3": {
-    "exercises": [
-      {
-        "id": "u12l3ex1",
-        "title": "Alıştırma 1: Participle Takımları ve Temel Kısaltmalar",
-        "description": "Cümle düzeyinde present ve past participle takımları ile gelişmiş niteleme pratikleri.",
-        "questions": [
-          {
-            "id": "u12l38_ex1_match_basit",
-            "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "bu bölgelerde kalan ormanlar",
-                "right": "the forests remaining in these areas"
-              },
-              {
-                "left": "doğru bir çizgi boyunca hareket eden bir nokta",
-                "right": "a point moving along a straight line"
-              },
-              {
-                "left": "toprakta yaşayan bir organizma",
-                "right": "an organism living in the soil"
-              },
-              {
-                "left": "kumlu toprakta yetişen bir ağaç",
-                "right": "a tree growing in sandy soil"
-              }
-            ]
-          },
-          {
-            "id": "u12l38_ex1_mc_et_basit_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"a line beginning at this point\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "doğru bir çizgi boyunca hareket eden bir nokta",
-              "bu bölgelerde kalan ormanlar",
-              "sütunun tabanında dönen bir küre",
-              "bu noktada başlayan bir çizgi"
-            ],
-            "correctIndex": 3,
-            "enSentence": "a line beginning at this point",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l38_ex1_wb_et_basit_5",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "micro-organisms living in the cell",
-            "words": [
-              "doğru",
-              "bir",
-              "mikroorganizmalar",
-              "yaşayan",
-              "hücrede",
-              "devam"
-            ],
-            "correctOrder": [
-              "hücrede",
-              "yaşayan",
-              "mikroorganizmalar"
-            ],
-            "enSentence": "micro-organisms living in the cell",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l38_ex1_fb_basit_6",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "costs ___ because of scarcity of raw materials",
-            "options": [
-              "increasing",
-              "increasings",
-              "increasinged",
-              "increasinging"
-            ],
-            "correctIndex": 0,
-            "enSentence": "costs increasing because of scarcity of raw materials"
-          },
-          {
-            "id": "u12l38_ex1_tx_et_basit_7",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"movement continuing in waves\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "dalgalar halinde devam eden hareket",
-            "enSentence": "movement continuing in waves",
-            "isEngToTr": true
-          },
-]
-      },
-      {
-        "id": "u12l33_ex2",
-        "title": "Alıştırma 2: Akademik Cümle Kısaltmaları ve Sentez",
-        "description": "İleri düzey cümle kısaltmaları ve bağlamsal niteleme analizi.",
-        "questions": [
-          {
-            "id": "u12l39_ex1_match_basit",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "sınıflandırmayı gösteren bir şema",
-                "right": "a diagram showing the classification"
-              },
-              {
-                "left": "gerçekleri içeren bir ifade",
-                "right": "a statement containing the facts"
-              },
-              {
-                "left": "durumu açıklayan bir makale",
-                "right": "an article describing the situation"
-              },
-              {
-                "left": "elektrotları bağlayan bir tel",
-                "right": "a wire connecting the electrodes"
-              }
-            ]
-          },
-          {
-            "id": "u12l39_ex1_mc_et_basit_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"a cover protecting the contents\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "elektrotları bağlayan bir tel",
-              "suçluluğu kanıtlayan delil",
-              "içeriği koruyan bir kapak",
-              "hakları koruyan yasalar"
-            ],
-            "correctIndex": 2,
-            "enSentence": "a cover protecting the contents",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l39_ex1_wb_et_basit_5",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "principles determining the right",
-            "words": [
-              "tesis",
-              "delil",
-              "ilkeler",
-              "belirleyen",
-              "içeriği",
-              "hakkı"
-            ],
-            "correctOrder": [
-              "hakkı",
-              "belirleyen",
-              "ilkeler"
-            ],
-            "enSentence": "principles determining the right",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l39_ex1_fb_basit_6",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "a statement ___ the principles",
-            "options": [
-              "defining",
-              "definings",
-              "defininged",
-              "defininging"
-            ],
-            "correctIndex": 0,
-            "enSentence": "a statement defining the principles"
-          },
-          {
-            "id": "u12l39_ex1_tx_et_basit_7",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"a law protecting the individual\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "bireyi koruyan bir yasa",
-            "enSentence": "a law protecting the individual",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l40_ex1_match_basit",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "arzularında birleşmiş uluslar",
-                "right": "nations united in their desire"
-              },
-              {
-                "left": "bilim insanlarınca iyi bilinen gerçekler",
-                "right": "facts well-known to scientists"
-              },
-              {
-                "left": "iki elementten oluşan bir bileşik",
-                "right": "a compound composed of two elements"
-              },
-              {
-                "left": "çocuklar için basitleştirilmiş bir resim",
-                "right": "a picture simplified for children"
-              }
-            ]
-          },
-          {
-            "id": "u12l40_ex1_mc_et_basit_4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"materials needed for their industries\" ifadesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "tehlikeye maruz kalan arazi",
-              "bilim insanlarınca iyi bilinen gerçekler",
-              "havaya maruz kalmış kurşun",
-              "sanayileri için ihtiyaç duyulan malzemeler"
-            ],
-            "correctIndex": 3,
-            "enSentence": "materials needed for their industries",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l40_ex1_wb_et_basit_5",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-            "translation": "lead exposed to the air",
-            "words": [
-              "havaya",
-              "kurşun",
-              "maruz",
-              "yaşadığı",
-              "duyulan",
-              "kalmış",
-              "çocuklar"
-            ],
-            "correctOrder": [
-              "havaya",
-              "maruz",
-              "kalmış",
-              "kurşun"
-            ],
-            "enSentence": "lead exposed to the air",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l40_ex1_fb_basit_6",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "organisms ___ in the vegetable kingdom",
-            "options": [
-              "classified",
-              "classifieds",
-              "classifieded",
-              "classifieding"
-            ],
-            "correctIndex": 0,
-            "enSentence": "organisms classified in the vegetable kingdom"
-          },
-          {
-            "id": "u12l40_ex1_tx_et_basit_7",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"the energy produced by an atomic pile\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "nükleer reaktör tarafından üretilen enerji",
-            "enSentence": "the energy produced by an atomic pile",
-            "isEngToTr": true
-          }
-        ]
-      }
-    ]
-  },
-  "4": {
-    "exercises": [
-      {
-        "id": "u12l4ex1",
-        "title": "Alıştırma 1: Fiil İsmi (Gerund) + Nesnesi",
-        "description": "Fiil isminin (gerund) cümle öznesi olarak kullanımı ve akademik yapılardaki işlevi (15 Soru)",
-        "questions": [
-          {
-            "id": "u12l4_ex1_match1",
-            "type": "matching",
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "analiz etme",
-                "right": "analyzing"
-              },
-              {
-                "left": "değiştirme",
-                "right": "modifying"
-              },
-              {
-                "left": "değerlendirme",
-                "right": "evaluating"
-              },
-              {
-                "left": "yapılandırma",
-                "right": "structuring"
-              }
-            ]
-          },
-          {
-            "id": "u12l4_ex1_mc1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Troubleshooting the Flutter interface</span> demands specific expert analysts.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Flutter arayüzündeki entegre etmek özel uzman analistler gerektirir.",
-              "Flutter arayüzündeki tahmin etmek özel uzman analistler gerektirir.",
-              "Flutter arayüzündeki sorunları gidermek özel uzman analistler gerektirir.",
-              "Flutter arayüzündeki yürütmek özel uzman analistler gerektirir."
-            ],
-            "correctIndex": 2,
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Troubleshooting the Flutter interface</span> demands specific expert analysts.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_mc2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"Düzenleyici süreç yoluyla yasal sözleşmeyi doğrulamak esastır.\" cümlesinin İngilizce karşılığı hangisidir?",
-            "options": [
-              "Distributing the legal contract through the regulatory process is essential.",
-              "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Validating the legal contract</span> through the regulatory process is essential.",
-              "The legal contract through the regulatory process is essential Validating .",
-              " Validating the legal through contract the regulatory process is essential."
-            ],
-            "correctIndex": 1,
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Validating the legal contract</span> through the regulatory process is essential.",
-            "isEngToTr": false
-          },
-          {
-            "id": "u12l4_ex1_wb1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Analyzing the raw data</span> requires a strict methodology.",
-            "words": [
-              "gerektirir",
-              "metodoloji",
-              "katı",
-              "etmek",
-              "bir",
-              "analiz",
-              "verileri",
-              "azaltır",
-              "Ham",
-              "en",
-              "Profesyonel"
-            ],
-            "correctOrder": [
-              "Ham",
-              "verileri",
-              "analiz",
-              "etmek",
-              "katı",
-              "bir",
-              "metodoloji",
-              "gerektirir"
-            ],
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Analyzing the raw data</span> requires a strict methodology.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_wb2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Modifying the legislative framework</span> causes temporary instability.",
-            "words": [
-              "kaynak",
-              "departmanı",
-              "sunar",
-              "Yasal",
-              "geçici",
-              "neden",
-              "istikrarsızlığa",
-              "çerçeveyi",
-              "değiştirmek",
-              "olur"
-            ],
-            "correctOrder": [
-              "Yasal",
-              "çerçeveyi",
-              "değiştirmek",
-              "geçici",
-              "istikrarsızlığa",
-              "neden",
-              "olur"
-            ],
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Modifying the legislative framework</span> causes temporary instability.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_tx1",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Structuring the financial resources</span> is a complex process.\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Finansal kaynakları yapılandırmak karmaşık bir süreçtir.",
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Structuring the financial resources</span> is a complex process.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_mc3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Regulating the battery temperature</span> is critical for solar inverter efficiency.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Batarya sıcaklığını düzenlemek güneş enerjisi invertör verimliliği için kritik öneme sahiptir.",
-              "Batarya sıcaklığını yayınlamak güneş enerjisi invertör verimliliği için kritik öneme sahiptir.",
-              "Batarya sıcaklığını sürdürmek güneş enerjisi invertör verimliliği için kritik öneme sahiptir.",
-              "Batarya sıcaklığını türetmek güneş enerjisi invertör verimliliği için kritik öneme sahiptir."
-            ],
-            "correctIndex": 0,
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Regulating the battery temperature</span> is critical for solar inverter efficiency.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_wb3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Defining the specific criteria</span> helps the committee exclude irrelevant data.",
-            "words": [
-              "olur",
-              "Belirli",
-              "kriterleri",
-              "yardımcı",
-              "sunmak",
-              "tanımlamak",
-              "hariç",
-              "tutmasına",
-              "komitenin",
-              "ortamı",
-              "ilgisiz",
-              "ölçüde",
-              "verileri"
-            ],
-            "correctOrder": [
-              "Belirli",
-              "kriterleri",
-              "tanımlamak",
-              "komitenin",
-              "ilgisiz",
-              "verileri",
-              "hariç",
-              "tutmasına",
-              "yardımcı",
-              "olur"
-            ],
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Defining the specific criteria</span> helps the committee exclude irrelevant data.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_tx2",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Monitoring the local conditions</span> allows the team to predict regional stability.\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Yerel koşulları izlemek, ekibin bölgesel istikrarı tahmin etmesini sağlar.",
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Monitoring the local conditions</span> allows the team to predict regional stability.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_mc4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Excluding the temporary variables</span> produces more consistent statistical outcomes.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Geçici değişkenleri değerlendirmek daha tutarlı istatistiksel sonuçlar üretir.",
-              "Geçici değişkenleri kaldırmak daha tutarlı istatistiksel sonuçlar üretir.",
-              "Geçici değişkenleri toplamak daha tutarlı istatistiksel sonuçlar üretir.",
-              "Geçici değişkenleri hariç tutmak daha tutarlı istatistiksel sonuçlar üretir."
-            ],
-            "correctIndex": 3,
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Excluding the temporary variables</span> produces more consistent statistical outcomes.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_wb4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Identifying the target goals</span> provides clarity for the entire project team.",
-            "words": [
-              "regional",
-              "clarity",
-              "entire",
-              "provides",
-              "project",
-              "team",
-              "goals",
-              "target",
-              "the",
-              "Identifying",
-              "simplifies",
-              "the",
-              "for",
-              "long"
-            ],
-            "correctOrder": [
-              "Identifying",
-              "the",
-              "target",
-              "goals",
-              "provides",
-              "clarity",
-              "for",
-              "the",
-              "entire",
-              "project",
-              "team"
-            ],
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Identifying the target goals</span> provides clarity for the entire project team.",
-            "isEngToTr": false
-          },
-          {
-            "id": "u12l4_ex1_tx3",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Challenging the traditional methodology</span> offers a unique alternative perspective.\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Geleneksel metodolojiye meydan okumak benzersiz alternatif bir bakış açısı sunar.",
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Challenging the traditional methodology</span> offers a unique alternative perspective.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_mc5",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "multiple-choice",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Utilizing the mobile interface</span> improves user interaction significantly.\" cümlesinin Türkçe karşılığı hangisidir?",
-            "options": [
-              "Mobil arayüzü kullanmak kullanıcı etkileşimini önemli ölçüde artırır.",
-              "Mobil arayüzü entegre etmek kullanıcı etkileşimini önemli ölçüde artırır.",
-              "Mobil arayüzü takip etmek kullanıcı etkileşimini önemli ölçüde artırır.",
-              "Mobil arayüzü yürütmek kullanıcı etkileşimini önemli ölçüde artırır."
-            ],
-            "correctIndex": 0,
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Utilizing the mobile interface</span> improves user interaction significantly.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_wb5",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Conducting the primary experiment</span> demands a completely sterile laboratory environment.",
-            "words": [
-              "Temel",
-              "tamamen",
-              "deneyi",
-              "ortamı",
-              "laboratuvar",
-              "yürütmek",
-              "steril",
-              "gerektirir",
-              "Maç",
-              "bir",
-              "Benzersiz",
-              "uzun"
-            ],
-            "correctOrder": [
-              "Temel",
-              "deneyi",
-              "yürütmek",
-              "tamamen",
-              "steril",
-              "bir",
-              "laboratuvar",
-              "ortamı",
-              "gerektirir"
-            ],
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Conducting the primary experiment</span> demands a completely sterile laboratory environment.",
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l4_ex1_tx4",
-            "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Participle Yapıları","Participle Nitelemeleri"], "type": "translation-text",
-            "prompt": "\"\"<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Reviewing the legal document</span> prevents potential administrative complications.\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Yasal belgeyi incelemek olası idari karmaşıklıkları önler.",
-            "enSentence": "<span style=\\\"color: #ff6b6b; font-weight: bold;\\\">Reviewing the legal document</span> prevents potential administrative complications.",
-            "isEngToTr": true
-          }
-        ]
-      }
-    ]
-  }
-},
-  "13": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u13l41ex1",
-          "title": "Alıştırma 1: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (1-10)",
-          "questions": [
-            {
-              "id": "u13l41_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "yaşamak",
-                  "right": "live"
-                },
-                {
-                  "left": "optimize etmek",
-                  "right": "optimize"
-                },
-                {
-                  "left": "talep etmek",
-                  "right": "request"
-                },
-                {
-                  "left": "geliştirmek",
-                  "right": "develop"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex1_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "güçlendirmek",
-                  "right": "reinforce"
-                },
-                {
-                  "left": "satın almak",
-                  "right": "buy"
-                },
-                {
-                  "left": "iş",
-                  "right": "work"
-                },
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex1_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Institutional authorities would rather settle the commercial dispute without a lawsuit.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Kurumsal makamlar ticari anlaşmazlığı dava açmadan çözmeyi tercih ederler.",
-                "Kurumsal makamlar anlaşmazlığı ticari dava açmadan çözmeyi tercih ederler.",
-                "Kurumsal ticari makamlar anlaşmazlığı dava açmadan çözmeyi tercih ederler.",
-                "Kurumsal makamlar ticari anlaşmazlığı dava açmadan yayınlamayı tercih ederler."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Institutional authorities would rather settle the commercial dispute without a lawsuit.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex1_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Sıradan bir dergiyi okumaktansa şifrelemeyle ilgili akademik bir makale okumayı tercih eder.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "She would rather read an academic paper regarding encryption than a regular journal.",
-                "An academic paper regarding encryption than a regular journal read she would rather.",
-                "She would rather read an academic regarding paper encryption than a regular journal.",
-                "She rather would read an academic paper regarding encryption than a regular journal."
-              ],
-              "correctIndex": 0,
-              "enSentence": "She would rather read an academic paper regarding encryption than a regular journal.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l41_ex1_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather live in Bodrum than in Ankara.",
-              "words": [
-                "yaşamaktansa",
-                "yaşamayı",
-                "Ankara'da",
-                "tercih",
-                "çerçeveyi",
-                "Bodrum'da",
-                "ederim",
-                "araç",
-                "dijital"
-              ],
-              "correctOrder": [
-                "Ankara'da",
-                "yaşamaktansa",
-                "Bodrum'da",
-                "yaşamayı",
-                "tercih",
-                "ederim"
-              ],
-              "enSentence": "I would rather live in Bodrum than in Ankara.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex1_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The software team would rather optimize the cloud database tonight.",
-              "words": [
-                "bulut",
-                "optimize",
-                "Yazılım",
-                "ekibi",
-                "etmeyi",
-                "veritabanını",
-                "gece",
-                "bu",
-                "anlaşmazlığı",
-                "tercih",
-                "analistler",
-                "eder",
-                "bir"
-              ],
-              "correctOrder": [
-                "Yazılım",
-                "ekibi",
-                "bulut",
-                "veritabanını",
-                "bu",
-                "gece",
-                "optimize",
-                "etmeyi",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "The software team would rather optimize the cloud database tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex1_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The laboratory researcher would rather ___ statistical data than conduct surveys.",
-              "options": [
-                "requestd",
-                "request",
-                "to request",
-                "requesting"
-              ],
-              "correctIndex": 1,
-              "translation": "Laboratuvar araştırmacısı anket yapmaktansa istatistiksel veri talep etmeyi tercih eder."
-            },
-            {
-              "id": "u13l41_ex1_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He would rather ___ an electric vehicle for the facility than a diesel car.",
-              "options": [
-                "buying",
-                "to buy",
-                "buy",
-                "buyd"
-              ],
-              "correctIndex": 2,
-              "translation": "Tesis için dizel bir araba yerine elektrikli bir araç satın almayı tercih eder."
-            },
-            {
-              "id": "u13l41_ex1_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"They would rather develop the app framework in Flutter than use outdated tools.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Eski araçları kullanmaktansa uygulama çerçevesini Flutter'da geliştirmeyi tercih ederler.",
-              "enSentence": "They would rather develop the app framework in Flutter than use outdated tools.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex1_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather reinforce the central concrete core than risk a structural anomaly.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yapısal bir anomaliyi göze almaktansa merkezi beton çekirdeği güçlendirmeyi tercih ederiz.",
-              "enSentence": "We would rather reinforce the central concrete core than risk a structural anomaly.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l41ex2",
-          "title": "Alıştırma 2: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (11-20)",
-          "questions": [
-            {
-              "id": "u13l41_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "tasarım",
-                  "right": "design"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex2_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "düzenlemeyi",
-                  "right": "organize"
-                },
-                {
-                  "left": "yaşamak",
-                  "right": "live"
-                },
-                {
-                  "left": "optimize etmek",
-                  "right": "optimize"
-                },
-                {
-                  "left": "talep etmek",
-                  "right": "request"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex2_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"They would rather develop the app framework in Flutter than use outdated tools.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Eski araçları kullanmaktansa uygulama çerçevesini Flutter'da yayınlamayı tercih ederler.",
-                "Eski kullanmaktansa araçları uygulama çerçevesini Flutter'da geliştirmeyi tercih ederler.",
-                "Eski araçları kullanmaktansa uygulama çerçevesini Flutter'da geliştirmeyi tercih ederler.",
-                "Eski araçları uygulama kullanmaktansa çerçevesini Flutter'da geliştirmeyi tercih ederler."
-              ],
-              "correctIndex": 2,
-              "enSentence": "They would rather develop the app framework in Flutter than use outdated tools.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex2_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Yapısal bir anomaliyi göze almaktansa merkezi beton çekirdeği güçlendirmeyi tercih ederiz.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "The central concrete core than risk a structural anomaly reinforce we would rather.",
-                "We rather would reinforce the central concrete core than risk a structural anomaly.",
-                "We would rather reinforce the central core concrete than risk a structural anomaly.",
-                "We would rather reinforce the central concrete core than risk a structural anomaly."
-              ],
-              "correctIndex": 3,
-              "enSentence": "We would rather reinforce the central concrete core than risk a structural anomaly.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l41_ex2_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Technical experts would rather design a new system than modify the old framework.",
-              "words": [
-                "Teknik",
-                "bir",
-                "uzmanlar",
-                "ilgili",
-                "Laboratuvar",
-                "tasarlamayı",
-                "Ankara'da",
-                "tercih",
-                "ederler",
-                "eski",
-                "çerçeveyi",
-                "sistem",
-                "yeni",
-                "değiştirmektense"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "uzmanlar",
-                "eski",
-                "çerçeveyi",
-                "değiştirmektense",
-                "yeni",
-                "bir",
-                "sistem",
-                "tasarlamayı",
-                "tercih",
-                "ederler"
-              ],
-              "enSentence": "Technical experts would rather design a new system than modify the old framework.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex2_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The evaluation committee would rather publish the qualitative insights next month.",
-              "words": [
-                "gelecek",
-                "yayınlamayı",
-                "Ankara'da",
-                "öngörüleri",
-                "göze",
-                "eder",
-                "uygulama",
-                "tercih",
-                "nitel",
-                "Değerlendirme",
-                "komitesi",
-                "ay"
-              ],
-              "correctOrder": [
-                "Değerlendirme",
-                "komitesi",
-                "nitel",
-                "öngörüleri",
-                "gelecek",
-                "ay",
-                "yayınlamayı",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "The evaluation committee would rather publish the qualitative insights next month.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex2_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Government agencies would rather ___ data locally to protect user privacy.",
-              "options": [
-                "processing",
-                "to process",
-                "processd",
-                "process"
-              ],
-              "correctIndex": 3,
-              "translation": "Devlet kurumları kullanıcı gizliliğini korumak için verileri yerel olarak işlemeyi tercih eder."
-            },
-            {
-              "id": "u13l41_ex2_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "I would rather ___ in Bodrum than in Ankara.",
-              "options": [
-                "liveing",
-                "lived",
-                "to live",
-                "live"
-              ],
-              "correctIndex": 3,
-              "translation": "Ankara'da yaşamaktansa Bodrum'da yaşamayı tercih ederim."
-            },
-            {
-              "id": "u13l41_ex2_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Annual auditors would rather utilize advanced encryption algorithms for deep scanning.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yıllık denetçiler derin tarama için gelişmiş şifreleme algoritmaları kullanmayı tercih ederler.",
-              "enSentence": "Annual auditors would rather utilize advanced encryption algorithms for deep scanning.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex2_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The education ministry would rather organize a digital summit than local meetings.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Eğitim bakanlığı yerel toplantılar yerine dijital bir zirve düzenlemeyi tercih eder.",
-              "enSentence": "The education ministry would rather organize a digital summit than local meetings.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l41ex3",
-          "title": "Alıştırma 3: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (6-15)",
-          "questions": [
-            {
-              "id": "u13l41_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "satın almak",
-                  "right": "buy"
-                },
-                {
-                  "left": "iş",
-                  "right": "work"
-                },
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                },
-                {
-                  "left": "çözmek",
-                  "right": "settle"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex3_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "okumak",
-                  "right": "read"
-                },
-                {
-                  "left": "tasarım",
-                  "right": "design"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                }
-              ]
-            },
-            {
-              "id": "u13l41_ex3_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Annual auditors would rather utilize advanced encryption algorithms for deep scanning.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Yıllık denetçiler derin tarama için gelişmiş şifreleme algoritmaları kullanmayı tercih ederler.",
-                "Yıllık derin denetçiler tarama için gelişmiş şifreleme algoritmaları kullanmayı tercih ederler.",
-                "Yıllık denetçiler tarama derin için gelişmiş şifreleme algoritmaları kullanmayı tercih ederler.",
-                "Yıllık denetçiler derin tarama için gelişmiş şifreleme algoritmaları düzenlemeyi tercih ederler."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Annual auditors would rather utilize advanced encryption algorithms for deep scanning.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex3_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Eğitim bakanlığı yerel toplantılar yerine dijital bir zirve düzenlemeyi tercih eder.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "The education ministry would rather organize a digital summit than local meetings.",
-                "The education ministry would rather organize a digital than summit local meetings.",
-                "The education would ministry rather organize a digital summit than local meetings.",
-                "A digital summit than local meetings organize the education ministry would rather."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The education ministry would rather organize a digital summit than local meetings.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l41_ex3_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "He would rather buy an electric vehicle for the facility than a diesel car.",
-              "words": [
-                "dizel",
-                "satın",
-                "tercih",
-                "araba",
-                "bir",
-                "dergiyi",
-                "sürdürmektense",
-                "ederim",
-                "yerine",
-                "eder",
-                "elektrikli",
-                "bir",
-                "araç",
-                "almayı",
-                "Tesis",
-                "için"
-              ],
-              "correctOrder": [
-                "Tesis",
-                "için",
-                "dizel",
-                "bir",
-                "araba",
-                "yerine",
-                "elektrikli",
-                "bir",
-                "araç",
-                "satın",
-                "almayı",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "He would rather buy an electric vehicle for the facility than a diesel car.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex3_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather work on a new architectural framework than maintain old scripts.",
-              "words": [
-                "akademik",
-                "Eğitim",
-                "yeni",
-                "çerçeve",
-                "çalışmayı",
-                "tercih",
-                "bir",
-                "kodları",
-                "Eski",
-                "üzerinde",
-                "korumak",
-                "mimari",
-                "ederim",
-                "sürdürmektense"
-              ],
-              "correctOrder": [
-                "Eski",
-                "kodları",
-                "sürdürmektense",
-                "yeni",
-                "bir",
-                "mimari",
-                "çerçeve",
-                "üzerinde",
-                "çalışmayı",
-                "tercih",
-                "ederim"
-              ],
-              "enSentence": "I would rather work on a new architectural framework than maintain old scripts.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex3_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Senior analysts would rather ___ data charts than read long regional surveys.",
-              "options": [
-                "evaluate",
-                "to evaluate",
-                "evaluateing",
-                "evaluated"
-              ],
-              "correctIndex": 0,
-              "translation": "Kıdemli analistler uzun bölgesel anketleri okumaktansa veri grafiklerini değerlendirmeyi tercih ederler."
-            },
-            {
-              "id": "u13l41_ex3_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Technical experts would rather ___ a new system than modify the old framework.",
-              "options": [
-                "design",
-                "designd",
-                "to design",
-                "designing"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik uzmanlar eski çerçeveyi değiştirmektense yeni bir sistem tasarlamayı tercih ederler."
-            },
-            {
-              "id": "u13l41_ex3_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Institutional authorities would rather settle the commercial dispute without a lawsuit.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kurumsal makamlar ticari anlaşmazlığı dava açmadan çözmeyi tercih ederler.",
-              "enSentence": "Institutional authorities would rather settle the commercial dispute without a lawsuit.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l41_ex3_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"She would rather read an academic paper regarding encryption than a regular journal.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sıradan bir dergiyi okumaktansa şifrelemeyle ilgili akademik bir makale okumayı tercih eder.",
-              "enSentence": "She would rather read an academic paper regarding encryption than a regular journal.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l41ex4",
-          "title": "Alıştırma 4: Hibrit Refleks Testi",
-          "description": "Çoktan seçmeli boşluk doldurma, sentaks eşleştirme ve yapı dönüştürme egzersizleri.",
-          "questions": [
-            {
-              "id": "u13l41_ex4_q1",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather ___ in Bodrum than in Ankara.",
-              "options": [
-                "liveing",
-                "live",
-                "to live",
-                "lived"
-              ],
-              "correctIndex": 1,
-              "translation": "Ankara'da yaşamaktansa Bodrum'da yaşamayı tercih ederim."
-            },
-            {
-              "id": "u13l41_ex4_q2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The software team would rather ___ the cloud database tonight.",
-              "options": [
-                "optimize",
-                "to optimize",
-                "optimizeing",
-                "optimized"
-              ],
-              "correctIndex": 0,
-              "translation": "Yazılım ekibi bulut veritabanını bu gece optimize etmeyi tercih eder."
-            },
-            {
-              "id": "u13l41_ex4_q3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The laboratory researcher would rather ___ statistical data than conduct surveys.",
-              "options": [
-                "requestd",
-                "requesting",
-                "to request",
-                "request"
-              ],
-              "correctIndex": 3,
-              "translation": "Laboratuvar araştırmacısı anket yapmaktansa istatistiksel veri talep etmeyi tercih eder."
-            },
-            {
-              "id": "u13l41_ex4_q4",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "They would rather ___ the app framework in Flutter than use outdated tools.",
-              "options": [
-                "developd",
-                "developing",
-                "to develop",
-                "develop"
-              ],
-              "correctIndex": 3,
-              "translation": "Eski araçları kullanmaktansa uygulama çerçevesini Flutter'da geliştirmeyi tercih ederler."
-            },
-            {
-              "id": "u13l41_ex4_q5",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We would rather ___ the central concrete core than risk a structural anomaly.",
-              "options": [
-                "to reinforce",
-                "reinforce",
-                "reinforced",
-                "reinforceing"
-              ],
-              "correctIndex": 1,
-              "translation": "Yapısal bir anomaliyi göze almaktansa merkezi beton çekirdeği güçlendirmeyi tercih ederiz."
-            },
-            {
-              "id": "u13l41_ex4_q6",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He would rather ___ an electric vehicle for the facility than a diesel car.",
-              "options": [
-                "buying",
-                "to buy",
-                "buyd",
-                "buy"
-              ],
-              "correctIndex": 3,
-              "translation": "Tesis için dizel bir araba yerine elektrikli bir araç satın almayı tercih eder."
-            },
-            {
-              "id": "u13l41_ex4_q7",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "I would rather work on a new architectural framework than maintain old scripts.",
-              "options": [
-                "Subject + would rather + V1",
-                "Subject + would rather + V2",
-                "Subject + would rather + have V3"
-              ],
-              "correctIndex": 0,
-              "translation": "Eski kodları sürdürmektense yeni bir mimari çerçeve üzerinde çalışmayı tercih ederim.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject + would rather + V1' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject + would rather + V1",
-                "mirror": "çalışmayı",
-                "academicNote": "'would rather' kendisinden sonra doğrudan yalın fiil veya have V3 alır."
-              }
-            },
-            {
-              "id": "u13l41_ex4_q8",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "Senior analysts would rather evaluate data charts than read long regional surveys.",
-              "options": [
-                "Subject + would rather + V1",
-                "Subject + would rather + V2",
-                "Subject + would rather + have V3"
-              ],
-              "correctIndex": 0,
-              "translation": "Kıdemli analistler uzun bölgesel anketleri okumaktansa veri grafiklerini değerlendirmeyi tercih ederler.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject + would rather + V1' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject + would rather + V1",
-                "mirror": "değerlendirmeyi",
-                "academicNote": "'would rather' kendisinden sonra doğrudan yalın fiil veya have V3 alır."
-              }
-            },
-            {
-              "id": "u13l41_ex4_q9",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Tercih cümlesini 'she' öznesiyle yeniden kurarak zaman kaymasını uygulayın (subjunctive shift):",
-              "mainSentence": "Institutional authorities would rather settle the commercial dispute without a lawsuit.",
-              "options": [
-                "Institutional authorities would rather she settled the commercial dispute without a lawsuit.",
-                "Institutional authorities would rather she settle the commercial dispute without a lawsuit.",
-                "Institutional authorities would rather she had settled the commercial dispute without a lawsuit."
-              ],
-              "correctIndex": 0,
-              "explanation": "Araya farklı bir özne girdiğinde şimdiki zaman tercihi için fiil V2 çekimine bükülür."
-            },
-            {
-              "id": "u13l41_ex4_q10",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Tercih cümlesini 'she' öznesiyle yeniden kurarak zaman kaymasını uygulayın (subjunctive shift):",
-              "mainSentence": "She would rather read an academic paper regarding encryption than a regular journal.",
-              "options": [
-                "She would rather she read an academic paper regarding encryption than a regular journal.",
-                "She would rather she read an academic paper regarding encryption than a regular journal.",
-                "She would rather she had read an academic paper regarding encryption than a regular journal."
-              ],
-              "correctIndex": 0,
-              "explanation": "Araya farklı bir özne girdiğinde şimdiki zaman tercihi için fiil V2 çekimine bükülür."
-            }
-          ]
-        }
-      ]
-    },
-    "2": {
-      "exercises": [
-        {
-          "id": "u13l42ex1",
-          "title": "Alıştırma 1: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (1-10)",
-          "questions": [
-            {
-              "id": "u13l42_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "seyahat etti",
-                  "right": "travelled"
-                },
-                {
-                  "left": "seçilmiş",
-                  "right": "chosen"
-                },
-                {
-                  "left": "yatırım yapılmış",
-                  "right": "invested"
-                },
-                {
-                  "left": "entegre",
-                  "right": "integrated"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex1_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kaldı",
-                  "right": "stayed"
-                },
-                {
-                  "left": "inceledik",
-                  "right": "studied"
-                },
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "alınmış",
-                  "right": "taken"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex1_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The council would rather have declined the formal bilateral agreements politely.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Konsey resmi ikili anlaşmaları kibarca seyahat etmiş olmayı tercih ederdi.",
-                "Konsey ikili resmi anlaşmaları kibarca reddetmiş olmayı tercih ederdi.",
-                "Konsey resmi ikili anlaşmaları kibarca reddetmiş olmayı tercih ederdi.",
-                "Konsey resmi anlaşmaları ikili kibarca reddetmiş olmayı tercih ederdi."
-              ],
-              "correctIndex": 2,
-              "enSentence": "The council would rather have declined the formal bilateral agreements politely.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex1_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Araştırma fonlarımızı uzmanlaşmış yerel bir komiteye harcamış olmayı tercih ederdik.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Our research funds on a specialized local committee spent we would rather have.",
-                "We would rather have spent our research funds on a specialized local committee.",
-                "We would have rather spent our research funds on a specialized local committee.",
-                "We would rather have spent our research on funds a specialized local committee."
-              ],
-              "correctIndex": 1,
-              "enSentence": "We would rather have spent our research funds on a specialized local committee.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l42_ex1_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather have travelled to the international summit by train last month.",
-              "words": [
-                "zirveye",
-                "uluslararası",
-                "etmiş",
-                "tarihten",
-                "olmayı",
-                "ay",
-                "tercih",
-                "ederdim",
-                "Geçen",
-                "seçmiş",
-                "trenle",
-                "bakım",
-                "seyahat"
-              ],
-              "correctOrder": [
-                "Geçen",
-                "ay",
-                "uluslararası",
-                "zirveye",
-                "trenle",
-                "seyahat",
-                "etmiş",
-                "olmayı",
-                "tercih",
-                "ederdim"
-              ],
-              "enSentence": "I would rather have travelled to the international summit by train last month.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex1_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The technical expert would rather have chosen an alternative research methodology.",
-              "words": [
-                "bir",
-                "uzman",
-                "seçmiş",
-                "ederdi",
-                "araştırma",
-                "test",
-                "fonlarımızı",
-                "tercih",
-                "Teknik",
-                "Bu",
-                "metodolojisi",
-                "alternatif",
-                "olmayı"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "uzman",
-                "alternatif",
-                "bir",
-                "araştırma",
-                "metodolojisi",
-                "seçmiş",
-                "olmayı",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "The technical expert would rather have chosen an alternative research methodology.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex1_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The corporation would rather have ___ its annual research budget in technology.",
-              "options": [
-                "invested",
-                "invest",
-                "to invest",
-                "investing"
-              ],
-              "correctIndex": 0,
-              "translation": "Şirket yıllık araştırma bütçesini teknolojiye yatırmış olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex1_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He would rather have ___ computer engineering before designing this framework.",
-              "options": [
-                "studied",
-                "to studi",
-                "studi",
-                "studiing"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu çerçeveyi tasarlamadan önce bilgisayar mühendisliği okumuş olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex1_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather have integrated individual software modules before the critical deadline.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kritik son tarihten önce bireysel yazılım modüllerini entegre etmiş olmayı tercih ederdik.",
-              "enSentence": "We would rather have integrated individual software modules before the critical deadline.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex1_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Technicians would rather have stayed at the modern industrial facility during the test.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Teknisyenler test sırasında modern endüstriyel tesiste kalmış olmayı tercih ederlerdi.",
-              "enSentence": "Technicians would rather have stayed at the modern industrial facility during the test.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l42ex2",
-          "title": "Alıştırma 2: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (11-20)",
-          "questions": [
-            {
-              "id": "u13l42_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "dağıttı",
-                  "right": "deployed"
-                },
-                {
-                  "left": "kurdu",
-                  "right": "installed"
-                },
-                {
-                  "left": "incelenen",
-                  "right": "inspected"
-                },
-                {
-                  "left": "topladı",
-                  "right": "collected"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex2_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "büyüme öngörülmektedir",
-                  "right": "growth is anticipated"
-                },
-                {
-                  "left": "seyahat etti",
-                  "right": "travelled"
-                },
-                {
-                  "left": "seçilmiş",
-                  "right": "chosen"
-                },
-                {
-                  "left": "yatırım yapılmış",
-                  "right": "invested"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex2_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"We would rather have integrated individual software modules before the critical deadline.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Kritik son tarihten önce bireysel yazılım modüllerini entegre etmiş olmayı tercih ederdik.",
-                "Kritik tarihten son önce bireysel yazılım modüllerini entegre etmiş olmayı tercih ederdik.",
-                "Kritik son önce tarihten bireysel yazılım modüllerini entegre etmiş olmayı tercih ederdik.",
-                "Kritik son tarihten önce bireysel yazılım modüllerini kontrol etmiş olmayı tercih ederdik."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We would rather have integrated individual software modules before the critical deadline.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex2_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Teknisyenler test sırasında modern endüstriyel tesiste kalmış olmayı tercih ederlerdi.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Technicians would rather have stayed at the industrial modern facility during the test.",
-                "Technicians would have rather stayed at the modern industrial facility during the test.",
-                "At the modern industrial facility during the test stayed technicians would rather have.",
-                "Technicians would rather have stayed at the modern industrial facility during the test."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Technicians would rather have stayed at the modern industrial facility during the test.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l42_ex2_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The software team would rather have deployed the script after comprehensive testing.",
-              "words": [
-                "dağıtmış",
-                "kapsamlı",
-                "ekibi",
-                "tercih",
-                "Yazılım",
-                "testlerden",
-                "olmayı",
-                "sonra",
-                "daha",
-                "kodu",
-                "ederdi",
-                "çerçeveyi",
-                "bilgisayar"
-              ],
-              "correctOrder": [
-                "Yazılım",
-                "ekibi",
-                "kapsamlı",
-                "testlerden",
-                "sonra",
-                "kodu",
-                "dağıtmış",
-                "olmayı",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "The software team would rather have deployed the script after comprehensive testing.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex2_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Government agencies would rather have installed the security patch during peak maintenance.",
-              "words": [
-                "günlüklerini",
-                "kurumları",
-                "Devlet",
-                "yamasını",
-                "ederdi",
-                "yoğun",
-                "bakım",
-                "ekibi",
-                "güvenlik",
-                "yüklemiş",
-                "sırasında",
-                "yıllık",
-                "olmayı",
-                "tercih"
-              ],
-              "correctOrder": [
-                "Devlet",
-                "kurumları",
-                "güvenlik",
-                "yamasını",
-                "yoğun",
-                "bakım",
-                "sırasında",
-                "yüklemiş",
-                "olmayı",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "Government agencies would rather have installed the security patch during peak maintenance.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex2_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Independent experts would rather have ___ the underlying structural framework sooner.",
-              "options": [
-                "inspected",
-                "inspect",
-                "inspecting",
-                "to inspect"
-              ],
-              "correctIndex": 0,
-              "translation": "Bağımsız uzmanlar altta yatan yapısal çerçeveyi daha önce incelemiş olmayı tercih ederlerdi."
-            },
-            {
-              "id": "u13l42_ex2_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "I would rather have ___ to the international summit by train last month.",
-              "options": [
-                "travell",
-                "travelled",
-                "travelling",
-                "to travell"
-              ],
-              "correctIndex": 1,
-              "translation": "Geçen ay uluslararası zirveye trenle seyahat etmiş olmayı tercih ederdim."
-            },
-            {
-              "id": "u13l42_ex2_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The laboratory researcher would rather have collected more empirical inputs initially.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Laboratuvar araştırmacısı başlangıçta daha fazla ampirik girdi toplamış olmayı tercih ederdi.",
-              "enSentence": "The laboratory researcher would rather have collected more empirical inputs initially.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex2_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Senior financial analysts would rather have anticipated the dynamic sector breakdown.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kıdemli finansal analistler dinamik sektör kırılımını öngörmüş olmayı tercih ederlerdi.",
-              "enSentence": "Senior financial analysts would rather have anticipated the dynamic sector breakdown.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l42ex3",
-          "title": "Alıştırma 3: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (6-15)",
-          "questions": [
-            {
-              "id": "u13l42_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "inceledik",
-                  "right": "studied"
-                },
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "alınmış",
-                  "right": "taken"
-                },
-                {
-                  "left": "reddedildi",
-                  "right": "declined"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex3_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "harcanmış",
-                  "right": "spent"
-                },
-                {
-                  "left": "dağıttı",
-                  "right": "deployed"
-                },
-                {
-                  "left": "kurdu",
-                  "right": "installed"
-                },
-                {
-                  "left": "incelenen",
-                  "right": "inspected"
-                }
-              ]
-            },
-            {
-              "id": "u13l42_ex3_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The laboratory researcher would rather have collected more empirical inputs initially.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Laboratuvar araştırmacısı başlangıçta daha fazla ampirik girdi toplamış olmayı tercih ederdi.",
-                "Laboratuvar başlangıçta araştırmacısı daha fazla ampirik girdi toplamış olmayı tercih ederdi.",
-                "Laboratuvar araştırmacısı daha başlangıçta fazla ampirik girdi toplamış olmayı tercih ederdi.",
-                "Laboratuvar araştırmacısı başlangıçta daha fazla ampirik girdi yüklemiş olmayı tercih ederdi."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The laboratory researcher would rather have collected more empirical inputs initially.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex3_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Kıdemli finansal analistler dinamik sektör kırılımını öngörmüş olmayı tercih ederlerdi.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Senior financial analysts would rather have anticipated the dynamic breakdown sector.",
-                "Senior financial analysts would rather have anticipated the dynamic sector breakdown.",
-                "The dynamic sector breakdown anticipated senior financial analysts would rather have.",
-                "Senior financial would analysts rather have anticipated the dynamic sector breakdown."
-              ],
-              "correctIndex": 1,
-              "enSentence": "Senior financial analysts would rather have anticipated the dynamic sector breakdown.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l42_ex3_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "He would rather have studied computer engineering before designing this framework.",
-              "words": [
-                "bilgisayar",
-                "Bu",
-                "mühendisliği",
-                "tercih",
-                "okumuş",
-                "olmayı",
-                "çerçeveyi",
-                "ederdi",
-                "tasarlamadan",
-                "modern",
-                "altta",
-                "etmiş",
-                "önce"
-              ],
-              "correctOrder": [
-                "Bu",
-                "çerçeveyi",
-                "tasarlamadan",
-                "önce",
-                "bilgisayar",
-                "mühendisliği",
-                "okumuş",
-                "olmayı",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "He would rather have studied computer engineering before designing this framework.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex3_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather have checked the automated script error logs yesterday morning.",
-              "words": [
-                "hata",
-                "kontrol",
-                "kod",
-                "otomatik",
-                "olmayı",
-                "etmiş",
-                "öngörmüş",
-                "sabah",
-                "ederdim",
-                "Devlet",
-                "araştırmacısı",
-                "tercih",
-                "Dün",
-                "günlüklerini"
-              ],
-              "correctOrder": [
-                "Dün",
-                "sabah",
-                "otomatik",
-                "kod",
-                "hata",
-                "günlüklerini",
-                "kontrol",
-                "etmiş",
-                "olmayı",
-                "tercih",
-                "ederdim"
-              ],
-              "enSentence": "I would rather have checked the automated script error logs yesterday morning.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex3_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "You would rather have ___ the shorter path to avoid the network congestion.",
-              "options": [
-                "to taken",
-                "taken",
-                "takening"
-              ],
-              "correctIndex": 1,
-              "translation": "Ağ sıkışıklığından kaçınmak için daha kısa yolu seçmiş olmayı tercih ederdiniz."
-            },
-            {
-              "id": "u13l42_ex3_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The software team would rather have ___ the script after comprehensive testing.",
-              "options": [
-                "to deploy",
-                "deploy",
-                "deployed",
-                "deploying"
-              ],
-              "correctIndex": 2,
-              "translation": "Yazılım ekibi kapsamlı testlerden sonra kodu dağıtmış olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex3_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The council would rather have declined the formal bilateral agreements politely.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Konsey resmi ikili anlaşmaları kibarca reddetmiş olmayı tercih ederdi.",
-              "enSentence": "The council would rather have declined the formal bilateral agreements politely.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l42_ex3_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather have spent our research funds on a specialized local committee.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Araştırma fonlarımızı uzmanlaşmış yerel bir komiteye harcamış olmayı tercih ederdik.",
-              "enSentence": "We would rather have spent our research funds on a specialized local committee.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l42ex4",
-          "title": "Alıştırma 4: Hibrit Refleks Testi",
-          "description": "Çoktan seçmeli boşluk doldurma, sentaks eşleştirme ve yapı dönüştürme egzersizleri.",
-          "questions": [
-            {
-              "id": "u13l42_ex4_q1",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather have ___ to the international summit by train last month.",
-              "options": [
-                "to travell",
-                "travelled",
-                "travell",
-                "travelling"
-              ],
-              "correctIndex": 1,
-              "translation": "Geçen ay uluslararası zirveye trenle seyahat etmiş olmayı tercih ederdim."
-            },
-            {
-              "id": "u13l42_ex4_q2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The technical expert would rather have ___ an alternative research methodology.",
-              "options": [
-                "chosen",
-                "chosening",
-                "to chosen"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik uzman alternatif bir araştırma metodolojisi seçmiş olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex4_q3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The corporation would rather have ___ its annual research budget in technology.",
-              "options": [
-                "invested",
-                "invest",
-                "investing",
-                "to invest"
-              ],
-              "correctIndex": 0,
-              "translation": "Şirket yıllık araştırma bütçesini teknolojiye yatırmış olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex4_q4",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We would rather have ___ individual software modules before the critical deadline.",
-              "options": [
-                "integrat",
-                "to integrat",
-                "integrated",
-                "integrating"
-              ],
-              "correctIndex": 2,
-              "translation": "Kritik son tarihten önce bireysel yazılım modüllerini entegre etmiş olmayı tercih ederdik."
-            },
-            {
-              "id": "u13l42_ex4_q5",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Technicians would rather have ___ at the modern industrial facility during the test.",
-              "options": [
-                "to stay",
-                "staying",
-                "stay",
-                "stayed"
-              ],
-              "correctIndex": 3,
-              "translation": "Teknisyenler test sırasında modern endüstriyel tesiste kalmış olmayı tercih ederlerdi."
-            },
-            {
-              "id": "u13l42_ex4_q6",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "He would rather have ___ computer engineering before designing this framework.",
-              "options": [
-                "studiing",
-                "studi",
-                "studied",
-                "to studi"
-              ],
-              "correctIndex": 2,
-              "translation": "Bu çerçeveyi tasarlamadan önce bilgisayar mühendisliği okumuş olmayı tercih ederdi."
-            },
-            {
-              "id": "u13l42_ex4_q7",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "I would rather have checked the automated script error logs yesterday morning.",
-              "options": [
-                "Subject + would rather + have + V3",
-                "Subject + would rather + V1",
-                "Subject + would rather + subject + V2"
-              ],
-              "correctIndex": 0,
-              "translation": "Dün sabah otomatik kod hata günlüklerini kontrol etmiş olmayı tercih ederdim.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject + would rather + have + V3' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject + would rather + have + V3",
-                "mirror": "kontrol etmiş olmayı",
-                "academicNote": "'would rather' kendisinden sonra doğrudan yalın fiil veya have V3 alır."
-              }
-            },
-            {
-              "id": "u13l42_ex4_q8",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "You would rather have taken the shorter path to avoid the network congestion.",
-              "options": [
-                "Subject + would rather + have + V3",
-                "Subject + would rather + V1",
-                "Subject + would rather + subject + V2"
-              ],
-              "correctIndex": 0,
-              "translation": "Ağ sıkışıklığından kaçınmak için daha kısa yolu seçmiş olmayı tercih ederdiniz.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject + would rather + have + V3' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject + would rather + have + V3",
-                "mirror": "seçmiş olmayı",
-                "academicNote": "'would rather' kendisinden sonra doğrudan yalın fiil veya have V3 alır."
-              }
-            },
-            {
-              "id": "u13l42_ex4_q9",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Geçmiş zaman tercih cümlesini 'you' öznesiyle yeniden kurun (subjunctive past):",
-              "mainSentence": "The council would rather have declined the formal bilateral agreements politely.",
-              "options": [
-                "The council would rather you had declined the formal bilateral agreements politely.",
-                "The council would rather you declined the formal bilateral agreements politely.",
-                "The council would rather you have declined the formal bilateral agreements politely."
-              ],
-              "correctIndex": 0,
-              "explanation": "Araya farklı bir özne girdiğinde geçmiş zaman tercihi/pişmanlığı için Past Perfect (had + V3) yapısı kullanılır."
-            },
-            {
-              "id": "u13l42_ex4_q10",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Geçmiş zaman tercih cümlesini 'you' öznesiyle yeniden kurun (subjunctive past):",
-              "mainSentence": "We would rather have spent our research funds on a specialized local committee.",
-              "options": [
-                "We would rather you had spent our research funds on a specialized local committee.",
-                "We would rather you spent our research funds on a specialized local committee.",
-                "We would rather you have spent our research funds on a specialized local committee."
-              ],
-              "correctIndex": 0,
-              "explanation": "Araya farklı bir özne girdiğinde geçmiş zaman tercihi/pişmanlığı için Past Perfect (had + V3) yapısı kullanılır."
-            }
-          ]
-        }
-      ]
-    },
-    "3": {
-      "exercises": [
-        {
-          "id": "u13l43ex1",
-          "title": "Alıştırma 1: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (1-10)",
-          "questions": [
-            {
-              "id": "u13l43_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "aldı",
-                  "right": "took"
-                },
-                {
-                  "left": "gelmek",
-                  "right": "come"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "use"
-                },
-                {
-                  "left": "güncellenmiş",
-                  "right": "updated"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex1_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "imzaladı",
-                  "right": "signed"
-                },
-                {
-                  "left": "çalıştı",
-                  "right": "worked"
-                },
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex1_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The evaluation committee would rather the researcher published the insights.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Değerlendirme komitesi araştırmacının öngörüleri yayınlamasını tercih eder.",
-                "Değerlendirme araştırmacının komitesi öngörüleri yayınlamasını tercih eder.",
-                "Değerlendirme komitesi araştırmacının öngörüleri yatırmasını tercih eder.",
-                "Değerlendirme komitesi öngörüleri araştırmacının yayınlamasını tercih eder."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The evaluation committee would rather the researcher published the insights.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex1_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Devlet kurumları konseyin verileri yerel olarak işlemesini tercih eder.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Government agencies would rather the council processed the locally data.",
-                "Government agencies rather would the council processed the data locally.",
-                "The data locally processed government agencies would rather the council.",
-                "Government agencies would rather the council processed the data locally."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Government agencies would rather the council processed the data locally.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l43_ex1_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather the technical expert took a plane to the international summit.",
-              "words": [
-                "uluslararası",
-                "ederim",
-                "Otomatik",
-                "olarak",
-                "uzmanın",
-                "Değerlendirme",
-                "tercih",
-                "zirveye",
-                "gitmesini",
-                "Teknik",
-                "uçakla"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "uzmanın",
-                "uluslararası",
-                "zirveye",
-                "uçakla",
-                "gitmesini",
-                "tercih",
-                "ederim"
-              ],
-              "enSentence": "I would rather the technical expert took a plane to the international summit.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex1_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The manager would rather the junior technician didn't come to the laboratory today.",
-              "words": [
-                "bugün",
-                "eder",
-                "gelmemesini",
-                "teknisyenin",
-                "Müdür",
-                "tercih",
-                "laboratuvara",
-                "yardım",
-                "denetçiler",
-                "zirveye",
-                "uluslararası"
-              ],
-              "correctOrder": [
-                "Müdür",
-                "yardım",
-                "teknisyenin",
-                "bugün",
-                "laboratuvara",
-                "gelmemesini",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "The manager would rather the junior technician didn't come to the laboratory today.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex1_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather you didn't ___ the centralized cloud database console right now.",
-              "options": [
-                "had use",
-                "use",
-                "useing",
-                "uses"
-              ],
-              "correctIndex": 1,
-              "translation": "Şu anda merkezi bulut veritabanı konsolunu kullanmamanızı tercih ederim."
-            },
-            {
-              "id": "u13l43_ex1_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The ministry would rather the specialized committee ___ in a public institution.",
-              "options": [
-                "worked",
-                "works",
-                "working",
-                "work"
-              ],
-              "correctIndex": 0,
-              "translation": "Bakanlık uzman komitenin kamu kurumunda çalışmasını tercih eder."
-            },
-            {
-              "id": "u13l43_ex1_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The director would rather the software team updated the system parameters tonight.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Direktör yazılım ekibinin sistem parametrelerini bu gece güncellemesini tercih eder.",
-              "enSentence": "The director would rather the software team updated the system parameters tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex1_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather she signed the formal bilateral commercial agreements tomorrow.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Onun resmi ikili ticari anlaşmaları yarın imzalamasını tercih ederiz.",
-              "enSentence": "We would rather she signed the formal bilateral commercial agreements tomorrow.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l43ex2",
-          "title": "Alıştırma 2: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (11-20)",
-          "questions": [
-            {
-              "id": "u13l43_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "sterilize edildi",
-                  "right": "sterilized"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                },
-                {
-                  "left": "kaldı",
-                  "right": "stayed"
-                },
-                {
-                  "left": "yatırım yapılmış",
-                  "right": "invested"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex2_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "aldı",
-                  "right": "took"
-                },
-                {
-                  "left": "gelmek",
-                  "right": "come"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "use"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex2_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The director would rather the software team updated the system parameters tonight.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Direktör yazılım ekibinin sistem parametrelerini bu gece imzalamasını tercih eder.",
-                "Direktör yazılım sistem ekibinin parametrelerini bu gece güncellemesini tercih eder.",
-                "Direktör ekibinin yazılım sistem parametrelerini bu gece güncellemesini tercih eder.",
-                "Direktör yazılım ekibinin sistem parametrelerini bu gece güncellemesini tercih eder."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The director would rather the software team updated the system parameters tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex2_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Onun resmi ikili ticari anlaşmaları yarın imzalamasını tercih ederiz.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "We would rather she signed the formal bilateral commercial agreements tomorrow.",
-                "The formal bilateral commercial agreements tomorrow signed we would rather she.",
-                "We would she rather signed the formal bilateral commercial agreements tomorrow.",
-                "We would rather she signed the formal commercial bilateral agreements tomorrow."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We would rather she signed the formal bilateral commercial agreements tomorrow.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l43_ex2_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The principal researcher would rather the assistant sterilized the test-tubes.",
-              "words": [
-                "günlüklerini",
-                "Baş",
-                "sterilize",
-                "araştırmacı",
-                "asistanın",
-                "etmesini",
-                "eder",
-                "tercih",
-                "tüplerini",
-                "Ofis",
-                "deney",
-                "anda"
-              ],
-              "correctOrder": [
-                "Baş",
-                "araştırmacı",
-                "asistanın",
-                "deney",
-                "tüplerini",
-                "sterilize",
-                "etmesini",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "The principal researcher would rather the assistant sterilized the test-tubes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex2_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Senior analysts would rather the team evaluated the data charts.",
-              "words": [
-                "tercih",
-                "değerlendirmesini",
-                "ederler",
-                "teknisyenin",
-                "Kıdemli",
-                "grafiklerini",
-                "güncellemesini",
-                "analistler",
-                "ekibin",
-                "endüstriyel",
-                "veri"
-              ],
-              "correctOrder": [
-                "Kıdemli",
-                "analistler",
-                "ekibin",
-                "veri",
-                "grafiklerini",
-                "değerlendirmesini",
-                "tercih",
-                "ederler"
-              ],
-              "enSentence": "Senior analysts would rather the team evaluated the data charts.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex2_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather the technician ___ at the modern industrial facility.",
-              "options": [
-                "stay",
-                "stayed",
-                "stays",
-                "staying"
-              ],
-              "correctIndex": 1,
-              "translation": "Teknisyenin modern endüstriyel tesiste kalmasını tercih ederim."
-            },
-            {
-              "id": "u13l43_ex2_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "I would rather the technical expert ___ a plane to the international summit.",
-              "options": [
-                "take",
-                "takeing",
-                "took",
-                "takes"
-              ],
-              "correctIndex": 2,
-              "translation": "Teknik uzmanın uluslararası zirveye uçakla gitmesini tercih ederim."
-            },
-            {
-              "id": "u13l43_ex2_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"They would rather the corporation invested its annual research budget in technology.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Şirketin yıllık araştırma bütçesini teknolojiye yatırmasını tercih ederler.",
-              "enSentence": "They would rather the corporation invested its annual research budget in technology.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex2_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather you checked the automated script error logs.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Otomatik kod hata günlüklerini kontrol etmenizi tercih ederiz.",
-              "enSentence": "We would rather you checked the automated script error logs.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l43ex3",
-          "title": "Alıştırma 3: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (6-15)",
-          "questions": [
-            {
-              "id": "u13l43_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "çalıştı",
-                  "right": "worked"
-                },
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                },
-                {
-                  "left": "yayınladı",
-                  "right": "published"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex3_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "işlenmiş",
-                  "right": "processed"
-                },
-                {
-                  "left": "sterilize edildi",
-                  "right": "sterilized"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                },
-                {
-                  "left": "kaldı",
-                  "right": "stayed"
-                }
-              ]
-            },
-            {
-              "id": "u13l43_ex3_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"They would rather the corporation invested its annual research budget in technology.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Şirketin yıllık bütçesini araştırma teknolojiye yatırmasını tercih ederler.",
-                "Şirketin yıllık araştırma bütçesini teknolojiye değerlendirmesini tercih ederler.",
-                "Şirketin araştırma yıllık bütçesini teknolojiye yatırmasını tercih ederler.",
-                "Şirketin yıllık araştırma bütçesini teknolojiye yatırmasını tercih ederler."
-              ],
-              "correctIndex": 3,
-              "enSentence": "They would rather the corporation invested its annual research budget in technology.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex3_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Otomatik kod hata günlüklerini kontrol etmenizi tercih ederiz.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "We would rather you checked the automated script error logs.",
-                "The automated script error logs checked we would rather you.",
-                "We would you rather checked the automated script error logs.",
-                "We would rather you checked the automated error script logs."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We would rather you checked the automated script error logs.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l43_ex3_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The ministry would rather the specialized committee worked in a public institution.",
-              "words": [
-                "tercih",
-                "kurumunda",
-                "Teknisyenin",
-                "Bakanlık",
-                "gitmesini",
-                "işlemesini",
-                "uzman",
-                "kamu",
-                "komitenin",
-                "çalışmasını",
-                "eder"
-              ],
-              "correctOrder": [
-                "Bakanlık",
-                "uzman",
-                "komitenin",
-                "kamu",
-                "kurumunda",
-                "çalışmasını",
-                "tercih",
-                "eder"
-              ],
-              "enSentence": "The ministry would rather the specialized committee worked in a public institution.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex3_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "They would rather you didn't modify substantial empirical inputs inside the office.",
-              "words": [
-                "girdileri",
-                "Bakanlık",
-                "öngörüleri",
-                "Ofis",
-                "içinde",
-                "anomalisini",
-                "tercih",
-                "ederler",
-                "önemli",
-                "ampirik",
-                "değiştirmemenizi"
-              ],
-              "correctOrder": [
-                "Ofis",
-                "içinde",
-                "önemli",
-                "ampirik",
-                "girdileri",
-                "değiştirmemenizi",
-                "tercih",
-                "ederler"
-              ],
-              "enSentence": "They would rather you didn't modify substantial empirical inputs inside the office.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex3_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Annual auditors would rather the software team ___ the data anomaly.",
-              "options": [
-                "resolving",
-                "resolved",
-                "resolv",
-                "resolvs"
-              ],
-              "correctIndex": 1,
-              "translation": "Yıllık denetçiler yazılım ekibinin veri anomalisini çözmesini tercih ederler."
-            },
-            {
-              "id": "u13l43_ex3_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The principal researcher would rather the assistant ___ the test-tubes.",
-              "options": [
-                "sterilized",
-                "sterilizing",
-                "sterilizs",
-                "steriliz"
-              ],
-              "correctIndex": 0,
-              "translation": "Baş araştırmacı asistanın deney tüplerini sterilize etmesini tercih eder."
-            },
-            {
-              "id": "u13l43_ex3_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The evaluation committee would rather the researcher published the insights.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Değerlendirme komitesi araştırmacının öngörüleri yayınlamasını tercih eder.",
-              "enSentence": "The evaluation committee would rather the researcher published the insights.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l43_ex3_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Government agencies would rather the council processed the data locally.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Devlet kurumları konseyin verileri yerel olarak işlemesini tercih eder.",
-              "enSentence": "Government agencies would rather the council processed the data locally.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l43ex4",
-          "title": "Alıştırma 4: Hibrit Refleks Testi",
-          "description": "Çoktan seçmeli boşluk doldurma, sentaks eşleştirme ve yapı dönüştürme egzersizleri.",
-          "questions": [
-            {
-              "id": "u13l43_ex4_q1",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather the technical expert ___ a plane to the international summit.",
-              "options": [
-                "takeing",
-                "takes",
-                "take",
-                "took"
-              ],
-              "correctIndex": 3,
-              "translation": "Teknik uzmanın uluslararası zirveye uçakla gitmesini tercih ederim."
-            },
-            {
-              "id": "u13l43_ex4_q2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The manager would rather the junior technician didn't ___ to the laboratory today.",
-              "options": [
-                "come",
-                "had come",
-                "comeing",
-                "comes"
-              ],
-              "correctIndex": 0,
-              "translation": "Müdür yardım teknisyenin bugün laboratuvara gelmemesini tercih eder."
-            },
-            {
-              "id": "u13l43_ex4_q3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather you didn't ___ the centralized cloud database console right now.",
-              "options": [
-                "uses",
-                "useing",
-                "had use",
-                "use"
-              ],
-              "correctIndex": 3,
-              "translation": "Şu anda merkezi bulut veritabanı konsolunu kullanmamanızı tercih ederim."
-            },
-            {
-              "id": "u13l43_ex4_q4",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The director would rather the software team ___ the system parameters tonight.",
-              "options": [
-                "updat",
-                "updated",
-                "updating",
-                "updats"
-              ],
-              "correctIndex": 1,
-              "translation": "Direktör yazılım ekibinin sistem parametrelerini bu gece güncellemesini tercih eder."
-            },
-            {
-              "id": "u13l43_ex4_q5",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We would rather she ___ the formal bilateral commercial agreements tomorrow.",
-              "options": [
-                "signs",
-                "signed",
-                "sign",
-                "signing"
-              ],
-              "correctIndex": 1,
-              "translation": "Onun resmi ikili ticari anlaşmaları yarın imzalamasını tercih ederiz."
-            },
-            {
-              "id": "u13l43_ex4_q6",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The ministry would rather the specialized committee ___ in a public institution.",
-              "options": [
-                "works",
-                "working",
-                "work",
-                "worked"
-              ],
-              "correctIndex": 3,
-              "translation": "Bakanlık uzman komitenin kamu kurumunda çalışmasını tercih eder."
-            },
-            {
-              "id": "u13l43_ex4_q7",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "They would rather you didn't modify substantial empirical inputs inside the office.",
-              "options": [
-                "Subject1 + would rather + Subject2 + V2",
-                "Subject1 + would rather + Subject2 + had V3",
-                "Subject + would rather + V1"
-              ],
-              "correctIndex": 0,
-              "translation": "Ofis içinde önemli ampirik girdileri değiştirmemenizi tercih ederler.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject1 + would rather + Subject2 + V2' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject1 + would rather + Subject2 + V2",
-                "mirror": "değiştirmemenizi",
-                "academicNote": "'would rather' ifadesinden sonra farklı bir özne geldiğinde zaman kayması (Tense Shift) yaşanır."
-              }
-            },
-            {
-              "id": "u13l43_ex4_q8",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "Annual auditors would rather the software team resolved the data anomaly.",
-              "options": [
-                "Subject1 + would rather + Subject2 + V2",
-                "Subject1 + would rather + Subject2 + had V3",
-                "Subject + would rather + V1"
-              ],
-              "correctIndex": 0,
-              "translation": "Yıllık denetçiler yazılım ekibinin veri anomalisini çözmesini tercih ederler.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject1 + would rather + Subject2 + V2' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject1 + would rather + Subject2 + V2",
-                "mirror": "çözmesini",
-                "academicNote": "'would rather' ifadesinden sonra farklı bir özne geldiğinde zaman kayması (Tense Shift) yaşanır."
-              }
-            },
-            {
-              "id": "u13l43_ex4_q9",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Şimdiki zaman diğer kişi tercihini geçmiş zamana (pişmanlığa) dönüştürün:",
-              "mainSentence": "The evaluation committee would rather the researcher published the insights.",
-              "options": [
-                "The evaluation committee would rather the researcher had published the insights last month.",
-                "The evaluation committee would rather the researcher published the insights.",
-                "The evaluation committee would rather the researcher have published the insights."
-              ],
-              "correctIndex": 0,
-              "explanation": "Diğer kişilerin geçmişteki tercihleri had + V3 ile bükülür."
-            },
-            {
-              "id": "u13l43_ex4_q10",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Şimdiki zaman diğer kişi tercihini geçmiş zamana (pişmanlığa) dönüştürün:",
-              "mainSentence": "Government agencies would rather the council processed the data locally.",
-              "options": [
-                "Government agencies would rather the council had processed the data locally to protect privacy.",
-                "Government agencies would rather the council processed the data locally.",
-                "Government agencies would rather the council have processed the data locally."
-              ],
-              "correctIndex": 0,
-              "explanation": "Diğer kişilerin geçmişteki tercihleri had + V3 ile bükülür."
-            }
-          ]
-        }
-      ]
-    },
-    "4": {
-      "exercises": [
-        {
-          "id": "u13l44ex1",
-          "title": "Alıştırma 1: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (1-10)",
-          "questions": [
-            {
-              "id": "u13l44_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "alınmış",
-                  "right": "taken"
-                },
-                {
-                  "left": "gelmek",
-                  "right": "come"
-                },
-                {
-                  "left": "kullanılan",
-                  "right": "used"
-                },
-                {
-                  "left": "güncellenmiş",
-                  "right": "updated"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex1_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "imzaladı",
-                  "right": "signed"
-                },
-                {
-                  "left": "çalıştı",
-                  "right": "worked"
-                },
-                {
-                  "left": "değiştirilmiş",
-                  "right": "modified"
-                },
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex1_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The evaluation committee would rather the researcher had published the insights last month.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Değerlendirme komitesi öngörüleri araştırmacının geçen ay yayınlamış olmasını tercih ederdi.",
-                "Değerlendirme komitesi araştırmacının öngörüleri geçen ay gitmiş olmasını tercih ederdi.",
-                "Değerlendirme araştırmacının komitesi öngörüleri geçen ay yayınlamış olmasını tercih ederdi.",
-                "Değerlendirme komitesi araştırmacının öngörüleri geçen ay yayınlamış olmasını tercih ederdi."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The evaluation committee would rather the researcher had published the insights last month.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex1_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Devlet kurumları konseyin gizliliği korumak için verileri yerel olarak işlemiş olmasını tercih ederdi.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Government agencies rather would the council had processed the data locally to protect privacy.",
-                "Government agencies would rather the council had processed the data to locally protect privacy.",
-                "The data locally to protect privacy processed government agencies would rather the council had.",
-                "Government agencies would rather the council had processed the data locally to protect privacy."
-              ],
-              "correctIndex": 3,
-              "enSentence": "Government agencies would rather the council had processed the data locally to protect privacy.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l44_ex1_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I would rather the technical expert had taken a plane to the international summit last week.",
-              "words": [
-                "Teknik",
-                "hafta",
-                "gitmiş",
-                "uzmanın",
-                "olmasını",
-                "Devlet",
-                "ederdim",
-                "geçen",
-                "uluslararası",
-                "daha",
-                "önce",
-                "zirveye",
-                "tercih",
-                "uçakla"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "uzmanın",
-                "geçen",
-                "hafta",
-                "uluslararası",
-                "zirveye",
-                "uçakla",
-                "gitmiş",
-                "olmasını",
-                "tercih",
-                "ederdim"
-              ],
-              "enSentence": "I would rather the technical expert had taken a plane to the international summit last week.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex1_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The manager would rather the junior technician had not come to the laboratory yesterday.",
-              "words": [
-                "gelmemiş",
-                "teknisyenin",
-                "laboratuvara",
-                "Şirketin",
-                "sistem",
-                "uzmanın",
-                "dün",
-                "ederdi",
-                "yardım",
-                "Müdür",
-                "tercih",
-                "olmasını"
-              ],
-              "correctOrder": [
-                "Müdür",
-                "yardım",
-                "teknisyenin",
-                "dün",
-                "laboratuvara",
-                "gelmemiş",
-                "olmasını",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "The manager would rather the junior technician had not come to the laboratory yesterday.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex1_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather you had not ___ the centralized cloud database console during the presentation.",
-              "options": [
-                "used",
-                "us",
-                "using"
-              ],
-              "correctIndex": 0,
-              "translation": "Sunum sırasında merkezi bulut veritabanı konsolunu kullanmamış olmanızı tercih ederdim."
-            },
-            {
-              "id": "u13l44_ex1_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The ministry would rather the specialized committee had ___ in a public institution last year.",
-              "options": [
-                "worked",
-                "work",
-                "working"
-              ],
-              "correctIndex": 0,
-              "translation": "Bakanlık uzman komitenin geçen yıl kamu kurumunda çalışmış olmasını tercih ederdi."
-            },
-            {
-              "id": "u13l44_ex1_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The director would rather the software team had updated the system parameters before the test.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Direktör yazılım ekibinin testten önce sistem parametrelerini güncellemiş olmasını tercih ederdi.",
-              "enSentence": "The director would rather the software team had updated the system parameters before the test.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex1_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather she had signed the formal bilateral commercial agreements during the summit.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Onun zirve sırasında resmi ikili ticari anlaşmaları imzalamış olmasını tercih ederdik.",
-              "enSentence": "We would rather she had signed the formal bilateral commercial agreements during the summit.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l44ex2",
-          "title": "Alıştırma 2: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (11-20)",
-          "questions": [
-            {
-              "id": "u13l44_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "sterilize edildi",
-                  "right": "sterilized"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                },
-                {
-                  "left": "kaldı",
-                  "right": "stayed"
-                },
-                {
-                  "left": "yatırım yapılmış",
-                  "right": "invested"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex2_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "alınmış",
-                  "right": "taken"
-                },
-                {
-                  "left": "gelmek",
-                  "right": "come"
-                },
-                {
-                  "left": "kullanılan",
-                  "right": "used"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex2_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"The director would rather the software team had updated the system parameters before the test.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Direktör yazılım ekibinin testten önce sistem parametrelerini çözmüş olmasını tercih ederdi.",
-                "Direktör yazılım testten ekibinin önce sistem parametrelerini güncellemiş olmasını tercih ederdi.",
-                "Direktör ekibinin yazılım testten önce sistem parametrelerini güncellemiş olmasını tercih ederdi.",
-                "Direktör yazılım ekibinin testten önce sistem parametrelerini güncellemiş olmasını tercih ederdi."
-              ],
-              "correctIndex": 3,
-              "enSentence": "The director would rather the software team had updated the system parameters before the test.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex2_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Onun zirve sırasında resmi ikili ticari anlaşmaları imzalamış olmasını tercih ederdik.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "We would rather she had signed the formal bilateral commercial agreements during the summit.",
-                "The formal bilateral commercial agreements during the summit signed we would rather she had.",
-                "We would rather she had signed the formal commercial bilateral agreements during the summit.",
-                "We would she rather had signed the formal bilateral commercial agreements during the summit."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We would rather she had signed the formal bilateral commercial agreements during the summit.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l44_ex2_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The principal researcher would rather the assistant had sterilized the test-tubes before use.",
-              "words": [
-                "kurumunda",
-                "Değerlendirme",
-                "tüplerini",
-                "araştırmacı",
-                "etmiş",
-                "ederdi",
-                "deney",
-                "önce",
-                "kullanmadan",
-                "Baş",
-                "olmasını",
-                "tercih",
-                "sterilize",
-                "merkezi",
-                "asistanın"
-              ],
-              "correctOrder": [
-                "Baş",
-                "araştırmacı",
-                "asistanın",
-                "kullanmadan",
-                "önce",
-                "deney",
-                "tüplerini",
-                "sterilize",
-                "etmiş",
-                "olmasını",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "The principal researcher would rather the assistant had sterilized the test-tubes before use.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex2_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Senior analysts would rather the team had evaluated the data charts before the presentation.",
-              "words": [
-                "veri",
-                "sunumdan",
-                "kurumları",
-                "ekibin",
-                "önce",
-                "analistler",
-                "Kıdemli",
-                "tercih",
-                "olmasını",
-                "grafiklerini",
-                "değerlendirmiş",
-                "ederlerdi",
-                "Bakanlık",
-                "geçen"
-              ],
-              "correctOrder": [
-                "Kıdemli",
-                "analistler",
-                "ekibin",
-                "sunumdan",
-                "önce",
-                "veri",
-                "grafiklerini",
-                "değerlendirmiş",
-                "olmasını",
-                "tercih",
-                "ederlerdi"
-              ],
-              "enSentence": "Senior analysts would rather the team had evaluated the data charts before the presentation.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex2_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather the technician had ___ at the modern industrial facility last night.",
-              "options": [
-                "stay",
-                "stayed",
-                "staying"
-              ],
-              "correctIndex": 1,
-              "translation": "Teknisyenin dün gece modern endüstriyel tesiste kalmış olmasını tercih ederdim."
-            },
-            {
-              "id": "u13l44_ex2_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "I would rather the technical expert had ___ a plane to the international summit last week.",
-              "options": [
-                "taken",
-                "take",
-                "takeing",
-                "takeed"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik uzmanın geçen hafta uluslararası zirveye uçakla gitmiş olmasını tercih ederdim."
-            },
-            {
-              "id": "u13l44_ex2_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"They would rather the corporation had invested its annual research budget in technology.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Şirketin yıllık araştırma bütçesini teknolojiye yatırmış olmasını tercih ederlerdi.",
-              "enSentence": "They would rather the corporation had invested its annual research budget in technology.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex2_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"We would rather you had checked the automated script error logs immediately.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Otomatik kod hata günlüklerini derhal kontrol etmiş olmanızı tercih ederdik.",
-              "enSentence": "We would rather you had checked the automated script error logs immediately.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l44ex3",
-          "title": "Alıştırma 3: Yapı Çalışması",
-          "description": "Eşleştirme, Seçmeli, Sıralama ve Çeviri Paketleri (6-15)",
-          "questions": [
-            {
-              "id": "u13l44_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "çalıştı",
-                  "right": "worked"
-                },
-                {
-                  "left": "değiştirilmiş",
-                  "right": "modified"
-                },
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                },
-                {
-                  "left": "yayınladı",
-                  "right": "published"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex3_match2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "işlenmiş",
-                  "right": "processed"
-                },
-                {
-                  "left": "sterilize edildi",
-                  "right": "sterilized"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                },
-                {
-                  "left": "kaldı",
-                  "right": "stayed"
-                }
-              ]
-            },
-            {
-              "id": "u13l44_ex3_mc_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"They would rather the corporation had invested its annual research budget in technology.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Şirketin yıllık araştırma bütçesini teknolojiye yatırmış olmasını tercih ederlerdi.",
-                "Şirketin araştırma yıllık bütçesini teknolojiye yatırmış olmasını tercih ederlerdi.",
-                "Şirketin yıllık bütçesini araştırma teknolojiye yatırmış olmasını tercih ederlerdi.",
-                "Şirketin yıllık araştırma bütçesini teknolojiye güncellemiş olmasını tercih ederlerdi."
-              ],
-              "correctIndex": 0,
-              "enSentence": "They would rather the corporation had invested its annual research budget in technology.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex3_mc_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "multiple-choice",
-              "prompt": "\"Otomatik kod hata günlüklerini derhal kontrol etmiş olmanızı tercih ederdik.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "We would you rather had checked the automated script error logs immediately.",
-                "The automated script error logs immediately checked we would rather you had.",
-                "We would rather you had checked the automated script error logs immediately.",
-                "We would rather you had checked the automated error script logs immediately."
-              ],
-              "correctIndex": 2,
-              "enSentence": "We would rather you had checked the automated script error logs immediately.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u13l44_ex3_wb_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The ministry would rather the specialized committee had worked in a public institution last year.",
-              "words": [
-                "ederdi",
-                "yıl",
-                "çalışmış",
-                "uzman",
-                "bütçesini",
-                "komitenin",
-                "geçen",
-                "kurumunda",
-                "Yıllık",
-                "olmasını",
-                "sırasında",
-                "Bakanlık",
-                "tercih",
-                "kamu"
-              ],
-              "correctOrder": [
-                "Bakanlık",
-                "uzman",
-                "komitenin",
-                "geçen",
-                "yıl",
-                "kamu",
-                "kurumunda",
-                "çalışmış",
-                "olmasını",
-                "tercih",
-                "ederdi"
-              ],
-              "enSentence": "The ministry would rather the specialized committee had worked in a public institution last year.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex3_wb_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "They would rather you had not modified substantial empirical inputs inside the office yesterday.",
-              "words": [
-                "tercih",
-                "önce",
-                "Dün",
-                "ofis",
-                "Baş",
-                "değiştirmemiş",
-                "ederlerdi",
-                "ampirik",
-                "içinde",
-                "olmanızı",
-                "denetçiler",
-                "önemli",
-                "girdileri"
-              ],
-              "correctOrder": [
-                "Dün",
-                "ofis",
-                "içinde",
-                "önemli",
-                "ampirik",
-                "girdileri",
-                "değiştirmemiş",
-                "olmanızı",
-                "tercih",
-                "ederlerdi"
-              ],
-              "enSentence": "They would rather you had not modified substantial empirical inputs inside the office yesterday.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex3_fbd_2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Annual auditors would rather the software team had ___ the data anomaly sooner.",
-              "options": [
-                "resolving",
-                "resolv",
-                "resolved"
-              ],
-              "correctIndex": 2,
-              "translation": "Yıllık denetçiler yazılım ekibinin veri anomalisini daha önce çözmüş olmasını tercih ederlerdi."
-            },
-            {
-              "id": "u13l44_ex3_fb_3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The principal researcher would rather the assistant had ___ the test-tubes before use.",
-              "options": [
-                "steriliz",
-                "sterilizing",
-                "sterilized"
-              ],
-              "correctIndex": 2,
-              "translation": "Baş araştırmacı asistanın kullanmadan önce deney tüplerini sterilize etmiş olmasını tercih ederdi."
-            },
-            {
-              "id": "u13l44_ex3_tx_0",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"The evaluation committee would rather the researcher had published the insights last month.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Değerlendirme komitesi araştırmacının öngörüleri geçen ay yayınlamış olmasını tercih ederdi.",
-              "enSentence": "The evaluation committee would rather the researcher had published the insights last month.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u13l44_ex3_tx_1",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "translation-text",
-              "prompt": "\"Government agencies would rather the council had processed the data locally to protect privacy.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Devlet kurumları konseyin gizliliği korumak için verileri yerel olarak işlemiş olmasını tercih ederdi.",
-              "enSentence": "Government agencies would rather the council had processed the data locally to protect privacy.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u13l44ex4",
-          "title": "Alıştırma 4: Hibrit Refleks Testi",
-          "description": "Çoktan seçmeli boşluk doldurma, sentaks eşleştirme ve yapı dönüştürme egzersizleri.",
-          "questions": [
-            {
-              "id": "u13l44_ex4_q1",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather the technical expert had ___ a plane to the international summit last week.",
-              "options": [
-                "takeing",
-                "taken",
-                "takeed",
-                "take"
-              ],
-              "correctIndex": 1,
-              "translation": "Teknik uzmanın geçen hafta uluslararası zirveye uçakla gitmiş olmasını tercih ederdim."
-            },
-            {
-              "id": "u13l44_ex4_q2",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The manager would rather the junior technician had not ___ to the laboratory yesterday.",
-              "options": [
-                "come",
-                "comeing",
-                "comeed"
-              ],
-              "correctIndex": 0,
-              "translation": "Müdür yardım teknisyenin dün laboratuvara gelmemiş olmasını tercih ederdi."
-            },
-            {
-              "id": "u13l44_ex4_q3",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "I would rather you had not ___ the centralized cloud database console during the presentation.",
-              "options": [
-                "using",
-                "us",
-                "used"
-              ],
-              "correctIndex": 2,
-              "translation": "Sunum sırasında merkezi bulut veritabanı konsolunu kullanmamış olmanızı tercih ederdim."
-            },
-            {
-              "id": "u13l44_ex4_q4",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The director would rather the software team had ___ the system parameters before the test.",
-              "options": [
-                "updated",
-                "updat",
-                "updating"
-              ],
-              "correctIndex": 0,
-              "translation": "Direktör yazılım ekibinin testten önce sistem parametrelerini güncellemiş olmasını tercih ederdi."
-            },
-            {
-              "id": "u13l44_ex4_q5",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "We would rather she had ___ the formal bilateral commercial agreements during the summit.",
-              "options": [
-                "signing",
-                "sign",
-                "signed"
-              ],
-              "correctIndex": 2,
-              "translation": "Onun zirve sırasında resmi ikili ticari anlaşmaları imzalamış olmasını tercih ederdik."
-            },
-            {
-              "id": "u13l44_ex4_q6",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The ministry would rather the specialized committee had ___ in a public institution last year.",
-              "options": [
-                "worked",
-                "work",
-                "working"
-              ],
-              "correctIndex": 0,
-              "translation": "Bakanlık uzman komitenin geçen yıl kamu kurumunda çalışmış olmasını tercih ederdi."
-            },
-            {
-              "id": "u13l44_ex4_q7",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "They would rather you had not modified substantial empirical inputs inside the office yesterday.",
-              "options": [
-                "Subject1 + would rather + Subject2 + had + V3",
-                "Subject1 + would rather + Subject2 + V2",
-                "Subject + would rather + have V3"
-              ],
-              "correctIndex": 0,
-              "translation": "Dün ofis içinde önemli ampirik girdileri değiştirmemiş olmanızı tercih ederlerdi.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject1 + would rather + Subject2 + had + V3' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject1 + would rather + Subject2 + had + V3",
-                "mirror": "değiştirmemiş olmanızı",
-                "academicNote": "'would rather' ifadesinden sonra farklı bir özne geldiğinde zaman kayması (Tense Shift) yaşanır."
-              }
-            },
-            {
-              "id": "u13l44_ex4_q8",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "structure-match",
-              "prompt": "Verilen cümlenin gramer yapısı eşleşmesini bulun:",
-              "sentence": "Annual auditors would rather the software team had resolved the data anomaly sooner.",
-              "options": [
-                "Subject1 + would rather + Subject2 + had + V3",
-                "Subject1 + would rather + Subject2 + V2",
-                "Subject + would rather + have V3"
-              ],
-              "correctIndex": 0,
-              "translation": "Yıllık denetçiler yazılım ekibinin veri anomalisini daha önce çözmüş olmasını tercih ederlerdi.",
-              "explanation": "Cümledeki yapı, tercih bildiren 'Subject1 + would rather + Subject2 + had + V3' formülüne uygundur.",
-              "hint": {
-                "formula": "Subject1 + would rather + Subject2 + had + V3",
-                "mirror": "çözmüş olmasını",
-                "academicNote": "'would rather' ifadesinden sonra farklı bir özne geldiğinde zaman kayması (Tense Shift) yaşanır."
-              }
-            },
-            {
-              "id": "u13l44_ex4_q9",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Geçmiş zaman diğer kişi tercihini şimdiki zaman tercihine (subjunctive present) dönüştürün:",
-              "mainSentence": "The evaluation committee would rather the researcher had published the insights last month.",
-              "options": [
-                "The evaluation committee would rather the researcher published the insights.",
-                "The evaluation committee would rather the researcher had published the insights last month.",
-                "The evaluation committee would rather the researcher have published the insights last month."
-              ],
-              "correctIndex": 0,
-              "explanation": "Farklı özneyle şimdiki zaman tercihi yapılırken fiil V2 düzeyinde çekimlenir."
-            },
-            {
-              "id": "u13l44_ex4_q10",
-              "grammarTags": ["There Yapıları","Var / Yok İfadeleri"], "grammarTags": ["Tercih Bildiren Yapılar","Prefer / Would Rather"], "type": "inversion-transformer",
-              "prompt": "Geçmiş zaman diğer kişi tercihini şimdiki zaman tercihine (subjunctive present) dönüştürün:",
-              "mainSentence": "Government agencies would rather the council had processed the data locally to protect privacy.",
-              "options": [
-                "Government agencies would rather the council processed the data locally.",
-                "Government agencies would rather the council had processed the data locally to protect privacy.",
-                "Government agencies would rather the council have processed the data locally to protect privacy."
-              ],
-              "correctIndex": 0,
-              "explanation": "Farklı özneyle şimdiki zaman tercihi yapılırken fiil V2 düzeyinde çekimlenir."
-            }
-          ]
-        }
-      ]
     }
   },
   "14": {
