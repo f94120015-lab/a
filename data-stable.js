@@ -19527,7 +19527,13 @@ const rawTopics = [
     "id": 14,
     "startLessonId": 45,
     "originalIndex": 14,
-    "edits": [],
+    "edits": [
+      {
+        "date": "2026-07-28T13:45:00+03:00",
+        "desc": "Bölüm Yeniden Tasarımı: İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive) [Bölüm 23 / Unit 14] ünitesi 4 derse ayrıldı. Beşeri bilimler, iktisat, hukuk, sinema, tarih, iletişim, sanat tarihi, antropoloji, coğrafya, sosyoloji ve psikoloji alanlarına ait kelime haznesi kullanıldı. Önceki bölümden (Participle Yapıları) %40 kelime devri sağlandı. AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme), strict content boundary, her soruda İsim Tamlamaları ve Edat Yapısı zorunluluğu ile Çok Katmanlı Etiketleme (Multi-Tag) uygulandı.",
+        "type": "custom"
+}
+    ],
     "title": "XIII. İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
     "desc": "Fiil tamlayıcısı mastarlar (Infinitive Compliments), özne ve durum bildiren mastarlar (It is + Adj + to V), amaç/maksat bildiren eylemsi yapıları (Infinitive of Purpose: to, in order to, so as to) ile soru kelimeli mastar kısaltmaları (Wh- + to V1)",
     "icon": "⛵",
@@ -43756,2801 +43762,3409 @@ const unitSentencesMap = {
     }
   },
   "14": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u14l45ex1",
-          "title": "Alıştırma 1: Mastar Yapısı Giriş",
-          "description": "Fiil + Mastar (Verb + to V) öbek düzeyinde alıştırmalar (Basit Seviye)",
-          "questions": [
-            {
-              "id": "u14l45_ex1_match1",
-              "grammarTags": [
-                "Fiil Tümleyici Mastar"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "to decide to abandon",
-                  "right": "vazgeçmeye karar vermek"
-                },
-                {
-                  "left": "to agree to inspect",
-                  "right": "denetlemeyi kabul etmek"
-                },
-                {
-                  "left": "to try to clarify",
-                  "right": "açıklığa kavuşturmaya çalışmak"
-                },
-                {
-                  "left": "to refuse to change",
-                  "right": "değiştirmeyi reddetmek"
-                }
-              ]
-            },
-            {
-              "id": "u14l45_ex1_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "to aim to optimize",
-                  "right": "optimize etmeyi amaçlamak"
-                },
-                {
-                  "left": "to continue to calculate",
-                  "right": "hesaplamaya devam etmek"
-                },
-                {
-                  "left": "to choose to shift",
-                  "right": "kaydırmayı seçmek"
-                },
-                {
-                  "left": "to serve to restrict",
-                  "right": "kısıtlamaya hizmet etmek"
-                }
-              ]
-            },
-            {
-              "id": "u14l45_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to hesitate to anticipate\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "öngörmekten çekinmek",
-                "başlamayı kabul etmek",
-                "tanımlamayı reddetmek",
-                "hesaplamayı denemek"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to hesitate to anticipate",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to plan to allocate\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "tahsis etmeyi planlamak",
-                "değiştirmeyi ummak",
-                "birikme eğiliminde olmak",
-                "kısıtlamayı başarmak"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to plan to allocate",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to fail to specify\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "belirtmeyi başaramamak",
-                "denetlemeyi kabul etmek",
-                "vazgeçmeye karar vermek",
-                "çözmeye çalışmak"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to fail to specify",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_mc_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to prepare to detect\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "tespit etmeye hazırlanmak",
-                "göstermeyi reddetmek",
-                "çözmeye çalışmak",
-                "kısıtlamayı kabul etmek"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to prepare to detect",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_mc_4",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to tend to accumulate\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "birikme eğiliminde olmak",
-                "değiştirmeyi planlamak",
-                "hesaplamayı reddetmek",
-                "belirtmeye çalışmak"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to tend to accumulate",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_mc_5",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"to hope to modify\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "değiştirmeyi ummak",
-                "gözden geçirmeyi planlamak",
-                "sonlandırmayı reddetmek",
-                "korumayı seçmek"
-              ],
-              "correctIndex": 0,
-              "enSentence": "to hope to modify",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"to refuse to calculate\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "hesaplamayı reddetmek",
-              "enSentence": "to refuse to calculate",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"to continue to restrict\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "kısıtlamaya devam etmek",
-              "enSentence": "to continue to restrict",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u14l45ex2",
-          "title": "Alıştırma 2: Mastar Cümleleri",
-          "description": "Fiil + Mastar (Verb + to V) yapısıyla kurulan temel cümleler (Orta Seviye)",
-          "questions": [
-            {
-              "id": "u14l45_ex2_mc_0",
-              "grammarTags": [
-                "Fiil Tümleyici Mastar"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"They decided to abandon the project.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Projeden vazgeçmeye karar verdiler.",
-                "Projeyi incelemeyi reddettiler.",
-                "Projeyi bitirmeyi amaçlıyorlar.",
-                "Projeyi değiştirmekten çekindiler."
-              ],
-              "correctIndex": 0,
-              "enSentence": "They decided to abandon the project.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The team agreed to inspect the facility.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Ekip tesisi denetlemeyi kabul etti.",
-                "Ekip tesisi kapatmaya karar verdi.",
-                "Ekip tesisi kurmak için anlaştı.",
-                "Ekip tesisi değiştirmeyi reddetti."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The team agreed to inspect the facility.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"We tried to clarify the scope.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Kapsamı açıklamaya çalıştık.",
-                "Kapsamı değiştirmeyi kabul ettik.",
-                "Kapsamı belirtmeyi başardık.",
-                "Kapsamı korumayı amaçladık."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We tried to clarify the scope.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_mc_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"He refused to change the configuration.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Konfigürasyonu değiştirmeyi reddetti.",
-                "Konfigürasyonu optimize etmeyi denedi.",
-                "Konfigürasyonu güncellemeyi kabul etti.",
-                "Konfigürasyonu belirtmeyi başardı."
-              ],
-              "correctIndex": 0,
-              "enSentence": "He refused to change the configuration.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Tasarımı değiştirmeyi umuyorlar.",
-              "words": [
-                "Tasarımı",
-                "değiştirmeyi",
-                "umuyorlar",
-                "karar",
-                "verdiler"
-              ],
-              "correctOrder": [
-                "Tasarımı",
-                "değiştirmeyi",
-                "umuyorlar"
-              ],
-              "enSentence": "They hope to modify the design.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Betik sonuçları hesaplamaya devam etti.",
-              "words": [
-                "Betik",
-                "sonuçları",
-                "hesaplamaya",
-                "devam",
-                "etti",
-                "başardı"
-              ],
-              "correctOrder": [
-                "Betik",
-                "sonuçları",
-                "hesaplamaya",
-                "devam",
-                "etti"
-              ],
-              "enSentence": "The script continued to calculate the results.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Bütçeyi kaydırmayı seçtik.",
-              "words": [
-                "Bütçeyi",
-                "kaydırmayı",
-                "seçtik",
-                "kabul",
-                "ettik"
-              ],
-              "correctOrder": [
-                "Bütçeyi",
-                "kaydırmayı",
-                "seçtik"
-              ],
-              "enSentence": "We chose to shift the budget.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Kurallar erişimi kısıtlamaya hizmet ediyor.",
-              "words": [
-                "The",
-                "rules",
-                "serve",
-                "to",
-                "restrict",
-                "access",
-                "modify",
-                "protect"
-              ],
-              "correctOrder": [
-                "The",
-                "rules",
-                "serve",
-                "to",
-                "restrict",
-                "access"
-              ],
-              "enSentence": "The rules serve to restrict access.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u14l45_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Analysts aim to optimize the code.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Analistler kodu optimize etmeyi amaçlıyor.",
-              "enSentence": "Analysts aim to optimize the code.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Did the council agree to allocate funds?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Konsey fonları tahsis etmeyi kabul etti mi?",
-              "enSentence": "Did the council agree to allocate funds?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u14l45ex3",
-          "title": "Alıştırma 3: İleri Düzey Mastar Cümleleri",
-          "description": "Sıfat-fiiller, edilgen yapılar, edat takımları ve isim tamlamaları içeren ileri akademik cümleler (İleri Seviye)",
-          "questions": [
-            {
-              "id": "u14l45_ex3_mc_0",
-              "grammarTags": [
-                "Fiil Tümleyici Mastar"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The researchers studying the dataset decided to abandon the obsolete methodology to save valuable resources.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Veri kümesini inceleyen araştırmacılar, değerli kaynakları korumak için eskiyen metodolojiyi bırakmaya karar verdiler.",
-                "Araştırmacılar veri kümesini inceledikten sonra eski metodolojiyi değiştirmeyi kabul ettiler.",
-                "Değerli kaynakları korumak için veri kümesi ve eskiyen metodolojiler analiz edilmelidir.",
-                "Eskiyen metodolojiyi bırakan araştırmacılar veri kümesini incelemeyi kabul ettiler."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The researchers studying the dataset decided to abandon the obsolete methodology to save valuable resources.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim + Edat Takımı"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The independent experts authorized by the board refused to inspect the damaged facility without modern tools.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Yönetim kurulu tarafından yetkilendirilen bağımsız uzmanlar, modern aletler olmadan hasarlı tesisi denetlemeyi reddettiler.",
-                "Yönetim kuruluna rapor sunan uzmanlar, hasarlı tesisi yeni aletlerle denetlemeyi kabul ettiler.",
-                "Bağımsız uzmanlar yönetim kurulunun izniyle tesisi denetleme kararı aldılar.",
-                "Modern aletler kullanılmadığı için uzmanlar tesisteki hasarları incelemekten vazgeçtiler."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The independent experts authorized by the board refused to inspect the damaged facility without modern tools.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim + Edat Takımı"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The software engineers working on the server tried to clarify the unexpected latency spike caused by the update.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Sunucu üzerinde çalışan yazılım mühendisleri, güncellemenin neden olduğu beklenmedik gecikme artışını açıklamaya çalıştılar.",
-                "Yazılım mühendisleri sunucu güncellemesinden sonra gecikme sorunlarını çözmeyi denediler.",
-                "Güncelleme nedeniyle sunucuda çalışan mühendisler gecikme artışını kabul etmek zorunda kaldılar.",
-                "Mühendisler sunucu üzerindeki çalışmalar sırasında beklenmedik güncellemeleri açıkladılar."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The software engineers working on the server tried to clarify the unexpected latency spike caused by the update.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_mc_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"An instruction guide published last month explained how the team agreed to modify the security framework.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Geçen ay yayınlanan bir yönerge kılavuzu, ekibin güvenlik çerçevesini değiştirmeyi nasıl kabul ettiğini açıkladı.",
-                "Yönerge kılavuzunun geçen ay yayınlanmasıyla ekip güvenlik kurallarını değiştirmeye karar verdi.",
-                "Güvenlik çerçevesini değiştirmeyi kabul eden ekip geçen ay bir kılavuz yayınladı.",
-                "Ekibin güvenlik kurallarını değiştirmesi geçen ay yayınlanan kılavuzda açıkça reddedildi."
-              ],
-              "correctIndex": 0,
-              "enSentence": "An instruction guide published last month explained how the team agreed to modify the security framework.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Raporları hazırlayan yıllık denetçiler, işletmenin finansal yapılarını optimize etmeyi amaçladılar.",
-              "words": [
-                "Raporları",
-                "hazırlayan",
-                "yıllık",
-                "denetçiler,",
-                "işletmenin",
-                "finansal",
-                "yapılarını",
-                "optimize",
-                "etmeyi",
-                "amaçladılar.",
-                "durumunu",
-                "kabul"
-              ],
-              "correctOrder": [
-                "Raporları",
-                "hazırlayan",
-                "yıllık",
-                "denetçiler,",
-                "işletmenin",
-                "finansal",
-                "yapılarını",
-                "optimize",
-                "etmeyi",
-                "amaçladılar."
-              ],
-              "enSentence": "The annual auditors preparing the reports aimed to optimize the financial structures of the enterprise.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Arka planda çalışan otomatik betik, gazın yoğunluğunu sürekli olarak hesaplamaya devam etti.",
-              "words": [
-                "Arka",
-                "planda",
-                "çalışan",
-                "otomatik",
-                "betik,",
-                "gazın",
-                "yoğunluğunu",
-                "sürekli",
-                "olarak",
-                "hesaplamaya",
-                "devam",
-                "etti.",
-                "ölçtü"
-              ],
-              "correctOrder": [
-                "Arka",
-                "planda",
-                "çalışan",
-                "otomatik",
-                "betik,",
-                "gazın",
-                "yoğunluğunu",
-                "sürekli",
-                "olarak",
-                "hesaplamaya",
-                "devam",
-                "etti."
-              ],
-              "enSentence": "The automated script running in the background continued to calculate the density of the gas continuously.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Yeni politikayı tartışan bölgesel konsey, kalan uluslararası fonları eğitime kaydırmayı seçti.",
-              "words": [
-                "Yeni",
-                "politikayı",
-                "tartışan",
-                "bölgesel",
-                "konsey,",
-                "kalan",
-                "uluslararası",
-                "fonları",
-                "eğitime",
-                "kaydırmayı",
-                "seçti.",
-                "karar",
-                "verdi"
-              ],
-              "correctOrder": [
-                "Yeni",
-                "politikayı",
-                "tartışan",
-                "bölgesel",
-                "konsey,",
-                "kalan",
-                "uluslararası",
-                "fonları",
-                "eğitime",
-                "kaydırmayı",
-                "seçti."
-              ],
-              "enSentence": "The regional council debating the new policy chose to shift the remaining international funds to education.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Kullanıcı gizliliğini korumak için, katı düzenlemeler hassas veritabanı profillerine erişimi kısıtlamaya hizmet eder.",
-              "words": [
-                "To",
-                "protect",
-                "user",
-                "privacy,",
-                "the",
-                "strict",
-                "regulations",
-                "serve",
-                "to",
-                "restrict",
-                "access",
-                "to",
-                "sensitive",
-                "database",
-                "profiles.",
-                "inspect",
-                "agree"
-              ],
-              "correctOrder": [
-                "To",
-                "protect",
-                "user",
-                "privacy,",
-                "the",
-                "strict",
-                "regulations",
-                "serve",
-                "to",
-                "restrict",
-                "access",
-                "to",
-                "sensitive",
-                "database",
-                "profiles."
-              ],
-              "enSentence": "To protect user privacy, the strict regulations serve to restrict access to sensitive database profiles.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u14l45_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The committee investigating the structural anomalies hesitated to anticipate the final outcomes of the research.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yapısal anomalileri araştıran komite, araştırmanın nihai sonuçlarını öngörmekten çekindi.",
-              "enSentence": "The committee investigating the structural anomalies hesitated to anticipate the final outcomes of the research.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u14l45_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The commission representing the government planned to allocate the extra budget to the local municipalities.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Hükümeti temsil eden komisyon, ek bütçeyi yerel belediyelere tahsis etmeyi planladı.",
-              "enSentence": "The commission representing the government planned to allocate the extra budget to the local municipalities.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
+  "1": {
+    "title": "1. Fiil Tümleyici Mastarlar (Verb + to V1 / Verb + Object + to V1)",
+    "subtitle": "Temel fiillerin nesnesi olarak mastar (infinitive) kullanımı",
+    "konuAnlatimi": {
+      "baslik": "Fiil Tümleyici Mastarlar Kılavuzu (agree to, refuse to, plan to, force sb to)",
+      "teorikMantik": "İngilizcede bazı fiiller doğrudan nesne olarak veya nesneden sonra bir başka eyleme bağlanırken 'to + V1' (to-infinitive) yapısını gerektirir.",
+      "formul": "Özne + Fiil + to V1 + Nesne/Edat Öbeği VEYA Özne + Fiil + Nesne + to V1",
+      "altinKural": "• Doğrudan Mastar Alan Fiiller: agree, attempt, decide, hesitate, intend, plan, refuse, seek, strive<br>• Nesne + Mastar Alan Fiiller: allow, encourage, force, require, urge, enable"
     },
-    "2": {
-      "exercises": [
-        {
-          "id": "u15l47ex1",
-          "title": "Alıştırma 1: Yapısal Cümle Girişleri",
-          "description": "It is + sıfat + to V1 kalıbının temel öbek ve giriş düzeyindeki örnekleri.",
-          "questions": [
-            {
-              "id": "u15l47_ex1_mc_0",
-              "grammarTags": [
-                "Strüktürel Özne Mastarı"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Uyum sağlamak kritik olmuştur.)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "It has been crucial to adapt.",
-              "isEngToTr": true,
-              "sentence": "It has been crucial __________ adapt.",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Tespit etmek hayati olurdu.)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "It would be vital to identify.",
-              "isEngToTr": false,
-              "sentence": "It would be vital __________ identify.",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex1_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is essential to define.",
-              "words": [
-                "avantajlı",
-                "Tanımlamak",
-                "esastır",
-                "Sınırlandırmak",
-                "olacak"
-              ],
-              "correctOrder": [
-                "Tanımlamak",
-                "esastır"
-              ],
-              "enSentence": "It is essential to define.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex1_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Is it essential to define?",
-              "words": [
-                "Tanımlamak",
-                "esas",
-                "Yapılandırmak",
-                "Parametrelendirmek",
-                "olmuş",
-                "mıdır"
-              ],
-              "correctOrder": [
-                "Tanımlamak",
-                "esas",
-                "mıdır"
-              ],
-              "enSentence": "Is it essential to define?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex1_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is important to specify.",
-              "words": [
-                "Belirtmek",
-                "olmuştur",
-                "önemlidir",
-                "esastır",
-                "Tanımlamak"
-              ],
-              "correctOrder": [
-                "Belirtmek",
-                "önemlidir"
-              ],
-              "enSentence": "It is important to specify.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex1_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Entegre etmek mümkün müdür?",
-              "words": [
-                "unnecessary",
-                "validate",
-                "Is",
-                "integrate",
-                "isolate",
-                "to",
-                "it",
-                "possible"
-              ],
-              "correctOrder": [
-                "Is",
-                "it",
-                "possible",
-                "to",
-                "integrate"
-              ],
-              "enSentence": "Is it possible to integrate?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u15l47_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:\n\n(Belirtmek önemli midir?)",
-              "sentence": "Is it important __________ specify?",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "translation": "Belirtmek önemli midir?",
-              "explanation": "Açılır menüden 'to' yapısı seçilmelidir."
-            },
-            {
-              "id": "u15l47_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:\n\n(Entegre etmek mümkündür.)",
-              "sentence": "It is possible __________ integrate.",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "translation": "Entegre etmek mümkündür.",
-              "explanation": "Açılır menüden 'to' yapısı seçilmelidir."
-            },
-            {
-              "id": "u15_new_tf_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "\"It is essential to backup the database files regularly.\" cümlesi dil bilgisel olarak doğrudur.",
-              "correctAnswer": true,
-              "explanation": "Doğru! 'It is + sıfat + to V1' kuralına tam uymaktadır."
-            },
-            {
-              "id": "u15_new_tf_4",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "\"It is possible to integrate these highly competitive dynamic sectors.\" cümlesinin Türkçe karşılığı 'Bu son derece rekabetçi dinamik sektörleri entegre etmek mümkündür.' ifadesidir.",
-              "correctAnswer": true,
-              "explanation": "Doğru! Cümle birebir ve kusursuz bir çeviriye sahiptir."
-            }
-          ]
-        },
-        {
-          "id": "u15l47ex2",
-          "title": "Alıştırma 2: Yapısal Cümleler",
-          "description": "Yapısal 'It' yapısının tüm cümle düzeyindeki orta seviye kullanımları.",
-          "questions": [
-            {
-              "id": "u15l47_ex2_mc_0",
-              "grammarTags": [
-                "Strüktürel Özne Mastarı"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Doğrulamak imkansız olacak mıdır?)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Will it be impossible to validate?",
-              "isEngToTr": true,
-              "sentence": "Will it be impossible __________ validate?",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Değiştirmek gereksiz olurdu.)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "It would be unnecessary to modify.",
-              "isEngToTr": false,
-              "sentence": "It would be unnecessary __________ modify.",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex2_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It will be crucial to clarify.",
-              "words": [
-                "olacaktır",
-                "kritik",
-                "kavuşturmak",
-                "önemlidir",
-                "Açıklığa",
-                "yeterli",
-                "Belirtmek"
-              ],
-              "correctOrder": [
-                "Açıklığa",
-                "kavuşturmak",
-                "kritik",
-                "olacaktır"
-              ],
-              "enSentence": "It will be crucial to clarify.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex2_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been difficult to isolate.",
-              "words": [
-                "İzole",
-                "Belirtmek",
-                "olmuştur",
-                "etmek",
-                "Denetlemek",
-                "zor",
-                "Tespit"
-              ],
-              "correctOrder": [
-                "İzole",
-                "etmek",
-                "zor",
-                "olmuştur"
-              ],
-              "enSentence": "It has been difficult to isolate.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex2_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Will it be crucial to clarify?",
-              "words": [
-                "olacak",
-                "kavuşturmak",
-                "Açıklığa",
-                "kritik",
-                "mıdır",
-                "elverişlidir",
-                "olacaktır",
-                "zor"
-              ],
-              "correctOrder": [
-                "Açıklığa",
-                "kavuşturmak",
-                "kritik",
-                "olacak",
-                "mıdır"
-              ],
-              "enSentence": "Will it be crucial to clarify.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex2_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Doğrulamak imkansız olacaktır.",
-              "words": [
-                "isolate",
-                "vital",
-                "to",
-                "impossible",
-                "validate",
-                "is",
-                "be",
-                "will",
-                "It"
-              ],
-              "correctOrder": [
-                "It",
-                "will",
-                "be",
-                "impossible",
-                "to",
-                "validate"
-              ],
-              "enSentence": "It will be impossible to validate.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u15l47_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:\n\n(İzole etmek zor olmuş mudur?)",
-              "sentence": "Has it been difficult __________ isolate?",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "translation": "İzole etmek zor olmuş mudur?",
-              "explanation": "Açılır menüden 'to' yapısı seçilmelidir."
-            },
-            {
-              "id": "u15l47_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "Aşağıdaki İngilizce cümlenin doğru Türkçe çevirisi \"Parametrelendirmek elverişlidir.\" ifadesidir:\n\n\"It is convenient to parameterize.\"",
-              "correctAnswer": true,
-              "explanation": "Doğru! Cümlenin çevirisi dil bilgisel olarak ve anlamsal olarak doğrudur."
-            },
-            {
-              "id": "u15_new_tf_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "\"It was vital protecting the mainframe network during the attack.\" cümlesi dil bilgisel olarak doğrudur.",
-              "correctAnswer": false,
-              "explanation": "Yanlış! 'It was vital TO protect' olmalıdır. Sıfattan sonra mastar (to V1) yapısı kullanılır, V-ing değil."
-            },
-            {
-              "id": "u15_new_fbd_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:\n\n(Değerli nitel içgörüler elde etmek temeldir.)",
-              "sentence": "It is fundamental __________ extract valuable qualitative insights.",
-              "options": [
-                "to",
-                "for",
-                "by",
-                "about"
-              ],
-              "correctIndex": 0,
-              "explanation": "'to extract' (çıkarmak/elde etmek için) mastar yapısı seçilmelidir."
-            }
-          ]
-        },
-        {
-          "id": "u15l47ex3",
-          "title": "Alıştırma 3: Akademik ve Karmaşık Yapılar",
-          "description": "Sıfat ve zarf nitelemeleri, edilgen yapılar ve edat öbekleri barındıran uzun akademik cümleler.",
-          "questions": [
-            {
-              "id": "u15l47_ex3_mc_0",
-              "grammarTags": [
-                "Strüktürel Özne Mastarı"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Bağımsız teknik uzmanlar kullanarak tüm temel yapısal çerçeveyi denetlemek faydalı olurdu.)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "It would be beneficial to inspect the entire underlying structural framework using independent technical experts.",
-              "isEngToTr": true,
-              "sentence": "It would be beneficial __________ inspect the entire underlying structural framework using independent technical experts.",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğu dolduracak doğru yapıyı seçin:\n\n(Eski çevre güvenliği düzenlemelerini gelişmiş şifreleme algoritmalarıyla değiştirmek mantıklı olacaktır.)",
-              "options": [
-                "to",
-                "for",
-                "which",
-                "so"
-              ],
-              "correctIndex": 0,
-              "enSentence": "It will be logical to substitute outdated environmental safety regulations with advanced encryption algorithms.",
-              "isEngToTr": false,
-              "sentence": "It will be logical __________ substitute outdated environmental safety regulations with advanced encryption algorithms.",
-              "explanation": "Bu yapısal 'It' cümlesinde doğru dil bilgisi ögesi 'to' olmalıdır."
-            },
-            {
-              "id": "u15l47_ex3_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It will be crucial to clarify the initial investigative project scope before the annual audit begins.",
-              "words": [
-                "araştırma",
-                "başlamadan",
-                "kavuşturmak",
-                "modüllerini",
-                "işlem",
-                "projesi",
-                "ilk",
-                "önce",
-                "kapsamını",
-                "açıklığa",
-                "denetim",
-                "olacaktır",
-                "altyapı",
-                "Yıllık",
-                "kritik"
-              ],
-              "correctOrder": [
-                "Yıllık",
-                "denetim",
-                "başlamadan",
-                "önce",
-                "ilk",
-                "araştırma",
-                "projesi",
-                "kapsamını",
-                "açıklığa",
-                "kavuşturmak",
-                "kritik",
-                "olacaktır"
-              ],
-              "enSentence": "It will be crucial to clarify the initial investigative project scope before the annual audit begins.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It would be unnecessary to modify individual functional software modules without receiving user feedback.",
-              "words": [
-                "geri",
-                "Kullanıcı",
-                "fonksiyonel",
-                "almadan",
-                "gereksiz",
-                "Revize",
-                "olurdu",
-                "doğrulamak",
-                "bireysel",
-                "daha",
-                "yazılım",
-                "değiştirmek",
-                "bildirimi",
-                "modüllerini"
-              ],
-              "correctOrder": [
-                "Kullanıcı",
-                "geri",
-                "bildirimi",
-                "almadan",
-                "bireysel",
-                "fonksiyonel",
-                "yazılım",
-                "modüllerini",
-                "değiştirmek",
-                "gereksiz",
-                "olurdu"
-              ],
-              "enSentence": "It would be unnecessary to modify individual functional software modules without receiving user feedback.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been advantageous to accumulate detailed historical system logs for future paradigm shifts.",
-              "words": [
-                "değişimleri",
-                "ayrıntılı",
-                "olmuştur",
-                "avantajlı",
-                "için",
-                "aracılığıyla",
-                "bileşenlerini",
-                "paradigma",
-                "kullanıcı",
-                "sistem",
-                "biriktirmek",
-                "Gelecekteki",
-                "günlüklerini",
-                "geçmiş"
-              ],
-              "correctOrder": [
-                "Gelecekteki",
-                "paradigma",
-                "değişimleri",
-                "için",
-                "ayrıntılı",
-                "geçmiş",
-                "sistem",
-                "günlüklerini",
-                "biriktirmek",
-                "avantajlı",
-                "olmuştur"
-              ],
-              "enSentence": "It has been advantageous to accumulate detailed historical system logs for future paradigm shifts.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been feasible to structure alternative scientific hypotheses based on the final scientific finding.",
-              "words": [
-                "Yapılandırmak",
-                "mümkün",
-                "esas",
-                "zorunlu",
-                "Tanımlamak",
-                "olmuştur",
-                "bilimsel",
-                "hipotezler",
-                "alternatif",
-                "bulguya",
-                "dayanarak",
-                "nihai"
-              ],
-              "correctOrder": [
-                "Nihai",
-                "bilimsel",
-                "bulguya",
-                "dayanarak",
-                "alternatif",
-                "bilimsel",
-                "hipotezler",
-                "yapılandırmak",
-                "mümkün",
-                "olmuştur"
-              ],
-              "enSentence": "It has been feasible to structure alternative scientific hypotheses based on the final scientific finding.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"It will be mandatory to protocol formal bilateral commercial agreements between the executive internal boards.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yönetici iç kurullar arasında resmi ikili ticari anlaşmalar imzalamak zorunlu olacaktır.",
-              "enSentence": "It will be mandatory to protocol formal bilateral commercial agreements between the executive internal boards.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"It is fundamental to extract valuable qualitative insights from mainstream digital media sources.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Ana akım dijital medya kaynaklarından değerli nitel öngörüleri çıkarmak esastır.",
-              "enSentence": "It is fundamental to extract valuable qualitative insights from mainstream digital media sources.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_bs_4",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is possible to integrate these highly competitive dynamic sectors into the national infrastructure expansion.",
-              "words": [
-                "genişlemesine",
-                "bulut",
-                "altyapı",
-                "etmek",
-                "ulusal",
-                "sektörleri",
-                "dinamik",
-                "rekabetçi",
-                "mümkündür",
-                "derece",
-                "olurdu",
-                "entegre",
-                "son",
-                "esastır",
-                "Bu"
-              ],
-              "correctOrder": [
-                "Bu",
-                "son",
-                "derece",
-                "rekabetçi",
-                "dinamik",
-                "sektörleri",
-                "ulusal",
-                "altyapı",
-                "genişlemesine",
-                "entegre",
-                "etmek",
-                "mümkündür"
-              ],
-              "enSentence": "It is possible to integrate these highly competitive dynamic sectors into the national infrastructure expansion.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u15l47_ex3_bs_5",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been necessary to evaluate comprehensive regional surveys every year.",
-              "words": [
-                "Her",
-                "yıl",
-                "kapsamlı",
-                "bölgesel",
-                "anketleri",
-                "değerlendirmek",
-                "gerekli",
-                "olmuştur",
-                "iç",
-                "sistem"
-              ],
-              "correctOrder": [
-                "Her",
-                "yıl",
-                "kapsamlı",
-                "bölgesel",
-                "anketleri",
-                "değerlendirmek",
-                "gerekli",
-                "olmuştur"
-              ],
-              "enSentence": "It has been necessary to evaluate comprehensive regional surveys every year.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "3": {
-      "exercises": [
-        {
-          "id": "u16l48ex1",
-          "createdAt": "2026-07-19T01:05:00Z",
-          "title": "Alıştırma 1: Basit Amaç Yapıları I",
-          "description": "Amaç bildiren mastarlar (to, in order to, so as to) ve olumsuz amaç bildiren yapılar.",
-          "questions": [
-            {
-              "id": "u16l48_ex1_match1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "Maksat ve Amaç Mastarı",
-                "Amaç Bildiren Yapılar",
-                "İsim + Edat Takımı",
-                "Edilgen Çatı"
-              ],
-              "type": "matching",
-              "prompt": "Amaç bildiren yapıların Türkçe karşılıklarını eşleştirin:",
-              "pairs": [
-                {
-                  "left": "yapmak için (yalın)",
-                  "right": "to do"
-                },
-                {
-                  "left": "yapmak amacıyla / yapmak için",
-                  "right": "in order to do / so as to do"
-                },
-                {
-                  "left": "yapmamak için (olumsuz)",
-                  "right": "in order not to do / so as not to do"
-                },
-                {
-                  "left": "yapılması için (edilgen)",
-                  "right": "to be done"
-                }
-              ]
-            },
-            {
-              "id": "u16l48_ex1_match2",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "Kelime çiftlerini Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "optimize etmek",
-                  "right": "optimize"
-                },
-                {
-                  "left": "azaltmak",
-                  "right": "reduce"
-                },
-                {
-                  "left": "önlemek",
-                  "right": "prevent"
-                },
-                {
-                  "left": "teşvik etmek",
-                  "right": "encourage"
-                }
-              ]
-            },
-            {
-              "id": "u16l48_ex1_dropdown_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Cümleyi tamamlamak için en uygun amaç edatını seçin:",
-              "sentence": "The developers updated the software database ___ optimize performance.",
-              "options": [
-                "to",
-                "for",
-                "so as",
-                "in order for"
-              ],
-              "correctIndex": 0,
-              "translation": "Yazılımcılar, performansı optimize etmek için yazılım veritabanını güncelledi."
-            },
-            {
-              "id": "u16l48_ex1_fb_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun amaç yapısını seçin:",
-              "sentence": "We conducted a comprehensive survey ___ analyze customer satisfaction.",
-              "options": [
-                "in order to",
-                "so as for",
-                "to analyzing",
-                "in order for"
-              ],
-              "correctIndex": 0,
-              "translation": "Müşteri memnuniyetini analiz etmek için kapsamlı bir anket yürüttük."
-            },
-            {
-              "id": "u16l48_ex1_dropdown_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun seçeneği seçin:",
-              "sentence": "The company restructured the departments ___ reduce operational costs.",
-              "options": [
-                "so as to",
-                "so as for",
-                "to reducing",
-                "in order"
-              ],
-              "correctIndex": 0,
-              "translation": "Şirket, operasyonel maliyetleri azaltmak için departmanları yeniden yapılandırdı."
-            },
-            {
-              "id": "u16l48_ex1_fb_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun olumsuz amaç yapısını seçin:",
-              "sentence": "Researchers isolated the specimens ___ contaminate the clean laboratory.",
-              "options": [
-                "in order not to",
-                "so as not",
-                "to not contaminate",
-                "in order for not to"
-              ],
-              "correctIndex": 0,
-              "translation": "Araştırmacılar, temiz laboratuvarı kirletmemek için örnekleri izole etti."
-            },
-            {
-              "id": "u16l48_ex1_mc_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The technician calibrated the equipment to prevent measurement errors.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Teknisyen, ölçüm hatalarını önlemek için ekipmanı kalibre etti.",
-                "Teknisyen, ölçüm hatalarını önlemeden ekipmanı çalıştırdı.",
-                "Ölçüm cihazındaki hatalar nedeniyle teknisyen ekipmanı değiştirdi.",
-                "Teknisyen, ölçüm hatalarını gözlemlemek amacıyla ekipmanı test etti."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The technician calibrated the equipment to prevent measurement errors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex1_mc_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Müdür, yeni proje kılavuzlarını tartışmak için bir ekip toplantısı düzenledi.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "The manager organized a team meeting to discuss the new project guidelines.",
-                "The manager organized a team meeting for discuss the new project guidelines.",
-                "The manager organized a team meeting so as to discussing the new project guidelines.",
-                "The manager organized a team meeting in order for discussing the new project guidelines."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The manager organized a team meeting to discuss the new project guidelines.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u16l48_ex1_tx_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"She took detailed notes during the lecture so as not to miss crucial information.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Önemli bilgileri kaçırmamak için ders sırasında ayrıntılı notlar aldı.",
-              "enSentence": "She took detailed notes during the lecture so as not to miss crucial information.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex1_tx_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The government implemented new policies to encourage regional economic growth.\" ifadesini İngilizce'ye çevirin:",
-              "correctSentence": "The government implemented new policies to encourage regional economic growth.",
-              "enSentence": "The government implemented new policies to encourage regional economic growth.",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u16l48ex2",
-          "createdAt": "2026-07-19T01:05:00Z",
-          "title": "Alıştırma 2: Basit Amaç Yapıları II",
-          "description": "Cümle birleştirme, yazılı boşluk doldurma, kelime sıralama ve yazılı çeviri pratikleri.",
-          "questions": [
-            {
-              "id": "u16l48_ex2_conn_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "Maksat ve Amaç Mastarı",
-                "Amaç Bildiren Yapılar",
-                "İsim + Edat Takımı"
-              ],
-              "type": "sentence-connector",
-              "prompt": "Bu iki ifadeyi amaç ilişkisi kurarak en doğru şekilde bağlayan yapıyı seçin:<br><br><span style='color: var(--accent-primary); font-weight: bold;'>İfade 1:</span> They checked the security logs regularly.<br><span style='color: #ec4899; font-weight: bold;'>İfade 2:</span> detect potential network threats",
-              "options": [
-                "They checked the security logs regularly to detect potential network threats.",
-                "They checked the security logs regularly for detect potential network threats.",
-                "They checked the security logs regularly in order for detecting potential network threats.",
-                "They checked the security logs regularly so as to detecting potential network threats."
-              ],
-              "correctIndex": 0
-            },
-            {
-              "id": "u16l48_ex2_conn_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "sentence-connector",
-              "prompt": "Bu iki ifadeyi amaç ilişkisi kurarak en doğru şekilde bağlayan yapıyı seçin:<br><br><span style='color: var(--accent-primary); font-weight: bold;'>İfade 1:</span> The organization launched an online campaign.<br><span style='color: #ec4899; font-weight: bold;'>İfade 2:</span> raise awareness about climate change",
-              "options": [
-                "The organization launched an online campaign in order raising awareness about climate change.",
-                "The organization launched an online campaign to raise awareness about climate change.",
-                "The organization launched an online campaign so as for raise awareness about climate change.",
-                "The organization launched an online campaign to raising awareness about climate change."
-              ],
-              "correctIndex": 1
-            },
-            {
-              "id": "u16l48_ex2_text_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-text",
-              "prompt": "Cümledeki boşluğu doldurun (amaç mastarı): \"Yazılımcılar performansı optimize etmek için veritabanını güncelledi.\"",
-              "sentence": "The developers updated the software database ___ optimize performance.",
-              "correct": "to",
-              "enSentence": "The developers updated the software database to optimize performance."
-            },
-            {
-              "id": "u16l48_ex2_text_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "fill-blank-text",
-              "prompt": "Cümledeki boşluğu doldurun (olumsuz amaç): \"Önemli bilgileri kaçırmamak için ders sırasında ayrıntılı notlar aldı.\"",
-              "sentence": "She took detailed notes during the lecture so ___ not to miss crucial information.",
-              "correct": "as",
-              "enSentence": "She took detailed notes during the lecture so as not to miss crucial information."
-            },
-            {
-              "id": "u16l48_ex2_wb_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "We conducted a comprehensive survey in order to analyze customer satisfaction.",
-              "words": [
-                "yürüttük.",
-                "kapsamlı",
-                "müşteri",
-                "memnuniyetini",
-                "analiz",
-                "için",
-                "anket",
-                "etmek",
-                "Biz,",
-                "çalışan"
-              ],
-              "correctOrder": [
-                "Biz,",
-                "müşteri",
-                "memnuniyetini",
-                "analiz",
-                "etmek",
-                "için",
-                "kapsamlı",
-                "bir",
-                "anket",
-                "yürüttük."
-              ],
-              "enSentence": "We conducted a comprehensive survey in order to analyze customer satisfaction.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex2_wb_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The company restructured the departments so as to reduce operational costs.",
-              "words": [
-                "için",
-                "Teknisyen",
-                "Şirket",
-                "azaltmak",
-                "maliyetleri",
-                "departmanları",
-                "operasyonel",
-                "yeniden",
-                "analiz",
-                "yapılandırdı",
-                "memnuniyetini"
-              ],
-              "correctOrder": [
-                "Şirket",
-                "operasyonel",
-                "maliyetleri",
-                "azaltmak",
-                "için",
-                "departmanları",
-                "yeniden",
-                "yapılandırdı"
-              ],
-              "enSentence": "The company restructured the departments so as to reduce operational costs.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex2_wb_2",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Araştırmacılar, temiz laboratuvarı kirletmemek için örnekleri izole etti.",
-              "words": [
-                "izole",
-                "örnekleri",
-                "kirletmemek",
-                "laboratuvarı",
-                "için",
-                "temiz",
-                "Araştırmacılar,",
-                "etti.",
-                "sistemi"
-              ],
-              "correctOrder": [
-                "Araştırmacılar,",
-                "temiz",
-                "laboratuvarı",
-                "kirletmemek",
-                "için",
-                "örnekleri",
-                "izole",
-                "etti."
-              ],
-              "enSentence": "Researchers isolated the specimens in order not to contaminate the clean laboratory.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex2_wb_3",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Teknisyen, ölçüm hatalarını önlemek için ekipmanı kalibre etti.",
-              "words": [
-                "The",
-                "technician",
-                "calibrated",
-                "the",
-                "equipment",
-                "to",
-                "prevent",
-                "measurement",
-                "errors.",
-                "for",
-                "preventing"
-              ],
-              "correctOrder": [
-                "The",
-                "technician",
-                "calibrated",
-                "the",
-                "equipment",
-                "to",
-                "prevent",
-                "measurement",
-                "errors."
-              ],
-              "enSentence": "The technician calibrated the equipment to prevent measurement errors.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u16l48_ex2_tx_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The developers updated the software database to optimize performance.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yazılımcılar, performansı optimize etmek için yazılım veritabanını güncelledi.",
-              "enSentence": "The developers updated the software database to optimize performance.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex2_tx_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"She took detailed notes during the lecture so as not to miss crucial information.\" ifadesini İngilizce'ye çevirin:",
-              "correctSentence": "She took detailed notes during the lecture so as not to miss crucial information.",
-              "enSentence": "She took detailed notes during the lecture so as not to miss crucial information.",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u16l48ex3",
-          "createdAt": "2026-07-19T01:05:00Z",
-          "title": "Alıştırma 3: Basit Amaç Yapıları III",
-          "description": "Kelime eşleştirme, Doğru/Yanlış ve çeviri pratikleri.",
-          "questions": [
-            {
-              "id": "u16l48_ex3_match1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "Maksat ve Amaç Mastarı",
-                "Amaç Bildiren Yapılar"
-              ],
-              "type": "matching",
-              "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "tür/örnek",
-                  "right": "specimen"
-                },
-                {
-                  "left": "bulaştırmak/kirletmek",
-                  "right": "contaminate"
-                },
-                {
-                  "left": "kalibre etmek",
-                  "right": "calibrate"
-                },
-                {
-                  "left": "kılavuzlar",
-                  "right": "guidelines"
-                }
-              ]
-            },
-            {
-              "id": "u16l48_ex3_match2",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "tehdit",
-                  "right": "threat"
-                },
-                {
-                  "left": "farkındalık",
-                  "right": "awareness"
-                },
-                {
-                  "left": "kapsamlı",
-                  "right": "comprehensive"
-                },
-                {
-                  "left": "tarihi",
-                  "right": "historical"
-                }
-              ]
-            },
-            {
-              "id": "u16l48_ex3_tf_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "Cümlenin çevirisi doğru mu, yanlış mı? (Doğru=SAĞA, Yanlış=SOLA)",
-              "englishPhrase": "The government implemented new policies to encourage regional economic growth.",
-              "turkishTranslation": "Hükümet, bölgesel ekonomik büyümeyi teşvik etmek için yeni politikalar uyguladı.",
-              "correctAnswer": "true",
-              "explanation": "Doğru! 'implemented new policies to encourage...' yapısı 'teşvik etmek için yeni politikalar uyguladı' olarak tam çevrilmiştir."
-            },
-            {
-              "id": "u16l48_ex3_tf_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "true-false",
-              "prompt": "Cümlenin çevirisi doğru mu, yanlış mı? (Doğru=SAĞA, Yanlış=SOLA)",
-              "englishPhrase": "Researchers isolated the specimens in order not to contaminate the clean laboratory.",
-              "turkishTranslation": "Araştırmacılar, temiz laboratuvarı kirletmek amacıyla örnekleri izole etti.",
-              "correctAnswer": "false",
-              "explanation": "Yanlış! 'in order not to contaminate' ifadesi 'kirletmemek için' (olumsuz amaç) anlamına gelir, 'kirletmek amacıyla' (aktif amaç) değil."
-            },
-            {
-              "id": "u16l48_ex3_wb_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The government implemented new policies to encourage regional economic growth.",
-              "words": [
-                "ekonomik",
-                "Hükümet,",
-                "teşvik",
-                "politikalar",
-                "büyümeyi",
-                "yeni",
-                "bölgesel",
-                "için",
-                "etmek",
-                "uyguladı."
-              ],
-              "correctOrder": [
-                "Hükümet,",
-                "bölgesel",
-                "ekonomik",
-                "büyümeyi",
-                "teşvik",
-                "etmek",
-                "için",
-                "yeni",
-                "politikalar",
-                "uyguladı."
-              ],
-              "enSentence": "The government implemented new policies to encourage regional economic growth.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex3_wb_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "They checked the security logs regularly to detect potential network threats.",
-              "words": [
-                "tespit",
-                "yeni",
-                "etmek",
-                "olarak",
-                "ağ",
-                "düzenli",
-                "farkındalık",
-                "tehditlerini",
-                "yürüttük",
-                "Olası",
-                "için",
-                "kontrol",
-                "günlüklerini",
-                "ettiler",
-                "güvenlik"
-              ],
-              "correctOrder": [
-                "Olası",
-                "ağ",
-                "tehditlerini",
-                "tespit",
-                "etmek",
-                "için",
-                "güvenlik",
-                "günlüklerini",
-                "düzenli",
-                "olarak",
-                "kontrol",
-                "ettiler"
-              ],
-              "enSentence": "They checked the security logs regularly to detect potential network threats.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex3_wb_2",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The organization launched an online campaign to raise awareness about climate change.",
-              "words": [
-                "kampanya",
-                "iklim",
-                "değişikliği",
-                "yaratmak",
-                "başlattı.",
-                "çevrimiçi",
-                "farkındalık",
-                "için",
-                "Kuruluş,",
-                "hakkında"
-              ],
-              "correctOrder": [
-                "Kuruluş,",
-                "iklim",
-                "değişikliği",
-                "hakkında",
-                "farkındalık",
-                "yaratmak",
-                "için",
-                "çevrimiçi",
-                "bir",
-                "kampanya",
-                "başlattı."
-              ],
-              "enSentence": "The organization launched an online campaign to raise awareness about climate change.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex3_wb_3",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Yazılımcılar, performansı optimize etmek için yazılım veritabanını güncelledi.",
-              "words": [
-                "The",
-                "developers",
-                "updated",
-                "the",
-                "software",
-                "database",
-                "to",
-                "optimize",
-                "performance.",
-                "for",
-                "optimizing"
-              ],
-              "correctOrder": [
-                "The",
-                "developers",
-                "updated",
-                "the",
-                "software",
-                "database",
-                "to",
-                "optimize",
-                "performance."
-              ],
-              "enSentence": "The developers updated the software database to optimize performance.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u16l48_ex3_tx_0",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"We conducted a comprehensive survey in order to analyze customer satisfaction.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Müşteri memnuniyetini analiz etmek için kapsamlı bir anket yürüttük.",
-              "enSentence": "We conducted a comprehensive survey in order to analyze customer satisfaction.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u16l48_ex3_tx_1",
-              "createdAt": "2026-07-19T01:05:00Z",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The company restructured the departments so as to reduce operational costs.\" ifadesini İngilizce'ye çevirin:",
-              "correctSentence": "The company restructured the departments so as to reduce operational costs.",
-              "enSentence": "The company restructured the departments so as to reduce operational costs.",
-              "isEngToTr": false
-            }
-          ]
-        }
-      ]
-    },
-    "4": {
-      "exercises": [
-        {
-          "id": "u20l51ex1",
-          "title": "Alıştırma 1: Temel Soru Mastarları",
-          "description": "Soru kelimesi + mastar (Wh- + to V) temel yapıları (Cümleler 1-10)",
-          "questions": [
-            {
-              "id": "u20l51_ex1_match1",
-              "grammarTags": [
-                "Soru Kelimeli Mastar"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "how to protect",
-                  "right": "nasıl korunacağı"
-                },
-                {
-                  "left": "where to go",
-                  "right": "nereye gidileceği"
-                },
-                {
-                  "left": "what to ask",
-                  "right": "ne sorulacağı"
-                },
-                {
-                  "left": "whether to start",
-                  "right": "başlanıp başlanmayacağı"
-                }
-              ]
-            },
-            {
-              "id": "u20l51_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"which to choose\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "hangisinin seçileceği",
-                "nerede kalınacağı",
-                "nasıl yapılacağı",
-                "ne zaman başlanacağı"
-              ],
-              "correctIndex": 0,
-              "enSentence": "which to choose",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"whom to contact\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "kiminle iletişime geçileceği",
-                "ne zaman ayrılınacağı",
-                "nasıl sakınılacağı",
-                "nereye gönderileceği"
-              ],
-              "correctIndex": 0,
-              "enSentence": "whom to contact",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"how to avoid\" ifadesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "nasıl sakınılacağı",
-                "nereye yerleşileceği",
-                "neyin silineceği",
-                "kimin seçileceği"
-              ],
-              "correctIndex": 0,
-              "enSentence": "how to avoid",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "what to do",
-              "words": [
-                "ne",
-                "yapılacağı",
-                "değiştirileceği",
-                "nasıl",
-                "kiminle"
-              ],
-              "correctOrder": [
-                "ne",
-                "yapılacağı"
-              ],
-              "enSentence": "what to do",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "İfadenin Türkçe karşılığını oluşturun:",
-              "translation": "when to start",
-              "words": [
-                "Ne",
-                "zaman",
-                "başlanacağı",
-                "nasıl",
-                "seçileceği"
-              ],
-              "correctOrder": [
-                "Ne",
-                "zaman",
-                "başlanacağı"
-              ],
-              "enSentence": "when to start",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "İfadenin İngilizce karşılığını oluşturun:",
-              "translation": "nerede bekleneceği",
-              "words": [
-                "where",
-                "to",
-                "wait",
-                "what",
-                "decide"
-              ],
-              "correctOrder": [
-                "where",
-                "to",
-                "wait"
-              ],
-              "enSentence": "where to wait",
-              "isEngToTr": false
-            },
-            {
-              "id": "u20l51_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"how to modify\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "nasıl değiştirileceği",
-              "enSentence": "how to modify",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"whether to accept\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "kabul edilip edilmeyeceği",
-              "enSentence": "whether to accept",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex1_tx_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"how to proceed\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "nasıl ilerleneceği",
-              "enSentence": "how to proceed",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u20l51ex2",
-          "title": "Alıştırma 2: Giriş Yapılarıyla Cümle Kurma",
-          "description": "Temel giriş yapılarının basit cümlelerdeki kullanımları (Cümleler 11-20)",
-          "questions": [
-            {
-              "id": "u20l51_ex2_mc_0",
-              "grammarTags": [
-                "Soru Kelimeli Mastar"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"They need to ask when to start the engine.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Motoru ne zaman çalıştıracaklarını sormaları gerekiyor.",
-                "Motoru nasıl kapatacaklarını öğrenmek istiyorlar.",
-                "Motorun neden durduğunu anlamaya çalışıyorlar.",
-                "Motoru ne zaman tamir edeceklerini sormaları gerekiyor."
-              ],
-              "correctIndex": 0,
-              "enSentence": "They need to ask when to start the engine.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Oraya nasıl gideceğimizi biliyor musun?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Do you know how to go there?",
-                "Do you know where to go there?",
-                "Did they show how to go there?",
-                "Can you tell us when to go there?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Do you know how to go there?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u20l51_ex2_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"We are trying to find where to store the tools.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Aletleri nerede depolayacağımızı bulmaya çalışıyoruz.",
-                "Aletlerin nereye satıldığını anlamaya çalışıyoruz.",
-                "Aletleri nasıl kullanacağımızı öğrenmeye çalışıyoruz.",
-                "Aletleri ne zaman temizleyeceğimizi bulmaya çalışıyoruz."
-              ],
-              "correctIndex": 0,
-              "enSentence": "We are trying to find where to store the tools.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "She showed me what to ask in the interview.",
-              "words": [
-                "Mülakatta",
-                "ne",
-                "soracağımı",
-                "bana",
-                "gösterdi",
-                "neler",
-                "söyleyeceğini"
-              ],
-              "correctOrder": [
-                "Mülakatta",
-                "ne",
-                "soracağımı",
-                "bana",
-                "gösterdi"
-              ],
-              "enSentence": "She showed me what to ask in the interview.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I do not know which to choose.",
-              "words": [
-                "Yaygın",
-                "vermelisiniz",
-                "Hangisini",
-                "bilmiyorum",
-                "kabul",
-                "seçeceğimi"
-              ],
-              "correctOrder": [
-                "Hangisini",
-                "seçeceğimi",
-                "bilmiyorum"
-              ],
-              "enSentence": "I do not know which to choose.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "They discussed whether to accept the offer.",
-              "words": [
-                "Teklifi",
-                "kabul",
-                "edip",
-                "etmeyeceklerini",
-                "tartıştılar",
-                "reddettiler",
-                "nasıl"
-              ],
-              "correctOrder": [
-                "Teklifi",
-                "kabul",
-                "edip",
-                "etmeyeceklerini",
-                "tartıştılar"
-              ],
-              "enSentence": "They discussed whether to accept the offer.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Bize kiminle iletişime geçeceğimizi söyledi.",
-              "words": [
-                "He",
-                "told",
-                "us",
-                "whom",
-                "to",
-                "contact",
-                "who",
-                "they",
-                "discuss"
-              ],
-              "correctOrder": [
-                "He",
-                "told",
-                "us",
-                "whom",
-                "to",
-                "contact"
-              ],
-              "enSentence": "He told us whom to contact.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u20l51_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"You must decide what to buy for the project.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Proje için ne satın alacağınıza karar vermelisiniz.",
-              "enSentence": "You must decide what to buy for the project.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"We learned how to avoid common errors.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yaygın hatalardan nasıl kaçınacağımızı öğrendik.",
-              "enSentence": "We learned how to avoid common errors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex2_tx_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The user guide explains how to modify the profile settings.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kullanım kılavuzu profil ayarlarının nasıl değiştirileceğini açıklar.",
-              "enSentence": "The user guide explains how to modify the profile settings.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u20l51ex3",
-          "title": "Alıştırma 3: İleri Düzey Giriş Yapıları",
-          "description": "İsim, edat, participle ve edilgen yapılar içeren karmaşık cümleler (Cümleler 21-30)",
-          "questions": [
-            {
-              "id": "u20l51_ex3_mc_0",
-              "grammarTags": [
-                "Soru Kelimeli Mastar"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"There is a detailed document in the library explaining where to get financial support for research projects.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Kütüphanede, araştırma projeleri için finansal desteğin nereden alınacağını açıklayan detaylı bir belge vardır.",
-                "Kütüphanedeki detaylı belge, araştırma projelerine nasıl finansal destek sağlanacağını açıklamaktadır.",
-                "Araştırma projelerine finansal destek sağlamak amacıyla kütüphanede detaylı bir inceleme yapılacaktır.",
-                "Detaylı bir belgeye göre, araştırma projeleri için finansal desteğin nereden alınacağı henüz netleşmemiştir."
-              ],
-              "correctIndex": 0,
-              "enSentence": "There is a detailed document in the library explaining where to get financial support for research projects.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim + Edat Takımı"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Gelişmiş veri modellerini kullanan mühendisler, veri sızıntısının nasıl önleneceğine dair yeni bir yönerge yayınladılar.\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Engineers using advanced data models published a new guideline on how to prevent data leakage.",
-                "Engineers who use basic data models published a guideline explaining how to optimize networks.",
-                "A new guideline on how to prevent data leakage was published by the research team using advanced data models.",
-                "Engineers published a guideline explaining how to prevent data leakage by using advanced data systems."
-              ],
-              "correctIndex": 0,
-              "enSentence": "Engineers using advanced data models published a new guideline on how to prevent data leakage.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u20l51_ex3_mc_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim + Edat Takımı"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"The system designed by the developers dictates whether to restrict unauthorized user access during maintenance.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Geliştiriciler tarafından tasarlanan sistem, bakım sırasında yetkisiz kullanıcı erişiminin kısıtlanıp kısıtlanmayacağını belirler.",
-                "Sistem, geliştiriciler tarafından yetkisiz erişimlerin engellenmesi amacıyla tasarlanmıştır.",
-                "Geliştiriciler, bakım sırasında sistem erişiminin kısıtlanıp kısıtlanmayacağına karar verecektir.",
-                "Tasarımı yapılan sistem, bakım esnasında sadece yetkili kullanıcıların erişimine izin verilmesini şart koşar."
-              ],
-              "correctIndex": 0,
-              "enSentence": "The system designed by the developers dictates whether to restrict unauthorized user access during maintenance.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_wb_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The supervisor of the project explained how to coordinate the teams working in different sectors.",
-              "words": [
-                "Projenin",
-                "denetçisi",
-                "farklı",
-                "sektörlerde",
-                "çalışan",
-                "ekiplerin",
-                "nasıl",
-                "koordine",
-                "edileceğini",
-                "açıkladı",
-                "durumda"
-              ],
-              "correctOrder": [
-                "Projenin",
-                "denetçisi",
-                "farklı",
-                "sektörlerde",
-                "çalışan",
-                "ekiplerin",
-                "nasıl",
-                "koordine",
-                "edileceğini",
-                "açıkladı"
-              ],
-              "enSentence": "The supervisor of the project explained how to coordinate the teams working in different sectors.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_wb_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "The substances tested in the laboratory indicate when to mix the chemicals.",
-              "words": [
-                "zaman",
-                "ne",
-                "optimize",
-                "gösterir",
-                "edilen",
-                "test",
-                "maddeler",
-                "Laboratuvarda",
-                "desteğin",
-                "karıştırılacağını",
-                "edilmiş",
-                "kimyasalların"
-              ],
-              "correctOrder": [
-                "Laboratuvarda",
-                "test",
-                "edilen",
-                "maddeler",
-                "kimyasalların",
-                "ne",
-                "zaman",
-                "karıştırılacağını",
-                "gösterir"
-              ],
-              "enSentence": "The substances tested in the laboratory indicate when to mix the chemicals.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_wb_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "There are several methods developed by researchers in order to identify which parameters to alter.",
-              "words": [
-                "Hangi",
-                "parametrelerin",
-                "değiştirileceğini",
-                "belirlemek",
-                "için",
-                "araştırmacılar",
-                "tarafından",
-                "geliştirilen",
-                "birkaç",
-                "yöntem",
-                "vardır"
-              ],
-              "correctOrder": [
-                "Hangi",
-                "parametrelerin",
-                "değiştirileceğini",
-                "belirlemek",
-                "için",
-                "araştırmacılar",
-                "tarafından",
-                "geliştirilen",
-                "birkaç",
-                "yöntem",
-                "vardır"
-              ],
-              "enSentence": "There are several methods developed by researchers in order to identify which parameters to alter.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_wb_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim + Edat Takımı"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Hükümet tarafından yayınlanan rapor, hangi ekonomik reformların uygulanacağını belirtir.",
-              "words": [
-                "The",
-                "report",
-                "published",
-                "by",
-                "the",
-                "government",
-                "specifies",
-                "which",
-                "economic",
-                "reforms",
-                "to",
-                "implement",
-                "how"
-              ],
-              "correctOrder": [
-                "The",
-                "report",
-                "published",
-                "by",
-                "the",
-                "government",
-                "specifies",
-                "which",
-                "economic",
-                "reforms",
-                "to",
-                "implement"
-              ],
-              "enSentence": "The report published by the government specifies which economic reforms to implement.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u20l51_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"The evaluation process of the committee focuses on how to reduce operational costs without sacrificing quality.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Komitenin değerlendirme süreci, kaliteden ödün vermeden operasyonel maliyetlerin nasıl düşürüleceğine odaklanmaktadır.",
-              "enSentence": "The evaluation process of the committee focuses on how to reduce operational costs without sacrificing quality.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"A committee investigating structural anomalies has proposed a draft suggesting when to renew old bridges.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yapısal anomalileri araştıran bir komite, eski köprülerin ne zaman yenileneceğini öneren bir taslak sundu.",
-              "enSentence": "A committee investigating structural anomalies has proposed a draft suggesting when to renew old bridges.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u20l51_ex3_tx_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"By studying the feedback loops, the team of developers learned how to optimize the algorithm optimized for speed.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Geri bildirim döngülerini inceleyerek, geliştirici ekibi hız için optimize edilmiş algoritmanın nasıl optimize edileceğini öğrendi.",
-              "enSentence": "By studying the feedback loops, the team of developers learned how to optimize the algorithm optimized for speed.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    }
+    "exercises": [
+      {
+        "id": "u14l45ex1",
+        "title": "Alıştırma 1: Temel mastar öbeği pratikleri",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l45_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Beşeri Bilimler"
+            ],
+            "pairs": [
+              {
+                "left": "scholars attempting to analyze ancient manuscripts",
+                "right": "antik elyazmalarını analiz etmeye çalışan bilginler"
+              },
+              {
+                "left": "courts refusing to modify judicial decisions",
+                "right": "yargı kararlarını değiştirmeyi reddeden mahkemeler"
+              },
+              {
+                "left": "archaeologists hesitating to excavate historical sites",
+                "right": "tarihi alanları kazmakta tereddüt eden arkeologlar"
+              },
+              {
+                "left": "economists striving to stimulate economic growth",
+                "right": "ekonomik büyümeyi teşvik etmeye çabalayan iktisatçılar"
+              }
+            ]
+          },
+          {
+            "id": "u14l45_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sosyoloji"
+            ],
+            "sentence": "Sociologists planning [to investigate] demographic shifts in urban areas",
+            "options": [
+              "to be investigated",
+              "to investigate",
+              "to have investigated",
+              "to have been investigated"
+            ],
+            "correctIndex": 1,
+            "translation": "kentsel alanlardaki demografik değişimleri araştırmayı planlayan sosyologlar",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "\"scholars attempting to analyze ancient manuscripts\" öbeğinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Tarih"
+            ],
+            "options": [
+              "Antik elyazmalarını analiz etmeye çalışan bilginler",
+              "Antik elyazmaları tarafından analiz edilmeye çalışılan bilginler",
+              "Antik elyazmalarının analiz edilme girişimini tamamlayan bilginlik",
+              "Bilginleri analiz etmeye çalışan antik elyazmaları"
+            ],
+            "correctIndex": 0,
+            "enSentence": "scholars attempting to analyze ancient manuscripts",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Hukuk"
+            ],
+            "sentence": "Legal frameworks designed _______ civil liberties of citizens.",
+            "options": [
+              "to be protected",
+              "to have protected",
+              "to have been protected",
+              "to protect"
+            ],
+            "correctIndex": 3,
+            "translation": "Yurttaşların sivil özgürlüklerini korumak için tasarlanmış yasal çerçeveler.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q5",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sinema"
+            ],
+            "words": [
+              "Film yönetmenleri,",
+              "festivallerde",
+              "klasik filmleri",
+              "sergilemeyi",
+              "kabul etti."
+            ],
+            "correctOrder": [
+              "Film yönetmenleri,",
+              "festivallerde",
+              "klasik filmleri",
+              "sergilemeyi",
+              "kabul etti."
+            ],
+            "translation": "Film yönetmenleri, festivallerde klasik filmleri sergilemeyi kabul etti.",
+            "enSentence": "Film directors agreed to showcase classic movies in festivals."
+          },
+          {
+            "id": "u14l45_ex1_q6",
+            "type": "multiple-choice",
+            "prompt": "\"economists striving to stimulate economic growth\" öbeğinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İktisat"
+            ],
+            "options": [
+              "Ekonomik büyümeyle teşvik edilmeye çabalanan iktisatçılar",
+              "Ekonomik büyümeyi teşvik etmek için çabalayan iktisatçıların büyümeleri",
+              "Ekonomik büyümeyi teşvik etmeye çabalayan iktisatçılar",
+              "Ekonomik büyümenin teşvik edilmesini çaba haline getiren iktisat"
+            ],
+            "correctIndex": 2,
+            "enSentence": "economists striving to stimulate economic growth",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Antropoloji"
+            ],
+            "sentence": "Anthropologists failing [to discover] intact artifacts in ancient ruins",
+            "options": [
+              "to be discovered",
+              "to discover",
+              "to have discovered",
+              "to have been discovered"
+            ],
+            "correctIndex": 1,
+            "translation": "antik harabelerde el değmemiş eserler keşfetmekte başarısız olan antropologlar",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q8",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Psikoloji"
+            ],
+            "words": [
+              "Psikologlar,",
+              "bireylerin bilişsel süreçlerini",
+              "değerlendirmeyi",
+              "hedeflemektedir."
+            ],
+            "correctOrder": [
+              "Psikologlar,",
+              "bireylerin bilişsel süreçlerini",
+              "değerlendirmeyi",
+              "hedeflemektedir."
+            ],
+            "translation": "Psikologlar, bireylerin bilişsel süreçlerini değerlendirmeyi hedeflemektedir.",
+            "enSentence": "Psychologists intend to evaluate cognitive processes of individuals."
+          },
+          {
+            "id": "u14l45_ex1_q9",
+            "type": "multiple-choice",
+            "prompt": "\"courts refusing to modify judicial decisions\" öbeğinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Hukuk"
+            ],
+            "options": [
+              "Yargı kararlarını değiştirmeyi reddeden mahkemeler",
+              "Yargı kararları tarafından değiştirilmesi reddedilen mahkemeler",
+              "Yargı kararlarının değiştirilmesini reddetmek üzere kurulan mahkeme",
+              "Mahkemelerin yargı kararlarını değiştirmesini reddeden karar"
+            ],
+            "correctIndex": 0,
+            "enSentence": "courts refusing to modify judicial decisions",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q10",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sanat Tarihi"
+            ],
+            "sentence": "Museum curators decided _______ architectural structures of ancient temples.",
+            "options": [
+              "to be restored",
+              "to have restored",
+              "to have been restored",
+              "to restore"
+            ],
+            "correctIndex": 3,
+            "translation": "Müze küratörleri antik tapınakların mimari yapılarını restore etmeye karar verdi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex1_q11",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İletişim"
+            ],
+            "pairs": [
+              {
+                "left": "governments agreeing to protect civil liberties",
+                "right": "sivil özgürlükleri korumayı kabul eden hükümetler"
+              },
+              {
+                "left": "psychologists intending to examine cognitive processes",
+                "right": "bilişsel süreçleri incelemeyi hedefleyen psikologlar"
+              },
+              {
+                "left": "journalists seeking to report media coverage",
+                "right": "medya haberlerini aktarmayı amaçlayan gazeteciler"
+              },
+              {
+                "left": "museum curators deciding to restore ancient monuments",
+                "right": "antik anıtları restore etmeye karar veren müze küratörleri"
+              }
+            ]
+          },
+          {
+            "id": "u14l45_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"Journalists striving to report unbiased news managed to inform the public.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İletişim"
+            ],
+            "correctSentence": "Tarafsız haber aktarmaya çabalayan gazeteciler kamuoyunu bilgilendirmeyi başardı.",
+            "enSentence": "Journalists striving to report unbiased news managed to inform the public.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l45ex2",
+        "title": "Alıştırma 2: Cümle içi mastar kullanımları",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l45_ex2_q1",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Coğrafya"
+            ],
+            "sentence": "The committee of experts decided _______ the proposal for urban development.",
+            "options": [
+              "to be approved",
+              "to have approved",
+              "to approve",
+              "to have been approved"
+            ],
+            "correctIndex": 2,
+            "translation": "Uzmanlar komitesi kentsel gelişim teklifini onaylamaya karar verdi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q2",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Hukuk"
+            ],
+            "words": [
+              "Mahkeme,",
+              "insan haklarına ilişkin",
+              "yargı kararlarını",
+              "değiştirmeyi",
+              "reddetti."
+            ],
+            "correctOrder": [
+              "Mahkeme,",
+              "insan haklarına ilişkin",
+              "yargı kararlarını",
+              "değiştirmeyi",
+              "reddetti."
+            ],
+            "translation": "Mahkeme, insan haklarına ilişkin yargı kararlarını değiştirmeyi reddetti.",
+            "enSentence": "The court refused to alter judicial decisions regarding human rights."
+          },
+          {
+            "id": "u14l45_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"Historians fail to compile comprehensive records without proper archival evidence.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Tarih"
+            ],
+            "options": [
+              "Kapsamlı kayıtlar derleyen tarihçiler uygun arşiv kanıtı olmadan çalışmayı başaramaz.",
+              "Tarihçiler uygun arşiv kanıtı olmadan kapsamlı kayıtlar derlemekte başarısız olurlar.",
+              "Uygun arşiv kanıtınca derlenen kayıtlar tarihçileri başarısızlığa uğratır.",
+              "Tarihçilerin kayıt derlemesi uygun arşiv kanıtlarının derlenmesinde başarısız oldu."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Historians fail to compile comprehensive records without proper archival evidence.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q4",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İktisat"
+            ],
+            "sentence": "The Ministry of Economy aims _______ financial stability in the region.",
+            "options": [
+              "to maintain",
+              "to be maintained",
+              "to have maintained",
+              "to have been maintained"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekonomi Bakanlığı bölgede finansal istikrarı korumayı hedeflemektedir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q5",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sosyoloji"
+            ],
+            "words": [
+              "Araştırmacılar,",
+              "demokratik kurumlardaki",
+              "sosyal dinamikleri",
+              "inceleme eğilimindedir."
+            ],
+            "correctOrder": [
+              "Araştırmacılar,",
+              "demokratik kurumlardaki",
+              "sosyal dinamikleri",
+              "inceleme eğilimindedir."
+            ],
+            "translation": "Araştırmacılar, demokratik kurumlardaki sosyal dinamikleri inceleme eğilimindedir.",
+            "enSentence": "Researchers tend to examine social dynamics in democratic institutions."
+          },
+          {
+            "id": "u14l45_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Hukuk"
+            ],
+            "sentence": "The High Court hesitates [to reverse] judicial decisions regarding civil liberties.",
+            "options": [
+              "to be reversed",
+              "to have reversed",
+              "to have been reversed",
+              "to reverse"
+            ],
+            "correctIndex": 3,
+            "translation": "Yüksek Mahkeme sivil özgürlüklere ilişkin yargı kararlarını tersine çevirmekte tereddüt ediyor.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q7",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Antropoloji"
+            ],
+            "words": [
+              "Arkeologlar,",
+              "kazı bölgelerinde",
+              "kültürel mirası",
+              "korumaya",
+              "çabalar."
+            ],
+            "correctOrder": [
+              "Arkeologlar,",
+              "kazı bölgelerinde",
+              "kültürel mirası",
+              "korumaya",
+              "çabalar."
+            ],
+            "translation": "Arkeologlar, kazı bölgelerinde kültürel mirası korumaya çabalar.",
+            "enSentence": "Archaeologists strive to preserve cultural heritage in excavation zones."
+          },
+          {
+            "id": "u14l45_ex2_q8",
+            "type": "multiple-choice",
+            "prompt": "\"Scholars attempt to categorize dialectal variations in rural communication.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İletişim"
+            ],
+            "options": [
+              "Diyalektsel varyasyonları kategorize eden bilginler kırsal iletişimi araştırmaya çalışır.",
+              "Kırsal iletişimdeki bilginlerin diyalektsel varyasyonlarca kategorize edilmesi çalışılır.",
+              "Bilginler kırsal iletişimdeki diyalektsel varyasyonları kategorize etmeye çalışır.",
+              "Kategorize etmeye çalışan kırsal iletişim bilginlerin diyalektsel varyasyonudur."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Scholars attempt to categorize dialectal variations in rural communication.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Psikoloji"
+            ],
+            "sentence": "Psychologists managed _______ psychological stress with cognitive exercises.",
+            "options": [
+              "to be reduced",
+              "to reduce",
+              "to have reduced",
+              "to have been reduced"
+            ],
+            "correctIndex": 1,
+            "translation": "Psikologlar bilişsel egzersizlerle psikolojik stresi azaltmayı başardı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q10",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "İktisat"
+            ],
+            "words": [
+              "İktisatçılar,",
+              "az gelişmiş bölgelerde",
+              "ekonomik büyümeyi",
+              "teşvik etmeyi",
+              "vaat eder."
+            ],
+            "correctOrder": [
+              "İktisatçılar,",
+              "az gelişmiş bölgelerde",
+              "ekonomik büyümeyi",
+              "teşvik etmeyi",
+              "vaat eder."
+            ],
+            "translation": "İktisatçılar, az gelişmiş bölgelerde ekonomik büyümeyi teşvik etmeyi vaat eder.",
+            "enSentence": "Economists promise to stimulate economic growth in underdeveloped regions."
+          },
+          {
+            "id": "u14l45_ex2_q11",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sinema"
+            ],
+            "sentence": "Film archives agree [to restore] classic movies of cinema history.",
+            "options": [
+              "to restore",
+              "to be restored",
+              "to have restored",
+              "to have been restored"
+            ],
+            "correctIndex": 0,
+            "translation": "Film arşivleri sinema tarihinin klasik filmlerini restore etmeyi kabul eder.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"Researchers refuse to question the validity of voting behavior statistics.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Araştırmacılar oy verme davranışı istatistiklerinin geçerliliğini sorgulamayı reddediyor.",
+            "enSentence": "Researchers refuse to question the validity of voting behavior statistics.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l45ex3",
+        "title": "Alıştırma 3: Akademik metin ve çeviriler",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l45_ex3_q1",
+            "type": "translation-text",
+            "prompt": "\"Psychologists studying cognitive processes intend to evaluate the levels of psychological stress among students.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Psikoloji"
+            ],
+            "correctSentence": "Bilişsel süreçleri inceleyen psikologlar, öğrenciler arasındaki psikolojik stres seviyelerini değerlendirmeyi hedeflemektedir.",
+            "enSentence": "Psychologists studying cognitive processes intend to evaluate the levels of psychological stress among students.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l45_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Sinema"
+            ],
+            "sentence": "Film directors analyzing cinema history agree [to showcase] classic movies in international festivals.",
+            "options": [
+              "to be showcased",
+              "to have showcased",
+              "to have been showcased",
+              "to showcase"
+            ],
+            "correctIndex": 3,
+            "translation": "Sinema tarihini analiz eden film yönetmenleri uluslararası festivallerde klasik filmleri sergilemeyi kabul ediyor.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"Anthropologists investigating ancient ruins failed to discover intact artifacts in the excavation site.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Antropoloji"
+            ],
+            "correctSentence": "Antik harabeleri araştıran antropologlar, kazı alanında el değmemiş eserler keşfetmekte başarısız oldu.",
+            "enSentence": "Anthropologists investigating ancient ruins failed to discover intact artifacts in the excavation site.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l45_ex3_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "İktisat"
+            ],
+            "words": [
+              "Piyasa dalgalanmalarını analiz eden iktisatçılar,",
+              "yeni finansal istikrar tedbirleri",
+              "getirmeyi",
+              "planlıyor."
+            ],
+            "correctOrder": [
+              "Piyasa dalgalanmalarını analiz eden iktisatçılar,",
+              "yeni finansal istikrar tedbirleri",
+              "getirmeyi",
+              "planlıyor."
+            ],
+            "translation": "Piyasa dalgalanmalarını analiz eden iktisatçılar, yeni finansal istikrar tedbirleri getirmeyi planlıyor.",
+            "enSentence": "Economists analyzing market fluctuations plan to introduce new financial stability measures."
+          },
+          {
+            "id": "u14l45_ex3_q5",
+            "type": "translation-text",
+            "prompt": "\"Judges reviewing constitutional appeals refused to alter judicial decisions of lower courts.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Hukuk"
+            ],
+            "correctSentence": "Anayasal başvuruları inceleyen yargıçlar, alt mahkemelerin yargı kararlarını değiştirmeyi reddetti.",
+            "enSentence": "Judges reviewing constitutional appeals refused to alter judicial decisions of lower courts.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l45_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Coğrafya"
+            ],
+            "sentence": "Geographers mapping urban development strive [to protect] natural habitats in coastal zones.",
+            "options": [
+              "to be protected",
+              "to have protected",
+              "to protect",
+              "to have been protected"
+            ],
+            "correctIndex": 2,
+            "translation": "Kentsel gelişimi haritalandıran coğrafyacılar kıyı bölgelerindeki doğal yaşam alanlarını korumaya çabalıyor.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q7",
+            "type": "multiple-choice",
+            "prompt": "\"Sociologists analyzing voting behavior failed to predict demographic shifts in rural constituencies.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Kırsal seçim bölgelerindeki demografik değişimleri tahmin eden sosyologlar oy verme davranışını analiz etmeyi başaramadı.",
+              "Oy verme davranışını analiz eden sosyologlar, kırsal seçim bölgelerindeki demografik değişimleri tahmin etmekte başarısız oldu.",
+              "Sosyologların oy verme davranışını analiz etmesi, kırsal seçim bölgelerindeki tahminlerin başarısızlığa uğramasını sağladı.",
+              "Kırsal seçim bölgelerindeki demografik değişimlerin analiz edilmesi, oy verme davranışını tahmin eden sosyologları başarsız kıldı."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Sociologists analyzing voting behavior failed to predict demographic shifts in rural constituencies.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q8",
+            "type": "multiple-choice",
+            "prompt": "\"Sociologists examining voting behavior tend to highlight demographic shifts in democratic elections.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Oy verme davranışını inceleyen sosyologlar, demokratik seçimlerdeki demografik değişimleri öne çıkarma eğilimindedir.",
+              "Demokratik seçimlerdeki demografik değişimleri inceleyen sosyologlar, oy verme davranışını öne çıkarır.",
+              "Sosyologların oy verme davranışını öne çıkarma eğilimi, demokratik seçimlerdeki demografik değişimlerce incelenir.",
+              "Demokratik seçimlerde oy verme davranışının öne çıkarılması, demografik değişimleri inceleyen sosyologların eğilimidir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Sociologists examining voting behavior tend to highlight demographic shifts in democratic elections.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q9",
+            "type": "multiple-choice",
+            "prompt": "\"Curators preserving cultural heritage managed to restore ancient sculptures in art history museums.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Sanat Tarihi"
+            ],
+            "options": [
+              "Sanat tarihi müzelerindeki antik heykelleri koruyan küratörler, kültürel mirası restore etmeyi başardı.",
+              "Küratörlerin sanat tarihi müzelerini restore etmesi, antik heykellerin kültürel mirasını korumayı sağladı.",
+              "Kültürel mirası restore eden antik heykeller, sanat tarihi müzelerindeki küratörler tarafından korundu.",
+              "Kültürel mirası koruyan küratörler, sanat tarihi müzelerindeki antik heykelleri restore etmeyi başardı."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Curators preserving cultural heritage managed to restore ancient sculptures in art history museums.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q10",
+            "type": "multiple-choice",
+            "prompt": "\"Journalists covering media coverage decided to broadcast documentary series on human rights.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "İletişim"
+            ],
+            "options": [
+              "İnsan hakları üzerine belgesel serilerini takip eden gazeteciler, medya yayınlarını yayınlamaya karar verdi.",
+              "Medya yayınlarının belgesel serilerini yayınlaması, insan haklarını takip eden gazetecilerce kararlaştırıldı.",
+              "Medya yayınlarını takip eden gazeteciler, insan hakları üzerine belgesel serileri yayınlamaya karar verdi.",
+              "Gazetecilerin insan haklarını yayınlamaya karar vermesi, belgesel serilerinin medya takibini oluşturdu."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Journalists covering media coverage decided to broadcast documentary series on human rights.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q11",
+            "type": "multiple-choice",
+            "prompt": "\"Historians documenting archival records hesitate to publish unverified claims about past conflicts.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "Tarih"
+            ],
+            "options": [
+              "Geçmiş çatışmalar hakkındaki doğrulanmamış iddiaları belgeleyen tarihçiler, arşiv kayıtlarını yayımlamakta tereddüt eder.",
+              "Arşiv kayıtlarını belgeleyen tarihçiler, geçmiş çatışmalar hakkında doğrulanmamış iddiaları yayımlamakta tereddüt eder.",
+              "Tarihçilerin doğrulanmamış iddiaları yayımlama tereddüdü, geçmiş çatışmaların arşiv kayıtlarınca belgelenmesini sağlar.",
+              "Arşiv kayıtlarını yayımlamakta tereddüt eden geçmiş çatışmalar, tarihçilerin iddialarını belgelemektedir."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Historians documenting archival records hesitate to publish unverified claims about past conflicts.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l45_ex3_q12",
+            "type": "multiple-choice",
+            "prompt": "\"Analysts evaluating financial stability refuse to ignore systemic risks in international trade.\" cümlesinin doğru Türkçe çevirisi hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Fiil Tümleyici Mastar",
+              "Participle Yapıları",
+              "İktisat"
+            ],
+            "options": [
+              "Finansal istikrarı değerlendiren analistler, uluslararası ticaretteki sistemik riskleri görmezden gelmeyi reddediyor.",
+              "Uluslararası ticaretteki sistemik riskleri değerlendiren analistler, finansal istikrarı görmezden gelmeyi reddediyor.",
+              "Finansal istikrarın sistemik riskleri görmezden gelmesi, uluslararası ticareti değerlendiren analistlerce reddedilir.",
+              "Uluslararası ticaretin finansal istikrarını reddeden analistler, sistemik riskleri değerlendirmeyi görmezden gelir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Analysts evaluating financial stability refuse to ignore systemic risks in international trade.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          }
+        ]
+      }
+    ]
   },
+  "2": {
+    "title": "2. Yapısal Özne Mastarları (It is + Adjective + for sb + to V1)",
+    "subtitle": "Strüktürel 'It' öznesi ile kurulan durum ve değer yargısı mastarları",
+    "konuAnlatimi": {
+      "baslik": "Yapısal Özne Mastarları Kılavuzu (It is essential to, It was crucial for sb to)",
+      "teorikMantik": "Bir eylemin zorluk, kolaylık, önem veya zorunluluk derecesini ifade etmek için 'It + be + Sıfat + (for + Nesne) + to V1' kalıbı kullanılır.",
+      "formul": "It is/was + Sıfat + (for + İsim/Zamir) + to V1 + İsim Tamlaması / Edat Öbeği",
+      "altinKural": "• Yaygın Sıfatlar: essential, vital, crucial, necessary, impossible, difficult, easy, important<br>• Nesne Belirteci: Eğer eylemi yapan kişi/grup vurgulanmak istenirse 'for + nesne' eklenir."
+    },
+    "exercises": [
+      {
+        "id": "u14l46ex1",
+        "title": "Alıştırma 1: Yapısal özne mastar öbekleri",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l46_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Beşeri Bilimler"
+            ],
+            "pairs": [
+              {
+                "left": "it is essential for analysts to isolate cognitive processes",
+                "right": "analistlerin bilişsel süreçleri izole etmesi esastır"
+              },
+              {
+                "left": "it was difficult for scholars to verify historical records",
+                "right": "bilginlerin tarihsel kayıtları doğrulaması zordu"
+              },
+              {
+                "left": "it is vital for governments to maintain financial stability",
+                "right": "hükümetlerin finansal istikrarı koruması hayati önem taşır"
+              },
+              {
+                "left": "it is crucial for journalists to analyze media coverage",
+                "right": "gazetecilerin medya haberlerini analiz etmesi kritik önemdedir"
+              }
+            ]
+          },
+          {
+            "id": "u14l46_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Psikoloji"
+            ],
+            "sentence": "It is essential for psychologists [to examine] emotional reactions in therapy sessions.",
+            "options": [
+              "to be examined",
+              "to have examined",
+              "to have been examined",
+              "to examine"
+            ],
+            "correctIndex": 3,
+            "translation": "Psikologların terapi seanslarındaki duygusal tepkileri incelemesi esastır.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q3",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sanat Tarihi"
+            ],
+            "words": [
+              "Sanat tarihçilerinin,",
+              "antik tapınakların mimari yapılarını",
+              "restore etmesi",
+              "zordu."
+            ],
+            "correctOrder": [
+              "Sanat tarihçilerinin,",
+              "antik tapınakların mimari yapılarını",
+              "restore etmesi",
+              "zordu."
+            ],
+            "translation": "Sanat tarihçilerinin, antik tapınakların mimari yapılarını restore etmesi zordu.",
+            "enSentence": "It was difficult for art historians to restore architectural structures of ancient temples."
+          },
+          {
+            "id": "u14l46_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Hukuk"
+            ],
+            "sentence": "It is crucial for judges _______ legal frameworks in court cases.",
+            "options": [
+              "to be interpreted",
+              "to have interpreted",
+              "to interpret",
+              "to have been interpreted"
+            ],
+            "correctIndex": 2,
+            "translation": "Yargıçların dava dosyalarındaki yasal çerçeveleri yorumlaması kritik önemdedir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İktisat"
+            ],
+            "sentence": "It is vital for economists [to monitor] market fluctuations during inflation periods.",
+            "options": [
+              "to be monitored",
+              "to monitor",
+              "to have monitored",
+              "to have been monitored"
+            ],
+            "correctIndex": 1,
+            "translation": "İktisatçıların enflasyon dönemlerinde piyasa dalgalanmalarını izlemesi hayati önem taşır.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q6",
+            "type": "translation-text",
+            "prompt": "\"It will be necessary for geographers to map urban development zones accurately.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Coğrafya"
+            ],
+            "correctSentence": "Coğrafyacıların kentsel gelişim bölgelerini doğru haritalandırması gerekli olacaktır.",
+            "enSentence": "It will be necessary for geographers to map urban development zones accurately.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l46_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sinema"
+            ],
+            "sentence": "It was impossible for film archivists _______ nitrate film reels without refrigeration.",
+            "options": [
+              "to preserve",
+              "to be preserved",
+              "to have preserved",
+              "to have been preserved"
+            ],
+            "correctIndex": 0,
+            "translation": "Film arşivcilerinin nitrat film makaralarını soğutma olmadan koruması imkansızdı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Antropoloji"
+            ],
+            "sentence": "It is important for anthropologists [to respect] cultural rituals of indigenous tribes.",
+            "options": [
+              "to be respected",
+              "to have respected",
+              "to have been respected",
+              "to respect"
+            ],
+            "correctIndex": 3,
+            "translation": "Antropologların yerli kabilelerin kültürel ritüellerine saygı göstermesi önemlidir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q9",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İletişim"
+            ],
+            "words": [
+              "Medya analistlerinin,",
+              "gazete manşetlerindeki yanlılığı",
+              "tespit etmesi",
+              "kolaydır."
+            ],
+            "correctOrder": [
+              "Medya analistlerinin,",
+              "gazete manşetlerindeki yanlılığı",
+              "tespit etmesi",
+              "kolaydır."
+            ],
+            "translation": "Medya analistlerinin, gazete manşetlerindeki yanlılığı tespit etmesi kolaydır.",
+            "enSentence": "It is easy for media analysts to detect bias in newspaper headlines."
+          },
+          {
+            "id": "u14l46_ex1_q10",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Tarih"
+            ],
+            "sentence": "It was rare for ancient historians _______ royal decrees of emperors.",
+            "options": [
+              "to be questioned",
+              "to have questioned",
+              "to question",
+              "to have been questioned"
+            ],
+            "correctIndex": 2,
+            "translation": "Antik tarihçilerin imparatorların kraliyet fermanlarını sorgulaması nadirdir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex1_q11",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sosyoloji"
+            ],
+            "pairs": [
+              {
+                "left": "it is necessary for sociologists to observe demographic shifts",
+                "right": "sosyologların demografik değişimleri gözlemlemesi gereklidir"
+              },
+              {
+                "left": "it was impossible for parliament to pass civil liberties laws",
+                "right": "parlamentonun sivil özgürlük yasalarını geçirmesi imkansızdı"
+              },
+              {
+                "left": "it is important for historians to preserve cultural heritage",
+                "right": "tarihçilerin kültürel mirası koruması önemlidir"
+              },
+              {
+                "left": "it is easy for researchers to collect empirical data",
+                "right": "araştırmacıların ampirik veri toplaması kolaydır"
+              }
+            ]
+          },
+          {
+            "id": "u14l46_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"It is customary for sociologists to conduct surveys in local communities.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Sosyologların yerel topluluklarda anketler yürütmesi adettendir.",
+            "enSentence": "It is customary for sociologists to conduct surveys in local communities.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l46ex2",
+        "title": "Alıştırma 2: Özne mastar cümle yapıları",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l46_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "\"It is vital for research teams to collect empirical data during sociological experiments.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Ampirik veri toplayan araştırma ekiplerinin sosyolojik deneyleri hayati önem taşır.",
+              "Araştırma ekiplerinin sosyolojik deneyler sırasında ampirik veri toplaması hayati önem taşır.",
+              "Sosyolojik deneyler sırasında ampirik verilerce toplanan araştırma ekipleri hayati önemdedir.",
+              "Araştırma ekiplerince sosyolojik deneylerin toplanması ampirik veriler için vital bir durumdur."
+            ],
+            "correctIndex": 1,
+            "enSentence": "It is vital for research teams to collect empirical data during sociological experiments.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İktisat"
+            ],
+            "sentence": "It is necessary for economists [to monitor] market fluctuations before implementing financial policies.",
+            "options": [
+              "to monitor",
+              "to be monitored",
+              "to have monitored",
+              "to have been monitored"
+            ],
+            "correctIndex": 0,
+            "translation": "İktisatçıların finansal politikaları uygulamadan önce piyasa dalgalanmalarını izlemesi gereklidir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"It is essential for constitutional courts to defend civil liberties against arbitrary laws.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Hukuk"
+            ],
+            "options": [
+              "Sivil özgürlükleri savunan anayasa mahkemelerinin keyfi yasalara karşı durması esastır.",
+              "Keyfi yasalara karşı savunulan sivil özgürlüklerin anayasa mahkemesini kurması esastır.",
+              "Anayasa mahkemelerince keyfi yasaların savunulması sivil özgürlükler açısından esastır.",
+              "Anayasa mahkemelerinin keyfi yasalara karşı sivil özgürlükleri savunması esastır."
+            ],
+            "correctIndex": 3,
+            "enSentence": "It is essential for constitutional courts to defend civil liberties against arbitrary laws.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Hukuk"
+            ],
+            "words": [
+              "Parlamentonun",
+              "uzlaşı olmadan",
+              "yeni yasal çerçeveyi",
+              "geçirmesi",
+              "imkansızdı."
+            ],
+            "correctOrder": [
+              "Parlamentonun",
+              "uzlaşı olmadan",
+              "yeni yasal çerçeveyi",
+              "geçirmesi",
+              "imkansızdı."
+            ],
+            "translation": "Parlamentonun uzlaşı olmadan yeni yasal çerçeveyi geçirmesi imkansızdı.",
+            "enSentence": "It was impossible for parliament to pass the new legal framework without consensus."
+          },
+          {
+            "id": "u14l46_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"It was difficult for economists to predict financial crisis during global inflation.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İktisat"
+            ],
+            "options": [
+              "Finansal krizi tahmin eden iktisatçıların küresel enflasyon yaratması zordu.",
+              "Küresel enflasyon sırasında tahmin edilen finansal krizlerin iktisatçıları zorlamasıdı.",
+              "İktisatçıların küresel enflasyon sırasında finansal krizi tahmin etmesi zordu.",
+              "Finansal kriz iktisatçılarca tahmin edildiğinde küresel enflasyonun zorlaşmasıydı."
+            ],
+            "correctIndex": 2,
+            "enSentence": "It was difficult for economists to predict financial crisis during global inflation.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Antropoloji"
+            ],
+            "sentence": "It is essential for archaeologists _______ historical artifacts with great care.",
+            "options": [
+              "to be handled",
+              "to handle",
+              "to have handled",
+              "to have been handled"
+            ],
+            "correctIndex": 1,
+            "translation": "Arkeologların tarihi eserlere büyük bir özenle yaklaşması esastır.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q7",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Tarih"
+            ],
+            "words": [
+              "Tarihçilerin",
+              "merkezi arşivlerdeki",
+              "tarihsel kayıtları",
+              "incelemesi",
+              "kritik önemdeydi."
+            ],
+            "correctOrder": [
+              "Tarihçilerin",
+              "merkezi arşivlerdeki",
+              "tarihsel kayıtları",
+              "incelemesi",
+              "kritik önemdeydi."
+            ],
+            "translation": "Tarihçilerin merkezi arşivlerdeki tarihsel kayıtları incelemesi kritik önemdeydi.",
+            "enSentence": "It was crucial for historians to examine historical records in central archives."
+          },
+          {
+            "id": "u14l46_ex2_q8",
+            "type": "translation-text",
+            "prompt": "\"It is important for psychologists to understand cognitive processes in stress management.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Psikoloji"
+            ],
+            "correctSentence": "Psikologların stres yönetiminde bilişsel süreçleri anlaması önemlidir.",
+            "enSentence": "It is important for psychologists to understand cognitive processes in stress management.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l46_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İletişim"
+            ],
+            "sentence": "It was difficult for journalists _______ unbiased media coverage during wartime.",
+            "options": [
+              "to provide",
+              "to be provided",
+              "to have provided",
+              "to have been provided"
+            ],
+            "correctIndex": 0,
+            "translation": "Gazetecilerin savaş zamanında tarafsız medya yayını sağlaması zordu.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q10",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Sosyoloji"
+            ],
+            "words": [
+              "Sosyologların",
+              "genişleyen kentsel alanlarda",
+              "demografik değişimleri",
+              "incelemesi",
+              "yaygındır."
+            ],
+            "correctOrder": [
+              "Sosyologların",
+              "genişleyen kentsel alanlarda",
+              "demografik değişimleri",
+              "incelemesi",
+              "yaygındır."
+            ],
+            "translation": "Sosyologların genişleyen kentsel alanlarda demografik değişimleri incelemesi yaygındır.",
+            "enSentence": "It is common for sociologists to study demographic shifts in expanding urban areas."
+          },
+          {
+            "id": "u14l46_ex2_q11",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Coğrafya"
+            ],
+            "sentence": "It will be crucial for urban planners [to protect] natural habitats in coastal zones.",
+            "options": [
+              "to be protected",
+              "to have protected",
+              "to have been protected",
+              "to protect"
+            ],
+            "correctIndex": 3,
+            "translation": "Şehir plancılarının kıyı bölgelerindeki doğal yaşam alanlarını koruması kritik önem taşıyacaktır.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"It is vital for research institutes to secure funding for scientific projects.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "İktisat"
+            ],
+            "correctSentence": "Araştırma enstitülerinin bilimsel projeler için finansman sağlaması hayati önem taşır.",
+            "enSentence": "It is vital for research institutes to secure funding for scientific projects.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l46ex3",
+        "title": "Alıştırma 3: Akademik çeviri ve spiralleşme",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l46_ex3_q1",
+            "type": "translation-text",
+            "prompt": "\"It will be necessary for sociologists to evaluate demographic shifts in developing urban areas.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Gelecek Zaman",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Sosyologların gelişmekte olan kentsel alanlardaki demografik değişimleri değerlendirmesi gerekli olacaktır.",
+            "enSentence": "It will be necessary for sociologists to evaluate demographic shifts in developing urban areas.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l46_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "İletişim"
+            ],
+            "sentence": "It was crucial for linguists studying dialectal variations [to record] spoken language samples.",
+            "options": [
+              "to be recorded",
+              "to have recorded",
+              "to record",
+              "to have been recorded"
+            ],
+            "correctIndex": 2,
+            "translation": "Diyalektsel varyasyonları inceleyen dilbilimcilerin konuşulan dil örneklerini kaydetmesi kritik önem taşıyordu.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"It is essential for courts reviewing constitutional appeals to guarantee civil liberties of all citizens.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Hukuk"
+            ],
+            "correctSentence": "Anayasal başvuruları inceleyen mahkemelerin tüm yurttaşların sivil özgürlüklerini garanti altına alması esastır.",
+            "enSentence": "It is essential for courts reviewing constitutional appeals to guarantee civil liberties of all citizens.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l46_ex3_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Antropoloji"
+            ],
+            "words": [
+              "Antik harabeleri kazan arkeologların",
+              "dijital araçlar olmadan",
+              "kayıp yazıtları kurtarması",
+              "imkansızdı."
+            ],
+            "correctOrder": [
+              "Antik harabeleri kazan arkeologların",
+              "dijital araçlar olmadan",
+              "kayıp yazıtları kurtarması",
+              "imkansızdı."
+            ],
+            "translation": "Antik harabeleri kazan arkeologların dijital araçlar olmadan kayıp yazıtları kurtarması imkansızdı.",
+            "enSentence": "It was impossible for archaeologists excavating ancient ruins to recover lost inscriptions without digital tools."
+          },
+          {
+            "id": "u14l46_ex3_q5",
+            "type": "translation-text",
+            "prompt": "\"It will be vital for economists analyzing market trends to stabilize economic growth rates.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "İktisat"
+            ],
+            "correctSentence": "Piyasa eğilimlerini analiz eden iktisatçıların ekonomik büyüme oranlarını dengelemesi hayati önem taşıyacaktır.",
+            "enSentence": "It will be vital for economists analyzing market trends to stabilize economic growth rates.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l46_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Psikoloji"
+            ],
+            "sentence": "It was difficult for psychologists researching cognitive stress [to isolate] emotional factors in clinical trials.",
+            "options": [
+              "to be isolated",
+              "to isolate",
+              "to have isolated",
+              "to have been isolated"
+            ],
+            "correctIndex": 1,
+            "translation": "Bilişsel stresi araştıran psikologların klinik deneylerde duygusal faktörleri izole etmesi zordu.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q7",
+            "type": "multiple-choice",
+            "prompt": "\"It is essential for scholars analyzing historical records to cross-examine primary sources.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Tarih"
+            ],
+            "options": [
+              "Tarihsel kayıtları analiz eden bilginlerin birincil kaynakları çapraz sorgulaması esastır.",
+              "Birincil kaynakları çapraz sorgulayan bilginlerin tarihsel kayıtları analiz etmesi esastır.",
+              "Tarihsel kayıtlarca analiz edilen birincil kaynakların bilginleri çapraz sorgulaması esastır.",
+              "Bilginlerin birincil kaynaklarca analiz edilmesi tarihsel kayıtları çapraz sorgulamak için esastır."
+            ],
+            "correctIndex": 0,
+            "enSentence": "It is essential for scholars analyzing historical records to cross-examine primary sources.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q8",
+            "type": "multiple-choice",
+            "prompt": "\"It was necessary for film directors restoring classic movies to preserve original audio tracks.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Sinema"
+            ],
+            "options": [
+              "Orijinal ses kayıtlarını koruyan film yönetmenlerinin klasik filmleri restore etmesi gerekliydi.",
+              "Klasik filmlerce restore edilen orijinal ses kayıtlarının film yönetmenlerini koruması gerekliydi.",
+              "Film yönetmenlerinin orijinal ses kayıtlarınca restore edilmesi klasik filmleri korumak içindi.",
+              "Klasik filmleri restore eden film yönetmenlerinin orijinal ses kayıtlarını koruması gerekliydi."
+            ],
+            "correctIndex": 3,
+            "enSentence": "It was necessary for film directors restoring classic movies to preserve original audio tracks.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q9",
+            "type": "multiple-choice",
+            "prompt": "\"It will be crucial for geographers studying coastal erosion to map land boundaries accurately.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Coğrafya"
+            ],
+            "options": [
+              "Kara sınırlarını doğru haritalandıran coğrafyacıların kıyı erozyonunu incelemesi kritik önem taşıyacaktır.",
+              "Kıyı erozyonunca incelenen kara sınırlarının coğrafyacıları haritalandırması kritik önem taşıyacaktır.",
+              "Kıyı erozyonunu inceleyen coğrafyacıların kara sınırlarını doğru haritalandırması kritik önem taşıyacaktır.",
+              "Coğrafyacıların kara sınırlarınca doğru haritalandırılması kıyı erozyonunu incelemek için kritiktir."
+            ],
+            "correctIndex": 2,
+            "enSentence": "It will be crucial for geographers studying coastal erosion to map land boundaries accurately.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q10",
+            "type": "multiple-choice",
+            "prompt": "\"It is customary for art historians curating museum exhibits to write detailed descriptive guides.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Sanat Tarihi"
+            ],
+            "options": [
+              "Ayrıntılı betimleyici kılavuzlar yazan sanat tarihçilerinin müze sergilerini düzenlemesi adettendir.",
+              "Müze sergilerini düzenleyen sanat tarihçilerinin ayrıntılı betimleyici kılavuzlar yazması adettendir.",
+              "Müze sergilerince düzenlenen ayrıntılı betimleyici kılavuzların sanat tarihçilerini yazması adettendir.",
+              "Sanat tarihçilerinin betimleyici kılavuzlarca yazılması müze sergilerini düzenlemek için adettendir."
+            ],
+            "correctIndex": 1,
+            "enSentence": "It is customary for art historians curating museum exhibits to write detailed descriptive guides.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q11",
+            "type": "multiple-choice",
+            "prompt": "\"It is vital for parliament reviewing democratic institutions to protect human rights codes.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Demokratik kurumları gözden geçiren parlamentonun insan hakları kurallarını koruması hayati önem taşır.",
+              "İnsan hakları kurallarını koruyan parlamentonun demokratik kurumları gözden geçirmesi hayati önem taşır.",
+              "Demokratik kurumlarca gözden geçirilen insan hakları kurallarının parlamentoyu koruması hayati önemdedir.",
+              "Parlamentonun insan hakları kurallarınca korunması demokratik kurumları gözden geçirmek içindir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "It is vital for parliament reviewing democratic institutions to protect human rights codes.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l46_ex3_q12",
+            "type": "multiple-choice",
+            "prompt": "\"It was urgent for journalists investigating media coverage to expose censorship practices.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Strüktürel Özne Mastarı",
+              "Participle Yapıları",
+              "İletişim"
+            ],
+            "options": [
+              "Sansür uygulamalarını ifşa eden gazetecilerin medya yayınlarını araştırması acildi.",
+              "Medya yayınlarınca araştırılan sansür uygulamalarının gazetecileri ifşa etmesi acildi.",
+              "Gazetecilerin sansür uygulamalarınca ifşa edilmesi medya yayınlarını araştırmak için acildi.",
+              "Medya yayınlarını araştıran gazetecilerin sansür uygulamalarını ifşa etmesi acildi."
+            ],
+            "correctIndex": 3,
+            "enSentence": "It was urgent for journalists investigating media coverage to expose censorship practices.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "title": "3. Amaç Mastarları (to / in order to / so as to + V1)",
+    "subtitle": "Eylemlerin yapılma amacını bildiren zarfsal mastar yapıları",
+    "konuAnlatimi": {
+      "baslik": "Amaç Mastarları Kılavuzu (to, in order to, so as to)",
+      "teorikMantik": "Bir eylemin hangi amaca yönelik gerçekleştirildiğini açıklamak için 'to V1', 'in order to V1' veya 'so as to V1' (amacıyla / -mek için) kalıpları kullanılır.",
+      "formul": "Özne + Fiil + Nesne + (to / in order to / so as to) + V1 + Tamlama",
+      "altinKural": "• Niyet Vurgusu: 'in order to' ve 'so as to' akademide 'to' yapısına kıyasla daha vurgulu ve resmidir.<br>• Olumsuz Biçim: 'in order not to' veya 'so as not to' şeklinde kurulur."
+    },
+    "exercises": [
+      {
+        "id": "u14l47ex1",
+        "title": "Alıştırma 1: Amaç mastarı öbeği pratikleri",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l47_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Beşeri Bilimler"
+            ],
+            "pairs": [
+              {
+                "left": "in order to protect civil liberties",
+                "right": "sivil özgürlükleri korumak amacıyla"
+              },
+              {
+                "left": "so as to stimulate economic growth",
+                "right": "ekonomik büyümeyi teşvik etmek için"
+              },
+              {
+                "left": "to preserve cultural heritage",
+                "right": "kültürel mirası korumak için"
+              },
+              {
+                "left": "in order to reduce psychological stress",
+                "right": "psikolojik stresi azaltmak amacıyla"
+              }
+            ]
+          },
+          {
+            "id": "u14l47_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Hukuk"
+            ],
+            "sentence": "Parliaments enact strict regulations [in order to] prevent corruption in public institutions.",
+            "options": [
+              "because",
+              "although",
+              "in order to",
+              "despite"
+            ],
+            "correctIndex": 2,
+            "translation": "Parlamentolar kamu kurumlarındaki yolsuzluğu önlemek amacıyla sıkı düzenlemeler çıkarır.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q3",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İktisat"
+            ],
+            "words": [
+              "Merkez bankaları,",
+              "enflasyonu kontrol etmek için",
+              "faiz oranlarını",
+              "ayarlar."
+            ],
+            "correctOrder": [
+              "Merkez bankaları,",
+              "enflasyonu kontrol etmek için",
+              "faiz oranlarını",
+              "ayarlar.",
+              "ancak",
+              "çünkü"
+            ],
+            "translation": "Merkez bankaları, enflasyonu kontrol etmek için faiz oranlarını ayarlar.",
+            "enSentence": "Central banks adjust interest rates so as to control inflation."
+          },
+          {
+            "id": "u14l47_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Antropoloji"
+            ],
+            "sentence": "Archaeologists excavated ancient ruins _______ discover intact pottery from the Bronze Age.",
+            "options": [
+              "due to",
+              "to",
+              "whereas",
+              "such as"
+            ],
+            "correctIndex": 1,
+            "translation": "Arkeologlar Bronz Çağı'na ait el değmemiş çömlekleri keşfetmek için antik harabeleri kazdı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Psikoloji"
+            ],
+            "sentence": "Therapists apply cognitive methods [in order to] alleviate anxiety among patients.",
+            "options": [
+              "in order to",
+              "owing to",
+              "in spite of",
+              "provided that"
+            ],
+            "correctIndex": 0,
+            "translation": "Terapistler hastalar arasındaki kaygıyı hafifletmek amacıyla bilişsel yöntemler uygular.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q6",
+            "type": "multiple-choice",
+            "prompt": "\"Directors use lighting techniques so as to create suspense in horror movies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sinema"
+            ],
+            "options": [
+              "Korku filmlerinde gerilim yaratan yönetmenler ışıklandırma tekniklerince kullanılır.",
+              "Işıklandırma tekniklerini gerilim yaratmak amacıyla kullanan yönetmenler korku filmlerindedir.",
+              "Gerilim yaratmak için yönetmenlerin kullanılması korku filmlerindeki ışıklandırma tekniğidir.",
+              "Yönetmenler korku filmlerinde gerilim yaratmak için ışıklandırma teknikleri kullanır."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Directors use lighting techniques so as to create suspense in horror movies.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sanat Tarihi"
+            ],
+            "sentence": "Museums install climate controls _______ preserve ancient oil paintings.",
+            "options": [
+              "despite",
+              "while",
+              "to",
+              "as if"
+            ],
+            "correctIndex": 2,
+            "translation": "Müzeler antik yağlı boya tabloları korumak için iklim kontrol sistemleri kurar.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İletişim"
+            ],
+            "sentence": "Journalists verify primary sources [in order to] avoid publishing false news.",
+            "options": [
+              "since",
+              "in order to",
+              "though",
+              "nonetheless"
+            ],
+            "correctIndex": 1,
+            "translation": "Gazeteciler yanlış haber yayımlamaktan kaçınmak amacıyla birincil kaynakları doğrular.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q9",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Coğrafya"
+            ],
+            "words": [
+              "Şehir plancıları,",
+              "karbon emisyonlarını azaltmak için",
+              "yeşil kuşaklar",
+              "diker."
+            ],
+            "correctOrder": [
+              "Şehir plancıları,",
+              "karbon emisyonlarını azaltmak için",
+              "yeşil kuşaklar",
+              "diker.",
+              "nitekim",
+              "daha sonra"
+            ],
+            "translation": "Şehir plancıları, karbon emisyonlarını azaltmak için yeşil kuşaklar diker.",
+            "enSentence": "Urban planners plant green belts so as to reduce carbon emissions."
+          },
+          {
+            "id": "u14l47_ex1_q10",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Tarih"
+            ],
+            "sentence": "Historians digitize rare manuscripts _______ protect historical records from decay.",
+            "options": [
+              "to",
+              "despite",
+              "unless",
+              "in case"
+            ],
+            "correctIndex": 0,
+            "translation": "Tarihçiler tarihsel kayıtları çürümekten korumak için nadir elyazmalarını dijitalleştirir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex1_q11",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sosyoloji"
+            ],
+            "pairs": [
+              {
+                "left": "so as to observe demographic shifts",
+                "right": "demografik değişimleri gözlemlemek için"
+              },
+              {
+                "left": "in order to evaluate voting behavior",
+                "right": "oy verme davranışını değerlendirmek amacıyla"
+              },
+              {
+                "left": "to maintain financial stability",
+                "right": "finansal istikrarı korumak için"
+              },
+              {
+                "left": "in order to collect empirical data",
+                "right": "ampirik veri toplamak amacıyla"
+              }
+            ]
+          },
+          {
+            "id": "u14l47_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"Sociologists organize field interviews in order to study voting behavior patterns.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Sosyologlar oy verme davranışı kalıplarını incelemek amacıyla saha mülakatları düzenler.",
+            "enSentence": "Sociologists organize field interviews in order to study voting behavior patterns.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l47ex2",
+        "title": "Alıştırma 2: Cümle içi amaç bağlaçları",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l47_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "\"Central banks raised interest rates in order to curb mounting inflationary pressures.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İktisat"
+            ],
+            "options": [
+              "Tırmanan enflasyonist baskıları artıran merkez bankaları faiz oranlarını dizginlemek için kuruldu.",
+              "Faiz oranlarını dizginlemek amacıyla merkez bankaları tırmanan enflasyonist baskıları artırdı.",
+              "Merkez bankalarının faiz oranlarınca artırılması enflasyonist baskıları dizginlemek içindir.",
+              "Merkez bankaları tırmanan enflasyonist baskıları dizginlemek amacıyla faiz oranlarını artırdı."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Central banks raised interest rates in order to curb mounting inflationary pressures.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İktisat"
+            ],
+            "sentence": "Economists revised tax laws [in order to] stimulate economic growth in underdeveloped regions.",
+            "options": [
+              "because of",
+              "despite",
+              "in order to",
+              "unless"
+            ],
+            "correctIndex": 2,
+            "translation": "İktisatçılar az gelişmiş bölgelerde ekonomik büyümeyi teşvik etmek amacıyla vergi yasalarını revize etti.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"Parliament enacted landmark legislation so as to defend freedom of expression.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Hukuk"
+            ],
+            "options": [
+              "İfade özgürlüğünü mevzuat haline getiren parlamento dönüm noktası niteliğinde savunuldu.",
+              "Parlamento ifade özgürlüğünü savunmak için dönüm noktası niteliğinde mevzuat çıkardı.",
+              "Dönüm noktası niteliğindeki mevzuatı savunmak amacıyla ifade özgürlüğü parlamentoyu çıkardı.",
+              "Parlamentonun mevzuatça savunulması ifade özgürlüğünün dönüm noktası niteliğindedir."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Parliament enacted landmark legislation so as to defend freedom of expression.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Tarih"
+            ],
+            "words": [
+              "Arkeologlar,",
+              "medeniyetin antik eserlerini",
+              "ortaya çıkarmak amacıyla",
+              "kazılar",
+              "yürüttü."
+            ],
+            "correctOrder": [
+              "Arkeologlar,",
+              "medeniyetin antik eserlerini",
+              "ortaya çıkarmak amacıyla",
+              "kazılar",
+              "yürüttü.",
+              "ancak",
+              "oysa"
+            ],
+            "translation": "Arkeologlar, medeniyetin antik eserlerini ortaya çıkarmak amacıyla kazılar yürüttü.",
+            "enSentence": "Archaeologists conducted excavations in order to unearth ancient artifacts of the civilization."
+          },
+          {
+            "id": "u14l47_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Clinicians applied cognitive interventions in order to alleviate trauma symptoms.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Psikoloji"
+            ],
+            "options": [
+              "Klinisyenler travma belirtilerini hafifletmek amacıyla bilişsel müdahaleler uyguladı.",
+              "Travma belirtilerini uygulayan klinisyenler bilişsel müdahaleleri hafifletmek için kuruldu.",
+              "Bilişsel müdahaleleri hafifletmek amacıyla travma belirtileri klinisyenleri uyguladı.",
+              "Klinisyenlerin bilişsel müdahalelerce uygulanması travma belirtilerini hafifletmek içindi."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Clinicians applied cognitive interventions in order to alleviate trauma symptoms.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sinema"
+            ],
+            "sentence": "Film directors adjusted camera angles [so as to] enhance cinematic aesthetics in movies.",
+            "options": [
+              "owing to",
+              "even if",
+              "such as",
+              "so as to"
+            ],
+            "correctIndex": 3,
+            "translation": "Film yönetmenleri filmlerdeki sinematik estetiği artırmak için kamera açılarını ayarladı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q7",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sosyoloji"
+            ],
+            "words": [
+              "Sosyologlar,",
+              "toplumdaki demografik değişimleri",
+              "vurgulamak için",
+              "araştırma raporları",
+              "yayımladı."
+            ],
+            "correctOrder": [
+              "Sosyologlar,",
+              "toplumdaki demografik değişimleri",
+              "vurgulamak için",
+              "araştırma raporları",
+              "yayımladı.",
+              "buna karşın",
+              "böylelikle"
+            ],
+            "translation": "Sosyologlar, toplumdaki demografik değişimleri vurgulamak için araştırma raporları yayımladı.",
+            "enSentence": "Sociologists published research reports so as to highlight demographic shifts in society."
+          },
+          {
+            "id": "u14l47_ex2_q8",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Tarih"
+            ],
+            "sentence": "Historians archived ancient decrees _______ safeguard historical records against damage.",
+            "options": [
+              "due to",
+              "whereas",
+              "to",
+              "although"
+            ],
+            "correctIndex": 2,
+            "translation": "Tarihçiler tarihsel kayıtları hasara karşı korumak için antik fermanları arşivledi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q9",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Sanat Tarihi"
+            ],
+            "words": [
+              "Küratörler,",
+              "mimari yapıları korumak amacıyla",
+              "tarihi binaları",
+              "restore",
+              "etti."
+            ],
+            "correctOrder": [
+              "Küratörler,",
+              "mimari yapıları korumak amacıyla",
+              "tarihi binaları",
+              "restore",
+              "etti.",
+              "daha sonra",
+              "bununla birlikte"
+            ],
+            "translation": "Küratörler, mimari yapıları korumak amacıyla tarihi binaları restore etti.",
+            "enSentence": "Curators restored historical buildings in order to preserve architectural structures."
+          },
+          {
+            "id": "u14l47_ex2_q10",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Hukuk"
+            ],
+            "sentence": "Judges consulted legal scholars [in order to] clarify complex judicial decisions.",
+            "options": [
+              "in spite of",
+              "in order to",
+              "provided that",
+              "as if"
+            ],
+            "correctIndex": 1,
+            "translation": "Yargıçlar karmaşık yargı kararlarını açıklığa kavuşturmak amacıyla hukuk bilginlerine danıştı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex2_q11",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İletişim"
+            ],
+            "words": [
+              "Medya ajansları,",
+              "seçimlerin medya yayınını geliştirmek için",
+              "haber politikalarını",
+              "güncelledi."
+            ],
+            "correctOrder": [
+              "Medya ajansları,",
+              "seçimlerin medya yayınını geliştirmek için",
+              "haber politikalarını",
+              "güncelledi.",
+              "örneğin",
+              "aksi takdirde"
+            ],
+            "translation": "Medya ajansları, seçimlerin medya yayınını geliştirmek için haber politikalarını güncelledi.",
+            "enSentence": "Media agencies updated news policies so as to improve media coverage of elections."
+          },
+          {
+            "id": "u14l47_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"Geographers collected satellite images in order to map urban development zones.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Coğrafya"
+            ],
+            "correctSentence": "Coğrafyacılar kentsel gelişim bölgelerini haritalandırmak amacıyla uydu görüntüleri topladı.",
+            "enSentence": "Geographers collected satellite images in order to map urban development zones.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l47ex3",
+        "title": "Alıştırma 3: Karma akademik metinler",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l47_ex3_q1",
+            "type": "translation-text",
+            "prompt": "\"Media outlets launched public campaigns in order to raise awareness about democratic rights.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "İletişim"
+            ],
+            "correctSentence": "Medya kuruluşları demokratik haklar konusunda farkındalığı artırmak amacıyla kamuoyu kampanyaları başlattı.",
+            "enSentence": "Media outlets launched public campaigns in order to raise awareness about democratic rights.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l47_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "sentence": "Scholars analyzing voting behavior gathered empirical data [so as to] evaluate election outcomes.",
+            "options": [
+              "so as to",
+              "because of",
+              "whereas",
+              "although"
+            ],
+            "correctIndex": 0,
+            "translation": "Oy verme davranışını analiz eden bilginler seçim sonuçlarını değerlendirmek için ampirik veri topladı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"Anthropologists excavating ancient ruins used carbon dating to determine the exact age of artifacts.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Antropoloji"
+            ],
+            "correctSentence": "Antik harabeleri kazan antropologlar, eserlerin kesin yaşını belirlemek için karbon tarihleme yöntemini kullandı.",
+            "enSentence": "Anthropologists excavating ancient ruins used carbon dating to determine the exact age of artifacts.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l47_ex3_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "İktisat"
+            ],
+            "words": [
+              "Finansal reformları yürürlüğe koyan hükümetler,",
+              "finansal istikrarı korumak amacıyla",
+              "faiz oranlarını",
+              "ayarladı."
+            ],
+            "correctOrder": [
+              "Finansal reformları yürürlüğe koyan hükümetler,",
+              "finansal istikrarı korumak amacıyla",
+              "faiz oranlarını",
+              "ayarladı.",
+              "bunun yanı sıra",
+              "nitekim"
+            ],
+            "translation": "Finansal reformları yürürlüğe koyan hükümetler, finansal istikrarı korumak amacıyla faiz oranlarını ayarladı.",
+            "enSentence": "Governments introducing financial reforms adjusted interest rates in order to maintain financial stability."
+          },
+          {
+            "id": "u14l47_ex3_q5",
+            "type": "translation-text",
+            "prompt": "\"Judges evaluating legal frameworks modified court rules so as to defend civil liberties.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Hukuk"
+            ],
+            "correctSentence": "Yasal çerçeveleri değerlendiren yargıçlar, sivil özgürlükleri savunmak için mahkeme kurallarını değiştirdi.",
+            "enSentence": "Judges evaluating legal frameworks modified court rules so as to defend civil liberties.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l47_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun amaç bağlacını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Psikoloji"
+            ],
+            "sentence": "Psychologists studying cognitive processes conducted therapy sessions [to] lower psychological stress.",
+            "options": [
+              "in spite of",
+              "provided that",
+              "as if",
+              "to"
+            ],
+            "correctIndex": 3,
+            "translation": "Bilişsel süreçleri inceleyen psikologlar psikolojik stresi düşürmek için terapi seansları yürüttü.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q7",
+            "type": "multiple-choice",
+            "prompt": "\"Film directors analyzing cinema history incorporated classical motifs in order to enrich visual storytelling.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Sinema"
+            ],
+            "options": [
+              "Klasik motifleri analiz eden film yönetmenleri, görsel anlatımı zenginleştirmek amacıyla sinema tarihini ekledi.",
+              "Görsel anlatımı zenginleştiren klasik motifler, sinema tarihini eklemek amacıyla film yönetmenlerince analiz edildi.",
+              "Sinema tarihini analiz eden film yönetmenleri, görsel anlatımı zenginleştirmek amacıyla klasik motifler ekledi.",
+              "Sinema tarihince zenginleştirilen görsel anlatım, klasik motifleri ekleyen film yönetmenlerini analiz etmek içindi."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Film directors analyzing cinema history incorporated classical motifs in order to enrich visual storytelling.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q8",
+            "type": "multiple-choice",
+            "prompt": "\"Curators restoring architectural structures used traditional materials so as to preserve cultural heritage.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Sanat Tarihi"
+            ],
+            "options": [
+              "Geleneksel malzemeleri restore eden küratörler, mimari yapıları korumak için kültürel mirası kullandı.",
+              "Mimari yapıları restore eden küratörler, kültürel mirası korumak için geleneksel malzemeler kullandı.",
+              "Kültürel mirası koruyan geleneksel malzemeler, mimari yapıları restore etmek amacıyla küratörlerce kullanıldı.",
+              "Mimari yapılardan korunan kültürel miras, geleneksel malzemeleri kullanmak amacıyla küratörleri restore etti."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Curators restoring architectural structures used traditional materials so as to preserve cultural heritage.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q9",
+            "type": "multiple-choice",
+            "prompt": "\"Geographers mapping urban development tracked demographic shifts in order to plan infrastructure projects.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Coğrafya"
+            ],
+            "options": [
+              "Kentsel gelişimi haritalandıran coğrafyacılar, altyapı projelerini planlamak amacıyla demografik değişimleri takip etti.",
+              "Demografik değişimleri haritalandıran coğrafyacılar, kentsel gelişimi planlamak amacıyla altyapı projelerini takip etti.",
+              "Altyapı projelerini planlayan demografik değişimler, kentsel gelişimi haritalandırmak amacıyla coğrafyacılarca takip edildi.",
+              "Kentsel gelişimce takip edilen altyapı projeleri, demografik değişimleri haritalandırmak için coğrafyacıları planladı."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Geographers mapping urban development tracked demographic shifts in order to plan infrastructure projects.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q10",
+            "type": "multiple-choice",
+            "prompt": "\"Journalists analyzing media coverage interviewed political figures so as to verify news sources.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "İletişim"
+            ],
+            "options": [
+              "Siyasi figürleri analiz eden gazeteciler, medya yayınlarını doğrulamak için haber kaynaklarıyla mülakat yaptı.",
+              "Haber kaynaklarını doğrulayan siyasi figürler, medya yayınlarıyla mülakat yapmak amacıyla gazetecilerce analiz edildi.",
+              "Medya yayınlarınca doğrulanan haber kaynakları, siyasi figürlerle mülakat yapmak için gazetecileri analiz etti.",
+              "Medya yayınlarını analiz eden gazeteciler, haber kaynaklarını doğrulamak için siyasi figürlerle mülakat yaptı."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Journalists analyzing media coverage interviewed political figures so as to verify news sources.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q11",
+            "type": "multiple-choice",
+            "prompt": "\"Historians documenting archival records translated Latin texts in order to illuminate medieval conflicts.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Tarih"
+            ],
+            "options": [
+              "Orta çağ çatışmalarını belgeleyen tarihçiler, arşiv kayıtlarını aydınlatmak amacıyla Latince metinleri çevirdi.",
+              "Latince metinleri aydınlatan orta çağ çatışmaları, arşiv kayıtlarını çevirmek amacıyla tarihçilerce belgelendi.",
+              "Arşiv kayıtlarını belgeleyen tarihçiler, orta çağ çatışmalarını aydınlatmak amacıyla Latince metinleri çevirdi.",
+              "Arşiv kayıtlarınca çevrilen Latince metinler, orta çağ çatışmalarını belgelemek için tarihçileri aydınlattı."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Historians documenting archival records translated Latin texts in order to illuminate medieval conflicts.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l47_ex3_q12",
+            "type": "multiple-choice",
+            "prompt": "\"Sociologists researching democratic institutions conducted regional surveys so as to measure public trust.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Amaç Mastarı",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Bölgesel anketleri araştıran sosyologlar, demokratik kurumları ölçmek için kamu güveni yürüttü.",
+              "Demokratik kurumları araştıran sosyologlar, kamu güvenini ölçmek için bölgesel anketler yürüttü.",
+              "Kamu güvenini ölçen bölgesel anketler, demokratik kurumları araştırmak amacıyla sosyologlarca yürütüldü.",
+              "Demokratik kurumlarca yürütülen kamu güveni, bölgesel anketleri ölçmek için sosyologları araştırdı."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Sociologists researching democratic institutions conducted regional surveys so as to measure public trust.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "title": "4. Soru Kelimeli Mastar Kısaltmaları (Wh- Word + to V1)",
+    "subtitle": "İsim cümleciklerinin (Noun Clause) soru kelimeli mastar kısaltmaları",
+    "konuAnlatimi": {
+      "baslik": "Soru Kelimeli Mastar Kısaltmaları Kılavuzu (how to, what to, where to, which to)",
+      "teorikMantik": "Soru kelimelerinden (what, how, where, when, which) sonra gelen 'to V1' yapısı, bir yöntemi, kararı veya nesneyi bildiren kısaltılmış isim cümleciği işlevi görür.",
+      "formul": "Özne + Fiil + (Wh- Soru Kelimesi + to V1) + Edat Öbeği",
+      "altinKural": "• Karar ve Yöntem Fiilleri: know, decide, learn, explain, understand, show, clarify<br>• Çeviri Refleksi: 'how to analyze' -> 'nasıl analiz edileceği / edilmesini', 'what to select' -> 'ne seçileceğini'"
+    },
+    "exercises": [
+      {
+        "id": "u14l48ex1",
+        "title": "Alıştırma 1: Soru kelimeli mastar öbekleri",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l48_ex1_q1",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Beşeri Bilimler"
+            ],
+            "pairs": [
+              {
+                "left": "how to analyze cognitive processes",
+                "right": "bilişsel süreçlerin nasıl analiz edileceği"
+              },
+              {
+                "left": "where to access historical records",
+                "right": "tarihsel kayıtlara nereden erişileceği"
+              },
+              {
+                "left": "which policies to implement in economics",
+                "right": "iktisatta hangi politikaların uygulanacağı"
+              },
+              {
+                "left": "what to observe during psychological stress",
+                "right": "psikolojik stres sırasında neyin gözlemleneceği"
+              }
+            ]
+          },
+          {
+            "id": "u14l48_ex1_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sinema"
+            ],
+            "sentence": "Film directors explain [how to interpret] narrative structures in modern cinema.",
+            "options": [
+              "how to interpret",
+              "how to be interpreted",
+              "how to have interpreted",
+              "how to have been interpreted"
+            ],
+            "correctIndex": 0,
+            "translation": "Film yönetmenleri modern sinemadaki anlatı yapılarının nasıl yorumlanacağını açıklıyor.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q3",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "İktisat"
+            ],
+            "words": [
+              "İktisatçılar,",
+              "finansal istikrar krizlerinde",
+              "hangi tedbirlerin alınacağına",
+              "karar verir."
+            ],
+            "correctOrder": [
+              "İktisatçılar,",
+              "finansal istikrar krizlerinde",
+              "hangi tedbirlerin alınacağına",
+              "karar verir.",
+              "oysa",
+              "sonra"
+            ],
+            "translation": "İktisatçılar, finansal istikrar krizlerinde hangi tedbirlerin alınacağına karar verir.",
+            "enSentence": "Economists decide which measures to take during financial stability crises."
+          },
+          {
+            "id": "u14l48_ex1_q4",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Antropoloji"
+            ],
+            "sentence": "Archaeologists demonstrate _______ ancient ruins without damaging artifacts.",
+            "options": [
+              "how to be excavated",
+              "how to have excavated",
+              "how to have been excavated",
+              "how to excavate"
+            ],
+            "correctIndex": 3,
+            "translation": "Arkeologlar eserlere zarar vermeden antik harabelerin nasıl kazılacağını gösterir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Tarih"
+            ],
+            "sentence": "Archivists show researchers [where to locate] historical records of medieval wars.",
+            "options": [
+              "where to be located",
+              "where to have located",
+              "where to locate",
+              "where to have been located"
+            ],
+            "correctIndex": 2,
+            "translation": "Arşivciler araştırmacılara orta çağ savaşlarının tarihsel kayıtlarının nerede bulunacağını gösterir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q6",
+            "type": "translation-text",
+            "prompt": "\"Sociologists clarify what to measure when evaluating voting behavior patterns.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Sosyologlar oy verme davranışı kalıplarını değerlendirirken neyin ölçüleceğini açıklığa kavuşturur.",
+            "enSentence": "Sociologists clarify what to measure when evaluating voting behavior patterns.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l48_ex1_q7",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Psikoloji"
+            ],
+            "sentence": "Psychologists teach patients _______ psychological stress in daily life.",
+            "options": [
+              "how to be managed",
+              "how to manage",
+              "how to have managed",
+              "how to have been managed"
+            ],
+            "correctIndex": 1,
+            "translation": "Psikologlar hastalara günlük yaşamda psikolojik stresin nasıl yönetileceğini öğretir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sanat Tarihi"
+            ],
+            "sentence": "Curators know [which architectural structures to restore] in historic districts.",
+            "options": [
+              "which architectural structures to restore",
+              "which architectural structures to be restored",
+              "which architectural structures to have restored",
+              "which architectural structures to have been restored"
+            ],
+            "correctIndex": 0,
+            "translation": "Küratörler tarihi bölgelerde hangi mimari yapıların restore edileceğini bilir.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q9",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "İletişim"
+            ],
+            "words": [
+              "Gazeteciler,",
+              "demokratik seçimlere ilişkin",
+              "son dakika haberlerinin",
+              "ne zaman yayımlanacağını",
+              "anlar."
+            ],
+            "correctOrder": [
+              "Gazeteciler,",
+              "demokratik seçimlere ilişkin",
+              "son dakika haberlerinin",
+              "ne zaman yayımlanacağını",
+              "anlar.",
+              "bununla birlikte",
+              "çünkü"
+            ],
+            "translation": "Gazeteciler, demokratik seçimlere ilişkin son dakika haberlerinin ne zaman yayımlanacağını anlar.",
+            "enSentence": "Journalists understand when to publish breaking news regarding democratic elections."
+          },
+          {
+            "id": "u14l48_ex1_q10",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Coğrafya"
+            ],
+            "sentence": "Geographers explain _______ demographic shifts in coastal zones.",
+            "options": [
+              "how to be mapped",
+              "how to have mapped",
+              "how to have been mapped",
+              "how to map"
+            ],
+            "correctIndex": 3,
+            "translation": "Coğrafyacılar kıyı bölgelerindeki demografik değişimlerin nasıl haritalandırılacağını açıklar.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex1_q11",
+            "type": "matching",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Hukuk"
+            ],
+            "pairs": [
+              {
+                "left": "how to interpret legal frameworks",
+                "right": "yasal çerçevelerin nasıl yorumlanacağı"
+              },
+              {
+                "left": "which decisions to modify in court",
+                "right": "mahkemede hangi kararların değiştirileceği"
+              },
+              {
+                "left": "where to file civil liberties petitions",
+                "right": "sivil özgürlük dilekçelerinin nereye verileceği"
+              },
+              {
+                "left": "when to apply constitutional rules",
+                "right": "anayasal kuralların ne zaman uygulanacağı"
+              }
+            ]
+          },
+          {
+            "id": "u14l48_ex1_q12",
+            "type": "translation-text",
+            "prompt": "\"Lawyers advise clients where to submit constitutional appeal files.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Hukuk"
+            ],
+            "correctSentence": "Avukatlar müvekkillere anayasal başvuru dosyalarının nereye teslim edileceğini tavsiye eder.",
+            "enSentence": "Lawyers advise clients where to submit constitutional appeal files.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l48ex2",
+        "title": "Alıştırma 2: Wh- + to V1 cümle kullanımı",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l48_ex2_q1",
+            "type": "multiple-choice",
+            "prompt": "\"Historians must decide which historical records to include in the archive.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Tarih"
+            ],
+            "options": [
+              "Arşive hangi tarihsel kayıtları dahil edeceğine karar veren tarihçilerin kendisidir.",
+              "Hangi tarihsel kayıtların arşive dahil edilmesi gerektiği tarihçilerce kararlaştırılır.",
+              "Tarihçiler arşive hangi tarihsel kayıtların dahil edileceğine karar vermelidir.",
+              "Tarihçilerin arşive karar vermesi hangi tarihsel kayıtların dahil edileceğindendir."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Historians must decide which historical records to include in the archive.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sosyoloji"
+            ],
+            "sentence": "Sociologists learned [how to measure] demographic shifts in urban areas.",
+            "options": [
+              "how to be measured",
+              "how to measure",
+              "how to have measured",
+              "how to have been measured"
+            ],
+            "correctIndex": 1,
+            "translation": "Sosyologlar kentsel alanlardaki demografik değişimlerin nasıl ölçüleceğini öğrendi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "\"Judges explain how to apply legal frameworks during constitutional trials.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Hukuk"
+            ],
+            "options": [
+              "Yargıçlar anayasal duruşmalar sırasında yasal çerçevelerin nasıl uygulanacağını açıklar.",
+              "Yasal çerçeveleri uygulayan yargıçlar anayasal duruşmaların nasıl açıklanacağını bildirir.",
+              "Anayasal duruşmalar sırasında uygulanan yasal çerçeveler yargıçların açıklamasıdır.",
+              "Yargıçların nasıl uygulanacağını açıklaması anayasal duruşmalardaki yasal çerçevelerdendir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Judges explain how to apply legal frameworks during constitutional trials.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Psikoloji"
+            ],
+            "words": [
+              "Psikologlar,",
+              "bilişsel testler sırasında",
+              "psikolojik stresin",
+              "nasıl kontrol edileceğini",
+              "gösterdi."
+            ],
+            "correctOrder": [
+              "Psikologlar,",
+              "bilişsel testler sırasında",
+              "psikolojik stresin",
+              "nasıl kontrol edileceğini",
+              "gösterdi.",
+              "nitekim",
+              "daha sonra"
+            ],
+            "translation": "Psikologlar, bilişsel testler sırasında psikolojik stresin nasıl kontrol edileceğini gösterdi.",
+            "enSentence": "Psychologists showed patients how to control psychological stress during cognitive tests."
+          },
+          {
+            "id": "u14l48_ex2_q5",
+            "type": "multiple-choice",
+            "prompt": "\"Economists analyze where to allocate financial investments in developing countries.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "İktisat"
+            ],
+            "options": [
+              "Finansal yatırımları tahsis eden iktisatçılar gelişmekte olan ülkelerin nereye analiz edileceğini araştırır.",
+              "Gelişmekte olan ülkelerde tahsis edilen finansal yatırımlar iktisatçıların analizidir.",
+              "İktisatçıların nereye tahsis edileceğini analiz etmesi gelişmekte olan ülkelerin finansal yatırımlarıdır.",
+              "İktisatçılar gelişmekte olan ülkelerde finansal yatırımların nereye tahsis edileceğini analiz eder."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Economists analyze where to allocate financial investments in developing countries.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q6",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Antropoloji"
+            ],
+            "sentence": "Archaeologists understood _______ ancient artifacts in excavation ruins.",
+            "options": [
+              "where to be located",
+              "where to have located",
+              "where to locate",
+              "where to have been located"
+            ],
+            "correctIndex": 2,
+            "translation": "Arkeologlar kazı harabelerinde antik eserlerin nereye yerleştirileceğini anladı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q7",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "İletişim"
+            ],
+            "words": [
+              "Medya analistleri,",
+              "seçim yayınları sırasında",
+              "neyin yayımlanacağını",
+              "gazetecilere",
+              "öğretti."
+            ],
+            "correctOrder": [
+              "Medya analistleri,",
+              "seçim yayınları sırasında",
+              "neyin yayımlanacağını",
+              "gazetecilere",
+              "öğretti.",
+              "oysa",
+              "sonra"
+            ],
+            "translation": "Medya analistleri, seçim yayınları sırasında neyin yayımlanacağını gazetecilere öğretti.",
+            "enSentence": "Media analysts taught journalists what to broadcast during election coverage."
+          },
+          {
+            "id": "u14l48_ex2_q8",
+            "type": "translation-text",
+            "prompt": "\"Art historians decided which architectural structures to restore in old cities.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sanat Tarihi"
+            ],
+            "correctSentence": "Sanat tarihçileri eski şehirlerde hangi mimari yapıların restore edileceğine karar verdi.",
+            "enSentence": "Art historians decided which architectural structures to restore in old cities.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l48_ex2_q9",
+            "type": "fill-blank",
+            "prompt": "Cümledeki boşluğa uygun mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sosyoloji"
+            ],
+            "sentence": "Researchers explained _______ empirical data from sociological surveys.",
+            "options": [
+              "how to be extracted",
+              "how to extract",
+              "how to have extracted",
+              "how to have been extracted"
+            ],
+            "correctIndex": 1,
+            "translation": "Araştırmacılar sosyolojik anketlerden ampirik verinin nasıl çıkarılacağını açıkladı.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q10",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Sinema"
+            ],
+            "words": [
+              "Film yönetmenleri,",
+              "sinema üretiminde",
+              "anlatı tekniklerinin",
+              "nasıl birleştirileceğini",
+              "sergiledi."
+            ],
+            "correctOrder": [
+              "Film yönetmenleri,",
+              "sinema üretiminde",
+              "anlatı tekniklerinin",
+              "nasıl birleştirileceğini",
+              "sergiledi.",
+              "bununla birlikte",
+              "çünkü"
+            ],
+            "translation": "Film yönetmenleri, sinema üretiminde anlatı tekniklerinin nasıl birleştirileceğini sergiledi.",
+            "enSentence": "Film directors demonstrated how to combine narrative techniques in cinema production."
+          },
+          {
+            "id": "u14l48_ex2_q11",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "İktisat"
+            ],
+            "sentence": "Economists clarified [how to maintain] financial stability during currency fluctuations.",
+            "options": [
+              "how to maintain",
+              "how to be maintained",
+              "how to have maintained",
+              "how to have been maintained"
+            ],
+            "correctIndex": 0,
+            "translation": "İktisatçılar para birimi dalgalanmaları sırasında finansal istikrarın nasıl korunacağını açıklığa kavuşturdu.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex2_q12",
+            "type": "translation-text",
+            "prompt": "\"Geographers mapped where to restrict urban development in protected coastal areas.\" cümlesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Coğrafya"
+            ],
+            "correctSentence": "Coğrafyacılar korunan kıyı alanlarında kentsel gelişimin nerede kısıtlanacağını haritalandırdı.",
+            "enSentence": "Geographers mapped where to restrict urban development in protected coastal areas.",
+            "isEngToTr": true
+          }
+        ]
+      },
+      {
+        "id": "u14l48ex3",
+        "title": "Alıştırma 3: Bölüm sonu genel değerlendirme",
+        "description": "",
+        "questions": [
+          {
+            "id": "u14l48_ex3_q1",
+            "type": "translation-text",
+            "prompt": "\"Legal experts studying judicial decisions explained where to file constitutional appeals.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Hukuk"
+            ],
+            "correctSentence": "Yargı kararlarını inceleyen hukuk uzmanları, anayasal başvuruların nereye yapılacağını açıkladı.",
+            "enSentence": "Legal experts studying judicial decisions explained where to file constitutional appeals.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l48_ex3_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Antropoloji"
+            ],
+            "sentence": "Anthropologists investigating ancient civilizations learned [how to preserve] cultural heritage artifacts.",
+            "options": [
+              "how to be preserved",
+              "how to have preserved",
+              "how to have been preserved",
+              "how to preserve"
+            ],
+            "correctIndex": 3,
+            "translation": "Antik uygarlıkları araştıran antropologlar kültürel miras eserlerinin nasıl korunacağını öğrendi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q3",
+            "type": "translation-text",
+            "prompt": "\"Economists studying market trends demonstrated how to maintain financial stability in developing nations.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "İktisat"
+            ],
+            "correctSentence": "Piyasa eğilimlerini inceleyen iktisatçılar, gelişmekte olan ülkelerde finansal istikrarın nasıl korunacağını gösterdi.",
+            "enSentence": "Economists studying market trends demonstrated how to maintain financial stability in developing nations.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l48_ex3_q4",
+            "type": "word-block",
+            "prompt": "Cümleyi oluşturmak için kelimeleri doğru sıraya dizin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Psikoloji"
+            ],
+            "words": [
+              "Bilişsel stresi gözlemleyen psikologlar,",
+              "hastalara psikolojik kaygının",
+              "nasıl yönetileceğini",
+              "öğretti."
+            ],
+            "correctOrder": [
+              "Bilişsel stresi gözlemleyen psikologlar,",
+              "hastalara psikolojik kaygının",
+              "nasıl yönetileceğini",
+              "öğretti.",
+              "nitekim",
+              "daha sonra"
+            ],
+            "translation": "Bilişsel stresi gözlemleyen psikologlar, hastalara psikolojik kaygının nasıl yönetileceğini öğretti.",
+            "enSentence": "Psychologists observing cognitive stress taught patients how to manage psychological anxiety."
+          },
+          {
+            "id": "u14l48_ex3_q5",
+            "type": "translation-text",
+            "prompt": "\"Sociologists measuring voting behavior explained how to interpret demographic shifts in general elections.\" ifadesini Türkçe'ye çevirin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "correctSentence": "Oy verme davranışını ölçen sosyologlar, genel seçimlerdeki demografik değişimlerin nasıl yorumlanacağını açıkladı.",
+            "enSentence": "Sociologists measuring voting behavior explained how to interpret demographic shifts in general elections.",
+            "isEngToTr": true
+          },
+          {
+            "id": "u14l48_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun soru kelimeli mastar yapısını seçin:",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Sanat Tarihi"
+            ],
+            "sentence": "Curators restoring architectural monuments decided [which historical ruins to protect] first.",
+            "options": [
+              "which historical ruins to be protected",
+              "which historical ruins to have protected",
+              "which historical ruins to protect",
+              "which historical ruins to have been protected"
+            ],
+            "correctIndex": 2,
+            "translation": "Mimari anıtları restore eden küratörler ilk olarak hangi tarihi harabelerin korunacağına karar verdi.",
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q7",
+            "type": "multiple-choice",
+            "prompt": "\"Film directors analyzing cinema classics demonstrated how to integrate sound effects in film production.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Sinema"
+            ],
+            "options": [
+              "Ses efektlerini analiz eden film yönetmenleri, sinema klasiklerinde film üretiminin nasıl entegre edileceğini sergiledi.",
+              "Sinema klasiklerini analiz eden film yönetmenleri, film üretiminde ses efektlerinin nasıl entegre edileceğini sergiledi.",
+              "Film üretiminde entegre edilen ses efektleri, sinema klasiklerini analiz eden film yönetmenlerini sergiledi.",
+              "Film yönetmenlerince sinema klasiklerinin entegre edilmesi ses efektlerini analiz etmek içindir."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Film directors analyzing cinema classics demonstrated how to integrate sound effects in film production.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q8",
+            "type": "multiple-choice",
+            "prompt": "\"Geographers studying urban development clarified where to establish green belts in coastal cities.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Coğrafya"
+            ],
+            "options": [
+              "Kentsel gelişimi inceleyen coğrafyacılar, kıyı şehirlerinde yeşil kuşakların nereye kurulacağını açıklığa kavuşturdu.",
+              "Kıyı şehirlerindeki yeşil kuşakları inceleyen coğrafyacılar, kentsel gelişimin nereye kurulacağını açıklığa kavuşturdu.",
+              "Kentsel gelişimce kurulan kıyı şehirleri, yeşil kuşakları inceleyen coğrafyacıları açıklığa kavuşturdu.",
+              "Coğrafyacıların kıyı şehirlerince kurulması yeşil kuşakları ve kentsel gelişimi incelemek içindir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Geographers studying urban development clarified where to establish green belts in coastal cities.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q9",
+            "type": "multiple-choice",
+            "prompt": "\"Journalists analyzing media coverage learned when to publish sensitive interview records.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "İletişim"
+            ],
+            "options": [
+              "Hassas mülakat kayıtlarını analiz eden gazeteciler, medya yayınlarının ne zaman yayımlanacağını öğrendi.",
+              "Ne zaman yayımlanacağını öğrenen medya yayınları, hassas mülakat kayıtlarını analiz eden gazetecilerdir.",
+              "Gazetecilerin medya yayınlarınca yayımlanması hassas mülakat kayıtlarını öğrenmek içindir.",
+              "Medya yayınlarını analiz eden gazeteciler, hassas mülakat kayıtlarının ne zaman yayımlanacağını öğrendi."
+            ],
+            "correctIndex": 3,
+            "enSentence": "Journalists analyzing media coverage learned when to publish sensitive interview records.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q10",
+            "type": "multiple-choice",
+            "prompt": "\"Historians documenting medieval decrees explained how to decipher royal seals on parchment.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Tarih"
+            ],
+            "options": [
+              "Parşömen üzerindeki kraliyet mühürlerini belgeleyen tarihçiler, orta çağ fermanlarının nasıl çözüleceğini açıkladı.",
+              "Orta çağ fermanlarınca açıklanan kraliyet mühürleri, parşömeni belgeleyen tarihçilerce çözüldü.",
+              "Orta çağ fermanlarını belgeleyen tarihçiler, parşömen üzerindeki kraliyet mühürlerinin nasıl çözüleceğini açıkladı.",
+              "Tarihçilerin parşömen üzerinde belgelenmesi orta çağ fermanlarını ve kraliyet mühürlerini açıklamak içindir."
+            ],
+            "correctIndex": 2,
+            "enSentence": "Historians documenting medieval decrees explained how to decipher royal seals on parchment.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q11",
+            "type": "multiple-choice",
+            "prompt": "\"Scholars researching civil liberties demonstrated how to draft constitutional proposals for parliament.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Hukuk"
+            ],
+            "options": [
+              "Parlamento için anayasal tasarıları araştıran bilginler, sivil özgürlüklerin nasıl hazırlanacağını gösterdi.",
+              "Sivil özgürlükleri araştıran bilginler, parlamento için anayasal tasarıların nasıl hazırlanacağını gösterdi.",
+              "Sivil özgürlüklerce hazırlanan anayasal tasarılar, parlamentoyu araştıran bilginleri gösterdi.",
+              "Bilginlerin parlamento için araştırılması sivil özgürlükleri ve anayasal tasarıları hazırlamak içindir."
+            ],
+            "correctIndex": 1,
+            "enSentence": "Scholars researching civil liberties demonstrated how to draft constitutional proposals for parliament.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          },
+          {
+            "id": "u14l48_ex3_q12",
+            "type": "multiple-choice",
+            "prompt": "\"Analysts evaluating empirical data showed how to isolate statistical anomalies in sociological studies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "grammarTags": [
+              "İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Soru Kelimeli Mastar Kısaltması",
+              "Participle Yapıları",
+              "Sosyoloji"
+            ],
+            "options": [
+              "Ampirik verileri değerlendiren analistler, sosyolojik çalışmalardaki istatistiksel anomalilerin nasıl izole edileceğini gösterdi.",
+              "Sosyolojik çalışmalardaki istatistiksel anomalileri değerlendiren analistler, ampirik verilerin nasıl izole edileceğini gösterdi.",
+              "Ampirik verilerce gösterilen istatistiksel anomaliler, sosyolojik çalışmaları değerlendiren analistlerce izole edildi.",
+              "Analistlerin ampirik verilerce izole edilmesi sosyolojik çalışmaları ve istatistiksel anomalileri göstermek içindir."
+            ],
+            "correctIndex": 0,
+            "enSentence": "Analysts evaluating empirical data showed how to isolate statistical anomalies in sociological studies.",
+            "isEngToTr": true,
+            "noOptionMeanings": true
+          }
+        ]
+      }
+    ]
+  }
+},
   "22": {
     "1": {
       "title": "1. Söz Dizimsel Yapılarına Göre Bağlaçlar (Edat Öbekleri, Yan Cümle Bağlaçları ve Geçiş Zarfları)",

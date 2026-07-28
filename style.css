@@ -8256,6 +8256,15 @@ input:checked + .slider:before {
   border-bottom: 2px dashed #f59e0b;
   display: inline-block;
 }
+.gpattern-infinitive {
+  color: #9c27b0 !important;
+  font-weight: 700 !important;
+  display: inline-block;
+}
+.gpattern-infinitive .hoverable-word {
+  color: #9c27b0 !important;
+  font-weight: 700 !important;
+}
 
 /* Matrix & Modal Selection Button Styling */
 .matrix-cell-btn, .modal-matrix-btn, .cond-matrix-btn {

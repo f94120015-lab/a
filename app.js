@@ -2799,6 +2799,26 @@ function highlightGrammarPatterns(text) {
   if (!text) return '';
   let res = text;
   
+  // 0. Mastar Yapıları (Infinitive Patterns) - Unit 14 / Unit 23 (ÖNCELİKLİ VURGULAMA)
+  // a) Wh- soru kelimeli isim öbeği mastarları (which...to V1)
+  res = res.replace(/\b(which(?:\s+[a-zA-Z]+){1,4}\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span class="gpattern-infinitive" style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+
+  // b) Soru kelimeli ve Amaç mastarları (how to, where to, when to, what to, in order to, so as to + V1)
+  res = res.replace(/\b(in order to|so as to|how to|where to|when to|what to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span class="gpattern-infinitive" style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+
+  // c) Yapısal Özne Mastarları (for + noun phrase + to V1)
+  res = res.replace(/\b(for\s+[a-zA-Z\s]{2,35}?\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span class="gpattern-infinitive" style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+
+  // d) Tekil mastarlar (to + V1)
+  res = res.replace(/(?<!<span[^>]*>)\bto\s+([a-zA-Z]+)\b(?!<\/span>)/gi, (match, p1) => {
+    const verb = p1.toLowerCase();
+    if (['today', 'tomorrow', 'local', 'the', 'a', 'an', 'this', 'that', 'my', 'your', 'our', 'their', 'his', 'her'].includes(verb)) return match;
+    return `<span class="gpattern-infinitive" style="color: #9c27b0; font-weight: 700;">to ${p1}</span>`;
+  });
+
   // 1. Zarf + past participle + isim
   res = res.replace(/\b(strictly|highly|well|quite|extremely)\s+([a-zA-Z]+ed)\s+([a-zA-Z]+s?)\b/gi, 
     '<span class="gpattern-adv-ed-noun">$1 $2 $3</span>');
@@ -7515,11 +7535,8 @@ function renderQuestion() {
     : question.type;
 
   // Adjust prompt text to fit the visual type
-  const originalPrompt = question.prompt;
-  if (activeType === 'fill-blank-dropdown' && question.prompt === 'Boşluğu doldur') {
+  if (question.prompt === 'Boşluğu doldur') {
     question.prompt = 'Boşluğa gelecek en uygun kelimeyi seçin:';
-  } else if (activeType === 'fill-blank' && question.prompt.startsWith('Boşluğa gelecek en uygun kelimeyi seçin')) {
-    question.prompt = 'Boşluğu doldur';
   }
 
   // Highlight quotes in prompts dynamically for better scanability, ignoring HTML attributes
@@ -8777,17 +8794,38 @@ function applyReadingPassageHighlights() {
   passageBox.innerHTML = html;
 }
 
+function formatEnglishInfinitiveHighlight(text) {
+  if (!text) return '';
+  let res = text;
+  res = res.replace(/\b(which(?:\s+[a-zA-Z]+){1,4}\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+  res = res.replace(/\b(in order to|so as to|how to|where to|when to|what to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+  res = res.replace(/\b(for\s+[a-zA-Z\s]{2,35}?\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
+    `<span style="color: #9c27b0; font-weight: 700;">${p1} ${p2}</span>`);
+  res = res.replace(/(?<!<span[^>]*>)\bto\s+([a-zA-Z]+)\b(?!<\/span>)/gi, (match, p1) => {
+    const verb = p1.toLowerCase();
+    if (['today', 'tomorrow', 'local', 'the', 'a', 'an', 'this', 'that', 'my', 'your', 'our', 'their', 'his', 'her'].includes(verb)) return match;
+    return `<span style="color: #9c27b0; font-weight: 700;">to ${p1}</span>`;
+  });
+  return res;
+}
+
 function renderMatching(container, question) {
   const shuffledRight = [...question.pairs].sort(() => Math.random() - 0.5);
+
+  const isLeftEnglish = question.pairs && question.pairs.length > 0 && /^[a-zA-Z]/.test(question.pairs[0].left);
+  const leftHeader = question.leftHeader || (isLeftEnglish ? "İngilizce İfade" : "Türkçe Karşılık");
+  const rightHeader = question.rightHeader || (isLeftEnglish ? "Türkçe Karşılık" : "İngilizce İfade");
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
     <div class="match-grid">
-      <span class="match-col-header">${question.leftHeader || "Türkçe"}</span>
-      <span class="match-col-header">${question.rightHeader || "İngilizce"}</span>
+      <span class="match-col-header">${leftHeader}</span>
+      <span class="match-col-header">${rightHeader}</span>
       ${question.pairs.map((pair, i) => `
-        <button class="match-item match-left" data-left="${escapeAttr(pair.left)}" data-pair-index="${i}">${pair.left}</button>
-        <button class="match-item match-right" data-right="${escapeAttr(shuffledRight[i].right)}">${makeTextHoverable(shuffledRight[i].right, true)}</button>
+        <button class="match-item match-left" data-left="${escapeAttr(pair.left)}" data-pair-index="${i}">${isLeftEnglish ? formatEnglishInfinitiveHighlight(pair.left) : pair.left}</button>
+        <button class="match-item match-right" data-right="${escapeAttr(shuffledRight[i].right)}">${!isLeftEnglish ? formatEnglishInfinitiveHighlight(shuffledRight[i].right) : makeTextHoverable(shuffledRight[i].right, true)}</button>
       `).join('')}
     </div>
   `;
@@ -8898,7 +8936,12 @@ function tryMatch(container, question) {
 // ── Boşluk Doldurma - Açılır Menü (Dropdown) ──────────────────
 function getOptionMeaning(question, opt) {
   if (!opt) return '';
+  if (question && question.noOptionMeanings) return '';
   opt = String(opt).trim();
+  const lowerOpt = opt.toLowerCase();
+  if (lowerOpt.startsWith('to ') || lowerOpt.startsWith('how to') || lowerOpt.startsWith('where to') || lowerOpt.startsWith('when to') || lowerOpt.startsWith('which ') || lowerOpt.startsWith('what to')) {
+    return '';
+  }
   if (question && question.optionMeanings && question.optionMeanings[opt]) {
     return question.optionMeanings[opt];
   }
@@ -9075,7 +9118,7 @@ function renderFillBlankDropdown(container, question) {
     const meaning = getOptionMeaning(question, opt);
     const displayText = meaning ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : `<strong>${opt}</strong>`;
     return `
-      <div class="custom-dropdown-item" data-index="" style="padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 1.05rem; color: var(--text-primary); transition: background 0.15s ease; border-bottom: 1px solid rgba(128,128,128,0.1); text-align: left; white-space: normal; word-break: break-word;">
+      <div class="custom-dropdown-item" data-index="${i}" style="padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 1.05rem; color: var(--text-primary); transition: background 0.15s ease; border-bottom: 1px solid rgba(128,128,128,0.1); text-align: left; white-space: normal; word-break: break-word;">
         ${displayText}
       </div>
     `;
