@@ -67,74 +67,34 @@ rawTopics.push(
   "id": 29,
   "startLessonId": 92,
   "originalIndex": 29,
-  "title": "XXIII. It + to be + sıfat/past participle + that",
-  "desc": "It is clear that..., It is believed that... gibi edilgen ve açıklayıcı cümle girişleri",
+  "edits": [
+    {
+      "date": "2026-07-28T15:30:00+03:00",
+      "desc": "Bölüm Yeniden Tasarımı: Sahte Özne Yapıları (It is + Adjective + That) [Bölüm 24 / Unit 29] ünitesi 2 derse ve her derste 3 ayrı alıştırmaya (her alıştırmada 10 soru, toplam 60 soru) ayrıldı.",
+      "type": "custom"
+    }
+  ],
+  "title": "XXIII. Sahte Özne Yapıları (It is + Adjective + That)",
+  "desc": "It is clear that..., It was confirmed that... ve It is essential to clarify that... gibi kişisiz, edilgen ve mastarlı açıklayıcı cümle girişleri",
   "icon": "🔌",
   "numLessons": 2,
   "formulas": [
     {
       "formula": "It + is/was/has been + Adjective/Past Participle + that + Clause",
-      "example": "It is apparent that the constituent variables change: Bileşen değişkenlerin değiştiği açıktır.",
-      "description": "Bu yapı, bir durumu, kanaati veya nesnel bir gerçeği vurgulamak için kullanılan kişisiz bir yapısal kalıptır (Impersonal Construction). that ifadesinden sonra tam bir cümle (S + V + O) gelir."
+      "example": "• Kişisiz Vurgulu Giriş: It is evident that demographic shifts affect urban communities (Demografik değişimlerin kentsel toplulukları etkilediği açıktır)<br>• Belgelenmiş Geçmiş Anlatım: It was documented that archaeologists preserved ancient artifacts (Arkeologların antik eserleri koruduğu belgelenmişti)<br>• Güncelliği Süren İddia: It has been reported that sociologists investigate voting behavior (Sosyologların oy verme davranışını araştırdığı bildirilmiştir)",
+      "description": "Kişisiz ve vurgulu cümle girişleri (Impersonal Extraposition): Bir durumu, kanaati veya nesnel bir gerçeği vurgulamak için kullanılır. 'That' bağlacından sonra tam cümle gelir."
     },
     {
       "formula": "It + is/was + Adjective/Past Participle + to + Verb + that + Clause",
-      "example": "It is easy to assume that constituents expand: Bileşenlerin genişlediğini varsaymak kolaydır.",
-      "description": "Bu yapı, bir durumun veya eylemin zorluk, kolaylık, önem derecesini bir mastar (to V1) eylemi aracılığıyla that cümleciğine bağlar."
+      "example": "• Mastarlı Giriş Modeli: It is essential to clarify that economists examine financial stability (İktisatçıların finansal istikrarı incelediğini netleştirmek esastır)<br>• Geçmiş Mastarlı Değerlendirme: It was helpful to confirm that courts protected civil liberties (Mahkemelerin sivil özgürlükleri koruduğunu doğrulamak faydalıydı)",
+      "description": "Mastarlı sahte özne yapısı: Eylemin veya durumun önem, kolaylık, zorluk derecesini bir mastar (to V1) eylemi aracılığıyla 'that' yan cümlesine bağlar."
     }
   ],
   "subtitles": [
-    "It + to be / modal + Sıfat / Past Participle + that Modeli",
-    "It + to be / modal + Sıfat / Past Participle + Mastar (to V1) + that Modeli"
+    "1. Sahte Özne Yapıları (It is / was / has been + Sıfat / V3 + that Modeli)",
+    "2. Mastarlı Sahte Özne Yapıları (It is / was + Sıfat / V3 + to V1 + that Modeli)"
   ],
   "originalNumLessons": 2
-},
-{
-  "id": 30,
-  "startLessonId": 94,
-  "originalIndex": 30,
-  "title": "XXV. Neden ve Etki Yapıları",
-  "desc": "Neden-sonuç bildiren bağlaçlar, aktif fiiller, zarflar ve edat grupları",
-  "icon": "🪐",
-  "numLessons": 3,
-  "formulas": [
-    {
-      "formula": "Subject + Active Verb (causes/leads to/results in/...) + Object",
-      "example": "Severe data formatting issues <span style=\"color: #ff6b6b; font-weight: bold;\">give rise to</span> validation anomalies.",
-      "description": "Neden-sonuç ilişkilerini doğrudan aktif fiillerle kuran doğrusal cümle şablonudur."
-    },
-    {
-      "formula": "Clause; therefore / thus / consequently / hence / as a result, Clause",
-      "example": "Data formatting issues occurred; <span style=\"color: #ff6b6b; font-weight: bold;\">consequently</span>, validation anomalies arose.",
-      "description": "İki bağımsız cümleyi noktalı virgül ve zarfsal geçişlerle bağlayan neden-sonuç şablonudur."
-    },
-    {
-      "formula": "Subject + cause + Object + to V1",
-      "example": "High temperatures <span style=\"color: #ff6b6b; font-weight: bold;\">caused</span> constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">to change</span>.",
-      "description": "Bir etkenin başka bir eylemi tetiklemesini cause + nesne + mastar ile ifade eden şablondur."
-    },
-    {
-      "formula": "because / as / since / inasmuch as + Clause, Clause",
-      "example": "<span style=\"color: #ff6b6b; font-weight: bold;\">Because</span> constituent variables change, developers must monitor lines.",
-      "description": "Yan cümle düzeyinde neden bildiren bağlaçlarla kurulan zarf cümlesi şablonudur."
-    },
-    {
-      "formula": "Subject + Verb + due to / because of / owing to / on account of / thanks to + Noun Phrase",
-      "example": "Corporate profits dropped <span style=\"color: #ff6b6b; font-weight: bold;\">due to</span> volatile economic indicators.",
-      "description": "İsim öbeği alan edat gruplarıyla neden bildiren şablondur."
-    },
-    {
-      "formula": "Subject (Effect) + stem from / stems from + Object (Cause)",
-      "example": "Analytical validation errors <span style=\"color: #ff6b6b; font-weight: bold;\">stem from</span> loose control filters.",
-      "description": "Sonucun hangi nedenden kaynaklandığını geriye doğru ifade eden fiil şablonudur."
-    }
-  ],
-  "subtitles": [
-    "1. Fiil Tabanlı Doğrusal & Yönlendirmeli Neden-Sonuç Yapıları (lead to, cause + obj + to V1)",
-    "2. Bağlaç, Edat ve Zarf Geçişli Neden-Sonuç Yapıları (therefore, because of, due to)",
-    "3. Köken Bildiren Ters Dönüşümlü Yapılar & Karma Akademik Test (stem from, result in/from)"
-  ],
-  "originalNumLessons": 3
 },
 {
   "id": 13,
@@ -20743,2215 +20703,1429 @@ Object.assign(unitSentencesMap, {
   }
 },
   "29": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi",
-          "description": "It is apparent that... gibi kişisiz giriş yapılarını tanıma ve tamamlama çalışmaları.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is apparent that the constituent variables change.\"</strong>",
-              "options": [
-                "Bileşen değişkenlerin değiştiği açıktır.",
-                "Veri formatının değiştiği belliydi.",
-                "Çelişkili kodların çakıştığı iddia edilmişti.",
-                "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It is apparent that the constituent variables change."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It had been argued that contradictory codes conflict.\"</strong>",
-              "options": [
-                "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
-                "Çelişkili kodların çakıştığı iddia edilmişti.",
-                "Veri formatının değiştiği belliydi.",
-                "Kimyasal yeniliklerin yapıları dönüştürdüğü saptanmıştı."
-              ],
-              "correctIndex": 1,
-              "isEngToTr": true,
-              "enSentence": "It had been argued that contradictory codes conflict."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is estimated that arbitrary criteria induce errors.\"</strong>",
-              "options": [
-                "Dilsel çıktının evrildiği hipotezi öne sürülmüştür.",
-                "Bileşen değişkenlerin değiştiği açıktır.",
-                "Çelişkili kodların çakıştığı iddia edilmişti.",
-                "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It is estimated that arbitrary criteria induce errors."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is predicted that alternative regimes will collapse.\"</strong>",
-              "options": [
-                "Sonraki metriklerin yükseleceği beklenmektedir.",
-                "Çelişkili kodların çakıştığı iddia edilmişti.",
-                "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir.",
-                "Alternatif rejimlerin çökeceği öngörülmektedir."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It is predicted that alternative regimes will collapse."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was concluded that automated scripts optimize files.\"</strong>",
-              "options": [
-                "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır.",
-                "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
-                "Dilsel çıktının evrildiği hipotezi öne sürülmüştür.",
-                "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It was concluded that automated scripts optimize files."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was ___ that the data format shifted.",
-              "options": [
-                "evidenced",
-                "evidence",
-                "evidently",
-                "evident"
-              ],
-              "correctIndex": 3,
-              "translation": "Veri formatının değiştiği belliydi."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was ___ that raw components decay.",
-              "options": [
-                "discovered",
-                "discovery",
-                "discovering",
-                "discover"
-              ],
-              "correctIndex": 0,
-              "translation": "Ham bileşenlerin çürüdüğü keşfedilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It should be ___ that the draft clauses vary.",
-              "options": [
-                "assume",
-                "assumed",
-                "assumption",
-                "assuming"
-              ],
-              "correctIndex": 1,
-              "translation": "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be ___ that unstable frameworks fail.",
-              "options": [
-                "remember",
-                "remembrance",
-                "remembering",
-                "remembered"
-              ],
-              "correctIndex": 3,
-              "translation": "Kararsız yapıların başarısız olduğu unutulmamalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ that subsequent metrics will rise.",
-              "options": [
-                "anticipatory",
-                "anticipated",
-                "anticipation",
-                "anticipate"
-              ],
-              "correctIndex": 1,
-              "translation": "Sonraki metriklerin yükseleceği beklenmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is ___ that the constituent variables change.",
-              "options": [
-                "apparent",
-                "apparently",
-                "appearance",
-                "appear"
-              ],
-              "correctIndex": 0,
-              "translation": "Bileşen değişkenlerin değiştiği açıktır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been verified that unconstitutional laws mutate.",
-              "words": [
-                "doğrulanmıştır",
-                "değişime",
-                "sürülmüştür",
-                "aykırı",
-                "Anayasaya",
-                "uğradığı",
-                "değişkenlerin",
-                "yasaların",
-                "kodların"
-              ],
-              "correctOrder": [
-                "Anayasaya",
-                "aykırı",
-                "yasaların",
-                "değişime",
-                "uğradığı",
-                "doğrulanmıştır"
-              ],
-              "enSentence": "It has been verified that unconstitutional laws mutate.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It had been ___ that contradictory codes conflict.",
-              "options": [
-                "argument",
-                "argued",
-                "argue",
-                "arguable"
-              ],
-              "correctIndex": 1,
-              "translation": "Çelişkili kodların çakıştığı iddia edilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is ___ that arbitrary criteria induce errors.",
-              "options": [
-                "estimated",
-                "estimation",
-                "estimating",
-                "estimate"
-              ],
-              "correctIndex": 0,
-              "translation": "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been hypothesized that linguistic output evolves.",
-              "words": [
-                "Dilsel",
-                "çıktının",
-                "sürülmüştür",
-                "Bileşen",
-                "hipotezi",
-                "öne",
-                "evrildiği",
-                "kriterlerin",
-                "tahmin"
-              ],
-              "correctOrder": [
-                "Dilsel",
-                "çıktının",
-                "evrildiği",
-                "hipotezi",
-                "öne",
-                "sürülmüştür"
-              ],
-              "enSentence": "It has been hypothesized that linguistic output evolves.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ that alternative regimes will collapse.",
-              "options": [
-                "predicted",
-                "predictive",
-                "prediction",
-                "predict"
-              ],
-              "correctIndex": 0,
-              "translation": "Alternatif rejimlerin çökeceği öngörülmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was ___ that automated scripts optimize files.",
-              "options": [
-                "concluded",
-                "conclusion",
-                "conclusive",
-                "conclude"
-              ],
-              "correctIndex": 0,
-              "translation": "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Belirli göstergelerin düştüğü kabul edilmelidir.",
-              "words": [
-                "after",
-                "is",
-                "before",
-                "indicators decline.",
-                "that specific",
-                "It should be recognized",
-                "was",
-                "will"
-              ],
-              "correctOrder": [
-                "It should be recognized",
-                "that specific",
-                "indicators decline."
-              ],
-              "enSentence": "It should be recognized that specific indicators decline.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It must be acknowledged that the parameterized matrix expands.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It must be acknowledged that the parameterized matrix expands.",
-              "correctSentence": "Parametrelendirilmiş matrisin genişlediği kabul edilmelidir.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It had been established that chemical innovations transform structures.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It had been established that chemical innovations transform structures.",
-              "correctSentence": "Kimyasal yeniliklerin yapıları dönüştürdüğü saptanmıştı.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde kişisiz kalıpların analizi.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is apparent that the constituent variables change.\"</strong>",
-              "options": [
-                "Parametrelendirilmiş matrisin genişlediği kabul edilmelidir.",
-                "Veri formatının değiştiği belliydi.",
-                "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
-                "Bileşen değişkenlerin değiştiği açıktır."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It is apparent that the constituent variables change."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It had been argued that contradictory codes conflict.\"</strong>",
-              "options": [
-                "Bileşen değişkenlerin değiştiği açıktır.",
-                "Veri formatının değiştiği belliydi.",
-                "Çelişkili kodların çakıştığı iddia edilmişti.",
-                "Kararsız yapıların başarısız olduğu unutulmamalıdır."
-              ],
-              "correctIndex": 2,
-              "isEngToTr": true,
-              "enSentence": "It had been argued that contradictory codes conflict."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is estimated that arbitrary criteria induce errors.\"</strong>",
-              "options": [
-                "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır.",
-                "Sonraki metriklerin yükseleceği beklenmektedir.",
-                "Kararsız yapıların başarısız olduğu unutulmamalıdır.",
-                "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It is estimated that arbitrary criteria induce errors."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is predicted that alternative regimes will collapse.\"</strong>",
-              "options": [
-                "Dilsel çıktının evrildiği hipotezi öne sürülmüştür.",
-                "Belirli göstergelerin düştüğü kabul edilmelidir.",
-                "Alternatif rejimlerin çökeceği öngörülmektedir.",
-                "Çelişkili kodların çakıştığı iddia edilmişti."
-              ],
-              "correctIndex": 2,
-              "isEngToTr": true,
-              "enSentence": "It is predicted that alternative regimes will collapse."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was concluded that automated scripts optimize files.\"</strong>",
-              "options": [
-                "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı.",
-                "Ham bileşenlerin çürüdüğü keşfedilmişti.",
-                "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir.",
-                "Alternatif rejimlerin çökeceği öngörülmektedir."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It was concluded that automated scripts optimize files."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was evident that the data format ___.",
-              "options": [
-                "shifter",
-                "shifting",
-                "shift",
-                "shifted"
-              ],
-              "correctIndex": 3,
-              "translation": "Veri formatının değiştiği belliydi."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was discovered that ___ components decay.",
-              "options": [
-                "raw",
-                "rare",
-                "rawly",
-                "rawness"
-              ],
-              "correctIndex": 0,
-              "translation": "Ham bileşenlerin çürüdüğü keşfedilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It should be assumed that the ___ clauses vary.",
-              "options": [
-                "drafting",
-                "drafted",
-                "drafts",
-                "draft"
-              ],
-              "correctIndex": 3,
-              "translation": "Taslak maddelerin değişiklik gösterdiği varsayılmalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be remembered that ___ frameworks fail.",
-              "options": [
-                "stably",
-                "stability",
-                "unstable",
-                "stabilize"
-              ],
-              "correctIndex": 2,
-              "translation": "Kararsız yapıların başarısız olduğu unutulmamalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is anticipated that ___ metrics will rise.",
-              "options": [
-                "sequence",
-                "subsequent",
-                "subsequently",
-                "sequentially"
-              ],
-              "correctIndex": 1,
-              "translation": "Sonraki metriklerin yükseleceği beklenmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is apparent that the ___ variables change.",
-              "options": [
-                "constituency",
-                "constitute",
-                "constituent",
-                "constitution"
-              ],
-              "correctIndex": 2,
-              "translation": "Bileşen değişkenlerin değiştiği açıktır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been verified that unconstitutional laws mutate.",
-              "words": [
-                "değişime",
-                "yasaların",
-                "aykırı",
-                "uğradığı",
-                "Anayasaya",
-                "varılmıştı",
-                "doğrulanmıştır",
-                "hatalara",
-                "kodların"
-              ],
-              "correctOrder": [
-                "Anayasaya",
-                "aykırı",
-                "yasaların",
-                "değişime",
-                "uğradığı",
-                "doğrulanmıştır"
-              ],
-              "enSentence": "It has been verified that unconstitutional laws mutate.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It had been argued that ___ codes conflict.",
-              "options": [
-                "contradictory",
-                "contradicted",
-                "contradict",
-                "contradiction"
-              ],
-              "correctIndex": 0,
-              "translation": "Çelişkili kodların çakıştığı iddia edilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is estimated that ___ criteria induce errors.",
-              "options": [
-                "arbitrary",
-                "arbitrarily",
-                "arbitrate",
-                "arbitration"
-              ],
-              "correctIndex": 0,
-              "translation": "Keyfi kriterlerin hatalara yol açtığı tahmin edilmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been hypothesized that linguistic output evolves.",
-              "words": [
-                "sürülmüştür",
-                "kriterlerin",
-                "hipotezi",
-                "açıktır",
-                "evrildiği",
-                "dosyaları",
-                "çıktının",
-                "öne",
-                "Dilsel"
-              ],
-              "correctOrder": [
-                "Dilsel",
-                "çıktının",
-                "evrildiği",
-                "hipotezi",
-                "öne",
-                "sürülmüştür"
-              ],
-              "enSentence": "It has been hypothesized that linguistic output evolves.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is predicted that ___ regimes will collapse.",
-              "options": [
-                "alteration",
-                "alternative",
-                "alternatively",
-                "alternate"
-              ],
-              "correctIndex": 1,
-              "translation": "Alternatif rejimlerin çökeceği öngörülmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was concluded that automated scripts ___ files.",
-              "options": [
-                "optimize",
-                "optimization",
-                "optimized",
-                "optimum"
-              ],
-              "correctIndex": 0,
-              "translation": "Otomatikleştirilmiş kodların dosyaları optimize ettiği sonucuna varılmıştı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Belirli göstergelerin düştüğü kabul edilmelidir.",
-              "words": [
-                "indicators decline.",
-                "before",
-                "that specific",
-                "after",
-                "was",
-                "It should be recognized",
-                "is",
-                "will"
-              ],
-              "correctOrder": [
-                "It should be recognized",
-                "that specific",
-                "indicators decline."
-              ],
-              "enSentence": "It should be recognized that specific indicators decline.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It must be acknowledged that the parameterized matrix expands.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It must be acknowledged that the parameterized matrix expands.",
-              "correctSentence": "Parametrelendirilmiş matrisin genişlediği kabul edilmelidir.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It had been established that chemical innovations transform structures.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It had been established that chemical innovations transform structures.",
-              "correctSentence": "Kimyasal yeniliklerin yapıları dönüştürdüğü saptanmıştı.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde Impersonal It kalıbının pekiştirilmesi.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It must be acknowledged that the parameterized matrix expands under pressure unless the filter units activate cleanly.",
-              "words": [
-                "üniteleri",
-                "matrisin",
-                "basınç",
-                "Filtre",
-                "etkinleşmedikçe",
-                "şekilde",
-                "bir",
-                "edilmelidir",
-                "kabul",
-                "parametrelendirilmiş",
-                "altında",
-                "genişlediği",
-                "alındığında",
-                "temiz",
-                "ekip",
-                "sistem"
-              ],
-              "correctOrder": [
-                "Filtre",
-                "üniteleri",
-                "temiz",
-                "bir",
-                "şekilde",
-                "etkinleşmedikçe",
-                "parametrelendirilmiş",
-                "matrisin",
-                "basınç",
-                "altında",
-                "genişlediği",
-                "kabul",
-                "edilmelidir"
-              ],
-              "enSentence": "It must be acknowledged that the parameterized matrix expands under pressure unless the filter units activate cleanly.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is estimated that arbitrary criteria induce ___ errors whenever the database runs an loose query loop.",
-              "options": [
-                "analytical",
-                "analysis",
-                "analyst",
-                "analytically"
-              ],
-              "correctIndex": 0,
-              "translation": "Veri tabanı gevşek bir sorgu döngüsü çalıştırdığında keyfi kriterlerin analitik hatalara yol açtığı tahmin edilmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It must be remembered that unstable frameworks fail during stress tests lest the platform should suffer cache crashes.",
-              "words": [
-                "çerçevelerin",
-                "diye",
-                "kararsız",
-                "güvenliği",
-                "başarısız",
-                "stres",
-                "unutulmamalıdır",
-                "önbellek",
-                "yaşamasın",
-                "testleri",
-                "olduğu",
-                "sırasında",
-                "çökmeleri",
-                "Platform",
-                "izole",
-                "çakıştığı"
-              ],
-              "correctOrder": [
-                "Platform",
-                "önbellek",
-                "çökmeleri",
-                "yaşamasın",
-                "diye",
-                "kararsız",
-                "çerçevelerin",
-                "stres",
-                "testleri",
-                "sırasında",
-                "başarısız",
-                "olduğu",
-                "unutulmamalıdır"
-              ],
-              "enSentence": "It must be remembered that unstable frameworks fail during stress tests lest the platform should suffer cache crashes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was evident that the data format shifted before the migration ended, which ___ an immediate override flag.",
-              "options": [
-                "trigger",
-                "triggers",
-                "triggered",
-                "triggering"
-              ],
-              "correctIndex": 2,
-              "translation": "Veri göçü sona ermeden önce veri formatının değiştiği belliydi, bu durum anında bir geçersiz kılma bayrağını tetikledi."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It was discovered that raw components decay inside the humid chamber before the technical team isolated the container.",
-              "words": [
-                "izole",
-                "ekip",
-                "önce",
-                "etmeden",
-                "nemli",
-                "Teknik",
-                "yazılım",
-                "bileşenlerin",
-                "çürüdüğü",
-                "oda",
-                "ham",
-                "keşfedilmişti",
-                "edilmelidir",
-                "içinde",
-                "konteyneri",
-                "araçlar"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "ekip",
-                "konteyneri",
-                "izole",
-                "etmeden",
-                "önce",
-                "ham",
-                "bileşenlerin",
-                "nemli",
-                "oda",
-                "içinde",
-                "çürüdüğü",
-                "keşfedilmişti"
-              ],
-              "enSentence": "It was discovered that raw components decay inside the humid chamber before the technical team isolated the container.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It should be recognized that specific indicators decline without modern resins although field crews work ___.",
-              "options": [
-                "intensely",
-                "intensity",
-                "intensify",
-                "intense"
-              ],
-              "correctIndex": 0,
-              "translation": "Saha ekipleri yoğun çalışmasına rağmen modern reçineler olmadan belirli göstergelerin düştüğü kabul edilmelidir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is anticipated that subsequent metrics will rise next quarter once the trading committee reads the compliance code.",
-              "words": [
-                "Ticaret",
-                "komitesi",
-                "çeyrekte",
-                "metriklerin",
-                "beklenmektedir",
-                "uyumluluk",
-                "aykırı",
-                "yükseleceği",
-                "kodunu",
-                "doğrulanmıştır",
-                "okuduğunda",
-                "sonraki",
-                "evrildiği"
-              ],
-              "correctOrder": [
-                "Ticaret",
-                "komitesi",
-                "uyumluluk",
-                "kodunu",
-                "okuduğunda",
-                "sonraki",
-                "çeyrekte",
-                "metriklerin",
-                "yükseleceği",
-                "beklenmektedir"
-              ],
-              "enSentence": "It is anticipated that subsequent metrics will rise next quarter once the trading committee reads the compliance code.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was concluded that automated scripts optimize runtime ___ just as the statistical compiler metrics predicted.",
-              "options": [
-                "lately",
-                "late",
-                "latent",
-                "latency"
-              ],
-              "correctIndex": 3,
-              "translation": "İstatistiksel derleyici metriklerinin öngördüğü gibi otomatikleştirilmiş kodların çalışma süresi gecikmesini optimize ettiği sonucuna varılmıştı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It had been argued that contradictory codes conflict with system security until the primary software patch was deployed.",
-              "words": [
-                "Birincil",
-                "sürülmüştür",
-                "kodların",
-                "çelişkili",
-                "ile",
-                "güvenliği",
-                "iddia",
-                "temiz",
-                "yazılım",
-                "çakıştığı",
-                "dağıtılana",
-                "sistem",
-                "edilmişti",
-                "araçlar",
-                "kadar",
-                "yaması"
-              ],
-              "correctOrder": [
-                "Birincil",
-                "yazılım",
-                "yaması",
-                "dağıtılana",
-                "kadar",
-                "çelişkili",
-                "kodların",
-                "sistem",
-                "güvenliği",
-                "ile",
-                "çakıştığı",
-                "iddia",
-                "edilmişti"
-              ],
-              "enSentence": "It had been argued that contradictory codes conflict with system security until the primary software patch was deployed.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is apparent that the constituent variables change during the test phase, so developers must ___ lines closely.",
-              "options": [
-                "monitored",
-                "monitors",
-                "monitoring",
-                "monitor"
-              ],
-              "correctIndex": 3,
-              "translation": "Bileşen değişkenlerin test aşamasında değiştiği açıktır, bu nedenle geliştiriciler satırları yakından izlemelidir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be acknowledged that the parameterized matrix expands under pressure unless the filter units ___ cleanly.",
-              "options": [
-                "activation",
-                "activate",
-                "actively",
-                "active"
-              ],
-              "correctIndex": 1,
-              "translation": "Filtre üniteleri temiz bir şekilde etkinleşmedikçe parametrelendirilmiş matrisin basınç altında genişlediği kabul edilmelidir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It should be assumed that the draft clauses vary based on new evidence since the assembly demanded an immediate revision.",
-              "words": [
-                "bir",
-                "gösterdiği",
-                "taslak",
-                "acil",
-                "temiz",
-                "ettiğinden",
-                "revizyon",
-                "yeni",
-                "kanıtlara",
-                "Meclis",
-                "beri",
-                "talep",
-                "önce",
-                "varsayılmalıdır",
-                "dayanarak",
-                "maddelerin",
-                "değişiklik",
-                "öngörülmektedir"
-              ],
-              "correctOrder": [
-                "Meclis",
-                "acil",
-                "bir",
-                "revizyon",
-                "talep",
-                "ettiğinden",
-                "beri",
-                "taslak",
-                "maddelerin",
-                "yeni",
-                "kanıtlara",
-                "dayanarak",
-                "değişiklik",
-                "gösterdiği",
-                "varsayılmalıdır"
-              ],
-              "enSentence": "It should be assumed that the draft clauses vary based on new evidence since the assembly demanded an immediate revision.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It must be remembered that unstable frameworks fail during stress tests lest the platform should ___ cache crashes.",
-              "options": [
-                "suffer",
-                "suffering",
-                "suffers",
-                "suffered"
-              ],
-              "correctIndex": 0,
-              "translation": "Platform önbellek çökmeleri yaşamasın diye kararsız çerçevelerin stres testleri sırasında başarısız olduğu unutulmamalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was discovered that raw components decay inside the ___ chamber before the technical team isolated the container.",
-              "options": [
-                "humidity",
-                "humidifier",
-                "humid",
-                "humidly"
-              ],
-              "correctIndex": 2,
-              "translation": "Teknik ekip konteyneri izole etmeden önce ham bileşenlerin nemli oda içinde çürüdüğü keşfedilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It has been hypothesized that linguistic output evolves smoothly over time now that gamified tools are used in classrooms.",
-              "words": [
-                "öne",
-                "şekilde",
-                "zamanla",
-                "oyunlaştırılmış",
-                "hipotezi",
-                "araçlar",
-                "altında",
-                "evrildiği",
-                "nemli",
-                "sorunsuz",
-                "bir",
-                "dilsel",
-                "için",
-                "diye",
-                "sürülmüştür",
-                "çıktının",
-                "Sınıflarda",
-                "kullanıldığı"
-              ],
-              "correctOrder": [
-                "Sınıflarda",
-                "oyunlaştırılmış",
-                "araçlar",
-                "kullanıldığı",
-                "için",
-                "dilsel",
-                "çıktının",
-                "zamanla",
-                "sorunsuz",
-                "bir",
-                "şekilde",
-                "evrildiği",
-                "hipotezi",
-                "öne",
-                "sürülmüştür"
-              ],
-              "enSentence": "It has been hypothesized that linguistic output evolves smoothly over time now that gamified tools are used in classrooms.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is anticipated that subsequent metrics will rise next quarter once the trading committee reads the ___ code.",
-              "options": [
-                "compliance",
-                "complying",
-                "compliant",
-                "comply"
-              ],
-              "correctIndex": 0,
-              "translation": "Ticaret komitesi uyumluluk kodunu okuduğunda sonraki çeyrekte metriklerin yükseleceği beklenmektedir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It had been argued that contradictory codes conflict with system ___ until the primary software patch was deployed.",
-              "options": [
-                "security",
-                "secure",
-                "securing",
-                "securely"
-              ],
-              "correctIndex": 0,
-              "translation": "Birincil yazılım yaması dağıtılana kadar çelişkili kodların sistem güvenliği ile çakıştığı iddia edilmişti."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Merkez bankaları değerleri düzenleyemediği için enflasyon artarsa alternatif rejimlerin çökeceği öngörülmektedir.",
-              "words": [
-                "alternative regimes will collapse",
-                "after",
-                "is",
-                "It is predicted that",
-                "before",
-                "to regulate values.",
-                "if inflation increases",
-                "because central banks fail",
-                "was",
-                "will"
-              ],
-              "correctOrder": [
-                "It is predicted that",
-                "alternative regimes will collapse",
-                "if inflation increases",
-                "because central banks fail",
-                "to regulate values."
-              ],
-              "enSentence": "It is predicted that alternative regimes will collapse if inflation increases because central banks fail to regulate values.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It has been verified that unconstitutional laws mutate local governance seeing that municipal budgets dropped significantly.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It has been verified that unconstitutional laws mutate local governance seeing that municipal budgets dropped significantly.",
-              "correctSentence": "Belediye bütçelerinin önemli ölçüde düştüğü göz önüne alındığında, anayasaya aykırı yasaların yerel yönetimi değiştirdiği doğrulanmıştır.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It had been established that chemical innovations transform organic structures long before the project timeline was modified.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It had been established that chemical innovations transform organic structures long before the project timeline was modified.",
-              "correctSentence": "Proje zaman çizelgesi değiştirilmeden çok önce kimyasal yeniliklerin organik yapıları dönüştürdüğü saptanmıştı.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
+  "1": {
+    "title": "1. Sahte Özne Yapıları (It + is/was/has been + Sıfat/V3 + that + Clause)",
+    "subtitle": "Kişisiz ve edilgen açıklayıcı cümle girişlerinin akademik metinlerdeki kullanımı",
+    "konuAnlatimi": {
+      "baslik": "Sahte Özne Yapıları Kılavuzu (It is clear that..., It was confirmed that...)",
+      "teorikMantik": "İngilizce akademik metinlerde bir durumu, kanaati veya nesnel gerçeği özneyi kişiselleştirmeden vurgulamak için 'It' sahte öznesi ile edilgen/sıfatlı girişler yapılır.",
+      "formul": "[It + is / was / has been + Sıfat / V3 + THAT + Özne + Fiil + Nesne]",
+      "altinKural": "• Temel Kalıplar: It is clear that, It was documented that, It has been reported that, It is evident that<br>• Cümle Dizilimi: 'That' bağlacından sonra daima nesnel ve bağımsız bir tam cümle (S + V + O) yer alır."
     },
-    "2": {
-      "exercises": [
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi",
-          "description": "It is easy to assume that... gibi mastar ve bağlaçlı giriş kalıplarını kavrama çalışmaları.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It might be hard to perceive that data degrades.\"</strong>",
-              "options": [
-                "Verilerin bozulduğunu algılamak zor olabilir.",
-                "Algoritmaların çalıştığını netleştirmek faydalıdır.",
-                "Uyumluluk yasalarının doğruladığından emin olmak kritik önem taşır.",
-                "Sunucuların klonladığını varsaymak güvenli olmalı."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It might be hard to perceive that data degrades."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was problematic to imply that structures fail.\"</strong>",
-              "options": [
-                "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-                "Çıktının optimize olduğunu elde etmek ödüllendirici olmalı.",
-                "Firmaların yeniden tahsisat yaptığını belirtmek yasalara uygundu.",
-                "Yapıların başarısız olduğunu ima etmek sorunluydu."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It was problematic to imply that structures fail."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was reassuring to confirm that firewalls block.\"</strong>",
-              "options": [
-                "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-                "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
-                "Çıktının optimize olduğunu elde etmek ödüllendirici olmalı.",
-                "Taslağın değiştiğini yorumlamak zordu."
-              ],
-              "correctIndex": 1,
-              "isEngToTr": true,
-              "enSentence": "It was reassuring to confirm that firewalls block."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is necessary to redefine that parameters change.\"</strong>",
-              "options": [
-                "Sunucuların klonladığını varsaymak güvenli olmalı.",
-                "Verilerin bozulduğunu algılamak zor olabilir.",
-                "Algoritmaların çalıştığını netleştirmek faydalıdır.",
-                "Parametrelerin değiştiğini yeniden tanımlamak gerekir."
-              ],
-              "correctIndex": 3,
-              "isEngToTr": true,
-              "enSentence": "It is necessary to redefine that parameters change."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was difficult to interpret that the draft varied.\"</strong>",
-              "options": [
-                "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-                "Taslağın değiştiğini yorumlamak zordu.",
-                "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
-                "Sunucuların klonladığını varsaymak güvenli olmalı."
-              ],
-              "correctIndex": 1,
-              "isEngToTr": true,
-              "enSentence": "It was difficult to interpret that the draft varied."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is helpful to ___ that algorithms run.",
-              "options": [
-                "clarify",
-                "clarification",
-                "clarifying",
-                "clarified"
-              ],
-              "correctIndex": 0,
-              "translation": "Algoritmaların çalıştığını netleştirmek faydalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be safe to ___ that servers clone.",
-              "options": [
-                "assume",
-                "assuming",
-                "assumption",
-                "assumed"
-              ],
-              "correctIndex": 0,
-              "translation": "Sunucuların klonladığını varsaymak güvenli olmalı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is urgent to ___ that systems override.",
-              "options": [
-                "reports",
-                "reporting",
-                "reported",
-                "report"
-              ],
-              "correctIndex": 3,
-              "translation": "Sistemlerin geçersiz kıldığını bildirmek acildir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is easy to ___ that constituents expand.",
-              "options": [
-                "assuming",
-                "assumed",
-                "assumption",
-                "assume"
-              ],
-              "correctIndex": 3,
-              "translation": "Bileşenlerin genişlediğini varsaymak kolaydır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was legal to ___ that firms reallocate.",
-              "options": [
-                "specifying",
-                "specify",
-                "specification",
-                "specified"
-              ],
-              "correctIndex": 1,
-              "translation": "Firmaların yeniden tahsisat yaptığını belirtmek yasalara uygundu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It might be hard to ___ that data degrades.",
-              "options": [
-                "perceive",
-                "perceived",
-                "perception",
-                "perceiving"
-              ],
-              "correctIndex": 0,
-              "translation": "Verilerin bozulduğunu algılamak zor olabilir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It must be rewarding to achieve that output optimizes.",
-              "words": [
-                "Çıktının",
-                "optimize",
-                "olduğunu",
-                "Uyumluluk",
-                "algılamak",
-                "kritik",
-                "elde",
-                "etmek",
-                "ödüllendirici",
-                "olmalı"
-              ],
-              "correctOrder": [
-                "Çıktının",
-                "optimize",
-                "olduğunu",
-                "elde",
-                "etmek",
-                "ödüllendirici",
-                "olmalı"
-              ],
-              "enSentence": "It must be rewarding to achieve that output optimizes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was problematic to ___ that structures fail.",
-              "options": [
-                "implied",
-                "implying",
-                "implication",
-                "imply"
-              ],
-              "correctIndex": 3,
-              "translation": "Yapıların başarısız olduğunu ima etmek sorunluydu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was reassuring to ___ that firewalls block.",
-              "options": [
-                "confirming",
-                "confirmed",
-                "confirmation",
-                "confirm"
-              ],
-              "correctIndex": 3,
-              "translation": "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It will be mandatory to enforce that factories reduce.",
-              "words": [
-                "uygulamak",
-                "zordu",
-                "değiştiğini",
-                "zorunlu",
-                "olacaktır",
-                "azalttığını",
-                "Fabrikaların",
-                "elde"
-              ],
-              "correctOrder": [
-                "Fabrikaların",
-                "azalttığını",
-                "uygulamak",
-                "zorunlu",
-                "olacaktır"
-              ],
-              "enSentence": "It will be mandatory to enforce that factories reduce.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is necessary to ___ that parameters change.",
-              "options": [
-                "redefinition",
-                "redefine",
-                "redefining",
-                "redefined"
-              ],
-              "correctIndex": 1,
-              "translation": "Parametrelerin değiştiğini yeniden tanımlamak gerekir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was difficult to ___ that the draft varied.",
-              "options": [
-                "interpret",
-                "interpretation",
-                "interpreting",
-                "interpreted"
-              ],
-              "correctIndex": 0,
-              "translation": "Taslağın değiştiğini yorumlamak zordu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-              "words": [
-                "It should be interesting to",
-                "after",
-                "observe that",
-                "is",
-                "was",
-                "cells divide.",
-                "will",
-                "before"
-              ],
-              "correctOrder": [
-                "It should be interesting to",
-                "observe that",
-                "cells divide."
-              ],
-              "enSentence": "It should be interesting to observe that cells divide.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It is critical to ensure that compliance laws validate.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It is critical to ensure that compliance laws validate.",
-              "correctSentence": "Uyumluluk yasalarının doğruladığından emin olmak kritik önem taşır.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It should be simple to demonstrate that variables interact.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It should be simple to demonstrate that variables interact.",
-              "correctSentence": "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde mastarlı It kalıplarının analizi.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It might be hard to perceive that data degrades.\"</strong>",
-              "options": [
-                "Verilerin bozulduğunu algılamak zor olabilir.",
-                "Parametrelerin değiştiğini yeniden tanımlamak gerekir.",
-                "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
-                "Bileşenlerin genişlediğini varsaymak kolaydır."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It might be hard to perceive that data degrades."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was problematic to imply that structures fail.\"</strong>",
-              "options": [
-                "Yapıların başarısız olduğunu ima etmek sorunluydu.",
-                "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-                "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
-                "Verilerin bozulduğunu algılamak zor olabilir."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It was problematic to imply that structures fail."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was reassuring to confirm that firewalls block.\"</strong>",
-              "options": [
-                "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı.",
-                "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-                "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-                "Yapıların başarısız olduğunu ima etmek sorunluydu."
-              ],
-              "correctIndex": 0,
-              "isEngToTr": true,
-              "enSentence": "It was reassuring to confirm that firewalls block."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It is necessary to redefine that parameters change.\"</strong>",
-              "options": [
-                "Algoritmaların çalıştığını netleştirmek faydalıdır.",
-                "Parametrelerin değiştiğini yeniden tanımlamak gerekir.",
-                "Yapıların başarısız olduğunu ima etmek sorunluydu.",
-                "Sunucuların klonladığını varsaymak güvenli olmalı."
-              ],
-              "correctIndex": 1,
-              "isEngToTr": true,
-              "enSentence": "It is necessary to redefine that parameters change."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_mc_${i}",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>\"It was difficult to interpret that the draft varied.\"</strong>",
-              "options": [
-                "Fabrikaların azalttığını uygulamak zorunlu olacaktır.",
-                "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-                "Taslağın değiştiğini yorumlamak zordu.",
-                "Bileşenlerin genişlediğini varsaymak kolaydır."
-              ],
-              "correctIndex": 2,
-              "isEngToTr": true,
-              "enSentence": "It was difficult to interpret that the draft varied."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is helpful to clarify that ___ run.",
-              "options": [
-                "algorithmic",
-                "algorithm",
-                "algorithmically",
-                "algorithms"
-              ],
-              "correctIndex": 3,
-              "translation": "Algoritmaların çalıştığını netleştirmek faydalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be safe to assume that servers ___.",
-              "options": [
-                "cloning",
-                "clone",
-                "cloned",
-                "clones"
-              ],
-              "correctIndex": 1,
-              "translation": "Sunucuların klonladığını varsaymak güvenli olmalı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is urgent to report that systems ___.",
-              "options": [
-                "overrides",
-                "overriding",
-                "overridden",
-                "override"
-              ],
-              "correctIndex": 3,
-              "translation": "Sistemlerin geçersiz kıldığını bildirmek acildir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is easy to assume that ___ expand.",
-              "options": [
-                "constitute",
-                "constituents",
-                "constitution",
-                "constituent"
-              ],
-              "correctIndex": 1,
-              "translation": "Bileşenlerin genişlediğini varsaymak kolaydır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was legal to specify that firms ___.",
-              "options": [
-                "reallocated",
-                "reallocating",
-                "reallocation",
-                "reallocate"
-              ],
-              "correctIndex": 3,
-              "translation": "Firmaların yeniden tahsisat yaptığını belirtmek yasalara uygundu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It might be hard to perceive that data ___.",
-              "options": [
-                "degrades",
-                "degradation",
-                "degrading",
-                "degraded"
-              ],
-              "correctIndex": 0,
-              "translation": "Verilerin bozulduğunu algılamak zor olabilir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It must be rewarding to achieve that output optimizes.",
-              "words": [
-                "ödüllendirici",
-                "Çıktının",
-                "optimize",
-                "değiştiğini",
-                "etmek",
-                "olduğunu",
-                "olmalı",
-                "elde",
-                "zor",
-                "Parametrelerin"
-              ],
-              "correctOrder": [
-                "Çıktının",
-                "optimize",
-                "olduğunu",
-                "elde",
-                "etmek",
-                "ödüllendirici",
-                "olmalı"
-              ],
-              "enSentence": "It must be rewarding to achieve that output optimizes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was problematic to imply that ___ fail.",
-              "options": [
-                "structures",
-                "structuring",
-                "structure",
-                "structural"
-              ],
-              "correctIndex": 0,
-              "translation": "Yapıların başarısız olduğunu ima etmek sorunluydu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was reassuring to confirm that ___ block.",
-              "options": [
-                "walls",
-                "firewalls",
-                "firewall",
-                "fire"
-              ],
-              "correctIndex": 1,
-              "translation": "Güvenlik duvarlarının engellediğini doğrulamak rahatlatıcıydı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It will be mandatory to enforce that factories reduce.",
-              "words": [
-                "azalttığını",
-                "olacaktır",
-                "taşır",
-                "kritik",
-                "Yapıların",
-                "uygulamak",
-                "Fabrikaların",
-                "zorunlu"
-              ],
-              "correctOrder": [
-                "Fabrikaların",
-                "azalttığını",
-                "uygulamak",
-                "zorunlu",
-                "olacaktır"
-              ],
-              "enSentence": "It will be mandatory to enforce that factories reduce.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is necessary to redefine that ___ change.",
-              "options": [
-                "parameters",
-                "parametrizing",
-                "parameter",
-                "parametric"
-              ],
-              "correctIndex": 0,
-              "translation": "Parametrelerin değiştiğini yeniden tanımlamak gerekir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was difficult to interpret that the draft ___.",
-              "options": [
-                "varies",
-                "varying",
-                "vary",
-                "varied"
-              ],
-              "correctIndex": 3,
-              "translation": "Taslağın değiştiğini yorumlamak zordu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-              "words": [
-                "is",
-                "will",
-                "after",
-                "cells divide.",
-                "observe that",
-                "before",
-                "It should be interesting to",
-                "was"
-              ],
-              "correctOrder": [
-                "It should be interesting to",
-                "observe that",
-                "cells divide."
-              ],
-              "enSentence": "It should be interesting to observe that cells divide.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It is critical to ensure that compliance laws validate.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It is critical to ensure that compliance laws validate.",
-              "correctSentence": "Uyumluluk yasalarının doğruladığından emin olmak kritik önem taşır.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It should be simple to demonstrate that variables interact.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It should be simple to demonstrate that variables interact.",
-              "correctSentence": "Değişkenlerin etkileşime girdiğini göstermek basit olmalı.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u${unitId}l${lessonId}${exId}",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde mastarlı It kalıbının pekiştirilmesi.",
-          "questions": [
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It was reassuring to confirm that automated firewalls block unauthenticated traffic whenever a query loop executes.",
-              "words": [
-                "engellediğini",
-                "sorgu",
-                "önem",
-                "duvarlarının",
-                "çalıştığında",
-                "güvenlik",
-                "trafiği",
-                "doğruladığından",
-                "aktif",
-                "Bir",
-                "otomatik",
-                "doğrulanmamış",
-                "rahatlatıcıydı",
-                "doğrulamak",
-                "kimliği",
-                "döngüsü"
-              ],
-              "correctOrder": [
-                "Bir",
-                "sorgu",
-                "döngüsü",
-                "çalıştığında",
-                "otomatik",
-                "güvenlik",
-                "duvarlarının",
-                "kimliği",
-                "doğrulanmamış",
-                "trafiği",
-                "engellediğini",
-                "doğrulamak",
-                "rahatlatıcıydı"
-              ],
-              "enSentence": "It was reassuring to confirm that automated firewalls block unauthenticated traffic whenever a query loop executes.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It must be rewarding to achieve that software output ___ runtime latency as soon as the unit tests end.",
-              "options": [
-                "optimizing",
-                "optimum",
-                "optimization",
-                "optimizes"
-              ],
-              "correctIndex": 3,
-              "translation": "Birim testleri biter bitmez yazılım çıktısının çalışma süresi gecikmesini optimize ettiğini görmek ödüllendirici olmalı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It might be hard to perceive that historical data degrades over centuries due to extensive ink and paper degradation.",
-              "words": [
-                "Yoğun",
-                "taslak",
-                "olabilir",
-                "verilerin",
-                "mürekkep",
-                "tarihi",
-                "algılamak",
-                "boyunca",
-                "zor",
-                "sorgu",
-                "nedeniyle",
-                "ve",
-                "kağıt",
-                "bozulması",
-                "bozulduğunu",
-                "yüzyıllar",
-                "olacaktır"
-              ],
-              "correctOrder": [
-                "Yoğun",
-                "mürekkep",
-                "ve",
-                "kağıt",
-                "bozulması",
-                "nedeniyle",
-                "tarihi",
-                "verilerin",
-                "yüzyıllar",
-                "boyunca",
-                "bozulduğunu",
-                "algılamak",
-                "zor",
-                "olabilir"
-              ],
-              "enSentence": "It might be hard to perceive that historical data degrades over centuries due to extensive ink and paper degradation.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It must be safe to assume that backup servers clone files ___ for fear that a device failure should happen.",
-              "options": [
-                "instance",
-                "instant",
-                "instances",
-                "instantly"
-              ],
-              "correctIndex": 3,
-              "translation": "Cihaz arızası meydana gelebilir korkusuyla yedekleme sunucularının dosyaları anında kopyaladığını varsaymak güvenli olmalı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is easy to assume that constituent elements expand during compilation while the network handles baseline operations.",
-              "words": [
-                "yürütürken",
-                "bileşen",
-                "derleme",
-                "varsaymak",
-                "işlemleri",
-                "temel",
-                "kolaydır",
-                "Ağ",
-                "unsurların",
-                "kayıtları",
-                "sırasında",
-                "kağıt",
-                "genişlediğini",
-                "doğruladığından"
-              ],
-              "correctOrder": [
-                "Ağ",
-                "temel",
-                "işlemleri",
-                "yürütürken",
-                "derleme",
-                "sırasında",
-                "bileşen",
-                "unsurların",
-                "genişlediğini",
-                "varsaymak",
-                "kolaydır"
-              ],
-              "enSentence": "It is easy to assume that constituent elements expand during compilation while the network handles baseline operations.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is necessary to redefine that ___ parameters change rapidly since industrialized carbon metrics rose.",
-              "options": [
-                "environments",
-                "environmentally",
-                "environment",
-                "environmental"
-              ],
-              "correctIndex": 3,
-              "translation": "Endüstrileşmiş karbon metrikleri yükseldiğinden beri çevresel parametrelerin hızla değiştiğini yeniden tanımlamak gerekir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It was difficult to interpret that the draft clauses varied significantly before the legal architect analyzed the text.",
-              "words": [
-                "mimarı",
-                "metni",
-                "ölçüde",
-                "doğrulamak",
-                "önemli",
-                "maddelerin",
-                "analiz",
-                "gösterdiğini",
-                "önce",
-                "etmeden",
-                "Bir",
-                "Hukuk",
-                "taslak",
-                "yorumlamak",
-                "değişiklik",
-                "güçlendirilmemiş",
-                "zordu"
-              ],
-              "correctOrder": [
-                "Hukuk",
-                "mimarı",
-                "metni",
-                "analiz",
-                "etmeden",
-                "önce",
-                "taslak",
-                "maddelerin",
-                "önemli",
-                "ölçüde",
-                "değişiklik",
-                "gösterdiğini",
-                "yorumlamak",
-                "zordu"
-              ],
-              "enSentence": "It was difficult to interpret that the draft clauses varied significantly before the legal architect analyzed the text.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is helpful to clarify that advanced algorithms run queries ___ now that cloud memory slots are upgraded.",
-              "options": [
-                "seaming",
-                "seamlessly",
-                "seam",
-                "seamless"
-              ],
-              "correctIndex": 1,
-              "translation": "Bulut bellek yuvaları yükseltildiği için gelişmiş algoritmaların sorguları sorunsuz bir şekilde çalıştırdığını netleştirmek faydalıdır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It will be mandatory to enforce that manufacturing factories reduce carbon emissions once the assembly passes the bill.",
-              "words": [
-                "üretim",
-                "fabrikalarının",
-                "zorunlu",
-                "olacaktır",
-                "duvarlarının",
-                "Meclis",
-                "yasayı",
-                "geçirdiğinde",
-                "karbon",
-                "tahsis",
-                "emisyonlarını",
-                "uygulamak",
-                "güçlendirilmemiş",
-                "azalttığını"
-              ],
-              "correctOrder": [
-                "Meclis",
-                "yasayı",
-                "geçirdiğinde",
-                "üretim",
-                "fabrikalarının",
-                "karbon",
-                "emisyonlarını",
-                "azalttığını",
-                "uygulamak",
-                "zorunlu",
-                "olacaktır"
-              ],
-              "enSentence": "It will be mandatory to enforce that manufacturing factories reduce carbon emissions once the assembly passes the bill.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It should be simple to demonstrate that variables ___ under normal loads just as the physics concept predicts.",
-              "options": [
-                "interacting",
-                "interaction",
-                "interact",
-                "interactive"
-              ],
-              "correctIndex": 2,
-              "translation": "Değişkenlerin fizik kavramının öngördüğü gibi normal yükler altında etkileşime girdiğini göstermek basit olmalı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It was reassuring to confirm that automated firewalls block ___ traffic whenever a query loop executes.",
-              "options": [
-                "authenticity",
-                "authenticated",
-                "unauthenticated",
-                "authentication"
-              ],
-              "correctIndex": 2,
-              "translation": "Bir sorgu döngüsü çalıştığında otomatik güvenlik duvarlarının kimliği doğrulanmamış trafiği engellediğini doğrulamak rahatlatıcıydı."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It was problematic to imply that unreinforced structures fail seismic stress on grounds that the foundation grid cracked.",
-              "words": [
-                "sismik",
-                "strese",
-                "etmek",
-                "Temel",
-                "kritik",
-                "yapıların",
-                "gerekçesiyle",
-                "bölündüğünü",
-                "ima",
-                "güçlendirilmemiş",
-                "sorunluydu",
-                "çatlaması",
-                "düştüğünü",
-                "Harici",
-                "ızgarasının",
-                "yenik"
-              ],
-              "correctOrder": [
-                "Temel",
-                "ızgarasının",
-                "çatlaması",
-                "gerekçesiyle",
-                "güçlendirilmemiş",
-                "yapıların",
-                "sismik",
-                "strese",
-                "yenik",
-                "düştüğünü",
-                "ima",
-                "etmek",
-                "sorunluydu"
-              ],
-              "enSentence": "It was problematic to imply that unreinforced structures fail seismic stress on grounds that the foundation grid cracked.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It might be hard to perceive that historical data ___ over centuries due to extensive ink and paper degradation.",
-              "options": [
-                "degrading",
-                "degraded",
-                "degradation",
-                "degrades"
-              ],
-              "correctIndex": 3,
-              "translation": "Yoğun mürekkep ve kağıt bozulması nedeniyle tarihi verilerin yüzyıllar boyunca bozulduğunu algılamak zor olabilir."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is easy to assume that constituent ___ expand during compilation while the network handles baseline operations.",
-              "options": [
-                "elementary",
-                "element",
-                "elemental",
-                "elements"
-              ],
-              "correctIndex": 3,
-              "translation": "Ağ temel işlemleri yürütürken derleme sırasında bileşen unsurların genişlediğini varsaymak kolaydır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "It is critical to ensure that compliance laws validate database transactions lest anonymous scripts should breach records.",
-              "words": [
-                "emin",
-                "ihlal",
-                "önem",
-                "işlemlerini",
-                "doğruladığından",
-                "uyumluluk",
-                "kayıtları",
-                "taşır",
-                "diye",
-                "belirteçlerini",
-                "tabanı",
-                "belirtmek",
-                "yasalarının",
-                "olmak",
-                "kodlar",
-                "Anonim",
-                "kritik",
-                "etmesin",
-                "veri",
-                "gerekçesiyle"
-              ],
-              "correctOrder": [
-                "Anonim",
-                "kodlar",
-                "kayıtları",
-                "ihlal",
-                "etmesin",
-                "diye",
-                "uyumluluk",
-                "yasalarının",
-                "veri",
-                "tabanı",
-                "işlemlerini",
-                "doğruladığından",
-                "emin",
-                "olmak",
-                "kritik",
-                "önem",
-                "taşır"
-              ],
-              "enSentence": "It is critical to ensure that compliance laws validate database transactions lest anonymous scripts should breach records.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It was difficult to interpret that the draft ___ varied significantly before the legal architect analyzed the text.",
-              "options": [
-                "clause",
-                "clausal",
-                "claused",
-                "clauses"
-              ],
-              "correctIndex": 3,
-              "translation": "Hukuk mimarı metni analiz etmeden önce taslak maddelerin önemli ölçüde değişiklik gösterdiğini yorumlamak zordu."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_cloze_${i}",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It will be mandatory to enforce that ___ factories reduce carbon emissions once the assembly passes the bill.",
-              "options": [
-                "manufacturer",
-                "manufacture",
-                "manufactured",
-                "manufacturing"
-              ],
-              "correctIndex": 3,
-              "translation": "Meclis yasayı geçirdiğinde üretim fabrikalarının karbon emisyonlarını azalttığını uygulamak zorunlu olacaktır."
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_wb_${i}",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
-              "translation": "Laboratuvar sıvısı steril olmasına rağmen karışımın içindeki organik hücrelerin bölündüğünü gözlemlemek ilginç olmalı.",
-              "words": [
-                "before",
-                "the mixture although the",
-                "organic cells divide inside",
-                "is",
-                "was",
-                "after",
-                "laboratory fluid is",
-                "will",
-                "It should be interesting to observe that",
-                "sterile."
-              ],
-              "correctOrder": [
-                "It should be interesting to observe that",
-                "organic cells divide inside",
-                "the mixture although the",
-                "laboratory fluid is",
-                "sterile."
-              ],
-              "enSentence": "It should be interesting to observe that organic cells divide inside the mixture although the laboratory fluid is sterile.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It is urgent to report that secondary systems override active entry tokens seeing that external client traces look malicious.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It is urgent to report that secondary systems override active entry tokens seeing that external client traces look malicious.",
-              "correctSentence": "Harici istemci izleri kötü niyetli göründüğü için ikincil sistemlerin aktif giriş belirteçlerini geçersiz kıldığını bildirmek acildir.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u${unitId}l${lessonId}_${exId}_tr_${idx}",
-              "type": "translation-text",
-              "prompt": "\"It was legal to specify that corporate entities reallocate office resources in order that cross-disciplinary groups could function.\" ifadesini Türkçe'ye çevirin:",
-              "enSentence": "It was legal to specify that corporate entities reallocate office resources in order that cross-disciplinary groups could function.",
-              "correctSentence": "Disiplinler arası grupların çalışabilmesi için kurumsal yapıların ofis kaynaklarını yeniden tahsis ettiğini belirtmek yasalara uygundur.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    }
+    "exercises": [
+      {
+        "id": "u29l92ex1",
+        "title": "Alıştırma 1: Öbek ve Temel Sahte Özne Girişleri",
+        "description": "It is/was/has been + Adjective/V3 + that modellerinin temel seviye soru seti.",
+        "questions": [
+          {
+            "id": "u29l92_ex1_q1",
+            "type": "matching",
+            "prompt": "Sahte özne öbeklerini Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "It is evident that demographic shifts affect urban communities.",
+                "right": "Demografik değişimlerin kentsel toplulukları etkilediği açıktır."
+              },
+              {
+                "left": "It was confirmed that historians restored ancient manuscripts.",
+                "right": "Tarihçilerin antik elyazmalarını restore ettiği doğrulandı."
+              },
+              {
+                "left": "It has been argued that economic growth requires financial stability.",
+                "right": "Ekonomik büyümenin finansal istikrar gerektirdiği iddia edilmiştir."
+              },
+              {
+                "left": "It is believed that civil liberties protect human rights.",
+                "right": "Sivil özgürlüklerin insan haklarını koruduğuna inanılır."
+              }
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Tarih",
+              "İktisat"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code><br><br><strong>'It is obvious that economists analyze financial stability during market crises.'</strong>",
+            "options": [
+              "Finansal istikrarın iktisatçılar tarafından kriz esnasında bozulduğu açıktır.",
+              "İktisatçıların piyasa krizleri sırasında finansal istikrarı analiz ettiği belirgindir.",
+              "İktisatçılar piyasa krizlerinde finansal istikrarı analiz etmeyi reddetmiştir.",
+              "Piyasa krizlerinin finansal istikrarı etkileyeceği iktisatçılarca düşünülmüştü."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It is obvious that economists analyze financial stability during market crises.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code><br><br><strong>'It was documented that archaeologists preserved ancient artifacts in regional museums.'</strong>",
+            "options": [
+              "Bölgesel müzelerdeki antik eserlerin arkeologlar tarafından sergilendiği iddia edildi.",
+              "Antik eserlerin korunduğu belgelense de arkeologlar araştırmayı durdurdu.",
+              "Arkeologların antik eserleri bölgesel müzelerde koruduğu belgelenmişti.",
+              "Arkeologların antik eserleri bölgesel müzelere taşımak zorunda kaldığı açıklandı."
+            ],
+            "correctIndex": 2,
+            "isEngToTr": true,
+            "enSentence": "It was documented that archaeologists preserved ancient artifacts in regional museums.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Arkeoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It has been + Past Participle + THAT + Subject + Verb + Object]</code><br><br><strong>'It has been reported that sociologists investigate voting behavior across urban districts.'</strong>",
+            "options": [
+              "Kentsel bölgelerdeki oy verme davranışının sosyologları şaşırttığı öne sürülmüştü.",
+              "Sosyologlar kentsel bölgelerde oy verme davranışlarını incelemekten kaçınmıştır.",
+              "Oy verme davranışının kentsel bölgelerde değiştiği sosyologlarca onaylanmıştı.",
+              "Sosyologların kentsel bölgelerde oy verme davranışını araştırdığı bildirilmiştir."
+            ],
+            "correctIndex": 3,
+            "isEngToTr": true,
+            "enSentence": "It has been reported that sociologists investigate voting behavior across urban districts.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sosyoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne sıfatını/yapısını seçiniz:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code>",
+            "sentence": "It is ___ that psychologists examine cognitive processes under extreme pressure.",
+            "options": [
+              "evident",
+              "reluctant",
+              "unlikely to",
+              "accustomed"
+            ],
+            "correctIndex": 0,
+            "correctAnswer": "evident",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun bağlacı seçiniz:<br><br><code>[It was + Past Participle + THAT + Clause]</code>",
+            "sentence": "It was acknowledged ___ legal analysts clarified constitutional laws during parliamentary debates.",
+            "options": [
+              "whether",
+              "that",
+              "unless",
+              "in order that"
+            ],
+            "correctIndex": 1,
+            "correctAnswer": "that",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun edilgen fiil çekimini seçiniz:<br><br><code>[It has been + Past Participle + THAT + Clause]</code>",
+            "sentence": "It has been ___ that geographers map environmental factors in coastal areas.",
+            "options": [
+              "observe",
+              "observing",
+              "observed",
+              "to observe"
+            ],
+            "correctIndex": 2,
+            "correctAnswer": "observed",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun yan cümle özneli isim tamlamasını seçiniz:<br><br><code>[It is + Adjective + THAT + Subject + Verb]</code>",
+            "sentence": "It is vital that ___ evaluate media coverage during national elections.",
+            "options": [
+              "journalism",
+              "journalistic",
+              "journey",
+              "journalists"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "journalists",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İletişim",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It is clear that historians examine primary sources inside the archival building.",
+            "words": [
+              "Tarihçilerin",
+              "arşiv",
+              "binası",
+              "içinde",
+              "birincil",
+              "kaynakları",
+              "incelediği",
+              "açıktır."
+            ],
+            "correctOrder": [
+              "Tarihçilerin",
+              "arşiv",
+              "binası",
+              "içinde",
+              "birincil",
+              "kaynakları",
+              "incelediği",
+              "açıktır."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Tarih",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It was verified that courts protected civil liberties.",
+            "words": [
+              "Mahkemelerin",
+              "sivil",
+              "özgürlükleri",
+              "koruduğu",
+              "doğrulanmıştı."
+            ],
+            "correctOrder": [
+              "Mahkemelerin",
+              "sivil",
+              "özgürlükleri",
+              "koruduğu",
+              "doğrulanmıştı."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u29l92ex2",
+        "title": "Alıştırma 2: Edilgen Yapılar ve Akademik Yan Cümleler",
+        "description": "Edilgen Sahte Özne ve bağlaç kalıplarının akademik cümle uygulamaları.",
+        "questions": [
+          {
+            "id": "u29l92_ex2_q1",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It is apparent that film directors apply cinematic techniques in modern cinema.",
+            "correctAnswer": "Film yönetmenlerinin modern sinemada sinematik teknikler uyguladığı açıktır.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q2",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It was hypothesized that anthropologists analyze social structures in ancient civilizations.",
+            "correctAnswer": "Antropologların antik uygarlıklarda sosyal yapıları incelediği varsayılmıştı.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Antropoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code><br><br><strong>'It is undeniable that archival documents are preserved by dedicated curators.'</strong>",
+            "options": [
+              "Arşiv belgelerinin özverili küratörler tarafından korunduğu yadsınamaz.",
+              "Özverili küratörlerin arşiv belgelerini yakında sergileyeceği reddedildi.",
+              "Arşiv belgeleri korunsa da küratörlerin müzeden ayrıldığı iddia edilmişti.",
+              "Küratörlerin arşiv belgelerini korumakta zorlandığı netleşmiştir."
+            ],
+            "correctIndex": 0,
+            "isEngToTr": true,
+            "enSentence": "It is undeniable that archival documents are preserved by dedicated curators.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sanat Tarihi",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code><br><br><strong>'It was observed that psychological stress increases among urban workers during economic recessions.'</strong>",
+            "options": [
+              "Psikolojik stresin kentsel çalışanları ekonomik durgunlukta etkilemediği belirtilmişti.",
+              "Ekonomik durgunluklar sırasında kentsel çalışanlar arasında psikolojik stresin arttığı gözlemlenmişti.",
+              "Kentsel çalışanların psikolojik strese rağmen üretkenliğini koruduğu söylenmişti.",
+              "Ekonomik durgunluğun kentsel alanlarda psikolojik stresi azalttığı tespit edilmişti."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It was observed that psychological stress increases among urban workers during economic recessions.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne past participle yapısını seçiniz:<br><br><code>[It was + Past Participle + THAT + Clause]</code>",
+            "sentence": "It was ___ that policy reforms stimulate economic growth in developing nations.",
+            "options": [
+              "demonstrate",
+              "demonstrating",
+              "demonstrated",
+              "to demonstrate"
+            ],
+            "correctIndex": 2,
+            "correctAnswer": "demonstrated",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sıfatı seçiniz:<br><br><code>[It is + Adjective + THAT + Clause]</code>",
+            "sentence": "It is ___ that historians consult primary sources before writing monographs.",
+            "options": [
+              "reluctant",
+              "accustomed to",
+              "incapable",
+              "essential"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "essential",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Tarih",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It has been verified that anthropologists research cultural heritage in urban communities.",
+            "words": [
+              "Antropologların",
+              "kentsel",
+              "topluluklarda",
+              "kültürel",
+              "mirası",
+              "araştırdığı",
+              "doğrulanmıştır."
+            ],
+            "correctOrder": [
+              "Antropologların",
+              "kentsel",
+              "topluluklarda",
+              "kültürel",
+              "mirası",
+              "araştırdığı",
+              "doğrulanmıştır."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Antropoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It is estimated that geographers map environmental factors in coastal regions.",
+            "words": [
+              "Coğrafyacıların",
+              "kıyı",
+              "bölgelerinde",
+              "çevresel",
+              "faktörleri",
+              "haritalandırdığı",
+              "tahmin",
+              "edilmektedir."
+            ],
+            "correctOrder": [
+              "Coğrafyacıların",
+              "kıyı",
+              "bölgelerinde",
+              "çevresel",
+              "faktörleri",
+              "haritalandırdığı",
+              "tahmin",
+              "edilmektedir."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q9",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It was established that judicial decisions uphold constitutional laws in democratic societies.",
+            "correctAnswer": "Yargı kararlarının demokratik toplumlarda anayasal yasaları savunduğu saptanmıştı.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex2_q10",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It has been + Past Participle + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It has been recognized that film directors convey symbolic meanings through camera angles.",
+            "correctAnswer": "Film yönetmenlerinin kamera açıları aracılığıyla sembolik anlamlar aktardığı kabul edilmiştir.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u29l92ex3",
+        "title": "Alıştırma 3: İleri Seviye Akademik & Karma Analiz",
+        "description": "Beşeri bilimler ve iktisat metinlerinde Sahte Özne yapılarının ileri uygulamaları.",
+        "questions": [
+          {
+            "id": "u29l92_ex3_q1",
+            "type": "matching",
+            "prompt": "İfadeleri akademik Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "It is widely acknowledged that urban communities experience demographic shifts.",
+                "right": "Kentsel toplulukların demografik değişimler yaşadığı yaygın şekilde kabul edilir."
+              },
+              {
+                "left": "It was explicitly stated that courts protected civil liberties during crises.",
+                "right": "Mahkemelerin krizlerde sivil özgürlükleri koruduğu açıkça belirtilmişti."
+              },
+              {
+                "left": "It has been statistically proven that economic growth stimulates employment.",
+                "right": "Ekonomik büyümenin istihdamı tetiklediği istatistiksel olarak kanıtlanmıştır."
+              },
+              {
+                "left": "It is generally assumed that primary sources provide authentic historical records.",
+                "right": "Birincil kaynakların otantik tarihsel kayıtlar sağladığı genel olarak varsayılır."
+              }
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sosyoloji",
+              "Hukuk",
+              "İktisat",
+              "Tarih",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q2",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code><br><br><strong>'It is clear that journalists investigate political corruption in modern democracies.'</strong>",
+            "options": [
+              "Gazetecilerin modern demokrasilerde siyasi yolsuzlukları araştırdığı açıktır.",
+              "Siyasi yolsuzlukların gazeteciler tarafından örtbas edildiği düşünülmektedir.",
+              "Modern demokrasilerde gazetecilerin araştırma yapması engellenmiştir.",
+              "Siyasi yolsuzlukların gazetecilik mesleğini tehdit ettiği iddia edildi."
+            ],
+            "correctIndex": 0,
+            "isEngToTr": true,
+            "enSentence": "It is clear that journalists investigate political corruption in modern democracies.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İletişim",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code><br><br><strong>'It was reported that psychologists evaluated cognitive responses under stress.'</strong>",
+            "options": [
+              "Bilişsel tepkilerin stres altındaki bireylerde kaybolduğu gözlemlenmişti.",
+              "Psikologların stres altında bilişsel tepkileri değerlendirdiği bildirilmişti.",
+              "Psikologlar stres altında bilişsel tepkileri ölçmekten vazgeçmişti.",
+              "Stres altındaki bireylerin psikologlara başvurmadığı açıklanmıştı."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It was reported that psychologists evaluated cognitive responses under stress.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It has been + Past Participle + THAT + Subject + Verb + Object]</code><br><br><strong>'It has been verified that geographers mapped coastal erosion across southern regions.'</strong>",
+            "options": [
+              "Güney bölgelerindeki kıyı erozyonunun coğrafyacıları endişelendirdiği bilinmektedir.",
+              "Coğrafyacılar kıyı erozyonunu haritalandırmakta geç kalmıştır.",
+              "Coğrafyacıların güney bölgeleri boyunca kıyı erozyonunu haritalandırdığı doğrulanmıştır.",
+              "Kıyı erozyonunun güney bölgelerinde durdurulduğu duyurulmuştu."
+            ],
+            "correctIndex": 2,
+            "isEngToTr": true,
+            "enSentence": "It has been verified that geographers mapped coastal erosion across southern regions.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne sıfatını seçiniz:<br><br><code>[It is + Adjective + THAT + Clause]</code>",
+            "sentence": "It is ___ that curators restore ancient artifacts inside central archives.",
+            "options": [
+              "unwilling",
+              "reluctant",
+              "accustomed",
+              "imperative"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "imperative",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sanat Tarihi",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun edilgen fiil çekimini seçiniz:<br><br><code>[It was + Past Participle + THAT + Clause]</code>",
+            "sentence": "It was ___ that voting behavior shifts dramatically during economic crises.",
+            "options": [
+              "observed",
+              "observe",
+              "observing",
+              "to observe"
+            ],
+            "correctIndex": 0,
+            "correctAnswer": "observed",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sosyoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It is evident that constitutional laws protect civil rights in democratic nations.",
+            "words": [
+              "Anayasal",
+              "yasaların",
+              "demokratik",
+              "uluslarda",
+              "sivil",
+              "hakları",
+              "koruduğu",
+              "açıktır."
+            ],
+            "correctOrder": [
+              "Anayasal",
+              "yasaların",
+              "demokratik",
+              "uluslarda",
+              "sivil",
+              "hakları",
+              "koruduğu",
+              "açıktır."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It has been documented that archaeologists excavated ancient artifacts near coastal areas.",
+            "words": [
+              "Arkeologların",
+              "kıyı",
+              "bölgeleri",
+              "yakınında",
+              "antik",
+              "eserleri",
+              "kazıp",
+              "çıkardığı",
+              "belgelenmiştir."
+            ],
+            "correctOrder": [
+              "Arkeologların",
+              "kıyı",
+              "bölgeleri",
+              "yakınında",
+              "antik",
+              "eserleri",
+              "kazıp",
+              "çıkardığı",
+              "belgelenmiştir."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Arkeoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q9",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It is + Adjective + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It is obvious that film directors convey emotional states through lighting techniques.",
+            "correctAnswer": "Film yönetmenlerinin aydınlatma teknikleri aracılığıyla duygusal durumları aktardığı belirgindir.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l92_ex3_q10",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Past Participle + THAT + Subject + Verb + Object]</code>",
+            "enSentence": "It was confirmed that economists evaluated market stability prior to monetary reforms.",
+            "correctAnswer": "İktisatçıların parasal reformlardan önce piyasa istikrarını değerlendirdiği doğrulanmıştı.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
   },
+  "2": {
+    "title": "2. Mastarlı Sahte Özne Yapıları (It + is/was + Adjective/V3 + to V1 + that + Clause)",
+    "subtitle": "Mastar eylemleri aracılığıyla that cümleciğine bağlanan açıklayıcı modeller",
+    "konuAnlatimi": {
+      "baslik": "Mastarlı Sahte Özne Yapıları Kılavuzu (It is easy to assume that..., It is essential to clarify that...)",
+      "teorikMantik": "Bu yapı, bir durumun veya eylemin zorluk, kolaylık, önem veya gereklilik derecesini bir mastar (to V1) fiili aracılığıyla 'that' yan cümlesine bağlar.",
+      "formul": "[It is / was + Sıfat / V3 + TO VERB + THAT + Özne + Fiil + Nesne]",
+      "altinKural": "• Mastarlı Kalıplar: It is easy to assume that, It is hard to perceive that, It is crucial to emphasize that, It is essential to clarify that<br>• Akademik Bağlam: Yan cümle içinde daima tam cümle (S + V + O) yer almalıdır."
+    },
+    "exercises": [
+      {
+        "id": "u29l93ex1",
+        "title": "Alıştırma 1: Öbek ve Temel Mastarlı Girişler",
+        "description": "It is/was + Adj + to V1 + that modellerinin temel seviye soru seti.",
+        "questions": [
+          {
+            "id": "u29l93_ex1_q1",
+            "type": "matching",
+            "prompt": "Mastarlı sahte özne öbeklerini Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "It is easy to assume that demographic shifts alter voting behavior.",
+                "right": "Demografik değişimlerin oy verme davranışını değiştirdiğini varsaymak kolaydır."
+              },
+              {
+                "left": "It was hard to perceive that economic growth slowed down during crises.",
+                "right": "Ekonomik büyümenin krizlerde yavaşladığını algılamak zordu."
+              },
+              {
+                "left": "It is crucial to emphasize that civil liberties protect citizens.",
+                "right": "Sivil özgürlüklerin vatandaşları koruduğunu vurgulamak kritik önemdedir."
+              },
+              {
+                "left": "It was helpful to clarify that historians verified primary sources.",
+                "right": "Tarihçilerin birincil kaynakları doğruladığını netleştirmek faydalıydı."
+              }
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Sosyoloji",
+              "İktisat"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q2",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + TO VERB + THAT + Subject + Verb + Object]</code><br><br><strong>'It is essential to clarify that economists examine financial stability during recessions.'</strong>",
+            "options": [
+              "Finansal istikrarın durgunluk döneminde iktisatçılarca bozulduğunu açıklamak imkansızdı.",
+              "İktisatçıların durgunluklarda finansal istikrarı incelediğini netleştirmek esastır.",
+              "İktisatçılar durgunluklarda finansal istikrarı incelemeyi ertelemiştir.",
+              "Durgunluk döneminde finansal istikrarın sağlandığı iktisatçılarca doğrulanmıştı."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It is essential to clarify that economists examine financial stability during recessions.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Past Participle + TO VERB + THAT + Subject + Verb + Object]</code><br><br><strong>'It was required to confirm that archaeologists excavated ancient artifacts carefully.'</strong>",
+            "options": [
+              "Antik eserlerin bölgesel müzede korunduğunu arkeologlara bildirmek zorunluydu.",
+              "Arkeologlar antik eserleri kazarken zarar verdiklerini kabul etmiştir.",
+              "Arkeologların antik eserleri dikkatle kazıp çıkardığını doğrulamak gerekmişti.",
+              "Dikkatle çıkarılan antik eserlerin müzeye taşındığı daha önce açıklanmıştı."
+            ],
+            "correctIndex": 2,
+            "isEngToTr": true,
+            "enSentence": "It was required to confirm that archaeologists excavated ancient artifacts carefully.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Arkeoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + TO VERB + THAT + Subject + Verb + Object]</code><br><br><strong>'It is important to understand that sociologists study social structures in urban districts.'</strong>",
+            "options": [
+              "Kentsel bölgelerdeki sosyal yapıların sosyologlarca değiştirildiği unutulmamalıdır.",
+              "Sosyologlar kentsel alanlarda sosyal yapıları incelemeyi reddetmiştir.",
+              "Sosyal yapıların kentsel bölgelerde bozulduğunu anlamak uzmanlık gerektirir.",
+              "Sosyologların kentsel bölgelerde sosyal yapıları incelediğini anlamak önemlidir."
+            ],
+            "correctIndex": 3,
+            "isEngToTr": true,
+            "enSentence": "It is important to understand that sociologists study social structures in urban districts.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sosyoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar fiilini seçiniz:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "sentence": "It is necessary to ___ that psychologists evaluate cognitive processes objectively.",
+            "options": [
+              "note",
+              "noted",
+              "noting",
+              "to note"
+            ],
+            "correctIndex": 0,
+            "correctAnswer": "note",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne sıfatını seçiniz:<br><br><code>[It was + Adjective + to V1 + THAT + Clause]</code>",
+            "sentence": "It was ___ to prove that legal analysts interpreted constitutional laws accurately.",
+            "options": [
+              "unlikely to",
+              "difficult",
+              "accustomed",
+              "reluctant"
+            ],
+            "correctIndex": 1,
+            "correctAnswer": "difficult",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q7",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun bağlacı seçiniz:<br><br><code>[It is + Adjective + to V1 + THAT + Clause]</code>",
+            "sentence": "It is helpful to note ___ geographers document environmental factors in coastal regions.",
+            "options": [
+              "whether",
+              "unless",
+              "that",
+              "in case"
+            ],
+            "correctIndex": 2,
+            "correctAnswer": "that",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q8",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun nesne tamlamasını seçiniz:<br><br><code>[It was + Past Participle + to V1 + THAT + Subject + Verb + Object]</code>",
+            "sentence": "It was recommended to specify that journalists analyze ___ during national elections.",
+            "options": [
+              "medium cover",
+              "media covering",
+              "mediatic",
+              "media coverage"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "media coverage",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İletişim",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q9",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It is important to emphasize that historians examine primary sources inside archives.",
+            "words": [
+              "Tarihçilerin",
+              "arşivler",
+              "içinde",
+              "birincil",
+              "kaynakları",
+              "incelediğini",
+              "vurgulamak",
+              "önemlidir."
+            ],
+            "correctOrder": [
+              "Tarihçilerin",
+              "arşivler",
+              "içinde",
+              "birincil",
+              "kaynakları",
+              "incelediğini",
+              "vurgulamak",
+              "önemlidir."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Tarih",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex1_q10",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It was helpful to confirm that courts protected civil liberties.",
+            "words": [
+              "Mahkemelerin",
+              "sivil",
+              "özgürlükleri",
+              "koruduğunu",
+              "doğrulamak",
+              "faydalıydı."
+            ],
+            "correctOrder": [
+              "Mahkemelerin",
+              "sivil",
+              "özgürlükleri",
+              "koruduğunu",
+              "doğrulamak",
+              "faydalıydı."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u29l93ex2",
+        "title": "Alıştırma 2: Cümle ve Mastarlı Değerlendirmeler",
+        "description": "Mastar eylemleri ile bağlanan sahte özne cümlelerinin analiz soruları.",
+        "questions": [
+          {
+            "id": "u29l93_ex2_q1",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It is fascinating to observe that film directors utilize cinematic techniques in modern cinema.",
+            "correctAnswer": "Film yönetmenlerinin modern sinemada sinematik teknikler kullandığını gözlemlemek büyüleyicidir.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q2",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It was reasonable to assume that anthropologists studied social structures in ancient civilizations.",
+            "correctAnswer": "Antropologların antik uygarlıklarda sosyal yapıları incelediğini varsaymak makuldü.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Antropoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code><br><br><strong>'It is reassuring to know that archival documents are preserved by dedicated curators.'</strong>",
+            "options": [
+              "Arşiv belgelerinin özverili küratörlerce korunduğunu bilmek rahatlatıcıdır.",
+              "Küratörlerin arşiv belgelerini korumadığını öğrenmek endişe vericidir.",
+              "Arşiv belgelerini koruyan küratörlerin ödüllendirildiği bildirilmiştir.",
+              "Özverili küratörlerin arşiv belgelerini sergilemeyi reddettiği söylenmiştir."
+            ],
+            "correctIndex": 0,
+            "isEngToTr": true,
+            "enSentence": "It is reassuring to know that archival documents are preserved by dedicated curators.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sanat Tarihi",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Past Participle + TO VERB + THAT + Clause]</code><br><br><strong>'It was expected to verify that psychological stress increases among urban workers.'</strong>",
+            "options": [
+              "Psikolojik stresin kentsel çalışanları etkilemediğini kanıtlamak zordu.",
+              "Kentsel çalışanlar arasında psikolojik stresin arttığını doğrulamak bekleniyordu.",
+              "Çalışanların psikolojik strese karşı direnç gösterdiği doğrulanmıştı.",
+              "Kentsel alanlardaki psikolojik stresin azaldığını iddia etmek beklenmiyordu."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It was expected to verify that psychological stress increases among urban workers.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun fiil biçimini seçiniz:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code>",
+            "sentence": "It was logical to ___ that policy reforms stimulate economic growth in developing nations.",
+            "options": [
+              "concluded",
+              "concluding",
+              "conclude",
+              "to conclude"
+            ],
+            "correctIndex": 2,
+            "correctAnswer": "conclude",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne sıfatını seçiniz:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "sentence": "It is ___ to verify that historians consult primary sources before writing monographs.",
+            "options": [
+              "unwilling",
+              "accustomed",
+              "reluctant",
+              "vital"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "vital",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Tarih",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It was easy to prove that anthropologists research cultural heritage in urban communities.",
+            "words": [
+              "Antropologların",
+              "kentsel",
+              "topluluklarda",
+              "kültürel",
+              "mirası",
+              "araştırdığını",
+              "kanıtlamak",
+              "kolaydı."
+            ],
+            "correctOrder": [
+              "Antropologların",
+              "kentsel",
+              "topluluklarda",
+              "kültürel",
+              "mirası",
+              "araştırdığını",
+              "kanıtlamak",
+              "kolaydı."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Antropoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It was urgent to state that geographers map environmental factors in coastal regions.",
+            "words": [
+              "Coğrafyacıların",
+              "kıyı",
+              "bölgelerinde",
+              "çevresel",
+              "faktörleri",
+              "haritalandırdığını",
+              "belirtmek",
+              "acildi."
+            ],
+            "correctOrder": [
+              "Coğrafyacıların",
+              "kıyı",
+              "bölgelerinde",
+              "çevresel",
+              "faktörleri",
+              "haritalandırdığını",
+              "belirtmek",
+              "acildi."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q9",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It is essential to recognize that judicial decisions uphold constitutional laws in democratic societies.",
+            "correctAnswer": "Yargı kararlarının demokratik toplumlarda anayasal yasaları savunduğunu kabul etmek esastır.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex2_q10",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It was insightful to note that film directors convey symbolic meanings through camera angles.",
+            "correctAnswer": "Film yönetmenlerinin kamera açıları aracılığıyla sembolik anlamlar aktardığını belirtmek ufuk açıcıydı.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "u29l93ex3",
+        "title": "Alıştırma 3: İleri Mastarlı Analiz & Karma Mantık",
+        "description": "Disiplinlerarası akademik paragraf ve cümlelerde ileri seviye mastarlı sahte özne soruları.",
+        "questions": [
+          {
+            "id": "u29l93_ex3_q1",
+            "type": "matching",
+            "prompt": "Mastarlı akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "It is imperative to demonstrate that economic growth requires financial stability.",
+                "right": "Ekonomik büyümenin finansal istikrar gerektirdiğini göstermek zorunludur."
+              },
+              {
+                "left": "It was crucial to prove that ancient manuscripts belonged to regional archives.",
+                "right": "Antik elyazmalarının bölgesel arşivlere ait olduğunu kanıtlamak hayatiydi."
+              },
+              {
+                "left": "It is advisable to check that courts uphold constitutional rights.",
+                "right": "Mahkemelerin anayasal hakları savunduğunu kontrol etmek tavsiye edilir."
+              },
+              {
+                "left": "It was instructive to observe that voting behavior shifted in urban districts.",
+                "right": "Oy verme davranışının kentsel bölgelerde değiştiğini gözlemlemek öğreticiydi."
+              }
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "Tarih",
+              "Hukuk",
+              "Sosyoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q2",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code><br><br><strong>'It is logical to assume that journalists investigate political scandals in democratic nations.'</strong>",
+            "options": [
+              "Gazetecilerin demokratik uluslarda siyasi skandalları araştırdığını varsaymak mantıklıdır.",
+              "Siyasi skandalların gazeteciler tarafından örtbas edildiğini varsaymak hatalıdır.",
+              "Demokratik uluslarda gazetecilerin siyasi skandalları araştırması yasaklanmıştır.",
+              "Gazetecilik etik kurallarının skandallar nedeniyle değiştiğini söylemek zordur."
+            ],
+            "correctIndex": 0,
+            "isEngToTr": true,
+            "enSentence": "It is logical to assume that journalists investigate political scandals in democratic nations.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İletişim",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q3",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code><br><br><strong>'It was essential to demonstrate that psychologists analyze cognitive stress under pressure.'</strong>",
+            "options": [
+              "Bilişsel stresin psikologlarca baskı altında ölçülemediğini iddia etmek hatalıydı.",
+              "Psikologların baskı altında bilişsel stresi analiz ettiğini göstermek esastı.",
+              "Psikologların baskı altındaki bireyleri tedavi etmeyi reddettiği gösterilmişti.",
+              "Baskı altındaki bireylerin bilişsel stres yaşamadığını kanıtlamak mümkündü."
+            ],
+            "correctIndex": 1,
+            "isEngToTr": true,
+            "enSentence": "It was essential to demonstrate that psychologists analyze cognitive stress under pressure.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Psikoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q4",
+            "type": "multiple-choice",
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code><br><br><strong>'It is helpful to verify that geographers document environmental shifts in coastal regions.'</strong>",
+            "options": [
+              "Kıyı bölgelerindeki çevresel değişimlerin coğrafyacılar tarafından göz ardı edildiği doğrulanmıştı.",
+              "Coğrafyacıların çevresel değişimleri belgelemekte yetersiz kaldığı bilinmektedir.",
+              "Coğrafyacıların kıyı bölgelerindeki çevresel değişimleri belgelediğini doğrulamak faydalıdır.",
+              "Çevresel değişimlerin kıyı bölgelerinde durdurulduğunu iddia etmek imkansızdır."
+            ],
+            "correctIndex": 2,
+            "isEngToTr": true,
+            "enSentence": "It is helpful to verify that geographers document environmental shifts in coastal regions.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Coğrafya",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun sahte özne sıfatını seçiniz:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "sentence": "It is ___ to confirm that curators restore ancient artifacts inside archives.",
+            "options": [
+              "unwilling",
+              "reluctant",
+              "accustomed",
+              "advisable"
+            ],
+            "correctIndex": 3,
+            "correctAnswer": "advisable",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sanat Tarihi",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun mastar fiilini seçiniz:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code>",
+            "sentence": "It was important to ___ that voting behavior shifts during economic recessions.",
+            "options": [
+              "observe",
+              "observed",
+              "observing",
+              "to observe"
+            ],
+            "correctIndex": 0,
+            "correctAnswer": "observe",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sosyoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q7",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It is crucial to clarify that constitutional laws uphold human rights in democratic societies.",
+            "words": [
+              "Anayasal",
+              "yasaların",
+              "demokratik",
+              "toplumlarda",
+              "insan",
+              "haklarını",
+              "savunduğunu",
+              "netleştirmek",
+              "kritiktir."
+            ],
+            "correctOrder": [
+              "Anayasal",
+              "yasaların",
+              "demokratik",
+              "toplumlarda",
+              "insan",
+              "haklarını",
+              "savunduğunu",
+              "netleştirmek",
+              "kritiktir."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Hukuk",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q8",
+            "type": "word-bank",
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "sentence": "It was helpful to prove that archaeologists preserved ancient artifacts in regional museums.",
+            "words": [
+              "Arkeologların",
+              "antik",
+              "eserleri",
+              "bölgesel",
+              "müzelerde",
+              "koruduğunu",
+              "kanıtlamak",
+              "faydalıydı."
+            ],
+            "correctOrder": [
+              "Arkeologların",
+              "antik",
+              "eserleri",
+              "bölgesel",
+              "müzelerde",
+              "koruduğunu",
+              "kanıtlamak",
+              "faydalıydı."
+            ],
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Arkeoloji",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q9",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It is + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It is fascinating to note that film directors apply lighting techniques in modern cinema.",
+            "correctAnswer": "Film yönetmenlerinin modern sinemada aydınlatma teknikleri uyguladığını belirtmek büyüleyicidir.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "Sinema",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u29l93_ex3_q10",
+            "type": "translation-text",
+            "prompt": "Cümleyi Türkçe'ye çevirin:<br><br><code>[It was + Adjective + TO VERB + THAT + Clause]</code>",
+            "enSentence": "It was essential to verify that economists evaluated market stability prior to reforms.",
+            "correctAnswer": "İktisatçıların reformlardan önce piyasa istikrarını değerlendirdiğini doğrulamak esastı.",
+            "grammarTags": [
+              "Sahte Özne Yapıları",
+              "Sahte Özne",
+              "İktisat",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+},
   "30": {
     "1": {
       "exercises": [
@@ -48607,748 +47781,736 @@ const placementQuestions = [
   }
 
   })();
-// data.js - UNIT 35: ACADEMIC SENTENCE PARSING & REDUCTIONS
+// data.js - UNIT 35: ACADEMIC SENTENCE PARSING & REDUCTIONS (BÖLÜM 25 - 120 EXERCISES)
 const unit35 = {
   unitId: "unit_35_reductions",
-  unitTitle: "Akademik Cümle Analizi ve Kısaltmalar",
-  lessons: [
-    // =========================================================================
-    // DERS 1: SPOTLIGHT MODU (Projektör - Görsel Şema 11) - 9 Soru
-    // =========================================================================
+  unitTitle: "Akademik Cümle Analizi ve Kısaltmalar (Reductions)",
+  unitDescription: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles/Reductions), bağımsız özne yapıları, sonuç bildiren participle öbekleri ve akademik metin parsing stratejileri.",
+  formulas: [
     {
-      lessonId: "u35_l1",
-      lessonTitle: "1: Projektör Modu ile Akademik Kısaltma Analizi",
-      exercises: [
-        {
-          id: "u35_l1_q1",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "The methodology developed by international scientists proved to be highly effective.",
-          highlightChunk: "developed by",
-          options: [
-            "tarafından geliştirilen",
-            "geliştirmek amacıyla",
-            "geliştirilmesine rağmen",
-            "geliştirildiği için"
-          ],
-          correctIndex: 0,
-          translation: "Uluslararası bilim insanları tarafından geliştirilen metodolojinin son derece etkili olduğu kanıtlandı.",
-          explanation: "'developed by', aslında 'which was developed by' yapısının pasif kısaltmasıdır (Past Participle) ve '-tarafından geliştirilen' anlamına gelir."
-        },
-        {
-          id: "u35_l1_q2",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "Having completed the initial laboratory trials, the research crew began compiling the final data.",
-          highlightChunk: "Having completed",
-          options: [
-            "Tamamladıktan sonra",
-            "Tamamlandığı halde",
-            "Tamamlamak üzereyken",
-            "Tamamlanmadığı için"
-          ],
-          correctIndex: 0,
-          translation: "İlk laboratuvar denemelerini tamamladıktan sonra araştırma ekibi nihai verileri derlemeye başladı.",
-          explanation: "'Having + V3' yapısı, aktif bir zarf cümlecik kısaltmasıdır (Perfect Participle) ve ana eylemden daha önce 'yapmış/tamamlamış olduktan sonra' anlamı katar."
-        },
-        {
-          id: "u35_l1_q3",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "Faced with severe financial constraints, the administration had to abandon the space project.",
-          highlightChunk: "Faced with",
-          options: [
-            "Karşı karşıya kaldığı için",
-            "Karşı karşıya kalmaksızın",
-            "Karşı karşıya kaldığından ziyade",
-            "Karşı karşıya kalır kalmaz"
-          ],
-          correctIndex: 0,
-          translation: "Ciddi finansal kısıtlamalarla karşı karşıya kalan yönetim, uzay projesinden vazgeçmek zorunda kaldı.",
-          explanation: "Cümle başında 'V3' (Faced) ile başlayan yapılar, pasif neden-sonuç kısaltmasıdır ve '-ile karşı karşıya kaldığı için/kalan' anlamı taşır."
-        },
-        {
-          id: "u35_l1_q4",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "The government announced a new policy aimed at reducing global carbon emissions.",
-          highlightChunk: "aimed at",
-          options: [
-            "hedefleyen / -e yönelik",
-            "hedeflemeksizin",
-            "hedeflediği halde",
-            "hedeflemek amacıyla"
-          ],
-          correctIndex: 0,
-          translation: "Hükümet, küresel karbon emisyonlarını azaltmayı hedefleyen yeni bir politika duyurdu.",
-          explanation: "'aimed at', önündeki politikayı niteleyen pasif bir relative clause kısaltmasıdır; '-e yönelik/hedefleyen' demektir."
-        },
-        {
-          id: "u35_l1_q5",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "Not knowing the exact cause of the digital error, the software team reset the entire system.",
-          highlightChunk: "Not knowing",
-          options: [
-            "Bilmedikleri için",
-            "Bilmelerine rağmen",
-            "Bilmedikleri sürece",
-            "Bilir bilmez"
-          ],
-          correctIndex: 0,
-          translation: "Dijital hatanın kesin nedenini bilmedikleri için yazılım ekibi tüm sistemi sıfırladı.",
-          explanation: "Olumsuz aktif kısaltma 'Not + V-ing' yapısıyla kurulur ve '-bilmediği için' şeklinde sebep bildirir."
-        },
-        {
-          id: "u35_l1_q6",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "The core framework, through which we process metadata, remains completely secure.",
-          highlightChunk: "through which",
-          options: [
-            "aracılığıyla / vasıtasıyla",
-            "aksine / tezat olarak",
-            "haricinde / başka",
-            "beklentilerin aksine"
-          ],
-          correctIndex: 0,
-          translation: "Metadata işlediğimiz temel altyapı tamamen güvenli kalmaya devam ediyor.",
-          explanation: "Preposition + Relative Pronoun yapısıdır; 'framework'ü niteler ve 'onun aracılığıyla/vasıtasıyla' anlamı sunar."
-        },
-        {
-          id: "u35_l1_q7",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "The company selected a highly encrypted framework, thus preventing external cyber attacks.",
-          highlightChunk: "thus preventing",
-          options: [
-            "böylece önleyerek",
-            "önlemesine rağmen",
-            "önlemek amacıyla",
-            "önlemediği sürece"
-          ],
-          correctIndex: 0,
-          translation: "Güçlendirilmiş titanyum alaşımlarından üretilen uydu gövdesi, uzaydaki çarpışmadan sağlam çıktı.",
-          explanation: "'thus + V-ing' yapısı, bir eylemin mantıksal sonucunu '-böylece önleyerek/sağlayarak' şeklinde zarflaştırır."
-        },
-        {
-          id: "u35_l1_q8",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "The data compiling process, carried out by the tech crew, took three consecutive weeks.",
-          highlightChunk: "carried out by",
-          options: [
-            "tarafından yürütülen",
-            "tarafından ertelenen",
-            "rağmen iptal edilen",
-            "amacıyla başlatılan"
-          ],
-          correctIndex: 0,
-          translation: "İşlem hızlarını optimize etmeyi uman mühendis, derleyicinin mantığını değiştirdi.",
-          explanation: "'carried out by', pasif bir niteleme sıfatı cümleciği kısaltmasıdır (yürütülen/gerçekleştirilen)."
-        },
-        {
-          id: "u35_l1_q9",
-          type: "spotlight",
-          prompt: "Projektör Modu: Parlayan İngilizce öbeğin Türkçe anlamını seçin:",
-          paragraph: "Whether the board accepts the new proposal or not remains a matter of hot dispute.",
-          highlightChunk: "Whether the board accepts",
-          options: [
-            "Yönetim kurulunun kabul edip etmeyeceği",
-            "Yönetim kurulu kabul ettiği için",
-            "Yönetim kurulu kabul etmedikçe",
-            "Yönetim kurulu kabul etmesine rağmen"
-          ],
-          correctIndex: 0,
-          translation: "Birkaç gün boyunca gözetimsiz bırakılan sunucu aşırı ısındı ve otomatik olarak kapandı.",
-          explanation: "Cümlenin öznesi konumunda olan bir Noun Clause (İsim Cümleciliği) yapısıdır; '-edip etmeyeceği' anlamı katar."
-        }
-      ]
-    },
-
-    // =========================================================================
-    // DERS 2: SWIPE MODU (Hata Avcısı - Görsel Şema 12) - 9 Soru
-    // =========================================================================
-    {
-      lessonId: "u35_l2",
-      lessonTitle: "2: Hata Avcısı ile Yanlış Kısaltmaları Ayıklayın",
-      exercises: [
-        {
-          id: "u35_l2_q1",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "The cars manufacturing in this giant factory are exported to Germany.",
-          translation: "Bu dev fabrikada üretilen arabalar Almanya'ya ihraç ediliyor.",
-          isCorrect: false,
-          explanation: "BUG! Arabalar kendi kendini üretemez, pasif kısaltma olmalıdır. 'manufacturing' yerine 'manufactured' (üretilen) gelmeliydi."
-        },
-        {
-          id: "u35_l2_q2",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "Having written the final academic report, the scientist submitted it.",
-          translation: "Son akademik raporu yazdıktan sonra, bilim insanı onu teslim etti.",
-          isCorrect: true,
-          explanation: "VALID! Raporu yazan kişi bilim insanıdır, dolayısıyla aktif zamanlı Perfect Participle (Having written) kullanımı tamamen doğrudur."
-        },
-        {
-          id: "u35_l2_q3",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "Facing with economic hardships, the small firm went completely bankrupt.",
-          translation: "Ekonomik zorluklarla karşı karşıya kaldığı için, küçük firma tamamen iflas etti.",
-          isCorrect: false,
-          explanation: "BUG! 'Face' fiili '-ile karşılaşmak' anlamında pasif kurulur. 'Facing with' değil, 'Faced with' olmalıdır."
-        },
-        {
-          id: "u35_l2_q4",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "The framework developed by the tech team runs smoothly without lag.",
-          translation: "Teknoloji ekibi tarafından geliştirilen altyapı takılmadan sorunsuz çalışıyor.",
-          isCorrect: true,
-          explanation: "VALID! 'developed by' yapısı pasif relative clause kısaltması olarak tamamen doğru kurgulanmıştır."
-        },
-        {
-          id: "u35_l2_q5",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "Not having checking the server lines, the network technician missed the bug.",
-          translation: "Sunucu hatlarını kontrol etmediği için, ağ teknisyeni hatayı kaçırdı.",
-          isCorrect: false,
-          explanation: "BUG! 'Having' yardımcı fiilinden sonra gelen esas fiil mutlaka V3 olmalıdır. 'checking' yerine 'checked' gelmelidir."
-        },
-        {
-          id: "u35_l2_q6",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "The artifact, discovering by archeologists yesterday, belongs to Rome.",
-          translation: "Dün arkeologlar tarafından keşfedilen eser Roma'ya aittir.",
-          isCorrect: false,
-          explanation: "BUG! Eser arkeologlar tarafından 'keşfedilmiştir' (pasif). 'discovering' değil, 'discovered by' olmalıdır."
-        },
-        {
-          id: "u35_l2_q7",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "Although challenged by rivals, the tech champion maintained its core position.",
-          translation: "Rakipleri tarafından zorlansa da, teknoloji şampiyonu ana konumunu korudu.",
-          isCorrect: true,
-          explanation: "VALID! Zarf bağlaçlarının (Although) arkasından özne düşürülerek pasif kısaltma (V3) getirilmesi tamamen yasaldır."
-        },
-        {
-          id: "u35_l2_q8",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "The criteria using to select candidates were extremely strict.",
-          translation: "Adayları seçmek için kullanılan kriterler son derece katıydı.",
-          isCorrect: false,
-          explanation: "BUG! Kriterler insanları seçmez, kriterler 'kullanılır'. Aktif değil, pasif kısaltma olan 'used to' olmalıdır."
-        },
-        {
-          id: "u35_l2_q9",
-          type: "swipe",
-          prompt: "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-          phrase: "The logic underlying the algorithm is based on advanced binary matrices.",
-          translation: "Algoritmanın temelinde yatan mantık, ileri düzey ikili matrislere dayanır.",
-          isCorrect: true,
-          explanation: "VALID! 'Underlying' fiili doğası gereği aktiftir ve '-in temelinde yatan' anlamında aktif kısaltma (V-ing) olarak doğru kurgulanmıştır."
-        }
-      ]
-    },
-
-    // =========================================================================
-    // DERS 3: STRUCTURE-MATCH (Yapı Seçimi - Görsel Şema 17) - 9 Soru
-    // =========================================================================
-    {
-      lessonId: "u35_l3",
-      lessonTitle: "3: Yapısal Analize Göre Doğru Kısıltmayı Belirleyin",
-      exercises: [
-        {
-          id: "u35_l3_q1",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The digital framework __________ by Cursor Composer resolved all parsing bugs.",
-          options: ["generated", "generating", "generate", "to generate"],
-          correctIndex: 0,
-          translation: "Direktörün masasında duran proje önerisi acil ilgi gerektiriyor.",
-          translation: "Python ile yazılan kod TypeScript diline yeniden yapılandırıldı.",
-          translation: "Güneşte bırakılan cihaz aşırı ısındı ve kapandı.",
-          translation: "Fon sağlamayı uman girişim ekibi demolarını mükemmelleştirdi.",
-          translation: "Hava durumu takibi için tasarlanan uydunun yörünge sorunları var.",
-          translation: "Şifreyi bilmediği için kullanıcı yönetici profilini kilitledi.",
-          translation: "Yerel girişimlere yardım etmeyi hedefleyen plan dün onaylandı.",
-          translation: "İflasla karşı karşıya kalan teknoloji şirketi, rakibiyle birleşti.",
-          translation: "Denetimi tamamladıktan sonra muhasebeci ofisten ayrıldı.",
-          translation: "Kıdemli ekip tarafından geliştirilen yazılım sorunsuz çalışıyor.",
-          explanation: "Framework kendi kendine bir şey üretemez, Composer tarafından 'üretilmiştir'. Pasif kısaltma olan V3 (generated) seçilmelidir."
-        },
-        {
-          id: "u35_l3_q2",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "__________ the new update, the developer ran the status checks immediately.",
-          options: ["Having installed", "Installed", "Install", "To being installed"],
-          correctIndex: 0,
-          translation: "Kullanıcı davranışını analiz ettikten sonra tasarım ekibi yerleşimi basitleştirdi.",
-          explanation: "Geliştirici güncellemeyi 'yükledikten sonra' (aktif) eylemi yaptığı için aktif Perfect Participle (Having installed) doğrudur."
-        },
-        {
-          id: "u35_l3_q3",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The main variables __________ the greenhouse effect are carbon and methane.",
-          options: ["driving", "driven", "drive", "to be driven"],
-          correctIndex: 0,
-          translation: "Sert hava koşullarıyla karşı karşıya kalan uçuş ekibi kalkışı erteledi.",
-          explanation: "Sera gazı etkisini 'tetikleyen/yürüten' değişkenler aktif bir rol oynadığı için aktif niteleme olan 'driving' (V-ing) gelmelidir."
-        },
-        {
-          id: "u35_l3_q4",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "__________ with continuous server glitches, they switched to the offline architecture.",
-          options: ["Frustrated", "Frustrating", "Frustrate", "Having frustrated"],
-          correctIndex: 0,
-          translation: "Sürekli sunucu arızalarından dolayı hüsrana uğrayan ekip, çevrimdışı mimariye geçti.",
-          explanation: "Sunucu arızalarından dolayı 'hayal kırıklığına uğradıkları için' (pasif ruh hali/neden) cümle başına V3 (Frustrated) gelmelidir."
-        },
-        {
-          id: "u35_l3_q5",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The project proposal __________ on the director's table requires instant attention.",
-          options: ["lying", "laid", "lain", "to lie"],
-          correctIndex: 0,
-          translation: "Araştırmacılar yüksek manyetik özelliklere sahip yeni bir element keşfettiler.",
-          explanation: "'Masanın üzerinde duran/yatan' anlamındaki 'lie' fiili nesne almayan nesnesiz (intransitive) bir fiildir ve kısaltması sadece aktif (lying) olur."
-        },
-        {
-          id: "u35_l3_q6",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The laws __________ by the government last month caused extreme debate.",
-          options: ["enacted", "enacting", "enact", "to enact"],
-          correctIndex: 0,
-          translation: "Veri sızıntısını en aza indirmek için tasarlanan şifreleme protokolü zorunludur.",
-          explanation: "Yasalar hükümet tarafından 'yürürlüğe konmuştur' (pasif). Geçmiş zamanlı pasif kısaltma V3 (enacted) olmalıdır."
-        },
-        {
-          id: "u35_l3_q7",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "__________ clearly, the instruction module avoids any syntax anomalies.",
-          options: ["Written", "Writing", "Having written", "To write"],
-          correctIndex: 0,
-          translation: "Yerleşim sorununu çözmeyi uman tasarımcı dolguyu ayarladı.",
-          explanation: "Modül kendi kendini yazamaz, 'Açıkça yazıldığı için' anlamında pasif başlangıç (Written) şarttır."
-        },
-        {
-          id: "u35_l3_q8",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The target molecules __________ under the electron microscope were highly unstable.",
-          options: ["observed", "observing", "observe", "having observed"],
-          correctIndex: 0,
-          translation: "Güvenli bir kasada saklanan belgeler güvende kaldı.",
-          explanation: "Mikroskop altında 'gözlemlenen' moleküller pasif durumdadır; V3 (observed) doğru tercihtir."
-        },
-        {
-          id: "u35_l3_q9",
-          type: "structure-match",
-          prompt: "Gramer yapısına uygun seçeneği belirleyin:",
-          sentence: "The programmer, __________ the compilation code multiple times, finally fixed the bug.",
-          options: ["having checked", "checked", "checking to", "to check"],
-          correctIndex: 0,
-          translation: "Derleme kodunu defalarca kontrol eden programcı sonunda hatayı düzeltti.",
-          explanation: "Kodu defalarca 'kontrol etmiş olan' yazılımcı (aktif/öncelik), işlemi bitirdikten sonra bug'ı çözmüştür. 'Having checked' tam oturur."
-        }
-      ]
+      formula: "Noun + V-ing / V3 / To V1 (Relative Clause Reduction)",
+      example: "The methodology developed by researchers / The project aiming to reduce emissions",
+      description: "<strong>Sıfat Cümleciği Kısaltması:</strong> Etken yapılarda <strong>V-ing</strong>, edilgen yapılarda <strong>V3</strong>, sıradalık veya amaç bildiren isimlerden sonra (the first, the only vb.) <strong>To V1 / To be V3</strong> kullanılır."
     },
     {
-      lessonId: "u35_l4",
-      lessonTitle: "4: Açılır Menü ile Akademik Kısaltma Seçimi",
-      exercises: [
-        {
-          id: "u35_l4_q1",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "The code __________ by the junior developer yesterday contained several syntax anomalies.",
-          options: ["written", "writing", "write", "to write"],
-          correctIndex: 0,
-          translation: "Dün çaylak geliştirici tarafından yazılan kod birkaç sözdizimi hatası içeriyordu.",
-          explanation: "Kod kendi kendini yazamaz, yazılımcı tarafından 'yazılmıştır'. Pasif bir Relative Clause kısaltması (V3) gereklidir."
-        },
-        {
-          id: "u35_l4_q2",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "__________ no prior experience in vibe coding, he struggled to complete the mobile framework.",
-          options: ["Having", "Had", "To have", "Being had"],
-          correctIndex: 0,
-          translation: "Daha önce vibe kodlama deneyimi olmadığı için mobil altyapıyı tamamlamakta zorlandı.",
-          explanation: "Cümle başında neden-sonuç ilişkisi kuran aktif bir kısaltmadır. 'Deneyime sahip olduğu için' anlamı 'V-ing' (Having) ile kurulur."
-        },
-        {
-          id: "u35_l4_q3",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "The prototype, __________ under extreme thermal conditions, managed to remain intact.",
-          options: ["tested", "testing", "test", "to test"],
-          correctIndex: 0,
-          translation: "Aşırı termal koşullar altında test edilen prototip sağlam kalmayı başardı.",
-          explanation: "Prototip termal koşullar altında 'test edilmiştir' (pasif). İki virgül arasında pasif niteleme (V3) kullanılmalıdır."
-        },
-        {
-          id: "u35_l4_q4",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "The factors __________ global carbon levels are being thoroughly investigated by scientists.",
-          options: ["influencing", "influenced", "influence", "to be influenced"],
-          correctIndex: 0,
-          translation: "Küresel karbon seviyelerini etkileyen faktörler bilim insanları tarafından derinlemesine araştırılıyor.",
-          explanation: "Karbon seviyelerini 'etki altına alan / etkileyen' faktörler aktif bir niteleme gerektirir (V-ing)."
-        },
-        {
-          id: "u35_l4_q5",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "__________ with the severe system crash, the IT team decided to reset the server parameters.",
-          options: ["Confronted", "Confronting", "Confront", "Having confronted"],
-          correctIndex: 0,
-          translation: "Ciddi sistem çökmesiyle karşı karşıya kalan bilgi işlem ekibi sunucu parametrelerini sıfırlamaya karar verdi.",
-          explanation: "'Confront' fiili bir krizle '-ile karşı karşıya kalmak' anlamında pasif (Confronted with) olarak kısaltılır."
-        },
-        {
-          id: "u35_l4_q6",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "The algorithm, __________ by the lead engineer last month, doubled the processing speed.",
-          options: ["implemented", "implementing", "implement", "to implement"],
-          correctIndex: 0,
-          translation: "Geçen ay baş mühendis tarafından uygulanan algoritma işlem hızını iki katına çıkardı.",
-          explanation: "Algoritma baş mühendis tarafından 'uygulanmıştır' (pasif kısaltma / Past Participle)."
-        },
-        {
-          id: "u35_l4_q7",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "__________ the comprehensive security tests, the network was finally declared safe.",
-          options: ["Having passed", "Passed", "Passing to", "To pass"],
-          correctIndex: 0,
-          translation: "Kapsamlı güvenlik testlerini geçtikten sonra ağ nihayet güvenli ilan edildi.",
-          explanation: "Güvenlik testlerini 'geçtikten sonra' anlamında, ana eylemden daha önce yapılmış aktif bir eylemi (Having + V3) niteler."
-        },
-        {
-          id: "u35_l4_q8",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "The dynamic data __________ from the local storage needs to be synchronized properly.",
-          options: ["retrieved", "retrieving", "retrieve", "to retrieve"],
-          correctIndex: 0,
-          translation: "Yerel depolamadan alınan dinamik verilerin düzgün bir şekilde senkronize edilmesi gerekiyor.",
-          explanation: "Yerel hafızadan 'alınan/getirilen' veri pasif durumdadır. V3 (retrieved) doğru şıktır."
-        },
-        {
-          id: "u35_l4_q9",
-          type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun kelimeyi seçin:",
-          sentence: "Not __________ the exact encryption key, the system denied administrative access to the user.",
-          options: ["recognizing", "recognized", "recognize", "to recognize"],
-          correctIndex: 0,
-          translation: "Tam şifreleme anahtarını tanımadığı için sistem kullanıcıya yönetici erişimini reddetti.",
-          explanation: "Şifre anahtarını 'tanımadığı için' anlamında aktif ve olumsuz bir zarf cümleciği kısaltmasıdır (Not + V-ing)."
-        }
-      ]
+      formula: "While / When + V-ing / V3 (Time Reductions)",
+      example: "While conducting experiments, the scientists observed unexpected reactions.",
+      description: "<strong>Zaman Cümleciği Kısaltması:</strong> Yan cümle öznesi ana cümle ile aynıysa bağlaç korunarak doğrudan <strong>V-ing</strong> (etken) veya <strong>V3</strong> (edilgen) getirilir."
     },
     {
-      lessonId: "u35_l5",
-      lessonTitle: "5: Buton Modu ile Kısaltma ve Cümle Çözümleme",
-      exercises: [
-        {
-          id: "u35_l5_q1",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "The materials __________ for the space expedition must withstand immense pressure.",
-          options: ["selected", "selecting", "select", "to select"],
-          correctIndex: 0,
-          translation: "Uzay seferi için seçilen malzemeler muazzam basınca dayanmalıdır.",
-          explanation: "Uzay seferi için 'seçilen' malzemeler edilgen (pasif) yapıdadır, bu yüzden V3 (selected) kullanılır."
-        },
-        {
-          id: "u35_l5_q2",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "__________ the budget limitations beforehand, the board restricted further expenditures.",
-          options: ["Knowing", "Known", "To know", "Having known to"],
-          correctIndex: 0,
-          translation: "Bütçe kısıtlamalarını önceden bildikleri için yönetim kurulu daha fazla harcamayı sınırladı.",
-          explanation: "Bütçe kısıtlamalarını önceden 'bildikleri için' (aktif neden) cümle başına 'V-ing' (Knowing) getirilmelidir."
-        },
-        {
-          id: "u35_l5_q3",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "The project, __________ by the director last week, targets lower-income communities.",
-          options: ["approved", "approving", "approve", "to approve"],
-          correctIndex: 0,
-          translation: "Geçen hafta direktör tarafından onaylanan proje, düşük gelirli toplulukları hedefliyor.",
-          explanation: "Proje direktör tarafından 'onaylanmıştır' (pasif niteleme / Past Participle) yani V3 (approved) olmalıdır."
-        },
-        {
-          id: "u35_l5_q4",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "Vehicles __________ hazardous toxic waste are heavily monitored by the city council.",
-          options: ["carrying", "carried", "carry", "to be carried"],
-          correctIndex: 0,
-          translation: "Tehlikeli zehirli atık taşıyan araçlar belediye meclisi tarafından sıkı bir şekilde izleniyor.",
-          explanation: "Tehlikeli atık 'taşıyan' araçlar aktif bir eylem gerçekleştirmektedir, bu yüzden aktif niteleme olan 'V-ing' (carrying) seçilmelidir."
-        },
-        {
-          id: "u35_l5_q5",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "__________ by the lack of clean water, the research expedition team turned back.",
-          options: ["Challenged", "Challenging", "Challenge", "Having challenging"],
-          correctIndex: 0,
-          translation: "Temiz su eksikliği nedeniyle zorlanan araştırma heyeti ekibi geri döndü.",
-          explanation: "Temiz su eksikliği nedeniyle 'zorlandıkları / engellendikleri için' pasif bir neden başlangıcı (V3 - Challenged) gerekir."
-        },
-        {
-          id: "u35_l5_q6",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "The economic strategy __________ by the ministry focuses entirely on renewable models.",
-          options: ["adopted", "adopting", "adopt", "to adopt"],
-          correctIndex: 0,
-          translation: "Bakanlık tarafından benimsenen ekonomik strateji tamamen yenilenebilir modellere odaklanıyor.",
-          explanation: "Bakanlık tarafından 'benimsenen' ekonomik strateji pasif nitelemedir, V3 (adopted) doğru şıktır."
-        },
-        {
-          id: "u35_l5_q7",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "__________ their initial goals, the tech firm expanding into international markets.",
-          options: ["Having achieved", "Achieved", "Achieving to", "To achieve"],
-          correctIndex: 0,
-          translation: "İlk hedeflerine ulaştıktan sonra teknoloji firması uluslararası pazarlara açılıyor.",
-          explanation: "İlk hedeflerine 'ulaştıktan sonra' (aktif ve zaman önceliği) anlamını 'Having + V3' (Having achieved) yapısı sağlar."
-        },
-        {
-          id: "u35_l5_q8",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "The parameters __________ from the initial control group showed massive anomalies.",
-          options: ["obtained", "obtaining", "obtain", "to obtain"],
-          correctIndex: 0,
-          translation: "İlk kontrol grubundan elde edilen parametreler büyük anomaliler gösterdi.",
-          explanation: "Kontrol grubundan 'elde edilen' parametreler edilgendir; V3 (obtained) doğru şıktır."
-        },
-        {
-          id: "u35_l5_q9",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru kısaltmayı seçin:",
-          sentence: "Not __________ the core language pedagogy, the developer duplicated the questions model.",
-          options: ["understanding", "understood", "understand", "to understand"],
-          correctIndex: 0,
-          translation: "Temel dil pedagojisini anlamadığı için geliştirici soru modelini kopyaladı.",
-          explanation: "Dil pedagojisini 'anlamadığı için' anlamında olumsuz ve aktif bir zarf cümleciği kısaltmasıdır; 'Not + V-ing' (Not understanding) olmalıdır."
-        }
-      ]
+      formula: "Having + V3 / Having been + V3 (Perfect Participle)",
+      example: "Having evaluated the data, the team published the report.",
+      description: "<strong>Zaman Öncelikli Kısaltma:</strong> Yan cümledeki eylem ana cümledeki eylemden önce gerçekleştiyse etkenlerde <strong>Having V3</strong>, edilgenlerde <strong>Having been V3</strong> kullanılır."
     },
     {
-      lessonId: "u35_l6",
-      lessonTitle: "6: Kısaltmalı Akademik Cümlelerin Doğru Çevirisini Bulun",
-      exercises: [
-        {
-          id: "u35_l6_q1",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The artifacts discovered by archeologists yesterday belong to ancient Rome.",
-          options: [
-            "Dün arkeologlar tarafından keşfedilen eserler antik Roma'ya aittir.",
-            "Arkeologlar dün keşfettikleri eserleri antik Roma'ya gönderdiler.",
-            "Antik Roma'ya ait eserler dün arkeologlarca incelenmeye başlandı.",
-            "Eserlerin dün keşfedilmesiyle arkeologlar antik Roma'yı araştırmaya karar verdi."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'discovered by' yapısı pasif sıfat cümleciği kısaltmasıdır ve '-tarafından keşfedilen' anlamı katar."
-        },
-        {
-          id: "u35_l6_q2",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "Having written the final report, the scientist submitted it to the committee.",
-          options: [
-            "Son raporu yazdıktan sonra, bilim insanı onu komiteye teslim etti.",
-            "Bilim insanı komiteye teslim etmek üzere son raporu yazmaya başladı.",
-            "Rapor yazıldığı sırada, bilim insanı komiteyle bir toplantı halindeydi.",
-            "Komite, bilim insanından son raporu hızlıca yazmasını talep etti."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'Having written' yapısı geçmiş zaman öncelikli aktif kısaltmadır ve '-yazdıktan sonra' anlamına gelir."
-        },
-        {
-          id: "u35_l6_q3",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "Faced with economic difficulties, the small startup had to cut its development budget.",
-          options: [
-            "Ekonomik zorluklarla karşı karşıya kalan küçük girişim, geliştirme bütçesini kısmak zorunda kaldı.",
-            "Küçük girişim, ekonomik zorluklar çıkınca geliştirme bütçesini tamamen sıfırladı.",
-            "Geliştirme bütçesi kısılınca, küçük girişim büyük ekonomik zorluklarla karşılaştı.",
-            "Ekonomik kriz çıkmadığı sürece küçük girişimin bütçeyi kısması beklenmiyor."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "Cümle başındaki 'Faced with' yapısı pasif bir sebep kısaltmasıdır; '-ile karşı karşıya kalan' demektir."
-        },
-        {
-          id: "u35_l6_q4",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The methodology implemented in the study yielded extremely highly accurate results.",
-          options: [
-            "Çalışmada uygulanan metodoloji son derece yüksek doğrulukta sonuçlar verdi.",
-            "Metodolojinin uygulanabilmesi için çalışmanın sonuçlarının yüksek çıkması gerekiyordu.",
-            "Çalışma son derece doğru sonuçlar verince metodoloji kalıcı hale getirildi.",
-            "Yüksek doğrulukta sonuçlar veren çalışma, metodolojiyi tamamen değiştirdi."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'implemented in' yapısı pasif kısaltmadır ve 'çalışmada uygulanan...' şeklinde ismi niteler."
-        },
-        {
-          id: "u35_l6_q5",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The programmer, not validating the data inputs, duplicated the major system bug.",
-          options: [
-            "Veri girişlerini doğrulamayan programcı, büyük sistem hatasını tekrarlamış oldu.",
-            "Veri girişleri doğrulandığı halde, programcı sistem hatasını düzeltemedi.",
-            "Sistem hatasını tekrarlamak istemeyen programcı, veri girişlerini kontrol etti.",
-            "Programcı veri girişlerini doğrulasaydı, sistem hatası oluşmayacaktı."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'not validating' aktif ve olumsuz bir niteleme/sebep kısaltmasıdır; '-doğrulamayan' anlamına gelir."
-        },
-        {
-          id: "u35_l6_q6",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The project aiming to reduce city traffic will be fully subsidized by the state.",
-          options: [
-            "Şehir trafiğini azaltmayı hedefleyen proje, devlet tarafından tamamen sübvanse edilecek.",
-            "Devlet, şehir trafiğini azaltmak amacıyla yeni bir projeyi finanse etmeye başladı.",
-            "Şehir trafiği azaldığında, projenin devlet desteği de kademeli olarak kesilecek.",
-            "Proje trafiği azaltmayı hedeflese de devletten beklediği mali desteği alamadı."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'aiming to' yapısı aktif sıfat cümleciği kısaltmasıdır (V-ing) ve 'hedefleyen' anlamına gelir."
-        },
-        {
-          id: "u35_l6_q7",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The criteria used to select corporate candidates were challenging.",
-          options: [
-            "Kurumsal adayları seçmek için kullanılan kriterler zorlayıcıydı.",
-            "Adayların kurumsal kriterlere uyum sağlaması oldukça zor oldu.",
-            "Zorlayıcı kriterler nedeniyle kurumsal adayların çoğu elenmek zorunda kaldı.",
-            "Kriterler zorlayıcı olsa da kurumsal firmalar aday seçimini tamamladı."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'used to' yapısı pasif sıfat cümleciği kısaltmasıdır; 'seçmek için kullanılan...' anlamı kurar."
-        },
-        {
-          id: "u35_l6_q8",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The framework chosen by the team runs smoothly without requiring internet servers.",
-          options: [
-            "Ekip tarafından seçilen altyapı, internet sunucularına ihtiyaç duymadan sorunsuz çalışıyor.",
-            "İnternet sunucuları sorunsuz çalışınca ekip yeni bir altyapı seçmeye karar verdi.",
-            "Altyapı sorunsuz çalıştığı için ekip internet sunucu kurma ihtiyacı hissetmedi.",
-            "Ekibin internet sunucusu gerektirmeyen bir altyapı seçmesi uzun zaman aldı."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'chosen by' yapısı pasif nitelemedir; 'ekip tarafından seçilen...' anlamını taşır."
-        },
-        {
-          id: "u35_l6_q9",
-          type: "multiple-choice",
-          prompt: "Cümlenin en uygun Türkçe karşılığını seçin:",
-          sentence: "The logic underlying the security model is based on advanced binary logic matrices.",
-          options: [
-            "Güvenlik modelinin temelinde yatan mantık, ileri düzey ikili mantık matrislerine dayanır.",
-            "Güvenlik modelinin mantığı geliştikçe, ikili matrislerin kullanımı da zorunlu hale geldi.",
-            "İleri düzey ikili matrisler, güvenlik modelinin mantıksal hatalarını çözmek için kuruldu.",
-            "Güvenlik modelinin temelindeki mantık, ikili matrislerin yapısını tamamen değiştirdi."
-          ],
-          correctIndex: 0,
-          isEngToTr: true,
-          explanation: "'underlying' fiili doğası gereği aktiftir; 'temelinde yatan...' anlamında bir niteleme yapar."
-        }
-      ]
+      formula: "V3 / Faced with / Restricted by (Adverbial Cause)",
+      example: "Faced with severe economic crisis, the government introduced reforms.",
+      description: "<strong>Sebep-Sonuç Kısaltması:</strong> Neden bildiren edilgen yan cümlelerde bağlaç atılarak doğrudan <strong>V3 veya Edatlı Yapı (Faced with, Driven by)</strong> ile başlanır."
+    },
+    {
+      formula: "Noun + V-ing / Noun + V3 (Absolute Clauses)",
+      example: "Weather permitting, the expedition will start tomorrow.",
+      description: "<strong>Bağımsız Özneli Kısaltma:</strong> Yan cümlenin öznesi ana cümleden farklı olduğunda özne düşürülmez; özne yazıldıktan sonra doğrudan <strong>V-ing veya V3</strong> getirilir."
+    },
+    {
+      formula: "..., thus / thereby + V-ing (Resultative Participle)",
+      example: "The company doubled production, thereby creating thousands of jobs.",
+      description: "<strong>Sonuç Bildiren Participle:</strong> Ana cümlenin tamamının doğurduğu sonucu aktarırken virgül sonrasında <strong>thus/thereby + V-ing</strong> yapısı kullanılır."
     }
-  ]
+  ],
+  lessons: [
+  {
+    "lessonId": "u35_l1",
+    "lessonTitle": "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
+    "exercises": [
+      {
+        "id": "u35_l1_ex1",
+        "title": "Alıştırma 1: Öbek Düzeyi — Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
+        "description": "Beşeri ve sosyal bilimler alanındaki sıfat kısaltma öbeklerini eşleştirme ve niteleyici analizi",
+        "questions": [
+          {
+            "id": "u35_l1_q1",
+            "type": "matching",
+            "prompt": "Tarih ve antropoloji alanındaki sıfat cümlesi kısaltma öbeklerini Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "the ancient manuscripts preserved in state archives",
+                "right": "devlet arşivlerinde muhafaza edilen antik el yazmaları"
+              },
+              {
+                "left": "anthropologists documenting indigenous cultural traditions",
+                "right": "yerli kültürel gelenekleri belgeleyen antropologlar"
+              },
+              {
+                "left": "the primary source evaluated by historians",
+                "right": "tarihçiler tarafından değerlendirilen birincil kaynak"
+              },
+              {
+                "left": "archaeologists working on spatial mapping",
+                "right": "mekânsal haritalama üzerine çalışan arkeologlar"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l1_q2",
+            "type": "matching",
+            "prompt": "Hukuk ve iktisat alanındaki sıfat niteleme öbeklerini eşleştirin.",
+            "pairs": [
+              {
+                "left": "statutory regulations governing digital communication",
+                "right": "dijital iletişimi düzenleyen kanuni yönetmelikler"
+              },
+              {
+                "left": "monetary policies enacted to curb financial instability",
+                "right": "finansal istikrarsızlığı önlemek amacıyla yürürlüğe konan parasal politikalar"
+              },
+              {
+                "left": "the judicial decisions regulating civil liberties",
+                "right": "sivil özgürlükleri düzenleyen yargı kararları"
+              },
+              {
+                "left": "economists analyzing market fluctuations",
+                "right": "piyasa dalgalanmalarını analiz eden iktisatçılar"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l1_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan sıfat kısaltma öbeğinin dilbilgisel yapısını ve Türkçe anlamını seçin:",
+            "paragraph": "The film directors utilizing innovative cinematic techniques captured the subtle nuances of social cohesion.",
+            "highlightChunk": "utilizing innovative cinematic techniques",
+            "options": [
+              "yenilikçi sinematik teknikleri kullanan (Etken Sıfat Cümleciği Kısaltması - Noun + V-ing)",
+              "yenilikçi sinematik teknikler kullanıldıktan sonra (Zaman Kısaltması)",
+              "yenilikçi sinematik teknikleri kullanmak amacıyla (Amaç Kısaltması)",
+              "yenilikçi sinematik teknikler kullanıldığı için (Sebep Kısaltması)"
+            ],
+            "correctIndex": 0,
+            "translation": "Yenilikçi sinematik teknikleri kullanan film yönetmenleri, sosyal uyumun ince nüanslarını yakaladı.",
+            "explanation": "'utilizing...' etken niteleme yapısıdır (directors who utilize -> directors utilizing).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l1_q4",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan edilgen sıfat nitelemesini analiz edin:",
+            "paragraph": "The sociological survey conducted across urban communities revealed significant demographic shifts.",
+            "highlightChunk": "conducted across urban communities",
+            "options": [
+              "kentsel topluluklar genelinde yürütülen (Edilgen Sıfat Cümleciği Kısaltması - Noun + V3)",
+              "kentsel toplulukları yürütmek üzere",
+              "kentsel topluluklar yürütüldüğü için",
+              "kentsel topluluklar yürütüldükten sonra"
+            ],
+            "correctIndex": 0,
+            "translation": "Kentsel topluluklar genelinde yürütülen sosyolojik anket, önemli demografik kaymaları ortaya çıkardı.",
+            "explanation": "'conducted...' edilgen niteleme yapısıdır (survey which was conducted -> survey conducted).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l1_q5",
+            "type": "swipe",
+            "prompt": "Sıfat cümlesi kısaltma sentaksı doğru mu? Sağ (VALID) / Sol (BUG)",
+            "phrase": "The museum curators restored ancient artifacts identified several distinct artistic movements.",
+            "translation": "Antik eserleri restore eden müze küratörleri birkaç farklı sanatsal akım belirledi.",
+            "isCorrect": false,
+            "explanation": "BUG! Küratörler eserleri restore eden etken öznedir. 'restored' (V3) edilgen niteleme yerine 'restoring' (V-ing) kullanılmalıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l1_q6",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelecek doğru niteleyici kısaltma biçimini seçin:",
+            "sentence": "Psychologists __________ cognitive processes under psychological stress observed marked differences in emotional intelligence.",
+            "options": [
+              "investigating",
+              "investigated",
+              "to be investigated",
+              "having investigated by"
+            ],
+            "correctIndex": 0,
+            "translation": "Psikolojik stres altında bilişsel süreçleri inceleyen psikologlar, duygusal zekada belirgin farklılıklar gözlemlediler.",
+            "explanation": "Psikologlar inceleme eylemini yapan etken öznedir (investigating).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "lessonId": "u35_l2",
+    "lessonTitle": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık (Time & Sequence)",
+    "exercises": [
+      {
+        "id": "u35_l2_ex1",
+        "title": "Alıştırma 1: Cümle Düzeyi — Zarf Cümleciği Kısaltmaları (Time & Sequence Reductions)",
+        "description": "Zaman, öncelik ve eylem sırası bildiren zarf kısaltmalarını inceleme ve çeviri alıştırmaları",
+        "questions": [
+          {
+            "id": "u35_l2_q1",
+            "type": "matching",
+            "prompt": "Zaman önceliği ve eylem sırası bildiren akademik kısaltma cümlelerini eşleştirin.",
+            "pairs": [
+              {
+                "left": "Having analyzed primary sources",
+                "right": "birincil kaynakları analiz ettikten sonra"
+              },
+              {
+                "left": "While examining architectural heritage",
+                "right": "mimari mirası incelerken"
+              },
+              {
+                "left": "Having been reviewed by legal scholars",
+                "right": "hukuk alimlerince gözden geçirildikten sonra"
+              },
+              {
+                "left": "Upon launching the journalistic investigation",
+                "right": "gazetecilik soruşturmasını başlatır başlatmaz"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l2_q2",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan etken zaman önceliği yapısını seçin:",
+            "paragraph": "Having completed the extensive fieldnotes on tribal rituals, the anthropologist published a comprehensive monograph.",
+            "highlightChunk": "Having completed the extensive fieldnotes on tribal rituals",
+            "options": [
+              "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamladıktan sonra (Etken Öncelik Kısaltması - Having V3)",
+              "Kabile ritüelleri üzerine kapsamlı arazi notları tamamlanırken",
+              "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamlamak amacıyla",
+              "Kabile ritüelleri üzerine kapsamlı arazi notları tamamlandığı sürece"
+            ],
+            "correctIndex": 0,
+            "translation": "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamladıktan sonra antropolog kapsayıcı bir monografi yayınladı.",
+            "explanation": "'Having completed...' eylemin zaman olarak ana cümle eyleminden önce yapıldığını gösteren etken zaman önceliği kısaltmasıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l2_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan edilgen zaman önceliği yapısının anlamını bulun:",
+            "paragraph": "Having been affected by severe economic stagnation, the urban communities demanded structural policy reforms.",
+            "highlightChunk": "Having been affected by severe economic stagnation",
+            "options": [
+              "Ciddi ekonomik durgunluktan etkilendikten sonra / etkilendiği için (Edilgen Öncelik Kısaltması - Having been V3)",
+              "Ciddi ekonomik durgunluğu etkilerken",
+              "Ciddi ekonomik durgunluktan etkilenmesine karşın",
+              "Ciddi ekonomik durgunluğu etkilemek amacıyla"
+            ],
+            "correctIndex": 0,
+            "translation": "Ciddi ekonomik durgunluktan etkilendikten sonra kentsel topluluklar yapısal politika reformları talep etti.",
+            "explanation": "'Having been affected' edilgen ve öncelikli zarf kısaltmasıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l2_q4",
+            "type": "swipe",
+            "prompt": "Zarf cümlesi kısaltma sentaksı doğru mu? Sağ (VALID) / Sol (BUG)",
+            "phrase": "After analyze the geographic distribution of resources, the geographers drew new thematic maps.",
+            "translation": "Kaynakların coğrafi dağılımını analiz ettikten sonra coğrafyacılar yeni tematik haritalar çizdiler.",
+            "isCorrect": false,
+            "explanation": "BUG! Edattan sonra fiil yalın gelmez; kısaltma kalıbı 'After analyzing' (V-ing) olmalıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l2_q5",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelebilecek en uygun zaman kısaltmasını seçin:",
+            "sentence": "__________ the documentary film on public discourse, the media analyst highlighted ethical standards in journalism.",
+            "options": [
+              "While reviewing",
+              "Reviewed",
+              "To review having",
+              "Being reviewed by"
+            ],
+            "correctIndex": 0,
+            "translation": "Kamusal söylem hakkındaki belgesel filmi incelerken medya analisti gazetecilikteki etik standartları vurguladı.",
+            "explanation": "'While + V-ing' eşzamanlı etken zarf cümlesi kısaltmasıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "lessonId": "u35_l3",
+    "lessonTitle": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık (Cause, Condition & Contrast)",
+    "exercises": [
+      {
+        "id": "u35_l3_ex1",
+        "title": "Alıştırma 1: Cümle Düzeyi — Sebep, Koşul ve Zıtlık Kısaltmaları (Cause, Condition & Contrast)",
+        "description": "Neden-sonuç, koşul ve zıtlık bağlamlı zarf kısaltmalarının çözümlenmesi",
+        "questions": [
+          {
+            "id": "u35_l3_q1",
+            "type": "matching",
+            "prompt": "Sebep, zıtlık ve koşul kısaltma cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "Faced with financial instability",
+                "right": "finansal istikrarsızlıkla karşı karşıya kaldığı için"
+              },
+              {
+                "left": "Not knowing the historical context",
+                "right": "tarihi bağlamı bilmediği için"
+              },
+              {
+                "left": "Although criticized by art historians",
+                "right": "sanat tarihçilerince eleştirilmesine rağmen"
+              },
+              {
+                "left": "Unless protected by constitutional rights",
+                "right": "anayasal haklarla korunmadığı sürece"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l3_q2",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan olumsuz etken sebep kısaltmasını analiz edin:",
+            "paragraph": "Not possessing archival documents on constitutional law, the attorney requested an extension for the judicial trial.",
+            "highlightChunk": "Not possessing archival documents on constitutional law",
+            "options": [
+              "Anayasa hukuku üzerine arşiv belgelerine sahip olmadığı için (Olumsuz Etken Sebep Kısaltması)",
+              "Anayasa hukuku üzerine arşiv belgelerine sahip olmasına rağmen",
+              "Anayasa hukuku üzerine arşiv belgelerine sahip olduğu sürece",
+              "Anayasa hukuku üzerine arşiv belgelerine sahip olmak maksadıyla"
+            ],
+            "correctIndex": 0,
+            "translation": "Anayasa hukuku üzerine arşiv belgelerine sahip olmadığı için avukat yargısal duruşma için ek süre talep etti.",
+            "explanation": "'Not + V-ing' yapısı olumsuz sebep bildirir (As he did not possess...).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l3_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan edilgen sebep kısaltmasının cümleye kattığı anlamı seçin:",
+            "paragraph": "Restricted by statutory regulations on digital privacy, the corporation altered its data collection protocols.",
+            "highlightChunk": "Restricted by statutory regulations on digital privacy",
+            "options": [
+              "Dijital gizlilik üzerindeki kanuni yönetmeliklerle kısıtlandığı için (Edilgen Sebep Kısaltması - V3)",
+              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtladıktan sonra",
+              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtlamasına rağmen",
+              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtlamak amacıyla"
+            ],
+            "correctIndex": 0,
+            "translation": "Dijital gizlilik üzerindeki kanuni yönetmeliklerle kısıtlandığı için şirket veri toplama protokollerini değiştirdi.",
+            "explanation": "'Restricted by...' edilgen sebep kısaltmasıdır (Because it was restricted by...).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l3_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelebilecek en uygun zıtlık kısaltmasını seçin:",
+            "sentence": "__________ in ancient manuscripts, the philosophical theory gained widespread popular interest only in the 20th century.",
+            "options": [
+              "Although obscured",
+              "Despite obscuring",
+              "Because obscured",
+              "While obscuring"
+            ],
+            "correctIndex": 0,
+            "translation": "Antik el yazmalarında muğlak kalmasına / anlaşılmaz olmasına rağmen felsefi teori popüler ilgiyi ancak 20. yüzyılda kazandı.",
+            "explanation": "'Although + V3' zıtlık bağlacının korunduğu edilgen niteleme kısaltmasıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "lessonId": "u35_l4",
+    "lessonTitle": "4. Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları (Absolute & Resultative Clauses)",
+    "exercises": [
+      {
+        "id": "u35_l4_ex1",
+        "title": "Alıştırma 1: Cümle Düzeyi — Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları (Absolute & Resultative Clauses)",
+        "description": "Absolute Clauses (öznesi farklı kısaltmalar) ve Thereby/Thus + V-ing kalıpları",
+        "questions": [
+          {
+            "id": "u35_l4_q1",
+            "type": "matching",
+            "prompt": "Bağımsız özneli ve sonuç bildiren kısaltma cümlelerini eşleştirin.",
+            "pairs": [
+              {
+                "left": "Weather conditions permitting",
+                "right": "hava koşulları elverdiği takdirde"
+              },
+              {
+                "left": "The archaeological excavation having concluded",
+                "right": "arkeolojik kazı sona erdiği için / erdikten sonra"
+              },
+              {
+                "left": "..., thereby ensuring social cohesion",
+                "right": "..., böylelikle sosyal uyumu güvence altına alarak"
+              },
+              {
+                "left": "..., thus causing demographic shifts",
+                "right": "..., böylece demografik kaymalara yol açarak"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l4_q2",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan sonuç bildiren participle yapısını (thereby + V-ing) analiz edin:",
+            "paragraph": "The parliament passed landmark legislation on civil liberties, thereby protecting fundamental constitutional rights.",
+            "highlightChunk": "thereby protecting fundamental constitutional rights",
+            "options": [
+              "Temel anayasal hakları korumak amacıyla",
+              "böylelikle temel anayasal hakları koruyarak / güvenceye alarak (Sonuç Bildiren Participle)",
+              "Temel anayasal haklar korunmasına rağmen",
+              "Temel anayasal haklar korunduğu zaman"
+            ],
+            "correctIndex": 1,
+            "translation": "Parlamento sivil özgürlükler üzerine tarihi bir yasayı kabul etti ve böylelikle temel anayasal hakları koruma altına aldı.",
+            "explanation": "Virgül sonrasında gelen 'thereby + V-ing' ana cümlenin doğrudan yol açtığı sonucu ifade eder.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l4_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Vurgulanan bağımsız özneli yapıyı (Absolute Clause) inceleyin:",
+            "paragraph": "All primary sources having been cross-checked by historians, the publisher released the biographical volume.",
+            "highlightChunk": "All primary sources having been authenticated",
+            "options": [
+              "Tüm birincil kaynaklar tarihçilerce çapraz kontrol edildikten sonra (Bağımsız Özneli Kısaltma)",
+              "Tarihçiler tüm birincil kaynakları çapraz kontrol etmek üzere",
+              "Tüm birincil kaynaklar çapraz kontrol edilmesine karşın",
+              "Tüm birincil kaynakları kontrol eden tarihçiler"
+            ],
+            "correctIndex": 0,
+            "translation": "Tüm birincil kaynaklar tarihçilerce çapraz kontrolden geçirildikten sonra yayıncı biyografik cildi yayımladı.",
+            "explanation": "Yan cümlenin öznesi 'All primary sources' düşürülmemiş, bağımsız özne yapısı korunmuştur.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u35_l4_q4",
+            "type": "fill-blank-dropdown",
+            "prompt": "Sonuç bildiren virgül sonrası boşluğu doldurun:",
+            "sentence": "The government invested in renewable infrastructure, __________ lowering greenhouse gas emissions.",
+            "options": [
+              "thereby drastically",
+              "thereby drastic",
+              "thereby to drastically",
+              "thereby drastically lowered"
+            ],
+            "correctIndex": 0,
+            "translation": "Hükümet yenilenebilir altyapıya yatırım yaptı ve böylelikle sera gazı emisyonlarını ciddi oranda düşürdü.",
+            "explanation": "'thereby + V-ing' kalıbı sonuç bildirir.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "lessonId": "u35_l5",
+    "lessonTitle": "5. Akademik Cümle Parsing & Çözümleme Stratejileri (Sentence Parsing Matrix)",
+    "exercises": [
+      {
+        "id": "u35_l5_ex1",
+        "title": "Alıştırma 1: Akademik / Spiralleşme — Cümle Parsing & Geçmiş Konu Entegrasyonu (Sentence Parsing Matrix & Spiral Integration)",
+        "description": "Geçmiş bölümlerden bilinen 'It is... that', 'Relative Clauses' ve 'Prepositional Phrases' yapılarıyla harmanlanmış akademik cümle analizi.",
+        "questions": [
+          {
+            "id": "u35_l5_q1",
+            "type": "spotlight",
+            "prompt": "Projektör Modu (Spiralleşme): Aşağıdaki uzun akademik cümlenin ANA FİİLİNİ (Main Verb) tespit edin:",
+            "paragraph": "It is widely acknowledged by scholars that the interdisciplinary committee, comprising renowned sociologists and economists investigating demographic shifts, has recommended fundamental policy reforms.",
+            "highlightChunk": "has recommended",
+            "options": [
+              "comprising (Kısaltma/Niteleyici)",
+              "investigating (Kısaltma/Niteleyici)",
+              "has recommended (ANA FİİL / Main Verb)",
+              "is widely acknowledged (İsim Cümlesi Giriş Fiili)"
+            ],
+            "correctIndex": 2,
+            "translation": "Demografik kaymaları inceleyen tanınmış sosyolog ve iktisatçılardan oluşan disiplinlerarası komitenin temel politika reformları tavsiye ettiği alimlerce yaygın biçimde kabul edilmektedir.",
+            "explanation": "Cümledeki 'comprising...' ve 'investigating...' yan kısaltmalardır. 'that' yan cümlesinin ana yüklemi 'has recommended'dır. (It is... that sahte özne kalıbı geçmiş konudan tekrar edilmiştir).",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          },
+          {
+            "id": "u35_l5_q2",
+            "type": "matching",
+            "prompt": "Cümle içi bileşenleri ve geçmiş konu tekrar kalıplarını eşleştirin.",
+            "paragraph": "It is reported by historians that the ancient manuscript preserved in state archives contains vital records, thereby clarifying unresolved legal disputes.",
+            "pairs": [
+              {
+                "left": "It is reported by historians that...",
+                "right": "Geçmiş Konu: Sahte Özne / İsim Cümleciği Kalıbı (It is V3 that...)"
+              },
+              {
+                "left": "the ancient manuscript preserved in state archives",
+                "right": "Özne + Edilgen Sıfat Kısaltması (Noun + V3)"
+              },
+              {
+                "left": "contains vital records",
+                "right": "Ana Yüklem ve Nesne Öbeği"
+              },
+              {
+                "left": "thereby clarifying unresolved legal disputes",
+                "right": "Sonuç Bildiren Participle (thereby + V-ing)"
+              }
+            ],
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          },
+          {
+            "id": "u35_l5_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Cümledeki ARAYA GİREN KISALTMA ÖBEĞİNİ (Parenthetical Reduction) belirleyin:",
+            "paragraph": "The constitutional amendment, drafted by legal scholars after lengthy judicial debates, aims to fortify civil liberties across all jurisdictions.",
+            "highlightChunk": "drafted by legal scholars after lengthy judicial debates",
+            "options": [
+              "The constitutional amendment (Ana Özne)",
+              "drafted by legal scholars after lengthy judicial debates (Araya Giren Edilgen Kısaltma)",
+              "aims to fortify (Ana Yüklem / Main Verb)",
+              "civil liberties across all jurisdictions (Nesne Öbeği)"
+            ],
+            "correctIndex": 1,
+            "translation": "Uzun yargısal tartışmaların ardından hukuk alimlerince taslağı hazırlanan anayasa değişikliği, tüm yargı alanlarında sivil özgürlükleri güçlendirmeyi hedeflemektedir.",
+            "explanation": "'drafted by legal scholars...' özne ile yüklem arasına giren edilgen niteleme kısaltmasıdır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "lessonId": "u35_l6",
+    "lessonTitle": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği (Advanced Diagnostic)",
+    "exercises": [
+      {
+        "id": "u35_l6_ex1",
+        "title": "Alıştırma 1: Akademik / Spiralleşme — Sınav Odaklı Karma Master Class & Sentaks Dedektifliği (Advanced Diagnostic)",
+        "description": "Sınav formatında Dangling Participles, çift taraflı boşluklar ve karma sentaks çözümlemesi",
+        "questions": [
+          {
+            "id": "u35_l6_q1",
+            "type": "swipe",
+            "prompt": "Cümlede 'Dangling Participle' (Özne Uyumsuzluğu Hatalı Kullanım) var mı? Sol (BUG) / Sağ (VALID)",
+            "phrase": "Examining the anthropological fieldnotes, several indigenous cultural traditions were analyzed by the researchers.",
+            "translation": "Antropolojik arazi notları incelenirken, araştırmacılar tarafından birkaç yerli kültürel gelenek analiz edildi.",
+            "isCorrect": false,
+            "explanation": "BUG! (Dangling Participle). 'Examining...' etken kısaltmasının mantıksal öznesi araştırmacılardır; fakat ana cümlenin öznesi 'traditions' (gelenekler) yazılmıştır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          },
+          {
+            "id": "u35_l6_q2",
+            "type": "fill-blank-dropdown",
+            "prompt": "YDS/YÖKDİL Çift Boşluk Doldurma (Kısaltma + İsim ve Edat Yapıları):",
+            "sentence": "The documentary film, __________ by renowned cinema directors, provides key insights __________ social cohesion in urban communities.",
+            "options": [
+              "produced / into",
+              "producing / onto",
+              "having produced / with",
+              "to produce / at"
+            ],
+            "correctIndex": 0,
+            "translation": "Tanınmış sinema yönetmenlerince üretilen belgesel film, kentsel topluluklardaki sosyal uyuma dair önemli bilgiler sağlamaktadır.",
+            "explanation": "'film (which was) produced' edilgen kısaltmadır; 'insights into' ise sabit isim-edat kombinasyonudur.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          },
+          {
+            "id": "u35_l6_q3",
+            "type": "spotlight",
+            "prompt": "Projektör Modu: Cümledeki spiralleşmiş geçmiş yapıları (It is believed that...) ve kısaltmayı birlikte analiz edin:",
+            "paragraph": "It is widely believed that the economic policies enacted by parliament will stabilize market fluctuations, thereby reducing financial stress.",
+            "highlightChunk": "enacted by parliament will stabilize market fluctuations, thereby reducing",
+            "options": [
+              "parlamento tarafından yürürlüğe konan politikaların piyasa dalgalanmalarını istikrara kavuşturacağı ve böylelikle finansal stresi azaltacağı (Kısaltma + İsim Cümleciği Entegrasyonu)",
+              "parlamento yürürlüğe koyduğu zaman finansal stresi azaltacağı",
+              "parlamento yürürlüğe koymasına karşın finansal stresi azaltacağı",
+              "parlamento yürürlüğe koymak amacıyla finansal stresi azaltacağı"
+            ],
+            "correctIndex": 0,
+            "translation": "Parlamento tarafından yürürlüğe konan ekonomik politikaların piyasa dalgalanmalarını istikrara kavuşturacağı ve böylelikle finansal stresi azaltacağı yaygın biçimde inanılmaktadır.",
+            "explanation": "Cümlede hem 'It is believed that' isim cümlesi kalıbı, hem 'enacted by' edilgen sıfat kısaltması hem de 'thereby reducing' sonuç kısaltması bir arada harmanlanmıştır.",
+            "grammarTags": [
+              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları",
+              "Geçmiş Konu Tekrarı"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
 };
 
-// Integrate Unit 35 into global units and lessons arrays
-(function () {
-  if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit35 !== 'undefined') {
+
+// data.js - UNIT 36: THE ULTIMATE ACADEMIC HEDGING & PROBABILITY LANGUAGE (108 EXERCISES)
+
+// Entegrasyon Protokolü: Unit 35'i (Bölüm 25) global units, lessons ve unitSentencesMap yapılarına kaydeder
+if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit35 !== 'undefined') {
     const unitLessonIds = unit35.lessons.map(l => l.lessonId);
 
     const titlesMap = {
-      "u35_l1": "1: Projektör Modu ile Akademik Kısaltma Analizi (developed by, having completed, referred to as)",
-      "u35_l2": "2: Hata Avcısı ile Yanlış Kısaltmaları Ayıklayın (having completed vs completed, active vs passive)",
-      "u35_l3": "3: Yapısal Analize Göre Doğru Kısıltmayı Belirleyin (having studied, known as, observed under)",
-      "u35_l4": "4: Açılır Menü ile Akademik Kısaltma Seçimi (given the circumstances, driven by, exposed to)",
-      "u35_l5": "5: Buton Modu ile Kısaltma ve Cümle Çözümleme (having been recognized, although defeated, if implemented)",
-      "u35_l6": "6: Kısaltmalı Akademik Cümlelerin Doğru Çevirisini Bulun (having published, accused of, supported by)"
+      "u35_l1": "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
+      "u35_l2": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık",
+      "u35_l3": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık",
+      "u35_l4": "4. Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları",
+      "u35_l5": "5. Akademik Cümle Parsing & Çözümleme Stratejileri",
+      "u35_l6": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği"
     };
 
-    // Push Unit 35
-    units.push({
+    // Check if Unit 35 is already in units array
+    const existingUnitIdx = units.findIndex(u => u.id === 35);
+    const unitData = {
       id: 35,
       title: unit35.unitTitle,
-      description: "Katmanlı kısaltma, isim/zarf/sıfat kısaltmaları ve akademik cümlecik analizleri.",
+      description: unit35.unitDescription,
       lessons: unitLessonIds,
+      formulas: unit35.formulas || [],
       pages: "145-160"
-    });
+    };
 
-    // Push Unit 35 Lessons
+    if (existingUnitIdx !== -1) {
+      units[existingUnitIdx] = unitData;
+    } else {
+      units.push(unitData);
+    }
+
     unit35.lessons.forEach(l => {
-      const displayTitle = titlesMap[l.lessonId] || l.lessonTitle;
-      // Wrap questions inside a standard single exercise object
-      const structuredExercises = [
-        {
-          id: l.lessonId + "_ex1",
-          title: "Alıştırma 1: Yapı Çalışması",
-          description: displayTitle,
-          questions: l.exercises
-        }
-      ];
-
-      lessons.push({
-        id: l.lessonId,
-        unitId: 35,
-        title: displayTitle,
-        subtitle: "",
-        exercises: structuredExercises
-      });
+      let lessonObj = lessons.find(less => less.id === l.lessonId);
+      if (!lessonObj) {
+        lessonObj = {
+          id: l.lessonId,
+          displayId: l.lessonId,
+          title: titlesMap[l.lessonId] || l.lessonTitle,
+          subtitle: l.lessonTitle,
+          icon: "📖",
+          unitId: 35,
+          questions: [],
+          exercises: l.exercises || []
+        };
+        lessons.push(lessonObj);
+      } else {
+        lessonObj.title = titlesMap[l.lessonId] || l.lessonTitle;
+        lessonObj.subtitle = l.lessonTitle;
+        lessonObj.exercises = l.exercises || [];
+      }
     });
-  }
 
-  })();
-// data.js - UNIT 36: THE ULTIMATE ACADEMIC HEDGING & PROBABILITY LANGUAGE (108 EXERCISES)
+    if (typeof unitSentencesMap !== 'undefined') {
+      unitSentencesMap[35] = {};
+      unit35.lessons.forEach(l => {
+        unitSentencesMap[35][l.lessonId] = l;
+      });
+    }
+}
+
+
 const unit36 = {
   unitId: "unit_36_hedging",
   unitTitle: "Akademik Yumuşatma ve İhtimal Dili",

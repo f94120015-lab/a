@@ -6673,6 +6673,19 @@ function colorCodeUnit101Sentence(sentence) {
   return cleaned;
 }
 
+function colorCodeUnit29Sentence(sentence) {
+  if (!sentence) return sentence;
+  let cleaned = sentence.replace(/<span[^>]*>(.*?)<\/span>/gi, '$1');
+  const regex = /\bIt\s+(?:is|was|has\s+been)(?:\s+[\w'-]+|\s+_{3,}){1,6}?\s+that\b/gi;
+  const regexNoThat = /\bIt\s+(?:is|was|has\s+been)\s+(?:[\w'-]+\s+){1,3}(?:to\s+[\w'-]+\s+)?_{3,}/gi;
+  if (regex.test(cleaned)) {
+    cleaned = cleaned.replace(regex, (match) => `<span class="color-code-extraposition">${match}</span>`);
+  } else if (regexNoThat.test(cleaned)) {
+    cleaned = cleaned.replace(regexNoThat, (match) => `<span class="color-code-extraposition">${match}</span>`);
+  }
+  return cleaned;
+}
+
 function getUnit101TimelineSVG(type) {
   if (type === 'since') {
     return `
@@ -6963,15 +6976,16 @@ function startLesson(lessonId, exerciseId = null) {
           id: `${q.id}_bridge`,
           type: 'word-bank',
           prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
+          sentence: q.sentence || q.enSentence || q.paragraph || q.mainSentence || '',
           translation: q.bridgeTranslation.sentence,
-          sentence: q.bridgeTranslation.sentence,
           correctOrder: q.bridgeTranslation.translation,
           words: q.bridgeTranslation.words,
+          isEngToTr: true,
           explanationKey: q.explanationKey || 'academic_tips_master'
         };
         expandedQuestions.push(bridgeQ);
       } else if (q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
-        let targetSentence = q.sentence || q.enSentence || q.mainSentence || '';
+        let targetSentence = q.sentence || q.enSentence || q.paragraph || q.mainSentence || '';
         let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
         if (targetTr && targetTr.length > 0) {
           const trWords = targetTr.split(' ');
@@ -6984,10 +6998,11 @@ function startLesson(lessonId, exerciseId = null) {
               id: `${q.id}_bridge`,
               type: 'word-bank',
               prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
-              translation: targetSentence,
               sentence: targetSentence,
+              translation: targetTr,
               correctOrder: chunks,
               words: [...chunks, 'rağmen', 'çünkü', 'önce', 'sonra'],
+              isEngToTr: true,
               explanationKey: q.explanationKey || 'academic_tips_master'
             };
             expandedQuestions.push(bridgeQ);
@@ -7492,6 +7507,19 @@ function renderQuestion() {
 
   if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) && question.sentence) {
     question.sentence = colorCodeUnit101Sentence(question.sentence);
+  }
+  if (currentLesson && (currentLesson.unitId === 29 || currentLesson.originalUnitId === 29)) {
+    if (question.sentence) question.sentence = colorCodeUnit29Sentence(question.sentence);
+    if (question.enSentence) question.enSentence = colorCodeUnit29Sentence(question.enSentence);
+    if (question.prompt) question.prompt = colorCodeUnit29Sentence(question.prompt);
+    if (question.options) {
+      question.options = question.options.map(opt => typeof opt === 'string' ? colorCodeUnit29Sentence(opt) : opt);
+    }
+    if (question.pairs) {
+      question.pairs.forEach(p => {
+        if (p.left && p.left.includes('It ')) p.left = colorCodeUnit29Sentence(p.left);
+      });
+    }
   }
 
   // Dynamically assign render type for blank questions
@@ -8689,14 +8717,19 @@ function renderWordBank(container, question) {
     ? question.isEngToTr
     : (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
 
-  let sourceText = isEngToTr ? (question.enSentence || question.sentence || "") : (question.translation || question.trSentence || question.sentence || "");
-  if (sourceText) {
-    sourceText = makeTextHoverable(sourceText);
+  // Eğer Türkçe çeviri/dizme isteniyorsa (isEngToTr == true), gösterilecek kaynak cümle İngilizce olmalıdır.
+  let displaySentence = "";
+  if (isEngToTr) {
+    displaySentence = question.sentence || question.enSentence || question.paragraph || question.mainSentence || "";
+  } else {
+    displaySentence = question.translation || question.trSentence || "";
   }
+
+  let formattedSourceText = displaySentence ? makeTextHoverable(displaySentence) : "";
 
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt}</p>
-    ${sourceText ? `<p class="quiz-translation">${sourceText}</p>` : ''}
+    ${formattedSourceText ? `<p class="quiz-translation">${formattedSourceText}</p>` : ''}
     <div class="wb-sentence" id="wb-sentence"></div>
     <div class="wb-bank" id="wb-bank">
       ${shuffledWords.map((w, i) => `

@@ -8794,6 +8794,12 @@ nDown 0.3s ease;
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
 }
 
+.color-code-extraposition {
+  color: #6366f1 !important; /* Indigo Accent */
+  font-weight: bold !important;
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.2);
+}
+
 /* Zaman Çizelgesi (Timeline) SVG Stilleri */
 .u101-timeline-wrapper {
   background: rgba(255, 255, 255, 0.03);
