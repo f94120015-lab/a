@@ -5271,3 +5271,222 @@ if (typeof lessons !== 'undefined') {
   }
 })();
 
+
+// DYNAMIC CURRICULUM MERGING & REDUCTION (CHAPTERS 25+)
+(function() {
+  if (typeof units === 'undefined' || typeof lessons === 'undefined') return;
+
+  const startIndex = units.findIndex(u => String(u.id) === '35');
+  if (startIndex === -1) return;
+
+  const newMergedUnits = [
+    {
+      id: "35",
+      title: "Master Reductions & Participles",
+      description: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles), Gerund/Infinitive ayrımı, edilgen kısaltmalar ve reduction geometrisi.",
+      pages: "300-339",
+      sourceUnitIds: ["35", "39_2", "200", "201", "52"],
+      icon: "🧪",
+      lessonFilter: (l, origUnitId) => {
+        if (origUnitId === "35") return true;
+        if (origUnitId === "39_2" && ["c40_l5_merged", "c40_l6_merged", "c40_l7_merged"].includes(l.id)) return true;
+        if (origUnitId === "200") return true;
+        if (origUnitId === "201") return true;
+        if (origUnitId === "52" && l.id === "c52_l1") return true;
+        return false;
+      }
+    },
+    {
+      id: "36",
+      title: "Hedging ve İhtimal Dili (Hedging Modality)",
+      description: "Akademik yazımda kesinlik bildiren ifadeler yerine kullanılan hedging ve ihtimal dilleri.",
+      pages: "340-359",
+      sourceUnitIds: ["36"],
+      icon: "🔍",
+      lessonFilter: () => true
+    },
+    {
+      id: "37",
+      title: "Advanced Relative Clauses",
+      description: "Tarih, hukuk, felsefe, sosyoloji, fen ve sağlık metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
+      pages: "360-399",
+      sourceUnitIds: ["37"],
+      icon: "📝",
+      lessonFilter: () => true
+    },
+    {
+      id: "38",
+      title: "Master Inversion & Devriklik",
+      description: "Akademik, edebi ve sınav düzeyinde (YDS/YÖKDİL) sıklık, kısıtlama, karşılaştırma ve koşul devriklikleri.",
+      pages: "400-419",
+      sourceUnitIds: ["38", "39_3", "51"],
+      icon: "⚡",
+      lessonFilter: (l, origUnitId) => {
+        if (origUnitId === "38") return true;
+        if (origUnitId === "39_3" && l.id === "c40_l8_merged") return true;
+        if (origUnitId === "51" && l.id === "c51_l3") return true;
+        return false;
+      }
+    },
+    {
+      id: "39",
+      title: "Master Tenses, Conjunctions & Conditionals",
+      description: "Zaman uyumları, bağlaçların sentaks kimliği, Type 0-1-2-3 & Mix koşul cümleleri ve devrik koşul yapıları.",
+      pages: "420-479",
+      sourceUnitIds: ["39", "39_2", "39_3", "105", "53", "55"],
+      icon: "🛡️",
+      lessonFilter: (l, origUnitId) => {
+        if (origUnitId === "39") return true;
+        if (origUnitId === "39_2" && l.id === "c40_l4_merged") return true;
+        if (origUnitId === "39_3" && ["c40_l9_merged", "c40_l10_merged"].includes(l.id)) return true;
+        if (origUnitId === "105") return true;
+        if (origUnitId === "53") return true;
+        if (origUnitId === "55") return true;
+        return false;
+      }
+    },
+    {
+      id: "57",
+      title: "Academic Verbs & Modals",
+      description: "Akademik deyimsel fiiller (Phrasal Verbs) ve Phrasal Modal / Subjunctive matrisi.",
+      pages: "480-499",
+      sourceUnitIds: ["57", "42"],
+      icon: "🎓",
+      lessonFilter: () => true
+    },
+    {
+      id: "52",
+      title: "Akademik TIPS & Özel Yapılar",
+      description: "As türevleri, Causative mühendisliği, Eşikte olma grubu, It-li pasif aktarımlar ve Subjunctive gizli şart kuralları.",
+      pages: "500-519",
+      sourceUnitIds: ["51", "52"],
+      icon: "💡",
+      lessonFilter: (l, origUnitId) => {
+        if (origUnitId === "51" && ["c51_l1", "c51_l2"].includes(l.id)) return true;
+        if (origUnitId === "52" && ["c52_l2", "c52_l3", "c52_l4"].includes(l.id)) return true;
+        return false;
+      }
+    },
+    {
+      id: "43",
+      title: "Multi-Element Verb Chains (5-8 Öğeli Yapılar)",
+      description: "5, 6, 7 ve 8 öğeli karmaşık morfolojik fiil zincirleri, söylentili edelgin süreçler ve eylem trenleri.",
+      pages: "520-559",
+      sourceUnitIds: ["43", "47", "48", "44", "45", "46"],
+      icon: "⚙️",
+      lessonFilter: () => true
+    },
+    {
+      id: "66",
+      title: "Sınav Kilitleri & Hızlı Refleks Stratejileri",
+      description: "Zaman kilitleri, esnek zaman alanları, since/for dünyası, recently/lately refleksleri ve 10 altın kural karma testleri.",
+      pages: "560-579",
+      sourceUnitIds: ["41", "66"],
+      icon: "🔑",
+      lessonFilter: () => true
+    },
+    {
+      id: "49",
+      title: "Ultimate Academic Exam Simulation & Challenge",
+      description: "YDS/YÖKDİL gramer simülasyonları, TOEFL/IELTS cümle çözümlemeleri, hata avcılığı, çeviri challenge'ları ve büyük final zirvesi.",
+      pages: "580-600",
+      sourceUnitIds: ["49", "50", "39_3"],
+      icon: "🏆",
+      lessonFilter: (l, origUnitId) => {
+        if (origUnitId === "49") return true;
+        if (origUnitId === "50") return true;
+        if (origUnitId === "39_3" && l.id === "c40_l11_merged") return true;
+        return false;
+      }
+    }
+  ];
+
+  const lessonsCopy = [...lessons];
+  const finalMergedUnits = [];
+  const processedLessonIds = new Set();
+  const finalLessons = [];
+
+  newMergedUnits.forEach(newUnit => {
+    const newUnitLessons = [];
+    const mergedFormulas = [];
+
+    newUnit.sourceUnitIds.forEach(sourceId => {
+      const origUnit = units.find(u => String(u.id) === String(sourceId));
+      if (!origUnit) return;
+
+      origUnit.lessons.forEach(lId => {
+        const lessonObj = lessonsCopy.find(l => String(l.id) === String(lId));
+        if (!lessonObj) return;
+
+        if (newUnit.lessonFilter(lessonObj, sourceId)) {
+          lessonObj.unitId = newUnit.id;
+          if (!processedLessonIds.has(lessonObj.id)) {
+            processedLessonIds.add(lessonObj.id);
+            finalLessons.push(lessonObj);
+          }
+          newUnitLessons.push(lessonObj.id);
+        }
+      });
+
+      if (typeof rawTopics !== 'undefined') {
+        const origTopic = rawTopics.find(t => String(t.id) === String(sourceId));
+        if (origTopic && origTopic.formulas) {
+          origTopic.formulas.forEach(f => {
+            if (!mergedFormulas.some(mf => mf.formula === f.formula)) {
+              mergedFormulas.push(f);
+            }
+          });
+        }
+      }
+    });
+
+    finalMergedUnits.push({
+      id: newUnit.id,
+      title: newUnit.title,
+      description: newUnit.description,
+      pages: newUnit.pages,
+      lessons: newUnitLessons,
+      icon: newUnit.icon,
+      formulas: mergedFormulas
+    });
+  });
+
+  const prefixUnits = units.slice(0, startIndex);
+  const prefixLessons = lessonsCopy.filter(l => !processedLessonIds.has(l.id) && prefixUnits.some(pu => pu.lessons.includes(l.id)));
+
+  units.length = 0;
+  units.push(...prefixUnits, ...finalMergedUnits);
+
+  lessons.length = 0;
+  lessons.push(...prefixLessons, ...finalLessons);
+
+  units.forEach(u => {
+    u.lessons.forEach((lId, idx) => {
+      const l = lessons.find(less => less.id === lId);
+      if (l) {
+        l.displayId = idx + 1;
+        l.title = l.title.replace(/^\d+[\.:\s]*/, `${idx + 1}. `);
+      }
+    });
+  });
+
+  if (typeof rawTopics !== 'undefined') {
+    const prefixTopics = rawTopics.slice(0, startIndex);
+    const finalTopics = [];
+    finalMergedUnits.forEach(mu => {
+      finalTopics.push({
+        id: mu.id,
+        title: mu.title,
+        desc: mu.description,
+        icon: mu.icon || "🧪",
+        numLessons: mu.lessons.length,
+        formulas: mu.formulas || []
+      });
+    });
+
+    rawTopics.length = 0;
+    rawTopics.push(...prefixTopics, ...finalTopics);
+  }
+})();
+
+
