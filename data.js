@@ -50242,519 +50242,577 @@ const unit36 = {
   lessons: [
     {
       lessonId: "u36_l1",
-      lessonTitle: "1: Yumuşatma Sıfatları & Zarfları",
+      lessonTitle: "1: Yumuşatma Sıfatları & Zarfları (likely, presumably, arguably, possibly)",
       exercises: [
         {
           id: "u36_l1_q1",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The newly engineered framework is __________ to resolve most parsing anomalies.",
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun akademik yumuşatma sıfatını seçiniz:<br><br>The cognitive psychologists noted that a change in behavioral patterns is ___ to occur under stress.",
           options: ["likely", "definitely", "completely", "absolutely"],
           correctIndex: 0,
-          explanation: "Akademik dilde kesinlik bildiren 'definitely' gibi yapılar yerine, ihtimal bildiren 'likely' (muhtemel) kelimesi iddiayı yumuşatmak için sıklıkla tercih edilir."
+          explanation: "Akademik yazımda kesinlik bildiren zarflar yerine ihtimal belirten 'likely' sıfat yapısı tercih edilerek iddia yumuşatılır.",
+          grammarTags: ["Hedging", "Adjective", "Psychology", "Collocation"]
         },
         {
           id: "u36_l1_q2",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The archaeological data suggests that the artifact is __________ of Roman origin.",
-          options: ["presumably", "undeniably", "permanently", "irresponsibly"],
-          correctIndex: 0,
-          explanation: "'Presumably' (muhtemelen/tahmin edilebileceği üzere), yazarların kesin kanıtı olmayan bir çıkarımı kibarca sunmasını sağlar."
+          type: "multiple-choice",
+          prompt: "Hangi cümle akademik yazımda 'Hedging' (yumuşatma) kuralına en uygundur?<br><br>Choose the most appropriate academic sentence:",
+          options: [
+            "The film director's interpretation of cultural history was 100% flawless.",
+            "The film director's interpretation of cultural history is arguably the most controversial of the decade.",
+            "The film director's interpretation of cultural history is definitely the worst without exception.",
+            "The film director's interpretation of cultural history is always proving absolute truth."
+          ],
+          correctIndex: 1,
+          explanation: "'Arguably' zarfı, iddiayı kesinlik tuzağından kurtaran ve tartışmaya açık bırakan akademik bir hedging kelimesidir.",
+          grammarTags: ["Hedging", "Adverb", "Cinema", "Sentence Selection"]
         },
         {
           id: "u36_l1_q3",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The implementation of renewable energy is __________ a viable solution for urban centers.",
-          options: ["arguably", "narrowly", "hopelessly", "defectively"],
-          correctIndex: 0,
-          explanation: "'Arguably' (tartışmalı bir şekilde / muhtemelen öyle olduğu ileri sürülebilir), iddiayı koruma kalkanına alan güçlü bir hedging zarfıdır."
+          type: "matching",
+          prompt: "Yumuşatma sıfat ve zarflarını Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the hedging terms with their translation:",
+          pairs: [
+            { left: "presumably", right: "tahminen / muhtemelen" },
+            { left: "arguably", right: "tartışmalı bir şekilde" },
+            { left: "partially", right: "kısmen" },
+            { left: "relatively", right: "nispeten / görece" }
+          ],
+          grammarTags: ["Hedging", "Matching", "Vocabulary"]
         },
         {
           id: "u36_l1_q4",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The reported system crash was __________ attributed to an unexpected memory leak.",
-          options: ["partially", "totally", "entirely", "permanently"],
-          correctIndex: 0,
-          explanation: "'Partially' (kısmen) zarfı, bir olayın nedenini tek bir etkene bağlayıp kesin konuşmaktan kaçınmayı sağlar."
+          type: "word-bank",
+          prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Tarihçiler, arşiv kaynaklarının kısmen güvenilir olduğunu kabul ettiler.",
+          words: ["Historians", "accepted", "that", "archival", "sources", "were", "partially", "reliable", "completely", "absolutely"],
+          correctOrder: ["Historians", "accepted", "that", "archival", "sources", "were", "partially", "reliable"],
+          enSentence: "Historians accepted that archival sources were partially reliable.",
+          grammarTags: ["Word Order", "Noun Clause", "History", "Hedging"]
         },
         {
           id: "u36_l1_q5",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The initial hypothesis was __________ accurate, though several edge cases were overlooked.",
-          options: ["largely", "never", "ruinously", "foolishly"],
-          correctIndex: 0,
-          explanation: "'Largely' (büyük ölçüde) kelimesi iddiayı %100 kesinlikten çıkarıp esneklik kazandırır."
+          type: "error-spotting",
+          prompt: "Aşağıdaki cümledeki gramer veya yumuşatma hatasını bulunuz:<br><br>Find the error:",
+          sentence: "The cultural anthropologist presumably to suggest that the kinship patterns changed.",
+          options: ["presumably", "to suggest", "kinship", "changed"],
+          correctIndex: 1,
+          explanation: "'Presumably' zarfından sonra doğrudan çekimli fiil gelmelidir, 'to suggest' gibi mastar yapısı kullanılamaz.",
+          grammarTags: ["Error Spotting", "Syntax", "Anthropology"]
         },
         {
           id: "u36_l1_q6",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "It is __________ true that higher temperature increases the rate of chemical reaction.",
-          options: ["generally", "instantly", "doubtfully", "rarely"],
-          correctIndex: 0,
-          explanation: "'Generally' (genellikle) kelimesi istisnaları kabul eden akademik bir yumuşatma zarfıdır."
+          type: "reverse-engineering-translation",
+          prompt: "Verilen Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Ekonomik araştırmalar, enflasyon oranlarını düşürme politikalarının muhtemelen yetersiz kalacağını gösteriyor.'",
+          options: [
+            "Economic research indicates that policies to reduce inflation rates will definitely fail.",
+            "Economic research indicates that policies to reduce inflation rates will absolutely fail.",
+            "Economic research indicates that policies to reduce inflation rates will possibly fail.",
+            "Economic research indicates that policies to reduce inflation rates will always fail."
+          ],
+          correctIndex: 2,
+          explanation: "'possibly' ihtimal zarfı, kesin bir iddia yerine makul bir akademik esneklik sağlar.",
+          grammarTags: ["Reverse Translation", "Hedging", "Economics"]
         },
         {
           id: "u36_l1_q7",
-          type: "matching",
-          prompt: "Kelimeleri akademik yumuşatma anlamlarıyla eşleştirin:",
-          pairs: [
-            { left: "likely", right: "muhtemel" },
-            { left: "arguably", right: "ileri sürülebilir ki" },
-            { left: "presumably", right: "tahminen / muhtemelen" },
-            { left: "partially", right: "kısmen" }
-          ]
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa uygun düşen yumuşatma zarfını seçiniz:<br><br>The defense lawyer argued that the evidence retrieved from historical archives is ___ incomplete.",
+          options: ["absolutely", "never", "totally", "presumably"],
+          correctIndex: 3,
+          explanation: "Kanıtın eksik olduğunu iddia ederken 'presumably' ile ihtimal derecesi eklenerek savunma dili yumuşatılmıştır.",
+          grammarTags: ["Hedging", "Adverb", "Law"]
         },
         {
           id: "u36_l1_q8",
-          type: "matching",
-          prompt: "Kelimeleri akademik kullanım anlamlarıyla eşleştirin:",
-          pairs: [
-            { left: "largely", right: "büyük ölçüde" },
-            { left: "generally", right: "genellikle" },
-            { left: "possibly", right: "muhtemelen / olasılıkla" },
-            { left: "relatively", right: "nispeten / görece" }
-          ]
+          type: "multiple-choice",
+          prompt: "Aşağıdaki cümledeki kesinlik ifadesini yumuşatarak akademik dile uyarlayan seçeneği bulunuz:<br><br>'The behavioral survey confirms that the subject reacted aggressively.'",
+          options: [
+            "The behavioral survey indicates that the subject presumably reacted aggressively.",
+            "The behavioral survey confirms 100% that the subject reacted aggressively.",
+            "The behavioral survey proves that the subject definitely reacted aggressively.",
+            "The behavioral survey shows that the subject always reacted aggressively."
+          ],
+          correctIndex: 0,
+          explanation: "'indicates' ve 'presumably' kullanılarak kesin hüküm bildiren 'confirms' ifadesi akademik dile uygun hale getirilmiştir.",
+          grammarTags: ["Sentence Correction", "Hedging", "Psychology"]
         },
         {
           id: "u36_l1_q9",
-          type: "multiple-choice",
-          prompt: "Hangi seçenekte kesinlik bildiren kelime yerine doğru bir hedging zarfı kullanılmıştır?",
-          options: [
-            "The results are arguably optimal for this specific dataset.",
-            "The results are definitely optimal for all conceivable datasets.",
-            "The results are 100% indisputably perfect in every situation.",
-            "The results always prove absolute certainty without exception."
+          type: "matching",
+          prompt: "Akademik yumuşatma sıfatlarını eşleştiriniz:<br><br>Match the following adjectives:",
+          pairs: [
+            { left: "likely", right: "muhtemel" },
+            { left: "possible", right: "olası" },
+            { left: "probable", right: "tahmin edilebilir / olası" },
+            { left: "apparent", right: "açık / aşikar" }
           ],
-          correctIndex: 0,
-          explanation: "'Arguably' ifadesi iddianın tartışmaya açık olduğunu vurgulayarak yumuşatır."
+          grammarTags: ["Hedging", "Adjective", "Matching"]
         },
         {
           id: "u36_l1_q10",
-          type: "multiple-choice",
-          prompt: "The market trend is presumably moving towards cloud-native architectures cümlesinin Türkçe karşılığını seçin:",
-          options: [
-            "Pazar eğilimi tahminen bulut yerel mimarilere doğru ilerlemektedir.",
-            "Pazar eğilimi kesinlikle bulut yerel mimarilere geçişi tamamlamıştır.",
-            "Pazar eğilimi asla bulut mimarilerini kabul etmeyecektir.",
-            "Pazar eğiliminin bulut yerel mimarilerle hiçbir ilgisi yoktur."
-          ],
-          correctIndex: 0,
-          explanation: "'Presumably' (tahminen/muhtemelen) kelimesi çıkarımın kesin olmadığını belirtir."
+          type: "word-bank",
+          prompt: "Kelimeleri doğru sıraya dizerek İngilizce cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Yeni sinema yönetmeni muhtemelen en yetenekli adaydır.",
+          words: ["The", "new", "cinema", "director", "is", "presumably", "the", "most", "talented", "candidate", "definitely", "always"],
+          correctOrder: ["The", "new", "cinema", "director", "is", "presumably", "the", "most", "talented", "candidate"],
+          enSentence: "The new cinema director is presumably the most talented candidate.",
+          grammarTags: ["Word Order", "Hedging", "Cinema"]
         },
         {
           id: "u36_l1_q11",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Yeni model kısmen başarılı bir performans gösterdi.",
-          words: ["Yeni", "model", "kısmen", "başarılı", "bir", "performans", "gösterdi", "kesinlikle", "tamamen"],
-          correctOrder: ["Yeni", "model", "kısmen", "başarılı", "bir", "performans", "gösterdi"],
-          enSentence: "The new model showed a partially successful performance.",
-          isEngToTr: true
+          type: "error-spotting",
+          prompt: "Cümledeki hedging veya gramer hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The survey data is arguably the most complexly document ever analyzed by the research team.",
+          options: ["is", "arguably", "complexly", "analyzed"],
+          correctIndex: 2,
+          explanation: "İsim (document) nitelemek için sıfat (complex) kullanılmalıdır, zarf (complexly) kullanılması gramer hatasıdır.",
+          grammarTags: ["Error Spotting", "Grammar", "Research"]
         },
         {
           id: "u36_l1_q12",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Bu yaklaşım muhtemelen en verimli seçenektir.",
-          words: ["This", "approach", "is", "likely", "the", "most", "efficient", "option", "definitely", "always"],
-          correctOrder: ["This", "approach", "is", "likely", "the", "most", "efficient", "option"],
-          enSentence: "This approach is likely the most efficient option.",
-          isEngToTr: false
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Mahkeme anlaşmazlığı, büyük ölçüde mülkiyet sınırlarının belirsizliğinden kaynaklanmaktadır.'",
+          options: [
+            "The court dispute is completely caused by the uncertainty of property borders.",
+            "The court dispute is absolutely caused by the uncertainty of property borders.",
+            "The court dispute is never caused by the uncertainty of property borders.",
+            "The court dispute is largely caused by the uncertainty of property borders."
+          ],
+          correctIndex: 3,
+          explanation: "'largely' (büyük ölçüde) kelimesi iddiaya esneklik kazandıran bir yumuşatma zarfıdır.",
+          grammarTags: ["Reverse Translation", "Hedging", "Law"]
         }
       ]
     },
     {
       lessonId: "u36_l2",
-      lessonTitle: "2: Yumuşatma Fiilleri & Modallar",
+      lessonTitle: "2: Yumuşatma Fiilleri & Modallar (tend to, appear to, suggest, could, may, might)",
       exercises: [
         {
           id: "u36_l2_q1",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The sharp rise in global temperatures __________ to accelerate severe climate shifts.",
-          options: ["tends", "must", "insists", "forces"],
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun yumuşatma fiilini seçiniz:<br><br>The cognitive psychologists noted that children ___ to imitate behavioral patterns of adults.",
+          options: ["tend", "must", "force", "insist"],
           correctIndex: 0,
-          explanation: "'Tend to' (-e eğiliminde olmak) yapısı akademik yazımda kesinlik tuzağından kaçınmak için kullanılan en temel hedging yapılamalarındandır."
+          explanation: "'tend to' (-e eğiliminde olmak) yapısı akademik yazımda kesinlik tuzağından kaçınmak için kullanılan bir hedging fiilidir.",
+          grammarTags: ["Hedging", "Verb", "Psychology"]
         },
         {
           id: "u36_l2_q2",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The patient __________ to have recovered fully after the secondary therapy session.",
-          options: ["appears", "proves", "demands", "dictates"],
-          correctIndex: 0,
-          explanation: "'Appears to' (görünmektedir/gibi durmaktadır) gözlem dayanaklı yumuşatma fiilidir."
+          type: "multiple-choice",
+          prompt: "İddiaları yumuşatmak (hedging) amacıyla 'must' veya 'will' yerine hangi modallar tercih edilmelidir?<br><br>Select the best option:",
+          options: [
+            "shall / should / must",
+            "may / might / could",
+            "will / can / execute",
+            "need / dare / ought"
+          ],
+          correctIndex: 1,
+          explanation: "'may/might/could' ihtimal ve yetenek modalları kesinlik bildiren modalların yerine tercih edilerek savlar yumuşatılır.",
+          grammarTags: ["Hedging", "Modals", "Academic Choice"]
         },
         {
           id: "u36_l2_q3",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "Recent statistical evidence __________ that low-carb diets reduce vascular risks.",
-          options: ["indicates", "guarantees", "commands", "enforces"],
-          correctIndex: 0,
-          explanation: "'Indicates' / 'suggests' fiilleri bilimsel bulguları kesin hüküm vermeden sunar."
-        },
-        {
-          id: "u36_l2_q4",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "Such a policy change __________ trigger unforeseen economic consequences.",
-          options: ["might", "must", "shall", "will"],
-          correctIndex: 0,
-          explanation: "'Might' veya 'may' modalları geleceğe veya olasılığa dair iddiaları yumuşatır."
-        },
-        {
-          id: "u36_l2_q5",
-          type: "multiple-choice",
-          prompt: "The current experimental findings suggest that the algorithm may require further optimization cümlesinin en uygun Türkçe karşılığını seçin:",
-          options: [
-            "Mevcut deney bulguları, algoritmanın daha fazla optimizasyon gerektirebileceğini göstermektedir.",
-            "Mevcut deney bulguları, algoritmanın kesinlikle daha fazla optimizasyon gerektirdiğini kanıtlar.",
-            "Mevcut deney bulguları, algoritmanın optimizasyona hiçbir ihtiyacı olmadığını ortaya koymuştur.",
-            "Mevcut deney bulguları, algoritmanın optimize edilmesinin imkansız olduğunu gösterir."
-          ],
-          correctIndex: 0,
-          explanation: "'Suggest' (göstermek/öne sürmek) ve 'may' (olabilir) yapıları iddiayı esnetir."
-        },
-        {
-          id: "u36_l2_q6",
-          type: "multiple-choice",
-          prompt: "İddiaları yumuşatmak (hedging) amacıyla 'must' veya 'will' yerine hangi modallar tercih edilmelidir?",
-          options: ["may / might / could", "shall / should / must", "will / can / execute", "need / dare / ought"],
-          correctIndex: 0,
-          explanation: "'May/might/could' üçlüsü, akademik yazımda kesinlik iddiasını düşüren en yaygın modal yumuşatma kalkanıdır."
-        },
-        {
-          id: "u36_l2_q7",
           type: "matching",
-          prompt: "Düşünsel yumuşatma fiillerini Türkçe karşılıklarıyla eşleştirin:",
+          prompt: "Düşünsel yumuşatma fiillerini Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the hedging verbs:",
           pairs: [
             { left: "tend to", right: "-e eğiliminde olmak" },
             { left: "appear to", right: "görünmek / gibi durmak" },
             { left: "suggest", right: "öne sürmek / işaret etmek" },
             { left: "assume", right: "varsaymak" }
-          ]
+          ],
+          grammarTags: ["Hedging", "Verb", "Matching"]
+        },
+        {
+          id: "u36_l2_q4",
+          type: "word-bank",
+          prompt: "Kelimeleri doğru sıraya dizerek akademik cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Mevcut bulgular, ekonomik politikaların istikrarsızlığa yol açabileceğini gösteriyor.",
+          words: ["Current", "findings", "suggest", "that", "economic", "policies", "might", "lead", "to", "instability", "must", "always"],
+          correctOrder: ["Current", "findings", "suggest", "that", "economic", "policies", "might", "lead", "to", "instability"],
+          enSentence: "Current findings suggest that economic policies might lead to instability.",
+          grammarTags: ["Word Order", "Economics", "Hedging", "Modals"]
+        },
+        {
+          id: "u36_l2_q5",
+          type: "error-spotting",
+          prompt: "Cümledeki gramer veya hedging hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The defense lawyer appears to having overlooked the legal documents.",
+          options: ["appears", "to having", "overlooked", "legal"],
+          correctIndex: 1,
+          explanation: "'appears to' yapısından sonra fiilin yalın hali (have + V3) gelir, '-ing' takısı alan 'having' kullanılamaz.",
+          grammarTags: ["Error Spotting", "Grammar", "Law"]
+        },
+        {
+          id: "u36_l2_q6",
+          type: "reverse-engineering-translation",
+          prompt: "Verilen Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Tarihçiler, arşiv belgelerindeki bilgilerin çelişkili olabileceğini öne sürüyorlar.'",
+          options: [
+            "Historians prove that the information in archival documents is contradictory.",
+            "Historians guarantee that the information in archival documents is contradictory.",
+            "Historians suggest that the information in archival documents could be contradictory.",
+            "Historians mandate that the information in archival documents must be contradictory."
+          ],
+          correctIndex: 2,
+          explanation: "'suggest' ve 'could' kullanarak iddia akademik olarak yumuşatılmıştır.",
+          grammarTags: ["Reverse Translation", "Hedging", "History"]
+        },
+        {
+          id: "u36_l2_q7",
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun modalı seçiniz:<br><br>The cultural anthropologist concluded that a sudden shift in kinship patterns ___ trigger societal changes.",
+          options: ["must", "will", "should", "might"],
+          correctIndex: 3,
+          explanation: "'might' zayıf ihtimal bildirerek kesin iddiadan kaçınmayı sağlar.",
+          grammarTags: ["Hedging", "Modals", "Anthropology"]
         },
         {
           id: "u36_l2_q8",
-          type: "matching",
-          prompt: "Yumuşatma modallarını ifade ettikleri anlam düzeyi ile eşleştirin:",
-          pairs: [
-            { left: "might", right: "zayıf ihtimal" },
-            { left: "may", right: "olası ihtimal" },
-            { left: "could", right: "potansiyel ihtimal" },
-            { left: "seem to", right: "izlenim vermek" }
-          ]
+          type: "multiple-choice",
+          prompt: "Aşağıdaki cümlelerin hangisi en uygun hedging kullanımına sahiptir?<br><br>Choose the sentence with correct hedging:",
+          options: [
+            "The film director seems to have modified the original script due to funding issues.",
+            "The film director definitely modified the original script due to funding issues.",
+            "The film director 100% modified the original script due to funding issues.",
+            "The film director absolutely had to modify the original script due to funding issues."
+          ],
+          correctIndex: 0,
+          explanation: "'seems to have modified' yapısı kesin bir hüküm yerine gözleme dayalı bir yumuşatma sunar.",
+          grammarTags: ["Sentence Selection", "Hedging", "Cinema"]
         },
         {
           id: "u36_l2_q9",
-          type: "multiple-choice",
-          prompt: "The research team seems to have overlooked the secondary user feedback cümlesinin Türkçe karşılığını seçin:",
-          options: [
-            "Araştırma ekibi ikincil kullanıcı geri bildirimlerini gözden kaçırmış gibi görünmektedir.",
-            "Araştırma ekibi ikincil geri bildirimleri kesinlikle incelemiştir.",
-            "Araştırma ekibi geri bildirim almayı tamamen reddetmiştir.",
-            "Araştırma ekibi ikincil verileri başarıyla sisteme entegre etmiştir."
+          type: "matching",
+          prompt: "Yumuşatma modallarını ve işlevlerini eşleştiriniz:<br><br>Match the modals with their functions:",
+          pairs: [
+            { left: "might", right: "zayıf / olası ihtimal" },
+            { left: "may", right: "izin / orta dereceli ihtimal" },
+            { left: "could", right: "potansiyel / yetenek ihtimali" },
+            { left: "seem to", right: "izlenim vermek" }
           ],
-          correctIndex: 0,
-          explanation: "'Seems to have overlooked' (gözden kaçırmış gibi görünmektedir) akademik yumuşatma yapısıdır."
+          grammarTags: ["Hedging", "Modals", "Matching"]
         },
         {
           id: "u36_l2_q10",
           type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Veriler yeni stratejinin etkili olabileceğini ima ediyor.",
-          words: ["Veriler", "yeni", "stratejinin", "etkili", "olabileceğini", "ima", "ediyor", "kesinlikle", "kanıtlıyor"],
-          correctOrder: ["Veriler", "yeni", "stratejinin", "etkili", "olabileceğini", "ima", "ediyor"],
-          enSentence: "The data implies that the new strategy could be effective.",
-          isEngToTr: true
+          prompt: "Kelimeleri sıraya koyarak İngilizce cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Denekler, anket sorularını çok hızlı cevaplama eğilimindedir.",
+          words: ["Subjects", "tend", "to", "answer", "survey", "questions", "very", "quickly", "must", "always"],
+          correctOrder: ["Subjects", "tend", "to", "answer", "survey", "questions", "very", "quickly"],
+          enSentence: "Subjects tend to answer survey questions very quickly.",
+          grammarTags: ["Word Order", "Psychology", "Hedging"]
         },
         {
           id: "u36_l2_q11",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Katılımcılar zor soruları atlama eğilimindedir.",
-          words: ["Participants", "tend", "to", "skip", "difficult", "questions", "must", "always"],
-          correctOrder: ["Participants", "tend", "to", "skip", "difficult", "questions"],
-          enSentence: "Participants tend to skip difficult questions.",
-          isEngToTr: false
+          type: "error-spotting",
+          prompt: "Cümledeki dilbilgisi hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The survey results indicates that the target group shows a strong preference for digital media.",
+          options: ["survey", "results", "indicates", "shows"],
+          correctIndex: 2,
+          explanation: "Özne çoğul (results) olduğu için fiil tekil olamaz, 'indicate' şeklinde olmalıdır.",
+          grammarTags: ["Error Spotting", "Subject-Verb Agreement", "Communication"]
         },
         {
           id: "u36_l2_q12",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Sonuçlar beklentilerden farklı görünüyor.",
-          words: ["Sonuçlar", "beklentilerden", "farklı", "görünüyor", "kesinlikle", "asla"],
-          correctOrder: ["Sonuçlar", "beklentilerden", "farklı", "görünüyor"],
-          enSentence: "The outcomes appear to differ from expectations.",
-          isEngToTr: true
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Yeni bulgular, ampirik araştırmaların veri güvenliğini artırabileceğini göstermektedir.'",
+          options: [
+            "New findings guarantee that empirical research increases data security.",
+            "New findings prove that empirical research will increase data security.",
+            "New findings demonstrate that empirical research must increase data security.",
+            "New findings indicate that empirical research may increase data security."
+          ],
+          correctIndex: 3,
+          explanation: "'indicate' ve 'may' kelimeleri kesin yargı vermeden hipotezi desteklemektedir.",
+          grammarTags: ["Reverse Translation", "Hedging", "Research"]
         }
       ]
     },
     {
       lessonId: "u36_l3",
-      lessonTitle: "3: İhtimal İsim Öbekleri & Yapısal İfadeler",
+      lessonTitle: "3: İhtimal İsim Öbekleri & Yapısal İfadeler (likelihood, possibility, assumption)",
       exercises: [
         {
           id: "u36_l3_q1",
-          type: "fill-blank",
-          prompt: "Boşluğu dolduracak doğru akademik kalıbı seçin:",
-          sentence: "Whether this software strategy is optimal remains a __________ of opinion among developers.",
-          options: ["matter", "fact", "law", "truth"],
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun ihtimal ismini seçiniz:<br><br>The economic survey suggests there is a strong ___ that inflation rates will decline next year.",
+          options: ["possibility", "guarantee", "rule", "commandment"],
           correctIndex: 0,
-          explanation: "'A matter of opinion' (bir görüş meselesi), mutlak doğru olmadığını belirterek iddiaları yumuşatır."
+          explanation: "Akademik dilde kesin yargılardan kaçınmak için 'possibility' (olasılık) ifadesi kullanılır.",
+          grammarTags: ["Hedging", "Noun", "Economics"]
         },
         {
           id: "u36_l3_q2",
-          type: "fill-blank",
-          prompt: "Boşluğu dolduracak doğru akademik kalıbı seçin:",
-          sentence: "The new structural policy addresses the network latency issues to a certain __________.",
-          options: ["extent", "danger", "infinity", "total"],
-          correctIndex: 0,
-          explanation: "'To a certain extent' (belirli bir dereceye kadar) yapısı mutlak başarı iddialarını yumuşatır."
+          type: "multiple-choice",
+          prompt: "Aşağıdaki cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>'The assumption that cultural history dictates behavioral patterns is a matter of speculation.'",
+          options: [
+            "Kültür tarihinin davranış kalıplarını belirlediği kesin bir kuraldır.",
+            "Kültür tarihinin davranış kalıplarını belirlediği varsayımı bir spekülasyon konusudur.",
+            "Kültür tarihinin davranış kalıplarını belirlemesi imkansız bir iddiadır.",
+            "Kültür tarihi davranış kalıplarını her zaman doğrudan etkiler."
+          ],
+          correctIndex: 1,
+          explanation: "'assumption' varsayım, 'matter of speculation' ise tahmin/spekülasyon konusu demektir.",
+          grammarTags: ["Sentence Translation", "Hedging", "History"]
         },
         {
           id: "u36_l3_q3",
-          type: "fill-blank",
-          prompt: "Boşluğu dolduracak doğru akademik kalıbı seçin:",
-          sentence: "There is a strong __________ that the market will stabilize by next quarter.",
-          options: ["possibility", "guarantee", "rule", "commandment"],
-          correctIndex: 0,
-          explanation: "'Possibility' (olasılık/ihtimal) kesin bir söz vermek yerine tahmin yürütür."
+          type: "matching",
+          prompt: "Hedging isim ve edat yapılarını Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the hedging structures:",
+          pairs: [
+            { left: "matter of speculation", right: "tahmin konusu" },
+            { left: "to some extent", right: "bir dereceye kadar" },
+            { left: "on the assumption", right: "varsayımıyla" },
+            { left: "in all likelihood", right: "büyük olasılıkla" }
+          ],
+          grammarTags: ["Hedging", "Noun", "Matching"]
         },
         {
           id: "u36_l3_q4",
-          type: "fill-blank",
-          prompt: "Boşluğu dolduracak doğru akademik kalıbı seçin:",
-          sentence: "On the basis of current data, the __________ is that inflation will moderate.",
-          options: ["assumption", "fact", "absolute", "mandate"],
-          correctIndex: 0,
-          explanation: "'Assumption' (varsayım/kabul) argümanın zeminini yumuşak tutar."
+          type: "word-bank",
+          prompt: "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Avukat, davanın büyük olasılıkla mahkeme dışında çözüleceğini belirtti.",
+          words: ["The", "lawyer", "stated", "that", "in", "all", "likelihood", "the", "dispute", "will", "be", "resolved", "must", "always"],
+          correctOrder: ["The", "lawyer", "stated", "that", "in", "all", "likelihood", "the", "dispute", "will", "be", "resolved"],
+          enSentence: "The lawyer stated that in all likelihood the dispute will be resolved.",
+          grammarTags: ["Word Order", "Law", "Hedging", "Passive"]
         },
         {
           id: "u36_l3_q5",
-          type: "matching",
-          prompt: "Hedging isimlerini Türkçe karşılıklarıyla eşleştirin:",
-          pairs: [
-            { left: "possibility", right: "olasılık / ihtimal" },
-            { left: "assumption", right: "varsayım / kabul" },
-            { left: "tendency", right: "eğilim / yönelim" },
-            { left: "likelihood", right: "olasılık / ihtimal derecesi" }
-          ]
+          type: "error-spotting",
+          prompt: "Cümledeki gramer hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The research team worked under a assumption that the subject was completely sane.",
+          options: ["team", "a assumption", "that", "subject"],
+          correctIndex: 1,
+          explanation: "Sesli harfle başlayan 'assumption' kelimesinden önce 'an' tanımlayıcısı kullanılmalıdır.",
+          grammarTags: ["Error Spotting", "Articles", "Research"]
         },
         {
           id: "u36_l3_q6",
-          type: "matching",
-          prompt: "Hedging ifadelerini Türkçe karşılıklarıyla eşleştirin:",
-          pairs: [
-            { left: "matter of opinion", right: "görüş meselesi" },
-            { left: "to a certain extent", right: "belli bir dereceye kadar" },
-            { left: "matter of speculation", right: "tahmin/spekülasyon konusu" },
-            { left: "in all likelihood", right: "büyük olasılıkla" }
-          ]
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Sinema tarihi araştırmalarında, yönetmenin vizyonunun başarısı bir dereceye kadar finansmana bağlıdır.'",
+          options: [
+            "In cinema history research, the success of the director's vision is absolutely dependent on funding.",
+            "In cinema history research, the success of the director's vision is completely dependent on funding.",
+            "In cinema history research, the success of the director's vision is dependent on funding to some extent.",
+            "In cinema history research, the success of the director's vision is never dependent on funding."
+          ],
+          correctIndex: 2,
+          explanation: "'to some extent' (bir dereceye kadar) ifadesi iddiayı yumuşatmak için kullanılan yapısal bir hedging öbeğidir.",
+          grammarTags: ["Reverse Translation", "Hedging", "Cinema"]
         },
         {
           id: "u36_l3_q7",
-          type: "multiple-choice",
-          prompt: "Whether the system architecture will succeed is largely a matter of speculation cümlesinin en uygun Türkçe karşılığını seçin:",
-          options: [
-            "Sistem mimarisinin başarılı olup olmayacağı büyük ölçüde bir tahmin meselesidir.",
-            "Sistem mimarisinin başarılı olacağı inkar edilemez bir gerçektir.",
-            "Sistem mimarisi kesinlikle bu yıl içinde başarısız olacaktır.",
-            "Sistem mimarisinin başarısı kanıtlanmış bilimsel bir kuraldır."
-          ],
-          correctIndex: 0,
-          explanation: "'A matter of speculation' (tahmin/spekülasyon meselesi), kesin yargı vermekten kaçınan bir yumuşatma ifadesidir."
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun edat grubunu seçiniz:<br><br>The cognitive psychologists published their reports ___ that the behavioral patterns were stable.",
+          options: ["guaranteeing", "on the rule", "with absolute truth", "on the assumption"],
+          correctIndex: 3,
+          explanation: "'on the assumption that' (- varsayımıyla/kabulüyle) akademik bir varsayım kalıbıdır.",
+          grammarTags: ["Hedging", "Prepositional Phrase", "Psychology"]
         },
         {
           id: "u36_l3_q8",
           type: "multiple-choice",
-          prompt: "In all likelihood, the server migration will be completed without downtime cümlesinin anlamı nedir?",
+          prompt: "Aşağıdaki cümlelerden hangisi en iyi hedging yapısına sahiptir?<br><br>Choose the best hedging sentence:",
           options: [
-            "Yüksek olasılıkla sunucu taşıma işlemi kesinti olmadan tamamlanacaktır.",
-            "Sunucu taşıma işlemi kesinlikle 0 kesinti garanti etmektedir.",
-            "Sunucu taşıma işleminin tamamlanması imkansızdır.",
-            "Sunucu taşıma işlemi sırasında kesinlikle büyük kesintiler yaşanacaktır."
+            "There is a strong likelihood that the cognitive psychologists will reformulate the survey.",
+            "The cognitive psychologists will 100% reformulate the survey.",
+            "The cognitive psychologists must reformulate the survey without fail.",
+            "There is an absolute guarantee that the cognitive psychologists will reformulate the survey."
           ],
           correctIndex: 0,
-          explanation: "'In all likelihood' (yüksek olasılıkla) yumuşatma kalıbıdır."
+          explanation: "'There is a strong likelihood' (güçlü bir ihtimal var) yapısı iddiayı yumuşatarak sunar.",
+          grammarTags: ["Sentence Selection", "Hedging", "Psychology"]
         },
         {
           id: "u36_l3_q9",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Bu karar bir dereceye kadar risk içermektedir.",
-          words: ["Bu", "karar", "bir", "dereceye", "kadar", "risk", "içermektedir", "kesinlikle", "tamamen"],
-          correctOrder: ["Bu", "karar", "bir", "dereceye", "kadar", "risk", "içermektedir"],
-          enSentence: "This decision involves risk to some extent.",
-          isEngToTr: true
+          type: "matching",
+          prompt: "Akademik terimleri Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the academic terms:",
+          pairs: [
+            { left: "likelihood", right: "olasılık / ihtimal derecesi" },
+            { left: "assumption", right: "varsayım / kabul" },
+            { left: "possibility", right: "olasılık / imkan" },
+            { left: "extent", right: "derece / kapsam" }
+          ],
+          grammarTags: ["Hedging", "Matching", "Noun"]
         },
         {
           id: "u36_l3_q10",
           type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Projenin başarısı yüksek ihtimalle ekibin deneyimine bağlıdır.",
-          words: ["The", "success", "in", "all", "likelihood", "depends", "on", "team", "experience"],
-          correctOrder: ["The", "success", "in", "all", "likelihood", "depends", "on", "team", "experience"],
-          enSentence: "The success in all likelihood depends on team experience.",
-          isEngToTr: false
+          prompt: "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Arşiv belgelerinin güvenilirliği bir spekülasyon konusudur.",
+          words: ["The", "reliability", "of", "archival", "documents", "is", "a", "matter", "of", "speculation", "absolute", "guarantee"],
+          correctOrder: ["The", "reliability", "of", "archival", "documents", "is", "a", "matter", "of", "speculation"],
+          enSentence: "The reliability of archival documents is a matter of speculation.",
+          grammarTags: ["Word Order", "History", "Hedging"]
         },
         {
           id: "u36_l3_q11",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Bu iddia bir varsayım meselesidir.",
-          words: ["Bu", "iddia", "bir", "varsayım", "meselesidir", "kesinlikle", "gerçektir"],
-          correctOrder: ["Bu", "iddia", "bir", "varsayım", "meselesidir"],
-          enSentence: "This claim is a matter of assumption.",
-          isEngToTr: true
+          type: "error-spotting",
+          prompt: "Cümledeki gramer hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The cultural anthropologist analyzed the kinship patterns on the assumption which they were ancient.",
+          options: ["analyzed", "patterns", "on the assumption which", "they were"],
+          correctIndex: 2,
+          explanation: "'on the assumption' sonrasında noun clause bağlacı olan 'that' kullanılmalıdır, 'which' sıfat cümlesi bağlacı yanlış bir tercihtir.",
+          grammarTags: ["Error Spotting", "Grammar", "Anthropology"]
         },
         {
           id: "u36_l3_q12",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Hata oranında düşüş olasılığı var.",
-          words: ["There", "is", "a", "possibility", "of", "a", "decrease", "in", "error", "rate"],
-          correctOrder: ["There", "is", "a", "possibility", "of", "a", "decrease", "in", "error", "rate"],
-          enSentence: "There is a possibility of a decrease in error rate.",
-          isEngToTr: false
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Fon kaynaklarındaki artış büyük olasılıkla araştırma ekibini memnun edecektir.'",
+          options: [
+            "The increase in funding resources will definitely satisfy the research team.",
+            "The increase in funding resources will absolutely satisfy the research team.",
+            "The increase in funding resources will never satisfy the research team.",
+            "In all likelihood, the increase in funding resources will satisfy the research team."
+          ],
+          correctIndex: 3,
+          explanation: "'In all likelihood' (büyük olasılıkla) yumuşatma kalıbıdır.",
+          grammarTags: ["Reverse Translation", "Hedging", "Research"]
         }
       ]
     },
     {
       lessonId: "u36_l4",
-      lessonTitle: "4: Akademik Hedging Cümle Kurma & Çeviri Pratiği",
+      lessonTitle: "4: Akademik Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)",
       exercises: [
         {
           id: "u36_l4_q1",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Yapay zeka modelleri karmaşık verileri daha hızlı işleme eğilimindedir.",
-          words: ["Yapay", "zeka", "modelleri", "karmaşık", "verileri", "daha", "hızlı", "işleme", "eğilimindedir", "kesinlikle", "asla"],
-          correctOrder: ["Yapay", "zeka", "modelleri", "karmaşık", "verileri", "daha", "hızlı", "işleme", "eğilimindedir"],
-          enSentence: "Artificial intelligence models tend to process complex data faster.",
-          isEngToTr: true
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun akademik ifadeyi seçiniz:<br><br>___ that the newly proposed economic policies will stabilize the inflation rates.",
+          options: ["It seems", "It guarantees", "It proves", "It is 100% true"],
+          correctIndex: 0,
+          explanation: "'It seems that...' (görünüşe göre...) kesin bir kanıt göstermek yerine yumuşak bir iddia sunar.",
+          grammarTags: ["Hedging", "Introductory It", "Economics"]
         },
         {
           id: "u36_l4_q2",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Mevcut bulgular yazılım mimarisinin güncellenmesi gerekebileceğini gösteriyor.",
-          words: ["Current", "findings", "suggest", "that", "the", "software", "architecture", "might", "need", "an", "update"],
-          correctOrder: ["Current", "findings", "suggest", "that", "the", "software", "architecture", "might", "need", "an", "update"],
-          enSentence: "Current findings suggest that the software architecture might need an update.",
-          isEngToTr: false
+          type: "multiple-choice",
+          prompt: "Aşağıdaki cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>'Evidence suggests that behavioral patterns tend to evolve over generations.'",
+          options: [
+            "Kanıtlar, davranış kalıplarının nesiller boyu kesinlikle evrileceğini kanıtlar.",
+            "Kanıtlar, davranış kalıplarının nesiller boyu evrilme eğiliminde olduğunu göstermektedir.",
+            "Kanıtlar, davranış kalıplarının nesiller boyu evrilmesini imkansız kılmaktadır.",
+            "Kanıtlar, davranış kalıplarının nesiller boyu asla değişmediğini gösterir."
+          ],
+          correctIndex: 1,
+          explanation: "'suggests' göstermek/öne sürmek, 'tend to' ise -e eğiliminde olmak demektir.",
+          grammarTags: ["Sentence Translation", "Hedging", "Sociology"]
         },
         {
           id: "u36_l4_q3",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Ekip yeni güvenlik protokolünü kısmen uyguladı.",
-          words: ["Ekip", "yeni", "güvenlik", "protokolünü", "kısmen", "uyguladı", "tamamen", "kesinlikle"],
-          correctOrder: ["Ekip", "yeni", "güvenlik", "protokolünü", "kısmen", "uyguladı"],
-          enSentence: "The team partially implemented the new security protocol.",
-          isEngToTr: true
-        },
-        {
-          id: "u36_l4_q4",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Gözlemler sıcaklık değişimlerinin tepki süresini etkileyebileceğini gösteriyor.",
-          words: ["Observations", "indicate", "that", "temperature", "changes", "may", "affect", "reaction", "time"],
-          correctOrder: ["Observations", "indicate", "that", "temperature", "changes", "may", "affect", "reaction", "time"],
-          enSentence: "Observations indicate that temperature changes may affect reaction time.",
-          isEngToTr: false
-        },
-        {
-          id: "u36_l4_q5",
-          type: "word-bank",
-          prompt: "Cümlenin Türkçe karşılığını oluşturun:",
-          translation: "Yeni sistem muhtemelen işletme maliyetlerini düşürecektir.",
-          words: ["Yeni", "sistem", "muhtemelen", "işletme", "maliyetlerini", "düşürecektir", "kesinlikle", "asla"],
-          correctOrder: ["Yeni", "sistem", "muhtemelen", "işletme", "maliyetlerini", "düşürecektir"],
-          enSentence: "The new system is likely to reduce operational costs.",
-          isEngToTr: true
-        },
-        {
-          id: "u36_l4_q6",
-          type: "word-bank",
-          prompt: "Cümlenin İngilizce karşılığını oluşturun:",
-          translation: "Araştırmacılar veri kaybını gözden kaçırmış gibi görünüyor.",
-          words: ["The", "researchers", "seem", "to", "have", "overlooked", "the", "data", "loss"],
-          correctOrder: ["The", "researchers", "seem", "to", "have", "overlooked", "the", "data", "loss"],
-          enSentence: "The researchers seem to have overlooked the data loss.",
-          isEngToTr: false
-        },
-        {
-          id: "u36_l4_q7",
-          type: "multiple-choice",
-          prompt: "Hangi cümle akademik yazımda 'Hedging' (yumuşatma) kuralına en uygundur?",
-          options: [
-            "The proposed method appears to offer a moderate improvement in processing speed.",
-            "The proposed method is 100% the best algorithm ever created in history.",
-            "The proposed method will definitely solve all world problems instantly.",
-            "The proposed method never fails under any circumstances whatsoever."
-          ],
-          correctIndex: 0,
-          explanation: "'Appears to offer a moderate improvement' akademik yumuşatmanın ideal bir örneğidir."
-        },
-        {
-          id: "u36_l4_q8",
-          type: "multiple-choice",
-          prompt: "Akademik bir makalede kesin iddialar (Örn: 'This proves X is true') yerine neden yumuşatma ifadeleri tercih edilir?",
-          options: [
-            "İddianın yanlışlanabilirliğini kabul etmek ve olası istisnalara kapı bırakmak için.",
-            "Kelime sayısını gereksiz yere artırıp sayfayı doldurmak için.",
-            "Okuyucunun kafasını tamamen karıştırmak için.",
-            "İngilizce dilbilgisini zorlaştırmak için."
-          ],
-          correctIndex: 0,
-          explanation: "Hedging, bilimselliğin ve akademik nezaketin temel şartıdır; mutlak iddialardan kaçınır."
-        },
-        {
-          id: "u36_l4_q9",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "The results of the survey are __________ indicative of a growing trend among teenagers.",
-          options: ["arguably", "violently", "recklessly", "dangerously"],
-          correctIndex: 0,
-          explanation: "'Arguably' kelimesi anket sonuçlarının yorumlanmasında esneklik sağlar."
-        },
-        {
-          id: "u36_l4_q10",
-          type: "fill-blank",
-          prompt: "Cümledeki boşluğu dolduracak doğru akademik kelimeyi seçin:",
-          sentence: "It __________ that the current bandwidth is insufficient for high-definition streaming.",
-          options: ["seems", "destroys", "mandates", "guarantees"],
-          correctIndex: 0,
-          explanation: "'It seems that...' (görünüşe göre...) yumuşatma yapısıdır."
-        },
-        {
-          id: "u36_l4_q11",
           type: "matching",
-          prompt: "Hedging örnek Cümle başlarını Türkçe karşılıklarıyla eşleştirin:",
+          prompt: "Hedging giriş ifadelerini Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the introductory hedging phrases:",
           pairs: [
             { left: "It is likely that...", right: "Muhtemeldir ki..." },
             { left: "Evidence suggests...", right: "Kanıtlar gösteriyor ki..." },
             { left: "It seems that...", right: "Görünüşe göre..." },
-            { left: "To some extent...", right: "Bir dereceye kadar..." }
-          ]
+            { left: "It is widely assumed...", right: "Yaygın olarak varsayılır..." }
+          ],
+          grammarTags: ["Hedging", "Matching", "Introductory Phrases"]
+        },
+        {
+          id: "u36_l4_q4",
+          type: "word-bank",
+          prompt: "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Görünüşe göre, savunma avukatı yasal belgeleri mahkemeye sundu.",
+          words: ["It", "seems", "that", "the", "defense", "lawyer", "presented", "the", "legal", "documents", "must", "always"],
+          correctOrder: ["It", "seems", "that", "the", "defense", "lawyer", "presented", "the", "legal", "documents"],
+          enSentence: "It seems that the defense lawyer presented the legal documents.",
+          grammarTags: ["Word Order", "Law", "Hedging"]
+        },
+        {
+          id: "u36_l4_q5",
+          type: "error-spotting",
+          prompt: "Cümledeki gramer hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "The film director, who is arguably the most talented candidate, seems to having retired.",
+          options: ["who is", "seems to having", "arguably", "retired"],
+          correctIndex: 1,
+          explanation: "seems to yapısından sonra fiilin yalın hali (have + V3) gelmelidir, '-ing' takısı alan 'having' kullanımı hatadır.",
+          grammarTags: ["Error Spotting", "Grammar", "Cinema"]
+        },
+        {
+          id: "u36_l4_q6",
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Bulgular, ampirik araştırmaların fon yetersizliğinden dolayı sekteye uğrayabileceğini göstermektedir.'",
+          options: [
+            "The findings prove that empirical research is definitely disrupted due to a lack of funding.",
+            "The findings guarantee that empirical research will be disrupted due to a lack of funding.",
+            "The findings suggest that empirical research could be disrupted due to a lack of funding.",
+            "The findings show that empirical research is always disrupted due to a lack of funding."
+          ],
+          correctIndex: 2,
+          explanation: "'suggest' ve 'could' ifadeleri iddiaya akademik bir yumuşatma kalkanı kazandırır.",
+          grammarTags: ["Reverse Translation", "Hedging", "Research"]
+        },
+        {
+          id: "u36_l4_q7",
+          type: "fill-blank-dropdown",
+          prompt: "Boşluğa gelecek en uygun ifadeyi seçiniz:<br><br>The cultural anthropologist's new book is ___ the most detailed study on kinship patterns.",
+          options: ["definitely", "completely", "absolutely", "arguably"],
+          correctIndex: 3,
+          explanation: "'arguably' (muhtemelen/tartışmalı bir şekilde) kelimesi iddiayı koruma kalkanına alan bir hedging zarfıdır.",
+          grammarTags: ["Hedging", "Adverb", "Anthropology"]
+        },
+        {
+          id: "u36_l4_q8",
+          type: "multiple-choice",
+          prompt: "Aşağıdaki cümlelerden hangisi akademik yazım standartlarına en uygundur?<br><br>Select the best academic sentence:",
+          options: [
+            "It is likely that the cognitive psychologists will publish the survey data soon.",
+            "The cognitive psychologists will 100% publish the survey data soon.",
+            "The cognitive psychologists must publish the survey data immediately without fail.",
+            "There is an absolute guarantee that the cognitive psychologists will publish the survey data soon."
+          ],
+          correctIndex: 0,
+          explanation: "'It is likely that...' (muhtemeldir ki...) akademik makalelerde sıkça kullanılan bir yumuşatma yapısıdır.",
+          grammarTags: ["Sentence Selection", "Hedging", "Psychology"]
+        },
+        {
+          id: "u36_l4_q9",
+          type: "matching",
+          prompt: "Akademik yumuşatma kalıplarını türleriyle eşleştiriniz:<br><br>Match the patterns with their types:",
+          pairs: [
+            { left: "It seems that...", right: "Giriş yapısı (Introductory It)" },
+            { left: "tend to", right: "Yumuşatma fiili (Verb)" },
+            { left: "arguably", right: "Yumuşatma zarfı (Adverb)" },
+            { left: "possibility", right: "İhtimal ismi (Noun)" }
+          ],
+          grammarTags: ["Hedging", "Matching", "Syntax Classifications"]
+        },
+        {
+          id: "u36_l4_q10",
+          type: "word-bank",
+          prompt: "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
+          translation: "Tarihçiler, arşiv kaynaklarını kısmen yanlış yorumlama eğilimindedir.",
+          words: ["Historians", "tend", "to", "partially", "misinterpret", "the", "archival", "sources", "must", "always"],
+          correctOrder: ["Historians", "tend", "to", "partially", "misinterpret", "the", "archival", "sources"],
+          enSentence: "Historians tend to partially misinterpret the archival sources.",
+          grammarTags: ["Word Order", "History", "Hedging"]
+        },
+        {
+          id: "u36_l4_q11",
+          type: "error-spotting",
+          prompt: "Cümledeki gramer hatasını bulunuz:<br><br>Identify the error:",
+          sentence: "Economic survey suggests that the defense lawyer could has won the court dispute.",
+          options: ["Economic", "suggests", "could has", "dispute"],
+          correctIndex: 2,
+          explanation: "Modal yardımcı fiili olan 'could' ifadesinden sonra fiilin yalın hali gelmelidir, 'has' değil 'have' olmalıdır.",
+          grammarTags: ["Error Spotting", "Modals", "Law"]
         },
         {
           id: "u36_l4_q12",
-          type: "matching",
-          prompt: "Akademik yumuşatma türlerini örnek kelimelerle eşleştirin:",
-          pairs: [
-            { left: "Zarf (Adverb)", right: "arguably / presumably" },
-            { left: "Modal (Auxiliary)", right: "may / might / could" },
-            { left: "Fiil (Verb)", right: "suggest / tend / appear" },
-            { left: "İsim (Noun)", right: "possibility / assumption" }
-          ]
+          type: "reverse-engineering-translation",
+          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Görünüşe göre, anket verileri davranışsal psikolojideki yeni eğilimleri desteklemektedir.'",
+          options: [
+            "The survey data definitely supports the new trends in behavioral psychology.",
+            "The survey data absolutely supports the new trends in behavioral psychology.",
+            "The survey data never supports the new trends in behavioral psychology.",
+            "It seems that the survey data supports the new trends in behavioral psychology."
+          ],
+          correctIndex: 3,
+          explanation: "'It seems that...' (görünüşe göre...) akademik dilde gözlemleri yumuşatarak sunmak için tercih edilir.",
+          grammarTags: ["Reverse Translation", "Psychology", "Hedging"]
         }
       ]
     }

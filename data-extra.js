@@ -913,7 +913,31 @@
       "digitalized": "dijitalleştirildi / dijitalleştirilen",
       "enforced": "uygulandı / uygulanan",
       "beautifully": "güzelce / sanatsal bir şekilde",
-      "universally": "evrensel olarak"
+      "universally": "evrensel olarak",
+      
+      // Unit 36 Hedging (Yumuşatma) Kelimeleri
+      "presumably": "tahminen / muhtemelen",
+      "undeniably": "inkar edilemez bir şekilde",
+      "irresponsibly": "sorumsuzca",
+      "likely": "muhtemel",
+      "definitely": "kesinlikle",
+      "completely": "tamamen",
+      "absolutely": "kesinlikle / tamamen",
+      "arguably": "tartışmalı bir şekilde / ileri sürülebilir ki",
+      "narrowly": "dar bir şekilde / ucu ucuna",
+      "hopelessly": "umutsuzca",
+      "defectively": "kusurlu bir şekilde",
+      "partially": "kısmen",
+      "totally": "tamamen",
+      "entirely": "tamamen",
+      "largely": "büyük ölçüde",
+      "never": "asla",
+      "ruinously": "yıkıcı bir şekilde",
+      "foolishly": "aptalca",
+      "generally": "genellikle",
+      "instantly": "anında",
+      "doubtfully": "şüpheyle",
+      "rarely": "nadiren"
     });
   }
 

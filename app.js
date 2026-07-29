@@ -6970,7 +6970,8 @@ function startLesson(lessonId, exerciseId = null) {
     let expandedQuestions = [];
     currentQuizQuestions.forEach(q => {
       expandedQuestions.push(q);
-      if (q.bridgeTranslation) {
+      const hasSentence = !!(q.sentence || q.enSentence || q.paragraph || q.mainSentence);
+      if (hasSentence && q.bridgeTranslation) {
         // Create a dynamic word-bank bridge question
         const bridgeQ = {
           id: `${q.id}_bridge`,
@@ -6984,7 +6985,7 @@ function startLesson(lessonId, exerciseId = null) {
           explanationKey: q.explanationKey || 'academic_tips_master'
         };
         expandedQuestions.push(bridgeQ);
-      } else if (q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
+      } else if (hasSentence && q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
         let targetSentence = q.sentence || q.enSentence || q.paragraph || q.mainSentence || '';
         let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
         if (targetTr && targetTr.length > 0) {
