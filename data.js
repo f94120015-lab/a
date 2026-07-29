@@ -48357,7 +48357,168 @@ const unit35 = {
       exercises: [
         {
           id: "u35_l2_ex1",
-          title: "Zaman ve Ardışıklık Kısaltmaları (Time & Sequence)",
+          title: "1. Tanıma ve Ayırt Etme Stratejileri",
+          description: "Zaman ve ardışıklık kısaltmalarının yapısal özelliklerinin ve seçenek eleme kurallarının tespiti.",
+          questions: [
+            {
+              id: "u35_l2_ex1_q1",
+              type: "multiple-choice",
+              prompt: "Cümle başında 'Having + V3' yapısı bulunuyorsa, bu kısaltma hakkında hangisi söylenebilir?",
+              options: [
+                "Eylemin ana cümledeki eylemden önce gerçekleştiğini (aktif/öncelik) gösterir.",
+                "Bir ismin niteleyen edilgen bir sıfat cümleciği kısaltmasıdır.",
+                "Geleceğe yönelik bir amaç bildiren to-infinitive yapısıdır.",
+                "Eşzamanlı gerçekleşen bir eylemi niteleyen zarf kısaltmasıdır."
+              ],
+              correctIndex: 0,
+              translation: "Having + V3 yapısı eylemin önceliğini gösterir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> 'Having + V3' (Perfect Participle) eylemler arasındaki öncelik-sonralık ilişkisini vurgulamak için kullanılır ve etkindir.",
+              grammarTags: ["Perfect Participle", "Elimination Strategy", "Time Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q2",
+              type: "multiple-choice",
+              prompt: "Boşluğun önünde 'While' zaman bağlacı bulunuyorsa ve boşluğun sağında bir nesne (isim öbeği) varsa hangi yapı tercih edilmelidir?",
+              options: [
+                "V-ing (aktif süreç)",
+                "V3 (edilgen süreç)",
+                "Having V3 (öncelik)",
+                "To V1 (amaç/sıralama)"
+              ],
+              correctIndex: 0,
+              translation: "While bağlacından sonra nesne varsa etken V-ing tercih edilir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Nesne Kontrolü:</b> Boşluğun sağında nesne olması eylemin etken olduğunu gösterir. 'While' ile birlikte aktif eşzamanlı süreç için 'While V-ing' kullanılır.",
+              grammarTags: ["Time Reduction", "Active Time Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l2_ex1_q3",
+              type: "multiple-choice",
+              prompt: "Boşluktan önce 'Before' / 'After' edatları varsa ve eylem etken ise seçenek eleme kurallarına göre hangisi doğrudan elenmelidir (kullanılamaz)?",
+              options: [
+                "Having V3",
+                "V-ing",
+                "V3",
+                "Being V3"
+              ],
+              correctIndex: 0,
+              translation: "Before/After edatlarından sonra 'Having V3' yapısı gereksizdir ve kullanılmaz.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman Bildiren Edatlar:</b> 'Before' (önce) ve 'After' (sonra) kelimeleri zaten zaman ilişkisini kendisi kurduğu için arkalarından doğrudan 'Having V3' gelmez. Doğrudan 'V-ing' kullanılır.",
+              grammarTags: ["Time Reduction", "Elimination Strategy"]
+            },
+            {
+              id: "u35_l2_ex1_q4",
+              type: "multiple-choice",
+              prompt: "Cümledeki 'Upon' zaman edatının ardından gelmesi gereken etken kısaltma yapısını bulunuz:",
+              sentence: "Upon _______ the rare documents, the historians changed their hypothesis.",
+              options: [
+                "discovering",
+                "discovered",
+                "to discover",
+                "having discovered"
+              ],
+              correctIndex: 0,
+              translation: "Nadir belgeleri keşfeder keşfetmez, tarihçiler hipotezlerini değiştirdiler.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> 'Upon / On + V-ing' yapısı 'as soon as' anlamına gelen hemen ardındalık bildiren bir zaman kısaltmasıdır.",
+              grammarTags: ["Time Reduction", "Upon Trigger", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q5",
+              type: "multiple-choice",
+              prompt: "Ana cümleden önce gerçekleşmiş (öncelikli) edilgen bir zaman kısaltması için hangisi seçilmelidir?",
+              options: [
+                "Having been V3",
+                "Having V3",
+                "Being V3",
+                "V-ing"
+              ],
+              correctIndex: 0,
+              translation: "Öncelikli edilgen kısaltma 'Having been V3' yapısı ile kurulur.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Öncelik/Sonralık:</b> Öncelik için 'Having V3' kullanılır.<br>2. <b>Edilgenlik:</b> Edilgenlik eklendiğinde yapı 'Having been V3' halini alır.",
+              grammarTags: ["Perfect Participle", "Passive Time Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q6",
+              type: "multiple-choice",
+              prompt: "Boşluğun önünde 'When' bağlacı yer alan bu cümlede, boşluktan sonra bir edat öbeği (by...) geldiğine dikkat ederek uygun edilgen kısaltmayı seçiniz:",
+              sentence: "When _______ by the research institute, the statistics were carefully verified.",
+              options: [
+                "analyzed",
+                "analyzing",
+                "analyze",
+                "having analyzed"
+              ],
+              correctIndex: 0,
+              translation: "Araştırma enstitüsü tarafından analiz edildiğinde, istatistikler dikkatle doğrulandı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Nesne/Edat:</b> Boşluğun sağında 'by...' edat yapısı yer alıyor ➔ Eylem edilgendir.<br>2. <b>Seçenek Eleme:</b> 'When'den sonra edilgen kısaltma doğrudan 'V3' (analyzed) olarak gelir.",
+              grammarTags: ["Time Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l2_ex1_q7",
+              type: "multiple-choice",
+              prompt: "Zaman kısaltmalarında 'Having V3' yapısının cümleye kattığı temel anlam ilişkisi nedir?",
+              options: [
+                "Ana cümledeki eylemin, yan cümledeki eylemden daha sonra gerçekleştiğini (yan cümlenin önce olduğunu) bildirir.",
+                "İki eylemin tam olarak aynı anda başladığını ve bittiğini bildirir.",
+                "Gelecekte yapılması planlanan bir amacı bildirir.",
+                "Ana cümlenin doğrudan bir sonucu olarak ortaya çıkan eylemi bildirir."
+              ],
+              correctIndex: 0,
+              translation: "Having V3 yapısı yan cümlenin önceliğini bildirir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> 'Having + V3' yapısı (Perfect Participle), yan cümledeki eylemin ana cümleden önce bitmiş olduğunu zaman vurgusuyla gösterir.",
+              grammarTags: ["Perfect Participle", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l2_ex1_q8",
+              type: "multiple-choice",
+              prompt: "Zaman kısaltması kurallarına göre, seçeneklerde yer alan 'to coordinate' yapısı bu cümlede zaman kısaltması olarak neden kullanılamaz?",
+              sentence: "While _______ the project details, the team encountered budget problems.",
+              options: [
+                "Çünkü 'to'lu yapılar zaman zarfı kısaltmalarında süreç veya eşzamanlılık bildiremez.",
+                "Çünkü cümle edilgendir ve 'to' yapısı etkendir.",
+                "Çünkü yan cümle öznesi ana cümleden farklıdır.",
+                "Çünkü 'While' bağlacı sadece geçmiş zamanla kullanılır."
+              ],
+              correctIndex: 0,
+              translation: "'to'lu yapılar zaman kısaltması olarak kullanılamaz.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> Zaman ve zıtlık gibi zarf cümleciklerinde 'to V1 / to be V3' kısaltmaları bulunmaz. Bunlar sadece sıfat cümleciklerinde (the first, the only) veya amaç bildiren zarflarda kullanılır.",
+              grammarTags: ["Time Reduction", "Elimination Strategy"]
+            },
+            {
+              id: "u35_l2_ex1_q9",
+              type: "multiple-choice",
+              prompt: "Cümle başında yer alan bu kısaltmada, boşluktan sonra 'the field study' (Nesne) geldiğine dikkat ederek aktif öncelik yapısını seçiniz:",
+              sentence: "_______ the field study, the anthropologist prepared the final questionnaire.",
+              options: [
+                "Having completed",
+                "Completed",
+                "Having been completed",
+                "To complete"
+              ],
+              correctIndex: 0,
+              translation: "Saha çalışmasını tamamladıktan sonra, antropolog nihai anketi hazırladı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman İlişkisi:</b> Saha çalışmasını tamamlama eylemi hazırlamaktan öncedir ➔ Öncelik yapısı (`Having V3` veya `Having been V3`).<br>2. <b>Nesne Kontrolü:</b> Boşluğun sağında 'the field study' (Nesne) var ➔ Aktif `Having completed` seçilir.",
+              grammarTags: ["Perfect Participle", "Active Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l2_ex1_q10",
+              type: "multiple-choice",
+              prompt: "Zaman kısaltması kurallarına göre, aşağıdaki cümlelerden hangisi dilbilgisi kuralları yönünden HATALIDIR?",
+              options: [
+                "While studied early cinema history, they found rare archives.",
+                "While studying early cinema history, they found rare archives.",
+                "Having studied early cinema history, they found rare archives.",
+                "Before studying early cinema history, they visited the library."
+              ],
+              correctIndex: 0,
+              translation: "'While studied' yapısı etken süreç için hatalıdır; 'While studying' olmalıdır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural Analizi:</b> 'While' bağlacından sonra etken bir eylemin kısaltmasında fiilin ikinci hali (V2) doğrudan gelemez. Etken için 'V-ing' (studying) kullanılmalıdır.",
+              grammarTags: ["Time Reduction Error", "Syntax Error"]
+            }
+          ]
+        },
+        {
+          id: "u35_l2_ex2",
+          title: "2. Öbek Düzeyi Alıştırmaları",
           description: "Zaman ve öncelik bildiren zarf kısaltma öbeklerinin akademik düzeyde çözümlenmesi.",
           questions: [
             {
