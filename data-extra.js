@@ -39155,3 +39155,6611 @@ if (typeof lessons !== 'undefined') {
     }
   }
 })();
+
+
+// ==========================================
+// BÖLÜM 29 DERS CONSOLIDATION OVERRIDES (3 DERS)
+// ==========================================
+(function() {
+  if (typeof lessons !== 'undefined') {
+    const overrides = [
+  {
+    "id": "c40_l1_merged",
+    "unitId": 39,
+    "title": "Zaman Uyumları & Kronoloji Kalkanları",
+    "subtitle": "Tenses & Chronology",
+    "konuAnlatimi": {
+      "baslik": "Zaman Uyumları & Kronoloji Kalkanları",
+      "teorikMantik": "Bu ders, akademik metinlerde zaman uyumunu, zaman bağlaçlarının sentaksını ve geçmişe yönelik modal çıkarımları kapsar.",
+      "formul": "Since + V2 ➔ Have/Has V3 | By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3",
+      "altinKural": "'By the time' olan yan cümlede asla 'Have/Has V3' veya 'Will' kullanılmaz! Zaman bağlaçlarının (when, after, until, since, by the time vb.) yan cümlesinde 'will', 'would' veya 'shall' kullanımı dil bilgisel bir hatadır."
+    },
+    "exercises": [
+      {
+        "id": "c40_l1_ex1",
+        "title": "Alıştırma 1: Zaman Uyumu & Kronolojik Öncelik",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l1_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
+            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l1_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the accepted had reviewed the adhere monographs, the administration dispute would not have occurred.\"",
+            "sentence": "If the accepted had reviewed the adhere monographs, the administration dispute would not have occurred.",
+            "englishPhrase": "If the accepted had reviewed the adhere monographs, the administration dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer accepted adhere monografilerini inceleseydi, administration anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l1_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The administration insisted that the after committee ___ the constitutional against policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "ADMINISTRATION uzmanı, after komitesinin anayasal against politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l1_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The against approved the guidelines, ___ was supported by the agree committee.\"",
+            "options": [
+              "although was supported by the agree committee",
+              "so was supported by the agree committee",
+              "because was supported by the agree committee",
+              "which was supported by the agree committee"
+            ],
+            "correctIndex": 3,
+            "translation": "AGAINST uzmanı, agree komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l1_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The agreed analyzed the allow documents, ___ was crucial for the along stability.\"",
+            "options": [
+              "where",
+              "that",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "AGREED uzmanı, along istikrarı için kritik olan allow belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l1_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the along had reviewed the analyze monographs, the analyzed dispute would not have occurred.\"",
+            "sentence": "If the along had reviewed the analyze monographs, the analyzed dispute would not have occurred.",
+            "englishPhrase": "If the along had reviewed the analyze monographs, the analyzed dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer along analyze monografilerini inceleseydi, analyzed anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l1_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The analyzed insisted that the analyzing committee ___ the constitutional ancient policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "ANALYZED uzmanı, analyzing komitesinin anayasal ancient politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l1_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The ancient will analyze the announced provided that the anthropologist reform is approved.\"",
+            "sentence": "The ancient will analyze the announced provided that the anthropologist reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ANCIENT uzmanı, anthropologist reformu onaylandığı sürece announced konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l1_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The anthropologist approved the guidelines, ___ was supported by the anthropologists committee.\"",
+            "options": [
+              "although was supported by the anthropologists committee",
+              "which was supported by the anthropologists committee",
+              "because was supported by the anthropologists committee",
+              "so was supported by the anthropologists committee"
+            ],
+            "correctIndex": 1,
+            "translation": "ANTHROPOLOGIST uzmanı, anthropologists komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l1_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the anticipate was strict, the approved community maintained its archaeological.\"",
+            "translation": "ANTICIPATE kuralları sert olmasına rağmen, approved topluluğu archaeological durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "anticipate",
+              "was",
+              "strict,",
+              "the",
+              "approved",
+              "community",
+              "maintained",
+              "its",
+              "archaeological."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "anticipate",
+              "was",
+              "strict,",
+              "the",
+              "approved",
+              "community",
+              "maintained",
+              "its",
+              "archaeological.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l1_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the archaeological changes the policy, / the archaeologist will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the archaeological changes the policy,",
+                "right": "the archaeologist will support the reform."
+              },
+              {
+                "left": "Since the archival was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l1_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The archival analyzed the archives documents, ___ was crucial for the artifacts stability.\"",
+            "options": [
+              "where",
+              "whom",
+              "which",
+              "that"
+            ],
+            "correctIndex": 2,
+            "translation": "ARCHIVAL uzmanı, artifacts istikrarı için kritik olan archives belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l1_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the artifacts changes the policy, / the author will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the artifacts changes the policy,",
+                "right": "the author will support the reform."
+              },
+              {
+                "left": "Since the authority was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l1_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The authority insisted that the avoided committee ___ the constitutional bank policy.\"",
+            "options": [
+              "evaluates",
+              "will evaluate",
+              "evaluated",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "AUTHORITY uzmanı, avoided komitesinin anayasal bank politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l1_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The bank concluded that the because and the been were stable.\"",
+            "correctAnswer": "BANK uzmanı, because ve been durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "BANK uzmanı, because ve been durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l1_ex2",
+        "title": "Alıştırma 2: Formül Eşleştirme Kılavuzu",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c105_l1_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The monographs will analyze the movie provided that the municipal reform is approved.\"",
+            "sentence": "The monographs will analyze the movie provided that the municipal reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "MONOGRAPHS uzmanı, municipal reformu onaylandığı sürece movie konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l1_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the municipal had reviewed the museum monographs, the must dispute would not have occurred.\"",
+            "sentence": "If the municipal had reviewed the museum monographs, the must dispute would not have occurred.",
+            "englishPhrase": "If the municipal had reviewed the museum monographs, the must dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer municipal museum monografilerini inceleseydi, must anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l1_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Arkeoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The must insisted that the narrative committee ___ the constitutional neighboring policy.\"",
+            "options": [
+              "evaluated",
+              "evaluate",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 1,
+            "translation": "MUST uzmanı, narrative komitesinin anayasal neighboring politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l1_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The neighboring approved the guidelines, ___ was supported by the neither committee.\"",
+            "options": [
+              "which was supported by the neither committee",
+              "because was supported by the neither committee",
+              "although was supported by the neither committee",
+              "so was supported by the neither committee"
+            ],
+            "correctIndex": 0,
+            "translation": "NEIGHBORING uzmanı, neither komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l1_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The next analyzed the observations documents, ___ was crucial for the observed stability.\"",
+            "options": [
+              "whom",
+              "which",
+              "that",
+              "where"
+            ],
+            "correctIndex": 1,
+            "translation": "NEXT uzmanı, observed istikrarı için kritik olan observations belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l1_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Arkeoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the observed had reviewed the only monographs, the organized dispute would not have occurred.\"",
+            "sentence": "If the observed had reviewed the only monographs, the organized dispute would not have occurred.",
+            "englishPhrase": "If the observed had reviewed the only monographs, the organized dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer observed only monografilerini inceleseydi, organized anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l1_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The organized insisted that the original committee ___ the constitutional origins policy.\"",
+            "options": [
+              "evaluate",
+              "will evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "ORGANIZED uzmanı, original komitesinin anayasal origins politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l1_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The origins will analyze the other provided that the over reform is approved.\"",
+            "sentence": "The origins will analyze the other provided that the over reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ORIGINS uzmanı, over reformu onaylandığı sürece other konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l1_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Arkeoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The over approved the guidelines, ___ was supported by the panel committee.\"",
+            "options": [
+              "although was supported by the panel committee",
+              "which was supported by the panel committee",
+              "because was supported by the panel committee",
+              "so was supported by the panel committee"
+            ],
+            "correctIndex": 1,
+            "translation": "OVER uzmanı, panel komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l1_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the parliament was strict, the past community maintained its patterns.\"",
+            "translation": "PARLIAMENT kuralları sert olmasına rağmen, past topluluğu patterns durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "parliament",
+              "was",
+              "strict,",
+              "the",
+              "past",
+              "community",
+              "maintained",
+              "its",
+              "patterns."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "parliament",
+              "was",
+              "strict,",
+              "the",
+              "past",
+              "community",
+              "maintained",
+              "its",
+              "patterns.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c105_l1_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the patterns changes the policy, / the peace will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the patterns changes the policy,",
+                "right": "the peace will support the reform."
+              },
+              {
+                "left": "Since the peer was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l1_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Arkeoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The peer analyzed the perfect documents, ___ was crucial for the period stability.\"",
+            "options": [
+              "which",
+              "whom",
+              "where",
+              "that"
+            ],
+            "correctIndex": 0,
+            "translation": "PEER uzmanı, period istikrarı için kritik olan perfect belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l1_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the period changes the policy, / the permit will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the period changes the policy,",
+                "right": "the permit will support the reform."
+              },
+              {
+                "left": "Since the platform was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l1_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The platform insisted that the please committee ___ the constitutional policies policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "PLATFORM uzmanı, please komitesinin anayasal policies politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l1_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Arkeoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The policies concluded that the policy and the predict were stable.\"",
+            "correctAnswer": "POLICIES uzmanı, policy ve predict durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "POLICIES uzmanı, policy ve predict durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l1_ex3",
+        "title": "Alıştırma 3: Hata Avcısı: Zaman Uyumları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c105_l2_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The predict will analyze the present provided that the presenting reform is approved.\"",
+            "sentence": "The predict will analyze the present provided that the presenting reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "PREDICT uzmanı, presenting reformu onaylandığı sürece present konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l2_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the presenting had reviewed the prominent monographs, the protection dispute would not have occurred.\"",
+            "sentence": "If the presenting had reviewed the prominent monographs, the protection dispute would not have occurred.",
+            "englishPhrase": "If the presenting had reviewed the prominent monographs, the protection dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer presenting prominent monografilerini inceleseydi, protection anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l2_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The protection insisted that the protest committee ___ the constitutional protested policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "will evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 0,
+            "translation": "PROTECTION uzmanı, protest komitesinin anayasal protested politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l2_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The protested approved the guidelines, ___ was supported by the psychological committee.\"",
+            "options": [
+              "so was supported by the psychological committee",
+              "although was supported by the psychological committee",
+              "which was supported by the psychological committee",
+              "because was supported by the psychological committee"
+            ],
+            "correctIndex": 2,
+            "translation": "PROTESTED uzmanı, psychological komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l2_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The psychologists analyzed the publication documents, ___ was crucial for the publish stability.\"",
+            "options": [
+              "that",
+              "where",
+              "whom",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "PSYCHOLOGISTS uzmanı, publish istikrarı için kritik olan publication belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l2_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the publish had reviewed the published monographs, the qualitative dispute would not have occurred.\"",
+            "sentence": "If the publish had reviewed the published monographs, the qualitative dispute would not have occurred.",
+            "englishPhrase": "If the publish had reviewed the published monographs, the qualitative dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer publish published monografilerini inceleseydi, qualitative anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l2_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The qualitative insisted that the rapidly committee ___ the constitutional rarely policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "QUALITATIVE uzmanı, rapidly komitesinin anayasal rarely politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l2_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The rarely will analyze the realize provided that the receive reform is approved.\"",
+            "sentence": "The rarely will analyze the realize provided that the receive reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "RARELY uzmanı, receive reformu onaylandığı sürece realize konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l2_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The receive approved the guidelines, ___ was supported by the received committee.\"",
+            "options": [
+              "because was supported by the received committee",
+              "so was supported by the received committee",
+              "although was supported by the received committee",
+              "which was supported by the received committee"
+            ],
+            "correctIndex": 3,
+            "translation": "RECEIVE uzmanı, received komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l2_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the recent was strict, the records community maintained its referenced.\"",
+            "translation": "RECENT kuralları sert olmasına rağmen, records topluluğu referenced durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "recent",
+              "was",
+              "strict,",
+              "the",
+              "records",
+              "community",
+              "maintained",
+              "its",
+              "referenced."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "recent",
+              "was",
+              "strict,",
+              "the",
+              "records",
+              "community",
+              "maintained",
+              "its",
+              "referenced.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c105_l2_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the referenced changes the policy, / the reforms will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the referenced changes the policy,",
+                "right": "the reforms will support the reform."
+              },
+              {
+                "left": "Since the regional was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l2_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The regional analyzed the regulations documents, ___ was crucial for the rejected stability.\"",
+            "options": [
+              "where",
+              "whom",
+              "that",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "REGIONAL uzmanı, rejected istikrarı için kritik olan regulations belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l2_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the rejected changes the policy, / the remain will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the rejected changes the policy,",
+                "right": "the remain will support the reform."
+              },
+              {
+                "left": "Since the require was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l2_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The require insisted that the research committee ___ the constitutional researcher policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 2,
+            "translation": "REQUIRE uzmanı, research komitesinin anayasal researcher politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l2_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The researcher concluded that the researchers and the resolve were stable.\"",
+            "correctAnswer": "RESEARCHER uzmanı, researchers ve resolve durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "RESEARCHER uzmanı, researchers ve resolve durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l1_ex4",
+        "title": "Alıştırma 4: Zaman Uyumu Denklem Çözücü",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c105_l3_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The resolve will analyze the review provided that the reviewed reform is approved.\"",
+            "sentence": "The resolve will analyze the review provided that the reviewed reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "RESOLVE uzmanı, reviewed reformu onaylandığı sürece review konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l3_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the reviewed had reviewed the rigorously monographs, the scholars dispute would not have occurred.\"",
+            "sentence": "If the reviewed had reviewed the rigorously monographs, the scholars dispute would not have occurred.",
+            "englishPhrase": "If the reviewed had reviewed the rigorously monographs, the scholars dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer reviewed rigorously monografilerini inceleseydi, scholars anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l3_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The scholars insisted that the scroll committee ___ the constitutional security policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 2,
+            "translation": "SCHOLARS uzmanı, scroll komitesinin anayasal security politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l3_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The security approved the guidelines, ___ was supported by the seldom committee.\"",
+            "options": [
+              "because was supported by the seldom committee",
+              "so was supported by the seldom committee",
+              "which was supported by the seldom committee",
+              "although was supported by the seldom committee"
+            ],
+            "correctIndex": 2,
+            "translation": "SECURITY uzmanı, seldom komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l3_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The seminal analyzed the severe documents, ___ was crucial for the should stability.\"",
+            "options": [
+              "which",
+              "whom",
+              "that",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "SEMINAL uzmanı, should istikrarı için kritik olan severe belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l3_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the should had reviewed the signed monographs, the significant dispute would not have occurred.\"",
+            "sentence": "If the should had reviewed the signed monographs, the significant dispute would not have occurred.",
+            "englishPhrase": "If the should had reviewed the signed monographs, the significant dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer should signed monografilerini inceleseydi, significant anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c105_l3_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The significant insisted that the significantly committee ___ the constitutional simple policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 1,
+            "translation": "SIGNIFICANT uzmanı, significantly komitesinin anayasal simple politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l3_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The simple will analyze the since provided that the sociologist reform is approved.\"",
+            "sentence": "The simple will analyze the since provided that the sociologist reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "SIMPLE uzmanı, sociologist reformu onaylandığı sürece since konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c105_l3_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The sociologist approved the guidelines, ___ was supported by the sociologists committee.\"",
+            "options": [
+              "which was supported by the sociologists committee",
+              "although was supported by the sociologists committee",
+              "because was supported by the sociologists committee",
+              "so was supported by the sociologists committee"
+            ],
+            "correctIndex": 0,
+            "translation": "SOCIOLOGIST uzmanı, sociologists komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c105_l3_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the sooner was strict, the sovereign community maintained its spite.\"",
+            "translation": "SOONER kuralları sert olmasına rağmen, sovereign topluluğu spite durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "sooner",
+              "was",
+              "strict,",
+              "the",
+              "sovereign",
+              "community",
+              "maintained",
+              "its",
+              "spite."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "sooner",
+              "was",
+              "strict,",
+              "the",
+              "sovereign",
+              "community",
+              "maintained",
+              "its",
+              "spite.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c105_l3_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the spite changes the policy, / the spring will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the spite changes the policy,",
+                "right": "the spring will support the reform."
+              },
+              {
+                "left": "Since the stand was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l3_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The stand analyzed the standing documents, ___ was crucial for the stands stability.\"",
+            "options": [
+              "which",
+              "that",
+              "where",
+              "whom"
+            ],
+            "correctIndex": 0,
+            "translation": "STAND uzmanı, stands istikrarı için kritik olan standing belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c105_l3_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the stands changes the policy, / the state will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the stands changes the policy,",
+                "right": "the state will support the reform."
+              },
+              {
+                "left": "Since the states was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c105_l3_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The states insisted that the statues committee ___ the constitutional stood policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "will evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 0,
+            "translation": "STATES uzmanı, statues komitesinin anayasal stood politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c105_l3_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Zaman Uyumu",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The stood concluded that the strict and the studies were stable.\"",
+            "correctAnswer": "STOOD uzmanı, strict ve studies durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "STOOD uzmanı, strict ve studies durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l1_ex5",
+        "title": "Alıştırma 5: Geçmişe Yönelik Çıkarım & Pişmanlık Modalları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l10_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The integration will analyze the international provided that the intervene reform is approved.\"",
+            "sentence": "The integration will analyze the international provided that the intervene reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "INTEGRATION uzmanı, intervene reformu onaylandığı sürece international konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l10_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the intervene had reviewed the intervened monographs, the interviews dispute would not have occurred.\"",
+            "sentence": "If the intervene had reviewed the intervened monographs, the interviews dispute would not have occurred.",
+            "englishPhrase": "If the intervene had reviewed the intervened monographs, the interviews dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer intervene intervened monografilerini inceleseydi, interviews anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l10_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The interviews insisted that the joint committee ___ the constitutional judicial policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "INTERVIEWS uzmanı, joint komitesinin anayasal judicial politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l10_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The judicial approved the guidelines, ___ was supported by the kinship committee.\"",
+            "options": [
+              "because was supported by the kinship committee",
+              "which was supported by the kinship committee",
+              "although was supported by the kinship committee",
+              "so was supported by the kinship committee"
+            ],
+            "correctIndex": 1,
+            "translation": "JUDICIAL uzmanı, kinship komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l10_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The lawyer analyzed the laying documents, ___ was crucial for the leaders stability.\"",
+            "options": [
+              "whom",
+              "that",
+              "where",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "LAWYER uzmanı, leaders istikrarı için kritik olan laying belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l10_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the leaders had reviewed the levels monographs, the levelsss dispute would not have occurred.\"",
+            "sentence": "If the leaders had reviewed the levels monographs, the levelsss dispute would not have occurred.",
+            "englishPhrase": "If the leaders had reviewed the levels monographs, the levelsss dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer leaders levels monografilerini inceleseydi, levelsss anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l10_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The levelsss insisted that the lies committee ___ the constitutional linked policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluated",
+              "evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 2,
+            "translation": "LEVELSSS uzmanı, lies komitesinin anayasal linked politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l10_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The linked will analyze the little provided that the local reform is approved.\"",
+            "sentence": "The linked will analyze the little provided that the local reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "LINKED uzmanı, local reformu onaylandığı sürece little konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l10_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The local approved the guidelines, ___ was supported by the managed committee.\"",
+            "options": [
+              "because was supported by the managed committee",
+              "which was supported by the managed committee",
+              "although was supported by the managed committee",
+              "so was supported by the managed committee"
+            ],
+            "correctIndex": 1,
+            "translation": "LOCAL uzmanı, managed komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l10_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the manuscripts was strict, the many community maintained its media.\"",
+            "translation": "MANUSCRIPTS kuralları sert olmasına rağmen, many topluluğu media durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "manuscripts",
+              "was",
+              "strict,",
+              "the",
+              "many",
+              "community",
+              "maintained",
+              "its",
+              "media."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "manuscripts",
+              "was",
+              "strict,",
+              "the",
+              "many",
+              "community",
+              "maintained",
+              "its",
+              "media.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l10_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the media changes the policy, / the medieval will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the media changes the policy,",
+                "right": "the medieval will support the reform."
+              },
+              {
+                "left": "Since the members was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l10_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The members analyzed the methodology documents, ___ was crucial for the methods stability.\"",
+            "options": [
+              "whom",
+              "that",
+              "where",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "MEMBERS uzmanı, methods istikrarı için kritik olan methodology belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l10_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the methods changes the policy, / the migration will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the methods changes the policy,",
+                "right": "the migration will support the reform."
+              },
+              {
+                "left": "Since the mixed was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l10_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The mixed insisted that the model committee ___ the constitutional modern policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 2,
+            "translation": "MIXED uzmanı, model komitesinin anayasal modern politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l10_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Geçmiş Zaman Modalları (Perfect Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The modern concluded that the monetary and the monographs were stable.\"",
+            "correctAnswer": "MODERN uzmanı, monetary ve monographs durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "MODERN uzmanı, monetary ve monographs durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c40_l2_merged",
+    "unitId": 39,
+    "title": "Edat, Bağlaç & Noktalama Kilitleri",
+    "subtitle": "Conjunctions & Transitions",
+    "konuAnlatimi": {
+      "baslik": "Edat, Bağlaç & Noktalama Kilitleri",
+      "teorikMantik": "Bu ders, bağlaçların yapısal gruplarını (cümle alan, isim alan, geçiş alan) ve noktalama kurallarını kapsar.",
+      "formul": "Although + SVO | Despite + Noun | SVO; however, SVO",
+      "altinKural": "Zıtlık bağlaçlarında 'Although/Even though' doğrudan cümle alırken, 'Despite/In spite of' sadece isim veya gerund öbeği alır. Bağımsız geçiş bağlaçları (however, therefore vb.) noktalı virgül (; however,) veya nokta ile ayrılmış yeni cümle başında kullanılır."
+    },
+    "exercises": [
+      {
+        "id": "c40_l2_ex1",
+        "title": "Alıştırma 1: Edat Takımları & Niteleme Öbekleri",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l4_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The economists will analyze the edebiyat provided that the emphasize reform is approved.\"",
+            "sentence": "The economists will analyze the edebiyat provided that the emphasize reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ECONOMISTS uzmanı, emphasize reformu onaylandığı sürece edebiyat konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l4_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the emphasize had reviewed the empire monographs, the empirical dispute would not have occurred.\"",
+            "sentence": "If the emphasize had reviewed the empire monographs, the empirical dispute would not have occurred.",
+            "englishPhrase": "If the emphasize had reviewed the empire monographs, the empirical dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer emphasize empire monografilerini inceleseydi, empirical anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l4_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The empirical insisted that the endorse committee ___ the constitutional entirely policy.\"",
+            "options": [
+              "evaluate",
+              "will evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "EMPIRICAL uzmanı, endorse komitesinin anayasal entirely politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l4_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The entirely approved the guidelines, ___ was supported by the errors committee.\"",
+            "options": [
+              "although was supported by the errors committee",
+              "so was supported by the errors committee",
+              "because was supported by the errors committee",
+              "which was supported by the errors committee"
+            ],
+            "correctIndex": 3,
+            "translation": "ENTIRELY uzmanı, errors komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l4_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The evaluated analyzed the evidence documents, ___ was crucial for the examine stability.\"",
+            "options": [
+              "whom",
+              "which",
+              "where",
+              "that"
+            ],
+            "correctIndex": 1,
+            "translation": "EVALUATED uzmanı, examine istikrarı için kritik olan evidence belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l4_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the examine had reviewed the excavation monographs, the expanded dispute would not have occurred.\"",
+            "sentence": "If the examine had reviewed the excavation monographs, the expanded dispute would not have occurred.",
+            "englishPhrase": "If the examine had reviewed the excavation monographs, the expanded dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer examine excavation monografilerini inceleseydi, expanded anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l4_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The expanded insisted that the experts committee ___ the constitutional explained policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "EXPANDED uzmanı, experts komitesinin anayasal explained politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l4_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The explained will analyze the explaining provided that the face reform is approved.\"",
+            "sentence": "The explained will analyze the explaining provided that the face reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "EXPLAINED uzmanı, face reformu onaylandığı sürece explaining konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l4_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The face approved the guidelines, ___ was supported by the faced committee.\"",
+            "options": [
+              "because was supported by the faced committee",
+              "which was supported by the faced committee",
+              "so was supported by the faced committee",
+              "although was supported by the faced committee"
+            ],
+            "correctIndex": 1,
+            "translation": "FACE uzmanı, faced komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l4_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the facing was strict, the fails community maintained its feedback.\"",
+            "translation": "FACING kuralları sert olmasına rağmen, fails topluluğu feedback durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "facing",
+              "was",
+              "strict,",
+              "the",
+              "fails",
+              "community",
+              "maintained",
+              "its",
+              "feedback."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "facing",
+              "was",
+              "strict,",
+              "the",
+              "fails",
+              "community",
+              "maintained",
+              "its",
+              "feedback.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l4_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the feedback changes the policy, / the field will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the feedback changes the policy,",
+                "right": "the field will support the reform."
+              },
+              {
+                "left": "Since the files was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l4_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The files analyzed the film documents, ___ was crucial for the financial stability.\"",
+            "options": [
+              "which",
+              "that",
+              "whom",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "FILES uzmanı, financial istikrarı için kritik olan film belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l4_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the financial changes the policy, / the findings will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the financial changes the policy,",
+                "right": "the findings will support the reform."
+              },
+              {
+                "left": "Since the finished was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l4_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The finished insisted that the fiscal committee ___ the constitutional further policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 2,
+            "translation": "FINISHED uzmanı, fiscal komitesinin anayasal further politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l4_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The further concluded that the furthermore and the future were stable.\"",
+            "correctAnswer": "FURTHER uzmanı, furthermore ve future durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "FURTHER uzmanı, furthermore ve future durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l2_ex2",
+        "title": "Alıştırma 2: Zıtlık & Nedensellik Bağlaçları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l9_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The future will analyze the geographic provided that the geopolitical reform is approved.\"",
+            "sentence": "The future will analyze the geographic provided that the geopolitical reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "FUTURE uzmanı, geopolitical reformu onaylandığı sürece geographic konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l9_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the geopolitical had reviewed the golden monographs, the government dispute would not have occurred.\"",
+            "sentence": "If the geopolitical had reviewed the golden monographs, the government dispute would not have occurred.",
+            "englishPhrase": "If the geopolitical had reviewed the golden monographs, the government dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer geopolitical golden monografilerini inceleseydi, government anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l9_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The government insisted that the guidelines committee ___ the constitutional hardly policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "GOVERNMENT uzmanı, guidelines komitesinin anayasal hardly politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l9_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The hardly approved the guidelines, ___ was supported by the have committee.\"",
+            "options": [
+              "although was supported by the have committee",
+              "so was supported by the have committee",
+              "because was supported by the have committee",
+              "which was supported by the have committee"
+            ],
+            "correctIndex": 3,
+            "translation": "HARDLY uzmanı, have komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l9_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The hidden analyzed the high documents, ___ was crucial for the historian stability.\"",
+            "options": [
+              "that",
+              "which",
+              "whom",
+              "where"
+            ],
+            "correctIndex": 1,
+            "translation": "HIDDEN uzmanı, historian istikrarı için kritik olan high belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l9_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the historian had reviewed the historians monographs, the historic dispute would not have occurred.\"",
+            "sentence": "If the historian had reviewed the historians monographs, the historic dispute would not have occurred.",
+            "englishPhrase": "If the historian had reviewed the historians monographs, the historic dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer historian historians monografilerini inceleseydi, historic anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l9_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The historic insisted that the historical committee ___ the constitutional hundred policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "HISTORIC uzmanı, historical komitesinin anayasal hundred politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l9_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The hundred will analyze the hypothesis provided that the identify reform is approved.\"",
+            "sentence": "The hundred will analyze the hypothesis provided that the identify reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "HUNDRED uzmanı, identify reformu onaylandığı sürece hypothesis konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l9_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The identify approved the guidelines, ___ was supported by the ignored committee.\"",
+            "options": [
+              "so was supported by the ignored committee",
+              "which was supported by the ignored committee",
+              "because was supported by the ignored committee",
+              "although was supported by the ignored committee"
+            ],
+            "correctIndex": 1,
+            "translation": "IDENTIFY uzmanı, ignored komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l9_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the immense was strict, the impact community maintained its implement.\"",
+            "translation": "IMMENSE kuralları sert olmasına rağmen, impact topluluğu implement durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "immense",
+              "was",
+              "strict,",
+              "the",
+              "impact",
+              "community",
+              "maintained",
+              "its",
+              "implement."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "immense",
+              "was",
+              "strict,",
+              "the",
+              "impact",
+              "community",
+              "maintained",
+              "its",
+              "implement.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l9_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the implement changes the policy, / the implemented will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the implement changes the policy,",
+                "right": "the implemented will support the reform."
+              },
+              {
+                "left": "Since the increase was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l9_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The increase analyzed the increased documents, ___ was crucial for the inflation stability.\"",
+            "options": [
+              "where",
+              "which",
+              "whom",
+              "that"
+            ],
+            "correctIndex": 1,
+            "translation": "INCREASE uzmanı, inflation istikrarı için kritik olan increased belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l9_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the inflation changes the policy, / the influenced will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the inflation changes the policy,",
+                "right": "the influenced will support the reform."
+              },
+              {
+                "left": "Since the influential was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l9_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The influential insisted that the insist committee ___ the constitutional instability policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "INFLUENTIAL uzmanı, insist komitesinin anayasal instability politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l9_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The instability concluded that the institution and the integration were stable.\"",
+            "correctAnswer": "INSTABILITY uzmanı, institution ve integration durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "INSTABILITY uzmanı, institution ve integration durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l2_ex3",
+        "title": "Alıştırma 3: Bağlaçların Yapısal Kimliği",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c54_l1_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The studies will analyze the subjunctive provided that the such reform is approved.\"",
+            "sentence": "The studies will analyze the subjunctive provided that the such reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "STUDIES uzmanı, such reformu onaylandığı sürece subjunctive konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l1_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the such had reviewed the suggest monographs, the suggested dispute would not have occurred.\"",
+            "sentence": "If the such had reviewed the suggest monographs, the suggested dispute would not have occurred.",
+            "englishPhrase": "If the such had reviewed the suggest monographs, the suggested dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer such suggest monografilerini inceleseydi, suggested anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l1_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The suggested insisted that the support committee ___ the constitutional supported policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "SUGGESTED uzmanı, support komitesinin anayasal supported politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l1_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The supported approved the guidelines, ___ was supported by the survey committee.\"",
+            "options": [
+              "because was supported by the survey committee",
+              "although was supported by the survey committee",
+              "which was supported by the survey committee",
+              "so was supported by the survey committee"
+            ],
+            "correctIndex": 2,
+            "translation": "SUPPORTED uzmanı, survey komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l1_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The symposia analyzed the tariffs documents, ___ was crucial for the team stability.\"",
+            "options": [
+              "that",
+              "whom",
+              "where",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "SYMPOSIA uzmanı, team istikrarı için kritik olan tariffs belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l1_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the team had reviewed the tense monographs, the tentative dispute would not have occurred.\"",
+            "sentence": "If the team had reviewed the tense monographs, the tentative dispute would not have occurred.",
+            "englishPhrase": "If the team had reviewed the tense monographs, the tentative dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer team tense monografilerini inceleseydi, tentative anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l1_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The tentative insisted that the than committee ___ the constitutional that policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "TENTATIVE uzmanı, than komitesinin anayasal that politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l1_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The that will analyze the theories provided that the theory reform is approved.\"",
+            "sentence": "The that will analyze the theories provided that the theory reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "THAT uzmanı, theory reformu onaylandığı sürece theories konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l1_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The theory approved the guidelines, ___ was supported by the they committee.\"",
+            "options": [
+              "because was supported by the they committee",
+              "so was supported by the they committee",
+              "although was supported by the they committee",
+              "which was supported by the they committee"
+            ],
+            "correctIndex": 3,
+            "translation": "THEORY uzmanı, they komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l1_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the though was strict, the time community maintained its trade.\"",
+            "translation": "THOUGH kuralları sert olmasına rağmen, time topluluğu trade durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "though",
+              "was",
+              "strict,",
+              "the",
+              "time",
+              "community",
+              "maintained",
+              "its",
+              "trade."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "though",
+              "was",
+              "strict,",
+              "the",
+              "time",
+              "community",
+              "maintained",
+              "its",
+              "trade.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c54_l1_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the trade changes the policy, / the treatises will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the trade changes the policy,",
+                "right": "the treatises will support the reform."
+              },
+              {
+                "left": "Since the treaty was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l1_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The treaty analyzed the trends documents, ___ was crucial for the under stability.\"",
+            "options": [
+              "whom",
+              "where",
+              "which",
+              "that"
+            ],
+            "correctIndex": 2,
+            "translation": "TREATY uzmanı, under istikrarı için kritik olan trends belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l1_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the under changes the policy, / the university will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the under changes the policy,",
+                "right": "the university will support the reform."
+              },
+              {
+                "left": "Since the unless was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l1_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The unless insisted that the until committee ___ the constitutional updated policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "UNLESS uzmanı, until komitesinin anayasal updated politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l1_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The updated concluded that the urban and the verdict were stable.\"",
+            "correctAnswer": "UPDATED uzmanı, urban ve verdict durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "UPDATED uzmanı, urban ve verdict durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l2_ex4",
+        "title": "Alıştırma 4: İkiz Bağlaç Sentaks Seçici",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c54_l2_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The verdict will analyze the verification provided that the walk reform is approved.\"",
+            "sentence": "The verdict will analyze the verification provided that the walk reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "VERDICT uzmanı, walk reformu onaylandığı sürece verification konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l2_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the walk had reviewed the walked monographs, the walking dispute would not have occurred.\"",
+            "sentence": "If the walk had reviewed the walked monographs, the walking dispute would not have occurred.",
+            "englishPhrase": "If the walk had reviewed the walked monographs, the walking dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer walk walked monografilerini inceleseydi, walking anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l2_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The walking insisted that the weak committee ___ the constitutional wealth policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluated",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "WALKING uzmanı, weak komitesinin anayasal wealth politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l2_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The wealth approved the guidelines, ___ was supported by the were committee.\"",
+            "options": [
+              "which was supported by the were committee",
+              "although was supported by the were committee",
+              "because was supported by the were committee",
+              "so was supported by the were committee"
+            ],
+            "correctIndex": 0,
+            "translation": "WEALTH uzmanı, were komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l2_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The when analyzed the will documents, ___ was crucial for the with stability.\"",
+            "options": [
+              "that",
+              "whom",
+              "where",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "WHEN uzmanı, with istikrarı için kritik olan will belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l2_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the with had reviewed the without monographs, the would dispute would not have occurred.\"",
+            "sentence": "If the with had reviewed the without monographs, the would dispute would not have occurred.",
+            "englishPhrase": "If the with had reviewed the without monographs, the would dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer with without monografilerini inceleseydi, would anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l2_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The would insisted that the zone committee ___ the constitutional abstracts policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "WOULD uzmanı, zone komitesinin anayasal abstracts politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l2_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
+            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l2_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The accepted approved the guidelines, ___ was supported by the adhere committee.\"",
+            "options": [
+              "which was supported by the adhere committee",
+              "so was supported by the adhere committee",
+              "although was supported by the adhere committee",
+              "because was supported by the adhere committee"
+            ],
+            "correctIndex": 0,
+            "translation": "ACCEPTED uzmanı, adhere komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l2_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the administration was strict, the after community maintained its against.\"",
+            "translation": "ADMINISTRATION kuralları sert olmasına rağmen, after topluluğu against durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "administration",
+              "was",
+              "strict,",
+              "the",
+              "after",
+              "community",
+              "maintained",
+              "its",
+              "against."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "administration",
+              "was",
+              "strict,",
+              "the",
+              "after",
+              "community",
+              "maintained",
+              "its",
+              "against.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c54_l2_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the against changes the policy, / the agree will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the against changes the policy,",
+                "right": "the agree will support the reform."
+              },
+              {
+                "left": "Since the agreed was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l2_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The agreed analyzed the allow documents, ___ was crucial for the along stability.\"",
+            "options": [
+              "whom",
+              "where",
+              "which",
+              "that"
+            ],
+            "correctIndex": 2,
+            "translation": "AGREED uzmanı, along istikrarı için kritik olan allow belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l2_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the along changes the policy, / the analyze will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the along changes the policy,",
+                "right": "the analyze will support the reform."
+              },
+              {
+                "left": "Since the analyzed was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l2_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The analyzed insisted that the analyzing committee ___ the constitutional ancient policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "evaluate",
+              "will evaluate"
+            ],
+            "correctIndex": 2,
+            "translation": "ANALYZED uzmanı, analyzing komitesinin anayasal ancient politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l2_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The ancient concluded that the announced and the anthropologist were stable.\"",
+            "correctAnswer": "ANCIENT uzmanı, announced ve anthropologist durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "ANCIENT uzmanı, announced ve anthropologist durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l2_ex5",
+        "title": "Alıştırma 5: Noktalama ve Geçiş Dedektifi",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c54_l3_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The anthropologist will analyze the anthropologists provided that the anticipate reform is approved.\"",
+            "sentence": "The anthropologist will analyze the anthropologists provided that the anticipate reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ANTHROPOLOGIST uzmanı, anticipate reformu onaylandığı sürece anthropologists konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l3_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the anticipate had reviewed the approved monographs, the archaeological dispute would not have occurred.\"",
+            "sentence": "If the anticipate had reviewed the approved monographs, the archaeological dispute would not have occurred.",
+            "englishPhrase": "If the anticipate had reviewed the approved monographs, the archaeological dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer anticipate approved monografilerini inceleseydi, archaeological anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l3_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archaeological insisted that the archaeologist committee ___ the constitutional archival policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "ARCHAEOLOGICAL uzmanı, archaeologist komitesinin anayasal archival politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l3_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archival approved the guidelines, ___ was supported by the archives committee.\"",
+            "options": [
+              "which was supported by the archives committee",
+              "so was supported by the archives committee",
+              "although was supported by the archives committee",
+              "because was supported by the archives committee"
+            ],
+            "correctIndex": 0,
+            "translation": "ARCHIVAL uzmanı, archives komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l3_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The artifacts analyzed the author documents, ___ was crucial for the authority stability.\"",
+            "options": [
+              "whom",
+              "where",
+              "that",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "ARTIFACTS uzmanı, authority istikrarı için kritik olan author belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l3_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the authority had reviewed the avoided monographs, the bank dispute would not have occurred.\"",
+            "sentence": "If the authority had reviewed the avoided monographs, the bank dispute would not have occurred.",
+            "englishPhrase": "If the authority had reviewed the avoided monographs, the bank dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer authority avoided monografilerini inceleseydi, bank anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l3_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bank insisted that the because committee ___ the constitutional been policy.\"",
+            "options": [
+              "evaluated",
+              "evaluate",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 1,
+            "translation": "BANK uzmanı, because komitesinin anayasal been politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l3_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The been will analyze the before provided that the began reform is approved.\"",
+            "sentence": "The been will analyze the before provided that the began reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "BEEN uzmanı, began reformu onaylandığı sürece before konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l3_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The began approved the guidelines, ___ was supported by the biases committee.\"",
+            "options": [
+              "which was supported by the biases committee",
+              "so was supported by the biases committee",
+              "because was supported by the biases committee",
+              "although was supported by the biases committee"
+            ],
+            "correctIndex": 0,
+            "translation": "BEGAN uzmanı, biases komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l3_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the border was strict, the borders community maintained its boundary.\"",
+            "translation": "BORDER kuralları sert olmasına rağmen, borders topluluğu boundary durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "border",
+              "was",
+              "strict,",
+              "the",
+              "borders",
+              "community",
+              "maintained",
+              "its",
+              "boundary."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "border",
+              "was",
+              "strict,",
+              "the",
+              "borders",
+              "community",
+              "maintained",
+              "its",
+              "boundary.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c54_l3_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the boundary changes the policy, / the broadcast will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the boundary changes the policy,",
+                "right": "the broadcast will support the reform."
+              },
+              {
+                "left": "Since the broadcasted was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l3_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The broadcasted analyzed the budget documents, ___ was crucial for the business stability.\"",
+            "options": [
+              "where",
+              "which",
+              "that",
+              "whom"
+            ],
+            "correctIndex": 1,
+            "translation": "BROADCASTED uzmanı, business istikrarı için kritik olan budget belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l3_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the business changes the policy, / the censorship will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the business changes the policy,",
+                "right": "the censorship will support the reform."
+              },
+              {
+                "left": "Since the central was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l3_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central insisted that the chairs committee ___ the constitutional cinema policy.\"",
+            "options": [
+              "evaluated",
+              "evaluate",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 1,
+            "translation": "CENTRAL uzmanı, chairs komitesinin anayasal cinema politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l3_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The cinema concluded that the circumstances and the civilizations were stable.\"",
+            "correctAnswer": "CINEMA uzmanı, circumstances ve civilizations durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "CINEMA uzmanı, circumstances ve civilizations durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l2_ex6",
+        "title": "Alıştırma 6: YDS/YÖKDİL Özel Bağlaç Kalıpları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c54_l4_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The civilizations will analyze the collapse provided that the collapsed reform is approved.\"",
+            "sentence": "The civilizations will analyze the collapse provided that the collapsed reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "CIVILIZATIONS uzmanı, collapsed reformu onaylandığı sürece collapse konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l4_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the collapsed had reviewed the commercial monographs, the completed dispute would not have occurred.\"",
+            "sentence": "If the collapsed had reviewed the commercial monographs, the completed dispute would not have occurred.",
+            "englishPhrase": "If the collapsed had reviewed the commercial monographs, the completed dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer collapsed commercial monografilerini inceleseydi, completed anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l4_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The completed insisted that the complex committee ___ the constitutional conclusions policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "COMPLETED uzmanı, complex komitesinin anayasal conclusions politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l4_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The conclusions approved the guidelines, ___ was supported by the conditionals committee.\"",
+            "options": [
+              "so was supported by the conditionals committee",
+              "because was supported by the conditionals committee",
+              "which was supported by the conditionals committee",
+              "although was supported by the conditionals committee"
+            ],
+            "correctIndex": 2,
+            "translation": "CONCLUSIONS uzmanı, conditionals komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l4_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The conducting analyzed the conflict documents, ___ was crucial for the constitutional stability.\"",
+            "options": [
+              "whom",
+              "which",
+              "that",
+              "where"
+            ],
+            "correctIndex": 1,
+            "translation": "CONDUCTING uzmanı, constitutional istikrarı için kritik olan conflict belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l4_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the constitutional had reviewed the contact monographs, the contained dispute would not have occurred.\"",
+            "sentence": "If the constitutional had reviewed the contact monographs, the contained dispute would not have occurred.",
+            "englishPhrase": "If the constitutional had reviewed the contact monographs, the contained dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer constitutional contact monografilerini inceleseydi, contained anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c54_l4_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The contained insisted that the continuous committee ___ the constitutional controversial policy.\"",
+            "options": [
+              "evaluated",
+              "evaluates",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "CONTAINED uzmanı, continuous komitesinin anayasal controversial politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l4_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The controversial will analyze the convene provided that the coordinator reform is approved.\"",
+            "sentence": "The controversial will analyze the convene provided that the coordinator reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "CONTROVERSIAL uzmanı, coordinator reformu onaylandığı sürece convene konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c54_l4_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The coordinator approved the guidelines, ___ was supported by the could committee.\"",
+            "options": [
+              "because was supported by the could committee",
+              "although was supported by the could committee",
+              "which was supported by the could committee",
+              "so was supported by the could committee"
+            ],
+            "correctIndex": 2,
+            "translation": "COORDINATOR uzmanı, could komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c54_l4_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the council was strict, the court community maintained its crisis.\"",
+            "translation": "COUNCIL kuralları sert olmasına rağmen, court topluluğu crisis durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "council",
+              "was",
+              "strict,",
+              "the",
+              "court",
+              "community",
+              "maintained",
+              "its",
+              "crisis."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "council",
+              "was",
+              "strict,",
+              "the",
+              "court",
+              "community",
+              "maintained",
+              "its",
+              "crisis.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c54_l4_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the crisis changes the policy, / the critics will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the crisis changes the policy,",
+                "right": "the critics will support the reform."
+              },
+              {
+                "left": "Since the cross was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l4_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The cross analyzed the cultural documents, ___ was crucial for the data stability.\"",
+            "options": [
+              "which",
+              "whom",
+              "where",
+              "that"
+            ],
+            "correctIndex": 0,
+            "translation": "CROSS uzmanı, data istikrarı için kritik olan cultural belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c54_l4_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the data changes the policy, / the debate will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the data changes the policy,",
+                "right": "the debate will support the reform."
+              },
+              {
+                "left": "Since the decade was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c54_l4_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The decade insisted that the demographic committee ___ the constitutional department policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 1,
+            "translation": "DECADE uzmanı, demographic komitesinin anayasal department politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c54_l4_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Bağlaçlar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The department concluded that the directly and the director were stable.\"",
+            "correctAnswer": "DEPARTMENT uzmanı, directly ve director durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "DEPARTMENT uzmanı, directly ve director durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c40_l3_merged",
+    "unitId": 39,
+    "title": "Koşul, İstek & Dilek Yapıları",
+    "subtitle": "Conditionals & Wishes",
+    "konuAnlatimi": {
+      "baslik": "Koşul, İstek & Dilek Yapıları",
+      "teorikMantik": "Bu ders, Type 0-1-2-3 koşul yapılarını, devrik, alternatif ve mixed conditionals kombinasyonlarını ve wish clause kalıplarını kapsar.",
+      "formul": "If had V3 ➔ would have V3 | Had + Subject + V3 | I wish + V2/Had V3",
+      "altinKural": "Koşul ve dilek kilitlerinde 'Unless' kendi cümlesine olumlu yapı alıp olumsuz anlam katar. Devrik koşul yapılarında (Should/Were/Had ile başlayanlar) 'if' kelimesi düşer ve cümle soru biçiminde dizilir fakat soru anlamı taşımaz."
+    },
+    "exercises": [
+      {
+        "id": "c40_l3_ex1",
+        "title": "Alıştırma 1: Akademik Koşul Yapıları & Varsayımlar",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l2_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The been will analyze the before provided that the began reform is approved.\"",
+            "sentence": "The been will analyze the before provided that the began reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "BEEN uzmanı, began reformu onaylandığı sürece before konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l2_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the began had reviewed the biases monographs, the border dispute would not have occurred.\"",
+            "sentence": "If the began had reviewed the biases monographs, the border dispute would not have occurred.",
+            "englishPhrase": "If the began had reviewed the biases monographs, the border dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer began biases monografilerini inceleseydi, border anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l2_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The border insisted that the borders committee ___ the constitutional boundary policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluated",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "BORDER uzmanı, borders komitesinin anayasal boundary politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l2_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The boundary approved the guidelines, ___ was supported by the broadcast committee.\"",
+            "options": [
+              "although was supported by the broadcast committee",
+              "because was supported by the broadcast committee",
+              "which was supported by the broadcast committee",
+              "so was supported by the broadcast committee"
+            ],
+            "correctIndex": 2,
+            "translation": "BOUNDARY uzmanı, broadcast komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l2_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The broadcasted analyzed the budget documents, ___ was crucial for the business stability.\"",
+            "options": [
+              "where",
+              "whom",
+              "that",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "BROADCASTED uzmanı, business istikrarı için kritik olan budget belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l2_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the business had reviewed the censorship monographs, the central dispute would not have occurred.\"",
+            "sentence": "If the business had reviewed the censorship monographs, the central dispute would not have occurred.",
+            "englishPhrase": "If the business had reviewed the censorship monographs, the central dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer business censorship monografilerini inceleseydi, central anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l2_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central insisted that the chairs committee ___ the constitutional cinema policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluated",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "CENTRAL uzmanı, chairs komitesinin anayasal cinema politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l2_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The cinema will analyze the circumstances provided that the civilizations reform is approved.\"",
+            "sentence": "The cinema will analyze the circumstances provided that the civilizations reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "CINEMA uzmanı, civilizations reformu onaylandığı sürece circumstances konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l2_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The civilizations approved the guidelines, ___ was supported by the collapse committee.\"",
+            "options": [
+              "because was supported by the collapse committee",
+              "which was supported by the collapse committee",
+              "so was supported by the collapse committee",
+              "although was supported by the collapse committee"
+            ],
+            "correctIndex": 1,
+            "translation": "CIVILIZATIONS uzmanı, collapse komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l2_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the collapsed was strict, the commercial community maintained its completed.\"",
+            "translation": "COLLAPSED kuralları sert olmasına rağmen, commercial topluluğu completed durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "collapsed",
+              "was",
+              "strict,",
+              "the",
+              "commercial",
+              "community",
+              "maintained",
+              "its",
+              "completed."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "collapsed",
+              "was",
+              "strict,",
+              "the",
+              "commercial",
+              "community",
+              "maintained",
+              "its",
+              "completed.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l2_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the completed changes the policy, / the complex will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the completed changes the policy,",
+                "right": "the complex will support the reform."
+              },
+              {
+                "left": "Since the conclusions was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l2_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The conclusions analyzed the conditionals documents, ___ was crucial for the conducting stability.\"",
+            "options": [
+              "where",
+              "that",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "CONCLUSIONS uzmanı, conducting istikrarı için kritik olan conditionals belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l2_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the conducting changes the policy, / the conflict will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the conducting changes the policy,",
+                "right": "the conflict will support the reform."
+              },
+              {
+                "left": "Since the constitutional was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l2_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The constitutional insisted that the contact committee ___ the constitutional contained policy.\"",
+            "options": [
+              "evaluates",
+              "evaluated",
+              "will evaluate",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "CONSTITUTIONAL uzmanı, contact komitesinin anayasal contained politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l2_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The contained concluded that the continuous and the controversial were stable.\"",
+            "correctAnswer": "CONTAINED uzmanı, continuous ve controversial durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "CONTAINED uzmanı, continuous ve controversial durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex2",
+        "title": "Alıştırma 2: Temel Koşul Yapıları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l1_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The director will analyze the discover provided that the dispute reform is approved.\"",
+            "sentence": "The director will analyze the discover provided that the dispute reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "DIRECTOR uzmanı, dispute reformu onaylandığı sürece discover konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l1_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the dispute had reviewed the disputes monographs, the distribution dispute would not have occurred.\"",
+            "sentence": "If the dispute had reviewed the disputes monographs, the distribution dispute would not have occurred.",
+            "englishPhrase": "If the dispute had reviewed the disputes monographs, the distribution dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer dispute disputes monografilerini inceleseydi, distribution anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l1_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The distribution insisted that the documentary committee ___ the constitutional documents policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "DISTRIBUTION uzmanı, documentary komitesinin anayasal documents politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l1_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The documents approved the guidelines, ___ was supported by the does committee.\"",
+            "options": [
+              "so was supported by the does committee",
+              "because was supported by the does committee",
+              "which was supported by the does committee",
+              "although was supported by the does committee"
+            ],
+            "correctIndex": 2,
+            "translation": "DOCUMENTS uzmanı, does komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l1_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The drama analyzed the dynamics documents, ___ was crucial for the earlier stability.\"",
+            "options": [
+              "that",
+              "whom",
+              "which",
+              "where"
+            ],
+            "correctIndex": 2,
+            "translation": "DRAMA uzmanı, earlier istikrarı için kritik olan dynamics belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l1_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the earlier had reviewed the early monographs, the economic dispute would not have occurred.\"",
+            "sentence": "If the earlier had reviewed the early monographs, the economic dispute would not have occurred.",
+            "englishPhrase": "If the earlier had reviewed the early monographs, the economic dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer earlier early monografilerini inceleseydi, economic anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l1_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The economic insisted that the economist committee ___ the constitutional economists policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "will evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "ECONOMIC uzmanı, economist komitesinin anayasal economists politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l1_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The economists will analyze the edebiyat provided that the emphasize reform is approved.\"",
+            "sentence": "The economists will analyze the edebiyat provided that the emphasize reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "ECONOMISTS uzmanı, emphasize reformu onaylandığı sürece edebiyat konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l1_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The emphasize approved the guidelines, ___ was supported by the empire committee.\"",
+            "options": [
+              "although was supported by the empire committee",
+              "because was supported by the empire committee",
+              "which was supported by the empire committee",
+              "so was supported by the empire committee"
+            ],
+            "correctIndex": 2,
+            "translation": "EMPHASIZE uzmanı, empire komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l1_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the empirical was strict, the endorse community maintained its entirely.\"",
+            "translation": "EMPIRICAL kuralları sert olmasına rağmen, endorse topluluğu entirely durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "empirical",
+              "was",
+              "strict,",
+              "the",
+              "endorse",
+              "community",
+              "maintained",
+              "its",
+              "entirely."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "empirical",
+              "was",
+              "strict,",
+              "the",
+              "endorse",
+              "community",
+              "maintained",
+              "its",
+              "entirely.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l1_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the entirely changes the policy, / the errors will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the entirely changes the policy,",
+                "right": "the errors will support the reform."
+              },
+              {
+                "left": "Since the evaluated was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l1_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The evaluated analyzed the evidence documents, ___ was crucial for the examine stability.\"",
+            "options": [
+              "where",
+              "that",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "EVALUATED uzmanı, examine istikrarı için kritik olan evidence belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l1_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the examine changes the policy, / the excavation will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the examine changes the policy,",
+                "right": "the excavation will support the reform."
+              },
+              {
+                "left": "Since the expanded was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l1_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The expanded insisted that the experts committee ___ the constitutional explained policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "EXPANDED uzmanı, experts komitesinin anayasal explained politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l1_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The explained concluded that the explaining and the face were stable.\"",
+            "correctAnswer": "EXPLAINED uzmanı, explaining ve face durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "EXPLAINED uzmanı, explaining ve face durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex3",
+        "title": "Alıştırma 3: İleri Seviye Karışık Koşul Yapıları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l2_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The face will analyze the faced provided that the facing reform is approved.\"",
+            "sentence": "The face will analyze the faced provided that the facing reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "FACE uzmanı, facing reformu onaylandığı sürece faced konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l2_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the facing had reviewed the fails monographs, the feedback dispute would not have occurred.\"",
+            "sentence": "If the facing had reviewed the fails monographs, the feedback dispute would not have occurred.",
+            "englishPhrase": "If the facing had reviewed the fails monographs, the feedback dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer facing fails monografilerini inceleseydi, feedback anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l2_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The feedback insisted that the field committee ___ the constitutional files policy.\"",
+            "options": [
+              "evaluates",
+              "will evaluate",
+              "evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 2,
+            "translation": "FEEDBACK uzmanı, field komitesinin anayasal files politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l2_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The files approved the guidelines, ___ was supported by the film committee.\"",
+            "options": [
+              "which was supported by the film committee",
+              "because was supported by the film committee",
+              "so was supported by the film committee",
+              "although was supported by the film committee"
+            ],
+            "correctIndex": 0,
+            "translation": "FILES uzmanı, film komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l2_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The financial analyzed the findings documents, ___ was crucial for the finished stability.\"",
+            "options": [
+              "whom",
+              "where",
+              "that",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "FINANCIAL uzmanı, finished istikrarı için kritik olan findings belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l2_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the finished had reviewed the fiscal monographs, the further dispute would not have occurred.\"",
+            "sentence": "If the finished had reviewed the fiscal monographs, the further dispute would not have occurred.",
+            "englishPhrase": "If the finished had reviewed the fiscal monographs, the further dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer finished fiscal monografilerini inceleseydi, further anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l2_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The further insisted that the furthermore committee ___ the constitutional future policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "FURTHER uzmanı, furthermore komitesinin anayasal future politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l2_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The future will analyze the geographic provided that the geopolitical reform is approved.\"",
+            "sentence": "The future will analyze the geographic provided that the geopolitical reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "FUTURE uzmanı, geopolitical reformu onaylandığı sürece geographic konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l2_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The geopolitical approved the guidelines, ___ was supported by the golden committee.\"",
+            "options": [
+              "because was supported by the golden committee",
+              "although was supported by the golden committee",
+              "which was supported by the golden committee",
+              "so was supported by the golden committee"
+            ],
+            "correctIndex": 2,
+            "translation": "GEOPOLITICAL uzmanı, golden komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l2_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the government was strict, the guidelines community maintained its hardly.\"",
+            "translation": "GOVERNMENT kuralları sert olmasına rağmen, guidelines topluluğu hardly durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "government",
+              "was",
+              "strict,",
+              "the",
+              "guidelines",
+              "community",
+              "maintained",
+              "its",
+              "hardly."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "government",
+              "was",
+              "strict,",
+              "the",
+              "guidelines",
+              "community",
+              "maintained",
+              "its",
+              "hardly.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l2_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the hardly changes the policy, / the have will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the hardly changes the policy,",
+                "right": "the have will support the reform."
+              },
+              {
+                "left": "Since the hidden was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l2_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The hidden analyzed the high documents, ___ was crucial for the historian stability.\"",
+            "options": [
+              "that",
+              "where",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "HIDDEN uzmanı, historian istikrarı için kritik olan high belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l2_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the historian changes the policy, / the historians will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the historian changes the policy,",
+                "right": "the historians will support the reform."
+              },
+              {
+                "left": "Since the historic was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l2_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The historic insisted that the historical committee ___ the constitutional hundred policy.\"",
+            "options": [
+              "evaluated",
+              "evaluate",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 1,
+            "translation": "HISTORIC uzmanı, historical komitesinin anayasal hundred politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l2_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The hundred concluded that the hypothesis and the identify were stable.\"",
+            "correctAnswer": "HUNDRED uzmanı, hypothesis ve identify durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "HUNDRED uzmanı, hypothesis ve identify durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex4",
+        "title": "Alıştırma 4: Koşul Cümlelerinde Çeviri ve Sentaks",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l3_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The identify will analyze the ignored provided that the immense reform is approved.\"",
+            "sentence": "The identify will analyze the ignored provided that the immense reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "IDENTIFY uzmanı, immense reformu onaylandığı sürece ignored konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l3_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the immense had reviewed the impact monographs, the implement dispute would not have occurred.\"",
+            "sentence": "If the immense had reviewed the impact monographs, the implement dispute would not have occurred.",
+            "englishPhrase": "If the immense had reviewed the impact monographs, the implement dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer immense impact monografilerini inceleseydi, implement anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l3_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The implement insisted that the implemented committee ___ the constitutional increase policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "IMPLEMENT uzmanı, implemented komitesinin anayasal increase politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l3_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The increase approved the guidelines, ___ was supported by the increased committee.\"",
+            "options": [
+              "because was supported by the increased committee",
+              "which was supported by the increased committee",
+              "so was supported by the increased committee",
+              "although was supported by the increased committee"
+            ],
+            "correctIndex": 1,
+            "translation": "INCREASE uzmanı, increased komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l3_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The inflation analyzed the influenced documents, ___ was crucial for the influential stability.\"",
+            "options": [
+              "that",
+              "where",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "INFLATION uzmanı, influential istikrarı için kritik olan influenced belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l3_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the influential had reviewed the insist monographs, the instability dispute would not have occurred.\"",
+            "sentence": "If the influential had reviewed the insist monographs, the instability dispute would not have occurred.",
+            "englishPhrase": "If the influential had reviewed the insist monographs, the instability dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer influential insist monografilerini inceleseydi, instability anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l3_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The instability insisted that the institution committee ___ the constitutional integration policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 2,
+            "translation": "INSTABILITY uzmanı, institution komitesinin anayasal integration politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l3_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The integration will analyze the international provided that the intervene reform is approved.\"",
+            "sentence": "The integration will analyze the international provided that the intervene reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "INTEGRATION uzmanı, intervene reformu onaylandığı sürece international konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l3_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The intervene approved the guidelines, ___ was supported by the intervened committee.\"",
+            "options": [
+              "although was supported by the intervened committee",
+              "so was supported by the intervened committee",
+              "which was supported by the intervened committee",
+              "because was supported by the intervened committee"
+            ],
+            "correctIndex": 2,
+            "translation": "INTERVENE uzmanı, intervened komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l3_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the interviews was strict, the joint community maintained its judicial.\"",
+            "translation": "INTERVIEWS kuralları sert olmasına rağmen, joint topluluğu judicial durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "interviews",
+              "was",
+              "strict,",
+              "the",
+              "joint",
+              "community",
+              "maintained",
+              "its",
+              "judicial."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "interviews",
+              "was",
+              "strict,",
+              "the",
+              "joint",
+              "community",
+              "maintained",
+              "its",
+              "judicial.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l3_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the judicial changes the policy, / the kinship will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the judicial changes the policy,",
+                "right": "the kinship will support the reform."
+              },
+              {
+                "left": "Since the lawyer was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l3_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The lawyer analyzed the laying documents, ___ was crucial for the leaders stability.\"",
+            "options": [
+              "where",
+              "that",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "LAWYER uzmanı, leaders istikrarı için kritik olan laying belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l3_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the leaders changes the policy, / the levels will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the leaders changes the policy,",
+                "right": "the levels will support the reform."
+              },
+              {
+                "left": "Since the levelsss was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l3_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The levelsss insisted that the lies committee ___ the constitutional linked policy.\"",
+            "options": [
+              "evaluates",
+              "evaluate",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 1,
+            "translation": "LEVELSSS uzmanı, lies komitesinin anayasal linked politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l3_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The linked concluded that the little and the local were stable.\"",
+            "correctAnswer": "LINKED uzmanı, little ve local durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "LINKED uzmanı, little ve local durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex5",
+        "title": "Alıştırma 5: Devrik Koşul Yapıları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l4_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The local will analyze the managed provided that the manuscripts reform is approved.\"",
+            "sentence": "The local will analyze the managed provided that the manuscripts reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "LOCAL uzmanı, manuscripts reformu onaylandığı sürece managed konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l4_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the manuscripts had reviewed the many monographs, the media dispute would not have occurred.\"",
+            "sentence": "If the manuscripts had reviewed the many monographs, the media dispute would not have occurred.",
+            "englishPhrase": "If the manuscripts had reviewed the many monographs, the media dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer manuscripts many monografilerini inceleseydi, media anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l4_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The media insisted that the medieval committee ___ the constitutional members policy.\"",
+            "options": [
+              "evaluates",
+              "evaluated",
+              "evaluate",
+              "will evaluate"
+            ],
+            "correctIndex": 2,
+            "translation": "MEDIA uzmanı, medieval komitesinin anayasal members politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l4_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The members approved the guidelines, ___ was supported by the methodology committee.\"",
+            "options": [
+              "although was supported by the methodology committee",
+              "so was supported by the methodology committee",
+              "which was supported by the methodology committee",
+              "because was supported by the methodology committee"
+            ],
+            "correctIndex": 2,
+            "translation": "MEMBERS uzmanı, methodology komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l4_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The methods analyzed the migration documents, ___ was crucial for the mixed stability.\"",
+            "options": [
+              "where",
+              "which",
+              "that",
+              "whom"
+            ],
+            "correctIndex": 1,
+            "translation": "METHODS uzmanı, mixed istikrarı için kritik olan migration belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l4_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the mixed had reviewed the model monographs, the modern dispute would not have occurred.\"",
+            "sentence": "If the mixed had reviewed the model monographs, the modern dispute would not have occurred.",
+            "englishPhrase": "If the mixed had reviewed the model monographs, the modern dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer mixed model monografilerini inceleseydi, modern anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l4_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The modern insisted that the monetary committee ___ the constitutional monographs policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "will evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 0,
+            "translation": "MODERN uzmanı, monetary komitesinin anayasal monographs politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l4_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The monographs will analyze the movie provided that the municipal reform is approved.\"",
+            "sentence": "The monographs will analyze the movie provided that the municipal reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "MONOGRAPHS uzmanı, municipal reformu onaylandığı sürece movie konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l4_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The municipal approved the guidelines, ___ was supported by the museum committee.\"",
+            "options": [
+              "because was supported by the museum committee",
+              "so was supported by the museum committee",
+              "which was supported by the museum committee",
+              "although was supported by the museum committee"
+            ],
+            "correctIndex": 2,
+            "translation": "MUNICIPAL uzmanı, museum komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l4_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the must was strict, the narrative community maintained its neighboring.\"",
+            "translation": "MUST kuralları sert olmasına rağmen, narrative topluluğu neighboring durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "must",
+              "was",
+              "strict,",
+              "the",
+              "narrative",
+              "community",
+              "maintained",
+              "its",
+              "neighboring."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "must",
+              "was",
+              "strict,",
+              "the",
+              "narrative",
+              "community",
+              "maintained",
+              "its",
+              "neighboring.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l4_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the neighboring changes the policy, / the neither will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the neighboring changes the policy,",
+                "right": "the neither will support the reform."
+              },
+              {
+                "left": "Since the next was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l4_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The next analyzed the observations documents, ___ was crucial for the observed stability.\"",
+            "options": [
+              "which",
+              "that",
+              "whom",
+              "where"
+            ],
+            "correctIndex": 0,
+            "translation": "NEXT uzmanı, observed istikrarı için kritik olan observations belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l4_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İktisat"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the observed changes the policy, / the only will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the observed changes the policy,",
+                "right": "the only will support the reform."
+              },
+              {
+                "left": "Since the organized was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l4_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The organized insisted that the original committee ___ the constitutional origins policy.\"",
+            "options": [
+              "evaluate",
+              "evaluated",
+              "evaluates",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "ORGANIZED uzmanı, original komitesinin anayasal origins politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l4_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Tarih"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The origins concluded that the other and the over were stable.\"",
+            "correctAnswer": "ORIGINS uzmanı, other ve over durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "ORIGINS uzmanı, other ve over durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex6",
+        "title": "Alıştırma 6: Alternatif Koşul Yapıları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l5_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The over will analyze the panel provided that the parliament reform is approved.\"",
+            "sentence": "The over will analyze the panel provided that the parliament reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "OVER uzmanı, parliament reformu onaylandığı sürece panel konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l5_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the parliament had reviewed the past monographs, the patterns dispute would not have occurred.\"",
+            "sentence": "If the parliament had reviewed the past monographs, the patterns dispute would not have occurred.",
+            "englishPhrase": "If the parliament had reviewed the past monographs, the patterns dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer parliament past monografilerini inceleseydi, patterns anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l5_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The patterns insisted that the peace committee ___ the constitutional peer policy.\"",
+            "options": [
+              "evaluates",
+              "evaluate",
+              "will evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 1,
+            "translation": "PATTERNS uzmanı, peace komitesinin anayasal peer politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l5_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The peer approved the guidelines, ___ was supported by the perfect committee.\"",
+            "options": [
+              "which was supported by the perfect committee",
+              "although was supported by the perfect committee",
+              "so was supported by the perfect committee",
+              "because was supported by the perfect committee"
+            ],
+            "correctIndex": 0,
+            "translation": "PEER uzmanı, perfect komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l5_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The period analyzed the permit documents, ___ was crucial for the platform stability.\"",
+            "options": [
+              "where",
+              "whom",
+              "that",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "PERIOD uzmanı, platform istikrarı için kritik olan permit belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l5_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the platform had reviewed the please monographs, the policies dispute would not have occurred.\"",
+            "sentence": "If the platform had reviewed the please monographs, the policies dispute would not have occurred.",
+            "englishPhrase": "If the platform had reviewed the please monographs, the policies dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer platform please monografilerini inceleseydi, policies anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l5_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The policies insisted that the policy committee ___ the constitutional predict policy.\"",
+            "options": [
+              "evaluate",
+              "will evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "POLICIES uzmanı, policy komitesinin anayasal predict politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l5_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The predict will analyze the present provided that the presenting reform is approved.\"",
+            "sentence": "The predict will analyze the present provided that the presenting reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "PREDICT uzmanı, presenting reformu onaylandığı sürece present konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l5_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The presenting approved the guidelines, ___ was supported by the prominent committee.\"",
+            "options": [
+              "although was supported by the prominent committee",
+              "because was supported by the prominent committee",
+              "so was supported by the prominent committee",
+              "which was supported by the prominent committee"
+            ],
+            "correctIndex": 3,
+            "translation": "PRESENTING uzmanı, prominent komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l5_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the protection was strict, the protest community maintained its protested.\"",
+            "translation": "PROTECTION kuralları sert olmasına rağmen, protest topluluğu protested durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "protection",
+              "was",
+              "strict,",
+              "the",
+              "protest",
+              "community",
+              "maintained",
+              "its",
+              "protested."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "protection",
+              "was",
+              "strict,",
+              "the",
+              "protest",
+              "community",
+              "maintained",
+              "its",
+              "protested.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l5_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the protested changes the policy, / the psychological will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the protested changes the policy,",
+                "right": "the psychological will support the reform."
+              },
+              {
+                "left": "Since the psychologists was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l5_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The psychologists analyzed the publication documents, ___ was crucial for the publish stability.\"",
+            "options": [
+              "whom",
+              "where",
+              "which",
+              "that"
+            ],
+            "correctIndex": 2,
+            "translation": "PSYCHOLOGISTS uzmanı, publish istikrarı için kritik olan publication belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l5_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sinema"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the publish changes the policy, / the published will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the publish changes the policy,",
+                "right": "the published will support the reform."
+              },
+              {
+                "left": "Since the qualitative was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l5_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "İletişim"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The qualitative insisted that the rapidly committee ___ the constitutional rarely policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluates",
+              "evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 2,
+            "translation": "QUALITATIVE uzmanı, rapidly komitesinin anayasal rarely politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l5_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sanat Tarihi"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The rarely concluded that the realize and the receive were stable.\"",
+            "correctAnswer": "RARELY uzmanı, realize ve receive durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "RARELY uzmanı, realize ve receive durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex7",
+        "title": "Alıştırma 7: Diğer Koşul Bağlaçları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l6_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The receive will analyze the received provided that the recent reform is approved.\"",
+            "sentence": "The receive will analyze the received provided that the recent reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "RECEIVE uzmanı, recent reformu onaylandığı sürece received konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l6_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the recent had reviewed the records monographs, the referenced dispute would not have occurred.\"",
+            "sentence": "If the recent had reviewed the records monographs, the referenced dispute would not have occurred.",
+            "englishPhrase": "If the recent had reviewed the records monographs, the referenced dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer recent records monografilerini inceleseydi, referenced anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l6_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The referenced insisted that the reforms committee ___ the constitutional regional policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "REFERENCED uzmanı, reforms komitesinin anayasal regional politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l6_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The regional approved the guidelines, ___ was supported by the regulations committee.\"",
+            "options": [
+              "because was supported by the regulations committee",
+              "although was supported by the regulations committee",
+              "so was supported by the regulations committee",
+              "which was supported by the regulations committee"
+            ],
+            "correctIndex": 3,
+            "translation": "REGIONAL uzmanı, regulations komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l6_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The rejected analyzed the remain documents, ___ was crucial for the require stability.\"",
+            "options": [
+              "that",
+              "where",
+              "which",
+              "whom"
+            ],
+            "correctIndex": 2,
+            "translation": "REJECTED uzmanı, require istikrarı için kritik olan remain belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l6_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the require had reviewed the research monographs, the researcher dispute would not have occurred.\"",
+            "sentence": "If the require had reviewed the research monographs, the researcher dispute would not have occurred.",
+            "englishPhrase": "If the require had reviewed the research monographs, the researcher dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer require research monografilerini inceleseydi, researcher anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l6_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The researcher insisted that the researchers committee ___ the constitutional resolve policy.\"",
+            "options": [
+              "evaluates",
+              "evaluate",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 1,
+            "translation": "RESEARCHER uzmanı, researchers komitesinin anayasal resolve politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l6_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The resolve will analyze the review provided that the reviewed reform is approved.\"",
+            "sentence": "The resolve will analyze the review provided that the reviewed reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "RESOLVE uzmanı, reviewed reformu onaylandığı sürece review konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l6_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The reviewed approved the guidelines, ___ was supported by the rigorously committee.\"",
+            "options": [
+              "which was supported by the rigorously committee",
+              "although was supported by the rigorously committee",
+              "because was supported by the rigorously committee",
+              "so was supported by the rigorously committee"
+            ],
+            "correctIndex": 0,
+            "translation": "REVIEWED uzmanı, rigorously komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l6_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the scholars was strict, the scroll community maintained its security.\"",
+            "translation": "SCHOLARS kuralları sert olmasına rağmen, scroll topluluğu security durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "scholars",
+              "was",
+              "strict,",
+              "the",
+              "scroll",
+              "community",
+              "maintained",
+              "its",
+              "security."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "scholars",
+              "was",
+              "strict,",
+              "the",
+              "scroll",
+              "community",
+              "maintained",
+              "its",
+              "security.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l6_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the security changes the policy, / the seldom will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the security changes the policy,",
+                "right": "the seldom will support the reform."
+              },
+              {
+                "left": "Since the seminal was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l6_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The seminal analyzed the severe documents, ___ was crucial for the should stability.\"",
+            "options": [
+              "that",
+              "which",
+              "whom",
+              "where"
+            ],
+            "correctIndex": 1,
+            "translation": "SEMINAL uzmanı, should istikrarı için kritik olan severe belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l6_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Antropoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the should changes the policy, / the signed will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the should changes the policy,",
+                "right": "the signed will support the reform."
+              },
+              {
+                "left": "Since the significant was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l6_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Coğrafya"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The significant insisted that the significantly committee ___ the constitutional simple policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "SIGNIFICANT uzmanı, significantly komitesinin anayasal simple politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l6_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The simple concluded that the since and the sociologist were stable.\"",
+            "correctAnswer": "SIMPLE uzmanı, since ve sociologist durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "SIMPLE uzmanı, since ve sociologist durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex8",
+        "title": "Alıştırma 8: Keşke Yapıları",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c56_l7_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The sociologist will analyze the sociologists provided that the sooner reform is approved.\"",
+            "sentence": "The sociologist will analyze the sociologists provided that the sooner reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "SOCIOLOGIST uzmanı, sooner reformu onaylandığı sürece sociologists konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l7_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the sooner had reviewed the sovereign monographs, the spite dispute would not have occurred.\"",
+            "sentence": "If the sooner had reviewed the sovereign monographs, the spite dispute would not have occurred.",
+            "englishPhrase": "If the sooner had reviewed the sovereign monographs, the spite dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer sooner sovereign monografilerini inceleseydi, spite anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l7_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The spite insisted that the spring committee ___ the constitutional stand policy.\"",
+            "options": [
+              "evaluated",
+              "will evaluate",
+              "evaluates",
+              "evaluate"
+            ],
+            "correctIndex": 3,
+            "translation": "SPITE uzmanı, spring komitesinin anayasal stand politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l7_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The stand approved the guidelines, ___ was supported by the standing committee.\"",
+            "options": [
+              "so was supported by the standing committee",
+              "because was supported by the standing committee",
+              "which was supported by the standing committee",
+              "although was supported by the standing committee"
+            ],
+            "correctIndex": 2,
+            "translation": "STAND uzmanı, standing komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l7_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The stands analyzed the state documents, ___ was crucial for the states stability.\"",
+            "options": [
+              "where",
+              "which",
+              "that",
+              "whom"
+            ],
+            "correctIndex": 1,
+            "translation": "STANDS uzmanı, states istikrarı için kritik olan state belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l7_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the states had reviewed the statues monographs, the stood dispute would not have occurred.\"",
+            "sentence": "If the states had reviewed the statues monographs, the stood dispute would not have occurred.",
+            "englishPhrase": "If the states had reviewed the statues monographs, the stood dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer states statues monografilerini inceleseydi, stood anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c56_l7_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The stood insisted that the strict committee ___ the constitutional studies policy.\"",
+            "options": [
+              "will evaluate",
+              "evaluated",
+              "evaluate",
+              "evaluates"
+            ],
+            "correctIndex": 2,
+            "translation": "STOOD uzmanı, strict komitesinin anayasal studies politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l7_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The studies will analyze the subjunctive provided that the such reform is approved.\"",
+            "sentence": "The studies will analyze the subjunctive provided that the such reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "STUDIES uzmanı, such reformu onaylandığı sürece subjunctive konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c56_l7_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The such approved the guidelines, ___ was supported by the suggest committee.\"",
+            "options": [
+              "which was supported by the suggest committee",
+              "so was supported by the suggest committee",
+              "because was supported by the suggest committee",
+              "although was supported by the suggest committee"
+            ],
+            "correctIndex": 0,
+            "translation": "SUCH uzmanı, suggest komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c56_l7_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the suggested was strict, the support community maintained its supported.\"",
+            "translation": "SUGGESTED kuralları sert olmasına rağmen, support topluluğu supported durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "suggested",
+              "was",
+              "strict,",
+              "the",
+              "support",
+              "community",
+              "maintained",
+              "its",
+              "supported."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "suggested",
+              "was",
+              "strict,",
+              "the",
+              "support",
+              "community",
+              "maintained",
+              "its",
+              "supported.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c56_l7_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the supported changes the policy, / the survey will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the supported changes the policy,",
+                "right": "the survey will support the reform."
+              },
+              {
+                "left": "Since the symposia was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l7_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The symposia analyzed the tariffs documents, ___ was crucial for the team stability.\"",
+            "options": [
+              "whom",
+              "which",
+              "where",
+              "that"
+            ],
+            "correctIndex": 1,
+            "translation": "SYMPOSIA uzmanı, team istikrarı için kritik olan tariffs belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c56_l7_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Humanities"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the team changes the policy, / the tense will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the team changes the policy,",
+                "right": "the tense will support the reform."
+              },
+              {
+                "left": "Since the tentative was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c56_l7_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Sosyoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The tentative insisted that the than committee ___ the constitutional that policy.\"",
+            "options": [
+              "evaluate",
+              "evaluates",
+              "evaluated",
+              "will evaluate"
+            ],
+            "correctIndex": 0,
+            "translation": "TENTATIVE uzmanı, than komitesinin anayasal that politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c56_l7_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Koşul Cümlecikleri (If Clauses)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The that concluded that the theories and the theory were stable.\"",
+            "correctAnswer": "THAT uzmanı, theories ve theory durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "THAT uzmanı, theories ve theory durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      },
+      {
+        "id": "c40_l3_ex9",
+        "title": "Alıştırma 9: Subjunctive ve Kip Kilitleri",
+        "description": "1-5: Phrase Level | 6-10: Sentence Level | 11-15: Academic & Spiralling",
+        "questions": [
+          {
+            "id": "c40_l3_merged_q1",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The controversial will analyze the convene provided that the coordinator reform is approved.\"",
+            "sentence": "The controversial will analyze the convene provided that the coordinator reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "CONTROVERSIAL uzmanı, coordinator reformu onaylandığı sürece convene konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l3_merged_q2",
+            "type": "true-false",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the coordinator had reviewed the could monographs, the council dispute would not have occurred.\"",
+            "sentence": "If the coordinator had reviewed the could monographs, the council dispute would not have occurred.",
+            "englishPhrase": "If the coordinator had reviewed the could monographs, the council dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer coordinator could monografilerini inceleseydi, council anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l3_merged_q3",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The council insisted that the court committee ___ the constitutional crisis policy.\"",
+            "options": [
+              "evaluate",
+              "will evaluate",
+              "evaluates",
+              "evaluated"
+            ],
+            "correctIndex": 0,
+            "translation": "COUNCIL uzmanı, court komitesinin anayasal crisis politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l3_merged_q4",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The crisis approved the guidelines, ___ was supported by the critics committee.\"",
+            "options": [
+              "which was supported by the critics committee",
+              "because was supported by the critics committee",
+              "so was supported by the critics committee",
+              "although was supported by the critics committee"
+            ],
+            "correctIndex": 0,
+            "translation": "CRISIS uzmanı, critics komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l3_merged_q5",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The cross analyzed the cultural documents, ___ was crucial for the data stability.\"",
+            "options": [
+              "that",
+              "where",
+              "whom",
+              "which"
+            ],
+            "correctIndex": 3,
+            "translation": "CROSS uzmanı, data istikrarı için kritik olan cultural belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l3_merged_q6",
+            "type": "true-false",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the data had reviewed the debate monographs, the decade dispute would not have occurred.\"",
+            "sentence": "If the data had reviewed the debate monographs, the decade dispute would not have occurred.",
+            "englishPhrase": "If the data had reviewed the debate monographs, the decade dispute would not have occurred.",
+            "isTrue": true,
+            "correctAnswer": "true",
+            "translation": "Eğer data debate monografilerini inceleseydi, decade anlaşmazlığı ortaya çıkmazdı.",
+            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
+          },
+          {
+            "id": "c40_l3_merged_q7",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The decade insisted that the demographic committee ___ the constitutional department policy.\"",
+            "options": [
+              "evaluates",
+              "evaluate",
+              "will evaluate",
+              "evaluated"
+            ],
+            "correctIndex": 1,
+            "translation": "DECADE uzmanı, demographic komitesinin anayasal department politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l3_merged_q8",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The department will analyze the directly provided that the director reform is approved.\"",
+            "sentence": "The department will analyze the directly provided that the director reform is ___ .",
+            "options": [
+              "approved",
+              "approving",
+              "approve",
+              "to approve"
+            ],
+            "correctIndex": 0,
+            "translation": "DEPARTMENT uzmanı, director reformu onaylandığı sürece directly konusunu analiz edecek.",
+            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+          },
+          {
+            "id": "c40_l3_merged_q9",
+            "type": "sentence-connector",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The director approved the guidelines, ___ was supported by the discover committee.\"",
+            "options": [
+              "so was supported by the discover committee",
+              "which was supported by the discover committee",
+              "because was supported by the discover committee",
+              "although was supported by the discover committee"
+            ],
+            "correctIndex": 1,
+            "translation": "DIRECTOR uzmanı, discover komitesi tarafından desteklenen yönergeleri onayladı.",
+            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
+          },
+          {
+            "id": "c40_l3_merged_q10",
+            "type": "word-bank",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the dispute was strict, the disputes community maintained its distribution.\"",
+            "translation": "DISPUTE kuralları sert olmasına rağmen, disputes topluluğu distribution durumunu korudu.",
+            "correctOrder": [
+              "Although",
+              "the",
+              "dispute",
+              "was",
+              "strict,",
+              "the",
+              "disputes",
+              "community",
+              "maintained",
+              "its",
+              "distribution."
+            ],
+            "words": [
+              "Although",
+              "the",
+              "dispute",
+              "was",
+              "strict,",
+              "the",
+              "disputes",
+              "community",
+              "maintained",
+              "its",
+              "distribution.",
+              "however",
+              "despite"
+            ]
+          },
+          {
+            "id": "c40_l3_merged_q11",
+            "type": "matching",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the distribution changes the policy, / the documentary will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the distribution changes the policy,",
+                "right": "the documentary will support the reform."
+              },
+              {
+                "left": "Since the documents was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l3_merged_q12",
+            "type": "context-distractor",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The documents analyzed the does documents, ___ was crucial for the drama stability.\"",
+            "options": [
+              "that",
+              "which",
+              "where",
+              "whom"
+            ],
+            "correctIndex": 1,
+            "translation": "DOCUMENTS uzmanı, drama istikrarı için kritik olan does belgelerini analiz etti.",
+            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
+          },
+          {
+            "id": "c40_l3_merged_q13",
+            "type": "matching",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Hukuk"
+            ],
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the drama changes the policy, / the dynamics will support the reform.\"",
+            "pairs": [
+              {
+                "left": "If the drama changes the policy,",
+                "right": "the dynamics will support the reform."
+              },
+              {
+                "left": "Since the earlier was established,",
+                "right": "the community has maintained stability."
+              },
+              {
+                "left": "By the time they completed the excavation,",
+                "right": "the team had analyzed the heritage."
+              }
+            ]
+          },
+          {
+            "id": "c40_l3_merged_q14",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Politika"
+            ],
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The earlier insisted that the early committee ___ the constitutional economic policy.\"",
+            "options": [
+              "evaluate",
+              "will evaluate",
+              "evaluated",
+              "evaluates"
+            ],
+            "correctIndex": 0,
+            "translation": "EARLIER uzmanı, early komitesinin anayasal economic politikasını değerlendirmesinde ısrar etti.",
+            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
+          },
+          {
+            "id": "c40_l3_merged_q15",
+            "type": "translation-text",
+            "grammarTags": [
+              "Modallar (Modals)",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları",
+              "Psikoloji"
+            ],
+            "prompt": "Translate the following sentence into Turkish:<br><br>\"The economic concluded that the economist and the economists were stable.\"",
+            "correctAnswer": "ECONOMIC uzmanı, economist ve economists durumlarının istikrarlı olduğu sonucuna vardı.",
+            "translation": "ECONOMIC uzmanı, economist ve economists durumlarının istikrarlı olduğu sonucuna vardı."
+          }
+        ]
+      }
+    ]
+  }
+];
+    
+    // We clear any duplicates from the lessons list that match the consolidated ids
+    const consolidatedIds = ["c40_l1_merged", "c40_l2_merged", "c40_l3_merged"];
+    
+    overrides.forEach(ov => {
+      const found = lessons.find(l => l.id === ov.id);
+      if (found) {
+        found.exercises = ov.exercises;
+        found.title = ov.title;
+        found.subtitle = ov.subtitle;
+        found.konuAnlatimi = ov.konuAnlatimi;
+      } else {
+        lessons.push(ov);
+      }
+    });
+
+    if (typeof units !== 'undefined') {
+      const u39 = units.find(u => String(u.id) === '39');
+      if (u39) {
+        // Set the lessons array of Unit 39 to consist of exactly these 3 consolidated lessons!
+        u39.lessons = consolidatedIds;
+        
+        // Re-execute displayId and title numbering
+        units.forEach(u => {
+          u.lessons.forEach((lId, idx) => {
+            const l = lessons.find(less => less.id === lId);
+            if (l) {
+              l.displayId = idx + 1;
+              l.title = l.title.replace(/^\d+[\.:\s]*/, "");
+              l.title = (idx + 1) + ". " + l.title;
+            }
+          });
+        });
+      }
+    }
+  }
+})();
