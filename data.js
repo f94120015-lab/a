@@ -76265,26 +76265,19 @@ const chapter40Data = {
   },
   {
     "id": "c54_l02_ef1",
-    "bridgeTranslation": {
-      "sentence": "The code optimization failed; however, the deployment succeeded.",
-      "translation": ["Kod optimizasyonu", "başarısız oldu;", "yine de,", "dağıtım başarıyla", "tamamlandı."],
-      "words": ["Kod optimizasyonu", "başarısız oldu;", "yine de,", "dağıtım başarıyla", "tamamlandı.", "çünkü", "önce", "rağmen"]
-    },
-    "type": "error-finder",
+    "type": "multiple-choice",
     "prompt": "Cümledeki noktalama ve bağlaç sentaksı hatasını saptayın:",
-    "sentenceTokens": [
-      "The",
-      "code",
-      "optimization",
-      "failed,",
-      "however",
-      "the",
-      "deployment",
-      "succeeded."
+    "sentence": "The diplomatic negotiation failed, however the treaty ratification succeeded.",
+    "options": [
+      "No error",
+      "Replace 'failed, however' with 'failed; however,'",
+      "Replace 'failed, however' with 'failed however'",
+      "Replace 'however the' with 'however; the'"
     ],
-    "correctIndex": 4,
-    "suggestedCorrection": "; however,",
-    "translation": "'however' iki bağımsız cümleyi sadece virgülle bağlayamaz; noktalı virgül (; however,) veya nokta sonrasında büyük harfle başlamalıdır."
+    "correctIndex": 1,
+    "translation": "'however' iki bağımsız cümleyi sadece virgülle bağlayamaz; noktalı virgül (; however,) veya nokta sonrasında büyük harfle başlamalıdır.",
+    "explanation": "'however' iki bağımsız cümleyi bağlarken noktalı virgül ve virgül (; however,) gerektirir.",
+    "grammarTags": ["Bağlaçlar", "Noktalama"]
   },
   {
     "id": "c54_l02_wb1",
@@ -77015,29 +77008,19 @@ const chapter40Data = {
 
   {
     "id": "c54_l03_ef1",
-    "bridgeTranslation": {
-      "sentence": "The compiler errors block the build; for instance, syntax issues crash it.",
-      "translation": ["Derleyici hataları", "derlemeyi engeller;", "örneğin,", "sözdizimi sorunları", "sistemi çökertir."],
-      "words": ["Derleyici hataları", "derlemeyi engeller;", "örneğin,", "sözdizimi sorunları", "sistemi çökertir.", "rağmen", "çünkü", "önce"]
-    },
-    "type": "error-finder",
-    "prompt": "Noktalama ve geçiş kelimesi kullanımındaki hatayı yakalayın:",
-    "sentenceTokens": [
-      "The",
-      "compiler",
-      "errors",
-      "block",
-      "the",
-      "build,",
-      "for instance,",
-      "syntax",
-      "issues",
-      "crash",
-      "it."
+    "type": "multiple-choice",
+    "prompt": "Cümledeki noktalama ve geçiş ifadesi sentaksı hatasını saptayın:",
+    "sentence": "The policy disputes block the reform, for instance, legal issues delay it.",
+    "options": [
+      "No error",
+      "Replace 'reform, for instance,' with 'reform; for instance,'",
+      "Replace 'for instance, legal' with 'for instance legal'",
+      "Replace 'block the' with 'block; the'"
     ],
-    "correctIndex": 6,
-    "suggestedCorrection": "; for instance,",
-    "translation": "'for instance' bağımsız cümleleri bağlarken virgülden önce noktalı virgül (;) gerektirir."
+    "correctIndex": 1,
+    "translation": "'for instance' bağımsız cümleleri bağlarken virgülden önce noktalı virgül (;) gerektirir.",
+    "explanation": "'for instance' iki bağımsız cümleyi bağlarken noktalı virgül ve virgül (; for instance,) gerektirir.",
+    "grammarTags": ["Bağlaçlar", "Noktalama"]
   },
   {
     "id": "c54_l03_wb1",
