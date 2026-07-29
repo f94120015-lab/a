@@ -44408,7 +44408,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Subjunctive Pasifler & Gizli Şartlar",
       "teorikMantik": "Gizli koşul bildiren zarflar, korku bağlaçları ve akademik raporlama pasiflerinin dönüşüm mantığını kapsar.",
-      "formul": "lest + Subject + V0 | SVO. Otherwise, SVO | It is thought that... ➔ He is thought to..."
+      "formul": "lest + Subject + V0 | SVO. Otherwise, SVO | It is thought that... ➔ He is thought to...",
+      "altinKural": "'Lest' yapısının bulunduğu cümlede fiil daima yalın halde (V0) olmalı veya 'should V0' biçiminde kullanılmalıdır. Lest anlamca olumsuz olduğu için yan cümleye ayrıca olumsuzluk eki (not) getirilmez."
     },
     "exercises": [
       {
@@ -45631,7 +45632,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Temel Pasif (Edilgen) ve Modal Çekimleri",
       "teorikMantik": "Zaman ve modallardaki temel edilgen (pasif) yapıların dizilimini ve cümle içindeki rollerini kavratır.",
-      "formul": "is being V3 | was V3 | will be V3 | modal + be + V3"
+      "formul": "is being V3 | was V3 | will be V3 | modal + be + V3",
+      "altinKural": "Edilgen (pasif) yapılarda eylemi gerçekleştiren özne değil, eylemden etkilenen nesne cümlenin öznesi konumundadır. Pasif çekimlerde 'be + V3' kalıbı asla bozulmaz."
     },
     "exercises": [
       {
@@ -46885,7 +46887,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Cümle Analizi & Hata Kontrolü",
       "teorikMantik": "Akademik metinlerdeki karmaşık cümlelerin yapısal analizini (sentaks) ve zaman uyumu tutarlılığını test eder.",
-      "formul": "Tense Consistency Check"
+      "formul": "Tense Consistency Check",
+      "altinKural": "Karmaşık akademik cümlelerde zaman uyumu (Tense Consistency) kuralları gereği, present bir ana cümle genellikle past bir yan cümleyle veya tam tersi durumlarla bağlanmaz."
     },
     "exercises": [
       {
@@ -47853,7 +47856,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Karmaşık Edilgen Raporlama ve Çoklu Fiil Zincirleri",
       "teorikMantik": "İngilizcedeki en karmaşık söylentili pasif aktarımları ve 5 ila 8 kelimeden oluşan uzun modal/zaman zincirlerini kapsar.",
-      "formul": "must have been V3 | was believed to have been V3 | modal + have been being V3"
+      "formul": "must have been V3 | was believed to have been V3 | modal + have been being V3",
+      "altinKural": "Söylentili edilgen yapılar 'to' ile kısaltılırken; ana eylem ile söylenti eylemi aynı zamandaysa 'to V1', ana eylem söylentiden daha önce gerçekleşmişse 'to have V3' kullanılır."
     },
     "exercises": [
       {
@@ -49774,7 +49778,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Sınav Kısayolları & Diyalog Refleksleri",
       "teorikMantik": "Akademik sınavlarda zaman kazandıran fiil çekimleri ve diyalog tamamlama reflekslerini inceler.",
-      "formul": "suggest doing | neither did I | so do I"
+      "formul": "suggest doing | neither did I | so do I",
+      "altinKural": "Diyalog tamamlama sorularında ve onaylama reflekslerinde, olumlu ifadelere 'so + yardımcı fiil + özne' (So do I), olumsuz ifadelere ise 'neither/nor + yardımcı fiil + özne' (Neither did I) kalıbıyla katılım sağlanır."
     },
     "exercises": [
       {
@@ -50139,7 +50144,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Tarih Belirteçleri, Çapalar & Perfect Matrisi",
       "teorikMantik": "Recently, lately ve 'by' edatının zaman sınırları ile tarih belirteçlerinin tuzaklarını inceler.",
-      "formul": "recently / lately ➔ present perfect | by + past ➔ had V3 | since + V2, for + duration"
+      "formul": "recently / lately ➔ present perfect | by + past ➔ had V3 | since + V2, for + duration",
+      "altinKural": "'By + Geçmiş Zaman' (by 1990) bizi Past Perfect'e (had V3) götürürken, 'By + Gelecek Zaman' (by 2050) Future Perfect'e (will have V3) yönlendirir."
     },
     "exercises": [
       {
@@ -51552,7 +51558,8 @@ if (typeof lessons !== 'undefined') {
     "konuAnlatimi": {
       "baslik": "Sıralama Sıfatları & Kısaltmalar",
       "teorikMantik": "The first, the only gibi niteleyicilerden sonra gelen infinitive (to V1) kısaltmaları ile karma refleks testlerini içerir.",
-      "formul": "the first / the only ➔ to + V1"
+      "formul": "the first / the only ➔ to + V1",
+      "altinKural": "Sıralama sıfatlarından (the first, the only, the last vb.) ve superlative (en üstünlük derecesi) sıfatlardan sonra relative clause kısaltması olarak daima 'to + V1' kullanılır."
     },
     "exercises": [
       {
