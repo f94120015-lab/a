@@ -53839,492 +53839,440 @@ const unit37_advanced_relative = {
     "lessons": [
       {
         "lessonId": "c38_l1",
-        "lessonTitle": "1: Sıklık Zarfları ve Korelasyonlu Zaman Kırılmaları",
+        "lessonTitle": "1: Sıklık Zarfları ve Korelasyonlu Zaman Kırılmaları (seldom, rarely, no sooner ... than, hardly ... when)",
         "konuAnlatimi": {
           "baslik": "1: Sıklık Zarfları ve Korelasyonlu Zaman Kırılmaları",
-          "teorikMantik": "Olumsuz veya kısıtlayıcı sıklık zarfları (Seldom, Rarely, Little, In no way) ile zaman kırılması belirten bağlaçlar (Hardly, Scarcely, No sooner) vurgu amacıyla cümle başına geldiklerinde, cümle düz yapısını kaybedip soru formatına (devrik) dönüşür.",
+          "teorikMantik": "Olumsuz veya kısıtlayıcı sıklık zarfları (Seldom, Rarely, Little, In no way) ile zaman kırılması belirten bağlaçlar (Hardly, Hardly, No sooner) vurgu amacıyla cümle başına geldiklerinde, cümle düz yapısını kaybedip soru formatına (devrik) dönüşür.",
           "formul": "[Olumsuz Zarf] + [Yardımcı Fiil / Modal] + [Özne] + [Fiil (V1/V3)]",
-          "altinKural": "'No sooner' yapısı 'than' ile bağlanırken; 'Hardly' ve 'Scarcely' yapıları 'when' ile bağlanır. Bu ikilileri birbiriyle karıştırmayın."
+          "altinKural": "'No sooner' yapısı 'than' ile bağlanırken; 'Hardly' ve 'Hardly' yapıları 'when' ile bağlanır. Bu ikilileri birbiriyle karıştırmayın."
         },
         "questions": [
           {
             "id": "c38_l1_q1",
             "type": "matching",
-            "prompt": "Sıklık zarfları ve kısıtlayıcı ifadelerle başlayan devrik cümle yapılarını karşılıklarıyla eşleştirin.",
+            "prompt": "Sıklık zarfları ve kısıtlayıcı ifadelerle başlayan devrik öbekleri Türkçe karşılıklarıyla eşleştirin.<br><br>Match the inversion phrases:",
             "pairs": [
               {
-                "left": "Seldom does the state",
-                "right": "intervene so drastically in market operations."
+                "left": "Seldom did the historian find",
+                "right": "tarihçi nadiren buldu"
               },
               {
-                "left": "Rarely did the council",
-                "right": "approve the emergency budget without revisions."
+                "left": "Rarely have the sociologists observed",
+                "right": "sosyologlar nadiren gözlemledi"
               },
               {
-                "left": "Little had the team realized",
-                "right": "the critical security vulnerability in the source code."
+                "left": "Little did the psychologist suspect",
+                "right": "psikolog neredeyse hiç şüphelenmedi"
               },
               {
-                "left": "In no way can we accept",
-                "right": "these terms under the current geopolitical climate."
+                "left": "In no way can the court endorse",
+                "right": "mahkeme hiçbir şekilde kabul edemez"
               }
             ],
-            "hint": {
-              "formula": "Zaman uyumu odaklı eşleşme",
-              "mirror": "Seldom/Rarely ile başlayan yapıların devamını bulun.",
-              "academicNote": "Giriş zarflarının zaman yapıları ile ana eylemleri eşleştirin."
-            }
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q2",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümlenin başındaki 'Rarely' vurgusuna uygun devrik yardımcı fiili seçin:",
-            "sentence": "Rarely ___ the committee encounter such a unified opposition from the local stakeholders.",
+            "prompt": "Cümle başındaki olumsuz zarfın gerektirdiği devrik yardımcı fiili seçin:<br><br>Seldom ___ the economist support such radical trade regulations without examining the long-term market dynamics.",
             "options": [
-              "does",
+              "did",
               "is",
               "has",
-              "did"
+              "does"
             ],
-            "correctIndex": 0,
-            "translation": "Kurul, yerel paydaşlardan nadiren bu kadar birleşik bir muhalefetle karşılaşır.",
-            "explanation": "Cümle başındaki 'Rarely' olumsuz zarfı devriklik gerektirir. Geniş zamanlı 'encounter' fiili için yardımcı fiil 'does' olmalıdır.",
-            "hint": {
-              "formula": "Rarely + [Yardımcı Fiil + Özne + V1]",
-              "mirror": "Normalde: 'The committee rarely encounters...'",
-              "academicNote": "Cümlede 'encounter' yalın (V1) olarak kullanıldığı ve özne tekil olduğu için geniş zaman yardımcı fiili 'does' seçilmelidir."
-            }
+            "correctIndex": 3,
+            "translation": "Ekonomist, uzun vadeli piyasa dinamiklerini incelemeden bu tür radikal ticaret düzenlemelerini nadiren destekler.",
+            "explanation": "Cümle başındaki 'Seldom' olumsuz zarfı devriklik gerektirir. 'Support' eylemi geniş zaman yalın halde olduğu için tekil özne (the economist) ile 'does' kullanılmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümle başında 'Little' azlık zarfına göre doğru devrik yapıyı seçin:",
-            "sentence": "Little ___ that the geopolitical data had been completely manipulated by the intelligence agency.",
+            "type": "multiple-choice",
+            "prompt": "Rarely olumsuz zarfıyla başlayan cümlenin dil bilgisine uygun devrik biçimini seçin:<br><br>Rarely ___ the archaeological team discover such well-preserved manuscripts during their seasonal excavations.",
             "options": [
-              "did the researchers suspect",
-              "the researchers suspected",
-              "have the researchers suspected",
-              "were the researchers suspecting"
+              "did the archaeological team",
+              "were the archaeological team",
+              "has the archaeological team",
+              "the archaeological team did"
             ],
             "correctIndex": 0,
-            "translation": "Araştırmacıların, jeopolitik verilerin istihbarat teşkilatı tarafından tamamen manipüle edildiğinden neredeyse hiç haberleri yoktu.",
-            "explanation": "Cümle başında 'Little' kullanımı 'neredeyse hiç' anlamında devriklik gerektirir. Geçmiş zamanı nitelemek için 'did + özne + V1' yapısı (did the researchers suspect) tercih edilmelidir.",
-            "hint": {
-              "formula": "Little + [Yardımcı Fiil + Özne + V1]",
-              "mirror": "Normalde: 'The researchers suspected little that...'",
-              "academicNote": "Geçmiş zamanda 'Little' devrik yapısı kurulurken 'did + özne + fiilin yalın hali' (did the researchers suspect) yapısı kullanılır."
-            }
+            "translation": "Arkeoloji ekibi, mevsimlik kazıları sırasında bu kadar iyi korunmuş el yazmalarını nadiren keşfetti.",
+            "explanation": "Cümle başında 'Rarely' olumsuz zarfı bulunduğunda devriklik zorunludur. Geçmiş zamanı nitelemek üzere 'did + özne + V1' (did the archaeological team) yapısı seçilmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q4",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümledeki yapısal hatayı düzelten doğru seçeneği belirleyin:\n'Seldom the parliament approves such controversial tax amendments without debate.'",
+            "type": "inversion-transformer",
+            "prompt": "Verilen düz cümleyi 'Little' zarfını başa alarak devrik akademik forma dönüştürün:<br><br>The film director little knew that the political drama would cause a nationwide debate among cinema critics.",
+            "mainSentence": "The film director little knew that the political drama would cause a nationwide debate among cinema critics.",
             "options": [
-              "Seldom does the parliament approve such controversial tax amendments without debate.",
-              "Seldom the parliament approves such controversial tax amendments without debate.",
-              "Seldom does the parliament approves such controversial tax amendments without debate."
+              "Little the film director knew that the political drama would cause a nationwide debate among cinema critics.",
+              "Little has the film director known that the political drama would cause a nationwide debate among cinema critics.",
+              "Little did the film director know that the political drama would cause a nationwide debate among cinema critics."
             ],
-            "correctIndex": 0,
-            "translation": "Parlamento, bu tür tartışmalı vergi değişikliklerini tartışmasız nadiren onaylar.",
-            "explanation": "'Seldom' olumsuz zarfı cümle başına geldiğinde devriklik yapılarak yardımcı fiil özneden önce gelmelidir: 'does the parliament approve'.",
-            "hint": {
-              "formula": "Seldom + [Yardımcı Fiil + Özne + V1]",
-              "mirror": "Hatalı yapı: 'Seldom the parliament approves...'",
-              "academicNote": "'Seldom' cümle başında olumsuz zarf olarak kullanıldığında düz dizilim kabul edilmez; devriklik zorunludur: 'does the parliament approve'."
-            }
+            "correctIndex": 3,
+            "translation": "Film yönetmeni, siyasi dramanın sinema eleştirmenleri arasında ülke çapında bir tartışmayı tetikleyeceğini neredeyse hiç bilmiyordu.",
+            "explanation": "Little olumsuz anlam taşıyan bir zarf olarak cümlenin başına geldiğinde, Simple Past tense için 'did + özne + V1' devrik yapısı kurulmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q5",
-            "type": "inversion-transformer",
-            "prompt": "Verilen düz akademik cümleyi 'In no way' kullanarak profesyonel devrik forma dönüştürün:",
-            "mainSentence": "The ministry in no way can endorse this flawed environmental report.",
-            "options": [
-              "In no way can the ministry endorse this flawed environmental report.",
-              "In no way the ministry can endorse this flawed environmental report.",
-              "In no way did the ministry endorsed this flawed environmental report."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'No sooner ... than' korelasyonlu devrik yapısını tamamlayın:<br><br>No sooner had the empire signed the peace treaty than the local authority protested against the central government.",
+            "translation": "İmparatorluk barış antlaşmasını imzalar imzalamaz, yerel otorite merkezi hükümete karşı isyan etti.",
+            "words": [
+              "No sooner had the empire signed",
+              "the peace treaty",
+              "than the local authority",
+              "protested against",
+              "the central government."
             ],
-            "correctIndex": 0,
-            "translation": "Bakanlık bu kusurlu çevre raporunu hiçbir şekilde onaylayamaz.",
-            "explanation": "'In no way' başa geldiğinde yardımcı modal fiil 'can' özneden önce yer almalıdır.",
-            "hint": {
-              "formula": "In no way + [Modal + Özne + V1]",
-              "mirror": "Düz hali: 'The ministry can in no way endorse...'",
-              "academicNote": "'In no way' ifadesi cümle başına alındığında modal yardımcı fiil olan 'can' özneden önce gelmelidir."
-            }
+            "correctOrder": [
+              "No sooner had the empire signed",
+              "the peace treaty",
+              "than the local authority",
+              "protested against",
+              "the central government."
+            ],
+            "enSentence": "No sooner had the empire signed the peace treaty than the local authority protested against the central government.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q6",
-            "type": "word-bank",
-            "prompt": "Blokları doğru dizerek olumsuz sıklık zarfı devrik yapısını tamamlayın:",
-            "translation": "Uzay aracı yörüngeye henüz girmişti ki telemetri bağlantısını kaybetti.",
-            "words": [
-              "Barely",
-              "had the spacecraft",
-              "entered orbit",
+            "type": "fill-blank",
+            "prompt": "Hardly ... when korelasyonuna uygun bağlacı yazın:<br><br>Hardly had the psychologist published the cognitive study ___ the university board challenged the empirical findings.",
+            "options": [
+              "then",
+              "before",
               "when",
-              "it lost telemetry."
+              "than"
             ],
-            "correctOrder": [
-              "Barely",
-              "had the spacecraft",
-              "entered orbit",
-              "when",
-              "it lost telemetry."
-            ],
-            "enSentence": "Barely had the spacecraft entered orbit when it lost telemetry.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Barely + [had + Özne + V3] + when + [Özne + V2]",
-              "mirror": "Normalde: 'The spacecraft had barely entered orbit...'",
-              "academicNote": "Eş zamanlı veya hemen ardışık eylemlerde 'Barely' ile başlayan devrik kısım Past Perfect (had + V3), ikinci cümle ise 'when' ile bağlanır."
-            }
+            "correctIndex": 2,
+            "translation": "Psikolog bilişsel çalışmayı yayınlar yayınlamaz, üniversite kurulu ampirik bulgulara meydan okudu.",
+            "explanation": "'Hardly' ile başlayan devrik cümlelerde ikinci cümleyi bağlayan korelasyon bağlacı her zaman 'when' (veya 'before') olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "No sooner ... than korelasyonlu yapısına uygun bağlacı bulun:",
-            "sentence": "No sooner had the prime minister announced the fiscal package ___ the union leaders declared a nation-wide strike.",
-            "options": [
-              "than",
-              "when",
-              "then",
-              "before"
-            ],
-            "correctIndex": 0,
-            "translation": "Başbakan mali paketi açıklar açıklamaz sendika liderleri ülke çapında grev ilan etti.",
-            "explanation": "'No sooner' devrik yapısı ile kurulan zaman kırılması cümlelerinde, ikinci cümleyi bağlayan unsur her zaman 'than' bağlacıdır.",
-            "hint": {
-              "formula": "No sooner + [had + Özne + V3] + than + [Özne + V2]",
-              "mirror": "No sooner kalıbının ayrılmaz eşini bulun.",
-              "academicNote": "Zaman kırılması belirten 'No sooner' devrik yapısı ikinci cümleye her zaman kıyas bildiren 'than' ile bağlanır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik cümleyi Türkçe'ye çevirin:<br><br>Hardly had the anthropologist finished the survey when the local administration rejected the research permit.",
+            "correctSentence": "Antropolog anketi bitirir bitirmez, yerel yönetim araştırma iznini iptal etti.",
+            "enSentence": "Hardly had the anthropologist finished the survey when the local administration rejected the research permit.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Hardly ... when zaman kırılmasına uygun devrik başlangıcı seçin:",
-            "sentence": "Hardly ___ the laboratory room when the critical power grid failed completely.",
-            "options": [
-              "had the scientists entered",
-              "the scientists had entered",
-              "did the scientists enter",
-              "were the scientists entering"
-            ],
-            "correctIndex": 0,
-            "translation": "Bilim insanları laboratuvar odasına girer girmez kritik elektrik şebekesi tamamen çöktü.",
-            "explanation": "'Hardly' cümle başında past perfect devrik yapı gerektirir: 'had + subject + V3' (had the scientists entered).",
-            "hint": {
-              "formula": "Hardly + [had + Özne + V3] + when + [Özne + V2]",
-              "mirror": "Normalde: 'The scientists had hardly entered...'",
-              "academicNote": "Hardly ile kurulan zaman kırılması yapısında, ilk cümlede Past Perfect devrik dizilimi ('had' + özne + V3) tercih edilir."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Seldom did the sociologist suggested that kinship patterns were directly linked to urban wealth distribution.",
+            "englishPhrase": "Seldom did the sociologist suggested that kinship patterns were directly linked to urban wealth distribution.",
+            "turkishTranslation": "Hata tespiti: 'did' yardımcı fiilinden sonra gelen asıl fiil yalın halde (suggest) olmalıdır, V2 (suggested) kullanılamaz.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q9",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümledeki korelasyon hatasını düzelten doğru seçeneği belirleyin:\n'Scarcely had the diplomat finished his speech than the military conflict erupted along the border.'",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'does' yardımcı fiilinin cümledeki sentaktik işlevi nedir?<br><br>Rarely does the constitutional court intervene in municipal disputes.",
+            "paragraph": "Rarely does the constitutional court intervene in municipal disputes.",
+            "highlightChunk": "does",
             "options": [
-              "Scarcely had the diplomat finished his speech when the military conflict erupted along the border.",
-              "Scarcely had the diplomat finished his speech than the military conflict erupted along the border.",
-              "Scarcely did the diplomat finished his speech when the military conflict erupted along the border."
+              "Vurgu Zarfı (Emphasis Adverb)",
+              "İlgeç (Preposition)",
+              "Esas Fiil (Main Verb)",
+              "Devrik Yardımcı Fiil (Inverted Auxiliary)"
             ],
-            "correctIndex": 0,
-            "translation": "Diplomat konuşmasını bitirir bitirmez sınır boyunca askeri çatışma patlak verdi.",
-            "explanation": "'Scarcely' ile kurulan devrik yapılarda ikinci cümleyi bağlayan kelime 'than' değil, 'when' (veya 'before') olmalıdır.",
-            "hint": {
-              "formula": "Scarcely + [had + Özne + V3] + when + [Özne + V2]",
-              "mirror": "Hatalı korelasyon: 'Scarcely had... than...'",
-              "academicNote": "'Scarcely' ve 'Hardly' yapıları ikinci cümleye 'when' ile bağlanır, 'than' sadece 'No sooner' ile kullanılır."
-            }
+            "correctIndex": 3,
+            "translation": "Anayasa mahkemesi belediye ihtilaflarına nadiren müdahale eder.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q10",
-            "type": "inversion-transformer",
-            "prompt": "Zaman uyumlu düz cümleyi 'No sooner' kullanarak devrik forma getirin:",
-            "mainSentence": "The regime deployed the troops as soon as the rebellion broke out.",
-            "options": [
-              "No sooner had the regime deployed the troops than the rebellion broke out.",
-              "No sooner the regime had deployed the troops when the rebellion broke out.",
-              "No sooner did the regime deployed the troops than the rebellion broke out."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları 'no sooner ... than' yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "No sooner ___ the team analyzed the economic indicator ___ the inflation levelss increased rapidly.",
+            "corrects": [
+              "had",
+              "than"
             ],
-            "correctIndex": 0,
-            "translation": "İsyan çıkar çıkmaz rejim birlikleri konuşlandırdı.",
-            "explanation": "'as soon as' eşdeğeri olarak 'No sooner had + subject + V3 ... than + subject + V2' devrik yapısı kurulmalıdır.",
-            "hint": {
-              "formula": "No sooner + [had + Özne + V3] + than + [Özne + V2]",
-              "mirror": "Düzü: 'The regime deployed... as soon as...'",
-              "academicNote": "'As soon as' yapısını 'No sooner... than' ile devrik hale getirirken, ilk eylem Past Perfect devrik (had the regime deployed) yapılır."
-            }
+            "translation": "Ekip ekonomik göstergeyi analiz eder etmez enflasyon oranı hızla yükseldi.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q11",
-            "type": "word-bank",
-            "prompt": "Blokları dizerek 'Hardly ... when' yapısını tamamlayın:",
-            "translation": "Banka faiz oranlarını artırır artırmaz enflasyon tamamen dengelendi.",
-            "words": [
-              "Hardly",
-              "had the bank",
-              "raised interest rates",
-              "when",
-              "inflation stabilized",
-              "completely."
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümle başındaki 'In no way' kısıtlamasına uygun devrik yardımcı fiili seçin:<br><br>In no way ___ the lawyers alter the original clauses of the contract without judicial supervision.",
+            "options": [
+              "are",
+              "do",
+              "have",
+              "can"
             ],
-            "correctOrder": [
-              "Hardly",
-              "had the bank",
-              "raised interest rates",
-              "when",
-              "inflation stabilized",
-              "completely."
-            ],
-            "enSentence": "Hardly had the bank raised interest rates when inflation stabilized completely.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Hardly + [had + Özne + V3] + when + [Özne + V2]",
-              "mirror": "Normalde: 'The bank had hardly raised...'",
-              "academicNote": "Hardly ile başlayan devrik yapının ardından past perfect dizilimi gelmeli ve ikinci cümle 'when' ile bağlanmalıdır."
-            }
+            "correctIndex": 3,
+            "translation": "Avukatlar, sözleşmenin orijinal maddelerini yargı denetimi olmaksızın hiçbir şekilde değiştiremezler.",
+            "explanation": "'In no way' olumsuzluk ifadesi başa geldiğinde devriklik yapılır. 'Alter' eylemi yalın (V1) halde olduğundan modal fiil 'can' uygun seçenektir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q12",
-            "type": "fill-blank-dropdown",
-            "prompt": "Geniş zamanlı 'Not only' devrik yapısına uygun yardımcı fiili seçin:",
-            "sentence": "Not only ___ the dynamic software encrypt the sensitive database, but it also monitors unauthorized server access.",
+            "type": "multiple-choice",
+            "prompt": "Aşağıdaki cümledeki sentaktik hatayı düzelten doğru devrik yapıyı seçin:<br><br>Seldom the state media broadcasted the controversial documentary on geopolitical conflict.",
             "options": [
-              "does",
-              "is",
-              "did",
-              "has"
+              "Seldom did the state media broadcast the controversial documentary on geopolitical conflict.",
+              "Seldom the state media broadcast did the controversial documentary on geopolitical conflict.",
+              "Seldom does the state media broadcasted the controversial documentary on geopolitical conflict.",
+              "Seldom did the state media broadcasted the controversial documentary on geopolitical conflict."
             ],
             "correctIndex": 0,
-            "translation": "Dinamik yazılım sadece hassas veritabanını şifrelemekle kalmaz, aynı zamanda yetkisiz sunucu erişimlerini de izler.",
-            "explanation": "İkinci cümledeki 'monitors' geniş zamanlı olduğundan, 'Not only' ile başlayan ilk devrik cümlenin yardımcı fiili de geniş zamanlı 'does' olmalıdır.",
-            "hint": {
-              "formula": "Not only + [does/did + Özne + V1] + but [Özne] also...",
-              "mirror": "İkinci cümledeki 'monitors' (Geniş Zaman) yapısına dikkat edin.",
-              "academicNote": "İkinci cümlecik geniş zamanlı (monitors) olduğu için, 'Not only' ile başlayan devrik ilk cümleciğin yardımcı fiili de geniş zamanlı 'does' olmalıdır."
-            }
+            "translation": "Devlet medyası, jeopolitik çatışma üzerine olan tartışmalı belgeseli nadiren yayınladı.",
+            "explanation": "'Seldom' cümle başına geldiğinde devriklik yapılmalı ve Simple Past tense asıl fiili 'broadcast' (V1) haline dönerek yardımcı fiili 'did' özneden önce gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Geçmiş zamanlı 'At no time' yapısına uygun devrik alternatifi bulun:",
-            "sentence": "At no time ___ the department head authorize the release of the classified database.",
+            "type": "inversion-transformer",
+            "prompt": "Düz yapıda verilen akademik cümleyi 'Rarely' olumsuz zarfıyla devrik forma getirin:<br><br>The institution rarely publishes such highly critical findings on social integration.",
+            "mainSentence": "The institution rarely publishes such highly critical findings on social integration.",
             "options": [
-              "did the department head",
-              "the department head did",
-              "has the department head",
-              "was the department head"
+              "Rarely did the institution publish such highly critical findings on social integration.",
+              "Rarely the institution publishes such highly critical findings on social integration.",
+              "Rarely does the institution publish such highly critical findings on social integration."
             ],
-            "correctIndex": 0,
-            "translation": "Bölüm başkanı, gizli veritabanının yayınlanmasına hiçbir zaman izin vermedi.",
-            "explanation": "At no time olumsuz zaman vurgusu cümle başında kullanıldığında past simple devriklik 'did + özne + V1' şeklinde kurulur.",
-            "hint": {
-              "formula": "At no time + [did + Özne + V1]",
-              "mirror": "Normalde: 'The department head at no time authorized...'",
-              "academicNote": "Geçmiş zamanlı bir eylemi 'At no time' ile devrik yaparken 'did + özne + fiilin yalın hali' (did the department head) kullanılır."
-            }
+            "correctIndex": 3,
+            "translation": "Kurum, toplumsal entegrasyon konusunda bu derece kritik bulguları nadiren yayınlar.",
+            "explanation": "Geniş zamanlı (publishes) düz cümleyi 'Rarely' ile devrik yaparken 'does + subject + V1' yapısı kullanılmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q14",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümledeki devriklik hatasını düzelten doğru seçeneği belirleyin:\n'Not only the tech company expanded its global market, but it also doubled its revenue.'",
-            "options": [
-              "Not only did the tech company expand its global market, but it also doubled its revenue.",
-              "Not only the tech company expanded its global market, but it also doubled its revenue.",
-              "Not only did the tech company expanded its global market, but it also doubled its revenue."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'Little did ... realize' akademik devrik yapısını oluşturun:<br><br>Little did the sociologist realize that the demographic survey contained significant regional errors.",
+            "translation": "Sosyolog, demografik anketin ciddi bölgesel hatalar içerdiğini neredeyse hiç fark etmedi.",
+            "words": [
+              "Little did the sociologist",
+              "realize that the",
+              "demographic survey",
+              "contained significant",
+              "regional errors."
             ],
-            "correctIndex": 0,
-            "translation": "Teknoloji şirketi sadece küresel pazarını genişletmekle kalmadı, aynı zamanda gelirini de ikiye katladı.",
-            "explanation": "'Not only' cümle başında olduğunda ilk cümlenin devrik yapılması gerekir; düz biçim (the tech company expanded) hatalıdır.",
-            "hint": {
-              "formula": "Not only + [did + Özne + V1] ...",
-              "mirror": "Hatalı düz cümle: 'Not only the tech company expanded...'",
-              "academicNote": "'Not only' ifadesi cümle başına geldiğinde ilk cümlede devriklik zorunludur. Geçmiş zamanı nitelemek için 'did the tech company expand' kullanılır."
-            }
+            "correctOrder": [
+              "Little did the sociologist",
+              "realize that the",
+              "demographic survey",
+              "contained significant",
+              "regional errors."
+            ],
+            "enSentence": "Little did the sociologist realize that the demographic survey contained significant regional errors.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q15",
-            "type": "word-bank",
-            "prompt": "Blokları doğru dizerek 'Under no circumstances' devrik uyarısını oluşturun:",
-            "translation": "Ağ mühendisleri hiçbir koşulda birincil yedekleme sunucularının fişini çekmemelidir.",
-            "words": [
-              "Under no circumstances",
-              "should the network",
-              "engineers",
-              "unplug the primary",
-              "backup servers."
+            "type": "fill-blank",
+            "prompt": "No sooner ... than korelasyonuna uygun bağlacı yazın:<br><br>No sooner had the law student examined the judicial verdict ___ she identified the logical contradiction.",
+            "options": [
+              "when",
+              "then",
+              "before",
+              "than"
             ],
-            "correctOrder": [
-              "Under no circumstances",
-              "should the network",
-              "engineers",
-              "unplug the primary",
-              "backup servers."
-            ],
-            "enSentence": "Under no circumstances should the network engineers unplug the primary backup servers.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Under no circumstances + [Modal + Özne + V1]",
-              "mirror": "Normalde: 'The network engineers should under no circumstances unplug...'",
-              "academicNote": "Under no circumstances ifadesi başa geldiğinde zorunluluk bildiren 'should' yardımcı fiili özneden önce gelmelidir."
-            }
+            "correctIndex": 3,
+            "translation": "Hukuk öğrencisi yargı kararını inceler incelemez, mantıksal çelişkiyi tespit etti.",
+            "explanation": "'No sooner' devrik yapısı ikinci yan cümleye her zaman 'than' bağlacı ile bağlanır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q16",
-            "type": "fill-blank-dropdown",
-            "prompt": "On no account devrik yasağına uygun yardımcı modalı bulun:",
-            "sentence": "On no account ___ the security personnel disclose the dynamic encryption keys to external auditors.",
-            "options": [
-              "must",
-              "does",
-              "have",
-              "are"
-            ],
-            "correctIndex": 0,
-            "translation": "Güvenlik personeli, dinamik şifreleme anahtarlarını hiçbir şekilde dış denetçilere ifşa etmemelidir.",
-            "explanation": "'disclose' fiili yalın (V1) haldedir ve yasaklama/zorunluluk anlamı taşıyan 'must' modalı ile devriklik kurulur.",
-            "hint": {
-              "formula": "On no account + [Modal + Özne + V1]",
-              "mirror": "Normalde: 'The security personnel must on no account disclose...'",
-              "academicNote": "Cümledeki 'disclose' fiili yalın (V1) olduğu ve yasaklama/zorunluluk bildirdiği için devrik yapıda 'must' modalı kullanılmalıdır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik cümleyi Türkçe'ye çevirin:<br><br>Rarely did the museum present the ancient artifacts without security protection methods.",
+            "correctSentence": "Müze, antik eserleri yüksek güvenlikli koruma sistemleri olmadan nadiren sergiledi.",
+            "enSentence": "Rarely did the museum present the ancient artifacts without security protection methods.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q17",
-            "type": "fill-blank-dropdown",
-            "prompt": "Azlık bildiren 'Scarcely' zarfına uygun geçmiş zaman devriklik yapısını seçin:",
-            "sentence": "Scarcely ___ the new algorithm initialized when the memory buffer overflowed.",
-            "options": [
-              "had the new algorithm",
-              "the new algorithm had",
-              "did the new algorithm",
-              "was the new algorithm"
-            ],
-            "correctIndex": 0,
-            "translation": "Yeni algoritma henüz başlatılmıştı ki bellek arabelleği taştı.",
-            "explanation": "'Scarcely... when' yapısı past perfect devrik yapıyla ('had + özne + V3') kurulmalıdır.",
-            "hint": {
-              "formula": "Scarcely + [had + Özne + V3] + when...",
-              "mirror": "Normalde: 'The new algorithm had scarcely initialized...'",
-              "academicNote": "Scarcely... when yapısında, ilk cümlede Past Perfect devrik yardımcı fiili olan 'had' kullanılır."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>No sooner had the parliament announced the tax reforms when the business leaders organized a joint protest.",
+            "englishPhrase": "No sooner had the parliament announced the tax reforms when the business leaders organized a joint protest.",
+            "turkishTranslation": "Hata tespiti: 'No sooner' ile başlayan devrik yapılarda ikinci cümleyi bağlayan kelime 'when' değil, 'than' olmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q18",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümledeki devriklik hatasını düzelten doğru seçeneği belirleyin:\n'At no time the localized algorithm predicted that the LFP battery performance would degrade so fast.'",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'did' yardımcı fiilinin cümledeki dil bilgisi işlevi nedir?<br><br>Little did the film critics anticipate the immense commercial impact of the low-budget drama.",
+            "paragraph": "Little did the film critics anticipate the immense commercial impact of the low-budget drama.",
+            "highlightChunk": "did",
             "options": [
-              "At no time did the localized algorithm predict that the LFP battery performance would degrade so fast.",
-              "At no time the localized algorithm predicted that the LFP battery performance would degrade so fast.",
-              "At no time does the localized algorithm predicted that the LFP battery performance would degrade so fast."
+              "Devrik Yardımcı Fiil (Inverted Auxiliary)",
+              "Zaman Bildiren Zarf (Time Adverb)",
+              "Yüklem (Main Verb)",
+              "Eylemsi (Participle)"
             ],
             "correctIndex": 0,
-            "translation": "Lokalize edilmiş algoritma, LFP pil performansının bu kadar hızlı düşeceğini hiçbir zaman tahmin etmemişti.",
-            "explanation": "'At no time' olumsuz zaman ifadesi başa geldiğinde cümle devrik olmalıdır: 'did the localized algorithm predict'.",
-            "hint": {
-              "formula": "At no time + [did + Özne + V1]",
-              "mirror": "Hatalı düz cümle: 'At no time the localized algorithm predicted...'",
-              "academicNote": "'At no time' olumsuz zaman ifadesi cümle başına geldiğinde devriklik şarttır; 'did the localized algorithm predict' şeklinde düzeltilmelidir."
-            }
+            "translation": "Sinema eleştirmenleri, düşük bütçeli dramanın muazzam ticari etkisini neredeyse hiç tahmin edemediler.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l1_q19",
-            "type": "inversion-transformer",
-            "prompt": "Verilen düz cümleyi 'At no point' kullanarak devrik forma getirin:",
-            "mainSentence": "The supervisor did not realize at any point that the system was vulnerable.",
-            "options": [
-              "At no point did the supervisor realize that the system was vulnerable.",
-              "At no point the supervisor realized that the system was vulnerable.",
-              "At no point does the supervisor realize that the system was vulnerable."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları 'hardly ... when' yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "Hardly ___ the archaeologist uncovered the ancient excavation ___ the regional conflict affected the excavation.",
+            "corrects": [
+              "had",
+              "when"
             ],
-            "correctIndex": 0,
-            "translation": "Gözetmen, sistemin savunmasız olduğunu hiçbir noktada fark etmedi.",
-            "explanation": "'At no point' olumsuz ifadesi başa alındığında geçmiş zaman devriklik 'did + özne + realize' olarak kurulmalıdır.",
-            "hint": {
-              "formula": "At no point + [did + Özne + V1]",
-              "mirror": "Düzü: 'The supervisor did not realize at any point that...'",
-              "academicNote": "'At no point' olumsuz zarf öbeği başa alındığında, geçmiş zaman devrik formu 'did the supervisor realize' olmalıdır."
-            }
+            "translation": "Arkeolog antik mezarı ortaya çıkarır çıkarmaz, bölgesel çatışma ekibi kaçmaya zorladı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l1_q20",
-            "type": "word-bank",
-            "prompt": "Blokları dizerek 'Little did ... know' akademik devriklik yapısını tamamlayın:",
-            "translation": "Operasyon ekibi, tüm dinamik konfigürasyon parametrelerinin betik tarafından üzerine yazıldığını neredeyse hiç bilmiyordu.",
-            "words": [
-              "Little",
-              "did the operations",
-              "team know",
-              "that all dynamic",
-              "configuration",
-              "parameters",
-              "had been overwritten",
-              "by the script."
+            "type": "multiple-choice",
+            "prompt": "Cümleyi gramer kurallarına uygun şekilde tamamlayan seçeneği seçin:<br><br>In no way ___ the psychological department approve these unethical experiments on human behavior.",
+            "options": [
+              "did the psychological department approved",
+              "can the psychological department",
+              "does the psychological department",
+              "the psychological department can"
             ],
-            "correctOrder": [
-              "Little",
-              "did the operations",
-              "team know",
-              "that all dynamic",
-              "configuration",
-              "parameters",
-              "had been overwritten",
-              "by the script."
-            ],
-            "enSentence": "Little did the operations team know that all dynamic configuration parameters had been overwritten by the script.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Little + [did + Özne + V1] + that...",
-              "mirror": "Normalde: 'The operations team knew little that...'",
-              "academicNote": "Little zarfı cümle başında devrik yap kurarken geçmiş zamanda 'did + özne + V1' (did the operations team know) dizilimini alır."
-            }
+            "correctIndex": 1,
+            "translation": "Psikoloji bölümü, insan davranışı üzerindeki bu etik dışı deneyleri hiçbir şekilde onaylayamaz.",
+            "explanation": "'In no way' kısıtlayıcı ifadesi ile başlayan cümlede devriklik modal fiille 'can + subject + V1' şeklinde kurulmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           }
         ]
       },
       {
         "lessonId": "c38_l2",
-        "lessonTitle": "2: Kısıtlayıcı Yapılar ve Ana Cümle Tuzakları",
+        "lessonTitle": "2: Kısıtlayıcı Yapılar ve Ana Cümle Tuzakları (only after, only when, under no circumstances)",
         "konuAnlatimi": {
           "baslik": "2: Kısıtlayıcı Yapılar ve Ana Cümle Tuzakları",
-          "teorikMantik": "Only after, Only when, Not until, Not since ve Only by ile başlayan yapılarda devriklik yan cümlede değil, yan cümle bittikten sonra gelen ANA cümlede yapılır. Bu yapılar başa geldiğinde yan cümle düz kurulur.",
-          "formul": "[Only / Not until + Yan Cümle (Düz Yapı)] + [Yardımcı Fiil] + [Özne] + [Fiil]",
-          "altinKural": "En büyük tuzak hem yan cümleyi hem de ana cümleyi devirmektir (çifte devriklik). Devriklik sadece ve sadece ana cümlede kurulmalıdır."
+          "teorikMantik": "Only after, Only when, Only by, Not until ve Not since gibi kısıtlayıcı yapılar bir yan cümleciğe bağlı olduklarında, yan cümlecik düz kurulur ancak takip eden ana cümlecik devrik yapıya (yardımcı fiil + özne) dönüşür.",
+          "formul": "[Restrictive Conjunction] + [Düz Yan Cümle (S + V)] + [Devrik Ana Cümle (Auxiliary + S + V)]",
+          "altinKural": "ZAMAN TUZAĞI: Kısıtlayıcı ifadelerle kurulan yapılarda devrikliği bağlacın hemen yanındaki cümlede değil, virgülden sonra gelen ana cümlede aramalısınız. 'Under no circumstances' ve 'On no account' gibi doğrudan zarf öbekleri ise cümlenin başında hemen devriklik gerektirir."
         },
         "questions": [
           {
             "id": "c38_l2_q1",
             "type": "matching",
-            "prompt": "Kısıtlayıcı zaman ve yöntem devrik cümleciklerini uygun ana cümleleriyle eşleştirin.",
+            "prompt": "Kısıtlayıcı zaman ve yöntem devrik cümleciklerini uygun ana cümleleriyle eşleştirin.<br><br>Match the restrictive inversion clauses:",
             "pairs": [
               {
-                "left": "Only after the data was lost",
-                "right": "did they install hybrid backups."
+                "left": "Only after the board analyzed the fiscal policy",
+                "right": "did they identify the demographic impact."
               },
               {
-                "left": "Not until the scanner was repaired",
-                "right": "did the archivists continue the OCR process."
+                "left": "Not until the museum secured the painting",
+                "right": "did the art historians publish the research paper."
               },
               {
-                "left": "Not since the fiscal crisis",
-                "right": "have global markets suffered this much."
+                "left": "Not since the economic crisis of 2008",
+                "right": "has the state faced such high inflation levelsss."
               },
               {
-                "left": "Only by shifting to LFP batteries",
-                "right": "could the EV manufacturer lower production costs."
+                "left": "Only by conducting qualitative interviews",
+                "right": "could the sociologist understand kinship patterns."
               }
             ],
-            "hint": {
-              "formula": "Kısıtlayıcı zarf ana cümle eşleştirmesi",
-              "mirror": "Only/Not yapılarının zaman ve anlam uyumuna dikkat edin.",
-              "academicNote": "Kısıtlayıcı yapıyla başlayan yan cümlelerin ardına gelen devrik ana cümleleri eşleştirin."
-            }
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q2",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümlenin başındaki 'Only after' vurgusuna uygun devrik yardımcı fiili seçin:",
-            "sentence": "Only after the board members read the complete audit report ___ they finally realize the company's financial risk.",
+            "prompt": "Only after yapısının gerektirdiği doğru devrik ana cümle başlangıcını seçin:<br><br>Only after the parliament amended the tax law ___ the local merchants stop their collective protests.",
             "options": [
               "did",
               "do",
@@ -54332,424 +54280,393 @@ const unit37_advanced_relative = {
               "were"
             ],
             "correctIndex": 0,
-            "translation": "Yönetim kurulu üyeleri ancak denetim raporunun tamamını okuduktan sonra şirketin finansal riskini nihayet fark ettiler.",
-            "explanation": "Only after zarf cümleciği başa geldiğinde devriklik ana cümlede kurulur. Geçmiş zamanı nitelemek için yardımcı fiil 'did' olmalıdır.",
-            "hint": {
-              "formula": "Only after + S + V + did + S + V1",
-              "mirror": "Normalde: 'They finally realized...'",
-              "academicNote": "Only after ile başlayan yapıda devriklik ana cümlede geçmiş zaman için 'did' ile kurulur."
-            }
+            "translation": "Yerel tüccarlar, ortak protestolarını ancak parlamento vergi yasasını değiştirdikten sonra durdurdular.",
+            "explanation": "'Only after' ile başlayan restrictive yapılarda devriklik ana cümlede kurulur. Geçmiş zamanı niteleyen doğru yardımcı fiil 'did' olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q3",
             "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümleyi tamamlayacak en uygun devrik ana cümle yapısını seçin:",
-            "sentence": "Not until the end of the devastating civil war ___ an independent economic recovery strategy.",
+            "prompt": "Cümle başındaki 'Not until' yapısına uygun doğru devrik tamamlamayı seçin:<br><br>Not until the film critics evaluated the symbolic adaptation ___ the director achieve global prestige.",
             "options": [
-              "did the new administration draft",
-              "the new administration drafted",
-              "has the new administration drafted",
-              "were the new administration drafting"
+              "has the cinema director",
+              "did the cinema director",
+              "was the cinema director",
+              "the cinema director did"
             ],
-            "correctIndex": 0,
-            "translation": "Yeni yönetim, bağımsız bir ekonomik kalkınma stratejisini ancak yıkıcı iç savaşın sonuna gelindiğinde hazırlayabildi.",
-            "explanation": "Not until zaman cümleciği başa geldiğinde ana cümle devrik (auxiliary + subject + verb) olmalıdır. Geçmiş zamanı niteleyen doğru devrik yapı 'did the new administration draft' şeklindedir.",
-            "hint": {
-              "formula": "Not until + S + V + [Auxiliary + S + V1]",
-              "mirror": "Geçmiş zaman devrik yapısını arayın.",
-              "academicNote": "Not until yapısından sonra devriklik ana cümlede 'did + subject + V1' (did the new administration draft) şeklinde kurulur."
-            }
+            "correctIndex": 1,
+            "translation": "Sinema yönetmeni, küresel prestiji ancak film eleştirmenleri sembolik uyarlamayı değerlendirdikten sonra elde edebildi.",
+            "explanation": "'Not until' yapısı başa geldiğinde yan cümle düz kurulur, ancak ana cümle devrik olmalıdır. Geçmiş zamanı nitelemek için 'did + özne + V1' seçilmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q4",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümlelerden hangisi 'Only after' sonrasında ana cümle devriklik tuzağına düşmeden doğru kurulmuştur?",
+            "type": "inversion-transformer",
+            "prompt": "Düz cümle yapısını 'Not since' kısıtlayıcı zaman ifadesini başa alarak devrik forma dönüştürün:<br><br>The institution has not witnessed such a severe budget crisis since the civil war period.",
+            "mainSentence": "The institution has not witnessed such a severe budget crisis since the civil war period.",
             "options": [
-              "Only after the parliament amended the law did the protests stop.",
-              "Only after did the parliament amend the law the protests stopped.",
-              "Only after the parliament amended the law the protests did stop."
+              "Not since the civil war period the institution has witnessed such a severe budget crisis.",
+              "Not since the civil war period has the institution witnessed such a severe budget crisis.",
+              "Not since did the civil war period happen the institution has witnessed such a severe budget crisis."
             ],
-            "correctIndex": 0,
-            "translation": "Parlamento yasayı ancak değiştirdikten sonra protestolar durdu.",
-            "explanation": "'Only after' yan cümleciği devrilmez. Devriklik yan cümlecik bittikten sonra, yani ana cümlede 'did the protests stop' şeklinde kurulmalıdır.",
-            "hint": {
-              "formula": "Only after + [Düz Cümle] + [Devrik Cümle]",
-              "mirror": "Yan cümleciğin düz kurulduğundan emin olun.",
-              "academicNote": "Only after yan cümleciği devrilmez (Only after the parliament amended). Devriklik ana cümlededir."
-            }
+            "correctIndex": 1,
+            "translation": "İç savaş döneminden bu yana kurum hiçbir zaman bu kadar ciddi bir bütçe açığına tanık olmamıştı.",
+            "explanation": "'Not since' ifadesi başa alındığında, present perfect yardımcı fiili 'has' özneden (the institution) önce gelerek devrik yapıyı kurmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q5",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Not since' kullanarak devrik akademik forma getirin:",
-            "mainSentence": "The museum has witnessed such a massive influx of visitors not since the Renaissance exhibition.",
-            "options": [
-              "Not since the Renaissance exhibition has the museum witnessed such a massive influx of visitors.",
-              "Not since the Renaissance exhibition the museum has witnessed such a massive influx of visitors.",
-              "Not since did the Renaissance exhibition happen has the museum witnessed such a massive influx of visitors."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'Only by' yöntem bildiren devrik yapısını oluşturun:<br><br>Only by conducting qualitative interviews could the sociologist identify the complex kinship patterns.",
+            "translation": "Sosyolog, karmaşık akrabalık ilişkilerini ancak nitel mülakatlar yürüterek belirleyebildi.",
+            "words": [
+              "Only by conducting",
+              "qualitative interviews",
+              "could the sociologist",
+              "identify the complex",
+              "kinship patterns."
             ],
-            "correctIndex": 0,
-            "translation": "Müze, Rönesans sergisinden beri ziyaretçilerin bu kadar yoğun bir akınına tanık olmamıştı.",
-            "explanation": "'Not since' ifadesi başa alındığında present perfect yardımcı fiili 'has' özneden önce gelmelidir.",
-            "hint": {
-              "formula": "Not since + Zaman/Olay + [has/have + S + V3]",
-              "mirror": "Normalde: 'The museum has not witnessed...'",
-              "academicNote": "Not since ifadesi başa geldiğinde present perfect devrik dizilim 'has the museum witnessed' olmalıdır."
-            }
+            "correctOrder": [
+              "Only by conducting",
+              "qualitative interviews",
+              "could the sociologist",
+              "identify the complex",
+              "kinship patterns."
+            ],
+            "enSentence": "Only by conducting qualitative interviews could the sociologist identify the complex kinship patterns.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q6",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını doğru dizerek kısıtlayıcı devrik yapıyı kurun:",
-            "translation": "Uygulama, küresel pazarda ancak İngilizce pedagojisine odaklanarak başarılı olabilir.",
-            "words": [
-              "Only by focusing on English pedagogy",
-              "can the application succeed",
-              "in the global market."
+            "type": "fill-blank",
+            "prompt": "Only when yapısının gerektirdiği doğru devrik yardımcı fiili yazın:<br><br>Only when the central bank calibrated the monetary policy did the inflation levelss ___ resolver levels.",
+            "options": [
+              "reached",
+              "reach",
+              "reaches",
+              "reaching"
             ],
-            "correctOrder": [
-              "Only by focusing on English pedagogy",
-              "can the application succeed",
-              "in the global market."
-            ],
-            "enSentence": "Only by focusing on English pedagogy can the application succeed in the global market.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Only by + Ving + [can + S + V1]",
-              "mirror": "Normalde: 'The application can succeed...'",
-              "academicNote": "Only by ile başlayan yapıda devriklik ana cümlede 'can + subject + V1' şeklinde kurulur."
-            }
+            "correctIndex": 1,
+            "translation": "Enflasyon oranı, ancak merkez bankası para politikasını ayarladıktan sonra istikrar seviyelerine ulaştı.",
+            "explanation": "Ana cümledeki 'did' yardımcı fiili nedeniyle asıl fiil yalın (V1) halde 'reach' olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Only when the security framework was fully deployed ___ the operations team allow external API access.",
-            "options": [
-              "did",
-              "does",
-              "had",
-              "were"
-            ],
-            "correctIndex": 0,
-            "translation": "Operasyon ekibi, harici API erişimine ancak güvenlik altyapısı tamamen kurulduktan sonra izin verdi.",
-            "explanation": "'Only when' yapısı başa geldiğinde ana cümle geçmiş zaman devrik formu 'did + subject + V1' (did the operations team allow) olmalıdır.",
-            "hint": {
-              "formula": "Only when + S + V + [did + S + V1]",
-              "mirror": "Normalde: 'The operations team allowed...'",
-              "academicNote": "Only when ile başlayan yapıda devriklik ana cümlede geçmiş zaman için 'did' ile kurulur."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki kısıtlayıcı devrik cümleyi Türkçe'ye çevirin:<br><br>Under no circumstances should the lawyer publish the archival archives to the media historians.",
+            "correctSentence": "Avukat, gizli arşivleri hiçbir koşulda medya temsilcilerine ifşa etmemelidir.",
+            "enSentence": "Under no circumstances should the lawyer publish the archival archives to the media historians.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q8",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi dil bilgisi kurallarına uygun şekilde tamamlayan devrik seçeneği seçin:",
-            "sentence": "Not until the hybrid solar inverter was calibrated dynamically ___ the facility achieve optimum energy efficiency.",
-            "options": [
-              "did the residential power system",
-              "the residential power system did",
-              "has the residential power system",
-              "was the residential power system"
-            ],
-            "correctIndex": 0,
-            "translation": "Mesken enerji sistemi, tesiste optimum enerji verimliliğini ancak hibrit güneş enerjisi invertörü dinamik olarak kalibre edildikten sonra sağlayabildi.",
-            "explanation": "'Not until' yan cümlesi bittikten sonra ana cümlede geçmiş zaman devrik yapısı ('did + özne + V1') kurulmalıdır.",
-            "hint": {
-              "formula": "Not until + S + V + [did + S + V1]",
-              "mirror": "Geçmiş zaman devrik ana cümlesini seçin.",
-              "academicNote": "Not until yan cümlesi düz kurulur. Ana cümle ise geçmiş zaman devrik yapısıyla (did the residential power system) bağlanır."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Only after did the archaeologist examine the manuscripts did they publish the findings.",
+            "englishPhrase": "Only after did the archaeologist examine the manuscripts did they publish the findings.",
+            "turkishTranslation": "Hata tespiti: 'Only after' ile başlayan yapılarda yan cümle düz kurulmalıdır ('Only after the archaeologist examined...'). Çift devriklik yapılamaz.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q9",
-            "type": "multiple-choice",
-            "prompt": "'Not since' yapısı için dil bilgisi kurallarına tamamen uygun olan seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'has' yardımcı fiilinin cümledeki sentaktik işlevi nedir?<br><br>Not since the geographic boundary disputes has the state faced such regional instability.",
+            "paragraph": "Not since the geographic boundary disputes has the state faced such regional instability.",
+            "highlightChunk": "has",
             "options": [
-              "Not since the team migrated to Vercel have they experienced such rapid deployment times.",
-              "Not since the team migrated to Vercel they have experienced such rapid deployment times.",
-              "Not since did the team migrate to Vercel have they experienced such rapid deployment times."
+              "Bağlaç (Conjunction)",
+              "Devrik Yardımcı Fiil (Inverted Auxiliary)",
+              "Belirteç (Determiner)",
+              "Esas Fiil (Main Verb)"
             ],
-            "correctIndex": 0,
-            "translation": "Ekip Vercel'e geçtiğinden beri hiçbir zaman bu kadar hızlı dağıtım süreleri deneyimlememişti.",
-            "explanation": "'Not since' ile başlayan kısıtlayıcı yapılarda, yan cümle ('the team migrated to Vercel') düz kurulur; devriklik ana cümlede present perfect yapısıyla ('have they experienced') kurulur.",
-            "hint": {
-              "formula": "Not since + S + V2 + [have/has + S + V3]",
-              "mirror": "Yan cümlecik düz, ana cümlecik devrik olmalıdır.",
-              "academicNote": "Not since yan cümlesi Simple Past (migrated) iken ana cümle Present Perfect devrik (have they experienced) olur."
-            }
+            "correctIndex": 1,
+            "translation": "Coğrafi sınır ihtilaflarından bu yana devlet hiçbir zaman bu kadar bölgesel istikrarsızlıkla karşılaşmamıştı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q10",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Only after' kullanarak devrik forma dönüştürün:",
-            "mainSentence": "The regional manager understood the market dynamics in Erbil only after conducting on-site research.",
-            "options": [
-              "Only after conducting on-site research did the regional manager understand the market dynamics in Erbil.",
-              "Only after conducting on-site research the regional manager understood the market dynamics in Erbil.",
-              "Only after did the regional manager conduct on-site research he understood the market dynamics in Erbil."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları 'Only when ... did' yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "Only when the psychologist collected the empirical evidence ___ they ___ a new hypothesis.",
+            "corrects": [
+              "did",
+              "formulate"
             ],
-            "correctIndex": 0,
-            "translation": "Bölge müdürü, Erbil'deki pazar dinamiklerini ancak yerinde araştırma yaptıktan sonra anladı.",
-            "explanation": "'Only after' yan cümlesindeki eylem ('conducting on-site research') bittikten sonra, ana cümle geçmiş zaman devrik yapısıyla ('did ... understand') bağlanır.",
-            "hint": {
-              "formula": "Only after + Ving + [did + S + V1]",
-              "mirror": "Düz hali: 'The regional manager understood... only after conducting...'",
-              "academicNote": "Only after yan cümlesindeki 'conducting' eyleminden sonra ana cümle geçmiş zaman devrik yapısı ('did ... understand') alır."
-            }
+            "translation": "Psikolog, ancak ampirik kanıtları topladıktan sonra yeni bir hipotez formüle etti.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q11",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek 'Not until' devrik söz dizimini mühürleyin:",
-            "translation": "Geliştiriciler hatalı token dizisini ancak JSON veri yükünü inceledikten sonra izole edebildiler.",
-            "words": [
-              "Not until the developers inspected",
-              "the JSON payload",
-              "did they isolate",
-              "the faulty token sequence."
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümle başındaki 'On no account' yasaklamasına uygun devrik yardımcı modal fiili seçin:<br><br>On no account ___ the administration authorize illegal trade migration without a judicial verdict.",
+            "options": [
+              "are",
+              "does",
+              "have",
+              "must"
             ],
-            "correctOrder": [
-              "Not until the developers inspected",
-              "the JSON payload",
-              "did they isolate",
-              "the faulty token sequence."
-            ],
-            "enSentence": "Not until the developers inspected the JSON payload did they isolate the faulty token sequence.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Not until + S + V + [did + S + V1]",
-              "mirror": "Normalde: 'They isolated...'",
-              "academicNote": "Not until yan cümlesi düz (the developers inspected), ana cümlesi geçmiş zaman devriğidir (did they isolate)."
-            }
+            "correctIndex": 3,
+            "translation": "Yönetim, yargı kararı olmaksızın yasa dışı ticaret göçüne hiçbir şekilde izin vermemelidir.",
+            "explanation": "'On no account' (hiçbir şekilde) güçlü bir yasaklama/zorunluluk gerektirdiğinden modal fiil 'must' tercih edilmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q12",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı modal fiili seçin:",
-            "sentence": "Only by integrating the dynamic calendar API ___ the user organize the 2026 FIFA World Cup schedule efficiently.",
+            "type": "multiple-choice",
+            "prompt": "Aşağıdaki cümlelerden hangisi 'Not until' yapısının ana cümle devriklik kuralına tamamen uyar?<br><br>Not until the team analyzed the economic crisis did the state implement new monetary regulations.",
             "options": [
-              "could",
-              "can",
-              "did",
-              "was"
+              "Not until did the team analyze the economic crisis the state implemented new monetary regulations.",
+              "Not until did the team analyze the economic crisis did the state implement new monetary regulations.",
+              "Not until the team analyzed the economic crisis did the state implement new monetary regulations.",
+              "Not until the team analyzed the economic crisis the state implemented new monetary regulations."
             ],
-            "correctIndex": 0,
-            "translation": "Kullanıcı, 2026 FIFA Dünya Kupası programını ancak dinamik takvim API'sini entegre ederek verimli bir şekilde düzenleyebildi.",
-            "explanation": "'Only by' yapısı ile yetenek bildiren geçmiş zaman devrik yapısı 'could + subject + V1' şeklinde kurulur.",
-            "hint": {
-              "formula": "Only by + Ving + [could + S + V1]",
-              "mirror": "Yetenek bildiren geçmiş zaman modalını arayın.",
-              "academicNote": "Only by ile başlayan yapıda yetenek bildiren geçmiş zaman devrik yapısı için 'could' kullanılır."
-            }
+            "correctIndex": 2,
+            "translation": "Devlet, ancak ekip ekonomik krizi analiz ettikten sonra yeni para politikası düzenlemelerini uygulamaya koydu.",
+            "explanation": "'Not until' ile başlayan restrictive yapılarda yan cümle düz ('the team analyzed...'), ana cümle ise devrik ('did the state implement...') olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q13",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi en uygun devrik yapyıyla tamamlayan seçeneği belirleyin:",
-            "sentence": "Only when the local distributor adjusted the diesel fuel prices ___ consumers resume buying heavy equipment.",
+            "type": "inversion-transformer",
+            "prompt": "Düz yapıda verilen cümleyi 'Only after' kısıtlayıcı ifadesiyle devrik akademik forma getirin:<br><br>The researcher understood the social dynamics only after conducting the ethnographic survey.",
+            "mainSentence": "The researcher understood the social dynamics only after conducting the ethnographic survey.",
             "options": [
-              "did the regional",
-              "the regional did",
-              "has the regional",
-              "were the regional"
+              "Only after conducting the ethnographic survey the researcher understood the social dynamics.",
+              "Only after did the researcher conduct the ethnographic survey he understood the social dynamics.",
+              "Only after conducting the ethnographic survey did the researcher understand the social dynamics."
             ],
-            "correctIndex": 0,
-            "translation": "Bölgesel tüketiciler, ağır ekipman alımına ancak yerel distribütör dizel yakıt fiyatlarını ayarladıktan sonra yeniden başladı.",
-            "explanation": "'Only when' yan cümlesi bittikten sonra ana cümlede devrik geçmiş zaman yapısı ('did + subject + V1') kurulmalıdır.",
-            "hint": {
-              "formula": "Only when + S + V + [did + S + V1]",
-              "mirror": "Normalde: 'Consumers resumed...'",
-              "academicNote": "Only when yan cümlesi bittikten sonra ana cümlede geçmiş zaman devrik yapısı 'did + subject + V1' (did the regional) kurulmalıdır."
-            }
+            "correctIndex": 2,
+            "translation": "Araştırmacı, toplumsal dinamikleri ancak etnografik anketi yürüttükten sonra anladı.",
+            "explanation": "'Only after' yan cümleciği ('conducting the ethnographic survey') düz kurulur; devriklik ana cümlede 'did the researcher understand' olarak gerçekleşir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q14",
-            "type": "multiple-choice",
-            "prompt": "Hangi seçenekte 'Only when' sonrasındaki ana cümle devrik yapısı doğru kurulmuştur?",
-            "options": [
-              "Only when the structural testing is complete can the new Flutter application be deployed safely.",
-              "Only when is the structural testing complete the new Flutter application can be deployed safely.",
-              "Only when the structural testing is complete the new Flutter application can be deployed safely."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'Not since ... has' present perfect devrik yapısını mühürleyin:<br><br>Not since the regional migration period has the administration observed such high demographic integration levels.",
+            "translation": "Bölgesel göç döneminden bu yana belediye hiçbir zaman bu kadar yüksek demografik entegrasyon seviyeleri gözlemlememişti.",
+            "words": [
+              "Not since the regional migration",
+              "period has the administration",
+              "observed such high",
+              "demographic integration",
+              "levels."
             ],
-            "correctIndex": 0,
-            "translation": "Yeni Flutter uygulaması ancak yapısal testler tamamlandıktan sonra güvenli bir şekilde yayına alınabilir.",
-            "explanation": "'Only when' yan cümleciği devrik olamaz ('Only when the structural testing is complete'). Devriklik ana cümlede 'can the new Flutter application be...' olarak kurulur.",
-            "hint": {
-              "formula": "Only when + [Düz Cümle] + [Devrik Cümle]",
-              "mirror": "Yan cümleciğin düz kurulduğundan emin olun.",
-              "academicNote": "Only when yan cümleciği devrilemez. Devriklik ana cümlede 'can the new Flutter...' şeklinde kurulur."
-            }
+            "correctOrder": [
+              "Not since the regional migration",
+              "period has the administration",
+              "observed such high",
+              "demographic integration",
+              "levels."
+            ],
+            "enSentence": "Not since the regional migration period has the administration observed such high demographic integration levels.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q15",
-            "type": "word-bank",
-            "prompt": "Blokları dizerek 'Not since' present perfect devrik yapısını oluşturun:",
-            "translation": "Platform, büyük algoritma güncellemesinden bu yana hiçbir zaman bu kadar yüksek kullanıcı etkileşim seviyeleri gözlemlememişti.",
-            "words": [
-              "Not since the major algorithm update",
-              "has the platform observed",
-              "such high user engagement levels."
+            "type": "fill-blank",
+            "prompt": "Only by yapısının gerektirdiği doğru devrik yardımcı modal fiili yazın:<br><br>Only by adapting the legal framework ___ the parliament resolve the sovereign jurisdiction disputes.",
+            "options": [
+              "did",
+              "could",
+              "were",
+              "can"
             ],
-            "correctOrder": [
-              "Not since the major algorithm update",
-              "has the platform observed",
-              "such high user engagement levels."
-            ],
-            "enSentence": "Not since the major algorithm update has the platform observed such high user engagement levels.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Not since + Zaman/Olay + [has/have + S + V3]",
-              "mirror": "Normalde: 'The platform has observed...'",
-              "academicNote": "Not since başa geldiğinde present perfect devrik 'has the platform observed' şeklinde dizilir."
-            }
+            "correctIndex": 1,
+            "translation": "Parlamento, egemen yargı yetkisi ihtilaflarını ancak yasal çerçeveyi uyarlayarak çözebildi.",
+            "explanation": "Yetenek ve geçmiş zaman bağlamında yetkiyi nitelemek üzere modal fiil 'could' tercih edilir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q16",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Only after the engineers stabilized the LFP battery thermal parameters ___ the EV company clear the model for production.",
-            "options": [
-              "did",
-              "does",
-              "have",
-              "was"
-            ],
-            "correctIndex": 0,
-            "translation": "Elektrikli araç şirketi, modeli seri üretim için ancak mühendisler LFP pil termal parametrelerini sabitledikten sonra onayladı.",
-            "explanation": "'Only after' yan cümleciği bittikten sonra geçmiş zaman devrik yardımcı fiili 'did' kullanılmalıdır.",
-            "hint": {
-              "formula": "Only after + S + V + [did + S + V1]",
-              "mirror": "Normalde: 'The EV company cleared...'",
-              "academicNote": "Only after yan cümlesi bittikten sonra geçmiş zaman devrik yardımcı fiili 'did' olmalıdır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik cümleyi Türkçe'ye çevirin:<br><br>Not until the excavation was completed did the museum present the golden statues.",
+            "correctSentence": "Müze, altın heykelleri ancak kazı tamamlandıktan sonra sergiledi.",
+            "enSentence": "Not until the excavation was completed did the museum present the golden statues.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q17",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi tamamlayacak doğru devrik yapıyı seçin:",
-            "sentence": "Not until the e-archive invoice from Gürgençler Bilişim was verified ___ the accountant close the quarterly log.",
-            "options": [
-              "did the financial officer",
-              "the financial officer did",
-              "has the financial officer",
-              "was the financial officer"
-            ],
-            "correctIndex": 0,
-            "translation": "Muhasebeci üç aylık kaydı ancak Gürgençler Bilişim'den gelen e-arşiv faturası doğrulandıktan sonra kapatabildi.",
-            "explanation": "'Not until' kısıtlayıcı zaman yapısında devriklik ana cümlede 'did + subject + close' olarak kurulmalıdır.",
-            "hint": {
-              "formula": "Not until + S + V + [did + S + V1]",
-              "mirror": "Geçmiş zaman devrik ana cümleyi bulun.",
-              "academicNote": "Not until ile kurulan kısıtlayıcı yapıda devriklik ana cümlede 'did the financial officer' şeklinde kurulur."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Under no circumstances did the administration approved the controversial trade regulations.",
+            "englishPhrase": "Under no circumstances did the administration approved the controversial trade regulations.",
+            "turkishTranslation": "Hata tespiti: 'did' devrik yardımcı fiilinden sonra gelen yüklem fiili yalın (V1 - approve) olmalıdır, V2 (approved) kullanılamaz.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q18",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümledeki 'çifte devriklik' hatasını düzelten en uygun yapıyı bulun:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'did' yardımcı fiilinin cümledeki sentaktik rolü nedir?<br><br>Not until the team analyzed the ancient scroll did they discover the medieval court verdict.",
+            "paragraph": "Not until the team analyzed the ancient scroll did they discover the medieval court verdict.",
+            "highlightChunk": "did",
             "options": [
-              "Only after the council finalized the zoning plans did the construction start in Bodrum.",
-              "Only after did the council finalize the zoning plans did the construction start in Bodrum.",
-              "Only after the council finalized the zoning plans the construction did start in Bodrum."
+              "Yüklem (Main Verb)",
+              "Ortaç (Participle)",
+              "Devrik Yardımcı Fiil (Inverted Auxiliary)",
+              "Bağlaç (Conjunction)"
             ],
-            "correctIndex": 0,
-            "translation": "Bodrum'da inşaat ancak belediye imar planlarını kesinleştirdikten sonra başladı.",
-            "explanation": "'Only after' yan cümleciğinde devriklik yapılmaz. Devriklik sadece ana cümlede ('did the construction start') kurulmalıdır.",
-            "hint": {
-              "formula": "Only after + [Düz Cümle] + [Devrik Cümle]",
-              "mirror": "Çifte devriklik hatasına dikkat edin.",
-              "academicNote": "Only after yan cümleciği düz kurulur (Only after the council finalized). Devriklik sadece ana cümlede yer alır."
-            }
+            "correctIndex": 2,
+            "translation": "Ekip, ortaçağ mahkeme kararını ancak antik parşömeni analiz ettikten sonra keşfetti.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l2_q19",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Only after' kullanarak profesyonel bir devrik akademik forma getirin:",
-            "mainSentence": "The technical team identified the Noun Clause bug in Section 26 only after debugging the source code for hours.",
-            "options": [
-              "Only after debugging the source code for hours did the technical team identify the Noun Clause bug in Section 26.",
-              "Only after debugging the source code for hours the technical team identified the Noun Clause bug in Section 26.",
-              "Only after did the technical team debug the source code for hours they identified the Noun Clause bug in Section 26."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları 'Only when ... did' yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "Only when the art historian approved the heritage certificate ___ the museum administration ___ the painting.",
+            "corrects": [
+              "did",
+              "sell"
             ],
-            "correctIndex": 0,
-            "translation": "Teknik ekip, Bölüm 26'daki Noun Clause hatasını ancak kaynak kodu saatlerce ayıkladıktan sonra tanımlayabildi.",
-            "explanation": "'Only after' ile başlayan cümlede yan cümlecik düz bağlanırken, ana cümle geçmiş zaman devrik yapısıyla ('did the technical team identify') kurulur.",
-            "hint": {
-              "formula": "Only after + Ving + [did + S + V1]",
-              "mirror": "Düz hali: 'The technical team identified... only after debugging...'",
-              "academicNote": "Only after yapısında yan cümle düz iken ana cümle 'did + subject + V1' (did the technical team identify) şeklinde devrik olur."
-            }
+            "translation": "Müzayede evi, tabloyu ancak sanat tarihçisi miras sertifikasını doğruladıktan sonra sattı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l2_q20",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını doğru dizerek 'Only when' devrik yapısını tamamlayın:",
-            "translation": "Hakim, belgeyi ancak mahkeme dijital imzayı doğruladıktan sonra yasal delil olarak kabul etti.",
-            "words": [
-              "Only when the court verified",
-              "the digital signature",
-              "did the judge admit",
-              "the document as legal evidence."
+            "type": "multiple-choice",
+            "prompt": "Cümleyi gramer kurallarına uygun tamamlayan devrik seçeneği seçin:<br><br>Only after analyzing the demographic changes ___ to implement the new social integration policies.",
+            "options": [
+              "did the local council agree",
+              "the local council did agree",
+              "agreed the local council",
+              "was the local council agreed"
             ],
-            "correctOrder": [
-              "Only when the court verified",
-              "the digital signature",
-              "did the judge admit",
-              "the document as legal evidence."
-            ],
-            "enSentence": "Only when the court verified the digital signature did the judge admit the document as legal evidence.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Only when + S + V + [did + S + V1]",
-              "mirror": "Normalde: 'The judge admitted...'",
-              "academicNote": "Only when yan cümleciği düz (the court verified), ana cümle ise devrik geçmiş zamandır (did the judge admit)."
-            }
+            "correctIndex": 0,
+            "translation": "Yerel meclis, yeni toplumsal entegrasyon politikalarını uygulamayı ancak demografik değişimleri analiz ettikten sonra kabul etti.",
+            "explanation": "'Only after' yan cümleciği bittikten sonra devrik yapı Simple Past için 'did + subject + V1' şeklinde olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           }
         ]
       },
       {
         "lessonId": "c38_l3",
-        "lessonTitle": "3: Şartlı ve Edebi Modals Devriklikleri",
+        "lessonTitle": "3: Şartlı ve Edebi Modals Devriklikleri (should you need, had we known, were I you)",
         "konuAnlatimi": {
-          "baslik": "3: Şartlı ve Edebi Modals Devriklikleri",
-          "teorikMantik": "Koşul cümlelerinde (If Clauses) 'if' bağlacı atıldığında cümle devrik yapıya bürünür. Tip 1 için 'Should', Tip 2 için 'Were... to V1', Tip 3 için ise 'Had... V3' cümle başına gelir.",
-          "formul": "Tip 1: Should + S + V1 | Tip 2: Were + S + to V1 | Tip 3: Had + S + V3",
-          "altinKural": "Tip 3 devrik yapısı olumsuz yapılırken 'Hadn't' şeklinde kısaltma başa gelemez; 'Had the government not intervened' şeklinde 'not' özneden sonra yazılmalıdır."
+          "baslik": "3: Şartlı ve Edebi Modals Devriklikleri (Conditional Inversion)",
+          "teorikMantik": "Koşul cümlelerinde (If Clauses) 'if' bağlacı atıldığında, cümlenin zaman yapısına göre should, were veya had yardımcı fiilleri öznenin önüne (cümle başına) gelerek devriklik oluşturur.",
+          "formul": "1. Type 1: Should + S + V1 (If you require -> Should you require)\n2. Type 2: Were + S + to + V1 (If he worked -> Were he to work) veya Were + S + Sıfat/İsim (If I were you -> Were I you)\n3. Type 3: Had + S + V3 (If they had known -> Had they known)",
+          "altinKural": "KOŞUL TUZAĞI: Devrik koşul cümlelerinde, normalde olumsuz olan anlamı 'not' kelimesini yardımcı fiille birleştirerek veremezsiniz. 'Hadn't we known' veya 'Weren't they to' gibi kullanımlar yanlıştır; olumsuzluk eki özneden sonra gelmelidir: 'Had we not known', 'Were they not to'."
         },
         "questions": [
           {
             "id": "c38_l3_q1",
             "type": "matching",
-            "prompt": "Devrik koşul cümleleri ile bu cümleleri tamamlayan sonuç yargılarını eşleştirin.",
+            "prompt": "Koşul devrikliklerini (If Inversion) akademik karşılıklarıyla eşleştirin.<br><br>Match the conditional inversions:",
             "pairs": [
               {
-                "left": "Should the system fail",
-                "right": "the automated backup will deploy instantly."
+                "left": "Should the committee reject the legal reforms,",
+                "right": "the government will face severe protests."
               },
               {
-                "left": "Were the state to raise taxes",
-                "right": "the currency would lose value rapidly."
+                "left": "Were the historian to examine the ancient scrolls,",
+                "right": "he would uncover the origins of the treaty."
               },
               {
-                "left": "Had the engineers checked the logs",
-                "right": "the security breach would have been avoided."
+                "left": "Had the psychologist known the side effects,",
+                "right": "she would not have approved the therapy methods."
               },
               {
-                "left": "Had it not been for the hybrid solar panels",
-                "right": "the facility would have faced severe power outages."
+                "left": "Were the treaty to be violated,",
+                "right": "sovereign jurisdictions would be compromised."
               }
             ],
-            "hint": {
-              "formula": "Devrik koşul ve sonuç eşleştirmesi",
-              "mirror": "If Clauses devriklerinin zaman uyumlarına dikkat edin.",
-              "academicNote": "Koşul cümlelerindeki Should/Were/Had devrikliklerini doğru sonuç yargılarıyla eşleştirin."
-            }
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q2",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun devrik fiili seçin:",
-            "sentence": "___ the laboratory technicians detect any sudden variance in the reactor core, they will abort the simulation immediately.",
+            "prompt": "Type 1 koşul devrik yapısına (should + V1) uygun yardımcı fiili seçin:<br><br>___ the administration modify the trade tariffs, the regional economy will experience sudden inflation fluctuations.",
             "options": [
               "Should",
               "Were",
@@ -54757,1224 +54674,1121 @@ const unit37_advanced_relative = {
               "Would"
             ],
             "correctIndex": 0,
-            "translation": "Laboratuvar teknisyenleri reaktör çekirdeğinde ani bir sapma tespit edecek olursa, simülasyonu derhal iptal edecekler.",
-            "explanation": "'If should' veya doğrudan devrik 'Should' yapısı, beklenmedik olasılıkları ifade etmek için kullanılır ve fiil yalın halde (detect) gelir.",
-            "hint": {
-              "formula": "Should + S + V1 (Type 1)",
-              "mirror": "Detect fiilinin yalın (V1) haline dikkat edin.",
-              "academicNote": "Geleceğe yönelik düşük olasılıklı koşul devrikliklerinde 'Should + özne + V1' yapısı kullanılır."
-            }
+            "translation": "Yönetim ticaret tarifelerini değiştirecek olursa, bölgesel ekonomi ani enflasyon dalgalanmaları yaşayacaktır.",
+            "explanation": "Cümle sonunda 'will' bulunması Type 1 koşul olduğunu gösterir. Type 1 koşul devrik yapısı 'Should + subject + V1' şeklinde kurulur.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q3",
             "type": "multiple-choice",
-            "prompt": "Tip 2 hayali bir senaryo için doğru devrik koşul yapısını seçin:",
-            "sentence": "___ its global digital curriculum, the language app would quickly dominate the educational market.",
+            "prompt": "Type 2 koşul devrik yapısına (Were + subject + to V1) uygun tamamlamayı seçin:<br><br>___ the excavation team to discover ancient artifacts, the museum would organize a grand exhibition.",
             "options": [
-              "Were the company to expand",
-              "Should the company expand",
-              "Had the company expanded",
-              "The company were to expand"
+              "Had the excavation team",
+              "Were the excavation team",
+              "Should the excavation team",
+              "Would the excavation team"
             ],
-            "correctIndex": 0,
-            "translation": "Şirket küresel dijital müfredatını genişletecek olsaydı, dil uygulaması eğitim pazarına hızla hakim olurdu.",
-            "explanation": "'If the company expanded' (Tip 2) yapısının devrik alternatifi 'Were + subject + to V1' (Were the company to expand) şeklindedir.",
-            "hint": {
-              "formula": "Were + S + to V1 (Type 2)",
-              "mirror": "Düzü: 'If the company expanded...'",
-              "academicNote": "Tip 2 hayali koşul cümlelerinde eylem fiilleri devrik yapılırken 'Were + özne + to V1' (Were the company to expand) kalıbı kullanılır."
-            }
+            "correctIndex": 1,
+            "translation": "Kazı ekibi antik eserler keşfedecek olsaydı, müze büyük bir sergi düzenlerdi.",
+            "explanation": "Cümle sonunda 'would' bulunması Type 2 koşul olduğunu gösterir. Devrik eylem 'to discover' ile birleştiğinden 'Were + subject + to V1' yapısı seçilmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q4",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdaki cümlelerden hangisi, devrik koşul cümlelerinin başındaki 'Hadn't' kısaltma hatasını doğru şekilde ele almıştır?",
+            "type": "inversion-transformer",
+            "prompt": "Koşul bildiren düz cümleyi 'Had' kullanarak devrik forma dönüştürün:<br><br>If the psychologist had known the behavioral patterns, she would have altered the therapy methods.",
+            "mainSentence": "If the psychologist had known the behavioral patterns, she would have altered the therapy methods.",
             "options": [
-              "Had the government not intervened quickly, the entire banking sector would have collapsed.",
-              "Had not the government intervened quickly, the entire banking sector would have collapsed.",
-              "Hadn't the government intervened quickly, the entire banking sector would have collapsed."
+              "Had the psychologist known the behavioral patterns, she would have altered the therapy methods.",
+              "Had the psychologist has known the behavioral patterns, she would have altered the therapy methods.",
+              "Had the psychologist knew the behavioral patterns, she would have altered the therapy methods."
             ],
             "correctIndex": 0,
-            "translation": "Hükümet hızlı bir şekilde müdahale etmeseydi, tüm bankacılık sektörü çökmüş olurdu.",
-            "explanation": "Devrik koşul yapılarında olumsuzluk eki 'not', özneden sonra gelmelidir. 'Had' ile 'not' başa gelerek 'Hadn't' şeklinde kısaltılamaz veya 'Had not the...' olarak yazılamaz.",
-            "hint": {
-              "formula": "Had + S + not + V3 (Type 3 Olumsuz)",
-              "mirror": "Hadn't kısaltma hatasına dikkat edin.",
-              "academicNote": "Tip 3 olumsuz devrik koşul yapısında olumsuzluk eki 'not' özneden sonra gelmelidir; başa gelip kısaltılamaz."
-            }
+            "translation": "Eğer psikolog davranış kalıplarını bilseydi, terapi yöntemlerini değiştirirdi.",
+            "explanation": "Type 3 koşul cümlelerinde devriklik 'if' kaldırılıp 'Had' yardımcı fiilinin özne başına getirilmesiyle sağlanır: 'Had the psychologist known...'.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q5",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Were' kullanarak devrik koşul formuna dönüştürün:",
-            "mainSentence": "If it were not for the hybrid solar panels, the Bodrum house would have no hot water.",
-            "options": [
-              "Were it not for the hybrid solar panels, the Bodrum house would have no hot water.",
-              "Were not it for the hybrid solar panels, the Bodrum house would have no hot water.",
-              "Had it not been for the hybrid solar panels, the Bodrum house would have no hot water."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek Type 2 devrik koşul yapısını tamamlayın:<br><br>Were the court to review the judicial verdict, the lawyer would present the empirical evidence.",
+            "translation": "Mahkeme yargı kararını gözden geçirecek olsaydı, avukat ampirik delilleri sunardı.",
+            "words": [
+              "Were the court to review",
+              "the judicial verdict,",
+              "the lawyer would present",
+              "the empirical evidence."
             ],
-            "correctIndex": 0,
-            "translation": "Hibrit güneş panelleri olmasaydı, Bodrum'daki evde sıcak su olmazdı.",
-            "explanation": "Tip 2 kalıbındaki 'If it were not for...' yapısının devrik hali 'Were it not for...' şeklindedir.",
-            "hint": {
-              "formula": "Were it not for + Noun (Type 2)",
-              "mirror": "Düzü: 'If it were not for...'",
-              "academicNote": "Tip 2 olumsuz nominal koşul cümlelerinde 'If' düşürülerek 'Were it not for...' şeklinde devriklik kurulur."
-            }
+            "correctOrder": [
+              "Were the court to review",
+              "the judicial verdict,",
+              "the lawyer would present",
+              "the empirical evidence."
+            ],
+            "enSentence": "Were the court to review the judicial verdict, the lawyer would present the empirical evidence.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q6",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını doğru dizerek Tip 2 devrik koşul yapısını kurun:",
-            "translation": "Geliştirici kod mimarisini değiştirecek olsaydı, uygulama saniyede binlerce isteği sorunsuz bir şekilde işleyebilirdi.",
-            "words": [
-              "Were the developer to alter",
-              "the code architecture,",
-              "the application could handle",
-              "thousands of requests smoothly."
+            "type": "fill-blank",
+            "prompt": "Type 3 koşul devriklik yapısına uygun fiil çekimini seçin:<br><br>Had the economist analyzed the market data, he would have ___ the inflation crisis earlier.",
+            "options": [
+              "predicts",
+              "predicting",
+              "predicted",
+              "predict"
             ],
-            "correctOrder": [
-              "Were the developer to alter",
-              "the code architecture,",
-              "the application could handle",
-              "thousands of requests smoothly."
-            ],
-            "enSentence": "Were the developer to alter the code architecture, the application could handle thousands of requests smoothly.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Were + S + to V1 + [S + would/could + V1]",
-              "mirror": "Düzü: 'If the developer altered...'",
-              "academicNote": "Eylem fiilli Tip 2 devrik koşul cümlelerinde 'Were + özne + to + fiilin yalın hali' dizilimi izlenir."
-            }
+            "correctIndex": 2,
+            "translation": "Ekonomist piyasa verilerini analiz etmiş olsaydı, enflasyon krizini daha önce tahmin edebilirdi.",
+            "explanation": "Type 3 koşulun ana cümlesinde 'would have + V3' (predicted) yapısı kullanılmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "___ you require any technical assistance with the Vercel deployment, the cloud operations team will guide you tomorrow.",
-            "options": [
-              "Should",
-              "Were",
-              "Had",
-              "Would"
-            ],
-            "correctIndex": 0,
-            "translation": "Vercel dağıtımıyla ilgili herhangi bir teknik yardıma ihtiyaç duyacak olursanız, bulut operasyon ekibi yarın size rehberlik edecektir.",
-            "explanation": "Gelecekteki düşük ihtimalli olayları ifade eden Tip 1 devrik koşul cümlelerinde yardımcı fiil olarak 'Should' tercih edilir.",
-            "hint": {
-              "formula": "Should + S + V1 (Type 1)",
-              "mirror": "Require fiilinin yalın (V1) hali ipucudur.",
-              "academicNote": "Gelecekte gerçekleşme olasılığı zayıf olan durumlarda Tip 1 devrik olarak 'Should' kullanılır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik koşul cümlesini Türkçe'ye çevirin:<br><br>Should you require further archival documents on the treaty, please contact the museum administration.",
+            "correctSentence": "Antlaşmaya dair daha fazla arşiv belgesine ihtiyaç duyacak olursanız, lütfen müze yönetimiyle iletişime geçin.",
+            "enSentence": "Should you require further archival documents on the treaty, please contact the museum administration.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q8",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi Tip 3 (geçmiş hayali durum) devrik yapısına uygun tamamlayan seçeneği belirleyin:",
-            "sentence": "___ the technical manager isolated the faulty JSON token sequence yesterday, the frontend crash would have been avoided.",
-            "options": [
-              "Had",
-              "Should",
-              "Were",
-              "Would"
-            ],
-            "correctIndex": 0,
-            "translation": "Teknik müdür dün hatalı JSON token dizisini izole etmiş olsaydı, ön yüzün çökmesi engellenmiş olurdu.",
-            "explanation": "Geçmiş zaman hayali durumu (Tip 3) bildirmek için 'Had + subject + V3' yapısıyla devriklik kurulur.",
-            "hint": {
-              "formula": "Had + S + V3 (Type 3)",
-              "mirror": "Dün gerçekleşen olay için Tip 3 devrik kullanın.",
-              "academicNote": "Geçmiş zaman hayali koşullarda (Tip 3) devriklik 'Had + özne + V3' (Had the technical manager isolated) şeklinde kurulur."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Were the government had signed the treaty, regional trade would have increased.",
+            "englishPhrase": "Were the government had signed the treaty, regional trade would have increased.",
+            "turkishTranslation": "Hata tespiti: Type 3 koşul devriklik yapısında 'Were' değil, 'Had' yardımcı fiili kullanılmalıdır ('Had the government signed...').",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q9",
-            "type": "multiple-choice",
-            "prompt": "Bir eylem fiili için Tip 2 'Were + subject + to V1' kuralına tamamen uygun olan seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'Were' yardımcı fiilinin koşul cümleciğindeki sentaktik rolü nedir?<br><br>Were the sociologist to publish the survey, she would receive empirical feedback.",
+            "paragraph": "Were the sociologist to publish the survey, she would receive empirical feedback.",
+            "highlightChunk": "Were",
             "options": [
-              "Were the team to integrate the dynamic calendar API, the integration process would be easier.",
-              "Were the team integrate the dynamic calendar API, the integration process would be easier.",
-              "Were the team integrated the dynamic calendar API, the integration process would be easier."
+              "Devrik Koşul Bağlacı (Inverted Conditional Auxiliary)",
+              "Zarf-Fiil (Gerundial Connector)",
+              "Zaman Zarfı (Time Adverb)",
+              "Esas Fiil (Main Verb)"
             ],
             "correctIndex": 0,
-            "translation": "Ekip dinamik takvim API'sini entegre edecek olsaydı, entegrasyon süreci daha kolay olurdu.",
-            "explanation": "Tip 2 eylem fiili devrikliklerinde 'Were + özne + to + fiilin yalın hali' (to integrate) formülü kullanılır.",
-            "hint": {
-              "formula": "Were + S + to V1 (Type 2)",
-              "mirror": "Mastarlı (to V1) yapıyı arayın.",
-              "academicNote": "Tip 2 eylem fiili devrikliklerinde 'Were + özne + to + V1' (Were the team to integrate) formülü esastır."
-            }
+            "translation": "Sosyolog anketi yayınlayacak olsaydı, akademik geri bildirim alırdı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q10",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Had' kullanarak devrik koşul formuna dönüştürün:",
-            "mainSentence": "If Toprak Razgatlıoğlu had not managed the rear tire wear perfectly, he couldn't have won the race.",
-            "options": [
-              "Had Toprak Razgatlıoğlu not managed the rear tire wear perfectly, he couldn't have won the race.",
-              "Had not Toprak Razgatlıoğlu managed the rear tire wear perfectly, he couldn't have won the race.",
-              "Hadn't Toprak Razgatlıoğlu managed the rear tire wear perfectly, he couldn't have won the race."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları devrik Type 2 yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "___ the empire ___ expand its geographic boundaries, neighboring civilizations would protest.",
+            "corrects": [
+              "Were",
+              "to"
             ],
-            "correctIndex": 0,
-            "translation": "Toprak Razgatlıoğlu arka lastik aşınmasını mükemmel şekilde yönetmeseydi, yarışı kazanamazdı.",
-            "explanation": "Tip 3 olumsuz devrik koşul cümlelerinde yardımcı fiil 'Had' başa gelir, olumsuzluk eki 'not' ise özneden sonra yer alır.",
-            "hint": {
-              "formula": "Had + S + not + V3 (Type 3 Olumsuz)",
-              "mirror": "Düzü: 'If Toprak Razgatlıoğlu had not managed...'",
-              "academicNote": "Tip 3 olumsuz devrik koşul cümlelerinde 'Had' başa gelir, 'not' ise özneden sonra yazılır."
-            }
+            "translation": "İmparatorluk coğrafi sınırlarını genişletecek olsaydı, komşu medeniyetler tepki gösterirdi.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q11",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek Tip 3 devrik koşul yapısını kurun:",
-            "translation": "Finans ekibi motorin fiyatlarını takip etmiş olsaydı, bölgesel lojistik maliyetleri istikrarlı kalırdı.",
-            "words": [
-              "Had the financial team tracked",
-              "the diesel fuel prices,",
-              "the regional logistics costs",
-              "would have remained stable."
+            "type": "fill-blank-dropdown",
+            "prompt": "Koşul devriklik yapısına uygun devrik fiili seçin:<br><br>___ the cinema critics attended the documentary screening, they would have written influential columns.",
+            "options": [
+              "Should",
+              "Had",
+              "Were",
+              "Would"
             ],
-            "correctOrder": [
-              "Had the financial team tracked",
-              "the diesel fuel prices,",
-              "the regional logistics costs",
-              "would have remained stable."
-            ],
-            "enSentence": "Had the financial team tracked the diesel fuel prices, the regional logistics costs would have remained stable.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Had + S + V3 + [S + would have + V3]",
-              "mirror": "Düzü: 'If the financial team had tracked...'",
-              "academicNote": "Tip 3 devrik yapısında 'Had + özne + V3' ile koşul yan cümlesi kurulur."
-            }
+            "correctIndex": 1,
+            "translation": "Sinema eleştirmenleri belgesel gösterimine katılmış olsalardı, etkili yazılar yazarlardı.",
+            "explanation": "Cümle sonunda 'would have written' (Type 3) bulunduğundan, devrik başlangıç 'Had + subject + V3' (Had the cinema critics attended) şeklinde olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q12",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun fiil formunu seçin:",
-            "sentence": "Had it not ___ for the strict validation rules in Section 26, the Noun Clause bug would have corrupted the database.",
+            "type": "multiple-choice",
+            "prompt": "Aşağıdaki cümlelerden hangisi 'were' ile kurulan devrik Type 2 kuralına tamamen uyar?<br><br>Were the historian to analyze the manuscripts, he would identify the original author.",
             "options": [
-              "been",
-              "be",
-              "being",
-              "was"
+              "Were the historian to analyzed the manuscripts, he would identify the original author.",
+              "Were the historian analyze the manuscripts, he would identify the original author.",
+              "Were the historian to analyze the manuscripts, he would identify the original author.",
+              "Were the historian analyzed the manuscripts, he would identify the original author."
             ],
-            "correctIndex": 0,
-            "translation": "Bölüm 26'daki katı doğrulama kuralları olmasaydı, Noun Clause hatası veritabanını bozmuş olurdu.",
-            "explanation": "Tip 3 koşul yapısındaki 'If it had not been for...' kalıbının devrik şekli 'Had it not been for...' şeklindedir.",
-            "hint": {
-              "formula": "Had it not been for + Noun (Type 3)",
-              "mirror": "İsim soylu Tip 3 devrik koşul kalıbını tamamlayın.",
-              "academicNote": "'If it had not been for...' yapısının devriğinde 'Had it not been for...' formülü kullanılır."
-            }
+            "correctIndex": 2,
+            "translation": "Tarihçi el yazmalarını analiz edecek olsaydı, orijinal yazarı belirlerdi.",
+            "explanation": "Type 2 devriklik yapısında 'Were + subject + to + V1' (Were the historian to analyze) kalıbı kullanılmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q13",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi tamamlayacak en uygun devrik yardımcı fiili seçin:",
-            "sentence": "___ the EV company to adjust the LFP battery configurations now, the vehicle range would increase significantly.",
+            "type": "inversion-transformer",
+            "prompt": "Verilen düz Type 1 koşul cümlesini devrik forma dönüştürün:<br><br>If the lawyers require further empirical evidence, she will review the archives.",
+            "mainSentence": "If the lawyers require further empirical evidence, she will review the archives.",
             "options": [
-              "Were",
-              "Should",
-              "Had",
-              "Would"
+              "Should the lawyers require further empirical evidence, she will review the archives.",
+              "Were the lawyers require further empirical evidence, she will review the archives."
             ],
             "correctIndex": 0,
-            "translation": "Elektrikli araç şirketi LFP pil konfigürasyonlarını şimdi ayarlayacak olsaydı, araç menzili önemli ölçüde artardı.",
-            "explanation": "'to adjust' mastar yapısı ile kurulmuş bir hayali koşul cümlesini devrik yapmak için 'Were' yardımcı fiili başa getirilir.",
-            "hint": {
-              "formula": "Were + S + to V1 (Type 2)",
-              "mirror": "Boşluğun devamındaki 'to adjust' yapısına dikkat edin.",
-              "academicNote": "Fiilin mastar (to V1) hali ile kurulan Tip 2 devrikliklerinde yardımcı fiil olarak 'Were' başa gelir."
-            }
+            "translation": "Avukatın daha fazla ampirik kanıta ihtiyacı olacak olursa, arşivleri gözden geçirecektir.",
+            "explanation": "Type 1 düz yapıyı devrik yaparken 'Should + subject + V1' (Should the lawyers require) yapısı kullanılır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q14",
-            "type": "multiple-choice",
-            "prompt": "Aşağıdakilerden hangisi edilgen çatı (passive voice) ile kurulmuş, dil bilgisi yönünden kusursuz bir Tip 3 devrik koşul cümlesidir?",
-            "options": [
-              "Had the e-archive invoice not been verified by the system, the transaction would have failed.",
-              "Had the e-archive invoice been not verified by the system, the transaction would have failed.",
-              "Had not the e-archive invoice been verified by the system, the transaction would have failed."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek Type 3 devrik koşul yapısını tamamlayın:<br><br>Had the institution received the financial support, they would have completed the excavation.",
+            "translation": "Kurum mali desteği almış olsaydı, kazıyı tamamlardı.",
+            "words": [
+              "Had the institution received",
+              "the financial support,",
+              "they would have completed",
+              "the excavation."
             ],
-            "correctIndex": 0,
-            "translation": "E-arşiv faturası sistem tarafından doğrulanmasaydı, işlem başarısız olurdu.",
-            "explanation": "Edilgen olumsuz devrik koşul yapısında 'Had + subject + not + been + V3' sıralaması izlenmelidir.",
-            "hint": {
-              "formula": "Had + S + not + been + V3 (Type 3 Edilgen)",
-              "mirror": "Edilgen ve olumsuz dizilimi kontrol edin.",
-              "academicNote": "Tip 3 edilgen ve olumsuz devrik yapıda 'Had + özne + not + been + V3' (Had the e-archive invoice not been verified) sıralaması izlenmelidir."
-            }
+            "correctOrder": [
+              "Had the institution received",
+              "the financial support,",
+              "they would have completed",
+              "the excavation."
+            ],
+            "enSentence": "Had the institution received the financial support, they would have completed the excavation.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q15",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek beklenmedik durum devrik yapısını oluşturun:",
-            "translation": "Otomatik betikler yetkisiz bir sunucu değişikliği tespit edecek olursa, ana sistem derhal kilitlenecektir.",
-            "words": [
-              "Should the automated scripts detect",
-              "any unauthorized server modification,",
-              "the main system",
-              "will lock immediately."
+            "type": "fill-blank",
+            "prompt": "Type 2 devrik koşul yapısına uygun fiil çekimini yazın:<br><br>Were the psychologist to conduct the survey, she would ___ positive cognitive outcomes.",
+            "options": [
+              "observing",
+              "observes",
+              "observed",
+              "observe"
             ],
-            "correctOrder": [
-              "Should the automated scripts detect",
-              "any unauthorized server modification,",
-              "the main system",
-              "will lock immediately."
-            ],
-            "enSentence": "Should the automated scripts detect any unauthorized server modification, the main system will lock immediately.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Should + S + V1 + [S + will + V1]",
-              "mirror": "Düzü: 'If the automated scripts detect...'",
-              "academicNote": "Gelecek ihtimal Tip 1 devrik koşul cümleciğinde 'Should + özne + V1' yapısı kullanılır."
-            }
+            "correctIndex": 3,
+            "translation": "Psikolog anketi yürütecek olsaydı, olumlu bilişsel sonuçlar gözlemlerdi.",
+            "explanation": "'would + V1' yapısından ötürü boşluğa yalın fiil 'observe' gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q16",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "___ the regional court veto the environmental appeal next Monday, the building company will halt operations in Bodrum.",
-            "options": [
-              "Should",
-              "Were",
-              "Had",
-              "Would"
-            ],
-            "correctIndex": 0,
-            "translation": "Bölge mahkemesi önümüzdeki Pazartesi günü çevre itirazını veto edecek olursa, inşaat şirketi Bodrum'daki faaliyetlerini durduracak.",
-            "explanation": "'veto' eylemi yalın (V1) halde olduğundan, gelecek olasılığını nitelemek için devrik 'Should' kullanılmalıdır.",
-            "hint": {
-              "formula": "Should + S + V1 (Type 1)",
-              "mirror": "Veto fiilinin yalın (V1) hali ipucudur.",
-              "academicNote": "Geleceğe yönelik olasılık bildiren Tip 1 devrik yapıda 'Should' kullanılır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik koşul cümlesini Türkçe'ye çevirin:<br><br>Had the treaty been signed earlier, the sovereign states would have avoided the conflict.",
+            "correctSentence": "Antlaşma daha önce imzalanmış olsaydı, egemen devletler çatışmadan kaçınmış olurlardı.",
+            "enSentence": "Had the treaty been signed earlier, the sovereign states would have avoided the conflict.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q17",
-            "type": "multiple-choice",
-            "prompt": "Cümledeki boşluğa gelebilecek en uygun devrik fiili seçin:",
-            "sentence": "___ it not for the dynamic AI document processing tools, the team could not clean the scanned historical PDFs now.",
-            "options": [
-              "Were",
-              "Had",
-              "Should",
-              "Would"
-            ],
-            "correctIndex": 0,
-            "translation": "Dinamik yapay zeka belge işleme araçları olmasaydı, ekip taranmış tarihi PDF'leri şu an temizleyemezdi.",
-            "explanation": "Şu anki duruma yönelik koşul (Tip 2) kurgulandığı için 'Were it not for...' kalıbı kullanılmalıdır.",
-            "hint": {
-              "formula": "Were it not for + Noun (Type 2)",
-              "mirror": "Şu anki duruma atıfta bulunulduğuna dikkat edin.",
-              "academicNote": "Şu ana yönelik olumsuz durum bildiren (Tip 2) nominal devrik yapıda 'Were' kullanılır."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Should you will require the files, please ask the museum coordinator.",
+            "englishPhrase": "Should you will require the files, please ask the museum coordinator.",
+            "turkishTranslation": "Hata tespiti: Devrik koşul cümlelerinde yardımcı fiilden sonra 'will' modalı kullanılamaz, fiil yalın halde (require) olmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q18",
-            "type": "multiple-choice",
-            "prompt": "Geleceğe yönelik düşük olasılıklı (Tip 1 ihtimal) bir durum için kurulmuş doğru devrik yapıyı seçin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'Had' yardımcı fiilinin cümledeki sentaktik işlevi nedir?<br><br>Had the sociologists analyzed the demographic trends, they would have updated the policy.",
+            "paragraph": "Had the sociologists analyzed the demographic trends, they would have updated the policy.",
+            "highlightChunk": "Had",
             "options": [
-              "Should any user encounter an error code during registration, the app will trigger a fallback loop.",
-              "Were any user encounter an error code during registration, the app will trigger a fallback loop.",
-              "Had any user encountered an error code during registration, the app will trigger a fallback loop."
+              "Edat (Preposition)",
+              "Niteleyici (Modifier)",
+              "Esas Fiil (Main Verb)",
+              "Devrik Koşul Yardımcı Fiili (Inverted Conditional Auxiliary)"
             ],
-            "correctIndex": 0,
-            "translation": "Herhangi bir kullanıcı kayıt sırasında bir hata koduyla karşılaşacak olursa, uygulama bir kurtarma döngüsünü tetikleyecektir.",
-            "explanation": "Tip 1 koşul devriklerinde 'Should + subject + V1' kalıbı kullanılır.",
-            "hint": {
-              "formula": "Should + S + V1 (Type 1)",
-              "mirror": "Geleceğe yönelik düşük olasılıklı Tip 1 devrik arayın.",
-              "academicNote": "Gelecek olasılık Tip 1 devrik koşul yapısında 'Should + özne + V1' (Should any user encounter) yapısı esastır."
-            }
+            "correctIndex": 3,
+            "translation": "Sosyologlar demografik eğilimleri analiz etmiş olsalardı, politikayı güncellerlerdi.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l3_q19",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Had' kullanarak devrik karma koşul (mixed conditional) formuna getirin:",
-            "mainSentence": "If the intelligence agency had not decoded the files on time, a major geopolitical crisis would face the federation today.",
-            "options": [
-              "Had the intelligence agency not decoded the files on time, a major geopolitical crisis would face the federation today.",
-              "Had not the intelligence agency decoded the files on time, a major geopolitical crisis would face the federation today.",
-              "Were the intelligence agency not decoded the files on time, a major geopolitical crisis would face the federation today."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları devrik Type 2 yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "___ the cinema critics ___ reject the documentary adaptation, the director would be concerned.",
+            "corrects": [
+              "Were",
+              "to"
             ],
-            "correctIndex": 0,
-            "translation": "İstihbarat teşkilatı dosyaları zamanında deşifre etmemiş olsaydı, bugün federasyon büyük bir jeopolitik krizle karşı karşıya kalırlardı.",
-            "explanation": "Mixed conditional yapısında geçmiş hayali koşul kısmı 'Had + subject + not + V3' şeklinde devrik yapılır.",
-            "hint": {
-              "formula": "Had + S + not + V3 + [S + would + V1] (Mixed)",
-              "mirror": "Düzü: 'If the agency had not decoded...'",
-              "academicNote": "Karma koşul (Mixed Conditional) cümlelerinde geçmiş zamana atıfta bulunan koşul kısmı 'Had + özne + not + V3' şeklinde devrik yapılır."
-            }
+            "translation": "Sinema eleştirmenleri belgesel uyarlamasını reddedecek olsalardı, yönetmen hayal kırıklığına uğrardı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l3_q20",
-            "type": "word-bank",
-            "prompt": "Kelimeleri doğru dizerek Tip 2 devrik koşul cümlesini kurun:",
-            "translation": "Bölgesel yetkililer katı ithalat tarifeleri uygulayacak olsaydı, yerel üreticiler faaliyetlerini hızla genişletirdi.",
-            "words": [
-              "Were the regional authorities to impose",
-              "strict import tariffs,",
-              "local manufacturers",
-              "would expand operations quickly."
+            "type": "multiple-choice",
+            "prompt": "Cümleyi dil bilgisine uygun tamamlayan devrik seçeneği belirleyin:<br><br>___ the sovereign authority sign the treaty, regional trade barriers would decrease.",
+            "options": [
+              "Were the sovereign authority to",
+              "Would the sovereign authority to",
+              "Had the sovereign authority to",
+              "Should the sovereign authority to"
             ],
-            "correctOrder": [
-              "Were the regional authorities to impose",
-              "strict import tariffs,",
-              "local manufacturers",
-              "would expand operations quickly."
-            ],
-            "enSentence": "Were the regional authorities to impose strict import tariffs, local manufacturers would expand operations quickly.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Were + S + to V1 + [S + would + V1]",
-              "mirror": "Düzü: 'If the regional authorities imposed...'",
-              "academicNote": "Tip 2 devrik koşul yapısında 'Were + özne + to + V1' (Were the regional authorities to impose) dizilimi kurulur."
-            }
+            "correctIndex": 0,
+            "translation": "Egemen otorite antlaşmayı imzalayacak olsaydı, bölgesel ticaret engelleri azalırdı.",
+            "explanation": "Cümle sonunda 'would' bulunması ve fiilin 'sign' şeklinde to'suz gelmesi planlandığında, devrik kalıp 'Were + subject + to' (Were the sovereign authority to) olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           }
         ]
       },
       {
         "lessonId": "c38_l4",
-        "lessonTitle": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri",
+        "lessonTitle": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
         "konuAnlatimi": {
           "baslik": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri",
-          "teorikMantik": "Olumlu katılım (So did I), olumsuz katılım (Neither/Nor do I) ve karşılaştırmalı kıyaslarda (as did contemporary states) devriklik yaygındır. Ayrıca 'Sıfat + As/Though' zıtlıklarında ve yer-yön belirten (Locative/Directional) ifadelerde esas fiil öne gelir.",
-          "formul": "Sıfat + As/Though + Özne + Yüklem | [Yer Zarfı] + [Esas Fiil] + [Özne]",
-          "altinKural": "'Sıfat + as/though' zıtlık yapılarında yan cümlecikte devriklik yapılmaz. 'Complex though the code was' doğrudur; 'Complex though was the code' kullanımı hatalıdır."
+          "teorikMantik": "Akademik metinlerde katılım bildiren so, neither, nor ve karşılaştırma bildiren as yapıları başa geldiğinde devriklik oluşturur. Ayrıca sıfat veya zarflar 'though' veya 'as' ile zıtlık bildiren cümlelerin başına çekildiğinde edebi bir devriklik kurulur.",
+          "formul": "1. Olumlu Katılım: and so + auxiliary + subject\n2. Olumsuz Katılım: nor / neither + auxiliary + subject\n3. Karşılaştırma: as + auxiliary + subject\n4. Sıfat Zıtlık Devrikliği: Adjective / Adverb + though / as + subject + verb (e.g. Beautiful though she is...)",
+          "altinKural": "ZITLIK TUZAĞI: Sıfat devrik zıtlık yapısında 'though' veya 'as' kelimesinden önce sadece sıfat/zarf (Beautiful though...) gelmelidir; 'Although beautiful she was' gibi bir kullanım yanlıştır. Ayrıca bu yapıda 'as' kullanıldığında sadece zıtlık (beğenilse de...) anlamı verir, sebep-sonuç vermez."
         },
         "questions": [
           {
             "id": "c38_l4_q1",
             "type": "matching",
-            "prompt": "Karşılaştırma, katılım ve sıfat devriklikleri içeren cümlelerin başlangıçlarını uygun bitişleriyle eşleştirin.",
+            "prompt": "Akademik katılım ve sıfat devrikliklerini Türkçe karşılıklarıyla eşleştirin.<br><br>Match the comparative and adjectival inversions:",
             "pairs": [
               {
-                "left": "The empire valued trade routing",
-                "right": "as did contemporary European states."
+                "left": "as did the neighboring civilizations.",
+                "right": "komşu medeniyetlerin yaptığı gibi."
               },
               {
-                "left": "The virus does not survive in air",
-                "right": "neither do these dynamic bacterial strains."
+                "left": "nor did the political scientists.",
+                "right": "siyaset bilimciler de yapmadı."
               },
               {
-                "left": "Crucial though the data matrix was",
-                "right": "the researchers delayed its online launch."
+                "left": "and so is the leading director.",
+                "right": "ve başrol oyuncusu da öyledir."
               },
               {
-                "left": "Hidden deep inside the isolated room",
-                "right": "were the primary backup servers."
+                "left": "Complex though the economic model is,",
+                "right": "ekonomik model karmaşık olsa da,"
               }
             ],
-            "hint": {
-              "formula": "Karşılaştırma ve zıtlık devrikleri eşleşmesi",
-              "mirror": "As did/neither do/though/were yapılarının zaman ve anlam uyumunu inceleyin.",
-              "academicNote": "Akademik kıyaslama, katılım ve sıfat devriklerini doğru tamamlayıcı yargılarıyla eşleştirin."
-            }
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Karşılaştırma (Comparison)",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l4_q2",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "The mutated cell reacted aggressively to the enzyme injection, and so ___ the surrounding biological tissue in the petri dish.",
+            "prompt": "Olumlu katılıma (so + auxiliary + subject) uygun devrik fiili seçin:<br><br>The cinema director is highly respected in the community, and so ___ the young critic.",
             "options": [
               "did",
-              "does",
+              "has",
               "is",
-              "was"
+              "does"
             ],
-            "correctIndex": 0,
-            "translation": "Mutasyona uğramış hücre enzim enjeksiyonuna agresif tepki verdi, petri kabındaki çevreleyen biyolojik doku da öyle.",
-            "explanation": "'So' ile kurulan olumlu katılım yapılarında eylem geçmiş zamanlı olduğundan, devriklik 'did + özne' şeklinde kurulmalıdır.",
-            "hint": {
-              "formula": "...and so + did + S",
-              "mirror": "Reacted fiilinin geçmiş zamanlı (V2) oluşuna dikkat edin.",
-              "academicNote": "Geçmiş zamanlı olumlu eyleme katılım bildirmek için 'so did + subject' devrik yapısı kurulur."
-            }
+            "correctIndex": 2,
+            "translation": "Sinema yönetmeni toplulukta son derece saygı görmektedir ve genç oyun yazarı da öyledir.",
+            "explanation": "İlk cümledeki 'is highly respected' (to be) yapısına katılım sağlamak için devrik kısımda 'so' sonrası 'is' yardımcı fiili kullanılmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q3",
             "type": "multiple-choice",
-            "prompt": "Tarihsel cümleyi tamamlayacak en uygun akademik kıyas ifadesini seçin:",
-            "sentence": "The Ottoman administration monitored maritime trade routes closely, ___ contemporary European empires.",
+            "prompt": "Olumsuz katılımı (nor + auxiliary + subject) doğru tamamlayan devrik yapıyı seçin:<br><br>The sociologist did not endorse the policy, ___ the other members of the administration.",
             "options": [
-              "as did",
-              "as they did",
-              "so did",
-              "as do"
+              "neither the other members did",
+              "nor have the other members",
+              "nor the other members did",
+              "nor did the other members"
             ],
-            "correctIndex": 0,
-            "translation": "Osmanlı yönetimi, çağdaş Avrupa imparatorlukları gibi deniz ticaret yollarını yakından izledi.",
-            "explanation": "'As did contemporary European empires' yapısı, iki durumu karşılaştırırken 'tıpkı onlar gibi' anlamında devrik kıyaslama yapısı kurar.",
-            "hint": {
-              "formula": "...as + did + S",
-              "mirror": "Monitored geçmiş zaman fiili ile zaman uyumu arayın.",
-              "academicNote": "Geçmiş zamanlı kıyaslamalarda 'as + did + subject' (as did contemporary European empires) yapısı kullanılır."
-            }
+            "correctIndex": 3,
+            "translation": "Sosyolog politikayı onaylamadı, yönetimin diğer üyeleri de onaylamadı.",
+            "explanation": "İlk cümle olumsuz (did not endorse) olduğundan, olumsuz katılım 'nor/neither + did + subject' (nor did the other members) şeklinde olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q4",
-            "type": "multiple-choice",
-            "prompt": "'Sıfat + As/Though + Özne + Yüklem' kuralını, özne ve yüklemi devirmeden doğru bir şekilde izleyen seçeneği seçin:",
+            "type": "inversion-transformer",
+            "prompt": "Verilen sıfat yapısını 'though' kullanarak devrik edebi forma dönüştürün:<br><br>Although the art painting was beautiful, it did not represent the political narrative.",
+            "mainSentence": "Although the art painting was beautiful, it did not represent the political narrative.",
             "options": [
-              "Complex though the database architecture was, the team synchronized all nodes.",
-              "Complex though was the database architecture, the team synchronized all nodes.",
-              "Complex although the database architecture was, the team synchronized all nodes."
+              "Beautiful though was the art painting, it did not represent the political narrative.",
+              "Beautiful the art painting though was, it did not represent the political narrative.",
+              "Beautiful though the art painting was, it did not represent the political narrative."
             ],
-            "correctIndex": 0,
-            "translation": "Veritabanı mimarisi karmaşık olmasına rağmen ekip tüm düğümleri senkronize etti.",
-            "explanation": "'Adjective + as/though + subject + verb' zıtlık yapısında yan cümle devrik yapılamaz; 'Complex though was...' kullanımı hatalıdır. 'Although' ise sıfatı bu şekilde niteleyemez.",
-            "hint": {
-              "formula": "Sıfat + as/though + S + V",
-              "mirror": "Yan cümleciğin düz dizilimde olduğunu kontrol edin.",
-              "academicNote": "'Sıfat + as/though' zıtlık yapılarında yan cümlecikte devriklik yapılmaz. 'Complex though the database architecture was' doğrudur."
-            }
+            "correctIndex": 2,
+            "translation": "Sanat tablosu güzel olsa da, siyasi gerçekliği temsil etmiyordu.",
+            "explanation": "'Adjective + though + subject + verb' devrik yapısı ('Beautiful though the art painting was') zıtlık bildirir ve sıfatı başa alarak kurulur.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q5",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Mekansal Devriklik' (Locative Inversion) kuralına uygun olarak devrik forma dönüştürün:",
-            "mainSentence": "A beautiful stone fountain was located in the center of the courtyard.",
-            "options": [
-              "Located in the center of the courtyard was a beautiful stone fountain.",
-              "Located in the center of the courtyard a beautiful stone fountain was.",
-              "In the center of the courtyard located was a beautiful stone fountain."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'as' karşılaştırma/katılım devrik yapısını tamamlayın:<br><br>The empire expanded its geographic borders, as did the neighboring civilizations.",
+            "translation": "Komşu medeniyetlerin yaptığı gibi, imparatorluk da coğrafi sınırlarını genişletti.",
+            "words": [
+              "The empire expanded",
+              "its geographic borders,",
+              "as did the neighboring",
+              "civilizations."
             ],
-            "correctIndex": 0,
-            "translation": "Avlunun ortasında güzel bir taş fıskiye bulunuyordu.",
-            "explanation": "Yer bildiren sıfat-fiil öbeği ('Located in the center of the courtyard') başa geldiğinde, fiil ('was') özneden ('a beautiful stone fountain') önce gelerek mekansal devriklik kurulur.",
-            "hint": {
-              "formula": "[Yer Zarfı / Participle] + was/were + S",
-              "mirror": "Düzü: 'A beautiful fountain was located...'",
-              "academicNote": "Mekansal devrikliklerde yer bildiren öbek başa geldiğinde yardımcı fiil olmadan 'was/were + özne' (was a beautiful stone fountain) dizilimi izlenir."
-            }
+            "correctOrder": [
+              "The empire expanded",
+              "its geographic borders,",
+              "as did the neighboring",
+              "civilizations."
+            ],
+            "enSentence": "The empire expanded its geographic borders, as did the neighboring civilizations.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q6",
-            "type": "word-bank",
-            "prompt": "Blokları dizerek sıfatlı zıtlık devrik cümlesini oluşturun:",
-            "translation": "Veri matrisi çok önemli olmasına rağmen ekip canlı yayına almayı erteledi.",
-            "words": [
-              "Crucial though",
-              "the data matrix was,",
-              "the team delayed the deployment."
+            "type": "fill-blank",
+            "prompt": "Sıfat devrik yapısına uygun boşluğu doldurun:<br><br>Important ___ the archaeological evidence was, the committee rejected the claims.",
+            "options": [
+              "so",
+              "than",
+              "as",
+              "but"
             ],
-            "correctOrder": [
-              "Crucial though",
-              "the data matrix was,",
-              "the team delayed the deployment."
-            ],
-            "enSentence": "Crucial though the data matrix was, the team delayed the deployment.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Sıfat + though + S + V",
-              "mirror": "Düzü: 'Although the data matrix was crucial...'",
-              "academicNote": "Sıfatlı zıtlık yapısında 'Crucial though the data matrix was' şeklinde yan cümle düz fiille sonlanır."
-            }
+            "correctIndex": 2,
+            "translation": "Arkeolojik kanıtlar önemli olsa da, kurul iddiaları reddetti.",
+            "explanation": "'Adjective + as/though + subject + verb' yapısı zıtlık bildirir. Sıfattan sonra 'as' veya 'though' gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "The initial test node did not accept the incoming JSON data stream, and neither ___ the secondary cloud storage clusters.",
-            "options": [
-              "did",
-              "do",
-              "have",
-              "were"
-            ],
-            "correctIndex": 0,
-            "translation": "İlk test düğümü gelen JSON veri akışını kabul etmedi, ikincil bulut depolama kümeleri de kabul etmedi.",
-            "explanation": "'Neither' ile kurulan geçmiş zamanlı olumsuz katılım cümlelerinde devriklik yardımcı fiil olarak 'did' ile kurulur.",
-            "hint": {
-              "formula": "...and neither + did + S",
-              "mirror": "Did not accept geçmiş zaman olumsuzluğuna katılım sağlayın.",
-              "academicNote": "Geçmiş zamanlı olumsuz eyleme katılım bildirmek için 'neither + did + subject' yapısı kullanılır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki katılım devrik cümlesini Türkçe'ye çevirin:<br><br>The psychologists did not endorse the hypothesis, nor did the researchers at the institution.",
+            "correctSentence": "Psikologlar hipotezi kabul etmediler, kurumdaki araştırmacılar da kabul etmediler.",
+            "enSentence": "The psychologists did not endorse the hypothesis, nor did the researchers at the institution.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l4_q8",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi mekansal devriklik (Locative Inversion) kurallarına uygun tamamlayan seçeneği belirleyin:",
-            "sentence": "High above the old valley ___ the massive towers of the medieval fortress, standing as a historical shield.",
-            "options": [
-              "stood",
-              "did stand",
-              "standing",
-              "were stood"
-            ],
-            "correctIndex": 0,
-            "translation": "Eski vadinin yükseklerinde, tarihi bir kalkan gibi duran ortaçağ kalesinin devasa kuleleri yükseliyordu.",
-            "explanation": "Yer-yön bildiren zarf öbeği başa geldiğinde ana fiil ('stood') doğrudan özneden ('the massive towers...') önce yer alır; 'did' yardımcı fiili kullanılmaz.",
-            "hint": {
-              "formula": "[Yer Zarfı] + [Esas Fiil] + S",
-              "mirror": "Mekansal devrikliklerde 'did' kullanılmadığına dikkat edin.",
-              "academicNote": "Yer/yön bildiren öbek cümle başında olduğunda doğrudan esas fiil özneden önce gelir: 'stood the massive towers'."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>The economist supported the trade policy, and so the business leaders did.",
+            "englishPhrase": "The economist supported the trade policy, and so the business leaders did.",
+            "turkishTranslation": "Hata tespiti: 'so' ile kurulan olumlu katılım yapılarında devriklik zorunludur. 'and so did the business leaders' şeklinde kurulmalıdır.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q9",
-            "type": "multiple-choice",
-            "prompt": "Nor ile kurulan olumsuz ekleme cümlesindeki devrik yapıyı doğru veren seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'though' bağlacının cümledeki işlevi nedir?<br><br>Complex though the economic model is, it fails to predict trade dynamics.",
+            "paragraph": "Complex though the economic model is, it fails to predict trade dynamics.",
+            "highlightChunk": "though",
             "options": [
-              "The local company does not manufacture hybrid inverters, nor do they plan to import components.",
-              "The local company does not manufacture hybrid inverters, nor they plan to import components.",
-              "The local company does not manufacture hybrid inverters, nor do they planning to import components."
+              "Koşul Bağlacı (Conditional Conjunction)",
+              "Zıtlık Bildiren Devrik Bağlaç (Concessive Inversion Conjunction)",
+              "Edat (Preposition)",
+              "Zaman Zarfı (Time Adverb)"
             ],
-            "correctIndex": 0,
-            "translation": "Yerel şirket hibrit invertörler üretmiyor, bileşen ithal etmeyi de planlamıyor.",
-            "explanation": "'Nor' olumsuz bağlacı cümle bağladığında ikinci cümle devrik olmalıdır: 'nor + yardımcı fiil + özne + fiil' (nor do they plan).",
-            "hint": {
-              "formula": "...nor + do + S + V1",
-              "mirror": "Nor sonrasındaki devrik dizilimi kontrol edin.",
-              "academicNote": "'Nor' olumsuz ekleme bağlacından sonra 'yardımcı fiil + özne + fiilin yalın hali' (nor do they plan) devrik yapısı kurulmalıdır."
-            }
+            "correctIndex": 1,
+            "translation": "Ekonomik model karmaşık olsa da, ticaret dinamiklerini tahmin etmekte başarısız oluyor.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q10",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Yönelimsel Devriklik' (Directional Inversion) kuralına uygun olarak devrik forma getirin:",
-            "mainSentence": "The senior engineer ran down the hallway to save the primary servers.",
-            "options": [
-              "Down the hallway ran the senior engineer to save the primary servers.",
-              "Down the hallway the senior engineer ran to save the primary servers.",
-              "Down the hallway did the senior engineer run to save the primary servers."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları sıfat devrik yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "___ as the demographic data ___, the administration published the survey.",
+            "corrects": [
+              "Flawed",
+              "was"
             ],
-            "correctIndex": 0,
-            "translation": "Kıdemli mühendis, birincil sunucuları kurtarmak için koridordan aşağı koştu.",
-            "explanation": "Yön bildiren zarf öbeği ('Down the hallway') başa geldiğinde, ana fiil ('ran') doğrudan özneden ('the senior engineer') önce yer alır.",
-            "hint": {
-              "formula": "[Yön Zarfı] + [Esas Fiil] + S",
-              "mirror": "Düzü: 'The senior engineer ran down...'",
-              "academicNote": "Yönelimsel devrikliklerde yön zarfı başa geldiğinde ana fiil özneden önce gelir: 'Down the hallway ran the senior engineer'."
-            }
+            "translation": "Demografik veriler kusurlu olsa da, yönetim anketi yayınladı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q11",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek mekansal devrik yapıyı mühürleyin:",
-            "translation": "Tarihi kale planının altında kraliyet muhafızlarının gizli odaları yatıyordu.",
-            "words": [
-              "Beneath the historic castle layout",
-              "lay the hidden chambers",
-              "of the royal guard."
+            "type": "fill-blank-dropdown",
+            "prompt": "Olumsuz katılımı niteleyen devrik yapıyı seçin:<br><br>The law student did not verify the verdict, ___ did she review the court archives.",
+            "options": [
+              "nor",
+              "as",
+              "so",
+              "neither she"
             ],
-            "correctOrder": [
-              "Beneath the historic castle layout",
-              "lay the hidden chambers",
-              "of the royal guard."
-            ],
-            "enSentence": "Beneath the historic castle layout lay the hidden chambers of the royal guard.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "[Yer Zarfı] + [Esas Fiil] + S",
-              "mirror": "Düzü: 'The hidden chambers lay beneath...'",
-              "academicNote": "Yer bildiren öbek başa geldiğinde 'lay the hidden chambers' şeklinde mekansal devriklik kurulur."
-            }
+            "correctIndex": 0,
+            "translation": "Hukuk öğrencisi kararı doğrulamadı, mahkeme arşivlerini de gözden geçirmedi.",
+            "explanation": "İlk cümle olumsuz (did not verify) olduğundan, devamındaki olumsuz katılım ve devriklik 'nor' bağlacıyla (nor did she) kurulmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l4_q12",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Innovative though the application workflow ___, it failed to dominate the global language market due to poor pedagogy.",
+            "type": "multiple-choice",
+            "prompt": "Aşağıdaki cümlelerden hangisi 'as' karşılaştırma devrik kuralına tamamen uyar?<br><br>The empire collapsed rapidly, as did many other ancient civilizations.",
             "options": [
-              "was",
-              "did",
-              "has",
-              "were"
+              "The empire collapsed rapidly, as many did other ancient civilizations.",
+              "The empire collapsed rapidly, as did collapse many other ancient civilizations.",
+              "The empire collapsed rapidly, as did many other ancient civilizations.",
+              "The empire collapsed rapidly, as many other ancient civilizations did."
             ],
-            "correctIndex": 0,
-            "translation": "Uygulama iş akışı yenilikçi olmasına rağmen, zayıf pedagoji nedeniyle küresel dil pazarına hakim olmayı başaramadı.",
-            "explanation": "'Adjective + though + subject + verb' yapısında tekil özneye uygun yardımcı fiil geçmiş zaman için 'was' olmalıdır.",
-            "hint": {
-              "formula": "Sıfat + though + S + was",
-              "mirror": "Tekil özneye uygun geçmiş zaman fiilini seçin.",
-              "academicNote": "'Innovative though the application workflow was' yapısında tekil durum öznesine atıfta bulunulduğu için 'was' kullanılır."
-            }
+            "correctIndex": 2,
+            "translation": "Diğer birçok antik medeniyetin yaptığı gibi, imparatorluk da hızla çöktü.",
+            "explanation": "Karşılaştırmalı katılım bildiren 'as' yapılarında devriklik (as + auxiliary + subject) kullanımı (as did many other...) tercih edilir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l4_q13",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi doğru katılım (agreement) yapısıyla tamamlayan seçeneği belirleyin:",
-            "sentence": "The regional manager in Istanbul supported the expansion plan, and ___ his colleagues working in the Erbil branch.",
+            "type": "inversion-transformer",
+            "prompt": "Katılım bildiren düz cümleyi devrik formda yazın:<br><br>The cinema critics admired the documentary, and the general audience admired it too.",
+            "mainSentence": "The cinema critics admired the documentary, and the general audience admired it too.",
             "options": [
-              "so did",
-              "as did",
-              "neither did",
-              "so have"
+              "The cinema critics admired the documentary, and so the general audience did.",
+              "The cinema critics admired the documentary, and so did the general audience.",
+              "The cinema critics admired the documentary, and as did the general audience."
             ],
-            "correctIndex": 0,
-            "translation": "İstanbul'daki bölge müdürü genişleme planını destekledi, Erbil şubesinde çalışan meslektaşları da öyle.",
-            "explanation": "Geçmiş zamanlı olumlu bir eyleme katılım bildirmek için 'so did + subject' yapısı kullanılır.",
-            "hint": {
-              "formula": "...and so + did + S",
-              "mirror": "Supported geçmiş zaman eylemine uygun katılım yapısını seçin.",
-              "academicNote": "Geçmiş zamanlı eylemlerde olumlu katılım 'so did + subject' (so did his colleagues) şeklinde devrik kurulur."
-            }
+            "correctIndex": 1,
+            "translation": "Sinema eleştirmenleri belgeseli çok beğendi, genel izleyici de öyle.",
+            "explanation": "Olumlu geçmiş zaman eylemine (admired) 'so' ile katılım sağlanırken devrik 'so did the general audience' yapısı kurulur.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q14",
-            "type": "multiple-choice",
-            "prompt": "Hangi seçenekte edilgen sıfat-fiil devrik yapısı (passive participle inversion) doğru kurulmuştur?",
-            "options": [
-              "Attached to the official email invoice was a digital receipt from Gürgençler Bilişim.",
-              "Attached to the official email invoice a digital receipt was from Gürgençler Bilişim.",
-              "Attached to the official email invoice did a digital receipt be from Gürgençler Bilişim."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'as' zıtlık devrik yapısını tamamlayın:<br><br>Influential as the theory was, the university rejected the findings.",
+            "translation": "Teori etkili olsa da, akademik kurum bulguları reddetti.",
+            "words": [
+              "Influential as",
+              "the theory was,",
+              "the university",
+              "rejected the findings."
             ],
-            "correctIndex": 0,
-            "translation": "Resmi e-posta faturasına Gürgençler Bilişim'den alınan dijital makbuz eklenmişti.",
-            "explanation": "Edilgen sıfat-fiil öbeği ('Attached to...') başa geldiğinde, 'was' fiili özneden ('a digital receipt') önce yer almalıdır.",
-            "hint": {
-              "formula": "[Edilgen Sıfat-Fiil Öbeği] + was/were + S",
-              "mirror": "Edilgen öbeğin ardından fiil + özne dizilimini kontrol edin.",
-              "academicNote": "Edilgen sıfat-fiil öbeği başa geldiğinde devriklik 'was/were + subject' (was a digital receipt) şeklinde kurulur."
-            }
+            "correctOrder": [
+              "Influential as",
+              "the theory was,",
+              "the university",
+              "rejected the findings."
+            ],
+            "enSentence": "Influential as the theory was, the university rejected the findings.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q15",
-            "type": "word-bank",
-            "prompt": "Kelimeleri doğru dizerek edilgen devrik yapıyı kurun:",
-            "translation": "Nadir biyolojik örnekler gözlem için sınırın diğer tarafına uçuruldu.",
-            "words": [
-              "Flown across the border",
-              "for observation were",
-              "the rare biological samples."
+            "type": "fill-blank",
+            "prompt": "Zıtlık bildiren sıfat devrik yapısına uygun kelimeyi yazın:<br><br>Clear ___ the empirical evidence was, the lawyers could not win the case.",
+            "options": [
+              "so",
+              "but",
+              "as",
+              "than"
             ],
-            "correctOrder": [
-              "Flown across the border",
-              "for observation were",
-              "the rare biological samples."
-            ],
-            "enSentence": "Flown across the border for observation were the rare biological samples.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "[Edilgen Sıfat-Fiil Öbeği] + were + S",
-              "mirror": "Düzü: 'The rare biological samples were flown...'",
-              "academicNote": "Edilgen devrik yapıda sıfat-fiil başa alınarak 'Flown across the border... were the rare...' dizilimi oluşturulur."
-            }
+            "correctIndex": 2,
+            "translation": "Ampirik kanıtlar net olsa da, avukatlar davayı kazanamadı.",
+            "explanation": "'Adjective + as + subject + verb' yapısı zıtlık bildirir, 'Clear as the empirical...' şeklinde kurulmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q16",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Trabzonspor dominated the first half of the tactical game, as ___ their rivals in the subsequent tournament matches.",
-            "options": [
-              "did",
-              "does",
-              "have",
-              "were"
-            ],
-            "correctIndex": 0,
-            "translation": "Trabzonspor taktiksel oyunun ilk yarısını domine etti, sonraki turnuva maçlarında rakipleri de öyle yaptı.",
-            "explanation": "'as' ile kurulan devrik karşılaştırmalarda geçmiş zamanlı eyleme atıfta bulunmak için 'did' yardımcı fiili kullanılır.",
-            "hint": {
-              "formula": "...as + did + S",
-              "mirror": "Dominated geçmiş zaman fiiline uygun kıyaslama yapısını seçin.",
-              "academicNote": "Geçmiş zaman karşılaştırmalarında 'as + did + subject' devrik yapısı kurulur."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik zıtlık cümlesini Türkçe'ye çevirin:<br><br>Weak though the historical narrative was, it influenced the movie director.",
+            "correctSentence": "Tarihsel anlatı zayıf olsa da, film yönetmenini ikna etti.",
+            "enSentence": "Weak though the historical narrative was, it influenced the movie director.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l4_q17",
-            "type": "multiple-choice",
-            "prompt": "Cümledeki boşluğa gelebilecek en uygun zıtlık sıfatını seçin:",
-            "sentence": "___ though the LFP battery cells were, the engineering team refused to implement them in the new EV model.",
-            "options": [
-              "Efficient",
-              "Efficiency",
-              "An efficient",
-              "More efficient"
-            ],
-            "correctIndex": 0,
-            "translation": "LFP pil hücreleri verimli olmasına rağmen mühendislik ekibi bunları yeni elektrikli araç modelinde uygulamayı reddetti.",
-            "explanation": "'Sıfat + though + subject + verb' zıtlık yapısında boşluğa doğrudan yalın haldeki sıfat ('Efficient') gelmelidir.",
-            "hint": {
-              "formula": "Sıfat + though + S + V",
-              "mirror": "Boşluğa gelebilecek yalın sıfat formunu seçin.",
-              "academicNote": "Zıtlık belirten 'Sıfat + though' kalıbının en başında yalın haldeki sıfat ('Efficient') yer almalıdır."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Though complex the model was, it explained the inflation levelsss.",
+            "englishPhrase": "Though complex the model was, it explained the inflation levelsss.",
+            "turkishTranslation": "Hata tespiti: Devrik zıtlık yapısında sıfat 'though' kelimesinden önce gelmelidir ('Complex though the model was...'). Sıfat sonda kalırsa devriklik kurulamaz.",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q18",
-            "type": "multiple-choice",
-            "prompt": "Olumsuz katılım cümlesindeki devriklik hatasını düzelten en uygun seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'did' yardımcı fiilinin cümledeki sentaktik işlevi nedir?<br><br>The sociologists analyzed the demographic trends, as did the anthropologists.",
+            "paragraph": "The sociologists analyzed the demographic trends, as did the anthropologists.",
+            "highlightChunk": "did",
             "options": [
-              "The application doesn't support nested JSON fields, nor does it parse Noun Clauses in Section 26.",
-              "The application doesn't support nested JSON fields, nor it parses Noun Clauses in Section 26.",
-              "The application doesn't support nested JSON fields, neither it does parse Noun Clauses in Section 26."
+              "Niteleyici (Adverbial Modifier)",
+              "Yüklem (Main Verb)",
+              "İlgeç (Preposition)",
+              "Devrik Kıyas Yardımcı Fiili (Inverted Comparative Auxiliary)"
             ],
-            "correctIndex": 0,
-            "translation": "Uygulama iç içe geçmiş JSON alanlarını desteklemiyor, Bölüm 26'daki Noun Clause yapılarını da çözümlemiyor.",
-            "explanation": "'nor' bağlacından sonra 'does + subject + V1' şeklinde devrik bir yapı kurulmalıdır.",
-            "hint": {
-              "formula": "...nor + does + S + V1",
-              "mirror": "Nor sonrasındaki geniş zaman devrik yapısını arayın.",
-              "academicNote": "Geniş zamanlı olumsuz cümleden devamında 'nor + does + subject + V1' (nor does it parse) devrik yapısı kurulur."
-            }
+            "correctIndex": 3,
+            "translation": "Sosyologlar demografik eğilimleri analiz etti, antropologlar da öyle.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q19",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Mekansal Devriklik' (Locative Inversion) kuralına uygun olarak devrik forma dönüştürün:",
-            "mainSentence": "The legal documents concerning the Bodrum solar project property were lying on the table.",
-            "options": [
-              "Lying on the table were the legal documents concerning the Bodrum solar project property.",
-              "Lying on the table the legal documents concerning the Bodrum solar project property were.",
-              "Lying on the table did the legal documents concerning the Bodrum solar project property lie."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları katılım devrik yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "The psychologist did not endorse the verdict, ___ did the university ___.",
+            "corrects": [
+              "nor",
+              "board"
             ],
-            "correctIndex": 0,
-            "translation": "Bodrum güneş enerjisi projesi mülkiyetine ilişkin yasal belgeler masanın üzerinde duruyordu.",
-            "explanation": "'Lying on the table' durum-yer belirteci başa geldiğinde yardımcı fiil olmadan doğrudan ana fiil ('were') özneden önce gelmelidir.",
-            "hint": {
-              "formula": "[Durum Sıfat-Fiili] + were/was + S",
-              "mirror": "Düzü: 'The legal documents... were lying...'",
-              "academicNote": "Mekansal devrikliklerde sıfat-fiil başa gelince ana fiil doğrudan özneden önce konumlanır: 'Lying on the table were the legal documents'."
-            }
+            "translation": "Psikolog kararı kabul etmedi, üniversite kurulu da etmedi.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l4_q20",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını dizerek yönelimsel devrik cümleyi oluşturun:",
-            "words": [
-              "Into the conference room walked",
-              "the regional manager",
-              "along with the legal advisory board."
+            "type": "multiple-choice",
+            "prompt": "Cümleyi dil bilgisine uygun tamamlayan katılım yapısını seçin:<br><br>The trade patterns shifted dramatically, ___ of the neighboring states.",
+            "options": [
+              "so the fiscal policies did",
+              "as did the fiscal policies",
+              "as the fiscal policies did",
+              "nor did the fiscal policies"
             ],
-            "correctOrder": [
-              "Into the conference room walked",
-              "the regional manager",
-              "along with the legal advisory board."
-            ],
-            "enSentence": "Into the conference room walked the regional manager along with the legal advisory board.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "[Yön Zarfı] + [Esas Fiil] + S",
-              "mirror": "Düzü: 'The regional manager walked into...'",
-              "academicNote": "Yön zarfı başa geldiğinde eylem fiili özneden önce yer alır: 'Into the conference room walked the regional manager'."
-            }
+            "correctIndex": 1,
+            "translation": "Ticaret modelleri çarpıcı biçimde değişti, komşu devletlerin mali politikaları da öyle.",
+            "explanation": "İlk cümle olumlu eylem (shifted) içerdiğinden, katılım devrik 'as did the fiscal policies' şeklinde olmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Katılım Yapıları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           }
         ]
       },
       {
         "lessonId": "c38_l5",
-        "lessonTitle": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi",
+        "lessonTitle": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi (Karma Inversion & Emphatic)",
         "konuAnlatimi": {
           "baslik": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi",
-          "teorikMantik": "Tüm devrik yapı tiplerinin (sıklık, kısıtlama, koşul, kıyas, mekansal) bir arada harmanlandığı karma deneme aşamasıdır. Cümlenin başına gelen ilk kelimenin türüne göre devriklik kurallarını ayırt etmeniz gerekir.",
-          "formul": "Cümle başı olumsuz/kısıtlayıcı ifadeye göre ilgili zaman ve devriklik formülünü uygulayın.",
-          "altinKural": "Zaman uyumunu (Tense Agreement) kontrol edin. İkinci cümle geçmiş zamanlı ise ilk devrik cümle Past; geniş zamanlı ise Present yardımcı fiili alır."
+          "teorikMantik": "Tüm devrik cümle yapılarının (sıklık, kısıtlama, karşılaştırma, koşul) yanı sıra yer/yön belirten edat öbeklerinin cümle başına alınmasıyla kurulan mekansal (Locative) ve yönelimsel (Directional) devriklikler bu ünitenin zirvesini oluşturur.",
+          "formul": "1. Mekansal Devriklik: Yer/Yön Öbeği + Asıl Fiil (stand, lie, sit vb.) + Özne (e.g. Under the tree sat the man)\n2. Yönelimsel Devriklik: Yön Öbeği + Asıl Fiil (walk, run, fly vb.) + Özne (e.g. Into the room ran the boy)\n3. Edilgen Sıfat-Fiil Devrikliği: Past Participle Phrase + to be + Özne (e.g. Attached to the letter was a photo)",
+          "altinKural": "YÖNELİM TUZAĞI: Mekansal ve yönelimsel devrik yapılarda kesinlikle 'do, does, did' yardımcı fiilleri kullanılamaz; asıl fiil doğrudan öznenin önüne geçer. Ayrıca, özne zamir ise devriklik yapılmaz, sadece düz dizilim korunur (e.g. 'In the doorway stood he' Hatalı; 'In the doorway he stood' Doğru)."
         },
         "questions": [
           {
             "id": "c38_l5_q1",
             "type": "matching",
-            "prompt": "Tüm devrik cümle çeşitlerini (zaman kırılması, sıklık, katılım, kısıtlama) uygun biçimleriyle eşleştirin.",
+            "prompt": "İleri düzey devrik yapıları akademik karşılıklarıyla eşleştirin.<br><br>Match the advanced inversion structures:",
             "pairs": [
               {
-                "left": "No sooner had the spacecraft entered orbit",
-                "right": "than it lost contact with the control center."
+                "left": "In the museum stands the ancient statue,",
+                "right": "under the protection of the art agency."
               },
               {
-                "left": "Hardly had the simulation started",
-                "right": "when the hardware parameters fluctuated dynamically."
+                "left": "Into the chamber entered the legendary director,",
+                "right": "accompanied by the cinema critics."
               },
               {
-                "left": "Not only did the software block the strike",
-                "right": "but it also encrypted the target logs."
+                "left": "Attached to the survey is the demographic survey",
+                "right": "explaining the migration patterns."
               },
               {
-                "left": "Rarely does an academic journal",
-                "right": "publish an unverified matrix without review."
+                "left": "Along the border lies the geographic zone",
+                "right": "that causeed the treaty disputes."
               }
             ],
-            "hint": {
-              "formula": "Karma devrik cümleler genel eşleşmesi",
-              "mirror": "No sooner/Hardly/Not only/Rarely yapılarının bağlaç ve zaman uyumlarını inceleyin.",
-              "academicNote": "Farklı devriklik tiplerini doğru tamamlayıcı yargıları ve korelasyonlarıyla eşleştirin."
-            }
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l5_q2",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Little ___ the research team suspect that the complex digital curriculum they designed would be adopted nationwide.",
+            "prompt": "Mekansal devriklik (Locative Inversion) kuralına uygun fiili seçin:<br><br>At the center of the historic plaza ___ the statue of the empire's founder.",
             "options": [
-              "did",
-              "do",
-              "have",
-              "were"
+              "standing",
+              "does stand",
+              "is standing",
+              "stands"
             ],
-            "correctIndex": 0,
-            "translation": "Araştırma ekibi, tasarladıkları karmaşık dijital müfredatın ülke çapında kabul edileceğini neredeyse hiç tahmin etmemişti.",
-            "explanation": "'Little' olumsuzluk zarfı başa geldiğinde devriklik geçmiş zaman için 'did + subject + V1' şeklinde kurulur.",
-            "hint": {
-              "formula": "Little + did + S + V1",
-              "mirror": "Suspect fiilinin yalın (V1) hali ipucudur.",
-              "academicNote": "Geçmiş zamanlı bir durumu nitelemek için 'Little' devrik zarfından sonra 'did' yardımcı fiili gelir."
-            }
+            "correctIndex": 3,
+            "translation": "Tarihi meydanın merkezinde imparatorluğun kurucusunun heykeli durmaktadır.",
+            "explanation": "Mekansal devriklikte (Locative Inversion) yer bildiren edat öbeği başa geldiğinde, eylem (stands) yardımcı fiil almaksızın doğrudan özneden (the statue) önce yer alır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q3",
             "type": "multiple-choice",
-            "prompt": "Aşağıdaki tarihsel zıtlık/kısıtlama ifadesi için doğru present perfect devrik kalıbını seçin:",
-            "sentence": "Not since the great agricultural drought of 1970 ___ this much severe crop failure across the country.",
+            "prompt": "Yönelimsel devriklik (Directional Inversion) yapısını doğru kuran seçeneği belirleyin:<br><br>Into the conference room ___ representing the international trade association.",
             "options": [
-              "have local farmers suffered",
-              "local farmers have suffered",
-              "did local farmers suffer",
-              "was local farmers suffering"
+              "the prominent economists walked",
+              "walked the prominent economists",
+              "did the prominent economists walk",
+              "were walking the prominent economists"
             ],
-            "correctIndex": 0,
-            "translation": "1970 yılındaki büyük tarımsal kuraklıktan bu yana, ülkedeki yerel çiftçiler hiçbir zaman bu kadar şiddetli bir ürün kaybı yaşamamışlardı.",
-            "explanation": "'Not since...' kısıtlayıcı yapısı cümle başına geldiğinde present perfect devrik formülü 'have/has + subject + V3' (have local farmers suffered) kullanılır.",
-            "hint": {
-              "formula": "Not since + Zaman/Olay + [have/has + S + V3]",
-              "mirror": "Present perfect devrik yapıyı seçin.",
-              "academicNote": "'Not since' kısıtlayıcı yapısı başa geldiğinde present perfect devrik dizilim 'have local farmers suffered' olmalıdır."
-            }
+            "correctIndex": 1,
+            "translation": "Konferans salonuna, uluslararası ticaret birliğini temsil eden seçkin ekonomistler girdi.",
+            "explanation": "Yönelimsel devriklikte (Directional Inversion) yön bildiren zarf öbeği başa geldiğinde, asıl fiil yardımcı fiil almadan öznenin önüne geçer: 'walked the prominent economists'.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin başındaki 'Had' devrik koşul yapısında 'Hadn't + subject' kısaltma hatasını tamamen engelleyen doğru yapıyı seçin:",
+            "type": "inversion-transformer",
+            "prompt": "Düz yapılı edilgen cümleyi edilgen sıfat-fiil devrik yapısı (Passive Participle Inversion) kullanarak devrik forma getirin:<br><br>The historic archives explaining the legal verdict were attached to the survey.",
+            "mainSentence": "The historic archives explaining the legal verdict were attached to the survey.",
             "options": [
-              "Had the supreme court not vetoed the bill, the entire national budget would have collapsed.",
-              "Had not the supreme court vetoed the bill, the entire national budget would have collapsed.",
-              "Hadn't the supreme court vetoed the bill, the entire national budget would have collapsed."
+              "Attached to the survey did the historic archives were explaining the legal verdict.",
+              "Attached to the survey the historic archives were explaining the legal verdict.",
+              "Attached to the survey were the historic archives explaining the legal verdict."
             ],
-            "correctIndex": 0,
-            "translation": "Yüksek mahkeme tasarıyı veto etmemiş olsaydı, tüm ulusal bütçe çökmüş olurdu.",
-            "explanation": "Devrik koşul cümlelerinde olumsuzluk bildiren 'not' kelimesi özneden sonra gelmelidir; baş tarafta kısaltma veya 'Had not the...' biçimi kullanılamaz.",
-            "hint": {
-              "formula": "Had + S + not + V3 (Type 3 Olumsuz)",
-              "mirror": "Hadn't kısaltmasının başa gelemeyeceğine dikkat edin.",
-              "academicNote": "Tip 3 olumsuz devrik koşul cümlelerinde 'not' kelimesi özneden sonra (Had the supreme court not vetoed) yer almalıdır."
-            }
+            "correctIndex": 3,
+            "translation": "Yargı kararını detaylandıran tarihi arşivler rapora eklenmişti.",
+            "explanation": "Edilgen sıfat-fiil devrikliklerinde, V3 ortaç öbeği (Attached to the survey) başa çekilir ve 'be' fiili (were) özneden önce gelir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Edilgen Devriklik",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q5",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Not only' kullanarak devrik forma dönüştürün:",
-            "mainSentence": "The application predicts database errors and it also tracks user engagement levels.",
-            "options": [
-              "Not only does the application predict database errors, but it also tracks user engagement levels.",
-              "Not only the application predicts database errors, but it also tracks user engagement levels.",
-              "Not only did the application predict database errors, but it also tracks user engagement levels."
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek mekansal devrik yapıyı (Locative Inversion) tamamlayın:<br><br>Hidden in the archives were the manuscripts explaining the treaty.",
+            "translation": "Antlaşmayı detaylandıran el yazmaları arşivlerde gizliydi.",
+            "words": [
+              "Hidden in the archives",
+              "were the manuscripts",
+              "explaining the treaty."
             ],
-            "correctIndex": 0,
-            "translation": "Uygulama sadece veritabanı hatalarını tahmin etmekle kalmaz, aynı zamanda kullanıcı etkileşim seviyelerini de izler.",
-            "explanation": "'Not only' cümle başına geldiğinde ilk cümlede devriklik 'does + subject + V1' olarak kurulmalıdır.",
-            "hint": {
-              "formula": "Not only + [does/did + S + V1] + but S also...",
-              "mirror": "Düzü: 'The application predicts... and also tracks...'",
-              "academicNote": "Geniş zamanlı bir cümleyi 'Not only' ile devrik yaparken 'does + subject + V1' (does the application predict) yapısı kullanılır."
-            }
+            "correctOrder": [
+              "Hidden in the archives",
+              "were the manuscripts",
+              "explaining the treaty."
+            ],
+            "enSentence": "Hidden in the archives were the manuscripts explaining the treaty.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q6",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını doğru dizerek zaman kırılması devrik yapısını oluşturun:",
-            "translation": "Uzay aracı yörüngeye girer girmez kontrol merkeziyle iletişimi kaybetti.",
-            "words": [
-              "No sooner had the spacecraft",
-              "entered orbit",
-              "than it lost contact",
-              "with the control center."
+            "type": "fill-blank",
+            "prompt": "Mekansal devriklik kuralına uygun boşluğu tamamlayın:<br><br>On the table lies the original document ___ the legal verdict.",
+            "options": [
+              "containing",
+              "contain",
+              "contained",
+              "contains"
             ],
-            "correctOrder": [
-              "No sooner had the spacecraft",
-              "entered orbit",
-              "than it lost contact",
-              "with the control center."
-            ],
-            "enSentence": "No sooner had the spacecraft entered orbit than it lost contact with the control center.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "No sooner + had + S + V3 + than + S + V2",
-              "mirror": "Düzü: 'The spacecraft had no sooner entered orbit than...'",
-              "academicNote": "Zaman kırılması yapısı 'No sooner had the spacecraft entered orbit than...' şeklinde kurulmalıdır."
-            }
+            "correctIndex": 0,
+            "translation": "Masada, hukuki kararı içeren orijinal belge durmaktadır.",
+            "explanation": "Cümle 'On the table lies...' şeklinde mekansal devrik kurulmuştur. Özne 'the original document' sonrasındaki kısaltma aktif ortaç 'containing' ile bağlanmalıdır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Only after conducting extensive on-site market research in Erbil ___ the professional manager implement the new branching strategy.",
-            "options": [
-              "did",
-              "does",
-              "had",
-              "was"
-            ],
-            "correctIndex": 0,
-            "translation": "Profesyonel müdür, yeni şubeleşme stratejisini ancak Erbil'de kapsamlı yerinde pazar araştırması yaptıktan sonra uyguladı.",
-            "explanation": "'Only after' yan tümcesinden sonra ana cümlede geçmiş zaman devrik yapısı ('did + subject + V1') kurulmalıdır.",
-            "hint": {
-              "formula": "Only after + Ving + [did + S + V1]",
-              "mirror": "Implement fiilinin yalın (V1) hali ipucudur.",
-              "academicNote": "'Only after' yan cümleciğinden sonra gelen ana cümle geçmiş zaman devrik yardımcı fiili 'did' alır."
-            }
+            "type": "translation-text",
+            "prompt": "Aşağıdaki ileri düzey devrik cümleyi Türkçe'ye çevirin:<br><br>Under no circumstances did the administration allow the trade tariffs to increase.",
+            "correctSentence": "Yönetim, ticaret tarifelerinin yükselmesine hiçbir koşulda izin vermedi.",
+            "enSentence": "Under no circumstances did the administration allow the trade tariffs to increase.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l5_q8",
-            "type": "multiple-choice",
-            "prompt": "Cümleyi kurallara uygun şekilde tamamlayan devrik modal yapısını seçin:",
-            "sentence": "___ the production team to discover a structural flaw in the LFP battery cells now, the EV launch would be delayed.",
-            "options": [
-              "Were",
-              "Should",
-              "Had",
-              "Would"
-            ],
-            "correctIndex": 0,
-            "translation": "Üretim ekibi şu anda LFP pil hücrelerinde yapısal bir hata keşfedecek olsaydı, elektrikli araç lansmanı gecikirdi.",
-            "explanation": "'to discover' mastarı ile kurulan hayali durum (Tip 2) koşul devrikliklerinde 'Were' yardımcı fiili kullanılır.",
-            "hint": {
-              "formula": "Were + S + to V1 (Type 2)",
-              "mirror": "to discover mastar fiil yapısını kontrol edin.",
-              "academicNote": "Geleceğe/şu ana yönelik hayali koşullarda mastarlı fiillerle devriklik 'Were + özne + to V1' (Were the production team) şeklinde kurulur."
-            }
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>In the museum stands did the ancient statues under security protection.",
+            "englishPhrase": "In the museum stands did the ancient statues under security protection.",
+            "turkishTranslation": "Hata tespiti: Mekansal devriklikte (Locative Inversion) yardımcı fiil 'did' kullanılmaz. Asıl fiil doğrudan öznenin önüne gelir ('In the museum stood the ancient...').",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q9",
-            "type": "multiple-choice",
-            "prompt": "'Scarcely had...' ile başlayan cümleyi doğru korelasyon ile bağlayan seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'lies' fiilinin cümledeki dil bilgisi işlevi nedir?<br><br>Along the geographic border lies the zone of regional dispute.",
+            "paragraph": "Along the geographic border lies the zone of regional dispute.",
+            "highlightChunk": "lies",
             "options": [
-              "Scarcely had the cloud server initiated the recovery script when the database stabilized.",
-              "Scarcely had the cloud server initiated the recovery script than the database stabilized.",
-              "Scarcely had the cloud server initiated the recovery script then the database stabilized."
+              "İlgeç (Preposition)",
+              "Devrik Konum Fiili (Inverted Locative Verb)",
+              "Yardımcı Fiil (Auxiliary Verb)",
+              "Ortaç (Participle)"
             ],
-            "correctIndex": 0,
-            "translation": "Bulut sunucusu kurtarma betiğini başlatır başlatmaz veritabanı kararlı hale geldi.",
-            "explanation": "'Scarcely' veya 'Hardly' devrik zaman yapıları ikinci cümleye 'when' (veya 'before') bağlacı ile bağlanır.",
-            "hint": {
-              "formula": "Scarcely + had + S + V3 + when + S + V2",
-              "mirror": "Scarcely yapısının 'when' ile bağlandığını kontrol edin.",
-              "academicNote": "Scarcely ile kurulan devrik yapılarda ikinci cümleyi bağlayan kelime 'when' olmalıdır; 'than' kullanımı hatalıdır."
-            }
+            "correctIndex": 1,
+            "translation": "Coğrafi sınır boyunca bölgesel ihtilaf bölgesi yer almaktadır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q10",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Had' kullanarak devrik karma koşul (mixed conditional) yapısına dönüştürün:",
-            "mainSentence": "If the network engineers had not installed hybrid solar inverters at the Bodrum facility last year, they would face massive blackouts now.",
-            "options": [
-              "Had the network engineers not installed hybrid solar inverters at the Bodrum facility last year, they would face massive blackouts now.",
-              "Had not the network engineers installed hybrid solar inverters at the Bodrum facility last year, they would face massive blackouts now.",
-              "Were the network engineers not installed hybrid solar inverters at the Bodrum facility last year, they would face massive blackouts now."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları mekansal devriklik kurallarına uygun şekilde sırasıyla doldurun:",
+            "sentence": "In the center of the exhibition ___ the rare paintings ___ by the art critics.",
+            "corrects": [
+              "were",
+              "admired"
             ],
-            "correctIndex": 0,
-            "translation": "Ağ mühendisleri geçen yıl Bodrum tesisine hibrit güneş invertörleri kurmamış olsaydı, şimdi büyük elektrik kesintileriyle karşı karşıya kalırlardı.",
-            "explanation": "Geçmiş zaman koşul kısmındaki (Tip 3) olumsuz yapıyı devrik yapmak için 'Had + subject + not + V3' sıralaması tercih edilir.",
-            "hint": {
-              "formula": "Had + S + not + V3 + [S + would + V1] (Mixed)",
-              "mirror": "Düzü: 'If the network engineers had not installed...'",
-              "academicNote": "Karma koşul (Mixed Conditional) yapısında geçmişe yönelik koşul kısmı 'Had + özne + not + V3' şeklinde devrik yapılır."
-            }
+            "translation": "Serginin merkezinde, sanat eleştirmenleri tarafından beğenilen nadir tablolar bulunuyordu.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim ve Edat Yapıları"
+            ]
           },
           {
             "id": "c38_l5_q11",
-            "type": "word-bank",
-            "prompt": "Kelime bloklarını dizerek edilgen/sıfat devrik yapısını oluşturun:",
-            "translation": "Bölüm 26'nın temiz bir şekilde biçimlendirilmesi, kod tabanının nihai doğrulaması için çok önemliydi.",
-            "words": [
-              "Crucial to the final validation",
-              "of the codebase was",
-              "the clean formatting of Section 26."
-            ],
-            "correctOrder": [
-              "Crucial to the final validation",
-              "of the codebase was",
-              "the clean formatting of Section 26."
-            ],
-            "enSentence": "Crucial to the final validation of the codebase was the clean formatting of Section 26.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Crucial to + Noun + was/were + S",
-              "mirror": "Düzü: 'The clean formatting... was crucial...'",
-              "academicNote": "Mekansal/sıfat devrik yapıda 'Crucial to the final validation... was the clean...' dizilimi esastır."
-            }
-          },
-          {
-            "id": "c38_l5_q12",
             "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Under no circumstances ___ the technicians override the automated safety protocols during a simulated reactor test.",
+            "prompt": "Koşul devriklik yapısına uygun devrik fiili seçin:<br><br>___ the sociologist known the demographic changes, she would have altered the survey methods.",
             "options": [
-              "should",
-              "does",
-              "did",
-              "have"
-            ],
-            "correctIndex": 0,
-            "translation": "Teknisyenler, simüle edilmiş bir reaktör testi sırasında otomatik güvenlik protokollerini hiçbir koşulda devre dışı bırakmamalıdır.",
-            "explanation": "'Under no circumstances' olumsuz ifadesi başa geldiğinde tavsiye/zorunluluk bildiren modal 'should' devrik olarak kullanılır.",
-            "hint": {
-              "formula": "Under no circumstances + should + S + V1",
-              "mirror": "Zorunluluk/tavsiye bildiren modal yapıyı arayın.",
-              "academicNote": "'Under no circumstances' kısıtlayıcı uyarısı başa geldiğinde devriklik 'should + subject + V1' şeklinde kurulur."
-            }
-          },
-          {
-            "id": "c38_l5_q13",
-            "type": "multiple-choice",
-            "prompt": "Cümledeki boşluğu dolduracak en uygun olumsuz katılım (agreement) yapısını seçin:",
-            "sentence": "The administrative team from Istanbul did not approve the structural budget changes, and ___ the managers in the Erbil division.",
-            "options": [
-              "neither did",
-              "nor they did",
-              "so did",
-              "as did"
-            ],
-            "correctIndex": 0,
-            "translation": "İstanbul'daki idari ekip yapısal bütçe değişikliklerini onaylamadı, Erbil bölümündeki yöneticiler de onaylamadı.",
-            "explanation": "Geçmiş zamanlı olumsuz bir eyleme katılım bildirmek için 'neither/nor + did + subject' (neither did the managers) yapısı kullanılır.",
-            "hint": {
-              "formula": "...and neither + did + S",
-              "mirror": "Geçmiş zamanlı olumsuz eyleme katılım sağlayan devrik yapıyı seçin.",
-              "academicNote": "Geçmiş zamanlı olumsuz cümlenin devamında katılım devrik yapısı 'neither did + subject' (neither did the managers) olur."
-            }
-          },
-          {
-            "id": "c38_l5_q14",
-            "type": "multiple-choice",
-            "prompt": "'Sıfat + As + Özne + Yüklem' yapısını dil bilgisi kurallarına tamamen uygun biçimde uygulayan seçeneği seçin:",
-            "options": [
-              "Flawed though the environmental report was, the ministry endorsed it immediately.",
-              "Flawed though was the environmental report, the ministry endorsed it immediately.",
-              "Flawed although the environmental report was, the ministry endorsed it immediately."
-            ],
-            "correctIndex": 0,
-            "translation": "Çevre raporu kusurlu olmasına rağmen, bakanlık bunu derhal onayladı.",
-            "explanation": "'though' zıtlık yapısında sıfat başa gelir fakat yan cümle devrilmez; yani 'flawed though the report was' şeklinde düz bağlanmalıdır.",
-            "hint": {
-              "formula": "Sıfat + though + S + V",
-              "mirror": "Yan cümleciğin düz kurulduğunu kontrol edin.",
-              "academicNote": "'though' zıtlık yapılarında sıfat öne alınır fakat yan cümle düz kurulur: 'Flawed though the environmental report was'."
-            }
-          },
-          {
-            "id": "c38_l5_q15",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek olumsuz sıklık zarfı devrik yapısını oluşturun:",
-            "translation": "Yüksek mahkeme, kapsamlı iç tartışmalar olmadan nadiren bu kadar tartışmalı bir yargı kararı vermiştir.",
-            "words": [
-              "Rarely has the supreme court",
-              "issued such a controversial decree",
-              "without extensive inner debate."
-            ],
-            "correctOrder": [
-              "Rarely has the supreme court",
-              "issued such a controversial decree",
-              "without extensive inner debate."
-            ],
-            "enSentence": "Rarely has the supreme court issued such a controversial decree without extensive inner debate.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Rarely + has/have + S + V3",
-              "mirror": "Düzü: 'The supreme court has rarely issued...'",
-              "academicNote": "Sıklık zarfı başa geldiğinde present perfect devrik dizilim 'Rarely has the supreme court issued' şeklinde olur."
-            }
-          },
-          {
-            "id": "c38_l5_q16",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek en uygun yardımcı fiili seçin:",
-            "sentence": "Only by migrating the nested JSON data arrays to Vercel ___ the developers fix the layout rendering latency.",
-            "options": [
-              "could",
-              "can",
-              "did",
-              "was"
-            ],
-            "correctIndex": 0,
-            "translation": "Geliştiriciler, düzen yükleme gecikmesini ancak iç içe geçmiş JSON veri dizilerini Vercel'e taşıyarak çözebildiler.",
-            "explanation": "'Only by + Ving' yöntemsel kısıtlayıcı yapısından sonra geçmiş yetenek ifadesi için 'could + subject + V1' kullanılır.",
-            "hint": {
-              "formula": "Only by + Ving + [could + S + V1]",
-              "mirror": "Geçmiş yetenek bildiren devrik yapıyı tamamlayın.",
-              "academicNote": "'Only by' kısıtlayıcı yöntem zarfından sonra gelen geçmiş yetenek devrikliklerinde 'could' kullanılır."
-            }
-          },
-          {
-            "id": "c38_l5_q17",
-            "type": "multiple-choice",
-            "prompt": "Beklenmedik bir gelecek olasılığı (Tip 1 koşul) için kurulan devrik yapıyı tamamlayın:",
-            "sentence": "___ any external client encounter a validation error while parsing the Noun Clause blocks, the application will drop the connection.",
-            "options": [
+              "Had",
               "Should",
               "Were",
-              "Had",
               "Would"
             ],
             "correctIndex": 0,
-            "translation": "Herhangi bir harici istemci, Noun Clause bloklarını çözümlerken bir doğrulama hatasıyla karşılaşacak olursa, uygulama bağlantıyı kesecektir.",
-            "explanation": "'encounter' eylemi yalın (V1) halde olduğundan beklenmedik gelecek olasılığını nitelemek için devrik 'Should' kullanılır.",
-            "hint": {
-              "formula": "Should + S + V1 (Type 1)",
-              "mirror": "Encounter fiilinin yalın (V1) hali ipucudur.",
-              "academicNote": "Gelecekteki beklenmedik olasılıkları devrik koşul yapmak için 'Should + özne + V1' (Should any external client) kullanılır."
-            }
+            "translation": "Sosyolog demografik değişimleri bilmiş olsaydı, anket yöntemlerini değiştirirdi.",
+            "explanation": "Type 3 devrik koşul yapısında 'Had + subject + V3' (Had the sociologist known) yapısı kullanılır.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "c38_l5_q12",
+            "type": "multiple-choice",
+            "prompt": "Aşağıdaki cümlelerden hangisi 'mekansal devriklik' (Locative Inversion) kuralına tamamen uygundur?<br><br>On the platform stood the cinema director, presenting the documentary.",
+            "options": [
+              "On the platform the cinema director stood, presenting the documentary.",
+              "On the platform did the cinema director stand, presenting the documentary.",
+              "On the platform stood the cinema director, presenting the documentary.",
+              "On the platform was standing the cinema director, presenting the documentary."
+            ],
+            "correctIndex": 2,
+            "translation": "Platformda belgeseli sunan sinema yönetmeni duruyordu.",
+            "explanation": "Mekansal devriklik kuralına göre edat öbeği (On the platform) başa geldiğinde, asıl fiil (stood) yardımcı fiil olmaksızın doğrudan öznenin önüne gelir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "c38_l5_q13",
+            "type": "inversion-transformer",
+            "prompt": "Verilen düz yapılı cümleyi 'locative inversion' kullanarak devrik akademik forma getirin:<br><br>The historic university library lies behind the museum gardens.",
+            "mainSentence": "The historic university library lies behind the museum gardens.",
+            "options": [
+              "Behind the museum gardens does the historic university library lie.",
+              "Behind the museum gardens the historic university library lies.",
+              "Behind the museum gardens lies the historic university library."
+            ],
+            "correctIndex": 2,
+            "translation": "Müze bahçelerinin arkasında tarihi üniversite kütüphanesi yer almaktadır.",
+            "explanation": "Yer yön bildiren zarf öbeği (Behind the museum gardens) başa çekildiğinde, asıl fiil (lies) özneden önce gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "c38_l5_q14",
+            "type": "word-bank",
+            "prompt": "Kelimeleri doğru dizerek 'Only by' yöntem bildiren devrik yapısını tamamlayın:<br><br>Only by analyzing the historical records could the researcher identify the origins of the treaty.",
+            "translation": "Araştırmacı, antlaşmanın kökenlerini ancak tarihi kayıtları analiz ederek belirleyebildi.",
+            "words": [
+              "Only by analyzing the",
+              "historical records could",
+              "the researcher identify",
+              "the origins of the treaty."
+            ],
+            "correctOrder": [
+              "Only by analyzing the",
+              "historical records could",
+              "the researcher identify",
+              "the origins of the treaty."
+            ],
+            "enSentence": "Only by analyzing the historical records could the researcher identify the origins of the treaty.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Kısıtlayıcı Yapılar",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "c38_l5_q15",
+            "type": "fill-blank",
+            "prompt": "Zıtlık bildiren sıfat devrik yapısına uygun bağlacı yazın:<br><br>Difficult ___ the legal case was, the lawyer achieved a favorable verdict.",
+            "options": [
+              "so",
+              "as",
+              "but",
+              "than"
+            ],
+            "correctIndex": 1,
+            "translation": "Hukuki dava zor olsa da, avukat olumlu bir karar elde etti.",
+            "explanation": "'Adjective + as + subject + verb' zıtlık bildiren sıfat devriklik kalıbıdır, boşluğa 'as' veya 'though' gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
+          },
+          {
+            "id": "c38_l5_q16",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki devrik koşul cümlesini Türkçe'ye çevirin:<br><br>Were the central bank to intervene, the economic inflation would resolve.",
+            "correctSentence": "Merkez bankası müdahale edecek olsaydı, ekonomik enflasyon dengelenirdi.",
+            "enSentence": "Were the central bank to intervene, the economic inflation would resolve.",
+            "isEngToTr": true,
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Koşul Cümleleri",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "c38_l5_q17",
+            "type": "true-false",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Seldom the constitutional court intervened in the municipal trade disputes.",
+            "englishPhrase": "Seldom the constitutional court intervened in the municipal trade disputes.",
+            "turkishTranslation": "Hata tespiti: 'Seldom' olumsuz zarfı cümle başında kullanıldığında devriklik zorunludur ('Seldom did the constitutional court intervene...').",
+            "correctAnswer": "false",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıklık Zarfları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q18",
-            "type": "multiple-choice",
-            "prompt": "'On no account' yapısında çifte yardımcı fiil hatasını gideren doğru seçeneği belirleyin:",
+            "type": "spotlight",
+            "prompt": "Altı çizili olan 'had' yardımcı fiilinin cümledeki sentaktik işlevi nedir?<br><br>No sooner had the historians published the empirical data than a debate began.",
+            "paragraph": "No sooner had the historians published the empirical data than a debate began.",
+            "highlightChunk": "had",
             "options": [
-              "On no account must the accountant process an invoice without a verified digital receipt.",
-              "On no account the accountant must process an invoice without a verified digital receipt.",
-              "On no account does the accountant must process an invoice without a verified digital receipt."
+              "Devrik Zaman Yardımcı Fiili (Inverted Tense Auxiliary)",
+              "Zıtlık Bağlacı (Contrast Conjunction)",
+              "Esas Fiil (Main Verb)",
+              "Niteleyici (Adverbial Modifier)"
             ],
             "correctIndex": 0,
-            "translation": "Muhasebeci, doğrulanmış bir dijital makbuz olmadan hiçbir şekilde bir fatura işlememelidir.",
-            "explanation": "'On no account' başa geldiğinde zorunluluk bildiren modal 'must' doğrudan devrik fiil olarak özneden önce gelir. 'does' ve 'must' bir arada kullanılamaz.",
-            "hint": {
-              "formula": "On no account + [must + S + V1]",
-              "mirror": "Çifte yardımcı fiil (does ... must) hatasına dikkat edin.",
-              "academicNote": "'On no account' yapısında modal 'must' doğrudan başa gelerek devriklik kurulur, başka yardımcı fiile ihtiyaç yoktur."
-            }
+            "translation": "Tarihçiler ampirik verileri yayınlar yayınlamaz bir tartışma başladı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Zaman Kırılmaları",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q19",
-            "type": "inversion-transformer",
-            "prompt": "Aşağıdaki düz cümleyi 'Yönelimsel Devriklik' (Directional Inversion) kuralına uygun olarak devrik forma getirin:",
-            "mainSentence": "The modified racing motorcycle driven by Toprak Razgatlıoğlu sped along the racetrack.",
-            "options": [
-              "Along the racetrack sped the modified racing motorcycle driven by Toprak Razgatlıoğlu.",
-              "Along the racetrack the modified racing motorcycle driven by Toprak Razgatlıoğlu sped.",
-              "Along the racetrack did the modified racing motorcycle driven by Toprak Razgatlıoğlu speed."
+            "type": "multiple-fill-blank",
+            "prompt": "Boşlukları sıfat devrik yapısına uygun şekilde sırasıyla doldurun:",
+            "sentence": "___ as the psychological study ___, the committee approved the research.",
+            "corrects": [
+              "Innovative",
+              "was"
             ],
-            "correctIndex": 0,
-            "translation": "Toprak Razgatlıoğlu'nun kullandığı modifiye yarış motosikleti yarış pisti boyunca hızla ilerledi.",
-            "explanation": "Yön bildiren zarf öbeği başa geldiğinde ana fiil ('sped') doğrudan özneden önce konumlanır.",
-            "hint": {
-              "formula": "[Yön Zarfı] + [Esas Fiil] + S",
-              "mirror": "Düzü: 'The modified racing motorcycle... sped along...'",
-              "academicNote": "Yönelimsel devrikliklerde yön zarfı başa geldiğinde eylem fiili özneden önce yer alır: 'Along the racetrack sped the modified...'"
-            }
+            "translation": "Psikolojik çalışma yenilikçi olsa da, kurul araştırmayı onayladı.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Sıfat Devriklikleri",
+              "İsim Tamlamaları"
+            ]
           },
           {
             "id": "c38_l5_q20",
-            "type": "word-bank",
-            "prompt": "Kelimeleri dizerek 'Not until' devrik zaman yapısını tamamlayın:",
-            "words": [
-              "Not until the financial team checked",
-              "the e-archive invoice from MediaMarkt",
-              "did they authorize the payment."
+            "type": "multiple-choice",
+            "prompt": "Cümleyi dil bilgisine uygun tamamlayan mekansal devrik yapıyı seçin:<br><br>Behind the ancient museum gardens ___ explaining the origins of the civilization.",
+            "options": [
+              "the historic manuscripts lay",
+              "were the historic manuscripts laying",
+              "lay the historic manuscripts",
+              "did the historic manuscripts lay"
             ],
-            "correctOrder": [
-              "Not until the financial team checked",
-              "the e-archive invoice from MediaMarkt",
-              "did they authorize the payment."
-            ],
-            "enSentence": "Not until the financial team checked the e-archive invoice from MediaMarkt did they authorize the payment.",
-            "isEngToTr": false,
-            "hint": {
-              "formula": "Not until + S + V + [did + S + V1]",
-              "mirror": "Düzü: 'They did not authorize... until the team checked...'",
-              "academicNote": "Not until yan cümlesi düz kurulurken, ana cümle geçmiş zaman devrik yapısıyla (did they authorize) bağlanır."
-            }
+            "correctIndex": 2,
+            "translation": "Antik müze kapılarının arkasında, medeniyetin kökenlerini detaylandıran tarihi el yazmaları bulunuyordu.",
+            "explanation": "Mekansal devriklikte (Locative Inversion) edat öbeği başa geldiğinde asıl fiil (lay) yardımcı fiilsiz özneden önce gelmelidir.",
+            "grammarTags": [
+              "Devrik Cümle (Inversion)",
+              "Mekansal Devriklik",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
           }
         ]
       }
