@@ -48513,6 +48513,319 @@ const unit35 = {
               translation: "'While studied' yapısı etken süreç için hatalıdır; 'While studying' olmalıdır.",
               explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural Analizi:</b> 'While' bağlacından sonra etken bir eylemin kısaltmasında fiilin ikinci hali (V2) doğrudan gelemez. Etken için 'V-ing' (studying) kullanılmalıdır.",
               grammarTags: ["Time Reduction Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l2_ex1_q11",
+              type: "multiple-choice",
+              prompt: "Boşluktan hemen sonra 'by the dean' (Edat öbeği) geldiğine dikkat ederek, eşzamanlı edilgen kısaltma yapısını bulunuz:",
+              sentence: "When _______ by the dean, the research project details were approved.",
+              options: [
+                "evaluated",
+                "evaluating",
+                "to evaluate",
+                "evaluates"
+              ],
+              correctIndex: 0,
+              translation: "Dekan tarafından değerlendirildiğinde, araştırma projesinin detayları onaylandı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Nesne/Edat Kontrolü:</b> Boşluğun hemen sağındaki 'by...' (Edat) yapısı edilgenliği gösterir.<br>2. <b>Zaman Kısaltması:</b> Eşzamanlı edilgen zarf kısaltması 'V3' (evaluated) ile tamamlanır.",
+              grammarTags: ["Time Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l2_ex1_q12",
+              type: "multiple-choice",
+              prompt: "Boşluktan önce 'Although' (zıtlık) bağlacı bulunuyorsa ve eylem edilgen ise hangisi tercih edilmelidir?",
+              sentence: "Although _______ for its methods, the study provided useful data.",
+              options: [
+                "criticized",
+                "criticizing",
+                "to criticize",
+                "criticizes"
+              ],
+              correctIndex: 0,
+              translation: "Yöntemleri nedeniyle eleştirilse de, çalışma faydalı veriler sağladı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Edilgenlik Analizi:</b> Çalışma 'eleştirilen' (edilgen) konumdadır.<br>2. <b>Bağlaçlı Kısaltma:</b> 'Although' bağlacı korunarak edilgen kısaltma 'Although + V3' (Although criticized) şeklinde yapılır.",
+              grammarTags: ["Contrast Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q13",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki cümlelerin hangisinde 'eşzamanlı' etken bir süreç vurgulanmaktadır?",
+              options: [
+                "While interviewing the psychologists, they took detailed notes.",
+                "Having interviewed the psychologists, they took detailed notes.",
+                "Having been interviewed by the psychologists, they took detailed notes.",
+                "To interview the psychologists, they took detailed notes."
+              ],
+              correctIndex: 0,
+              translation: "Psikologlarla görüşme yaparken, detaylı notlar aldılar.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> 'While V-ing' yapısı eşzamanlı (aynı anda devam eden) bir etken süreci vurgulamak için en uygun kısaltmadır.",
+              grammarTags: ["Time Reduction", "Active Time Reduction", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l2_ex1_q14",
+              type: "multiple-choice",
+              prompt: "Zarf cümlecikleri kısaltmalarında 'ortak özne' (common subject) kuralına göre hangisi doğrudur?",
+              options: [
+                "Yan cümlenin gizli öznesi ile ana cümlenin gerçek öznesi aynı kişi/nesne olmalıdır.",
+                "Yan cümle ile ana cümlenin özneleri farklı olmak zorundadır.",
+                "Kısaltma yapıldıktan sonra cümlenin öznesi tamamen kaybolur.",
+                "Kısaltılmış cümlelerde özne olarak sadece cansız varlıklar kullanılabilir."
+              ],
+              correctIndex: 0,
+              translation: "Zarf kısaltmalarında öznelerin ortak olması şarttır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> Zarf kısaltmalarında yan cümlenin öznesi ana cümlenin öznesiyle aynı değilse 'Dangling Participle' (özne uyuşmazlığı hatası) oluşur.",
+              grammarTags: ["Grammar Rule", "Subject Agreement", "Dangling Modifier"]
+            },
+            {
+              id: "u35_l2_ex1_q15",
+              type: "multiple-choice",
+              prompt: "Zaman edatlı kısaltma kurallarına göre 'Since' bağlacından sonra hangi etken kısaltma yapısı gelmelidir?",
+              sentence: "Since _______ the new program, the university has received more applications.",
+              options: [
+                "introducing",
+                "introduced",
+                "having introduced",
+                "to introduce"
+              ],
+              correctIndex: 0,
+              translation: "Yeni programı tanıttığından beri, üniversite daha fazla başvuru aldı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman Edatı/Bağlacı:</b> 'Since' edat olarak kullanıldığında kendisinden sonra doğrudan etken fiille 'V-ing' (introducing) alır.",
+              grammarTags: ["Time Reduction", "Since Trigger", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q16",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki seçeneklerden hangisi 'Upon receiving the results' öbeği ile aynı anlamdadır?",
+              options: [
+                "On receiving the results",
+                "Before receiving the results",
+                "While receiving the results",
+                "Although receiving the results"
+              ],
+              correctIndex: 0,
+              translation: "Sonuçları alır almaz anlamı 'On' ve 'Upon' ile aynı şekilde sağlanır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Anlamsal Eşitlik:</b> 'On + V-ing' ve 'Upon + V-ing' yapıları birbirinin yerine kullanılabilir ve hemen ardındalık (-er -mez) bildirir.",
+              grammarTags: ["Time Reduction", "On Trigger", "Upon Trigger"]
+            },
+            {
+              id: "u35_l2_ex1_q17",
+              type: "multiple-choice",
+              prompt: "Cümle sonunda yer alan bu kısaltmada, edilgen bir öncelik-sonralık ilişkisini kuran doğru yapıyı bulunuz:",
+              sentence: "The project was submitted to the committee, having been _______ by three experts.",
+              options: [
+                "evaluated",
+                "evaluating",
+                "evaluates",
+                "to evaluate"
+              ],
+              correctIndex: 0,
+              translation: "Proje, üç uzman tarafından değerlendirildikten sonra komiteye sunuldu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman/Yön:</b> Eylem ana cümleden önce edilgen olarak tamamlanmıştır ➔ 'having been V3' (having been evaluated).",
+              grammarTags: ["Perfect Participle", "Passive Time Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q18",
+              type: "multiple-choice",
+              prompt: "Öncelikli bir eylemin 'olumsuz' (negative) etken kısaltması için doğru formül hangisidir?",
+              sentence: "_______ the details, the manager asked for a follow-up report.",
+              options: [
+                "Not having understood",
+                "Having not understood",
+                "Not understanding",
+                "Understanding not"
+              ],
+              correctIndex: 0,
+              translation: "Detayları anlamamış olduğundan, müdür takip raporu istedi.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Olumsuzluk Kuralı:</b> Kısaltmalarda olumsuzluk eki 'Not' her zaman yapının en başına getirilir: 'Not having V3'.",
+              grammarTags: ["Perfect Participle", "Negative Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q19",
+              type: "multiple-choice",
+              prompt: "Eşzamanlı bir eylemin 'olumsuz' (negative) etken kısaltması için doğru seçenek hangisidir?",
+              sentence: "_______ the local language, the anthropologist had difficulty in the field.",
+              options: [
+                "Not speaking",
+                "Speaking not",
+                "Not having spoken",
+                "Having not spoken"
+              ],
+              correctIndex: 0,
+              translation: "Yerel dili konuşamadığı için, antropolog sahada zorluk yaşadı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman Uyumlu Olumsuzluk:</b> Eşzamanlı durumun olumsuzu 'Not + V-ing' (Not speaking) ile kurulur.",
+              grammarTags: ["Time Reduction", "Negative Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q20",
+              type: "multiple-choice",
+              prompt: "'Upon receiving the primary sources' yapısının kısaltılmamış açık hali aşağıdakilerden hangisidir?",
+              options: [
+                "As soon as they received the primary sources",
+                "While they were receiving the primary sources",
+                "Although they received the primary sources",
+                "Before they had received the primary sources"
+              ],
+              correctIndex: 0,
+              translation: "Sonuçları/kaynakları alır almaz anlamı 'As soon as' ile açılır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Yapısal Çözümleme:</b> 'Upon/On V-ing' yapısı 'hemen ardındalık' bildirdiği için açık hali 'As soon as + S + V' kalıbıdır.",
+              grammarTags: ["Structural Deconstruction", "Time Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q21",
+              type: "multiple-choice",
+              prompt: "Herhangi bir zaman bağlacı (while, when vb.) kullanılmadan yapılan kısaltmalar hakkında hangisi söylenebilir?",
+              options: [
+                "Cümlenin anlam bağlamı ve eylemlerin sırası zaman ilişkisini belirlemek için yeterlidir.",
+                "Bu tür kısaltmalar dilbilgisi yönünden her zaman hatalıdır.",
+                "Bu yapılarda zaman anlamı tamamen kaybolur ve sadece sebep bildirir.",
+                "Bu cümleler sadece gelecek zamanı ifade etmek için kullanılır."
+              ],
+              correctIndex: 0,
+              translation: "Zaman bağlacı olmadan da kısaltma yapılabilir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> Zarf kısaltmalarında bağlaçlar (while, when vb.) isteğe bağlı olarak atılabilir. Bu durumda anlam bağlamdan çıkarılır.",
+              grammarTags: ["Grammar Rule", "Conjunction Deletion"]
+            },
+            {
+              id: "u35_l2_ex1_q22",
+              type: "multiple-choice",
+              prompt: "'After' edatından sonra gelen etken zaman kısaltmasını seçiniz:",
+              sentence: "After _______ the historical controversy, they published a joint paper.",
+              options: [
+                "resolving",
+                "resolved",
+                "having resolved",
+                "to resolve"
+              ],
+              correctIndex: 0,
+              translation: "Tarihi tartışmayı çözdükten sonra ortak bir makale yayınladılar.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Edat Kuralı:</b> 'After' edatından sonra doğrudan etken fiilin '-ing' hali (resolving) gelir. 'After having V3' kullanımı gereksiz kabul edilir.",
+              grammarTags: ["Time Reduction", "After Trigger", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q23",
+              type: "multiple-choice",
+              prompt: "'Before' edatından sonra gelen etken zaman kısaltmasını seçiniz:",
+              sentence: "Before _______ the empirical research, the scientists secured the funding.",
+              options: [
+                "initiating",
+                "initiated",
+                "having initiated",
+                "to initiate"
+              ],
+              correctIndex: 0,
+              translation: "Ampirik araştırmayı başlatmadan önce bilim insanları fonu güvenceye aldılar.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Edat Kuralı:</b> 'Before' edatından sonra doğrudan etken fiilin '-ing' hali (initiating) gelir.",
+              grammarTags: ["Time Reduction", "Before Trigger", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q24",
+              type: "multiple-choice",
+              prompt: "Eşzamanlı edilgen bir sürecin vurgulandığı kısaltma yapısını bulunuz:",
+              sentence: "Being _______ by the court, the witness felt extremely nervous.",
+              options: [
+                "questioned",
+                "questioning",
+                "questions",
+                "to question"
+              ],
+              correctIndex: 0,
+              translation: "Mahkeme tarafından sorgulanırken, tanık son derece gergin hissetti.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Eşzamanlı Süreç:</b> Edilgen süreç vurgusu 'Being + V3' (Being questioned) ile sağlanır.",
+              grammarTags: ["Time Reduction", "Passive Reduction", "Being V3"]
+            },
+            {
+              id: "u35_l2_ex1_q25",
+              type: "multiple-choice",
+              prompt: "Boşluktan sonra 'the legal dispute' (Nesne) olduğuna dikkat ederek doğru yapıyı seçiniz:",
+              sentence: "While _______ the legal dispute, the judge analyzed the primary sources.",
+              options: [
+                "studying",
+                "studied",
+                "having studied",
+                "studies"
+              ],
+              correctIndex: 0,
+              translation: "Yasal anlaşmazlığı incelerken, hakim birincil kaynakları analiz etti.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Nesne Takibi:</b> Boşluğun sağındaki nesne etkenlik gerektirir ➔ 'While studying' doğru tercihtir.",
+              grammarTags: ["Time Reduction", "Active Time Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l2_ex1_q26",
+              type: "multiple-choice",
+              prompt: "Zarflarda 'Having V3' ile 'V-ing' arasındaki en temel fark nedir?",
+              options: [
+                "'Having V3' eylemin daha önce bittiğini (öncelik), 'V-ing' ise eşzamanlılığı bildirir.",
+                "'Having V3' sadece edilgen cümlelerde, 'V-ing' ise etken cümlelerde kullanılır.",
+                "'Having V3' gelecek zamanı, 'V-ing' geçmiş zamanı ifade eder.",
+                "Aralarında hiçbir anlamsal veya dilbilgisel fark yoktur."
+              ],
+              correctIndex: 0,
+              translation: "Having V3 öncelik, V-ing eşzamanlılık bildirir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Zaman Ayrımı:</b> 'Having + V3' (Perfect Participle) eylemler arasındaki zaman farkını ve önceliği net şekilde ayırt eder.",
+              grammarTags: ["Grammar Rule", "Time Comparison"]
+            },
+            {
+              id: "u35_l2_ex1_q27",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki cümlenin boşluğuna gelebilecek yapıyı seçenek eleme kurallarına göre bulunuz:",
+              sentence: "While _______ the public opinions, the team gathered valuable insight.",
+              options: [
+                "evaluating",
+                "to evaluate",
+                "evaluated by",
+                "evaluates"
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşlerini değerlendirirken ekip değerli içgörüler topladı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Eleme:</b> Zarf kısaltmasında 'to'lu mastarlar veya çekimli fiiller (evaluates) kullanılamaz. Geriye etken 'evaluating' kalır.",
+              grammarTags: ["Time Reduction", "Elimination Strategy", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_ex1_q28",
+              type: "multiple-choice",
+              prompt: "Boşluktan hemen sonra bir nesne gelmediğine dikkat ederek, 'Once' bağlacından sonraki edilgen zaman kısaltmasını seçiniz:",
+              sentence: "Once _______, the legal code will be applied nationwide.",
+              options: [
+                "approved",
+                "approving",
+                "to approve",
+                "approves"
+              ],
+              correctIndex: 0,
+              translation: "Onaylanır onaylanmaz, yasal kod ülke çapında uygulanacaktır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Koşul/Zaman:</b> 'Once' bağlacından sonra edilgen kısaltma doğrudan 'V3' (approved) ile yapılır.",
+              grammarTags: ["Time Reduction", "Passive Reduction", "Once Trigger"]
+            },
+            {
+              id: "u35_l2_ex1_q29",
+              type: "multiple-choice",
+              prompt: "Genel bir durumu veya kuralı ifade ederken 'When' bağlacından sonra hangi etken kısaltma yapısı tercih edilir?",
+              sentence: "When _______ new research projects, economists must follow guidelines.",
+              options: [
+                "designing",
+                "designed",
+                "to design",
+                "having designed"
+              ],
+              correctIndex: 0,
+              translation: "Yeni araştırma projeleri tasarlarken, iktisatçılar kılavuzları takip etmelidir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Genel Durum:</b> Genel veya geniş zamanlı kurallarda 'When + V-ing' (designing) etken süreç olarak kullanılır.",
+              grammarTags: ["Time Reduction", "Active Time Reduction", "When Trigger"]
+            },
+            {
+              id: "u35_l2_ex1_q30",
+              type: "multiple-choice",
+              prompt: "Zarf cümleciklerinde özne uyuşmazlığından kaynaklanan 'Dangling Modifier' hatası içeren cümle hangisidir?",
+              options: [
+                "While walking down the street, the library was closed.",
+                "While walking down the street, I saw the closed library.",
+                "Having finished the book, he went to bed.",
+                "Upon entering the room, they turned on the lights."
+              ],
+              correctIndex: 0,
+              translation: "'While walking...' cümlesinde yürüyen kütüphane olamayacağı için özne hatası vardır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Hata Tespiti:</b> 'While walking' eyleminin gizli öznesi ana cümle öznesi olan 'the library' (kütüphane) olamayacağı için 'Dangling Modifier' hatası oluşmuştur.",
+              grammarTags: ["Grammar Error", "Dangling Modifier", "Subject Agreement"]
             }
           ]
         },
