@@ -5649,8 +5649,18 @@ input {
 .unit-banner-title-row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+
+.unit-banner-title-row > span:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
 }
 
 .unit-banner-not-uploaded-tag {

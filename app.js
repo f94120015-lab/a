@@ -85,36 +85,42 @@ function cleanAcademicUnitTitle(title) {
     .replace(/^Bölüm\s*\d+\s*/i, "")
     .replace(/^[IVXLCDM]+\.\s*/, "");
 
-  if (map[cleaned]) return map[cleaned];
-  if (map[t]) return map[t];
+  let result = cleaned;
+  if (map[cleaned]) {
+    result = map[cleaned];
+  } else if (map[t]) {
+    result = map[t];
+  } else {
+    result = cleaned
+      .replace(/Mühendisliği/g, "Yapıları")
+      .replace(/mühendisliği/g, "yapıları")
+      .replace(/Kalkanları/g, "Yapıları")
+      .replace(/kalkanları/g, "yapıları")
+      .replace(/Zirvesi/g, "Soruları")
+      .replace(/zirvesi/g, "soruları")
+      .replace(/Matrisi/g, "Yapıları")
+      .replace(/matrisi/g, "yapıları")
+      .replace(/Kriptoloji/g, "Çözümleme")
+      .replace(/kriptoloji/g, "çözümleme")
+      .replace(/Titan/g, "İleri")
+      .replace(/titan/g, "ileri")
+      .replace(/Hiper/g, "İleri")
+      .replace(/hiper/g, "ileri")
+      .replace(/Mega/g, "Karma")
+      .replace(/mega/g, "karma")
+      .replace(/Strüktürleri/g, "Yapıları")
+      .replace(/strüktürleri/g, "yapıları")
+      .replace(/Strüktürü/g, "Yapısı")
+      .replace(/strüktürü/g, "yapısı")
+      .replace(/Strüktürel/g, "Yapısal")
+      .replace(/strüktürel/g, "yapısal")
+      .replace(/Strüktür/g, "Yapı")
+      .replace(/strüktür/g, "yapı");
+  }
 
-  cleaned = cleaned
-    .replace(/Mühendisliği/g, "Yapıları")
-    .replace(/mühendisliği/g, "yapıları")
-    .replace(/Kalkanları/g, "Yapıları")
-    .replace(/kalkanları/g, "yapıları")
-    .replace(/Zirvesi/g, "Soruları")
-    .replace(/zirvesi/g, "soruları")
-    .replace(/Matrisi/g, "Yapıları")
-    .replace(/matrisi/g, "yapıları")
-    .replace(/Kriptoloji/g, "Çözümleme")
-    .replace(/kriptoloji/g, "çözümleme")
-    .replace(/Titan/g, "İleri")
-    .replace(/titan/g, "ileri")
-    .replace(/Hiper/g, "İleri")
-    .replace(/hiper/g, "ileri")
-    .replace(/Mega/g, "Karma")
-    .replace(/mega/g, "karma")
-    .replace(/Strüktürleri/g, "Yapıları")
-    .replace(/strüktürleri/g, "yapıları")
-    .replace(/Strüktürü/g, "Yapısı")
-    .replace(/strüktürü/g, "yapısı")
-    .replace(/Strüktürel/g, "Yapısal")
-    .replace(/strüktürel/g, "yapısal")
-    .replace(/Strüktür/g, "Yapı")
-    .replace(/strüktür/g, "yapı");
-
-  return cleaned.trim();
+  // Remove parenthesis and their content
+  result = result.replace(/\s*\([^)]*\)/g, "");
+  return result.trim();
 }
 
 function cleanAcademicLessonTitle(title) {
