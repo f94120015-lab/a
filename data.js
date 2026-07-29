@@ -47785,7 +47785,7 @@ const placementQuestions = [
 const unit35 = {
   unitId: "unit_35_reductions",
   unitTitle: "Akademik Cümle Analizi ve Kısaltmalar (Reductions)",
-  unitDescription: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles/Reductions), bağımsız özne yapıları, sonuç bildiren participle öbekleri ve akademik metin parsing stratejileri.",
+  unitDescription: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles/Reductions), bağımsız özne yapıları, sonuç bildiren participle öbekleri ve akademik metin çözme algoritmaları.",
   formulas: [
     {
       formula: "Noun + V-ing / V3 / To V1 (Relative Clause Reduction)",
@@ -47819,633 +47819,1869 @@ const unit35 = {
     }
   ],
   lessons: [
-  {
-    "lessonId": "u35_l1",
-    "lessonTitle": "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
-    "exercises": [
-      {
-        "id": "u35_l1_ex1",
-        "title": "Alıştırma 1: Öbek Düzeyi — Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
-        "description": "Beşeri ve sosyal bilimler alanındaki sıfat kısaltma öbeklerini eşleştirme ve niteleyici analizi",
-        "questions": [
-          {
-            "id": "u35_l1_q1",
-            "type": "matching",
-            "prompt": "Tarih ve antropoloji alanındaki sıfat cümlesi kısaltma öbeklerini Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "the ancient manuscripts preserved in state archives",
-                "right": "devlet arşivlerinde muhafaza edilen antik el yazmaları"
-              },
-              {
-                "left": "anthropologists documenting indigenous cultural traditions",
-                "right": "yerli kültürel gelenekleri belgeleyen antropologlar"
-              },
-              {
-                "left": "the primary source evaluated by historians",
-                "right": "tarihçiler tarafından değerlendirilen birincil kaynak"
-              },
-              {
-                "left": "archaeologists working on spatial mapping",
-                "right": "mekânsal haritalama üzerine çalışan arkeologlar"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l1_q2",
-            "type": "matching",
-            "prompt": "Hukuk ve iktisat alanındaki sıfat niteleme öbeklerini eşleştirin.",
-            "pairs": [
-              {
-                "left": "statutory regulations governing digital communication",
-                "right": "dijital iletişimi düzenleyen kanuni yönetmelikler"
-              },
-              {
-                "left": "monetary policies enacted to curb financial instability",
-                "right": "finansal istikrarsızlığı önlemek amacıyla yürürlüğe konan parasal politikalar"
-              },
-              {
-                "left": "the judicial decisions regulating civil liberties",
-                "right": "sivil özgürlükleri düzenleyen yargı kararları"
-              },
-              {
-                "left": "economists analyzing market fluctuations",
-                "right": "piyasa dalgalanmalarını analiz eden iktisatçılar"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l1_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan sıfat kısaltma öbeğinin dilbilgisel yapısını ve Türkçe anlamını seçin:",
-            "paragraph": "The film directors utilizing innovative cinematic techniques captured the subtle nuances of social cohesion.",
-            "highlightChunk": "utilizing innovative cinematic techniques",
-            "options": [
-              "yenilikçi sinematik teknikleri kullanan (Etken Sıfat Cümleciği Kısaltması - Noun + V-ing)",
-              "yenilikçi sinematik teknikler kullanıldıktan sonra (Zaman Kısaltması)",
-              "yenilikçi sinematik teknikleri kullanmak amacıyla (Amaç Kısaltması)",
-              "yenilikçi sinematik teknikler kullanıldığı için (Sebep Kısaltması)"
-            ],
-            "correctIndex": 0,
-            "translation": "Yenilikçi sinematik teknikleri kullanan film yönetmenleri, sosyal uyumun ince nüanslarını yakaladı.",
-            "explanation": "'utilizing...' etken niteleme yapısıdır (directors who utilize -> directors utilizing).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l1_q4",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan edilgen sıfat nitelemesini analiz edin:",
-            "paragraph": "The sociological survey conducted across urban communities revealed significant demographic shifts.",
-            "highlightChunk": "conducted across urban communities",
-            "options": [
-              "kentsel topluluklar genelinde yürütülen (Edilgen Sıfat Cümleciği Kısaltması - Noun + V3)",
-              "kentsel toplulukları yürütmek üzere",
-              "kentsel topluluklar yürütüldüğü için",
-              "kentsel topluluklar yürütüldükten sonra"
-            ],
-            "correctIndex": 0,
-            "translation": "Kentsel topluluklar genelinde yürütülen sosyolojik anket, önemli demografik kaymaları ortaya çıkardı.",
-            "explanation": "'conducted...' edilgen niteleme yapısıdır (survey which was conducted -> survey conducted).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l1_q5",
-            "type": "swipe",
-            "prompt": "Sıfat cümlesi kısaltma sentaksı doğru mu? Sağ (VALID) / Sol (BUG)",
-            "phrase": "The museum curators restored ancient artifacts identified several distinct artistic movements.",
-            "translation": "Antik eserleri restore eden müze küratörleri birkaç farklı sanatsal akım belirledi.",
-            "isCorrect": false,
-            "explanation": "BUG! Küratörler eserleri restore eden etken öznedir. 'restored' (V3) edilgen niteleme yerine 'restoring' (V-ing) kullanılmalıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Cümledeki boşluğa gelecek doğru niteleyici kısaltma biçimini seçin:",
-            "sentence": "Psychologists __________ cognitive processes under psychological stress observed marked differences in emotional intelligence.",
-            "options": [
-              "investigating",
-              "investigated",
-              "to be investigated",
-              "having investigated by"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikolojik stres altında bilişsel süreçleri inceleyen psikologlar, duygusal zekada belirgin farklılıklar gözlemlediler.",
-            "explanation": "Psikologlar inceleme eylemini yapan etken öznedir (investigating).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "lessonId": "u35_l2",
-    "lessonTitle": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık (Time & Sequence)",
-    "exercises": [
-      {
-        "id": "u35_l2_ex1",
-        "title": "Alıştırma 1: Cümle Düzeyi — Zarf Cümleciği Kısaltmaları (Time & Sequence Reductions)",
-        "description": "Zaman, öncelik ve eylem sırası bildiren zarf kısaltmalarını inceleme ve çeviri alıştırmaları",
-        "questions": [
-          {
-            "id": "u35_l2_q1",
-            "type": "matching",
-            "prompt": "Zaman önceliği ve eylem sırası bildiren akademik kısaltma cümlelerini eşleştirin.",
-            "pairs": [
-              {
-                "left": "Having analyzed primary sources",
-                "right": "birincil kaynakları analiz ettikten sonra"
-              },
-              {
-                "left": "While examining architectural heritage",
-                "right": "mimari mirası incelerken"
-              },
-              {
-                "left": "Having been reviewed by legal scholars",
-                "right": "hukuk alimlerince gözden geçirildikten sonra"
-              },
-              {
-                "left": "Upon launching the journalistic investigation",
-                "right": "gazetecilik soruşturmasını başlatır başlatmaz"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l2_q2",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan etken zaman önceliği yapısını seçin:",
-            "paragraph": "Having completed the extensive fieldnotes on tribal rituals, the anthropologist published a comprehensive monograph.",
-            "highlightChunk": "Having completed the extensive fieldnotes on tribal rituals",
-            "options": [
-              "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamladıktan sonra (Etken Öncelik Kısaltması - Having V3)",
-              "Kabile ritüelleri üzerine kapsamlı arazi notları tamamlanırken",
-              "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamlamak amacıyla",
-              "Kabile ritüelleri üzerine kapsamlı arazi notları tamamlandığı sürece"
-            ],
-            "correctIndex": 0,
-            "translation": "Kabile ritüelleri üzerine kapsamlı arazi notlarını tamamladıktan sonra antropolog kapsayıcı bir monografi yayınladı.",
-            "explanation": "'Having completed...' eylemin zaman olarak ana cümle eyleminden önce yapıldığını gösteren etken zaman önceliği kısaltmasıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l2_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan edilgen zaman önceliği yapısının anlamını bulun:",
-            "paragraph": "Having been affected by severe economic stagnation, the urban communities demanded structural policy reforms.",
-            "highlightChunk": "Having been affected by severe economic stagnation",
-            "options": [
-              "Ciddi ekonomik durgunluktan etkilendikten sonra / etkilendiği için (Edilgen Öncelik Kısaltması - Having been V3)",
-              "Ciddi ekonomik durgunluğu etkilerken",
-              "Ciddi ekonomik durgunluktan etkilenmesine karşın",
-              "Ciddi ekonomik durgunluğu etkilemek amacıyla"
-            ],
-            "correctIndex": 0,
-            "translation": "Ciddi ekonomik durgunluktan etkilendikten sonra kentsel topluluklar yapısal politika reformları talep etti.",
-            "explanation": "'Having been affected' edilgen ve öncelikli zarf kısaltmasıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l2_q4",
-            "type": "swipe",
-            "prompt": "Zarf cümlesi kısaltma sentaksı doğru mu? Sağ (VALID) / Sol (BUG)",
-            "phrase": "After analyze the geographic distribution of resources, the geographers drew new thematic maps.",
-            "translation": "Kaynakların coğrafi dağılımını analiz ettikten sonra coğrafyacılar yeni tematik haritalar çizdiler.",
-            "isCorrect": false,
-            "explanation": "BUG! Edattan sonra fiil yalın gelmez; kısaltma kalıbı 'After analyzing' (V-ing) olmalıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l2_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelebilecek en uygun zaman kısaltmasını seçin:",
-            "sentence": "__________ the documentary film on public discourse, the media analyst highlighted ethical standards in journalism.",
-            "options": [
-              "While reviewing",
-              "Reviewed",
-              "To review having",
-              "Being reviewed by"
-            ],
-            "correctIndex": 0,
-            "translation": "Kamusal söylem hakkındaki belgesel filmi incelerken medya analisti gazetecilikteki etik standartları vurguladı.",
-            "explanation": "'While + V-ing' eşzamanlı etken zarf cümlesi kısaltmasıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "lessonId": "u35_l3",
-    "lessonTitle": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık (Cause, Condition & Contrast)",
-    "exercises": [
-      {
-        "id": "u35_l3_ex1",
-        "title": "Alıştırma 1: Cümle Düzeyi — Sebep, Koşul ve Zıtlık Kısaltmaları (Cause, Condition & Contrast)",
-        "description": "Neden-sonuç, koşul ve zıtlık bağlamlı zarf kısaltmalarının çözümlenmesi",
-        "questions": [
-          {
-            "id": "u35_l3_q1",
-            "type": "matching",
-            "prompt": "Sebep, zıtlık ve koşul kısaltma cümlelerini Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "Faced with financial instability",
-                "right": "finansal istikrarsızlıkla karşı karşıya kaldığı için"
-              },
-              {
-                "left": "Not knowing the historical context",
-                "right": "tarihi bağlamı bilmediği için"
-              },
-              {
-                "left": "Although criticized by art historians",
-                "right": "sanat tarihçilerince eleştirilmesine rağmen"
-              },
-              {
-                "left": "Unless protected by constitutional rights",
-                "right": "anayasal haklarla korunmadığı sürece"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l3_q2",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan olumsuz etken sebep kısaltmasını analiz edin:",
-            "paragraph": "Not possessing archival documents on constitutional law, the attorney requested an extension for the judicial trial.",
-            "highlightChunk": "Not possessing archival documents on constitutional law",
-            "options": [
-              "Anayasa hukuku üzerine arşiv belgelerine sahip olmadığı için (Olumsuz Etken Sebep Kısaltması)",
-              "Anayasa hukuku üzerine arşiv belgelerine sahip olmasına rağmen",
-              "Anayasa hukuku üzerine arşiv belgelerine sahip olduğu sürece",
-              "Anayasa hukuku üzerine arşiv belgelerine sahip olmak maksadıyla"
-            ],
-            "correctIndex": 0,
-            "translation": "Anayasa hukuku üzerine arşiv belgelerine sahip olmadığı için avukat yargısal duruşma için ek süre talep etti.",
-            "explanation": "'Not + V-ing' yapısı olumsuz sebep bildirir (As he did not possess...).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l3_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan edilgen sebep kısaltmasının cümleye kattığı anlamı seçin:",
-            "paragraph": "Restricted by statutory regulations on digital privacy, the corporation altered its data collection protocols.",
-            "highlightChunk": "Restricted by statutory regulations on digital privacy",
-            "options": [
-              "Dijital gizlilik üzerindeki kanuni yönetmeliklerle kısıtlandığı için (Edilgen Sebep Kısaltması - V3)",
-              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtladıktan sonra",
-              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtlamasına rağmen",
-              "Dijital gizlilik üzerindeki kanuni yönetmelikleri kısıtlamak amacıyla"
-            ],
-            "correctIndex": 0,
-            "translation": "Dijital gizlilik üzerindeki kanuni yönetmeliklerle kısıtlandığı için şirket veri toplama protokollerini değiştirdi.",
-            "explanation": "'Restricted by...' edilgen sebep kısaltmasıdır (Because it was restricted by...).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l3_q4",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelebilecek en uygun zıtlık kısaltmasını seçin:",
-            "sentence": "__________ in ancient manuscripts, the philosophical theory gained widespread popular interest only in the 20th century.",
-            "options": [
-              "Although obscured",
-              "Despite obscuring",
-              "Because obscured",
-              "While obscuring"
-            ],
-            "correctIndex": 0,
-            "translation": "Antik el yazmalarında muğlak kalmasına / anlaşılmaz olmasına rağmen felsefi teori popüler ilgiyi ancak 20. yüzyılda kazandı.",
-            "explanation": "'Although + V3' zıtlık bağlacının korunduğu edilgen niteleme kısaltmasıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "lessonId": "u35_l4",
-    "lessonTitle": "4. Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları (Absolute & Resultative Clauses)",
-    "exercises": [
-      {
-        "id": "u35_l4_ex1",
-        "title": "Alıştırma 1: Cümle Düzeyi — Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları (Absolute & Resultative Clauses)",
-        "description": "Absolute Clauses (öznesi farklı kısaltmalar) ve Thereby/Thus + V-ing kalıpları",
-        "questions": [
-          {
-            "id": "u35_l4_q1",
-            "type": "matching",
-            "prompt": "Bağımsız özneli ve sonuç bildiren kısaltma cümlelerini eşleştirin.",
-            "pairs": [
-              {
-                "left": "Weather conditions permitting",
-                "right": "hava koşulları elverdiği takdirde"
-              },
-              {
-                "left": "The archaeological excavation having concluded",
-                "right": "arkeolojik kazı sona erdiği için / erdikten sonra"
-              },
-              {
-                "left": "..., thereby ensuring social cohesion",
-                "right": "..., böylelikle sosyal uyumu güvence altına alarak"
-              },
-              {
-                "left": "..., thus causing demographic shifts",
-                "right": "..., böylece demografik kaymalara yol açarak"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l4_q2",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan sonuç bildiren participle yapısını (thereby + V-ing) analiz edin:",
-            "paragraph": "The parliament passed landmark legislation on civil liberties, thereby protecting fundamental constitutional rights.",
-            "highlightChunk": "thereby protecting fundamental constitutional rights",
-            "options": [
-              "Temel anayasal hakları korumak amacıyla",
-              "böylelikle temel anayasal hakları koruyarak / güvenceye alarak (Sonuç Bildiren Participle)",
-              "Temel anayasal haklar korunmasına rağmen",
-              "Temel anayasal haklar korunduğu zaman"
-            ],
-            "correctIndex": 1,
-            "translation": "Parlamento sivil özgürlükler üzerine tarihi bir yasayı kabul etti ve böylelikle temel anayasal hakları koruma altına aldı.",
-            "explanation": "Virgül sonrasında gelen 'thereby + V-ing' ana cümlenin doğrudan yol açtığı sonucu ifade eder.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l4_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Vurgulanan bağımsız özneli yapıyı (Absolute Clause) inceleyin:",
-            "paragraph": "All primary sources having been cross-checked by historians, the publisher released the biographical volume.",
-            "highlightChunk": "All primary sources having been authenticated",
-            "options": [
-              "Tüm birincil kaynaklar tarihçilerce çapraz kontrol edildikten sonra (Bağımsız Özneli Kısaltma)",
-              "Tarihçiler tüm birincil kaynakları çapraz kontrol etmek üzere",
-              "Tüm birincil kaynaklar çapraz kontrol edilmesine karşın",
-              "Tüm birincil kaynakları kontrol eden tarihçiler"
-            ],
-            "correctIndex": 0,
-            "translation": "Tüm birincil kaynaklar tarihçilerce çapraz kontrolden geçirildikten sonra yayıncı biyografik cildi yayımladı.",
-            "explanation": "Yan cümlenin öznesi 'All primary sources' düşürülmemiş, bağımsız özne yapısı korunmuştur.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u35_l4_q4",
-            "type": "fill-blank-dropdown",
-            "prompt": "Sonuç bildiren virgül sonrası boşluğu doldurun:",
-            "sentence": "The government invested in renewable infrastructure, __________ lowering greenhouse gas emissions.",
-            "options": [
-              "thereby drastically",
-              "thereby drastic",
-              "thereby to drastically",
-              "thereby drastically lowered"
-            ],
-            "correctIndex": 0,
-            "translation": "Hükümet yenilenebilir altyapıya yatırım yaptı ve böylelikle sera gazı emisyonlarını ciddi oranda düşürdü.",
-            "explanation": "'thereby + V-ing' kalıbı sonuç bildirir.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "lessonId": "u35_l5",
-    "lessonTitle": "5. Akademik Cümle Parsing & Çözümleme Stratejileri (Sentence Parsing Matrix)",
-    "exercises": [
-      {
-        "id": "u35_l5_ex1",
-        "title": "Alıştırma 1: Akademik / Spiralleşme — Cümle Parsing & Geçmiş Konu Entegrasyonu (Sentence Parsing Matrix & Spiral Integration)",
-        "description": "Geçmiş bölümlerden bilinen 'It is... that', 'Relative Clauses' ve 'Prepositional Phrases' yapılarıyla harmanlanmış akademik cümle analizi.",
-        "questions": [
-          {
-            "id": "u35_l5_q1",
-            "type": "spotlight",
-            "prompt": "Projektör Modu (Spiralleşme): Aşağıdaki uzun akademik cümlenin ANA FİİLİNİ (Main Verb) tespit edin:",
-            "paragraph": "It is widely acknowledged by scholars that the interdisciplinary committee, comprising renowned sociologists and economists investigating demographic shifts, has recommended fundamental policy reforms.",
-            "highlightChunk": "has recommended",
-            "options": [
-              "comprising (Kısaltma/Niteleyici)",
-              "investigating (Kısaltma/Niteleyici)",
-              "has recommended (ANA FİİL / Main Verb)",
-              "is widely acknowledged (İsim Cümlesi Giriş Fiili)"
-            ],
-            "correctIndex": 2,
-            "translation": "Demografik kaymaları inceleyen tanınmış sosyolog ve iktisatçılardan oluşan disiplinlerarası komitenin temel politika reformları tavsiye ettiği alimlerce yaygın biçimde kabul edilmektedir.",
-            "explanation": "Cümledeki 'comprising...' ve 'investigating...' yan kısaltmalardır. 'that' yan cümlesinin ana yüklemi 'has recommended'dır. (It is... that sahte özne kalıbı geçmiş konudan tekrar edilmiştir).",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          },
-          {
-            "id": "u35_l5_q2",
-            "type": "matching",
-            "prompt": "Cümle içi bileşenleri ve geçmiş konu tekrar kalıplarını eşleştirin.",
-            "paragraph": "It is reported by historians that the ancient manuscript preserved in state archives contains vital records, thereby clarifying unresolved legal disputes.",
-            "pairs": [
-              {
-                "left": "It is reported by historians that...",
-                "right": "Geçmiş Konu: Sahte Özne / İsim Cümleciği Kalıbı (It is V3 that...)"
-              },
-              {
-                "left": "the ancient manuscript preserved in state archives",
-                "right": "Özne + Edilgen Sıfat Kısaltması (Noun + V3)"
-              },
-              {
-                "left": "contains vital records",
-                "right": "Ana Yüklem ve Nesne Öbeği"
-              },
-              {
-                "left": "thereby clarifying unresolved legal disputes",
-                "right": "Sonuç Bildiren Participle (thereby + V-ing)"
-              }
-            ],
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          },
-          {
-            "id": "u35_l5_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Cümledeki ARAYA GİREN KISALTMA ÖBEĞİNİ (Parenthetical Reduction) belirleyin:",
-            "paragraph": "The constitutional amendment, drafted by legal scholars after lengthy judicial debates, aims to fortify civil liberties across all jurisdictions.",
-            "highlightChunk": "drafted by legal scholars after lengthy judicial debates",
-            "options": [
-              "The constitutional amendment (Ana Özne)",
-              "drafted by legal scholars after lengthy judicial debates (Araya Giren Edilgen Kısaltma)",
-              "aims to fortify (Ana Yüklem / Main Verb)",
-              "civil liberties across all jurisdictions (Nesne Öbeği)"
-            ],
-            "correctIndex": 1,
-            "translation": "Uzun yargısal tartışmaların ardından hukuk alimlerince taslağı hazırlanan anayasa değişikliği, tüm yargı alanlarında sivil özgürlükleri güçlendirmeyi hedeflemektedir.",
-            "explanation": "'drafted by legal scholars...' özne ile yüklem arasına giren edilgen niteleme kısaltmasıdır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "lessonId": "u35_l6",
-    "lessonTitle": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği (Advanced Diagnostic)",
-    "exercises": [
-      {
-        "id": "u35_l6_ex1",
-        "title": "Alıştırma 1: Akademik / Spiralleşme — Sınav Odaklı Karma Master Class & Sentaks Dedektifliği (Advanced Diagnostic)",
-        "description": "Sınav formatında Dangling Participles, çift taraflı boşluklar ve karma sentaks çözümlemesi",
-        "questions": [
-          {
-            "id": "u35_l6_q1",
-            "type": "swipe",
-            "prompt": "Cümlede 'Dangling Participle' (Özne Uyumsuzluğu Hatalı Kullanım) var mı? Sol (BUG) / Sağ (VALID)",
-            "phrase": "Examining the anthropological fieldnotes, several indigenous cultural traditions were analyzed by the researchers.",
-            "translation": "Antropolojik arazi notları incelenirken, araştırmacılar tarafından birkaç yerli kültürel gelenek analiz edildi.",
-            "isCorrect": false,
-            "explanation": "BUG! (Dangling Participle). 'Examining...' etken kısaltmasının mantıksal öznesi araştırmacılardır; fakat ana cümlenin öznesi 'traditions' (gelenekler) yazılmıştır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          },
-          {
-            "id": "u35_l6_q2",
-            "type": "fill-blank-dropdown",
-            "prompt": "YDS/YÖKDİL Çift Boşluk Doldurma (Kısaltma + İsim ve Edat Yapıları):",
-            "sentence": "The documentary film, __________ by renowned cinema directors, provides key insights __________ social cohesion in urban communities.",
-            "options": [
-              "produced / into",
-              "producing / onto",
-              "having produced / with",
-              "to produce / at"
-            ],
-            "correctIndex": 0,
-            "translation": "Tanınmış sinema yönetmenlerince üretilen belgesel film, kentsel topluluklardaki sosyal uyuma dair önemli bilgiler sağlamaktadır.",
-            "explanation": "'film (which was) produced' edilgen kısaltmadır; 'insights into' ise sabit isim-edat kombinasyonudur.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          },
-          {
-            "id": "u35_l6_q3",
-            "type": "spotlight",
-            "prompt": "Projektör Modu: Cümledeki spiralleşmiş geçmiş yapıları (It is believed that...) ve kısaltmayı birlikte analiz edin:",
-            "paragraph": "It is widely believed that the economic policies enacted by parliament will stabilize market fluctuations, thereby reducing financial stress.",
-            "highlightChunk": "enacted by parliament will stabilize market fluctuations, thereby reducing",
-            "options": [
-              "parlamento tarafından yürürlüğe konan politikaların piyasa dalgalanmalarını istikrara kavuşturacağı ve böylelikle finansal stresi azaltacağı (Kısaltma + İsim Cümleciği Entegrasyonu)",
-              "parlamento yürürlüğe koyduğu zaman finansal stresi azaltacağı",
-              "parlamento yürürlüğe koymasına karşın finansal stresi azaltacağı",
-              "parlamento yürürlüğe koymak amacıyla finansal stresi azaltacağı"
-            ],
-            "correctIndex": 0,
-            "translation": "Parlamento tarafından yürürlüğe konan ekonomik politikaların piyasa dalgalanmalarını istikrara kavuşturacağı ve böylelikle finansal stresi azaltacağı yaygın biçimde inanılmaktadır.",
-            "explanation": "Cümlede hem 'It is believed that' isim cümlesi kalıbı, hem 'enacted by' edilgen sıfat kısaltması hem de 'thereby reducing' sonuç kısaltması bir arada harmanlanmıştır.",
-            "grammarTags": [
-              "Cümle Analizi ve Kısaltma Yapıları (Reductions)",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları",
-              "Geçmiş Konu Tekrarı"
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+    {
+      lessonId: "u35_l1",
+      lessonTitle: "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
+      description: `<strong>🧠 Sıfat Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Boşluğun önünde <em>the first / the last / the only / superlative</em> var mı?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>TO</strong> ara (<em>to V1</em> veya <em>to be V3</em>).<br>• <strong>Hayır ise ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluğun hemen sağında ne var?<br>• <strong>Nesne (İsim öbeği) var ise ➔</strong> Eylem etkendir, <strong>V-ing</strong> seç.<br>• <strong>Edat (by, in, under vb.) var ise ➔</strong> Eylem edilgendir, <strong>V3</strong> seç.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Sıfat Kısaltmasının \"3 Altın Formülü\" Nedir?</strong><br>Bir <strong>ismin (Noun)</strong> hemen ardından gelip onu niteleyen sıfat cümleciği kısaltması <strong>SADECE</strong> şu 3 yapıdan biri olabilir:<br>1. <strong>Noun + V-ing</strong> (Etken: Yapan/Eden)<br>2. <strong>Noun + V3</strong> (Edilgen: Yapılan/Edilen)<br>3. <strong>Noun + To V1 / To be V3</strong> (Sıralama/Amaç)<br><br>⚠️ <strong>Önemli Kural:</strong> Bir ismin hemen ardından <strong>Having V3 / Having been V3</strong>, çekimli fiil (V1/V2/s takısı vb.) veya <strong>to V-ing</strong> yapısı gelip o ismi niteleyemez. Seçeneklerde bunları doğrudan eleyebilirsin!`,
+      exercises: [
+        {
+          id: "u35_l1_ex1",
+          title: "1. Tanıma ve Ayırt Etme Stratejileri",
+          description: "Kısaltma yapılarının ayırt edici özelliklerinin ve seçenek eleme kurallarının tespiti.",
+          questions: [
+            {
+              id: "u35_l1_q1",
+              type: "multiple-choice",
+              prompt: "Cümledeki 'the first economist' ifadesine dikkat ederek boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "He was the first economist to criticize this policy.",
+              options: [
+                "to criticize",
+                "criticizing",
+                "criticized",
+                "having criticized"
+              ],
+              correctIndex: 0,
+              translation: "Bu politikayı eleştiren ilk iktisatçı oydu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Boşluğun önünde 'the first' (sıralama) var ➔ <b>Cevap 'To' ile başlamalıdır.</b><br>2. <b>Eleme:</b> Bu nedenle 'criticizing' (V-ing), 'criticized' (V3) ve 'having criticized' elenir.",
+              grammarTags: ["Relative Clause Reduction", "To-Infinitive", "Elimination Strategy"]
+            },
+            {
+              id: "u35_l1_q2",
+              type: "multiple-choice",
+              prompt: "Önündeki 'the only' tetikleyicisine göre boşluğu niteleyecek edilgen kısaltmayı bulunuz:",
+              sentence: "The only report to be published by the research institute yesterday was suspended.",
+              options: [
+                "to be published",
+                "publishing",
+                "published",
+                "having been published"
+              ],
+              correctIndex: 0,
+              translation: "Dün araştırma enstitüsü tarafından yayınlanan tek rapor askıya alındı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Boşluğun önünde 'the only' (teklik) var ➔ <b>Cevap 'To' ile başlamalıdır.</b><br>2. <b>Etken/Edilgen:</b> Rapor edilgen olduğu için 'to be V3' (to be published) doğru seçenektir.",
+              grammarTags: ["Relative Clause Reduction", "To-Infinitive", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_q3",
+              type: "multiple-choice",
+              prompt: "Boşluktan önce 'the best' (superlative) yapısı bulunduğundan seçeneklerden hangisi sıfat kısaltması olarak gelmelidir?",
+              sentence: "This is the best research project to evaluate public opinions.",
+              options: [
+                "to evaluate",
+                "evaluating",
+                "evaluated",
+                "having evaluated"
+              ],
+              correctIndex: 0,
+              translation: "Bu, kamuoyu görüşlerini değerlendirmek için en iyi araştırma projesidir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Boşluğun önünde 'the best' (en üstünlük) var ➔ <b>Cevap 'To' ile başlamalıdır.</b><br>2. <b>Eleme:</b> Sıfat kısaltmasında 'to' gerekir, diğer seçenekler doğrudan elenir.",
+              grammarTags: ["Relative Clause Reduction", "To-Infinitive", "Elimination Strategy"]
+            },
+            {
+              id: "u35_l1_q4",
+              type: "multiple-choice",
+              prompt: "Boşluktan önce 'the next anthropologist' (sıralama) ifadesi yer aldığından doğru sıfat kısaltma formülünü seçiniz:",
+              sentence: "She was the next anthropologist to study kinship patterns of the ancient community.",
+              options: [
+                "to study",
+                "studying",
+                "studied",
+                "having studied"
+              ],
+              correctIndex: 0,
+              translation: "Antik topluluğun akrabalık kalıplarını inceleyecek bir sonraki antropolog oydu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Boşluğun önünde 'the next' (sıralama) var ➔ <b>Cevap 'To V1' olmalıdır.</b><br>2. <b>Eleme:</b> Diğer etken/edilgen alternatifler elenir.",
+              grammarTags: ["Relative Clause Reduction", "To-Infinitive", "Active Reduction"]
+            },
+            {
+              id: "u35_l1_q5",
+              type: "multiple-choice",
+              prompt: "Sıfat kısaltması kurallarına göre, önünde 'the first' tetikleyicisi olan bir isimden sonra hangisi doğrudan niteleme yapamaz (elenmelidir)?",
+              sentence: "He was the first lawyer having resolved such a complex legal dispute.",
+              options: [
+                "having resolved",
+                "to resolve",
+                "resolving",
+                "resolved"
+              ],
+              correctIndex: 0,
+              translation: "Böylesine karmaşık bir yasal anlaşmazlığı çözen ilk avukat oydu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> 'the first' yapısı 'to' gerektirir. 'having resolved' isimden sonra doğrudan sıfat kısaltması olamaz.<br>2. <b>Kural:</b> Sıfat kısaltmasında 'having V3' asla isim niteleyemez.",
+              grammarTags: ["Relative Clause Reduction", "Elimination Strategy", "To-Infinitive"]
+            },
+            {
+              id: "u35_l1_q6",
+              type: "multiple-choice",
+              prompt: "Sıfat kısaltması kurallarına göre, önünde herhangi bir 'to' tetikleyicisi (first, only vb.) bulunmayan bu cümlede hangisi niteleme yapabilir?",
+              sentence: "The historians studying early cinema archives discovered rare documents.",
+              options: [
+                "studying",
+                "to study",
+                "having studied",
+                "studies"
+              ],
+              correctIndex: 0,
+              translation: "Erken sinema arşivlerini çalışan tarihçiler nadir belgeler keşfettiler.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' vb. yok ➔ <b>To elenir.</b><br>2. <b>Eleme:</b> Çekimli fiil (studies) ve 'having V3' sıfat kısaltması olamaz. Geriye etken 'studying' kalır.",
+              grammarTags: ["Relative Clause Reduction", "Elimination Strategy", "Active Reduction"]
+            },
+            {
+              id: "u35_l1_q7",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'public opinions' (Nesne) geldiğine dikkat ederek etken sıfat kısaltmasını seçiniz:",
+              sentence: "The behavioral psychologists [analyzing] public opinions on social environment published a report.",
+              options: ["analyzing", "analyzed", "to be analyzed", "analyzes"],
+              correctIndex: 0,
+              translation: "Sosyal çevre hakkında kamuoyundaki görüşleri analiz eden davranış psikologları bir rapor yayınladı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'public opinions' (Nesne) var ➔ <b>Etken 'V-ing' (analyzing) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l1_q8",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'in historical archives' (Edat öbeği) geldiğine dikkat ederek edilgen sıfat kısaltmasını seçiniz:",
+              sentence: "The primary sources [preserved] in historical archives of the local library are protected.",
+              options: ["preserved", "preserving", "to preserve", "preserves"],
+              correctIndex: 0,
+              translation: "Yerel kütüphanenin tarihi arşivlerinde korunan birincil kaynaklar korunmaktadır.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'in...' (Edat) var ➔ <b>Edilgen 'V3' (preserved) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l1_q9",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'by modern historians' (Edat öbeği) bulunduğuna dikkat ederek edilgen sıfat kısaltmasını bulunuz:",
+              sentence: "The archival documents [discovered] by modern historians belong to the museum.",
+              options: ["discovered", "discovering", "to discover", "discovers"],
+              correctIndex: 0,
+              translation: "Modern tarihçiler tarafından keşfedilen arşiv belgeleri müzeye aittir.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'by...' (Edat) var ➔ <b>Edilgen 'V3' (discovered) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l1_q10",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'kinship patterns' (Nesne) bulunduğuna dikkat ederek etken sıfat kısaltmasını bulunuz:",
+              sentence: "Cultural anthropologists [studying] kinship patterns of the ancient community received awards.",
+              options: ["studying", "studied", "studies", "having been studied"],
+              correctIndex: 0,
+              translation: "Kadim topluluğun akrabalık kalıplarını çalışan kültürel antropologlar ödüller aldı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'kinship patterns' (Nesne) var ➔ <b>Etken 'V-ing' (studying) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l1_q11",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'by the experts' (Edat öbeği) geldiğinden, bu sıfat kısaltması etken mi yoksa edilgen mi olmalıdır?",
+              sentence: "The legal archives [restored] by the experts under suspended funding was reopened.",
+              options: ["restored", "restoring", "to restore", "restores"],
+              correctIndex: 0,
+              translation: "Askıya alınan fonlama altında uzmanlarca restore edilen yasal arşivler yeniden açıldı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'by...' (Edat) var ➔ <b>Edilgen 'V3' (restored) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l1_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun sıfat kısaltmasını seçiniz (İpucu: Boşluğun hemen sağındaki kelimeye bakınız):",
+              sentence: "The empirical survey [conducted] by economists about resource distribution was successful.",
+              options: ["conducted", "conducting", "to conduct", "conducts"],
+              correctIndex: 0,
+              translation: "İktisatçılar tarafından kaynak dağılımı hakkında yürütülen ampirik anket başarılı oldu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'by...' (Edat) var ➔ <b>Edilgen 'V3' (conducted) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Edat İpucu"]
+            },
+            {
+              id: "u35_l1_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluktan hemen sonra 'the aesthetic value' (Nesne) geldiğine dikkat ederek uygun sıfat kısaltmasını bulunuz:",
+              sentence: "The art historians [evaluating] the aesthetic value of historical documents published an article.",
+              options: ["evaluating", "evaluated", "to evaluate", "evaluates"],
+              correctIndex: 0,
+              translation: "Tarihi belgelerin estetik değerini değerlendiren sanat tarihçileri bir makale yayınladı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'the aesthetic value' (Nesne) var ➔ <b>Etken 'V-ing' (evaluating) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction", "Nesne İpucu"]
+            },
+            {
+              id: "u35_l1_q14",
+              type: "multiple-choice",
+              prompt: "Bütüncül Karar Verme: Önündeki niteleyiciyi ve sağındaki yapıyı analiz ederek doğru sıfat kısaltmasını seçiniz:",
+              sentence: "The public communication patterns observed by sociologists in the local community changed over time.",
+              options: ["observed", "observing", "to observe", "observes"],
+              correctIndex: 0,
+              translation: "Sosyologlar tarafından yerel toplulukta gözlemlenen kamuoyu iletişim kalıpları zamanla değişti.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'by...' (Edat) var ➔ <b>Edilgen 'V3' (observed) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l1_q15",
+              type: "multiple-choice",
+              prompt: "Bütüncül Karar Verme: Önündeki niteleyiciyi ve sağındaki yapıyı analiz ederek doğru sıfat kısaltmasını seçiniz:",
+              sentence: "The empirical research conducted by economists was suspended due to lack of funding.",
+              options: ["conducted", "conducting", "to conduct", "conducts"],
+              correctIndex: 0,
+              translation: "İktisatçılar tarafından yürütülen ampirik araştırma, fon eksikliği nedeniyle askıya alındı.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'by...' (Edat) var ➔ <b>Edilgen 'V3' (conducted) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l1_q16",
+              type: "multiple-choice",
+              prompt: "Bütüncül Karar Verme: Önündeki niteleyiciyi ve sağındaki yapıyı analiz ederek doğru sıfat kısaltmasını seçiniz:",
+              sentence: "The candidate selected for the research team declined the offer.",
+              options: ["selected", "selecting", "declines", "to select"],
+              correctIndex: 0,
+              translation: "Araştırma ekibi için seçilen aday teklifi reddetti.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok ➔ <b>To elenir.</b><br>2. <b>Nesne/Edat:</b> Boşluktan sonra 'for...' (Edat) var ➔ <b>Edilgen 'V3' (selected) seçilir.</b>",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l1_q17",
+              type: "multiple-choice",
+              prompt: "Bütüncül Karar Verme: Cümleyi analiz ederek 'investigating' yapısının neden bir ZARF kısaltması olduğunu bulunuz:",
+              sentence: "While investigating public opinions, the psychologist discovered interesting behavioral patterns.",
+              options: [
+                "Bir ismin hemen arkasından gelmediği ve 'While' ile zaman belirttiği için.",
+                "Bir ismi nitelediği ve etken olduğu için.",
+                "Cümlenin ana yüklemi (Main Verb) olduğu için.",
+                "Çekimli bir zaman yapısı olduğu için"
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşlerini araştırırken psikolog ilginç davranış kalıpları keşfetti.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Kural:</b> Sıfat kısaltmaları bir ismin arkasından gelir. Burada 'investigating' bir ismin arkasında değil, 'While' zaman bağlacıyla cümleye başlamıştır, dolayısıyla <b>Zarf Kısaltmasıdır.</b>",
+              grammarTags: ["Adverbial Reduction", "Time Reduction", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l1_q18",
+              type: "structural-deconstruction",
+              prompt: "Bütüncül Karar Verme: Aşağıdaki cümlenin kısaltılmamış (açık) sıfat cümleciği halini bulunuz:",
+              sentence: "The legal dispute resolved yesterday caused a big controversy.",
+              options: [
+                "The legal dispute which was resolved yesterday caused a big controversy.",
+                "The legal dispute resolving yesterday caused a big controversy.",
+                "The legal dispute resolved the court yesterday caused a big controversy.",
+                "The legal dispute that resolved yesterday caused a big controversy."
+              ],
+              correctIndex: 0,
+              translation: "Dün çözülen yasal anlaşmazlık büyük bir tartışmaya neden oldu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>To Kontrolü:</b> Önünde 'first, only' yok.<br>2. <b>Açık Hal:</b> 'resolved' (V3) edilgen kısaltmasının açık hali 'which was resolved'dur.",
+              grammarTags: ["Relative Clause Reduction", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l1_q19",
+              type: "reverse-engineering-translation",
+              prompt: "Bütüncül Karar Verme: Cümledeki 'preserved' edilgen kısaltmasını dikkate alarak doğru Türkçe çeviriyi bulunuz:",
+              sentence: "The primary sources preserved in restricted archives were presented to the court.",
+              options: [
+                "Kısıtlı arşivlerde korunan birincil kaynaklar mahkemeye sunuldu.",
+                "Kısıtlı arşivlerde korunan birincil kaynaklar mahkemeye sunulacak.",
+                "Birincil kaynakları koruyan kısıtlı arşivler mahkemeye sunuldu.",
+                "Birincil kaynaklar kısıtlı arşivlerde korunarak mahkemeye sunuldu."
+              ],
+              correctIndex: 0,
+              translation: "Kısıtlı arşivlerde korunan birincil kaynaklar mahkemeye sunuldu.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Analiz:</b> 'sources preserved' ➔ korunan kaynaklar (edilgen sıfat kısaltması). Türkçe'ye 'korunan ... kaynaklar' olarak çevrilir.",
+              grammarTags: ["Relative Clause Reduction", "Reverse Translation", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_q20",
+              type: "multiple-choice",
+              prompt: "Bütüncül Karar Verme: Aşağıdaki cümlenin ANA FİİLİNİ (Main Verb) bulunuz:",
+              sentence: "The art historians evaluating the aesthetic value of historical documents in legal archives published a report.",
+              options: ["evaluating", "published", "documents", "value"],
+              correctIndex: 1,
+              translation: "Yasal arşivlerdeki tarihi belgelerin estetik değerini değerlendiren sanat tarihçileri bir rapor yayınladılar.",
+              explanation: "<b>Çözüm Adımları:</b><br>1. <b>Niteleyici Tespiti:</b> 'evaluating...' kısmı 'art historians' öznesini niteleyen sıfat cümleciği değildir. Özneyi niteleyen sıfat cümleciği kısaltmasıdır.<br>2. <b>Ana Yüklem:</b> Cümlenin ana zaman çekimli yüklemi 'published' fiilidir.",
+              grammarTags: ["Sentence Parsing", "Main Verb", "Sentence Analysis"]
+            }
+          ]
+        },
+        {
+          id: "u35_l1_ex2",
+          title: "2. Öbek Düzeyi Alıştırmaları",
+          description: "Sıfat cümleciği etken ve edilgen kısaltma öbeklerinin akademik bağlamda analizi.",
+          questions: [
+            {
+              id: "u35_l1_ex2_q1",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The primary sources [preserved] in historical archives of the local library",
+              options: ["preserved", "preserving", "to preserve", "preserves"],
+              correctIndex: 0,
+              translation: "Yerel kütüphanenin tarihi arşivlerinde korunan birincil kaynaklar",
+              explanation: "Kaynaklar kendi kendisini korumadığı, korunan (edilgen) olduğu için V3 ('preserved') kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q2",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The behavioral psychologists [analyzing] public opinions on social environment",
+              options: ["analyzing", "analyzed", "to be analyzed", "analyzes"],
+              correctIndex: 0,
+              translation: "Sosyal çevre hakkında kamuoyundaki görüşleri analiz eden davranış psikologları",
+              explanation: "Psikologlar analiz etme eylemini kendileri yaptığı için etken 'analyzing' (who analyze) kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q3",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The archival documents [discovered] by modern historians in early cinema archives",
+              options: ["discovered", "discovering", "to discover", "discovers"],
+              correctIndex: 0,
+              translation: "Erken sinema arşivlerinde modern tarihçiler tarafından keşfedilen arşiv belgeleri",
+              explanation: "Belgeler keşfedilen (edilgen) konumda olduğu için V3 ('discovered') kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q4",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Cultural anthropologists [studying] kinship patterns of the ancient community",
+              options: ["studying", "studied", "studies", "having been studied"],
+              correctIndex: 0,
+              translation: "Kadim topluluğun akrabalık kalıplarını çalışan kültürel antropologlar",
+              explanation: "Antropologlar çalışma eylemini etken olarak yürüttüğü için 'studying' kullanımı doğrudur.",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q5",
+              type: "error-spotting",
+              prompt: "Öbekteki sıfat niteleme hatasını bulunuz:",
+              sentence: "The legal archives restoring by the experts under suspended funding",
+              options: ["restoring", "experts", "under", "suspended"],
+              correctIndex: 0,
+              translation: "Askıya alınan fonlama altında uzmanlarca restore edilen yasal arşivler",
+              explanation: "Arşivler restore edilen (edilgen) olduğundan 'restored' (V3) kullanılmalıdır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction Error"]
+            },
+            {
+              id: "u35_l1_ex2_q6",
+              type: "error-spotting",
+              prompt: "Öbekteki sıfat niteleme hatasını bulunuz:",
+              sentence: "The empirical survey conducting by economists about resource distribution",
+              options: ["conducting", "economists", "about", "distribution"],
+              correctIndex: 0,
+              translation: "İktisatçılar tarafından kaynak dağılımı hakkında yürütülen ampirik anket",
+              explanation: "Anket yürütülen (edilgen) olduğu için 'conducted' (V3) şeklinde kısaltılmalıdır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction Error"]
+            },
+            {
+              id: "u35_l1_ex2_q7",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The academic dispute [resolved] by modern historians after the controversy over primary sources",
+              options: ["resolved", "resolving", "to resolve", "resolves"],
+              correctIndex: 0,
+              translation: "Birincil kaynaklar üzerindeki tartışmanın ardından modern tarihçiler tarafından çözülen akademik anlaşmazlık",
+              explanation: "Anlaşmazlık çözülen (edilgen) olduğu için passive reduction olan 'resolved' (which was resolved) kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q8",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış (açık) sıfat cümleciği halini bulunuz: 'The legal experts examining court decisions under supervision'",
+              options: [
+                "The legal experts who examine court decisions under supervision",
+                "The legal experts which examining court decisions under supervision",
+                "The legal experts whom examines court decisions under supervision",
+                "The legal experts having examined court decisions under supervision"
+              ],
+              correctIndex: 0,
+              translation: "Gözetim altında mahkeme kararlarını inceleyen hukuk uzmanları",
+              explanation: "İnsanları nitelerken 'who' bağlacı ve geniş zamanlı etken çekim kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l1_ex2_q9",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış (açık) sıfat cümleciği halini bulunuz: 'The primary sources preserved in restricted archives'",
+              options: [
+                "The primary sources that are preserved in restricted archives",
+                "The primary sources who preserve in restricted archives",
+                "The primary sources preserving in restricted archives",
+                "The primary sources that preserved in restricted archives"
+              ],
+              correctIndex: 0,
+              translation: "Kısıtlı arşivlerde korunan birincil kaynaklar",
+              explanation: "Cansız isimleri edilgen nitelemek için 'that/which are preserved' yapısı kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l1_ex2_q10",
+              type: "reverse-engineering-translation",
+              prompt: "'Kamuoyu görüşlerini değerlendiren sosyal psikologlar' ifadesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "The social psychologists evaluating public opinions",
+                "The social psychologists evaluated public opinions",
+                "The social psychologists which evaluate public opinions",
+                "The social psychologists to be evaluated public opinions"
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşlerini değerlendiren sosyal psikologlar",
+              explanation: "Etken niteleme 'evaluating' (who evaluate) sıfat kısaltmasıyla sağlanır.",
+              grammarTags: ["Relative Clause Reduction", "Reverse Translation"]
+            },
+            {
+              id: "u35_l1_ex2_q11",
+              type: "reverse-engineering-translation",
+              prompt: "'Erken sinema tarihini inceleyen araştırmacılar' ifadesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "The researchers studying early cinema history",
+                "The researchers studied early cinema history",
+                "The researchers which studies early cinema history",
+                "The researchers having studied early cinema history"
+              ],
+              correctIndex: 0,
+              translation: "Erken sinema tarihini inceleyen araştırmacılar",
+              explanation: "Araştırmacılar aktif incelediği için 'studying' doğru biçimdir.",
+              grammarTags: ["Relative Clause Reduction", "Reverse Translation"]
+            },
+            {
+              id: "u35_l1_ex2_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The empirical research [finalized] by economists with suspended funding",
+              options: ["finalized", "finalizing", "to finalize", "finalizes"],
+              correctIndex: 0,
+              translation: "Askıya alınan fonlarla iktisatçılar tarafından kesinleştirilen ampirik araştırma",
+              explanation: "Araştırma kesinleştirilen (edilgen) olduğundan V3 olan 'finalized' yapısı doğrudur.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q13",
+              type: "multiple-choice",
+              prompt: "Choose the correct reduction form for the given phrase: 'The art historians ________ the aesthetic value of historical documents in legal archives'",
+              options: ["evaluating", "evaluated", "to evaluate", "evaluates"],
+              correctIndex: 0,
+              translation: "Yasal arşivlerdeki tarihi belgelerin estetik değerini değerlendiren sanat tarihçileri",
+              explanation: "Sanat tarihçileri değerlendirme eylemini kendisi yaptığı için aktif 'evaluating' kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q14",
+              type: "multiple-choice",
+              prompt: "Identify the correct reduction structure: 'The public communication patterns ________ by sociologists in the local community'",
+              options: ["observed", "observing", "to observe", "observes"],
+              correctIndex: 0,
+              translation: "Yerel toplulukta sosyologlar tarafından gözlemlenen kamuoyu iletişim kalıpları",
+              explanation: "Kalıplar gözlemlenen (edilgen) olduğu için 'observed' (V3) yapısı uygundur.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l1_ex2_q15",
+              type: "error-spotting",
+              prompt: "Öbekteki sıfat niteleme hatasını bulunuz:",
+              sentence: "The legal dispute resolving by the court after the public controversy",
+              options: ["resolving", "court", "after", "public"],
+              correctIndex: 0,
+              translation: "Kamuoyu tartışmasından sonra mahkeme tarafından çözülen yasal anlaşmazlık",
+              explanation: "Anlaşmazlık çözülen olduğu için 'resolved' (V3) kullanılmalıdır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction Error"]
+            },
+            {
+              id: "u35_l1_ex2_q16",
+              type: "error-spotting",
+              prompt: "Öbekteki sıfat niteleme hatasını bulunuz:",
+              sentence: "The kinship patterns establishing by the anthropologists in the social environment",
+              options: ["establishing", "anthropologists", "social", "environment"],
+              correctIndex: 0,
+              translation: "Antropologlar tarafından sosyal çevrede kurulan akrabalık kalıpları",
+              explanation: "Kalıplar kurulan (edilgen) olduğundan 'established' (V3) kullanılmalıdır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction Error"]
+            },
+            {
+              id: "u35_l1_ex2_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış (açık) halini bulunuz: 'The funding resources allocated for psychological research'",
+              options: [
+                "The funding resources that were allocated for psychological research",
+                "The funding resources allocating for psychological research",
+                "The funding resources who was allocated for psychological research",
+                "The funding resources that allocated for psychological research"
+              ],
+              correctIndex: 0,
+              translation: "Psikolojik araştırma için tahsis edilen fon kaynakları",
+              explanation: "Cansız ve edilgen yapıda 'that were allocated' doğru açık biçimdir.",
+              grammarTags: ["Relative Clause Reduction", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l1_ex2_q18",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış halini bulunuz: 'The economists criticizing public communication strategies'",
+              options: [
+                "The economists who criticize public communication strategies",
+                "The economists which criticizing public communication strategies",
+                "The economists criticized public communication strategies",
+                "The economists whom criticize public communication strategies"
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyu iletişim stratejilerini eleştiren iktisatçılar",
+              explanation: "İnsanlar için etken nitelemede 'who + fiil' (who criticize) yapısı kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Structural Deconstruction"]
+            },
+            {
+              id: "u35_l1_ex2_q19",
+              type: "reverse-engineering-translation",
+              prompt: "'Kısıtlı arşivlerde korunan birincil kaynaklar' ifadesinin İngilizce karşılığı:",
+              options: [
+                "The primary sources preserved in restricted archives",
+                "The primary sources preserving in restricted archives",
+                "The primary sources which preserved in restricted archives",
+                "The primary sources who are preserved in restricted archives"
+              ],
+              correctIndex: 0,
+              translation: "Kısıtlı arşivlerde korunan birincil kaynaklar",
+              explanation: "Edilgen niteleme 'preserved' (V3) ile sağlanır.",
+              grammarTags: ["Relative Clause Reduction", "Reverse Translation"]
+            },
+            {
+              id: "u35_l1_ex2_q20",
+              type: "multiple-choice",
+              prompt: "Choose the correct reduction form: 'The legal decisions ________ by the court concerning the academic dispute'",
+              options: ["implemented", "implementing", "to implement", "implements"],
+              correctIndex: 0,
+              translation: "Akademik anlaşmazlığa ilişkin olarak mahkemece uygulanan yasal kararlar",
+              explanation: "Kararlar uygulanan (edilgen) olduğu için 'implemented' (V3) kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      lessonId: "u35_l2",
+      lessonTitle: "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık — Öbek Düzeyi",
+      description: `<strong>🧠 Zaman Zarf Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Eylemler arasında bir öncelik-sonralık ilişkisi var mı (Önce olan eylem belirtilmiş mi)?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>Having + V3</strong> (etken) veya <strong>Having been + V3</strong> (edilgen) ara.<br>• <strong>Hayır ise (Eşzamanlı/Süreç) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluktan hemen önce bir zaman bağlacı (While, When, Before, After vb.) var mı?<br>• <strong>Evet ise ➔</strong> Bağlaçtan sonra gelen eylemin sağ tarafını kontrol et. Nesne varsa <strong>V-ing</strong>, edat/boşluk varsa <strong>V3</strong> seç.<br>• <strong>Hayır ise ➔</strong> Cümlenin zaman bağlamına göre <strong>V-ing / V3</strong> veya <strong>On/Upon V-ing</strong> yapılarını değerlendir.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Zaman Kısaltmasının "Altın Formülleri" Nedir?</strong><br>Zaman ve ardışıklık bildiren zarf cümleciği kısaltmaları şu kalıplarla karşımıza çıkar:<br>1. <strong>While / When + V-ing</strong> (Etken - Eşzamanlı: İncelerken/Yaparken)<br>2. <strong>While / When + V3</strong> (Edilgen - Eşzamanlı: İncelenirken/Yapılırken)<br>3. <strong>Having + V3</strong> (Etken - Öncelikli: Yapmış olduktan sonra)<br>4. <strong>Having been + V3</strong> (Edilgen - Öncelikli: Yapılmış olduktan sonra)<br>5. <strong>Before / After / On / Upon + V-ing</strong> (Zaman edatı kısaltması)<br><br>⚠️ <strong>Önemli Kural:</strong> Zarf cümlesi kısaltmalarında öznelerin ortak olması şarttır. Yan cümlenin gizli öznesi ile ana cümlenin öznesi aynı değilse bu kısaltmalar yapılamaz!`,
+      exercises: [
+        {
+          id: "u35_l2_ex1",
+          title: "Zaman ve Ardışıklık Kısaltmaları (Time & Sequence)",
+          description: "Zaman ve öncelik bildiren zarf kısaltma öbeklerinin akademik düzeyde çözümlenmesi.",
+          questions: [
+            {
+              id: "u35_l2_q1",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "While [examining] the historical documents in restricted archives",
+              options: ["examining", "examined", "examine", "having been examined"],
+              correctIndex: 0,
+              translation: "Kısıtlı arşivlerdeki tarihi belgeleri incelerken",
+              explanation: "Eşzamanlılık bildiren etken yapıda 'While + V-ing' kullanımı doğrudur.",
+              grammarTags: ["Time Reduction", "Active Time Reduction"]
+            },
+            {
+              id: "u35_l2_q2",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Having [finalized] the empirical survey on public opinions",
+              options: ["finalized", "finalizing", "finalize", "having been finalized"],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşleri üzerine ampirik anketi kesinleştirdikten sonra",
+              explanation: "Öncelik bildiren etken yapıda 'Having + V3' yapısı kullanılır.",
+              grammarTags: ["Perfect Participle", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q3",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Having been [suspended] due to the legal dispute over funding resources",
+              options: ["suspended", "suspending", "suspend", "having suspended"],
+              correctIndex: 0,
+              translation: "Fon kaynakları üzerindeki yasal anlaşmazlık nedeniyle askıya alındıktan sonra",
+              explanation: "Öncelik bildiren edilgen yapıda 'Having been + V3' kullanılır.",
+              grammarTags: ["Perfect Participle", "Passive Time Reduction"]
+            },
+            {
+              id: "u35_l2_q4",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Before [publishing] the psychological research on behavioral patterns",
+              options: ["publishing", "published", "publish", "having published"],
+              correctIndex: 0,
+              translation: "Davranış kalıpları üzerine psikolojik araştırmayı yayınlamadan önce",
+              explanation: "'Before' edatından sonra etken eylem doğrudan V-ing alır.",
+              grammarTags: ["Time Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q5",
+              type: "error-spotting",
+              prompt: "Öbekteki kısaltma hatasını bulunuz:",
+              sentence: "While studied the history of early cinema in the local library",
+              options: ["While", "studied", "early", "local"],
+              correctIndex: 1,
+              translation: "Yerel kütüphanede erken sinema tarihini çalışırken",
+              explanation: "Etken eşzamanlılık kısaltmasında 'While'dan sonra V-ing gelmelidir: 'studying'.",
+              grammarTags: ["Time Reduction Error", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q6",
+              type: "error-spotting",
+              prompt: "Öbekteki kısaltma hatasını bulunuz:",
+              sentence: "Having resolve the academic dispute between modern historians",
+              options: ["Having", "resolve", "academic", "historians"],
+              correctIndex: 1,
+              translation: "Modern tarihçiler arasındaki akademik anlaşmazlığı çözdükten sonra",
+              explanation: "Perfect Participle yapısında 'Having'den sonra fiilin üçüncü hali gelmelidir: 'resolved'.",
+              grammarTags: ["Perfect Participle Error", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q7",
+              type: "multiple-choice",
+              prompt: "Choose the correct option: 'On ________ the kinship patterns of the ancient community'",
+              options: ["evaluating", "evaluated", "evaluate", "having evaluated"],
+              correctIndex: 0,
+              translation: "Kadim topluluğun akrabalık kalıplarını değerlendirir değerlendirmez / değerlendirirken",
+              explanation: "'On + V-ing' yapısı bir eylemin hemen ardındalığını veya yapılmasını ifade eder.",
+              grammarTags: ["Time Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q8",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış (açık) halini bulunuz: 'Having finalized the empirical research on social environment'",
+              options: [
+                "After they had finalized the empirical research on social environment",
+                "While they were finalizing the empirical research on social environment",
+                "Before they finalized the empirical research on social environment",
+                "Although they finalized the empirical research on social environment"
+              ],
+              correctIndex: 0,
+              translation: "Sosyal çevre üzerine ampirik araştırmayı kesinleştirdikten sonra",
+              explanation: "'Having V3' öncelik bildirir ve 'After had V3' açık haliyle eşanlamlıdır.",
+              grammarTags: ["Structural Deconstruction", "Perfect Participle"]
+            },
+            {
+              id: "u35_l2_q9",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış halini bulunuz: 'While studying the controversy over primary sources'",
+              options: [
+                "While they were studying the controversy over primary sources",
+                "After they studied the controversy over primary sources",
+                "Because they studied the controversy over primary sources",
+                "Unless they were studying the controversy over primary sources"
+              ],
+              correctIndex: 0,
+              translation: "Birincil kaynaklar üzerindeki tartışmayı incelerken",
+              explanation: "'While V-ing' yapısının açık hali 'While they were V-ing' geçmiş zaman süreç biçimidir.",
+              grammarTags: ["Structural Deconstruction", "Time Reduction"]
+            },
+            {
+              id: "u35_l2_q10",
+              type: "reverse-engineering-translation",
+              prompt: "'Mahkeme kararlarını inceledikten sonra' ifadesinin İngilizce karşılığı:",
+              options: [
+                "Having examined the court decisions",
+                "While examining the court decisions",
+                "To examine the court decisions",
+                "On examining the court decisions"
+              ],
+              correctIndex: 0,
+              translation: "Mahkeme kararlarını inceledikten sonra",
+              explanation: "Öncelik-sonralık ilişkisi 'Having + V3' yapısı ile kurulur.",
+              grammarTags: ["Perfect Participle", "Reverse Translation"]
+            },
+            {
+              id: "u35_l2_q11",
+              type: "reverse-engineering-translation",
+              prompt: "'Sosyal çevreyi analiz ederken' ifadesinin İngilizce karşılığı:",
+              options: [
+                "While analyzing the social environment",
+                "Having analyzed the social environment",
+                "Before analyzing the social environment",
+                "To analyze the social environment"
+              ],
+              correctIndex: 0,
+              translation: "Sosyal çevreyi analiz ederken",
+              explanation: "Eşzamanlı süreç 'While + V-ing' yapısıyla doğru aktarılır.",
+              grammarTags: ["Time Reduction", "Reverse Translation"]
+            },
+            {
+              id: "u35_l2_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun zaman kısaltmasını seçiniz:",
+              sentence: "Having been [evaluated] by cultural anthropologists during the field study",
+              options: ["evaluated", "evaluating", "evaluate", "having evaluated"],
+              correctIndex: 0,
+              translation: "Saha çalışması sırasında kültürel antropologlar tarafından değerlendirildikten sonra",
+              explanation: "Edilgen ve öncelikli yapı 'Having been V3' (Having been evaluated) ile tamamlanır.",
+              grammarTags: ["Perfect Participle", "Passive Time Reduction"]
+            },
+            {
+              id: "u35_l2_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun zaman kısaltmasını seçiniz:",
+              sentence: "Before [concluding] the debate on public communication patterns",
+              options: ["concluding", "concluded", "conclude", "having concluded"],
+              correctIndex: 0,
+              translation: "Kamuoyu iletişim kalıpları üzerindeki tartışmayı sonuçlandırmadan önce",
+              explanation: "'Before' edatından sonra etken fiil doğrudan '-ing' alır.",
+              grammarTags: ["Time Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q14",
+              type: "error-spotting",
+              prompt: "Öbekteki kısaltma hatasını bulunuz:",
+              sentence: "While analyzed the historical archives of early cinema",
+              options: ["While", "analyzed", "historical", "cinema"],
+              correctIndex: 1,
+              translation: "Erken sinemanın tarihi arşivlerini analiz ederken",
+              explanation: "'While' bağlacından sonra etken süreç için 'analyzing' gelmelidir.",
+              grammarTags: ["Time Reduction Error", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q15",
+              type: "error-spotting",
+              prompt: "Öbekteki kısaltma hatasını bulunuz:",
+              sentence: "Having spend all the allocated funding for empirical research",
+              options: ["Having", "spend", "allocated", "funding"],
+              correctIndex: 1,
+              translation: "Ampirik araştırma için tahsis edilen tüm fonları harcadıktan sonra",
+              explanation: "'Having'den sonra fiilin üçüncü hali olan 'spent' gelmelidir.",
+              grammarTags: ["Perfect Participle Error", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q16",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış halini bulunuz: 'Having been warned about the legal dispute by the court'",
+              options: [
+                "After he had been warned about the legal dispute by the court",
+                "While he was warning about the legal dispute by the court",
+                "Before he was warned about the legal dispute by the court",
+                "Although he warned about the legal dispute by the court"
+              ],
+              correctIndex: 0,
+              translation: "Mahkeme tarafından yasal anlaşmazlık hakkında uyarıldıktan sonra",
+              explanation: "Edilgen Perfect Participle yapısının açık hali 'After had been V3' şeklindedir.",
+              grammarTags: ["Structural Deconstruction", "Perfect Participle"]
+            },
+            {
+              id: "u35_l2_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki öbeğin kısaltılmamış halini bulunuz: 'Upon receiving the primary sources from the archives'",
+              options: [
+                "As soon as they received the primary sources from the archives",
+                "Although they received the primary sources from the archives",
+                "While they were receiving the primary sources from the archives",
+                "Before they had received the primary sources from the archives"
+              ],
+              correctIndex: 0,
+              translation: "Arşivlerden birincil kaynakları alır almaz",
+              explanation: "'Upon + V-ing' yapısı 'as soon as' ile aynı anlamda hemen ardındalık belirtir.",
+              grammarTags: ["Structural Deconstruction", "Time Reduction"]
+            },
+            {
+              id: "u35_l2_q18",
+              type: "reverse-engineering-translation",
+              prompt: "'Birincil kaynakları keşfettikten sonra' ifadesinin İngilizce karşılığı:",
+              options: [
+                "Having discovered the primary sources",
+                "While discovering the primary sources",
+                "On discovering the primary sources",
+                "To discover the primary sources"
+              ],
+              correctIndex: 0,
+              translation: "Birincil kaynakları keşfettikten sonra",
+              explanation: "Eylemin önceliği 'Having + V3' yapısıyla karşılanır.",
+              grammarTags: ["Perfect Participle", "Reverse Translation"]
+            },
+            {
+              id: "u35_l2_q19",
+              type: "multiple-choice",
+              prompt: "Choose the correct option: 'On ________ the legal archives under the supervision of historians'",
+              options: ["entering", "entered", "enter", "having entered"],
+              correctIndex: 0,
+              translation: "Tarihçilerin gözetimi altında yasal arşivlere girer girmez",
+              explanation: "'On' edatından sonra hemen ardındalık için V-ing ('entering') kullanılır.",
+              grammarTags: ["Time Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l2_q20",
+              type: "multiple-choice",
+              prompt: "Identify the correct participle form: 'Having ________ a comprehensive survey on behavioral psychologists'",
+              options: ["conducted", "conducting", "conduct", "been conducted"],
+              correctIndex: 0,
+              translation: "Davranış psikologları üzerine kapsamlı bir anket yürüttükten sonra",
+              explanation: "Etken öncelik yapısında 'Having + V3' (conducted) gelir.",
+              grammarTags: ["Perfect Participle", "Active Reduction"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      lessonId: "u35_l3",
+      lessonTitle: "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık — Cümle Düzeyi",
+      description: `<strong>🧠 Sebep, Koşul ve Zıtlık Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Cümle başında bağlaç olmadan doğrudan eylemle mi başlanmış?<br>• <strong>Evet ise (Sebep Bildiren Kısaltma) ➔</strong> Cümle etken ise <strong>V-ing</strong> (Olumsuzda <em>Not V-ing</em>), edilgen ise <strong>V3</strong> (veya <em>Faced with/Driven by</em>) ile başlanır. <em>Because/Since gibi bağlaçlar kısaltmada asla kullanılmaz!</em><br>• <strong>Hayır ise (Zıtlık/Koşul) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Cümlede <em>Although / Unless / If</em> gibi bağlaçlar korunmuş mu?<br>• <strong>Evet ise ➔</strong> Eylemin etkenlik/edilgenlik durumuna göre <strong>Although + V-ing/V3</strong> veya <strong>Unless/If + V3</strong> yapılarını seç.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Sebep, Koşul ve Zıtlık Kısaltma Şablonları:</strong><br>1. <strong>V-ing / Not V-ing ... , S + V + O</strong> (Etken Sebep: Bilmediği için/Yaparak)<br>2. <strong>V3 / Faced with ... , S + V + O</strong> (Edilgen Sebep: Maruz kaldığı için/Karşı karşıya kalınca)<br>3. <strong>Although / Though + V-ing veya V3</strong> (Zıtlık Kısaltması: Yapmasına/Yapılmasına rağmen)<br>4. <strong>Unless / If + V3</strong> (Edilgen Koşul Kısaltması: Yapılmadıkça/Yapılırsa)<br><br>⚠️ <strong>Önemli Kural:</strong> Sebep kısaltmalarında <em>Because, Since, As</em> bağlaçları cümleden tamamen atılır. Kısaltılmış yapının başında <em>Because V-ing</em> veya <em>Because V3</em> kullanımı kesinlikle **dilbilgisi hatasıdır**!`,
+      exercises: [
+        {
+          id: "u35_l3_ex1",
+          title: "Sebep, Koşul ve Zıtlık Kısaltmaları",
+          description: "Cümle düzeyinde sebep, koşul ve zıtlık bağlamlı kısaltma yapılarının akademik analizi.",
+          questions: [
+            {
+              id: "u35_l3_q1",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Not [knowing] the history of early cinema, the researchers postponed their survey.",
+              options: ["knowing", "known", "to know", "having been known"],
+              correctIndex: 0,
+              translation: "Erken sinema tarihini bilmedikleri için araştırmacılar anketlerini ertelediler.",
+              explanation: "Olumsuz sebep bildiren etken yapıda 'Not + V-ing' (Because they did not know) kalıbı kullanılır.",
+              grammarTags: ["Cause Reduction", "Negative reduction"]
+            },
+            {
+              id: "u35_l3_q2",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "[Restricted] by legal decisions, the economists modified their empirical research.",
+              options: ["Restricted", "Restricting", "To restrict", "Restrict"],
+              correctIndex: 0,
+              translation: "Yasal kararlarla kısıtlandıkları için iktisatçılar ampirik araştırmalarını değiştirdiler.",
+              explanation: "İktisatçılar kısıtlandığı (edilgen sebep) için doğrudan V3 olan 'Restricted' ile başlanır.",
+              grammarTags: ["Cause Reduction", "Passive Cause Reduction"]
+            },
+            {
+              id: "u35_l3_q3",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun zıtlık kısaltmasını seçiniz:",
+              sentence: "Although [criticized] by modern historians, the psychological research was published.",
+              options: ["criticized", "criticizing", "to criticize", "criticizes"],
+              correctIndex: 0,
+              translation: "Modern tarihçiler tarafından eleştirilmesine rağmen psikolojik araştırma yayınlandı.",
+              explanation: "Araştırma eleştirildiği için zıtlık bağlacından sonra edilgen kısaltma olan 'criticized' (V3) gelir.",
+              grammarTags: ["Contrast Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l3_q4",
+              type: "error-spotting",
+              prompt: "Kısaltma hatasını bulunuz:",
+              sentence: "Because not having funding, the anthropologists suspended the kinship study.",
+              options: ["Because", "having", "suspended", "kinship"],
+              correctIndex: 0,
+              translation: "Fonları olmadığı için antropologlar akrabalık çalışmasını askıya aldılar.",
+              explanation: "Sebep kısaltmalarında 'because' kullanılmaz; doğrudan 'Not having funding' şeklinde başlanmalıdır.",
+              grammarTags: ["Cause Reduction Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l3_q5",
+              type: "error-spotting",
+              prompt: "Zıtlık kısaltmasındaki hatayı bulunuz:",
+              sentence: "Despite heavily analyzed, the archival documents remained controversial.",
+              options: ["Despite", "analyzed", "archival", "controversial"],
+              correctIndex: 0,
+              translation: "Yoğun bir şekilde analiz edilmesine rağmen arşiv belgeleri tartışmalı kaldı.",
+              explanation: "'Despite' edatından sonra doğrudan V3 gelmez, 'Although heavily analyzed' veya 'Despite being heavily analyzed' olmalıdır.",
+              grammarTags: ["Contrast Reduction Error", "Prepositional Error"]
+            },
+            {
+              id: "u35_l3_q6",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Faced with a legal dispute, the commission suspended the funding.'",
+              options: [
+                "Because the commission was faced with a legal dispute, they suspended the funding.",
+                "Although the commission faced a legal dispute, they suspended the funding.",
+                "Before the commission had faced a legal dispute, they suspended the funding.",
+                "Unless the commission is faced with a legal dispute, they suspended the funding."
+              ],
+              correctIndex: 0,
+              translation: "Yasal bir anlaşmazlıkla karşı karşıya kalan komisyon fonu askıya aldı.",
+              explanation: "'Faced with' edilgen sebep kısaltmasıdır ve açık hali 'Because it was faced with' şeklindedir.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l3_q7",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Unless supported by reliable funding, the empirical research will be suspended.'",
+              options: [
+                "If the empirical research is not supported by reliable funding, it will be suspended.",
+                "Unless the empirical research supported by reliable funding, it will be suspended.",
+                "Because the empirical research did not support by reliable funding, it will be suspended.",
+                "Although the empirical research supports by reliable funding, it will be suspended."
+              ],
+              correctIndex: 0,
+              translation: "Güvenilir fonlarla desteklenmediği sürece ampirik araştırma askıya alınacaktır.",
+              explanation: "'Unless supported' edilgen koşul kısaltmasıdır, açık hali 'Unless it is supported' ya da 'If it is not supported' şeklindedir.",
+              grammarTags: ["Structural Deconstruction", "Condition Reduction"]
+            },
+            {
+              id: "u35_l3_q8",
+              type: "reverse-engineering-translation",
+              prompt: "'Kamuoyundan çekindiği için iktisatçılar araştırmayı erteledi.' cümlesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "Fearing public reaction, the economists postponed the research.",
+                "Because of fearing public reaction, the economists postponed the research.",
+                "Feared public reaction, the economists postponed the research.",
+                "Having feared public reaction, the economists postpones the research."
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyundan çekindiği için iktisatçılar araştırmayı erteledi.",
+              explanation: "Sebep bildiren etken durumlar doğrudan V-ing ('Fearing') yapısıyla kısaltılabilir.",
+              grammarTags: ["Reverse Translation", "Cause Reduction"]
+            },
+            {
+              id: "u35_l3_q9",
+              type: "reverse-engineering-translation",
+              prompt: "'Hukuk uzmanlarınca eleştirilse de yasa kabul edildi.' cümlesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "Although criticized by legal experts, the law was accepted.",
+                "Despite criticized by legal experts, the law was accepted.",
+                "Criticizing by legal experts, the law was accepted.",
+                "Unless criticized by legal experts, the law was accepted."
+              ],
+              correctIndex: 0,
+              translation: "Hukuk uzmanlarınca eleştirilse de yasa kabul edildi.",
+              explanation: "'Although + V3' yapısı edilgen zıtlık kısaltması oluşturur.",
+              grammarTags: ["Reverse Translation", "Contrast Reduction"]
+            },
+            {
+              id: "u35_l3_q10",
+              type: "multiple-choice",
+              prompt: "Choose the correct reduction form to fill the gap: '________ the primary sources, the historian resolved the controversy.'",
+              options: ["Having found", "Found", "To find", "On finding to"],
+              correctIndex: 0,
+              translation: "Birincil kaynakları bulduktan sonra tarihçi tartışmayı çözdü.",
+              explanation: "Tarihçi bulma eylemini önceden tamamladığı için 'Having + V3' (Having found) kullanılır.",
+              grammarTags: ["Perfect Participle", "Multiple Choice"]
+            },
+            {
+              id: "u35_l3_q11",
+              type: "multiple-choice",
+              prompt: "Identify the correct reduction structure: '________ by public opinions, the board changed the communication policy.'",
+              options: ["Driven", "Driving", "To drive", "Having driven by"],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşleriyle yönlendirilen kurul, iletişim politikasını değiştirdi.",
+              explanation: "Kurul yönlendirildiği (edilgen sebep) için 'Driven' (V3) ile cümleye başlanır.",
+              grammarTags: ["Cause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l3_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun zıtlık kısaltmasını seçiniz:",
+              sentence: "Although [born] in a small community, the anthropologist understood global kinship patterns.",
+              options: ["born", "bearing", "to be born", "born by"],
+              correctIndex: 0,
+              translation: "Küçük bir toplulukta doğmuş olmasına rağmen, antropolog küresel akrabalık kalıplarını anladı.",
+              explanation: "'Although + V3' (Although he was born) kalıbı zıtlık kısaltmasıdır.",
+              grammarTags: ["Contrast Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l3_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun sebep kısaltmasını seçiniz:",
+              sentence: "[Concerned] about public opinions, the politicians modified the legal archives.",
+              options: ["Concerned", "Concerning", "To concern", "Having concerned"],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşleri konusunda endişeli oldukları için politikacılar yasal arşivleri değiştirdiler.",
+              explanation: "Politikacılar endişelendiği (edilgen durum) için edilgen niteleyici sıfat 'Concerned' kullanılır.",
+              grammarTags: ["Cause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l3_q14",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun koşul kısaltmasını seçiniz:",
+              sentence: "Unless [protected] by legal court decisions, primary sources will be damaged.",
+              options: ["protected", "protecting", "protect", "to protect"],
+              correctIndex: 0,
+              translation: "Yasal mahkeme kararlarıyla korunmadığı sürece birincil kaynaklar zarar görecektir.",
+              explanation: "Kaynaklar korunduğu (edilgen koşul) için 'Unless'den sonra 'protected' (V3) gelir.",
+              grammarTags: ["Condition Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l3_q15",
+              type: "error-spotting",
+              prompt: "Sebep kısaltmasındaki hatayı bulunuz:",
+              sentence: "Not known the answer, the student left the psychology test blank.",
+              options: ["known", "left", "psychology", "blank"],
+              correctIndex: 0,
+              translation: "Cevabı bilmediği için öğrenci psikoloji testini boş bıraktı.",
+              explanation: "Bilmemek etken bir durumdur, 'Not knowing the answer' şeklinde olmalıdır.",
+              grammarTags: ["Cause Reduction Error", "Active Reduction"]
+            },
+            {
+              id: "u35_l3_q16",
+              type: "error-spotting",
+              prompt: "Zıtlık kısaltmasındaki hatayı bulunuz:",
+              sentence: "Despite born in poverty, the lawyer resolved many legal disputes.",
+              options: ["Despite", "poverty", "resolved", "disputes"],
+              correctIndex: 0,
+              translation: "Yoksulluk içinde doğmasına rağmen avukat birçok yasal anlaşmazlığı çözdü.",
+              explanation: "'Despite' edatından sonra doğrudan V3 gelmez. 'Although born' veya 'Despite being born' olmalıdır.",
+              grammarTags: ["Contrast Reduction Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l3_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Convinced of the empirical evidence, the psychologist defended the theory.'",
+              options: [
+                "Because the psychologist was convinced of the empirical evidence, he defended the theory.",
+                "Although the psychologist convinced of the empirical evidence, he defended the theory.",
+                "Before the psychologist was convincing of the empirical evidence, he defended the theory.",
+                "Unless the psychologist is convinced of the empirical evidence, he defended the theory."
+              ],
+              correctIndex: 0,
+              translation: "Ampirik kanıtlara ikna olduğu için psikolog teoriyi savundu.",
+              explanation: "'Convinced of' edilgen sebep kısaltmasıdır, açık hali 'Because he was convinced' şeklindedir.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l3_q18",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Unless registered online, students cannot access the cinema archives.'",
+              options: [
+                "If they are not registered online, students cannot access the cinema archives.",
+                "Unless students register online, they cannot access the cinema archives.",
+                "Because students did not register online, they cannot access the cinema archives.",
+                "Although students register online, they cannot access the cinema archives."
+              ],
+              correctIndex: 0,
+              translation: "İnternetten kayıt olmadıkları sürece öğrenciler sinema arşivlerine erişemezler.",
+              explanation: "'Unless registered' yapısı 'If they are not registered' ile aynı anlamdadır.",
+              grammarTags: ["Structural Deconstruction", "Condition Reduction"]
+            },
+            {
+              id: "u35_l3_q19",
+              type: "reverse-engineering-translation",
+              prompt: "'Kültürel akrabalığı inceleyen uzmanlar yeni belgeler keşfettiler.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The experts studying cultural kinship discovered new documents.",
+                "The experts studied cultural kinship discovered new documents.",
+                "The experts which study cultural kinship discovered new documents.",
+                "Studying cultural kinship, new documents were discovered by the experts."
+              ],
+              correctIndex: 0,
+              translation: "Kültürel akrabalığı inceleyen uzmanlar yeni belgeler keşfettiler.",
+              explanation: "Aktif niteleme 'experts studying' (inceleyen uzmanlar) sıfat kısaltmasıyla sağlanır.",
+              grammarTags: ["Reverse Translation", "Active Reduction"]
+            },
+            {
+              id: "u35_l3_q20",
+              type: "multiple-choice",
+              prompt: "Choose the correct reduction form: '________ by the historical controversy, the sociologist abandoned the survey.'",
+              options: ["Discouraged", "Discouraging", "To discourage", "Having discouraged by"],
+              correctIndex: 0,
+              translation: "Tarihi tartışma nedeniyle cesareti kırılan sosyolog anketi bıraktı.",
+              explanation: "Sosyoloğun cesareti kırıldığı (edilgen sebep) için edilgen kısaltma 'Discouraged' (V3) kullanılır.",
+              grammarTags: ["Cause Reduction", "Passive Reduction"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      lessonId: "u35_l4",
+      lessonTitle: "4. Bağımsız Özneli & Sonuç Bildiren Participle Yapıları — Cümle Düzeyi",
+      description: `<strong>🧠 Bağımsız Özne ve Sonuç Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Boşluk bir virgülden sonra cümlenin en sonunda mı ve ana cümlenin sonucunu mu bağlıyor?<br>• <strong>Evet ise (Sonuç Bildiren Participle) ➔</strong> Seçeneklerde doğrudan <strong>thereby / thus + V-ing</strong> yapısını ara.<br>• <strong>Hayır ise (Farklı Özneli Durum) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Yan cümlenin öznesi ana cümleden farklı olup cümlenin başında yazılmış mı?<br>• <strong>Evet ise (Bağımsız Özneli - Absolute Clause) ➔</strong> Yazılan öznenin hemen ardından <strong>having + V3</strong> (etken) veya <strong>having been + V3</strong> (edilgen) getirerek kısaltmayı tamamla.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Bağımsız Özne ve Sonuç Formülleri:</strong><br>1. <strong>Noun + having + V3 / having been + V3</strong> (Absolute Clause: İş bittiği için/tamamlandığında)<br>2. <strong>S + V + O, thereby / thus + V-ing</strong> (Resultative: ...ve böylece yapıp/yaparak)<br><br>⚠️ <strong>Önemli Kural:</strong> <em>thereby</em> veya <em>thus</em> ile yapılan sonuç kısaltmalarından sonra mastar (to V1) ya da yalın fiil gelmez, mutlaka **V-ing** gelmelidir!`,
+      exercises: [
+        {
+          id: "u35_l4_ex1",
+          title: "Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları",
+          description: "Absolute ve Resultative participle yapılarının akademik cümleler üzerinden incelenmesi.",
+          questions: [
+            {
+              id: "u35_l4_q1",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun sonuç bildiren kelimeyi seçiniz:",
+              sentence: "The economists lowered the estimate, [thereby] satisfying the commission.",
+              options: ["thereby", "thus to", "in order to", "because"],
+              correctIndex: 0,
+              translation: "İktisatçılar tahmini düşürdü ve böylelikle komisyonu memnun etti.",
+              explanation: "Virgülden sonra gelen 'thereby + V-ing' yapısı eylemin sonucunu bildirmek için kullanılır.",
+              grammarTags: ["Resultative Participle", "Adverbial Result"]
+            },
+            {
+              id: "u35_l4_q2",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun bağımsız özneli yapıyı (Absolute Clause) seçiniz:",
+              sentence: "The empirical survey [having] concluded, the psychologists prepared the reports.",
+              options: ["having", "was", "is", "had"],
+              correctIndex: 0,
+              translation: "Ampirik anket sona erdiği için psikologlar raporları hazırladı.",
+              explanation: "Yan cümlenin öznesi 'The empirical survey' yazılmış ve düşürülmemiştir. 'having concluded' ile bağımsız özneli kısaltma tamamlanır.",
+              grammarTags: ["Absolute Clause", "Independent Subject"]
+            },
+            {
+              id: "u35_l4_q3",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun sonuç bildiren kelimeyi seçiniz:",
+              sentence: "The commission doubled the funding resources, [thus] preventing the legal dispute.",
+              options: ["thus", "thereby to", "because of", "so that"],
+              correctIndex: 0,
+              translation: "Komisyon fon kaynaklarını ikiye katladı ve böylece yasal anlaşmazlığı önledi.",
+              explanation: "Virgülden sonra gelen 'thus + V-ing' yapısı ana cümlenin sonucunu ifade eder.",
+              grammarTags: ["Resultative Participle", "Adverbial Result"]
+            },
+            {
+              id: "u35_l4_q4",
+              type: "error-spotting",
+              prompt: "Absolute Clause yapısındaki hatayı bulunuz:",
+              sentence: "The funding suspended having, the researchers abandoned the empirical survey.",
+              options: ["funding", "suspended", "having", "survey"],
+              correctIndex: 2,
+              translation: "Fonlar askıya alındığı için araştırmacılar ampirik anketi bıraktılar.",
+              explanation: "Doğru dizilim 'The funding having been suspended' şeklinde olmalıdır, fiil kısmı özneden sonra gelir.",
+              grammarTags: ["Absolute Clause Error", "Word Order"]
+            },
+            {
+              id: "u35_l4_q5",
+              type: "error-spotting",
+              prompt: "Sonuç kısaltmasındaki hatayı bulunuz:",
+              sentence: "The modern historians worked hard, thereby to resolve the academic dispute.",
+              options: ["historians", "thereby", "to resolve", "dispute"],
+              correctIndex: 2,
+              translation: "Modern tarihçiler çok çalıştı, böylelikle akademik anlaşmazlığı çözdü.",
+              explanation: "'thereby' kelimesinden sonra doğrudan 'V-ing' gelmelidir: 'thereby resolving'. Infinitve 'to resolve' kullanılmaz.",
+              grammarTags: ["Resultative Participle Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l4_q6",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The legal dispute having been resolved, the research institute resumed its work.'",
+              options: [
+                "After the legal dispute had been resolved, the research institute resumed its work.",
+                "While the legal dispute was resolving, the research institute resumed its work.",
+                "Although the legal dispute was resolved, the research institute resumed its work.",
+                "Before the legal dispute resolved, the research institute resumed its work."
+              ],
+              correctIndex: 0,
+              translation: "Yasal anlaşmazlık çözüldükten sonra araştırma enstitüsü çalışmasına yeniden başladı.",
+              explanation: "'The legal dispute having been resolved' bağımsız özne yapısı 'After had been V3' açık haline karşılık gelir.",
+              grammarTags: ["Structural Deconstruction", "Absolute Clause"]
+            },
+            {
+              id: "u35_l4_q7",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The court rejected the appeal, thus suspending the execution.'",
+              options: [
+                "The court rejected the appeal, and as a result, suspended the execution.",
+                "The court rejected the appeal in order to suspend the execution.",
+                "Because the court suspended the execution, it rejected the appeal.",
+                "Although the court rejected the appeal, it suspended the execution."
+              ],
+              correctIndex: 0,
+              translation: "Mahkeme temyizi reddetti ve böylece infazı askıya aldı.",
+              explanation: "'thus + V-ing' yapısı 'and as a result' (ve sonuç olarak) anlamına gelir.",
+              grammarTags: ["Structural Deconstruction", "Resultative Participle"]
+            },
+            {
+              id: "u35_l4_q8",
+              type: "reverse-engineering-translation",
+              prompt: "'Araştırma tamamlandığında tarihçiler kütüphaneden ayrıldı.' cümlesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "The research having concluded, the historians left the library.",
+                "Having concluded the research, the historians left the library.",
+                "The research concluded having, the historians left the library.",
+                "While concluding the research, the historians left the library."
+              ],
+              correctIndex: 0,
+              translation: "Araştırma tamamlandığında tarihçiler kütüphaneden ayrıldı.",
+              explanation: "Araştırma ve tarihçiler farklı özneler olduğu için 'The research having concluded' absolute clause yapısı kullanılır.",
+              grammarTags: ["Reverse Translation", "Absolute Clause"]
+            },
+            {
+              id: "u35_l4_q9",
+              type: "reverse-engineering-translation",
+              prompt: "'Hükümet fonu kesti ve böylece projeyi engelledi.' cümlesinin doğru İngilizce karşılığını seçiniz:",
+              options: [
+                "The government cut the funding, thereby preventing the project.",
+                "The government cut the funding, thereby prevented the project.",
+                "The government cut the funding to prevent the project.",
+                "Because the government cut the funding, thereby preventing the project."
+              ],
+              correctIndex: 0,
+              translation: "Hükümet fonu kesti ve böylece projeyi engelledi.",
+              explanation: "'..., thereby preventing' yapısı eylemin sonucunu mükemmel bir şekilde bağlar.",
+              grammarTags: ["Reverse Translation", "Resultative Participle"]
+            },
+            {
+              id: "u35_l4_q10",
+              type: "multiple-choice",
+              prompt: "Choose the correct option: 'The court resolved the dispute, ________ bringing peace to the community.'",
+              options: ["thereby", "thus to", "because of", "so that"],
+              correctIndex: 0,
+              translation: "Mahkeme anlaşmazlığı çözdü ve böylelikle topluluğa barış getirdi.",
+              explanation: "Eylemin sonucunu 'thereby + V-ing' ile bağlarız.",
+              grammarTags: ["Resultative Participle", "Multiple Choice"]
+            },
+            {
+              id: "u35_l4_q11",
+              type: "multiple-choice",
+              prompt: "Identify the correct Absolute Clause structure: '________, the cinema history project was postponed.'",
+              options: ["The funding resources being suspended", "Being suspended funding resources", "The funding resources was suspended", "Having suspended funding resources"],
+              correctIndex: 0,
+              translation: "Fon kaynakları askıya alındığı için sinema tarihi projesi ertelendi.",
+              explanation: "Ana cümle ile yan cümlenin öznesi farklı olduğu için 'The funding resources being suspended' Absolute Clause'u kullanılır.",
+              grammarTags: ["Absolute Clause", "Multiple Choice"]
+            },
+            {
+              id: "u35_l4_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun Absolute Clause yapısını seçiniz:",
+              sentence: "The academic controversy [having] escalated, the social psychologists ceased their survey.",
+              options: ["having", "was", "is", "had"],
+              correctIndex: 0,
+              translation: "Akademik tartışma tırmandığı için sosyal psikologlar anketlerini durdurdular.",
+              explanation: "'The controversy having escalated' bağımsız özneli kısaltmadır.",
+              grammarTags: ["Absolute Clause", "Independent Subject"]
+            },
+            {
+              id: "u35_l4_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun sonuç bildiren yapıyı seçiniz:",
+              sentence: "They analyzed the behavioral patterns, [thus] proving the hypothesis on social environment.",
+              options: ["thus", "thereby to", "because", "to"],
+              correctIndex: 0,
+              translation: "Davranış kalıplarını analiz ettiler ve böylece sosyal çevre üzerine olan hipotezi kanıtladılar.",
+              explanation: "'thus + V-ing' kalıbı sonuç bildirir.",
+              grammarTags: ["Resultative Participle", "Adverbial Result"]
+            },
+            {
+              id: "u35_l4_q14",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun Absolute Clause yapısını seçiniz:",
+              sentence: "The primary sources [having] been destroyed in the fire, the historians wept.",
+              options: ["having", "being", "was", "were"],
+              correctIndex: 0,
+              translation: "Birincil kaynaklar yangında yok olduğu için tarihçiler ağladı.",
+              explanation: "Edilgen bağımsız özneli kısaltmada 'having been V3' kullanılır.",
+              grammarTags: ["Absolute Clause", "Independent Subject"]
+            },
+            {
+              id: "u35_l4_q15",
+              type: "error-spotting",
+              prompt: "Cümledeki hata ögesini bulunuz:",
+              sentence: "The legal meeting having dismissed, the lawyers returned to the court.",
+              options: ["meeting", "dismissed", "returned", "court"],
+              correctIndex: 1,
+              translation: "Yasal toplantı dağıtıldıktan sonra avukatlar mahkemeye döndü.",
+              explanation: "Toplantı kendi kendini dağıtamaz, edilgen bağımsız özne olarak 'having been dismissed' olmalıdır.",
+              grammarTags: ["Absolute Clause Error", "Passive Reduction"]
+            },
+            {
+              id: "u35_l4_q16",
+              type: "error-spotting",
+              prompt: "Cümledeki hata ögesini bulunuz:",
+              sentence: "He didn't study the history of cinema, thereby failed the communication test.",
+              options: ["didn't", "thereby", "failed", "communication"],
+              correctIndex: 2,
+              translation: "Sinema tarihine çalışmadı ve böylelikle iletişim testinden kaldı.",
+              explanation: "'thereby'dan sonra fiilin etken kısaltma şekli 'failing' gelmelidir.",
+              grammarTags: ["Resultative Participle Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l4_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The survey having been finalized, the economists published the data.'",
+              options: [
+                "After the survey had been finalized, the economists published the data.",
+                "While the economists finalized the survey, they published the data.",
+                "Although the survey was finalizing, they published the data.",
+                "Before the survey was finalizing, they published the data."
+              ],
+              correctIndex: 0,
+              translation: "Anket kesinleştirildikten sonra iktisatçılar verileri yayınladı.",
+              explanation: "'The survey having been finalized' edilgen absolute clause yapısıdır.",
+              grammarTags: ["Structural Deconstruction", "Absolute Clause"]
+            },
+            {
+              id: "u35_l4_q18",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The anthropologist analyzed kinship patterns, thereby explaining the culture.'",
+              options: [
+                "The anthropologist analyzed kinship patterns, and as a result, explained the culture.",
+                "Because the anthropologist analyzed kinship patterns to explain the culture.",
+                "Although the anthropologist analyzed kinship patterns, they explained the culture.",
+                "The anthropologist analyzed kinship patterns before explaining the culture."
+              ],
+              correctIndex: 0,
+              translation: "Antropolog akrabalık kalıplarını analiz etti ve böylece kültürü açıkladı.",
+              explanation: "'thereby explaining' yapısı eylemin sonucunu açıklar.",
+              grammarTags: ["Structural Deconstruction", "Resultative Participle"]
+            },
+            {
+              id: "u35_l4_q19",
+              type: "reverse-engineering-translation",
+              prompt: "'Fon kaynakları azaldığı için psikologlar çalışmayı durdurdu.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The funding resources having decreased, the psychologists stopped the study.",
+                "Having decreased the funding resources, the psychologists stopped the study.",
+                "The funding resources decreased having, the psychologists stopped the study.",
+                "While decreasing the funding resources, the psychologists stopped the study."
+              ],
+              correctIndex: 0,
+              translation: "Fon kaynakları azaldığı için psikologlar çalışmayı durdurdu.",
+              explanation: "'The funding resources' ve 'the psychologists' farklı öznelerdir, absolute clause ile bağlanır.",
+              grammarTags: ["Reverse Translation", "Absolute Clause"]
+            },
+            {
+              id: "u35_l4_q20",
+              type: "multiple-choice",
+              prompt: "Choose the correct Absolute Clause structure: '________, the behavioral psychologists changed their method.'",
+              options: ["The survey having failed", "Having failed the survey", "The survey was failed", "Failed the survey"],
+              correctIndex: 0,
+              translation: "Anket başarısız oldu ve böylece davranış psikologları yöntemlerini değiştirdi.",
+              explanation: "Anket başarısız olduğu için (Absolute clause, active) 'The survey having failed' kullanılır.",
+              grammarTags: ["Absolute Clause", "Multiple Choice"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      lessonId: "u35_l5",
+      lessonTitle: "5. Akademik Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
+      description: `<strong>Akademik Cümle Çözümleme (Parsing) Nedir?</strong><br>Uzun akademik cümlelerde, özne ile ana fiil arasına giren kısaltılmış sıfat ve zarf cümleciklerini (parenthetical modifiers) ayıklamak, cümlenin ana fiilini (Main Verb) bulmak için şarttır.`,
+      exercises: [
+        {
+          id: "u35_l5_ex1",
+          title: "Akademik Cümle Parsing & Çözümleme Stratejileri",
+          description: "Karmaşık cümlelerde ana fiilleri ve araya giren kısaltmaları tespit etme alıştırmaları.",
+          questions: [
+            {
+              id: "u35_l6_q1",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki cümlenin ANA FİİLİNİ (Main Verb) bulunuz:\n'The commission comprising economists and historians investigating early cinema has funded the research.'",
+              sentence: "The commission comprising economists and historians investigating early cinema has funded the research.",
+              options: ["comprising", "investigating", "has funded", "research"],
+              correctIndex: 2,
+              translation: "Erken sinemayı araştıran iktisatçılardan ve tarihçilerden oluşan komisyon araştırmayı finanse etti.",
+              explanation: "'comprising...' ve 'investigating...' niteleyici sıfat cümlecikleridir. Ana yüklem 'has funded'dır.",
+              grammarTags: ["Sentence Parsing", "Main Verb", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l6_q2",
+              type: "multiple-choice",
+              prompt: "Cümledeki 'that' isim cümleciğinin ANA FİİLİNİ (Main Verb) bulunuz:\n'It is acknowledged that the legal decisions governing primary sources enacted last year fail to protect archives.'",
+              sentence: "It is acknowledged that the legal decisions governing primary sources enacted last year fail to protect archives.",
+              options: ["governing", "enacted", "fail", "to protect"],
+              correctIndex: 2,
+              translation: "Geçen yıl yürürlüğe giren ve birincil kaynakları düzenleyen yasal kararların arşivleri korumakta yetersiz kaldığı kabul edilmektedir.",
+              explanation: "'governing' ve 'enacted' sıfat cümlesi kısaltmalarıdır. 'that' cümleciğinin ana fiili 'fail'dir.",
+              grammarTags: ["Sentence Parsing", "Main Verb", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l6_q3",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki cümledeki ARAYA GİREN KISALTMA ÖBEĞİNİ (Parenthetical Reduction) bulunuz:\n'The legal archives, restored by experts after long disputes, aim to preserve primary sources.'",
+              sentence: "The legal archives, restored by experts after long disputes, aim to preserve primary sources.",
+              options: [
+                "restored by experts after long disputes",
+                "The legal archives",
+                "aims to preserve",
+                "primary sources"
+              ],
+              correctIndex: 0,
+              translation: "Uzun anlaşmazlıklardan sonra uzmanlarca restore edilen yasal arşivler, birincil kaynakları korumayı amaçlamaktadır.",
+              explanation: "Özne ile yüklem arasına virgüllerle girmiş 'restored by...' öbeği edilgen bir kısaltmadır.",
+              grammarTags: ["Sentence Parsing", "Parenthetical Clause", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l6_q4",
+              type: "error-spotting",
+              prompt: "Cümledeki parsing/yapısal hatasını içeren kelimeyi bulunuz:",
+              sentence: "The empirical survey, which finalized by the psychologists, failed to receive reliable funding.",
+              options: ["which", "finalized", "failed", "funding"],
+              correctIndex: 0,
+              translation: "Psikologlar tarafından kesinleştirilen ampirik anket, güvenilir fon alamadı.",
+              explanation: "Eğer 'which' kullanılacaksa edilgen biçimde 'which was finalized' olmalıdır. 'which' atılırsa doğrudan 'finalized' ile kısaltılır.",
+              grammarTags: ["Relative Clause Reduction Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l6_q5",
+              type: "error-spotting",
+              prompt: "Cümledeki parsing/uyum hatasını bulunuz:",
+              sentence: "Having evaluating the public opinions, the communication expert found that the hypothesis was correct.",
+              options: ["evaluating", "found", "that", "was"],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşlerini değerlendirdikten sonra iletişim uzmanı hipotezin doğru olduğunu gördü.",
+              explanation: "Perfect Participle yapısında 'Having'den sonra V3 gelir: 'Having evaluated' olmalıdır.",
+              grammarTags: ["Perfect Participle Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l6_q6",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The documents, preserved in legal archives, were written by historians.'",
+              options: [
+                "The documents, which were preserved in legal archives, were written by historians.",
+                "The documents, preserving in legal archives, were written by historians.",
+                "Because the documents preserved in legal archives, they were written by historians.",
+                "The documents which preserved in legal archives were written by historians."
+              ],
+              correctIndex: 0,
+              translation: "Yasal arşivlerde korunan belgeler tarihçiler tarafından yazıldı.",
+              explanation: "'preserved' kısaltmasının açık hali 'which were preserved' şeklindedir.",
+              grammarTags: ["Structural Deconstruction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q7",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Not possessing enough funding, the anthropologists abandoned the survey.'",
+              options: [
+                "Since they did not want to argue, the historians walked away from the debate.",
+                "Although the historians did not want to argue, they walked away from the debate.",
+                "Before the historians wanted to argue, they walked away from the debate.",
+                "If they do not want to argue, the historians walked away from the debate."
+              ],
+              correctIndex: 0,
+              translation: "Yeterli fonları olmadığı için antropologlar anketi bıraktılar.",
+              explanation: "'Not possessing' olumsuz sebep kısaltmasıdır.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l6_q8",
+              type: "reverse-engineering-translation",
+              prompt: "'Hukuk uzmanlarınca yürütülen araştırma önemli kanıtları ortaya çıkardı.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The research conducted by legal experts revealed important evidence.",
+                "The research conducting by legal experts revealed important evidence.",
+                "The research which conducted by legal experts revealed important evidence.",
+                "Having conducted by legal experts, the research revealed evidence."
+              ],
+              correctIndex: 0,
+              translation: "Hukuk uzmanlarınca yürütülen araştırma önemli kanıtları ortaya çıkardı.",
+              explanation: "'conducted by' yapısı edilgen sıfat nitelemesi oluşturur.",
+              grammarTags: ["Reverse Translation", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q9",
+              type: "reverse-engineering-translation",
+              prompt: "'Verileri inceleyen psikologlar bulguları yayınladılar.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The psychologists examining the data published the findings.",
+                "The psychologists examined the data published the findings.",
+                "The psychologists who was examining the data published the findings.",
+                "Examining the data, the findings were published by the psychologists."
+              ],
+              correctIndex: 0,
+              translation: "Verileri inceleyen psikologlar bulguları yayınladılar.",
+              explanation: "'psychologists examining' (inceleyen psikologlar) aktif niteleme kısaltmasıdır.",
+              grammarTags: ["Reverse Translation", "Active Reduction"]
+            },
+            {
+              id: "u35_l6_q10",
+              type: "multiple-choice",
+              prompt: "What is the grammatical function of 'designed' in the following sentence?\n'The survey designed to evaluate kinship patterns failed.'",
+              options: [
+                "It is the main verb of the sentence.",
+                "It is a passive relative clause reduction modifying 'the survey'.",
+                "It is an active participle indicating cause.",
+                "It is an infinitive of purpose."
+              ],
+              correctIndex: 1,
+              translation: "Akrabalık kalıplarını değerlendirmek üzere tasarlanan anket başarısız oldu.",
+              explanation: "'designed' kelimesi 'the survey (which was) designed' nitelemesidir, ana fiil 'failed'dır.",
+              grammarTags: ["Sentence Parsing", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q11",
+              type: "multiple-choice",
+              prompt: "Find the main verb: 'The documents written by economists during the legal dispute reflect diverse public opinions.'",
+              options: ["written", "during", "reflect", "opinions"],
+              correctIndex: 2,
+              translation: "Yasal anlaşmazlık sırasında iktisatçılar tarafından yazılan belgeler, çeşitli kamuoyu görüşlerini yansıtmaktadır.",
+              explanation: "Özne 'The documents', ana yüklem ise 'reflect'tir.",
+              grammarTags: ["Sentence Parsing", "Main Verb", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l6_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun niteleyici kısaltmayı seçiniz:",
+              sentence: "The empirical research [conducted] by behavioral psychologists proved highly effective.",
+              options: ["conducted", "conducting", "to conduct", "conducts"],
+              correctIndex: 0,
+              translation: "Davranış psikologları tarafından yürütülen ampirik araştırma son derece etkili oldu.",
+              explanation: "Araştırma yürütülen (edilgen) olduğu için 'conducted' (V3) kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The historians [studying] early cinema archives discovered rare documents.",
+              options: ["studying", "studied", "study", "having been studied"],
+              correctIndex: 0,
+              translation: "Erken sinema arşivlerini çalışan tarihçiler nadir belgeler keşfettiler.",
+              explanation: "Tarihçiler etken olarak çalıştıkları için active reduction olan 'studying' (who are studying) tercih edilir.",
+              grammarTags: ["Relative Clause Reduction", "Active Reduction"]
+            },
+            {
+              id: "u35_l6_q14",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The legal dispute, [resolved] by the court yesterday, caused public controversy.",
+              options: ["resolved", "resolving", "to resolve", "resolves"],
+              correctIndex: 0,
+              translation: "Dün mahkemece çözülen yasal anlaşmazlık, kamuoyunda tartışmaya neden oldu.",
+              explanation: "Anlaşmazlık çözüldüğü için passive reduction 'resolved' kullanılır.",
+              grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q15",
+              type: "error-spotting",
+              prompt: "Cümledeki sıfat niteleme hatasını bulunuz:",
+              sentence: "The project, initiating by the research institute, failed to obtain funding.",
+              options: ["initiating", "research", "failed", "funding"],
+              correctIndex: 0,
+              translation: "Araştırma enstitüsü tarafından başlatılan proje fon alamadı.",
+              explanation: "Proje başlatılan (edilgen) olduğu için 'initiated' olmalıdır.",
+              grammarTags: ["Relative Clause Reduction Error", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q16",
+              type: "error-spotting",
+              prompt: "Dangling modifier (özne uyumsuzluğu) hatasını bulunuz:",
+              sentence: "Having analyzed the kinship patterns, the findings were published by the anthropologist.",
+              options: ["analyzed", "findings", "published", "anthropologist"],
+              correctIndex: 1,
+              translation: "Akrabalık kalıplarını analiz eden antropolog bulguları yayınladı.",
+              explanation: "Kısaltmanın öznesi 'anthropologist' olmalıdır; ancak ana cümlenin öznesi 'findings' yapılmıştır.",
+              grammarTags: ["Dangling Participle", "Syntax Error"]
+            },
+            {
+              id: "u35_l6_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The data collected by economists during the survey was reliable.'",
+              options: [
+                "The data which was collected by economists during the survey was reliable.",
+                "The data collecting by economists during the survey was reliable.",
+                "Because the data collected by economists during the survey, it was reliable.",
+                "The data which collected by economists during the survey was reliable."
+              ],
+              correctIndex: 0,
+              translation: "Anket sırasında iktisatçılar tarafından toplanan veriler güvenilirdi.",
+              explanation: "'collected' edilgen nitelemesinin açık hali 'which was collected'dır.",
+              grammarTags: ["Structural Deconstruction", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q18",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Not having enough resources, they cancelled the cinema project.'",
+              options: [
+                "Because they did not have enough resources, they cancelled the cinema project.",
+                "Although they did not have enough resources, they cancelled the cinema project.",
+                "Before they had enough resources, they cancelled the cinema project.",
+                "If they do not have enough resources, they cancelled the cinema project."
+              ],
+              correctIndex: 0,
+              translation: "Yeterli kaynakları olmadığı için sinema projesini iptal ettiler.",
+              explanation: "'Not having' etken sebep kısaltmasıdır.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l6_q19",
+              type: "reverse-engineering-translation",
+              prompt: "'Arşivlerde korunan belgeler sinema tarihini aydınlatmaktadır.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The documents preserved in archives illuminate cinema history.",
+                "The documents preserving in archives illuminate cinema history.",
+                "The documents which preserved in archives illuminate cinema history.",
+                "Preserving in archives, cinema history is illuminated by the documents."
+              ],
+              correctIndex: 0,
+              translation: "Arşivlerde korunan belgeler sinema tarihini aydınlatmaktadır.",
+              explanation: "'documents preserved' edilgen sıfat nitelemesidir.",
+              grammarTags: ["Reverse Translation", "Passive Reduction"]
+            },
+            {
+              id: "u35_l6_q20",
+              type: "multiple-choice",
+              prompt: "Find the main verb of this sentence: 'The candidate selected for the research team declined the offer.'",
+              options: ["selected", "for", "declined", "offer"],
+              correctIndex: 2,
+              translation: "Araştırma ekibi için seçilen aday teklifi reddetti.",
+              explanation: "Aday seçilen (kısaltma) olandır, cümlenin ana yüklemi 'declined'dır.",
+              grammarTags: ["Sentence Parsing", "Main Verb", "Sentence Analysis"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      lessonId: "u35_l6",
+      lessonTitle: "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği — Cümle Düzeyi",
+      description: `<strong>Master Class & Dangling Participle:</strong><br>Bu bölümde, YDS/YÖKDİL formatında karma kısaltma soruları ve özne uyumu hataları (Dangling Modifiers) test edilmektedir.<br><br><strong>Önemli Kural:</strong><br>Kısaltılan yan cümlenin öznesi ile ana cümlenin öznesi aynı olmalıdır, aksi takdirde özne uyuşmazlığı hatası oluşur.`,
+      exercises: [
+        {
+          id: "u35_l6_ex1",
+          title: "Karma Master Class & Sentaks Dedektifliği",
+          description: "Özne uyumsuzluğu (Dangling Participle) ve karma akademik sentaks analizi.",
+          questions: [
+            {
+              id: "u35_l7_q1",
+              type: "multiple-choice",
+              prompt: "Aşağıdaki cümledeki Dangling Participle (Özne Uyumsuzluğu) hatasını düzeltmek için hangi değişiklik yapılmalıdır?\n'Analyzing public opinions, the survey was completed by the psychologists.'",
+              options: [
+                "Analyzing public opinions, the psychologists completed the survey.",
+                "Analyzed public opinions, the survey was completed by the psychologists.",
+                "While analyzing public opinions, the survey was completed.",
+                "Having analyzed public opinions, the survey was completed by the psychologists."
+              ],
+              correctIndex: 0,
+              translation: "Kamuoyu görüşlerini analiz eden psikologlar anketi tamamladı.",
+              explanation: "'Analyzing' eylemini yapan psikologlar olduğu için ana cümlenin öznesi 'the psychologists' olmalıdır.",
+              grammarTags: ["Dangling Participle", "Sentence Correction"]
+            },
+            {
+              id: "u35_l7_q2",
+              type: "multiple-choice",
+              prompt: "YDS Çift Boşluk Sorusu: 'The primary sources ________ in the archives, ________ by historians, resolved the dispute.'",
+              options: [
+                "found / analyzed",
+                "finding / analyzing",
+                "having found / was analyzed",
+                "found / analyzing"
+              ],
+              correctIndex: 0,
+              translation: "Arşivlerde bulunan ve tarihçiler tarafından analiz edilen birincil kaynaklar anlaşmazlığı çözdü.",
+              explanation: "Kaynaklar hem bulunan hem de analiz edilen (çift edilgen niteleme) olduğu için her iki boşlukta da V3 gerekir.",
+              grammarTags: ["Relative Clause Reduction", "Double Reduction"]
+            },
+            {
+              id: "u35_l7_q3",
+              type: "multiple-choice",
+              prompt: "Choose the correct option: 'It is believed that the policies ________ by the economists will stabilize the market, ________ inflation.'",
+              options: [
+                "enacted / thereby reducing",
+                "enacting / thereby reduce",
+                "enacted / thereby reduced",
+                "to enact / thereby reducing"
+              ],
+              correctIndex: 0,
+              translation: "İktisatçılar tarafından yürürlüğe konan politikaların piyasayı istikrara kavuşturacağına ve böylelikle enflasyonu azaltacağına inanılmaktadır.",
+              explanation: "Politikalar yürürlüğe konan (edilgen kısaltma -> enacted) ve eylemin sonucu (thereby + V-ing -> thereby reducing) şeklinde doğru yapı kurulur.",
+              grammarTags: ["Advanced Syntax", "Spiraled Grammar"]
+            },
+            {
+              id: "u35_l7_q4",
+              type: "error-spotting",
+              prompt: "Cümledeki Dangling Participle (özne uyumsuzluğu) hatasını bulunuz:",
+              sentence: "Examining the legal documents, a serious error was found by the lawyer.",
+              options: ["Examining", "serious", "was found", "lawyer"],
+              correctIndex: 0,
+              translation: "Yasal belgeleri inceleyen avukat ciddi bir hata buldu.",
+              explanation: "Belgeleri inceleyen avukattır; ancak ana cümlenin öznesi 'error' yapılmıştır. Cümlenin 'Examining... the lawyer found...' olması gerekir.",
+              grammarTags: ["Dangling Participle", "Syntax Error"]
+            },
+            {
+              id: "u35_l7_q5",
+              type: "error-spotting",
+              prompt: "Gramer hatasını bulunuz:",
+              sentence: "Driven by curiosity, the ancient kinship patterns were explored by the anthropologist.",
+              options: ["Driven", "kinship", "were explored", "anthropologist"],
+              correctIndex: 0,
+              translation: "Merakla yönlenen antropolog antik akrabalık kalıplarını keşfetti.",
+              explanation: "Merakla yönlenen antropologdur; ancak özne 'kinship patterns' yapılmıştır. Özne 'anthropologist' olmalıdır.",
+              grammarTags: ["Dangling Participle", "Syntax Error"]
+            },
+            {
+              id: "u35_l7_q6",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Although defeated in court, the economists continued the dispute.'",
+              options: [
+                "Although the economists were defeated in court, they continued the dispute.",
+                "Although the economists defeated in court, they continued the dispute.",
+                "Despite they were defeated in court, they continued the dispute.",
+                "Because the economists were defeated in court, they continued the dispute."
+              ],
+              correctIndex: 0,
+              translation: "Mahkemede mağlup olmalarına rağmen iktisatçılar anlaşmazlığı sürdürdüler.",
+              explanation: "'Although defeated' edilgen zıtlık kısaltmasıdır.",
+              grammarTags: ["Structural Deconstruction", "Contrast Reduction"]
+            },
+            {
+              id: "u35_l7_q7",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'The controversy having passed, they returned to empirical research.'",
+              options: [
+                "After the controversy had passed, they returned to empirical research.",
+                "While the controversy was passing, they returned to empirical research.",
+                "Although the controversy had passed, they returned to empirical research.",
+                "Before the controversy passed, they returned to empirical research."
+              ],
+              correctIndex: 0,
+              translation: "Tartışma geçtikten sonra ampirik araştırmaya geri döndüler.",
+              explanation: "'The controversy having passed' bağımsız özne yapısıdır.",
+              grammarTags: ["Structural Deconstruction", "Absolute Clause"]
+            },
+            {
+              id: "u35_l7_q8",
+              type: "reverse-engineering-translation",
+              prompt: "'Birincil kaynakları sunan avukat davanın seyrini değiştirdi.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The lawyer presenting the primary sources changed the course of the trial.",
+                "The lawyer presented the primary sources changed the course of the trial.",
+                "The lawyer who was presented the primary sources changed the course of the trial.",
+                "Presenting the primary sources, the course of the trial was changed by the lawyer."
+              ],
+              correctIndex: 0,
+              translation: "Birincil kaynakları sunan avukat davanın seyrini değiştirdi.",
+              explanation: "'lawyer presenting' (sunan avukat) etken sıfat nitelemesidir.",
+              grammarTags: ["Reverse Translation", "Active Reduction"]
+            },
+            {
+              id: "u35_l7_q9",
+              type: "reverse-engineering-translation",
+              prompt: "'Davranış psikolojisinde iyi eğitilmiş olmasına rağmen denek bazen beklenmedik davranıyor.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "Although well-trained in behavioral psychology, the subject sometimes behaves unexpectedly.",
+                "Despite well-trained in behavioral psychology, the subject sometimes behaves unexpectedly.",
+                "Having well-trained in behavioral psychology, the subject sometimes behaves unexpectedly.",
+                "While training well in behavioral psychology, the subject sometimes behaves unexpectedly."
+              ],
+              correctIndex: 0,
+              translation: "Davranış psikolojisinde iyi eğitilmiş olmasına rağmen denek bazen beklenmedik davranıyor.",
+              explanation: "'Although well-trained' (Although he was well-trained) zıtlık kısaltmasıdır.",
+              grammarTags: ["Reverse Translation", "Contrast Reduction"]
+            },
+            {
+              id: "u35_l7_q10",
+              type: "multiple-choice",
+              prompt: "Select the grammatically correct sentence:",
+              options: [
+                "Having read the archival documents, the historian put them back.",
+                "Reading the archival documents, the shelf was reorganised by the historian.",
+                "Having read the archival documents, the shelf was reorganised by the historian.",
+                "The documents having read, the historian put them back."
+              ],
+              correctIndex: 0,
+              translation: "Arşiv belgelerini okuduktan sonra tarihçi onları geri koydu.",
+              explanation: "Tarihçi belgeleri okuyan kişi olduğu için özne uyumu 'Having read the archival documents, the historian...' cümlesinde doğrudur.",
+              grammarTags: ["Dangling Participle", "Sentence Correction"]
+            },
+            {
+              id: "u35_l7_q11",
+              type: "multiple-choice",
+              prompt: "Find the grammatical error: 'While studying early cinema, the film hit her in the face.'",
+              options: [
+                "It has a dangling participle because the film cannot study early cinema.",
+                "It is correct because while is followed by a gerund.",
+                "The word cinema should be replaced with art.",
+                "It has an active passive conflict in the verb hit."
+              ],
+              correctIndex: 0,
+              translation: "Erken sinema çalışırken film onun yüzüne çarptı.",
+              explanation: "'While studying early cinema' kısaltmasının öznesi film olamaz. Özne uyumsuzluğu vardır.",
+              grammarTags: ["Dangling Participle", "Sentence Analysis"]
+            },
+            {
+              id: "u35_l7_q12",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "The funding resources increased, [thereby] satisfying the behavioral psychologists.",
+              options: ["thereby", "thus to", "because of", "so that"],
+              correctIndex: 0,
+              translation: "Fon kaynakları arttı ve böylelikle davranış psikologlarını memnun etti.",
+              explanation: "'thereby + V-ing' sonuç bildirir.",
+              grammarTags: ["Resultative Participle", "Adverbial Result"]
+            },
+            {
+              id: "u35_l7_q13",
+              type: "fill-blank-dropdown",
+              prompt: "Boşluğa gelecek uygun kısaltmayı seçiniz:",
+              sentence: "Having [spent] all the suspended funding, they ceased the empirical research.",
+              options: ["spent", "spending", "spend", "having been spent"],
+              correctIndex: 0,
+              translation: "Askıya alınan tüm fonları harcadıktan sonra ampirik araştırmayı durdurdular.",
+              explanation: "Harcama eylemi etken ve önceliklidir: 'Having spent'.",
+              grammarTags: ["Perfect Participle", "Active Reduction"]
+            },
+            {
+              id: "u35_l7_q14",
+              type: "error-spotting",
+              prompt: "Cümledeki hatayı bulunuz:",
+              sentence: "Although was wounded in the legal dispute, the lawyer returned to court.",
+              options: ["was wounded", "returned", "legal", "dispute"],
+              correctIndex: 0,
+              translation: "Yasal anlaşmazlıkta yaralanmasına rağmen avukat mahkemeye döndü.",
+              explanation: "Kısaltmada yardımcı fiil 'was' kullanılmaz, doğrudan 'Although wounded' olmalıdır.",
+              grammarTags: ["Contrast Reduction Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l7_q15",
+              type: "error-spotting",
+              prompt: "Cümledeki hatayı bulunuz:",
+              sentence: "Having being informed of the controversy, the anthropologist signed the documents.",
+              options: ["being", "informed", "anthropologist", "documents"],
+              correctIndex: 0,
+              translation: "Tartışmadan haberdar edildikten sonra antropolog belgeleri imzaladı.",
+              explanation: "Edilgen Perfect Participle 'Having been informed' şeklinde olmalıdır, 'being' değil 'been' kullanılır.",
+              grammarTags: ["Perfect Participle Error", "Syntax Error"]
+            },
+            {
+              id: "u35_l7_q16",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Deprived of reliable funding, the research institute withered.'",
+              options: [
+                "Because they were deprived of reliable funding, the research institute withered.",
+                "Although the research institute deprived of reliable funding, it withered.",
+                "Before the research institute was deprived of reliable funding, it withered.",
+                "While depriving of reliable funding, the research institute withered."
+              ],
+              correctIndex: 0,
+              translation: "Güvenilir fondan mahrum kalan araştırma enstitüsü solup gitti.",
+              explanation: "'Deprived of' edilgen sebep kısaltmasıdır.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l7_q17",
+              type: "structural-deconstruction",
+              prompt: "Aşağıdaki cümlenin açık halini bulunuz: 'Not wanting to argue, the historians walked away from the debate.'",
+              options: [
+                "Since they did not want to argue, the historians walked away from the debate.",
+                "Although they did not want to argue, the historians walked away from the debate.",
+                "Before they wanted to argue, the historians walked away from the debate.",
+                "If they do not want to argue, the historians walked away from the debate."
+              ],
+              correctIndex: 0,
+              translation: "Tartışmak istemedikleri için tarihçiler tartışmadan çekip gittiler.",
+              explanation: "'Not wanting' olumsuz sebep kısaltmasıdır.",
+              grammarTags: ["Structural Deconstruction", "Cause Reduction"]
+            },
+            {
+              id: "u35_l7_q18",
+              type: "reverse-engineering-translation",
+              prompt: "'İşten dolayı çok yorulan iktisatçılar erken ayrıldı.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "The economists, exhausted from empirical research, left early.",
+                "The economists, exhausting from empirical research, left early.",
+                "Exhausting from empirical research, the economists was left early.",
+                "The economists left early when exhausting from empirical research."
+              ],
+              correctIndex: 0,
+              translation: "Ampirik araştırmadan dolayı bitkin düşen iktisatçılar erken ayrıldı.",
+              explanation: "'economists, exhausted' edilgen durum/kısaltma nitelemesidir.",
+              grammarTags: ["Reverse Translation", "Passive Reduction"]
+            },
+            {
+              id: "u35_l7_q19",
+              type: "reverse-engineering-translation",
+              prompt: "'Birincil kaynakları değerlendirirken klasik müzik dinlemeyi sever.' cümlesinin İngilizce karşılığı:",
+              options: [
+                "She likes listening to classical music while evaluating primary sources.",
+                "She likes listening to classical music while she evaluating primary sources.",
+                "She likes listening to classical music when evaluated primary sources.",
+                "Having evaluated primary sources, she likes listening to classical music."
+              ],
+              correctIndex: 0,
+              translation: "Birincil kaynakları değerlendirirken klasik müzik dinlemeyi sever.",
+              explanation: "'while evaluating' etken zaman kısaltmasıdır.",
+              grammarTags: ["Reverse Translation", "Time Reduction"]
+            },
+            {
+              id: "u35_l7_q20",
+              type: "multiple-choice",
+              prompt: "Choose the correct option: '________ by the cinema history performance, the director offered him the lead role.'",
+              options: ["Impressed", "Impressing", "Having impressed", "To impress"],
+              correctIndex: 0,
+              translation: "Sinema tarihi performansından etkilenen yönetmen ona başrolü teklif etti.",
+              explanation: "Yönetmen etkilendiği (edilgen sebep) için 'Impressed' (V3) kullanılır.",
+              grammarTags: ["Cause Reduction", "Passive Reduction"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 };
 
 
@@ -48453,16 +49689,29 @@ const unit35 = {
 
 // Entegrasyon Protokolü: Unit 35'i (Bölüm 25) global units, lessons ve unitSentencesMap yapılarına kaydeder
 if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unit35 !== 'undefined') {
+    if (typeof rawTopics !== 'undefined') {
+        const existingTopic = rawTopics.find(t => t.id === 35);
+        if (!existingTopic) {
+            rawTopics.push({
+                id: 35,
+                title: unit35.unitTitle,
+                desc: unit35.unitDescription,
+                icon: "🧪",
+                numLessons: unit35.lessons.length,
+                formulas: unit35.formulas || []
+            });
+        }
+    }
     const unitLessonIds = unit35.lessons.map(l => l.lessonId);
 
     const titlesMap = {
       "u35_l1": "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
-      "u35_l2": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık",
-      "u35_l3": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık",
-      "u35_l4": "4. Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları",
-      "u35_l5": "5. Akademik Cümle Parsing & Çözümleme Stratejileri",
-      "u35_l6": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği"
-    };
+      "u35_l2": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık — Öbek Düzeyi",
+      "u35_l3": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık — Cümle Düzeyi",
+      "u35_l4": "4. Bağımsız Özneli & Sonuç Bildiren Participle Yapıları — Cümle Düzeyi",
+      "u35_l5": "5. Akademik Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
+      "u35_l6": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği — Cümle Düzeyi"
+    }
 
     // Check if Unit 35 is already in units array
     const existingUnitIdx = units.findIndex(u => u.id === 35);
@@ -48489,6 +49738,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
           displayId: l.lessonId,
           title: titlesMap[l.lessonId] || l.lessonTitle,
           subtitle: l.lessonTitle,
+          description: l.description || "",
           icon: "📖",
           unitId: 35,
           questions: [],
@@ -48498,6 +49748,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
       } else {
         lessonObj.title = titlesMap[l.lessonId] || l.lessonTitle;
         lessonObj.subtitle = l.lessonTitle;
+        lessonObj.description = l.description || "";
         lessonObj.exercises = l.exercises || [];
       }
     });
