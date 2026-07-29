@@ -530,7 +530,8 @@ let state = {
   selectedShieldId: 'likely',
   conditionalType: 'none',
   formationTourCompleted: false,
-  activePassiveMode: 'active'
+  activePassiveMode: 'active',
+  profileAlertShown: false
 };
 
 // Formasyon Turu Soruları (30 Adet Özet Soru)
@@ -12104,6 +12105,12 @@ async function requestLicence() {
 function renderProfile() {
   const container = document.querySelector('#tab-content-profile .profile-container');
   if (!container) return;
+
+  if (!state.profileAlertShown) {
+    state.profileAlertShown = true;
+    saveState(true);
+    alert("Profil resminizi değiştirebilirsiniz");
+  }
 
   const firstLetter = (state.username || 'K').charAt(0).toUpperCase();
   const isGuest = state.isGuest;
