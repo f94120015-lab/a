@@ -50943,8 +50943,8 @@ const unit37_advanced_relative = {
   "lessons": [
     {
       "lessonId": "c37_l1",
-      "lessonTitle": "1: Sosyal Bilimler Özel Serisi",
-      "description": "Tarih, hukuk, felsefe ve sosyoloji metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
+      "lessonTitle": "1: Sosyal ve Beşeri Bilimler Serisi I",
+      "description": "Tarih, hukuk, felsefe, sosyoloji ve psikoloji metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
       "exercises": [
         {
           "id": "c37_l1_ex1",
@@ -50953,7 +50953,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex1_q1",
               "type": "matching",
-              "prompt": "Temel miktar yapılarını sosyal bilimler çeviri karşılıklarıyla eşleştirin.",
+              "prompt": "Temel miktar yapılarını sosyal bilimler çeviri karşılıklarıyla eşleştirin.<br><br>Match the quantifiers:",
               "pairs": [
                 {
                   "left": "most of which",
@@ -50976,56 +50976,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex1_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Sosyal teorileri niteleyen doğru miktar yapısını seçin:",
-              "sentence": "The historian examined twenty medieval manuscripts, most of ___ detailed the economic impact of the Silk Road.",
+              "prompt": "Sosyal teorileri niteleyen doğru miktar yapısını seçin:<br><br>The sociologist examined twenty archival documents, most of ___ detailed the economic impact of kinship patterns.",
               "options": [
-                "which",
+                "that",
                 "them",
                 "whom",
-                "that"
+                "which"
               ],
-              "correctIndex": 0,
-              "translation": "Tarihçi, büyük kısmı İpek Yolu'nun ekonomik etkilerini detaylandıran yirmi ortaçağ el yazmasını inceledi."
+              "correctIndex": 3,
+              "translation": "Sosyolog, büyük kısmı akrabalık ilişkilerinin ekonomik etkilerini detaylandıran yirmi arşiv belgesini inceledi."
             },
             {
               "id": "c37_l1_ex1_q3",
               "type": "fill-blank-dropdown",
-              "prompt": "Cümledeki virgülden sonra gelmesi gereken yapıyı bulun:",
-              "sentence": "The government implemented five fiscal reforms, some of ___ triggered widespread public protests.",
+              "prompt": "Cümledeki virgülden sonra gelmesi gereken yapıyı bulun:<br><br>The administration proposed five legal reforms, some of ___ triggered widespread dispute among psychologists.",
               "options": [
-                "which",
+                "what",
                 "that",
                 "them",
-                "what"
+                "which"
               ],
-              "correctIndex": 0,
-              "translation": "Hükümet, bazıları yaygın halk protestolarını tetikleyen beş mali reform uyguladı."
+              "correctIndex": 3,
+              "translation": "Yönetim, bazıları psikologlar arasında yaygın tartışmaları tetikleyen beş yasal reform önerdi."
             },
             {
               "id": "c37_l1_ex1_q4",
-              "type": "error-finder",
-              "prompt": "Cümledeki gramer hatasını (ölümcül bağlaç tuzağını) bulun:",
-              "sentenceTokens": [
-                "The",
-                "diplomats",
-                "drafted",
-                "three",
-                "alternative",
-                "treaties,",
-                "none",
-                "of",
-                "them",
-                "were",
-                "accepted."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The historians drafted three empirical surveys, ___ were accepted by the department.",
+              "options": [
+                "none of them",
+                "none of whom",
+                "none of which",
+                "none of whose"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Diplomatlar üç alternatif antlaşma tasarladı, ancak bunlardan hiçbirisi kabul edilmedi."
+              "correctIndex": 2,
+              "explanation": "İki bağımsız cümleyi virgülden sonra relative clause ile bağlamak için 'none of them' değil, cansız referanslı 'none of which' kullanılmalıdır.",
+              "translation": "Tarihçiler üç ampirik anket tasarladı, ancak bunlardan hiçbirisi departman tarafından kabul edilmedi."
             },
             {
               "id": "c37_l1_ex1_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak tarihsel omurgayı oluşturun:",
+              "prompt": "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
               "translation": "Sosyolog birkaç anket modeli test etti, bunların hepsi toplumsal cinsiyet rollerine odaklanmıştı.",
               "words": [
                 "The sociologist tested",
@@ -51047,20 +51038,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex1_q6",
               "type": "sentence-connector",
-              "prompt": "Ana cümleyi anlamca tamamlayan miktar yapılı alt cümleyi seçin:",
-              "mainSentence": "The institute published two socio-economic reports,",
+              "prompt": "Ana cümleyi anlamca tamamlayan miktar yapılı alt cümleyi seçin:<br><br>The research institute published two socio-economic reports,",
               "options": [
-                "both of which criticized inflation rates.",
-                "most of whom were highly educated.",
-                "in which event the treaty was signed."
+                "most of whom were retired psychologists.",
+                "in which event the legal dispute was resolved.",
+                "both of which criticized the behavioral survey."
               ],
-              "correctIndex": 0,
-              "translation": "Enstitü iki sosyo-ekonomik rapor yayınladı, bunların ikisi de enflasyon oranlarını eleştiriyordu."
+              "correctIndex": 2,
+              "translation": "Araştırma enstitüsü iki sosyo-ekonomik rapor yayınladı, bunların ikisi de davranışsal anketi eleştiriyordu."
             },
             {
               "id": "c37_l1_ex1_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki miktar belirteçli cümleyi Türkçe'ye pürüzsüzce çevirin:",
+              "prompt": "Aşağıdaki miktar belirteçli cümleyi Türkçe'ye pürüzsüzce çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Konsey, çoğu kentsel dönüşümle ilgili olan beş yapısal teklifi onayladı.",
               "enSentence": "The council approved five structural proposals, most of which were related to urban transformation.",
               "isEngToTr": true
@@ -51074,7 +51064,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q1",
               "type": "matching",
-              "prompt": "İnsan odaklı akademik miktar yapılarını anlamlarıyla eşleştirin.",
+              "prompt": "İnsan odaklı akademik miktar yapılarını anlamlarıyla eşleştirin.<br><br>Match the human-focused quantifiers:",
               "pairs": [
                 {
                   "left": "many of whom",
@@ -51097,13 +51087,12 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "İnsan topluluğunu niteleyen miktar belirteçli doğru yapıyı seçin:",
-              "sentence": "The empire exiled ten political dissidents, many of ___ established influential networks abroad.",
+              "prompt": "İnsan topluluğunu niteleyen miktar belirteçli doğru yapıyı seçin:<br><br>The empire exiled ten political dissidents, many of ___ established influential networks abroad.",
               "options": [
                 "whom",
+                "whose",
                 "which",
-                "them",
-                "whose"
+                "them"
               ],
               "correctIndex": 0,
               "translation": "İmparatorluk, birçoğu yurt dışında nüfuzlu ağlar kuran on siyasi muhalifi sürgün etti."
@@ -51111,42 +51100,34 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q3",
               "type": "context-distractor",
-              "prompt": "Boşluğa gelmesi gereken en uygun akademik öbeği seçin:",
-              "sentence": "The university hired three renowned anthropologists, ___ had conducted extensive fieldwork in Peru.",
+              "prompt": "Boşluğa gelmesi gereken en uygun akademik öbeği seçin:<br><br>The university hired three renowned anthropologists, ___ had conducted empirical research in Peru.",
               "options": [
-                "each of whom",
-                "each of which",
                 "the majority of which",
-                "most of them"
+                "each of which",
+                "most of them",
+                "each of whom"
               ],
-              "correctIndex": 0,
-              "translation": "Üniversite, her biri Peru'da kapsamlı saha çalışması yürütmüş olan üç tanınmış antropoloğu işe aldı."
+              "correctIndex": 3,
+              "translation": "Üniversite, her biri Peru'da ampirik araştırma yürütmüş olan üç tanınmış antropoloğu işe aldı."
             },
             {
               "id": "c37_l1_ex2_q4",
-              "type": "error-finder",
-              "prompt": "İki kişiyi nitelerken yapılan hatayı düzeltin:",
-              "sentenceTokens": [
-                "The",
-                "prime",
-                "minister",
-                "appointed",
-                "two",
-                "advisors,",
-                "neither",
-                "of",
-                "which",
-                "had",
-                "experience."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The defense lawyer appointed two candidates, ___ had relevant court experience.",
+              "options": [
+                "none of them",
+                "neither of them",
+                "neither of whom",
+                "neither of which"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "whom",
-              "translation": "Başbakan, ikisinin de deneyimi bulunmayan iki danışman atadı."
+              "correctIndex": 2,
+              "explanation": "İki insanı olumsuzlayarak relative clause yapısı kurmak için 'neither of whom' kullanılmalıdır. 'neither of which' cansızlar için tercih edilir.",
+              "translation": "Savunma avukatı, ikisinin de ilgili mahkeme deneyimi bulunmayan iki aday atadı."
             },
             {
               "id": "c37_l1_ex2_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını sosyal bilimler söz dizimine uygun sıralayın:",
+              "prompt": "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
               "translation": "STK, çoğunluğu mülteci olan yüzlerce yerinden edilmiş insana yardım sağladı.",
               "words": [
                 "The NGO provided aid to",
@@ -51168,20 +51149,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q6",
               "type": "sentence-connector",
-              "prompt": "Cümleyi insan/nesne uyumuna dikkat ederek tamamlayın:",
-              "mainSentence": "The committee interviewed twenty local leaders,",
+              "prompt": "Cümleyi insan/nesne uyumuna dikkat ederek tamamlayın:<br><br>The committee interviewed twenty local leaders,",
               "options": [
-                "many of whom supported the structural reform.",
+                "by which time the meeting was adjourned.",
                 "most of which were written in Latin.",
-                "by which time the meeting was adjourned."
+                "many of whom supported the structural reform."
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "Komite, birçoğu yapısal reformu destekleyen yirmi yerel liderle görüştü."
             },
             {
               "id": "c37_l1_ex2_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki cümleyi Türkçe'ye pürüzsüzce aktarın:",
+              "prompt": "Aşağıdaki cümleyi Türkçe'ye pürüzsüzce aktarın:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Arkeologlar, ikisi antik hiyeroglifleri okuyabilen üç uzmanı davet etti.",
               "enSentence": "The archeologists invited three experts, two of whom could read ancient hieroglyphs.",
               "isEngToTr": true
@@ -51195,7 +51175,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex3_q1",
               "type": "matching",
-              "prompt": "Sıralama ve derece miktar kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Sıralama ve derece miktar kalıplarını anlamlarıyla eşleştirin.<br><br>Match the ordinal and superlative structures:",
               "pairs": [
                 {
                   "left": "the largest of which",
@@ -51218,57 +51198,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex3_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Tarihsel kronoloji bildiren miktar yapısını doğru tamamlayın:",
-              "sentence": "The civilization built three grand libraries, the first of ___ was destroyed during the civil war.",
+              "prompt": "Tarihsel kronoloji bildiren miktar yapısını doğru tamamlayın:<br><br>The civilization built three grand libraries, the first of ___ was destroyed during the civil war.",
               "options": [
+                "what",
                 "which",
                 "whom",
-                "that",
-                "what"
+                "that"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Medeniyet, ilki iç savaş sırasında yok edilen üç büyük kütüphane inşa etti."
             },
             {
               "id": "c37_l1_ex3_q3",
               "type": "context-distractor",
-              "prompt": "Derecelendirme bildiren en uygun akademik yapıyı seçin:",
-              "sentence": "The empire faced five major peasant rebellions, ___ shook the capital city.",
+              "prompt": "Derecelendirme bildiren en uygun akademik yapıyı seçin:<br><br>The empire faced five major peasant rebellions, ___ shook the capital city.",
               "options": [
-                "the largest of which",
                 "the largest of whom",
-                "most of whose",
-                "all of them"
+                "all of them",
+                "the largest of which",
+                "most of whose"
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "İmparatorluk, en büyüğü başkenti sarsan beş büyük köylü isyanıyla karşı karşıya kaldı."
             },
             {
               "id": "c37_l1_ex3_q4",
-              "type": "error-finder",
-              "prompt": "İnsan topluluğunda kıdem belirtirken yapılan hatayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "academy",
-                "honored",
-                "four",
-                "senior",
-                "philosophers,",
-                "the",
-                "oldest",
-                "of",
-                "which",
-                "met",
-                "Sartre."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The academy honored four senior philosophers, ___ met Sartre in Paris.",
+              "options": [
+                "the oldest of whom",
+                "the oldest of whose",
+                "the oldest of them",
+                "the oldest of which"
               ],
-              "correctIndex": 9,
-              "suggestedCorrection": "whom",
-              "translation": "Anlamca insan kastedildiği için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Filozoflar insan olduğu için en yaşlısını nitelemek amacıyla 'the oldest of whom' yapısı kullanılmalıdır.",
+              "translation": "Akademi, en yaşlısı Paris'te Sartre ile buluşmuş olan dört kıdemli filozofu onurlandırdı."
             },
             {
               "id": "c37_l1_ex3_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
               "translation": "Hükümet üç sosyal program başlattı, bunların sonuncusu evsizlere barınak sağladı.",
               "words": [
                 "The government launched",
@@ -51290,20 +51260,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex3_q6",
               "type": "sentence-connector",
-              "prompt": "Cümleyi mantıksal derece akışına göre tamamlayın:",
-              "mainSentence": "The archeologists discovered three ancient temples,",
+              "prompt": "Cümleyi mantıksal derece akışına göre tamamlayın:<br><br>The archeologists discovered three ancient temples,",
               "options": [
+                "most of whose citizens were farmers.",
                 "the largest of which was dedicated to the sun god.",
-                "the oldest of whom was thirty years old.",
-                "most of whose citizens were farmers."
+                "the oldest of whom was thirty years old."
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Arkeologlar üç antik tapınak keşfettiler, bunların en büyüğü güneş tanrısına adanmıştı."
             },
             {
               "id": "c37_l1_ex3_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki derece bildiren miktar cümlesini Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki derece bildiren miktar cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Düşünür üç makale yayınladı, ki bunların ilki feodalizmi analiz ediyordu.",
               "enSentence": "The thinker published three essays, the first of which analyzed feudalism.",
               "isEngToTr": true
@@ -51317,7 +51286,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex4_q1",
               "type": "matching",
-              "prompt": "Aitlik bildiren miktar kalıplarını sosyal bilimler karşılıklarıyla eşleştirin.",
+              "prompt": "Aitlik bildiren miktar kalıplarını sosyal bilimler karşılıklarıyla eşleştirin.<br><br>Match the possessive quantifiers:",
               "pairs": [
                 {
                   "left": "most of whose citizens",
@@ -51340,57 +51309,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex4_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluktan sonra gelen 'citizens' ismine dikkat ederek seçim yapın:",
-              "sentence": "They studied an ancient city-state, most of ___ citizens were classified as free merchants.",
+              "prompt": "Boşluktan sonra gelen 'citizens' ismine dikkat ederek seçim yapın:<br><br>They studied an ancient city-state, most of ___ citizens were classified as free merchants.",
               "options": [
-                "whose",
-                "which",
+                "that",
                 "whom",
-                "that"
+                "which",
+                "whose"
               ],
-              "correctIndex": 0,
+              "correctIndex": 3,
               "translation": "Vatandaşlarının çoğu özgür tüccarlar olarak sınıflandırılan antik bir şehir devletini incelediler."
             },
             {
               "id": "c37_l1_ex4_q3",
               "type": "context-distractor",
-              "prompt": "Kurumsal aidiyet bildiren miktar yapısını tam öbek olarak seçin:",
-              "sentence": "The tribunal dissolved two political factions, ___ had openly violated the constitution.",
+              "prompt": "Kurumsal aidiyet bildiren miktar yapısını tam öbek olarak seçin:<br><br>The tribunal dissolved two political factions, ___ had openly violated the constitution.",
               "options": [
+                "none of them",
                 "all of whose members",
                 "all of which members",
-                "the majority of whom",
-                "none of them"
+                "the majority of whom"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Mahkeme, üyelerinin tamamı anayasayı açıkça ihlal etmiş olan iki siyasi grubu feshetti."
             },
             {
               "id": "c37_l1_ex4_q4",
-              "type": "error-finder",
-              "prompt": "Sahiplik bildiren relative clause tuzağını yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "professor",
-                "critiqued",
-                "a",
-                "famous",
-                "sociologist,",
-                "some",
-                "of",
-                "which",
-                "theories",
-                "were",
-                "weak."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The professor critiqued a famous sociologist, ___ theories were weak.",
+              "options": [
+                "some of whose",
+                "some of them",
+                "some of whom",
+                "some of which"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "whose",
-              "translation": "Teorilerin yazara ait olduğunu belirtmek için 'which' yerine 'whose' gelmelidir."
+              "correctIndex": 0,
+              "explanation": "Sosyoloğa ait teorileri nitelemek ve sahiplik ilişkisi kurmak amacıyla 'some of whose' relative belirteci kullanılmalıdır.",
+              "translation": "Profesör, bazı teorileri zayıf olan ünlü bir sosyoloğu eleştirdi."
             },
             {
               "id": "c37_l1_ex4_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
               "translation": "Filozof kalın bir kitap yazdı, bunun bölümlerinin her biri demokrasiyi yeniden tanımlar.",
               "words": [
                 "The philosopher wrote a thick book,",
@@ -51412,20 +51371,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex4_q6",
               "type": "sentence-connector",
-              "prompt": "Anlam bütünlüğünü sahiplik ilişkisine göre tamamlayın:",
-              "mainSentence": "The sociologist studied five ethnic groups,",
+              "prompt": "Anlam bütünlüğünü sahiplik ilişkisine göre tamamlayın:<br><br>The sociologist studied five ethnic groups,",
               "options": [
+                "the purpose of which was unknown.",
                 "most of whose traditions had vanished completely.",
-                "many of whom were living in Europe.",
-                "the purpose of which was unknown."
+                "many of whom were living in Europe."
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Sosyolog beş etnik grubu inceledi, bunların geleneklerinin çoğu tamamen kaybolmuştu."
             },
             {
               "id": "c37_l1_ex4_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki ileri seviye cümleyi Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki ileri seviye cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
               "correctSentence": "Müze, eserlerinin hiçbirisi orijinal olmayan üç sergiyi kapattı.",
               "enSentence": "The museum closed three exhibitions, none of whose artifacts were original.",
               "isEngToTr": true
@@ -51439,7 +51397,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex5_q1",
               "type": "matching",
-              "prompt": "Edatlı miktar yapılarını sosyal bilimler anlamlarıyla eşleştirin.",
+              "prompt": "Edatlı miktar yapılarını sosyal bilimler anlamlarıyla eşleştirin.<br><br>Match the prepositional quantifiers:",
               "pairs": [
                 {
                   "left": "in some of which",
@@ -51462,57 +51420,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex5_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Pasif yapıdaki eylemi (by... ) niteleyen edatlı miktar bağlacını bulun:",
-              "sentence": "The institute invited ten prominent historians, by many of ___ the traditional narrative was rejected.",
+              "prompt": "Pasif yapıdaki eylemi (by... ) niteleyen edatlı miktar bağlacını bulun:<br><br>The institute invited ten prominent historians, by many of ___ the traditional narrative was rejected.",
               "options": [
-                "whom",
-                "which",
                 "that",
-                "them"
+                "whom",
+                "them",
+                "which"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Enstitü, birçoğu tarafından geleneksel anlatının reddedildiği on seçkin tarihçiyi davet etti."
             },
             {
               "id": "c37_l1_ex5_q3",
               "type": "context-distractor",
-              "prompt": "Arşiv ve belge niteleyen edatlı miktar yapısını tam grup olarak bulun:",
-              "sentence": "The researchers uncovered five ancient archives, ___ evidence of early trade was clearly found.",
+              "prompt": "Arşiv ve belge niteleyen edatlı miktar yapısını tam grup olarak bulun:<br><br>The researchers uncovered five ancient archives, ___ evidence of early trade was clearly found.",
               "options": [
                 "in some of which",
                 "in some of whom",
-                "most of which",
-                "from them"
+                "from them",
+                "most of which"
               ],
               "correctIndex": 0,
-              "translation": "Araştırmacılar, bazılarının içinde erken ticaret kanıtlarının açıkça bulunduğu beş antik arşiv ortaya çıkardılar."
+              "translation": "Araştırmacılar, bazılarının içinde erken ticaret kanıtlarının açıkça bulunduğu ve incelendiği beş antik arşiv ortaya çıkardılar."
             },
             {
               "id": "c37_l1_ex5_q4",
-              "type": "error-finder",
-              "prompt": "Fiilin edat uyumuna (agree to) dikkat ederek hatayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "delegation",
-                "proposed",
-                "two",
-                "amendments,",
-                "to",
-                "neither",
-                "of",
-                "whom",
-                "the",
-                "parliament",
-                "agreed."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The delegation proposed two amendments, ___ the parliament agreed.",
+              "options": [
+                "to neither of whom",
+                "to none of them",
+                "to neither of which",
+                "to neither of them"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Kanun teklifi nesne olduğu için 'whom' yerine 'which' kullanılmalıdır."
+              "correctIndex": 2,
+              "explanation": "Değişiklikler (amendments) cansız nesnelerdir ve 'agree to' edatıyla birlikte kullanıldıkları için 'to neither of which' yapısı getirilmelidir.",
+              "translation": "Delegasyon iki değişiklik önerdi, parlamento bunların hiçbirine katılmadı."
             },
             {
               "id": "c37_l1_ex5_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
               "translation": "Yazar on liderle görüştü, bunların çoğuyla daha önce Cenevre'de bir araya gelmişti.",
               "words": [
                 "The author interviewed ten leaders,",
@@ -51534,20 +51482,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex5_q6",
               "type": "sentence-connector",
-              "prompt": "Edat-isim dengesini gözeterek doğru cümleyi seçin:",
-              "mainSentence": "The government presented three bills,",
+              "prompt": "Edat-isim dengesini gözeterek doğru cümleyi seçin:<br><br>The government presented three bills,",
               "options": [
-                "for most of which public support was actively sought.",
                 "under the supervision of whom they worked.",
-                "the majority of whose members were absent."
+                "the majority of whose members were absent.",
+                "for most of which public support was actively sought."
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "Hükümet üç yeni yasa tasarısı sundu, bunların büyük bir kısmı için aktif olarak kamuoyu desteği arandı."
             },
             {
               "id": "c37_l1_ex5_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki edatlı akademik cümleyi Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki edatlı akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Sosyolog, çoğuna tamamen katıldığım teoriler ortaya koydu.",
               "enSentence": "The sociologist advanced theories, with most of which I completely agreed.",
               "isEngToTr": true
@@ -51561,7 +51508,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex6_q1",
               "type": "matching",
-              "prompt": "Gelişmiş edatlı ve kurumsal miktar öbeklerini eşleştirin.",
+              "prompt": "Gelişmiş edatlı ve kurumsal miktar öbeklerini eşleştirin.<br><br>Match the hierarchical structures:",
               "pairs": [
                 {
                   "left": "under the supervision of whom",
@@ -51577,68 +51524,54 @@ const unit37_advanced_relative = {
                 },
                 {
                   "left": "under the protection of which",
-                  "right": "koruması altında ... olan"
+                  "right": "koruması altında ... olan (cansız)"
                 }
               ]
             },
             {
               "id": "c37_l1_ex6_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Akademik/idari gözetim bildiren yapıyı doğru tamamlayın:",
-              "sentence": "The foundation employs five junior researchers, under the supervision of ___ the field study is conducted.",
+              "prompt": "Akademik/idari gözetim bildiren yapıyı doğru tamamlayın:<br><br>The foundation employs five junior researchers, under the supervision of ___ the field study is conducted.",
               "options": [
-                "whom",
-                "which",
                 "whose",
-                "them"
+                "whom",
+                "them",
+                "which"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Vakıf, saha çalışmasının gözetimi altında yürütüldüğü beş genç araştırmacı istihdam etmektedir."
             },
             {
               "id": "c37_l1_ex6_q3",
               "type": "context-distractor",
-              "prompt": "Veri çözümleme yoluyla bağ kuran en ağır yapıyı seçin:",
-              "sentence": "The sociologists examined two massive census datasets, ___ new social trends clearly emerged.",
+              "prompt": "Veri çözümleme yoluyla bağ kuran en ağır yapıyı seçin:<br><br>The sociologists examined two massive census datasets, ___ new social trends clearly emerged.",
               "options": [
-                "through the analysis of which",
                 "under the leadership of whom",
                 "most of whose parameters",
-                "in which event"
+                "in which event",
+                "through the analysis of which"
               ],
-              "correctIndex": 0,
+              "correctIndex": 3,
               "translation": "Sosyologlar, analizi vasıtasıyla yeni toplumsal trendlerin açıkça ortaya çıktığı iki büyük nüfus sayımı veri setini incelediler."
             },
             {
               "id": "c37_l1_ex6_q4",
-              "type": "error-finder",
-              "prompt": "Kurumsal hiyerarşideki relative hatasını tespit edin:",
-              "sentenceTokens": [
-                "The",
-                "mayor",
-                "praised",
-                "the",
-                "three",
-                "urban",
-                "planners,",
-                "with",
-                "the",
-                "assistance",
-                "of",
-                "which",
-                "the",
-                "park",
-                "was",
-                "built."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The mayor praised the three urban planners, ___ the park was built.",
+              "options": [
+                "with the assistance of which",
+                "with the assistance of whom",
+                "with the assistance of whose",
+                "with the assistance of them"
               ],
-              "correctIndex": 11,
-              "suggestedCorrection": "whom",
-              "translation": "Şehir plancıları insan grubu olduğu için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 1,
+              "explanation": "Şehir planlamacıları insan olduğu için relative clause yapısında 'with the assistance of whom' kullanılmalıdır. 'which' cansız nesneler içindir.",
+              "translation": "Belediye başkanı, yardımlarıyla parkın inşa edildiği üç şehir planlamacısını övdü."
             },
             {
               "id": "c37_l1_ex6_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyun:<br><br>Construct the sentence:",
               "translation": "Devlet üç özerk kabile tanıdı, bunların koruması altında mülteciler yaşıyordu.",
               "words": [
                 "The state recognized three autonomous tribes,",
@@ -51660,12 +51593,11 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex6_q6",
               "type": "sentence-connector",
-              "prompt": "Liderlik ve yönetim hiyerarşisine uygun olan seçeneği eşleştirin:",
-              "mainSentence": "The ministry hired two international consultants,",
+              "prompt": "Liderlik ve yönetim hiyerarşisine uygun olan seçeneği eşleştirin:<br><br>The ministry hired two international consultants,",
               "options": [
                 "under the leadership of whom the macro reform was drafted.",
-                "the result of which was completely disastrous.",
-                "by which time the parliament had dissolved."
+                "by which time the parliament had dissolved.",
+                "the result of which was completely disastrous."
               ],
               "correctIndex": 0,
               "translation": "Bakanlık iki uluslararası danışman işe aldı, bunların liderliğinde makro reform tasarlanmıştı."
@@ -51673,7 +51605,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex6_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki ağır akademik cümleyi Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki ağır akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Kral iki elçi görevlendirdi, ki bunların diplomatik çabaları sayesinde savaş önlendi.",
               "enSentence": "The king appointed two envoys, through the diplomatic efforts of whom the war was avoided.",
               "isEngToTr": true
@@ -51687,7 +51619,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex7_q1",
               "type": "matching",
-              "prompt": "Süreç ve zaman bağlayıcılarını anlamlarıyla eşleştirin.",
+              "prompt": "Süreç ve zaman bağlayıcılarını anlamlarıyla eşleştirin.<br><br>Match the abstract time relation tags:",
               "pairs": [
                 {
                   "left": "at which point",
@@ -51710,56 +51642,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex7_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Zaman farkını kuran doğru miktar yapısını seçin:",
-              "sentence": "The peace negotiations lasted for two years, by which ___ the economy had collapsed completely.",
+              "prompt": "Zaman farkını kuran doğru miktar yapısını seçin:<br><br>The peace negotiations lasted for two years, by which ___ the economy had collapsed completely.",
               "options": [
-                "time",
                 "point",
                 "period",
-                "event"
+                "event",
+                "time"
               ],
-              "correctIndex": 0,
+              "correctIndex": 3,
               "translation": "Barış müzakereleri iki yıl sürdü, ki o zamana kadar ekonomi tamamen çökmüştü."
             },
             {
               "id": "c37_l1_ex7_q3",
               "type": "context-distractor",
-              "prompt": "Kırılma anı bildiren soyut zaman yapısını seçin:",
-              "sentence": "The revolution reached its peak in winter, ___ the regime dissolved the parliament.",
+              "prompt": "Kırılma anı bildiren soyut zaman yapısını seçin:<br><br>The revolution reached its peak in winter, ___ the regime dissolved the parliament.",
               "options": [
                 "at which point",
+                "since when",
                 "during which period",
-                "by which time",
-                "since when"
+                "by which time"
               ],
               "correctIndex": 0,
               "translation": "Devrim kışın zirve noktasına ulaştı, ki bu noktada rejim parlamentoyu feshetti."
             },
             {
               "id": "c37_l1_ex7_q4",
-              "type": "error-finder",
-              "prompt": "Zaman bloğu nitelemesindeki hatayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "region",
-                "suffered",
-                "for",
-                "a",
-                "decade,",
-                "during",
-                "what",
-                "period",
-                "thousands",
-                "fled."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The region suffered for a decade, ___ thousands of citizens fled.",
+              "options": [
+                "during which period",
+                "during whose period",
+                "during which time",
+                "during what period"
               ],
-              "correctIndex": 7,
-              "suggestedCorrection": "which",
-              "translation": "Relative zarf yapısında 'what' değil, her zaman 'which' tercih edilir."
+              "correctIndex": 0,
+              "explanation": "Zaman ve süreç niteleyen relative yapılarda edatlı bağlaç olarak 'during which period' (bu dönem boyunca) yapısı kullanılmalıdır.",
+              "translation": "Bölge on yıl boyunca sıkıntı çekti, ki bu dönem boyunca binlerce vatandaş kaçtı."
             },
             {
               "id": "c37_l1_ex7_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını tarihsel akışa uygun sıralayın:",
+              "prompt": "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
               "translation": "Büyük Buhran 1929'da başladı, ki o yıldan beri küresel ticaret geriledi.",
               "words": [
                 "The Great Depression began in 1929,",
@@ -51781,8 +51704,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex7_q6",
               "type": "sentence-connector",
-              "prompt": "Zamanın akış hızına uygun olan doğru devam cümleciğini bulun:",
-              "mainSentence": "Inflation reached eighty percent,",
+              "prompt": "Zamanın akış hızına uygun olan doğru devam cümleciğini bulun:<br><br>Inflation reached eighty percent,",
               "options": [
                 "at which point the central bank intervened drastically.",
                 "the majority of whom were economic advisors.",
@@ -51794,7 +51716,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex7_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki tarihsel geçiş cümlesini Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki tarihsel geçiş cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Anlaşma 1945'te imzalandı, ki o zamana kadar birçok şehir harabeye dönmüştü.",
               "enSentence": "The treaty was signed in 1945, by which time many cities had been turned into ruins.",
               "isEngToTr": true
@@ -51808,7 +51730,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex8_q1",
               "type": "matching",
-              "prompt": "Nedensellik ve varsayım bildiren yapıları Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Nedensellik ve varsayım bildiren yapıları Türkçe karşılıklarıyla eşleştirin.<br><br>Match the causal and speculative structures:",
               "pairs": [
                 {
                   "left": "in which event",
@@ -51831,55 +51753,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex8_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Hukuki bir gerekçe sunan doğru relative yapıyı seçin:",
-              "sentence": "The corporation violated the labor laws, for ___ reason the ministry revoked its license.",
+              "prompt": "Hukuki bir gerekçe sunan doğru relative yapıyı seçin:<br><br>The corporation violated the labor laws, for ___ reason the ministry revoked its license.",
               "options": [
-                "which",
-                "what",
                 "that",
-                "whose"
+                "whose",
+                "which",
+                "what"
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "Şirket iş kanunlarını ihlal etti, ki bu nedenden ötürü bakanlık şirket lisansını iptal etti."
             },
             {
               "id": "c37_l1_ex8_q3",
               "type": "context-distractor",
-              "prompt": "Geleceğe yönelik olasılık/koşul senaryosu kuran yapıyı seçin:",
-              "sentence": "The parliament might reject the budget proposal, ___ a general election will be triggered.",
+              "prompt": "Geleceğe yönelik olasılık/koşul senaryosu kuran yapıyı seçin:<br><br>The parliament might reject the budget proposal, ___ a general election will be triggered.",
               "options": [
-                "in which event",
-                "for which reason",
+                "by which time",
                 "at which point",
-                "by which time"
+                "in which event",
+                "for which reason"
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "Parlamento bütçe teklifini reddedebilir, ki bu durumda bir genel seçim tetiklenecektir."
             },
             {
               "id": "c37_l1_ex8_q4",
-              "type": "error-finder",
-              "prompt": "Süreç nitelemesindeki yapısal sapmayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "state",
-                "adopted",
-                "secularism,",
-                "through",
-                "that",
-                "process",
-                "the",
-                "judiciary",
-                "changed."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The state adopted secularism, ___ the judiciary was reformed.",
+              "options": [
+                "through which process",
+                "through that process",
+                "through which method",
+                "through whose process"
               ],
-              "correctIndex": 5,
-              "suggestedCorrection": "which",
-              "translation": "Cümleleri bağlayan relative kalıbında 'that' ismi doğrudan bu şekilde niteleyemez, 'which' olmalıdır."
+              "correctIndex": 0,
+              "explanation": "İki cümleyi süreç niteleyerek bağlamak amacıyla 'through which process' yapısı kullanılmalıdır. 'through that process' bağlaç değildir.",
+              "translation": "Devlet laikliği benimsedi, ki bu süreç vasıtasıyla yargı reforme edildi."
             },
             {
               "id": "c37_l1_ex8_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını mantıksal akışa göre dizin:",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
               "translation": "Sanık mahkemeye çıkmayı reddedebilir, ki bu durumda dava ertelenecektir.",
               "words": [
                 "The defendant may refuse to appear,",
@@ -51901,20 +51815,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex8_q6",
               "type": "sentence-connector",
-              "prompt": "Sebep-sonuç ilişkisini tamamlayan cümleyi seçin:",
-              "mainSentence": "The nation defaulted on its debts,",
+              "prompt": "Sebep-sonuç ilişkisini tamamlayan cümleyi seçin:<br><br>The nation defaulted on its debts,",
               "options": [
+                "many of whom were prominent economists.",
                 "for which reason it immediately sought assistance from the IMF.",
-                "the purpose of which was to gain territory.",
-                "many of whom were prominent economists."
+                "the purpose of which was to gain territory."
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Ülke borçlarını ödeyemedi, ki bu nedenden ötürü derhal IMF'den yardım istedi."
             },
             {
               "id": "c37_l1_ex8_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki gelişmiş nedensellik cümlesini Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki gelişmiş nedensellik cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Yasa temel özgürlükleri kısıtladı, ki bu nedenden ötürü anayasa mahkemesi tarafından iptal edildi.",
               "enSentence": "The law restricted basic liberties, for which reason it was annulled by the constitutional court.",
               "isEngToTr": true
@@ -51928,7 +51841,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex9_q1",
               "type": "matching",
-              "prompt": "İşlevsel ve parça-bütün bildiren kalıpları anlamlarıyla eşleştirin.",
+              "prompt": "İşlevsel ve parça-bütün bildiren kalıpları anlamlarıyla eşleştirin.<br><br>Match the purpose and result structures:",
               "pairs": [
                 {
                   "left": "the purpose of which",
@@ -51951,56 +51864,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex9_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Amaç bildiren kurumsal yapıyı doğru tamamlayın:",
-              "sentence": "The ministry initiated an integration project, the purpose of ___ is to assist immigrant families.",
+              "prompt": "Amaç bildiren kurumsal yapıyı doğru tamamlayın:<br><br>The ministry initiated an integration project, the purpose of ___ is to assist immigrant families.",
               "options": [
+                "what",
                 "which",
                 "whom",
-                "that",
-                "what"
+                "that"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Bakanlık, amacı göçmen ailelere yardım etmek olan bir entegrasyon projesi başlattı."
             },
             {
               "id": "c37_l1_ex9_q3",
               "type": "context-distractor",
-              "prompt": "Ekonomik sonuç bildiren doğru soyut yapıyı seçin:",
-              "sentence": "The central bank printed excess currency, ___ was hyperinflation.",
+              "prompt": "Ekonomik sonuç bildiren doğru soyut yapıyı seçin:<br><br>The central bank printed excess currency, ___ was hyperinflation.",
               "options": [
-                "the result of which",
                 "the purpose of which",
-                "by which time",
-                "none of whom"
+                "the result of which",
+                "none of whom",
+                "by which time"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Merkez bankası aşırı para bastı, ki bunun sonucu hiperenflasyon oldu."
             },
             {
               "id": "c37_l1_ex9_q4",
-              "type": "error-finder",
-              "prompt": "Tarihsel figürleri niteleyen yapıdaki hatayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "committee",
-                "identified",
-                "five",
-                "kings,",
-                "the",
-                "names",
-                "of",
-                "which",
-                "were",
-                "erased."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The committee identified five kings, ___ were written on the ancient tablet.",
+              "options": [
+                "the names of whom",
+                "the names of which",
+                "whose names of",
+                "the names of them"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "whom",
-              "translation": "Kral isimleri insanı temsil ettiği için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Krallar insan olduğu için isimlerini nitelerken 'the names of whom' yapısı tercih edilmelidir. 'which' cansızlar içindir.",
+              "translation": "Komite, isimleri antik tablette yazılı olan beş kral belirledi."
             },
             {
               "id": "c37_l1_ex9_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
+              "prompt": "Kelimeleri doğru sıraya koyun:<br><br>Construct the sentence:",
               "translation": "Meclis yeni vergiler onayladı, bunların çoğunluğu lüks tüketime yönelikti.",
               "words": [
                 "The parliament approved new taxes,",
@@ -52022,8 +51926,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex9_q6",
               "type": "sentence-connector",
-              "prompt": "Amaç-işlev uyumuna göre cümleyi tamamlayın:",
-              "mainSentence": "The sociologists designed a new program,",
+              "prompt": "Amaç-işlev uyumuna göre cümleyi tamamlayın:<br><br>The sociologists designed a new program,",
               "options": [
                 "the purpose of which is to alleviate urban poverty.",
                 "the oldest of whom was working in Paris.",
@@ -52035,7 +51938,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex9_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki işlevsel akademik cümleyi Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki işlevsel akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Hükümet gümrük tarifelerini yükseltti, ki bunun sonucu bir ticaret savaşı oldu.",
               "enSentence": "The government raised tariffs, the result of which was a trade war.",
               "isEngToTr": true
@@ -52049,7 +51952,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex10_q1",
               "type": "matching",
-              "prompt": "Gelişmiş soyut çıkarım kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Gelişmiş soyut çıkarım kalıplarını anlamlarıyla eşleştirin.<br><br>Match the abstract structural links:",
               "pairs": [
                 {
                   "left": "the cause of which",
@@ -52072,58 +51975,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex10_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Toplumsal bir kırılmanın nedenini niteleyen doğru yapıyı seçin:",
-              "sentence": "The civilization suffered a sudden demographic collapse, the cause of ___ is still debated.",
+              "prompt": "Toplumsal bir kırılmanın nedenini niteleyen doğru yapıyı seçin:<br><br>The civilization suffered a sudden demographic collapse, the cause of ___ is still debated.",
               "options": [
+                "that",
                 "which",
                 "whom",
-                "that",
                 "what"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Medeniyet, nedeni hala tartışılan ani bir demografik çöküş yaşadı."
             },
             {
               "id": "c37_l1_ex10_q3",
               "type": "context-distractor",
-              "prompt": "Siyasi kararların soyut, geniş çaplı etkilerini anlatan öbeği seçin:",
-              "sentence": "The council adopted an isolative policy, ___ will drastically affect foreign trade.",
+              "prompt": "Siyasi kararların soyut, geniş çaplı etkilerini anlatan öbeği seçin:<br><br>The council adopted an isolative policy, ___ will drastically affect foreign trade.",
               "options": [
-                "the implications of which",
+                "by which time",
                 "the origin of which",
                 "each of whom",
-                "by which time"
+                "the implications of which"
               ],
-              "correctIndex": 0,
+              "correctIndex": 3,
               "translation": "Konsey, etkileri/doğuracağı sonuçlar dış ticareti büyük oranda etkileyecek olan içe kapanık bir politika benimsedi."
             },
             {
               "id": "c37_l1_ex10_q4",
-              "type": "error-finder",
-              "prompt": "Finansal kaynak ve parça nitelemesindeki hatayı süzün:",
-              "sentenceTokens": [
-                "The",
-                "city",
-                "secured",
-                "five",
-                "million",
-                "Euros,",
-                "the",
-                "rest",
-                "of",
-                "them",
-                "will",
-                "be",
-                "spent."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The city secured five million Euros, ___ will be spent on rebuilding the archive.",
+              "options": [
+                "the rest of them",
+                "the rest of which",
+                "the rest of whom",
+                "the rest of whose"
               ],
-              "correctIndex": 9,
-              "suggestedCorrection": "which",
-              "translation": "Virgülden sonra relative clause devamlılığı sağlamak için 'them' yerine 'which' gelmelidir."
+              "correctIndex": 1,
+              "explanation": "Para cansız nesne olduğu için ve virgülden sonra relative clause devamlılığı sağlamak amacıyla 'the rest of which' kullanılmalıdır.",
+              "translation": "Şehir beş milyon Euro temin etti, ki bunun geri kalanı arşivi yeniden inşa etmek için harcanacak."
             },
             {
               "id": "c37_l1_ex10_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyun:<br><br>Construct the sentence:",
               "translation": "Antropologlar yeni bir ritüel belgelediler, bunun kökeni paganizme dayanıyor.",
               "words": [
                 "The anthropologists documented a new ritual,",
@@ -52145,8 +52037,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex10_q6",
               "type": "sentence-connector",
-              "prompt": "Felsefi ve sosyolojik çıkarım bağlamına uygun olan seçeneği bulun:",
-              "mainSentence": "The thinkers published a radical manifesto,",
+              "prompt": "Felsefi ve sosyolojik çıkarım bağlamına uygun olan seçeneği bulun:<br><br>The thinkers published a radical manifesto,",
               "options": [
                 "the implications of which shook the entire political structure.",
                 "under the supervision of whom they wrote it.",
@@ -52158,7 +52049,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex10_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki soyut akademik cümleyi Türkçe'ye aktarın:",
+              "prompt": "Aşağıdaki soyut akademik cümleyi Türkçe'ye aktarın:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Bakanlık bütçeyi başarıyla yönetti, ki bunun geri kalanı eğitim reformuna aktarıldı.",
               "enSentence": "The ministry managed the budget successfully, the rest of which was transferred to education reform.",
               "isEngToTr": true
@@ -52172,7 +52063,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex11_q1",
               "type": "matching",
-              "prompt": "Sınavda en sık çıkan sosyal bilimler miktar kalıplarını eşleştirin.",
+              "prompt": "Sınavda en sık çıkan sosyal bilimler miktar kalıplarını eşleştirin.<br><br>Match the exam-focused quantifiers:",
               "pairs": [
                 {
                   "left": "the last of which",
@@ -52195,57 +52086,47 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex11_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Sınav formatındaki boşluğu en uygun bağlaç yapısıyla doldurun:",
-              "sentence": "The prime minister interviewed five candidates, ___ had extensive experience in international law.",
+              "prompt": "Sınav formatındaki boşluğu en uygun bağlaç yapısıyla doldurun:<br><br>The prime minister interviewed five candidates, ___ had extensive experience in international law.",
               "options": [
-                "three of whom",
+                "that three of",
                 "three of them",
-                "which three",
-                "that three of"
+                "three of whom",
+                "which three"
               ],
-              "correctIndex": 0,
+              "correctIndex": 2,
               "translation": "Başbakan, üçü uluslararası hukuk alanında geniş deneyime sahip olan beş aday ile görüştü."
             },
             {
               "id": "c37_l1_ex11_q3",
               "type": "context-distractor",
-              "prompt": "Zaman ve mantık ilişkisini tam öbek olarak süzün:",
-              "sentence": "The protests dragged on until late winter, ___ the regime finally conceded to early elections.",
+              "prompt": "Zaman ve mantık ilişkisini tam öbek olarak süzün:<br><br>The protests dragged on until late winter, ___ the regime finally conceded to early elections.",
               "options": [
+                "in which event",
                 "at which point",
-                "by which time",
                 "for which reason",
-                "in which event"
+                "by which time"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Protestolar kış sonuna kadar uzadı, ki bu noktada rejim nihayet erken seçimleri kabul etti."
             },
             {
               "id": "c37_l1_ex11_q4",
-              "type": "error-finder",
-              "prompt": "Tarihsel neden bildiren yapıdaki ölümcül sınav hatasını yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "colony",
-                "suffered",
-                "an",
-                "embargo,",
-                "the",
-                "cause",
-                "of",
-                "them",
-                "remains",
-                "a",
-                "mystery."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The colony suffered an embargo, ___ remains a mystery.",
+              "options": [
+                "cause of whose",
+                "the cause of which",
+                "the cause of them",
+                "the cause of whom"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Ambargo tekil ve nesne olduğu için 'them' değil 'which' kullanılmalıdır."
+              "correctIndex": 1,
+              "explanation": "Embargo tekil ve cansız bir kavram olduğundan relative clause yapısında 'the cause of which' tercih edilmelidir. 'them' bağlaçsız iki bağımsız cümle oluşturacağı için elenir.",
+              "translation": "Koloni bir ambargoya maruz kaldı, ki bunun nedeni bir gizem olarak kalmaktadır."
             },
             {
               "id": "c37_l1_ex11_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
               "translation": "Hükümet üç yeni ittifak kurdu, bunların sonuncusu geçen ay resmiyet kazandı.",
               "words": [
                 "The government formed three new alliances,",
@@ -52267,20 +52148,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex11_q6",
               "type": "sentence-connector",
-              "prompt": "Sınav formatında insan-nesne geçiş köprüsünü kurun:",
-              "mainSentence": "The delegation consisted of ten delegates,",
+              "prompt": "Sınav formatında insan-nesne geçiş köprüsünü kurun:<br><br>The delegation consisted of ten delegates,",
               "options": [
-                "with most of whom I had previously met in Brussels.",
                 "most of which were written in French.",
+                "with most of whom I had previously met in Brussels.",
                 "the cause of which was completely economic."
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Heyet on delegeden oluşuyordu, bunların çoğuyla daha önce Brüksel'de tanışmıştım."
             },
             {
               "id": "c37_l1_ex11_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki YDS ayarındaki karmaşık cümleyi Türkçe'ye çevirin:",
+              "prompt": "Aşağıdaki YDS ayarındaki karmaşık cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Arkeologlar üç eski yazıt keşfettiler, bunların ilki tamamen hanedan soyu ile ilgilidir.",
               "enSentence": "The archeologists discovered three ancient inscriptions, the first of which is completely related to dynastic lineage.",
               "isEngToTr": true
@@ -52294,7 +52174,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex12_q1",
               "type": "matching",
-              "prompt": "İleri düzey karma sosyal yapıları anlamlarıyla eşleştirin.",
+              "prompt": "İleri düzey karma sosyal yapıları anlamlarıyla eşleştirin.<br><br>Match the advanced social connectors:",
               "pairs": [
                 {
                   "left": "the majority of whose parameters",
@@ -52317,22 +52197,20 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex12_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelmesi gereken en sinsi sınav yapısını bulun (As a result of which):",
-              "sentence": "The empire deployed several tactical laws, ___ the sociopolitical framework became more stable.",
+              "prompt": "Boşluğa gelmesi gereken en sinsi sınav yapısını bulun (As a result of which):<br><br>The empire deployed several tactical laws, ___ the sociopolitical framework became more stable.",
               "options": [
+                "whose result",
                 "as a result of which",
                 "as a result of them",
-                "which result",
-                "whose result"
+                "which result"
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "İmparatorluk birkaç taktiksel yasa çıkardı, ki bunun sonucunda sosyo-politik çerçeve daha istikrarlı hale geldi."
             },
             {
               "id": "c37_l1_ex12_q3",
               "type": "context-distractor",
-              "prompt": "Söz dizimini ve sahiplik miktar ilişkisini tarayın:",
-              "sentence": "The research team constructed a historical model, ___ were set according to economic data.",
+              "prompt": "Söz dizimini ve sahiplik miktar ilişkisini tarayın:<br><br>The research team constructed a historical model, ___ were set according to economic data.",
               "options": [
                 "the majority of whose parameters",
                 "the majority of which parameters",
@@ -52344,32 +52222,23 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex12_q4",
-              "type": "error-finder",
-              "prompt": "Edatlı miktar tuzağındaki hatayı saptayın:",
-              "sentenceTokens": [
-                "The",
-                "ministry",
-                "initiated",
-                "five",
-                "shifts,",
-                "for",
-                "most",
-                "of",
-                "them",
-                "no",
-                "funding",
-                "was",
-                "given."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The ministry initiated five shifts, ___ no funding was given.",
+              "options": [
+                "for most of whose",
+                "for most of whom",
+                "for most of which",
+                "for most of them"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Bağımsız iki cümleyi relative clause ile bağlamak için 'them' yerine 'which' şarttır."
+              "correctIndex": 2,
+              "explanation": "Değişiklikler (shifts) cansızdır. Virgülden sonra relative clause bağı kurarak iki cümleyi birleştirmek için 'for most of which' tercih edilmelidir.",
+              "translation": "Bakanlık beş değişiklik başlattı, bunların çoğunluğu için hiçbir bütçe verilmedi."
             },
             {
               "id": "c37_l1_ex12_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
-              "translation": "Hükümet anlaşmayı aniden bozabilir, ki bu durumda kriz kaçınılmaz olacaktır.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Hükümet anlaşmayı aniden bozebilir, ki bu durumda kriz kaçınılmaz olacaktır.",
               "words": [
                 "The government might break the pact unexpectedly,",
                 "in which event",
@@ -52390,20 +52259,19 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex12_q6",
               "type": "sentence-connector",
-              "prompt": "Belgelerin analizi üzerinden kurulan doğru köprü cümleyi bulun:",
-              "mainSentence": "The historians translated ten ancient documents,",
+              "prompt": "Belgelerin analizi üzerinden kurulan doğru köprü cümleyi bulun:<br><br>The historians translated ten ancient documents,",
               "options": [
+                "the purpose of which is to predict earthquakes.",
                 "through the analysis of which the collapse of the dynasty was understood.",
-                "under the protection of whom they traveled to Europe.",
-                "the purpose of which is to predict earthquakes."
+                "under the protection of whom they traveled to Europe."
               ],
-              "correctIndex": 0,
+              "correctIndex": 1,
               "translation": "Tarihçiler on eski belge çevirdiler, bunların analizi vasıtasıyla hanedanın çöküşü anlaşıldı."
             },
             {
               "id": "c37_l1_ex12_q7",
               "type": "translation-text",
-              "prompt": "Bu zorlu felsefi final cümlesini pürüzsüzce Türkçe'ye çevirin:",
+              "prompt": "Bu zorlu felsefi final cümlesini pürüzsüzce Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
               "correctSentence": "Düşünür iki yeni felsefi tez öne sürdü, ki bunların amacı dogmatik inançları engellemektir.",
               "enSentence": "The thinker proposed two new philosophical theses, the purpose of which is to inhibit dogmatic beliefs.",
               "isEngToTr": true
@@ -52413,22 +52281,22 @@ const unit37_advanced_relative = {
       ]
     },
     {
-      "id": "c37_l2",
-      "lessonTitle": "2: Fen & Sağlık Bilimleri ve Karma Sınav Simülasyonu",
-      "description": "Laboratuvar verileri, tıp, genetik, astronomi metinleri ve en yanıltıcı YDS çeldiricileri.",
+      "lessonId": "c37_l2",
+      "lessonTitle": "2: Sosyal ve Beşeri Bilimler Serisi II",
+      "description": "İktisat, antropoloji, coğrafya, sinema ve iletişim metinleri ve en yanıltıcı sınav çeldiricileri.",
       "exercises": [
         {
           "id": "c37_l2_ex13",
-          "title": "Alıştırma 13: Fen Bilimlerinde Miktar ve Oran Geçişleri",
+          "title": "Alıştırma 13: İktisat ve Sosyolojide Miktar ve Oran Geçişleri",
           "questions": [
             {
               "id": "c37_l2_ex13_q1",
               "type": "matching",
-              "prompt": "Fen bilimlerinde kullanılan miktar yapılarını anlamlarıyla eşleştirin.",
+              "prompt": "İktisatta kullanılan miktar yapılarını anlamlarıyla eşleştirin.<br><br>Match the economic quantifiers:",
               "pairs": [
                 {
                   "left": "half of which",
-                  "right": "yarısı ... olan (cansız/element)"
+                  "right": "yarısı ... olan (cansız/kavram)"
                 },
                 {
                   "left": "a fraction of which",
@@ -52436,7 +52304,7 @@ const unit37_advanced_relative = {
                 },
                 {
                   "left": "the concentration of which",
-                  "right": "konsantrasyonu ... olan"
+                  "right": "yoğunluğu ... olan"
                 },
                 {
                   "left": "the percentage of which",
@@ -52447,109 +52315,99 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex13_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Kimyasal elementleri niteleyen doğru miktar yapısını seçin:",
-              "sentence": "The laboratory isolated five new isotopes, half of ___ decayed within seconds.",
+              "prompt": "Sosyal anketleri niteleyen doğru miktar yapısını seçin:<br><br>The sociologists isolated five new datasets, half of ___ decayed in reliability within weeks.",
               "options": [
-                "which",
-                "them",
                 "whom",
-                "whose"
+                "whose",
+                "them",
+                "which"
               ],
-              "correctIndex": 0,
-              "translation": "Laboratuvar beş yeni izotop ayrıştırdı, ki bunların yarısı saniyeler içinde bozundu."
+              "correctIndex": 3,
+              "translation": "Sosyologlar beş yeni veri seti ayırdı, ki bunların yarısı haftalar içinde güvenilirlik yönünden zayıfladı."
             },
             {
               "id": "c37_l2_ex13_q3",
               "type": "context-distractor",
-              "prompt": "Gök cisimlerini niteleyen doğru oran öbeğini bulun:",
-              "sentence": "Astronomers detected ten distant exoplanets, ___ orbit around a dwarf star.",
+              "prompt": "Tarihi belgeleri niteleyen doğru oran öbeğini bulun:<br><br>The researchers detected ten distant archives, ___ focus on medieval economic history.",
               "options": [
                 "a fraction of which",
-                "a fraction of whom",
+                "all of them",
                 "most of whose",
-                "all of them"
+                "a fraction of whom"
               ],
               "correctIndex": 0,
-              "translation": "Gökbilimciler on uzak ötegezegen tespit etti, ki bunların küçük bir kısmı bir cüce yıldızın etrafında dönmektedir."
+              "translation": "Araştırmacılar on eski arşiv tespit etti, ki bunların küçük bir kısmı ortaçağ iktisat tarihine odaklanmaktadır."
             },
             {
               "id": "c37_l2_ex13_q4",
-              "type": "error-finder",
-              "prompt": "Fen metnindeki relative clause tuzağını yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "engineers",
-                "tested",
-                "three",
-                "prototypes,",
-                "none",
-                "of",
-                "them",
-                "survived",
-                "the",
-                "heat."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The economists tested three policies, ___ survived the inflation.",
+              "options": [
+                "none of which",
+                "none of whom",
+                "none of them",
+                "none of whose"
               ],
-              "correctIndex": 7,
-              "suggestedCorrection": "which",
-              "translation": "İki bağımsız yapıyı bağlamak adına relative clause formatında 'which' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Politikalar cansız nesneler olduğundan, virgülden sonra relative clause bağı kurarak cümleyi tamamlamak için 'none of which' kullanılmalıdır.",
+              "translation": "Ekonomistler üç politikayı test ettiler, bunların hiçbirisi enflasyona karşı koruma sağlamadı."
             },
             {
               "id": "c37_l2_ex13_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
-              "translation": "Kimyager iki solüsyon karıştırdı, bunların ikisi de asidik reaksiyon gösterdi.",
+              "prompt": "Kelimeleri doğru sıraya koyun:<br><br>Construct the sentence:",
+              "translation": "Analist iki ekonomik modeli karşılaştırdı, bunların ikisi de kararsızlık gösterdi.",
               "words": [
-                "The chemist mixed",
-                "two solutions,",
+                "The analyst compared",
+                "two economic models,",
                 "both of which",
-                "showed acidic reactions.",
+                "showed high instability.",
                 "them",
                 "whom"
               ],
               "correctOrder": [
-                "The chemist mixed",
-                "two solutions,",
+                "The analyst compared",
+                "two economic models,",
                 "both of which",
-                "showed acidic reactions."
+                "showed high instability."
               ],
-              "enSentence": "The chemist mixed two solutions, both of which showed acidic reactions.",
+              "enSentence": "The analyst compared two economic models, both of which showed high instability.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex13_q6",
               "type": "sentence-connector",
-              "prompt": "Fen verilerine uygun olan tamamlayıcı cümleyi bulun:",
-              "mainSentence": "The rover collected several soil samples,",
+              "prompt": "Sosyolojik verilere uygun olan tamamlayıcı cümleyi bulun:<br><br>The researcher collected several household surveys,",
               "options": [
-                "most of which contained high levels of iron oxide.",
+                "the purpose of which was to deploy a satellite.",
                 "many of whom were geologists.",
-                "the purpose of which was to deploy a satellite."
+                "most of which contained high levels of statistical speculation."
               ],
-              "correctIndex": 0,
-              "translation": "Gezgin araç birkaç toprak numunesi topladı, bunların büyük kısmı yüksek oranda demir oksit içeriyordu."
+              "correctIndex": 2,
+              "translation": "Araştırmacı birkaç hanehalkı anketi topladı, bunların büyük kısmı yüksek oranda istatistiksel spekülasyon içeriyordu."
             },
             {
               "id": "c37_l2_ex13_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki teknik cümleyi pürüzsüzce Türkçe'ye çevirin:",
-              "correctSentence": "Mühendisler, tamamı çevre dostu olan üç alternatif yakıt geliştirdiler.",
-              "enSentence": "The engineers developed three alternative fuels, all of which were eco-friendly.",
+              "prompt": "Aşağıdaki teknik cümleyi pürüzsüzce Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Tarihçiler, tamamı arşiv belgelerine dayanan üç alternatif teori geliştirdiler.",
+              "enSentence": "The historians developed three alternative theories, all of which were based on archival documents.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex14",
-          "title": "Alıştırma 14: Sağlık Bilimlerinde İnsan Odaklı Yapılar",
+          "title": "Alıştırma 14: İletişim ve Psikolojide İnsan Odaklı Yapılar",
           "questions": [
             {
               "id": "c37_l2_ex14_q1",
               "type": "matching",
-              "prompt": "Tıp ve sağlık metinlerindeki insan odaklı yapıları eşleştirin.",
+              "prompt": "İletişim ve psikoloji metinlerindeki insan odaklı yapıları eşleştirin.<br><br>Match human relative structures:",
               "pairs": [
                 {
                   "left": "some of whom",
-                  "right": "bazıları (hasta/doktor) ... olan"
+                  "right": "bazıları (katılımcı/uzman) ... olan"
                 },
                 {
                   "left": "both of whom",
@@ -52568,971 +52426,879 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex14_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Klinik deney hastalarını niteleyen doğru yapıyı bulun:",
-              "sentence": "The hospital monitored twenty chronic patients, some of ___ showed rapid genetic recovery.",
+              "prompt": "Psikolojik deney katılımcılarını niteleyen doğru yapıyı bulun:<br><br>The clinic monitored twenty chronic patients, some of ___ showed rapid behavioral recovery.",
               "options": [
-                "whom",
-                "which",
                 "them",
-                "whose"
+                "whose",
+                "which",
+                "whom"
               ],
-              "correctIndex": 0,
-              "translation": "Hastane yirmi kronik hastayı izledi, ki bunların bazıları hızlı genetik iyileşme gösterdi."
+              "correctIndex": 3,
+              "translation": "Klinik yirmi kronik hastayı izledi, ki bunların bazıları hızlı davranışsal iyileşme gösterdi."
             },
             {
               "id": "c37_l2_ex14_q3",
               "type": "context-distractor",
-              "prompt": "Sağlık personeli grubunu niteleyen doğru öbeği seçin:",
-              "sentence": "The clinic hired three cardiac surgeons, ___ had trained extensively in Harvard.",
+              "prompt": "İletişim uzmanları grubunu niteleyen doğru öbeği seçin:<br><br>The agency hired three media consultants, ___ had worked extensively in digital channels.",
               "options": [
-                "all of whom",
+                "each of them",
                 "all of which",
-                "most of whose",
-                "each of them"
+                "all of whom",
+                "most of whose"
               ],
-              "correctIndex": 0,
-              "translation": "Klinik, tamamı Harvard'da kapsamlı eğitim almış olan üç kalp cerrahı işe aldı."
+              "correctIndex": 2,
+              "translation": "Ajans, tamamı dijital kanallarda kapsamlı şekilde çalışmış olan üç medya danışmanı işe aldı."
             },
             {
               "id": "c37_l2_ex14_q4",
-              "type": "error-finder",
-              "prompt": "Tıp metnindeki özne-bağlaç uyumsuzluğunu yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "doctors",
-                "treated",
-                "two",
-                "infants,",
-                "neither",
-                "of",
-                "which",
-                "showed",
-                "any",
-                "symptoms."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The therapists treated two infants, ___ showed any cognitive symptoms.",
+              "options": [
+                "neither of which",
+                "none of them",
+                "neither of them",
+                "neither of whom"
               ],
-              "correctIndex": 7,
-              "suggestedCorrection": "whom",
-              "translation": "Bebekler/hastalar insan olarak sınıflandırıldığı için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 3,
+              "explanation": "Bebekler insan olduğundan relative clause yapısı kurarken 'neither of whom' kullanılmalıdır. 'neither of which' cansızlar için tercih edilir.",
+              "translation": "Terapistler, ikisi de hiçbir bilişsel semptom göstermeyen iki bebeği tedavi etti."
             },
             {
               "id": "c37_l2_ex14_q5",
               "type": "word-bank",
-              "prompt": "Cümleyi sağlık bilimleri normlarına göre doğru dizin:",
-              "translation": "Ekip yüzlerce gönüllüyü test etti, bunların birçoğu yüksek tansiyondan muzdaripti.",
+              "prompt": "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
+              "translation": "Ekip yüzlerce katılımcıyı test etti, bunların birçoğu yüksek kaygıdan muzdaripti.",
               "words": [
-                "The team tested hundreds of volunteers,",
+                "The team tested hundreds of participants,",
                 "many of whom",
-                "suffered from hypertension.",
+                "suffered from high anxiety.",
                 "which",
                 "them",
                 "whose"
               ],
               "correctOrder": [
-                "The team tested hundreds of volunteers,",
+                "The team tested hundreds of participants,",
                 "many of whom",
-                "suffered from hypertension."
+                "suffered from high anxiety."
               ],
-              "enSentence": "The team tested hundreds of volunteers, many of whom suffered from hypertension.",
+              "enSentence": "The team tested hundreds of participants, many of whom suffered from high anxiety.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex14_q6",
               "type": "sentence-connector",
-              "prompt": "Hastalık-insan niteleme ilişkisine uygun kartı seçin:",
-              "mainSentence": "The researchers selected fifty diabetic subjects,",
+              "prompt": "İnsan niteleme ilişkisine uygun kartı seçin:<br><br>The psychologists selected fifty elderly subjects,",
               "options": [
                 "the majority of whom were over the age of sixty.",
-                "most of which were stored in liquid nitrogen.",
-                "the cause of which was completely viral."
+                "the cause of which was completely cognitive.",
+                "most of which were stored in libraries."
               ],
               "correctIndex": 0,
-              "translation": "Araştırmacılar elli diyabetik denek seçtiler, ki bunların çoğunluğu altmış yaşın üzerindeydi."
+              "translation": "Psikologlar elli yaşlı denek seçtiler, ki bunların çoğunluğu altmış yaşın üzerindeydi."
             },
             {
               "id": "c37_l2_ex14_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki medikal cümleyi Türkçe'ye aktarın:",
-              "correctSentence": "Profesör, ikisi de nöroloji alanında uzmanlaşmış olan iki cerrahı davet etti.",
-              "enSentence": "The professor invited two surgeons, both of whom specialized in neurology.",
+              "prompt": "Aşağıdaki psikoloji içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Araştırmacılar, ikisi davranışsal kalıpları inceleyen üç psikoloğu davet ettiler.",
+              "enSentence": "The researchers invited three psychologists, two of whom studied behavioral patterns.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex15",
-          "title": "Alıştırma 15: Fen Bilimlerinde Derecelendirme ve Ölçüm Kalıpları",
+          "title": "Alıştırma 15: Tarih ve Sanat Tarihinde Sıralama Kalıpları",
           "questions": [
             {
               "id": "c37_l2_ex15_q1",
               "type": "matching",
-              "prompt": "Ölçüm ve derece bildiren fen kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Sanat tarihinde kullanılan sıralama yapılarını eşleştirin.<br><br>Match art history ordinals:",
               "pairs": [
                 {
-                  "left": "the heaviest of which",
-                  "right": "en ağırı ... olan"
+                  "left": "the oldest of which",
+                  "right": "en eskisi ... olan (cansız/tablo)"
                 },
                 {
-                  "left": "the fastest of which",
-                  "right": "en hızlısı ... olan"
+                  "left": "the oldest of whom",
+                  "right": "en yaşlısı ... olan (sanatçı/insan)"
                 },
                 {
-                  "left": "the rarest of which",
-                  "right": "en nadiri ... olan"
+                  "left": "the second of which",
+                  "right": "ikincisi ... olan"
                 },
                 {
-                  "left": "the hottest of which",
-                  "right": "en sıcağı ... olan"
+                  "left": "the former of which",
+                  "right": "ilki (bahsedilenlerden) ... olan"
                 }
               ]
             },
             {
               "id": "c37_l2_ex15_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Metal ve ağırlık ölçümü bildiren yapıyı tamamlayın:",
-              "sentence": "The geologist discovered three rare minerals, the heaviest of ___ weighed over ten kilograms.",
+              "prompt": "Tabloları niteleyen doğru sıralama yapısını bulun:<br><br>The gallery exhibited five ancient portraits, the oldest of ___ was restored in Florence.",
               "options": [
-                "which",
                 "whom",
-                "that",
-                "what"
+                "which",
+                "whose",
+                "that"
               ],
-              "correctIndex": 0,
-              "translation": "Jeolog üç nadir mineral keşfetti, ki bunların en ağırı on kilogramın üzerindeydi."
+              "correctIndex": 1,
+              "translation": "Galeri beş antik portre sergiledi, ki bunların en eskisi Floransa'da restore edilmişti."
             },
             {
               "id": "c37_l2_ex15_q3",
               "type": "context-distractor",
-              "prompt": "Hız ve veri bildiren en uygun derece öbeğini seçin:",
-              "sentence": "The lab analyzed five particle beams, ___ exceeded the speed of light simulation.",
+              "prompt": "Tarihi binaları niteleyen doğru sıralama öbeğini seçin:<br><br>The museum bought three classical sculptures, ___ is dated back to the Roman Empire.",
               "options": [
-                "the fastest of which",
-                "the fastest of whom",
-                "most of whose",
-                "all of them"
+                "all of whose",
+                "some of them",
+                "the oldest of whom",
+                "the oldest of which"
               ],
-              "correctIndex": 0,
-              "translation": "Laboratuvar beş parçacık demetini analiz etti, ki bunların en hızlısı ışık hızı simülasyonunu aştı."
+              "correctIndex": 3,
+              "translation": "Müze üç klasik heykel satın aldı, ki bunların en eskisi Roma İmparatorluğu'na kadar uzanmaktadır."
             },
             {
               "id": "c37_l2_ex15_q4",
-              "type": "error-finder",
-              "prompt": "Gök cisimlerinin derecelendirilmesindeki hatayı yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "telescope",
-                "tracked",
-                "four",
-                "stars,",
-                "the",
-                "hottest",
-                "of",
-                "whom",
-                "was",
-                "a",
-                "blue",
-                "giant."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The curator reviewed two paintings, ___ was a landscape.",
+              "options": [
+                "the first of which",
+                "whose first of",
+                "the first of them",
+                "the first of whom"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Yıldızlar cansız nesne olduğu için 'whom' yerine 'which' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Tablolar cansız nesneler olduğundan, relative nitelemesinde 'the first of which' kalıbı kullanılmalıdır. 'whom' insanlar içindir.",
+              "translation": "Küratör iki tabloyu inceledi, ki bunlardan ilki bir manzara resmiydi."
             },
             {
               "id": "c37_l2_ex15_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
-              "translation": "Laboratuvar üç yeni element üretti, bunların en nadiri sadece birkaç milisaniye dayandı.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Tarihçi iki antik parşömen çevirdi, bunların ikincisi hanedan tarihini anlatıyordu.",
               "words": [
-                "The lab synthesized three new elements,",
-                "the rarest of which",
-                "lasted only for a few milliseconds.",
+                "The historian translated two ancient scrolls,",
+                "the second of which",
+                "described dynastic history.",
                 "whom",
                 "them",
-                "that"
+                "whose"
               ],
               "correctOrder": [
-                "The lab synthesized three new elements,",
-                "the rarest of which",
-                "lasted only for a few milliseconds."
+                "The historian translated two ancient scrolls,",
+                "the second of which",
+                "described dynastic history."
               ],
-              "enSentence": "The lab synthesized three new elements, the rarest of which lasted only for a few milliseconds.",
+              "enSentence": "The historian translated two ancient scrolls, the second of which described dynastic history.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex15_q6",
               "type": "sentence-connector",
-              "prompt": "Termodinamik verilere en uygun köprü cümleyi bulun:",
-              "mainSentence": "The technicians monitored four hydrothermal vents,",
+              "prompt": "Sanatçı-eser uyumuna göre doğru devamı seçin:<br><br>The city constructed three grand monuments,",
               "options": [
-                "the hottest of which emitted volcanic gases continually.",
-                "the oldest of whom was a famous physicist.",
-                "most of whose members were laboratory mice."
+                "the oldest of whom was thirty years old.",
+                "most of whose walls were painted in red.",
+                "the largest of which was designed by a French architect."
               ],
-              "correctIndex": 0,
-              "translation": "Teknisyenler dört hidrotermal bacayı izledi, ki bunların en sıcağı sürekli olarak volkanik gazlar yayıyordu."
+              "correctIndex": 2,
+              "translation": "Şehir üç büyük anıt inşa etti, ki bunların en büyüğü bir Fransız mimar tarafından tasarlanmıştı."
             },
             {
               "id": "c37_l2_ex15_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki mühendislik derece cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Firma üç süper bilgisayar test etti, ki bunların en hızlısı saniyede kuadrilyonlarca işlem yapıyor.",
-              "enSentence": "The firm tested three supercomputers, the fastest of which performs quadrillions of operations per second.",
+              "prompt": "Aşağıdaki sanat tarihi cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Müze, ikisi Rönesans dönemine ait olan üç yeni sergi açtı.",
+              "enSentence": "The museum opened three new exhibitions, two of which belong to the Renaissance era.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex16",
-          "title": "Alıştırma 16: Sağlık Bilimlerinde Hücre ve DNA Odaklı Aitlik Yapıları",
+          "title": "Alıştırma 16: Hukuk ve Antropolojide Aitlik Yapıları",
           "questions": [
             {
               "id": "c37_l2_ex16_q1",
               "type": "matching",
-              "prompt": "Genetik ve anatomi aitlik kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Hukuk ve antropolojide aitlik bildiren yapıları eşleştirin.<br><br>Match possessive connectors:",
               "pairs": [
                 {
-                  "left": "most of whose walls",
-                  "right": "duvarlarının çoğu ... olan (hücre/arter)"
+                  "left": "most of whose clauses",
+                  "right": "maddelerinin çoğu ... olan (yasa)"
                 },
                 {
-                  "left": "all of whose genes",
-                  "right": "genlerinin tamamı ... olan"
+                  "left": "each of whose members",
+                  "right": "üyelerinin her biri ... olan"
                 },
                 {
-                  "left": "some of whose samples",
-                  "right": "numunelerinin bazıları ... olan"
+                  "left": "some of whose customs",
+                  "right": "adetlerinin bazıları ... olan"
                 },
                 {
-                  "left": "each of whose steps",
-                  "right": "basamaklarının her biri ... olan"
+                  "left": "none of whose files",
+                  "right": "dosyalarının hiçbirisi ... olmayan"
                 }
               ]
             },
             {
               "id": "c37_l2_ex16_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Hücresel yapının aitliğini niteleyen miktar kelimesini seçin:",
-              "sentence": "They isolated a dangerous pathogen, most of ___ walls were resistant to standard penicillin.",
+              "prompt": "Kanun maddelerini niteleyen doğru sahiplik yapısını bulun:<br><br>The parliament amended a code of law, most of ___ sections were outdated.",
               "options": [
                 "whose",
-                "which",
+                "that",
                 "whom",
-                "that"
+                "which"
               ],
               "correctIndex": 0,
-              "translation": "Duvarlarının çoğu standart penisiline dirençli olan tehlikeli bir patojen izole ettiler."
+              "translation": "Parlamento, maddelerinin çoğu güncelliğini yitirmiş olan bir kanunu değiştirdi."
             },
             {
               "id": "c37_l2_ex16_q3",
               "type": "context-distractor",
-              "prompt": "Genetik parça-bütün ilişkisini kuran doğru tam öbeği bulun:",
-              "sentence": "The biologists mapped a specific virus, ___ had mutated during the freeze-drying process.",
+              "prompt": "Toplumsal gelenekleri niteleyen doğru aitlik öbeğini seçin:<br><br>The anthropologist studied an isolated tribe, ___ had been preserved for centuries.",
               "options": [
-                "all of whose genes",
-                "all of which genes",
-                "the majority of whom",
-                "none of them"
+                "none of them",
+                "most of whose traditions",
+                "many of whom",
+                "most of which traditions"
               ],
-              "correctIndex": 0,
-              "translation": "Biyologlar, genlerinin tamamı dondurarak kurutma işlemi sırasında mutasyona uğramış olan spesifik bir virüsü haritalandırdılar."
+              "correctIndex": 1,
+              "translation": "Antropolog, geleneklerinin çoğu yüzyıllar boyunca korunmuş olan izole bir kabileyi inceledi."
             },
             {
               "id": "c37_l2_ex16_q4",
-              "type": "error-finder",
-              "prompt": "Tıbbi laboratuvar verisindeki sahiplik hatasını bulun:",
-              "sentenceTokens": [
-                "The",
-                "lab",
-                "examined",
-                "five",
-                "patients,",
-                "some",
-                "of",
-                "which",
-                "blood",
-                "samples",
-                "were",
-                "contaminated."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The court examined three files, ___ pages were missing.",
+              "options": [
+                "some of whom",
+                "some of whose",
+                "some of them",
+                "some of which"
               ],
-              "correctIndex": 7,
-              "suggestedCorrection": "whose",
-              "translation": "Kan numunelerinin hastalara ait olduğunu belirtmek için 'which' yerine 'whose' kullanılmalıdır."
+              "correctIndex": 1,
+              "explanation": "Dosyalara ait sayfaları nitelemek ve sahiplik ilişkisi kurmak amacıyla 'some of whose' relative yapısı kullanılmalıdır.",
+              "translation": "Mahkeme, bazı sayfaları eksik olan üç dosyayı inceledi."
             },
             {
               "id": "c37_l2_ex16_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını genetik akışa uygun sıralayın:",
-              "translation": "Onlar karmaşık bir DNA sarmalı sentezlediler, bunun basamaklarının her biri kararlı bir bağ içerir.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Avukat iki dava dosyasını inceledi, bunların her birinin içeriği gizliydi.",
               "words": [
-                "They synthesized a complex DNA strand,",
-                "each of whose steps",
-                "contains a stable",
-                "chemical bond.",
+                "The lawyer reviewed two case files,",
+                "each of whose contents",
+                "was highly confidential.",
                 "each of which",
-                "that"
+                "them"
               ],
               "correctOrder": [
-                "They synthesized a complex DNA strand,",
-                "each of whose steps",
-                "contains a stable",
-                "chemical bond."
+                "The lawyer reviewed two case files,",
+                "each of whose contents",
+                "was highly confidential."
               ],
-              "enSentence": "They synthesized a complex DNA strand, each of whose steps contains a stable chemical bond.",
+              "enSentence": "The lawyer reviewed two case files, each of whose contents was highly confidential.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex16_q6",
               "type": "sentence-connector",
-              "prompt": "Hücre anatomisine uygun olan devam cümlesini seçin:",
-              "mainSentence": "The pathology department cultured ten tumor cells,",
+              "prompt": "Hukuki belge ile aitlik ilişkisi kuran kartı seçin:<br><br>The legal team drafted three contracts,",
               "options": [
-                "most of whose membranes were highly permeable to the drug.",
-                "many of whom were prominent oncologists.",
-                "the purpose of which was to measure temperature."
+                "most of whose clauses were heavily criticized by defense lawyers.",
+                "the purpose of which was to resolve disputes.",
+                "many of whom were judges."
               ],
               "correctIndex": 0,
-              "translation": "Patoloji bölümü on tümör hücresi kültüre etti, bunların zarlarının çoğu ilaca karşı yüksek geçirgenliğe sahipti."
+              "translation": "Hukuk ekibi üç sözleşme tasarladı, ki bunların maddelerinin çoğu savunma avukatları tarafından sert bir şekilde eleştirildi."
             },
             {
               "id": "c37_l2_ex16_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki ileri seviye genetik cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Bilim insanları, dizilimlerinin hiçbirisi insan genomuyla eşleşmeyen üç organizma test etti.",
-              "enSentence": "The scientists tested three organisms, none of whose sequences matched the human genome.",
+              "prompt": "Aşağıdaki antropoloji içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Sosyolog beş topluluk inceledi, bunların üyelerinin hepsi tarımla uğraşıyordu.",
+              "enSentence": "The sociologist studied five communities, all of whose members were engaged in agriculture.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex17",
-          "title": "Alıştırma 17: Fen Bilimlerinde Edat Kombinasyonlu Miktar Yapıları",
+          "title": "Alıştırma 17: Beşeri Bilimlerde Edat Kombinasyonlu Miktar Yapıları",
           "questions": [
             {
               "id": "c37_l2_ex17_q1",
               "type": "matching",
-              "prompt": "Laboratuvar eylemlerini niteleyen edatlı miktar yapılarını eşleştirin.",
+              "prompt": "Edatlı miktar yapılarını beşeri bilimlerdeki anlamlarıyla eşleştirin.<br><br>Match prepositional structures:",
               "pairs": [
                 {
-                  "left": "through some of which",
-                  "right": "bazılarının içinden/sayesinde ... olan"
+                  "left": "in some of which",
+                  "right": "bazılarının içinde ... olan (kitap/yazıt)"
                 },
                 {
-                  "left": "by means of which",
-                  "right": "aracılığıyla/vasıtasıyla ... olan"
+                  "left": "by many of whom",
+                  "right": "birçoğu tarafından ... yapılan (yazar/tarihçi)"
                 },
                 {
-                  "left": "with most of which",
-                  "right": "çoğu ile birlikte ... reaksiyona giren"
+                  "left": "with most of whom",
+                  "right": "çoğu ile birlikte ... olunan (meslektaş)"
                 },
                 {
-                  "left": "for neither of which",
-                  "right": "ikisinden hiçbirisi için de ... olmayan"
+                  "left": "to none of which",
+                  "right": "hiçbirisine de ... olmayan"
                 }
               ]
             },
             {
               "id": "c37_l2_ex17_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Pasif deney süreçlerini (by... ) niteleyen doğru yapıyı seçin:",
-              "sentence": "The university invited ten distinguished physicists, by many of ___ the new string theory was refuted.",
+              "prompt": "Fiilin edat uyumunu gözeterek doğru relative bağlacını seçin:<br><br>The committee nominated ten prominent authors, by many of ___ the literary award was rejected.",
               "options": [
-                "whom",
-                "which",
+                "them",
                 "that",
-                "them"
+                "which",
+                "whom"
               ],
-              "correctIndex": 0,
-              "translation": "Üniversite, birçoğu tarafından yeni sicim teorisinin çürütüldüğü on seçkin fizikçiyi davet etti."
+              "correctIndex": 3,
+              "translation": "Komite, birçoğu tarafından edebi ödülün reddedildiği on seçkin yazar belirledi."
             },
             {
               "id": "c37_l2_ex17_q3",
               "type": "context-distractor",
-              "prompt": "Deney ortamlarını ve tüplerini niteleyen edatlı miktar yapısını bulun:",
-              "sentence": "The chemist prepared five sterile test tubes, ___ crystallization had already begun.",
+              "prompt": "Tarihi belgeleri niteleyen doğru edatlı miktar yapısını seçin:<br><br>The archeologists uncovered five ancient inscriptions, ___ references to early trade were found.",
               "options": [
-                "in some of which",
-                "in some of whom",
                 "most of which",
+                "in some of whom",
+                "in some of which",
                 "from them"
               ],
-              "correctIndex": 0,
-              "translation": "Kimyager, bazılarının içinde kristalleşmenin çoktan başladığı beş steril deney tüpü hazırladı."
+              "correctIndex": 2,
+              "translation": "Arkeologlar, bazılarının içinde erken ticaret referanslarının bulunduğu beş antik yazıt ortaya çıkardılar."
             },
             {
               "id": "c37_l2_ex17_q4",
-              "type": "error-finder",
-              "prompt": "Element reaksiyon edatındaki (react to) gramer hatasını yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "lab",
-                "exposed",
-                "two",
-                "alloys,",
-                "to",
-                "neither",
-                "of",
-                "whom",
-                "the",
-                "acid",
-                "reacted."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The sociologist interviewed ten leaders, ___ she had worked on the kinship project.",
+              "options": [
+                "with most of whom",
+                "with most of whose",
+                "with most of which",
+                "with most of them"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Alaşım cansız bir nesne olduğu için 'whom' yerine 'which' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Liderler insan topluluğu olduğu için relative yapısında cansızlar için kullanılan 'which' yerine 'whom' tercih edilerek 'with most of whom' denmelidir.",
+              "translation": "Sosyolog on liderle görüştü, bunların çoğuyla birlikte akrabalık projesi üzerinde çalışmıştı."
             },
             {
               "id": "c37_l2_ex17_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
-              "translation": "Profesör on araştırma grubuyla görüştü, bunların çoğuyla daha önce CERN'de çalışmıştı.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Tarihçi beş kütüphaneyi ziyaret etti, bazılarında nadir el yazmaları buldu.",
               "words": [
-                "The professor interviewed ten research groups,",
-                "with most of whom",
-                "she had previously worked",
-                "at CERN.",
+                "The historian visited five libraries,",
+                "in some of which",
+                "she found rare manuscripts.",
                 "most of them",
-                "which"
+                "whom"
               ],
               "correctOrder": [
-                "The professor interviewed ten research groups,",
-                "with most of whom",
-                "she had previously worked",
-                "at CERN."
+                "The historian visited five libraries,",
+                "in some of which",
+                "she found rare manuscripts."
               ],
-              "enSentence": "The professor interviewed ten research groups, with most of whom she had previously worked at CERN.",
+              "enSentence": "The historian visited five libraries, in some of which she found rare manuscripts.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex17_q6",
               "type": "sentence-connector",
-              "prompt": "Kimyasal çözeltilere ve edat dengesine uygun olan kartı seçin:",
-              "mainSentence": "The researcher mixed three reactive compounds,",
+              "prompt": "Edatlı miktar yapısını doğru tamamlayan seçeneği bulun:<br><br>The delegation presented three proposals,",
               "options": [
-                "with most of which the liquid reacted violently.",
-                "under the supervision of whom they conducted the trial.",
-                "the majority of whose patients recovered."
+                "to none of which the committee agreed.",
+                "most of whose files were lost.",
+                "under the supervision of whom they wrote."
               ],
               "correctIndex": 0,
-              "translation": "Araştırmacı üç reaktif bileşiği karıştırdı, ki sıvı bunların büyük kısmıyla şiddetli bir şekilde reaksiyona girdi."
+              "translation": "Heyet üç teklif sundu, komite bunların hiçbirini kabul etmedi."
             },
             {
               "id": "c37_l2_ex17_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki kimya odaklı edatlı cümleyi Türkçe'ye çevirin:",
-              "correctSentence": "Klinik ekip, tıbbi kurulun çoğuna katıldığı yeni tedavi kılavuzları formüle etti.",
-              "enSentence": "The clinical team formulated new treatment guidelines, with most of which the medical board agreed.",
+              "prompt": "Aşağıdaki edatlı cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Antropolog, çoğuna katıldığım teoriler ortaya koydu.",
+              "enSentence": "The anthropologist advanced theories, with most of which I agreed.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex18",
-          "title": "Alıştırma 18: Sağlık Bilimlerinde İleri Deneysel Hiyerarşi Kalıpları",
+          "title": "Alıştırma 18: Sosyal Hiyerarşi ve Akademik Gözetim Yapıları",
           "questions": [
             {
               "id": "c37_l2_ex18_q1",
               "type": "matching",
-              "prompt": "Tıbbi laboratuvar hiyerarşi ve takip öbeklerini eşleştirin.",
+              "prompt": "Akademik ve kurumsal hiyerarşi bildiren miktar yapılarını eşleştirin.<br><br>Match hierarchical structures:",
               "pairs": [
                 {
-                  "left": "under the leadership of whom",
-                  "right": "kimin liderliği altında ... yapılan"
+                  "left": "under the supervision of whom",
+                  "right": "kimin gözetimi altında ... olan (insan)"
                 },
                 {
-                  "left": "through the injection of which",
-                  "right": "enjekte edilmesi vasıtasıyla ... olan (ilaç)"
+                  "left": "through the analysis of which",
+                  "right": "analizi vasıtasıyla ... olan (cansız)"
                 },
                 {
-                  "left": "with the cooperation of whom",
-                  "right": "kimin işbirliğiyle ... tedavi edilen"
+                  "left": "with the assistance of whom",
+                  "right": "kimin yardımıyla ... olan (insan)"
                 },
                 {
-                  "left": "under the action of which",
-                  "right": "etkisi/aksiyonu altında ... çözünen"
+                  "left": "under the protection of which",
+                  "right": "koruması altında ... olan (cansız)"
                 }
               ]
             },
             {
               "id": "c37_l2_ex18_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Tıbbi klinik denetim bildiren yapıyı doğru tamamlayın:",
-              "sentence": "The hospital employs five senior virologists, under the supervision of ___ the vaccine trial is monitored.",
+              "prompt": "Akademik gözetim bildiren yapıyı doğru tamamlayın:<br><br>The university employs five senior professors, under the supervision of ___ the research is conducted.",
               "options": [
                 "whom",
-                "which",
                 "whose",
+                "which",
                 "them"
               ],
               "correctIndex": 0,
-              "translation": "Hastane, aşı denemesinin gözetimi altında izlendiği beş kıdemli virolog istihdam etmektedir."
+              "translation": "Üniversite, araştırmanın gözetimi altında yürütüldüğü beş kıdemli profesör istihdam etmektedir."
             },
             {
               "id": "c37_l2_ex18_q3",
               "type": "context-distractor",
-              "prompt": "Klinik tedavi ve enjeksiyon yöntemini belirten ileri yapıyı seçin:",
-              "sentence": "The clinicians tested two experimental serums, ___ tumor growth was successfully halted.",
+              "prompt": "Veri çözümleme yoluyla bağ kuran yapıyı seçin:<br><br>The researchers analyzed three large census databases, ___ new social dynamics emerged.",
               "options": [
-                "through the injection of which",
+                "through the analysis of which",
                 "under the leadership of whom",
-                "most of whose parameters",
-                "in which event"
+                "in which event",
+                "most of whose parameters"
               ],
               "correctIndex": 0,
-              "translation": "Klinisyenler iki deneysel serum test ettiler, ki bunun enjekte edilmesi vasıtasıyla tümör büyümesi başarıyla durduruldu."
+              "translation": "Araştırmacılar, analizi vasıtasıyla yeni sosyal dinamiklerin ortaya çıktığı üç büyük nüfus sayımı veri tabanını incelediler."
             },
             {
               "id": "c37_l2_ex18_q4",
-              "type": "error-finder",
-              "prompt": "Cerrahi ekip hiyerarşisindeki relative hatasını süzün:",
-              "sentenceTokens": [
-                "The",
-                "chief",
-                "praised",
-                "the",
-                "three",
-                "nurses,",
-                "with",
-                "the",
-                "assistance",
-                "of",
-                "which",
-                "the",
-                "surgery",
-                "succeeded."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The director praised the three lawyers, ___ the dispute was resolved.",
+              "options": [
+                "with the assistance of whom",
+                "assistance of whose",
+                "with the assistance of them",
+                "with the assistance of which"
               ],
-              "correctIndex": 10,
-              "suggestedCorrection": "whom",
-              "translation": "Hemşireler insan topluluğu olduğu için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 0,
+              "explanation": "Avukatlar insan olduğu için hiyerarşik nitelemelerde 'with the assistance of whom' kullanılmalıdır. 'which' cansız nesneler içindir.",
+              "translation": "Müdür, yardımlarıyla anlaşmazlığın çözüldüğü üç avukatı övdü."
             },
             {
               "id": "c37_l2_ex18_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını medikal akışa göre sıralayın:",
-              "translation": "Doktorlar üç özerk hücre grubu izole ettiler, enzimlerin etkisi altında bunlar hızla çözüldü.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Devlet üç koruyucu kurum kurdu, bunların şemsiyesi altında azınlıklar yaşıyordu.",
               "words": [
-                "The doctors isolated three cell cultures,",
-                "under the action of which",
-                "the enzymes dissolved",
-                "rapidly.",
+                "The state established three protection agencies,",
+                "under the umbrella of which",
+                "minorities lived",
+                "safely.",
                 "whom",
                 "that"
               ],
               "correctOrder": [
-                "The doctors isolated three cell cultures,",
-                "under the action of which",
-                "the enzymes dissolved",
-                "rapidly."
+                "The state established three protection agencies,",
+                "under the umbrella of which",
+                "minorities lived",
+                "safely."
               ],
-              "enSentence": "The doctors isolated three cell cultures, under the action of which the enzymes dissolved rapidly.",
+              "enSentence": "The state established three protection agencies, under the umbrella of which minorities lived safely.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex18_q6",
               "type": "sentence-connector",
-              "prompt": "Tıbbi araştırma liderliği bağlamına en uygun kartı bulun:",
-              "mainSentence": "The institute hired two global epidemiologists,",
+              "prompt": "Liderlik ve yönetim hiyerarşisine uygun olan seçeneği bulun:<br><br>The ministry hired two international experts,",
               "options": [
-                "under the leadership of whom the pandemic strategy was drafted.",
-                "the result of which was completely contaminated.",
-                "by which time the patient had passed away."
+                "the result of which was completely disastrous.",
+                "under the leadership of whom the macro reform was drafted.",
+                "by which time the parliament had dissolved."
               ],
-              "correctIndex": 0,
-              "translation": "Enstitü iki küresel epidemiyolog işe aldı, bunların liderliğinde pandemi stratejisi tasarlandı."
+              "correctIndex": 1,
+              "translation": "Bakanlık iki uluslararası uzman işe aldı, bunların liderliğinde makro reform tasarlanmıştı."
             },
             {
               "id": "c37_l2_ex18_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki klinik hiyerarşi cümlesini pürüzsüzce Türkçe'ye çevirin:",
-              "correctSentence": "Onlar iki uzman hekim görevlendirdiler, ki bunların muazzam çabaları sayesinde salgın önlendi.",
-              "enSentence": "They appointed two specialist physicians, through the immense efforts of whom the outbreak was avoided.",
+              "prompt": "Aşağıdaki akademik cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Yönetim iki danışman görevlendirdi, ki bunların diplomatik çabaları sayesinde anlaşmazlık çözüldü.",
+              "enSentence": "The management appointed two consultants, through the diplomatic efforts of whom the dispute was resolved.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex19",
-          "title": "Alıştırma 19: Fen Bilimlerinde Zaman, Süreç ve Reaksiyon Aşamaları",
+          "title": "Alıştırma 19: Coğrafya ve Sosyolojide Soyut Zaman Geçişleri",
           "questions": [
             {
               "id": "c37_l2_ex19_q1",
               "type": "matching",
-              "prompt": "Reaksiyon ve süreç zamanlayıcılarını anlamlarıyla eşleştirin.",
+              "prompt": "Coğrafya ve sosyolojide süreç ve zaman bağlayıcılarını anlamlarıyla eşleştirin.<br><br>Match geography time connectors:",
               "pairs": [
                 {
-                  "left": "after which stage",
-                  "right": "ki bu aşamadan sonra"
+                  "left": "at which point",
+                  "right": "ki bu noktada / tam bu sırada"
                 },
                 {
-                  "left": "by which hour",
-                  "right": "ki o saate kadar"
+                  "left": "by which time",
+                  "right": "ki o zamana kadar"
                 },
                 {
-                  "left": "during which interval",
-                  "right": "ki bu zaman aralığı boyunca"
+                  "left": "during which period",
+                  "right": "ki bu dönem boyunca"
                 },
                 {
-                  "left": "since which decade",
-                  "right": "ki o on yıldan beri"
+                  "left": "since which year",
+                  "right": "ki o yıldan beri"
                 }
               ]
             },
             {
               "id": "c37_l2_ex19_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Kimyasal reaksiyon süresini belirten doğru yapıyı seçin:",
-              "sentence": "The mixture boiled heating for twenty minutes, by which ___ the catalyst had dissolved completely.",
+              "prompt": "Süreç bildiren doğru zaman yapısını seçin:<br><br>The drought lasted for three years, by which ___ the soil had lost all its fertility.",
               "options": [
+                "period",
                 "time",
                 "point",
-                "phase",
                 "event"
               ],
-              "correctIndex": 0,
-              "translation": "Karışım yirmi dakika boyunca kaynatıldı, ki o zamana kadar katalizör tamamen çözülmüştü."
+              "correctIndex": 1,
+              "translation": "Kuraklık üç yıl sürdü, ki o zamana kadar toprak tüm verimliliğini kaybetmişti."
             },
             {
               "id": "c37_l2_ex19_q3",
               "type": "context-distractor",
-              "prompt": "Reaksiyonun tam kırılma/dönüşüm anını bildiren zaman öbeğini seçin:",
-              "sentence": "The solution reached its freezing temperature, ___ it transformed into a crystalline structure.",
+              "prompt": "Coğrafi süreçteki kırılma anını bildiren zaman yapısını seçin:<br><br>The migration wave reached its peak in winter, ___ the border was closed.",
               "options": [
-                "at which point",
-                "during which phase",
                 "by which time",
+                "during which period",
+                "at which point",
                 "since when"
               ],
-              "correctIndex": 0,
-              "translation": "Çözelti donma sıcaklığına ulaştı, ki bu noktada kristal bir yapıya dönüştü."
+              "correctIndex": 2,
+              "translation": "Göç dalgası kışın zirve noktasına ulaştı, ki bu noktada sınır kapatıldı."
             },
             {
               "id": "c37_l2_ex19_q4",
-              "type": "error-finder",
-              "prompt": "Hücre bölünmesi evre nitelemesindeki hatayı yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "organism",
-                "mutated",
-                "for",
-                "weeks,",
-                "during",
-                "what",
-                "phase",
-                "cells",
-                "multiplied."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The nation suffered from recession, ___ inflation doubled.",
+              "options": [
+                "during what period",
+                "during whose period",
+                "during which period",
+                "during which time"
               ],
-              "correctIndex": 6,
-              "suggestedCorrection": "which",
-              "translation": "Relative yapılarda evre veya süreci bağlarken 'what' değil 'which' tercih edilir."
+              "correctIndex": 2,
+              "explanation": "Zaman belirteçli yan cümlelerde edatlı bağlaç olarak 'during which period' (bu dönem boyunca) yapısı kullanılmalıdır.",
+              "translation": "Ülke resesyon yaşadı, ki bu dönem boyunca enflasyon iki katına çıktı."
             },
             {
               "id": "c37_l2_ex19_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını teknik akışa göre sıralayın:",
-              "translation": "Küresel ısınma 1980'lerde hızlandı, ki o on yıldan beri buzullar önemli ölçüde eridi.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Endüstri devrimi 1780'de başladı, ki o yıldan beri kentsel nüfus arttı.",
               "words": [
-                "Global warming accelerated in the 1980s,",
-                "since which decade",
-                "glaciers melted",
-                "significantly.",
+                "The Industrial Revolution began in 1780,",
+                "since which year",
+                "urban population increased",
+                "rapidly.",
                 "at which",
                 "that"
               ],
               "correctOrder": [
-                "Global warming accelerated in the 1980s,",
-                "since which decade",
-                "glaciers melted",
-                "significantly."
+                "The Industrial Revolution began in 1780,",
+                "since which year",
+                "urban population increased",
+                "rapidly."
               ],
-              "enSentence": "Global warming accelerated in the 1980s, since which decade glaciers melted significantly.",
+              "enSentence": "The Industrial Revolution began in 1780, since which year urban population increased rapidly.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex19_q6",
               "type": "sentence-connector",
-              "prompt": "Verilen reaksiyon verisine en uygun zaman geçiş kartını seçin:",
-              "mainSentence": "The core temperature rose to a thousand degrees,",
+              "prompt": "Zamanın akış hızına uygun olan doğru devam cümlesini bulun:<br><br>The water levels dropped below critical values,",
               "options": [
-                "at which point the safety valves opened automatically.",
-                "the majority of whom were nuclear physicists.",
-                "under the protection of which the computers operated."
+                "the majority of whom were geographers.",
+                "at which point the government declared a crisis.",
+                "under the protection of which resources were secured."
               ],
-              "correctIndex": 0,
-              "translation": "Çekirdek sıcaklığı bin dereceye yükseldi, ki bu noktada emniyet valfleri otomatik olarak açıldı."
+              "correctIndex": 1,
+              "translation": "Su seviyeleri kritik değerlerin altına düştü, ki bu noktada hükümet kriz ilan etti."
             },
             {
               "id": "c37_l2_ex19_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki teknik süreç geçiş cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Deney akşama kadar devam etti, ki o zamana kadar tüm veriler bilgisayara kaydedilmişti.",
-              "enSentence": "The experiment continued until evening, by which time all data had been recorded to the computer.",
+              "prompt": "Aşağıdaki coğrafi geçiş cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Deprem 1999'da meydana geldi, ki o zamana kadar şehir önlemler almıştı.",
+              "enSentence": "The earthquake occurred in 1999, by which time the city had taken precautions.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex20",
-          "title": "Alıştırma 20: Sağlık Bilimlerinde Neden, Koşul ve Klinik Çıkarım Yapıları",
+          "title": "Alıştırma 20: İktisat ve Hukukta Olasılık ve Süreç Bağları",
           "questions": [
             {
               "id": "c37_l2_ex20_q1",
               "type": "matching",
-              "prompt": "Klinik sonuç ve koşul bildiren relative yapıları anlamlarıyla eşleştirin.",
+              "prompt": "İktisat ve hukukta olasılık bildiren relative kalıplarını eşleştirin.<br><br>Match economic-legal causal linkers:",
               "pairs": [
                 {
-                  "left": "in which case",
-                  "right": "ki bu durumda"
+                  "left": "in which event",
+                  "right": "ki bu durumda / öyle olması halinde"
                 },
                 {
-                  "left": "for which purpose",
-                  "right": "ki bu amaçla"
+                  "left": "for which reason",
+                  "right": "ki bu nedenden ötürü"
                 },
                 {
-                  "left": "through which therapy",
-                  "right": "hangi tedavi vasıtasıyla ... iyileşen"
+                  "left": "through which process",
+                  "right": "hangi süreç vasıtasıyla ... olan"
                 },
                 {
-                  "left": "from which organ",
-                  "right": "ki bu organdan itibaren yayılan"
+                  "left": "from which location",
+                  "right": "ki bu konumdan itibaren"
                 }
               ]
             },
             {
               "id": "c37_l2_ex20_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Tıbbi bir gerekçe sunan doğru relative yapıyı seçin:",
-              "sentence": "The patient neglected the post-op care, for ___ reason the infection spread to the bones.",
+              "prompt": "Hukuki gerekçe bildiren relative yapıyı tamamlayın:<br><br>The debtor failed to repay, for ___ reason the bank filed a lawsuit.",
               "options": [
-                "which",
                 "what",
                 "that",
-                "whose"
+                "whose",
+                "which"
               ],
-              "correctIndex": 0,
-              "translation": "Hasta ameliyat sonrası bakımı ihmal etti, ki bu nedenden ötürü enfeksiyon kemiklere yayıldı."
+              "correctIndex": 3,
+              "translation": "Borçlu ödemeyi yapamadı, ki bu nedenden ötürü banka dava açtı."
             },
             {
               "id": "c37_l2_ex20_q3",
               "type": "context-distractor",
-              "prompt": "Klinik bir acil durum/koşul senaryosu kuran tam öbeği bulun:",
-              "sentence": "The patient's blood pressure might drop suddenly, ___ the emergency team will intervene.",
+              "prompt": "Senaryo kuran olasılık yapısını seçin:<br><br>The parliament might reject the tax bill, ___ a economic crisis will begin.",
               "options": [
-                "in which event",
-                "for which reason",
                 "at which point",
-                "by which time"
+                "by which time",
+                "in which event",
+                "for which reason"
               ],
-              "correctIndex": 0,
-              "translation": "Hastanın kan basıncı aniden düşebilir, ki bu durumda acil durum ekibi müdahale edecektir."
+              "correctIndex": 2,
+              "translation": "Parlamento vergi yasasını reddedebilir, ki bu durumda ekonomik kriz başlayacaktır."
             },
             {
               "id": "c37_l2_ex20_q4",
-              "type": "error-finder",
-              "prompt": "Klinik terapi nitelemesindeki yapısal sapmayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "child",
-                "underwent",
-                "immunotherapy,",
-                "through",
-                "that",
-                "therapy",
-                "the",
-                "allergy",
-                "was",
-                "cured."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The ministry adopted the treaty, ___ tariffs were stabilized.",
+              "options": [
+                "through whose process",
+                "through which method",
+                "through that process",
+                "through which process"
               ],
-              "correctIndex": 5,
-              "suggestedCorrection": "which",
-              "translation": "Cümleleri bağlayan relative kalıbında işaret sıfatı 'that' değil, bağlaç olan 'which' kullanılmalıdır."
+              "correctIndex": 3,
+              "explanation": "Cümleleri bağlamak için relative yapıda 'through which process' kullanılması şarttır. 'through that process' bağlaç değildir.",
+              "translation": "Bakanlık antlaşmayı benimsedi, ki bu süreç vasıtasıyla gümrük tarifeleri dengelendi."
             },
             {
               "id": "c37_l2_ex20_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını tıbbi mantığa göre dizin:",
-              "translation": "Kalp aniden durabilir, ki bu durumda cerrah elektroşok uygulayacaktır.",
+              "prompt": "Kelimeleri doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Yargıç karar vermeyi erteleyebilir, ki bu durumda avukat itiraz edecektir.",
               "words": [
-                "The heart may stop unexpectedly,",
+                "The judge may delay the decision,",
                 "in which event",
-                "the surgeon will apply",
-                "electroshock.",
+                "the lawyer will object",
+                "immediately.",
                 "that",
-                "in whose"
+                "where"
               ],
               "correctOrder": [
-                "The heart may stop unexpectedly,",
+                "The judge may delay the decision,",
                 "in which event",
-                "the surgeon will apply",
-                "electroshock."
+                "the lawyer will object",
+                "immediately."
               ],
-              "enSentence": "The heart may stop unexpectedly, in which event the surgeon will apply electroshock.",
+              "enSentence": "The judge may delay the decision, in which event the lawyer will object immediately.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex20_q6",
               "type": "sentence-connector",
-              "prompt": "Medikal sebep-sonuç ilişkisini pürüzsüz tamamlayan cümleyi seçin:",
-              "mainSentence": "The subject developed severe resistance to insulin,",
+              "prompt": "Sebep-sonuç ilişkisine uygun olan cümleyi bulun:<br><br>The country experienced massive capital flight,",
               "options": [
-                "for which reason the dosage was modified by the endocrinologist.",
-                "the purpose of which was to amplify the sound.",
-                "many of whom were veterinary physicians."
+                "many of whom were prominent judges.",
+                "the purpose of which was to satisfy the client.",
+                "for which reason the central bank raised rates."
               ],
-              "correctIndex": 0,
-              "translation": "Denek insüline karşı şiddetli direnç geliştirdi, ki bu nedenden ötürü dozaj endokrinolog tarafından değiştirildi."
+              "correctIndex": 2,
+              "translation": "Ülke büyük bir sermaye kaçışı yaşadı, ki bu nedenden ötürü merkez bankası faizleri yükseltti."
             },
             {
               "id": "c37_l2_ex20_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki gelişmiş medikal nedensellik cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Virüs solunum yollarını tıkadı, ki bu nedenden ötürü hasta yoğun bakıma alındı.",
-              "enSentence": "The virus blocked the airways, for which reason the patient was admitted to intensive care.",
+              "prompt": "Aşağıdaki iktisadi nedensellik cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Hükümet gümrük vergilerini artırdı, ki bu nedenden ötürü ticaret hacmi azaldı.",
+              "enSentence": "The government increased tariffs, for which reason the trade volume decreased.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex21",
-          "title": "Alıştırma 21: Fen Bilimlerinde Amaç, Deney Tasarımı ve Sonuç İlişkileri",
+          "title": "Alıştırma 21: Sinema ve İletişimde Amaç ve Sonuç İlişkili Yapılar",
           "questions": [
             {
               "id": "c37_l2_ex21_q1",
               "type": "matching",
-              "prompt": "İşlevsel ve parça-bütün bildiren fen kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Sinema ve iletişimde amaç ve sonuç bildiren yapıları eşleştirin.<br><br>Match purpose-result links in cinema:",
               "pairs": [
                 {
-                  "left": "the function of which",
-                  "right": "işlevi/görevi ... olan"
+                  "left": "the purpose of which",
+                  "right": "amacı ... olan (cansız/film)"
                 },
                 {
-                  "left": "the consequence of which",
-                  "right": "sonucu/getirisi ... olan"
+                  "left": "the result of which",
+                  "right": "sonucu ... olan (cansız/kavram)"
                 },
                 {
-                  "left": "the concentration of which",
-                  "right": "konsantrasyonu ... olan"
+                  "left": "the majority of which",
+                  "right": "çoğunluğu ... olan (cansız/belge)"
                 },
                 {
-                  "left": "the identities of whom",
-                  "right": "kimlikleri ... olan"
+                  "left": "the names of whom",
+                  "right": "isimleri ... olan (insan/yönetmen)"
                 }
               ]
             },
             {
               "id": "c37_l2_ex21_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Cihaz amacını bildiren teknik yapıyı doğru tamamlayın:",
-              "sentence": "The engineers installed a seismic sensor, the purpose of ___ is to detect micro-earthquakes.",
+              "prompt": "Amaç bildiren sinema yapısını doğru tamamlayın:<br><br>The director launched a documentary series, the purpose of ___ is to raise awareness about global warming.",
               "options": [
-                "which",
                 "whom",
                 "that",
+                "which",
                 "what"
               ],
-              "correctIndex": 0,
-              "translation": "Mühendisler, amacı mikro depremleri tespit etmek olan bir sismik sensör kurdular."
+              "correctIndex": 2,
+              "translation": "Yönetmen, amacı küresel ısınma konusunda farkındalık yaratmak olan bir belgesel serisi başlattı."
             },
             {
               "id": "c37_l2_ex21_q3",
               "type": "context-distractor",
-              "prompt": "Kimyasal patlama/sonuç bildiren doğru teknik yapıyı seçin:",
-              "sentence": "The facility mixed volatile gases incorrectly, ___ was a massive explosion.",
+              "prompt": "İletişim eylemlerinin sonucunu niteleyen doğru yapıyı seçin:<br><br>The studio released the controversial movie, ___ was a widespread public debate.",
               "options": [
                 "the result of which",
-                "the purpose of which",
                 "by which time",
-                "none of whom"
+                "none of whom",
+                "the purpose of which"
               ],
               "correctIndex": 0,
-              "translation": "Tesis uçucu gazları yanlış karıştırdı, ki bunun sonucu devasa bir patlama oldu."
+              "translation": "Stüdyo tartışmalı filmi vizyona soktu, ki bunun sonucu yaygın bir toplumsal tartışma oldu."
             },
             {
               "id": "c37_l2_ex21_q4",
-              "type": "error-finder",
-              "prompt": "Nobel ödüllü ekibi niteleyen yapıdaki hatayı bulun:",
-              "sentenceTokens": [
-                "The",
-                "academy",
-                "awarded",
-                "five",
-                "physicists,",
-                "the",
-                "names",
-                "of",
-                "which",
-                "were",
-                "announced."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The critics interviewed three directors, ___ were well-known to the audience.",
+              "options": [
+                "whose names of",
+                "the names of which",
+                "the names of them",
+                "the names of whom"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "whom",
-              "translation": "Fizikçiler insan grubunu temsil ettiği için 'which' yerine 'whom' kullanılmalıdır."
+              "correctIndex": 3,
+              "explanation": "Yönetmenler insan olduğu için relative clause yapısında 'the names of whom' kullanılmalıdır.",
+              "translation": "Eleştirmenler, isimleri seyirciler tarafından iyi bilinen üç yönetmenle röportaj yaptı."
             },
             {
               "id": "c37_l2_ex21_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
-              "translation": "Yazılım binlerce veriyi taradı, bunların çoğunluğu sistem hatalarına yönelikti.",
+              "prompt": "Cümle bloklarını doğru sıraya koyun:<br><br>Construct the sentence:",
+              "translation": "Yönetmen yeni sahneler ekledi, bunların çoğunluğu kurgudan çıkarıldı.",
               "words": [
-                "The software scanned thousands of data,",
+                "The director added new scenes,",
                 "the majority of which",
-                "targeted system",
-                "errors.",
+                "were cut during editing.",
                 "whom",
                 "that"
               ],
               "correctOrder": [
-                "The software scanned thousands of data,",
+                "The director added new scenes,",
                 "the majority of which",
-                "targeted system",
-                "errors."
+                "were cut during editing."
               ],
-              "enSentence": "The software scanned thousands of data, the majority of which targeted system errors.",
+              "enSentence": "The director added new scenes, the majority of which were cut during editing.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex21_q6",
               "type": "sentence-connector",
-              "prompt": "Tasarım-işlev uyumuna göre cümleyi tamamlayın:",
-              "mainSentence": "The astrophysicists designed a new satellite,",
+              "prompt": "Amaç-işlev uyumuna göre cümleyi tamamlayın:<br><br>The candidate produced a political campaign film,",
               "options": [
-                "the purpose of which is to map dark matter in space.",
-                "the oldest of whom was working in NASA.",
-                "in some of which they discovered water."
+                "the oldest of whom was working in Rome.",
+                "the purpose of which was to critique societal norms.",
+                "in some of which they discovered scrolls."
               ],
-              "correctIndex": 0,
-              "translation": "Astrofizikçiler yeni bir uydu tasarladılar, bunun amacı uzaydaki karanlık maddeyi haritalandırmaktır."
+              "correctIndex": 1,
+              "translation": "Aday, amacı toplumsal normları eleştirmek olan siyasi bir kampanya filmi hazırladı."
             },
             {
               "id": "c37_l2_ex21_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki teknik sonuç cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Yazılım kodları aşırı yüklendi, ki bunun sonucu sistem çökmesi oldu.",
-              "enSentence": "The software codes overloaded, the result of which was a system crash.",
+              "prompt": "Aşağıdaki sinema içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Stüdyo bütçeyi kıstı, ki bunun sonucu filmin gecikmesi oldu.",
+              "enSentence": "The studio cut the budget, the result of which was the delay of the film.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex22",
-          "title": "Alıştırma 22: Sağlık Bilimlerinde Soyut Köken, Etki ve Anatomi Bağları",
+          "title": "Alıştırma 22: Psikoloji ve Antropolojide Soyut Köken Bağları",
           "questions": [
             {
               "id": "c37_l2_ex22_q1",
               "type": "matching",
-              "prompt": "Medikal soyut patoloji kalıplarını anlamlarıyla eşleştirin.",
+              "prompt": "Soyut köken ve etki bildiren yapıları Türkçe karşılıklarıyla eşleştirin.<br><br>Match abstract origin structures:",
               "pairs": [
                 {
-                  "left": "the source of which",
-                  "right": "kaynağı ... olan"
+                  "left": "the cause of which",
+                  "right": "nedeni ... olan"
                 },
                 {
-                  "left": "the side effects of which",
-                  "right": "yan etkileri ... olan"
+                  "left": "the implications of which",
+                  "right": "etkileri / doğuracağı sonuçlar ... olan"
                 },
                 {
-                  "left": "the sequence of which",
-                  "right": "dizilimi ... olan"
+                  "left": "the origin of which",
+                  "right": "kökeni ... olan"
                 },
                 {
-                  "left": "the remainder of which",
+                  "left": "the rest of which",
                   "right": "geri kalanı ... olan"
                 }
               ]
@@ -53540,107 +53306,95 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex22_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Bir sendromun bilinmeyen nedenini niteleyen doğru yapıyı seçin:",
-              "sentence": "The infant suffered a sudden autoimmune breakdown, the cause of ___ is still unknown.",
+              "prompt": "Psikolojik bir olgunun kökenini niteleyen doğru yapıyı seçin:<br><br>The patient displayed a rare cognitive disorder, the origin of ___ was traced to early childhood.",
               "options": [
-                "which",
-                "whom",
                 "that",
-                "what"
+                "which",
+                "what",
+                "whom"
               ],
-              "correctIndex": 0,
-              "translation": "Bebek, nedeni hala bilinmeyen ani bir otoimmün çöküş yaşadı."
+              "correctIndex": 1,
+              "translation": "Hasta, kökeni erken çocukluğa kadar uzanan nadir bir bilişsel bozukluk gösterdi."
             },
             {
               "id": "c37_l2_ex22_q3",
               "type": "context-distractor",
-              "prompt": "Tıbbi tedavilerin geniş çaplı biyolojik sonuçlarını anlatan yapıyı seçin:",
-              "sentence": "The board approved a genetic modification therapy, ___ will affect future generations.",
+              "prompt": "Bilişsel davranış teorilerinin etkilerini niteleyen doğru öbeği seçin:<br><br>The professor proposed a new cognitive theory, ___ are still being discussed.",
               "options": [
-                "the implications of which",
-                "the origin of which",
+                "by which time",
                 "each of whom",
-                "by which time"
+                "the implications of which",
+                "the origin of which"
               ],
-              "correctIndex": 0,
-              "translation": "Kurul, tıbbi sonuçları/etkileri gelecek nesilleri etkileyecek olan bir genetik modifikasyon tedavisini onayladı."
+              "correctIndex": 2,
+              "translation": "Profesör, etkileri hala tartışılmakta olan yeni bir bilişsel teori önerdi."
             },
             {
               "id": "c37_l2_ex22_q4",
-              "type": "error-finder",
-              "prompt": "Deneysel ilaç dozajı ve parça nitelemesindeki hatayı süzün:",
-              "sentenceTokens": [
-                "The",
-                "clinic",
-                "received",
-                "five",
-                "liters",
-                "of",
-                "serum,",
-                "the",
-                "rest",
-                "of",
-                "them",
-                "was",
-                "frozen."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The anthropologists documented a new culture, ___ remains unknown to modern science.",
+              "options": [
+                "the origin of them",
+                "the origin of whom",
+                "whose origin of",
+                "the origin of which"
               ],
-              "correctIndex": 10,
-              "suggestedCorrection": "which",
-              "translation": "Virgülden sonra relative clause yapısını korumak adına 'them' yerine 'which' getirilmelidir."
+              "correctIndex": 3,
+              "explanation": "Kültür cansız/soyut bir kavram olduğundan relative nitelemesi yapılırken 'the origin of which' yapısı tercih edilmelidir.",
+              "translation": "Antropologlar, kökeni modern bilim tarafından bilinmeyen yeni bir kültür belgelediler."
             },
             {
               "id": "c37_l2_ex22_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyun:",
-              "translation": "Virologlar yeni bir virüs türü belgelediler, bunun kökeni Asya'ya dayanıyor.",
+              "prompt": "Cümle bloklarını doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Sosyologlar yeni bir davranışsal eğilim incelediler, bunun kökeni kentsel yaşama dayanıyor.",
               "words": [
-                "The virologists documented a new virus strain,",
+                "The sociologists studied a new behavioral trend,",
                 "the origin of which",
-                "is traced back",
-                "to Asia.",
+                "is traced to",
+                "urban life.",
                 "whom",
                 "that"
               ],
               "correctOrder": [
-                "The virologists documented a new virus strain,",
+                "The sociologists studied a new behavioral trend,",
                 "the origin of which",
-                "is traced back",
-                "to Asia."
+                "is traced to",
+                "urban life."
               ],
-              "enSentence": "The virologists documented a new virus strain, the origin of which is traced back to Asia.",
+              "enSentence": "The sociologists studied a new behavioral trend, the origin of which is traced to urban life.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex22_q6",
               "type": "sentence-connector",
-              "prompt": "Patolojik çıkarım bağlamına en uygun olan seçeneği bulun:",
-              "mainSentence": "The team published a study on neural degeneration,",
+              "prompt": "Psikolojik çıkarım bağlamına uygun olan seçeneği bulun:<br><br>The psychologists published a study on behavioral patterns,",
               "options": [
-                "the implications of which shook the entire medical community.",
                 "under the supervision of whom they treated patients.",
-                "the largest of which was located in Berlin."
+                "the largest of which was located in Berlin.",
+                "the implications of which shook the entire psychology department."
               ],
-              "correctIndex": 0,
-              "translation": "Ekip sinirsel dejenerasyon üzerine bir çalışma yayınladı, bunun sonuçları tüm tıp camiasını sarstı."
+              "correctIndex": 2,
+              "translation": "Psikologlar davranışsal kalıplar üzerine bir çalışma yayınladılar, bunun etkileri tüm psikoloji bölümünü sarstı."
             },
             {
               "id": "c37_l2_ex22_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki soyut medikal cümleyi Türkçe'ye aktarın:",
-              "correctSentence": "Hastane bütçeyi başarıyla yönetti, ki bunun geri kalanı kanser araştırmalarına aktarıldı.",
-              "enSentence": "The hospital managed the budget successfully, the rest of which was transferred to cancer research.",
+              "prompt": "Aşağıdaki soyut psikoloji cümlesini Türkçe'ye aktarın:<br><br>Translate to Turkish:",
+              "correctSentence": "Klinik bütçeyi başarıyla yönetti, ki bunun geri kalanı psikolojik araştırmalara aktarıldı.",
+              "enSentence": "The clinic managed the budget successfully, the rest of which was transferred to psychological research.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex23",
-          "title": "Alıştırma 23: Fen Bilimleri Karma YDS/YÖKDİL Tarama Soruları",
+          "title": "Alıştırma 23: Sosyal Bilimler Karma YDS/YÖKDİL Tarama Soruları I",
           "questions": [
             {
               "id": "c37_l2_ex23_q1",
               "type": "matching",
-              "prompt": "Sınavda en sık çıkan fen bilimleri miktar kalıplarını eşleştirin.",
+              "prompt": "Sınavda en sık çıkan sosyal bilimler miktar kalıplarını eşleştirin.<br><br>Match common exam quantifiers:",
               "pairs": [
                 {
                   "left": "the former of which",
@@ -53663,119 +53417,107 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex23_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Sınav formatındaki boşluğu en uygun teknik bağlaçla doldurun:",
-              "sentence": "The space agency selected five engineers, ___ had extensive experience in propulsion systems.",
+              "prompt": "Sınav formatındaki boşluğu en uygun bağlaçla doldurun:<br><br>The university selected five researchers, ___ had extensive experience in social surveys.",
               "options": [
-                "three of whom",
                 "three of them",
+                "three of whom",
                 "which three",
                 "that three of"
               ],
-              "correctIndex": 0,
-              "translation": "Uzay ajansı, üçü itki sistemleri alanında geniş deneyime sahip olan beş mühendis seçti."
+              "correctIndex": 1,
+              "translation": "Üniversite, üçü sosyal anketler alanında geniş deneyime sahip olan beş araştırmacı seçti."
             },
             {
               "id": "c37_l2_ex23_q3",
               "type": "context-distractor",
-              "prompt": "Zaman ve fiziksel reaksiyon ilişkisini tam öbek olarak süzün:",
-              "sentence": "The heating process dragged on until midnight, ___ the reactor finally reached critical mass.",
+              "prompt": "Zaman ve toplumsal reaksiyon ilişkisini tam öbek olarak süzün:<br><br>The debate dragged on until midnight, ___ the committee finally reached a consensus.",
               "options": [
-                "at which point",
-                "by which time",
                 "for which reason",
+                "by which time",
+                "at which point",
                 "in which event"
               ],
-              "correctIndex": 0,
-              "translation": "Isıtma işlemi gece yarısına kadar uzadı, ki bu noktada reaktör nihayet kritik kütleye ulaştı."
+              "correctIndex": 2,
+              "translation": "Tartışma gece yarısına kadar uzadı, ki bu noktada komite nihayet bir uzlaşıya vardı."
             },
             {
               "id": "c37_l2_ex23_q4",
-              "type": "error-finder",
-              "prompt": "Teknik arıza bildiren yapıdaki sinsi sınav hatasını yakalayın:",
-              "sentenceTokens": [
-                "The",
-                "rocket",
-                "suffered",
-                "a",
-                "malfunction,",
-                "the",
-                "cause",
-                "of",
-                "them",
-                "was",
-                "a",
-                "loose",
-                "valve."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The government suffered from a crisis, ___ was a legal loophole.",
+              "options": [
+                "the cause of them",
+                "the cause of whom",
+                "the cause of which",
+                "whose cause of"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Arıza tekil ve nesne olduğu için 'them' değil 'which' kullanılmalıdır."
+              "correctIndex": 2,
+              "explanation": "Kriz (crisis) tekil ve cansızdır. Relative clause ile bağlamak amacıyla 'the cause of which' getirilmelidir.",
+              "translation": "Hükümet bir kriz yaşadı, bunun nedeni yasal bir boşluktu."
             },
             {
               "id": "c37_l2_ex23_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
-              "translation": "Laboratuvar üç deneysel bileşik sentezledi, bunlardan ilki yüksek toksisite gösterdi.",
+              "prompt": "Cümle bloklarını doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Hukuk bürosu üç dava üstlendi, bunlardan ilki büyük ilgi çekti.",
               "words": [
-                "The laboratory synthesized three experimental compounds,",
+                "The law firm took three cases,",
                 "the first of which",
-                "exhibited",
-                "high toxicity.",
+                "attracted",
+                "much attention.",
                 "the first of them",
                 "that"
               ],
               "correctOrder": [
-                "The laboratory synthesized three experimental compounds,",
+                "The law firm took three cases,",
                 "the first of which",
-                "exhibited",
-                "high toxicity."
+                "attracted",
+                "much attention."
               ],
-              "enSentence": "The laboratory synthesized three experimental compounds, the first of which exhibited high toxicity.",
+              "enSentence": "The law firm took three cases, the first of which attracted much attention.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex23_q6",
               "type": "sentence-connector",
-              "prompt": "Sınav formatında insan-mühendis geçiş köprüsünü kurun:",
-              "mainSentence": "The delegation consisted of ten experts,",
+              "prompt": "Sınav formatında insan-uzman geçiş köprüsünü kurun:<br><br>The council consisted of ten experts,",
               "options": [
-                "with most of whom I had previously worked in NASA.",
-                "most of which were built in Germany.",
-                "the cause of which was completely mechanical."
+                "with most of whom I had previously worked in the academy.",
+                "the cause of which was completely political.",
+                "most of which were built in Greece."
               ],
               "correctIndex": 0,
-              "translation": "Heyet on uzmandan oluşuyordu, bunların çoğuyla daha önce NASA'da çalışmıştım."
+              "translation": "Konsey on uzmandan oluşuyordu, bunların çoğuyla daha önce akademide çalışmıştım."
             },
             {
               "id": "c37_l2_ex23_q7",
               "type": "translation-text",
-              "prompt": "Aşağıdaki YDS ayarındaki fen cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Gökbilimciler üç eski göktaşı keşfettiler, bunların ilki tamamen demir bileşenleri ile ilgilidir.",
-              "enSentence": "The astronomers discovered three ancient meteorites, the first of which is completely related to iron components.",
+              "prompt": "Aşağıdaki YDS ayarındaki cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
+              "correctSentence": "Tarihçiler üç eski el yazması keşfettiler, bunların ilki tamamen hanedan tarihi ile ilgilidir.",
+              "enSentence": "The historians discovered three ancient manuscripts, the first of which is completely related to dynastic history.",
               "isEngToTr": true
             }
           ]
         },
         {
           "id": "c37_l2_ex24",
-          "title": "Alıştırma 24: Sağlık Bilimleri Karma YDS/YÖKDİL Tarama Soruları",
+          "title": "Alıştırma 24: Sosyal Bilimler Karma YDS/YÖKDİL Tarama Soruları II",
           "questions": [
             {
               "id": "c37_l2_ex24_q1",
               "type": "matching",
-              "prompt": "İleri düzey karma medikal yapıları anlamlarıyla eşleştirin.",
+              "prompt": "İleri düzey karma sosyal bilimler yapılarını anlamlarıyla eşleştirin.<br><br>Match advanced exam connectors:",
               "pairs": [
                 {
-                  "left": "the majority of whose symptoms",
-                  "right": "semptomlarının çoğunluğu ... olan"
+                  "left": "the majority of whose traditions",
+                  "right": "geleneklerinin çoğunluğu ... olan"
                 },
                 {
                   "left": "in which case",
                   "right": "ki bu durumda"
                 },
                 {
-                  "left": "through the injection of which",
-                  "right": "enjekte edilmesi vasıtasıyla ... olan"
+                  "left": "through the analysis of which",
+                  "right": "analizi vasıtasıyla ... olan"
                 },
                 {
                   "left": "for some of which",
@@ -53786,95 +53528,83 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex24_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelmesi gereken en sinsi sınav yapısını bulun (As a result of which):",
-              "sentence": "The patient received several advanced drugs, ___ the neurological framework became more stable.",
+              "prompt": "Boşluğa gelmesi gereken en sinsi sınav yapısını bulun (As a result of which):<br><br>The candidate received several donations, ___ the campaign budget became more stable.",
               "options": [
-                "as a result of which",
-                "as a result of them",
+                "whose result",
                 "which result",
-                "whose result"
+                "as a result of them",
+                "as a result of which"
               ],
-              "correctIndex": 0,
-              "translation": "Hasta birkaç gelişmiş ilaç aldı, ki bunun sonucunda nörolojik yapı daha istikrarlı hale geldi."
+              "correctIndex": 3,
+              "translation": "Aday birkaç bağış aldı, ki bunun sonucunda kampanya bütçesi daha istikrarlı hale geldi."
             },
             {
               "id": "c37_l2_ex24_q3",
               "type": "context-distractor",
-              "prompt": "Söz dizimini ve hastalık niteleme ilişkisini tarayın:",
-              "sentence": "The medical team monitored a rare pathology, ___ were treated according to genetic data.",
+              "prompt": "Söz dizimini ve topluluk niteleme ilişkisini tarayın:<br><br>The research team studied a rare community, ___ were analyzed according to empirical data.",
               "options": [
-                "the majority of whose symptoms",
-                "the majority of which symptoms",
-                "most of which symptoms",
-                "whose symptoms majority"
+                "the majority of which traditions",
+                "most of which traditions",
+                "the majority of whose traditions",
+                "whose traditions majority"
               ],
-              "correctIndex": 0,
-              "translation": "Sağlık ekibi, semptomlarının çoğunluğu genetik verilere göre tedavi edilen nadir bir patolojiyi izledi."
+              "correctIndex": 2,
+              "translation": "Araştırma ekibi, geleneklerinin çoğunluğu ampirik verilere göre analiz edilen nadir bir topluluğu inceledi."
             },
             {
               "id": "c37_l2_ex24_q4",
-              "type": "error-finder",
-              "prompt": "Medikal bütçe ve edat tuzağındaki hatayı saptayın:",
-              "sentenceTokens": [
-                "The",
-                "hospital",
-                "initiated",
-                "five",
-                "trials,",
-                "for",
-                "most",
-                "of",
-                "them",
-                "no",
-                "funding",
-                "was",
-                "allocated."
+              "type": "multiple-choice",
+              "prompt": "Aşağıdaki cümleyi dilbilgisel olarak en uygun şekilde tamamlayan ifadeyi seçiniz:<br><br>The ministry initiated five social programs, ___ no funding was allocated.",
+              "options": [
+                "for most of them",
+                "for most of whom",
+                "for most of whose",
+                "for most of which"
               ],
-              "correctIndex": 8,
-              "suggestedCorrection": "which",
-              "translation": "Cümleleri tek bir relative yapıda birleştirmek adına 'them' yerine 'which' şarttır."
+              "correctIndex": 3,
+              "explanation": "Sosyal programlar cansız olduğu için 'for most of which' yapısı getirilmelidir. 'them' bağlaç olmadığı için elenir.",
+              "translation": "Bakanlık beş sosyal program başlattı, bunların çoğunluğu için hiçbir bütçe tahsis edilmedi."
             },
             {
               "id": "c37_l2_ex24_q5",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya dizin:",
-              "translation": "Kalp atış hızı kritik seviyelerin altına düşebilir, ki bu durumda kalp pili otomatik olarak devreye girecektir.",
+              "prompt": "Cümle bloklarını doğru sıraya dizin:<br><br>Construct the sentence:",
+              "translation": "Enflasyon oranları kritik seviyelerin altına düşebilir, ki bu durumda ekonomi otomatik olarak toparlanacaktır.",
               "words": [
-                "The heart rate might drop below critical levels,",
+                "The inflation rates might drop below critical levels,",
                 "in which case",
-                "the pacemaker will trigger",
+                "the economy will recover",
                 "automatically.",
                 "in which event",
                 "that"
               ],
               "correctOrder": [
-                "The heart rate might drop below critical levels,",
+                "The inflation rates might drop below critical levels,",
                 "in which case",
-                "the pacemaker will trigger",
+                "the economy will recover",
                 "automatically."
               ],
-              "enSentence": "The heart rate might drop below critical levels, in which case the pacemaker will trigger automatically.",
+              "enSentence": "The inflation rates might drop below critical levels, in which case the economy will recover automatically.",
               "isEngToTr": false
             },
             {
               "id": "c37_l2_ex24_q6",
               "type": "sentence-connector",
-              "prompt": "Enjeksiyon üzerinden kurulan doğru köprü cümleyi bulun:",
-              "mainSentence": "The doctors manufactured ten custom antibodies,",
+              "prompt": "Analiz üzerinden kurulan doğru köprü cümleyi bulun:<br><br>The historians translated ten ancient documents,",
               "options": [
-                "through the injection of which the collapse of the immune system was prevented.",
-                "under the protection of whom they traveled to Africa.",
-                "the purpose of which is to track meteorites."
+                "under the protection of whom they traveled to Greece.",
+                "the purpose of which is to track social trends.",
+                "through the analysis of which the collapse of the empire was prevented."
               ],
-              "correctIndex": 0,
-              "translation": "Doktorlar on özel antikor ürettiler, ki bunun enjekte edilmesi vasıtasıyla bağışıklık sisteminin çökmesi önlendi."
+              "correctIndex": 2,
+              "translation": "Tarihçiler on eski belge çevirdiler, ki bunların analizi vasıtasıyla imparatorluğun çöküşü önlendi."
             },
             {
               "id": "c37_l2_ex24_q7",
               "type": "translation-text",
-              "prompt": "Bu zorlu final medikal cümlesini pürüzsüzce Türkçe'ye çevirin:",
-              "correctSentence": "Doktor iki yeni klinik tedavi öne sürdü, ki bunların amacı ölümcül tümörleri engellemektir.",
-              "enSentence": "The doctor proposed two new clinical treatments, the purpose of which is to inhibit fatal tumors.",
+              "prompt": "Bu zorlu final cümlesini pürüzsüzce Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
+              "correctSentence": "Avukat iki yeni yasal savunma öne sürdü, ki bunların amacı davanın seyrini değiştirmektir.",
+              "enSentence": "The lawyer proposed two new legal defenses, the purpose of which is to alter the course of the lawsuit.",
               "isEngToTr": true
             }
           ]

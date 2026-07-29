@@ -7442,8 +7442,10 @@ function renderQuestion() {
   const question = isFormationMode ? FORMATION_QUESTIONS[currentQuestionIndex] : (isReviewMode ? reviewQuestions[currentQuestionIndex] : currentQuizQuestions[currentQuestionIndex]);
   if (!question) return;
 
+  const originalPrompt = question.prompt;
+
   // Automatic Question Schema Normalization Guard
-  if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown') {
+  if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown' || question.type === 'context-distractor') {
     if (!question.sentence && question.prompt && question.prompt.includes('___')) {
       question.sentence = question.prompt;
       question.prompt = "Boşluğu doldur";
@@ -7878,6 +7880,10 @@ function renderQuestion() {
         <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
         <h3 style="margin: 0 0 10px 0; font-family: 'Outfit', sans-serif; color: #ff6b6b;">Soru Yüklenemedi</h3>
         <p style="margin: 0 0 20px 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Bu sorunun veri şemasında eksik alanlar bulunmaktadır.</p>
+        <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff6b6b; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; color: #ff6b6b; max-height: 150px; overflow-y: auto; text-align: left; margin-bottom: 15px;">
+          <strong>Hata Mesajı:</strong> ${error.message}<br>
+          <strong>Hata Yeri:</strong> <pre style="margin: 5px 0 0 0; white-space: pre-wrap; font-size: 0.75rem;">${error.stack}</pre>
+        </div>
         <button id="btn-fallback-skip" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s;">Soruyu Atla ➔</button>
       </div>
     `;
