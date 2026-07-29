@@ -55059,3 +55059,969 @@ if (typeof lessons !== 'undefined') {
   }
 })();
 // >>> END BÖLÜM 30-33 DERS CONSOLIDATION OVERRIDES <<<
+
+// ==========================================
+// BÖLÜM 35 PARAGRAFLAR VE SENTAKS ANALİZİ EKLEME
+
+(function() {
+  if (typeof rawTopics !== 'undefined' && typeof units !== 'undefined' && typeof lessons !== 'undefined') {
+    // 1. Create and push the new unit
+    const u50 = {
+      id: 50,
+      title: "Paragraf Okuma ve Cümle Yapısı Çözümlemesi",
+      description: "Beşeri ve sosyal bilimler metinleri üzerinden referans kelime takibi, akışı bozan cümle analizi, paragraf sıralama ve geçiş bağlaçları pratikleri.",
+      lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3"],
+      formulas: [
+        {
+          formula: "Reference Mapping & Context Clues",
+          example: "This anomaly / The former / The latter",
+          description: "Metin içi zamir ve referans kelimelerin nitelediği kavramları saptama."
+        },
+        {
+          formula: "Coherence & Sentence Insertion",
+          example: "Paradoxically / Consequently / Furthermore",
+          description: "Paragraflar arası mantık ve geçiş bağlaçlarını doğru kurgulama."
+        }
+      ]
+    };
+    
+    // Check if unit 50 already exists to avoid duplicate pushes
+    if (!units.some(u => String(u.id) === '50')) {
+      units.push(u50);
+    }
+    if (!rawTopics.some(t => String(t.id) === '50')) {
+      rawTopics.push({
+        id: 50,
+        title: "XXXV. Paragraf Okuma ve Cümle Yapısı Çözümlemesi",
+        desc: "Beşeri ve sosyal bilimler metinleri üzerinden referans kelime takibi, akışı bozan cümle analizi, paragraf sıralama ve geçiş bağlaçları pratikleri.",
+        icon: "📖",
+        numLessons: 3,
+        formulas: u50.formulas
+      });
+    }
+
+    // 2. Load lessons
+    const newLessons = [
+  {
+    "id": "c50_p_l1",
+    "unitId": 50,
+    "title": "Referans ve Geçiş Analizi",
+    "subtitle": "Reference & Cloze",
+    "konuAnlatimi": {
+      "baslik": "Referans ve Geçiş Analizi",
+      "teorikMantik": "Akademik metinlerdeki referans ifadeleri ve paragraflar arası geçiş bağlaçlarını analiz eder.",
+      "formul": "Reference Mapping & Context Clues",
+      "altinKural": "Referans ifadeler (this, the former, the latter) daima önceki cümlelerdeki isim bloklarına bağlanır."
+    },
+    "exercises": [
+      {
+        "id": "u50_l1_ex1",
+        "title": "Alıştırma 1: Referans Kelime Takibi (Reference Mapping)",
+        "description": "Metindeki vurgulu zamir ve sıfatların önceki cümlelerde hangi kavramlara atıfta bulunduğunu tespit edin.",
+        "questions": [
+          {
+            "id": "u50_l1_q1",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this legal intervention' ifadesi hangisine atıfta bulunmaktadır?",
+            "sentence": "In constitutional law, the high court reviewed the executive order limiting press freedoms. <b>This legal intervention</b>, which was rumored to have been compromised by political interests, sparked massive debates.",
+            "options": [
+              "The high court's review of the executive order",
+              "Press freedoms",
+              "Political interests"
+            ],
+            "correctIndex": 0,
+            "translation": "Anayasa hukukunda, yüksek mahkeme basın özgürlüklerini kısıtlayan kararnameyi inceledi. Siyasi çıkarlar tarafından riske atıldığı söylenen bu hukuki müdahale büyük tartışmalara yol açtı.",
+            "explanation": "'This legal intervention' (bu hukuki müdahale), yüksek mahkemenin kararnameyi inceleme/müdahale etme eylemini ('reviewed') nitelemektedir."
+          },
+          {
+            "id": "u50_l1_q2",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'the former' (birincisi) ifadesi hangi kavrama atıfta bulunur?",
+            "sentence": "Psychologists distinguish between cognitive variables and emotional triggers. While <b>the former</b> can be measured through clinical validation tests, the latter remain highly subjective.",
+            "options": [
+              "Cognitive variables",
+              "Emotional triggers",
+              "Clinical validation tests"
+            ],
+            "correctIndex": 0,
+            "translation": "Psikologlar bilişsel değişkenler ile duygusal tetikleyiciler arasında ayrım yaparlar. Birincisi klinik doğrulama testleriyle ölçülebilirken, ikincisi oldukça öznel kalır.",
+            "explanation": "'The former' iki gruptan ilk bahsedilen 'cognitive variables' (bilişsel değişkenler) ifadesini temsil eder."
+          },
+          {
+            "id": "u50_l1_q3",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this monetary anomaly' ifadesi hangi duruma atıfta bulunmaktadır?",
+            "sentence": "During the hyperinflation crisis, the central bank initiated a sudden monetary intervention. <b>This monetary anomaly</b>, although intended to stabilize market variables, caused panic among investors.",
+            "options": [
+              "The central bank's sudden monetary intervention",
+              "The hyperinflation crisis",
+              "Panic among investors"
+            ],
+            "correctIndex": 0,
+            "translation": "Hiperenflasyon krizi sırasında, merkez bankası ani bir parasal müdahale başlattı. Piyasa değişkenlerini stabilize etmesi amaçlansa da, bu parasal anomali yatırımcılar arasında paniğe neden oldu.",
+            "explanation": "'This monetary anomaly' (bu parasal anomali), merkez bankasının ani müdahalesine ('monetary intervention') atıfta bulunmaktadır."
+          },
+          {
+            "id": "u50_l1_q4",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'these cinematic variables' ifadesi neyi tanımlamaktadır?",
+            "sentence": "The director manipulated lighting, camera angles, and sound design. <b>These cinematic variables</b> earned the epic narrative critical acclaim at the festival.",
+            "options": [
+              "Lighting, camera angles, and sound design",
+              "The epic narrative",
+              "Critical acclaim at the festival"
+            ],
+            "correctIndex": 0,
+            "translation": "Yönetmen ışıklandırmayı, kamera açılarını ve ses tasarımını manipüle etti. Bu sinematik değişkenler, destansı anlatıya festivalde eleştirmenlerin beğenisini kazandı.",
+            "explanation": "'These cinematic variables' ifadesi, yönetmenin manipüle ettiği ışık, kamera açısı ve ses unsurlarını nitelemektedir."
+          },
+          {
+            "id": "u50_l1_q5",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'the latter' (ikincisi) ifadesi hangi kavramın yerine kullanılmıştır?",
+            "sentence": "Anthropologists compare ancestral cartography with modern satellite imaging. While the former relied on artistic interpretation, <b>the latter</b> provides strict geographical validation.",
+            "options": [
+              "Modern satellite imaging",
+              "Ancestral cartography",
+              "Artistic interpretation"
+            ],
+            "correctIndex": 0,
+            "translation": "Antropologlar ata yadigarı kartografya ile modern uydu görüntülemeyi karşılaştırırlar. Birincisi sanatsal yoruma dayanırken, ikincisi kesin coğrafi doğrulama sağlar.",
+            "explanation": "'The latter' iki gruptan son bahsedilen 'modern satellite imaging' (modern uydu görüntüleme) kavramını temsil eder."
+          },
+          {
+            "id": "u50_l1_q6",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this artistic specimen' ifadesi hangi bulguyu temsil etmektedir?",
+            "sentence": "Art historians unearthed a medieval chest containing a decorated manuscript. <b>This artistic specimen</b> confirmed that clerical scribes had developed advanced calligraphy styles.",
+            "options": [
+              "A decorated manuscript inside a medieval chest",
+              "Clerical scribes",
+              "Advanced calligraphy styles"
+            ],
+            "correctIndex": 0,
+            "translation": "Sanat tarihçileri süslü bir el yazması içeren ortaçağ sandığını gün yüzüne çıkardılar. Bu sanatsal örnek, ruhban kâtiplerin gelişmiş kaligrafi stilleri geliştirdiğini doğruladı.",
+            "explanation": "'This artistic specimen' (bu sanatsal örnek), sandıktan çıkarılan süslü el yazmasını ('decorated manuscript') kastetmektedir."
+          },
+          {
+            "id": "u50_l1_q7",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this compromised validation' ifadesi neyi nitelemektedir?",
+            "sentence": "The research team published survey results without examining the control variables. <b>This compromised validation</b> was criticized by peer reviewers during the academic review.",
+            "options": [
+              "Publishing survey results without examining control variables",
+              "Survey results",
+              "Peer reviewers"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma ekibi, kontrol değişkenlerini incelemeden anket sonuçlarını yayınladı. Bu riskli doğrulama, akademik inceleme sırasında hakemler tarafından eleştirildi.",
+            "explanation": "'This compromised validation' (bu riske atılmış/zarar görmüş doğrulama süreci), kontrol değişkenleri incelenmeden yapılan yayınlama eylemini ifade eder."
+          },
+          {
+            "id": "u50_l1_q8",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this colonial infrastructure' ifadesi hangi yapıyı temsil eder?",
+            "sentence": "During the empire's reign, the administration built military roads and communication towers. <b>This colonial infrastructure</b>, however, was suspected to have been compromised by native resistance.",
+            "options": [
+              "Military roads and communication towers",
+              "The empire's reign",
+              "Native resistance"
+            ],
+            "correctIndex": 0,
+            "translation": "İmparatorluğun saltanatı sırasında, yönetim askeri yollar ve iletişim kuleleri inşa etti. Ancak, bu sömürge altyapısının yerli direniş tarafından riske atıldığından şüpheleniliyordu.",
+            "explanation": "'This colonial infrastructure' ifadesi askeri yolları ve iletişim kulelerini ('military roads and communication towers') temsil eder."
+          },
+          {
+            "id": "u50_l1_q9",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this geographical anomaly' ifadesi hangi bölgeyi kastetmektedir?",
+            "sentence": "The geological expedition mapped a deep canyon cutting through the volcanic geography. <b>This geographical anomaly</b> was analyzed by experts to determine past tectonic movements.",
+            "options": [
+              "A deep canyon cutting through the volcanic geography",
+              "Tectonic movements",
+              "Geological expedition"
+            ],
+            "correctIndex": 0,
+            "translation": "Jeolojik keşif heyeti, volkanik coğrafyayı kesen derin bir kanyonu haritalandırdı. Bu coğrafi anomali, geçmiş tektonik hareketleri belirlemek için uzmanlar tarafından analiz edildi.",
+            "explanation": "'This geographical anomaly' ifadesi, volkanik coğrafyayı kesen derin kanyonu ('deep canyon') kastetmektedir."
+          },
+          {
+            "id": "u50_l1_q10",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'the former' (birincisi) ifadesi hangi gruba atıfta bulunmaktadır?",
+            "sentence": "Historians analyze diplomatic letters and public decrees. While <b>the former</b> provide insights into private negotiations, the latter reveal official state policies.",
+            "options": [
+              "Diplomatic letters",
+              "Public decrees",
+              "Private negotiations"
+            ],
+            "correctIndex": 0,
+            "translation": "Tarihçiler diplomatik mektupları ve kamu kararnamelerini analiz ederler. Birincisi özel müzakerelere dair ipuçları sunarken, ikincisi resmi devlet politikalarını ortaya koyar.",
+            "explanation": "'The former' iki unsurdan ilk belirtilen 'diplomatic letters' (diplomatik mektuplar) ifadesine karşılık gelir."
+          },
+          {
+            "id": "u50_l1_q11",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'this study intervention' ifadesi neyi kastetmektedir?",
+            "sentence": "The university introduced a new curriculum for cinema students. <b>This study intervention</b>, which aimed to teach avant-garde parameters, was met with critical acclaim.",
+            "options": [
+              "Introducing a new curriculum for cinema students",
+              "Avant-garde parameters",
+              "Cinema students"
+            ],
+            "correctIndex": 0,
+            "translation": "Üniversite sinema öğrencileri için yeni bir müfredat sundu. Avangart parametreleri öğretmeyi amaçlayan bu çalışma müdahalesi, eleştirmenlerin beğenisiyle karşılaştı.",
+            "explanation": "'This study intervention' ifadesi, müfredatın sunulmasını ('introducing a new curriculum') kastetmektedir."
+          },
+          {
+            "id": "u50_l1_q12",
+            "type": "multiple-choice",
+            "prompt": "Metindeki 'the latter' (ikincisi) ifadesi neyin yerini tutmaktadır?",
+            "sentence": "Sociologists distinguish between rural communities and urban centers. The former maintain traditional values, while <b>the latter</b> adapt quickly to technological variables.",
+            "options": [
+              "Urban centers",
+              "Rural communities",
+              "Traditional values"
+            ],
+            "correctIndex": 0,
+            "translation": "Sosyologlar kırsal topluluklar ile kentsel merkezler arasında ayrım yaparlar. Birincisi geleneksel değerleri korurken, ikincisi teknolojik değişkenlere hızla uyum sağlar.",
+            "explanation": "'The latter' ifadesi bahsedilen iki gruptan sonuncusu olan 'urban centers' (kentsel merkezler) kavramının yerini almıştır."
+          }
+        ]
+      },
+      {
+        "id": "u50_l1_ex2",
+        "title": "Alıştırma 2: Paragraflar Arası Geçiş Bağlaçları (Transition Blanks)",
+        "description": "Paragraflar ve düşünceler arasındaki mantıksal ilişkiyi kuran en uygun geçiş kelimesini seçin.",
+        "questions": [
+          {
+            "id": "u50_l1_q13",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun akademik geçiş kelimesini seçin:",
+            "sentence": "Historical records show that clerical scribes preserved the ancient manuscripts under harsh conditions. ____, the local population had no access to these texts due to the strict control of the colonial infrastructure.",
+            "options": [
+              "Paradoxically",
+              "Furthermore",
+              "Consequently",
+              "Similarly"
+            ],
+            "correctIndex": 0,
+            "translation": "Tarihsel kayıtlar, ruhban kâtiplerin antik el yazmalarını zorlu koşullar altında koruduğunu göstermektedir. Çelişkili bir şekilde, sömürge altyapısının sıkı kontrolü nedeniyle yerel halkın bu metinlere erişimi yoktu.",
+            "explanation": "Metindeki koruma eylemi ile halkın erişememesi arasındaki çelişkiyi vurgulamak için 'Paradoxically' kullanılır."
+          },
+          {
+            "id": "u50_l1_q14",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The research team conducted multiple clinical validation tests on the target group. ____, they analyzed psychological variables to minimize compromised validation.",
+            "options": [
+              "Furthermore",
+              "However",
+              "Conversely",
+              "On the contrary"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma ekibi, hedef grup üzerinde çok sayıda klinik doğrulama testi gerçekleştirdi. Dahası, riskli doğrulamaları en aza indirmek için psikolojik değişkenleri analiz ettiler.",
+            "explanation": "Ek bir analiz/eylem eklendiği için ekleme bağlacı olan 'Furthermore' (Dahası) seçilmelidir."
+          },
+          {
+            "id": "u50_l1_q15",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The government implemented a sudden monetary intervention to control the hyperinflation crisis. ____, market volatility decreased and currency variables stabilized.",
+            "options": [
+              "Consequently",
+              "Nevertheless",
+              "Conversely",
+              "Otherwise"
+            ],
+            "correctIndex": 0,
+            "translation": "Hükümet, hiperenflasyon krizini kontrol etmek için ani bir parasal müdahale uyguladı. Sonuç olarak, piyasa oynaklığı azaldı ve para birimi değişkenleri istikrara kavuştu.",
+            "explanation": "Parasal müdahalenin sonucu anlatıldığı için 'Consequently' (Sonuç olarak) bağlacı getirilmelidir."
+          },
+          {
+            "id": "u50_l1_q16",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The director's epic narrative was praised for its aesthetic structure. ____, the script was criticized for deviating from historical facts.",
+            "options": [
+              "However",
+              "Moreover",
+              "Thus",
+              "Therefore"
+            ],
+            "correctIndex": 0,
+            "translation": "Yönetmenin destansı anlatısı estetik yapısından dolayı övüldü. Ancak, senaryo tarihi gerçeklerden saptığı gerekçesiyle eleştirildi.",
+            "explanation": "Övgüden sonra eleştiriye geçiş yapıldığı için zıtlık bildiren 'However' (Ancak) kullanımı doğrudur."
+          },
+          {
+            "id": "u50_l1_q17",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Cartographic validation requires precise coordinates and modern satellite tools. ____, ancient cartography relied heavily on speculative artistic interpretation.",
+            "options": [
+              "In contrast",
+              "Additionally",
+              "Consequently",
+              "Indeed"
+            ],
+            "correctIndex": 0,
+            "translation": "Kartografik doğrulama hassas koordinatlar ve modern uydu araçları gerektirir. Buna karşın, antik haritacılık büyük ölçüde spekülatif sanatsal yoruma dayanıyordu.",
+            "explanation": "Modern ve antik haritacılık yöntemleri karşılaştırıldığı için karşıtlık bildiren 'In contrast' (Buna karşın) uygundur."
+          },
+          {
+            "id": "u50_l1_q18",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The new legal intervention restricted foreign trade parameters. ____, local merchants suffered from compromised validation of their export products.",
+            "options": [
+              "As a result",
+              "Nevertheless",
+              "On the other hand",
+              "Alternatively"
+            ],
+            "correctIndex": 0,
+            "translation": "Yeni hukuki müdahale dış ticaret parametrelerini kısıtladı. Sonuç olarak, yerel tüccarlar ihraç ürünlerinin tehlikeye giren doğrulama süreçlerinden zarar gördü.",
+            "explanation": "Kısıtlamanın yerel tüccarlar üzerindeki olumsuz etkisi bir sonuç olduğundan 'As a result' (Sonuç olarak) seçilmelidir."
+          },
+          {
+            "id": "u50_l1_q19",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Early colonial infrastructure isolated local communities from neighboring tribes. ____, the tribal members developed unique linguistic variables.",
+            "options": [
+              "Thus",
+              "Paradoxically",
+              "Nonetheless",
+              "Conversely"
+            ],
+            "correctIndex": 0,
+            "translation": "Erken dönem sömürge altyapısı, yerel toplulukları komşu kabilelerden izole etti. Böylece, kabile üyeleri benzersiz dilsel değişkenler geliştirdiler.",
+            "explanation": "İzolasyonun doğrudan doğurduğu sonuç açıklandığı için 'Thus' (Böylece/Bu nedenle) bağlacı uygundur."
+          },
+          {
+            "id": "u50_l1_q20",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The museum curator cataloged the rare artistic specimen. ____, she organized an exhibition to earn critical acclaim from art historians.",
+            "options": [
+              "Subsequently",
+              "Instead",
+              "Conversely",
+              "Albeit"
+            ],
+            "correctIndex": 0,
+            "translation": "Müze küratörü nadir sanatsal örneği katalogladı. Sonrasında, sanat tarihçilerinden övgü almak için bir sergi düzenledi.",
+            "explanation": "Kataloglama eyleminden sonra yapılan sonraki aşama anlatıldığı için zaman sırası bildiren 'Subsequently' (Sonrasında) getirilmelidir."
+          },
+          {
+            "id": "u50_l1_q21",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Psychological experiments are designed to test cognitive reactions. ____, researchers must account for unpredictable subjective variables.",
+            "options": [
+              "Nevertheless",
+              "Moreover",
+              "Therefore",
+              "Consequently"
+            ],
+            "correctIndex": 0,
+            "translation": "Psikolojik deneyler bilişsel reaksiyonları test etmek için tasarlanır. Yine de, araştırmacılar öngörülemeyen öznel değişkenleri hesaba katmalıdır.",
+            "explanation": "Tasarım amacına rağmen dikkat edilmesi gereken beklenmedik durum zıtlık/beklenmeyen sonuç bağlacı olan 'Nevertheless' (Yine de) gerektirir."
+          },
+          {
+            "id": "u50_l1_q22",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "Geologists monitored the seismic activity in the volcanic geography. ____, they analyzed magma movement to predict future eruptions.",
+            "options": [
+              "Simultaneously",
+              "On the contrary",
+              "Nonetheless",
+              "Otherwise"
+            ],
+            "correctIndex": 0,
+            "translation": "Jeologlar volkanik coğrafyadaki sismik aktiviteyi izlediler. Eş zamanlı olarak, gelecekteki patlamaları tahmin etmek için magma hareketini analiz ettiler.",
+            "explanation": "Aynı anda yürütülen iki süreç anlatıldığı için 'Simultaneously' (Eş zamanlı olarak) kullanımı doğrudur."
+          },
+          {
+            "id": "u50_l1_q23",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "The ancient clerical scribes wrote on delicate papyrus rolls. ____, most of these documents decomposed before modern recovery efforts.",
+            "options": [
+              "Unfortunately",
+              "Fortunately",
+              "Furthermore",
+              "Accordingly"
+            ],
+            "correctIndex": 0,
+            "translation": "Antik ruhban kâtipler hassas papirüs ruloları üzerine yazdılar. Ne yazık ki, bu belgelerin çoğu modern kurtarma çalışmalarından önce çürüdü.",
+            "explanation": "İstenmeyen/kötü bir durumdan bahsedildiği için 'Unfortunately' (Ne yazık ki) zarfı getirilmelidir."
+          },
+          {
+            "id": "u50_l1_q24",
+            "type": "fill-blank-dropdown",
+            "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+            "sentence": "A legal intervention was required to resolve the trade dispute between nations. ____, the economic council organized a mediation summit.",
+            "options": [
+              "Accordingly",
+              "However",
+              "Conversely",
+              "In spite of this"
+            ],
+            "correctIndex": 0,
+            "translation": "Uluslar arasındaki ticaret anlaşmazlığını çözmek için hukuki bir müdahale gerekiyordu. Bu doğrultuda, ekonomi konseyi bir arabuluculuk zirvesi düzenledi.",
+            "explanation": "Gerekliliğe uygun olarak/bu doğrultuda yapılan eylemi bağlamak için 'Accordingly' (Bu doğrultuda/Buna uygun olarak) seçilmelidir."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c50_p_l2",
+    "unitId": 50,
+    "title": "Paragraf Akışı ve Uyum",
+    "subtitle": "Reordering & Irrelevant Sentence",
+    "konuAnlatimi": {
+      "baslik": "Paragraf Akışı ve Uyum",
+      "teorikMantik": "Paragraftaki cümlelerin anlamlı ve tutarlı bir şekilde sıralanması ile bütünlüğü bozan cümleleri analiz eder.",
+      "formul": "Coherence & Sentence Insertion",
+      "altinKural": "Paragrafın akışını takip ederken cümleler arasındaki bağlaçlara ve konu kapsamına dikkat edin."
+    },
+    "exercises": [
+      {
+        "id": "u50_l2_ex1",
+        "title": "Alıştırma 1: Akışı Bozan Cümleyi Bulma (Irrelevant Sentence)",
+        "description": "Paragrafın genel anlam bütünlüğünü ve tutarlılığını bozan numaralandırılmış cümleyi tespit edin.",
+        "questions": [
+          {
+            "id": "u50_l2_q1",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] The director's early epic narrative received critical acclaim for its innovative use of cinematic variables. [II] Film scholars argued that the lighting techniques enhanced the psychological tension. [III] Volcanic geography often dictates the architectural style of local cinema theaters. [IV] Consequently, the movie set a new standard for modern historical dramas.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Yönetmenin erken dönem destansı anlatısı, sinematik değişkenleri yenilikçi kullanımıyla eleştirmenlerin beğenisini kazandı. [II] Sinema akademisyenleri, ışıklandırma tekniklerinin psikolojik gerilimi artırdığını savundu. [III] Volkanik coğrafya genellikle yerel sinema salonlarının mimari tarzını belirler. [IV] Sonuç olarak, film modern tarihi dramalar için yeni bir standart belirledi.",
+            "explanation": "Paragraf sinema estetiği ve yönetmenin başarısı hakkındayken, III. cümledeki 'volkanik coğrafya ve sinema salonu mimarisi' akışı tamamen bozmaktadır."
+          },
+          {
+            "id": "u50_l2_q2",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] In constitutional law, any major legal intervention must be approved by the supreme council. [II] This validation procedure ensures that individual rights are protected under the constitution. [III] Many international lawyers prefer studying tax laws in small European countries. [IV] Therefore, arbitrary decisions by local courts are effectively prevented.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Anayasa hukukunda, herhangi bir büyük hukuki müdahale yüksek kurul tarafından onaylanmalıdır. [II] Bu doğrulama prosedürü, bireysel hakların anayasa altında korunmasını güvence altına alır. [III] Birçok uluslararası avukat küçük Avrupa ülkelerindeki vergi yasalarını incelemeyi tercih eder. [IV] Bu nedenle, yerel mahkemelerin keyfi kararları etkili bir şekilde engellenir.",
+            "explanation": "Paragraf anayasal koruma ve doğrulama süreçleri ile ilgilidir. III. cümledeki 'küçük ülkelerdeki vergi yasaları' paragrafın hukuk ve anayasal güvence odaklı akışıyla alakasızdır."
+          },
+          {
+            "id": "u50_l2_q3",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Psychologists study the variables influencing human memory during stressful events. [II] They designed clinical validation tests to assess how compromised validation occurs. [III] Standard computer hardware is rumored to have been mutating rapidly due to silicon shortages. [IV] Nevertheless, individual psychological differences make generalized conclusions difficult.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Psikologlar, stresli olaylar sırasında insan belleğini etkileyen değişkenleri incelerler. [II] Riskli doğrulamaların nasıl gerçekleştiğini değerlendirmek için klinik doğrulama testleri tasarladılar. [III] Standart bilgisayar donanımının, silikon sıkıntısı nedeniyle hızla değişime uğradığı söylenmektedir. [IV] Yine de, bireysel psikolojik farklılıklar genelleştirilmiş sonuçlar çıkarmayı zorlaştırmaktadır.",
+            "explanation": "Paragraf bellek ve psikolojik testler üzerinedir. III. cümledeki 'bilgisayar donanımı ve silikon sıkıntısı' tamamen alakasız bir konuya geçiş yapmaktadır."
+          },
+          {
+            "id": "u50_l2_q4",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Ancient cartography reflected the geographical limits of imperial expansion. [II] Cartographic validation was often difficult because maps were hand-drawn by clerical scribes. [III] Scribes frequently copied religious texts rather than drawing geographic delta lines. [IV] Modern satellites have now mapped the volcanic geography of the world with perfect accuracy.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 3,
+            "translation": "[I] Antik haritacılık, imparatorluk genişlemesinin coğrafi sınırlarını yansıtıyordu. [II] Haritalar ruhban kâtipler tarafından elle çizildiği için kartografik doğrulama genellikle zordu. [III] Kâtipler coğrafi delta çizgileri çizmek yerine sıklıkla dini metinleri kopyalıyorlardı. [IV] Modern uydular artık dünyanın volkanik coğrafyasını kusursuz bir doğrulukla haritalandırdı.",
+            "explanation": "Paragraf antik dönem haritacılığı ve kâtiplerin rolünü anlatmaktadır. IV. cümledeki 'modern uydular' ifadesi tarihsel bağlamı aniden günümüze taşımakta ve akışı bozmaktadır."
+          },
+          {
+            "id": "u50_l2_q5",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] During the hyperinflation crisis, the central bank faced a severe loss of monetary control. [II] Investors worried that their assets would be compromised by unpredictable inflation variables. [III] Gold miners discovered a rich artistic specimen in the eastern fault line. [IV] Consequently, capital flight to foreign banks accelerated rapidly.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Hiperenflasyon krizi sırasında, merkez bankası ciddi bir parasal kontrol kaybıyla karşı karşıya kaldı. [II] Yatırımcılar, varlıklarının öngörülemeyen enflasyon değişkenleri tarafından tehlikeye atılacağından endişe ettiler. [III] Altın madencileri doğu fay hattında zengin bir sanatsal örnek keşfettiler. [IV] Sonuç olarak, yabancı bankalara sermaye kaçışı hızla arttı.",
+            "explanation": "Paragraf finansal kriz, enflasyon ve sermaye kaçışı ile ilgilidir. III. cümledeki 'altın madencileri ve sanatsal örnek' konusu finansal akışla tamamen ilgisizdir."
+          },
+          {
+            "id": "u50_l2_q6",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Anthropologists investigate the social structure of ancestral tribes. [II] In many cultures, the colonial infrastructure imposed foreign linguistic rules. [III] Some ancient tribes built river delta networks to irrigate agricultural fields. [IV] As a result, native dialects were compromised and many traditional ceremonies were lost.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Antropologlar atalardan kalma kabilelerin sosyal yapısını araştırırlar. [II] Birçok kültürde, sömürge altyapısı yabancı dil kurallarını dayattı. [III] Bazı antik kabileler tarım alanlarını sulamak için nehir deltası ağları inşa ettiler. [IV] Sonuç olarak, yerel lehçeler zarar gördü ve birçok geleneksel tören kayboldu.",
+            "explanation": "Paragraf sömürge altyapısının yerel kabilelerin dilleri ve gelenekleri üzerindeki olumsuz etkisini işlemektedir. III. cümledeki 'tarımsal sulama ağları' bu temadan tamamen sapmaktadır."
+          },
+          {
+            "id": "u50_l2_q7",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Art historians analyzed the decorative manuscript preserved in the monastery. [II] They confirmed that the artistic specimen reflected Byzantine styles. [III] The volcanic geography of Southern Italy created hot springs that attracted tourists. [IV] Additionally, the clerical scribes had utilized expensive gold leaf for the calligraphy.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Sanat tarihçileri manastırda korunan süslü el yazmasını analiz ettiler. [II] Sanatsal örneğin Bizans stillerini yansıttığını doğruladılar. [III] Güney İtalya'nın volkanik coğrafyası turistleri çeken sıcak su kaynakları oluşturdu. [IV] Ek olarak, ruhban kâtipler kaligrafi için pahalı altın yapraklar kullanmışlardı.",
+            "explanation": "Paragraf manastırdaki el yazması ve kâtiplerin teknikleriyle ilgilidir. III. cümledeki 'İtalya'nın volkanik coğrafyası ve turizm' konusu el yazması incelemesiyle uyuşmamaktadır."
+          },
+          {
+            "id": "u50_l2_q8",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] The development of printing infrastructure transformed communication variables in Europe. [II] Before this technological intervention, books were copied by hand. [III] Paper factories required a lot of water to process wood pulp. [IV] Consequently, literacy rates increased and scientific ideas spread much faster.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Baskı altyapısının gelişimi, Avrupa'daki iletişim değişkenlerini dönüştürdü. [II] Bu teknolojik müdahaleden önce, kitaplar elle kopyalanıyordu. [III] Kağıt fabrikaları odun hamurunu işlemek için çok fazla suya ihtiyaç duyuyordu. [IV] Sonuç olarak, okuryazarlık oranları arttı ve bilimsel fikirler çok daha hızlı yayıldı.",
+            "explanation": "Paragraf matbaanın iletişim, okuryazarlık ve bilgi yayılımı üzerindeki devrimsel etkisini anlatmaktadır. III. cümledeki 'kağıt fabrikalarının su ihtiyacı' paragrafın ana temasından uzaktır."
+          },
+          {
+            "id": "u50_l2_q9",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Economists argue that a sudden monetary intervention can halt capital flight. [II] When the central bank raises interest rates, investors stabilize their assets. [III] Silver coins were often decorated with portraits of ancient emperors. [IV] Therefore, currency variables become more predictable during a financial crisis.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] İktisatçılar, ani bir parasal müdahalenin sermaye kaçışını durdurabileceğini savunurlar. [II] Merkez bankası faiz oranlarını yükselttiğinde, yatırımcılar varlıklarını stabilize ederler. [III] Gümüş paralar sıklıkla antik imparatorların portreleriyle süslenirdi. [IV] Bu nedenle, finansal kriz sırasında para birimi değişkenleri daha öngörülebilir hale gelir.",
+            "explanation": "Paragraf parasal müdahale, faiz oranları ve para birimi dengesi hakkındadır. III. cümledeki 'antik paralar ve imparator portreleri' konusu tamamen alakasızdır."
+          },
+          {
+            "id": "u50_l2_q10",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] In social psychology, researchers examine group behavior under controlled conditions. [II] They analyze variables like social pressure and peer validation. [III] Many participants reported that they enjoyed eating at the university cafeteria. [IV] Consequently, they can predict how compromised validation affects decision making.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Sosyal psikolojide, araştırmacılar kontrollü koşullar altında grup davranışlarını incelerler. [II] Sosyal baskı ve akran doğrulaması gibi değişkenleri analiz ederler. [III] Birçok katılımcı üniversite kafeteryasında yemek yemekten keyif aldığını bildirdi. [IV] Sonuç olarak, zedelenen doğrulama sürecinin karar vermeyi nasıl etkilediğini tahmin edebilirler.",
+            "explanation": "Paragraf sosyal psikoloji araştırmaları ve grup davranışı üzerinedir. III. cümledeki 'kafeterya yemeği' konusu alakasız bir detaydır."
+          },
+          {
+            "id": "u50_l2_q11",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Geographical studies show that river delta networks shape human settlements. [II] These fertile lands support large agricultural populations. [III] Mapmaking software requires high processing memory to load global cartography. [IV] Thus, ancestral civilizations thrived along these waterways due to resources.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Coğrafi çalışmalar, nehir deltası ağlarının insan yerleşimlerini şekillendirdiğini göstermektedir. [II] Bu verimli topraklar büyük tarım nüfuslarını destekler. [III] Harita yapım yazılımı, küresel kartografyayı yüklemek için yüksek işlemci belleği gerektirir. [IV] Böylece, atalardan kalma medeniyetler kaynaklar nedeniyle bu su yolları boyunca geliştiler.",
+            "explanation": "Paragraf nehir deltaları ve bunların yerleşik hayat üzerindeki etkilerini işlemektedir. III. cümledeki 'harita yapım yazılımının işlemci gücü' alakasız bir teknik detaydır."
+          },
+          {
+            "id": "u50_l2_q12",
+            "type": "multiple-choice",
+            "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+            "sentence": "[I] Epic narratives in cinema combine historical events with artistic license. [II] Film directors often modify storylines to fit cinematic variables. [III] Soundproof windows are designed to keep external noises out of the studio. [IV] In spite of these changes, the film can still achieve critical acclaim for its visual infrastructure.",
+            "options": [
+              "Sentence I",
+              "Sentence II",
+              "Sentence III",
+              "Sentence IV"
+            ],
+            "correctIndex": 2,
+            "translation": "[I] Sinemadaki destansı anlatılar, tarihi olayları sanatsal serbesti ile birleştirir. [II] Film yönetmenleri hikaye akışlarını sıklıkla sinematik değişkenlere uyacak şekilde değiştirirler. [III] Ses yalıtımlı pencereler, dış gürültüleri stüdyodan uzak tutmak için tasarlanmıştır. [IV] Bu değişikliklere rağmen, film görsel altyapısıyla hala eleştirmenlerin beğenisini kazanabilir.",
+            "explanation": "Paragraf sinema anlatıları, yönetmenlerin hikaye değişiklikleri ve görsel altyapının başarısı ile ilgilidir. III. cümledeki 'ses yalıtımlı pencereler' paragrafın gidişatını bozmaktadır."
+          }
+        ]
+      },
+      {
+        "id": "u50_l2_ex2",
+        "title": "Alıştırma 2: Paragraf Sıralama (Scrambled Paragraph)",
+        "description": "Karışık olarak verilen cümleleri mantıklı bir paragraf akışı oluşturacak şekilde sıralayın.",
+        "questions": [
+          {
+            "id": "u50_l2_q13",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+            "sentence": "[A] Seldom did the cartographers achieve accurate results before this cartographic validation method. [B] Modern researchers analyzed the volcanic geography of the region using digital tools. [C] As a result of this investigation, they discovered major errors in the colonial maps.",
+            "scrambled_elements": [
+              "B",
+              "C",
+              "A"
+            ],
+            "correct_sequence": [
+              "B",
+              "C",
+              "A"
+            ],
+            "translation": "Modern araştırmacılar dijital araçlar kullanarak bölgenin volkanik coğrafyasını analiz ettiler. Bu incelemenin bir sonucu olarak, sömürge haritalarında büyük hatalar keşfettiler. Bu kartografik doğrulama yönteminden önce, haritacılar nadiren doğru sonuçlar elde ederlerdi.",
+            "explanation": "B cümlesi araştırmanın başlangıcını verir. C cümlesi araştırmanın sonucunu bağlaçla ('As a result') devam ettirir. A cümlesi ise devrik yapıyla ('Seldom did...') geçmişle kıyaslama yaparak paragrafı tamamlar."
+          },
+          {
+            "id": "u50_l2_q14",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] Therefore, the legal intervention failed to protect local merchants. [B] A dispute arose regarding the validation of imported goods. [C] Had the court acted faster, the compromised validation would have been avoided.",
+            "scrambled_elements": [
+              "B",
+              "A",
+              "C"
+            ],
+            "correct_sequence": [
+              "B",
+              "A",
+              "C"
+            ],
+            "translation": "İthal malların doğrulanmasıyla ilgili bir anlaşmazlık ortaya çıktı. Bu nedenle, hukuki müdahale yerel tüccarları korumada başarısız oldu. Mahkeme daha hızlı hareket etmiş olsaydı, tehlikeye giren doğrulamadan kaçınılmış olurdu.",
+            "explanation": "B cümlesi konuya giriş yapar. A cümlesi 'Therefore' ile bu girişten doğan sonucu verir. C cümlesi ise 'Had the court acted' devrik şartlı yapısıyla geçmişe yönelik bir pişmanlığı/koşulu bildirir."
+          },
+          {
+            "id": "u50_l2_q15",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] As a consequence of this inflation, investors moved their assets abroad. [B] The central bank initiated a massive monetary intervention. [C] However, unpredictable currency variables continued to destabilize the market.",
+            "scrambled_elements": [
+              "B",
+              "C",
+              "A"
+            ],
+            "correct_sequence": [
+              "B",
+              "C",
+              "A"
+            ],
+            "translation": "Merkez bankası büyük bir parasal müdahale başlattı. Ancak, öngörülemeyen para birimi değişkenleri piyasayı istikrarsızlaştırmaya devam etti. Bu enflasyonun bir sonucu olarak, yatırımcılar varlıklarını yurt dışına taşıdılar.",
+            "explanation": "B cümlesi eylemi başlatır. C cümlesi müdahaleye karşılık gelen olumsuz durumu 'However' ile bağlar. A cümlesi ise 'As a consequence of this' diyerek nihai sonucu bildirir."
+          },
+          {
+            "id": "u50_l2_q16",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] The director introduced several experimental techniques in his epic narrative. [B] Film critics, most of whom praised the visual infrastructure, gave it high acclaim. [C] Consequently, the studio avoided any restrictive intervention during the post-production.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Yönetmen destansı anlatısında birkaç deneysel teknik sundu. Çoğu görsel altyapıyı öven sinema eleştirmenleri filme yüksek övgü verdi. Sonuç olarak, stüdyo yapım sonrası süreçte herhangi bir kısıtlayıcı müdahaleden kaçındı.",
+            "explanation": "A cümlesi yönetmenin eylemini tanıtır. B cümlesi eleştirmenlerin tepkisini 'most of whom' advanced relative yapısıyla bağlar. C cümlesi ise stüdyonun nihai kararını 'Consequently' ile bağlar."
+          },
+          {
+            "id": "u50_l2_q17",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] In the early colonies, the administration built a strict communication network. [B] Through this colonial infrastructure, they monitored linguistic variables across tribes. [C] Rarely did the native people accept these rules without quiet resistance.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Erken sömürgelerde, yönetim sıkı bir iletişim ağı inşa etti. Bu sömürge altyapısı sayesinde, kabileler arasındaki dilsel değişkenleri izlediler. Yerel halk bu kuralları sessiz bir direniş göstermeden nadiren kabul ederdi.",
+            "explanation": "A cümlesi ağın inşasını tanıtır. B cümlesi bu ağı 'this colonial infrastructure' şeklinde niteleyerek sürdürür. C cümlesi 'Rarely did...' devrik yapısıyla yerel halkın tepkisini özetler."
+          },
+          {
+            "id": "u50_l2_q18",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] The research team selected a unique archaeological specimen for analysis. [B] They subjected the object to clinical validation tests. [C] In spite of these effort, some parameters remained compromised due to contamination.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Araştırma ekibi, analiz için benzersiz bir arkeolojik örnek seçti. Nesneyi klinik doğrulama testlerine tabi tuttular. Bu çabalara rağmen, bazı parametreler kontaminasyon nedeniyle tehlikeye atılmış olarak kaldı.",
+            "explanation": "A cümlesi arkeolojik örneğin seçimiyle başlar. B cümlesi 'They' ile ekibin yaptığı testi açıklar. C cümlesi 'In spite of these efforts' ile olumsuz sonucu bağlar."
+          },
+          {
+            "id": "u50_l2_q19",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] Clerical scribes spent decades copying historical cartography manuscripts. [B] Thus, they preserved geographical delta descriptions for future generations. [C] Had the archives burned down, this knowledge would have been lost forever.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Ruhban kâtipler tarihi kartografya el yazmalarını kopyalayarak onlarca yıl geçirdiler. Böylece, gelecek nesiller için coğrafi delta açıklamalarını korudular. Arşivler yanmış olsaydı, bu bilgi sonsuza dek kaybolmuş olurdu.",
+            "explanation": "A cümlesi kâtiplerin eylemini sunar. B cümlesi 'Thus' ile bunun doğrudan koruyucu sonucunu açıklar. C cümlesi ise 'Had the archives burned down' devrik Type 3 yapısıyla varsayımsal geçmiş durumunu belirtir."
+          },
+          {
+            "id": "u50_l2_q20",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] The volcanic geography of the island was mapped by scientists. [B] In some zones, they observed major geothermal anomalies. [C] Consequently, they recommended avoiding any tourist infrastructure projects there.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Adanın volkanik coğrafyası bilim insanları tarafından haritalandırıldı. Bazı bölgelerde büyük jeotermal anomaliler gözlemlediler. Sonuç olarak, orada herhangi bir turizm altyapı projesinden kaçınılmasını tavsiye ettiler.",
+            "explanation": "A cümlesi haritalama girişidir. B cümlesi haritalama esnasında gözlemlenen anomalileri açıklar. C cümlesi 'Consequently' ile bu anomalilere bağlı tavsiyeyi sunar."
+          },
+          {
+            "id": "u50_l2_q21",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] Psychologists analyzed cognitive variables during stressful exams. [B] They collected data from several university centers. [C] However, the compromised validation of the surveys weakened their overall findings.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Psikologlar stresli sınavlar sırasında bilişsel değişkenleri analiz ettiler. Birkaç üniversite merkezinden veri topladılar. Ancak, anketlerin tehlikeye giren doğrulaması genel bulgularını zayıflattı.",
+            "explanation": "A cümlesi analizin amacını tanıtır. B cümlesi veri toplama sürecini açıklar. C cümlesi 'However' ile bu sürecin zayıflığını ('compromised validation') bağlar."
+          },
+          {
+            "id": "u50_l2_q22",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] The regional museum received a rare artistic specimen from a private donor. [B] Art historians immediately organized a cartographic validation process. [C] Subsequently, the object was exhibited under strict security measures.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Bölge müzesi, özel bir bağışçıdan nadir bir sanatsal örnek aldı. Sanat tarihçileri derhal bir kartografik doğrulama süreci düzenledi. Sonrasında, nesne sıkı güvenlik önlemleri altında sergilendi.",
+            "explanation": "A cümlesi örneğin alınmasını sunar. B cümlesi hemen ardından yapılan doğrulama sürecini belirtir. C cümlesi ise 'Subsequently' ile sergileme aşamasını bağlar."
+          },
+          {
+            "id": "u50_l2_q23",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] Severe inflation variables destabilized the national currency. [B] Neither did the monetary intervention resolve the banking crisis. [C] Consequently, the government was forced to seek international loans.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Ciddi enflasyon değişkenleri ulusal para birimini istikrarsızlaştırdı. Parasal müdahale de bankacılık krizini çözmedi. Sonuç olarak, hükümet uluslararası krediler aramak zorunda kaldı.",
+            "explanation": "A cümlesi ekonomik krizi başlatır. B cümlesi 'Neither did...' devrik yapısıyla müdahalenin başarısızlığını ekler. C cümlesi 'Consequently' ile nihai kurtarma paketini bağlar."
+          },
+          {
+            "id": "u50_l2_q24",
+            "type": "vector-assembly",
+            "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde sıralayın:",
+            "sentence": "[A] Modern communication variables have replaced traditional letters. [B] In spite of this technological intervention, clerical scribes are still honored in history books. [C] Their ancient calligraphy is recognized as a supreme artistic specimen.",
+            "scrambled_elements": [
+              "A",
+              "B",
+              "C"
+            ],
+            "correct_sequence": [
+              "A",
+              "B",
+              "C"
+            ],
+            "translation": "Modern iletişim değişkenleri geleneksel mektupların yerini almıştır. Bu teknolojik müdahaleye rağmen, ruhban kâtipler tarih kitaplarında hala onurlandırılmaktadır. Onların antik kaligrafisi yüce bir sanatsal örnek olarak kabul edilmektedir.",
+            "explanation": "A cümlesi genel modern durumu sunar. B cümlesi 'In spite of this' ile kâtiplerin tarihsel önemini bağlar. C cümlesi ise kâtiplerin eserini ('artistic specimen') överek paragrafı kapatır."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "c50_p_l3",
+    "unitId": 50,
+    "title": "Makro Okuma ve Sentez",
+    "subtitle": "Main Idea Matching & Exam Prep",
+    "konuAnlatimi": {
+      "baslik": "Makro Okuma ve Sentez",
+      "teorikMantik": "Akademik metinlerin makro düzeyde özetlenmesi ve YDS/YÖKDİL düzeyindeki okuma reflekslerini kapsar.",
+      "formul": "Macro Reading & Synthesis",
+      "altinKural": "Paragrafların ilk ve son cümleleri genellikle ana fikri barındırır."
+    },
+    "exercises": [
+      {
+        "id": "u50_l3_ex1",
+        "title": "Alıştırma 1: Paragraf-Ana Fikir Eşleştirme (Main Idea Matching)",
+        "description": "Akademik metnin paragraflarını en uygun özet/ana fikir cümleleriyle eşleştirin.",
+        "questions": [
+          {
+            "id": "u50_l3_q1",
+            "type": "matching",
+            "prompt": "Paragrafları ana fikirleriyle eşleştirin (Grup 1):",
+            "pairs": [
+              {
+                "left": "Art historians examined the artistic specimen unearthed in Italy. Most of the findings were derived from Byzantine parameters, proving that cultural exchanges were common.",
+                "right": "The origins of the artistic specimen show clear external cultural influences."
+              },
+              {
+                "left": "Had the legal intervention occurred earlier, the protection of historical monuments would have been secured. The state's late action caused irreversible damage to the heritage sites.",
+                "right": "Late state actions led to the destruction of valuable historical monuments."
+              },
+              {
+                "left": "The central bank initiated a sudden monetary intervention to stop capital flight. However, unpredictable currency variables continued to destabilize the market.",
+                "right": "Unpredictable currency variables limited the success of the monetary intervention."
+              },
+              {
+                "left": "Clerical scribes spent decades copying geographical delta descriptions. Thus, they preserved historical cartography records for future researchers.",
+                "right": "Scribes played a crucial role in preserving cartographic records."
+              }
+            ]
+          },
+          {
+            "id": "u50_l3_q2",
+            "type": "matching",
+            "prompt": "Paragrafları ana fikirleriyle eşleştirin (Grup 2):",
+            "pairs": [
+              {
+                "left": "Anthropologists compare ancestral cartography with modern satellite tools. While the former relied on artistic interpretation, the latter provides geographical validation.",
+                "right": "Modern satellite tools offer strict validation compared to speculative old maps."
+              },
+              {
+                "left": "The volcanic geography of the region was mapped using digital tools. Scientists discovered major geothermal anomalies that suggested potential tectonic movement.",
+                "right": "Geothermal anomalies in volcanic geography indicate future tectonic activities."
+              },
+              {
+                "left": "Psychologists analyzed cognitive variables through clinical validation tests. They had to account for compromised validation due to subjective differences.",
+                "right": "Subjective variables present challenges in clinical validation tests."
+              },
+              {
+                "left": "The colonial infrastructure forced tribes to adopt new communication variables. Consequently, native dialects were compromised and traditional customs were lost.",
+                "right": "Colonial infrastructure led to the decline of native dialects and traditions."
+              }
+            ]
+          },
+          {
+            "id": "u50_l3_q3",
+            "type": "matching",
+            "prompt": "Paragrafları ana fikirleriyle eşleştirin (Grup 3):",
+            "pairs": [
+              {
+                "left": "The director's epic narrative was praised for its aesthetic structure. However, the script was criticized for deviating from historical facts.",
+                "right": "The film achieved aesthetic acclaim but lacked historical accuracy."
+              },
+              {
+                "left": "Neither did the monetary intervention solve the banking crisis, nor did it help stabilize currency variables. Therefore, the government faced a financial collapse.",
+                "right": "Ineffective monetary intervention contributed to the financial collapse."
+              },
+              {
+                "left": "During the empire's reign, the colonial infrastructure was threatened by native resistance. The military roads were rumored to have been compromised by local warriors.",
+                "right": "Native resistance challenged the colonial military infrastructure."
+              },
+              {
+                "left": "Modern communication variables have replaced traditional letters. In spite of this technological intervention, ancient calligraphy is still studied as an artistic specimen.",
+                "right": "Ancient calligraphy remains a valuable subject of study despite modern tools."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+    newLessons.forEach(nl => {
+      const found = lessons.find(l => l.id === nl.id);
+      if (found) {
+        Object.assign(found, nl);
+      } else {
+        lessons.push(nl);
+      }
+    });
+
+    if (typeof unitSentencesMap !== 'undefined') {
+      unitSentencesMap["50"] = {
+        "1": { exercises: newLessons[0].exercises },
+        "2": { exercises: newLessons[1].exercises },
+        "3": { exercises: newLessons[2].exercises }
+      };
+    }
+
+    // Sort lessons inside the unit correctly and apply titles
+    const finalU50 = units.find(u => String(u.id) === '50');
+    if (finalU50) {
+      finalU50.lessons.forEach((lId, idx) => {
+        const l = lessons.find(less => less.id === lId);
+        if (l) {
+          l.displayId = idx + 1;
+          l.title = l.title.replace(/^d+[.:\s]*/, "");
+          l.title = (idx + 1) + ". " + l.title;
+        }
+      });
+    }
+  }
+})();
