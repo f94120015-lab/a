@@ -12572,6 +12572,13 @@ function initSocialSystem() {
   renderSocialList();
 }
 
+function maskName(name) {
+  if (!name) return '';
+  return name.replace(/\b(\w)(\w+)/g, (match, p1, p2) => {
+    return p1 + '*'.repeat(p2.length);
+  });
+}
+
 async function renderSocialList() {
   const contentEl = document.getElementById('social-list-content');
   if (!contentEl) return;
@@ -12719,7 +12726,8 @@ async function renderSocialList() {
 
   contentEl.innerHTML = competitors.map((user, index) => {
     const rank = index + 1;
-    const letter = user.displayName.charAt(0).toUpperCase();
+    const displayNameToShow = user.isSelf ? user.displayName : maskName(user.displayName);
+    const letter = displayNameToShow.charAt(0).toUpperCase();
     const isFollowing = state.following && state.following.some(u => u.username === user.username);
     
     let actionBtn = '';
@@ -12759,7 +12767,7 @@ async function renderSocialList() {
             ${rankBadgeHtml}
           </div>
           <div class="friend-details" style="display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1;">
-            <span class="friend-name" style="${user.isSelf ? 'font-weight: 800; color: var(--accent-primary);' : 'font-weight: 700; color: var(--text-primary);'} word-break: break-word; line-height: 1.25; display: block; font-size: 0.95rem;">${escapeHtml(user.displayName)}</span>
+            <span class="friend-name" style="${user.isSelf ? 'font-weight: 800; color: var(--accent-primary);' : 'font-weight: 700; color: var(--text-primary);'} word-break: break-word; line-height: 1.25; display: block; font-size: 0.95rem;">${escapeHtml(displayNameToShow)}</span>
             <div class="friend-meta" style="display: flex; gap: 6px; font-size: 0.75rem; color: var(--text-secondary); flex-wrap: wrap;">
               <span class="friend-stat">⚡ ${user.xp} Puan</span>
               ${user.streak > 0 ? `<span class="friend-stat">🔥 ${user.streak} Gün</span>` : ''}
