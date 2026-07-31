@@ -14122,18 +14122,38 @@ function initEventListeners() {
 
   // Klavye Kısayolları (Quiz ve Placement ekranları için)
   document.addEventListener('keydown', (e) => {
+    // Eğer dilbilgisi modalı açıksa, Enter kapatma tuşunu (Anladım) tetiklesin
+    const grammarModal = document.getElementById('grammar-modal');
+    if (grammarModal && grammarModal.classList.contains('show')) {
+      if (e.key === 'Enter') {
+        const okBtn = document.getElementById('grammar-modal-ok-btn');
+        if (okBtn) {
+          e.preventDefault();
+          okBtn.click();
+        }
+        return;
+      }
+    }
+
     // Eğer kullanıcı bir metin kutusuna veya alana yazıyorsa kısayolları engelle
     if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
       if (['1', '2', '3', '4'].includes(e.key)) {
         return; // Sayı yazmasına izin ver
       }
       if (e.key === 'Enter') {
-        // Textarea içinde Enter satır atlamalı, input içindeyse kontrol butonu tıklanabilir
-        if (document.activeElement.tagName === 'INPUT') {
-          const checkBtn = document.getElementById('btn-check') || document.getElementById('btn-placement-check');
+        // Textarea içinde Enter satır atlamalı, input veya translation-text-area içindeyse kontrol butonu tıklanabilir
+        if (document.activeElement.tagName === 'INPUT' || document.activeElement.id === 'translation-text-area') {
+          e.preventDefault();
+          const quizScreen = document.getElementById('quiz-screen');
+          const placementScreen = document.getElementById('placement-screen');
+          let checkBtn = null;
+          if (quizScreen && quizScreen.classList.contains('active')) {
+            checkBtn = document.getElementById('btn-check');
+          } else if (placementScreen && placementScreen.classList.contains('active')) {
+            checkBtn = document.getElementById('btn-placement-check');
+          }
           if (checkBtn && !checkBtn.disabled) {
             checkBtn.click();
-            e.preventDefault();
           }
         }
         return;
