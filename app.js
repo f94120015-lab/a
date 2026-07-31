@@ -23570,11 +23570,8 @@ function initParagraphAnalysisModule() {
   const questionCard = document.getElementById('paragraph-question-card');
   const summaryCard = document.getElementById('paragraph-summary-card');
 
-  // Segmented tabs
-  const btnRead = document.getElementById('btn-paragraph-mode-read');
-  const btnAnalyze = document.getElementById('btn-paragraph-mode-analyze');
+  // Segmented tabs elements removed, keeping legend, reader text and breakdown elements
   const legendContainer = document.getElementById('paragraph-legend-container');
-  const modeIndicator = document.getElementById('paragraph-mode-indicator');
   const breakdownCard = document.getElementById('paragraph-breakdown-card');
   const breakdownPlaceholder = document.getElementById('paragraph-breakdown-placeholder');
   const breakdownContent = document.getElementById('paragraph-breakdown-content');
@@ -23600,8 +23597,12 @@ function initParagraphAnalysisModule() {
       breakdownCard.style.borderColor = 'var(--border-color)';
     }
 
-    // Set default tab to "Sadece Oku"
-    if (btnRead) btnRead.click();
+    // Load Passage HTML and setup listeners directly
+    if (readerTextEl) {
+      readerTextEl.innerHTML = prototypeParagraphData.passageHtml;
+      readerTextEl.className = 'analyze-mode';
+      setupHighlightListeners();
+    }
 
     // Populate scorecard translations
     const translationList = document.getElementById('paragraph-translation-list');
@@ -23684,57 +23685,6 @@ function initParagraphAnalysisModule() {
 
       el.addEventListener('mouseover', showDetails);
       el.addEventListener('click', showDetails);
-    });
-  }
-
-  // Register Tab click event listeners
-  if (btnRead && btnAnalyze) {
-    btnRead.addEventListener('click', (e) => {
-      e.preventDefault();
-      btnRead.classList.add('active');
-      btnRead.style.background = 'var(--bg-card)';
-      btnRead.style.color = 'var(--text-primary)';
-      btnRead.style.boxShadow = 'var(--shadow-xs)';
-      
-      btnAnalyze.classList.remove('active');
-      btnAnalyze.style.background = 'transparent';
-      btnAnalyze.style.color = 'var(--text-secondary)';
-      btnAnalyze.style.boxShadow = 'none';
-
-      if (legendContainer) legendContainer.style.display = 'none';
-      if (modeIndicator) modeIndicator.textContent = 'Sadece Okuma Modu';
-      if (readerTextEl) {
-        readerTextEl.innerHTML = prototypeParagraphData.passagePlain;
-        readerTextEl.className = 'reading-mode';
-      }
-      
-      if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'block';
-      if (breakdownContent) breakdownContent.style.display = 'none';
-      if (breakdownCard) {
-        breakdownCard.style.borderStyle = 'dashed';
-        breakdownCard.style.borderColor = 'var(--border-color)';
-      }
-    });
-
-    btnAnalyze.addEventListener('click', (e) => {
-      e.preventDefault();
-      btnAnalyze.classList.add('active');
-      btnAnalyze.style.background = 'var(--bg-card)';
-      btnAnalyze.style.color = 'var(--text-primary)';
-      btnAnalyze.style.boxShadow = 'var(--shadow-xs)';
-      
-      btnRead.classList.remove('active');
-      btnRead.style.background = 'transparent';
-      btnRead.style.color = 'var(--text-secondary)';
-      btnRead.style.boxShadow = 'none';
-
-      if (legendContainer) legendContainer.style.display = 'flex';
-      if (modeIndicator) modeIndicator.textContent = 'Dil Bilgisi Haritası Modu';
-      if (readerTextEl) {
-        readerTextEl.innerHTML = prototypeParagraphData.passageHtml;
-        readerTextEl.className = 'analyze-mode';
-        setupHighlightListeners();
-      }
     });
   }
 
