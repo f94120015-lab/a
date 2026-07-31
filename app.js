@@ -405,7 +405,7 @@ function normalizePhone(phone) {
 // E-posta + Telefon + Bitiş Tarihi formatını birleştirerek eşsiz lisans kodu oluşturur.
 function generateLicenceSignature(email, phone, expiryDateStr) {
   const cleanEmail = email.trim().toLowerCase();
-  const cleanPhone = normalizePhone(phone); // Sadece rakamlar normalize edildi
+  const cleanPhone = phone.replace(/\D/g, ''); // Sadece rakamlar (verilen parametreyi olduğu gibi temizler)
   const rawString = `amok:${cleanEmail}:${cleanPhone}:${expiryDateStr}:${LICENCE_SECRET_SALT}`;
   let hash = 0;
   for (let i = 0; i < rawString.length; i++) {
@@ -442,7 +442,6 @@ function verifyLicenceKey(licenceKey, email = '', phone = '') {
   // Eğer doğrulayan kişi e-posta ve telefon girdiyse, hash uyumunu denetle
   if (email && phone) {
     const cleanEmail = email.trim().toLowerCase();
-    const cleanPhone = normalizePhone(phone);
     
     // Hash email
     let eHash = 0;
@@ -452,20 +451,36 @@ function verifyLicenceKey(licenceKey, email = '', phone = '') {
     }
     const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
     
-    // Hash phone
-    let pHash = 0;
-    for (let i = 0; i < cleanPhone.length; i++) {
-      pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
-      pHash = pHash & pHash;
-    }
-    const hexPhone = Math.abs(pHash).toString(16).toUpperCase();
-    
-    if (hexEmail !== emailHash || hexPhone !== phoneHash) {
-      return { valid: false, message: "E-Posta veya Telefon bilgisi bu lisans kodu ile uyuşmuyor!" };
+    if (hexEmail !== emailHash) {
+      return { valid: false, message: "E-Posta bilgisi bu lisans kodu ile uyuşmuyor!" };
     }
 
-    // İmzayı doğrula
-    const calculatedSig = generateLicenceSignature(cleanEmail, cleanPhone, expiryStr);
+    // Telefon doğrulaması: Geriye dönük uyumluluk için hem normalize edilmiş 10 haneli hali
+    // hem de ham temizlenmiş hali (örn: ülke kodlu) denenir.
+    const normalizedPhone = normalizePhone(phone);
+    const rawDigitsPhone = phone.replace(/\D/g, '');
+
+    const hashPhone = (phoneNumber) => {
+      let pHash = 0;
+      for (let i = 0; i < phoneNumber.length; i++) {
+        pHash = ((pHash << 5) - pHash) + phoneNumber.charCodeAt(i);
+        pHash = pHash & pHash;
+      }
+      return Math.abs(pHash).toString(16).toUpperCase();
+    };
+
+    const hexPhoneNormalized = hashPhone(normalizedPhone);
+    const hexPhoneRaw = hashPhone(rawDigitsPhone);
+
+    let calculatedSig = "";
+    if (hexPhoneNormalized === phoneHash) {
+      calculatedSig = generateLicenceSignature(cleanEmail, normalizedPhone, expiryStr);
+    } else if (hexPhoneRaw === phoneHash) {
+      calculatedSig = generateLicenceSignature(cleanEmail, rawDigitsPhone, expiryStr);
+    } else {
+      return { valid: false, message: "Telefon bilgisi bu lisans kodu ile uyuşmuyor!" };
+    }
+
     if (calculatedSig !== signature) {
       return { valid: false, message: "Lisans imza doğrulaması başarısız!" };
     }
@@ -5025,8 +5040,26 @@ function initAuth() {
   }
 }
 
-function enterApp() {
+async function enterApp() {
   startHeartbeat();
+  
+  // Sync licence_key from Supabase if empty locally but exists in db
+  if (supabaseClient && state.username && !state.isGuest && !state.licenceKey) {
+    try {
+      const { data, error } = await supabaseClient
+        .from('user_states')
+        .select('licence_key')
+        .eq('username', state.username)
+        .maybeSingle();
+      if (!error && data && data.licence_key) {
+        state.licenceKey = data.licence_key;
+        saveState();
+      }
+    } catch (e) {
+      console.error('License sync on enterApp failed:', e);
+    }
+  }
+
   validateLicenseDevices();
   updateStreak();
   updateTopBar();
