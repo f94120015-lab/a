@@ -23490,67 +23490,62 @@ const prototypeParagraphData = {
     "<strong>4. Cümle:</strong> Bilim insanları geçen yıl projenin ilk sonuçlarını analiz ettiklerinde, nihai raporlarda net bir zaman uyumunun gerekli olduğunu fark ettiler.",
     "<strong>5. Cümle:</strong> Birçok soru cevapsız kalsa da, bilgisayar bilimi okuyan öğrenciler gerçek dünya problemlerini çözmek için bu temel kavramları öğrenmeli ve kilit çözümler bulmak için tüm becerilerini bir araya getirmelidir."
   ],
-  questions: [
-    {
-      id: 1,
-      prompt: "1. Paragrafın ilk cümlesinin öznesi olan <strong>'The development of modern technology'</strong> ifadesi hangi dil bilgisi yapısına örnektir?",
-      options: [
-        "İsim + of + İsim (Noun + of + Noun) yapısında bir edatlı isim tamlamasıdır.",
-        "Kip eki (Modal) ile kurulmuş bir yardımcı fiil yapısıdır.",
-        "Geçmiş zaman belirten bir zaman zarfıdır.",
-        "Edilgen sıfat-fiil kısaltmasıdır (Passive Participle)."
-      ],
-      correctIndex: 0,
-      explanation: "✅ <strong>Doğru!</strong> 'The development of modern technology' yapısı, <strong>Noun + of + Noun</strong> (İsim + of + İsim) kuralına dayanan çok yaygın bir akademik edatlı isim tamlamasıdır."
-    },
-    {
-      id: 2,
-      prompt: "2. Paragraftaki şu cümlede boşluklara sırasıyla hangi ifadeler gelmelidir?<br><br><em>'Today, researchers in various universities <strong>______</strong> study complex data because there <strong>______</strong> advanced computer systems in their laboratories.'</em>",
-      options: [
-        "can / are",
-        "should / was",
-        "must / is",
-        "could / were"
-      ],
-      correctIndex: 0,
-      explanation: "✅ <strong>Tebrikler!</strong> Cümle şimdiki zamanı ('Today') kastettiği ve araştırmacıların yeteneğini belirttiği için modal olarak <strong>can</strong>; 'advanced computer systems' çoğul olduğu için <strong>are</strong> kullanılır."
-    },
-    {
-      id: 3,
-      prompt: "3. 'When scientists <strong>analyzed</strong>... <strong>last year</strong>, they <strong>realized</strong> that a clear tense agreement <strong>was</strong> necessary...'<br><br>Bu cümlede neden tüm fiiller Past Simple (Geçmiş Zaman) ile çekimlenmiştir?",
-      options: [
-        "Cümlede 'last year' geçmiş zaman zarfı olduğundan, zaman uyumu (Tense Agreement) kuralı gereği tüm fiiller geçmiş zamanda olmalıdır.",
-        "Cümle 'When' bağlacıyla başladığı için tüm fiiller edilgen olmak zorundadır.",
-        "Fiillerin hepsi düzensiz fiil olduğu için geçmiş zaman kuralı geçerlidir.",
-        "Cümlede bir modal yardımcı fiili eksik olduğu için."
-      ],
-      correctIndex: 0,
-      explanation: "✅ <strong>Harika Analiz!</strong> Cümlede belirli bir geçmiş zaman zarfı (<strong>last year</strong>) kullanıldığından, tüm fiiller geçmiş zamanda (analyzed, realized, was) çekimlenerek zaman uyumu sağlanmıştır."
-    },
-    {
-      id: 4,
-      prompt: "4. Paragrafta geçen <strong>'data processed by these machines'</strong> ile <strong>'students studying computer science'</strong> ifadeleri hangi konunun kısaltma kurallarını örneklendirir?",
-      options: [
-        "Sıfat fiil kısaltmaları (Edilgen - processed / Etken - studying)",
-        "Gelecek zaman ve planlama ifadeleri",
-        "Soru cümlesi oluşturma kuralları",
-        "Konum bildiren edat öbekleri"
-      ],
-      correctIndex: 0,
-      explanation: "✅ <strong>Çok Başarılı!</strong> 'data (which is) processed...' edilgen (passive) sıfat-fiil kısaltmasıyken, 'students (who are) studying...' etken (active) sıfat-fiil kısaltmasıdır (Participle Reduction)."
-    },
-    {
-      id: 5,
-      prompt: "5. Paragrafın son cümlesine göre bilgisayar bilimi okuyan öğrencilerin ne yapması önerilmektedir?",
-      options: [
-        "Tüm becerilerini kullanarak kilit çözümler bulmak için temel kavramları öğrenmelidirler.",
-        "Yalnızca laboratuvardaki gelişmiş sistemleri kapatıp teorik çalışmalıdırlar.",
-        "Geniş zaman ve geçmiş zaman arasındaki tüm uyum kurallarını göz ardı etmelidirler.",
-        "Uygulamayı bitirdikten sonra sadece kullanıcı edinme kanallarına odaklanmalıdırlar."
-      ],
-      correctIndex: 0,
-      explanation: "✅ <strong>Tebrikler!</strong> Son cümlede öğrencilerin gerçek dünya sorunlarını çözmek ve kilit çözümler bulmak adına tüm yeteneklerini kullanarak temel kavramları öğrenmeleri gerektiği ('should learn these core concepts...') belirtilmiştir."
-    }
+  sentences: [
+    "The development of modern technology has changed our daily lives in many ways.",
+    "Today, researchers in various universities can study complex data processed by these machines because there are advanced computer systems in their laboratories.",
+    "How do computers process this information so fast?",
+    "When scientists analyzed the initial results of the project last year, they realized that a clear tense agreement was necessary in the final reports.",
+    "Although many questions remain unanswered, students studying computer science should learn these core concepts to solve real-world problems, mustering all their skills to find key solutions."
+  ],
+  vocabHints: [
+    [
+      { en: "development", tr: "gelişim" },
+      { en: "modern technology", tr: "modern teknoloji" },
+      { en: "changed", tr: "değiştirdi" },
+      { en: "daily lives", tr: "günlük yaşamlar" },
+      { en: "in many ways", tr: "birçok yönden" }
+    ],
+    [
+      { en: "researchers", tr: "araştırmacılar" },
+      { en: "various", tr: "çeşitli" },
+      { en: "study", tr: "incelemek/çalışmak" },
+      { en: "complex data", tr: "karmaşık veri" },
+      { en: "processed by", tr: "...tarafından işlenen" },
+      { en: "because", tr: "çünkü / ...-den dolayı" },
+      { en: "advanced", tr: "gelişmiş" }
+    ],
+    [
+      { en: "How", tr: "nasıl" },
+      { en: "process", tr: "işlemek" },
+      { en: "information", tr: "bilgi" },
+      { en: "so fast", tr: "bu kadar hızlı" }
+    ],
+    [
+      { en: "scientists", tr: "bilim insanları" },
+      { en: "analyzed", tr: "analiz etti" },
+      { en: "initial results", tr: "ilk sonuçlar" },
+      { en: "realized", tr: "fark etti" },
+      { en: "tense agreement", tr: "zaman uyumu" },
+      { en: "necessary", tr: "gerekli" },
+      { en: "final reports", tr: "nihai raporlar" }
+    ],
+    [
+      { en: "Although", tr: "rağmen / ...-e karşın" },
+      { en: "remain unanswered", tr: "cevapsız kalmak" },
+      { en: "studying", tr: "öğrenim gören / okuyan" },
+      { en: "should learn", tr: "öğrenmeli" },
+      { en: "core concepts", tr: "temel kavramlar" },
+      { en: "solve", tr: "çözmek" },
+      { en: "mustering", tr: "bir araya getirerek" },
+      { en: "key solutions", tr: "kilit çözümler" }
+    ]
+  ],
+  officialTranslations: [
+    "Modern teknolojinin gelişimi, günlük yaşamlarımızı birçok yönden değiştirmiştir.",
+    "Günümüzde, laboratuvarlarında gelişmiş bilgisayar sistemleri bulunduğu için çeşitli üniversitelerdeki araştırmacılar bu makineler tarafından işlenen karmaşık verileri inceleyebilmektedir.",
+    "Bilgisayarlar bu bilgiyi nasıl bu kadar hızlı işlemektedir?",
+    "Bilim insanları geçen yıl projenin ilk sonuçlarını analiz ettiklerinde, nihai raporlarda net bir zaman uyumunun gerekli olduğunu fark ettiler.",
+    "Birçok soru cevapsız kalsa da, bilgisayar bilimi okuyan öğrenciler gerçek dünya problemlerini çözmek için bu temel kavramları öğrenmeli ve kilit çözümler bulmak için tüm becerilerini bir araya getirmelidir."
   ]
 };
 
@@ -23563,9 +23558,13 @@ function initParagraphAnalysisModule() {
   const readerTextEl = document.getElementById('paragraph-reader-text');
   const stepLabel = document.getElementById('paragraph-question-step-label');
   const progressDots = document.getElementById('paragraph-progress-dots');
-  const promptEl = document.getElementById('paragraph-question-prompt');
-  const optionsEl = document.getElementById('paragraph-question-options');
-  const feedbackEl = document.getElementById('paragraph-question-feedback');
+
+  // Workbench elements
+  const sentencePromptEl = document.getElementById('paragraph-sentence-prompt');
+  const translationInputEl = document.getElementById('paragraph-translation-input');
+  const vocabHintsListEl = document.getElementById('vocab-hints-list');
+  const comparisonBoxEl = document.getElementById('paragraph-comparison-box');
+  const officialTranslationEl = document.getElementById('paragraph-official-translation');
 
   const questionCard = document.getElementById('paragraph-question-card');
   const summaryCard = document.getElementById('paragraph-summary-card');
@@ -23579,15 +23578,29 @@ function initParagraphAnalysisModule() {
   if (!modal) return;
 
   let currentStep = 0;
-  let userAnswers = [];
+  let isComparisonShown = false;
+  let userTranslations = [];
 
   function openModal() {
     currentStep = 0;
-    userAnswers = [];
+    isComparisonShown = false;
+    userTranslations = [];
     modal.classList.add('show');
     if (questionCard) questionCard.style.display = 'flex';
     if (summaryCard) summaryCard.style.display = 'none';
-    if (nextBtn) nextBtn.style.display = 'inline-block';
+    if (nextBtn) {
+      nextBtn.style.display = 'inline-block';
+      nextBtn.disabled = false;
+      nextBtn.style.opacity = '1';
+      nextBtn.textContent = 'Çeviriyi Karşılaştır';
+    }
+
+    // Reset input and comparison box
+    if (translationInputEl) {
+      translationInputEl.value = '';
+      translationInputEl.disabled = false;
+    }
+    if (comparisonBoxEl) comparisonBoxEl.style.display = 'none';
 
     // Reset breakdown card
     if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'block';
@@ -23612,7 +23625,7 @@ function initParagraphAnalysisModule() {
       }).join('');
     }
 
-    renderQuestionStep();
+    renderSentenceStep();
   }
 
   function closeModal() {
@@ -23688,115 +23701,117 @@ function initParagraphAnalysisModule() {
     });
   }
 
-  function renderQuestionStep() {
-    const q = prototypeParagraphData.questions[currentStep];
-    const total = prototypeParagraphData.questions.length;
+  function renderSentenceStep() {
+    const total = prototypeParagraphData.sentences.length;
 
-    if (stepLabel) stepLabel.textContent = `SORU ${currentStep + 1} / ${total}`;
+    if (stepLabel) stepLabel.textContent = `CÜMLE \${currentStep + 1} / \${total}`;
 
     // Render Dots
     if (progressDots) {
-      progressDots.innerHTML = prototypeParagraphData.questions.map((_, idx) => {
+      progressDots.innerHTML = prototypeParagraphData.sentences.map((_, idx) => {
         let cls = 'paragraph-step-dot';
         if (idx === currentStep) cls += ' active';
         else if (idx < currentStep) cls += ' completed';
-        return `<div class="${cls}"></div>`;
+        return `<div class="\${cls}"></div>`;
       }).join('');
     }
 
-    if (promptEl) promptEl.innerHTML = q.prompt;
+    // Sentence prompt
+    if (sentencePromptEl) {
+      sentencePromptEl.textContent = prototypeParagraphData.sentences[currentStep];
+    }
 
-    // Render options
-    if (optionsEl) {
-      optionsEl.innerHTML = q.options.map((opt, oIdx) => {
+    // Vocabulary hints
+    if (vocabHintsListEl) {
+      const hints = prototypeParagraphData.vocabHints[currentStep] || [];
+      vocabHintsListEl.innerHTML = hints.map(hint => {
         return `
-          <button class="paragraph-option-btn" data-index="${oIdx}">
-            <span>${String.fromCharCode(65 + oIdx)}) ${opt}</span>
-          </button>
+          <span class="syntax-badge" style="background: rgba(139, 92, 246, 0.08); color: var(--accent-primary); border: 1px solid rgba(139, 92, 246, 0.2); padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px;">
+            <strong>\${hint.en}:</strong> \${hint.tr}
+          </span>
         `;
       }).join('');
     }
 
-    if (feedbackEl) {
-      feedbackEl.style.display = 'none';
-      feedbackEl.innerHTML = '';
+    // Enable/disable textarea input change listeners
+    if (translationInputEl) {
+      translationInputEl.value = userTranslations[currentStep] || '';
+      translationInputEl.disabled = false;
+      translationInputEl.focus();
     }
+
+    if (comparisonBoxEl) {
+      comparisonBoxEl.style.display = 'none';
+    }
+
+    isComparisonShown = false;
     if (nextBtn) {
-      nextBtn.disabled = true;
-      nextBtn.style.opacity = '0.5';
-      nextBtn.textContent = (currentStep === total - 1) ? 'Analizi Tamamla ✨' : 'Sonraki Soru →';
-    }
-
-    // Option click listeners
-    if (optionsEl) {
-      const btns = optionsEl.querySelectorAll('.paragraph-option-btn');
-      btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const selectedIdx = parseInt(btn.dataset.index, 10);
-          handleAnswer(selectedIdx, btns, q);
-        });
-      });
-    }
-  }
-
-  function handleAnswer(selectedIdx, btns, q) {
-    btns.forEach((b, idx) => {
-      b.disabled = true;
-      if (idx === q.correctIndex) {
-        b.classList.add('correct');
-      } else if (idx === selectedIdx) {
-        b.classList.add('wrong');
-      }
-    });
-
-    userAnswers[currentStep] = (selectedIdx === q.correctIndex);
-
-    if (feedbackEl) {
-      feedbackEl.style.display = 'block';
-      if (selectedIdx === q.correctIndex) {
-        feedbackEl.style.background = 'rgba(16, 185, 129, 0.12)';
-        feedbackEl.style.border = '1px solid rgba(16, 185, 129, 0.3)';
-        feedbackEl.style.color = '#059669';
-      } else {
-        feedbackEl.style.background = 'rgba(239, 68, 68, 0.12)';
-        feedbackEl.style.border = '1px solid rgba(239, 68, 68, 0.3)';
-        feedbackEl.style.color = '#dc2626';
-      }
-      feedbackEl.innerHTML = q.explanation;
-    }
-
-    if (nextBtn) {
+      nextBtn.textContent = 'Çeviriyi Karşılaştır';
       nextBtn.disabled = false;
       nextBtn.style.opacity = '1';
     }
   }
 
-  function handleNextStep() {
-    const total = prototypeParagraphData.questions.length;
-    if (currentStep < total - 1) {
-      currentStep++;
-      renderQuestionStep();
-    } else {
-      // Finish paragraph test
-      if (questionCard) questionCard.style.display = 'none';
-      if (summaryCard) summaryCard.style.display = 'flex';
-      if (nextBtn) nextBtn.style.display = 'none';
+  function handleActionStep() {
+    const total = prototypeParagraphData.sentences.length;
 
-      // Confetti celebration
-      if (typeof confetti === 'function') {
-        confetti({
-          particleCount: 80,
-          spread: 70,
-          origin: { y: 0.6 }
-        });
+    if (!isComparisonShown) {
+      // User requested comparison
+      const userText = translationInputEl ? translationInputEl.value.trim() : '';
+      if (!userText) {
+        if (typeof showToast === 'function') {
+          showToast('Lütfen önce kendi çevirinizi yazın!', 'info');
+        } else {
+          alert('Lütfen önce kendi çevirinizi yazın!');
+        }
+        return;
       }
 
-      // Add XP & Save State
-      state.xp = (state.xp || 0) + 50;
-      saveState();
-      updateTopBar();
-      if (typeof showToast === 'function') {
-        showToast('Paragraf analizi tamamlandı! +50 XP kazandınız. 🏆', 'success');
+      userTranslations[currentStep] = userText;
+      isComparisonShown = true;
+
+      // Show comparison box
+      if (officialTranslationEl) {
+        officialTranslationEl.textContent = prototypeParagraphData.officialTranslations[currentStep];
+      }
+      if (comparisonBoxEl) {
+        comparisonBoxEl.style.display = 'flex';
+      }
+
+      if (translationInputEl) {
+        translationInputEl.disabled = true;
+      }
+
+      if (nextBtn) {
+        nextBtn.textContent = (currentStep === total - 1) ? 'Analizi Tamamla ✨' : 'Sonraki Cümle →';
+      }
+    } else {
+      // User moves to next step
+      if (currentStep < total - 1) {
+        currentStep++;
+        renderSentenceStep();
+      } else {
+        // Finish paragraph test
+        if (questionCard) questionCard.style.display = 'none';
+        if (summaryCard) summaryCard.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'none';
+
+        // Confetti celebration
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 80,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+        }
+
+        // Add XP & Save State
+        state.xp = (state.xp || 0) + 50;
+        saveState();
+        updateTopBar();
+        if (typeof showToast === 'function') {
+          showToast('Paragraf analizi tamamlandı! +50 XP kazandınız. 🏆', 'success');
+        }
       }
     }
   }
@@ -23823,7 +23838,14 @@ function initParagraphAnalysisModule() {
     }
   });
 
-  if (nextBtn) nextBtn.addEventListener('click', handleNextStep);
+  if (nextBtn) {
+    // Remove duplicate listeners if any, recreate listener
+    nextBtn.replaceWith(nextBtn.cloneNode(true));
+    const newNextBtn = document.getElementById('paragraph-analysis-next-btn');
+    if (newNextBtn) {
+      newNextBtn.addEventListener('click', handleActionStep);
+    }
+  }
 }
 
 // Register initialization
@@ -23832,7 +23854,3 @@ if (document.readyState === 'loading') {
 } else {
   initParagraphAnalysisModule();
 }
-
-
-
-
