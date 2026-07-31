@@ -1617,6 +1617,12 @@
                 </div>
               </div>
 
+              <!-- Mode Switcher (Klavyeyle Yaz / Ögeleri Sırala) -->
+              <div class="translation-mode-tabs" style="display: flex; gap: 6px; background: var(--bg-secondary); padding: 3px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 2px;">
+                <button type="button" class="translation-mode-tab active" id="btn-trans-mode-write" style="flex: 1; padding: 7px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: var(--bg-card); color: var(--text-primary); box-shadow: var(--shadow-xs);">⌨️ Klavyeyle Yaz</button>
+                <button type="button" class="translation-mode-tab" id="btn-trans-mode-scramble" style="flex: 1; padding: 7px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">🧩 Ögeleri Sırala</button>
+              </div>
+
               <!-- Aktif Cümle -->
               <div style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
                 <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Çevrilecek Cümle:</div>
@@ -1625,10 +1631,29 @@
                 </div>
               </div>
 
-              <!-- Çeviri Girdisi -->
-              <div style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
+              <!-- Mod 1: Çeviri Girdisi (Klavyeyle Yaz) -->
+              <div id="trans-write-area" style="display: flex; flex-direction: column; gap: 6px; text-align: left;">
                 <label for="paragraph-translation-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px;">Çeviriniz:</label>
                 <textarea id="paragraph-translation-input" placeholder="Bu cümlenin Türkçe çevirisini buraya yazın..." style="width: 100%; min-height: 72px; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.92rem; box-sizing: border-box; resize: vertical; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--accent-primary)'" onblur="this.style.borderColor='var(--border-color)'"></textarea>
+              </div>
+
+              <!-- Mod 2: Çeviri Sıralayıcı (Ögeleri Sırala) -->
+              <div id="trans-scramble-area" style="display: none; flex-direction: column; gap: 8px; text-align: left; box-sizing: border-box; width: 100%;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; display: flex; justify-content: space-between; align-items: center;">
+                  <span>Sıralanan Çeviri:</span>
+                  <button type="button" id="btn-scramble-clear" style="background: none; border: none; color: var(--accent-primary); font-size: 0.75rem; font-weight: 800; cursor: pointer; padding: 0;">🗑️ Temizle</button>
+                </div>
+                
+                <!-- Active Translation Container -->
+                <div id="scramble-active-container" style="min-height: 52px; padding: 8px 10px; border: 1.5px dashed var(--border-color); border-radius: var(--radius-md); background: var(--bg-card); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; align-content: flex-start; box-sizing: border-box;">
+                  <span id="scramble-placeholder-text" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; width: 100%; text-align: center; pointer-events: none;">Kelimeleri yerleştirmek için aşağıdaki havuzdan seçim yapın...</span>
+                </div>
+
+                <!-- Word Pool Container -->
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;">Kelime Havuzu:</div>
+                <div id="scramble-pool-container" style="display: flex; flex-wrap: wrap; gap: 6px; background: var(--bg-card); padding: 8px 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); min-height: 52px; box-sizing: border-box; width: 100%;">
+                  <!-- Clickable word pool chips -->
+                </div>
               </div>
 
               <!-- Kelime İpuçları Panel -->

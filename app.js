@@ -23559,12 +23559,24 @@ function initParagraphAnalysisModule() {
   const stepLabel = document.getElementById('paragraph-question-step-label');
   const progressDots = document.getElementById('paragraph-progress-dots');
 
+  // Mode tabs
+  const btnTransModeWrite = document.getElementById('btn-trans-mode-write');
+  const btnTransModeScramble = document.getElementById('btn-trans-mode-scramble');
+  const transWriteArea = document.getElementById('trans-write-area');
+  const transScrambleArea = document.getElementById('trans-scramble-area');
+
   // Workbench elements
   const sentencePromptEl = document.getElementById('paragraph-sentence-prompt');
   const translationInputEl = document.getElementById('paragraph-translation-input');
   const vocabHintsListEl = document.getElementById('vocab-hints-list');
   const comparisonBoxEl = document.getElementById('paragraph-comparison-box');
   const officialTranslationEl = document.getElementById('paragraph-official-translation');
+
+  // Scramble Containers
+  const scrambleActiveContainer = document.getElementById('scramble-active-container');
+  const scramblePoolContainer = document.getElementById('scramble-pool-container');
+  const scramblePlaceholderText = document.getElementById('scramble-placeholder-text');
+  const btnScrambleClear = document.getElementById('btn-scramble-clear');
 
   const questionCard = document.getElementById('paragraph-question-card');
   const summaryCard = document.getElementById('paragraph-summary-card');
@@ -23580,6 +23592,19 @@ function initParagraphAnalysisModule() {
   let currentStep = 0;
   let isComparisonShown = false;
   let userTranslations = [];
+  
+  let activeTranslationMode = 'write'; // 'write' or 'scramble'
+  let scramblePool = [];
+  let scrambleActive = [];
+
+  function shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
 
   function openModal() {
     currentStep = 0;
@@ -23595,12 +23620,9 @@ function initParagraphAnalysisModule() {
       nextBtn.textContent = 'Çeviriyi Karşılaştır';
     }
 
-    // Reset input and comparison box
-    if (translationInputEl) {
-      translationInputEl.value = '';
-      translationInputEl.disabled = false;
-    }
-    if (comparisonBoxEl) comparisonBoxEl.style.display = 'none';
+    // Set default mode tab
+    activeTranslationMode = 'write';
+    if (btnTransModeWrite) btnTransModeWrite.click();
 
     // Reset breakdown card
     if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'block';
@@ -23635,6 +23657,45 @@ function initParagraphAnalysisModule() {
   window.openParagraphAnalysisModal = openModal;
   window.closeParagraphAnalysisModal = closeModal;
 
+  // Mode toggle handlers
+  if (btnTransModeWrite && btnTransModeScramble) {
+    btnTransModeWrite.addEventListener('click', () => {
+      if (isComparisonShown) return;
+      activeTranslationMode = 'write';
+      btnTransModeWrite.classList.add('active');
+      btnTransModeWrite.style.background = 'var(--bg-card)';
+      btnTransModeWrite.style.color = 'var(--text-primary)';
+      btnTransModeWrite.style.boxShadow = 'var(--shadow-xs)';
+      
+      btnTransModeScramble.classList.remove('active');
+      btnTransModeScramble.style.background = 'transparent';
+      btnTransModeScramble.style.color = 'var(--text-secondary)';
+      btnTransModeScramble.style.boxShadow = 'none';
+
+      if (transWriteArea) transWriteArea.style.display = 'flex';
+      if (transScrambleArea) transScrambleArea.style.display = 'none';
+    });
+
+    btnTransModeScramble.addEventListener('click', () => {
+      if (isComparisonShown) return;
+      activeTranslationMode = 'scramble';
+      btnTransModeScramble.classList.add('active');
+      btnTransModeScramble.style.background = 'var(--bg-card)';
+      btnTransModeScramble.style.color = 'var(--text-primary)';
+      btnTransModeScramble.style.boxShadow = 'var(--shadow-xs)';
+      
+      btnTransModeWrite.classList.remove('active');
+      btnTransModeWrite.style.background = 'transparent';
+      btnTransModeWrite.style.color = 'var(--text-secondary)';
+      btnTransModeWrite.style.boxShadow = 'none';
+
+      if (transWriteArea) transWriteArea.style.display = 'none';
+      if (transScrambleArea) transScrambleArea.style.display = 'flex';
+      
+      renderScrambleContainers();
+    });
+  }
+
   // Highlights listener for Analyze Mode
   function setupHighlightListeners() {
     if (!readerTextEl) return;
@@ -23655,7 +23716,6 @@ function initParagraphAnalysisModule() {
           
           if (breakdownTopic) {
             breakdownTopic.textContent = detail.topic;
-            // Set styles dynamically based on theme-compatible tags
             if (el.classList.contains('noun-phrase')) {
               breakdownTopic.style.background = 'rgba(59, 130, 246, 0.15)';
               breakdownTopic.style.color = '#3b82f6';
@@ -23733,12 +23793,17 @@ function initParagraphAnalysisModule() {
       }).join('');
     }
 
-    // Enable/disable textarea input change listeners
+    // Reset textarea input
     if (translationInputEl) {
-      translationInputEl.value = userTranslations[currentStep] || '';
+      translationInputEl.value = '';
       translationInputEl.disabled = false;
-      translationInputEl.focus();
     }
+
+    // Generate Scramble Word Pools
+    const words = prototypeParagraphData.officialTranslations[currentStep].split(' ');
+    scramblePool = shuffleArray(words);
+    scrambleActive = [];
+    renderScrambleContainers();
 
     if (comparisonBoxEl) {
       comparisonBoxEl.style.display = 'none';
@@ -23752,17 +23817,88 @@ function initParagraphAnalysisModule() {
     }
   }
 
+  function renderScrambleContainers() {
+    if (!scramblePoolContainer || !scrambleActiveContainer) return;
+
+    // 1. Render Active Area
+    if (scrambleActive.length === 0) {
+      if (scramblePlaceholderText) scramblePlaceholderText.style.display = 'block';
+      // Keep only placeholder
+      scrambleActiveContainer.innerHTML = '';
+      scrambleActiveContainer.appendChild(scramblePlaceholderText);
+    } else {
+      if (scramblePlaceholderText) scramblePlaceholderText.style.display = 'none';
+      scrambleActiveContainer.innerHTML = scrambleActive.map((w, idx) => {
+        return `
+          <button type="button" class="scramble-chip active-chip" data-idx="${idx}" ${isComparisonShown ? 'disabled' : ''} style="background: var(--accent-primary); color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 4px; box-shadow: var(--shadow-sm);">
+            ${w}
+          </button>
+        `;
+      }).join('');
+
+      // Add listeners to active chips to put them back to pool
+      scrambleActiveContainer.querySelectorAll('.active-chip').forEach(btn => {
+        btn.onclick = () => {
+          if (isComparisonShown) return;
+          const idx = parseInt(btn.getAttribute('data-idx'));
+          const word = scrambleActive[idx];
+          scrambleActive.splice(idx, 1);
+          scramblePool.push(word);
+          renderScrambleContainers();
+        };
+      });
+    }
+
+    // 2. Render Pool Area
+    scramblePoolContainer.innerHTML = scramblePool.map((w, idx) => {
+      return `
+        <button type="button" class="scramble-chip pool-chip" data-idx="${idx}" ${isComparisonShown ? 'disabled' : ''} style="background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border-color); padding: 6px 12px; border-radius: 6px; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow-xs);">
+          ${w}
+        </button>
+      `;
+    }).join('');
+
+    // Add listeners to pool chips to move to active selection
+    scramblePoolContainer.querySelectorAll('.pool-chip').forEach(btn => {
+      btn.onclick = () => {
+        if (isComparisonShown) return;
+        const idx = parseInt(btn.getAttribute('data-idx'));
+        const word = scramblePool[idx];
+        scramblePool.splice(idx, 1);
+        scrambleActive.push(word);
+        renderScrambleContainers();
+      };
+    });
+  }
+
+  // Scramble Clear Button
+  if (btnScrambleClear) {
+    btnScrambleClear.onclick = () => {
+      if (isComparisonShown) return;
+      const allWords = [...scrambleActive, ...scramblePool];
+      scrambleActive = [];
+      scramblePool = shuffleArray(allWords);
+      renderScrambleContainers();
+    };
+  }
+
   function handleActionStep() {
     const total = prototypeParagraphData.sentences.length;
 
     if (!isComparisonShown) {
       // User requested comparison
-      const userText = translationInputEl ? translationInputEl.value.trim() : '';
+      let userText = '';
+      if (activeTranslationMode === 'write') {
+        userText = translationInputEl ? translationInputEl.value.trim() : '';
+      } else {
+        userText = scrambleActive.join(' ').trim();
+      }
+
       if (!userText) {
         if (typeof showToast === 'function') {
-          showToast('Lütfen önce kendi çevirinizi yazın!', 'info');
+          showToast('Lütfen önce kendi çevirinizi tamamlayın!', 'info');
         } else {
-          alert('Lütfen önce kendi çevirinizi yazın!');
+          alert('Lütfen önce kendi çevirinizi tamamlayın!');
         }
         return;
       }
@@ -23778,9 +23914,11 @@ function initParagraphAnalysisModule() {
         comparisonBoxEl.style.display = 'flex';
       }
 
+      // Lock current mode elements
       if (translationInputEl) {
         translationInputEl.disabled = true;
       }
+      renderScrambleContainers(); // Re-render to apply disabled state
 
       if (nextBtn) {
         nextBtn.textContent = (currentStep === total - 1) ? 'Analizi Tamamla ✨' : 'Sonraki Cümle →';
