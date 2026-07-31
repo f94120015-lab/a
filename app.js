@@ -5054,13 +5054,23 @@ async function enterApp() {
       if (!error && data && data.licence_key) {
         state.licenceKey = data.licence_key;
         saveState();
+        
+        // Re-render UI components to reflect premium status immediately
+        try {
+          updateLicenceUI();
+          renderSimulator();
+          renderLessonTree();
+          updateTopBar();
+        } catch (uiErr) {
+          console.error('UI refresh after license sync failed:', uiErr);
+        }
       }
     } catch (e) {
       console.error('License sync on enterApp failed:', e);
     }
   }
 
-  validateLicenseDevices();
+  await validateLicenseDevices();
   updateStreak();
   updateTopBar();
   renderLessonTree();
@@ -22502,32 +22512,6 @@ async function validateLicenseDevices() {
       }
 
       if (!hasCurrentDevice) {
-        const sameTypeDevice = registeredDevices.find(d => d.type === currentDeviceType);
-        if (sameTypeDevice) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir ${currentDeviceType === 'pc' ? 'PC' : 'mobil cihaz'} üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-
-        const pcCount = registeredDevices.filter(d => d.type === 'pc').length;
-        const mobileCount = registeredDevices.filter(d => d.type === 'mobile').length;
-        if (currentDeviceType === 'pc' && pcCount >= 1) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir PC üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-        if (currentDeviceType === 'mobile' && mobileCount >= 1) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir mobil cihaz üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-
         registeredDevices.push({ id: devId, type: currentDeviceType, raw: `${devId}:${currentDeviceType}` });
         const newDevicesStr = registeredDevices.map(d => d.raw).join(',');
         await supabaseClient
@@ -22583,32 +22567,6 @@ async function validateLicenseDevices() {
       }
 
       if (!hasCurrentDevice) {
-        const sameTypeDevice = registeredDevices.find(d => d.type === currentDeviceType);
-        if (sameTypeDevice) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir ${currentDeviceType === 'pc' ? 'PC' : 'mobil cihaz'} üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-
-        const pcCount = registeredDevices.filter(d => d.type === 'pc').length;
-        const mobileCount = registeredDevices.filter(d => d.type === 'mobile').length;
-        if (currentDeviceType === 'pc' && pcCount >= 1) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir PC üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-        if (currentDeviceType === 'mobile' && mobileCount >= 1) {
-          showToast(`Lisans limit hatası! Bu lisans zaten başka bir mobil cihaz üzerinde kullanılmaktadır.`, "error");
-          state.licenceKey = '';
-          saveState();
-          updateProfileLicenceUI();
-          return false;
-        }
-
         registeredDevices.push({ id: devId, type: currentDeviceType, raw: `${devId}:${currentDeviceType}` });
         userState.licence_devices = registeredDevices.map(d => d.raw).join(',');
         localStates[state.username] = userState;
