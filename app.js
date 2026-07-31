@@ -23704,7 +23704,7 @@ function initParagraphAnalysisModule() {
   function renderSentenceStep() {
     const total = prototypeParagraphData.sentences.length;
 
-    if (stepLabel) stepLabel.textContent = `CÜMLE \${currentStep + 1} / \${total}`;
+    if (stepLabel) stepLabel.textContent = `CÜMLE ${currentStep + 1} / ${total}`;
 
     // Render Dots
     if (progressDots) {
@@ -23712,7 +23712,7 @@ function initParagraphAnalysisModule() {
         let cls = 'paragraph-step-dot';
         if (idx === currentStep) cls += ' active';
         else if (idx < currentStep) cls += ' completed';
-        return `<div class="\${cls}"></div>`;
+        return `<div class="${cls}"></div>`;
       }).join('');
     }
 
@@ -23727,7 +23727,7 @@ function initParagraphAnalysisModule() {
       vocabHintsListEl.innerHTML = hints.map(hint => {
         return `
           <span class="syntax-badge" style="background: rgba(139, 92, 246, 0.08); color: var(--accent-primary); border: 1px solid rgba(139, 92, 246, 0.2); padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px;">
-            <strong>\${hint.en}:</strong> \${hint.tr}
+            <strong>${hint.en}:</strong> ${hint.tr}
           </span>
         `;
       }).join('');
