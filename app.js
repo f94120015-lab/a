@@ -23406,76 +23406,150 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
 // ============================================================
 const prototypeParagraphData = {
   id: 'milestone-1-paragraph',
-  title: 'Milestone 1: Modern Bilim ve Merak',
+  title: 'Milestone 1: Modern Bilim ve Teknoloji',
+  passagePlain: `The development of modern technology has changed our daily lives in many ways. Today, researchers in various universities can study complex data processed by these machines because there are advanced computer systems in their laboratories. How do computers process this information so fast? When scientists analyzed the initial results of the project last year, they realized that a clear tense agreement was necessary in the final reports. Although many questions remain unanswered, students studying computer science should learn these core concepts to solve real-world problems, mustering all their skills to find key solutions.`,
   passageHtml: `
-    <span class="syntax-hl noun-phrase" title="⭐ Ders 1-3 & 5: Bilimsel keşfin tarihi, insan merakının büyüleyici bir yolculuğudur. (Subject + be + Noun / Noun of Noun)">The history of scientific discovery is a fascinating journey of human curiosity</span>. 
-    <span class="syntax-hl prep-phrase" title="👋 Ders 6 & 8: Üniversitedeki farklı bölümlerden araştırmacılar, doğa kanunlarının doğrulanması üzerinde çalışırlar. (Noun from Noun / Verb + Prep)">Researchers from different departments in the university work on the validation of natural laws</span>. 
-    <span class="syntax-hl adj-phrase" title="⭐ Ders 2: Bu cihazların tasarımı son derece karmaşıktır. (Subject + be + Adjective / Noun of Noun)">The design of these instruments is highly complex</span>.
-    <span class="syntax-hl location-phrase" title="⭐ Ders 4: Ekibin temel araçları ana binadadır. (Subject + be + Prepositional Phrase)">The key tools of the team are in the main building</span>.
-    <span class="syntax-hl verb-phrase" title="🧪 Ders 9-10: Deneyin başlangıcında, laboratuvardaki bilim insanları numunenin ana unsurlarını analiz ederler. (Prep + Prep / Subject + Transitive Verb + Object)">At the beginning of the experiment, scientists in the laboratory analyze the main elements of the sample</span>.
-    <span class="syntax-hl result-phrase" title="📊 Ders 7 & 10: Bu testlerin doğrudan sonuçları, sıvının sıcaklığındaki değişimleri gösterir. (Noun + Prep + Noun / S + V + O)">The direct results of these tests show the changes in the temperature of the liquid</span>.
-    <span class="syntax-hl summary-phrase" title="💡 Ders 8 & 10: Sonuç olarak, bu analiz projenin kritik sorunlarına net çözümler sunar. (Prep Phrase / S + V + O)">In the end, this analysis provides clear solutions to the critical problems of the project</span>.
+    <span class="syntax-hl noun-phrase" data-id="1" style="border-bottom: 2px solid #3b82f6; cursor: pointer; background: rgba(59, 130, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">The development of modern technology</span> has changed our daily lives in many ways. Today, researchers in various universities <span class="syntax-hl verb-phrase" data-id="2" style="border-bottom: 2px solid #8b5cf6; cursor: pointer; background: rgba(139, 92, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">can study</span> complex <span class="syntax-hl result-phrase" data-id="3" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">data processed by these machines</span> because <span class="syntax-hl location-phrase" data-id="4" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">there are</span> advanced computer systems <span class="syntax-hl location-phrase" data-id="5" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">in their laboratories</span>. <span class="syntax-hl summary-phrase" data-id="6" style="border-bottom: 2px solid #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">How do computers process this information so fast?</span> When scientists <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">analyzed</span> the initial results of the project <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">last year</span>, they <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">realized</span> that a clear tense agreement <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">was</span> necessary in the final reports. Although many questions remain unanswered, <span class="syntax-hl result-phrase" data-id="8" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">students studying computer science</span> <span class="syntax-hl verb-phrase" data-id="9" style="border-bottom: 2px solid #8b5cf6; cursor: pointer; background: rgba(139, 92, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">should learn</span> these core concepts to solve real-world problems, <span class="syntax-hl result-phrase" data-id="10" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">mustering all their skills</span> to find key solutions.
   `,
+  analysisDetails: {
+    '1': {
+      topic: 'Noun + of + Noun',
+      lesson: 'Ders 1-3 & 5',
+      en: 'The development of modern technology',
+      tr: 'Modern teknolojinin gelişimi',
+      explanation: '<strong>The development</strong> (isim) + <strong>of</strong> (edat) + <strong>modern technology</strong> (isim öbeği) yapısıyla kurulmuştur. İngilizce\'de karmaşık özneler ve tamlamalar oluşturmak için temel bir yapıdır.'
+    },
+    '2': {
+      topic: 'Modals (Kip Ekleri)',
+      lesson: 'Ders 6',
+      en: 'can study',
+      tr: 'inceleyebilir / çalışabilir',
+      explanation: '<strong>can</strong> (yetenek/olasılık) modalı ve sonrasında gelen yalın fiil (study) ile kurulmuştur. Şimdiki zamanda yeterlilik veya olasılık bildiren temel bir yardımcı fiil yapısıdır.'
+    },
+    '3': {
+      topic: 'Participle Reduction (Edilgen Sıfat-Fiil)',
+      lesson: 'Ders 8',
+      en: 'data processed by these machines',
+      tr: 'bu makineler tarafından işlenen veriler',
+      explanation: 'Aslı <em>"data which is processed by these machines"</em> olan yapının, sıfat cümleciği bağlacı ve yardımcı fiilinin atılmasıyla (reduction) elde edilmiş <strong>Past Participle (-V3)</strong> kısaltmasıdır.'
+    },
+    '4': {
+      topic: 'Var/Yok (Existential)',
+      lesson: 'Ders 4',
+      en: 'there are',
+      tr: 'vardır',
+      explanation: 'Çoğul isimlerle ("advanced computer systems") "var" anlamını vermek için kullanılan geniş zamanlı <strong>there are</strong> yapısıdır.'
+    },
+    '5': {
+      topic: 'Prepositional Phrase of Location',
+      lesson: 'Ders 4',
+      en: 'in their laboratories',
+      tr: 'laboratuvarlarında',
+      explanation: 'Konum bildiren <strong>in</strong> edatı (preposition) ile kurulmuş bir dolaylı tümleç/yer bildiren edat öbeğidir (Prepositional Phrase).'
+    },
+    '6': {
+      topic: 'Question Sentence (Soru Cümlesi)',
+      lesson: 'Ders 10',
+      en: 'How do computers process this information so fast?',
+      tr: 'Bilgisayarlar bu bilgiyi nasıl bu kadar hızlı işler?',
+      explanation: 'Geniş zaman (Simple Present) soru yapısıdır. <strong>How</strong> (soru kelimesi) + <strong>do</strong> (yardımcı fiil) + <strong>computers</strong> (özne) + <strong>process</strong> (yalın fiil) dizilimine sahiptir.'
+    },
+    '7': {
+      topic: 'Tenses & Tense Agreement',
+      lesson: 'Ders 9-10',
+      en: 'analyzed... last year... realized... was...',
+      tr: 'analiz ettiler... geçen yıl... fark ettiler... idi...',
+      explanation: 'Cümledeki <strong>"last year"</strong> (geçen yıl) zaman zarfı nedeniyle tüm fiiller geçmiş zamanlı (Past Simple) çekimlenmiş ve yan cümle ile ana cümle arasında <strong>Tense Agreement</strong> (Zaman Uyumu) kuralı eksiksiz uygulanmıştır.'
+    },
+    '8': {
+      topic: 'Participle Reduction (Etken Sıfat-Fiil)',
+      lesson: 'Ders 8',
+      en: 'students studying computer science',
+      tr: 'bilgisayar bilimi okuyan öğrenciler',
+      explanation: 'Aslı <em>"students who are studying..."</em> olan yapının <strong>Present Participle (-ing)</strong> ile etken (active) kısaltmasıdır.'
+    },
+    '9': {
+      topic: 'Modals (Kip Ekleri)',
+      lesson: 'Ders 6',
+      en: 'should learn',
+      tr: 'öğrenmelidir / öğrenmesi gerekir',
+      explanation: 'Gereklilik veya tavsiye bildiren <strong>should</strong> modalı ve sonrasında gelen yalın fiil (learn) ile kurulmuştur.'
+    },
+    '10': {
+      topic: 'Participle Clause Reduction',
+      lesson: 'Ders 8',
+      en: 'mustering all their skills',
+      tr: 'tüm becerilerini bir araya getirerek',
+      explanation: 'Eşzamanlı eylemleri bağlamak için kullanılan ve etken (active) yapıdaki zarf cümleciği kısaltmasıdır (Participle Clause).'
+    }
+  },
+  translations: [
+    "<strong>1. Cümle:</strong> Modern teknolojinin gelişimi, günlük yaşamlarımızı birçok yönden değiştirmiştir.",
+    "<strong>2. Cümle:</strong> Günümüzde, laboratuvarlarında gelişmiş bilgisayar sistemleri bulunduğu için çeşitli üniversitelerdeki araştırmacılar bu makineler tarafından işlenen karmaşık verileri inceleyebilmektedir.",
+    "<strong>3. Cümle:</strong> Bilgisayarlar bu bilgiyi nasıl bu kadar hızlı işlemektedir?",
+    "<strong>4. Cümle:</strong> Bilim insanları geçen yıl projenin ilk sonuçlarını analiz ettiklerinde, nihai raporlarda net bir zaman uyumunun gerekli olduğunu fark ettiler.",
+    "<strong>5. Cümle:</strong> Birçok soru cevapsız kalsa da, bilgisayar bilimi okuyan öğrenciler gerçek dünya problemlerini çözmek için bu temel kavramları öğrenmeli ve kilit çözümler bulmak için tüm becerilerini bir araya getirmelidir."
+  ],
   questions: [
     {
       id: 1,
-      prompt: "1. Cümlenin öznesi olan <strong>'The history of scientific discovery'</strong> ifadesi ilk 10 derste öğrendiğimiz hangi dil bilgisi yapısına örnektir?",
+      prompt: "1. Paragrafın ilk cümlesinin öznesi olan <strong>'The development of modern technology'</strong> ifadesi hangi dil bilgisi yapısına örnektir?",
       options: [
-        "İsim + edat takımı (Noun + of + Noun)",
-        "Öbeksel kip (Phrasal Modal)",
-        "İsim cümleciği (Noun Clause)",
-        "Sıfat cümleciği (Relative Clause)"
+        "İsim + of + İsim (Noun + of + Noun) yapısında bir edatlı isim tamlamasıdır.",
+        "Kip eki (Modal) ile kurulmuş bir yardımcı fiil yapısıdır.",
+        "Geçmiş zaman belirten bir zaman zarfıdır.",
+        "Edilgen sıfat-fiil kısaltmasıdır (Passive Participle)."
       ],
       correctIndex: 0,
-      explanation: "✅ <strong>Doğru!</strong> 'The history of scientific discovery' (bilimsel keşfin tarihi) ifadesi, <strong>Noun + of + Noun</strong> yapısında kurulmuş bir isim ve edat takımıdır (Bölüm I)."
+      explanation: "✅ <strong>Doğru!</strong> 'The development of modern technology' yapısı, <strong>Noun + of + Noun</strong> (İsim + of + İsim) kuralına dayanan çok yaygın bir akademik edatlı isim tamlamasıdır."
     },
     {
       id: 2,
-      prompt: "2. İkinci cümledeki <strong>'work on'</strong> (üzerinde çalışmak) eylemi hangi dil bilgisi kuralını temsil eder?",
+      prompt: "2. Paragraftaki şu cümlede boşluklara sırasıyla hangi ifadeler gelmelidir?<br><br><em>'Today, researchers in various universities <strong>______</strong> study complex data because there <strong>______</strong> advanced computer systems in their laboratories.'</em>",
       options: [
-        "Fiil + edat takımı (Verb + Prepositional Phrase)",
-        "Edilgen çatı (Passive Voice)",
-        "Zaman uyumu (Tense Agreement)",
-        "Kısaltma (Reduction)"
+        "can / are",
+        "should / was",
+        "must / is",
+        "could / were"
       ],
       correctIndex: 0,
-      explanation: "✅ <strong>Tebrikler!</strong> 'work on the validation...' yapısı <strong>Verb + Prepositional Phrase</strong> (Fiil + Edat Takımı) kuralına (Bölüm II) mükemmel bir örnektir."
+      explanation: "✅ <strong>Tebrikler!</strong> Cümle şimdiki zamanı ('Today') kastettiği ve araştırmacıların yeteneğini belirttiği için modal olarak <strong>can</strong>; 'advanced computer systems' çoğul olduğu için <strong>are</strong> kullanılır."
     },
     {
       id: 3,
-      prompt: "3. Metinde geçen <strong>'The key tools of the team are in the main building.'</strong> cümlesinin dil bilgisi yapısı hakkında ne söylenebilir?",
+      prompt: "3. 'When scientists <strong>analyzed</strong>... <strong>last year</strong>, they <strong>realized</strong> that a clear tense agreement <strong>was</strong> necessary...'<br><br>Bu cümlede neden tüm fiiller Past Simple (Geçmiş Zaman) ile çekimlenmiştir?",
       options: [
-        "Yüklem 'are' olup, 'Özne + to be + edat yapısı' kalıbındadır.",
-        "Yüklem geçişli bir fiildir (Transitive Verb).",
-        "Cümle edilgen (passive) bir yapıdadır.",
-        "Cümlede herhangi bir edat öbeği bulunmamaktadır."
+        "Cümlede 'last year' geçmiş zaman zarfı olduğundan, zaman uyumu (Tense Agreement) kuralı gereği tüm fiiller geçmiş zamanda olmalıdır.",
+        "Cümle 'When' bağlacıyla başladığı için tüm fiiller edilgen olmak zorundadır.",
+        "Fiillerin hepsi düzensiz fiil olduğu için geçmiş zaman kuralı geçerlidir.",
+        "Cümlede bir modal yardımcı fiili eksik olduğu için."
       ],
       correctIndex: 0,
-      explanation: "✅ <strong>Harika Analiz!</strong> 'are in the main building' yapısı, <strong>Özne + to be + edat takımı</strong> yapısına örnektir (Bölüm VI - Ders 4)."
+      explanation: "✅ <strong>Harika Analiz!</strong> Cümlede belirli bir geçmiş zaman zarfı (<strong>last year</strong>) kullanıldığından, tüm fiiller geçmiş zamanda (analyzed, realized, was) çekimlenerek zaman uyumu sağlanmıştır."
     },
     {
       id: 4,
-      prompt: "4. Beşinci cümledeki <strong>'scientists in the laboratory analyze the main elements of the sample'</strong> ifadesinin temel dizilimi nedir?",
+      prompt: "4. Paragrafta geçen <strong>'data processed by these machines'</strong> ile <strong>'students studying computer science'</strong> ifadeleri hangi konunun kısaltma kurallarını örneklendirir?",
       options: [
-        "Özne + Geçişli Fiil + Nesne (Subject + Transitive Verb + Object)",
-        "There + olmak + İsim",
-        "Özne + olmak + Sıfat",
-        "Zarf Cümleciği + Ana Cümle"
+        "Sıfat fiil kısaltmaları (Edilgen - processed / Etken - studying)",
+        "Gelecek zaman ve planlama ifadeleri",
+        "Soru cümlesi oluşturma kuralları",
+        "Konum bildiren edat öbekleri"
       ],
       correctIndex: 0,
-      explanation: "✅ <strong>Doğru Çıkarım!</strong> Bu cümlede 'scientists in the laboratory' <strong>Özne</strong>, 'analyze' <strong>Geçişli Fiil</strong>, 'the main elements of the sample' ise <strong>Nesne</strong> konumundadır (Bölüm VII)."
+      explanation: "✅ <strong>Çok Başarılı!</strong> 'data (which is) processed...' edilgen (passive) sıfat-fiil kısaltmasıyken, 'students (who are) studying...' etken (active) sıfat-fiil kısaltmasıdır (Participle Reduction)."
     },
     {
       id: 5,
-      prompt: "5. Metinde sunulan bilgilere dayanarak aşağıdakilerden hangisi <strong>ÇIKARILAMAZ</strong>?",
+      prompt: "5. Paragrafın son cümlesine göre bilgisayar bilimi okuyan öğrencilerin ne yapması önerilmektedir?",
       options: [
-        "Bilimsel araştırma cihazlarının tasarımı oldukça basittir.",
-        "Bilim insanları deney numunesinin ana unsurlarını laboratuvarda analiz etmektedir.",
-        "Bilim tarihi, insan merakıyla şekillenen bir süreçtir.",
-        "Yapılan testlerin doğrudan sonuçları, sıvının sıcaklığındaki değişimleri göstermektedir."
+        "Tüm becerilerini kullanarak kilit çözümler bulmak için temel kavramları öğrenmelidirler.",
+        "Yalnızca laboratuvardaki gelişmiş sistemleri kapatıp teorik çalışmalıdırlar.",
+        "Geniş zaman ve geçmiş zaman arasındaki tüm uyum kurallarını göz ardı etmelidirler.",
+        "Uygulamayı bitirdikten sonra sadece kullanıcı edinme kanallarına odaklanmalıdırlar."
       ],
       correctIndex: 0,
-      explanation: "✅ <strong>Tebrikler!</strong> Üçüncü cümlede cihazların tasarımının oldukça karmaşık olduğu belirtilmiştir (<em>'The design of these instruments is highly complex'</em>). Dolayısıyla basit olduğu çıkarılamaz."
+      explanation: "✅ <strong>Tebrikler!</strong> Son cümlede öğrencilerin gerçek dünya sorunlarını çözmek ve kilit çözümler bulmak adına tüm yeteneklerini kullanarak temel kavramları öğrenmeleri gerektiği ('should learn these core concepts...') belirtilmiştir."
     }
   ]
 };
@@ -23496,6 +23570,15 @@ function initParagraphAnalysisModule() {
   const questionCard = document.getElementById('paragraph-question-card');
   const summaryCard = document.getElementById('paragraph-summary-card');
 
+  // Segmented tabs
+  const btnRead = document.getElementById('btn-paragraph-mode-read');
+  const btnAnalyze = document.getElementById('btn-paragraph-mode-analyze');
+  const legendContainer = document.getElementById('paragraph-legend-container');
+  const modeIndicator = document.getElementById('paragraph-mode-indicator');
+  const breakdownCard = document.getElementById('paragraph-breakdown-card');
+  const breakdownPlaceholder = document.getElementById('paragraph-breakdown-placeholder');
+  const breakdownContent = document.getElementById('paragraph-breakdown-content');
+
   if (!modal) return;
 
   let currentStep = 0;
@@ -23509,14 +23592,23 @@ function initParagraphAnalysisModule() {
     if (summaryCard) summaryCard.style.display = 'none';
     if (nextBtn) nextBtn.style.display = 'inline-block';
 
-    const explContent = document.getElementById('paragraph-explanation-content');
-    const explArrow = document.getElementById('paragraph-explanation-arrow');
-    if (explContent) explContent.style.setProperty('display', 'none', 'important');
-    if (explArrow) explArrow.style.transform = 'rotate(0deg)';
+    // Reset breakdown card
+    if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'block';
+    if (breakdownContent) breakdownContent.style.display = 'none';
+    if (breakdownCard) {
+      breakdownCard.style.borderStyle = 'dashed';
+      breakdownCard.style.borderColor = 'var(--border-color)';
+    }
 
-    // Ingest passage text
-    if (readerTextEl) {
-      readerTextEl.innerHTML = prototypeParagraphData.passageHtml;
+    // Set default tab to "Sadece Oku"
+    if (btnRead) btnRead.click();
+
+    // Populate scorecard translations
+    const translationList = document.getElementById('paragraph-translation-list');
+    if (translationList) {
+      translationList.innerHTML = prototypeParagraphData.translations.map(t => {
+        return `<li style="margin-bottom: 6px; line-height: 1.45;">${t}</li>`;
+      }).join('');
     }
 
     renderQuestionStep();
@@ -23528,6 +23620,123 @@ function initParagraphAnalysisModule() {
 
   window.openParagraphAnalysisModal = openModal;
   window.closeParagraphAnalysisModal = closeModal;
+
+  // Highlights listener for Analyze Mode
+  function setupHighlightListeners() {
+    if (!readerTextEl) return;
+    const highlights = readerTextEl.querySelectorAll('.syntax-hl');
+    highlights.forEach(el => {
+      const showDetails = (e) => {
+        if (e && e.type === 'click') {
+          e.preventDefault();
+        }
+        const dataId = el.getAttribute('data-id');
+        const detail = prototypeParagraphData.analysisDetails[dataId];
+        if (detail) {
+          const breakdownTopic = document.getElementById('breakdown-grammar-topic');
+          const breakdownLesson = document.getElementById('breakdown-lesson-no');
+          const breakdownEn = document.getElementById('breakdown-sentence-en');
+          const breakdownTr = document.getElementById('breakdown-sentence-tr');
+          const breakdownExpl = document.getElementById('breakdown-explanation');
+          
+          if (breakdownTopic) {
+            breakdownTopic.textContent = detail.topic;
+            // Set styles dynamically based on theme-compatible tags
+            if (el.classList.contains('noun-phrase')) {
+              breakdownTopic.style.background = 'rgba(59, 130, 246, 0.15)';
+              breakdownTopic.style.color = '#3b82f6';
+            } else if (el.classList.contains('verb-phrase')) {
+              breakdownTopic.style.background = 'rgba(139, 92, 246, 0.15)';
+              breakdownTopic.style.color = '#8b5cf6';
+            } else if (el.classList.contains('result-phrase')) {
+              breakdownTopic.style.background = 'rgba(245, 158, 11, 0.15)';
+              breakdownTopic.style.color = '#d97706';
+            } else if (el.classList.contains('location-phrase')) {
+              breakdownTopic.style.background = 'rgba(244, 63, 94, 0.15)';
+              breakdownTopic.style.color = '#f43f5e';
+            } else if (el.classList.contains('summary-phrase')) {
+              breakdownTopic.style.background = 'rgba(16, 185, 129, 0.15)';
+              breakdownTopic.style.color = '#10b981';
+            }
+          }
+          if (breakdownLesson) breakdownLesson.textContent = detail.lesson;
+          if (breakdownEn) breakdownEn.innerHTML = detail.en;
+          if (breakdownTr) breakdownTr.innerHTML = detail.tr;
+          if (breakdownExpl) breakdownExpl.innerHTML = detail.explanation;
+          
+          if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'none';
+          if (breakdownContent) breakdownContent.style.display = 'flex';
+          
+          if (breakdownCard) {
+            breakdownCard.style.borderStyle = 'solid';
+            breakdownCard.style.borderColor = 'var(--accent-primary)';
+          }
+
+          // Highlight the active text span
+          highlights.forEach(h => {
+            h.style.background = 'rgba(139, 92, 246, 0.04)';
+            h.style.boxShadow = 'none';
+          });
+          el.style.background = 'rgba(139, 92, 246, 0.16)';
+          el.style.boxShadow = '0 0 8px rgba(139, 92, 246, 0.2)';
+        }
+      };
+
+      el.addEventListener('mouseover', showDetails);
+      el.addEventListener('click', showDetails);
+    });
+  }
+
+  // Register Tab click event listeners
+  if (btnRead && btnAnalyze) {
+    btnRead.addEventListener('click', (e) => {
+      e.preventDefault();
+      btnRead.classList.add('active');
+      btnRead.style.background = 'var(--bg-card)';
+      btnRead.style.color = 'var(--text-primary)';
+      btnRead.style.boxShadow = 'var(--shadow-xs)';
+      
+      btnAnalyze.classList.remove('active');
+      btnAnalyze.style.background = 'transparent';
+      btnAnalyze.style.color = 'var(--text-secondary)';
+      btnAnalyze.style.boxShadow = 'none';
+
+      if (legendContainer) legendContainer.style.display = 'none';
+      if (modeIndicator) modeIndicator.textContent = 'Sadece Okuma Modu';
+      if (readerTextEl) {
+        readerTextEl.innerHTML = prototypeParagraphData.passagePlain;
+        readerTextEl.className = 'reading-mode';
+      }
+      
+      if (breakdownPlaceholder) breakdownPlaceholder.style.display = 'block';
+      if (breakdownContent) breakdownContent.style.display = 'none';
+      if (breakdownCard) {
+        breakdownCard.style.borderStyle = 'dashed';
+        breakdownCard.style.borderColor = 'var(--border-color)';
+      }
+    });
+
+    btnAnalyze.addEventListener('click', (e) => {
+      e.preventDefault();
+      btnAnalyze.classList.add('active');
+      btnAnalyze.style.background = 'var(--bg-card)';
+      btnAnalyze.style.color = 'var(--text-primary)';
+      btnAnalyze.style.boxShadow = 'var(--shadow-xs)';
+      
+      btnRead.classList.remove('active');
+      btnRead.style.background = 'transparent';
+      btnRead.style.color = 'var(--text-secondary)';
+      btnRead.style.boxShadow = 'none';
+
+      if (legendContainer) legendContainer.style.display = 'flex';
+      if (modeIndicator) modeIndicator.textContent = 'Dil Bilgisi Haritası Modu';
+      if (readerTextEl) {
+        readerTextEl.innerHTML = prototypeParagraphData.passageHtml;
+        readerTextEl.className = 'analyze-mode';
+        setupHighlightListeners();
+      }
+    });
+  }
 
   function renderQuestionStep() {
     const q = prototypeParagraphData.questions[currentStep];
@@ -23655,23 +23864,6 @@ function initParagraphAnalysisModule() {
     if (closeTrigger) {
       e.preventDefault();
       closeModal();
-      return;
-    }
-
-    const toggleTrigger = e.target.closest('#btn-toggle-paragraph-explanation');
-    if (toggleTrigger) {
-      e.preventDefault();
-      const content = document.getElementById('paragraph-explanation-content');
-      const arrow = document.getElementById('paragraph-explanation-arrow');
-      if (content && arrow) {
-        if (content.style.display === 'none' || !content.style.display) {
-          content.style.setProperty('display', 'flex', 'important');
-          arrow.style.transform = 'rotate(180deg)';
-        } else {
-          content.style.setProperty('display', 'none', 'important');
-          arrow.style.transform = 'rotate(0deg)';
-        }
-      }
       return;
     }
 

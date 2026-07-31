@@ -1536,7 +1536,7 @@
 
   <!-- Paragraf Çözümleme Modal Overlay -->
   <div class="grammar-modal-overlay" id="paragraph-analysis-modal" style="z-index: 2100;">
-    <div class="grammar-modal" style="max-width: 820px; width: 95%; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-xl); border: 1.5px solid rgba(139, 92, 246, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+    <div class="grammar-modal" style="max-width: 900px; width: 95%; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-xl); border: 1.5px solid rgba(139, 92, 246, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
       
       <!-- Modal Header -->
       <div class="grammar-modal-header" style="background: linear-gradient(135deg, #7c3aed, #2563eb); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between;">
@@ -1544,7 +1544,7 @@
           <span style="font-size: 1.6rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">📖</span>
           <div>
             <h3 style="margin: 0; color: white; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Akademik Metni Anlama & Çıkarım Yapma</h3>
-            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85); font-weight: 500;">Milestone 1 — Okuma Kavrama & Anlam Analizi</span>
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85); font-weight: 500;">Milestone 1 — İlk 10 Ders Dil Bilgisi Tahlili</span>
           </div>
         </div>
         <button class="grammar-modal-close" id="paragraph-analysis-close-btn" style="color: white; font-size: 1.8rem; line-height: 1; background: none; border: none; cursor: pointer;">&times;</button>
@@ -1554,96 +1554,60 @@
       <div class="grammar-modal-body" id="paragraph-modal-body" style="padding: 20px; overflow-y: auto; background: var(--bg-card);">
         
         <!-- Responsive Grid Wrapper (Sol: Metin & İpuçları, Sağ: İnteraktif Soru Paneli) -->
-        <div class="paragraph-modal-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+        <div class="paragraph-modal-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; align-items: start;">
           
           <!-- Sol Sütun: Metin ve İpuçları -->
           <div style="display: flex; flex-direction: column; gap: 14px;">
-            <!-- Üst Bilgi Kartı & Legend -->
-            <div style="background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 12px 16px; border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 8px;">
+            
+            <!-- Segmented Mode Tabs -->
+            <div class="paragraph-mode-tabs" style="display: flex; gap: 8px; background: var(--bg-secondary); padding: 4px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <button class="paragraph-mode-tab active" id="btn-paragraph-mode-read" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: var(--bg-card); color: var(--text-primary); box-shadow: var(--shadow-xs);">📄 Sadece Oku</button>
+              <button class="paragraph-mode-tab" id="btn-paragraph-mode-analyze" style="flex: 1; padding: 10px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">🔍 Dil Bilgisi Haritası</button>
+            </div>
+
+            <!-- Üst Bilgi Kartı & Legend (Sadece Çözümleme modunda görünür) -->
+            <div id="paragraph-legend-container" style="display: none; background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 12px 16px; border: 1px solid var(--border-color); flex-direction: column; gap: 8px;">
               <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;">
-                💡 Metindeki renkli ifadelerin üzerine gelerek parçanın anlam haritasını ve kilit mesajlarını inceleyin:
+                💡 Metindeki renkli ifadelerin üzerine gelerek veya tıklayarak dil bilgisi tahlilini ve Türkçe anlamını inceleyin:
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.72rem; font-weight: 700;">
-                <span class="syntax-badge noun-phrase" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">Noun + of + Noun</span>
-                <span class="syntax-badge prep-phrase" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2);">Verb + Prep / Noun from Noun</span>
-                <span class="syntax-badge adj-phrase" style="background: rgba(245, 158, 11, 0.1); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.2);">to be + Adjective</span>
-                <span class="syntax-badge location-phrase" style="background: rgba(225, 29, 72, 0.1); color: #e11d48; border: 1px solid rgba(225, 29, 72, 0.2);">to be + Prep Phrase</span>
-                <span class="syntax-badge verb-phrase" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.2);">S + Transitive Verb + Object</span>
-                <span class="syntax-badge result-phrase" style="background: rgba(13, 148, 136, 0.1); color: #0d9488; border: 1px solid rgba(13, 148, 136, 0.2);">Chained Prepositions</span>
-                <span class="syntax-badge summary-phrase" style="background: rgba(217, 70, 239, 0.1); color: #c026d3; border: 1px solid rgba(217, 70, 239, 0.2);">SVO & Prep Phrase Sentezi</span>
+                <span class="syntax-badge noun-phrase" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); padding: 2px 6px; border-radius: 4px;">Noun + of + Noun</span>
+                <span class="syntax-badge verb-phrase" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.2); padding: 2px 6px; border-radius: 4px;">Modals (Kip Ekleri)</span>
+                <span class="syntax-badge result-phrase" style="background: rgba(245, 158, 11, 0.1); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.2); padding: 2px 6px; border-radius: 4px;">Participle Reduction</span>
+                <span class="syntax-badge location-phrase" style="background: rgba(244, 63, 94, 0.1); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.2); padding: 2px 6px; border-radius: 4px;">Var/Yok (There is/are)</span>
+                <span class="syntax-badge summary-phrase" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); padding: 2px 6px; border-radius: 4px;">Tense & Tense Agreement</span>
               </div>
             </div>
 
             <!-- Paragraf Okuma Kartı -->
-            <div class="paragraph-reader-card" style="background: var(--bg-body); border: 1.5px solid var(--border-color); border-radius: var(--radius-xl); padding: 20px; box-shadow: var(--shadow-sm); position: relative;">
-              <div style="font-size: 0.75rem; font-weight: 800; color: var(--accent-primary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">
-                📄 OKUMA METNİ (READING PASSAGE)
+            <div class="paragraph-reader-card" style="background: var(--bg-body); border: 1.5px solid var(--border-color); border-radius: var(--radius-xl); padding: 22px; box-shadow: var(--shadow-sm); position: relative;">
+              <div style="font-size: 0.75rem; font-weight: 800; color: var(--accent-primary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+                <span>📄 OKUMA PARAGRAFI</span>
+                <span id="paragraph-mode-indicator" style="font-size: 0.7rem; background: var(--bg-secondary); padding: 2px 8px; border-radius: 10px; color: var(--text-secondary); border: 1px solid var(--border-color);">Sadece Okuma Modu</span>
               </div>
-              <div id="paragraph-reader-text" style="font-family: var(--font-heading); font-size: 1.02rem; line-height: 1.8; color: var(--text-primary);">
+              <div id="paragraph-reader-text" class="reading-mode" style="font-family: var(--font-heading); font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); transition: all 0.3s;">
                 <!-- Dynamic JS injected HTML -->
               </div>
             </div>
 
-            <!-- Satır Satır Analiz Kartı (Anlatım Amacı) -->
-            <div class="paragraph-explanation-card" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-sm);">
-              <div style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" id="btn-toggle-paragraph-explanation">
-                <h4 style="margin: 0; font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">
-                  📚 Satır Satır Dil Bilgisi & Anlam Analizi
-                </h4>
-                <span id="paragraph-explanation-arrow" style="font-size: 0.85rem; color: var(--text-secondary); transition: transform 0.2s;">▼</span>
+            <!-- Dil Bilgisi Çözümleme Kartı -->
+            <div class="paragraph-breakdown-card" id="paragraph-breakdown-card" style="background: var(--bg-secondary); border: 1.5px dashed var(--border-color); border-radius: var(--radius-xl); padding: 20px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); transition: all 0.25s ease; min-height: 140px; justify-content: center; box-sizing: border-box;">
+              <div id="paragraph-breakdown-placeholder" style="text-align: center; color: var(--text-muted); font-size: 0.88rem; font-style: italic;">
+                💡 Dil Bilgisi Haritası modundayken metindeki renkli ifadelerin üzerine gelerek veya tıklayarak detaylı analizini inceleyebilirsiniz.
               </div>
-              <div id="paragraph-explanation-content" style="display: none; flex-direction: column; gap: 14px; margin-top: 10px; border-top: 1px solid var(--border-color); padding-top: 14px; max-height: 300px; overflow-y: auto;">
-                <!-- Sentence 1 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #3b82f6; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">1. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">The history of scientific discovery is a fascinating journey of human curiosity.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #3b82f6; font-size: 0.78rem;">Formül: Subject + be + Adjective + Noun</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "The history of scientific discovery" (Özne - Noun of Noun) + "is" (durum fiili) + "a fascinating journey of human curiosity" (sıfat + isim + edat öbeği).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Bilimsel keşfin tarihi, insan merakının büyüleyici bir yolculuğudur.</div>
+              <div id="paragraph-breakdown-content" style="display: none; flex-direction: column; gap: 8px; text-align: left;">
+                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 4px;">
+                  <span id="breakdown-grammar-topic" style="font-size: 0.78rem; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Noun + of + Noun</span>
+                  <span id="breakdown-lesson-no" style="font-size: 0.78rem; color: var(--accent-primary); font-weight: 700; background: rgba(139, 92, 246, 0.1); padding: 2px 8px; border-radius: 10px;">Ders 1-3</span>
                 </div>
-                <!-- Sentence 2 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #10b981; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">2. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">Researchers from different departments in the university work on the validation of natural laws.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #10b981; font-size: 0.78rem;">Formül: Subject + Verb + Prepositional Phrase</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "Researchers from different departments in the university" (from ve in edatlarıyla genişletilmiş Özne) + "work on" (Fiil + Edat) + "the validation of natural laws" (edat öbeği nesnesi).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Üniversitedeki farklı bölümlerden araştırmacılar, doğa kanunlarının doğrulanması üzerinde çalışırlar.</div>
+                <div style="font-size: 1.02rem; font-weight: 700; color: var(--text-primary); line-height: 1.4;" id="breakdown-sentence-en">The development of modern technology...</div>
+                <div style="font-size: 0.92rem; font-weight: 700; color: var(--color-correct, #10b981); display: flex; gap: 6px; align-items: center;" id="breakdown-sentence-tr-wrapper">
+                  <span>🇹🇷</span> <span id="breakdown-sentence-tr">Modern teknolojinin gelişimi...</span>
                 </div>
-                <!-- Sentence 3 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #f59e0b; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">3. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">The design of these instruments is highly complex.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #f59e0b; font-size: 0.78rem;">Formül: Subject + be + Adjective</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "The design of these instruments" (Özne) + "is" (durum fiili) + "highly complex" (derecelendirilmiş sıfat).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Bu cihazların tasarımı son derece karmaşıktır.</div>
-                </div>
-                <!-- Sentence 4 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #f43f5e; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">4. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">The key tools of the team are in the main building.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #f43f5e; font-size: 0.78rem;">Formül: Subject + be + Prepositional Phrase</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "The key tools of the team" (Özne) + "are" (durum fiili) + "in the main building" (konum bildiren edat öbeği).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Ekibin temel araçları ana binadadır.</div>
-                </div>
-                <!-- Sentence 5 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #8b5cf6; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">5. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">At the beginning of the experiment, scientists in the laboratory analyze the main elements of the sample.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #8b5cf6; font-size: 0.78rem;">Formül: Prep Phrase + Prep Phrase, Subject + Transitive Verb + Object</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "At the beginning of the experiment" (giriş edat öbekleri) + "scientists in the laboratory" (Özne) + "analyze" (geçişli fiil) + "the main elements of the sample" (Nesne).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Deneyin başlangıcında, laboratuvardaki bilim insanları numunenin ana unsurlarını analiz ederler.</div>
-                </div>
-                <!-- Sentence 6 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #14b8a6; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">6. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">The direct results of these tests show the changes in the temperature of the liquid.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #14b8a6; font-size: 0.78rem;">Formül: Subject + Transitive Verb + Object (Chained)</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "The direct results of these tests" (Özne) + "show" (geçişli fiil) + "the changes in the temperature of the liquid" (zincirleme edatlarla bağlanan Nesne).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Bu testlerin doğrudan sonuçları, sıvının sıcaklığındaki değişimleri gösterir.</div>
-                </div>
-                <!-- Sentence 7 -->
-                <div style="font-size: 0.85rem; border-left: 3px solid #d946ef; padding-left: 10px; margin-bottom: 4px;">
-                  <strong style="color: var(--text-primary);">7. Cümle:</strong> <span style="font-style: italic; color: var(--text-secondary);">In the end, this analysis provides clear solutions to the critical problems of the project.</span>
-                  <div style="margin-top: 4px; font-weight: 700; color: #d946ef; font-size: 0.78rem;">Formül: Prep Phrase, Subject + Transitive Verb + Object</div>
-                  <div style="margin-top: 2px; color: var(--text-muted); line-height: 1.4;"><strong>Açıklama:</strong> "In the end" (edat öbeği) + "this analysis" (Özne) + "provides" (geçişli fiil) + "clear solutions to the critical problems of the project" (Nesne).</div>
-                  <div style="margin-top: 4px; font-weight: 700; color: var(--text-primary);">🇹🇷 Sonuç olarak, bu analiz projenin kritik sorunlarına net çözümler sunar.</div>
-                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.45; margin-top: 4px; background: var(--bg-card); border-left: 3px solid var(--accent-primary); padding: 8px 12px; border-radius: 0 8px 8px 0;" id="breakdown-explanation">Detaylı açıklama...</div>
               </div>
             </div>
+
           </div>
 
           <!-- Sağ Sütun: İnteraktif Soru Paneli & Sonuç Karnesi -->
@@ -1654,7 +1618,7 @@
               
               <!-- Soru İlerleme Çubuğu -->
               <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
-                <span id="paragraph-question-step-label" style="font-size: 0.85rem; font-weight: 800; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px;">SORU 1 / 4</span>
+                <span id="paragraph-question-step-label" style="font-size: 0.85rem; font-weight: 800; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px;">SORU 1 / 5</span>
                 <div style="display: flex; gap: 6px;" id="paragraph-progress-dots">
                   <!-- Dots injected dynamically -->
                 </div>
@@ -1677,28 +1641,26 @@
             </div>
 
             <!-- Sonuç Karnesi (Gizli başlar) -->
-            <div id="paragraph-summary-card" style="display: none; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1)); border: 1.5px solid #10b981; border-radius: var(--radius-xl); padding: 20px; text-align: center; flex-direction: column; align-items: center; gap: 14px;">
+            <div id="paragraph-summary-card" style="display: none; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1)); border: 1.5px solid #10b981; border-radius: var(--radius-xl); padding: 20px; text-align: center; flex-direction: column; align-items: center; gap: 14px; box-sizing: border-box;">
               <div style="font-size: 3rem; line-height: 1;">🎉</div>
               <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-primary);">Tebrikler! Okuma Anlama Analizi Tamamlandı</h3>
-              <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
-                Metindeki ana fikri, araştırma amacını ve toplumsal mesajı başarıyla tahlil ettiniz.
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.45;">
+                Metindeki ana fikri, araştırma amacını ve dil bilgisi haritasını başarıyla tahlil ettiniz.
               </p>
-              <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: var(--accent-primary); font-size: 0.88rem;">
+              <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 4px 0;">
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: var(--accent-primary); font-size: 0.88rem; box-shadow: var(--shadow-xs);">
                   ⚡ +50 XP
                 </div>
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: #10b981; font-size: 0.88rem;">
+                <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: #10b981; font-size: 0.88rem; box-shadow: var(--shadow-xs);">
                   🏅 Metin Analisti Başarımı
                 </div>
               </div>
               
               <!-- Türkçe Paragraf Tam Çözümleme Görünümü -->
-              <div style="width: 100%; text-align: left; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 14px 16px;">
-                <h4 style="margin: 0 0 8px 0; font-family: var(--font-heading); font-size: 0.9rem; color: var(--accent-primary);">🇹🇷 Tam Paragraf Çevirisi & Anlam Özeti:</h4>
-                <ol style="margin: 0; padding-left: 18px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: flex; flex-direction: column; gap: 6px;">
-                  <li><strong>Modern bilimin tarihi</strong> insan merakının büyüleyici bir yolculuğudur.</li>
-                  <li><strong>Çok sayıda üniversitedeki araştırmacılar</strong>, doğa kanunlarını keşfetmek amacıyla gelişmiş teknoloji cihazlarıyla çalışırlar.</li>
-                  <li><strong>Bu deneylerin sonuçları</strong>, toplumun temel sorunlarına net çözümler sunar.</li>
+              <div style="width: 100%; text-align: left; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 14px 16px; box-sizing: border-box;">
+                <h4 style="margin: 0 0 8px 0; font-family: var(--font-heading); font-size: 0.9rem; color: var(--accent-primary);">🇹🇷 Cümle Cümle Paragraf Çevirisi:</h4>
+                <ol id="paragraph-translation-list" style="margin: 0; padding-left: 18px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: flex; flex-direction: column; gap: 8px;">
+                  <!-- Dynamic JS injected translations -->
                 </ol>
               </div>
             </div>
