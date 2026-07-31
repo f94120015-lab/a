@@ -386,11 +386,26 @@ function getDeviceType() {
   return isMobile ? 'mobile' : 'pc';
 }
 
+// Telefon numarasını 10 haneli standart formata getirir (ülke kodu ve başındaki sıfırı atar).
+function normalizePhone(phone) {
+  if (!phone) return '';
+  let normalized = phone.replace(/\D/g, '');
+  if (normalized.startsWith('90') && normalized.length === 12) {
+    normalized = normalized.slice(2);
+  } else if (normalized.startsWith('0') && normalized.length === 11) {
+    normalized = normalized.slice(1);
+  }
+  if (normalized.length > 10) {
+    normalized = normalized.slice(-10);
+  }
+  return normalized;
+}
+
 // Basit ama güvenli kriptografik imza üretici
 // E-posta + Telefon + Bitiş Tarihi formatını birleştirerek eşsiz lisans kodu oluşturur.
 function generateLicenceSignature(email, phone, expiryDateStr) {
   const cleanEmail = email.trim().toLowerCase();
-  const cleanPhone = phone.replace(/\D/g, ''); // Sadece rakamlar
+  const cleanPhone = normalizePhone(phone); // Sadece rakamlar normalize edildi
   const rawString = `amok:${cleanEmail}:${cleanPhone}:${expiryDateStr}:${LICENCE_SECRET_SALT}`;
   let hash = 0;
   for (let i = 0; i < rawString.length; i++) {
@@ -400,6 +415,7 @@ function generateLicenceSignature(email, phone, expiryDateStr) {
   }
   return Math.abs(hash).toString(16).toUpperCase();
 }
+
 
 // Lisans Doğrulama Fonksiyonu
 // email ve phone parametreleri opsiyoneldir. Profil UI doğrulaması esnasında lisans kodundan
@@ -426,7 +442,7 @@ function verifyLicenceKey(licenceKey, email = '', phone = '') {
   // Eğer doğrulayan kişi e-posta ve telefon girdiyse, hash uyumunu denetle
   if (email && phone) {
     const cleanEmail = email.trim().toLowerCase();
-    const cleanPhone = phone.replace(/\D/g, '');
+    const cleanPhone = normalizePhone(phone);
     
     // Hash email
     let eHash = 0;
@@ -4491,7 +4507,7 @@ function initAuth() {
         try {
           const { data: profile, error: profileErr } = await supabaseClient
             .from('profiles')
-            .select('username')
+            .select('username, phone')
             .eq('email', email)
             .maybeSingle();
 
@@ -4511,6 +4527,7 @@ function initAuth() {
                 ...finalState,
                 username: profile.username,
                 email: email,
+                phone: profile.phone || phone,
                 isGuest: false,
                 xp: dbState.xp || 0,
                 streak: dbState.streak || 0,
@@ -4524,6 +4541,7 @@ function initAuth() {
             } else {
               finalState.username = profile.username;
               finalState.email = email;
+              finalState.phone = profile.phone || phone;
               finalState.isGuest = false;
             }
           } else {
@@ -4552,6 +4570,7 @@ function initAuth() {
               .insert({
                 username: checkUsername,
                 email: email,
+                phone: phone,
                 password_hash: null
               });
 
@@ -4572,6 +4591,7 @@ function initAuth() {
 
             finalState.username = checkUsername;
             finalState.email = email;
+            finalState.phone = phone;
             finalState.isGuest = false;
             finalState.avatarColor = randomColor;
             finalState.xp = 0;
@@ -4603,6 +4623,7 @@ function initAuth() {
             ...finalState,
             username: uname,
             email: email,
+            phone: phone,
             isGuest: false,
             xp: savedState.xp || 0,
             streak: savedState.streak || 0,
@@ -4643,6 +4664,7 @@ function initAuth() {
 
           finalState.username = checkUsername;
           finalState.email = email;
+          finalState.phone = phone;
           finalState.isGuest = false;
           finalState.avatarColor = randomColor;
           finalState.xp = 0;
@@ -15442,7 +15464,7 @@ function init() {
          const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
 
          let pHash = 0;
-         const cleanPhone = phone.replace(/\D/g, '');
+         const cleanPhone = normalizePhone(phone);
          for (let i = 0; i < cleanPhone.length; i++) {
            pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
            pHash = pHash & pHash;
@@ -16443,7 +16465,7 @@ return `
           const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
 
           let pHash = 0;
-          const cleanPhone = phoneVal.replace(/\D/g, '');
+          const cleanPhone = normalizePhone(phoneVal);
           for (let i = 0; i < cleanPhone.length; i++) {
             pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
             pHash = pHash & pHash;
@@ -16478,7 +16500,7 @@ return `
           const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
 
           let pHash = 0;
-          const cleanPhone = phone.replace(/\D/g, '');
+          const cleanPhone = normalizePhone(phone);
           for (let i = 0; i < cleanPhone.length; i++) {
             pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
             pHash = pHash & pHash;
@@ -16822,7 +16844,7 @@ return `
         const hexEmail = Math.abs(eHash).toString(16).toUpperCase();
 
         let pHash = 0;
-        const cleanPhone = phone.replace(/\D/g, '');
+        const cleanPhone = normalizePhone(phone);
         for (let i = 0; i < cleanPhone.length; i++) {
           pHash = ((pHash << 5) - pHash) + cleanPhone.charCodeAt(i);
           pHash = pHash & pHash;
@@ -16857,12 +16879,7 @@ return `
           return;
         }
 
-        let normalizedPhone = phone.replace(/\D/g, '');
-        if (normalizedPhone.startsWith('90') && normalizedPhone.length === 12) {
-          normalizedPhone = normalizedPhone.slice(2);
-        } else if (normalizedPhone.startsWith('0') && normalizedPhone.length === 11) {
-          normalizedPhone = normalizedPhone.slice(1);
-        }
+        let normalizedPhone = normalizePhone(phone);
 
         if (!normalizedPhone || normalizedPhone.length !== 10) {
           showToast('Lütfen geçerli 10 haneli telefon numarasını girin!', 'error');
@@ -18641,7 +18658,7 @@ function applyPluperfect(stem, neg) {
 function applyPerfectiveParticipleSuffix(stem) {
   const lastV = getLastVowel(stem);
   const harmony = get4WayHarmony(lastV);
-  return harmony + 'ş';
+  return 'm' + harmony + 'ş';
 }
 
 function applyPerfectiveParticiple(stem, neg) {
@@ -19268,7 +19285,7 @@ const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
         wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       }
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "been", role: "perfect_continuous", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
@@ -19539,6 +19556,19 @@ const baseLvl = simulatorData.levels.find(x => x.level === lvlNum);
     // Transform Turkish reflection to question
     trReflexColored = convertTrToQuestion(trReflexColored);
   }
+  if (!isPassive) {
+    if (currentLvl.title) {
+      currentLvl.title = currentLvl.title
+        .replace(/Passive/g, 'Active')
+        .replace(/Edilgen/g, 'Etken');
+    }
+    if (currentLvl.mechanic_note) {
+      currentLvl.mechanic_note = currentLvl.mechanic_note
+        .replace(/edilgeni/g, 'etkeni')
+        .replace(/edilgen/g, 'etken')
+        .replace(/Passive/g, 'Active');
+    }
+  }
 currentLvl.wagon_chain = wagonChain;
   currentLvl.english_sentence = wagonChain.map(w => w.word).join(' ').replace(/\s+\./g, '.').replace(/\.+/g, '.');
   currentLvl.turkish_reflex_colored = trReflexColored;
@@ -19803,10 +19833,189 @@ function initSimulator() {
     };
   }
 
+  const reportBugBtn = document.getElementById('btn-simulator-report-bug');
+  if (reportBugBtn) {
+    reportBugBtn.onclick = () => {
+      showSimulatorReportModal();
+    };
+  }
+
   initSimulatorMatrixEventListeners();
   initCockpitEventListeners();
   renderSimulatorContent();
   renderActiveMission();
+}
+
+function showSimulatorReportModal() {
+  if (typeof html2canvas === 'undefined') {
+    showToast('Ekran görüntüsü kütüphanesi yükleniyor, lütfen birkaç saniye sonra tekrar deneyin.', 'error');
+    return;
+  }
+
+  showToast('Ekran görüntüsü alınıyor, lütfen bekleyin... 📸', 'info');
+  
+  const targetElement = document.getElementById('simulator-main-container') || document.body;
+  
+  html2canvas(targetElement, {
+    useCORS: true,
+    scale: 1,
+    logging: false,
+    backgroundColor: getComputedStyle(document.body).getPropertyValue('--bg-body').trim() || '#ffffff'
+  }).then(canvas => {
+    const screenshotDataUrl = canvas.toDataURL('image/jpeg', 0.85);
+    
+    // Create the modal overlay container
+    const modal = document.createElement('div');
+    modal.className = 'custom-modal-overlay';
+    modal.id = 'simulator-report-modal';
+    
+    // Populate Modal HTML
+    modal.innerHTML = `
+      <div class="custom-modal" style="max-width: 500px; box-sizing: border-box;">
+        <div class="custom-modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+          <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary);">⚠️ Simülatör Hata Bildirimi</h3>
+          <button class="modal-close-btn" id="btn-close-sim-report-modal" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.6rem; cursor: pointer; line-height: 1;">&times;</button>
+        </div>
+        
+        <div class="report-question-info" style="display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); margin-bottom: 14px; font-size: 0.85rem; box-sizing: border-box;">
+          <div class="info-row" style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+            <span style="color: var(--text-primary);"><strong>Seviye:</strong> <span id="sim-report-lvl-title" style="color: var(--text-secondary);">-</span></span>
+          </div>
+          <div class="info-row" style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 4px;">
+            <span style="color: var(--text-primary); text-align: left; word-break: break-word;"><strong>Cümle:</strong> <em id="sim-report-sentence" style="font-size: 0.85rem; color: var(--text-secondary);">-</em></span>
+          </div>
+        </div>
+
+        <!-- Screenshot Preview -->
+        <div style="margin-bottom: 14px; box-sizing: border-box;">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Ekran Görüntüsü Önizlemesi:</span>
+          <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; max-height: 150px; background: #111; display: flex; align-items: center; justify-content: center; position: relative; box-sizing: border-box; box-shadow: var(--shadow-sm);">
+            <img id="sim-report-screenshot-img" src="${screenshotDataUrl}" style="max-width: 100%; max-height: 150px; object-fit: contain; display: block;" />
+            <label style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.2);">
+              <input type="checkbox" id="sim-report-include-screenshot" checked style="margin: 0; cursor: pointer;" />
+              Görüntüyü Ekle
+            </label>
+          </div>
+        </div>
+        
+        <!-- Error Type Select -->
+        <div style="margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; box-sizing: border-box;">
+          <label for="sim-report-error-type" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Hata Türü</label>
+          <select id="sim-report-error-type" class="report-select" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none; box-sizing: border-box; transition: border-color var(--transition-fast);">
+            <option value="wagon_logic">Vagon Çekim / Yapı Hatası 🚂</option>
+            <option value="translation">Türkçe Çeviri / Anlam Hatası 🇹🇷</option>
+            <option value="ui_layout">Görsel / Arayüz Kayması 🖥️</option>
+            <option value="labeling">Etiketleme / Rol Hatası 🏷️</option>
+            <option value="other">Diğer Sorunlar 💬</option>
+          </select>
+        </div>
+        
+        <!-- Comment Textarea -->
+        <div style="margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px; box-sizing: border-box;">
+          <label for="sim-report-comment" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Açıklamanız</label>
+          <textarea id="sim-report-comment" placeholder="Karşılaştığınız hatayı, yanlış bulduğunuz kelime veya kuralı kısaca detaylandırın..." class="report-textarea" style="width: 100%; min-height: 90px; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none; box-sizing: border-box; resize: vertical; line-height: 1.4; transition: border-color var(--transition-fast);"></textarea>
+        </div>
+        
+        <!-- Buttons -->
+        <div style="display: flex; justify-content: flex-end; gap: 10px; box-sizing: border-box;">
+          <button class="btn btn-secondary" id="btn-cancel-sim-report" style="margin-bottom: 0; padding: 10px 18px; border-radius: var(--radius-md); font-weight: 600;">İptal</button>
+          <button class="btn btn-primary" id="btn-submit-sim-report" style="margin-bottom: 0; padding: 10px 18px; border-radius: var(--radius-md); font-weight: 700; background: var(--accent-primary);">Gönder</button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Fill text info
+    const currentLvlData = getActiveLevelData(selectedLevel);
+    if (currentLvlData) {
+      document.getElementById('sim-report-lvl-title').textContent = currentLvlData.title || `Seviye ${selectedLevel}`;
+      document.getElementById('sim-report-sentence').textContent = currentLvlData.english_sentence || '';
+    }
+    
+    // Bind buttons
+    document.getElementById('btn-close-sim-report-modal').onclick = () => modal.remove();
+    document.getElementById('btn-cancel-sim-report').onclick = () => modal.remove();
+    
+    const submitBtn = document.getElementById('btn-submit-sim-report');
+    submitBtn.onclick = async () => {
+      const comment = document.getElementById('sim-report-comment').value.trim();
+      const errorType = document.getElementById('sim-report-error-type').value;
+      const includeScreenshot = document.getElementById('sim-report-include-screenshot').checked;
+      
+      if (!comment) {
+        showToast('Lütfen hatanın açıklaması alanını doldurunuz!', 'error');
+        return;
+      }
+      
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Gönderiliyor...';
+      
+      try {
+        const screenshotToSend = includeScreenshot ? screenshotDataUrl : null;
+        
+        // Detailed description
+        const fullDesc = `[Simülatör Hatası - ${errorType.toUpperCase()}]\nCümle: ${currentLvlData ? currentLvlData.english_sentence : ''}\nÇeviri: ${currentLvlData ? currentLvlData.turkish_reflex : ''}\nNotlar: ${currentLvlData ? currentLvlData.mechanic_note : ''}\n\nKullanıcı Açıklaması:\n${comment}`;
+        
+        const payload = {
+          id: Date.now().toString(),
+          created_at: new Date().toISOString(),
+          username: state.username || 'Misafir',
+          email: state.email || '',
+          category: 'bug', // Saved as general feedback category "bug" to show in feedbacks admin panel
+          title: `Simülatör Hatası - ${currentLvlData ? currentLvlData.title : `Seviye ${selectedLevel}`}`,
+          description: fullDesc,
+          screenshot: screenshotToSend
+        };
+        
+        let supabaseSuccess = false;
+        if (supabaseClient) {
+          try {
+            const { error } = await supabaseClient
+              .from('general_feedback')
+              .insert([payload]);
+            if (!error) supabaseSuccess = true;
+          } catch (dbErr) {
+            console.error('Supabase save error:', dbErr);
+          }
+        }
+        
+        // Save locally
+        let localFeedbacks = [];
+        try {
+          localFeedbacks = JSON.parse(localStorage.getItem('amok_general_feedback') || '[]');
+        } catch (e) {}
+        localFeedbacks.push(payload);
+        localStorage.setItem('amok_general_feedback', JSON.stringify(localFeedbacks));
+        
+        // Trigger Email (using existing trigger function if available)
+        try {
+          if (typeof triggerFeedbackEmail === 'function') {
+            await triggerFeedbackEmail(payload);
+          }
+        } catch (emailErr) {
+          console.error('Error sending feedback email:', emailErr);
+        }
+        
+        showToast('Simülatör hata bildiriminiz iletildi. Teşekkür ederiz! ⚙️', 'success');
+        modal.remove();
+        
+        // Reload admin table if we are on the admin page
+        if (typeof loadAdminGeneralFeedbacks === 'function') {
+          loadAdminGeneralFeedbacks();
+        }
+      } catch (err) {
+        console.error('Error submitting simulator report:', err);
+        showToast('Gönderim sırasında hata oluştu.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    };
+  }).catch(err => {
+    console.error('html2canvas capture error:', err);
+    showToast('Ekran görüntüsü alınırken bir hata oluştu.', 'error');
+  });
 }
 
 function initSimulatorMatrixEventListeners() {
@@ -19925,7 +20134,7 @@ function renderSimulatorContent() {
         formula = 'V1';
       } else if (roleLower === 'perfect_bridge') {
         formula = (wordLower === 'had') ? 'had' : 'have/has';
-      } else if (roleLower === 'perfect_passive') {
+      } else if (roleLower === 'perfect_passive' || roleLower === 'perfect_continuous') {
         formula = 'been';
       } else if (roleLower === 'perfect_inf') {
         formula = 'to have';
@@ -20765,7 +20974,7 @@ const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSu
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
       if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "been", role: "perfect_continuous", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
@@ -20790,7 +20999,7 @@ const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSu
       wagonChain.push({ word: activeSpeaker, role: "subject", color: colorSubject });
       wagonChain.push({ word: "had", role: "perfect_bridge", color: colorAux, suffix_tr: "zaten" });
       if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "been", role: "perfect_continuous", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
@@ -20817,7 +21026,7 @@ const subjectIndex = state.selectedSubjectIndex !== undefined ? state.selectedSu
       wagonChain.push({ word: "will", role: "future", color: colorAux, suffix_tr: "-acak" });
       if (isNeg) wagonChain.push({ word: "not", role: "negation", color: colorNegation });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorAux, suffix_tr: "olmuş" });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect, suffix_tr: "ol-" });
+      wagonChain.push({ word: "been", role: "perfect_continuous", color: colorPerfect, suffix_tr: "ol-" });
       wagonChain.push({ word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-makta" });
       wagonChain.push({ word: activeSubjectObj.eng.toLowerCase(), role: "object", color: colorObject });
       
@@ -21438,7 +21647,7 @@ function getModalTenseData(modal, tense, aspect) {
       if (qRem) wagonChain.push({ word: qRem, role: "status_linker", color: colorAux });
       if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      wagonChain.push({ word: "been", role: isPassive ? "perfect_passive" : "perfect_continuous", color: colorPerfect });
       if (isPassive) {
         wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
       }
@@ -21448,7 +21657,7 @@ function getModalTenseData(modal, tense, aspect) {
       wagonChain.push({ word: isNeg ? mNotWord : mWord, role: "status_linker", color: colorAux });
       if (needsTo) wagonChain.push({ word: "to", role: "status_linker", color: colorInfinitive });
       wagonChain.push({ word: "have", role: "perfect_bridge", color: colorPerfect });
-      wagonChain.push({ word: "been", role: "perfect_passive", color: colorPerfect });
+      wagonChain.push({ word: "been", role: isPassive ? "perfect_passive" : "perfect_continuous", color: colorPerfect });
       if (isPassive) {
         wagonChain.push({ word: "being", role: "continuous_motor", color: colorContinuous });
       }
@@ -22185,7 +22394,7 @@ function checkLicence() {
     return false;
   }
   // Eğer email ve telefon varsa (Supabase veya profil state'inden alınabiliyorsa) doğrulamaya gönder
-  const email = state.email || (supabase.auth.user && supabase.auth.user())?.email || '';
+  const email = state.email || (supabaseClient && supabaseClient.auth ? (supabaseClient.auth.user && supabaseClient.auth.user())?.email : '') || '';
   const phone = state.phone || '';
   const check = verifyLicenceKey(state.licenceKey, email, phone);
   if (!check.valid) {
@@ -23180,6 +23389,297 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
     initScrollToTop();
   }
 })();
+
+// ============================================================
+// PARAGRAF ÇÖZÜMLEME (PARAGRAPH ANALYSIS) DENEME MODÜLÜ
+// ============================================================
+const prototypeParagraphData = {
+  id: 'milestone-1-paragraph',
+  title: 'Milestone 1: Modern Bilim ve Merak',
+  passageHtml: `
+    <span class="syntax-hl noun-phrase" title="⭐ Ders 1-3 & 5: Bilimsel keşfin tarihi, insan merakının büyüleyici bir yolculuğudur. (Subject + be + Noun / Noun of Noun)">The history of scientific discovery is a fascinating journey of human curiosity</span>. 
+    <span class="syntax-hl prep-phrase" title="👋 Ders 6 & 8: Üniversitedeki farklı bölümlerden araştırmacılar, doğa kanunlarının doğrulanması üzerinde çalışırlar. (Noun from Noun / Verb + Prep)">Researchers from different departments in the university work on the validation of natural laws</span>. 
+    <span class="syntax-hl adj-phrase" title="⭐ Ders 2: Bu cihazların tasarımı son derece karmaşıktır. (Subject + be + Adjective / Noun of Noun)">The design of these instruments is highly complex</span>.
+    <span class="syntax-hl location-phrase" title="⭐ Ders 4: Ekibin temel araçları ana binadadır. (Subject + be + Prepositional Phrase)">The key tools of the team are in the main building</span>.
+    <span class="syntax-hl verb-phrase" title="🧪 Ders 9-10: Deneyin başlangıcında, laboratuvardaki bilim insanları numunenin ana unsurlarını analiz ederler. (Prep + Prep / Subject + Transitive Verb + Object)">At the beginning of the experiment, scientists in the laboratory analyze the main elements of the sample</span>.
+    <span class="syntax-hl result-phrase" title="📊 Ders 7 & 10: Bu testlerin doğrudan sonuçları, sıvının sıcaklığındaki değişimleri gösterir. (Noun + Prep + Noun / S + V + O)">The direct results of these tests show the changes in the temperature of the liquid</span>.
+    <span class="syntax-hl summary-phrase" title="💡 Ders 8 & 10: Sonuç olarak, bu analiz projenin kritik sorunlarına net çözümler sunar. (Prep Phrase / S + V + O)">In the end, this analysis provides clear solutions to the critical problems of the project</span>.
+  `,
+  questions: [
+    {
+      id: 1,
+      prompt: "1. Cümlenin öznesi olan <strong>'The history of scientific discovery'</strong> ifadesi ilk 10 derste öğrendiğimiz hangi dil bilgisi yapısına örnektir?",
+      options: [
+        "İsim + edat takımı (Noun + of + Noun)",
+        "Öbeksel kip (Phrasal Modal)",
+        "İsim cümleciği (Noun Clause)",
+        "Sıfat cümleciği (Relative Clause)"
+      ],
+      correctIndex: 0,
+      explanation: "✅ <strong>Doğru!</strong> 'The history of scientific discovery' (bilimsel keşfin tarihi) ifadesi, <strong>Noun + of + Noun</strong> yapısında kurulmuş bir isim ve edat takımıdır (Bölüm I)."
+    },
+    {
+      id: 2,
+      prompt: "2. İkinci cümledeki <strong>'work on'</strong> (üzerinde çalışmak) eylemi hangi dil bilgisi kuralını temsil eder?",
+      options: [
+        "Fiil + edat takımı (Verb + Prepositional Phrase)",
+        "Edilgen çatı (Passive Voice)",
+        "Zaman uyumu (Tense Agreement)",
+        "Kısaltma (Reduction)"
+      ],
+      correctIndex: 0,
+      explanation: "✅ <strong>Tebrikler!</strong> 'work on the validation...' yapısı <strong>Verb + Prepositional Phrase</strong> (Fiil + Edat Takımı) kuralına (Bölüm II) mükemmel bir örnektir."
+    },
+    {
+      id: 3,
+      prompt: "3. Metinde geçen <strong>'The key tools of the team are in the main building.'</strong> cümlesinin dil bilgisi yapısı hakkında ne söylenebilir?",
+      options: [
+        "Yüklem 'are' olup, 'Özne + to be + edat yapısı' kalıbındadır.",
+        "Yüklem geçişli bir fiildir (Transitive Verb).",
+        "Cümle edilgen (passive) bir yapıdadır.",
+        "Cümlede herhangi bir edat öbeği bulunmamaktadır."
+      ],
+      correctIndex: 0,
+      explanation: "✅ <strong>Harika Analiz!</strong> 'are in the main building' yapısı, <strong>Özne + to be + edat takımı</strong> yapısına örnektir (Bölüm VI - Ders 4)."
+    },
+    {
+      id: 4,
+      prompt: "4. Beşinci cümledeki <strong>'scientists in the laboratory analyze the main elements of the sample'</strong> ifadesinin temel dizilimi nedir?",
+      options: [
+        "Özne + Geçişli Fiil + Nesne (Subject + Transitive Verb + Object)",
+        "There + olmak + İsim",
+        "Özne + olmak + Sıfat",
+        "Zarf Cümleciği + Ana Cümle"
+      ],
+      correctIndex: 0,
+      explanation: "✅ <strong>Doğru Çıkarım!</strong> Bu cümlede 'scientists in the laboratory' <strong>Özne</strong>, 'analyze' <strong>Geçişli Fiil</strong>, 'the main elements of the sample' ise <strong>Nesne</strong> konumundadır (Bölüm VII)."
+    },
+    {
+      id: 5,
+      prompt: "5. Metinde sunulan bilgilere dayanarak aşağıdakilerden hangisi <strong>ÇIKARILAMAZ</strong>?",
+      options: [
+        "Bilimsel araştırma cihazlarının tasarımı oldukça basittir.",
+        "Bilim insanları deney numunesinin ana unsurlarını laboratuvarda analiz etmektedir.",
+        "Bilim tarihi, insan merakıyla şekillenen bir süreçtir.",
+        "Yapılan testlerin doğrudan sonuçları, sıvının sıcaklığındaki değişimleri göstermektedir."
+      ],
+      correctIndex: 0,
+      explanation: "✅ <strong>Tebrikler!</strong> Üçüncü cümlede cihazların tasarımının oldukça karmaşık olduğu belirtilmiştir (<em>'The design of these instruments is highly complex'</em>). Dolayısıyla basit olduğu çıkarılamaz."
+    }
+  ]
+};
+
+function initParagraphAnalysisModule() {
+  const modal = document.getElementById('paragraph-analysis-modal');
+  const closeBtn = document.getElementById('paragraph-analysis-close-btn');
+  const cancelBtn = document.getElementById('paragraph-analysis-cancel-btn');
+  const nextBtn = document.getElementById('paragraph-analysis-next-btn');
+
+  const readerTextEl = document.getElementById('paragraph-reader-text');
+  const stepLabel = document.getElementById('paragraph-question-step-label');
+  const progressDots = document.getElementById('paragraph-progress-dots');
+  const promptEl = document.getElementById('paragraph-question-prompt');
+  const optionsEl = document.getElementById('paragraph-question-options');
+  const feedbackEl = document.getElementById('paragraph-question-feedback');
+
+  const questionCard = document.getElementById('paragraph-question-card');
+  const summaryCard = document.getElementById('paragraph-summary-card');
+
+  if (!modal) return;
+
+  let currentStep = 0;
+  let userAnswers = [];
+
+  function openModal() {
+    currentStep = 0;
+    userAnswers = [];
+    modal.classList.add('show');
+    if (questionCard) questionCard.style.display = 'flex';
+    if (summaryCard) summaryCard.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'inline-block';
+
+    const explContent = document.getElementById('paragraph-explanation-content');
+    const explArrow = document.getElementById('paragraph-explanation-arrow');
+    if (explContent) explContent.style.setProperty('display', 'none', 'important');
+    if (explArrow) explArrow.style.transform = 'rotate(0deg)';
+
+    // Ingest passage text
+    if (readerTextEl) {
+      readerTextEl.innerHTML = prototypeParagraphData.passageHtml;
+    }
+
+    renderQuestionStep();
+  }
+
+  function closeModal() {
+    modal.classList.remove('show');
+  }
+
+  window.openParagraphAnalysisModal = openModal;
+  window.closeParagraphAnalysisModal = closeModal;
+
+  function renderQuestionStep() {
+    const q = prototypeParagraphData.questions[currentStep];
+    const total = prototypeParagraphData.questions.length;
+
+    if (stepLabel) stepLabel.textContent = `SORU ${currentStep + 1} / ${total}`;
+
+    // Render Dots
+    if (progressDots) {
+      progressDots.innerHTML = prototypeParagraphData.questions.map((_, idx) => {
+        let cls = 'paragraph-step-dot';
+        if (idx === currentStep) cls += ' active';
+        else if (idx < currentStep) cls += ' completed';
+        return `<div class="${cls}"></div>`;
+      }).join('');
+    }
+
+    if (promptEl) promptEl.innerHTML = q.prompt;
+
+    // Render options
+    if (optionsEl) {
+      optionsEl.innerHTML = q.options.map((opt, oIdx) => {
+        return `
+          <button class="paragraph-option-btn" data-index="${oIdx}">
+            <span>${String.fromCharCode(65 + oIdx)}) ${opt}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    if (feedbackEl) {
+      feedbackEl.style.display = 'none';
+      feedbackEl.innerHTML = '';
+    }
+    if (nextBtn) {
+      nextBtn.disabled = true;
+      nextBtn.style.opacity = '0.5';
+      nextBtn.textContent = (currentStep === total - 1) ? 'Analizi Tamamla ✨' : 'Sonraki Soru →';
+    }
+
+    // Option click listeners
+    if (optionsEl) {
+      const btns = optionsEl.querySelectorAll('.paragraph-option-btn');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedIdx = parseInt(btn.dataset.index, 10);
+          handleAnswer(selectedIdx, btns, q);
+        });
+      });
+    }
+  }
+
+  function handleAnswer(selectedIdx, btns, q) {
+    btns.forEach((b, idx) => {
+      b.disabled = true;
+      if (idx === q.correctIndex) {
+        b.classList.add('correct');
+      } else if (idx === selectedIdx) {
+        b.classList.add('wrong');
+      }
+    });
+
+    userAnswers[currentStep] = (selectedIdx === q.correctIndex);
+
+    if (feedbackEl) {
+      feedbackEl.style.display = 'block';
+      if (selectedIdx === q.correctIndex) {
+        feedbackEl.style.background = 'rgba(16, 185, 129, 0.12)';
+        feedbackEl.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+        feedbackEl.style.color = '#059669';
+      } else {
+        feedbackEl.style.background = 'rgba(239, 68, 68, 0.12)';
+        feedbackEl.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+        feedbackEl.style.color = '#dc2626';
+      }
+      feedbackEl.innerHTML = q.explanation;
+    }
+
+    if (nextBtn) {
+      nextBtn.disabled = false;
+      nextBtn.style.opacity = '1';
+    }
+  }
+
+  function handleNextStep() {
+    const total = prototypeParagraphData.questions.length;
+    if (currentStep < total - 1) {
+      currentStep++;
+      renderQuestionStep();
+    } else {
+      // Finish paragraph test
+      if (questionCard) questionCard.style.display = 'none';
+      if (summaryCard) summaryCard.style.display = 'flex';
+      if (nextBtn) nextBtn.style.display = 'none';
+
+      // Confetti celebration
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+
+      // Add XP & Save State
+      state.xp = (state.xp || 0) + 50;
+      saveState();
+      updateTopBar();
+      if (typeof showToast === 'function') {
+        showToast('Paragraf analizi tamamlandı! +50 XP kazandınız. 🏆', 'success');
+      }
+    }
+  }
+
+  // Delegated click listener for button trigger & close
+  document.addEventListener('click', (e) => {
+    const startTrigger = e.target.closest('#btn-start-paragraph-analysis');
+    if (startTrigger) {
+      e.preventDefault();
+      openModal();
+      return;
+    }
+
+    const closeTrigger = e.target.closest('#paragraph-analysis-close-btn, #paragraph-analysis-cancel-btn');
+    if (closeTrigger) {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+
+    const toggleTrigger = e.target.closest('#btn-toggle-paragraph-explanation');
+    if (toggleTrigger) {
+      e.preventDefault();
+      const content = document.getElementById('paragraph-explanation-content');
+      const arrow = document.getElementById('paragraph-explanation-arrow');
+      if (content && arrow) {
+        if (content.style.display === 'none' || !content.style.display) {
+          content.style.setProperty('display', 'flex', 'important');
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          content.style.setProperty('display', 'none', 'important');
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+      return;
+    }
+
+    if (e.target === modal) {
+      closeModal();
+      return;
+    }
+  });
+
+  if (nextBtn) nextBtn.addEventListener('click', handleNextStep);
+}
+
+// Register initialization
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initParagraphAnalysisModule);
+} else {
+  initParagraphAnalysisModule();
+}
+
 
 
 
