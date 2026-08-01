@@ -3336,3997 +3336,860 @@ Object.assign(unitSentencesMap, {
   },
   "17": {
     "1": {
+      "title": "1. Rica Yapıları (Modallar & I Wonder)",
+      "subtitle": "Kibarca ricada bulunma ve dolaylı soru kalıpları",
+      "konuAnlatimi": {
+        "baslik": "Rica Yapıları Kılavuzu (Modallar & I Wonder)",
+        "teorikMantik": "İngilizcede birinden kibarca bir şey yapmasını isterken veya ricada bulunurken modal fiiller (would, could, will, can) ve dolaylı anlatım kalıpları (I wonder if you could) kullanılır.",
+        "formul": "Would / Could / Will / Can + you + V1 (Request)\nI wonder if you could + V1 (Request)",
+        "altinKural": "• Modal fiillerden sonra ve 'I wonder if you could' kalıbından sonra fiil her zaman yalın halde (V1) gelir.\n• Bu yapılarda akademik isim tamlamaları ve edat öbekleri kullanılarak akademik bağlam zenginleştirilir."
+      },
       "exercises": [
         {
-          "id": "u17l57ex1",
-          "title": "Alıştırma 1: Akademik İnceleme 1",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
+          "id": "u17l51ex1",
+          "title": "Alıştırma 1: Öbek Düzeyi",
+          "description": "Rica yapılarında kullanılan akademik öbekler ve kelime eşleştirmeleri (10 Soru)",
           "questions": [
             {
-              "id": "u17l57_ex1_match1",
+              "id": "u17l51_ex1_q1",
               "type": "matching",
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "İsim ve Edat Yapıları", "Antropoloji"],
               "pairs": [
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "yedeklemek",
-                  "right": "back up"
-                },
-                {
-                  "left": "denetlemek",
-                  "right": "inspect"
-                }
+                { "left": "could you modify the sociological variables", "right": "sosyolojik değişkenleri değiştirebilir misiniz" },
+                { "left": "will you publish the peer-reviewed journal", "right": "hakemli dergiyi yayınlar mısınız" },
+                { "left": "I wonder if you could verify the historical archives", "right": "tarihi arşivleri doğrulayabilir misiniz acaba" },
+                { "left": "would you postpone the archaeological seminar", "right": "arkeolojik semineri erteler misiniz" }
               ]
             },
             {
-              "id": "u17l57_ex1_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                },
-                {
-                  "left": "tanımlamak",
-                  "right": "define"
-                },
-                {
-                  "left": "mevcut",
-                  "right": "present"
-                },
-                {
-                  "left": "optimize etmek",
-                  "right": "optimize"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l51_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"Will you restrict unauthorized user network access under strict policy?\" cümlesinin Türkçe karşılığı hangisidir?",
+              "prompt": "İfadenin Türkçe karşılığını seçiniz:<br><br><strong>\"I wonder if you could upgrade the communication database\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "İletişim"],
               "options": [
-                "Nitel öngörüleri iç yönetim kuruluna sunabilir misiniz?",
-                "Teknik ağ anomalisini derhal çözebilir misiniz?",
-                "Sıkı politika kapsamında yetkisiz kullanıcı ağ erişimini sınırlandıracak mısınız?",
-                "Nitel veritabanı geri bildirim dosyalarını düzenler misiniz?"
-              ],
-              "correctIndex": 2,
-              "enSentence": "Will you restrict unauthorized user network access under strict policy?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Yıllık araştırma bütçesini son tarihten önce yeniden tahsis edebilir misiniz?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Could you inspect the entire underlying structural framework?",
-                "Would you verify the security parameters of the database tomorrow?",
-                "Could you present the qualitative insights to the internal board?",
-                "Could you reallocate the annual research budget before the deadline?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Could you reallocate the annual research budget before the deadline?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex1_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you modify the parameters of the architectural framework?",
-              "words": [
-                "Mimari",
-                "değiştirir",
-                "çerçevenin",
-                "bu",
-                "yetkisiz",
-                "misiniz",
-                "kapsamında",
-                "parametrelerini"
-              ],
-              "correctOrder": [
-                "Mimari",
-                "çerçevenin",
-                "parametrelerini",
-                "değiştirir",
-                "misiniz"
-              ],
-              "enSentence": "Would you modify the parameters of the architectural framework?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex1_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Could you process the newly collected empirical data?",
-              "words": [
-                "anketlerini",
-                "toplanan",
-                "işleyebilir",
-                "verileri",
-                "Yeni",
-                "yetkisiz",
-                "tanımlayabilir",
-                "ampirik",
-                "misiniz"
-              ],
-              "correctOrder": [
-                "Yeni",
-                "toplanan",
-                "ampirik",
-                "verileri",
-                "işleyebilir",
-                "misiniz"
-              ],
-              "enSentence": "Could you process the newly collected empirical data?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex1_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Will you back up the centralized cloud database tonight?",
-              "words": [
-                "Merkezi",
-                "kullanıcı",
-                "bulut",
-                "yedekleyecek",
-                "gece",
-                "işleyebilir",
-                "misiniz",
-                "veritabanını",
-                "bu",
-                "yapısal"
-              ],
-              "correctOrder": [
-                "Merkezi",
-                "bulut",
-                "veritabanını",
-                "bu",
-                "gece",
-                "yedekleyecek",
-                "misiniz"
-              ],
-              "enSentence": "Will you back up the centralized cloud database tonight?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex1_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Kritik teknik sistem parametrelerini tanımlayabilir misiniz?",
-              "words": [
-                "system parameters?",
-                "the crucial technical",
-                "Can you define"
-              ],
-              "correctOrder": [
-                "Can you define",
-                "the crucial technical",
-                "system parameters?"
-              ],
-              "enSentence": "Can you define the crucial technical system parameters?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Could you inspect the entire underlying structural framework?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Altta yatan tüm yapısal çerçeveyi denetleyebilir misiniz?",
-              "enSentence": "Could you inspect the entire underlying structural framework?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you evaluate these comprehensive regional educational surveys?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu kapsamlı bölgesel eğitim anketlerini değerlendirir misiniz?",
-              "enSentence": "Would you evaluate these comprehensive regional educational surveys?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l57ex2",
-          "title": "Alıştırma 2: Akademik İnceleme 2",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l57_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "doğrulamak",
-                  "right": "verify"
-                },
-                {
-                  "left": "çözmek",
-                  "right": "resolve"
-                },
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex2_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "düzenler misiniz",
-                  "right": "organize"
-                },
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "yedeklemek",
-                  "right": "back up"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex2_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Could you inspect the entire underlying structural framework?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Altta yatan tüm yapısal çerçeveyi denetleyebilir misiniz?",
-                "Teknik ağ anomalisini derhal çözebilir misiniz?",
-                "Sıkı politika kapsamında yetkisiz kullanıcı ağ erişimini sınırlandıracak mısınız?",
-                "Veritabanının güvenlik parametrelerini yarın doğrular mısınız?"
+                "iletişim veritabanını yükseltebilir misiniz acaba",
+                "iletişim veritabanını yükseltmiş olmalı mıydınız",
+                "iletişim veritabanını yükseltmeniz gerekecek mi acaba",
+                "iletişim veritabanını yükseltmeyi mi tercih ederdiniz"
               ],
               "correctIndex": 0,
-              "enSentence": "Could you inspect the entire underlying structural framework?",
+              "enSentence": "I wonder if you could upgrade the communication database",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Bu kapsamlı bölgesel eğitim anketlerini değerlendirir misiniz?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "id": "u17l51_ex1_q3",
+              "type": "spotlight",
+              "prompt": "Projektör Modu: Cümledeki parlayan kelimenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Would you <strong>postpone</strong> the lecture on economics?\"",
+              "grammarTags": ["Rica Yapıları", "İsim ve Edat Yapıları", "İktisat"],
+              "paragraph": "Would you postpone the lecture on economics?",
+              "highlightChunk": "postpone",
               "options": [
-                "Would you optimize the automated background script for the summit?",
-                "Would you organize the qualitative database feedback files?",
-                "Will you restrict unauthorized user network access under strict policy?",
-                "Would you evaluate these comprehensive regional educational surveys?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Would you evaluate these comprehensive regional educational surveys?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex2_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you verify the security parameters of the database tomorrow?",
-              "words": [
-                "yarın",
-                "mısınız",
-                "Veritabanının",
-                "Nitel",
-                "doğrular",
-                "güvenlik",
-                "çözebilir",
-                "parametrelerini",
-                "tüm"
-              ],
-              "correctOrder": [
-                "Veritabanının",
-                "güvenlik",
-                "parametrelerini",
-                "yarın",
-                "doğrular",
-                "mısınız"
-              ],
-              "enSentence": "Would you verify the security parameters of the database tomorrow?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex2_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Can you resolve the technical network anomaly immediately?",
-              "words": [
-                "ağ",
-                "derhal",
-                "Teknik",
-                "çözebilir",
-                "parametrelerini",
-                "dokümantasyonunu",
-                "anomalisini",
-                "misiniz",
-                "çerçevenin"
-              ],
-              "correctOrder": [
-                "Teknik",
-                "ağ",
-                "anomalisini",
-                "derhal",
-                "çözebilir",
-                "misiniz"
-              ],
-              "enSentence": "Can you resolve the technical network anomaly immediately?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex2_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Could you update the system documentation regarding encryption?",
-              "words": [
-                "güncelleyebilir",
-                "bildirim",
-                "Veritabanının",
-                "sistem",
-                "misiniz",
-                "dokümantasyonunu",
-                "ilgili",
-                "Altta",
-                "Şifrelemeyle"
-              ],
-              "correctOrder": [
-                "Şifrelemeyle",
-                "ilgili",
-                "sistem",
-                "dokümantasyonunu",
-                "güncelleyebilir",
-                "misiniz"
-              ],
-              "enSentence": "Could you update the system documentation regarding encryption?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex2_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Mimari çerçevenin parametrelerini değiştirir misiniz?",
-              "words": [
-                "the parameters",
-                "Would you modify",
-                "of the architectural framework?"
-              ],
-              "correctOrder": [
-                "Would you modify",
-                "the parameters",
-                "of the architectural framework?"
-              ],
-              "enSentence": "Would you modify the parameters of the architectural framework?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Will you publish the dynamic sector breakdown next week?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Dinamik sektör kırılımını gelecek hafta yayınlayacak mısınız?",
-              "enSentence": "Will you publish the dynamic sector breakdown next week?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you organize the qualitative database feedback files?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Nitel veritabanı geri bildirim dosyalarını düzenler misiniz?",
-              "enSentence": "Would you organize the qualitative database feedback files?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l57ex3",
-          "title": "Alıştırma 3: Akademik İnceleme 3",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l57_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "tanımlamak",
-                  "right": "define"
-                },
-                {
-                  "left": "mevcut",
-                  "right": "present"
-                },
-                {
-                  "left": "optimize etmek",
-                  "right": "optimize"
-                },
-                {
-                  "left": "kısıtlamak",
-                  "right": "restrict"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex3_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "yeniden tahsis etmek",
-                  "right": "reallocate"
-                },
-                {
-                  "left": "doğrulamak",
-                  "right": "verify"
-                },
-                {
-                  "left": "çözmek",
-                  "right": "resolve"
-                },
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex3_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Will you publish the dynamic sector breakdown next week?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Bu kapsamlı bölgesel eğitim anketlerini değerlendirir misiniz?",
-                "Mimari çerçevenin parametrelerini değiştirir misiniz?",
-                "Kritik teknik sistem parametrelerini tanımlayabilir misiniz?",
-                "Dinamik sektör kırılımını gelecek hafta yayınlayacak mısınız?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Will you publish the dynamic sector breakdown next week?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Nitel veritabanı geri bildirim dosyalarını düzenler misiniz?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Would you organize the qualitative database feedback files?",
-                "Will you back up the centralized cloud database tonight?",
-                "Can you resolve the technical network anomaly immediately?",
-                "Could you process the newly collected empirical data?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Would you organize the qualitative database feedback files?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex3_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Can you define the crucial technical system parameters?",
-              "words": [
-                "parametrelerini",
-                "önce",
-                "teknik",
-                "yeniden",
-                "gelecek",
-                "sistem",
-                "tanımlayabilir",
-                "Kritik",
-                "misiniz"
-              ],
-              "correctOrder": [
-                "Kritik",
-                "teknik",
-                "sistem",
-                "parametrelerini",
-                "tanımlayabilir",
-                "misiniz"
-              ],
-              "enSentence": "Can you define the crucial technical system parameters?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex3_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Could you present the qualitative insights to the internal board?",
-              "words": [
-                "yönetim",
-                "Nitel",
-                "Kritik",
-                "öngörüleri",
-                "kuruluna",
-                "mısınız",
-                "iç",
-                "misiniz",
-                "sunabilir",
-                "kullanıcı"
-              ],
-              "correctOrder": [
-                "Nitel",
-                "öngörüleri",
-                "iç",
-                "yönetim",
-                "kuruluna",
-                "sunabilir",
-                "misiniz"
-              ],
-              "enSentence": "Could you present the qualitative insights to the internal board?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex3_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you optimize the automated background script for the summit?",
-              "words": [
-                "Zirve",
-                "için",
-                "kodunu",
-                "gelecek",
-                "doğrular",
-                "arka",
-                "plan",
-                "optimize",
-                "eder",
-                "otomatik",
-                "iç",
-                "misiniz"
-              ],
-              "correctOrder": [
-                "Zirve",
-                "için",
-                "otomatik",
-                "arka",
-                "plan",
-                "kodunu",
-                "optimize",
-                "eder",
-                "misiniz"
-              ],
-              "enSentence": "Would you optimize the automated background script for the summit?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex3_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Veritabanının güvenlik parametrelerini yarın doğrular mısınız?",
-              "words": [
-                "of the database tomorrow?",
-                "the security parameters",
-                "Would you verify"
-              ],
-              "correctOrder": [
-                "Would you verify",
-                "the security parameters",
-                "of the database tomorrow?"
-              ],
-              "enSentence": "Would you verify the security parameters of the database tomorrow?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l57_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Will you restrict unauthorized user network access under strict policy?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sıkı politika kapsamında yetkisiz kullanıcı ağ erişimini sınırlandıracak mısınız?",
-              "enSentence": "Will you restrict unauthorized user network access under strict policy?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l57_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Could you reallocate the annual research budget before the deadline?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yıllık araştırma bütçesini son tarihten önce yeniden tahsis edebilir misiniz?",
-              "enSentence": "Could you reallocate the annual research budget before the deadline?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l57ex4",
-          "title": "Alıştırma 4: Akademik İnceleme 4",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l57_ex4_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                },
-                {
-                  "left": "düzenler misiniz",
-                  "right": "organize"
-                },
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex4_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "yedeklemek",
-                  "right": "back up"
-                },
-                {
-                  "left": "denetlemek",
-                  "right": "inspect"
-                },
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                }
-              ]
-            },
-            {
-              "id": "u17l57_ex4_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Can you define the crucial technical system parameters?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Yıllık araştırma bütçesini son tarihten önce yeniden tahsis edebilir misiniz?",
-                "Kritik teknik sistem parametrelerini tanımlayabilir misiniz?",
-                "Şifrelemeyle ilgili sistem dokümantasyonunu güncelleyebilir misiniz?",
-                "Nitel öngörüleri iç yönetim kuruluna sunabilir misiniz?"
+                "hızlandırmak",
+                "ertelemek",
+                "iptal etmek",
+                "sunmak"
               ],
               "correctIndex": 1,
-              "enSentence": "Can you define the crucial technical system parameters?",
+              "explanation": "\"postpone\" kelimesi bu cümlede \"ertelemek\" olarak çevrilir."
+            },
+            {
+              "id": "u17l51_ex1_q4",
+              "type": "multiple-choice",
+              "prompt": "İfadenin İngilizce karşılığını seçiniz:<br><br><strong>\"bütçeyi analiz edebilir misiniz\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "İktisat"],
+              "options": [
+                "Could you have analyzed the budget",
+                "Could the budget be analyzed by you",
+                "Could you analyze the budget",
+                "I wonder if the budget is analyzed"
+              ],
+              "correctIndex": 2,
+              "enSentence": "Could you analyze the budget",
+              "isEngToTr": false
+            },
+            {
+              "id": "u17l51_ex1_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Hukuki sözleşmeyi bugün sunabilir misiniz acaba?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Hukuk"],
+              "sentence": "I wonder if you ___ submit the legal contract today.",
+              "options": [
+                "could",
+                "will",
+                "are",
+                "should"
+              ],
+              "correctIndex": 0,
+              "translation": "Hukuki sözleşmeyi bugün sunabilir misiniz acaba?"
+            },
+            {
+              "id": "u17l51_ex1_q6",
+              "type": "matching",
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "pairs": [
+                { "left": "can you monitor the lab variables", "right": "laboratuvar değişkenlerini izleyebilir misiniz" },
+                { "left": "will you update the project files", "right": "proje dosyalarını günceller misiniz" },
+                { "left": "could you inspect the database code", "right": "veritabanı kodunu inceleyebilir misiniz" },
+                { "left": "I wonder if you could publish the findings", "right": "bulguları yayınlayabilir misiniz acaba" }
+              ]
+            },
+            {
+              "id": "u17l51_ex1_q7",
+              "type": "multiple-choice",
+              "prompt": "İfadenin İngilizce karşılığını seçiniz:<br><br><strong>\"raporu güncelleyebilir misiniz acaba\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "options": [
+                "I wonder if you could update the report",
+                "I wonder if you had updated the report",
+                "Do you mind if you update the report",
+                "Could the report be updated by you"
+              ],
+              "correctIndex": 0,
+              "enSentence": "I wonder if you could update the report",
+              "isEngToTr": false
+            },
+            {
+              "id": "u17l51_ex1_q8",
+              "type": "spotlight",
+              "prompt": "Projektör Modu: Cümledeki parlayan kelimenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Could you <strong>verify</strong> the research project?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "paragraph": "Could you verify the research project?",
+              "highlightChunk": "verify",
+              "options": [
+                "geliştirmek",
+                "değiştirmek",
+                "doğrulamak",
+                "yayınlamak"
+              ],
+              "correctIndex": 2,
+              "explanation": "\"verify\" kelimesi bu cümlede \"doğrulamak\" anlamına gelir."
+            },
+            {
+              "id": "u17l51_ex1_q9",
+              "type": "multiple-choice",
+              "prompt": "İfadenin Türkçe karşılığını seçiniz:<br><br><strong>\"Would you inspect the laboratory equipment?\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "options": [
+                "Laboratuvar ekipmanlarını denetler misiniz",
+                "Laboratuvar ekipmanlarını denetlemeyi tercih mi edersiniz",
+                "Laboratuvar ekipmanları denetlenecek mi",
+                "Laboratuvar ekipmanlarını denetlemenizi önerir miyim"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Would you inspect the laboratory equipment?",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex4_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Nitel öngörüleri iç yönetim kuruluna sunabilir misiniz?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "id": "u17l51_ex1_q10",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Bütçeyi analiz edebilir misiniz acaba?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "İktisat"],
+              "sentence": "I wonder if you ___ analyze the budget.",
               "options": [
-                "Could you inspect the entire underlying structural framework?",
-                "Would you optimize the automated background script for the summit?",
-                "Could you process the newly collected empirical data?",
-                "Could you present the qualitative insights to the internal board?"
+                "will",
+                "could",
+                "are",
+                "did"
+              ],
+              "correctIndex": 1,
+              "translation": "Bütçeyi analiz edebilir misiniz acaba?"
+            }
+          ]
+        },
+        {
+          "id": "u17l51ex2",
+          "title": "Alıştırma 2: Cümle Düzeyi",
+          "description": "Rica yapılarını içeren akademik cümlelerin analizi ve çevirisi (10 Soru)",
+          "questions": [
+            {
+              "id": "u17l51_ex2_q1",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Would you evaluate the psychological behavior of the patients under the supervision of the clinic?\"",
+              "grammarTags": ["Rica Yapıları", "İsim ve Edat Yapıları", "İsim Tamlamaları", "Psikoloji"],
+              "options": [
+                "Kliğin denetimi altında hastaların psikolojik davranışları değerlendirilmeli miydi?",
+                "Kliğin denetimi altında hastaların psikolojik davranışlarını değerlendirmiş miydiniz?",
+                "Klinik denetlendiğinde hastaların psikolojik davranışlarını değerlendirecek misiniz?",
+                "Kliğin denetimi altında hastaların psikolojik davranışlarını değerlendirir misiniz?"
               ],
               "correctIndex": 3,
-              "enSentence": "Could you present the qualitative insights to the internal board?",
+              "enSentence": "Would you evaluate the psychological behavior of the patients under the supervision of the clinic?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex2_q2",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Yaklaşan deney için laboratuvardaki eski ekipmanı değiştirebilir misiniz lütfen?\"",
+              "grammarTags": ["Rica Yapıları", "İsim ve Edat Yapıları", "Kimya/Fizik"],
+              "sentence": "___ you please replace the legacy equipment in the laboratory for the upcoming experiment?",
+              "options": [
+                "Could",
+                "Do",
+                "Are",
+                "Have"
+              ],
+              "correctIndex": 0,
+              "translation": "Yaklaşan deney için laboratuvardaki eski ekipmanı değiştirebilir misiniz lütfen?"
+            },
+            {
+              "id": "u17l51_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Sanat tarihi seminerinin bütçesini onaylayabilir misiniz acaba?\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sanat Tarihi"],
+              "options": [
+                "I wonder if you approved the budget of the art history seminar?",
+                "I wonder if you could approve the budget of the art history seminar?",
+                "I wonder if the budget of the art history seminar could be approved by you?",
+                "I wonder if you had approved the budget of the art history seminar?"
+              ],
+              "correctIndex": 1,
+              "enSentence": "I wonder if you could approve the budget of the art history seminar?",
               "isEngToTr": false
             },
             {
-              "id": "u17l57_ex4_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Could you update the system documentation regarding encryption?",
-              "words": [
-                "sistem",
-                "hafta",
-                "Şifrelemeyle",
-                "dokümantasyonunu",
-                "mısınız",
-                "ilgili",
-                "misiniz",
-                "yedekleyecek",
-                "güncelleyebilir"
-              ],
-              "correctOrder": [
-                "Şifrelemeyle",
-                "ilgili",
-                "sistem",
-                "dokümantasyonunu",
-                "güncelleyebilir",
-                "misiniz"
-              ],
-              "enSentence": "Could you update the system documentation regarding encryption?",
+              "id": "u17l51_ex2_q4",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Will you rewrite the legacy code of the communication system?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "İletişim"],
+              "correctSentence": "İletişim sisteminin eski kodunu yeniden yazacak mısınız?",
+              "enSentence": "Will you rewrite the legacy code of the communication system?",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex4_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l51_ex2_q5",
+              "type": "fill-blank-text",
+              "prompt": "Boşluğu uygun kelimeyle doldurun (İngilizce - Türkçe çeviri: Toplantıdan önce yeni araştırmacıların kimlik bilgilerini doğrulayabilir misiniz acaba?):",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "sentence": "I wonder if you ___ verify the credentials of the new researchers before the meeting.",
+              "correct": "could",
+              "enSentence": "I wonder if you could verify the credentials of the new researchers before the meeting."
+            },
+            {
+              "id": "u17l51_ex2_q6",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Could you please inspect the statistical findings of the sociological study?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "options": [
+                "Sosyolojik çalışmanın istatistiksel bulgularını denetleyebilir misiniz lütfen?",
+                "Sosyolojik çalışmanın istatistiksel bulguları denetlenmeli miydi lütfen?",
+                "Sosyolojik çalışmanın istatistiksel bulgularını denetlemeyi mi tercih edersiniz?",
+                "Sosyolojik çalışmanın istatistiksel bulgularını denetlemiş miydiniz lütfen?"
               ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Will you publish the dynamic sector breakdown next week?",
-              "words": [
-                "Dinamik",
-                "mısınız",
-                "yayınlayacak",
-                "Şifrelemeyle",
-                "sektör",
-                "gelecek",
-                "hafta",
-                "kırılımını",
-                "sistem",
-                "toplanan"
-              ],
-              "correctOrder": [
-                "Dinamik",
-                "sektör",
-                "kırılımını",
-                "gelecek",
-                "hafta",
-                "yayınlayacak",
-                "mısınız"
-              ],
-              "enSentence": "Will you publish the dynamic sector breakdown next week?",
+              "correctIndex": 0,
+              "enSentence": "Could you please inspect the statistical findings of the sociological study?",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex4_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you organize the qualitative database feedback files?",
-              "words": [
-                "düzenler",
-                "geri",
-                "dosyalarını",
-                "değiştirir",
-                "kırılımını",
-                "veritabanı",
-                "bildirim",
-                "Nitel",
-                "teknik",
-                "misiniz"
-              ],
-              "correctOrder": [
-                "Nitel",
-                "veritabanı",
-                "geri",
-                "bildirim",
-                "dosyalarını",
-                "düzenler",
-                "misiniz"
-              ],
-              "enSentence": "Would you organize the qualitative database feedback files?",
+              "id": "u17l51_ex2_q7",
+              "type": "fill-blank-text",
+              "prompt": "Boşluğu uygun kelimeyle doldurun (İngilizce): \"Sanat tarihi veritabanını güncelleyebilir misiniz acaba?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Sanat Tarihi"],
+              "sentence": "I wonder if you ___ update the art history database.",
+              "correct": "could",
+              "enSentence": "I wonder if you could update the art history database."
+            },
+            {
+              "id": "u17l51_ex2_q8",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Would you postpone the development of the psychological model?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Psikoloji"],
+              "correctSentence": "Psikolojik modelin geliştirilmesini erteler misiniz?",
+              "enSentence": "Would you postpone the development of the psychological model?",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex4_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l51_ex2_q9",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Araştırma bulgularını hakemli dergide yayınlar mısınız lütfen?\"",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Antropoloji"],
+              "sentence": "___ you please publish the research findings in the peer-reviewed journal?",
+              "options": [
+                "Do",
+                "Are",
+                "Could",
+                "Have"
               ],
+              "correctIndex": 2,
+              "translation": "Araştırma bulgularını hakemli dergide yayınlar mısınız lütfen?"
+            },
+            {
+              "id": "u17l51_ex2_q10",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Deney değişkenlerini yarın izleyebilir misiniz acaba?\"</strong>",
+              "grammarTags": ["Rica Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "options": [
+                "I wonder if you could monitor the experimental variables tomorrow?",
+                "I wonder if you had monitored the experimental variables tomorrow?",
+                "Do you mind if you monitor the experimental variables tomorrow?",
+                "Would you mind if I monitored the experimental variables tomorrow?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "I wonder if you could monitor the experimental variables tomorrow?",
+              "isEngToTr": false
+            }
+          ]
+        },
+        {
+          "id": "u17l51ex3",
+          "title": "Alıştırma 3: Akademik Sentez & Spiralleşme",
+          "description": "İleri düzey akademik cümleler ve geçmiş konuların tekrarı (10 Soru)",
+          "questions": [
+            {
+              "id": "u17l51_ex3_q1",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Merkezi bulut veritabanını bu gece yedekleyecek misiniz?",
-              "words": [
-                "tonight?",
-                "the centralized cloud database",
-                "Will you back up"
+              "prompt": "Kelimeleri doğru sıraya koyarak Türkçe çeviriyi oluşturunuz:",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim ve Edat Yapıları", "Arkeoloji"],
+              "translation": "Could you inspect the ancient artifacts recovered from the tomb during the archaeological excavation?",
+              "words": ["Arkeolojik", "kazı", "sırasında", "mezardan", "çıkarılan", "antik", "eserleri", "denetleyebilir", "misiniz", "başarı", "tarihi", "çözebilir"],
+              "correctOrder": ["Arkeolojik", "kazı", "sırasında", "mezardan", "çıkarılan", "antik", "eserleri", "denetleyebilir", "misiniz"],
+              "enSentence": "Could you inspect the ancient artifacts recovered from the tomb during the archaeological excavation?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"I wonder if you could modify the variables of the economic inflation model that was developed last term?\"",
+              "grammarTags": ["Rica Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "İktisat"],
+              "options": [
+                "Geçen dönem geliştirilen ekonomik enflasyon modelinin değişkenleri değiştirilmeli miydi acaba?",
+                "Geçen dönem geliştirilen ekonomik enflasyon modelinin değişkenlerini değiştirmeyi tercih eder miydiniz acaba?",
+                "Geçen dönem geliştirilen ekonomik enflasyon modelinin değişkenlerini değiştirebilir misiniz acaba?",
+                "Geçen dönem geliştirilen ekonomik enflasyon modelinin değişkenlerini değiştirdiğinizi merak ediyorum acaba?"
               ],
-              "correctOrder": [
-                "Will you back up",
-                "the centralized cloud database",
-                "tonight?"
-              ],
-              "enSentence": "Will you back up the centralized cloud database tonight?",
+              "correctIndex": 2,
+              "enSentence": "I wonder if you could modify the variables of the economic inflation model that was developed last term?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q3",
+              "type": "word-bank",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturunuz:",
+              "grammarTags": ["Rica Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "İktisat"],
+              "translation": "Dünkü toplantıya katılan kurul üyelerine bütçe raporunu sunabilir misiniz?",
+              "words": ["Could you present", "the budget report to the board members", "who attended yesterday's meeting?"],
+              "correctOrder": ["Could you present", "the budget report to the board members", "who attended yesterday's meeting?"],
+              "enSentence": "Could you present the budget report to the board members who attended yesterday's meeting?",
               "isEngToTr": false
             },
             {
-              "id": "u17l57_ex4_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l51_ex3_q4",
               "type": "translation-text",
-              "prompt": "\"Would you modify the parameters of the architectural framework?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Mimari çerçevenin parametrelerini değiştirir misiniz?",
-              "enSentence": "Would you modify the parameters of the architectural framework?",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"I wonder if you could verify the legislative claims published in the law journal?\"",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Hukuk"],
+              "correctSentence": "Hukuk dergisinde yayınlanan yasal iddiaları doğrulayabilir misiniz acaba?",
+              "enSentence": "I wonder if you could verify the legislative claims published in the law journal?",
               "isEngToTr": true
             },
             {
-              "id": "u17l57_ex4_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l51_ex3_q5",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Will you monitor the socio-economic trends affecting the local communication channels?\"",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "options": [
+                "Yerel iletişim kanallarını etkileyen sosyo-ekonomik eğilimlerin izlenmesini tercih eder miydiniz?",
+                "Yerel iletişim kanallarını etkileyen sosyo-ekonomik eğilimler izleniyor mu?",
+                "Yerel iletişim kanallarını etkileyen sosyo-ekonomik eğilimleri izlemiş miydiniz?",
+                "Yerel iletişim kanallarını etkileyen sosyo-ekonomik eğilimleri izleyecek misiniz?"
               ],
-              "type": "translation-text",
-              "prompt": "\"Could you process the newly collected empirical data?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yeni toplanan ampirik verileri işleyebilir misiniz?",
-              "enSentence": "Could you process the newly collected empirical data?",
+              "correctIndex": 3,
+              "enSentence": "Will you monitor the socio-economic trends affecting the local communication channels?",
               "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q6",
+              "type": "word-bank",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturunuz:",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "translation": "Laboratuvarda çalışan araştırmacılar için güvenlik kodunu güncelleyebilir misiniz?",
+              "words": ["Could you update", "the security code for the researchers", "working in the laboratory?"],
+              "correctOrder": ["Could you update", "the security code for the researchers", "working in the laboratory?"],
+              "enSentence": "Could you update the security code for the researchers working in the laboratory?",
+              "isEngToTr": false
+            },
+            {
+              "id": "u17l51_ex3_q7",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"I wonder if you could postpone the presentation of the art project that was scheduled for Friday?\"",
+              "grammarTags": ["Rica Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "Sanat Tarihi"],
+              "options": [
+                "Cuma günü için planlanan sanat projesinin sunumunu erteleyebilir misiniz acaba?",
+                "Cuma günü için planlanan sanat projesinin sunumunun ertelenmesini mi tercih ederdiniz acaba?",
+                "Cuma günü planlanan sanat projesinin sunumu ertelemeli miydi acaba?",
+                "Cuma günü planlanan sanat projesinin sunumunu ertelediğinizi merak ediyorum."
+              ],
+              "correctIndex": 0,
+              "enSentence": "I wonder if you could postpone the presentation of the art project that was scheduled for Friday?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q8",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Will you verify the sociological data collected from the local community during the project?\"",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "correctSentence": "Proje sırasında yerel topluluktan toplanan sosyolojik verileri doğrulayacak mısınız?",
+              "enSentence": "Will you verify the sociological data collected from the local community during the project?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q9",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya koyarak Türkçe çeviriyi oluşturunuz:",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim ve Edat Yapıları", "Sinema"],
+              "translation": "I wonder if you could inspect the historic cinema archives that document the early cultural movement?",
+              "words": ["Erken", "kültürel", "hareketi", "belgeleyen", "tarihi", "sinema", "arşivlerini", "denetleyebilir", "misiniz", "acaba", "tarih", "bilim", "başarı"],
+              "correctOrder": ["Erken", "kültürel", "hareketi", "belgeleyen", "tarihi", "sinema", "arşivlerini", "denetleyebilir", "misiniz", "acaba"],
+              "enSentence": "I wonder if you could inspect the historic cinema archives that document the early cultural movement?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l51_ex3_q10",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Komite tarafından hazırlanan bütçe teklifindeki değişkenleri değiştirebilir misiniz?\"</strong>",
+              "grammarTags": ["Rica Yapıları", "Participle Yapıları", "İsim Tamlamaları", "İktisat"],
+              "options": [
+                "Could you modify the variables in the budget proposal prepared by the committee?",
+                "Could you have modified the variables in the budget proposal prepared by the committee?",
+                "Could the variables in the budget proposal prepared by the committee be modified?",
+                "Will you be modifying the variables in the budget proposal prepared by the committee?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Could you modify the variables in the budget proposal prepared by the committee?",
+              "isEngToTr": false
             }
           ]
         }
       ]
     },
     "2": {
+      "title": "2. İzin İsteme Yapıları (Do / Would You Mind If I)",
+      "subtitle": "Kibarca izin isteme ve varsayımsal izin kalıpları",
+      "konuAnlatimi": {
+        "baslik": "İzin İsteme Yapıları Kılavuzu (Do / Would You Mind If I)",
+        "teorikMantik": "Bir eylemi gerçekleştirmek için kibarca izin isterken 'Do you mind if I' (şimdiki/geniş zaman) ve 'Would you mind if I' (daha varsayımsal/kibar geçmiş zaman) kalıpları kullanılır.",
+        "formul": "Do you mind if I + V1 (Permission)\nWould you mind if I + V2 (Permission)",
+        "altinKural": "• 'Do you mind if I' kalıbından sonra fiilin yalın hali (V1) gelir.\n• 'Would you mind if I' kalıbından sonra fiilin geçmiş zaman hali (V2) gelir."
+      },
       "exercises": [
         {
-          "id": "u17l58ex1",
-          "title": "Alıştırma 1: Akademik İnceleme 1",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
+          "id": "u17l52ex1",
+          "title": "Alıştırma 1: Öbek Düzeyi",
+          "description": "İzin isteme yapılarında kullanılan akademik öbekler ve kelime eşleştirmeleri (10 Soru)",
           "questions": [
             {
-              "id": "u17l58_ex1_match1",
+              "id": "u17l52_ex1_q1",
               "type": "matching",
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sinema/Hukuk"],
               "pairs": [
-                {
-                  "left": "entegre etmek",
-                  "right": "integrate"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                },
-                {
-                  "left": "güçlendirmek",
-                  "right": "reinforce"
-                },
-                {
-                  "left": "uygulamak",
-                  "right": "implement"
-                }
+                { "left": "do you mind if I examine the cinema archives", "right": "sinema arşivlerini incelememin bir sakıncası var mı" },
+                { "left": "would you mind if I analyzed the psychological data", "right": "psikolojik verileri analiz etmemin bir sakıncası olur muydu" },
+                { "left": "do you mind if I verify the legal credentials", "right": "yasal kimlik bilgilerini doğrulamamın bir sakıncası var mı" },
+                { "left": "would you mind if I modified the trade policy", "right": "ticaret politikasını değiştirmemin bir sakıncası olur muydu" }
               ]
             },
             {
-              "id": "u17l58_ex1_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "türetmek",
-                  "right": "derive"
-                },
-                {
-                  "left": "ince ayar yapmak",
-                  "right": "fine-tune"
-                },
-                {
-                  "left": "analiz etmek",
-                  "right": "analyze"
-                },
-                {
-                  "left": "açıklığa kavuşturmak",
-                  "right": "clarify"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l52_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"I wonder if you could organize a specialized local committee for the survey.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "prompt": "İfadenin Türkçe karşılığını seçiniz:<br><br><strong>\"Do you mind if I inspect the laboratory equipment?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
               "options": [
-                "Anket için uzmanlaşmış yerel bir komite düzenleyebilir misiniz acaba?",
-                "Kapsamlı yasal vergi reformunu uygulayabilir misiniz acaba?",
-                "Deneysel laboratuvar örneklerini yarın sabah değerlendirebilir misiniz acaba?",
-                "Tesisin merkezi beton çekirdeğini güçlendirebilir misiniz acaba?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "I wonder if you could organize a specialized local committee for the survey.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Karmaşık matematiksel veri oranlarını bugün hesaplayabilir misiniz acaba?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "I wonder if you could organize a specialized local committee for the survey.",
-                "I wonder if you could calculate the complex mathematical data ratios today.",
-                "I wonder if you could integrate these individual functional software modules.",
-                "I wonder if you could back up the system parameters before the test."
+                "Laboratuvar ekipmanlarını denetlememin bir sakıncası olur muydu?",
+                "Laboratuvar ekipmanlarını denetlememin bir sakıncası var mı?",
+                "Laboratuvar ekipmanlarının denetlenmesinin bir sakıncası var mı?",
+                "Laboratuvar ekipmanlarını denetlemeyi tercih eder misiniz?"
               ],
               "correctIndex": 1,
-              "enSentence": "I wonder if you could calculate the complex mathematical data ratios today.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex1_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could integrate these individual functional software modules.",
-              "words": [
-                "ayarlayabilir",
-                "Bu",
-                "entegre",
-                "modüllerini",
-                "için",
-                "beton",
-                "yazılım",
-                "bağımsız",
-                "edebilir",
-                "fonksiyonel",
-                "misiniz",
-                "acaba"
-              ],
-              "correctOrder": [
-                "Bu",
-                "bağımsız",
-                "fonksiyonel",
-                "yazılım",
-                "modüllerini",
-                "entegre",
-                "edebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could integrate these individual functional software modules.",
+              "enSentence": "Do you mind if I inspect the laboratory equipment?",
               "isEngToTr": true
             },
             {
-              "id": "u17l58_ex1_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could utilize advanced encryption algorithms to protect privacy.",
-              "words": [
-                "kullanabilir",
-                "acaba",
-                "Gizliliği",
-                "için",
-                "algoritmaları",
-                "misiniz",
-                "gelişmiş",
-                "korumak",
-                "olarak",
-                "plan",
-                "arka",
-                "şifreleme"
-              ],
-              "correctOrder": [
-                "Gizliliği",
-                "korumak",
-                "için",
-                "gelişmiş",
-                "şifreleme",
-                "algoritmaları",
-                "kullanabilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could utilize advanced encryption algorithms to protect privacy.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex1_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could reinforce the central concrete core of the facility.",
-              "words": [
-                "Tesisin",
-                "misiniz",
-                "acaba",
-                "güçlendirebilir",
-                "için",
-                "merkezi",
-                "çekirdeğini",
-                "beton",
-                "Bu",
-                "Anket"
-              ],
-              "correctOrder": [
-                "Tesisin",
-                "merkezi",
-                "beton",
-                "çekirdeğini",
-                "güçlendirebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could reinforce the central concrete core of the facility.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex1_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Otomatik arka plan kodunu dinamik olarak ince ayarlayabilir misiniz acaba?",
-              "words": [
-                "dynamically.",
-                "fine-tune the automated background script",
-                "I wonder if you could"
-              ],
-              "correctOrder": [
-                "I wonder if you could",
-                "fine-tune the automated background script",
-                "dynamically."
-              ],
-              "enSentence": "I wonder if you could fine-tune the automated background script dynamically.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could implement the comprehensive legislative tax reform.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kapsamlı yasal vergi reformunu uygulayabilir misiniz acaba?",
-              "enSentence": "I wonder if you could implement the comprehensive legislative tax reform.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could derive valuable qualitative insights from the database.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Veritabanından değerli nitel öngörüler çıkarabilir misiniz acaba?",
-              "enSentence": "I wonder if you could derive valuable qualitative insights from the database.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l58ex2",
-          "title": "Alıştırma 2: Akademik İnceleme 2",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l58_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "tasarım",
-                  "right": "design"
-                },
-                {
-                  "left": "kontrol edebilir misiniz acaba",
-                  "right": "check"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex2_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "yedeklemek",
-                  "right": "back up"
-                },
-                {
-                  "left": "entegre etmek",
-                  "right": "integrate"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                },
-                {
-                  "left": "güçlendirmek",
-                  "right": "reinforce"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex2_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"I wonder if you could implement the comprehensive legislative tax reform.\" cümlesinin Türkçe karşılığı hangisidir?",
+              "id": "u17l52_ex1_q3",
+              "type": "spotlight",
+              "prompt": "Projektör Modu: Cümledeki parlayan kelimenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Would you mind if I <strong>postponed</strong> the seminar?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim ve Edat Yapıları", "Sosyoloji"],
+              "paragraph": "Would you mind if I postponed the seminar?",
+              "highlightChunk": "postponed",
               "options": [
-                "Deneysel laboratuvar örneklerini yarın sabah değerlendirebilir misiniz acaba?",
-                "Anket için uzmanlaşmış yerel bir komite düzenleyebilir misiniz acaba?",
-                "Veritabanından değerli nitel öngörüler çıkarabilir misiniz acaba?",
-                "Kapsamlı yasal vergi reformunu uygulayabilir misiniz acaba?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "I wonder if you could implement the comprehensive legislative tax reform.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Veritabanından değerli nitel öngörüler çıkarabilir misiniz acaba?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "I wonder if you could clarify the investigative project scope to the team.",
-                "I wonder if you could derive valuable qualitative insights from the database.",
-                "I wonder if you could analyze the historical system logs of the server.",
-                "I wonder if you could organize a specialized local committee for the survey."
-              ],
-              "correctIndex": 1,
-              "enSentence": "I wonder if you could derive valuable qualitative insights from the database.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex2_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could evaluate the experimental laboratory samples tomorrow morning.",
-              "words": [
-                "acaba",
-                "Bu",
-                "laboratuvar",
-                "sabah",
-                "yarın",
-                "örneklerini",
-                "Deneysel",
-                "Testten",
-                "değerlendirebilir",
-                "nitel",
-                "misiniz"
-              ],
-              "correctOrder": [
-                "Deneysel",
-                "laboratuvar",
-                "örneklerini",
-                "yarın",
-                "sabah",
-                "değerlendirebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could evaluate the experimental laboratory samples tomorrow morning.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex2_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could process these qualitative survey metrics immediately.",
-              "words": [
-                "işleyebilir",
-                "acaba",
-                "misiniz",
-                "nitel",
-                "yasal",
-                "Bu",
-                "derhal",
-                "ölçümlerini",
-                "için",
-                "Kapsamlı",
-                "anket"
-              ],
-              "correctOrder": [
-                "Bu",
-                "nitel",
-                "anket",
-                "ölçümlerini",
-                "derhal",
-                "işleyebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could process these qualitative survey metrics immediately.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex2_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could design a new architectural framework for our project.",
-              "words": [
-                "çerçeve",
-                "ölçümlerini",
-                "acaba",
-                "Projemiz",
-                "mimari",
-                "için",
-                "bir",
-                "misiniz",
-                "tasarlayabilir",
-                "yeni",
-                "laboratuvar",
-                "Bu"
-              ],
-              "correctOrder": [
-                "Projemiz",
-                "için",
-                "yeni",
-                "bir",
-                "mimari",
-                "çerçeve",
-                "tasarlayabilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could design a new architectural framework for our project.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex2_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Bu bağımsız fonksiyonel yazılım modüllerini entegre edebilir misiniz acaba?",
-              "words": [
-                "functional software modules.",
-                "integrate these individual",
-                "I wonder if you could"
-              ],
-              "correctOrder": [
-                "I wonder if you could",
-                "integrate these individual",
-                "functional software modules."
-              ],
-              "enSentence": "I wonder if you could integrate these individual functional software modules.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could check the server communication protocols tonight.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Sunucu iletişim protokollerini bu gece kontrol edebilir misiniz acaba?",
-              "enSentence": "I wonder if you could check the server communication protocols tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could back up the system parameters before the test.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Testten önce sistem parametrelerini yedekleyebilir misiniz acaba?",
-              "enSentence": "I wonder if you could back up the system parameters before the test.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l58ex3",
-          "title": "Alıştırma 3: Akademik İnceleme 3",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l58_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "ince ayar yapmak",
-                  "right": "fine-tune"
-                },
-                {
-                  "left": "analiz etmek",
-                  "right": "analyze"
-                },
-                {
-                  "left": "açıklığa kavuşturmak",
-                  "right": "clarify"
-                },
-                {
-                  "left": "düzenleyebilir misiniz acaba",
-                  "right": "organize"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex3_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "hesaplamak",
-                  "right": "calculate"
-                },
-                {
-                  "left": "değerlendirmek",
-                  "right": "evaluate"
-                },
-                {
-                  "left": "işlemek",
-                  "right": "process"
-                },
-                {
-                  "left": "tasarım",
-                  "right": "design"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex3_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"I wonder if you could check the server communication protocols tonight.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Testten önce sistem parametrelerini yedekleyebilir misiniz acaba?",
-                "Sunucunun geçmiş sistem günlüklerini analiz edebilir misiniz acaba?",
-                "Projemiz için yeni bir mimari çerçeve tasarlayabilir misiniz acaba?",
-                "Sunucu iletişim protokollerini bu gece kontrol edebilir misiniz acaba?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "I wonder if you could check the server communication protocols tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Testten önce sistem parametrelerini yedekleyebilir misiniz acaba?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "I wonder if you could back up the system parameters before the test.",
-                "I wonder if you could analyze the historical system logs of the server.",
-                "I wonder if you could process these qualitative survey metrics immediately.",
-                "I wonder if you could integrate these individual functional software modules."
-              ],
-              "correctIndex": 0,
-              "enSentence": "I wonder if you could back up the system parameters before the test.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex3_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could fine-tune the automated background script dynamically.",
-              "words": [
-                "bir",
-                "ince",
-                "plan",
-                "ayarlayabilir",
-                "acaba",
-                "misiniz",
-                "arka",
-                "dinamik",
-                "kodunu",
-                "Otomatik",
-                "gece",
-                "olarak",
-                "Sunucu"
-              ],
-              "correctOrder": [
-                "Otomatik",
-                "arka",
-                "plan",
-                "kodunu",
-                "dinamik",
-                "olarak",
-                "ince",
-                "ayarlayabilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could fine-tune the automated background script dynamically.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex3_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could analyze the historical system logs of the server.",
-              "words": [
-                "edebilir",
-                "geçmiş",
-                "misiniz",
-                "sistem",
-                "Araştırma",
-                "acaba",
-                "günlüklerini",
-                "analiz",
-                "Otomatik",
-                "Sunucunun",
-                "iletişim"
-              ],
-              "correctOrder": [
-                "Sunucunun",
-                "geçmiş",
-                "sistem",
-                "günlüklerini",
-                "analiz",
-                "edebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could analyze the historical system logs of the server.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex3_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could clarify the investigative project scope to the team.",
-              "words": [
-                "ekibe",
-                "Araştırma",
-                "bu",
-                "açıklayabilir",
-                "projesinin",
-                "kapsamını",
-                "protokollerini",
-                "iletişim",
-                "misiniz",
-                "acaba"
-              ],
-              "correctOrder": [
-                "Araştırma",
-                "projesinin",
-                "kapsamını",
-                "ekibe",
-                "açıklayabilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could clarify the investigative project scope to the team.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex3_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Deneysel laboratuvar örneklerini yarın sabah değerlendirebilir misiniz acaba?",
-              "words": [
-                "I wonder if you could",
-                "evaluate the experimental laboratory samples",
-                "tomorrow morning."
-              ],
-              "correctOrder": [
-                "I wonder if you could",
-                "evaluate the experimental laboratory samples",
-                "tomorrow morning."
-              ],
-              "enSentence": "I wonder if you could evaluate the experimental laboratory samples tomorrow morning.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could organize a specialized local committee for the survey.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Anket için uzmanlaşmış yerel bir komite düzenleyebilir misiniz acaba?",
-              "enSentence": "I wonder if you could organize a specialized local committee for the survey.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could calculate the complex mathematical data ratios today.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Karmaşık matematiksel veri oranlarını bugün hesaplayabilir misiniz acaba?",
-              "enSentence": "I wonder if you could calculate the complex mathematical data ratios today.",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l58ex4",
-          "title": "Alıştırma 4: Akademik İnceleme 4",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l58_ex4_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "tasarım",
-                  "right": "design"
-                },
-                {
-                  "left": "kontrol edebilir misiniz acaba",
-                  "right": "check"
-                },
-                {
-                  "left": "yedeklemek",
-                  "right": "back up"
-                },
-                {
-                  "left": "entegre etmek",
-                  "right": "integrate"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex4_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                },
-                {
-                  "left": "güçlendirmek",
-                  "right": "reinforce"
-                },
-                {
-                  "left": "uygulamak",
-                  "right": "implement"
-                },
-                {
-                  "left": "türetmek",
-                  "right": "derive"
-                }
-              ]
-            },
-            {
-              "id": "u17l58_ex4_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"I wonder if you could fine-tune the automated background script dynamically.\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Araştırma projesinin kapsamını ekibe açıklayabilir misiniz acaba?",
-                "Kapsamlı yasal vergi reformunu uygulayabilir misiniz acaba?",
-                "Anket için uzmanlaşmış yerel bir komite düzenleyebilir misiniz acaba?",
-                "Otomatik arka plan kodunu dinamik olarak ince ayarlayabilir misiniz acaba?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "I wonder if you could fine-tune the automated background script dynamically.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex4_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Sunucunun geçmiş sistem günlüklerini analiz edebilir misiniz acaba?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "I wonder if you could clarify the investigative project scope to the team.",
-                "I wonder if you could integrate these individual functional software modules.",
-                "I wonder if you could design a new architectural framework for our project.",
-                "I wonder if you could analyze the historical system logs of the server."
-              ],
-              "correctIndex": 3,
-              "enSentence": "I wonder if you could analyze the historical system logs of the server.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex4_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could design a new architectural framework for our project.",
-              "words": [
-                "tasarlayabilir",
-                "çerçeve",
-                "misiniz",
-                "mimari",
-                "bir",
-                "Testten",
-                "yeni",
-                "Otomatik",
-                "şifreleme",
-                "için",
-                "acaba",
-                "Projemiz"
-              ],
-              "correctOrder": [
-                "Projemiz",
-                "için",
-                "yeni",
-                "bir",
-                "mimari",
-                "çerçeve",
-                "tasarlayabilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could design a new architectural framework for our project.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex4_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could check the server communication protocols tonight.",
-              "words": [
-                "şifreleme",
-                "Sunucu",
-                "algoritmaları",
-                "edebilir",
-                "Testten",
-                "misiniz",
-                "iletişim",
-                "protokollerini",
-                "bu",
-                "gece",
-                "kontrol",
-                "acaba"
-              ],
-              "correctOrder": [
-                "Sunucu",
-                "iletişim",
-                "protokollerini",
-                "bu",
-                "gece",
-                "kontrol",
-                "edebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could check the server communication protocols tonight.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex4_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "I wonder if you could back up the system parameters before the test.",
-              "words": [
-                "yedekleyebilir",
-                "olarak",
-                "sistem",
-                "Otomatik",
-                "önce",
-                "misiniz",
-                "tasarlayabilir",
-                "parametrelerini",
-                "Testten",
-                "acaba"
-              ],
-              "correctOrder": [
-                "Testten",
-                "önce",
-                "sistem",
-                "parametrelerini",
-                "yedekleyebilir",
-                "misiniz",
-                "acaba"
-              ],
-              "enSentence": "I wonder if you could back up the system parameters before the test.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex4_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Tesisin merkezi beton çekirdeğini güçlendirebilir misiniz acaba?",
-              "words": [
-                "reinforce the central concrete core",
-                "I wonder if you could",
-                "of the facility."
-              ],
-              "correctOrder": [
-                "I wonder if you could",
-                "reinforce the central concrete core",
-                "of the facility."
-              ],
-              "enSentence": "I wonder if you could reinforce the central concrete core of the facility.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l58_ex4_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could integrate these individual functional software modules.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu bağımsız fonksiyonel yazılım modüllerini entegre edebilir misiniz acaba?",
-              "enSentence": "I wonder if you could integrate these individual functional software modules.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l58_ex4_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"I wonder if you could utilize advanced encryption algorithms to protect privacy.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Gizliliği korumak için gelişmiş şifreleme algoritmaları kullanabilir misiniz acaba?",
-              "enSentence": "I wonder if you could utilize advanced encryption algorithms to protect privacy.",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "3": {
-      "exercises": [
-        {
-          "id": "u17l59ex1",
-          "title": "Alıştırma 1: Akademik İnceleme 1",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l59_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "tekrar kontrol etmek",
-                  "right": "double-check"
-                },
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                },
-                {
-                  "left": "takip etmek",
-                  "right": "follow"
-                },
-                {
-                  "left": "mevcut",
-                  "right": "present"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex1_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "izlemek",
-                  "right": "monitor"
-                },
-                {
-                  "left": "paylaşmamın",
-                  "right": "share"
-                },
-                {
-                  "left": "tahsis etmek",
-                  "right": "allocate"
-                },
-                {
-                  "left": "denetlemek",
-                  "right": "inspect"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Do you mind if I restructure the centralized cloud database parameters?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Bu detaylı ampirik girdileri danışmanlarla paylaşmamın bir sakıncası var mı?",
-                "Yönetim kuruluna alternatif bir araştırma metodolojisi sunmamın bir sakıncası var mı?",
-                "Gizli politika belgelerini bugün okumamın bir sakıncası var mı?",
-                "Merkezi bulut veritabanı parametrelerini yeniden yapılandırmamın bir sakıncası var mı?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Do you mind if I restructure the centralized cloud database parameters?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Platforma çok faktörlü biyometrik doğrulama getirmemin bir sakıncası var mı?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Do you mind if I utilize the laboratory testing console tonight?",
-                "Do you mind if I follow the strict institutional policy during the audit?",
-                "Do you mind if I update the corporate regulations on user data privacy?",
-                "Do you mind if I introduce multi-factor biometric authentication to the platform?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Do you mind if I introduce multi-factor biometric authentication to the platform?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex1_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I double-check the statistical calculations of the project?",
-              "words": [
-                "hesaplamalarını",
-                "kuruluna",
-                "istatistiksel",
-                "mı",
-                "veritabanı",
-                "kontrol",
-                "Projenin",
-                "var",
-                "bir",
-                "detaylı",
-                "etmemin",
-                "sakıncası",
-                "tekrar"
-              ],
-              "correctOrder": [
-                "Projenin",
-                "istatistiksel",
-                "hesaplamalarını",
-                "tekrar",
-                "kontrol",
-                "etmemin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I double-check the statistical calculations of the project?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex1_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I update the corporate regulations on user data privacy?",
-              "words": [
-                "izlememin",
-                "güncellememin",
-                "Kullanıcı",
-                "düzenlemeleri",
-                "gizliliğine",
-                "var",
-                "sakıncası",
-                "mı",
-                "Bu",
-                "ilişkin",
-                "bir",
-                "kurumsal",
-                "parametrelerini",
-                "veri"
-              ],
-              "correctOrder": [
-                "Kullanıcı",
-                "veri",
-                "gizliliğine",
-                "ilişkin",
-                "kurumsal",
-                "düzenlemeleri",
-                "güncellememin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I update the corporate regulations on user data privacy?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex1_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I follow the strict institutional policy during the audit?",
-              "words": [
-                "politikayı",
-                "takip",
-                "kurumsal",
-                "mı",
-                "Denetim",
-                "sakıncası",
-                "parametrelerini",
-                "ampirik",
-                "bir",
-                "sırasında",
-                "var",
-                "Merkezi",
-                "sıkı",
-                "etmemin"
-              ],
-              "correctOrder": [
-                "Denetim",
-                "sırasında",
-                "sıkı",
-                "kurumsal",
-                "politikayı",
-                "takip",
-                "etmemin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I follow the strict institutional policy during the audit?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex1_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Bu detaylı ampirik girdileri danışmanlarla paylaşmamın bir sakıncası var mı?",
-              "words": [
-                "with the consultants?",
-                "share these detailed empirical inputs",
-                "Do you mind if I"
-              ],
-              "correctOrder": [
-                "Do you mind if I",
-                "share these detailed empirical inputs",
-                "with the consultants?"
-              ],
-              "enSentence": "Do you mind if I share these detailed empirical inputs with the consultants?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I present an alternative research methodology to the board?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yönetim kuruluna alternatif bir araştırma metodolojisi sunmamın bir sakıncası var mı?",
-              "enSentence": "Do you mind if I present an alternative research methodology to the board?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I monitor the continuous chemical process this afternoon?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu öğleden sonra sürekli kimyasal süreci izlememin bir sakıncası var mı?",
-              "enSentence": "Do you mind if I monitor the continuous chemical process this afternoon?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l59ex2",
-          "title": "Alıştırma 2: Akademik İnceleme 2",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l59_ex2_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "analiz etmek",
-                  "right": "analyze"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                },
-                {
-                  "left": "okumak",
-                  "right": "read"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex2_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                },
-                {
-                  "left": "tekrar kontrol etmek",
-                  "right": "double-check"
-                },
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                },
-                {
-                  "left": "takip etmek",
-                  "right": "follow"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex2_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Do you mind if I present an alternative research methodology to the board?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Bu detaylı ampirik girdileri danışmanlarla paylaşmamın bir sakıncası var mı?",
-                "Yönetim kuruluna alternatif bir araştırma metodolojisi sunmamın bir sakıncası var mı?",
-                "Kullanıcı veri gizliliğine ilişkin kurumsal düzenlemeleri güncellememin bir sakıncası var mı?",
-                "Bu öğleden sonra sürekli kimyasal süreci izlememin bir sakıncası var mı?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Do you mind if I present an alternative research methodology to the board?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Bu öğleden sonra sürekli kimyasal süreci izlememin bir sakıncası var mı?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Do you mind if I double-check the statistical calculations of the project?",
-                "Do you mind if I analyze the automated system error logs now?",
-                "Do you mind if I monitor the continuous chemical process this afternoon?",
-                "Do you mind if I publish these qualitative research results next month?"
+                "iptal etmemin",
+                "ertelememden",
+                "ertelememin",
+                "hızlandırmamın"
               ],
               "correctIndex": 2,
-              "enSentence": "Do you mind if I monitor the continuous chemical process this afternoon?",
-              "isEngToTr": false
+              "explanation": "\"postponed\" kelimesinin bu cümledeki anlamı \"ertelememin\" şeklindedir."
             },
             {
-              "id": "u17l59_ex2_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I modify the underlying parameters of the framework?",
-              "words": [
-                "istatistiksel",
-                "yatan",
-                "sakıncası",
-                "altta",
-                "belgelerini",
-                "mı",
-                "şimdi",
-                "var",
-                "bir",
-                "Çerçevenin",
-                "parametrelerini",
-                "değiştirmemin"
-              ],
-              "correctOrder": [
-                "Çerçevenin",
-                "altta",
-                "yatan",
-                "parametrelerini",
-                "değiştirmemin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I modify the underlying parameters of the framework?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex2_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I analyze the automated system error logs now?",
-              "words": [
-                "şimdi",
-                "bir",
-                "etmemin",
-                "günlüklerini",
-                "Yönetim",
-                "Otomatik",
-                "hata",
-                "sistem",
-                "analiz",
-                "var",
-                "sakıncası",
-                "kuruluna",
-                "Bu",
-                "mı"
-              ],
-              "correctOrder": [
-                "Otomatik",
-                "sistem",
-                "hata",
-                "günlüklerini",
-                "şimdi",
-                "analiz",
-                "etmemin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I analyze the automated system error logs now?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex2_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I publish these qualitative research results next month?",
-              "words": [
-                "sonuçlarını",
-                "bir",
-                "nitel",
-                "ay",
-                "mı",
-                "kullanmamın",
-                "konsolunu",
-                "sakıncası",
-                "Bu",
-                "gelecek",
-                "araştırma",
-                "var",
-                "yayınlamamın",
-                "test"
-              ],
-              "correctOrder": [
-                "Bu",
-                "nitel",
-                "araştırma",
-                "sonuçlarını",
-                "gelecek",
-                "ay",
-                "yayınlamamın",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I publish these qualitative research results next month?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex2_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Projenin istatistiksel hesaplamalarını tekrar kontrol etmemin bir sakıncası var mı?",
-              "words": [
-                "Do you mind if I",
-                "double-check the statistical calculations",
-                "of the project?"
-              ],
-              "correctOrder": [
-                "Do you mind if I",
-                "double-check the statistical calculations",
-                "of the project?"
-              ],
-              "enSentence": "Do you mind if I double-check the statistical calculations of the project?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I read the confidential policy documents today?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Gizli politika belgelerini bugün okumamın bir sakıncası var mı?",
-              "enSentence": "Do you mind if I read the confidential policy documents today?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I utilize the laboratory testing console tonight?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu gece laboratuvar test konsolunu kullanmamın bir sakıncası var mı?",
-              "enSentence": "Do you mind if I utilize the laboratory testing console tonight?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l59ex3",
-          "title": "Alıştırma 3: Akademik İnceleme 3",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l59_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "paylaşmamın",
-                  "right": "share"
-                },
-                {
-                  "left": "tahsis etmek",
-                  "right": "allocate"
-                },
-                {
-                  "left": "denetlemek",
-                  "right": "inspect"
-                },
-                {
-                  "left": "yeniden yapılandırmak",
-                  "right": "restructure"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex3_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "tanıtmak",
-                  "right": "introduce"
-                },
-                {
-                  "left": "değiştirmek",
-                  "right": "modify"
-                },
-                {
-                  "left": "analiz etmek",
-                  "right": "analyze"
-                },
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex3_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l52_ex1_q4",
               "type": "multiple-choice",
-              "prompt": "\"Do you mind if I read the confidential policy documents today?\" cümlesinin Türkçe karşılığı hangisidir?",
+              "prompt": "İfadenin İngilizce karşılığını seçiniz:<br><br><strong>\"Hassas araştırma bulgularını yayınlamamın bir sakıncası olur muydu?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
               "options": [
-                "Gizli politika belgelerini bugün okumamın bir sakıncası var mı?",
-                "Otomatik sistem hata günlüklerini şimdi analiz etmemin bir sakıncası var mı?",
-                "Bu gece laboratuvar test konsolunu kullanmamın bir sakıncası var mı?",
-                "Bu nitel araştırma sonuçlarını gelecek ay yayınlamamın bir sakıncası var mı?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Do you mind if I read the confidential policy documents today?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Bu gece laboratuvar test konsolunu kullanmamın bir sakıncası var mı?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Do you mind if I follow the strict institutional policy during the audit?",
-                "Do you mind if I utilize the laboratory testing console tonight?",
-                "Do you mind if I update the corporate regulations on user data privacy?",
-                "Do you mind if I restructure the centralized cloud database parameters?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Do you mind if I utilize the laboratory testing console tonight?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex3_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I share these detailed empirical inputs with the consultants?",
-              "words": [
-                "danışmanlarla",
-                "girdileri",
-                "kaynağı",
-                "sakıncası",
-                "Bu",
-                "mı",
-                "var",
-                "Gizli",
-                "detaylı",
-                "paylaşmamın",
-                "bir",
-                "ampirik",
-                "bulut"
-              ],
-              "correctOrder": [
-                "Bu",
-                "detaylı",
-                "ampirik",
-                "girdileri",
-                "danışmanlarla",
-                "paylaşmamın",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I share these detailed empirical inputs with the consultants?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex3_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I allocate maximum annual manufacturing resources to our sector?",
-              "words": [
-                "bir",
-                "etmemin",
-                "önce",
-                "tahsis",
-                "maksimum",
-                "tesisi",
-                "var",
-                "sakıncası",
-                "kaynağı",
-                "üretim",
-                "Sektörümüze",
-                "bulut",
-                "mı",
-                "yıllık"
-              ],
-              "correctOrder": [
-                "Sektörümüze",
-                "maksimum",
-                "yıllık",
-                "üretim",
-                "kaynağı",
-                "tahsis",
-                "etmemin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I allocate maximum annual manufacturing resources to our sector?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex3_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I inspect the modern industrial facility before the summit?",
-              "words": [
-                "politika",
-                "Zirveden",
-                "önce",
-                "denetlememin",
-                "modern",
-                "yeniden",
-                "tesisi",
-                "endüstriyel",
-                "sakıncası",
-                "mı",
-                "bir",
-                "bugün",
-                "var"
-              ],
-              "correctOrder": [
-                "Zirveden",
-                "önce",
-                "modern",
-                "endüstriyel",
-                "tesisi",
-                "denetlememin",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I inspect the modern industrial facility before the summit?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex3_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Çerçevenin altta yatan parametrelerini değiştirmemin bir sakıncası var mı?",
-              "words": [
-                "modify the underlying parameters",
-                "Do you mind if I",
-                "of the framework?"
-              ],
-              "correctOrder": [
-                "Do you mind if I",
-                "modify the underlying parameters",
-                "of the framework?"
-              ],
-              "enSentence": "Do you mind if I modify the underlying parameters of the framework?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I restructure the centralized cloud database parameters?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Merkezi bulut veritabanı parametrelerini yeniden yapılandırmamın bir sakıncası var mı?",
-              "enSentence": "Do you mind if I restructure the centralized cloud database parameters?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I introduce multi-factor biometric authentication to the platform?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Platforma çok faktörlü biyometrik doğrulama getirmemin bir sakıncası var mı?",
-              "enSentence": "Do you mind if I introduce multi-factor biometric authentication to the platform?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l59ex4",
-          "title": "Alıştırma 4: Akademik İnceleme 4",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l59_ex4_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "yayınlamak",
-                  "right": "publish"
-                },
-                {
-                  "left": "okumak",
-                  "right": "read"
-                },
-                {
-                  "left": "kullanmak",
-                  "right": "utilize"
-                },
-                {
-                  "left": "tekrar kontrol etmek",
-                  "right": "double-check"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex4_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "güncellemek",
-                  "right": "update"
-                },
-                {
-                  "left": "takip etmek",
-                  "right": "follow"
-                },
-                {
-                  "left": "mevcut",
-                  "right": "present"
-                },
-                {
-                  "left": "izlemek",
-                  "right": "monitor"
-                }
-              ]
-            },
-            {
-              "id": "u17l59_ex4_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Do you mind if I share these detailed empirical inputs with the consultants?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Bu detaylı ampirik girdileri danışmanlarla paylaşmamın bir sakıncası var mı?",
-                "Projenin istatistiksel hesaplamalarını tekrar kontrol etmemin bir sakıncası var mı?",
-                "Bu gece laboratuvar test konsolunu kullanmamın bir sakıncası var mı?",
-                "Otomatik sistem hata günlüklerini şimdi analiz etmemin bir sakıncası var mı?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Do you mind if I share these detailed empirical inputs with the consultants?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex4_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Sektörümüze maksimum yıllık üretim kaynağı tahsis etmemin bir sakıncası var mı?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Do you mind if I monitor the continuous chemical process this afternoon?",
-                "Do you mind if I allocate maximum annual manufacturing resources to our sector?",
-                "Do you mind if I introduce multi-factor biometric authentication to the platform?",
-                "Do you mind if I restructure the centralized cloud database parameters?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Do you mind if I allocate maximum annual manufacturing resources to our sector?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex4_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I publish these qualitative research results next month?",
-              "words": [
-                "danışmanlarla",
-                "Bu",
-                "ay",
-                "yayınlamamın",
-                "nitel",
-                "veri",
-                "sonuçlarını",
-                "var",
-                "mı",
-                "sakıncası",
-                "etmemin",
-                "bir",
-                "gelecek",
-                "araştırma"
-              ],
-              "correctOrder": [
-                "Bu",
-                "nitel",
-                "araştırma",
-                "sonuçlarını",
-                "gelecek",
-                "ay",
-                "yayınlamamın",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I publish these qualitative research results next month?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex4_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I read the confidential policy documents today?",
-              "words": [
-                "sakıncası",
-                "bir",
-                "istatistiksel",
-                "Bu",
-                "belgelerini",
-                "okumamın",
-                "mı",
-                "var",
-                "bugün",
-                "politika",
-                "Gizli",
-                "sonuçlarını"
-              ],
-              "correctOrder": [
-                "Gizli",
-                "politika",
-                "belgelerini",
-                "bugün",
-                "okumamın",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I read the confidential policy documents today?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex4_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Do you mind if I utilize the laboratory testing console tonight?",
-              "words": [
-                "test",
-                "Bu",
-                "Gizli",
-                "hesaplamalarını",
-                "laboratuvar",
-                "konsolunu",
-                "sakıncası",
-                "bir",
-                "girdileri",
-                "var",
-                "kullanmamın",
-                "gece",
-                "mı"
-              ],
-              "correctOrder": [
-                "Bu",
-                "gece",
-                "laboratuvar",
-                "test",
-                "konsolunu",
-                "kullanmamın",
-                "bir",
-                "sakıncası",
-                "var",
-                "mı"
-              ],
-              "enSentence": "Do you mind if I utilize the laboratory testing console tonight?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex4_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Denetim sırasında sıkı kurumsal politikayı takip etmemin bir sakıncası var mı?",
-              "words": [
-                "follow the strict institutional policy",
-                "Do you mind if I",
-                "during the audit?"
-              ],
-              "correctOrder": [
-                "Do you mind if I",
-                "follow the strict institutional policy",
-                "during the audit?"
-              ],
-              "enSentence": "Do you mind if I follow the strict institutional policy during the audit?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l59_ex4_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I double-check the statistical calculations of the project?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Projenin istatistiksel hesaplamalarını tekrar kontrol etmemin bir sakıncası var mı?",
-              "enSentence": "Do you mind if I double-check the statistical calculations of the project?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l59_ex4_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Do you mind if I update the corporate regulations on user data privacy?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Kullanıcı veri gizliliğine ilişkin kurumsal düzenlemeleri güncellememin bir sakıncası var mı?",
-              "enSentence": "Do you mind if I update the corporate regulations on user data privacy?",
-              "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "4": {
-      "exercises": [
-        {
-          "id": "u17l60ex1",
-          "title": "Alıştırma 1: Akademik İnceleme 1",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l60_ex1_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "paylaşılan",
-                  "right": "shared"
-                },
-                {
-                  "left": "erişim",
-                  "right": "access"
-                },
-                {
-                  "left": "tasarladı",
-                  "right": "designed"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex1_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "uygulamaya konuldu",
-                  "right": "introduced"
-                },
-                {
-                  "left": "kullanılmış",
-                  "right": "utilized"
-                },
-                {
-                  "left": "ince ayar yapılmış",
-                  "right": "fine-tuned"
-                },
-                {
-                  "left": "genişletilmiş",
-                  "right": "expanded"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex1_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Would you mind if I conducted exhaustive digital database surveys this weekend?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Otomatik arka plan kodunu yarın ince ayarlamamın bir sakıncası olur muydu?",
-                "Veritabanı optimizasyonu için güvenli ağ alanına erişmemin bir sakıncası olur muydu?",
-                "Geçmiş sistem günlüklerini değerlendirme komitesiyle paylaşmamın bir sakıncası olur muydu?",
-                "Bu hafta sonu kapsamlı dijital veritabanı anketleri yürütmemin bir sakıncası olur muydu?"
+                "Do you mind if I publish the sensitive research findings?",
+                "Would you mind if the sensitive research findings were published by me?",
+                "I wonder if I could publish the sensitive research findings?",
+                "Would you mind if I published the sensitive research findings?"
               ],
               "correctIndex": 3,
-              "enSentence": "Would you mind if I conducted exhaustive digital database surveys this weekend?",
-              "isEngToTr": true
+              "enSentence": "Would you mind if I published the sensitive research findings?",
+              "isEngToTr": false
             },
             {
-              "id": "u17l60_ex1_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Yarın modern laboratuvar ekipmanlarını denetlememin bir sakıncası olur muydu?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "id": "u17l52_ex1_q5",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Gelecek toplantıda bütçe teklifini sunmamın bir sakıncası var mı?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İktisat"],
+              "sentence": "Do you ___ if I submit the budget proposal in the next meeting?",
               "options": [
-                "Would you mind if I inspected the modern laboratory equipment tomorrow?",
-                "Would you mind if I conducted exhaustive digital database surveys this weekend?",
-                "Would you mind if I published the annual evaluation insights today?",
-                "Would you mind if I designed a new architectural framework for our cloud?"
+                "mind",
+                "care",
+                "want",
+                "wish"
               ],
               "correctIndex": 0,
-              "enSentence": "Would you mind if I inspected the modern laboratory equipment tomorrow?",
-              "isEngToTr": false
+              "translation": "Gelecek toplantıda bütçe teklifini sunmamın bir sakıncası var mı?"
             },
             {
-              "id": "u17l60_ex1_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I shared the historical system logs with the evaluation committee?",
-              "words": [
-                "Geçmiş",
-                "sistem",
-                "sakıncası",
-                "muydu",
-                "kapsamlı",
-                "gelişmiş",
-                "olur",
-                "Bu",
-                "değerlendirme",
-                "komitesiyle",
-                "bir",
-                "paylaşmamın",
-                "günlüklerini"
-              ],
-              "correctOrder": [
-                "Geçmiş",
-                "sistem",
-                "günlüklerini",
-                "değerlendirme",
-                "komitesiyle",
-                "paylaşmamın",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I shared the historical system logs with the evaluation committee?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex1_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I accessed the secure network area for database optimization?",
-              "words": [
-                "optimizasyonu",
-                "Veritabanı",
-                "tasarlamamın",
-                "sonu",
-                "güvenli",
-                "erişmemin",
-                "için",
-                "sakıncası",
-                "olur",
-                "muydu",
-                "bir",
-                "veritabanı",
-                "ağ",
-                "alanına"
-              ],
-              "correctOrder": [
-                "Veritabanı",
-                "optimizasyonu",
-                "için",
-                "güvenli",
-                "ağ",
-                "alanına",
-                "erişmemin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I accessed the secure network area for database optimization?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex1_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I designed a new architectural framework for our cloud?",
-              "words": [
-                "sakıncası",
-                "için",
-                "çerçeve",
-                "Zirve",
-                "yeni",
-                "muydu",
-                "Bulutumuz",
-                "olur",
-                "bir",
-                "mimari",
-                "tasarlamamın",
-                "bir",
-                "yürütmemin",
-                "Geçmiş"
-              ],
-              "correctOrder": [
-                "Bulutumuz",
-                "için",
-                "yeni",
-                "bir",
-                "mimari",
-                "çerçeve",
-                "tasarlamamın",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I designed a new architectural framework for our cloud?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex1_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Bu modülde gelişmiş şifreleme algoritmaları kullanmamın bir sakıncası olur muydu?",
-              "words": [
-                "Would you mind if I",
-                "utilized advanced encryption algorithms",
-                "in this module?"
-              ],
-              "correctOrder": [
-                "Would you mind if I",
-                "utilized advanced encryption algorithms",
-                "in this module?"
-              ],
-              "enSentence": "Would you mind if I utilized advanced encryption algorithms in this module?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l60_ex1_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I evaluated the regional educational surveys ahead of schedule?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bölgesel eğitim anketlerini planlanandan önce değerlendirmemin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I evaluated the regional educational surveys ahead of schedule?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex1_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I introduced strict policy changes during the summit?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Zirve sırasında sıkı politika değişiklikleri getirmemin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I introduced strict policy changes during the summit?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l60ex2",
-          "title": "Alıştırma 2: Akademik İnceleme 2",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l60_ex2_match1",
+              "id": "u17l52_ex1_q6",
               "type": "matching",
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İletişim"],
               "pairs": [
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                },
-                {
-                  "left": "işlenmiş",
-                  "right": "processed"
-                },
-                {
-                  "left": "güncellenmiş",
-                  "right": "updated"
-                },
-                {
-                  "left": "yayınladı",
-                  "right": "published"
-                }
+                { "left": "do you mind if I update the code", "right": "kodu güncellememin bir sakıncası var mı" },
+                { "left": "would you mind if I checked the report", "right": "raporu kontrol etmemin bir sakıncası olur muydu" },
+                { "left": "do you mind if I analyze the budget", "right": "bütçeyi analiz etmemin bir sakıncası var mı" },
+                { "left": "would you mind if I monitored the project", "right": "projeyi izlememin bir sakıncası olur muydu" }
               ]
             },
             {
-              "id": "u17l60_ex2_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "paylaşılan",
-                  "right": "shared"
-                },
-                {
-                  "left": "erişim",
-                  "right": "access"
-                },
-                {
-                  "left": "tasarladı",
-                  "right": "designed"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex2_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l52_ex1_q7",
               "type": "multiple-choice",
-              "prompt": "\"Would you mind if I evaluated the regional educational surveys ahead of schedule?\" cümlesinin Türkçe karşılığı hangisidir?",
+              "prompt": "İfadenin İngilizce karşılığını seçiniz:<br><br><strong>\"Bulguları doğrulamamın bir sakıncası var mı?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
               "options": [
-                "Yarın modern laboratuvar ekipmanlarını denetlememin bir sakıncası olur muydu?",
-                "Bölgesel eğitim anketlerini planlanandan önce değerlendirmemin bir sakıncası olur muydu?",
-                "Bu modülde gelişmiş şifreleme algoritmaları kullanmamın bir sakıncası olur muydu?",
-                "Bu gece merkezi veritabanı parametrelerini kontrol etmemin bir sakıncası olur muydu?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Would you mind if I evaluated the regional educational surveys ahead of schedule?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex2_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Zirve sırasında sıkı politika değişiklikleri getirmemin bir sakıncası olur muydu?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Would you mind if I fine-tuned the automated background script tomorrow?",
-                "Would you mind if I conducted exhaustive digital database surveys this weekend?",
-                "Would you mind if I utilized advanced encryption algorithms in this module?",
-                "Would you mind if I introduced strict policy changes during the summit?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Would you mind if I introduced strict policy changes during the summit?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l60_ex2_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I resolved the server network anomaly immediately?",
-              "words": [
-                "çözmemin",
-                "sakıncası",
-                "muydu",
-                "anomalisini",
-                "derhal",
-                "Sunucu",
-                "oranlarını",
-                "öngörülerini",
-                "olur",
-                "ağ",
-                "bir",
-                "gece"
-              ],
-              "correctOrder": [
-                "Sunucu",
-                "ağ",
-                "anomalisini",
-                "derhal",
-                "çözmemin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I resolved the server network anomaly immediately?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex2_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I processed the empirical data ratios next week?",
-              "words": [
-                "veri",
-                "bir",
-                "Gelecek",
-                "işlememin",
-                "hafta",
-                "olur",
-                "ampirik",
-                "ağ",
-                "derhal",
-                "gece",
-                "oranlarını",
-                "muydu",
-                "sakıncası"
-              ],
-              "correctOrder": [
-                "Gelecek",
-                "hafta",
-                "ampirik",
-                "veri",
-                "oranlarını",
-                "işlememin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I processed the empirical data ratios next week?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex2_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I updated the security parameters of the application?",
-              "words": [
-                "sakıncası",
-                "parametrelerini",
-                "güncellememin",
-                "güvenlik",
-                "muydu",
-                "veri",
-                "bir",
-                "Ugulamanın",
-                "olur",
-                "gece",
-                "öngörülerini"
-              ],
-              "correctOrder": [
-                "Ugulamanın",
-                "güvenlik",
-                "parametrelerini",
-                "güncellememin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I updated the security parameters of the application?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex2_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Geçmiş sistem günlüklerini değerlendirme komitesiyle paylaşmamın bir sakıncası olur muydu?",
-              "words": [
-                "shared the historical system logs",
-                "Would you mind if I",
-                "with the evaluation committee?"
-              ],
-              "correctOrder": [
-                "Would you mind if I",
-                "shared the historical system logs",
-                "with the evaluation committee?"
-              ],
-              "enSentence": "Would you mind if I shared the historical system logs with the evaluation committee?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l60_ex2_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I published the annual evaluation insights today?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yıllık değerlendirme öngörülerini bugün yayınlamamın bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I published the annual evaluation insights today?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex2_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I checked the centralized database parameters tonight?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu gece merkezi veritabanı parametrelerini kontrol etmemin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I checked the centralized database parameters tonight?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l60ex3",
-          "title": "Alıştırma 3: Akademik İnceleme 3",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l60_ex3_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "kullanılmış",
-                  "right": "utilized"
-                },
-                {
-                  "left": "ince ayar yapılmış",
-                  "right": "fine-tuned"
-                },
-                {
-                  "left": "genişletilmiş",
-                  "right": "expanded"
-                },
-                {
-                  "left": "yürüttü",
-                  "right": "conducted"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex3_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "incelenen",
-                  "right": "inspected"
-                },
-                {
-                  "left": "çözüldü",
-                  "right": "resolved"
-                },
-                {
-                  "left": "işlenmiş",
-                  "right": "processed"
-                },
-                {
-                  "left": "güncellenmiş",
-                  "right": "updated"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex3_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Would you mind if I published the annual evaluation insights today?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Geçmiş sistem günlüklerini değerlendirme komitesiyle paylaşmamın bir sakıncası olur muydu?",
-                "Yıllık değerlendirme öngörülerini bugün yayınlamamın bir sakıncası olur muydu?",
-                "Gelecek hafta ampirik veri oranlarını işlememin bir sakıncası olur muydu?",
-                "Zirve sırasında sıkı politika değişiklikleri getirmemin bir sakıncası olur muydu?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Would you mind if I published the annual evaluation insights today?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex3_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Bu gece merkezi veritabanı parametrelerini kontrol etmemin bir sakıncası olur muydu?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Would you mind if I shared the historical system logs with the evaluation committee?",
-                "Would you mind if I introduced strict policy changes during the summit?",
-                "Would you mind if I inspected the modern laboratory equipment tomorrow?",
-                "Would you mind if I checked the centralized database parameters tonight?"
-              ],
-              "correctIndex": 3,
-              "enSentence": "Would you mind if I checked the centralized database parameters tonight?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l60_ex3_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I utilized advanced encryption algorithms in this module?",
-              "words": [
-                "Bu",
-                "modülde",
-                "kullanmamın",
-                "gelişmiş",
-                "muydu",
-                "Otomatik",
-                "ekipmanlarını",
-                "bir",
-                "olur",
-                "algoritmaları",
-                "sakıncası",
-                "şifreleme",
-                "ince"
-              ],
-              "correctOrder": [
-                "Bu",
-                "modülde",
-                "gelişmiş",
-                "şifreleme",
-                "algoritmaları",
-                "kullanmamın",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I utilized advanced encryption algorithms in this module?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex3_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I fine-tuned the automated background script tomorrow?",
-              "words": [
-                "ince",
-                "ayarlamamın",
-                "Otomatik",
-                "muydu",
-                "olur",
-                "arka",
-                "plan",
-                "ekipmanlarını",
-                "kodunu",
-                "bir",
-                "yarın",
-                "bugün",
-                "sakıncası",
-                "kapsamlı"
-              ],
-              "correctOrder": [
-                "Otomatik",
-                "arka",
-                "plan",
-                "kodunu",
-                "yarın",
-                "ince",
-                "ayarlamamın",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I fine-tuned the automated background script tomorrow?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex3_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I expanded the investigative project scope slightly?",
-              "words": [
-                "olur",
-                "muydu",
-                "dijital",
-                "biraz",
-                "Araştırma",
-                "projesi",
-                "genişletmemin",
-                "Otomatik",
-                "sakıncası",
-                "bir",
-                "Yıllık",
-                "kapsamını"
-              ],
-              "correctOrder": [
-                "Araştırma",
-                "projesi",
-                "kapsamını",
-                "biraz",
-                "genişletmemin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I expanded the investigative project scope slightly?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex3_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Sunucu ağ anomalisini derhal çözmemin bir sakıncası olur muydu?",
-              "words": [
-                "Would you mind if I",
-                "immediately?",
-                "resolved the server network anomaly"
-              ],
-              "correctOrder": [
-                "Would you mind if I",
-                "resolved the server network anomaly",
-                "immediately?"
-              ],
-              "enSentence": "Would you mind if I resolved the server network anomaly immediately?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u17l60_ex3_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I conducted exhaustive digital database surveys this weekend?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Bu hafta sonu kapsamlı dijital veritabanı anketleri yürütmemin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I conducted exhaustive digital database surveys this weekend?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex3_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I inspected the modern laboratory equipment tomorrow?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Yarın modern laboratuvar ekipmanlarını denetlememin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I inspected the modern laboratory equipment tomorrow?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u17l60ex4",
-          "title": "Alıştırma 4: Akademik İnceleme 4",
-          "description": "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
-          "questions": [
-            {
-              "id": "u17l60_ex4_match1",
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "güncellenmiş",
-                  "right": "updated"
-                },
-                {
-                  "left": "yayınladı",
-                  "right": "published"
-                },
-                {
-                  "left": "kontrol etti",
-                  "right": "checked"
-                },
-                {
-                  "left": "paylaşılan",
-                  "right": "shared"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex4_match2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "matching",
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-              "pairs": [
-                {
-                  "left": "erişim",
-                  "right": "access"
-                },
-                {
-                  "left": "tasarladı",
-                  "right": "designed"
-                },
-                {
-                  "left": "değerlendirilmiş",
-                  "right": "evaluated"
-                },
-                {
-                  "left": "uygulamaya konuldu",
-                  "right": "introduced"
-                }
-              ]
-            },
-            {
-              "id": "u17l60_ex4_mc_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Would you mind if I utilized advanced encryption algorithms in this module?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "options": [
-                "Yarın modern laboratuvar ekipmanlarını denetlememin bir sakıncası olur muydu?",
-                "Bu modülde gelişmiş şifreleme algoritmaları kullanmamın bir sakıncası olur muydu?",
-                "Bu gece merkezi veritabanı parametrelerini kontrol etmemin bir sakıncası olur muydu?",
-                "Bölgesel eğitim anketlerini planlanandan önce değerlendirmemin bir sakıncası olur muydu?"
-              ],
-              "correctIndex": 1,
-              "enSentence": "Would you mind if I utilized advanced encryption algorithms in this module?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex4_mc_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "multiple-choice",
-              "prompt": "\"Otomatik arka plan kodunu yarın ince ayarlamamın bir sakıncası olur muydu?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "options": [
-                "Would you mind if I fine-tuned the automated background script tomorrow?",
-                "Would you mind if I designed a new architectural framework for our cloud?",
-                "Would you mind if I conducted exhaustive digital database surveys this weekend?",
-                "Would you mind if I updated the security parameters of the application?"
+                "Do you mind if I verify the findings?",
+                "Would you mind if I verify the findings?",
+                "Do you mind if I verified the findings?",
+                "I wonder if I could verify the findings?"
               ],
               "correctIndex": 0,
-              "enSentence": "Would you mind if I fine-tuned the automated background script tomorrow?",
+              "enSentence": "Do you mind if I verify the findings?",
               "isEngToTr": false
             },
             {
-              "id": "u17l60_ex4_bs_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I updated the security parameters of the application?",
-              "words": [
-                "Ugulamanın",
-                "muydu",
-                "günlüklerini",
-                "güvenlik",
-                "güncellememin",
-                "bir",
-                "sakıncası",
-                "parametrelerini",
-                "olur",
-                "modülde",
-                "şifreleme"
-              ],
-              "correctOrder": [
-                "Ugulamanın",
-                "güvenlik",
-                "parametrelerini",
-                "güncellememin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I updated the security parameters of the application?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u17l60_ex4_bs_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I published the annual evaluation insights today?",
-              "words": [
-                "sakıncası",
+              "id": "u17l52_ex1_q8",
+              "type": "spotlight",
+              "prompt": "Projektör Modu: Cümledeki parlayan kelimenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Would you mind if I <strong>published</strong> the book?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Tarih"],
+              "paragraph": "Would you mind if I published the book?",
+              "highlightChunk": "published",
+              "options": [
                 "yayınlamamın",
-                "kontrol",
-                "Yıllık",
-                "bugün",
-                "şifreleme",
-                "bir",
-                "değerlendirme",
-                "olur",
-                "komitesiyle",
-                "öngörülerini",
-                "muydu"
+                "yayınlamamdan",
+                "yazmamın",
+                "okumamın"
               ],
-              "correctOrder": [
-                "Yıllık",
-                "değerlendirme",
-                "öngörülerini",
-                "bugün",
-                "yayınlamamın",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
+              "correctIndex": 0,
+              "explanation": "\"published\" kelimesinin bu cümledeki anlamı \"yayınlamamın\" şeklindedir."
+            },
+            {
+              "id": "u17l52_ex1_q9",
+              "type": "multiple-choice",
+              "prompt": "İfadenin Türkçe karşılığını seçiniz:<br><br><strong>\"Do you mind if I inspect the database?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İletişim"],
+              "options": [
+                "Veritabanını denetlememin bir sakıncası var mı?",
+                "Veritabanını denetlememin bir sakıncası olur muydu?",
+                "Veritabanını denetlemeyi mi tercih edersiniz?",
+                "Veritabanını denetleyecek misiniz?"
               ],
-              "enSentence": "Would you mind if I published the annual evaluation insights today?",
+              "correctIndex": 0,
+              "enSentence": "Do you mind if I inspect the database?",
               "isEngToTr": true
             },
             {
-              "id": "u17l60_ex4_bs_2",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l52_ex1_q10",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Toplantıyı ertelememin bir sakıncası olur muydu?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Hukuk"],
+              "sentence": "___ you mind if I postponed the meeting?",
+              "options": [
+                "Do",
+                "Would",
+                "Could",
+                "Should"
               ],
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Would you mind if I checked the centralized database parameters tonight?",
-              "words": [
-                "modülde",
-                "veritabanı",
-                "muydu",
-                "merkezi",
-                "olur",
-                "etmemin",
-                "kontrol",
-                "bugün",
-                "bir",
-                "parametrelerini",
-                "güvenlik",
-                "sakıncası",
-                "gece",
-                "Bu"
+              "correctIndex": 1,
+              "translation": "Toplantıyı ertelememin bir sakıncası olur muydu?"
+            }
+          ]
+        },
+        {
+          "id": "u17l52ex2",
+          "title": "Alıştırma 2: Cümle Düzeyi",
+          "description": "İzin isteme yapılarını içeren akademik cümlelerin analizi ve çevirisi (10 Soru)",
+          "questions": [
+            {
+              "id": "u17l52_ex2_q1",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Would you mind if I evaluated the results of the archaeological study before the conference?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim ve Edat Yapıları", "İsim Tamlamaları", "Arkeoloji"],
+              "options": [
+                "Konferanstan önce arkeolojik çalışmanın sonuçlarını değerlendirmemin bir sakıncası olur muydu?",
+                "Konferanstan önce arkeolojik çalışmanın sonuçlarını değerlendirmemin bir sakıncası var mı?",
+                "Konferanstan önce arkeolojik çalışmanın sonuçlarının değerlendirilmesini mi isterdiniz?",
+                "Konferanstan önce arkeolojik çalışmanın sonuçlarını değerlendirmiş miydiniz?"
               ],
-              "correctOrder": [
-                "Bu",
-                "gece",
-                "merkezi",
-                "veritabanı",
-                "parametrelerini",
-                "kontrol",
-                "etmemin",
-                "bir",
-                "sakıncası",
-                "olur",
-                "muydu"
-              ],
-              "enSentence": "Would you mind if I checked the centralized database parameters tonight?",
+              "correctIndex": 0,
+              "enSentence": "Would you mind if I evaluated the results of the archaeological study before the conference?",
               "isEngToTr": true
             },
             {
-              "id": "u17l60_ex4_bs_3",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l52_ex2_q2",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Veritabanı güvenlik sisteminin eski kodunu yeniden yazmamın bir sakıncası olur muydu?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İletişim"],
+              "sentence": "___ you mind if I rewrote the legacy code of the database security system?",
+              "options": [
+                "Would",
+                "Do",
+                "Could",
+                "Will"
               ],
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını (anlamlı kelime gruplarını) doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Bulutumuz için yeni bir mimari çerçeve tasarlamamın bir sakıncası olur muydu?",
-              "words": [
-                "for our cloud?",
-                "designed a new architectural framework",
-                "Would you mind if I"
+              "correctIndex": 0,
+              "translation": "Veritabanı güvenlik sisteminin eski kodunu yeniden yazmamın bir sakıncası olur muydu?"
+            },
+            {
+              "id": "u17l52_ex2_q3",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Sosyoloji seminerini gelecek haftaya ertelememin bir sakıncası var mı?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "options": [
+                "Would you mind if I postponed the sociology seminar until next week?",
+                "Do you mind if the sociology seminar is postponed until next week?",
+                "I wonder if I could postpone the sociology seminar until next week?",
+                "Do you mind if I postpone the sociology seminar until next week?"
               ],
-              "correctOrder": [
-                "Would you mind if I",
-                "designed a new architectural framework",
-                "for our cloud?"
-              ],
-              "enSentence": "Would you mind if I designed a new architectural framework for our cloud?",
+              "correctIndex": 3,
+              "enSentence": "Do you mind if I postpone the sociology seminar until next week?",
               "isEngToTr": false
             },
             {
-              "id": "u17l60_ex4_tx_0",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
-              ],
+              "id": "u17l52_ex2_q4",
               "type": "translation-text",
-              "prompt": "\"Would you mind if I shared the historical system logs with the evaluation committee?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Geçmiş sistem günlüklerini değerlendirme komitesiyle paylaşmamın bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I shared the historical system logs with the evaluation committee?",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Do you mind if I modify the parameters of the communication device?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İletişim"],
+              "correctSentence": "İletişim cihazının parametrelerini değiştirmemin bir sakıncası var mı?",
+              "enSentence": "Do you mind if I modify the parameters of the communication device?",
               "isEngToTr": true
             },
             {
-              "id": "u17l60_ex4_tx_1",
-              "grammarTags": [
-                "There Yapıları",
-                "Var / Yok İfadeleri"
+              "id": "u17l52_ex2_q5",
+              "type": "fill-blank-text",
+              "prompt": "Boşluğu uygun kelimeyle doldurun (İngilizce): \"Parlamentonun tarihi belgelerini denetlememin bir sakıncası olur muydu?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Tarih/Hukuk"],
+              "sentence": "Would you ___ if I inspected the historical documents of the parliament?",
+              "correct": "mind",
+              "enSentence": "Would you mind if I inspected the historical documents of the parliament?"
+            },
+            {
+              "id": "u17l52_ex2_q6",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Do you mind if I modify the variables in the laboratory software?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "options": [
+                "Laboratuvar yazılımındaki değişkenleri değiştirmemin bir sakıncası var mı?",
+                "Laboratuvar yazılımındaki değişkenleri değiştirmemin bir sakıncası olur muydu?",
+                "Laboratuvar yazılımındaki değişkenleri değiştirmeyi tercih mi edersiniz?",
+                "Laboratuvar yazılımındaki değişkenleri değiştirebilir miyim acaba?"
               ],
-              "type": "translation-text",
-              "prompt": "\"Would you mind if I accessed the secure network area for database optimization?\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Veritabanı optimizasyonu için güvenli ağ alanına erişmemin bir sakıncası olur muydu?",
-              "enSentence": "Would you mind if I accessed the secure network area for database optimization?",
+              "correctIndex": 0,
+              "enSentence": "Do you mind if I modify the variables in the laboratory software?",
               "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex2_q7",
+              "type": "fill-blank-text",
+              "prompt": "Boşluğu uygun kelimeyle doldurun (İngilizce): \"Yeni projeyi izlememin bir sakıncası olur muydu?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "sentence": "Would you ___ if I monitored the new project?",
+              "correct": "mind",
+              "enSentence": "Would you mind if I monitored the new project?"
+            },
+            {
+              "id": "u17l52_ex2_q8",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Do you mind if I check the budget report before the presentation?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İktisat"],
+              "correctSentence": "Sunumdan önce bütçe raporunu kontrol etmemin bir sakıncası var mı?",
+              "enSentence": "Do you mind if I check the budget report before the presentation?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex2_q9",
+              "type": "fill-blank-dropdown",
+              "prompt": "Cümleyi tamamlayın: \"Eski veritabanını güncellememin bir sakıncası olur muydu?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "İletişim"],
+              "sentence": "Would you mind if I ___ the legacy database?",
+              "options": [
+                "update",
+                "updated",
+                "updating",
+                "updates"
+              ],
+              "correctIndex": 1,
+              "translation": "Eski veritabanını güncellememin bir sakıncası olur muydu?"
+            },
+            {
+              "id": "u17l52_ex2_q10",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Sosyolojik araştırmanın bulgularını yayınlamamın bir sakıncası var mı?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
+              "options": [
+                "Do you mind if I publish the findings of the sociological research?",
+                "Would you mind if I published the findings of the sociological research?",
+                "Do you mind if I published the findings of the sociological research?",
+                "Would you mind if I publish the findings of the sociological research?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Do you mind if I publish the findings of the sociological research?",
+              "isEngToTr": false
+            }
+          ]
+        },
+        {
+          "id": "u17l52ex3",
+          "title": "Alıştırma 3: Akademik Sentez & Spiralleşme",
+          "description": "İleri düzey akademik izin isteme cümleleri ve geçmiş konuların tekrarı (10 Soru)",
+          "questions": [
+            {
+              "id": "u17l52_ex3_q1",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya koyarak Türkçe çeviriyi oluşturunuz:",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim ve Edat Yapıları", "İktisat"],
+              "translation": "Would you mind if I monitored the economic variables affecting the regional inflation rate?",
+              "words": ["Bölgesel", "enflasyon", "oranını", "etkileyen", "ekonomik", "değişkenleri", "izlememin", "bir", "sakıncası", "olur", "muydu", "ve", "tarih", "başarı"],
+              "correctOrder": ["Bölgesel", "enflasyon", "oranını", "etkileyen", "ekonomik", "değişkenleri", "izlememin", "bir", "sakıncası", "olur", "muydu"],
+              "enSentence": "Would you mind if I monitored the economic variables affecting the regional inflation rate?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q2",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Do you mind if I verify the legal credentials of the scholars who are conducting the research since last month?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "Hukuk"],
+              "options": [
+                "Geçen aydan beri araştırmayı yürüten akademisyenlerin yasal kimlik bilgilerini doğrulamanın bir sakıncası var mı?",
+                "Geçen aydan beri araştırmayı yürüten akademisyenlerin yasal kimlik bilgilerini doğrulamanın bir sakıncası olur muydu?",
+                "Geçen aydan beri araştırmayı yürüten akademisyenlerin yasal kimlik bilgilerinin doğrulanmasını mı tercih ederdiniz?",
+                "Geçen aydan beri araştırmayı yürüten akademisyenlerin yasal kimlik bilgilerini doğrulamış mıydınız?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Do you mind if I verify the legal credentials of the scholars who are conducting the research since last month?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q3",
+              "type": "word-bank",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturunuz:",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim ve Edat Yapıları", "Arkeoloji"],
+              "translation": "Arşivde korunan antik belgeleri incelememin bir sakıncası var mı?",
+              "words": ["Do you mind if I", "examine the ancient documents", "preserved in the archive?"],
+              "correctOrder": ["Do you mind if I", "examine the ancient documents", "preserved in the archive?"],
+              "enSentence": "Do you mind if I examine the ancient documents preserved in the archive?",
+              "isEngToTr": false
+            },
+            {
+              "id": "u17l52_ex3_q4",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Would you mind if I replaced the legacy software used in the art history database?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Sanat Tarihi"],
+              "correctSentence": "Sanat tarihi veritabanında kullanılan eski yazılımı değiştirmemin bir sakıncası olur muydu?",
+              "enSentence": "Would you mind if I replaced the legacy software used in the art history database?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q5",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Do you mind if I postpone the committee meeting until the board members approve the budget?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "Hukuk/İktisat"],
+              "options": [
+                "Yönetim kurulu üyeleri bütçeyi onaylayana kadar komite toplantısını ertelememin bir sakıncası olur muydu?",
+                "Yönetim kurulu üyeleri bütçeyi onaylayana kadar komite toplantısını ertelememin bir sakıncası var mı?",
+                "Yönetim kurulu üyeleri bütçeyi onayladığı için komite toplantısını ertelemeyi tercih eder miydiniz?",
+                "Yönetim kurulu üyeleri bütçeyi onayladığında komite toplantısını ertelemiş miydiniz?"
+              ],
+              "correctIndex": 1,
+              "enSentence": "Do you mind if I postpone the committee meeting until the board members approve the budget?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q6",
+              "type": "word-bank",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturunuz:",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Psikoloji"],
+              "translation": "Dönem boyunca toplanan psikolojik verileri analiz etmemin bir sakıncası olur muydu?",
+              "words": ["Would you mind if I", "analyzed the psychological data", "collected during the term?"],
+              "correctOrder": ["Would you mind if I", "analyzed the psychological data", "collected during the term?"],
+              "enSentence": "Would you mind if I analyzed the psychological data collected during the term?",
+              "isEngToTr": false
+            },
+            {
+              "id": "u17l52_ex3_q7",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçiniz:<br><br>\"Do you mind if I verify the trade policy documents that were signed by the committee yesterday?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "Zaman Uyumu", "İsim Tamlamaları", "İktisat"],
+              "options": [
+                "Dün komite tarafından imzalanan ticaret politikası belgelerini doğrulamamın bir sakıncası var mı?",
+                "Dün komite tarafından imzalanan ticaret politikası belgelerini doğrulamamın bir sakıncası olur muydu?",
+                "Dün komite tarafından imzalanan ticaret politikası belgelerini doğrulamayı tercih mi edersiniz?",
+                "Dün komite tarafından imzalanan ticaret politikası belgelerini doğruladınız mı?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Do you mind if I verify the trade policy documents that were signed by the committee yesterday?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q8",
+              "type": "translation-text",
+              "prompt": "Cümleyi Türkçe'ye çeviriniz:<br><br>\"Would you mind if I inspected the cinema archives that were classified last year?\"",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Sinema"],
+              "correctSentence": "Geçen yıl sınıflandırılan sinema arşivlerini denetlememin bir sakıncası olur muydu?",
+              "enSentence": "Would you mind if I inspected the cinema archives that were classified last year?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q9",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya koyarak Türkçe çeviriyi oluşturunuz:",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim ve Edat Yapıları", "Sanat Tarihi"],
+              "translation": "Do you mind if I postpone the presentation of the art project which is currently being updated?",
+              "words": ["Şu", "anda", "güncellenmekte", "olan", "sanat", "projesinin", "sunumunu", "ertelememin", "bir", "sakıncası", "var", "mı", "ve", "başarı", "tarihi"],
+              "correctOrder": ["Şu", "anda", "güncellenmekte", "olan", "sanat", "projesinin", "sunumunu", "ertelememin", "bir", "sakıncası", "var", "mı"],
+              "enSentence": "Do you mind if I postpone the presentation of the art project which is currently being updated?",
+              "isEngToTr": true
+            },
+            {
+              "id": "u17l52_ex3_q10",
+              "type": "multiple-choice",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Laboratuvar deneyinden elde edilen bulguları rapor etmemin bir sakıncası olur muydu?\"</strong>",
+              "grammarTags": ["İzin İsteme Yapıları", "Participle Yapıları", "İsim Tamlamaları", "Kimya/Fizik"],
+              "options": [
+                "Would you mind if I reported the findings obtained from the laboratory experiment?",
+                "Do you mind if I report the findings obtained from the laboratory experiment?",
+                "Would you mind if I report the findings obtained from the laboratory experiment?",
+                "Do you mind if I reported the findings obtained from the laboratory experiment?"
+              ],
+              "correctIndex": 0,
+              "enSentence": "Would you mind if I reported the findings obtained from the laboratory experiment?",
+              "isEngToTr": false
             }
           ]
         }
       ]
     }
-  },
-  "19": {
+  },  "19": {
     "1": {
       "exercises": [
         {
@@ -83826,6 +80689,18 @@ if (typeof rawTopics !== 'undefined') {
     if (!t22.edits) t22.edits = [];
     t22.edits.push({
       date: "2026-07-28T01:25:00+03:00",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      type: "custom"
+    });
+  }
+}
+
+if (typeof rawTopics !== 'undefined') {
+  const t17 = rawTopics.find(t => t.id === 17);
+  if (t17) {
+    if (!t17.edits) t17.edits = [];
+    t17.edits.push({
+      date: "2026-08-01T12:30:00+03:00",
       desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
       type: "custom"
     });
