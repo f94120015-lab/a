@@ -6145,6 +6145,126 @@ span[style*="color:#339af0"] * {
   font-weight: bold !important;
 }
 
+/* ─── Conjunction Highlight Styles for Section 29 ─────────── */
+.conjunction-highlight,
+.conjunction-highlight .hoverable-word,
+.conjunction-highlight * {
+  border-bottom: none !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #6366f1"] .hoverable-word,
+span[style*="color:#6366f1"] .hoverable-word,
+span[style*="color: #6366f1"] *,
+span[style*="color:#6366f1"] * {
+  color: #6366f1 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #10b981"] .hoverable-word,
+span[style*="color:#10b981"] .hoverable-word,
+span[style*="color: #10b981"] *,
+span[style*="color:#10b981"] * {
+  color: #10b981 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #f59e0b"] .hoverable-word,
+span[style*="color:#f59e0b"] .hoverable-word,
+span[style*="color: #f59e0b"] *,
+span[style*="color:#f59e0b"] * {
+  color: #f59e0b !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #ec4899"] .hoverable-word,
+span[style*="color:#ec4899"] .hoverable-word,
+span[style*="color: #ec4899"] *,
+span[style*="color:#ec4899"] * {
+  color: #ec4899 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #06b6d4"] .hoverable-word,
+span[style*="color:#06b6d4"] .hoverable-word,
+span[style*="color: #06b6d4"] *,
+span[style*="color:#06b6d4"] * {
+  color: #06b6d4 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #f43f5e"] .hoverable-word,
+span[style*="color:#f43f5e"] .hoverable-word,
+span[style*="color: #f43f5e"] *,
+span[style*="color:#f43f5e"] * {
+  color: #f43f5e !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #e11d48"] .hoverable-word,
+span[style*="color:#e11d48"] .hoverable-word,
+span[style*="color: #e11d48"] *,
+span[style*="color:#e11d48"] * {
+  color: #e11d48 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #d97706"] .hoverable-word,
+span[style*="color:#d97706"] .hoverable-word,
+span[style*="color: #d97706"] *,
+span[style*="color:#d97706"] * {
+  color: #d97706 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #8b5cf6"] .hoverable-word,
+span[style*="color:#8b5cf6"] .hoverable-word,
+span[style*="color: #8b5cf6"] *,
+span[style*="color:#8b5cf6"] * {
+  color: #8b5cf6 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #14b8a6"] .hoverable-word,
+span[style*="color:#14b8a6"] .hoverable-word,
+span[style*="color: #14b8a6"] *,
+span[style*="color:#14b8a6"] * {
+  color: #14b8a6 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #3b82f6"] .hoverable-word,
+span[style*="color:#3b82f6"] .hoverable-word,
+span[style*="color: #3b82f6"] *,
+span[style*="color:#3b82f6"] * {
+  color: #3b82f6 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #a855f7"] .hoverable-word,
+span[style*="color:#a855f7"] .hoverable-word,
+span[style*="color: #a855f7"] *,
+span[style*="color:#a855f7"] * {
+  color: #a855f7 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #ef4444"] .hoverable-word,
+span[style*="color:#ef4444"] .hoverable-word,
+span[style*="color: #ef4444"] *,
+span[style*="color:#ef4444"] * {
+  color: #ef4444 !important;
+  font-weight: 800 !important;
+}
+
+span[style*="color: #f97316"] .hoverable-word,
+span[style*="color:#f97316"] .hoverable-word,
+span[style*="color: #f97316"] *,
+span[style*="color:#f97316"] * {
+  color: #f97316 !important;
+  font-weight: 800 !important;
+}
+
 /* ─── Orijinal Sıralama Vurgu Etiketleri ──────────────────── */
 .original-pos-badge {
   display: inline-flex;

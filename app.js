@@ -366,8 +366,570 @@ function formatPromptWithTags(promptText) {
   return `<div class="prompt-tags-wrapper" style="margin-bottom: 12px; display: flex; justify-content: center; flex-wrap: wrap; gap: 4px; width: 100%;">${badgesHtml}</div><div class="prompt-clean-text" style="font-weight: 700;">${cleanPrompt}</div>`;
 }
 
+function translatePromptToTurkish(prompt, question) {
+  if (!prompt) return prompt;
+  
+  // Normalize line breaks
+  const parts = prompt.split(/<br\s*\/?>/i);
+  let mainText = parts[0].trim();
+  
+  // Decide whether to strip the sentence/extra info from the prompt
+  let shouldStripSentence = false;
+  if (question && question.type) {
+    const stripTypes = [
+      'fill-blank',
+      'fill-blank-dropdown',
+      'fill-blank-text',
+      'multiple-fill-blank',
+      'word-bank',
+      'matching',
+      'preposition-magnet',
+      'double-preposition-magnet'
+    ];
+    if (stripTypes.includes(question.type)) {
+      shouldStripSentence = true;
+    }
+  }
 
+  // Remove trailing colon for mapping, but preserve it if present
+  let hasColon = false;
+  if (mainText.endsWith(':')) {
+    hasColon = true;
+    mainText = mainText.slice(0, -1).trim();
+  }
+  
+  const translations = {
+    "choose the correct grammatical form to complete the sentence": "Cümleyi tamamlamak için doğru dil bilgisi biçimini seçiniz",
+    "is the following sentence grammatically correct according to zaman uyumu rules?": "Aşağıdaki cümle Zaman Uyumu kurallarına göre dil bilgisi açısından doğru mudur?",
+    "select the correct choice that satisfies the syntax guidelines": "Sözdizimi kılavuzunu karşılayan doğru seçeneği belirleyiniz",
+    "reconstruct the sentence in english using the correct word blocks": "Doğru kelime bloklarını kullanarak cümleyi İngilizce olarak yeniden oluşturun",
+    "match the clauses to form correct sentences": "Doğru cümleler oluşturmak için yan cümleleri eşleştirin",
+    "translate the following sentence into turkish": "Aşağıdaki cümleyi Türkçe'ye çevirin",
+    "is the following sentence grammatically correct according to modallar (modals) rules?": "Aşağıdaki cümle Modallar (Modals) kurallarına göre dil bilgisi açısından doğru mudur?",
+    "select the correct clause to connect with the sentence logically": "Cümleyi mantıksal olarak bağlamak için doğru yan cümleyi seçiniz",
+    "select the most suitable academic option for the context": "Bağlam için en uygun akademik seçeneği belirleyiniz"
+  };
 
+  const lowerText = mainText.toLowerCase();
+  let translatedText = null;
+
+  if (translations[lowerText]) {
+    translatedText = translations[lowerText];
+  } else {
+    // Check dynamic rules
+    const isMatch = mainText.match(/^Is the following sentence grammatically correct according to (.+?) rules\??$/i);
+    if (isMatch) {
+      let ruleName = isMatch[1].trim();
+      const ruleTranslations = {
+        "zaman uyumu": "Zaman Uyumu",
+        "koşul cümlecikleri (if clauses)": "Koşul Cümlecikleri (If Clauses)",
+        "modallar (modals)": "Modallar (Modals)",
+        "sıfat cümlecikleri (relative clauses)": "Sıfat Cümlecikleri (Relative Clauses)",
+        "bağlaçlar": "Bağlaçlar",
+        "geçmiş zaman modalları (perfect modals)": "Geçmiş Zaman Modalları (Perfect Modals)"
+      };
+      const trRule = ruleTranslations[ruleName.toLowerCase()] || ruleName;
+      translatedText = `Aşağıdaki cümle ${trRule} kurallarına göre dil bilgisi açısından doğru mudur?`;
+    }
+  }
+
+  if (translatedText) {
+    if (shouldStripSentence) {
+      return translatedText + (hasColon ? ":" : "");
+    }
+    parts[0] = translatedText + (hasColon ? ":" : "");
+    return parts.join("<br>");
+  }
+
+  return prompt;
+}
+
+function translateEnglishPlaceholdersInTurkish(text) {
+  if (!text || typeof text !== 'string') return text;
+
+  const engToTrMap = {
+    "abstracts": "özetler",
+    "accepted": "kabul edilen",
+    "academic": "akademik",
+    "account": "hesap",
+    "achieve": "başarı",
+    "dispute": "anlaşmazlık",
+    "disputes": "anlaşmazlıklar",
+    "occurred": "ortaya çıktı",
+    "reform": "reform",
+    "reforms": "reformlar",
+    "approved": "onay",
+    "adaptation": "uyum",
+    "adapting": "uyum sağlama",
+    "adhere": "bağlılık",
+    "adjectival": "sıfatsal",
+    "administration": "yönetim",
+    "admired": "hayran olunan",
+    "advanced": "ileri düzey",
+    "adverb": "zarf",
+    "adverbial": "zarfsal",
+    "affected": "etkilenen",
+    "after": "sonra",
+    "against": "karşı",
+    "agree": "anlaşma",
+    "agreed": "anlaşma",
+    "community": "topluluk",
+    "maintained": "sürdürdü",
+    "allow": "izin",
+    "along": "boyunca",
+    "also": "ayrıca",
+    "alter": "değişiklik",
+    "altered": "değişiklik",
+    "although": "rağmen",
+    "amended": "düzeltme",
+    "among": "arasında",
+    "analysis": "analiz",
+    "concluded": "sonucuna vardı",
+    "stable": "istikrarlı",
+    "taking": "alma",
+    "ancient": "antik",
+    "announced": "duyurulmuş",
+    "anthropologist": "antropolog",
+    "anthropologists": "antropologlar",
+    "anticipate": "öngörü",
+    "applied": "uygulamalı",
+    "approve": "onay",
+    "archaeological": "arkeolojik",
+    "archaeologist": "arkeolog",
+    "architecture": "mimari",
+    "archival": "arşivsel",
+    "archives": "arşivler",
+    "artifacts": "tarihi eserler",
+    "audience": "izleyici",
+    "audit": "denetim",
+    "author": "yazar",
+    "authority": "yetki",
+    "authorize": "yetkilendirmek",
+    "auxiliary": "yardımcı",
+    "avoided": "kaçınılmış",
+    "barriers": "engeller",
+    "behavior": "davranış",
+    "behavioral": "davranışsal",
+    "board": "kurul",
+    "boundary": "sınır",
+    "broadcast": "yayın",
+    "broadcasted": "yayınlanmış",
+    "cause": "sebep",
+    "certificate": "sertifika",
+    "challenged": "meydan okuma",
+    "changes": "değişiklikler",
+    "civilization": "uygarlık",
+    "claims": "iddialar",
+    "clear": "açık",
+    "collapse": "çöküş",
+    "collapsed": "çökmüş",
+    "columns": "sütunlar",
+    "comparative": "karşılaştırmalı",
+    "completed": "tamamlanmış",
+    "complex": "karmaşık",
+    "condition": "koşul",
+    "conditionals": "koşul cümleleri",
+    "conducting": "yürütme",
+    "connection": "bağlantı",
+    "consequences": "sonuçlar",
+    "contact": "temas",
+    "contained": "içerilen",
+    "contract": "sözleşme",
+    "convene": "toplanma",
+    "corrupted": "bozulmuş",
+    "council": "konsey",
+    "critic": "eleştirmen",
+    "critics": "eleştirmenler",
+    "cultural": "kültürel",
+    "decade": "on yıl",
+    "decrease": "azalma",
+    "definitive": "kesin",
+    "demonstrate": "gösterme",
+    "deployment": "dağıtım",
+    "directional": "yönsel",
+    "director": "yönetmen",
+    "documentary": "belgesel",
+    "dramatically": "büyük ölçüde",
+    "during": "sırasında",
+    "earlier": "daha önce",
+    "economists": "ekonomistler",
+    "effective": "etkili",
+    "emphasize": "vurgu",
+    "empirical": "deneysel",
+    "endorse": "onay",
+    "errors": "hatalar",
+    "ethnographic": "etnografik",
+    "evidence": "kanıt",
+    "examine": "inceleme",
+    "excavations": "kazılar",
+    "expanded": "genişletilmiş",
+    "experiments": "deneyler",
+    "explained": "açıklanmış",
+    "faced": "yüzleşilmiş",
+    "fails": "başarısızlık",
+    "feedback": "geri bildirim",
+    "film": "film",
+    "find": "bulgu",
+    "finished": "bitiş",
+    "furthermore": "dahası",
+    "gardens": "bahçeler",
+    "golden": "altın",
+    "grand": "büyük",
+    "guides": "rehberler",
+    "hardly": "neredeyse hiç",
+    "hidden": "gizli",
+    "historians": "tarihçiler",
+    "historical": "tarihsel",
+    "hundred": "yüz",
+    "ignored": "göz ardı edilmiş",
+    "immense": "muazzam",
+    "implement": "uygulama",
+    "important": "önemli",
+    "improves": "gelişme",
+    "indicator": "gösterge",
+    "instability": "istikrarsızlık",
+    "institutional": "kurumsal",
+    "intervened": "müdahale edilmiş",
+    "into": "içine",
+    "inversions": "devriklikler",
+    "judicial": "yargısal",
+    "leaders": "liderler",
+    "little": "az",
+    "locative": "bulunma",
+    "main": "ana",
+    "manuscripts": "el yazmaları",
+    "market": "piyasa",
+    "media": "medya",
+    "merchants": "tüccarlar",
+    "methodology": "metodoloji",
+    "migration": "göç",
+    "modern": "modern",
+    "monographs": "monografiler",
+    "municipal": "belediyeye ait",
+    "must": "gereklilik",
+    "neighboring": "komşu",
+    "observe": "gözlem",
+    "observes": "gözlemler",
+    "organized": "organize edilmiş",
+    "origins": "kökenler",
+    "other": "diğer",
+    "paintings": "tablolar",
+    "paragraph": "paragraf",
+    "passive": "edilgen",
+    "patterns": "örüntüler",
+    "peer": "akran",
+    "perform": "gerçekleştirme",
+    "platform": "platform",
+    "policy": "politika",
+    "positive": "olumlu",
+    "predicted": "öngörülen",
+    "present": "şimdiki",
+    "preserved": "korunmuş",
+    "production": "üretim",
+    "protested": "protesto edilmiş",
+    "provided": "sağlanan",
+    "psychological": "psikolojik",
+    "psychologists": "psikologlar",
+    "published": "yayınlanmış",
+    "rapidly": "hızla",
+    "rarely": "nadiren",
+    "reached": "ulaşılmış",
+    "receive": "alma",
+    "recent": "son zamanlardaki",
+    "referenced": "atıfta bulunulmuş",
+    "regulations": "yönetmelikler",
+    "rejected": "reddedilmiş",
+    "represent": "temsil",
+    "require": "gereklilik",
+    "resolve": "çözüm",
+    "review": "inceleme",
+    "revolutionary": "devrimsel",
+    "screening": "tarama",
+    "seasonal": "mevsimsel",
+    "seldom": "nadiren",
+    "shifted": "kaydırılmış",
+    "sign": "işaret",
+    "significant": "önemli",
+    "simple": "basit",
+    "social": "sosyal",
+    "sovereign": "egemen",
+    "spite": "rağmen",
+    "standards": "standartlar",
+    "stands": "duruyor",
+    "states": "devletler",
+    "stop": "durdurma",
+    "strong": "güçlü",
+    "student": "öğrenci",
+    "study": "çalışma",
+    "sudden": "ani",
+    "support": "destek",
+    "survey": "anket",
+    "unesco": "UNESCO",
+    "early": "erken",
+    "economic": "ekonomik",
+    "economics": "ekonomi",
+    "association": "dernek",
+    "containing": "içeren",
+    "demonstrated": "gösterilmiş",
+    "examined": "incelenmiş",
+    "fiscal": "mali",
+    "increase": "artış",
+    "its": "onun",
+    "knew": "biliyordu",
+    "logical": "mantıksal",
+    "observing": "gözlemleme",
+    "strict": "sert",
+    "subject": "özne",
+    "border": "sınır",
+    "cooperation": "iş birliği"
+  };
+
+  let processedText = text;
+  for (const [eng, tr] of Object.entries(engToTrMap)) {
+    const regexUpper = new RegExp(`\\b${eng.toUpperCase()}\\b`, 'g');
+    processedText = processedText.replace(regexUpper, tr.toUpperCase());
+
+    const engLower = eng.toLowerCase();
+    const trLower = tr.toLowerCase();
+    
+    const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
+    const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
+    
+    const regexCap = new RegExp(`\\b${engCapitalized}\\b`, 'g');
+    processedText = processedText.replace(regexCap, trCapitalized);
+    
+    const regexLower = new RegExp(`\\b${engLower}\\b`, 'g');
+    processedText = processedText.replace(regexLower, trLower);
+  }
+
+  return processedText;
+}
+
+function translateTurkishPlaceholdersInEnglish(text) {
+  if (!text || typeof text !== 'string') return text;
+
+  const trToEngMap = {
+    "akademik": "academic",
+    "alarak": "taking",
+    "antropoloji": "anthropology",
+    "belirleyin": "determine",
+    "bilgisi": "knowledge",
+    "bulun": "find",
+    "devrikliklerini": "inversions",
+    "dizerek": "arranging",
+    "doldurun": "fill",
+    "edebiyat": "literature",
+    "ekilde": "manner",
+    "fiilinin": "verb",
+    "formda": "form",
+    "gelecek": "future",
+    "gerektirdi": "required",
+    "getirin": "bring",
+    "hangisi": "which",
+    "ifadelerle": "expressions",
+    "ifadesiyle": "expression",
+    "iniz": "your",
+    "kelimeleri": "words",
+    "kilitlerini": "locks",
+    "konum": "position",
+    "kullanılamaz": "cannot be used",
+    "kural": "rule",
+    "kuran": "establishing",
+    "layayan": "providing",
+    "leri": "plural suffix",
+    "mledeki": "in the sentence",
+    "mleleri": "sentences",
+    "mlelerle": "with sentences",
+    "mlesini": "sentence",
+    "ndan": "from",
+    "nelimsel": "relative",
+    "ntem": "method",
+    "olumlu": "positive",
+    "paragraf": "paragraph",
+    "rleyin": "determine",
+    "soru": "question"
+  };
+
+  let processedText = text;
+  for (const [tr, eng] of Object.entries(trToEngMap)) {
+    const regexUpper = new RegExp(`\\b${tr.toUpperCase()}\\b`, 'g');
+    processedText = processedText.replace(regexUpper, eng.toUpperCase());
+
+    const trLower = tr.toLowerCase();
+    const engLower = eng.toLowerCase();
+    
+    const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
+    const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
+    
+    const regexCap = new RegExp(`\\b${trCapitalized}\\b`, 'g');
+    processedText = processedText.replace(regexCap, engCapitalized);
+    
+    const regexLower = new RegExp(`\\b${trLower}\\b`, 'g');
+    processedText = processedText.replace(regexLower, engLower);
+  }
+
+  return processedText;
+}
+
+function sanitizeAllQuestions() {
+  const allQs = [];
+
+  if (typeof lessons !== 'undefined') {
+    lessons.forEach(l => {
+      if (l.questions) {
+        l.questions.forEach(q => allQs.push(q));
+      }
+      if (l.exercises) {
+        l.exercises.forEach(ex => {
+          if (ex.questions) {
+            ex.questions.forEach(q => allQs.push(q));
+          }
+        });
+      }
+    });
+  }
+
+  if (typeof FORMATION_QUESTIONS !== 'undefined' && FORMATION_QUESTIONS) {
+    FORMATION_QUESTIONS.forEach(q => allQs.push(q));
+  }
+
+  if (typeof placementQuestionsList !== 'undefined' && placementQuestionsList) {
+    placementQuestionsList.forEach(q => allQs.push(q));
+  }
+  if (typeof placementQuestions !== 'undefined' && placementQuestions) {
+    placementQuestions.forEach(q => allQs.push(q));
+  }
+
+  const uniqueQs = Array.from(new Set(allQs));
+  uniqueQs.forEach(q => {
+    if (!q) return;
+
+    // Convert translation-text to word-bank to avoid typing complex translations
+    if (q.type === 'translation-text') {
+      let engSentence = "";
+      if (q.prompt) {
+        const parts = q.prompt.split(/<br\s*\/?>/i);
+        if (parts.length > 1) {
+          engSentence = parts[parts.length - 1].trim().replace(/^["'\u201c\u201d]/, '').replace(/["'\u201c\u201d]$/, '').trim();
+        }
+      }
+      
+      const trSentence = q.correctAnswer || q.correctSentence || q.translation || "";
+      
+      if (engSentence && trSentence) {
+        q.type = 'word-bank';
+        q.isEngToTr = true;
+        q.prompt = 'Reconstruct the sentence in Turkish using the correct word blocks:';
+        q.sentence = engSentence;
+        q.translation = trSentence;
+        
+        // Translate placeholders in Turkish sentence before segmenting
+        const cleanTr = translateEnglishPlaceholdersInTurkish(trSentence);
+        q.correctOrder = segmentSentence(cleanTr, true);
+        
+        const distractors = ["rağmen", "çünkü", "önce", "sonra", "ancak", "ve", "veya", "iken"];
+        const uniqueDistractors = distractors.filter(d => !q.correctOrder.includes(d)).slice(0, 3);
+        q.words = [...q.correctOrder, ...uniqueDistractors];
+      }
+    }
+
+    // 1. Schema Normalization
+    if (q.type === 'fill-blank' || q.type === 'fill-blank-dropdown' || q.type === 'context-distractor') {
+      if (!q.sentence && q.prompt && q.prompt.includes('___')) {
+        let sentencePart = q.prompt;
+        const parts = q.prompt.split(/<br\s*\/?>/i);
+        if (parts.length > 1) {
+          sentencePart = parts[parts.length - 1].trim();
+          sentencePart = sentencePart.replace(/^["'\u201c\u201d]/, '').replace(/["'\u201c\u201d]$/, '').trim();
+        }
+        q.sentence = sentencePart;
+        q.prompt = "Boşluğu doldur";
+      }
+    }
+
+    // 2. Translate fields in Turkish context
+    if (q.translation) {
+      q.translation = translateEnglishPlaceholdersInTurkish(q.translation);
+    }
+    if (q.trSentence) {
+      q.trSentence = translateEnglishPlaceholdersInTurkish(q.trSentence);
+    }
+    if (q.turkishTranslation) {
+      q.turkishTranslation = translateEnglishPlaceholdersInTurkish(q.turkishTranslation);
+    }
+    if (q.correctAnswer && q.type === 'translation-text') {
+      // In translation-text, if correctAnswer is Turkish, translate it
+      q.correctAnswer = translateEnglishPlaceholdersInTurkish(q.correctAnswer);
+    }
+
+    // 3. Translate fields in English context
+    if (q.sentence) {
+      q.sentence = translateTurkishPlaceholdersInEnglish(q.sentence);
+    }
+    if (q.enSentence) {
+      q.enSentence = translateTurkishPlaceholdersInEnglish(q.enSentence);
+    }
+    if (q.englishPhrase) {
+      q.englishPhrase = translateTurkishPlaceholdersInEnglish(q.englishPhrase);
+    }
+    if (q.paragraph) {
+      q.paragraph = translateTurkishPlaceholdersInEnglish(q.paragraph);
+    }
+    if (q.mainSentence) {
+      q.mainSentence = translateTurkishPlaceholdersInEnglish(q.mainSentence);
+    }
+    if (q.options) {
+      q.options = q.options.map(opt => translateTurkishPlaceholdersInEnglish(opt));
+    }
+
+    // 4. Word bank translation
+    const isEngToTr = q.isEngToTr !== undefined
+      ? q.isEngToTr
+      : (q.prompt && (q.prompt.includes("Türkçe") || q.prompt.includes("Turkish")));
+
+    if (q.type === 'word-bank') {
+      if (isEngToTr) {
+        if (q.words) {
+          q.words = q.words.map(w => translateEnglishPlaceholdersInTurkish(w));
+        }
+        if (Array.isArray(q.correctOrder)) {
+          q.correctOrder = q.correctOrder.map(w => translateEnglishPlaceholdersInTurkish(w));
+        } else if (typeof q.correctOrder === 'string') {
+          q.correctOrder = translateEnglishPlaceholdersInTurkish(q.correctOrder);
+        }
+      } else {
+        if (q.words) {
+          q.words = q.words.map(w => translateTurkishPlaceholdersInEnglish(w));
+        }
+        if (Array.isArray(q.correctOrder)) {
+          q.correctOrder = q.correctOrder.map(w => translateTurkishPlaceholdersInEnglish(w));
+        } else if (typeof q.correctOrder === 'string') {
+          q.correctOrder = translateTurkishPlaceholdersInEnglish(q.correctOrder);
+        }
+      }
+    }
+
+    // 5. Matching translation
+    if (q.type === 'matching' && q.pairs) {
+      q.pairs.forEach(p => {
+        p.left = translateTurkishPlaceholdersInEnglish(p.left);
+        p.right = translateTurkishPlaceholdersInEnglish(p.right);
+      });
+    }
+
+    // 6. Translate prompt
+    if (q.prompt) {
+      q.prompt = translatePromptToTurkish(q.prompt, q);
+      const parts = q.prompt.split(/<br\s*\/?>/i);
+      if (parts.length > 1) {
+        for (let i = 1; i < parts.length; i++) {
+          parts[i] = translateTurkishPlaceholdersInEnglish(parts[i]);
+        }
+        q.prompt = parts.join("<br>");
+      }
+    }
+  });
+}
 
 function getOrCreateDeviceId() {
   let devId = localStorage.getItem('amok_device_uuid');
@@ -3350,7 +3912,7 @@ function showScreen(screenId) {
 
   // If leaving home-screen, save scroll position
   const activeScreen = document.querySelector('.app-screen.active');
-  if (activeScreen && activeScreen.id === 'home-screen') {
+  if (activeScreen && activeScreen.id === 'home-screen' && activeScreen.id !== screenId) {
     homeScreenScrollY = window.scrollY;
     localStorage.setItem('amok_last_scroll_y', window.scrollY);
   }
@@ -3375,6 +3937,12 @@ function showScreen(screenId) {
     requestAnimationFrame(() => {
       window.scrollTo(0, lastScrollY);
     });
+    setTimeout(() => {
+      window.scrollTo(0, lastScrollY);
+    }, 100);
+    setTimeout(() => {
+      window.scrollTo(0, lastScrollY);
+    }, 300);
     setTimeout(checkAndShowReviewPrompt, 600);
   }
 
@@ -3513,7 +4081,7 @@ function openQuestionPreview(title, questions, parentObj = null) {
         detailsHtml = `
           <div class="qp-detail-row">
             <span class="qp-detail-label">Cümle Şablonu:</span>
-            <span class="qp-detail-val">"${q.sentence || q.prompt || ''}"</span>
+            <span class="qp-detail-val">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Seçenekler:</span>
@@ -3532,7 +4100,7 @@ function openQuestionPreview(title, questions, parentObj = null) {
         detailsHtml = `
           <div class="qp-detail-row">
             <span class="qp-detail-label">Cümle Şablonu:</span>
-            <span class="qp-detail-val">"${q.sentence || q.prompt || ''}"</span>
+            <span class="qp-detail-val">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Seçenekler:</span>
@@ -3672,7 +4240,7 @@ function openQuestionPreview(title, questions, parentObj = null) {
           <span class="qp-type-badge ${typeClass}">${typeLabel}</span>
           ${startBtnHtml}
         </div>
-        <p class="qp-prompt">${q.prompt}</p>
+        <p class="qp-prompt">${translatePromptToTurkish(q.prompt, q)}</p>
         <div class="qp-details">
           ${detailsHtml}
         </div>
@@ -5150,24 +5718,24 @@ async function enterApp() {
         if (lessonId) {
           startLesson(lessonId, exerciseId, true);
         } else {
-          showScreen('home-screen');
           switchTab(lastTab);
+          showScreen('home-screen');
         }
       } else if (quizType === 'review') {
         startReviewMode(true);
       } else if (quizType === 'formation') {
         startFormationTour(true);
       } else {
-        showScreen('home-screen');
         switchTab(lastTab);
+        showScreen('home-screen');
       }
     } else {
-      showScreen('home-screen');
       switchTab(lastTab);
+      showScreen('home-screen');
     }
   } else {
-    showScreen(lastScreen);
     switchTab(lastTab);
+    showScreen(lastScreen);
   }
 
   if (lastScreen === 'home-screen') {
@@ -6814,16 +7382,57 @@ function colorCodeUnit101Sentence(sentence) {
 }
 
 function colorCodeUnit29Sentence(sentence) {
-  if (!sentence) return sentence;
-  let cleaned = sentence.replace(/<span[^>]*>(.*?)<\/span>/gi, '$1');
-  const regex = /\bIt\s+(?:is|was|has\s+been)(?:\s+[\w'-]+|\s+_{3,}){1,6}?\s+that\b/gi;
-  const regexNoThat = /\bIt\s+(?:is|was|has\s+been)\s+(?:[\w'-]+\s+){1,3}(?:to\s+[\w'-]+\s+)?_{3,}/gi;
-  if (regex.test(cleaned)) {
-    cleaned = cleaned.replace(regex, (match) => `<span class="color-code-extraposition">${match}</span>`);
-  } else if (regexNoThat.test(cleaned)) {
-    cleaned = cleaned.replace(regexNoThat, (match) => `<span class="color-code-extraposition">${match}</span>`);
+  if (!sentence || typeof sentence !== 'string') return sentence;
+  const patterns = [
+    // 🟢 GRUP 1: İsim & V-ing Alan Yapılar (Edatlar / Prepositions) - YEŞİL (#10b981)
+    { 
+      regex: /\b(In spite of|In addition to|In contrast to|Despite|Notwithstanding|On account of|As a consequence of|As a result of|Owing to|Due to|In view of|Because of|Thanks to|with a view to|for the purpose of|by means of|for the sake of|by virtue of|on the grounds of|Regardless of|In case of|with regard to|in terms of)\b/gi, 
+      color: "#10b981" 
+    },
+
+    // 🔵 GRUP 2: Cümle (Özne+Yüklem) Alan Yapılar (Cümle Bağlaçları) - MAVİ (#3b82f6)
+    { 
+      regex: /\b(Even though|Although|Even if|Though|Because|Since|While|Whereas|in order that|so that|Provided that|As long as|on condition that|Unless|Provided|By the time|As soon as|Until|Before|After)\b/gi, 
+      color: "#3b82f6" 
+    },
+
+    // 🔴 GRUP 3: İki Cümle Arasına Gelenler (Geçiş Zarfları / Transitions) - KIRMIZI (#ef4444)
+    { 
+      regex: /\b(However|Nevertheless|Nonetheless|Moreover|Furthermore|Accordingly|Consequently|Therefore|On the other hand|On the contrary|Otherwise|Besides|In addition|Hence|Thus)\b/gi, 
+      color: "#ef4444" 
+    }
+  ];
+
+  const tokens = sentence.split(/(<[^>]+>)/g);
+  for (let i = 0; i < tokens.length; i++) {
+    if (!tokens[i].startsWith("<")) {
+      patterns.forEach(p => {
+        tokens[i] = tokens[i].replace(p.regex, (m) => 
+          `<span class="conjunction-highlight" style="color: ${p.color}; font-weight: 700; font-family: inherit;">${m}</span>`
+        );
+      });
+    }
   }
-  return cleaned;
+  return tokens.join("");
+}
+
+function getConjunctionGroupInfo(optText) {
+  if (!optText || typeof optText !== 'string') return null;
+  const clean = optText.trim();
+  const g1Regex = /\b(In spite of|In addition to|In contrast to|Despite|Notwithstanding|On account of|As a consequence of|As a result of|Owing to|Due to|In view of|Because of|Thanks to|with a view to|for the purpose of|by means of|for the sake of|by virtue of|on the grounds of|Regardless of|In case of|with regard to|in terms of)\b/i;
+  const g2Regex = /\b(Even though|Although|Even if|Though|Because|Since|While|Whereas|in order that|so that|Provided that|As long as|on condition that|Unless|Provided|By the time|As soon as|Until|Before|After)\b/i;
+  const g3Regex = /\b(However|Nevertheless|Nonetheless|Moreover|Furthermore|Accordingly|Consequently|Therefore|On the other hand|On the contrary|Otherwise|Besides|In addition|Hence|Thus)\b/i;
+
+  if (g1Regex.test(clean)) {
+    return { name: "Grup 1 (İsim & V-ing Alan)", color: "#10b981", badge: "🟢" };
+  }
+  if (g2Regex.test(clean)) {
+    return { name: "Grup 2 (Tam Cümle Alan)", color: "#3b82f6", badge: "🔵" };
+  }
+  if (g3Regex.test(clean)) {
+    return { name: "Grup 3 (İki Cümle Arasına Gelen - Noktalamacı)", color: "#ef4444", badge: "🔴" };
+  }
+  return null;
 }
 
 function getUnit101TimelineSVG(type) {
@@ -7111,13 +7720,33 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
     currentQuizQuestions.forEach(q => {
       expandedQuestions.push(q);
       const hasSentence = !!(q.sentence || q.enSentence || q.paragraph || q.mainSentence);
+      const getCompleteSentence = (question) => {
+        let text = question.sentence || question.enSentence || question.paragraph || question.mainSentence || '';
+        if (text.includes('___')) {
+          if (question.options && typeof question.correctIndex === 'number' && question.options[question.correctIndex]) {
+            const correctOpt = question.options[question.correctIndex];
+            if (correctOpt.includes(' / ')) {
+              const parts = correctOpt.split(' / ').map(s => s.trim());
+              let pIdx = 0;
+              text = text.replace(/___/g, () => parts[pIdx++] || '___');
+            } else {
+              text = text.replace(/___/g, correctOpt.trim());
+            }
+          } else if (Array.isArray(question.corrects)) {
+            let cIdx = 0;
+            text = text.replace(/___/g, () => question.corrects[cIdx++] || '___');
+          }
+        }
+        return text;
+      };
+
       if (hasSentence && q.bridgeTranslation) {
         // Create a dynamic word-bank bridge question
         const bridgeQ = {
           id: `${q.id}_bridge`,
           type: 'word-bank',
-          prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
-          sentence: q.sentence || q.enSentence || q.paragraph || q.mainSentence || '',
+          prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü tamamlayın:`,
+          sentence: getCompleteSentence(q),
           translation: q.bridgeTranslation.sentence,
           correctOrder: q.bridgeTranslation.translation,
           words: q.bridgeTranslation.words,
@@ -7126,19 +7755,15 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
         };
         expandedQuestions.push(bridgeQ);
       } else if (hasSentence && q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
-        let targetSentence = q.sentence || q.enSentence || q.paragraph || q.mainSentence || '';
+        let targetSentence = getCompleteSentence(q);
         let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
         if (targetTr && targetTr.length > 0) {
-          const trWords = targetTr.split(' ');
-          let chunks = [];
-          for (let i = 0; i < trWords.length; i += 3) {
-            chunks.push(trWords.slice(i, i + 3).join(' '));
-          }
+          let chunks = segmentSentence(targetTr, true);
           if (chunks.length > 1) {
             const bridgeQ = {
               id: `${q.id}_bridge`,
               type: 'word-bank',
-              prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü (Grammar Bridge) tamamlayın:`,
+              prompt: `Cümleyi Türkçe'ye çevirerek Dil Bilgisi Köprüsünü tamamlayın:`,
               sentence: targetSentence,
               translation: targetTr,
               correctOrder: chunks,
@@ -7640,6 +8265,7 @@ function renderQuestion() {
   if (!question.prompt && question.question) {
     question.prompt = question.question;
   }
+  question.prompt = translatePromptToTurkish(question.prompt, question);
 
   if (reflexTimer) {
     clearTimeout(reflexTimer);
@@ -7663,16 +8289,21 @@ function renderQuestion() {
   if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) && question.sentence) {
     question.sentence = colorCodeUnit101Sentence(question.sentence);
   }
-  if (currentLesson && (currentLesson.unitId === 29 || currentLesson.originalUnitId === 29)) {
+  if (currentLesson && (currentLesson.unitId === 29 || currentLesson.originalUnitId === 29 || currentLesson.unitId === 39 || (currentLesson.id && currentLesson.id.includes('c40_l')))) {
     if (question.sentence) question.sentence = colorCodeUnit29Sentence(question.sentence);
     if (question.enSentence) question.enSentence = colorCodeUnit29Sentence(question.enSentence);
-    if (question.prompt) question.prompt = colorCodeUnit29Sentence(question.prompt);
+    if (question.paragraph) question.paragraph = colorCodeUnit29Sentence(question.paragraph);
+    if (question.englishPhrase) question.englishPhrase = colorCodeUnit29Sentence(question.englishPhrase);
     if (question.options) {
       question.options = question.options.map(opt => typeof opt === 'string' ? colorCodeUnit29Sentence(opt) : opt);
     }
+    if (question.words) {
+      question.words = question.words.map(w => typeof w === 'string' ? colorCodeUnit29Sentence(w) : w);
+    }
     if (question.pairs) {
       question.pairs.forEach(p => {
-        if (p.left && p.left.includes('It ')) p.left = colorCodeUnit29Sentence(p.left);
+        if (p.left) p.left = colorCodeUnit29Sentence(p.left);
+        if (p.right) p.right = colorCodeUnit29Sentence(p.right);
       });
     }
   }
@@ -8053,7 +8684,16 @@ function renderQuestion() {
 
   if (question.grammarTags && question.grammarTags.length > 0) {
     const rawCleaned = question.grammarTags
-      .filter(t => t && !t.toLowerCase().includes('beşeri bilimler'))
+      .filter(t => {
+        if (!t) return false;
+        const lower = t.toLowerCase().trim();
+        const nonGrammarTags = [
+          'antropoloji', 'arkeoloji', 'coğrafya', 'hukuk', 'humanities', 
+          'politika', 'psikoloji', 'sanat tarihi', 'sinema', 'sosyoloji', 
+          'tarih', 'iktisat', 'iletişim', 'beşeri bilimler'
+        ];
+        return !nonGrammarTags.includes(lower);
+      })
       .map(t => t.replace(/^Önceki Konu:\s*/i, "").replace(/\s*\(.*?\)/g, "").trim())
       .filter(t => t.length > 0);
 
@@ -8154,8 +8794,13 @@ function renderMultipleChoice(container, question) {
     if (!isEngToTr && optHtml) {
       const meaning = getOptionMeaning(question, opt);
       if (meaning && !optHtml.includes('/')) {
-        optHtml = `<strong>${optHtml}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>`;
-      } else {
+        const hasTags = optHtml.includes('<');
+        if (hasTags) {
+          optHtml = `${optHtml} <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>`;
+        } else {
+          optHtml = `<strong>${optHtml}</strong> <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>`;
+        }
+      } else if (!optHtml.includes('<')) {
         optHtml = makeTextHoverable(optHtml, true);
       }
     }
@@ -8360,7 +9005,10 @@ function renderPunctuationCheck(container, question) {
 
   const optionsHtml = question.options.map((opt, i) => {
     const meaning = getOptionMeaning(question, opt);
-    const displayText = (meaning && !opt.includes('/')) ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : opt;
+    const hasTags = String(opt).includes('<');
+    const displayText = (meaning && !String(opt).includes('/')) 
+      ? (hasTags ? `${opt} <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>` : `<strong>${opt}</strong> <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>`)
+      : opt;
     return `<button class="mc-option" data-index="${i}">${displayText}</button>`;
   }).join('');
 
@@ -8394,7 +9042,10 @@ function renderPunctuationCheck(container, question) {
 function renderStructureMatch(container, question) {
   const optionsHtml = question.options.map((opt, i) => {
     const meaning = getOptionMeaning(question, opt);
-    const displayText = (meaning && !opt.includes('/')) ? `<strong>${opt}</strong> <span style="opacity: 0.75; font-weight: 400; font-size: 0.9em; margin-left: 6px;">/ ${meaning}</span>` : opt;
+    const hasTags = String(opt).includes('<');
+    const displayText = (meaning && !String(opt).includes('/')) 
+      ? (hasTags ? `${opt} <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>` : `<strong>${opt}</strong> <span style="opacity: 0.8; font-weight: 400; font-size: 0.9em; margin-left: 6px; color: var(--text-secondary, #64748b);">/ ${meaning}</span>`)
+      : opt;
     return `<button class="mc-option" data-index="${i}">${displayText}</button>`;
   }).join('');
 
@@ -9129,7 +9780,8 @@ function tryMatch(container, question) {
 function getOptionMeaning(question, opt) {
   if (!opt) return '';
   if (question && question.noOptionMeanings) return '';
-  opt = String(opt).trim();
+  opt = String(opt).replace(/<[^>]+>/g, '').trim();
+  if (!opt) return '';
   const lowerOpt = opt.toLowerCase();
   if (lowerOpt.startsWith('to ') || lowerOpt.startsWith('how to') || lowerOpt.startsWith('where to') || lowerOpt.startsWith('when to') || lowerOpt.startsWith('which ') || lowerOpt.startsWith('what to')) {
     return '';
@@ -9156,6 +9808,8 @@ function getOptionMeaning(question, opt) {
     "though": "-e rağmen / yine de",
     "despite": "-e rağmen",
     "in spite of": "-e rağmen",
+    "notwithstanding": "-e rağmen / -e karşın",
+    "in contrast to": "-in aksine",
     "whereas": "-e karşın (oysa)",
     "while": "iken / -e rağmen",
     "unlike": "-in aksine",
@@ -9163,6 +9817,7 @@ function getOptionMeaning(question, opt) {
     "as opposed to": "-in aksine",
     "conversely": "aksine / tersine",
     "on the other hand": "diğer yandan",
+    "on the contrary": "aksine / tersine",
     "however": "ancak / yine de",
     "nevertheless": "yine de / buna rağmen",
     "nonetheless": "yine de / buna rağmen",
@@ -9176,18 +9831,22 @@ function getOptionMeaning(question, opt) {
     "owing to": "-den dolayı / yüzünden",
     "on account of": "-den dolayı / yüzünden",
     "in view of": "-den dolayı / göz önüne alındığında",
+    "as a consequence of": "-in sonucu olarak",
+    "as a result of": "-in sonucu olarak",
     "thanks to": "sayesinde",
     "therefore": "bu yüzden / dolayısıyla",
     "hence": "bu yüzden / dolayısıyla",
     "thus": "bu yüzden / böylece",
     "consequently": "sonuç olarak",
     "as a result": "sonuç olarak",
+    "accordingly": "bu doğrultuda / dolayısıyla",
     "that's why": "bu yüzden",
     "furthermore": "dahası / ayrıca",
     "moreover": "dahası / ayrıca",
     "besides": "ayrıca / -in yanı sıra",
     "as well as": "-in yanı sıra",
     "in addition to": "-in yanı sıra",
+    "in addition": "ayrıca / ek olarak",
     "along with": "-in yanı sıra",
     "likewise": "aynı şekilde / benzer şekilde",
     "similarly": "aynı şekilde / benzer şekilde",
@@ -9199,6 +9858,10 @@ function getOptionMeaning(question, opt) {
     "that is to say": "yani / başka bir deyişle",
     "in order to": "-mek amacıyla",
     "so as to": "-mek amacıyla",
+    "with a view to": "-amacıyla",
+    "for the purpose of": "-amacıyla",
+    "by virtue of": "sayesinde / -den dolayı",
+    "on the grounds of": "gerekçesiyle",
     "so that": "-sin diye / amacıyla",
     "in order that": "-sin diye / amacıyla",
     "except for": "-den başka / hariç",
@@ -9206,6 +9869,7 @@ function getOptionMeaning(question, opt) {
     "apart from": "-den başka / hariç",
     "according to": "-e göre",
     "in terms of": "açısından / bakımından",
+    "with regard to": "ile ilgili olarak",
     "in accordance with": "-e uygun olarak",
     "in favor of": "lehine / yararına",
     "instead of": "-in yerine",
@@ -9224,6 +9888,7 @@ function getOptionMeaning(question, opt) {
     "so long as": "sürece / şartıyla",
     "on condition that": "şartıyla",
     "unless": "-madıkça / aksi takdirde",
+    "in case of": "durumunda / halinde",
     "in case": "durumunda / ihtimaline karşı",
     "for fear that": "korkusuyla",
     "lest": "korkusuyla / -mesin diye",
@@ -11359,11 +12024,18 @@ function checkAnswer() {
       let analysisHtml = `<div style="font-weight: 800; margin-bottom: 4px; color: var(--text-primary); font-size: 0.8rem;">🔍 Hızlı Eleme Refleksi & Şık Analizi:</div>`;
       
       question.options.forEach((opt, idx) => {
-        const cleanOptText = (opt || "").split(/\s*\/\s*/)[0].trim();
+        const cleanOptText = (opt || "").split(/\s*\/\s*/)[0].replace(/<[^>]+>/g, "").trim();
+        const groupInfo = getConjunctionGroupInfo(cleanOptText);
+        let groupTag = '';
+        if (groupInfo) {
+          groupTag = ` <span style="background: rgba(255,255,255,0.06); border: 1px solid ${groupInfo.color}; color: ${groupInfo.color}; padding: 1px 7px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; margin-left: 4px;">${groupInfo.badge} ${groupInfo.name}</span>`;
+        }
+
         if (idx === question.correctIndex) {
-          analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 2px;">🟢 <strong>${cleanOptText}</strong> (DOĞRU): Cümle yapısıyla ve zaman/bağlaç kuralıyla tam uyumludur.</div>`;
+          const detail = groupInfo ? ` [Grup Sentakslı Doğru Yapı]` : '';
+          analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 4px; line-height: 1.4;">🟢 <strong>${cleanOptText}</strong>${groupTag}${detail} (DOĞRU): Cümle yapısıyla ve sentaks kuralıyla tam uyumludur.</div>`;
         } else {
-          let reason = "Zaman, bağlaç veya söz dizimi uyumsuzluğu sebebiyle elenir.";
+          let reason = groupInfo ? `${groupInfo.name} yapısıdır. Soru kurgusundaki sentaks beklentisine uymadığı için elenir.` : "Zaman, bağlaç veya söz dizimi uyumsuzluğu sebebiyle elenir.";
           const optLower = (opt || "").toLowerCase();
           const sentenceLower = (question.sentence || "").toLowerCase();
           
@@ -11387,7 +12059,7 @@ function checkAnswer() {
             reason = "Edatlardan (preposition) hemen sonra doğrudan 'that' kullanılamaz!";
           }
           
-          analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 2px;">❌ <strong>${cleanOptText}</strong> (ELENDİ): ${reason}</div>`;
+          analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 4px; line-height: 1.4;">❌ <strong>${cleanOptText}</strong>${groupTag} (ELENDİ): ${reason}</div>`;
         }
       });
       
@@ -14503,6 +15175,7 @@ function renderPlacementQuestion() {
 
   // Adjust prompt text to fit the visual type
   const originalPrompt = question.prompt;
+  question.prompt = translatePromptToTurkish(question.prompt, question);
   if (activeType === 'fill-blank-dropdown' && question.prompt === 'Boşluğu doldur') {
     question.prompt = 'Boşluğa gelecek en uygun kelimeyi seçin:';
   } else if (activeType === 'fill-blank' && question.prompt.startsWith('Boşluğa gelecek en uygun kelimeyi seçin')) {
@@ -15274,6 +15947,10 @@ function stopHeartbeat() {
 // BAŞLATMA
 // ============================================================
 function init() {
+  sanitizeAllQuestions();
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
   console.log("DEBUG: Initializing app...");
   console.log("DEBUG: Total units initially:", typeof units !== 'undefined' ? units.length : 'undefined');
   console.log("DEBUG: Total lessons initially:", typeof lessons !== 'undefined' ? lessons.length : 'undefined');

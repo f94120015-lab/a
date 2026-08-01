@@ -8,60 +8,36 @@ rawTopics.push(
   "title": "XXII. İsim Cümleciği",
   "desc": "Cümlede özne/nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin akademik kullanımı.",
   "icon": "🔋",
-  "numLessons": 8,
+  "numLessons": 4,
   "formulas": [
     {
-      "formula": "Subject + Verb + that + Clause / That + Clause + Verb",
-      "example": "The study confirmed that the hypothesis is valid: Çalışma hipotezin geçerli olduğunu onayladı.",
-      "description": "That ile başlayan cümleciklerin cümlenin öznesi veya nesnesi olarak kullanımı."
+      "formula": "That / The Fact That / It is + Adj + that + Clause",
+      "example": "The study confirmed that the hypothesis is valid / The fact that datasets conflict invalidates the report.",
+      "description": "Nesne/Özne konumundaki that cümleleri, the fact that soyut isim blokları, impersonal/vurgulu sahte özne yapımları ve sıfat arkası that kullanımları."
     },
     {
-      "formula": "Subject + Verb + if / whether + Clause / Whether + Clause + Verb",
-      "example": "Whether inflation will decline remains uncertain: Enflasyonun düşüp düşmeyeceği belirsizliğini koruyor.",
-      "description": "Olup olmadığı anlamı katan whether/if yapımları ve cümle başında özne konumunda sadece whether kullanımı."
+      "formula": "Wh- Word / Whether / If + Clause",
+      "example": "Whether inflation will decline remains uncertain / They discussed the plan about how to allocate resources.",
+      "description": "If/whether dolaylı soru yapıları, wh- soru kelimeleri (what, how, why, when, where), -ever genellemeleri (whatever, whoever) ve edat sonrası isim cümlecikleri."
     },
     {
-      "formula": "Wh- Word / -ever + Subject + Verb",
-      "example": "Whatever decision the board takes will affect all sectors: Yönetim kurulunun alacağı her ne karar olursa tüm sektörleri etkileyecektir.",
-      "description": "What, how, why, when, where soru kelimeleri ile whatever, whoever, wherever genelleştirilmiş isim cümlecikleri."
+      "formula": "Subjunctive That Clause / Noun Clause vs. Adjective Clause / That vs. What",
+      "example": "They recommended that the report be submitted immediately / The finding that data leaked (Noun Clause) vs The finding that was published (Adjective Clause).",
+      "description": "Zorunluluk/tavsiye bildiren subjunctive yapılar, Noun Clause ile Relative Clause arasındaki yapısal farklar ve that/what ayrımı."
     },
     {
-      "formula": "The fact that + Clause... / It is + Adjective/V3 + that + Clause",
-      "example": "It is apparent that the constituent variables change: Bileşen değişkenlerin değiştiği açıktır.",
-      "description": "The fact that soyut isim blokları ile It is clear that / It is believed that impersonal ve vurgulu cümle yapıları."
-    },
-    {
-      "formula": "Demand / Recommend / Essential + that + Subject + V1 (base form)",
-      "example": "They demanded that the report be submitted immediately: Raporun derhal sunulmasını talep ettiler.",
-      "description": "Akademik dilde tavsiye, emir ve zorunluluk bildiren fiil/sıfatlardan sonra gelen yalın fiilli (subjunctive) that cümleleri."
-    },
-    {
-      "formula": "Preposition + Wh- / Whether + Clause & Adjective + that / Wh- + Clause",
-      "example": "They discussed the plan about how to allocate resources: Kaynakların nasıl tahsis edileceğine dair planı tartıştılar.",
-      "description": "Edatlardan sonra 'that' gelmeyip wh- veya whether yapılarının gelmesi kuralı ile sıfat arkasına bağlanan isim cümlecikleri."
-    },
-    {
-      "formula": "Noun + That + Incomplete vs Verb + That + Complete",
-      "example": "The finding that was published (Adjective Clause) vs The finding that data leaked (Noun Clause).",
-      "description": "Sınavlarda en çok karıştırılan THAT (Sıfat cümlesi mi yoksa İsim cümlesi mi?) ve THAT vs. WHAT farklarını ayırt etme alıştırmaları."
-    },
-    {
-      "formula": "Mixed Noun Clause Syntax",
-      "example": "Comprehensive analysis of all Noun Clause sentence patterns: Tüm Noun Clause cümle kalıplarının kapsamlı analizi.",
-      "description": "Tüm Noun Clause yapılarının akademik cümle ve metinler üzerinde karışık olarak test edildiği bitirme testi."
+      "formula": "Mixed Noun Clause Syntax & Academic Reading",
+      "example": "Comprehensive analysis of all Noun Clause sentence patterns on academic passages.",
+      "description": "Tüm Noun Clause yapılarının akademik metinler üzerinde karışık test edilmesi."
     }
   ],
   "subtitles": [
-    "1. That Cümlecikleri (Temel Yapılar & Özne/Nesne Konumu)",
-    "2. İkilem ve Şüphe Yapıları (If / Whether & Soru Başındaki Kullanım)",
-    "3. Wh- Soru Kelimeleri ve -ever Yapıları (Whatever, Whoever)",
-    "4. Gerçeklik ve Vurgu Kalıpları (The Fact That & Extraposition)",
-    "5. Akademik Zorunluluk Yapıları (Subjunctive Yapıları)",
-    "6. Edat ve Sıfat Sonrası Noun Clause Yapıları",
-    "7. Kritik Ayırt Etme Refleksi (That vs. What & Adjective Clause vs. Noun Clause)",
-    "8. Karma Akademik Noun Clause Testi ve Metin Okuma"
+    "1. Bildirim Cümlecikleri: That, The Fact That & Vurgu Yapıları",
+    "2. Dolaylı Sorular: Wh- Kelimeleri, -ever & Whether/If Yapıları",
+    "3. Akademik Zorunluluk (Subjunctive) & Kritik Ayrım Refleksleri",
+    "4. Karma Akademik Noun Clause Testi ve Metin Okuma"
   ],
-  "originalNumLessons": 8
+  "originalNumLessons": 4
 },
 {
   "id": 29,
@@ -44685,7 +44661,7 @@ const unit35 = {
     {
       lessonId: "u35_l1",
       lessonTitle: "1. Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
-      description: `<strong>🧠 Sıfat Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Boşluğun önünde <em>the first / the last / the only / superlative</em> var mı?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>TO</strong> ara (<em>to V1</em> veya <em>to be V3</em>).<br>• <strong>Hayır ise ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluğun hemen sağında ne var?<br>• <strong>Nesne (İsim öbeği) var ise ➔</strong> Eylem etkendir, <strong>V-ing</strong> seç.<br>• <strong>Edat (by, in, under vb.) var ise ➔</strong> Eylem edilgendir, <strong>V3</strong> seç.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Sıfat Kısaltmasının \"3 Altın Formülü\" Nedir?</strong><br>Bir <strong>ismin (Noun)</strong> hemen ardından gelip onu niteleyen sıfat cümleciği kısaltması <strong>SADECE</strong> şu 3 yapıdan biri olabilir:<br>1. <strong>Noun + V-ing</strong> (Etken: Yapan/Eden)<br>2. <strong>Noun + V3</strong> (Edilgen: Yapılan/Edilen)<br>3. <strong>Noun + To V1 / To be V3</strong> (Sıralama/Amaç)<br><br>⚠️ <strong>Önemli Kural:</strong> Bir ismin hemen ardından <strong>Having V3 / Having been V3</strong>, çekimli fiil (V1/V2/s takısı vb.) veya <strong>to V-ing</strong> yapısı gelip o ismi niteleyemez. Seçeneklerde bunları doğrudan eleyebilirsin!`,
+      description: `<strong>💡 Sıfat Kısaltmasının \"3 Altın Formülü\" Nedir?</strong><br>Bir <strong>ismin (Noun)</strong> hemen ardından gelip onu niteleyen sıfat cümleciği kısaltması <strong>SADECE</strong> şu 3 yapıdan biri olabilir:<br>1. <strong>Noun + V-ing</strong> (Etken: Yapan/Eden)<br>2. <strong>Noun + V3</strong> (Edilgen: Yapılan/Edilen)<br>3. <strong>Noun + To V1 / To be V3</strong> (Sıralama/Amaç)<br><br>⚠️ <strong>Önemli Kural:</strong> Bir ismin hemen ardından <strong>Having V3 / Having been V3</strong>, çekimli fiil (V1/V2/s takısı vb.) veya <strong>to V-ing</strong> yapısı gelip o ismi niteleyemez. Seçeneklerde bunları doğrudan eleyebilirsin!<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Sıfat Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Boşluğun önünde <em>the first / the last / the only / superlative</em> var mı?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>TO</strong> ara (<em>to V1</em> veya <em>to be V3</em>).<br>• <strong>Hayır ise ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluğun hemen sağında ne var?<br>• <strong>Nesne (İsim öbeği) var ise ➔</strong> Eylem etkendir, <strong>V-ing</strong> seç.<br>• <strong>Edat (by, in, under vb.) var ise ➔</strong> Eylem edilgendir, <strong>V3</strong> seç.`,
       exercises: [
         {
           id: "u35_l1_ex1",
@@ -45216,7 +45192,7 @@ const unit35 = {
     {
       lessonId: "u35_l2",
       lessonTitle: "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık — Öbek Düzeyi",
-      description: `<strong>🧠 Zaman Zarf Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Eylemler arasında bir öncelik-sonralık ilişkisi var mı (Önce olan eylem belirtilmiş mi)?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>Having + V3</strong> (etken) veya <strong>Having been + V3</strong> (edilgen) ara.<br>• <strong>Hayır ise (Eşzamanlı/Süreç) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluktan hemen önce bir zaman bağlacı (While, When, Before, After vb.) var mı?<br>• <strong>Evet ise ➔</strong> Bağlaçtan sonra gelen eylemin sağ tarafını kontrol et. Nesne varsa <strong>V-ing</strong>, edat/boşluk varsa <strong>V3</strong> seç.<br>• <strong>Hayır ise ➔</strong> Cümlenin zaman bağlamına göre <strong>V-ing / V3</strong> veya <strong>On/Upon V-ing</strong> yapılarını değerlendir.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>💡 Zaman Kısaltmasının "Altın Formülleri" Nedir?</strong><br>Zaman ve ardışıklık bildiren zarf cümleciği kısaltmaları şu kalıplarla karşımıza çıkar:<br>1. <strong>While / When + V-ing</strong> (Etken - Eşzamanlı: İncelerken/Yaparken)<br>2. <strong>While / When + V3</strong> (Edilgen - Eşzamanlı: İncelenirken/Yapılırken)<br>3. <strong>Having + V3</strong> (Etken - Öncelikli: Yapmış olduktan sonra)<br>4. <strong>Having been + V3</strong> (Edilgen - Öncelikli: Yapılmış olduktan sonra)<br>5. <strong>Before / After / On / Upon + V-ing</strong> (Zaman edatı kısaltması)<br><br>⚠️ <strong>Önemli Kural:</strong> Zarf cümlesi kısaltmalarında öznelerin ortak olması şarttır. Yan cümlenin gizli öznesi ile ana cümlenin öznesi aynı değilse bu kısaltmalar yapılamaz!`,
+      description: `<strong>💡 Zaman Kısaltmasının "Altın Formülleri" Nedir?</strong><br>Zaman ve ardışıklık bildiren zarf cümleciği kısaltmaları şu kalıplarla karşımıza çıkar:<br>1. <strong>While / When + V-ing</strong> (Etken - Eşzamanlı: İncelerken/Yaparken)<br>2. <strong>While / When + V3</strong> (Edilgen - Eşzamanlı: İncelenirken/Yapılırken)<br>3. <strong>Having + V3</strong> (Etken - Öncelikli: Yapmış olduktan sonra)<br>4. <strong>Having been + V3</strong> (Edilgen - Öncelikli: Yapılmış olduktan sonra)<br>5. <strong>Before / After / On / Upon + V-ing</strong> (Zaman edatı kısaltması)<br><br>⚠️ <strong>Önemli Kural:</strong> Zarf cümlesi kısaltmalarında öznelerin ortak olması şarttır. Yan cümlenin gizli öznesi ile ana cümlenin öznesi aynı değilse bu kısaltmalar yapılamaz!<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Zaman Zarf Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Eylemler arasında bir öncelik-sonralık ilişkisi var mı (Önce olan eylem belirtilmiş mi)?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>Having + V3</strong> (etken) veya <strong>Having been + V3</strong> (edilgen) ara.<br>• <strong>Hayır ise (Eşzamanlı/Süreç) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluktan hemen önce bir zaman bağlacı (While, When, Before, After vb.) var mı?<br>• <strong>Evet ise ➔</strong> Bağlaçtan sonra gelen eylemin sağ tarafını kontrol et. Nesne varsa <strong>V-ing</strong>, edat/boşluk varsa <strong>V3</strong> seç.<br>• <strong>Hayır ise ➔</strong> Cümlenin zaman bağlamına göre <strong>V-ing / V3</strong> veya <strong>On/Upon V-ing</strong> yapılarını değerlendir.`,
       exercises: [
         {
           id: "u35_l2_ex1",
@@ -46467,7 +46443,7 @@ const unit35 = {
     {
       lessonId: "u35_l5",
       lessonTitle: "5. Akademik Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
-      description: `<strong>Akademik Cümle Çözümleme (Parsing) Nedir?</strong><br>Uzun akademik cümlelerde, özne ile ana fiil arasına giren kısaltılmış sıfat ve zarf cümleciklerini (parenthetical modifiers) ayıklamak, cümlenin ana fiilini (Main Verb) bulmak için şarttır.`,
+      description: `<strong>💡 Akademik Cümle Parsing'in "Altın Formülleri" Nedir?</strong><br>Uzun ve karmaşık akademik cümleleri doğru çözümlemek (parsing) ve ana ögeleri bulmak için şu 3 altın kuralı uygulayınız:<br>1. <strong>Özne - Yüklem Ayrımı (The Core):</strong> Ana özne ile ana yüklem arasına giren tüm ek açıklamaları ve kısaltmaları geçici olarak cümleden eleyin.<br>2. <strong>Kısaltmalar Yüklem Değildir:</strong> Cümledeki <strong>V-ing</strong>, <strong>V3</strong> veya <strong>to V0</strong> yapıları niteleyici kısaltmalardır (modifiers); asla cümlenin ana fiili (Main Verb) olamazlar.<br>3. <strong>Uyum ve Bağlaç Kontrolü:</strong> Kısaltma öbeklerinin nitelenen özne ile aktif/pasif uyumuna ve iki çekimli yüklem varsa arada bağlaç olup olmadığına dikkat edin.<br><br>⚠️ <strong>Önemli Kural:</strong> Bir cümlede bağlaç olmadan birden fazla ana yüklem bulunamaz. Birden fazla yüklem varsa, biri kısaltılmış (reduction) ya da bir bağlaçla bağlanmış olmak zorundadır.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Akademik Cümle Çözümleme Algoritması</strong><br><br><strong>ADIM 1:</strong> Virgüller veya tireler arasına girmiş olan tüm kısaltma öbeklerini (parenthetical modifiers) parantez içine alarak yok sayın. Geriye kalan çekimli fiil ana yükleminizdir (Main Verb).<br>• <strong>Örnek:</strong> The documents, [preserved in legal archives], <u>were written</u>... (were written = Main Verb)<br><br><strong>ADIM 2:</strong> Cümledeki Noun Clause veya Relative Clause bağlaçlarını (that, which, who vb.) bularak yan cümle sınırlarını çizin. Ana cümlenin yüklemi ile yan cümlenin yüklemini birbirine karıştırmayın.<br><br><strong>ADIM 3:</strong> Kısaltmalarda yapısal veya uyum hatası olup olmadığını kontrol edin.<br>• Eylem edilgense relative clause kısaltmasında bağlaç kalamaz (örn: <i>which finalized by...</i> Hatalı ➔ <i>finalized by...</i> veya <i>which was finalized by...</i> olmalıdır).<br>• Kısaltma biçimleri dilbilgisel formüllere uymalıdır (örn: <i>Having</i>'den sonra V3 gelmelidir: <i>Having evaluated</i>).`,
       exercises: [
         {
           id: "u35_l5_ex1",
@@ -47732,7 +47708,7 @@ const unit36 = {
 
 const unit37 = { lessons: [] };
 
-// Register and Consolidate Noun Clause (İsim Cümleciği) into 8 Master Lessons
+// Register and Consolidate Noun Clause (İsim Cümleciği) into 4 Master Lessons
 (function () {
   if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof unitSentencesMap !== 'undefined') {
     const unitNC = units.find(u => u.title && u.title.includes('İsim Cümleciği'));
@@ -47740,21 +47716,140 @@ const unit37 = { lessons: [] };
       unitNC.pages = "240-260";
       unitNC.description = "Cümlede özne veya nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin akademik kullanımı.";
       
+      const rawNC = unitSentencesMap["28"];
+      if (rawNC && rawNC["8"]) {
+        const consolidatedNC = {
+          "1": {
+            "exercises": [
+              {
+                "id": "nc_l1_ex1",
+                "title": "Alıştırma 1: Bildirim Cümlecikleri — Öbek Düzeyi",
+                "description": "That ve The Fact That yapılarının öbek düzeyinde tanınması.",
+                "questions": [...rawNC["1"].exercises[0].questions, ...rawNC["4"].exercises[0].questions]
+              },
+              {
+                "id": "nc_l1_ex2",
+                "title": "Alıştırma 2: Bildirim Cümlecikleri — Cümle Düzeyi",
+                "description": "That ve The Fact That yapılarında özne ve nesne konumlarının kavranması.",
+                "questions": [...rawNC["1"].exercises[1].questions, ...rawNC["4"].exercises[1].questions]
+              },
+              {
+                "id": "nc_l1_ex3",
+                "title": "Alıştırma 3: Bildirim Cümlecikleri — Akademik Düzey",
+                "description": "That ve The Fact That yapılarının akademik düzeyde pekiştirilmesi.",
+                "questions": [...rawNC["1"].exercises[2].questions, ...rawNC["4"].exercises[2].questions]
+              }
+            ]
+          },
+          "2": {
+            "exercises": [
+              {
+                "id": "nc_l2_ex1",
+                "title": "Alıştırma 1: Dolaylı Sorular — Öbek Düzeyi",
+                "description": "Whether, if, wh- ve -ever yapılarının öbek düzeyinde tanınması.",
+                "questions": [...rawNC["2"].exercises[0].questions, ...rawNC["3"].exercises[0].questions]
+              },
+              {
+                "id": "nc_l2_ex2",
+                "title": "Alıştırma 2: Dolaylı Sorular — Cümle Düzeyi",
+                "description": "Whether, if, wh- ve -ever yapılarında özne ve nesne konumlarının kavranması.",
+                "questions": [...rawNC["2"].exercises[1].questions, ...rawNC["3"].exercises[1].questions]
+              },
+              {
+                "id": "nc_l2_ex3",
+                "title": "Alıştırma 3: Dolaylı Sorular — Akademik Düzey",
+                "description": "Whether, if, wh- ve -ever yapılarının akademik düzeyde pekiştirilmesi.",
+                "questions": [...rawNC["2"].exercises[2].questions, ...rawNC["3"].exercises[2].questions]
+              }
+            ]
+          },
+          "3": {
+            "exercises": [
+              {
+                "id": "nc_l3_ex1",
+                "title": "Alıştırma 1: Akademik Zorunluluk & Edat-Sıfat Sonrası — Öbek Düzeyi",
+                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarının öbek düzeyinde tanınması.",
+                "questions": [...rawNC["5"].exercises[0].questions, ...rawNC["6"].exercises[0].questions]
+              },
+              {
+                "id": "nc_l3_ex2",
+                "title": "Alıştırma 2: Akademik Zorunluluk & Edat-Sıfat Sonrası — Cümle Düzeyi",
+                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarında özne/nesne konumlarının kavranması.",
+                "questions": [...rawNC["5"].exercises[1].questions, ...rawNC["6"].exercises[1].questions]
+              },
+              {
+                "id": "nc_l3_ex3",
+                "title": "Alıştırma 3: Akademik Zorunluluk & Edat-Sıfat Sonrası — Akademik Düzey",
+                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarının akademik düzeyde pekiştirilmesi.",
+                "questions": [...rawNC["5"].exercises[2].questions, ...rawNC["6"].exercises[2].questions]
+              }
+            ]
+          },
+          "4": {
+            "exercises": [
+              {
+                "id": "nc_l4_ex1",
+                "title": "Alıştırma 1: Kritik Ayrım Refleksleri — Öbek Düzeyi",
+                "description": "Noun Clause ve Relative Clause ayırt etme alıştırmaları.",
+                "questions": [...rawNC["7"].exercises[0].questions, ...rawNC["8"].exercises[0].questions]
+              },
+              {
+                "id": "nc_l4_ex2",
+                "title": "Alıştırma 2: Kritik Ayrım Refleksleri — Cümle Düzeyi",
+                "description": "Noun Clause ve Relative Clause yapısal farklarının cümle düzeyinde pekiştirilmesi.",
+                "questions": [...rawNC["7"].exercises[1].questions, ...rawNC["8"].exercises[1].questions]
+              },
+              {
+                "id": "nc_l4_ex3",
+                "title": "Alıştırma 3: Kritik Ayrım Refleksleri — Akademik Düzey",
+                "description": "Karma akademik noun clause ve relative clause ayırt etme refleksleri.",
+                "questions": [...rawNC["7"].exercises[2].questions, ...rawNC["8"].exercises[2].questions]
+              }
+            ]
+          }
+        };
+        unitSentencesMap["28"] = consolidatedNC;
+      }
+
       const masterLessons = [];
       const unitSentsObj = unitSentencesMap["28"];
       
       const titlesMap = {
-        "1": { title: "1. That Cümlecikleri", subtitle: "Nesne ve Özne Konumundaki That Blokları", icon: "🔋", formula: "Subject + Verb + that + Clause / That + Clause + Verb", example: "The study confirmed that the hypothesis is valid.", description: "That ile başlayan cümleciklerin cümlenin öznesi veya nesnesi olarak kullanımı." },
-        "2": { title: "2. İkilem ve Şüphe Yapıları", subtitle: "İhtimal, İkilem ve Cümle Başı Whether Yapıları", icon: "❓", formula: "Subject + Verb + if / whether + Clause / Whether + Clause + Verb", example: "Whether inflation will decline remains uncertain.", description: "Olup olmadığı anlamı katan whether/if yapımları ve cümle başında özne konumunda sadece whether kullanımı." },
-        "3": { title: "3. Wh- Soru Kelimeleri ve -ever Yapıları", subtitle: "Soru Kelimeleri ve Genelleştirilmiş Yan Cümleler", icon: "🌐", formula: "Wh- Word / -ever + Subject + Verb", example: "Whatever decision the board takes will affect all sectors.", description: "What, how, why, when, where soru kelimeleri ile whatever, whoever, wherever genelleştirilmiş isim cümlecikleri." },
-        "4": { title: "4. Gerçeklik ve Vurgu Kalıpları", subtitle: "The Fact That ve Vurgulu Giriş Yapıları", icon: "💡", formula: "The fact that + Clause... / It is + Adjective/V3 + that + Clause", example: "It is apparent that the constituent variables change.", description: "The fact that soyut isim blokları ile It is clear that / It is believed that impersonal ve vurgulu cümle yapıları." },
-        "5": { title: "5. Akademik Zorunluluk Yapıları", subtitle: "Zorunluluk, Tavsiye ve Talep Cümlecikleri", icon: "📜", formula: "Demand / Recommend / Essential + that + Subject + V1 (base form)", example: "They demanded that the report be submitted immediately.", description: "Akademik dilde tavsiye, emir ve zorunluluk bildiren fiil/sıfatlardan sonra gelen yalın fiilli (subjunctive) that cümleleri." },
-        "6": { title: "6. Edat ve Sıfat Sonrası Noun Clause Yapıları", subtitle: "Edat + Wh-/Whether & Sıfat Arkası İsim Cümlecikleri", icon: "🔗", formula: "Preposition + Wh- / Whether + Clause & Adjective + that / Wh- + Clause", example: "They discussed the plan about how to allocate resources.", description: "Edatlardan sonra 'that' gelmeyip wh- veya whether yapılarının gelmesi kuralı ile sıfat arkasına bağlanan isim cümlecikleri." },
-        "7": { title: "7. Kritik Ayırt Etme Refleksi", subtitle: "Cümle Yapısı Ayırt Etme ve Sınav Refleksleri", icon: "🎯", formula: "Noun + That + Incomplete vs Verb + That + Complete", example: "The finding that was published (Adjective Clause) vs The finding that data leaked (Noun Clause).", description: "Sınavlarda en çok karıştırılan THAT (Sıfat cümlesi mi yoksa İsim cümlesi mi?) ve THAT vs. WHAT farklarını ayırt etme alıştırmaları." },
-        "8": { title: "8. Karma Akademik Noun Clause Testi ve Metin Okuma", subtitle: "Bölüm Sonu Genel Değerlendirme", icon: "🎓", formula: "Mixed Noun Clause Syntax", example: "Comprehensive analysis of all Noun Clause sentence patterns.", description: "Tüm Noun Clause yapılarının akademik cümle ve metinler üzerinde karışık olarak test edildiği bitirme testi." }
+        "1": { 
+          title: "1. Bildirim Cümlecikleri: That, The Fact That & Vurgu Yapıları", 
+          subtitle: "Nesne, Özne ve Vurgu Konumundaki Declarative Bloklar", 
+          icon: "🔋", 
+          formula: "Subject + Verb + that + Clause / The fact that + Clause... / It is + Adj + that + Clause", 
+          example: "The study confirmed that the hypothesis is valid / The fact that datasets conflict invalidates the report.", 
+          description: "Declarative that cümleleri, the fact that soyut isim blokları, impersonal/vurgulu sahte özne yapımları ve sıfat arkası that kullanımları." 
+        },
+        "2": { 
+          title: "2. Dolaylı Sorular: Wh- Kelimeleri, -ever & Whether/If Yapıları", 
+          subtitle: "İhtimal, İkilem, Wh- Kelimeleri ve Genelleştirilmiş Cümlecikler", 
+          icon: "❓", 
+          formula: "Subject + Verb + if / whether + Clause / Wh- Word + Subject + Verb", 
+          example: "Whether inflation will decline remains uncertain / Whatever decision the board takes will affect all sectors.", 
+          description: "If/whether dolaylı soru yapıları, wh- soru kelimeleri, -ever genellemeleri ve edat sonrası isim cümlecikleri." 
+        },
+        "3": { 
+          title: "3. Akademik Zorunluluk & Edat-Sıfat Sonrası Cümlecikler", 
+          subtitle: "Subjunctive Yapılar ve Edat/Sıfat Sonrası Konumlar", 
+          icon: "📜", 
+          formula: "Demand / Recommend / Essential + that + Subject + V1 (base form) & Preposition + Wh- / Whether + Clause", 
+          example: "They demanded that the report be submitted immediately / They discussed the plan about how to allocate resources.", 
+          description: "Tavsiye, emir ve zorunluluk bildiren subjunctive (yalın fiilli) that cümleleri ile edat/sıfat arkası isim cümlecikleri." 
+        },
+        "4": { 
+          title: "4. Kritik Ayrım Refleksleri & Karma Akademik Test", 
+          subtitle: "Cümle Yapısı Ayırt Etme, Sınav Refleksleri ve Genel Değerlendirme", 
+          icon: "🎯", 
+          formula: "Noun Clause vs. Adjective Clause / That vs. What & Mixed Syntax", 
+          example: "The finding that was published (Adjective Clause) vs The finding that data leaked (Noun Clause).", 
+          description: "Noun Clause ile Relative Clause arasındaki yapısal farklar, that/what ayrımı ve tüm yapıların karma akademik testleri." 
+        }
       };
 
-      for (let k = 1; k <= 8; k++) {
+      for (let k = 1; k <= 4; k++) {
         const key = String(k);
         const lData = unitSentsObj[key];
         const info = titlesMap[key];
@@ -47778,9 +47873,9 @@ const unit37 = { lessons: [] };
         if (idx !== -1) lessons.splice(idx, 1);
       });
 
-      // Assign new master 8 lessons
+      // Assign new master 4 lessons
       unitNC.lessons = masterLessons.map(ml => ml.id);
-      unitNC.numLessons = 8;
+      unitNC.numLessons = 4;
       unitNC.subtitles = masterLessons.map(ml => ml.title.replace(/^\d+\.\s*/, ''));
       unitNC.formulas = masterLessons.map(ml => ({
         formula: ml.formula,
