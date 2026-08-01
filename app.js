@@ -1100,6 +1100,44 @@ let placementQuestionsList = [];
 let quizSessionId = 0;
 let isCurrentExercisePassed = true;
 
+// Aktif quiz durumunu tarayıcı hafızasına kaydet (yenilemeden sonra devam etmek için)
+function saveActiveQuizState() {
+  if (isReviewMode) {
+    localStorage.setItem('amok_active_quiz_type', 'review');
+  } else if (isFormationMode) {
+    localStorage.setItem('amok_active_quiz_type', 'formation');
+  } else if (currentLesson) {
+    localStorage.setItem('amok_active_quiz_type', 'lesson');
+    localStorage.setItem('amok_active_lesson_id', currentLesson.id);
+    if (currentLesson.activeExerciseId) {
+      localStorage.setItem('amok_active_exercise_id', currentLesson.activeExerciseId);
+    } else {
+      localStorage.removeItem('amok_active_exercise_id');
+    }
+  } else {
+    localStorage.removeItem('amok_active_quiz_type');
+    return;
+  }
+  localStorage.setItem('amok_active_question_index', currentQuestionIndex);
+  localStorage.setItem('amok_active_correct_count', correctCount);
+  localStorage.setItem('amok_active_wrong_count', wrongCount);
+  if (isReviewMode) {
+    localStorage.setItem('amok_active_review_question_ids', JSON.stringify(reviewQuestions.map(q => q.id)));
+    localStorage.setItem('amok_active_review_correct_ids', JSON.stringify(reviewSessionCorrectIds));
+  }
+}
+
+function clearActiveQuizState() {
+  localStorage.removeItem('amok_active_quiz_type');
+  localStorage.removeItem('amok_active_lesson_id');
+  localStorage.removeItem('amok_active_exercise_id');
+  localStorage.removeItem('amok_active_question_index');
+  localStorage.removeItem('amok_active_correct_count');
+  localStorage.removeItem('amok_active_wrong_count');
+  localStorage.removeItem('amok_active_review_question_ids');
+  localStorage.removeItem('amok_active_review_correct_ids');
+}
+
 let reflexTimer = null;
 let reflexInterval = null;
 let blitzKeyHandler = null;
@@ -3318,6 +3356,9 @@ function showScreen(screenId) {
   }
 
   localStorage.setItem('amok_last_screen', screenId);
+  if (screenId !== 'quiz-screen') {
+    clearActiveQuizState();
+  }
 
   // Scroll to top instantly before screen state changes
   if (screenId !== 'home-screen') {
@@ -5100,8 +5141,34 @@ async function enterApp() {
   }
   const lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
   
-  showScreen(lastScreen);
-  switchTab(lastTab);
+  if (lastScreen === 'quiz-screen') {
+    const quizType = localStorage.getItem('amok_active_quiz_type');
+    if (quizType) {
+      if (quizType === 'lesson') {
+        const lessonId = localStorage.getItem('amok_active_lesson_id');
+        const exerciseId = localStorage.getItem('amok_active_exercise_id') || null;
+        if (lessonId) {
+          startLesson(lessonId, exerciseId, true);
+        } else {
+          showScreen('home-screen');
+          switchTab(lastTab);
+        }
+      } else if (quizType === 'review') {
+        startReviewMode(true);
+      } else if (quizType === 'formation') {
+        startFormationTour(true);
+      } else {
+        showScreen('home-screen');
+        switchTab(lastTab);
+      }
+    } else {
+      showScreen('home-screen');
+      switchTab(lastTab);
+    }
+  } else {
+    showScreen(lastScreen);
+    switchTab(lastTab);
+  }
 
   if (lastScreen === 'home-screen') {
     requestAnimationFrame(() => {
@@ -5122,6 +5189,7 @@ function logout() {
   }
   localStorage.removeItem(STATE_KEY);
   localStorage.removeItem('amok_last_scroll_y');
+  clearActiveQuizState();
   
 
   // Temayı sıfırla
@@ -7018,7 +7086,7 @@ function showFormulaWarmup(lesson, callback) {
 // ============================================================
 // QUIZ MOTORU
 // ============================================================
-function startLesson(lessonId, exerciseId = null) {
+function startLesson(lessonId, exerciseId = null, isRestore = false) {
   window.completedReadingHighlights = [];
   quizSessionId++;
   isCurrentExercisePassed = false;
@@ -7086,9 +7154,15 @@ function startLesson(lessonId, exerciseId = null) {
     currentQuizQuestions = expandedQuestions;
   }
 
-  currentQuestionIndex = 0;
-  correctCount = 0;
-  wrongCount = 0;
+  if (isRestore) {
+    currentQuestionIndex = parseInt(localStorage.getItem('amok_active_question_index') || '0', 10);
+    correctCount = parseInt(localStorage.getItem('amok_active_correct_count') || '0', 10);
+    wrongCount = parseInt(localStorage.getItem('amok_active_wrong_count') || '0', 10);
+  } else {
+    currentQuestionIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+  }
   heartsAtStart = state.hearts;
   selectedAnswer = null;
   isAnswerChecked = false;
@@ -7100,23 +7174,29 @@ function startLesson(lessonId, exerciseId = null) {
     return;
   }
 
+  saveActiveQuizState();
+
   updateQuizUI();
   showScreen('quiz-screen');
 
-  const proceedToQuiz = () => {
-    if (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) {
-      showFormulaWarmup(currentLesson, () => {
-        renderQuestion();
-      });
-    } else {
-      renderQuestion();
-    }
-  };
-
-  if (currentLesson.konuAnlatimi) {
-    showKonuAnlatimi(currentLesson.konuAnlatimi, proceedToQuiz);
+  if (isRestore) {
+    renderQuestion();
   } else {
-    proceedToQuiz();
+    const proceedToQuiz = () => {
+      if (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) {
+        showFormulaWarmup(currentLesson, () => {
+          renderQuestion();
+        });
+      } else {
+        renderQuestion();
+      }
+    };
+
+    if (currentLesson.konuAnlatimi) {
+      showKonuAnlatimi(currentLesson.konuAnlatimi, proceedToQuiz);
+    } else {
+      proceedToQuiz();
+    }
   }
 }
 
@@ -11175,6 +11255,7 @@ function checkAnswer() {
       ? `<div>Harika! Doğru cevap! 🎉</div><div class="explanation-box" style="font-size: 0.9rem; margin-top: 8px; text-align: left; background: rgba(255,255,255,0.15); padding: 10px 14px; border-radius: 8px; line-height: 1.5; color: inherit;">${question.explanation}</div>` 
       : 'Harika! Doğru cevap! 🎉';
     correctCount++;
+    saveActiveQuizState();
     state.xp += XP_PER_CORRECT;
     animateStat('stat-xp', 'xp-gain');
     updateDailyTaskProgress('xp', XP_PER_CORRECT);
@@ -11258,6 +11339,7 @@ function checkAnswer() {
         (question.explanation ? `<div class="explanation-box" style="font-size: 0.9rem; margin-top: 8px; text-align: left; background: rgba(0,0,0,0.06); padding: 10px 14px; border-radius: 8px; line-height: 1.5; color: inherit;">${question.explanation}</div>` : '');
     }
     wrongCount++;
+    saveActiveQuizState();
     
     if (!isReviewMode && !isFormationMode) {
       state.hearts = Math.max(0, state.hearts - 1);
@@ -11416,6 +11498,7 @@ function nextQuestion() {
     autoAdvanceTimeout = null;
   }
   currentQuestionIndex++;
+  saveActiveQuizState();
 
   // Canlar bitti mi?
   if (!isReviewMode && !isFormationMode && state.hearts <= 0) {
@@ -13542,15 +13625,25 @@ function showGuestBlockModal() {
   }
 }
 
-function startFormationTour() {
+function startFormationTour(isRestore = false) {
   quizSessionId++;
   isFormationMode = true;
-  currentQuestionIndex = 0;
-  correctCount = 0;
-  wrongCount = 0;
+
+  if (isRestore) {
+    currentQuestionIndex = parseInt(localStorage.getItem('amok_active_question_index') || '0', 10);
+    correctCount = parseInt(localStorage.getItem('amok_active_correct_count') || '0', 10);
+    wrongCount = parseInt(localStorage.getItem('amok_active_wrong_count') || '0', 10);
+  } else {
+    currentQuestionIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+  }
+
   selectedAnswer = null;
   isAnswerChecked = false;
   matchState = null;
+
+  saveActiveQuizState();
 
   updateQuizUI();
   showScreen('quiz-screen');
@@ -15034,44 +15127,77 @@ function checkAndShowReviewPrompt() {
   return;
 }
 
-function startReviewMode() {
-  if (!state.wrongQuestions || state.wrongQuestions.length === 0) {
+function startReviewMode(isRestore = false) {
+  if (!isRestore && (!state.wrongQuestions || state.wrongQuestions.length === 0)) {
     showToast('Harika! Tekrar edilecek hatalı sorunuz bulunmamaktadır.', 'success');
     return;
   }
 
   quizSessionId++;
   isReviewMode = true;
-  currentQuestionIndex = 0;
-  correctCount = 0;
-  wrongCount = 0;
+
+  if (isRestore) {
+    currentQuestionIndex = parseInt(localStorage.getItem('amok_active_question_index') || '0', 10);
+    correctCount = parseInt(localStorage.getItem('amok_active_correct_count') || '0', 10);
+    wrongCount = parseInt(localStorage.getItem('amok_active_wrong_count') || '0', 10);
+
+    // Restore reviewQuestions
+    reviewQuestions = [];
+    try {
+      const qIds = JSON.parse(localStorage.getItem('amok_active_review_question_ids') || '[]');
+      qIds.forEach(qId => {
+        lessons.forEach(l => {
+          const allQs = getLessonQuestions(l);
+          const q = allQs.find(quest => quest.id === qId);
+          if (q) reviewQuestions.push(q);
+        });
+      });
+    } catch (e) {
+      console.error(e);
+    }
+
+    // Restore reviewSessionCorrectIds
+    try {
+      reviewSessionCorrectIds = JSON.parse(localStorage.getItem('amok_active_review_correct_ids') || '[]');
+    } catch (e) {
+      reviewSessionCorrectIds = [];
+    }
+  } else {
+    currentQuestionIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+    reviewSessionCorrectIds = []; // Reset correctly answered list for this session
+
+    // Hata yapılan soruları veritabanından çek
+    reviewQuestions = [];
+    state.wrongQuestions.forEach(qId => {
+      lessons.forEach(l => {
+        const allQs = getLessonQuestions(l);
+        const q = allQs.find(quest => quest.id === qId);
+        if (q) reviewQuestions.push(q);
+      });
+    });
+
+    if (reviewQuestions.length === 0) {
+      isReviewMode = false;
+      showToast('Tekrar edilecek soru bulunamadı.', 'info');
+      return;
+    }
+
+    // Karma/Karışık test olması için soruları karıştır
+    reviewQuestions.sort(() => Math.random() - 0.5);
+
+    // Sadece ilk 10 soruyu al (10'ar soruluk testler yapmak için)
+    reviewQuestions = reviewQuestions.slice(0, 10);
+  }
+
   selectedAnswer = null;
   isAnswerChecked = false;
   matchState = null;
-  reviewSessionCorrectIds = []; // Reset correctly answered list for this session
 
-  // Hata yapılan soruları veritabanından çek
-  reviewQuestions = [];
-  state.wrongQuestions.forEach(qId => {
-    lessons.forEach(l => {
-      const allQs = getLessonQuestions(l);
-      const q = allQs.find(quest => quest.id === qId);
-      if (q) reviewQuestions.push(q);
-    });
-  });
+  saveActiveQuizState();
 
-  if (reviewQuestions.length === 0) {
-    isReviewMode = false;
-    showToast('Tekrar edilecek soru bulunamadı.', 'info');
-    return;
-  }
-
-  // Karma/Karışık test olması için soruları karıştır
-  reviewQuestions.sort(() => Math.random() - 0.5);
-
-  // Sadece ilk 10 soruyu al (10'ar soruluk testler yapmak için)
-  reviewQuestions = reviewQuestions.slice(0, 10);
-
+  updateQuizUI();
   showScreen('quiz-screen');
   renderQuestion();
 }

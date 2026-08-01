@@ -38225,8 +38225,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l23ex1",
-          "title": "Alıştırma 1: Yapısal Kalıplar ve Öbekler",
-          "description": "Durum, modal ve yardımcı fiil sorularında öbek seviyesinde yapılar (10 Soru)",
+          "title": "Alıştırma 1: Soru Yapıları - Durum ve Modallar",
+          "description": "Durum, modal ve yardımcı fiil soru kalıplarını tanıma (15 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -38308,25 +38308,6 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l23_q2",
-              "type": "fill-blank",
-              "prompt": "Boşluğu uygun yardımcı fiille tamamlayın: \"___ the film critic analyze the narrative structure of classical cinema?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Should",
-                "Is",
-                "Are",
-                "Been"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Should the film critic analyze the narrative structure of classical cinema?"
-            },
-            {
               "id": "u9l23_q3",
               "type": "multiple-choice",
               "prompt": "\"Tarihçiler kadim el yazmalarındaki felsefi mantığı ve fikirleri sorgulamalı mıdır?\" cümlesinin İngilizce karşılığı hangisidir?",
@@ -38345,25 +38326,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "Should historians question the philosophical logic and ideas in ancient manuscripts?",
               "isEngToTr": false
-            },
-            {
-              "id": "u9l23_q4",
-              "type": "fill-blank",
-              "prompt": "Cümle başı modal boşluğunu tamamlayın: \"___ sociologists observe the impact of urbanization on social behavior?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Could",
-                "Was",
-                "Has",
-                "Does"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Could sociologists observe the impact of urbanization on social behavior?"
             },
             {
               "id": "u9l23_q5",
@@ -38386,15 +38348,56 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
+              "id": "u9l23_q2",
+              "grammarTags": [
+                "Soru Yapıları",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Saf Modallar"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ the film critic analyze the narrative structure of classical cinema?",
+              "options": [
+                "Should",
+                "Is",
+                "Are",
+                "Been"
+              ],
+              "correctIndex": 0,
+              "translation": "Film eleştirmeni klasik sinemanın anlatı yapısını analiz etmeli mi?"
+            },
+            {
+              "id": "u9l23_q4",
+              "grammarTags": [
+                "Soru Yapıları",
+                "İsim Tamlamaları",
+                "Fiil ve Edat Yapıları",
+                "Saf Modallar"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ sociologists observe the impact of urbanization on social behavior?",
+              "options": [
+                "Could",
+                "Was",
+                "Has",
+                "Does"
+              ],
+              "correctIndex": 0,
+              "translation": "Sosyologlar kentleşmenin toplumsal davranış üzerindeki etkisini gözlemleyebilir miydi?"
+            },
+            {
               "id": "u9l23_q6",
-              "type": "fill-blank",
-              "prompt": "Durum sorusu yardımcı fiilini seçin: \"___ the historical evidence sufficient for a definitive legal judgment?\"",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Temel Cümle Yapıları"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ the historical evidence sufficient for a definitive legal judgment?",
               "options": [
                 "Was",
                 "Do",
@@ -38402,103 +38405,19 @@ const unitSentencesMap = {
                 "Can"
               ],
               "correctIndex": 0,
-              "enSentence": "Was the historical evidence sufficient for a definitive legal judgment?"
-            },
-            {
-              "id": "u9l23_q7",
-              "type": "translation-text",
-              "prompt": "\"May the author attend the academic conference to evaluate the primary sources of the research project?\" cümlesini Türkçe'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "correctSentence": "Yazar araştırma projesinin birincil kaynaklarını değerlendirmek için akademik konferansa katılabilir mi?",
-              "enSentence": "May the author attend the academic conference to evaluate the primary sources of the research project?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l23_q8",
-              "type": "translation-text",
-              "prompt": "\"Ekonomistler merkez bankasının yeni parasal politikasını alanda (field) tartışabilir mi?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "correctSentence": "Can economists discuss the new monetary policy of the central bank in the field?",
-              "enSentence": "Can economists discuss the new monetary policy of the central bank in the field?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l23ex2",
-          "title": "Alıştırma 2: Yalın Cümleler",
-          "description": "Durum, modal ve yardımcı fiil sorularında yalın cümle düzeyinde yapılar (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l23_ex2_m1",
-              "type": "matching",
-              "prompt": "Yalın cümle modal sorularını Türkçe karşılıklarıyla eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "pairs": [
-                {
-                  "left": "Has the scholar deciphered the inscription in the hall?",
-                  "right": "Bilgin salondaki yazıtı çözdü mü?"
-                },
-                {
-                  "left": "Must legal scholars respect historical precedent and law?",
-                  "right": "Hukuk bilginleri tarihsel emsale ve yasaya saygı duymalı mıdır?"
-                },
-                {
-                  "left": "Were sociologists analyzing economic data during the meeting?",
-                  "right": "Sosyologlar toplantı sırasında ekonomik verileri analiz ediyor muydu?"
-                },
-                {
-                  "left": "Can cinematic techniques convey psychological states of fear?",
-                  "right": "Sinematik teknikler korkunun psikolojik durumlarını aktarabilir mi?"
-                }
-              ]
-            },
-            {
-              "id": "u9l23_q9",
-              "type": "multiple-choice",
-              "prompt": "\"Would the philosopher accept the basic premise of modern ethics and argument in his book?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Filozof kitabında modern etiğin temel önermesini ve argümanını kabul eder miydi?",
-                "Filozof kitabında modern etiğin temel önermesini ve argümanını kabul etmeli midir?",
-                "Filozof kitabında modern etiğin temel önermesini ve argümanını kabul edebildi mi?",
-                "Filozof kitabında modern etiğin temel önermesini ve argümanını kabul ediyor mu?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Would the philosopher accept the basic premise of modern ethics and argument in his book?",
-              "isEngToTr": true
+              "translation": "Tarihsel kanıtlar kesin bir yasal karar için yeterli miydi?"
             },
             {
               "id": "u9l23_q10",
-              "type": "fill-blank",
-              "prompt": "Boşluğu tamamlayın: \"___ the court review the archival documents in the hall before the final decision?\"",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Saf Modallar"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ the court review the archival documents in the hall before the final decision?",
               "options": [
                 "Should",
                 "Is",
@@ -38506,77 +38425,19 @@ const unitSentencesMap = {
                 "Are"
               ],
               "correctIndex": 0,
-              "enSentence": "Should the court review the archival documents in the hall before the final decision?"
-            },
-            {
-              "id": "u9l23_q11",
-              "type": "multiple-choice",
-              "prompt": "\"Araştırmacılar kütüphanedeki nadir el yazmalarını ve kitapları koruyabilir mi?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Can researchers protect the rare manuscripts and books in the library?",
-                "Should researchers protect the rare manuscripts and books in the library?",
-                "Were researchers protecting the rare manuscripts and books in the library?",
-                "Must researchers protect the rare manuscripts and books in the library?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Can researchers protect the rare manuscripts and books in the library?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l23_q12",
-              "type": "fill-blank",
-              "prompt": "Soru kalıbını doldurun: \"___ the director depict social conflicts and prejudice in his new film?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Might",
-                "Was",
-                "Has",
-                "Been"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Might the director depict social conflicts and prejudice in his new film?"
-            },
-            {
-              "id": "u9l23_q13",
-              "type": "multiple-choice",
-              "prompt": "\"Have economists gathered sufficient empirical data for the research project?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Kip Ekleri ve Zamanlar"
-              ],
-              "options": [
-                "Ekonomistler araştırma projesi için yeterli ampirik veri topladı mı?",
-                "Ekonomistler araştırma projesi için yeterli ampirik veri toplayacak mı?",
-                "Ekonomistler araştırma projesi için yeterli ampirik veri toplamalı mıdır?",
-                "Ekonomistler araştırma projesi için yeterli ampirik veri topluyor muydu?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Have economists gathered sufficient empirical data for the research project?",
-              "isEngToTr": true
+              "translation": "Mahkeme nihai karardan önce salondaki arşiv belgelerini incelemeli mi?"
             },
             {
               "id": "u9l23_q14",
-              "type": "fill-blank",
-              "prompt": "Doğru modalı seçin: \"___ historians disregard the cultural context of ancient ruins, artifacts, and discovery?\"",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Saf Modallar"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ historians disregard the cultural context of ancient ruins, artifacts, and discovery?",
               "options": [
                 "Should",
                 "Are",
@@ -38584,27 +38445,7 @@ const unitSentencesMap = {
                 "Is"
               ],
               "correctIndex": 0,
-              "enSentence": "Should historians disregard the cultural context of ancient ruins, artifacts, and discovery?"
-            },
-            {
-              "id": "u9l23_q15",
-              "type": "multiple-choice",
-              "prompt": "\"Sosyo-ekonomik faktörler topluluktaki bireysel davranışları ve fikirleri etkileyebilir mi?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Can socio-economic factors influence individual behavior and ideas in the community?",
-                "Must socio-economic factors influence individual behavior and ideas in the community?",
-                "Were socio-economic factors influencing individual behavior and ideas in the community?",
-                "Should socio-economic factors influence individual behavior and ideas in the community?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Can socio-economic factors influence individual behavior and ideas in the community?",
-              "isEngToTr": false
+              "translation": "Tarihçiler antik kalıntıların, eserlerin ve keşiflerin kültürel bağlamını göz ardı etmeli midir?"
             },
             {
               "id": "u9l23_q16",
@@ -38679,122 +38520,8 @@ const unitSentencesMap = {
                 "truth"
               ],
               "enSentence": "Can philosophers discuss the importance of moral values and truth?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l23ex3",
-          "title": "Alıştırma 3: İleri Düzey Cümleler",
-          "description": "Akademik bağlamda durum ve modal soruları (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l23_ex3_m1",
-              "type": "matching",
-              "prompt": "İleri düzey akademik soruları Türkçe karşılıklarıyla eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "pairs": [
-                {
-                  "left": "Must legal scholars defend constitutional principles during the conference?",
-                  "right": "Hukuk bilginleri konferans sırasında anayasal ilkeleri savunmalı mıdır?"
-                },
-                {
-                  "left": "Could economic fluctuations trigger shifts in political ideology and opinions?",
-                  "right": "Ekonomik dalgalanmalar siyasi ideoloji ve fikirlerde kaymalara yol açabilir miydi?"
-                },
-                {
-                  "left": "Has the sociologist published a detailed study on urban poverty and climate?",
-                  "right": "Sosyolog kentsel yoksulluk ve iklim üzerine detaylı bir çalışma yayımladı mı?"
-                },
-                {
-                  "left": "Can cinematic realism reflect psychological difficulties of human life?",
-                  "right": "Sinematik realizm insan yaşamının psikolojik zorluklarını yansıtabilir mi?"
-                }
-              ]
-            },
-            {
-              "id": "u9l23_q18",
-              "type": "multiple-choice",
-              "prompt": "\"Should historians scrutinize the methodological validity of primary sources in archival research?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Tarihçiler arşiv araştırmalarında birincil kaynakların metodolojik geçerliliğini titizlikle incelemeli midir?",
-                "Tarihçiler arşiv araştırmalarında birincil kaynakların metodolojik geçerliliğini titizlikle inceleyebilir mi?",
-                "Tarihçiler arşiv araştırmalarında birincil kaynakların metodolojik geçerliliğini titizlikle inceledi mi?",
-                "Tarihçiler arşiv araştırmalarında birincil kaynakların metodolojik geçerliliğini titizlikle inceleyecek mi?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Should historians scrutinize the methodological validity of primary sources in archival research?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l23_q19",
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek uygun modalı seçin: \"___ the ethics committee evaluate the long-term societal consequences of scientific experiments in the institute?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Must",
-                "Is",
-                "Were",
-                "Are"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Must the ethics committee evaluate the long-term societal consequences of scientific experiments in the institute?"
-            },
-            {
-              "id": "u9l23_q20",
-              "type": "multiple-choice",
-              "prompt": "\"Psikologlar deneysel çalışmalar sırasında gözlemlenen davranışsal anomalileri ve korkuları açıklayabilir mi?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Can psychologists explain the behavioral anomalies and fears observed during experimental studies?",
-                "Should psychologists explain the behavioral anomalies and fears observed during experimental studies?",
-                "Must psychologists explain the behavioral anomalies and fears observed during experimental studies?",
-                "Were psychologists explaining the behavioral anomalies and fears observed during experimental studies?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Can psychologists explain the behavioral anomalies and fears observed during experimental studies?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l23_q21",
-              "type": "fill-blank",
-              "prompt": "Yardımcı fiili tamamlayın: \"___ the constitutional court nullify legal acts that violate fundamental human rights and opinions?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "options": [
-                "Can",
-                "Was",
-                "Has",
-                "Been"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Can the constitutional court nullify legal acts that violate fundamental human rights and opinions?"
+              "isEngToTr": false,
+              "trSentence": "Filozoflar ahlaki değerlerin ve gerçeğin önemini tartışabilir mi?"
             },
             {
               "id": "u9l23_q22",
@@ -38836,102 +38563,17 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l23_q23",
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını doğru sırayla oluşturun: \"Ekonomistler küresel pazarın yapısındaki kırılganlıkları ve riskleri tahmin edebilir miydi?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "translation": "Ekonomistler küresel pazarın yapısındaki kırılganlıkları ve riskleri tahmin edebilir miydi?",
-              "words": [
-                "Could",
-                "economists",
-                "predict",
-                "the",
-                "vulnerabilities",
-                "and",
-                "risks",
-                "in",
-                "the",
-                "structure",
-                "of",
-                "the",
-                "global",
-                "market"
-              ],
-              "correctOrder": [
-                "Could",
-                "economists",
-                "predict",
-                "the",
-                "vulnerabilities",
-                "and",
-                "risks",
-                "in",
-                "the",
-                "structure",
-                "of",
-                "the",
-                "global",
-                "market"
-              ],
-              "enSentence": "Could economists predict the vulnerabilities and risks in the structure of the global market?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l23_q24",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Have sociologists gathered empirical evidence regarding social mobility in urban research?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Kip Ekleri ve Zamanlar"
-              ],
-              "translation": "Have sociologists gathered empirical evidence regarding social mobility in urban research?",
-              "words": [
-                "Sosyologlar",
-                "kentsel",
-                "araştırmada",
-                "toplumsal",
-                "hareketliliğe",
-                "ilişkin",
-                "ampirik",
-                "kanıt",
-                "topladı",
-                "mı",
-                "metodoloji"
-              ],
-              "correctOrder": [
-                "Sosyologlar",
-                "kentsel",
-                "araştırmada",
-                "toplumsal",
-                "hareketliliğe",
-                "ilişkin",
-                "ampirik",
-                "kanıt",
-                "topladı",
-                "mı"
-              ],
-              "enSentence": "Have sociologists gathered empirical evidence regarding social mobility in urban research?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l23_q25",
+              "id": "u9l23_q7",
               "type": "translation-text",
-              "prompt": "\"Would the philosopher challenge traditional metaphysical concepts through modern logic and ideas?\" cümlesini Türkçe'ye çevirin:",
+              "prompt": "\"May the author attend the academic conference to evaluate the primary sources of the research project?\" cümlesini Türkçe'ye çevirin:",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Saf Modallar"
               ],
-              "correctSentence": "Filozof geleneksel metafizik kavramlara modern mantık ve fikirler aracılığıyla meydan okur muydu?",
-              "enSentence": "Would the philosopher challenge traditional metaphysical concepts through modern logic and ideas?",
+              "correctSentence": "Yazar araştırma projesinin birincil kaynaklarını değerlendirmek için akademik konferansa katılabilir mi?",
+              "enSentence": "May the author attend the academic conference to evaluate the primary sources of the research project?",
               "isEngToTr": true
             },
             {
@@ -38956,8 +38598,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l24ex1",
-          "title": "Alıştırma 1: Yapısal Kalıplar ve Öbekler",
-          "description": "Eylem ve yardımcı fiil (Do/Does/Did) sorularında öbek seviyesinde yapılar (10 Soru)",
+          "title": "Alıştırma 1: Soru Yapıları - Do/Does/Did ve There is/are",
+          "description": "Yardımcı fiil eylemleri ve var/yok soru kalıplarını tanıma (15 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -39039,25 +38681,6 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l24_q2",
-              "type": "fill-blank",
-              "prompt": "Boşluğu uygun yardımcı fiille tamamlayın: \"___ sociologists conduct surveys on social inequality in big cities?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "options": [
-                "Do",
-                "Is",
-                "Has",
-                "Was"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Do sociologists conduct surveys on social inequality in big cities?"
-            },
-            {
               "id": "u9l24_q3",
               "type": "multiple-choice",
               "prompt": "\"Felsefe profesörü ders sırasında felsefi mantık kurallarını açıkladı mı?\" cümlesinin İngilizce karşılığı hangisidir?",
@@ -39076,129 +38699,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "Did the philosophy professor explain the rules of philosophical logic during the lecture?",
               "isEngToTr": false
-            },
-            {
-              "id": "u9l24_q4",
-              "type": "fill-blank",
-              "prompt": "Cümle başı yardımcı fiil boşluğunu doldurun: \"___ the court inspect the new corporate policy in the hearing?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "options": [
-                "Does",
-                "Is",
-                "Were",
-                "Are"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Does the court inspect the new corporate policy in the hearing?"
-            },
-            {
-              "id": "u9l24_q5",
-              "type": "multiple-choice",
-              "prompt": "\"Did the film director deny the psychological conflict and prejudice of the author?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Film yönetmeni yazarın psikolojik çatışmasını ve önyargısını inkar etti mi?",
-                "Film yönetmeni yazarın psikolojik çatışmasını ve önyargısını inkar etmeli midir?",
-                "Film yönetmeni yazarın psikolojik çatışmasını ve önyargısını inkar edecek mi?",
-                "Film yönetmeni yazarın psikolojik çatışmasını ve önyargısını inkar edebilir mi?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the film director deny the psychological conflict and prejudice of the author?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q6",
-              "type": "fill-blank",
-              "prompt": "Geçmiş zaman yardımcı fiilini seçin: \"___ the economic crisis lead to major difficulties across the nation?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did",
-                "Does",
-                "Has",
-                "Was"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the economic crisis lead to major difficulties across the nation?"
-            },
-            {
-              "id": "u9l24_q7",
-              "type": "translation-text",
-              "prompt": "\"Does the researcher rely on primary documents in the archive?\" cümlesini Türkçe'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "correctSentence": "Araştırmacı arşivdeki birincil belgelere dayanıyor mu?",
-              "enSentence": "Does the researcher rely on primary documents in the archive?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q8",
-              "type": "translation-text",
-              "prompt": "\"Tarihçiler antik medeniyetlerin kültürel mirasını ve eserlerini belgeledi mi?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "correctSentence": "Did historians document the cultural heritage and artifacts of ancient civilizations?",
-              "enSentence": "Did historians document the cultural heritage and artifacts of ancient civilizations?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l24ex2",
-          "title": "Alıştırma 2: Yalın Cümleler",
-          "description": "Eylem ve var/yok sorularında yalın cümle düzeyinde yapılar (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l24_ex2_m1",
-              "type": "matching",
-              "prompt": "Var/Yok (There is/are) ve eylem soru kalıplarını eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları"
-              ],
-              "pairs": [
-                {
-                  "left": "Is there a conflict between legal rights and morality?",
-                  "right": "Yasal haklar ile ahlak arasında bir çatışma var mıdır?"
-                },
-                {
-                  "left": "Are there historical documents in the university library?",
-                  "right": "Üniversite kütüphanesinde tarihsel belgeler var mıdır?"
-                },
-                {
-                  "left": "Was there an economic decline in the ancient empire?",
-                  "right": "Antik imparatorlukta ekonomik bir gerileme var mıydı?"
-                },
-                {
-                  "left": "Were there sociologists present at the international conference?",
-                  "right": "Uluslararası konferansta hazır bulunan sosyologlar var mıydı?"
-                }
-              ]
             },
             {
               "id": "u9l24_q9",
@@ -39221,15 +38721,76 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
+              "id": "u9l24_q2",
+              "grammarTags": [
+                "Soru Yapıları",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Geniş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ sociologists conduct surveys on social inequality in big cities?",
+              "options": [
+                "Do",
+                "Is",
+                "Has",
+                "Was"
+              ],
+              "correctIndex": 0,
+              "translation": "Sosyologlar büyük şehirlerde toplumsal eşitsizlik üzerine anketler yapar mı?"
+            },
+            {
+              "id": "u9l24_q4",
+              "grammarTags": [
+                "Soru Yapıları",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Geniş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ the court inspect the new corporate policy in the hearing?",
+              "options": [
+                "Does",
+                "Is",
+                "Were",
+                "Are"
+              ],
+              "correctIndex": 0,
+              "translation": "Mahkeme duruşmada yeni şirket politikasını denetler mi?"
+            },
+            {
+              "id": "u9l24_q6",
+              "grammarTags": [
+                "Soru Yapıları",
+                "İsim Tamlamaları",
+                "Fiil ve Edat Yapıları",
+                "Geçmiş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ the economic crisis lead to major difficulties across the nation?",
+              "options": [
+                "Did",
+                "Does",
+                "Has",
+                "Was"
+              ],
+              "correctIndex": 0,
+              "translation": "Ekonomik kriz ulus genelinde büyük zorluklara yol açtı mı?"
+            },
+            {
               "id": "u9l24_q10",
-              "type": "fill-blank",
-              "prompt": "Var/Yok yapısı soru kelimesini seçin: \"___ there any significant difference between the two sociological models?\"",
               "grammarTags": [
                 "Soru Yapıları",
                 "Var / Yok İfadeleri",
                 "İsim Tamlamaları",
                 "Temel Cümle Yapıları"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ there any significant difference between the two sociological models?",
               "options": [
                 "Is",
                 "Do",
@@ -39237,105 +38798,27 @@ const unitSentencesMap = {
                 "Did"
               ],
               "correctIndex": 0,
-              "enSentence": "Is there any significant difference between the two sociological models?"
+              "translation": "İki sosyolojik model arasında önemli bir fark var mıdır?"
             },
             {
-              "id": "u9l24_q11",
-              "type": "multiple-choice",
-              "prompt": "\"Arkeologlar kazı alanında antik bir yazıt ve kalıntı buldu mu?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did archaeologists find an ancient inscription and ruins at the excavation site?",
-                "Do archaeologists find an ancient inscription and ruins at the excavation site?",
-                "Are archaeologists finding an ancient inscription and ruins at the excavation site?",
-                "Have archaeologists found an ancient inscription and ruins at the excavation site?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did archaeologists find an ancient inscription and ruins at the excavation site?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l24_q12",
-              "type": "fill-blank",
-              "prompt": "Boşluğu tamamlayın: \"___ the board of directors approve the new budget for the cinema project?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did",
-                "Is",
-                "Were",
-                "Are"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the board of directors approve the new budget for the cinema project?"
-            },
-            {
-              "id": "u9l24_q13",
-              "type": "multiple-choice",
-              "prompt": "\"Was there any consensus among historians regarding the origin of the treaty?\" cümlesinin Türkçe karşılığı hangisidir?",
+              "id": "u9l24_q19",
               "grammarTags": [
                 "Soru Yapıları",
                 "Var / Yok İfadeleri",
                 "İsim Tamlamaları",
-                "İsim ve Edat Yapıları"
+                "Temel Cümle Yapıları"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
+              "sentence": "___ there any inherent biases in the methodology of the sociological survey?",
               "options": [
-                "Tarihçiler arasında antlaşmanın kökenine ilişkin herhangi bir uzlaşı var mıydı?",
-                "Tarihçiler arasında antlaşmanın kökenine ilişkin herhangi bir uzlaşı var mıdır?",
-                "Tarihçiler arasında antlaşmanın kökenine ilişkin herhangi bir uzlaşı olacak mı?",
-                "Tarihçiler arasında antlaşmanın kökenine ilişkin herhangi bir uzlaşı olabilir mi?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Was there any consensus among historians regarding the origin of the treaty?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q14",
-              "type": "fill-blank",
-              "prompt": "Yardımcı fiili tamamlayın: \"___ economic instability trigger political unrest in developing nations?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "SVO Yapısı",
-                "Geniş Zaman"
-              ],
-              "options": [
+                "Are",
+                "Do",
                 "Does",
-                "Is",
-                "Has",
-                "Was"
+                "Did"
               ],
               "correctIndex": 0,
-              "enSentence": "Does economic instability trigger political unrest in developing nations?"
-            },
-            {
-              "id": "u9l24_q15",
-              "type": "multiple-choice",
-              "prompt": "\"Psikolog hastanın çocukluk anılarını ve davranışlarını analiz etti mi?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did the psychologist analyze the childhood memories and behavior of the patient?",
-                "Does the psychologist analyze the childhood memories and behavior of the patient?",
-                "Is the psychologist analyzing the childhood memories and behavior of the patient?",
-                "Has the psychologist analyzed the childhood memories and behavior of the patient?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the psychologist analyze the childhood memories and behavior of the patient?",
-              "isEngToTr": false
+              "translation": "Sosyolojik anketin metodolojisinde doğal yanlılıklar var mıdır?"
             },
             {
               "id": "u9l24_q16",
@@ -39410,160 +38893,8 @@ const unitSentencesMap = {
                 "document"
               ],
               "enSentence": "Did the court examine the signature on the historical document?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l24ex3",
-          "title": "Alıştırma 3: İleri Düzey Cümleler",
-          "description": "Akademik bağlamda eylem ve var/yok soruları (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l24_ex3_m1",
-              "type": "matching",
-              "prompt": "İleri düzey akademik eylem ve var/yok sorularını eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları"
-              ],
-              "pairs": [
-                {
-                  "left": "Is there strong empirical evidence supporting the new economic model?",
-                  "right": "Yeni ekonomik modeli destekleyen güçlü ampirik kanıt var mıdır?"
-                },
-                {
-                  "left": "Did constitutional scholars debate the limits of executive power during the meeting?",
-                  "right": "Anayasa bilginleri toplantı sırasında yürütme gücünün sınırlarını tartıştılar mı?"
-                },
-                {
-                  "left": "Do sociologists link urbanization to changes in family structure?",
-                  "right": "Sosyologlar kentleşmeyi aile yapısındaki değişimlere bağlar mı?"
-                },
-                {
-                  "left": "Were there substantial difficulties in deciphering the ancient manuscript?",
-                  "right": "Antik el yazmasını çözmede önemli zorluklar var mıydı?"
-                }
-              ]
-            },
-            {
-              "id": "u9l24_q18",
-              "type": "multiple-choice",
-              "prompt": "\"Did the supreme court invalidate the controversial tax legislation after prolonged public debate?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Anayasa Mahkemesi uzun süren kamuoyu tartışmasının ardından tartışmalı vergi mevzuatını geçersiz kıldı mı?",
-                "Anayasa Mahkemesi uzun süren kamuoyu tartışmasının ardından tartışmalı vergi mevzuatını geçersiz kılabilir mi?",
-                "Anayasa Mahkemesi uzun süren kamuoyu tartışmasının ardından tartışmalı vergi mevzuatını geçersiz kılmalı mıdır?",
-                "Anayasa Mahkemesi uzun süren kamuoyu tartışmasının ardından tartışmalı vergi mevzuatını geçersiz kılacak mı?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the supreme court invalidate the controversial tax legislation after prolonged public debate?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q19",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldurun: \"___ there any inherent biases in the methodology of the sociological survey?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "Var / Yok İfadeleri",
-                "İsim Tamlamaları",
-                "Temel Cümle Yapıları"
-              ],
-              "options": [
-                "Are",
-                "Do",
-                "Does",
-                "Did"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Are there any inherent biases in the methodology of the sociological survey?"
-            },
-            {
-              "id": "u9l24_q20",
-              "type": "multiple-choice",
-              "prompt": "\"Tarihçiler arşivdeki belgelerin ve raporların doğruluğunu teyit etti mi?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did historians confirm the authenticity of the documents and reports in the archive?",
-                "Do historians confirm the authenticity of the documents and reports in the archive?",
-                "Are historians confirming the authenticity of the documents and reports in the archive?",
-                "Have historians confirmed the authenticity of the documents and reports in the archive?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did historians confirm the authenticity of the documents and reports in the archive?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l24_q21",
-              "type": "fill-blank",
-              "prompt": "Geçmiş zaman yardımcı fiili seçin: \"___ the psychological experiment demonstrate a clear link between stress and cognitive performance in patients?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did",
-                "Does",
-                "Has",
-                "Was"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the psychological experiment demonstrate a clear link between stress and cognitive performance in patients?"
-            },
-            {
-              "id": "u9l24_q22",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Does the new film reflect the ideological movement of twentieth-century cinema?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "translation": "Does the new film reflect the ideological movement of twentieth-century cinema?",
-              "words": [
-                "Yeni",
-                "film",
-                "yirminci",
-                "yüzyıl",
-                "sinemasının",
-                "ideolojik",
-                "akımını",
-                "yansıtır",
-                "mı",
-                "psikoloji",
-                "kanun"
-              ],
-              "correctOrder": [
-                "Yeni",
-                "film",
-                "yirminci",
-                "yüzyıl",
-                "sinemasının",
-                "ideolojik",
-                "akımını",
-                "yansıtır",
-                "mı"
-              ],
-              "enSentence": "Does the new film reflect the ideological movement of twentieth-century cinema?",
-              "isEngToTr": true
+              "isEngToTr": false,
+              "trSentence": "Mahkeme tarihi belgedeki imzayı inceledi mi?"
             },
             {
               "id": "u9l24_q23",
@@ -39602,48 +38933,21 @@ const unitSentencesMap = {
                 "rates"
               ],
               "enSentence": "Did sociologists investigate the relationship between urbanization and crime rates?",
-              "isEngToTr": false
+              "isEngToTr": false,
+              "trSentence": "Sosyologlar kentleşme ile suç oranları arasındaki ilişkiyi araştırdı mı?"
             },
             {
-              "id": "u9l24_q24",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Was there any direct connection between economic policy and social reform in history?\"",
+              "id": "u9l24_q7",
+              "type": "translation-text",
+              "prompt": "\"Does the researcher rely on primary documents in the archive?\" cümlesini Türkçe'ye çevirin:",
               "grammarTags": [
                 "Soru Yapıları",
-                "Var / Yok İfadeleri",
                 "İsim Tamlamaları",
-                "İsim ve Edat Yapıları"
+                "Fiil ve Edat Yapıları",
+                "Geniş Zaman"
               ],
-              "translation": "Was there any direct connection between economic policy and social reform in history?",
-              "words": [
-                "Tarihte",
-                "ekonomik",
-                "politika",
-                "ile",
-                "sosyal",
-                "reform",
-                "arasında",
-                "doğrudan",
-                "bir",
-                "bağlantı",
-                "var",
-                "mıydı"
-              ],
-              "correctOrder": [
-                "Tarihte",
-                "ekonomik",
-                "politika",
-                "ile",
-                "sosyal",
-                "reform",
-                "arasında",
-                "doğrudan",
-                "bir",
-                "bağlantı",
-                "var",
-                "mıydı"
-              ],
-              "enSentence": "Was there any direct connection between economic policy and social reform in history?",
+              "correctSentence": "Araştırmacı arşivdeki birincil belgelere dayanıyor mu?",
+              "enSentence": "Does the researcher rely on primary documents in the archive?",
               "isEngToTr": true
             },
             {
@@ -39659,20 +38963,6 @@ const unitSentencesMap = {
               "correctSentence": "Komite iklim değişikliği ve ekonomi üzerine nihai araştırma raporunu yayımladı mı?",
               "enSentence": "Did the committee publish the final research report on climate change and economics?",
               "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q26",
-              "type": "translation-text",
-              "prompt": "\"Filozoflar ahlak ile hukuk arasındaki ayrımı ve gerçeği açıkça tanımladı mı?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "correctSentence": "Did philosophers clearly define the distinction between morality and law and the truth?",
-              "enSentence": "Did philosophers clearly define the distinction between morality and law and the truth?",
-              "isEngToTr": false
             }
           ]
         }
@@ -39682,14 +38972,14 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l25ex1",
-          "title": "Alıştırma 1: Yapısal Kalıplar ve Öbekler",
-          "description": "Soru kelimeli (Wh-) sorularda öbek seviyesinde yapılar (10 Soru)",
+          "title": "Alıştırma 1: Soru Yapıları - Soru Kelimeleri (Wh- Questions)",
+          "description": "Soru kelimeli (Wh-) sorularda öbek ve cümle düzeyinde yapılar (15 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
               "id": "u9l25_m1",
               "type": "matching",
-              "prompt": "Soru kelimeli soru kalıplarını Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Soru kelimeli (Wh-) soru kalıplarını Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
@@ -39718,7 +39008,7 @@ const unitSentencesMap = {
             {
               "id": "u9l25_m2",
               "type": "matching",
-              "prompt": "Sosyoloji ve hukuk alanındaki Wh- soru kalıplarını eşleştirin.",
+              "prompt": "Akademik soru yapılarını Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
@@ -39765,25 +39055,6 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l25_q2",
-              "type": "fill-blank",
-              "prompt": "Soru kelimesini seçin: \"___ did the historians find the ancient manuscripts and documents?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Where",
-                "Why",
-                "Who",
-                "What"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Where did the historians find the ancient manuscripts and documents?"
-            },
-            {
               "id": "u9l25_q3",
               "type": "multiple-choice",
               "prompt": "\"Sosyologlar toplumsal yapıyı ve kültürel değerleri nasıl tanımlar?\" cümlesinin İngilizce karşılığı hangisidir?",
@@ -39802,129 +39073,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "How do sociologists define social structure and cultural values?",
               "isEngToTr": false
-            },
-            {
-              "id": "u9l25_q4",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldurun: \"___ economic model predicts market growth accurately?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "SVO Yapısı",
-                "Geniş Zaman"
-              ],
-              "options": [
-                "Which",
-                "Where",
-                "Why",
-                "When"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Which economic model predicts market growth accurately?"
-            },
-            {
-              "id": "u9l25_q5",
-              "type": "multiple-choice",
-              "prompt": "\"What did the research team discover during the psychological experiment in the institute?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Araştırma ekibi enstitüdeki psikolojik deney sırasında ne keşfetti?",
-                "Araştırma ekibi enstitüdeki psikolojik deney sırasında ne keşfedebilir?",
-                "Araştırma ekibi enstitüdeki psikolojik deney sırasında ne keşfetmeli?",
-                "Araştırma ekibi enstitüdeki psikolojik deney sırasında ne keşfedecek?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "What did the research team discover during the psychological experiment in the institute?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l25_q6",
-              "type": "fill-blank",
-              "prompt": "Soru kelimesini seçin: \"___ authority issued the new legal decree during the session?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Whose",
-                "Why",
-                "Where",
-                "How"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Whose authority issued the new legal decree during the session?"
-            },
-            {
-              "id": "u9l25_q7",
-              "type": "translation-text",
-              "prompt": "\"When did the ethics committee review the proposed research project at the conference?\" cümlesini Türkçe'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "correctSentence": "Etik komitesi konferansta önerilen araştırma projesini ne zaman gözden geçirdi?",
-              "enSentence": "When did the ethics committee review the proposed research project at the conference?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l25_q8",
-              "type": "translation-text",
-              "prompt": "\"Filozoflar ahlak yasasını neden insan doğasıyla ilişkilendirir?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "correctSentence": "Why do philosophers link moral law with human nature?",
-              "enSentence": "Why do philosophers link moral law with human nature?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l25ex2",
-          "title": "Alıştırma 2: Yalın Cümleler",
-          "description": "Soru kelimeli (Wh-) sorularda yalın cümle düzeyinde yapılar (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l25_ex2_m1",
-              "type": "matching",
-              "prompt": "Yalın Wh- soru cümlelerini eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "SVO Yapısı"
-              ],
-              "pairs": [
-                {
-                  "left": "Why did scholars challenge the classical theory in their articles?",
-                  "right": "Bilginler makalelerinde klasik teoriye neden meydan okudu?"
-                },
-                {
-                  "left": "How does the legal system protect civil liberties in the court?",
-                  "right": "Hukuk sistemi mahkemede sivil özgürlükleri nasıl korur?"
-                },
-                {
-                  "left": "What caused the sudden shift in economic policy and market trends?",
-                  "right": "Ekonomi politikasındaki ve piyasa eğilimlerindeki ani değişime ne sebep oldu?"
-                },
-                {
-                  "left": "Where did archaeologists excavate the ancient ruins of the temple?",
-                  "right": "Arkeologlar tapınağın antik harabelerini nerede kazdı?"
-                }
-              ]
             },
             {
               "id": "u9l25_q9",
@@ -39947,15 +39095,36 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l25_q10",
-              "type": "fill-blank",
-              "prompt": "Soru kelimesini seçin: \"___ factor influenced the voting behavior of citizens in the election?\"",
+              "id": "u9l25_q2",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "___ did the historians find the ancient manuscripts and documents?",
+              "options": [
+                "Where",
+                "Why",
+                "Who",
+                "What"
+              ],
+              "correctIndex": 0,
+              "translation": "Tarihçiler antik el yazmalarını ve belgeleri nerede buldu?"
+            },
+            {
+              "id": "u9l25_q4",
+              "grammarTags": [
+                "Soru Yapıları (Wh-)",
+                "İsim Tamlamaları",
+                "SVO Yapısı",
+                "Geniş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "___ economic model predicts market growth accurately?",
               "options": [
                 "Which",
                 "Where",
@@ -39963,105 +39132,67 @@ const unitSentencesMap = {
                 "When"
               ],
               "correctIndex": 0,
-              "enSentence": "Which factor influenced the voting behavior of citizens in the election?"
+              "translation": "Hangi ekonomik model piyasa büyümesini doğru tahmin eder?"
             },
             {
-              "id": "u9l25_q11",
-              "type": "multiple-choice",
-              "prompt": "\"Sinema eleştirmenleri filmin sembolik anlamını ve fikirlerini nasıl değerlendirdi?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "id": "u9l25_q6",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "___ authority issued the new legal decree during the session?",
               "options": [
-                "How did film critics evaluate the symbolic meaning and ideas of the movie?",
-                "Why did film critics evaluate the symbolic meaning and ideas of the movie?",
-                "Where did film critics evaluate the symbolic meaning and ideas of the movie?",
-                "When did film critics evaluate the symbolic meaning and ideas of the movie?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "How did film critics evaluate the symbolic meaning and ideas of the movie?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l25_q12",
-              "type": "fill-blank",
-              "prompt": "Boşluğu tamamlayın: \"___ did the legal scholar publish the detailed article and ideas on constitutional law?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "When",
-                "Who",
-                "What",
-                "Whose"
-              ],
-              "correctIndex": 0,
-              "enSentence": "When did the legal scholar publish the detailed article and ideas on constitutional law?"
-            },
-            {
-              "id": "u9l25_q13",
-              "type": "multiple-choice",
-              "prompt": "\"Whose philosophy influenced the founding principles of modern democracy in history?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Tarihte modern demokrasinin kurucu ilkelerini kimin felsefesi etkiledi?",
-                "Tarihte modern demokrasinin kurucu ilkelerini kimin felsefesi etkileyebilir?",
-                "Tarihte modern demokrasinin kurucu ilkelerini kimin felsefesi etkilemelidir?",
-                "Tarihte modern demokrasinin kurucu ilkelerini kimin felsefesi etkiliyor?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Whose philosophy influenced the founding principles of modern democracy in history?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l25_q14",
-              "type": "fill-blank",
-              "prompt": "Neden bildiren soru kelimesini seçin: \"___ did the government modify the corporate tax legislation after the meeting?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
+                "Whose",
                 "Why",
                 "Where",
-                "Who",
-                "Whose"
+                "How"
               ],
               "correctIndex": 0,
-              "enSentence": "Why did the government modify the corporate tax legislation after the meeting?"
+              "translation": "Oturum sırasında yeni yasal kararnameyi kimin yetkisi çıkardı?"
             },
             {
-              "id": "u9l25_q15",
-              "type": "multiple-choice",
-              "prompt": "\"Tarihçiler belgedeki antik yazıtları ve belgeleri nerede inceledi?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "id": "u9l25_q10",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "___ factor influenced the voting behavior of citizens in the election?",
               "options": [
-                "Where did historians examine the ancient inscriptions and documents on the paper?",
-                "Why did historians examine the ancient inscriptions and documents on the paper?",
-                "How did historians examine the ancient inscriptions and documents on the paper?",
-                "When did historians examine the ancient inscriptions and documents on the paper?"
+                "Which",
+                "Where",
+                "Why",
+                "When"
               ],
               "correctIndex": 0,
-              "enSentence": "Where did historians examine the ancient inscriptions and documents on the paper?",
-              "isEngToTr": false
+              "translation": "Seçimimde vatandaşların oy verme davranışını hangi faktör etkiledi?"
+            },
+            {
+              "id": "u9l25_q19",
+              "grammarTags": [
+                "Soru Yapıları (Wh-)",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Geçmiş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "___ methodological approach did the research team utilize for the data collection?",
+              "options": [
+                "Which",
+                "Where",
+                "Why",
+                "When"
+              ],
+              "correctIndex": 0,
+              "translation": "Araştırma ekibi veri toplama için hangi metodolojik yaklaşımı kullandı?"
             },
             {
               "id": "u9l25_q16",
@@ -40134,157 +39265,8 @@ const unitSentencesMap = {
                 "difficulties"
               ],
               "enSentence": "How do sociologists analyze the social class crisis and difficulties?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l25ex3",
-          "title": "Alıştırma 3: İleri Düzey Cümleler",
-          "description": "Akademik bağlamda soru kelimeli (Wh-) cümleler (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l25_ex3_m1",
-              "type": "matching",
-              "prompt": "İleri düzey akademik Wh- sorularını Türkçe karşılıklarıyla eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "SVO Yapısı"
-              ],
-              "pairs": [
-                {
-                  "left": "Why did the supreme court challenge the validity of legal acts and opinions?",
-                  "right": "Anayasa Mahkemesi yasal eylemlerin ve fikirlerin geçerliliğini neden sorguladı?"
-                },
-                {
-                  "left": "How do economists calculate the long-term impact of inflation on social life?",
-                  "right": "Ekonomistler enflasyonun sosyal yaşam üzerindeki uzun vadeli etkisini nasıl hesaplar?"
-                },
-                {
-                  "left": "What methodological framework did the psychologist adopt for the academic study?",
-                  "right": "Psikolog akademik çalışma için hangi metodolojik çerçeveyi benimsedi?"
-                },
-                {
-                  "left": "Where did the archaeologist discover the imperial inscriptions and artifacts at the ruins?",
-                  "right": "Arkeolog imparatorluk yazıtlarını ve eserlerini harabelerde nerede keşfetti?"
-                }
-              ]
-            },
-            {
-              "id": "u9l25_q18",
-              "type": "multiple-choice",
-              "prompt": "\"Why did constitutional scholars question the executive order during the political crisis?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Anayasa bilginleri siyasi kriz sırasında yürütme kararnamesini neden sorguladı?",
-                "Anayasa bilginleri siyasi kriz sırasında yürütme kararnamesini neden sorgulayabilir?",
-                "Anayasa bilginleri siyasi kriz sırasında yürütme kararnamesini neden sorgulamalıdır?",
-                "Anayasa bilginleri siyasi kriz sırasında yürütme kararnamesini neden sorguluyor?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Why did constitutional scholars question the executive order during the political crisis?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l25_q19",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldurun: \"___ methodological approach did the research team utilize for the data collection?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Which",
-                "Where",
-                "Why",
-                "When"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Which methodological approach did the research team utilize for the data collection?"
-            },
-            {
-              "id": "u9l25_q20",
-              "type": "multiple-choice",
-              "prompt": "\"Tarihçiler antik kentin yıkımına ilişkin arşivsel kanıtları ve bilgileri nerede buldu?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Where did historians find archival evidence and information regarding the destruction of the ancient city?",
-                "Why did historians find archival evidence and information regarding the destruction of the ancient city?",
-                "How did historians find archival evidence and information regarding the destruction of the ancient city?",
-                "When did historians find archival evidence and information regarding the destruction of the ancient city?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Where did historians find archival evidence and information regarding the destruction of the ancient city?",
-              "isEngToTr": false
-            },
-            {
-              "id": "u9l25_q21",
-              "type": "fill-blank",
-              "prompt": "Soru kelimesini seçin: \"___ did sociologists interpret the sudden shift in public opinion?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "How",
-                "Where",
-                "Who",
-                "Whose"
-              ],
-              "correctIndex": 0,
-              "enSentence": "How did sociologists interpret the sudden shift in public opinion?"
-            },
-            {
-              "id": "u9l25_q22",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Why did the philosopher criticize the ethical framework of modern materialism in his manifesto?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Why did the philosopher criticize the ethical framework of modern materialism in his manifesto?",
-              "words": [
-                "Filozof",
-                "manifestosunda",
-                "modern",
-                "materyalizmin",
-                "etik",
-                "çerçevesini",
-                "neden",
-                "eleştirdi",
-                "hukuk"
-              ],
-              "correctOrder": [
-                "Filozof",
-                "manifestosunda",
-                "modern",
-                "materyalizmin",
-                "etik",
-                "çerçevesini",
-                "neden",
-                "eleştirdi"
-              ],
-              "enSentence": "Why did the philosopher criticize the ethical framework of modern materialism in his manifesto?",
-              "isEngToTr": true
+              "isEngToTr": false,
+              "trSentence": "Sosyologlar toplumsal sınıf krizini ve sorunlarını nasıl analiz eder?"
             },
             {
               "id": "u9l25_q23",
@@ -40325,55 +39307,21 @@ const unitSentencesMap = {
                 "agreement"
               ],
               "enSentence": "How did economists evaluate the terms of the international trade agreement?",
-              "isEngToTr": false
+              "isEngToTr": false,
+              "trSentence": "Ekonomistler uluslararası ticaret anlaşmasının şartlarını nasıl değerlendirdi?"
             },
             {
-              "id": "u9l25_q24",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Whose administrative decision altered the scope of the archaeological excavation at the ruins?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Whose administrative decision altered the scope of the archaeological excavation at the ruins?",
-              "words": [
-                "Kimin",
-                "idari",
-                "kararı",
-                "harabelerdeki",
-                "arkeolojik",
-                "kazının",
-                "kapsamını",
-                "değiştirdi",
-                "sosyoloji"
-              ],
-              "correctOrder": [
-                "Kimin",
-                "idari",
-                "kararı",
-                "harabelerdeki",
-                "arkeolojik",
-                "kazının",
-                "kapsamını",
-                "değiştirdi"
-              ],
-              "enSentence": "Whose administrative decision altered the scope of the archaeological excavation at the ruins?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l25_q25",
+              "id": "u9l25_q7",
               "type": "translation-text",
-              "prompt": "\"What primary sources did the historian analyze in the national library during his study?\" cümlesini Türkçe'ye çevirin:",
+              "prompt": "\"When did the ethics committee review the proposed research project at the conference?\" cümlesini Türkçe'ye çevirin:",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
-              "correctSentence": "Tarihçi çalışması sırasında milli kütüphanede hangi birincil kaynakları analiz etti?",
-              "enSentence": "What primary sources did the historian analyze in the national library during his study?",
+              "correctSentence": "Etik komitesi konferansta önerilen araştırma projesini ne zaman gözden geçirdi?",
+              "enSentence": "When did the ethics committee review the proposed research project at the conference?",
               "isEngToTr": true
             },
             {
@@ -40398,8 +39346,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l26ex1",
-          "title": "Alıştırma 1: Yapısal Kalıplar ve Öbekler",
-          "description": "Edatlı soru kalıpları, olumsuz sorular ve teyit sorularında öbek yapılar (10 Soru)",
+          "title": "Alıştırma 1: Soru Yapıları - Edatlı Sorular ve Teyit Soruları (Tag Questions)",
+          "description": "Edatlı soru kalıpları, olumsuz sorular ve teyit sorularını tanıma (15 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -40434,7 +39382,7 @@ const unitSentencesMap = {
             {
               "id": "u9l26_m2",
               "type": "matching",
-              "prompt": "Teyit soruları (Tag questions) ve edatlı soruları eşleştirin.",
+              "prompt": "Teyit sorularını ve edatlı soru yapılarını eşleştirin.",
               "grammarTags": [
                 "Soru Yapıları (Tag Question)",
                 "İsim Tamlamaları",
@@ -40481,25 +39429,6 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l26_q2",
-              "type": "fill-blank",
-              "prompt": "Cümle başı edatlı soru yapısını doldurun: \"___ which historical epoch did constitutional monarchy emerge?\"",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "In",
-                "On",
-                "At",
-                "By"
-              ],
-              "correctIndex": 0,
-              "enSentence": "In which historical epoch did constitutional monarchy emerge?"
-            },
-            {
               "id": "u9l26_q3",
               "type": "multiple-choice",
               "prompt": "\"Didn't the ethics committee review the experimental results in the laboratory?\" cümlesinin Türkçe karşılığı hangisidir?",
@@ -40518,129 +39447,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "Didn't the ethics committee review the experimental results in the laboratory?",
               "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q4",
-              "type": "fill-blank",
-              "prompt": "Teyit sorusu (tag question) eklentisini seçin: \"The sociologist published the study on social mobility, ___?\"",
-              "grammarTags": [
-                "Soru Yapıları (Tag Question)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Teyit Sorusu"
-              ],
-              "options": [
-                "didn't he",
-                "isn't he",
-                "wasn't he",
-                "doesn't he"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The sociologist published the study on social mobility, didn't he?"
-            },
-            {
-              "id": "u9l26_q5",
-              "type": "multiple-choice",
-              "prompt": "\"Under whose political leadership did the cultural renaissance reach its artistic peak?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Kültürel rönesans hangi siyasi liderlik altında sanatsal zirvesine ulaştı?",
-                "Kültürel rönesans hangi siyasi liderlik altında sanatsal zirvesine ulaşabilir?",
-                "Kültürel rönesans hangi siyasi liderlik altında sanatsal zirvesine ulaşmalıdır?",
-                "Kültürel rönesans hangi siyasi liderlik altında sanatsal zirvesine ulaşıyor?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Under whose political leadership did the cultural renaissance reach its artistic peak?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q6",
-              "type": "fill-blank",
-              "prompt": "Olumsuz durum sorusu boşluğunu doldurun: \"___ human rights essential for sustaining a democratic society?\"",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Olumsuz Soru"
-              ],
-              "options": [
-                "Aren't",
-                "Isn't",
-                "Didn't",
-                "Don't"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Aren't human rights essential for sustaining a democratic society?"
-            },
-            {
-              "id": "u9l26_q7",
-              "type": "translation-text",
-              "prompt": "\"In which century did parliamentary sovereignty become the dominant political norm in history?\" cümlesini Türkçe'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "correctSentence": "Parlamento egemenliği tarihte hangi yüzyılda hakim siyasi norm haline geldi?",
-              "enSentence": "In which century did parliamentary sovereignty become the dominant political norm in history?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q8",
-              "type": "translation-text",
-              "prompt": "\"Tarihçi arşivdeki orijinal el yazmasını doğruladı, değil mi?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları (Tag Question)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Teyit Sorusu"
-              ],
-              "correctSentence": "The historian verified the original manuscript in the archive, didn't he?",
-              "enSentence": "The historian verified the original manuscript in the archive, didn't he?",
-              "isEngToTr": false
-            }
-          ]
-        },
-        {
-          "id": "u9l26ex2",
-          "title": "Alıştırma 2: Yalın Cümleler",
-          "description": "Edatlı, olumsuz ve teyit sorularında yalın cümle yapılanması (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l26_ex2_m1",
-              "type": "matching",
-              "prompt": "Yalın edatlı ve teyit soru cümlelerini eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Teyit Sorusu"
-              ],
-              "pairs": [
-                {
-                  "left": "Philosophers rarely accept dogma without empirical verification, do they?",
-                  "right": "Filozoflar ampirik doğrulama olmaksızın dogmayı nadiren kabul eder, değil mi?"
-                },
-                {
-                  "left": "For what reason did economists modify the market forecast in their study?",
-                  "right": "Ekonomistler çalışmalarında piyasa tahminini ne sebepten değiştirdi?"
-                },
-                {
-                  "left": "Didn't ancient trade networks facilitate cultural exchange between nations?",
-                  "right": "Antik ticaret ağları uluslar arasında kültürel değişimi kolaylaştırmadı mı?"
-                },
-                {
-                  "left": "In which historical period did maritime trade flourish across the sea?",
-                  "right": "Deniz ticareti deniz genelinde hangi tarihsel dönemde gelişti?"
-                }
-              ]
             },
             {
               "id": "u9l26_q9",
@@ -40663,93 +39469,36 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l26_q10",
-              "type": "fill-blank",
-              "prompt": "Edatlı soru kalıbını doldurun: \"For what strategic purpose ___ the supreme court order a judicial review?\"",
+              "id": "u9l26_q2",
               "grammarTags": [
                 "Soru Yapıları (Edatlı Soru)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun edatlı soru kelimesini seçin:",
+              "sentence": "___ which historical epoch did constitutional monarchy emerge?",
               "options": [
-                "did",
-                "is",
-                "were",
-                "are"
+                "In",
+                "On",
+                "At",
+                "By"
               ],
               "correctIndex": 0,
-              "enSentence": "For what strategic purpose did the supreme court order a judicial review?"
+              "translation": "Anayasal monarşi hangi tarihsel çağda ortaya çıktı?"
             },
             {
-              "id": "u9l26_q11",
-              "type": "multiple-choice",
-              "prompt": "\"Didn't ancient trade networks facilitate cultural exchange between East and West?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Antik ticaret ağları Doğu ile Batı arasında kültürel değişimi kolaylaştırmadı mı?",
-                "Antik ticaret ağları Doğu ile Batı arasında kültürel değişimi kolaylaştırabilir mi?",
-                "Antik ticaret ağları Doğu ile Batı arasında kültürel değişimi kolaylaştırmalı mıdır?",
-                "Antik ticaret ağları Doğu ile Batı arasında kültürel değişimi kolaylaştıracak mı?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Didn't ancient trade networks facilitate cultural exchange between East and West?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q12",
-              "type": "fill-blank",
-              "prompt": "Boşluğu tamamlayın: \"Under ___ political leadership did the economic reform package take effect?\"",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "whose",
-                "which",
-                "what",
-                "where"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Under whose political leadership did the economic reform package take effect?"
-            },
-            {
-              "id": "u9l26_q13",
-              "type": "multiple-choice",
-              "prompt": "\"In which historical epoch did constitutional monarchy emerge as a stable governance model in society?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Anayasal monarşi toplumda hangi tarihsel çağda istikrarlı bir yönetim modeli olarak ortaya çıktı?",
-                "Anayasal monarşi toplumda hangi tarihsel çağda istikrarlı bir yönetim modeli olarak ortaya çıkabilir?",
-                "Anayasal monarşi toplumda hangi tarihsel çağda istikrarlı bir yönetim modeli olarak ortaya çıkmalıdır?",
-                "Anayasal monarşi toplumda hangi tarihsel çağda istikrarlı bir yönetim modeli olarak ortaya çıkıyor?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "In which historical epoch did constitutional monarchy emerge as a stable governance model in society?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q14",
-              "type": "fill-blank",
-              "prompt": "Teyit sorusu eklentisini doldurun: \"The economic analyst evaluated the financial budget in the report, ___?\"",
+              "id": "u9l26_q4",
               "grammarTags": [
                 "Soru Yapıları (Tag Question)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Teyit Sorusu"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun teyit sorusu (tag question) eklentisini seçin:",
+              "sentence": "The sociologist published the study on social mobility, ___?",
               "options": [
                 "didn't he",
                 "isn't he",
@@ -40757,27 +39506,67 @@ const unitSentencesMap = {
                 "doesn't he"
               ],
               "correctIndex": 0,
-              "enSentence": "The economic analyst evaluated the financial budget in the report, didn't he?"
+              "translation": "Sosyolog toplumsal hareketlilik üzerine çalışmayı yayınladı, değil mi?"
             },
             {
-              "id": "u9l26_q15",
-              "type": "multiple-choice",
-              "prompt": "\"Aren't human rights inherent to all individuals regardless of citizenship status in society?\" cümlesinin Türkçe karşılığı hangisidir?",
+              "id": "u9l26_q6",
               "grammarTags": [
                 "Soru Yapıları (Olumsuz Soru)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Olumsuz Soru"
               ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun olumsuz soru kelimesini seçin:",
+              "sentence": "___ human rights essential for sustaining a democratic society?",
               "options": [
-                "Toplumda vatandaşlık durumuna bakılmaksızın insan hakları tüm bireylerin doğasında yok mudur?",
-                "Toplumda vatandaşlık durumuna bakılmaksızın insan hakları tüm bireylerin doğasında olamaz mı?",
-                "Toplumda vatandaşlık durumuna bakılmaksızın insan hakları tüm bireylerin doğasında olmalı mıdır?",
-                "Toplumda vatandaşlık durumuna bakılmaksızın insan hakları tüm bireylerin doğasında var mıdır?"
+                "Aren't",
+                "Isn't",
+                "Didn't",
+                "Don't"
               ],
               "correctIndex": 0,
-              "enSentence": "Aren't human rights inherent to all individuals regardless of citizenship status in society?",
-              "isEngToTr": true
+              "translation": "Demokratik bir toplumu sürdürmek için insan hakları elzem değil midir?"
+            },
+            {
+              "id": "u9l26_q12",
+              "grammarTags": [
+                "Soru Yapıları (Edatlı Soru)",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Geçmiş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "Under ___ political leadership did the economic reform package take effect?",
+              "options": [
+                "whose",
+                "which",
+                "what",
+                "where"
+              ],
+              "correctIndex": 0,
+              "translation": "Ekonomik reform paketi kimin siyasi liderliği altında yürürlüğe girdi?"
+            },
+            {
+              "id": "u9l26_q19",
+              "grammarTags": [
+                "Soru Yapıları (Edatlı Soru)",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları",
+                "Geçmiş Zaman"
+              ],
+              "type": "fill-blank-dropdown",
+              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
+              "sentence": "Under ___ regulatory framework did the financial authority suspend market trading?",
+              "options": [
+                "which",
+                "whose",
+                "what",
+                "where"
+              ],
+              "correctIndex": 0,
+              "translation": "Finansal otorite piyasa işlemlerini hangi düzenleyici çerçeve altında askıya aldı?"
             },
             {
               "id": "u9l26_q16",
@@ -40813,161 +39602,6 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l26_q17",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Didn't ancient trade networks facilitate cultural exchange between East and West?\"",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Didn't ancient trade networks facilitate cultural exchange between East and West?",
-              "words": [
-                "Antik",
-                "ticaret",
-                "ağları",
-                "Doğu",
-                "ile",
-                "Batı",
-                "arasında",
-                "kültürel",
-                "değişimi",
-                "kolaylaştırmadı",
-                "mı"
-              ],
-              "correctOrder": [
-                "Antik",
-                "ticaret",
-                "ağları",
-                "Doğu",
-                "ile",
-                "Batı",
-                "arasında",
-                "kültürel",
-                "değişimi",
-                "kolaylaştırmadı",
-                "mı"
-              ],
-              "enSentence": "Didn't ancient trade networks facilitate cultural exchange between East and West?",
-              "isEngToTr": true
-            }
-          ]
-        },
-        {
-          "id": "u9l26ex3",
-          "title": "Alıştırma 3: İleri Düzey Cümleler",
-          "description": "Akademik bağlamda edatlı, olumsuz ve teyit soruları (10 Soru)",
-          "createdAt": "2026-07-27T00:00:00Z",
-          "questions": [
-            {
-              "id": "u9l26_ex3_m1",
-              "type": "matching",
-              "prompt": "İleri edatlı ve olumsuz akademik soruları eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "pairs": [
-                {
-                  "left": "On what philosophical grounds did Locke defend religious toleration in his book?",
-                  "right": "Locke kitabında hangi felsefi temellerde dini hoşgörüyü savundu?"
-                },
-                {
-                  "left": "Isn't freedom of speech crucial for sustaining democratic debate in society?",
-                  "right": "İfade özgürlüğü toplumda demokratik tartışmayı sürdürmek için hayati değil midir?"
-                },
-                {
-                  "left": "From which ancient civilization did the legal system inherit its principles and law?",
-                  "right": "Hukuk sistemi ilkelerini ve yasayı hangi antik uygarlıktan devraldı?"
-                },
-                {
-                  "left": "Didn't the economic crisis precipitate the fall of the ruling government and board?",
-                  "right": "Ekonomik kriz iktidar hükümetinin ve kurulun düşüşünü hızlandırmadı mı?"
-                }
-              ]
-            },
-            {
-              "id": "u9l26_q18",
-              "type": "multiple-choice",
-              "prompt": "\"On what philosophical grounds did John Locke defend religious toleration in his essays?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "John Locke denemelerinde dini hoşgörüyü hangi felsefi temellerde savundu?",
-                "John Locke denemelerinde dini hoşgörüyü hangi felsefi temellerde savunabilir?",
-                "John Locke denemelerinde dini hoşgörüyü hangi felsefi temellerde savunmalıdır?",
-                "John Locke denemelerinde dini hoşgörüyü hangi felsefi temellerde savunuyor?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "On what philosophical grounds did John Locke defend religious toleration in his essays?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q19",
-              "type": "fill-blank",
-              "prompt": "Edatlı soru boşluğunu doldurun: \"Under ___ regulatory framework did the financial authority suspend market trading?\"",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "which",
-                "whose",
-                "what",
-                "where"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Under which regulatory framework did the financial authority suspend market trading?"
-            },
-            {
-              "id": "u9l26_q20",
-              "type": "multiple-choice",
-              "prompt": "\"Isn't freedom of expression essential for promoting open academic discourse in universities?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Olumsuz Soru"
-              ],
-              "options": [
-                "İfade özgürlüğü üniversitelerde açık akademik söylemi teşvik etmek için gerekli değil midir?",
-                "İfade özgürlüğü üniversitelerde açık akademik söylemi teşvik etmek için gerekli olamaz mı?",
-                "İfade özgürlüğü üniversitelerde açık akademik söylemi teşvik etmek için gerekli olmalı mıdır?",
-                "İfade özgürlüğü üniversitelerde açık akademik söylemi teşvik etmek için gerekli midir?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Isn't freedom of expression essential for promoting open academic discourse in universities?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q21",
-              "type": "fill-blank",
-              "prompt": "Tag question olumsuz eklentisini doldurun: \"The ethics committee approved the new experimental procedure in the meeting, ___?\"",
-              "grammarTags": [
-                "Soru Yapıları (Tag Question)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Teyit Sorusu"
-              ],
-              "options": [
-                "didn't it",
-                "isn't it",
-                "wasn't it",
-                "doesn't it"
-              ],
-              "correctIndex": 0,
-              "enSentence": "The ethics committee approved the new experimental procedure in the meeting, didn't it?"
-            },
-            {
               "id": "u9l26_q22",
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"From which ancient civilization did the legal system inherit its core principles?\"",
@@ -41000,41 +39634,6 @@ const unitSentencesMap = {
                 "devraldı"
               ],
               "enSentence": "From which ancient civilization did the legal system inherit its core principles?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q23",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Didn't the severe economic crisis precipitate the collapse of the parliamentary government?\"",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Didn't the severe economic crisis precipitate the collapse of the parliamentary government?",
-              "words": [
-                "Şiddetli",
-                "ekonomik",
-                "kriz",
-                "parlamenter",
-                "hükümetin",
-                "çöküşünü",
-                "hızlandırmadı",
-                "mı",
-                "felsefe"
-              ],
-              "correctOrder": [
-                "Şiddetli",
-                "ekonomik",
-                "kriz",
-                "parlamenter",
-                "hükümetin",
-                "çöküşünü",
-                "hızlandırmadı",
-                "mı"
-              ],
-              "enSentence": "Didn't the severe economic crisis precipitate the collapse of the parliamentary government?",
               "isEngToTr": true
             },
             {
@@ -41078,17 +39677,17 @@ const unitSentencesMap = {
               "isEngToTr": true
             },
             {
-              "id": "u9l26_q25",
+              "id": "u9l26_q7",
               "type": "translation-text",
-              "prompt": "\"For what strategic purpose did the military alliance build fortified outposts along the frontier in history?\" cümlesini Türkçe'ye çevirin:",
+              "prompt": "\"In which century did parliamentary sovereignty become the dominant political norm in history?\" cümlesini Türkçe'ye çevirin:",
               "grammarTags": [
                 "Soru Yapıları (Edatlı Soru)",
                 "İsim Tamlamaları",
                 "İsim ve Edat Yapıları",
                 "Geçmiş Zaman"
               ],
-              "correctSentence": "Askeri ittifak tarihte sınır boyunca hangi stratejik amaçla müstahkem karakollar inşa etti?",
-              "enSentence": "For what strategic purpose did the military alliance build fortified outposts along the frontier in history?",
+              "correctSentence": "Parlamento egemenliği tarihte hangi yüzyılda hakim siyasi norm haline geldi?",
+              "enSentence": "In which century did parliamentary sovereignty become the dominant political norm in history?",
               "isEngToTr": true
             },
             {
