@@ -35705,10 +35705,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c60_l1",
     "unitId": 57,
-    "title": "Master Academic Phrasal Verbs",
+    "title": "En Sık Karşılaşılan Deyimsel Fiiller",
     "subtitle": "Akademik Deyimsel Fiiller",
     "konuAnlatimi": {
-      "baslik": "Master Academic Phrasal Verbs",
+      "baslik": "En Sık Karşılaşılan Deyimsel Fiiller",
       "teorikMantik": "Akademik metinlerde en sık kullanılan phrasal verb'lerin anlam ve cümle içi kullanım kalıplarını pekiştirir.",
       "formul": "carry out (yürütmek) | bring about (sebep olmak) | come across (rastlamak) | deal with (ilgilenmek)",
       "altinKural": "Phrasal verb'ler cümlede edat kombinasyonleriyle bir bütün olarak değerlendirilmeli ve bağlama göre eş anlamlılarıyla eşleştirilmelidir."
@@ -38121,11 +38121,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c42_l1",
     "unitId": 52,
-    "title": "Akademik Modal Zincirleri",
-    "subtitle": "Modal & Time Shifts",
+    "title": "İhtimal, Beklenti ve Zorunluluk Modalları (likely, bound, supposed, due, doomed to)",
+    "subtitle": "is/are/was/were + likely/bound/supposed/due/doomed/obliged/certain + to V1 / to be V3 / to have V3 / to have been V3 yapılarının zaman ve edilgenlik bükümleri",
     "konuAnlatimi": {
-      "baslik": "Akademik Modal Zincirleri",
-      "teorikMantik": "Akademik dilde olasılık, zorunluluk ve beklenti bildiren phrasal modal yapılarının zaman kayması çekimlerini kapsar.",
+      "baslik": "İhtimal, Beklenti ve Zorunluluk Modalları (likely, bound, supposed, due, doomed to)",
+      "teorikMantik": "is/are/was/were + likely/bound/supposed/due/doomed/obliged/certain + to V1 / to be V3 / to have V3 / to have been V3 yapılarının zaman ve edilgenlik bükümleri",
       "formul": "is likely to V1 | is bound to be V3 | is supposed to have V3",
       "altinKural": "Perfect modal zincirleri (have V3 içerenler) geçmişe yönelik çıkarım veya gerçekleşmemiş beklentileri anlatır."
     },
@@ -39615,11 +39615,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c51_l1",
     "unitId": 52,
-    "title": "As Türevleri & Eşikte Olma Yapıları",
-    "subtitle": "As Structures & Thresholds",
+    "title": "As Türevleri, as if/though ve Eşikte Olma Yapıları (be about to / on the verge of)",
+    "subtitle": "as (=because/while/like), as to, as of, as if/though ile be about to + V1 ve be on the verge of + V-ing yapılarının kullanımı",
     "konuAnlatimi": {
-      "baslik": "As Türevleri & Eşikte Olma Yapıları",
-      "teorikMantik": "As kelimesinin farklı bağlaç ve edat işlevleri ile '-e üzere olmak' anlamına gelen eşik yapılarını kapsar.",
+      "baslik": "As Türevleri, as if/though ve Eşikte Olma Yapıları (be about to / on the verge of)",
+      "teorikMantik": "as (=because/while/like), as to, as of, as if/though ile be about to + V1 ve be on the verge of + V-ing yapılarının kullanımı",
       "formul": "as (= because / while / like / as if) | be about to V1 | be on the verge of N/V-ing",
       "altinKural": "As if / As though gerçek dışı varsayımlarda kendisinden sonra past tense çekimleri gerektirir."
     },
@@ -40585,11 +40585,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c51_l2",
     "unitId": 52,
-    "title": "Causative & Ettirgen Süreçler",
-    "subtitle": "Ettirgen Yapılar",
+    "title": "Ettirgen Yapılar (have someone do / get someone to do / have-get something done)",
+    "subtitle": "Aktif ettirgen (have someone do, get someone to do) ve edilgen ettirgen (have/get something V3) yapıların sentaks dizilimi",
     "konuAnlatimi": {
-      "baslik": "Causative & Ettirgen Süreçler",
-      "teorikMantik": "Eylemi başkasına yaptırma veya edilgen ettirgen yapıların sentaktik dizilim kurallarını inceler.",
+      "baslik": "Ettirgen Yapılar (have someone do / get someone to do / have-get something done)",
+      "teorikMantik": "Aktif ettirgen (have someone do, get someone to do) ve edilgen ettirgen (have/get something V3) yapıların sentaks dizilimi",
       "formul": "have someone do | get someone to do | have/get something done",
       "altinKural": "Causative nesnesi ile eylem arasındaki ilişki aktif ise yalın/to'lu fiil, pasif ise daima V3 kullanılır."
     },
@@ -40945,11 +40945,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c52_l3",
     "unitId": 52,
-    "title": "Subjunctive Pasifler & Gizli Şartlar",
-    "subtitle": "Advanced Subjunctives & Passives",
+    "title": "Subjunctive, Gizli Şartlar (lest, otherwise, but for) ve Aktarım Pasifleri",
+    "subtitle": "vital/recommend that + S + V0, lest, otherwise, but for kurguları ile 'It is thought that' ➔ 'He is thought to be' dönüşümleri",
     "konuAnlatimi": {
-      "baslik": "Subjunctive Pasifler & Gizli Şartlar",
-      "teorikMantik": "Gizli koşul bildiren zarflar, korku bağlaçları ve akademik raporlama pasiflerinin dönüşüm mantığını kapsar.",
+      "baslik": "Subjunctive, Gizli Şartlar (lest, otherwise, but for) ve Aktarım Pasifleri",
+      "teorikMantik": "vital/recommend that + S + V0, lest, otherwise, but for kurguları ile 'It is thought that' ➔ 'He is thought to be' dönüşümleri",
       "formul": "lest + Subject + V0 | SVO. Otherwise, SVO | It is thought that... ➔ He is thought to...",
       "altinKural": "'Lest' yapısının bulunduğu cümlede fiil daima yalın halde (V0) olmalı veya 'should V0' biçiminde kullanılmalıdır. Lest anlamca olumsuz olduğu için yan cümleye ayrıca olumsuzluk eki (not) getirilmez."
     },
@@ -42169,13 +42169,13 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c43_l1",
     "unitId": 43,
-    "title": "Temel Pasif (Edilgen) ve Modal Çekimleri",
-    "subtitle": "Şimdiki, Geçmiş ve Gelecek Zamanlarda Edilgen Cümle Kurgusu",
+    "title": "5 Öğeli Pasif Yapılar (is likely/bound/supposed to be V3)",
+    "subtitle": "is/are + likely/bound/supposed/obliged/doomed/certain/unlikely + to be + V3 yapılarının cümle içi kullanımı",
     "konuAnlatimi": {
-      "baslik": "Temel Pasif (Edilgen) ve Modal Çekimleri",
-      "teorikMantik": "Zaman ve modallardaki temel edilgen (pasif) yapıların dizilimini ve cümle içindeki rollerini kavratır.",
-      "formul": "is being V3 | was V3 | will be V3 | modal + be + V3",
-      "altinKural": "Edilgen (pasif) yapılarda eylemi gerçekleştiren özne değil, eylemden etkilenen nesne cümlenin öznesi konumundadır. Pasif çekimlerde 'be + V3' kalıbı asla bozulmaz."
+      "baslik": "5 Öğeli Pasif Yapılar (is likely/bound/supposed to be V3)",
+      "teorikMantik": "is/are + likely/bound/supposed/obliged/doomed/certain/unlikely + to be + V3 yapılarının cümle içi kullanımı",
+      "formul": "is likely/bound/supposed to be V3",
+      "altinKural": "5 öğeli pasif yapılar, eylemin olasılık, zorunluluk veya beklenti çerçevesinde edilgen olarak gerçekleşeceğini ifade eder. 'to be + V3' yapısı korunur."
     },
     "exercises": [
       {
@@ -43424,13 +43424,13 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c47_l1",
     "unitId": 43,
-    "title": "Cümle Analizi & Hata Kontrolü",
-    "subtitle": "Akademik Cümlelerde Yapısal Hataları ve Uyumları Tespit Etme",
+    "title": "4-8 Öğeli Fiil Zincirleri ve Karşılaştırmalı Cümle Analizi",
+    "subtitle": "4-8 öğeden oluşan karmaşık fiil trenlerinin morfolojik dizilimi ve syntax analizi",
     "konuAnlatimi": {
-      "baslik": "Cümle Analizi & Hata Kontrolü",
-      "teorikMantik": "Akademik metinlerdeki karmaşık cümlelerin yapısal analizini (sentaks) ve zaman uyumu tutarlılığını test eder.",
-      "formul": "Tense Consistency Check",
-      "altinKural": "Karmaşık akademik cümlelerde zaman uyumu (Tense Consistency) kuralları gereği, present bir ana cümle genellikle past bir yan cümleyle veya tam tersi durumlarla bağlanmaz."
+      "baslik": "4-8 Öğeli Fiil Zincirleri ve Karşılaştırmalı Cümle Analizi",
+      "teorikMantik": "4-8 öğeden oluşan karmaşık fiil trenlerinin morfolojik dizilimi ve syntax analizi",
+      "formul": "Verb Chains (4-8 elements)",
+      "altinKural": "Karmaşık ve çok öğeli fiil zincirlerini çözümlerken yardımcı fiillerin, zarfların ve edilgen kurgunun sırasını doğru analiz edin."
     },
     "exercises": [
       {
@@ -44393,13 +44393,13 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c44_l1",
     "unitId": 43,
-    "title": "Karmaşık Edilgen Raporlama ve Çoklu Fiil Zincirleri",
-    "subtitle": "Söylentili Yapılar (is said to be) ve Çok Öğeli Fiil Çekimleri (5-8 Öğeli)",
+    "title": "6 Öğeli Pasif Yapılar (is rumored/likely/supposed to have been V3)",
+    "subtitle": "is/are + rumored/likely/certain/unlikely/supposed + to have been + V3 yapılarının cümle içi kullanımı",
     "konuAnlatimi": {
-      "baslik": "Karmaşık Edilgen Raporlama ve Çoklu Fiil Zincirleri",
-      "teorikMantik": "İngilizcedeki en karmaşık söylentili pasif aktarımları ve 5 ila 8 kelimeden oluşan uzun modal/zaman zincirlerini kapsar.",
-      "formul": "must have been V3 | was believed to have been V3 | modal + have been being V3",
-      "altinKural": "Söylentili edilgen yapılar 'to' ile kısaltılırken; ana eylem ile söylenti eylemi aynı zamandaysa 'to V1', ana eylem söylentiden daha önce gerçekleşmişse 'to have V3' kullanılır."
+      "baslik": "6 Öğeli Pasif Yapılar (is rumored/likely/supposed to have been V3)",
+      "teorikMantik": "is/are + rumored/likely/certain/unlikely/supposed + to have been + V3 yapılarının cümle içi kullanımı",
+      "formul": "is rumored to have been V3 | is likely to have been V3 | is supposed to have been V3",
+      "altinKural": "6 öğeli pasif yapılar, geçmişte gerçekleşen bir eylemin edilgen olarak tamamlanmış olduğunu olasılık veya söylenti bağlamında ifade eder."
     },
     "exercises": [
       {
@@ -46315,8 +46315,9 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c41_l1",
     "unitId": 66,
-    "title": "YÖKDİL Gramer Kısayolları ve Diyalog Soruları",
-    "subtitle": "Zaman Kazandıran Yapılar ve Karşılıklı Konuşma Kalıpları",
+    "title": "Gerund & Infinitive Kısayolları (suggest doing, insist on, fail to, it is no use)",
+    "subtitle": "Diyalog ve Reaksiyon Kalıpları (so do I, neither did I, such as, well)",
+    "description": "YDS/YÖKDİL'de zaman kazandıran Gerund & Infinitive yapı kısayolları ile diyalog sorularında onaylama/geçiş refleksleri.",
     "konuAnlatimi": {
       "baslik": "YÖKDİL Gramer Kısayolları ve Diyalog Soruları",
       "teorikMantik": "YÖKDİL ve YDS sınavlarında zaman kazandıran dil bilgisi kısayolları ile diyalog tamamlama sorularında olumlu/olumsuz onaylama reflekslerini kapsar.",
@@ -46681,8 +46682,9 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c66_l3",
     "unitId": 66,
-    "title": "Tense ve Zaman Soruları (Since, For, By & Lately Tuzakları)",
-    "subtitle": "Zaman Sorularında Puan Kazandıran Tarih Çapaları",
+    "title": "Zaman Çapaları ve Tense Soruları (since + V2, for + duration, by + past/future)",
+    "subtitle": "Recently & Lately Kuralları ve Farkındalık Fiilleri (realize, notice, discover)",
+    "description": "Sınavların en çok soru gelen konusu olan Tense alanında since, for, by, recently ve lately gibi zaman belirteçlerinin stratejik tuzakları.",
     "konuAnlatimi": {
       "baslik": "Tense ve Zaman Soruları (Since, For, By & Lately Tuzakları)",
       "teorikMantik": "Zaman (Tense) sorularında belirleyici olan since, for, by, recently, lately gibi edatların ve zaman bağlaçlarının sınav tuzaklarını deşifre eder.",
@@ -48095,8 +48097,9 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c66_l7",
     "unitId": 66,
-    "title": "Kısaltma (Reduction) Soruları ve Sıralama Sıfatları",
-    "subtitle": "The First, The Only Kalıpları ve Karma Sınav Soruları",
+    "title": "Sıralama Sıfatı Kısaltmaları (the first / last / only / best + to V1 / to be V3)",
+    "subtitle": "YÖKDİL Karma Sınav Soruları ve 10 Altın Refleks Simülasyonu",
+    "description": "Sıralama sıfatları ve en üstünlük derecelerinden sonra gelen özel kısaltma (to-infinitive) kalıpları ve tüm kilitlerin sınandığı karma sınav simülasyonu.",
     "konuAnlatimi": {
       "baslik": "Kısaltma (Reduction) Soruları ve Sıralama Sıfatları",
       "teorikMantik": "YÖKDİL/YDS'nin en çok seçici sorusunu barındıran relative clause/noun clause kısaltmalarında (the first/only -> to V1) uygulanan pratik kuralları öğretir.",
@@ -48681,20 +48684,20 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c49_l1",
     "unitId": 49,
-    "title": "YÖKDİL & YDS Karma Dil Bilgisi Simülasyonu",
-    "subtitle": "Sınav Tipi Karma Dil Bilgisi Soruları (Gramer Simülasyonu)",
+    "title": "Uzun Yüklem Öbekleri 1",
+    "subtitle": "Uzun Yüklem Öbekleri 1",
     "konuAnlatimi": {
-      "baslik": "YÖKDİL & YDS Karma Dil Bilgisi Simülasyonu",
-      "teorikMantik": "YÖKDİL ve YDS sınavlarında karşımıza çıkan tüm karma dil bilgisi (tense, modal, passive, reduction, bağlaç) yapılarını ve pratik çözüm yollarını içerir.",
-      "formul": "Grammar & Reading Simulation",
-      "altinKural": "Akademik sınavlarda çeldiricileri elemek için cümlenin ana fiilini ve bağlaç dengesini (artı/eksi analizi) hızla tespit edin."
+      "baslik": "Uzun Yüklem Öbekleri 1",
+      "teorikMantik": "Uzun Yüklem Öbekleri 1",
+      "formul": "Uzun Yüklem Öbekleri 1",
+      "altinKural": "Uzun Yüklem Öbekleri 1"
     },
     "exercises": [
       {
         "id": "c49_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: YÖKDİL/YDS Gramer Denemesi (Seviye 1)",
-        "description": "Karma gramer sorularıyla sınav öncesi dil bilgisi reflekslerinizi test edin.",
+        "title": "Alıştırma 1: Uzun Yüklem Öbekleri ve Gramer Denemesi (Seviye 1)",
+        "description": "Uzun edilgen eylem zincirleri ve karma gramer sorularıyla dil bilgisi reflekslerinizi test edin.",
         "questions": [
           {
             "id": "c49_l1_ex1_q1",
@@ -48865,8 +48868,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c49_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 2: YÖKDİL/YDS Gramer Denemesi (Seviye 2)",
-        "description": "İleri düzey karma gramer yapılarını ve çeldiricileri eleme pratikleri yapın.",
+        "title": "Alıştırma 2: Uzun Yüklem Öbekleri ve Gramer Denemesi (Seviye 2)",
+        "description": "İleri düzey karmaşık eylem zincirlerini ve dil bilgisi çeldiricilerini eleme pratikleri yapın.",
         "questions": [
           {
             "id": "c49_l1_ex2_q1",
@@ -49635,20 +49638,20 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c50_l1",
     "unitId": 49,
-    "title": "Cümle Yapısı ve Hata Avcılığı (Sentaks Analizi)",
-    "subtitle": "Cümle Tamamlama ve Çeviri Soruları için Hata Yakalama",
+    "title": "Uzun Yüklem Öbekleri 2",
+    "subtitle": "Uzun Yüklem Öbekleri 2",
     "konuAnlatimi": {
-      "baslik": "Cümle Yapısı ve Hata Avcılığı (Sentaks Analizi)",
-      "teorikMantik": "Cümle tamamlama ve çeviri sorularında yanlış seçeneği hızla elemek için özne-yüklem uyumu, bağlaç dengesi ve yapısal hataları tespit etme teknikleri.",
-      "formul": "Error Hunting & Grammar Synthesis",
-      "altinKural": "Hata tespiti yaparken özellikle zaman uyumsuzluklarına, tekil-çoğul özne-yüklem uyumuna ve edat (preposition) tuzaklarına odaklanın."
+      "baslik": "Uzun Yüklem Öbekleri 2",
+      "teorikMantik": "Uzun Yüklem Öbekleri 2",
+      "formul": "Uzun Yüklem Öbekleri 2",
+      "altinKural": "Uzun Yüklem Öbekleri 2"
     },
     "exercises": [
       {
         "id": "c50_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: Cümle Analizi ve Hata Yakalama (Başlangıç)",
-        "description": "Cümlelerdeki gizli özne-yüklem uyumsuzluklarını ve yapısal bozuklukları bulun.",
+        "title": "Alıştırma 1: Uzun Yüklem Analizi ve Hata Yakalama (Başlangıç)",
+        "description": "Uzun yüklem zincirlerindeki sinsi syntax hatalarını ve yapısal bozuklukları bulun.",
         "questions": [
           {
             "id": "c50_l1_ex1_q1",
@@ -49798,8 +49801,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c50_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 2: Cümle Analizi ve Hata Yakalama (İleri Seviye)",
-        "description": "En karmaşık akademik cümle yapılarında çeldiricilerin elenmesini sağlayan sinsi hataları avlayın.",
+        "title": "Alıştırma 2: Uzun Yüklem Analizi ve Hata Yakalama (İleri Düzey)",
+        "description": "En karmaşık mega eylem zincirlerinde çeldiricilerin elenmesini sağlayan sinsi hataları avlayın.",
         "questions": [
           {
             "id": "c50_l1_ex2_q1",
@@ -50562,20 +50565,20 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c49_l3",
     "unitId": 49,
-    "title": "YÖKDİL Çeviri ve Paragraf Okuma Stratejileri",
-    "subtitle": "İngilizce-Türkçe Çeviri ve Paragraf Analiz Egzersizleri",
+    "title": "Uzun Yüklem Öbekleri 3",
+    "subtitle": "Uzun Yüklem Öbekleri 3",
     "konuAnlatimi": {
-      "baslik": "YÖKDİL Çeviri ve Paragraf Okuma Stratejileri",
-      "teorikMantik": "YÖKDİL sınavında en yüksek puan getiren İngilizce-Türkçe / Türkçe-İngilizce çeviri soruları ve paragraf okuma anlama taktikleri.",
-      "formul": "Translation & Comprehension",
-      "altinKural": "İngilizce-Türkçe çeviri yaparken ana fiilin (yüklem) Türkçe cümlenin en sonunda yer alması gerektiğini unutmayın."
+      "baslik": "Uzun Yüklem Öbekleri 3",
+      "teorikMantik": "Uzun Yüklem Öbekleri 3",
+      "formul": "Uzun Yüklem Öbekleri 3",
+      "altinKural": "Uzun Yüklem Öbekleri 3"
     },
     "exercises": [
       {
         "id": "c49_l3_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: İngilizce-Türkçe Cümle Çevirisi",
-        "description": "İngilizce cümlelerin Türkçe karşılıklarını yüklem ve bağlaç takibi yaparak eşleştirin.",
+        "title": "Alıştırma 1: Uzun Yüklemli Cümle Çevirileri (İngilizce-Türkçe)",
+        "description": "Mega eylem zinciri barındıran İngilizce cümlelerin Türkçe karşılıklarını yüklem ve kalkan takibi yaparak eşleştirin.",
         "questions": [
           {
             "id": "c49_l3_ex1_q1",
@@ -51544,6 +51547,7 @@ if (typeof lessons !== 'undefined') {
         found.exercises = ov.exercises;
         found.title = ov.title;
         found.subtitle = ov.subtitle;
+        found.description = ov.description;
         found.konuAnlatimi = ov.konuAnlatimi;
         found.unitId = ov.unitId;
       } else {
@@ -51608,14 +51612,14 @@ if (typeof lessons !== 'undefined') {
       const u57 = units.find(u => String(u.id) === '57');
       if (u57) {
         u57.lessons = ["c60_l1"];
-        u57.title = "Master Academic Phrasal Verbs";
+        u57.title = "En Sık Karşılaşılan Deyimsel Fiiller";
       }
       
       // 2. Unit 52 (Advanced Modals & Special TIPS)
       const u52 = units.find(u => String(u.id) === '52');
       if (u52) {
         u52.lessons = ["c42_l1", "c51_l1", "c51_l2", "c52_l3"];
-        u52.title = "Akademik TIPS, Modals & Özel Yapılar";
+        u52.title = "İhtimal Modalları, As Yapıları, Ettirgen & Subjunctive";
       }
 
       // 3. Unit 43 (Multi-Element Verb Chains)
@@ -51629,11 +51633,11 @@ if (typeof lessons !== 'undefined') {
       const u66 = units.find(u => String(u.id) === '66');
       if (u66) {
         u66.lessons = ["c41_l1", "c66_l3", "c66_l7"];
-        u66.title = "YÖKDİL Sınav Stratejileri & Hızlı Çözüm Teknikleri";
+        u66.title = "YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri";
       }
       const t66 = rawTopics.find(t => String(t.id) === '66');
       if (t66) {
-        t66.title = "XXXIII. YÖKDİL Sınav Stratejileri & Hızlı Çözüm Teknikleri";
+        t66.title = "XXXIII. YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri";
         t66.desc = "Zaman kazandıran sınav kısayolları, tense-bağlaç soru taktikleri, since/for ve by kuralları ile 10 altın sınav kuralı karma testleri.";
       }
 
@@ -51641,12 +51645,12 @@ if (typeof lessons !== 'undefined') {
       const u49 = units.find(u => String(u.id) === '49');
       if (u49) {
         u49.lessons = ["c49_l1", "c50_l1", "c49_l3"];
-        u49.title = "YÖKDİL Karma Sınav Simülasyonu ve Büyük Final";
+        u49.title = "Uzun Yüklem Öbekleri";
       }
       const t49 = rawTopics.find(t => String(t.id) === '49');
       if (t49) {
-        t49.title = "XXXIV. YÖKDİL Karma Sınav Simülasyonu ve Büyük Final";
-        t49.desc = "YÖKDİL ve YDS sınavlarında çıkan tüm karma gramer, cümle tamamlama, çeviri ve okuma parçası soru tiplerinin simülasyonu.";
+        t49.title = "XXXIV. Uzun Yüklem Öbekleri";
+        t49.desc = "Uzun yüklem öbekleri içeren dil bilgisi simülasyonu, hata avcılığı ve cümle çeviri egzersizleri.";
       }
 
       // Re-execute displayId and title numbering for all units to make sure everything matches
@@ -51655,7 +51659,7 @@ if (typeof lessons !== 'undefined') {
           const l = lessons.find(less => less.id === lId);
           if (l) {
             l.displayId = idx + 1;
-            l.title = l.title.replace(/^\d+[\.:\s]*/, "");
+            l.title = l.title.replace(/^(?:\d+\.\s*|Ders\s+\d+[\.:\s]*)/i, "");
             l.title = (idx + 1) + ". " + l.title;
           }
         });

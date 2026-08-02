@@ -685,8 +685,9 @@ function translateEnglishPlaceholdersInTurkish(text) {
   };
 
   let processedText = text;
+  const wordChars = "a-zA-Z0-9ğüşöçıİĞÜŞÖÇ";
   for (const [eng, tr] of Object.entries(engToTrMap)) {
-    const regexUpper = new RegExp(`\\b${eng.toUpperCase()}\\b`, 'g');
+    const regexUpper = new RegExp(`(?<![${wordChars}])${eng.toUpperCase()}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexUpper, tr.toUpperCase());
 
     const engLower = eng.toLowerCase();
@@ -695,10 +696,10 @@ function translateEnglishPlaceholdersInTurkish(text) {
     const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
     const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
     
-    const regexCap = new RegExp(`\\b${engCapitalized}\\b`, 'g');
+    const regexCap = new RegExp(`(?<![${wordChars}])${engCapitalized}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexCap, trCapitalized);
     
-    const regexLower = new RegExp(`\\b${engLower}\\b`, 'g');
+    const regexLower = new RegExp(`(?<![${wordChars}])${engLower}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexLower, trLower);
   }
 
@@ -751,8 +752,9 @@ function translateTurkishPlaceholdersInEnglish(text) {
   };
 
   let processedText = text;
+  const wordChars = "a-zA-Z0-9ğüşöçıİĞÜŞÖÇ";
   for (const [tr, eng] of Object.entries(trToEngMap)) {
-    const regexUpper = new RegExp(`\\b${tr.toUpperCase()}\\b`, 'g');
+    const regexUpper = new RegExp(`(?<![${wordChars}])${tr.toUpperCase()}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexUpper, eng.toUpperCase());
 
     const trLower = tr.toLowerCase();
@@ -761,10 +763,10 @@ function translateTurkishPlaceholdersInEnglish(text) {
     const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
     const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
     
-    const regexCap = new RegExp(`\\b${trCapitalized}\\b`, 'g');
+    const regexCap = new RegExp(`(?<![${wordChars}])${trCapitalized}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexCap, engCapitalized);
     
-    const regexLower = new RegExp(`\\b${trLower}\\b`, 'g');
+    const regexLower = new RegExp(`(?<![${wordChars}])${trLower}(?![${wordChars}])`, 'g');
     processedText = processedText.replace(regexLower, engLower);
   }
 
@@ -803,6 +805,20 @@ function sanitizeAllQuestions() {
   const uniqueQs = Array.from(new Set(allQs));
   uniqueQs.forEach(q => {
     if (!q) return;
+
+    // Fix squished words after closing span tag globally
+    if (q.sentence && typeof q.sentence === 'string') {
+      q.sentence = q.sentence.replace(/<\/span>([a-zA-Z0-9])/g, '</span> $1');
+    }
+    if (q.enSentence && typeof q.enSentence === 'string') {
+      q.enSentence = q.enSentence.replace(/<\/span>([a-zA-Z0-9])/g, '</span> $1');
+    }
+    if (q.paragraph && typeof q.paragraph === 'string') {
+      q.paragraph = q.paragraph.replace(/<\/span>([a-zA-Z0-9])/g, '</span> $1');
+    }
+    if (q.question && typeof q.question === 'string') {
+      q.question = q.question.replace(/<\/span>([a-zA-Z0-9])/g, '</span> $1');
+    }
 
     // Convert translation-text to word-bank to avoid typing complex translations
     if (q.type === 'translation-text') {
@@ -6992,21 +7008,8 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         <div class="lesson-preview-title">Örnek cümle kalıpları:</div>
         <div class="preview-sentences-list">${sentencesList}</div>
       `;
-    } else if (lessonIndex === 2) {
-      previewHTML = `
-        <div class="lesson-preview-title">Ders Odak Noktası:</div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">Dinlediğiniz kelimeleri ve cümleleri yazarak işitsel anlama yeteneğinizi geliştirin.</p>
-      `;
-    } else if (lessonIndex === 3) {
-      previewHTML = `
-        <div class="lesson-preview-title">Ders Odak Noktası:</div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">İngilizce metinleri sesli okuyarak telaffuz pratiği yapın ve konuşma becerilerini geliştirin.</p>
-      `;
     } else {
-      previewHTML = `
-        <div class="lesson-preview-title">Ders Odak Noktası:</div>
-        <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">Boşluk doldurma, kelime havuzu ve çoktan seçmeli sorularla pratik yapın.</p>
-      `;
+      previewHTML = '';
     }
   }
 
@@ -7140,9 +7143,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       <h4 class="popover-title">${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</h4>
       <span class="popover-subtitle">${popoverSubtitleHTML}</span>
     </div>
-    <div class="popover-body">
-      ${previewHTML}
-    </div>
+    ${previewHTML ? `<div class="popover-body">${previewHTML}</div>` : ''}
     ${popoverFooterHTML}
   `;
 
@@ -9139,6 +9140,23 @@ function renderVectorAssembly(container, question) {
   let currentSelection = [];
   const tokens = [...question.scrambled_elements];
   
+  let displaySentence = question.sentence || question.question || "";
+  if (displaySentence && question.correct_sequence) {
+    const correctPhrase = question.correct_sequence.join(' ').trim();
+    if (correctPhrase) {
+      const escapedPhrase = correctPhrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const spanRegex = new RegExp(`<span[^>]*>\\s*${escapedPhrase.split('\\s+').join('\\s+')}\\s*<\\/span>`, 'i');
+      if (spanRegex.test(displaySentence)) {
+        displaySentence = displaySentence.replace(spanRegex, '_______');
+      } else {
+        const rawRegex = new RegExp(escapedPhrase.split('\\s+').join('\\s+'), 'i');
+        if (rawRegex.test(displaySentence)) {
+          displaySentence = displaySentence.replace(rawRegex, '_______');
+        }
+      }
+    }
+  }
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || "Öğeleri doğru sırayla birleştirerek eylemi inşa edin:"}</p>
     
@@ -9147,7 +9165,7 @@ function renderVectorAssembly(container, question) {
     </div>
     
     <div class="context-sentence" style="text-align: center; margin: 20px 0; font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">
-      ${question.sentence || question.question}
+      ${displaySentence}
     </div>
     
     <div class="tokens-flex" id="vector-tokens" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;"></div>

@@ -80676,20 +80676,20 @@ const chapter66Data = {
       "c41_l3": "3. Akademik Diyalog ve Mülakat Matrisi (neither did I, so do I, question flow)",
 
       // Unit 42
-      "c42_l1": "1. Temel Modallar (is likely to, is bound to, is supposed to)",
+      "c42_l1": "İhtimal, Beklenti ve Zorunluluk Modalları (likely, bound, supposed, due, doomed to)",
       "c42_l2": "2. Zaman Bükücüler (was likely to, used to vs was used to)",
       "c42_l3": "3. Edilgenlik Matrisi (bound to be V3, supposed to be V3)",
       "c42_l4": "4. Zaman Kayması Matrisi (likely to have V3, was to have V3)",
       "c42_l5": "5. Mega Zincirler (bound to have been V3, supposed to have been V3)",
 
       // Unit 43
-      "c43_l1": "1. Şimdiki Zaman & Edilgen Süreç Kökleri (is being V3)",
+      "c43_l1": "5 Öğeli Pasif Yapılar (is likely/bound/supposed to be V3)",
       "c43_l2": "2. Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
       "c43_l3": "3. Aktif Geçmiş Zaman Kaymaları (had V3, was V-ing)",
       "c43_l4": "4. Saf Modalların 5'li Yapı Sentezi (modal + be + V-ing/V3)",
 
       // Unit 44
-      "c44_l1": "1. Varsayımsal Geçmiş Zaman Zincirleri (would have been V3)",
+      "c44_l1": "6 Öğeli Pasif Yapılar (is rumored/likely/supposed to have been V3)",
       "c44_l2": "2. Geçmiş Zaman Edilgen Bükümleri (had been being V3)",
       "c44_l3": "3. Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
 
@@ -80701,20 +80701,20 @@ const chapter66Data = {
       "c46_l1": "Ders 1: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
 
       // Unit 47
-      "c47_l1": "Ders 1: Vagon Kırılımları ve Anlamsal Diferansiyel (syntax trees & modifiers)",
+      "c47_l1": "4-8 Öğeli Fiil Zincirleri ve Karşılaştırmalı Cümle Analizi",
 
       // Unit 48
       "c48_l1": "Ders 1: Zaman Kayma Kontrolü (tense consistency checking)",
 
       // Unit 51
-      "c51_l1": "1. As Türevleri ve Karıştırılan Bağlaçlar (as, like, as if, as though)",
-      "c51_l2": "2. Causative (Ettirgen Yapı) Mühendisliği (have someone do, get someone to do)",
+      "c51_l1": "As Türevleri, as if/though ve Eşikte Olma Yapıları (be about to / on the verge of)",
+      "c51_l2": "Ettirgen Yapılar (have someone do / get someone to do / have-get something done)",
       "c51_l3": "3. Inversion (Devrik Cümle) Dedektifi (hardly had I, only then)",
 
       // Unit 52
       "c52_l1": "1. Participle Reduction (Kısaltma) Geometrisi (V-ing, V3, having V3)",
       "c52_l2": "2. Eşikte Olma (\"-e Üzere Olmak\") Grubu (be about to, be on the verge of)",
-      "c52_l3": "3. Subjunctive & Gizli Şart (\"Otherwise\" / \"But\") Kuralları (lest, otherwise, but for)",
+      "c52_l3": "Subjunctive, Gizli Şartlar (lest, otherwise, but for) ve Aktarım Pasifleri",
       "c52_l4": "4. \"It\"li Pasif Aktarım & \"To\"lu Dönüşümler (it is thought that, he is thought to be)",
 
       // Unit 53
