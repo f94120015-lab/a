@@ -4323,7 +4323,7 @@ window.previewQuestionById = function(lessonId, questionId) {
     return;
   }
   
-  openQuestionPreview(`${lesson ? lesson.id + '. Ders (' + lesson.subtitle + ')' : 'Soru Önizleme'}`, [targetQuestion], lesson);
+  openQuestionPreview(`${lesson ? (lesson.subtitle ? lesson.id + '. Ders (' + lesson.subtitle + ')' : lesson.title || lesson.id + '. Ders') : 'Soru Önizleme'}`, [targetQuestion], lesson);
 };
 
 window.startLessonAtQuestion = function(lessonId, exerciseId, questionId) {
@@ -7739,11 +7739,23 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
 
   if (exerciseId && currentLesson.exercises) {
     const exercise = currentLesson.exercises.find(ex => ex.id === exerciseId);
-    currentQuizQuestions = exercise ? exercise.questions : currentLesson.questions;
-    currentLesson.activeExerciseId = exerciseId;
-    currentLesson.activeExerciseTitle = exercise ? exercise.title : '';
+    if (exercise && exercise.questions && exercise.questions.length > 0) {
+      currentQuizQuestions = exercise.questions;
+      currentLesson.activeExerciseId = exerciseId;
+      currentLesson.activeExerciseTitle = exercise.title || '';
+    } else {
+      const fallbackEx = currentLesson.exercises[0];
+      currentQuizQuestions = fallbackEx ? fallbackEx.questions : (currentLesson.questions || []);
+      currentLesson.activeExerciseId = fallbackEx ? fallbackEx.id : null;
+      currentLesson.activeExerciseTitle = fallbackEx ? fallbackEx.title : '';
+    }
+  } else if (currentLesson.exercises && currentLesson.exercises.length > 0) {
+    const firstEx = currentLesson.exercises[0];
+    currentQuizQuestions = firstEx ? firstEx.questions : (currentLesson.questions || []);
+    currentLesson.activeExerciseId = firstEx ? firstEx.id : null;
+    currentLesson.activeExerciseTitle = firstEx ? firstEx.title : '';
   } else {
-    currentQuizQuestions = currentLesson.questions;
+    currentQuizQuestions = currentLesson.questions || [];
     currentLesson.activeExerciseId = null;
     currentLesson.activeExerciseTitle = '';
   }
@@ -8084,7 +8096,7 @@ function updateQuizMetadata() {
   }
 
   const unitTitle = getUnitDisplayTitle(currentLesson.unitId);
-  const lessonLabel = `${currentLesson.title} (${currentLesson.subtitle})`;
+  const lessonLabel = (currentLesson.subtitle && currentLesson.subtitle.trim() !== '') ? `${currentLesson.title} (${currentLesson.subtitle})` : currentLesson.title;
   
   let exLabel = '';
   if (currentLesson.activeExerciseTitle) {
@@ -15618,7 +15630,7 @@ function submitReport(question, errorType, comment) {
   }
   const questionLesson = (typeof lessons !== 'undefined') ? lessons.find(l => getLessonQuestions(l).some(q => q.id === question.id)) : null;
   const activeLesson = questionLesson || currentLesson;
-  const lessonTitleStr = activeLesson ? `${activeLesson.id}. Ders (${activeLesson.subtitle})` : (isReviewMode ? 'Hızlı Tekrar' : 'N/A');
+  const lessonTitleStr = activeLesson ? (activeLesson.subtitle ? `${activeLesson.id}. Ders (${activeLesson.subtitle})` : (activeLesson.title || `${activeLesson.id}. Ders`)) : (isReviewMode ? 'Hızlı Tekrar' : 'N/A');
   const lessonIdStr = activeLesson ? activeLesson.id : 'N/A';
 
   const newReport = {
