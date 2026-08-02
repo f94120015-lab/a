@@ -61193,7 +61193,7 @@ const chapter40Data = {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
@@ -61494,10 +61494,10 @@ const chapter40Data = {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Dilek, Varsayım & Şart Geometrisi",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Dilek, Varsayım & Şart Geometrisi (If / Wish / Unless / Provided that)",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "Koşul ve dilek cümlelerinde zaman 1 derece geriye kayar (Backshift). Şu anki hayali durumlar Past Simple ile, geçmişteki pişmanlıklar Past Perfect (Had V3) ile ifade edilir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect",
       "altinKural": "'Unless' olumsuz anlam taşır (madıkça/medikçe); yan cümlesine ayrıca 'not' gelemez! 'I wish / If only' yapılarından sonra 'will/would' ile şikayet bildirilir."
@@ -61795,10 +61795,10 @@ const chapter40Data = {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Subjunctive Aciliyet Kilitleri & Gramer Emirleri",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Subjunctive Aciliyet Kilitleri & Gramer Emirleri",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Tavsiye, emir, aciliyet veya hayati önem bildiren akademik fiil ve sıfatlardan sonra gelen 'that' bağlacında özne ne olursa olsun fiil yalın kök (bare infinitive / V0) kalır.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0",
       "altinKural": "Özne 'he/she/it' veya pasif olsa dahi V-s takısı veya am/is/are almaz! Örn: 'insist that he BE present' veya 'recommend that the report BE revised'."
@@ -62095,11 +62095,11 @@ const chapter40Data = {
   },
   {
     "id": "c40_l4_merged",
-    "unitId": "39_2",
-    "title": "4. İsim Cümlecikleri",
+    "unitId": 39,
+    "title": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "4. İsim Cümlecikleri (Noun Clauses: That / Whether / If / Wh-)",
+      "baslik": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
       "teorikMantik": "İsim cümlecikleri bir cümlede özne veya nesne konumuna geçen tüm cümleciklerdir. 'That' bildirim, 'Whether/If' olup olmadığı (seçenek), 'Wh-' ise bilinmeyen ögeyi sorar.",
       "formul": "Verb + THAT + SVO (Bildirim) | Verb + WHETHER/IF + SVO (Olup olmadığı) | Prep + WH- word + SVO (Preposition arkasından THAT gelemez!)",
       "altinKural": "Edatlardan (in, on, about, of vb.) sonra doğrudan 'that' gelemez; 'whether' veya 'wh-' sözcükleri tercih edilmelidir!"
@@ -63600,11 +63600,11 @@ const chapter40Data = {
   },
   {
     "id": "c40_l9_merged",
-    "unitId": "39_3",
-    "title": "9. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi",
+    "unitId": 39,
+    "title": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "9. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi",
+      "baslik": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
       "teorikMantik": "Bağlaç türlerinde en kritik ayrım 'Tam Cümle alanlar (SVO)', 'İsim/Öbek alanlar (Noun/V-ing)' ve 'Noktalama gerektiren geçiş sözcükleri (; transition ,)' ayrımıdır.",
       "formul": "Zıtlık Cümle: Although / Even though + SVO | Zıtlık İsim: In spite of / Despite + Noun/V-ing | Geçiş: ; however, / ; therefore,",
       "altinKural": "'Despite' ve 'In spite of' kelimelerinden sonra tam cümle (SVO) gelemez! 'Despite of' diye bir kullanım İngilizcede YOKTUR."
@@ -63901,11 +63901,11 @@ const chapter40Data = {
   },
   {
     "id": "c40_l10_merged",
-    "unitId": "39_3",
-    "title": "10. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları",
+    "unitId": 39,
+    "title": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "10. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları",
+      "baslik": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
       "teorikMantik": "Geçmişe yönelik olasılık, kesin çıkarım veya pişmanlık bildiren modallarda her zaman 'Modal + HAVE + V3' kalıbı kullanılır.",
       "formul": "Must have V3 (Geçmişte yüksek ihtimal) | Can't / Couldn't have V3 (İmkansızlık) | Should have V3 (Yapılmalıydı ama yapılmadı) | Needn't have V3 (Yapıldı ama gereksizdi)",
       "altinKural": "'Should have V3' eylemin YAPILMADIĞINI, 'Needn't have V3' ise eylemin GEREKSİZ YERE YAPILDIĞINI açıklar!"
@@ -80654,20 +80654,20 @@ const chapter66Data = {
       "c38_l5": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi (Karma Inversion & Emphatic)",
 
       // Unit 39
-      "c40_l1_merged": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
-      "c40_l2_merged": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
-      "c40_l3_merged": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+      "c40_l1_merged": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
+      "c40_l2_merged": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "c40_l3_merged": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
 
       // Unit 39_2
-      "c40_l4_merged": "1. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+      "c40_l4_merged": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
       "c40_l5_merged": "2. İsim & Sıfat Cümleciklerinin Kısaltma Geometrisi (V-ing, V3, to V1)",
       "c40_l6_merged": "3. Zarf Cümleciklerinde Kısaltma & Anlamsal Büzülme (while studying, once approved)",
       "c40_l7_merged": "4. Karmaşık Kısaltmalar & Geçmiş Zaman Kilitleri (having V3, having been V3)",
 
       // Unit 39_3
       "c40_l8_merged": "1. Devrik Cümle Mimarisi & Zaman Kilitleri (not only ... but also, no sooner ... than)",
-      "c40_l9_merged": "2. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
-      "c40_l10_merged": "3. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+      "c40_l9_merged": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
+      "c40_l10_merged": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
       "c40_l11_merged": "4. Sınav Çeldirici & Hata Avcısı Zirvesi (Karma Hatasızlaştırma)",
 
       // Unit 41

@@ -6983,7 +6983,16 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const lessonIndex = unit.lessons.indexOf(lessonId);
 
   if (topic) {
-    if (lesson.formula && lesson.example) {
+    if (lesson.konuAnlatimi) {
+      const formula = lesson.konuAnlatimi.formul || lesson.konuAnlatimi.formula;
+      const description = lesson.konuAnlatimi.teorikMantik || lesson.konuAnlatimi.description;
+      previewHTML = `
+        <div class="grammar-preview-box">
+          ${formula ? `<div class="grammar-formula"><span class="formula-badge">Formül</span> ${formula}</div>` : ''}
+          ${description ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${formula ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);' : ''} line-height: 1.4;">${description}</div>` : ''}
+        </div>
+      `;
+    } else if (lesson.formula && lesson.example) {
       previewHTML = `
         <div class="grammar-preview-box">
           <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>

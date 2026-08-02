@@ -5534,11 +5534,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
-      "teorikMantik": "Bu ders 1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since) yapısının sentaks ve anlam kurallarını pekiştirir.",
+      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
+      "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' eylemin tamamlanma sınırını (miladını), 'Since' ise eylemin başladığı geçmiş noktayı belirler.",
       "formul": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3"
     },
     "exercises": [
@@ -5874,10 +5874,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "Bu ders 2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
@@ -6214,10 +6214,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Bu ders 3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
@@ -6554,10 +6554,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l4_merged",
     "unitId": 39,
-    "title": "4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+    "title": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+      "baslik": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
       "teorikMantik": "Bu ders 4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Verb + THAT + SVO (Bildirim) | Verb + WHETHER/IF + SVO (Olup olmadığı) | Prep + WH- word + SVO (Preposition arkasından THAT gelemez!)"
     },
@@ -6894,10 +6894,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l9_merged",
     "unitId": 39,
-    "title": "5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+    "title": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+      "baslik": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
       "teorikMantik": "Bu ders 5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Zıtlık Cümle: Although / Even though + SVO | Zıtlık İsim: In spite of / Despite + Noun/V-ing | Geçiş: ; however, / ; therefore,"
     },
@@ -7234,10 +7234,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l10_merged",
     "unitId": 39,
-    "title": "6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+    "title": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+      "baslik": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
       "teorikMantik": "Bu ders 6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Must have V3 (Geçmişte yüksek ihtimal) | Can't / Couldn't have V3 (İmkansızlık) | Should have V3 (Yapılmalıydı ama yapılmadı) | Needn't have V3 (Yapıldı ama gereksizdi)"
     },
@@ -12355,11 +12355,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
-      "teorikMantik": "Bu ders 1. Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since) yapısının sentaks ve anlam kurallarını pekiştirir.",
+      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
+      "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' eylemin tamamlanma sınırını (miladını), 'Since' ise eylemin başladığı geçmiş noktayı belirler.",
       "formul": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3"
     },
     "exercises": [
@@ -12694,10 +12694,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "Bu ders 2. Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
@@ -13033,10 +13033,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Bu ders 3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
@@ -13372,12 +13372,12 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l4_merged",
     "unitId": 39,
-    "title": "4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+    "title": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
-      "teorikMantik": "Bu ders 4. Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of) yapısının sentaks ve anlam kurallarını pekiştirir.",
-      "formul": "Verb + THAT + SVO (Bildirim) | Verb + WHETHER/IF + SVO (Olup olmadığı) | Prep + WH- word + SVO (Preposition arkasından THAT gelemez!)"
+      "baslik": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
+      "teorikMantik": "Bu ders 4. Bağlaçlar, Zarf Cümlecikleri & Sadeleştirme (because, although, while, as long as / after doing, having done) yapısının sentaks ve anlam kurallarını pekiştirir.",
+      "formul": "SVO, because/although/while/as long as SVO | After doing / Having done SVO"
     },
     "exercises": [
       {
@@ -13711,11 +13711,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l9_merged",
     "unitId": 39,
-    "title": "5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+    "title": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
-      "teorikMantik": "Bu ders 5. Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite) yapısının sentaks ve anlam kurallarını pekiştirir.",
+      "baslik": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
+      "teorikMantik": "Bağlaç türlerinde en kritik ayrım 'Tam Cümle alanlar (SVO)', 'İsim/Öbek alanlar (Noun/V-ing)' ve 'Noktalama gerektiren geçiş sözcükleri (; transition ,)' ayrımıdır.",
       "formul": "Zıtlık Cümle: Although / Even though + SVO | Zıtlık İsim: In spite of / Despite + Noun/V-ing | Geçiş: ; however, / ; therefore,"
     },
     "exercises": [
@@ -14050,10 +14050,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l10_merged",
     "unitId": 39,
-    "title": "6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+    "title": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+      "baslik": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
       "teorikMantik": "Bu ders 6. Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Must have V3 (Geçmişte yüksek ihtimal) | Can't / Couldn't have V3 (İmkansızlık) | Should have V3 (Yapılmalıydı ama yapılmadı) | Needn't have V3 (Yapıldı ama gereksizdi)"
     },
@@ -19156,10 +19156,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since)",
+      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Bu ders Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3"
     },
@@ -19495,10 +19495,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for)",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "Bu ders Akademik Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
@@ -19834,10 +19834,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should)",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Bu ders Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
@@ -20173,10 +20173,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l4_merged",
     "unitId": 39,
-    "title": "Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+    "title": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of)",
+      "baslik": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
       "teorikMantik": "Bu ders Edat Takımları & Akademik Niteleme Öbekleri (in terms of, with respect to, by means of) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Verb + THAT + SVO (Bildirim) | Verb + WHETHER/IF + SVO (Olup olmadığı) | Prep + WH- word + SVO (Preposition arkasından THAT gelemez!)"
     },
@@ -20512,10 +20512,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l9_merged",
     "unitId": 39,
-    "title": "Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+    "title": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite)",
+      "baslik": "9. Karışık Zaman Uyumu & Bağlaç Matrisi - I",
       "teorikMantik": "Bu ders Zıtlık & Nedensellik Bağlaçlarında Terazi Dengesi (although, because, whereas, despite) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Zıtlık Cümle: Although / Even though + SVO | Zıtlık İsim: In spite of / Despite + Noun/V-ing | Geçiş: ; however, / ; therefore,"
     },
@@ -20851,10 +20851,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l10_merged",
     "unitId": 39,
-    "title": "Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+    "title": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3)",
+      "baslik": "10. Karışık Zaman Uyumu & Bağlaç Matrisi - II",
       "teorikMantik": "Bu ders Geçmişe Yönelik Çıkarım & Pişmanlık Modalları (must have V3, should have V3, might have V3) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Must have V3 (Geçmişte yüksek ihtimal) | Can't / Couldn't have V3 (İmkansızlık) | Should have V3 (Yapılmalıydı ama yapılmadı) | Needn't have V3 (Yapıldı ama gereksizdi)"
     },
@@ -25986,10 +25986,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "Zaman Uyumları & Kronoloji Kalkanları",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
     "subtitle": "Tenses & Chronology",
     "konuAnlatimi": {
-      "baslik": "Zaman Uyumları & Kronoloji Kalkanları",
+      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Bu ders, akademik metinlerde zaman uyumunu, zaman bağlaçlarının sentaksını ve geçmişe yönelik modal çıkarımları kapsar.",
       "formul": "By the time + V2 ➔ Had V3 | Since + V2 ➔ Have/Has V3 | Must/Should have V3"
     },
@@ -27629,10 +27629,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "Edat, Bağlaç & Noktalama Kilitleri",
-    "subtitle": "Conjunctions & Transitions",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+    "subtitle": "Sentaks ve Noktalama Kuralları: İsim Alan Edatlar (despite, due to), Cümle Alan Bağlaçlar (although, because) ve İki Cümle Arası Geçişler (however, therefore)",
     "konuAnlatimi": {
-      "baslik": "Edat, Bağlaç & Noktalama Kilitleri",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "Bu ders, bağlaçların yapısal gruplarını (cümle alan, isim alan, geçiş alan) ve noktalama kurallarını kapsar.",
       "formul": "Although + SVO | Despite + Noun | SVO; however, SVO"
     },
@@ -29598,10 +29598,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "Koşul, İstek & Dilek Yapıları",
-    "subtitle": "Conditionals & Wishes",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+    "subtitle": "Type 0, 1, 2, 3, Mix ve Devrik Koşul Yapılarının Sentaks ve Çeviri Kuralları",
     "konuAnlatimi": {
-      "baslik": "Koşul, İstek & Dilek Yapıları",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Bu ders, Type 0-1-2-3 koşul yapılarını, devrik, alternatif ve mixed conditionals kombinasyonlarını ve wish clause kalıplarını kapsar.",
       "formul": "If had V3 ➔ would have V3 | Had + Subject + V3 | I wish + V2/Had V3"
     },
@@ -32591,10 +32591,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l1_merged",
     "unitId": 39,
-    "title": "1. Zaman Uyumları & Kronoloji Kalkanları",
-    "subtitle": "Zaman Uyumları & Kronolojik Öncelik Matrisi (by the time, since, until, as soon as, before/after)",
+    "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
+    "subtitle": "Zaman uyumu kuralları ve zaman bağlaçlarının (by the time, since, until, as soon as, before / after) akademik kullanımı",
     "konuAnlatimi": {
-      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the time, Since, Until, As soon as, Before/After)",
+      "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' tamamlanma sınırını (Deadline), 'Since' eylemin başlangıç noktasını (-den beri), 'Until' o ana kadar sürdürülen eylemi (-e kadar), 'As soon as' anlık eylem ardışıklığını (-er etmez), 'Before/After' ise kronolojik öncelik/sonralık sırasını belirler. Zaman bağlacı içeren yan cümlelere ASLA 'will/would' gelemez.",
       "formul": "By the time + V2 ➔ Had V3 | Since + V2 ➔ Have/Has V3 | Until + V2 ➔ Had V3 / V2 | As soon as + V2 ➔ V2 | Before + V2 ➔ Had V3",
       "altinKural": "'By the time', 'Until', 'As soon as', 'Before' ve 'After' yan cümlelerine asla 'will/would' almaz! Her bağlaç eşit soru ağırlığı ve soru tipleriyle tam uyumlu bükümler gerektirir."
@@ -33638,10 +33638,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Edat, Bağlaç & Noktalama Kilitleri",
-    "subtitle": "3 Renk Kodu: İsim Alanlar, Cümle Alanlar & İki Cümle Arasına Gelenler",
+    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+    "subtitle": "Sentaks ve Noktalama Kuralları: İsim Alan Edatlar (despite, due to), Cümle Alan Bağlaçlar (although, because) ve İki Cümle Arası Geçişler (however, therefore)",
     "konuAnlatimi": {
-      "baslik": "2. Edat, Bağlaç & Noktalama Kilitleri (Sentaks & Renk Kodlu Üçlü Ayrım)",
+      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
       "teorikMantik": "<div style='display:flex; flex-direction:column; gap:10px; text-align:left;'><div style='background:rgba(16,185,129,0.12); border:1px solid #10b981; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#10b981;'>🟢 GRUP 1 (YEŞİL) - İSİM & V-ING ALANLAR (Edatlar / Prepositions):</strong><br>Arkasından <u>asla tam cümle almaz</u>. Yalnızca İsim, İsim Öbeği veya V-ing alır.<br><em>Örnekler: Despite, In spite of, Due to, Owing to, On account of, In addition to, With a view to, As a consequence of, Notwithstanding.</em></div><div style='background:rgba(59,130,246,0.12); border:1px solid #3b82f6; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#3b82f6;'>🔵 GRUP 2 (MAVİ) - CÜMLE (ÖZNE+YÜKLEM) ALANLAR (Cümle Bağlaçları):</strong><br>Arkasından mutlaka <u>Tam Cümle (Özne + Yüklem / S+V)</u> gerektirir.<br><em>Örnekler: Although, Even though, Though, Because, Since, As, While, Whereas, In order that, So that, Provided that.</em></div><div style='background:rgba(239,68,68,0.12); border:1px solid #ef4444; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#ef4444;'>🔴 GRUP 3 (KIRMIZI) - İKİ CÜMLE ARASINA GELENLER (Geçiş Zarfları / Transitions):</strong><br>İki bağımsız cümleyi birbirine bağlar. Noktalama kuralı: <u>Cümle 1; Transition, Cümle 2.</u> veya <u>Cümle 1. Transition, Cümle 2.</u><br><em>Örnekler: However, Nevertheless, Furthermore, Moreover, Consequently, Therefore, On the other hand.</em></div></div>",
       "formul": "🟢 GRUP 1: Edat + Noun / V-ing (İsim Alanlar) | 🔵 GRUP 2: Bağlaç + S+V+O (Tam Cümle Alanlar) | 🔴 GRUP 3: Cümle 1; Transition, Cümle 2. (İki Cümle Arasına Gelenler)",
       "altinKural": "⚠️ SINAV TUZAĞI: 'Despite / In spite of / Due to' (Grup 1) yapılarından sonra fiil içeren tam cümle GELEMEZ! Tam cümlelerin önüne 'Although / Because' (Grup 2) getirilir. İki cümle arasında noktalı virgül (;) varsa 'However / Therefore' (Grup 3) seçilir."
@@ -34627,10 +34627,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Koşul, İstek & Dilek Yapıları",
-    "subtitle": "Type 0-1-2-3, Mix Conditionals & Inverted Conditionals",
+    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+    "subtitle": "Type 0, 1, 2, 3, Mix ve Devrik Koşul Yapılarının Sentaks ve Çeviri Kuralları",
     "konuAnlatimi": {
-      "baslik": "3. Koşul, İstek & Dilek Yapıları (Type 0-3, Mix & Devrik Şart Yapıları)",
+      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
       "teorikMantik": "Koşul yapılarında Type 0 genel bilimsel gerçekleri (is applied ➔ expand), Type 1 gelecek olasılıklarını (lowers ➔ will increase), Type 2 günümüz hayali durumlarını (allocated ➔ would recruit), Type 3 geçmiş imkansız durumları (had reviewed ➔ would have dismissed), Mix Conditionals geçmiş neden/bugün sonuç çaprazlamasını (had negotiated ➔ would be today), Devriklik ise If'siz yapıları (Had...V3 / Were...to V1 / Should...V1) ifade eder.",
       "formul": "Type 0 (V1➔V1) | Type 1 (V1➔Will V1) | Type 2 (V2➔Would V1) | Type 3 (Had V3➔Would Have V3) | Mix (Had V3➔Would V1) | Devrik (Had/Were/Should)",
       "altinKural": "Type 0-1-2-3, Mix ve Devrik yapılar arasında zaman uyumları katidir. 'If' bağlacı kaldırıldığında devriklik başa gelen Had/Were/Should ile sağlanır."
